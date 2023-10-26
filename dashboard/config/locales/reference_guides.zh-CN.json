@@ -3,201 +3,267 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "加速传感器事件",
           "display_name": "加速传感器事件"
         },
         "csd-2022/ai-lab": {
+          "display_name": "人工智能实验室",
           "display_name": "人工智能实验室"
         },
         "csd-2022/app-lab": {
+          "display_name": "应用实验室",
           "display_name": "应用实验室"
         },
         "csd-2022/applab-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/arrays": {
+          "display_name": "数组",
           "display_name": "数组"
         },
         "csd-2022/board-events": {
+          "display_name": "主板事件",
           "display_name": "主板事件"
         },
         "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "布尔值和比较运算符",
           "display_name": "布尔值和比较运算符"
         },
         "csd-2022/changing-screens": {
+          "display_name": "更改屏幕",
           "display_name": "更改屏幕"
         },
         "csd-2022/changing-sensor-scale": {
+          "display_name": "改变传感器的级别",
           "display_name": "改变传感器的级别"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "电路游戏板概述",
           "display_name": "电路游戏板概述"
         },
         "csd-2022/classes": {
+          "display_name": "班级",
           "display_name": "班级"
         },
         "csd-2022/collision-detection": {
+          "display_name": "碰撞检测",
           "display_name": "碰撞检测"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "知识共享检索",
           "display_name": "知识共享检索"
         },
         "csd-2022/css-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/debugging-with-watchers": {
+          "display_name": "使用监视器调试",
           "display_name": "使用监视器调试"
         },
         "csd-2022/design-mode": {
+          "display_name": "设计模式",
           "display_name": "设计模式"
         },
         "csd-2022/design-mode-elements": {
+          "display_name": "设计模式元素",
           "display_name": "设计模式元素"
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "使用代码设计屏幕",
           "display_name": "使用代码设计屏幕"
         },
         "csd-2022/drawing-shapes": {
+          "display_name": "绘制形状",
           "display_name": "绘制形状"
         },
         "csd-2022/editing-images": {
+          "display_name": "编辑图像",
           "display_name": "编辑图像"
         },
         "csd-2022/for-loops": {
+          "display_name": "计数循环",
           "display_name": "计数循环"
         },
         "csd-2022/formatting-html": {
+          "display_name": "格式化 HTML",
           "display_name": "格式化 HTML"
         },
         "csd-2022/functions": {
+          "display_name": "函数",
           "display_name": "函数"
         },
         "csd-2022/game-lab": {
+          "display_name": "游戏实验室",
           "display_name": "游戏实验室"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "标题和段落",
           "display_name": "标题和段落"
         },
         "csd-2022/html-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/html-tags": {
+          "display_name": "HTML 标签",
           "display_name": "HTML 标签"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "超链接",
           "display_name": "超链接"
         },
         "csd-2022/if-else-statements": {
+          "display_name": "If-else 语句",
           "display_name": "If-else 语句"
         },
         "csd-2022/if-statements": {
+          "display_name": "If 语句",
           "display_name": "If 语句"
         },
         "csd-2022/if-statements-2": {
+          "display_name": "If 语句",
           "display_name": "If 语句"
         },
         "csd-2022/images-in-html": {
+          "display_name": "HTML 中的图像",
           "display_name": "HTML 中的图像"
         },
         "csd-2022/importing-screens": {
+          "display_name": "导入屏幕",
           "display_name": "导入屏幕"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "人工智能实验室的介绍",
           "display_name": "人工智能实验室的介绍"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/layout-properties": {
+          "display_name": "布局属性",
           "display_name": "布局属性"
         },
         "csd-2022/lists": {
+          "display_name": "列表",
           "display_name": "列表"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker 工具包",
           "display_name": "Maker 工具包"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "人工智能实验室中的模型卡",
           "display_name": "人工智能实验室中的模型卡"
         },
         "csd-2022/modifying-arrays": {
+          "display_name": "修改数组",
           "display_name": "修改数组"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "多屏幕应用程序",
           "display_name": "多屏幕应用程序"
         },
         "csd-2022/naming-variables": {
+          "display_name": "命名变量",
           "display_name": "命名变量"
         },
         "csd-2022/other": {
+          "display_name": "其他",
           "display_name": "其他"
         },
         "csd-2022/other-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "概览",
           "display_name": "概览"
         },
         "csd-2022/playing-notes": {
+          "display_name": "角色备注",
           "display_name": "角色备注"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "解决问题的过程",
           "display_name": "解决问题的过程"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "解决问题的过程",
           "display_name": "解决问题的过程"
         },
         "csd-2022/random-numbers": {
+          "display_name": "随机数",
           "display_name": "随机数"
         },
         "csd-2022/responding-to-user-input": {
+          "display_name": "响应用户输入",
           "display_name": "响应用户输入"
         },
         "csd-2022/shapes-and-parameters": {
+          "display_name": "形状和参数",
           "display_name": "形状和参数"
         },
         "csd-2022/sprite-interactions": {
+          "display_name": "精灵图互动",
           "display_name": "精灵图互动"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "精灵图属性",
           "display_name": "精灵图属性"
         },
         "csd-2022/sprites": {
+          "display_name": "精灵图",
           "display_name": "精灵图"
         },
         "csd-2022/the-accelerometer": {
+          "display_name": "加速传感器",
           "display_name": "加速传感器"
         },
         "csd-2022/the-counter-pattern": {
+          "display_name": "计数器模式",
           "display_name": "计数器模式"
         },
         "csd-2022/the-counter-pattern-2": {
+          "display_name": "计数器模式",
           "display_name": "计数器模式"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "绘制循环",
           "display_name": "绘制循环"
         },
         "csd-2022/variables": {
+          "display_name": "变量",
           "display_name": "变量"
         },
         "csd-2022/velocity": {
+          "display_name": "矢量",
           "display_name": "矢量"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "速度和计数模式",
           "display_name": "速度和计数模式"
         },
         "csd-2022/web-lab": {
+          "display_name": "网络实验室",
           "display_name": "网络实验室"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
