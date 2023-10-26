@@ -5,7 +5,8 @@ require 'cdo/shared_cache'
 # datastore adapter is being used in the current environment, intended for use
 # by Cdo::DynamicConfig.
 class DatastoreCache
-  CACHE_KEY = "DynamicConfigDatastore".freeze
+  CACHE_NAMESPACE = "DynamicConfigData".freeze
+  ALL_CACHED_KEYS = [CACHE_NAMESPACE, :all_keys].join('/')
 
   # @param datastore [Object] a datastore adapter
   # @param cache_expiration [int] seconds after which a cached entry expires
@@ -16,7 +17,10 @@ class DatastoreCache
     # A list of change listeners.
     @listeners = []
 
+    # Update the cache to populate it with initial values, and provide a
+    # reasonable default for our set of all cache keys.
     update_cache
+    CDO.shared_cache.fetch(ALL_CACHED_KEYS) {Set.new}
   end
 
   # Adds a listener that will be invoked whenever the store changes.
@@ -37,12 +41,20 @@ class DatastoreCache
     end
   end
 
+  # Given a key representing a Cdo::DynamicConfig value, return the namespaced
+  # key used to fetch the corresponding value from Cdo::SharedCache
+  # @param key [String] a DCDO/Gatekeeper key; ie, "hoc_mode"
+  # @return [String] a SharedCache key; ie, "DynamicConfigData/value/hoc_mode"
+  def namespaced_cache_key(key)
+    return [CACHE_NAMESPACE, :value, key].join('/')
+  end
+
   # Gets the data associated with a given key
   # @param key [String]
   # @returns stored value
   def get(key)
     raise ArgumentError unless key.is_a? String
-    return all[key]
+    return CDO.shared_cache.read(namespaced_cache_key(key))
   end
 
   # Sets the given value for the key in both the local cache and datastore
@@ -58,12 +70,17 @@ class DatastoreCache
 
   # Return all cached elements
   def all
-    return CDO.shared_cache.read(CACHE_KEY) || {}
+    return CDO.shared_cache.read(ALL_CACHED_KEYS).map do |key|
+      [key, CDO.shared_cache.read(namespaced_cache_key(key))]
+    end.to_h
   end
 
   # Clear the datastore
   def clear
-    CDO.shared_cache.write(CACHE_KEY, {})
+    CDO.shared_cache.read(ALL_CACHED_KEYS).each do |key|
+      CDO.shared_cache.delete(namespaced_cache_key(key))
+    end
+    CDO.shared_cache.write(ALL_CACHED_KEYS, Set.new)
     @datastore.clear
     notify_change_listeners
   end
@@ -95,7 +112,8 @@ class DatastoreCache
   # @param key [String]
   # @param value [String]
   private def set_local(key, value)
-    updated_cache_data = all.merge({key => value})
-    CDO.shared_cache.write(CACHE_KEY, updated_cache_data)
+    new_cached_keys = CDO.shared_cache.read(ALL_CACHED_KEYS).union(Set[key])
+    CDO.shared_cache.write(ALL_CACHED_KEYS, new_cached_keys)
+    CDO.shared_cache.write(namespaced_cache_key(key), value)
   end
 end
