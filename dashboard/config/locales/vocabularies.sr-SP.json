@@ -3,411 +3,546 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Унос",
           "word": "Унос"
         },
         "copyright/csd/2021": {
+          "word": "Ауторска права",
           "word": "Ауторска права"
         },
         "debugging/csd/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "variable/csd/2021": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "conditionals/csd/2021": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "abstraction/csd/2021": {
+          "word": "Апстракција",
           "word": "Апстракција"
         },
         "function/csd/2021": {
+          "word": "Функција",
           "word": "Функција"
         },
         "debugging/coursea/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursea/2021": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/courseb/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/courseb/2021": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/coursec/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursec/2021": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/coursed/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursed/2021": {
+          "word": "Programming",
           "word": "Programming"
         },
         "conditionals/coursed/2021": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "behavior/coursee/2021": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "copyright/coursee/2021": {
+          "word": "Ауторска права",
           "word": "Ауторска права"
         },
         "function/coursee/2021": {
+          "word": "Функција",
           "word": "Функција"
         },
         "conditionals/coursee/2021": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "define/coursee/2021": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "behavior/coursef/2021": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "variable/coursef/2021": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "input/coursef/2021": {
+          "word": "Унос",
           "word": "Унос"
         },
         "internet/coursef/2021": {
+          "word": "Интернет",
           "word": "Интернет"
         },
         "define/coursef/2021": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "debugging/express/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/express/2021": {
+          "word": "Programming",
           "word": "Programming"
         },
         "behavior/express/2021": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "conditionals/express/2021": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "function/express/2021": {
+          "word": "Функција",
           "word": "Функција"
         },
         "variable/express/2021": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "define/express/2021": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "debugging/pre-express/2021": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/pre-express/2021": {
+          "word": "Programming",
           "word": "Programming"
         },
         "input/csd/2022": {
+          "word": "Унос",
           "word": "Унос"
         },
         "copyright/csd/2022": {
+          "word": "Ауторска права",
           "word": "Ауторска права"
         },
         "debugging/csd/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "variable/csd/2022": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "conditionals/csd/2022": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "abstraction/csd/2022": {
+          "word": "Апстракција",
           "word": "Апстракција"
         },
         "function/csd/2022": {
+          "word": "Функција",
           "word": "Функција"
         },
         "debugging/coursea/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursea/2022": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/courseb/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/courseb/2022": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/coursec/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursec/2022": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/coursed/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursed/2022": {
+          "word": "Programming",
           "word": "Programming"
         },
         "conditionals/coursed/2022": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "behavior/coursee/2022": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "function/coursee/2022": {
+          "word": "Функција",
           "word": "Функција"
         },
         "conditionals/coursee/2022": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "copyright/coursee/2022": {
+          "word": "Ауторска права",
           "word": "Ауторска права"
         },
         "define/coursee/2022": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "behavior/coursef/2022": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "variable/coursef/2022": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "input/coursef/2022": {
+          "word": "Унос",
           "word": "Унос"
         },
         "internet/coursef/2022": {
+          "word": "Интернет",
           "word": "Интернет"
         },
         "define/coursef/2022": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "debugging/express/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/express/2022": {
+          "word": "Programming",
           "word": "Programming"
         },
         "behavior/express/2022": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "conditionals/express/2022": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "function/express/2022": {
+          "word": "Функција",
           "word": "Функција"
         },
         "variable/express/2022": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "define/express/2022": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "debugging/pre-express/2022": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/pre-express/2022": {
+          "word": "Programming",
           "word": "Programming"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kod",
           "word": "Kod"
         },
         "behavior/csc-adaptations/2023": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kod",
           "word": "Kod"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kod",
           "word": "Kod"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Уметник",
           "word": "Уметник"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Коментари",
           "word": "Коментари"
         },
         "code/poetry/2023": {
+          "word": "Kod",
           "word": "Kod"
         },
         "input/csd/2023": {
+          "word": "Унос",
           "word": "Унос"
         },
         "copyright/csd/2023": {
+          "word": "Ауторска права",
           "word": "Ауторска права"
         },
         "debugging/csd/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "variable/csd/2023": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "conditionals/csd/2023": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "abstraction/csd/2023": {
+          "word": "Апстракција",
           "word": "Апстракција"
         },
         "function/csd/2023": {
+          "word": "Функција",
           "word": "Функција"
         },
         "debugging/coursea/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursea/2023": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/courseb/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/courseb/2023": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/coursec/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursec/2023": {
+          "word": "Programming",
           "word": "Programming"
         },
         "debugging/coursed/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/coursed/2023": {
+          "word": "Programming",
           "word": "Programming"
         },
         "conditionals/coursed/2023": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "behavior/coursee/2023": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "function/coursee/2023": {
+          "word": "Функција",
           "word": "Функција"
         },
         "conditionals/coursee/2023": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "copyright/coursee/2023": {
+          "word": "Ауторска права",
           "word": "Ауторска права"
         },
         "define/coursee/2023": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "behavior/coursef/2023": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "variable/coursef/2023": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "input/coursef/2023": {
+          "word": "Унос",
           "word": "Унос"
         },
         "internet/coursef/2023": {
+          "word": "Интернет",
           "word": "Интернет"
         },
         "define/coursef/2023": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "debugging/express/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/express/2023": {
+          "word": "Programming",
           "word": "Programming"
         },
         "behavior/express/2023": {
+          "word": "Понашање",
           "word": "Понашање"
         },
         "conditionals/express/2023": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "function/express/2023": {
+          "word": "Функција",
           "word": "Функција"
         },
         "variable/express/2023": {
+          "word": "Променљива",
           "word": "Променљива"
         },
         "define/express/2023": {
+          "word": "Дефинисати",
           "word": "Дефинисати"
         },
         "debugging/pre-express/2023": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "programming/pre-express/2023": {
+          "word": "Programming",
           "word": "Programming"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Кондиционали",
           "word": "Кондиционали"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "loops/aquatic/unversioned": {
+          "word": "Петље",
           "word": "Петље"
         },
         "code/artist/unversioned": {
+          "word": "Kod",
           "word": "Kod"
         },
         "debugging/artist/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/basketball/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/flappy/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/frozen/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/gumball/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/hero/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "function/hero/unversioned": {
+          "word": "Функција",
           "word": "Функција"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/iceage/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/infinity/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/mc/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/playlab/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "code/poem-art/2021": {
           "word": "Kod"
         },
         "code/sports/unversioned": {
+          "word": "Kod",
           "word": "Kod"
         },
         "debugging/sports/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/starwars/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Отклањање грешака",
           "word": "Отклањање грешака"
         }
       }

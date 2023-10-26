@@ -39,6 +39,7 @@
           "name": "Algorithms: Tangrams"
         },
         "express-2017/Building a Foundation": {
+          "name": "Изградња темеља",
           "name": "Изградња темеља"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -276,168 +277,223 @@
           "name": "Интернет"
         },
         "csd3-2021/Variables": {
+          "name": "Променљиве",
           "name": "Променљиве"
         },
         "csd3-2021/Text": {
+          "name": "текст",
           "name": "текст"
         },
         "csd3-2021/Conditionals": {
+          "name": "Кондиционали",
           "name": "Кондиционали"
         },
         "csd3-2021/Velocity": {
+          "name": "Брзина",
           "name": "Брзина"
         },
         "csd3-2021/Functions": {
+          "name": "Функције",
           "name": "Функције"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Функције са параметрима",
           "name": "Функције са параметрима"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Веселе мапе",
           "name": "Веселе мапе"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Помери га, помери",
           "name": "Помери га, помери"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Запетљанције",
           "name": "Запетљанције"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Велики догађај",
           "name": "Велики догађај"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Бинарне наруквице",
           "name": "Бинарне наруквице"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Графиконско - Папирно Програмирање",
           "name": "Графиконско - Папирно Програмирање"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Услови са картама",
           "name": "Услови са картама"
         },
         "coursef-2021/Internet": {
+          "name": "Интернет",
           "name": "Интернет"
         },
         "csd3-2022/Variables": {
+          "name": "Променљиве",
           "name": "Променљиве"
         },
         "csd3-2022/Text": {
+          "name": "текст",
           "name": "текст"
         },
         "csd3-2022/Conditionals": {
+          "name": "Кондиционали",
           "name": "Кондиционали"
         },
         "csd3-2022/Velocity": {
+          "name": "Брзина",
           "name": "Брзина"
         },
         "csd3-2022/Functions": {
+          "name": "Функције",
           "name": "Функције"
         },
         "csd6-2022/Functions": {
+          "name": "Функције",
           "name": "Функције"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Веселе мапе",
           "name": "Веселе мапе"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Помери га, помери",
           "name": "Помери га, помери"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Запетљанције",
           "name": "Запетљанције"
         },
         "coursec-2022/The Big Event": {
+          "name": "Велики догађај",
           "name": "Велики догађај"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Бинарне наруквице",
           "name": "Бинарне наруквице"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Графиконско - Папирно Програмирање",
           "name": "Графиконско - Папирно Програмирање"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Услови са картама",
           "name": "Услови са картама"
         },
         "coursef-2022/The Internet": {
+          "name": "Интернет",
           "name": "Интернет"
         },
         "csd3-2023/Variables": {
+          "name": "Променљиве",
           "name": "Променљиве"
         },
         "csd3-2023/Text": {
+          "name": "текст",
           "name": "текст"
         },
         "csd3-2023/Conditionals": {
+          "name": "Кондиционали",
           "name": "Кондиционали"
         },
         "csd3-2023/Velocity": {
+          "name": "Брзина",
           "name": "Брзина"
         },
         "csd3-2023/Functions": {
+          "name": "Функције",
           "name": "Функције"
         },
         "csd6a-2023/Functions": {
+          "name": "Функције",
           "name": "Функције"
         },
         "csd6b-2023/Functions": {
+          "name": "Функције",
           "name": "Функције"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Веселе мапе",
           "name": "Веселе мапе"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Помери га, помери",
           "name": "Помери га, помери"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Запетљанције",
           "name": "Запетљанције"
         },
         "coursec-2023/The Big Event": {
+          "name": "Велики догађај",
           "name": "Велики догађај"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Бинарне наруквице",
           "name": "Бинарне наруквице"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Графиконско - Папирно Програмирање",
           "name": "Графиконско - Папирно Програмирање"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Relay programming",
           "name": "Relay programming"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Услови са картама",
           "name": "Услови са картама"
         },
         "coursef-2023/The Internet": {
+          "name": "Интернет",
           "name": "Интернет"
         },
         "artist/Artist": {
+          "name": "Уметник",
           "name": "Уметник"
         },
         "frozen/Artist": {
+          "name": "Програмирај са Аном и Елзом",
           "name": "Програмирај са Аном и Елзом"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Играоница",
           "name": "Gumball Играоница"
         },
         "hourofcode/Maze": {
+          "name": "Лавиринт",
           "name": "Лавиринт"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ледено доба - Играоница",
           "name": "Ледено доба - Играоница"
         },
         "infinity/Infinity": {
+          "name": "Дизнијева Играоница",
           "name": "Дизнијева Играоница"
         },
         "mc/Hour of Code 2015": {
+          "name": "Мајнкрафт час програмирања",
           "name": "Мајнкрафт час програмирања"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Мајнкрафт дизајнер - час програмирања",
           "name": "Мајнкрафт дизајнер - час програмирања"
         },
         "playlab/Play Lab": {
+          "name": "Играоница",
           "name": "Играоница"
         },
         "allthethings/Jigsaw": {
