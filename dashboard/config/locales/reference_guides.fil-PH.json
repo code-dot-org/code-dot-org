@@ -3,114 +3,151 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "Mga Event sa Accelerometer",
           "display_name": "Mga Event sa Accelerometer"
         },
         "csd-2022/app-lab": {
+          "display_name": "App na Lab",
           "display_name": "App na Lab"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/arrays": {
+          "display_name": "Mga Array",
           "display_name": "Mga Array"
         },
         "csd-2022/board-events": {
+          "display_name": "Mga Pangyayari sa Board",
           "display_name": "Mga Pangyayari sa Board"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Pangkalahatang-ideya ng Circuit Playground",
           "display_name": "Pangkalahatang-ideya ng Circuit Playground"
         },
         "csd-2022/classes": {
+          "display_name": "Mga Klase",
           "display_name": "Mga Klase"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Pagtukoy sa mga Banggaan",
           "display_name": "Pagtukoy sa mga Banggaan"
         },
         "csd-2022/css-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/design-mode": {
+          "display_name": "Mode ng Pag-disenyo",
           "display_name": "Mode ng Pag-disenyo"
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "Pagdidisenyo ng mga Screen gamit ang Code",
           "display_name": "Pagdidisenyo ng mga Screen gamit ang Code"
         },
         "csd-2022/for-loops": {
+          "display_name": "For Loops",
           "display_name": "For Loops"
         },
         "csd-2022/functions": {
+          "display_name": "Mga function",
           "display_name": "Mga function"
         },
         "csd-2022/game-lab": {
+          "display_name": "Game Lab",
           "display_name": "Game Lab"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/html-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/images-in-html": {
+          "display_name": "Mga Larawan sa HTML",
           "display_name": "Mga Larawan sa HTML"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Introduksiyon sa AI Lab",
           "display_name": "Introduksiyon sa AI Lab"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/lists": {
+          "display_name": "Mga listahan",
           "display_name": "Mga listahan"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker Toolkit",
           "display_name": "Maker Toolkit"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Mga model card sa Ai Lab",
           "display_name": "Mga model card sa Ai Lab"
         },
         "csd-2022/other": {
+          "display_name": "Iba",
           "display_name": "Iba"
         },
         "csd-2022/other-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Buod",
           "display_name": "Buod"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Mga Tala ng Laro",
           "display_name": "Mga Tala ng Laro"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "Ang Proseso ng Pagtuklas ng Problema",
           "display_name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "Ang Proseso ng Pagtuklas ng Problema",
           "display_name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "csd-2022/sprites": {
+          "display_name": "Mga Sprites",
           "display_name": "Mga Sprites"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "Ang Draw na Loop",
           "display_name": "Ang Draw na Loop"
         },
         "csd-2022/variables": {
+          "display_name": "Mga variable",
           "display_name": "Mga variable"
         },
         "csd-2022/velocity": {
+          "display_name": "Belosidad",
           "display_name": "Belosidad"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Bilis at ang Counter Pattern",
           "display_name": "Bilis at ang Counter Pattern"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web Lab",
           "display_name": "Web Lab"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
