@@ -118,9 +118,11 @@ module TextToSpeech
     TTSSafeRenderer.render(text)
   end
 
-  def tts_upload_to_s3(text, context = nil)
-    filename = tts_path(text)
-    TextToSpeech.tts_upload_to_s3(text, filename, context)
+  def tts_upload_to_s3(text, context = nil, locale: I18n.locale)
+    I18n.with_locale(locale) do
+      filename = tts_path(text)
+      TextToSpeech.tts_upload_to_s3(text, filename, context)
+    end
   end
 
   # Returns the URL where the TTS audio file can be downloaded for the given text and locale
@@ -144,13 +146,13 @@ module TextToSpeech
     (changed || update_all) && Policies::LevelFiles.write_to_file?(self) && published
   end
 
-  def tts_short_instructions_text
-    if I18n.locale == I18n.default_locale
-      # We still have to try localized instructions here for the
-      # levels.js-defined levels
-      tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || try(:localized_short_instructions)) || ""
-    else
-      TextToSpeech.sanitize(try(:localized_short_instructions) || "")
+  def tts_short_instructions_text(locale: I18n.locale)
+    I18n.with_locale(locale) do
+      localized_short_instructions = try(:localized_short_instructions) || ''
+      return TextToSpeech.sanitize(localized_short_instructions) unless I18n.locale == I18n.default_locale
+
+      # We still have to try localized instructions here for the levels.js-defined levels
+      tts_short_instructions_override || TextToSpeech.sanitize(short_instructions || localized_short_instructions) || ''
     end
   end
 
@@ -159,18 +161,20 @@ module TextToSpeech
     return tts_should_update(relevant_property, update_all)
   end
 
-  def tts_long_instructions_text
+  def tts_long_instructions_text(locale: I18n.locale)
     # Instructions content priority:
     #
     # 1. manual override if it exists (English only)
     # 2. contained level content if it exists
     # 3. instructions content
-    if tts_long_instructions_override && I18n.locale == I18n.default_locale
-      tts_long_instructions_override
-    elsif contained_level_text = tts_for_contained_level
-      TextToSpeech.sanitize(contained_level_text)
-    else
-      TextToSpeech.sanitize(try(:localized_long_instructions) || long_instructions || "")
+    I18n.with_locale(locale) do
+      if tts_long_instructions_override && I18n.locale == I18n.default_locale
+        tts_long_instructions_override
+      elsif contained_level_text = tts_for_contained_level
+        TextToSpeech.sanitize(contained_level_text)
+      else
+        TextToSpeech.sanitize(try(:localized_long_instructions) || long_instructions || "")
+      end
     end
   end
 
