@@ -3,114 +3,151 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "Γεγονότα Επιταχυνσιόμετρου",
           "display_name": "Γεγονότα Επιταχυνσιόμετρου"
         },
         "csd-2022/app-lab": {
+          "display_name": "Εργαστήριο εφαρμογών",
           "display_name": "Εργαστήριο εφαρμογών"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/board-events": {
+          "display_name": "Γεγονότα Πίνακα",
           "display_name": "Γεγονότα Πίνακα"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Επισκόπηση Παιδότοπου",
           "display_name": "Επισκόπηση Παιδότοπου"
         },
         "csd-2022/css-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/design-mode": {
+          "display_name": "Κατάσταση Σχεδίασης",
           "display_name": "Κατάσταση Σχεδίασης"
         },
         "csd-2022/for-loops": {
+          "display_name": "Βρόχοι Για",
           "display_name": "Βρόχοι Για"
         },
         "csd-2022/functions": {
+          "display_name": "Συναρτήσεις",
           "display_name": "Συναρτήσεις"
         },
         "csd-2022/game-lab": {
+          "display_name": "Game Lab",
           "display_name": "Game Lab"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Κεφαλίδες και Παράγραφοι",
           "display_name": "Κεφαλίδες και Παράγραφοι"
         },
         "csd-2022/html-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "Υπερσύνδεσμοι",
           "display_name": "Υπερσύνδεσμοι"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "display_name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/layout-properties": {
+          "display_name": "Ιδιότητες Διάταξης",
           "display_name": "Ιδιότητες Διάταξης"
         },
         "csd-2022/lists": {
+          "display_name": "Λίστες",
           "display_name": "Λίστες"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Εργαλειοθήκη Maker",
           "display_name": "Εργαλειοθήκη Maker"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης",
           "display_name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης"
         },
         "csd-2022/naming-variables": {
+          "display_name": "Ορίζοντας Μεταβλητές",
           "display_name": "Ορίζοντας Μεταβλητές"
         },
         "csd-2022/other": {
+          "display_name": "Άλλα",
           "display_name": "Άλλα"
         },
         "csd-2022/other-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Επισκόπηση",
           "display_name": "Επισκόπηση"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Παίζοντας Νότες",
           "display_name": "Παίζοντας Νότες"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "Η Διαδικασία Επίλυσης Προβλημάτων",
           "display_name": "Η Διαδικασία Επίλυσης Προβλημάτων"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "Η Διαδικασία Επίλυσης Προβλημάτων",
           "display_name": "Η Διαδικασία Επίλυσης Προβλημάτων"
         },
         "csd-2022/random-numbers": {
+          "display_name": "Τυχαίοι αριθμοί",
           "display_name": "Τυχαίοι αριθμοί"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Ιδιότητες Χαρακτήρα",
           "display_name": "Ιδιότητες Χαρακτήρα"
         },
         "csd-2022/sprites": {
+          "display_name": "Χαρακτήρας",
           "display_name": "Χαρακτήρας"
         },
         "csd-2022/variables": {
+          "display_name": "Μεταβλητές",
           "display_name": "Μεταβλητές"
         },
         "csd-2022/velocity": {
+          "display_name": "Ταχύτητα",
           "display_name": "Ταχύτητα"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Ταχύτητα και το μοτίβο αντίθετης φοράς",
           "display_name": "Ταχύτητα και το μοτίβο αντίθετης φοράς"
         },
         "csd-2022/web-lab": {
+          "display_name": "Εργαστήρι Ιστού",
           "display_name": "Εργαστήρι Ιστού"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
