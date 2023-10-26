@@ -45,12 +45,15 @@
           "name": "Algoritmer: Tangrams"
         },
         "express-2017/Introduction": {
+          "name": "Introduktion",
           "name": "Introduktion"
         },
         "express-2017/Building a Foundation": {
+          "name": "Opbygge et fundament",
           "name": "Opbygge et fundament"
         },
         "express-2017/Nested Loops": {
+          "name": "Indlejret Løkker",
           "name": "Indlejret Løkker"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -339,219 +342,291 @@
           "name": "Dance Party"
         },
         "csd3-2021/Variables": {
+          "name": "Variabler",
           "name": "Variabler"
         },
         "csd3-2021/Sprites": {
+          "name": "figure",
           "name": "figure"
         },
         "csd3-2021/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2021/Conditionals": {
+          "name": "Betingelser",
           "name": "Betingelser"
         },
         "csd3-2021/Functions": {
+          "name": "Funktioner",
           "name": "Funktioner"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funktioner med parametre",
           "name": "Funktioner med parametre"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Glade Kort",
           "name": "Glade Kort"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Flyt det, flyt det",
           "name": "Flyt det, flyt det"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Blive Svimmel",
           "name": "Blive Svimmel"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Den store begivenhed",
           "name": "Den store begivenhed"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binære armbånd",
           "name": "Binære armbånd"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programmering på millimeterpapir",
           "name": "Programmering på millimeterpapir"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Stafet-programmering",
           "name": "Stafet-programmering"
         },
         "coursed-2021/Dance Party": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Betingelser med kortspil",
           "name": "Betingelser med kortspil"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Sangskrivning",
           "name": "Sangskrivning"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "For loop sjov",
           "name": "For loop sjov"
         },
         "coursef-2021/lesson-5": {
+          "name": "Udbrud",
           "name": "Udbrud"
         },
         "coursef-2021/Internet": {
+          "name": "Internettet",
           "name": "Internettet"
         },
         "express-2021/lesson-1": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "csd3-2022/Variables": {
+          "name": "Variabler",
           "name": "Variabler"
         },
         "csd3-2022/Sprites": {
+          "name": "figure",
           "name": "figure"
         },
         "csd3-2022/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2022/Conditionals": {
+          "name": "Betingelser",
           "name": "Betingelser"
         },
         "csd3-2022/Functions": {
+          "name": "Funktioner",
           "name": "Funktioner"
         },
         "csd6-2022/Functions": {
+          "name": "Funktioner",
           "name": "Funktioner"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Glade Kort",
           "name": "Glade Kort"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Flyt det, flyt det",
           "name": "Flyt det, flyt det"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Blive Svimmel",
           "name": "Blive Svimmel"
         },
         "coursec-2022/The Big Event": {
+          "name": "Den store begivenhed",
           "name": "Den store begivenhed"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binære armbånd",
           "name": "Binære armbånd"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Programmering på millimeterpapir",
           "name": "Programmering på millimeterpapir"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Stafet-programmering",
           "name": "Stafet-programmering"
         },
         "coursed-2022/Dance Party": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Betingelser med kortspil",
           "name": "Betingelser med kortspil"
         },
         "coursee-2022/Songwriting": {
+          "name": "Sangskrivning",
           "name": "Sangskrivning"
         },
         "coursef-2022/Outbreak": {
+          "name": "Udbrud",
           "name": "Udbrud"
         },
         "coursef-2022/The Internet": {
+          "name": "Internettet",
           "name": "Internettet"
         },
         "express-2022/Dance Party": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "csd3-2023/Variables": {
+          "name": "Variabler",
           "name": "Variabler"
         },
         "csd3-2023/Sprites": {
+          "name": "figure",
           "name": "figure"
         },
         "csd3-2023/Text": {
+          "name": "Tekst",
           "name": "Tekst"
         },
         "csd3-2023/Conditionals": {
+          "name": "Betingelser",
           "name": "Betingelser"
         },
         "csd3-2023/Functions": {
+          "name": "Funktioner",
           "name": "Funktioner"
         },
         "csd6a-2023/Functions": {
+          "name": "Funktioner",
           "name": "Funktioner"
         },
         "csd6b-2023/Functions": {
+          "name": "Funktioner",
           "name": "Funktioner"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Glade Kort",
           "name": "Glade Kort"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Flyt det, flyt det",
           "name": "Flyt det, flyt det"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Blive Svimmel",
           "name": "Blive Svimmel"
         },
         "coursec-2023/The Big Event": {
+          "name": "Den store begivenhed",
           "name": "Den store begivenhed"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binære armbånd",
           "name": "Binære armbånd"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Programmering på millimeterpapir",
           "name": "Programmering på millimeterpapir"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Stafet-programmering",
           "name": "Stafet-programmering"
         },
         "coursed-2023/Dance Party": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Betingelser med kortspil",
           "name": "Betingelser med kortspil"
         },
         "coursee-2023/Songwriting": {
+          "name": "Sangskrivning",
           "name": "Sangskrivning"
         },
         "coursef-2023/Outbreak": {
+          "name": "Udbrud",
           "name": "Udbrud"
         },
         "coursef-2023/The Internet": {
+          "name": "Internettet",
           "name": "Internettet"
         },
         "express-2023/Dance Party": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "aquatic/Aquatic": {
+          "name": "Minecraft: Akvatisk rejse",
           "name": "Minecraft: Akvatisk rejse"
         },
         "artist/Artist": {
+          "name": "Kunstner",
           "name": "Kunstner"
         },
         "dance-2019/Dance Party": {
+          "name": "Dance Party",
           "name": "Dance Party"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kode",
           "name": "Flappy kode"
         },
         "frozen/Artist": {
+          "name": "Kod med Anna og Elsa",
           "name": "Kod med Anna og Elsa"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab",
           "name": "Gumball Play Lab"
         },
         "hoc-encryption/Simple Encryption": {
+          "name": "Enkel kryptering",
           "name": "Enkel kryptering"
         },
         "hourofcode/Maze": {
+          "name": "Labyrint",
           "name": "Labyrint"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab",
           "name": "Ice Age Play Lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab",
           "name": "Disney Infinity Play Lab"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code",
           "name": "Minecraft Hour of Code"
         },
         "outbreak/Outbreak": {
+          "name": "Kodning af en simulation",
           "name": "Kodning af en simulation"
         },
         "playlab/Play Lab": {
+          "name": "Play Lab",
           "name": "Play Lab"
         },
         "allthethings/Jigsaw": {

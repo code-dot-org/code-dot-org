@@ -3,423 +3,562 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "input",
           "word": "input"
         },
         "copyright/csd/2021": {
+          "word": "Copyright",
           "word": "Copyright"
         },
         "debugging/csd/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "variable/csd/2021": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "conditionals/csd/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "abstraction/csd/2021": {
+          "word": "Abstraktion",
           "word": "Abstraktion"
         },
         "function/csd/2021": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "debugging/coursea/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "drop/coursea/2021": {
+          "word": "Slip",
           "word": "Slip"
         },
         "programming/coursea/2021": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "debugging/courseb/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "drop/courseb/2021": {
+          "word": "Slip",
           "word": "Slip"
         },
         "programming/courseb/2021": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "debugging/coursec/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/coursec/2021": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "binary/coursec/2021": {
+          "word": "Binære",
           "word": "Binære"
         },
         "debugging/coursed/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/coursed/2021": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "conditionals/coursed/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "copyright/coursee/2021": {
+          "word": "Copyright",
           "word": "Copyright"
         },
         "function/coursee/2021": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "conditionals/coursee/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "define/coursee/2021": {
+          "word": "Definer",
           "word": "Definer"
         },
         "variable/coursef/2021": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "input/coursef/2021": {
+          "word": "input",
           "word": "input"
         },
         "internet/coursef/2021": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2021": {
+          "word": "Definer",
           "word": "Definer"
         },
         "debugging/express/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/express/2021": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "conditionals/express/2021": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/express/2021": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "variable/express/2021": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "define/express/2021": {
+          "word": "Definer",
           "word": "Definer"
         },
         "drop/pre-express/2021": {
+          "word": "Slip",
           "word": "Slip"
         },
         "debugging/pre-express/2021": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/pre-express/2021": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "input/csd/2022": {
+          "word": "input",
           "word": "input"
         },
         "copyright/csd/2022": {
+          "word": "Copyright",
           "word": "Copyright"
         },
         "debugging/csd/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "variable/csd/2022": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "conditionals/csd/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "abstraction/csd/2022": {
+          "word": "Abstraktion",
           "word": "Abstraktion"
         },
         "function/csd/2022": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "debugging/coursea/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "drop/coursea/2022": {
+          "word": "Slip",
           "word": "Slip"
         },
         "programming/coursea/2022": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "debugging/courseb/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "drop/courseb/2022": {
+          "word": "Slip",
           "word": "Slip"
         },
         "programming/courseb/2022": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "debugging/coursec/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/coursec/2022": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "binary/coursec/2022": {
+          "word": "Binære",
           "word": "Binære"
         },
         "debugging/coursed/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/coursed/2022": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "conditionals/coursed/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/coursee/2022": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "conditionals/coursee/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "copyright/coursee/2022": {
+          "word": "Copyright",
           "word": "Copyright"
         },
         "define/coursee/2022": {
+          "word": "Definer",
           "word": "Definer"
         },
         "variable/coursef/2022": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "input/coursef/2022": {
+          "word": "input",
           "word": "input"
         },
         "internet/coursef/2022": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2022": {
+          "word": "Definer",
           "word": "Definer"
         },
         "debugging/express/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/express/2022": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "conditionals/express/2022": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/express/2022": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "variable/express/2022": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "define/express/2022": {
+          "word": "Definer",
           "word": "Definer"
         },
         "drop/pre-express/2022": {
+          "word": "Slip",
           "word": "Slip"
         },
         "debugging/pre-express/2022": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/pre-express/2022": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "map/csc-mappinglandmarks/2023": {
+          "word": "Kort",
           "word": "Kort"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Kunstner",
           "word": "Kunstner"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Kommentarer",
           "word": "Kommentarer"
         },
         "code/poetry/2023": {
+          "word": "Kode",
           "word": "Kode"
         },
         "input/csd/2023": {
+          "word": "input",
           "word": "input"
         },
         "copyright/csd/2023": {
+          "word": "Copyright",
           "word": "Copyright"
         },
         "debugging/csd/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "variable/csd/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "conditionals/csd/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "abstraction/csd/2023": {
+          "word": "Abstraktion",
           "word": "Abstraktion"
         },
         "function/csd/2023": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "debugging/coursea/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "drop/coursea/2023": {
+          "word": "Slip",
           "word": "Slip"
         },
         "programming/coursea/2023": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "debugging/courseb/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "drop/courseb/2023": {
+          "word": "Slip",
           "word": "Slip"
         },
         "programming/courseb/2023": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "debugging/coursec/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/coursec/2023": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "binary/coursec/2023": {
+          "word": "Binære",
           "word": "Binære"
         },
         "debugging/coursed/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/coursed/2023": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "conditionals/coursed/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/coursee/2023": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "conditionals/coursee/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "copyright/coursee/2023": {
+          "word": "Copyright",
           "word": "Copyright"
         },
         "define/coursee/2023": {
+          "word": "Definer",
           "word": "Definer"
         },
         "variable/coursef/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "input/coursef/2023": {
+          "word": "input",
           "word": "input"
         },
         "internet/coursef/2023": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2023": {
+          "word": "Definer",
           "word": "Definer"
         },
         "debugging/express/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/express/2023": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "conditionals/express/2023": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "function/express/2023": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "variable/express/2023": {
+          "word": "Variabel",
           "word": "Variabel"
         },
         "define/express/2023": {
+          "word": "Definer",
           "word": "Definer"
         },
         "drop/pre-express/2023": {
+          "word": "Slip",
           "word": "Slip"
         },
         "debugging/pre-express/2023": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "programming/pre-express/2023": {
+          "word": "Programmering",
           "word": "Programmering"
         },
         "network/how-ai-works/2023": {
+          "word": "Netværk",
           "word": "Netværk"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Betingelser",
           "word": "Betingelser"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "loops/aquatic/unversioned": {
+          "word": "Løkker",
           "word": "Løkker"
         },
         "code/artist/unversioned": {
+          "word": "Kode",
           "word": "Kode"
         },
         "debugging/artist/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/basketball/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/flappy/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/frozen/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/gumball/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/hero/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "function/hero/unversioned": {
+          "word": "Funktion",
           "word": "Funktion"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/iceage/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/infinity/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/mc/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/playlab/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "code/poem-art/2021": {
           "word": "Kode"
         },
         "code/sports/unversioned": {
+          "word": "Kode",
           "word": "Kode"
         },
         "debugging/sports/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/starwars/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Fejlfinding",
           "word": "Fejlfinding"
         }
       }
