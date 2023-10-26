@@ -183,7 +183,7 @@ class RubricsControllerTest < ActionController::TestCase
       understanding: 1
     )
     # TODO: remove this placeholders
-    create :old_learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: teacher
+    create :old_learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, requester: @teacher
 
     get :get_ai_evaluations, params: {
       id: learning_goal.rubric.id,
