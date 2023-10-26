@@ -28,6 +28,7 @@ class SectionsController < ApplicationController
     @section['primaryInstructor'] = {
       email: existing_section.teacher.email,
       name: existing_section.teacher.name,
+      # TODO: remove if not needed
       isPrimary: current_user.id == existing_section.teacher.id,
     }
 

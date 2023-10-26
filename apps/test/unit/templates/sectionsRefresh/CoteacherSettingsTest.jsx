@@ -1,12 +1,33 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/CoteacherSettings';
 import sinon from 'sinon';
 
+const testPrimaryTeacher = {
+  name: 'T-rex',
+  email: 'tyrannosaurus.rex@code.org',
+  isPrimary: 'true',
+};
+
 const testSectionInstructors = [
-  {instructorName: 'Allosaurus', instructorEmail: 'allosaurus@code.org'},
-  {instructorName: 'Brachiosaurus', instructorEmail: 'brachiosaurus@code.org'},
+  {
+    instructorName: 'T-rex',
+    instructorEmail: 'tyrannosaurus.rex@code.org',
+    status: 'active',
+    id: 1,
+  },
+  {
+    instructorName: 'Allosaurus',
+    instructorEmail: 'allosaurus@code.org',
+    status: 'active',
+    id: 2,
+  },
+  {
+    instructorEmail: 'brachiosaurus@code.org',
+    status: 'invited',
+    id: 3,
+  },
 ];
 
 describe('CoteacherSettings', () => {
@@ -14,21 +35,23 @@ describe('CoteacherSettings', () => {
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
-        addCoteacher={() => {}}
+        setCoteachersToAdd={() => {}}
         coteachersToAdd={[]}
+        primaryInstructor={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
     expect(wrapper.find('Figcaption').props().children).to.include(
-      '1/5 co-teachers added'
+      '2/5 co-teachers added'
     );
   });
   it('renders count if current sectionInstructors is null', () => {
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={null}
-        addCoteacher={() => {}}
+        setCoteachersToAdd={() => {}}
         coteachersToAdd={[]}
+        primaryInstructor={null}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
@@ -40,37 +63,39 @@ describe('CoteacherSettings', () => {
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
-        addCoteacher={() => {}}
+        setCoteachersToAdd={() => {}}
         coteachersToAdd={['coelophysis@code.org']}
+        primaryInstructor={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
     expect(wrapper.find('Figcaption').props().children).to.include(
-      '2/5 co-teachers added'
+      '3/5 co-teachers added'
     );
   });
   it('disables add button when max coteachers reached', () => {
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
-        addCoteacher={() => {}}
+        setCoteachersToAdd={() => {}}
         coteachersToAdd={[
           'coelophysis@code.org',
           'diplodocus@code.org',
           'eoraptor@code.org',
-          'fylax@code.org',
         ]}
+        primaryInstructor={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
   it('shows error when adding invalid email', () => {
-    const addCoteacherSpy = sinon.spy();
+    const setCoteachersToAddSpy = sinon.spy();
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
-        addCoteacher={addCoteacherSpy}
+        setCoteachersToAdd={setCoteachersToAddSpy}
         coteachersToAdd={[]}
+        primaryInstructor={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
@@ -88,15 +113,19 @@ describe('CoteacherSettings', () => {
     );
     const icon = wrapper.find('FontAwesome').first();
     expect(icon.props().icon).to.include('info-circle');
-    expect(addCoteacherSpy).to.have.not.been.called;
+    expect(setCoteachersToAddSpy).to.have.not.been.called;
   });
   it('adds coteacher when valid email is added', () => {
-    const addCoteacherSpy = sinon.spy();
+    let coteachersToAdd = ['coelophysis@code.org'];
+    const setCoteachersToAdd = func =>
+      (coteachersToAdd = func(coteachersToAdd));
+
     const wrapper = shallow(
       <CoteacherSettings
         sectionInstructors={testSectionInstructors}
-        addCoteacher={addCoteacherSpy}
-        coteachersToAdd={[]}
+        setCoteachersToAdd={setCoteachersToAdd}
+        coteachersToAdd={coteachersToAdd}
+        primaryInstructor={testPrimaryTeacher}
       />
     );
     wrapper
@@ -105,7 +134,51 @@ describe('CoteacherSettings', () => {
     wrapper
       .find('Button[id="add-coteacher"]')
       .simulate('click', {preventDefault: () => {}});
-    expect(addCoteacherSpy).to.have.been.calledOnce;
-    expect(addCoteacherSpy).to.have.been.calledWith('new-email@code.org');
+    expect(coteachersToAdd).to.deep.equal([
+      'new-email@code.org',
+      'coelophysis@code.org',
+    ]);
+  });
+  it('shows coteacher table and sorts instructors', () => {
+    const wrapper = mount(
+      <CoteacherSettings
+        sectionInstructors={testSectionInstructors}
+        setCoteachersToAdd={() => {}}
+        coteachersToAdd={['coelophysis@code.org']}
+        primaryInstructor={testPrimaryTeacher}
+      />
+    );
+    expect(wrapper.find('tr')).to.have.lengthOf(3);
+    const cells = wrapper.find('td');
+    expect(cells).to.have.lengthOf(9);
+    expect(cells.at(0).text()).to.include('coelophysis@code.org');
+    expect(cells.at(1).text()).to.include('PENDING');
+    expect(cells.at(3).text()).to.not.include('Brachiosaurus');
+    expect(cells.at(3).text()).to.include('brachiosaurus@code.org');
+    expect(cells.at(4).text()).to.include('PENDING');
+    expect(cells.at(6).text()).to.include('Allosaurus');
+    expect(cells.at(6).text()).to.include('allosaurus@code.org');
+    expect(cells.at(7).text()).to.include('ACCEPTED');
+  });
+  it('clicking remove opens dialog', () => {
+    const wrapper = mount(
+      <CoteacherSettings
+        sectionInstructors={testSectionInstructors}
+        setCoteachersToAdd={() => {}}
+        coteachersToAdd={['coelophysis@code.org']}
+        primaryInstructor={testPrimaryTeacher}
+      />
+    );
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    const cells = wrapper.find('td');
+    expect(cells).to.have.lengthOf(9);
+    const button = cells.at(2).find('button');
+    button.at(0).simulate('click', {preventDefault: () => {}});
+    console.log('up', wrapper.debug());
+    wrapper.update();
+    const dialog = wrapper.find('AccessibleDialog');
+    expect(dialog).to.exist;
+    expect(dialog.find('Button')).to.have.lengthOf(2);
+    expect(dialog.text()).to.include('Remove coelophysis@code.org');
   });
 });

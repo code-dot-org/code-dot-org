@@ -13,6 +13,7 @@ import AccessibleDialog from '../AccessibleDialog';
 
 export default function CoteacherSettings({
   sectionInstructors,
+  //TODO before merge: change name to whatever Molly says
   primaryInstructor,
   setCoteachersToAdd,
   coteachersToAdd,
@@ -46,10 +47,10 @@ export default function CoteacherSettings({
     return unfiltered
       .filter(
         instructor =>
-          (!primaryInstructor ||
-            instructor.instructorEmail !== primaryInstructor.email) &&
-          !removedCoteacherIds.includes(instructor.id)
+          !primaryInstructor ||
+          instructor.instructorEmail !== primaryInstructor.email
       )
+      .filter(instructor => !removedCoteacherIds.includes(instructor.id))
       .sort((a, b) => statusSortValue(a) - statusSortValue(b));
   }, [
     sectionInstructors,
@@ -109,13 +110,13 @@ export default function CoteacherSettings({
 
   const statusPill = status => {
     if (!status || status === 'invited') {
-      return pill('PENDING', styles.tablePending, 'ellipsis');
+      return pill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
     } else if (status === 'active') {
-      return pill('ACCEPTED', styles.tableActive, 'check');
+      return pill(i18n.coteacherAccepted(), styles.tableActive, 'check');
     } else if (status === 'declined') {
-      return pill('DECLINED', styles.tableDeclined, 'xmark');
+      return pill(i18n.coteacherDeclined(), styles.tableDeclined, 'xmark');
     } else {
-      return pill('ERROR', styles.tableError, 'xmark');
+      return pill(i18n.coteacherError(), styles.tableError, 'xmark');
     }
   };
 
@@ -152,16 +153,10 @@ export default function CoteacherSettings({
 
   const removeCoteacher = coteacher => e => {
     e.preventDefault();
-    console.log(coteacher);
     if (!coteacher.id) {
       // remove from coteachersToAdd
       const additions = coteachersToAdd.filter(
         teacher => teacher !== coteacher.instructorEmail
-      );
-      console.log(
-        additions,
-        coteachersToAdd.indexOf(coteacher.instructorEmail),
-        coteacher.instructorEmail
       );
       setCoteachersToAdd(additions);
       setCoteacherToRemove({});
@@ -179,27 +174,30 @@ export default function CoteacherSettings({
   };
 
   const removePopup = coteacher => {
+    if (_.isEmpty(coteacher)) {
+      return null;
+    }
     return (
       <AccessibleDialog
         onClose={() => setCoteacherToRemove({})}
         className={styles.removeDialog}
       >
         <StrongText className={styles.removeDialogTitle}>
-          Remove {coteacher.instructorEmail} as a co-teacher?
+          {i18n.coteacherRemoveDialogHeader(coteacher.instructorEmail)}
         </StrongText>
         <div className={styles.removeDialogDescription}>
-          This teacher will lose their ability to manage or view student work
-          for this section.
+          {i18n.coteacherRemoveDialogDescription()}
         </div>
         <div className={styles.removeDialogButtons}>
           <Button
             onClick={() => setCoteacherToRemove({})}
-            text="Cancel"
+            text={i18n.dialogCancel()}
             color={Button.ButtonColor.white}
+            id="remove-coteacher-cancel"
           />
           <Button
             onClick={removeCoteacher(coteacher)}
-            text="Remove"
+            text={i18n.dialogRemove()}
             color={Button.ButtonColor.red}
             className={styles.removeDialogRemove}
           />
@@ -212,7 +210,7 @@ export default function CoteacherSettings({
     if (coteachers.length === 0) {
       return (
         <div className={classNames(styles.table, styles.tableRow)}>
-          You haven't added any co-teachers yet
+          {i18n.coteacherNoCoteachers()}
         </div>
       );
     }
@@ -276,7 +274,7 @@ export default function CoteacherSettings({
       <div className={styles.settings}>
         {addForm()}
         {table()}
-        {!_.isEmpty(coteacherToRemove) && removePopup(coteacherToRemove)}
+        {removePopup(coteacherToRemove)}
       </div>
     </div>
   );
