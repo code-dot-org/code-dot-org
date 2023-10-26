@@ -780,6 +780,12 @@ pl:
           rozwiązywania problemu
         PL_CSD_Unit4_AppTesting: Testowanie prototypów papieru
         PL_CSP_EIPMOverview: Przewodnik po lekcjach EIPM
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: |2-
+
+          Jednostka 1 Powiązania i wnioski
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Jednostka 3: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Jednostka 2: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3L7Debugging: Jednostka 3 Lekcja 7 - Debugowanie
         PL_CSP_TeacherTips_APExam: 'Wskazówki dla nauczycieli: Przygotowanie do egzaminu
           AP'
         PL_CSP_TeacherTips_Advice: 'Wskazówki dla nauczycieli: Porady dla nowych nauczycieli
@@ -806,6 +812,7 @@ pl:
         Unplug8: Abstrakcja
         Unplug9: Programowanie przekaźnika
         ai-ethis: Etyka i sztuczna inteligencja
+        ai_dance_editblocks_draft: Potańcówka AI Edytuj szkic bloków
         alg_10_conditionals: Informatyka w algebrze - instrukcje warunkowe
         alg_11_coordinate_plane: Informatyka w algebrze - płaszczyzna współrzędnych
         alg_12_biggame_variables: Informatyka w Algebrze - zmienne Wielkiej Gry (Big
