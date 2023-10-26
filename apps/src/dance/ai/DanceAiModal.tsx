@@ -183,7 +183,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     const params = JSON.parse(resultJson);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+      workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
       workspace.newBlock(
         'Dancelab_setBackgroundEffectWithPaletteAI'
       ) as BlockSvg,
