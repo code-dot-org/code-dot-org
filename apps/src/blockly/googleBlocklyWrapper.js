@@ -405,7 +405,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this);
-      this.unusedSvg_.render(this.svgGroup_, this.RTL);
+      this.unusedSvg_.render();
     }
   };
 
