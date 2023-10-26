@@ -3,606 +3,806 @@
     "data": {
       "vocabularies": {
         "input/csd/2021": {
+          "word": "Inntak",
           "word": "Inntak"
         },
         "processing/csd/2021": {
+          "word": "Vinnsla",
           "word": "Vinnsla"
         },
         "copyright/csd/2021": {
+          "word": "Höfundarréttur",
           "word": "Höfundarréttur"
         },
         "debugging/csd/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "variable/csd/2021": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "sprite/csd/2021": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "conditionals/csd/2021": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "abstraction/csd/2021": {
+          "word": "Útdráttur",
           "word": "Útdráttur"
         },
         "function/csd/2021": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "user/csd/2021": {
+          "word": "Notandi",
           "word": "Notandi"
         },
         "machine_learning/csd/2021": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "algorithm/coursea/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursea/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "drop/coursea/2021": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "programming/coursea/2021": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "algorithm/courseb/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/courseb/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "drop/courseb/2021": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "programming/courseb/2021": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "algorithm/coursec/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursec/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "sequencing/coursec/2021": {
+          "word": "Skipanaröð",
           "word": "Skipanaröð"
         },
         "programming/coursec/2021": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "binary/coursec/2021": {
+          "word": "Tvíundir",
           "word": "Tvíundir"
         },
         "algorithm/coursed/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursed/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "programming/coursed/2021": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "conditionals/coursed/2021": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "sprite/coursee/2021": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "copyright/coursee/2021": {
+          "word": "Höfundarréttur",
           "word": "Höfundarréttur"
         },
         "function/coursee/2021": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "conditionals/coursee/2021": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "define/coursee/2021": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "sprite/coursef/2021": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "user/coursef/2021": {
+          "word": "Notandi",
           "word": "Notandi"
         },
         "algorithm/coursef/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "variable/coursef/2021": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "input/coursef/2021": {
+          "word": "Inntak",
           "word": "Inntak"
         },
         "machine_learning/coursef/2021": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "internet/coursef/2021": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2021": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "algorithm/express/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/express/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "sequencing/express/2021": {
+          "word": "Skipanaröð",
           "word": "Skipanaröð"
         },
         "programming/express/2021": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "sprite/express/2021": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "conditionals/express/2021": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "function/express/2021": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "variable/express/2021": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "define/express/2021": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "drop/pre-express/2021": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "algorithm/pre-express/2021": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/pre-express/2021": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "programming/pre-express/2021": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "input/csd/2022": {
+          "word": "Inntak",
           "word": "Inntak"
         },
         "processing/csd/2022": {
+          "word": "Vinnsla",
           "word": "Vinnsla"
         },
         "copyright/csd/2022": {
+          "word": "Höfundarréttur",
           "word": "Höfundarréttur"
         },
         "debugging/csd/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "variable/csd/2022": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "sprite/csd/2022": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "conditionals/csd/2022": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "abstraction/csd/2022": {
+          "word": "Útdráttur",
           "word": "Útdráttur"
         },
         "function/csd/2022": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "user/csd/2022": {
+          "word": "Notandi",
           "word": "Notandi"
         },
         "machine_learning/csd/2022": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "algorithm/coursea/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursea/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "drop/coursea/2022": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "programming/coursea/2022": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "algorithm/courseb/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/courseb/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "drop/courseb/2022": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "programming/courseb/2022": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "algorithm/coursec/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursec/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "sequencing/coursec/2022": {
+          "word": "Skipanaröð",
           "word": "Skipanaröð"
         },
         "programming/coursec/2022": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "data/coursec/2022": {
+          "word": "Gögn",
           "word": "Gögn"
         },
         "binary/coursec/2022": {
+          "word": "Tvíundir",
           "word": "Tvíundir"
         },
         "algorithm/coursed/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursed/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "programming/coursed/2022": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "conditionals/coursed/2022": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "sprite/coursee/2022": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "function/coursee/2022": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "conditionals/coursee/2022": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "copyright/coursee/2022": {
+          "word": "Höfundarréttur",
           "word": "Höfundarréttur"
         },
         "define/coursee/2022": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "sprite/coursef/2022": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "user/coursef/2022": {
+          "word": "Notandi",
           "word": "Notandi"
         },
         "algorithm/coursef/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "variable/coursef/2022": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "input/coursef/2022": {
+          "word": "Inntak",
           "word": "Inntak"
         },
         "machine_learning/coursef/2022": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "internet/coursef/2022": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2022": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "algorithm/express/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/express/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "sequencing/express/2022": {
+          "word": "Skipanaröð",
           "word": "Skipanaröð"
         },
         "programming/express/2022": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "sprite/express/2022": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "conditionals/express/2022": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "function/express/2022": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "variable/express/2022": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "define/express/2022": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "drop/pre-express/2022": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "algorithm/pre-express/2022": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/pre-express/2022": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "programming/pre-express/2022": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "code/csc-adaptations/2023": {
+          "word": "Kóði",
           "word": "Kóði"
         },
         "sprite/csc-bookcovers/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "code/csc-ecosystems/2023": {
+          "word": "Kóði",
           "word": "Kóði"
         },
         "conditionals/csc-ecosystems/2023": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "variable/csc-ecosystems/2023": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "code/csc-mappinglandmarks/2023": {
+          "word": "Kóði",
           "word": "Kóði"
         },
         "sprite/csc-mappinglandmarks/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "artist/csc-starquilts/2023": {
+          "word": "Listamaður",
           "word": "Listamaður"
         },
         "comments/csc-starquilts/2023": {
+          "word": "Athugasemdir",
           "word": "Athugasemdir"
         },
         "sprite/csc-timecapsule/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "code/poetry/2023": {
+          "word": "Kóði",
           "word": "Kóði"
         },
         "input/csd/2023": {
+          "word": "Inntak",
           "word": "Inntak"
         },
         "processing/csd/2023": {
+          "word": "Vinnsla",
           "word": "Vinnsla"
         },
         "copyright/csd/2023": {
+          "word": "Höfundarréttur",
           "word": "Höfundarréttur"
         },
         "debugging/csd/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "variable/csd/2023": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "sprite/csd/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "conditionals/csd/2023": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "abstraction/csd/2023": {
+          "word": "Útdráttur",
           "word": "Útdráttur"
         },
         "function/csd/2023": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "user/csd/2023": {
+          "word": "Notandi",
           "word": "Notandi"
         },
         "machine_learning/csd/2023": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "algorithm/coursea/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursea/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "drop/coursea/2023": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "programming/coursea/2023": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "algorithm/courseb/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/courseb/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "drop/courseb/2023": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "programming/courseb/2023": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "algorithm/coursec/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursec/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "sequencing/coursec/2023": {
+          "word": "Skipanaröð",
           "word": "Skipanaröð"
         },
         "programming/coursec/2023": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "data/coursec/2023": {
+          "word": "Gögn",
           "word": "Gögn"
         },
         "binary/coursec/2023": {
+          "word": "Tvíundir",
           "word": "Tvíundir"
         },
         "algorithm/coursed/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/coursed/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "programming/coursed/2023": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "conditionals/coursed/2023": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "sprite/coursee/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "function/coursee/2023": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "conditionals/coursee/2023": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "copyright/coursee/2023": {
+          "word": "Höfundarréttur",
           "word": "Höfundarréttur"
         },
         "define/coursee/2023": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "sprite/coursef/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "user/coursef/2023": {
+          "word": "Notandi",
           "word": "Notandi"
         },
         "algorithm/coursef/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "variable/coursef/2023": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "input/coursef/2023": {
+          "word": "Inntak",
           "word": "Inntak"
         },
         "machine_learning/coursef/2023": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "internet/coursef/2023": {
+          "word": "Internet",
           "word": "Internet"
         },
         "define/coursef/2023": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "algorithm/express/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/express/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "sequencing/express/2023": {
+          "word": "Skipanaröð",
           "word": "Skipanaröð"
         },
         "programming/express/2023": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "sprite/express/2023": {
+          "word": "Kviki",
           "word": "Kviki"
         },
         "conditionals/express/2023": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "function/express/2023": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "variable/express/2023": {
+          "word": "Breyta",
           "word": "Breyta"
         },
         "define/express/2023": {
+          "word": "Skilgreina",
           "word": "Skilgreina"
         },
         "drop/pre-express/2023": {
+          "word": "Droppa",
           "word": "Droppa"
         },
         "algorithm/pre-express/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "debugging/pre-express/2023": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "programming/pre-express/2023": {
+          "word": "Forritun",
           "word": "Forritun"
         },
         "machine_learning/how-ai-works/2023": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "algorithm/how-ai-works/2023": {
+          "word": "Algrím",
           "word": "Algrím"
         },
         "network/how-ai-works/2023": {
+          "word": "Netkerfi",
           "word": "Netkerfi"
         },
         "conditionals/aquatic/unversioned": {
+          "word": "Skilyrði",
           "word": "Skilyrði"
         },
         "debugging/aquatic/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "loops/aquatic/unversioned": {
+          "word": "Lykkjur",
           "word": "Lykkjur"
         },
         "code/artist/unversioned": {
+          "word": "Kóði",
           "word": "Kóði"
         },
         "debugging/artist/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/basketball/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/flappy/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/frozen/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/gumball/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/hero/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "function/hero/unversioned": {
+          "word": "Aðgerð",
           "word": "Aðgerð"
         },
         "debugging/hourofcode/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/iceage/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/infinity/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/mc/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/minecraft/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Vélarnám",
           "word": "Vélarnám"
         },
         "debugging/playlab/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "code/poem-art/2021": {
           "word": "Kóði"
         },
         "code/sports/unversioned": {
+          "word": "Kóði",
           "word": "Kóði"
         },
         "debugging/sports/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/starwars/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         },
         "debugging/starwarsblocks/unversioned": {
+          "word": "Villuleit",
           "word": "Villuleit"
         }
       }

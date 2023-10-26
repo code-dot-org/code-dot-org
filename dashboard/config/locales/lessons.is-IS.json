@@ -144,33 +144,43 @@
           "name": "Fara yfir verkefnið"
         },
         "express-2017/Introduction": {
+          "name": "Kynning",
           "name": "Kynning"
         },
         "express-2017/Building a Foundation": {
+          "name": "Að byggja grunn",
           "name": "Að byggja grunn"
         },
         "express-2017/Nested Loops": {
+          "name": "Innri lykkjur",
           "name": "Innri lykkjur"
         },
         "express-2017/Variables in Artist": {
+          "name": "Breytur með Listamanni",
           "name": "Breytur með Listamanni"
         },
         "express-2017/Variables in Play Lab": {
+          "name": "Breytur í Leikjasmiðju",
           "name": "Breytur í Leikjasmiðju"
         },
         "express-2017/For Loops in Bee": {
+          "name": "Frá-lykkjur með Býflugu",
           "name": "Frá-lykkjur með Býflugu"
         },
         "express-2017/For Loops in Artist": {
+          "name": "Frá-lykkjur með Listamanni",
           "name": "Frá-lykkjur með Listamanni"
         },
         "express-2017/Functions with Parameters in Artist": {
+          "name": "Föll og færibreytur með Listamanni",
           "name": "Föll og færibreytur með Listamanni"
         },
         "express-2017/Functions with Parameters in Bee": {
+          "name": "Föll og færibreytur með Býflugu",
           "name": "Föll og færibreytur með Býflugu"
         },
         "express-2017/Revise Your Project": {
+          "name": "Fara yfir verkefnið",
           "name": "Fara yfir verkefnið"
         },
         "pre-express-2017/Debugging: Unspotted Bugs": {
@@ -774,192 +784,259 @@
           "name": "Lykkjur með Láru"
         },
         "csd1-2021/What is a Computer?": {
+          "name": "Hvað er tölva?",
           "name": "Hvað er tölva?"
         },
         "csd1-2021/Input and Output": {
+          "name": "Inntak og Úttak",
           "name": "Inntak og Úttak"
         },
         "csd1-2021/Processing": {
+          "name": "Vinnsla",
           "name": "Vinnsla"
         },
         "csd1-2021/Storage": {
+          "name": "Vistun",
           "name": "Vistun"
         },
         "csd1-2021/Project - Propose an App": {
+          "name": "Verkefni - Tillaga að Appi",
           "name": "Verkefni - Tillaga að Appi"
         },
         "csd2-2021/Intro to HTML": {
+          "name": "Kynning á HTML",
           "name": "Kynning á HTML"
         },
         "csd3-2021/Drawing in Game Lab": {
+          "name": "Teikning í Leikjasmiðju",
           "name": "Teikning í Leikjasmiðju"
         },
         "csd3-2021/Variables": {
+          "name": "Breytur",
           "name": "Breytur"
         },
         "csd3-2021/Sprites": {
+          "name": "Kvikar",
           "name": "Kvikar"
         },
         "csd3-2021/Sprite Properties": {
+          "name": "Eiginleikar kvika",
           "name": "Eiginleikar kvika"
         },
         "csd3-2021/Text": {
+          "name": "texti",
           "name": "texti"
         },
         "csd3-2021/Sprite Movement": {
+          "name": "Hreyfing kvika",
           "name": "Hreyfing kvika"
         },
         "csd3-2021/Conditionals": {
+          "name": "Skilyrði",
           "name": "Skilyrði"
         },
         "csd3-2021/Velocity": {
+          "name": "Hraði",
           "name": "Hraði"
         },
         "csd3-2021/Collision Detection": {
+          "name": "Skynjun árekstra",
           "name": "Skynjun árekstra"
         },
         "csd3-2021/Complex Sprite Movement": {
+          "name": "Samsett kvikahreyfing",
           "name": "Samsett kvikahreyfing"
         },
         "csd3-2021/Collisions": {
+          "name": "Árekstrar",
           "name": "Árekstrar"
         },
         "csd3-2021/Functions": {
+          "name": "Föll",
           "name": "Föll"
         },
         "csd3-2021/The Game Design Process": {
+          "name": "Ferli leikjahönnunar",
           "name": "Ferli leikjahönnunar"
         },
         "csd3-2021/Using the Game Design Process": {
+          "name": "Notkun leikjahönnunarferlisins",
           "name": "Notkun leikjahönnunarferlisins"
         },
         "csd4-2021/Identifying User Needs": {
+          "name": "Greining á þörfum notenda",
           "name": "Greining á þörfum notenda"
         },
         "csd6-2021/Making Music": {
+          "name": "Lagasmíð",
           "name": "Lagasmíð"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Föll með stikum",
           "name": "Föll með stikum"
         },
         "csd7-2021/Survey Planning": {
+          "name": "Söfnun gagna hönnuð",
           "name": "Söfnun gagna hönnuð"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Krúttleg kort",
           "name": "Krúttleg kort"
         },
         "coursea-2021/Loops: Happy Loops": {
           "name": "Lukkulegar lykkjur",
+          "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.",
+          "name": "Lukkulegar lykkjur",
           "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni."
         },
         "coursea-2021/Loops in Collector": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "coursea-2021/lesson-1": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Hreyfa sig, hreyfa sig",
           "name": "Hreyfa sig, hreyfa sig"
         },
         "courseb-2021/Sequencing in Maze": {
+          "name": "Röð aðgerða með Angry Birds",
           "name": "Röð aðgerða með Angry Birds"
         },
         "courseb-2021/Programming in Harvester": {
+          "name": "Forritun með Hirðinum",
           "name": "Forritun með Hirðinum"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Lykkjulæti",
           "name": "Lykkjulæti"
         },
         "courseb-2021/Loops in Harvester": {
+          "name": "Lykkjur með Hirðinum",
           "name": "Lykkjur með Hirðinum"
         },
         "courseb-2021/Loops in Collector": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "courseb-2021/lesson-1": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Stórviðburður",
           "name": "Stórviðburður"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Stafræn armbönd",
           "name": "Stafræn armbönd"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Forritun rúðublaða",
           "name": "Forritun rúðublaða"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Boðhlaupsforritun",
           "name": "Boðhlaupsforritun"
         },
         "coursed-2021/Dance Party": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "coursed-2021/Loops in Ice Age": {
+          "name": "Lykkjur í Ísöld",
           "name": "Lykkjur í Ísöld"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Skilyrði með kortum",
           "name": "Skilyrði með kortum"
         },
         "coursed-2021/lesson-6": {
+          "name": "Horft fram á við",
           "name": "Horft fram á við"
         },
         "coursed-2021/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Lagasmíð",
           "name": "Lagasmíð"
         },
         "coursee-2021/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursef-2021/lesson-6": {
           "name": "Kynning á Kvikasmiðjunni",
           "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
           "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
+          "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. ",
+          "name": "Kynning á Kvikasmiðjunni",
+          "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
+          "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
           "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. "
         },
         "coursef-2021/lesson-8": {
+          "name": "Kvikar í verki",
           "name": "Kvikar í verki"
         },
         "coursef-2021/Virtual Pet": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
         },
         "coursef-2021/lesson-2": {
+          "name": "Afl orða",
           "name": "Afl orða"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Fyndnar frá lykkjur",
           "name": "Fyndnar frá lykkjur"
         },
         "coursef-2021/Internet": {
+          "name": "Internetið",
           "name": "Internetið"
         },
         "coursef-2021/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "express-2021/lesson-3": {
+          "name": "Kvikar í verki",
           "name": "Kvikar í verki"
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
         },
         "express-2021/lesson-1": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "express-2021/Looking Ahead with Minecraft ": {
+          "name": "Horft fram á við",
           "name": "Horft fram á við"
         },
         "express-2021/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "pre-express-2021/Programming in Harvester": {
+          "name": "Forritun með Hirðinum",
           "name": "Forritun með Hirðinum"
         },
         "pre-express-2021/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "kodea-pd-2021/Getting Started": {
@@ -996,420 +1073,567 @@
           "name": "Næstu skref"
         },
         "csd1-2022/What is a Computer?": {
+          "name": "Hvað er tölva?",
           "name": "Hvað er tölva?"
         },
         "csd1-2022/Input and Output": {
+          "name": "Inntak og Úttak",
           "name": "Inntak og Úttak"
         },
         "csd1-2022/Processing": {
+          "name": "Vinnsla",
           "name": "Vinnsla"
         },
         "csd1-2022/Storage": {
+          "name": "Vistun",
           "name": "Vistun"
         },
         "csd1-2022/Project - Propose an App": {
+          "name": "Verkefni - Tillaga að Appi",
           "name": "Verkefni - Tillaga að Appi"
         },
         "csd2-2022/Intro to HTML": {
+          "name": "Kynning á HTML",
           "name": "Kynning á HTML"
         },
         "csd3-2022/Drawing in Game Lab": {
+          "name": "Teikning í Leikjasmiðju",
           "name": "Teikning í Leikjasmiðju"
         },
         "csd3-2022/Variables": {
+          "name": "Breytur",
           "name": "Breytur"
         },
         "csd3-2022/Sprites": {
+          "name": "Kvikar",
           "name": "Kvikar"
         },
         "csd3-2022/Sprite Properties": {
+          "name": "Eiginleikar kvika",
           "name": "Eiginleikar kvika"
         },
         "csd3-2022/Text": {
+          "name": "texti",
           "name": "texti"
         },
         "csd3-2022/Sprite Movement": {
+          "name": "Hreyfing kvika",
           "name": "Hreyfing kvika"
         },
         "csd3-2022/Conditionals": {
+          "name": "Skilyrði",
           "name": "Skilyrði"
         },
         "csd3-2022/Velocity": {
+          "name": "Hraði",
           "name": "Hraði"
         },
         "csd3-2022/Collision Detection": {
+          "name": "Skynjun árekstra",
           "name": "Skynjun árekstra"
         },
         "csd3-2022/Complex Sprite Movement": {
+          "name": "Samsett kvikahreyfing",
           "name": "Samsett kvikahreyfing"
         },
         "csd3-2022/Collisions": {
+          "name": "Árekstrar",
           "name": "Árekstrar"
         },
         "csd3-2022/Functions": {
+          "name": "Föll",
           "name": "Föll"
         },
         "csd3-2022/The Game Design Process": {
+          "name": "Ferli leikjahönnunar",
           "name": "Ferli leikjahönnunar"
         },
         "csd3-2022/Using the Game Design Process": {
+          "name": "Notkun leikjahönnunarferlisins",
           "name": "Notkun leikjahönnunarferlisins"
         },
         "csd4-2022/Identifying User Needs": {
+          "name": "Greining á þörfum notenda",
           "name": "Greining á þörfum notenda"
         },
         "csd6-2022/Making Music": {
+          "name": "Lagasmíð",
           "name": "Lagasmíð"
         },
         "csd6-2022/Functions": {
+          "name": "Föll",
           "name": "Föll"
         },
         "csd7-2022/Survey Planning": {
+          "name": "Söfnun gagna hönnuð",
           "name": "Söfnun gagna hönnuð"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Krúttleg kort",
           "name": "Krúttleg kort"
         },
         "coursea-2022/Happy Loops": {
           "name": "Lukkulegar lykkjur",
+          "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.",
+          "name": "Lukkulegar lykkjur",
           "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni."
         },
         "coursea-2022/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "coursea-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Hreyfa sig, hreyfa sig",
           "name": "Hreyfa sig, hreyfa sig"
         },
         "courseb-2022/Sequencing with Angry Birds": {
+          "name": "Röð aðgerða með Angry Birds",
           "name": "Röð aðgerða með Angry Birds"
         },
         "courseb-2022/Programming with Harvester": {
+          "name": "Forritun með Hirðinum",
           "name": "Forritun með Hirðinum"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Lykkjulæti",
           "name": "Lykkjulæti"
         },
         "courseb-2022/Loops with Harvester": {
+          "name": "Lykkjur með Hirðinum",
           "name": "Lykkjur með Hirðinum"
         },
         "courseb-2022/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "courseb-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursec-2022/The Big Event": {
+          "name": "Stórviðburður",
           "name": "Stórviðburður"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Stafræn armbönd",
           "name": "Stafræn armbönd"
         },
         "coursec-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Forritun rúðublaða",
           "name": "Forritun rúðublaða"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Boðhlaupsforritun",
           "name": "Boðhlaupsforritun"
         },
         "coursed-2022/Dance Party": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "coursed-2022/Loops in Ice Age": {
+          "name": "Lykkjur í Ísöld",
           "name": "Lykkjur í Ísöld"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Skilyrði með kortum",
           "name": "Skilyrði með kortum"
         },
         "coursed-2022/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við",
           "name": "Horft fram á við"
         },
         "coursed-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursee-2022/Songwriting": {
+          "name": "Lagasmíð",
           "name": "Lagasmíð"
         },
         "coursee-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursef-2022/The Power of Words": {
+          "name": "Afl orða",
           "name": "Afl orða"
         },
         "coursef-2022/Introducing Sprite Lab": {
           "name": "Kynning á Kvikasmiðjunni",
           "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
           "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
+          "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. ",
+          "name": "Kynning á Kvikasmiðjunni",
+          "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
+          "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
           "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. "
         },
         "coursef-2022/Sprites in Action": {
+          "name": "Kvikar í verki",
           "name": "Kvikar í verki"
         },
         "coursef-2022/Mini-Project: Virtual Pet": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
         },
         "coursef-2022/The Internet": {
+          "name": "Internetið",
           "name": "Internetið"
         },
         "coursef-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "express-2022/Sprites in Action": {
+          "name": "Kvikar í verki",
           "name": "Kvikar í verki"
         },
         "express-2022/Virtual Pet with Sprite Lab": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
         },
         "express-2022/Dance Party": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "express-2022/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við",
           "name": "Horft fram á við"
         },
         "express-2022/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "pre-express-2022/Programming with Harvester": {
+          "name": "Forritun með Hirðinum",
           "name": "Forritun með Hirðinum"
         },
         "pre-express-2022/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "csd1-2023/What is a Computer?": {
+          "name": "Hvað er tölva?",
           "name": "Hvað er tölva?"
         },
         "csd1-2023/Input and Output": {
+          "name": "Inntak og Úttak",
           "name": "Inntak og Úttak"
         },
         "csd1-2023/Processing": {
+          "name": "Vinnsla",
           "name": "Vinnsla"
         },
         "csd1-2023/Storage": {
+          "name": "Vistun",
           "name": "Vistun"
         },
         "csd1-2023/Project - Propose an App": {
+          "name": "Verkefni - Tillaga að Appi",
           "name": "Verkefni - Tillaga að Appi"
         },
         "csd2-2023/Intro to HTML": {
+          "name": "Kynning á HTML",
           "name": "Kynning á HTML"
         },
         "csd3-2023/Drawing in Game Lab": {
+          "name": "Teikning í Leikjasmiðju",
           "name": "Teikning í Leikjasmiðju"
         },
         "csd3-2023/Variables": {
+          "name": "Breytur",
           "name": "Breytur"
         },
         "csd3-2023/Sprites": {
+          "name": "Kvikar",
           "name": "Kvikar"
         },
         "csd3-2023/Sprite Properties": {
+          "name": "Eiginleikar kvika",
           "name": "Eiginleikar kvika"
         },
         "csd3-2023/Text": {
+          "name": "texti",
           "name": "texti"
         },
         "csd3-2023/Sprite Movement": {
+          "name": "Hreyfing kvika",
           "name": "Hreyfing kvika"
         },
         "csd3-2023/Conditionals": {
+          "name": "Skilyrði",
           "name": "Skilyrði"
         },
         "csd3-2023/Velocity": {
+          "name": "Hraði",
           "name": "Hraði"
         },
         "csd3-2023/Collision Detection": {
+          "name": "Skynjun árekstra",
           "name": "Skynjun árekstra"
         },
         "csd3-2023/Complex Sprite Movement": {
+          "name": "Samsett kvikahreyfing",
           "name": "Samsett kvikahreyfing"
         },
         "csd3-2023/Collisions": {
+          "name": "Árekstrar",
           "name": "Árekstrar"
         },
         "csd3-2023/Functions": {
+          "name": "Föll",
           "name": "Föll"
         },
         "csd3-2023/The Game Design Process": {
+          "name": "Ferli leikjahönnunar",
           "name": "Ferli leikjahönnunar"
         },
         "csd3-2023/Using the Game Design Process": {
+          "name": "Notkun leikjahönnunarferlisins",
           "name": "Notkun leikjahönnunarferlisins"
         },
         "csd4-2023/Identifying User Needs": {
+          "name": "Greining á þörfum notenda",
           "name": "Greining á þörfum notenda"
         },
         "csd6a-2023/Making Music": {
+          "name": "Lagasmíð",
           "name": "Lagasmíð"
         },
         "csd6a-2023/Functions": {
+          "name": "Föll",
           "name": "Föll"
         },
         "csd6b-2023/Functions": {
+          "name": "Föll",
           "name": "Föll"
         },
         "csd7-2023/Survey Planning": {
+          "name": "Söfnun gagna hönnuð",
           "name": "Söfnun gagna hönnuð"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Krúttleg kort",
           "name": "Krúttleg kort"
         },
         "coursea-2023/Happy Loops": {
           "name": "Lukkulegar lykkjur",
+          "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.",
+          "name": "Lukkulegar lykkjur",
           "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni."
         },
         "coursea-2023/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "coursea-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Hreyfa sig, hreyfa sig",
           "name": "Hreyfa sig, hreyfa sig"
         },
         "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Röð aðgerða með Angry Birds",
           "name": "Röð aðgerða með Angry Birds"
         },
         "courseb-2023/Programming with Harvester": {
+          "name": "Forritun með Hirðinum",
           "name": "Forritun með Hirðinum"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Lykkjulæti",
           "name": "Lykkjulæti"
         },
         "courseb-2023/Loops with Harvester": {
+          "name": "Lykkjur með Hirðinum",
           "name": "Lykkjur með Hirðinum"
         },
         "courseb-2023/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "courseb-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursec-2023/The Big Event": {
+          "name": "Stórviðburður",
           "name": "Stórviðburður"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Stafræn armbönd",
           "name": "Stafræn armbönd"
         },
         "coursec-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Forritun rúðublaða",
           "name": "Forritun rúðublaða"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Boðhlaupsforritun",
           "name": "Boðhlaupsforritun"
         },
         "coursed-2023/Dance Party": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "coursed-2023/Loops in Ice Age": {
+          "name": "Lykkjur í Ísöld",
           "name": "Lykkjur í Ísöld"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Skilyrði með kortum",
           "name": "Skilyrði með kortum"
         },
         "coursed-2023/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við",
           "name": "Horft fram á við"
         },
         "coursed-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursee-2023/Songwriting": {
+          "name": "Lagasmíð",
           "name": "Lagasmíð"
         },
         "coursee-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "coursef-2023/The Power of Words": {
+          "name": "Afl orða",
           "name": "Afl orða"
         },
         "coursef-2023/Introducing Sprite Lab": {
           "name": "Kynning á Kvikasmiðjunni",
           "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
           "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
+          "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. ",
+          "name": "Kynning á Kvikasmiðjunni",
+          "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
+          "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
           "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. "
         },
         "coursef-2023/Sprites in Action": {
+          "name": "Kvikar í verki",
           "name": "Kvikar í verki"
         },
         "coursef-2023/Mini-Project: Virtual Pet": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
         },
         "coursef-2023/The Internet": {
+          "name": "Internetið",
           "name": "Internetið"
         },
         "coursef-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "express-2023/Sprites in Action": {
+          "name": "Kvikar í verki",
           "name": "Kvikar í verki"
         },
         "express-2023/Virtual Pet with Sprite Lab": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
         },
         "express-2023/Dance Party": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "express-2023/Looking Ahead with Minecraft": {
+          "name": "Horft fram á við",
           "name": "Horft fram á við"
         },
         "express-2023/End of Course Project": {
+          "name": "Lokaverkefni námskeiðs",
           "name": "Lokaverkefni námskeiðs"
         },
         "pre-express-2023/Programming with Harvester": {
+          "name": "Forritun með Hirðinum",
           "name": "Forritun með Hirðinum"
         },
         "pre-express-2023/Loops with Laurel": {
+          "name": "Lykkjur með Láru",
           "name": "Lykkjur með Láru"
         },
         "artist/Artist": {
+          "name": "Listamaður",
           "name": "Listamaður"
         },
         "dance-2019/Dance Party": {
+          "name": "Danspartý",
           "name": "Danspartý"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kóði",
           "name": "Flappy kóði"
         },
         "frozen/Artist": {
+          "name": "Kóðaðu með Önnu og Elsu",
           "name": "Kóðaðu með Önnu og Elsu"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Leikjasmiðja",
           "name": "Gumball Leikjasmiðja"
         },
         "hoc-encryption/Simple Encryption": {
+          "name": "Einföld dulkóðun",
           "name": "Einföld dulkóðun"
         },
         "hourofcode/Maze": {
+          "name": "Völundarhús",
           "name": "Völundarhús"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Leikjasmiðja",
           "name": "Ice Age Leikjasmiðja"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity leikjasmiðja",
           "name": "Disney Infinity leikjasmiðja"
         },
         "mc/Hour of Code 2015": {
+          "name": "Klukkustund kóðunar með Minecraft",
           "name": "Klukkustund kóðunar með Minecraft"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Klukkustund kóðunar - Minecraft Hönnuður",
           "name": "Klukkustund kóðunar - Minecraft Hönnuður"
         },
         "playlab/Play Lab": {
+          "name": "Leikjasmiðjan",
           "name": "Leikjasmiðjan"
         },
         "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript",
           "name": "Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript"
         },
         "text-compression/Text Compression": {
+          "name": "Þjöppun texta",
           "name": "Þjöppun texta"
         },
         "allthethings/Jigsaw": {

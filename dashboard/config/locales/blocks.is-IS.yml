@@ -62,6 +62,11 @@ is:
             '"measures"': takta
             '"seconds"': sekúndur
         text: eftir {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takta
+            '"seconds"': sekúndur
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -550,6 +555,48 @@ is:
             '"electronic"': Rafmagnað
             '"iceCream"': Rjómaís
             '"neon"': Neon
+            '"rave"': Svarthvítt
+            '"tropical"': Hitabelti
+            '"vintage"': Klassískt
+            '"warm"': Hlýlegt
+        text: stilla bakgrunn {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Hringir
+            '"color_cycle"': Litir
+            '"diamonds"': Demantar
+            '"disco"': Reitir
+            '"disco_ball"': Diskókúla
+            '"fireworks"': Flugeldar
+            '"flowers"': Blóm
+            '"galaxy"': Geimur
+            '"growing_stars"': Vaxandi stjörnur
+            '"kaleidoscope"': Breytilegt mynstur
+            '"lasers"': Laser dansgólf
+            '"music_wave"': Bylgjur
+            '"none"': Ekkert
+            '"quads"': Horn
+            '"rainbow"': Regnbogi
+            '"rand"': "(Handahóf)"
+            '"ripples"': Gárur
+            '"ripples_random"': Handahófsgárur
+            '"snowflakes"': Snjór
+            '"sparkles"': Glitrandi
+            '"spiral"': Spírall
+            '"splatter"': Málningarslettur
+            '"squiggles"': Hrafnaspark
+            '"starburst"': Stjörnublossi
+            '"stars"': Stjörnur
+            '"swirl"': Dáleiðsla
+            '"text"': Nöfn laga
+          PALETTE:
+            '"cool"': Svalt
+            '"default"': Ljós
+            '"electronic"': Rafmagnað
+            '"iceCream"': Rjómaís
+            '"neon"': Neon
+            '"rainbow"': Regnbogi
             '"rave"': Svarthvítt
             '"tropical"': Hitabelti
             '"vintage"': Klassískt

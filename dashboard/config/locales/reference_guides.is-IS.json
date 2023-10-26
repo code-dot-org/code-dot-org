@@ -3,87 +3,115 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Appsmiðjan",
           "display_name": "Appsmiðjan"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/classes": {
+          "display_name": "Klasar",
           "display_name": "Klasar"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Skynjun árekstra",
           "display_name": "Skynjun árekstra"
         },
         "csd-2022/css-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/design-mode": {
+          "display_name": "Hönnun",
           "display_name": "Hönnun"
         },
         "csd-2022/for-loops": {
+          "display_name": "Frá lykkjur",
           "display_name": "Frá lykkjur"
         },
         "csd-2022/functions": {
+          "display_name": "Föll",
           "display_name": "Föll"
         },
         "csd-2022/game-lab": {
+          "display_name": "Leikjasmiðjan",
           "display_name": "Leikjasmiðjan"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/html-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/images-in-html": {
+          "display_name": "Myndir í HTML",
           "display_name": "Myndir í HTML"
         },
         "csd-2022/javascript": {
+          "display_name": "Javascript",
           "display_name": "Javascript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/lists": {
+          "display_name": "Listar",
           "display_name": "Listar"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker Toolkit",
           "display_name": "Maker Toolkit"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "Öpp með fleiri en eina skjámynd",
           "display_name": "Öpp með fleiri en eina skjámynd"
         },
         "csd-2022/other": {
+          "display_name": "Annað",
           "display_name": "Annað"
         },
         "csd-2022/other-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Yfirlit",
           "display_name": "Yfirlit"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Eiginleikar kvika",
           "display_name": "Eiginleikar kvika"
         },
         "csd-2022/sprites": {
+          "display_name": "Kvikar",
           "display_name": "Kvikar"
         },
         "csd-2022/variables": {
+          "display_name": "Breytur",
           "display_name": "Breytur"
         },
         "csd-2022/velocity": {
+          "display_name": "Hraði",
           "display_name": "Hraði"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Hröðun og Teljaramynstrið",
           "display_name": "Hröðun og Teljaramynstrið"
         },
         "csd-2022/web-lab": {
+          "display_name": "Vefsmiðja",
           "display_name": "Vefsmiðja"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
