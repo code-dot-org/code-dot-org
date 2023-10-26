@@ -467,7 +467,6 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
-  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
   this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
@@ -485,9 +484,24 @@ Dance.prototype.preview = async function () {
 
   const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
-  this.hooks.find(v => v.name === 'runUserSetup').func();
 
-  this.nativeAPI.staticPreview();
+  const previewDraw = () => {
+    this.nativeAPI.setEffectsInPreviewMode(true);
+
+    // the user setup hook initializes effects,
+    // needs to happen in preview mode for some effects (eg, tacos)
+    this.hooks.find(v => v.name === 'runUserSetup').func();
+
+    // redraw() (rather than draw()) is p5's recommended way
+    // of drawing once.
+    this.nativeAPI.p5_.redraw();
+
+    this.nativeAPI.setEffectsInPreviewMode(false);
+  };
+
+  // This is the mechanism p5 uses to queue draws,
+  // so we do the same so we end up after any queued draws.
+  window.requestAnimationFrame(previewDraw);
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
