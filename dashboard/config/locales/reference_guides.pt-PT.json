@@ -3,198 +3,263 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "Eventos do Acelerômetro",
           "display_name": "Eventos do Acelerômetro"
         },
         "csd-2022/app-lab": {
+          "display_name": "Laboratório de aplicações",
           "display_name": "Laboratório de aplicações"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/arrays": {
+          "display_name": "Vetores",
           "display_name": "Vetores"
         },
         "csd-2022/board-events": {
+          "display_name": "Eventos de borda",
           "display_name": "Eventos de borda"
         },
         "csd-2022/booleans-and-comparison-operators": {
+          "display_name": "Operadores de comparação e valores booleanos",
           "display_name": "Operadores de comparação e valores booleanos"
         },
         "csd-2022/changing-screens": {
+          "display_name": "Mudando Telas",
           "display_name": "Mudando Telas"
         },
         "csd-2022/changing-sensor-scale": {
+          "display_name": "Alterando a escala do Sensor",
           "display_name": "Alterando a escala do Sensor"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Visão geral do Circuit Play",
           "display_name": "Visão geral do Circuit Play"
         },
         "csd-2022/classes": {
+          "display_name": "Classes",
           "display_name": "Classes"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Detecção de Colisão",
           "display_name": "Detecção de Colisão"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "Busca Creative Commons",
           "display_name": "Busca Creative Commons"
         },
         "csd-2022/css-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/debugging-with-watchers": {
+          "display_name": "Depurando com Observadores",
           "display_name": "Depurando com Observadores"
         },
         "csd-2022/design-mode": {
+          "display_name": "Modo de Design",
           "display_name": "Modo de Design"
         },
         "csd-2022/design-mode-elements": {
+          "display_name": "Modo de Design de Elementos",
           "display_name": "Modo de Design de Elementos"
         },
         "csd-2022/designing-screens-with-code": {
+          "display_name": "Criando telas com código",
           "display_name": "Criando telas com código"
         },
         "csd-2022/drawing-shapes": {
+          "display_name": "Desenhando Formas",
           "display_name": "Desenhando Formas"
         },
         "csd-2022/editing-images": {
+          "display_name": "Editando Imagens",
           "display_name": "Editando Imagens"
         },
         "csd-2022/for-loops": {
+          "display_name": "Ciclos \"for\"",
           "display_name": "Ciclos \"for\""
         },
         "csd-2022/formatting-html": {
+          "display_name": "Formatando HTML",
           "display_name": "Formatando HTML"
         },
         "csd-2022/functions": {
+          "display_name": "Funções",
           "display_name": "Funções"
         },
         "csd-2022/game-lab": {
+          "display_name": "Laboratório de Jogos",
           "display_name": "Laboratório de Jogos"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Títulos e Parágrafos",
           "display_name": "Títulos e Parágrafos"
         },
         "csd-2022/html-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/html-tags": {
+          "display_name": "Tags HTML",
           "display_name": "Tags HTML"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "HiperLinks",
           "display_name": "HiperLinks"
         },
         "csd-2022/if-else-statements": {
+          "display_name": "Instruções Se/Senão",
           "display_name": "Instruções Se/Senão"
         },
         "csd-2022/if-statements": {
+          "display_name": "Instruções Se",
           "display_name": "Instruções Se"
         },
         "csd-2022/if-statements-2": {
+          "display_name": "Instruções Se",
           "display_name": "Instruções Se"
         },
         "csd-2022/images-in-html": {
+          "display_name": "Imagens em HTML",
           "display_name": "Imagens em HTML"
         },
         "csd-2022/importing-screens": {
+          "display_name": "Importando Telas",
           "display_name": "Importando Telas"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Introdução ao AI Lab",
           "display_name": "Introdução ao AI Lab"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/layout-properties": {
+          "display_name": "Propriedades do Layout",
           "display_name": "Propriedades do Layout"
         },
         "csd-2022/lists": {
+          "display_name": "Listas",
           "display_name": "Listas"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Caixa de Ferramentas Maker",
           "display_name": "Caixa de Ferramentas Maker"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Cartões de modelo no AI Lab",
           "display_name": "Cartões de modelo no AI Lab"
         },
         "csd-2022/modifying-arrays": {
+          "display_name": "Modificando e Criando Matrizes",
           "display_name": "Modificando e Criando Matrizes"
         },
         "csd-2022/multi-screen-apps": {
+          "display_name": "Aplicativos Multiplas Telas",
           "display_name": "Aplicativos Multiplas Telas"
         },
         "csd-2022/naming-variables": {
+          "display_name": "Nomeando Variáveis",
           "display_name": "Nomeando Variáveis"
         },
         "csd-2022/other": {
+          "display_name": "Outro",
           "display_name": "Outro"
         },
         "csd-2022/other-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Visão geral",
           "display_name": "Visão geral"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Jogando Notas",
           "display_name": "Jogando Notas"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "O Processo de Resolução de Problemas",
           "display_name": "O Processo de Resolução de Problemas"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "O Processo de Resolução de Problemas",
           "display_name": "O Processo de Resolução de Problemas"
         },
         "csd-2022/random-numbers": {
+          "display_name": "Números Aleatórios",
           "display_name": "Números Aleatórios"
         },
         "csd-2022/responding-to-user-input": {
+          "display_name": "Respondendo a Entradas de Usuário",
           "display_name": "Respondendo a Entradas de Usuário"
         },
         "csd-2022/shapes-and-parameters": {
+          "display_name": "Formas e Parâmetros",
           "display_name": "Formas e Parâmetros"
         },
         "csd-2022/sprite-interactions": {
+          "display_name": "Interações com Sprite",
           "display_name": "Interações com Sprite"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Propriedades do Sprite",
           "display_name": "Propriedades do Sprite"
         },
         "csd-2022/sprites": {
+          "display_name": "Sprite",
           "display_name": "Sprite"
         },
         "csd-2022/the-accelerometer": {
+          "display_name": "O Acelerômetro",
           "display_name": "O Acelerômetro"
         },
         "csd-2022/the-counter-pattern": {
+          "display_name": "O padrão Contador",
           "display_name": "O padrão Contador"
         },
         "csd-2022/the-counter-pattern-2": {
+          "display_name": "O padrão Contador",
           "display_name": "O padrão Contador"
         },
         "csd-2022/the-draw-loop": {
+          "display_name": "O laço de desenho",
           "display_name": "O laço de desenho"
         },
         "csd-2022/variables": {
+          "display_name": "Variáveis",
           "display_name": "Variáveis"
         },
         "csd-2022/velocity": {
+          "display_name": "Velocidade",
           "display_name": "Velocidade"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Velocidade e o Padrão Contador",
           "display_name": "Velocidade e o Padrão Contador"
         },
         "csd-2022/web-lab": {
+          "display_name": "Laboratório Web",
           "display_name": "Laboratório Web"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
