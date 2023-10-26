@@ -1,9 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
-  load_resource only: [:get_teacher_evaluations, :run_ai_evaluations_for_user]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :run_ai_evaluations_for_user]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
+  load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :run_ai_evaluations_for_user]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -107,8 +107,8 @@ class RubricsController < ApplicationController
 
   def run_ai_evaluations_for_user
     user_id = params.transform_keys(&:underscore).require(:user_id)
-    user = User.find_by(id: user_id)
-    return head :forbidden unless user&.student_of?(current_user)
+    @user = User.find_by(id: user_id)
+    return head :forbidden unless @user&.student_of?(current_user)
 
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
@@ -117,8 +117,34 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
-    EvaluateRubricJob.perform_later(user_id: user.id, script_level_id: script_level.id)
+    attempted = attempted_at
+    return render status: :bad_request, json: {error: 'Not attempted'} unless attempted
+    evaluated = ai_evaluated_at
+    return render status: :bad_request, json: {error: 'Already evaluated'} if evaluated && attempted < evaluated
+
+    EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id)
     return head :ok
+  end
+
+  def ai_evaluation_status_for_user
+    user_id = params.transform_keys(&:underscore).require(:user_id)
+    @user = User.find_by(id: user_id)
+    return head :forbidden unless @user&.student_of?(current_user)
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
+    return head :bad_request unless is_level_ai_enabled
+
+    attempted = attempted_at
+    evaluated = ai_evaluated_at
+    render json: {
+      attempted: !!attempted,
+      lastAttemptEvaluated: !!attempted && !!evaluated && evaluated >= attempted,
+      csrfToken: form_authenticity_token
+    }
   end
 
   private
@@ -145,5 +171,21 @@ class RubricsController < ApplicationController
         }
       ],
     )
+  end
+
+  def attempted_at
+    script = @rubric.lesson.script
+    level = @rubric.level
+    user_level = UserLevel.find_by(user: @user, level: level, script: script)
+    user_level&.updated_at
+  end
+
+  def ai_evaluated_at
+    learning_goal_ids = @rubric.learning_goals.pluck(:id)
+    LearningGoalAiEvaluation.
+      where(user_id: @user.id, learning_goal_id: learning_goal_ids).
+      order(created_at: :desc).
+      first&.
+      created_at
   end
 end

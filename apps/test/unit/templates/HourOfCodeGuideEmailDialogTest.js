@@ -7,7 +7,7 @@ import experiments from '@cdo/apps/util/experiments';
 
 describe('HourOfCodeGuideEmailDialog', () => {
   const defaultProps = {
-    signedIn: true,
+    isSignedIn: true,
   };
 
   it('renders signed out text in Dialog', () => {
@@ -19,7 +19,7 @@ describe('HourOfCodeGuideEmailDialog', () => {
   it('renders correct translations if user is not signed in', () => {
     experiments.setEnabled(experiments.HOC_TUTORIAL_DIALOG, true);
     const wrapper = shallow(
-      <HourOfCodeGuideEmailDialog {...defaultProps} signedIn={false} />
+      <HourOfCodeGuideEmailDialog {...defaultProps} isSignedIn={false} />
     );
     expect(wrapper.contains(i18n.getGuideContinue()));
   });
