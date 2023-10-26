@@ -1,23 +1,22 @@
 require 'honeybadger/ruby'
+require 'cdo/shared_cache'
 
-# A caching layer that sits in front of a datastore that
-# implements get and set
-
+# A lightweight interface layer between Cdo::SharedCache and whichever
+# datastore adapter is being used in the current environment, intended for use
+# by Cdo::DynamicConfig.
 class DatastoreCache
+  CACHE_KEY = "DynamicConfigDatastore".freeze
+
   # @param datastore [Object] a datastore adapter
   # @param cache_expiration [int] seconds after which a cached entry expires
   def initialize(datastore, cache_expiration: 30)
-    @cache = {}
     @datastore = datastore
     @cache_expiration = cache_expiration
 
     # A list of change listeners.
     @listeners = []
 
-    # Note we intentionally do this before spawning the background thread
-    # to make sure the cache is seeded successfully on init
     update_cache
-    @update_thread = spawn_update_thread
   end
 
   # Adds a listener that will be invoked whenever the store changes.
@@ -43,7 +42,7 @@ class DatastoreCache
   # @returns stored value
   def get(key)
     raise ArgumentError unless key.is_a? String
-    return @cache[key]
+    return all[key]
   end
 
   # Sets the given value for the key in both the local cache and datastore
@@ -51,7 +50,7 @@ class DatastoreCache
   # @param value [JSONable]
   def set(key, value)
     raise ArgumentError unless key.is_a? String
-    old_value = @cache[key]
+    old_value = get(key)
     @datastore.set(key, value)
     set_local(key, value)
     notify_change_listeners if value != old_value
@@ -59,12 +58,12 @@ class DatastoreCache
 
   # Return all cached elements
   def all
-    @cache
+    return CDO.shared_cache.read(CACHE_KEY) || {}
   end
 
   # Clear the datastore
   def clear
-    @cache = {}
+    CDO.shared_cache.write(CACHE_KEY, {})
     @datastore.clear
     notify_change_listeners
   end
@@ -72,7 +71,7 @@ class DatastoreCache
   # When unicorn preload the app and then forks worker processes the update_thread
   # doesn't make it to the other processes.  Restart it here
   def after_fork
-    @update_thread = spawn_update_thread unless @update_thread&.alive?
+    ## TODO: remove this method entirely, including all invocations
   end
 
   # Pulls all values from the datastore and populates the local cache
@@ -81,7 +80,7 @@ class DatastoreCache
     updated = false
     begin
       @datastore.all.each do |key, value|
-        old_value = @cache[key]
+        old_value = get(key)
         set_local(key, value)
         updated = true if value != old_value
       end
@@ -96,17 +95,7 @@ class DatastoreCache
   # @param key [String]
   # @param value [String]
   private def set_local(key, value)
-    @cache[key] = value
-  end
-
-  # Spawns a background thread that periodically updates the cached
-  # values from the persistent datastore
-  private def spawn_update_thread
-    Thread.new do
-      loop do
-        sleep @cache_expiration
-        update_cache
-      end
-    end
+    updated_cache_data = all.merge({key => value})
+    CDO.shared_cache.write(CACHE_KEY, updated_cache_data)
   end
 end
