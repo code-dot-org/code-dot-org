@@ -52,6 +52,7 @@ pt:
       Assessment: Avaliação
       Attribution: Atribuição
       Back and Forth: Vai e volta
+      Balance an Ecosystem: Equilíbrio de um ecossistema
       Basic Conditionals: Condicionais Básicas
       Bass, Mid, and Treble: Grave, Médio e Agudo
       Be a Super Digital Citizen: Seja um Cidadão Super Digital
@@ -96,6 +97,7 @@ pt:
       Change: Mudança
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
+      Check For Understanding: Verifique se todos compreenderam
       Check Your Work: Verifique Seu Trabalho
       Check for Understanding: Verifique a compreensão
       Check-In Survey: Pesquisa de verificação
@@ -172,6 +174,8 @@ pt:
       Drawing: Desenho
       Drawing Shapes: Desenhando Formas
       Driver Alert System: Sistema de alerta de motorista
+      Ecosystems Simulation: Simulação de ecossistema
+      Ecosystems Video: Vídeo sobre ecossistemas
       Editing Images: Editando Imagens
       Emotion Machine Example: Exemplo de Máquina de Emoção
       End of Course Projects: Projetos de conclusão de curso
@@ -214,6 +218,7 @@ pt:
       Follow the Algorithm - Unplugged Activity: Siga o Algoritmo - Atividade offline
       Follow the Mouse: Siga o Mouse
       Fonts and Style: Fontes e Estilo
+      Food Chain Setup: Configuração da cadeia alimentar
       FoodFight: GuerraDeComida
       For Loop Fun - Unplugged Activity: Diversão com loops for - Atividade offline
       For Loops: Laços para
@@ -245,6 +250,7 @@ pt:
       Ice Age Loops: Laços da Era do Gelo
       If Statements: Instruções Se
       If-Else Statements: Instruções Se/Senão
+      If... then... Conditional Statements: Se... então... Declarações condicionais
       Images and Sounds: Imagens e Sons
       Images in HTML: Imagens em HTML
       Import Your Model: Importe seu modelo
@@ -428,6 +434,7 @@ pt:
       Share Out: Compartilhar
       Share Your App: Compartilhe Seu App
       Share Your Pages: Compartilhe Suas Páginas
+      Share Your Simulation: Compartilhe sua simulação
       Share Your Stylesheets: Compartilhe Suas Folhas de Estilo
       Shoe Recommendation Survey: Pesquisa de recomendação de calçado
       Shoe Recommender: Recomendador de sapato
@@ -437,6 +444,8 @@ pt:
       Sliders: Barras de Rolagem
       Smart Bike - Blinkers: Bicicleta Inteligente - Blinkers
       Social Sleuth: Detetive social
+      Solution 2 - Fishing Season: Solução 2 - Estação de pesca
+      Solution 3 - Fishing Limits: Solução 3 - Limites de pesca
       Speed it Up, Slow it Down: Acelerar, retardar
       Sprite Interactions: Interações com Sprite
       Sprite Interactions Review: Revisão de interações de Sprite
@@ -460,7 +469,8 @@ pt:
       The Buzzer: A Campainha
       The Collector: O Coletor
       The Counter Pattern: O padrão Contador
-      The Draw Loop: O laço de desenho
+      The Draw Loop: O Desenho do Laço
+      The Food Chain: A cadeia alimentar
       The Harvester: A Colheitadeira
       Top Websites: Principais Sites
       Tour of Design Mode: Introdução ao Modo Design
