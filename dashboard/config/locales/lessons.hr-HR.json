@@ -48,12 +48,15 @@
           "name": "Algoritmi: Tangrami"
         },
         "express-2017/Introduction": {
+          "name": "Uvod",
           "name": "Uvod"
         },
         "express-2017/Building a Foundation": {
+          "name": "Izrada temelja",
           "name": "Izrada temelja"
         },
         "express-2017/Nested Loops": {
+          "name": "Ugniježđene petlje",
           "name": "Ugniježđene petlje"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -312,183 +315,243 @@
           "name": "For Petlja Zabava"
         },
         "csd1-2021/What is a Computer?": {
+          "name": "Što je računalo?",
           "name": "Što je računalo?"
         },
         "csd3-2021/Variables": {
+          "name": "Varijable",
           "name": "Varijable"
         },
         "csd3-2021/Sprites": {
+          "name": "Likovi",
           "name": "Likovi"
         },
         "csd3-2021/Text": {
+          "name": "tekst",
           "name": "tekst"
         },
         "csd3-2021/Conditionals": {
+          "name": "Uvjeti",
           "name": "Uvjeti"
         },
         "csd3-2021/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Funkcije s parametrima",
           "name": "Funkcije s parametrima"
         },
         "csd7-2021/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij",
           "name": "Uvod u AI laboratorij"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Vesele karte",
           "name": "Vesele karte"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Pomakni, pomakni",
           "name": "Pomakni, pomakni"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Zapetljancije",
           "name": "Zapetljancije"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Veliki događaj",
           "name": "Veliki događaj"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Binarne narukvice",
           "name": "Binarne narukvice"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Grafičko programiranje",
           "name": "Grafičko programiranje"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Odnosno programiranje",
           "name": "Odnosno programiranje"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Uvjeti s kartama",
           "name": "Uvjeti s kartama"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Pisanje pjesama",
           "name": "Pisanje pjesama"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "For Petlja Zabava",
           "name": "For Petlja Zabava"
         },
         "coursef-2021/Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "csd1-2022/What is a Computer?": {
+          "name": "Što je računalo?",
           "name": "Što je računalo?"
         },
         "csd3-2022/Variables": {
+          "name": "Varijable",
           "name": "Varijable"
         },
         "csd3-2022/Sprites": {
+          "name": "Likovi",
           "name": "Likovi"
         },
         "csd3-2022/Text": {
+          "name": "tekst",
           "name": "tekst"
         },
         "csd3-2022/Conditionals": {
+          "name": "Uvjeti",
           "name": "Uvjeti"
         },
         "csd3-2022/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6-2022/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd7-2022/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij",
           "name": "Uvod u AI laboratorij"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Vesele karte",
           "name": "Vesele karte"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Pomakni, pomakni",
           "name": "Pomakni, pomakni"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Zapetljancije",
           "name": "Zapetljancije"
         },
         "coursec-2022/The Big Event": {
+          "name": "Veliki događaj",
           "name": "Veliki događaj"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Binarne narukvice",
           "name": "Binarne narukvice"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Grafičko programiranje",
           "name": "Grafičko programiranje"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Odnosno programiranje",
           "name": "Odnosno programiranje"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Uvjeti s kartama",
           "name": "Uvjeti s kartama"
         },
         "coursee-2022/Songwriting": {
+          "name": "Pisanje pjesama",
           "name": "Pisanje pjesama"
         },
         "coursef-2022/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "csd1-2023/What is a Computer?": {
+          "name": "Što je računalo?",
           "name": "Što je računalo?"
         },
         "csd3-2023/Variables": {
+          "name": "Varijable",
           "name": "Varijable"
         },
         "csd3-2023/Sprites": {
+          "name": "Likovi",
           "name": "Likovi"
         },
         "csd3-2023/Text": {
+          "name": "tekst",
           "name": "tekst"
         },
         "csd3-2023/Conditionals": {
+          "name": "Uvjeti",
           "name": "Uvjeti"
         },
         "csd3-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6a-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd6b-2023/Functions": {
+          "name": "Funkcije",
           "name": "Funkcije"
         },
         "csd7-2023/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij",
           "name": "Uvod u AI laboratorij"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Vesele karte",
           "name": "Vesele karte"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Pomakni, pomakni",
           "name": "Pomakni, pomakni"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Zapetljancije",
           "name": "Zapetljancije"
         },
         "coursec-2023/The Big Event": {
+          "name": "Veliki događaj",
           "name": "Veliki događaj"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Binarne narukvice",
           "name": "Binarne narukvice"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Grafičko programiranje",
           "name": "Grafičko programiranje"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Odnosno programiranje",
           "name": "Odnosno programiranje"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Uvjeti s kartama",
           "name": "Uvjeti s kartama"
         },
         "coursee-2023/Songwriting": {
+          "name": "Pisanje pjesama",
           "name": "Pisanje pjesama"
         },
         "coursef-2023/The Internet": {
+          "name": "Internet",
           "name": "Internet"
         },
         "artist/Artist": {
+          "name": "Umjetnik",
           "name": "Umjetnik"
         },
         "flappy/Flappy Code": {
+          "name": "Flappy kôd",
           "name": "Flappy kôd"
         },
         "frozen/Artist": {
+          "name": "Kodiraj s Annom i Elsom",
           "name": "Kodiraj s Annom i Elsom"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab",
           "name": "Gumball Play Lab"
         },
         "hello-world-soccer-2022/Hello World: Food": {
@@ -498,18 +561,23 @@
           "name": "Hello World: Prostor"
         },
         "hourofcode/Maze": {
+          "name": "Labirint",
           "name": "Labirint"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab",
           "name": "Ice Age Play Lab"
         },
         "infinity/Infinity": {
+          "name": "Disney Infinity Laboratorij igara",
           "name": "Disney Infinity Laboratorij igara"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Sat Kodiranja",
           "name": "Minecraft Sat Kodiranja"
         },
         "playlab/Play Lab": {
+          "name": "Laboratorij igara",
           "name": "Laboratorij igara"
         },
         "poem-art-2021/Poem Art": {
