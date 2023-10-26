@@ -1,16 +1,45 @@
-export const behaviorGetMutator = {
+export const procedureCallerMutator = {
   previousEnabledState_: true,
 
   paramsFromSerializedState_: [],
 
-  domToMutation: function (element) {
-    const name = element.nextElementSibling.textContent;
-    this.behaviorId = element.nextElementSibling.getAttribute('id');
-    this.deserialize_(name, []);
+  /**
+   * Create XML to represent the (non-editable) name and arguments.
+   * Backwards compatible serialization implementation.
+   * @returns XML storage element.
+   * @this {Blockly.Block}
+   */
+  mutationToDom: function () {
+    const container = Blockly.utils.xml.createElement('mutation');
+    const model = this.getProcedureModel();
+    if (!model) return container;
+
+    container.setAttribute('name', model.getName());
+    for (const param of model.getParameters()) {
+      const arg = Blockly.utils.xml.createElement('arg');
+      arg.setAttribute('name', param.getName());
+      container.appendChild(arg);
+    }
+    return container;
   },
 
-  // Only used to save in XML, but still required to exist by Blockly.
-  mutationToDom: function () {},
+  /**
+   * Parse XML to restore the (non-editable) name and parameters.
+   * Backwards compatible serialization implementation.
+   * @param xmlElement XML storage element.
+   * @this {Blockly.Block}
+   */
+  domToMutation: function (xmlElement) {
+    const name = xmlElement.getAttribute('name');
+    const params = [];
+    for (const n of xmlElement.childNodes) {
+      if (n.nodeName.toLowerCase() === 'arg') {
+        params.push(n.getAttribute('name'));
+      }
+    }
+    this.deserialize_(name, params);
+  },
+
   /**
    * Returns the state of this block as a JSON serializable object.
    * @returns The state of
@@ -29,6 +58,7 @@ export const behaviorGetMutator = {
     }
     return state;
   },
+
   /**
    * Applies the given state to this block.
    * @param state The state to apply to this block, ie the params and
@@ -37,6 +67,7 @@ export const behaviorGetMutator = {
   loadExtraState: function (state) {
     this.deserialize_(state['name'], state['params'] || []);
   },
+
   /**
    * Applies the given name and params from the serialized state to the block.
    * @param name The name to apply to the block.

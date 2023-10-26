@@ -23,36 +23,7 @@ export function convertXmlToJson(xml) {
   //   x: the x attribute found in <block/> element
   //   y: the y attribute found in <block/> element
   const xmlBlocks = Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
-  // const date = Date.now();
-  // let currentDate = null;
-  // do {
-  //   currentDate = Date.now();
-  // } while (currentDate - date < 1000);
-
-  // const timeout = () =>
-  //   new Promise(() =>
-  //     setTimeout(() => {
-  //       const stateToLoad =
-  //         Blockly.serialization.workspaces.save(tempWorkspace);
-  //       console.log({stateToLoad});
-
-  //       if (xmlBlocks.length && stateToLoad.blocks) {
-  //         // Create a map of ids (key) and block serializations (value).
-  //         const blockIdMap = stateToLoad.blocks.blocks.reduce(
-  //           (map, blockJson) => map.set(blockJson.id, blockJson),
-  //           new Map()
-  //         );
-
-  //         addPositionsToState(xmlBlocks, blockIdMap);
-  //       }
-  //       tempWorkspace.dispose();
-  //       return stateToLoad;
-  //     }, 100)
-  //   );
-  // await timeout();
-
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
-  console.log(JSON.stringify(stateToLoad));
 
   if (xmlBlocks.length && stateToLoad.blocks) {
     // Create a map of ids (key) and block serializations (value).
