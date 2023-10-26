@@ -7,10 +7,12 @@ theme: responsive_full_width
   window.pegasus = window.pegasus || {};
   window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
 
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/code.org/public/dance.js')}
 
--# %link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
--# %link{href: "/css/generated/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
+%link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
+%link{href: "/css/generated/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/dance-styles.css", rel: "stylesheet"}
