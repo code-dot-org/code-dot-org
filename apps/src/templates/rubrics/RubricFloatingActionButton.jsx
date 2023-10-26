@@ -17,7 +17,7 @@ export default function RubricFloatingActionButton({
   currentLevelName,
   reportingData,
 }) {
-  const [isOpen, setIsOpen] = useState(!!studentLevelInfo);
+  const [isOpen, setIsOpen] = useState(false);
 
   const eventData = useMemo(() => {
     return {
