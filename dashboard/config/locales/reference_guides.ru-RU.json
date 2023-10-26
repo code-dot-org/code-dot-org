@@ -3,147 +3,195 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
+          "display_name": "События акселерометра",
           "display_name": "События акселерометра"
         },
         "csd-2022/app-lab": {
+          "display_name": "Лаборатория приложений",
           "display_name": "Лаборатория приложений"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/board-events": {
+          "display_name": "События на доске",
           "display_name": "События на доске"
         },
         "csd-2022/changing-screens": {
+          "display_name": "Изменение экранов",
           "display_name": "Изменение экранов"
         },
         "csd-2022/circuit-playground": {
+          "display_name": "Обзор Окружной Игровой Площадки",
           "display_name": "Обзор Окружной Игровой Площадки"
         },
         "csd-2022/collision-detection": {
+          "display_name": "Обнаружение столкновений",
           "display_name": "Обнаружение столкновений"
         },
         "csd-2022/creative-commons-search": {
+          "display_name": "Поиск Creative Commons",
           "display_name": "Поиск Creative Commons"
         },
         "csd-2022/css-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/design-mode": {
+          "display_name": "Режим дизайна",
           "display_name": "Режим дизайна"
         },
         "csd-2022/editing-images": {
+          "display_name": "Редактирование изображений",
           "display_name": "Редактирование изображений"
         },
         "csd-2022/for-loops": {
+          "display_name": "Циклы с параметром",
           "display_name": "Циклы с параметром"
         },
         "csd-2022/formatting-html": {
+          "display_name": "Форматирование HTML",
           "display_name": "Форматирование HTML"
         },
         "csd-2022/functions": {
+          "display_name": "функции",
           "display_name": "функции"
         },
         "csd-2022/game-lab": {
+          "display_name": "Лаборатория игр",
           "display_name": "Лаборатория игр"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/headings-and-paragraphs": {
+          "display_name": "Заголовки и параграфы",
           "display_name": "Заголовки и параграфы"
         },
         "csd-2022/html-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/html-tags": {
+          "display_name": "HTML тэги",
           "display_name": "HTML тэги"
         },
         "csd-2022/hyperlinks": {
+          "display_name": "Гиперссылки",
           "display_name": "Гиперссылки"
         },
         "csd-2022/if-else-statements": {
+          "display_name": "Операторы \"если-иначе\"",
           "display_name": "Операторы \"если-иначе\""
         },
         "csd-2022/if-statements": {
+          "display_name": "Операторы Если",
           "display_name": "Операторы Если"
         },
         "csd-2022/if-statements-2": {
+          "display_name": "Операторы Если",
           "display_name": "Операторы Если"
         },
         "csd-2022/importing-screens": {
+          "display_name": "Импорт экранов",
           "display_name": "Импорт экранов"
         },
         "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Введение в AI лаборатории",
           "display_name": "Введение в AI лаборатории"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/layout-properties": {
+          "display_name": "Свойства макета",
           "display_name": "Свойства макета"
         },
         "csd-2022/lists": {
+          "display_name": "Списки",
           "display_name": "Списки"
         },
         "csd-2022/maker-toolkit": {
+          "display_name": "Maker Toolkit",
           "display_name": "Maker Toolkit"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Карточки моделей в AI Lab",
           "display_name": "Карточки моделей в AI Lab"
         },
         "csd-2022/modifying-arrays": {
+          "display_name": "Изменение и создание массивов",
           "display_name": "Изменение и создание массивов"
         },
         "csd-2022/naming-variables": {
+          "display_name": "Именование переменных",
           "display_name": "Именование переменных"
         },
         "csd-2022/other": {
+          "display_name": "Другое",
           "display_name": "Другое"
         },
         "csd-2022/other-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Краткий обзор",
           "display_name": "Краткий обзор"
         },
         "csd-2022/playing-notes": {
+          "display_name": "Игра в Notes",
           "display_name": "Игра в Notes"
         },
         "csd-2022/problem-solving-process": {
+          "display_name": "Процесс решения проблем",
           "display_name": "Процесс решения проблем"
         },
         "csd-2022/problem-solving-process-general": {
+          "display_name": "Процесс решения проблем",
           "display_name": "Процесс решения проблем"
         },
         "csd-2022/random-numbers": {
+          "display_name": "Случайные числа",
           "display_name": "Случайные числа"
         },
         "csd-2022/sprite-properties": {
+          "display_name": "Свойства спрайтов",
           "display_name": "Свойства спрайтов"
         },
         "csd-2022/sprites": {
+          "display_name": "Спрайты",
           "display_name": "Спрайты"
         },
         "csd-2022/variables": {
+          "display_name": "Переменные",
           "display_name": "Переменные"
         },
         "csd-2022/velocity": {
+          "display_name": "Скорость",
           "display_name": "Скорость"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
+          "display_name": "Скорость и шаблон Счетчика",
           "display_name": "Скорость и шаблон Счетчика"
         },
         "csd-2022/web-lab": {
+          "display_name": "Веб-лаборатория",
           "display_name": "Веб-лаборатория"
         },
         "csd-2022/which-type-of-chart": {
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)",
           "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
