@@ -3,48 +3,63 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Қосымшалар Лабораториясы",
           "display_name": "Қосымшалар Лабораториясы"
         },
         "csd-2022/applab-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/css-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/for-loops": {
+          "display_name": "For ілмектері",
           "display_name": "For ілмектері"
         },
         "csd-2022/functions": {
+          "display_name": "Функциялар",
           "display_name": "Функциялар"
         },
         "csd-2022/game-lab-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/html-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/javascript": {
+          "display_name": "JavaScript",
           "display_name": "JavaScript"
         },
         "csd-2022/javascript-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/lists": {
+          "display_name": "Тізімдер",
           "display_name": "Тізімдер"
         },
         "csd-2022/maker-toolkit-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/other": {
+          "display_name": "Басқасы",
           "display_name": "Басқасы"
         },
         "csd-2022/other-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/patterns-overview": {
+          "display_name": "Қысқаша шолу",
           "display_name": "Қысқаша шолу"
         },
         "csd-2022/variables": {
+          "display_name": "Айнымалылар",
           "display_name": "Айнымалылар"
         }
       }

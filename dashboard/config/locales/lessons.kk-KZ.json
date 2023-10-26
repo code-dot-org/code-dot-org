@@ -42,12 +42,15 @@
           "name": "Алгоритмдер: Танграмдар"
         },
         "express-2017/Introduction": {
+          "name": "Кіріспе",
           "name": "Кіріспе"
         },
         "express-2017/Building a Foundation": {
+          "name": "Ғимарат Салу",
           "name": "Ғимарат Салу"
         },
         "express-2017/Nested Loops": {
+          "name": "Кіріккен Циклдер",
           "name": "Кіріккен Циклдер"
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
@@ -315,174 +318,231 @@
           "name": "Көңілді For циклі"
         },
         "csd3-2021/Variables": {
+          "name": "Айнымалылар",
           "name": "Айнымалылар"
         },
         "csd3-2021/Text": {
+          "name": "Мәтін",
           "name": "Мәтін"
         },
         "csd3-2021/Conditionals": {
+          "name": "Шарттар",
           "name": "Шарттар"
         },
         "csd3-2021/Functions": {
+          "name": "Функциялар",
           "name": "Функциялар"
         },
         "csd6-2021/Functions with Parameters": {
+          "name": "Параметрлі Функциялар",
           "name": "Параметрлі Функциялар"
         },
         "coursea-2021/Programming: Happy Maps": {
+          "name": "Көңілді Карталар",
           "name": "Көңілді Карталар"
         },
         "courseb-2021/Move It, Move It": {
+          "name": "Қозғал, Қозғал",
           "name": "Қозғал, Қозғал"
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "name": "Ілмектерді үйрену",
           "name": "Ілмектерді үйрену"
         },
         "coursec-2021/Events: The Big Event": {
+          "name": "Үлкен Оқиға",
           "name": "Үлкен Оқиға"
         },
         "coursec-2021/Binary Bracelets": {
+          "name": "Екілік Білезіктер",
           "name": "Екілік Білезіктер"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау",
           "name": "Миллиметрлік Бағдарламалау"
         },
         "coursed-2021/Relay Programming": {
+          "name": "Релелік Бағдарламалау",
           "name": "Релелік Бағдарламалау"
         },
         "coursed-2021/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер",
           "name": "Картаға қатысты шартты белгілер"
         },
         "coursee-2021/Functions: Songwriting": {
+          "name": "Ән Жазу",
           "name": "Ән Жазу"
         },
         "coursef-2021/For Loop Fun": {
+          "name": "Көңілді For циклі",
           "name": "Көңілді For циклі"
         },
         "coursef-2021/Internet": {
+          "name": "Ғаламтор",
           "name": "Ғаламтор"
         },
         "csd3-2022/Variables": {
+          "name": "Айнымалылар",
           "name": "Айнымалылар"
         },
         "csd3-2022/Text": {
+          "name": "Мәтін",
           "name": "Мәтін"
         },
         "csd3-2022/Conditionals": {
+          "name": "Шарттар",
           "name": "Шарттар"
         },
         "csd3-2022/Functions": {
+          "name": "Функциялар",
           "name": "Функциялар"
         },
         "csd6-2022/Functions": {
+          "name": "Функциялар",
           "name": "Функциялар"
         },
         "coursea-2022/Happy Maps": {
+          "name": "Көңілді Карталар",
           "name": "Көңілді Карталар"
         },
         "courseb-2022/Move It, Move It": {
+          "name": "Қозғал, Қозғал",
           "name": "Қозғал, Қозғал"
         },
         "courseb-2022/Getting Loopy": {
+          "name": "Ілмектерді үйрену",
           "name": "Ілмектерді үйрену"
         },
         "coursec-2022/The Big Event": {
+          "name": "Үлкен Оқиға",
           "name": "Үлкен Оқиға"
         },
         "coursec-2022/Binary Bracelets": {
+          "name": "Екілік Білезіктер",
           "name": "Екілік Білезіктер"
         },
         "coursed-2022/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау",
           "name": "Миллиметрлік Бағдарламалау"
         },
         "coursed-2022/Relay Programming": {
+          "name": "Релелік Бағдарламалау",
           "name": "Релелік Бағдарламалау"
         },
         "coursed-2022/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер",
           "name": "Картаға қатысты шартты белгілер"
         },
         "coursee-2022/Songwriting": {
+          "name": "Ән Жазу",
           "name": "Ән Жазу"
         },
         "coursef-2022/The Internet": {
+          "name": "Ғаламтор",
           "name": "Ғаламтор"
         },
         "csd3-2023/Variables": {
+          "name": "Айнымалылар",
           "name": "Айнымалылар"
         },
         "csd3-2023/Text": {
+          "name": "Мәтін",
           "name": "Мәтін"
         },
         "csd3-2023/Conditionals": {
+          "name": "Шарттар",
           "name": "Шарттар"
         },
         "csd3-2023/Functions": {
+          "name": "Функциялар",
           "name": "Функциялар"
         },
         "csd6a-2023/Functions": {
+          "name": "Функциялар",
           "name": "Функциялар"
         },
         "csd6b-2023/Functions": {
+          "name": "Функциялар",
           "name": "Функциялар"
         },
         "coursea-2023/Happy Maps": {
+          "name": "Көңілді Карталар",
           "name": "Көңілді Карталар"
         },
         "courseb-2023/Move It, Move It": {
+          "name": "Қозғал, Қозғал",
           "name": "Қозғал, Қозғал"
         },
         "courseb-2023/Getting Loopy": {
+          "name": "Ілмектерді үйрену",
           "name": "Ілмектерді үйрену"
         },
         "coursec-2023/The Big Event": {
+          "name": "Үлкен Оқиға",
           "name": "Үлкен Оқиға"
         },
         "coursec-2023/Binary Bracelets": {
+          "name": "Екілік Білезіктер",
           "name": "Екілік Білезіктер"
         },
         "coursed-2023/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау",
           "name": "Миллиметрлік Бағдарламалау"
         },
         "coursed-2023/Relay Programming": {
+          "name": "Релелік Бағдарламалау",
           "name": "Релелік Бағдарламалау"
         },
         "coursed-2023/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер",
           "name": "Картаға қатысты шартты белгілер"
         },
         "coursee-2023/Songwriting": {
+          "name": "Ән Жазу",
           "name": "Ән Жазу"
         },
         "coursef-2023/The Internet": {
+          "name": "Ғаламтор",
           "name": "Ғаламтор"
         },
         "artist/Artist": {
+          "name": "Кейіпкер",
           "name": "Кейіпкер"
         },
         "flappy/Flappy Code": {
+          "name": "Қанат Қағу Коды",
           "name": "Қанат Қағу Коды"
         },
         "frozen/Artist": {
+          "name": "Анна және Эльзамен код жазыңыз",
           "name": "Анна және Эльзамен код жазыңыз"
         },
         "gumball/Gumball Play Lab": {
+          "name": "Gumball ойын лабораториясы",
           "name": "Gumball ойын лабораториясы"
         },
         "hourofcode/Maze": {
+          "name": "Лабиринт",
           "name": "Лабиринт"
         },
         "iceage/Ice Age Play Lab": {
+          "name": "Mұзды дәуірі ойын лабораториясы",
           "name": "Mұзды дәуірі ойын лабораториясы"
         },
         "infinity/Infinity": {
+          "name": "Диснейдің Шексіз Ойындар Лабораториясы",
           "name": "Диснейдің Шексіз Ойындар Лабораториясы"
         },
         "mc/Hour of Code 2015": {
+          "name": "Minecraft Кодтау Сағаты",
           "name": "Minecraft Кодтау Сағаты"
         },
         "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft кодтау сағатының дизайнеры",
           "name": "Minecraft кодтау сағатының дизайнеры"
         },
         "playlab/Play Lab": {
+          "name": "Ойындар Лабораториясы",
           "name": "Ойындар Лабораториясы"
         },
         "allthethings/Jigsaw": {
