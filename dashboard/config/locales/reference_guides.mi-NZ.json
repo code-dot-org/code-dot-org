@@ -3,18 +3,23 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "Taiwhanga Taupānga",
           "display_name": "Taiwhanga Taupānga"
         },
         "csd-2022/for-loops": {
+          "display_name": "Mō Ngā Koromeke",
           "display_name": "Mō Ngā Koromeke"
         },
         "csd-2022/functions": {
+          "display_name": "Ngā Taumahi",
           "display_name": "Ngā Taumahi"
         },
         "csd-2022/lists": {
+          "display_name": "Ngā Rārangi",
           "display_name": "Ngā Rārangi"
         },
         "csd-2022/variables": {
+          "display_name": "Ngā Taurangi",
           "display_name": "Ngā Taurangi"
         }
       }
