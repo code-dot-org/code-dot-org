@@ -109,10 +109,17 @@
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
     %div.video-thumbnail-wrapper
-      %img.thumbnail-image{:src => image, :alt => "Video thumbnail"}
+      %img.thumbnail-image{:alt => "Video thumbnail", :id => "video-thumbnail-#{id}"}
       %button.play-button-wrapper
         %img.play{:src => "/shared/images/play-button.png", :alt => "Play video #{caption}"}
     .video_caption_link= caption
 
 - unless thumbnail_only
   = view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
+
+:javascript
+  var img_#{id} = document.getElementById("video-thumbnail-#{id}");
+  img_#{id}.onload = function() {
+    $(img_#{id}).addClass('video-thumbnail-loaded')
+  }
+  img_#{id}.src = "#{image}"
