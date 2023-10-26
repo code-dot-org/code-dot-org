@@ -3,12 +3,15 @@
     "data": {
       "reference_guides": {
         "csd-2022/lists": {
+          "display_name": "စာရင်းများ",
           "display_name": "စာရင်းများ"
         },
         "csd-2022/variables": {
+          "display_name": "Variables",
           "display_name": "Variables"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web Lab",
           "display_name": "Web Lab"
         }
       }
