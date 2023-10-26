@@ -8,10 +8,14 @@ import json
 nlp = spacy.load("en_core_web_lg")
 
 ai_inputs_file = open('apps/static/dance/ai/ai-inputs.json')
-data = json.load(ai_inputs_file)
-emoji_ids = []
-for emoji in data['items']:
-    emoji_ids.append(emoji['name'])
+emoji_data = json.load(ai_inputs_file)
+emojis_map = {}
+emojis_list = []
+for emoji in emoji_data['items']:
+    name = emoji['name']
+    id = emoji['id']
+    emojis_map[name] = id
+    emojis_list.append(name)
 
 # We rename foreground/background effects and palettes as their python_name
 # to better reflect the actual output of the effect or color.
@@ -108,36 +112,33 @@ foreground_dict = {}
 color_palettes = list(color_palettes_map.keys())
 background_effects = list(background_effects_map.keys())
 foreground_effects = list(foreground_effects_map.keys())
-print(color_palettes)
-print(background_effects)
-print(foreground_effects)
 
 # Calculate and print similarity scores
-for id_word in emoji_ids:
+for emoji_name in emojis_list:
     palette_scores = []
     for palette_word in color_palettes:
-        id_token = nlp(id_word)
+        id_token = nlp(emoji_name)
         palette_token = nlp(palette_word)
         similarity_score = id_token.similarity(palette_token)
         palette_scores.append(round(similarity_score, 2))
     
     background_scores = []
-    for bg_word in background_effects:
-        id_token = nlp(id_word)
-        bg_token = nlp(bg_word)
-        similarity_score = id_token.similarity(bg_token)
+    for background_word in background_effects:
+        id_token = nlp(emoji_name)
+        background_token = nlp(background_word)
+        similarity_score = id_token.similarity(background_token)
         background_scores.append(round(similarity_score, 2))
         
     foreground_scores = []
-    for fg_word in foreground_effects:
-        id_token = nlp(id_word)
-        fg_token = nlp(fg_word)
-        similarity_score = id_token.similarity(fg_token)
+    for foreground_word in foreground_effects:
+        id_token = nlp(emoji_name)
+        foreground_token = nlp(foreground_word)
+        similarity_score = id_token.similarity(foreground_token)
         foreground_scores.append(round(similarity_score, 2))
-        
-    palette_dict[id_word] = palette_scores
-    background_dict[id_word] = background_scores
-    foreground_dict[id_word] = foreground_scores
+    emoji_id = emojis_map[emoji_name]
+    palette_dict[emoji_id] = palette_scores
+    background_dict[emoji_id] = background_scores
+    foreground_dict[emoji_id] = foreground_scores
 
 palette_output = {'emojiAssociations': palette_dict, 'output': color_palettes}
 background_output = {'emojiAssociations': background_dict, 'output': background_effects}
