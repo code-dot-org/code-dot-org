@@ -8,7 +8,7 @@
   left: 0;
   background-color: #000;
   opacity: 0.6;
-  z-index: 1250;
+  z-index: 10500;
 };
 
 .modal {
@@ -16,11 +16,28 @@
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1350;
+  z-index: 11000;
   width: 70%;
   max-width: 600px;
   background-color: #fff;
   border-radius: 4px;
   padding: 1rem;
   overflow: auto;
+};
+
+.middle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: $lighter_gray;
+};
+
+.buttonsBottom {
+  float: right;
 };
