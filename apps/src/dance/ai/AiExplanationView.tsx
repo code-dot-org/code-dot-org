@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
+import {DropdownTranslations, TranslationTuple} from '../types';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -18,6 +19,7 @@ import {
   Legend,
 } from 'chart.js';
 import {Bar} from 'react-chartjs-2';
+import Dropdown from '@cdo/apps/applab/designElements/dropdown';
 
 ChartJS.register(
   CategoryScale,
@@ -39,15 +41,15 @@ type Result = {[key in FieldKey]: string};
 interface AiExplanationViewProps {
   inputs: string[];
   result: Result;
-  backgroundMapping: [string, string][];
-  foregroundMapping: [string, string][];
-  paletteMapping: [string, string][];
+  backgroundMapping: DropdownTranslations;
+  foregroundMapping: DropdownTranslations;
+  paletteMapping: DropdownTranslations;
 }
 
 interface FieldObject {
   name: string;
   data: CachedWeightsMapping;
-  labelTranslations: [string, string][];
+  labelTranslations: DropdownTranslations;
 }
 
 interface Fields {
@@ -69,7 +71,6 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   foregroundMapping,
   paletteMapping,
 }) => {
-  console.log(backgroundMapping);
   const [currentFieldKey, setCurrentFieldKey] = useState(
     FieldKey.BACKGROUND_EFFECT
   );
@@ -103,19 +104,13 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
         stacked: true,
         ticks: {
           color: function (context) {
-            // result[currentFieldKey] => 'disco_ball'
-            // context.tick.label => Colors
-            // mapping between disco_ball -> colors only in currentField.labelTranslations
             const translations = currentField.labelTranslations;
-            const translationTuple = translations.find(
-              translationMapping =>
-                translationMapping[1] === result[currentFieldKey]
+            const translation = getTranslation(
+              result[currentFieldKey],
+              translations
             );
 
-            if (
-              translationTuple &&
-              context.tick.label === translationTuple[0]
-            ) {
+            if (translation && context.tick.label === translation) {
               return 'rgba(54, 162, 235, 1)';
             }
             return '#000000';
@@ -133,14 +128,11 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
 
   const labels = currentField.data.output.map(label => {
     const translations = currentField.labelTranslations;
-    const translationTuple = translations.find(
-      translationMapping => translationMapping[1] === label
-    );
+    const translation = getTranslation(label, translations);
 
     // if we can't find a translation for the key from the model,
     // display the untranslated key
-    const translatedString = translationTuple ? translationTuple[0] : label;
-    return translatedString;
+    return translation || label;
   });
 
   // to do: refactor into shared function
@@ -186,6 +178,17 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
       <Bar width={800} height={255} options={options} data={data} />
     </div>
   );
+};
+
+const getTranslation = (
+  key: string,
+  translations: DropdownTranslations
+): string | undefined => {
+  const translationTuple: TranslationTuple | undefined = translations.find(
+    translationMapping => translationMapping[1] === key
+  );
+
+  return translationTuple ? translationTuple[0] : undefined;
 };
 
 export default AiExplanationView;

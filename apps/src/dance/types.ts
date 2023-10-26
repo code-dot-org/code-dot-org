@@ -41,3 +41,9 @@ export enum AiOutput {
   GENERATED_BLOCKS = 'generated_blocks',
   BOTH = 'both',
 }
+
+// first item is user readable / translated string (eg, "Blooming Petals"),
+// second item is english-only key (eg, "blooming_petals")
+export type TranslationTuple = [string, string];
+
+export type DropdownTranslations = TranslationTuple[];

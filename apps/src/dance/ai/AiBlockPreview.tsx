@@ -4,7 +4,11 @@ import moduleStyles from './ai-block-preview.module.scss';
 
 interface AiBlockPreviewProps {
   fadeIn: boolean;
-  generateBlocksFromResult: (workspace: Workspace) => [BlockSvg, BlockSvg];
+  generateBlocksFromResult: (
+    workspace: Workspace,
+    resultJsonString: string
+  ) => [BlockSvg, BlockSvg];
+  resultJson: string;
   onComplete: () => void;
 }
 
@@ -15,6 +19,7 @@ interface AiBlockPreviewProps {
 const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   fadeIn,
   generateBlocksFromResult,
+  resultJson,
   onComplete,
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
@@ -53,16 +58,14 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
           {}
         );
 
-      // fragile, ends up producing lots of blocks if dependencies (eg, generateBlocksFromResult) change.
-      // figure out only generate blocks if we haven't already
-      const blocksSvg = generateBlocksFromResult(previewWorkspace);
+      const blocksSvg = generateBlocksFromResult(previewWorkspace, resultJson);
       blocksSvg.forEach((blockSvg: BlockSvg) => {
         blockSvg.initSvg();
         blockSvg.render();
       });
       Blockly.svgResize(previewWorkspace as WorkspaceSvg);
     }
-  }, [blockPreviewContainerRef, generateBlocksFromResult, done]);
+  }, [blockPreviewContainerRef, generateBlocksFromResult, resultJson, done]);
 
   return (
     <div id={fadeIn ? 'fade-in' : undefined}>

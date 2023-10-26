@@ -12,7 +12,8 @@ import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput} from '../types';
+import {AiOutput, TranslationTuple, DropdownTranslations} from '../types';
+import Dropdown from '@cdo/apps/applab/designElements/dropdown';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -59,13 +60,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
-  const [backgroundMapping, setBackgroundMapping] = useState<
-    [string, string][]
-  >([]);
-  const [foregroundMapping, setForegroundMapping] = useState<
-    [string, string][]
-  >([]);
-  const [paletteMapping, setPaletteMapping] = useState<[string, string][]>([]);
+  const [backgroundMapping, setBackgroundMapping] =
+    useState<DropdownTranslations>([]);
+  const [foregroundMapping, setForegroundMapping] =
+    useState<DropdownTranslations>([]);
+  const [paletteMapping, setPaletteMapping] = useState<DropdownTranslations>(
+    []
+  );
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -91,6 +92,30 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setInputs(JSON.parse(currentValue).inputs);
     }
   }, [currentAiModalField]);
+
+  useEffect(() => {
+    if (resultJson) {
+      const blocksSvg = generateBlocksFromResult(
+        Blockly.getMainWorkspace(),
+        resultJson
+      );
+
+      const translationsForeground = getTranslationsFromField(
+        blocksSvg[0].getField('EFFECT') as FieldDropdown
+      );
+      setForegroundMapping(translationsForeground);
+
+      const translationsBackground = getTranslationsFromField(
+        blocksSvg[1].getField('EFFECT') as FieldDropdown
+      );
+      setBackgroundMapping(translationsBackground);
+
+      const translationsPalette = getTranslationsFromField(
+        blocksSvg[1].getField('PALETTE') as FieldDropdown
+      );
+      setPaletteMapping(translationsPalette);
+    }
+  }, [resultJson]);
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;
@@ -180,76 +205,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setResultJson(fullResultJson);
   };
 
-  /**
-   * Generates blocks from the AI result, and attaches
-   * them to each other.
-   */
-  const generateBlocksFromResult = (
-    workspace: Workspace
-  ): [BlockSvg, BlockSvg] => {
-    const params = JSON.parse(resultJson);
-
-    const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
-      workspace.newBlock(
-        'Dancelab_setBackgroundEffectWithPaletteAI'
-      ) as BlockSvg,
-    ];
-
-    // Foreground block.
-    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
-
-    // Background block.
-    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
-
-    // is type from google ok (rather than wrapper)?
-    const foregroundFieldDropdown = blocksSvg[0].getField(
-      'EFFECT'
-    ) as FieldDropdown;
-    const backgroundFieldDropdown = blocksSvg[1].getField(
-      'EFFECT'
-    ) as FieldDropdown;
-    const paletteFieldDropdown = blocksSvg[1].getField(
-      'PALETTE'
-    ) as FieldDropdown;
-
-    if (!foregroundMapping.length) {
-      const translations = foregroundFieldDropdown
-        .getOptions()
-        .map(translation => {
-          translation[1] = translation[1].replace(/"/g, '');
-          return translation;
-        }) as [string, string][];
-      setForegroundMapping(translations);
-    }
-    if (!backgroundMapping.length) {
-      const translations = backgroundFieldDropdown
-        .getOptions()
-        .map(translation => {
-          translation[1] = translation[1].replace(/"/g, '');
-          return translation;
-        }) as [string, string][];
-      setBackgroundMapping(translations);
-    }
-    if (!paletteMapping.length) {
-      const translations = paletteFieldDropdown
-        .getOptions()
-        .map(translation => {
-          translation[1] = translation[1].replace(/"/g, '');
-          return translation;
-        }) as [string, string][];
-      setPaletteMapping(translations);
-    }
-
-    // Connect the blocks.
-    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-
-    return blocksSvg;
-  };
-
   const handleConvertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
+    const blocksSvg = generateBlocksFromResult(
+      Blockly.getMainWorkspace(),
+      resultJson
+    );
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -538,6 +498,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               <AiBlockPreview
                 fadeIn={mode === Mode.GENERATING}
                 generateBlocksFromResult={generateBlocksFromResult}
+                resultJson={resultJson}
                 onComplete={() => {
                   if (mode === Mode.GENERATING) {
                     setGeneratingDone(true);
@@ -556,7 +517,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           showPreview && (
             <div id="preview-area" className={moduleStyles.previewArea}>
               <AiVisualizationPreview
-                blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+                blocks={generateBlocksFromResult(
+                  Blockly.getMainWorkspace(),
+                  resultJson
+                )}
               />
             </div>
           )}
@@ -647,6 +611,46 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       </div>
     </AccessibleDialog>
   );
+};
+
+/**
+ * Generates blocks from the AI result in a given workspace,
+ * and attaches them to each other.
+ */
+const generateBlocksFromResult = (
+  workspace: Workspace,
+  resultJsonString: string
+): [BlockSvg, BlockSvg] => {
+  const params = JSON.parse(resultJsonString);
+
+  const blocksSvg: [BlockSvg, BlockSvg] = [
+    workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+    workspace.newBlock('Dancelab_setBackgroundEffectWithPaletteAI') as BlockSvg,
+  ];
+
+  // Foreground block.
+  blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+
+  // Background block.
+  blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
+  blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+
+  // Connect the blocks.
+  blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+
+  return blocksSvg;
+};
+
+const getTranslationsFromField = (
+  dropdown: FieldDropdown
+): DropdownTranslations => {
+  const stripDoubleQuotes = (translationTuple: TranslationTuple) => {
+    translationTuple[1] = translationTuple[1].replace(/"/g, '');
+    return translationTuple;
+  };
+
+  const dropdownOptions = dropdown.getOptions() as DropdownTranslations;
+  return dropdownOptions.map(stripDoubleQuotes);
 };
 
 export default DanceAiModal;
