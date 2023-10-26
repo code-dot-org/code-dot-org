@@ -4,6 +4,7 @@ import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import procedureCallerOnChangeMixin from './mutators/procedureCallerOnChangeMixin';
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
@@ -86,7 +87,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
       'procedure_caller_context_menu_mixin',
-      'procedure_caller_onchange_mixin',
+      'custom_procedure_caller_on_change_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
       'modal_procedures_no_destroy',
     ],
@@ -188,6 +189,11 @@ GoogleBlockly.Extensions.unregister('procedure_def_mutator');
 GoogleBlockly.Extensions.registerMutator(
   'procedure_def_mutator',
   procedureDefMutator
+);
+
+GoogleBlockly.Extensions.registerMixin(
+  'custom_procedure_caller_on_change_mixin',
+  procedureCallerOnChangeMixin
 );
 
 /**

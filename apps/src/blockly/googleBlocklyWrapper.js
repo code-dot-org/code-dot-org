@@ -155,15 +155,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    let workspaceCode = Blockly.JavaScript.workspaceToCode(
-      Blockly.mainBlockSpace
-    );
-    if (this.getHiddenDefinitionWorkspace()) {
-      workspaceCode += Blockly.JavaScript.workspaceToCode(
-        this.getHiddenDefinitionWorkspace()
+    setTimeout(() => {
+      let workspaceCode = Blockly.JavaScript.workspaceToCode(
+        Blockly.mainBlockSpace
       );
-    }
-    return workspaceCode;
+      if (this.getHiddenDefinitionWorkspace()) {
+        workspaceCode += Blockly.JavaScript.workspaceToCode(
+          this.getHiddenDefinitionWorkspace()
+        );
+      }
+      return workspaceCode;
+    }, 100);
   };
 
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
