@@ -1,10 +1,15 @@
 require_relative '../i18n_script_utils'
+require_relative '../metrics'
 
 module I18n
   module Utils
     class SyncOutBase
       def self.perform
-        new.send(:perform)
+        resource_class = name.match(/.*::(?<component>\w+)::SyncOut/)
+
+        I18n::Metrics.report_runtime(resource_class, 'sync-out') do
+          new.send(:perform)
+        end
       end
 
       protected

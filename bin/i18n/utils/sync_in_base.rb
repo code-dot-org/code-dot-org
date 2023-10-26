@@ -1,10 +1,15 @@
 require_relative '../i18n_script_utils'
+require_relative '../metrics'
 
 module I18n
   module Utils
     class SyncInBase
       def self.perform
-        new.send(:perform)
+        resource_class = name.match(/.*::(?<component>\w+)::SyncIn/)
+
+        I18n::Metrics.report_runtime(resource_class[:component], 'sync-in') do
+          new.send(:perform)
+        end
       end
 
       protected
