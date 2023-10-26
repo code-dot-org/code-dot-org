@@ -3,24 +3,31 @@
     "data": {
       "reference_guides": {
         "csd-2022/app-lab": {
+          "display_name": "App Lab",
           "display_name": "App Lab"
         },
         "csd-2022/functions": {
+          "display_name": "Функциялар",
           "display_name": "Функциялар"
         },
         "csd-2022/game-lab": {
+          "display_name": "Оюн лабы",
           "display_name": "Оюн лабы"
         },
         "csd-2022/lists": {
+          "display_name": "Тизмелер",
           "display_name": "Тизмелер"
         },
         "csd-2022/other": {
+          "display_name": "Башка",
           "display_name": "Башка"
         },
         "csd-2022/variables": {
+          "display_name": "Өзгөрмөлөр",
           "display_name": "Өзгөрмөлөр"
         },
         "csd-2022/web-lab": {
+          "display_name": "Web Lab",
           "display_name": "Web Lab"
         }
       }
