@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! D
 
 ### Dieđit Eaktodáhtolaččaide dalle go Registeret iežat Dáhpáhusa
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
 
 ### Movttidahte iežat Ohppiid
 

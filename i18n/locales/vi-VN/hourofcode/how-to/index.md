@@ -72,7 +72,7 @@ Hãy giới thiệu Giờ lập trình cho các giáo viên khác, những ngư�
 
 ### Hãy cho tình nguyện viên biết bằng cách đăng ký sự kiện của bạn
 
-Khi bạn [đăng ký sự kiện Giờ lập trình](/#join), bạn sẽ nhận được thông báo hữu ích qua email về tin tức và lời khuyên để tổ chức Giờ lập trình thành công. Đó cũng là cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham gia. Tình nguyện viên là một nguồn lực tuyệt vời và có thể đến nói chuyện với lớp của bạn về khoa học máy tính hoặc chỉ đơn giản là giúp học sinh của bạn trong các hoạt động Giờ lập trình.
+Khi đăng [ký sự kiện Giờ Mã](/events), bạn sẽ nhận được thông tin liên lạc qua email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Đó cũng là cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham gia. Tình nguyện viên là một nguồn lực tuyệt vời và có thể đến nói chuyện với lớp của bạn về khoa học máy tính hoặc chỉ đơn giản là giúp học sinh của bạn trong các hoạt động Giờ lập trình.
 
 ### Tạo hứng thú cho học sinh
 

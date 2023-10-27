@@ -35,17 +35,17 @@ title: 编程一小时操作指南
 
 * * *
 
-## Example plan for a school assembly or event
+## 学校活动的计划样例
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**活动：**全校计算机科学教育周启动会
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**日期：**{{ campaign_date/start_short }}（教育周的第一天）
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**时间：**上学期间，上午活动最佳。大致要 1 小时。
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**地点：**学校活动厅（例如：剧场、体育馆或食堂）
 
-## Run of Show
+## 活动时间表
 
 | 时长          | 活动                                                    |
 | ----------- | ----------------------------------------------------- |

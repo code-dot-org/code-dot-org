@@ -134,7 +134,7 @@ Parlez-en avec l'école ou l'enseignant pour voir ce qui est le plus logique. No
 - Expliquez certains effets de la technologies sur nos vies, en utilisant des exemples qui intéresseront des élèves de tous les horizons : parlez de technologies qui sauvent des vies, aident les gens, ou facilitent le contact. 
 - Si vous représentez une entreprise technologique, présentez des produits amusants et innovants sur lesquels votre entreprise travaille. Si vous ne représentez pas une entreprise technologique, parlez des façons dont votre entreprise utilise la technologie pour résoudre ses problèmes et atteindre ses objectifs.
 - Invitez les ingénieurs en informatique de votre entreprise à discuter des raisons pour lesquelles ils ont décidé d'étudier l'informatique et des projets sur lesquels ils travaillent. 
-- Si c'est un groupe de votre personnel qui va animer votre événement ou va se porter volontaire dans une école des environs, pensez à commander des [t-shirts personnalisés](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour vos collaborateurs.
+- Si vous avez un groupe de membres du personnel qui animera votre événement ou fera du bénévolat auprès d'une école locale, pensez à commander des t-shirts [personnalisés](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) pour votre groupe.
 
 ### 3. Envisagez vos besoins technologiques
 
@@ -187,7 +187,7 @@ L'une des meilleures façons de nous aider est de faire passer le mot et de prom
 
 ### 1. Enregistrez votre événement
 
-Après avoir finalisé [votre inscription à l'événement Heure du code](/#join), vous recevrez des messages électroniques utiles contenant des nouvelles et des conseils pour organiser l'Heure du code avec succès. C'est aussi de cette manière que vous pourrez faire savoir aux écoles des environs ou aux parents que vous organisez un événement près de chez eux.
+Lorsque vous vous [inscrivez à une Heure de code](/events), vous recevrez des communications électroniques précieuses contenant des informations et des conseils pour organiser efficacement un évènement Heure de code. C'est aussi de cette manière que vous pourrez faire savoir aux écoles des environs ou aux parents que vous organisez un événement près de chez eux.
 
 ### 2. Publiez sur les réseaux sociaux
 

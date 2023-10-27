@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: מדריך הוראות לשעת קוד לאחר הלימודים
 ---
 
 {{ signup_button }}
@@ -10,9 +10,9 @@ title: Hour of Code How-to Guide for After-school
 
 חשיבה חישובית עוזרת לטפח מיומנויות פתרון בעיות, היגיון ויצירתיות. וטכנולוגיה משנה צורה של כל תעשייה על גבי כדור הארץ. תלמידים בימינו צריכים ללמוד איך לייצר טכנולוגיה, לא רק להשתמש בה. בכך שיתחילו מוקדם, יהיה להם הבסיס להצלחה בכל מסלול קריירה במאה ה-21.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. אם תצטרכו עזרה נוספת, תוכלו למצוא [מתנדב/ת מקומי/ת]({{ urls/volunteer_local }}) שיעזור לכם/ן להעביר שעת קוד בשיעורים שלאחר שעות הלימודים ובמועדוניות.
+לנסות שעה של קוד היא דרך פשוטה ומהנה להכיר לתלמידים מדעי המחשב, אולי בפעם הראשונה. אם תצטרכו עזרה נוספת, תוכלו למצוא [מתנדב/ת מקומי/ת]({{ urls/volunteer_local }}) שיעזור לכם/ן להעביר שעת קוד בשיעורים שלאחר שעות הלימודים ובמועדוניות.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### ניתן לארח גם שעת קוד מרחוק! כדי להתחיל, עיין [בטיפים שלנו לאירוח אירוע Hour of Code וירטואלי](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -40,7 +40,7 @@ The best Hour of Code experience includes Internet-connected computers. אבל *
 
 ספק אזניות עבור הכיתה, או בקש מהתלמידים להביא את שלהם, אם המדריך אשר בחרת עובד הכי טוב עם שמע.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). כאשר תלמידים מתחברים יחד, הם עוזרים אחד לשני ונסמכים פחות על המורה. They’ll also see that computer science is social and collaborative.
+**אין לכם מספיק מכשירים?** השתמש בת [כנות זוגי](https://www.youtube.com/watch?v=vgkahOzFH2Q). כאשר תלמידים מתחברים יחד, הם עוזרים אחד לשני ונסמכים פחות על המורה. They’ll also see that computer science is social and collaborative.
 
 ## 5. התחילו את "שעה של קוד" עם סרטון מעורר השראה
 
@@ -57,23 +57,23 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - הסבר כיצד טכנולוגיה משפיעה על חיינו, עם דוגמאות שיתחברו אליהם, גם לבנות וגם לבנים (דבר על אפליקציות וטכנולוגיות שעוזרות להציל חיים, לעזור לאנשים, לחבר אנשים וכדו').
 - ערכו רשימה של דברים שמשתמשים בקוד בחיי היום יום.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- ראה טיפים להשגת התעניינות של בנות במדעי המחשב [כאן]({{ urls/girls }}).
 
 **זקוק להדרכה נוספת?** הורד את זה [תבנית לתכנון שיעור](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6) קודד!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**הפנה את המשתתפים לפעילות** - כתוב את קישור ההדרכה על לוח לבן. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. בוא/י נבין את זה יחד." -"טכנולוגיה לא פועלת תמיד בדרך בה אנחנו רוצים." - "לימוד תכנות זה כמו לימוד שפה חדשה; לא תשלוט בה מיד."
+**כשמישהו נתקל בקשיים זה בסדר להגיב:** - "אני לא יודע. בוא/י נבין את זה יחד." -"טכנולוגיה לא פועלת תמיד בדרך בה אנחנו רוצים." - "לימוד תכנות זה כמו לימוד שפה חדשה; לא תשלוט בה מיד."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**מה לעשות אם מישהו מסיים מוקדם?** - עודדו את המשתתפים לנסות פעילות נוספת של שעת קוד בכתובת [hourofcode.com/learn]({{ urls/learn }}) - או, בקש ממי שמסיים מוקדם לעזור לאחרים שנתקלים בבעיות.
 
-## 7. Celebrate
+## 7. לחגוג
 
 - [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [הדפס "עשיתי שעה של קוד!"]({{ promote/resources_stickers }}) מדבקות לתלמידים שלך.
+- [הזמינו חולצות טריקו מותא](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) מות אישית למשתתפים.
 - שתפו תמונות וסרטוני וידאו של אירוע "שעה של קוד" ברשתות החברתיות. השתמשו בתג #HourOfCode ו@codeorg כדי שנוכל גם אנחנו להדגיש את הצלחתכם!
 
 ## מקורות מידע נוספים במסגרת "שעה של קוד" למורים
@@ -85,6 +85,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## איך ממשיכים אחרי "שעה של קוד"?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+שעת הקוד היא רק הצעד הראשון במסע ללמוד עוד על אופן הפעולה של הטכנולוגיה וכיצד ליצור יישומי תוכנה. עזרו לתלמידים להמשיך את המסע שלהם ולעודד אותם [ללמוד עוד באינטרנט](/beyond)!
 
 {{ signup_button }}
