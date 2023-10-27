@@ -112,6 +112,7 @@ class RubricsControllerTest < ActionController::TestCase
 
   test "gets ai evaluations for student and learning goal" do
     student = create :student
+    classmate = create :student
     create :follower, student_user: student, user: @teacher
     sign_in @teacher
 
@@ -137,6 +138,29 @@ class RubricsControllerTest < ActionController::TestCase
       learning_goal: learning_goal2,
       understanding: 2
     )
+
+    # Create other records for another student
+    travel 1.minute do
+      rubric_ai_evaluation = create(
+        :rubric_ai_evaluation,
+        rubric: @rubric,
+        user: classmate,
+        requester: @teacher,
+        status: 1
+      )
+      create(
+        :learning_goal_ai_evaluation,
+        rubric_ai_evaluation: rubric_ai_evaluation,
+        learning_goal: learning_goal1,
+        understanding: 3
+      )
+      create(
+        :learning_goal_ai_evaluation,
+        rubric_ai_evaluation: rubric_ai_evaluation,
+        learning_goal: learning_goal2,
+        understanding: 3
+      )
+    end
 
     get :get_ai_evaluations, params: {
       id: @rubric.id,
