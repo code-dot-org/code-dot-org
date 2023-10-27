@@ -46,15 +46,15 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * Overrides the standard render to create a frame within the element, rather than around it.
    */
   render() {
-    var minWidth = this.frameText_.getBoundingClientRect().width;
-    var width =
+    const minWidth = this.frameText_.getBoundingClientRect().width;
+    let width =
       Math.max(
         minWidth,
         this.element_.getMetricsManager().getMetrics().contentWidth
       ) +
       2 * frameSizes.MARGIN_SIDE;
 
-    var height =
+    let height =
       this.element_.getMetricsManager().getMetrics().contentHeight +
       frameSizes.MARGIN_TOP +
       frameSizes.MARGIN_BOTTOM +
@@ -82,6 +82,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     this.frameText_.setAttribute('y', frameY + frameSizes.HEADER_HEIGHT / 2);
   }
 }
+
 /**
  * Event handler for changes in the workspace.
  *

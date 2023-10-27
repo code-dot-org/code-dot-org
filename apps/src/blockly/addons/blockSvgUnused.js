@@ -28,9 +28,11 @@ export default class BlockSvgUnused extends BlockSvgFrame {
  */
 export function onBlockClickDragDelete(event) {
   if (
-    event.type === Blockly.Events.CLICK ||
-    event.type === Blockly.Events.BLOCK_DRAG ||
-    event.type === Blockly.Events.BLOCK_DELETE
+    [
+      Blockly.Events.CLICK,
+      Blockly.Events.BLOCK_DRAG,
+      Blockly.Events.BLOCK_DELETE,
+    ].includes(event.type)
   ) {
     const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
     const block = workspace.getBlockById(event.blockId);
@@ -38,5 +40,25 @@ export function onBlockClickDragDelete(event) {
       return;
     }
     block.removeUnusedBlockFrame();
+  }
+}
+
+/**
+ * Event handler for theme changes in the workspace.
+ *
+ * This function is added as a change listener to the Blockly workspace. It triggers
+ * when a theme change occurs and re-renders the SVG frame. We do this because
+ * high contrast themes increase the rendered size of the block.
+ * to re-center it on the content.
+ *
+ * @param {Blockly.Events.Abstract} event - The Blockly event object.
+ */
+export function onThemeChange(event) {
+  if (event.type === Blockly.Events.THEME_CHANGE) {
+    const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
+    const blocks = workspace.getTopBlocks();
+    blocks
+      .filter(block => block.unusedSvg_)
+      .forEach(block => block.unusedSvg_.render());
   }
 }

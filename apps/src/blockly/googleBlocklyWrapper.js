@@ -49,7 +49,10 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
+import BlockSvgUnused, {
+  onBlockClickDragDelete,
+  onThemeChange,
+} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
@@ -665,6 +668,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
     workspace.addChangeListener(onBlockClickDragDelete);
+    workspace.addChangeListener(onThemeChange);
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
 

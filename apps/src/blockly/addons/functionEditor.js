@@ -12,7 +12,7 @@ import {
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
-import i18n from '@cdo/locale';
+import msg from '@cdo/locale';
 import {BLOCK_TYPES} from '../constants';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
@@ -178,13 +178,10 @@ export default class FunctionEditor {
     }
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
-    const existingFrame = this.editorWorkspace.svgFrame_;
-    if (existingFrame) {
-      existingFrame.dispose();
-    }
+
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
-      isBehavior ? i18n.behaviorEditorHeader() : i18n.function(),
+      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
       'blocklyWorkspaceSvgFrame'
     );
     this.editorWorkspace.svgFrame_.render();
@@ -383,6 +380,10 @@ export default class FunctionEditor {
       // Dispose of all non-procedure-definition top blocks (aka orphaned blocks)
       // and propagate the delete event to the hidden workspace.
       orphanedBlocks.forEach(block => block.dispose(false));
+    }
+    const workspaceSvgFrame = this.editorWorkspace.svgFrame_;
+    if (workspaceSvgFrame) {
+      workspaceSvgFrame.dispose();
     }
 
     // Now call clear() to have Blockly handle the rest of the workspace clearing.
