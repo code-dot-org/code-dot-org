@@ -8,7 +8,6 @@ import sinon from 'sinon';
 const testPrimaryTeacher = {
   name: 'T-rex',
   email: 'tyrannosaurus.rex@code.org',
-  isPrimary: 'true',
 };
 
 const testSectionInstructors = [
@@ -38,7 +37,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={() => {}}
         coteachersToAdd={[]}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
@@ -52,7 +51,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={null}
         setCoteachersToAdd={() => {}}
         coteachersToAdd={[]}
-        primaryInstructor={null}
+        primaryTeacher={null}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
@@ -66,7 +65,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={() => {}}
         coteachersToAdd={['coelophysis@code.org']}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
@@ -84,7 +83,7 @@ describe('CoteacherSettings', () => {
           'diplodocus@code.org',
           'eoraptor@code.org',
         ]}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
@@ -96,7 +95,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={setCoteachersToAddSpy}
         coteachersToAdd={[]}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
@@ -126,7 +125,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={setCoteachersToAdd}
         coteachersToAdd={coteachersToAdd}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     wrapper
@@ -146,7 +145,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={() => {}}
         coteachersToAdd={['coelophysis@code.org']}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('tr')).to.have.lengthOf(3);
@@ -167,7 +166,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={() => {}}
         coteachersToAdd={['coelophysis@code.org']}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
@@ -198,7 +197,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={setCoteachersToAdd}
         coteachersToAdd={coteachersToAdd}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
@@ -235,7 +234,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={setCoteachersToAdd}
         coteachersToAdd={coteachersToAdd}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
@@ -276,7 +275,7 @@ describe('CoteacherSettings', () => {
         sectionInstructors={testSectionInstructors}
         setCoteachersToAdd={setCoteachersToAddSpy}
         coteachersToAdd={['coelophysis@code.org']}
-        primaryInstructor={testPrimaryTeacher}
+        primaryTeacher={testPrimaryTeacher}
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
