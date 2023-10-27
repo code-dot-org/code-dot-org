@@ -122,6 +122,15 @@ $ai-modal-border-width: 8px;
     border-radius: 4px;
     background-color: white;
 
+    .toggleArea  {
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      top: 10px;
+      left: 0;
+      text-align: center;
+    }
+
     .textArea {
       position: absolute;
       width: 100%;
@@ -286,7 +295,7 @@ $ai-modal-border-width: 8px;
       justify-content: center;
       width: 100%;
       height: 270px;
-      top: 10px;
+      top: 40px;
       left: 0;
 
       .blockPreview {
@@ -310,6 +319,7 @@ $ai-modal-border-width: 8px;
       position: absolute;
       height: 200px;
       right: 300px;
+      top: 40px;
       display: flex;
       align-items: center;
       margin-top: 10px;
