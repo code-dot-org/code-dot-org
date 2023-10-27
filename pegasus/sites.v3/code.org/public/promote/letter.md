@@ -9,8 +9,8 @@ Send an email or letter to encourage your local school to offer or expand comput
 <p>Dear Teacher or Administrator,</p>
 
 **90% of parents want schools to teach computer programming, and students love it.**
-  
-Computer science opens more doors than any other discipline. Learning the basics will help students in any career—from architecture to zoology. [71%](https://www.brookings.edu/research/digitalization-and-the-american-workforce) of all US jobs require digital skills. And high-skilled computing occupations are the [fastest-growing](http://www.rasmussen.edu/degrees/technology/blog/careers-in-computer-science-face-the-facts), [best-paying](http://www.naceweb.org/about-us/press/2016/stem-grads-highest-starting-salaries.aspx), and now the [largest](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) sector of all new wages in the US.
+
+Computer science opens more doors than any other discipline. Learning the basics will help students in any career—from architecture to zoology. [71%](https://www.brookings.edu/research/digitalization-and-the-american-workforce) of all US jobs require digital skills. And high-skilled computing occupations are the [fastest-growing](http://www.rasmussen.edu/degrees/technology/blog/careers-in-computer-science-face-the-facts), [best-paying](http://www.naceweb.org/about-us/press/2016/stem-grads-highest-starting-salaries.aspx), and now the largest sector of all new wages in the US.
 
 9 out of 10 parents want schools to teach computer science ([Gallup poll](https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf)), and students rank it among their [favorite subjects](https://www.linkedin.com/pulse/what-classes-do-students-like-most-hadi-partovi), behind only art and music. Just as they learn how to write an essay or how electricity works, it’s important for every 21st century student to have a chance to learn how the internet works or design an app.
 

@@ -1463,7 +1463,9 @@ si:
           name: mc
           student_description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft
             ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
+        minecraft:
+          title: Minecraft Designer
         netsim:
           description: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.
           description_short: අන්තර්ජාලය වැඩ කරන ආකාරය ගැන දැනගන්න.

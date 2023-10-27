@@ -35,6 +35,10 @@ et:
   africa_campaign_date_full: 1. oktoober - 18. detsember
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1. oktoober 2022 - 18. detsember 2022
+  hoc2023_header: Loovus tehisintellektiga
+  hoc2023_social_creativity_with_ai_title: Kooditund - Mida te loote?
+  hoc2023_social_creativity_with_ai_desc: Kasutage arvutiteadust, et uurida ja õppida
+    AI!
   hoc2022_header: uurida, mängida, luua!
   social_hoc2022_explore_play_create: Kasutage arvutiteadust, et uurida, mängida ja
     luua!
@@ -175,6 +179,32 @@ et:
     õppekavakataloog ja ümber kujundatud Õpetajate leht, mis aitavad teil seda kõike
     leida!
   in_partnership_with: Koostöös
+  shop_code_dot_org_heading: Pood Code.org
+  shop_code_dot_org_desc: Toetage meie tööd ja kandke liikumist uhkusega. Meie mütsid
+    on kandnud president Obama ja kuulsused ka.
+  spread_the_word_heading: Levita infot
+  spread_the_word_desc: Võimendage meie mõju, jagades Code.org oma võrguga. Avastage
+    sotsiaalmeediast kuni meiliteenuste uuendusteni, kuidas saate aidata meil jõuda
+    rohkemate haridustöötajate, õpilaste ja toetajateni.
+  follow_us_heading: Jälgi meid sotsiaalmeedias
+  follow_us_desc: Olge meiega kursis sotsiaalmeedias ja jagage meie postitusi oma
+    võrgustikuga, et olla kursis ja teadlikkuse tõstmiseks.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: tahvelarvuti
+  device_laptop: Sülearvuti
+  device_desktop_computer: Lauaarvuti
+  device_mobile_device: Mobiilseade
+  subscribe_to_emails_heading: Telli e-kirjad
+  subscribe_to_emails_desc: Loe, mis toimub Code.org ja infotehnoloogia hariduses
+    läbi kvartali uuendused meie postitusnimekirja kaudu.
+  subscribe_to_emails_intl: Telli rahvusvahelised uuendused
+  promote_code_dot_org_heading: Edendada Code.org
+  promote_code_dot_org_desc: Reklaamige arvutiteadust oma piirkonnas statistika, hinnapakkumiste
+    ja videote abil.
   afe_partnership_logo_alt: Amazon Future Engineer logo
   afe_partnership_thanks_desc: Amazon Future Engineer on terviklik lapsepõlvest karjääri
     programm, mis inspireerib, harida ja koolitada madala sissetulekuga ja teisi ebasoodsas
@@ -193,19 +223,48 @@ et:
   curricula_title_high: Keskkooli õppekavad
   curricula_desc_high: Sirvige kaalukaid kursusi ja tegevusi, mis kutsuvad teid ja
     teie keskkooliõpilasi arvutiteadusesse sügavamale kaevama.
+  for_administrators_heading: Administraatoritele
+  for_administrators_desc: Liitu tuhandeid koole, kes on juba inkorporeeritud infotehnoloogia
+    oma õppekava.
+  for_parents_heading: Vanematele
+  for_parents_desc: Võite aidata julgustada oma õpilase kooli pakkuda või laiendada
+    infotehnoloogia haridus.
+  for_educators_heading: Haridustöötajatele
+  for_educators_desc: Alusta täna õpetamist — arvutiteaduse kogemusi pole vaja — meie
+    professionaalsete õppetöötubade abil.
   students_label: Õpilased
   teachers_label: Õpetajad
+  educators_label: Koolitajad
+  companies_label: Ettevõtted
+  districts_label: Linnaosad
+  school_assemblies_label: Kooli assambleed
+  parents_label: Vanemad
+  public_officials_label: Riigiametnikud
+  volunteers_label: Vabatahtlikud
+  virtual_events_label: Virtuaalsed sündmused
   teacher_label_csf: CS põhialuste õpetaja
   teacher_label_csd: CS avastused õpetaja
   teacher_label_csp: CS põhimõtete õpetaja
   teacher_label_csc: CS ühenduste õpetaja
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Õpetajate foorum
+  teacher_forum_desc: Külastage koodi tunni õpetajate foorumit, et saada nõu, teiste
+    koolitajate ülevaade ja tugi.
   required_materials: 'Nõutavad materjalid:'
   optional_materials: 'Valikulised materjalid:'
-  call_to_action_explore_roles: Avatud rollide uurimine
+  call_to_action_hold_an_event: Sündmuse hoidmine
+  call_to_action_register_event: Registreeri oma üritus
+  call_to_action_select_activity: Valige tegevus
+  call_to_action_start_activity: Alustage tegevust
+  call_to_action_get_certificates: Hankige sertifikaadid
+  call_to_action_go_beyond_hoc: Minge kaugemale koodi tunnist
+  call_to_action_view_promo_resources: Vaata promo ressursse
   call_to_action_learn_more: Rohkem lugemist
   call_to_action_watch_now: Vaadake kohe
   call_to_action_try_activity: Proovige tegevust
+  call_to_action_try_activities: Proovige tegevusi
+  call_to_action_explore_activities: Avastage tegevusi
+  call_to_action_explore_ai: Avastage AI
   call_to_action_explore_unit: Avasta üksus
   call_to_action_explore_curriculum: Tutvu õppekavaga
   call_to_action_explore_curriculum_options: Tutvu õppekava suvanditega
@@ -258,6 +317,7 @@ et:
   call_to_action_find_self_paced_modules: Leia ise tempo moodulid
   call_to_action_join_teacher_forums: Liitu õpetajate foorumitega
   call_to_action_explore_teacher_forums: Avasta õpetajate foorumeid
+  call_to_action_explore_teacher_forum: Avastage õpetajate foorumit
   call_to_action_explore_career_resources: Tutvu karjääriressurssidega
   call_to_action_watch_videos: Vaadake videoid
   call_to_action_download_posters: Lae alla plakatid
@@ -274,11 +334,31 @@ et:
   call_to_action_notify_available: Teavita mind, kui see on saadaval
   call_to_action_register_early_access: Registreeri varajase juurdepääsu saamiseks
   call_to_action_open_positions: Vaata avatud positsioone
+  call_to_action_explore_roles: Avatud rollide uurimine
   call_to_action_get_guide: Hankige juhend
   call_to_action_donate_to_cdo: Anneta Code.org
   call_to_action_start_fundraiser: Alusta loobus
   call_to_action_view_donation_policy: Vaata annetuse poliitikat
   call_to_action_view_donate_bitpay: Anneta BitPayga
+  call_to_action_make_a_donation: Tee annetus
+  call_to_action_other_ways_to_give: Muud võimalused anda
+  call_to_action_become_partner_usa: Hakka Ameerika Ühendriikide partneriks
+  call_to_action_become_partner_intl: Hakka rahvusvaheliseks partneriks
+  call_to_action_become_a_volunteer: Hakka vabatahtlikuks
+  call_to_action_start_translating: Alusta tõlkimist
+  call_to_action_learn_about_advocacy: Lugege meie propageerimise kohta
+  call_to_action_visit_store: Külasta poodi
+  call_to_action_view_faqs: Vaata veel KKK-d
+  aria_label_call_to_action_hoc_how_to_educators: Vaadake õpetajate juhendit
+  aria_label_call_to_action_hoc_how_to_companies: Vaadake ettevõtete juhendit
+  aria_label_call_to_action_hoc_how_to_districts: Vaadake linnaosade juhendit
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Vaadake kooliassambleede
+    juhendit
+  aria_label_call_to_action_hoc_how_to_parents: Vaadake vanemate juhendit
+  aria_label_call_to_action_hoc_how_to_public_officials: Vaadake riigiametnike juhendit
+  aria_label_call_to_action_hoc_how_to_volunteers: Vaadake vabatahtlike juhendit
+  aria_label_call_to_action_hoc_how_to_virtual_events: Vaadake virtuaalsete sündmuste
+    juhendit
   aria_label_call_to_action_afe: Lisateave Amazon Future Engineeri kohta
   aria_label_call_to_action_teaching_csf: Alusta õpetamine arvutiteaduse alused professionaalne
     õppe programm
@@ -605,6 +685,7 @@ et:
   heading_these_lessons_will: 'Need õppetunnid:'
   heading_explore_curriculum_catalog: Tutvuge kõigi meie kursuste õppekavakataloogis
   heading_csa_ai: Kas otsite asju teha pärast AP® eksamit?
+  heading_bring_cs_to_students: Tooge arvutiteadus õpilastele
   professional_learning_section_desc: Hankige toetus, mida vajate, kui valmistate
     õpetama. Õpetajad armastavad seda, üle 90% pingerida see parim professionaalne
     areng kunagi!
@@ -868,6 +949,7 @@ et:
     hindamisele ja kasutamisele ning AI võimendamisele õpilaste hindamiseks. Rikkaliku
     segu teooria, praktilisi näiteid ja ressursse, selle eesmärk on anda õpetajatele
     jõudu liikuda AI maastiku ja suurendada õpilaste õpikogemusi.
+  ai_pl_101_resources_5: Juhend vastutustundliku lähenemisviisi tagamiseks AI
   ai_pl_101_video_desc_6: 'Lisateavet uue tehnoloogia sõidu suuri muutusi AI, featuring
     kaks uut videot Large Language Mudelid (nagu ChatGPT) ja generatiivne AI. Kuulge,
     kuidas need uued tehnoloogiad töötavad otse ekspertidelt: Mira Murati, OpenAI
@@ -878,6 +960,8 @@ et:
     oma varbad, samuti täiustatud tööriistad neile, kes soovivad maksimeerida oma
     potentsiaali.
   ai_pl_101_resources_3: AI küsib üliõpilaste õppe muutmist
+  ai_pl_101_resources_section_title: Rohkem võimalusi õppida tehisintellekti
+  ai_pl_101_resources_guide: 'Kaaslane juhend:'
   how_ai_works_hero_heading: Kuidas tehisintellekt toimib
   how_ai_works_hero_desc: Sukelduge AI maailma „Kuidas AI töötab”, meie video seeria
     ja sellega kaasnevad õppetunnid!
@@ -1698,6 +1782,29 @@ et:
   donate_tabs_bitpay_desc: Omaks tuleviku andes koos cryptocurrency. Läbi BitPay,
     oma digitaalse valuuta saab otseselt toetada Code.org püüab laiendada infotehnoloogia
     haridus.
+  help_page_top_heading: Kuidas saate aidata
+  help_page_top_desc: Toetage meie missiooni teha arvutiteadus kättesaadavaks igale
+    lapsele, kõikjal. Teie jõupingutused aitavad meil inspireerida tulevasi uuendajaid
+    ja kõrvaldada tehnoloogilise hariduse lõhe.
+  help_page_top_subhead: Tee annetuse Code.org
+  help_page_top_desc_02: Töötame selle nimel, et anda igale õpilasele võimalus õppida
+    arvutiteadust — nii veebis kui ka koolides, kus me loome alalised kursused ja
+    õpetajate koolitamine. Iga dollari eest, mida annete, tutvustatakse arvutiteadusele
+    ühte last.
+  help_page_partners_heading: Hakka partneriks
+  help_page_partners_desc: Code.org töötab teiste mittetulundusühingutega partneritega,
+    et aidata arvutiteadust levitada kohalikul, jätkusuutlikul moel. Lisateave meie
+    programmi kohta.
+  help_page_volunteer_heading: Vabatahtlik klassiruumis
+  help_page_volunteer_desc: Vabatahtlik õpetada koodetund või olla külalisesineja
+    kohalikus klassiruumis. Registreeru, et kuulda teie läheduses asuvatest võimalustest.
+  help_page_translate_heading: Aidake meil tõlkida
+  help_page_translate_desc: Vabatahtlikud on tõlkinud meie õpetused enam kui 45 keeles.
+    Aidake meil jätkata meie õpetuste laiendamist üliõpilastele üle maailma!
+  help_page_speak_for_cs_heading: Räägi üles infotehnoloogia haridus
+  help_page_speak_for_cs_desc: Lisateave Code.org propageerimise töö kohta kogu USAs
+    ja kümne poliitika kohta, mida soovitame riikidel vastu võtta, et muuta arvutiteadus
+    kõigile õpilastele aluseks. Plus, teada, kuidas saate sõita muutus oma riigi.
   hoc_live: Tund kood Live
   hoc_live_sign_up_title: Registreeru kood Hour Live
   hoc_live_learn_title: Õppige kooditund Live
@@ -12853,6 +12960,121 @@ et:
   all: Kõik
   dont_know: Ma ei tea
   language_label: Keel
+  before_hoc: Enne koodi tundi
+  day_of_hoc: Koodi tunni päev
+  after_hoc: Pärast koodi tundi
+  step_01: 1. samm
+  step_02: 2. samm
+  step_03: 3. samm
+  step_04: 4. samm
+  step_05: 5. samm
+  step_06: 6. samm
+  step_07: 7. samm
+  step_08: 8. samm
+  hoc_how_to_top_heading: Teie juhend koodi tunni kohta
+  hoc_how_to_top_desc: Kohandatud juhendid parima koodi tunni kogemuse saamiseks.
+  hoc_how_to_top_view_guide: Vaata juhendit
+  hoc_how_to_nav_main_aria_label: Valige juhend
+  hoc_how_to_nav_sidebar_aria_label: Külgriba navigeerimine
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: Kooditund on ühetunnine sissejuhatus arvutiteadusse,
+    kasutades lõbusaid õpetusi, et näidata, et igaüks saab põhitõdesid õppida. Sel
+    aastal viime Hour of Code uutesse kõrgustesse, pakkudes kodeerimisvõimalusi, mis
+    hõlmavad nii tehisintellekti (AI) kui ka mitte-tehisintellekti komponente. Ükskõik,
+    kas teie või teie õpilased olete kogenud kodeerijad või asute kõik oma esimesele
+    arvutiteaduse ekspeditsioonile, see Kooditund lubab erakordset reisi.
+  hoc_how_to_faq_question_prerequisites: Millised on kooditund tegemise eeldused?
+  hoc_how_to_faq_answer_prerequisites: Kooditund on lihtne käivitada - isegi algajatele.
+    Te ei vaja kogemusi arvutiteaduse või õpetamise alal, et inspireerida õpilasi
+    midagi uut uurima, looma ja õppima.
+  hoc_how_to_faq_question_devices: Milliseid seadmeid on vaja koodi tunni käivitamiseks?
+  hoc_how_to_faq_answer_devices_01: 'Seadmed, mida saate kasutada:'
+  hoc_how_to_faq_answer_devices_02: Kui seadmed on piiratud või pole saadaval, proovige
+    [paari programmeerimine] (%{pair_url}) või uurige meie [ühendatud tegevused] (%{unplugged_url})
+    õppida ilma seadmeteta üldse!
+  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_answer_volunteer: Vabatahtlik võib olla igaüks, kes on kirglik arvutiteaduse
+    hariduse ja tehnoloogia mitmekesisuse suurendamise vastu! Meile meeldiks näha,
+    et osalevad igasuguse taustaga vabatahtlikud. Kooditund sisaldab palju erinevaid
+    tegevusi igas vanuses ja oskuste tasemele, nii et vabatahtlikuks saamiseks ei
+    pea te olema programmeerimisekspert!
+  hoc_how_to_faq_question_full_hour: Kas kooditund võtab terve tunni?
+  hoc_how_to_faq_answer_full_hour: Paljud õpilased saavad oma tegevuse lõpetada vähem
+    kui tunni jooksul ja see on okei! Õpilased saavad jätkata õppimist, samal ajal
+    kui teised õpilased oma tegevuse lõpetavad.
+  hoc_how_to_faq_question_account: Kas tudengid peavad sisse logima või konto looma?
+  hoc_how_to_faq_answer_account: Kooditundi proovimiseks pole õpilaste registreerumist
+    ega sisselogimist vaja. Kooditunni registreerumine EI loo automaatselt Code.org
+    kontot.
+  hoc_how_to_resources_heading_educators: Teised KoodiTund materjalid õpetajatele
+  hoc_how_to_resources_promo_heading: Reklaamressursid
+  hoc_how_to_resources_promo_desc: Leidke kõik vajalikud ressursid - trükitud ja digitaalsed
+    -, et juhtida tähelepanu oma kooditunnile.
+  hoc_how_to_resources_discover_heading: Avastage tegevused
+  hoc_how_to_resources_discover_desc: Tutvuge laia valiku ühetunniseid õpetusi, mis
+    on mõeldud igas vanuses üle 45 keeltes.
+  hoc_how_to_step_label_plan: Planeerige, kus ja millal oma kooditund teete
+  hoc_how_to_step_label_choose_activity: Valige oma tegevus
+  hoc_how_to_step_label_test_activity: Testige oma tegevust
+  hoc_how_to_step_label_register_event: Registreeri oma üritus
+  hoc_how_to_step_label_tell: Öelge oma õpilastele, koolile ja kogukonnale
+  hoc_how_to_step_label_get_coding: Hankige kodeerimine!
+  hoc_how_to_step_label_celebrate: Tähistage
+  hoc_how_to_step_label_beyond_hoc: Koodi tunnist kaugemale
+  hoc_how_to_step_beyond_hoc_subhead: See ei lõpe siin!
+  hoc_how_to_step_beyond_hoc_desc: Arvutiteadus ei pea lõppema kooditundiga! Kuigi
+    90% vanematest soovib, et nende laps õpiks arvutiteadust, enamik koole seda ikkagi
+    ei õpeta. Siit saate teada, kuidas tuua CS-i juba täna oma lapse kooli.
+  hoc_how_to_step_01_educators_subhead: Valige sündmuse aeg ja -ruum, mis sobib teie
+    saadaolevate õpilaste ja seadmete arvu järgi.
+  hoc_how_to_step_01_educators_desc_01: Millised ruumid on teil oma kooditunni tegemiseks
+    saadaval? Mõelge oma ruumi tehnilistele võimalustele, ja milliseid seadmeid ootate,
+    et teie õpilased töötaksid. Õpilased saavad õpetuste kallal töötada ühes seadmes,
+    kasutada kordamööda jagatud seadet, või proovige koos õpetust klassiruumi tahvlil.
+    On isegi lahti ühendatud õpetusi, mida saab täita ilma seadmeteta. Vooluvõrgust
+    lahti ühendatud valikuid saab teha kõikjal - isegi õues!
+  hoc_how_to_step_01_educators_desc_02: Inimesed üle kogu maailma liituvad CS haridusnädala
+    ajal Kooditunni tähistamisega, %{campaign_date} kui ilmuvad uusimad õpetused ja
+    tegevused. Kuid saate teha kooditundi igal päeval aastas!
+  hoc_how_to_step_02_educators_desc_01: Uurige tegevusi vastavalt oma rühma vanusele,
+    kogemus, huvid, ja veel. Õpilastel on populaarne proovida isejuhitavaid õpetusi,
+    kuigi paljud tegevused hõlmavad õppetundiplaane õpetajatele arutelu juhtimiseks
+    või tegevuse laiendamiseks.
+  hoc_how_to_step_02_educators_desc_02: Otsustage enne tähtaega, kas soovite valida
+    kõigile oma õpilastele ühe õpetuse, või laske igal lapsel ise valida.
+  hoc_how_to_step_02_educators_desc_03: Sel aastal saate teie ja teie õpilased [õppida
+    kõike tehisintellekti kohta] (%ai_url) õpetuste, tundiplaanide ja meie uue videosarja
+    How AI Works kaudu.
+  hoc_how_to_step_03_educators_desc_01: Enne klassiruumi sisenemist proovige õpetust
+    ise, et saaksite küsimustele vastata!
+  hoc_how_to_step_03_educators_desc_02: Õpetusi saate testida ka õpilaste arvutites
+    või seadmetes, et tagada nende heli ja video toetamine. Kas teil on madal ribalaius?
+    Plaanige näidata videoid klassi ees, nii et iga õpilane ei laadi alla oma videoid.
+  hoc_how_to_step_03_educators_desc_03: Kaaluge oma klassi kõrvaklappide pakkumist
+    või paluge õpilastel oma kaasa võtta, kui valitud õpetus sobib kõige paremini
+    heliga.
+  hoc_how_to_step_04_educators_desc_01: Kui registreerite oma Kooditund sündmuse,
+    saate kasulikke e-kirju koos uudiste ja näpunäidetega eduka kooditunni korraldamiseks.
+    See on ka see, kuidas saate kohalikele vabatahtlikele teada anda, et teie kool
+    osaleb. Vabatahtlikud on suurepärane ressurss ja võivad tulla teie klassiga arvutiteadusest
+    rääkima või aidata oma õpilasi koodi tunni tegevustes.
+  hoc_how_to_step_05_educators_desc_01: Jagage oma õpilasi üritusest põnevil [inspireerivad
+    videod] (%{videos_url}) tuues esile mitmekesised inimesed ja loomingulised viisid,
+    kuidas arvutiteadust reaalses maailmas kasutada.
+  hoc_how_to_step_05_educators_desc_02: Jagage oma koodi tunni plaane teiste õpetajatega,
+    kes võiksid lõbusalt liituda! See on ka suurepärane võimalus pöörduda oma kooli
+    vanemate õpetajate üliõpilaste ühenduse poole või jagada vanemate uudiskirju,
+    andes neile teada, mida nende lapsed õpivad.
+  hoc_how_to_step_06_educators_desc_01: Suunake oma õpilased tegevusele, võib-olla
+    jagades linki tahvlil või klassiruumi õppejuhtimissüsteemi kaudu. Teie õpilased
+    võivad kokku puutuda väljakutsetega - see on okei! Programmi õppimine on nagu
+    uue keele õppimine; te ei saa kohe vabalt. Kui te ei tea vastust, saate selle
+    koos välja mõelda.
+  hoc_how_to_step_07_educators_desc_01: 'Tähistage kindlasti edu! Jagage sotsiaalmeedias
+    fotosid ja videoid oma Hour of Code üritusest. Kasutage #HourOfCode ja @codeorg,
+    et saaksime ka teie edu esile tõsta!'
+  hoc_how_to_step_07_educators_desc_02: Samuti saate oma õpilastele printida sertifikaate,
+    et näidata oma saavutusi!
   team_page_full_team_alt_text: Ligi 100 Code.org töötajate sobitamine sinine ja kollane
     t-särgid kujutavad hotelli konverentsiruumi ettevõtte suvel 2022 Codechella sündmus.
   careers_page_code_pride_alt_text: Kaks naiselikku esitlevat töötajat naeratavad,
@@ -13334,6 +13556,9 @@ et:
   video_library_page_inspirational_video_title_11: Igaüks võib õppida (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta Et Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA tähistab kooditundi (2 min)
+  video_library_page_inspirational_video_title_14: See on rohkem kui mäng (1 min)
+  video_library_page_inspirational_video_title_15: Loo arvutiteadusega (1 min)
   video_library_page_not_hacked_video_title_1: 'Kuidas mitte saada häkkinud: Sissejuhatus'
   video_library_page_not_hacked_video_title_2: 'Kuidas mitte saada häkkinud: Paroolid'
   video_library_page_not_hacked_video_title_3: 'Kuidas mitte saada häkkinud: autentimine
@@ -13345,6 +13570,153 @@ et:
     ja allalaadimised'
   video_library_page_not_hacked_video_title_7: 'Kuidas mitte saada häkkinud: Installige
     värskendused'
+  about_us_page_title: Meist
+  about_us_page_hero_description: Code.org® on hariduse innovatsiooni mittetulundusühing,
+    mis on pühendatud visioonile, et igal õpilasel igas koolis on võimalus õppida
+    arvutiteadust osana oma põhilisest K-12 haridusest. Laiendame juurdepääsu arvutiteadusele
+    koolides, keskendudes noorte naiste ja teiste alaesindatud rühmade õpilaste osalemise
+    suurendamisele. Ameerika Ühendriikide suurimate koolipiirkondade K-12 arvutiteaduse
+    õppekava juhtiv pakkuja Code.org korraldab ka iga-aastase [Hour of Code] (%{hour_url})
+    kampaania, mis on kaasanud üle 15% kõigist õpilastest maailmas. Code.org toetavad
+    helded annetajad, sealhulgas Microsoft, Amazon, Google ja [paljud teised.]%{others_url}
+  about_us_page_section_title_1: Rohkem kui 80 miljonit õpilast ja 2 miljonit õpetajat
+    saidil Code.org
+  about_us_page_statistic_figcaption: Code.org osalemine alates 2021—2022 õppeaastast.
+    [Vaata jaotatud andmeid.] ()%{data_url}
+  about_us_page_statistic_description: Code.org suurendab arvutiteaduse mitmekesisust,
+    jõudes igasuguse taustaga õpilasteni seal, kus nad asuvad - nende oskuste tasemel,
+    nende koolides ja viisil, mis inspireerib neid õppima jätkama. Valdav enamus Code.org
+    õpilastest on pärit õpilasrühmadest, mis on arvutiteaduses ajalooliselt alaesindatud.
+    Arvutiteaduse mitmekesisuse suurendamine on meie töö aluseks, ja [soovitame teil
+    meie jõupingutuste kohta rohkem lugeda] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org uudistes
+  about_us_page_section_news_description: Vaata kõiki minevikku [uudised ja teadaanded]
+    (%{news_url})
+  about_us_page_section_table: Meie eesmärgid ja mõõdikud
+  about_us_page_section_table_header_1: Code.org eesmärk
+  about_us_page_section_table_header_2: Saavutus
+  abous_page_section_table_cell_1_1: Parandada mitmekesisust CS* (USA üliõpilased)
+    *
+  abous_page_section_table_cell_1_2: 45% Code.org õpilastest on noored naised, 50%
+    on tõrjutud rassilistest ja etnilistest rühmadest pärit õpilased ning 46% USA
+    õpilastest on kõrgete vajadustega koolides. Loe lähemalt [meie lähenemisviisi
+    mitmekesisusele.%{diversity_url}]
+  about_page_section_table_cell_2_1: Inspireerige õpilasi
+  about_page_section_table_cell_2_2: Kümned miljonid on proovinud [Koodi tund] (%{hour_url}).
+    (426 370,561 teenitud. 49% naine)
+  about_page_section_table_cell_3_1: Jõudke klassiruumid
+  about_page_section_table_cell_3_2: Meie sissejuhatavate kursuste õpetamiseks on
+    registreerunud 591 636 õpetajat [Code Studio] (%{code_studio_url}) ja registreerub
+    19 177 297 õpilast.
+  about_page_section_table_cell_4_1: Valmistage ette uued CS-õpetajad
+  about_page_section_table_cell_4_2: Oleme ette valmistanud üle 106 000 uue õpetaja
+    CS-i õpetamiseks K-12 klassides. Lisateave meie kohta [professionaalsed õppeprogrammid.]
+    (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Muuda koolipiirkonna õppekava
+  about_page_section_table_cell_5_2: Oleme teinud koostööd [180+ suurimatest koolipiirkondadest]
+    (%{schoold_disctrict_url}) ja 60 piirkondlikud partnerid [lisada CS kooli õppekavasse]
+    (%{cs_curriculum_url}). [Lisateave piirkondlikuks partneriks saamise kohta.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Seadistage eeskirjad CS-i toetamiseks
+  about_page_section_table_cell_6_2: "[Poliitikat muudeti aastal 50 USA. osariigid]
+    (%{states_url}) kehtestada CS-haridusstandardid, panna CS-kursused arvestama keskkooli
+    lõpetamiseni, jne. [(üksikasjad)] (%{details_url})"
+  about_page_section_table_cell_7_1: Mine globaalseks
+  about_page_section_table_cell_7_2: Meie kursused on saadaval üle 67 keeles, mida
+    kasutatakse 180+ riigis.
+  about_page_section_table_under_label: 'Allikas: Code Studio Activity ja [osalevate
+    koolitajate küsitlused] (%{educators_url})'
+  about_page_section_title_3: Rohkem infot, ajalugu ja filosoofia
+  about_page_section_more_description_1: '2013. aastal käivitasid Code.org kaksikvennad
+    [Hadi](%{hadi_url}) ja [Ali Partovi] (%{partovi_url}) arvutiteadust edendavaga
+    [video](%{video_url}). Sellest videost sai päevaks YouTube''is #1 ja 15 000 kooli
+    pöördus meie poole abi saamiseks. Sellest ajast, oleme laienenud alglaaditud vabatahtlike
+    töötajatest, et luua täielik organisatsioon, mis toetab ülemaailmset liikumist.
+    Usume, et kvaliteetne arvutiteaduse haridus peaks olema kättesaadav igale lapsele,
+    mitte ainult vähestele õnnelikele.'
+  about_page_section_more_description_2: 'Meie eesmärgi toetamiseks, teeme tööd kogu
+    haridusspektris: kujundame oma kursusi või teeme koostööd teistega, koolitame
+    õpetajaid, koostööd suurte koolipiirkondadega, aitame muuta valitsuse poliitikat,
+    laiendades rahvusvaheliselt partnerluste kaudu, ja turundus stereotüüpide murdmiseks.'
+  about_page_section_more_description_3: Meie töö tugineb [aastakümnete pikkune pingutus,
+    lugematute organisatsioonide ja üksikisikute poolt] (%{efforts_url}) kes on aidanud
+    luua, rahastada, ja levitada arvutiteadusharidust. Oleme tänulikud, et saame kasu
+    laiema arvutiteaduse hariduse kogukonna väsimatust abist, ja [täname kõiki partnereid
+    ja üksikisikuid, kes on meie mõju aastate jooksul toetanud] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 aastaaruanne] (%{report_url}) (Varasemad
+    aruanded: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Meie põhiväärtused ja sõnumside juhised] (%{core_url})"
+  about_page_section_more_list_3: "[Meie õppekava ja pedagoogika filosoofia] (%{curriculum_url})"
+  about_page_section_more_list_4: "[Meie asutaja Hadi Partovi TEDx jutt sellest, miks
+    arvutiteadus on kõigile mõeldud (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Ühine lähenemine lõhestatud maailmas
+  about_page_section_specific_title_1: Ühine lähenemine lõhestatud maailmas
+  about_page_section_specific_title_2: Meie pühendumus juurdepääsetavusele
+  about_page_section_specific_title_3: Meie pühendumus tasuta õppekavale ja avatud
+    lähtekoodiga tehnoloogiale
+  about_page_section_specific_title_4: Code.org propageerimise koalitsioon
+  about_page_section_specific_title_5: K-12 arvutiteaduse raamistik
+  about_page_section_specific_title_6: Code.org Doonorid
+  about_page_section_specific_title_7: Jälgi meid
+  about_page_section_specific_title_8: Code.org rahvusvaheline jõudlus
+  about_page_section_specific_description_1: Code.org ülemaailmne roll K-12 arvutiteaduse
+    liikumises on võimalik ainult seetõttu, et kasutame ühendavat lähenemisviisi erinevate
+    ja sageli jagatud sidusrühmade vahel. Suureneva polarisatsiooni ajal ühendab õpilaste
+    võimaluste suurendamise idee inimesi kogu poliitilisest spektrist. Code.org meeskonnaliikmetel,
+    õpilastel, õpetajatel ja toetajatel on erinevad ja erinevad seisukohad ning nad
+    kõik on meie missioonile teretulnud. [Loe edasi.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org usub, et arvutiteadus on kõigi
+    õpilaste jaoks alus ja oleme pühendunud võrdsusele, juurdepääsule ja võimalustele
+    meie organisatsioonilises [values.](%{values_url}) Selle eesmärgi saavutamiseks
+    töötame selle nimel, et tuvastada ja kõrvaldada tõkked, mis takistavad õpilaste
+    ja puuetega koolitajate kaasamist ja täielikku osalemist. Meie jõupingutuste kohta
+    lisateabe saamiseks vaadake meie [juurdepääsetavuse avaldus.] (%{accessibility_url})
+  about_page_section_specific_description_3: Kõik meie autorite õppekava ressursid
+    ja õpetused on igavesti vabalt kasutatavad ja avalikult litsentsitud a alusel
+    [Creative Commons] (%{commons_url}) litsents, võimaldades teistel teha tuletatud
+    haridusressursse mitteärilistel eesmärkidel. Kui olete huvitatud meie materjalide
+    litsentsimisest ärilistel eesmärkidel, [võtke meiega ühendust] (%{contact_us_url}).
+    Meie kursused on tõlgitud ülemaailmseks kasutamiseks või erinevate keelte kõnelejate
+    poolt. Meie tehnoloogia on välja töötatud kui [avatud lähtekoodiga projekt.] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    on kahepoolne korporatsioonide ja mittetulundusühingute koalitsioon, mis teeb
+    koostööd, et aidata kehtestada USA föderaal- ja osariigi poliitikat, et laiendada
+    ja säilitada juurdepääsu K-12 arvutiteadusele ning laiendada osalust ja mitmekesisust
+    valdkonnas. Me toome kokku [Vabariiklaste ja demokraatide poliitilised juhid]
+    (%{leaders_url}) ühisel põhjusel, mis toetab juurdepääsu laiendamist K-12 arvutiteadusele
+    ja selles osalemist."
+  about_page_section_specific_description_5: Code.org on juhtkomitee liige, mis aitas
+    luua [K-12 Computer Science Framework] (%{framework_url}) - kõrgetasemelist juhendit
+    riikidele, linnaosadele ja organisatsioonidele, kes rakendavad infotehnoloogia
+    haridust. Raamistik on võitnud sadade akadeemikute toetuse, K-12 koolitajad, tarkvaraettevõtted,
+    mittetulundusühingud, ja osariigid.
+  about_page_section_specific_description_6: Code.org IRS vorm 990 jaoks [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](), (%{irs_url_5})
+    [2019]%{irs_url_6}), [2020](%{irs_url_7}) ja [2021](%{irs_url_8}). [Annetuspoliitika.]
+    (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Registreeruge oleku värskenduste saamiseks]
+    (%{sign_up_url}) arvutiteaduse liikumise K-12 edusammude ja Code.org töö kohta.
+    Või jälgige Code.org sotsiaalmeedias:"
+  about_page_section_specific_description_8: Üle 40% meie veebisaidi liiklusest pärineb
+    väljaspool Ameerika Ühendriike ja see arv kasvab jätkuvalt. Arvutiteadusele ülemaailmse
+    juurdepääsu laiendamiseks teeb meie meeskond tihedat koostööd [enam kui 100 rahvusvahelise
+    partneriga] (%{partners_url}), aidates neil propageerida Koodektundi, propageerida
+    poliitikamuutusi ja koolitada õpetajaid. Teeme arvutiteaduse osaks rahvusvahelisest
+    haridusdiskursusest, tehes koostööd haridusministeeriumidega üle kogu maailma
+    ja tehes koostööd rahvusvaheliste organisatsioonidega nagu Majanduskoostöö ja
+    Arengu Organisatsioon ning ÜRO Haridus-, Teadus- ja Kultuuriorganisatsioon.
+  about_page_section_donors_description_1: Code.org® on registreeritud avalik 501c3
+    mittetulundusühing, avalikkuse toel. Oleme tänulikud helde toetuse eest, mille
+    oleme saanud [üksikisikud ja organisatsioonid] (%{individuals_url}) kes toetavad
+    meie visiooni.
+  about_page_section_donors_description_2: Koodide saavutused (ülal) näitavad meie
+    võimet neid dollareid tugevateks tulemusteks kasutada. Kuid arvestades meie mittetulundusühingu
+    ambitsiooni, et igal lapsel igas koolis peaks olema juurdepääs arvutiteadusele
+    - saada tänapäeva digitaalses maailmas kirjaoskajaks kodanikeks ja testida nende
+    huve CS-i edasiseks uurimiseks karjäärina -, on meil veel pikk tee minna, et saavutada
+    raha kogumine eesmärk, mis toetab seda visiooni.
+  about_page_donors_link_1: Tehke annetused
+  about_page_donors_link_2: "[vaata meie doonorite nimekirja] (%{donors_url})"
   language_code:
     ar: araabia
     az: Aserbaidžaani

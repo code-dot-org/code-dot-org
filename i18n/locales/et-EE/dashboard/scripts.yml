@@ -156,7 +156,7 @@ et:
           description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
         mc:
-          title: Minecrafti KoodiTund
+          title: Minecraft Seikleja
           description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi selle Minecrafti maailma.
           description_short: Uuri Minecrafti maailma koodi kaudu.
           student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi selle Minecrafti maailma.
@@ -1517,6 +1517,8 @@ et:
               display_name: Sisu
             lessonGroup-2:
               display_name: Sisu
+        dance-unplugged:
+          title: Unplugged Tantsuõhtu
         spelling-bee:
           title: Sõnamesilane
         csa5-exemplars:

@@ -1375,9 +1375,16 @@ az:
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": Hava buynuzu
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": alqış
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": nəğmə
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": şənləndirmək, alqış
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": zərbə
             "'sound://category_sports/One_Whistle_SFX.mp3'": Fit
       gamelab_playSoundOptionsSpace:
         text: oynat
+        options:
+          SOUND:
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
       gamelab_playSpeech:
         text: nitqi oynat
       gamelab_playerBehaviors:
@@ -1568,7 +1575,7 @@ az:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: akrobatika
+        text: yıxılma
       gamelab_turn:
         text: döndər {SPRITE} {DIRECTION} {N} dərəcə
         options:
@@ -1651,7 +1658,7 @@ az:
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
       KatiesBlocks_tumbling:
-        text: akrobatika
+        text: yıxılma
       Mikelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1987,6 +1994,10 @@ az:
         text: canavarlar hərəkət etməyi dayandırırlar
       ParticlesBlocks_statesOfMatter:
         text: davranış
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): bərk
+            new Behavior(liquid, []): maye
       Poetry_addFrame:
         text: "{BRUSH} çərçivə təyin edin"
         options:
@@ -2077,6 +2088,9 @@ az:
             '"sound://category_achievements/peaceful_win_6.mp3"': külək cingiltisi
       Poetry_playSoundOptionsSpace:
         text: oynat
+        options:
+          SOUND:
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
       Poetry_setAuthor:
         text: müəllifi təyin et {AUTHOR}
       Poetry_setBackground:
@@ -2423,6 +2437,7 @@ az:
             '"blueIce"': mavi buz
             '"blackConcrete"': qara beton
             '"seaGrass"': dəniz otu
+            '"kelp"': yosun
       craft_placeTorch:
         text: məşəl yerləşdir
       craft_repeatUntilGoal:

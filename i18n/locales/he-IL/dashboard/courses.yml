@@ -90,6 +90,8 @@ he:
         vpl-csp-2023: {}
         vpl-csa-2023: {}
         vpl-csd-2023: {}
+        virtual-pl-csa-summer-2024: {}
+        virtual-pl-csp-summer-2024: {}
     resources:
       curriculum/csd/2017:
         name: תוכנית לימוד

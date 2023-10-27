@@ -2181,26 +2181,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compression",
           "definition": "isang data compression algorithm na nagbibigay-daan sa orihinal na data na ganap na mabuo mula sa naka-compress na data. Pinakakaraniwang ginagamit sa pag-compress ng text (hal. .zip compression)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Code",
-          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Event",
-          "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Mood",
-          "definition": "pagpapahayag ng damdamin, kapaligiran, o emosyon sa sining o pagsulat."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Linya",
-          "definition": "(tula) - isang subdibisyon ng tula na nakaayos ng sunud-sunod na nagtatapos sa kanang gilid. "
         }
       }
     }

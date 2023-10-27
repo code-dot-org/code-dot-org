@@ -434,6 +434,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Stafsetning"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Fyrstu skrefin"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Grunnatriði tölvunarfræði"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Horft fram á við"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Grunnfærni: Skipanaröðin"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Grunnfærni: Lykkjur"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Grunnfærni: Skilyrðingar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Grunnfærni: Föll"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Grunnfærni: Atburðir"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Bestu aðferðir við kennslu tölvunarfræði"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Áætlanagerð"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Næstu skref"
+        },
         "csd1-2019/What is a Computer?": {
           "name": "Hvað er tölva?"
         },
@@ -622,6 +655,30 @@
         },
         "pre-express-2019/Loops in Collector": {
           "name": "Lykkjur með Láru"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Skipanaröð"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lykkjur"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Atvik"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Skilyrði"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Föll"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Breytur"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Frá lykkjur"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Kvikasmiðjan"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Krúttleg kort"
@@ -904,6 +961,39 @@
         },
         "pre-express-2021/Loops with Laurel": {
           "name": "Lykkjur með Láru"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Fyrstu skrefin"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Grunnatriði tölvunarfræði"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Horft fram á við"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Grunnfærni: Skipanaröðin"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Grunnfærni: Lykkjur"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Grunnfærni: Skilyrðingar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Grunnfærni: Föll"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Grunnfærni: Atburðir"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Bestu aðferðir við kennslu tölvunarfræði"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Áætlanagerð"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Næstu skref"
         },
         "csd1-2022/What is a Computer?": {
           "name": "Hvað er tölva?"
@@ -1280,9 +1370,6 @@
         "pre-express-2023/Loops with Laurel": {
           "name": "Lykkjur með Láru"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Klukkustund kóðunar 2013"
-        },
         "artist/Artist": {
           "name": "Listamaður"
         },
@@ -1316,12 +1403,6 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Klukkustund kóðunar - Minecraft Hönnuður"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Leikjasmiðjan"
         },
@@ -1330,39 +1411,6 @@
         },
         "text-compression/Text Compression": {
           "name": "Þjöppun texta"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Yfirlit og uppsetningarleiðbeiningar"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Milli jafningja - Sending bita á samnýttri línu"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Milli jafningja - Sending talna"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Milli jafningja - Sending Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Sending boða"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Beinar og vistföng"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakkar og áreiðanleiki"
-        },
-        "netsim/Manual DNS": {
-          "name": "Handvirkt DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Sjálfvirk DNS stöð"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Internet-hermir frjáls æfing"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Púsl"
@@ -1757,8 +1805,41 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ýkt áskorun - Fjölþætt"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Klukkustund kóðunar 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Púsl"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Yfirlit og uppsetningarleiðbeiningar"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Milli jafningja - Sending bita á samnýttri línu"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Milli jafningja - Sending talna"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Milli jafningja - Sending Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Sending boða"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Beinar og vistföng"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakkar og áreiðanleiki"
+        },
+        "netsim/Manual DNS": {
+          "name": "Handvirkt DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Sjálfvirk DNS stöð"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet-hermir frjáls æfing"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Svart-hvít dílamynstur - kennslustund"
@@ -1774,6 +1855,9 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Lituð dílamynstur - frjáls æfing"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

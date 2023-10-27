@@ -14307,30 +14307,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Öğrencilerin öğrenmesini geliştirmek için bu etkinlikleri kullanın.  Sınıf dışı etkinlikler veya diğer zenginleştirmeler olarak kullanılabilirler.\n\n **Kaputun Altına Bakın**\n\n Hikayenizin bağlantısını paylaştığınızda, bunun arkasındaki tüm kodu da paylaşırsınız.  Bu, öğrencilerin birbirlerinden öğrenmeleri için harika bir yoldur.\n\n-   Tamamlanan hikayelerin bağlantılarını çevrimiçi yayınlayın\n    -   Paylaşmak için kendi hikayeni de oluştur!\n-   Öğrenciler bir bağlantı yüklediklerinde, hikayenin arkasındaki kodu görmeleri için \"Nasıl Çalışır\" düğmesini tıklatmalarını sağlayın.\n-   Grup olarak sınıf arkadaşlarınızın hikayelerini farklı şekillerde kodladığını tartışın.\n    -   Seni ne şaşırttı?\n    -   Ne denemek istersin?\n-   Başka birinin hikayesini seçin ve üzerine inşa etmek için \"Remix\"e tıklayın.  (Endişelenmeyin, orijinal hikaye güvende olacak.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Hazırlık Aşaması",
-          "description": "Öğrencilerinizi karşılayın ve kısaca günün etkinliğinden bahsedin."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Bu aktivitede, hareketli nesne adı verilen eğlenceli karakterlerle etkileşimli bir dünya yaratırken çok eğleneceksiniz. Çizgi romanlarda olduğu gibi, hareketli nesnelerin konuşma balonlarıyla bir şeyler söylemesini sağlayabileceksiniz ve siz veya bir başkası tıkladığında onlara otomatik olarak yanıt verdirmeyi öğreneceksiniz._\n\n_Bugün, bir bilgisayarın anlayabileceği talimatlar dizisi anlamına gelen \"kodlar\" yazacaksınız. Bir hikaye yazarken, kullandığınız kelimeler hakkında dikkatlice düşünmeniz gerekir. Kod yazarken de bilgisayarınıza vereceğiniz talimatları dikkatlice düşünmeniz gerekecek._",
-          "tips": [
-            "Kod Saatinizi önden yüklemek veya tanıtmak için çok az zaman harcamak isteyeceksiniz. Özellikle küçük öğrencilerde, mümkün olduğunca çabuk başlamak en iyisidir."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Merhaba Dünya"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             "\\*\\*Nasıl Yapılır Videoları: \\*\\* Aşağıdaki adımlar, Code.org'un Öğretmen Desteği web sitesinde bulunan bir dizi [r code_org_how-to_videos/csd/2022] dizisinde de ele alınmıştır. Aşağıdaki talimatları okumadan önce bu videoları izlemeye karar verebilirsiniz."
@@ -24724,7 +24700,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -24739,7 +24730,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -24754,7 +24755,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -25147,16 +25163,16 @@
         },
         "0698034d-f421-4962-8bb5-63e351454c9a": {
           "tips": [
-            "\\*\\*Bilim İçeriği: \\*\\* Öğrenciler Ders 1 ve 2'de deniz yaşamı ekosistemi ile çalışacaklardır. Bu ekosisteme aşinalık oluşturmak için bu <a href=\"https://www.youtube.com/watch?v=8adtdg0N2-g\" target=\"_blank\">Okyanus Hayvanları Videosunu öneriyoruz</a> (9:42 dakika).\n\n\\*\\*Bilgisayar Bilimi İçeriği: \\*\\* Bu modülde öğrenciler, yeni bilgisayar bilimi öğrencileri için zor olabilecek yeni kodlama kavramlarını öğreneceklerdir. Öğrenciler Code.org'un Sprite Laboratuvarı'na aşina değilse, araca temel bir giriş için <a href=\"https://studio.code.org/s/coursee-2022/lessons/3\" target=\"_blank\">Swimming Fish with Sprite Lab</a> (55 dakika) denemenizi öneririz. \n\nBu modül ayrıca koşullu ifadeler adı verilen gelişmiş bir CS kavramı kullanır. Öğrenciler bu kavramı iskeleli bir şekilde öğrenirler, ancak bazı öğrenciler ilk önce koşullu takılı olmayan etkinliğe bu girişte yer almaktan yararlanabilir: <a href=\"https://studio.code.org/s/coursed-2022/lessons/12\" target=\"_blank\">Kartlı Koşullar (50 dakika).</a>"
+            "**Bilim İçeriği:** Öğrenciler 1. ve 2. Derslerde deniz yaşamı ekosistemi üzerinde çalışacaklar. Bu ekosisteme aşinalık kazanmak için şunu öneririz: <a href=\"https://www.youtube.com/watch?v= 8adtdg0N2-g\" target=\"_blank\">Okyanus Hayvanları Videosu</a> (9:42 dakika).\n\n**Bilgisayar Bilimi İçeriği:** Bu modülde öğrenciler, bilgisayar bilimlerine yeni başlayan öğrenciler için zor olabilecek yeni kodlama kavramlarını öğreneceklerdir. Öğrenciler Code.org'un Sprite Lab'ına aşina değilse <a href=\"https://studio.code.org/s/coursee-2022/lessons/3\" target=\"_blank\">Sprite Lab ile Balık Yüzmeyi denemenizi öneririz. </a> (55 dakika) araca temel bir giriş için.\n\nBu modül aynı zamanda koşullu ifadeler adı verilen gelişmiş bir CS konseptini de kullanır. Öğrenciler bu kavramı destekleyici bir şekilde öğrenirler, ancak bazı öğrenciler ilk önce koşullu bağlantısız aktiviteye girişten yararlanabilirler: <a href=\"https://studio.code.org/s/coursed-2022/lessons/12\" target=\"_blank\">Kartlı Koşullar</a> (50 dakika)."
           ]
         },
         "dfb9f773-cb0e-44b8-b4a9-933c50bdcac0": {
           "name": "Bunu düşün",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Görüntüle**: “Tartışma” slaytını göster\n\n**Tartışmalar**: \n\n-   \\_İki fotoğraf arasında ne gibi farklılıklar fark ediyorsunuz? \\_ \n-   \\_Hangi resim dengeli bir ekosistemi gösteriyor? Hangi kanıtları görüyorsunuz? \\_ \n\n**Bunu Yap**: Öğrencilere slayt gösterisinde fotoğrafları gösterin veya kendi örneğinizi bulun ve dengeli bir ekosistem örneği olmayan.\n\n\\*\\*Tartışma Hedefi: Öğrenciler dengeli bir ekosistemin parlak, renkli ve hayat dolu olduğunu, ancak dengesiz bir ekosistemin kasvetli ve ölü olduğunu fark edeceklerdir. Kanıtlar, çok sayıda balık yüzmeyi içerebilir, yaşayan ve parlak renkli mercan, gruplar halinde yüzen balıklar, ve sağlıklı ve dengeli ekosistemde parlak renkli su. Sağlıksız ekosistemin kanıtı balık eksikliğini içerebilir, yaşlı ve ölü mercan, eski bir balık ağı, vb."
+          "description": "<i class = \"fa fa-list-alt\" aria-hidden = \"true\"></i> **Ekran**: “Tartışma” slaydını göster\n\n**Tartışmak**:\n\n-   _İki fotoğraf arasında ne gibi farklar görüyorsunuz?_\n-   _Hangi resim dengeli bir ekosistemi gösteriyor? Hangi kanıtları görüyorsunuz?_\n\n**Bunu Yapın**: Öğrencilere slayt gösterisindeki fotoğrafları gösterin veya dengeli bir ekosistem örneği olmayan kendi örneğinizi bulun.\n\n**Tartışma Hedefi**: Öğrenciler dengeli bir ekosistemin parlak, renkli ve hayat dolu olduğunu, dengesiz bir ekosistemin ise kasvetli ve ölü olduğunu fark edeceklerdir. Kanıtlar arasında sağlıklı ve dengeli ekosistemde yüzen birden fazla balık türü, yaşayan ve parlak renkli mercanlar, gruplar halinde yüzen balıklar ve parlak renkli su yer alabilir. Sağlıksız ekosistemin kanıtları arasında balık eksikliği, eski ve ölü mercanlar, eski bir balık ağı vb. sayılabilir."
         },
         "eaf174f1-bc53-496f-aa5c-32ba79886c44": {
           "tips": [
-            "Katılımı artırmak ve tüm seslerin duyulmasını sağlamak için, öğrencilere tüm grupla paylaşmadan önce birkaç fikir düşünmeleri ve hatta yazmaları için bir an verin. Bir düşün, eşleştir, paylaş stratejisi kullanmayı düşünün. Aynı ana dile sahip öğrencilerin ana dillerinde tartışmalarına izin verin. Deniz ekosistemlerini ziyaret etme konusunda ilk elden deneyime sahip öğrenci seslerine öncelik vermekten kaçınmak için bir randomizasyon sistemi kullanarak öğrencileri çağırmaya çalışın."
+            "Katılımı artırmak ve tüm seslerin duyulmasını sağlamak için, öğrencilere düşünmeleri için biraz zaman tanıyın, hatta tüm grupla paylaşmadan önce birkaç fikir yazın. Düşün, eşleştir, paylaş stratejisini kullanmayı düşünün. Aynı ana dile sahip öğrencilerin kendi ana dillerinde tartışmalarına izin verin. Yalnızca deniz ekosistemlerini ziyaret etme konusunda ilk elden deneyime sahip öğrencilerin seslerine öncelik vermekten kaçınmak için rastgele bir sistem kullanarak öğrencileri çağırmaya çalışın."
           ]
         },
         "a58fb61c-3be3-44e1-801a-e33bbfc94649": {
@@ -39151,7 +39167,11 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Giriş",
-          "description": "**Tartışma:**\n\n- _Bir virüsün yayılması hakkında ne biliyoruz?_\n- _Bir virüsün bir kasabada daha hızlı yayılmasına ne sebep olabilir?_\n- _Bir virüsün yayılmasını yavaşlatmaya ne yardımcı olabilir?_\n\nBu tartışmanın amacı, öğrencilerin ön bilgilerini harekete geçirme ve fikirlerini tahtada görme fırsatına sahip olmalarıdır. Bu aynı zamanda virüslerin nasıl yayıldığına dair bazı yanlış bilgileri araştırma fırsatıdır."
+          "description": "**Tartışma:**\n\n-   _Bir virüsün yayılması hakkında ne biliyoruz?_\n-   _Bir virüsün bir kasabada daha hızlı yayılmasına ne sebep olabilir?_\n-   _Bir virüsün yayılmasını yavaşlatmaya ne yardımcı olabilir?_\n\nBu tartışmanın amacı, öğrencilerin ön bilgilerini harekete geçirme ve fikirlerini tahtada görme fırsatına sahip olmalarıdır. Bu aynı zamanda virüslerin nasıl yayıldığına dair bazı yanlış bilgileri araştırma fırsatıdır."
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Genel Destek",
+          "description": "**Genel Destek:** Bir öğretmen olarak rolünüz, öncelikle öğrencileri eğitim boyunca desteklemektir. Aşağıda, seviyeleri ne olursa olsun öğrencilere yardımcı olacak birkaç ipucu verilmiştir:\n\n-   Öğrencileri farklı \"ekstralar\" arasında istedikleri sırayla ilerlemeye teşvik edin. Menüyü tekrar ziyaret etmek için her zaman Seviye 1'e geri dönebilirler.\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takıldıkları anlarda arkadaşlarıyla fikir alışverişinde bulunmaları için teşvik edin. Bu öğretici, videolar içerdiğinden ve öğrenciler bu videoları kulaklıklarıyla dinliyor olabileceğinden kendilerini \"bir balonun içinde\" gibi hissedebilirler. Yardıma ihtiyaçları olduklarında öğrencileri aktif olarak eşleştirerek bu durumu aşmaya yardımcı olun. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.  \n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilerin bir seviyeyi tamamlamadan önce, hedef resme gerçekten yakından baktıklarından ve tüm metni okuduklarından emin olun.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Çıkmaza mı girdiniz? İpuçları arayın:** Her seviye, onu nasıl geçeceğinizle ilgili daha fazla ayrıntı içeren bir ipucu içerir. Öğrenciler bulmacaları olabildiğince çabuk geçmeye çalışıyorlarsa, devam etmeden önce tüm kodun oynatılması için belirli bir süre beklemeleri gerektiğini bunun sayesinde öğrenebilirler. Birçok düzey, görevi genişleterek daha da yaratıcı olmanın yollarına ilişkin öneriler içeren ikinci bir ipucu da içermektedir.\n\n-   **İlerle ve Sonra Geri Dön:** Bazen öğrenciler zor bir seviyeye daha sonra geri dönmekten daha fazla fayda sağlar. Tüm düzeyler birbirinden bağımsızdır, ancak bazen daha önce tanıtılan kavramlara dayanmaktadırlar.\n\n-   **Acele etmeyin ve deneyimleyin.** İlk birkaç seviye öğrencilere geçmek için tam olarak ne yapmaları gerektiğini söylese de, onlar kendi fikirlerini denemekten çekinmemelidir. Bu düzeylerde doğru veya yanlış cevap yoktur. (Bu arada hepsi ücretsizdir!)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Salgın",
@@ -39183,11 +39203,15 @@
           "description": "_Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim adamlarının sorunları çözmelerine, sorunun nasıl çözüleceğini tahmin etmelerine, yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olurlar. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Tartışma:**\n\n- Simülasyonlar gerçek dünyada nasıl yardımcı olabilir?\n- Simülasyonlar çevremizdeki dünyayı anlamamıza nasıl yardımcı olabilir?\n- Simülasyonlar fikirleri test etme şeklimizi nasıl iyileştirebilir?\n\nTartışmanın amacı, öğrencilerin simülasyonların karmaşık sistemleri etkileşimli bir şekilde modellemenin yollarından biri olduğunu anlamalarıdır. Ayrıca simülasyonların insanların fikirleri hızlı, ucuz ve güvenli bir şekilde test etmesini nasıl sağladığını da görmeliler."
+          "description": "**Tartışma:**\n\n-   Simülasyonlar gerçek dünyada nasıl yardımcı olabilir?\n-   Simülasyonlar çevremizdeki dünyayı anlamamıza nasıl yardımcı olabilir?\n-   Simülasyonlar fikirleri test etme şeklimizi nasıl iyileştirebilir?\n\nTartışmanın amacı, öğrencilerin simülasyonların karmaşık sistemleri etkileşimli bir şekilde modellemenin yollarından biri olduğunu anlamalarıdır. Ayrıca simülasyonların insanların fikirleri hızlı, ucuz ve güvenli bir şekilde test etmesini nasıl sağladığını da görmeliler."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Yansıma",
-          "description": "**Sorular:**\n\n- Bu simülasyon gerçek dünyaya ne kadar benzer? Gerçek dünyadan ne kadar farklı?\n- Simülasyonunuzda neyi değiştirmek/eklemek istersiniz?"
+          "description": "**Sorular:**\n\n-   Bu simülasyon gerçek dünyaya ne kadar benzer? Gerçek dünyadan ne kadar farklı?\n-   Simülasyonunuzda neyi değiştirmek/eklemek istersiniz?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Tebrik Edin",
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](http://code.org/certificates) verin."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Hazırlık Aşaması",
@@ -39516,18 +39540,6 @@
           "name": "UI (Kullanıcı Arayüzü) Öğesi Özellikleri",
           "progression_name": "UI (Kullanıcı Arayüzü) Öğesi Özellikleri"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Isınmak"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Asıl Faaliyet (Eski)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Asıl Faaliyet (Yeni)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Özet"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "CS Discoveries Kurs Sonrası Anketi",
           "progression_name": "CS Discoveries Kurs Sonrası Anketi"
@@ -39575,39 +39587,17 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### Hour of Code'un Ötesi\n\nK-5 sınıfınızda Hour of Code'un sonrasında da bilgisayar bilimleri öğretmeye devam etmenin birçok yolu var. İşte bazı fikirler:\n\n-   [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) derslerini öğretin. Bu altı ders genç öğrenciler için tasarlanmıştır. Öğrenciler kodlamayı öğrenmelerini sağlayacak bir dizi bulmacayı çözmeye çalışır, eğitimciler de öğrenmeyi canlı hale getirecek ilginç ders planlarına erişim sağlayabilirler. Code.org, bu dersler için, çevrimiçi veya yüz yüze, ücretsiz profesyonel gelişim hizmeti sunuyor.\n-   Sınıfınıza çalışmalarıyla ilgili bir konuşma yapmak üzere bir bilgisayar bilimi uzmanı davet edin. Bulunduğunuz yerde hiçbir bilgisayar bilimcisi tanımıyor musunuz? O halde, [gönüllü haritası](https://code.org/volunteer/local)'ndan bir gönüllüye ulaşın."
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Sahneyi kurma\n\nÖğrencileri sınıfa davet edin ve günün etkinliğini tanıtın.",
-          "tips": [
-            "Kodlamaya pek aşina değilseniz Kodlama Saatini tanıtmanın bir yolu [ilham verici videolarımızdan][0] birini göstermektir. Öğrencilerinizin ilham verici bulacağını düşündüğünüzü seçin ve şimdi paylaşın. Orta sınıflardaki öğrenciler için [Kodlama Saati Burada][1] öneririz."
-          ]
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Isınmak"
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Bugün kodlamayı öğrenirken yaratıcılığımızı kullanacağız. Yaratıcı olmanın birçok yolu var. Yaratıcı olmayı sevdiğiniz bazı yollar nelerdir? "
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Asıl Faaliyet (Eski)"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Öğrencileri sanat, dans, müzik veya yazı gibi yaratıcılıklarını ifade etme yollarını paylaşmaya teşvik edin. Takip eden bir soru olarak, öğrencilere yaratıcılıklarına ilham vermek için ne kullandıklarını sorun. "
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Asıl Faaliyet (Yeni)"
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Bilgisayar biliminin çok yaratıcı olabileceğini biliyor muydunuz? Aslında kod ile sanat yapabilirsiniz. Hatırlatma olarak, kod, bir bilgisayarın anlayabileceği bir dizi talimattır. Hangi boya renklerini kullanacağınızı seçmek gibi, hangi kodu yazacağınızı seçmek de yaratıcılığınızı ifade etmek için bir fırsat olabilir!\n\nBugün yaratıcı kodlamamıza ilham vermek için şiir kullanacağız. Şiir nedir bilen var mı? Favori bir şiiriniz veya şairiniz var mı? "
-        },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Birlikte şiir okuyun:** Bir sınıf olarak birlikte [birkaç şiir][0] okuyun ve her şiirin ruh halini adlandırma alıştırması yapın. Öğrencileri, başka birininkinden farklı olsa bile yorumlarını paylaşmaya teşvik edin. "
-        },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Şiir Sanatı",
-          "description": "#### Genel Destek\n\nBu etkinliğin sonunda öğrenciler seçtikleri şiirin görsel yorumunu temsil eden animasyonlu bir şiire sahip olacaklardır. Bu ders, öğrencilere kodlarını kurcalama ve en çok beğendikleri görsel efektleri bulma fırsatı vermek için tasarlanmıştır.\n\nOdanın etrafında dönerken öğrencileri şunları yapmaya teşvik edin:\n\n- **Zaman Ayırın:** Seviyelerin çoğu, öğrencilerin şiirin havasına ilişkin yorumlarına uygun mükemmel efektleri bulmalarını gerektirir. Bir seviyede kalmak ve kodlarını kurcalamak son derece teşvik edilir.\n\n- **Beğendiğiniz bir şiir bulun:** Yeni bir seviyedeki bir öğrenci için sergilenen şiir sadece bir öneridir. Oyun alanının üst kısmında önceden yüklenmiş şiirler içeren bir şiir açılır menüsü vardır. Öğrencilerden birkaç tanesini okumalarını ve kendilerine hitap eden birini bulmalarını isteyin. Daha sonra seçtikleri şiiri kodla canlandırmaya başlayabilirler. \n\n- **Tamamlanmış bir seviyeyi gösterin:** Tamamen yeşil olan herhangi bir seviye balonu, öğrencinin o seviye için tüm gereklilikleri başarıyla tamamladığı anlamına gelir. Bir öğrenciden, yarattıklarını göstermek için yeşil bir baloncuğu tıklamasını isteyin.\n\nÖğrencinin kendini sıkışmış hissettiği zamanlar için:\n\n- **Talimatları okuyun:** Talimatlar, seviyenin nasıl tamamlanacağına ilişkin madde işaretli noktalardır. Bir öğrenci sıkışmış hissediyorsa, talimatları yüksek sesle size okumasını ve talimatların söylediklerini kendi sözcükleriyle tekrar etmelerini isteyin.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Öğrenciler, talimatların yüksek sesle okunmasını dinlemek için bu metinden sese simgesine de tıklayabilir.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İpuçları arayın**: Çoğu seviye, seviyenin nasıl geçileceğine dair daha açık ayrıntılar içeren en az bir ipucu içerir.\n- **Hataları kutlayın:** Kodunuzda bir hata olması, kodlama sürecinin doğal bir parçasıdır. Program beklediklerini yapmıyorsa, öğrenciden önce size ne olmasını istediğini söylemesini isteyin, gerçekte ne olduğunu gözlemlemek için çalıştır'a tıklayın, ardından kodunda tutarsızlığa neden olan yeri bulun. Hata bulmayı ve hataları düzeltmeyi kutlamayı unutmayın. Hata almak, öğrencilerin daha karmaşık bir program oluşturmak için harika bir iş çıkardıkları anlamına gelir. "
-        },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Seviyeye Göre Destek\n\n**Seviye 1:** Öğrencileri şiiri okumaya teşvik edin. Ardından öğrencilerden seçtikleri şiirin tonuna uyan bir arka plan rengi veya efekti bulmalarını isteyin.\n\n**Seviye 2:** Bu örnekte, öğrenciler önce şiiri kendi başlarına okumalı, ardından Çalıştır'a basmalıdır. Öğrenciye programcının seçtiği ses ve efektlerin şiirin havasına uyup uymadığını sorabilirsiniz. Öğrencilerden cevaplarını detaylandırmalarını isteyin.\n\n**Seviye 3:** Bu seviye sesi tanıtır, öğrenciler varsa kulaklık kullanabilirler.\n\n**Seviye 4:** Öğrencilerden şiiri okumalarını ve şiirin ruh halinin değiştiği dizeyi veya şairin sunduğu yeni bir imge olup olmadığını bulmalarını isteyin. Şiirin tanımlanan satırlarına karşılık gelen efektler eklemek için olay bloğunu kullanın.\n\n**Seviye 5:** Bu örnekte öğrenciler önce şiiri kendi başlarına okumalı, ardından Çalıştır'a basmalıdır. Öğrenciye resimlerin şiirin sözleriyle uyuşup uyuşmadığını sorun. Cevaplarını detaylandırmalarını isteyin.\n\n**Seviye 6, 7, 8:** Genel Destek bölümündeki \"Hataları kutlayın\" bölümüne bakın. Öğrencileri, etkinlik bloklarıyla birden fazla geçiş içeren programlar oluşturmaya teşvik edin. \n\n**Seviye 9:** Öğrencileri, beğendiklerini bulmak için açılır menüdeki tüm şiirleri okumaya teşvik edin. Öğrencilere, bu son seviyede yaptıklarını arkadaşları ve aileleri ile paylaşabileceklerini söyleyin. Şimdi tüm kodlama ve ELA becerilerini bir araya getirme zamanı! "
-        },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Bugün kodlamayı öğrenmekten keyif aldıysanız, code.org/learn adresini ziyaret ederek öğrenmeye devam edebilirsiniz. Yaptıklarınızı arkadaşlarınızla ve ailenizle paylaşmak istiyorsanız, “Paylaş” düğmesine tıklayın ve bağlantıyı istediğiniz kişiye gönderin!"
-        },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (İsteğe bağlı) Değerlendirme: Anlamayı Kontrol Et (4 dakika)\n\nÖğrenci başına iki yapışkan not dağıtın. "
-        },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "İki yapışkan notunuz var. Birinde, bugün kodlama hakkında öğrendiğiniz bir şeyi yazın.\nİkincisine, bugün şiir hakkında öğrendiğiniz bir şeyi yazın.\n\nBu soruyu cevaplamak için el kaldırarak tüm sınıfla paylaşalım: Bundan sonra kodlama ve bilgisayar bilimi hakkında başka neler öğrenebileceğinizi umuyorsunuz? "
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Özet"
         }
       }
     }

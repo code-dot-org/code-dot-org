@@ -165,7 +165,6 @@ bs:
           description_short: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
           student_description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
         mc:
-          title: Sata Kodiranja Minecraft-a
           description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet
           description_short: Istražite svijet Minecraft-a putem koda
           student_description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet
@@ -1021,6 +1020,8 @@ bs:
           lesson_groups:
             lessonGroup-2:
               description: uslov
+        dance-unplugged:
+          title: Plesna zabava bez granica
         spelling-bee:
           title: Spelovanje
         2022drafting:

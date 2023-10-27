@@ -12,6 +12,16 @@ var readline = require("readline");
 var variableRe = /\$([\w-]+)\s*:\s*([^;]+);/;
 var cachedVariables = {};
 
+const mixinStartRe = /@mixin\s([\w-]+)\s*\{/;
+const mixinEndRe = /}/;
+const includeRe = /@include\s([\w-]+);/;
+const scssKeyValuePairRe = /([\w-]+)\s*:\s*([\w]+);/;
+const scssVariableValueRe = /([\w-]+)\s*:\s*\$([\w-]+);/;
+const cachedMixins = {};
+let currentlyInsideMixin = "";
+
+const camelize = (s) => s.replace(/-./g, (x) => x[1].toUpperCase());
+
 // In color.scss some variable definitions reference previous
 // variable definitions.  Since we're reading them in order,
 // we can recursively resolve these referential definitions
@@ -22,6 +32,79 @@ function resolveVariable(value) {
   }
   return value;
 }
+
+const parseMixinStart = (mixinStartMatch, out) => {
+  currentlyInsideMixin = mixinStartMatch[1];
+  cachedMixins[mixinStartMatch[1]] = {};
+  out.write(`  "${mixinStartMatch[1]}": {\n`);
+};
+
+const parseMixinVariableValue = (variableLineMatch) => {
+  variableLineMatch[1] = camelize(variableLineMatch[1]);
+  cachedMixins[currentlyInsideMixin][variableLineMatch[1]] =
+    cachedVariables[variableLineMatch[2]];
+};
+
+const parseMixinKeyValuePair = (keyValuePairMatch) => {
+  keyValuePairMatch[1] = camelize(keyValuePairMatch[1]);
+  cachedMixins[currentlyInsideMixin][keyValuePairMatch[1]] =
+    keyValuePairMatch[2];
+};
+
+const parseIncludeMixin = (includeMatch) => {
+  cachedMixins[currentlyInsideMixin] = {
+    ...cachedMixins[includeMatch[1]],
+    ...cachedMixins[currentlyInsideMixin],
+  };
+};
+
+const parseMixinEnd = (out) => {
+  const mixinParsedToJSObject = JSON.stringify(
+    cachedMixins[currentlyInsideMixin]
+  )
+    .replaceAll(":", ": ")
+    .replaceAll(/[{}]/g, "")
+    .replaceAll('",', '",\n  ');
+
+  out.write(`  ${mixinParsedToJSObject},\n`);
+  out.write("  },\n");
+  currentlyInsideMixin = "";
+};
+
+const parseMixin = (line, out) => {
+  if (!currentlyInsideMixin) {
+    let mixinStartMatch = mixinStartRe.exec(line);
+    if (mixinStartMatch !== null) {
+      parseMixinStart(mixinStartMatch, out);
+      return;
+    }
+
+    return;
+  }
+
+  let keyValuePairMatch = scssKeyValuePairRe.exec(line);
+  if (keyValuePairMatch !== null) {
+    parseMixinKeyValuePair(keyValuePairMatch);
+    return;
+  }
+
+  let variableLineMatch = scssVariableValueRe.exec(line);
+  if (variableLineMatch !== null) {
+    parseMixinVariableValue(variableLineMatch);
+    return;
+  }
+
+  let includeMatch = includeRe.exec(line);
+  if (includeMatch !== null) {
+    parseIncludeMixin(includeMatch);
+    return;
+  }
+
+  if (mixinEndRe.test(line)) {
+    parseMixinEnd(out);
+    return;
+  }
+};
 
 function convertScssToJs(scssPath, jsPath) {
   // Generate <foo>.js while reading <foo>.scss line-by-line
@@ -51,8 +134,10 @@ function convertScssToJs(scssPath, jsPath) {
   var currentLine = 0;
   rl.on("line", function (line) {
     currentLine++;
+
     var match = variableRe.exec(line);
-    if (match === null) {
+    if (match === null || !!currentlyInsideMixin) {
+      parseMixin(line, out);
       return;
     }
 

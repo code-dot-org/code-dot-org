@@ -1284,10 +1284,6 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
@@ -1351,26 +1347,6 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": "(v) att skriva instruktioner för en dator."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Stämning",
-          "definition": "uttrycket av en känsla, atmosfär eller sinnesrörelse i konst eller skrift."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Rad",
-          "definition": "(poesi) – en underavdelning av en dikt ordnad i en rad som slutar i högermarginalen."
         }
       }
     }

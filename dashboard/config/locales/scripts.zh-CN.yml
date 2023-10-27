@@ -7057,7 +7057,7 @@ zh-CN:
           description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
           description_short: 用代码来探索《我的世界》。
           student_description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
-          title: 我的世界 编程一小时
+          title: "《我的世界》大冒险"
         microbit-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8280,6 +8280,104 @@ zh-CN:
               display_name: 内容
             csd3_2:
               display_name: 第 2 章︰ 创建游戏
+        virtual-pl-csa-summer-2024-day1:
+          title: 第一天
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第一天
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第二天
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第三天
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: 第四天
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          title: '第 5 天 '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -8381,6 +8479,23 @@ zh-CN:
               name: 预览学年研讨会
             lesson-9:
               name: 为新的一年做准备
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 同步第 2 部分
+            lessonGroup-4:
+              display_name: 异步第 1 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第一天
+        virtual-pl-csp-summer-day2:
+          title: 第二天
+        virtual-pl-csp-summer-day3:
+          title: 第三天
+        virtual-pl-csp-summer-day4:
+          title: 第四天
         virustest:
           description_short: '使用精灵图实验室创建一个病毒爆发模拟。 '
           lesson_groups:

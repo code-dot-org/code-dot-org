@@ -444,7 +444,7 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def resolve_template(subdir, extnames, uri, is_document = false)
+    def resolve_template(subdir, extnames, uri, is_document: false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
         # Negotiate for a locale specific partial
@@ -510,7 +510,7 @@ class Documents < Sinatra::Base
         File.join(uri, "index")
       ]
       paths.each do |path|
-        template = resolve_template('public', settings.non_static_extnames, path, true)
+        template = resolve_template('public', settings.non_static_extnames, path, is_document: true)
         return template if template
       end
 
@@ -520,7 +520,7 @@ class Documents < Sinatra::Base
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
+        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), is_document: true)
         if path
           request.env[:splat_path_info] = uri[parent.length..]
           return path

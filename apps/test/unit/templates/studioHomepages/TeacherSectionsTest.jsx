@@ -6,7 +6,9 @@ import {UnconnectedTeacherSections as TeacherSections} from '@cdo/apps/templates
 describe('TeacherSections', () => {
   const defaultProps = {
     asyncLoadSectionData: () => {},
+    asyncLoadCoteacherInvite: () => {},
     studentSectionIds: [],
+    coteacherInvite: null,
     plSectionIds: [],
     hiddenPlSectionIds: [],
     hiddenStudentSectionIds: [],
@@ -34,15 +36,41 @@ describe('TeacherSections', () => {
     expect(wrapper.find('Connect(OwnedSections)').length).to.equal(0);
   });
 
-  it('does not render sections tables if there are no section ids', () => {
+  it('does not render sections tables if there are no section ids and no coteacher invite', () => {
     const wrapper = shallow(<TeacherSections {...defaultProps} />);
     expect(wrapper.find('Connect(ContentContainer)').length).to.equal(1);
     expect(wrapper.find('Connect(OwnedSections)').length).to.equal(0);
   });
 
+  it('renders student sections area if coteacher invite', () => {
+    const wrapper = shallow(
+      <TeacherSections {...defaultProps} coteacherInvite={{id: 1}} />
+    );
+    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
+    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
+    expect(
+      wrapper.find('Connect(OwnedSections)').props().isPlSections
+    ).to.equal(undefined);
+  });
+
   it('renders student sections area if there are student sections', () => {
     const wrapper = shallow(
       <TeacherSections {...defaultProps} studentSectionIds={[1]} />
+    );
+    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
+    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
+    expect(
+      wrapper.find('Connect(OwnedSections)').props().isPlSections
+    ).to.equal(undefined);
+  });
+
+  it('renders student sections area if there are student sections and coteacher invite', () => {
+    const wrapper = shallow(
+      <TeacherSections
+        {...defaultProps}
+        studentSectionIds={[1]}
+        coteacherInvite={{id: 1}}
+      />
     );
     expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
     expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);

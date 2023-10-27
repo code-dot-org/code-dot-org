@@ -366,7 +366,7 @@
     "TEXT_TRIM_HELPURL": "https://code.google.com/p/blockly/wiki/Text#Trimming_%28removing%29_spaces",
     "TEXT_TRIM_OPERATOR_BOTH": "تراشیدن فاصله‌ها از هر دو طرف",
     "TEXT_TRIM_OPERATOR_LEFT": "تراشیدن فاصله‌ها از طرف چپ",
-    "TEXT_TRIM_OPERATOR_RIGHT": "حذف فاصله‌های طرف چپ",
+    "TEXT_TRIM_OPERATOR_RIGHT": "حذف کردن فاصله‌ها از سمت راست",
     "TEXT_TRIM_TOOLTIP": "یک کپی از متن که فاصله های هر دو طرف آن حذف شده را برمیگرداند.",
     "UNUSED_CODE": "کد استفاده نشده",
     "VARIABLE": "متغیر",

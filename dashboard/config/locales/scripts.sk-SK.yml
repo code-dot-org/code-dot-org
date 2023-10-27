@@ -4032,7 +4032,7 @@ sk:
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na
             dobrodružstvo po svete Minecraftu.
-          title: Minecraft Hodina Kódu
+          title: 'Minecraft: Dobrodruh'
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4535,6 +4535,10 @@ sk:
               display_name: Obsah
             csd3_2:
               display_name: 'Kapitola 2: Tvorba hier'
+        virtual-pl-csa-summer-day3:
+          title: Deň 3
+        virtual-pl-csa-summer-day4:
+          title: Deň 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4559,6 +4563,12 @@ sk:
           lessons:
             lesson-3:
               name: Hodnotenie
+          title: Deň 5
+        virtual-pl-csp-summer-day3:
+          title: Deň 3
+        virtual-pl-csp-summer-day4:
+          title: Deň 4
+        virtual-pl-csp-summer-day5:
           title: Deň 5
         virustest:
           description_short: Pomocou programu Sprite Lab vytvorte simuláciu nákazy

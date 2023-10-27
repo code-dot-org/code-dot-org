@@ -8,6 +8,7 @@ import AssignmentVersionMenuItem, {
 } from './AssignmentVersionMenuItem';
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const menuItemWidth = _(columnWidths).values().reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
@@ -127,7 +128,7 @@ const styles = {
     marginTop: 4,
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss

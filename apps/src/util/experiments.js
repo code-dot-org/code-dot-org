@@ -45,8 +45,7 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
 experiments.AI_RUBRICS = 'ai-rubrics';
-// Experiment for enabling the Google Blockly modal function editor
-experiments.MODAL_FUNCTION_EDITOR = 'modalFunctionEditor';
+experiments.HOC_TUTORIAL_DIALOG = 'hocTutorialDialog';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

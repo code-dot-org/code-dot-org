@@ -1,0 +1,32 @@
+{
+  "ar-SA": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "العودة"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "طعام",
+            "PEOPLE": "الناس",
+            "allButtonText": "جميع"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "طعام",
+            "PEOPLE": "الناس",
+            "allButtonText": "جميع"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "resetBtn_8": "إعادة تعيين"
+          }
+        }
+      }
+    }
+  }
+}

@@ -94,15 +94,12 @@ class RedactRestoreUtils
         file.write(JSON.pretty_generate(restored))
       else
         redacted_key = redacted_data.keys.first
-        file.write(
-          I18nScriptUtils.to_crowdin_yaml(
-            {
-              redacted_key => restored
-            }
-          )
-        )
+        restored = {redacted_key => restored}
+        file.write(I18nScriptUtils.to_crowdin_yaml(restored))
       end
     end
+
+    restored
   end
 
   def self.redact(source, dest, plugins = [], format = 'md')

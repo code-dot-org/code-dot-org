@@ -1012,7 +1012,7 @@ az:
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
       KatiesBlocks_tumbling:
-        text: akrobatika
+        text: yıxılma
       Mikelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1361,6 +1361,10 @@ az:
       Outbreak_stopMoving:
         text: canavarlar hərəkət etməyi dayandırırlar
       ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(liquid, []): maye
+            new Behavior(solid, []): bərk
         text: davranış
       Poetry_addFrame:
         options:
@@ -1451,6 +1455,9 @@ az:
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': köpük
         text: oynat
       Poetry_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
         text: oynat
       Poetry_setAuthor:
         text: müəllifi təyin et {AUTHOR}
@@ -1788,6 +1795,7 @@ az:
             '"blueIce"': mavi buz
             '"chiseledStoneBricks"': dekorativ daş kərpicləri
             '"crackedStoneBricks"': qırılmış daş kərpicləri
+            '"kelp"': yosun
             '"mossyStoneBricks"': yosunlu daş kərpic
             '"packedIce"': dolu buz
             '"pinkCoralBlock"': çəhrayı mərcan bloku
@@ -2205,9 +2213,16 @@ az:
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": Hava buynuzu
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": alqış
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": nəğmə
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": şənləndirmək, alqış
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": zərbə
             "'sound://category_sports/One_Whistle_SFX.mp3'": Fit
         text: oynat
       gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
         text: oynat
       gamelab_playSpeech:
         text: nitqi oynat
@@ -2417,7 +2432,7 @@ az:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: akrobatika
+        text: yıxılma
       gamelab_turn:
         options:
           DIRECTION:

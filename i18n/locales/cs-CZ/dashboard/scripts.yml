@@ -487,7 +487,7 @@ cs:
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           name: starwarsblocks
         mc:
-          title: Hodina kódu s Minecraftem
+          title: Minecraft Adventurer
           description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím po světě Minecraft.
           description_short: Prozkoumej svět Minecraftu pomocí kódu
           student_description: Vezmi pomocí kódu Steva nebo Alex za dobrodružstvím po světě Minecraft.
@@ -8193,3 +8193,105 @@ cs:
           lessons:
             lesson-1:
               name: Náš etický kodex umělé inteligence
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-1:
+              name: Synchronní část 1
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Synchronní část 1
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-1:
+              name: Synchronní část 1
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: Synchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+          title: 'Den 5 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-1:
+              name: Synchronní část 1
+            lesson-2:
+              name: Asynchronní část 1
+            lesson-3:
+              name: Synchronní část 2
+            lesson-4:
+              name: Asynchronní část 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Asynchronní část 1
+            lessonGroup-4:
+              display_name: Synchronní část 2
+            lessonGroup-5:
+              display_name: Asynchronní část 2
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronní část 1
+            lessonGroup-3:
+              display_name: Synchronní část 2
+            lessonGroup-4:
+              display_name: Asynchronní část 1
+            lessonGroup-5:
+              display_name: Asynchronní část 2

@@ -66,7 +66,7 @@ Pentru mai multe detalii privind voluntariatul și exemple de mesaje pentru a v�
 
 Dacă doriți să faceți mai mult, societatea dv. poate găzdui, de asemenea, un eveniment Hour of Code. Nu există o formulă specifică pentru găzduirea unui eveniment, așadar vă încurajăm să fiți creativ! Întrucât numărul personalului nostru este mic (dar puternic!), Code.org nu are o echipă dedicată pentru coordonarea evenimentelor Hour of Code. Cu toate acestea, există câteva sfaturi pentru a începe.
 
-### 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Urmărește acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Stabilește data, formatul și locul în care se va organiza evenimentul tău
 

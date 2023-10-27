@@ -28,6 +28,8 @@ az:
           lesson_groups:
             Argentina:
               display_name: Argentina
+            contagion:
+              display_name: Yoluxma
             debugging:
               display_name: Sazlama
             introduction:
@@ -37,8 +39,16 @@ az:
         2022drafting:
           description_short: Daxili
           lesson_groups:
+            lessonGroup-2:
+              display_name: Dəyişənlər
+            lessonGroup-3:
+              display_name: Dəyişdirilmiş dərslər
+            lessonGroup-4:
+              display_name: Alət qutuları
             lessonGroup-8:
               display_name: Kod Saatı
+          name: 2022qaralama
+          title: Planlaşdırma qrafikası
         AlgebraA:
           description: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrənin
           description_short: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrənin
@@ -52,16 +62,24 @@ az:
           student_description: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrənin
           title: 'Cəbrdə Kompüter Elmləri: Kurs B'
         CSDU1-Draft:
+          description: Disko'nın U1-də işləmək üçün müvəqqəti yer
           description_short: Problemin həlli
         CSDU2-Draft:
           description: Disco U2-də işləmək üçün müvəqqəti yer
+          description_short: Veb İnkişafı
         CSDU3-Draft:
           description: Disco U3-də işləmək üçün müvəqqəti yer
           description_short: Proqramlaşdırma
           title: TEMP CSD Unit 3 - İnteraktiv Oyunlar və Animasiyalar
+        CSDU4-Draft:
+          description: Disco U2-də işləmək üçün müvəqqəti yer
+          description_short: Dizayn Prosesi və Proqram Laboratoriyası
+          title: " CSD Bölməsi 4 - Dizayn Prosesi"
         CSDU5-Draft:
+          description: Disko'nın U5-də işləmək üçün müvəqqəti yer
           description_short: məlumat
         CSDU6-Draft:
+          description: Disko'nın U6-da işləmək üçün müvəqqəti yer
           description_short: düzəltmə laboratoriyası
         CSF_Secret_Sample:
           description: Yeni təhsil fəlsəfəsi testi
@@ -76,6 +94,9 @@ az:
           student_description: Rəhbər hekayə xətti ilə yeni təhsil fəlsəfəsinin sınağı
           title: Hekayə ilə Gizli Nümunə
         CSP-Unit3-Support:
+          description: CSP Unit 3 üçün Onlayn Dəstəklər
+          description_short: CSP Unit 3 üçün Onlayn Dəstəklər
+          student_description: CSP Unit 3 üçün Onlayn Dəstəklər
           title: 'Kompüter Elmləri Prinsipləri: Bölmə 3 PD '
         CSPLessonSamples:
           description: CSP üçün dərs nümunələri
@@ -87,7 +108,22 @@ az:
           description_short: 'Mərhələ 1: CSP - ə Online Giriş'
           student_description: 'Mərhələ 1: CSP - ə Online Giriş'
           title: Kompyüter Elməri Təməlləri PD
+        CSPPD2:
+          description: 5 günlük şəxsi təcrübəyə əsaslanan və müəllimlərin semestrin
+            başlanğıcına hazırlaşmasına kömək edən 8 saatlıq onlayn PD
+          description_short: 'Qarışıq Yay Tədqiqatı: 8 saat onlayn'
+          student_description: 5 günlük şəxsi təcrübəyə əsaslanan və müəllimlərin
+            semestrin başlanğıcına hazırlaşmasına kömək edən 8 saatlıq onlayn PD
+          title: 'Kompüter Elmləri Prinsipləri PD: Qarışıq Yay Araşdırması'
+        CSPPD3-Unit2:
+          description: CSP Unit 2 üçün Onlayn Dəstəklər
+          description_short: CSP Unit 2 üçün Onlayn Dəstəklər
+          student_description: CSP Unit 2 üçün Onlayn Dəstəklər
+          title: 'Kompüter Elmləri Prinsipləri: Bölmə 2 PD '
         CSPPD3-Unit3:
+          description: CSP Unit 3 üçün Onlayn Dəstəklər
+          description_short: CSP Unit 3 üçün Onlayn Dəstəklər
+          student_description: CSP Unit 3 üçün Onlayn Dəstəklər
           title: 'Kompüter Elmləri Prinsipləri: Bölmə 3 PD '
         CSPPD3-Unit3-pt2:
           description: CSP Vahid 3-ün Onlayn Tədqiqi -- Dərs Çətinlikləri
@@ -193,12 +229,12 @@ az:
             yaratmaq üçün strategiyalar hazırlayın.
           title: Daha ədalətli kompüter elmləri sinif otaqlarının yaradılması
         Hour of Code:
-          description: Angry Birds and Plants vs Zombies personajları ilə kompüter
-            elminin əsaslarını sınayın!
+          description: Kompüter elminin əsasını "Angry Birds" və "Plants vs Zombies"
+            ilə öyrənin!
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
-          student_description: Angry Birds and Plants vs Zombies personajları ilə
-            kompüter elminin əsaslarını sınayın!
+          student_description: Kompüter elminin əsasını "Angry Birds" və "Plants vs
+            Zombies" ilə öyrənin!
           title: Kod Saatı 2013
         K5-OnlinePD:
           description: Bu pulsuz, müstəqil onlayn kursla Code.org-un Kompüter Elmlərinin
@@ -206,6 +242,7 @@ az:
           description_short: Bu pulsuz, müstəqil onlayn kursla Code.org-un Kompüter
             Elmlərinin Əsaslarından istifadə edərək kompüter elmini necə öyrətməyi
             öyrənin.
+          name: K5-Onlayn EPD
           student_description: Bu pulsuz, müstəqil onlayn kursla Code.org-un Kompüter
             Elmlərinin Əsaslarından istifadə edərək kompüter elmini necə öyrətməyi
             öyrənin.
@@ -223,8 +260,13 @@ az:
           student_description: Heç nəyi pozmamağa çalışmaq
           title: mikrofon testi
         ScienceP3OLPT2:
+          description: 3-cü mərhələ tədris ilinin inkişafı
+          description_short: 3-cü mərhələ tədris ilinin inkişafı
           title: Elmdə Kompüter Elmləri PD Faza 3A Post İşi
         ScienceP3OLPT3:
+          description: 3-cü mərhələ tədris ilinin inkişafı
+          description_short: 3-cü mərhələ tədris ilinin inkişafı
+          student_description: 3-cü mərhələ tədris ilinin inkişafı
           title: Elmdə Kompüter Elmləri PD Pre-Faza 3B
         Special Fun:
           description_audience: 10+ yaş (Kurs 3-dən sonra)
@@ -358,8 +400,14 @@ az:
             ili təhsili'
           title: Cəbrd PD də Kompyuter Elmləri
         algebraPD3b:
+          description: 'Mərhələ 3 (Hissə 2): Cəbrdə CS orta illik dərs dəstəyi'
+          description_short: 'Mərhələ 3 (Hissə 2): Cəbrdə CS orta illik dərs dəstəyi'
+          student_description: 'Mərhələ 3 (Hissə 2): Cəbrdə CS orta illik dərs dəstəyi'
           title: Cəbrd PD də Kompyuter Elmləri
         algebraPD3c:
+          description: Cəbrdə CS ilin sonunun əks etdirilməsi
+          description_short: Cəbrdə CS ilin sonunun əks etdirilməsi
+          student_description: Cəbrdə CS ilin sonunun əks etdirilməsi
           title: Cəbrd PD də Kompyuter Elmləri
         algebrademo:
           description: Code.org CS -də Cəbrdə istifadə olunan mühiti və proqramlaşdırma
@@ -375,6 +423,9 @@ az:
           student_description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
           title: Cəbrdə Kompüter Elmləri PD Mərhələ 2
         allthehiddenthings:
+          description: Admin olaraq UI testi üçün buraxılmamış səviyyəli növlər
+          description_short: Admin olaraq UI testi üçün buraxılmamış səviyyəli növlər
+          student_description: Admin olaraq UI testi üçün buraxılmamış səviyyəli növlər
           title: Bütün Gizli Şeylər!
         allthemigratedthings:
           lesson_groups:
@@ -402,6 +453,8 @@ az:
             bir nüsxəsidir
           title: PLC üçün nümunə kurs
         allthesurveys:
+          description_short: sorğu
+          name: bütün sorğular
           title: Bütün sorğular
         allthethings:
           description: UI testi üçün bütün səviyyə növləri. Lütfən, applab səviyyələrini
@@ -413,6 +466,10 @@ az:
           lessons:
             lesson-49:
               name: Musiqi
+            lesson-50:
+              name: AI söhbəti
+            lesson-51:
+              name: AI rubrikaları
           name: Hər şey
           student_description: UI testi üçün bütün səviyyə növləri. Lütfən, applab
             səviyyələrini sınaqdan keçirmək üçün daxil olun (Dizayna görə, applab
@@ -421,6 +478,7 @@ az:
             üçün bunu etmək bezdirici olardı).
           title: Bütün hər şey!
         andrea-test:
+          description_audience: Təlimdə vasitəçilər
           lesson_groups:
             content:
               display_name: Məzmun
@@ -430,6 +488,13 @@ az:
           lessons:
             lesson-5:
               name: Yoxlamalar
+        applab-1hour:
+          description: arxa fon
+          description_audience: orta
+          student_description: arxa fon
+          title: laboratoriya
+        applab-2hour:
+          description_audience: orta
         applab-intro:
           title: Proqram laboratoriyasına giriş
         applab-intro-staging:
@@ -444,8 +509,11 @@ az:
           student_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
           title: Rəssam
         artistExemplar:
+          description: Bu sənət səviyyələri üçüncü sinif tələbələrini şok edəcək.
           description_audience: 8+ yaş (Kurs 2-dən sonra)
           description_short: Rəssamın səviyyələrini necə işlədə bilərik?
+          student_description: Bu sənət səviyyələri üçüncü sinif tələbələrini şok
+            edəcək.
           title: Rəssam nümunəsi
         asUnplugged:
           description: Afterschool Unplugged oflayn oyunlar və sənətkarlıq vasitəsilə
@@ -464,6 +532,8 @@ az:
             fantastikdir. Bu kurs əyləncə vasitəsilə öyrənməyə yönəlib. K-8 sinifləri
             üçün tövsiyə olunur.
           title: Məktəbdən sonra
+        aws-demo:
+          title: AWS Demo
         basketball:
           description: Komandanızı seçin və basketbol oynamağa başlayın
           description_short: Komandanızı seçin və basketbol oynamağa başlayın
@@ -473,24 +543,38 @@ az:
         classic-hoc-impact-study:
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
+          title: Anketlə Kod Saatı
         contagion-guided-practice:
           description_audience: 5-ci sinif
         contagion-pilot:
           description_audience: 5-cü sinif
+          lesson_groups:
+            contagion:
+              display_name: Yoluxma
+        counting-csc:
+          title: Dəfnə ilə saymaq
+        counting-csc-2021:
+          title: Dəfnə ilə saymaq
         course-e-2018:
           lesson_groups:
+            csf_e_1:
+              display_name: E kursuna qədər yüksəliş (İsteğe bağlı)
             csf_e_2:
               display_name: Kursun E-nin məzmunu
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
             extra_course_content:
               display_name: Əlavə Kurs Məzmunu
+          title: Kurs E 2018 (Köhnəlmiş!)
         course-f-2018:
           lesson_groups:
+            csf_f_1:
+              display_name: F kursuna qədər yüksəliş (İsteğe bağlı)
             csf_f_2:
               display_name: Kursun F-nin məzmunu
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+          title: Kurs F 2018 (Köhnəlmiş)
         course1:
           description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr kompyuter
             proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri həll
@@ -499,6 +583,7 @@ az:
             onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.
           description_audience: 4+ yaş (oxumağı bacarmayanlar)
           description_short: Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.
+          name: kurs1
           student_description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr
             kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri
             həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi
@@ -513,6 +598,7 @@ az:
             və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.
           description_audience: 6+ yaş (oxuma tələb olunur)
           description_short: Kurs 2 oxumağı bacaran şagirdlər üçün hazırlanıb.
+          name: kurs2
           student_description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma
             təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri
             həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv
@@ -527,6 +613,7 @@ az:
             4-5-ci siniflər üçün tövsiyyə olunur.
           description_audience: 8+ yaş (Kurs 2-dən sonra)
           description_short: Kurs 3 Kurs 2-nin davamıdır.
+          name: kurs3
           student_description: Kurs 3 artıq Kurs 2-ni keçmiş şagirdlər üçün hazırlanıb.
             Şagirdlər əvvəlki kurslarda təqdim olunmuş proqramlaşdırma mövzularını
             daha mürəkkəb məsələlərin çevik həlli üçün daha dərindən araşdıracaqlar.
@@ -657,6 +744,11 @@ az:
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını
             öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
             yaradın.
+        coursea-draft:
+          description: Qiymət
+          description_short: Erkən oxucular üçün kompüter elminə giriş.
+          student_description: Qiymət
+          title: 'CS Əsasları: Kurs A'
         courseb-2017:
           assignment_family_title: B Kursu
           description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin.
@@ -674,6 +766,7 @@ az:
           description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin.
             Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını
             öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
             yaradın.
@@ -682,6 +775,7 @@ az:
           description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin.
             Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -699,6 +793,7 @@ az:
           description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin.
             Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -714,6 +809,7 @@ az:
           title: B Kursu (2020)
         courseb-2021:
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -730,6 +826,7 @@ az:
             yaradın.
         courseb-2022:
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -746,6 +843,7 @@ az:
             yaradın.
         courseb-2023:
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -760,6 +858,11 @@ az:
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını
             öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
             yaradın.
+        courseb-draft:
+          description: adət
+          description_short: Erkən oxucular üçün kompüter elminə giriş.
+          student_description: adət
+          title: kurs
         coursec-2017:
           assignment_family_title: C Kursu
           description: Ardıcıllıq, döngələr və hadisələrlə proqramlar yaradın. Baş
@@ -911,18 +1014,30 @@ az:
             üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun
             sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
         coursec-draft:
+          description: interaktiv
           description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
             hekayələrini və oyunlarını yarat.
+          student_description: interaktiv
+          title: Fundamentallar
         coursed-2017:
           assignment_family_title: D Kursu
+          description: Alqoritmlər, yuvalı döngələr, döngələr, şərtlər və hadisələr
+            daxil olmaqla yeni kodlaşdırma anlayışlarını öyrənin. Paylaşa biləcəyiniz
+            öz oyununuzu və ya hekayənizi yaratmadan əvvəl rəqəmsal vətəndaşlığa giriş
+            əldə edin.
           description_audience: 'Yaşlar: 7-11'
           description_short: C Kursundan anlayışları sürətlə əhatə edin, sonra alqoritmlər,
             iç-içə döngələr, şərtlər və s. ilə daha da irəli gedin.
           name: coursed-2017
+          student_description: Alqoritmlər, yuvalı döngələr, döngələr, şərtlər və
+            hadisələr daxil olmaqla yeni kodlaşdırma anlayışlarını öyrənin. Paylaşa
+            biləcəyiniz öz oyununuzu və ya hekayənizi yaratmadan əvvəl rəqəmsal vətəndaşlığa
+            giriş əldə edin.
           title: D Kursu
         coursed-2018:
           assignment_family_title: D Kursu
           description_audience: 'Yaşlar: 7-11'
+          description_short: rəsm
           title: D Kursu (2018)
         coursed-2019:
           description: Şagirdlər döngələr, şərtlər və hadisələr haqqında anlayışlarını
@@ -1025,8 +1140,17 @@ az:
               display_name: Rəqəmsal vətəndaşlıq
           title: D Kursu (2021)
         coursed-draft:
+          description: Bu kursda tələbələr problemləri həll etmək və paylaşa biləcəkləri
+            interaktiv oyunlar və ya hekayələr hazırlamaq üçün proqramlar yaradacaqlar.
+            3-cü sinif üçün tövsiyə olunur.
           description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
             hekayələrini və oyunlarını yarat.
+          student_description: Bu kursda tələbələr problemləri həll etmək və paylaşa
+            biləcəkləri interaktiv oyunlar və ya hekayələr hazırlamaq üçün proqramlar
+            yaradacaqlar. 3-cü sinif üçün tövsiyə olunur.
+          title: 'CS Əsasları: Kurs D'
+        coursed-ramp:
+          title: 'CS Əsasları: Kurs D'
         coursee-2017:
           assignment_family_title: E Kursu
           description: Alqoritmlər, döngələr, şərtlər və hadisələrlə kodlamağa başlayın
@@ -1036,6 +1160,8 @@ az:
           description_short: C & D Kursunda tez anlayışları əhatə edin və sonra funksiyalarla
             irəli gedin.
           lesson_groups:
+            csf_e_1:
+              display_name: E kursuna qədər yüksəliş (İsteğe bağlı)
             csf_e_2:
               display_name: Kursun E-nin məzmunu
             end_of_course_project:
@@ -1054,6 +1180,8 @@ az:
             ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
           description_audience: 'Yaşlar: 8-12'
           lesson_groups:
+            csf_e_1:
+              display_name: E kursuna qədər yüksəliş (İsteğe bağlı)
             csf_e_2:
               display_name: Kursun E-nin məzmunu
             end_of_course_project:
@@ -1080,6 +1208,8 @@ az:
               display_name: Spraytlar
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+            ramp_up:
+              display_name: Yüksəlmək
           student_description: Alqoritmlər, döngələr, şərtlər və hadisələrlə kodlamağa
             başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
             və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
@@ -1100,6 +1230,8 @@ az:
               display_name: Spraytlar
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+            ramp_up:
+              display_name: Yüksəlmək
           student_description: Alqoritmlər, döngələr, şərtlər və hadisələrlə kodlamağa
             başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
             və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
@@ -1134,6 +1266,8 @@ az:
               display_name: Spraytlar
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+            lessonGroup-8:
+              display_name: Köhnəlmiş
             ramp_up:
               display_name: Iç-içə dövrlər
         coursee-2023:
@@ -1152,6 +1286,9 @@ az:
             ramp_up:
               display_name: Iç-içə dövrlər
         coursee-draft:
+          description: Bu kursda tələbələr problemləri həll etmək və paylaşa biləcəkləri
+            interaktiv oyunlar və ya hekayələr hazırlamaq üçün proqramlar yaradacaqlar.
+            Kurs çox günlük bir layihə ilə nəticələnir. 4-cü sinif üçün tövsiyə olunur.
           description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
             hekayələrini və oyunlarını yarat.
           lesson_groups:
@@ -1161,6 +1298,10 @@ az:
               display_name: Kurs layihələrinin sonu!
             extra_course_content:
               display_name: Əlavə Kurs Məzmunu
+          student_description: Bu kursda tələbələr problemləri həll etmək və paylaşa
+            biləcəkləri interaktiv oyunlar və ya hekayələr hazırlamaq üçün proqramlar
+            yaradacaqlar. Kurs çox günlük bir layihə ilə nəticələnir. 4-cü sinif üçün
+            tövsiyə olunur.
         coursef-2017:
           assignment_family_title: F Kursu
           description: Müxtəlif növ döngələrdən, hadisələrdən, funksiyalardan və şərtlərdən
@@ -1172,6 +1313,8 @@ az:
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin
             və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
           lesson_groups:
+            csf_f_1:
+              display_name: F kursuna qədər yüksəliş (İsteğe bağlı)
             csf_f_2:
               display_name: Kursun F-nin məzmunu
             end_of_course_project:
@@ -1194,6 +1337,8 @@ az:
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin
             və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
           lesson_groups:
+            csf_f_1:
+              display_name: F kursuna qədər yüksəliş (İsteğe bağlı)
             csf_f_2:
               display_name: Kursun F-nin məzmunu
             end_of_course_project:
@@ -1228,6 +1373,8 @@ az:
               display_name: dəyişənlər
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+            ramp_up:
+              display_name: Yüksəlmək
           student_description: Müxtəlif növ döngələrdən, hadisələrdən, funksiyalardan
             və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli üsullarını
             araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə edin.
@@ -1256,6 +1403,8 @@ az:
               display_name: dəyişənlər
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+            ramp_up:
+              display_name: Yüksəlmək
           student_description: Müxtəlif növ döngələrdən, hadisələrdən, funksiyalardan
             və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli üsullarını
             araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə edin.
@@ -1267,6 +1416,8 @@ az:
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin
             və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
           lesson_groups:
+            csf_data:
+              display_name: Məlumatlar və Simulyasiyalar
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
             csf_for_loops:
@@ -1288,6 +1439,10 @@ az:
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin
             və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
           lesson_groups:
+            csf_data:
+              display_name: Məlumatlar və Simulyasiyalar
+            csf_variables:
+              display_name: Köhnəlmiş
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
             lessonGroup-7:
@@ -1301,6 +1456,8 @@ az:
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin
             və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
           lesson_groups:
+            csf_data:
+              display_name: Məlumatlar və Simulyasiyalar
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
             lessonGroup-7:
@@ -1320,9 +1477,14 @@ az:
               display_name: Spraytlar
             lessonGroup-4:
               display_name: dəyişənlər
+            lessonGroup-5:
+              display_name: Məlumatlar və Simulyasiyalar
             lessonGroup-6:
               display_name: Kurs layihələrinin sonu!
         coursef-draft:
+          description: Bu kursda tələbələr problemləri həll etmək və paylaşa biləcəkləri
+            interaktiv oyunlar və ya hekayələr hazırlamaq üçün proqramlar yaradacaqlar.
+            Kurs çox günlük bir layihə ilə nəticələnir. 5-ci sinif üçün tövsiyə olunur.
           description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
             hekayələrini və oyunlarını yarat.
           lesson_groups:
@@ -1330,6 +1492,12 @@ az:
               display_name: Məzmun
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+          student_description: Bu kursda tələbələr problemləri həll etmək və paylaşa
+            biləcəkləri interaktiv oyunlar və ya hekayələr hazırlamaq üçün proqramlar
+            yaradacaqlar. Kurs çox günlük bir layihə ilə nəticələnir. 5-ci sinif üçün
+            tövsiyə olunur.
+        craft17:
+          title: yazı
         cs4all-invasive-species:
           lessons:
             lesson-21:
@@ -1340,6 +1508,9 @@ az:
           lesson_groups:
             lessonGroup-3:
               display_name: Dərslər
+          lessons:
+            lesson-2:
+              name: Ayırıcılar
         csa-frq-practice-2019:
           lesson_groups:
             lessonGroup-3:
@@ -1363,12 +1534,23 @@ az:
           lesson_groups:
             lessonGroup-3:
               display_name: Dərslər
+        csa-labs-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Məşhurluq Laboratoriyası
+            lessonGroup-5:
+              display_name: Məlumat Laboratoriyası
         csa-magpie-lab:
           lessons:
             lesson-4:
               name: Cavabları Dəyişdirin
             lesson-5:
               name: Təsadüfi Cavablar Almaq Üçün Massivlərdən İstifadə Edin
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
         csa-software-engineering:
           lesson_groups:
             lessonGroup-3:
@@ -1454,10 +1636,14 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1477,6 +1663,10 @@ az:
             lessonGroup-2:
               display_name: Məzmun
           lessons:
+            lesson-1:
+              name: Xüsusiyyətlər
+            lesson-12:
+              name: Bölmə 2 Qiymətləndirmə
             lesson-4:
               name: dəyişənlər
           title: Sinif strukturu və dizaynı
@@ -1488,10 +1678,14 @@ az:
           lesson_groups:
             lesson group:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Qum qutusu
         csa2-pilot-facilitator:
           lesson_groups:
             lesson group:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Qum qutusu
         csa2-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1517,10 +1711,14 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa3-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa3-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1534,6 +1732,10 @@ az:
             lessonGroup-2:
               display_name: Məzmun
           lessons:
+            lesson-5:
+              name: Teatr
+            lesson-8:
+              name: Atma və yuvarlaşdırma
             lesson-9:
               name: Təsadüf
           title: Şərtlər və Məntiq
@@ -1551,10 +1753,14 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Qum qutusu
         csa4-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Qum qutusu
         csa4-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1575,11 +1781,15 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Qum qutusu
           name: csa5-pilot
         csa5-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-4:
+              display_name: Qum qutusu
         csa5-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1588,10 +1798,17 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa6-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+          lessons:
+            lesson-2:
+              name: Alt sətirlər
+            lesson-7:
+              name: Obyektlərin siyahıları
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1600,11 +1817,15 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
           name: csa6-pilot
         csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa6-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1613,27 +1834,39 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+          lessons:
+            lesson-7:
+              name: Təkrar
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+          name: nümunələr
         csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
           name: csa7-pilot
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa7-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa7-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1651,8 +1884,16 @@ az:
             lessonGroup-4:
               display_name: Sorğu
           lessons:
+            lesson-4:
+              name: Seçim sıralaması
+            lesson-5:
+              name: Daxiletmə Sıralaması
+            lesson-6:
+              name: Birləşmə çeşidi
             lesson-7:
               name: Axtarış və Çeşidləmə
+            lesson-9:
+              name: Məxfilik və Təhlükəsizlik
           title: Axtarış və Çeşidləmə
         csa8-exemplars:
           lesson_groups:
@@ -1662,15 +1903,21 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
           name: csa8-pilot
         csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa8-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+            lessonGroup-5:
+              display_name: Qum qutusu
         csa8-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1679,6 +1926,10 @@ az:
               display_name: Sorğu
         csa9-pilot:
           name: csa9-pilot
+        csc-playground:
+          lessons:
+            lesson-7:
+              name: Labirint funksiyaları
         csd-apprentice-18:
           lesson_groups:
             content:
@@ -1692,6 +1943,7 @@ az:
             required:
               display_name: Yekun
         csd-playground:
+          description_audience: kurikulum, proqram
           lessons:
             lesson-7:
               name: Spraytlara giriş
@@ -1710,6 +1962,8 @@ az:
           title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
         csd-post-survey-2023:
           title: Kursdan Sonra Sorğusu
+        csd-test-saving-state:
+          title: Onlayn fəaliyyətlərin nümunəsi
         csd1-2017:
           description: Bölmə 1, problemlərin həlli üçün daha geniş axtarış çərçivəsində
             qurulduğu kimi, kompüter elmləri sahəsinə yüksək dərəcədə interaktiv və
@@ -1736,6 +1990,7 @@ az:
             etməyə kömək etmək üçün məlumatları necə daxil etdiyini, çıxardığını,
             saxladığını və emal etdiyini öyrənəcəksiniz. Bölmə, seçdiyiniz problemi
             həll etməyə kömək edən proqram tərtib etdiyiniz layihə ilə yekunlaşır.
+          title: CSD Bölməsi 1 - Problemlərin həlli ('17-'18)
         csd1-2018:
           description: Bölmə 1, problemlərin həlli üçün daha geniş axtarış çərçivəsində
             qurulduğu kimi, kompüter elmləri sahəsinə yüksək dərəcədə interaktiv və
@@ -1813,6 +2068,7 @@ az:
             lessonGroup-5:
               display_name: Sorğu
         csd1-dlp:
+          description_audience: Araşdırmalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -1824,6 +2080,17 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csd1-old:
+          description: Bu, əvvəlcə 2016-cı ilin payızında nəşr olunan CSD 1-ci bölməsinin
+            orijinal layihəsidir. Bu versiya studio.code.org/s/csd1-2019 saytında
+            yenilənmiş bir vahid ilə əvəz edildi və yalnız 1 iyul 2017-ci il tarixinədək
+            mövcud qalacaq.
+          description_short: 2016/2017 CSD 1-ci bölməsinin layihəsi
+          student_description: Bu, əvvəlcə 2016-cı ilin payızında nəşr olunan CSD
+            1-ci bölməsinin orijinal layihəsidir. Bu versiya studio.code.org/s/csd1-2019
+            saytında yenilənmiş bir vahid ilə əvəz edildi və yalnız 1 iyul 2017-ci
+            il tarixinədək mövcud qalacaq.
+          title: CSD Bölməsi 1 (Köhnəlmiş)
         csd1-pilot:
           description_short: Problemləri həll etmək üçün insanların kompüterlərlə
             necə işlədiyini öyrənin.
@@ -1835,30 +2102,81 @@ az:
             cspSurvey:
               display_name: Sorğu
         csd2-2017:
+          description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
           description_short: Web Lab-da öz veb saytınızı qurmağı öyrənin.
           lesson_groups:
+            csd2_1:
+              display_name: 'Fəsil 1: Veb məzmun və HTML'
             csd2_2:
               display_name: '2ci Hissə: stil yaratma və CSS'
             csd_survey:
               display_name: Kursdan Sonra Sorğusu
+          student_description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
+          title: CSD Bölməsi 2 - Veb İnkişafı ('17-'18)
         csd2-2018:
+          description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
           description_short: Web Lab-da öz veb saytınızı qurmağı öyrənin.
           lesson_groups:
+            csd2_1:
+              display_name: 'Fəsil 1: Veb məzmun və HTML'
             csd2_2:
               display_name: '2ci Hissə: stil yaratma və CSS'
             cspSurvey:
               display_name: Sorğu
+          student_description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
           title: CSD Unit 2 - Veb İnkişaf (18-19)
         csd2-2019:
+          description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
           description_short: Web Lab-da öz veb saytınızı qurmağı öyrənin.
           lesson_groups:
+            csd2_1:
+              display_name: 'Fəsil 1: Veb məzmun və HTML'
             csd2_2:
               display_name: '2ci Hissə: stil yaratma və CSS'
             cspSurvey:
               display_name: Sorğu
+          student_description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
         csd2-2020:
           description_short: Web Lab-da öz veb saytınızı qurmağı öyrənin.
           lesson_groups:
+            csd2_1:
+              display_name: 'Fəsil 1: Veb məzmun və HTML'
             csd2_1v2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
             csd2_2:
@@ -1884,6 +2202,7 @@ az:
             lessonGroup-2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
         csd2-dlp:
+          description_audience: Araşdırmalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -1895,15 +2214,36 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csd2-old:
+          description_short: Veb İnkişafı
+          title: CSD Bölməsi 2 (Köhnəlmiş)
         csd2-pilot:
+          description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
           description_short: Web Lab-da öz veb saytınızı qurmağı öyrənin.
           lesson_groups:
+            csd2_1:
+              display_name: 'Fəsil 1: Veb məzmun və HTML'
             csd2_2:
               display_name: '2ci Hissə: stil yaratma və CSS'
             cspSurvey:
               display_name: Sorğu
+          student_description: " Bölmə 2-də, öz veb səhifələrinizdə məzmunu necə yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Dünyaya hansı məzmunu bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizi necə
+            qurmağı və tərtib edəcəyinizi öyrənəcəksiniz. Siz həmçinin 'debugging'
+            və 'commenting' kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+            Vahidin sonuna qədər İnternetdə yayımlaya biləcəyiniz şəxsi veb saytınız
+            olacaq."
         csd2-virtual:
           lesson_groups:
+            csd2_1:
+              display_name: 'Fəsil 1: Veb məzmun və HTML'
             csd2_2:
               display_name: '2ci Hissə: stil yaratma və CSS'
         csd3-1819draft:
@@ -1913,6 +2253,8 @@ az:
             və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə
             edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz
             fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -1926,6 +2268,7 @@ az:
             konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+          title: CSD Bölmə 3 - Animasiyalar və Oyunlar
         csd3-2017:
           description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət
             və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz.
@@ -1957,6 +2300,8 @@ az:
             və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə
             edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz
             fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -1977,6 +2322,8 @@ az:
             və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə
             edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz
             fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -1997,6 +2344,8 @@ az:
             və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə
             edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz
             fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -2011,6 +2360,8 @@ az:
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
         csd3-2021:
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -2025,6 +2376,8 @@ az:
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
         csd3-2022:
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -2051,6 +2404,7 @@ az:
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
         csd3-dlp:
+          description_audience: Araşdırmalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2062,6 +2416,22 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csd3-draft:
+          description_short: Animasiyalar və oyunlar
+          title: Animasiya
+        csd3-old:
+          description: Bu, 2016-cı ilin payızında yayımlanan CSD Unit 3-ün orijinal
+            layihəsidir. Hazırda bu kursdan istifadə edən tələbələriniz olmadıqda,
+            bunun əvəzinə studio.code.org/s/csd3-2019 saytında bu bölmənin yenilənmiş
+            versiyasından istifadə etməlisiniz - bu orijinal layihə 1 iyul 2017-ci
+            il tarixinə qədər mövcud qalacaq.
+          description_short: 2016/2017 CSD 3-cü bölməsinin layihəsi
+          student_description: Bu, 2016-cı ilin payızında yayımlanan CSD Unit 3-ün
+            orijinal layihəsidir. Hazırda bu kursdan istifadə edən tələbələriniz olmadıqda,
+            bunun əvəzinə studio.code.org/s/csd3-2019 saytında bu bölmənin yenilənmiş
+            versiyasından istifadə etməlisiniz - bu orijinal layihə 1 iyul 2017-ci
+            il tarixinə qədər mövcud qalacaq.
+          title: CSD Bölməsi 3 (Köhnəlmiş)
         csd3-pilot:
           description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət
             və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz.
@@ -2069,6 +2439,8 @@ az:
             və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə
             edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz
             fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
@@ -2083,6 +2455,8 @@ az:
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
         csd3-virtual:
+          description_short: " Game Laboratoriyasında animasiyalar, interaktiv sənət
+            və oyunları proqramlaşdırmağı öyrənin."
           lesson_groups:
             csd3_1:
               display_name: Məzmun
@@ -2091,30 +2465,155 @@ az:
             cspSurvey:
               display_name: Məzmun
         csd4-2017:
+          description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini təqdim edir.
+            Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən başqalarının
+            ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz. Bölmənin ikinci
+            yarısı təkrarlanan komanda layihəsindən ibarətdir, bu müddət ərzində komandalar
+            maraqlandıqları ehtiyacı müəyyən etmək, həm kağız üzərində, həm də App
+            Lab-da prototip həllər və geribildirim əldə etmək və daha da iterasiya
+            etmək üçün real istifadəçilərlə test həllərini müəyyən etmək imkanı əldə
+            edirlər.
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
             csd_survey:
               display_name: Kursdan Sonra Sorğusu
+          student_description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini
+            təqdim edir. Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən
+            başqalarının ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz.
+            Bölmənin ikinci yarısı təkrarlanan komanda layihəsindən ibarətdir, bu
+            müddət ərzində komandalar maraqlandıqları ehtiyacı müəyyən etmək, həm
+            kağız üzərində, həm də App Lab-da prototip həllər və geribildirim əldə
+            etmək və daha da iterasiya etmək üçün real istifadəçilərlə test həllərini
+            müəyyən etmək imkanı əldə edirlər.
+          title: CSD Bölməsi 4 - Dizayn Prosesi ('17-'18)
         csd4-2018:
+          description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini təqdim edir.
+            Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən başqalarının
+            ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz. Bölmənin ikinci
+            yarısı təkrarlanan komanda layihəsindən ibarətdir, bu müddət ərzində komandalar
+            maraqlandıqları ehtiyacı müəyyən etmək, həm kağız üzərində, həm də App
+            Lab-da prototip həllər və geribildirim əldə etmək və daha da iterasiya
+            etmək üçün real istifadəçilərlə test həllərini müəyyən etmək imkanı əldə
+            edirlər.
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini
+            təqdim edir. Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən
+            başqalarının ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz.
+            Bölmənin ikinci yarısı təkrarlanan komanda layihəsindən ibarətdir, bu
+            müddət ərzində komandalar maraqlandıqları ehtiyacı müəyyən etmək, həm
+            kağız üzərində, həm də App Lab-da prototip həllər və geribildirim əldə
+            etmək və daha da iterasiya etmək üçün real istifadəçilərlə test həllərini
+            müəyyən etmək imkanı əldə edirlər.
         csd4-2019:
+          description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini təqdim edir.
+            Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən başqalarının
+            ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz. Bölmənin ikinci
+            yarısı təkrarlanan komanda layihəsindən ibarətdir, bu müddət ərzində komandalar
+            maraqlandıqları ehtiyacı müəyyən etmək, həm kağız üzərində, həm də App
+            Lab-da prototip həllər və geribildirim əldə etmək və daha da iterasiya
+            etmək üçün real istifadəçilərlə test həllərini müəyyən etmək imkanı əldə
+            edirlər.
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini
+            təqdim edir. Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən
+            başqalarının ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz.
+            Bölmənin ikinci yarısı təkrarlanan komanda layihəsindən ibarətdir, bu
+            müddət ərzində komandalar maraqlandıqları ehtiyacı müəyyən etmək, həm
+            kağız üzərində, həm də App Lab-da prototip həllər və geribildirim əldə
+            etmək və daha da iterasiya etmək üçün real istifadəçilərlə test həllərini
+            müəyyən etmək imkanı əldə edirlər.
         csd4-2020:
+          description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini təqdim edir.
+            Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən başqalarının
+            ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz. Bölmənin ikinci
+            yarısı təkrarlanan komanda layihəsindən ibarətdir, bu müddət ərzində komandalar
+            maraqlandıqları ehtiyacı müəyyən etmək, həm kağız üzərində, həm də App
+            Lab-da prototip həllər və geribildirim əldə etmək və daha da iterasiya
+            etmək üçün real istifadəçilərlə test həllərini müəyyən etmək imkanı əldə
+            edirlər.
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini
+            təqdim edir. Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən
+            başqalarının ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz.
+            Bölmənin ikinci yarısı təkrarlanan komanda layihəsindən ibarətdir, bu
+            müddət ərzində komandalar maraqlandıqları ehtiyacı müəyyən etmək, həm
+            kağız üzərində, həm də App Lab-da prototip həllər və geribildirim əldə
+            etmək və daha da iterasiya etmək üçün real istifadəçilərlə test həllərini
+            müəyyən etmək imkanı əldə edirlər.
         csd4-2021:
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini
+            təqdim edir. Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən
+            başqalarının ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz.
+            Bölmənin ikinci yarısı təkrarlanan komanda layihəsindən ibarətdir, bu
+            müddət ərzində komandalar maraqlandıqları ehtiyacı müəyyən etmək, həm
+            kağız üzərində, həm də App Lab-da prototip həllər və geribildirim əldə
+            etmək və daha da iterasiya etmək üçün real istifadəçilərlə test həllərini
+            müəyyən etmək imkanı əldə edirlər.
+          title: Dizayn Prosesi
         csd4-2022:
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
             cspSurvey:
               display_name: Sorğu
+          student_description: rəy
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+          student_description: rəy
         csd4-dlp:
+          description_audience: Araşdırmalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2126,41 +2625,193 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csd4-draft:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+        csd4-old:
+          description_short: versiya
+          lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
         csd4-pilot:
           lesson_groups:
             csd1_2:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
         csd4-preview-2021:
+          description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini təqdim edir.
+            Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən başqalarının
+            ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz. Bölmənin ikinci
+            yarısı təkrarlanan komanda layihəsindən ibarətdir, bu müddət ərzində komandalar
+            maraqlandıqları ehtiyacı müəyyən etmək, həm kağız üzərində, həm də App
+            Lab-da prototip həllər və geribildirim əldə etmək və daha da iterasiya
+            etmək üçün real istifadəçilərlə test həllərini müəyyən etmək imkanı əldə
+            edirlər.
+          description_short: "  İstifadəçilərinizin ehtiyaclarına cavab verən bir
+            proqram necə dizayn edəcəyinizi öyrənin."
           lesson_groups:
+            csd4_1:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            csd4_2:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+            csd5_2:
+              display_name: həll etmək
             csdSurvey:
               display_name: Sorğu
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 4 hesablamanın daha geniş sosial təsirlərini
+            təqdim edir. Bir sıra dizayn problemləri vasitəsilə problemin həlli hazırlayarkən
+            başqalarının ehtiyaclarını necə daha yaxşı başa düşməyi öyrənəcəksiniz.
+            Bölmənin ikinci yarısı təkrarlanan komanda layihəsindən ibarətdir, bu
+            müddət ərzində komandalar maraqlandıqları ehtiyacı müəyyən etmək, həm
+            kağız üzərində, həm də App Lab-da prototip həllər və geribildirim əldə
+            etmək və daha da iterasiya etmək üçün real istifadəçilərlə test həllərini
+            müəyyən etmək imkanı əldə edirlər.
         csd5-2017:
+          description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən bəhs
+            edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             csd_survey:
               display_name: Kursdan Sonra Sorğusu
+          student_description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          title: CSD Bölməsi 5 - Məlumat və Cəmiyyət ('17-'18)
         csd5-2018:
+          description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən bəhs
+            edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
         csd5-2019:
+          description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən bəhs
+            edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
         csd5-2020:
+          description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən bəhs
+            edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
         csd5-2021:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          title: Məlumat və Cəmiyyət
         csd5-2022:
+          description: Həll
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+        csd5-2023:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: həll etmək
         csd5-dlp:
+          description_audience: Araşdırmalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2172,35 +2823,100 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
-        csd5-preview-2021:
+        csd5-draft:
           lesson_groups:
+            csd5_2:
+              display_name: həll etmək
+        csd5-old:
+          description: Proses
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+          lesson_groups:
+            csd5_2:
+              display_name: həll etmək
+          student_description: Proses
+          title: Cəmiyyət
+        csd5-preview-2021:
+          description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən bəhs
+            edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+          lesson_groups:
+            csd5_2:
+              display_name: həll etmək
             cspSurvey:
               display_name: Sorğu
+          student_description: Bölmə 5 problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsildə kompüterdə məlumatları təmsil etmək üçün istifadə olunan
+            müxtəlif sistemlər və onlardan istifadə etməklə ortaya çıxan çətinliklər
+            və kompromislər araşdırılır. İkinci fəsildə məlumat kolleksiyalarının
+            problemləri həll etmək üçün necə istifadə edildiyini və kompüterlərin
+            bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz.
+            Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq
+            oluna biləcəyini nəzərdən keçirərək başa çatır.
         csd6-2017:
+          description: Araşdırmaq
           lesson_groups:
+            csd6_2:
+              display_name: Fəsil
             csd_survey:
               display_name: Kursdan Sonra Sorğusu
+          student_description: Araşdırmaq
+          title: Fiziki
         csd6-2018:
+          description: Araşdırmaq
           lesson_groups:
+            csd6_2:
+              display_name: Fəsil
             cspSurvey:
               display_name: Sorğu
+          student_description: Araşdırmaq
         csd6-2019:
+          description: Araşdırmaq
           lesson_groups:
+            csd6_2:
+              display_name: Fəsil
             cspSurvey:
               display_name: Sorğu
+          student_description: Araşdırmaq
         csd6-2020:
+          description: Araşdırmaq
           lesson_groups:
+            csd6_2:
+              display_name: Fəsil
             cspSurvey:
               display_name: Sorğu
+          student_description: Araşdırmaq
         csd6-2021:
           lesson_groups:
+            csd6_2:
+              display_name: Fəsil
             cspSurvey:
               display_name: Sorğu
+          student_description: Araşdırmaq
         csd6-2022:
+          description: həyata keçirilməsi
           lesson_groups:
+            lessonGroup-3:
+              display_name: Fəsil
             lessonGroup-4:
               display_name: Sorğu
+          student_description: aparat
+          title: Fiziki hesablama
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Fəsil
         csd6-dlp:
+          description_audience: Araşdırmalar
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2212,12 +2928,26 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csd6-draft:
+          lesson_groups:
+            csd6_2:
+              display_name: Fəsil
+        csd6-old:
+          lesson_groups:
+            csd6_2:
+              display_name: Fəsil
+          title: "(Köhnəlmiş) CSD Bölməsi 6 - Fiziki Hesablama"
         csd6-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: 1-ci Fəsil
             lessonGroup-3:
               display_name: 2-ci Fəsil
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: aparat
         csd6b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2227,9 +2957,11 @@ az:
             lessonGroup-4:
               display_name: Sorğu
         csd7-2022:
+          description: inkişaf
           lesson_groups:
             lessonGroup-4:
               display_name: Sorğu
+          student_description: cədvəlli
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2238,10 +2970,20 @@ az:
               display_name: 2-ci Fəsil
             lessonGroup-4:
               display_name: Proqram laboratoriyasına giriş
+          student_description: cədvəlli
+        csdnovice:
+          description: Refleksiya
+          description_audience: CSD Təcrübəsiz Fasilitatorları
+          description_short: TeacherCon-da təcrübəsiz fasilitatorlar üçün düşünmə
+            sualları.
+          student_description: Refleksiya
+          title: CS Discoventures TeacherCon Təcrübəsiz Fasilitatorları
         csdu6-playground:
           lesson_groups:
             lessonGroup-2:
               display_name: 1-ci Fəsil
+            lessonGroup-3:
+              display_name: Şablonlar
             lessonGroup-4:
               display_name: 2-ci Fəsil
         csf-2021-pilot:
@@ -2263,11 +3005,13 @@ az:
             lessonGroup-4:
               display_name: Kurs layihələrinin sonu!
         csf2harvey:
+          description: Yalnız bizim sinifimiz üçün xüsusi baloncuklar!
           lesson_groups:
             content:
               display_name: Məzmun
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+          student_description: Yalnız bizim sinifimiz üçün xüsusi baloncuklar!
           title: Cənab Harveyin Dərsi
         csl-vn:
           lesson_groups:
@@ -2277,6 +3021,26 @@ az:
               display_name: dövrlər
             csf_sequencing:
               display_name: Ardıcıllıq qurmaq
+        csp-ap:
+          description: Dərslər tələbələrə AP imtahanına və Performans Tapşırıqlarına
+            hazırlaşmağa və tamamlamağa kömək edir.
+          description_short: Dərslər tələbələrə AP imtahanına və Performans Tapşırıqlarına
+            hazırlaşmağa və tamamlamağa kömək edir.
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Fəsil 1: AP Tech Quraşdırma'
+            csp_ap_2:
+              display_name: Performans
+            csp_ap_3:
+              display_name: 'Fəsil 3: AP Performans Tapşırığı yaradın'
+          student_description: Dərslər tələbələrə AP imtahanına və Performans Tapşırıqlarına
+            hazırlaşmağa və tamamlamağa kömək edir.
+          title: CSP AP İmtahan və Performans Tapşırıqları
+        csp-ap-tech-setup:
+          description: AP Digital Portfolio quruluşunu və AP Performans Tapşırıqlarını
+            yerinə yetirmək və təqdim etmək üçün tələb olunan digər texniki vasitələri
+            əhatə edir.
+          title: CSP AP Rəqəmsal Portfel və Digər Alətlər
         csp-apprentice-18:
           lesson_groups:
             content:
@@ -2284,47 +3048,85 @@ az:
             required:
               display_name: Yekun
         csp-create-2017:
+          description: ləvazimat
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_ap_3:
+              display_name: 'Fəsil 3: AP Performans Tapşırığı yaradın'
+          student_description: ləvazimat
         csp-create-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_ap_3:
+              display_name: 'Fəsil 3: AP Performans Tapşırığı yaradın'
         csp-create-2019:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_ap_3:
+              display_name: 'Fəsil 3: AP Performans Tapşırığı yaradın'
         csp-create-dlp-18:
           lesson_groups:
             content:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csp-create-task:
+          description: Bu dərslər CS Prinsipləri AP Create Performance Tapşırığının
+            hazırlanmasını və tamamlanmasını əhatə edir.
+          description_short: Bu dərslər CS Prinsipləri AP Create Performance Tapşırığının
+            hazırlanmasını və tamamlanmasını əhatə edir.
+        csp-exam:
+          description: çoxsaylı
+          description_short: Prinsiplər
+          student_description: çoxsaylı
+          title: Prinsiplər
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_ap_2:
+              display_name: Performans
         csp-explore-2018:
+          description: quraşdırma
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_ap_2:
+              display_name: Performans
+          student_description: quraşdırma
+          title: tapşırıq
         csp-explore-2019:
+          description: quraşdırma
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_ap_2:
+              display_name: Performans
+          student_description: quraşdırma
         csp-explore-dlp-18:
           lesson_groups:
             content:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csp-explore-task:
+          description: Bu dərslər CS Prinsipləri AP Explore Performance Tapşırığının
+            hazırlanmasını və tamamlanmasını əhatə edir.
+          description_short: Bu dərslər CS Prinsipləri AP Explore Performance Tapşırığının
+            hazırlanmasını və tamamlanmasını əhatə edir.
+          title: CSP PT Hazırlığını araşdırın
         csp-facilitators:
           description: CS Principles kursundan alətlər toplusu. Bu səviyyələr tədris
             proqramı boyunca istifadə etdiyimiz alətlərə nəzər yetirir.
+          description_short: Yeni Fasilitatorlar üçün CS Prinsiplərinə Giriş
           student_description: CS Principles kursundan alətlər toplusu. Bu səviyyələr
             tədris proqramı boyunca istifadə etdiyimiz alətlərə nəzər yetirir.
+          title: CSP Alətinə Baxış
         csp-mid-survey:
+          description_audience: CSP Tələbələri
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -2335,6 +3137,9 @@ az:
             required:
               display_name: Yekun
         csp-online-test:
+          description: Bu onlayn pd üçün sınaq sahəsidir. Bu kursa qeydiyyatdan keçmək
+            heç bir şey etmir.
+          description_short: Bu csp onlayn pd-ni sınamaq üçün nümunə kursdur
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2342,19 +3147,67 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          student_description: Bu onlayn pd üçün sınaq sahəsidir. Bu kursa qeydiyyatdan
+            keçmək heç bir şey etmir.
           title: CSP onlayn dəstək üçün test yeri
+        csp-playground:
+          description_audience: kurikulum, proqram
+          title: CSP Oyun Meydançası
         csp-post-survey:
+          description: Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş gəlmisiniz.
+            Bu sorğunun tamamlanması təxminən 15 dəqiqə çəkir. Cavablarınız şəxsi
+            və anonimdir - müəlliminiz bütün sinif üçün anonim ümumi nəticələri görə
+            bilər. Nəticələr müəlliminiz və Code.org üçün kursu davam etdirmək və
+            təkmilləşdirmək üçün çox vacibdir. Vaxtınız və düşündüyünüz üçün təşəkkür
+            edirik.
+          description_audience: CSP Tələbələri
+          description_short: CSP Tələbə Kursundan Sonrakı Sorğu
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          student_description: Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş
+            gəlmisiniz. Bu sorğunun tamamlanması təxminən 15 dəqiqə çəkir. Cavablarınız
+            şəxsi və anonimdir - müəlliminiz bütün sinif üçün anonim ümumi nəticələri
+            görə bilər. Nəticələr müəlliminiz və Code.org üçün kursu davam etdirmək
+            və təkmilləşdirmək üçün çox vacibdir. Vaxtınız və düşündüyünüz üçün təşəkkür
+            edirik.
+          title: CSP Tələbə Kursundan Sonrakı Sorğu ('17-'18)
         csp-post-survey-2018:
+          description: Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş gəlmisiniz.
+            Bu sorğunun tamamlanması təxminən 15 dəqiqə çəkir. Cavablarınız şəxsi
+            və anonimdir - müəlliminiz bütün sinif üçün anonim ümumi nəticələri görə
+            bilər. Nəticələr müəlliminiz və Code.org üçün kursu davam etdirmək və
+            təkmilləşdirmək üçün çox vacibdir. Vaxtınız və düşündüyünüz üçün təşəkkür
+            edirik.
+          description_audience: CSP Tələbələri
+          description_short: CSP Tələbə Kursundan Sonrakı Sorğu
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          student_description: Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş
+            gəlmisiniz. Bu sorğunun tamamlanması təxminən 15 dəqiqə çəkir. Cavablarınız
+            şəxsi və anonimdir - müəlliminiz bütün sinif üçün anonim ümumi nəticələri
+            görə bilər. Nəticələr müəlliminiz və Code.org üçün kursu davam etdirmək
+            və təkmilləşdirmək üçün çox vacibdir. Vaxtınız və düşündüyünüz üçün təşəkkür
+            edirik.
         csp-post-survey-2020:
+          description: Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş gəlmisiniz.
+            Bu sorğunun tamamlanması təxminən 15 dəqiqə çəkir. Cavablarınız şəxsi
+            və anonimdir - müəlliminiz bütün sinif üçün anonim ümumi nəticələri görə
+            bilər. Nəticələr müəlliminiz və Code.org üçün kursu davam etdirmək və
+            təkmilləşdirmək üçün çox vacibdir. Vaxtınız və düşündüyünüz üçün təşəkkür
+            edirik.
+          description_audience: CSP Tələbələri
+          description_short: CSP Tələbə Kursundan Sonrakı Sorğu
           lesson_groups:
             cspSurvey2020:
               display_name: Sorğu
+          student_description: Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş
+            gəlmisiniz. Bu sorğunun tamamlanması təxminən 15 dəqiqə çəkir. Cavablarınız
+            şəxsi və anonimdir - müəlliminiz bütün sinif üçün anonim ümumi nəticələri
+            görə bilər. Nəticələr müəlliminiz və Code.org üçün kursu davam etdirmək
+            və təkmilləşdirmək üçün çox vacibdir. Vaxtınız və düşündüyünüz üçün təşəkkür
+            edirik.
         csp-pre-survey:
           name: csp öncəsi sorğu
           title: KE Prinsipləri Öncəsi Sorğu
@@ -2366,12 +3219,17 @@ az:
           description_short: Məlumatı bit kimi təqdim etmək və bu bitləri bir yerdən
             digər yerə necə çatdırmaq barədə çətinlikləri araşdırın.
           lesson_groups:
+            csp1_1:
+              display_name: 'Fəsil 1: Məlumatı təmsil etmək və ötürmək'
+            csp1_2:
+              display_name: 'Fəsil 2: İnternetin icad edilməsi'
             cspSurvey:
               display_name: Sorğu
           student_description: Bu bölmə rəqəmsal məlumatı kompüterlərdə təqdim etmək
             və onu insanlar və hesablama cihazları arasında ötürmək ehtiyacından yaranan
             texniki çətinlikləri və sualları araşdırır. Sonra bölmə internetin strukturunu
             və dizaynını və bu dizayn qərarlarının nəticələrini araşdırır.
+          title: CSP Bölməsi 1 - İnternet ('17-'18)
         csp1-2018:
           description: Bu bölmə rəqəmsal məlumatı kompüterlərdə təqdim etmək və onu
             insanlar və hesablama cihazları arasında ötürmək ehtiyacından yaranan
@@ -2380,6 +3238,10 @@ az:
           description_short: Məlumatı bit kimi təqdim etmək və bu bitləri bir yerdən
             digər yerə necə çatdırmaq barədə çətinlikləri araşdırın.
           lesson_groups:
+            csp1_1:
+              display_name: 'Fəsil 1: Məlumatı təmsil etmək və ötürmək'
+            csp1_2:
+              display_name: 'Fəsil 2: İnternetin icad edilməsi'
             cspSurvey:
               display_name: Sorğu
           student_description: Bu bölmə rəqəmsal məlumatı kompüterlərdə təqdim etmək
@@ -2394,6 +3256,10 @@ az:
           description_short: Məlumatı bit kimi təqdim etmək və bu bitləri bir yerdən
             digər yerə necə çatdırmaq barədə çətinlikləri araşdırın.
           lesson_groups:
+            csp1_1:
+              display_name: 'Fəsil 1: Məlumatı təmsil etmək və ötürmək'
+            csp1_2:
+              display_name: 'Fəsil 2: İnternetin icad edilməsi'
             cspSurvey:
               display_name: Sorğu
           student_description: Bu bölmə rəqəmsal məlumatı kompüterlərdə təqdim etmək
@@ -2406,25 +3272,48 @@ az:
               display_name: Sorğu
             cspSurvey2020:
               display_name: Kursdan Sonra Sorğusu
+            csp_unit1_2020:
+              display_name: Rəqəmsal məlumat
         csp1-2021:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_unit1_2020:
+              display_name: Rəqəmsal məlumat
+          title: Rəqəmsal məlumat
         csp1-2022:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_unit1_2020:
+              display_name: Rəqəmsal məlumat
         csp1-2023:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+            csp_unit1_2020:
+              display_name: Rəqəmsal məlumat
         csp1-dlp:
+          description: 'Bu, təlimdə Code.org CSP vasitəçiləri üçün Dərin Öyrənmə Planının
+            1-ci bölməsidir. Burada Code.org CSP Kurikulumunun 1-ci bölməsinin bacarıqlığını
+            nümayiş etdirmək üçün düşünmə təlimatları və təlimatları tapa bilərsiniz.
+            Vahid üçün öz düşüncələrinizi təqdim etdikdən sonra həmyaşıdların araşdırma
+            maddələri bu səhifənin altında mövcuddur. '
+          description_audience: Təlimdə CS Prinsipləri Fasilitatorları
+          description_short: 'Təlimdə CSP fasilitatorları üçün daha dərin öyrənmə
+            materialları '
           lesson_groups:
             content:
               display_name: Məzmun
             required:
               display_name: Yekun
           name: csp1-dlp
+          student_description: 'Bu, təlimdə Code.org CSP vasitəçiləri üçün Dərin Öyrənmə
+            Planının 1-ci bölməsidir. Burada Code.org CSP Kurikulumunun 1-ci bölməsinin
+            bacarıqlığını nümayiş etdirmək üçün düşünmə təlimatları və təlimatları
+            tapa bilərsiniz. Vahid üçün öz düşüncələrinizi təqdim etdikdən sonra həmyaşıdların
+            araşdırma maddələri bu səhifənin altında mövcuddur. '
+          title: CSP Bölməsi 1 Dərin Öyrənmə
         csp1-dlp-18:
           lesson_groups:
             content:
@@ -2448,6 +3337,10 @@ az:
             csp_variables:
               display_name: dəyişənlər
         csp1-support:
+          description: Bu CSP müəllimlərinin 1-ci Bölməni tədris etməyə hazırlaşmaq
+            üçün təşkil edilmiş bir Profesional Öyrənmə Kursuna uyğunlaşdırılmış onlayn
+            dəstək dəstəyidir.
+          description_short: CSP 1-ci bölmə üçün müəllim peşəkar öyrənmə kursu
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2455,6 +3348,10 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          student_description: Bu CSP müəllimlərinin 1-ci Bölməni tədris etməyə hazırlaşmaq
+            üçün təşkil edilmiş bir Profesional Öyrənmə Kursuna uyğunlaşdırılmış onlayn
+            dəstək dəstəyidir.
+          title: Bölmə 1 Onlayn Peşəkar Öyrənmə Kursu
         csp10-2020:
           lesson_groups:
             cspSurvey2020:
@@ -2463,6 +3360,7 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Sorğu
+          title: Kibertəhlükəsizlik
         csp10-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2496,6 +3394,8 @@ az:
           lesson_groups:
             csp2_1:
               display_name: 'Fəsil 1: Mürəkkəb məlumatların kodlaşdırılması və sıxılması'
+            csp2_2:
+              display_name: 'Fəsil 2: Məlumatların manipulyasiyası və vizuallaşdırılması'
             cspSurvey:
               display_name: Sorğu
           student_description: Bu bölmə rəqəmsal məlumatın kodlaşdırılması, təqdim
@@ -2507,6 +3407,7 @@ az:
             malik olmaq və verilənləri manipulyasiya etmək və bu barədə ünsiyyət qurmaq
             üçün hesablama alətlərindən istifadə etmək bölmədə müzakirə olunan əsas
             bacarıqlardır.
+          title: CSP Bölməsi 2 - Rəqəmsal Məlumat ('17-'18)
         csp2-2018:
           description: Bu bölmə rəqəmsal məlumatın kodlaşdırılması, təqdim edilməsi
             və manipulyasiya edilməsi yollarını daha da araşdırır. Məlumatları rəqəmsal
@@ -2583,11 +3484,25 @@ az:
             csp_unit2_2020:
               display_name: Mövzu 2:İnternet
         csp2-dlp:
+          description: 'Bu, təlimdə Code.org CSP vasitəçiləri üçün Dərin Öyrənmə Planının
+            2-ci bölməsidir. Burada Code.org CSP Kurikulumunun 2-ci bölməsinin bacarıqlığını
+            nümayiş etdirmək üçün düşünmə təlimatları və təlimatları tapa bilərsiniz.
+            Vahid üçün öz düşüncələrinizi təqdim etdikdən sonra həmyaşıdların araşdırma
+            maddələri bu səhifənin altında mövcuddur. '
+          description_audience: Təlimdə CS Prinsipləri Fasilitatorları
+          description_short: 'Bölmə 2 Təlimdə CSP fasilitatorları üçün daha dərin
+            öyrənmə materialları '
           lesson_groups:
             content:
               display_name: Məzmun
             required:
               display_name: Yekun
+          student_description: 'Bu, təlimdə Code.org CSP vasitəçiləri üçün Dərin Öyrənmə
+            Planının 2-ci bölməsidir. Burada Code.org CSP Kurikulumunun 2-ci bölməsinin
+            bacarıqlığını nümayiş etdirmək üçün düşünmə təlimatları və təlimatları
+            tapa bilərsiniz. Vahid üçün öz düşüncələrinizi təqdim etdikdən sonra həmyaşıdların
+            araşdırma maddələri bu səhifənin altında mövcuddur. '
+          title: CSP Bölmə 2 Dərin Öyrənmə
         csp2-dlp-18:
           lesson_groups:
             content:
@@ -2612,6 +3527,9 @@ az:
               display_name: dəyişənlər
           title: Mövzu 2:İnternet
         csp2-support:
+          description: 'Bu, 2-ci bölməni tədris etməyə hazırlaşan CSP müəllimləri
+            üçün Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur. '
+          description_short: CSP 2-ci bölməsi üçün müəllim peşəkar öyrənmə kursu
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2619,6 +3537,9 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          student_description: 'Bu, 2-ci bölməni tədris etməyə hazırlaşan CSP müəllimləri
+            üçün Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur. '
+          title: Bölmə 2 Onlayn Peşəkar Öyrənmə Kursu
         csp3-2017:
           description: |-
             Bu bölmə zəngin, interaktiv proqramlar yaratmaq qabiliyyətini açan kompüter proqramlaşdırmasının əsas konsepsiyalarını təqdim edir. Bu kurs proqramlaşdırma dili kimi JavaScript-dən və proqramlar yaratmaq üçün proqramlaşdırma mühiti kimi App Lab-dan istifadə edir, lakin bu dərslərdə öyrənilən anlayışlar bütün proqramlaşdırma dilləri və alətlərini əhatə edir.
@@ -2687,16 +3608,46 @@ az:
           lesson_groups:
             cspSurvey2020:
               display_name: Kursdan Sonra Sorğusu
+            csp_unit3_2020:
+              display_name: 'Bölmə 3: Tətbiq Dizaynına Giriş'
+        csp3-2021:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Bölmə 3: Tətbiq Dizaynına Giriş'
+        csp3-2022:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Bölmə 3: Tətbiq Dizaynına Giriş'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Bölmə 3: Tətbiq Dizaynına Giriş'
         csp3-a:
+          description: əsaslı
           lesson_groups:
             csp3_1:
               display_name: 1-ci fəsil. Proqramlaşdırma dilləri və alqoritmləri
+          student_description: əsaslı
         csp3-dlp:
+          description: 'Bu, təlimdə Code.org CSP vasitəçiləri üçün Dərin Öyrənmə Planının
+            3-cü bölməsidir. Burada Code.org CSP Kurikulumunun 3-cü bölməsinin bacarıqlığını
+            nümayiş etdirmək üçün düşünmə təlimatları və təlimatları tapa bilərsiniz.
+            Vahid üçün öz düşüncələrinizi təqdim etdikdən sonra həmyaşıdların araşdırma
+            maddələri bu səhifənin altında mövcuddur. '
+          description_audience: Təlimdə CS Prinsipləri Fasilitatorları
+          description_short: 'Bölmə 3 Təlimdə CSP fasilitatorları üçün daha dərin
+            öyrənmə materialları '
           lesson_groups:
             content:
               display_name: Məzmun
             required:
               display_name: Yekun
+          student_description: 'Bu, təlimdə Code.org CSP vasitəçiləri üçün Dərin Öyrənmə
+            Planının 3-cü bölməsidir. Burada Code.org CSP Kurikulumunun 3-cü bölməsinin
+            bacarıqlığını nümayiş etdirmək üçün düşünmə təlimatları və təlimatları
+            tapa bilərsiniz. Vahid üçün öz düşüncələrinizi təqdim etdikdən sonra həmyaşıdların
+            araşdırma maddələri bu səhifənin altında mövcuddur. '
+          title: CSP Bölmə 3 Dərin Öyrənmə
         csp3-dlp-18:
           lesson_groups:
             content:
@@ -2709,6 +3660,10 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        csp3-recovery:
+          title: 'CSP3 dəniz altında tələbə işinin bərpası '
+        csp3-reovery:
+          title: 'csp3 dəniz altında tələbə işinin bərpası '
         csp3-research-mxghyt:
           description: Bu bölmə zəngin, interaktiv proqramlar yaratmaq qabiliyyətini
             açan kompüter proqramlaşdırmasının əsas konsepsiyalarını təqdim edir.
@@ -2738,6 +3693,9 @@ az:
             cspAssessment:
               display_name: Fəsilin qiymətləndirilməsi
         csp3-support:
+          description: Bu, 3-cü bölmənin tədrisi üçün hazırlaşan CSP müəllimləri üçün
+            Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur.
+          description_short: CSP 3-cü bölmə üçün müəllim peşəkar öyrənmə kursu
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2745,6 +3703,9 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          student_description: Bu, 3-cü bölmənin tədrisi üçün hazırlaşan CSP müəllimləri
+            üçün Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur.
+          title: onlayn
         csp3-virtual:
           description: Bu bölmə zəngin, interaktiv proqramlar yaratmaq qabiliyyətini
             açan kompüter proqramlaşdırmasının əsas konsepsiyalarını təqdim edir.
@@ -2835,6 +3796,7 @@ az:
               display_name: Layihə
             csp_variables:
               display_name: dəyişənlər
+          title: Dəyişənlər, Şərtlər və Funksiyalar
         csp4-2023:
           lesson_groups:
             csp_conditionals:
@@ -2846,6 +3808,9 @@ az:
             csp_variables:
               display_name: dəyişənlər
         csp4-dlp:
+          description_audience: Təlimdə CS Prinsipləri Fasilitatorları
+          description_short: 'Təlimdə CSP fasilitatorları üçün daha dərin öyrənmə
+            materialları '
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2890,6 +3855,9 @@ az:
             csp_variables:
               display_name: dəyişənlər
         csp4-support:
+          description: Bu, 4-cü bölmənin tədrisi üçün hazırlaşan CSP müəllimləri üçün
+            Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur.
+          description_short: CSP bölməsi 4 üçün müəllim peşəkar öyrənmə kursu
           lesson_groups:
             content:
               display_name: Məzmun
@@ -2897,6 +3865,9 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          student_description: Bu, 4-cü bölmənin tədrisi üçün hazırlaşan CSP müəllimləri
+            üçün Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur.
+          title: Bölmə 4 Onlayn Peşəkar Öyrənmə Kursu
         csp5-2017:
           description: Bu bölmə zəngin, interaktiv proqramlar yaratmaq qabiliyyətini
             açan kompüter proqramlaşdırmasının əsas konsepsiyalarının tətbiqini davam
@@ -3000,6 +3971,7 @@ az:
               display_name: Keçidlər
             lessonGroup-5:
               display_name: Kursdan Sonra Sorğusu
+          title: Siyahılar, Döngələr və Keçidlər
         csp5-2023:
           lesson_groups:
             csp_lists:
@@ -3013,6 +3985,9 @@ az:
             lessonGroup-5:
               display_name: Kursdan Sonra Sorğusu
         csp5-dlp:
+          description_audience: Təlimdə CS Prinsipləri Fasilitatorları
+          description_short: 'Təlimdə CSP fasilitatorları üçün daha dərin öyrənmə
+            materialları '
           lesson_groups:
             content:
               display_name: Məzmun
@@ -3049,6 +4024,8 @@ az:
             csp_traversals:
               display_name: Keçidlər
         csp5-support:
+          description: dəstəkləmək
+          description_short: Bölmə
           lesson_groups:
             content:
               display_name: Məzmun
@@ -3056,6 +4033,10 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          name: dəstək
+          student_description: Bu, 5-ci bölməni tədris etməyə hazırlaşan CSP müəllimləri
+            üçün Peşəkar Öyrənmə Kursunda təşkil edilmiş onlayn dəstəklər toplusudur.
+          title: Bölmə 5 Onlayn Peşəkar Öyrənmə Kursu
         csp5-virtual-part2:
           lesson_groups:
             csp5_1:
@@ -3074,6 +4055,8 @@ az:
           lesson_groups:
             cspSurvey2020:
               display_name: Kursdan Sonra Sorğusu
+            csp_unit6_2020:
+              display_name: Alqoritmlər
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -3082,6 +4065,8 @@ az:
               display_name: Kursdan Sonra Sorğusu
         csp6-2022:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: Alqoritmlər
             lessonGroup-2:
               display_name: Kursdan Sonra Sorğusu
         csp6-2023:
@@ -3112,6 +4097,13 @@ az:
               display_name: Layihə
             csp_variables:
               display_name: dəyişənlər
+          title: Alqoritmlər
+        csp6-support:
+          description: 'TEZLIKLƏ: tezliklə bu səhifə AP imtahanına hazırlaşan müəllimlər
+            üçün bir sıra mənbələrə ev sahibliyi edəcək'
+          student_description: 'TEZLIKLƏ: tezliklə bu səhifə AP imtahanına hazırlaşan
+            müəllimlər üçün bir sıra mənbələrə ev sahibliyi edəcək'
+          title: AP Hazırlığı və Müəllimlər üçün Resurslar
         csp7-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3186,6 +4178,7 @@ az:
               display_name: 'Mövzu 9: Data'
             lessonGroup-2:
               display_name: Sorğu
+          title: Məlumat
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -3226,6 +4219,7 @@ az:
             CSP praktik imtahanından istifadə edəsiniz.  [Bu 55-sual çox seçim qiymətləndirmə
             kompüter elminin 7 böyük ideyası üzrə sualları əhatə edir: Yaradıcılıq,
             Abstraction, Data, Alqoritmlər, Proqramlaşdırma, İnternet və Qlobal təsir]'
+          title: "[Deprecated] CS Prinsipləri Kulminasiya Qiymətləndirmə"
         cspexam1-mWU7ilDYM9:
           description: 'Bu 25 sual bir çox seçim qiymətləndirmə kompüter elmlərinin
             7 böyük ideyası üzrə sualları əhatə edir: Yaradıcılıq, Abstraksiya, Data,
@@ -3236,17 +4230,35 @@ az:
           student_description: 'Bu 25 sual bir çox seçim qiymətləndirmə kompüter elmlərinin
             7 böyük ideyası üzrə sualları əhatə edir: Yaradıcılıq, Abstraksiya, Data,
             Alqoritmlər, Proqramlaşdırma, Internet və Global Təsir.'
+          title: CS Prinsipləri Kulminasiya Qiymətləndirmə
+        cspexam2-AKwgAh1ac5:
+          description: 'Bu 25 sual bir çox seçim qiymətləndirmə kompüter elmlərinin
+            7 böyük ideyası üzrə sualları əhatə edir: Yaradıcılıq, Abstraksiya, Data,
+            Alqoritmlər, Proqramlaşdırma, Internet və Global Təsir.'
+          description_short: Bu çoxsaylı seçim qiymətləndirməsi kompüter elminin 7
+            böyük ideyası üzrə sualları əhatə edir. Bu, iki hissəli 50 sual imtahanının
+            2-ci hissəsidir.
+          student_description: 'Bu 25 sual bir çox seçim qiymətləndirmə kompüter elmlərinin
+            7 böyük ideyası üzrə sualları əhatə edir: Yaradıcılıq, Abstraksiya, Data,
+            Alqoritmlər, Proqramlaşdırma, Internet və Global Təsir.'
+          title: CS Prinsipləri Kulminasiya Qiymətləndirmə - Hissə 2
         cspfacilitator:
           description: PD seminarı üçün onlayn səviyyələr
           description_short: PD seminarı üçün onlayn səviyyələr
           student_description: PD seminarı üçün onlayn səviyyələr
           title: CS Prinsipləri Fasilitator Seminarı
         cspnovice:
+          description: Refleksiya
+          description_audience: CSP Təcrübəsiz Fasilitatorlar
+          description_short: TeacherCon-da təcrübəsiz fasilitatorlar üçün düşünmə
+            sualları.
           lesson_groups:
             content:
               display_name: Məzmun
             required:
               display_name: Yekun
+          student_description: Refleksiya
+          title: CS Prinsipləri TeacherCon Təcrübəsiz Fasilitator Refleksiyası
         cspoptional:
           description: Bütün CS Prinsipləri bölmələri üzrə əlavə dərslər və məzmun
             burada verilmişdir
@@ -3264,6 +4276,7 @@ az:
               display_name: Layihə
             csp_variables:
               display_name: dəyişənlər
+          title: CSP Oyun Meydançası
         csppostap-2017:
           description: Tətbiq Laboratoriyasında proqramlarınızda məlumat toplamağa
             və istifadə etməyə imkan verən bir sıra alətlər var. Aşağıdakı material
@@ -3294,6 +4307,17 @@ az:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+        csppostsurvey:
+          description: 'Code.org CS Prinsipləri Kurs Sonrası Sorğusuna xoş gəlmisiniz.
+            Bu sorğunun tamamlanması təxminən 10 dəqiqə çəkir. Cavablarınız şəxsi
+            və anonimdir.  '
+          description_audience: CSP Tələbələri
+          description_short: CSP Tələbə Kursundan Sonrakı Sorğu
+          title: CSP Tələbə Kursundan Sonrakı Sorğu
+        csppostsurvey-staging:
+          description: "/s/csp-post-survey saytına köçürülmüşdür. 05.05.17-dən sonra
+            Destory"
+          title: "[Deprecated] CSP sonrakı tədqiqat sahəsi"
         cspunit1:
           description: Bu bölmə rəqəmsal məlumatın kompüterlərdə təqdim edilməsi və
             insanlar və hesablama cihazları arasında ötürülməsi zərurətindən yaranan
@@ -3328,6 +4352,7 @@ az:
             ondan necə istifadə etdiyimizin müzakirəsi
           student_description: internet simulyatoru ilə tanışlıq və interneti öyrətmək
             üçün ondan necə istifadə etdiyimizin müzakirəsi
+          title: netsim tapşırığının tamamlanması
         cspunit2:
           description: Bu bölmədə tələbələr Bölmə 1-də bitləri göndərərkən öyrənilən
             anlayışları inkişaf etdirməklə internet və onun necə fəaliyyət göstərməsi
@@ -3341,6 +4366,7 @@ az:
             göstərməsi haqqında anlayışlarını genişləndirirlər. Bu bölmə pilot versiyadır
             və artıq dəstəklənmir və yenilənmir. Siz yeni vahidləri code.org/educate/csp
             ünvanında tapa bilərsiniz.
+          title: "(köhnə) CS Prinsipləri Bölmə 2 - İnternet"
         cspunit3:
           description: Bu bölmə zəngin, interaktiv proqramlar yaratmaq qabiliyyətini
             açan kompüter proqramlaşdırmasının əsas konsepsiyalarını təqdim edir.
@@ -3461,6 +4487,8 @@ az:
           student_description: Genişləndirilmiş layihə ideyaları ilə ilk saatdan kənara
             çıxın.
           title: Rəqs etməyə davam edin
+        dance-unplugged:
+          title: Sərbəst Rəqs Şənliyi fəaliyyəti
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -3468,17 +4496,36 @@ az:
             cspSurvey:
               display_name: Sorğu
         data-society-2023:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
           lesson_groups:
+            lessonGroup-3:
+              display_name: həll etmək
             lessonGroup-4:
               display_name: Sorğu
         design-process-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
             lessonGroup-4:
               display_name: Sorğu
+          student_description: rəy
+        devices-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Fəsil
+          student_description: aparat
         devices-2023:
           lesson_groups:
+            lessonGroup-4:
+              display_name: Fəsil
             lessonGroup-5:
               display_name: Sorğu
+          student_description: aparat
+        dlp-csd-mod4-2022:
+          title: məşğələ
         dlp19-csd-mod-fit:
           lesson_groups:
             content:
@@ -3556,14 +4603,19 @@ az:
               display_name: Mərhələ 1
             lessonGroup-3:
               display_name: Mərhələ 2
+        dlp21-overview:
+          name: icmal
         drafting:
           name: qaralama
         duino:
           description: Arduinos ilə tədris üçün bəzi vasitələrin sınaqdan keçirilməsi
           student_description: Arduinos ilə tədris üçün bəzi vasitələrin sınaqdan
             keçirilməsi
+          title: Arduino əşyaları ilə təcrübə
         e-f-ramp:
           lesson_groups:
+            csf_e_1:
+              display_name: E kursuna qədər yüksəliş (İsteğe bağlı)
             csf_e_2:
               display_name: Kursun E-nin məzmunu
             end_of_course_project:
@@ -3609,6 +4661,10 @@ az:
           lessons:
             lesson-1:
               name: Təcrübə Et
+        emmas-playground:
+          lessons:
+            lesson-1:
+              name: Emmanın əşyaları
         equity-pd:
           description: Code.org PD-də kapitalla bağlı müzakirəyə necə rəhbərlik etmək
             olar
@@ -3673,6 +4729,8 @@ az:
               display_name: Spraytlar
             csf_variables:
               display_name: dəyişənlər
+            csf_warmup:
+              display_name: isinmək
           title: Ekspress Kurs (2019)
         express-2020:
           description_audience: 'Yaşlar: 9-18'
@@ -3691,6 +4749,8 @@ az:
               display_name: Spraytlar
             csf_variables:
               display_name: dəyişənlər
+            csf_warmup:
+              display_name: isinmək
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
           title: Ekspress Kurs (2020)
@@ -3760,6 +4820,7 @@ az:
         fancygeometry-pilot:
           description_audience: 3-cü sinif, 4-cü sinif
         fit-test:
+          description_short: Təlim kursu
           lesson_groups:
             content:
               display_name: Məzmun
@@ -3777,6 +4838,7 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+          title: Seminar
         flappy:
           description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
             Qanadlı Kod dərsliyimizi sınayın!
@@ -3785,8 +4847,20 @@ az:
             Qanadlı Kod dərsliyimizi sınayın!
           title: Qanadlı Kod
         flappy-impact-study:
+          description: Öz oyununuzu 10 dəqiqədən az müddətdə yazmaq istəyirsiniz?
+            Flappy Code təlimatımızı sınayın! Bu versiyaya Kod Saatını təkmilləşdirməyə
+            davam etməyimizə kömək etmək üçün əvvəlcədən və sonrakı sorğular daxildir.
+            Sinifinizdən dərsin bitməsindən 10 dəqiqə əvvəl sonrakı sorğuya keçməsini
+            xahiş edin.
+          description_short: 'Öz Flappy oyununuzu 10 dəqiqədən az müddətdə yazın! '
+          student_description: Öz oyununuzu 10 dəqiqədən az müddətdə yazmaq istəyirsiniz?
+            Flappy Code təlimatımızı sınayın! Bu versiyaya Kod Saatını təkmilləşdirməyə
+            davam etməyimizə kömək etmək üçün əvvəlcədən və sonrakı sorğular daxildir.
+            Sinifinizdən dərsin bitməsindən 10 dəqiqə əvvəl sonrakı sorğuya keçməsini
+            xahiş edin.
           title: Sorğu ilə Flappy Kodu
         fmscsd3preview:
+          description_audience: Falmouth Orta Məktəbi (Mike Harvey)
           title: Oyun laboratoriyasında rəsm
         focus-on-coding-post-survey-2023:
           title: Kursdan Sonra Sorğusu
@@ -3814,6 +4888,11 @@ az:
             konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Fəsil
+          student_description: aparat
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3844,6 +4923,11 @@ az:
             konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn
             prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
             Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Fəsil
+          student_description: aparat
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3858,6 +4942,15 @@ az:
               display_name: Alternativ Dərslər
             lessonGroup-4:
               display_name: Sorğu
+        focus-on-data2:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+        focus-on-data2-2023:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: həll etmək
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3866,6 +4959,7 @@ az:
               display_name: 1-ci Fəsil
             lessonGroup-4:
               display_name: 2-ci Fəsil
+          student_description: cədvəlli
         focus-on-design-with-purpose-post-survey-2023:
           title: Kursdan Sonra Sorğusu
         focus-on-design-with-purpose1-2023:
@@ -3880,6 +4974,18 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+          student_description: rəy
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Fəsil
+          student_description: aparat
         focus-on-design-with-purpose4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3896,6 +5002,17 @@ az:
               display_name: Alternativ Dərslər
             lessonGroup-5:
               display_name: Sorğu
+        focus-on-hardware2-2023:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: həll etmək
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Fəsil
+          student_description: aparat
         focus-on-hardware3b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3910,6 +5027,16 @@ az:
               display_name: Alternativ Dərslər
             lessonGroup-4:
               display_name: Sorğu
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+          student_description: rəy
+        focus-on-impact-in-society3-2023:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3918,6 +5045,7 @@ az:
               display_name: Proqram laboratoriyasına giriş
             lessonGroup-4:
               display_name: 2-ci Fəsil
+          student_description: cədvəlli
         frequency_analysis:
           description: Daxil edilmiş mətndəki hərf tezliklərini standart ingilis dili
             üçün gözlənilən tezliklərlə müqayisə etmək üçün Tezlik Analizi Vidcetindən
@@ -3945,6 +5073,13 @@ az:
           title: Anna və Elza ilə proqramlaşdır
         gamelab:
           title: Oyun labaratoriyası
+        gamelab-hackathon:
+          description: Game Laboratoriyasında hər şeyi sınamaq üçün bir yer
+          description_short: Gamelab Hakatonu
+          student_description: Game Laboratoriyasında hər şeyi sınamaq üçün bir yer
+          title: Gamelab Hakatonu
+        glj-behavior-test:
+          title: Oyun Laboratoriyası Jr. Test - Davranış
         grade1:
           description: CSF 2.0 üçün Planlaşdırma Skripti
           description_audience: 5-18 yaş
@@ -4026,6 +5161,12 @@ az:
             Kod ilə Minecraft-a səyahət.
           title: 'Minecraft: Qəhrəmanın səyahəti'
         hoc-encryption:
+          description: Bu dərsdə tələbələr şifrələmə ehtiyacı və gizli mesajları çözmək
+            (və ya qırmaq) üçün sadə üsullarla tanış olurlar.
+          description_short: Bu dərsdə tələbələr şifrələmə ehtiyacı və gizli mesajları
+            çözmək (və ya qırmaq) üçün sadə üsullarla tanış olurlar.
+          student_description: Bu dərsdə tələbələr şifrələmə ehtiyacı və gizli mesajları
+            çözmək (və ya qırmaq) üçün sadə üsullarla tanış olurlar.
           title: 'Kodlama Saatı : Sadə Şifrələmə'
         hoc-impact-study:
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
@@ -4042,7 +5183,11 @@ az:
         how-ai-works-2023:
           title: Süni İntelekt (Sİ) necə işləyir?
         iceage:
+          description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+          description_short: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
           name: buz dövrü
+          student_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
+          title: Buz dövrü oyun laboratoriyası
         infinity:
           description: Disney Infinity personajlarının oynadığı hekayə və ya oyun
             yaratmaq üçün Play Lab-dan istifadə edin.
@@ -4113,11 +5258,13 @@ az:
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə
             bu Maynkraft dünyasında bir macəra yaşadın.
-          title: Maynkraft Kod Saatı
+          title: Minecraft Macəraçısı
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
               display_name: Verilənlər və Nəticələr
+            lessonGroup-4:
+              display_name: Fəsil
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4152,6 +5299,8 @@ az:
               display_name: Spraytlar
             lessonGroup-3:
               display_name: Şərti ifadələr
+            lessonGroup-4:
+              display_name: Məlumatlar və Simulyasiyalar
             lessonGroup-5:
               display_name: dəyişənlər
             lessonGroup-7:
@@ -4165,6 +5314,7 @@ az:
               display_name: Spraytlar
         nevada-standards-aligned-first-grade-2023:
           description_audience: 'Yaşlar: 5-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             lessonGroup-2:
               display_name: Rəqəmsal vətəndaşlıq
@@ -4188,6 +5338,8 @@ az:
               display_name: Iç-içə dövrlər
             lessonGroup-4:
               display_name: Funksiyalar
+            lessonGroup-5:
+              display_name: Məlumatlar və Simulyasiyalar
             lessonGroup-6:
               display_name: Kurs layihələrinin sonu!
         nevada-standards-aligned-kindergarten-2023:
@@ -4232,6 +5384,8 @@ az:
               display_name: Kurs layihələrinin sonu!
         new-e:
           lesson_groups:
+            csf_e_1:
+              display_name: E kursuna qədər yüksəliş (İsteğe bağlı)
             csf_e_2:
               display_name: Kursun E-nin məzmunu
             end_of_course_project:
@@ -4245,17 +5399,24 @@ az:
               display_name: Məzmun
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
+          title: İfadə etmək
         new-f:
           lesson_groups:
+            csf_f_1:
+              display_name: F kursuna qədər yüksəliş (İsteğe bağlı)
             csf_f_2:
               display_name: Kursun F-nin məzmunu
             end_of_course_project:
               display_name: Kurs layihələrinin sonu!
           title: F üçün yeni skript
+        new-stages-sept-2017:
+          title: mərhələ
         novice-view:
           description: na
+          description_audience: Brook, day, mal
           description_short: na
           student_description: na
+          title: təcrübəsiz cavablara baxın
         oceans:
           description: Süni intellekt və maşın öyrənməsinin dünya problemlərini həll
             etmək üçün necə istifadə oluna biləcəyini öyrənin.
@@ -4274,6 +5435,18 @@ az:
           student_description: Müxtəlif rəqəm əsaslı odometrləri idarə etmək üçün
             Odometer vidcetindən istifadə edin. Binar, Ondalık və Hexadecimal kompüter
             elmində ən çox görülən say sistemləridir.
+          title: Odometr Widget
+        outbreak:
+          name: yayılma
+        outbreak-csc:
+          title: Yayılma
+        outbreak-module:
+          title: Yayılma
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: aparat
         pixelation:
           description: Bit və baytlarla şəkillər yaradın.
           description_short: Bit və baytlarla şəkillər yaradın.
@@ -4305,6 +5478,8 @@ az:
             lessonGroup-2:
               display_name: Gün 4
           lessons:
+            lesson-10:
+              name: Fərqləndirmə
             lesson-12:
               name: Yekun
           title: Gün 4
@@ -4321,11 +5496,14 @@ az:
           title: Kompüter Elmləri və Şeir
         poetry-2021:
           title: Kompüter Elmləri və Şeir
+        poster:
+          name: Afişa
         pre-express-2017:
           assignment_family_title: Öncədən Oxucu Ekspres Kursu
           description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin.
             Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           name: öncə-express-2017
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını
             öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
@@ -4336,11 +5514,13 @@ az:
           description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin.
             Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını
             öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
             yaradın.
         pre-express-2019:
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_events:
               display_name: Tədbirlər
@@ -4350,6 +5530,7 @@ az:
               display_name: Ardıcıllıq qurmaq
         pre-express-2020:
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_events:
               display_name: Tədbirlər
@@ -4359,6 +5540,7 @@ az:
               display_name: Ardıcıllıq qurmaq
         pre-express-2021:
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_events:
               display_name: Tədbirlər
@@ -4368,6 +5550,7 @@ az:
               display_name: Ardıcıllıq qurmaq
         pre-express-2022:
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_events:
               display_name: Tədbirlər
@@ -4377,6 +5560,7 @@ az:
               display_name: Ardıcıllıq qurmaq
         pre-express-2023:
           description_audience: 'Yaşlar: 4-8'
+          description_short: qabaqcadan oxuyanlar
           lesson_groups:
             csf_events:
               display_name: Tədbirlər
@@ -4392,24 +5576,35 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+        public-key-cryptography:
+          title: İctimai Açar Kriptoqrafiya Widgetləri
+        rbo-reference:
+          description: rbo-istinad
+          description_short: rbo-istinad
+          student_description: rbo-istinad
+          title: rbo-istinad
         science-PD2:
           description: Faza 2 Onlayn Qarışıq Yay Tədrisi
           description_short: Faza 2 Onlayn Qarışıq Yay Tədrisi
           student_description: Faza 2 Onlayn Qarışıq Yay Tədrisi
+          title: Elmdə Kompüter Elmləri PD Pre-Faza 3B
         sciencePD:
           description: 'Mərhələ 1 : Onlayn təqdimetmə'
           description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          title: Elmdə Kompüter Elmləri PD
         sciencePD-NexTech:
           description: 'Mərhələ 1 : Onlayn təqdimetmə'
           description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           logo_image: nextech\_logo.png
           student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          title: Elmdə Kompüter Elmləri PD
         sciencePD-iZone:
           description: 'Mərhələ 1 : Onlayn təqdimetmə'
           description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           logo_image: izone\_logo.png
           student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          title: Elmdə Kompüter Elmləri PD
         sciencePD1:
           description: Layihə GUTS ilə əməkdaşlıqda
           description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
@@ -4424,10 +5619,12 @@ az:
           description: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
           description_short: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
           student_description: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
+          title: Elmdə Kompüter Elmləri PD Pre-Faza 3B
         sciencePD2b-iZone:
           description: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
           description_short: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
           student_description: 'Faza 2 Onlayn: Qarışıq Yay Təhsili'
+          title: Elmdə Kompüter Elmləri PD Pre-Faza 3B
         sciencePD3:
           description: Tədris İl Dəstəyi - Semestr 1
           description_short: Tədris İl Dəstəyi - Semestr 1
@@ -4438,6 +5635,15 @@ az:
           description_short: 'Mərhələ 3: 1-dən əvvəl Akademik İlin İnkişafı'
           student_description: 'Mərhələ 3: Akademik İlin İnkişafı (Birinci Seqment)'
           title: Elmdə CS PD3 1-ci şəxsdən əvvəl
+        sciencepd4:
+          description: əks etdirmək
+          description_short: əks etdirmək
+          student_description: əks etdirmək
+          title: Elm
+        sciencepd5:
+          description: 'Mərhələ 3: Semestr 2 seminarına hazırlaşın'
+          description_short: 'Mərhələ 3: Semestr 2 seminarına hazırlaşın'
+          student_description: 'Mərhələ 3: Semestr 2 seminarına hazırlaşın'
         self-paced-pl-csc-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4486,6 +5692,12 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 7 -ci hissənin tədrisinə hazırlıq
+        self-paced-pl-csp4-2022:
+          description: cüt
+          student_description: cüt
+        self-paced-pl-csp4-2023:
+          description: cüt
+          student_description: cüt
         soccer:
           description: Futbol oyunu düzəlt
           description_short: Futbol oyunu düzəlt
@@ -4521,6 +5733,10 @@ az:
           student_description: Addım təlimi
           title: addım
         teachercon:
+          description: Bunu TeacherCon zamanı sessiyalar üçün dəstək və materiallar
+            çatdırmaq üçün istifadə edəcəyik
+          description_short: Bunu TeacherCon zamanı sessiyalar üçün dəstək və materiallar
+            çatdırmaq üçün istifadə edəcəyik
           lesson_groups:
             content:
               display_name: Məzmun
@@ -4528,6 +5744,8 @@ az:
               display_name: Öyrədici proqramlar
             required:
               display_name: Yekun
+          student_description: Bunu TeacherCon zamanı sessiyalar üçün dəstək və materiallar
+            çatdırmaq üçün istifadə edəcəyik
           title: TeacherCon dəstəkləyir
         tess-testing-problem-solving-2023:
           lesson_groups:
@@ -4565,11 +5783,14 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+          title: Veb İnkişafı
         text-compression:
           description: Təkrarlanan nümunələri müəyyən edərək mətni qısaldın
           description_short: Təkrarlanan nümunələri müəyyən edərək mətni qısaldın
           student_description: Təkrarlanan nümunələri müəyyən edərək mətni qısaldın
           title: Mətnin sıxılması
+        textbook:
+          title: CSF Dərslik Səhifələri
         time4cs-control-unit-1:
           lesson_groups:
             csf_conditionals:
@@ -4584,6 +5805,8 @@ az:
               display_name: Ardıcıllıq qurmaq
             csf_sprites:
               display_name: Spraytlar
+            ramp_up:
+              display_name: Yüksəlmək
         time4cs-control-unit-2:
           lesson_groups:
             csf_conditionals:
@@ -4610,11 +5833,15 @@ az:
               display_name: Ardıcıllıq qurmaq
             csf_sprites:
               display_name: Spraytlar
+            ramp_up:
+              display_name: Yüksəlmək
         time4csdemo:
           description_audience: 4-cü sinif
           lesson_groups:
             csf_sprites:
               display_name: Spraytlar
+            ramp_up:
+              display_name: Yüksəlmək
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -4631,11 +5858,16 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        unembedded:
+          title: Daxili olmayan Səviyyələr
+        unembeddedlevels:
+          title: Daxili olmayan Səviyyələr
         usability:
           description: faydalılıq testi üçün 4 kurs kursu seçimi.
           student_description: faydalılıq testi üçün 4 kurs kursu seçimi.
           title: İstifadəyə Yararlılıq Testi
         valentine:
+          description_short: Cütlüklər yaratmaqla əylənin
           title: Valentine Xüsusi
         vigenere:
           description: Vigenere Şifrə ilə mesajların şifrələnməsini və deşifrəsini
@@ -4651,6 +5883,16 @@ az:
               display_name: Məzmun
             csd3_2:
               display_name: '2-ci fəsil: Oyunlar yaratmaq'
+        virtual-pl-csa-summer-2024-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day2:
+          title: Gün 2
+        virtual-pl-csa-summer-day3:
+          title: Gün 3
+        virtual-pl-csa-summer-day4:
+          title: Gün 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4670,6 +5912,8 @@ az:
           title: Gün 3
         virtual-pl-csd-summer-day4:
           lessons:
+            lesson-12:
+              name: Fərqləndirmə
             lesson-13:
               name: Yekun
           title: Gün 4
@@ -4677,6 +5921,14 @@ az:
           lessons:
             lesson-3:
               name: Yoxlama
+        virtual-pl-csp-summer-day1:
+          title: Gün 1
+        virtual-pl-csp-summer-day2:
+          title: Gün 2
+        virtual-pl-csp-summer-day3:
+          title: Gün 3
+        virtual-pl-csp-summer-day4:
+          title: Gün 4
         vpl-csa-2023-m1:
           title: Modul 1
         vpl-csa-2023-m2:
@@ -4728,9 +5980,51 @@ az:
         vpl-csd-2023-m8:
           title: Modul 8
         vpl-csd-ci-7:
+          description: Süni İntellekt (S.I)
           lesson_groups:
             lessonGroup-2:
               display_name: AI və Maşın Öyrənməsinin tədrisi
+          student_description: Süni İntellekt (S.I)
+          title: Hazırlamaq
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Bağlanma
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Bağlanma
+        vpl-csd3-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Bağlanma
+        vpl-csd4-ayw-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Bağlanma
+        vpl-csd5-ayw-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Bağlanma
+        vpl-csd6-ayw-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Bağlanma
+        vpl-csd6-ci-pilot-2022:
+          description: Modul
+          student_description: Modul
+        vpl-csd7-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Bağlanma
+        vpl-csd7-ci-pilot-2022:
+          description: Süni İntellekt (S.I)
+          student_description: Süni İntellekt (S.I)
+          title: Hazırlamaq
+        vpl-csd8-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Bağlanma
         vpl-csp-2023-m1:
           title: Modul 1
         vpl-csp-2023-m2:
@@ -4754,4 +6048,9 @@ az:
             lessonGroup-4:
               display_name: Sorğu
         workshop-gamelab:
+          description_audience: məşğələ
+          description_short: mərhələ
           title: Oyun Laboratoriyası Emalatxanası
+        workshop-maker:
+          description: anlayışlar
+          student_description: anlayışlar

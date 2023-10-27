@@ -35,6 +35,10 @@ lv:
   africa_campaign_date_full: 1. oktobris - 18. decembris
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 2022. gada 1. oktobris - 2022. gada 18. decembris
+  hoc2023_header: Radošums ar mākslīgā intelekta palīdzību
+  hoc2023_social_creativity_with_ai_title: Kodēšanas stunda - Ko jūs izveidojat?
+  hoc2023_social_creativity_with_ai_desc: Izmantojiet datorzinātnes, lai izpētītu
+    un uzzinātu par AI!
   hoc2022_header: Izpētīt, spēlēt, izveidot!
   social_hoc2022_explore_play_create: Izmantojiet datorzinātnes, lai izpētītu, spēlētu
     un radītu!
@@ -178,6 +182,32 @@ lv:
   curriculum_launch_2023_desc: CSC, CSP, CSD un citu atjauninājumi, kā arī jauns mācību
     plānu katalogs un pārveidota mācību lapa, lai palīdzētu jums to visu atrast!
   in_partnership_with: Sadarbībā ar
+  shop_code_dot_org_heading: Veikals Code.org
+  shop_code_dot_org_desc: Atbalstīt mūsu darbu un valkāt kustību ar lepnumu. Mūsu
+    cepures ir nēsājušas arī prezidents Obama un slavenības.
+  spread_the_word_heading: Izplatiet vārdu
+  spread_the_word_desc: Pastiprināt mūsu ietekmi, koplietojot Code.org ar savu tīklu.
+    Sākot ar sociālajiem plašsaziņas līdzekļiem līdz e-pasta atjauninājumiem, uzziniet,
+    kā varat palīdzēt mums sasniegt vairāk pedagogu, studentu un advokātu.
+  follow_us_heading: Sekojiet mums sociālajos tīklos
+  follow_us_desc: Palieciet līdzi mums sociālajos plašsaziņas līdzekļos un dalieties
+    ar mūsu ziņām ar savu tīklu, lai informētu un palīdzētu veicināt informētību.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablete
+  device_laptop: Klēpjdators
+  device_desktop_computer: Galddators
+  device_mobile_device: Mobilā ierīce
+  subscribe_to_emails_heading: Parakstīties uz e-pastiem
+  subscribe_to_emails_desc: Lasiet par to, kas notiek Code.org un datorzinātnes izglītībā,
+    izmantojot ceturkšņa atjauninājumus, izmantojot mūsu adresātu sarakstu.
+  subscribe_to_emails_intl: Abonēt starptautiskos atjauninājumus
+  promote_code_dot_org_heading: Veicināt Code.org
+  promote_code_dot_org_desc: Veicināt datorzinātnes savā reģionā, izmantojot statistiku,
+    citātus un videoklipus.
   afe_partnership_logo_alt: Amazon Future Engineer logo
   afe_partnership_thanks_desc: Amazon Future Engineer ir visaptveroša bērnu karjeras
     programma, kuras mērķis ir iedvesmot, izglītot un apmācīt maznodrošinātus un citus
@@ -196,19 +226,48 @@ lv:
   curricula_title_high: Vidusskolas mācību programma
   curricula_desc_high: Pārlūkojiet saistošus kursus un aktivitātes, kas aicina jūs
     un jūsu vidusskolas skolēnus iedziļināties datorzinātnēs.
+  for_administrators_heading: Administratoriem
+  for_administrators_desc: Pievienojieties tūkstošiem skolu, kas jau ir iekļautas
+    datorzinātnes savā mācību programmā.
+  for_parents_heading: Vecākiem
+  for_parents_desc: Jūs varat palīdzēt iedrošināt skolēnu skolu piedāvāt vai paplašināt
+    datorzinātņu izglītību.
+  for_educators_heading: Pedagogiem
+  for_educators_desc: Sāciet mācības jau šodien — bez datorzinātnes pieredzes — ar
+    mūsu profesionālajām mācību darbnīcām.
   students_label: Skolēni
   teachers_label: Skolotāji
+  educators_label: Pedagogi
+  companies_label: Uzņēmumi
+  districts_label: Rajoni
+  school_assemblies_label: Skolas asamblejas
+  parents_label: Vecāki
+  public_officials_label: Valsts amatpersonas
+  volunteers_label: brīvprātīgie
+  virtual_events_label: Virtuālie notikumi
   teacher_label_csf: CS pamati skolotājs
   teacher_label_csd: CS atklājumu skolotājs
   teacher_label_csp: CS principi skolotājs
   teacher_label_csc: CS Connections skolotājs
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Skolotāju forums
+  teacher_forum_desc: Apmeklējiet koda stundas skolotāju forumu, lai saņemtu padomus,
+    ieskatu un atbalstu no citiem pedagogiem.
   required_materials: 'Nepieciešamie materiāli:'
   optional_materials: 'Izvēles materiāli:'
-  call_to_action_explore_roles: Izpētiet atvērtās lomas
+  call_to_action_hold_an_event: Pasākuma turēšana
+  call_to_action_register_event: Reģistrējiet savu pasākumu
+  call_to_action_select_activity: Izvēlieties aktivitāti
+  call_to_action_start_activity: Sāciet darbību
+  call_to_action_get_certificates: Iegūstiet sertifikātus
+  call_to_action_go_beyond_hoc: Pārsniedziet koda stundu
+  call_to_action_view_promo_resources: Skatīt reklāmas resursus
   call_to_action_learn_more: Uzzināt vairāk
   call_to_action_watch_now: Skatīties tagad
   call_to_action_try_activity: Izmēģināt darbību
+  call_to_action_try_activities: Izmēģiniet darbības
+  call_to_action_explore_activities: Izpētiet aktivitātes
+  call_to_action_explore_ai: Izpētiet AI
   call_to_action_explore_unit: Izpētīt vienību
   call_to_action_explore_curriculum: Izpētīt mācību plānu
   call_to_action_explore_curriculum_options: Izpētīt mācību plāna opcijas
@@ -261,6 +320,7 @@ lv:
   call_to_action_find_self_paced_modules: Atrast pašregulējamu moduļu
   call_to_action_join_teacher_forums: Pievienojies skolotāju forumiem
   call_to_action_explore_teacher_forums: Izpētiet skolotāju forumus
+  call_to_action_explore_teacher_forum: Izpētiet skolotāju forumu
   call_to_action_explore_career_resources: Izpētiet karjeras resursus
   call_to_action_watch_videos: Skatīties videoklipus
   call_to_action_download_posters: Lejupielādēt plakātus
@@ -277,11 +337,32 @@ lv:
   call_to_action_notify_available: Informēt mani, kad pieejams
   call_to_action_register_early_access: Reģistrējieties agrīnai piekļuvei
   call_to_action_open_positions: Skatīt atvērtās pozīcijas
+  call_to_action_explore_roles: Izpētiet atvērtās lomas
   call_to_action_get_guide: Iegūt ceļvedi
   call_to_action_donate_to_cdo: Ziedot Code.org
   call_to_action_start_fundraiser: Sāciet līdzekļu vākšanas līdzekli
   call_to_action_view_donation_policy: Skatīt ziedošanas politiku
   call_to_action_view_donate_bitpay: Ziedot ar BitPay
+  call_to_action_make_a_donation: Veikt ziedojumu
+  call_to_action_other_ways_to_give: Citi veidi, kā dot
+  call_to_action_become_partner_usa: Kļūsti par ASV partneri
+  call_to_action_become_partner_intl: Kļūsti par starptautisku partneri
+  call_to_action_become_a_volunteer: Kļūsti par brīvprātīgo
+  call_to_action_start_translating: Sākt tulkot
+  call_to_action_learn_about_advocacy: Uzziniet par mūsu aizstāvību
+  call_to_action_visit_store: Apmeklējiet veikalu
+  call_to_action_view_faqs: Skatīt vairāk Bieži uzdotie jautājumi
+  aria_label_call_to_action_hoc_how_to_educators: Skatiet instrukciju rokasgrāmatu
+    pedagogiem
+  aria_label_call_to_action_hoc_how_to_companies: Skatiet rokasgrāmatu uzņēmumiem
+  aria_label_call_to_action_hoc_how_to_districts: Skatiet ceļvedi rajoniem
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Skatiet skolas asambleju
+    rokasgrāmatu
+  aria_label_call_to_action_hoc_how_to_parents: Skatiet vecāku rokasgrāmatu
+  aria_label_call_to_action_hoc_how_to_public_officials: Skatiet norādījumus valsts
+    amatpersonām
+  aria_label_call_to_action_hoc_how_to_volunteers: Skatiet brīvprātīgo rokasgrāmatu
+  aria_label_call_to_action_hoc_how_to_virtual_events: Skatiet virtuālo notikumu rokasgrāmatu
   aria_label_call_to_action_afe: Uzziniet vairāk par Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Sākt mācību datorzinātnes pamati profesionālās
     apmācības programmu
@@ -621,6 +702,7 @@ lv:
   heading_these_lessons_will: 'Šīs nodarbības:'
   heading_explore_curriculum_catalog: Izpētiet visus mūsu kursus Curriculum Catalog
   heading_csa_ai: Vai meklējat lietas, ko darīt pēc AP® eksāmena?
+  heading_bring_cs_to_students: Dodiet datorzinātnes studentiem
   professional_learning_section_desc: Saņemiet nepieciešamo atbalstu, kad sagatavojat
     mācīt. Skolotāji to mīl, vairāk nekā 90% ierindojot to par labāko profesionālo
     attīstību jebkad!
@@ -890,6 +972,7 @@ lv:
     rīku novērtēšanu un izmantošanu un AI piesaisti studentu novērtēšanai. Ar bagātīgu
     teoriju, praktiskiem piemēriem un resursiem, tā mērķis ir dot pedagogiem iespēju
     orientēties mākslīgā intelekta ainavā un uzlabot skolēnu mācīšanās pieredzi.
+  ai_pl_101_resources_5: Rokasgrāmata atbildīgas pieejas AI nodrošināšanai
   ai_pl_101_video_desc_6: 'Uzziniet vairāk par jauno tehnoloģiju, kas rada lielas
     AI izmaiņas, tostarp divi jauni videoklipi par Large Language Modeļu (piemēram,
     ChatGPT) un Generative AI. Uzklausiet, kā šīs jaunās tehnoloģijas darbojas tieši
@@ -900,6 +983,8 @@ lv:
     tiem, kas vienkārši iegremdē pirkstus, kā arī uzlabotus rīkus tiem, kas vēlas
     palielināt savu potenciālu.
   ai_pl_101_resources_3: AI piedāvā skolēnu mācību pārveidošanu
+  ai_pl_101_resources_section_title: Vairāk veidu, kā uzzināt par AI
+  ai_pl_101_resources_guide: 'Pavadonis ceļvedis:'
   how_ai_works_hero_heading: Kā darbojas mākslīgā intelekta darbība
   how_ai_works_hero_desc: Ieduriet AI pasaulē ar “Kā AI darbojas”, mūsu video sēriju
     un pavadošās nodarbības!
@@ -1724,6 +1809,31 @@ lv:
   donate_tabs_bitpay_desc: Apskāviens nākotni dod ar kriptonauda. Izmantojot BitPay,
     jūsu digitālā valūta var tieši atbalstīt Code.org centienus paplašināt datorzinātņu
     izglītību.
+  help_page_top_heading: Kā jūs varat palīdzēt
+  help_page_top_desc: Atbalstīt mūsu misiju, lai datorzinātnes būtu pieejamas katram
+    bērnam, visur. Jūsu centieni palīdz mums iedvesmot nākotnes novatorus un mazināt
+    tehnoloģiju izglītības plaisu.
+  help_page_top_subhead: Veikt ziedojumu Code.org
+  help_page_top_desc_02: Mēs strādājam, lai ikvienam skolēnam dotu iespēju apgūt datorzinātnes
+    — gan tiešsaistē, gan skolās, kur mēs izveidojam pastāvīgus kursus un apmācām
+    skolotājus. Par katru dolāru, kuru jūs ziedojat, viens bērns tiek iepazīstināts
+    ar datorzinātnēm.
+  help_page_partners_heading: Kļūsti par partneri
+  help_page_partners_desc: Code.org sadarbojas ar citām bezpeļņas organizācijām kā
+    partneri, lai palīdzētu izplatīt datorzinātnes vietējā, ilgtspējīgā veidā. Uzziniet
+    vairāk par mūsu programmu.
+  help_page_volunteer_heading: Brīvprātīgais klasē
+  help_page_volunteer_desc: Brīvprātīgais mācīt Programmēšanas stundu vai būt viesrunātājs
+    vietējā klasē. Reģistrējieties, lai uzzinātu par iespējām pie jums.
+  help_page_translate_heading: Palīdziet mums tulkot
+  help_page_translate_desc: Brīvprātīgie ir tulkojuši mūsu konsultācijas vairāk nekā
+    45 valodās. Palīdziet mums turpināt paplašināt mūsu konsultācijas studentiem visā
+    pasaulē!
+  help_page_speak_for_cs_heading: Runāt par datorzinātņu izglītību
+  help_page_speak_for_cs_desc: Uzziniet vairāk par Code.org aizstāvības darbu visā
+    ASV un desmit politikas mēs iesakām valstis pieņemt, lai padarītu datorzinātnes
+    pamatus visiem studentiem. Turklāt uzziniet, kā jūs varat vadīt izmaiņas savā
+    valstī.
   hoc_live: Live kodēšanas stunda
   hoc_live_sign_up_title: Reģistrējieties Programmstundas tiešraidē
   hoc_live_learn_title: Mācīties ar programēšanas stundu tiešraidē
@@ -13116,6 +13226,124 @@ lv:
   all: Visi
   dont_know: Es nezinu
   language_label: Valoda
+  before_hoc: Pirms koda stundas
+  day_of_hoc: Koda stundas diena
+  after_hoc: Pēc koda stundas
+  step_01: 1. solis
+  step_02: 2. solis
+  step_03: 3. solis
+  step_04: 4. solis
+  step_05: 5. solis
+  step_06: 6. solis
+  step_07: 7. solis
+  step_08: 8. solis
+  hoc_how_to_top_heading: Jūsu ceļvedis par koda stundu
+  hoc_how_to_top_desc: Pielāgoti ceļveži labākajai koda stundas pieredzei.
+  hoc_how_to_top_view_guide: Skatīt ceļvedi
+  hoc_how_to_nav_main_aria_label: Izvēlieties ceļvedi
+  hoc_how_to_nav_sidebar_aria_label: Navigācija sānjoslā
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: Koda stunda ir vienas stundas ievads datorzinātnēs,
+    izmantojot jautras konsultācijas, lai parādītu, ka ikviens var apgūt pamatus.
+    Šogad mēs paceļam koda stundu jaunos augstumos, piedāvājot kodēšanas iespējas,
+    kas ietver gan mākslīgā intelekta (AI), gan ne-AI komponentus. Neatkarīgi no tā,
+    vai jūs vai jūsu studenti esat pieredzējuši kodētāji, vai arī jūs visi dodaties
+    pirmajā datorzinātņu ekspedīcijā, šī koda stunda sola ārkārtas braucienu.
+  hoc_how_to_faq_question_prerequisites: Kādi ir priekšnoteikumi koda stundas veikšanai?
+  hoc_how_to_faq_answer_prerequisites: Kodu stundu ir vienkārši palaist - pat iesācējiem.
+    Jums nav nepieciešama pieredze datorzinātnēs vai mācīšanā, lai iedvesmotu studentus
+    izpētīt, radīt un apgūt kaut ko jaunu.
+  hoc_how_to_faq_question_devices: Kādas ierīces man ir vajadzīgas, lai palaistu koda
+    stundu?
+  hoc_how_to_faq_answer_devices_01: 'Ierīces, kuras varat izmantot:'
+  hoc_how_to_faq_answer_devices_02: Ja ierīces ir ierobežotas vai nav pieejamas, mēģiniet
+    [pārī programmēšana] (%{pair_url}) vai izpētiet mūsu [atvienotās darbības] (%{unplugged_url}),
+    lai mācītos bez jebkādām ierīcēm!
+  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_answer_volunteer: Ikviens, kas aizraujas ar datorzinātņu izglītību
+    un pieaugošo tehnoloģiju daudzveidību, var būt brīvprātīgais! Mēs labprāt redzētu,
+    lai piedalītos brīvprātīgie no visām izcelsmēm. Koda stunda piedāvā plašu aktivitāšu
+    klāstu visu vecumu un prasmju līmeņiem, tāpēc jums nav jābūt programmēšanas ekspertam,
+    lai brīvprātīgo!
+  hoc_how_to_faq_question_full_hour: Vai koda stunda prasīs pilnu stundu?
+  hoc_how_to_faq_answer_full_hour: Daudzi studenti varēs pabeigt savas aktivitātes
+    mazāk nekā stundas laikā, un tas ir labi! Studenti var turpināt mācīties, kamēr
+    citi studenti pabeidz savu darbību.
+  hoc_how_to_faq_question_account: Vai skolēniem jāpiesakās, izmantojot kontu?
+  hoc_how_to_faq_answer_account: Lai studenti izmēģinātu koda stundu, nav nepieciešama
+    reģistrēšanās vai pieteikšanās. Reģistrējoties koda stundai, netiek automātiski
+    izveidots Code.org konts.
+  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_promo_heading: Reklāmas resursi
+  hoc_how_to_resources_promo_desc: Atrodiet visus nepieciešamos resursus — drukātus
+    un digitālos —, lai pievērstu uzmanību savai kodeksa stundai.
+  hoc_how_to_resources_discover_heading: Atklājiet aktivitātes
+  hoc_how_to_resources_discover_desc: Izpētiet plašu vienas stundas apmācību izvēli,
+    kas paredzētas visu vecumu cilvēkiem vairāk nekā 45 valodās.
+  hoc_how_to_step_label_plan: Plānojiet, kur un kad veiksit savu koda stundu
+  hoc_how_to_step_label_choose_activity: Izvēlieties savu darbību
+  hoc_how_to_step_label_test_activity: Pārbaudiet savu darbību
+  hoc_how_to_step_label_register_event: Reģistrējiet savu pasākumu
+  hoc_how_to_step_label_tell: Pastāstiet saviem skolēniem, skolai un kopienai
+  hoc_how_to_step_label_get_coding: Iegūstiet kodēšanu!
+  hoc_how_to_step_label_celebrate: Svinēt
+  hoc_how_to_step_label_beyond_hoc: Ārpus koda stundas
+  hoc_how_to_step_beyond_hoc_subhead: Šeit tas nebeidzas!
+  hoc_how_to_step_beyond_hoc_desc: Datorzinātnei nav jābeidzas ar koda stundu! Lai
+    gan 90% vecāku vēlas, lai viņu bērns apgūtu datorzinātni, lielākā daļa skolu to
+    joprojām nemāca. Uzziniet, kā šodien nogādāt CS bērna skolā.
+  hoc_how_to_step_01_educators_subhead: Atlasiet notikuma laiku un vietu, kas atbilst
+    pieejamo studentu un ierīču skaitam.
+  hoc_how_to_step_01_educators_desc_01: Kādas vietas jums ir pieejamas, lai veiktu
+    savu koda stundu? Apsveriet savas telpas tehnoloģiskās iespējas un to ierīču veidus,
+    pie kuriem jūs sagaidāt, ka studenti strādās. Studenti var strādāt pie apmācībām
+    vienā ierīcē, pēc kārtas, izmantojot koplietojamu ierīci, vai kopā izmēģināt apmācību
+    uz klases tāfeles. Ir pat atvienotas konsultācijas, kuras var pabeigt bez ierīcēm
+    vispār. Atvienotās opcijas var veikt jebkurā vietā — pat ārpus telpām!
+  hoc_how_to_step_01_educators_desc_02: Cilvēki visā pasaulē pievienojas koda stundas
+    svinībām CS izglītības nedēļas laikā, %{campaign_date} kad tiek izlaistas jaunākās
+    konsultācijas un aktivitātes. Bet jūs varat veikt koda stundu jebkurā gada dienā!
+  hoc_how_to_step_02_educators_desc_01: Izpētiet aktivitātes, pamatojoties uz savas
+    grupas vecumu, pieredzi, interesēm un daudz ko citu. Studentiem ir populāri izmēģināt
+    pašvadītas apmācības, lai gan daudzās aktivitātēs ietver stundu plānus skolotājiem,
+    lai vadītu diskusijas vai paplašinātu darbību.
+  hoc_how_to_step_02_educators_desc_02: Pirms laika izlemiet, vai vēlaties izvēlēties
+    vienu apmācību visiem saviem studentiem, vai ļaujiet katram bērnam izvēlēties
+    savu.
+  hoc_how_to_step_02_educators_desc_03: Šogad jūs un jūsu studenti varat [uzzināt
+    visu par AI] (%ai_url), izmantojot apmācības, stundu plānus un mūsu jauno How
+    AI Works video sēriju.
+  hoc_how_to_step_03_educators_desc_01: Pirms iekļūšanas klasē izmēģiniet apmācību
+    pats, lai jūs varētu atbildēt uz jautājumiem!
+  hoc_how_to_step_03_educators_desc_02: Varat arī pārbaudīt apmācības studentu datoros
+    vai ierīcēs, lai nodrošinātu, ka tās atbalsta skaņu un video. Vai ir zems joslas
+    platums? Plānojiet parādīt videoklipus klases priekšpusē, lai katrs students nelejupielādētu
+    savus videoklipus.
+  hoc_how_to_step_03_educators_desc_03: Apsveriet iespēju nodrošināt austiņas savai
+    klasei vai lūdziet skolēniem atnest savas, ja izvēlētā apmācība vislabāk darbojas
+    ar skaņu.
+  hoc_how_to_step_04_educators_desc_01: Reģistrējot savu koda stundas pasākumu, jūs
+    saņemsit noderīgus e-pastus ar jaunumiem un padomiem veiksmīgas koda stundas rīkošanai.
+    Tas ir arī veids, kā jūs varat paziņot vietējiem brīvprātīgajiem, ka jūsu skola
+    piedalās. Brīvprātīgie ir lielisks resurss, un viņi var nākt runāt ar jūsu klasi
+    par datorzinātnēm vai palīdzēt saviem skolēniem veikt koda stundas aktivitātes.
+  hoc_how_to_step_05_educators_desc_01: Iegūstiet savus studentus satraukti par pasākumu,
+    daloties [iedvesmojoši videoklipi] (%{videos_url}), izceļot daudzveidīgus cilvēkus
+    un radošus veidus, kā datorzinātni var izmantot reālajā pasaulē.
+  hoc_how_to_step_05_educators_desc_02: Kopīgojiet savus koda stundas plānus ar citiem
+    skolotājiem, kuri, iespējams, vēlēsies pievienoties jautrībai! Šī ir arī lieliska
+    iespēja sazināties ar savas skolas Vecāku skolotāju studentu asociāciju vai dalīties
+    vecāku biļetenos, ļaujot viņiem uzzināt, ko mācās viņu bērni.
+  hoc_how_to_step_06_educators_desc_01: Virziet savus skolēnus uz aktivitāti, varbūt,
+    kopīgojot saiti uz tāfeles vai izmantojot savas klases mācību vadības sistēmu.
+    Jūsu studenti var saskarties ar izaicinājumiem - tas ir labi! Mācīšanās programmēt
+    ir kā jaunas valodas apguve; jūs uzreiz nevarēsit brīvi. Ja nezināt atbildi, varat
+    to izdomāt kopā.
+  hoc_how_to_step_07_educators_desc_01: 'Noteikti svinēt panākumus! Kopīgojiet sava
+    koda stundas pasākuma fotoattēlus un videoklipus sociālajos medijos. Izmantojiet
+    #HourOfCode un @codeorg, lai mēs varētu izcelt arī jūsu panākumus!'
+  hoc_how_to_step_07_educators_desc_02: Varat arī izdrukāt sertifikātus saviem studentiem,
+    lai parādītu savus sasniegumus!
   team_page_full_team_alt_text: Gandrīz 100 Code.org darbinieki, kas saskaņo zilos
     un dzeltenos t-kreklus, rada viesnīcas konferenču zālē uzņēmuma 2022 vasaras Codechella
     pasākumam.
@@ -13627,6 +13855,10 @@ lv:
   video_library_page_inspirational_video_title_11: Ikviens var mācīties (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta un Nuestras Eskuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA svin Programmēšanas stundu
+    (2 min)
+  video_library_page_inspirational_video_title_14: Tas ir vairāk nekā spēle (1 min)
+  video_library_page_inspirational_video_title_15: Izveidot ar datorzinātnēm (1 min)
   video_library_page_not_hacked_video_title_1: 'Kā nevar nokļūt uzlauzts: Ievads'
   video_library_page_not_hacked_video_title_2: 'Kā nevar tikt uzlauzts: paroles'
   video_library_page_not_hacked_video_title_3: 'Kā nevar tikt uzlauzts: autentifikācija
@@ -13638,6 +13870,159 @@ lv:
     un lejupielādes'
   video_library_page_not_hacked_video_title_7: 'Kā nevar tikt uzlauzts: instalējiet
     atjauninājumus'
+  about_us_page_title: Par mums
+  about_us_page_hero_description: Code.org® ir izglītības inovāciju bezpeļņas organizācija,
+    kas veltīta redzējumam, ka katram skolēnam katrā skolā ir iespēja apgūt datorzinātnes
+    kā daļu no savas pamatizglītības K-12. Mēs paplašinām piekļuvi datorzinātnēm skolās,
+    koncentrējoties uz jaunu sieviešu un citu nepietiekami pārstāvētu grupu studentu
+    līdzdalības palielināšanu. Vadošais K-12 datorzinātņu mācību programmas nodrošinātājs
+    Amerikas Savienoto Valstu lielākajos skolu rajonos Code.org organizē arī ikgadējo
+    [Hour of Code] (%{hour_url}) kampaņu, kurā iesaistīti vairāk nekā 15% no visiem
+    studentiem pasaulē. Code.org atbalsta dāsni ziedotāji, tostarp Microsoft, Amazon,
+    Google un [daudzi citi.]%{others_url}
+  about_us_page_section_title_1: Vairāk nekā 80 miljoni studentu un 2 miljoni skolotāju
+    vietnē Code.org
+  about_us_page_statistic_figcaption: Code.org dalība no 2021.-2022. mācību gada.
+    [Skatīt sadalītos datus.] ()%{data_url}
+  about_us_page_statistic_description: Code.org palielina datorzinātņu daudzveidību,
+    sasniedzot visu izcelsmes studentus tur, kur viņi atrodas - viņu prasmju līmenī,
+    viņu skolās un tādā veidā, kas iedvesmo viņus turpināt mācīties. Lielākā daļa
+    Code.org studentu ir no studentu grupām, kas vēsturiski nepietiekami pārstāvētas
+    datorzinātnēs. Datorzinātņu daudzveidības palielināšana ir mūsu darba pamats,
+    un [mēs aicinām jūs lasīt vairāk par mūsu centieniem] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org ziņās
+  about_us_page_section_news_description: Skatīt visus iepriekšējos [ziņas un paziņojumus]
+    (%{news_url})
+  about_us_page_section_table: Mūsu mērķi un rādītāji
+  about_us_page_section_table_header_1: Code.org mērķis
+  about_us_page_section_table_header_2: Sasniegums
+  abous_page_section_table_cell_1_1: Uzlabot daudzveidību CS * (ASV studenti) *
+  abous_page_section_table_cell_1_2: 45% Code.org studentu ir jaunas sievietes, 50%
+    ir studenti no atstumtām rasu un etniskajām grupām, un 46% ASV studentu ir skolās
+    ar augstām vajadzībām. Lasiet vairāk par [mūsu pieeju daudzveidībai.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Iedvesmojiet studentus
+  about_page_section_table_cell_2_2: Desmitiem miljonu ir izmēģinājuši [Kodeksa stundu]
+    (%{hour_url}). (426 370,561 kalpoja. 49% sieviešu)
+  about_page_section_table_cell_3_1: Sasniedziet klases
+  about_page_section_table_cell_3_2: 591 636 skolotāji ir pierakstījušies mācīt mūsu
+    intro kursus vietnē [Code Studio] (%{code_studio_url}), un tiek uzņemti 19 177
+    297 studenti.
+  about_page_section_table_cell_4_1: Sagatavojiet jaunus CS skolotājus
+  about_page_section_table_cell_4_2: Mēs esam sagatavojuši vairāk nekā 106 000 jaunu
+    skolotāju, lai mācītu CS visās K-12 klasēs. Uzziniet par mūsu [profesionālās mācību
+    programmām.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Mainīt skolas rajona mācību programmu
+  about_page_section_table_cell_5_2: Mēs esam sadarbojušies ar [180+ no lielākajiem
+    skolu rajoniem] (%{schoold_disctrict_url}) un 60 reģionālajiem partneriem, lai
+    [pievienotu CS skolas mācību programmai] (%{cs_curriculum_url}). [Uzziniet, kā
+    kļūt par reģionālo partneri.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Iestatiet politikas, lai atbalstītu CS
+  about_page_section_table_cell_6_2: "[Politika mainīta 50 ASV štatos] (%{states_url}),
+    lai izveidotu CS izglītības standartus, panāktu CS kursus skaitīt līdz vidusskolas
+    beigšanai utt. [(Sīkāka informācija)] (%{details_url})"
+  about_page_section_table_cell_7_1: Iet globāli
+  about_page_section_table_cell_7_2: Mūsu kursi ir pieejami vairāk nekā 67 valodās,
+    kurus izmanto vairāk nekā 180 valstīs.
+  about_page_section_table_under_label: 'Avots: Code Studio Activity un [iesaistīto
+    pedagogu aptaujas] (%{educators_url})'
+  about_page_section_title_3: Vairāk informācijas, vēsture un filozofija
+  about_page_section_more_description_1: '2013. gadā Code.org uzsāka brāļi dvīņi [Hadi](%{hadi_url})
+    un [Ali Partovi] (%{partovi_url}) ar datorzinātni veicinošu [video](%{video_url}).
+    Šis video vienu dienu kļuva par #1 vietnē YouTube, un 15 000 skolu sazinājās ar
+    mums, lai saņemtu palīdzību. Kopš tā laika mēs esam paplašinājušies no brīvprātīgo
+    personāla, lai izveidotu pilnīgu organizāciju, kas atbalsta pasaules kustību.
+    Mēs uzskatām, ka kvalitatīvai datorzinātņu izglītībai jābūt pieejamai katram bērnam,
+    ne tikai laimīgajiem.'
+  about_page_section_more_description_2: 'Lai atbalstītu mūsu mērķi, mēs strādājam
+    visā izglītības spektrā: izstrādājam savus kursus vai sadarbojamies ar citiem,
+    apmācām skolotājus, sadarbojamies ar lieliem skolu rajoniem, palīdzam mainīt valdības
+    politiku, paplašināmies starptautiskā mērogā, izmantojot partnerības, un mārketingu,
+    lai izjauktu stereotipus.'
+  about_page_section_more_description_3: Mūsu darbs balstās uz [gadu desmitiem ilgiem
+    centieniem, ko veica neskaitāmas organizācijas un indivīdi] (%{efforts_url}),
+    kuri ir palīdzējuši izveidot, finansēt un izplatīt datorzinātņu izglītību. Mēs
+    esam pateicīgi, ka gūstam labumu no plašākas datorzinātņu izglītības kopienas
+    nenogurstošās palīdzības, un [mēs pateicamies visiem partneriem un indivīdiem,
+    kuri gadu gaitā ir atbalstījuši mūsu ietekmi] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021. gada pārskats] (%{report_url})
+    (Iepriekšējie ziņojumi: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Mūsu pamatvērtības un ziņojumapmaiņas vadlīnijas]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Mūsu mācību programma un pedagoģijas filozofija]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx mūsu dibinātāja Hadi Partovi runā par to,
+    kāpēc datorzinātne ir paredzēta visiem (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Vienojoša pieeja sadalītā pasaulē
+  about_page_section_specific_title_1: Vienojoša pieeja sadalītā pasaulē
+  about_page_section_specific_title_2: Mūsu apņemšanās nodrošināt pieejamību
+  about_page_section_specific_title_3: Mūsu apņemšanās nodrošināt bezmaksas mācību
+    programmu un atvērtā koda tehnoloģiju
+  about_page_section_specific_title_4: Code.org aizstāvības koalīcija
+  about_page_section_specific_title_5: K-12 datorzinātņu sistēma
+  about_page_section_specific_title_6: Code.org Donori
+  about_page_section_specific_title_7: Sekojiet mums
+  about_page_section_specific_title_8: Code.org starptautiskā sasniedzamība
+  about_page_section_specific_description_1: Code.org globālā loma K-12 datorzinātņu
+    kustībā ir iespējama tikai tāpēc, ka mēs izmantojam vienojošu pieeju dažādām un
+    bieži sadalītām ieinteresētajām personām. Laikā, kad pieaug polarizācija, ideja
+    par iespēju palielināšanu studentiem apvieno cilvēkus no visa politiskā spektra.
+    Code.org komandas locekļiem, studentiem, skolotājiem un atbalstītājiem ir dažādi
+    un atšķirīgi viedokļi, un viņi visi ir laipni gaidīti mūsu misijā. [Lasīt vairāk.]
+    (%{read_more_url})
+  about_page_section_specific_description_2: Code.org uzskata, ka datorzinātne ir
+    pamats visiem studentiem, un mēs esam apņēmušies nodrošināt taisnīgumu, piekļuvi
+    un iespējas mūsu organizatoriskajā jomā [values.](%{values_url}) Lai sasniegtu
+    šo mērķi, mēs strādājam, lai identificētu un novērstu šķēršļus, kas kavē studentu
+    un pedagogu iekļaušanu un pilnīgu līdzdalību. ar invaliditāti. Lai uzzinātu vairāk
+    par mūsu centieniem, skatiet mūsu [pieejamības paziņojumu.] (%{accessibility_url})
+  about_page_section_specific_description_3: Visi mūsu autorētie mācību programmas
+    resursi un konsultācijas uz visiem laikiem varēs brīvi izmantot un atklāti licencēt
+    saskaņā ar [Creative Commons] (%{commons_url}) licenci, ļaujot citiem izveidot
+    atvasinātus izglītības resursus nekomerciāliem mērķiem. Ja jūs interesē mūsu materiālu
+    licencēšana komerciāliem mērķiem, [sazinieties ar mums] (%{contact_us_url}). Mūsu
+    kursi tiek tulkoti lietošanai visā pasaulē vai dažādu valodu runātājiem. Mūsu
+    tehnoloģija ir izstrādāta kā [atvērtā koda projekts.] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org aizstāvības koalīcija] (%{advocacy_url})
+    ir divpusēja korporāciju un bezpeļņas organizāciju koalīcija, kas strādā kopā,
+    lai palīdzētu izveidot ASV federālo un valsts politiku, lai paplašinātu un uzturētu
+    piekļuvi K-12 datorzinātnēm un paplašinātu līdzdalību un daudzveidību šajā jomā.
+    Mēs apvienojam [republikāņu un demokrātu politiskie līderus] (%{leaders_url})
+    kopīgā nolūkā, atbalstot piekļuves paplašināšanu K-12 datorzinātnēm un dalību
+    tajās."
+  about_page_section_specific_description_5: Code.org ir vadības komitejas loceklis,
+    kas palīdzēja izveidot [K-12 Computer Science Framework] (%{framework_url}) -
+    augsta līmeņa ceļvedi valstīm, rajoniem un organizācijām, kas īsteno datorzinātņu
+    izglītību. Sistēma ir ieguvusi simtiem akadēmiķu, K-12 pedagogu, programmatūras
+    uzņēmumu, bezpeļņas organizāciju un valstu atbalstu.
+  about_page_section_specific_description_6: Code.org IRS veidlapa 990 par [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}) un [2021](%{irs_url_8}). [Ziedojumu
+    politika.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Reģistrējieties, lai saņemtu statusa
+    atjauninājumus] (%{sign_up_url}) par progresu K-12 datorzinātņu kustībā un par
+    Code.org darbu. Vai arī sekojiet Code.org sociālajos medijos:"
+  about_page_section_specific_description_8: Vairāk nekā 40% no mūsu vietnes trafika
+    nāk ārpus Amerikas Savienotajām Valstīm, un šis skaits turpina pieaugt. Lai paplašinātu
+    globālu piekļuvi datorzinātnēm, mūsu komanda cieši sadarbojas ar [vairāk nekā
+    100 starptautiskajiem partneriem] (%{partners_url}), palīdzot viņiem popularizēt
+    Kodeksa stundu, aizstāvēt politikas izmaiņas un apmācīt skolotājus. Mēs padarām
+    datorzinātni par daļu no starptautiskās izglītības diskursa, sadarbojoties ar
+    izglītības ministrijām no visas pasaules un sadarbojoties ar tādām starptautiskām
+    organizācijām kā Ekonomiskās sadarbības un attīstības organizācija un Apvienoto
+    Nāciju Izglītības, zinātnes un kultūras organizācija.
+  about_page_section_donors_description_1: Code.org® ir reģistrēta publiska 501c3
+    bezpeļņas organizācija ar plašas sabiedrības atbalstu. Mēs esam pateicīgi par
+    dāsno atbalstu, ko esam saņēmuši no [indivīdiem un organizācijām] (%{individuals_url}),
+    kas atbalsta mūsu redzējumu.
+  about_page_section_donors_description_2: Kodu sasniegumi (iepriekš) parāda mūsu
+    spēju piesaistīt šos dolārus spēcīgos rezultātos. Bet, ņemot vērā mūsu bezpeļņas
+    mērķi, ka katram bērnam katrā skolā ir jābūt piekļuvei datorzinātnēm - kļūt par
+    izglītotiem pilsoņiem mūsdienu digitālajā pasaulē un pārbaudīt viņu intereses
+    turpināt izpētīt CS kā karjeru - mums ir tāls ceļš ejams, lai sasniegtu līdzekļu
+    vākšanas mērķi, kas atbalstīs šo redzējumu.
+  about_page_donors_link_1: Veiciet ziedojumus
+  about_page_donors_link_2: "[skatiet mūsu donoru sarakstu] (%{donors_url})"
   language_code:
     ar: Arābu valoda
     az: Azerbaidžāņi

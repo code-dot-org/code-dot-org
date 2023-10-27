@@ -284,7 +284,7 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_not_equal(before[i], e.call, error)
+      refute_equal(before[i], e.call, error)
     end
   end
 

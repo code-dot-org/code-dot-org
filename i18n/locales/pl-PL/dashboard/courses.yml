@@ -212,6 +212,14 @@ pl:
         vpl-csd-2023:
           title: Wirtualne profesjonalne uczenie się CSD
           version_title: '2023'
+        virtual-pl-csa-summer-2024:
+          title: virtual-pl-csa-summer-2024
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się do nauczania kursu informatyki A.\n-   Przećwiczysz kluczowe pojęcia z programu nauczania kursu informatyki A.\n-   Zwiększysz zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów. \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+          description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do nauczania kursu informatyki A.\n-   Przećwiczą kluczowe pojęcia z programu nauczania kursu informatyki A.\n-   Zwiększą zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów. \n-   Staną się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+        virtual-pl-csp-summer-2024:
+          title: virtual-pl-csp-summer-2024
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się do nauczania zasad informatyki.\n-   Przećwiczysz kluczowe pojęcia z programu nauczania zasad informatyki.\n-   Zwiększysz zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów. \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+          description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do nauczania zasad informatyki.\n-   Przećwiczą kluczowe pojęcia z programu nauczania zasad informatyki.\n-   Zwiększą zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów. \n-   Staną się elementem sieci nauczycieli, którzy wykonują podobną pracę."
     resources:
       curriculum/csd/2017:
         name: Program nauczania

@@ -257,6 +257,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "loops"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Իրադարձություններ"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "conditionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "գործառույթները"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "փոփոխականների"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Ուրախ Քարտեզներ"
         },
@@ -437,9 +455,6 @@
         "coursef-2023/The Internet": {
           "name": "Համացանց"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Ժամ օրենսգրքի 2013-"
-        },
         "artist/Artist": {
           "name": "Արտիստ"
         },
@@ -463,12 +478,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Hour of Code"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
@@ -802,6 +811,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme Challenge - Comprehensive"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ժամ օրենսգրքի 2013-"
         },
         "jigsaw/Jigsaw": {
           "name": "ոլորահատ սղոց"
