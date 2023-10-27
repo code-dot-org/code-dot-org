@@ -15,6 +15,8 @@ module I18n
         class SyncOut < I18n::Utils::SyncOutBase
           METRIC_CONTEXT = 'update_i18n_static_messages'.freeze
 
+          # TODO: (elijah) formalize a process for flagging these strings somewhere in apps code,
+          # rather than maintaining this ugly manual Hash
           LABS_FEEDBACK_MESSAGE_KEYS = {
             common: %w[
               emptyBlocksErrorMsg
