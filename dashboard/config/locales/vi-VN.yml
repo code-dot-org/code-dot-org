@@ -4,6 +4,7 @@ vi:
     attributes:
       user:
         age: Tuổi
+        ai_settings_header: Cài đặt AI
         current_password: Mật khẩu hiện tại
         edit_header: Chỉnh sửa thông tin tài khoản
         email: Thư điện tử
@@ -166,6 +167,8 @@ vi:
       mình.
     more_information: Xem Chính sách quyền riêng tư của Code.org.
   copy: Sao chép
+  course_deprecated:
+    button: Xem chương trình giảng dạy mới
   course_offering:
     headers:
       collections: Bộ sưu tập
@@ -182,6 +185,7 @@ vi:
       sports: Thể thao
       summer_workshops_612: 6-12 Hội thảo Mùa hè
       teacher_led: Giáo viên hướng dẫn
+      unsupported: Không được hỗ trợ
       virtual_academic_year_workshops_612: Hội thảo năm học ảo 6—12
       workshops_k5: Hội thảo K-5
       year_long: Năm dài
@@ -724,6 +728,8 @@ vi:
     parent_email_added_subject: Chào mừng tới Code.org!
     parent_permission_confirmation_subject: Cảm ơn bạn đã chấp thuận quyền truy cập
       của con bạn vào Code.org!
+    parent_permission_reminder_subject: Nhắc nhở, cần có sự đồng ý của cha mẹ để con
+      bạn truy cập Code.org
     student_associated_subject: Thông tin đăng nhập vào Code.org
   password:
     change_form:
@@ -786,18 +792,31 @@ vi:
         australia: Úc
         barbados: Barbados
         belize: Belize
+        brazil: Braxin
         canada: Canada
         chile: Chile
         colombia: Colombia
+        dominican_republic: Cộng hòa Dominica
         india: Ấn Độ
+        indonesia: Indonesia
         israel: Israel
+        jamaica: Jamaica
+        kenya: Kenya
+        kosovo: Kosovo
         malaysia: Malaysia
+        maldives: Maldives
         mexico: Mexico
+        mongolia: Mông Cổ
+        new_zealand: New Zealand
         paraguay: Paraguay
+        philippines: Philippines
         portugal: Bồ Đào Nha
+        puerto_rico: Puerto Rico
+        slovakia: Slovakia
         south_korea: Hàn Quốc
         spain: Tây Ban Nha
         thailand: Thái Lan
+        trinidad_and_tobago: Trinidad và Tobago
         uzbekistan: Uzbekistan
         vietnam: Việt Nam
       subjects:
