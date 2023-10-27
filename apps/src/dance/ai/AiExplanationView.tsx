@@ -121,8 +121,8 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     const translations = currentField.labelTranslations;
     const translation = getTranslation(label, translations);
 
-    // if we can't find a translation for the key from the model,
-    // display the untranslated key
+    // If we can't find a translation for the key from the model,
+    // display the untranslated key.
     return translation || label;
   });
 

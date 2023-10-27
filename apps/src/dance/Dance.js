@@ -488,7 +488,7 @@ Dance.prototype.preview = async function () {
   const previewDraw = () => {
     this.nativeAPI.setEffectsInPreviewMode(true);
 
-    // calls each effect's init() step
+    // Calls each effect's init() step.
     this.hooks.find(v => v.name === 'runUserSetup').func();
 
     // redraw() (rather than draw()) is p5's recommended way
