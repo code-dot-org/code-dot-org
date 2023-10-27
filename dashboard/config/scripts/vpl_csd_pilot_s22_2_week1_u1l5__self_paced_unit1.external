@@ -12,13 +12,15 @@ markdown <<MARKDOWN
 
 ## Overview of Lessons 4 - 7 
 
-##### Click the dropdown arrows below to view lesson overviews.
+###### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: What is a Computer?</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 <img src="https://images.code.org/4c8d73dc89099256e349c647e38881bb-image-1651163631001.20.06 AM.png" alt="Image of computer poster example" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+<a href="https://studio.code.org/s/csd1-2023/lessons/4" target="blank" rel="noopener noreferrer">Link to lesson</a>
 
 **Question of the Day:** What is a computer?
 
@@ -42,6 +44,8 @@ In this lesson students develop a preliminary definition of a computer. To begin
     <p>
 <img src="https://images.code.org/fb8dc7679c1156d1d6ff35a2b50ab59b-image-1651163628875.23.14 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px; padding-right: 30px;">
 
+<a href="https://studio.code.org/s/csd1-2023/lessons/5" target="blank" rel="noopener noreferrer">Link to lesson</a>
+
 **Question of the Day:** How do computers use input and output to get and give the information that they need to solve problems?
 
 **Lesson Overview:**
@@ -61,6 +65,8 @@ In this lesson students consider how computers get and give information to the u
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:65px;">
     <p>
 <img src="https://images.code.org/c60bc7e8dac089d47906ed09d38cad20-image-1651163625821.26.55 AM.png" alt="Image of an app" width="185px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+<a href="https://studio.code.org/s/csd1-2023/lessons/6" target="blank" rel="noopener noreferrer">Link to lesson</a>
 
 **Question of the Day:** What are the different ways computers can process information?
 
@@ -82,6 +88,8 @@ This lesson introduces students to four common types of processing: if/then (con
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:50px;">
     <p>
 <img src="https://images.code.org/65531495e24a8c5eea78d0b231348169-image-1651163758693.27.45 AM.png" alt="Image of an app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+<a href="https://studio.code.org/s/csd1-2023/lessons/7" target="blank" rel="noopener noreferrer">Link to lesson</a>
 
 **Question of the Day:** Why is storage an important part of the computing process?
 

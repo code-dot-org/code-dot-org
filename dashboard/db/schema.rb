@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2023_10_26_235831) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -461,7 +462,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
-  create_table "delayed_jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
@@ -637,7 +638,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "learning_goal_id"
     t.integer "project_id"
@@ -663,7 +664,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
   end
 
-  create_table "learning_goal_teacher_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_teacher_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "teacher_id", null: false
     t.integer "learning_goal_id", null: false
@@ -1846,7 +1847,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id"
   end
 
-  create_table "section_instructors", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "section_instructors", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "instructor_id", null: false
     t.integer "section_id", null: false
     t.integer "invited_by_id"
@@ -1882,8 +1883,10 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.boolean "restrict_section", default: false
     t.text "properties"
     t.string "participant_type", default: "student", null: false
+    t.bigint "lti_integration_id"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
+    t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
     t.index ["user_id"], name: "index_sections_on_user_id"
   end
 
@@ -2331,6 +2334,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
   add_foreign_key "schools", "school_districts"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
+  add_foreign_key "sections", "lti_integrations"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
