@@ -6,13 +6,14 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {BlockSvg, Workspace, FieldDropdown, MenuOption} from 'blockly/core';
+import {FieldDropdown} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput, TranslationTuple, DropdownTranslations} from '../types';
+import {generateBlocksFromResult} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -495,7 +496,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             >
               <AiBlockPreview
                 fadeIn={mode === Mode.GENERATING}
-                generateBlocksFromResult={generateBlocksFromResult}
                 resultJson={resultJson}
                 onComplete={() => {
                   if (mode === Mode.GENERATING) {
@@ -609,34 +609,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       </div>
     </AccessibleDialog>
   );
-};
-
-/**
- * Generates blocks from the AI result in a given workspace,
- * and attaches them to each other.
- */
-const generateBlocksFromResult = (
-  workspace: Workspace,
-  resultJsonString: string
-): [BlockSvg, BlockSvg] => {
-  const params = JSON.parse(resultJsonString);
-
-  const blocksSvg: [BlockSvg, BlockSvg] = [
-    workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
-    workspace.newBlock('Dancelab_setBackgroundEffectWithPaletteAI') as BlockSvg,
-  ];
-
-  // Foreground block.
-  blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
-
-  // Background block.
-  blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-  blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
-
-  // Connect the blocks.
-  blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-
-  return blocksSvg;
 };
 
 const getTranslationsFromField = (

@@ -1,13 +1,10 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useEffect, useRef, useState} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
+import {generateBlocksFromResult} from './utils';
 
 interface AiBlockPreviewProps {
   fadeIn: boolean;
-  generateBlocksFromResult: (
-    workspace: Workspace,
-    resultJsonString: string
-  ) => [BlockSvg, BlockSvg];
   resultJson: string;
   onComplete: () => void;
 }
@@ -18,7 +15,6 @@ interface AiBlockPreviewProps {
 // block preview rendering twice?
 const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   fadeIn,
-  generateBlocksFromResult,
   resultJson,
   onComplete,
 }) => {
@@ -65,7 +61,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       });
       Blockly.svgResize(previewWorkspace as WorkspaceSvg);
     }
-  }, [blockPreviewContainerRef, generateBlocksFromResult, resultJson, done]);
+  }, [blockPreviewContainerRef, resultJson, done]);
 
   return (
     <div id={fadeIn ? 'fade-in' : undefined}>
