@@ -5838,6 +5838,14 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lti_integration_id
+    sql_type_metadata: *30
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   seed_info:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -11964,6 +11972,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: sections
+    name: fk_rails_f0d4df9901
+    unique: false
+    columns:
+    - lti_integration_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   seed_info:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: seed_info
@@ -12800,7 +12821,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20231017201252
+version: 20231026194936
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
