@@ -488,8 +488,7 @@ Dance.prototype.preview = async function () {
   const previewDraw = () => {
     this.nativeAPI.setEffectsInPreviewMode(true);
 
-    // the user setup hook initializes effects,
-    // needs to happen in preview mode for some effects (eg, tacos)
+    // calls each effect's init() step
     this.hooks.find(v => v.name === 'runUserSetup').func();
 
     // redraw() (rather than draw()) is p5's recommended way
@@ -500,7 +499,8 @@ Dance.prototype.preview = async function () {
   };
 
   // This is the mechanism p5 uses to queue draws,
-  // so we do the same so we end up after any queued draws.
+  // so we use the same mechanism to ensure that
+  // this preview is drawn after any queued draw calls.
   window.requestAnimationFrame(previewDraw);
 };
 
