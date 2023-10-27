@@ -160,7 +160,7 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
 
     this.setOnChange(function () {
       if (!this.isInFlyout) {
-        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+        this.functionalSvg_.render();
       }
     });
   }
