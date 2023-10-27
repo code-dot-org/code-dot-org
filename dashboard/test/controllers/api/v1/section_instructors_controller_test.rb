@@ -62,6 +62,7 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     assert_equal @teacher3.id, si.instructor_id
     assert_equal @section.id, si.section_id
     assert_equal :invited, si.status.to_sym
+    assert_equal @teacher, si.invited_by
   end
 
   test 'instructor can add a former instructor to instruct a section' do

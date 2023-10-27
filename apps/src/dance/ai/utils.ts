@@ -11,7 +11,7 @@ export const generateBlocksFromResult = (
   const params = JSON.parse(resultJsonString);
 
   const blocksSvg: [BlockSvg, BlockSvg] = [
-    workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+    workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
     workspace.newBlock('Dancelab_setBackgroundEffectWithPaletteAI') as BlockSvg,
   ];
 

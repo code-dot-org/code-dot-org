@@ -86,7 +86,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
       labelTranslations: foregroundTranslations,
     },
     [FieldKey.BACKGROUND_PALETTE]: {
-      name: 'Background palette',
+      name: 'Background color',
       data: CachedPalettes as CachedWeightsMapping,
       labelTranslations: paletteTranslations,
     },
