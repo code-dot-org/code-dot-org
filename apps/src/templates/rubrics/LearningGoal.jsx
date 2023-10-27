@@ -228,7 +228,7 @@ export default function LearningGoal({
           )}
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
-              {submittedEvaluation.understanding && (
+              {submittedEvaluation.understanding !== null && (
                 <BodyThreeText>
                   {
                     UNDERSTANDING_LEVEL_STRINGS[

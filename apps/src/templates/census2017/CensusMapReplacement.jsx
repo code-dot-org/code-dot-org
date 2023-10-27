@@ -93,15 +93,6 @@ class CensusMapInfoWindow extends Component {
               </div>
             </a>
           </div>
-          <div className="button-link-div">
-            <a href="/yourschool/letter" target="_blank">
-              <div className="button">
-                <div className="button-text">
-                  Send the survey to a teacher at this school
-                </div>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
     );
