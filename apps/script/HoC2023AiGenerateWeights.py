@@ -23,7 +23,7 @@ for emoji in data['items']:
 color_palettes_map = {
   'rainbow pastel': 'default', # Light
   'green blue': 'cool', # Cool
-  'electronic': 'elecronic', # Electronic
+  'electronic': 'electronic', # Electronic
   'creamy pastel': 'iceCream', # Ice Cream
   'neon': 'neon', # Neon
   'black and white': 'rave', # Black and White
@@ -120,21 +120,21 @@ for id_word in emoji_ids:
         palette_token = nlp(palette_word)
         similarity_score = id_token.similarity(palette_token)
         palette_scores.append(round(similarity_score, 2))
-    
+
     background_scores = []
     for bg_word in background_effects:
         id_token = nlp(id_word)
         bg_token = nlp(bg_word)
         similarity_score = id_token.similarity(bg_token)
         background_scores.append(round(similarity_score, 2))
-        
+
     foreground_scores = []
     for fg_word in foreground_effects:
         id_token = nlp(id_word)
         fg_token = nlp(fg_word)
         similarity_score = id_token.similarity(fg_token)
         foreground_scores.append(round(similarity_score, 2))
-        
+
     palette_dict[id_word] = palette_scores
     background_dict[id_word] = background_scores
     foreground_dict[id_word] = foreground_scores
@@ -157,6 +157,6 @@ with open("apps/static/dance/ai/model/cached-spacy-palette-map.json", "w") as js
 
 with open("apps/static/dance/ai/model/cached-spacy-background-map.json", "w") as json_file:
     json_file.write(json.dumps(background_output))
-    
+
 with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as json_file:
     json_file.write(json.dumps(foreground_output))
