@@ -271,7 +271,7 @@ module Cdo
     # connect to the database. We use the `puma` web application server in most environments, except development, where
     # we use `thin`.
     def running_web_application?
-      File.basename($0) == 'puma' || File.basename($0) == 'thin'
+      %w(puma thin).include?(File.basename($0))
     end
 
     def shared_image_url(path)
