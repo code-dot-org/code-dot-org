@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
+import $ from 'jquery';
 
 import styles from './coteacher-settings.module.scss';
 import Button from '../Button';
@@ -165,12 +166,9 @@ export default function CoteacherSettings({
     $.ajax({
       url: `/api/v1/section_instructors/${coteacher.id}`,
       method: 'DELETE',
-    }).then(response => {
-      if (!response || response.status !== 'failure') {
-        addRemovedCoteacher(coteacher.id);
-      }
-      setCoteacherToRemove({});
-    });
+    })
+      .done(() => addRemovedCoteacher(coteacher.id))
+      .fail(() => setCoteacherToRemove({}));
   };
 
   const removePopup = coteacher => {

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
@@ -187,5 +188,115 @@ describe('CoteacherSettings', () => {
       'Remove coelophysis@code.org'
     );
   });
-  // TODO: remove dialog removes added and saved coteacher
+  it('cancel remove does nothing', () => {
+    let coteachersToAdd = ['coelophysis@code.org'];
+    const setCoteachersToAdd = func =>
+      (coteachersToAdd = func(coteachersToAdd));
+
+    const wrapper = shallow(
+      <CoteacherSettings
+        sectionInstructors={testSectionInstructors}
+        setCoteachersToAdd={setCoteachersToAdd}
+        coteachersToAdd={coteachersToAdd}
+        primaryInstructor={testPrimaryTeacher}
+      />
+    );
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    const cells = wrapper.find('td');
+    expect(cells).to.have.lengthOf(9);
+    const button = cells.at(2).find('button');
+    button.at(0).simulate('click', {preventDefault: () => {}});
+
+    wrapper.update();
+
+    expect(wrapper.find('tr')).to.have.lengthOf(3);
+
+    const dialog = wrapper.find('AccessibleDialog');
+
+    dialog.shallow();
+
+    dialog
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+
+    wrapper.update();
+
+    expect(wrapper.find('tr')).to.have.lengthOf(3);
+  });
+  it('Remove unsubmitted', () => {
+    let coteachersToAdd = ['coelophysis@code.org', 'diplodocus@code.org'];
+    const setCoteachersToAdd = coteachers => (coteachersToAdd = coteachers);
+
+    const wrapper = shallow(
+      <CoteacherSettings
+        sectionInstructors={testSectionInstructors}
+        setCoteachersToAdd={setCoteachersToAdd}
+        coteachersToAdd={coteachersToAdd}
+        primaryInstructor={testPrimaryTeacher}
+      />
+    );
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    const cells = wrapper.find('td');
+    const button = cells.at(2).find('button');
+    button.at(0).simulate('click', {preventDefault: () => {}});
+
+    wrapper.update();
+
+    expect(wrapper.find('tr')).to.have.lengthOf(4);
+
+    const dialog = wrapper.find('AccessibleDialog');
+
+    dialog.shallow();
+
+    dialog
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(coteachersToAdd).to.deep.equal(['diplodocus@code.org']);
+  });
+  it('Remove submitted', () => {
+    const setCoteachersToAddSpy = sinon.spy();
+
+    const ajaxStub = sinon.stub($, 'ajax').returns({
+      done: successCallback => {
+        successCallback();
+        return {fail: () => {}};
+      },
+    });
+
+    const wrapper = shallow(
+      <CoteacherSettings
+        sectionInstructors={testSectionInstructors}
+        setCoteachersToAdd={setCoteachersToAddSpy}
+        coteachersToAdd={['coelophysis@code.org']}
+        primaryInstructor={testPrimaryTeacher}
+      />
+    );
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    const cells = wrapper.find('td');
+    const button = cells.at(5).find('button');
+    button.at(0).simulate('click', {preventDefault: () => {}});
+
+    wrapper.update();
+
+    expect(wrapper.find('tr')).to.have.lengthOf(3);
+
+    const dialog = wrapper.find('AccessibleDialog');
+
+    dialog.shallow();
+
+    dialog
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    wrapper.update();
+
+    expect(wrapper.find('tr')).to.have.lengthOf(2);
+    expect(setCoteachersToAddSpy).to.have.not.been.called;
+    expect(ajaxStub).to.have.been.calledOnce;
+    $.ajax.restore();
+  });
 });
