@@ -4,6 +4,20 @@ chef_local_mode: true
 stub_school_data: true
 db_writer: 'mysql://root@localhost/'
 
+db_cluster_id: localhost
+db_endpoint_writer: localhost
+db_endpoint_writer_port: 3306
+db_endpoint_proxy_writer: localhost
+db_endpoint_proxy_writer_port: 3306
+db_endpoint_proxy_reader: localhost
+db_endpoint_proxy_reader_port: 3306
+db_endpoint_proxy_reporting: localhost
+db_endpoint_proxy_reporting_port: 3306
+
+db_credential_admin: {"username":"root", "password":""}
+db_credential_writer: {"username":"root", "password":""}
+db_credential_reader: {"username":"root", "password":""}
+
 dashboard_secret_key_base: not a secret
 
 # needed by storage_id helper
