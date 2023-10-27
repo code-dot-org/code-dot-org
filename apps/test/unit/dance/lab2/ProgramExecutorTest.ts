@@ -9,7 +9,6 @@ import * as sinon from 'sinon';
 const DanceParty = require('@code-dot-org/dance-party/src/p5.dance');
 
 describe('ProgramExecutor', () => {
-  let clock: sinon.SinonFakeTimers;
   let nativeAPI: typeof DanceParty,
     validationCode: string,
     onEventsChanged,
@@ -30,7 +29,6 @@ describe('ProgramExecutor', () => {
     programExecutor: ProgramExecutor;
 
   beforeEach(() => {
-    clock = sinon.useFakeTimers();
     nativeAPI = {
       addCues: sinon.stub(),
       registerValidation: sinon.stub(),
@@ -45,7 +43,7 @@ describe('ProgramExecutor', () => {
       p5_: {
         redraw: sinon.stub(),
       },
-      setForegroundEffectsInPreviewMode: sinon.stub(),
+      setEffectsInPreviewMode: sinon.stub(),
     };
 
     validationCode = 'validationCode';
@@ -93,7 +91,6 @@ describe('ProgramExecutor', () => {
   });
 
   afterEach(() => {
-    clock.restore();
     sinon.restore();
   });
 
@@ -128,6 +125,7 @@ describe('ProgramExecutor', () => {
   });
 
   it('compiles and draws a frame on preview', async () => {
+    const spy = sinon.stub(window, 'requestAnimationFrame').callsArg(0);
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,
@@ -135,10 +133,8 @@ describe('ProgramExecutor', () => {
     });
 
     await programExecutor.preview();
-    clock.tick(1);
 
-    expect(nativeAPI.setForegroundEffectsInPreviewMode).to.have.been
-      .calledTwice;
+    expect(nativeAPI.setEffectsInPreviewMode).to.have.been.calledTwice;
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
     const events = evalWithEvents.firstCall.args[1];

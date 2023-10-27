@@ -13548,7 +13548,9 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csp-summer-day1:
-          lessons: {}
+          lessons:
+            lesson-5:
+              name: Introduction to Asynchronous Activities
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -13583,6 +13585,8 @@ en:
           lessons:
             lesson-1:
               name: Hour of Code (Draft 2)
+            lesson-2:
+              name: hour of code lesson plan template
           lesson_groups: {}
           name: draft-hoc-dp-2
           title: Dance Party (October Pilot)
@@ -13671,5 +13675,5 @@ en:
           title: Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"

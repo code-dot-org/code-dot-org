@@ -31,7 +31,7 @@
       Period: 60
       Statistic: Maximum
       Threshold: 87
-      TreatMissingData: missing
+      TreatMissingData: breaching
 <% if environment == :production -%>
   # Detect problems with the bin/cron/deliver_poste_messages scheduled job by monitoring outbound emails sent by AWS SES.
   OutboundEmailAlarm:

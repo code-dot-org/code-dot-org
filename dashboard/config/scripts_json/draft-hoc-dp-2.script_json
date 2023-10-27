@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "draft-hoc-dp-2",
-    "serialized_at": "2023-10-18 17:16:26 UTC",
+    "serialized_at": "2023-10-26 21:53:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,6 +44,26 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "Dance Party (Pilot)",
+      "name": "Dance Party w/lesson plan",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n- Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n- Review the supplementary lesson plan, [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\n- (optional) Encourage students to bring in headphones to use during the activity.\n",
+        "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
+        "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
         "lesson_group.key": "",
         "script.name": "draft-hoc-dp-2"
       }
@@ -85,6 +105,88 @@
       "seeding_key": {
         "lesson_activity.key": "605ecc8a-672a-4bd1-a1af-51fc7330dd52",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "ad7415d7-7057-40b7-b0c7-61ea427cc606",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Getting Started "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606",
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "b3de518c-96d6-48dd-bece-dae4e6d77c5d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3de518c-96d6-48dd-bece-dae4e6d77c5d",
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "0eec8320-023c-469d-8022-45e908b436a5",
+      "position": 3,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5",
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "120f3590-4a4b-47fc-9fbd-0b1b9785a493",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "120f3590-4a4b-47fc-9fbd-0b1b9785a493",
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "94e0d8f4-23c6-4d05-b254-5c1f1a30f8ad",
+      "position": 5,
+      "properties": {
+        "name": "Go Viral"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94e0d8f4-23c6-4d05-b254-5c1f1a30f8ad",
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2"
+      }
+    },
+    {
+      "key": "e057b7a9-30dc-4ce7-9c3b-d4586ffb849d",
+      "position": 6,
+      "properties": {
+        "duration": 2,
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e057b7a9-30dc-4ce7-9c3b-d4586ffb849d",
+        "lesson.key": "Dance Party (Pilot)",
         "lesson_group.key": "",
         "script.name": "draft-hoc-dp-2"
       }
@@ -230,6 +332,314 @@
       "seeding_key": {
         "activity_section.key": "846da7ec-fce7-4aff-bf3a-05dcfddfafda",
         "lesson_activity.key": "605ecc8a-672a-4bd1-a1af-51fc7330dd52"
+      }
+    },
+    {
+      "key": "5dce2c89-ba4d-443d-82b5-a8ecf06765e4",
+      "position": 1,
+      "properties": {
+        "description": "Welcome students to class and very briefly introduce the day’s activity.",
+        "name": "Setting the Stage\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dce2c89-ba4d-443d-82b5-a8ecf06765e4",
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606"
+      }
+    },
+    {
+      "key": "c02f4fdf-1b55-4477-ae5f-02e77499763e",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and would like to prepare your students with an unplugged activity, consider delivering [\"Dance Party: Unplugged\"](https://curriculum.code.org/hoc/unplugged/4/) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c02f4fdf-1b55-4477-ae5f-02e77499763e",
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606"
+      }
+    },
+    {
+      "key": "c7cd5bea-7a82-4b99-82c5-a977d57cea3c",
+      "position": 3,
+      "properties": {
+        "description": "Today we're going to do something really creative. What's your favorite way to be creative?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c7cd5bea-7a82-4b99-82c5-a977d57cea3c",
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606"
+      }
+    },
+    {
+      "key": "3c5d8d64-ca1f-43cc-96e7-ea12a19cc405",
+      "position": 4,
+      "properties": {
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing."
+      },
+      "seeding_key": {
+        "activity_section.key": "3c5d8d64-ca1f-43cc-96e7-ea12a19cc405",
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606"
+      }
+    },
+    {
+      "key": "4d736d90-db37-44f6-933b-6846c45cbbc3",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/promote/resources#videos). Choose one you think your students will find inspiring, and share it now. For learners in the middle grades, we suggest [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d736d90-db37-44f6-933b-6846c45cbbc3",
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606"
+      }
+    },
+    {
+      "key": "f6e62ad2-0648-4593-af65-52164fd59a94",
+      "position": 6,
+      "properties": {
+        "description": "Explain that today we're going to be creative with \"code\", which just means using a set of instructions that a computer can understand. Just like choosing which colors of paint to use, or what words you write with are ways of expressing creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this [r dance-party-playlist] to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6e62ad2-0648-4593-af65-52164fd59a94",
+        "lesson_activity.key": "ad7415d7-7057-40b7-b0c7-61ea427cc606"
+      }
+    },
+    {
+      "key": "1ec00184-aebd-413b-806f-f69d135c21a2",
+      "position": 1,
+      "properties": {
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw ) . We are using radio-safe versions of all songs and for students under 13.",
+        "name": "Music Filtering\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ec00184-aebd-413b-806f-f69d135c21a2",
+        "lesson_activity.key": "b3de518c-96d6-48dd-bece-dae4e6d77c5d"
+      }
+    },
+    {
+      "key": "b8385de8-b9ac-45ce-8692-767380f138ed",
+      "position": 2,
+      "properties": {
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\n* ![](https://curriculum.code.org/media/uploads/hint.png)**Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass puzzles as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. Many levels contain a second hint with suggestions of ways to get even more creative by extending the task.\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they do rely to some degree on previously introduced concepts.\n* **Take your time and experiment.** Even though the first couple levels tell students exactly what they need to do to pass, they should also feel free to try out their own ideas.",
+        "name": "General Support\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8385de8-b9ac-45ce-8692-767380f138ed",
+        "lesson_activity.key": "b3de518c-96d6-48dd-bece-dae4e6d77c5d"
+      }
+    },
+    {
+      "key": "9f9285ac-5b34-441a-9c1f-34974ef3b5c8",
+      "position": 1,
+      "properties": {
+        "name": "Level 1",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f9285ac-5b34-441a-9c1f-34974ef3b5c8",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "e417ac45-d640-4dbe-90e4-78b255143154",
+      "position": 2,
+      "properties": {
+        "description": "#### Level 2 \n\n* Add a dancer and make them move!",
+        "progression_name": "Code a dancer and dance move"
+      },
+      "seeding_key": {
+        "activity_section.key": "e417ac45-d640-4dbe-90e4-78b255143154",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "e1a2c56b-da6a-44a3-a342-15b21afeac76",
+      "position": 3,
+      "properties": {
+        "description": "#### Level 3\n* Level 3 is about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the dance move block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n",
+        "progression_name": "Code an event"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1a2c56b-da6a-44a3-a342-15b21afeac76",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "42c186d3-8c27-4e9c-bfc4-cb268f662ca6",
+      "position": 4,
+      "properties": {
+        "description": "#### Level 4\n\n* This level will introduce you to a new block where you will code special effects with the help of AI.\n\n* Drag the `AI generate ___ effects` into the setup. Follow the prompts to choose 3 emojis to match the vibe of the song and click \"Generate\" to see what effects AI comes up with.\n\n* Regenerate the stage until you have the effects you like. Then click \"Use\" to add it to your program.",
+        "name": "Use AI to generate special effects",
+        "progression_name": "AI Generated effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "42c186d3-8c27-4e9c-bfc4-cb268f662ca6",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "e5763f27-20fc-460f-bb6e-1767099cd0d0",
+      "position": 5,
+      "properties": {
+        "description": "#### Level 5\n\n* The song on this level has a different mood than the last. \n* Use the `AI generate ___ effects` block again and choose new emojis to match this song. a",
+        "progression_name": "AI Generated effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5763f27-20fc-460f-bb6e-1767099cd0d0",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "52b903db-632c-4585-853d-7dbddc4c0ee3",
+      "position": 6,
+      "properties": {
+        "description": "#### Level 6\n\n",
+        "progression_name": "Choose a dance move"
+      },
+      "seeding_key": {
+        "activity_section.key": "52b903db-632c-4585-853d-7dbddc4c0ee3",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "454235f6-858c-4346-b85e-76a738fd8e0c",
+      "position": 7,
+      "properties": {
+        "description": "#### Level 6\n\n* Level 6 is about creating groups of dancers quickly.\n* Use the new block provided in the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it in a smaller scale. In the next level you’ll be able to fine tune this effect.\n",
+        "progression_name": "Code backup dancers"
+      },
+      "seeding_key": {
+        "activity_section.key": "454235f6-858c-4346-b85e-76a738fd8e0c",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "18460b16-53e5-4fb4-a383-87dbd20132ce",
+      "position": 8,
+      "properties": {
+        "description": "#### Level 7\n\n* Level 7 is about giving the group of dancers a cohesive dance move.\n* Students can set all dancers of a certain costume to perform the same dance move using one block of code.",
+        "progression_name": "Choose backup dancer moves"
+      },
+      "seeding_key": {
+        "activity_section.key": "18460b16-53e5-4fb4-a383-87dbd20132ce",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "98d28499-5912-4e67-9c87-0fc6bd9a7712",
+      "position": 9,
+      "properties": {
+        "progression_name": "Video: Using Events with Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "98d28499-5912-4e67-9c87-0fc6bd9a7712",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "e0791c0c-24ec-49bb-bf52-a00f4480e05c",
+      "position": 10,
+      "properties": {
+        "description": "#### Level 9\n\n##### After X measures\n* Levels 9 is about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n\n##### Key Pressed\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.",
+        "progression_name": "Key Press events"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0791c0c-24ec-49bb-bf52-a00f4480e05c",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "598f47ea-49ba-4f47-94bb-fb99062d7408",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "598f47ea-49ba-4f47-94bb-fb99062d7408",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "050ed60a-16cf-4312-8f9c-c44f1bf5be70",
+      "position": 12,
+      "properties": {
+        "description": "#### Level 10\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else! ",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "050ed60a-16cf-4312-8f9c-c44f1bf5be70",
+        "lesson_activity.key": "0eec8320-023c-469d-8022-45e908b436a5"
+      }
+    },
+    {
+      "key": "f7219f0b-eaff-4e92-b4fd-baf2bf88f84a",
+      "position": 1,
+      "properties": {
+        "description": "- Pose a prompt that has multiple answers such as “What is something you enjoyed about today's activity?” or “What is the connection between creativity and computer science?\"",
+        "name": "Debrief\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7219f0b-eaff-4e92-b4fd-baf2bf88f84a",
+        "lesson_activity.key": "120f3590-4a4b-47fc-9fbd-0b1b9785a493"
+      }
+    },
+    {
+      "key": "0fce7f2a-d654-4847-9fa9-d6730fa95550",
+      "position": 2,
+      "properties": {
+        "description": "Explain that you are spending one hour coding today, because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this world wide movement.\r\n\r\nGive each student [a certificate](http://code.org/certificates) with his or her name on it.",
+        "name": "Celebrate\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fce7f2a-d654-4847-9fa9-d6730fa95550",
+        "lesson_activity.key": "120f3590-4a4b-47fc-9fbd-0b1b9785a493"
+      }
+    },
+    {
+      "key": "9e62969e-6338-488d-9281-e3ea68758d89",
+      "position": 3,
+      "properties": {
+        "description": "Let students know that if they enjoyed today’s activity, they have many options for continuing to code. Encourage students to visit code.org/learn for a list of options, or, if you’re planning any of the extension activities that follow, tell students what’s coming next in your classroom.",
+        "name": "Next Steps\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e62969e-6338-488d-9281-e3ea68758d89",
+        "lesson_activity.key": "120f3590-4a4b-47fc-9fbd-0b1b9785a493"
+      }
+    },
+    {
+      "key": "04b3e273-c64e-48aa-a23d-42ee857bdb47",
+      "position": 1,
+      "properties": {
+        "description": "The Hour of Code is about creativity, and we can’t wait to see what you create! Please share student creations, photos, and videos on social media! Teachers, record your classroom coding a dance, or dancing the dance. Make your video special by adding an [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\r\n\r\nBe sure to include #HourOfCode and tag us on Facebook, Twitter and Instagram.  Bonus points for tagging the artist whose music your students used. Code.org will re-share our favorite posts to our millions of followers. \r\n\r\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\r\n\r\n_Of course, make sure to respect your school's social media policy._"
+      },
+      "seeding_key": {
+        "activity_section.key": "04b3e273-c64e-48aa-a23d-42ee857bdb47",
+        "lesson_activity.key": "94e0d8f4-23c6-4d05-b254-5c1f1a30f8ad"
+      }
+    },
+    {
+      "key": "90fba4c8-c174-4d2a-b579-90067676ba33",
+      "position": 1,
+      "properties": {
+        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters."
+      },
+      "seeding_key": {
+        "activity_section.key": "90fba4c8-c174-4d2a-b579-90067676ba33",
+        "lesson_activity.key": "e057b7a9-30dc-4ce7-9c3b-d4586ffb849d"
       }
     }
   ],
@@ -433,6 +843,281 @@
       "level_keys": [
         "draft_ai_dance_party_free_play"
       ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro_a"
+        ],
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "draft_ai_dance_party_video_intro_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "9f9285ac-5b34-441a-9c1f-34974ef3b5c8"
+      },
+      "level_keys": [
+        "draft_ai_dance_party_video_intro_a"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer_a"
+        ],
+        "progression": "Code a dancer and dance move"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "draft_ai_dance_party_drag_dancer_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e417ac45-d640-4dbe-90e4-78b255143154"
+      },
+      "level_keys": [
+        "draft_ai_dance_party_drag_dancer_a"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1_a"
+        ],
+        "progression": "Code an event"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "draft_ai_dance_party_key_press_events_1_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e1a2c56b-da6a-44a3-a342-15b21afeac76"
+      },
+      "level_keys": [
+        "draft_ai_dance_party_key_press_events_1_a"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_a"
+        ],
+        "progression": "AI Generated effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "42c186d3-8c27-4e9c-bfc4-cb268f662ca6"
+      },
+      "level_keys": [
+        "draft_ai_dance_party_drag_ai_cosmic_a"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_01_october"
+        ],
+        "progression": "AI Generated effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_01_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e5763f27-20fc-460f-bb6e-1767099cd0d0"
+      },
+      "level_keys": [
+        "Dance_2019_01_october"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_02_october"
+        ],
+        "progression": "Choose a dance move"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_02_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "52b903db-632c-4585-853d-7dbddc4c0ee3"
+      },
+      "level_keys": [
+        "Dance_2019_02_october"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_06_october"
+        ],
+        "progression": "Code backup dancers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_06_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "454235f6-858c-4346-b85e-76a738fd8e0c"
+      },
+      "level_keys": [
+        "Dance_2019_06_october"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_06_draft_backup_dance_moves_october"
+        ],
+        "progression": "Choose backup dancer moves"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_06_draft_backup_dance_moves_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "18460b16-53e5-4fb4-a383-87dbd20132ce"
+      },
+      "level_keys": [
+        "Dance_2019_06_draft_backup_dance_moves_october"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_party_ai_prototype_video_measures_october"
+        ],
+        "progression": "Video: Using Events with Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_party_ai_prototype_video_measures_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "98d28499-5912-4e67-9c87-0fc6bd9a7712"
+      },
+      "level_keys": [
+        "dance_party_ai_prototype_video_measures_october"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_04_october"
+        ],
+        "progression": "Key Press events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_04_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e0791c0c-24ec-49bb-bf52-a00f4480e05c"
+      },
+      "level_keys": [
+        "Dance_2019_04_october"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_10_october"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_10_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "050ed60a-16cf-4312-8f9c-c44f1bf5be70"
+      },
+      "level_keys": [
+        "Dance_2019_10_october"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -531,13 +1216,160 @@
         "script.name": "draft-hoc-dp-2",
         "activity_section.key": "4f19fd00-2031-47f3-b724-aae0553a50d5"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "draft_ai_dance_party_video_intro_a",
+        "script_level.level_keys": [
+          "draft_ai_dance_party_video_intro_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "9f9285ac-5b34-441a-9c1f-34974ef3b5c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "draft_ai_dance_party_drag_dancer_a",
+        "script_level.level_keys": [
+          "draft_ai_dance_party_drag_dancer_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e417ac45-d640-4dbe-90e4-78b255143154"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "draft_ai_dance_party_key_press_events_1_a",
+        "script_level.level_keys": [
+          "draft_ai_dance_party_key_press_events_1_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e1a2c56b-da6a-44a3-a342-15b21afeac76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "draft_ai_dance_party_drag_ai_cosmic_a",
+        "script_level.level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_a"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "42c186d3-8c27-4e9c-bfc4-cb268f662ca6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_01_october",
+        "script_level.level_keys": [
+          "Dance_2019_01_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e5763f27-20fc-460f-bb6e-1767099cd0d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_02_october",
+        "script_level.level_keys": [
+          "Dance_2019_02_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "52b903db-632c-4585-853d-7dbddc4c0ee3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_06_october",
+        "script_level.level_keys": [
+          "Dance_2019_06_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "454235f6-858c-4346-b85e-76a738fd8e0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_06_draft_backup_dance_moves_october",
+        "script_level.level_keys": [
+          "Dance_2019_06_draft_backup_dance_moves_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "18460b16-53e5-4fb4-a383-87dbd20132ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_party_ai_prototype_video_measures_october",
+        "script_level.level_keys": [
+          "dance_party_ai_prototype_video_measures_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "98d28499-5912-4e67-9c87-0fc6bd9a7712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_04_october",
+        "script_level.level_keys": [
+          "Dance_2019_04_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "e0791c0c-24ec-49bb-bf52-a00f4480e05c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_10_october",
+        "script_level.level_keys": [
+          "Dance_2019_10_october"
+        ],
+        "lesson.key": "Dance Party (Pilot)",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp-2",
+        "activity_section.key": "050ed60a-16cf-4312-8f9c-c44f1bf5be70"
+      }
     }
   ],
   "resources": [
-
+    {
+      "name": "Spotify Playlist (all ages)",
+      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
+      "key": "spotify_playlist_all_ages_",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "spotify_playlist_all_ages_"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "resource.key": "spotify_playlist_all_ages_"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -546,16 +1378,91 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "code",
+      "word": "code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "vocabulary.key": "program"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "6222d85c-3585-48a6-a234-6d0cde4ded53",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "objective.key": "6222d85c-3585-48a6-a234-6d0cde4ded53"
+      }
+    },
+    {
+      "key": "9e007d8e-3aa3-499d-b310-917c3ed2b778",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "objective.key": "9e007d8e-3aa3-499d-b310-917c3ed2b778"
+      }
+    },
+    {
+      "key": "be4ac957-7b42-4600-8971-6bb332b15314",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party (Pilot)",
+        "objective.key": "be4ac957-7b42-4600-8971-6bb332b15314"
+      }
+    }
   ],
   "lessons_standards": [
 
