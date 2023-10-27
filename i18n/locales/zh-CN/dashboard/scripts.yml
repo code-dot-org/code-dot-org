@@ -480,7 +480,7 @@ zh-CN:
           description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
           student_description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
         mc:
-          title: 我的世界 编程一小时
+          title: "《我的世界》大冒险"
           description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
           description_short: 用代码来探索《我的世界》。
           student_description: 使用代码方块，带史蒂夫或艾莉克斯在《我的世界》中，展开一场冒险。
@@ -8238,3 +8238,118 @@ zh-CN:
           lessons:
             lesson-1:
               name: 我们的 AI 道德守则
+        virtual-pl-csa-summer-2024-day1:
+          title: 第一天
+        virtual-pl-csp-summer-day2:
+          title: 第二天
+        virtual-pl-csp-summer-day3:
+          title: 第三天
+        virtual-pl-csp-summer-day4:
+          title: 第四天
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第二天
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第三天
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第四天
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: '第 5 天 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-1:
+              name: 同步第 1 部分
+            lesson-2:
+              name: 异步第 1 部分
+            lesson-3:
+              name: 同步第 2 部分
+            lesson-4:
+              name: 异步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第一天
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 同步第 2 部分
+            lessonGroup-4:
+              display_name: 异步第 1 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
+          title: 第一天

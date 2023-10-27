@@ -2933,7 +2933,8 @@
           "courseD_collector_debugging1_c": "זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.  "
         },
         "courseD_collector_debugging2a_2021": {
-          "courseD_collector_debugging2a_a": "נסה להשתמש בכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
+          "courseD_collector_debugging2a_a": "נסה להשתמש בכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?",
+          "courseD_collector_debugging2a_c": "מה זה עושה?\n\nמה זה אמור לעשות?\n\nמה זה אומר לך?"
         },
         "courseD_collector_debugging3": {
           "courseD_collector_debugging3_a": "האם יש מקום בו לורל עושה משהו לא הגיוני? מה קורה כשאתה מחליף את הבלוקים הללו?"

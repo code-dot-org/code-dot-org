@@ -1466,6 +1466,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Pagsisimula"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Mga Batayan ng Computer Science"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Masdan ang Hinaharap"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Loop"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Function"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Mga Magandang Gawi sa Pagtuturo ng Computer Science"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Pagpaplano"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Mga susunod na Hakbang"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Panimula sa Paglutas ng Problema"
         },
@@ -2065,6 +2098,27 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Isang Royal Battle na may Mga Kaganapan"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Mga loop"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Mga event"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Mga conditional"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Mga function"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Mga variable"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loops"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Kaligtasan sa Aking Kapaligiran sa Internet"
@@ -3561,6 +3615,39 @@
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
           "purpose": "Sa online na aktibidad na ito, matututunan ng mga mag-aaral kung paano gumamit ng mga kaganapan sa Play Lab. Magsisimula sila sa pamamagitan ng pagsasanay sa kabalyero na gumalaw kapag pinindot ang arrow key, pagkatapos ay magtatapos sa pagkakataong ipakita ang iba pang mga kasanayan na natutunan nila sa buong kursong ito, kabilang ang pagkakasunud-sunod at pag-loop, bilang bahagi ng panghuling freeplay na palaisipan.",
           "student_overview": "Gumamit ng mga kaganapan upang lumikha ng kuwento o gumawa ng interactive na laro."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Pagsisimula"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Mga Batayan ng Computer Science"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Masdan ang Hinaharap"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Pagsunod-sunod"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Loop"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kondisyonal"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Function"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Pag-amo sa mga Pangunahing Kaalaman: Mga Kaganapan"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Mga Magandang Gawi sa Pagtuturo ng Computer Science"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Pagpaplano"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Mga susunod na Hakbang"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Panimula sa Paglutas ng Problema"
@@ -5803,9 +5890,6 @@
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Ang aming Kodigo ng Etika sa AI."
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Panimula sa App Lab",
           "overview": "Idinisenyo ang tutorial na ito upang mabilis na ipakilala ang kapaligiran ng programming ng App Lab bilang isang mahusay na tool sa pagbuo at pagbabahagi ng mga app. Nagtuturo sa mga mag-aaral ang tutorial mismo na gumawa at kontrolin ang mga pindutan, teksto, mga larawan, mga tunog, at mga screen sa JavaScript gamit ang alinman sa mga bloke o text. Sa pagtatapos ng tutorial, binibigyan ng oras ang mga mag-aaral na palawigin ang isang proyekto na sinimulan nilang itayo sa isang app na \"Piliin ang Iyong Sariling Pakikipagsapalaran\" \"Greeting Card\" o \"Personality Quiz.\" Maaari rin silang magpatuloy sa pagbuo ng higit pang mga proyektong itinatampok sa pahina ng code.org/applab.\n\nMagsaya sa pagkumpleto ng Hour of Code mo gamit ang App Lab!\n\n**Angkop sa Edad:** Dinisenyo ang tutorial sa mga mag-aaral na higit sa 13 taong gulang. Dahil pinapayagan nito ang mga mag-aaral na mag-upload ng mga custom na tunog at larawan, hindi ito dapat gamitin ng mga batang mag-aaral nang walang pangangasiwa. Upang maprotektahan ang privacy ng mga mag-aaral, kung wala pang 13 taong gulang ang mga mag-aaral mo, hindi nila magagamit ang tutorial na ito maliban kung magse-set up ka muna ng mga account sa kanila sa isang seksyong iyong pinamamahalaan.",
@@ -5980,9 +6064,10 @@
           "student_overview": "Una inuuri ng mga mag-aaral ang mga bagay bilang alinman sa \"isda\" o \"hindi isda\" upang subukang alisin ang mga basura mula sa karagatan. Pagkatapos, kakailanganin ng mga mag-aaral na palawakin ang kanilang set ng data ng pagsasanay upang maisama ang iba pang nilalang sa dagat. Sa ikalawang bahagi ng aktibidad, pipili ang mga mag-aaral ng kanilang sariling mga label na ilalapat sa mga larawan ng random na nabuong isda. Ginagamit ang data ng pagsasanay na ito sa isang modelo ng machine learning na makapag-label ng mga bagong larawan nang mag-isa."
         },
         "outbreak/Outbreak": {
-          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
-          "preparation": "- Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n- Siguraduhing may reflection journal ang bawat mag-aaral.",
-          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
+          "name": "Pag-coding ng isang Simulasyon",
+          "overview": "Sa araling ito, ang mga mag-aaral sa lahat ng edad ay nakakakuha ng panimulang karanasan sa coding at computer science sa ligtas at sumusuportang kapaligiran. Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
+          "preparation": "#### Isang Linggo Bago ang Iyong Oras ng Code\n\n-   Rebyuhin ang [Gabay ng Tagapagturo sa Oras ng Code](https://hourofcode.com/us/how-to) at [Mabubuting mga Praktis mula sa Matagumpay na mga Tagapagturo](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) upang mag-umpisang planuhin ang event mo sa Hour of Code. \n\n-   [I-register ang event mo sa Hour of Code](https://hourofcode.com/us) kung gusto mong makakuha ng suporta ng silid-aralan, may diskwentong mga poster, o sumali sa robotics give-away (US lamang). \n\n-   Rebyuhin at kumpletuhon ang online tutorial nang ikaw lamang: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   Tiyakin na subukan muna ito bago ito ipakumpleto sa mga mag-aaral mo. \n\n-   Suriin ang teknolohiya mo at magpasya kung kailangan mong i-troubleshoot ang anumang bagay bago ang Hour of Code mo.\n\n### Isang Araw Bago ang Hour of Code Mo\n\n-   Ang bawat mag-aaral na nakakumpleto sa aktibidad ay dapat tatanggap ng isang [certificate](https://studio.code.org/certificates/batch). I-print ang isang sertipiko para sa lahat nang pauna para mas mapadali ito sa dulo ng iyong Oras ng Code. \n\n-   (osyonal) Hikayatin ang mga mag-aaral na magdala ng headphone na gagamitin sa panahon ng aktibidad.",
+          "purpose": "Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
           "student_overview": "Isang virus ang dumating sa Monster Town! Matutong gumawa ng virus simulator at tulungan na maging malusog muli ang mga halimaw."
         },
         "playlab/Play Lab": {
@@ -6025,63 +6110,6 @@
           "preparation": "-   Subukan ang Text Compression Widget\n-   Suriin ang mga tip sa pagtuturo upang magpasya kung aling mga opsyon ang gusto mong gamitin",
           "purpose": "Ang pangunahing prinsipyo sa likod ng compression ay upang bumuo ng paraan o protocol sa paggamit ng mas kaunting mga piraso upang kumatawan sa orihinal na impormasyon. Ang paraan ng pagre-represent namin ng naka-compress na data sa araling ito, na may \"diksyonaryo\" ng mga paulit-ulit na pattern ay katulad ng [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), ngunit dapat tandaan na ang LZW ay bahagyang naiiba sa ginagawa ng mga mag-aaral sa araling ito. Ang mga mag-aaral ay nag-imbento ng kanilang sariling paraan dito. Ang LZW ay ginagamit hindi lamang sa mga text (zip file), kundi pati na rin sa GIF image file format.",
           "student_overview": "Sa ilang mga punto, naabot natin ang pisikal na limitasyon kung gaano tayo kabilis makapagpadala ng mga bit at kung gusto nating magpadala ng malaking impormasyon nang mas mabilis, kailangan nating maghanap ng paraan upang kumatawan sa parehong impormasyon na may mas kaunting mga bit - dapat nating i-compress ang data."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Pagtakas sa Kuwarto"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Digital na Disenyo"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Pag-Program na Pinapatakbo ng mga Events"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Pangunahing Functionality ng App"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Tagakuha at Taga-takda"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Kadalasan na Pagsusuri"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Kolektor Oras ng Code 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Buod at mga Tagubilin sa Pag-Setup"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Pagpapadala ng mga Bits sa isang Nakabahaging Wire"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Pagpapadala ng mga Numero"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Pagpapadala ng Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Pag-broadcast ng mga mensahe"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Mga router at mga address"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Mga Packets at ang Pagiging Maasahan"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manwal na DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Awtomatikong DNS na node"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Internet na Simulator ng Freeplay"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Mood Study"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Jigsaw"
@@ -6202,6 +6230,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musika"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Pagtakas sa Kuwarto"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digital na Disenyo"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Pag-Program na Pinapatakbo ng mga Events"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Pangunahing Functionality ng App"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Tagakuha at Taga-takda"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Panimula sa Computer Science"
@@ -6503,12 +6546,51 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Matinding Hamon - Pag-uunawa"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Kadalasan na Pagsusuri"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw",
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Suriin ang website ng [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para sa higit pang nilalamang pangkaligtasan sa online.",
           "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device.",
           "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Kolektor Oras ng Code 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Buod at mga Tagubilin sa Pag-Setup"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Pagpapadala ng mga Bits sa isang Nakabahaging Wire"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Pagpapadala ng mga Numero"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Pagpapadala ng Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Pag-broadcast ng mga mensahe"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Mga router at mga address"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Mga Packets at ang Pagiging Maasahan"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manwal na DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Awtomatikong DNS na node"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet na Simulator ng Freeplay"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Itim & Puti na Tutoryal sa Pixelasyon"
@@ -6524,6 +6606,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Kulay ng Pixelasyon na Freeplay"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Mood Study"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

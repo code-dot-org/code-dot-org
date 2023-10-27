@@ -99,6 +99,7 @@ html, body, #map-canvas {
 }
 
 .help-choice {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 

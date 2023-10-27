@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-09-11 22:27:57 UTC",
+    "serialized_at": "2023-10-02 16:06:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11369,6 +11369,18 @@
     },
     {
       "name": "Functions",
+      "url": "https://docs.google.com/presentation/d/1GaKD2JihCwsreJPzSTpSrl3MltFWpdwvFgej0QqFQ_s/template/preview",
+      "key": "fucntions_devices",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "fucntions_devices"
+      }
+    },
+    {
+      "name": "Functions",
       "url": "https://youtu.be/TUdtGzQge3M",
       "key": "functions",
       "properties": {
@@ -11389,18 +11401,6 @@
       },
       "seeding_key": {
         "resource.key": "functions_1"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/view",
-      "key": "functions_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "functions_2"
       }
     },
     {
@@ -12140,6 +12140,12 @@
     {
       "seeding_key": {
         "lesson.key": "Functions",
+        "resource.key": "fucntions_devices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
         "resource.key": "functions"
       }
     },
@@ -12147,12 +12153,6 @@
       "seeding_key": {
         "lesson.key": "Functions",
         "resource.key": "functions_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_2"
       }
     },
     {

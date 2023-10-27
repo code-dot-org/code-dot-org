@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {LessonIcons} from './standardsConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class StandardDescriptionCell extends Component {
   static propTypes = {
@@ -112,7 +113,7 @@ const styles = {
     textAlign: 'center',
   },
   tooltipLessonName: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
 };
 

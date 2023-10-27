@@ -3783,6 +3783,9 @@
         "functions_with_parameters/csd/2023": {
           "type": "វីដេអូ"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "អនុ​គមន៍"
+        },
         "student_example_projects/csd/2023": {
           "type": "ប្រភពឯកសារ"
         },
@@ -4683,11 +4686,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "វីដេអូ"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

@@ -104,6 +104,7 @@ class User < ApplicationRecord
   #     child account policy.
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
+  #   ai_rubrics_disabled: Turns off AI assessment for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -140,6 +141,7 @@ class User < ApplicationRecord
     us_state
     country_code
     family_name
+    ai_rubrics_disabled
   )
 
   attr_accessor(
@@ -1210,7 +1212,7 @@ class User < ApplicationRecord
   #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
@@ -1502,6 +1504,10 @@ class User < ApplicationRecord
   # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
+  end
+
+  def over_21?
+    !age.nil? && age.to_i >= 21
   end
 
   def mute_music?
@@ -2217,6 +2223,11 @@ class User < ApplicationRecord
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Returns true when the parent email matches the account email.
+  def parent_created_account?
+    student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
   end
 
   # Temporary: Allow single-auth students to add a parent email so it's possible

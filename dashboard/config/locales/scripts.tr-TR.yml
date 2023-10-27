@@ -9000,7 +9000,7 @@ tr:
           description_short: Minecraft dünyasını kodlamayla keşfet
           student_description: Steve ya da Alex'i Minecraft dünyasında bir maceraya
             çıkarmak için kod blokları kullan.
-          title: Minecraft Kod Saati
+          title: Minecraft Maceracısı
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -10221,6 +10221,103 @@ tr:
               display_name: İçerik
             csd3_2:
               display_name: 'Bölüm 2: Oyun geliştirme'
+        virtual-pl-csa-summer-2024-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-1:
+              name: Eşzamanlı Bölüm 1
+            lesson-2:
+              name: Eşzamansız Bölüm 1
+            lesson-3:
+              name: Eşzamanlı Bölüm 2
+            lesson-4:
+              name: Eşzamansız Bölüm 2
+          title: Gün 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-1:
+              name: Eşzamanlı Bölüm 1
+            lesson-2:
+              name: Eşzamansız Bölüm 1
+            lesson-3:
+              name: Eşzamanlı Bölüm 2
+            lesson-4:
+              name: Eşzamansız Bölüm 2
+          title: Gün 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-1:
+              name: Eşzamanlı Bölüm 1
+            lesson-2:
+              name: Eşzamansız Bölüm 1
+            lesson-3:
+              name: Eşzamanlı Bölüm 2
+            lesson-4:
+              name: Eşzamansız Bölüm 2
+          title: Gün 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-1:
+              name: Eşzamanlı Bölüm 1
+            lesson-2:
+              name: Eşzamansız Bölüm 1
+            lesson-3:
+              name: Eşzamanlı Bölüm 2
+            lesson-4:
+              name: Eşzamansız Bölüm 2
+          title: Gün 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-1:
+              name: Eşzamanlı Bölüm 1
+            lesson-3:
+              name: Eşzamanlı Bölüm 2
+            lesson-4:
+              name: Eşzamansız Bölüm 2
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -10290,6 +10387,23 @@ tr:
           lessons:
             lesson-3:
               name: Değerlendirme
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-4:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          title: Gün 1
+        virtual-pl-csp-summer-day2:
+          title: Gün 2
+        virtual-pl-csp-summer-day3:
+          title: Gün 3
+        virtual-pl-csp-summer-day4:
+          title: Gün 4
         virustest:
           description_short: Bir virüs salgınının simülasyonunu yapmak için Sprite
             Lab'ı kullanın.

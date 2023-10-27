@@ -51,6 +51,7 @@ az:
         csd-pilot:
           description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
         csp-2020:
+          title: Kompüter Elmləri Prinsipləri ('20 -'21)
           description_short: Əsas informatika anlayışlarını öyrənin.
         csd-2020:
           description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir giriş informatika kursu.

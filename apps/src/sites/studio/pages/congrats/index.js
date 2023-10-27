@@ -6,6 +6,8 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import queryString from 'query-string';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(function () {
   const store = getStore();
@@ -37,6 +39,10 @@ $(document).ready(function () {
   } catch (e) {}
 
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
+
+  userType === 'teacher' &&
+    analyticsReporter.sendEvent(EVENTS.TEACHER_HOC_CONGRATS_PAGE_VISITED);
+
   ReactDOM.render(
     <Provider store={store}>
       <Congrats

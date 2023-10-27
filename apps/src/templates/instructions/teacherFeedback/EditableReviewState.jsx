@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import ReactTooltip from 'react-tooltip';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import fontConstants from '@cdo/apps/fontConstants';
 
 // EditableReviewState displays a checkbox which can be in one of 3 states:
 // 1. Checked - meaning the teacher has requested the student to keep working
@@ -111,8 +112,7 @@ const styles = {
     margin: '0 8px',
   },
   keepWorkingText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-semi-bold'],
   },
   awaitingReviewText: {
     fontStyle: 'italic',

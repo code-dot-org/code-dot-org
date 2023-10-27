@@ -78,12 +78,22 @@ const EVENTS = {
   CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT: 'Quick View Clicked',
 
   // Rubrics
-  RUBRIC_OPENED_FROM_FAB_EVENT: 'Rubric Opened From FAB',
-  RUBRIC_CLOSED_FROM_FAB_EVENT: 'Rubric Closed From FAB',
-  RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'Rubric Learning Goal Expanded',
-  RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'Rubric Learning Goal Collapsed',
+  TA_RUBRIC_OPENED_FROM_FAB_EVENT: 'TA Rubric Opened From FAB',
+  TA_RUBRIC_CLOSED_FROM_FAB_EVENT: 'TA Rubric Closed From FAB',
+  TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'TA Rubric Learning Goal Expanded',
+  TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'TA Rubric Learning Goal Collapsed',
+  TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
+  TA_RUBRIC_ON_STUDENT_WORK_UNLOADED: 'TA Rubric On Student Work Unloaded',
+  TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
+  TA_RUBRIC_EVIDENCE_LEVEL_SELECTED: 'TA Rubric Evidence Level Selected',
 
+  // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
+  GUIDE_SENT_EVENT: 'Guide Sent',
+
+  BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
+  TEACHER_HOC_CONGRATS_PAGE_VISITED:
+    'Teacher Hour of Code Congrats Page Visited ',
 };
 
 export {EVENTS};

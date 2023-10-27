@@ -6224,7 +6224,6 @@
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
           "name": "CSF - Kursi C - Sllajdet 2022-2023",
-          "url": "https://docs.google.com/presentation/d/1gBtG-smXiAPsk5LJhkVsoX795WN18AZFRdml5uJynug/template/preview",
           "type": "Sllajdet"
         },
         "my_robotic_friends/coursec/2022": {
@@ -7039,7 +7038,6 @@
           "type": "Burim"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Video"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -9325,6 +9323,10 @@
           "url": "https://youtu.be/5UMKeMPCa7E",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "funksione",
+          "type": "Sllajdet"
+        },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "name": "Modeli 1 - Silueta e Qytetit",
           "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
@@ -10356,7 +10358,6 @@
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2023": {
           "name": "CSF - Kursi C - Sllajdet 2022-2023",
-          "url": "https://docs.google.com/presentation/d/1gBtG-smXiAPsk5LJhkVsoX795WN18AZFRdml5uJynug/template/preview",
           "type": "Sllajdet"
         },
         "my_robotic_friends/coursec/2023": {
@@ -11468,11 +11469,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": "Sllajdet"
         }
       }
     }

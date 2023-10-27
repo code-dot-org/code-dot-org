@@ -5,6 +5,7 @@ import SchoolInfoInputs from '../SchoolInfoInputs';
 import styleConstants from '../../styleConstants';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class CensusTeacherBanner extends Component {
   static propTypes = {
@@ -557,6 +558,6 @@ const styles = {
   },
   updateSchoolLink: {
     cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };

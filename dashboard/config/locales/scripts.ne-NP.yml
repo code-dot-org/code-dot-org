@@ -1415,7 +1415,7 @@ ne:
           description_short: Explore a Minecraft world through code
           student_description: Use blocks of code to take Steve or Alex on an adventure
             through this Minecraft world
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
         minecraft:
           description: Program animals and other Minecraft creatures in your own version
             of Minecraft.

@@ -5,36 +5,39 @@ zh:
   language: English
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
-  campaign_date_start_short: 12月5日
-  campaign_date_start_long: 12月5日
-  campaign_date_short: 12月5日11日
-  campaign_date_full: 12 月 5 日 - 11 日
-  campaign_date_year: '2022'
-  campaign_date_full_year: 2022年12月5-11日
+  campaign_date_start_short: 12月4日
+  campaign_date_start_long: 12月4日
+  campaign_date_short: 12月4日10日
+  campaign_date_full: 12 月 4 日 - 10 日
+  campaign_date_year: '2023'
+  campaign_date_full_year: 2023年12月4-10日
   nonus_campaign_date_start_short: 十月一日
   nonus_campaign_date_start_long: 拾月壹日
   nonus_campaign_date_short: 10 月 1 日 - 12 月 18 日
   nonus_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   latam_campaign_date_start_short: 十月一日
   latam_campaign_date_start_long: 拾月壹日
   latam_campaign_date_short: 10 月 1 日 - 12 月 18 日
   latam_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   europe_campaign_date_start_short: 十月一日
   europe_campaign_date_start_long: 拾月壹日
   europe_campaign_date_short: 10 月 1 日 - 12 月 18 日
   europe_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   africa_campaign_date_start_short: 十月一日
   africa_campaign_date_start_long: 拾月壹日
   africa_campaign_date_short: 10 月 1 日 - 12 月 18 日
   africa_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  hoc2023_header: 人工智能創造力
+  hoc2023_social_creativity_with_ai_title: 一小時玩程式-你會創造什麼？
+  hoc2023_social_creativity_with_ai_desc: 利用計算機科學探索和學習 AI！
   hoc2022_header: 探索，玩耍，創造！
   social_hoc2022_explore_play_create: 使用電腦科學來探索、玩耍和創造！
   codeorg_homepage_hoc2022_body: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多。
@@ -122,6 +125,26 @@ zh:
   curriculum_launch_2023_title: 不可思議的課程内容更新
   curriculum_launch_2023_desc: CSC、CSP、CSD等内容更新，還有全新的課程目錄和重新設計的教學頁面，協助您找到所有內容！
   in_partnership_with: 合作夥伴：
+  shop_code_dot_org_heading: 商店代碼.
+  shop_code_dot_org_desc: 支持我們的工作，自豪地穿上運動。我們的帽子也被奧巴馬總統和名人戴過。
+  spread_the_word_heading: 傳播這個訊息
+  spread_the_word_desc: 透過與您的網路分享 Code.org 來擴大我們的影響力。從社交媒體到電子郵件更新，了解如何幫助我們接觸更多教育工作者，學生和倡導者。
+  follow_us_heading: 在社交媒體上關注我們
+  follow_us_desc: 在社交媒體上與我們保持最新消息，並與您的網絡分享我們的帖子，以保持最新消息並幫助提高知名度。
+  facebook: Pseudoloc-弗诶伊比哦开
+  twitter: Pseudoloc-提尔提提儿
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: 提克托克
+  device_tablet: Pseudoloc-提诶勒伊
+  device_laptop: 筆記型電腦
+  device_desktop_computer: 桌上型電腦
+  device_mobile_device: 行動裝置
+  subscribe_to_emails_heading: 訂閱電子郵件
+  subscribe_to_emails_desc: 透過我們的郵件清單，透過每季更新，閱讀 Code.org 和電腦科學教育的情況。
+  subscribe_to_emails_intl: 訂閱國際更新
+  promote_code_dot_org_heading: 促進代碼.
+  promote_code_dot_org_desc: 借助統計信息，報價和視頻，促進您所在地區的計算機科學。
   afe_partnership_logo_alt: 亞馬遜未來工程師徽標
   afe_partnership_thanks_desc: 亞馬遜未來工程師徽標是一項從童年到職業生涯的全面計劃，旨在激勵、教育和培訓低收入和其他弱勢兒童和年輕人從事計算機科學事業。[瞭解我們的合作夥伴關係](%{afe_url})。
   grade_level: 年級
@@ -134,19 +157,44 @@ zh:
   curricula_desc_middle: 瀏覽引人入勝的產品，讓您和您的初中學生一起探索電腦科學。
   curricula_title_high: 高中課程
   curricula_desc_high: 瀏覽引人注目的課程和活動，邀請您和您的高中生更深入地了解計算機科學。
+  for_administrators_heading: 對於管理員
+  for_administrators_desc: 加入數以千計的學校，他們已經將計算機科學納入他們的課程。
+  for_parents_heading: 致家長
+  for_parents_desc: 您可以幫助鼓勵學生的學校提供或擴展計算機科學教育。
+  for_educators_heading: 致教師
+  for_educators_desc: 通過我們的專業學習工作坊，立即開始教學-無需計算機科學經驗。
   students_label: 學生
   teachers_label: 教師
+  educators_label: Pseudoloc-伊迪西诶哦儿
+  companies_label: 公司
+  districts_label: 地區
+  school_assemblies_label: 學校會議
+  parents_label: Pseudoloc-屁诶伊娜丝
+  public_officials_label: 公職人員
+  volunteers_label: 志願者
+  virtual_events_label: 虛擬活動
   teacher_label_csf: 計算機科學基礎教師
   teacher_label_csd: 計算機科學探索教師
   teacher_label_csp: 計算機科學原理教師
   teacher_label_csc: 計算機科學聯繫教師
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Pseudoloc-提伊西尺儿 哦儿马
+  teacher_forum_desc: 造訪程式碼時間教師論壇，獲取其他教育工作者的建議、見解和支持。
   required_materials: 所需材料：
   optional_materials: 可選材料：
-  call_to_action_explore_roles: 探索開放角色
+  call_to_action_hold_an_event: 舉辦活動
+  call_to_action_register_event: 註冊您的活動
+  call_to_action_select_activity: 選擇活動
+  call_to_action_start_activity: 開始活動
+  call_to_action_get_certificates: 取得憑證
+  call_to_action_go_beyond_hoc: 超越《編碼時刻》
+  call_to_action_view_promo_resources: 查看促銷資源
   call_to_action_learn_more: 進一步學習
   call_to_action_watch_now: 立即觀看
   call_to_action_try_activity: 試用活動
+  call_to_action_try_activities: 嘗試活動
+  call_to_action_explore_activities: 探索活動
+  call_to_action_explore_ai: 探索人工智能
   call_to_action_explore_unit: 探索單位
   call_to_action_explore_curriculum: 探索課程
   call_to_action_explore_curriculum_options: 探索課程選項
@@ -199,6 +247,7 @@ zh:
   call_to_action_find_self_paced_modules: 查找自定進度模組
   call_to_action_join_teacher_forums: 加入教師論壇
   call_to_action_explore_teacher_forums: 探索教師論壇
+  call_to_action_explore_teacher_forum: 探索教師論壇
   call_to_action_explore_career_resources: 探索職業資源
   call_to_action_watch_videos: 觀看視訊
   call_to_action_download_posters: 下載海報
@@ -215,11 +264,29 @@ zh:
   call_to_action_notify_available: 有貨時通知我
   call_to_action_register_early_access: 註冊以取得早期存取
   call_to_action_open_positions: 查看未平倉職位
+  call_to_action_explore_roles: 探索開放角色
   call_to_action_get_guide: 取得指南
   call_to_action_donate_to_cdo: 捐款給我們
   call_to_action_start_fundraiser: 開始籌款活動
   call_to_action_view_donation_policy: 查看捐款政策
   call_to_action_view_donate_bitpay: 使用比特支付捐款
+  call_to_action_make_a_donation: 捐款
+  call_to_action_other_ways_to_give: 其他給予方式
+  call_to_action_become_partner_usa: 成為美國合作夥伴
+  call_to_action_become_partner_intl: 成為國際合作夥伴
+  call_to_action_become_a_volunteer: 成為義工
+  call_to_action_start_translating: 開始翻譯
+  call_to_action_learn_about_advocacy: 了解我們的倡導
+  call_to_action_visit_store: 參觀商店
+  call_to_action_view_faqs: 查看更多常見問題
+  aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者的操作指南
+  aria_label_call_to_action_hoc_how_to_companies: 查看公司的操作指南
+  aria_label_call_to_action_hoc_how_to_districts: 查看區域的操作指南
+  aria_label_call_to_action_hoc_how_to_school_assemblies: 查看學校會議的操作指南
+  aria_label_call_to_action_hoc_how_to_parents: 查看家長的操作指南
+  aria_label_call_to_action_hoc_how_to_public_officials: 查看公職人員的操作指南
+  aria_label_call_to_action_hoc_how_to_volunteers: 查看志願者的操作指南
+  aria_label_call_to_action_hoc_how_to_virtual_events: 查看虛擬活動的操作指南
   aria_label_call_to_action_afe: 進一步了解亞馬遜未來工程師
   aria_label_call_to_action_teaching_csf: 開始教學計算機科學基礎知識專業學習計劃
   aria_label_call_to_action_teaching_csd: 啟動計算機科學發現教學專業學習計劃
@@ -464,6 +531,7 @@ zh:
   heading_these_lessons_will: 這些課程將：
   heading_explore_curriculum_catalog: 在課程目錄中探索我們所有的課程
   heading_csa_ai: 尋找 AP® 考試後要做的事情嗎？
+  heading_bring_cs_to_students: 將計算機科學帶給學生
   professional_learning_section_desc: 在準備教學時獲得所需的支援。老師喜歡它，超過90％的老師將其評為有史以來最好的職業發展！
   professional_learning_section_desc_short: 在準備教學時獲得所需的支援。
   professional_learning_section_desc_self_paced: 及時的支持，讓你可以根據自己的日程安排充滿信心地準備教學。
@@ -624,11 +692,14 @@ zh:
   ai_pl_101_video_title_5: 將 AI 帶入課堂
   ai_pl_101_video_desc_5: 本課程重點介紹有關 AI 的教學，評估和利用 AI 教育工具，以及利用 AI 進行學生評估。它融合了豐富的理論、實務範例和資源，旨在讓教育工作者能夠導航
     AI 環境並增強學生的學習體驗。
+  ai_pl_101_resources_5: 確保負責任的人工智慧方法指南
   ai_pl_101_video_desc_6: 深入瞭解推動人工智慧重大變革的新技術，其中包含兩個有關大型語言模型 (如 ChatGPT) 和生成 AI 的新影片。聽聽這些新技術如何直接從專家那裡工作：OpenAI
     的首席技術官 Mira Murati 和 RunwayML 首席執行官克里斯托瓦爾·瓦倫蘇埃拉。
   ai_pl_101_llm_slides_title: 教育工作者的大語言模型提示
   ai_pl_101_llm_slides_desc: 從 ChatGPT 等 LMS 獲得最佳輸出的工具，從初學者到高級。包括那些只是浸入腳趾的人的入門提示，以及為那些希望最大限度地發揮潛力的人提供高級工具。
   ai_pl_101_resources_3: AI 提示改變學生學習
+  ai_pl_101_resources_section_title: 更多瞭解 AI 的方式
+  ai_pl_101_resources_guide: 同伴指南：
   how_ai_works_hero_heading: AI 如何運作
   how_ai_works_hero_desc: 通過我們的視頻系列視頻和隨附的課程「AI 如何工作」深入人工智能世界！
   how_ai_works_intro_desc: 這一系列的短片和隨附的課堂內課程將向您和您的學生介紹人工智慧的運作方式以及其重要性。您可以根據主題選擇個別課程，在一個班級中探索整個系列主題，或教授所有
@@ -1164,6 +1235,18 @@ zh:
   donate_tabs_amazon_desc: 使用您的亞馬遜帳戶直接捐款。只要按幾下滑鼠，就能順暢地為 Code.org 的使命做出貢獻，並為電腦科學教育的未來提供支援。
   donate_tabs_bitpay_title: 透過 BitPay 以加密貨幣捐款
   donate_tabs_bitpay_desc: 擁抱加密貨幣捐贈的未來。通過 BitPay，您的數字貨幣可以直接支持 Code.org 在擴展計算機科學教育方面的努力。
+  help_page_top_heading: 您可以如何提供幫助
+  help_page_top_desc: 支持我們的使命，使計算機科學可以在任何地方為每個孩子訪問。您的努力有助於我們啟發未來的創新者，並彌合科技教育差距。
+  help_page_top_subhead: 捐款給科德。
+  help_page_top_desc_02: 我們正在努力為每個學生提供學習計算機科學的機會-無論是在線還是在學校中，我們都可以在那裡建立永久性課程並培訓教師。您捐贈的每一美元，就會有一個孩子接觸到計算機科學。
+  help_page_partners_heading: 成為合作夥伴
+  help_page_partners_desc: Code.org 與其他非營利組織合作，成為合作夥伴，協助以當地、可持續的方式傳播電腦科學。進一步了解我們的計劃。
+  help_page_volunteer_heading: 義工, 在, a, 教室
+  help_page_volunteer_desc: 志願者教導一小時玩程式，或在當地教室擔任嘉賓講者。註冊以了解您附近的機會。
+  help_page_translate_heading: 幫助我們翻譯
+  help_page_translate_desc: 志願者已經將我們的教程翻譯成超過 45 種語言。幫助我們繼續為世界各地的學生擴展我們的教程！
+  help_page_speak_for_cs_heading: 講話, 為, 計算機科學, 教育
+  help_page_speak_for_cs_desc: 深入瞭解 Code.org 在美國各地的倡導工作，以及我們建議各州採取的十項政策，讓所有學生都能獲得電腦科學基礎。另外，了解如何推動您所在州的變化。
   hoc_live: 一小時玩程式直播
   hoc_live_sign_up_title: 註冊以取得「一小時玩程式」直播
   hoc_live_learn_title: 透過一小時玩程式直播來學習
@@ -9018,6 +9101,71 @@ zh:
   all: 所有
   dont_know: 我不知道
   language_label: 語言
+  before_hoc: 編碼一小時之前
+  day_of_hoc: 編碼時間的日
+  after_hoc: 編碼一小時之後
+  step_01: 第一步
+  step_02: 第二步
+  step_03: 第三步
+  step_04: 第四步
+  step_05: 第五步
+  step_06: 第六步
+  step_07: 第七步
+  step_08: 第八步
+  hoc_how_to_top_heading: 您的編碼一小時指南
+  hoc_how_to_top_desc: 量身定制的操作指南，提供最佳程式碼一小時體驗。
+  hoc_how_to_top_view_guide: 查看指南
+  hoc_how_to_nav_main_aria_label: 選擇指南
+  hoc_how_to_nav_sidebar_aria_label: 側邊欄導航
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: 程式碼時間是一小時的計算機科學介紹，使用有趣的教程來表明任何人都可以學習基礎知識。今年，我們透過提供包括人工智能
+    (AI) 和非 AI 元件的編碼機會，將程式碼一小時提升到新的高度。無論您或您的學生都是經驗豐富的編程師，還是您所有人都正在開展您的第一次計算機科學探險，這一小時代碼保證了一次非凡的旅程。
+  hoc_how_to_faq_question_prerequisites: 執行一小時程式碼的先決條件是什麼？
+  hoc_how_to_faq_answer_prerequisites: 程式碼一小時運行很簡單，即使是初學者也是如此。您不需要在計算機科學或教學方面的經驗才能激發學生探索，創造和學習新事物。
+  hoc_how_to_faq_question_devices: 我需要哪些裝置才能執行一小時程式碼？
+  hoc_how_to_faq_answer_devices_01: 您可以使用的裝置：
+  hoc_how_to_faq_answer_devices_02: 如果設備有限或無法使用，請嘗試 [配對編程]（%{pair_url}）或探索我們的 [未插拔的活動]（%{unplugged_url}），無需任何設備就可以學習！
+  hoc_how_to_faq_question_volunteer: 誰可以做志工？
+  hoc_how_to_faq_answer_volunteer: 任何對計算機科學教育和增加科技的多樣性充滿熱情的人都可以成為志願者！我們很希望看到各種背景的志願者參加。程式碼時間提供各種各樣的活動，適合所有年齡段和技能水平，因此您不需要成為編程專家即可進行志願服務！
+  hoc_how_to_faq_question_full_hour: 程式碼時間是否需要整個小時？
+  hoc_how_to_faq_answer_full_hour: 許多學生將能夠在不到一小時內完成活動，沒關係！學生可以在其他學生完成活動的同時繼續學習。
+  hoc_how_to_faq_question_account: 學生是否需要使用帳戶登錄？
+  hoc_how_to_faq_answer_account: 學生無需註冊或登錄才能嘗試代碼一小時。註冊代碼時間不會自動創建 Code.org 帳戶。
+  hoc_how_to_resources_heading_educators: 給教師的其他一小時玩程式活動資源：
+  hoc_how_to_resources_promo_heading: 促銷資源
+  hoc_how_to_resources_promo_desc: 找到您所需的所有資源（包括印刷和數字），以引起您的程式碼時的注意力。
+  hoc_how_to_resources_discover_heading: 探索活動
+  hoc_how_to_resources_discover_desc: 探索各種專為所有年齡段設計的一小時教程，並提供超過 45 種語言。
+  hoc_how_to_step_label_plan: 計劃您的程式碼一小時進行的位置和時間
+  hoc_how_to_step_label_choose_activity: 選擇您的活動
+  hoc_how_to_step_label_test_activity: 測試您的活動
+  hoc_how_to_step_label_register_event: 註冊您的活動
+  hoc_how_to_step_label_tell: 告訴您的學生、學校和社區
+  hoc_how_to_step_label_get_coding: 開始編碼！
+  hoc_how_to_step_label_celebrate: Pseudoloc-西伊伊比诶提
+  hoc_how_to_step_label_beyond_hoc: 超越程式碼的一小時
+  hoc_how_to_step_beyond_hoc_subhead: 這並沒有在這裡結束！
+  hoc_how_to_step_beyond_hoc_desc: 計算機科學不必以程式碼一小時結束！雖然 90％ 的父母希望他們的孩子學習計算機科學，但大多數學校仍然不教授它。立即了解如何將
+    CS 帶到孩子的學校。
+  hoc_how_to_step_01_educators_subhead: 選擇適合您可用的學生數量和設備的活動時間和空間。
+  hoc_how_to_step_01_educators_desc_01: 有哪些空間可供您進行編碼一小時？考慮您的空間的技術能力，以及您期望學生使用的設備類型。學生可以在單一裝置上處理教學課程、輪流使用共用裝置，或在課堂白板上一起嘗試教學課程。甚至還有未插拔的教學課程，完全無需設備即可完成。無插電的選項可以在任何地方進行，即使在戶外也可以！
+  hoc_how_to_step_01_educators_desc_02: 在 CS 教育週期間，世界各地的人們都參加了編碼一小時慶祝活動， %{campaign_date}
+    當時發布最新的教程和活動。但是，您可以在一年中的任何一天進行一小時代碼！
+  hoc_how_to_step_02_educators_desc_01: 根據您群組的年齡、經驗、興趣等，探索活動。雖然許多活動都包括教師的課程計劃，讓學生嘗試自主導教學課程也很受歡迎。
+  hoc_how_to_step_02_educators_desc_02: 提前決定是否要為所有學生選擇單一教程，還是讓每個孩子自己選擇自己的教程。
+  hoc_how_to_step_02_educators_desc_03: 今年，您和您的學生可以通過教程，課程計劃和我們的全新 AI 工作方式視頻系列 [了解有關
+    AI 的所有信息]（%ai_url）。
+  hoc_how_to_step_03_educators_desc_01: 在進入課堂之前，請自己嘗試教程，以便您可以回答問題！
+  hoc_how_to_step_03_educators_desc_02: 您還可以在學生計算機或設備上測試教程，以確保它們支持聲音和視頻。頻寬低？計劃在課堂前面顯示視頻，這樣每個學生都不會下載自己的視頻。
+  hoc_how_to_step_03_educators_desc_03: 如果您選擇的教學課程最適合聲音，請考慮為您的課程提供耳機，或要求學生自備耳機。
+  hoc_how_to_step_04_educators_desc_01: 當您註冊一小時代碼活動時，您將收到有用的電子郵件，其中包含有關舉辦成功的代碼一小時的新聞和提示。這也是您可以讓當地志願者知道您的學校正在參與的方式。志願者是一個很好的資源，可以向您的班級講解計算機科學，或幫助您的學生進行編碼一小時活動。
+  hoc_how_to_step_05_educators_desc_01: 通過分享 [勵志視頻]（%{videos_url}）突出多元化的人和計算機科學可以在現實世界中使用的創意方式，讓您的學生感到興奮。
+  hoc_how_to_step_05_educators_desc_02: 與其他可能希望加入樂趣的其他教師分享您的編碼時間計劃！這也是聯繫學校的家長教師學生協會或在家長通訊中分享，讓他們知道他們的孩子正在學習什麼的好機會。
+  hoc_how_to_step_06_educators_desc_01: 將學生引導參與活動，可能通過在板上分享鏈接或通過您的課堂的學習管理系統。您的學生可能會遇到挑戰
+    —— 沒關係！學習編程就像學習一種新語言；您將不會立即流利。如果你不知道答案，你可以一起弄清楚。
+  hoc_how_to_step_07_educators_desc_01: '一定要慶祝成功！在社交媒體上分享編碼一小時活動的照片和視頻。使用 #HourOfCode
+    和 @codeorg，我們也可以突出您的成功！'
+  hoc_how_to_step_07_educators_desc_02: 您還可以打印證書給您的學生以展示他們的成就！
   team_page_full_team_alt_text: 將近 100 名員工穿著藍色和黃色 T 恤的 Code.org 員工在酒店會議室舉辦的 2022 年夏季
     Codechella 活動中擺姿勢。
   careers_page_code_pride_alt_text: 兩位女性呈現的員工微笑著，同時拿著代碼的末端。組織品牌的彩虹橫幅。在他們背後，有幾個人穿著
@@ -9285,6 +9433,9 @@ zh:
   video_library_page_inspirational_video_title_10: 奧巴馬總統談計算機科學（1 分鐘）
   video_library_page_inspirational_video_title_11: 任何人都可以學習（1 分鐘）
   video_library_page_inspirational_video_title_12: 羅闕法爾塔恩努埃斯庫埃斯庫塞拉斯（2 分鐘）
+  video_library_page_inspirational_video_title_13: 美國太空總署慶祝一小時玩程式（2 分鐘）
+  video_library_page_inspirational_video_title_14: 不只是一場比賽 (1 分鐘)
+  video_library_page_inspirational_video_title_15: 利用計算機科學創造（1 分鐘）
   video_library_page_not_hacked_video_title_1: 如何不被黑客攻擊：簡介
   video_library_page_not_hacked_video_title_2: 如何不被黑客攻擊：密碼
   video_library_page_not_hacked_video_title_3: 如何不被黑客入侵：身份驗證和設備鎖定
@@ -9292,6 +9443,90 @@ zh:
   video_library_page_not_hacked_video_title_5: 如何不被黑客攻擊：網站和 Wifi
   video_library_page_not_hacked_video_title_6: 如何不被黑客攻擊：消息傳遞和下載
   video_library_page_not_hacked_video_title_7: 如何不被黑客攻擊：安裝更新
+  about_us_page_title: Pseudoloc-诶比吾提吾丝
+  about_us_page_hero_description: Code.org® 是一個教育創新非營利組織，致力於致力於每個學校的每個學生都有機會學習計算機科學作為他們核心
+    K-12 教育的一部分。我們擴大學校使用計算機科學的機會，重點是增加來自其他代表性不足的群體的年輕女性和學生的參與。Code.org 是美國最大學校區的 K-12
+    計算機科學課程的領先提供商，還組織了年度的 [編碼時間]（%{hour_url}）活動，該活動吸引了全球 15％ 以上的學生。Code.org 受到大方的捐贈者支持，包括微軟，亞馬遜，谷歌和
+    [許多其他人]。（）%{others_url}
+  about_us_page_section_title_1: Code.org 上有超過 800 萬名學生和 200 萬名教師
+  about_us_page_statistic_figcaption: 2021 至 2022 學年開始，Code.org 參與。[請參閱分類數據。] ()%{data_url}
+  about_us_page_statistic_description: Code.org 通過接觸各種背景的學生 —— 技能水平、學校，以及鼓勵他們繼續學習的方式來增加計算機科學的多樣性。Code.org
+    上的絕大多數學生都來自學生團體，歷史上在計算機科學中表現不足。增加計算機科學的多元化是我們工作的基礎，[我們鼓勵您閱讀有關我們的努力的更多信息]（%{diversity_url}）。
+  about_us_page_section_title_2: 新聞中的代碼 .org
+  about_us_page_section_news_description: 查看所有過去的 [新聞和公告]（%{news_url}）
+  about_us_page_section_table: 我們的目標和指標
+  about_us_page_section_table_header_1: 程式碼 .org 目標
+  about_us_page_section_table_header_2: 成就
+  abous_page_section_table_cell_1_1: 提高資訊科技的多元化 *（美國學生）*
+  abous_page_section_table_cell_1_2: Code.org 學生中有 45% 是年輕女性，50％ 是來自邊緣種族和族群的學生，46％
+    的美國學生就讀高級學校。閱讀更多關於 [我們對多樣性的方法]（%{diversity_url}）
+  about_page_section_table_cell_2_1: Pseudoloc-艾娜屁艾伊 提吾伊娜丝
+  about_page_section_table_cell_2_2: 數十萬人試過《編碼時刻》（）。（共%{hour_url}有 426,370,561 人，女性
+    49%）
+  about_page_section_table_cell_3_1: 到達教室
+  about_page_section_table_cell_3_2: 已有 591,636 名教師在 [程式碼工作室] 上教授我們的介紹課程（），並有 19,177,%{code_studio_url}297
+    名學生報名。
+  about_page_section_table_cell_4_1: 準備新的 CS 老師
+  about_page_section_table_cell_4_2: 我們已準備了超過 106,000 名新教師，可以在 K-12 年級教授科學系統。了解我們的
+    [專業學習計劃]（%{learning_programs_url}）
+  about_page_section_table_cell_5_1: 改變學區課程
+  about_page_section_table_cell_5_2: 我們已與 [180 多個最大學區]（%{schoold_disctrict_url}）和
+    60 個區域合作夥伴合作，[將 CS 添加到學校課程中]（）。%{cs_curriculum_url}[了解如何成為區域合作夥伴。]（%{regional_partner_url}）
+  about_page_section_table_cell_6_1: 設定政策以支援 CS
+  about_page_section_table_cell_6_2: "[美國 50 個州的政策變更]%{states_url}（）制定 CS 教育標準，使 CS
+    課程計入高中畢業等 [（詳細信息）]（%{details_url}）"
+  about_page_section_table_cell_7_1: 全球化
+  about_page_section_table_cell_7_2: 我們的課程提供超過 67 種語言，在 180 多個國家/地區使用。
+  about_page_section_table_under_label: 來源：程式碼工作室活動和 [參與教育工作者的調查]（%{educators_url}）
+  about_page_section_title_3: 更多信息，歷史和哲學
+  about_page_section_more_description_1: '2013 年，Code.org 由雙胞胎兄弟 [Hadi]（%{hadi_url}）和
+    [阿里·帕爾托維]（）推出了一個（%{partovi_url}）促進計算 [video]機%{video_url}科學。這部影片在 YouTube 上成為一天的
+    #1 影片，15 萬間學校聯絡我們尋求協助。從那時起，我們已經從一支啟動的志願者團隊擴展到了一個全面的組織，支持全球運動。我們相信，每個孩子都應該提供優質的計算機科學教育，而不只是一些幸運的少數。'
+  about_page_section_more_description_2: 為了支持我們的目標，我們的教育範疇包括設計自己的課程或與他人合作、培訓教師、與大型學區合作、協助改變政府政策、通過合作夥伴關係拓展國際化，以及打破刻型態的行銷。
+  about_page_section_more_description_3: 我們的工作基於 [數十年的努力，無數組織和個人]（%{efforts_url}）他們幫助建立，資助和傳播計算機科學教育。我們感謝受益於更廣泛的計算機科學教育社區的不懈幫助，並
+    [我們感謝所有在多年來支持我們的影響的所有合作夥伴和個人]（%{partners_url}））。
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[我們的核心價值觀和訊息指南]（%{core_url}）"
+  about_page_section_more_list_3: "[我們的課程和教學哲學]（%{curriculum_url}）"
+  about_page_section_more_list_4: "[我們的創始人哈迪·帕爾托維的 TEDx 講座關於為什麼計算機科學適合所有人（視頻）] ()%{tedx_url}"
+  about_page_section_title_4: 在分裂的世界中的統一方法
+  about_page_section_specific_title_1: 在分裂的世界中的統一方法
+  about_page_section_specific_title_2: 我們對無障礙性的承諾
+  about_page_section_specific_title_3: 我們承諾提供免費課程與開放原始碼的技術
+  about_page_section_specific_title_4: 科德 .org 倡導聯盟
+  about_page_section_specific_title_5: K-12 計算機科學框架
+  about_page_section_specific_title_6: 代碼 .org 捐款者
+  about_page_section_specific_title_7: 跟隨我們
+  about_page_section_specific_title_8: Code.org 的全球足跡
+  about_page_section_specific_description_1: Code.org 在 K-12 計算機科學運動中的全球角色僅是因為我們在不同且經常分裂的利益相關者採用統一的方法。在極化日益增加的時代，增加學生機會的想法，團結了來自各個政治範疇的人。Code.org
+    的團隊成員、學生、教師和支持者的觀點多樣化和不同，歡迎他們參與我們的使命。[閱讀更多。]（%{read_more_url}）
+  about_page_section_specific_description_2: Code.org 相信計算機科學是所有學生的基礎，我們致力於在我們的組織中實現公平，訪問性和機會
+    [values.]（%{values_url}）為了實現這一目標，我們致力於找出並消除阻止殘疾學生和教育工作者包容和全面參與的障礙。要進一步了解我們的努力，請參閱我們的
+    [無障礙聲明]。（%{accessibility_url}）
+  about_page_section_specific_description_3: 我們撰寫的所有課程資源和教學課程將永遠免費使用並根據 [Creative
+    Commons]（%{commons_url}）許可證下公開授權，允許其他人為非商業目的製作衍生教育資源。如果您有興趣為商業目的授權我們的材料，請 [聯繫我們]（%{contact_us_url}）。我們的課程被翻譯為全球使用或由不同語言的使用者進行翻譯。我們的技術是以
+    [開源項目] 開發的。（%{open_source_url}）
+  about_page_section_specific_description_4: "[Code.org 倡導聯盟]（%{advocacy_url}）是一個由企業和非營利組織組成的雙黨聯盟，協助建立美國聯邦和州政策，以擴大和維持
+    K-12 計算機科學的訪問權限，並擴大該領域的參與和多樣性。我們將 [共和黨和民主黨政治領袖]（%{leaders_url}）聚集在一起，以支持擴大 K-12
+    計算機科學的訪問和參與。"
+  about_page_section_specific_description_5: Code.org 是指導委員會的成員，協助建立 [K-12 計算機科學框架]（%{framework_url}）-為實施計算機科學教育的州，地區和組織的高級指南。該框架獲得了數百位學者，K-12
+    教育者，軟件公司，非營利組織和州的支持。
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[註冊以接收狀態更新]（%{sign_up_url}）關於 K-12 計算機科學運動的進度以及
+    Code.org 的工作。或在社交媒體上關注 Code.org："
+  about_page_section_specific_description_8: 我們的網站流量超過 40％ 來自美國以外，這個數字繼續上升。為了擴大全球對計算機科學的接觸，我們的團隊與
+    [100 多個國際合作夥伴]（%{partners_url}）密切合作，幫助他們推廣《守則一小時》，倡導政策改變，並培訓教師。我們正在與世界各地的教育部合作，並與經濟合作和發展組織和聯合國教育、科學和文化組織等國際組織合作，將計算機科學成為國際教育演講的一部分。
+  about_page_section_donors_description_1: Code.org® 是一家註冊公共 501c3 非營利組織，獲得公眾的支持。我們感謝支持我們願景的
+    [個人和組織]（%{individuals_url}）的大方支持。
+  about_page_section_donors_description_2: 程式碼的成就（上面）表明我們能夠利用這些美元來實現強勁的成果。但考慮到我們的非營利機構願望，每個學校的每個孩子都應該能夠接觸電腦科學
+    —— 在當今數位世界中成為知識的公民，並測試他們對於進一步探索 CS 作為職業的興趣 —— 我們還有很長的路要走，才能達成支持這一願景的籌款目標。
+  about_page_donors_link_1: 進行捐款
+  about_page_donors_link_2: "[查看我們的捐贈者列表]（%{donors_url}）"
   language_code:
     ar: 阿拉伯人
     az: 阿塞拜疆

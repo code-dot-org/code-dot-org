@@ -122,6 +122,8 @@ nl:
     te sponsoren."
   compatibility:
     upgrade:
+      applab_unsupported_tablet: App Lab werkt het beste op een PC of laptop met muis
+        en toetsenbord. Op je huidige apparaat zou het minder goed kunnen werken.
       link: Leer meer
       unsupported_message: Uw browser wordt niet ondersteund. Probeer uw browser te
         upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van
@@ -268,6 +270,7 @@ nl:
       Hour of Code&reg; zijn handelsmerken van Code.org."
     translate: Help ons te vertalen naar uw taal
     try_hour_of_code: Probeer een Hour of Code!
+    view_code: Bekijk Code
   free_response:
     placeholder: Voer uw antwoord hier in
   gender:
@@ -277,6 +280,8 @@ nl:
     none: Wil ik liever niet zeggen
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
   hello: Hallo wereld
+  hidden_stage: Jouw leraar had jou hier niet verwacht. Vraag je leraar welke les
+    je zou moeten doen.
   hoc_download:
     download_in_Chinese: 'Download in het Chinees:'
     download_in_Croatian: 'Download in het Kroatisch:'

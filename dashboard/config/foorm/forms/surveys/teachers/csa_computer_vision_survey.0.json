@@ -8,7 +8,7 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {
@@ -31,28 +31,28 @@
                   "text": "Post-Module Survey"
                 },
                 {
-                  "value": "post_lesson_1_l1",
-                  "text": "Chapter 1 Lesson 1, Post-Lesson Survey"
+                  "value": "post_lesson_2",
+                  "text": "Lesson 2: Intro to GitHub, Post-Lesson Survey"
                 },
                 {
-                  "value": "post_lesson_1_l2",
-                  "text": "Chapter 1 Lesson 2, Post-Lesson Survey"
+                  "value": "post_lesson_3",
+                  "text": "Lesson 3: Intro to Copilot, Post-Lesson Survey"
                 },
                 {
-                  "value": "post_lesson_1_l3",
-                  "text": "Chapter 1 Lesson 3, Post-Lesson Survey"
+                  "value": "post_lesson_4",
+                  "text": "Lesson 4: Build with Copilot, Post-Lesson Survey"
                 },
                 {
-                  "value": "post_lesson_2_l1",
-                  "text": "Chapter 2 Lesson 1, Post-Lesson Survey"
+                  "value": "post_lesson_5",
+                  "text": "Lesson 5: Intro to AI Models, Post-Lesson Survey"
                 },
                 {
-                  "value": "post_lesson_2_l2",
-                  "text": "Chapter 2 Lesson 2, Post-Lesson Survey"
+                  "value": "post_lesson_6",
+                  "text": "Lesson 6: Training Your Model, Post-Lesson Survey"
                 },
                 {
-                  "value": "post_lesson_2_l3",
-                  "text": "Chapter 2 Lesson 3, Post-Lesson Survey"
+                  "value": "post_lesson_7",
+                  "text": "Lesson 7: Using Your Model, Post-Lesson Survey"
                 }
               ]
             },
@@ -75,6 +75,20 @@
           "library_version": 0,
           "name": "pre_module_survey_header_panel",
           "natalia_comment": "NOTE: Header - Pre-module survey: Displays if {survey_variable}='pre_module', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_module_survey_header_panel",
+          "natalia_comment": "NOTE: Header - Post-module survey: Displays if {survey_variable}='post_module', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_survey_header_panel",
+          "natalia_comment": "NOTE: Header - Post-lesson survey: Displays for all lessons, this is when {survey_variable}<>'pre_module' and {survey_variable} <> 'post_module', conditional logic in library item."
         }
       ]
     },
@@ -86,7 +100,56 @@
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "pre_module_survey_questions_panel",
-          "natalia_comment": "NOTE: Header - Pre-module survey: Displays if {survey_variable}='pre_module', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Pre-module survey: Displays if {survey_variable}='pre_module', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_module_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-module survey: Displays if {survey_variable}='post_module', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_2_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-lesson 2 survey: Displays if {survey_variable}='post_lesson_2', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_3_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-lesson 3 survey: Displays if {survey_variable}='post_lesson_3', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_4_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-lesson 4 survey: Displays if {survey_variable}='post_lesson_4', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_5_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-lesson 5 survey: Displays if {survey_variable}='post_lesson_5', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_6_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-lesson 6 survey: Displays if {survey_variable}='post_lesson_6', conditional logic in library item."
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/csa_computer_vision",
+          "library_version": 0,
+          "name": "post_lesson_7_survey_questions_panel",
+          "natalia_comment": "NOTE: Question panel - Post-lesson 7 survey: Displays if {survey_variable}='post_lesson_7', conditional logic in library item."
         },
         {
           "type": "html",
@@ -96,5 +159,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

@@ -2257,7 +2257,7 @@ ms:
           description_short: Terokai dunia Minecraft melalui pengekodan.
           student_description: Gunakan blok kod untuk membawa Steve atau Alex mengembara
             melalui dunia Minecraft ini.
-          title: Jam Kod Minecraft
+          title: Pengembara Minecraft
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -2269,6 +2269,7 @@ ms:
             Minecraft anda sendiri.
           student_description: Program haiwan dan makhluk Minecraft lain dalam versi
             Minecraft anda sendiri.
+          title: Pereka Minecraft
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:

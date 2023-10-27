@@ -5,36 +5,40 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 7 Dis.
-  campaign_date_start_long: 7 Disember
-  campaign_date_short: 7-13 Dis.
-  campaign_date_full: 7-13 Disember
-  campaign_date_year: '2020'
-  campaign_date_full_year: 5-11 Disember 2022
+  campaign_date_start_short: 4 Dis
+  campaign_date_start_long: 4 Disember
+  campaign_date_short: 4-10 Dis.
+  campaign_date_full: 4-10 Disember
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 Disember 2023
   nonus_campaign_date_start_short: 1 Okt.
   nonus_campaign_date_start_long: 1 Oktober
   nonus_campaign_date_short: 1 Oktober - 18 Disember
   nonus_campaign_date_full: 1 Oktober - 18 Disember
-  nonus_campaign_date_year: '2020'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 Oktober 2022 - 18 Disember 2022
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktober
   latam_campaign_date_short: 1 Oktober - 18 Disember
   latam_campaign_date_full: 1 Oktober - 18 Disember
-  latam_campaign_date_year: '2020'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 Oktober 2022 - 18 Disember 2022
   europe_campaign_date_start_short: 10 Okt.
   europe_campaign_date_start_long: 10 Oktober
   europe_campaign_date_short: 10-25 Okt.
   europe_campaign_date_full: 10-25 Oktober
-  europe_campaign_date_year: '2020'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10-25 Oktober 2020
   africa_campaign_date_start_short: 1 Okt.
   africa_campaign_date_start_long: 1 Oktober
   africa_campaign_date_short: 1-31 Okt.
   africa_campaign_date_full: 1-31 Oktober
-  africa_campaign_date_year: '2020'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1-31 Oktober 2020
+  hoc2023_header: Kreativiti dengan AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Apa yang akan anda buat?
+  hoc2023_social_creativity_with_ai_desc: Gunakan sains komputer untuk meneroka dan
+    belajar tentang AI!
   hoc2022_header: Meneroka, Bermain, Mencipta!
   social_hoc2022_explore_play_create: Gunakan sains komputer untuk meneroka, bermain
     dan mencipta!
@@ -186,6 +190,33 @@ ms:
     - ditambah dengan Katalog Kurikulum baharu dan halaman Teach direka bentuk semula
     untuk membantu anda mencari semuanya!
   in_partnership_with: Dengan kerjasama
+  shop_code_dot_org_heading: Kedai Code.org
+  shop_code_dot_org_desc: Sokong kerja kami dan pakai pergerakan dengan bangga. Topi
+    kami telah dipakai oleh Presiden Obama dan selebriti juga.
+  spread_the_word_heading: Sebarkan berita ini
+  spread_the_word_desc: Tingkatkan kesan kami dengan berkongsi Code.org dengan rangkaian
+    anda. Dari media sosial hingga kemas kini e-mel, ketahui cara anda dapat membantu
+    kami menjangkau lebih banyak pendidik, pelajar, dan penyokong.
+  follow_us_heading: Ikuti kami di media sosial
+  follow_us_desc: Ikuti perkembangan terkini dengan kami di media sosial dan kongsi
+    siaran kami dengan rangkaian anda untuk terus dimaklumkan dan membantu mendorong
+    kesedaran.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Komputer riba
+  device_desktop_computer: Komputer Desktop
+  device_mobile_device: Peranti Mudah Alih
+  subscribe_to_emails_heading: Langgan e-mel
+  subscribe_to_emails_desc: Baca tentang apa yang berlaku di Code.org dan dalam pendidikan
+    sains komputer melalui kemas kini suku tahunan melalui senarai mel kami.
+  subscribe_to_emails_intl: Langgan kemas kini antarabangsa
+  promote_code_dot_org_heading: Menggalakkan Code.org
+  promote_code_dot_org_desc: Menggalakkan sains komputer di kawasan anda dengan bantuan
+    statistik, petikan, dan video.
   afe_partnership_logo_alt: Logo Jurutera Masa Depan Amazon
   afe_partnership_thanks_desc: Amazon Future Engineer ialah program daripada kanak-kanak
     hingga kerjaya yang komprehensif untuk memberi inspirasi, mendidik, dan melatih
@@ -206,19 +237,48 @@ ms:
   curricula_desc_high: Semak imbas kursus dan aktiviti menarik yang menjemput anda
     dan pelajar sekolah menengah anda untuk menggali lebih mendalam ke dalam sains
     komputer.
+  for_administrators_heading: Untuk pentadbir
+  for_administrators_desc: Sertai beribu-ribu sekolah yang telah memasukkan sains
+    komputer ke dalam kurikulum mereka.
+  for_parents_heading: Untuk ibubapa
+  for_parents_desc: Anda boleh membantu menggalakkan sekolah pelajar anda untuk menawarkan
+    atau mengembangkan pendidikan sains komputer.
+  for_educators_heading: Untuk warga pendidik
+  for_educators_desc: Mula mengajar hari ini - tiada pengalaman sains komputer diperlukan
+    - dengan bengkel pembelajaran profesional kami.
   students_label: Pelajar
   teachers_label: Guru
+  educators_label: Pendidik
+  companies_label: Syarikat
+  districts_label: Daerah
+  school_assemblies_label: Perhimpunan Sekolah
+  parents_label: Ibu bapa
+  public_officials_label: Pegawai Awam
+  volunteers_label: Sukarelawan
+  virtual_events_label: Acara Maya
   teacher_label_csf: Guru Asas CS
   teacher_label_csd: Guru Penemuan CS
   teacher_label_csp: Guru Prinsip CS
   teacher_label_csc: Guru CS Connections
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Forum Guru
+  teacher_forum_desc: Lawati Forum Guru Jam Kod untuk mendapatkan nasihat, wawasan
+    dan sokongan daripada pendidik lain.
   required_materials: 'Bahan yang Diperlukan:'
   optional_materials: 'Bahan Pilihan:'
-  call_to_action_explore_roles: Terokai peranan terbuka
+  call_to_action_hold_an_event: Pegang acara
+  call_to_action_register_event: Daftar acara anda
+  call_to_action_select_activity: Pilih aktiviti
+  call_to_action_start_activity: Mulakan aktiviti
+  call_to_action_get_certificates: Dapatkan sijil
+  call_to_action_go_beyond_hoc: Melangkaui Jam Kod
+  call_to_action_view_promo_resources: Lihat sumber promo
   call_to_action_learn_more: Ketahui lebih lanjut
   call_to_action_watch_now: Tonton sekarang
   call_to_action_try_activity: Cuba aktiviti
+  call_to_action_try_activities: Cuba aktiviti
+  call_to_action_explore_activities: Terokai aktiviti
+  call_to_action_explore_ai: Terokai AI
   call_to_action_explore_unit: Terokai unit
   call_to_action_explore_curriculum: Terokai kurikulum
   call_to_action_explore_curriculum_options: Terokai pilihan kurikulum
@@ -271,6 +331,7 @@ ms:
   call_to_action_find_self_paced_modules: Cari modul kendiri
   call_to_action_join_teacher_forums: Sertai forum guru
   call_to_action_explore_teacher_forums: Terokai forum guru
+  call_to_action_explore_teacher_forum: Terokai forum guru
   call_to_action_explore_career_resources: Terokai sumber kerjaya
   call_to_action_watch_videos: Tonton video
   call_to_action_download_posters: Muat turun poster
@@ -287,11 +348,32 @@ ms:
   call_to_action_notify_available: Beritahu saya apabila tersedia
   call_to_action_register_early_access: Daftar untuk akses awal
   call_to_action_open_positions: Lihat kedudukan terbuka
+  call_to_action_explore_roles: Terokai peranan terbuka
   call_to_action_get_guide: Dapatkan panduan
   call_to_action_donate_to_cdo: Derma kepada Code.org
   call_to_action_start_fundraiser: Mulakan pengumpulan dana
   call_to_action_view_donation_policy: Lihat dasar derma
   call_to_action_view_donate_bitpay: Derma dengan BitPay
+  call_to_action_make_a_donation: Buat sumbangan
+  call_to_action_other_ways_to_give: Cara lain untuk memberi
+  call_to_action_become_partner_usa: Menjadi rakan kongsi Amerika Syarikat
+  call_to_action_become_partner_intl: Menjadi rakan kongsi antarabangsa
+  call_to_action_become_a_volunteer: Menjadi sukarelawan
+  call_to_action_start_translating: Mula menterjemahkan
+  call_to_action_learn_about_advocacy: Ketahui tentang advokasi kami
+  call_to_action_visit_store: Lawati kedai
+  call_to_action_view_faqs: Lihat lebih banyak Soalan Lazim
+  aria_label_call_to_action_hoc_how_to_educators: Lihat panduan cara untuk Pendidik
+  aria_label_call_to_action_hoc_how_to_companies: Lihat panduan cara untuk Syarikat
+  aria_label_call_to_action_hoc_how_to_districts: Lihat panduan cara untuk Daerah
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Lihat panduan cara untuk
+    Perhimpunan Sekolah
+  aria_label_call_to_action_hoc_how_to_parents: Lihat panduan cara untuk ibu bapa
+  aria_label_call_to_action_hoc_how_to_public_officials: Lihat panduan cara untuk
+    Pegawai Awam
+  aria_label_call_to_action_hoc_how_to_volunteers: Lihat panduan cara untuk Sukarelawan
+  aria_label_call_to_action_hoc_how_to_virtual_events: Lihat panduan cara untuk Acara
+    Maya
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -634,6 +716,7 @@ ms:
   heading_these_lessons_will: 'Pelajaran ini akan:'
   heading_explore_curriculum_catalog: Terokai semua kursus kami dalam Katalog Kurikulum
   heading_csa_ai: Mencari perkara yang perlu dilakukan selepas peperiksaan AP®?
+  heading_bring_cs_to_students: Membawa sains komputer kepada pelajar
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
     sebagai pembangunan profesional terbaik yang pernah ada!
@@ -910,6 +993,8 @@ ms:
     Dengan gabungan teori, contoh praktikal dan sumber yang kaya, ia bertujuan untuk
     memperkasakan pendidik untuk menavigasi landskap AI dan meningkatkan pengalaman
     pembelajaran pelajar.
+  ai_pl_101_resources_5: Panduan untuk Memastikan Pendekatan Bertanggungjawab terhadap
+    AI
   ai_pl_101_video_desc_6: 'Ketahui lebih lanjut mengenai teknologi baru yang mendorong
     perubahan besar dalam AI, yang menampilkan dua video baru pada Model Bahasa Besar
     (seperti ChatGPT) dan Generative AI. Dengar bagaimana teknologi baru ini berfungsi
@@ -921,6 +1006,8 @@ ms:
     mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimumkan
     potensi mereka.
   ai_pl_101_resources_3: AI Prompts untuk Mengubah Pembelajaran Pelajar
+  ai_pl_101_resources_section_title: Lebih banyak cara untuk belajar tentang AI
+  ai_pl_101_resources_guide: 'Panduan pendamping:'
   how_ai_works_hero_heading: Bagaimana AI Berfungsi
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” siri video kami dan
     pelajaran yang menyertainya!
@@ -1790,6 +1877,32 @@ ms:
   donate_tabs_bitpay_desc: Merangkul masa depan memberi dengan cryptocurrency. Melalui
     BitPay, mata wang digital anda boleh terus menyokong usaha Code.org dalam mengembangkan
     pendidikan sains komputer.
+  help_page_top_heading: Bagaimana anda boleh membantu
+  help_page_top_desc: Sokong misi kami untuk menjadikan sains komputer dapat diakses
+    oleh setiap kanak-kanak, di mana sahaja. Usaha anda membantu kami memberi inspirasi
+    kepada inovator masa depan dan merapatkan jurang pendidikan teknologi.
+  help_page_top_subhead: Buat sumbangan kepada Code.org
+  help_page_top_desc_02: Kami sedang berusaha untuk memberi peluang kepada setiap
+    pelajar untuk belajar sains komputer - baik dalam talian DAN di sekolah, di mana
+    kami menubuhkan kursus tetap dan melatih guru. Untuk setiap dolar yang anda sumbangkan,
+    seorang kanak-kanak diperkenalkan kepada sains komputer.
+  help_page_partners_heading: Menjadi rakan kongsi
+  help_page_partners_desc: Code.org bekerjasama dengan organisasi bukan untung lain
+    sebagai rakan kongsi untuk membantu menyebarkan sains komputer secara tempatan
+    dan lestari. Ketahui lebih lanjut tentang program kami.
+  help_page_volunteer_heading: Sukarelawan di dalam kelas
+  help_page_volunteer_desc: Sukarelawan untuk mengajar Jam Kod atau menjadi penceramah
+    tetamu di bilik darjah tempatan. Daftar untuk mendengar tentang peluang berhampiran
+    anda.
+  help_page_translate_heading: Bantu kami menterjemahkan
+  help_page_translate_desc: Sukarelawan telah menterjemahkan tutorial kami dalam lebih
+    daripada 45 bahasa. Bantu kami terus mengembangkan tutorial kami untuk pelajar
+    di seluruh dunia!
+  help_page_speak_for_cs_heading: Bercakap untuk pendidikan sains komputer
+  help_page_speak_for_cs_desc: Ketahui lebih lanjut mengenai kerja advokasi Code.org
+    di seluruh A.S. dan sepuluh dasar yang kami cadangkan negara pakai untuk menjadikan
+    sains komputer asas untuk semua pelajar. Selain itu, ketahui bagaimana anda boleh
+    memacu perubahan dalam keadaan anda.
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod
@@ -13713,6 +13826,132 @@ ms:
   all: Semua
   dont_know: Saya tidak tahu
   language_label: Bahasa
+  before_hoc: Sebelum Jam Kod
+  day_of_hoc: Hari Jam Kod
+  after_hoc: Selepas Jam Kod
+  step_01: Langkah 1
+  step_02: Langkah 2
+  step_03: Langkah 3
+  step_04: Langkah 4
+  step_05: Langkah 5
+  step_06: Langkah 6
+  step_07: Langkah 7
+  step_08: Langkah 8
+  hoc_how_to_top_heading: Panduan anda untuk Jam Kod
+  hoc_how_to_top_desc: Panduan cara yang disesuaikan untuk pengalaman Hour of Code
+    terbaik.
+  hoc_how_to_top_view_guide: Lihat panduan untuk
+  hoc_how_to_nav_main_aria_label: Pilih panduan
+  hoc_how_to_nav_sidebar_aria_label: Navigasi Sidebar
+  hoc_how_to_educators_intro_heading: Cara merancang Jam Kod anda
+  hoc_how_to_educators_intro_desc: Hour of Code adalah pengenalan satu jam kepada
+    sains komputer, menggunakan tutorial yang menyeronokkan untuk menunjukkan bahawa
+    sesiapa sahaja boleh mempelajari asas-asas. Tahun ini, kami mengambil Hour of
+    Code ke tahap baru dengan menawarkan peluang pengekodan yang merangkumi kedua-dua
+    komponen kecerdasan buatan (AI) dan bukan AI. Sama ada anda atau pelajar anda
+    adalah pengkod yang berpengalaman atau anda semua sedang memulakan ekspedisi sains
+    komputer pertama anda, Jam Kod ini menjanjikan pelayaran yang luar biasa.
+  hoc_how_to_faq_question_prerequisites: Apakah prasyarat untuk melakukan Jam Kod?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code mudah dijalankan - walaupun untuk
+    pemula. Anda tidak memerlukan pengalaman dalam sains komputer atau pengajaran
+    untuk memberi inspirasi kepada pelajar untuk meneroka, mencipta, dan belajar sesuatu
+    yang baru.
+  hoc_how_to_faq_question_devices: Apakah peranti yang saya perlukan untuk menjalankan
+    Hour of Code?
+  hoc_how_to_faq_answer_devices_01: 'Peranti yang boleh anda gunakan:'
+  hoc_how_to_faq_answer_devices_02: Jika peranti terhad atau tidak tersedia, cuba
+    [pasangan pengaturcaraan] (%{pair_url}) atau terokai [aktiviti yang tidak disambungkan]
+    kami (%{unplugged_url}) untuk belajar tanpa sebarang peranti sama sekali!
+  hoc_how_to_faq_question_volunteer: Siapakah yang boleh menjadi sukarelawan?
+  hoc_how_to_faq_answer_volunteer: Sesiapa yang bersemangat tentang pendidikan sains
+    komputer dan meningkatkan kepelbagaian dalam teknologi boleh menjadi sukarelawan!
+    Kami ingin melihat sukarelawan dari semua latar belakang mengambil bahagian. Hour
+    of Code menampilkan pelbagai aktiviti untuk semua peringkat umur dan kemahiran,
+    jadi anda tidak perlu menjadi pakar pengaturcaraan untuk menjadi sukarelawan!
+  hoc_how_to_faq_question_full_hour: Adakah Jam Kod akan mengambil masa satu jam penuh?
+  hoc_how_to_faq_answer_full_hour: Ramai pelajar akan dapat menyelesaikan aktiviti
+    mereka dalam masa kurang dari satu jam, dan tidak mengapa! Pelajar boleh terus
+    belajar sementara pelajar lain menyelesaikan aktiviti mereka.
+  hoc_how_to_faq_question_account: Adakah pelajar perlu daftar masuk dengan menggunakan
+    akaun?
+  hoc_how_to_faq_answer_account: Tiada pendaftaran atau log masuk diperlukan untuk
+    pelajar mencuba Jam Kod. Mendaftar untuk Hour of Code TIDAK membuat akaun Code.org
+    secara automatik.
+  hoc_how_to_resources_heading_educators: Sumber Jam Kod lain untuk pendidik
+  hoc_how_to_resources_promo_heading: Sumber Promosi
+  hoc_how_to_resources_promo_desc: Cari semua sumber yang anda perlukan—cetak dan
+    digital—untuk memberi perhatian kepada Jam Kod anda.
+  hoc_how_to_resources_discover_heading: Temui Aktiviti
+  hoc_how_to_resources_discover_desc: Terokai pelbagai pilihan tutorial satu jam yang
+    direka untuk semua peringkat umur dalam lebih daripada 45 bahasa.
+  hoc_how_to_step_label_plan: Rancang di mana dan bila anda akan melakukan Hour of
+    Code anda
+  hoc_how_to_step_label_choose_activity: Pilih aktiviti anda
+  hoc_how_to_step_label_test_activity: Uji aktiviti anda
+  hoc_how_to_step_label_register_event: Daftar acara anda
+  hoc_how_to_step_label_tell: Beritahu pelajar, sekolah, dan komuniti anda
+  hoc_how_to_step_label_get_coding: Dapatkan pengekodan!
+  hoc_how_to_step_label_celebrate: Raikan
+  hoc_how_to_step_label_beyond_hoc: Di luar Jam Kod
+  hoc_how_to_step_beyond_hoc_subhead: Ia tidak berakhir di sini!
+  hoc_how_to_step_beyond_hoc_desc: Sains komputer tidak perlu berakhir dengan Jam
+    Kod! Walaupun 90% ibu bapa mahu anak mereka belajar sains komputer, kebanyakan
+    sekolah masih tidak mengajarnya. Ketahui cara membawa CS ke sekolah anak anda
+    hari ini.
+  hoc_how_to_step_01_educators_subhead: Pilih masa dan ruang acara yang sesuai untuk
+    bilangan pelajar dan peranti yang anda ada.
+  hoc_how_to_step_01_educators_desc_01: Apakah ruang yang tersedia untuk anda lakukan
+    Jam Kod anda? Pertimbangkan keupayaan teknologi ruang anda, dan jenis peranti
+    yang anda harapkan untuk bekerja oleh pelajar anda. Pelajar boleh mengusahakan
+    tutorial pada satu peranti, bergilir-gilir menggunakan peranti yang dikongsi,
+    atau mencuba tutorial bersama di papan putih bilik darjah. Terdapat juga tutorial
+    yang dicabut yang boleh diselesaikan tanpa peranti sama sekali. Pilihan yang tidak
+    dicabut boleh dilakukan di mana sahaja — walaupun di luar rumah!
+  hoc_how_to_step_01_educators_desc_02: Orang di seluruh dunia menyertai sambutan
+    Hour of Code semasa Minggu Pendidikan CS %{campaign_date} apabila tutorial dan
+    aktiviti terkini dikeluarkan. Tetapi anda boleh melakukan Jam Kod pada bila-bila
+    hari sepanjang tahun!
+  hoc_how_to_step_02_educators_desc_01: Terokai aktiviti berdasarkan umur, pengalaman,
+    minat dan banyak lagi kumpulan anda. Sangat popular bagi pelajar untuk mencuba
+    tutorial yang dipimpin sendiri, walaupun banyak aktiviti termasuk rancangan pelajaran
+    untuk guru untuk membimbing perbincangan atau melanjutkan aktiviti juga.
+  hoc_how_to_step_02_educators_desc_02: Tentukan lebih awal jika anda ingin memilih
+    tutorial tunggal untuk semua pelajar anda, atau biarkan setiap anak memilih sendiri.
+  hoc_how_to_step_02_educators_desc_03: Tahun ini, anda dan pelajar anda boleh [belajar
+    semua tentang AI] (%ai_url) melalui tutorial, rancangan pelajaran, dan siri video
+    How AI Works baharu kami.
+  hoc_how_to_step_03_educators_desc_01: Cuba tutorial sendiri sebelum anda masuk ke
+    dalam kelas supaya anda boleh menjawab soalan!
+  hoc_how_to_step_03_educators_desc_02: Anda juga boleh menguji tutorial pada komputer
+    atau peranti pelajar untuk memastikan mereka menyokong bunyi dan video. Mempunyai
+    jalur lebar yang rendah? Rancang untuk menunjukkan video di bahagian depan kelas,
+    jadi setiap pelajar tidak memuat turun video mereka sendiri.
+  hoc_how_to_step_03_educators_desc_03: Pertimbangkan untuk menyediakan fon kepala
+    untuk kelas anda, atau minta pelajar membawa mereka sendiri, jika tutorial yang
+    anda pilih berfungsi dengan baik dengan bunyi.
+  hoc_how_to_step_04_educators_desc_01: Apabila anda mendaftarkan acara Hour of Code
+    anda, anda akan menerima e-mel yang berguna dengan berita dan petua untuk menganjurkan
+    Hour of Code yang berjaya. Ini juga cara anda boleh memberitahu sukarelawan tempatan
+    mengetahui sekolah anda mengambil bahagian. Sukarelawan adalah sumber yang hebat
+    dan boleh datang bercakap dengan kelas anda tentang sains komputer atau membantu
+    pelajar anda dengan aktiviti Hour of Code.
+  hoc_how_to_step_05_educators_desc_01: Dapatkan pelajar anda teruja untuk acara itu
+    dengan berkongsi [video inspirasi] (%{videos_url}) menonjolkan pelbagai orang
+    dan cara kreatif bahawa sains komputer boleh digunakan di dunia nyata.
+  hoc_how_to_step_05_educators_desc_02: Kongsi rancangan Hour of Code anda dengan
+    guru lain yang mungkin ingin menyertai keseronokan! Ini juga merupakan peluang
+    terbaik untuk menghubungi Persatuan Pelajar Guru Ibu Bapa sekolah anda atau berkongsi
+    surat berita ibu bapa, memberitahu mereka apa yang anak-anak mereka belajar.
+  hoc_how_to_step_06_educators_desc_01: Arahkan pelajar anda ke aktiviti tersebut,
+    mungkin dengan berkongsi pautan di papan atau melalui sistem pengurusan pembelajaran
+    bilik darjah anda. Pelajar anda mungkin menghadapi cabaran-tidak mengapa! Belajar
+    untuk program adalah seperti belajar bahasa baru; anda tidak akan fasih dengan
+    segera. Sekiranya anda tidak tahu jawapannya, anda boleh memikirkannya bersama.
+  hoc_how_to_step_07_educators_desc_01: 'Pastikan untuk meraikan kejayaan! Kongsi
+    foto dan video acara Hour of Code anda di media sosial. Gunakan #HourOfCode dan
+    @codeorg supaya kami dapat menyerlahkan kejayaan anda juga!'
+  hoc_how_to_step_07_educators_desc_02: Anda juga boleh mencetak sijil untuk pelajar
+    anda untuk menunjukkan pencapaian mereka!
   team_page_full_team_alt_text: Hampir 100 pekerja Code.org dalam kemeja-t biru dan
     kuning yang sepadan berpose di bilik persidangan hotel untuk acara Codechella
     musim panas 2022 syarikat.
@@ -14254,6 +14493,10 @@ ms:
     minit)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA Meraikan Jam Kod (2 minit)
+  video_library_page_inspirational_video_title_14: Ia Lebih Daripada Permainan (1
+    min)
+  video_library_page_inspirational_video_title_15: Buat Dengan Sains Komputer (1 min)
   video_library_page_not_hacked_video_title_1: 'Bagaimana Untuk Tidak Digodam: Pengenalan'
   video_library_page_not_hacked_video_title_2: 'Bagaimana Untuk Tidak Digodam: Kata
     Laluan'
@@ -14266,6 +14509,163 @@ ms:
     dan Muat Turun'
   video_library_page_not_hacked_video_title_7: 'Bagaimana Untuk Tidak Digodam: Pasang
     Kemas Kini'
+  about_us_page_title: Tentang Kami
+  about_us_page_hero_description: Code.org® adalah inovasi pendidikan bukan untung
+    yang didedikasikan untuk visi bahawa setiap pelajar di setiap sekolah mempunyai
+    peluang untuk belajar sains komputer sebagai sebahagian daripada pendidikan K-12
+    teras mereka. Kami memperluaskan akses kepada sains komputer di sekolah, dengan
+    fokus pada peningkatan penyertaan wanita muda dan pelajar dari kumpulan lain yang
+    kurang diwakili. Pembekal utama kurikulum sains komputer K-12 di daerah sekolah
+    terbesar di Amerika Syarikat, Code.org juga menganjurkan kempen tahunan [Hour
+    of Code] (%{hour_url}), yang telah melibatkan lebih daripada 15% daripada semua
+    pelajar di dunia. Code.org disokong oleh penderma murah hati termasuk Microsoft,
+    Amazon, Google dan [banyak lagi.]%{others_url}
+  about_us_page_section_title_1: Lebih 80 juta pelajar dan 2 juta guru di Code.org
+  about_us_page_statistic_figcaption: Penyertaan Code.org dari tahun persekolahan
+    2021-2022. [Lihat data yang dipisahkan.] ()%{data_url}
+  about_us_page_statistic_description: Code.org meningkatkan kepelbagaian dalam sains
+    komputer dengan menjangkau pelajar dari semua latar belakang di mana mereka berada
+    - di peringkat kemahiran mereka, di sekolah mereka, dan dengan cara yang memberi
+    inspirasi kepada mereka untuk terus belajar. Sebilangan besar pelajar di Code.org
+    adalah dari kumpulan pelajar yang secara historis kurang diwakili dalam sains
+    komputer. Meningkatkan kepelbagaian dalam sains komputer adalah asas kepada kerja
+    kami, dan [kami menggalakkan anda membaca lebih lanjut mengenai usaha kami] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org dalam Berita
+  about_us_page_section_news_description: Lihat semua masa lalu [berita dan pengumuman]
+    (%{news_url})
+  about_us_page_section_table: Matlamat dan metrik kami
+  about_us_page_section_table_header_1: Matlamat Code.org
+  about_us_page_section_table_header_2: Pencapaian
+  abous_page_section_table_cell_1_1: Meningkatkan kepelbagaian dalam CS* (pelajar
+    AS) *
+  abous_page_section_table_cell_1_2: 45% pelajar Code.org adalah wanita muda, 50%
+    adalah pelajar dari kumpulan kaum dan etnik yang terpinggir, dan 46% pelajar AS
+    berada di sekolah keperluan tinggi. Baca lebih lanjut mengenai [pendekatan kami
+    terhadap kepelbagaian.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirasi pelajar
+  about_page_section_table_cell_2_2: Puluhan juta telah mencuba [Jam Kod] (%{hour_url}).
+    (426,370,561 berkhidmat. 49% wanita)
+  about_page_section_table_cell_3_1: Jangkau bilik darjah
+  about_page_section_table_cell_3_2: 591,636 guru telah mendaftar untuk mengajar kursus
+    pengenalan kami di [Code Studio] (%{code_studio_url}) dan 19,177,297 pelajar mendaftar.
+  about_page_section_table_cell_4_1: Prep guru CS baru
+  about_page_section_table_cell_4_2: Kami telah menyediakan lebih daripada 106,000
+    guru baru untuk mengajar CS merentas gred K-12. Ketahui tentang [program pembelajaran
+    profesional kami.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Tukar kurikulum daerah sekolah
+  about_page_section_table_cell_5_2: Kami telah bekerjasama dengan [180+ daerah sekolah
+    terbesar] (%{schoold_disctrict_url}) dan 60 rakan serantau untuk [menambah CS
+    ke kurikulum sekolah] (%{cs_curriculum_url}). [Ketahui tentang menjadi rakan kongsi
+    serantau.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Sediakan dasar untuk menyokong CS
+  about_page_section_table_cell_6_2: "[Dasar berubah di 50 negeri AS] (%{states_url})
+    untuk menetapkan piawaian pendidikan CS, membuat kursus CS dikira ke arah tamat
+    pengajian sekolah menengah, dll. [(butiran)] (%{details_url})"
+  about_page_section_table_cell_7_1: Pergi global
+  about_page_section_table_cell_7_2: Kursus kami boleh didapati dalam lebih daripada
+    67 bahasa, digunakan di 180+ negara.
+  about_page_section_table_under_label: 'Sumber: Aktiviti Kod Studio dan [tinjauan
+    pendidik yang mengambil bahagian] (%{educators_url})'
+  about_page_section_title_3: Maklumat lanjut, sejarah, dan falsafah
+  about_page_section_more_description_1: 'Pada tahun 2013, Code.org dilancarkan oleh
+    saudara kembar [Hadi](%{hadi_url}) dan [Ali Partovi] (%{partovi_url}) dengan ()
+    mempromosikan [video]s%{video_url}ains komputer. Video ini menjadi #1 di YouTube
+    selama sehari, dan 15,000 sekolah menghubungi kami untuk mendapatkan bantuan.
+    Sejak itu, kami telah berkembang dari kakitangan sukarelawan bootstrapped untuk
+    membina organisasi penuh yang menyokong gerakan di seluruh dunia. Kami percaya
+    bahawa pendidikan sains komputer yang berkualiti harus tersedia untuk setiap kanak-kanak,
+    bukan hanya beberapa orang yang bertuah.'
+  about_page_section_more_description_2: 'Untuk menyokong matlamat kami, kami bekerja
+    di seluruh spektrum pendidikan: mereka bentuk kursus kami sendiri atau bekerjasama
+    dengan orang lain, melatih guru, bekerjasama dengan daerah sekolah yang besar,
+    membantu mengubah dasar kerajaan, berkembang di peringkat antarabangsa melalui
+    perkongsian, dan pemasaran untuk memecahkan stereotaip.'
+  about_page_section_more_description_3: Kerja kami dibina atas [usaha selama beberapa
+    dekad, oleh organisasi dan individu yang tidak terkira banyaknya] (%{efforts_url})
+    yang telah membantu menubuhkan, membiayai, dan menyebarkan pendidikan sains komputer.
+    Kami berterima kasih kerana mendapat manfaat daripada bantuan yang tidak kenal
+    lelah komuniti pendidikan sains komputer yang lebih luas, dan [kami mengucapkan
+    terima kasih kepada semua rakan kongsi dan individu yang telah menyokong kesan
+    kami selama bertahun-tahun] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Laporan Tahunan] (%{report_url})
+    (Laporan lepas: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Nilai teras dan garis panduan pemesejan kami]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Kurikulum dan falsafah pedagogi kami] (%{curriculum_url})"
+  about_page_section_more_list_4: "[Ceramah TEDx oleh pengasas kami Hadi Partovi tentang
+    mengapa sains komputer adalah untuk semua (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Pendekatan penyatuan dalam dunia yang terbahagi
+  about_page_section_specific_title_1: Pendekatan penyatuan dalam dunia yang terbahagi
+  about_page_section_specific_title_2: Komitmen kami terhadap kebolehcapaian
+  about_page_section_specific_title_3: Komitmen kami ialah untuk menyediakan kurikulum
+    dan teknologi sumber terbuka secara percuma
+  about_page_section_specific_title_4: Code.org Gabungan Advokasi
+  about_page_section_specific_title_5: Rangka Kerja Sains Komputer K-12
+  about_page_section_specific_title_6: Penderma Code.org
+  about_page_section_specific_title_7: Ikuti kami
+  about_page_section_specific_title_8: Jangkauan Antarabangsa Code.org
+  about_page_section_specific_description_1: Peranan global Code.org dalam gerakan
+    sains komputer K-12 hanya mungkin kerana kami menggunakan pendekatan penyatuan
+    di seluruh pihak berkepentingan yang pelbagai dan sering dibahagikan. Pada masa
+    polarisasi yang semakin meningkat, idea meningkatkan peluang untuk pelajar menyatukan
+    orang dari seluruh spektrum politik. Ahli pasukan, pelajar, guru, dan penyokong
+    Code.org mempunyai pandangan yang pelbagai dan menyimpang, dan mereka semua dialu-alukan
+    dalam misi kami. [Baca lebih lanjut.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org percaya sains komputer adalah
+    asas bagi semua pelajar dan kami komited untuk ekuiti, akses, dan peluang dalam
+    organisasi kami [values.](%{values_url}) Untuk mencapai matlamat ini, kami berusaha
+    untuk mengenal pasti dan menghapuskan halangan yang menghalang kemasukan dan penyertaan
+    penuh pelajar dan pendidik kurang upaya. Untuk mengetahui lebih lanjut mengenai
+    usaha kami, lihat [pernyataan kebolehcapaian.] (%{accessibility_url})
+  about_page_section_specific_description_3: Semua sumber kurikulum dan tutorial yang
+    kami pengarang akan selamanya bebas untuk digunakan dan dilesenkan secara terbuka
+    di bawah lesen [Creative Commons] (%{commons_url}), yang membolehkan orang lain
+    membuat sumber pendidikan derivatif untuk tujuan bukan komersil. Jika anda berminat
+    untuk melesenkan bahan kami untuk tujuan komersil, [hubungi kami] (%{contact_us_url}).
+    Kursus kami diterjemahkan untuk kegunaan di seluruh dunia atau oleh penutur bahasa
+    yang berbeza. Teknologi kami dibangunkan sebagai [projek sumber terbuka.] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Code.org] (%{advocacy_url})
+    adalah gabungan bipartisan syarikat dan organisasi bukan untung yang bekerjasama
+    untuk membantu mewujudkan dasar persekutuan dan negeri AS untuk memperluas dan
+    mengekalkan akses kepada sains komputer K-12 dan untuk memperluas penyertaan dan
+    kepelbagaian dalam bidang. Kami menyatukan [pemimpin politik Republik dan Demokrat]
+    (%{leaders_url}) dalam tujuan bersama menyokong memperluas akses dan penyertaan
+    dalam sains komputer K-12."
+  about_page_section_specific_description_5: Code.org adalah ahli jawatankuasa pemandu
+    yang membantu mewujudkan [K-12 Computer Science Framework] (%{framework_url})
+    - panduan peringkat tinggi untuk negeri, daerah, dan organisasi yang melaksanakan
+    pendidikan sains komputer. Rangka Kerja telah memenangi sokongan beratus-ratus
+    ahli akademik, pendidik K-12, syarikat perisian, bukan untung, dan negeri.
+  about_page_section_specific_description_6: Code.org IRS borang 990 untuk [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), dan [2021](%{irs_url_8}). [Dasar Derma.]
+    (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Daftar untuk menerima kemas kini status]
+    (%{sign_up_url}) mengenai kemajuan dalam gerakan sains komputer K-12 dan mengenai
+    kerja Code.org. Atau ikuti Code.org di media sosial:"
+  about_page_section_specific_description_8: Lebih 40% daripada trafik laman web kami
+    datang dari luar Amerika Syarikat dan jumlah itu terus meningkat. Untuk memperluas
+    akses global ke sains komputer, pasukan kami bekerjasama rapat dengan [lebih daripada
+    100 rakan antarabangsa] (%{partners_url}), membantu mereka mempromosikan Jam Kod,
+    menyokong perubahan dasar, dan melatih guru. Kami menjadikan sains komputer sebahagian
+    daripada wacana pendidikan antarabangsa dengan bekerjasama dengan kementerian
+    pendidikan dari seluruh dunia dan bekerjasama dengan organisasi antarabangsa seperti
+    Pertubuhan Kerjasama Ekonomi dan Pembangunan dan Pertubuhan Pendidikan, Saintifik
+    dan Kebudayaan Pertubuhan Bangsa-Bangsa Bersatu.
+  about_page_section_donors_description_1: Code.org® adalah bukan untung 501c3 awam
+    berdaftar, dengan sokongan daripada orang awam. Kami berterima kasih atas sokongan
+    murah hati yang kami terima daripada [individu dan organisasi] (%{individuals_url})
+    yang menyokong visi kami.
+  about_page_section_donors_description_2: Pencapaian kod (di atas) menunjukkan keupayaan
+    kami untuk memanfaatkan dolar tersebut menjadi hasil yang kukuh. Tetapi memandangkan
+    cita-cita bukan untung kita bahawa setiap kanak-kanak di setiap sekolah harus
+    mempunyai akses kepada sains komputer - untuk menjadi warganegara celik dalam
+    dunia digital hari ini dan untuk menguji minat mereka dalam meneroka CS lebih
+    jauh sebagai kerjaya - kita mempunyai jalan yang panjang untuk memenuhi matlamat
+    pengumpulan dana yang akan menyokong visi itu.
+  about_page_donors_link_1: Buat sumbangan
+  about_page_donors_link_2: "[lihat senarai penderma kami] (%{donors_url})"
   language_code:
     ar: Bahasa Arab
     az: Azerbaijan

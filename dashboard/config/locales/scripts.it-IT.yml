@@ -5307,7 +5307,7 @@ it:
           description_short: Esplora il mondo di Minecraft attraverso il codice.
           student_description: Usa i blocchi di codice per avventurarti nel mondo
             di Minecraft con Steve o Alex.
-          title: L'Ora del Codice con Minecraft
+          title: Un'avventura con Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5981,6 +5981,16 @@ it:
               display_name: Contenuto
             csd3_2:
               display_name: 'Capitolo 2: Realizzazione di giochi'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1° giorno
+        virtual-pl-csa-summer-day1:
+          title: 1° giorno
+        virtual-pl-csa-summer-day2:
+          title: 2° giorno
+        virtual-pl-csa-summer-day3:
+          title: 3° giorno
+        virtual-pl-csa-summer-day4:
+          title: 4° giorno
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6007,6 +6017,16 @@ it:
           lessons:
             lesson-3:
               name: Valutazione
+          title: Giorno 5
+        virtual-pl-csp-summer-day1:
+          title: 1° giorno
+        virtual-pl-csp-summer-day2:
+          title: 2° giorno
+        virtual-pl-csp-summer-day3:
+          title: 3° giorno
+        virtual-pl-csp-summer-day4:
+          title: 4° giorno
+        virtual-pl-csp-summer-day5:
           title: Giorno 5
         virustest:
           description_short: Usa Sprite Lab per creare una simulazione di un'epidemia

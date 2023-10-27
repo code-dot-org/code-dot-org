@@ -75,7 +75,7 @@ module Services
 
       rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
-      learning_goal_evidence_levels = learning_goals.map(&:learning_goal_evidence_levels).flatten.sort_by(&:understanding)
+      learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
       seed_context = SeedContext.new(
         script: script,

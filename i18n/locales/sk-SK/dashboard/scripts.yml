@@ -155,7 +155,7 @@ sk:
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         mc:
-          title: Minecraft Hodina Kódu
+          title: 'Minecraft: Dobrodruh'
           description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
@@ -4295,3 +4295,13 @@ sk:
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
         how-ai-works-2023:
           title: Ako funguje umelá inteligencia
+        virtual-pl-csp-summer-day3:
+          title: Deň 3
+        virtual-pl-csp-summer-day4:
+          title: Deň 4
+        virtual-pl-csp-summer-day5:
+          title: Deň 5
+        virtual-pl-csa-summer-day3:
+          title: Deň 3
+        virtual-pl-csa-summer-day4:
+          title: Deň 4

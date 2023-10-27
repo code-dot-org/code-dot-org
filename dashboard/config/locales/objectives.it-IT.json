@@ -1763,12 +1763,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "condividere una propria creazione con altri alunni"
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
-        },
         "0476cbe2-4b38-4943-8a29-10e8f9307666": {
           "description": "  comunicare e collaborare con i compagni di classe per risolvere un problema "
         },
@@ -5830,15 +5824,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "sviluppare programmi che rispondano ad eventi temporizzati."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Illustrare i cambiamenti di umore di una poesia."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
         }
       }
     }

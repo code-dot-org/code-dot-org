@@ -37,6 +37,10 @@ hu:
   africa_campaign_date_full: Október 1-31.
   africa_campaign_date_year: '2022.'
   africa_campaign_date_full_year: 2020. október 1-31.
+  hoc2023_header: Kreativitás az AI-vel
+  hoc2023_social_creativity_with_ai_title: Kódolás órája - Mit fogsz létrehozni?
+  hoc2023_social_creativity_with_ai_desc: Használja a számítástechnikát az AI felfedezéséhez
+    és megismeréséhez!
   hoc2022_header: Fedezd fel, játssz és alkoss!
   social_hoc2022_explore_play_create: Használd az informatikát a felfedezéshez, a
     játékhoz és az alkotáshoz!
@@ -189,6 +193,33 @@ hu:
     egy új tantervkatalógus és újratervezett Tanítási oldal, amely segít megtalálni
     az egészet!
   in_partnership_with: Partnerségben a
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Támogassa munkánkat, és büszkén viselje a mozgalmat. A kalapunkat
+    Obama elnök és hírességek is viselték.
+  spread_the_word_heading: Terjeszd az igét
+  spread_the_word_desc: Növelje hatásunkat azáltal, hogy megosztja a Code.org hálózattal.
+    A közösségi médiától az e-mailes frissítésekig, fedezze fel, hogyan segíthet nekünk
+    több oktató elérésében, diákok, és szószólók.
+  follow_us_heading: Kövess minket a közösségi médiában
+  follow_us_desc: Legyen naprakész velünk a közösségi médiában, és ossza meg bejegyzéseinket
+    hálózatával, hogy tájékozódjon és elősegítse a tudatosság növelését.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tabletta
+  device_laptop: Laptop
+  device_desktop_computer: Asztali számítógép
+  device_mobile_device: Mobil eszköz
+  subscribe_to_emails_heading: Feliratkozás e-mailekre
+  subscribe_to_emails_desc: A levelezőlistánkon keresztül negyedéves frissítéseken
+    keresztül olvashat arról, hogy mi történik a Code.org oldalon és a számítástechnikai
+    oktatásban.
+  subscribe_to_emails_intl: Feliratkozás a nemzetközi frissítésekre
+  promote_code_dot_org_heading: A Code.org népszerűsítése
+  promote_code_dot_org_desc: Támogassa a számítástechnikát a környéken statisztikák,
+    idézetek és videók segítségével.
   afe_partnership_logo_alt: Amazon Future Engineer logó
   afe_partnership_thanks_desc: Az Amazon Future Engineer egy átfogó gyermekkor-karrier
     program, amely inspirálja, oktat, és képezze az alacsony jövedelmű és más hátrányos
@@ -208,19 +239,48 @@ hu:
   curricula_title_high: Középiskolai tantervek
   curricula_desc_high: Böngésszen a lenyűgöző kurzusok és tevékenységek között, amelyek
     meghívják Önt és középiskolás diákjait, hogy mélyebbre ássanak a számítástechnikában.
+  for_administrators_heading: Rendszergazdáknak
+  for_administrators_desc: Csatlakozzon az iskolák ezreihez, akik már beépítették
+    a számítástechnikát a tantervükbe.
+  for_parents_heading: Szülőknek
+  for_parents_desc: Segíthet arra ösztönözni diákiskoláját, hogy számítástechnikai
+    oktatást kínáljon vagy bővítsen.
+  for_educators_heading: Oktatóknak
+  for_educators_desc: Kezdje el a tanítást még ma - nincs szükség számítástechnikai
+    tapasztalatra - szakmai tanulási műhelyeinkkel.
   students_label: Diákok
   teachers_label: Tanárok
+  educators_label: Pedagógusok
+  companies_label: Vállalatok
+  districts_label: Kerületek
+  school_assemblies_label: Iskolai gyűlések
+  parents_label: Szülők
+  public_officials_label: Köztisztviselők
+  volunteers_label: Önkéntesek
+  virtual_events_label: Virtuális események
   teacher_label_csf: CS Fundamentals tanár
   teacher_label_csd: CS felfedezések tanár
   teacher_label_csp: CS alapelvek tanár
   teacher_label_csc: CS kapcsolatok tanár
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Tanár fórum
+  teacher_forum_desc: Látogasson el a Kódolási Óra tanár fórumára, hogy tanácsot kapjon,
+    betekintés és támogatás más oktatóktól.
   required_materials: 'Szükséges anyagok:'
   optional_materials: 'Opcionális anyagok:'
-  call_to_action_explore_roles: Fedezze fel a nyitott szerepeket
+  call_to_action_hold_an_event: Esemény megtartása
+  call_to_action_register_event: Regisztrálja rendezvényét
+  call_to_action_select_activity: Tevékenység kiválasztása
+  call_to_action_start_activity: Tevékenység indítása
+  call_to_action_get_certificates: Tanúsítványok megszerzése
+  call_to_action_go_beyond_hoc: Menj túl a kódolás óráján
+  call_to_action_view_promo_resources: Promóciós források megtekintése
   call_to_action_learn_more: Tudj meg többet
   call_to_action_watch_now: Nézd meg most
   call_to_action_try_activity: Próbálja ki a tevékenységet
+  call_to_action_try_activities: Próbálja ki a tevékenységeket
+  call_to_action_explore_activities: Fedezze fel a tevékenységeket
+  call_to_action_explore_ai: Fedezze fel az AI
   call_to_action_explore_unit: Fedezze fel az egységet
   call_to_action_explore_curriculum: Fedezze fel a tantervet
   call_to_action_explore_curriculum_options: Fedezze fel a tantervi lehetőségeket
@@ -273,6 +333,7 @@ hu:
   call_to_action_find_self_paced_modules: Keressen saját tempójú modulokat
   call_to_action_join_teacher_forums: Csatlakozzon a tanári fórumokhoz
   call_to_action_explore_teacher_forums: Fedezze fel a tanári fórumokat
+  call_to_action_explore_teacher_forum: Ismerje meg a tanári fórumot
   call_to_action_explore_career_resources: Fedezze fel a karrier forrásait
   call_to_action_watch_videos: Nézze meg a videókat
   call_to_action_download_posters: Plakátok letöltése
@@ -289,11 +350,34 @@ hu:
   call_to_action_notify_available: Értesítsen, ha elérhető
   call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
   call_to_action_open_positions: Nyitott pozíciók megtekintése
+  call_to_action_explore_roles: Fedezze fel a nyitott szerepeket
   call_to_action_get_guide: Szerezd meg az útmutatót
   call_to_action_donate_to_cdo: Adomány a Code.org számára
   call_to_action_start_fundraiser: Indítson adománygyűjtést
   call_to_action_view_donation_policy: Adományozási irányelvek megtekintése
   call_to_action_view_donate_bitpay: Adományozzon a BitPay segítségével
+  call_to_action_make_a_donation: Adományozz
+  call_to_action_other_ways_to_give: Egyéb módja annak, hogy adjon
+  call_to_action_become_partner_usa: Legyen az Egyesült Államok partnere
+  call_to_action_become_partner_intl: Legyen nemzetközi partner
+  call_to_action_become_a_volunteer: Legyél önkéntes
+  call_to_action_start_translating: Indítsa el a fordítást
+  call_to_action_learn_about_advocacy: Tudjon meg többet érdekképviseletünkről
+  call_to_action_visit_store: Látogasson el a boltba
+  call_to_action_view_faqs: További GYIK megtekintése
+  aria_label_call_to_action_hoc_how_to_educators: Tekintse meg az oktatók útmutatóját
+  aria_label_call_to_action_hoc_how_to_companies: Útmutató megtekintése a vállalatok
+    számára
+  aria_label_call_to_action_hoc_how_to_districts: Tekintse meg a körzetek útmutatóját
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Az iskolai összeállítások
+    útmutatójának megtekintése
+  aria_label_call_to_action_hoc_how_to_parents: Útmutató megtekintése a szülők számára
+  aria_label_call_to_action_hoc_how_to_public_officials: Útmutató megtekintése a köztisztviselők
+    számára
+  aria_label_call_to_action_hoc_how_to_volunteers: Útmutató megtekintése az önkéntesek
+    számára
+  aria_label_call_to_action_hoc_how_to_virtual_events: Tekintse meg a virtuális események
+    útmutatóját
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -646,6 +730,7 @@ hu:
   heading_explore_curriculum_catalog: Fedezze fel az összes tanfolyamunkat a tantervi
     katalógusban
   heading_csa_ai: Tennivalókat keres az AP® vizsga után?
+  heading_bring_cs_to_students: Hozd el a számítástechnikát a hallgatóknak
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -923,6 +1008,8 @@ hu:
     értékeléséhez. Az elmélet gazdag keverékével, gyakorlati példák, és források,
     célja, hogy felhatalmazza az oktatókat az AI tájon való eligazodásra és a diákok
     tanulási tapasztalatainak javítására.
+  ai_pl_101_resources_5: Útmutató a mesterséges intelligencia felelősségteljes megközelítésének
+    biztosításához
   ai_pl_101_video_desc_6: 'Tudjon meg többet az AI nagy változásait előidéző új technológiáról,
     amely két új videót tartalmaz a nagy nyelvi modelleken (például a ChatGPT) és
     a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
@@ -934,6 +1021,8 @@ hu:
     azok számára, akik csak belemerítik a lábujjaikat, valamint fejlett eszközöket
     azok számára, akik maximalizálni akarják potenciáljukat.
   ai_pl_101_resources_3: AI felszólítások a hallgatói tanulás átalakításához
+  ai_pl_101_resources_section_title: További módszerek az AI megismerésére
+  ai_pl_101_resources_guide: 'Kísérő útmutató:'
   how_ai_works_hero_heading: Hogyan működik az AI
   how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
     videósorozatunkkal és a kísérő leckékkel!
@@ -1794,6 +1883,30 @@ hu:
   donate_tabs_bitpay_desc: Ölelje át az adakozás jövőjét a kriptovalutával. A BitPay
     segítségével digitális pénzneme közvetlenül támogathatja a Code.org törekvéseit
     a számítástechnikai oktatás bővítésében.
+  help_page_top_heading: Hogyan segíthetsz
+  help_page_top_desc: Támogassa küldetésünket, hogy a számítástechnikát minden gyermek
+    számára elérhetővé tegyük, mindenhol. Erőfeszítései segítenek inspirálni a jövőbeli
+    újítókat és áthidalni a technológiai oktatási szakadékot.
+  help_page_top_subhead: Adományozzon a Code.org számára
+  help_page_top_desc_02: Azon dolgozunk, hogy minden diáknak lehetőséget biztosítsunk
+    a számítástechnika elsajátítására - mind online, mind az iskolákban, ahol állandó
+    tanfolyamokat létesítünk és tanárokat képezünk. Minden adományozott dollárért,
+    egy gyermek megismertetik a számítástechnikával.
+  help_page_partners_heading: Legyen partner
+  help_page_partners_desc: A Code.org partnerként együttműködik más nonprofit szervezetekkel,
+    hogy elősegítse a számítástechnika helyi, fenntartható módon történő terjesztését.
+    Tudjon meg többet programunkról.
+  help_page_volunteer_heading: Önkéntes egy osztályteremben
+  help_page_volunteer_desc: Önként jelentkezzen a Kódolás Órája tanítására, vagy vendégelőadó
+    lehet egy helyi osztályteremben. Iratkozzon fel, hogy értesüljön a közeli lehetőségekről.
+  help_page_translate_heading: Segítsen nekünk lefordítani
+  help_page_translate_desc: Az önkéntesek több mint 45 nyelvre fordították le oktatóanyagainkat.
+    Segítsen nekünk tovább bővíteni oktatóanyagainkat a diákok számára szerte a világon!
+  help_page_speak_for_cs_heading: Beszéljen a számítástechnikai oktatásért
+  help_page_speak_for_cs_desc: Tudjon meg többet a Code.org érdekképviseleti munkájáról
+    az Egyesült Államokban, és arról a tíz politikáról, amelyet az államok javasolunk,
+    hogy az informatika alapja legyen minden hallgató számára. Plusz, megtudhatja,
+    hogyan vezethet változást az állapotában.
   hoc_live: Élő kódolás órája
   hoc_live_sign_up_title: Iratkozzon fel a Hour of Code Live szolgáltatásra
   hoc_live_learn_title: Tanulj a Hour of Code Live segítségével
@@ -13440,6 +13553,129 @@ hu:
   all: Összes
   dont_know: Nem tudom
   language_label: Nyelv
+  before_hoc: A kód órája előtt
+  day_of_hoc: A kód órájának napja
+  after_hoc: A kód órája után
+  step_01: 1. lépés
+  step_02: 2. lépés
+  step_03: 3. lépés
+  step_04: 4. lépés
+  step_05: 5. lépés
+  step_06: 6. lépés
+  step_07: 7. lépés
+  step_08: 8. lépés
+  hoc_how_to_top_heading: Útmutató a Kódolás órájához
+  hoc_how_to_top_desc: Testreszabott útmutatók a legjobb Hour of Code élményhez.
+  hoc_how_to_top_view_guide: Útmutató megtekintése
+  hoc_how_to_nav_main_aria_label: Válasszon útmutatót
+  hoc_how_to_nav_sidebar_aria_label: Oldalsáv navigáció
+  hoc_how_to_educators_intro_heading: Hogyan tervezd meg a Kódolás Óráját
+  hoc_how_to_educators_intro_desc: A Kódolás órája egy órás bevezetés a számítástechnikába,
+    szórakoztató oktatóanyagok felhasználásával annak bemutatására, hogy bárki megtanulhatja
+    az alapokat. Ebben az évben új magasságokba emeljük a Kódolási Órát azáltal, hogy
+    olyan kódolási lehetőségeket kínálunk, amelyek mind a mesterséges intelligenciát
+    (AI), mind a nem AI komponenseket magukban foglalják. Függetlenül attól, hogy
+    Ön vagy hallgatói tapasztalt kódolók, vagy mindannyian elindulnak a legelső számítástechnikai
+    expedíciójára, ez a Kódolási Óra rendkívüli utat ígér.
+  hoc_how_to_faq_question_prerequisites: Melyek a kódolási óra elvégzésének előfeltételei?
+  hoc_how_to_faq_answer_prerequisites: A Kódolás órája egyszerűen futtatható - még
+    kezdőknek is. Nincs szüksége tapasztalatra a számítástechnikában vagy a tanításban
+    ahhoz, hogy ösztönözze a hallgatókat valami újat felfedezni, létrehozni és tanulni.
+  hoc_how_to_faq_question_devices: Milyen eszközökre van szükségem a Kódolás Órájának
+    futtatásához?
+  hoc_how_to_faq_answer_devices_01: 'Használható eszközök:'
+  hoc_how_to_faq_answer_devices_02: Ha az eszközök korlátozottak vagy nem érhetők
+    el, próbálja meg a [páros programozás] (%{pair_url}) vagy fedezze fel a [kihúzott
+    tevékenységek] (%{unplugged_url}) tanulni bármilyen eszköz nélkül!
+  hoc_how_to_faq_question_volunteer: Ki jelentkezhet önkéntesnek?
+  hoc_how_to_faq_answer_volunteer: Bárki, aki szenvedélyes a számítástechnikai oktatás
+    és a technika sokszínűségének növelése iránt, önkéntes lehet! Szeretnénk látni,
+    hogy minden háttérrel rendelkező önkéntesek részt vesznek. A Kódolási Óra számos
+    tevékenységet kínál minden korosztály számára és képzettségi szint számára, így
+    önkénteskedéshez nem kell programozási szakértőnek lennie!
+  hoc_how_to_faq_question_full_hour: Teljes órát vesz igénybe a kódolás órája?
+  hoc_how_to_faq_answer_full_hour: Sok diák kevesebb, mint egy óra alatt befejezheti
+    tevékenységét, és ez rendben van! A diákok továbbra is tanulhatnak, míg más hallgatók
+    befejezik tevékenységüket.
+  hoc_how_to_faq_question_account: Be kell jelentkezniük a diákoknak egy fiókkal?
+  hoc_how_to_faq_answer_account: Nincs szükség regisztrációra vagy bejelentkezésre
+    ahhoz, hogy a diákok kipróbálhassák a Kódolási órát. A Kód Órájára való regisztráció
+    NEM hoz létre automatikusan Code.org fiókot.
+  hoc_how_to_resources_heading_educators: Egyéb "Hour of Code" forrás anyagok oktatóknak
+  hoc_how_to_resources_promo_heading: Promóciós források
+  hoc_how_to_resources_promo_desc: Keresse meg az összes szükséges erőforrást - nyomtatott
+    és digitális -, hogy felhívja a figyelmet a Kódolás órájára.
+  hoc_how_to_resources_discover_heading: Fedezze fel a tevékenységeket
+  hoc_how_to_resources_discover_desc: Fedezze fel az egyórás oktatóanyagok széles
+    választékát, amelyeket minden korosztály számára terveztek 45 nyelvek.
+  hoc_how_to_step_label_plan: Tervezze meg, hol és mikor fogja megtenni a kódolási
+    óráját
+  hoc_how_to_step_label_choose_activity: Válassza ki tevékenységét
+  hoc_how_to_step_label_test_activity: Tesztelje ki tevékenységét
+  hoc_how_to_step_label_register_event: Regisztrálja rendezvényét
+  hoc_how_to_step_label_tell: Mondja el diákjainak, iskolájának és közösségének
+  hoc_how_to_step_label_get_coding: Szerezd meg a kódolást!
+  hoc_how_to_step_label_celebrate: Ünnepelni
+  hoc_how_to_step_label_beyond_hoc: A kód óráján túl
+  hoc_how_to_step_beyond_hoc_subhead: Itt nem ér véget!
+  hoc_how_to_step_beyond_hoc_desc: A számítástechnikai tudománynak nem kell a Kódolás
+    Órájával végződnie! Míg a szülők 90% -a azt akarja, hogy gyermeke tanuljon számítástechnikát,
+    a legtöbb iskola még mindig nem tanítja. Ismerje meg, hogyan hozhatja a CS-t gyermeke
+    iskolájába ma.
+  hoc_how_to_step_01_educators_subhead: Válasszon ki egy eseményidőt és helyet, amely
+    megfelel a rendelkezésre álló hallgatók és eszközök számához.
+  hoc_how_to_step_01_educators_desc_01: Milyen helyek állnak rendelkezésre a Kódolás
+    órájának elvégzéséhez? Fontolja meg terének technológiai képességeit, és milyen
+    eszközöket várhat el a hallgatóitól, hogy dolgozzanak. A diákok egyetlen eszközön
+    dolgozhatnak oktatóanyagokon, felváltva használhatnak megosztott eszközt, vagy
+    kipróbálhatnak egy oktatóanyagot egy osztálytermi táblán. Vannak még kihúzott
+    oktatóanyagok is, amelyek készülékek nélkül is kiegészíthetők. A kihúzott opciók
+    bárhol megtehetők - akár szabadban is!
+  hoc_how_to_step_01_educators_desc_02: Az emberek szerte a világon csatlakoznak a
+    Kódolás Órájának ünnepségéhez a CS Oktatási Hét alkalmával, %{campaign_date} amikor
+    megjelennek a legújabb oktatóanyagok és tevékenységek. De az év bármely napján
+    megteheti a Kódolási Órát!
+  hoc_how_to_step_02_educators_desc_01: Fedezze fel a tevékenységeket a csoport életkora
+    alapján, tapasztalat, érdekek, és több. Népszerű, hogy a diákok kipróbálják az
+    önvezető oktatóanyagokat, bár sok tevékenység tartalmaz óraterveket a tanárok
+    számára a vita irányítására vagy a tevékenység kiterjesztésére is.
+  hoc_how_to_step_02_educators_desc_02: Döntse el idő előtt, ha egyetlen oktatóanyagot
+    szeretne választani minden hallgatója számára, vagy hagyja, hogy minden gyermek
+    válassza ki a sajátját.
+  hoc_how_to_step_02_educators_desc_03: Ebben az évben Ön és diákjai [mindent megtudhat
+    az AI-ről] (%ai_url) oktatóanyagokon, óraterveken és új How AI Works videósorozatunkon
+    keresztül.
+  hoc_how_to_step_03_educators_desc_01: Próbáld ki magad az oktatóanyagot, mielőtt
+    belépsz az osztályterembe, hogy válaszolhasson a kérdésekre!
+  hoc_how_to_step_03_educators_desc_02: Kipróbálhatja az oktatóanyagokat hallgatói
+    számítógépeken vagy eszközökön is, hogy megbizonyosodjon arról, hogy támogatják
+    a hangot és a videót. Alacsony sávszélessége van? Tervezze meg, hogy videókat
+    jelenít meg az osztály elején, így minden hallgató nem tölti le saját videóit.
+  hoc_how_to_step_03_educators_desc_03: Fontolja meg, hogy fejhallgatót biztosítson
+    osztályához, vagy kérje meg a hallgatókat, hogy hozzanak magukkal sajátjukat,
+    ha a választott oktatóanyag a legjobban működik a hanggal.
+  hoc_how_to_step_04_educators_desc_01: Amikor regisztrálja a Hour of Code eseményét,
+    hasznos e-maileket kap hírekkel és tippekkel a sikeres Kódolási Óra megrendezéséhez.
+    Ez azt is jelenti, hogy a helyi önkéntesek tudják, hogy iskolája részt vesz. Az
+    önkéntesek nagyszerű erőforrás, és eljöhetnek beszélni az osztályodhoz a számítástechnikáról,
+    vagy segíthetnek hallgatóinak a Kódolási Óra tevékenységekben.
+  hoc_how_to_step_05_educators_desc_01: Megosztva izgatja hallgatóit az esemény miatt
+    [inspiráló videók] (%{videos_url}) kiemelve a különféle embereket és a számítástechnika
+    valós világban való felhasználásának kreatív módjait.
+  hoc_how_to_step_05_educators_desc_02: Ossza meg kódolási óráját más tanárokkal,
+    akik esetleg csatlakozni szeretnének a szórakozáshoz! Ez egy nagyszerű lehetőség
+    arra is, hogy kapcsolatba lépjen iskolája Szülőtanári Hallgatói Szövetségéhez,
+    vagy ossza meg a szülői hírleveleket, tudatja velük, mit tanulnak gyermekeik.
+  hoc_how_to_step_06_educators_desc_01: Irányítsa diákjait a tevékenységre, talán
+    a táblán lévő link megosztásával vagy az osztályterem tanuláskezelő rendszerén
+    keresztül. Tanítványai kihívásokkal szembesülhetnek - ez rendben van! A programozás
+    megtanulása olyan, mint egy új nyelv megtanulása; nem fogsz azonnal folyékonyan
+    beszélni. Ha nem tudod a választ, együtt kitalálhatod.
+  hoc_how_to_step_07_educators_desc_01: 'Ügyeljen arra, hogy ünnepelje a sikert! Ossza
+    meg fényképeit és videóit a Kódolás órájáról a közösségi médiában. Használja a
+    #HourOfCode és a @codeorg -t, hogy kiemelhessük a sikerét is!'
+  hoc_how_to_step_07_educators_desc_02: Tanúsítványokat is kinyomtathat hallgatói
+    számára, hogy megmutassák eredményeiket!
   team_page_full_team_alt_text: Közel 100 Code.org alkalmazott kék és sárga pólóban
     pózol egy szállodai konferenciateremben a cég 2022-es nyári Codechella rendezvényén.
   careers_page_code_pride_alt_text: Két nőies bemutató alkalmazott mosolyog, miközben
@@ -13967,6 +14203,10 @@ hu:
   video_library_page_inspirational_video_title_11: Bárki Tanulhat (1 perc)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 perc)
+  video_library_page_inspirational_video_title_13: A NASA ünnepli a Kódolás Óráját
+    (2 perc)
+  video_library_page_inspirational_video_title_14: Ez több, mint egy játék (1 perc)
+  video_library_page_inspirational_video_title_15: Alkoss Számítástechnikával (1 perc)
   video_library_page_not_hacked_video_title_1: 'Hogyan ne hackeljenek fel: Bevezetés'
   video_library_page_not_hacked_video_title_2: 'Hogyan ne törjék fel: Jelszavak'
   video_library_page_not_hacked_video_title_3: 'Hogyan ne törjék fel: Hitelesítés
@@ -13978,6 +14218,161 @@ hu:
     letöltések'
   video_library_page_not_hacked_video_title_7: 'Hogyan ne törjék fel: Telepítse a
     frissítéseket'
+  about_us_page_title: Rólunk
+  about_us_page_hero_description: A Code.org® egy oktatási innovációs nonprofit szervezet,
+    amely elkötelezett annak a víziónak, hogy minden iskolában minden tanulónak lehetősége
+    van arra, hogy számítástechnikát tanuljon a K-12 alapvető oktatás részeként. Bővítjük
+    a számítástechnikához való hozzáférést az iskolákban, különös tekintettel a fiatal
+    nők és más alulreprezentált csoportok hallgatóinak részvételének fokozására. A
+    K-12 számítástechnikai tanterv vezető szolgáltatója az Egyesült Államok legnagyobb
+    iskolai körzeteiben, a Code.org is szervezi az éves [Hour of Code] (%{hour_url})
+    kampányt, amely a világ összes hallgatójának több mint 15% -át vonta be. A Code.org-t
+    nagylelkű adományozók támogatják, köztük a Microsoft, az Amazon, a Google és [még
+    sokan mások.]%{others_url}
+  about_us_page_section_title_1: Több mint 80 millió diák és 2 millió tanár a Code.org
+    oldalon
+  about_us_page_statistic_figcaption: Code.org részvétel a 2021-2022-es tanévtől.
+    [Lásd a bontott adatokat.] ()%{data_url}
+  about_us_page_statistic_description: A Code.org növeli a számítástechnika sokféleségét
+    azáltal, hogy minden háttérrel rendelkező diákokat eléri, ahol vannak - készségeik
+    szintjén, iskolájukban és olyan módon, amelyek ösztönzik őket a tanulás folytatására.
+    A Code.org hallgatóinak túlnyomó többsége a számítástechnikában történelmileg
+    alulreprezentált hallgatói csoportokból származik. Munkánk alapja a számítástechnika
+    sokféleségének növekedése, és [javasoljuk, hogy olvassa el többet erőfeszítéseinkről]
+    (%{diversity_url}).
+  about_us_page_section_title_2: Code.org a hírekben
+  about_us_page_section_news_description: Az összes múlt megtekintése [hírek és bejelentések]
+    (%{news_url})
+  about_us_page_section_table: Céljaink és mutatóink
+  about_us_page_section_table_header_1: Code.org cél
+  about_us_page_section_table_header_2: Teljesítmény
+  abous_page_section_table_cell_1_1: A CS sokféleségének javítása * (amerikai hallgatók)
+    *
+  abous_page_section_table_cell_1_2: A Code.org hallgatók 45% -a fiatal nő, 50% -a
+    marginalizált faji és etnikai csoportokból származó hallgatók, és az amerikai
+    hallgatók 46% -a magas igényű iskolákban van. További információ [a sokféleségre
+    vonatkozó megközelítésünk.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirálja a diákokat
+  about_page_section_table_cell_2_2: Tízmilliók próbálták ki a [Kódolás órája] (%{hour_url}).
+    (426,370,561 szolgált. 49% nő)
+  about_page_section_table_cell_3_1: Érje el az osztálytermeket
+  about_page_section_table_cell_3_2: 591.636 tanár jelentkezett be a [Code Studio]
+    (%{code_studio_url}) bevezető tanfolyamainkra, és 19 177.297 hallgató beiratkozott.
+  about_page_section_table_cell_4_1: Készítsen új CS tanárokat
+  about_page_section_table_cell_4_2: Több mint 106 000 új tanárt készítettünk CS tanítására
+    a K-12 osztályok között. Tudjon meg többet [szakmai tanulási programok.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Az iskolai kerületi tanterv módosítása
+  about_page_section_table_cell_5_2: Együttműködtünk [180+ a legnagyobb iskolai körzetek]
+    (%{schoold_disctrict_url}) és 60 regionális partnerek [add CS az iskolai tantervhez]
+    (%{cs_curriculum_url}). [Tudjon meg többet arról, hogy regionális partnerré váljon.]
+    (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Házirendek beállítása a CS támogatására
+  about_page_section_table_cell_6_2: "[Az irányelvek megváltoztak 50 Egyesült Államokban.
+    államok] (%{states_url}) a CS oktatási szabványok megállapítása, hogy a CS tanfolyamok
+    számítanak a középiskolai érettségbe, stb. [(részletek)] (%{details_url})"
+  about_page_section_table_cell_7_1: Menj globálisan
+  about_page_section_table_cell_7_2: Tanfolyamaink több mint 67 nyelven érhetők el,
+    több mint 180 országban.
+  about_page_section_table_under_label: 'Forrás: Code Studio Activity és [részt vevő
+    oktatók felmérései] (%{educators_url})'
+  about_page_section_title_3: További információ, történelem és filozófia
+  about_page_section_more_description_1: '2013-ban a Code.org-t ikertestvérek [Hadi](%{hadi_url})
+    és [Ali Partovi] () indították el a (%{partovi_url}) számítástechnikát népszerűsítő
+    [video](%{video_url}) segítségével. Ez a videó egy napra #1 lett a YouTube-on,
+    és 15 000 iskola fordult hozzánk segítségért. Azóta, kibővítettük az önkéntesekből
+    álló bootstrapped személyzetből, hogy teljes körű szervezetet építsünk ki egy
+    világméretű mozgalmat támogató szervezetet. Hisszük, hogy a minőségi számítástechnikai
+    oktatásnak minden gyermek számára elérhetőnek kell lennie, nem csak néhány szerencsés.'
+  about_page_section_more_description_2: 'Célunk támogatása érdekében az oktatási
+    spektrumon keresztül dolgozunk: saját tanfolyamaink megtervezése vagy másokkal
+    való partnerség kialakítása, tanárok képzése, nagy iskolai körzetekkel való együttműködés,
+    a kormányzati politikák megváltoztatásának elősegítése, partnerségek útján nemzetközi
+    terjeszkedés, és marketing a sztereotípiák megtörésére.'
+  about_page_section_more_description_3: Munkánk épül [évtizedes erőfeszítések, számtalan
+    szervezet és egyén által] (%{efforts_url}) akik segítettek létrehozni, finanszírozni,
+    és terjeszti a számítástechnikai oktatást. Hálásak vagyunk, hogy részesülhetünk
+    a szélesebb számítástechnikai oktatási közösség fáradhatatlan segítségéből, és
+    [köszönjük minden partnernek és egyénnek, akik támogatták hatásunkat az évek során]
+    (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 éves jelentés] (%{report_url}) (Korábbi
+    jelentések: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016]()%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Alapértékeink és üzenetküldési irányelveink] (%{core_url})"
+  about_page_section_more_list_3: "[Tantervünk és pedagógiai filozófiánk] (%{curriculum_url})"
+  about_page_section_more_list_4: "[Alapítónk, Hadi Partovi TEDx beszéde arról, hogy
+    miért mindenkinek szól a számítástechnika (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Egy egységes megközelítés egy megosztott világban
+  about_page_section_specific_title_1: Egy egységes megközelítés egy megosztott világban
+  about_page_section_specific_title_2: Elkötelezettségünk a hozzáférhetőség iránt
+  about_page_section_specific_title_3: Elkötelezettségünk a szabadon használható tananyag
+    és a nyílt forráskódú technológia iránt
+  about_page_section_specific_title_4: Code.org érdekképviseleti koalíció
+  about_page_section_specific_title_5: K-12 Számítástechnikai Keretrendszer
+  about_page_section_specific_title_6: Code.org adományozók
+  about_page_section_specific_title_7: Kövessen minket
+  about_page_section_specific_title_8: A Code.org nemzetközi kiterjedése
+  about_page_section_specific_description_1: A Code.org globális szerepe a K-12 számítástechnikai
+    mozgalomban csak azért lehetséges, mert egyesítő megközelítést alkalmazunk a különböző
+    és gyakran megosztott érdekelt felek között. A növekvő polarizáció idején a diákok
+    lehetőségeinek növelésének ötlete egyesíti az embereket a politikai spektrumból.
+    A Code.org csapattagjai, hallgatói, tanárai és támogatói változatos és eltérő
+    nézőpontokkal rendelkeznek, és mindannyian szívesen látjuk küldetésünket. [Bővebben.]
+    (%{read_more_url})
+  about_page_section_specific_description_2: A Code.org úgy véli, hogy a számítástechnika
+    minden hallgató számára alapvető fontosságú, és elkötelezettek vagyunk a méltányosság,
+    a hozzáférés és a lehetőségek iránt szervezeti [values.](%{values_url}) E cél
+    elérése érdekében azon dolgozunk, hogy azonosítsuk és megszüntessük azokat az
+    akadályokat, amelyek megakadályozzák a fogyatékossággal élő hallgatók és oktatók
+    befogadását és teljes részvételét. Ha többet szeretne megtudni erőfeszítéseinkről,
+    olvassa el a [akadálymentességi nyilatkozat.] (%{accessibility_url})
+  about_page_section_specific_description_3: Az összes tantervi forrás és oktatóanyag,
+    amelyet szerzünk, örökre szabadon használható és nyíltan engedélyezhető a [Creative
+    Commons] (%{commons_url}) licenc, lehetővé téve mások számára, hogy származékos
+    oktatási forrásokat készítsenek nem kereskedelmi célokra. Ha érdekli anyagaink
+    kereskedelmi célokra történő engedélyezése, [lépjen kapcsolatba velünk] (%{contact_us_url}).
+    Tanfolyamainkat világszerte vagy különböző nyelvű beszélők fordítják le. Technológiánkat
+    [nyílt forráskódú projektként fejlesztették ki.] (%{open_source_url})
+  about_page_section_specific_description_4: A [Code.org Advocacy Coalition] (%{advocacy_url})
+    a vállalatok és nonprofit szervezetek kétoldalú koalíciója, amelyek együttműködnek
+    az Egyesült Államok szövetségi és állami politikáinak kialakításában a K-12 számítástechnikához
+    való hozzáférés bővítésére és fenntartására, valamint a részvétel és a sokszínűség
+    szélesítésére a területen. Összehozunk [Republikánus és demokratikus politikai
+    vezetők] (%{leaders_url}) közös ügyben támogatja a K-12 számítástechnikához való
+    hozzáférés és az abban való részvétel bővítését.
+  about_page_section_specific_description_5: A Code.org tagja annak az irányítóbizottságnak,
+    amely segített létrehozni a [K-12 Computer Science Framework] (%{framework_url})
+    - magas szintű útmutatót az államok, kerületek és szervezetek számára, amelyek
+    informatikai oktatást végeznek. A keretrendszer több száz akadémikus támogatását
+    nyerte el, K-12 oktatók, szoftvercégek, nonprofit szervezetek, és államok.
+  about_page_section_specific_description_6: Code.org IRS űrlap 990 [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](), (%{irs_url_5})
+    [2019]%{irs_url_6}), [2020](%{irs_url_7}), és [2021](%{irs_url_8}). [Adományozási
+    politika.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Iratkozzon fel állapotfrissítések fogadására]
+    (%{sign_up_url}) a K-12 számítástechnikai mozgalom előrehaladásáról és a Code.org
+    munkájáról. Vagy kövesse a Code.org oldalt a közösségi médiában:"
+  about_page_section_specific_description_8: Weboldalunk forgalmának több mint 40%
+    -a az Egyesült Államokon kívülről származik, és ez a szám továbbra is növekszik.
+    A számítástechnikához való globális hozzáférés bővítése érdekében csapatunk szorosan
+    együttműködik [több mint 100 nemzetközi partnerrel] (%{partners_url}), segítve
+    őket a Kódex Órájának népszerűsítésében, a politikaváltás támogatásában és a tanárok
+    képzésében. A számítástechnikát a nemzetközi oktatási diskurzus részévé tesszük
+    a világ minden tájáról érkező oktatási minisztériumokkal együttműködve, és olyan
+    nemzetközi szervezetekkel dolgozunk, mint a Gazdasági Együttműködési és Fejlesztési
+    Szervezet és az ENSZ Oktatási, Tudományos és Kulturális Szervezete.
+  about_page_section_donors_description_1: A Code.org® egy bejegyzett nyilvános 501c3
+    nonprofit szervezet, a nagyközönség támogatásával. Hálásak vagyunk a nagylelkű
+    támogatásért, amelyet kaptunk [egyének és szervezetek] (%{individuals_url}) akik
+    támogatják jövőképünket.
+  about_page_section_donors_description_2: A kódok eredményei (fent) bizonyítják,
+    hogy képesek vagyunk ezeket a dollárt erős eredményekre kihasználni. De tekintettel
+    nonprofit törekvésünkre, hogy minden iskolában minden gyermeknek hozzáférnie kell
+    a számítástechnikához - hogy írástudó állampolgárok legyenek a mai digitális világban,
+    és teszteljék érdeklődésüket a CS karrierként való további feltárása iránt - hosszú
+    utat kell megtennünk ahhoz, hogy elérjünk egy adománygyűjtési célt, amely támogatni
+    fogja ezt a jövőképet.
+  about_page_donors_link_1: Tegyen adományokat
+  about_page_donors_link_2: "[lásd az adományozók listáját] (%{donors_url})"
   language_code:
     ar: arab
     az: azerbajdzsáni

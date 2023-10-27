@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Yeni hareketli nesneler yaratın ve onlara kostümler ve konumlar atayın."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Hareketli nesneleri ve olayları kullanarak etkileşimli bir animasyon yapın."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Bir makine öğrenim modelini öğretme ve test etme."
         },
@@ -3484,15 +3478,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Zamanlanmış olaylara yanıt veren programlar geliştirin."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Bir şiirin ruh halindeki değişimleri gösterin."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Bir metinde mecazi ve gerçek dili temsil eder."
         }
       }
     }
