@@ -23,15 +23,18 @@ describe('Congrats', () => {
 
   it('renders curriculum catalog button, for teachers', () => {
     const wrapper = shallow(<Congrats {...defaultProps} userType="teacher" />);
-
-    wrapper.find('a[href="/catalog"]');
+    expect(wrapper.find('a[href="/catalog"]').exists()).to.be.true;
   });
 
   it('renders two learning for ages buttons, for students', () => {
     const wrapper = shallow(<Congrats {...defaultProps} userType="student" />);
 
-    wrapper.find('a[href="https://code.org/student/elementary"]');
-    wrapper.find('a[href="https://code.org/student/middle-high"]');
+    expect(
+      wrapper.find('a[href="https://code.org/student/elementary"]').exists()
+    ).to.be.true;
+    expect(
+      wrapper.find('a[href="https://code.org/student/middle-high"]').exists()
+    ).to.be.true;
   });
 
   it('renders a professional learning section, for teachers', () => {
