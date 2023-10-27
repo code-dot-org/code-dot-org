@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable import/no-commonjs */
 
 /**
  * Script that processes an scss file containing a set of variables, and
