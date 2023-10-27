@@ -1,4 +1,3 @@
-import msg from '@cdo/locale';
 import {
   ObservableProcedureModel,
   ProcedureBase,
