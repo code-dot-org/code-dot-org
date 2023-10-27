@@ -38,7 +38,7 @@ mysql_defaults: &mysql_defaults
 environment_defaults: &environment_defaults
   primary:
     <<: *mysql_defaults
-    <% if EnvironmentAwareDynamicConfigHelper.running_web_application? %>
+    <% if CDO.running_web_application? %>
     host: <%= CDO.db_endpoint_proxy_writer %>
     port: <%= CDO.db_endpoint_proxy_writer_port %>
     <% else %>
@@ -49,6 +49,9 @@ environment_defaults: &environment_defaults
     username: <%= CDO.db_credential_writer['username'] %>
     password: <%= CDO.db_credential_writer['password'] %>
     database: <%= CDO.dashboard_db_name %>
+  # Always provision a read replica database connection pool, even in environments that do not have an Aurora cluster
+  # with read replicas, such as local development environments and continuous integration builds. In those non-AWS
+  # environments, CDO.db_endpoint_proxy_reader is set to the same servername as the writer (typically 'localhost').
   primary_replica:
     replica: true
     <<: *mysql_defaults
@@ -57,6 +60,10 @@ environment_defaults: &environment_defaults
     username: <%= CDO.db_credential_reader['username'] %>
     password: <%= CDO.db_credential_reader['password'] %>
     database: <%= CDO.dashboard_db_name %>
+  # Always provision a reporting replica database connection pool, even in environments that do not have an Aurora
+  # cluster with a "reporting" RDS Proxy, such as local development environments and continuous integration
+  # builds. In those non-AWS environments, CDO.db_endpoint_proxy_reporting is set to the same servername as the writer
+  # (typically 'localhost').
   primary_reporting:
     replica: true
     <<: *mysql_defaults
