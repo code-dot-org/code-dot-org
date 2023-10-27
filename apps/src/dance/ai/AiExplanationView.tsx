@@ -54,9 +54,6 @@ interface Fields {
   [FieldKey.BACKGROUND_PALETTE]: FieldObject;
 }
 
-// block has translated values
-// keys from model results won't be translated (but are what are used here, i think, as labels
-
 /**
  * Presents some bar charts explaining how output values were chosen.
  */
@@ -128,9 +125,6 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     // display the untranslated key
     return translation || label;
   });
-
-  // to do: refactor into shared function
-  // const findTranslation = (value, mapping) => {};
 
   const emojiAssociations = currentField.data.emojiAssociations;
   const datasets = Object.keys(emojiAssociations)
