@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_21_022039) do
+ActiveRecord::Schema.define(version: 2023_10_26_194936) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -874,22 +874,6 @@ ActiveRecord::Schema.define(version: 2023_10_21_022039) do
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
 
-  create_table "old_learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "learning_goal_id"
-    t.integer "project_id"
-    t.string "project_version"
-    t.integer "understanding"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "requester_id"
-    t.integer "ai_confidence"
-    t.integer "status", default: 0
-    t.index ["learning_goal_id"], name: "index_old_learning_goal_ai_evaluations_on_learning_goal_id"
-    t.index ["requester_id"], name: "index_old_learning_goal_ai_evaluations_on_requester_id"
-    t.index ["user_id"], name: "index_old_learning_goal_ai_evaluations_on_user_id"
-  end
-
   create_table "paired_user_levels", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.bigint "driver_user_level_id", unsigned: true
     t.bigint "navigator_user_level_id", unsigned: true
@@ -1661,7 +1645,7 @@ ActiveRecord::Schema.define(version: 2023_10_21_022039) do
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
-  create_table "rubric_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "rubric_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "requester_id", null: false
     t.bigint "rubric_id", null: false
@@ -2326,7 +2310,6 @@ ActiveRecord::Schema.define(version: 2023_10_21_022039) do
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
-  add_foreign_key "old_learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
