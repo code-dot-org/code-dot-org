@@ -1,6 +1,6 @@
 {
   "key": "self-paced-pl-csd-unit1",
-  "display_name": "self-paced-pl-csd-unit1",
+  "display_name": "Teaching Problem Solving and Computing",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -16,6 +16,6 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_id": 484,
+  "self_paced_pl_course_offering_key": "self-paced-pl-csd-unit1"
 }
