@@ -8436,6 +8436,10 @@
   hoc_how_to_educators_intro_heading: "How to plan your Hour of Code"
   hoc_how_to_educators_intro_desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics.  This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code promises an extraordinary voyage."
 
+  hoc_how_to_companies_intro_heading: "How your company can engage with the Hour of Code"
+  hoc_how_to_companies_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential."
+  hoc_how_to_companies_intro_desc_02: "This guide will tell you how to host an Hour of Code event with your company. Check out our volunteer guide to see how to connect with a local school or volunteer as an individual."
+
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
