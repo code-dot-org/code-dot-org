@@ -11,6 +11,7 @@ import instructionsDialog from './instructionsDialog';
 import watchedExpressions from './watchedExpressions';
 import feedback from './feedback';
 import studioAppActivity from './studioAppActivity';
+import blockly from './blockly';
 
 export default {
   runState,
@@ -22,4 +23,5 @@ export default {
   watchedExpressions,
   feedback,
   studioAppActivity,
+  blockly,
 };

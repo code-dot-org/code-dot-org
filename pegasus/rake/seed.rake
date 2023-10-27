@@ -16,7 +16,7 @@ namespace :seed do
 
   desc 'download modified Google Sheets as CSV'
   timed_task_with_logging :sync_v3 do
-    Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
+    Dir.glob(pegasus_dir('data/*.gsheet')) {|file| GSheetToCsv.new(file).import}
   end
 
   desc 'download modified Google Sheets as CSV, and import any modified CSVs into the database'

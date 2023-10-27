@@ -1,7 +1,11 @@
 {
   "name": "virtual-pl-csa-summer-2024",
   "script_names": [
-
+    "virtual-pl-csa-summer-day1",
+    "virtual-pl-csa-summer-day2",
+    "virtual-pl-csa-summer-day3",
+    "virtual-pl-csa-summer-day4",
+    "virtual-pl-csa-summer-day5"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

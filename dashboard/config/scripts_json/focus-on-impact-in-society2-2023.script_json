@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:49:49 UTC",
+    "serialized_at": "2023-10-03 16:57:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1730,7 +1730,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reducing Printed Materials**\r\n\r\nThe User Profiles are used for reference only.  Students can look at digital versions during this activity.  Assign each student a link, rather than handing out the actual profiles.\r\n\r\nIf you choose to print out the user profiles, they can be reused, as long as the students are told not to write on them.\r\n\r\n"
+            "markdown": "**Reducing Printed Materials:** The User Profiles are used for reference only. Students can look at digital versions during this activity. Assign each student a link, rather than handing out the actual profiles.\n\n**Generating Alternative Profiles:** These profiles are provided as a baseline, but you may decide to augment these profiles or generate entirely new ones to better suit your classroom. You could even consider using a generative AI tool like ChatGPT or Bard to re-imagine these profiles from another perspective - [click here to see an example from our Teacher Forum](https://forum.code.org/t/lesson-2-alternate-user-profiles-for-teaching-empathy/38454) of a teacher who used ChatGPT to re-imagine these profiles as teenagers.\n\nFor more information on using generative AI as a teaching aide, consider reviewing our [AI 101 Professional Learning Series](https://code.org/ai/pl/101)\n"
           }
         ]
       },
@@ -10133,6 +10133,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

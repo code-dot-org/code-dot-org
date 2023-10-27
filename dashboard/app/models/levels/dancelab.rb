@@ -27,6 +27,7 @@
 class Dancelab < GamelabJr
   serialized_attrs %w(
     default_song
+    song_selection
     uses_lab2
     uses_preview
   )

@@ -29,6 +29,8 @@
       "@cdo/aichat/locale": ["./src/aichat/locale-do-not-import.js"],
       "@cdo/standaloneVideo/locale": ["./src/standaloneVideo/locale-do-not-import.js"],
       "@cdo/locale": ["./src/util/locale-do-not-import.js"],
-    }
+      "@cdo/static/*": ["./static/*"],
+    },
+    "resolveJsonModule": true,
   }
 }

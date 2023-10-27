@@ -6,6 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
 import Spinner from '../../components/spinner';
@@ -200,7 +201,7 @@ const styles = {
     opacity: 0.5,
   },
   attendanceSummary: {
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     fontSize: 16,
     margin: 15,
   },

@@ -98,7 +98,7 @@ function devtool({minify} = {}) {
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'inline-cheap-source-map';
+    return 'eval-source-map';
   } else {
     return 'inline-source-map';
   }
@@ -267,9 +267,22 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
+      ...(process.env.DEV
+        ? [
+            // Enable source maps locally for Blockly for easier debugging.
+            {
+              test: /(blockly\/.*\.js)$/,
+              use: ['source-map-loader'],
+              enforce: 'pre',
+            },
+          ]
+        : []),
     ],
     noParse: [/html2canvas/],
   },
+  // Ignore spurious warnings from source-map-loader.
+  // It can't find source maps for some Closure modules in Blockly and that is expected.
+  ignoreWarnings: [/Failed to parse source map/],
 };
 
 // FIXME: figure out how to re-enable hot reloading with
@@ -332,6 +345,8 @@ function createWebpackConfig({
       // When minifying, this generates a 20-hex-character hash.
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
+    // Don't output >1000 lines of webpack build stats to the CI logs
+    stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
     watch,
     entry: addPollyfillsToEntryPoints(

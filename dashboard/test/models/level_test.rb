@@ -75,7 +75,7 @@ class LevelTest < ActiveSupport::TestCase
   test "cannot create two custom levels with same name" do
     assert_does_not_create(Level) do
       level2 = Level.create(@custom_maze_data)
-      assert_not level2.valid?
+      refute level2.valid?
       assert_includes(level2.errors, :name)
     end
   end
@@ -84,7 +84,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_does_not_create(Level) do
       name_upcase = @custom_maze_data[:name].upcase
       level2 = Level.create(@custom_maze_data.merge(name: name_upcase))
-      assert_not level2.valid?
+      refute level2.valid?
       assert_includes(level2.errors, :name)
     end
   end
@@ -100,7 +100,7 @@ class LevelTest < ActiveSupport::TestCase
   test "reject bad chars in custom level name" do
     assert_does_not_create(Level) do
       level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
-      assert_not level.valid?
+      refute level.valid?
       assert_includes(level.errors, :name)
     end
   end
@@ -1327,7 +1327,7 @@ class LevelTest < ActiveSupport::TestCase
     contained_level = create :multi
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
-    assert_not level_with_contained.can_have_feedback_review_state?
+    refute level_with_contained.can_have_feedback_review_state?
   end
 
   test 'next_unused_name_for_copy finds next available level name' do

@@ -175,7 +175,7 @@ const PEGASUS_ENTRIES = {
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/public/administrators': './src/sites/code.org/pages/public/administrators.js',
+  'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
   'code.org/views/regional_partner_search': './src/sites/code.org/pages/views/regional_partner_search.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
@@ -187,7 +187,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
 
   // hourofcode.com
-  'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+  'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',

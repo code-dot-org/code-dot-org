@@ -401,7 +401,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
 
     teacher = User.last
-    assert_not_nil teacher.share_teacher_email_regional_partner_opt_in
+    refute_nil teacher.share_teacher_email_regional_partner_opt_in
   end
 
   test "create new teacher with us ip with opt-out to sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil" do

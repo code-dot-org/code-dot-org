@@ -1,6 +1,6 @@
 //This is the unused sprite we attach behaviors to, which is how we get animations to happen over time
 //When the animation is over, we remove the behavior from the sprite
-createNewSprite({name: 'effectSprite'}, "", ({"x":-200,"y":-200}));
+//createNewSprite({name: 'effectSprite'}, "", ({"x":-200,"y":-200}));
 
 //From https://github.com/code-dot-org/code-dot-org/blob/525025d9870b45a81dcb4c69f7541f4f2b1abeee/apps/src/p5lab/poetry/constants.js
 var PALETTES = {
@@ -51,6 +51,10 @@ function randomColor() {
 /** Creates a rain effect with 20 drops on the screen
 */
 function rainEffect() {
+  if (drops.length === 0) {
+    //removeBehaviorSimple(({name: "effectSprite"}), new Behavior(rainEffect, []));
+    return;
+  }
   console.log("inside rain effect");
   push();
   stroke(
@@ -67,9 +71,6 @@ function rainEffect() {
   drops = drops.filter(function(drop) {
     return (drop.y < 420 && drop.x < 420);
   });
-  if (drops.length === 0) {
-    removeBehaviorSimple(({name: "effectSprite"}), new Behavior(rainEffect, []));
-  }
   pop();
 }
 
@@ -96,7 +97,8 @@ function setForegroundEffect2(option) {
         color: randomColor()
       });
     }
-    addBehaviorSimple(({name: "effectSprite"}), new Behavior(bubbleEffect, []));
+    //addBehaviorSimple(({name: "effectSprite"}), new Behavior(bubbleEffect, []));
+    other.push(bubbleEffect);
   }
   else if (option == "hearts") {
     for (var hearts_i = 0; hearts_i < numHearts; hearts_i++) {
@@ -108,7 +110,8 @@ function setForegroundEffect2(option) {
         color: randomColor()
       });
     }
-    addBehaviorSimple(({name: "effectSprite"}), new Behavior(heartEffect, []));
+    //addBehaviorSimple(({name: "effectSprite"}), new Behavior(heartEffect, []));
+    other.push(heartEffect);
   }
   else if (option == "confetti") {
 	for (var confetti_i = 0; confetti_i < numConfetti; confetti_i++) {
@@ -121,7 +124,8 @@ function setForegroundEffect2(option) {
         color: randomColor()
       });
     }
-    addBehaviorSimple(({name: "effectSprite"}), new Behavior(confettiEffect, []));
+    //addBehaviorSimple(({name: "effectSprite"}), new Behavior(confettiEffect, []));
+    other.push(confettiEffect);
   }
   else if (option == "starburst") {
     for (var star_i = 0; star_i < numStars; star_i++) {
@@ -135,7 +139,8 @@ function setForegroundEffect2(option) {
         velocityY: velocity * sin(theta)
       });
     }
-    addBehaviorSimple(({name: "effectSprite"}), new Behavior(starburstEffect, []));
+    //addBehaviorSimple(({name: "effectSprite"}), new Behavior(starburstEffect, []));
+    other.push(starburstEffect);
   }
   else if (option == "twinkling") {
    	for (var twinkle_i = 0; twinkle_i < numTwinkleStars; twinkle_i++) {
@@ -151,7 +156,8 @@ function setForegroundEffect2(option) {
         delta: random([-6, -5, -4, -3, 3, 4, 5, 6])
       });
     }
-    addBehaviorSimple(({name: "effectSprite"}), new Behavior(twinklingEffect, []));
+    //addBehaviorSimple(({name: "effectSprite"}), new Behavior(twinklingEffect, []));
+    other.push(twinklingEffect);
   }
 }
 
@@ -160,6 +166,10 @@ function setForegroundEffect2(option) {
 /** Creates a bubble effect that float up from the bottom
 */
 function bubbleEffect() {
+  if (bubbles.length === 0) {
+    //removeBehaviorSimple(({name: "effectSprite"}), new Behavior(bubbleEffect, []));
+    return;
+  }
   push();
   noStroke();
   for(var i = 0; i < bubbles.length; i++) {
@@ -177,13 +187,14 @@ function bubbleEffect() {
   bubbles = bubbles.filter(function(bubble) {
     return bubble.y > 0;
   });
-  if (bubbles.length === 0) {
-    removeBehaviorSimple(({name: "effectSprite"}), new Behavior(bubbleEffect, []));
-  }
 }
 /** Creates a heart effect with hearts on the screen that shrink in size
 */
 function heartEffect() {
+  if(hearts.length === 0) {
+	//removeBehaviorSimple(({name: "effectSprite"}), new Behavior(heartEffect, []));
+    return;
+  }
   for(var hearts_j = 0; hearts_j < hearts.length; hearts_j++) {
    	var heart = hearts[hearts_j];
     push();
@@ -197,13 +208,14 @@ function heartEffect() {
   hearts = hearts.filter(function(heart) {
     return heart.size > 0;
   });
-  if(hearts.length === 0) {
-	removeBehaviorSimple(({name: "effectSprite"}), new Behavior(heartEffect, []));
-  }
 }
 /** Creates a confetti effect with confetti that falls from the top of the screen
 */
 function confettiEffect() {
+    if(confetti.length === 0) {
+	  //removeBehaviorSimple(({name: "effectSprite"}), new Behavior(confettiEffect, []));
+      return;
+    }
 	push();
   	noStroke();
   	for(var confetti_j = 0; confetti_j < confetti.length; confetti_j++) {
@@ -222,14 +234,15 @@ function confettiEffect() {
   	confetti = confetti.filter(function(confetto) {
       return confetto.y < 420;
     });
-  	if(confetti.length === 0) {
-		removeBehaviorSimple(({name: "effectSprite"}), new Behavior(confettiEffect, []));
-    }
   	pop();
 }
 /** Creates several starts on the screen that twinkle then fade out
 */
 function starburstEffect() {
+  	if (stars.length === 0) {
+      //removeBehaviorSimple(({name: "effectSprite"}), new Behavior(starburstEffect, []));
+      return;
+    }
 	push();
     noStroke();
 	for(var star_j = 0; star_j < stars.length; star_j++) {
@@ -242,13 +255,14 @@ function starburstEffect() {
   	stars = stars.filter(function(star) {
       return star.x > -10 && star.x < 410 && star.y > -10 && star.y < 410;
     });
-  	if (stars.length === 0) {
-     	removeBehaviorSimple(({name: "effectSprite"}), new Behavior(starburstEffect, []));
-    }
   	pop();
 }
 
 function twinklingEffect() {
+  if(twinkleStars.length === 0) {
+    //removeBehaviorSimple(({name: "effectSprite"}), new Behavior(twinklingEffect, []));
+    return;
+  }
   push();
   noStroke();
   for(var twinkle_j = 0; twinkle_j < twinkleStars.length; twinkle_j++) {
@@ -265,9 +279,6 @@ function twinklingEffect() {
   twinkleStars = twinkleStars.filter(function(star) {
     return star.alpha > 0;
   });
-  if(twinkleStars.length === 0) {
-    removeBehaviorSimple(({name: "effectSprite"}), new Behavior(twinklingEffect, []));
-  }
   pop();
 }
 

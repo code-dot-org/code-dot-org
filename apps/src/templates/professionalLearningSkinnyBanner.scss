@@ -78,9 +78,9 @@
   }
 
   h1 {
+    @include main-font-regular;
     color: black;
     position: relative;
-    font-family: $gotham-regular;
     font-size: 18px;
     line-height: 40px;
     margin: 0;
@@ -96,10 +96,10 @@
   }
 
   p {
+    @include main-font-regular;
     color: black;
     position: relative;
     font-size: 14px;
-    font-family: $gotham-regular;
 
     @media screen and (max-width: $width-md) {
       color: white;
@@ -107,12 +107,12 @@
   }
 
   span {
+    @include main-font-semi-bold;
     min-width: 100px;
     background-color: white;
     border-color: white;
     border-radius: 4px;
     color: black;
-    font-family: $gotham-bold;
     font-size: 14px;
     text-align: center;
     padding: 10px;
