@@ -369,6 +369,10 @@ section.faq {
     }
   }
 
+  ul li {
+    margin-bottom: 1rem;
+  }
+
   @media screen and (max-width: $width-sm) {
     h2 {
       text-align: center;
