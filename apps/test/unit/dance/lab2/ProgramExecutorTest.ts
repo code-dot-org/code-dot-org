@@ -43,7 +43,6 @@ describe('ProgramExecutor', () => {
       p5_: {
         redraw: sinon.stub(),
       },
-      setForegroundEffectsInPreviewMode: sinon.stub(),
       livePreview: sinon.stub(),
     };
 
@@ -125,8 +124,7 @@ describe('ProgramExecutor', () => {
     expect(nativeAPI.play).to.have.been.calledWith(currentSongMetadata);
   });
 
-  it('compiles and draws a frame on preview', async () => {
-    const spy = sinon.stub(window, 'requestAnimationFrame').callsArg(0);
+  it('compiles and runs live preview on preview', async () => {
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,
