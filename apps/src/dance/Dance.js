@@ -503,7 +503,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
 
   // Assign danceMessage the value of the message key if the key exists.
   // Otherwise, assign it an empty string.
-  const danceMessage = message && danceMsg[message] ? danceMsg[message]() : '';
+  const danceMessage = danceMsg[message] ? danceMsg[message]() : '';
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
     this.message = danceMessage;
