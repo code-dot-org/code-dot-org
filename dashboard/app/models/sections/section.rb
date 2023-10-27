@@ -23,12 +23,10 @@
 #  restrict_section     :boolean          default(FALSE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
-#  lti_integration_id   :bigint
 #
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
-#  fk_rails_f0d4df9901        (lti_integration_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
