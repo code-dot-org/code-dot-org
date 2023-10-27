@@ -44,6 +44,17 @@ export enum AiOutput {
 
 // first item is user readable / translated string (eg, "Blooming Petals"),
 // second item is english-only key (eg, "blooming_petals")
+// ['Blooming Petals', 'blooming_petals']
 export type TranslationTuple = [string, string];
 
 export type DropdownTranslations = TranslationTuple[];
+
+export type Translations = {
+  [key in FieldKey]: DropdownTranslations;
+};
+
+export enum FieldKey {
+  BACKGROUND_EFFECT = 'backgroundEffect',
+  FOREGROUND_EFFECT = 'foregroundEffect',
+  BACKGROUND_PALETTE = 'backgroundColor',
+}

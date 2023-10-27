@@ -12,7 +12,13 @@ import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput, TranslationTuple, DropdownTranslations} from '../types';
+import {
+  AiOutput,
+  TranslationTuple,
+  DropdownTranslations,
+  Translations,
+  FieldKey,
+} from '../types';
 import {generateBlocksFromResult} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -60,12 +66,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
-  const [backgroundTranslations, setBackgroundTranslations] =
-    useState<DropdownTranslations>([]);
-  const [foregroundTranslations, setForegroundTranslations] =
-    useState<DropdownTranslations>([]);
-  const [paletteTranslations, setPaletteTranslations] =
-    useState<DropdownTranslations>([]);
+  const [translations, setTranslations] = useState<Translations>(
+    {} as Translations
+  );
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -99,20 +102,21 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         resultJson
       );
 
-      const translationsForeground = getTranslationsFromField(
+      const foregroundTranslations = getTranslationsFromField(
         blocksSvg[0].getField('EFFECT') as FieldDropdown
       );
-      setForegroundTranslations(translationsForeground);
-
       const backgroundTranslations = getTranslationsFromField(
         blocksSvg[1].getField('EFFECT') as FieldDropdown
       );
-      setBackgroundTranslations(backgroundTranslations);
-
       const paletteTranslations = getTranslationsFromField(
         blocksSvg[1].getField('PALETTE') as FieldDropdown
       );
-      setPaletteTranslations(paletteTranslations);
+
+      setTranslations({
+        [FieldKey.FOREGROUND_EFFECT]: foregroundTranslations,
+        [FieldKey.BACKGROUND_EFFECT]: backgroundTranslations,
+        [FieldKey.BACKGROUND_PALETTE]: paletteTranslations,
+      });
     }
   }, [resultJson]);
 
@@ -528,9 +532,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={JSON.parse(resultJson)}
-              backgroundTranslations={backgroundTranslations}
-              foregroundTranslations={foregroundTranslations}
-              paletteTranslations={paletteTranslations}
+              translations={translations}
             />
           </div>
         )}
@@ -618,6 +620,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 const getTranslationsFromField = (
   dropdown: FieldDropdown
 ): DropdownTranslations => {
+  // Keys from blockly are surrounded in double quotes
+  // eg, '"blooming_petals"'. Remove them for easier use.
   const stripDoubleQuotes = (translationTuple: TranslationTuple) => {
     translationTuple[1] = translationTuple[1].replace(/"/g, '');
     return translationTuple;

@@ -2,7 +2,12 @@ import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
-import {DropdownTranslations, TranslationTuple} from '../types';
+import {
+  DropdownTranslations,
+  TranslationTuple,
+  Translations,
+  FieldKey,
+} from '../types';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -29,20 +34,12 @@ ChartJS.register(
   Legend
 );
 
-enum FieldKey {
-  BACKGROUND_EFFECT = 'backgroundEffect',
-  FOREGROUND_EFFECT = 'foregroundEffect',
-  BACKGROUND_PALETTE = 'backgroundColor',
-}
-
 type Result = {[key in FieldKey]: string};
 
 interface AiExplanationViewProps {
   inputs: string[];
   result: Result;
-  backgroundTranslations: DropdownTranslations;
-  foregroundTranslations: DropdownTranslations;
-  paletteTranslations: DropdownTranslations;
+  translations: Translations;
 }
 
 interface FieldObject {
@@ -66,9 +63,7 @@ interface Fields {
 const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   inputs,
   result,
-  backgroundTranslations,
-  foregroundTranslations,
-  paletteTranslations,
+  translations,
 }) => {
   const [currentFieldKey, setCurrentFieldKey] = useState(
     FieldKey.BACKGROUND_EFFECT
@@ -78,17 +73,17 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     [FieldKey.BACKGROUND_EFFECT]: {
       name: 'Background effect',
       data: CachedBackgrounds as CachedWeightsMapping,
-      labelTranslations: backgroundTranslations,
+      labelTranslations: translations[FieldKey.BACKGROUND_EFFECT],
     },
     [FieldKey.FOREGROUND_EFFECT]: {
       name: 'Foreground effect',
       data: CachedForegrounds as CachedWeightsMapping,
-      labelTranslations: foregroundTranslations,
+      labelTranslations: translations[FieldKey.FOREGROUND_EFFECT],
     },
     [FieldKey.BACKGROUND_PALETTE]: {
       name: 'Background color',
       data: CachedPalettes as CachedWeightsMapping,
-      labelTranslations: paletteTranslations,
+      labelTranslations: translations[FieldKey.BACKGROUND_PALETTE],
     },
   };
 
