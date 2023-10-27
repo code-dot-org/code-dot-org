@@ -160,7 +160,7 @@
           "maxRateDescription": "Very interested"
         },
         {
-          "type": "text",
+          "type": "comment",
           "name": "open_questions_implementation",
           "title": "Do you have any questions about implementing this curriculum in your classroom that were not answered during this workshop?",
           "rows": 3
