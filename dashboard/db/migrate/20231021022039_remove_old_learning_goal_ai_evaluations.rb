@@ -1,4 +1,7 @@
 class RemoveOldLearningGoalAiEvaluations < ActiveRecord::Migration[6.1]
+  class OldLearningGoalAiEvaluation < ApplicationRecord
+  end
+
   def up
     # Move over the data
     OldLearningGoalAiEvaluation.all.each do |old_lg|
