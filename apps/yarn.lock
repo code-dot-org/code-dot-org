@@ -2255,10 +2255,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:1.0.11":
-  version: 1.0.11
-  resolution: "@code-dot-org/dance-party@npm:1.0.11"
-  checksum: 8c2cb83a06b9bffcb01d3ce47373a1a6e9f5f091570d7adba53ef5a922d8af3db299a399c8b4130b593a5ddb8c32752f3e1235e1a27f77423956b8f286585661
+"@code-dot-org/dance-party@npm:1.0.13":
+  version: 1.0.13
+  resolution: "@code-dot-org/dance-party@npm:1.0.13"
+  checksum: 6c5f6c7c197077d07b4984275a876b8297f70a888c7e610cdd43786fc87cdb87a9d3ee9e4a8ef89a184e12c4e92c57682404c710267c9193f9e55d7eef34d1fd
   languageName: node
   linkType: hard
 
@@ -2362,14 +2362,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/piskel@npm:0.13.0-cdo.12":
-  version: 0.13.0-cdo.12
-  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.12"
+"@code-dot-org/piskel@npm:0.13.0-cdo.13":
+  version: 0.13.0-cdo.13
+  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.13"
   dependencies:
     messageformat: ^2.3.0
   bin:
     piskel-root: misc/scripts/piskel-root
-  checksum: cb027ba26fa220eb1d442de536b26954864523317e526db5685b6428214af5830b9692c348d52fe6e6624624b35ee9e0ab350f39ecfd8ee0f563b22aaa3271f8
+  checksum: fb4280827c65fc8ea80151c3eaeacb656a821695ed464c2eb15f7f0b2bc97de96fd6fdd5836276e288d4a7bfb8ee1ed439383c3822d569835f3406c238a04a47
   languageName: node
   linkType: hard
 
@@ -7659,7 +7659,7 @@ __metadata:
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
     "@code-dot-org/craft": 0.2.2
-    "@code-dot-org/dance-party": 1.0.11
+    "@code-dot-org/dance-party": 1.0.13
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
     "@code-dot-org/js-interpreter": 1.3.13
     "@code-dot-org/js-numbers": 0.1.0-cdo.0
@@ -7667,7 +7667,7 @@ __metadata:
     "@code-dot-org/ml-activities": 0.0.26
     "@code-dot-org/ml-playground": 0.0.47
     "@code-dot-org/p5.play": 1.3.21-cdo
-    "@code-dot-org/piskel": 0.13.0-cdo.12
+    "@code-dot-org/piskel": 0.13.0-cdo.13
     "@code-dot-org/redactable-markdown": 0.4.0
     "@code-dot-org/remark-plugins": ^1.3.0
     "@codemirror/autocomplete": ^6.1.0

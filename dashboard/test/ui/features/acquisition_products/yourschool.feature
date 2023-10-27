@@ -29,9 +29,6 @@ Feature: Using the YourSchool census page
     Then I press "#submit-button" using jQuery
     Then I wait until I am on "http://code.org/yourschool/thankyou"
 
-  # The google map on /yourschool is broken in production. We should stop skipping
-  # this test as soon as that page is fixed.
-  @skip
   @no_circle
   Scenario: Use census map to select school
     Given I am on "http://code.org/yourschool"
@@ -46,10 +43,6 @@ Feature: Using the YourSchool census page
     Then I press keys "ALBERT EINSTEIN ACADEMY ELEMENTARY" for element "#map input"
     Then I wait until element ".VirtualizedSelectOption:contains('Albert Einstein Academy Elementary - Santa Clarita, CA 91355')" is visible
     Then I press ".VirtualizedSelectOption:contains('Albert Einstein Academy Elementary - Santa Clarita, CA 91355')" using jQuery
-
-    # Click the "Take the survey for this school" button
-    Then I wait until element "#census-info-window" is visible
-    And I press the first "#census-info-window div.button-text" element
 
     # Verify that the correct school id is set in the census form
     Then element "#form input[name='nces_school_s']" has value "60000113717"
