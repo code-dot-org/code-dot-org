@@ -5,7 +5,7 @@ module I18n
   module Utils
     class SyncOutBase
       def self.perform
-        resource_class = name.match(/.*::(?<component>\w+)::SyncOut/)
+        resource_class = name[/^.*::(\w+::\w+)::SyncOut/, 1] || name
 
         I18n::Metrics.report_runtime(resource_class, 'sync-out') do
           new.send(:perform)

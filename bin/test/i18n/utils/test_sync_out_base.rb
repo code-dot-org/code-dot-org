@@ -20,6 +20,11 @@ describe I18n::Utils::SyncOutBase do
       described_class.any_instance.expects(:process).once
       described_class.perform
     end
+
+    it 'calls report_runtime metrics with class name' do
+      I18n::Metrics.expects(:report_runtime).with(described_class.name, 'sync-out').once
+      described_class.perform
+    end
   end
 
   describe '#process' do

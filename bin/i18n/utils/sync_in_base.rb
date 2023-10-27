@@ -5,9 +5,9 @@ module I18n
   module Utils
     class SyncInBase
       def self.perform
-        resource_class = name.match(/.*::(?<component>\w+)::SyncIn/)
+        resource_class = name[/^.*::(\w+::\w+)::SyncIn/, 1] || name
 
-        I18n::Metrics.report_runtime(resource_class[:component], 'sync-in') do
+        I18n::Metrics.report_runtime(resource_class, 'sync-in') do
           new.send(:perform)
         end
       end
