@@ -1,6 +1,8 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
+import sinon from 'sinon';
+import {act} from 'react-dom/test-utils';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 
 describe('RubricContainer', () => {
@@ -28,6 +30,34 @@ describe('RubricContainer', () => {
       />
     );
     expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
+  });
+
+  it('fetches AI evaluations and passes them to children', async () => {
+    const mockFetch = sinon.stub(window, 'fetch');
+    const mockAiEvaluations = [
+      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+    ];
+    mockFetch.returns(
+      Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
+    );
+    const wrapper = mount(
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{}}
+        initialTeacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
+      />
+    );
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    expect(mockFetch).to.have.been.calledOnce;
+    expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
+      mockAiEvaluations
+    );
   });
 
   it('switches components when tabs are clicked', () => {

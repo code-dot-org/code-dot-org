@@ -126,6 +126,7 @@ describe('ProgramExecutor', () => {
   });
 
   it('compiles and draws a frame on preview', async () => {
+    const spy = sinon.stub(window, 'requestAnimationFrame').callsArg(0);
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,

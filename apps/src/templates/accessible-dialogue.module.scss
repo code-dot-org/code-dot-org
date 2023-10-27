@@ -24,20 +24,3 @@
   padding: 1rem;
   overflow: auto;
 };
-
-.middle {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  border-right-width: 0;
-  border-left-width: 0;
-  border-style: solid;
-  border-color: $lighter_gray;
-};
-
-.buttonsBottom {
-  float: right;
-};

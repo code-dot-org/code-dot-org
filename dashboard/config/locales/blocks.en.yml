@@ -105,6 +105,12 @@ en:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: change {COLOR} {METHOD} by {AMOUNT}
         options:
