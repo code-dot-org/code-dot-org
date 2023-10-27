@@ -86,6 +86,40 @@ class EvaluateRubricJob < ApplicationJob
     raise exception
   end
 
+  rescue_from(ProfanityFilterException) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
+  rescue_from(PIIFilterException) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
@@ -105,7 +139,9 @@ class EvaluateRubricJob < ApplicationJob
     code, project_version = read_user_code(channel_id)
 
     # Check for PII / sharing failures
-    share_failure = ShareFiltering.find_share_failure(code, user.locale)
+    # Get the 2-character language code from the user's preferred locale
+    locale = (user.locale || 'en')[0...2]
+    share_failure = ShareFiltering.find_share_failure(code, locale, exceptions: true)
     raise "ShareFailure #{share_failure.type}" if share_failure
 
     openai_params = get_openai_params(lesson_s3_name, code)
