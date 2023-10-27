@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -19,7 +19,7 @@ import {
   Translations,
   FieldKey,
 } from '../types';
-import {generateBlocksFromResult} from './utils';
+import {generateBlocks, generateBlocksFromResult} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -66,9 +66,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
-  const [translations, setTranslations] = useState<Translations>(
-    {} as Translations
-  );
+  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -77,8 +75,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
-
-  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
@@ -95,30 +91,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   }, [currentAiModalField]);
 
-  useEffect(() => {
-    if (resultJson) {
-      const blocksSvg = generateBlocksFromResult(
-        Blockly.getMainWorkspace(),
-        resultJson
-      );
+  const translations: Translations = useMemo(() => {
+    const blocksSvg = generateBlocks(Blockly.getMainWorkspace());
 
-      const foregroundTranslations = getTranslationsFromField(
-        blocksSvg[0].getField('EFFECT') as FieldDropdown
-      );
-      const backgroundTranslations = getTranslationsFromField(
-        blocksSvg[1].getField('EFFECT') as FieldDropdown
-      );
-      const paletteTranslations = getTranslationsFromField(
-        blocksSvg[1].getField('PALETTE') as FieldDropdown
-      );
+    const foregroundTranslations = getTranslationsFromField(
+      blocksSvg[0].getField('EFFECT') as FieldDropdown
+    );
+    const backgroundTranslations = getTranslationsFromField(
+      blocksSvg[1].getField('EFFECT') as FieldDropdown
+    );
+    const paletteTranslations = getTranslationsFromField(
+      blocksSvg[1].getField('PALETTE') as FieldDropdown
+    );
 
-      setTranslations({
-        [FieldKey.FOREGROUND_EFFECT]: foregroundTranslations,
-        [FieldKey.BACKGROUND_EFFECT]: backgroundTranslations,
-        [FieldKey.BACKGROUND_PALETTE]: paletteTranslations,
-      });
-    }
-  }, [resultJson]);
+    return {
+      [FieldKey.FOREGROUND_EFFECT]: foregroundTranslations,
+      [FieldKey.BACKGROUND_EFFECT]: backgroundTranslations,
+      [FieldKey.BACKGROUND_PALETTE]: paletteTranslations,
+    };
+  }, []);
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;

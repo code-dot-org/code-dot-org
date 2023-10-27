@@ -9,11 +9,7 @@ export const generateBlocksFromResult = (
   resultJsonString: string
 ): [BlockSvg, BlockSvg] => {
   const params = JSON.parse(resultJsonString);
-
-  const blocksSvg: [BlockSvg, BlockSvg] = [
-    workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-    workspace.newBlock('Dancelab_setBackgroundEffectWithPaletteAI') as BlockSvg,
-  ];
+  const blocksSvg = generateBlocks(workspace);
 
   // Foreground block.
   blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
@@ -26,4 +22,11 @@ export const generateBlocksFromResult = (
   blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
 
   return blocksSvg;
+};
+
+export const generateBlocks = (workspace: Workspace): [BlockSvg, BlockSvg] => {
+  return [
+    workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
+    workspace.newBlock('Dancelab_setBackgroundEffectWithPaletteAI') as BlockSvg,
+  ];
 };
