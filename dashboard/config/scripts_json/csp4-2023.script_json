@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-25 19:50:42 UTC",
+    "serialized_at": "2023-10-26 14:55:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2200,8 +2200,24 @@
       }
     },
     {
-      "key": "7c061907-0662-4db5-b83c-4e5d618cc95c",
+      "key": "41713b4f-37ae-47a5-b568-9284eda0f0a2",
       "position": 18,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Examine the selection statement (conditional) used in the Lemon Squeeze app that you diagrammed into the flowchart above. Describe one result or side effect if a particular condition in that selection statement was changed.\n</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g23c38eeb1dc_0_94\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41713b4f-37ae-47a5-b568-9284eda0f0a2",
+        "lesson_activity.key": "3f83304a-4ab6-4d5b-b7be-5de673849e3a"
+      }
+    },
+    {
+      "key": "7c061907-0662-4db5-b83c-4e5d618cc95c",
+      "position": 19,
       "properties": {
         "progression_name": "Logical Operators: AND OR"
       },
