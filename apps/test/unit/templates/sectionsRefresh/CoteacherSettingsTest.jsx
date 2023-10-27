@@ -227,7 +227,8 @@ describe('CoteacherSettings', () => {
   });
   it('Remove unsubmitted', () => {
     let coteachersToAdd = ['coelophysis@code.org', 'diplodocus@code.org'];
-    const setCoteachersToAdd = coteachers => (coteachersToAdd = coteachers);
+    const setCoteachersToAdd = func =>
+      (coteachersToAdd = func(coteachersToAdd));
 
     const wrapper = shallow(
       <CoteacherSettings

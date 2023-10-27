@@ -14,8 +14,7 @@ import AccessibleDialog from '../AccessibleDialog';
 
 export default function CoteacherSettings({
   sectionInstructors,
-  //TODO before merge: change name to whatever Molly says
-  primaryInstructor,
+  primaryTeacher,
   setCoteachersToAdd,
   coteachersToAdd,
 }) {
@@ -44,12 +43,11 @@ export default function CoteacherSettings({
       ? [...sectionInstructors, ...additions]
       : additions;
 
-    // Remove the primary instructor and any coteachers that have been removed
+    // Remove the primary teacher and any coteachers that have been removed
     return unfiltered
       .filter(
         instructor =>
-          !primaryInstructor ||
-          instructor.instructorEmail !== primaryInstructor.email
+          !primaryTeacher || instructor.instructorEmail !== primaryTeacher.email
       )
       .filter(instructor => !removedCoteacherIds.includes(instructor.id))
       .sort((a, b) => statusSortValue(a) - statusSortValue(b));
@@ -57,7 +55,7 @@ export default function CoteacherSettings({
     sectionInstructors,
     coteachersToAdd,
     removedCoteacherIds,
-    primaryInstructor,
+    primaryTeacher,
   ]);
 
   const addRemovedCoteacher = id => {
@@ -156,10 +154,9 @@ export default function CoteacherSettings({
     e.preventDefault();
     if (!coteacher.id) {
       // remove from coteachersToAdd
-      const additions = coteachersToAdd.filter(
-        teacher => teacher !== coteacher.instructorEmail
+      setCoteachersToAdd(existing =>
+        existing.filter(teacher => teacher !== coteacher.instructorEmail)
       );
-      setCoteachersToAdd(additions);
       setCoteacherToRemove({});
       return;
     }
@@ -283,7 +280,7 @@ export default function CoteacherSettings({
 
 CoteacherSettings.propTypes = {
   sectionInstructors: PropTypes.arrayOf(PropTypes.object),
-  primaryInstructor: PropTypes.object,
+  primaryTeacher: PropTypes.object,
   setCoteachersToAdd: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
 };

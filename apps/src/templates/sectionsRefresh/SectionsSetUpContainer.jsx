@@ -79,8 +79,7 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
-  // TODO: set back to true
-  const [isCoteacherOpen, setIsCoteacherOpen] = useState(true);
+  const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
   const [coteachersToAdd, setCoteachersToAdd] = useState([]);
@@ -313,7 +312,7 @@ export default function SectionsSetUpContainer({
       () => (
         <CoteacherSettings
           sectionInstructors={sections[0].sectionInstructors}
-          primaryInstructor={sections[0].primaryInstructor}
+          primaryTeacher={sections[0].primaryInstructor}
           setCoteachersToAdd={setCoteachersToAdd}
           coteachersToAdd={coteachersToAdd}
         />
