@@ -23,7 +23,7 @@ class RemoveOldLearningGoalAiEvaluations < ActiveRecord::Migration[6.1]
         requester_id: old_lg.requester_id || old_lg.user_id,
         project_id: old_lg.project_id,
         project_version: old_lg.project_version,
-        rubric: old_lg.learning_goal.rubric,
+        rubric: LearningGoal.find(old_lg.learning_goal_id).rubric,
         status: 1,
         created_at: old_lg.created_at,
         updated_at: old_lg.updated_at
