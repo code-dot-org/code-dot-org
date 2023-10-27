@@ -4,6 +4,7 @@ import React from 'react';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import style from './project-card.module.scss';
 import ReportAbusePopUp from './ReportAbusePopUp.jsx';
@@ -98,9 +99,9 @@ export default class ProjectCard extends React.Component {
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
 
-    const thumbnailStyle = styles.thumbnail;
+    let thumbnailStyle = styles.thumbnail;
     if (this.props.showFullThumbnail) {
-      Object.assign(thumbnailStyle, styles.fullThumbnail);
+      thumbnailStyle = {...thumbnailStyle, ...styles.fullThumbnail};
     }
 
     const shouldShowPublicDetails =
@@ -200,7 +201,7 @@ const styles = {
     paddingTop: 18,
     paddingBottom: 5,
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     overflow: 'hidden',
     textOverflow: 'ellipsis',

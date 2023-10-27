@@ -36,13 +36,8 @@ export interface DanceLevelProperties extends LevelProperties {
   useRestrictedSongs?: boolean;
 }
 
-export type AiModalItem = {
-  id: string;
-  name: string;
-};
-
-export type AiModalReturnedItem = {
-  id: string;
-  name: string;
-  url: string;
-};
+export enum AiOutput {
+  AI_BLOCK = 'ai_block',
+  GENERATED_BLOCKS = 'generated_blocks',
+  BOTH = 'both',
+}

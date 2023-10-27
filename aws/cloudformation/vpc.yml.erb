@@ -290,6 +290,13 @@ Resources:
           FromPort: 5439
           ToPort: 5439
           DestinationSecurityGroupId: {Ref: RedshiftSecurityGroup}
+        - Description: Permit Replication Instance to store intermediate data in S3.
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          # Managed prefix list for AWS S3 in us-east-1
+          # https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html
+          DestinationPrefixListId: pl-63a5400a
   DMSSubnetGroup:
     Type: AWS::DMS::ReplicationSubnetGroup
     Properties:

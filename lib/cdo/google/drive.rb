@@ -1,7 +1,6 @@
 require 'json'
 require 'stringio'
 require 'google_drive'
-require 'cdo/chat_client'
 
 module Google
   class Drive
@@ -11,7 +10,7 @@ module Google
       def initialize(session, file)
         @session = session
         @file = file
-        $log&.debug "Google Drive file opened (key: #{@file.key})"
+        CDO.log.debug "Google Drive file opened (key: #{@file.key})"
       end
 
       def raw_file
@@ -40,7 +39,7 @@ module Google
     end
 
     def initialize(service_account_key = CDO.gdrive_export_secret.to_json)
-      $log&.debug 'Establishing Google Drive session'
+      CDO.log.debug 'Establishing Google Drive session'
       raise "Google Authentication Key not provided." if service_account_key.nil?
       @session = GoogleDrive::Session.from_service_account_key StringIO.new(service_account_key)
     end
@@ -49,9 +48,12 @@ module Google
       file = @session.file_by_title(path_to_title_array(path))
       return nil if file.nil?
       Google::Drive::File.new(@session, file)
-    rescue GoogleDrive::Error => exception
-      ChatClient.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{exception.message}</code></pre>", color: 'yellow'
-      return nil
+    end
+
+    def file_by_id(id)
+      file = @session.file_by_id(id)
+      return nil if file.nil?
+      Google::Drive::File.new(@session, file)
     end
 
     def folder(path)
@@ -65,21 +67,21 @@ module Google
       target_name = ::File.basename(target_path)
       target_folder = ::File.dirname(target_path)
 
-      $log&.debug "Uploading '#{src_path}' as '/#{temp_name}'"
+      CDO.log.debug "Uploading '#{src_path}' as '/#{temp_name}'"
       file = @session.upload_from_file(src_path, temp_name)
 
-      $log&.debug "Moving '/#{temp_name}' to '#{target_folder}/#{temp_name}'"
+      CDO.log.debug "Moving '/#{temp_name}' to '#{target_folder}/#{temp_name}'"
       folder = self.folder(target_folder)
       folder.add(file)
       @session.root_collection.remove(file)
 
       existing_file = self.file(target_path)
       unless existing_file.nil?
-        $log&.debug "Removing existing '#{target_path}'"
+        CDO.log.debug "Removing existing '#{target_path}'"
         folder.remove(existing_file.raw_file)
       end
 
-      $log&.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
+      CDO.log.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
       file.title = target_name
     end
 

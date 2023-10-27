@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import BaseDialog from '../../BaseDialog';
 import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export class CreateStandardsReportDialog extends Component {
   static propTypes = {
@@ -69,13 +70,13 @@ const styles = {
     color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };
 

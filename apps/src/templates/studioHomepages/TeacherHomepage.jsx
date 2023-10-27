@@ -189,7 +189,7 @@ export const UnconnectedTeacherHomepage = ({
         )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
-        {isEnglish && specialAnnouncement && (
+        {specialAnnouncement && (
           <MarketingAnnouncementBanner
             announcement={specialAnnouncement}
             marginBottom="30px"
