@@ -86,7 +86,10 @@ class RubricsController < ApplicationController
     return head :forbidden unless can?(:manage, student)
 
     # Get the latest rubric evaluation
-    rubric_ai_evaluation = RubricAiEvaluation.where(rubric_id: permitted_params[:id]).order(updated_at: :desc).first
+    rubric_ai_evaluation = RubricAiEvaluation.where(
+      rubric_id: permitted_params[:id],
+      user_id: student.id
+    ).order(updated_at: :desc).first
 
     # Get the most recent learning goals based on the most recent graded rubric
     learning_goal_ai_evaluations = rubric_ai_evaluation.learning_goal_ai_evaluations
