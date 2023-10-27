@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "draft-hoc-dp-2",
-    "serialized_at": "2023-10-25 22:30:41 UTC",
+    "serialized_at": "2023-10-26 21:53:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -850,6 +850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro_a"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -872,6 +875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer_a"
+        ],
         "progression": "Code a dancer and dance move"
       },
       "bonus": false,
@@ -894,6 +900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1_a"
+        ],
         "progression": "Code an event"
       },
       "bonus": false,
@@ -916,6 +925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_a"
+        ],
         "progression": "AI Generated effects"
       },
       "bonus": false,
@@ -938,6 +950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_01_october"
+        ],
         "progression": "AI Generated effects"
       },
       "bonus": false,
@@ -960,6 +975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_02_october"
+        ],
         "progression": "Choose a dance move"
       },
       "bonus": false,
@@ -982,6 +1000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_06_october"
+        ],
         "progression": "Code backup dancers"
       },
       "bonus": false,
@@ -1004,6 +1025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_06_draft_backup_dance_moves_october"
+        ],
         "progression": "Choose backup dancer moves"
       },
       "bonus": false,
@@ -1026,6 +1050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_party_ai_prototype_video_measures_october"
+        ],
         "progression": "Video: Using Events with Measures"
       },
       "bonus": false,
@@ -1048,6 +1075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_04_october"
+        ],
         "progression": "Key Press events"
       },
       "bonus": false,
@@ -1070,6 +1100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_10_october"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
