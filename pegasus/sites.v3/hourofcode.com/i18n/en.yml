@@ -229,6 +229,7 @@
   call_to_action_start_part_02: "Start part two"
   call_to_action_start_unplugged_activity: "Start unplugged activity"
   call_to_action_view_promo_resources: "View promo resources"
+  call_to_action_get_involved: "Get involved"
   call_to_action_learn_more: "Learn more"
   call_to_action_watch_now: "Watch now"
   call_to_action_try_activity: "Try activity"
@@ -8452,6 +8453,8 @@
   hoc_how_to_resources_promo_desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
   hoc_how_to_resources_discover_heading: "Discover Activities"
   hoc_how_to_resources_discover_desc: "Explore a wide selection of one-hour tutorials designed for all ages in over 45 languages."
+  hoc_how_to_resources_get_involved_heading: "How to Get Involved"
+  hoc_how_to_resources_get_involved_desc: "Help spread the word about Hour of Code! Discover ways to get your community involved."
 
   hoc_how_to_step_label_plan: "Plan where and when you'll do your Hour of Code"
   hoc_how_to_step_label_choose_activity: "Choose your activity"
