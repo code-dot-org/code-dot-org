@@ -48,25 +48,11 @@ class Tutorials
     "http://#{api_domain}/api/hour/begin_learn/#{code}"
   end
 
-  def find_with_tag(tag)
+  def find_with_grade_level(gradelevel)
     results = {}
     @contents.each do |i|
-      tags = CSV.parse_line(i[:tags].to_s)
-      next unless tags.include?(tag)
-      results[i[:code]] = i
-    end
-    results
-  end
-
-  def find_with_tag_and_language(tag, language)
-    results = {}
-    @contents.each do |i|
-      tags = CSV.parse_line(i[:tags].to_s)
-      next unless tags.include?(tag)
-
-      languages = CSV.parse_line(i[:languages_supported].to_s)
-      next unless languages.nil_or_empty? || languages.include?(language) || languages.include?(language[0, 2])
-
+      tag = CSV.parse_line(i[:gradeleveltag].to_s)
+      next unless tag.include?(gradelevel)
       results[i[:code]] = i
     end
     results
