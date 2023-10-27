@@ -320,7 +320,7 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
 end
 
 When /^I wait for the video thumbnails to load$/ do
-  wait_until {@browser.execute_script('return $(".video-thumbnail-loaded").length == $(".video-thumbnail-wrapper").length')}
+  wait_until {@browser.execute_script("return $('.video-thumbnail-loaded').length == $('.video-thumbnail-wrapper').length")}
 end
 
 When /^I rotate to (landscape|portrait)$/ do |orientation|
