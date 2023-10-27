@@ -191,7 +191,7 @@
     # SQL user.
     DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
     DBServerHost: {'Fn::GetAtt': ['AuroraCluster', 'Endpoint.Address']},
-    # Credentials (username and password) for the SQL User this Resource is provisioning.
+    # Credentials for SQL admin user that will create/update/delete this SQL user resource.
     DBCredentialAdminSecret: {Ref: 'DatabaseSecretAdmin'},
     # Credentials (username and password) for the SQL User this Resource is provisioning.
     DBCredentialSecret: {Ref: 'DatabaseSecretWriter'},
