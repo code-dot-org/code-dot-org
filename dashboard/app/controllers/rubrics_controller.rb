@@ -113,13 +113,12 @@ class RubricsController < ApplicationController
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
+    # Find the rubric (must have something to evaluate)
+    return head :bad_request unless @rubric
+
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
-
-    # Find the rubric (must have something to evaluate)
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
-    return head :bad_request unless rubric
 
     attempted = attempted_at
     return render status: :bad_request, json: {error: 'Not attempted'} unless attempted
