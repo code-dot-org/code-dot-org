@@ -223,6 +223,7 @@ describe('CoteacherSettings', () => {
     wrapper.update();
 
     expect(wrapper.find('tr')).to.have.lengthOf(3);
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
   });
   it('Remove unsubmitted', () => {
     let coteachersToAdd = ['coelophysis@code.org', 'diplodocus@code.org'];
@@ -255,6 +256,9 @@ describe('CoteacherSettings', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(coteachersToAdd).to.deep.equal(['diplodocus@code.org']);
+    wrapper.update();
+
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
   });
   it('Remove submitted', () => {
     const setCoteachersToAddSpy = sinon.spy();
@@ -294,6 +298,7 @@ describe('CoteacherSettings', () => {
 
     wrapper.update();
 
+    expect(wrapper.find('AccessibleDialog')).to.be.empty;
     expect(wrapper.find('tr')).to.have.lengthOf(2);
     expect(setCoteachersToAddSpy).to.have.not.been.called;
     expect(ajaxStub).to.have.been.calledOnce;

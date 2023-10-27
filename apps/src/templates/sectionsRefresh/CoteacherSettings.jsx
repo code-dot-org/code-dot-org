@@ -167,7 +167,10 @@ export default function CoteacherSettings({
       url: `/api/v1/section_instructors/${coteacher.id}`,
       method: 'DELETE',
     })
-      .done(() => addRemovedCoteacher(coteacher.id))
+      .done(() => {
+        addRemovedCoteacher(coteacher.id);
+        setCoteacherToRemove({});
+      })
       .fail(() => setCoteacherToRemove({}));
   };
 
