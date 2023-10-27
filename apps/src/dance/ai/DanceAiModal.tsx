@@ -13,6 +13,8 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput} from '../types';
+const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
+import color from '@cdo/apps/util/color';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -60,6 +62,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
+  const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -276,10 +279,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const showUseButton =
     mode === Mode.RESULTS_FINAL &&
+    currentToggle === 'ai-block' &&
     (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
   const showConvertButton =
-    (mode === Mode.RESULTS_FINAL || mode === Mode.CODE) &&
+    mode === Mode.RESULTS_FINAL &&
+    currentToggle === 'code' &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   return (
@@ -311,6 +316,29 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         ></div>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
+        {mode === Mode.RESULTS_FINAL && (
+          <div
+            id="toggle-area"
+            className={moduleStyles.toggleArea}
+            style={{zIndex: mode === Mode.RESULTS_FINAL ? 1 : 0}}
+          >
+            <ToggleGroup
+              selected={currentToggle}
+              activeColor={color.teal}
+              onChange={(value: string) => {
+                setCurrentToggle(value);
+              }}
+            >
+              <button key={0} type="button" value={'ai-block'}>
+                AI
+              </button>
+              <button key={1} type="button" value={'code'}>
+                Code
+              </button>
+            </ToggleGroup>
+          </div>
+        )}
+
         <div id="text-area" className={moduleStyles.textArea}>
           {' '}
           {mode === Mode.SELECT_INPUTS
@@ -454,8 +482,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div className={moduleStyles.outputsArea}>
-          {mode === Mode.CODE && (
+        <div id="outputs-area" className={moduleStyles.outputsArea}>
+          {mode === Mode.RESULTS_FINAL && currentToggle === 'code' && (
             <div
               id="generating-block-preview"
               className={moduleStyles.blockPreview}
@@ -471,7 +499,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        {(mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL) &&
+        {mode === Mode.RESULTS_FINAL &&
+          currentToggle === 'ai-block' &&
           showPreview && (
             <div id="preview-area" className={moduleStyles.previewArea}>
               <AiVisualizationPreview
@@ -510,7 +539,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               </div>
             )}
 
-            {mode === Mode.CODE && (
+            {/*mode === Mode.CODE && (
               <Button
                 id="back-to-effects"
                 text={'Back to effects'}
@@ -518,7 +547,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={classNames(moduleStyles.button)}
               />
-            )}
+            )*/}
 
             {mode === Mode.EXPLANATION && (
               <Button
@@ -560,7 +589,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               className={moduleStyles.button}
             />
           )}
-          {showConvertButton && mode === Mode.RESULTS_FINAL && (
+          {/*showConvertButton && mode === Mode.RESULTS_FINAL && (
             <Button
               id="view-code-button"
               text={'Show code'}
@@ -568,9 +597,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               color={Button.ButtonColor.white}
               className={moduleStyles.button}
             />
-          )}
+          )*/}
 
-          {mode === Mode.CODE && typingDone && (
+          {/*mode === Mode.CODE && typingDone && (
             <Button
               id="explanation-button"
               text={'Explanation'}
@@ -578,9 +607,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               color={Button.ButtonColor.white}
               className={moduleStyles.button}
             />
-          )}
+          )*/}
 
-          {showConvertButton && mode === Mode.CODE && typingDone && (
+          {showConvertButton && currentToggle === 'code' && typingDone && (
             <Button
               id="convert-button"
               text={'Use this code'}
@@ -589,7 +618,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               className={moduleStyles.button}
             />
           )}
-          {showUseButton && (
+          {showUseButton && currentToggle === 'ai-block' && (
             <Button
               id="use-button"
               text={'Use'}
