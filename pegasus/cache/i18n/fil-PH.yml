@@ -2844,30 +2844,15 @@ fil-PH:
     na kilusan para subukan ang isang oras na panimula sa computer science, umabot
     sa sampung milyong mga estudyante ang naabot sa 180+ na mga bansa. Sana makalahok
     ka sa Computer Science Education Week ngayong ika-7 hanggang ika-13 ng Disyembre.
-  volunteer_engineer_submission_intro_guide: Alamin pa ang tungkol sa ating <a href="%{volunteer_guide}">programa
-    sa pagboluntaryo dito</a>.
   volunteer_engineer_submission_intro_guide_markdown: Matuto nang higit pa tungkol
     sa aming [volunteer program dito](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Isa ka bang guro na naghahanap ng mga
-    boluntaryo? Maghanap ng boluntaryo sa ating <a href="%{volunteer_local}">mapa
-    ng boluntaryo</a>.
   volunteer_engineer_submission_intro_links_markdown: Isa ka bang guro na naghahanap
     ng mga boluntaryo? Maghanap ng lokal na boluntaryo sa aming [volunteer map](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Gusto ng mga guro na magkaroon ng
-    isang tao na <span style="font-family: ''Gotham 7r'', sans-serif;">mainit tungkol
-    sa edukasyon sa computer science</span> na maaaring tumulong sa silid-aralan,
-    o kahit na sino na maaaring <span style="font-family: ''Gotham 7r'', sans-serif;">magbigay
-    inspirasyon</span> sa kanilang mga estudyante sa pamamagitan ng pakikipag-usap
-    sa lawak ng posibilidad sa computer science (na maaaring magawa sa pamamagitan
-    ng video chat).'
   volunteer_engineer_submission_intro_recruit_markdown: Gusto ng mga guro na magkaroon
     ng isang tao na **may pasyon tungkol sa edukasyon sa computer science ** na maaaring
     tumulong sa silid-aralan, o kahit na sino na maaaring magbigay **inspirasyon**
     sa kanilang mga mag-aaral sa pamamagitan ng pakikipag-usap sa lawak ng posibilidad
     sa computer science (na maaaring magawa sa pamamagitan ng video chat).
-  volunteer_engineer_submission_intro_signup: Pakilagyan ang sumusunod na mga impormasyon
-    kung ikaw ay isang estudyante sa computer sciece o isang software na propesyonal.
-    Ang mga patlang na may markang<span class="form-required-field">*</span> ay kinakailangan.
   volunteer_engineer_submission_intro_signup_markdown: Ilagay ang sumusunod na impormasyon
     kung ikaw ay isang computer science na mag-aaral o software professional. Ikaw
     ay dapat na hindi bababa sa 18 taong gulang upang mag-sign up bilang isang boluntaryo.
