@@ -138,7 +138,7 @@
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
-    DependsOn: [ReaderSQLUser]
+    DependsOn: ReaderSQLUser
     Properties:
       DBProxyName: !Sub "${AWS::StackName}-reporting"
       EngineFamily: MYSQL
