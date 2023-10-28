@@ -2,59 +2,50 @@ require 'test_helper'
 require 'user'
 require 'authentication_option'
 require 'policies/lti'
-# require 'pry'
 
 class Services::LtiTest < ActiveSupport::TestCase
-  id_token = {
-    sub: '12345-a314-4215-b03e-58fe1bd3c8b0',
-    aud: '10000000000001',
-    iss: 'https://some-lms.com',
-    name: 'Han Solo',
-    given_name: 'Han',
-    family_name: 'Solo',
-    'https://purl.imsglobal.org/spec/lti/claim/roles' => [
+  setup do
+    @roles_key = Policies::Lti::LTI_ROLES_KEY
+    @custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    @teacher_roles = [
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#SysAdmin',
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#User',
-    ],
-  }
+    ]
 
-  student_id_token = {
-    sub: '67890-a314-4215-b03e-58fe1bd3c8b0',
-    aud: '10000000000001',
-    iss: 'https://some-lms.com',
-    name: 'Luke Skywalker',
-    given_name: 'Luke',
-    family_name: 'Skywalker',
-    'https://purl.imsglobal.org/spec/lti/claim/roles' => [
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Student',
-      'http://purl.imsglobal.org/vocab/lis/v2/membership#Learner',
-      'http://purl.imsglobal.org/vocab/lis/v2/system/person#None',
-    ],
-  }
-
-  # TODO: We don't need this anymore, since we aren't creating a user
-  # setup do
-  #   User.all.destroy_all
-  # end
-
-  test 'partially_create_user should create User::TYPE_TEACHER when id_token contains teacher/admin roles' do
-    user = Services::Lti.partially_create_user(id_token)
-    assert user
-    assert_equal user.user_type, User::TYPE_TEACHER
-    assert_equal user.name, id_token[:name]
-    refute user.authentication_options.empty?
-    assert_equal user.authentication_options[0].credential_type, AuthenticationOption::LTI_V1
-    assert_equal user.authentication_options[0].authentication_id, Policies::Lti.generate_auth_id(id_token)
+    @id_token = {
+      sub: 'some-sub',
+      aud: 'some-aud',
+      iss: 'http://some-iss.com',
+      @custom_claims_key => {
+        full_name: 'Han Solo',
+        given_name: 'Han',
+        family_name: 'Solo',
+      }
+    }
   end
 
-  test 'partially_create_user should create User::TYPE_STUDENT when id_token contains student roles' do
-    student_user = Services::Lti.partially_create_user(student_id_token)
+  test 'initialize_lti_user should create User::TYPE_TEACHER when id_token contains teacher/admin roles' do
+    @id_token[@roles_key] = @teacher_roles
+    user = Services::Lti.initialize_lti_user(@id_token)
+    assert user
+    assert_equal user.user_type, User::TYPE_TEACHER
+    # TODO: Probably need to test for more of the name cases, since we have multiple fallbacks depending on what kind of name we get in the id_token
+    assert_equal user.name, @id_token[@custom_claims_key][:full_name]
+    refute user.authentication_options.empty?
+    assert_equal user.authentication_options[0].credential_type, AuthenticationOption::LTI_V1
+    assert_equal user.authentication_options[0].authentication_id, Policies::Lti.generate_auth_id(@id_token)
+  end
+
+  test 'initialize_lti_user should create User::TYPE_STUDENT when id_token contains student roles' do
+    @id_token[@roles_key] = ['not-a-teacher-role']
+    student_user = Services::Lti.initialize_lti_user(@id_token)
     assert student_user
     assert_equal student_user.user_type, User::TYPE_STUDENT
-    assert_equal student_user.name, student_id_token[:given_name]
-    assert_equal student_user.family_name, student_id_token[:family_name]
+    # TODO: Probably need to test for more of the name cases, since we have multiple fallbacks depending on what kind of name we get in the id_token
+    assert_equal student_user.name, @id_token[@custom_claims_key][:full_name]
+    assert_equal student_user.family_name, @id_token[@custom_claims_key][:family_name]
   end
 end

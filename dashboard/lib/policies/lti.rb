@@ -25,6 +25,7 @@ class Policies::Lti
     ]
 ).freeze
   LTI_ROLES_KEY = 'https://purl.imsglobal.org/spec/lti/claim/roles'.freeze
+  LTI_CUSTOM_CLAIMS = "https://purl.imsglobal.org/spec/lti/claim/custom".freeze
 
   def self.get_account_type(id_token)
     id_token[LTI_ROLES_KEY].each do |role|
@@ -38,7 +39,7 @@ class Policies::Lti
   end
 
   def self.lti?(user)
-    return !user.authentication_options.empty? && user.authentication_options.first.credential_type == AuthenticationOption::LTI_V1
+    return !user.authentication_options.empty? && user.authentication_options.any? {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
     false
   end
 
