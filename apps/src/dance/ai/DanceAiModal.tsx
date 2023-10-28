@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -45,6 +45,34 @@ interface DanceAiProps {
   onClose: () => void;
 }
 
+// adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
+
+//interface RefObject {
+//  callback: () => void
+//}
+
+function useInterval(callback: () => void, delay: number | undefined) {
+  const savedCallback = useRef<() => void>();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      if (savedCallback.current) {
+        savedCallback.current();
+      }
+    }
+    if (delay !== undefined) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
+
 const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
@@ -57,10 +85,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [resultJson, setResultJson] = useState<string>('');
+  const [badResults, setBadResults] = useState<any>(undefined);
+  const [currentPreview, setCurrentPreview] = useState<any>(undefined);
   const [generatingNodesDone, setGeneratingNodesDone] =
     useState<boolean>(false);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
-  const [generatingDone, setGeneratingDone] = useState<boolean>(false);
+  const [generatingStep, setGeneratingStep] = useState<number>(0);
   const [typingDone, setTypingDone] = useState<boolean>(false);
   const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
 
@@ -135,12 +165,37 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.EXPLANATION);
   };
 
+  useInterval(
+    () => {
+      if (generatingStep < 4) {
+        setGeneratingStep(generatingStep + 1);
+        console.log('useInterval', generatingStep);
+      }
+    },
+    mode === Mode.GENERATING ? 2000 : undefined
+  );
+
+  useEffect(() => {
+    if (mode === Mode.GENERATING) {
+      if (generatingStep === 0) {
+        setCurrentPreview(badResults[0]);
+        console.log('preview 0');
+      } else if (generatingStep === 1) {
+        setCurrentPreview(badResults[1]);
+        console.log('preview 1');
+      } else if (generatingStep === 2) {
+        setCurrentPreview(badResults[2]);
+        console.log('preview 2');
+      } else if (generatingStep === 3) {
+        setCurrentPreview(JSON.parse(resultJson));
+        console.log('preview result');
+      }
+    }
+  }, [generatingStep]);
+
   const handleGenerateClick = () => {
     startAi();
     setMode(Mode.GENERATING);
-    setTimeout(() => {
-      setGeneratingDone(true);
-    }, 6000);
   };
 
   const handleRegenerateClick = () => {
@@ -150,7 +205,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setShowPreview(false);
     setProcessingDone(false);
     setGeneratingNodesDone(false);
-    setGeneratingDone(false);
+    setGeneratingStep(0);
+    setCurrentPreview(undefined);
 
     handleGenerateClick();
   };
@@ -163,27 +219,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async () => {
-    const responseJsonString = chooseEffects(inputs);
-    const result = JSON.parse(responseJsonString);
-
-    // "Pick" a subset of fields to be used.  Specifically, we exclude the
-    // explanation, since we don't want it becoming part of the code.
-    const pickedResult = (({
-      backgroundEffect,
-      backgroundColor,
-      foregroundEffect,
-    }) => ({
-      backgroundEffect,
-      backgroundColor,
-      foregroundEffect,
-    }))(result);
-
-    const fullResult = {inputs, ...pickedResult};
-
+    const result = chooseEffects(inputs, true);
+    const fullResult = {inputs, ...result};
     const fullResultJson = JSON.stringify(fullResult);
 
     // The block value will be set to this JSON.
     setResultJson(fullResultJson);
+
+    const badResultsList: any = [];
+    // Grab some bad results too.
+    for (let i = 0; i < 3; i++) {
+      badResultsList[i] = chooseEffects(inputs, false);
+    }
+    setBadResults(badResultsList);
   };
 
   /**
@@ -193,7 +241,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const generateBlocksFromResult = (
     workspace: Workspace
   ): [BlockSvg, BlockSvg] => {
-    const params = JSON.parse(resultJson);
+    //const params = JSON.parse(resultJson);
+    const params = currentPreview;
+    console.log('generate blocks', params);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
       workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
@@ -274,7 +324,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setShowPreview(false);
     setProcessingDone(false);
     setGeneratingNodesDone(false);
-    setGeneratingDone(false);
+    setGeneratingStep(0);
   };
 
   const showUseButton =
@@ -470,7 +520,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         </div>
 
         <div id="generating-area" className={moduleStyles.generatingArea}>
-          {mode === Mode.GENERATING && (
+          {/*mode === Mode.GENERATING && (
             <AiGeneratingView
               imageUrls={inputs.map(input => {
                 return getImageUrl(input);
@@ -479,7 +529,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                 setGeneratingNodesDone(true);
               }}
             />
-          )}
+            )*/}
         </div>
 
         <div id="outputs-area" className={moduleStyles.outputsArea}>
@@ -499,10 +549,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        {mode === Mode.RESULTS_FINAL &&
-          currentToggle === 'ai-block' &&
-          showPreview && (
-            <div id="preview-area" className={moduleStyles.previewArea}>
+        {(mode === Mode.GENERATING ||
+          (mode === Mode.RESULTS_FINAL && currentToggle === 'ai-block')) &&
+          /*showPreview*/ currentPreview && (
+            <div
+              key={generatingStep}
+              id={'preview-area'}
+              className={moduleStyles.previewArea}
+            >
               <AiVisualizationPreview
                 blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
               />
@@ -574,13 +628,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <Button
               id="generate-button"
               text={'Generate'}
-              onClick={handleGenerateClick}
+              onClick={() => {
+                handleGenerateClick();
+              }}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
           )}
 
-          {mode === Mode.GENERATING && generatingDone && (
+          {mode === Mode.GENERATING && generatingStep >= 4 && (
             <Button
               id="results-button"
               text={'Show effects'}
