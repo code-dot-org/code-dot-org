@@ -53,7 +53,7 @@
       Description: !Sub "Database credentials for ${AWS::StackName} writer user."
 <% if database -%>
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "writer"}'
+        SecretStringTemplate: '{"username": "writer"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
@@ -67,7 +67,7 @@
       Description: !Sub "Database credentials for ${AWS::StackName} reader user."
 <% if database -%>
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "reader"}'
+        SecretStringTemplate: '{"username": "reader"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
