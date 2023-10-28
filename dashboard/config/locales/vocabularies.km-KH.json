@@ -1679,6 +1679,9 @@
         "program/starwarsblocks/unversioned": {
           "word": "កម្មវិធី (Program)",
           "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "ផែនទី"
         }
       }
     }

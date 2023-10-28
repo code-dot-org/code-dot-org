@@ -16,7 +16,7 @@ Deși Hour of Code se desfășoară în mod tradițional în sălile de clasă d
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## Nu vă aflați în același loc, dar puteți începe împreună
+## Deși nu vă aflați în același loc, puteți începe împreună
 Chiar dacă intenția este ca elevii să își desfășoare activitățile în mod independent, îți recomandăm să începi evenimentul cu o întâlnire virtuală de lansare online, pentru a-i entuziasma pe participanți. Există mai multe moduri interesante prin care poți începe evenimentul:
 
 <ul>
@@ -35,7 +35,7 @@ Probabil că ești deja familiarizat cu platforme precum Cisco Webex, Google Mee
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
 ### 2. Planifică modul în care vor participa elevii
-**Activitate de tip "Hour of Code" pe cont propriu**<br>Îți recomandăm ca, după începerea evenimentului, să le permiți elevilor să părăsească videoconferința pentru a lucra singuri la <a href="https://hourofcode.com/us/learn">activitățile Hour of Code</a> pe cont propriu. Acest lucru le va permite elevilor să se concentreze asupra propriilor proiecte și să înțeleagă mai bine conceptele de CS. De asemenea, acest lucru va reduce numărul situațiilor care le pot distrage atenția elevilor și va elimina obstacolul prezentat de fereastra de videoconferință care a rămas deschisă.
+**Activitate de tip "Hour of Code" pe cont propriu**<br>Recomandăm ca, după începerea evenimentului, să le permiți elevilor să părăsească videoconferința pentru a lucra singuri la <a href="https://hourofcode.com/us/learn">activitățile Hour of Code</a> pe cont propriu. Acest lucru le va permite elevilor să se concentreze asupra propriilor proiecte și să înțeleagă mai bine conceptele de CS. De asemenea, acest lucru va reduce numărul situațiilor care le pot distrage atenția elevilor și va elimina obstacolul prezentat de fereastra de videoconferință care a rămas deschisă.
 
 Ar putea fi util să stabilești din timp 1 până la 3 opțiuni de tutoriale dintre care elevii să aleagă. Acest lucru îți permite să selectezi activitățile care se potrivesc cel mai bine nivelului lor de clasă. De asemenea, dacă elevii au întrebări la care au nevoie de ajutorul tău, vei fi mai bine pregătit să îi ajuți dacă ești deja familiarizați cu tutorialele la care lucrează.
 
@@ -57,10 +57,10 @@ Mai jos vei găsi câteva idei pentru a sărbători evenimentul virtual Hour of 
 
 ## Sărbătoriți împreună
 
-Ați început împreună evenimentul, acum adunați-vă după eveniment pentru a sărbători! Iată câteva idei pentru a face ca această ocazie virtuală să fie interactivă și deosebită:
+Asemenea începutului evenimentului, reuniți-vă ulterior pentru a sărbători împreună! Iată câteva idei pentru a face ca această ocazie virtuală să fie interactivă și deosebită:
 
 - Permite-le elevilor să împărtășească proiectele lor finalizate cu restul clasei. Dacă platforma de conferință permite acest lucru, îi poți chiar încuraja pe elevi să facă o captură de ecran a proiectelor lor și să o seteze ca fundal virtual!
-- Discutați despre ce au învățat: Ce au învățat despre știința calculatoarelor sau tehnologie? Ce au făcut atunci când s-au confruntat cu o problemă, cum au rezolvat-o?
+- Discutați despre ce au învățat: Ce au învățat despre programare sau tehnologie? Ce au făcut atunci când s-au confruntat cu o problemă, cum au rezolvat-o?
 - <a href="https://code.org/certificates">Creează și distribuie certificate</a> pentru participanți.
 - Distribuie fotografii și clipuri video de la evenimentul virtual Hour of Code pe rețelele de socializare. Folosește #HourOfCode și @codeorg pentru ca și noi să le spunem altora despre succesul tău!
 

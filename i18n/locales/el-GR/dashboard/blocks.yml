@@ -61,6 +61,11 @@ el:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': μέτρα
+            '"seconds"': δευτερόλεπτα
       Dancelab_changeColorBy:
         text: άλλαξε του {COLOR} την {METHOD} κατά {AMOUNT}
         options:
@@ -551,6 +556,48 @@ el:
             '"iceCream"': Παγωτό
             '"default"': Φωτεινό
             '"neon"': Νέον
+            '"tropical"': Τροπικό
+            '"vintage"': Βίντατζ
+            '"warm"': Κόκκινα
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: όρισε εφέ φόντου {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Κανένα
+            '"rand"': "(Τυχαίο)"
+            '"circles"': Σήραγγα
+            '"quads"': Γωνίες
+            '"color_cycle"': Χρώματα
+            '"diamonds"': Διαμάντια
+            '"disco_ball"': Ντισκομπάλα
+            '"fireworks"': Πυροτεχνήματα
+            '"flowers"': Λουλούδια
+            '"growing_stars"': Ανερχόμενοι αστέρες
+            '"swirl"': Hypno
+            '"kaleidoscope"': Καλειδοσκόπιο
+            '"lasers"': Πίστα χορού λέιζερ
+            '"splatter"': Πιτσιλιές χρωμάτων
+            '"rainbow"': Ουράνιο τόξο
+            '"ripples_random"': Τυχαίες πτυχώσεις
+            '"ripples"': Πτυχώσεις
+            '"snowflakes"': Χιόνι
+            '"text"': Τίτλος τραγουδιού
+            '"squiggles"': Μουτζούρες
+            '"galaxy"': Διάστημα
+            '"sparkles"': Αστράκια
+            '"spiral"': Σπιράλ
+            '"disco"': Τετράγωνα
+            '"starburst"': Οδοντωτός σύνδεσμος
+            '"stars"': Αστέρια
+            '"music_wave"': Κύματα
+          PALETTE:
+            '"rave"': Ασπρόμαυρο
+            '"cool"': Μπλουζ
+            '"electronic"': Ηλεκτρονικό
+            '"iceCream"': Παγωτό
+            '"default"': Φωτεινό
+            '"neon"': Νέον
+            '"rainbow"': Ουράνιο τόξο
             '"tropical"': Τροπικό
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα

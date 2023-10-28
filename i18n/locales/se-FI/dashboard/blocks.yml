@@ -47,6 +47,10 @@ se:
         options:
           UNIT:
             '"measures"': távttat
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': távttat
       Dancelab_changeColorBy:
         text: rievdat {COLOR} {METHOD} {AMOUNT}:iin
         options:
@@ -492,6 +496,49 @@ se:
             '"iceCream"': LákcaJiekŋa
             '"default"': Čuovga
             '"neon"': Neona
+            '"tropical"': Trohpalaš
+            '"vintage"': Retro
+            '"warm"': Liekkus
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          bija duogábeal-effeavtta
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"rand"': "(Sahtedohko)"
+            '"circles"': Jorbbát
+            '"quads"': Čiegat
+            '"color_cycle"': Ivnnit
+            '"diamonds"': Diamánttat
+            '"disco_ball"': Diskospábba
+            '"fireworks"': Dollarusonat
+            '"flowers"': Lieđit
+            '"growing_stars"': Šaddi Násttit
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskohpa
+            '"lasers"': Laser Dánsenguolbi
+            '"splatter"': Málá Goaikkanas
+            '"rainbow"': Arvedávgi
+            '"ripples_random"': Sahtedohko Bárožat
+            '"ripples"': Bárožat
+            '"snowflakes"': Muohta
+            '"text"': Lávlagiid namat
+            '"squiggles"': Squiggles
+            '"galaxy"': Gomuvuohta
+            '"sparkles"': Šelggonat
+            '"spiral"': Spirála
+            '"disco"': Njealječiegagat
+            '"starburst"': Starburst
+            '"stars"': Násttit
+            '"music_wave"': Bárut
+          PALETTE:
+            '"rave"': Čáhppes ja Vilges
+            '"cool"': Čáffa
+            '"electronic"': Elektrovnnalaš
+            '"iceCream"': LákcaJiekŋa
+            '"default"': Čuovga
+            '"neon"': Neona
+            '"rainbow"': Arvedávgi
             '"tropical"': Trohpalaš
             '"vintage"': Retro
             '"warm"': Liekkus
