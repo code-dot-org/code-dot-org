@@ -238,7 +238,7 @@ module I18n
             types_i18n_data = {}
 
             crowdin_file_paths = Dir.glob(File.join(crowdin_locale_dir_of(language), '**/*.json'))
-            progress_bar.total += crowdin_file_paths.size
+            mutex.synchronize {progress_bar.total += crowdin_file_paths.size}
 
             # First we gather together all our script objects into a single hash
             crowdin_file_paths.each do |crowdin_file_path|
@@ -247,7 +247,7 @@ module I18n
 
               types_i18n_data[type] = type_i18n_data if type_i18n_data.present?
             ensure
-              progress_bar.increment
+              mutex.synchronize {progress_bar.increment}
             end
 
             # Then we recursively flatten all of our hashes of objects, to group them by type rather than by script
@@ -258,7 +258,7 @@ module I18n
             types_i18n_data = restore_reference_guide_i18n_keys(types_i18n_data)
             types_i18n_data = fix_resource_urls(types_i18n_data)
 
-            types_i18n_data
+            types_i18n_data.deep_stringify_keys
           end
 
           def distribute_localization(language)
