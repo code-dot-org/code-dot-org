@@ -32,7 +32,7 @@ fa:
       Dancelab_alternateMoves:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -74,6 +74,11 @@ fa:
             '"measures"': اندازه‌ها
             '"seconds"': ثانیه
         text: بعد از {TIMESTAMP}{UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': اندازه‌ها
+            '"seconds"': ثانیه
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -84,7 +89,7 @@ fa:
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -141,7 +146,7 @@ fa:
       Dancelab_changePropEachBy:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -162,7 +167,7 @@ fa:
       Dancelab_doMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -304,7 +309,7 @@ fa:
       Dancelab_jumpToEach:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -347,7 +352,7 @@ fa:
             '"top"': ردیف بالا
             '"x"': کریس کراس (ضربدری)
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -416,7 +421,7 @@ fa:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"CAT"': گربه ها
             '"DOG"': سگ ها
@@ -572,6 +577,49 @@ fa:
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
         text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': دایره‌ها
+            '"color_cycle"': رنگ‌ها
+            '"diamonds"': لوزی‌ها
+            '"disco"': مربع (افکت)
+            '"disco_ball"': دسکو بال
+            '"fireworks"': آتش‌بازی
+            '"flowers"': گلها (افکت)
+            '"galaxy"': فضا  (افکت)
+            '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
+            '"kaleidoscope"': هزار رنگ (افکت)
+            '"lasers"': نور لیزر سالن رقص (افکت)
+            '"music_wave"': امواج (افکت)
+            '"none"': هیچکدام
+            '"quads"': زاویه‌ (افکت)
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"rand"': "(تصادفی)"
+            '"ripples"': شن (افکت)
+            '"ripples_random"': شنهای تصادفی (افکت)
+            '"snowflakes"': برف (افکت)
+            '"sparkles"': درخشش (افکت)
+            '"spiral"': مارپیچ (افکت)
+            '"splatter"': رنگ پاشی (افکت)
+            '"squiggles"': موج موج (افکت)
+            '"starburst"': استارباست (افکت)
+            '"stars"': ستاره  (افکت)
+            '"swirl"': هیپنو (افکت)
+            '"text"': اسم آواز (افکت)
+          PALETTE:
+            '"cool"': جالب (پالت رنگ)
+            '"default"': روشن (پالت)
+            '"electronic"': الکترونیکی (پالت)
+            '"iceCream"': بستنی (پالت)
+            '"neon"': نئون (پالت)
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"rave"': سیاه و سفید (افکت)
+            '"tropical"': استوایی (پالت)
+            '"vintage"': آنتیک (پالت)
+            '"warm"': گرم (پالت)
+        text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -584,7 +632,7 @@ fa:
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -655,7 +703,7 @@ fa:
       Dancelab_setPropEach:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -687,7 +735,7 @@ fa:
       Dancelab_setPropRandomEach:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -711,7 +759,7 @@ fa:
       Dancelab_setTintEach:
         options:
           THIS:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -726,7 +774,7 @@ fa:
       Dancelab_setTintEachInline:
         options:
           THIS:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -749,7 +797,7 @@ fa:
       Dancelab_setVisibleEach:
         options:
           THIS:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -781,7 +829,7 @@ fa:
       Dancelab_startMappingEach:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -822,7 +870,7 @@ fa:
       Dancelab_stopMappingEach:
         options:
           GROUP:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
@@ -1494,7 +1542,7 @@ fa:
               (صدا)
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': جنگل
             '"sound://category_nature/rain_loop.mp3"': نم‌نم باران (صدا)
-            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپ
+            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپینگ
             '"sound://category_nature/summer_night_loop.mp3"': شب
         text: پخش {SOUND}
       Poetry_playSound:

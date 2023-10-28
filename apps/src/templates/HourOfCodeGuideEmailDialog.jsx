@@ -7,7 +7,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
-import style from './accessible-dialogue.module.scss';
+import style from './hoc-guide-dialogue.module.scss';
 
 function HourOfCodeGuideEmailDialog({isSignedIn}) {
   const [isOpen, setIsOpen] = useState(true);
@@ -42,7 +42,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
   return (
     <div>
       {isOpen && experiments.isEnabled(experiments.HOC_TUTORIAL_DIALOG) && (
-        <AccessibleDialog onClose={onClose}>
+        <AccessibleDialog styles={style} onClose={onClose}>
           <div tabIndex="0">
             <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
           </div>

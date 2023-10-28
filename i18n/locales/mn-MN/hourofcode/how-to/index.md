@@ -8,7 +8,7 @@ title: Хэрхэн зааварлах кодын цаг
 
 ### Хөдөлгөөнд нэгдэж, оюутнууддаа компьютерийн шинжлэх ухааныг эдгээр алхамуудаар танилцуулаарай.
 
-Students today should learn how to create technology, not just use it.
+Өнөөгийн оюутнууд зөвхөн ашиглах бус технологийг хэрхэн бүтээх талаар суралцах ёстой.
 
 Кодын цагийг туршиж үзэх нь оюутнуудыг компьютерийн шинжлэх ухаанд танилцуулах энгийн бөгөөд хөгжилтэй арга юм. Хичээл доторх эсвэл сургуулийн дараах, биечлэн эсвэл виртуал эсэхээс үл хамааран өөрийн тохиргоонд нийцсэн үйл ажиллагааг хайж олоорой. Доорх алхмуудыг</a> хийсний дараа танд асуулт байгаа бол манай оролцооны гарын авлагыг үзээрэй.</p> 
 
@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [Хэрхэн хүчтэй код нь таны цаг эхлэх](#how-to-start)
 - [Кодлох авах](#code)
 - [Оюутнуудынхаа амжилтыг тэмдэглэ](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Сурган хүмүүжүүлэгчдэд зориулсан Кодын цагийн бусад эх сурвалжууд](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Та Код үйл явдлын цаг дээр [гарын үсэг зурах үед](/#join), Хэрэв та амжилттай Кодын цаг байршуулах мэдээ, зөвлөмж нь тустай и-мэйл харилцаа холбоог хүлээн авах болно. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Та Hour [of Code арга хэмжээнд бүртгүүлэхдээ амжилттай Кодын цагийг зохион байгуулах мэдээ](/events), зөвлөмжүүдтэй тустай имэйл харилцаа холбоо хүлээн авах болно. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -139,9 +139,9 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [Оюутнууддаа зориул]({{ urls/certificates }}) ж гэрчилгээ хэвлэнэ үү.
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-    - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+    - Hour of Code арга хэмжээнийхээ зураг, видеог олон нийтийн мэдээллийн хэрэгслээр хуваалцаарай. #HourOfCode болон @codeorg -ийг ашиглаарай, ингэснээр бид таны амжилтыг бас тодруулж чадна!
     
     * * *
     
@@ -153,7 +153,7 @@ Direct students to the activity
     ## Сурган хүмүүжүүлэгчдэд зориулсан кодын бусад цаг:
     
     - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-    - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+    - Кодын [цагийн асуултыг тоймлон үзээрэй](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
     
     ### What comes after the Hour of Code?
     

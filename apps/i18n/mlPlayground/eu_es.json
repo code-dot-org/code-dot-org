@@ -114,6 +114,13 @@
         }
       }
     },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "kaiman"
+        }
+      }
+    },
     "salad_toy": {
       "fields": {
         "chicken": {

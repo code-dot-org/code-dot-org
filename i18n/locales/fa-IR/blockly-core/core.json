@@ -298,7 +298,7 @@
     "PROCEDURES_DEFRETURN_RETURN": "بازگشت",
     "PROCEDURES_DEFRETURN_TOOLTIP": "تابعی با یک خروجی می‌سازد.",
     "PROCEDURES_DEF_DUPLICATE_WARNING": "اخطار: این تابع پارامترهای تکراری دارد.",
-    "PROCEDURES_HIGHLIGHT_DEF": "تعریف تابع را انتخاب کنید",
+    "PROCEDURES_HIGHLIGHT_DEF": "تعریف تابع را هایلایت کنید",
     "PROCEDURES_IFRETURN_TOOLTIP": "اگر یک مقدار صحیح است، مقدار دوم را برگردان.",
     "PROCEDURES_IFRETURN_WARNING": "اخطار: این بلوک فقط در تعریف توابع میتواند بکار رود.",
     "PROCEDURES_MUTATORARG_TITLE": "نام ورودی:",

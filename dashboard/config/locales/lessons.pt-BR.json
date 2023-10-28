@@ -90,7 +90,7 @@
           "name": "Sprite"
         },
         "csd3-2017/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2017/The Counter Pattern Unplugged": {
           "name": "O padrão do contador desconectado"
@@ -852,7 +852,7 @@
           "name": "Sprite"
         },
         "csd3-2018/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2018/The Counter Pattern Unplugged": {
           "name": "O padrão do contador desconectado"
@@ -1713,7 +1713,7 @@
           "name": "Sprite"
         },
         "csd3-2019/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2019/The Counter Pattern Unplugged": {
           "name": "O padrão do contador desconectado"
@@ -2941,8 +2941,8 @@
           "student_overview": "**Pergunta do dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2021/The Draw Loop": {
-          "name": "O laço de desenho",
-          "student_overview": "**Pergunta do dia: Como podemos animar nossas imagens no laboratório de Games?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
+          "name": "O Desenho do Laço",
+          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o draw loop com números aleatórios para criar suas primeiras animações. "
         },
         "csd3-2021/Sprite Movement": {
           "name": "Movimento de Sprite",
@@ -2962,7 +2962,7 @@
         },
         "csd3-2021/Mouse Input": {
           "name": "Entrada de Mouse",
-          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais. "
+          "student_overview": "**Pergunta do Dia: Quais são as outras maneiras pelas quais o computador pode reagir aos dados de input do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá a usar o mouse para obter informações a partir do usuário que podem ser usadas em suas declarações condicionais."
         },
         "csd3-2021/Project - Interactive Card": {
           "name": "Projeto - Cartão Interativo",
@@ -3029,15 +3029,21 @@
           "student_overview": "**Pergunta do Dia: Como podemos projetar para outras pessoas além de nós mesmos?**\n\nNesta lição, você usará o processo de design para o desenvolvimento de ideias para a criação de roupas inteligentes. "
         },
         "csd4-2021/User-Centered Design 2": {
-          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe."
+          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe.",
+          "overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nEsta é a segunda parte de uma aula planejada para ser realizada ao longo de dois encontros, nos quais os alunos são guiados por uma versão abreviada do processo de design ao qual serão apresentados ao longo desta unidade. Na primeira parte, os alunos concluíram as etapas de definição e preparação do processo de design. Hoje, eles devem completar as partes Tente e Reflita. Os alunos continuam seu trabalho iniciado na primeira parte da aula, em que desenharam uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que eles discutiram para orientar sua tomada de decisão. Os alunos podem compartilhar seu processo de tomada de decisão e obter feedback sobre como seu produto atende às necessidades do usuário que eles selecionaram.",
+          "purpose": "Esta microatividade é o primeiro de três projetos de design apresentados nesta unidade. É uma introdução rápida ao processo de design centrado no usuário, com o objetivo de oferecer aos alunos uma experiência com design centrado no usuário, que eles poderão desenvolver em projetos posteriores. Nesta lição, o objetivo principal é alinhar o design de um produto às necessidades do usuário,  deixando de lado as crenças ou preferências pessoais. O ato de basear as decisões em um usuário e não em si mesmo é uma forma de pensar fundamental que aparecerá em toda a unidade.\n\nA atividade desta lição é uma adaptação da [Design Charrette da Universidade de Washington].[0]"
         },
         "csd4-2021/User Interfaces": {
           "name": "Interfaces de Usuário",
-          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo."
+          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo.",
+          "overview": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?\n\nApós o projeto de mini design, os alunos olham para a próxima fase do design - prototipagem de um produto para atender às necessidades do usuário. Em equipes, os alunos examinam um protótipo em papel para um aplicativo de bate-papo chamado “Txt Ur Grndkdz”. Ao usar esse protótipo de papel, os alunos têm a chance de ver como um simples protótipo de papel pode ser usado para testar rapidamente ideias e suposições antes mesmo de chegarmos ao computador. Depois de “usar” o protótipo fornecido, os alunos começam a identificar maneiras de melhorar a próxima iteração.",
+          "purpose": "Esta lição apresenta aos alunos o conceito de um protótipo em papel como uma ferramenta rápida e não sincronizada para iniciar o desenvolvimento de um aplicativo. Os protótipos em papel retornarão nas próximas aulas e também no projeto do capítulo dois. Esse protótipo também servirá como contexto em torno do qual os alunos começarão a analisar e a organizar o feedback de uma ampla variedade de usuários. Embora esta lição peça aos alunos que trabalhem com um protótipo existente, em breve eles desenvolverão protótipos a partir de seus próprios designs."
         },
         "csd4-2021/Feedback and Testing": {
           "name": "Teste e Feedback",
-          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários."
+          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários.",
+          "overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, os alunos usam o feedback dos “usuários” do aplicativo prototipado em papel da lição anterior para desenvolver melhorias na interface do usuário desse protótipo em papel. A lição começa com uma reflexão sobre o fato de que os designers precisam traduzir as necessidades humanas com a tecnologia em mudanças na interface ou na experiência do usuário. Em seguida, os alunos recebem uma coleção de comentários e solicitações dos usuários do aplicativo da lição anterior. Em grupos, os alunos categorizam o feedback e identificam maneiras pelas quais as necessidades expressas no feedback podem ser atendidas por meio de mudanças na interface do aplicativo. Em seguida, em grupos, os alunos implementarão algumas dessas mudanças para atender a uma das necessidades identificadas.",
+          "purpose": "Esta lição apresenta várias habilidades que os alunos precisarão usar posteriormente na unidade. Eles aprenderão a categorizar o feedback para organizar e priorizar sua resposta. Eles aprendem a interpretar as necessidades humanas com um elemento de tecnologia em termos de mudanças na interface do usuário. Eles têm a primeira oportunidade de criar seu próprio protótipo em papel ao projetarem uma nova tela de um aplicativo. À medida que os alunos começam a criar seus próprios aplicativos do zero, essas serão habilidades importantes que os alunos colocarão em prática repetidamente."
         },
         "csd4-2021/Identifying User Needs": {
           "name": "Identificando Necessidades do Usuário",
@@ -4465,8 +4471,8 @@
           "student_overview": "**Pergunta do Dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2022/The Draw Loop": {
-          "name": "O laço de desenho",
-          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
+          "name": "O Desenho do Laço",
+          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o draw loop com números aleatórios para criar suas primeiras animações. "
         },
         "csd3-2022/Sprite Movement": {
           "name": "Movimento de Sprite",
@@ -4491,7 +4497,7 @@
         "csd3-2022/Mouse Input": {
           "name": "Entrada de Mouse",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações Se e explorará as declarações Senão, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais."
+          "student_overview": "**Pergunta do Dia: Quais são as outras maneiras pelas quais o computador pode reagir aos dados de input do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá a usar o mouse para obter informações a partir do usuário que podem ser usadas em suas declarações condicionais."
         },
         "csd3-2022/Project - Interactive Card": {
           "name": "Projeto - Cartão Interativo",
@@ -4527,7 +4533,7 @@
           "student_overview": "**Pergunta do Dia: Como as novas categorias de colisões e movimentos de modelagem podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre simular a gravidade e as diferentes categorias de colisões para criar um jogo de folhetos simples!"
         },
         "csd3-2022/Functions": {
-          "name": "funções",
+          "name": "Funções",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
           "student_overview": "**Pergunta do Dia: Como os programadores podem usar funções para criar suas próprias abstrações?**\n\nNesta lição, você aprenderá como organizar melhor seu código usando funções para tornar o programa legível e remover blocos de código repetidos. "
         },
@@ -4570,15 +4576,24 @@
         },
         "csd4-2022/User Centered Design   Try and Reflect": {
           "name": "Design Centrado no Usuário - Experimente e Reflita",
-          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe."
+          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe.",
+          "overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nEsta é a segunda parte de uma aula planejada para ser realizada ao longo de dois encontros, nos quais os alunos são guiados por uma versão abreviada do processo de design ao qual serão apresentados ao longo desta unidade. Na primeira parte, os alunos concluíram as etapas de definição e preparação do processo de design. Hoje, eles devem completar as partes Tente e Reflita. Os alunos continuam seu trabalho iniciado na primeira parte da aula, em que desenharam uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que eles discutiram para orientar sua tomada de decisão. Os alunos podem compartilhar seu processo de tomada de decisão e obter feedback sobre como seu produto atende às necessidades do usuário que eles selecionaram.",
+          "preparation": "-   Devolva o guia de atividades utilizado na aula anterior aos alunos\n-   Faça cópias da parte Tente & Reflita do guia de atividades - uma cópia por grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta microatividade é a primeira parte de três projetos de design apresentados nesta unidade. É uma introdução rápida ao processo de design centrado no usuário, com o objetivo de oferecer aos alunos uma experiência com design centrado no usuário, que eles poderão desenvolver em projetos posteriores. Nesta lição, o objetivo principal é alinhar o design de um produto às necessidades do usuário,  deixando de lado as crenças ou preferências pessoais. O ato de basear as decisões em um usuário e não em si mesmo é uma forma de pensar fundamental que aparecerá em toda a unidade.\n\nA atividade desta lição é uma adaptação da [Design Charrette da Universidade de Washington].[0]"
         },
         "csd4-2022/User Interfaces": {
           "name": "Interfaces de Usuário",
-          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo."
+          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo.",
+          "overview": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?\n\nApós o projeto de mini design, os alunos olham para a próxima fase do design - prototipagem de um produto para atender às necessidades do usuário. Em equipes, os alunos examinam um protótipo em papel para um aplicativo de bate-papo chamado “Txt Ur Grndkdz”. Ao usar esse protótipo de papel, os alunos têm a chance de ver como um simples protótipo de papel pode ser usado para testar rapidamente ideias e suposições antes mesmo de chegarmos ao computador. Depois de “usar” o protótipo fornecido, os alunos começam a identificar maneiras de melhorar a próxima iteração.",
+          "preparation": "-   Imprima uma cópia do guia de atividades de Telas de Interface do Usuário para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (computador) para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (usuário) para cada dupla de alunos\n-   Recorte as telas da interface do usuário ou forneça tesouras para que os alunos façam isso\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta lição apresenta aos alunos o conceito de um protótipo em papel como uma ferramenta rápida e não sincronizada para iniciar o desenvolvimento de um aplicativo. Os protótipos em papel retornarão nas próximas aulas e também no projeto do capítulo dois. Esse protótipo também servirá como contexto em torno do qual os alunos começarão a analisar e a organizar o feedback de uma ampla variedade de usuários. Embora esta lição peça aos alunos que trabalhem com um protótipo existente, em breve eles desenvolverão protótipos a partir de seus próprios designs."
         },
         "csd4-2022/Feedback and Testing": {
           "name": "Teste e Feedback",
-          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários."
+          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários.",
+          "overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, os alunos usam o feedback dos “usuários” do aplicativo prototipado em papel da lição anterior para desenvolver melhorias na interface do usuário desse protótipo em papel. A lição começa com uma reflexão sobre o fato de que os designers precisam traduzir as necessidades humanas com a tecnologia em mudanças na interface ou na experiência do usuário. Em seguida, os alunos recebem uma coleção de comentários e solicitações dos usuários do aplicativo da lição anterior. Em grupos, os alunos categorizam o feedback e identificam maneiras pelas quais as necessidades expressas no feedback podem ser atendidas por meio de mudanças na interface do aplicativo. Em seguida, em grupos, os alunos implementarão algumas dessas mudanças para atender a uma das necessidades identificadas.",
+          "preparation": "-   Imprima uma cópia do recurso Telas da Interface do Usuário para cada grupo ou exiba as telas aos aluno na sala de aula\n-   Imprima uma cópia do recurso de feedback do protótipo para cada grupo. Se possível, corte-o em tiras com antecedência\n-   Imprima uma cópia do material Melhorando uma Tela para cada grupo. Se possível, imprima em um único lado para que os alunos possam dividir o guia de atividades.\n-   Lápis coloridos ou marcadores para os protótipos de papel\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta lição apresenta várias habilidades que os alunos precisarão usar posteriormente na unidade. Eles aprenderão a categorizar o feedback para organizar e priorizar sua resposta. Eles aprendem a interpretar as necessidades humanas com um elemento de tecnologia em termos de mudanças na interface do usuário. Eles têm a primeira oportunidade de criar seu próprio protótipo em papel ao projetarem uma nova tela de um aplicativo. À medida que os alunos começam a criar seus próprios aplicativos do zero, essas serão habilidades importantes que os alunos colocarão em prática repetidamente."
         },
         "csd4-2022/Identifying User Needs": {
           "name": "Identificando Necessidades do Usuário",
@@ -5713,21 +5728,21 @@
           "student_overview": "Nesta lição final, você compartilhará a capa do livro com seus colegas de classe. Você terá a chance de mostrar seu trabalho e testar os projetos de seus colegas. No final da aula, você discutirá quais escolhas seus colegas fizeram nas capas dos livros."
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
-          "name": "Simulação de sobrepesca",
+          "name": "Simulação de pesca predatória",
           "overview": "Nesta aula de **desenvolvimento de habilidades**, os alunos programarão um modelo de ecossistema aquático e, em seguida, simularão uma situação de sobrepesca. Os alunos aprenderão como programar declarações condicionais para verificar a quantidade de algas na água. Se houver muitas algas, o coral fica doente. Se houver pouca alga, os peixes não têm fonte de alimento e saem da área. Se houver a quantidade certa de algas, o coral doente se curará e os peixes permanecerão na área. ",
-          "preparation": "-   Percorra os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.\n-   Considere atribuir aos alunos a preparação recomendada \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Considere essas opções de extensões relacionadas ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) para explorar após a última aula.\n\n##### Opcional:\n\n-   [Optional] Revise esta <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">apresentação de slides de dicas úteis.</a> \n-   [Optional] Leia este guia de depuração do <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">professor para se preparar</a>  para ajudar os alunos a encontrar e corrigir erros no código. ",
+          "preparation": "-   Jogue todos os níveis e leia os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a>   \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo. \n-   Considere a possibilidade de designar para os alunos a preparação recomendada  ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))  - Considere essas opções de extensões relacionadas ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) para explorar após a última aula. \n\n##### Opcional:\n\n-   [Optional] Veja esta <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">apresentação de slides com dicas úteis.</a>   \n-   [Optional] Leia este guia de depuração do <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">guia de depuração do professor</a> para estar preparado para ajudar os alunos a identificar e corrigir erros no código. ",
           "purpose": "Os alunos aprenderão que os ecossistemas marinhos têm muitos organismos que interagem e se mantêm em equilíbrio. Esta lição combina ciência da computação com ciências biológicas à medida que os alunos criam um modelo que simula os efeitos da sobrepesca usando declarações condicionais em ciência da computação para mostrar causa e efeito na vida real. "
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
           "name": "Equilibrando o ecossistema",
           "overview": "Nesta lição**desenvolvimento de habilidades**, os alunos lerão e programarão três soluções diferentes para o problema da sobrepesca.\n\nEsta lição começa de onde a lição anterior parou, com o modelo de um ecossistema aquático desequilibrado. Primeiro, os alunos modificarão o comportamento do barco para que ele só possa se mover dentro de uma “zona de pesca” especificada. Em segundo lugar, os alunos programarão um novo evento para especificar uma “temporada de pesca” e uma “temporada sem pesca”. Terceiro, os alunos aprenderão como usar uma variável para acompanhar o número de peixes que o barco removeu. A lição termina com um nível de verificação de compreensão para garantir que os alunos aprendam as três soluções para a sobrepesca.",
-          "preparation": "-   Leia o artigo fornecido sobre <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Entendendo a sobrepesca</a>. Andaime conforme necessário para atender às necessidades de seus alunos. \n-   Percorra os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.\n-   Considere atribuir aos alunos a preparação recomendada [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Considere essas opções de extensões relacionadas [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opcional:\n\n-   [Optional] Revise esta <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">apresentação de slides de dicas úteis.</a> \n-   [Optional] Leia este guia de depuração do <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">professor para se preparar</a>  para ajudar os alunos a encontrar e corrigir erros no código. ",
+          "preparation": "-   Leia o artigo fornecido <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Entenda a pesca predatória</a>. Siga a progressão gradual conforme as necessidades dos seus alunos.   \n-   Jogue todos os níveis e veja os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a>  \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.  - Considere a possibilidade de designar aos alunos a preparação recomendada [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).  \n-   Considere essas opções de extensões relacionadas [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).    \n\n##### Opcional:\n\n-   [Optional] Veja esta <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">apresentação de slides com dicas úteis.</a>   \n-   [Optional] Leia este <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">guia de depuração do professor</a>  para estar preparado para ajudar os alunos a identifica e corrigir erros no código. ",
           "purpose": "Os alunos continuarão aprendendo sobre ecossistemas equilibrados e desequilibrados. Usando um artigo científico sobre pesca predatória como base, os alunos desenvolverão uma rica compreensão das conexões entre organismos em um ecossistema. Em última análise, os alunos terão a oportunidade de aplicar o que aprenderam modelando um ecossistema local. "
         },
         "csc-ecosystems-2023/lesson-3": {
           "name": "Codificando meu ecossistema",
           "overview": "Nesta aula de **desenvolvimento de habilidades**, os alunos explorarão várias simulações de ecossistemas diferentes. Os estudantes podem optar por explorar um ecossistema de floresta tropical, deserto, ártico ou zonas úmidas. Eles assumirão o papel de ecologistas e investigarão as interações entre as plantas e os animais na cadeia alimentar de cada ecossistema. Os alunos lerão as instruções para entender o desafio que cada ecossistema está enfrentando. Em seguida, eles modificarão o código correspondente para reequilibrar o ecossistema. ",
-          "preparation": "-   Percorra os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.\n-   Imprima um caderno de ecologista para cada aluno\n-   Considere estas [oportunidades de extensão](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) após esta lição"
+          "preparation": "-   Jogue todos os níveis e veja os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.  \n-   Imprima um caderno de ecologista para cada aluno \n-   Considere estas [oportunidades de extensão](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) após esta lição"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "Introdução à criação de mapas",
@@ -5972,7 +5987,7 @@
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
         },
         "csd3-2023/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2023/Sprite Movement": {
           "name": "Movimento de Sprite",
@@ -6046,13 +6061,16 @@
           "preparation": "-   Certifique-se de que você tenha muitas notas adesivas, canetas e cartolinas para cartazes para os alunos trabalharem\n-   Monte grupos com, de preferência, 3 alunos cada\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/User Centered Design - Try and Reflect": {
-          "name": "Design Centrado no Usuário - Experimente e Reflita"
+          "name": "Design Centrado no Usuário - Experimente e Reflita",
+          "preparation": "-   Devolva o guia de atividades utilizado na aula anterior aos alunos\n-   Faça cópias da parte Tente & Reflita do guia de atividades - uma cópia por grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/User Interfaces": {
-          "name": "Interfaces de Usuário"
+          "name": "Interfaces de Usuário",
+          "preparation": "-   Imprima uma cópia do guia de atividades de Telas de Interface do Usuário para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (computador) para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (usuário) para cada dupla de alunos\n-   Recorte as telas da interface do usuário ou forneça tesouras para que os alunos façam isso\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/Feedback and Testing": {
-          "name": "Teste e Feedback"
+          "name": "Teste e Feedback",
+          "preparation": "-   Imprima uma cópia do recurso Telas da Interface do Usuário para cada grupo ou exiba as telas aos aluno na sala de aula\n-   Imprima uma cópia do recurso de feedback do protótipo para cada grupo. Se possível, corte-o em tiras com antecedência\n-   Imprima uma cópia do material Melhorando uma Tela para cada grupo. Se possível, imprima em um único lado para que os alunos possam dividir o guia de atividades.\n-   Lápis coloridos ou marcadores para os protótipos de papel\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/Identifying User Needs": {
           "name": "Identificando Necessidades do Usuário"

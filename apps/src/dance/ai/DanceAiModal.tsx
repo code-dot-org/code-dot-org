@@ -246,7 +246,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     console.log('generate blocks', params);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+      workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
       workspace.newBlock(
         'Dancelab_setBackgroundEffectWithPaletteAI'
       ) as BlockSvg,
@@ -399,8 +399,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             ? 'A.I. is ready to generate effects!'
             : mode === Mode.GENERATING
             ? 'A.I. is generating effects based on the emojis.'
-            : mode === Mode.RESULTS
-            ? 'A.I. generated effects for your dance party!'
+            : mode === Mode.RESULTS && !typingDone
+            ? ''
+            : mode === Mode.RESULTS && typingDone
+            ? 'A.I. generated code for your dance party!'
             : mode === Mode.RESULTS_FINAL
             ? 'A.I. generated effects for your dance party!'
             : mode === Mode.EXPLANATION

@@ -1240,9 +1240,24 @@ hr:
           description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
           student_description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
           title: Testiranje upotrebljivosti
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod
+          lessons:
+            lesson-7:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Uvod
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Uvod
         vpl-csd1-ayw-pilot-2022:
           lessons:

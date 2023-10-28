@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: دليل «ساعة البرمجة» الإرشادي لمرحلة ما بعد المدرسة
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 يساعد التفكير الحسابي في تنمية مهارات حل المشكلات والمنطق والإبداع. تعمل التكنولوجيا على تغيير كل صناعة على هذا الكوكب. ينبغي للطلاب اليوم أن يتعلَّموا كيفية تصميم التقنية، وليس استخدامها فحسب. ومع بدء الطلاب للتعلُّم في مرحلة مبكرة، سيصبح لديهم أساسًا للنجاح في أي مسارٍ مهني في القرن الحادي والعشرين.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. إذا أردت أية مساعدات إضافية، يمكنك أن تجد [متطوعًا محليًا](%= codeorg_url('/volunteer/local') %) ليساعدك في أنشطة "ساعة البرمجة" بعد المدرسة أو في النادي.
+تعد تجربة «ساعة من البرمجة» طريقة بسيطة وممتعة لتعريف الطلاب بعلوم الكمبيوتر، ربما لأول مرة. إذا أردت أية مساعدات إضافية، يمكنك أن تجد [متطوعًا محليًا](%= codeorg_url('/volunteer/local') %) ليساعدك في أنشطة "ساعة البرمجة" بعد المدرسة أو في النادي.
 
 ### تُنظَّم فعالية "ساعة من البرمجة" أيضًا عن بُعد! وللبدء، يُرجى مراجعة [نصائحنا لفعالية افتراضية من "ساعة من البرمجة"](https://hourofcode.com/us/how-to/virtual).
 
@@ -73,7 +73,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 - [اطبع الشهادات]({{ urls/certificates }}) لطلابك.
 - [اطبع ملصقات مكتوب عليها "أنجزت نشاط "ساعة من البرمجة"]({{ promote/resources_stickers }}) لطلابك.
-- [اطلب قمصان خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) للمشاركين.
+- [اطلب تيشيرتات](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) مخصصة للمشاركين.
 - شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة من البرمجة" على وسائل التواصل الاجتماعي. استخدم هاشتاج #HourOfCode و @codeorg حتى نتمكن من إبراز نجاحك أيضًا!
 
 ## مصادر أخرى للمعلمين في "ساعة من البرمجة"
