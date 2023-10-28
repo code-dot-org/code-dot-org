@@ -131,10 +131,6 @@ class AuthenticationOption < ApplicationRecord
     self.hashed_email = AuthenticationOption.hash_email(email)
   end
 
-  # def email_required?
-  #   credential_type != LTI_V1
-  # end
-
   def data_hash
     column_value = read_attribute(:data)
     if column_value

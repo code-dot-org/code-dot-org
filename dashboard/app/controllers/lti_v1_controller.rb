@@ -91,7 +91,7 @@ class LtiV1Controller < ApplicationController
         sign_in user
         redirect_to target_link_uri
       else
-        user = Services::Lti.partially_create_user(decoded_jwt)
+        user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
         session[:user_return_to] = target_link_uri
         redirect_to new_user_registration_url

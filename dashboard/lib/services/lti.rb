@@ -3,8 +3,8 @@ require 'user'
 require 'authentication_option'
 
 class Services::Lti
-  def self.partially_create_user(id_token)
-    custom_claims = id_token["https://purl.imsglobal.org/spec/lti/claim/custom"]
+  def self.initialize_lti_user(id_token)
+    custom_claims = id_token[Policies::Lti::LTI_CUSTOM_CLAIMS]
     user_type = Policies::Lti.get_account_type(id_token)
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
@@ -18,8 +18,8 @@ class Services::Lti
     end
     ao = AuthenticationOption.new(
       authentication_id: Policies::Lti.generate_auth_id(id_token),
-       credential_type: AuthenticationOption::LTI_V1,
-       email: custom_claims[:email],
+      credential_type: AuthenticationOption::LTI_V1,
+      email: custom_claims[:email],
     )
     user.authentication_options = [ao]
     user
