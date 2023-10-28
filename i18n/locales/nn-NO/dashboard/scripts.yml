@@ -3006,3 +3006,18 @@ nn:
             lessonGroup-5:
               display_name: Variablar
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduksjon
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon

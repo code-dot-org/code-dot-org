@@ -53,7 +53,7 @@
       Description: !Sub "Database credentials for ${AWS::StackName} writer user."
 <% if database -%>
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "writer"}'
+        SecretStringTemplate: '{"username": "writer"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
@@ -67,7 +67,7 @@
       Description: !Sub "Database credentials for ${AWS::StackName} reader user."
 <% if database -%>
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "reader"}'
+        SecretStringTemplate: '{"username": "reader"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
@@ -138,7 +138,7 @@
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
-    DependsOn: [ReaderSQLUser]
+    DependsOn: ReaderSQLUser
     Properties:
       DBProxyName: !Sub "${AWS::StackName}-reporting"
       EngineFamily: MYSQL
@@ -185,6 +185,54 @@
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
         # exceed 5% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 5
+  WriterSQLUser:
+    Type: Custom::SQLUser
+<%  unless rack_env?(:production)%>
+    # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
+    # SQL user.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%  end -%>
+    Properties:
+      ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"
+      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretWriter
+      Privileges:
+        - SELECT
+        - INSERT
+        - UPDATE
+        - DELETE
+        - CREATE
+        - DROP
+        - REFERENCES
+        - INDEX
+        - ALTER
+        - CREATE TEMPORARY TABLES
+        - LOCK TABLES
+        - EXECUTE
+        - CREATE VIEW
+        - SHOW VIEW
+        - CREATE ROUTINE
+        - ALTER ROUTINE
+        - EVENT
+        - TRIGGER
+  ReaderSQLUser:
+    Type: Custom::SQLUser
+<%  unless rack_env?(:production)%>
+    # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
+    # SQL user.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%  end -%>
+    Properties:
+      ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"
+      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretReader
+      Privileges: ['SELECT']
 
   WriterSQLUser: <%= lambda_fn 'SQLUser', {
     # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application

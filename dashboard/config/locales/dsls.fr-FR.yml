@@ -13259,40 +13259,38 @@ fr-FR:
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
           ## Regardez les trois pratiques de pêche durables
 
           Faites glisser le code vers l'image correspondante.
 
         questions:
-        - text: Créez une zone de pêche pour les bateaux ! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: Créer une zone de pêche pour les bateaux ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
-            Commencez une saison de pêche et une saison sans pêche
-             ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: Fixez des limites de pêche ! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+            Mettre en place une saison de pêche et une saison de non-pêche
+             ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Fixer des limites à la pêche ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
         title: Faites correspondre le code à l'image
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
           ## Regardez les trois écosystèmes
 
           L'un est équilibré et les deux autres sont déséquilibrés de différentes manières. Faites glisser le code vers l'image correspondante.
         questions:
-        - text: Trop peu d'algues fait partir le poisson. ! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
-        - text: |-
-            Trop d'algues rend le corail malade. <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: La juste quantité d'algues permet au corail malade de guérir et au
-            poisson de rester en bonne santé ! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        - text: Trop peu d'algues fait partir les poissons. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: Trop d'algues rend le corail malade. <br> ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Tout juste assez d'algues permet au corail malade de guérir et aux
+            poissons de rester en bonne santé, aussi.  ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
         title: Faites correspondre le code à l'image
       csc_ecosystems_matching_events:
         answers:
@@ -13300,13 +13298,12 @@ fr-FR:
             PM.png)"
         - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
-        markdown: |+
-          Regardez ce qui se passe lorsque les sprites se touchent dans les deux animations. Faites ensuite glisser chaque image de code vers l'image correspondante.
-
-
+        markdown: "Regarder ce qui se passe lorsque les sprites se touchent dans les
+          deux animations. Ensuite, faire glisser chaque image de code vers l'image
+          qui lui correspond.\n\n"
         questions:
-        - text: Le bateau attrape le poisson. ! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: Les poissons mangent les algues ! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        - text: Le bateau attrape le poisson. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Les poissons mangent l'algue. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
         title: Associez le code à l'animation
       csc_ecosystems_overfishing_solution2_overview:
         markdown: "> #Sustainable Fishing Practice #2 :\n>># #Create une saison de

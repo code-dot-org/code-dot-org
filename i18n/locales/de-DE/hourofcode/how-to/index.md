@@ -72,7 +72,7 @@ Machen Sie bei anderen Lehrern, die dieses tolle Ereignis vielleicht auch verans
 
 ### Informieren Sie Freiwillige, indem Sie Ihre Veranstaltung registrieren 
 
-Wenn Sie [Ihre Hour of Code-Veranstaltung registrieren](/), erhalten Sie E-Mails mit aktuellen Informationen und Tipps für eine erfolgreiche Hour of Code. So wissen dann auch lokale Freiwillige Bescheid darüber, dass Ihre Schule daran teilnehmen wird. Freiwillige sind extrem hilfreich für eine solche Veranstaltung und können in Ihrer Stunde über Informatik referieren oder den SchülerInnen bei den Hour of Code-Aktivitäten helfen. 
+Wenn du [dich für deine Hour of Code-Veranstaltung anmeldest](/events), erhältst du hilfreiche E-Mail-Mitteilungen mit Neuigkeiten und Tipps für die Ausrichtung einer erfolgreichen Hour of Code. So wissen dann auch lokale Freiwillige Bescheid darüber, dass Ihre Schule daran teilnehmen wird. Freiwillige sind extrem hilfreich für eine solche Veranstaltung und können in Ihrer Stunde über Informatik referieren oder den SchülerInnen bei den Hour of Code-Aktivitäten helfen. 
 
 ### Begeistern Sie Ihre Klasse 
 

@@ -78,6 +78,8 @@ cs:
           description_short: Naučte se základní principy informatiky.
         mike-test:
           title: Základy informatiky
+        self-paced-pl-csd-unit1-2023:
+          title: Výuka řešení problémů a výpočetní technika
         vpl-csa-2023:
           title: CSA Virtuální profesionální učení
     resources:

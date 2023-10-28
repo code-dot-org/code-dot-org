@@ -2594,3 +2594,18 @@
             lessonGroup-5:
               display_name: Variabler
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduksjon
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon

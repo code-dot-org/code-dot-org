@@ -103,6 +103,11 @@ ca:
             '"measures"': mesures
             '"seconds"': segons
         text: després de {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': mesures
+            '"seconds"': segons
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -597,6 +602,49 @@ ca:
             '"electronic"': Electrònic
             '"iceCream"': Gelat
             '"neon"': Neó
+            '"rave"': Blanc i negre
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Vermells
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Túnel
+            '"color_cycle"': Colors
+            '"diamonds"': Diamants
+            '"disco"': Requadres
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
+            '"flowers"': Flors
+            '"galaxy"': Espai
+            '"growing_stars"': Estrelles creixents
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"music_wave"': Onades
+            '"none"': Cap
+            '"quads"': Angles
+            '"rainbow"': Arc de Sant Martí
+            '"rand"': "(Aleatori)"
+            '"ripples"': Ones
+            '"ripples_random"': Ones aleatòries
+            '"snowflakes"': Neu
+            '"sparkles"': Guspires
+            '"spiral"': Espiral
+            '"splatter"': Esquitxades de pintura
+            '"squiggles"': Guixots
+            '"starburst"': esclat d'estrelles
+            '"stars"': Estrelles
+            '"swirl"': Hipnosi
+            '"text"': Títol de la cançó
+          PALETTE:
+            '"cool"': Blues
+            '"default"': Llum
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
+            '"neon"': Neó
+            '"ocean"': Oceà
+            '"rainbow"': Arc de Sant Martí
             '"rave"': Blanc i negre
             '"tropical"': Tropical
             '"vintage"': Vintage
