@@ -6,7 +6,7 @@ title: Anciennes affiches de l'Heure du code
 
 # Anciennes affiches de l'Heure du code
 
-### Retrouvez nos affiches de ces dernières années pour les imprimer et les accrocher dans votre salle de classe ! Envie d'une nouvelle affiche ? <Cliquez ici</a>.
+### Retrouvez nos affiches de ces dernières années pour les imprimer et les accrocher dans votre salle de classe ! Envie d'une nouvelle affiche ? [Cliquez ici]({{ promote/promote_posters_url }}).
 
 * * *
 

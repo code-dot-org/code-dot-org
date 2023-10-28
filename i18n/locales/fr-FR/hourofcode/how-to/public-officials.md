@@ -18,7 +18,7 @@ title: Guide pratique pour les institutionnels
 
 ![](/images/fit-800/hoc_govs.png)
 
-De gauche à droite : <Les gouverneurs de l'Arkansas, de la Caroline du Nord et de l'Arizona qui participent à l'Heure du code.</em>
+De gauche à droite : *Les gouverneurs de l'Arkansas, de la Caroline du Nord et de l'Arizona qui participent à l'Heure du code.*
 
 ## Amenez chaque école à participer, permettez à n'importe quel étudiant d'apprendre !
 
@@ -48,7 +48,7 @@ Songez à publier un article dans votre journal local. Consultez cet [exemple d'
 
 ### 7. Diffusez l'information autour de vous
 
-<Partagez la vidéo de l'Heure du code sur Facebook</a> et parlez de votre soutien sur Twitter</a>. Partagez des photos des événements ou une vidéo de vous et d'autres adultes participant à Une Heure de Code. Utilisez le hashtag **#HourOfCode** pour que Code.org (@code.org) le voie et promeuve votre soutien. Ou utilisez ces exemples de tweets :
+[Partagez la vidéo de l'Heure du code sur Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) et [parlez de votre soutien sur Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Partagez des photos des événements ou une vidéo de vous et d'autres adultes participant à Une Heure de Code. Utilisez le hashtag **#HourOfCode** pour que Code.org (@code.org) le voie et promeuve votre soutien. Ou utilisez ces exemples de tweets :
 
 - *Chaque élève, garçon comme fille, devrait avoir la chance d'apprendre l'informatique. Rejoignez-nous pour commencer votre première #HourOfCode [https://hourofcode.com]({{ urls/home }})*
 - *Nous sommes fiers de rejoindre aujourd'hui l'initiative "Hour of Code". Êtes-vous de la partie ? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
