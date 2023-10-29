@@ -105,6 +105,16 @@ $ai-modal-border-width: 8px;
 
     &Right {
       margin-left: auto;
+
+      .closeButton {
+        background-color: initial;
+        color: white;
+        border: initial;
+
+        &:hover {
+          box-shadow: initial;
+        }
+      }
     }
   }
 
@@ -377,13 +387,6 @@ $ai-modal-border-width: 8px;
           margin-top: 10px;
         }
       }
-
-    }
-
-    .generatingArea {
-      position: absolute;
-      top: 0;
-      width: calc(100% - 20px)
     }
 
     .explanationArea {

@@ -7,7 +7,6 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {BlockSvg, Workspace} from 'blockly/core';
-import AiGeneratingView from './AiGeneratingView';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
@@ -15,7 +14,6 @@ import AiExplanationView from './AiExplanationView';
 import {AiOutput} from '../types';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
-import {setScore} from '@cdo/apps/flappy/api';
 
 const aiBotBorder = require('@cdo/static/dance/ai/bot/ai-bot-border.png');
 const aiBotYes = require('@cdo/static/dance/ai/bot/ai-bot-yes.png');
@@ -51,10 +49,6 @@ interface DanceAiProps {
 }
 
 // adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
-
-//interface RefObject {
-//  callback: () => void
-//}
 
 function useInterval(callback: () => void, delay: number | undefined) {
   const savedCallback = useRef<() => void>();
@@ -412,7 +406,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
-        ></div>
+        >
+          <button
+            className={moduleStyles.closeButton}
+            data-dismiss="modal"
+            type="button"
+            onClick={onClose}
+          >
+            <i className="fa fa-close" aria-hidden={true} />
+            <span className="sr-only">Close</span>
+          </button>
+        </div>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         {mode === Mode.RESULTS_FINAL && (
@@ -429,7 +433,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               }}
             >
               <button key={0} type="button" value={'ai-block'}>
-                AI effects
+                Preview
               </button>
               <button key={1} type="button" value={'code'}>
                 Custom code
@@ -579,19 +583,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div id="generating-area" className={moduleStyles.generatingArea}>
-          {/*mode === Mode.GENERATING && (
-            <AiGeneratingView
-              imageUrls={inputs.map(input => {
-                return getImageUrl(input);
-              })}
-              onComplete={() => {
-                setGeneratingNodesDone(true);
-              }}
-            />
-            )*/}
-        </div>
-
         <div id="outputs-area" className={moduleStyles.outputsArea}>
           {mode === Mode.RESULTS_FINAL /* && currentToggle === 'code' */ && (
             <div
@@ -687,31 +678,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
-            {mode === Mode.RESULTS_FINAL && (
-              <div>
-                {/*
-                <Button
-                  id="start-over-button"
-                  text={'Start over'}
-                  onClick={handleStartOverClick}
-                  color={Button.ButtonColor.white}
-                  className={classNames(moduleStyles.button)}
-                />
-                */}
-              </div>
-            )}
-
-            {/*mode === Mode.CODE && (
-              <Button
-                id="back-to-effects"
-                text={'Back to effects'}
-                onClick={handleResultsClick}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                className={classNames(moduleStyles.button)}
-              />
-            )*/}
-          </div>
+          <div
+            id="buttons-area-left"
+            className={moduleStyles.buttonsAreaLeft}
+          ></div>
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
@@ -744,25 +714,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               className={moduleStyles.button}
             />
           )}
-          {/*showConvertButton && mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="view-code-button"
-              text={'Show code'}
-              onClick={handleShowCode}
-              color={Button.ButtonColor.white}
-              className={moduleStyles.button}
-            />
-          )*/}
-
-          {/*mode === Mode.CODE && typingDone && (
-            <Button
-              id="explanation-button"
-              text={'Explanation'}
-              onClick={handleExplanationClick}
-              color={Button.ButtonColor.white}
-              className={moduleStyles.button}
-            />
-          )*/}
 
           {showConvertButton && (
             <Button
