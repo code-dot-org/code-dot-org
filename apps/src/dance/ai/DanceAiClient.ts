@@ -45,18 +45,27 @@ export function chooseEffects(emojis: string[], topOptions: boolean): any {
   const foregroundOptions: [number, string][] = outputOptions[1];
   const paletteOptions: [number, string][] = outputOptions[2];
 
+  const backgroundEffectOption =
+    backgroundOptions[Math.floor(Math.random() * backgroundOptions.length)];
+
+  const backgroundColorOption =
+    paletteOptions[Math.floor(Math.random() * paletteOptions.length)];
+
+  const foregroundEffectOption =
+    foregroundOptions[Math.floor(Math.random() * foregroundOptions.length)];
+
   // Choose random value from top scoring options.
   const chosenEffects = {
-    backgroundEffect:
-      backgroundOptions[
-        Math.floor(Math.random() * backgroundOptions.length)
-      ][1],
-    backgroundColor:
-      paletteOptions[Math.floor(Math.random() * paletteOptions.length)][1],
-    foregroundEffect:
-      foregroundOptions[
-        Math.floor(Math.random() * foregroundOptions.length)
-      ][1],
+    results: {
+      backgroundEffect: backgroundEffectOption[1],
+      backgroundColor: backgroundColorOption[1],
+      foregroundEffect: foregroundEffectOption[1],
+    },
+    scores: {
+      backgroundEffectScore: backgroundEffectOption[0],
+      backgroundColorScore: backgroundColorOption[0],
+      foregroundEffectScore: foregroundEffectOption[0],
+    },
   };
 
   return chosenEffects;
@@ -104,6 +113,57 @@ function obtainOptions(
       return options;
     })
     .sort((item1, item2) => item2[0] - item1[0]);
-  //.slice(0, numOptions);
   return topOptions;
 }
+
+enum FieldKey {
+  BACKGROUND_EFFECT = 'backgroundEffect',
+  FOREGROUND_EFFECT = 'foregroundEffect',
+  BACKGROUND_PALETTE = 'backgroundColor',
+}
+
+interface Fields {
+  [FieldKey.BACKGROUND_EFFECT]: FieldObject;
+  [FieldKey.FOREGROUND_EFFECT]: FieldObject;
+  [FieldKey.BACKGROUND_PALETTE]: FieldObject;
+}
+
+interface FieldObject {
+  name: string;
+  data: CachedWeightsMapping;
+}
+
+/*
+export function getScoreForEmoji(inputs: string[]) {
+  const fields: Fields = {
+    [FieldKey.BACKGROUND_EFFECT]: {
+      name: 'Background effect',
+      data: CachedBackgrounds as CachedWeightsMapping,
+    },
+    [FieldKey.FOREGROUND_EFFECT]: {
+      name: 'Foreground effect',
+      data: CachedForegrounds as CachedWeightsMapping,
+    },
+    [FieldKey.BACKGROUND_PALETTE]: {
+      name: 'Background color',
+      data: CachedPalettes as CachedWeightsMapping,
+    },
+  };
+
+  Object.keys(fields).map(fieldKey => {
+    const currentField = fields[fieldKey as FieldKey];
+    const emojiAssociations = currentField.data.emojiAssociations;
+    const datasets = Object.keys(emojiAssociations)
+      .filter((emojiId: string) => {
+        return inputs.includes(emojiId);
+      })
+      .map((emojiId: string, index) => {
+        return {
+          label: emojiId,
+          data: emojiAssociations[emojiId],
+          backgroundColor: colors[index],
+        };
+      });
+  })
+}
+*/
