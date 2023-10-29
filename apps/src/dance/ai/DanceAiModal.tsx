@@ -382,6 +382,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       className={moduleStyles.dialog}
       onClose={onClose}
       initialFocus={false}
+      styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
         <img src={aiBotBorder} className={moduleStyles.botImage} />
