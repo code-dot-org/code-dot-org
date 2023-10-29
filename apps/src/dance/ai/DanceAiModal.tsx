@@ -15,9 +15,14 @@ import AiExplanationView from './AiExplanationView';
 import {AiOutput} from '../types';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
+import {setScore} from '@cdo/apps/flappy/api';
 
-const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
-const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
+const aiBotBorder = require('@cdo/static/dance/ai/bot/ai-bot-border.png');
+const aiBotYes = require('@cdo/static/dance/ai/bot/ai-bot-yes.png');
+const aiBotNo = require('@cdo/static/dance/ai/bot/ai-bot-no.png');
+const aiBotBeam = require('@cdo/static/dance/ai/bot/blue-scanner.png');
+const aiBotBeamGreen = require('@cdo/static/dance/ai/bot/green-scanner.png');
+const aiBotBeamRed = require('@cdo/static/dance/ai/bot/red-scanner.png');
 
 enum Mode {
   SELECT_INPUTS = 'selectInputs',
@@ -86,7 +91,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [inputs, setInputs] = useState<string[]>([]);
   const [resultJson, setResultJson] = useState<string>('');
   const [badResults, setBadResults] = useState<any>(undefined);
+  const [resultScores, setResultScores] = useState<any>(undefined);
   const [currentPreview, setCurrentPreview] = useState<any>(undefined);
+  const [currentPreviewScore, setCurrentPreviewScore] = useState<
+    number | undefined
+  >(undefined);
   const [generatingNodesDone, setGeneratingNodesDone] =
     useState<boolean>(false);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
@@ -175,20 +184,39 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     mode === Mode.GENERATING ? 2000 : undefined
   );
 
+  const setScore = (scores: any) => {
+    const total =
+      scores.backgroundEffectScore +
+      scores.foregroundEffectScore +
+      scores.backgroundColorScore;
+    setCurrentPreviewScore(total);
+  };
+
   useEffect(() => {
     if (mode === Mode.GENERATING) {
       if (generatingStep === 0) {
-        setCurrentPreview(badResults[0]);
+        setCurrentPreview(badResults[0].results);
         console.log('preview 0');
+        console.log(badResults[0].scores);
+        setScore(badResults[0].scores);
       } else if (generatingStep === 1) {
-        setCurrentPreview(badResults[1]);
+        setCurrentPreview(badResults[1].results);
         console.log('preview 1');
+        console.log(badResults[1].scores);
+        setScore(badResults[1].scores);
       } else if (generatingStep === 2) {
-        setCurrentPreview(badResults[2]);
+        setCurrentPreview(badResults[2].results);
         console.log('preview 2');
+        console.log(badResults[2].scores);
+        setScore(badResults[2].scores);
       } else if (generatingStep === 3) {
         setCurrentPreview(JSON.parse(resultJson));
+        console.log(resultScores);
         console.log('preview result');
+        setScore(resultScores);
+      } else if (generatingStep === 4) {
+        setMode(Mode.RESULTS_FINAL);
+        setShowPreview(true);
       }
     }
   }, [generatingStep]);
@@ -214,17 +242,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const handleProcessClick = () => {
     setMode(Mode.PROCESSING);
     setTimeout(() => {
-      setProcessingDone(true);
+      handleGenerateClick();
+      //setProcessingDone(true);
     }, 4000);
   };
 
   const startAi = async () => {
     const result = chooseEffects(inputs, true);
-    const fullResult = {inputs, ...result};
+    const fullResult = {inputs, ...result.results};
     const fullResultJson = JSON.stringify(fullResult);
 
     // The block value will be set to this JSON.
     setResultJson(fullResultJson);
+
+    setResultScores(result.scores);
 
     const badResultsList: any = [];
     // Grab some bad results too.
@@ -311,7 +342,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleLeaveExplanation = () => {
-    setMode(Mode.CODE);
+    setMode(Mode.RESULTS_FINAL);
     setTypingDone(false);
   };
 
@@ -337,6 +368,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     currentToggle === 'code' &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
+  const botImage =
+    mode === Mode.GENERATING && generatingStep < 3
+      ? aiBotNo
+      : mode === Mode.GENERATING
+      ? aiBotYes
+      : aiBotBorder;
+  const botSideBeamImage =
+    mode === Mode.GENERATING && generatingStep < 3
+      ? aiBotBeamRed
+      : mode === Mode.GENERATING
+      ? aiBotBeamGreen
+      : undefined;
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -346,7 +390,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
         <img src={aiBotBorder} className={moduleStyles.botImage} />
         generate &nbsp;
-        <div className={moduleStyles.inputsContainer}>
+        <div
+          className={moduleStyles.inputsContainer}
+          onClick={handleStartOverClick}
+        >
           {Array.from(Array(SLOT_COUNT).keys()).map(index => (
             <div
               key={index}
@@ -403,8 +450,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             ? ''
             : mode === Mode.RESULTS && typingDone
             ? 'A.I. generated code for your dance party!'
-            : mode === Mode.RESULTS_FINAL
+            : mode === Mode.RESULTS_FINAL && currentToggle === 'ai-block'
             ? 'A.I. generated effects for your dance party!'
+            : mode === Mode.RESULTS_FINAL && currentToggle === 'code'
+            ? 'A.I. internally generated this code for the effects.'
             : mode === Mode.EXPLANATION
             ? 'These are the associations between the emojis and this effect.'
             : mode === Mode.CODE
@@ -515,7 +564,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       moduleStyles.beamImageVisible
                   )}
                 />
-                <img src={aiBotBorder} className={moduleStyles.image} />
+                {botSideBeamImage && (
+                  <img
+                    src={botSideBeamImage}
+                    className={moduleStyles.sideBeamImage}
+                  />
+                )}
+
+                <img src={botImage} className={moduleStyles.image} />
               </div>
             </div>
           )}
@@ -535,10 +591,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         </div>
 
         <div id="outputs-area" className={moduleStyles.outputsArea}>
-          {mode === Mode.RESULTS_FINAL && currentToggle === 'code' && (
+          {mode === Mode.RESULTS_FINAL /* && currentToggle === 'code' */ && (
             <div
               id="generating-block-preview"
-              className={moduleStyles.blockPreview}
+              className={classNames(
+                moduleStyles.blockPreview,
+                currentToggle !== 'code' && moduleStyles.blockPreviewHide
+              )}
             >
               <AiBlockPreview
                 fadeIn={true}
@@ -552,16 +611,39 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         </div>
 
         {(mode === Mode.GENERATING ||
-          (mode === Mode.RESULTS_FINAL && currentToggle === 'ai-block')) &&
+          mode === Mode.RESULTS_FINAL) /* && currentToggle === 'ai-block' */ &&
           /*showPreview*/ currentPreview && (
             <div
               key={generatingStep}
               id={'preview-area'}
-              className={moduleStyles.previewArea}
+              className={classNames(
+                moduleStyles.previewArea,
+                mode === Mode.RESULTS_FINAL &&
+                  currentToggle !== 'ai-block' &&
+                  moduleStyles.previewAreaHide
+              )}
             >
               <AiVisualizationPreview
                 blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
               />
+              {mode === Mode.GENERATING &&
+                currentPreviewScore !== undefined && (
+                  <div className={moduleStyles.score}>
+                    <div className={moduleStyles.barContainer}>
+                      <div
+                        className={moduleStyles.barFill}
+                        style={{
+                          height: Math.round(2 * currentPreviewScore * 10),
+                        }}
+                      >
+                        &nbsp;
+                      </div>
+                    </div>
+                    <div className={moduleStyles.text}>
+                      {Math.round(currentPreviewScore * 10)}
+                    </div>
+                  </div>
+                )}
             </div>
           )}
 
@@ -574,10 +656,43 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           </div>
         )}
 
+        <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
+          {mode === Mode.RESULTS_FINAL && (
+            <div>
+              <Button
+                id="regenerate"
+                onClick={handleRegenerateClick}
+                color={Button.ButtonColor.white}
+                className={classNames(moduleStyles.button)}
+              >
+                <i className="fa fa-refresh" />
+              </Button>
+              <Button
+                id="explanation-button"
+                text={'?'}
+                onClick={handleExplanationClick}
+                color={Button.ButtonColor.white}
+                className={moduleStyles.button}
+              />
+            </div>
+          )}
+
+          {mode === Mode.EXPLANATION && (
+            <Button
+              id="results-final-button"
+              text={'Back'}
+              onClick={handleLeaveExplanation}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={moduleStyles.button}
+            />
+          )}
+        </div>
+
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
           <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
             {mode === Mode.RESULTS_FINAL && (
               <div>
+                {/*
                 <Button
                   id="start-over-button"
                   text={'Start over'}
@@ -585,13 +700,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                   color={Button.ButtonColor.white}
                   className={classNames(moduleStyles.button)}
                 />
-                <Button
-                  id="regenerate"
-                  text={'Regenerate'}
-                  onClick={handleRegenerateClick}
-                  color={Button.ButtonColor.white}
-                  className={classNames(moduleStyles.button)}
-                />
+                */}
               </div>
             )}
 
@@ -604,16 +713,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                 className={classNames(moduleStyles.button)}
               />
             )*/}
-
-            {mode === Mode.EXPLANATION && (
-              <Button
-                id="results-final-button"
-                text={'Back to Code'}
-                onClick={handleLeaveExplanation}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                className={moduleStyles.button}
-              />
-            )}
           </div>
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
@@ -641,7 +740,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.GENERATING && generatingStep >= 4 && (
             <Button
               id="results-button"
-              text={'Show effects'}
+              text={'Continue'}
               onClick={handleResultsClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
