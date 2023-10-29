@@ -122,6 +122,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       // The block value will be set to this JSON.
       setResultJson(currentValue);
 
+      setCurrentPreview(JSON.parse(currentValue));
+
       setShowPreview(true);
 
       setInputs(JSON.parse(currentValue).inputs);
@@ -427,10 +429,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               }}
             >
               <button key={0} type="button" value={'ai-block'}>
-                AI
+                AI effects
               </button>
               <button key={1} type="button" value={'code'}>
-                Code
+                Custom code
               </button>
             </ToggleGroup>
           </div>
@@ -457,7 +459,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             : mode === Mode.EXPLANATION
             ? 'These are the associations between the emojis and this effect.'
             : mode === Mode.CODE
-            ? 'This is the internal code that A.I. generated.'
+            ? 'This is the custom code that A.I. generated.'
             : undefined}
         </div>
 
@@ -600,11 +602,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               )}
             >
               <AiBlockPreview
-                fadeIn={true}
                 generateBlocksFromResult={generateBlocksFromResult}
-                onComplete={() => {
-                  setTypingDone(true);
-                }}
               />
             </div>
           )}
@@ -766,16 +764,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )*/}
 
-          {showConvertButton && currentToggle === 'code' && typingDone && (
+          {showConvertButton && (
             <Button
               id="convert-button"
-              text={'Use this code'}
+              text={'Use custom code'}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
           )}
-          {showUseButton && currentToggle === 'ai-block' && (
+          {showUseButton && (
             <Button
               id="use-button"
               text={'Use'}
