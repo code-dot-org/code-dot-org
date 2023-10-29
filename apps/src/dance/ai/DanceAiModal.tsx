@@ -48,8 +48,7 @@ interface DanceAiProps {
   onClose: () => void;
 }
 
-// adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
-
+// Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 function useInterval(callback: () => void, delay: number | undefined) {
   const savedCallback = useRef<() => void>();
 
@@ -66,7 +65,7 @@ function useInterval(callback: () => void, delay: number | undefined) {
       }
     }
     if (delay !== undefined) {
-      let id = setInterval(tick, delay);
+      const id = setInterval(tick, delay);
       return () => clearInterval(id);
     }
   }, [delay]);
@@ -90,11 +89,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [currentPreviewScore, setCurrentPreviewScore] = useState<
     number | undefined
   >(undefined);
-  const [generatingNodesDone, setGeneratingNodesDone] =
-    useState<boolean>(false);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingStep, setGeneratingStep] = useState<number>(0);
-  const [typingDone, setTypingDone] = useState<boolean>(false);
   const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
 
   const currentAiModalField = useSelector(
@@ -104,8 +100,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
-
-  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
@@ -117,8 +111,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setResultJson(currentValue);
 
       setCurrentPreview(JSON.parse(currentValue));
-
-      setShowPreview(true);
 
       setInputs(JSON.parse(currentValue).inputs);
     }
@@ -158,12 +150,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleResultsClick = () => {
     setMode(Mode.RESULTS_FINAL);
-    setShowPreview(true);
-  };
-
-  const handleShowCode = () => {
-    setMode(Mode.CODE);
-    setTypingDone(false);
   };
 
   const handleExplanationClick = () => {
@@ -212,7 +198,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         setScore(resultScores);
       } else if (generatingStep === 4) {
         setMode(Mode.RESULTS_FINAL);
-        setShowPreview(true);
       }
     }
   }, [generatingStep]);
@@ -222,13 +207,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.GENERATING);
   };
 
-  const handleRegenerateClick = () => {
-    // Reset state
-    setTypingDone(false);
+  const handleStartOverClick = () => {
+    setMode(Mode.SELECT_INPUTS);
+    setInputs([]);
+    setCurrentInputSlot(0);
     setResultJson('');
-    setShowPreview(false);
     setProcessingDone(false);
-    setGeneratingNodesDone(false);
+    setGeneratingStep(0);
+  };
+
+  const handleRegenerateClick = () => {
+    setResultJson('');
+    setProcessingDone(false);
     setGeneratingStep(0);
     setCurrentPreview(undefined);
 
@@ -339,19 +329,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleLeaveExplanation = () => {
     setMode(Mode.RESULTS_FINAL);
-    setTypingDone(false);
-  };
-
-  const handleStartOverClick = () => {
-    setMode(Mode.SELECT_INPUTS);
-    setInputs([]);
-    setCurrentInputSlot(0);
-    setTypingDone(false);
-    setResultJson('');
-    setShowPreview(false);
-    setProcessingDone(false);
-    setGeneratingNodesDone(false);
-    setGeneratingStep(0);
   };
 
   const showUseButton =
@@ -453,10 +430,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             ? 'A.I. is ready to generate effects!'
             : mode === Mode.GENERATING
             ? 'A.I. is generating effects based on the emojis.'
-            : mode === Mode.RESULTS && !typingDone
-            ? ''
-            : mode === Mode.RESULTS && typingDone
-            ? 'A.I. generated code for your dance party!'
             : mode === Mode.RESULTS_FINAL && currentToggle === 'ai-block'
             ? 'A.I. generated effects for your dance party!'
             : mode === Mode.RESULTS_FINAL && currentToggle === 'code'
@@ -600,9 +573,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        {(mode === Mode.GENERATING ||
-          mode === Mode.RESULTS_FINAL) /* && currentToggle === 'ai-block' */ &&
-          /*showPreview*/ currentPreview && (
+        {(mode === Mode.GENERATING || mode === Mode.RESULTS_FINAL) &&
+          currentPreview && (
             <div
               key={generatingStep}
               id={'preview-area'}
@@ -682,7 +654,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           <div
             id="buttons-area-left"
             className={moduleStyles.buttonsAreaLeft}
-          ></div>
+          />
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button

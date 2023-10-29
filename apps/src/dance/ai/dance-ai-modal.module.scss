@@ -1,9 +1,9 @@
 @import 'color.scss';
 @import '../../mixins.scss';
 
-$ai-block-color: rgb(86, 96, 101);
+$ai-block-color: rgb(86 96 101);
 $ai-block-border-color: rgb(121 124 128);
-$ai-block-inputs-color: rgb(63, 68, 75);
+$ai-block-inputs-color: rgb(63 68 75);
 $ai-block-inputs-border-color: rgba(255 255 255 / 0.6);;
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
@@ -310,7 +310,7 @@ $ai-modal-border-width: 8px;
           }
 
           .sideBeamImage {
-            top: 0px;
+            top: 0;
             left: 90%;
             width: 100px;
             position: absolute;
@@ -374,7 +374,7 @@ $ai-modal-border-width: 8px;
         padding: 20px;
 
         .barContainer {
-          background-color: rgb(56, 55, 55);
+          background-color: rgb(56 55 55);
           width: 20px;
           height: 80px;
           position: relative;
@@ -384,7 +384,7 @@ $ai-modal-border-width: 8px;
             bottom: 0;
             left: 0;
             width: 20px;
-            background-color: rgb(16, 189, 233);
+            background-color: rgb(16 189 233);
           }
         }
 
@@ -423,8 +423,8 @@ $ai-modal-border-width: 8px;
 
     .buttonsAreaTop {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 0;
+      right: 0;
       width: 30%;
       display: flex;
       justify-content: flex-end;
