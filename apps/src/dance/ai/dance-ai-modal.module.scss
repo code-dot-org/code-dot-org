@@ -1,9 +1,10 @@
 @import 'color.scss';
 @import '../../mixins.scss';
 
-$ai-block-color: rgb(64 68 73);
+$ai-block-color: rgb(86, 96, 101);
 $ai-block-border-color: rgb(121 124 128);
-$ai-block-inputs-border-color: rgb(121 124 128);
+$ai-block-inputs-color: rgb(63, 68, 75);
+$ai-block-inputs-border-color: rgba(255 255 255 / 0.6);;
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
 
@@ -74,8 +75,8 @@ $ai-modal-border-width: 8px;
   width: 824px !important;
   height: 454px;
   padding: 0 !important;
-  border: solid 1px $ai-block-border-color;
   background-color: $ai-block-color !important;
+  border: solid 1px $ai-block-border-color;
 
   .headerArea {
     width: calc(100% - 2 * $ai-modal-border-width);
@@ -98,6 +99,7 @@ $ai-modal-border-width: 8px;
       padding: 5px;
       border-radius: 4px;
       gap: 6px;
+      background-color: $ai-block-inputs-color;
       border: solid 2px $ai-block-inputs-border-color;
 
       .emojiSlot {
