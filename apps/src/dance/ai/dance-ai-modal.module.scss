@@ -65,6 +65,10 @@ $ai-modal-border-width: 8px;
   }
 }
 
+.modalBackdrop {
+  background-color: initial;
+}
+
 .dialog {
   max-width: initial !important;
   width: 824px !important;
