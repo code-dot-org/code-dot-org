@@ -234,51 +234,6 @@
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
 
-  WriterSQLUser: <%= lambda_fn 'SQLUser', {
-    # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
-    # SQL user.
-    DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
-    DBServerHost: {'Fn::GetAtt': ['AuroraCluster', 'Endpoint.Address']},
-    # Credentials (username and password) for the SQL User this Resource is provisioning.
-    DBCredentialAdminSecret: {Ref: 'DatabaseSecretAdmin'},
-    # Credentials (username and password) for the SQL User this Resource is provisioning.
-    DBCredentialSecret: {Ref: 'DatabaseSecretWriter'},
-    Privileges: %w(
-      SELECT
-      INSERT
-      UPDATE
-      DELETE
-      CREATE
-      DROP
-      REFERENCES
-      INDEX
-      ALTER
-      CREATE\ TEMPORARY\ TABLES
-      LOCK\ TABLES
-      EXECUTE
-      CREATE\ VIEW
-      SHOW\ VIEW
-      CREATE\ ROUTINE
-      ALTER\ ROUTINE
-      EVENT
-      TRIGGER
-    )
-  }.compact
-  %>
-
-  ReaderSQLUser: <%= lambda_fn 'SQLUser', {
-    # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
-    # SQL user.
-    DependsOn: rack_env?(:production) ? nil : DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"},
-    DBServerHost: {'Fn::GetAtt': ['AuroraCluster', 'Endpoint.Address']},
-    # Credentials for SQL admin user that will create/update/delete this SQL user resource.
-    DBCredentialAdminSecret: {Ref: 'DatabaseSecretAdmin'},
-    # Credentials (username and password) for the SQL User this Resource is provisioning.
-    DBCredentialSecret: {Ref: "DatabaseSecretReader"},
-    Privileges: ['SELECT']
-  }.compact
-  %>
-
 # We don't provision these in production via CloudFormation ... yet!
 <%  unless rack_env?(:production)%>
   AuroraCluster:
