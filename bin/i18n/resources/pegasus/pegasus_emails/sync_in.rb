@@ -42,7 +42,7 @@ module I18n
 
           def progress_bar
             @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Pegasus/pegasus_emails sync-in',
+              title: 'Pegasus/emails sync-in',
               total: LOCALIZABLE_FILE_SUBPATHS.size
             )
           end

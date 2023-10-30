@@ -9,6 +9,7 @@ describe I18n::Resources::Pegasus do
       I18n::Resources::Pegasus::HourOfCode.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Pegasus::Markdown.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Pegasus::Mobile.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Pegasus::Emails.expects(:sync_in).in_sequence(execution_sequence)
 
       I18n::Resources::Pegasus.sync_in
     end
@@ -21,6 +22,7 @@ describe I18n::Resources::Pegasus do
       I18n::Resources::Pegasus::HourOfCode.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Pegasus::Markdown.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Pegasus::Mobile.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Pegasus::Emails.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Pegasus.sync_out
     end
