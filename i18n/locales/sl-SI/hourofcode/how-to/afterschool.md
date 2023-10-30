@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Hour of Code Navodila za uporabo po šoli
 ---
 
 {{ signup_button }}
@@ -8,39 +8,39 @@ title: Hour of Code How-to Guide for After-school
 
 ### Pridružite se gibanju in s temi koraki seznanite svoje študente računalništvu.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Računalniško razmišljanje pomaga negovati veščine reševanja problemov, logiko in ustvarjalnost. In tehnologija spreminja vsako industrijo na planetu. Študenti bi se morali danes naučiti ustvarjati tehnologijo, ne le uporabljati jo. Če začnejo zgodaj, bodo imeli temelj za uspeh na kateri koli karierni poti 21. stoletja.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Preizkus ure kode je preprost in zabaven način, da študente seznanite z računalništvom, morda prvič. Če želite dodaten komplet rok za pomoč, lahko poiščete [lokalnega prostovoljca, ki vam bo pomag]({{ urls/volunteer_local }}) al voditi uro kode v vašem pouku ali klubu po šolah.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Huro kode lahko gostujete tudi na daljavo! Za začetek si oglejte naše [nasvete za gostovanje virtualnega dogodka Hour of Code](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Oglejte si ta video z navodili <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Izberite tečaj
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Ponujamo različne [zabavne, enourne vadnice]({{ urls/learn }}) za udeležence vseh starosti, ki so jih ustvarili različni partnerji. [Preizkusite jih!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Vse vaje Ure Za Kodo** so pripravljene tako, da potrebujejo minimalno količino časa za pripravo za organizatorja, in so primerne za samo postrežno učenje. Omogočajo vsakemu učencu svoj ritem napredovanja.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Potrebujete učni načrt za vašo popoldansko Uro za kodo?** Oglejte si to [predlogo](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Promovirajte svojo uro kode
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+[S temi orodji promovirajte svojo uro kode]({{ urls/promote }}) in spodbujajte druge, da gostijo lastne dogodke.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Načrtujte svoje tehnološke potrebe - računalniki so neobvezni
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Ampak **ne potrebujete** računalnika za vsakega učenca in Uro Za Kodo lahko izvajate tudi brez račinalnika.
 
-Preverite ponujene tečaje nprvo preverite ali delujejo pravilno na brskljalnikih učencev z zvokom in sliko. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Preverite ponujene tečaje nprvo preverite ali delujejo pravilno na brskljalnikih učencev z zvokom in sliko. **Imate nizko pasovno širino?** Načrtujte prikazovanje videoposnetkov na sprednji strani razreda, tako da vsak učenec ne bo nalagal svojih videoposnetkov. Ali pa poskusite vadnice za izključene/brez povezave.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Tako si učenci pomagajo in so manj odvisni od učitelja. Naučili se bodo, da je programiranje družabno in je pomembno sodelovanje.
+**Nimate dovolj naprav?** Uporabite [parno programiranje](https://www.youtube.com/watch?v=vgkahOzFH2Q). Tako si učenci pomagajo in so manj odvisni od učitelja. Naučili se bodo, da je programiranje družabno in je pomembno sodelovanje.
 
 ## 5. Začnite vašo Uro Za Kodo z navdihujočim video posnetkom
 
@@ -48,43 +48,43 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Izvirni predstavitveni video Code.org, v katerem so bili predstavljeni Bill Gates, Mark Zuckerberg in zvezda NBA Chris Bosh - na voljo so [1-minutne](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minut](https://www.youtube.com/watch?v=nKIu9yen5nc)ne in [9-minutne](https://www.youtube.com/watch?v=dU1xS07N-FA) različice.
+- U [ra kode po vsem svetu video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Predsednik Obama poziva vse študente, naj se naučijo računalništva](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - [Poiščite](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) še več navdihujočih video posnetkov.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Odlično, da ste tukaj. Tudi v kolikor ste čisto na sveže. Nekaj idej, kako začeti z Uro Za Kodo:**
 
 - Razložite kako tehnologija vpliva na naše življenje. Poiščite primere, ki bodo blizu tako fantom kot dekletom (pogovarjajte se o tehnologiji, ki rešuje življenja, pomaga ljudem, povezuje ljudi itd).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Naštejte stvari, ki uporabljajo kodo v vsakdanjem življenju.
+- Oglejte si nasvete za zainteresiranje deklet za računal [ništvo tukaj]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Potrebujete več smernic?**Prenesite [predlogo za načrtovanje vaj](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Koda!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Usmerite udeležence na dejav** nost - Napišite povezavo za vadnico na tablo. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Ko nekdo naleti na težave, je v redu odgovoriti:** - »Ne vem. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Kaj storiti, če nekdo zgodaj zaključi?** - Spodbujajte udeležence, da preizkusijo še eno dejavnost Hour of Code na [hourofcode.com/learn]({{ urls/learn }}) - Ali pa prosite tiste, ki končajo zgodaj, da pomagajo drugim, ki imajo težave.
 
-## 7. Celebrate
+## 7. Praznujte
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [Natisnite potr]({{ urls/certificates }}) dila za svoje študente.
+- [Natisnite »Naredil sem uro kode!«]({{ promote/resources_stickers }}) nalepke za vaše študente.
+- [Naročite majice po meri](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) za udeležence.
+- Delite fotografije in videoposnetke dogodka Hour of Code na družbenih omrežjih. Uporabite #HourOfCode in @codeorg, da lahko poudarimo tudi vaš uspeh!
 
-## Other Hour of Code resources for educators
+## Drugi viri Hour of Code za vzgojitelje
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Oglejte si [najboljše prakse pre](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) teklih organizatorjev Hour of Code.
+- Oglejte si posnetek našega [spletnega seminarja](https://youtu.be/EJeMeSW2-Mw)Vodnik za učitelje po uri kode.
+- Obiščite forum H [our of Code in](http://forum.code.org/c/plc/hour-of-code) dobite nasvete, vpogled in podporo drugih organizatorjev.
+- Preglejte [pogosta vprašanja o uri kode](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Kaj pride po Uri za kodo?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Ura za kodo je le prvi korak, če se želimo naučiti več o delovanju tehnologije in kako narediti aplikacije. Pomagajte študentom nadaljevati pot in jih spodbudite, da se [naučijo več na spletu](/beyond)!
 
 {{ signup_button }}

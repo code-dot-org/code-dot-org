@@ -76,7 +76,7 @@ U kunt altijd uw voorkeuren aanpassen of zich afmelden door op de link onder een
 
 U hoeft geen gebruik te maken van onze lijst met vrijwilligers. Wij raden in feite aan om direct contact op te nemen met leraren en beheerders als er een klas is waar u vrijwilligerswerk voor wilt doen. 
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - Als u een andere school in gedachten hebt, ga dan naar hun website om in contact te komen met de juiste contactpersonen zoals het schoolhoofd of conrector, of de leraren die lesgeven in technologie en informatica, of zelfs de oudervereniging. U kunt ook een partnerschap aangaan met diverse organisaaties om samen een 'Hour of Code' te organiseren. - Als het u niet lukt een school te vinden die een 'Hour of Code' host, dan kunt u zich als vrijwilliger aanmelden om uw eigen evenement uit te voeren met uw eigen bedrijf. Raadpleeg onze [Gebruiksaanwijzing voor bedrijven](https://hourofcode.com/us/how-to/companies) voor meer informatie en om geïnspireerd te worden.
+Om te beginnen: - Als u een ouder of verzorger bent, stuur [deze e-mail dan](https://hourofcode.com/us/promote/resources#help-schools) naar de leerkracht van uw kind en bied aan hen te helpen bij het uitvoeren van een Hour of Code. - Als u een andere school in gedachten hebt, ga dan naar hun website om in contact te komen met de juiste contactpersonen zoals het schoolhoofd of conrector, of de leraren die lesgeven in technologie en informatica, of zelfs de oudervereniging. U kunt ook een partnerschap aangaan met diverse organisaaties om samen een 'Hour of Code' te organiseren. - Als het u niet lukt een school te vinden die een 'Hour of Code' host, dan kunt u zich als vrijwilliger aanmelden om uw eigen evenement uit te voeren met uw eigen bedrijf. Raadpleeg onze [Gebruiksaanwijzing voor bedrijven](https://hourofcode.com/us/how-to/companies) voor meer informatie en om geïnspireerd te worden.
 
 * * *
 
@@ -116,7 +116,7 @@ Als u de gastheer of -vrouw bent van een evenement in een klas, gebruik dan het 
 
 Als u overweegt thuis of in de gemeenschap een 'Hour of Code' te organiseren, dan raden wij u aan enkele van onze gebruiksgidsen voor [ouders](https://hourofcode.com/us/how-to/parents) en [organisaties of bedrijven](https://hourofcode.com/us/how-to/companies) te bekijken. 
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Bekijk deze instructievideo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Leg de datum, format, en locatie van uw evenement vast.
 
@@ -126,14 +126,14 @@ Werk samen met de school of leraar om te bespreken wat het beste werkt. Wij zien
 
 #### Voorbeeldagenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Wat of wie heeft u geïnspireerd? Wat heeft uw interesse in informatica gewekt? Had u een mentor? Stel vragen aan de studenten en houd tijd over voor V&A. | |30-60 minutes | Code! Als u uw evenement persoonlijk bijwoont, dan is nu het moment daar om vragen te beantwoorden en studenten door middel van moeilijke puzzels te begeleiden. Geef ze niet meteen de oplossing, maar stel ze in plaats daarvan vragen zodat voor zichzelf kunnen beantwoorden wat er fout ging, en moedig studenten aan vragen aan elkaar te stellen als ze deze hebben. Als u virtueel vrijwilligerswerk doet, bespreek dan samen met de leraar wat de beste benadering kan zijn. Het is verstandiger om na het einde van de sessie terug te keren om te zien welke voortgang de studenten hebben gemaakt. | | |1-3 minuten | Bedank iedereen en geef wat inspirerende woorden ter afscheid. Deel wat cadeautjes van uw bedrijf uit ([stickers](#celebrate) zijn geweldig)! | | <br />
+|Tijd | Agendapunt | | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuten | Laat een [inspirerende video zien | |5-10 minuten](https://hourofcode.com/us/promote/resources#videos)| Stel jezelf voor en leer meer over de studenten: Waar werk je, wat doe je en wat vind je het leukst aan je werk? Wat of wie heeft u geïnspireerd? Wat heeft uw interesse in informatica gewekt? Had u een mentor? Stel vragen aan de studenten en houd tijd over voor V&A. | |30-60 minuten | Code! Als u uw evenement persoonlijk bijwoont, dan is nu het moment daar om vragen te beantwoorden en studenten door middel van moeilijke puzzels te begeleiden. Geef ze niet meteen de oplossing, maar stel ze in plaats daarvan vragen zodat voor zichzelf kunnen beantwoorden wat er fout ging, en moedig studenten aan vragen aan elkaar te stellen als ze deze hebben. Als u virtueel vrijwilligerswerk doet, bespreek dan samen met de leraar wat de beste benadering kan zijn. Het is verstandiger om na het einde van de sessie terug te keren om te zien welke voortgang de studenten hebben gemaakt. | | |1-3 minuten | Bedank iedereen en geef wat inspirerende woorden ter afscheid. Deel wat cadeautjes van uw bedrijf uit ([stickers](#celebrate) zijn geweldig)! | | <br />
 
 #### Overige ideeën die u aan uw evenement kunt toevoegen.
 
 - Leg uit op welke manieren technologie een impact heeft op onze levens; gebruik hierbij voorbeelden die studenten ongeacht hun achtergrond zullen aanspreken - praat over technologie dat levens redt, mensen helpt en mensen met elkaar in contact brengt.
 - Als u een technologiebedrijf bent, geef dan leuke demonstraties van innovatieve producten waar u bedrijf aan werkt. Als u geen technologiebedrijf bent, bespreek dan wat voor technologie uw bedrijf gebruikt om problemen op te lossen en doelen te behalen.
 - Nodig software ingenieurs van uw bedrijf uit om te spreken over waarom zij hebben gekozen voor programmeren en aan wat voor projecten zij werken.
-- Als u een groep aan personeelsleden hebt die uw evenement zullen facilitieren of vrijwilligerswerk doen op een locale school, overweeg dan [aangepast t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw groep te bestellen.
+- Als je een groep medewerkers hebt die je evenement zullen faciliteren of vrijwilligerswerk gaat doen bij een plaatselijke school, overweeg dan om [op maat gemaakte t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) voor je groep te bestellen.
 
 ### 3. Uw behoefte aan technologie plannen
 
@@ -186,7 +186,7 @@ Een van de beste manieren om helpen is het verspreiden van informatie en het pro
 
 ### 1. Registreer uw evenement
 
-Wanneer je je [aanmeldt voor je Hour of Code-evenement](/#join), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. Tevens kunt u op deze wijze locale scholen of ouders laten weten dat u een evenement bij hen in de buurt zult hosten.
+Wanneer je je [aanmeldt voor je Hour of Code-evenement](/events), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. Tevens kunt u op deze wijze locale scholen of ouders laten weten dat u een evenement bij hen in de buurt zult hosten.
 
 ### 2. Plaatsen op sociale media
 
@@ -199,7 +199,7 @@ Gebruik deze inhoud als voorbeeld en plaats het op sociale media en deel het met
 
 #### Statistieken
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- Wist je dat slechts 53% van de Amerikaanse scholen computerwetenschappen doceert? Geef elke student de kans om er een te leren #HourOfCode https://hourofcode.com/
 - In de VS is slechts 26% van alle softwareprofessionals een vrouw. Laat meer vrouwen kennis maken met informatica dankzij #HourOfCode https://hourofcode.com/.
 - 67% van alle computerbanen in de VS bevinden zich niet in de technologiesecotr. Laat informatie onderdeel worden van het standaard curriculum met #HourOfCode. https://hourofcode.com/.
 

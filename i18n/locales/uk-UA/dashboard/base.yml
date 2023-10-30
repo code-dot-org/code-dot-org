@@ -118,11 +118,11 @@ uk:
     sign_out_of_markdown: '#### Ви скористались %{provider} для входу. [Клацніть тут] (%{url}) щоб вийти з %{provider}.'
     already_signedup: 'Вже зареєстровані?'
     notyet_signedup: "Ще не приєдналися?"
-    google_oauth2: 'обліковий запис Google'
+    google_oauth2: 'обліковим записом Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'обліковий запис Microsoft'
-    microsoft_v2_auth: 'обліковий запис Microsoft'
+    windowslive: 'обліковим записом Microsoft'
+    microsoft_v2_auth: 'обліковим записом Microsoft'
     clever: 'Розумний'
     powerschool: 'Powerschool'
     forgot_password: 'Забули пароль?'
@@ -362,7 +362,7 @@ uk:
       learn: "Вчитися"
       stats: "Статистика"
       help_us: "Допомога нам"
-      teach: "Вчити"
+      teach: "Навчати"
       about: "Про нас"
       incubator: "Інкубатор"
       legal: "Конфіденційність та юридична інформація"
@@ -401,7 +401,7 @@ uk:
       iceage: 'Льодовиковий період'
       infinity: 'Infinity'
       makerlab: 'Maker Toolkit'
-      minecraft_adventurer: 'Майнкрафт - Пригоди'
+      minecraft_adventurer: 'Майнкрафт: Пригоди'
       minecraft_aquatic: 'Майнкрафт: Підводна подорож'
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: 'Майнкрафт'
@@ -1072,7 +1072,7 @@ uk:
       workshop_course:
         csf_af: 'Основи інформатики (Курси A-F)'
         csf_express: 'Основи інформатики (Вступ до прискорених та Прискорені)'
-        csd: 'Відкриття інформатики'
+        csd: 'Дослідження інформатики'
         csp: '''16-''17 принципи інформатики'
         other: 'Інше'
         not_applicable: "Не застосовується"

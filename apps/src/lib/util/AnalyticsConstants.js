@@ -85,6 +85,7 @@ const EVENTS = {
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
   TA_RUBRIC_ON_STUDENT_WORK_UNLOADED: 'TA Rubric On Student Work Unloaded',
   TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
+  TA_RUBRIC_EVIDENCE_LEVEL_SELECTED: 'TA Rubric Evidence Level Selected',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',

@@ -46,6 +46,11 @@ bs:
           UNIT:
             '"measures"': taktovi
             '"seconds"': sekunde
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': taktovi
+            '"seconds"': sekunde
       Dancelab_changeColorBy:
         text: izmjeni {COLOR} {METHOD} za {AMOUNT}
         options:
@@ -487,6 +492,41 @@ bs:
             '"iceCream"': Sladoled
             '"default"': Svjetlo
             '"neon"': Neon
+            '"tropical"': Tropsko
+            '"vintage"': Starinsko
+            '"warm"': Vruće
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          podesi efekat pozadine
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nijedno
+            '"rand"': "(Slučajna)"
+            '"circles"': Krugovi
+            '"color_cycle"': Boje
+            '"diamonds"': Dijamanti
+            '"disco_ball"': Disko lopta
+            '"fireworks"': Vatromet
+            '"swirl"': Nilski konj
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Plesni podij laser
+            '"splatter"': Prosute boje
+            '"rainbow"': Duge
+            '"snowflakes"': Snijeg
+            '"text"': Imena pjesama
+            '"sparkles"': Svtlucanje
+            '"spiral"': Spirala
+            '"disco"': Kvadrati
+            '"stars"': Zvijezde
+          PALETTE:
+            '"rave"': Crno-bijelo
+            '"cool"': Cool
+            '"electronic"': Elektronski
+            '"iceCream"': Sladoled
+            '"default"': Svjetlo
+            '"neon"': Neon
+            '"rainbow"': Duge
             '"tropical"': Tropsko
             '"vintage"': Starinsko
             '"warm"': Vruće
