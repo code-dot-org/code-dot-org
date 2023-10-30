@@ -1,5 +1,7 @@
 - data = {}
-- data[:is_csa] = @script.is_csa?
+- data[:is_csa] = @script.csa?
+- data[:level_type] = @level.type
+- data[:has_ai_tutor_access] = @current_user.has_ai_tutor_access?
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_ai_tutor_panel.js'), data: {aitutorpanel: data.to_json }}
