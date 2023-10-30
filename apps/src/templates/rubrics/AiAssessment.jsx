@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
+import AiAssessmentFeedback from './AiAssessmentFeedback';
 const icon = require('@cdo/static/ai-bot.png');
 
 export default function AiAssessment({
@@ -11,7 +12,14 @@ export default function AiAssessment({
   studentName,
   aiUnderstandingLevel,
   aiConfidence,
+  learningGoalKey,
 }) {
+  const [aiFeedback, setAIFeedback] = useState('');
+
+  const radioAiFeedbackCallback = radioButtonData => {
+    setAIFeedback(radioButtonData);
+  };
+
   return (
     <div>
       <Heading6>{i18n.aiAssessment()}</Heading6>
@@ -24,6 +32,13 @@ export default function AiAssessment({
           aiConfidence={aiConfidence}
         />
       </div>
+      <div>
+        <AiAssessmentFeedback
+          learningGoalKey={learningGoalKey}
+          radioAiFeedbackCallback={radioAiFeedbackCallback}
+          aiFeedback={aiFeedback}
+        />
+      </div>
     </div>
   );
 }
@@ -33,4 +48,5 @@ AiAssessment.propTypes = {
   studentName: PropTypes.string,
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
+  learningGoalKey: PropTypes.string,
 };

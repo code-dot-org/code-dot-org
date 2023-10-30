@@ -260,6 +260,7 @@ export default function LearningGoal({
                 studentName={studentLevelInfo.name}
                 aiConfidence={aiConfidence}
                 aiUnderstandingLevel={aiUnderstanding}
+                learningGoalKey={learningGoal.key}
               />
             </div>
           )}
