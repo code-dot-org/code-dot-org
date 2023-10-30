@@ -11,12 +11,14 @@ module I18n
         HourOfCode.sync_in
         Markdown.sync_in
         Mobile.sync_in
+        PegasusEmails.sync_in
       end
 
       def self.sync_out
         HourOfCode.sync_out
         Markdown.sync_out
         Mobile.sync_out
+        PegasusEmails.sync_out
       end
     end
   end
