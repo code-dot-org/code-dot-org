@@ -145,10 +145,9 @@ async function handleSongSelection(
   // manifest within Dance.js, and Lab2 Dance which reads the current song's manifest from Redux.
   if (onSongSelected) {
     onSongSelected(songId);
-  } else {
-    const metadata = await loadSongMetadata(songId);
-    dispatch(setCurrentSongMetadata(metadata));
   }
+  const metadata = await loadSongMetadata(songId);
+  dispatch(setCurrentSongMetadata(metadata));
 }
 
 const danceSlice = createSlice({

@@ -11441,7 +11441,8 @@
           "type": "Video"
         },
         "list_of_poems/poem-art/2021": {
-          "type": "Sllajdet"
+          "type": "Sllajdet",
+          "name": "Arti i poemës "
         },
         "poem_art_celebration/poem-art/2021": {
           "type": "Video"
@@ -11469,6 +11470,9 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Burim"
         }
       }
     }

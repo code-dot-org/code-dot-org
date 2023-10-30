@@ -24,8 +24,7 @@ module I18n
         SharedFunctions.sync_in
         Slides.sync_in
         Standards.sync_in
-
-        I18nScriptUtils.copy_file File.join(ORIGIN_I18N_DIR_PATH, 'unplugged.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'unplugged.yml')
+        UnpluggedContent.sync_in
       end
 
       def self.sync_out
@@ -44,6 +43,10 @@ module I18n
         SharedFunctions.sync_out
         Slides.sync_out
         Standards.sync_out
+        UnpluggedContent.sync_out
+
+        # Should be called when all the Dashboard locale files have been synced-out
+        TextToSpeech.sync_out
       end
     end
   end

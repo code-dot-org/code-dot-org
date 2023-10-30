@@ -1,0 +1,19 @@
+{
+  "sm-WS": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "title": "Malamalama atili i le Atamai Faakomepiuta ma Masini Aoao"
+          },
+          "home-learning-2020": {
+            "buttonText": "Vaai Manatu o Poloketi"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Faatu se Faiaoga"
+          }
+        }
+      }
+    }
+  }
+}

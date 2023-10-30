@@ -12813,17 +12813,17 @@
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] Red de visión artificial",
-          "url": "https://docs.google.com/presentation/d/19y7hjJoAo-N-2xYX4EAy4OHh1sabj55fws4kUmDehcI/",
+          "url": "https://docs.google.com/presentation/d/15yV1_yDu-uUtVeCZLVfrGM6k_gTdP0EIBpxh3Xfu7sk/",
           "type": "Ejemplo"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "Visión artificial",
-          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+          "url": "https://docs.google.com/presentation/d/1_9zHn5Jo8wWXZQtepm5deHTBOgLUIsdwIlWrbhJH9a0/",
           "type": "Diapositivas"
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "Red de visión artificial",
-          "url": "https://docs.google.com/document/d/1IozBvuIrH_bawlXIqQZHBiiUlM5orjvjsjjWn8FyOr4/view",
+          "url": "https://docs.google.com/document/d/1RqvsiN_5eAB3XTM-ku8unU9-sVkrrZILRR21bphAZWM/",
           "type": "Guía de Actividad"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
@@ -13145,6 +13145,9 @@
           "name": "Vídeo: Compresión de Texto con Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Vídeo"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Recurso"
         }
       }
     }

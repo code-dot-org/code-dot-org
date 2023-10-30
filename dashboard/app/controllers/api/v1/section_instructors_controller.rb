@@ -26,13 +26,13 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     authorize! :manage, section
 
     begin
-      si = section.add_instructor(params.require(:email))
+      si = section.add_instructor(params.require(:email), current_user)
+      render json: si, serializer: Api::V1::SectionInstructorSerializer
     rescue ArgumentError => exception
       render json: {error: exception.message}, status: :bad_request
     rescue ActiveRecord::RecordNotFound
-      return head :not_found
+      head :not_found
     end
-    return si
   end
 
   # Removes an instructor from the section (soft-deleting the record).
@@ -64,5 +64,32 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     @section_instructor.save!
 
     render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
+  end
+
+  # GET /section_instructors/check
+  # Checks if the given email address corresponds to a user that could be added
+  # as an instructor. Optional section id parameter can be given to verify that
+  # the user is not already an instructor in the section.
+  def check
+    return head :forbidden unless current_user&.teacher?
+
+    instructor = User.find_by(email: params.require(:email), user_type: :teacher)
+    return head :not_found if instructor.blank?
+    if instructor == current_user
+      return render json: {error: 'inviting self'}, status: :bad_request
+    end
+
+    section = Section.find_by_id(params[:section_id])
+    if section.present?
+      authorize! :manage, section
+
+      begin
+        section.validate_instructor(instructor)
+      rescue ArgumentError => exception
+        return render json: {error: exception.message}, status: :bad_request
+      end
+    end
+
+    head :no_content
   end
 end

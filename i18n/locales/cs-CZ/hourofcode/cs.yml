@@ -5,6 +5,11 @@ cs:
   language: Čeština
   front_title: Připojte se k největší vzdělávací akce v dějinách během  %{campaign_date}
   coming_soon: Bude to brzy
+  new: Nový
+  hours_of_code_served: Hodiny obsluhy kódu
+  hoc_stat_languages: Studenti se učí ve více než 45 jazycích
+  hoc_stat_hours_served: Přes 100 milionů studentů zkusilo Hodinu programování
+  hoc_stat_females: Studentky tvoří 50% účastníků Hodiny kódu
   campaign_date_start_short: 4. prosince
   campaign_date_start_long: 4. prosince
   campaign_date_short: 4. - 10. prosince
@@ -36,9 +41,19 @@ cs:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 5. září 2023 až 17. prosince 2023
   hoc2023_header: Kreativita s AI
+  hoc2023_hero_desc_homepage: Připojte se k milionům lidí po celém světě a zorganizujte
+    hodinu kódování, s AI nebo bez ní, a naučte se, jak AI funguje. Kdokoli, kdekoli
+    to může udělat. Nejsou potřeba žádné zkušenosti.
+  hoc2023_hero_desc_learn_page: Letos posuneme Hodinu kódu do nových výšin tím, že
+    nabízíme možnosti kódování, které zahrnují jak umělou inteligenci (AI), tak komponenty
+    jiné než AI.
   hoc2023_social_creativity_with_ai_title: Hodina kódu - Co vytvoříte?
   hoc2023_social_creativity_with_ai_desc: Využijte informatiku k prozkoumání a poznávání
     AI!
+  hoc2023_what_is_hoc_desc: Hodina kódu je bezplatný úvod do informatiky prostřednictvím
+    zábavných aktivit a videí pro studenty všech úrovní dovedností. Letošní oslavu
+    programování a umělé inteligence podporuje více než 400 partnerů, 20 000 pedagogů
+    a 58 000 dobrovolníků.
   hoc2022_header: Bádejte, hrajte, vytvářejte!
   social_hoc2022_explore_play_create: Používejte počítačovou vědu k bádání, hraní
     a vytváření!
@@ -51,6 +66,9 @@ cs:
     Nas X, Selena Gomez, hudba z Disneyho „Encanto,“ a další!
   social_hoc2023_dance: Představujeme Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X,
     Selena Gomez, hudbu z Disneyho „Encanto“ a další!
+  social_hoc2023_dance_v2: Je čas, abyste si věci rozebrali! Vytvořte si vlastní taneční
+    párty s hity Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía a
+    dalších!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Učte se dnes, vybudujte zářnější zítřek.
@@ -174,6 +192,7 @@ cs:
   social_ai_title: Další informace o umělé inteligenci (AI) | Code.org
   social_ai_desc: Nástroje, které pomáhají studentům a učitelům přinést umělou inteligenci
     do učebny.
+  social_videos_desc: Poutavá videa z informatiky pro studenty všech věkových kategorií.
   pl_superhero_title: Pomozte studentům stát se superhrdiny!
   pl_superhero_desc: Připojte se k našemu vysoce podpůrnému programu profesionálního
     učení pro pedagogy středních a středních škol.
@@ -204,6 +223,15 @@ cs:
   device_laptop: Notebook
   device_desktop_computer: Stolní počítač
   device_mobile_device: Mobilní zařízení
+  for_everyone: Pro všechny
+  for_students_teacher_led_learning: 'Pro studenty: Učení vedené učitelem'
+  for_students_teacher_led_lessons: 'Pro studenty: Lekce vedené učitelem'
+  professional_development: Profesní rozvoj
+  how_ai_works_video_series: Jak funguje AI Série videí
+  learn_how_ai_works: Zjistěte, jak funguje AI
+  ai_101_for_educators: AI 101 pro pedagogy
+  learn_about_ai_impacts: Zjistěte více o dopadech AI
+  hoc_ai_activities: Aktivity Hour of Code AI
   subscribe_to_emails_heading: Přihlásit se k odběru e-mailů
   subscribe_to_emails_desc: Přečtěte si o tom, co se děje na Code.org a ve vzdělávání
     informatiky prostřednictvím čtvrtletních aktualizací prostřednictvím našeho seznamu
@@ -260,21 +288,32 @@ cs:
     přehled a podporu od ostatních pedagogů.
   required_materials: 'Požadované materiály:'
   optional_materials: 'Volitelné materiály:'
+  for_students: Pro studenty
+  for_educators: Pro učitele
+  call_to_action_host_hoc: Uspořádejte hodinu kódu
   call_to_action_hold_an_event: Pořádat událost
   call_to_action_register_event: Zaregistrujte svou akci
+  call_to_action_register_your_hoc: Zaregistrujte si svou Hodinu programování
   call_to_action_select_activity: Vyberte aktivitu
   call_to_action_start_activity: Zahájení aktivity
   call_to_action_get_certificates: Získat certifikáty
   call_to_action_go_beyond_hoc: Překročte Hodinu kódu
+  call_to_action_explore_all_hoc_activities: Prozkoumejte všechny aktivity Hour of
+    Code na webu Code.org
+  call_to_action_start_dance_party: Spusťte taneční párty
+  call_to_action_start_part_02: Začátek druhé části
+  call_to_action_start_unplugged_activity: Spusťte odpojenou aktivitu
   call_to_action_view_promo_resources: Zobrazit propagační zdroje
   call_to_action_learn_more: Dozvědět se více
   call_to_action_watch_now: Sledovat nyní
   call_to_action_try_activity: Vyzkoušejte aktivitu
   call_to_action_try_activities: Vyzkoušejte aktivity
+  call_to_action_try_hoc_ai_activities: Vyzkoušejte aktivity Hour of Code AI
   call_to_action_explore_activities: Prozkoumejte aktivity
   call_to_action_explore_ai: Prozkoumejte AI
   call_to_action_explore_unit: Prozkoumejte jednotku
   call_to_action_explore_curriculum: Prozkoumejte kurikulum
+  call_to_action_explore_curricula: Prozkoumat učební osnovy
   call_to_action_explore_curriculum_options: Prozkoumat možnosti učebních osnov
   call_to_action_explore_lessons: Prozkoumejte lekce
   call_to_action_explore_modules: Prozkoumejte moduly
@@ -357,6 +396,11 @@ cs:
   call_to_action_learn_about_advocacy: Zjistěte více o naší advokacii
   call_to_action_visit_store: Navštivte obchod
   call_to_action_view_faqs: Zobrazit více často kladených dotazů
+  call_to_action_applications_open: Přihlášky jsou nyní otevřené
+  call_to_action_apply_cs_ambassador: Přihlaste se jako velvyslanec CS
+  call_to_action_coming_soon: Již brzy!
+  call_to_action_learn_how_ai_works: Zjistěte, jak funguje umělá inteligence
+  call_to_action_learn_about_ai: Další informace o umělé inteligenci
   aria_label_call_to_action_hoc_how_to_educators: Podívejte se na návod pro pedagogy
   aria_label_call_to_action_hoc_how_to_companies: Zobrazit průvodce návody pro společnosti
   aria_label_call_to_action_hoc_how_to_districts: Zobrazit průvodce návody pro okresy
@@ -368,6 +412,9 @@ cs:
   aria_label_call_to_action_hoc_how_to_volunteers: Zobrazit návod pro dobrovolníky
   aria_label_call_to_action_hoc_how_to_virtual_events: Podívejte se na průvodce virtuálními
     událostmi
+  aria_label_call_to_action_dance_01: Spusťte aktivitu Taneční párty
+  aria_label_call_to_action_dance_02: Začněte druhou část aktivity Dance Party
+  aria_label_call_to_action_dance_unplugged: Spusťte odpojenou aktivitu Dance Party
   aria_label_call_to_action_afe: Další informace o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začněte odborný vzdělávací program Teaching
     Computer Science Fundamentals
@@ -483,11 +530,25 @@ cs:
   curriculum_name_creating_apps_with_devices: Tvorba aplikací pomocí nástrojů
   curriculum_name_poetry: Programování s Poezií
   curriculum_name_dance_party: Taneční párty
+  curriculum_name_dance_party_02: Pokračujte v tanci
+  curriculum_name_dance_party_unplugged: Taneční párty Unplugged
+  curriculum_name_dance_party_ai_edition: 'Taneční párty: AI Edition'
   curriculum_name_problem_solving_computing: Řešení problémů a práce s počítačem
   curriculum_name_web_development: Vývoj webových stránek
   curriculum_name_interactive_animations_games: Interaktivní animace a hry
   curriculum_name_design_process: Proces navrhování
   curriculum_name_data_society: Data a společnost
+  curriculum_desc_dance_party_01: V této úvodní aktivitě použijte kód k tomu, aby
+    se různé barevné postavy přesunuly k animovanému pozadí a pozitivní hudbě.
+  curriculum_desc_dance_party_02: Jděte nad rámec úvodního tutoriálu s rozšířenými
+    nápady na projekty. Projděte si knihovnu příkladů složitějších tanečních večírků.
+  curriculum_desc_dance_party_unplugged: Pusťte se do hry - není potřeba žádný počítač!
+    Zjistěte, jak lze kódovací koncepty, jako události, použít k synchronizaci choreografie
+    tanečníků.
+  curriculum_desc_dance_party_ai_edition: Zjistěte více o konceptech umělé inteligence
+    (AI) a vytvořte si vlastní virtuální taneční párty představující dnešní nejlepší
+    umělce. S desítkami skladeb, ze kterých si můžete vybrat, oslovíte každého studenta
+    bez ohledu na jeho hudební vkus. Je čas, abyste si věci rozebrali!
   curriculum_desc_csf: Volný soubor základních učebních osnov, který seznamuje studenty
     se základními koncepty informatiky.
   curriculum_desc_csf_express: Naučte se vytvářet počítačové programy, rozvíjejte
@@ -601,12 +662,16 @@ cs:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2—12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Předškoláci
   module_grade_grade_01: 1. ročník
@@ -614,6 +679,12 @@ cs:
   module_grade_grade_03: 3. ročník
   module_grade_grade_04: 4. ročník
   module_grade_grade_05: 5. ročník
+  module_age_05_07: Věk 5-7
+  module_age_07: Věk 7+
+  module_age_07_11: Věk 7-11
+  module_age_11: Věk 11+
+  module_age_13: Věk 13+
+  module_age_all_age: Všechny věkové kategorie
   module_grade_k_5_teachers: K-5 Učitelé
   module_grade_6_10_teachers: 6-10 Učitelé
   module_grade_9_12_teachers: 9-12 Učitelé
@@ -708,6 +779,56 @@ cs:
     osnov
   heading_csa_ai: Hledáte co dělat po zkoušce AP®?
   heading_bring_cs_to_students: Přineste studentům informatiku
+  heading_cs_ambassador_program: Program velvyslance CS
+  heading_featured_student_projects: Doporučené studentské projekty
+  heading_start_hoc_with_videos: Začněte svou Hodinu kódu inspirativními videi
+  cs_ambassador_subhead: Pokud jste studentem střední školy, který je nadšený povzbuzováním
+    více mladých žen, aby ve vaší škole studovaly informatiku, pak tě potřebujeme!
+  cs_ambassador_desc: Počítačová věda se dotýká každého oboru, včetně medicíny, zábavy,
+    sportu, vzdělávání, obchodu, módy a podnikání. Přesto pouze 5% mladých žen ve
+    středoškolském věku navštěvuje kurzy informatiky. Velvyslanci mohou pomoci překonat
+    tento rozdíl mezi pohlavími tím, že povzbudí své vrstevníky, aby absolvovali kurz
+    informatiky.
+  cs_ambassador_application_date: Přihlášky otevřené do 8. listopadu 2023
+  cs_ambassador_application_subhead: Spolupracujte s učitelem a odešlete svou žádost
+    ještě dnes
+  cs_ambassador_application_questions: Otázky? Kontaktujte prosím [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Co dělají velvyslanci CS?
+  cs_ambassador_do_desc: Ambasadoři CS povzbuzují mladé ženy, aby prozkoumaly toto
+    téma, a navzájem se zvedají, když získávají zpět své místo v počítačové vědě.
+    Ambasadoři CS se spojují se svými vrstevníky, aby se podělili o své vzrušení a
+    lásku k počítačové vědě. Navštěvují učebny, hostí stoly na oběd, a mluví na shromážděních
+    a klubových schůzích. Ambasadoři CS spolupracují s učiteli a správci škol na rozbití
+    stereotypů, které brzdí mladé ženy.
+  cs_ambassador_steps_heading: Co potřebuji, abych se stal velvyslancem CS?
+  cs_ambassador_steps_list_title_01: Vášeň
+  cs_ambassador_steps_list_title_02: Zkušenosti v kurzu CS
+  cs_ambassador_steps_list_title_03: Škola, která nabízí CS
+  cs_ambassador_steps_list_desc_01: Vášeň pro povzbuzení mladých žen ve vaší škole,
+    aby chodily na kurzy informatiky
+  cs_ambassador_steps_list_desc_02: 'Absolvovali roční kurz informatiky ve školním
+    roce 2022-23 nebo dříve (doporučeno: CS Principles nebo AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Navštěvujte střední školu, která pravidelně nabízí
+    roční kurz informatiky (doporučeno: CS Principles nebo AP® CSA)'
+  cs_ambassador_benefits_heading: Výhody programu
+  cs_ambassador_benefits_list_title_01: Národní společenství
+  cs_ambassador_benefits_list_title_02: Veřejná služba
+  cs_ambassador_benefits_list_title_03: Uznání
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certifikát
+  cs_ambassador_benefits_list_title_06: Zkušenosti
+  cs_ambassador_benefits_list_desc_01: Přístup k národní komunitě mladých vůdců, kteří
+    se zavázali odstranit genderovou mezeru v informatice.
+  cs_ambassador_benefits_list_desc_02: Hodiny komunitních služeb a příležitost získat
+    [Cena prezidentské dobrovolnické služby USA] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Uznání jako velvyslanec 2023-2024 a způsobilý
+    být oceněn v Síni slávy ambasadorů Code.org.
+  cs_ambassador_benefits_list_desc_04: Buďte identifikováni jako velvyslanec CS prostřednictvím
+    speciálního oblečení, samolepek a dalších značkových oděvů Code.org!
+  cs_ambassador_benefits_list_desc_05: Oficiální osvědčení o účasti od Code.org.
+  cs_ambassador_benefits_list_desc_06: Získejte zkušenosti a příběhy, které můžete
+    sdílet ve své přihlášce na vysokou školu, životopis a další!
   professional_learning_section_desc: Získejte podporu potřebnou k přípravě na učení,
     kterou doporučují samotní učitelé. Až 90 % z nich kurz považuje za ten nejlepší
     program pro profesní rozvoj.
@@ -757,6 +878,13 @@ cs:
     informatiky Code.org a získejte užitečné připomenutí, tipy a aktualizace zasílané
     přímo do vaší doručené pošty.
   subscribe_form_section_unsubscribe: Z odběru se můžete kdykoli odhlásit.
+  dance_hero_heading: Kódujte taneční párty
+  dance_featuring_songs_by_short: 'Obsahující písně:'
+  dance_featuring_songs_by_long: 'Dance Party obsahuje písně od:'
+  dance_and_more: a více
+  dance_choose_activity: Vyberte si taneční párty
+  dance_afe_disclaimer: Umělci, jejichž hudba je použita v tomto tutoriálu, nesponzorují
+    ani neschvalují Amazon jako součást licencování používání své hudby na Code.org.
   blockchain_hero_heading: Jak funguje blockchain
   blockchain_hero_desc: Ponořte se do světa blockchainu s „Jak funguje blockchain“,
     naší nové video série a doprovodných lekcí!
@@ -862,6 +990,11 @@ cs:
   ai_curriculum_grades_05: 'Úrovně stupně: 9-12'
   ai_curriculum_btn_aria_label_05: Prozkoumejte modul Softwarové inženýrství a počítačové
     vidění
+  ai_curriculum_title_06: Společenský dopad generativní AI
+  ai_curriculum_desc_06: Prozkoumejte dopad generativní umělé inteligence z různých
+    perspektiv a poté spolupracujte jako tým a vypracujte pokyny, které řeší nejvíce
+    potřeb všech účastníků.
+  ai_curriculum_btn_aria_label_06: Zobrazit společenský dopad generativní umělé inteligence
   ai_carousel_heading: 'Co říkají učitelé o AI s Code.org:'
   ai_carousel_quote_01: Tato lekce také dala mým studentům příležitost vidět, že v
     klasifikačních systémech existuje prvek názoru. Později, když jsme začali vidět,
@@ -1853,6 +1986,9 @@ cs:
   help_page_speak_for_cs_desc: Zjistěte více o advokační práci Code.org v USA a deseti
     zásadách, které státům doporučujeme přijmout, aby byla informatika základem pro
     všechny studenty. Navíc zjistěte, jak můžete řídit změnu ve svém stavu.
+  yw_page_top_heading: Mladé ženy v informatice
+  yw_page_top_desc: Staňte se velvyslancem CS a zapojte se do odstraňování genderových
+    rozdílů v informatice.
   hoc_live: Hodina kódu naživo
   hoc_live_sign_up_title: Přihlaste se k odběru Hour of Code Live
   hoc_live_learn_title: Učte se s Hour of Code Live
@@ -1977,7 +2113,7 @@ cs:
     žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci
     Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované
     žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>
-  front_intro_default_2: Globální hnutí ve více než 180 zemích
+  front_intro_default_2: Globální hnutí ve více než 180 zemích.
   front_watch_video: Podívejte se na nové video
   front_watch_regular_video: Podívejte se na video
   front_volunteers: Hledáme technické dobrovolníky
@@ -2159,7 +2295,7 @@ cs:
     nám ji představit stovce milionů.
   front_join_us_description_short: Informatika je základ pro každého studenta.
   front_join_us_button: Připojte se k nám
-  front_what_is_hoc: 'Co je Hodina kódu? '
+  front_what_is_hoc: 'Co je to Hodina programování? '
   front_join_us_header: Každý se může naučit základy a ještě se přitom pobavit!
   front_join_us_volunteer_header: Dobrovolníci pro hodinu kódu
   front_join_us_tutorials: Vyberte si svůj tutoriál k Hour of Code!
@@ -2218,10 +2354,16 @@ cs:
     věd pomocí zábavných výukových kurzů, které vám předvedou, že naučit se základy
     může každý. Tuto veřejnou kampaň podporuje přes 400 partnerů a 200 000 vzdělavatelů
     z celého světa.
+  hoc_homepage_registration_desc: Vaše třída nebo skupina se mohou připojit k milionům
+    lidí po celém světě, kteří dělají Hodinu programování! Registrace na každoroční
+    oslavu Týdne vzdělávání v počítačové vědě začíná v říjnu. Hodina programování
+    je však k dispozici po celý rok.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Přečtěte si náš Návodný průvodce](%{howto_guide_url}),
     abyste mohli naplánovat akci pro Vaši třídu."
   hoc_homepage_highlights_heading: Významné body hodiny programování
   hoc_homepage_organized_by: Hodinu programování organizuje [Code.org](%{codeorg_url}).
+  hoc_events_heading: Zaregistrujte se jako organizátor Hodiny programování
+  hoc_events_jump_to_map: Přejít na mapu Hodina programování
   signup_closed: Registrace na Hodinu kódu je nyní uzavřena. Zkontrolujte prosím znovu
     v říjnu a zaregistrujte se na další Hodinu kódu.
   signup_registration_not_required: Jestliže se chcete zúčastnit, nemusíte se registrovat!
@@ -2253,7 +2395,8 @@ cs:
   signup_event_entire_school_label: Moje celá škola se zúčastní
   signup_event_location_label: Místo akce (volitelné)
   signup_event_location_error: Je vyžadováno místo události.
-  signup_special_event_flag_label: Zvýrazněte moji zvláštní událost
+  signup_special_event_flag_label: Moje akce zapojí celý okres, celou organizaci,
+    členy společenství nebo jiné speciální plány přesahující jednu hodinu
   signup_special_event_details_label: Podrobnosti o zvláštních událostech
   signup_send_posters_flag_label: Zašlete <a href= "/resources#posters"> plakáty</a>
     do mé školy nebo organizace
@@ -2327,6 +2470,8 @@ cs:
   map_title: Mapa Hodiny kódu
   map_header: "# akcí Hodiny kódu na celém světě"
   map_header_count_year: "%{event_count} přihlášených akcí %{year}"
+  map_header_count_year_so_far: V roce %{year} bylo zatím zaregistrováno %{event_count}
+    událostí
   see_all_events: Zobrazit všechny události
   map_header_company: "# od firemních organizátorů"
   map_header_country: "# v České republice (%{country})"
@@ -2340,6 +2485,7 @@ cs:
     Všechny registrované události s platnou adresou lze zobrazit na <a href='%{events_url}'>
     stránce událostí.</a>
   map_warning_markdown: Kompletní seznam událostí lze zobrazit na [stránce událostí.](%{events_url})
+  map_view_all_events: 'Úplný seznam událostí Hodiny programování najdete tady: [here](%{events_url}).'
   meta_tag_og_title: Hodina kódu se blíží
   meta_tag_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od
@@ -2360,15 +2506,7 @@ cs:
   twitter_default_text_donor: 'Zúčastním se letošního #HourOfCode, že? (Díky %{random_donor}
     za podporu @codeorg)'
   hoc_faq_title: Nejčastější dotazy
-  hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
-  hoc_faq_what_is_hoc_a: Hodina kódu začala jako hodinový úvod do počítačové vědy
-    navržený tak, aby demystifikoval programování a ukázal, že základy se může naučit
-    každý – a aby otevřel dveře k počítačové vědě více studentům. Od té doby se z
-    ní stala celosvětová záležitost – dnes je to oslava počítačové vědy, která začíná
-    hodinovými programovacími aktivitami, ale pokračuje celou řadou komunitních kurzů.
-    Podívejte se na <a href='%{tutorials}'>výukové kurzy a aktivity</a>. Tuto všeobecnou
-    kampaň podporuje přes <a href='%{partners}'>400 partnerů</a> a 200 000 pedagogů
-    po celém světě.
+  hoc_faq_what_is_hoc_q: 'Co je to Hodina programování? '
   hoc_faq_what_is_hoc_a_markdown: Hodina kódu začala jako hodinový úvod do počítačové
     vědy navržený tak, aby demystifikoval programování a ukázal, že základy se může
     naučit každý – a aby otevřel dveře k počítačové vědě více studentům. Od té doby
@@ -2379,52 +2517,28 @@ cs:
     světě.
   hoc_faq_last_year: Vyzkoušejte kurzy
   hoc_faq_when_is_hoc_q: Kdy začne Hodina kódu?
-  hoc_faq_when_is_hoc_a: Hodina kódu se koná každý rok v rámci <a href='%{csedweek_url}'>Týdne
-    informatiky</a>. Ten bude v roce %{campaign_date_year} probíhat %{campaign_date_full},
-    ale Hodinu kódu můžete uspořádat kdykoli během celého roku. Týden informatiky
-    se každoročně koná na počest průkopnice počítačových věd <a href='%{grace_hopper}'>admirálky
-    Grace Murray Hopperové</a> v den jejích narozenin (9. prosince 1906).
   hoc_faq_when_is_hoc_a_markdown: Hodina kódu se koná každý rok v rámci [Týdne informatiky](%{csedweek_url}).
     Ten bude v roce %{campaign_date_year} probíhat %{campaign_date_full}, ale Hodinu
     kódu můžete uspořádat kdykoli během celého roku. Týden informatiky se každoročně
     koná na počest průkopnice počítačových věd [admirálky Grace Murray Hopperové](%{grace_hopper})
     v den jejích narozenin (9. prosince 1906).
   hoc_faq_why_cs_q: Proč informatika?
-  hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost učit se informatiku –
-    díky ní může rozvíjet schopnost řešit problémy, logické myšlení a tvořivost. Když
-    studenti začnou včas, dostanou základ pro budoucí úspěch v jakékoli kariérní dráze,
-    která je ve 21. století čeká. Na další statistiky se můžete podívat <a href='%{stats_url}'>tady</a>."
   hoc_faq_why_cs_a_markdown: _Každý_ student by měl mít možnost učit se informatiku
     – díky ní může rozvíjet schopnost řešit problémy, logické myšlení a tvořivost.
     Když studenti začnou včas, dostanou základ pro budoucí úspěch v jakékoli kariérní
     dráze, která je ve 21. století čeká. Na další statistiky se můžete podívat [tady](%{stats_url}).
   hoc_faq_how_participate_q: Jak se Hodiny kódu zúčastním?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Začít plánovat můžete tady</a> – přečtením
-    našeho průvodce. Hodinu kódu můžete uapořádat ve škole nebo v jiném zařízení –
-    třeba ve volnočasovém centru, neziskové organizaci nebo v práci. Anebo si Hodinu
-    kódu vyzkoušejte %{campaign_date} sami."
   hoc_faq_how_participate_a_markdown: "[Začít plánovat můžete tady](%{howto}) – přečtením
     našeho průvodce. Hodinu kódu můžete uapořádat ve škole nebo v jiném zařízení –
     třeba ve volnočasovém centru, neziskové organizaci nebo v práci. Anebo si Hodinu
     kódu vyzkoušejte %{campaign_date} sami."
   hoc_faq_behind_hoc_q: Kdo stojí za Hodinou kódu?
-  hoc_faq_behind_hoc_a: Hodinu kódu pomáhají zajišťovat <a href='%{partner_url}'>Poradní
-    a kontrolní výbory</a> vzdělávacího programu Hodina kódu a Týden informatiky,
-    stejně jako spolupracující partneři, kterí se dali bezprecedentním způsobem dohromady,
-    aby Hodinu kódu podpořili – jsou mezi nimi společnosti Microsoft, Apple, Amazon,
-    Boys and Girls Clubs of America a College Board.
   hoc_faq_behind_hoc_a_markdown: Hodinu kódu pomáhají zajišťovat [Poradní a kontrolní
     výbory](%{partner_url}) vzdělávacího programu Hodina kódu a Týden informatiky,
     stejně jako spolupracující partneři, kterí se dali bezprecedentním způsobem dohromady,
     aby Hodinu kódu podpořili – jsou mezi nimi společnosti Microsoft, Apple, Amazon,
     Boys and Girls Clubs of America a College Board.
   hoc_faq_host_q: O kódování nic nevím. Můžu událost uspořádat?
-  hoc_faq_host_a: Samozřejmě. Aktivity Hodiny kódu probíhají pod vlastním vedením.
-    Jediné, co musíte udělat, je  <a href='%{codeorg_url}/learn'>vyzkoušet naše aktuální
-    výukové kurzy</a>, vybrat si kurz podle vlastních preferencí a zvolit hodinu –
-    o zbytek se postaráme my. K dispozici jsou možnosti pro všechny věkové kategorie
-    a všechny úrovně zkušeností – od dětí školkového věku dál. Chcete-li začít plánovat
-    akci, nejprve si přečtěte našeho <a href='/how-to'>průvodce</a>.
   hoc_faq_host_a_markdown: Samozřejmě. Aktivity Hodiny kódu probíhají pod vlastním
     vedením. Jediné, co musíte udělat, je [vyzkoušet naše aktuální výukové kurzy](%{codeorg_url}/learn),
     vybrat si kurz podle vlastních preferencí a zvolit hodinu – o zbytek se postaráme
@@ -2432,13 +2546,6 @@ cs:
     – od dětí školkového věku dál. Chcete-li začít plánovat akci, nejprve si přečtěte
     našeho [průvodce](%{howto}).
   hoc_faq_devices_q: Na jakých zařízeních by měli studenti pracovat?
-  hoc_faq_devices_a: Výukové kurzy Code.org fungují na všech zařízeních a ve všech
-    prohlížečích. Další informace o technických požadavcích na výukové kurzy Code.org
-    najdete <a href='%{codeorg_url}/educate/it'>tady</a>. Technické požadavky na výukové
-    kurzy od jiných poskytovatelů než Code.org najdete na  <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    v popisu konkrétního výukového kurzu. Pokud vaše škola nedisponuje vybavením potřebným
-    k pořádání výukových kurzů, nezapomeňte, že nabízíme také <a href='%{unplugged_url}'>aktivity
-    bez počítače</a>.
   hoc_faq_devices_a_markdown: Výukové kurzy Code.org fungují na všech zařízeních a
     ve všech prohlížečích. Další informace o technických požadavcích na výukové kurzy
     Code.org najdete [tady](%{codeorg_url}/educate/it). Technické požadavky na výukové
@@ -2446,17 +2553,6 @@ cs:
     v popisu konkrétního výukového kurzu. Pokud vaše škola nedisponuje vybavením potřebným
     k pořádání výukových kurzů, nezapomeňte, že nabízíme také [aktivity bez počítače](%{unplugged_url}).
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
-  hoc_faq_need_computers_a: Ne. Máme výukové kurzy Hodiny kódu, které fungují na počítačích,
-    smartphonech a tabletech, a dokonce i takové, které se úplně obejdou bez počítače.
-    Můžete se přidat odkudkoli a s jakýmkoli vybavením. <p><i>Tady je několik možností:</i>
-    <br> <ul> <li><b>Práce ve dvojicích.</b> <a href='%{pair_programming_research}'>Výzkumy
-    ukazují</a>, že studenti se nejlépe učí při <a href='%{pair_programming_video}'>programování
-    ve dvojicích</a>, když sdílejí počítač a pracují společně. Nechte studenty, ať
-    utvoří dvojice. <li><b>Projekce na plátno.</b> Pokud máte projektor a plátno a
-    můžete připojit počítač s internetem, může celá skupina absolvovat Hodinu kódu
-    společně. Sledujte videa ve skupině a střídejte se při řešení úkolů a zodpovídání
-    otázek. <li><b>Výuka bez počítače.</b> Nabízíme <a href='%{unplugged_url}'>výukové
-    kurzy, které se úplně obejdou bez počítače</a>. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Ne. Máme výukové kurzy Hodiny kódu, které fungují na počítačích, smartphonech a tabletech, a dokonce i takové, které se úplně obejdou bez počítače. Můžete se přidat odkudkoli a s jakýmkoli vybavením.
 
@@ -2466,40 +2562,21 @@ cs:
     - **Projekce na plátno.** Pokud máte projektor a plátno a můžete připojit počítač s internetem, může celá skupina absolvovat Hodinu kódu společně. Sledujte videa ve skupině a střídejte se při řešení úkolů a zodpovídání otázek.
     - **Výuka bez počítače.** Nabízíme [výukové kurzy, které se úplně obejdou bez počítače](%{unplugged_url}).
   hoc_faq_international_q: 'Kde se nacházím: <country>. Jak se mohu zúčastnit ze zahraničí?'
-  hoc_faq_international_a: Hodinu kódu může uspořádat kdokoli – kdekoli na světě.
-    Minulý rok se při Hodině kódu propojili studenti z celého světa. Více si můžete
-    zjistit <a href='/promote'>tady</a>.
   hoc_faq_international_a_markdown: Hodinu kódu může uspořádat kdokoli – kdekoli na
     světě. Minulý rok se při Hodině kódu propojili studenti z celého světa. Více si
     můžete zjistit [tady](%{promote}).
   hoc_faq_tutorial_q: Jak můžu připravit výukový kurz Hodiny kódu?
-  hoc_faq_tutorial_a: Pokud máte zájem stát se partnerem výukového kurzu, <a href='/tutorial-guidelines'>podívejte
-    se na naše pokyny a instrukce</a>. Rádi bychom nabídli mnoho různých zajímavých
-    možností, ale primárním cílem je optimalizovat zkušenost pro studenty a učitele,
-    pro které jsou počítačové vědy nové.
   hoc_faq_tutorial_a_markdown: Jestliže máte zájem stát se partnerem výukového kurzu,
     [podívejte se na naše pokyny a instrukce](%{tutorial_guidelines}). Rádi bychom
     nabídli mnoho různých zajímavých možností, ale primárním cílem je optimalizovat
     zkušenost pro studenty a učitele, pro které jsou počítačové vědy nové.
   hoc_faq_account_q: Musí se studenti přihlásit pomocí účtu?
-  hoc_faq_account_a: Ne. K tomu, aby si student vyzkoušel Hodinu kódu, nepotřebuje
-    vůbec žádnou registraci ani přihlášení. Většina <a href='%{codeorg_url}/learn/beyond'>pokračovacích
-    kurzů</a> vyžaduje vytvoření účtu k uložení pokroku studenta. Navíc registrací
-    k Hodině kódu NEVYTVÁŘÍTE automaticky účet na Code Studiu. Pokud přesto svým studentům
-    chcete vytvořit účty, postupujte prosím podle následujících <a href='https://youtu.be/_smelV_KISE'>pokynů</a>.
   hoc_faq_account_a_markdown: Ne. K tomu, aby si student vyzkoušel Hodinu kódu, nepotřebuje
     vůbec žádnou registraci ani přihlášení. Většina [pokračovacích kurzů](%{codeorg_url}/learn/beyond)
     vyžaduje vytvoření účtu k uložení pokroku studenta. Navíc registrací k Hodině
     kódu NEVYTVÁŘÍTE automaticky účet na Code Studiu. Pokud přesto svým studentům
     chcete vytvořit účty, postupujte prosím podle následujících [pokynů](%{section_instructions_url}).
   hoc_faq_high_school_q: Kterou aktivitu bych měl(a) dělat se studenty středních škol?
-  hoc_faq_high_school_a: Naše výukové kurzy Hvězdné války a Minecraft jsou ideální
-    pro středoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a volně hratelná
-    úroveň obou těchto výukových kurzů. Případně doporučujeme vyzkoušet na rozjezd
-    některý z našich výukových kurzů pro začátečníky na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    například výukový kurz s Angry Birds nebo s Annou a Elsou. Středoškolský student
-    by měl takový kurz zvládnout do 30 minut a pak může vyzkoušet pokročilejší výukový
-    kurz v jazyce JavaScript, například Khan Academy nebo CodeHS.
   hoc_faq_high_school_a_markdown: Naše výukové kurzy Hvězdné války a Minecraft jsou
     ideální pro středoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a
     volně hratelná úroveň obou těchto výukových kurzů. Případně doporučujeme vyzkoušet
@@ -2509,23 +2586,12 @@ cs:
     kurz v jazyce JavaScript, například Khan Academy nebo CodeHS.
   hoc_faq_scratch_q: Používám pro Hodinu kódu Scratch, ale co když mí studenti mají
     iPady, a ne notebooky?
-  hoc_faq_scratch_a: Scratch nelze spouštět na tabletech. Pokud vyučujete mladší studenty,
-    můžou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí číst). Mezi výukovými
-    kurzy na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> najdete takové,
-    které fungují na iPadu – od Code.org, Tynkeru, Lightbotu nebo CodeSparku.
   hoc_faq_scratch_a_markdown: Scratch nelze spouštět na tabletech. Pokud vyučujete
     mladší studenty, můžou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí
     číst). Mezi výukovými kurzy na [%{partner_url}/learn](%{codeorg_url}/learn) najdete
     takové, které fungují na iPadu – od Code.org, Tynkeru, Lightbotu nebo CodeSparku.
   hoc_faq_count_hoc_q: Jak počítáte hodiny kódu?
   hoc_faq_map_q: Proč nevidím svůj bod na mapě?
-  hoc_faq_map_a: Je nám líto, že v mapě Hodiny kódu nevidíte svoji událost. Vzhledem
-    k tomu, že se k Hodině kódu registrují desítky tisíc organizátorů, agreguje mapa
-    data a zobrazuje jednu položku pro několik událostí. Když kliknete na odkaz na
-    <a href='%{events_url}'>stránku událostí</a> pod mapou, budete přesměrování na
-    seznam všech událostí podle států a můžete se dostat ke své události. Navíc se
-    k Hodině kódu registrují tisíce lidí, takže aktualizace mapy a událostí trvá běžně
-    i 48 hodin. Podívejte se sem znovu za pár dní.
   hoc_faq_map_a_markdown: Je nám líto, že v mapě Hodiny kódu nevidíte svoji událost.
     Vzhledem k tomu, že se k Hodině kódu registrují desítky tisíc organizátorů, agreguje
     mapa data a zobrazuje jednu položku pro několik událostí. Když kliknete na odkaz
@@ -2533,35 +2599,12 @@ cs:
     všech událostí podle států a můžete se dostat ke své události. Navíc se k Hodině
     kódu registrují tisíce lidí, takže aktualizace mapy a událostí trvá běžně i 48
     hodin. Podívejte se sem znovu za pár dní.
-  hoc_faq_count_hoc_a: Nástroj na sledování Hodiny kódu neprovádí přesné měření využití.
-    Při sledování účasti na Hodině kódu nepočítáme přesně unikátní ID studentů, zejména
-    proto, že nevyžadujeme, aby se studenti přihlašovali nebo zaregistrovali. V důsledku
-    toho může být počet účastníků nadhodnocený nebo podhodnocený. Všechny podrobnosti
-    si můžete přečíst<a href='%{codeorg_url}/loc'>zde</a>.
   hoc_faq_count_hoc_a_markdown: Nástroj na sledování Hodiny kódu neprovádí přesné
     měření využití. Při sledování účasti na Hodině kódu nepočítáme přesně unikátní
     ID studentů, zejména proto, že nevyžadujeme, aby se studenti přihlašovali nebo
     zaregistrovali. V důsledku toho může být počet účastníků nadhodnocený nebo podhodnocený.
     Všechny podrobnosti si můžete přečíst [zde](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Kolik se toho dá za hodinu naučit?
-  hoc_faq_one_hour_a: Cílem Hodiny kódu není udělat ze studentů za jednu hodinu experty
-    na počítačové vědy. Jedna hodina stačí jen na to, aby zjistili, že počítačová
-    věda je zábavná a tvůrčí, dostupná lidem všech věkových kategorií a vhodná pro
-    všechny studenty bez rozdílu. Měřítkem úspěchu této kampaně není to, kolik se
-    studenti počítačových věd naučí – úspěch odráží široká účast lidí bez ohledu na
-    pohlaví a příslušnost k etnické nebo socioekonomické skupině i výsledný nárůst
-    účasti a zapojení, který pozorujeme u kurzů počítačových věd na všech úrovních.
-    Miliony účastníků, učitelů i studentů, se rozhodly pro více než jednu hodinu –
-    absolvovali celý den, celý týden nebo i déle. A mnozí studenti se pak rozhodli
-    zapsat se na celý kurz (nebo si dokonce zvolili informatiku jako obor na vysoké
-    škole). <br/><br/>Kromě studentů je hodina přínosná i pro pedagoga, který si díky
-    ní uvědomí, že dokáže vyučovat počítačové vědy, i když třeba nemá pro tento předmět
-    univerzitní diplom. Desítky tisíc učitelů se rozhodují rozvíjet se v počítačových
-    vědách dále, ať už absolvováním profesního rozvoje, nebo tím, že nabízí následné
-    online kurzy, případně obojím. A to platí i pro vedení škol, které si uvědomí,
-    že počítačové vědy jsou něčím, co studenti chtějí a co jim učitelé dovedou poskytovat.
-    <br/><br/>Hlavně je ale potřeba zdůraznit, že všichni účastníci se během jedné
-    hodiny dozví především to, že na to mají.
   hoc_faq_one_hour_a_markdown: |-
     Cílem Hodiny kódu není udělat ze studentů za jednu hodinu experty na počítačové vědy. Jedna hodina stačí jen na to, aby zjistili, že počítačová věda je zábavná a tvůrčí, dostupná lidem všech věkových kategorií a vhodná pro všechny studenty bez rozdílu. Měřítkem úspěchu této kampaně není to, kolik se studenti počítačových věd naučí – úspěch odráží široká účast lidí obou pohlaví, různých ras, lidí z odlišných etnických a socioekonomických skupin i výsledný nárůst účasti a zapojení, který pozorujeme u kurzů počítačových věd na všech úrovních. Miliony účastníků, učitelů i studentů, se rozhodly pro více než jednu hodinu – absolvovali celý den, celý týden nebo i déle. A mnozí studenti se pak rozhodli zapsat se na celý kurz (nebo si dokonce zvolili informatiku jako obor na vysoké škole).
 
@@ -2569,47 +2612,36 @@ cs:
 
     Hlavně je ale potřeba zdůraznit, že všichni účastníci se během jedné hodiny dozví především to, že na to mají.
   hoc_faq_more_questions_q: Máte ještě další otázky?
-  hoc_faq_more_questions_a: Zkuste najít odpověď v našem <a href='http://support.code.org'>fóru
-    podpory</a>.
   hoc_faq_more_questions_a_markdown: Zkuste najít odpověď v našem [fóru podpory](http://support.code.org).
   hoc_faq_keep_learning_q: Jak mohu po Hodině kódu pokračovat ve studiu?
-  hoc_faq_keep_learning_a: Hodinu kódu může uspořádat kdokoli a kdykoli. Výukové kurzy
-    jsou dostupné celý rok. Můžete očekávat, že všechny naše výukové kurzy a osnovy
-    budou na našem serveru k dispozici napořád. Podívejte se prosím na <a href='/promote'>naše
-    materiály</a>, kde najdete průvodce k pořádání akcí a další materiály, které vám
-    pomůžou připravit úspěšnou Hodinu kódu.
   hoc_faq_keep_learning_a_markdown: Hodinu kódu může uspořádat kdokoli a kdykoli.
     Výukové kurzy jsou dostupné celý rok. Můžete očekávat, že všechny naše výukové
     kurzy a osnovy budou na našem serveru k dispozici napořád. Podívejte se prosím
     na [naše materiály](%{promote}), kde najdete průvodce k pořádání akcí a další
     materiály, které vám pomůžou připravit úspěšnou Hodinu kódu.
   hoc_faq_certificates_q: Kde mohu vytisknout certifikáty pro své studenty?
-  hoc_faq_certificates_a: Přejděte na naši <a href='%{codeorg_url}/certificates'>stránku
-    s certifikáty</a>, kde si můžete dopředu vytisknout certifikáty pro celou třídu.
-    Dále můžete vytisknout <a href='%{codeorg_url}/certificates?course=mc'>speciální
-    certifikáty</a> pro studenty, kteří absolvují výukový kurz Minecraftu.
-  hoc_faq_certificates_a_markdown: Přejděte na naši [stránku certifikátů](%{codeorg_url}/certificates),
-    kde si můžete předem vytisknout certifikáty pro celou třídu. Dále můžete vytisknout
-    [speciální certifikáty](%{codeorg_url}/certificates?course=mc) pro studenty, kteří
-    absolvují výukový kurz Minecraftu.
+  hoc_faq_certificates_answer_markdown: Přejděte na naši [stránku certifikátů] (%{certificates_url})
+    kde si můžete předem vytisknout certifikáty pro celou třídu.
   hoc_faq_logo_q: Existují omezení ohledně toho, jak mohu používat logo nebo název
     Hodiny kódu?
-  hoc_faq_logo_a: Hour of Code (Hodina kódu) je ochranná známka. Nechceme bránit jejímu
-    používání, ale rádi bychom, aby se toto používání řídilo určitými pravidly. Projděte
-    si prosím <a href='%{logo_url}'>tyto pokyny pro používání</a>.
   hoc_faq_logo_a_markdown: Hour of Code (Hodina kódu) je ochranná známka. Nechceme
     bránit jejímu používání, ale rádi bychom, aby se toto používání řídilo určitými
     pravidly. Projděte si prosím [tyto pokyny pro používání](%{logo_url}).
+  hoc_faq_bug_q: Našel jsem chybu v aktivitě Hour of Code! Co mám dělat?
+  hoc_faq_bug_a_markdown: |-
+    Ach ne! Pokud jste narazili na chybu v aktivitě Hodina kódu - nejprve zkontrolujte adresu URL aktivity, na které se nacházíte. Pokud adresa URL začíná studio.code.org, náš tým podpory Code.org vám může pomoci! Klikněte na ikonu otazníku v pravém horním rohu obrazovky a poté z rozbalovací nabídky vyberte možnost Nahlásit problém.
+
+    Pokud adresa URL nezačíná studio.code.org, pravděpodobně pracujete na aktivitě třetí strany a budete se muset obrátit na tým podpory této společnosti s žádostí o další pomoc.
   stats_hoc_2013_image_alt: Statistika roku 2013 akce Hodina kódu
   stats_growth: Byl to nejrychlejší způsob, jak dosáhnout 15 milionů uživatelů.
-  stats_i18n: Studenti se učí ve 40 jazycích
+  stats_i18n: Studenti se učí ve více než 45 jazycích
   stats_tumblr: 'Tumblr: 3 a půl roku'
   stats_facebook: 'Facebook: 3 roky'
   stats_twitter: 'Twitter: 2 a půl roku'
   stats_pinterest: 'Pinterest: 2 roky'
   stats_instagram: 'Instagram: 14 měsíců'
   stats_hoc: 'Hodina Kódu: 5 dnů'
-  stats_global: Přes 100M studentů zkusilo Hodinu kódu
+  stats_global: Přes 100 milionů studentů zkusilo Hodinu programování
   stats_girls_more: Informatiku si vyzkoušelo více dívek než za posledních 70 let
   stats_females: Účast studentek na docházce do výuky počítačových věd při středoškolských
     a vysokoškolských kurzech a vzdělávání pracovní síly je jen 20-25 %.
@@ -13249,6 +13281,21 @@ cs:
     a @codeorg, abychom mohli zdůraznit i váš úspěch!'
   hoc_how_to_step_07_educators_desc_02: Můžete také vytisknout certifikáty pro své
     studenty, aby předvedli své úspěchy!
+  hoc_ai_top_desc: O umělé inteligenci se může dozvědět kdokoli, ať už jste student
+    ve třídě nebo pedagog, který odemyká budoucnost výuky s AI a o ní.
+  hoc_ai_how_ai_works_video_series_desc: Tato série krátkých videí vás seznámí s tím,
+    jak umělá inteligence funguje a proč na ní záleží. Poté se ponořte do problémů,
+    jako je algoritmická předpojatost a etika rozhodování o umělé inteligenci.
+  hoc_ai_learn_how_ai_works_desc: Ponořte se do světa umělé inteligence pomocí lekcí
+    „How AI Works“ spárovaných s naší sérií videí, která vás seznámí s tím, jak AI
+    funguje a proč na ní záleží.
+  hoc_ai_101_for_educators_desc: Objevte průlomový potenciál umělé inteligence (AI)
+    ve vzdělávání s naším bezplatným online školením pro učitele.
+  hoc_ai_impacts_desc: Zapojte svou třídu lekcemi vedenými učiteli, které zkoumají
+    dopady umělé inteligence a vyzývají studenty, aby přemýšleli o řešení některých
+    problémů umělé inteligence.
+  hoc_ai_activities_desc: Tyto zcela nové aktivity Hodiny kódu představí uživatelům
+    svět umělé inteligence zábavným a poutavým způsobem.
   team_page_full_team_alt_text: Téměř 100 zaměstnanců Code.org v odpovídajících modrých
     a žlutých tričkách pózuje v hotelové konferenční místnosti pro firemní letní akci
     Codechella 2022.
@@ -13767,6 +13814,23 @@ cs:
     stahování'
   video_library_page_not_hacked_video_title_7: 'Jak se nenechat hacknout: Nainstalujte
     aktualizace'
+  thank_you_page_main_title: Děkujeme za pomoc při budování hnutí
+  thank_you_page_description: Koalice Code.org Advocacy Coalition by ráda poděkovala
+    stovkám tisíc místních šampionů a obhájců, včetně učitelů, členů komunity, výzkumných
+    pracovníků, neziskových organizací, univerzit, korporací a vládních institucí,
+    kteří podpořili vizi, že každý student v každé škole si zaslouží příležitost učit
+    se počítačové vědy. Děkuji vám za podporu tohoto hnutí.
+  thank_you_page_members_section_title: 'A všem členům Coalition Advocacy Coalition
+    Code.org:'
+  thank_you_page_individual_organization_title: 'Děkujeme následujícím jednotlivcům
+    a organizacím za jejich příspěvky k této zprávě:'
+  thank_you_page_individual_organization_description: Vedoucí vzdělávání v oblasti
+    informatiky v každé státní vzdělávací agentuře, College Board, Della Cronin, Stuart
+    Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Děkuji studentům a učitelům citovaným v
+    této zprávě:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campionová, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: O nás
   about_us_page_hero_description: Code.org® je vzdělávací inovační nezisková organizace
     zaměřená na vizi, že každý student v každé škole má příležitost učit se počítačové
@@ -13840,8 +13904,8 @@ cs:
     a šířit vzdělávání v oblasti informatiky. Jsme vděční, že můžeme těžit z neúnavné
     pomoci širší komunity vzdělávání v oblasti informatiky, a [děkujeme všem partnerům
     a jednotlivcům, kteří v průběhu let podporovali náš dopad] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
-    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+  about_page_section_more_list_1: "[Výroční zpráva Code.org 2021] (%{report_url})
+    (Minulé zprávy: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
     [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Naše základní hodnoty a pokyny pro zasílání zpráv]
     (%{core_url})"
@@ -13889,10 +13953,10 @@ cs:
     na vysoké úrovni pro státy, okresy a organizace provádějící vzdělávání v oblasti
     informatiky. Rámec získal podporu stovek akademiků, pedagogů K-12, softwarových
     společností, neziskových organizací a států.
-  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+  about_page_section_specific_description_6: Formulář IRS Code.org 990 pro [2014](%{irs_url_1}),
     [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
-    Policy.](%{donation_policy_url})
+    [2019]()%{irs_url_6}), [2020](%{irs_url_7}), a [2021](%{irs_url_8}). [Zásady darování.]
+    (%{donation_policy_url})
   about_page_section_specific_description_7: "[Přihlaste se k odběru aktualizací stavu]
     (%{sign_up_url}) o pokroku v hnutí informatiky K-12 a o práci Code.org. Nebo sledujte
     Code.org na sociálních médiích:"
@@ -13916,6 +13980,119 @@ cs:
     který tuto vizi podpoří.
   about_page_donors_link_1: Udělejte dary
   about_page_donors_link_2: "[viz náš seznam dárců] (%{donors_url})"
+  teach_ai_title: Příklady reálného světa. Praktické zdroje.
+  teach_ai_description: Sada nástrojů AI Guidance for Schools je zdrojem pro tvůrce
+    politik, vedoucí škol a zaměstnance, aby vytvořili počáteční pokyny k AI ve svých
+    školách.
+  teach_ai_button_label: Zobrazit sadu nástrojů
+  middle_high_page_main_title: Učení pro děti od 11 let
+  middle_high_page_main_description: Prozkoumejte svět informatiky pomocí poutavých
+    videí, výukových programů s vlastním tempem, programovacích aktivit a dalších!
+  middle_high_page_hero_title: Začínáme s hodinou kódu
+  middle_high_page_hero_description: Naučte se základy informatiky pomocí bezplatných
+    aktivit Hodiny kódu, které obsahují bloky kódování drag-and-drop. Na výběr jsou
+    stovky hodinových možností!
+  middle_high_page_hourofcode_link: Prozkoumejte aktivity Hour of Code
+  middle_high_page_modules_title: Programovací moduly pro starší studenty
+  middle_high_page_modules_description: Tyto krátké moduly pro studenty středních
+    a středních škol, přizpůsobené našim kurzům CS Discoveries a CS Principles, jsou
+    skvělým způsobem, jak se naučit koncepty, které pokrývají všechny programovací
+    jazyky a nástroje.
+  middle_high_page_modules_card_title_1: Úvod do Laboratoře aplikací
+  middle_high_page_modules_card_title_2: Programování želvy v Laboratoři aplikací
+  middle_high_page_modules_card_title_3: Programování založené na událostech v laboratoři
+    aplikací
+  middle_high_page_modules_card_description_1: Pohybujte se svým vlastním tempem v
+    tomto úvodu do našeho prostředí Game Lab při programování animací, interaktivního
+    umění a her.
+  middle_high_page_modules_card_description_2: Odemkněte schopnost vytvářet bohaté,
+    interaktivní aplikace pomocí JavaScriptu v App Lab!
+  middle_high_page_modules_card_description_3: Jděte svým vlastním tempem s tímto
+    úvodem do programovacího prostředí App Lab, ve kterém studenti používají JavaScript
+    k vytváření interaktivních aplikací.
+  middle_high_page_modules_card_link: Zkuste to
+  middle_high_page_make_your_own_title: Vytvořte si vlastní aplikace, hry a webové
+    stránky
+  middle_high_page_make_your_own_description: 'Kromě kurzů máme programovací nástroje,
+    které vám umožní prozkoumat vaši kreativitu a udělat něco úžasného. '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: Herní laboratoř
+  middle_high_page_make_your_own_card_title_3: Webová laboratoř
+  middle_high_page_make_your_own_card_descrpition_1: App Lab je programovací prostředí,
+    kde můžete vytvářet jednoduché aplikace. Navrhněte aplikaci, kódujte v JavaScriptu
+    pomocí bloků nebo textu a poté aplikaci sdílejte během několika sekund.
+  middle_high_page_make_your_own_card_descrpition_2: Laboratoř her je programovací
+    prostředí, kde můžete tvořit jednoduché animace a hry - se vzájemně interagujícími
+    objekty a postavami.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab je programovací prostředí,
+    kde můžete vytvářet jednoduché webové stránky pomocí HTML a CSS. Navrhněte své
+    webové stránky a sdílejte své stránky během několika sekund.
+  middle_high_page_make_your_own_card_link: Dozvědět se více
+  middle_high_page_additional_resources_title: Další zdroje
+  middle_high_page_additional_resources_description: Existuje tolik způsobů, jak dále
+    prozkoumat informatiku! Prohlédněte si naši knihovnu videí, nebo se dozvíte více
+    o vzrušujících kariérách v oblasti informatiky.
+  middle_high_page_video_library_title: Objevte naši knihovnu videí
+  middle_high_page_video_library_description: Naučte se základy informatiky prostřednictvím
+    krátkých 5-10 minutových videí na témata, jako je umělá inteligence, internet,
+    jak počítače fungují, jak se nenechat hacknout, blockchain, kariéra a další!
+  middle_high_page_video_library_link: Zobrazit knihovnu videí
+  middle_high_page_cs_journeys_title: Jděte dál s CS Journeys
+  middle_high_page_cs_journeys_description: Udělejte další krok na své cestě počítačové
+    vědy. Prozkoumejte kariéru, mentorské příležitosti, online kurzy, stipendia, stáže
+    a další!
+  middle_high_page_cs_journeys_link: Prozkoumejte CS Journeys
+  middle_high_page_cs_title: Počítačová věda ve třídě
+  middle_high_page_cs_description: Tyto kurzy by měl vést učitel! Pokud byste je chtěli
+    vidět vyučovat ve vaší škole, zvažte spolupráci s učitelem, abyste je přivedli
+    do vaší třídy.
+  middle_high_page_cs_card_title_1: CS Objevy
+  middle_high_page_cs_card_title_2: Zásady CS
+  middle_high_page_cs_card_title_3: AP Počítačová věda A
+  middle_high_page_cs_card_description_1: Bezplatné celoroční učební osnovy, které
+    studenty seznámí se základními koncepty informatiky a budou je motivovat k přemýšlení
+    nad tím, jak počítače a technologie ovlivňují svět.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Seznámit studenty se softwarovým inženýrstvím
+    a objektově orientovaným designem, zatímco se učí programovací jazyk Java v tomto
+    bezplatném kurikulu pro AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Prozkoumejte CS Dicoveries
+  middle_high_page_cs_link_2: Prozkoumejte principy CS
+  middle_high_page_cs_link_3: Prozkoumejte CSA
+  elemeentary_page_main_title: Učení pro děti od 5 do 11 let
+  elementary_page_main_description: Prozkoumejte svět informatiky pomocí poutavých
+    videí, výukových programů s vlastním tempem, programovacích aktivit a dalších!
+  elementary_page_own_pace_title: Pokračujte v učení svým vlastním tempem
+  elementary_page_own_pace_description: Vytvářejte kresby, hry a další v těchto dvou
+    vynikajících možnostech pro studenty, kteří se sami začínají učit základy informatiky.
+  elementary_page_own_pace_card_title_1: Expresní kurz před čtenářem
+  elementary_page_own_pace_card_title_2: Rychlý kurz
+  elementary_page_own_pace_card_description_1: Naučte se informatiku svým vlastním
+    tempem! Naučte se vytvářet počítačové programy, rozvíjet dovednosti při řešení
+    problémů a pracovat se zábavnými výzvami! Vytvářejte hry a kreativní projekty,
+    které můžete sdílet s přáteli, rodinou a učiteli.
+  elementary_page_own_pace_link_1: Začít kurz před čtenářem
+  elementary_page_own_pace_link_2: Spusťte expresní kurz
+  elementary_page_make_your_own_games_title: Vytvořte si vlastní animace a hry
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Je čas být kreativní! Pomocí
+    blokového kódování vytvořte ve Sprite Lab něco hloupého, sladkého nebo vesmírného.
+    Jediným limitem je vaše představivost!
+  elementary_page_make_your_own_games_link: Vyzkoušejte Sprite Lab
+  elementary_page_computer_science_title: Počítačová věda ve třídě
+  elementary_page_computer_science_description: Tyto kurzy by měl vést učitel! Pokud
+    byste je chtěli vidět vyučovat ve vaší škole, požádejte rodiče nebo opatrovníka,
+    aby spolupracoval s učitelem a přivedl je do vaší třídy.
+  elementary_page_computer_science_card_title_1: Základy informatiky
+  elementary_page_computer_science_card_title_2: Napojení na počítačovou vědu
+  elementary_page_computer_science_description_1: Bezplatné celoroční učební osnovy,
+    které studenty seznámí se základními koncepty informatiky a budou je motivovat
+    k přemýšlení nad tím, jak počítače a technologie ovlivňují svět.
+  elementary_page_computer_science_description_2: Objevujte souvislosti mezi informatikou
+    a jinými předměty, např. matematikou, jazyky, vědou a sociálními studii.
   language_code:
     ar: arabština
     az: ázerbájdžánský

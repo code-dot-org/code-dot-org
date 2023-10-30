@@ -49,9 +49,13 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
+import BlockSvgUnused, {
+  onBlockClickDragDelete,
+  onThemeChange,
+} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
@@ -404,7 +408,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this);
-      this.unusedSvg_.render(this.svgGroup_, this.RTL);
+      this.unusedSvg_.render();
     }
   };
 
@@ -664,6 +668,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
     workspace.addChangeListener(onBlockClickDragDelete);
+    workspace.addChangeListener(onThemeChange);
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
@@ -689,6 +694,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
       'PROCEDURE',
       functionsFlyoutCategory
     );
+    workspace.registerToolboxCategoryCallback(
+      'VARIABLE',
+      variablesFlyoutCategory
+    );
+
     workspace.registerToolboxCategoryCallback(
       'Behavior',
       behaviorsFlyoutCategory

@@ -1712,16 +1712,6 @@ et-EE:
     mille eesmärk on anda tunnine sissejuhatus arvutiteadusesse. See üritus jõuab
     sadade miljonite õpilasteni enam kui 180 riigis. Palun tule samuti osalema arvutiteaduse
     õppe nädala raames, mis toimub 7.-13. detsembril.
-  volunteer_engineer_submission_intro_links: Kas olete õpetaja otsib vabatahtlikke?
-    Leia kohalikke vabatahtlike meie <a href="%{volunteer_local}"> vabatahtlike kaardilt</a>.
-  volunteer_engineer_submission_intro_recruit: 'Õpetajad otsivad vabatahtlikke, <span
-    style="font-family: ''Gotham 7r'', sans-serif;">kes tahaksid õpetada arvutiteaduse
-    </span> ja kes aitaksid neid klassiruumis või kes <span style="font-family: ''Gotham
-    7r'', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse
-    arvukatest võimalustest (seda saab teha ka videovestluse või Skype teel).'
-  volunteer_engineer_submission_intro_signup: Palun sisesta järgnev info, kui oled
-    arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class="form-required-field">*</span>
-    on kohustuslikud.
   volunteer_engineer_submission_location_flexibility_curriculum: valmis kaasa aitama
     avatud lähtekoodiga õppekava projektides
   volunteer_engineer_submission_location_flexibility_onsite: Koolis kohapeal (1–2
