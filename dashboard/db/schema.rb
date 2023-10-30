@@ -461,7 +461,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
-  create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "delayed_jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
@@ -637,20 +637,15 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "learning_goal_id"
-    t.integer "project_id"
-    t.string "project_version"
+  create_table "learning_goal_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "rubric_ai_evaluation_id", null: false
+    t.bigint "learning_goal_id", null: false
     t.integer "understanding"
+    t.integer "ai_confidence"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "requester_id"
-    t.integer "ai_confidence"
-    t.integer "status", default: 0
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
-    t.index ["requester_id"], name: "index_learning_goal_ai_evaluations_on_requester_id"
-    t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
+    t.index ["rubric_ai_evaluation_id"], name: "index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -663,7 +658,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
   end
 
-  create_table "learning_goal_teacher_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_teacher_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "teacher_id", null: false
     t.integer "learning_goal_id", null: false
@@ -1473,7 +1468,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
   create_table "potential_teachers", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "tutorial_source"
+    t.integer "source_course_offering_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -1656,6 +1651,20 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
+  end
+
+  create_table "rubric_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "requester_id", null: false
+    t.bigint "rubric_id", null: false
+    t.integer "project_id", null: false
+    t.string "project_version"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["requester_id"], name: "rubric_ai_evaluation_requester_index"
+    t.index ["rubric_id"], name: "rubric_ai_evaluation_rubric_index"
+    t.index ["user_id"], name: "index_rubric_ai_evaluations_on_user_id"
   end
 
   create_table "rubrics", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1846,7 +1855,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id"
   end
 
-  create_table "section_instructors", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "section_instructors", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "instructor_id", null: false
     t.integer "section_id", null: false
     t.integer "invited_by_id"
@@ -2303,7 +2312,8 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
+  add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
+  add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
@@ -2327,6 +2337,9 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
+  add_foreign_key "rubric_ai_evaluations", "rubrics"
+  add_foreign_key "rubric_ai_evaluations", "users"
+  add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
