@@ -251,6 +251,23 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 2, json_response[0]['understanding']
   end
 
+  test "returns no ai evaluations if evaluation has not been run" do
+    student = create :student
+    create :follower, student_user: student, user: @teacher
+    sign_in @teacher
+
+    learning_goal = create :learning_goal
+    assert 0, RubricAiEvaluation.where(user: student).count
+
+    get :get_ai_evaluations, params: {
+      id: learning_goal.rubric.id,
+      studentId: student.id,
+    }
+
+    assert_response :success
+    assert_equal 0, json_response.length
+  end
+
   test "gets teacher evaluations for current user" do
     student = create :student
     sign_in student
