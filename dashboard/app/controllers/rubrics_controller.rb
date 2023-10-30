@@ -92,7 +92,7 @@ class RubricsController < ApplicationController
     ).order(updated_at: :desc).first
 
     # Get the most recent learning goals based on the most recent graded rubric
-    learning_goal_ai_evaluations = rubric_ai_evaluation.learning_goal_ai_evaluations
+    learning_goal_ai_evaluations = rubric_ai_evaluation&.learning_goal_ai_evaluations || []
 
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
