@@ -1570,6 +1570,7 @@
   cta_see_whats_new: "See what's new"
   cta_try_more_activities: 'Try more activities'
   cta_try_an_activity: 'Try an activity'
+  cta_see_more_video: "See more inspirational videos"
 
   hoc_homepage_join_the_movement_heading: 'Join the movement'
   hoc_homepage_join_the_movement_description: 'Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
@@ -8869,6 +8870,26 @@
 
   hc_2023_main_under_title: "Hour of Code 2023" 
   hc_2023_main_title: "Creativity with AI"
+  hc_2023_hourofcode_title: "What is Hour of Code?"
+  hc_2023_hourofcode_description_1: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hc_2023_hourofcode_description_2: "In 2023, Hour of Code is exploring the limitless realms of creativity empowered by AI! Whether you or your students are experienced coders or you are setting out on your very first computer science expedition, this Hour of Code promises an extraordinary voyage."
+  hc_2023_hourofcode_description_3: "There are several places you can start your voyage—choose which one is right for you and your students:"
+  hc_2023_lead_activity_title: "Lead an Hour of Code Activity"
+  hc_2023_lead_activity_description: "With more than 700 activities to choose from with classifications by grade level, experience, and inclusion of AI, your choices are vast. When you know your plans, please [register your activity](%{register_activity}) so we can celebrate all the events happening across the globe."
+  hc_2023_lead_activity_card_title_1: "AI Dance Party"
+  hc_2023_lead_activity_card_title_2: "AI For Oceans"
+  hc_2023_lead_activity_card_title_3: "AI Minecraft"
+  hc_2023_lead_activity_card_description_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+  hc_2023_lead_activity_card_description_2: "In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean."
+  hc_2023_lead_activity_card_description_3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+  hc_2023_lead_activity_card_link_1: "Explore AI Dance Party"
+  hc_2023_lead_activity_card_link_2: "Explore AI For Oceans"
+  hc_2023_lead_activity_card_link_3: "Explore AI Minecraft"
+  
+  
+  
+  
+  
   language_code:
     ar: "Arabic"
     az: "Azerbaijani"
