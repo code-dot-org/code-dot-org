@@ -98,6 +98,45 @@
         }
       }
     },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialUses": "Predice si el tiro de 3 puntos se hizo o se falló"
+        },
+        "description": "Este set de datos contiene cada intento de un tiro de 3 puntos hecho durante el torneo de la NCAA 2017. Con esos datos es posible predecir si el tiro fue logrado o no"
+      },
+      "fields": {
+        "Away team alias": {
+          "description": "Abreviación del nombre del equipo visitante",
+          "id": "Alias del equipo visitante"
+        },
+        "Home team alias": {
+          "description": "Abreviación del nombre del equipo local",
+          "id": "Alias del equipo local"
+        },
+        "Inches from bottom sideline": {
+          "description": "Pulgadas desde la línea lateral del fondo(la línea a través la longitud de la cancha)",
+          "id": "Pulgadas desde la línea lateral del fondo"
+        },
+        "Inches from left baseline": {
+          "description": "Pulgadas desde la línea de base izquierda(la línea detrás de la canasta)",
+          "id": "Pulgadas desde la línea de base izquierda"
+        },
+        "Jersey number": {
+          "description": "El número del jugador que hizo el tiro",
+          "id": "Número de la camisa"
+        },
+        "Made or miss": {
+          "description": "Si el tiro de 3 puntos se logró o se falló",
+          "id": "Logrado o fallado"
+        },
+        "Time in seconds": {
+          "description": "Tiempo transcurrido en el reloj de juego, en segundos",
+          "id": "Tiempo en segundos"
+        }
+      },
+      "name": "Intentos de tiros de 3 puntos de la NCAA"
+    },
     "bike_sharing": {
       "fields": {
         "Month": {

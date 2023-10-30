@@ -31,6 +31,9 @@ describe('LearningGoalItem', () => {
     expect(wrapper.find('input[type="checkbox"]').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(1);
     expect(wrapper.find('EvidenceDescriptions').length).to.equal(1);
+    expect(
+      wrapper.find('EvidenceDescriptions').prop('learningGoalData')
+    ).to.equal(defaultProps.exisitingLearningGoalData);
     expect(wrapper.find('textarea').length).to.equal(1);
   });
 

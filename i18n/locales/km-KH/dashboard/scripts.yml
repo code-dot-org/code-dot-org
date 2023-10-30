@@ -1301,3 +1301,18 @@ km:
             lessonGroup-7:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ការណែនាំ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ការណែនាំ
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: ការណែនាំ
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ការណែនាំ

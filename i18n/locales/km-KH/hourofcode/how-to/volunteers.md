@@ -133,7 +133,7 @@ Work with the school or teacher to discuss what makes the most sense. យើង�
 - ពន្យល់វិធីដែលបច្ចេកវិទ្យាជះឥទ្ធិពលដល់ជីវិតរបស់យើងជាមួយឧទាហរណ៍ដែលសិស្សគ្រប់មជ្ឈដ្ឋាននឹងយកចិត្តទុកដាក់ - និយាយអំពីបច្ចេកវិទ្យាដែលជួយសង្គ្រោះជីវិតជួយមនុស្សនិងការភ្ជាប់ទំនាក់ទំនងមនុស្ស។
 - ប្រសិនបើអ្នកជាក្រុមហ៊ុនបច្ចេកវិទ្យាការបង្ហាញផលិតផលច្នៃប្រឌិតថ្មីបែបសប្បាយៗដែលក្រុមហ៊ុនរបស់អ្នកកំពុងធ្វើការ។ ប្រសិនបើអ្នកមិនមែនជាក្រុមហ៊ុនបច្ចេកវិទ្យាទេចូរពិភាក្សាគ្នាអំពីវិធីដែលក្រុមហ៊ុនរបស់អ្នកប្រើបច្ចេកវិទ្យាដើម្បីដោះស្រាយបញ្ហានិងសម្រេចគោលដៅ។
 - អញ្ជើញ software engineers ពីក្រុមហ៊ុនរបស់អ្នកឱ្យនិយាយអំពីមូលហេតុដែលពួកគេសម្រេចចិត្តសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រនិងគម្រោងដែលពួកគេធ្វើការ។
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for your group.
 
 ### 3. រៀបចំផែនការតម្រូវការបច្ចេកវិទ្យារបស់អ្នក 
 
@@ -186,7 +186,7 @@ Work with the school or teacher to discuss what makes the most sense. យើង�
 
 ### 1. ចុះឈ្មោះកម្មវិធីរបស់អ្នក
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. វាក៏ជាវិធីដែលអ្នកអាចឱ្យសាលារៀនឬមាតាបិតាក្នុងស្រុកដឹងថាអ្នកនឹងរៀបចំកម្មវិធីនៅក្បែរពួកគេ។
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. វាក៏ជាវិធីដែលអ្នកអាចឱ្យសាលារៀនឬមាតាបិតាក្នុងស្រុកដឹងថាអ្នកនឹងរៀបចំកម្មវិធីនៅក្បែរពួកគេ។
 
 ### 2. បោះផ្សាយលើបណ្តាមញ សង្គម 
 

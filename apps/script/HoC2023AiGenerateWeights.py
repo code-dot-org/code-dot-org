@@ -15,11 +15,15 @@ import pandas as pd
 # Load the most recent Ada model as of 10/23
 EMBEDDING_MODEL = 'text-embedding-ada-002'
 
-ai_inputs_file = open('./ai-inputs.json')
-data = json.load(ai_inputs_file)
-emoji_ids = []
-for emoji in data['items']:
-    emoji_ids.append(emoji['name'])
+ai_inputs_file = open('apps/static/dance/ai/ai-inputs.json')
+emojis_data = json.load(ai_inputs_file)
+emojis_map = {}
+emojis_list = []
+for emoji in emojis_data['items']:
+    name = emoji['name']
+    id = emoji['id']
+    emojis_map[name] = id
+    emojis_list.append(name)
 
 # We rename foreground/background effects and palettes as their python_name
 # to better reflect the actual output of the effect or color.

@@ -6434,7 +6434,7 @@ ko-KR:
         display_name: 과정말 프로젝트
       courseB_EOC2022:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합  프로젝트
       courseB_EOC2022_2023:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -16310,11 +16310,6 @@ ko-KR:
 
           ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
       ml-models-shoe survey_2022:
-        markdown: |
-          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
-      ml-models-shoe survey_2023:
         markdown: |
           ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
