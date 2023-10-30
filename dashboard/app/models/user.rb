@@ -2161,7 +2161,7 @@ class User < ApplicationRecord
   end
 
   def should_disable_user_type?
-    user_type.present? && (oauth_provided_user_type || Policies::Lti.lti?(self))
+    user_type.present? && oauth_provided_user_type
   end
 
   def oauth_provided_user_type
