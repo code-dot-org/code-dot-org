@@ -29,14 +29,14 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
     let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
     let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'emails')}
     let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
-    let(:origin_markdown_file_path) {CDO.dir('pegasus/emails/test.md')}
-    let(:markdown_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md.partial')}
+    let(:origin_email_file_path) {CDO.dir('pegasus/emails/test.md')}
+    let(:email_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md')}
 
     let(:expect_localization_distribution) do
-      I18nScriptUtils.expects(:copy_file).with(crowdin_file_path, markdown_i18n_file_path)
+      I18nScriptUtils.expects(:copy_file).with(crowdin_file_path, email_i18n_file_path)
     end
     let(:expect_markdown_i18n_file_header_restoration) do
-      I18n::Utils::PegasusMarkdown.expects(:restore_file_header).with(origin_markdown_file_path, markdown_i18n_file_path)
+      I18n::Utils::PegasusMarkdown.expects(:restore_file_header).with(origin_email_file_path, email_i18n_file_path)
     end
     let(:expect_crowdin_locale_resource_dir_removing) do
       FileUtils.expects(:rm_r).with(crowdin_locale_resource_dir)
@@ -51,8 +51,8 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
       FileUtils.mkdir_p(File.dirname(crowdin_file_path))
       FileUtils.touch(crowdin_file_path)
 
-      FileUtils.mkdir_p(File.dirname(origin_markdown_file_path))
-      FileUtils.touch(origin_markdown_file_path)
+      FileUtils.mkdir_p(File.dirname(origin_email_file_path))
+      FileUtils.touch(origin_email_file_path)
     end
 
     it 'distributes the emails localization with restored header' do
@@ -68,8 +68,8 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
 
     context 'when a "view" Crowdin file exists' do
       let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
-      let(:origin_markdown_file_path) {CDO.dir('pegasus/emails/test.md.partial')}
-      let(:markdown_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md.partial')}
+      let(:origin_email_file_path) {CDO.dir('pegasus/emails/test.md')}
+      let(:email_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md')}
 
       it 'distributes the emails localization with restored header' do
         execution_sequence = sequence('execution')
@@ -101,7 +101,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
 
     context 'when the origin emails file does not exists' do
       before do
-        FileUtils.rm(origin_markdown_file_path)
+        FileUtils.rm(origin_email_file_path)
       end
 
       it 'does not distribute the emails localization' do
