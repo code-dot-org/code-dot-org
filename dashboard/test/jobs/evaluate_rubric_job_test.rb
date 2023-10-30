@@ -16,6 +16,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # Don't actually talk to S3 when running SourceBucket.new
     AWS::S3.stubs :create_client
+
+    CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-api-key')
   end
 
   test "job succeeds on ai-enabled level" do
@@ -33,30 +35,35 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # run the job
     perform_enqueued_jobs do
-      EvaluateRubricJob.perform_later(user_id: @student.id, script_level_id: @script_level.id)
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
     end
 
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
     verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
   end
 
   test "job fails on non-ai level" do
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns(nil)
 
+    # create a project (we still build a rubric evaluation record first, which means that check is first)
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
     exception = assert_raises RuntimeError do
-      EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
+      EvaluateRubricJob.perform_now(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
     end
     assert_includes exception.message, 'lesson_s3_name not found'
-    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   test "job fails if channel token does not exist" do
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     exception = assert_raises RuntimeError do
-      EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
+      EvaluateRubricJob.perform_now(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
     end
     assert_includes exception.message, 'channel token not found'
-    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   test "job fails if project source code not found" do
@@ -69,21 +76,31 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns({status: 'NOT_FOUND'})
 
     exception = assert_raises RuntimeError do
-      EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
+      EvaluateRubricJob.perform_now(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
     end
     assert_includes exception.message, 'main.json not found'
-    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE], RubricAiEvaluation.where(user_id: @student.id).first.status
   end
 
   test "job fails if rubric not found" do
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+    @rubric.learning_goals.each do |lg|
+      LearningGoalAiEvaluation.where(learning_goal_id: lg.id).map(&:destroy)
+    end
     @rubric.destroy
 
+    # Create the evaluation record
+    rubric_ai_evaluation = create(
+      :rubric_ai_evaluation,
+      user: @student,
+      requester: @student,
+      status: 0
+    )
+
     exception = assert_raises ActiveRecord::RecordNotFound do
-      EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
+      EvaluateRubricJob.new.perform(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id, rubric_ai_evaluation_id: rubric_ai_evaluation.id)
     end
     assert_includes exception.message, "Couldn't find Rubric"
-    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   # stub out the calls to fetch project data from S3. Because the call to S3
@@ -159,6 +176,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "prompt" => 'fake-system-prompt',
       "rubric" => 'fake-standard-rubric',
       "examples" => expected_examples.to_json,
+      'api-key' => 'fake-api-key',
     }
     fake_ai_evaluations = [
       {
@@ -190,11 +208,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     version_id: 'fake-version-id'
   )
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    rubric_ai_eval = RubricAiEvaluation.where(user_id: user.id).order(updated_at: :desc).first
+    assert_equal project_id, rubric_ai_eval.project_id
+    assert_equal version_id, rubric_ai_eval.project_version
     rubric.learning_goals.each do |learning_goal|
-      ai_eval = LearningGoalAiEvaluation.find_by(user_id: user.id, learning_goal_id: learning_goal.id)
+      ai_eval = rubric_ai_eval.learning_goal_ai_evaluations.find_by(learning_goal_id: learning_goal.id)
       assert_equal expected_understanding, ai_eval.understanding
-      assert_equal project_id, ai_eval.project_id
-      assert_equal version_id, ai_eval.project_version
       assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
     end
   end

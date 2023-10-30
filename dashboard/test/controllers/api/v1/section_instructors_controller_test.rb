@@ -15,6 +15,10 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     @former_instructor = create(:section_instructor, section: @section, instructor: @teacher2, status: :removed)
     @former_instructor.destroy!
     @si3 = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
+    @full_section = create(:section, user: @teacher2, login_type: 'word')
+    (Section::INSTRUCTOR_LIMIT - 1).times do
+      create(:section_instructor, section: @full_section, instructor: create(:teacher), status: :active)
+    end
   end
 
   test 'logged out user has no section_instructors' do
@@ -58,6 +62,7 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     assert_equal @teacher3.id, si.instructor_id
     assert_equal @section.id, si.section_id
     assert_equal :invited, si.status.to_sym
+    assert_equal @teacher, si.invited_by
   end
 
   test 'instructor can add a former instructor to instruct a section' do
@@ -77,12 +82,8 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
   end
 
   test 'instructor cannot add a new instructor to a full section' do
-    sign_in @teacher
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :active)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :invited)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :declined)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :active)
-    post :create, params: {section_id: @section2.id, email: @teacher3.email}
+    sign_in @teacher2
+    post :create, params: {section_id: @full_section.id, email: @teacher3.email}
 
     assert_response :bad_request
   end
@@ -165,6 +166,55 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     put :decline, params: {id: si.id}
     assert_response :forbidden
   end
+
+  test 'logged-out user cannot check email addresses' do
+    get :check, params: {email: @teacher2.email}
+    assert_response :forbidden
+  end
+
+  test 'teacher can check other teacher for eligibility' do
+    sign_in @teacher
+    get :check, params: {email: @teacher2.email}
+    assert_response :success
+  end
+
+  test 'teacher gets error checking own email address' do
+    sign_in @teacher
+    get :check, params: {email: @teacher.email}
+    assert_response :bad_request
+  end
+
+  test 'teacher gets error checking non-user email address' do
+    sign_in @teacher
+    get :check, params: {email: 'nonsense@nowhere.com'}
+    assert_response :not_found
+  end
+
+  test 'teacher can check teacher for existing section' do
+    sign_in @teacher
+    get :check, params: {email: @teacher3.email, section_id: @section2.id}
+    assert_response :success
+  end
+
+  test 'teacher gets error checking existing co-teacher' do
+    sign_in @teacher
+    get :check, params: {email: @teacher2.email, section_id: @section2.id}
+    assert_response :bad_request
+  end
+
+  test 'teacher cannot check adding to a section they do not teach' do
+    sign_in @teacher2
+    get :check, params: {email: @teacher3.email, section_id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'instructor gets error checking for a full section' do
+    sign_in @teacher2
+    get :check, params: {section_id: @full_section.id, email: @teacher3.email}
+
+    assert_response :bad_request
+  end
+
   # Parsed JSON returned after the last request, for easy assertions.
   # Returned hash has string keys
   def returned_json
