@@ -39,7 +39,7 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
     # See: https://dev.mysql.com/doc/refman/5.7/en/mysql-options.html
 
     # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-    reconnect: false,
+    # reconnect: false,
 
     # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
     connect_timeout: 2,
