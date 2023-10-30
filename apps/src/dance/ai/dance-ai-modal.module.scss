@@ -401,6 +401,9 @@ $ai-modal-border-width: 8px;
 
       .score {
         padding: 20px;
+        position: absolute;
+        top: 40px;
+        right: -80px;
 
         .barContainer {
           background-color: rgb(56 55 55);

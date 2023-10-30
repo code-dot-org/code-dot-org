@@ -6,6 +6,8 @@
  * these things change.
  */
 
+@import "color";
+
 // Create an animation that delays for $delay seconds and then fades in
 // over the course of $duration seconds.
 @mixin appear($index) {
@@ -59,6 +61,9 @@
     #defaultCanvas1 {
       width: 100% !important;
       height: 100% !important;
+      border-radius: 4px;
+      border: 1px solid $neutral_dark30;
+      box-sizing: border-box;
     }
   }
 }
