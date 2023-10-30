@@ -19,16 +19,12 @@ export default class SpecialAnnouncement extends Component {
 
   render() {
     const {isEnglish, isTeacher} = this.props;
-    const headingText = isEnglish
-      ? isTeacher
-        ? i18n.teacherAnnouncementSpecialWinter2021Heading()
-        : i18n.studentAnnouncementSpecial2023AiLaunchHeading()
-      : i18n.studentAnnouncementSpecial2023AiLaunchHeading(); // replaces International string
-    const descriptionText = isEnglish
-      ? isTeacher
-        ? i18n.teacherAnnouncementSpecialWinter2021Body()
-        : i18n.studentAnnouncementSpecial2023AiLaunchBody()
-      : i18n.studentAnnouncementSpecial2023AiLaunchBody(); // replaces International string
+    const headingText = isTeacher
+      ? i18n.teacherAnnouncementSpecialWinter2021Heading()
+      : i18n.studentAnnouncementHoc2023Heading();
+    const descriptionText = isTeacher
+      ? i18n.teacherAnnouncementSpecialWinter2021Body()
+      : i18n.studentAnnouncementHoc2023Body();
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
@@ -41,7 +37,7 @@ export default class SpecialAnnouncement extends Component {
             '/shared/images/fill-540x300/announcement/announcement_hoc2020_ai.png'
           )
         : pegasus(
-            '/shared/images/fill-540x300/announcement/announcement_special_ai-launch_2023.png'
+            '/shared/images/fill-540x300/social-media/hoc2023_social.png'
           );
 
     return (
