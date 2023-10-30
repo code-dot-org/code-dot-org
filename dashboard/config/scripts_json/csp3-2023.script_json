@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-25 19:50:17 UTC",
+    "serialized_at": "2023-10-27 17:54:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4237,18 +4237,6 @@
       }
     },
     {
-      "name": "Unit 3 Journal - Example",
-      "url": "https://docs.google.com/presentation/d/1Jf3Z3mZWso9rpEhMPVb6ZhNTwXB12yL0XKEtfkdbtoQ/edit?usp=drive_link",
-      "key": "unit_3_journal_-_example",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_journal_-_example"
-      }
-    },
-    {
       "name": "Unit 3 Interactive Notebook Journal",
       "url": "https://docs.google.com/presentation/d/1P8Iz5X_NiTUx8fBJGtKcQPQfGaR9O9ujIWBJp_H6WtQ/edit?usp=drive_link",
       "key": "unit_3_journal_-_interactive_notebook",
@@ -4326,12 +4314,6 @@
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
         "resource.key": "unit_3_journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "unit_3_journal_-_example"
       }
     },
     {
