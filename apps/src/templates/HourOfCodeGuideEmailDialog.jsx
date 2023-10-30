@@ -49,6 +49,26 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
           <div className={style.middle}>
             <Heading3>{i18n.learnHowToHost()}</Heading3>
             {bodyText}
+            <label className={style.typographyLabel}>
+              {i18n.mame()}
+              <input
+                required
+                type="text"
+                id="uitest-hoc-guide-name"
+                className={style.classNameTextField}
+                onChange={() => {}}
+              />
+            </label>
+            <label className={style.typographyLabel}>
+              {i18n.email()}
+              <input
+                required
+                type="text"
+                id="uitest-hoc-guide-email"
+                className={style.classNameTextField}
+                onChange={() => {}}
+              />
+            </label>
           </div>
           <div className={style.buttonsBottom}>
             <Button
