@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: පාසලෙන් පසු සඳහා කේත පැය මාර්ගෝපදේශය
 ---
 
 {{ signup_button }}
@@ -8,83 +8,83 @@ title: Hour of Code How-to Guide for After-school
 
 ### මෙම පියවර සමඟ ව්යාපාරයට සම්බන්ධ වී ඔබේ සිසුන් පරිගණක විද්යාවට හඳුන්වා දෙන්න.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+පරිගණක චින්තනය ගැටළු විසඳීමේ කුසලතා, තර්කනය සහ නිර්මාණශීලීත්වය පෝෂණය කිරීමට උපකාරී වේ. තවද තාක්ෂණය පෘථිවියේ සෑම කර්මාන්තයක්ම පරිවර්තනය කරයි. අද සිසුන් ඉගෙන ගත යුත්තේ තාක්ෂණය නිර්මාණය කරන්නේ කෙසේද යන්න මිස එය භාවිතා කිරීම පමණක් නොවේ. මුල් කාලීනව ආරම්භ කිරීමෙන්, 21 වන සියවසේ ඕනෑම වෘත්තීය මාර්ගයක සාර්ථකත්වය සඳහා ඔවුන්ට අඩිතාලමක් ඇත.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Hour of Code උත්සාහ කිරීම යනු සිසුන් පරිගණක විද්යාවට හඳුන්වා දීමට සරල හා විනෝදජනක ක්රමයකි, සමහරවිට පළමු වරට. ඔබට උදව් කිරීමට අමතර අත් කට්ටලයක් අවශ්ය නම්, ඔබේ පාසලෙන් පසු පන්තියේ හෝ සමාජ ශාලාවේ කේත පැයක් පවත්වාගෙන යාමට උදව්</a> කිරීමට ඔබට දේශීය ස්වේච්ඡා සේවකයෙකු සොයා ගත හැකිය.</p> 
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### කේත පැයක් දුරස්ථව සත්කාරකත්වය ද කළ හැකිය! ආරම්භ කිරීම සඳහා, අතථ්ය හෝර් ඔෆ් [කෝඩ් උත්සවයක් සත්කාරකත්වය සඳහා අපගේ ඉඟි බලන්න](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. මෙම ආකාරය වීඩියෝව නරඹන්න <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. නිබන්ධන තෝරන්න
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+විවිධාකාර හවුල්කරුවන් විසින් නිර්මාණය කරන ලද [සියලුම වයස් කාණ්ඩවල සහභාගිවන්නන්]({{ urls/learn }}) සඳහා විවිධාකාර විනෝදජනක, පැය දිගු නිබන්ධන සපයන්නෙමු. [ඒවා අත්හදා බලන්න!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**සියලුම හෝර් ඔෆ් කෝඩ් නිබන්ධන සංවිධායකයන් සඳහා අවම සූදානම් කාලය** අවශ්ය වන අතර, ස්වයං-මඟ පෙන්වනු ලැබේ - ළමයින්ට තමන්ගේම වේගයෙන් හා කුසලතා මට්ටමින් වැඩ කිරීමට ඉඩ සලසයි.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**ඔබේ පාසලෙන් පසු කේත පැය සඳහා පාඩම් සැලැස්මක් අවශ්යද?** මෙම සැකිල්ල පරීක්ෂ [ා කරන්න](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. ඔබේ කේත පැය ප්රවර්ධනය කරන්න
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+මෙම මෙවලම් සමඟ ඔබේ කේත පැය [ප්රවර්ධනය කිරීම]({{ urls/promote }}) සහ තමන්ගේම සිදුවීම් සත්කාරකත්වය සඳහා අන් අය දිරිමත් කරන්න.
 
-## 4. Plan your technology needs - computers are optional
+## 4. ඔබේ තාක්ෂණ අවශ්යතා සැලසුම් කරන්න - පරිගණක අත්යවශ්ය වේ
 
-හොඳම පැය කේත අත්දැකීම අන්තර්ජාලයට සම්බන්ධ පරිගණක ඇතුළත් වේ. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+හොඳම පැය කේත අත්දැකීම අන්තර්ජාලයට සම්බන්ධ පරිගණක ඇතුළත් වේ. හැබැයි **හැම දරුවෙකුටම පරිගණකයක්** අවශ්ය නැහැ, කොහෙත්ම පරිගණකයක් නොමැතිව Hour of Code එක පවා කරන්න පුලුවන්.
 
-ශබ්දය සහ වීඩියෝ සහිත බ්‍රව්සර් මත නිසියාකාරව ක්‍රියාත්මක වන බව සහතික කිරීම සඳහා ශිෂ්‍ය පරිගණකවල හෝ උපාංගවල නිබන්ධන පරීක්ෂා කිරීමට වග බලා ගන්න. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+ශබ්දය සහ වීඩියෝ සහිත බ්‍රව්සර් මත නිසියාකාරව ක්‍රියාත්මක වන බව සහතික කිරීම සඳහා ශිෂ්‍ය පරිගණකවල හෝ උපාංගවල නිබන්ධන පරීක්ෂා කිරීමට වග බලා ගන්න. **අඩු කලාප පළල තිබේද?** පන්තියේ ඉදිරිපස වීඩියෝ පෙන්වීමට සැලසුම් කරන්න, ඒ නිසා එක් එක් ශිෂ්යයා තමන්ගේම වීඩියෝ බාගත කරන්නේ නැත. නැතහොත් unplugg/නොබැඳි නිබන්ධන උත්සාහ කරන්න.
 
 ඔබ තෝරා ගන්නා නිබන්ධනය ශබ්දය සමඟ වඩා හොඳින් ක්‍රියාත්මක වන්නේ නම්, ඔබේ පන්තිය සඳහා හෙඩ්ෆෝන් ලබා දෙන්න, නැතහොත් තමන්ගේම දෑ ගෙන ඒමට සිසුන්ගෙන් ඉල්ලා සිටින්න.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). සිසුන් හවුල් වූ විට, ඔවුන් එකිනෙකාට උදව් කරන අතර ගුරුවරයා මත අඩුවෙන් රඳා සිටිති. පරිගණක විද්‍යාව සමාජීය සහ සහයෝගී බව ඔවුන් දකිනු ඇත.
+**ප්රමාණවත් උපාංග නැද්ද?** [යුගල ක්රමලේඛනය භාවිතා කරන්න](https://www.youtube.com/watch?v=vgkahOzFH2Q). සිසුන් හවුල් වූ විට, ඔවුන් එකිනෙකාට උදව් කරන අතර ගුරුවරයා මත අඩුවෙන් රඳා සිටිති. පරිගණක විද්‍යාව සමාජීය සහ සහයෝගී බව ඔවුන් දකිනු ඇත.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. ආස්වාදජනක වීඩියෝවක් සමඟ ඔබේ කේත පැය ආරම්භ කරන්න
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- බිල් ගේට්ස්, මාර්ක් සකර්බර්ග් සහ එන්බීඒ තාරකා ක්රිස් බෝෂ් අටවා ඇති මුල් Code.org දියත් කිරීමේ වීඩියෝව - විනාඩි [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), විනාඩි [5 සහ විනා](https://www.youtube.com/watch?v=nKIu9yen5nc)ඩි [9 අන](https://www.youtube.com/watch?v=dU1xS07N-FA) ුවාදයන් ලබා ගත හැකිය.
+- ලෝක ව්යා [ප්ත වීඩියෝව ඔෆ් කෝඩ්](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [පරිගණක විද්යාව ඉගෙන ගන්නා ලෙස ජනාධිපති ඔබාමා සියලු සිසුන්ගෙන් ඉල්ලා සිටියි](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- තවත් ආශ්වාදජනක වීඩියෝ මෙතැ [නින් සොයා ගන්න](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**ඔබ සියල්ලෝම පරිගණක විද්යාවට අලුතින් නම් කමක් නැත. ඔබේ කේත පැය ක්රියාකාරිත්වය හඳුන්වා දීම සඳහා අදහස් කිහිපයක් මෙන්න:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- තාක්ෂණය අපගේ ජීවිතවලට බලපාන ක්රම පැහැදිලි කරන්න, උදාහරණ සමඟ පිරිමි හා ගැහැණු ළමයින් දෙදෙනාම සැලකිලිමත් වනු ඇත (ජීවිත බේරා ගැනීමට භාවිතා කරන යෙදුම් සහ තාක්ෂණය ගැන කතා කරන්න, මිනිසුන්ට උදව් කිරීම, මිනිසුන් සම්බන්ධ කිරීම ආදිය).
+- එදිනෙදා ජීවිතයේ කේතය භාවිතා කරන දේවල් ලැයිස්තුගත කරන්න.
+- ගැහැණු ළමයින් පරිගණක විද්යාව කෙරෙහි උනන්දුවක් දැක්වීම සඳහා උපදෙස් බලන්න [මෙතැ]({{ urls/girls }})නින්.
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**තවත් මග පෙන්වීමක් අවශ්යද?** මෙම සැකිලි පා [ඩම් සැලැස්ම බා](/files/AfterschoolEducatorLessonPlanOutline.docx)ගන්න.
 
-## 6. Code!
+## 6. කේතය!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**ක්රියාකාරකමට සෘජු සහභාගිවන්න** න් - නිබන්ධන සබැඳිය වයිට්බෝඩ් එකක ලියන්න. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**යමෙකු දුෂ්කරතා හමුවන විට ප්රතිචාර දැක්වීමට කමක්** නැත: - “මම නොදනිමි. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**කවුරු හරි කලින් ඉවර කළොත් මොකද කරන්නේ?** - [hourofcode.com/learn හි තවත් පැය කේත ක්රියාකාරකමක් අත්හදා බැලීමට සහභාගිවන්නන් දිරිමත් කරන්න]({{ urls/learn }}) - නැතහොත්, කරදරයක් ඇති අන් අයට උපකාර කිරීමට කලින් අවසන් කරන අයගෙන් ඉල්ලා සිටින්න.
 
-## 7. Celebrate
+## 7. සැමරීම
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [ඔබේ සිසුන්]({{ urls/certificates }}) සඳහා සහතික මුද්රණය කරන්න.
+- [මුද්රණය කරන්න “මම කෝඩ් පැයක් කළා!”]({{ promote/resources_stickers }}) ඔබේ සිසුන් සඳහා ස්ටිකර්
+- [සහභාගිවන්නන් සඳහා අභිරුචි](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ටී-ෂර්ට් ඇණ
+- ඔබේ හෝර් ඔෆ් කෝඩ් උත්සවයේ ඡායාරූප සහ වීඩියෝ සමාජ මාධ්ය ඔස්සේ බෙදා ගන්න. #HourOfCode සහ @codeorg භාවිතා කරන්න එවිට අපට ඔබේ සාර්ථකත්වය ද ඉස්මතු කළ හැකිය!
 
-## Other Hour of Code resources for educators
+## අධ්යාපනඥයන් සඳහා වෙනත් පැය සංග්රහය සම්පත්
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- පසුගිය හෝර් ඔ [ෆ් කෝඩ්](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) සංවිධායකවරුන්ගේ හොඳම භාවිතයන් පරීක්ෂා කරන්න.
+- අපගේ අධ්යාපනඥයාගේ මාර්ගෝපදේශය ටෝ [ද හෝර් ඔෆ් කෝඩ් වෙබිනාර් හි පටිගත කිරීම නරඹන්න](https://youtu.be/EJeMeSW2-Mw).
+- වෙනත් සංවිධායකවරු [න්ගේ උපදෙස්, අවබෝධය](http://forum.code.org/c/plc/hour-of-code) සහ සහයෝගය ලබා ගැනීම සඳහා Hour of Code සංසදයට පිවිසෙන්න.
+- කේත [පැය නිතර අසන පැය සමාලෝචනය](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)කරන්න.
 
 ## කේත වේලාවෙන් පසුව පැමිණෙන්නේ කුමක්ද?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+තාක්ෂණය ක්රියාත්මක වන ආකාරය සහ මෘදුකාංග යෙදුම් නිර්මාණය කරන්නේ කෙසේද යන්න ගැන වැඩි විස්තර දැන ගැනීමට යන ගමනක පළමු පියවර පමණක් කේත පැය වේ. සිසුන්ට ඔවුන්ගේ ගමන දිගටම කරගෙන යාමට උදව් කරන්න සහ අන්තර්ජාලය හරහා තවත් [ඉගෙන ගැනීමට ඔවුන් දිරිමත්](/beyond)කරන්න!
 
 {{ signup_button }}

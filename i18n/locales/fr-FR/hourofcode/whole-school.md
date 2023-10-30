@@ -4,6 +4,6 @@ title: Participation de l'ensemble de l'école
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Faire participer toute votre école
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Des informations sur comment faire participer toutes les écoles à l'Heure du code seront disponibles ici.

@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - 如果你是一個科技公司，展示由你的公司開發有趣且創新的產品。
 - 如果你不是科技公司，討論你們公司如何藉由科技來解決問題與達成目標。
 - 從你的公司邀請軟體工程師來聊聊他們為什麼決定學計算機科學，還有他們進行中的計畫。
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- 在這裡查看讓女孩對計算機科學感興趣的 [提示]({{ urls/girls }})。
 
 ## 6. 寫程式吧!
 **在活動中指導參與者**

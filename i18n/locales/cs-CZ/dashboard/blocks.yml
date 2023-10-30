@@ -69,6 +69,11 @@ cs:
           UNIT:
             '"measures"': takty
             '"seconds"': sekund
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekund
       Dancelab_changeColorBy:
         text: změnit {COLOR} {METHOD} o {AMOUNT}
         options:
@@ -564,6 +569,49 @@ cs:
             '"iceCream"': Zmrzlina
             '"default"': Světlo
             '"neon"': Neon
+            '"tropical"': Tropické
+            '"vintage"': Retro
+            '"warm"': Červené
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: nastav efekt pozadí {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Žádný
+            '"rand"': "(Náhodně)"
+            '"circles"': Tunel
+            '"quads"': Úhly
+            '"color_cycle"': Barvy
+            '"diamonds"': Diamanty
+            '"disco_ball"': Disco koule
+            '"fireworks"': Ohňostroj
+            '"flowers"': Květiny
+            '"growing_stars"': Zvětšující se hvězdy
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový taneční parket
+            '"splatter"': Barevný stříkanec
+            '"rainbow"': Duha
+            '"ripples_random"': Náhodné vlny
+            '"ripples"': Vlny
+            '"snowflakes"': Sníh
+            '"text"': Název skladby
+            '"squiggles"': Klikyháky
+            '"galaxy"': Vesmír
+            '"sparkles"': Lesky
+            '"spiral"': Spirála
+            '"disco"': Čtverce
+            '"starburst"': Výbuch hvězdy
+            '"stars"': Hvězdy
+            '"music_wave"': Vlny
+          PALETTE:
+            '"rave"': Černá a bílá
+            '"cool"': Modré
+            '"electronic"': Elektronika
+            '"iceCream"': Zmrzlina
+            '"default"': Světlo
+            '"neon"': Neon
+            '"ocean"': Oceán
+            '"rainbow"': Duha
             '"tropical"': Tropické
             '"vintage"': Retro
             '"warm"': Červené

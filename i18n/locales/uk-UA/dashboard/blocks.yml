@@ -71,6 +71,11 @@ uk:
           UNIT:
             '"measures"': такти
             '"seconds"': секунди
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': такти
+            '"seconds"': секунди
       Dancelab_changeColorBy:
         text: змінити {COLOR} {METHOD} на {AMOUNT}
         options:
@@ -575,6 +580,51 @@ uk:
             '"iceCream"': Морозиво
             '"default"': Світлий
             '"neon"': Неоновий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "установити фоновий ефект
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Немає
+            '"rand"': "(Випадковий)"
+            '"circles"': Коло
+            '"quads"': Кути
+            '"color_cycle"': Кольори
+            '"diamonds"': Ромби
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
+            '"flowers"': Квіти
+            '"growing_stars"': Зірки, які ростуть
+            '"higher_power"': Вища сила
+            '"swirl"': Гіпноз
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
+            '"splatter"': Бульбашки
+            '"rainbow"': Веселка
+            '"ripples_random"': Випадкові брижі
+            '"ripples"': Брижі
+            '"snowflakes"': Сніг
+            '"text"': Назва пісні
+            '"squiggles"': Звивання
+            '"galaxy"': Відступ
+            '"sparkles"': Блискітки
+            '"spiral"': спіраль
+            '"disco"': Квадрати
+            '"starburst"': Вибухаюча зірка
+            '"stars"': Зірки
+            '"music_wave"': Хвилі
+          PALETTE:
+            '"rave"': Чорний та білий
+            '"cool"': Холодний
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"default"': Світлий
+            '"neon"': Неоновий
+            '"rainbow"': Веселка
             '"tropical"': Тропічний
             '"vintage"': Вінтажний
             '"warm"': Теплий

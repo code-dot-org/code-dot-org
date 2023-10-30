@@ -84,10 +84,10 @@ uk:
         обліковий запис.
     facebook: Facebook
     forgot_password: Забули пароль?
-    google_oauth2: обліковий запис Google
+    google_oauth2: обліковим записом Google
     invalid_provider: На жаль, облікові записи %{provider} не можна зв'язати з обліковими
       записами Code.org.
-    microsoft_v2_auth: обліковий запис Microsoft
+    microsoft_v2_auth: обліковим записом Microsoft
     migration_required: На жаль, ми не можемо підключати або відключати облікові записи,
       які використовують стару версію облікового запису. Оновіть, будь ласка, версію
       облікового запису.
@@ -108,7 +108,7 @@ uk:
       %{provider} аккаунту. Будь ласка, спробуйте ще раз.
     use_clever: Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Будь
       ласка, увійдіть через ваш Clever Portal замість цього.
-    windowslive: обліковий запис Microsoft
+    windowslive: обліковим записом Microsoft
   behaviors:
     this_sprite: цей спрайт
   beta: бета-версія
@@ -564,7 +564,7 @@ uk:
       sign_in_to_save: Увійдіть для збереження досягнень
       sprite_lab_documentation: Документація Спрайт Лабораторії
       stats: Статистика
-      teach: Вчити
+      teach: Навчати
       teacher_community: Спільнота вчителів
       tutorials: Навчальні матеріали
       web_lab_documentation: Документація веб-лабораторії
@@ -604,7 +604,7 @@ uk:
       loading: Завантаження...
       logout: Вийти
       makerlab: Maker Toolkit
-      minecraft_adventurer: Майнкрафт - Пригоди
+      minecraft_adventurer: 'Майнкрафт: Пригоди'
       minecraft_aquatic: 'Майнкрафт: Підводна подорож'
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: Майнкрафт
@@ -741,7 +741,7 @@ uk:
         other: 'Інше:'
         science: Природничі науки
       workshop_course:
-        csd: Відкриття інформатики
+        csd: Дослідження інформатики
         csf_af: Основи інформатики (Курси A-F)
         csf_express: Основи інформатики (Вступ до прискорених та Прискорені)
         csp: "'16-'17 принципи інформатики"

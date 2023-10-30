@@ -59,6 +59,11 @@ mn:
           UNIT:
             '"measures"': арга хэмжээ
             '"seconds"': секундууд
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': арга хэмжээ
+            '"seconds"': секундууд
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD}-г {AMOUNT}-р солих"
         options:
@@ -551,6 +556,50 @@ mn:
             '"iceCream"': Зайрмаг
             '"default"': Гэрэл
             '"neon"': Неон
+            '"tropical"': Тропикийн
+            '"vintage"': Усан үзэм
+            '"warm"': Дулаан
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          суурь нөлөөг тохируулах
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Байхгүй
+            '"rand"': "(Санамсаргүй)"
+            '"circles"': Тойргууд
+            '"quads"': Өнцөг
+            '"color_cycle"': Өнгөнүүд
+            '"diamonds"': Алмааз
+            '"disco_ball"': Дисконы бөмбөг
+            '"fireworks"': Салют
+            '"flowers"': Цэцэг
+            '"growing_stars"': Томорч буй од
+            '"swirl"': Гипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Бүжгийн лазер шал
+            '"splatter"': Будаг тараагч
+            '"rainbow"': Солонго
+            '"ripples_random"': Санамсаргүй долгио
+            '"ripples"': Долгионууд
+            '"snowflakes"': Цас
+            '"text"': Дууны нэрнүүд
+            '"squiggles"': Жижиг долгио
+            '"galaxy"': Сансар
+            '"sparkles"': Гялалзах
+            '"spiral"': Спираль
+            '"disco"': Квадратууд
+            '"starburst"': Оддын тэсрэлт
+            '"stars"': Одод
+            '"music_wave"': Давалгаа
+          PALETTE:
+            '"rave"': Хар ба цагаан
+            '"cool"': Гайхалтай
+            '"electronic"': Электрон
+            '"iceCream"': Зайрмаг
+            '"default"': Гэрэл
+            '"neon"': Неон
+            '"rainbow"': Солонго
             '"tropical"': Тропикийн
             '"vintage"': Усан үзэм
             '"warm"': Дулаан

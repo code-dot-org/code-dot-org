@@ -135,7 +135,7 @@ Uma das melhores maneiras de ajudar é divulgar e promover a Hora do Código.
 
 ### 1. Registre o seu evento
 
-Quando você se cadastra no evento do Hour of Code>/a>, você recebe um e-mail com informações úteis, notícias e dicas para promover um evento de sucesso no Hour of Code. Desse modo, você também poderá avisar aos pais e as escolas da região que você receberá um evento perto deles.</p> 
+Ao se [inscrever em seu evento da Hora do Código](/events), você receberá comunicações úteis por e-mail com notícias e dicas para organizar uma Hora do Código de sucesso. Desse modo, você também poderá avisar aos pais e as escolas da região que você receberá um evento perto deles.
 
 ### 2. Publique nas redes sociais
 
