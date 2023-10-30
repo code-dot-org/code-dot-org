@@ -25,10 +25,19 @@ describe('RubricEditorTest ', () => {
     wrapper = shallow(<RubricEditor {...defaultProps} />);
   });
 
-  it('renders correct number of LearningGoalItem components', () => {
+  it('renders correct LearningGoalItem components', () => {
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       sampleLearningGoalList.length
     );
+    expect(
+      wrapper.find('LearningGoalItem').at(0).prop('exisitingLearningGoalData')
+    ).to.equal(sampleLearningGoalList[0]);
+    expect(
+      wrapper.find('LearningGoalItem').at(1).prop('exisitingLearningGoalData')
+    ).to.equal(sampleLearningGoalList[1]);
+    expect(
+      wrapper.find('LearningGoalItem').at(2).prop('exisitingLearningGoalData')
+    ).to.equal(sampleLearningGoalList[2]);
   });
 
   it('renders the "Add new Key Concept" button and it can be clicked when submittable levels are available', () => {
