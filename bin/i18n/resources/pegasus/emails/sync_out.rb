@@ -40,7 +40,8 @@ module I18n
 
             unless I18nScriptUtils.source_lang?(language)
               # Distributes the localization
-              target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{language[:locale_s]}.yml")
+              target_i18n_file_name = crowdin_file_name.gsub(/en.md/, "#{language[:locale_s]}.md")
+              target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, target_i18n_file_name)
               I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
             end
 
