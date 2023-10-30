@@ -2279,22 +2279,6 @@ nn-NO:
     gir ein time introduksjon til informatikk og programmering og som når ut til titals
     millionar elevar i meir enn 180 land. Bli gjerne med under Computer Science Education
     Week, 7.-13. desember.
-  volunteer_engineer_submission_intro_guide: Lær mer om vårt <a href="%{volunteer_guide}">program
-    for frivillige her</a>.
-  volunteer_engineer_submission_intro_links: Er du ein lærar som ser etter frivillige?
-    Finn ein lokal frivillig på vårt <a href="%{volunteer_local}">kart over frivillige</a>.
-  volunteer_engineer_submission_intro_recruit: 'Lærarar skulle gjerne hatt nokre som
-    er<span style="font-family: ''Gotham 7r'', sans-serif;"> lidenskapleg opptatt
-    av utdanning innan informatikk</span> til å hjelpe til i klasserommet, eller nokon
-    som kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspirere</span>
-    elevane med å preike om alle dei moglegheitene som finst innan informatikk og
-    programmering (som kan bli gjort gjennom ein video-chat).'
-  volunteer_engineer_submission_intro_signup: Fint om du oppgir følgande informasjon
-    dersom du er ein informatikkstudent eller jobbar med programmering. Du må vere
-    minst 18 år for å registrere deg som frivillig. Merk deg at felta du fyller ut
-    i denne seksjonen vil bli tilgjengelege offentleg for alle å sjå på <a href="/volunteer/local">kartet
-    over frivillige</a>Felt som er markert med <span class="form-required-field">*</span>
-    er påkrevde.
   volunteer_engineer_submission_location_flexibility_curriculum: bidra til undervisingsprosjekt
     med open kildekode
   volunteer_engineer_submission_location_flexibility_onsite: komme på besøk til ein

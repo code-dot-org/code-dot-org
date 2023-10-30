@@ -604,7 +604,7 @@ uk-UA:
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс E: '
   dashboard_coursef: 'Курс F: '
-  dashboard_curriculum: Навчальний план
+  dashboard_curriculum: Програма
   dashboard_curriculum_csd: 'Дослідження інформатики CS Discoveries: '
   dashboard_curriculum_csina: 'Інформатика в алгебрі:'
   dashboard_curriculum_csins: 'Інформатика в науці:'
@@ -1004,7 +1004,7 @@ uk-UA:
   header_screen_reader_help: Допомога
   header_sections: Секції
   header_stats: Статистика
-  header_teach: Вчити
+  header_teach: Навчати
   header_teacher_community: Спільнота вчителів
   header_tutorials: Навчальні матеріали
   hello: Привіт, світ!
@@ -1098,7 +1098,7 @@ uk-UA:
     всі серії (5 хв)
   hoc2018_mc_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
     на пригоду.
-  hoc2018_mc_adventurer_title: Майнкрафт - Пригоди
+  hoc2018_mc_adventurer_title: 'Майнкрафт: Пригоди'
   hoc2018_mc_aquatic_description: Майнкрафт повернувся до Години коду з новеньким
     підручником! Подорожуйте Майнкрафтом з кодом.
   hoc2018_mc_aquatic_title: 'Minecraft: Підводна подорож'
@@ -1610,7 +1610,7 @@ uk-UA:
   mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
     пригодах у світі Майнкрафт.
   mc_specs: Багато мов | Сучасні браузери та планшети| Вік 6-106
-  minecraft_adventurer: Майнкрафт - Пригоди
+  minecraft_adventurer: 'Майнкрафт: Пригоди'
   minecraft_adventurer_button: Початок
   minecraft_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
     на пригоду.
@@ -2016,7 +2016,7 @@ uk-UA:
   third_party_cost_free_10: Спробувати безкоштовно, $9.99/місяць
   third_party_cost_free_2: Спробувати безкоштовно, $2/учень
   third_party_cost_free_399: Спробувати безкоштовно, $399/клас
-  third_party_curriculum: Навчальний план
+  third_party_curriculum: Програма
   third_party_desc_10to12_kto3: Приблизно 10-12 уроків, орієнтованих на 3 клас
   third_party_desc_10to12_kto5: Приблизно 10-12 уроків, орієнтованих на 5 клас
   third_party_desc_10to15_3to12: Між 10 та 15 уроків, орієнтованих на 3-12 класи
@@ -2283,24 +2283,10 @@ uk-UA:
   volunteer_engineer_submission_intro_background: Година коду - це глобальний рух
     годинного вступу до програмування, що охоплює десятки мільйонів учнів у більш,
     як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня.
-  volunteer_engineer_submission_intro_guide: Дізнайтеся більше про нашу <a href="%{volunteer_guide}">волонтерську
-    програму тут</a>.
   volunteer_engineer_submission_intro_guide_markdown: 'Дізнайтеся більше про нашу
     [програму волонтерів тут] (%{volunteer_guide}). '
-  volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
-    більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
-    на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
   volunteer_engineer_submission_intro_links_markdown: 'Ви - вчитель і шукаєте волонтерів?
     Знайдіть місцевого волонтера на нашій [карті волонтерів](%{volunteer_local}). '
-  volunteer_engineer_submission_intro_recruit: 'Ці вчителі хочуть, щоб хтось, <span
-    style="font-family: ''Gotham 7r'', sans-serif;">захоплений інформатичною освітою</span>
-    допоміг їм у класі, або <span style="font-family: ''Gotham 7r'', sans-serif;">надихнув</span>
-    їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат).
-    Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію
-    власного заходу Години коду.'
-  volunteer_engineer_submission_intro_signup: Вкажіть наступну інформацію, якщо ви
-    студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span
-    class="form-required-field">*</span> є обов'язковими для заповнення.
   volunteer_engineer_submission_intro_signup_markdown: 'Будь ласка, вкажіть наступну
     інформацію, якщо ви студент галузі комп''ютерних наук чи професійний програміст.  Вам
     має бути щонайменше 18 років, щоб зареєструватися добровольцем. Зверніть увагу,
