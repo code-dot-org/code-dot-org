@@ -71,6 +71,7 @@
   "aiAssessment": "AI Assessment",
   "aiAssessmentDoesMeet": "Extensive or Convincing Evidence",
   "aiAssessmentDoesNotMeet": "Limited or No Evidence",
+  "aiAssessmentFeedbackAsk": "Is this AI Assessment accurate?",
   "aiBot": "AI Bot",
   "aiCannotAssess": "This learning goal is too subjective for AI to evaluate.",
   "aiConfidence": "AI has {aiConfidence} confidence in this assessment",
