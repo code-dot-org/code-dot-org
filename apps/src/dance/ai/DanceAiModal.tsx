@@ -584,12 +584,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       moduleStyles.beamImageVisible
                   )}
                 />
-                {botSideBeamImage && (
+                {/*botSideBeamImage && (
                   <img
                     src={botSideBeamImage}
                     className={moduleStyles.sideBeamImage}
                   />
-                )}
+                )*/}
 
                 <img src={botImage} className={moduleStyles.image} />
               </div>
