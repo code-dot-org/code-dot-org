@@ -10,14 +10,10 @@ module I18n
   module Resources
     module Pegasus
       module Emails
-        class SyncIn
+        class SyncIn < I18n::Utils::SyncInBase
           LOCALIZABLE_FILE_SUBPATHS = %w[
             hoc_signup_2023_receipt_en.md
           ].freeze
-
-          def self.perform
-            new.execute
-          end
 
           def execute
             progress_bar.start
@@ -27,7 +23,7 @@ module I18n
               next unless File.exist?(origin_file_path)
 
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, file_subpath)
-              i18n_source_file_path = i18n_source_file_path.sub('public/public/', '')
+              i18n_source_file_path = i18n_source_file_path.sub('public/', '')
 
               I18nScriptUtils.copy_file(origin_file_path, i18n_source_file_path)
               I18n::Utils::PegasusMarkdown.sanitize_file_header(i18n_source_file_path)
@@ -38,17 +34,10 @@ module I18n
             progress_bar.finish
           end
 
-          private
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Pegasus/emails sync-in',
-              total: LOCALIZABLE_FILE_SUBPATHS.size
-            )
-          end
-
-          def mutex
-            @mutex ||= Thread::Mutex.new
+          def process
+            LOCALIZABLE_FILE_SUBPATHS.each do |file|
+              I18nScriptUtils.copy_file(`#{ORIGIN_DIR_PATH}/#{file}`, I18N_SOURCE_DIR_PATH)
+            end
           end
         end
       end
@@ -56,4 +45,4 @@ module I18n
   end
 end
 
-I18n::Resources::Pegasus::Markdown::SyncIn.perform if __FILE__ == $0
+I18n::Resources::Pegasus::Emails::SyncIn.perform if __FILE__ == $0

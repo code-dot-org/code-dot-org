@@ -8,17 +8,17 @@ module I18n
   module Resources
     module Pegasus
       def self.sync_in
+        Emails.sync_in
         HourOfCode.sync_in
         Markdown.sync_in
         Mobile.sync_in
-        Emails.sync_in
       end
 
       def self.sync_out
+        Emails.sync_out
         HourOfCode.sync_out
         Markdown.sync_out
         Mobile.sync_out
-        Emails.sync_out
       end
     end
   end
