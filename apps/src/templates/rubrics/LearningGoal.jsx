@@ -145,6 +145,13 @@ export default function LearningGoal({
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
+      ...(reportingData || {}),
+      learningGoalId: learningGoal.id,
+      learningGoal: learningGoal.learningGoal,
+      newlySelectedEvidenceLevel: radioButtonData,
+      previouslySelectedEvidenceLevel: understandingLevel.current,
+    });
     setDisplayUnderstanding(radioButtonData);
     understandingLevel.current = radioButtonData;
     if (!isAutosaving) {

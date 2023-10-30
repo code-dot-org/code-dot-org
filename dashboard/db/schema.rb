@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_17_201252) do
+ActiveRecord::Schema.define(version: 2023_10_26_194936) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -638,19 +638,14 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
   end
 
   create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "learning_goal_id"
-    t.integer "project_id"
-    t.string "project_version"
+    t.bigint "rubric_ai_evaluation_id", null: false
+    t.bigint "learning_goal_id", null: false
     t.integer "understanding"
+    t.integer "ai_confidence"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "requester_id"
-    t.integer "ai_confidence"
-    t.integer "status", default: 0
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
-    t.index ["requester_id"], name: "index_learning_goal_ai_evaluations_on_requester_id"
-    t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
+    t.index ["rubric_ai_evaluation_id"], name: "index_learning_goal_ai_evaluations_on_rubric_ai_evaluation_id"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1650,6 +1645,20 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
+  create_table "rubric_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "requester_id", null: false
+    t.bigint "rubric_id", null: false
+    t.integer "project_id", null: false
+    t.string "project_version"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["requester_id"], name: "rubric_ai_evaluation_requester_index"
+    t.index ["rubric_id"], name: "rubric_ai_evaluation_rubric_index"
+    t.index ["user_id"], name: "index_rubric_ai_evaluations_on_user_id"
+  end
+
   create_table "rubrics", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "level_id", null: false
@@ -1874,8 +1883,10 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
     t.boolean "restrict_section", default: false
     t.text "properties"
     t.string "participant_type", default: "student", null: false
+    t.bigint "lti_integration_id"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
+    t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
     t.index ["user_id"], name: "index_sections_on_user_id"
   end
 
@@ -2293,7 +2304,8 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "learning_goal_ai_evaluations", "users", column: "requester_id", name: "index_learning_goal_ai_evaluations_on_requester_id"
+  add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
+  add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
@@ -2317,12 +2329,16 @@ ActiveRecord::Schema.define(version: 2023_10_17_201252) do
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "queued_account_purges", "users"
+  add_foreign_key "rubric_ai_evaluations", "rubrics"
+  add_foreign_key "rubric_ai_evaluations", "users"
+  add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
+  add_foreign_key "sections", "lti_integrations"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
