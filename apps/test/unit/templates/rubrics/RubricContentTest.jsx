@@ -249,9 +249,10 @@ describe('RubricContent', () => {
     );
   });
 
-  it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
+  it('passes down respective ai evaluation to the LearningGoal', async () => {
     const aiEvaluations = [
-      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+      {learning_goal_id: 1, understanding: 1, ai_confidence: 1},
+      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     const wrapper = mount(
       <RubricContent
@@ -267,7 +268,9 @@ describe('RubricContent', () => {
     );
 
     const learningGoal2Wrapper = wrapper.find('LearningGoal').at(1);
-    expect(learningGoal2Wrapper.prop('aiEvaluation')).to.eql(aiEvaluationsMock);
+    expect(learningGoal2Wrapper.prop('aiEvaluation')).to.equal(
+      aiEvaluations[1]
+    );
 
     sinon.restore();
   });

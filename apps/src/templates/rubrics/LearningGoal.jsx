@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import style from './rubrics.module.scss';
 import {
+  aiEvaluationShape,
   learningGoalShape,
   reportingDataShape,
   studentLevelInfoShape,
@@ -308,7 +309,7 @@ LearningGoal.propTypes = {
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  aiEvaluation: PropTypes.object,
+  aiEvaluation: aiEvaluationShape,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,

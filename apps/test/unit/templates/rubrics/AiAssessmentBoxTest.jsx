@@ -11,6 +11,7 @@ describe('AiAssessmentBox', () => {
     isAiAssessed: true,
     studentName: 'Jane Doe',
     aiEvaluation: {
+      learning_goal_id: 1,
       understanding: RubricUnderstandingLevels.CONVINCING,
       ai_confidence: 1,
     },
@@ -27,6 +28,7 @@ describe('AiAssessmentBox', () => {
     const updatedProps = {
       ...props,
       aiEvaluation: {
+        learning_goal_id: 1,
         understanding: RubricUnderstandingLevels.CONVINCING,
         ai_confidence: null,
       },
@@ -55,6 +57,7 @@ describe('AiAssessmentBox', () => {
     const updatedProps = {
       ...props,
       aiEvaluation: {
+        learning_goal_id: 1,
         understanding: RubricUnderstandingLevels.LIMITED,
         ai_confidence: 1,
       },

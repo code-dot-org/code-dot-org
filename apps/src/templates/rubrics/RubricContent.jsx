@@ -90,37 +90,13 @@ export default function RubricContent({
     }
   };
 
-  const getAiUnderstanding = learningGoalId => {
+  const getAiEvaluationForLearningGoal = learningGoalId => {
     if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
+      return aiEvaluations.find(
+        aiEvaluation => aiEvaluation.learning_goal_id === learningGoalId
       );
-      return aiInfo?.understanding;
-    } else {
-      return null;
     }
-  };
-
-  const getAiConfidence = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.ai_confidence;
-    } else {
-      return null;
-    }
-  };
-
-  const getAiInfo = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo;
-    } else {
-      return null;
-    }
+    return null;
   };
 
   let infoText = null;
@@ -196,7 +172,7 @@ export default function RubricContent({
             canProvideFeedback={canProvideFeedback}
             reportingData={reportingData}
             studentLevelInfo={studentLevelInfo}
-            aiEvaluation={aiEvaluations}
+            aiEvaluation={getAiEvaluationForLearningGoal(lg.id)}
             isStudent={false}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}

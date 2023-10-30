@@ -37,7 +37,7 @@ export default function AiAssessment({
 AiAssessment.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
   studentName: PropTypes.string,
-  aiEvaluation: PropTypes.object,
+  aiEvaluation: aiEvaluationShape,
   studentSubmitted: PropTypes.bool,
   learningGoalKey: PropTypes.string,
 };
