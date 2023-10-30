@@ -42,12 +42,10 @@ export enum AiOutput {
   BOTH = 'both',
 }
 
-// The first item is user readable / translated string (eg, "Blooming Petals"),
-// and the second item is english-only key (eg, "blooming_petals").
-// Example: ['Blooming Petals', 'blooming_petals']
-export type TranslationTuple = [string, string];
-
-export type DropdownTranslations = TranslationTuple[];
+// The keys are English-only (eg, "blooming_petals"),
+// and values is user readable / translated string (eg, "Blooming Petals").
+// Example: {'blooming_petals': 'Blooming Petals'}
+export type DropdownTranslations = {[id: string]: string};
 
 export type Translations = {
   [key in FieldKey]: DropdownTranslations;

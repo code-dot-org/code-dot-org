@@ -12,13 +12,7 @@ import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {
-  AiOutput,
-  TranslationTuple,
-  DropdownTranslations,
-  Translations,
-  FieldKey,
-} from '../types';
+import {AiOutput, DropdownTranslations, Translations, FieldKey} from '../types';
 import {generateBlocks, generateBlocksFromResult} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -94,13 +88,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const translations: Translations = useMemo(() => {
     const blocksSvg = generateBlocks(Blockly.getMainWorkspace());
 
-    const foregroundTranslations = getTranslationsFromField(
+    const foregroundTranslations = getTranslationsMap(
       blocksSvg[0].getField('EFFECT') as FieldDropdown
     );
-    const backgroundTranslations = getTranslationsFromField(
+    const backgroundTranslations = getTranslationsMap(
       blocksSvg[1].getField('EFFECT') as FieldDropdown
     );
-    const paletteTranslations = getTranslationsFromField(
+    const paletteTranslations = getTranslationsMap(
       blocksSvg[1].getField('PALETTE') as FieldDropdown
     );
 
@@ -608,18 +602,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   );
 };
 
-const getTranslationsFromField = (
+export const getTranslationsMap = (
   dropdown: FieldDropdown
 ): DropdownTranslations => {
-  // Keys from blockly are surrounded in double quotes
-  // eg, '"blooming_petals"'. Remove them for easier use.
-  const stripDoubleQuotes = (translationTuple: TranslationTuple) => {
-    translationTuple[1] = translationTuple[1].replace(/"/g, '');
-    return translationTuple;
-  };
+  const options = dropdown.getOptions() as [string, string][];
 
-  const dropdownOptions = dropdown.getOptions() as DropdownTranslations;
-  return dropdownOptions.map(stripDoubleQuotes);
+  const map: DropdownTranslations = {};
+  options.forEach(option => {
+    // Keys from blockly are surrounded in double quotes
+    // eg, '"blooming_petals"'. Remove them for easier use.
+    const id = option[1].replace(/"/g, '');
+
+    map[id] = option[0];
+  });
+  return map;
 };
 
 export default DanceAiModal;

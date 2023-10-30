@@ -2,12 +2,7 @@ import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
-import {
-  DropdownTranslations,
-  TranslationTuple,
-  Translations,
-  FieldKey,
-} from '../types';
+import {DropdownTranslations, Translations, FieldKey} from '../types';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -96,10 +91,8 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
         ticks: {
           color: function (context) {
             const translations = currentField.labelTranslations;
-            const translation = getTranslation(
-              result[currentFieldKey],
-              translations
-            );
+            const key = result[currentFieldKey];
+            const translation = translations[key];
 
             if (translation && context.tick.label === translation) {
               return 'rgba(54, 162, 235, 1)';
@@ -119,11 +112,10 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
 
   const labels = currentField.data.output.map(label => {
     const translations = currentField.labelTranslations;
-    const translation = getTranslation(label, translations);
 
     // If we can't find a translation for the key from the model,
     // display the untranslated key.
-    return translation || label;
+    return translations[label] || label;
   });
 
   const emojiAssociations = currentField.data.emojiAssociations;
@@ -166,17 +158,6 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
       <Bar width={800} height={255} options={options} data={data} />
     </div>
   );
-};
-
-const getTranslation = (
-  key: string,
-  translations: DropdownTranslations
-): string | undefined => {
-  const translationTuple: TranslationTuple | undefined = translations.find(
-    translationMapping => translationMapping[1] === key
-  );
-
-  return translationTuple ? translationTuple[0] : undefined;
 };
 
 export default AiExplanationView;
