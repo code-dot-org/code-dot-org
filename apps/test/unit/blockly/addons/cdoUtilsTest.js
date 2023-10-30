@@ -321,30 +321,6 @@ describe('CdoUtils', () => {
     });
 
     it('should call getCombinedSerialization and with a null second argument if the hidden workspace does not exist', () => {
-      // const workspaceStub = {};
-      // const singleSerializationStub = {blocks: {blocks: []}, procedures: []};
-      // const combinedSerializationStub = {blocks: {blocks: []}, procedures: []};
-
-      // const saveStub = sandbox
-      //   .stub(Blockly.serialization.workspaces, 'save')
-      //   .returns(singleSerializationStub);
-      // const getHiddenDefinitionWorkspaceStub = sandbox
-      //   .stub(Blockly, 'getHiddenDefinitionWorkspace')
-      //   .returns(undefined);
-      // const getCombinedSerializationStub = sinon
-      //   .stub(cdoSerializationHelpers, 'getCombinedSerialization')
-      //   .returns(combinedSerializationStub);
-
-      // const result = getCode(workspaceStub, true);
-
-      // expect(saveStub).to.have.been.calledOnce.with(workspaceStub);
-      // expect(getHiddenDefinitionWorkspaceStub).to.have.been.calledOnce;
-      // expect(getCombinedSerializationStub).to.have.been.calledWith(
-      //   singleSerializationStub,
-      //   null
-      // );
-      // expect(result).to.equal(JSON.stringify(combinedSerializationStub));
-
       const workspaceStub = {};
       const singleSerializationStub = {blocks: {blocks: []}, procedures: []};
       const combinedSerializationStub = {blocks: {blocks: []}, procedures: []};
@@ -365,7 +341,7 @@ describe('CdoUtils', () => {
 
       const result = getCode(workspaceStub, true);
 
-      expect(saveStub).to.have.been.calledTwice;
+      expect(saveStub).to.have.been.calledOnce;
       expect(getHiddenDefinitionWorkspaceStub).to.have.been.calledOnce;
       expect(getCombinedSerializationStub).to.have.been.calledOnce;
       expect(getCombinedSerializationStub.getCall(0).args).to.deep.equal([
