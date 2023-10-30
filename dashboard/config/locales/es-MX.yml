@@ -4,6 +4,8 @@ es-MX:
     attributes:
       user:
         age: Edad
+        ai_rubrics_disabled: Desactivar la función de rúbrica de IA
+        ai_settings_header: Configuración de IA
         current_password: Contraseña actual
         edit_header: Editar información de la cuenta
         email: Correo electrónico

@@ -6,6 +6,10 @@ hy:
         options:
           UNIT:
             '"seconds"': վայրկյան
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       Dancelab_changePropBy:
         options:
           PROPERTY:

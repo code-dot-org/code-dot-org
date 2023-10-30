@@ -56,9 +56,7 @@ pl:
             '3.00': bardzo duży
         text: ustaw {SPRITE} woelkość na {SIZE}
       Dancelab_ai:
-        text: użyj AI do {VALUE}
-      Dancelab_aiText:
-        text: użyj AI do {VALUE}
+        text: użyj AI do {IMAGE}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -108,6 +106,12 @@ pl:
             '"measures"': takty
             '"seconds"': sekundy
         text: po {TIMESTAMP} taktach {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekundy
+        text: w {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -644,6 +648,58 @@ pl:
             '"tropical"': Tropikalne
             '"vintage"': Starocie
             '"warm"': Ciepły
+        text: ustaw efekt tła {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Kółka
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco"': Kwadraty
+            '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
+            '"flowers"': Kwiaty
+            '"galaxy"': Przestrzeń
+            '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"music_wave"': Fale
+            '"none"': Żaden
+            '"quads"': Kąty
+            '"rainbow"': Tęcza
+            '"rand"': "(Losowy)"
+            '"ripples"': Fale
+            '"ripples_random"': Losowe fale
+            '"snowflakes"': Śnieg
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"splatter"': Rozpryski farby
+            '"squiggles"': Pokręcone linie
+            '"starburst"': Rozprysk
+            '"stars"': Gwiazdy
+            '"swirl"': Hypno
+            '"text"': Tytuły piosenek
+          PALETTE:
+            '"autumn"': Jesień
+            '"cool"': Chłodny
+            '"default"': Jasne
+            '"electronic"': Elektroniczny
+            '"iceCream"': Lody
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Tęcza
+            '"rave"': Czarno-białe
+            '"roses"': Róże
+            '"sky"': Niebo
+            '"spring"': Wiosna
+            '"summer"': Lato
+            '"sunrise"': Wschód słońca
+            '"sunset"': Zachód słońca
+            '"tropical"': Tropikalne
+            '"vintage"': Starocie
+            '"warm"': Ciepły
+            '"winter"': Zima
         text: ustaw efekt tła {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:

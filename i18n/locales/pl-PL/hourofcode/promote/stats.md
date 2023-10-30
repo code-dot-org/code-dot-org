@@ -16,7 +16,7 @@ title: Notki i przydatne statystyki
 
 #### Wprowadź informatykę do swojej szkoły. Zacznij z Godziną Kodowania!
 
-Ponieważ technologia zmienia każdą branżę na świecie, znajomość informatyki staje się częścią wszechstronnego zestawu umiejętności. But just half of all schools offer computer science! Dobrą wiadomością jest, że zamierzamy to zmienić. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Ponieważ technologia zmienia każdą branżę na świecie, znajomość informatyki staje się częścią wszechstronnego zestawu umiejętności. Ale tylko połowa wszystkich szkół (w USA) oferuje informatykę! Dobrą wiadomością jest, że zamierzamy to zmienić. Jeśli słyszałeś o Godzinie Kodowania, być może wiesz, że przeszła ona już do historii. Ponad 100 milionów uczniów odkryło, jak przystępna i przyjemna może być informatyka, wykonując tylko jedną Godzinę Kodowania.
 
 Godzina Kodowania jest godzinnym wstępem do informatyki, mającym na celu odczarowanie programowania i pokazanie, że każdy może nauczyć się podstaw. Dowiedz się więcej tutaj [ http://HourOfCode.com](http://HourofCode.com), próbuj godzinę samodzielnie lub lub będąc gospodarzem wydarzenia Godzina Kodowania, aby wprowadzić innych w świat informatyki!
 
@@ -30,7 +30,7 @@ Mamy nadzieję, że uda się rozbudzić zainteresowanie uczniów, by kontynuowal
 
 #### Dlaczego jest to ważne?
 
-There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Bez względu na to, czy nasi uczniowie w dorosłym życiu pójdą w kierunku medycyny, biznesu, polityki, czy sztuki, wiedza o tworzeniu technologii doda im pewności siebie w każdej dziedzinie i pozwoli im odnieść sukces. <br /> <br />
+W Stanach Zjednoczonych jest prawie 700 000 wolnych miejsc pracy w dziedzinie informatyki, ale tylko 80 000 studentów wproczyło na rynek pracy w zeszłym roku. A 47 procent szkół w USA nie oferuje informatyki. Najwyższy czas, by nadążyć za XXI wiekiem. Bez względu na to, czy nasi uczniowie w dorosłym życiu pójdą w kierunku medycyny, biznesu, polityki, czy sztuki, wiedza o tworzeniu technologii doda im pewności siebie w każdej dziedzinie i pozwoli im odnieść sukces. <br /> <br />
 
 #### Cytat, którego możesz użyć w materiałach
 
@@ -38,7 +38,7 @@ There are nearly 700,000 open computing jobs in the US, but only 80,000 computer
 
 #### O Code.org
 
-Code.org to publiczna organizacja non-profit 501c3, której celem jest poszerzanie udziału w informatyce oraz zwiększanie udziału młodych kobiet i uczniów z innych, niedostatecznie reprezentowanych grup. Jego wizja polega na tym, że każdy uczeń w każdej szkole ma możliwość nauki programowania komputerów. Po uruchomieniu w 2013, Code.org zainicjowała Godzinę Kodowania, która do dzisiaj stała się wprowadzeniem do informatyki dla ponad 100 milionów uczniów, współpracując z 70 okręgami szkół publicznych w USA, aby rozwijać programy zajęć informatycznych. Organizacja Code.org jest wspierana przez dobroczynne darowizny od korporacji, fundacji i hojnych osób, w tym Microsoft, Facebook, Infosys Foundation, USA, Amazon i inne. Aby uzyskać więcej informacji, odwiedź [code.org]({{ codeorg_link }}).
+Code.org to publiczna organizacja non-profit 501c3, której celem jest zwiększenie udziału w informatyce i zwiększenie udziału młodych kobiet i studentów z innych niedostatecznie reprezentowanych grup. Jego wizja polega na tym, że każdy uczeń w każdej szkole ma możliwość nauki programowania komputerów. Po uruchomieniu w 2013, Code.org zainicjowała Godzinę Kodowania, która do dzisiaj stała się wprowadzeniem do informatyki dla ponad 100 milionów uczniów, współpracując z 70 okręgami szkół publicznych w USA, aby rozwijać programy zajęć informatycznych. Organizacja Code.org jest wspierana przez dobroczynne darowizny od korporacji, fundacji i hojnych osób, w tym Microsoft, Facebook, Infosys Foundation, USA, Amazon i inne. Aby uzyskać więcej informacji, odwiedź [code.org]({{ codeorg_link }}).
 
 ## Udostępnij je w mediach społecznościowych i w przekazach e-mail
 

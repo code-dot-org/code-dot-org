@@ -8,7 +8,7 @@ title: د کوډ ساعت څنګه لارښود
 
 ### په غورځنګ کې ګډون وکړئ او خپل زده کونکي د دې مرحلو سره کمپیوټر ساینس ته معرفي کړئ.
 
-Students today should learn how to create technology, not just use it.
+نن زده کونکي باید زده کړي چې څنګه د ټیکنالوژۍ رامنځته کول، نه
 
 د کوډ ساعت هڅه کول د کمپیوټر ساینس ته زده کونکو معرفي کولو لپاره یوه ساده او ساتیري لار ده، شاید د لومړي ځل لپاره! یو فعالیت ومومئ چې ستاسو ترتیب سره سمون ولري، که په ټولګي کې یا له ښوونځي وروسته، په شخصي یا مجازی کې. زموږ د [ګډون لارښود ته یو نظر وګورئ که تاسو لاهم لاندې مرحلو چیک کولو]({{ localized_files/participation_guide }}) وروسته پوښتنې لرئ:
 
@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [ستاسو د کوډ ساعت قوي پیل کولو څرنګوالی](#how-to-start)
 - [کوډینګ ترلاسه کړئ](#code)
 - [د خپلو زده کونکو بریا ولمانځئ](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [د ښوونکو لپاره د کوډ ساعتي نور سرچینې](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-کله چې تاسو د خپل ساعت کوډ پیښې [لاسلیک کړئ](/#join)، نو تاسو به د کوډ بریالي ساعت کوربه کولو لپاره خبرونو او لارښوونو سره ګټور بریښنالیک مخابرات ترلاسه کړئ. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+کله چې تاسو [خپل ساعته د کوډ پیښې لاسلیک کړئ](/events)، تاسو به د کوډ د بریالي ساعت کوربه کولو لپاره د خبریالو او لارښوونې سره ګټوره بریښنالیک It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [ستاسو د محصلی]({{ urls/certificates }}) نو لپاره سندونه چاپ کړئ.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- په ټولنیزو رسنیو کې د خپل د ساعت د کوډ پیښې عکسونه او ویډیو شریک کړئ. #HourOfCode او @codeorg وکاروئ نو موږ کولی شو ستاسو بریالیتوب ته روښانه کړئ، هم!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## د ښوونکو لپاره د کوډ نور ساعت سرچینې:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- د کوډ ساع [تي سوالونه بیاکتنه](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کړئ.
 
 ### What comes after the Hour of Code?
 

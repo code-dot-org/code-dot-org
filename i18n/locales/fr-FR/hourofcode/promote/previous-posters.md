@@ -1,12 +1,12 @@
 ---
-title: Past Hour of Code Posters
+title: Anciennes affiches de l'Heure du code
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# Anciennes affiches de l'Heure du code
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Retrouvez nos affiches de ces dernières années pour les imprimer et les accrocher dans votre salle de classe ! Envie d'une nouvelle affiche ? [Cliquez ici]({{ promote/promote_posters_url }}).
 
 * * *
 

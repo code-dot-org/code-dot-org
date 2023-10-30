@@ -326,9 +326,6 @@
   volunteer_engineer_submission_subtitle_generic: 'Un total de 100.000 profesores van acoller unha Hora do Código nas súas aulas este ano, de 7 a 13 decembro de 2015. Queren a túa axuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} profesores queren voluntarios apaixoados pola informática para axudar coas súas Horas do Código este mes de decembro.<br>%{num_volunteers} voluntarios xa se inscribiron. Xúntate a eles."
   volunteer_engineer_submission_intro_background: "A Hora do Código é un movemento global que ofrece unha introdución dunha hora á informática e que atinxe decenas de millóns de estudantes en máis de 180 países. Participa ti tamén durante a Semana da Educación en informática, de 7 a 13 de decembro."
-  volunteer_engineer_submission_intro_recruit: 'Estes profesores adorarían ter alguén<span style="font-family: ''Gotham 7r'', sans-serif;">apaixoado polo ensino da informática</span> que puidese axudalos nas súas clases, ou alguén que puidese<span style="font-family: ''Gotham 7r'', sans-serif;">animar</span> os seus alumnos falando sobre a gama de posibilidades da informática (o que pode ser feito por medio de vídeo conferencia).'
-  volunteer_engineer_submission_intro_signup: "Fornece as seguintes informacións se és un estudante de informática ou un profesional do software. Os campos marcados cun <span class=\"form-required-field\">*</span> son obrigatorios."
-  volunteer_engineer_submission_intro_links: "Necesitas un voluntario? Atopa un voluntario local no noso <a href=\"%{volunteer_local}\">mapa de voluntarios</a>."
   volunteer_engineer_submission_update_information: "Actualiza a túa información"
   volunteer_engineer_submission_header_shared: "Informacións compartidas con profesores no mapa de voluntarios"
   volunteer_engineer_submission_field_name: "Nome"

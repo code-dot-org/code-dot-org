@@ -75,7 +75,7 @@ Vaai i galuega faatino ma fuafua mamao lava e oe pe e te filifili se vasega se t
     
     ### Ia faailoa i nisi e tagata e ono fesoasoani i lau polokalame e ala lea i le Resitalaina o lau Polokalame
     
-    When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. O leisi foi lea auala e faailoa ai i ni tagata o loo fia fesoasoani o loo auai lau aoga i le polokalame. O tagata fesoasoani e aoga tele ma e mafai ona o atu e fai ni a latou tautualaga i lau vasega e faatatau i tulaga tau komepiuta faasaienisi pe fesoasoani i tamaiti aoga i galuega faatino a le Hour of Code. 
+    When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. O leisi foi lea auala e faailoa ai i ni tagata o loo fia fesoasoani o loo auai lau aoga i le polokalame. O tagata fesoasoani e aoga tele ma e mafai ona o atu e fai ni a latou tautualaga i lau vasega e faatatau i tulaga tau komepiuta faasaienisi pe fesoasoani i tamaiti aoga i galuega faatino a le Hour of Code. 
     
     ### Ia faafiafia au tamaiti aoga. 
     
