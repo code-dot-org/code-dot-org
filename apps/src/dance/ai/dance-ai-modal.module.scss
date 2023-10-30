@@ -355,6 +355,7 @@ $ai-modal-border-width: 8px;
 
     .previewArea {
       position: absolute;
+      width: 500px;
       height: 280px;
       top: 40px;
       left: 50%;
@@ -363,11 +364,39 @@ $ai-modal-border-width: 8px;
       align-items: center;
       margin-top: 10px;
       animation: appear1 2s;
-      backface-visibility: hidden;
-      transition: transform 0.8s;
 
-      &Hide {
-        transform: rotateY(180deg);
+      .flipCard {
+        position: absolute;
+        top: 0;
+        perspective: 1400px;
+        width: 100%;
+        height: 100%;
+
+        &Inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+
+          &Flipped {
+            transform: rotateY(180deg);
+          }
+        }
+
+        &Front, &Back {
+          position: absolute;
+          backface-visibility: hidden;
+          left: 50%;
+        }
+
+        &Front {
+          transform: translateX(-50%);
+        }
+
+        &Back {
+          transform: rotateY(180deg) translateX(50%);
+        }
       }
 
       .score {

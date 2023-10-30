@@ -557,55 +557,70 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div id="outputs-area" className={moduleStyles.outputsArea}>
-          {mode === Mode.RESULTS_FINAL /* && currentToggle === 'code' */ && (
-            <div
-              id="generating-block-preview"
-              className={classNames(
-                moduleStyles.blockPreview,
-                currentToggle !== 'code' && moduleStyles.blockPreviewHide
-              )}
-            >
-              <AiBlockPreview
-                generateBlocksFromResult={generateBlocksFromResult}
-              />
-            </div>
-          )}
-        </div>
-
         {(mode === Mode.GENERATING || mode === Mode.RESULTS_FINAL) &&
           currentPreview && (
             <div
               key={generatingStep}
-              id={'preview-area'}
-              className={classNames(
-                moduleStyles.previewArea,
-                mode === Mode.RESULTS_FINAL &&
-                  currentToggle !== 'ai-block' &&
-                  moduleStyles.previewAreaHide
-              )}
+              id="preview-area"
+              className={moduleStyles.previewArea}
             >
-              <AiVisualizationPreview
-                blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
-              />
-              {mode === Mode.GENERATING &&
-                currentPreviewScore !== undefined && (
-                  <div className={moduleStyles.score}>
-                    <div className={moduleStyles.barContainer}>
-                      <div
-                        className={moduleStyles.barFill}
-                        style={{
-                          height: Math.round(2 * currentPreviewScore * 10),
-                        }}
-                      >
-                        &nbsp;
-                      </div>
-                    </div>
-                    <div className={moduleStyles.text}>
-                      {Math.round(currentPreviewScore * 10)}
-                    </div>
+              <div id="flip-card" className={moduleStyles.flipCard}>
+                <div
+                  id="flip-card-inner"
+                  className={classNames(
+                    moduleStyles.flipCardInner,
+                    mode === Mode.RESULTS_FINAL &&
+                      currentToggle === 'code' &&
+                      moduleStyles.flipCardInnerFlipped
+                  )}
+                >
+                  <div
+                    id="flip-card-front"
+                    className={moduleStyles.flipCardFront}
+                  >
+                    <AiVisualizationPreview
+                      blocks={generateBlocksFromResult(
+                        Blockly.getMainWorkspace()
+                      )}
+                    />
+                    {mode === Mode.GENERATING &&
+                      currentPreviewScore !== undefined && (
+                        <div className={moduleStyles.score}>
+                          <div className={moduleStyles.barContainer}>
+                            <div
+                              className={moduleStyles.barFill}
+                              style={{
+                                height: Math.round(
+                                  2 * currentPreviewScore * 10
+                                ),
+                              }}
+                            >
+                              &nbsp;
+                            </div>
+                          </div>
+                          <div className={moduleStyles.text}>
+                            {Math.round(currentPreviewScore * 10)}
+                          </div>
+                        </div>
+                      )}
                   </div>
-                )}
+                  <div
+                    id="flip-card-back"
+                    className={moduleStyles.flipCardBack}
+                  >
+                    {mode === Mode.RESULTS_FINAL && (
+                      <div
+                        id="block-preview"
+                        className={moduleStyles.blockPreview}
+                      >
+                        <AiBlockPreview
+                          generateBlocksFromResult={generateBlocksFromResult}
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           )}
 
