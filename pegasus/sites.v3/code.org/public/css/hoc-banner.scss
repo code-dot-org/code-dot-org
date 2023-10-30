@@ -9,6 +9,10 @@
     height: 400px;
   }
 
+  @media screen and (max-width: $width-sm) {
+    height: 500px;
+  }
+
   & > div.col-33 {
     position: absolute;
 
@@ -17,11 +21,12 @@
       height: inherit;
       max-width: 500px;
       left: 0;
-      bottom: 0;
+      top: -10%;
 
       @media screen and (max-width: $width-md) {
         width: 45%;
-        left: -6%;
+        left: -9%;
+        top: -3rem;
       }
     }
 
@@ -34,6 +39,7 @@
 
       @media screen and (max-width: $width-lg) {
         width: 570px;
+        margin-top: -0.5rem;
       }
 
       @media screen and (max-width: $width-sm) {
@@ -111,6 +117,11 @@
       font-size: 1.35em;
     }
   }
+}
+
+// Misc styles that need to be overridden
+.widehero_do_not_hide.phone-feature {
+  background-position: 50% 0% !important;
 }
 
 #homepage #actions .herohocbutton-solid-yellow {
