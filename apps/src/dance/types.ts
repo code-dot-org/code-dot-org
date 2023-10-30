@@ -45,10 +45,10 @@ export enum AiOutput {
 // The keys are English-only (eg, "blooming_petals"),
 // and values is user readable / translated string (eg, "Blooming Petals").
 // Example: {'blooming_petals': 'Blooming Petals'}
-export type DropdownTranslations = {[id: string]: string};
+export type DropdownLabels = {[id: string]: string};
 
 export type Translations = {
-  [key in FieldKey]: DropdownTranslations;
+  [key in FieldKey]: DropdownLabels;
 };
 
 export enum FieldKey {

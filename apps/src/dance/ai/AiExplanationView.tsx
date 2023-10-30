@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
-import {DropdownTranslations, Translations, FieldKey} from '../types';
+import {DropdownLabels, Translations, FieldKey} from '../types';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -40,7 +40,7 @@ interface AiExplanationViewProps {
 interface FieldObject {
   name: string;
   data: CachedWeightsMapping;
-  labelTranslations: DropdownTranslations;
+  labelTranslations: DropdownLabels;
 }
 
 interface Fields {

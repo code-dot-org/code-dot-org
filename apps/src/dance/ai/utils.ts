@@ -1,5 +1,5 @@
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
-import {DropdownTranslations} from '@cdo/apps/dance/types';
+import {DropdownLabels} from '@cdo/apps/dance/types';
 
 /**
  * Generates blocks from the AI result in a given workspace,
@@ -32,12 +32,10 @@ export const generateBlocks = (workspace: Workspace): [BlockSvg, BlockSvg] => {
   ];
 };
 
-export const getTranslationsMap = (
-  dropdown: FieldDropdown
-): DropdownTranslations => {
+export const getTranslationsMap = (dropdown: FieldDropdown): DropdownLabels => {
   const options = dropdown.getOptions() as [string, string][];
 
-  const map: DropdownTranslations = {};
+  const map: DropdownLabels = {};
   options.forEach(option => {
     // Keys from blockly are surrounded in double quotes
     // eg, '"blooming_petals"'. Remove them for easier use.
