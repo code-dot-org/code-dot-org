@@ -33,7 +33,7 @@
             %div= "Title: #{level.properties['title']}"
           - if level.properties['long_instructions']
             - markdown = level.properties['long_instructions']
-            =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
+            =ActionView::Base.with_empty_template_cache.empty.render(inline: markdown, type: :md) unless markdown.blank?
           = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
           - if level.properties['questions']
             %div= "Questions: #{level.properties['questions']}"
