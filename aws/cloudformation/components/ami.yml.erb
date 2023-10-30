@@ -60,6 +60,16 @@ frontend_device_name ||= '/dev/sda1'
         Count: 1
   WebServerAMI:
     Type: AWS::EC2::Instance
+      # We don't yet provision the production database cluster/instances via CloudFormation.
+<% if database && !rack_env?(:production) %>
+    DependsOn:
+      - WriterSQLUser
+      - ReaderSQLUser
+      - DBWriterEndpointConfig
+      - DBProxyWriterEndpointConfig
+      - DBProxyReaderEndpointConfig
+      - DBProxyReportingEndpointConfig
+<% end -%>
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>

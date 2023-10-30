@@ -571,7 +571,13 @@ Resources:
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <% if database && !rack_env?(:production) %>
-    DependsOn: DBProxy
+    DependsOn:
+      - WriterSQLUser
+      - ReaderSQLUser
+      - DBWriterEndpointConfig
+      - DBProxyWriterEndpointConfig
+      - DBProxyReaderEndpointConfig
+      - DBProxyReportingEndpointConfig
 <% end -%>
 <%end-%>
 
@@ -618,10 +624,16 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-# We don't yet provision the production database cluster/instances via CloudFormation.
-<%   if database && !rack_env?(:production)%>
-    DependsOn: DBProxy
-<%   end -%>
+    # We don't yet provision the production database cluster/instances via CloudFormation.
+<% if database && !rack_env?(:production) %>
+    DependsOn:
+      - WriterSQLUser
+      - ReaderSQLUser
+      - DBWriterEndpointConfig
+      - DBProxyWriterEndpointConfig
+      - DBProxyReaderEndpointConfig
+      - DBProxyReportingEndpointConfig
+<% end -%>
 <% end-%>
 
 
