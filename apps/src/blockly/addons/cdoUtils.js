@@ -65,7 +65,7 @@ function prepareSourcesForWorkspaces(source) {
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
-  const {mainSource, hiddenDefinitionSource} = extractHiddenProcedures(
+  const {mainSource, hiddenDefinitionSource} = moveHiddenProcedures(
     combinedSource,
     procedureTypesToHide
   );
@@ -95,7 +95,7 @@ function parseSource(source) {
 }
 
 /**
- * Extract hidden procedures from the source to a hidden definition object.
+ * Move hidden procedures from the source to a hidden definition object.
  * These will be used to initialize the main and hidden definitions workspaces, respectively.
  * Procedures are hidden if they have a type in the procedureTypesToHide array.
  * In addition, copy the procedure model from the source
@@ -105,7 +105,7 @@ function parseSource(source) {
  * @returns void
  * exported for unit testing
  */
-export function extractHiddenProcedures(source, procedureTypesToHide) {
+export function moveHiddenProcedures(source, procedureTypesToHide = []) {
   if (
     procedureTypesToHide.length === 0 ||
     !source.blocks ||
@@ -114,9 +114,8 @@ export function extractHiddenProcedures(source, procedureTypesToHide) {
     return;
   }
 
-  const clonedSource = _.cloneDeep(source);
-  const mainSource = clonedSource;
-  const hiddenDefinitionSource = clonedSource;
+  const mainSource = _.cloneDeep(source);
+  const hiddenDefinitionSource = _.cloneDeep(source);
 
   // Reset the values on the copies so they can be populated from scratch
   // All of the original source procedures can be retained on the main workspace
@@ -131,9 +130,10 @@ export function extractHiddenProcedures(source, procedureTypesToHide) {
     destination.blocks.blocks.push(block);
 
     // Also copy the procedure model for blocks to that need to be hidden
+    // Equality check works because hiddenDefinitionSource and mainSource are different object references
     if (destination === hiddenDefinitionSource) {
       const procedureModel = source.procedures.find(
-        p => p.id === block.extraState.procedureId
+        procedure => procedure.id === block.extraState?.procedureId
       );
       if (procedureModel) {
         hiddenDefinitionSource.procedures.push(procedureModel);
