@@ -13,6 +13,7 @@ import AgeDialog from '../templates/AgeDialog';
 import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
+// import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 export const SongSelector = Radium(
   class extends React.Component {
@@ -40,6 +41,26 @@ export const SongSelector = Radium(
           <label>
             <b>{i18n.selectSong()}</b>
           </label>
+          {/*<button type="button"*/}
+          {/*onClick={ () => {*/}
+          {/*    console.log('start playing song');*/}
+          {/*    audioCommands.playSound({*/}
+          {/*    url: songData[selectedSong].url,*/}
+          {/*    callback: () => {*/}
+          {/*    setTimeout(() => {*/}
+          {/*    audioCommands.stopSound({url: songData[selectedSong].url});*/}
+          {/*}, 10000);*/}
+          {/*    console.log('callback');*/}
+          {/*},*/}
+          {/*    onEnded: () => {*/}
+          {/*    console.log('end');*/}
+          {/*    // onEnded();*/}
+          {/*    // this.studioApp_.toggleRunReset('run');*/}
+          {/*},*/}
+          {/*});*/}
+          {/*}}>*/}
+          {/*    Preview song*/}
+          {/*</button>*/}
           <select
             id="song_selector"
             style={styles.selectStyle}
@@ -90,6 +111,8 @@ class DanceVisualizationColumn extends React.Component {
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
+    // const {nativeApi} = this.props;
+    // console.log(nativeApi);
 
     const imgSrc = filenameToImgUrl['click-to-run'];
 
