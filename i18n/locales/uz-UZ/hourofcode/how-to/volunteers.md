@@ -133,132 +133,146 @@ Nima maqsadga muvofiq ekanligini muhokama qilish uchun Maktab yoki o'qituvchi bi
 - Texnologiya hayotimizga qanday ta’sir qilishini, har xil o'tmishga ega talabalarni qiziqtiradigan misollar bilan tushuntiring – hayotni saqlaydigan, odamlarga yordam beradigan va odamlarni bog‘laydigan texnologiyalar haqida gapirib bering.
 - Agar sizning kompaniyangiz texnologik kompaniya bo'lsa, kompaniyangiz ustida ishlayotgan qiziqarli, innovatsion mahsulotlarni namoyish qiling. Agar sizning kompaniyangiz texnologik kompaniya bo'lmasa, kompaniyangiz muammolarni hal qilish va maqsadlarga erishish uchun texnologiyalardan foydalanish usullarini muhokama qiling.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- Agar sizning tadbiringizga yordam beradigan yoki mahalliy maktabda ko'ngillilik qiladigan xodimlar guruhi bo'lsa, guruhingiz uchun [maxsus futbolkalar](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)ga buurtma berishga o'ylab ko'ring.
-
-### 3. Texnologik ehtiyojlaringizni rejalashtiring
-
-[![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
-
-#### Qurilmalar:
-
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Kompyutersiz mashg‘ulotlar uchun “Kompyuter yoki qurilmalar yo‘q” parametrlarini ko‘rsatish uchun Sinf Texnoligiyasi filtrlang.
-
-- Kompyuter yoki qurilmalarda **sinov faoliyatlari**. Ular ovozli va videoli brauzerlarda to'g'ri ishlashiga ishonch hosil qiling.
-- **Qurilmalaringiz yetarli emasmi?** Juft dasturlashdan foydalaning. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- Ishtirokchilaringizga **quloqchinlar** bering yoki ular tovushlar bilan eng yaxshi ishlaydigan darsliklarni sinab ko'rmoqchi bo'lsa, o'zlari bilan quloqchinlarini olib kelishlarini so'rang.
-- **Internet o'tkazuvchanligi qobiliyati past**mi? Har bir ishtirokchi o‘z videolarini yuklab olmasligi uchun tadbir ishtirokchilari oldida videolarni ko‘rsatishni rejalashtiring. Yoki o'chirilgan / oflayn holda faoliyat turlarini sinab ko'ring.
-
-#### Virtual Tadbirlar:
-
-Agar sizning tadbiringiz virtual bo'ladigan bo'lsa, tadbiringizdan oldin konferentsiya platformangizda bu haqida qaror qabul qilishingiz (va uni sinab ko'ring) kerak. Bu siz uchun qulay bo'lgan talabalar soniga ta'sir qilishi mumkin, shuning uchun sinfga taklif qilish yoki tadbiringizni targ'ib qilishdan oldin buni aniqlagan ma'qul. Dasturlash Soatini masofadan o'tkazish bo‘yicha g‘oyalar uchun [Virtual Dasturslash Soati tadbiri bo‘yicha maslahatlarimizni](https://hourofcode.com/us/how-to/virtual) o‘qib chiqing.
-
-### 4. Mashqni tanlang
-
-Biz barcha yosh guruhlari va tajriba darajalariga ega turli xil qiziqarli, talabalar tomonidan boshqariladigan o‘quv qo‘llanmalarini taqdim etamiz. Talabalar uchun mustaqil oʻzlari o'rganish o'quv qo'llanmalarini sinab koʻrishlari ommalashgan, bunga qaramay siz tadbirni [ilhomlantiruvchi video](https://hourofcode.com/us/promote/resources#videos)ni hamma bilan birgalikda tomosha qilish bilan boshlashingiz mumkin. 
+- Agar sizning tadbiringizni osonlashtiradigan yoki mahalliy maktab bilan ko'ngilli bo'ladigan xodimlar guruhi bo'lsa, guruhingiz</a> uchun maxsus futbolkalarni buyurtma qilishni o'ylab ko'ring.</li> </ul> 
+    
+    ### 3. Texnologik ehtiyojlaringizni rejalashtiring
+    
+    [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
+    
+    #### Qurilmalar:
+    
+    The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Kompyutersiz mashg‘ulotlar uchun “Kompyuter yoki qurilmalar yo‘q” parametrlarini ko‘rsatish uchun Sinf Texnoligiyasi filtrlang.
+    
+    - Kompyuter yoki qurilmalarda **sinov faoliyatlari**. Ular ovozli va videoli brauzerlarda to'g'ri ishlashiga ishonch hosil qiling.
+    - **Qurilmalaringiz yetarli emasmi?** Juft dasturlashdan foydalaning. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+    - Ishtirokchilaringizga **quloqchinlar** bering yoki ular tovushlar bilan eng yaxshi ishlaydigan darsliklarni sinab ko'rmoqchi bo'lsa, o'zlari bilan quloqchinlarini olib kelishlarini so'rang.
+    - **Internet o'tkazuvchanligi qobiliyati past**mi? Har bir ishtirokchi o‘z videolarini yuklab olmasligi uchun tadbir ishtirokchilari oldida videolarni ko‘rsatishni rejalashtiring. Yoki o'chirilgan / oflayn holda faoliyat turlarini sinab ko'ring.
+    
+    #### Virtual Tadbirlar:
+    
+    Agar sizning tadbiringiz virtual bo'ladigan bo'lsa, tadbiringizdan oldin konferentsiya platformangizda bu haqida qaror qabul qilishingiz (va uni sinab ko'ring) kerak. Bu siz uchun qulay bo'lgan talabalar soniga ta'sir qilishi mumkin, shuning uchun sinfga taklif qilish yoki tadbiringizni targ'ib qilishdan oldin buni aniqlagan ma'qul. Dasturlash Soatini masofadan o'tkazish bo‘yicha g‘oyalar uchun [Virtual Dasturslash Soati tadbiri bo‘yicha maslahatlarimizni](https://hourofcode.com/us/how-to/virtual) o‘qib chiqing.
+    
+    ### 4. Mashqni tanlang
+    
+    Biz barcha yosh guruhlari va tajriba darajalariga ega turli xil qiziqarli, talabalar tomonidan boshqariladigan o‘quv qo‘llanmalarini taqdim etamiz. Talabalar uchun mustaqil oʻzlari o'rganish o'quv qo'llanmalarini sinab koʻrishlari ommalashgan, bunga qaramay siz tadbirni [ilhomlantiruvchi video](https://hourofcode.com/us/promote/resources#videos)ni hamma bilan birgalikda tomosha qilish bilan boshlashingiz mumkin. 
+    
+    
 
 <a href="https://hourofcode.com/us/learn">mashg'ulotlarni o'rganib chiqing</a> va barcha mehmonlaringiz uchun bitta o'quv qo'llanmasini tanlashni xohlaysizmi, yoki har bir bola o'ziga tanlab olishiga ruxsat berasizmi, oldindan qaror qiling. **Dasturlash Soatining barcha mashg‘ulotlari** minimal tayyorgarlik vaqtini talab qiladi va mustaqil bajarilishi mumkin - bu ishtirokchilarga o‘z tezligi va mahorat darajasida ishlashga imkon beradi.
-
-[![](/images/tutorials.png)]({{ urls/learn }})
-
-Tadbiringiz uchun aniq yo'l xaritasiga ega bo'lgach, siz talabalarni, maktabni yoki kattaroq jamoani taklif qilishni boshlashingiz mumkin. Biz sizning aloqangiz boʻlgan mahalliy maktabdan boshlashni yoki Dasturlash Soati tadbirlarini [xaritamizdan koʻrib chiqishni](https://hourofcode.com/us/map) tavsiya qilamiz.
+    
+    [![](/images/tutorials.png)]({{ urls/learn }})
+    
+    Tadbiringiz uchun aniq yo'l xaritasiga ega bo'lgach, siz talabalarni, maktabni yoki kattaroq jamoani taklif qilishni boshlashingiz mumkin. Biz sizning aloqangiz boʻlgan mahalliy maktabdan boshlashni yoki Dasturlash Soati tadbirlarini [xaritamizdan koʻrib chiqishni](https://hourofcode.com/us/map) tavsiya qilamiz.
+    
+    
 
 <a id="celebrate"></a>
 
-### 5. Nishonlash
-
-[![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
-
-Talabalar yoki mehmonlar Dasturlash Soatini tugatgandan so'ng, ularning muvaffaqiyatini nishonlash vaqtiga yetib kelinadi. Tadbiringizni yanada qiziqarli qilish uchun bir nechta fikrlar mana bu yerda:
-
-- Ishtirokchilar va talabalarga [Sertifikatlarni tarqating]({{ urls/certificates }}).
-- [ “Men "Dasturlash soati"ni bajardim! stikerlar" Chop qilish]({{ promote/resources_stickers }}) yoki boshqa sovrinlarni olish va [Code.org Amazon Store](https://code.org/shop)da vaqt o'tkazish.
-- Ijtimoiy tarmoqlarda Dasturlash soati tadbiringizning fotosuratlari va videolarini baham ko'ring. Sizning muvaffaqiyatingizni namoish qila olishimiz uchun #HourOfCode va @codeorg xeshtegidan foydalaning.
-
-* * *
+    
+    ### 5. Nishonlash
+    
+    [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
+    
+    Talabalar yoki mehmonlar Dasturlash Soatini tugatgandan so'ng, ularning muvaffaqiyatini nishonlash vaqtiga yetib kelinadi. Tadbiringizni yanada qiziqarli qilish uchun bir nechta fikrlar mana bu yerda:
+    
+    - Ishtirokchilar va talabalarga [Sertifikatlarni tarqating]({{ urls/certificates }}).
+    - [ “Men "Dasturlash soati"ni bajardim! stikerlar" Chop qilish]({{ promote/resources_stickers }}) yoki boshqa sovrinlarni olish va [Code.org Amazon Store](https://code.org/shop)da vaqt o'tkazish.
+    - Ijtimoiy tarmoqlarda Dasturlash soati tadbiringizning fotosuratlari va videolarini baham ko'ring. Sizning muvaffaqiyatingizni namoish qila olishimiz uchun #HourOfCode va @codeorg xeshtegidan foydalaning.
+    
+    * * *
+    
+    
 
 <a id="promote-hour-of-code"></a>
 
-## Dasturlash Soati haqida xabar tarqating
-
-Yordam berishning eng yaxshi usullaridan biri bu haqida ma'lumotlarni tarqatish va Dasturlash Soatini targ'ib qilishdir.
-
-[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
-
-### 1. Tadbiringizni ro'yxatdan o'tkazing
-
-Siz [Dasturlash Soati tadbirini](/#join) ro‘yxatdan o‘tkazganingizda, sizga yangiliklar va Dasturlash Soatini muvaffaqiyatli o‘tkazish bo‘yicha maslahatlar bilan foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy maktablar yoki ota-onalarga ular yaqinida tadbir o'tkazayotganligingiz haqida xabar berishingiz mumkin.
-
-### 2. Ijtimoiy tarmoqlarga joylang
-
-Ijtimoiy tarmoqlarda joylashtirish va xodimlaringiz bilan baham ko'rish bilan ushbu namunaviy matn bilan kompyuter fanlari harakati haqida xabardorlikni oshirishga yordam bering.
-
-#### "Dasturlash Soati" umumiy e'loni
-
-- Kompyuter fanlari bizning dunyomizni o'zgartirmoqda. #HourOfCode bilan talabalarga ushbu oʻzgarishlarning bir qismi boʻlishga yordam bering. https://hourofcode.com/
-- Texnologiyadan faqat foydalanishni o'ylamang - uni qanday yaratishni ham o'rganing. #HourOfCode bilan kimgadir boshlab olish uchun yordam bering. https://hourofcode.com/
-
-#### Statistika
-
-- AQSH maktablarining atigi 53 foizi iformatikani o'qitishini bilasizmi? Har bir talabaga #HourOfCode https://hourofcode.com/ ni o'rganish imkoniyatini bering.
-- AQShda dasturiy ta'minot bo'yicha mutaxassislarning atigi 26 foizi ayollardir. #HourOfCode https://hourofcode.com/ yordamida ko'proq yosh hotin qizlarga kompyuter fanlari bilan tanishtiring.
-- AQSHdagi hisob-kitobga oid ishlarining 67 foizi texnologiya sohasida emas. #HourOfCode https://hourofcode.com/ yordamida kompyuter fanlarini standart oʻquv dasturiga kiritishga yordam bering.
-
-#### O'zingiznikini yarating
-
-- #HourOfCode [hikoyangizni kiriting] ga yetaklashi mumkin. https://hourofcode.com/
-- Men #HourOfCode ni qo'llab-quvvatlayman, chunki [fikrlaringizni to'ldiring]. Bizga qo'shiling https://hourofcode.com
-
-#### Maxsus-muhandis
-
-- Agar sizning birinchi kod qatoringiz hayotingizni o'zgartirgan bo'lsa, sizga yaqin bo'lgan talabalarga birinchi #HourOfCode yozishga yordam bering https://code.org/volunteer
-- Agar siz dasturlashni o'rgangan bo'lsangiz - sizning hikoyangiz qanday? Yaqiningizdagi talabani birinchi #HourOfCode https://code.org/volunteer orqali ruhlantiring
-
-Sizning tadbiringizni jamoaga targ'ib qilishning boshqa ussullari uchun <a href="https://hourofcode.com/promote/resources#posters"> afishalar, videolar, stikerlar haqida batafsil ma'lumot oling</a>.
-
-* * *
+    
+    ## Dasturlash Soati haqida xabar tarqating
+    
+    Yordam berishning eng yaxshi usullaridan biri bu haqida ma'lumotlarni tarqatish va Dasturlash Soatini targ'ib qilishdir.
+    
+    [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+    
+    ### 1. Tadbiringizni ro'yxatdan o'tkazing
+    
+    Kod soati [tadbiriga ro'yxatdan o'tganingizda](/events), muvaffaqiyatli Kod soati o'tkazish bo'yicha yangiliklar va maslahatlar bilan foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy maktablar yoki ota-onalarga ular yaqinida tadbir o'tkazayotganligingiz haqida xabar berishingiz mumkin.
+    
+    ### 2. Ijtimoiy tarmoqlarga joylang
+    
+    Ijtimoiy tarmoqlarda joylashtirish va xodimlaringiz bilan baham ko'rish bilan ushbu namunaviy matn bilan kompyuter fanlari harakati haqida xabardorlikni oshirishga yordam bering.
+    
+    #### "Dasturlash Soati" umumiy e'loni
+    
+    - Kompyuter fanlari bizning dunyomizni o'zgartirmoqda. #HourOfCode bilan talabalarga ushbu oʻzgarishlarning bir qismi boʻlishga yordam bering. https://hourofcode.com/
+    - Texnologiyadan faqat foydalanishni o'ylamang - uni qanday yaratishni ham o'rganing. #HourOfCode bilan kimgadir boshlab olish uchun yordam bering. https://hourofcode.com/
+    
+    #### Statistika
+    
+    - AQSH maktablarining atigi 53 foizi iformatikani o'qitishini bilasizmi? Har bir talabaga #HourOfCode https://hourofcode.com/ ni o'rganish imkoniyatini bering.
+    - AQShda dasturiy ta'minot bo'yicha mutaxassislarning atigi 26 foizi ayollardir. #HourOfCode https://hourofcode.com/ yordamida ko'proq yosh hotin qizlarga kompyuter fanlari bilan tanishtiring.
+    - AQSHdagi hisob-kitobga oid ishlarining 67 foizi texnologiya sohasida emas. #HourOfCode https://hourofcode.com/ yordamida kompyuter fanlarini standart oʻquv dasturiga kiritishga yordam bering.
+    
+    #### O'zingiznikini yarating
+    
+    - #HourOfCode [hikoyangizni kiriting] ga yetaklashi mumkin. https://hourofcode.com/
+    - Men #HourOfCode ni qo'llab-quvvatlayman, chunki [fikrlaringizni to'ldiring]. Bizga qo'shiling https://hourofcode.com
+    
+    #### Maxsus-muhandis
+    
+    - Agar sizning birinchi kod qatoringiz hayotingizni o'zgartirgan bo'lsa, sizga yaqin bo'lgan talabalarga birinchi #HourOfCode yozishga yordam bering https://code.org/volunteer
+    - Agar siz dasturlashni o'rgangan bo'lsangiz - sizning hikoyangiz qanday? Yaqiningizdagi talabani birinchi #HourOfCode https://code.org/volunteer orqali ruhlantiring
+    
+    Sizning tadbiringizni jamoaga targ'ib qilishning boshqa ussullari uchun <a href="https://hourofcode.com/promote/resources#posters"> afishalar, videolar, stikerlar haqida batafsil ma'lumot oling</a>.
+    
+    * * *
+    
+    
 
 <a id="support-hour-of-code"></a>
 
-## Dasturlash Soatini qo'llab-quvvatlashning boshqa usullari
-
-[![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
-
-- [ ni kiyib, Code.org swag](https://store.code.org/) haqidagi xabardorlikni oshiring (barcha tushumlar ko‘proq talabalarning kompyuter fanlari bo‘yicha ta’lim olishlarini qo‘llab-quvvatlashga sarflanadi).
-- [AmazonSmile](https://code.org/donate/amazonsmile) orqali xarid qilganingizda Code.org-ga yordam qilishni tanlang.
-- Bosh direktoringizdan kompyuter fanlarining muhimligini ta'kidlaydigan va xodimlarni u haqida ma'lumot tarqatishga undaydigan kompaniya bo'ylab elektron pochta xabarini yuborishini so'rang.
-- Hamkasblar bilan [hayr ehson yig'ish kampaniyasi](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2) da ko'ngilhushlik qiling.
-- [Ushbu petitsiyani](https://code.org/promote) har bir talaba informatika fanini o‘rganish imkoniyatiga ega bo'lishiga ishonch hosil qilish uhcun imzolang.
-- Ta'lim resurslarimizni bepul va hamma uchun ochiq saqlashimiz uchun Code.org saytiga [Xayriya qiling](https://code.org/donate).
-
-Code.org va Dasturlash Soatini qanday qo‘llab-quvvatlash bo‘yicha qo‘shimcha takliflar uchun [Code.org/Help](https://code.org/help) saytiga kiring.
-
-* * *
+    
+    ## Dasturlash Soatini qo'llab-quvvatlashning boshqa usullari
+    
+    [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
+    
+    - [ ni kiyib, Code.org swag](https://store.code.org/) haqidagi xabardorlikni oshiring (barcha tushumlar ko‘proq talabalarning kompyuter fanlari bo‘yicha ta’lim olishlarini qo‘llab-quvvatlashga sarflanadi).
+    - [AmazonSmile](https://code.org/donate/amazonsmile) orqali xarid qilganingizda Code.org-ga yordam qilishni tanlang.
+    - Bosh direktoringizdan kompyuter fanlarining muhimligini ta'kidlaydigan va xodimlarni u haqida ma'lumot tarqatishga undaydigan kompaniya bo'ylab elektron pochta xabarini yuborishini so'rang.
+    - Hamkasblar bilan [hayr ehson yig'ish kampaniyasi](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2) da ko'ngilhushlik qiling.
+    - [Ushbu petitsiyani](https://code.org/promote) har bir talaba informatika fanini o‘rganish imkoniyatiga ega bo'lishiga ishonch hosil qilish uhcun imzolang.
+    - Ta'lim resurslarimizni bepul va hamma uchun ochiq saqlashimiz uchun Code.org saytiga [Xayriya qiling](https://code.org/donate).
+    
+    Code.org va Dasturlash Soatini qanday qo‘llab-quvvatlash bo‘yicha qo‘shimcha takliflar uchun [Code.org/Help](https://code.org/help) saytiga kiring.
+    
+    * * *
+    
+    
 
 <a id="faq"></a>
 
-## Ko'ngillilik Tez-tez so'raladigan savollar
-
-### Hozircha o‘qituvchi bilan bog‘langanim yo‘q. Qanday qilib men ko'ngilli bo'lishim mumkin?
-
-Mahalliy maktablarni qidirib ko'ring va direktor/o'qituvchi/front ofisga qo'ng'iroq qiling va qanday yordam berishingiz haqida so'rang.  
-
-
-### Sinfga tashriflarning vaqti qancha bo'ladi?
-
-Sinfga shaxsan tashrif buyurish odatda 60-90 daqiqa, virtual sinfga tashrif esa 20-30 daqiqa davom etadi.  
-
-
-### Dasturlash Soati mashg'ulorlari qaysi yosh guruhiga mos keladi?
-
-Code.org va bizning hamkorlarimiz barcha sinflardagi (K-12) turli xil kelib chiqishga ega o‘quvchilarni jalb qilish uchun Dasturlash Soati tadbirlarini ishlab chiqadilar. Har bir inson, hatto kattalar ham, o'ynashdan zavqlanishlari mumkin!  
-
-
-### Qanday qilib texnik ko'ngilli yoki mehmon ma'ruzachisi sifatida tanlanishim mumkin?
-
-O'qituvchilar ko'ngillilarni bizning [ko'ngillilar xaritamizdan](http://code.org/volunteer/local) qidiradilar. O'qituvchi sizni tanlash imkoniyatini oshirish uchun profilingizni iloji boricha to'liq qilishga harakat qiling. Agar siz ko'ngilli bo'lishda tanlovlaringiz bo'lsa bu haqida , masalan, mehmon ma'ruzachisi yoki texnik yordamchi sifatida, buni profilingiz tavsifida ko'rsating.   
-
-
-Siz tanlangan bo'lsangiz, o'qituvchi ko'ngillilar platformasi orqali siz bilan bog'lanadi (sizning elektron pochta manzilingiz hech qachon o'qituvchiga berilmaydi). Agar siz oʻqituvchilardan juda koʻp soʻrovlar olayotgan boʻlsangiz, oʻqituvchidan kelgan har qanday xatning pastki qismida berilgan maʼlumotingizni tahrirlash yoki obunani bekor qilish uchun havolani bosish orqali har doim oʻz afzalliklaringizni yangilashingiz mumkin.   
-
-
-[<button>Ko'ngilli bo'lish uchun ro'yxatdan o'ting</button>]({{ urls/volunteer }})
+    
+    ## Ko'ngillilik Tez-tez so'raladigan savollar
+    
+    ### Hozircha o‘qituvchi bilan bog‘langanim yo‘q. Qanday qilib men ko'ngilli bo'lishim mumkin?
+    
+    Mahalliy maktablarni qidirib ko'ring va direktor/o'qituvchi/front ofisga qo'ng'iroq qiling va qanday yordam berishingiz haqida so'rang.  
+    
+    
+    ### Sinfga tashriflarning vaqti qancha bo'ladi?
+    
+    Sinfga shaxsan tashrif buyurish odatda 60-90 daqiqa, virtual sinfga tashrif esa 20-30 daqiqa davom etadi.  
+    
+    
+    ### Dasturlash Soati mashg'ulorlari qaysi yosh guruhiga mos keladi?
+    
+    Code.org va bizning hamkorlarimiz barcha sinflardagi (K-12) turli xil kelib chiqishga ega o‘quvchilarni jalb qilish uchun Dasturlash Soati tadbirlarini ishlab chiqadilar. Har bir inson, hatto kattalar ham, o'ynashdan zavqlanishlari mumkin!  
+    
+    
+    ### Qanday qilib texnik ko'ngilli yoki mehmon ma'ruzachisi sifatida tanlanishim mumkin?
+    
+    O'qituvchilar ko'ngillilarni bizning [ko'ngillilar xaritamizdan](http://code.org/volunteer/local) qidiradilar. O'qituvchi sizni tanlash imkoniyatini oshirish uchun profilingizni iloji boricha to'liq qilishga harakat qiling. Agar siz ko'ngilli bo'lishda tanlovlaringiz bo'lsa bu haqida , masalan, mehmon ma'ruzachisi yoki texnik yordamchi sifatida, buni profilingiz tavsifida ko'rsating.   
+    
+    
+    Siz tanlangan bo'lsangiz, o'qituvchi ko'ngillilar platformasi orqali siz bilan bog'lanadi (sizning elektron pochta manzilingiz hech qachon o'qituvchiga berilmaydi). Agar siz oʻqituvchilardan juda koʻp soʻrovlar olayotgan boʻlsangiz, oʻqituvchidan kelgan har qanday xatning pastki qismida berilgan maʼlumotingizni tahrirlash yoki obunani bekor qilish uchun havolani bosish orqali har doim oʻz afzalliklaringizni yangilashingiz mumkin.   
+    
+    
+    [<button>Ko'ngilli bo'lish uchun ro'yxatdan o'ting</button>]({{ urls/volunteer }})

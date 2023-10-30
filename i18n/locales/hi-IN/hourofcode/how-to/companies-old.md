@@ -58,7 +58,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
 - The [ऑवर ऑफ़ कोड की विश्व व्यापक वीडियो](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [राष्ट्रपति ओबामा ने सभी छात्रों से कंप्यूटर विज्ञान सीखने का आह्वान किया](https://www.youtube.com/watch?v=6XvmhE1J9PY)।
 - और प्रेरणादायक वीडियोस पाएँ [यहाँ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - आप अगर तकनीकी क्षेत्र की कंपनी है तो आप कर रहे रंजक और नाविन्यपूर्ण उत्पदानोंका प्रात्यक्षिक दिखाइए.
 - आपकी कंपनी अगर तकनीकी क्षेत्र की नहीं है तो, आप तकनीक का इस्तमाल समस्याओंको सुलाझाने के लिये और लक्ष्य साध्य करने के लिए कैसे करते है इसके बारे में चर्चा कीजिये.
 - आपकी कंपनीके साॅफ्टवेअर अभियंताओंको बुला कर, उन्होंने संगणक शास्त्र सिखानेका और उसके प्रकल्पोंपर काम करनेका निर्णय क्यों लिया, इसके बारे में बताने को बोले.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- लड़कियों को कंप्यूटर साइंस में दिलचस्पी दिलाने के टिप्स [यहां देखें]({{ urls/girls }})।
 
 ## 6. Code!
 **सहभागींयोंको काम शुरू करेने को बोले**

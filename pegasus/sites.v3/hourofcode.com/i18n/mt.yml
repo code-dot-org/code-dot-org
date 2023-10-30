@@ -5,6 +5,11 @@ mt:
   language: Malti
   front_title: Ingħaqad fl-akbar avveniment ta 'tagħlim fl-istorja, %{campaign_date}
   coming_soon: Dalwaqt
+  new: Ġdid
+  hours_of_code_served: Sigħat ta' Kodiċi Servuti
+  hoc_stat_languages: L-istudenti qed jitgħallmu f'aktar minn 45 lingwa
+  hoc_stat_hours_served: Aktar minn 100M studenti ppruvaw Hour of Code
+  hoc_stat_females: Studenti nisa jiffurmaw 50% tal-parteċipanti tas-Siegħa tal-Kodiċi
   campaign_date_start_short: 5 ta 'Diċembru
   campaign_date_start_long: diċembru 5
   campaign_date_short: 5-11 ta 'Diċembru
@@ -36,9 +41,20 @@ mt:
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 ta 'Ottubru, 2022 - 18 ta' Diċembru, 2022
   hoc2023_header: Kreattività bl-AI
+  hoc2023_hero_desc_homepage: Ingħaqad miljuni madwar id-dinja fl-organizzazzjoni
+    ta 'siegħa ta' kodifikazzjoni, bi jew mingħajrha AI u titgħallem kif taħdem l-AI.
+    Kull ħadd, kullimkien jista 'jagħmel dan. L-ebda esperjenza meħtieġa.
+  hoc2023_hero_desc_learn_page: Din is-sena, qed nieħdu l-Hour of Code għal għoli
+    ġdid billi noffru opportunitajiet ta 'kodifikazzjoni li jinkludu kemm l-intelliġenza
+    artifiċjali (AI) kif ukoll komponenti mhux AI.
   hoc2023_social_creativity_with_ai_title: Siegħa tal-Kodiċi - X'se toħloq?
   hoc2023_social_creativity_with_ai_desc: Uża x-xjenza tal-kompjuter biex tesplora
     u titgħallem dwar l-AI!
+  hoc2023_what_is_hoc_desc: Is-Siegħa tal-Kodiċi hija introduzzjoni b'xejn għax-xjenza
+    tal-kompjuter permezz ta 'attivitajiet divertenti u vidjows għal studenti tal-livelli
+    kollha tal-ħiliet. Iċ-ċelebrazzjoni ta 'din is-sena kemm tal-kodifikazzjoni kif
+    ukoll tal-AI hija appoġġjata minn aktar minn 400 imsieħba, 20,000 edukatur, u
+    58,000 voluntier.
   hoc2022_header: Esplora, Play, Oħloq!
   social_hoc2022_explore_play_create: Uża x-xjenza tal-kompjuter biex tesplora, tilgħab,
     u toħloq!
@@ -51,6 +67,9 @@ mt:
     mużika minn “Encanto” ta 'Disney, u aktar!
   social_hoc2023_dance: Jidhru Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, mużika minn Disney “Encanto,” u aktar!
+  social_hoc2023_dance_v2: Wasal iż-żmien li toqgħod l-affarijiet tiegħek! Oħloq parti
+    taż-żfin tiegħek stess li fiha hits minn Miley Cyrus, BTS, Lil Nas X, Harry Styles,
+    Nicki Minaj, Rosalía, u aktar!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Tgħallem illum, ibni għada isbaħ.
@@ -172,6 +191,8 @@ mt:
     għaliex huwa importanti.
   social_ai_title: Tgħallem dwar intelliġenza artifiċjali (AI) | Code.org
   social_ai_desc: Għodda biex tgħin lill-istudenti u l-għalliema jġibu l-AI fil-klassi.
+  social_videos_desc: Filmati tax-xjenza tal-kompjuter involviment għal studenti ta
+    'kull età.
   pl_superhero_title: Għin lill-istudenti jsiru superheroes!
   pl_superhero_desc: Ingħaqad mal-Programm ta 'Tagħlim Professjonali tagħna ta' appoġġ
     kbir għall-edukaturi tal-iskola medja u għolja.
@@ -203,6 +224,15 @@ mt:
   device_laptop: Laptop
   device_desktop_computer: Kompjuter desktop
   device_mobile_device: Apparat mobbli
+  for_everyone: Għal kulħadd
+  for_students_teacher_led_learning: 'Għall-istudenti: Tagħlim immexxi mill-għalliema'
+  for_students_teacher_led_lessons: 'Għall-istudenti: Lezzjonijiet immexxija mill-għalliema'
+  professional_development: Żvilupp professjonali
+  how_ai_works_video_series: Kif taħdem l-AI Serje tal-Vidjow
+  learn_how_ai_works: Tgħallem Kif Taħdem l-AI
+  ai_101_for_educators: AI 101 għall-Edukaturi
+  learn_about_ai_impacts: Tgħallem dwar l-Impatti tal-AI
+  hoc_ai_activities: Attivitajiet tal-AI tas-Siegħa tal-Kodiċi
   subscribe_to_emails_heading: Abbona għall-emails
   subscribe_to_emails_desc: Aqra dwar x'qed jiġri fuq Code.org u fl-edukazzjoni tax-xjenza
     tal-kompjuter permezz ta 'aġġornamenti trimestrali permezz tal-lista tal-posta
@@ -260,21 +290,32 @@ mt:
     għarfien u appoġġ minn edukaturi oħra.
   required_materials: 'Materjali Meħtieġa:'
   optional_materials: 'Materjali Fakultattivi:'
+  for_students: Għall-istudenti
+  for_educators: Għall-edukaturi
+  call_to_action_host_hoc: Ospita Siegħa ta' Kodiċi
   call_to_action_hold_an_event: Żomm avveniment
   call_to_action_register_event: Irreġistra l-avveniment tiegħek
+  call_to_action_register_your_hoc: Irreġistra s-Siegħa tal-Kodiċi tiegħek
   call_to_action_select_activity: Agħżel attività
   call_to_action_start_activity: Ibda attività
   call_to_action_get_certificates: Ikseb ċertifikati
   call_to_action_go_beyond_hoc: Mur lil hinn mis-Siegħa tal-Kodiċi
+  call_to_action_explore_all_hoc_activities: Skopri l-attivitajiet kollha ta' Hour
+    of Code minn Code.org
+  call_to_action_start_dance_party: Ibda Dance Party
+  call_to_action_start_part_02: Ibda t-tieni parti
+  call_to_action_start_unplugged_activity: Ibda l-attività unplugged
   call_to_action_view_promo_resources: Ara r-riżorsi promozzjonali
   call_to_action_learn_more: Tgħallem aktar
   call_to_action_watch_now: Watch issa
   call_to_action_try_activity: Ipprova l-attività
   call_to_action_try_activities: Ipprova attivitajiet
+  call_to_action_try_hoc_ai_activities: Ipprova attivitajiet ta' Hour of Code AI
   call_to_action_explore_activities: Esplora l-attivitajiet
   call_to_action_explore_ai: Esplora AI
   call_to_action_explore_unit: Esplora l-unità
   call_to_action_explore_curriculum: Esplora l-kurrikulu
+  call_to_action_explore_curricula: Esplora l-kurrikuli
   call_to_action_explore_curriculum_options: Skopri l-għażliet tal-kurrikulu
   call_to_action_explore_lessons: Esplora l-lezzjonijiet
   call_to_action_explore_modules: Esplora moduli
@@ -357,6 +398,11 @@ mt:
   call_to_action_learn_about_advocacy: Tgħallem dwar il-promozzjoni tagħna
   call_to_action_visit_store: Żur il-maħżen
   call_to_action_view_faqs: Ara aktar FAQs
+  call_to_action_applications_open: Applikazzjonijiet issa miftuħa
+  call_to_action_apply_cs_ambassador: Applika biex tkun Ambaxxatur CS
+  call_to_action_coming_soon: Ġej dalwaqt!
+  call_to_action_learn_how_ai_works: Tgħallem kif taħdem l-AI
+  call_to_action_learn_about_ai: Tgħallem dwar l-AI
   aria_label_call_to_action_hoc_how_to_educators: Ara l-gwida għall-Edukaturi
   aria_label_call_to_action_hoc_how_to_companies: Ara l-gwida għall-Kumpaniji
   aria_label_call_to_action_hoc_how_to_districts: Ara l-gwida dwar il-mod għad-Distretti
@@ -368,6 +414,9 @@ mt:
   aria_label_call_to_action_hoc_how_to_volunteers: Ara l-gwida għall-Voluntiera
   aria_label_call_to_action_hoc_how_to_virtual_events: Ara l-gwida għall-Avvenimenti
     Virtwali
+  aria_label_call_to_action_dance_01: Ibda l-attività tad-Dance Party
+  aria_label_call_to_action_dance_02: Tibda t-tieni parti tal-attività Dance Party
+  aria_label_call_to_action_dance_unplugged: Ibda l-attività unplugged Dance Party
   aria_label_call_to_action_afe: Tgħallem aktar dwar Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Ibda l-programm ta 'tagħlim professjonali
     tal-Fundamentali tax-Xjenza tal-Kompjuter tat-Tagħlim
@@ -486,11 +535,26 @@ mt:
   curriculum_name_creating_apps_with_devices: Ħolqien ta 'Applikazzjonijiet b'Mezzi
   curriculum_name_poetry: Kodifikazzjoni bil-Poeżija
   curriculum_name_dance_party: Partit Taż-żfin
+  curriculum_name_dance_party_02: Ibqa' Żfin
+  curriculum_name_dance_party_unplugged: Parti taż-Żfin Unplugged
+  curriculum_name_dance_party_ai_edition: 'Parti taż-żfin: Edizzjoni AI'
   curriculum_name_problem_solving_computing: Soluzzjoni ta 'Problemi u Computing
   curriculum_name_web_development: Żvilupp tal-Web
   curriculum_name_interactive_animations_games: Animazzjonijiet Interattivi u Logħob
   curriculum_name_design_process: Il-Proċess tad-Disinn
   curriculum_name_data_society: Data & Soċjetà
+  curriculum_desc_dance_party_01: F'din l-attività introduttorja, użu kodiċi biex
+    jagħmlu varjetà ta 'karattri mlewna bust mossa għal sfondi animati u mużika upbeat.
+  curriculum_desc_dance_party_02: Mur lil hinn mit-tutorja introduttorja b'ideat estiżi
+    tal-proġett. Ibbrawżja librerija ta 'eżempji ta' partijiet taż-żfin aktar kumplessi.
+  curriculum_desc_dance_party_unplugged: Ikseb il-kanal tiegħek fuq - l-ebda kompjuter
+    meħtieġ! Tgħallem kif il-kunċetti tal-kodifikazzjoni, bħal avvenimenti, jistgħu
+    jintużaw biex tissinkronizza l-koreografija taż-żeffien.
+  curriculum_desc_dance_party_ai_edition: Tgħallem dwar kunċetti ta 'intelliġenza
+    artifiċjali (AI) biex toħloq parti taż-żfin virtwali tiegħek stess li turi l-aqwa
+    artisti tal-lum. B'għexieren ta 'kanzunetti minn fejn jagħżlu, jilħqu kull student
+    irrispettivament minn togħma mużika tagħhom. Wasal iż-żmien li toqgħod l-affarijiet
+    tiegħek!
   curriculum_desc_csf: Sett b'xejn ta 'kurrikuli elementari li jintroduċi lill-istudenti
     għall-kunċetti fundamentali tax-xjenza tal-kompjuter.
   curriculum_desc_csf_express: Tgħallem toħloq programmi tal-kompjuter, tiżviluppa
@@ -586,7 +650,7 @@ mt:
   module_label_prerequisites: 'Prerekwiżiti:'
   module_label_level: 'Livell:'
   module_label_topics: 'Suġġetti:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Apparati:'
   module_label_tools: 'Għodda ta ''Programmazzjoni:'
   module_label_professional_learning: 'Tagħlim Professjonali:'
   module_label_languages: 'Lingwi Appoġġjati:'
@@ -608,12 +672,16 @@ mt:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Kindergarten
   module_grade_grade_01: Grad 1
@@ -621,6 +689,12 @@ mt:
   module_grade_grade_03: Grad 3
   module_grade_grade_04: Grad 4
   module_grade_grade_05: Grad 5
+  module_age_05_07: Etajiet 5-7
+  module_age_07: Etajiet 7+
+  module_age_07_11: Etajiet 7-11
+  module_age_11: Etajiet 11+
+  module_age_13: Etajiet 13+
+  module_age_all_age: Etajiet kollha
   module_grade_k_5_teachers: K-5 Għalliema
   module_grade_6_10_teachers: 6-10 Għalliema
   module_grade_9_12_teachers: 9-12 Għalliema
@@ -716,6 +790,60 @@ mt:
     tal-Kurrikulu
   heading_csa_ai: Qed tfittex affarijiet x'tagħmel wara l-eżami AP®?
   heading_bring_cs_to_students: Ġib ix-xjenza tal-kompjuter lill-istudenti
+  heading_cs_ambassador_program: Programm Ambaxxatur CS
+  heading_featured_student_projects: Proġetti tal-istudenti dehru
+  heading_start_hoc_with_videos: Ibda s-Siegħa tal-Kodiċi tiegħek b'vidjows ta 'ispirazzjoni
+  cs_ambassador_subhead: Jekk int student tal-iskola għolja passjonat dwar tħeġġeġ
+    aktar nisa żgħażagħ biex jieħdu x-xjenza tal-kompjuter fl-iskola tiegħek, allura
+    għandna bżonn inti!
+  cs_ambassador_desc: Kull qasam, inkluż il-mediċina, id-divertiment, l-isports, l-edukazzjoni,
+    in-negozju, il-moda, u l-intraprenditorija jintmess mix-xjenza tal-kompjuter.
+    Madankollu 5% biss tan-nisa żgħażagħ fl-età tal-iskola għolja jieħdu klassijiet
+    tax-xjenza tal-kompjuter. L-ambaxxaturi jistgħu jgħinu biex tagħlaq din id-differenza
+    bejn is-sessi billi jħeġġu lil sħabhom biex jieħdu klassi tax-xjenza tal-komp
+  cs_ambassador_application_date: L-applikazzjonijiet miftuħa sat-8 ta' Novembru,
+    2023
+  cs_ambassador_application_subhead: Taħdem ma 'għalliem biex tissottometti l-applikazzjoni
+    tiegħek illum
+  cs_ambassador_application_questions: Mistoqsijiet? Jekk jogħġbok ikkuntattja lil
+    [youngwomen@code.org] (%{email_url})
+  cs_ambassador_do_heading: X'jagħmlu l-Ambaxxaturi CS?
+  cs_ambassador_do_desc: L-Ambaxxaturi CS jinkoraġġixxu lin-nisa żgħażagħ biex jesploraw
+    is-suġġett, u jerfgħu lil xulxin hekk kif jerġgħu jitolbu postu fix-xjenza tal-kompjuter
+    L-Ambaxxaturi CS jgħaqqdu ma' sħabhom biex jaqsmu l-eċċitament u l-imħabba tagħhom
+    lejn ix-xjenza tal-kompjuter Huma jżuru klassijiet, jospitaw tabelli waqt l-ikel,
+    u jitkellmu f'assembleji u laqgħat tal-klabb. L-Ambaxxaturi CS jaħdmu mal-għalliema
+    u l-amministraturi tal-iskejjel biex jitqassmu l-isterjotipi li jżom
+  cs_ambassador_steps_heading: X'għandi bżonn biex insir Ambaxxatur CS?
+  cs_ambassador_steps_list_title_01: Passjoni
+  cs_ambassador_steps_list_title_02: Esperjenza fi Kors CS
+  cs_ambassador_steps_list_title_03: Skola li toffri CS
+  cs_ambassador_steps_list_desc_01: Passjoni għall-inkoraġġiment tan-nisa żgħażagħ
+    fl-iskola tiegħek biex jieħdu klassijiet tax-xjenza tal-kompjuter
+  cs_ambassador_steps_list_desc_02: 'Ħadu klassi ta ''xjenza tal-kompjuter ta'' sena
+    fis-sena skolastika 2022-23 jew qabel (rakkomandat: Prinċipji CS jew AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Tattendi skola għolja li regolarment toffri kors
+    ta ''xjenza tal-kompjuter ta'' sena (rakkomandat: Prinċipji CS jew AP® CSA)'
+  cs_ambassador_benefits_heading: Benefiċċji tal-programm
+  cs_ambassador_benefits_list_title_01: Komunità nazzjonali
+  cs_ambassador_benefits_list_title_02: Servizz komunitarju
+  cs_ambassador_benefits_list_title_03: Rikonoxximent
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Ċertifikat
+  cs_ambassador_benefits_list_title_06: Esperjenzi
+  cs_ambassador_benefits_list_desc_01: Aċċess għal komunità nazzjonali ta' mexxejja
+    żgħażagħ impenjati li tagħlaq id-differenza bejn is-sessi fix-xjenza tal-kompjuter.
+  cs_ambassador_benefits_list_desc_02: Ħinijiet ta 'servizz tal-komunità u l-opportunità
+    li jaqilgħu l- [Premju tas-Servizz tal-Volontiera Presidenzjali tal-Istati Uniti]
+    (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Rikonoxximent bħala Ambaxxatur 2023-2024 u
+    eliġibbli biex jiġi onorat fis-Sala tal-Fama tal-Ambaxxatur Code.org.
+  cs_ambassador_benefits_list_desc_04: Kun identifikat bħala Ambaxxatur CS permezz
+    ta 'ilbies speċjali tad-ditta Code.org, stikers, u aktar!
+  cs_ambassador_benefits_list_desc_05: Ċertifikat uffiċjali tal-parteċipazzjoni minn
+    Code.org.
+  cs_ambassador_benefits_list_desc_06: Ikseb esperjenzi u stejjer biex taqsam fuq
+    l-applikazzjoni tal-kulleġġ tiegħek, terġa 'tibda u aktar!
   professional_learning_section_desc: Ikseb l-appoġġ li għandek bżonn hekk kif tipprepara
     biex tgħallem. L-għalliema jħobbuha, b'aktar minn 90% jikklassifikawha l-aħjar
     żvilupp professjonali li qatt kien hemm!
@@ -766,6 +894,14 @@ mt:
     dwar il-Prinċipji tax-Xjenza tal-Kompjuter ta' Code.org u tikseb tfakkiriet utli,
     pariri, u aġġornamenti mibgħuta dritt għall-inbox tiegħek.
   subscribe_form_section_unsubscribe: Tista 'tħassar l-abbonament fi kwalunkwe ħin.
+  dance_hero_heading: Kodiċi u Parti taż-Żfin
+  dance_featuring_songs_by_short: 'Jidhru kanzunetti minn:'
+  dance_featuring_songs_by_long: 'Dance Party tinkludi kanzunetti minn:'
+  dance_and_more: u aktar
+  dance_choose_activity: Agħżel il-Parti taż-Żfin tiegħek
+  dance_afe_disclaimer: L-artisti li l-mużika tagħhom huma użati f'dan it-tutorja
+    mhumiex jisponsorjaw jew japprovaw Amazon bħala parti mill-liċenzjar użu tal-mużika
+    tagħhom li Code.org.
   blockchain_hero_heading: Kif taħdem Blockchain
   blockchain_hero_desc: Adsa fis-dinja ta 'blockchain ma “Kif Blockchain Xogħlijiet,”
     serje video ġdida tagħna u l-lezzjonijiet li jakkumpanjaw!
@@ -875,6 +1011,12 @@ mt:
   ai_curriculum_grades_05: 'Livelli ta ''Grad: 9-12'
   ai_curriculum_btn_aria_label_05: Esplora l-modulu tal-Inġinerija tas-Softwer u l-Viżjoni
     tal-Kompjuter
+  ai_curriculum_title_06: Impatt Soċjetali tal-AI Ġenerattiva
+  ai_curriculum_desc_06: Investiga l-impatt ta 'AI ġenerattiva minn perspettivi differenti,
+    imbagħad tikkollabora bħala tim biex toħroġ bi linji gwida li jindirizzaw l-aktar
+    bżonnijiet mill-parteċipanti kollha.
+  ai_curriculum_btn_aria_label_06: Ara l-Impatt Soċjetali tal-pjan tal-lezzjonijiet
+    Ġenerattiva tal-AI
   ai_carousel_heading: 'Dak li jgħidu l-għalliema dwar l-AI ma ''Code.org:'
   ai_carousel_quote_01: Din il-lezzjoni tat ukoll l-opportunità lill-istudenti tiegħi
     biex jaraw li hemm element ta 'opinjoni fis-sistemi ta' klassifikazzjoni. Aktar
@@ -1911,6 +2053,9 @@ mt:
     madwar l-Istati Uniti u l-għaxar politiki nirrakkomandaw istati jadottaw biex
     jagħmlu xjenza tal-kompjuter fundamentali għall-istudenti kollha. Barra minn hekk,
     sib kif tista 'ssuq bidla fl-istat tiegħek.
+  yw_page_top_heading: Nisa Żgħażagħ fix-Xjenza tal-Kompjuter
+  yw_page_top_desc: Issir Ambaxxatur CS u kun parti mill-għeluq tad-differenza bejn
+    is-sessi fix-xjenza tal-kompjuter.
   hoc_live: Siegħa tal-Kodiċi Live
   hoc_live_sign_up_title: Sign up għall Hour ta 'Kodiċi Live
   hoc_live_learn_title: Tgħallem bis-Siegħa tal-Kodiċi Live
@@ -2283,10 +2428,16 @@ mt:
     'siegħa għax-xjenza tal-kompjuter, billi tuża tutorials divertenti biex turi li
     kulħadd jista' jitgħallem l-affarijiet bażiċi. Din il-kampanja fil-livell lokali
     hija appoġġjata minn aktar minn 400 imsieħeb u 200,000 edukatur madwar id-dinja.
+  hoc_homepage_registration_desc: Il-klassi jew il-grupp tiegħek jistgħu jingħaqdu
+    ma 'miljuni madwar id-dinja jagħmlu s-Siegħa tal-Kodiċi! Ir-reġistrazzjoni għaċ-ċelebrazzjoni
+    annwali tal-Ġimgħa tal-Edukazzjoni tax-Xjenza tal-Kompjuter tibda Għalkemm, is-Siegħa
+    tal-Kodiċi hija disponibbli s-sena kollha.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Aqra l-gwida tagħna Kif-to] (%{howto_guide_url})
     biex tippjana avveniment għall-klassi tiegħek."
   hoc_homepage_highlights_heading: Siegħa ta 'punti ewlenin tal-Kodiċi
   hoc_homepage_organized_by: Is-Siegħa tal-Kodiċi hija organizzata minn [Code.org](%{codeorg_url}).
+  hoc_events_heading: Irreġistra biex tospita Siegħa ta' Kodiċi
+  hoc_events_jump_to_map: Aqbeż għall-mappa tas-Siegħa tal-Kodiċi
   signup_closed: Ir-reġistrazzjoni għas-Siegħa tal-Kodiċi issa hija magħluqa. Jekk
     jogħġbok iċċekkja mill-ġdid f'Ottubru biex tiffirma għas-Siegħa tal-Kodiċi li
     jmiss.
@@ -2403,6 +2554,8 @@ mt:
   map_title: Siegħa ta 'mappa Kodiċi
   map_header: "# avvenimenti reġistrati għall Hour tal-Kodiċi 2017"
   map_header_count_year: "%{event_count} avvenimenti rreġistrati %{year}"
+  map_header_count_year_so_far: "%{event_count} avvenimenti rreġistrati s'issa fi
+    %{year}"
   see_all_events: Ara l-avvenimenti kollha
   map_header_company: "# mill-organizzaturi tal-kumpanija"
   map_header_country: "# fil %{country}"
@@ -2416,6 +2569,7 @@ mt:
     <a href='%{events_url}'>.</a>
   map_warning_markdown: Wieħed jista' jara lista sħiħa tal-avvenimenti fuq il- [paġna
     tal-avvenimenti.] (%{events_url})
+  map_view_all_events: Ara lista sħiħa tal-avvenimenti tas-Siegħa tal-Kodiċi [here](%{events_url}).
   meta_tag_og_title: 'Siegħa tal-Kodiċi: Ingħaqad mal-Moviment'
   meta_tag_og_description: Is-Siegħa tal-Kodiċi huwa moviment globali li jilħaq għexieren
     ta 'miljuni ta' studenti ta 'kull età f'pajjiżi 180+ u aktar minn 45 lingwa.
@@ -2437,14 +2591,6 @@ mt:
     %{random_donor} għall-appoġġ @codeorg)'
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: X'inhi s-Siegħa tal-Kodiċi?
-  hoc_faq_what_is_hoc_a: Is-Siegħa tal-Kodiċi bdiet bħala introduzzjoni ta 'siegħa
-    għax-xjenza tal-kompjuter, maħsuba biex tiddemystify “kodiċi”, biex turi li kulħadd
-    jista' jitgħallem l-affarijiet bażiċi, u biex iwessgħu l-parteċipazzjoni fil-qasam
-    tax-xjenza tal-kompjuter. Minn dakinhar sar sforz dinji biex tiċċelebra x-xjenza
-    tal-kompjuter, billi tibda b'attivitajiet ta 'kodifikazzjoni ta' siegħa iżda tespandi
-    għal kull xorta ta 'sforzi tal-komunità. Iċċekkja l- <a href='%{tutorials}'>tutorials
-    u attivitajiet</a>. Din il-kampanja fil-livell lokali hija appoġġjata minn aktar
-    minn <a href='%{partners}'>400 imsieħeb</a> u 200,000 edukatur madwar id-dinja.
   hoc_faq_what_is_hoc_a_markdown: Is-Siegħa tal-Kodiċi bdiet bħala introduzzjoni ta
     'siegħa għax-xjenza tal-kompjuter, maħsuba biex tiddemystify “kodiċi”, biex turi
     li kulħadd jista' jitgħallem l-affarijiet bażiċi, u biex iwessgħu l-parteċipazzjoni
@@ -2455,13 +2601,6 @@ mt:
     minn aktar minn [400 imsieħeb] (%{partners}) u minn 200,000 edukatur madwar id-dinja.
   hoc_faq_last_year: Ipprova t-tutorials
   hoc_faq_when_is_hoc_q: Meta hija s-Siegħa tal-Kodiċi?
-  hoc_faq_when_is_hoc_a: Is-Siegħa tal-Kodiċi sseħħ kull sena matul il-Ġimgħa tal-Edukazzjoni
-    tax-Xjenza <a href='%{csedweek_url}'>tal-Kompjuter</a>. Il-Ġimgħa tal-Edukazzjoni
-    tax-Xjenza %{campaign_date_year} tal-Kompjuter se tkun %{campaign_date_full},
-    imma tista 'tospita Siegħa ta' Kodiċi s-sena kollha. Il-Ġimgħa tal-Edukazzjoni
-    tax-Xjenza tal-Kompjuter issir kull sena bħala rikonoxximent tal-għeluq tal-pijunier
-    tal-kompjuters <a href='%{grace_hopper}'>Ammirall Grace Murray Hopper</a> (9 ta
-    'Diċembru, 1906).
   hoc_faq_when_is_hoc_a_markdown: Is-Siegħa tal-Kodiċi sseħħ kull sena matul [Ġimgħa
     tal-Edukazzjoni tax-Xjenza tal-Kompjuter] (%{csedweek_url}). Il-Ġimgħa tal-Edukazzjoni
     tax-Xjenza %{campaign_date_year} tal-Kompjuter se tkun %{campaign_date_full},
@@ -2470,54 +2609,29 @@ mt:
     tal-kompjuters [Ammirall Grace Murray Hopper] (%{grace_hopper}) (9 ta 'Diċembru,
     1906).
   hoc_faq_why_cs_q: Għaliex ix-xjenza tal-kompjuter?
-  hoc_faq_why_cs_a: "<i>Kull student</i> għandu jkollu l-opportunità li jitgħallem
-    ix-xjenza tal-kompjuter. Jgħin biex jitrawwem il-ħiliet, il-loġika u l-kreattività
-    għas-soluzzjoni tal-problemi. Billi jibdew kmieni, l-istudenti se jkollhom bażi
-    għas-suċċess fi kwalunkwe karriera tas-seklu 21. Ara aktar stats <a href='%{stats_url}'>hawn</a>."
   hoc_faq_why_cs_a_markdown: _Every_ student għandu jkollhom l-opportunità li jitgħallmu
     xjenza tal-kompjuter. Jgħin biex jitrawwem il-ħiliet, il-loġika u l-kreattività
     għas-soluzzjoni tal-problemi. Billi jibdew kmieni, l-istudenti se jkollhom bażi
     għas-suċċess fi kwalunkwe karriera tas-seklu 21. Ara aktar stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Kif nista 'nipparteċipa fis-Siegħa tal-Kodiċi?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Ibda tippjana hawn</a> billi tirrevedi
-    l-gwida tagħna dwar kif. Tista 'torganizza avveniment ta' Hour of Code fl-iskola
-    tiegħek jew fil-komunità tiegħek &mdash; bħal fi klabb extra-kurrikulari, mingħajr
-    skop ta 'qligħ jew fuq ix-xogħol. Jew, sempliċement ipprova lilek innifsek meta
-    tasal %{campaign_date} ."
   hoc_faq_how_participate_a_markdown: "[Ibda tippjana hawn] (%{howto}) billi tirrevedi
     l-gwida tagħna dwar kif. Tista 'torganizza avveniment ta' Hour of Code fl-iskola
     tiegħek jew fil-komunità tiegħek - bħal fi klabb extra-kurrikulari, mingħajr skop
     ta 'qligħ jew fuq ix-xogħol. Jew, sempliċement ipprova lilek innifsek meta jasal
     %{campaign_date} ."
   hoc_faq_behind_hoc_q: Min hu wara l-Hour tal-Kodiċi?
-  hoc_faq_behind_hoc_a: Is-Siegħa tal-Kodiċi hija organizzata minn Code.org u mmexxija
-    mill-Kumitat ta 'Reviżjoni tas-Siegħa tal-Kodiċi kif ukoll koalizzjoni bla preċedent
-    ta' <a href='%{partner_url}'>imsieħba</a> li ngħaqdu flimkien biex jappoġġjaw
-    is-Siegħa tal-Kodiċi - inklużi Microsoft, Apple, Amazon, Boys u Girls Clubs ta
-    'l-Amerika u l-Bord tal-Kulleġġ.
   hoc_faq_behind_hoc_a_markdown: Is-Siegħa tal-Kodiċi hija organizzata minn Code.org
     u mmexxija mill-Kumitat ta 'Reviżjoni tas-Siegħa tal-Kodiċi kif ukoll koalizzjoni
     bla preċedent ta' [partners](%{partner_url}) li ngħaqdu flimkien biex jappoġġjaw
     is-Siegħa tal-Kodiċi - inklużi Microsoft, Apple, Amazon, Boys and Girls Clubs
     of America u l-Bord tal-Kulleġġ.
   hoc_faq_host_q: Ma naf xejn dwar il-kodifikazzjoni. Xorta nista' nospita avveniment?
-  hoc_faq_host_a: Dażgur. Siegħa ta 'attivitajiet tal-Kodiċi huma awtogwidati. Kulma
-    għandek tagħmel hu li <a href='%{codeorg_url}/learn'>tipprova tutorials attwali
-    tagħna</a>, pick-tutorja trid, u pick siegħa &mdash; nieħdu ħsieb il-bqija. Għandna
-    wkoll għażliet għal kull età u livell ta 'esperjenza, mill-kindergarten u' l fuq.
-    Ibda tippjana l-avveniment tiegħek billi taqra <a href='/how-to'>kif niggwidaw</a>.
   hoc_faq_host_a_markdown: Dażgur. Siegħa ta 'attivitajiet tal-Kodiċi huma awtogwidati.
     Kull ma trid tagħmel hu [ipprova t-tutorials attwali tagħna] (%{codeorg_url}/titgħallem),
     aqbad it-tutorja li trid, u aqbad siegħa - nieħdu ħsieb il-bqija. Għandna wkoll
     għażliet għal kull età u livell ta 'esperjenza, mill-kindergarten u' l fuq. Ibda
     tippjana l-avveniment tiegħek billi taqra tagħna [kif tiggwida] (%{howto}).
   hoc_faq_devices_q: Liema apparat għandi nuża għall-istudenti tiegħi?
-  hoc_faq_devices_a: Code.org tutorials jaħdmu fuq l-apparati u l-browsers kollha.
-    Tista 'tara aktar informazzjoni dwar il-ħtiġijiet <a href='%{codeorg_url}/educate/it'>ta'
-    teknoloġija tutorja ta 'Code.org hawn.</a>Bżonnijiet Tech għal tutorials mhux
-    code.org jistgħu jinstabu <a href='%{codeorg_url}/learn'>%{partner_url}fuq/jitgħallmu</a>
-    fid-deskrizzjoni speċifika tutorja. Tinsiex noffru wkoll attivitajiet <a href='%{unplugged_url}'>mhux
-    imqabbda</a> jekk l-iskola tiegħek ma tistax takkomoda t-tutorials!
   hoc_faq_devices_a_markdown: Code.org tutorials jaħdmu fuq l-apparati u l-browsers
     kollha. Tista 'tara aktar informazzjoni dwar il-ħtiġijiet ta' teknoloġija tutorja
     ta 'Code.org (/%{codeorg_url}teduka/it [here]). Bżonnijiet Tech għal tutorials
@@ -2525,17 +2639,6 @@ mt:
     fid-deskrizzjoni speċifika tutorja. Tinsiex noffru wkoll [attivitajiet mhux imqabbda]
     (%{unplugged_url}) jekk l-iskola tiegħek ma tistax takkomoda t-tutorials!
   hoc_faq_need_computers_q: Għandi bżonn kompjuters għal kull parteċipant?
-  hoc_faq_need_computers_a: Le. Għandna tutorials ta 'Siegħa ta' Kodiċi li jaħdmu
-    fuq kompjuters, smartphones, pilloli, u xi wħud li ma jeħtieġu l-ebda kompjuter!
-    Tista 'tingħaqad fejn int, b'kull ma għandek. <p><i>Hawn huma ftit għażliet:</i>
-    <br> <ul> <li><b>Xogħol f'pari.</b> <a href='%{pair_programming_research}'>Ir-riċerka
-    turi li</a> l-istudenti jitgħallmu l-aħjar bl-ipprogrammar <a href='%{pair_programming_video}'>tal-par</a>,
-    jaqsmu kompjuter u jaħdmu flimkien. Ħeġġeġ lill-istudenti tiegħek biex jirdoppjaw.
-    <li><b>Uża skrin ipproġettat.</b> Jekk għandek projettur u skrin għal kompjuter
-    konness mal-Web, il-grupp kollu tiegħek jista 'jagħmel Siegħa ta' Kodiċi flimkien.
-    Ara porzjonijiet tal-vidjow flimkien u ħu dawra biex issolvi puzzles jew twieġeb
-    mistoqsijiet. <li><b>Mur splaggjat.</b> Noffru <a href='%{unplugged_url}'>tutorials
-    li jeħtieġu l-ebda kompjuter</a> fil-livelli kollha. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Le. Għandna tutorials ta 'Siegħa ta' Kodiċi li jaħdmu fuq kompjuters, smartphones, pilloli, u xi wħud li ma jeħtieġu l-ebda kompjuter! Tista 'tingħaqad fejn int, b'kull ma għandek.
 
@@ -2545,28 +2648,15 @@ mt:
     - ** Uża skrin proġettat.** Jekk għandek projettur u skrin għal kompjuter konness mal-Web, il-grupp kollu tiegħek jista 'jagħmel Siegħa ta' Kodiċi flimkien. Ara porzjonijiet tal-vidjow flimkien u ħu dawra biex issolvi puzzles jew twieġeb mistoqsijiet.
     - ** Mur unplugged.** Noffru [tutorials li jeħtieġu l-ebda kompjuter] () fil-livelli kollha.%{unplugged_url}
   hoc_faq_international_q: Jiena <country>. Kif nista' nipparteċipa internazzjonalment?
-  hoc_faq_international_a: Kulħadd jista 'jorganizza avveniment ta' Hour of Code,
-    kullimkien fid-dinja. Is-sena l-oħra, l-istudenti madwar id-dinja ngħaqdu flimkien
-    għas-Siegħa tal-Kodiċi. Sir af aktar <a href='/promote'>hawn</a>.
   hoc_faq_international_a_markdown: Kulħadd jista 'jorganizza avveniment ta' Hour
     of Code, kullimkien fid-dinja. Is-sena l-oħra, l-istudenti madwar id-dinja ngħaqdu
     flimkien għas-Siegħa tal-Kodiċi. Skopri aktar [here](%{promote}).
   hoc_faq_tutorial_q: Kif nista 'nagħmel Siegħa ta' tutorja tal-Kodiċi?
-  hoc_faq_tutorial_a: Jekk int interessat li ssir sieħeb tutorja, <a href='/tutorial-guidelines'>ara
-    l-linji gwida u l-istruzzjonijiet tagħna</a>. Nixtiequ li jospita varjetà ta 'għażliet
-    involviment, iżda l-għan primarju huwa li jottimizzaw l-esperjenza għall-istudenti
-    u l-għalliema li huma ġodda għall-xjenza tal-kompjuter.
   hoc_faq_tutorial_a_markdown: Jekk int interessat li ssir sieħeb tutorja, [ara l-linji
     gwida u l-istruzzjonijiet tagħna] (%{tutorial_guidelines}). Nixtiequ li jospita
     varjetà ta 'għażliet involviment, iżda l-għan primarju huwa li jottimizzaw l-esperjenza
     għall-istudenti u l-għalliema li huma ġodda għall-xjenza tal-kompjuter.
   hoc_faq_account_q: L-istudenti għandhom bżonn jidħlu billi jużaw kont?
-  hoc_faq_account_a: Le. Assolutament l-ebda reġistrazzjoni jew login mhu meħtieġ
-    għall-istudenti biex jippruvaw is-Siegħa tal-Kodiċi. Ħafna mill-korsijiet ta 'segwitu
-    <a href='%{codeorg_url}/learn/beyond'></a> jeħtieġu l-ħolqien tal-kont biex jiffrankaw
-    il-progress tal-istudenti. Ukoll, l-iffirmar għas-Siegħa tal-Kodiċi MHUX awtomatikament
-    joħloq kont Code Studio. Jekk trid toħloq kontijiet għall-istudenti tiegħek, jekk
-    jogħġbok segwi dawn l-istruzzjonijiet <a href='https://youtu.be/_smelV_KISE'></a>.
   hoc_faq_account_a_markdown: Le. Assolutament l-ebda reġistrazzjoni jew login mhu
     meħtieġ għall-istudenti biex jippruvaw is-Siegħa tal-Kodiċi. Ħafna mill- [korsijiet
     ta 'segwitu] (%{codeorg_url}/jitgħallmu/lil hinn) jeħtieġu ħolqien ta' kont biex
@@ -2574,13 +2664,6 @@ mt:
     MHUX awtomatikament joħloq kont Code Studio. Jekk trid toħloq kontijiet għall-istudenti
     tiegħek, jekk jogħġbok segwi dawn [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Liema attività għandi nagħmel ma 'studenti tal-iskola sekondarja?
-  hoc_faq_high_school_a: It-tutorials tagħna ta 'Star Wars u Minecraft huma tajbin
-    għal studenti tal-iskola għolja, speċjalment il-verżjoni Star Wars JavaScript
-    u l-livell ta' logħob liberu fuq iż-żewġ tutorials. Alternattivament, nirrakkomandaw
-    li tipprova wieħed mit-tutorials tal-Bidu <a href='%{codeorg_url}/learn'>%{partner_url}fuq/titgħallem
-    tibda, bħat-tutorja</a> ma 'Angry Birds jew ma' Anna u Elsa. Student tal-iskola
-    għolja għandu jkun jista 'jtemm wieħed minn dawn fi 30 minuta u jista' mbagħad
-    jipprova tutorja aktar avvanzata f'JavaScript, bħal Khan Academy jew CodeHS.
   hoc_faq_high_school_a_markdown: It-tutorials tagħna ta 'Star Wars u Minecraft huma
     tajbin għal studenti tal-iskola għolja, speċjalment il-verżjoni Star Wars JavaScript
     u l-livell ta' logħob liberu fuq iż-żewġ tutorials. Alternattivament, nirrakkomandaw
@@ -2590,11 +2673,6 @@ mt:
     jipprova tutorja aktar avvanzata f'JavaScript, bħal Khan Academy jew CodeHS.
   hoc_faq_scratch_q: I am doing Scratch għall Hour of Code, imma x'jiġri jekk l-istudenti
     tiegħi jkollhom iPads aktar milli laptops?
-  hoc_faq_scratch_a: Scratch ma jaħdimx fuq il-pilloli. Jekk l-istudenti tiegħek huma
-    żgħar, jistgħu jużaw l-app ScratchJR iPad (għal qarrejja bikrija). Jekk tħares
-    lejn it-tutorials <a href='%{codeorg_url}/learn'>%{partner_url}fuq/titgħallem</a>,
-    tista 'ssib tutorials oħra li jaħdmu fuq iPads - minn Code.org, Tynker, Lightbot,
-    jew CodesPark.
   hoc_faq_scratch_a_markdown: Scratch ma jaħdimx fuq il-pilloli. Jekk l-istudenti
     tiegħek huma żgħar, jistgħu jużaw l-app ScratchJR iPad (għal qarrejja bikrija).
     Jekk tħares lejn it-tutorials fuq [%{partner_url}/titgħallem] (%{codeorg_url}/titgħallem),
@@ -2602,14 +2680,6 @@ mt:
     jew CodesPark.
   hoc_faq_count_hoc_q: Kif tgħodd Sigħat ta 'Kodiċi?
   hoc_faq_map_q: Għaliex ma narax it-tikka tiegħi fuq il-mappa?
-  hoc_faq_map_a: Aħna hekk sorry inti ma tara avveniment tiegħek fuq il-Hour ta 'Kodiċi
-    mappa. Minħabba l-għexieren ta 'eluf ta' organizzaturi li jiffirmaw, il-mappa
-    tiġbor id-dejta u turi punt wieħed għal diversi avvenimenti. Jekk tikklikkja l-
-    <a href='%{events_url}'>avvenimenti paġna</a> link taħt il-mappa inti ser tkun
-    diretta lejn lista ta 'l-avvenimenti kollha skond l-istat u tista' ssib avveniment
-    tiegħek elenkati hemmhekk. Barra minn hekk, minħabba l-eluf ta 'nies li jiffirmaw
-    għas-Siegħa tal-Kodiċi, il-lista tal-mappa u l-avvenimenti normalment tieħu 48
-    siegħa biex taġġorna. Iċċekkja lura fi ftit jiem!
   hoc_faq_map_a_markdown: Aħna hekk sorry inti ma tara avveniment tiegħek fuq il-Hour
     ta 'Kodiċi mappa. Minħabba l-għexieren ta 'eluf ta' organizzaturi li jiffirmaw,
     il-mappa tiġbor id-dejta u turi punt wieħed għal diversi avvenimenti. Jekk tikklikkja
@@ -2618,11 +2688,6 @@ mt:
     elenkat hemmhekk. Barra minn hekk, minħabba l-eluf ta 'nies li jiffirmaw għas-Siegħa
     tal-Kodiċi, il-lista tal-mappa u l-avvenimenti normalment tieħu 48 siegħa biex
     taġġorna. Iċċekkja lura fi ftit jiem!
-  hoc_faq_count_hoc_a: Is-Siegħa tal-Kodiċi tracker mhix kejl eżatt tal-użu. Aħna
-    ma ngħoddux l-IDs tal-istudenti uniċi perfettament meta nsegwu l-parteċipazzjoni
-    fis-Siegħa tal-Kodiċi, speċjalment għaliex aħna ma jeħtiġux li l-istudenti jidħlu
-    jew jirreġistraw. Bħala riżultat, aħna kemm il-parteċipanti ngħoddu żżejjed kif
-    ukoll dawk taħt l-għadd fl-istess ħin. Aqra d-dettalji kollha <a href='%{codeorg_url}/loc'>hawn</a>.
   hoc_faq_count_hoc_a_markdown: 'Aħna ma ngħoddux l-IDs tal-istudenti uniċi perfettament
     meta nsegwu l-parteċipazzjoni fis-Siegħa tal-Kodiċi. Għaliex? Parzjalment minħabba
     li ma rridux il-frizzjoni li twassal għal “login /reġistru” qabel ma student jew
@@ -2639,25 +2704,6 @@ mt:
     of Code tracker bħala miżura eżatta ta'' użu. Huwa ċertament direzzjonalment korrett,
     u juri li ħafna għexieren ta ''miljuni ta'' studenti pparteċipaw.'
   hoc_faq_one_hour_q: Kemm wieħed jista 'jitgħallem f'siegħa?
-  hoc_faq_one_hour_a: L-għan tas-Siegħa tal-Kodiċi mhuwiex li jgħallem lil xi ħadd
-    biex isir xjenzat espert tal-kompjuter f'siegħa. Siegħa hija biss biżżejjed biex
-    titgħallem li x-xjenza tal-kompjuter hija divertenti u kreattiva, li hija aċċessibbli
-    fl-etajiet kollha, għall-istudenti kollha, irrispettivament mill-isfond. Il-kejl
-    tas-suċċess ta 'din il-kampanja mhuwiex f'kemm jitgħallmu l-istudenti tas-CS -
-    is-suċċess huwa rifless fil-parteċipazzjoni wiesgħa bejn is-sessi u l-gruppi etniċi
-    u soċjoekonomiċi, u ż-żieda li tirriżulta fir-reġistrazzjoni u l-parteċipazzjoni
-    naraw fil-korsijiet CS fil-livelli kollha grad. Miljuni ta 'għalliema u studenti
-    parteċipanti ddeċidew li jmorru lil hinn minn siegħa - biex jitgħallmu għal ġurnata
-    sħiħa jew ġimgħa sħiħa jew itwal, u ħafna studenti ddeċidew li jirreġistraw f'kors
-    sħiħ (jew saħansitra kulleġġ maġġuri) bħala riżultat. <br/><br/> Minbarra l-istudenti,
-    ieħor “jitgħallem” huwa l-edukatur li jikseb il-kunfidenza wara siegħa li jkunu
-    jistgħu jgħallmu xjenza tal-kompjuter anki jekk dawn ma jistgħux ikollhom grad
-    kulleġġ bħala xjenzat kompjuter. Għexieren ta 'eluf ta' għalliema jiddeċiedu li
-    jsegwu aktar ix-xjenza tal-kompjuter, jew jattendu PD jew joffru korsijiet online
-    ta 'segwitu, jew it-tnejn. U dan japplika għall-amministraturi tal-iskejjel ukoll,
-    li jirrealizzaw li x-xjenza tal-kompjuter hija xi ħaġa li l-istudenti tagħhom
-    iridu u l-għalliema tagħhom huma kapaċi. <br/><br/> Fuq kollox, dak li l-parteċipanti
-    kollha jistgħu jitgħallmu f'siegħa huwa li nistgħu nagħmlu dan.
   hoc_faq_one_hour_a_markdown: |-
     L-għan tas-Siegħa tal-Kodiċi mhuwiex li jgħallem lil xi ħadd biex isir xjenzat espert tal-kompjuter f'siegħa. Siegħa hija biss biżżejjed biex titgħallem li x-xjenza tal-kompjuter hija divertenti u kreattiva, li hija aċċessibbli fl-etajiet kollha, għall-istudenti kollha, irrispettivament mill-isfond. Il-kejl tas-suċċess ta 'din il-kampanja mhuwiex f'kemm jitgħallmu l-istudenti tas-CS - is-suċċess huwa rifless fil-parteċipazzjoni wiesgħa bejn il-gruppi ta' sess, razzjali/etniċi, u soċjoekonomiċi, u ż-żieda li tirriżulta fir-reġistrazzjoni u l-parteċipazzjoni li naraw fil-korsijiet CS fil-livelli kollha tal-grad. Miljuni ta 'għalliema u studenti parteċipanti ddeċidew li jmorru lil hinn minn siegħa - biex jitgħallmu għal ġurnata sħiħa jew ġimgħa sħiħa jew itwal, u ħafna studenti ddeċidew li jirreġistraw f'kors sħiħ (jew saħansitra kulleġġ maġġuri) bħala riżultat.
 
@@ -2665,37 +2711,27 @@ mt:
 
     Fuq kollox, dak li l-parteċipanti kollha jistgħu jitgħallmu f'siegħa huwa li nistgħu nagħmlu dan.
   hoc_faq_more_questions_q: Għad għandek aktar mistoqsijiet?
-  hoc_faq_more_questions_a: Ipprova ssib tweġiba fil-forum ta 'appoġġ <a href='http://support.code.org'>tagħna</a>.
   hoc_faq_more_questions_a_markdown: Ipprova ssib tweġiba fil- [forum ta 'appoġġ]
     tagħna (http://support.code.org).
   hoc_faq_keep_learning_q: Kif nista 'nibqa' nitgħallem wara s-Siegħa tal-Kodiċi?
-  hoc_faq_keep_learning_a: Kulħadd jista 'jospita Siegħa ta' Kodiċi fi kwalunkwe ħin.
-    It-tutorials jibqgħu aġġornati s-sena kollha. Għandek tistenna li t-tutorials
-    u l-kurrikulu kollha tagħna jkunu disponibbli fuq is-sit tagħna għal dejjem. Jekk
-    jogħġbok mur <a href='/promote'>riżorsi tagħna</a> għall avveniment how-to gwidi
-    u riżorsi oħra biex jgħinu jagħmlu Hour tiegħek ta 'Kodiċi avveniment suċċess.
   hoc_faq_keep_learning_a_markdown: Kulħadd jista 'jospita Siegħa ta' Kodiċi fi kwalunkwe
     ħin. It-tutorials jibqgħu aġġornati s-sena kollha. Għandek tistenna li t-tutorials
     u l-kurrikulu kollha tagħna jkunu disponibbli fuq is-sit tagħna għal dejjem. Jekk
     jogħġbok mur [riżorsi tagħna] (%{promote}) għal gwidi avveniment how-to u riżorsi
     oħra biex jgħinu jagħmlu Hour tiegħek ta 'Kodiċi avveniment suċċess.
   hoc_faq_certificates_q: Fejn nista 'nipprintja ċertifikati għall-istudenti tiegħi?
-  hoc_faq_certificates_a: Mur fil-paġna taċ-ċertifikati <a href='%{codeorg_url}/certificates'>tagħna</a>
-    fejn tista 'tipprintja ċertifikati għall-klassi kollha tiegħek qabel iż-żmien.
-    Tista 'wkoll tipprintja <a href='%{codeorg_url}/certificates?course=mc'>ċertifikati
-    speċjali</a> għal studenti li jagħmlu t-tutorja Minecraft.
-  hoc_faq_certificates_a_markdown: Mur fil- [paġna taċ-ċertifikati] (%{codeorg_url}/ċertifikati)
-    tagħna fejn tista 'tipprintja ċertifikati għall-klassi kollha tiegħek qabel iż-żmien.
-    Tista 'wkoll tipprintja [ċertifikati speċjali] (%{codeorg_url}/ċertifikati? course=mc)
-    għall-istudenti li jagħmlu t-tutorja tal-Minecraft.
+  hoc_faq_certificates_answer_markdown: Mur fil- [paġna taċ-ċertifikati] tagħna (%{certificates_url})
+    fejn tista 'tistampa ċertifikati għall-klassi kollha tiegħek qabel iż-żmien.
   hoc_faq_logo_q: Hemm limitazzjonijiet għal kif nista 'nuża l-logo jew l-isem tas-Siegħa
     tal-Kodiċi?
-  hoc_faq_logo_a: Siegħa ta 'Kodiċi huwa trademarked. Ma rridux nipprevjenu l-użu
-    tiegħu, imma rridu niżguraw li l-użu tiegħu joqgħod fi ftit limiti. Jekk jogħġbok
-    ara <a href='%{logo_url}'>dawn il-linji gwida għall-użu</a>.
   hoc_faq_logo_a_markdown: Siegħa ta 'Kodiċi huwa trademarked. Ma rridux nipprevjenu
     l-użu tiegħu, imma rridu niżguraw li l-użu tiegħu joqgħod fi ftit limiti. Jekk
     jogħġbok ara [dawn il-linji gwida għall-użu] (%{logo_url}).
+  hoc_faq_bug_q: Sibt bug f'attività ta' Hour of Code! X'għandi nagħmel?
+  hoc_faq_bug_a_markdown: |-
+    Oh le! Jekk iltaqajt ma 'bug f'attività ta' Siegħa ta 'Kodiċi - l-ewwel iċċekkja l-URL għall-attività li tkun fuqha. Jekk l-URL jibda bi studio.code.org, it-tim ta 'Appoġġ Code.org tagħna jista' jgħin! Ikklikkja l-ikona tal-marka tal-mistoqsija fir-rokna ta 'fuq tal-lemin tal-iskrin tiegħek, imbagħad agħżel “Rapporta problema” mill-menu dropdown.
+
+    Jekk l-URL ma jibdax bi studio.code.org, x'aktarx qed taħdem fuq attività ta 'parti terza u ser ikollok bżonn tilħaq lit-tim ta' appoġġ ta 'dik il-kumpanija għal aktar assistenza.
   stats_hoc_2013_image_alt: Stats mill-2013 Siegħa tal-Kodiċi
   stats_growth: Kien l-iktar mgħaġġel biex jilħaq 15-il miljun utent.
   stats_i18n: L-istudenti qed jitgħallmu f'aktar minn 45 lingwa
@@ -13687,7 +13723,7 @@ mt:
     ipprova [programmazzjoni par] (%{pair_url}) jew tesplora tagħna [attivitajiet
     unplugged] (%{unplugged_url}) biex titgħallem mingħajr ebda apparat fil-livelli
     kollha!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Min jista' jkun volontarjat?
   hoc_how_to_faq_answer_volunteer: Kull min passjonat dwar l-edukazzjoni tax-xjenza
     tal-kompjuter u d-diversità dejjem tiżdied fit-teknoloġija jista 'jkun voluntier!
     Aħna nħobbu naraw voluntiera ta 'l-isfond kollu jipparteċipaw. Is-Siegħa tal-Kodiċi
@@ -13701,7 +13737,7 @@ mt:
   hoc_how_to_faq_answer_account: L-ebda reġistrazzjoni jew login mhu meħtieġ biex
     l-istudenti jippruvaw is-Siegħa tal-Kodiċi. L-iffirmar għas-Siegħa tal-Kodiċi
     MHUX awtomatikament joħloq kont Code.org.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Riżorsi oħra tas-Siegħa tal-Kodiċi għall-edukaturi
   hoc_how_to_resources_promo_heading: Riżorsi Promozzjonali
   hoc_how_to_resources_promo_desc: Sib ir-riżorsi kollha li għandek bżonn - stampati
     u diġitali - biex iġġib l-attenzjoni għas-Siegħa tal-Kodiċi tiegħek.
@@ -13779,6 +13815,23 @@ mt:
     u @codeorg sabiex inkunu nistgħu nenfasizzaw is-suċċess tiegħek ukoll!'
   hoc_how_to_step_07_educators_desc_02: Tista 'wkoll tipprintja ċertifikati għall-istudenti
     tiegħek biex juru l-kisba tagħhom!
+  hoc_ai_top_desc: Kulħadd jista 'jitgħallem dwar l-AI, kemm jekk int student fil-klassi
+    jew edukatur li jinfettaħ il-futur tat-tagħlim ma' u dwar l-AI.
+  hoc_ai_how_ai_works_video_series_desc: Din is-serje ta 'vidjows qosra se tintroduċik
+    għal kif taħdem l-intelliġenza artifiċjali u għaliex hija importanti. Imbagħad
+    tidħol f'kwistjonijiet bħall-preġudizzju algoritmiku u l-etika tat-teħid tad-deċiżjonijiet
+    tal-AI.
+  hoc_ai_learn_how_ai_works_desc: Adsa fid-dinja ta 'l-AI ma' “Kif taħdem l-AI,” lezzjonijiet
+    imqabbda mas-serje tal-vidjow tagħna li tintrodulek kif taħdem l-AI u għaliex
+    huwa importanti.
+  hoc_ai_101_for_educators_desc: Skopri d-dinja innovattiva tal-intelliġenza artifiċjali
+    (AI) u l-potenzjal trasformattiv tagħha fl-edukazzjoni bis-serje fundamentali
+    tagħna ta 'tagħlim onlajn għall-għalliema.
+  hoc_ai_impacts_desc: Involvi l-klassi tiegħek b'lezzjonijiet immexxija mill-għalliema
+    li jesploraw l-impatti tal-intelliġenza artifiċjali u jistiednu lill-istudenti
+    biex jaħsbu f'soluzzjonijiet għal uħud mill-kwistjonijiet ta 'l-AI.
+  hoc_ai_activities_desc: Dawn l-attivitajiet ġodda kollha tas-Siegħa tal-Kodiċi jintroduċu
+    lill-utenti għad-dinja tal-intelliġenza artifiċjali b'mod divertenti u involviment.
   team_page_full_team_alt_text: Kważi 100 impjegat Code.org fit-tqabbil ta 't-shirts
     blu u isfar joħolqu f'kamra tal-konferenzi f'lukanda għall-avveniment tal-Codechella
     tas-sajf 2022 tal-kumpanija.
@@ -14327,6 +14380,24 @@ mt:
   video_library_page_not_hacked_video_title_6: 'Kif Mhux To Get Hacked: Messaġġi u
     Downloads'
   video_library_page_not_hacked_video_title_7: 'Kif Mhux To Get Hacked: Installa Aġġornamenti'
+  thank_you_page_main_title: Grazzi talli Għajnuna biex Tibni Moviment
+  thank_you_page_description: Il-Code.org Advocacy Coalition tixtieq tirringrazzja
+    lill-mijiet ta 'eluf ta' champions u avukati lokali, inklużi għalliema, membri
+    tal-komunità, riċerkaturi, nonprofit, universitajiet, korporazzjonijiet, u istituzzjonijiet
+    tal-gvern li appoġġjaw il-viżjoni li kull student f'kull skola jistħoqqilhom l-opportunità
+    li jitgħallmu x-xjenza tal-kompjuter. Grazzi tal-appoġġ tiegħek għal dan il-moviment.
+  thank_you_page_members_section_title: 'U lill-membri kollha tal-Koalizzjoni tal-Advocacy
+    Code.org:'
+  thank_you_page_individual_organization_title: 'Grazzi lill-individwi u organizzazzjonijiet
+    li ġejjin għall-kontribuzzjonijiet tagħhom għal dan ir-rapport:'
+  thank_you_page_individual_organization_description: Superviżuri tal-edukazzjoni
+    tax-xjenza tal-kompjuter f'kull aġenzija tal-edukazzjoni statali, Bord tal-Kulleġġ,
+    Della Cronin, Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle
+    Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Grazzi lill-istudenti u l-għalliema kkwotati
+    f''dan ir-rapport:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Dwarna
   about_us_page_hero_description: Code.org® hija innovazzjoni edukazzjoni nonprofit
     iddedikat għall-viżjoni li kull student f'kull skola għandu l-opportunità li jitgħallmu
@@ -14489,6 +14560,125 @@ mt:
     se tappoġġja dik il-viżjoni.
   about_page_donors_link_1: Agħmel donazzjonijiet
   about_page_donors_link_2: "[ara l-lista tagħna ta' donaturi] (%{donors_url})"
+  teach_ai_title: Eżempji tad-dinja reali. Riżorsi Prattiċi.
+  teach_ai_description: L-AI Gwida għall-Iskejjel Toolkit huwa riżorsa għal dawk li
+    jfasslu l-politika, mexxejja tal-iskejjel, u persunal biex jiżviluppaw gwida inizjali
+    dwar l-AI fl-iskejjel tagħhom.
+  teach_ai_button_label: Ara l-Toolkit
+  middle_high_page_main_title: Tagħlim għal Età ta' 11 u aktar
+  middle_high_page_main_description: Esplora d-dinja tax-xjenza tal-kompjuter b'vidjows
+    li jinvolvu, tutorials b'ritmu waħdu, attivitajiet ta 'programmazzjoni, u aktar!
+  middle_high_page_hero_title: Ibda bil-Hour of Code
+  middle_high_page_hero_description: Tgħallem il-fundamentali tax-xjenza tal-kompjuter
+    b'attivitajiet b'xejn Hour of Code, li jidhru blokki ta 'kodifikazzjoni drag-and-drop.
+    Hemm mijiet ta 'għażliet ta' siegħa minn fejn tagħżel!
+  middle_high_page_hourofcode_link: Esplora l-attivitajiet tas-Siegħa tal-Kodiċi
+  middle_high_page_modules_title: Moduli ta' Programmazzjoni għal Studenti Anzjani
+  middle_high_page_modules_description: Adattati mill-korsijiet tagħna ta 'Skoperti
+    CS u Prinċipji CS, dawn il-moduli qosra u awto-ritmu għall-istudenti ta' l-iskola
+    tan-nofs u għolja huma mod tajjeb ħafna biex jitgħallmu kunċetti li jifirxu l-lingwi
+    u l-għodod kollha ta 'programmazzjoni.
+  middle_high_page_modules_card_title_1: Introduzzjoni għall-Game Lab
+  middle_high_page_modules_card_title_2: Programmazzjoni tal-Fekruna fil-Lab tal-App
+  middle_high_page_modules_card_title_3: Programmazzjoni Immexxija mill-Avvenimenti
+    fil-Lab tal-App
+  middle_high_page_modules_card_description_1: Nimxu bil-pass tiegħek stess f'din
+    l-introduzzjoni għall-ambjent Game Lab tagħna kif inti programm animazzjonijiet,
+    arti interattiva, u logħob.
+  middle_high_page_modules_card_description_2: Nisfruttaw il-ħila li jagħmlu apps
+    sinjuri, interattivi ma JavaScript fil-Lab App!
+  middle_high_page_modules_card_description_3: Mur bil-pass tiegħek stess ma 'din
+    l-introduzzjoni għall-ambjent ta' programmazzjoni App Lab, li fih l-istudenti
+    jużaw JavaScript biex joħolqu apps interattivi.
+  middle_high_page_modules_card_link: Ipprova
+  middle_high_page_make_your_own_title: Agħmel l-Applikazzjonijiet, il-Logħob u l-Paġni
+    tal-Web Tiegħek
+  middle_high_page_make_your_own_description: 'Minbarra l-korsijiet, għandna għodod
+    ta ''programmazzjoni li jħalluk tesplora l-kreattività tiegħek u tagħmel xi ħaġa
+    aqwa. '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: Laboratorju tal-Logħob
+  middle_high_page_make_your_own_card_title_3: Laboratorju tal-Web
+  middle_high_page_make_your_own_card_descrpition_1: App Lab huwa ambjent ta 'programmazzjoni
+    fejn tista' tagħmel apps sempliċi. Disinn app, kodiċi fil-JavaScript ma jew blokki
+    jew test, imbagħad jaqsmu l-app tiegħek f'sekondi.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab huwa ambjent ta 'programmazzjoni
+    fejn tista' tagħmel animazzjonijiet sempliċi u logħob b'oġġetti u karattri li
+    jinteraġixxu ma 'xulxin.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab huwa ambjent ta 'programmazzjoni
+    fejn tista' tagħmel paġni web sempliċi billi tuża HTML u CSS. Iddisinja l-paġni
+    tal-web tiegħek u aqsam is-sit tiegħek f'sekondi.
+  middle_high_page_make_your_own_card_link: Tgħallem aktar
+  middle_high_page_additional_resources_title: Riżorsi addizzjonali
+  middle_high_page_additional_resources_description: Hemm tant modi biex tesplora
+    aktar ix-xjenza tal-kompjuter! Ibbrawżja l-librerija tal-vidjow tagħna, jew titgħallem
+    aktar dwar karrieri eċċitanti fil-qasam tax-xjenza tal-kompjuter.
+  middle_high_page_video_library_title: Skopri l-Librerija tal-Vidjow tagħna
+  middle_high_page_video_library_description: Tgħallem il-bażiċi tax-xjenza tal-kompjuter
+    permezz ta 'vidjows qosra ta' 5-10 minuta dwar suġġetti bħal intelliġenza artifiċjali,
+    l-Internet, kif jaħdmu kompjuters, kif ma tikseb hacked, blockchain, karrieri,
+    u aktar!
+  middle_high_page_video_library_link: Ara l-librerija tal-vidjow
+  middle_high_page_cs_journeys_title: Mur aktar bil-CS Journeys
+  middle_high_page_cs_journeys_description: Ħu l-pass li jmiss fil-vjaġġ tax-xjenza
+    tal-kompjuter tiegħek. Esplora karrieri, opportunitajiet ta 'mentoring, korsijiet
+    onlajn, boroż ta' studju, apprendistati u aktar!
+  middle_high_page_cs_journeys_link: Esplora CS Journeys
+  middle_high_page_cs_title: Xjenza tal-Kompjuter fil-Klassi
+  middle_high_page_cs_description: Dawn il-korsijiet għandhom jitmexxew minn għalliem!
+    Jekk tixtieq tarahom mgħallma fl-iskola tiegħek, ikkunsidra li taħdem ma 'għalliem
+    biex iġġibhom fil-klassi tiegħek.
+  middle_high_page_cs_card_title_1: Skoperti CS
+  middle_high_page_cs_card_title_2: Prinċipji CS
+  middle_high_page_cs_card_title_3: Xjenza tal-Kompjuter AP A
+  middle_high_page_cs_card_description_1: Sett b'xejn ta 'kurrikuli elementari li
+    jintroduċi lill-istudenti għall-kunċetti fundamentali tax-xjenza tal-kompjuter
+    u jisfidahom biex jesploraw kif il-kompjuters u t-teknoloġija jistgħu jħallu impatt
+    fuq id-dinja.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Introduċi lill-istudenti għall-inġinerija
+    tas-softwer u d-disinn orjentat lejn l-oġġett waqt li jitgħallmu l-lingwa ta 'programmazzjoni
+    Java f'dan il-kurrikulu b'xejn għal AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Esplora CS Dicoveries
+  middle_high_page_cs_link_2: Esplora Prinċipji CS
+  middle_high_page_cs_link_3: Esplora CSA
+  elemeentary_page_main_title: Tagħlim għal Etajiet minn 5 sa 11-il sena
+  elementary_page_main_description: Esplora d-dinja tax-xjenza tal-kompjuter b'vidjows
+    li jinvolvu, tutorials b'ritmu waħdu, attivitajiet ta 'programmazzjoni, u aktar!
+  elementary_page_own_pace_title: Kompli Tagħlim bil-pass tiegħek stess
+  elementary_page_own_pace_description: Oħloq tpinġijiet, logħob, u aktar f'dawn iż-żewġ
+    għażliet eċċellenti għall-istudenti jkollna bidu fuq tagħhom stess tagħlim l-bażiċi
+    tax-xjenza tal-kompjuter.
+  elementary_page_own_pace_card_title_1: Kors Pre-Reader Express
+  elementary_page_own_pace_card_title_2: Kors Express
+  elementary_page_own_pace_card_description_1: Tgħallem ix-xjenza tal-kompjuter bil-pass
+    tiegħek stess! Tgħallem toħloq programmi tal-kompjuter, tiżviluppa ħiliet għas-soluzzjoni
+    tal-problemi, u taħdem permezz ta 'sfidi divertenti! Agħmel logħob u proġetti
+    kreattivi biex jaqsmu mal-ħbieb, familja, u l-għalliema.
+  elementary_page_own_pace_link_1: Ibda l-Kors Pre-Reader
+  elementary_page_own_pace_link_2: Ibda l-Kors Express
+  elementary_page_make_your_own_games_title: Agħmel l-Animazzjonijiet u l-Logħob Tiegħek
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Żmien li ssir kreattiv!
+    Uża kodifikazzjoni bbażata fuq il-blokk biex tagħmel xi ħaġa iblah, ħelwa, jew
+    outter-spacey fil-Lab Sprite. L-uniku limitu huwa l-immaġinazzjoni tiegħek!
+  elementary_page_make_your_own_games_link: Ipprova Sprite Lab
+  elementary_page_computer_science_title: Xjenza tal-Kompjuter fil-Klassi
+  elementary_page_computer_science_description: Dawn il-korsijiet għandhom jitmexxew
+    minn għalliem! Jekk tixtieq tarahom mgħallma fl-iskola tiegħek, staqsi lil ġenitur
+    jew lill-gwardjan biex jaħdmu ma 'għalliem biex iġibhom fil-klassi tiegħek.
+  elementary_page_computer_science_card_title_1: Fundamentali tax-Xjenza tal-Kompjuter
+  elementary_page_computer_science_card_title_2: Konnessjonijiet tax-Xjenza tal-Kompjuter
+  elementary_page_computer_science_description_1: Sett b'xejn ta 'kurrikuli elementari
+    li jintroduċi lill-istudenti għall-kunċetti fundamentali tax-xjenza tal-kompjuter
+    u jisfidahom biex jesploraw kif il-kompjuters u t-teknoloġija jistgħu jħallu impatt
+    fuq id-dinja.
+  elementary_page_computer_science_description_2: Agħmel konnessjonijiet bejn ix-xjenza
+    tal-kompjuter (CS) u suġġetti oħra bħall-matematika, l-arti tal-lingwa, ix-xjenza,
+    u l-istudji soċjali.
   language_code:
     ar: Għarbi
     az: Ażerbajġan

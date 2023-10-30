@@ -8,7 +8,7 @@ title: Tund kood juhend
 
 ### Liitu liikumise ja tutvustada oma õpilastele infotehnoloogia neid samme.
 
-Students today should learn how to create technology, not just use it.
+Tänapäeva õpilased peaksid õppima tehnoloogiat looma, mitte ainult seda kasutama.
 
 Kooditunni proovimine on lihtne ja lõbus viis tutvustada õpilastele arvutiteadust, võib-olla esimest korda! Leidke tegevus, mis sobib teie seadistusele, olenemata sellest, kas klassis või pärast kooli, isiklikult või virtuaalset. Vaadake meie [osalemise juhendit, kui teil on veel küsimusi]({{ localized_files/participation_guide }}) pärast allolevate sammude kontrollimist:
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Kui [registreerite oma kooditunnise sündmuse](/#join), saate kasulikku e-posti suhtlust uudiste ja näpunäidetega eduka kooditunni majutamiseks. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kui [registreerute oma kooditunni üritusele](/events), saate kasulikku e-posti teatist koos uudiste ja näpunäidetega eduka kooditunni korraldamiseks. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ Mida teha, kui õpilane saab varem valmis?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Printige oma õpil]({{ urls/certificates }}) astele sertifikaadid.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 

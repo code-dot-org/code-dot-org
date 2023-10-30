@@ -32,6 +32,10 @@ sr:
         options:
           UNIT:
             '"seconds"': секунде
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': секунде
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -217,6 +221,10 @@ sr:
       Dancelab_randomColor:
         text: насумична боја
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': "(Насумичан)"
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"rand"': "(Насумичан)"

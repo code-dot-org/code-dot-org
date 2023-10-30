@@ -133,7 +133,7 @@ Proberte se školou nebo učitelem, co bude dávat největší smysl. Byli jsme 
 - Vysvětlete, jak technologie ovlivňují náš život, a uveďte příklady, které by mohly zaujmout všechny studenty bez rozdílu – zmiňte se o technologiích, která zachraňují životy, pomáhají lidem, spojují je apod.
 - Pokud jste technologická firma, předveďte zábavné, inovativní produkty, na kterých vaše společnost pracuje. Pokud máte jiné zaměření, pohovořte o tom, jak vaše firma využívá technologie k řešení problémů a dosahování cílů.
 - Pozvěte softwarové inženýry z Vaší společnosti, aby promluvili o tom, proč se rozhodli studovat počítačovou vědu, a o projektech, na kterých pracují.
-- V případě, že se na události bude podílet váš personál nebo vyšlete dobrovolníky do místní školy, zvažte objednání [speciálních triček](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more), která si skupina oblékne.
+- Pokud máte skupinu zaměstnanců, kteří budou usnadňovat vaši akci nebo dobrovolně pracovat s místní školou, zvažte objednání [vlastních triček](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) pro vaši skupinu.
 
 ### 3. Naplánujte všechno s ohledem na technické požadavky
 
@@ -186,7 +186,7 @@ Jedním z nejlepších způsobů, jak můžete pomoct, je šířit osvětu a pro
 
 ### 1. Zaregistrujte svou událost
 
-Když se [zaregistrujete na svou akci Hodina programování](/#join), budete dostávat užitečné e-maily se zprávami a radami, jak pořádat úspěšnou Hodinu programování. Zároveň tím dáte místním školám a rodičům vědět, že v jejich okolí pořádáte událost.
+Když se zaregi [strujete k události Hodina kódu](/events), obdržíte užitečnou e-mailovou komunikaci se zprávami a tipy, jak uspořádat úspěšnou Hodinu kódu. Zároveň tím dáte místním školám a rodičům vědět, že v jejich okolí pořádáte událost.
 
 ### 2. Zveřejněte událost na sociálních médiích 
 
