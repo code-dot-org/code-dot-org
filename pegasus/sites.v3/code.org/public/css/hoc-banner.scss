@@ -60,14 +60,13 @@
   text-align: center;
   color: $white;
   line-height: 1.4;
-  text-shadow: 0px 0px 8px #5d1582;
 
   h1, h2 {
     color: $white
   }
 
   h1 {
-    font-size: 4.5em;
+    font-size: 3.5rem;
     font-family: var(--main-font);
     font-weight: var(--bold-font-weight);
     margin: 0 auto 0.5em;
@@ -86,8 +85,9 @@
   }
 
   h2 {
-    margin-top: 0;
+    margin: 0 auto 1rem;
     font-family: var(--main-font);
+    font-size: 1.25rem;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.25em;
@@ -113,69 +113,7 @@
   }
 }
 
-// Code.org HoC /learn page banner
-#fullwidth.hoc-banner {
-  background: url('/images/hoc2022-codeorg-hero-banner-01.svg') no-repeat center center;
-  background-size: cover;
-
-  @media screen and (max-width: $width-sm) {
-    background: url('/images/hoc2022-codeorg-hero-banner-mobile-01.svg') no-repeat center center;
-    background-size: cover;
-  }
-}
-
-section.banner {
-  text-align: center;
-  color: $darkest_gray;
-
-  h1, h2 {
-    color: $darkest_gray;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 3em;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 2.5em;
-    }
-  }
-
-  h2 {
-    font-family: var(--main-font);
-    font-size: 1.2em;
-    line-height: 1.4;
-    margin: 1em auto 2em;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 1em;
-    }
-  }
-
-  .wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 5.75em 0 6.5em;
-
-    @media screen and (max-width: $width-md) {
-      padding: 6em 0 6.5em;
-      width: 80%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      padding: 4.5em 1em 6em;
-      width: 88%;
-    }
-  }
-
-  a {
-    color: $darkest_gray;
-    text-decoration: underline;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
+#homepage #actions .herohocbutton-solid-yellow {
+  background-color: #1AADBB;
+  border-color: #1AADBB;
 }

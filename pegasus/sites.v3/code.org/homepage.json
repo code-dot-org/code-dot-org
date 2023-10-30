@@ -23,21 +23,21 @@
         },
         {
           "type": "heading",
-          "text": "hoc2022_banner_title"
+          "text": "curriculum_name_dance_party_ai_edition"
         },
         {
           "type": "heading-two",
-          "text": "hoc2022_banner_description"
+          "text": "codeorg_homepage_hoc2023_body"
         },
         {
           "type": "cta_button_solid_yellow",
           "text": "hoc2022_cta_primary",
-          "url": "/hourofcode2022"
+          "url": "/hourofcode"
         },
         {
-          "type": "cta_button_hollow_white",
+          "type": "cta_button_solid_white",
           "text": "hoc2022_cta_secondary",
-          "url": "/hourofcode/overview"
+          "url": "https://hourofcode.com/learn"
         }
       ]
     },
@@ -55,21 +55,21 @@
         },
         {
           "type": "heading",
-          "text": "hoc2022_banner_title"
+          "text": "curriculum_name_dance_party_ai_edition"
         },
         {
           "type": "heading-two",
-          "text": "hoc2022_banner_description"
+          "text": "codeorg_homepage_hoc2023_body"
         },
         {
           "type": "cta_button_solid_yellow",
           "text": "hoc2022_cta_primary",
-          "url": "/hourofcode2022"
+          "url": "/dance"
         },
         {
-          "type": "cta_button_hollow_white",
+          "type": "cta_button_solid_white",
           "text": "hoc2022_cta_secondary",
-          "url": "/hourofcode/overview"
+          "url": "https://hourofcode.com/learn"
         }
       ]
     },
