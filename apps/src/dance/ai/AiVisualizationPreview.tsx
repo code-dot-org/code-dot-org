@@ -57,7 +57,7 @@ const AiVisualizationPreview: React.FunctionComponent<
       true, // treat this as a readonly workspace
       false // no replay log
     );
-    executor.preview(songMetadata);
+    executor.livePreview(songMetadata);
     return () => {
       executor.destroy();
     };

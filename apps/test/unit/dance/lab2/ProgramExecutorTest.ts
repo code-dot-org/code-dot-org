@@ -124,14 +124,14 @@ describe('ProgramExecutor', () => {
     expect(nativeAPI.play).to.have.been.calledWith(currentSongMetadata);
   });
 
-  it('compiles and runs live preview on preview', async () => {
+  it('compiles and runs live preview on when calling livePreview', async () => {
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
 
-    await programExecutor.preview(currentSongMetadata);
+    await programExecutor.livePreview(currentSongMetadata);
 
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;

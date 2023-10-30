@@ -102,9 +102,45 @@ export default class ProgramExecutor {
   }
 
   /**
-   * Preview the program. Compiles student code and calls on the native API to draw a frame.
+   * Show a static preview of the program. Compiles student code and calls on the native API to draw a frame.
    */
-  async preview(songMetadata: SongMetadata) {
+  async staticPreview() {
+    this.reset();
+    this.hooks = await this.preloadSpritesAndCompileCode(
+      this.getCode(),
+      'runUserSetup'
+    );
+    if (!this.hooks.runUserSetup) {
+      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      return;
+    }
+
+    const previewDraw = () => {
+      this.nativeAPI.setEffectsInPreviewMode(true);
+
+      // the user setup hook initializes effects,
+      // needs to happen in preview mode for some effects (eg, tacos)
+      if (!this.hooks.runUserSetup) {
+        return;
+      }
+      this.hooks.runUserSetup();
+
+      // redraw() (rather than draw()) is p5's recommended way
+      // of drawing once.
+      this.nativeAPI.p5_.redraw();
+
+      this.nativeAPI.setEffectsInPreviewMode(false);
+    };
+
+    // This is the mechanism p5 uses to queue draws,
+    // so we do the same so we end up after any queued draws.
+    window.requestAnimationFrame(previewDraw);
+  }
+
+  /**
+   * Show a live preview of the program. Compiles student code and calls on the native API to run the live preview.
+   */
+  async livePreview(songMetadata: SongMetadata) {
     this.reset();
     this.hooks = await this.preloadSpritesAndCompileCode(
       this.getCode(),
@@ -117,9 +153,6 @@ export default class ProgramExecutor {
     }
 
     this.hooks.runUserSetup();
-    // TODO: We are calling livePreview() here since this is currently only used by
-    // the AI Dance modal. When this is integrated with Lab2, we should probably also
-    // support static previews.
     this.nativeAPI.livePreview(songMetadata);
     this.livePreviewActive = true;
   }
