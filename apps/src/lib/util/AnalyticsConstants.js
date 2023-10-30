@@ -90,6 +90,20 @@ const EVENTS = {
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   GUIDE_SENT_EVENT: 'Guide Sent',
 
+  // Hour of Code - Dance Party
+  DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',
+  DANCE_PARTY_LEVEL_COMPLETED: 'Dance Party Level Completed',
+  DANCE_PARTY_AI_BACKGROUND_GENERATED: 'Dance Party AI Background Generated',
+  DANCE_PARTY_AI_BACKGROUND_REGENERATED:
+    'Dance Party AI Background Regenerated',
+  DANCE_PARTY_AI_BACKGROUND_USED: 'Dance Party AI Background Used',
+  DANCE_PARTY_AI_BACKGROUND_RESTARTED: 'Dance Party AI Background Restarted',
+  DANCE_PARTY_AI_BACKGROUND_EDITED: 'Dance Party AI Background Edited',
+  DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
+  DANCE_PARTY_VIDEO_PRESENTED: 'Dance Party Video Presented',
+  DANCE_PARTY_VIDEO_STARTED: 'Dance Party Video Started',
+  DANCE_PARTY_VIDEO_COMPLETED: 'Dance Party Video Completed',
+
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
   TEACHER_HOC_CONGRATS_PAGE_VISITED:
     'Teacher Hour of Code Congrats Page Visited ',

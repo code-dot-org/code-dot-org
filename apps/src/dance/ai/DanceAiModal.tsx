@@ -14,6 +14,9 @@ import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput} from '../types';
 
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
 
@@ -114,6 +117,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     if (currentInputSlot < SLOT_COUNT) {
       setInputs([...inputs, id]);
       setCurrentInputSlot(currentInputSlot + 1);
+      analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_EMOJI_USED, {
+        emoji: id,
+      });
     }
   };
 
@@ -127,6 +133,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleGenerateClick = () => {
     startAi();
+
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
+      emojis: inputs,
+    });
+
     setMode(Mode.GENERATING);
   };
 
@@ -138,6 +149,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setProcessingDone(false);
     setGeneratingNodesDone(false);
     setGeneratingDone(false);
+
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
+      emojis: inputs,
+    });
 
     handleGenerateClick();
   };
@@ -244,6 +259,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleUseClick = () => {
     currentAiModalField?.setValue(resultJson);
+    const params = JSON.parse(resultJson);
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
+      emojis: params.inputs,
+      backgroundEffect: params.backgroundEffect,
+      backgroundColor: params.backgroundColor,
+      foregroundEffect: params.foregroundEffect,
+    });
+
     dispatch(setCurrentAiModalField(undefined));
   };
 
@@ -252,6 +275,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleStartOverClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
+      emojis: inputs,
+    });
     setMode(Mode.SELECT_INPUTS);
     setInputs([]);
     setCurrentInputSlot(0);
