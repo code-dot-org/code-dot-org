@@ -4,7 +4,8 @@ import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
 
 interface AiVisualizationPreviewProps {
-  blocks: BlockSvg[];
+  generateBlocks: () => BlockSvg[];
+  //blocks: BlockSvg[];
 }
 
 const PREVIEW_DIV_ID = 'ai-preview';
@@ -14,13 +15,15 @@ const PREVIEW_DIV_ID = 'ai-preview';
  */
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
-> = ({blocks}) => {
+> = ({generateBlocks}) => {
   // Generate setup code for previewing the given blocks.
   const generateSetupCode = useCallback((): string => {
+    const blocks: BlockSvg[] = generateBlocks();
     if (blocks.length === 0) {
       console.log('No blocks to preview');
       return '';
     }
+
     // Create a temporary setup block
     const setup: BlockSvg = Blockly.getMainWorkspace().newBlock(
       'Dancelab_whenSetup'
@@ -36,11 +39,9 @@ const AiVisualizationPreview: React.FunctionComponent<
     // Remove the temp setup block from the workspace so it doesn't remain after preview
     Blockly.getMainWorkspace().removeTopBlock(setup);
     return Blockly.getGenerator().blockToCode(setup);
-  }, [blocks]);
+  }, []);
 
   useEffect(() => {
-    console.log('new executor');
-
     // Create a new program executor whenever preview code changes
     // to ensure that P5 is destroyed and reloaded correctly.
     const executor: ProgramExecutor = new ProgramExecutor(
@@ -54,7 +55,7 @@ const AiVisualizationPreview: React.FunctionComponent<
     return () => {
       executor.destroy();
     };
-  }, [blocks, generateSetupCode]);
+  }, []);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const blockPreviewContainerRef = useRef<HTMLDivElement>(null);

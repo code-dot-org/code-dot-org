@@ -79,19 +79,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const inputLibraryFilename = 'ai-inputs';
   const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
 
+  const allResults = useRef<any[]>([]);
+
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [resultJson, setResultJson] = useState<string>('');
-  const [badResults, setBadResults] = useState<any>(undefined);
-  const [resultScores, setResultScores] = useState<any>(undefined);
-  const [currentPreview, setCurrentPreview] = useState<any>(undefined);
-  const [currentPreviewScore, setCurrentPreviewScore] = useState<
+  //const [badResults, setBadResults] = useState<any>(undefined);
+  //const [resultScores, setResultScores] = useState<any>(undefined);
+  //const [currentPreview, setCurrentPreview] = useState<any>(undefined);
+  /*const [currentPreviewScore, setCurrentPreviewScore] = useState<
     number | undefined
-  >(undefined);
+  >(undefined);*/
   const [processingDone, setProcessingDone] = useState<boolean>(false);
-  const [generatingStep, setGeneratingStep] = useState<number>(0);
-  const [generatingSubStep, setGeneratingSubStep] = useState<number>(0);
+  const [generatingStep, setGeneratingStep] = useState<number[]>([0, 0]);
   const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
 
   const currentAiModalField = useSelector(
@@ -111,7 +112,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       // The block value will be set to this JSON.
       setResultJson(currentValue);
 
-      setCurrentPreview(JSON.parse(currentValue));
+      //setCurrentPreview(JSON.parse(currentValue));
 
       setInputs(JSON.parse(currentValue).inputs);
     }
@@ -159,50 +160,79 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   useInterval(
     () => {
-      if (generatingSubStep < 2) {
-        setGeneratingSubStep(generatingSubStep + 1);
-      } else if (generatingStep < 4) {
-        setGeneratingStep(generatingStep + 1);
-        setGeneratingSubStep(0);
+      /*
+      let currentGeneratingStep = generatingStep;
+      let currentGeneratingSubStep = generatingSubStep;
+
+      if (currentGeneratingSubStep < 2) {
+        currentGeneratingSubStep++;
+        setGeneratingSubStep(currentGeneratingSubStep);
+      } else if (currentGeneratingStep < 4) {
+        currentGeneratingStep++;
+        setGeneratingStep(currentGeneratingStep);
+        currentGeneratingSubStep = 0;
+        setGeneratingSubStep(currentGeneratingSubStep);
+      }*/
+
+      console.log('begin tick');
+
+      if (mode === Mode.GENERATING) {
+        /* if (generatingSubStep === 0) {
+          // generatingSubStep 0 is when the preview appears.
+          // generatingSubStep 1 is when the score appears.
+          // generatingSubStep 2 is when the bot shows green/red.
+
+         if (generatingStep === 0) {
+            setCurrentPreview(badResults[0].results);
+            setScore(badResults[0].scores);
+            console.log('set preview 0', badResults[0].results);
+          } else if (generatingStep === 1) {
+            setCurrentPreview(badResults[1].results);
+            setScore(badResults[1].scores);
+            console.log('set preview 1', badResults[1].results);
+          } else if (generatingStep === 2) {
+            setCurrentPreview(badResults[2].results);
+            setScore(badResults[2].scores);
+            console.log('set preview 2', badResults[2].results);
+          } else if (generatingStep === 3) {
+            setCurrentPreview(JSON.parse(resultJson));
+            setScore(resultScores);
+            console.log('set preview 3', JSON.parse(resultJson));
+          } else if (generatingStep === 4) {
+            setMode(Mode.RESULTS_FINAL);
+          }
+        }*/
+
+        let currentGeneratingStep = [...generatingStep];
+
+        if (currentGeneratingStep[1] < 2) {
+          // bump substep.
+          currentGeneratingStep[1]++;
+        } else if (currentGeneratingStep[0] < 3) {
+          // bump step and reset substep;
+          currentGeneratingStep[0]++;
+          currentGeneratingStep[1] = 0;
+        } else {
+          // leave these values but go to results.
+          setMode(Mode.RESULTS_FINAL);
+        }
+
+        // one-shot update of step & substep.
+        setGeneratingStep(currentGeneratingStep);
+
+        console.log('end tick', currentGeneratingStep);
       }
     },
     mode === Mode.GENERATING ? 1500 : undefined
   );
 
-  const setScore = (scores: any) => {
+  const getScore = (scores: any) => {
     const total =
       scores.backgroundEffectScore +
       scores.foregroundEffectScore +
       scores.backgroundColorScore;
-    setCurrentPreviewScore(total);
+    return total;
   };
-
-  useEffect(() => {
-    if (mode === Mode.GENERATING) {
-      if (generatingSubStep === 0) {
-        // generatingSubStep 0 is when the preview appears.
-        // generatingSubStep 1 is when the score appears.
-        // generatingSubStep 2 is when the bot shows green/red.
-
-        if (generatingStep === 0) {
-          setCurrentPreview(badResults[0].results);
-          setScore(badResults[0].scores);
-          console.log('set current preview 0');
-        } else if (generatingStep === 1) {
-          setCurrentPreview(badResults[1].results);
-          setScore(badResults[1].scores);
-        } else if (generatingStep === 2) {
-          setCurrentPreview(badResults[2].results);
-          setScore(badResults[2].scores);
-        } else if (generatingStep === 3) {
-          setCurrentPreview(JSON.parse(resultJson));
-          setScore(resultScores);
-        } else if (generatingStep === 4) {
-          setMode(Mode.RESULTS_FINAL);
-        }
-      }
-    }
-  }, [mode, generatingStep, generatingSubStep]);
 
   const handleGenerateClick = () => {
     startAi();
@@ -215,14 +245,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setCurrentInputSlot(0);
     setResultJson('');
     setProcessingDone(false);
-    setGeneratingStep(0);
+    setGeneratingStep([0, 0]);
   };
 
   const handleRegenerateClick = () => {
     setResultJson('');
     setProcessingDone(false);
-    setGeneratingStep(0);
-    setCurrentPreview(undefined);
+    setGeneratingStep([0, 0]);
 
     handleGenerateClick();
   };
@@ -242,15 +271,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     // The block value will be set to this JSON.
     setResultJson(fullResultJson);
+    //setResultScores(result.scores);
 
-    setResultScores(result.scores);
+    allResults.current = [];
 
     const badResultsList: any = [];
     // Grab some bad results too.
     for (let i = 0; i < 3; i++) {
-      badResultsList[i] = chooseEffects(inputs, false);
+      allResults.current[i] = chooseEffects(inputs, false);
     }
-    setBadResults(badResultsList);
+
+    allResults.current[3] = result;
+
+    //setBadResults(badResultsList);
+    console.log('all results', allResults);
   };
 
   /**
@@ -261,8 +295,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     workspace: Workspace
   ): [BlockSvg, BlockSvg] => {
     //const params = JSON.parse(resultJson);
-    const params = currentPreview;
-    console.log('generate blocks', params);
+    const params = allResults.current[generatingStep[0]].results;
+    console.log('generate blocks', generatingStep, params);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
       workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
@@ -344,17 +378,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   const botImage =
-    mode === Mode.GENERATING && generatingStep < 3 && generatingSubStep >= 2
+    mode === Mode.GENERATING && generatingStep[0] < 3 && generatingStep[1] >= 2
       ? aiBotNo
-      : mode === Mode.GENERATING && generatingSubStep >= 2
+      : mode === Mode.GENERATING && generatingStep[1] >= 2
       ? aiBotYes
       : aiBotBorder;
   const botSideBeamImage =
-    mode === Mode.GENERATING && generatingSubStep === 1
+    mode === Mode.GENERATING && generatingStep[1] === 1
       ? aiBotBeam
-      : mode === Mode.GENERATING && generatingStep < 3 && generatingSubStep >= 2
+      : mode === Mode.GENERATING &&
+        generatingStep[0] < 3 &&
+        generatingStep[1] >= 2
       ? aiBotBeamRed
-      : mode === Mode.GENERATING && generatingSubStep >= 2
+      : mode === Mode.GENERATING && generatingStep[1] >= 2
       ? aiBotBeamGreen
       : undefined;
 
@@ -561,73 +597,83 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        {(mode === Mode.GENERATING || mode === Mode.RESULTS_FINAL) &&
-          currentPreview && (
-            <div
-              key={'preview' /*generatingStep*/}
-              id="preview-area"
-              className={moduleStyles.previewArea}
-            >
-              <div id="flip-card" className={moduleStyles.flipCard}>
+        {(mode === Mode.GENERATING || mode === Mode.RESULTS_FINAL) && (
+          <div
+            key={'preview-' + (generatingStep[0] === 4 ? 3 : generatingStep[0])}
+            id="preview-area"
+            className={moduleStyles.previewArea}
+          >
+            <div id="flip-card" className={moduleStyles.flipCard}>
+              <div
+                id="flip-card-inner"
+                className={classNames(
+                  moduleStyles.flipCardInner,
+                  mode === Mode.RESULTS_FINAL &&
+                    currentToggle === 'code' &&
+                    moduleStyles.flipCardInnerFlipped
+                )}
+              >
                 <div
-                  id="flip-card-inner"
-                  className={classNames(
-                    moduleStyles.flipCardInner,
-                    mode === Mode.RESULTS_FINAL &&
-                      currentToggle === 'code' &&
-                      moduleStyles.flipCardInnerFlipped
-                  )}
+                  id="flip-card-front"
+                  className={moduleStyles.flipCardFront}
                 >
-                  <div
-                    id="flip-card-front"
-                    className={moduleStyles.flipCardFront}
-                  >
-                    <AiVisualizationPreview
-                      blocks={generateBlocksFromResult(
+                  <AiVisualizationPreview
+                    generateBlocks={() => {
+                      return generateBlocksFromResult(
                         Blockly.getMainWorkspace()
-                      )}
-                    />
-                    {mode === Mode.GENERATING &&
-                      currentPreviewScore !== undefined &&
-                      generatingSubStep >= 1 && (
-                        <div className={moduleStyles.score}>
-                          <div className={moduleStyles.barContainer}>
-                            <div
-                              className={moduleStyles.barFill}
-                              style={{
-                                height: Math.round(
-                                  2 * currentPreviewScore * 10
-                                ),
-                              }}
-                            >
-                              &nbsp;
-                            </div>
-                          </div>
-                          <div className={moduleStyles.text}>
-                            {Math.round(currentPreviewScore * 10)}
-                          </div>
+                      );
+                    }}
+                  />
+                  {mode === Mode.GENERATING && generatingStep[1] >= 1 && (
+                    <div className={moduleStyles.score}>
+                      <div className={moduleStyles.barContainer}>
+                        <div
+                          className={moduleStyles.barFill}
+                          style={{
+                            height: Math.round(
+                              2 *
+                                getScore(
+                                  allResults.current[
+                                    generatingStep[0] > 3
+                                      ? 3
+                                      : generatingStep[0]
+                                  ].scores
+                                ) *
+                                10
+                            ),
+                          }}
+                        >
+                          &nbsp;
                         </div>
-                      )}
-                  </div>
-                  <div
-                    id="flip-card-back"
-                    className={moduleStyles.flipCardBack}
-                  >
-                    {mode === Mode.RESULTS_FINAL && (
-                      <div
-                        id="block-preview"
-                        className={moduleStyles.blockPreview}
-                      >
-                        <AiBlockPreview
-                          generateBlocksFromResult={generateBlocksFromResult}
-                        />
                       </div>
-                    )}
-                  </div>
+                      <div className={moduleStyles.text}>
+                        {Math.round(
+                          getScore(
+                            allResults.current[
+                              generatingStep[0] > 3 ? 3 : generatingStep[0]
+                            ].scores
+                          ) * 10
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div id="flip-card-back" className={moduleStyles.flipCardBack}>
+                  {mode === Mode.RESULTS_FINAL && (
+                    <div
+                      id="block-preview"
+                      className={moduleStyles.blockPreview}
+                    >
+                      <AiBlockPreview
+                        generateBlocksFromResult={generateBlocksFromResult}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          )}
+          </div>
+        )}
 
         {mode === Mode.EXPLANATION && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
@@ -698,7 +744,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.GENERATING && generatingStep >= 4 && (
+          {mode === Mode.GENERATING && generatingStep[0] >= 4 && (
             <Button
               id="results-button"
               text={'Continue'}
