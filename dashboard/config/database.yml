@@ -30,7 +30,7 @@ mysql_defaults: &mysql_defaults
   connect_timeout: 2
 
   # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-  reconnect: false
+  # reconnect: false
 
   # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.
   # There are retries if necessary, so the total effective timeout value is three times the option value.
