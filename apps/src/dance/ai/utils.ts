@@ -1,4 +1,5 @@
-import {BlockSvg, Workspace} from 'blockly';
+import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
+import {DropdownTranslations} from '@cdo/apps/dance/types';
 
 /**
  * Generates blocks from the AI result in a given workspace,
@@ -29,4 +30,20 @@ export const generateBlocks = (workspace: Workspace): [BlockSvg, BlockSvg] => {
     workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
     workspace.newBlock('Dancelab_setBackgroundEffectWithPaletteAI') as BlockSvg,
   ];
+};
+
+export const getTranslationsMap = (
+  dropdown: FieldDropdown
+): DropdownTranslations => {
+  const options = dropdown.getOptions() as [string, string][];
+
+  const map: DropdownTranslations = {};
+  options.forEach(option => {
+    // Keys from blockly are surrounded in double quotes
+    // eg, '"blooming_petals"'. Remove them for easier use.
+    const id = option[1].replace(/"/g, '');
+
+    map[id] = option[0];
+  });
+  return map;
 };

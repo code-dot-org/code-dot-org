@@ -12,8 +12,12 @@ import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput, DropdownTranslations, Translations, FieldKey} from '../types';
-import {generateBlocks, generateBlocksFromResult} from './utils';
+import {AiOutput, Translations, FieldKey} from '../types';
+import {
+  generateBlocks,
+  generateBlocksFromResult,
+  getTranslationsMap,
+} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -600,22 +604,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       </div>
     </AccessibleDialog>
   );
-};
-
-export const getTranslationsMap = (
-  dropdown: FieldDropdown
-): DropdownTranslations => {
-  const options = dropdown.getOptions() as [string, string][];
-
-  const map: DropdownTranslations = {};
-  options.forEach(option => {
-    // Keys from blockly are surrounded in double quotes
-    // eg, '"blooming_petals"'. Remove them for easier use.
-    const id = option[1].replace(/"/g, '');
-
-    map[id] = option[0];
-  });
-  return map;
 };
 
 export default DanceAiModal;
