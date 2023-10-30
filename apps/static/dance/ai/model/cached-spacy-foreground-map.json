@@ -103,9 +103,12 @@
   },
   "output": [
     "bubbles",
+    "hearts_colorful",
     "confetti",
+    "emojis",
     "hearts_red",
     "music_notes",
+    "paint_drip",
     "pineapples",
     "pizzas",
     "smiling_poop",
@@ -114,9 +117,6 @@
     "smile_face",
     "spotlight",
     "color_lights",
-    "raining_tacos",
-    "emojis",
-    "hearts_colorful",
     "exploding_stars",
     "paint_drip"
   ],
