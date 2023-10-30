@@ -5,6 +5,7 @@ import style from './rubrics.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
 import AiAssessmentFeedback from './AiAssessmentFeedback';
+import {aiEvaluationShape} from './rubricShapes';
 const icon = require('@cdo/static/ai-bot.png');
 
 export default function AiAssessment({
@@ -36,7 +37,7 @@ export default function AiAssessment({
 AiAssessment.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
   studentName: PropTypes.string,
-  aiEvaluation: PropTypes.object,
+  aiEvaluation: aiEvaluationShape,
   studentSubmitted: PropTypes.bool,
   learningGoalKey: PropTypes.string,
 };

@@ -10,6 +10,7 @@ import {
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {aiEvaluationShape} from './rubricShapes';
 
 export default function AiAssessmentBox({
   isAiAssessed,
@@ -84,6 +85,6 @@ export default function AiAssessmentBox({
 AiAssessmentBox.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
   studentName: PropTypes.string,
-  aiEvaluation: PropTypes.object,
+  aiEvaluation: aiEvaluationShape,
   studentSubmitted: PropTypes.bool,
 };
