@@ -8,7 +8,7 @@ module I18n
       module Emails
         ORIGIN_DIR_PATH = CDO.dir('pegasus/emails').freeze
         ORIGIN_I18N_DIR_PATH = File.join(ORIGIN_DIR_PATH, 'i18n').freeze
-        I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, 'emails/public').freeze
+        I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, 'emails').freeze
 
         def self.sync_in
           SyncIn.perform
