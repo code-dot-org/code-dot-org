@@ -19,46 +19,47 @@ export default function CoteacherSettings({
 }) {
   const [inputValue, setInputValue] = useState('');
   const [addError, setAddError] = useState('');
-  const [removedCoteacherIds, setRemovedCoteacherIds] = useState([]);
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
 
-  const statusSortValue = coteacher => {
-    if (!coteacher.status) {
-      return 0;
-    } else if (coteacher.status === 'invited') {
-      return 1;
-    } else if (coteacher.status === 'declined') {
-      return 2;
-    } else if (coteacher.status === 'active') {
-      return 3;
+  const initialCoteachers = React.useMemo(() => {
+    if (!sectionInstructors) {
+      return [];
     }
-    return 4;
+    if (!primaryTeacher) {
+      return sectionInstructors;
+    }
+    return sectionInstructors.filter(
+      instructor => instructor.instructorEmail !== primaryTeacher.email
+    );
+  }, [sectionInstructors, primaryTeacher]);
+
+  const [savedCoteachers, setSavedCoteachers] = useState(initialCoteachers);
+
+  const statusSortValue = coteacher => {
+    // Always put new, unsaved coteachers first.
+    if (coteacher.status === 'invited') {
+      return 0;
+    } else if (coteacher.status === 'declined') {
+      return 1;
+    } else if (coteacher.status === 'active') {
+      return 2;
+    }
+    return 3;
   };
 
   const coteachers = React.useMemo(() => {
-    const additions = coteachersToAdd.map(email => ({instructorEmail: email}));
+    const unsaved = coteachersToAdd.map(email => ({instructorEmail: email}));
 
-    const unfiltered = !!sectionInstructors
-      ? [...sectionInstructors, ...additions]
-      : additions;
+    const sortedSaved = savedCoteachers.sort(
+      (a, b) => statusSortValue(a) - statusSortValue(b)
+    );
+    return [...unsaved, ...sortedSaved];
+  }, [savedCoteachers, coteachersToAdd]);
 
-    // Remove the primary teacher and any coteachers that have been removed
-    return unfiltered
-      .filter(
-        instructor =>
-          !primaryTeacher || instructor.instructorEmail !== primaryTeacher.email
-      )
-      .filter(instructor => !removedCoteacherIds.includes(instructor.id))
-      .sort((a, b) => statusSortValue(a) - statusSortValue(b));
-  }, [
-    sectionInstructors,
-    coteachersToAdd,
-    removedCoteacherIds,
-    primaryTeacher,
-  ]);
-
-  const addRemovedCoteacher = id => {
-    setRemovedCoteacherIds([...removedCoteacherIds, id]);
+  const removeSavedCoteacher = id => {
+    setSavedCoteachers(prevSaved =>
+      prevSaved.filter(coteacher => coteacher.id !== id)
+    );
   };
 
   const handleAddEmail = e => {
@@ -162,7 +163,7 @@ export default function CoteacherSettings({
       method: 'DELETE',
     })
       .done(() => {
-        addRemovedCoteacher(coteacher.id);
+        removeSavedCoteacher(coteacher.id);
         setCoteacherToRemove(null);
       })
       .fail(() => setCoteacherToRemove(null));
