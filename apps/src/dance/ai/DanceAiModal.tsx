@@ -91,6 +91,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   >(undefined);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingStep, setGeneratingStep] = useState<number>(0);
+  const [generatingSubStep, setGeneratingSubStep] = useState<number>(0);
   const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
 
   const currentAiModalField = useSelector(
@@ -158,12 +159,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   useInterval(
     () => {
-      if (generatingStep < 4) {
+      if (generatingSubStep < 2) {
+        setGeneratingSubStep(generatingSubStep + 1);
+      } else if (generatingStep < 4) {
         setGeneratingStep(generatingStep + 1);
-        console.log('useInterval', generatingStep);
+        setGeneratingSubStep(0);
       }
     },
-    mode === Mode.GENERATING ? 2000 : undefined
+    mode === Mode.GENERATING ? 1500 : undefined
   );
 
   const setScore = (scores: any) => {
@@ -176,31 +179,30 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   useEffect(() => {
     if (mode === Mode.GENERATING) {
-      if (generatingStep === 0) {
-        setCurrentPreview(badResults[0].results);
-        console.log('preview 0');
-        console.log(badResults[0].scores);
-        setScore(badResults[0].scores);
-      } else if (generatingStep === 1) {
-        setCurrentPreview(badResults[1].results);
-        console.log('preview 1');
-        console.log(badResults[1].scores);
-        setScore(badResults[1].scores);
-      } else if (generatingStep === 2) {
-        setCurrentPreview(badResults[2].results);
-        console.log('preview 2');
-        console.log(badResults[2].scores);
-        setScore(badResults[2].scores);
-      } else if (generatingStep === 3) {
-        setCurrentPreview(JSON.parse(resultJson));
-        console.log(resultScores);
-        console.log('preview result');
-        setScore(resultScores);
-      } else if (generatingStep === 4) {
-        setMode(Mode.RESULTS_FINAL);
+      if (generatingSubStep === 0) {
+        // generatingSubStep 0 is when the preview appears.
+        // generatingSubStep 1 is when the score appears.
+        // generatingSubStep 2 is when the bot shows green/red.
+
+        if (generatingStep === 0) {
+          setCurrentPreview(badResults[0].results);
+          setScore(badResults[0].scores);
+          console.log('set current preview 0');
+        } else if (generatingStep === 1) {
+          setCurrentPreview(badResults[1].results);
+          setScore(badResults[1].scores);
+        } else if (generatingStep === 2) {
+          setCurrentPreview(badResults[2].results);
+          setScore(badResults[2].scores);
+        } else if (generatingStep === 3) {
+          setCurrentPreview(JSON.parse(resultJson));
+          setScore(resultScores);
+        } else if (generatingStep === 4) {
+          setMode(Mode.RESULTS_FINAL);
+        }
       }
     }
-  }, [generatingStep]);
+  }, [mode, generatingStep, generatingSubStep]);
 
   const handleGenerateClick = () => {
     startAi();
@@ -342,15 +344,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   const botImage =
-    mode === Mode.GENERATING && generatingStep < 3
+    mode === Mode.GENERATING && generatingStep < 3 && generatingSubStep >= 2
       ? aiBotNo
-      : mode === Mode.GENERATING
+      : mode === Mode.GENERATING && generatingSubStep >= 2
       ? aiBotYes
       : aiBotBorder;
   const botSideBeamImage =
-    mode === Mode.GENERATING && generatingStep < 3
+    mode === Mode.GENERATING && generatingSubStep === 1
+      ? aiBotBeam
+      : mode === Mode.GENERATING && generatingStep < 3 && generatingSubStep >= 2
       ? aiBotBeamRed
-      : mode === Mode.GENERATING
+      : mode === Mode.GENERATING && generatingSubStep >= 2
       ? aiBotBeamGreen
       : undefined;
 
@@ -560,7 +564,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         {(mode === Mode.GENERATING || mode === Mode.RESULTS_FINAL) &&
           currentPreview && (
             <div
-              key={generatingStep}
+              key={'preview' /*generatingStep*/}
               id="preview-area"
               className={moduleStyles.previewArea}
             >
@@ -584,7 +588,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       )}
                     />
                     {mode === Mode.GENERATING &&
-                      currentPreviewScore !== undefined && (
+                      currentPreviewScore !== undefined &&
+                      generatingSubStep >= 1 && (
                         <div className={moduleStyles.score}>
                           <div className={moduleStyles.barContainer}>
                             <div
