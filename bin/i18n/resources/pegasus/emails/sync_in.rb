@@ -15,25 +15,6 @@ module I18n
             hoc_signup_2023_receipt_en.md
           ].freeze
 
-          def execute
-            progress_bar.start
-
-            I18nScriptUtils.process_in_threads(LOCALIZABLE_FILE_SUBPATHS) do |file_subpath|
-              origin_file_path = File.join(ORIGIN_DIR_PATH, file_subpath)
-              next unless File.exist?(origin_file_path)
-
-              i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, file_subpath)
-              i18n_source_file_path = i18n_source_file_path.sub('public/', '')
-
-              I18nScriptUtils.copy_file(origin_file_path, i18n_source_file_path)
-              I18n::Utils::PegasusMarkdown.sanitize_file_header(i18n_source_file_path)
-            ensure
-              mutex.synchronize {progress_bar.increment}
-            end
-
-            progress_bar.finish
-          end
-
           def process
             LOCALIZABLE_FILE_SUBPATHS.each do |file|
               I18nScriptUtils.copy_file(`#{ORIGIN_DIR_PATH}/#{file}`, I18N_SOURCE_DIR_PATH)
