@@ -1,7 +1,7 @@
 require_relative '../../../../test_helper'
-require_relative '../../../../../i18n/resources/pegasus/markdown/sync_out'
+require_relative '../../../../../i18n/resources/pegasus/emails/sync_out'
 
-describe I18n::Resources::Pegasus::Markdown::SyncOut do
+describe I18n::Resources::Pegasus::Emails::SyncOut do
   def around
     FakeFS.with_fresh {yield}
   end
@@ -13,24 +13,24 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
 
   describe '.perform' do
     it 'calls #execute' do
-      I18n::Resources::Pegasus::Markdown::SyncOut.any_instance.expects(:execute).once
+      I18n::Resources::Pegasus::Emails::SyncOut.any_instance.expects(:execute).once
 
-      I18n::Resources::Pegasus::Markdown::SyncOut.perform
+      I18n::Resources::Pegasus::Emails::SyncOut.perform
     end
   end
 
   describe '#execute' do
-    let(:sync_out) {I18n::Resources::Pegasus::Markdown::SyncOut.new}
+    let(:sync_out) {I18n::Resources::Pegasus::Emails::SyncOut.new}
 
     let(:crowdin_locale) {'Not English'}
     let(:i18n_locale) {'not-EN'}
     let(:unique_language_code) {'expected_unique_language_code'}
 
     let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
-    let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'codeorg-markdown')}
+    let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'emails')}
     let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
-    let(:origin_markdown_file_path) {CDO.dir('pegasus/sites.v3/code.org/public/test.md')}
-    let(:markdown_i18n_file_path) {CDO.dir('pegasus/sites.v3/code.org/i18n/public/test.not-EN.md.partial')}
+    let(:origin_markdown_file_path) {CDO.dir('pegasus/emails/test.md')}
+    let(:markdown_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md.partial')}
 
     let(:expect_localization_distribution) do
       I18nScriptUtils.expects(:copy_file).with(crowdin_file_path, markdown_i18n_file_path)
@@ -55,7 +55,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
       FileUtils.touch(origin_markdown_file_path)
     end
 
-    it 'distributes the markdown localization with restored header' do
+    it 'distributes the emails localization with restored header' do
       execution_sequence = sequence('execution')
 
       expect_localization_distribution.in_sequence(execution_sequence)
@@ -67,11 +67,11 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
     end
 
     context 'when a "view" Crowdin file exists' do
-      let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'views/test.md')}
-      let(:origin_markdown_file_path) {CDO.dir('pegasus/sites.v3/code.org/views/test.md.partial')}
-      let(:markdown_i18n_file_path) {CDO.dir('pegasus/sites.v3/code.org/i18n/views/test.not-EN.md.partial')}
+      let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
+      let(:origin_markdown_file_path) {CDO.dir('pegasus/emails/test.md.partial')}
+      let(:markdown_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md.partial')}
 
-      it 'distributes the markdown localization with restored header' do
+      it 'distributes the emails localization with restored header' do
         execution_sequence = sequence('execution')
 
         expect_localization_distribution.in_sequence(execution_sequence)
@@ -87,7 +87,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
       let(:crowdin_locale) {'English'}
       let(:i18n_locale) {'en-US'}
 
-      it 'does not distribute the markdown localization' do
+      it 'does not distribute the emails localization' do
         execution_sequence = sequence('execution')
 
         expect_localization_distribution.never
@@ -99,12 +99,12 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
       end
     end
 
-    context 'when the origin markdown file does not exists' do
+    context 'when the origin emails file does not exists' do
       before do
         FileUtils.rm(origin_markdown_file_path)
       end
 
-      it 'does not distribute the markdown localization' do
+      it 'does not distribute the emails localization' do
         execution_sequence = sequence('execution')
 
         expect_localization_distribution.never
