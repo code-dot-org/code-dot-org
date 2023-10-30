@@ -44,8 +44,8 @@
     "hoc2023-actual-hoc": {
       "hoc_modes": ["actual-hoc"],
       "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2023-codeorg-hero-banner.svg",
-      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.svg",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
       "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
       "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
       "actions": [
