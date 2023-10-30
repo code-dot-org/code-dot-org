@@ -11,7 +11,7 @@ module I18n
     module Pegasus
       module Markdown
         class SyncOut
-          DIR_NAME = 'pegasus-emails'.freeze
+          DIR_NAME = 'emails'.freeze
 
           def self.perform
             new.execute
@@ -46,7 +46,7 @@ module I18n
 
           def progress_bar
             @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Pegasus/pegasus_emails sync-out',
+              title: 'Pegasus/emails sync-out',
               total: pegasus_languages.size
             )
           end
