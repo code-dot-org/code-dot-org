@@ -39,6 +39,8 @@ const AiVisualizationPreview: React.FunctionComponent<
   }, [blocks]);
 
   useEffect(() => {
+    console.log('new executor');
+
     // Create a new program executor whenever preview code changes
     // to ensure that P5 is destroyed and reloaded correctly.
     const executor: ProgramExecutor = new ProgramExecutor(
