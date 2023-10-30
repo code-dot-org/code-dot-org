@@ -162,7 +162,7 @@ def retrieve_embedding(string: str,
     return embedding_cache[(string, model)]
 
 # Retrieve embeddings for input emojis, palettes, backgrounds, and foregrounds in that order
-option_lists = [emoji_ids, color_palettes, background_effects, foreground_effects]
+option_lists = [emojis_list, color_palettes, background_effects, foreground_effects]
 embeddings = []
 # Final output should be list of lists structured as [[[emoji1], [emoji2], ...], [[palette1]...]...]
 # Where embeddings[0] = all emoji embeddings, [1] = palettes, [2] = background, [3] = foreground
@@ -186,7 +186,7 @@ def calculate_similarity_score(input_embeddings, output_embeddings):
     
     # Conversion to pandas DataFrame for ease of manipulation
     similarities = pd.DataFrame(similarities)
-    similarities.index = emoji_ids
+    similarities.index = emojis_list
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format
