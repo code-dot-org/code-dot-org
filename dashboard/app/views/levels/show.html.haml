@@ -79,10 +79,8 @@
 
 = render partial: 'levels/admin'
 
-
-
 - if @rubric.present? && current_user&.teacher?
   %div#rubric-fab-mount-point
 
-= render partial: 'levels/ai_tools_panel'
+= render partial: 'levels/ai_tutor_panel'
 

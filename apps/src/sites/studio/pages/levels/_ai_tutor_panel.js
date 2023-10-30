@@ -10,18 +10,21 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-aitutorpanel]');
   const aiTutorPanelData = JSON.parse(script.dataset.aitutorpanel);
-  console.log('aiTutorPanelData', aiTutorPanelData);
-  renderAITutorPanel();
+  const shouldRenderAITutorPanel =
+    aiTutorPanelData.has_ai_tutor_access && aiTutorPanelData.is_csa;
+  if (shouldRenderAITutorPanel) {
+    renderAITutorPanel(aiTutorPanelData.level_type);
+  }
 }
 
-function renderAITutorPanel() {
+function renderAITutorPanel(levelType) {
   const div = document.createElement('div');
   div.setAttribute('id', 'ai-tutor-panel-container');
   const store = getStore();
 
   ReactDOM.render(
     <Provider store={store}>
-      <AITutorPanel />
+      <AITutorPanel levelType={levelType} />
     </Provider>,
     div
   );

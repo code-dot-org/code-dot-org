@@ -1455,6 +1455,20 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
+  def has_ai_chat_access?
+    permission?(UserPermission::AI_CHAT_ACCESS)
+  end
+
+  def assigned_csa?
+    sections_as_student.any?(&:assigned_csa?)
+  end
+
+  def has_ai_tutor_access?
+    has_ai_chat_access? && (verified_instructor? || assigned_csa?)
+    # TODO: add ai tutor must be enabled for the section
+    # TODO: add section must have ai tutor experiment enabled
+  end
+
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
