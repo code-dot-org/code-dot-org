@@ -4,12 +4,12 @@ require 'fileutils'
 
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/pegasus_markdown'
-require_relative '../markdown'
+require_relative '../emails'
 
 module I18n
   module Resources
     module Pegasus
-      module Markdown
+      module Emails
         class SyncIn
           LOCALIZABLE_FILE_SUBPATHS = %w[
             hoc_signup_2023_receipt_en.md
@@ -27,7 +27,7 @@ module I18n
               next unless File.exist?(origin_file_path)
 
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, file_subpath)
-              i18n_source_file_path = i18n_source_file_path.sub('public/public/', 'public/')
+              i18n_source_file_path = i18n_source_file_path.sub('public/public/', '')
 
               I18nScriptUtils.copy_file(origin_file_path, i18n_source_file_path)
               I18n::Utils::PegasusMarkdown.sanitize_file_header(i18n_source_file_path)
