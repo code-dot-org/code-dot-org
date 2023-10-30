@@ -87,7 +87,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 
 - დაბეჭდეთ [კოდის ერთი საათის სერტიფიკატები](https://staging.code.org/certificates), რომლებსაც მისცემთ მოსწავლეებს აქტივობის დასრულების მერე
 - [დაბეჭდეთ სტიკერები](https://staging.hourofcode.com/us/promote/resources#stickers) სახლში ან [შეიძინეთ ონლაინ](https://store.code.org/), როგორც დამატებითი სიურპრიზი.
-- Share photos and videos of your at-home Hour of Code on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Share photos and videos of your at-home Hour of Code on social media. გამოიყენეთ [#HourOfCode](https://twitter.com/hashtag/hourofcode) და [@codeorg, რათა ჩვენ ასევე](https://twitter.com/codeorg) შეგვიძლია ხაზი გავათვალისწინოთ თქვენი წარმატება!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

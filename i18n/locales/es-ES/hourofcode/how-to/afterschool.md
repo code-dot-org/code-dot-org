@@ -74,7 +74,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 - [Imprimir certificados]({{ urls/certificates }}) para tus estudiantes.
 - [Imprimir pegatinas "Yo hice una Hora de Código"]({{ promote/resources_stickers }}) para tus estudiantes.
-- [Ordena camisetas a la medida para](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) los participantes.
+- [Solicite camisetas personalizadas](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) para los participantes.
 - Comparte fotos y videos de la Hora del Código en las redes sociales. ¡Usa #HoraDelCódigo y @codeorg para que podamos destacar tu éxito!
 
 ## Otros recursos de Hora del Código para educadores

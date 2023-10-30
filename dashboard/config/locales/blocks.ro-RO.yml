@@ -70,6 +70,11 @@ ro:
             '"measures"': măsuri
             '"seconds"': secunde
         text: după {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': măsuri
+            '"seconds"': secunde
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -564,6 +569,51 @@ ro:
             '"electronic"': Electronic
             '"iceCream"': Îngheţată
             '"neon"': Neon
+            '"rave"': Negru şi alb
+            '"tropical"': Tropical
+            '"vintage"': Vechi
+            '"warm"': Cald
+        text: |-
+          setează efectul de fundal la
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Cercuri
+            '"color_cycle"': Culori
+            '"diamonds"': Diamante
+            '"disco"': Pătrate
+            '"disco_ball"': Glob de discotecă
+            '"fireworks"': Artificii
+            '"flowers"': Flori
+            '"galaxy"': Spaţiu
+            '"growing_stars"': Stele crescânde
+            '"kaleidoscope"': Caleidoscope
+            '"lasers"': Ring de dans cu lasere
+            '"music_wave"': Valuri
+            '"none"': Nici unul
+            '"quads"': Îngeri
+            '"rainbow"': Curcubeu
+            '"rand"': Aleatoriu
+            '"ripples"': Ondulații
+            '"ripples_random"': Ondulații aleatorii
+            '"snowflakes"': Zăpadă
+            '"sparkles"': Scântei
+            '"spiral"': Spirală
+            '"splatter"': Stropi de vopsea
+            '"squiggles"': Mâzgălituri
+            '"starburst"': Accelerare
+            '"stars"': Stele
+            '"swirl"': Hipnotic
+            '"text"': Nume cântec
+          PALETTE:
+            '"cool"': Interesant
+            '"default"': Lumină
+            '"electronic"': Electronic
+            '"iceCream"': Îngheţată
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Curcubeu
             '"rave"': Negru şi alb
             '"tropical"': Tropical
             '"vintage"': Vechi
