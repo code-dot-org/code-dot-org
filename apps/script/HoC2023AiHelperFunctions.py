@@ -25,8 +25,9 @@ def get_foreground_effect_json_object():
 def get_background_effects():
     set_background_effect_json_object = get_background_effect_json_object()
     background_effect_options = set_background_effect_json_object['config']['args'][0]['options']
-    # Remove from background_options the first two elements which are 'None' and 'Random'
-    del background_effect_options[:2]
+    # Remove from background_effect_options the elements which are 'None' and '(Random)'
+    background_effect_options.remove(['None', '"none"'])
+    background_effect_options.remove(['(Random)', '"rand"'])
     background_effect_blockly_ids_list = []
     background_effect_user_facing_names_list = []
     # background array is an array with two elements [blockly_id, user_facing_name]
@@ -53,8 +54,9 @@ def get_palettes():
 def get_foreground_effects():
     set_foreground_effect_json_object = get_foreground_effect_json_object()
     foreground_effect_options = set_foreground_effect_json_object['config']['args'][0]['options']
-    # Remove from foreground_options the first two elements which are 'None' and 'Random'
-    del foreground_effect_options[:2]
+    # Remove from foreground_effect_options the elements which are 'None' and '(Random)'
+    foreground_effect_options.remove(['None', '"none"'])
+    foreground_effect_options.remove(['(Random)', '"rand"'])
     foreground_effect_blockly_ids_list = []
     foreground_effect_user_facing_names_list = []
     # foreground array is an array with two elements [blockly_id, user_facing_name]

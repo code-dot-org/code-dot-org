@@ -14,19 +14,17 @@ nlp = spacy.load("en_core_web_lg")
 
 # Get the list of emoji names and their corresponding emoji ids
 emoji_names_list, emojis_map = get_ai_emoji_inputs()
-print(emoji_names_list)
-print(emojis_map)
 
 background_effect_blockly_ids_list, background_effect_user_facing_names_list = get_background_effects()
 palette_blockly_ids_list, palette_user_facing_names_list = get_palettes()
 foreground_effect_blockly_ids_list, foreground_effect_user_facing_names_list = get_foreground_effects()
 
-# We rename foreground/background effects and palettes as their python_name
+# We rename foreground/background effects and palettes as their model_descriptive_name
 # to better reflect the actual output of the effect or color.
-# Below, we store them in maps for which the key is the python_name and the
+# Below, we store them in maps for which the key is the model_descriptive_name and the
 # value is the corresponding blockly_id.
 
-background_effect_python_names = [
+background_effect_model_descriptive_names = [
     'moving shapes',
     'flower petals',
     'pulse',
@@ -58,17 +56,17 @@ background_effect_python_names = [
     'sound wave'
 ]
 
-# background_effects_map contains python_name as key and blockly_id as value.
+# background_effects_map contains model_descriptive_name as key and blockly_id as value.
 background_effects_map = {}
 print ('BACKGROUND EFFECTS')
-print ('python_name | blockly_id | blockly_user_facing_name')
-for i in range(len(background_effect_python_names)):
-    python_name = background_effect_python_names[i]
+print ('model_descriptive_name | blockly_id | blockly_user_facing_name')
+for i in range(len(background_effect_model_descriptive_names)):
+    model_descriptive_name = background_effect_model_descriptive_names[i]
     blockly_id = background_effect_blockly_ids_list[i]
-    background_effects_map[python_name] = blockly_id
-    print (python_name + ' | ' + blockly_id + ' | ' + background_effect_user_facing_names_list[i])
+    background_effects_map[model_descriptive_name] = blockly_id
+    print (model_descriptive_name + ' | ' + blockly_id + ' | ' + background_effect_user_facing_names_list[i])
 
-palette_python_names = [
+palette_model_descriptive_names = [
     'autumn',
     'black and white',
     'green blue',
@@ -92,17 +90,17 @@ palette_python_names = [
     'icy blue'
 ]
 
-# palettes_map contains python_name as key and blockly_id as value.
+# palettes_map contains model_descriptive_name as key and blockly_id as value.
 palettes_map = {}
 print ('PALETTES')
-print ('python_name | blockly_id | blockly_user_facing_name')
-for i in range(len(palette_python_names)):
-    python_name = palette_python_names[i]
+print ('model_descriptive_name | blockly_id | blockly_user_facing_name')
+for i in range(len(palette_model_descriptive_names)):
+    model_descriptive_name = palette_model_descriptive_names[i]
     blockly_id = palette_blockly_ids_list[i]
-    palettes_map[python_name] = blockly_id
-    print (python_name + ' | ' + blockly_id + ' | ' + palette_user_facing_names_list[i])
+    palettes_map[model_descriptive_name] = blockly_id
+    print (model_descriptive_name + ' | ' + blockly_id + ' | ' + palette_user_facing_names_list[i])
 
-foreground_effect_python_names = [
+foreground_effect_model_descriptive_names = [
     'bubbles',
     'hearts',
     'confetti',
@@ -122,15 +120,15 @@ foreground_effect_python_names = [
     'taco'
 ]
 
-# foreground_effects_map contains python_name as key and blockly_id as value.
+# foreground_effects_map contains model_descriptive_name as key and blockly_id as value.
 foreground_effects_map = {}
 print ('FOREGROUND EFFECTS')
-print ('python_name | blockly_id | blockly_user_facing_name')
-for i in range(len(foreground_effect_python_names)):
-    python_name = foreground_effect_python_names[i]
+print ('model_descriptive_name | blockly_id | blockly_user_facing_name')
+for i in range(len(foreground_effect_model_descriptive_names)):
+    model_descriptive_name = foreground_effect_model_descriptive_names[i]
     blockly_id = foreground_effect_blockly_ids_list[i]
-    foreground_effects_map[python_name] = blockly_id
-    print (python_name + ' | ' + blockly_id + ' | ' + foreground_effect_user_facing_names_list[i])
+    foreground_effects_map[model_descriptive_name] = blockly_id
+    print (model_descriptive_name + ' | ' + blockly_id + ' | ' + foreground_effect_user_facing_names_list[i])
 
 palette_dict = {}
 background_dict = {}
@@ -139,21 +137,21 @@ foreground_dict = {}
 # Calculate and print similarity scores
 for emoji_name in emoji_names_list:
     palette_scores = []
-    for palette_word in palette_python_names:
+    for palette_word in palette_model_descriptive_names:
         id_token = nlp(emoji_name)
         palette_token = nlp(palette_word)
         similarity_score = id_token.similarity(palette_token)
         palette_scores.append(round(similarity_score, 2))
     
     background_scores = []
-    for background_word in background_effect_python_names:
+    for background_word in background_effect_model_descriptive_names:
         id_token = nlp(emoji_name)
         background_token = nlp(background_word)
         similarity_score = id_token.similarity(background_token)
         background_scores.append(round(similarity_score, 2))
         
     foreground_scores = []
-    for foreground_word in foreground_effect_python_names:
+    for foreground_word in foreground_effect_model_descriptive_names:
         id_token = nlp(emoji_name)
         foreground_token = nlp(foreground_word)
         similarity_score = id_token.similarity(foreground_token)
@@ -163,9 +161,9 @@ for emoji_name in emoji_names_list:
     background_dict[emoji_id] = background_scores
     foreground_dict[emoji_id] = foreground_scores
 
-background_output = {'emojiAssociations': background_dict, 'output': background_effect_python_names}
-palette_output = {'emojiAssociations': palette_dict, 'output': palette_python_names}
-foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effect_python_names}
+background_output = {'emojiAssociations': background_dict, 'output': background_effect_model_descriptive_names}
+palette_output = {'emojiAssociations': palette_dict, 'output': palette_model_descriptive_names}
+foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effect_model_descriptive_names}
 
 background_output['pythonNames'] = background_output['output']
 palette_output['pythonNames'] = palette_output['output']
@@ -192,7 +190,7 @@ with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as
 # python apps/script/HoC2023AiGenerateWeights.py
 
 # BACKGROUND EFFECTS
-# python_name | blockly_id | blockly_user_facing_name
+# model_descriptive_name | blockly_id | blockly_user_facing_name
 # moving shapes | quads | Angles
 # flower petals | blooming_petals | Blooming Petals
 # pulse | circles | Circles
@@ -224,7 +222,7 @@ with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as
 # sound wave | music_wave | Waves
 
 # PALETTES
-# python_name | blockly_id | blockly_user_facing_name
+# model_descriptive_name | blockly_id | blockly_user_facing_name
 # autumn | autumn | Autumn
 # black and white | rave | Black and White
 # green blue | cool | Cool
@@ -248,7 +246,7 @@ with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as
 # icy blue | winter | Winter
 
 # FOREGROUND EFFECTS
-# python_name | blockly_id | blockly_user_facing_name
+# model_descriptive_name | blockly_id | blockly_user_facing_name
 # bubbles | bubbles | Bubbles
 # hearts | hearts_colorful | Colorful Hearts
 # confetti | confetti | Confetti
