@@ -168,6 +168,7 @@ export default class ProgramExecutor {
   }
 
   destroy() {
+    this.livePreviewActive = false;
     this.nativeAPI.teardown();
   }
 
