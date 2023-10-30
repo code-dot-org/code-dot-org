@@ -8,7 +8,6 @@ import Button from '../Button';
 import {Figcaption, StrongText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
 import classNames from 'classnames';
-import _ from 'lodash';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import AccessibleDialog from '../AccessibleDialog';
 
@@ -21,7 +20,7 @@ export default function CoteacherSettings({
   const [inputValue, setInputValue] = useState('');
   const [addError, setAddError] = useState('');
   const [removedCoteacherIds, setRemovedCoteacherIds] = useState([]);
-  const [coteacherToRemove, setCoteacherToRemove] = useState({});
+  const [coteacherToRemove, setCoteacherToRemove] = useState(null);
 
   const statusSortValue = coteacher => {
     if (!coteacher.status) {
@@ -96,16 +95,14 @@ export default function CoteacherSettings({
     }
   };
 
-  const pill = (text, className, icon) => {
-    return (
-      <div className={classNames(className, styles.tablePill)}>
-        <StrongText>
-          <FontAwesome icon={icon} className={styles.tablePillIcon} />
-          {text}
-        </StrongText>
-      </div>
-    );
-  };
+  const pill = (text, className, icon) => (
+    <div className={classNames(className, styles.tablePill)}>
+      <StrongText>
+        <FontAwesome icon={icon} className={styles.tablePillIcon} />
+        {text}
+      </StrongText>
+    </div>
+  );
 
   const statusPill = status => {
     if (!status || status === 'invited') {
@@ -157,7 +154,7 @@ export default function CoteacherSettings({
       setCoteachersToAdd(existing =>
         existing.filter(teacher => teacher !== coteacher.instructorEmail)
       );
-      setCoteacherToRemove({});
+      setCoteacherToRemove(null);
       return;
     }
     $.ajax({
@@ -166,41 +163,42 @@ export default function CoteacherSettings({
     })
       .done(() => {
         addRemovedCoteacher(coteacher.id);
-        setCoteacherToRemove({});
+        setCoteacherToRemove(null);
       })
-      .fail(() => setCoteacherToRemove({}));
+      .fail(() => setCoteacherToRemove(null));
   };
 
   const removePopup = coteacher => {
-    if (_.isEmpty(coteacher)) {
-      return null;
-    }
     return (
-      <AccessibleDialog
-        onClose={() => setCoteacherToRemove({})}
-        className={styles.removeDialog}
-      >
-        <StrongText className={styles.removeDialogTitle}>
-          {i18n.coteacherRemoveDialogHeader({email: coteacher.instructorEmail})}
-        </StrongText>
-        <div className={styles.removeDialogDescription}>
-          {i18n.coteacherRemoveDialogDescription()}
-        </div>
-        <div className={styles.removeDialogButtons}>
-          <Button
-            onClick={() => setCoteacherToRemove({})}
-            text={i18n.dialogCancel()}
-            color={Button.ButtonColor.white}
-            id="remove-coteacher-cancel"
-          />
-          <Button
-            onClick={removeCoteacher(coteacher)}
-            text={i18n.dialogRemove()}
-            color={Button.ButtonColor.red}
-            className={styles.removeDialogRemove}
-          />
-        </div>
-      </AccessibleDialog>
+      coteacher && (
+        <AccessibleDialog
+          onClose={() => setCoteacherToRemove(null)}
+          className={styles.removeDialog}
+        >
+          <StrongText className={styles.removeDialogTitle}>
+            {i18n.coteacherRemoveDialogHeader({
+              email: coteacher.instructorEmail,
+            })}
+          </StrongText>
+          <div className={styles.removeDialogDescription}>
+            {i18n.coteacherRemoveDialogDescription()}
+          </div>
+          <div className={styles.removeDialogButtons}>
+            <Button
+              onClick={() => setCoteacherToRemove(null)}
+              text={i18n.dialogCancel()}
+              color={Button.ButtonColor.white}
+              id="remove-coteacher-cancel"
+            />
+            <Button
+              onClick={removeCoteacher(coteacher)}
+              text={i18n.dialogRemove()}
+              color={Button.ButtonColor.red}
+              className={styles.removeDialogRemove}
+            />
+          </div>
+        </AccessibleDialog>
+      )
     );
   };
 
