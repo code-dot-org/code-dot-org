@@ -75,22 +75,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
+  const BAD_RESULTS_COUNT = 3;
 
   const inputLibraryFilename = 'ai-inputs';
   const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
 
   const allResults = useRef<any[]>([]);
+  //const result = useRef<string>result;
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [resultJson, setResultJson] = useState<string>('');
-  //const [badResults, setBadResults] = useState<any>(undefined);
-  //const [resultScores, setResultScores] = useState<any>(undefined);
-  //const [currentPreview, setCurrentPreview] = useState<any>(undefined);
-  /*const [currentPreviewScore, setCurrentPreviewScore] = useState<
-    number | undefined
-  >(undefined);*/
+  //const [resultJson, setResultJson] = useState<string>('');
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingStep, setGeneratingStep] = useState<number[]>([0, 0]);
   const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
@@ -110,9 +106,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setMode(Mode.RESULTS_FINAL);
 
       // The block value will be set to this JSON.
-      setResultJson(currentValue);
+      //setResultJson(currentValue);
+      allResults.current = [];
+      allResults.current[BAD_RESULTS_COUNT] = {
+        results: JSON.parse(currentValue),
+      };
 
       //setCurrentPreview(JSON.parse(currentValue));
+
+      setGeneratingStep([BAD_RESULTS_COUNT, 0]);
 
       setInputs(JSON.parse(currentValue).inputs);
     }
@@ -208,7 +210,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         if (currentGeneratingStep[1] < 2) {
           // bump substep.
           currentGeneratingStep[1]++;
-        } else if (currentGeneratingStep[0] < 3) {
+        } else if (currentGeneratingStep[0] < BAD_RESULTS_COUNT) {
           // bump step and reset substep;
           currentGeneratingStep[0]++;
           currentGeneratingStep[1] = 0;
@@ -243,13 +245,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.SELECT_INPUTS);
     setInputs([]);
     setCurrentInputSlot(0);
-    setResultJson('');
     setProcessingDone(false);
     setGeneratingStep([0, 0]);
   };
 
   const handleRegenerateClick = () => {
-    setResultJson('');
     setProcessingDone(false);
     setGeneratingStep([0, 0]);
 
@@ -266,22 +266,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const startAi = async () => {
     const result = chooseEffects(inputs, true);
-    const fullResult = {inputs, ...result.results};
-    const fullResultJson = JSON.stringify(fullResult);
+    //const fullResult = {inputs, ...result.results};
+    //const fullResultJson = JSON.stringify(fullResult);
 
     // The block value will be set to this JSON.
-    setResultJson(fullResultJson);
+    // setResultJson(fullResultJson);
     //setResultScores(result.scores);
 
     allResults.current = [];
 
     const badResultsList: any = [];
     // Grab some bad results too.
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < BAD_RESULTS_COUNT; i++) {
       allResults.current[i] = chooseEffects(inputs, false);
     }
 
-    allResults.current[3] = result;
+    allResults.current[BAD_RESULTS_COUNT] = result;
 
     //setBadResults(badResultsList);
     console.log('all results', allResults);
@@ -359,7 +359,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleUseClick = () => {
-    currentAiModalField?.setValue(resultJson);
+    currentAiModalField?.setValue(
+      JSON.stringify({inputs, ...allResults.current[BAD_RESULTS_COUNT].results})
+    );
     dispatch(setCurrentAiModalField(undefined));
   };
 
@@ -634,8 +636,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                               2 *
                                 getScore(
                                   allResults.current[
-                                    generatingStep[0] > 3
-                                      ? 3
+                                    generatingStep[0] > BAD_RESULTS_COUNT
+                                      ? BAD_RESULTS_COUNT
                                       : generatingStep[0]
                                   ].scores
                                 ) *
@@ -650,7 +652,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                         {Math.round(
                           getScore(
                             allResults.current[
-                              generatingStep[0] > 3 ? 3 : generatingStep[0]
+                              generatingStep[0] > BAD_RESULTS_COUNT
+                                ? BAD_RESULTS_COUNT
+                                : generatingStep[0]
                             ].scores
                           ) * 10
                         )}
@@ -679,7 +683,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <AiExplanationView
               inputs={inputs}
-              result={JSON.parse(resultJson)}
+              result={allResults.current[BAD_RESULTS_COUNT]}
             />
           </div>
         )}
