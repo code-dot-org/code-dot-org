@@ -6,10 +6,10 @@ uk:
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}
   coming_soon: Незабаром
   new: Нові
-  hours_of_code_served: Години подачі коду
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Учні навчаються 40 мовами
   hoc_stat_hours_served: Більше 100 мільйонів учнів спробували Годину коду
-  hoc_stat_females: Студентки складають 50% учасників Години коду
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 грудня
   campaign_date_start_long: 4 грудня
   campaign_date_short: 4-10 грудня
@@ -50,10 +50,10 @@ uk:
   hoc2023_social_creativity_with_ai_title: Година коду - що ви створите?
   hoc2023_social_creativity_with_ai_desc: Використовуйте інформатику, щоб досліджувати
     та дізнаватися про AI!
-  hoc2023_what_is_hoc_desc: Година коду - це безкоштовний вступ до інформатики через
-    веселі заходи та відео для учнів усіх рівнів навичок. Цього року святкування кодування
-    та штучного інтелекту підтримують понад 400 партнерів, 20 000 освітян та 58 000
-    волонтерів.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Вчись, грай, твори!
   social_hoc2022_explore_play_create: Інформатика допомагає вчитися, грати й творити!
   codeorg_homepage_hoc2022_body: Досліджуйте всесвіт, досягайте результатів, рухайтеся
@@ -66,9 +66,9 @@ uk:
     іншого!
   social_hoc2023_dance: За участю Бейонсе, BTS, Гаррі Стайлса, Ліццо, Lil Nas X, Селени
     Гомес, музики з Disney «Encanto» та багато іншого!
-  social_hoc2023_dance_v2: Прийшов час розкрутити свої речі! Створіть власну танцювальну
-    вечірку з хітами Майлі Сайрус, BTS, Lil Nas X, Гаррі Стайлса, Нікі Мінаж, Розалії
-    тощо!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'Під час #HourOfCode, ми святкуємо #CSEverywhere. Відкрийте
     зв''язки!'
   hoc2020_header: Вчіться сьогодні, будуйте світле майбутнє.
@@ -223,9 +223,9 @@ uk:
   device_desktop_computer: Настільний комп'ютер
   device_mobile_device: Мобільний пристрій
   for_everyone: Для всіх
-  for_students_teacher_led_learning: 'Для студентів: Навчання під керівництвом вчителя'
-  for_students_teacher_led_lessons: 'Для студентів: Уроки під керівництвом викладачів'
-  professional_development: Pseudoloc-Проффессііоналл деввелоппментт
+  for_students_teacher_led_learning: 'Для студентів: Навчання під керівництвом учителя'
+  for_students_teacher_led_lessons: 'Для учнів: Уроки під керівництвом викладачів'
+  professional_development: Професійний розвиток
   how_ai_works_video_series: Як працює AI Відеосеріал
   learn_how_ai_works: Дізнайтеся, як працює штучний інтелект
   ai_101_for_educators: AI 101 для освітян
@@ -286,9 +286,9 @@ uk:
     розуміння та підтримку від інших викладачів.
   required_materials: 'Необхідні матеріали:'
   optional_materials: 'Додаткові матеріали:'
-  for_students: Для студентів
+  for_students: For students
   for_educators: Для освітян
-  call_to_action_host_hoc: Pseudoloc-Хостт ан  Хоюрр оф  Cодее
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Провести захід
   call_to_action_register_event: Зареєструйте свій захід
   call_to_action_register_your_hoc: Зареєструйте свою Годину коду
@@ -296,18 +296,18 @@ uk:
   call_to_action_start_activity: Почніть діяльність
   call_to_action_get_certificates: Отримати сертифікати
   call_to_action_go_beyond_hoc: Вийдіть за рамки Години коду
-  call_to_action_explore_all_hoc_activities: Ознайомтеся з усіма заходами «Година
-    коду» з Code.org
-  call_to_action_start_dance_party: Почати танцювальну вечірку
-  call_to_action_start_part_02: Почніть частину другу
-  call_to_action_start_unplugged_activity: Почніть відключену діяльність
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Переглянути промо ресурси
   call_to_action_learn_more: Дізнатися більше
   call_to_action_watch_now: Дивитися зараз
   call_to_action_try_activity: Спробуйте активність
-  call_to_action_try_activities: Спробуйте заходи
+  call_to_action_try_activities: Спробуйте різні заняття
   call_to_action_try_hoc_ai_activities: Спробуйте заняття «Година коду» AI
-  call_to_action_explore_activities: Досліджуйте діяльність
+  call_to_action_explore_activities: Знайдіть заняття саме для вас
   call_to_action_explore_ai: Досліджуйте AI
   call_to_action_explore_unit: Досліджуйте одиницю
   call_to_action_explore_curriculum: Дослідіть навчальну програму
@@ -397,9 +397,9 @@ uk:
   call_to_action_view_faqs: Переглянути більше поширених запитань
   call_to_action_applications_open: Заявки відкриті
   call_to_action_apply_cs_ambassador: Подайте заявку на посаду Посла CS
-  call_to_action_coming_soon: Скоро!
-  call_to_action_learn_how_ai_works: Дізнайтеся, як працює AI
-  call_to_action_learn_about_ai: Дізнайтеся про штучний інтелект
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Переглянути інструкції для викладачів
   aria_label_call_to_action_hoc_how_to_companies: Переглянути інструкції для компаній
   aria_label_call_to_action_hoc_how_to_districts: Переглянути інструкції для районів
@@ -411,10 +411,9 @@ uk:
   aria_label_call_to_action_hoc_how_to_volunteers: Переглянути інструкції для волонтерів
   aria_label_call_to_action_hoc_how_to_virtual_events: Переглянути інструкції щодо
     віртуальних подій
-  aria_label_call_to_action_dance_01: Почніть діяльність танцювальної вечірки
-  aria_label_call_to_action_dance_02: Почніть другу частину активності танцювальної
-    вечірки
-  aria_label_call_to_action_dance_unplugged: Почніть танцювальну вечірку без підключення
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Дізнайтеся більше про майбутні інженери Amazon
   aria_label_call_to_action_teaching_csf: Почніть програму професійного навчання «Основи
     інформатики»
@@ -532,26 +531,25 @@ uk:
   curriculum_name_creating_apps_with_devices: Створення застосунків за допомогою пристроїв
   curriculum_name_poetry: Кодування за допомогою поезії
   curriculum_name_dance_party: Танцювальна вечірка
-  curriculum_name_dance_party_02: Pseudoloc-Кеепп Он  Данссіндж
-  curriculum_name_dance_party_unplugged: Pseudoloc-Данссе Паарту  Юнпллюджджеед
-  curriculum_name_dance_party_ai_edition: 'Танцювальна вечірка: AI Edition'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Вирішення проблем та обчислення
   curriculum_name_web_development: Веб-розробка
   curriculum_name_interactive_animations_games: Інтерактивні анімації та ігри
   curriculum_name_design_process: Процес проєктування
   curriculum_name_data_society: Дані й суспільство
-  curriculum_desc_dance_party_01: У цій вступній діяльності використовуйте код, щоб
-    змусити різноманітних барвистих персонажів перейти до анімованих фонів та оптимістичної
-    музики.
-  curriculum_desc_dance_party_02: Вийдіть за рамки вступного підручника з розширеними
-    ідеями проекту. Перегляньте бібліотеку прикладів більш складних танцювальних вечірок.
-  curriculum_desc_dance_party_unplugged: Запустіть свій гвинт — комп'ютер не потрібен!
-    Дізнайтеся, як концепції кодування, як-от події, можна використовувати для синхронізації
-    хореографії танцюристів.
-  curriculum_desc_dance_party_ai_edition: Дізнайтеся про концепції штучного інтелекту
-    (AI), щоб створити власну віртуальну танцювальну вечірку, яка демонструє сучасних
-    найкращих артистів. Маючи десятки пісень на вибір, охоплюйте кожного студента
-    незалежно від його музичного смаку. Прийшов час розкрутити свої речі!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Безкоштовний набір початкових навчальних програм, який знайомить
     учнів з основоположними поняттями інформатики.
   curriculum_desc_csf_express: Навчіться створювати комп'ютерні програми, розвивайте
@@ -684,12 +682,12 @@ uk:
   module_grade_grade_03: 3 клас
   module_grade_grade_04: 4 клас
   module_grade_grade_05: 5 клас
-  module_age_05_07: Вік 5-7
-  module_age_07: Вік 7+
-  module_age_07_11: Pseudoloc-Аджесс 7-111
-  module_age_11: Вік 11+
-  module_age_13: Pseudoloc-Аджесс 13++
-  module_age_all_age: Всі віки
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Вчителі
   module_grade_6_10_teachers: 6-10 Вчителі
   module_grade_9_12_teachers: 9-12 Вчителі
@@ -786,8 +784,8 @@ uk:
   heading_csa_ai: Шукаєте, чим зайнятися після іспиту AP®?
   heading_bring_cs_to_students: Принесіть інформатику студентам
   heading_cs_ambassador_program: Програма Посла CS
-  heading_featured_student_projects: Рекомендовані студентські проекти
-  heading_start_hoc_with_videos: Почніть свою Годину коду з надихаючих відео
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Якщо ви старшокласник, захоплений заохоченням більшої кількості
     молодих жінок вчитися в інформатиці у вашій школі, тоді ви нам потрібні!
   cs_ambassador_desc: Кожна сфера, включаючи медицину, розваги, спорт, освіту, бізнес,
@@ -883,14 +881,13 @@ uk:
     поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
   subscribe_form_section_unsubscribe: Ви можете відмовитися від підписки в будь-який
     час.
-  dance_hero_heading: Закодуйте танцювальну вечірку
-  dance_featuring_songs_by_short: 'За участю пісень:'
-  dance_featuring_songs_by_long: 'Танцювальна вечірка включає пісні:'
-  dance_and_more: та багато іншого
-  dance_choose_activity: Виберіть свою танцювальну вечірку
-  dance_afe_disclaimer: Виконавці, чия музика використовується в цьому підручнику,
-    не спонсорують і не підтримують Amazon як частину ліцензування використання своєї
-    музики на Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Як працює блокчейн
   blockchain_hero_desc: Пориньте у світ блокчейну з нашою новою серією відео та супутніми
     уроками «Як працює блокчейн»!
@@ -2387,10 +2384,9 @@ uk:
     годину, під час якого учні в цікавій формі можуть ознайомитися з основами інформатики.
     Ця кампанія для учнів початкового рівня проводиться за підтримки 400 партнерів
     та 200 000 вчителів з усього світу."
-  hoc_homepage_registration_desc: Ваш клас або група можуть приєднатися до мільйонів
-    людей по всьому світу, займаючись Годиною коду! Реєстрація на щорічне святкування
-    Тижня освіти з інформатики починається в жовтні. Хоча Година коду доступна цілий
-    рік.
+  hoc_homepage_registration_desc: У Годині коду ваш клас або група можуть приєднатися
+    до мільйонів людей по всьому світу! Реєстрація на щорічне святкування Тижня інформатики
+    починається в жовтні. Але Година коду доступна цілий рік.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Ознайомтеся з нашим керівництвом](%{howto_guide_url}),
     щоб запланувати цей захід для свого класу."
   hoc_homepage_highlights_heading: Основні відомості про «Годину коду»
@@ -2428,8 +2424,8 @@ uk:
   signup_event_entire_school_label: Вся моя школа бере участь
   signup_event_location_label: Місце проведення
   signup_event_location_error: Місце проведення заходу обов'язкове.
-  signup_special_event_flag_label: Моя подія охоплює цілий район, учасників спільноти,
-    та/або інші заходи поза Годиною коду
+  signup_special_event_flag_label: Моя подія охоплює цілий район, цілу організацію,
+    членів громади, та/або інші заходи поза Годиною коду
   signup_special_event_details_label: Зареєструватись для висвітлення особливої події
   signup_send_posters_flag_label: Надішліть <a href= "/resources#posters">плакати</a>
     для моєї школи чи установи
@@ -2441,7 +2437,7 @@ uk:
     учнів
   signup_email_preference_opt_in: Ми можемо надсилати оновлення про курси Code.org,
     локальні можливості чи інші новини інформатики?
-  signup_email_preference_privacy: "(Див. нашу політику конфіденційності)"
+  signup_email_preference_privacy: "(Дивіться нашу політику конфіденційності)"
   signup_email_preference_yes: Так
   signup_email_preference_yes_elementary: Так - Надішліть мені оновлення про ресурси
     початкової школи
@@ -2501,7 +2497,8 @@ uk:
   map_title: Карта Години коду
   map_header: "# заходів Години коду по всьому світу"
   map_header_count_year: "%{event_count} подій зареєстровано у %{year}"
-  map_header_count_year_so_far: "%{event_count} події, зареєстровані досі в %{year}"
+  map_header_count_year_so_far: "%{event_count} події, зареєстровані наразі в %{year}
+    році"
   see_all_events: Переглянути всі події
   map_header_company: "# від організаторів"
   map_header_country: "# в %{country}"
@@ -2514,7 +2511,7 @@ uk:
   map_warning: Повний список подій можна побачити на <a href='%{events_url}'>сторінці
     подій.</a>
   map_warning_markdown: Повний список подій можна побачити на [сторінці подій.](%{events_url})
-  map_view_all_events: Дивіться повний список подій Година коду [here](%{events_url}).
+  map_view_all_events: Дивіться повний список подій Години коду [here](%{events_url}).
   meta_tag_og_title: 'Година коду: приєднуйтесь до руху'
   meta_tag_og_description: Година коду є глобальним рухом, який залучає десятки мільйони
     учнів із більш, як 180 країн, які розмовляють більш, як 45 мовами. Для будь-якого
@@ -14091,9 +14088,9 @@ uk:
     те, що скористаємося невтомною допомогою ширшої спільноти освіти з інформатики,
     і [ми дякуємо всім партнерам та особам, які підтримували наш вплив протягом багатьох
     років] (%{partners_url})).
-  about_page_section_more_list_1: "[Річний звіт Code.org 2021] (%{report_url}) (Минулі
-    звіти: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
-    [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Наші основні цінності та рекомендації щодо обміну
     повідомленнями] (%{core_url})"
   about_page_section_more_list_3: "[Наша навчальна програма та філософія педагогіки]
@@ -14174,68 +14171,66 @@ uk:
     керівників шкіл та персоналу, щоб розробити початкові вказівки щодо штучного інтелекту
     у своїх школах.
   teach_ai_button_label: Переглянути набір інструментів
-  middle_high_page_main_title: Навчання для 11 років і старше
-  middle_high_page_main_description: Досліджуйте світ інформатики за допомогою захоплюючих
-    відео, навчальних посібників з власного темпу, програмування тощо!
-  middle_high_page_hero_title: Почніть роботу з Годиною коду
-  middle_high_page_hero_description: Вивчіть основи інформатики за допомогою безкоштовних
-    заходів «Година коду», що включає блоки кодування перетягування. На вибір є сотні
-    годинних варіантів!
-  middle_high_page_hourofcode_link: Ознайомтеся з заходами «Година коду»
-  middle_high_page_modules_title: Модулі програмування для старших учнів
-  middle_high_page_modules_description: Адаптовані з наших курсів CS Discoveries та
-    CS Principles, ці короткі модулі для учнів середньої та середньої школи є чудовим
-    способом вивчити концепції, які охоплюють усі мови програмування та інструменти.
-  middle_high_page_modules_card_title_1: Pseudoloc-Інтрродюсстіонн то  Гамее Лабб
-  middle_high_page_modules_card_title_2: Черепашаче програмування в App Lab
-  middle_high_page_modules_card_title_3: Pseudoloc-Eвеннт-Дррівенн Прооджраммміндждж
-    ін  Апп  Лаб
-  middle_high_page_modules_card_description_1: Рухайтеся у своєму власному темпі в
-    цьому вступі до нашого середовища Game Lab, коли ви програмуєте анімацію, інтерактивне
-    мистецтво та ігри.
-  middle_high_page_modules_card_description_2: Розблокуйте можливість створювати багаті
-    інтерактивні програми за допомогою JavaScript у App Lab!
-  middle_high_page_modules_card_description_3: Ідіть у своєму власному темпі з цим
-    вступом до середовища програмування App Lab, в якому студенти використовують JavaScript
-    для створення інтерактивних додатків.
-  middle_high_page_modules_card_link: Pseudoloc-Тру  іт ооют
-  middle_high_page_make_your_own_title: Створіть власні програми, ігри та веб-сторінки
-  middle_high_page_make_your_own_description: 'На додаток до курсів, у нас є інструменти
-    програмування, які дозволяють досліджувати свою творчість і зробити щось дивовижне. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Лабораторія застосунків
-  middle_high_page_make_your_own_card_title_2: Pseudoloc-Гамее Лабб
-  middle_high_page_make_your_own_card_title_3: Pseudoloc-Веб  Лаб
-  middle_high_page_make_your_own_card_descrpition_1: App Lab - це середовище програмування,
-    де ви можете створювати прості програми. Створіть додаток, кодуйте в JavaScript
-    за допомогою блоків або тексту, а потім поділіться своїм додатком за лічені секунди.
-  middle_high_page_make_your_own_card_descrpition_2: Pseudoloc-Гамее Лабб іс  а прроджрааммінндж
-    еннвіроонменнт вххере  уою  сан  макее сіммпле  анімматіоонс аанд джджамесс віттх
-    оббджесттс аннд сххарасстерсс тхаат іннтерааст ввітх  еасхх отххер.
-  middle_high_page_make_your_own_card_descrpition_3: Pseudoloc-Веб  Лаб  іс аа прооджраммміндждж
-    енввіроннментт вхеере ууою ссан ммаке  сімппле ввеб ппаджесс юсііндж ХХТМЛ  анд  CСС..
-    Дессіджн  уоюрр вебб паджджес аанд ссхарее уоююр сііте іін сеесонддс.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Дізнатися більше
-  middle_high_page_additional_resources_title: Додаткові ресурси
-  middle_high_page_additional_resources_description: Існує так багато способів подальшого
-    вивчення інформатики! Перегляньте нашу бібліотеку відео або дізнайтеся більше
-    про захоплюючу кар'єру в галузі інформатики.
-  middle_high_page_video_library_title: Відкрийте для себе нашу відеобібліотеку
-  middle_high_page_video_library_description: Вивчіть основи інформатики за допомогою
-    коротких 5-10 хвилинних відео на такі теми, як штучний інтелект, Інтернет, як
-    працюють комп'ютери, як не бути зламаним, блокчейн, кар'єра тощо!
-  middle_high_page_video_library_link: Перегляд відеотеки
-  middle_high_page_cs_journeys_title: Ідіть далі з CS Journeys
-  middle_high_page_cs_journeys_description: Зробіть наступний крок у своїй подорожі
-    з інформатики. Досліджуйте кар'єру, можливості наставництва, онлайн-курси, стипендії,
-    стажування тощо!
-  middle_high_page_cs_journeys_link: Ознайомтеся з подорожами CS
-  middle_high_page_cs_title: Комп'ютерні науки в класі
-  middle_high_page_cs_description: Ці курси повинен вести викладач! Якщо ви хочете
-    бачити, як їх викладають у вашій школі, подумайте про співпрацю з вчителем, щоб
-    привести їх до вашого класу.
-  middle_high_page_cs_card_title_1: Pseudoloc-CС ДДіссооверііес
-  middle_high_page_cs_card_title_2: Pseudoloc-CС ППрінссіплеес
-  middle_high_page_cs_card_title_3: AP Комп'ютерні науки A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Безкоштовна річна навчальна програма, яка
     знайомить учнів з основними концепціями інформатики та пропонує дослідити, як
     обчислювальна техніка й технології можуть вплинути на світ.
@@ -14246,34 +14241,34 @@ uk:
   middle_high_page_cs_card_description_3: Познайомте студентів з програмною інженерією
     та об'єктно-орієнтованим дизайном, поки вони вивчають мову програмування Java
     у цій безкоштовній навчальній програмі AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Ознайомтеся з дискусіями CS
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Ознайомтеся з принципами CS
-  middle_high_page_cs_link_3: Дослідіть CSA
-  elemeentary_page_main_title: Навчання у віці від 5 до 11 років
-  elementary_page_main_description: Досліджуйте світ інформатики за допомогою захоплюючих
-    відео, навчальних посібників з власного темпу, програмування тощо!
-  elementary_page_own_pace_title: Продовжуйте вчитися у власному темпі
-  elementary_page_own_pace_description: Створюйте малюнки, ігри та багато іншого в
-    цих двох чудових варіантах для студентів, які починають самостійно вивчати основи
-    інформатики.
-  elementary_page_own_pace_card_title_1: Експрес-курс перед читанням
-  elementary_page_own_pace_card_title_2: Pseudoloc-Eкспрресс  Cоюррсе
-  elementary_page_own_pace_card_description_1: Вивчайте інформатику у своєму власному
-    темпі! Навчіться створювати комп'ютерні програми, розвивати навички вирішення
-    проблем та працювати над веселими викликами! Створюйте ігри та творчі проекти,
-    щоб поділитися з друзями, родиною та вчителями.
-  elementary_page_own_pace_link_1: Почніть курс попереднього читання
-  elementary_page_own_pace_link_2: Почніть експрес-курс
-  elementary_page_make_your_own_games_title: Створюйте власні анімації та ігри
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Спрайт Лабораторія
-  elementary_page_make_your_own_games_card_description_1: Час проявити творчість!
-    Використовуйте блокове кодування, щоб зробити щось дурне, солодке або зовнішнє
-    в Sprite Lab. Єдина межа - ваша фантазія!
-  elementary_page_make_your_own_games_link: Спробуйте лабораторію Sprite
-  elementary_page_computer_science_title: Комп'ютерні науки в класі
-  elementary_page_computer_science_description: Ці курси повинен вести викладач! Якщо
-    ви хочете бачити, як їх викладають у вашій школі, попросіть батьків або опікуна
-    співпрацювати з вчителем, щоб привезти їх до вашого класу.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Основи інформатики
   elementary_page_computer_science_card_title_2: Зв'язки в інформатиці
   elementary_page_computer_science_description_1: Безкоштовна річна навчальна програма,

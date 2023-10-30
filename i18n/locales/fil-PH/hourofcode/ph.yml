@@ -41,7 +41,7 @@ ph:
   africa_campaign_date_full: Oktubre 1 - Disyembre 18
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
-  hoc2023_header: Creativity with AI
+  hoc2023_header: Pagkamalikhain gamit ang AI
   hoc2023_hero_desc_homepage: Join millions across the globe in organizing an hour
     of coding, with or without AI and learning how AI works. Anyone, anywhere can
     do it. No experience needed.
@@ -228,10 +228,12 @@ ph:
   device_laptop: Laptop
   device_desktop_computer: Desktop Computer
   device_mobile_device: Mobile Device
-  for_everyone: For everyone
-  for_students_teacher_led_learning: 'For students: Teacher-led learning'
-  for_students_teacher_led_lessons: 'For students: Teacher-led lessons'
-  professional_development: Professional development
+  for_everyone: Para sa lahat
+  for_students_teacher_led_learning: 'Para sa mga mag-aaral: Pag-aaral na pinamumunuan
+    ng guro'
+  for_students_teacher_led_lessons: 'Para sa mga mag-aaral: Mga aralin na pinamumunuan
+    ng guro'
+  professional_development: Propesyonal na pag-unlad
   how_ai_works_video_series: How AI Works Video Series
   learn_how_ai_works: Learn How AI Works
   ai_101_for_educators: AI 101 for Educators
@@ -297,7 +299,7 @@ ph:
   call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Hold an event
   call_to_action_register_event: Register your event
-  call_to_action_register_your_hoc: Register your Hour of Code
+  call_to_action_register_your_hoc: Irehistro ang Hour of Code mo
   call_to_action_select_activity: Select an activity
   call_to_action_start_activity: Start an activity
   call_to_action_get_certificates: Get certificates
@@ -311,9 +313,9 @@ ph:
   call_to_action_learn_more: Matuto ng higit pa
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
-  call_to_action_try_activities: Try activities
+  call_to_action_try_activities: Subukan ang mga aktibidad
   call_to_action_try_hoc_ai_activities: Try Hour of Code AI activities
-  call_to_action_explore_activities: Explore activities
+  call_to_action_explore_activities: Tuklasin ang mga aktibidad
   call_to_action_explore_ai: Explore AI
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
@@ -2192,7 +2194,7 @@ ph:
     ay maaaring mag-organisa ng kaganapan ng Hour of Code. Isang oras na pagtuturo
     ay pwede sa mahigit 45 na wika. Hindi kailangan ng karanasan. <strong>Mga 4 hanggang
     104 na gulang.</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: Pandaigdigang kilusan sa 180+ na bansa.
   front_watch_video: Panoorin ang bagong video
   front_watch_regular_video: Panoorin ang video
   front_volunteers: Nais ng mga teknikal na mga boluntaryo
@@ -2443,15 +2445,16 @@ ph:
     sa computer science, gamit ang mga masasayang tutorial upang ipakita na kahit
     sino ay maaaring matuto ng mga pangunahing kaalaman. Ang grassroots campaign na
     ito ay sinusuportahan ng mahigit 400 partners at 200,000 educators sa buong mundo.
-  hoc_homepage_registration_desc: Your class or group can join millions around the
-    world doing the Hour of Code! Registration for the annual Computer Science Education
-    Week celebration begins in October. Though, Hour of Code is available year-round.
+  hoc_homepage_registration_desc: Ang klase o grupo mo ay maaaring sumali sa milyun-milyong
+    tao sa buong mundo na gumagawa ng Hour of Code! Ang pagpaparehistro para sa taunang
+    pagdiriwang ng Computer Science Education Week ay nagsisimula sa Oktubre. Bagaman,
+    ang Hour of Code ay magagamit sa buong taon.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Basahin ang aming How-to na Gabay](%{howto_guide_url})
     upang magplano ng event sa klase mo."
   hoc_homepage_highlights_heading: Mga pinakatampok sa Hour of Code
   hoc_homepage_organized_by: Ang Hour of Code ay inorganisa ni [Code.org](%{codeorg_url}).
-  hoc_events_heading: Register to Host an Hour of Code
-  hoc_events_jump_to_map: Jump to the Hour of Code map
+  hoc_events_heading: Magparehistro upang Mag-host ng Hour of Code
+  hoc_events_jump_to_map: Lumipat sa Hour of Code na mapa
   signup_closed: Ang pagpaparehistro para sa Hour of Code ay sarado na ngayon. Mangyaring
     tignan ulit sa Oktubre upang mag-sign up para sa susunod na Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -2483,7 +2486,9 @@ ph:
   signup_event_entire_school_label: Ang aking buong paaralan ay sasali
   signup_event_location_label: Lugar ng kaganapan (optional)
   signup_event_location_error: Kailangan ang lokasyon ng kaganapan.
-  signup_special_event_flag_label: Ipagkita ang aking espesyal na aktibidad
+  signup_special_event_flag_label: Ang kaganapan ko ay magsasangkot ng buong distrito,
+    buong organisasyon, mga miyembro ng komunidad, at/o iba pang mga espesyal na plano
+    na lampas sa isang oras
   signup_special_event_details_label: Mga detalye tungkol sa espesyal na aktibidad
   signup_send_posters_flag_label: Magpada<a href= "/resources#posters">ng mga poster</a>sa
     aming paaralan o organisasyon
@@ -2495,7 +2500,7 @@ ph:
     para bigyang-inspirasyon ang aking mga estudyante
   signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
     local opportunities, or other computer science news?
-  signup_email_preference_privacy: "(See our privacy policy)"
+  signup_email_preference_privacy: "(Tingnan ang aming patakaran sa pagkapribado)"
   signup_email_preference_yes: 'Yes'
   signup_email_preference_yes_elementary: Yes - Send me updates on Elementary School
     Resources
@@ -2562,7 +2567,8 @@ ph:
   map_title: Mapa ng Hour of Code
   map_header: "# Hour of Code events sa buong mundo"
   map_header_count_year: "%{event_count} events registered in %{year}"
-  map_header_count_year_so_far: "%{event_count} events registered so far in %{year}"
+  map_header_count_year_so_far: "%{event_count} mga kaganapan na nakarehistro ngayon
+    sa %{year}"
   see_all_events: Tignan ang lahat ng mga kaganapan
   map_header_company: "# ng mga organizer ng kumpanya"
   map_header_country: "# sa %{country}"
@@ -2576,7 +2582,8 @@ ph:
     nakarehistrong mga kaganapan. Lahat ng nakarehistrong mga kaganapan ng may valid
     address ay pwedeng makita sa <a href='%{events_url}'>ang pahina ng mga kaganapan.</a>
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
-  map_view_all_events: See a full list of Hour of Code events [here](%{events_url}).
+  map_view_all_events: Tingnan ang kumpletong listahan ng mga kaganapan sa Hour of
+    Code [here]{%{events_url}).
   meta_tag_og_title: Parating na ang Hour of Code
   meta_tag_og_description: Ang Hour of Code ay isang pandaigdigang kilusan na umaabot
     sa halos sampung milyong mag-aaral sa 180+ na bansa at sa 30 mga wika. Edad 4-104.
@@ -14657,10 +14664,9 @@ ph:
   middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
     courses, these short, self-paced modules for middle and high school students are
     a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduskyon sa Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming sa App Lab
-  middle_high_page_modules_card_title_3: Programming na Batay sa Kaganapan sa App
-    Lab
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
   middle_high_page_modules_card_description_1: Move at your own pace in this introduction
     to our Game Lab environment as you program animations, interactive art, and games.
   middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
@@ -14668,7 +14674,7 @@ ph:
   middle_high_page_modules_card_description_3: Go at your own pace with this introduction
     to the App Lab programming environment, in which students use JavaScript to create
     interactive apps.
-  middle_high_page_modules_card_link: Subukan ito
+  middle_high_page_modules_card_link: Try it out
   middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
   middle_high_page_make_your_own_description: 'In addition to courses, we have programming
     tools that let you explore your creativity and make something amazing. '
@@ -14678,9 +14684,9 @@ ph:
   middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
     where you can make simple apps. Design an app, code in JavaScript with either
     blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Ang Game Lab ay isang programming
-    environment kung saan pwede kang gumawa ng mga simpleng animation at laro gamit
-    ang mga bagay at character na kayang makipag-ugnayan sa isa't isa.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
   middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
     where you can make simple web pages using HTML and CSS. Design your web pages
     and share your site in seconds.
@@ -14728,7 +14734,7 @@ ph:
     two excellent options for students getting started on their own learning the basics
     of computer science.
   elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Mabilisang Kurso
+  elementary_page_own_pace_card_title_2: Express Course
   elementary_page_own_pace_card_description_1: Learn computer science at your own
     pace! Learn to create computer programs, develop problem-solving skills, and work
     through fun challenges! Make games and creative projects to share with friends,
