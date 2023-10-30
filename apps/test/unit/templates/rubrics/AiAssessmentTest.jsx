@@ -8,6 +8,7 @@ describe('AiAssessment', () => {
     isAiAssessed: true,
     studentName: 'Jane Doe',
     aiEvaluation: {
+      learning_goal_id: 1,
       understanding: 3,
       ai_confidence: 70,
     },

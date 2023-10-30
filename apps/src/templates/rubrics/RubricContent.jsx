@@ -90,6 +90,15 @@ export default function RubricContent({
     }
   };
 
+  const getAiEvaluationForLearningGoal = learningGoalId => {
+    if (!!aiEvaluations) {
+      return aiEvaluations.find(
+        aiEvaluation => aiEvaluation.learning_goal_id === learningGoalId
+      );
+    }
+    return null;
+  };
+
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
@@ -163,7 +172,7 @@ export default function RubricContent({
             canProvideFeedback={canProvideFeedback}
             reportingData={reportingData}
             studentLevelInfo={studentLevelInfo}
-            aiEvaluation={aiEvaluations}
+            aiEvaluation={getAiEvaluationForLearningGoal(lg.id)}
             isStudent={false}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}

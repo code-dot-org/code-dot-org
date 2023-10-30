@@ -38,6 +38,7 @@ describe('LearningGoal', () => {
         }}
         teacherHasEnabledAi={true}
         aiEvaluation={{
+          learning_goal_id: 1,
           understanding: 3,
           ai_confidence: 1,
         }}
