@@ -49,3 +49,15 @@ def get_palettes():
     set_background_effect_json_object = get_json_object('dashboard/config/blocks/Dancelab/Dancelab_setBackgroundEffectWithPaletteAI.json')
     palette_options = set_background_effect_json_object['config']['args'][1]['options']
     return get_blockly_ids_and_user_facing_names(palette_options, False)
+
+def create_map_print_options(options_name, model_descriptive_names, blockly_ids_list, user_facing_names_list):
+    # options_map contains model_descriptive_name as key and blockly_id as value.
+    options_map = {}
+    print(options_name.upper())
+    print('model_descriptive_name | blockly_id | blockly_user_facing_name')
+    for i in range(len(model_descriptive_names)):
+        model_descriptive_name = model_descriptive_names[i]
+        blockly_id = blockly_ids_list[i]
+        options_map[model_descriptive_name] = blockly_id
+        print (model_descriptive_name + ' | ' + blockly_id + ' | ' + user_facing_names_list[i])
+    return options_map

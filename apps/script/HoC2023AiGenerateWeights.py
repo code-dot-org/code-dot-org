@@ -55,16 +55,7 @@ background_effect_model_descriptive_names = [
     'twinkle',
     'sound wave'
 ]
-
-# background_effects_map contains model_descriptive_name as key and blockly_id as value.
-background_effects_map = {}
-print ('BACKGROUND EFFECTS')
-print ('model_descriptive_name | blockly_id | blockly_user_facing_name')
-for i in range(len(background_effect_model_descriptive_names)):
-    model_descriptive_name = background_effect_model_descriptive_names[i]
-    blockly_id = background_effect_blockly_ids_list[i]
-    background_effects_map[model_descriptive_name] = blockly_id
-    print (model_descriptive_name + ' | ' + blockly_id + ' | ' + background_effect_user_facing_names_list[i])
+background_effects_map = create_map_print_options('background_effects', background_effect_model_descriptive_names, background_effect_blockly_ids_list, background_effect_user_facing_names_list)
 
 palette_model_descriptive_names = [
     'autumn',
@@ -89,16 +80,7 @@ palette_model_descriptive_names = [
     'red orange',
     'icy blue'
 ]
-
-# palettes_map contains model_descriptive_name as key and blockly_id as value.
-palettes_map = {}
-print ('PALETTES')
-print ('model_descriptive_name | blockly_id | blockly_user_facing_name')
-for i in range(len(palette_model_descriptive_names)):
-    model_descriptive_name = palette_model_descriptive_names[i]
-    blockly_id = palette_blockly_ids_list[i]
-    palettes_map[model_descriptive_name] = blockly_id
-    print (model_descriptive_name + ' | ' + blockly_id + ' | ' + palette_user_facing_names_list[i])
+palettes_map = create_map_print_options('palettes', palette_model_descriptive_names, palette_blockly_ids_list, palette_user_facing_names_list)
 
 foreground_effect_model_descriptive_names = [
     'bubbles',
@@ -119,16 +101,7 @@ foreground_effect_model_descriptive_names = [
     'stars',
     'taco'
 ]
-
-# foreground_effects_map contains model_descriptive_name as key and blockly_id as value.
-foreground_effects_map = {}
-print ('FOREGROUND EFFECTS')
-print ('model_descriptive_name | blockly_id | blockly_user_facing_name')
-for i in range(len(foreground_effect_model_descriptive_names)):
-    model_descriptive_name = foreground_effect_model_descriptive_names[i]
-    blockly_id = foreground_effect_blockly_ids_list[i]
-    foreground_effects_map[model_descriptive_name] = blockly_id
-    print (model_descriptive_name + ' | ' + blockly_id + ' | ' + foreground_effect_user_facing_names_list[i])
+foreground_effects_map = create_map_print_options('foreground_effects', foreground_effect_model_descriptive_names, foreground_effect_blockly_ids_list, foreground_effect_user_facing_names_list)
 
 palette_dict = {}
 background_dict = {}
@@ -156,6 +129,7 @@ for emoji_name in emoji_names_list:
         foreground_token = nlp(foreground_word)
         similarity_score = id_token.similarity(foreground_token)
         foreground_scores.append(round(similarity_score, 2))
+
     emoji_id = emojis_map[emoji_name]
     palette_dict[emoji_id] = palette_scores
     background_dict[emoji_id] = background_scores
