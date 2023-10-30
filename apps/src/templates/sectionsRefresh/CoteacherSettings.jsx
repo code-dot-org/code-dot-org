@@ -21,7 +21,7 @@ export default function CoteacherSettings({
   const [addError, setAddError] = useState('');
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
 
-  const initialCoteachers = React.useMemo(() => {
+  const initialCoteachers = (sectionInstructors, primaryTeacher) => {
     if (!sectionInstructors) {
       return [];
     }
@@ -31,12 +31,13 @@ export default function CoteacherSettings({
     return sectionInstructors.filter(
       instructor => instructor.instructorEmail !== primaryTeacher.email
     );
-  }, [sectionInstructors, primaryTeacher]);
+  };
 
-  const [savedCoteachers, setSavedCoteachers] = useState(initialCoteachers);
+  const [savedCoteachers, setSavedCoteachers] = useState(
+    initialCoteachers(sectionInstructors, primaryTeacher)
+  );
 
   const statusSortValue = coteacher => {
-    // Always put new, unsaved coteachers first.
     if (coteacher.status === 'invited') {
       return 0;
     } else if (coteacher.status === 'declined') {
