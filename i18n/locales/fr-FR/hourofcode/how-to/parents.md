@@ -30,7 +30,7 @@ Toutes nos activités développent l'esprit critique et la capacité à résoudr
 
 - Pour l'enfant qui aime jouer : [Minecraft](https://code.org/minecraft) ou Soirée Dansante</ a> </li> 
     
-    - For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+    - Pour les enfants qui adorent Disney : [La Guerre des étoiles](https://code.org/starwars), [La Reine des neiges](https://studio.code.org/s/frozen/lessons/1/levels/1), ou [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
     - Pour l'enfant qui aime apprendre : [IA pour les océans](https://code.org/oceans) ou <a href = "https://scratch.mit.edu/projects/editor /? tutorial = music & utm_source = codeorg ">Faire de la musique avec Scratch</a> </ul>
 
 <h3>Peu ou pas de technologie ?</h3>

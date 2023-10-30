@@ -947,7 +947,7 @@
           "type": "Vídeo"
         },
         "the_draw_loop/csd/2021": {
-          "name": "O laço de desenho",
+          "name": "O Desenho do Laço",
           "type": "Recurso"
         },
         "animating-sprites/csd/2021": {
@@ -3924,11 +3924,11 @@
           "type": "Vídeo"
         },
         "the_draw_loop/csd/2022": {
-          "name": "O laço de desenho",
+          "name": "O Desenho do Laço",
           "type": "Recurso"
         },
         "the_draw_loop_1/csd/2022": {
-          "name": "O laço de desenho",
+          "name": "O Desenho do Laço",
           "type": "Slides"
         },
         "sprite_movement/csd/2022": {
@@ -7566,11 +7566,11 @@
           "type": "Vídeo"
         },
         "the_draw_loop/csd/2023": {
-          "name": "O laço de desenho",
+          "name": "O Desenho do Laço",
           "type": "Recurso"
         },
         "the_draw_loop_1/csd/2023": {
-          "name": "O laço de desenho",
+          "name": "O Desenho do Laço",
           "type": "Slides"
         },
         "sprite_movement/csd/2023": {
@@ -10539,6 +10539,9 @@
           "name": "Vídeo: Compactação de texto com Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Vídeo"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Recurso"
         }
       }
     }

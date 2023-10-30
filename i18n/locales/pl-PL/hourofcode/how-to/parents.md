@@ -7,7 +7,7 @@ title: Godzina Kodowania - Przewodnik dla rodziców i opiekunów
 Wypróbowanie Godziny Kodowania jest łatwe i stanowi atrakcyjny sposób wprowadzenia swojego dziecka w dziedzinę informatyki, być może po raz pierwszy. Informatyka ma znaczenie fundamentalne dla wszystkich dziedzin nauki, ale [ostatnie badania pokazują](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536), że dzieci, które uczą się informatyki osiągają lepsze wyniki w innych przedmiotach, przodują w rozwiązywaniu problemów i mają <font color="00adbc"><b> o 17% większe szanse dostać się na studia </font></b>.</p> 
 
 <p>
-  Możesz dołączyć do dziesiątków milionów uczniów na całym świecie w ramach tego wydarzenia o zasięgu globalnym. Razem możemy zainspirować dzieci do nauki, łamać stereotypy i pomóc dzieciom odkrywać nowo wzbudzone zainteresowanie. Najlepsze jest jednak to, że masz już wszystko, czego potrzebujesz, aby wprowadzić Godzinę Kodowania do swojego domu!
+  Możesz dołączyć do dziesiątków milionów uczniów na całym świecie w ramach tego ruchu o zasięgu globalnym. Razem możemy zainspirować dzieci do nauki, łamać stereotypy i pomóc dzieciom odkrywać nowo wzbudzone zainteresowanie. Najlepsze jest jednak to, że masz już wszystko, czego potrzebujesz, aby wprowadzić Godzinę Kodowania do swojego domu!
 </p>
 
 <p>
@@ -17,7 +17,7 @@ Wypróbowanie Godziny Kodowania jest łatwe i stanowi atrakcyjny sposób wprowad
 <h3>Czego potrzebuję, by rozpocząć?</h3>
 
 <p>
-  Godzina Kodowania jest łatwa do przeprowadzenia - nawet dla początkujących! Nie jest potrzebne doświadczenie w dziedzinie informatyki ani dydaktyki, aby prowadzić atrakcyjne zajęcia dla Twoich dzieci, na których będą się one uczyć i śmiać.
+  Godzina Kodowania jest łatwa do przeprowadzenia - nawet dla początkujących! Nie jest potrzebne doświadczenie w dziedzinie informatyki ani dydaktyki, aby prowadzić atrakcyjne zajęcia dla Twoich dzieci, na których będą się one uczyć i uśmiechać.
 </p>
 
 <p>
@@ -31,7 +31,7 @@ Wypróbowanie Godziny Kodowania jest łatwe i stanowi atrakcyjny sposób wprowad
 <hr />
 
 <h2>
-  1) Poznawaj zajęcia i treści samouczków
+  1) Poznawaj aktywności i samouczki
 </h2>
 
 <p>

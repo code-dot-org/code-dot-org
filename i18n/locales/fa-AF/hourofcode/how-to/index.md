@@ -8,7 +8,7 @@ title: یک ساعت از کد چگونه به راهنمای
 
 ### پیوستن به جنبش و معرفی دانش آموزان خود را به علوم کامپیوتر با این مراحل.
 
-Students today should learn how to create technology, not just use it.
+دانش آموزان امروزه باید یاد بگیرند که چگونه تکنولوژی ایجاد کنند، نه فقط از آن استفاده کنند.
 
 تلاش یک ساعت کد یک راه ساده و سرگرم کننده برای معرفی دانش آموزان به علوم کامپیوتر است، شاید برای اولین بار! فعالیتی را پیدا کنید که متناسب با تنظیمات شما باشد، چه در کلاس یا بعد از مدرسه، حضوری یا مجازی. اگر</a> بعد از بررسی مراحل زیر هنوز سوالی دارید، به راهنمای مشارکت ما نگاه کنید:</p> 
 
@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [چگونه برای شروع ساعت خود را از کد قوی](#how-to-start)
 - [دریافت برنامه نویسی](#code)
 - [موفقیت دانش آموزان خود را جشن بگیرید](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [سایر منابع ساعت کد برای مربیان](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-هنگامی که شما [ثبت نام ساعت خود را از رویداد کد](/#join)، شما ارتباطات ایمیل مفید با اخبار و راهنمایی برای میزبانی یک ساعت موفق از کد دریافت خواهید کرد. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+هنگامی که در [رویداد Hour of Code خود ثبت نام می کنید](/events)، ارتباطات ایمیلی مفید با اخبار و نکات برای میزبانی یک ساعت کد موفق دریافت خواهید کرد. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [گواهینامه ها را]({{ urls/certificates }}) برای دانش آموزان خود چاپ کنید
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- عکس ها و فیلم های رویداد Hour of Code خود را در رسانه های اجتماعی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا بتوانیم موفقیت شما را نیز برجسته کنیم!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## ساعت دیگر منابع کد برای مربیان:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- سوالات متداول [ساعت کد را مرور](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کنید.
 
 ### What comes after the Hour of Code?
 
