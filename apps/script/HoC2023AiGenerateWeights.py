@@ -193,9 +193,9 @@ background_output = {'emojiAssociations': background_dict, 'output': background_
 palette_output = {'emojiAssociations': palette_dict, 'output': palette_model_descriptive_names}
 foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effect_model_descriptive_names}
 
-background_output['pythonNames'] = background_output['output']
-palette_output['pythonNames'] = palette_output['output']
-foreground_output['pythonNames'] = foreground_output['output']
+background_output['modelDescriptiveNames'] = background_output['output']
+palette_output['modelDescriptiveNames'] = palette_output['output']
+foreground_output['modelDescriptiveNames'] = foreground_output['output']
 
 # Modify output to reflect blockly id names.
 background_output['output'] = [background_effects_map[bg] for bg in background_output['output']]
