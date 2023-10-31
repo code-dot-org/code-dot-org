@@ -14,7 +14,7 @@ OptionParser.new do |opts|
   opts.on('-u', '--actually-update', 'Actually perform the update.') do
     options[:actually_update] = true
   end
-  opts.on('-sSTART', '--start-with=START', 'Start with section ID START.') do |s|
+  opts.on('-sSTART', '--start-with=START', Integer, 'Start with section ID START.') do |s|
     options[:start_with] = s
   end
   opts.on('-h', '--help', 'Add -u to perform the update.') do
