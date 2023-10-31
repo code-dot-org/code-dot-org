@@ -10,14 +10,6 @@ class DatastoreCacheTest < ActiveSupport::TestCase
 
   test 'simple get and set' do
     key = "key"
-    value = [1, 3, 2]
-
-    @datastore_cache.set(key, value)
-    assert_equal value, @datastore_cache.get(key)
-  end
-
-  test 'simple get and set' do
-    key = "key"
     first_value = [1, 3, 2]
     second_value = [2, 4, 3]
 
@@ -39,18 +31,22 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     cache = DatastoreCache.new @data_adapter, 'fast expiration', cache_expiration: 0.01
     assert_equal initial_value, cache.get(key)
 
-    # Data is not updated immediately
+    # Local cache is not updated immediately when the shared cache is updated
     @data_adapter.set(key, updated_value)
+    cache.populate_shared_cache
+    refute cache.local_cache_expired?
     assert_equal initial_value, cache.get(key)
 
-    # Data is eventually updated
+    # Local cache is eventually updated
     sleep 0.1
+    assert cache.local_cache_expired?
     assert_equal updated_value, cache.get(key)
   end
 
   test "set updates datastore and local cache" do
     @data_adapter.expects(:set).once
-    @datastore_cache.expects(:set_local).once
+    @datastore_cache.expects(:populate_shared_cache).once
+    @datastore_cache.expects(:update_local_cache).once
     @datastore_cache.set("whatever", "yo")
   end
 
