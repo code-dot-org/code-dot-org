@@ -33,6 +33,7 @@ const getInitialCoteachers = (sectionInstructors, primaryTeacher) => {
 };
 
 export default function CoteacherSettings({
+  sectionId,
   sectionInstructors,
   primaryTeacher,
   setCoteachersToAdd,
@@ -67,6 +68,7 @@ export default function CoteacherSettings({
       {i18n.coteacherAddInfo()}
       <div className={styles.settings}>
         <AddCoteacher
+          sectionId={sectionId}
           coteachers={coteachers}
           setCoteachersToAdd={setCoteachersToAdd}
           addError={addError}
@@ -88,6 +90,7 @@ export default function CoteacherSettings({
 }
 
 CoteacherSettings.propTypes = {
+  sectionId: PropTypes.number,
   sectionInstructors: PropTypes.arrayOf(PropTypes.object),
   primaryTeacher: PropTypes.object,
   setCoteachersToAdd: PropTypes.func.isRequired,

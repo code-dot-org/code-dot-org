@@ -11,6 +11,7 @@ import Button from '@cdo/apps/templates/Button';
 import styles from './coteacher-settings.module.scss';
 
 export default function AddCoteacher({
+  sectionId,
   coteachers,
   setCoteachersToAdd,
   addError,
@@ -18,30 +19,56 @@ export default function AddCoteacher({
 }) {
   const [inputValue, setInputValue] = useState('');
 
+  const getInputErrorMessage = useCallback(
+    email => {
+      if (email === '') {
+        return Promise.resolve(i18n.coteacherAddNoEmail());
+      }
+      if (!isEmail(email)) {
+        return Promise.resolve(i18n.coteacherAddInvalidEmail({email}));
+      }
+
+      return $.ajax({
+        url: `/api/v1/section_instructors/check`,
+        method: 'GET',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify({
+          email: email,
+          section_id: sectionId,
+        }),
+      })
+        .done(() => {
+          return '';
+        })
+        .fail(error => {
+          console.log('lfm', JSON.stringify(error));
+          return 'error';
+        });
+    },
+    [sectionId]
+  );
+
   const handleAddEmail = useCallback(
     e => {
       e.preventDefault();
       const newEmail = inputValue;
-      if (newEmail === '') {
-        setAddError(i18n.coteacherAddNoEmail());
-        return;
-      }
-      if (!isEmail(newEmail)) {
-        setAddError(i18n.coteacherAddInvalidEmail({email: newEmail}));
-        return;
-      }
-      if (
-        coteachers.some(instructor => instructor.instructorEmail === newEmail)
-      ) {
-        setAddError(i18n.coteacherAddAlreadyExists({email: newEmail}));
-        return;
-      }
+      getInputErrorMessage(newEmail).then(errorMessage => {
+        setAddError(errorMessage);
 
-      setCoteachersToAdd(existing => [newEmail, ...existing]);
-      setAddError('');
-      setInputValue('');
+        if (errorMessage === '') {
+          setCoteachersToAdd(existing => [newEmail, ...existing]);
+          setInputValue('');
+        }
+      });
     },
-    [coteachers, setCoteachersToAdd, setAddError, inputValue, setInputValue]
+    [
+      setCoteachersToAdd,
+      setAddError,
+      inputValue,
+      setInputValue,
+      getInputErrorMessage,
+    ]
   );
 
   const handleInputChange = useCallback(
@@ -108,6 +135,7 @@ export default function AddCoteacher({
 }
 
 AddCoteacher.propTypes = {
+  sectionId: PropTypes.number,
   coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
   addError: PropTypes.string,
