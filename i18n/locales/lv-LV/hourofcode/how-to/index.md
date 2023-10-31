@@ -8,7 +8,7 @@ title: Programmēšanas stunda, kā ceļvedis
 
 ### Pievienojieties kustībai un iepazīstiniet savus skolēnus ar datorzinātnēm ar šīm darbībām.
 
-Students today should learn how to create technology, not just use it.
+Mūsdienās studentiem vajadzētu iemācīties radīt tehnoloģijas, nevis tikai tās izmantot.
 
 Kodēšanas stunda ir vienkāršs un jautrs veids, kā iepazīstināt studentus ar datorzinātnēm, iespējams, pirmo reizi! Atrodiet darbību, kas atbilst jūsu iestatījumiem — gan klasē, gan pēcskolā, gan personiski, gan virtuāli. Apskatiet mūsu [dalības ceļvedi, ja jums vēl ir jautājumi,]({{ localized_files/participation_guide }}) pārbaudot tālāk norādītās darbības:
 
@@ -19,7 +19,7 @@ Kodēšanas stunda ir vienkāršs un jautrs veids, kā iepazīstināt studentus 
 - [Kā sākt savu kodēšanas stundu spēcīgu](#how-to-start)
 - [Iegūt kodēšanu](#code)
 - [Sviniet skolēnu panākumus](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Citi koda stundas resursi pedagogiem](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-[Reģistrējoties “Kodēšanas stundas” notikumam](/#join), jūs saņemsit noderīgus e-pasta ziņojumus ar jaunumiem un padomiem veiksmīgas kodēšanas stundas viesošanai. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Reģistr [ējoties Koda stundas pasākumam](/events), jūs saņemsiet noderīgu e-pasta ziņojumu ar jaunumiem un padomiem veiksmīgas koda stundas rīkošanai. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Izdrukājiet sertifik]({{ urls/certificates }}) ātus saviem studentiem.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Dalies ar sava Programmēšanas stundas pasākuma fotogrāfijām un video sociālajos medijos. Izmanto #HourOfCode un @codeorg, lai mēs arī varētu izcelt tavus panākumus!
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Citi Programmēšanas stundas resursi skolotājiem:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Pārskati [et koda stundas FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Kas nāk pēc "Programmēšanas stundas"?
 

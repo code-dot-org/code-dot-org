@@ -16,8 +16,8 @@ title: Οδηγός Κατευθύνσεων Ώρας του Κώδικα για
 
 Δείτε τα παρακάτω βήματα για να ξεκινήσετε και τον [οδηγό για εταιρικούς συνεργάτες](/files/hoc-corporate-toolkit.pdf) για περισσότερα σχετικά με το πώς να ενθουσιάσετε την εταιρεία σας με την Ώρα του Κώδικα.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Συνδεθείτε με ένα τοπικό σχολείο](#connect-with-a-school)
+- [Ενθαρρύνετε τους υπαλλήλους να γίνουν εθελοντές συμμετέχοντας σε μια τάξη](#encourage-employees)
 - [Διοργανώστε τη δική σας εκδήλωση Ώρας του Κώδικα](#host-hour-of-code)
 - [Προωθήστε την Ώρα του Κώδικα](#promote-hour-of-code)
 - [Περισσότεροι τρόποι να στηρίξετε την Ώρα του Κώδικα](#support-hour-of-code)
@@ -26,31 +26,31 @@ title: Οδηγός Κατευθύνσεων Ώρας του Κώδικα για
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Συνδεθείτε με ένα τοπικό σχολείο
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Είναι πάντα καλύτερο να ξεκινήσετε τοπικά, με σχολεία με τα οποία εσείς ή οι υπάλληλοί σας έχετε ισχυρή σύνδεση, όπως ένα alma mater, ένα παιδικό σχολείο ή μια τοπική οργάνωση ή σχολείο που επικεντρώνεται στην εξυπηρέτηση ενός πληθυσμού που ιστορικά υποεκπροσωπείται στην επιστήμη των υπολογιστών.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Από εκεί, μπορείτε να επισκεφθείτε τον ιστότοπο του σχολείου για να βρείτε τις κατάλληλες επαφές για να επικοινωνήσετε, όπως διευθυντή, αντιδιευθυντή, εκπαιδευτές τεχνολογίας ή επιστήμης υπολογιστών ή ακόμα και το PTSA του σχολείου. Θα μπορούσατε επίσης να συνεργαστείτε με οργανισμούς όπως τα Boys & Girls Clubs of America, ένα υποκατάστημα YMCA, και πολλά άλλα για να συνδιοργανώσετε μια εκδήλωση.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Αν δεν μπορείτε να συνδεθείτε με ένα σχολείο, [επικοινωνήστε μαζί μας](https://support.code.org/hc/en-us/requests/new) και θα σας συνδέσουμε με έναν από τους τοπικούς συνεργάτες μας αν αυτό είναι δυνατόν.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Ενθαρρύνετε τους υπαλλήλους να γίνουν εθελοντές συμμετέχοντας σε μια τάξη
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+'Ένας από τρόπους που γεμίζουν περισσότερο είναι η συμμετοχή στην Ώρα του Προγραμματισμού προσφέροντας εθελοντισμό σε μια τοπική τάξη, είτε αυτοπροσώπως είτε εικονικά. Το καλύτερο απ' όλα, δε χρειάζεται να είστε μηχανικός προκειμένου να γίνετε εθελοντής, Μπορείτε ακόμα να παρέχετε μια ουσιαστική εμπειρία στους μαθητές μοιράζοντας τη δική σας εμπειρία σταδιοδρομίας και πώς η CS ή η τεχνολογία επηρέασαν τον ρόλο σας.
 
 [<button>Εγγραφείτε για να είστε εθελοντές</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Μόλις εγγραφεί ένας εθελοντής, οι δάσκαλοι μπορούν να δουν το προφίλ του/της στον δικό μας [χάρτη εθελοντών](https://code.org/volunteer/local) - συνεπώς τα προφίλ θα πρέπει να υποβάλλονται όσο πιο ολοκληρωμένα γίνεται. Αν είστε κατάλληλος/-η για τη τάξη του, ο δάσκαλος ή η δασκάλα θα επικοινωνήσει μαζί σας μέσω της πλατφόρμας (δεν θα αποκαλύψουμε ποτέ τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας στη δασκάλα) Μπορείτε μετά να κανονίσετε τις λεπτομέρειες απευθείας με τον δάσκαλο / την δασκάλα σχετικά με το [πώς θα προσφέρουν εθελοντικά την τάξη τους](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Για περισσότερη καθοδήγηση σχετικά με τον εθελοντισμό και τα παραδείγματα μηνυμάτων για να κινήσετε το ενδιαφέρον στην εταιρεία σας για την Ώρα του Κώδικα, ρίξτε μια ματιά στον δικό μας [οδηγό για εταιρικούς συνεργάτες]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -136,7 +136,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 ### 1. Καταχωρήστε την Εκδήλωσή σας
 
-Όταν [καταχωρήσετε την εκδήλωσή σας της Ώρας του Κώδικα](/#join), θα λάβετε χρήσιμες πληροφορίες μέσω email με νέα και συμβουλές για τη διοργάνωση μιας επιτυχημένης Ώρας του Κώδικα. Επίσης, είναι ο τρόπος με τον οποίο μπορείτε να διαδώσετε την πληροφορία στα τοπικά σχολεία και πανεπιστήμια ή τους γονείς ότι φιλοξενείτε μια εκδήλωση κοντά τους.
+Όταν [εγγραφείτε στην εκδήλωση Hour of Code](/events), θα λαμβάνετε χρήσιμες επικοινωνίες μέσω email με ειδήσεις και συμβουλές για τη φιλοξενία μιας επιτυχημένης Ώρας Κώδικα. Επίσης, είναι ο τρόπος με τον οποίο μπορείτε να διαδώσετε την πληροφορία στα τοπικά σχολεία και πανεπιστήμια ή τους γονείς ότι φιλοξενείτε μια εκδήλωση κοντά τους.
 
 ### 2. Κοινοποιήστε στα Μέσα Κοινωνικής Δικτύωσης
 
@@ -163,7 +163,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 - Αν η πρώτη-πρώτη γραμμή σας προγραμματισμού σας άλλαξε τη ζωή, βοηθήστε μαθητές να γράψουν τη πρώτη τους #HourOfCode https://code.org/volunteer
 - Αν μάθετε να προγραμματίζετε κώδικες— ποια είναι η ιστορία σας; Εμπνεύστε ένα μαθητή κοντά σας με την πρώτη #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Βρείτε περισσότερες</a> αφίσες, βίντεο, αυτοκόλλητα και άλλους τρόπους προώθησης της εκδήλωσής σας στην κοινότητά σας.
 
 * * *
 

@@ -73,7 +73,7 @@ Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismi
 
 - O'quvchilaringiz uchun [sertifikatlarni chop eting]({{ urls/certificates }}).
 - [ O'quvchilaringiz uchun “Men Dasturlash soatini bajardim!”]({{ promote/resources_stickers }}) stikerlarini chop eting.
-- [Ishtirokchilar uchun maxsus futbolkalarga buyurtma bering](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- [Ishtirokchilar uchun maxsus futbolkal](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) arga buyurtma bering.
 - Ijtimoiy tarmoqlarda Dasturlash soati tadbiringizning fotosuratlari va videolarini baham ko'ring. Sizning muvaffaqiyatingizni namoish qila olishimiz uchun #HourOfCode va @codeorg xeshtegidan foydalaning.
 
 ## O'qituvchilar uchun boshqa Dasturlash soati manbalari

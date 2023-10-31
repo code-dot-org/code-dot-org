@@ -2592,6 +2592,28 @@ ms:
           title: 'Modul 2: Menavigasi Code.org'
         self-paced-pl-csa2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          title: 'Modul 1: Persediaan untuk Mengajar Penyelesaian Masalah dan Pengkomputeran'
         self-paced-pl-csd1-2021:
           description: |-
             Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
@@ -3117,6 +3139,17 @@ ms:
               display_name: Jin
             ramp_up:
               display_name: Tingkatkan
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pengenalan
+          lessons:
+            lesson-7:
+              name: Pengenalan
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pengenalan
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3139,6 +3172,10 @@ ms:
           lessons:
             lesson-3:
               name: Penilaian
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pengenalan
         virustest:
           description_short: Gunakan Makmal Jin untuk mencipta simulasi wabak virus.
           title: Mensimulasikan Wabak

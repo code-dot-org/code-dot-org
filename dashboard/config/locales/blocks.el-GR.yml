@@ -61,6 +61,11 @@ el:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
         text: μετά από {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': μέτρα
+            '"seconds"': δευτερόλεπτα
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -549,6 +554,48 @@ el:
             '"electronic"': Ηλεκτρονικό
             '"iceCream"': Παγωτό
             '"neon"': Νέον
+            '"rave"': Ασπρόμαυρο
+            '"tropical"': Τροπικό
+            '"vintage"': Βίντατζ
+            '"warm"': Κόκκινα
+        text: όρισε εφέ φόντου {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Σήραγγα
+            '"color_cycle"': Χρώματα
+            '"diamonds"': Διαμάντια
+            '"disco"': Τετράγωνα
+            '"disco_ball"': Ντισκομπάλα
+            '"fireworks"': Πυροτεχνήματα
+            '"flowers"': Λουλούδια
+            '"galaxy"': Διάστημα
+            '"growing_stars"': Ανερχόμενοι αστέρες
+            '"kaleidoscope"': Καλειδοσκόπιο
+            '"lasers"': Πίστα χορού λέιζερ
+            '"music_wave"': Κύματα
+            '"none"': Κανένα
+            '"quads"': Γωνίες
+            '"rainbow"': Ουράνιο τόξο
+            '"rand"': "(Τυχαίο)"
+            '"ripples"': Πτυχώσεις
+            '"ripples_random"': Τυχαίες πτυχώσεις
+            '"snowflakes"': Χιόνι
+            '"sparkles"': Αστράκια
+            '"spiral"': Σπιράλ
+            '"splatter"': Πιτσιλιές χρωμάτων
+            '"squiggles"': Μουτζούρες
+            '"starburst"': Οδοντωτός σύνδεσμος
+            '"stars"': Αστέρια
+            '"swirl"': Hypno
+            '"text"': Τίτλος τραγουδιού
+          PALETTE:
+            '"cool"': Μπλουζ
+            '"default"': Φωτεινό
+            '"electronic"': Ηλεκτρονικό
+            '"iceCream"': Παγωτό
+            '"neon"': Νέον
+            '"rainbow"': Ουράνιο τόξο
             '"rave"': Ασπρόμαυρο
             '"tropical"': Τροπικό
             '"vintage"': Βίντατζ

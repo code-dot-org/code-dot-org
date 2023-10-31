@@ -41,7 +41,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     around do |test|
-      described_class.stub_const(:TTS_LOCALES, [locale]) {test.call}
+      I18nScriptUtils.stub_const(:TTS_LOCALES, [locale]) {test.call}
     end
 
     before do

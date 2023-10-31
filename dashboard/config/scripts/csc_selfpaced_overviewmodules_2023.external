@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Sample Projects
 
-#####  CS Connections integrates computer science into other subjects like math, science, ELA, and social studies.  These modules are designed especially for educators who are new to coding and use fun and engaging ways to teach coding to students in a visual, block-based coding environment.
+#####  CS Connections seamlessly weaves computer science into core subjects such as math, science, ELA, and social studies. Tailored specifically for educators new to coding, these modules captivate students with engaging activities in a user-friendly, block-based coding environment.
 
 ## Preview of Modules
 
-##### Click the dropdown arrows to view sample end-of-module projects.
+##### Below, you will find sample end-of-module projects that you students will create in each of the modules. 
 <hr style="clear:both">
 
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 
 <summary><strong>Coding a Time Capsule</strong></summary>
 
-##### Students create a digital time capsule with images, sounds, and effects to enhance the imagery and mood of poems they write to capture an event or moment in time.
+##### In this Social Studies/English Language Arts module, students create a digital time capsule to capture and preserve memories for the future.
 
 <img src="https://images.code.org/1b3b840611059c5d37ac1cf4ad685e68-image-1680730761355.gif" alt="Gif of star burst" width="300px;">
 
@@ -32,8 +32,7 @@ markdown <<MARKDOWN
 
 <summary><strong>Coding a Geometric Star Quilt</strong></summary>
 
-##### Students use angles and shapes to create an 8-pointed star to represent a Native American star quilt.
-
+#####  In this Math-aligned module, students learn code to create geometric patterns in stunning star quilts, blending mathematical concepts with creative expression.
 <img src="https://images.code.org/e8f8c539d9fc7ee83df23d7af02033f7-image-1680731362485.gif" alt="Gif of 8-pointed star" width="300px;">
 
 </details>
@@ -44,7 +43,8 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Coding Interactive Maps</strong></summary>
 
-##### Students create a digital map with a tour guide that tells a story about a place.
+##### In this Social Studies module, students code a map that tells a story, allowing you to explore geographic information in an engaging and interactive way.
+
 
 <img src="https://images.code.org/6dea5ced2f6892572561171a345f2dd5-image-1680731924182.gif" alt="Image of a person with map of the United States and a compass" width="300px">
 
@@ -57,7 +57,7 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Coding with Poetry</strong></summary>
 
-##### Students animate poems with images, sounds, and effects to reveal mood and imagery in their poems.
+##### In this English Language Arts module, students explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code.
 
 
 <img src="https://images.code.org/c148179df0238d756a12c7b075ff7d8e-image-1680732701654.gif" alt="Gif of marshmallows burst" width="300px">
@@ -70,7 +70,8 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Modeling Animal Adaptations</strong></summary>
 
-##### Students code animal behaviors to model how species survive in their environments.
+##### In this science-related module, students use code to model animal adaptations, deepening your understanding of how different species have evolved to survive in their environments.
+
 
 
 <img src="https://images.code.org/e72ce377731a6887b285252d923068a7-image-1682033456371.gif" alt="Meadow with a bear and rabbit" width="300px">
@@ -79,4 +80,36 @@ markdown <<MARKDOWN
 </details>
 
 <div style="clear:both"/>
+<hr style="clear:both">
+
+<details>
+<summary><strong>Simulating a Marine Ecosystem</strong></summary>
+
+##### In this science-related modules, students use coding to simulate a marine ecosystem, exploring the interdependencies between different organisms and their environment.
+
+
+
+<img src="https://images.code.org/180239721015627aa8308d465f3630cd-image-1698675368816.png" alt="Coastal ecosystem with crane, frogs, and dragonflies" width="300px">
+
+
+</details>
+
+<div style="clear:both"/>
+<hr style="clear:both">
+
+<details>
+<summary><strong>Coding Book Covers</strong></summary>
+
+#####  In this English Language Art module, students use code to create an animated cover of a book, using sprites and text to convey characters, setting, plot, and more.
+
+
+<img src="https://images.code.org/44d8f547d7ac497865eb5ad42c7016c8-image-1698675708913.png" alt="Coastal ecosystem with crane, frogs, and dragonflies" width="300px">
+
+
+</details>
+
+
+
+<div style="clear:both"/>
+
 MARKDOWN

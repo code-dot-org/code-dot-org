@@ -74,6 +74,11 @@ id:
             '"measures"': langkah
             '"seconds"': detik
         text: setelah {TIMESTAMP}{UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': langkah
+            '"seconds"': detik
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -591,6 +596,52 @@ id:
             '"electronic"': Elektronik
             '"iceCream"': Es Krim
             '"neon"': Neon
+            '"rave"': Hitam dan Putih
+            '"tropical"': Tropis
+            '"vintage"': Vintage
+            '"warm"': Hangat
+        text: |-
+          tetapkan efek latar belakang
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Lingkaran
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco"': Bujur sangkar
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"flowers"': Bunga
+            '"galaxy"': Spasi
+            '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"music_wave"': Gelombang
+            '"none"': Tidak Ada
+            '"quads"': Sudut
+            '"rainbow"': Pelangi
+            '"rand"': Acak
+            '"ripples"': Riak
+            '"ripples_random"': Riak Acak
+            '"snowflakes"': Salju
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"splatter"': Percikan Cat
+            '"squiggles"': Garis berlekuk
+            '"starburst"': Semburan bintang
+            '"stars"': Bintang
+            '"swirl"': Hypno
+            '"text"': Nama Lagu
+          PALETTE:
+            '"cool"': Keren
+            '"default"': Lampu
+            '"electronic"': Elektronik
+            '"iceCream"': Es Krim
+            '"neon"': Neon
+            '"ocean"': Lautan
+            '"rainbow"': Pelangi
             '"rave"': Hitam dan Putih
             '"tropical"': Tropis
             '"vintage"': Vintage
