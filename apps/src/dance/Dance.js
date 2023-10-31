@@ -182,6 +182,7 @@ Dance.prototype.init = function (config) {
           <DanceVisualizationColumn
             showFinishButton={showFinishButton}
             setSong={this.setSongCallback.bind(this)}
+            resetProgram={this.reset.bind(this)}
           />
         }
         onMount={onMount}
