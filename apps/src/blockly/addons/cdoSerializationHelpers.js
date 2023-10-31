@@ -106,10 +106,7 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
  */
 function positionBlockWithCursor(block, cursor) {
   addUnusedFrame(block);
-  if (
-    isBlockLocationUnset(block) ||
-    PROCEDURE_DEFINITION_TYPES.includes(block.type)
-  ) {
+  if (isBlockLocationUnset(block)) {
     block.moveTo(getNewLocation(block, cursor));
   }
   cursor.y += getCursorYAdjustment(block);
@@ -154,16 +151,29 @@ export function getCursorYAdjustment(block) {
  * @return {boolean} - true if the block is at the top corner of the workspace
  */
 export function isBlockLocationUnset(block) {
-  const workspace = block.workspace;
+  const {defaultX, defaultY} = getDefaultLocation(block.workspace);
+  const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
+  return x === defaultX && y === defaultY;
+}
+
+export const getDefaultLocation = workspace => {
   const isRTL = workspace.RTL;
   const {viewWidth = 0} = workspace.getMetrics();
-  const defaultLocation = {
-    x: isRTL ? viewWidth : 0,
-    y: 0,
-  };
-  const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-  return x === defaultLocation.x && y === defaultLocation.y;
-}
+  const defaultX = isRTL ? viewWidth : 0;
+  const defaultY = 0;
+
+  return {defaultX, defaultY};
+};
+
+export const resetBlockLocations = blocks => {
+  if (_.isEmpty(blocks)) {
+    return;
+  }
+  blocks.forEach(block => {
+    const {defaultX, defaultY} = getDefaultLocation(block.workspace);
+    block.moveTo(defaultX, defaultY);
+  });
+};
 
 /**
  * Adds an svg frame around a block to signal that it is unused.
@@ -197,22 +207,22 @@ function reorderBlocks(blocks, blockOrderMap) {
 }
 
 export function getCombinedSerialization(
-  mainSerialization,
-  otherSerialization
+  mainWorkspaceSerialization,
+  hiddenWorkspaceSerialization
 ) {
-  if (_.isEmpty(otherSerialization)) {
-    return mainSerialization;
+  if (_.isEmpty(hiddenWorkspaceSerialization)) {
+    return mainWorkspaceSerialization;
   }
 
-  const combinedSerialization = _.cloneDeep(mainSerialization);
+  const combinedSerialization = _.cloneDeep(mainWorkspaceSerialization);
   combinedSerialization.blocks.blocks = _.unionBy(
-    mainSerialization.blocks.blocks,
-    otherSerialization.blocks.blocks,
+    mainWorkspaceSerialization.blocks.blocks,
+    hiddenWorkspaceSerialization.blocks.blocks,
     'id'
   );
   combinedSerialization.procedures = _.unionBy(
-    mainSerialization.procedures,
-    otherSerialization.procedures,
+    mainWorkspaceSerialization.procedures,
+    hiddenWorkspaceSerialization.procedures,
     'id'
   );
   return combinedSerialization;
