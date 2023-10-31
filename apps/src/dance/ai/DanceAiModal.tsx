@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState, useEffect} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -6,18 +6,14 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {FieldDropdown} from 'blockly/core';
+import {FieldDropdown, Workspace} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput, Translations, FieldKey} from '../types';
-import {
-  generateBlocks,
-  generateBlocksFromResult,
-  getTranslationsMap,
-} from './utils';
+import {AiOutput, FieldKey} from '../types';
+import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -89,25 +85,28 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   }, [currentAiModalField]);
 
-  const translations: Translations = useMemo(() => {
-    const blocksSvg = generateBlocks(Blockly.getMainWorkspace());
+  const getLabels = () => {
+    const tempWorkspace = new Workspace();
+    const blocksSvg = generateBlocks(tempWorkspace);
 
-    const foregroundTranslations = getTranslationsMap(
+    const foregroundLabels = getLabelMap(
       blocksSvg[0].getField('EFFECT') as FieldDropdown
     );
-    const backgroundTranslations = getTranslationsMap(
+    const backgroundLabels = getLabelMap(
       blocksSvg[1].getField('EFFECT') as FieldDropdown
     );
-    const paletteTranslations = getTranslationsMap(
+    const paletteLabels = getLabelMap(
       blocksSvg[1].getField('PALETTE') as FieldDropdown
     );
 
+    tempWorkspace.dispose();
+
     return {
-      [FieldKey.FOREGROUND_EFFECT]: foregroundTranslations,
-      [FieldKey.BACKGROUND_EFFECT]: backgroundTranslations,
-      [FieldKey.BACKGROUND_PALETTE]: paletteTranslations,
+      [FieldKey.FOREGROUND_EFFECT]: foregroundLabels,
+      [FieldKey.BACKGROUND_EFFECT]: backgroundLabels,
+      [FieldKey.BACKGROUND_PALETTE]: paletteLabels,
     };
-  }, []);
+  };
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;
@@ -521,7 +520,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={JSON.parse(resultJson)}
-              translations={translations}
+              labelMaps={getLabels()}
             />
           </div>
         )}

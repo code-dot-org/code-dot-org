@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
-import {Translations, FieldKey} from '../types';
+import {LabelMaps, FieldKey} from '../types';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -34,13 +34,13 @@ type Result = {[key in FieldKey]: string};
 interface AiExplanationViewProps {
   inputs: string[];
   result: Result;
-  translations: Translations;
+  labelMaps: LabelMaps;
 }
 
 interface FieldObject {
   name: string;
   data: CachedWeightsMapping;
-  labelTranslations: {[id: string]: string};
+  labels: {[id: string]: string};
 }
 
 interface Fields {
@@ -55,7 +55,7 @@ interface Fields {
 const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   inputs,
   result,
-  translations,
+  labelMaps,
 }) => {
   const [currentFieldKey, setCurrentFieldKey] = useState(
     FieldKey.BACKGROUND_EFFECT
@@ -65,17 +65,17 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
     [FieldKey.BACKGROUND_EFFECT]: {
       name: 'Background effect',
       data: CachedBackgrounds as CachedWeightsMapping,
-      labelTranslations: translations[FieldKey.BACKGROUND_EFFECT],
+      labels: labelMaps[FieldKey.BACKGROUND_EFFECT],
     },
     [FieldKey.FOREGROUND_EFFECT]: {
       name: 'Foreground effect',
       data: CachedForegrounds as CachedWeightsMapping,
-      labelTranslations: translations[FieldKey.FOREGROUND_EFFECT],
+      labels: labelMaps[FieldKey.FOREGROUND_EFFECT],
     },
     [FieldKey.BACKGROUND_PALETTE]: {
       name: 'Background color',
       data: CachedPalettes as CachedWeightsMapping,
-      labelTranslations: translations[FieldKey.BACKGROUND_PALETTE],
+      labels: labelMaps[FieldKey.BACKGROUND_PALETTE],
     },
   };
 
@@ -90,7 +90,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
         stacked: true,
         ticks: {
           color: function (context) {
-            const translations = currentField.labelTranslations;
+            const translations = currentField.labels;
             const key = result[currentFieldKey];
             const translation = translations[key];
 
@@ -111,7 +111,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   ];
 
   const labels = currentField.data.output.map(label => {
-    const translations = currentField.labelTranslations;
+    const translations = currentField.labels;
 
     // If we can't find a translation for the key from the model,
     // display the untranslated key.

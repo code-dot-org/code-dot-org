@@ -42,7 +42,7 @@ export enum AiOutput {
   BOTH = 'both',
 }
 
-export type Translations = {
+export type LabelMaps = {
   [key in FieldKey]: {[id: string]: string};
 };
 

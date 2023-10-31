@@ -34,7 +34,7 @@ export const generateBlocks = (workspace: Workspace): [BlockSvg, BlockSvg] => {
 // The keys are English-only (eg, "blooming_petals"),
 // and values is user readable / translated string (eg, "Blooming Petals").
 // Example: {'blooming_petals': 'Blooming Petals'}
-export const getTranslationsMap = (
+export const getLabelMap = (
   dropdown: FieldDropdown
 ): {[id: string]: string} => {
   const options = dropdown.getOptions();
