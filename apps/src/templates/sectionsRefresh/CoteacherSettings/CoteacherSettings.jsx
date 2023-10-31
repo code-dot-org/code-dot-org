@@ -6,10 +6,9 @@ import $ from 'jquery';
 import styles from './coteacher-settings.module.scss';
 import Button from '@cdo/apps/templates/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import classNames from 'classnames';
-import AccessibleDialog from '../AccessibleDialog';
-import {AddCoteacher} from './CoteacherSettings/AddCoteacher';
+import AccessibleDialog from '../../AccessibleDialog';
+import AddCoteacher from './AddCoteacher';
+import CoteacherTable from './CoteacherTable';
 
 export default function CoteacherSettings({
   sectionInstructors,
@@ -37,14 +36,16 @@ export default function CoteacherSettings({
   );
 
   const statusSortValue = coteacher => {
-    if (coteacher.status === 'invited') {
-      return 0;
-    } else if (coteacher.status === 'declined') {
-      return 1;
-    } else if (coteacher.status === 'active') {
-      return 2;
+    switch (coteacher.status) {
+      case 'invited':
+        return 0;
+      case 'declined':
+        return 1;
+      case 'active':
+        return 2;
+      default:
+        return 3;
     }
-    return 3;
   };
 
   const coteachers = React.useMemo(() => {
@@ -59,58 +60,6 @@ export default function CoteacherSettings({
   const removeSavedCoteacher = id => {
     setSavedCoteachers(prevSaved =>
       prevSaved.filter(coteacher => coteacher.id !== id)
-    );
-  };
-
-  const pill = (text, className, icon) => (
-    <div className={classNames(className, styles.tablePill)}>
-      <StrongText>
-        <FontAwesome icon={icon} className={styles.tablePillIcon} />
-        {text}
-      </StrongText>
-    </div>
-  );
-
-  const statusPill = status => {
-    if (!status || status === 'invited') {
-      return pill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
-    } else if (status === 'active') {
-      return pill(i18n.coteacherAccepted(), styles.tableActive, 'check');
-    } else if (status === 'declined') {
-      return pill(i18n.coteacherDeclined(), styles.tableDeclined, 'xmark');
-    } else {
-      return pill(i18n.coteacherError(), styles.tableError, 'xmark');
-    }
-  };
-
-  const tableRow = (index, coteacher) => {
-    return (
-      <tr key={index} className={styles.tableRow}>
-        <td className={styles.tableInfoCell}>
-          <div>
-            {coteacher.instructorName ? (
-              <>
-                <StrongText> {coteacher.instructorName}</StrongText>
-                <br />
-              </>
-            ) : null}
-
-            {coteacher.instructorEmail}
-          </div>
-        </td>
-        <td className={styles.tableStatusCell}>
-          {statusPill(coteacher.status)}
-        </td>
-        <td>
-          <button
-            type="button"
-            onClick={() => setCoteacherToRemove(coteacher)}
-            className={styles.tableRemoveButton}
-          >
-            <i className={classNames('fa-solid fa-trash', styles.trashIcon)} />
-          </button>
-        </td>
-      </tr>
     );
   };
 
@@ -137,7 +86,7 @@ export default function CoteacherSettings({
 
   const removePopup = coteacher => {
     return (
-      coteacher && (
+      !!coteacher && (
         <AccessibleDialog
           onClose={() => setCoteacherToRemove(null)}
           className={styles.removeDialog}
@@ -169,23 +118,6 @@ export default function CoteacherSettings({
     );
   };
 
-  const table = () => {
-    if (coteachers.length === 0) {
-      return (
-        <div className={classNames(styles.table, styles.tableRow)}>
-          {i18n.coteacherNoCoteachers()}
-        </div>
-      );
-    }
-    return (
-      <table className={styles.table}>
-        <tbody>
-          {coteachers.map((instructor, id) => tableRow(id, instructor))}
-        </tbody>
-      </table>
-    );
-  };
-
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
@@ -197,7 +129,10 @@ export default function CoteacherSettings({
           setAddError={setAddError}
         />
 
-        {table()}
+        <CoteacherTable
+          coteachers={coteachers}
+          setCoteacherToRemove={setCoteacherToRemove}
+        />
         {removePopup(coteacherToRemove)}
       </div>
     </div>

@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/CoteacherSettings';
+import {expect} from '../../../../util/reconfiguredChai';
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import sinon from 'sinon';
 
 const testPrimaryTeacher = {
@@ -177,7 +177,8 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
-    const cells = wrapper.find('td');
+    const table = wrapper.find('CoteacherTable').dive();
+    const cells = table.find('td');
     expect(cells).to.have.lengthOf(9);
     const button = cells.at(2).find('button');
     button.at(0).simulate('click', {preventDefault: () => {}});
@@ -208,14 +209,16 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
-    const cells = wrapper.find('td');
+    let table = wrapper.find('CoteacherTable').dive();
+    const cells = table.find('td');
     expect(cells).to.have.lengthOf(9);
     const button = cells.at(2).find('button');
     button.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
-    expect(wrapper.find('tr')).to.have.lengthOf(3);
+    table = wrapper.find('CoteacherTable').dive();
+    expect(table.find('tr')).to.have.lengthOf(3);
 
     const dialog = wrapper.find('AccessibleDialog');
 
@@ -227,8 +230,9 @@ describe('CoteacherSettings', () => {
       .simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
+    table = wrapper.find('CoteacherTable').dive();
 
-    expect(wrapper.find('tr')).to.have.lengthOf(3);
+    expect(table.find('tr')).to.have.lengthOf(3);
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
   });
   it('Remove unsubmitted', () => {
@@ -245,13 +249,15 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
-    const cells = wrapper.find('td');
+    let table = wrapper.find('CoteacherTable').dive();
+    const cells = table.find('td');
     const button = cells.at(2).find('button');
     button.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
-    expect(wrapper.find('tr')).to.have.lengthOf(4);
+    table = wrapper.find('CoteacherTable').dive();
+    expect(table.find('tr')).to.have.lengthOf(4);
 
     const dialog = wrapper.find('AccessibleDialog');
 
@@ -286,13 +292,16 @@ describe('CoteacherSettings', () => {
       />
     );
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
-    const cells = wrapper.find('td');
+
+    const cells = wrapper.find('CoteacherTable').dive().find('td');
     const button = cells.at(5).find('button');
     button.at(0).simulate('click', {preventDefault: () => {}});
 
     wrapper.update();
 
-    expect(wrapper.find('tr')).to.have.lengthOf(3);
+    expect(wrapper.find('CoteacherTable').dive().find('tr')).to.have.lengthOf(
+      3
+    );
 
     const dialog = wrapper.find('AccessibleDialog');
 
@@ -306,7 +315,8 @@ describe('CoteacherSettings', () => {
     wrapper.update();
 
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
-    expect(wrapper.find('tr')).to.have.lengthOf(2);
+    const table = wrapper.find('CoteacherTable').dive();
+    expect(table.find('tr')).to.have.lengthOf(2);
     expect(setCoteachersToAddSpy).to.have.not.been.called;
     expect(ajaxStub).to.have.been.calledOnce;
     $.ajax.restore();

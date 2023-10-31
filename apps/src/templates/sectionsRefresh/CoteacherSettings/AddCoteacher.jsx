@@ -8,14 +8,14 @@ import {Figcaption} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 
-import styles from '../coteacher-settings.module.scss';
+import styles from './coteacher-settings.module.scss';
 
-export const AddCoteacher = ({
+export default function AddCoteacher({
   coteachers,
   setCoteachersToAdd,
   addError,
   setAddError,
-}) => {
+}) {
   const [inputValue, setInputValue] = useState('');
 
   const handleAddEmail = useCallback(
@@ -105,7 +105,7 @@ export const AddCoteacher = ({
       {getErrorOrCount()}
     </div>
   );
-};
+}
 
 AddCoteacher.propTypes = {
   coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
