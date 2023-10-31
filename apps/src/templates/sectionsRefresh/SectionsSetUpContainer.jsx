@@ -21,7 +21,7 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
-import CoteacherSettings from './coteacherSettings/CoteacherSettings';
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
