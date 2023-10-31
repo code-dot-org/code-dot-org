@@ -176,7 +176,9 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+
+    let dialog = wrapper.find('RemoveCoteacherDialog').dive();
+    expect(dialog).to.be.empty;
     const table = wrapper.find('CoteacherTable').dive();
     const cells = table.find('td');
     expect(cells).to.have.lengthOf(9);
@@ -185,15 +187,14 @@ describe('CoteacherSettings', () => {
 
     wrapper.update();
 
-    const dialog = wrapper.find('AccessibleDialog');
-    expect(dialog).to.exist;
-
-    dialog.shallow();
+    dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     expect(dialog.find('Button')).to.have.lengthOf(2);
     expect(dialog.find('StrongText').dive().text()).to.contain(
       'Remove coelophysis@code.org'
     );
+    dialog = wrapper.find('RemoveCoteacherDialog').dive();
+    expect(dialog).to.be.empty;
   });
   it('cancel remove does nothing', () => {
     let coteachersToAdd = ['coelophysis@code.org'];
@@ -208,7 +209,8 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    let dialog = wrapper.find('RemoveCoteacherDialog').dive();
+    expect(dialog).to.be.empty;
     let table = wrapper.find('CoteacherTable').dive();
     const cells = table.find('td');
     expect(cells).to.have.lengthOf(9);
@@ -220,9 +222,7 @@ describe('CoteacherSettings', () => {
     table = wrapper.find('CoteacherTable').dive();
     expect(table.find('tr')).to.have.lengthOf(3);
 
-    const dialog = wrapper.find('AccessibleDialog');
-
-    dialog.shallow();
+    dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
       .find('Button')
@@ -233,7 +233,7 @@ describe('CoteacherSettings', () => {
     table = wrapper.find('CoteacherTable').dive();
 
     expect(table.find('tr')).to.have.lengthOf(3);
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
   });
   it('Remove unsubmitted', () => {
     let coteachersToAdd = ['coelophysis@code.org', 'diplodocus@code.org'];
@@ -248,7 +248,8 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    let dialog = wrapper.find('RemoveCoteacherDialog').dive();
+    expect(dialog).to.be.empty;
     let table = wrapper.find('CoteacherTable').dive();
     const cells = table.find('td');
     const button = cells.at(2).find('button');
@@ -259,9 +260,7 @@ describe('CoteacherSettings', () => {
     table = wrapper.find('CoteacherTable').dive();
     expect(table.find('tr')).to.have.lengthOf(4);
 
-    const dialog = wrapper.find('AccessibleDialog');
-
-    dialog.shallow();
+    dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
       .find('Button')
@@ -271,7 +270,7 @@ describe('CoteacherSettings', () => {
     expect(coteachersToAdd).to.deep.equal(['diplodocus@code.org']);
     wrapper.update();
 
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
   });
   it('Remove submitted', () => {
     const setCoteachersToAddSpy = sinon.spy();
@@ -291,7 +290,8 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    let dialog = wrapper.find('RemoveCoteacherDialog').dive();
+    expect(dialog).to.be.empty;
 
     const cells = wrapper.find('CoteacherTable').dive().find('td');
     const button = cells.at(5).find('button');
@@ -303,9 +303,7 @@ describe('CoteacherSettings', () => {
       3
     );
 
-    const dialog = wrapper.find('AccessibleDialog');
-
-    dialog.shallow();
+    dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
       .find('Button')
@@ -314,7 +312,7 @@ describe('CoteacherSettings', () => {
 
     wrapper.update();
 
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
+    expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
     const table = wrapper.find('CoteacherTable').dive();
     expect(table.find('tr')).to.have.lengthOf(2);
     expect(setCoteachersToAddSpy).to.have.not.been.called;
