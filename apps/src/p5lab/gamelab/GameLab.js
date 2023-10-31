@@ -74,20 +74,18 @@ export default class GameLab extends P5Lab {
 
   runButtonClick() {
     // For AI Rubrics Pilot
+    console.log(this.level.name);
     if (
       experiments.isEnabled('ai-rubrics') &&
       hasScriptData('script[data-rubricdata]')
     ) {
       const rubricData = getScriptData('rubricdata');
-      const script = document.querySelector('script[data-level]');
-      const config = JSON.parse(script.dataset.level);
       const teacherId = getStore().getState().currentUser.userId;
       const {rubric, studentLevelInfo} = rubricData;
-      if (studentLevelInfo && rubric.level.name === config.level_name) {
+      if (studentLevelInfo && rubric.level.name === this.level.name) {
         analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_RUN_BUTTON_CLICKED, {
-          unitName: config.script_name,
           lessonName: rubric.lesson.name,
-          levelName: config.level_name,
+          levelName: this.level.name,
           studentUserId: studentLevelInfo.user_id,
           teacherUserId: teacherId,
         });
