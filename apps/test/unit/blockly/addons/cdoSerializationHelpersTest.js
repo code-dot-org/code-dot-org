@@ -59,7 +59,7 @@ describe('getNewLocation', () => {
 
   it('should determine the new location for blocks with SVG frames', () => {
     const block = {
-      unusedSvg_: {},
+      functionalSvg_: {},
       workspace: {RTL: false},
     };
     const cursor = {x: 16, y: 100};
