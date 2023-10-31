@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -177,30 +177,31 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
    * Generates blocks from the AI result in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResult = (
-    workspace: Workspace
-  ): [BlockSvg, BlockSvg] => {
-    const params = JSON.parse(resultJson);
+  const generateBlocksFromResult = useCallback(
+    (workspace: Workspace): [BlockSvg, BlockSvg] => {
+      const params = JSON.parse(resultJson);
 
-    const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-      workspace.newBlock(
-        'Dancelab_setBackgroundEffectWithPaletteAI'
-      ) as BlockSvg,
-    ];
+      const blocksSvg: [BlockSvg, BlockSvg] = [
+        workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
+        workspace.newBlock(
+          'Dancelab_setBackgroundEffectWithPaletteAI'
+        ) as BlockSvg,
+      ];
 
-    // Foreground block.
-    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+      // Foreground block.
+      blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
 
-    // Background block.
-    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+      // Background block.
+      blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
+      blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
 
-    // Connect the blocks.
-    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+      // Connect the blocks.
+      blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
 
-    return blocksSvg;
-  };
+      return blocksSvg;
+    },
+    [resultJson]
+  );
 
   const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
@@ -274,6 +275,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       showUseButton = true;
     }
   }
+
+  const onBlockPreviewDone = useCallback(() => {
+    if (mode === Mode.GENERATING) {
+      setGeneratingDone(true);
+    } else if (mode === Mode.RESULTS) {
+      setShowPreview(true);
+      setMode(Mode.RESULTS_FINAL);
+      setTypingDone(true);
+    }
+  }, [mode, setGeneratingDone, setShowPreview, setTypingDone]);
 
   return (
     <AccessibleDialog
@@ -492,15 +503,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               <AiBlockPreview
                 fadeIn={mode === Mode.GENERATING}
                 generateBlocksFromResult={generateBlocksFromResult}
-                onComplete={() => {
-                  if (mode === Mode.GENERATING) {
-                    setGeneratingDone(true);
-                  } else if (mode === Mode.RESULTS) {
-                    setShowPreview(true);
-                    setMode(Mode.RESULTS_FINAL);
-                    setTypingDone(true);
-                  }
-                }}
+                onComplete={onBlockPreviewDone}
               />
             </div>
           )}
