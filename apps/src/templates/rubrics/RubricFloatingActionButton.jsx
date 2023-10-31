@@ -74,7 +74,7 @@ export default function RubricFloatingActionButton({
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
         currentLevelName={currentLevelName}
-        initialTeacherHasEnabledAi={aiEnabled}
+        teacherHasEnabledAi={aiEnabled}
         open={isOpen}
         closeRubric={handleClick}
       />

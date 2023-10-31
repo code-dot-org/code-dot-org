@@ -21,7 +21,7 @@ const TAB_NAMES = {
 export default function RubricContainer({
   rubric,
   studentLevelInfo,
-  initialTeacherHasEnabledAi,
+  teacherHasEnabledAi,
   currentLevelName,
   reportingData,
   open,
@@ -31,9 +31,6 @@ export default function RubricContainer({
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
 
   const [selectedTab, setSelectedTab] = useState(TAB_NAMES.RUBRIC);
-  const [teacherHasEnabledAi, setTeacherHasEnabledAi] = useState(
-    initialTeacherHasEnabledAi
-  );
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const fetchAiEvaluations = useCallback(() => {
@@ -116,7 +113,6 @@ export default function RubricContainer({
         <RubricSettings
           canProvideFeedback={canProvideFeedback}
           teacherHasEnabledAi={teacherHasEnabledAi}
-          updateTeacherAiSetting={setTeacherHasEnabledAi}
           rubricId={rubric.id}
           studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
           visible={selectedTab === TAB_NAMES.SETTINGS}
@@ -131,7 +127,7 @@ RubricContainer.propTypes = {
   rubric: rubricShape,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  initialTeacherHasEnabledAi: PropTypes.bool,
+  teacherHasEnabledAi: PropTypes.bool,
   currentLevelName: PropTypes.string,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
