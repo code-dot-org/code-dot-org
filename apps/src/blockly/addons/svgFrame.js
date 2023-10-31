@@ -14,17 +14,8 @@ export default class SvgFrame {
    * @param {string} textColor - The color for the frame's text.
    * @param {string} headerColor - The color for the frame's header.
    * @param {number} [headerHeight] - An optional override for the header size, used for workspace frames.
-   * @param {number} [radius] - An optional override for the radius of the frame corners.
    */
-  constructor(
-    element,
-    text,
-    className,
-    textColor,
-    headerColor,
-    headerHeight,
-    radius
-  ) {
+  constructor(element, text, className, textColor, headerColor, headerHeight) {
     this.element_ = element;
     this.text = text || msg.block();
     this.className = className || 'svgFrame';
@@ -32,7 +23,6 @@ export default class SvgFrame {
     this.headerColor = headerColor || color.light_gray;
     this.baseColor = color.lightest_gray;
     this.headerHeight = headerHeight || frameSizes.BLOCK_HEADER_HEIGHT;
-    this.radius = radius || 15;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -87,8 +77,8 @@ export default class SvgFrame {
         y: frameY,
         fill: this.baseColor,
         stroke: this.headerColor,
-        rx: this.radius,
-        ry: this.radius,
+        rx: 4,
+        ry: 4,
       },
       this.frameGroup_
     );
@@ -99,8 +89,8 @@ export default class SvgFrame {
         x: frameX,
         y: frameY,
         fill: this.headerColor,
-        rx: this.radius,
-        ry: this.radius,
+        rx: 4,
+        ry: 4,
         'clip-path': `url(#frameClip${safeCharBlockId})`,
       },
       this.frameGroup_
