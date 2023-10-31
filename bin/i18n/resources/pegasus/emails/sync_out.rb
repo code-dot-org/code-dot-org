@@ -11,7 +11,7 @@ module I18n
       module Emails
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_dir_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            crowdin_dir_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], 'emails')
             return if File.directory?(crowdin_dir_path)
 
             unless I18nScriptUtils.source_lang?(language)
