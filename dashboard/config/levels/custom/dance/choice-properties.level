@@ -36,7 +36,7 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL"
   },
-  "audit_log": "[{\"changed_at\":\"2023-10-31 16:48:28 +0000\",\"changed\":[\"published\",\"preload_asset_list\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-31 16:48:28 +0000\",\"changed\":[\"published\",\"preload_asset_list\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:59:04 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
