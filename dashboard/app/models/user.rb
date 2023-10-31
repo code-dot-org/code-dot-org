@@ -696,13 +696,12 @@ class User < ApplicationRecord
   end
 
   def primary_contact_info
-    # TODO: Make sure this works?
-    return @primary_contact_info unless @primary_contact_info.nil?
+    if Policies::Lti.lti?(self)
+      ao_with_email = authentication_options.select {|ao| ao.email.present?}
+      return ao_with_email.first unless ao_with_email.empty?
+    end
 
-    ao_with_email = authentication_options.select {|ao| ao.email.present?}
-    return ao_with_email.first unless ao_with_email.empty?
-
-    nil
+    super
   end
 
   # Locate an SSO user by SSO provider and associated user id.
@@ -893,6 +892,7 @@ class User < ApplicationRecord
     new_from_partial_registration session do |user|
       params = params.merge(user.attributes) {|_key, old_val, new_val| old_val.nil? ? new_val : old_val}
       user.attributes = params.compact
+      # user.attributes = params
     end
   end
 
