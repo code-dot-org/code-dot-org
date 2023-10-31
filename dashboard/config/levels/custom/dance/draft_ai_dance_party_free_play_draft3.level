@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-10-30T13:44:03.000Z",
   "level_num": "custom",
@@ -53,11 +54,13 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:03.409+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play_b\"},{\"changed_at\":\"2023-10-30 21:13:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 21:15:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:03.409+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play_b\"},{\"changed_at\":\"2023-10-30 21:13:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 21:15:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:55:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2023-10-31 17:56:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
