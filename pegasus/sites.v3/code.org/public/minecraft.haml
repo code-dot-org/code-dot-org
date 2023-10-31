@@ -14,4 +14,26 @@ theme: responsive_full_width
 
 %section
   .wrapper
+    %h2 Available on Code.org
+
+%section
+  .wrapper
+    %h2 Available in Minecraft Education
+
+%section
+  .wrapper
+    %h2 More coding resources
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:heading_start_hoc_with_videos)
+    %p=hoc_s(:video_library_page_description_inspirational)
+    = view :carousel_inspirational_video
+
+%section
+  .wrapper
     = view :ai_microsoft_block
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+%script{:src=>'/js/page/minecraft_page.js'}
