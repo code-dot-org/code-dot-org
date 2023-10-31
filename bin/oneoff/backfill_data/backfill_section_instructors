@@ -8,11 +8,14 @@ require_relative '../../../dashboard/config/environment'
 CDO.log = Logger.new(STDOUT)
 ActiveRecord::Base.record_timestamps = false
 
-options = {actually_update: false}
+options = {actually_update: false, start_with: 1}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on('-u', '--actually-update', 'Actually perform the update.') do
     options[:actually_update] = true
+  end
+  opts.on('-sSTART', '--start-with=START', 'Start with section ID START.') do |s|
+    options[:start_with] = s
   end
   opts.on('-h', '--help', 'Add -u to perform the update.') do
     puts opts
@@ -27,7 +30,7 @@ INFO_INTERVAL = 1_000
 sections_processed = 0
 sections_not_processed = 0
 
-Section.includes(:user).find_each(batch_size: BATCH_SIZE) do |section|
+Section.includes(:user).find_each(batch_size: BATCH_SIZE, start: options[:start_with]) do |section|
   # Be kind to the database by limiting to 100 sections processed per second
   sleep 0.01
 
