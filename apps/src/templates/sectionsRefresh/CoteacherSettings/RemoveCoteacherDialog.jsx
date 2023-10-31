@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useCallback} from 'react';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -13,31 +13,38 @@ export default function RemoveCoteacherDialog({
   removeSavedCoteacher,
   setCoteachersToAdd,
 }) {
-  const removeCoteacher = coteacher => e => {
-    e.preventDefault();
-    if (!coteacher.id) {
-      // remove from coteachersToAdd
-      setCoteachersToAdd(existing =>
-        existing.filter(teacher => teacher !== coteacher.instructorEmail)
-      );
-      setCoteacherToRemove(null);
-      return;
-    }
-    $.ajax({
-      url: `/api/v1/section_instructors/${coteacher.id}`,
-      method: 'DELETE',
-    })
-      .done(() => {
-        removeSavedCoteacher(coteacher.id);
-        setCoteacherToRemove(null);
+  const closeRemoveDialog = useCallback(() => {
+    setCoteacherToRemove(null);
+  }, [setCoteacherToRemove]);
+
+  const removeCoteacher = useCallback(
+    coteacher => e => {
+      e.preventDefault();
+      if (!coteacher.id) {
+        // remove from coteachersToAdd
+        setCoteachersToAdd(existing =>
+          existing.filter(teacher => teacher !== coteacher.instructorEmail)
+        );
+        closeRemoveDialog();
+        return;
+      }
+      $.ajax({
+        url: `/api/v1/section_instructors/${coteacher.id}`,
+        method: 'DELETE',
       })
-      .fail(() => setCoteacherToRemove(null));
-  };
+        .done(() => {
+          removeSavedCoteacher(coteacher.id);
+          closeRemoveDialog();
+        })
+        .fail(closeRemoveDialog);
+    },
+    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
+  );
 
   return (
     !!coteacherToRemove && (
       <AccessibleDialog
-        onClose={() => setCoteacherToRemove(null)}
+        onClose={closeRemoveDialog}
         className={styles.removeDialog}
       >
         <StrongText className={styles.removeDialogTitle}>
@@ -50,7 +57,7 @@ export default function RemoveCoteacherDialog({
         </div>
         <div className={styles.removeDialogButtons}>
           <Button
-            onClick={() => setCoteacherToRemove(null)}
+            onClick={closeRemoveDialog}
             text={i18n.dialogCancel()}
             color={Button.ButtonColor.white}
             id="remove-coteacher-cancel"

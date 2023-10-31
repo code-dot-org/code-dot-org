@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
@@ -20,6 +20,18 @@ const statusSortValue = coteacher => {
   }
 };
 
+const getInitialCoteachers = (sectionInstructors, primaryTeacher) => {
+  if (!sectionInstructors) {
+    return [];
+  }
+  if (!primaryTeacher) {
+    return sectionInstructors;
+  }
+  return sectionInstructors.filter(
+    instructor => instructor.instructorEmail !== primaryTeacher.email
+  );
+};
+
 export default function CoteacherSettings({
   sectionInstructors,
   primaryTeacher,
@@ -28,24 +40,11 @@ export default function CoteacherSettings({
 }) {
   const [addError, setAddError] = useState('');
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
-
-  const initialCoteachers = (sectionInstructors, primaryTeacher) => {
-    if (!sectionInstructors) {
-      return [];
-    }
-    if (!primaryTeacher) {
-      return sectionInstructors;
-    }
-    return sectionInstructors.filter(
-      instructor => instructor.instructorEmail !== primaryTeacher.email
-    );
-  };
-
   const [savedCoteachers, setSavedCoteachers] = useState(
-    initialCoteachers(sectionInstructors, primaryTeacher)
+    getInitialCoteachers(sectionInstructors, primaryTeacher)
   );
 
-  const coteachers = React.useMemo(() => {
+  const coteachers = useMemo(() => {
     const unsaved = coteachersToAdd.map(email => ({instructorEmail: email}));
 
     const sortedSaved = savedCoteachers.sort(
@@ -54,11 +53,14 @@ export default function CoteacherSettings({
     return [...unsaved, ...sortedSaved];
   }, [savedCoteachers, coteachersToAdd]);
 
-  const removeSavedCoteacher = id => {
-    setSavedCoteachers(prevSaved =>
-      prevSaved.filter(coteacher => coteacher.id !== id)
-    );
-  };
+  const removeSavedCoteacher = useCallback(
+    id => {
+      setSavedCoteachers(prevSaved =>
+        prevSaved.filter(coteacher => coteacher.id !== id)
+      );
+    },
+    [setSavedCoteachers]
+  );
 
   return (
     <div className={styles.expandedSection}>

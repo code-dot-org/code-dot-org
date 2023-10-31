@@ -7,45 +7,49 @@ import styles from './coteacher-settings.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
+const getPill = (text, className, icon) => (
+  <div className={classNames(className, styles.tablePill)}>
+    <StrongText>
+      <FontAwesome icon={icon} className={styles.tablePillIcon} />
+      {text}
+    </StrongText>
+  </div>
+);
+
+const getStatusPill = status => {
+  if (!status) {
+    return getPill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
+  }
+  switch (status) {
+    case 'invited':
+      return getPill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
+    case 'active':
+      return getPill(i18n.coteacherAccepted(), styles.tableActive, 'check');
+    case 'declined':
+      return getPill(i18n.coteacherDeclined(), styles.tableDeclined, 'xmark');
+    default:
+      return getPill(i18n.coteacherError(), styles.tableError, 'xmark');
+  }
+};
+
 export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
-  const pill = (text, className, icon) => (
-    <div className={classNames(className, styles.tablePill)}>
-      <StrongText>
-        <FontAwesome icon={icon} className={styles.tablePillIcon} />
-        {text}
-      </StrongText>
-    </div>
-  );
-
-  const statusPill = status => {
-    if (!status || status === 'invited') {
-      return pill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
-    } else if (status === 'active') {
-      return pill(i18n.coteacherAccepted(), styles.tableActive, 'check');
-    } else if (status === 'declined') {
-      return pill(i18n.coteacherDeclined(), styles.tableDeclined, 'xmark');
-    } else {
-      return pill(i18n.coteacherError(), styles.tableError, 'xmark');
-    }
-  };
-
   const tableRow = (index, coteacher) => {
     return (
       <tr key={index} className={styles.tableRow}>
         <td className={styles.tableInfoCell}>
           <div>
-            {coteacher.instructorName ? (
+            {coteacher.instructorName && (
               <>
                 <StrongText> {coteacher.instructorName}</StrongText>
                 <br />
               </>
-            ) : null}
+            )}
 
             {coteacher.instructorEmail}
           </div>
         </td>
         <td className={styles.tableStatusCell}>
-          {statusPill(coteacher.status)}
+          {getStatusPill(coteacher.status)}
         </td>
         <td>
           <button
