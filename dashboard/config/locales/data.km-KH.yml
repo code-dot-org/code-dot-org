@@ -151,7 +151,7 @@ km:
         C4_conditionals: លក្ខខណ្ឌ
         C4_intro: ការណែនាំ
         C4_loops_zombie: ប្រតិបត្តិដដែលៗ
-        C4_variables_artist: អថេរ - សិល្បករ
+        C4_variables_artist: អថេរ - វិចិត្រករ
         CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
         CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពី Sprite Lab
         CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
@@ -178,7 +178,7 @@ km:
         CSF_skinOverview_Harvester: អ្នកប្រមូលផល
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: កំហុសដែលមិនបានគ្រោងទុក
-        MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
+        MC_2018_loops: 'Minecraft: ដំណើរផ្សងព្រេងក្នុងដែនទឹក (ធ្វើឡើងវិញរហូតដល់)'
         Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug5: អនុគមន៍
         Unplug6: លក្ខខណ្ឌ
@@ -216,9 +216,9 @@ km:
         mc_2017_puzzle_3: Minecraft Hour of Code - រង្វិលជុំ
         mc_2017_puzzle_8: Minecraft Hour of Code - មុខងារ
         mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
-        mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_closing: 'Minecraft: អបអរសាទរអ្នកបានបញ្ចប់ដំណើរផ្សងព្រេងក្នុងដែនទឹក'
         mc_2018_conditionals: 'Minecraft: ដំណើរផ្សងព្រេងក្នុងទឹក ដោយប្រើលក្ខខណ្ឌ'
-        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរផ្សងព្រេងក្នុងដែនទឹក'
         mc_intro: ការណែនាំពី Minecraft
         mc_repeat: ការប្រើប្រាស់ ប្រតិបត្តិដដែលៗ ក្នុង Minecraft
         playlab_2021: ការណែនាំអំពីការអនុវត្តលើ Play Lab

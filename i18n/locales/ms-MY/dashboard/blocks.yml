@@ -71,6 +71,11 @@ ms:
           UNIT:
             '"measures"': corak berirama
             '"seconds"': saat
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': corak berirama
+            '"seconds"': saat
       Dancelab_changeColorBy:
         text: tukar {COLOR} {METHOD} dengan {AMOUNT}
         options:
@@ -565,6 +570,51 @@ ms:
             '"iceCream"': Aiskrim
             '"default"': Lampu
             '"neon"': Neon
+            '"tropical"': Tropikal
+            '"vintage"': Vintaj
+            '"warm"': Hangat
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          tetapkan kesan latar belakang
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Tiada
+            '"rand"': "(Rawak)"
+            '"circles"': Bulatan
+            '"quads"': Sudut
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Bunga Api
+            '"flowers"': Bunga
+            '"growing_stars"': Bintang yang Semakin Meningkat
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Menari Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"ripples_random"': Riak Rawak
+            '"ripples"': Riak
+            '"snowflakes"': Salji
+            '"text"': Nama Lagu
+            '"squiggles"': Cacing Kerawit
+            '"galaxy"': Ruang
+            '"sparkles"': Berkilau
+            '"spiral"': Lingkaran
+            '"disco"': Segi Empat
+            '"starburst"': Pecahan Cahaya
+            '"stars"': Bintang
+            '"music_wave"': Gelombang
+          PALETTE:
+            '"rave"': Hitam dan Putih
+            '"cool"': Sejuk
+            '"electronic"': Elektronik
+            '"iceCream"': Aiskrim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"ocean"': Laut
+            '"rainbow"': Pelangi
             '"tropical"': Tropikal
             '"vintage"': Vintaj
             '"warm"': Hangat

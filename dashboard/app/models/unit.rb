@@ -45,6 +45,7 @@ class Unit < ApplicationRecord
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
+  include Unit::TextToSpeech
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
@@ -975,15 +976,6 @@ class Unit < ApplicationRecord
       }
     end
     summarized_lesson_levels
-  end
-
-  def text_to_speech_enabled?
-    tts?
-  end
-
-  # Generates TTS files for each level in a unit.
-  def tts_update(update_all: false)
-    levels.each {|l| l.tts_update(update_all: update_all)}
   end
 
   def hint_prompt_enabled?

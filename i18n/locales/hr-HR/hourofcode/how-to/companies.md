@@ -66,7 +66,7 @@ Za više smjernica o volontiranju i primjere slanja poruka kako biste svoju tvrt
 
 Ako želite ići dalje, vaša tvrtka također može ugostiti događaj Sat kodiranja. Ne postoji posebna formula za organizaciju događaja pa vas potičemo da budete kreativni! S obzirom na to da je broj našeg osoblja malen (ali moćan!), Code.org nema tim posvećen koordiniranju događaja Sat kodiranja. Međutim, evo nekoliko savjeta za početak.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Pogledajte ovaj video s uputama <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Odredite datum, format i mjesto za svoj događaj
 
@@ -135,7 +135,7 @@ Jedan od najboljih načina je širenje vijesti i promoviranje Sata kodiranja.
 
 ### 1. Prijavite svoj događaj
 
-Kada se [prijavite za događaj Sat kodiranja](/#join), primat ćete korisnu komunikaciju e-poštom s novostima i savjetima za uspješno organiziranje Sata kodiranja. To je i način na koji možete obavijestiti lokalne škole ili roditelje da ste domaćin događaja u njihovoj blizini.
+Kada se prijav [ite na događaj Hour of Code](/events), primit ćete korisne komunikacije putem e-pošte s vijestima i savjetima za održavanje uspješnog sata koda. To je i način na koji možete obavijestiti lokalne škole ili roditelje da ste domaćin događaja u njihovoj blizini.
 
 ### 2. Objavite na društvenim mrežama
 

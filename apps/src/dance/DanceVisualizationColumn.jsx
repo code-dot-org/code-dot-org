@@ -73,6 +73,7 @@ class DanceVisualizationColumn extends React.Component {
     over21: PropTypes.bool.isRequired,
     currentAiModalField: PropTypes.object,
     setCurrentAiModalField: PropTypes.func,
+    resetProgram: PropTypes.func.isRequired,
   };
 
   state = {
@@ -86,6 +87,16 @@ class DanceVisualizationColumn extends React.Component {
     this.setState({filterOn: false});
   };
 
+  componentDidUpdate(prevProps) {
+    // Reset the program when the AI modal is opened
+    if (
+      prevProps.currentAiModalField === undefined &&
+      this.props.currentAiModalField
+    ) {
+      this.props.resetProgram();
+    }
+  }
+
   render() {
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
@@ -96,12 +107,17 @@ class DanceVisualizationColumn extends React.Component {
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
+    const isSignedIn =
+      this.props.userType === 'teacher' || this.props.userType === 'student';
+
     return (
       <div>
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        {this.props.over21 && <HourOfCodeGuideEmailDialog />}
+        {(this.props.over21 || this.props.userType === 'teacher') && (
+          <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
+        )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
             <SongSelector

@@ -14,6 +14,10 @@ kk:
         options:
           UNIT:
             '"seconds"': секунд
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_changePropBy:
         options:
           PROPERTY:
