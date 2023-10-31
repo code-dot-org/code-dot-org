@@ -13,6 +13,7 @@ import styles from './coteacher-settings.module.scss';
 export default function AddCoteacher({
   sectionId,
   coteachers,
+  coteachersToAdd,
   setCoteachersToAdd,
   addError,
   setAddError,
@@ -27,26 +28,46 @@ export default function AddCoteacher({
       if (!isEmail(email)) {
         return Promise.resolve(i18n.coteacherAddInvalidEmail({email}));
       }
+      if (coteachersToAdd.some(coteacher => coteacher === email)) {
+        return Promise.resolve(i18n.coteacherAddAlreadyAdded({email}));
+      }
 
-      return $.ajax({
-        url: `/api/v1/section_instructors/check`,
-        method: 'GET',
-        dataType: 'json',
-        contentType: 'application/json',
-        data: JSON.stringify({
-          email: email,
-          section_id: sectionId,
-        }),
-      })
-        .done(() => {
-          return '';
+      const params = {email: email, ...(sectionId && {section_id: sectionId})};
+
+      return new Promise(resolve => {
+        return $.ajax({
+          url: `/api/v1/section_instructors/check`,
+          method: 'GET',
+          dataType: 'json',
+          contentType: 'application/json; charset=utf-8',
+          data: params,
         })
-        .fail(error => {
-          console.log('lfm', JSON.stringify(error));
-          return 'error';
-        });
+          .done(() => {
+            resolve('');
+          })
+          .fail((jqXHR, textStatus, errorThrown) => {
+            console.log('lfm', jqXHR, textStatus, errorThrown);
+
+            if (errorThrown === 'Not Found') {
+              resolve(i18n.coteacherAddNoAccount({email}));
+            }
+            if (jqXHR.responseText.includes('already invited')) {
+              resolve(i18n.coteacherAddAlreadyExists({email}));
+            }
+            if (jqXHR.responseText.includes('section full')) {
+              resolve(i18n.coteacherAddSectionFull());
+            }
+            if (jqXHR.responseText.includes('inviting self')) {
+              resolve(i18n.coteacherCannotInviteSelf());
+            }
+            if (errorThrown === 'Forbidden') {
+              resolve(i18n.coteacherUnableToEditCoteachers());
+            }
+            resolve(i18n.coteacherUnknownValidationError({email}));
+          });
+      });
     },
-    [sectionId]
+    [coteachersToAdd, sectionId]
   );
 
   const handleAddEmail = useCallback(
@@ -137,6 +158,7 @@ export default function AddCoteacher({
 AddCoteacher.propTypes = {
   sectionId: PropTypes.number,
   coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  coteachersToAdd: PropTypes.arrayOf(PropTypes.string).isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
   addError: PropTypes.string,
   setAddError: PropTypes.func.isRequired,

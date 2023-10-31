@@ -79,6 +79,8 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
       return render json: {error: 'inviting self'}, status: :bad_request
     end
 
+    puts current_user.inspect
+
     section = Section.find_by_id(params[:section_id])
     if section.present?
       authorize! :manage, section

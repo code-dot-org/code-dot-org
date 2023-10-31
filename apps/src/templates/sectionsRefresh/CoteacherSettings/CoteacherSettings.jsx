@@ -70,6 +70,7 @@ export default function CoteacherSettings({
         <AddCoteacher
           sectionId={sectionId}
           coteachers={coteachers}
+          coteachersToAdd={coteachersToAdd}
           setCoteachersToAdd={setCoteachersToAdd}
           addError={addError}
           setAddError={setAddError}
