@@ -1,10 +1,6 @@
 import _ from 'lodash';
 import BlockSvgUnused from './blockSvgUnused';
-import {
-  WORKSPACE_PADDING,
-  SETUP_TYPES,
-  PROCEDURE_DEFINITION_TYPES,
-} from '../constants';
+import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
 
