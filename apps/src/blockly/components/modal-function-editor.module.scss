@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .container {
   display: none;
@@ -11,7 +11,7 @@
 
 .toolbar {
   position: absolute;
-  top: 10px;
+  top: 36px;
   right: 10px;
   z-index: 1;
 }
