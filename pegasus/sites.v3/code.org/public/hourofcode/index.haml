@@ -22,8 +22,8 @@ theme: responsive_full_width
         =hoc_s(:hc_2023_hourofcode_description_2)
       %p.body-three{style: "font-weight: bold"}
         =hoc_s(:hc_2023_hourofcode_description_3)
-    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
-      %img{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    %figure.video-101__video.col-50
+      = view :display_video_thumbnail, id: "hoc_2023", video_code: "KsOIlDT145A", play_button: 'center', letterbox: 'false'
       %a.body-three{href: "/educate/resources/videos"}
         =hoc_s(:cta_see_more_video)
     .clear
@@ -39,67 +39,111 @@ theme: responsive_full_width
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
-            =hoc_s(:module_age_11)
+            =hoc_s(:module_label_grade_levels)
+            =hoc_s(:module_grade_2_12)
           %h3
             =hoc_s(:hc_2023_lead_activity_card_title_1)
-          %img{src: "/images/introduction-game-lab-banner.png", alt: ""}
+          %img{src: "/images/hoc-2023-dance-pary-banner.png", alt: ""}
           %p
             =hoc_s(:hc_2023_lead_activity_card_description_1)
         .content-footer
-          %a.link-button{href: "https://studio.code.org/s/csd3-virtual", target: "_blank", rel: "noopener noreferrer"}
+          %a.link-button{href: "/dance", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:hc_2023_lead_activity_card_link_1)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
-            =hoc_s(:module_age_13)
+            =hoc_s(:module_label_grade_levels)
+            =hoc_s(:module_grade_2_13)
           %h3
             =hoc_s(:hc_2023_lead_activity_card_title_2)
-          %img{src: "/images/turtle-programming-banner.png", alt: ""}
+          %img{src: "/images/hoc-2023-oceans-banner.png", alt: ""}
           %p
             =hoc_s(:hc_2023_lead_activity_card_description_2)
         .content-footer
-          %a.link-button{href: "https://studio.code.org/s/csp3-virtual", target: "_blank", rel: "noopener noreferrer"}
+          %a.link-button{href: "/oceans", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:hc_2023_lead_activity_card_link_2)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
-            =hoc_s(:module_age_13)
+            =hoc_s(:module_label_grade_levels)
+            =hoc_s(:module_grade_2_12)
           %h3
             =hoc_s(:hc_2023_lead_activity_card_title_3)
-          %img{src: "/images/event-driven-programming-banner.png", alt: ""}
+          %img{src: "/images/hoc-2023-minecraft-banner.png", alt: ""}
           %p
             =hoc_s(:hc_2023_lead_activity_card_description_3)
         .content-footer
-          %a.link-button{href: "https://studio.code.org/s/csp5-virtual", target: "_blank", rel: "noopener noreferrer"}
+          %a.link-button{href: "/minecraft", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:hc_2023_lead_activity_card_link_3)
     .ending-link
-      %a.link-button.secondary.centered{href: CDO.studio_url("/catalog?marketingInitiative=hoc")}
+      %a.link-button.secondary.centered{href: CDO.studio_url("https://hourofcode.com/learn")}
         =hoc_s(:call_to_action_explore_all_hoc_activities)
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2=hoc_s(:csa_ai_page_learn_more_section_title)
+    %h2=hoc_s(:learn_how_ai_works)
+    %p
+      =hoc_s(:hc_2023_ai_section_description)
     .action-block.action-block--two-col
-      %img{src: "/shared/images/social-media/ai-101-social.png", alt: "", class: "col-50"}
+      %figure.video-101__video.col-50
+        = view :display_video_thumbnail, id: "ai_fundamentals", video_code: "YlwVMtNEWKA", play_button: 'center', letterbox: 'false'
       .text-wrapper.col-50
+        %p.overline
+          =hoc_s(:module_label_grade_levels)
+          =hoc_s(:module_grade_6_12)
         %h3.heading-sm
-          =hoc_s(:csa_ai_page_learn_more_title)
-        %p=hoc_s(:csa_ai_page_learn_more_description)
-        %a.link-button{href: "/ai/pl/101"}
-          =hoc_s(:csa_ai_page_learn_more_link)
+          =hoc_s(:hc_2023_ai_section_card_title)
+        %p=hoc_s(:hc_2023_ai_section_card_description)
+        %a.link-button{href: "/ai/how-ai-works"}
+          =hoc_s(:hc_2023_ai_section_card_link)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2=hoc_s(:csa_ai_page_learn_more_section_title)
+    %h2=hoc_s(:hc_2023_ai_teachers_section_title)
+    %p
+      =hoc_s(:hc_2023_ai_teachers_section_description)
     .action-block.action-block--two-col
       %img{src: "/shared/images/social-media/ai-101-social.png", alt: "", class: "col-50"}
       .text-wrapper.col-50
+        %p.overline
+          =hoc_s(:module_proffesional_learning)
         %h3.heading-sm
-          =hoc_s(:csa_ai_page_learn_more_title)
-        %p=hoc_s(:csa_ai_page_learn_more_description)
+          =hoc_s(:hc_2023_ai_teachers_section_card_title)
+        %p=hoc_s(:hc_2023_ai_teachers_section_card_description)
         %a.link-button{href: "/ai/pl/101"}
-          =hoc_s(:csa_ai_page_learn_more_link)
-= view :section_divider_line
+          =hoc_s(:hc_2023_ai_teachers_section_card_link)
+
+%section 
+  .wrapper
+    %h2{style:"text-align: center"}=hoc_s(:hc_2023_ai_go_beyond_section_title)
+    .editorial-cards-wrapper{style: "text-align: center"}
+      %div.flex-container.align-content-baseline.wrap
+        %figure
+          %img{src: "/images/teach-computer-science-banner.png", alt: ""}
+        .content-wrapper
+          %h3.heading-sm
+            =hoc_s(:hc_2023_ai_go_beyond_section_card_title_1)
+          %p{style: "text-justify: center"}=hoc_s(:hc_2023_ai_go_beyond_section_card_description_1)
+          %a.link-button{href: "/teach"}
+            =hoc_s(:hc_2023_ai_go_beyond_section_card_link_1)
+      %div.flex-container.align-content-baseline.wrap
+        %figure
+          %img{src: "/images/explore-curriculum-banner.png", alt: ""}
+        .content-wrapper
+          %h3.heading-sm
+            =hoc_s(:hc_2023_ai_go_beyond_section_card_title_2)
+          %p=hoc_s(:hc_2023_ai_go_beyond_section_card_description_2)
+          %a.link-button{href: "https://studio.code.org/catalog"}
+            =hoc_s(:hc_2023_ai_go_beyond_section_card_link_2)
+      %div.flex-container.align-content-baseline.wrap
+        %figure
+          %img{src: "/images/professional-learning-banner.png", alt: ""}
+        .content-wrapper
+          %h3.heading-sm
+            =hoc_s(:hc_2023_ai_go_beyond_section_card_title_3)
+          %p=hoc_s(:hc_2023_ai_go_beyond_section_card_description_3)
+          %a.link-button{href: "/professional-learning"}
+            =hoc_s(:hc_2023_ai_go_beyond_section_card_link_1)
