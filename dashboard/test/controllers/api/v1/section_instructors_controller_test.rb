@@ -12,8 +12,6 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     # These are auto-created for the section creator
     @si1 = @section.instructors.first
     @si2 = @section2.instructors.first
-    @former_instructor = create(:section_instructor, section: @section, instructor: @teacher2, status: :removed)
-    @former_instructor.destroy!
     @si3 = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
     @full_section = create(:section, user: @teacher2, login_type: 'word')
     (Section::INSTRUCTOR_LIMIT - 1).times do
@@ -56,17 +54,23 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'instructor can add a teacher to instruct a section' do
     sign_in @teacher
-    post :create, params: {section_id: @section.id, email: @teacher3.email}
+    section = create(:section, user: @teacher, login_type: 'word')
+    post :create, params: {section_id: section.id, email: @teacher3.email}
     assert_response :success
     si = SectionInstructor.last
     assert_equal @teacher3.id, si.instructor_id
-    assert_equal @section.id, si.section_id
+    assert_equal section.id, si.section_id
     assert_equal :invited, si.status.to_sym
     assert_equal @teacher, si.invited_by
   end
 
   test 'instructor can add a former instructor to instruct a section' do
     sign_in @teacher
+
+    section = create(:section, user: @teacher, login_type: 'word')
+    former_instructor = create(:section_instructor, section: section, instructor: @teacher2, status: :removed)
+    former_instructor.destroy!
+
     post :create, params: {section_id: @section.id, email: @teacher2.email}
     assert_response :success
     si = SectionInstructor.last
@@ -95,7 +99,9 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
   end
 
   test 'instructor can remove other instructor' do
-    si = create(:section_instructor, section: @section2, instructor: @teacher3, status: :active)
+    section = create(:section, user: @teacher)
+    si = create(:section_instructor, section: section, instructor: @teacher2, status: :active)
+    create(:section_instructor, section: section, instructor: @teacher3, status: :active)
     sign_in @teacher3
     delete :destroy, params: {id: si.id}
     assert_response :success
@@ -111,20 +117,24 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'instructor cannot remove section owner' do
     sign_in @teacher2
-    delete :destroy, params: {id: @si2.id}
+    si = SectionInstructor.find_by(instructor: @teacher, section: @section2)
+    delete :destroy, params: {id: si.id}
     assert_response :forbidden
-    assert @si2.reload.deleted_at.nil?
+    assert si.reload.deleted_at.nil?
   end
 
   test 'instructor can remove themselves if not section owner' do
+    section = create(:section, user: @teacher)
+    si = create(:section_instructor, section: section, instructor: @teacher2, status: :active)
     sign_in @teacher2
-    delete :destroy, params: {id: @si3.id}
+    delete :destroy, params: {id: si.id}
     assert_response :success
-    assert @si3.reload.deleted_at.present?
+    assert si.reload.deleted_at.present?
   end
 
   test 'invited instructor can accept invitation' do
-    si = create(:section_instructor, section: @section2, instructor: @teacher3, status: :invited)
+    section = create(:section, user: @teacher)
+    si = create(:section_instructor, section: section, instructor: @teacher3, status: :invited)
     sign_in @teacher3
     put :accept, params: {id: si.id}
     assert_response :success
@@ -146,7 +156,8 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
   end
 
   test 'invited instructor can decline invitation' do
-    si = create(:section_instructor, section: @section2, instructor: @teacher3, status: :invited)
+    section = create(:section, user: @teacher)
+    si = create(:section_instructor, section: section, instructor: @teacher3, status: :invited)
     sign_in @teacher3
     put :decline, params: {id: si.id}
     assert_response :success
