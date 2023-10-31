@@ -28,7 +28,8 @@ export default class SpecialAnnouncement extends Component {
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
-    const url = isTeacher && isEnglish ? pegasus('/ai') : pegasus('/ai');
+    const url =
+      isTeacher && isEnglish ? pegasus('/hourofcode') : pegasus('/hourofcode');
     const buttonText =
       isTeacher && isEnglish ? i18n.joinUs() : i18n.learnMore();
     const imageUrl =
