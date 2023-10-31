@@ -45,7 +45,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
   addBrowserResizeListener() {
     window.addEventListener('resize', () => {
       // Frame size can depend upon workspace size, so we re-render.
-      this.render(this.element_.svgGroup_, this.element_.RTL);
+      this.render();
     });
   }
 
