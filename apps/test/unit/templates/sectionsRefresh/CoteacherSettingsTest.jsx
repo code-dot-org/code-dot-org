@@ -40,8 +40,9 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').props().children).to.include(
+    const addCoteacher = wrapper.find('AddCoteacher').dive();
+    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
+    expect(addCoteacher.find('Figcaption').props().children).to.include(
       '2/5 co-teachers added'
     );
   });
@@ -54,8 +55,9 @@ describe('CoteacherSettings', () => {
         primaryTeacher={null}
       />
     );
-    expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').props().children).to.include(
+    const addCoteacher = wrapper.find('AddCoteacher').dive();
+    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
+    expect(addCoteacher.find('Figcaption').props().children).to.include(
       '0/5 co-teachers added'
     );
   });
@@ -68,8 +70,9 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').props().children).to.include(
+    const addCoteacher = wrapper.find('AddCoteacher').dive();
+    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
+    expect(addCoteacher.find('Figcaption').props().children).to.include(
       '3/5 co-teachers added'
     );
   });
@@ -86,7 +89,8 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    const addCoteacher = wrapper.find('AddCoteacher').dive();
+    expect(addCoteacher.find('Button').first().props().disabled).to.be.true;
   });
   it('shows error when adding invalid email', () => {
     const setCoteachersToAddSpy = sinon.spy();
@@ -98,20 +102,22 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    expect(wrapper.find('Figcaption')).to.have.lengthOf(1);
-    expect(wrapper.find('Figcaption').props().children).not.to.include(
+    const addCoteacher = wrapper.find('AddCoteacher').dive();
+    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
+    expect(addCoteacher.find('Figcaption').props().children).not.to.include(
       'not a valid email address'
     );
-    wrapper
+    addCoteacher
       .find('input')
       .simulate('change', {target: {value: 'invalid-email'}});
-    wrapper
+    addCoteacher
       .find('Button[id="add-coteacher"]')
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Figcaption').props().children).to.include(
+    const updatedAddInput = wrapper.find('AddCoteacher').dive();
+    expect(updatedAddInput.find('Figcaption').props().children).to.include(
       'invalid-email is not a valid email address.'
     );
-    const icon = wrapper.find('FontAwesome').first();
+    const icon = updatedAddInput.find('FontAwesome').first();
     expect(icon.props().icon).to.include('info-circle');
     expect(setCoteachersToAddSpy).to.have.not.been.called;
   });
@@ -128,10 +134,11 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
-    wrapper
+    const addCoteacher = wrapper.find('AddCoteacher').dive();
+    addCoteacher
       .find('input')
       .simulate('change', {target: {value: 'new-email@code.org'}});
-    wrapper
+    addCoteacher
       .find('Button[id="add-coteacher"]')
       .simulate('click', {preventDefault: () => {}});
     expect(coteachersToAdd).to.deep.equal([
