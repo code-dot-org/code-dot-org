@@ -59,14 +59,13 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  *  blockOrderMap is only used when source is XML, and is a map of blocks to their positions on the workspace.
  */
 function prepareSourcesForWorkspaces(source) {
-  let {combinedSource, blockOrderMap} = parseSource(source);
-
+  let {parsedSource, blockOrderMap} = parseSource(source);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
   }
   const {mainSource, hiddenDefinitionSource} = moveHiddenProcedures(
-    combinedSource,
+    parsedSource,
     procedureTypesToHide
   );
   return {mainSource, hiddenDefinitionSource, blockOrderMap};
@@ -105,13 +104,9 @@ function parseSource(source) {
  * @returns void
  * exported for unit testing
  */
-export function moveHiddenProcedures(source, procedureTypesToHide = []) {
-  if (
-    procedureTypesToHide.length === 0 ||
-    !source.blocks ||
-    !source.blocks.blocks
-  ) {
-    return;
+export function moveHiddenProcedures(source = {}, procedureTypesToHide = []) {
+  if (procedureTypesToHide.length === 0 || !_.has(source, 'blocks.blocks')) {
+    return {mainSource: {}, hiddenDefinitionSource: {}};
   }
 
   const mainSource = _.cloneDeep(source);
@@ -212,7 +207,7 @@ export function bindBrowserEvent(element, name, thisObject, func, useCapture) {
   );
 }
 
-export function isWorkspaceReadOnly(workspace) {
+export function isWorkspaceReadOnly() {
   return false; // TODO - used for feedback
 }
 
@@ -220,7 +215,7 @@ export function blockLimitExceeded() {
   return false;
 }
 
-export function getBlockLimit(blockType) {
+export function getBlockLimit() {
   return 0;
 }
 

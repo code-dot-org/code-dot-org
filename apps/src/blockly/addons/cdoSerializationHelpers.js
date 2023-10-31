@@ -1,6 +1,10 @@
 import _ from 'lodash';
 import BlockSvgUnused from './blockSvgUnused';
-import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
+import {
+  WORKSPACE_PADDING,
+  SETUP_TYPES,
+  PROCEDURE_DEFINITION_TYPES,
+} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
 
@@ -102,10 +106,13 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
  */
 function positionBlockWithCursor(block, cursor) {
   addUnusedFrame(block);
-  if (isBlockLocationUnset(block)) {
+  if (
+    isBlockLocationUnset(block) ||
+    PROCEDURE_DEFINITION_TYPES.includes(block.type)
+  ) {
     block.moveTo(getNewLocation(block, cursor));
-    cursor.y += getCursorYAdjustment(block);
   }
+  cursor.y += getCursorYAdjustment(block);
   return cursor;
 }
 
