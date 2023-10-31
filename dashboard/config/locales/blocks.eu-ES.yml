@@ -46,6 +46,11 @@ eu:
             '"measures"': neurriak
             '"seconds"': segundu
         text: "{TIMESTAMP} ondoren {UNIT}"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': neurriak
+            '"seconds"': segundu
       Dancelab_changeColorBy:
         options:
           METHOD:

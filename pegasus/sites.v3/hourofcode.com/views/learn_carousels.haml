@@ -1,21 +1,7 @@
-- learn_categories = []
-- learn_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}
-- learn_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}
-- learn_categories << {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}
-- learn_categories << {tag:"Apps", name: I18n.t(:carousel_heading_devices)}
-- learn_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}
-- learn_categories << {tag:"Teacherled", name: I18n.t(:teach_led_lesson_plans)}
-
 - beyond_categories = []
-- beyond_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beyond_beginners)}
-- beyond_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_beyond_javascript)}
-- beyond_categories << {tag:"Apps", name: I18n.t(:carousel_heading_beyond_devices)}
-- beyond_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_beyond_languages)}
-- beyond_categories << {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}
-- beyond_categories << {tag:"Univ", name: I18n.t(:carousel_heading_university)}
-- beyond_categories << {tag:"Web", name: I18n.t(:carousel_heading_webpages)}
-- beyond_categories << {tag:"Robot", name: I18n.t(:carousel_heading_robots)}
-- beyond_categories << {tag:"IDE", name: I18n.t(:carousel_heading_ide)}
+- beyond_categories << {tag:"es", name: "For Elementary School"}
+- beyond_categories << {tag:"ms", name: "For Middle School"}
+- beyond_categories << {tag:"hs", name: "For High School and Beyond"}
 
 %div{style: "clear:both"}
 
@@ -23,24 +9,10 @@
 
 - @variation = variation
 
-#carousel-ie8{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true, :shuffle=>true
-
-#carousel-international{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true, :shuffle=>true
-  %br
-  %br
-  %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
-    %button{:style=>"font-size:20px;"}
-      = I18n.t(:carousel_heading_domestic)
-  %br
-  %br
-
-- categories = variation == 'learn' ? learn_categories : beyond_categories
 #all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
-  - categories.each do |category|
+  - beyond_categories.each do |category|
     - id = "collection-" + category[:tag]
-    = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id, :shuffle=>true
+    = view :learn_carousel, :heading=>category[:name], :gradelevel=>category[:tag], :tutorials=>tutorials, :id=>id, :shuffle=>true
 
 - if request.locale == "en-US"
   %br

@@ -73,7 +73,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
       data: CachedForegrounds as CachedWeightsMapping,
     },
     [FieldKey.BACKGROUND_PALETTE]: {
-      name: 'Background palette',
+      name: 'Background color',
       data: CachedPalettes as CachedWeightsMapping,
     },
   };

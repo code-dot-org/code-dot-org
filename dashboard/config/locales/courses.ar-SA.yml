@@ -131,6 +131,8 @@ ar:
           description_short: تعلَّم المفاهيم الأساسية لعلم الحاسوب.
         mike-test:
           title: أساسيات علم الحاسوب
+        self-paced-pl-csd-unit1-2023:
+          title: تعليم حل المشكلات والحوسبة
         vpl-csa-2023:
           title: التعلم المهني الافتراضي CSA
     resources:
