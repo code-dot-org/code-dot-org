@@ -2,3 +2,16 @@
 title: Minecraft
 theme: responsive_full_width
 ---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/minecraft-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:minecraft_hero_heading)
+
+%section
+  .wrapper
+    = view :ai_microsoft_block
