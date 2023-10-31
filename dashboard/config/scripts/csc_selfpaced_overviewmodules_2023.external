@@ -49,6 +49,8 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/6dea5ced2f6892572561171a345f2dd5-image-1680731924182.gif" alt="Image of a person with map of the United States and a compass" width="300px">
 
 
+
+
 </details>
 
 <div style="clear:both"/>
@@ -57,11 +59,12 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Coding with Poetry</strong></summary>
 
-##### In this English Language Arts module, students explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code.
+##### In this English Language Arts module, students explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code. Check out the Coding with Poetry Walkthrough tutorial video to learn more.
 
 
-<img src="https://images.code.org/c148179df0238d756a12c7b075ff7d8e-image-1680732701654.gif" alt="Gif of marshmallows burst" width="300px">
-
+<img src="https://images.code.org/c148179df0238d756a12c7b075ff7d8e-image-1680732701654.gif" alt="Gif of marshmallows burst" width="300px" style = "margin: 0 0 30px 20px">
+<a href = "https://www.youtube.com/watch?v=wSLRswf2CKs&list=PLzdnOPI1iJNdnyFt2FqlpYHn4-Phr9Y01&index=1" ><img src="https://images.code.org/fb1047cbd7f8262ee84b31e26535b8ce-image-1698769654410.png" alt="Image of the title page for the Coding with Poetry video" width="350px" style = "float:right; margin: 0 150px 20px 20px" ></a>
+	
 </details>
 
 <div style="clear:both"/>
@@ -112,4 +115,5 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
+![](https://images.code.org/fb1047cbd7f8262ee84b31e26535b8ce-image-1698769654410.png)
 MARKDOWN
