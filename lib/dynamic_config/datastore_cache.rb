@@ -22,9 +22,13 @@ class DatastoreCache
   SHARED_CACHE_NAMESPACE = "DynamicConfigData".freeze
 
   # @param datastore [Object] a datastore adapter
+  # @param identifier [String] a unique identifier for this instance of
+  #        datastore cache; used to prevent DCDO and Gatekeeper from trying to
+  #        store things in the same place.
   # @param cache_expiration [int] seconds after which a cached entry expires
-  def initialize(datastore, cache_expiration: 30)
+  def initialize(datastore, identifier, cache_expiration: 30)
     @datastore = datastore
+    @identifier = identifier
 
     # Set up our local cache; a simple in-memory hashed used to rapidly respond
     # to user requests which is occasionally refreshed from the shared cache to
@@ -37,9 +41,13 @@ class DatastoreCache
     update_local_cache
   end
 
+  def shared_cache_key
+    [SHARED_CACHE_NAMESPACE, @identifier].join('/')
+  end
+
   def local_cache_expired?
     expires_at = @local_cache_last_refreshed_at + @local_cache_expiration
-    return expires_at >= Time.now
+    return expires_at <= Time.now
   end
 
   # Gets the data associated with a given key
@@ -70,7 +78,7 @@ class DatastoreCache
   # Clear the datastore
   def clear
     @local_cache = {}
-    CDO.shared_cache.write(SHARED_CACHE_NAMESPACE, {})
+    CDO.shared_cache.write(shared_cache_key, {})
     @datastore.clear
   end
 
@@ -80,7 +88,7 @@ class DatastoreCache
   def populate_shared_cache
     tries ||= 3
     begin
-      CDO.shared_cache.write(SHARED_CACHE_NAMESPACE, @datastore.all)
+      CDO.shared_cache.write(shared_cache_key, @datastore.all)
     rescue => exception
       retry unless (tries -= 1).zero?
       Honeybadger.notify(exception)
@@ -90,7 +98,7 @@ class DatastoreCache
   # Updates the local cache with the latest values from the shared cache. Can
   # be called regularly, but only for a small subset of user requests.
   def update_local_cache
-    @local_cache = CDO.shared_cache.read(SHARED_CACHE_NAMESPACE)
+    @local_cache = CDO.shared_cache.read(shared_cache_key)
     @local_cache_last_refreshed_at = Time.now
   end
 end
