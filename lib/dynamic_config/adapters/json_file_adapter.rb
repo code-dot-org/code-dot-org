@@ -22,6 +22,7 @@ class JSONFileDatastoreAdapter
   # @returns [JSONable Object] or nil if key doesn't exist
   def get(key)
     load_from_file
+    return nil unless @hash.key?(key)
     begin
       return Oj.load(@hash[key])
     rescue => exception
