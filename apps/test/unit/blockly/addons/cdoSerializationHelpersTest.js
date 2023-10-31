@@ -72,7 +72,7 @@ describe('getNewLocation', () => {
 
   it('should determine the new location for blocks with SVG frames in RTL mode', () => {
     const block = {
-      unusedSvg_: {},
+      functionalSvg_: {},
       workspace: {RTL: true},
     };
     // For RTL workspaces, we position blocks from the left.
