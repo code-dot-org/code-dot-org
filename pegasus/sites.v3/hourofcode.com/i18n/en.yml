@@ -331,6 +331,7 @@
   call_to_action_coming_soon: "Coming soon!"
   call_to_action_learn_how_ai_works: "Learn how AI works"
   call_to_action_learn_about_ai: "Learn about AI"
+  call_to_action_get_started: "Get started"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -396,6 +397,10 @@
   aria_label_call_to_action_how_ai_works_lesson_05: "See the Generative Images lesson details"
   aria_label_call_to_action_how_ai_works_lesson_06: "See the Algorithmic Bias lesson details"
   aria_label_call_to_action_how_ai_works_lesson_07: "See the Our AI Code of Ethics lesson details"
+  aria_label_call_to_action_minecraft_2023: "Get started with Minecraft Generation AI"
+  aria_label_call_to_action_minecraft_2022: "Get started with Minecraft Escape Estate"
+  aria_label_call_to_action_minecraft_2021: "Get started with Minecraft TimeCraft"
+  aria_label_call_to_action_minecraft_2020: "Get started with Minecraft AI for Earth"
   aria_label_call_to_action_register_student_workshop: "Register for a free student workshop"
   aria_label_call_to_action_view_more_cs_resources: "View more computer science resources"
 
@@ -620,6 +625,7 @@
   heading_start_hoc_with_videos: "Start your Hour of Code with inspirational videos"
   heading_attend_free_workshop: "Attend a free student workshop"
   heading_access_more_cs_resources: "Access more computer science resources"
+  heading_available_on_code_dot_org: "Available on Code.org"
 
   cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
   cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
@@ -680,6 +686,16 @@
   dance_afe_disclaimer: "The artists whose music are used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org."
 
   minecraft_hero_heading: "Minecraft Hour of Code Tutorials"
+  minecraft_activities_desc: "All tutorials are available in many languages and compatible with modern browsers and tablets."
+  minecraft_education_activities_heading: "Available in Minecraft Education"
+  minecraft_education_activity_title_2023: "Minecraft Generation AI"
+  minecraft_education_activity_desc_2023: "Venture through time to create your AI-powered inventions! The new Minecraft Hour of Code tutorial is now available in Minecraft Education for Windows, Mac, Chromebook, iPad and Mobile. Get started with free educator resources, trainings, and videos."
+  minecraft_education_activity_title_2022: "Minecraft Escape Estate"
+  minecraft_education_activity_desc_2022: "Escape the mysterious mansion by dawn and earn a million emeralds!"
+  minecraft_education_activity_title_2021: "Minecraft TimeCraft"
+  minecraft_education_activity_desc_2021: "Travel back in time to save the future in this free coding lesson in Minecraft Education."
+  minecraft_education_activity_title_2020: "Minecraft AI for Earth"
+  minecraft_education_activity_desc_2020: "Program the Minecraft Agent to collect data about forest fires. Learn coding basics and explore a real-world example of artificial intelligence."
   minecraft_resources_desc_01: "Utilize this on demand [free course](%{course_url}) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEdWeek, %{campaign_date}."
   minecraft_resources_desc_02: "Inspire STEM passion in K-12 learners with 200hr of computer science curriculum, from block to python, supported by professional development."
 

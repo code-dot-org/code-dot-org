@@ -14,13 +14,15 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Available on Code.org
+    %h2=hoc_s(:heading_available_on_code_dot_org)
+    %p=hoc_s(:minecraft_activities_desc)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2 Available in Minecraft Education
+    %h2=hoc_s(:minecraft_education_activities_heading)
+    = view :"minecraft/minecraft_activities"
 
 = view :section_divider_line
 
