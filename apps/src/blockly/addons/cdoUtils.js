@@ -15,6 +15,7 @@ import {
   convertXmlToJson,
   getCombinedSerialization,
   positionBlocksOnWorkspace,
+  resetBlockLocations,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
 
@@ -273,6 +274,10 @@ export function getCode(workspace, getSourceAsJson) {
         Blockly.getHiddenDefinitionWorkspace()
       )
     : null;
+
+  // Resetting locations on hidden workspace blocks allows auto-positioning to kick in
+  // as they are moved between the main and hidden workspaces (depending on whether editor is used)
+  resetBlockLocations(hiddenWorkspaceSerialization.blocks.blocks);
 
   const combinedSerialization = getCombinedSerialization(
     mainWorkspaceSerialization,
