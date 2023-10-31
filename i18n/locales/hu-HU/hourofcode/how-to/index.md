@@ -72,7 +72,7 @@ Terjeszd a Kódolás óráját más tanároknak, akik talán örömmel csatlakoz
 
 ### Tájékoztasd a pedagógiai asszisztenseket, regisztráljanak az eseményre
 
-Miután [regisztrálsz egy Kódolás órájára](/#csatlakozás), e-mail üzeneteket fogsz kapni, amelyben híreket küldünk és hasznos ötleteket adunk ahhoz, hogy Kódolás óráját eredményesen meg tudjátok tartani. Abban is segít hogy replikáld az infót arról hogy iskolád ilyenben részt vesz. Az önkéntesek nagyszerű forrást jelenthetnek, és eljöhetnek az osztályunkba a számítástechnikáról beszélni, vagy egyszerűen csak segíthetnek tanulóknak a Kódolás órája tevékenységekben.
+Amikor felir [atkozik a Hour of Code eseményre](/events), hasznos e-mailes üzeneteket fog kapni hírekkel és tippekkel a sikeres kódolási óra megszervezéséhez. Abban is segít hogy replikáld az infót arról hogy iskolád ilyenben részt vesz. Az önkéntesek nagyszerű forrást jelenthetnek, és eljöhetnek az osztályunkba a számítástechnikáról beszélni, vagy egyszerűen csak segíthetnek tanulóknak a Kódolás órája tevékenységekben.
 
 ### Csigázd fel őket!
 

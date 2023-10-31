@@ -4,13 +4,16 @@ import {
 } from '@blockly/block-shareable-procedures';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
+import msg from '@cdo/locale';
+import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
-import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import CdoMetricsManager from './cdoMetricsManager';
+import WorkspaceSvgFrame from './workspaceSvgFrame';
+import {BLOCK_TYPES} from '../constants';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -73,7 +76,7 @@ export default class FunctionEditor {
     // Delete handler
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', this.handleDelete.bind(this));
+      .addEventListener('click', this.onDeletePressed.bind(this));
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
@@ -151,6 +154,7 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
+
       Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.
@@ -166,11 +170,21 @@ export default class FunctionEditor {
         deletable: false,
         movable: false,
       };
+
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
+    const type = procedureType || existingProcedureBlock.type;
+    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+
+    this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
+      this.editorWorkspace,
+      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      'blocklyWorkspaceSvgFrame'
+    );
+    this.editorWorkspace.svgFrame_.render();
   }
 
   /**
@@ -237,7 +251,22 @@ export default class FunctionEditor {
     this.showForFunction(hiddenProcedure, procedureType);
   };
 
-  handleDelete() {
+  onDeletePressed() {
+    /// We use "delete" for cancel and "keep" for confirm so that the
+    // delete button is red and the keep button is purple.
+    Blockly.customSimpleDialog({
+      bodyText: msg.confirmDeleteFunctionWarning({
+        functionName: this.block.getProcedureModel().getName(),
+      }),
+      cancelText: msg.delete(),
+      isDangerCancel: true, // gives us a red button
+      confirmText: msg.keep(),
+      onConfirm: null, // No-op
+      onCancel: this.onDeleteConfirmed.bind(this),
+    });
+  }
+
+  onDeleteConfirmed() {
     // delete all caller blocks from the procedure workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
@@ -318,7 +347,7 @@ export default class FunctionEditor {
     const returnValue = {
       ...blockConfig,
       x: 20,
-      y: 20,
+      y: 40,
     };
     return returnValue;
   }
@@ -366,6 +395,10 @@ export default class FunctionEditor {
       // Dispose of all non-procedure-definition top blocks (aka orphaned blocks)
       // and propagate the delete event to the hidden workspace.
       orphanedBlocks.forEach(block => block.dispose(false));
+    }
+    const workspaceSvgFrame = this.editorWorkspace.svgFrame_;
+    if (workspaceSvgFrame) {
+      workspaceSvgFrame.dispose();
     }
 
     // Now call clear() to have Blockly handle the rest of the workspace clearing.

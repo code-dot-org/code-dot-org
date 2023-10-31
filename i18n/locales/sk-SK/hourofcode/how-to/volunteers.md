@@ -133,7 +133,7 @@ V spolupráci so školou alebo učiteľom sa rozhodnite, aké riešenie bude na
 - Vysvetlite, ako technológie ovplyvňujú naše životy, pomocou príkladov, ktoré budú zaujímať žiakov z rozličných prostredí – hovorte o technológiách, ktoré zachraňujú životy, pomáhajú ľuďom alebo ich spájajú.
 - Ak pracujete pre technologickú spoločnosť, predstavte zábavné a inovatívne produkty, na ktorých vaša firma práve pracuje. Ak nepracujete pre technologickú spoločnosť, porozprávajte o spôsoboch, ako vaša firma využíva technológie na riešenie problémov a dosahovanie cieľov.
 - Pozvite programátorov z vašej spoločnosti, nech žiakom povedia, prečo sa rozhodli študovať informatiku, a predstavia im svoje aktuálne projekty.
-- Ak máte skupinu zamestnancov, ktorí budú organizovať vaše podujatie alebo pracovať ako dobrovoľníci v miestnej škole, môžete im objednať [tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- Ak máte skupinu zamestnancov, ktorí vám uľahčia udalosť alebo dobrovoľníctvo v miestnej škole, zvážte objednanie [vlastných tričiek](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) pre vašu skupinu.
 
 ### 3. Pripravte si potrebnú techniku
 
@@ -186,7 +186,7 @@ Jedným z najlepších spôsobov, ako pomôcť, je šíriť povedomie o Hodine 
 
 ### 1. Zaregistrujte svoje podujatie
 
-Keď svoje [podujatie Hodiny kódu zaregistrujete](/#join), budete dostávať užitočnú e-mailovú komunikáciu s novinkami a tipmi, ako Hodinu kódu úspešne usporiadať. Takto zároveň dáte miestnym školám alebo rodičom vedieť, že v ich blízkosti organizujete podujatie.
+Keď si [zaregistrujete svoju Hodinu kódu](/events), dostanete užitočné informácie s novinkami a tipmi na usporiadanie úspešnej Hodiny kódu. Takto zároveň dáte miestnym školám alebo rodičom vedieť, že v ich blízkosti organizujete podujatie.
 
 ### 2. Uverejnite príspevky na sociálnych sieťach
 

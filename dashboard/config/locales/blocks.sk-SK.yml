@@ -94,6 +94,11 @@ sk:
             '"measures"': takty
             '"seconds"': sekundy
         text: po {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekundy
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -582,6 +587,51 @@ sk:
             '"electronic"': Elektro
             '"iceCream"': Zmrzlina
             '"neon"': Neón
+            '"rave"': Čierna a biela
+            '"tropical"': Trópy
+            '"vintage"': Vintage
+            '"warm"': Teplý
+        text: |-
+          nastav efekt pozadia
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Kruhy
+            '"color_cycle"': Farby
+            '"diamonds"': Diamanty
+            '"disco"': Štvorce
+            '"disco_ball"': Disco guľa
+            '"fireworks"': Ohňostroj
+            '"flowers"': Kvety
+            '"galaxy"': Vesmír
+            '"growing_stars"': Rastúce hviezdy
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový tanečný parket
+            '"music_wave"': Vlny
+            '"none"': Žiadne
+            '"quads"': Uhly
+            '"rainbow"': Dúha
+            '"rand"': "(Náhodný)"
+            '"ripples"': Vlnky
+            '"ripples_random"': Náhodné vlnky
+            '"snowflakes"': Sneh
+            '"sparkles"': Trblietky
+            '"spiral"': Špirála
+            '"splatter"': Fŕkanie farby
+            '"squiggles"': Haky - baky
+            '"starburst"': Žiara
+            '"stars"': Hviezdy
+            '"swirl"': Hypno
+            '"text"': Názvy pesničiek
+          PALETTE:
+            '"cool"': Chladný
+            '"default"': Svetlý
+            '"electronic"': Elektro
+            '"iceCream"': Zmrzlina
+            '"neon"': Neón
+            '"ocean"': Oceán
+            '"rainbow"': Dúha
             '"rave"': Čierna a biela
             '"tropical"': Trópy
             '"vintage"': Vintage
