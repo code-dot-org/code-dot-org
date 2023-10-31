@@ -1,5 +1,5 @@
 :ruby
-  block_item = [
+  activity_item = [
     {
       overline: hoc_s(:module_grade_2_12),
       title: hoc_s(:minecraft_education_activity_title_2022),
@@ -45,17 +45,17 @@
   .clear
 
 .action-block__wrapper.action-block__wrapper--three-col
-  - block_item.each do |block_item|
+  - activity_item.each do |activity_item|
     .action-block.action-block--one-col.flex-space-between
       .content-wrapper
         %p.overline
           =hoc_s(:module_label_grades)
-          = block_item[:overline]
+          = activity_item[:overline]
         %h3
-          = block_item[:title]
-        %img{src: "#{block_item[:image]}", alt: ""}
+          = activity_item[:title]
+        %img{src: "#{activity_item[:image]}", alt: ""}
         %p
-          = block_item[:desc]
+          = activity_item[:desc]
       .content-footer
-        %a.link-button.has-external-link{href: "#{block_item[:url]}", "aria-label": "#{block_item[:aria_label]}"}
+        %a.link-button.has-external-link{href: "#{activity_item[:url]}", "aria-label": "#{activity_item[:aria_label]}"}
           =hoc_s(:call_to_action_get_started)
