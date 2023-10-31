@@ -6,6 +6,10 @@ gl:
         options:
           UNIT:
             '"seconds"': segundos
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': segundos
       Dancelab_changePropBy:
         options:
           PROPERTY:

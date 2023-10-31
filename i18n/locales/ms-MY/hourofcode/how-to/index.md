@@ -72,7 +72,7 @@ Promosikan Hour of Code kepada guru lain yang mungkin mahu menyertai keseronokan
 
 ### Biarkan Sukarelawan Tahu dengan Mendaftar Acara Anda
 
-Apabila anda [mendaftar acara Hour of Code anda](/#join), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Hour of Code.
+Apabila anda [mendaftar acara Hour of Code anda](/events), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Hour of Code.
 
 ### Buatkan Pelajar Anda Teruja
 

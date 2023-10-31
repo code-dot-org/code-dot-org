@@ -85,12 +85,15 @@ class RubricsController < ApplicationController
     return head :not_found unless student
     return head :forbidden unless can?(:manage, student)
 
-    learning_goals = LearningGoal.where(rubric_id: permitted_params[:id])
-    # Get the most recent AI evaluation for each learning goal
-    learning_goal_ai_evaluations =
-      LearningGoalAiEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goals.pluck(:id)).
-        group_by(&:learning_goal_id).
-        map {|_, eval_list| eval_list.max_by(&:updated_at)}
+    # Get the latest rubric evaluation
+    rubric_ai_evaluation = RubricAiEvaluation.where(
+      rubric_id: permitted_params[:id],
+      user_id: student.id
+    ).order(updated_at: :desc).first
+
+    # Get the most recent learning goals based on the most recent graded rubric
+    learning_goal_ai_evaluations = rubric_ai_evaluation&.learning_goal_ai_evaluations || []
+
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
 
@@ -113,6 +116,9 @@ class RubricsController < ApplicationController
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
+    # Find the rubric (must have something to evaluate)
+    return head :bad_request unless @rubric
+
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
@@ -122,7 +128,11 @@ class RubricsController < ApplicationController
     evaluated = ai_evaluated_at
     return render status: :bad_request, json: {error: 'Already evaluated'} if evaluated && attempted < evaluated
 
-    EvaluateRubricJob.perform_later(user_id: @user.id, script_level_id: script_level.id)
+    EvaluateRubricJob.perform_later(
+      user_id: @user.id,
+      requester_id: current_user.id,
+      script_level_id: script_level.id,
+    )
     return head :ok
   end
 
@@ -181,10 +191,9 @@ class RubricsController < ApplicationController
   end
 
   def ai_evaluated_at
-    learning_goal_ids = @rubric.learning_goals.pluck(:id)
-    LearningGoalAiEvaluation.
-      where(user_id: @user.id, learning_goal_id: learning_goal_ids).
-      order(created_at: :desc).
+    RubricAiEvaluation.
+      where(rubric_id: @rubric.id, user_id: @user.id).
+      order(updated_at: :desc).
       first&.
       created_at
   end

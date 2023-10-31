@@ -94,6 +94,11 @@ sk:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekundy
       Dancelab_changeColorBy:
         text: zmeň {COLOR} {METHOD} o {AMOUNT}
         options:
@@ -586,6 +591,51 @@ sk:
             '"iceCream"': Zmrzlina
             '"default"': Svetlý
             '"neon"': Neón
+            '"tropical"': Trópy
+            '"vintage"': Vintage
+            '"warm"': Teplý
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          nastav efekt pozadia
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Žiadne
+            '"rand"': "(Náhodný)"
+            '"circles"': Kruhy
+            '"quads"': Uhly
+            '"color_cycle"': Farby
+            '"diamonds"': Diamanty
+            '"disco_ball"': Disco guľa
+            '"fireworks"': Ohňostroj
+            '"flowers"': Kvety
+            '"growing_stars"': Rastúce hviezdy
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový tanečný parket
+            '"splatter"': Fŕkanie farby
+            '"rainbow"': Dúha
+            '"ripples_random"': Náhodné vlnky
+            '"ripples"': Vlnky
+            '"snowflakes"': Sneh
+            '"text"': Názvy pesničiek
+            '"squiggles"': Haky - baky
+            '"galaxy"': Vesmír
+            '"sparkles"': Trblietky
+            '"spiral"': Špirála
+            '"disco"': Štvorce
+            '"starburst"': Žiara
+            '"stars"': Hviezdy
+            '"music_wave"': Vlny
+          PALETTE:
+            '"rave"': Čierna a biela
+            '"cool"': Chladný
+            '"electronic"': Elektro
+            '"iceCream"': Zmrzlina
+            '"default"': Svetlý
+            '"neon"': Neón
+            '"ocean"': Oceán
+            '"rainbow"': Dúha
             '"tropical"': Trópy
             '"vintage"': Vintage
             '"warm"': Teplý

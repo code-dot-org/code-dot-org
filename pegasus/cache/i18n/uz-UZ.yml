@@ -2526,30 +2526,16 @@ uz-UZ:
     kirish soatini o‘tishni maqsad qilgan umumbashariy harakat. U 180 dan oshiq mamlakatda
     o‘n millionlab o‘quvchilarni qamrab olishni maqsad qilgan. 7-13 Dekabr kunlari
     Informatika ta'limi haftaligiga qo‘shiling.
-  volunteer_engineer_submission_intro_guide: <a href="%{volunteer_guide}"> Ko'ngillilar
-    dasturi haqida bu yerda </a> bilib oling.
   volunteer_engineer_submission_intro_guide_markdown: Ko'ngillilar dasturi haqida
     [bu yerda](%{volunteer_guide}) bilib oling.
-  volunteer_engineer_submission_intro_links: Are you a teacher looking for volunteers?
-    Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_intro_links_markdown: Are you a teacher looking for
     volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Bu o‘qituvchilar darslariga yordami
-    tegadigan, <span style="font-family: ''Gotham 7r'', sans-serif;">informatikani
-    o‘qitishga qiziqqan</span> yoki o‘quvchilarini Informatika ilmi imkoniyatlari
-    haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin) <span style="font-family:
-    ''Gotham 7r'', sans-serif;">ilhomlantira oladigan</span> insonlarni qo‘shilishidan
-    bag‘oyatda minnatdor. Agar siz ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash
-    soatini tashkillashtirish haqida <a href="%{url}">batafsil o‘rganing</a>.'
   volunteer_engineer_submission_intro_recruit_markdown: Bu o‘qituvchilar darslariga
     yordami tegadigan, informatikani o‘qitishga qiziqqan yoki o‘quvchilarini Informatika
     ilmi imkoniyatlari haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin)
     ilhomlantira oladigan insonlarni qo‘shilishidan bag‘oyatda minnatdor. Agar siz
     ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash soatini tashkillashtirish haqida
     <a href="%{url}">batafsil o‘rganing</a>.
-  volunteer_engineer_submission_intro_signup: Informatika talabasi yoki dasturchi
-    bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. <span class="form-required-field">*</span>
-    belgili sohalarni to‘ldirish majburiy.
   volunteer_engineer_submission_intro_signup_markdown: Informatika talabasi yoki dasturchi
     bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. Ko'ngilli sifatida ro'yxatdan
     o'tish uchun siz kamida 18 yoshda bo'lishingiz kerak. Shuni esda tutingki, ushbu

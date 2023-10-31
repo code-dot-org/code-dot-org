@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-当你[注册编程一小时活动](/#join)时，你将收到有用的电子邮件通讯，其中包括新闻和举办成功的编程一小时活动的提示。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+[报名参加编程一小时活动后](/events)，您将收到有用的电子邮件通信，其中包含成功举办 “编程一小时” 的新闻和小贴士。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- []({{ urls/certificates }}) 为您的学生打印证书。
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
 

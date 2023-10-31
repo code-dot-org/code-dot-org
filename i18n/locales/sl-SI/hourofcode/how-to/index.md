@@ -8,7 +8,7 @@ title: Ura kode Navodila za uporabo
 
 ### Pridružite se gibanju in s temi koraki seznanite svoje študente računalništvu.
 
-Students today should learn how to create technology, not just use it.
+Študenti bi se morali danes naučiti ustvarjati tehnologijo, ne le uporabljati jo.
 
 Poskus ure kode je preprost in zabaven način, da študente seznanite z računalništvom, morda prvič! Poiščite dejavnost, ki ustreza vaši nastavitvi, bodisi v razredu ali po šoli, osebno ali virtualno. Oglejte si naš vodnik za [sodelovanje, če imate še vedno vprašanja]({{ localized_files/participation_guide }}) po preverjanju spodnjih korakov:
 
@@ -19,7 +19,7 @@ Poskus ure kode je preprost in zabaven način, da študente seznanite z računal
 - [Kako začeti svojo Uro kode močno](#how-to-start)
 - [Pridobite kodiranje](#code)
 - [Praznujte uspeh svojih učencev](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Drugi viri Hour of Code za vzgojitelje](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Ko se [prijavite na dogodek Hour of Code](/#join), boste prejeli koristne e-poštne komunikacije z novicami in nasveti za gostovanje uspešne ure kode. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Ko se prijav [ite na dogodek Hour of Code](/events), boste prejeli koristna e-poštna sporočila z novicami in nasveti za uspešno gostovanje ure kode. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Natisnite potr]({{ urls/certificates }}) dila za svoje študente.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Delite fotografije in videoposnetke dogodka Hour of Code na družbenih omrežjih. Uporabite #HourOfCode in @codeorg, da lahko poudarimo tudi vaš uspeh!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Drugi viri ure kodeksa za vzgojitelje:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Preglejte [pogosta vprašanja o uri kode](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Kaj pride po Uri za kodo?
 

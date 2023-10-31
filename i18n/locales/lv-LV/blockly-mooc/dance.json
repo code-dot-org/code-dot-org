@@ -1,13 +1,13 @@
 {
+  "danceFeedbackNeedDifferentDance": "Izmanto citu deju.",
+  "danceFeedbackNeedEveryTwoMeasures": "Pārliecinies, vai izmanto bloku 'katras 2 ritma kustības' (every 2 measures)",
+  "danceFeedbackNeedMakeANewDancer": "Izmanto 'izveidot jaunu' bloku lai izveidotu otru dejotāju.",
   "danceFeedbackNeedNewDancer": "Jāizveido dejotājs.",
-  "danceFeedbackNoDancers": "Tev nav dejotāji.",
   "danceFeedbackNoBackground": "Jums nepieciešams pievienot fona efektu.",
+  "danceFeedbackNoDancers": "Tev nav dejotāji.",
+  "danceFeedbackStartNewMove": "Tavs dejotājs neveiks jaunu kustību pēc ceturtās ritma kustības.",
   "danceFeedbackTooManyDancers": "Uzmanies! Ja ievietosi 'izveidot jaunu' bloku iekš 'katras 2 ritma kustības', tu izveidosi ļoti daudz dejotāju.",
   "danceFeedbackUseSetSize": "Lai izveidotu šo dejotāju mazāku, lieto bloku 'set backup_dancer2 size'.",
   "danceFeedbackUseSetTint": "Izmantojiet \"set tint\" bloku, lai mainītu dejotāja toni.",
-  "danceFeedbackUseStartMapping": "Mēģini pievienot <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloku savā programmā.",
-  "danceFeedbackStartNewMove": "Tavs dejotājs neveiks jaunu kustību pēc ceturtās ritma kustības.",
-  "danceFeedbackNeedDifferentDance": "Izmanto citu deju.",
-  "danceFeedbackNeedEveryTwoMeasures": "Pārliecinies, vai izmanto bloku 'katras 2 ritma kustības' (every 2 measures)",
-  "danceFeedbackNeedMakeANewDancer": "Izmanto 'izveidot jaunu' bloku lai izveidotu otru dejotāju."
+  "danceFeedbackUseStartMapping": "Mēģini pievienot <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloku savā programmā."
 }
