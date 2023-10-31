@@ -1,90 +1,90 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Hour of Code -opas koulun jälkeen
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Kuinka opettaa yhden tunnin koodia koulun jälkeisissä tunneissa ja klubeissa
 
 ### Liity liikkeeseen ja esittele oppilaasi tietojenkäsittelytieteeseen näiden vaiheiden avulla.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Laskennallinen ajattelu auttaa vaalimaan ongelmanratkaisutaitoja, logiikkaa ja luovuutta. Ja teknologia muuttaa kaikkia teollisuudenaloja planeetalla. Nykypäivän opiskelijoiden tulisi oppia luomaan tekniikkaa, ei vain käyttämään sitä. Aloittamalla aikaisin, heillä on perusta menestykselle millä tahansa 2000-luvun urapolulla.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Koodin tunnin kokeilu on yksinkertainen ja hauska tapa tutustuttaa opiskelijat tietojenkäsittelytieteeseen, ehkä ensimmäistä kertaa. Jos haluat ylimääräisen käden avuksi, voit löytää [paikallisen vapaaehtoisen auttamaan Hour of Code]({{ urls/volunteer_local }}) -tapahtuman järjestämisessä koulun jälkeisessä luokassa tai klubilla.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Hour of Code voidaan isännöidä myös etänä! Aloita tutustumalla [vinkkeihimme virtuaalisen Hour of Code -tapahtuman järjestämiseen](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Katso tämä ohjevideo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-## 2. Choose a tutorial
+## 2. Valitse opetusohjelma
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Tarjoamme erilaisia [hauskoja, tunnin mittaisia opetusohjelmia kaikenikä]({{ urls/learn }}) isille osallistujille, jotka ovat luoneet erilaiset kumppanit. [Kokeile niitä!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Kaikki Hour of Code -opetusohjelmat** vaativat järjestäjiltä vain vähän valmistautumisaikaa ja ovat itseohjautuvia, joten lapset voivat työskennellä omassa tahdissaan ja taitotasollaan.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Tarvitsetko tuntisuunnitelman koulun jälkeiselle Hour of Code -tuntisuunnitelmalle?** Katso tämä [malli](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Mainosta Hour of Code
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Mainosta Hour of Code -sovellu [stasi näillä työkal]({{ urls/promote }}) uilla ja rohkaise muita järjestämään omia tapahtumiaan.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Suunnittele teknologiatarpeesi - tietokoneet ovat valinnaisia
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Mutta et **** tarvitse tietokonetta jokaiselle lapselle, ja voit jopa tehdä koodin tunnin ilman tietokonetta ollenkaan.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Onko sinulla alhainen kaistanleveys?** Suunnittele videoiden näyttäminen luokan edessä, jotta jokainen oppilas ei lataa omia videoitaan. Tai kokeile irrotettuja/offline-opetusohjelmia.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Eikö sinulla ole tarpeeksi laitteita?** Käytä pari [ohjelmointia](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Aloita Hour of Code -ohjelma inspiroivalla videolla
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Alkuperäinen Code.org-julkaisuvideo, jossa esiintyvät Bill Gates, Mark Zuckerberg ja NBA-tähti Chris Bosh - saatavilla on [1 minuutin](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuutin](https://www.youtube.com/watch?v=nKIu9yen5nc)ja [9 minuutin](https://www.youtube.com/watch?v=dU1xS07N-FA) versiot.
+- Koo [din tunti maailmanlaajuinen video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Presidentti Obama kehottaa kaikkia opiskelijoita oppimaan tietojenkäsittelytiedettä](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Löydät lisää inspiroivia videoita [täältä](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Se on okei, jos olet uusi tietotekniikkaan. Tässä on pari ideaa joiden avulle pääset alkuun koodaustunnillasi:**
 
 - Kerro miten tekniikka vaikuttaa elämiimme, kerro esimerkkejä jotka vaikuttavat kaikkien ihmisten elämiin(Kerro ohjelmista ja tekniikoista joita käytetään pelastamaan ihmisiä, auttamaan ihmisiä, yhdistämään ihmisiä jne).
 - Luettele esineitä, jotka käyttävät koodia jokapäiväisessä elämässä.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Katso vinkkejä tyttöjen kiinnostumiseen tietojenkäsittelytiete [estä täältä]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Tarvitsetko lisää opastusta?** Lataa tämä [malli tuntisuunnitelma](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Koodi!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Ohjaa osallistujat aktivite** ettiin - Kirjoita opetuslinkki taululle. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Kun joku kohtaa vaikeuksia, on hyvä vastata:** - ”En tiedä. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Mitä tehdä, jos joku lopettaa aikaisin?** - Kannusta osallistujia kokeilemaan toista Hour of Code -toimintaa osoitteessa [hourofcode.com/learn]({{ urls/learn }}) - Tai pyydä aikaisin lopettaneita auttamaan muita, joilla on ongelmia.
 
-## 7. Celebrate
+## 7. Juhli
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Tulosta todist]({{ urls/certificates }}) ukset opiskelijoillesi.
+- [Tulosta ”Tein tunnin koodin!”]({{ promote/resources_stickers }}) tarroja opiskelijoillesi.
+- [Tilaa räätälöityjä t-pait](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) oja osallistujille.
 - Jaa kuvia ja videoita sinun koodaustunnistasi sosiaalisessa mediassa. Kaytä #HourOfCode ja @codeorg jotta voimme korostaa sinun onnistumista, myös!
 
-## Other Hour of Code resources for educators
+## Muut Hour of Code -resurssit opettajille
 
 - Katso [parhaat harjoitukset](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) meidän vanhoilta koodaustunti järjestäjiltä.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Katso tallenne opettajan op [paasta Hour of Code -verkkoseminaarista](https://youtu.be/EJeMeSW2-Mw).
 - Katso [Koodaustunti Foorumi](http://forum.code.org/c/plc/hour-of-code) jotta saat neuvoja, tietoja ja tukea muilta järjestäjiltä.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Tutustu H [our of Code -usein kysyttyihin kysymyksiin](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Mitä koodaustunnin jälkeen?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Hour of Code on vasta ensimmäinen askel matkalla oppia lisää tekniikan toiminnasta ja ohjelmistosovellusten luomisesta. Auta oppilaita jatkamaan matkaansa ja rohkaise [heitä oppimaan lisää verkossa](/beyond)!
 
 {{ signup_button }}

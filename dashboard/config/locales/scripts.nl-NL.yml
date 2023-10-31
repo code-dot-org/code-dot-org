@@ -3222,10 +3222,19 @@ nl:
         virtual-pl-csa-summer-2024-day1:
           title: Dag 1
         virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introductie
+          lessons:
+            lesson-7:
+              name: Introductie
           title: Dag 1
         virtual-pl-csa-summer-day2:
           title: Dag 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introductie
           title: Dag 3
         virtual-pl-csa-summer-day4:
           title: Dag 4
@@ -3258,6 +3267,9 @@ nl:
         virtual-pl-csp-summer-day1:
           title: Dag 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introductie
           title: Dag 2
         virtual-pl-csp-summer-day3:
           title: Dag 3

@@ -65,6 +65,11 @@ uz:
             '"measures"': o'lchovlar
             '"seconds"': soniyalar
         text: " {TIMESTAMP} {UNIT} dan keyin"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -559,6 +564,50 @@ uz:
             '"electronic"': Elektronik
             '"iceCream"': Muzqaymoq
             '"neon"': Neon
+            '"rave"': Qora va oq
+            '"tropical"': Tropik
+            '"vintage"': Vintaj
+            '"warm"': Iliq
+        text: |-
+          orqa fon effektini
+          {PALETTE} {EFFECT} ga sozlash
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Aylanalar
+            '"color_cycle"': Ranglar
+            '"diamonds"': Brilliantlar
+            '"disco"': Kvadratlar
+            '"disco_ball"': Disko to'p
+            '"fireworks"': Feyerverklar
+            '"flowers"': Gullar
+            '"galaxy"': Qoinot
+            '"growing_stars"': O'sib borayotgan yulduzlar
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazerli raqs maydonchasi
+            '"music_wave"': Toʻlqinlar
+            '"none"': Hech biri
+            '"quads"': Burchaklar
+            '"rainbow"': Kamalak
+            '"rand"': "(Tasodifiy)"
+            '"ripples"': To‘lqinlar
+            '"ripples_random"': Tasodifiy to‘lqinlar
+            '"snowflakes"': Qor
+            '"sparkles"': Uchqunlar
+            '"spiral"': Spiral
+            '"splatter"': Bo'yoq sachratmalari
+            '"squiggles"': Siqilish (burmalar)
+            '"starburst"': Yulduzlar to'plami
+            '"stars"': Yulduzlar
+            '"swirl"': Gipno
+            '"text"': Qo'shiq nomlari
+          PALETTE:
+            '"cool"': Zo'r
+            '"default"': Chiroq
+            '"electronic"': Elektronik
+            '"iceCream"': Muzqaymoq
+            '"neon"': Neon
+            '"rainbow"': Kamalak
             '"rave"': Qora va oq
             '"tropical"': Tropik
             '"vintage"': Vintaj

@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Koda stundas pamācība uzņēmumiem
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Kā jūsu uzņēmums var iesaistīties koda stundā
 
-### Find out how you and your employees can inspire students to try computer science!
+### Uzziniet, kā jūs un jūsu darbinieki varat iedvesmot studentus izmēģināt datorzinātnes!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Skaitļošanas domāšana palīdz attīstīt problēmu risināšanas prasmes, loģiku un radošumu. Un tehnoloģijas pārveido katru nozari uz planētas. Mūsdienās studentiem vajadzētu iemācīties radīt tehnoloģijas, nevis tikai tās izmantot. Sākot agri, viņiem būs pamats panākumiem jebkurā 21. gadsimta karjeras ceļā.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+Koda stundas kampaņas laikā jūsu uzņēmums var palīdzēt palielināt izpratni par datorzinātņu kustību. Neatkarīgi no tā, vai jūs brīvprātīgi strādājat kā indivīds vai plānojat pasākumu savam uzņēmumam, visi jūsu centieni var milzīgi ietekmēt to, kā jaunas sievietes un studenti no atstumtām rasu un etniskajām grupām uztver datorzinātni un savu potenciālu.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Lai sāktu darbu, iepazīstieties ar tālāk norādītajām darbībām, un skatiet mūsu [ceļvedi korporatīvaj](/files/hoc-corporate-toolkit.pdf) iem partneriem, lai uzzinātu vairāk par to, kā satraukt savu uzņēmumu par koda stundu.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Sazinieties ar vietējo skolu](#connect-with-a-school)
+- [Mudiniet darbiniekus brīvprātīgi darboties klasē](#encourage-employees)
+- [Rīkojiet savu kodu stundas pasākumu](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Vairāk veidu, kā atbalstīt koda stundu](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Sazinieties ar vietējo skolu
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Vienmēr vislabāk ir sākt lokāli, ar skolām, ar kurām jums vai jūsu darbiniekiem ir cieša saikne, piemēram, alma mater, bērnu skolu vai vietējo organizāciju vai skolu, kas ir vērsta uz iedzīvotāju apkalpošanu, kuri vēsturiski ir bijuši nepietiekami pārstāvēti datorzinātnēs.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+No turienes jūs varat apmeklēt skolas vietni, lai atrastu atbilstošus kontaktus, ar kuriem sazināties, piemēram, direktoru, direktora vietnieku, tehnoloģiju vai datorzinātņu instruktorus vai pat skolas PTSA. Jūs varētu arī sadarboties ar tādām organizācijām kā Amerikas zēnu me & iteņu klubi, YMCA filiāle un citas, lai līdzvadītu pasākumu.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Ja nevarat [sazināties ar skolu, lūdzu, sazinieties ar mums,](https://support.code.org/hc/en-us/requests/new) un mēs, ja iespējams, sazināsimies ar kādu no mūsu vietējiem partneriem.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Mudiniet darbiniekus brīvprātīgi darboties klasē
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Viens no vispiedīgākajiem veidiem, kā piedalīties koda stundā, ir brīvprātīgi darboties vietējā klasē klātienē vai virtuāli. Vislabākais ir tas, ka jums nav jābūt inženierim, lai brīvprātīgi darbotos. Jūs joprojām varat sniegt studentiem jēgpilnu pieredzi, daloties savā karjeras pieredzē un tajā, kā CS vai tehnoloģija ir ietekmējusi jūsu lomu.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Reģistrējieties brīvprātīgajam</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Kad brīvprātīgais reģistrējas, skolotājs var pārskatīt savu profilu mūsu brīv [prātīgo kartē](https://code.org/volunteer/local) - tāpēc profili jāiesniedz pēc iespējas pilnīgāki. Ja esat piemērots viņu klasei, skolotājs sazināsies ar jums, izmantojot platformu (mēs nekad nekopīgosim jūsu e-pasta adresi ar skolotāju). Pēc tam jūs varat saskaņot informāciju tieši ar skolotāju par to, [kā vislabāk brīvprātīgi darboties savā klasē](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Lai iegūtu vairāk norādījumus par brīvprātīgo darbu un ziņojumapmaiņas paraugus, lai jūsu uzņēmums būtu sajūsmā par koda stundu, skatiet mūsu [ceļvedi korporatīvajiem partneriem]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
-<h4><font color="00adbc"><i>"BIJU SAJŪSMĀ redzot, cik aizrautīgi bija bērni. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>"BIJU SAJŪSMĀ redzot, cik aizrautīgi bija bērni. Viena pārsteidzoša lieta bija tā, ka skolotāji pamanīja, ka daži studenti, kuriem akadēmiski neveicās tik labi, izcili domāja kā izstrādātājs un palīdzēja citiem - dodot viņiem vietu, kur justies pārliecināti.”</i></font></h4>
 
--Hour of Code volunteer
+- Hour of Code brīvprātīgais
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Rīkojiet savu kodu stundas pasākumu
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Ja vēlaties veikt papildu jūdzi, jūsu uzņēmums var rīkot arī koda stundas pasākumu. Nav konkrētas formulas pasākuma rīkošanai, tāpēc mēs aicinām jūs būt radošiem! Ņemot vērā, ka mūsu darbinieku lielums ir mazs (bet varens!) , Code.org nav komandas, kas veltīta koda stundas pasākumu koordinēšanai. Tomēr šeit ir daži padomi, kā sākt darbu.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Noskatieties šo instrukciju videoklipu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Noteikt notikuma datumu, formātu un atrašanās vietu
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Mēs esam redzējuši pasākumus, kas ir [virtuāli](https://hourofcode.com/us/how-to/virtual) vai klātienē, uzņēmuma birojā vai notiek kopienā un visu vecumu studentiem! Varat arī apskatīt, ko citi [korporatīvie partner](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) i un ziedotāji ir [darī](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) juši pagātnē, lai iegūtu dažas iedvesmojošas idejas.
 
 <br />
 
-#### Sample Agenda:
+#### Darba kārtības paraugs:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Laiks | Darba kārtības punkts | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minūtes | Parādīt [iedvesmojošu video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minūtes | Iepazīstiniet sevi un uzziniet vairāk par studentiem: Kur jūs strādājat, ko jūs darāt un kas jums patīk visvairāk savā darbā? Kas vai kurš jūs iedvesmoja? Kā jūs interesējāties par datorzinātnēm? Vai jums bija mentors? Uzdodiet studentiem jautājumus un atstājiet laiku jautājumiem&A. | |30-60 minūtes | Kods! Ja jūsu pasākums notiek klātienē, šis ir laiks atbildēt uz jautājumiem un vadīt studentus ar grūtām mīklām. Centieties nesniegt viņiem tiešu risinājumu, tā vietā mēģiniet uzdot viņiem jautājumus, lai viņi paši varētu atbildēt, kas notika greizi, un mudināt studentus uzdot viens otram, ja viņiem ir jautājumi. Ja praktiski strādājat brīvprātīgo darbu, sadarbojieties ar skolotāju par to, kāda varētu būt labākā pieeja. Var būt jēgāk atgriezties sesijas beigās, lai redzētu, kādu progresu studenti ir guvuši. | | |1-3 minūtes | Paldies visiem un dalieties iedvesmojošos atvadīšanās vārdos. Izdaliet jebkuru sava uzņēmuma krājumu (uz[līmes](#celebrate) ir lieliskas)! | | <br />
 
-#### Other ideas to add to your event
+#### Citas idejas, ko pievienot savam pasākumam
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Paskaidrojiet, kā tehnoloģija ietekmē mūsu dzīvi, ar piemēriem, par kuriem rūpēsies visas izcelsmes studenti - runājiet par tehnoloģijām, kas glābj dzīvības, palīdz cilvēkiem, savieno cilvēkus.
+- Ja esat tehnoloģiju uzņēmums, demonstrējiet jautrus, novatoriskus produktus, pie kuriem jūsu uzņēmums strādā. Ja neesat tehnoloģiju uzņēmums, apspriediet veidus, kā jūsu uzņēmums izmanto tehnoloģijas problēmu risināšanai un mērķu sasniegšanai.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 
-### 3. Plan your technology needs
+### 3. Plānojiet savas tehnoloģiju vajadzības
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Ierīces:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Lai veiktu atvienotas darbības, vienkārši filtrējiet sadaļu Klases tehnoloģija, lai parādītu opcijas “Nav datoru vai ierīču”.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. Kad studenti sadarbojas, viņi palīdz viens otram un mazāk paļaujas uz skolotāju. Viņiem arī būs iespēja ievērot, ka datorzinātne ir sociāla un raisa sadarbību.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Pārbaudes darbības** datoros vai ierīcēs. Pārliecinieties, ka tie darbojas pareizi pārlūkprogrammās ar skaņu un video.
+- **Vai jums nav pietiekami daudz ierīču?** Izmantojiet pāra programmēšanu. Kad studenti sadarbojas, viņi palīdz viens otram un mazāk paļaujas uz skolotāju. Viņiem arī būs iespēja ievērot, ka datorzinātne ir sociāla un raisa sadarbību.
+- **Nodrošiniet dalīb** niekiem austiņas vai palūdziet viņiem paņemt līdzi savas, ja viņi izmēģinās apmācības, kas vislabāk darbojas ar skaņām.
+- **Vai jums ir zems joslas plat**ums? Plānojiet videoklipus parādīt pasākuma priekšpusē, lai katrs dalībnieks nelejupielādētu savus videoklipus. Vai arī izmēģiniet atvienotās /bezsaistes darbības.
 
-#### Virtual Events:
+#### Virtuālie pasākumi:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Ja jūsu pasākums būs virtuāls, pirms pasākuma vēlaties izlemt par savu konferences platformu (un pārbaudīt to). Tas var ietekmēt studentu skaitu, ar kuriem jūtaties ērti, iesaistot, tāpēc vislabāk to noteikt pirms uzaicināšanas uz klasi vai veicināt savu pasākumu. Lai iegūtu idejas, kā vadīt attālinātu koda stundu, izlasiet mūsu [padomus virtuālajam koda stundas pasākumam](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Izvēlieties aktivitāti
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Mēs piedāvājam dažādas jautras, studentu vadītas apmācības visām vecuma grupām un pieredzes līmeņiem. Studentiem ir populāri izmēģināt pašvadītas apmācības, lai gan jūs, iespējams, vēlēsities sākt pasākumu ar iedvesmojošu [video, kuru visi var](https://hourofcode.com/us/promote/resources#videos) apskatīt kopā.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Izpētiet aktiv</a> itātes un pirms laika izlemiet, vai vēlaties izvēlēties vienu apmācību visiem saviem viesiem, vai ļaujiet katram bērnam izvēlēties savu. **Visām koda stundas aktivitātēm ir** nepieciešams minimāls sagatavošanās laiks, un tās ir pašvadāmas - ļaujot dalībniekiem strādāt savā tempā un prasmju līmenī.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Kad jums ir izveidots stabils sava pasākuma ceļvedis, varat sākt uzaicināt skolēnus, skolu vai lielāku kopienu. Mēs iesakām sākt ar vietējo skolu, ar kuru jums ir attiecības, vai [pārlūkot mūsu Koda stundas notikumu karti](https://hourofcode.com/us/map) .
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Svinēt
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Pēc tam, kad studenti vai viesi ir pabeiguši kodu stundu, ir pienācis laiks svinēt viņu panākumus. Šeit ir dažas idejas, kā padarīt jūsu pasākumu vēl jautrāku:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Drukāt “Es izdarīju koda stundu! uzlīmes”]({{ promote/resources_stickers }}) vai atrodiet citas balvas un krājumus [Code.org Amazon veikalā.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. Izmanto [jiet #HourOfCode](https://twitter.com/hashtag/hourofcode) un [@codeorg,](https://twitter.com/codeorg) lai mēs varētu izcelt arī jūsu panākumus!
 
 * * *
 
@@ -129,56 +129,56 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promote the Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Viens no labākajiem veidiem, kā palīdzēt, ir izplatīt vārdu un popularizēt koda stundu.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Reģistrējiet savu pasākumu
 
-[Reģistrējoties “Kodēšanas stundas” notikumam](/#join), jūs saņemsit noderīgus e-pasta ziņojumus ar jaunumiem un padomiem veiksmīgas kodēšanas stundas viesošanai. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Reģistr [ējoties Koda stundas pasākumam](/events), jūs saņemsiet noderīgu e-pasta ziņojumu ar jaunumiem un padomiem veiksmīgas koda stundas rīkošanai. Tas ir arī veids, kā jūs varat informēt vietējām skolām vai vecākiem, ka rīkojat pasākumu viņu tuvumā.
 
-### 2. Post on Social Media
+### 2. Ievietot sociālajos medijos
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Palīdziet palielināt izpratni par datorzinātņu kustību, izmantojot šo satura paraugu, ko publicēt sociālajos medijos un dalīties ar saviem darbiniekiem.
 
-#### Hour of Code general announcement
+#### Kodeksa stundas vispārējs paziņojums
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Datorzinātne maina mūsu pasauli. Palīdziet studentiem piedalīties šajās izmaiņās, sākot ar vienu #HourOfCode. https://hourofcode.com/
+- Nelietojiet tikai tehnoloģijas — uzziniet, kā to veidot. Palīdziet kādam sākt ar #HourOfCode. https://hourofcode.com/
 
-#### Stats
+#### Statistika
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Vai zinājāt, ka tikai 53% ASV skolu māca datorzinātnes? Dodiet katram studentam iespēju iemācīties vienu #HourOfCode https://hourofcode.com/
+- ASV tikai 26% programmatūras profesionāļu ir sievietes. Iepazīstiniet vairāk jaunu sieviešu ar datorzinātnēm ar #HourOfCode https://hourofcode.com/
+- 67% skaitļošanas darbu ASV nav tehnoloģiju nozarē. Palīdziet datorzinātnes iekļaut standarta mācību programmā ar #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Izveidojiet savu
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Viens #HourOfCode var novest pie [aizpildiet savu stāstu]. https://hourofcode.com/
+- Es atbalstu #HourOfCode, jo [aizpildiet savas domas]. Pievienojieties mums https://hourofcode.com
 
-#### Engineer-specific
+#### Specifisks inženieriem
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Ja jūsu pirmā koda rinda mainīja jūsu dzīvi, palīdziet tuvējiem studentiem uzrakstīt savu pirmo #HourOfCode https://code.org/volunteer
+- Ja iemācījāties kodēt - kāds ir jūsu stāsts? Iedvesmojiet studentu tuvumā, izmantojot viņu pirmo #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Atrodiet vairāk</a> plakātu, videoklipu, uzlīmju un citu veidu, kā reklamēt savu pasākumu savā kopienā.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Vairāk veidu, kā atbalstīt koda stundu
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- Izplatiet izpratni, valkājot [Code.org vāku](https://store.code.org/) (visi ieņēmumi tiek novirzīti, lai atbalstītu vairāk studentu piekļuvi datorzinātņu izglītībai).
+- Izvēlieties izmantot Code.org, iepērkoties vietnē [Amazon](https://code.org/donate/amazonsmile)Smile.
+- Palūdziet savam izpilddirektoram nosūtīt uzņēmuma mēroga e-pastu, uzsverot datorzinātņu nozīmi un mudinot darbiniekus izplatīt šo vārdu.
+- Izklaidējieties ar kolēģiem dāvināšanas kam [](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)paņā.
+- [Parakstiet šo lū](https://code.org/promote) gumrakstu, lai pārliecinātos, ka katram studentam ir iespēja apgūt datorzinātnes.
+- [Zie](https://code.org/donate) dojiet Code.org, lai mēs varētu saglabāt savus izglītības resursus bezmaksas un pieejamus visiem.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Lai iegūtu vairāk ieteikumu, kā atbalstīt Code.org un koda stundu, apmekl [ējiet vietni Code.org/Help](https://code.org/help)
 
 {{ signup_button }}

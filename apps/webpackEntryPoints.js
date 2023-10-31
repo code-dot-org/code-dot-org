@@ -170,11 +170,10 @@ const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
   'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-  'code.org/public/student/middle-high': './src/sites/code.org/pages/public/student/middle-high.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/public/administrators': './src/sites/code.org/pages/public/administrators.js',
+  'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
   'code.org/views/regional_partner_search': './src/sites/code.org/pages/views/regional_partner_search.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',

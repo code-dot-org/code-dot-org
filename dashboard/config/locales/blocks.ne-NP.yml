@@ -48,6 +48,11 @@ ne:
             '"measures"': मापनहरु
             '"seconds"': seconds
         text: पछि
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': मापनहरु
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -291,6 +296,10 @@ ne:
       Dancelab_randomColor:
         text: कुनै एक  रङ
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': अनियमित
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"rand"': अनियमित

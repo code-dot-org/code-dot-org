@@ -24,7 +24,7 @@ section.banner {
     }
 
     @media screen and (max-width: $width-sm) {
-      padding: 1em 1em 4em;
+      padding: 1em 0 4em;
       width: 88%;
     }
   }
@@ -41,7 +41,7 @@ section.banner {
 
   h1 {
     font-size: 4rem;
-    margin-top: 0;
+    margin: 0 auto 0.75rem;
     color: #00FFF5;
 
     @media screen and (max-width: $width-md) {
@@ -70,29 +70,60 @@ section.banner.homepage {
   padding: 0;
 
   .wrapper {
-    max-width: 660px;
+    max-width: 800px;
     padding: 2em 0 7em;
 
     @media screen and (max-width: $width-sm) {
-      padding: 3em 1em 5em;
+      padding: 3em 0 5em;
     }
   }
 
-  .button-wrapper {
+  i {
+    margin: 0 4px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .side-by-side-cta-wrapper {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 2rem;
 
-    .ctabutton {
-      background-color: $neutral_white;
-      border: 2px solid $neutral_white;
-      color: $neutral_dark;
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1rem;
 
-      &.secondary {
-        background: none;
-        border: 2px solid $neutral_white;
-        color: $neutral_white;
+      &:first-child {
+        border-bottom: 1px solid var(--neutral_dark60);
+        padding: 0 0 2rem 0;
+
+        @media (min-width: $width-sm) {
+          &:first-child {
+            border-bottom: 0;
+            border-right: 1px solid var(--neutral_dark60);
+            padding: 0 2rem 0 0;
+
+            html[dir="rtl"] & {
+              border-right: 0;
+              border-left: 1px solid var(--neutral_dark60);
+              padding: 0 0 0 2rem;
+            }
+          }
+        }
+      }
+
+      a.link-button {
+        text-decoration: none;
+
+        &.secondary {
+          background-color: #121212;
+        }
       }
     }
   }

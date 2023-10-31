@@ -673,12 +673,38 @@ sq:
       colombian_chilean_school_name: Emri i shkollës
       email: Email
       email_opt_in: A mund t'ju dërgojmë email në lidhje me programin ndërkombëtar
-        të Code.org, azhurnimet në kurset tona ose lajme të tjera të shkencave kompjuterike?
+        të Code.org, përditësimet në kurset tona ose lajme të tjera të shkencave kompjuterike?
+      first_name: Emri
+      first_name_preferred: Emri i preferuar
+      last_name: Mbiemri
+      legal_opt_in: 'Duke dorëzuar këtë formular, ju pranoni të lejoni Code.org të
+        ndajë informacione se si e përdorni Code.org dhe burimet e të mësuarit profesional
+        me Partnerët ndërkombëtarë të Code.org në vendin tuaj. Ne do të ndajmë me
+        këta partnerë informacionin tuaj të kontaktit (si emri dhe adresa e emailit),
+        informacionin që jepni për shkollën tuaj, cilat kurse/njësi po përdorni dhe
+        të dhëna të përmbledhura rreth këtyre kurseve (si p.sh. numri i studentëve
+        që përdorin çdo kurs ). Ne nuk do të ndajmë asnjë informacion për nxënësit
+        me partnerët tanë: të gjitha informacionet e nxënësve do të çidentifikohen
+        dhe grumbullohen. Partnerët dhe fasilitorët tanë ndërkombëtarë janë të detyruar
+        kontraktualisht ta trajtojnë këtë informacion me të njëjtin nivel konfidencialiteti
+        si Code.org.'
       school: Shkolla
-      school_country: Qyteti i shkollës
+      school_city: Qyteti
+      school_country: Shteti
       school_name: Emri i shkollës
-      workshop_course: Kursi i punëtorisë
-      workshop_organizer: Organizuesi i punëtorisë
+      workshop_course: Kursi i trajnimit
+      workshop_organizer: Organizatori i trajnimit
+    international_opt_in:
+      instructions: Ju lutemi plotësoni formularin më poshtë për të treguar se 1)
+        keni marrë pjesë në një trajnimi të drejtuar nga një nga partnerët ndërkombëtarë
+        të Code.org dhe 2) pranoni të ndani informacionin tuaj me partnerin tonë ndërkombëtar
+        në vendin tuaj në mënyrë që ata të mund të ndihmojnë për të mbështetur udhëtimin
+        tuaj si mësimdhënës i shkencave kompjuterike.
+      intro: Faleminderit që keni gjetë kohë për të marrë pjesë në trajnimin për kurrikulën
+        e Code.org. Misioni ynë për të sjellë mundësinë e edukimit në Shkencat Kompjuterike
+        për të gjithë fëmijët në të gjitha shkollat në mbarë botën nuk do të ishte
+        i mundur pa ju.
+      title: Pjesëmarrja në trajnim
   pdf_download: Shkarko PDF
   peer_review:
     accepted:

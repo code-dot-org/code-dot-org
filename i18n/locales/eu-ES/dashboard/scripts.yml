@@ -1203,3 +1203,18 @@ eu:
               display_name: Baldintzak
             lessonGroup-5:
               display_name: Aldagaiak
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Sarrera
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Sarrera
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Sarrera
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sarrera

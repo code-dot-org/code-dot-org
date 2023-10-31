@@ -1,8 +1,9 @@
 :root {
   /* Colors */
-  --brand_primary_light: #d5f1f4;
+  --brand_primary_light: #d6f2f5;
   --brand_primary_default: #008b9a;
   --brand_primary_dark: #176870;
+  --brand_secondary_light: #c7b4df;
   --brand_secondary_default: #5c3f7f;
   --brand_secondary_dark: #432d5c;
   --neutral_white: #FFFFFF;
@@ -29,6 +30,8 @@
   --bold-font-weight: 700;
   --extra-bold-font-weight: 800;
   --black-font-weight: 900;
+  /* Border radius */
+  --border-radius: 4px;
 }
 
 html {
@@ -265,6 +268,8 @@ td {
   border-style: solid;
   padding: 15px;
 }
+
+.flex-container { display: flex; }
 
 /* Centers a block-level element */
 .centered { text-align: center !important; }
@@ -512,7 +517,7 @@ a.link-button,
 button {
   align-items: flex-start;
   background-color: var(--brand_secondary_default);
-  border: 1px solid var(--brand_secondary_default);
+  border: 2px solid var(--brand_secondary_default);
   border-radius: 4px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
@@ -533,6 +538,39 @@ button {
 a.link-button:hover,
 button:hover {
   background-color: var(--brand_secondary_dark);
+  border-color: var(--brand_secondary_dark);
+}
+
+a.link-button.secondary {
+  background: none;
+  border: 2px solid var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
+}
+
+a.link-button.secondary:hover {
+  background-color: var(--neutral_dark10);
+}
+
+a.link-button.secondary {
+  background: none;
+  border: 2px solid var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
+}
+
+a.link-button.secondary:hover {
+  background-color: var(--neutral_dark10);
+}
+
+a.link-button.white {
+  background-color: var(--neutral_light);
+  border-color: var(--neutral_light);
+  color: var(--neutral_dark);
+}
+
+a.link-button.secondary.white {
+  background: none;
+  border-color: var(--neutral_white);
+  color: var(--neutral_white);
 }
 
 .continue-btn{
@@ -559,10 +597,10 @@ button:hover {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #7765a1;
+  background: var(--brand_secondary_light);
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: var(--brand_secondary_default);
 }
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 

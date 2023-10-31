@@ -982,7 +982,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2021": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "whats-for-lunch-testing/csd/2021": {
@@ -1000,23 +1000,23 @@
           "type": "Mənbə"
         },
         "design_mode_elements_1/csd/2021": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "changing_screens/csd/2021": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2021": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "multi-screen_apps/csd/2021": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2021": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "app-presentation/csd/2021": {
@@ -1051,7 +1051,7 @@
           "type": "Cavab kitabcası"
         },
         "how-computers-work-data-and-binary/csd/2021": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "unit_5_data_society/csd/2021": {
@@ -1147,7 +1147,7 @@
           "type": "Mənbə"
         },
         "responding_to_user_input_1/csd/2021": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "how_computers_word_hardware_software/csd/2021": {
@@ -1178,7 +1178,8 @@
           "type": "Mənbə"
         },
         "changing_sensor_scale/csd/2021": {
-          "type": "Mənbə"
+          "type": "Mənbə",
+          "name": "miqyas"
         },
         "date_and_change_events/csd/2021": {
           "type": "Mənbə"
@@ -1229,7 +1230,8 @@
           "type": "Mənbə"
         },
         "modifying_arrays/csd/2021": {
-          "type": "Mənbə"
+          "type": "Mənbə",
+          "name": "Massivlərin dəyişdirilməsi"
         },
         "accelerometer_events/csd/2021": {
           "name": "Akselerometr hadisələri",
@@ -3266,7 +3268,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2022": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "build_a_paper_prototype/csd/2022": {
@@ -3299,19 +3301,19 @@
           "type": "Video"
         },
         "changing_screens/csd/2022": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2022": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "multi-screen_apps/csd/2022": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2022": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "linking_prototype_screens/csd/2022": {
@@ -3375,7 +3377,7 @@
           "type": "Slaydlar"
         },
         "binary_and_data/csd/2022": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "representing_numbers_1/csd/2022": {
@@ -3498,7 +3500,8 @@
           "type": "Video"
         },
         "circuits_and_logic/csd/2022": {
-          "type": "Video"
+          "type": "Video",
+          "name": "Sxemlər və məntiq"
         },
         "circuit_playground/csd/2022": {
           "type": "Mənbə"
@@ -3614,7 +3617,8 @@
           "type": "Slaydlar"
         },
         "changing_sensor_scale/csd/2022": {
-          "type": "Mənbə"
+          "type": "Mənbə",
+          "name": "miqyas"
         },
         "date_and_change_events/csd/2022": {
           "type": "Mənbə"
@@ -3650,7 +3654,8 @@
           "type": "Mənbə"
         },
         "modifying_arrays/csd/2022": {
-          "type": "Mənbə"
+          "type": "Mənbə",
+          "name": "Massivlərin dəyişdirilməsi"
         },
         "functions_2/csd/2022": {
           "name": "Funksiyalar",
@@ -5797,7 +5802,8 @@
           "type": "Cavab kitabcası"
         },
         "programming_for_a_purpose/csd/2023": {
-          "type": "Slaydlar"
+          "type": "Slaydlar",
+          "name": "Məqsəd üçün proqramlaşdırma"
         },
         "animation_and_game_design_template/csd/2023": {
           "type": "Mənbə"
@@ -5893,21 +5899,26 @@
         },
         "sprite_properties_1/csd/2023": {
           "name": "Sprite Xüsusiyyətləri",
-          "type": "Slaydlar"
+          "type": "Slaydlar",
+          "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview"
         },
         "sprite_properties_needs_updating_/csd/2023": {
           "name": "Sprite Xüsusiyyətləri",
-          "type": "Video"
+          "type": "Video",
+          "url": "https://www.youtube.com/watch?v=5Op72oHFUnc"
         },
         "text/csd/2023": {
           "name": "mətn",
-          "type": "Slaydlar"
+          "type": "Slaydlar",
+          "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview"
         },
         "captioned_scenes/csd/2023": {
-          "type": "sərlövhə"
+          "type": "sərlövhə",
+          "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view"
         },
         "mini-project_-_captioned_scenes/csd/2023": {
-          "type": "Slaydlar"
+          "type": "Slaydlar",
+          "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview"
         },
         "flipbook_example_-_by_marnic_bos/csd/2023": {
           "type": "Video"
@@ -6145,7 +6156,7 @@
           "type": "Mənbə"
         },
         "design_mode_elements/csd/2023": {
-          "name": "Dizayn rejimi elementləri",
+          "name": "Dizayn rejimi elementləri,",
           "type": "Mənbə"
         },
         "prototype_testing/csd/2023": {
@@ -6178,22 +6189,22 @@
           "type": "Slaydlar"
         },
         "changing_screens/csd/2023": {
-          "name": "Ekranların dəyişdirilməsi",
+          "name": "Ekranların dəyişdirilməsi/",
           "type": "Mənbə"
         },
         "importing_screens/csd/2023": {
-          "name": "Ekranlar idxal olunur",
+          "name": "Ekranlar idxal olunur,",
           "type": "Mənbə"
         },
         "linking_prototype_screens/csd/2023": {
           "type": "Slaydlar"
         },
         "multi-screen_apps/csd/2023": {
-          "name": "Çox-ekranlı Tətbiqlər",
+          "name": "Çox-ekranlı Tətbiqlər,",
           "type": "Mənbə"
         },
         "responding_to_user_input/csd/2023": {
-          "name": "İstifadəçi input-una cavab",
+          "name": "İstifadəçi input-una cavab.",
           "type": "Mənbə"
         },
         "testing_the_app/csd/2023": {
@@ -6252,7 +6263,7 @@
           "type": "Slaydlar"
         },
         "binary_and_data/csd/2023": {
-          "name": "İkili və məlumat",
+          "name": "İkili və məlumat.",
           "type": "Video"
         },
         "representing_numbers_1/csd/2023": {
@@ -6366,7 +6377,8 @@
           "type": "Mənbə"
         },
         "circuits_and_logic/csd/2023": {
-          "type": "Video"
+          "type": "Video",
+          "name": "Sxemlər və məntiq"
         },
         "physical_output/csd/2023": {
           "type": "Mənbə"
@@ -6462,7 +6474,8 @@
           "type": "Slaydlar"
         },
         "changing_sensor_scale/csd/2023": {
-          "type": "Mənbə"
+          "type": "Mənbə",
+          "name": "miqyas"
         },
         "date_and_change_events/csd/2023": {
           "type": "Mənbə"
@@ -6491,7 +6504,8 @@
           "type": "Slaydlar"
         },
         "modifying_arrays/csd/2023": {
-          "type": "Mənbə"
+          "type": "Mənbə",
+          "name": "Massivlərin dəyişdirilməsi"
         },
         "playing_notes/csd/2023": {
           "name": "Notları Çalmaq",
@@ -8106,6 +8120,15 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Mənbə"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view"
+        },
+        "sprite_scene_planning/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view"
         }
       }
     }

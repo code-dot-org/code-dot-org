@@ -58,7 +58,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_onchange_mixin',
       'procedure_def_validator_helper',
       'procedure_defnoreturn_get_caller_block_mixin',
-      'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
       'procedure_def_mini_toolbox',
@@ -161,7 +160,7 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
 
     this.setOnChange(function () {
       if (!this.isInFlyout) {
-        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+        this.functionalSvg_.render();
       }
     });
   }
