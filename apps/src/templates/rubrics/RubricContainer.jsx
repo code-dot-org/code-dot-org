@@ -65,6 +65,11 @@ export default function RubricContainer({
     fetchAiEvaluations();
   }, [fetchAiEvaluations]);
 
+  // Currently the settings tab only provides a way to manually run AI.
+  // In the future, we should update or remove this conditional when we
+  // add more functionality to the settings tab.
+  const showSettings = canProvideFeedback && teacherHasEnabledAi;
+
   return (
     <div
       className={classnames(style.rubricContainer, {
@@ -78,7 +83,7 @@ export default function RubricContainer({
             isSelected={selectedTab === TAB_NAMES.RUBRIC}
             onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
           />
-          {canProvideFeedback && teacherHasEnabledAi && (
+          {showSettings && (
             <HeaderTab
               text={i18n.settings()}
               isSelected={selectedTab === TAB_NAMES.SETTINGS}
@@ -107,15 +112,17 @@ export default function RubricContainer({
         visible={selectedTab === TAB_NAMES.RUBRIC}
         aiEvaluations={aiEvaluations}
       />
-      <RubricSettings
-        canProvideFeedback={canProvideFeedback}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        updateTeacherAiSetting={setTeacherHasEnabledAi}
-        rubricId={rubric.id}
-        studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-        visible={selectedTab === TAB_NAMES.SETTINGS}
-        refreshAiEvaluations={fetchAiEvaluations}
-      />
+      {showSettings && (
+        <RubricSettings
+          canProvideFeedback={canProvideFeedback}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          updateTeacherAiSetting={setTeacherHasEnabledAi}
+          rubricId={rubric.id}
+          studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+          visible={selectedTab === TAB_NAMES.SETTINGS}
+          refreshAiEvaluations={fetchAiEvaluations}
+        />
+      )}
     </div>
   );
 }
