@@ -5,6 +5,10 @@ import {P5LabType} from '../constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {showLevelBuilderSaveButton} from '../../code-studio/header';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default class GameLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -69,6 +73,26 @@ export default class GameLab extends P5Lab {
   }
 
   runButtonClick() {
+    // For AI Rubrics Pilot
+    if (
+      experiments.isEnabled('ai-rubrics') &&
+      hasScriptData('script[data-rubricdata]')
+    ) {
+      const rubricData = getScriptData('rubricdata');
+      const script = document.querySelector('script[data-level]');
+      const config = JSON.parse(script.dataset.level);
+      const teacherId = getStore().getState().currentUser.userId;
+      const {rubric, studentLevelInfo} = rubricData;
+      if (studentLevelInfo && rubric.level.name === config.level_name) {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_RUN_BUTTON_CLICKED, {
+          unitName: config.script_name,
+          lessonName: rubric.lesson.name,
+          levelName: config.level_name,
+          studentUserId: studentLevelInfo.user_id,
+          teacherUserId: teacherId,
+        });
+      }
+    }
     if (!this.studioApp_.config.readonlyWorkspace) {
       $('.droplet-main-canvas').css(
         'background-color',
