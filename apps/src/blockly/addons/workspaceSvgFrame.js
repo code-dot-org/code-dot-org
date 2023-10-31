@@ -17,9 +17,18 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * @param {string} headerColor - The color for the frame's header.
    */
   constructor(workspace, text, className, textColor, headerColor) {
-    className = className || 'blocklyWorkspaceFrame';
+    className = className || 'blocklyWorkspaceSvgFrame';
     text = text || msg.function();
-    super(workspace, text, className, textColor, headerColor);
+    const cornerRadius = 4;
+    super(
+      workspace,
+      text,
+      className,
+      textColor,
+      headerColor,
+      frameSizes.WORKSPACE_HEADER_HEIGHT,
+      cornerRadius
+    );
 
     const frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;
     const frameY =
@@ -58,7 +67,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       this.element_.getMetricsManager().getMetrics().contentHeight +
       frameSizes.MARGIN_TOP +
       frameSizes.MARGIN_BOTTOM +
-      frameSizes.HEADER_HEIGHT;
+      frameSizes.WORKSPACE_HEADER_HEIGHT;
     // Increase the frame size to the full workspace.
     // Get the height and width of the rendered workspace, not including toolbox
     const viewMetrics = this.element_.getMetricsManager().getViewMetrics();
@@ -79,7 +88,10 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     this.frameClipRect_.setAttribute('y', frameY);
     this.frameBase_.setAttribute('y', frameY);
     this.frameHeader_.setAttribute('y', frameY);
-    this.frameText_.setAttribute('y', frameY + frameSizes.HEADER_HEIGHT / 2);
+    this.frameText_.setAttribute(
+      'y',
+      frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2
+    );
   }
 }
 

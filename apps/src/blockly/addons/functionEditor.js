@@ -347,7 +347,7 @@ export default class FunctionEditor {
     const returnValue = {
       ...blockConfig,
       x: 20,
-      y: 40,
+      y: 75,
     };
     return returnValue;
   }

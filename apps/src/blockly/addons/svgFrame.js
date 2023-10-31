@@ -13,14 +13,26 @@ export default class SvgFrame {
    * @param {string} className - The CSS class name for styling.
    * @param {string} textColor - The color for the frame's text.
    * @param {string} headerColor - The color for the frame's header.
+   * @param {number} [headerHeight] - An optional override for the header size, used for workspace frames.
+   * @param {number} [radius] - An optional override for the radius of the frame corners.
    */
-  constructor(element, text, className, textColor, headerColor) {
+  constructor(
+    element,
+    text,
+    className,
+    textColor,
+    headerColor,
+    headerHeight,
+    radius
+  ) {
     this.element_ = element;
     this.text = text || msg.block();
     this.className = className || 'svgFrame';
     this.textColor = textColor || color.white;
     this.headerColor = headerColor || color.light_gray;
     this.baseColor = color.lightest_gray;
+    this.headerHeight = headerHeight || frameSizes.BLOCK_HEADER_HEIGHT;
+    this.radius = radius || 15;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -63,7 +75,7 @@ export default class SvgFrame {
       {
         x: frameX,
         y: frameY,
-        height: frameSizes.HEADER_HEIGHT,
+        height: this.headerHeight,
       },
       clip
     );
@@ -75,8 +87,8 @@ export default class SvgFrame {
         y: frameY,
         fill: this.baseColor,
         stroke: this.headerColor,
-        rx: 15,
-        ry: 15,
+        rx: this.radius,
+        ry: this.radius,
       },
       this.frameGroup_
     );
@@ -87,14 +99,14 @@ export default class SvgFrame {
         x: frameX,
         y: frameY,
         fill: this.headerColor,
-        rx: 15,
-        ry: 15,
+        rx: this.radius,
+        ry: this.radius,
         'clip-path': `url(#frameClip${safeCharBlockId})`,
       },
       this.frameGroup_
     );
 
-    var frameTextVerticalPosition = frameY + frameSizes.HEADER_HEIGHT / 2;
+    var frameTextVerticalPosition = frameY + this.headerHeight / 2;
 
     this.frameText_ = Blockly.utils.dom.createSvgElement(
       'text',
@@ -112,7 +124,7 @@ export default class SvgFrame {
 
   getPadding() {
     return {
-      top: frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT,
+      top: frameSizes.MARGIN_TOP + this.headerHeight,
       right: frameSizes.MARGIN_SIDE,
       bottom: frameSizes.MARGIN_BOTTOM,
       left: frameSizes.MARGIN_SIDE,
@@ -153,7 +165,7 @@ export default class SvgFrame {
       groupRect.height +
         frameSizes.MARGIN_TOP +
         frameSizes.MARGIN_BOTTOM +
-        frameSizes.HEADER_HEIGHT;
+        this.headerHeight;
 
     this.frameClipRect_.setAttribute('width', width);
     this.frameBase_.setAttribute('width', width);

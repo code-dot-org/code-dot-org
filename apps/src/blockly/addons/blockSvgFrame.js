@@ -16,7 +16,7 @@ export default class BlockSvgFrame extends SvgFrame {
     super(block, text, className, textColor, headerColor);
 
     const frameX = -frameSizes.MARGIN_SIDE;
-    const frameY = -(frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT);
+    const frameY = -(frameSizes.MARGIN_TOP + frameSizes.BLOCK_HEADER_HEIGHT);
     super.initChildren(frameX, frameY);
   }
 }
