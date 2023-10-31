@@ -79,9 +79,37 @@ markdown <<MARKDOWN
 
 </details>
 
+<div style="clear:both"/>
+<hr style="clear:both">
+
+<details>
+<summary><strong>Simulating a Marine Ecosystem</strong></summary>
+
+##### In this science-related modules, students use coding to simulate a marine ecosystem, exploring the interdependencies between different organisms and their environment.
+
+
+
+<img src="https://images.code.org/180239721015627aa8308d465f3630cd-image-1698675368816.png" alt="Coastal ecosystem with crane, frogs, and dragonflies" width="300px">
+
+
+</details>
+
+<div style="clear:both"/>
+<hr style="clear:both">
+
+<details>
+<summary><strong>Coding Book Covers</strong></summary>
+
+#####  In this English Language Art module, students use code to create an animated cover of a book, using sprites and text to convey characters, setting, plot, and more.
+
+
+<img src="https://images.code.org/44d8f547d7ac497865eb5ad42c7016c8-image-1698675708913.png" alt="Coastal ecosystem with crane, frogs, and dragonflies" width="300px">
+
+
+</details>
+
 
 
 <div style="clear:both"/>
 
-![]()
 MARKDOWN
