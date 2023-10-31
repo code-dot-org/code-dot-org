@@ -16,13 +16,18 @@ theme: responsive_full_width
   .wrapper
     %h2 Available on Code.org
 
+= view :section_divider_line
+
 %section
   .wrapper
     %h2 Available in Minecraft Education
 
+= view :section_divider_line
+
 %section
   .wrapper
-    %h2 More coding resources
+    %h2=hoc_s(:heading_additional_resources)
+    = view :"minecraft/minecraft_resources"
 
 %section.bg-neutral-light
   .wrapper.centered

@@ -220,6 +220,7 @@
   call_to_action_hold_an_event: "Hold an event"
   call_to_action_register_event: "Register your event"
   call_to_action_register_your_hoc: "Register your Hour of Code"
+  call_to_action_register_now: "Register now"
   call_to_action_select_activity: "Select an activity"
   call_to_action_select_coding_activity: "Select a coding activity"
   call_to_action_start_activity: "Start an activity"
@@ -324,6 +325,7 @@
   call_to_action_learn_about_advocacy: "Learn about our advocacy"
   call_to_action_visit_store: "Visit the store"
   call_to_action_view_faqs: "View more FAQs"
+  call_to_action_view_resources: "View more resources"
   call_to_action_applications_open: "Applications now open"
   call_to_action_apply_cs_ambassador: "Apply to be a CS Ambassador"
   call_to_action_coming_soon: "Coming soon!"
@@ -394,6 +396,8 @@
   aria_label_call_to_action_how_ai_works_lesson_05: "See the Generative Images lesson details"
   aria_label_call_to_action_how_ai_works_lesson_06: "See the Algorithmic Bias lesson details"
   aria_label_call_to_action_how_ai_works_lesson_07: "See the Our AI Code of Ethics lesson details"
+  aria_label_call_to_action_register_student_workshop: "Register for a free student workshop"
+  aria_label_call_to_action_view_more_cs_resources: "View more computer science resources"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
@@ -614,6 +618,8 @@
   heading_cs_ambassador_program: "CS Ambassador Program"
   heading_featured_student_projects: "Featured student projects"
   heading_start_hoc_with_videos: "Start your Hour of Code with inspirational videos"
+  heading_attend_free_workshop: "Attend a free student workshop"
+  heading_access_more_cs_resources: "Access more computer science resources"
 
   cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
   cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
@@ -674,6 +680,8 @@
   dance_afe_disclaimer: "The artists whose music are used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org."
 
   minecraft_hero_heading: "Minecraft Hour of Code Tutorials"
+  minecraft_resources_desc_01: "Utilize this on demand [free course](%{course_url}) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEdWeek, %{campaign_date}."
+  minecraft_resources_desc_02: "Inspire STEM passion in K-12 learners with 200hr of computer science curriculum, from block to python, supported by professional development."
 
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
