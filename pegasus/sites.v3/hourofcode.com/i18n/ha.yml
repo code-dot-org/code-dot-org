@@ -5,6 +5,11 @@ ha:
   language: English
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Coming Soon
+  new: New
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: Students are learning in over 45 languages
+  hoc_stat_hours_served: Over 100M students have tried an Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: Dec. 4
   campaign_date_start_long: December 4
   campaign_date_short: Dec. 4-10
@@ -36,9 +41,19 @@ ha:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: September 5, 2023 - December 17, 2023
   hoc2023_header: Creativity with AI
+  hoc2023_hero_desc_homepage: Join millions across the globe in organizing an hour
+    of coding, with or without AI and learning how AI works. Anyone, anywhere can
+    do it. No experience needed.
+  hoc2023_hero_desc_learn_page: This year, we're taking Hour of Code to new heights
+    by offering coding opportunities that encompass both artificial intelligence (AI)
+    and non-AI components.
   hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
   hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
     about AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Explore, Play, Create!
   social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
   codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
@@ -50,6 +65,9 @@ ha:
     Gomez, music from Disney's "Encanto," and more!
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -166,6 +184,7 @@ ha:
     it's important.
   social_ai_title: Learn about artificial intelligence (AI) | Code.org
   social_ai_desc: Tools to help students and teachers bring AI into the classroom.
+  social_videos_desc: Engaging computer science videos for learners of all ages.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
@@ -195,6 +214,15 @@ ha:
   device_laptop: Laptop
   device_desktop_computer: Desktop Computer
   device_mobile_device: Mobile Device
+  for_everyone: For everyone
+  for_students_teacher_led_learning: 'For students: Teacher-led learning'
+  for_students_teacher_led_lessons: 'For students: Teacher-led lessons'
+  professional_development: Professional development
+  how_ai_works_video_series: How AI Works Video Series
+  learn_how_ai_works: Learn How AI Works
+  ai_101_for_educators: AI 101 for Educators
+  learn_about_ai_impacts: Learn about the Impacts of AI
+  hoc_ai_activities: Hour of Code AI Activities
   subscribe_to_emails_heading: Subscribe to emails
   subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
     science education through quarterly updates via our mailing list.
@@ -248,21 +276,32 @@ ha:
     and support from other educators.
   required_materials: 'Required Materials:'
   optional_materials: 'Optional Materials:'
+  for_students: For students
+  for_educators: For educators
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Hold an event
   call_to_action_register_event: Register your event
+  call_to_action_register_your_hoc: Register your Hour of Code
   call_to_action_select_activity: Select an activity
   call_to_action_start_activity: Start an activity
   call_to_action_get_certificates: Get certificates
   call_to_action_go_beyond_hoc: Go beyond the Hour of Code
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: View promo resources
   call_to_action_learn_more: Learn more
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_try_activities: Try activities
+  call_to_action_try_hoc_ai_activities: Try Hour of Code AI activities
   call_to_action_explore_activities: Explore activities
   call_to_action_explore_ai: Explore AI
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
+  call_to_action_explore_curricula: Explore curricula
   call_to_action_explore_curriculum_options: Explore curriculum options
   call_to_action_explore_lessons: Explore lessons
   call_to_action_explore_modules: Explore modules
@@ -345,6 +384,11 @@ ha:
   call_to_action_learn_about_advocacy: Learn about our advocacy
   call_to_action_visit_store: Visit the store
   call_to_action_view_faqs: View more FAQs
+  call_to_action_applications_open: Applications now open
+  call_to_action_apply_cs_ambassador: Apply to be a CS Ambassador
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
   aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
   aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
@@ -356,6 +400,9 @@ ha:
   aria_label_call_to_action_hoc_how_to_volunteers: View how-to guide for Volunteers
   aria_label_call_to_action_hoc_how_to_virtual_events: View how-to guide for Virtual
     Events
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -474,11 +521,25 @@ ha:
   curriculum_name_creating_apps_with_devices: Creating Apps with Devices
   curriculum_name_poetry: Coding with Poetry
   curriculum_name_dance_party: Dance Party
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problem Solving & Computing
   curriculum_name_web_development: Web Development
   curriculum_name_interactive_animations_games: Interactive Animations & Games
   curriculum_name_design_process: The Design Process
   curriculum_name_data_society: Data & Society
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Free set of elementary curricula that introduces students to
     the foundational concepts of computer science.
   curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
@@ -590,12 +651,16 @@ ha:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Kindergarten
   module_grade_grade_01: Grade 1
@@ -603,6 +668,12 @@ ha:
   module_grade_grade_03: Grade 3
   module_grade_grade_04: Grade 4
   module_grade_grade_05: Grade 5
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Teachers
   module_grade_6_10_teachers: 6-10 Teachers
   module_grade_9_12_teachers: 9-12 Teachers
@@ -692,6 +763,56 @@ ha:
     Catalog
   heading_csa_ai: Looking for things to do after the AP® exam?
   heading_bring_cs_to_students: Bring computer science to students
+  heading_cs_ambassador_program: CS Ambassador Program
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: If you're a high school student passionate about encouraging
+    more young women to take computer science at your school, then we need you!
+  cs_ambassador_desc: Every field, including medicine, entertainment, sports, education,
+    business, fashion, and entrepreneurship is touched by computer science. Yet only
+    5% of high school aged young women take computer science classes. Ambassadors
+    can help close this gender gap by encouraging their peers to take a computer science
+    class.
+  cs_ambassador_application_date: Applications open until November 8th, 2023
+  cs_ambassador_application_subhead: Work with a teacher to submit your application
+    today
+  cs_ambassador_application_questions: Questions? Please contact [youngwomen@code.org](%{email_url})
+  cs_ambassador_do_heading: What do CS Ambassadors do?
+  cs_ambassador_do_desc: CS Ambassadors encourage young women to explore the subject,
+    and lift each other up as they reclaim their place in computer science. CS Ambassadors
+    connect with their peers to share their excitement and love of computer science.
+    They visit classrooms, host tables at lunch, and speak at assemblies and club
+    meetings. CS Ambassadors work with teachers and school administrators to breakdown
+    stereotypes that hold young women back.
+  cs_ambassador_steps_heading: What do I need to become a CS Ambassador?
+  cs_ambassador_steps_list_title_01: Passion
+  cs_ambassador_steps_list_title_02: Experience in a CS Course
+  cs_ambassador_steps_list_title_03: School that offers CS
+  cs_ambassador_steps_list_desc_01: A passion for encouraging young women at your
+    school to take computer science classes
+  cs_ambassador_steps_list_desc_02: 'Have completed or is currently enrolled in a
+    year-long computer science class (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Attend a high school that regularly offers a
+    year-long computer science course (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_benefits_heading: Program benefits
+  cs_ambassador_benefits_list_title_01: National community
+  cs_ambassador_benefits_list_title_02: Community service
+  cs_ambassador_benefits_list_title_03: Recognition
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certificate
+  cs_ambassador_benefits_list_title_06: Experiences
+  cs_ambassador_benefits_list_desc_01: Access to a national community of young leaders
+    committed to closing the gender gap in computer science.
+  cs_ambassador_benefits_list_desc_02: Community service hours and the opportunity
+    to earn the [U.S. Presidential Volunteer Service Award](%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Recognition as a 2023-2024 Ambassador and eligible
+    to be honored in the Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Be identified as a CS Ambassador through special
+    Code.org branded apparel, stickers, and more!
+  cs_ambassador_benefits_list_desc_05: Official certificate of participation from
+    Code.org.
+  cs_ambassador_benefits_list_desc_06: Gain experiences and stories to share on your
+    college application, resume and more!
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -739,6 +860,13 @@ ha:
     Computer Science Principles and get helpful reminders, tips, and updates sent
     right to your inbox.
   subscribe_form_section_unsubscribe: You can unsubscribe at any time.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -846,6 +974,11 @@ ha:
   ai_curriculum_grades_05: 'Grade Levels: 9-12'
   ai_curriculum_btn_aria_label_05: Explore the Software Engineering & Computer Vision
     module
+  ai_curriculum_title_06: Societal Impact of Generative AI
+  ai_curriculum_desc_06: Investigate the impact of generative AI from different perspectives,
+    then collaborate as a team to come up with guidelines that address the most needs
+    from all participants.
+  ai_curriculum_btn_aria_label_06: View Societal Impact of Generative AI lesson plan
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -1814,6 +1947,9 @@ ha:
   help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
     U.S. and the ten policies we recommend states adopt to make computer science foundational
     for all students. Plus, find out how you can drive change in your state.
+  yw_page_top_heading: Young Women in Computer Science
+  yw_page_top_desc: Become a CS Ambassador and be a part of closing the gender gap
+    in computer science.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -2177,10 +2313,15 @@ ha:
     to computer science, using fun tutorials to show that anybody can learn the basics.
     This grassroots campaign is supported by over 400 partners and 200,000 educators
     worldwide.
+  hoc_homepage_registration_desc: Your class or group can join millions around the
+    world doing the Hour of Code! Registration for the annual Computer Science Education
+    Week celebration begins in October. Though, Hour of Code is available year-round.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
     to plan an event for your class."
   hoc_homepage_highlights_heading: Hour of Code highlights
   hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_events_heading: Register to Host an Hour of Code
+  hoc_events_jump_to_map: Jump to the Hour of Code map
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -2211,8 +2352,9 @@ ha:
   signup_event_entire_school_label: My entire school is participating
   signup_event_location_label: Event location
   signup_event_location_error: Event location is required.
-  signup_special_event_flag_label: My event will involve an entire district, members
-    of the community, and/or other special plans to go beyond an hour
+  signup_special_event_flag_label: My event will involve an entire district, an entire
+    organization, members of the community, and/or other special plans to go beyond
+    an hour
   signup_special_event_details_label: Apply to be highlighted as a special event
   signup_send_posters_flag_label: Send <a href= "/resources/promote#posters">posters</a>
     to my school or organization (US only, while supplies last)
@@ -2285,6 +2427,7 @@ ha:
   map_title: Hour of Code map
   map_header: "# events registered for Hour of Code 2017"
   map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year_so_far: "%{event_count} events registered so far in %{year}"
   see_all_events: See all events
   map_header_company: "# by company organizers"
   map_header_country: "# in %{country}"
@@ -2297,6 +2440,7 @@ ha:
   map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
     page.</a>
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_view_all_events: See a full list of Hour of Code events [here](%{events_url}).
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
@@ -2317,13 +2461,6 @@ ha:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: FAQs
   hoc_faq_what_is_hoc_q: What is the Hour of Code?
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
   hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
     to computer science, designed to demystify "code", to show that anybody can learn
     the basics, and to broaden participation in the field of computer science. It
@@ -2333,12 +2470,6 @@ ha:
     supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Try the tutorials
   hoc_faq_when_is_hoc_q: When is the Hour of Code?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
   hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
     Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
     Education Week will be %{campaign_date_full}, but you can host an Hour of Code
@@ -2346,67 +2477,33 @@ ha:
     of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
     (December 9, 1906).
   hoc_faq_why_cs_q: Why computer science?
-  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer
-    science. It helps nurture problem-solving skills, logic and creativity. By starting
-    early, students will have a foundation for success in any 21st-century career
-    path. See more stats <a href='%{stats_url}'>here</a>."
   hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
     computer science. It helps nurture problem-solving skills, logic and creativity.
     By starting early, students will have a foundation for success in any 21st-century
     career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: How do I participate in the Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community &mdash; like in an extracurricular club, non-profit or at work.
-    Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+    your community — like in an extracurricular club, non-profit, or at work."
   hoc_faq_behind_hoc_q: Who is behind the Hour of Code?
-  hoc_faq_behind_hoc_a: The Hour of Code is organized by Code.org and driven by the
-    Hour of Code Review Committee as well as an unprecedented coalition of <a href='%{partner_url}'>partners</a>
-    that have come together to support the Hour of Code — including Microsoft, Apple,
-    Amazon, Boys and Girls Clubs of America and the College Board.
   hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
     by the Hour of Code Review Committee as well as an unprecedented coalition of
     [partners](%{partner_url}) that have come together to support the Hour of Code
-    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America, and the
     College Board.
   hoc_faq_host_q: I don't know anything about coding. Can I still host an event?
-  hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
-    to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
-    tutorial you want, and pick an hour &mdash; we take care of the rest. We also
-    have options for every age and experience-level, from kindergarten and up. Start
-    planning your event by reading our <a href='/how-to'>how to guide</a>.
   hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+    you have to do is [try our current tutorials](%{learn_url}), pick the tutorial
+    you want, and pick an hour — we take care of the rest. We also have options for
+    every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how-to guide](%{howto_url}).
   hoc_faq_devices_q: What devices should I use for my students?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
   hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    You can see more information about Code.org's tutorial tech needs [here](%{it_url}).
+    Tech needs for non-Code.org tutorials can be found on [hourofcode.com/learn](%{learn_url})
+    in a specific tutorial description. Don't forget we also offer [unplugged activities](%{unplugged_url})
     if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Do I need computers for every participant?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
   hoc_faq_need_computers_a_markdown: |-
     No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
 
@@ -2416,82 +2513,47 @@ ha:
     - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
     - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: I am in <country>. How do I participate internationally?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
-    the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more <a href='/promote'>here</a>.
   hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
     in the world. Last year, students worldwide joined together for the Hour of Code.
     Find out more [here](%{promote}).
   hoc_faq_tutorial_q: How can I make an Hour of Code tutorial?
-  hoc_faq_tutorial_a: If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see
-    our guidelines and instructions</a>. We'd like to host a variety of engaging options,
-    but the primary goal is to optimize the experience for students and teachers who
-    are new to computer science.
   hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
     [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
     a variety of engaging options, but the primary goal is to optimize the experience
     for students and teachers who are new to computer science.
   hoc_faq_account_q: Do students need to log on using an account?
-  hoc_faq_account_a: No. Absolutely no signup or login is required for students to
-    try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on
-    courses</a> require account creation to save student progress. Also, signing up
-    for the Hour of Code does NOT automatically create a Code Studio account. If you
-    do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>.
   hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+    to try the Hour of Code. Most of the [follow-on courses](%{beyond_url}) require
+    account creation to save student progress. Also, signing up for the Hour of Code
+    does NOT automatically create a Code Studio account. If you do want to create
+    accounts for your students, please follow these [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
     for high schoolers, especially the Star Wars JavaScript version and the free play
     level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    tutorials on [hourofcode.com/learn](%{learn_url}) to start, such as the tutorial
+    with Angry Birds or with Frozen's Anna and Elsa. A high school student should
     be able to finish one of these in 30 minutes and can then try a more advanced
     tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students
     have iPads rather than laptops?
-  hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
-    can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
     young, they can use the ScratchJR iPad app (for early-readers). If you look at
     the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
     tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: How do you count Hours of Code?
   hoc_faq_map_q: Why don't I see my dot on the map?
-  hoc_faq_map_a: We're so sorry you aren't seeing your event on the Hour of Code map.
-    Because of the tens of thousands of organizers who sign up, the map aggregates
-    the data and displays one point for several events. If you click the <a href='%{events_url}'>events
-    page</a> link below the map you will be directed to a list of all events by state
-    and can find your event listed there. Additionally, given the thousands of people
-    signing up for the Hour of Code, the map and event list usually takes 48 hours
-    to update. Check back in a few days!
   hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
     of Code map. Because of the tens of thousands of organizers who sign up, the map
     aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
+    [events page](%{events_url}) link below the map, you will be directed to a list
     of all events by state and can find your event listed there. Additionally, given
     the thousands of people signing up for the Hour of Code, the map and event list
     usually takes 48 hours to update. Check back in a few days!
-  hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
-    We do not count unique student IDs perfectly when tracking participation in the
-    Hour of Code, especially because we don't require students to log in or register.
-    As a result, we both over-count and under-count participants at the same time.
-    Read all the details <a href='%{codeorg_url}/loc'>here</a>.
   hoc_faq_count_hoc_a_markdown: 'We do not count unique student IDs perfectly when
     tracking participation in the Hour of Code. Why? Partly because we don''t want
     the friction of prompting to “login / register” before a student or classroom
-    tries learning for the first time, and partly because there are may activities
+    tries learning for the first time, and partly because there are many activities
     we cannot track online. We do take certain steps to reduce double-counting, but
     without a login prompt, this can''t work perfectly. At the same time, there are
     MANY student activities in the Hour of Code that aren''t tracked at all. For example:
@@ -2503,62 +2565,33 @@ ha:
     not view the Hour of Code tracker to be an exact measure of usage. It is certainly
     directionally correct, and shows that many tens of millions of students have participated.'
   hoc_faq_one_hour_q: How much can one learn in an hour?
-  hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
-    an expert computer scientist in one hour. One hour is only enough to learn that
-    computer science is fun and creative, that it is accessible at all ages, for all
-    students, regardless of background. The measure of success of this campaign is
-    not in how much CS students learn - the success is reflected in broad participation
-    across gender and ethnic and socioeconomic groups, and the resulting increase
-    in enrollment and participation we see in CS courses at all grade levels. Millions
-    of the participating teachers and students have decided to go beyond one hour
-    -  to learn for a whole day or a whole week or longer, and many students have
-    decided to enroll in a whole course (or even a college major) as a result. <br/><br/>
-    Besides the students, another "learner" is the educator who gains the confidence
-    after one hour that they can teach computer science even though they may not have
-    a college degree as a computer scientist. Tens of thousands of teachers decide
-    to pursue computer science further, either attending PD or offering follow-on
-    online courses, or both. And this applies to school administrators too, who realize
-    that computer science is something their students want and their teachers are
-    capable of. <br/><br/> Above all, what all participants can learn in an hour is
-    that we can do this.
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, and that it's accessible at all ages and for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour - to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending professional development or follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    Above all, what all participants can learn in an hour is that anyone can learn computer science!
   hoc_faq_more_questions_q: Still have more questions?
-  hoc_faq_more_questions_a: Try finding an answer in our <a href='http://support.code.org'>support
-    forum</a>.
   hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
-  hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
-    stay up year-round. You can expect all our tutorials and curriculum to be available
-    on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
-    event how-to guides and other resources to help make your Hour of Code event a
-    success.
   hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
     tutorials stay up year-round. You can expect all our tutorials and curriculum
     to be available on our site in perpetuity. Please go to [our resources](%{promote})
     for event how-to guides and other resources to help make your Hour of Code event
     a success.
   hoc_faq_certificates_q: Where can I print certificates for my students?
-  hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
-    page</a> where you can print certificates for your entire class ahead of time.
-    You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> for students doing the Minecraft tutorial.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_answer_markdown: Go to our [certificates page](%{certificates_url})
+    where you can print certificates for your entire class ahead of time.
   hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
     name?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
   hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
     usage, but we want to make sure its usage fits within a few limits. Please see
     [these guidelines for usage](%{logo_url}).
+  hoc_faq_bug_q: I found a bug in an Hour of Code activity! What should I do?
+  hoc_faq_bug_a_markdown: |-
+    Oh no! If you've come across a bug in an Hour of Code activity - first check the URL for the activity you are on. If the URL starts with studio.code.org, our Code.org Support team can help! Click the question mark icon in the upper right corner of your screen, then select "Report a problem" from the dropdown menu.
+
+    If the URL does not start with studio.code.org, you are likely working on a third party activity and will need to reach out to that company's support team for further assistance.
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   stats_growth: It was the fastest to reach 15 million users.
   stats_i18n: Students are learning in over 45 languages
@@ -13141,6 +13174,21 @@ ha:
     so we can highlight your success, too!'
   hoc_how_to_step_07_educators_desc_02: You can also print certificates for your students
     to show off their achievement!
+  hoc_ai_top_desc: Anyone can learn about AI, whether you're a student in the classroom
+    or an educator unlocking the future of teaching with and about AI.
+  hoc_ai_how_ai_works_video_series_desc: This series of short videos will introduce
+    you to how artificial intelligence works and why it matters. Then delve into issues
+    like algorithmic bias and the ethics of AI decision-making.
+  hoc_ai_learn_how_ai_works_desc: Dive into the world of AI with "How AI Works," lessons
+    paired with our video series introducing you to how AI works and why it matters.
+  hoc_ai_101_for_educators_desc: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our foundational online
+    learning series for teachers.
+  hoc_ai_impacts_desc: Engage your classroom with  teacher-led lessons that explore
+    the impacts of artificial intelligence and invite learners to think of solutions
+    to some of AI's issues.
+  hoc_ai_activities_desc: These all-new Hour of Code activities introduce users to
+    the world of artificial intelligence in a fun, engaging way.
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
     Codechella event.
@@ -13663,6 +13711,23 @@ ha:
   video_library_page_not_hacked_video_title_6: 'How Not To Get Hacked: Messaging and
     Downloads'
   video_library_page_not_hacked_video_title_7: 'How Not To Get Hacked: Install Updates'
+  thank_you_page_main_title: Thank You for Helping to Build a Movement
+  thank_you_page_description: The Code.org Advocacy Coalition wishes to thank the
+    hundreds of thousands of local champions and advocates, including teachers, community
+    members, researchers, nonprofits, universities, corporations, and government institutions
+    who have supported the vision that every student in every school deserves the
+    opportunity to learn computer science. Thank you for your support of this movement.
+  thank_you_page_members_section_title: 'And to all the members of the Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Thank you to the following individuals
+    and organizations for their contributions to this report:'
+  thank_you_page_individual_organization_description: Computer science education supervisors
+    at each state education agency, College Board, Della Cronin, Stuart Dexler, Katharine
+    Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Thank you to the students and teachers
+    quoted in this report:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: About Us
   about_us_page_hero_description: Code.org® is an education innovation nonprofit dedicated
     to the vision that every student in every school has the opportunity to learn
@@ -13807,6 +13872,116 @@ ha:
     goal that will support that vision.
   about_page_donors_link_1: Make a donations
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+  teach_ai_title: Real-world Examples. Practical Resources.
+  teach_ai_description: The AI Guidance for Schools Toolkit is a resource for policymakers,
+    school leaders, and staff to develop initial guidance on AI in their schools.
+  teach_ai_button_label: View the Toolkit
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: Learn more
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_description_1: Free set of elementary curricula that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Introduce students to software engineering
+    and object-oriented design while they learn the Java programming language in this
+    free curriculum for AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_2: Explore CS Principles
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
+  elementary_page_computer_science_card_title_1: Computer Science Fundamentals
+  elementary_page_computer_science_card_title_2: Computer Science Connections
+  elementary_page_computer_science_description_1: Free set of elementary curricula
+    that introduces students to the foundational concepts of computer science and
+    challenges them to explore how computing and technology can impact the world.
+  elementary_page_computer_science_description_2: Make connections between computer
+    science (CS) and other subjects like math, language arts, science, and social
+    studies.
   language_code:
     ar: Arabic
     az: Azerbaijani

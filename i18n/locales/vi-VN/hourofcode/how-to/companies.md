@@ -16,8 +16,8 @@ Trong chiến dịch Giờ lập trình, doanh nghiệp của bạn có thể gi
 
 Hãy xem các bước dưới đây để bắt đầu và xem [hướng dẫn dành cho đối tác doanh nghiệp](/files/hoc-corporate-toolkit.pdf) để biết thêm những cách truyền cảm hứng cho công ty bạn tham gia Giờ lập trình.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Kết nối với một trường học địa phương](#connect-with-a-school)
+- [Khuyến khích nhân viên tình nguyện tham gia lớp học](#encourage-employees)
 - [Tổ chức sự kiện Giờ lập trình của riêng bạn](#host-hour-of-code)
 - [Quảng bá Giờ lập trình](#promote-hour-of-code)
 - [Các cách khác để ủng hộ Giờ lập trình](#support-hour-of-code)
@@ -26,31 +26,31 @@ Hãy xem các bước dưới đây để bắt đầu và xem [hướng dẫn d
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Kết nối với một trường học địa phương
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Tốt nhất là bắt đầu tại địa phương, với các trường mà bạn hoặc nhân viên của bạn có mối liên hệ chặt chẽ với, chẳng hạn như trường cũ, trường học của trẻ em hoặc một tổ chức hoặc trường học địa phương tập trung vào việc phục vụ một dân số chưa được đại diện trong lịch sử trong khoa học máy tính.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Từ đó, bạn có thể truy cập trang web của trường để tìm các địa chỉ liên hệ thích hợp để liên hệ, như hiệu trưởng, phó hiệu trưởng, giảng viên công nghệ hoặc khoa học máy tính, hoặc thậm chí là PTSA của trường. Bạn cũng có thể hợp tác với các tổ chức như Boys & Girls Clubs of America, chi nhánh YMCA, v.v. để đồng tổ chức một sự kiện.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Nếu bạn không thể kết nối với trường học, vui lòng [liên hệ với chúng tôi](https://support.code.org/hc/en-us/requests/new) và chúng tôi sẽ kết nối bạn với một trong những đối tác địa phương của chúng tôi nếu có thể.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Khuyến khích nhân viên tình nguyện tham gia lớp học
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Một trong những cách hiệu quả nhất để tham gia Giờ lập trình là tình nguyện tham gia lớp học trực tiếp hoặc trực tuyến tại địa phương. Hơn hết, bạn không cần phải là một kỹ sư để trở thành tình nguyện viên. Bạn vẫn có thể cung cấp trải nghiệm ý nghĩa cho sinh viên bằng cách chia sẻ kinh nghiệm nghề nghiệp của riêng bạn và cách CS hoặc công nghệ đã tác động đến vai trò của bạn.
 
 [<button>Đăng ký làm tình nguyện viên</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Sau khi tình nguyện viên đăng ký, giáo viên có thể xem lại hồ sơ của họ trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi, vì vậy hồ sơ phải nộp càng đầy đủ càng tốt. Nếu bạn phù hợp với lớp học của họ, giáo viên sẽ liên hệ với bạn thông qua nền tảng (chúng tôi sẽ không bao giờ chia sẻ địa chỉ email của bạn với giáo viên). Sau đó, bạn có thể gửi thông tin chi tiết trực tiếp đến giáo viên về [cách làm tình nguyện viên tốt nhất với lớp học của họ](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Để biết thêm hướng dẫn về hoạt động tình nguyện và thư mẫu để truyền cảm hứng tham gia Giờ lập trình cho công ty bạn, hãy xem [hướng dẫn dành cho đối tác doanh nghiệp]({{ localized_files/hoc_corporate_toolkit }}) của chúng tôi.
 
 * * *
 
@@ -135,7 +135,7 @@ Một trong những cách tốt nhất để trợ giúp là lan rộng thông t
 
 ### 1. Đăng ký sự kiện
 
-Khi bạn [đăng ký sự kiện Giờ lập trình](/#join), bạn sẽ nhận được thông báo hữu ích qua email về tin tức và lời khuyên để tổ chức Giờ lập trình thành công. Đó cũng là cách bạn có thể cho các trường học hoặc phụ huynh địa phương biết rằng bạn đang tổ chức một sự kiện gần họ.
+Khi đăng [ký sự kiện Giờ Mã](/events), bạn sẽ nhận được thông tin liên lạc qua email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Đó cũng là cách bạn có thể cho các trường học hoặc phụ huynh địa phương biết rằng bạn đang tổ chức một sự kiện gần họ.
 
 ### 2. Đăng trên mạng xã hội
 
@@ -162,7 +162,7 @@ Hãy giúp nâng cao nhận thức về phong trào khoa học máy tính với 
 - Nếu dòng mã đầu tiên đã thay đổi cuộc đời bạn, hãy giúp những học sinh gần bạn viết nên câu chuyện #GiờLậpTrình đầu tiên của họ https://code.org/volunteer
 - Nếu bạn học cách viết mã – câu chuyện của bạn là gì? Hãy truyền cảm hứng cho một học sinh gần bạn thông qua #GiờLậpTrình đầu tiên của họ https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Tìm thêm</a> áp phích, video, nhãn dán và các cách khác để quảng bá sự kiện của bạn đến cộng đồng của bạn.
 
 * * *
 

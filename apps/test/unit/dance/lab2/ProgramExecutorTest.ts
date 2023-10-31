@@ -41,8 +41,9 @@ describe('ProgramExecutor', () => {
       teardown: sinon.stub(),
       ensureSpritesAreLoaded: sinon.stub(),
       p5_: {
-        draw: sinon.stub(),
+        redraw: sinon.stub(),
       },
+      livePreview: sinon.stub(),
     };
 
     validationCode = 'validationCode';
@@ -123,21 +124,23 @@ describe('ProgramExecutor', () => {
     expect(nativeAPI.play).to.have.been.calledWith(currentSongMetadata);
   });
 
-  it('compiles and draws the first frame on preview', async () => {
+  it('compiles and runs live preview on when calling livePreview', async () => {
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
 
-    await programExecutor.preview();
+    await programExecutor.livePreview(currentSongMetadata);
 
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
     const events = evalWithEvents.firstCall.args[1];
     expect(Object.keys(events)).to.have.members(expectedHooks.map(h => h.name));
     expect(runUserSetup).to.have.been.calledOnce;
-    expect(nativeAPI.p5_.draw).to.have.been.calledOnce;
+    expect(nativeAPI.livePreview).to.have.been.calledWithExactly(
+      currentSongMetadata
+    );
   });
 
   it('resets the native API on reset', () => {

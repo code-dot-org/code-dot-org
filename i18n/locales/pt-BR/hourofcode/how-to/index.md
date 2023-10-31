@@ -72,7 +72,7 @@ Promova a sua Hora do Código para outros professores que também possam querer 
 
 ### Avise os voluntários ao registrar o seu evento
 
-Quando você [se increver no evento Hour of Code](/#join), você vai receber um e-mail com informações úteis, notícias e dicas para promover sessões bem-sucedidas do Hour of Code. Assim você também pode avisar aos voluntários da região que a sua escola está participando. Voluntários são um recurso excelente e podem falar com a turma sobre ciência da computação ou simplesmente ajudar seus alunos com as atividades da Hora do Código. 
+Ao se [inscrever em seu evento da Hora do Código](/events), você receberá comunicações úteis por e-mail com notícias e dicas para organizar uma Hora do Código de sucesso. Assim você também pode avisar aos voluntários da região que a sua escola está participando. Voluntários são um recurso excelente e podem falar com a turma sobre ciência da computação ou simplesmente ajudar seus alunos com as atividades da Hora do Código. 
 
 ### Entusiasme seus alunos 
 

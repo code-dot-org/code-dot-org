@@ -4167,7 +4167,7 @@ fr:
               display_name: Contenu
               description: Croire en sa propre identité d'ingénieur logiciel développe la confiance et la persévérance. Cette leçon présente les valeurs fondamentales du génie logiciel et explore les perceptions communes que les étudiants peuvent avoir. Les étudiants réfléchissent à la façon dont ils mettent déjà en pratique bon nombre de ces valeurs pour découvrir leur propre identité en génie logiciel.
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4180,7 +4180,7 @@ fr:
             lesson group:
               display_name: Contenu
             lessonGroup-2:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-3:
               display_name: Enquête pilote
             lessonGroup-4:
@@ -4194,7 +4194,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4208,7 +4208,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4222,7 +4222,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4233,7 +4233,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4244,7 +4244,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4255,7 +4255,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4600,7 +4600,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA1
           title: Unité 1 - Programmation orientée objet [Exemplars]
         csa2-exemplars:
@@ -4608,7 +4608,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA2
           title: Unité 2 - Donner un état [Exemplars]aux objets
         csa-videos:
@@ -4631,7 +4631,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           title: Unité 3 - Expansion des données du programme [Exemplars]
         ai-lab:
           title: Laboratoire d'IA
@@ -4704,7 +4704,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4717,7 +4717,7 @@ fr:
             lesson group:
               display_name: Contenu
             lessonGroup-2:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-3:
               display_name: Enquête pilote
             lessonGroup-4:
@@ -4730,7 +4730,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4743,7 +4743,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4756,7 +4756,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4811,13 +4811,13 @@ fr:
             content:
               display_name: Contenu
             show_what_you_know:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lesson_group:
               display_name: Contenu
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           title: Unité 4 - Élargir la logique du programme [Exemplars]
         ai-ethics:
           title: Notre code d'éthique en matière d'IA
@@ -4882,7 +4882,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: csa5-exemplars
           title: Module 5 - Organiser des objets [Exemplaires]
         csa-examples-21:
@@ -4908,7 +4908,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4946,7 +4946,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA6
           title: Unité 6 - Élargir les capacités du programme [Exemplars]
         2022drafting:
@@ -4973,7 +4973,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA7
           title: Unité 7 - Développement de la conception logicielle [Exemplars]
         csf-2022-pilot:
@@ -5002,7 +5002,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA8
           title: Unité 8 - Donner vie aux objets [Exemplars]
         alltheselfpacedplthings:
@@ -5013,7 +5013,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5024,7 +5024,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5301,7 +5301,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5323,7 +5323,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Structure et conception des classes (22-2023)
@@ -5332,7 +5332,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Tableaux et algorithmes ('22-'23)
@@ -5360,7 +5360,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Conditions et logique ('22-'23)
@@ -5378,7 +5378,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
         self-paced-pl-csa2-2022:
           title: 'Module 2 : Navigation sur Code.org'
         self-paced-pl-csa3-2022:
@@ -5388,7 +5388,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5400,7 +5400,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5436,7 +5436,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5448,7 +5448,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5461,7 +5461,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5533,7 +5533,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           title: Unité 2 - Structure et conception des classes [Exemplars]
         k5-onlinepd-2022:
           lesson_groups:
@@ -5977,7 +5977,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
         csa2-validation-pilot-2022:
@@ -5985,7 +5985,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Structure et conception des classes (22-2023)
@@ -5994,7 +5994,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Tableaux et algorithmes ('22-'23)
@@ -6003,7 +6003,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Conditions et logique ('22-'23)
@@ -6021,7 +6021,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Listes de tableaux et méthodes de chaîne ('22-'23)
@@ -6031,7 +6031,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Méthode de décomposition et de récursion ('22-'23)
@@ -6041,7 +6041,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -6110,7 +6110,7 @@ fr:
             lessonGroup-3:
               display_name: Contenu
             lessonGroup-4:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-5:
               display_name: Leçons alternatives
             lessonGroup-6:
@@ -6156,7 +6156,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6200,7 +6200,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6246,7 +6246,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6290,7 +6290,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6334,7 +6334,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6378,7 +6378,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête de fin d'unité
             lessonGroup-5:
@@ -6440,7 +6440,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête
             lessonGroup-5:
@@ -7044,6 +7044,7 @@ fr:
             lesson-3:
               name: Codez votre propre écosystème (2023)
           title: Simulation d'un écosystème marin
+          description: "## Travaux préparatoires suggérés pour ce module\n\n**Science:**Les élèves simuleront un écosystème marin dans les cours 1 et 2. Pour se familiariser avec cet écosystème, nous vous invitons à consulter la [Vidéo sur les animaux marins](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nAu cours de la leçon 2, les élèves codifieront plusieurs pratiques de pêche durable. Ci-dessous quelques articles que nous vous invitons à lire pour acquérir des connaissances de base et mieux comprendre le monde réel : [Comprendre ce qu'est la surpêche](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (article sur l'Aquarium de la baie de Monterey), ou [Mw,kwa parle au huard](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (livre pour enfants).\n\n**Science informatique:** Dans ce module, les étudiants apprendront de nouvelles notions de codage potentiellement difficiles à assimiler pour ceux qui ne maîtrisent pas encore l'informatique. Si les participants ne maîtrisent pas Sprite Lab de Code.org, nous leur recommandons d'essayer [Swimming Fish de Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) pour une initiation à l'outil. \n\nCe module repose également sur un concept avancé de CS et les instructions conditionnelles. Les participants apprendront ce concept de façon structurée, mais certains d'entre eux pourraient tirer profit de cette activité d'introduction aux conditionnelles : [Conditionnelles avec des cartes](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes)."
         csc-adaptations-2023:
           lessons:
             lesson-2:
@@ -8262,15 +8263,57 @@ fr:
         virtual-pl-csa-summer-2024-day1:
           title: Jour 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
           title: Jour 2
         virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Asynchrone, partie 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
           title: Jour 3
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
           title: Jour 4
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: Cérémonies de clôture
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
         virtual-pl-csa-summer-day2:
           lessons:
-            lesson-1:
-              name: Synchrone, partie 1
             lesson-2:
               name: Asynchrone, partie 1
             lesson-3:
@@ -8290,11 +8333,9 @@ fr:
         virtual-pl-csa-summer-day3:
           lessons:
             lesson-1:
-              name: Synchrone, partie 1
+              name: Introduction
             lesson-2:
               name: Asynchrone, partie 1
-            lesson-3:
-              name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
           lesson_groups:
@@ -8309,14 +8350,12 @@ fr:
           title: Jour 3
         virtual-pl-csa-summer-day4:
           lessons:
-            lesson-1:
-              name: Synchrone, partie 1
             lesson-2:
               name: Asynchrone, partie 1
-            lesson-3:
-              name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
+            lesson-5:
+              name: Ouverture de l'atelier
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8330,11 +8369,17 @@ fr:
         virtual-pl-csa-summer-day5:
           lessons:
             lesson-1:
-              name: Synchrone, partie 1
+              name: Ouverture de l'atelier
+            lesson-2:
+              name: Asynchrone, partie 1
             lesson-3:
               name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
+            lesson-13:
+              name: Cérémonies de clôture
+            lesson-16:
+              name: Cérémonies de clôture
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8345,14 +8390,16 @@ fr:
           title: 'Jour 5 '
         virtual-pl-csa-summer-day1:
           lessons:
-            lesson-1:
-              name: Synchrone, partie 1
             lesson-2:
               name: Asynchrone, partie 1
             lesson-3:
               name: Synchrone, partie 2
             lesson-4:
               name: Asynchrone, partie 2
+            lesson-7:
+              name: Introduction
+            lesson-8:
+              name: Ouverture de l'atelier
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8362,6 +8409,8 @@ fr:
               display_name: Synchrone, partie 2
             lessonGroup-5:
               display_name: Asynchrone, partie 2
+            lessonGroup-7:
+              display_name: Introduction
           title: Jour 1
         virtual-pl-csp-summer-day1:
           lesson_groups:
@@ -8374,3 +8423,7 @@ fr:
             lessonGroup-5:
               display_name: Asynchrone, partie 2
           title: Jour 1
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Module 1 : Se préparer à l''enseignement sur la résolution de problèmes et l''informatique'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"

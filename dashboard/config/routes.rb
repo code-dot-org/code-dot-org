@@ -921,6 +921,7 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        get 'section_instructors/check', to: 'section_instructors#check'
         resources :section_instructors, only: [:index, :create, :destroy] do
           member do
             put 'accept'
@@ -1052,6 +1053,7 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
         post 'run_ai_evaluations_for_user'
         post 'submit_evaluations'
       end

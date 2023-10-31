@@ -9215,7 +9215,7 @@
           "type": "Video"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+          "url": "https://docs.google.com/document/d/19J30X8eWuYCwvVEIPthWVYMJqPhtm6RVwA_ZYVwpPA8"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "Yapay Zeka Nasıl Çalışır - Eğitim Verileri ve Önyargı",
@@ -9228,7 +9228,7 @@
           "type": "Video"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "url": "https://docs.google.com/presentation/d/1q4WeWF42FCSI6h7wr1yGeFVIoE17NCqPGHzGXhpNaCU/",
           "type": "Slaytlar"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
@@ -9251,7 +9251,7 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "Yedi Segment Ekran Manipülatif",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "url": "https://docs.google.com/document/d/1pnKln2bbDQG4-Q30ng-vEHfWaucmFYidCT7qkB9YFcg"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "Bir Sinir Ağı Ne Görür?",
@@ -9553,6 +9553,33 @@
           "name": "Video: Aloe Blacc ile Metin Sıkıştırma",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Kaynak"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
         }
       }
     }

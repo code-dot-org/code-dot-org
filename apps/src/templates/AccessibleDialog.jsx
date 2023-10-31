@@ -2,32 +2,40 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FocusTrap from 'focus-trap-react';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
-import style from './accessible-dialogue.module.scss';
+import defaultStyle from './accessible-dialogue.module.scss';
 import classnames from 'classnames';
 
-const AccessibleDialog = ({
+function AccessibleDialog({
+  styles,
   onClose,
   children,
   className,
   initialFocus = true,
-}) => (
-  <>
-    <div className={style.modalBackdrop} />
-    <CloseOnEscape handleClose={onClose}>
-      <FocusTrap focusTrapOptions={{initialFocus: initialFocus}}>
-        <div
-          aria-modal
-          className={classnames(style.modal, className)}
-          role="dialog"
-        >
-          {children}
-        </div>
-      </FocusTrap>
-    </CloseOnEscape>
-  </>
-);
+}) {
+  // If these styles are provided by the given stylesheet, use them
+  const modalStyle = styles?.modal || defaultStyle.modal;
+  const backdropStyle = styles?.modalBackdrop || defaultStyle.modalBackdrop;
+
+  return (
+    <div>
+      <div className={backdropStyle} />
+      <CloseOnEscape handleClose={onClose}>
+        <FocusTrap focusTrapOptions={{initialFocus: initialFocus}}>
+          <div
+            aria-modal
+            className={classnames(modalStyle, className)}
+            role="dialog"
+          >
+            {children}
+          </div>
+        </FocusTrap>
+      </CloseOnEscape>
+    </div>
+  );
+}
 
 AccessibleDialog.propTypes = {
+  styles: PropTypes.object,
   onClose: PropTypes.func.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,

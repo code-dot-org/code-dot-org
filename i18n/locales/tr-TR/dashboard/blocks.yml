@@ -9,12 +9,12 @@ tr:
             '"avoids"': kaçınır
       AmysBlocks_goldilocks:
         text: |2-
-           eğer {CONDITION}{SPRITE}
+           if {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:
             '"too much"': çok fazla
-            '"just right"': sadece doğru
+            '"just right"': harfi harfine
             '"too little"': çok az
       AmysBlocks_goldilocksElse:
         text: |2-
@@ -96,6 +96,11 @@ tr:
             MOVES.Rest: Hiçbiri
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} den sonra"
+        options:
+          UNIT:
+            '"measures"': ölçüler
+            '"seconds"': saniye
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"measures"': ölçüler
@@ -615,6 +620,50 @@ tr:
             '"iceCream"': Dondurma
             '"default"': Işık
             '"neon"': Neon
+            '"tropical"': Tropik
+            '"vintage"': Eski tip
+            '"warm"': Sıcak
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
+        options:
+          EFFECT:
+            '"none"': Hiçbiri
+            '"rand"': "(Rastgele)"
+            '"circles"': Çemberler
+            '"quads"': Açılar
+            '"color_cycle"': Renkler
+            '"diamonds"': Elmaslar
+            '"disco_ball"': Disko Topu
+            '"fireworks"': Havai fişekler
+            '"flowers"': Çiçekler
+            '"growing_stars"': Büyüyen Yıldızlar
+            '"higher_power"': Higher Power
+            '"swirl"': Hipnozcu
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Dans Pisti
+            '"splatter"': Boya Lekesi
+            '"rainbow"': Gökkuşağı
+            '"ripples_random"': Rastgele Dalgalar
+            '"ripples"': Dalgalar
+            '"snowflakes"': Kar
+            '"text"': Şarkı Adları
+            '"squiggles"': Karalamalar
+            '"galaxy"': Uzay
+            '"sparkles"': Kıvılcımlar
+            '"spiral"': Sarmal
+            '"disco"': Kareler
+            '"starburst"': Yıldız patlaması
+            '"stars"': Yıldızlar
+            '"music_wave"': Dalgalar
+          PALETTE:
+            '"rave"': Siyah Beyaz
+            '"cool"': Havalı
+            '"electronic"': Elektronik
+            '"iceCream"': Dondurma
+            '"default"': Işık
+            '"neon"': Neon
+            '"ocean"': Okyanus
+            '"rainbow"': Gökkuşağı
             '"tropical"': Tropik
             '"vintage"': Eski tip
             '"warm"': Sıcak
@@ -2693,17 +2742,17 @@ tr:
             right: sağa ↻
             left: sola ↺
       ecosystems_catchMe:
-        text: yakala {THIS}
+        text: 'yakala: {THIS}'
       ecosystems_eat:
-        text: ye {THIS}
+        text: 'ye: {THIS}'
       ecosystems_goldilocks:
         text: |2-
-           eğer {CONDITION}{SPRITE}
+           if {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:
             '"too much"': çok fazla
-            '"just right"': sadece doğru
+            '"just right"': harfi harfine
             '"too little"': çok az
       ecosystems_int10:
         text: "{VALUE}"
@@ -2719,6 +2768,24 @@ tr:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: 'x: {X} y: {Y} konumu arasında {N} yeni {GROUP} yap'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "{LOCATION_GENERATOR} konumunda {NUM} yeni {ANIMATION_NAME} hareketli nesne yap"
+      ecosystems_makeNumSpritesWithinRange:
+        text: "{RANGE} konumunda {NUM} yeni {ANIMATION_NAME} hareketli nesne yap"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
+            "{x1:0, x2:400, y1:150, y2:250}": Orta
+            "{x1:0, x2:400, y1:0, y2:200}": Alt
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x maks{X2}y min{Y1}y maks{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
+            "{x1:0, x2:400, y1:0, y2:200}": Alt
       storylab_clearHeadings:
         text: başlıkları temizle
       storylab_printText:

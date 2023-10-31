@@ -122,7 +122,7 @@ export const setSong = createAsyncThunk(
     loadSong(songId, songData, async (status: number) => {
       if (status === 403) {
         // The cloudfront signed cookies may have expired.
-        await fetchSignedCookies();
+        await fetchSignedCookies(true);
         loadSong(songId, songData, (status: number) => {
           if (status === 403) {
             // Something is wrong, because we just re-fetched cloudfront credentials.
@@ -145,10 +145,9 @@ async function handleSongSelection(
   // manifest within Dance.js, and Lab2 Dance which reads the current song's manifest from Redux.
   if (onSongSelected) {
     onSongSelected(songId);
-  } else {
-    const metadata = await loadSongMetadata(songId);
-    dispatch(setCurrentSongMetadata(metadata));
   }
+  const metadata = await loadSongMetadata(songId);
+  dispatch(setCurrentSongMetadata(metadata));
 }
 
 const danceSlice = createSlice({
