@@ -73,16 +73,15 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
   end
   db = Sequel.connect writer, db_options
 
-  # Enable read splitting with the `with_server` method
+  # Enable read splitting with the `with_server` method.
   # https://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/server_block_rb.html
   db.extension :server_block
-  # Handle terminated database connections
-  # http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
-  db.extension :connection_validator
 
   # Check if validation frequency is valid and then use it to specify how often to
   # verify the db connection
   if validation_frequency && (validation_frequency == -1 || validation_frequency > 0)
+    # Handle terminated database connections.
+    # http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
     db.extension(:connection_validator)
     db.pool.connection_validation_timeout = validation_frequency
   end
