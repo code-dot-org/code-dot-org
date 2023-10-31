@@ -7,7 +7,7 @@
 // once we upgrade to Blockly v10.
 import {commonFunctions} from './commonProcedureCallerMutator';
 
-export const procedureCallerMutator = {
+const procedureCallerMutator = {
   previousEnabledState_: true,
 
   paramsFromSerializedState_: [],
@@ -51,3 +51,5 @@ export const procedureCallerMutator = {
 
   ...commonFunctions,
 };
+
+export default procedureCallerMutator;
