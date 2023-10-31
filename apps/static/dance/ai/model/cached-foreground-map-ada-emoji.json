@@ -1,0 +1,41 @@
+{
+  "emojiAssociations": {},
+  "output": [
+    "bubbles",
+    "hearts_colorful",
+    "confetti",
+    "emojis",
+    "hearts_red",
+    "music_notes",
+    "paint_drip",
+    "pineapples",
+    "pizzas",
+    "smiling_poop",
+    "rain",
+    "floating_rainbows",
+    "smile_face",
+    "spotlight",
+    "color_lights",
+    "exploding_stars",
+    "raining_tacos"
+  ],
+  "modelDescriptiveNames": [
+    "bubbles",
+    "hearts",
+    "confetti",
+    "emojis",
+    "heart",
+    "music notes",
+    "rainbow paint",
+    "pineapple",
+    "pizza",
+    "poop",
+    "rain",
+    "rainbow",
+    "smily face",
+    "spotlight",
+    "stage lights",
+    "stars",
+    "taco"
+  ]
+}
