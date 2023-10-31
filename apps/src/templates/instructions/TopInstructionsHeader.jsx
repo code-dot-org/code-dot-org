@@ -57,7 +57,7 @@ function TopInstructionsHeader(props) {
     ...(isRtl
       ? styles.collapserIcon.showHideButtonRtl
       : styles.collapserIcon.showHideButtonLtr),
-    ...(!isOldPurpleColor && styles.collapserIcon.newStylesColor),
+    ...(!isOldPurpleColor && styles.collapserIcon.rebrandPhase1StylesColor),
     ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
   };
 
@@ -270,7 +270,7 @@ const styles = {
     showHideButtonRtl: {
       right: 8,
     },
-    newStylesColor: {
+    rebrandPhase1StylesColor: {
       color: color.white,
     },
     teacherOnlyColor: {
