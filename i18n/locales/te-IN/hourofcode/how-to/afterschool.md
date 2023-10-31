@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: ఆఫ్టర్ స్కూల్ కోసం అవర్ ఆఫ్ కోడ్ హౌ-హౌ-గైడ్
 ---
 
 {{ signup_button }}
@@ -10,81 +10,81 @@ title: Hour of Code How-to Guide for After-school
 
 కంప్యూటేషనల్ నైపుణ్యాలు సమస్య-పరిష్కార నైపుణ్యాలు, తార్కికత, మరియు సృజనాత్మకతను పెంచడానికి సహాయపడతాయి. మరియు టెక్నాలజీ అనేది ఈ భూమిపై ప్రతి పరిశ్రమనూ పరివర్తన చేస్తున్నది. ఈరోజు విద్యార్థులు టెక్నాలజీని ఎలా క్రియేట్ చేయాలో నేర్చుకోవాలి, కేవలం దాన్ని ఉపయోగించుకోవడం మాత్రమే కాదు. త్వరగా మొదలుపెట్టడం ద్వారా, ఏదేని 21వ-శతాబ్దపు కెరీర్ మార్గంలో విజయానికి వాళ్ళు పునాది వేసుకోగలుగుతారు.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+ఒక అవర్ ఆఫ్ కోడ్ను ప్రయత్నించడం అనేది కంప్యూటర్ సైన్స్కు విద్యార్థులను పరిచయం చేయడానికి సరళమైన మరియు సరదాగా మార్గం, బహుశా మొదటిసారి. మీరు సహాయం చేయడానికి అదనపు చేతుల సమితిని కావాలనుకుంటే, మీ పాఠశాల తరువాత తరగతి లేదా క్లబ్లో కోడ్ యొక్క అవర్ అమలు చేయడంలో సహాయపడ</a> టానికి మీరు స్థానిక వాలంటీర్ను కనుగొనవచ్చు.</p> 
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### ఒక అవర్ ఆఫ్ కోడ్ను రిమోట్గా కూడా హోస్ట్ చేయవచ్చు! ప్రారంభించడానికి, వర్చువల్ అవర్ ఆఫ్ కోడ్ [ఈవెంట్ను హోస్ట్ చేయడానికి మా చిట్కాలను చూడండి](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. ఈ ఎలా చేయాలో వీడియో చూడండి <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. ట్యుటోరియల్ నీ చూసే చేస్కోండి
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+మేము అన్ని వయసుల పాల్గొనే</a> కోసం ఆహ్లాదకరమైన, గంట-దీర్ఘ ట్యుటోరియల్స్ వివిధ అందించడానికి, భాగస్వాములు వివిధ రూపొందించినవారు. [వాటిని ప్రయత్నించండి!]({{ urls/learn }})</p> 
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**అన్ని అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్స్ నిర్వాహకులకు కనీస ప్రిపరేషన్-సమయం** అవసరం, మరియు స్వీయ-మార్గనిర్దేశం చేయబడతాయి - పిల్లలు వారి స్వంత వేగంతో మరియు నైపుణ్య-స్థాయిలో పనిచేయడానికి అనుమతిస్తుంది.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**మీ ఆఫ్టర్ స్కూల్ అవర్ ఆఫ్ కోడ్ కోసం పాఠం ప్రణాళిక అవసరమా?** ఈ [టెంప్లేట్ను చూడండి](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. మీ అవర్ ఆఫ్ కోడ్ను ప్రోత్సహించండి
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+ఈ సాధనాలతో మీ అవర్ ఆఫ్ కోడ్ను ప్రో [త్సహించండి]({{ urls/promote }}) మరియు వారి స్వంత ఈవెంట్లను హోస్ట్ చేయడానికి ఇతరులను ప్రోత్సహించండి.
 
-## 4. Plan your technology needs - computers are optional
+## 4. మీ సాంకేతిక అవసరాలను ప్లాన్ చేయండి - కంప్యూటర్లు ఐచ్ఛికం
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. కానీ మీకు ప్రతి బి</strong> డ్డకు కంప్యూటర్ అవసరం **లేదు, మరియు మీరు అస్సలు కంప్యూటర్ లేకుండా అవర్ ఆఫ్ కోడ్ కూడా చేయవచ్చు.</p> 
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **తక్కువ బ్యాండ్విడ్త్ ఉందా?** తరగతి ముందు భాగంలో వీడియోలను చూపించడానికి ప్లాన్ చేయండి, కాబట్టి ప్రతి విద్యార్థి వారి స్వంత వీడియోలను డౌన్లోడ్ చేయడం లేదు. లేదా అన్ప్లగ్డ్/ఆఫ్లైన్ ట్యుటోరియల్లను ప్రయత్నించండి.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**తగినంత పరికరాలు లేవా?** [జత ప్రోగ్రామింగ్ ఉపయోగించండి](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. స్ఫూర్తిదాయకమైన వీడియోతో మీ అవర్ ఆఫ్ కోడ్ను ప్రారంభించండి
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- అసలు Code.org ప్రయోగ వీడియో, బిల్ గేట్స్, మార్క్ జుకర్బర్గ్, మరియు NBA స్టార్ క్రిస్ బాష్ నటించిన - [1 నిమిషం](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 నిమిషం](https://www.youtube.com/watch?v=nKIu9yen5nc), మరియు [9 నిమిషం వెర్](https://www.youtube.com/watch?v=dU1xS07N-FA) షన్లు అందుబాటులో ఉన్నాయి.
+- ది అవ [ర్ ఆఫ్ కోడ్ ప్రపంచవ్యాప్త వీడియో](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [విద్యార్థులందరూ కంప్యూటర్ సైన్స్ నేర్చుకోవాలని అధ్యక్షుడు ఒబామా పిలుపునిచ్చారు](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- మరిన్ని స్ఫూర్తిదాయకమైన వీడియోలను [ఇక్కడ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)కనుగొనండి.
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**మీరంతా కంప్యూటర్ సైన్స్కు సరికొత్తగా ఉంటే సరే. మీ అవర్ ఆఫ్ కోడ్ కార్యాచరణను పరిచయం చేయడానికి ఇక్కడ కొన్ని ఆలోచనలు ఉన్నాయి:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- సాంకేతికత మన జీవితాలను ప్రభావితం చేసే మార్గాలను వివరించండి, ఉదాహరణలతో అబ్బాయిలు మరియు అమ్మాయిలు ఇద్దరూ శ్రద్ధ వహిస్తారు (జీవితాలను కాపాడటానికి ఉపయోగించే అనువర్తనాలు మరియు సాంకేతికత గురించి మాట్లాడండి, ప్రజలకు సహాయం చేయడం, ప్రజలను కనెక్ట్ చేయడం మొదలైనవి).
+- రోజువారీ జీవితంలో కోడ్ను ఉపయోగించే విషయాలను జాబితా చేయండి.
+- కంప్యూటర్ సైన్స్లో అమ్మాయిలకు ఆసక్తి కలిగించే చిట్కాలను [ఇక్కడ చూడండి]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**మరింత మార్గదర్శకత్వం కావాలా?** ఈ [టెంప్లేట్ పాఠం ప్రణాళికను డౌన్లోడ్](/files/AfterschoolEducatorLessonPlanOutline.docx)చేయండి.
 
-## 6. Code!
+## 6. కోడ్!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**కార్యాచరణకు ప్రత్యక్ష పాల్గొనేవారు** - వైట్బోర్డ్లో ట్యుటోరియల్ లింక్ను వ్రాయండి. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. మనం కలిసి దీన్ని సరిచేసుకుందాం.” - “టెక్నాలజీ ఎల్లప్పుడూ మనం కోరుకున్న విధంగా పనిచేయదు.” - “ప్రోగ్రామును నేర్చుకోవడమనేది ఒక కొత్త భాషను నేర్చుకోవడం వంటిది; ఇప్పటికిప్పుడే మీరు ప్రావీణ్యులు కాకపోవచ్చు.”
+**ఎవరైనా ఇబ్బందులు వచ్చినప్పుడు అది స్పందించడం సరే:** - “నాకు తెలియదు. మనం కలిసి దీన్ని సరిచేసుకుందాం.” - “టెక్నాలజీ ఎల్లప్పుడూ మనం కోరుకున్న విధంగా పనిచేయదు.” - “ప్రోగ్రామును నేర్చుకోవడమనేది ఒక కొత్త భాషను నేర్చుకోవడం వంటిది; ఇప్పటికిప్పుడే మీరు ప్రావీణ్యులు కాకపోవచ్చు.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**ఎవరైనా ముందుగానే ముగించినట్లయితే ఏమి చేయాలి?** - [hourofcode.com/learn వద్ద మరొక అవర్ ఆఫ్ కోడ్ కార్యాచరణను ప్రయత్నించమని పాల్గొనేవారిని ప్రోత్సహించండి]({{ urls/learn }}) - లేదా, ఇబ్బందులు ఎదుర్కొంటున్న ఇతరులకు సహాయం చేయడానికి ముందుగానే పూర్తి చేసిన వారిని అడగండి.
 
-## 7. Celebrate
+## 7. జరుపుకుంటారు
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [మీ విద్యార్థుల]({{ urls/certificates }}) కోసం సర్టిఫికెట్లను ముద్రించండి.
+- [ముద్రించండి “నేను ఒక అవర్ ఆఫ్ కోడ్ చేసాను!”]({{ promote/resources_stickers }}) మీ విద్యార్థుల కోసం స్టిక్కర్లు.
+- [పాల్గొనేవారి కోసం కస్టమ్ టీ ష](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) ర్టులను ఆర్డర్ చేయండి.
+- మీ అవర్ ఆఫ్ కోడ్ ఈవెంట్ యొక్క ఫోటోలు మరియు వీడియోలను సోషల్ మీడియాలో షేర్ చేయండి. #HourOfCode మరియు @codeorg ను ఉపయోగించండి కాబట్టి మేము మీ విజయాన్ని కూడా హైలైట్ చేయవచ్చు!
 
-## Other Hour of Code resources for educators
+## అధ్యాపకుల కోసం ఇతర అవర్ ఆఫ్ కోడ్ వనరులు
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- గత అవర్ [ఆఫ్ కోడ్ నిర్వాహకుల](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) నుండి ఉత్తమ పద్ధతులను చూడండి.
+- మా ఎడ్యుకేటర్స్ గై [డ్ టు ది అవర్ ఆఫ్ కోడ్ వెబ్నార్](https://youtu.be/EJeMeSW2-Mw)యొక్క రికార్డింగ్ చూడండి.
+- ఇతర నిర్వాహ [కుల నుండి సలహా, అంతర్దృష్టి మరియు మద్దతు పొంద](http://forum.code.org/c/plc/hour-of-code) డానికి అవర్ ఆఫ్ కోడ్ ఫోరమ్ను సందర్శించండి.
+- అవర్ ఆఫ్ కోడ్ [తరచుగా అడిగే ప్రశ్నలు సమీక్ష](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)ించండి.
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+టెక్నాలజీ ఎలా పనిచేస్తుందో మరియు సాఫ్ట్వేర్ అనువర్తనాలను ఎలా సృష్టించాలో గురించి మరింత తెలుసుకోవడానికి ఒక ప్రయాణంలో అవర్ ఆఫ్ కోడ్ కేవలం మొదటి అడుగు. విద్యార్థులు వారి ప్రయాణాన్ని కొనసాగించడంలో సహాయపడండి మరియు ఆన్లైన్లో మరింత [తెలుసుకోవడానికి వారిని ప్రోత్సహించండి](/beyond)!
 
 {{ signup_button }}

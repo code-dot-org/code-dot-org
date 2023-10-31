@@ -6189,6 +6189,9 @@
         },
         "vigenere/Vigenere": {
           "name": "Vigenere"
+        },
+        "allthethings/lesson-50": {
+          "name": "Trò chuyện AI"
         }
       }
     }

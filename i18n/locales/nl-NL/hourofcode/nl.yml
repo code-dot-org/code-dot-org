@@ -6,40 +6,55 @@ nl:
   front_title: Doe mee met het grootste onderwijsproject in de geschiedenis, 7-13
     december, 2015
   coming_soon: Binnenkort beschikbaar
-  campaign_date_start_short: 5 dec.
-  campaign_date_start_long: 6 december
-  campaign_date_short: 5-11 dec
-  campaign_date_full: 5-11 december
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 December, 2022
-  nonus_campaign_date_start_short: 1 oktober
-  nonus_campaign_date_start_long: 1 oktober
-  nonus_campaign_date_short: 1 oktober - 18 december
-  nonus_campaign_date_full: 1 oktober - 18 december
-  nonus_campaign_date_year: '2022'
+  new: Nieuw
+  hours_of_code_served: Uren code die wordt geserveerd
+  hoc_stat_languages: Leerlingen leren in 40 talen
+  hoc_stat_hours_served: Meer dan 100M leerlingen hebben 'Hour of Code' geprobeerd
+  hoc_stat_females: Vrouwelijke studenten vormen 50% van de Hour of Code-deelnemers
+  campaign_date_start_short: 4 dec.
+  campaign_date_start_long: 4 december
+  campaign_date_short: 4-10 dec
+  campaign_date_full: 4-10 december
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 December, 2023
+  nonus_campaign_date_start_short: 5 september
+  nonus_campaign_date_start_long: 5 september
+  nonus_campaign_date_short: 5 september - 17 december
+  nonus_campaign_date_full: 5 september - 17 december
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  latam_campaign_date_start_short: 1 oktober
-  latam_campaign_date_start_long: 1 oktober
-  latam_campaign_date_short: 1 oktober - 18 december
-  latam_campaign_date_full: 1 oktober - 18 december
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_start_short: 5 september
+  latam_campaign_date_start_long: 5 september
+  latam_campaign_date_short: 5 september - 17 december
+  latam_campaign_date_full: 5 september - 17 december
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  europe_campaign_date_start_short: 1 oktober
-  europe_campaign_date_start_long: 1 oktober
-  europe_campaign_date_short: 1 oktober - 18 december
-  europe_campaign_date_full: 1 oktober - 18 december
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_start_short: 5 september
+  europe_campaign_date_start_long: 5 september
+  europe_campaign_date_short: 5 september - 17 december
+  europe_campaign_date_full: 5 september - 17 december
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
-  africa_campaign_date_start_short: 1 oktober
-  africa_campaign_date_start_long: 1 oktober
-  africa_campaign_date_short: 1 oktober - 18 december
-  africa_campaign_date_full: 1 oktober - 18 december
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_start_short: 5 september
+  africa_campaign_date_start_long: 5 september
+  africa_campaign_date_short: 5 september - 17 december
+  africa_campaign_date_full: 5 september - 17 december
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 oktober 2022 - 18 december 2022
   hoc2023_header: Creativiteit met AI
+  hoc2023_hero_desc_homepage: Organiseer samen met miljoenen mensen over de hele wereld
+    een uur programmeren, met of zonder AI, en leer hoe AI werkt. Iedereen, waar dan
+    ook, kan het doen. Ervaring is niet nodig.
+  hoc2023_hero_desc_learn_page: Dit jaar brengen we Hour of Code naar nieuwe hoogten
+    door codeermogelijkheden aan te bieden die zowel kunstmatige intelligentie (AI)
+    als niet-AI-componenten omvatten.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Wat ga jij maken?
   hoc2023_social_creativity_with_ai_desc: Gebruik computerwetenschap om AI te ontdekken
     en te leren kennen!
+  hoc2023_what_is_hoc_desc: The Hour of Code is een gratis kennismaking met informatica
+    door middel van leuke activiteiten en video's voor leerlingen van alle vaardigheidsniveaus.
+    De viering van zowel codering als AI wordt dit jaar ondersteund door meer dan
+    400 partners, 20.000 docenten en 58.000 vrijwilligers.
   hoc2022_header: Ontdek, speel, creëer!
   social_hoc2022_explore_play_create: Gebruik informatica om te ontdekken, te spelen
     en te creëren!
@@ -52,6 +67,9 @@ nl:
     muziek uit Disney's „Encanto” en meer!
   social_hoc2023_dance: Met Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     muziek uit Disney's „Encanto” en meer!
+  social_hoc2023_dance_v2: Het is tijd om je spullen te laten zien! Creëer je eigen
+    dansfeest met hits van Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
+    Rosalía en meer!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Leer vandaag, bouw een mooiere morgen.  "
@@ -174,6 +192,8 @@ nl:
   social_ai_title: Meer informatie over kunstmatige intelligentie (AI) | Code.org
   social_ai_desc: Hulpmiddelen om leerlingen en docenten te helpen AI naar de klas
     te brengen.
+  social_videos_desc: Boeiende computerwetenschappelijke video's voor leerlingen van
+    alle leeftijden.
   pl_superhero_title: Help leerlingen superhelden te worden!
   pl_superhero_desc: Neem deel aan ons zeer ondersteunende professionele leerprogramma
     voor docenten in het midden- en voortgezet onderwijs.
@@ -204,6 +224,17 @@ nl:
   device_laptop: Laptop
   device_desktop_computer: Desktopcomputer
   device_mobile_device: Mobiel apparaat
+  for_everyone: Voor iedereen
+  for_students_teacher_led_learning: 'Voor studenten: leren onder leiding van een
+    leraar'
+  for_students_teacher_led_lessons: 'Voor studenten: lessen onder leiding van een
+    docent'
+  professional_development: Professionele ontwikkeling
+  how_ai_works_video_series: Hoe AI werkt Videoserie
+  learn_how_ai_works: Ontdek hoe AI werkt
+  ai_101_for_educators: AI 101 voor docenten
+  learn_about_ai_impacts: Meer informatie over de effecten van AI
+  hoc_ai_activities: AI-activiteiten van Hour of Code
   subscribe_to_emails_heading: Abonneer je op e-mails
   subscribe_to_emails_desc: Lees meer over wat er gebeurt op Code.org en in het informaticaonderwijs
     door middel van driemaandelijkse updates via onze mailinglijst.
@@ -258,21 +289,32 @@ nl:
     ondersteuning van andere docenten.
   required_materials: 'Benodigde materialen:'
   optional_materials: 'Optionele materialen:'
+  for_students: Voor studenten
+  for_educators: Voor leerkrachten
+  call_to_action_host_hoc: Organiseer een uur code
   call_to_action_hold_an_event: Een evenement houden
   call_to_action_register_event: Meld je evenement aan
+  call_to_action_register_your_hoc: Registreer je Hour of Code
   call_to_action_select_activity: Selecteer een activiteit
   call_to_action_start_activity: Een activiteit starten
   call_to_action_get_certificates: Certificaten verkrijgen
   call_to_action_go_beyond_hoc: Ga verder dan het Hour of Code
+  call_to_action_explore_all_hoc_activities: Ontdek alle Hour of Code-activiteiten
+    van Code.org
+  call_to_action_start_dance_party: Start het dansfeest
+  call_to_action_start_part_02: Begin deel twee
+  call_to_action_start_unplugged_activity: De activiteit zonder stekker starten
   call_to_action_view_promo_resources: Promotiemateriaal bekijken
   call_to_action_learn_more: Meer informatie
   call_to_action_watch_now: Nu kijken
   call_to_action_try_activity: Activiteit proberen
   call_to_action_try_activities: Activiteiten uitproberen
+  call_to_action_try_hoc_ai_activities: Probeer de AI-activiteiten van Hour of Code
   call_to_action_explore_activities: Activiteiten ontdekken
   call_to_action_explore_ai: AI ontdekken
   call_to_action_explore_unit: Eenheid verkennen
   call_to_action_explore_curriculum: Ontdek het curriculum
+  call_to_action_explore_curricula: Bekijk de curricula
   call_to_action_explore_curriculum_options: Bekijk de opties voor het curriculum
   call_to_action_explore_lessons: Lessen ontdekken
   call_to_action_explore_modules: Ontdek de modules
@@ -356,6 +398,11 @@ nl:
   call_to_action_learn_about_advocacy: Meer informatie over onze belangenbehartiging
   call_to_action_visit_store: Bezoek de winkel
   call_to_action_view_faqs: Bekijk meer veelgestelde vragen
+  call_to_action_applications_open: Aanvragen zijn nu geopend
+  call_to_action_apply_cs_ambassador: Meld je aan om CS Ambassador te worden
+  call_to_action_coming_soon: Binnenkort beschikbaar!
+  call_to_action_learn_how_ai_works: Ontdek hoe AI werkt
+  call_to_action_learn_about_ai: Meer informatie over AI
   aria_label_call_to_action_hoc_how_to_educators: Bekijk de handleiding voor docenten
   aria_label_call_to_action_hoc_how_to_companies: Bekijk de handleiding voor bedrijven
   aria_label_call_to_action_hoc_how_to_districts: Bekijk de instructiegids voor districten
@@ -367,6 +414,9 @@ nl:
   aria_label_call_to_action_hoc_how_to_volunteers: Bekijk de handleiding voor vrijwilligers
   aria_label_call_to_action_hoc_how_to_virtual_events: Bekijk de handleiding voor
     virtuele evenementen
+  aria_label_call_to_action_dance_01: Start de Dance Party-activiteit
+  aria_label_call_to_action_dance_02: Start deel twee van de Dance Party-activiteit
+  aria_label_call_to_action_dance_unplugged: De activiteit Dance Party unplugged starten
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -480,11 +530,27 @@ nl:
   curriculum_name_creating_apps_with_devices: Apps maken met apparaten
   curriculum_name_poetry: Coderen met poëzie
   curriculum_name_dance_party: Dansfeest
+  curriculum_name_dance_party_02: Blijf dansen
+  curriculum_name_dance_party_unplugged: Dansfeest zonder stekker
+  curriculum_name_dance_party_ai_edition: 'Dansfeest: AI-editie'
   curriculum_name_problem_solving_computing: Probleemoplossing en computergebruik
   curriculum_name_web_development: Webontwikkeling
   curriculum_name_interactive_animations_games: Interactieve animaties en games
   curriculum_name_design_process: Het ontwerpproces
   curriculum_name_data_society: Data en maatschappij
+  curriculum_desc_dance_party_01: Gebruik in deze introductieactiviteit code om verschillende
+    kleurrijke personages de overstap te laten maken naar geanimeerde achtergronden
+    en vrolijke muziek.
+  curriculum_desc_dance_party_02: Ga verder dan de inleidende handleiding met uitgebreide
+    projectideeën. Bekijk een bibliotheek met voorbeelden van complexere dansfeesten.
+  curriculum_desc_dance_party_unplugged: Ga lekker aan de slag, geen computer nodig!
+    Ontdek hoe coderingsconcepten, zoals gebeurtenissen, kunnen worden gebruikt om
+    de choreografie van dansers te synchroniseren.
+  curriculum_desc_dance_party_ai_edition: Kom meer te weten over concepten op het
+    gebied van kunstmatige intelligentie (AI) om je eigen virtuele dansfeest te organiseren
+    met de beste artiesten van vandaag. Met tientallen liedjes om uit te kiezen bereik
+    je elke student, ongeacht hun muzieksmaak. Het is tijd om je spullen te laten
+    zien!
   curriculum_desc_csf: Gratis set elementaire curricula die studenten kennis laat
     maken met de basisconcepten van de informatica.
   curriculum_desc_csf_express: Leer computerprogramma's te maken, probleemoplossende
@@ -604,12 +670,16 @@ nl:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Kleuterschool
   module_grade_grade_01: Graad 1
@@ -617,6 +687,12 @@ nl:
   module_grade_grade_03: Graad 3
   module_grade_grade_04: Graad 4
   module_grade_grade_05: Graad 5
+  module_age_05_07: Leeftijden 5-7
+  module_age_07: Vanaf 7 jaar
+  module_age_07_11: Leeftijden 7-11
+  module_age_11: Leeftijden 11+
+  module_age_13: Vanaf 13 jaar
+  module_age_all_age: Alle leeftijden
   module_grade_k_5_teachers: K-5 leraren
   module_grade_6_10_teachers: 6-10 leraren
   module_grade_9_12_teachers: 9-12 leraren
@@ -711,6 +787,59 @@ nl:
   heading_explore_curriculum_catalog: Bekijk al onze cursussen in de Curriculumcatalogus
   heading_csa_ai: Op zoek naar dingen om te doen na het AP® -examen?
   heading_bring_cs_to_students: Informatica naar studenten brengen
+  heading_cs_ambassador_program: CS Ambassador-programma
+  heading_featured_student_projects: Uitgelichte studentenprojecten
+  heading_start_hoc_with_videos: Begin je Hour of Code met inspirerende video's
+  cs_ambassador_subhead: Als je een middelbare scholier bent die graag meer jonge
+    vrouwen aanmoedigt om informatica op jouw school te gaan volgen, dan hebben we
+    je nodig!
+  cs_ambassador_desc: Elk vakgebied, inclusief geneeskunde, entertainment, sport,
+    onderwijs, zaken, mode en ondernemerschap, wordt geraakt door de informatica.
+    Toch volgt slechts 5% van de jonge vrouwen in de middelbare schoolleeftijd computerwetenschappen.
+    Ambassadeurs kunnen helpen deze genderkloof te dichten door hun leeftijdsgenoten
+    aan te moedigen een cursus informatica te volgen.
+  cs_ambassador_application_date: Inschrijvingen open tot 8 november 2023
+  cs_ambassador_application_subhead: Werk samen met een leraar om je aanvraag vandaag
+    nog in te dienen
+  cs_ambassador_application_questions: Vragen? Neem contact op met [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Wat doen CS Ambassadors?
+  cs_ambassador_do_desc: CS-ambassadeurs moedigen jonge vrouwen aan om zich over het
+    onderwerp te verdiepen en geven elkaar een boost naarmate ze hun plaats in de
+    informatica heroveren. CS-ambassadeurs komen in contact met hun collega's om hun
+    enthousiasme en liefde voor informatica te delen. Ze bezoeken klaslokalen, organiseren
+    tafels tijdens de lunch en spreken op vergaderingen en clubbijeenkomsten. CS-ambassadeurs
+    werken samen met leraren en schoolbestuurders om stereotypen te doorbreken die
+    jonge vrouwen tegenhouden.
+  cs_ambassador_steps_heading: Wat heb ik nodig om CS Ambassador te worden?
+  cs_ambassador_steps_list_title_01: Passie
+  cs_ambassador_steps_list_title_02: Ervaring in een CS-cursus
+  cs_ambassador_steps_list_title_03: School die CS aanbiedt
+  cs_ambassador_steps_list_desc_01: Een passie om jonge vrouwen op jouw school aan
+    te moedigen om lessen informatica te volgen
+  cs_ambassador_steps_list_desc_02: 'Heb in het schooljaar 2022-23 of eerder een jaar
+    lang computerwetenschappen gevolgd (aanbevolen: CS Principles of AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Ga naar een middelbare school die regelmatig
+    een cursus informatica van een jaar aanbiedt (aanbevolen: CS Principles of AP®
+    CSA)'
+  cs_ambassador_benefits_heading: Voordelen van het programma
+  cs_ambassador_benefits_list_title_01: Nationale gemeenschap
+  cs_ambassador_benefits_list_title_02: Dienst aan de gemeenschap
+  cs_ambassador_benefits_list_title_03: Erkenning
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certificaat
+  cs_ambassador_benefits_list_title_06: Ervaringen
+  cs_ambassador_benefits_list_desc_01: Toegang tot een nationale gemeenschap van jonge
+    leiders die zich inzetten voor het dichten van de genderkloof in de informatica.
+  cs_ambassador_benefits_list_desc_02: Openingstijden van de gemeenschapsdienst en
+    de mogelijkheid om de [U.S. Presidential Volunteer Service Award] te winnen (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Erkenning als ambassadeur 2023-2024 en in aanmerking
+    komend om gehonoreerd te worden in de Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Word geïdentificeerd als CS-ambassadeur door
+    middel van speciale kleding, stickers en meer van het merk Code.org!
+  cs_ambassador_benefits_list_desc_05: Officieel certificaat van deelname van Code.org.
+  cs_ambassador_benefits_list_desc_06: Doe ervaringen en verhalen op om te delen op
+    je universiteitsaanvraag, cv en meer!
   professional_learning_section_desc: Krijg de ondersteuning die je nodig hebt terwijl
     je je voorbereidt om les te geven. Leraren vinden het geweldig, meer dan 90% vindt
     het de beste professionele ontwikkeling ooit!
@@ -760,6 +889,14 @@ nl:
     Science Principles van Code.org te ontvangen en nuttige herinneringen, tips en
     updates rechtstreeks in uw inbox te ontvangen.
   subscribe_form_section_unsubscribe: Je kunt je op elk moment uitschrijven.
+  dance_hero_heading: Programmeer een dansfeest
+  dance_featuring_songs_by_short: 'Met liedjes van:'
+  dance_featuring_songs_by_long: 'Dance Party bevat liedjes van:'
+  dance_and_more: en meer
+  dance_choose_activity: Kies jouw dansfeest
+  dance_afe_disclaimer: De artiesten van wie de muziek in deze handleiding wordt gebruikt,
+    sponsoren of onderschrijven Amazon niet als onderdeel van een licentie voor het
+    gebruik van hun muziek aan Code.org.
   blockchain_hero_heading: Hoe Blockchain werkt
   blockchain_hero_desc: Duik in de wereld van blockchain met „How Blockchain Works”,
     onze nieuwe videoserie en bijbehorende lessen!
@@ -867,6 +1004,12 @@ nl:
   ai_curriculum_grades_05: 'Graadniveaus: 9-12'
   ai_curriculum_btn_aria_label_05: Ontdek de module Software Engineering & Computer
     Vision
+  ai_curriculum_title_06: Maatschappelijke impact van generatieve AI
+  ai_curriculum_desc_06: Onderzoek de impact van generatieve AI vanuit verschillende
+    perspectieven en werk vervolgens als team samen om richtlijnen op te stellen die
+    inspelen op de meeste behoeften van alle deelnemers.
+  ai_curriculum_btn_aria_label_06: Bekijk het lesplan voor de maatschappelijke impact
+    van generatieve AI
   ai_carousel_heading: 'Wat docenten zeggen over AI met Code.org:'
   ai_carousel_quote_01: Deze les gaf mijn leerlingen ook de kans om te zien dat er
     een element van mening schuilt in classificatiesystemen. Later, toen we begonnen
@@ -1900,6 +2043,9 @@ nl:
     in de VS en de tien beleidsmaatregelen die we staten aanbevelen om computerwetenschap
     fundamenteel te maken voor alle studenten. Ontdek bovendien hoe u verandering
     in uw staat kunt bewerkstelligen.
+  yw_page_top_heading: Jonge vrouwen in de informatica
+  yw_page_top_desc: Word CS-ambassadeur en draag bij aan het dichten van de genderkloof
+    in de informatica.
   hoc_live: Hour of Code live
   hoc_live_sign_up_title: Meld je aan voor Hour of Code Live
   hoc_live_learn_title: Leer met Hour of Code Live
@@ -2270,10 +2416,16 @@ nl:
     uur in informatica, waarbij gebruik wordt gemaakt van leuke tutorials om te laten
     zien dat iedereen de basis kan leren. Deze grassroots-campagne wordt ondersteund
     door meer dan 400 partners en 200.000 docenten wereldwijd.
+  hoc_homepage_registration_desc: Je klas of groep kan samen met miljoenen mensen
+    over de hele wereld het Hour of Code doen! De inschrijving voor de jaarlijkse
+    viering van de Computer Science Education Week begint in oktober. Hour of Code
+    is echter het hele jaar door beschikbaar.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lees onze instructiegids] (%{howto_guide_url})
     om een evenement voor je klas te plannen."
   hoc_homepage_highlights_heading: Hoogtepunten van Hour of Code
   hoc_homepage_organized_by: Het Hour of Code is georganiseerd door [Code.org](%{codeorg_url}).
+  hoc_events_heading: Registreer je voor Host an Hour of Code
+  hoc_events_jump_to_map: Spring naar de Hour of Code-kaart
   signup_closed: De registratie voor een Uur met Code is gesloten. Probeer het opnieuw
     in oktober om je aan te melden voor het volgende Uur met Code.
   signup_registration_not_required: Je hoeft je niet te registreren om deel te nemen!
@@ -2385,6 +2537,8 @@ nl:
   map_header: "# geregistreerde 'Hour of Code'-activiteiten over de hele de wereld
     in 2017"
   map_header_count_year: "%{event_count} evenementen geregistreerd in %{year}"
+  map_header_count_year_so_far: "%{event_count} evenementen die tot nu toe zijn geregistreerd
+    in %{year}"
   see_all_events: Bekijk alle evenementen
   map_header_company: "# door bedijfsorganisatoren"
   map_header_country: "# in %{country}"
@@ -2399,6 +2553,7 @@ nl:
     worden bekeken op <a href='%{events_url}'> de evenementenpagina.</a>
   map_warning_markdown: Een volledige lijst van de evenementen kan worden bekeken
     op de [evenementenpagina] (%{events_url})
+  map_view_all_events: Bekijk een volledige lijst met Hour of Code-evenementen [here](%{events_url}).
   meta_tag_og_title: "'Hour of Code': Iedereen kan het leren"
   meta_tag_og_description: "'Hour of Code' is een wereldwijde beweging die tientallen
     miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd:
@@ -2421,11 +2576,6 @@ nl:
     %{random_donor} voor het steunen van @codeorg)'
   hoc_faq_title: Veelgestelde vragen
   hoc_faq_what_is_hoc_q: Wat is 'Hour of Code'?
-  hoc_faq_what_is_hoc_a: "'Hour of Code' is een één uur durende introductie in de
-    wereld van informatica, ontworpen om coderen begrijpbaar te maken en aan te tonen
-    dat iederen de basis kan leren. <a href='%{tutorials}'>Bekijk de handleidingen</a>.
-    Deze vrijwilligerscampagne wordt ondersteund door meer dan <a href='%{partners}'>400
-    partners</a> en 200.000 leerkrachten van over de hele wereld."
   hoc_faq_what_is_hoc_a_markdown: 'De ''Hour of Code'' begon als een introductie in
     de wereld van informatica die een uur duurde, en was ontworpen om het coderen
     begrijpeljk te maken, en om aan te tonen dat iedereen de basis kan leren, en om
@@ -2437,11 +2587,6 @@ nl:
     ondersteunt. '
   hoc_faq_last_year: Probeer de tutorials
   hoc_faq_when_is_hoc_q: Wanneer is het 'Hour of Code'?
-  hoc_faq_when_is_hoc_a: "'Hour of Code' vindt jaarlijks plaats tijdens <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. In %{campaign_date_year} is dat op %{campaign_date_full},
-    maar je kunt het hele jaar door een 'Hour of Code' organiseren. Computer Science
-    Education Week wordt jaarlijks gehouden rond de verjaardag van <a href='%{grace_hopper}'>Admiraal
-    Grace Murray Hopper</a> (9 december 1906)."
   hoc_faq_when_is_hoc_a_markdown: "  De Hour of Code vindt elk jaar plaats tijdens
     [Computer Science Education Week](%{csedweek_url}). De %{campaign_date_year} Computer
     Science Education Week is op %{campaign_date_full}, maar je kunt het hele jaar
@@ -2449,28 +2594,16 @@ nl:
     gehouden ter gelegenheid van de verjaardag van computerpionier [Admiraal Grace
     Murray Hopper](%{grace_hopper}) (9 december 1906).  "
   hoc_faq_why_cs_q: Waarom Informatica?
-  hoc_faq_why_cs_a: "<i>Elke</i> leerling moet de kans krijgen om te leren programmeren.
-    Het helpt probleemoplossende vaardigheden, logica en creativiteit te ontwikkelen.
-    Leerlingen krijgen door vroeg te beginnen de basis voor een succesvole hedendaagse
-    loopbaan. Kijk voor meer informatie op <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: "  _Elke_leerling zou de mogelijkheid moeten hebben om
     informatica te leren. Het bevordert probleemoplossende vaardigheden, logica en
     creativiteit. Door vroeg te beginnen krijgen leerlingen een basis voor succes
     in elk 21e eeuws carrièrepad. Zie [hier](%{stats_url}) meer statistieken.  "
   hoc_faq_how_participate_q: Hoe doe ik mee met 'Hour of Code'?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Begin hier met plannen</a> door onze
-    handleiding door te nemen. Je kunt een 'Hour of Code' organiseren op jouw school
-    of in je gemeenschap &mdash; zoals een naschoolse club, vrijwilligersorganisatie
-    of op het werk. Of probeer het gewoon zelf op %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "  [Start planning hier](%{howto} door onze
     gids te bekijken. Je kunt een Hour of Code-evenement organiseren op je school
     of in je gemeenschap – zoals in een buitenschoolse club, non-profit of op het
     werk. Of, probeer het zelf maar als %{campaign_date} eraan komt.  "
   hoc_faq_behind_hoc_q: Wie zit er achter 'Hour of Code'?
-  hoc_faq_behind_hoc_a: "'Hour of Code' wordt georganiseerd door de <a href='%{partner_url}'>Raad
-    van Advies</a> van Hour of Code en de Computer Science Education Week, met een
-    nog nooit eerder vertoonde samenwerking van partners die 'Hour of Code' ondersteunen
-    &mdash; onder andere Microsoft, Apple en Amazon."
   hoc_faq_behind_hoc_a_markdown: "  De Hour of Code wordt gestuurd door het Hour of
     Code en de Computer Science Education Week [Advies- en beoordelingscommissies](%{partner_url})
     en door een ongekende coalitie van partners die bij elkaar komen om de Hour of
@@ -2478,11 +2611,6 @@ nl:
     of America en het College Board.  "
   hoc_faq_host_q: Ik weet niets over programmeren. Kan ik nog steeds een evenement
     organiseren?
-  hoc_faq_host_a: 'Natuurlijk. De ''Hour of Code''-activiteiten zijn doe-het-zelf.
-    Het enige wat je hoeft te doen is <a href=''%{codeorg_url}/learn''>onze tutorials
-    uit te proberen</a>: kies de tutorial, en kies een uur &mdash; wij zorgen voor
-    de rest. We hebben mogelijkheden voor iedere leeftijd en ervaringsniveau, vanaf
-    de kleuterschool. Ga van start door onze <a href=''/how-to''>handleiding te lezen</a>.'
   hoc_faq_host_a_markdown: "  Natuurlijk. Hour of Code-activiteiten zijn zelfsturend.
     Het enige wat je hoeft te doen is [probeer onze huidige tutorials](%{codeorg_url}/learn),
     kies de tutorial die je wilt, en kies een uur – wij zorgen voor de rest. We hebben
@@ -2490,10 +2618,6 @@ nl:
     en hoger. Begin met het plannen van je evenement door onze [gids](%{howto}) te
     lezen.  "
   hoc_faq_devices_q: Welke apparaten moet ik gebruiken voor mijn leerlingen?
-  hoc_faq_devices_a: Code.org tutorials werken op alle apparaten en browsers. U kunt
-    meer informatie over de Code.org tech needs tutorials vinden op < een href = '%{codeorg_url}/educatie/it'
-    >. Tech needs voor non-Code.org tutorials kunt u vinden op <a href=''%{codeorg_url}/learn'>
-    in de tutorial beschrijving. Vergeet niet dat wij ook unplugged activiteiten bieden!
   hoc_faq_devices_a_markdown: "  Code.org tutorials werken op alle apparaten en browsers.
     Je kunt meer informatie zien over de technologiebehoeften van Code.org [hier](%{codeorg_url}/educate/it).
     Technologiebehoeften voor niet-Code.org tutorials kunnen worden gevonden op [%{partner_url}/learn](%{codeorg_url}/learn)
@@ -2501,17 +2625,6 @@ nl:
     activiteiten](%{unplugged_url}) aanbieden als je school de tutorials niet kan
     bieden!  "
   hoc_faq_need_computers_q: Heb ik een computer nodig voor iedere deelnemer?
-  hoc_faq_need_computers_a: Nee. We hebben cursussen die werken op PC's, smartphones,
-    tablets, en een paar waarvoor je helemaal geen computer nodig hebt! Je kunt meedoen
-    waar je ook bent, wat je ook hebt. <p><i>Hier zijn een aantal mogelijkheden:</i>
-    <br> <ul> <li><b>Werk in paren.</b> <a href='%{pair_programming_research}'>Onderzoek
-    wijst uit</a> dat leerlingen het best leren met <a href='%{pair_programming_video}'>pair
-    programming</a>, door een computer te delen en samen te werken. Moedig je leerlingen
-    aan tweetallen te vormen. <li><b>Gebruik een projector.</b> Als je een projector
-    en scherm hebt voor een computer met een internetverbinding, dan kan je hele groep
-    samen een 'Hour of Code' doen. Kijk naar stukken video en los om de beurt opdrachten
-    op of beantwoord vragen. <li><b>Ga draadloos</b> We hebben ook tutorials die <a
-    href='%{unplugged_url}'>helemaal geen computer vereisen</a>.</ul>
   hoc_faq_need_computers_a_markdown: "  Nee. We hebben Hour of Code-tutorials die
     werken op pc's, smartphones, tablets, en sommige die helemaal geen computer nodig
     hebben! Je kunt meedoen waar je ook bent, met wat je ook hebt.      _Hier zijn
@@ -2524,29 +2637,16 @@ nl:
     vragen.   - **Go unplugged.** We bieden [tutorials die geen computer nodig hebben](%{unplugged_url}).
     \ "
   hoc_faq_international_q: Ik ben in <country>. Hoe doe ik internationaal mee?
-  hoc_faq_international_a: Iedereen kan een 'Hour of Code' organiseren, waar je ook
-    bent. Vorig jaar deden leerlingen van over de hele wereld een 'Hour of Code'.
-    Lees <a href='/promote'>hier</a> meer.
   hoc_faq_international_a_markdown: iedereen kan een 'Hour of Code' organiseren, waar
     je je ook bevindt. Vorig jaar deden studenten over de hele wereld mee aan een
     'Hour of Code'. Lees [hier]%(%{promote}) meer.
   hoc_faq_tutorial_q: Hoe kan ik een 'Hour of Code'-tutorial maken?
-  hoc_faq_tutorial_a: Als je tutorial-partner wil worden, <a href='targetHOC'>lees
-    onze richtlijnen en instructies</a>. We bieden graag een veelheid aan mogelijkheden,
-    maar het hoofddoel is de ervaring voor leerlingen en leraren die nieuw zijn in
-    de informatica te optimaliseren.
   hoc_faq_tutorial_a_markdown: "  Als je geïnteresseerd bent om een tutorial partner
     te worden, [zie onze richtlijnen en instructies](%{tutorial_guidelines}). We willen
     graag een verscheidenheid aan boeiende opties hosten, maar het primaire doel is
     om de ervaring te optimaliseren voor leerlingen en docenten die nieuw zijn in
     de informatica.  "
   hoc_faq_account_q: Moeten leerlingen zich aanmelden met een account?
-  hoc_faq_account_a: Nee. Er is voor leerlingen helemaal geen inschrijving of login
-    vereist om het 'Hour of Code' te proberen. De meeste van de <a href='%{codeorg_url}/learn/beyond'>vervolgcursussen</a>
-    vereisen het maken van een account om de vooruitgang van de leerlingen op te slaan.
-    Aanmelden voor 'Hour of Code' maakt NIET automatisch een Code Studio-account aan.
-    Als je accounts wil aanmaken voor je leerlingen, volg dan <a href=''https://youtu.be/_smelV_KISE'>deze
-    instructies</a>.
   hoc_faq_account_a_markdown: "  Nee. Er is absoluut geen inschrijving of login nodig
     voor leerlingen om de Hour of Code te proberen. De meeste [vervolgcursussen](%{codeorg_url}/learn/beyond)
     vereisen het aanmaken van een account om de voortgang van de leerlingen te bewaren.
@@ -2555,12 +2655,6 @@ nl:
     [instructies](https://youtu.be/_smelV_KISE).  "
   hoc_faq_high_school_q: Welke activiteit doe ik best met leerlingen van een middelbare
     school?
-  hoc_faq_high_school_a: Ongeacht de leeftijd raden we aan om te beginnen bij een
-    van de beginnershandleidingen op <a href='http://code.org/learn'Code.org/learn</a>
-    om te beginnen met een handleiding zoals Angry Birds of met Anna en Elsa. Een
-    leerling van het middelbaar zou in staat moeten zijn om zo'n handleiding af te
-    werken in een 30-tal minuten en dan kunnen ze verder gaan met een meer geavanceerde
-    handleiding in Javascript zoals Khan Academy of CodeHS.
   hoc_faq_high_school_a_markdown: "  Onze Star Wars en Minecraft tutorials zijn geweldig
     voor middelbare scholieren, vooral de Star Wars JavaScript versie en het gratis
     speelniveau op beide tutorials. Als alternatief raden we aan een van de beginnerstutorials
@@ -2570,11 +2664,6 @@ nl:
     tutorial in JavaScript proberen, zoals Khan Academy of CodeHS.  "
   hoc_faq_scratch_q: Wat moet ik doen als ik Scratch voor 'Hour of Code' doe, maar
     mijn leerlingen iPads hebben in plaats van laptops?
-  hoc_faq_scratch_a: Scratch werkt niet op tablets. Als je leerlingen jong zijn kunnen
-    ze gebruik maken van de ScratchJR iPad app (voor kinderen die al kunnen lezen).
-    Wanneer je naar de handleidingen kijkt op <a href='http://code.org/learn'>Code.org/learn</a>,
-    kan je daar andere handleidingen vinden die werken op iPads - van Code.org, Tynker,Lightbot
-    of CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch werkt niet op tablets. Als uw leerlingen jong
     zijn, dan kunnen ze gebruik maken van de ScratchJR iPad-app (voor jonge kinderen
     die al kunnen lezen). Wanneer u de tutorials ip [%{partner_url}/learn](%{codeorg_url}/learn)
@@ -2582,13 +2671,6 @@ nl:
     Tynker, Lightbot tot CodeSpark.
   hoc_faq_count_hoc_q: Hoe tellen jullie het totale aantal uren 'Hour of Code'?
   hoc_faq_map_q: Waarom zie ik mijn punt niet op de kaart?
-  hoc_faq_map_a: Het spijt ons zeer dat u uw 'Hour of Code'-activiteit niet kunt vinden
-    op de 'Hour of Code'-kaart. Vanwege de tientallen duizenden organisatoren die
-    zich aanmelden, aggregeert de kaart de gegevens en weergeeft één punt voor verschillende
-    evenementen. Als u klikt op het nummer boven de kaart wordt u geleid naar een
-    lijst van alle evenementen gesorteerd op gemeente, daar staat uw evenement vermeld.
-    Bovendien duurt het, gezien de duizenden aanmeldingen voor 'Hour of Code', 48
-    uur om de kaart en event bij te werken. Probeer het een paar dagen later weer!
   hoc_faq_map_a_markdown: "  Het spijt ons zo dat je je evenement niet op de Hour
     of Code-kaart ziet. Door de tienduizenden organisatoren die zich aanmelden, verzamelt
     de kaart de gegevens en toont één punt voor meerdere evenementen. Als je op de
@@ -2597,11 +2679,6 @@ nl:
     Bovendien duurt het, gezien de duizenden mensen die zich aanmelden voor de Hour
     of Code, meestal 48 uur om de kaart en de evenementenlijst bij te werken. Kom
     over een paar dagen terug!  "
-  hoc_faq_count_hoc_a: De teller van 'Hour of Code' is geen nauwkeurige meting van
-    het gebruik. We kunnen niet het exacte aantal unieke leerlingen tellen tijdens
-    het volgen van het gebruik van 'Hour of Code', met name omdat we inloggen of registreren
-    niet verplicht stellen voor de leerlingen. Daardoor tellen we tegelijkertijd zowel
-    te veel als te weinig deelnemers. Lees de verdere details <a href='%{codeorg_url}/loc'>hier</a>.
   hoc_faq_count_hoc_a_markdown: "  De Hour of Code-tracker is geen exacte meting van
     het gebruik. We tellen de unieke student-ID's niet perfect bij het bijhouden van
     de deelname aan de Hour of Code, vooral omdat we niet eisen dat leerlingen inloggen
@@ -2609,24 +2686,6 @@ nl:
     de deelnemers tegelijkertijd uitvoeren. Lees alle details [hier](%{codeorg_url}/loc).
     \ "
   hoc_faq_one_hour_q: Hoeveel kan men leren in een uur?
-  hoc_faq_one_hour_a: Het is niet het doel van 'Hour of Code' om van iedereen in één
-    uur een programmeer-expert te maken. Eén uur is alleen genoeg om te leren dat
-    programmeren leuk en creatief is, dat het toegankelijk is voor alle leeftijden,
-    en voor alle leerlingen ongeacht wat hun achtergrond is. De maatstaf voor het
-    succes van deze campagne is niet in hoeveel leerlingen leren programmeren - het
-    succes is te zien aan brede deelname qua geslacht en qua etnische en sociaal-economische
-    groepen, en de daaruit voortvloeiende toename van de inschrijving en deelname
-    die we in programmeercursussen op alle niveaus zien. Miljoenen deelnemende leerkrachten
-    en leerlingen hebben besloten verder te gaan dan alleen één uur - om een hele
-    dag te leren, een hele week of zelfs langer, ook hebben veel leerlingen besloten
-    zich in te schrijven voor een hele cursus (of zelfs een opleiding). <br/><br/>
-    Naast de leerlingen is een andere "leerling" de opvoeder die na een uur les het
-    vertrouwen heeft dat deze geen universiteitsgraad als computerwetenschapper hoeft
-    te hebben om programmeren te onderwijzen. Tienduizenden leraren besluiten verder
-    te gaan met het onderwijzen van programmeren, bijvoorbeeld door vervolgcursussen
-    aan te bieden. En dat geldt ook voor schooldirecteurs die beseffen dat programmeren
-    iets is wat de leerlingen willen leren en de leerkrachten kunnen onderwijzen.
-    <br/><br/>Het belangrijkste is dat alle deelnemers leren dat ze dit kunnen.
   hoc_faq_one_hour_a_markdown: '  Het doel van de Hour of Code is niet om iemand te
     leren in een uur een deskundige computerwetenschapper te worden. Een uurtje is
     slechts genoeg om te leren dat informatica leuk en creatief is, dat het toegankelijk
@@ -2647,38 +2706,29 @@ nl:
     leerlingen willen en waartoe hun docenten in staat zijn.      Wat alle deelnemers
     vooral kunnen leren in een uurtje is dat we dit kunnen doen.  '
   hoc_faq_more_questions_q: Heb je meer vragen?
-  hoc_faq_more_questions_a: Probeer het antwoord te vinden in ons  <a href='http://support.code.org'>forum</a>.
   hoc_faq_more_questions_a_markdown: Probeer een antwoord te vinden in ons [ondersteunende
     forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hoe kan ik blijven leren na 'Hour of Code'?
-  hoc_faq_keep_learning_a: Iedereen kan, op elk gewenst moment, een 'Hour of Code'
-    hosten. De tutorials blijven gedurende het hele jaar op de site staan. U kunt
-    verwachten dat alle onze tutorials en curriculum beschikbaar zullen blijven op
-    onze site. Ga naar <a href='/promote'>onze middelen</a> voor how-to gidsen en
-    andere middelen die u kunnen helpen uw 'Hour of Code'-activiteit tot een succes
-    te maken.
   hoc_faq_keep_learning_a_markdown: "  Iedereen kan op elk moment een Hour of Code
     hosten. De tutorials blijven het hele jaar door. Je kunt verwachten dat al onze
     tutorials en het leerprogramma voor altijd beschikbaar zijn op onze site. Ga naar
     [onze hulpmiddelen](%{promote}) voor de gidsen voor evenementen en andere hulpmiddelen
     om je Hour of Code-evenement tot een succes te maken.  "
   hoc_faq_certificates_q: Waar kan ik certificaten voor mijn studenten afdrukken?
-  hoc_faq_certificates_a: Ga naar onze <a href='%{codeorg_url}/certificates'> certificaten
-    pagina</a> waar u certificaten voor uw hele klas kunt afdrukken.
-  hoc_faq_certificates_a_markdown: "  Ga naar onze [certificatenpagina](%{codeorg_url}/certificates)
-    waar je vooraf certificaten voor je hele klas kunt afdrukken. Je kunt ook [speciale
-    certificaten](%{codeorg_url}/certificates?course=mc) afdrukken voor leerlingen
-    die de Minecraft tutorial doen.  "
+  hoc_faq_certificates_answer_markdown: Ga naar onze [certificatenpagina] (%{certificates_url})
+    waar je van tevoren certificaten voor je hele klas kunt afdrukken.
   hoc_faq_logo_q: Zijn er beperkingen aan hoe ik het 'Hour of Code'-logo of de naam
     kan gebruiken?
-  hoc_faq_logo_a: Uur van Code is een handelsmerk. We willen het gebruik ervan niet
-    voorkomen, maar we willen ervoor zorgen dat het gebruik ervan past binnen een
-    paar grenzen. Raadpleeg <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    deze richtlijnen voor gebruik</a>.
   hoc_faq_logo_a_markdown: "  Hour of Code is een handelsmerk. We willen het gebruik
     ervan niet verhinderen, maar we willen er wel voor zorgen dat het gebruik ervan
     binnen enkele grenzen past. Zie [deze richtlijnen voor gebruik](%{logo_url}).
     \ "
+  hoc_faq_bug_q: Ik heb een bug gevonden in een Hour of Code-activiteit! Wat moet
+    ik doen?
+  hoc_faq_bug_a_markdown: |-
+    Oh nee! Als je een bug bent tegengekomen in een Hour of Code-activiteit, controleer dan eerst de URL van de activiteit waarop je je bevindt. Als de URL begint met studio.code.org, kan ons Code.org Support-team helpen! Klik op het vraagtekenpictogram in de rechterbovenhoek van je scherm en selecteer vervolgens „Een probleem melden” in het dropdownmenu.
+
+    Als de URL niet begint met studio.code.org, bent u waarschijnlijk bezig met een activiteit van derden en moet u contact opnemen met het ondersteuningsteam van dat bedrijf voor verdere hulp.
   stats_hoc_2013_image_alt: Statistieken van 'Hour of Code' 2013
   stats_growth: Bereikte het als snelste 15 miljoen deelnemers.
   stats_i18n: Leerlingen leren in 40 talen
@@ -13553,7 +13603,7 @@ nl:
   hoc_how_to_faq_answer_account: Studenten hoeven zich niet aan te melden of in te
     loggen om de Hour of Code uit te proberen. Als je je aanmeldt voor het Hour of
     Code, wordt er NIET automatisch een Code.org-account aangemaakt.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Andere Hour of Code-bronnen voor docenten
   hoc_how_to_resources_promo_heading: Promotiebronnen
   hoc_how_to_resources_promo_desc: Vind alle bronnen die je nodig hebt (gedrukt en
     digitaal) om je Hour of Code onder de aandacht te brengen.
@@ -13627,6 +13677,21 @@ nl:
     en @codeorg zodat we ook jouw succes kunnen benadrukken!'
   hoc_how_to_step_07_educators_desc_02: Je kunt ook certificaten afdrukken zodat je
     leerlingen kunnen laten zien wat ze hebben bereikt!
+  hoc_ai_top_desc: Iedereen kan meer te weten komen over AI, of je nu een student
+    in de klas bent of een docent die de toekomst van lesgeven met en over AI ontsluit.
+  hoc_ai_how_ai_works_video_series_desc: Deze serie korte video's laat je zien hoe
+    kunstmatige intelligentie werkt en waarom het belangrijk is. Verdiep je vervolgens
+    in zaken als algoritmische vooroordelen en de ethiek van AI-besluitvorming.
+  hoc_ai_learn_how_ai_works_desc: Duik in de wereld van AI met „Hoe AI werkt”, lessen
+    in combinatie met onze videoserie die je laat zien hoe AI werkt en waarom het
+    belangrijk is.
+  hoc_ai_101_for_educators_desc: Ontdek het transformatieve potentieel van kunstmatige
+    intelligentie (AI) in het onderwijs met onze gratis online leerserie voor docenten.
+  hoc_ai_impacts_desc: Betrek je klaslokaal met lessen onder leiding van docenten
+    waarin de effecten van kunstmatige intelligentie worden onderzocht en leerlingen
+    worden uitgenodigd om oplossingen te bedenken voor sommige AI-problemen.
+  hoc_ai_activities_desc: Deze gloednieuwe Hour of Code-activiteiten laten gebruikers
+    op een leuke, boeiende manier kennismaken met de wereld van kunstmatige intelligentie.
   team_page_full_team_alt_text: Bijna 100 medewerkers van Code.org in bijpassende
     blauwe en gele t-shirts poseren in een vergaderruimte van een hotel voor het Codechella-evenement
     van het bedrijf in de zomer van 2022.
@@ -14190,6 +14255,24 @@ nl:
     en downloads'
   video_library_page_not_hacked_video_title_7: 'Hoe u niet gehackt wordt: updates
     installeren'
+  thank_you_page_main_title: Bedankt voor je hulp bij het opbouwen van een beweging
+  thank_you_page_description: De Code.org Advocacy Coalition wil de honderdduizenden
+    lokale voorvechters en pleitbezorgers bedanken, waaronder leraren, leden van de
+    gemeenschap, onderzoekers, non-profitorganisaties, universiteiten, bedrijven en
+    overheidsinstellingen die de visie hebben gesteund dat elke student op elke school
+    de kans verdient om informatica te leren. Bedankt voor je steun aan deze beweging.
+  thank_you_page_members_section_title: 'En aan alle leden van de Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Bedankt aan de volgende personen
+    en organisaties voor hun bijdragen aan dit rapport:'
+  thank_you_page_individual_organization_description: Toezichthouders op het gebied
+    van computerwetenschappelijk onderwijs bij elke staatsonderwijsinstelling, College
+    Board, Della Cronin, Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts,
+    Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Bedankt aan de studenten en docenten die
+    in dit rapport worden geciteerd:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Over Ons
   about_us_page_hero_description: Code.org® is een non-profitorganisatie zonder winstoogmerk
     die zich inzet voor de visie dat elke student op elke school de mogelijkheid heeft
@@ -14351,6 +14434,119 @@ nl:
     die visie ondersteunt.
   about_page_donors_link_1: Doe een donatie
   about_page_donors_link_2: "[zie onze lijst van donateurs] (%{donors_url})"
+  teach_ai_title: Voorbeelden uit de echte wereld. Praktische bronnen.
+  teach_ai_description: De AI Guidance for Schools Toolkit is een hulpmiddel voor
+    beleidsmakers, schoolleiders en personeel om initiële richtlijnen over AI op hun
+    scholen te ontwikkelen.
+  teach_ai_button_label: Bekijk de toolkit
+  middle_high_page_main_title: Leren voor kinderen van 11 jaar en ouder
+  middle_high_page_main_description: Ontdek de wereld van de informatica met boeiende
+    video's, tutorials in je eigen tempo, programmeeractiviteiten en meer!
+  middle_high_page_hero_title: Ga aan de slag met Hour of Code
+  middle_high_page_hero_description: Leer de grondbeginselen van de informatica met
+    gratis Hour of Code-activiteiten, inclusief codeerblokken met slepen en neerzetten.
+    Er zijn honderden opties van een uur om uit te kiezen!
+  middle_high_page_hourofcode_link: Ontdek de activiteiten van Hour of Code
+  middle_high_page_modules_title: Programmeermodules voor oudere studenten
+  middle_high_page_modules_description: Deze korte modules in eigen tempo voor middelbare
+    en middelbare scholieren zijn aangepast aan onze cursussen CS Discoveries en CS
+    Principles en zijn een geweldige manier om concepten te leren die alle programmeertalen
+    en tools omvatten.
+  middle_high_page_modules_card_title_1: Game Lab Introductie
+  middle_high_page_modules_card_title_2: Turtle Programmeren in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programmeren in App Lab
+  middle_high_page_modules_card_description_1: Beweeg in je eigen tempo in deze introductie
+    tot onze Game Lab-omgeving terwijl je animaties, interactieve kunst en games programmeert.
+  middle_high_page_modules_card_description_2: Ontgrendelt de mogelijkheid om rijke,
+    interactieve apps te maken met JavaScript in het App Lab!
+  middle_high_page_modules_card_description_3: Ga in je eigen tempo aan de slag met
+    deze kennismaking met de App Lab-programmeeromgeving, waarin leerlingen JavaScript
+    gebruiken om interactieve apps te maken.
+  middle_high_page_modules_card_link: Probeer het uit
+  middle_high_page_make_your_own_title: Maak je eigen apps, games en webpagina's
+  middle_high_page_make_your_own_description: 'Naast cursussen hebben we programmeertools
+    waarmee je je creativiteit kunt ontdekken en iets geweldigs kunt maken. '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: Gamelab
+  middle_high_page_make_your_own_card_title_3: Weblab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is een programmeeromgeving
+    waar je eenvoudige apps kunt maken. Ontwerp een app, codeer in JavaScript met
+    blokken of tekst en deel je app vervolgens binnen enkele seconden.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is een programmeeromgeving
+    waarin je eenvoudige animaties en games kan maken met objecten en personages die
+    met elkaar interageren.
+  middle_high_page_make_your_own_card_descrpition_3: Weblab is een programmeeromgeving
+    waar je eenvoudige webpagina's kunt maken met HTML en CSS. Ontwerp uw webpagina's
+    en deel uw site in enkele seconden.
+  middle_high_page_make_your_own_card_link: Meer informatie
+  middle_high_page_additional_resources_title: Aanvullende bronnen
+  middle_high_page_additional_resources_description: Er zijn zoveel manieren om de
+    informatica verder te verkennen! Blader door onze videobibliotheek of kom meer
+    te weten over interessante carrières in de informatica.
+  middle_high_page_video_library_title: Ontdek onze videobibliotheek
+  middle_high_page_video_library_description: Leer de basisprincipes van de informatica
+    door middel van korte video's van 5-10 minuten over onderwerpen als kunstmatige
+    intelligentie, het internet, hoe computers werken, hoe je niet gehackt wordt,
+    blockchain, carrières en meer!
+  middle_high_page_video_library_link: Bekijk de videobibliotheek
+  middle_high_page_cs_journeys_title: Ga verder met CS Journeys
+  middle_high_page_cs_journeys_description: Zet de volgende stap op je reis op het
+    gebied van informatica. Ontdek carrières, mentorschapsmogelijkheden, online cursussen,
+    beurzen, stages en meer!
+  middle_high_page_cs_journeys_link: Ontdek CS-reizen
+  middle_high_page_cs_title: Informatica in de klas
+  middle_high_page_cs_description: Deze cursussen moeten worden gegeven door een docent!
+    Als je wilt dat ze op jouw school worden onderwezen, overweeg dan om met een leraar
+    samen te werken om ze naar je klas te brengen.
+  middle_high_page_cs_card_title_1: CS Ontdekkingen
+  middle_high_page_cs_card_title_2: CS-principes
+  middle_high_page_cs_card_title_3: AP Computerwetenschappen A
+  middle_high_page_cs_card_description_1: Gratis curriculum van een jaar dat studenten
+    kennis laat maken met de fundamentele concepten van de informatica en hen uitdaagt
+    om te ontdekken hoe computers en technologie de wereld kunnen beïnvloeden.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Laat studenten kennismaken met software-engineering
+    en objectgeoriënteerd ontwerp terwijl ze de programmeertaal Java leren in dit
+    gratis curriculum voor AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Ontdek de ontdekkingen van CS
+  middle_high_page_cs_link_2: Ontdek de CS-principes
+  middle_high_page_cs_link_3: Ontdek CSA
+  elemeentary_page_main_title: Leren voor kinderen van 5 tot 11 jaar
+  elementary_page_main_description: Ontdek de wereld van de informatica met boeiende
+    video's, tutorials in je eigen tempo, programmeeractiviteiten en meer!
+  elementary_page_own_pace_title: Blijf leren in je eigen tempo
+  elementary_page_own_pace_description: Maak tekeningen, spelletjes en meer in deze
+    twee uitstekende opties voor studenten die zelf aan de slag gaan met het leren
+    van de basisprincipes van informatica.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express-cursus
+  elementary_page_own_pace_card_title_2: Expres Cursus
+  elementary_page_own_pace_card_description_1: Leer informatica in je eigen tempo!
+    Leer computerprogramma's maken, probleemoplossende vaardigheden ontwikkelen en
+    leuke uitdagingen aangaan! Maak games en creatieve projecten om te delen met vrienden,
+    familie en docenten.
+  elementary_page_own_pace_link_1: De Pre-Reader-cursus starten
+  elementary_page_own_pace_link_2: Express-cursus starten
+  elementary_page_make_your_own_games_title: Maak je eigen animaties en games
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Tijd om creatief aan de
+    slag te gaan! Gebruik codering op basis van blokken om iets geks, liefs of buitengewoons
+    te maken in Sprite Lab. De enige beperking is je verbeelding!
+  elementary_page_make_your_own_games_link: Probeer Sprite Lab
+  elementary_page_computer_science_title: Informatica in de klas
+  elementary_page_computer_science_description: Deze cursussen moeten worden gegeven
+    door een docent! Als je wilt dat ze op jouw school worden onderwezen, vraag dan
+    een ouder of verzorger om met een leraar samen te werken om ze naar je klas te
+    brengen.
+  elementary_page_computer_science_card_title_1: Grondbeginselen van de informatica
+  elementary_page_computer_science_card_title_2: Verbindingen op het gebied van informatica
+  elementary_page_computer_science_description_1: Gratis curriculum van een jaar dat
+    studenten kennis laat maken met de fundamentele concepten van de informatica en
+    hen uitdaagt om te ontdekken hoe computers en technologie de wereld kunnen beïnvloeden.
+  elementary_page_computer_science_description_2: Leg verbanden tussen informatica
+    (CS) en andere vakken zoals wiskunde, taalkunsten, wetenschappen en sociale studies.
   language_code:
     ar: Arabisch
     az: Azerbeidzjaans
