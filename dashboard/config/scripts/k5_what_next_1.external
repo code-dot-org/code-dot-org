@@ -25,7 +25,7 @@ Tynker's creative computing platform helps children develop computational thinki
 
 **Other third party recommendations:**
 
-<table style="background-color: white; border-collapse: collapse; border-spacing: 0px; border-radius:10px; box-sizing: border-box; color: dimgrey; font-family: 'Gotham 4r', sans-serif; font-size: 14px; line-height: 22px; margin-top:0px;">
+<table style="background-color: white; border-collapse: collapse; border-spacing: 0px; border-radius:10px; box-sizing: border-box; color: dimgrey; font-family: 'Metropolis', sans-serif; font-weight: 400; font-style: normal; font-size: 14px; line-height: 22px; margin-top:0px;">
 	<thead style="background-color: #00b2c0; border-color: rgb(0, 178, 192) rgb(0, 178, 192) white; border-style: solid; border-width: 1px; box-sizing: border-box; color: white; padding: 15px;">
 		<tr>
     		<th>Organization</th>
@@ -36,7 +36,7 @@ Tynker's creative computing platform helps children develop computational thinki
     <tbody>
         <tr>
             <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
-                <a href="https://code.org/educate/k5" style="background-color: transparent; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">
+                <a href="https://code.org/educate/k5" style="background-color: transparent; color: #7665a0; font-family: 'Metropolis', sans-serif; font-weight: 700; font-style: normal; text-decoration: none;">
                 	Scratch Jr.
                 </a>
             </td>
@@ -49,7 +49,7 @@ Tynker's creative computing platform helps children develop computational thinki
         </tr>
         <tr>
             <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
-                <a href="https://code.org/educate/k5" style="background-color: transparent; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">
+                <a href="https://code.org/educate/k5" style="background-color: transparent; color: #7665a0; font-family: 'Metropolis', sans-serif; font-weight: 700; font-style: normal text-decoration: none;">
                 	Tynker
                 </a>
             </td>

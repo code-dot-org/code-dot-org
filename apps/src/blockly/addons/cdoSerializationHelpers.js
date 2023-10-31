@@ -105,7 +105,6 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
  * @return {object} the cursor with updated coordinates
  */
 function positionBlockWithCursor(block, cursor) {
-  addUnusedFrame(block);
   if (
     isBlockLocationUnset(block) ||
     PROCEDURE_DEFINITION_TYPES.includes(block.type)
@@ -124,7 +123,7 @@ function positionBlockWithCursor(block, cursor) {
  * @param {number} cursor.y - a y-coordinate for moving a block
  */
 export function getNewLocation(block, cursor) {
-  const blockHasFrameSvg = !!block.functionalSvg_ || !!block.unusedSvg_;
+  const blockHasFrameSvg = !!block.functionalSvg_;
   const blockTopPadding = blockHasFrameSvg ? SVG_FRAME_TOP_PADDING : 0;
   const blockSidePadding = blockHasFrameSvg ? SVG_FRAME_SIDE_PADDING : 0;
   const isRTL = block.workspace.RTL;
@@ -142,7 +141,7 @@ export function getNewLocation(block, cursor) {
  */
 export function getCursorYAdjustment(block) {
   const blockHeight = block.getHeightWidth().height;
-  const blockHasFrameSvg = !!block.functionalSvg_ || !!block.unusedSvg_;
+  const blockHasFrameSvg = !!block.functionalSvg_;
   const blockVerticalPadding =
     VERTICAL_SPACE_BETWEEN_BLOCKS + (blockHasFrameSvg ? SVG_FRAME_HEIGHT : 0);
   return blockHeight + blockVerticalPadding;
@@ -163,17 +162,6 @@ export function isBlockLocationUnset(block) {
   };
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultLocation.x && y === defaultLocation.y;
-}
-
-/**
- * Adds an svg frame around a block to signal that it is unused.
- * @param {Blockly.Block} block - a Blockly block
- */
-function addUnusedFrame(block) {
-  if (block.isUnused() && !block.unusedSvg_) {
-    block.unusedSvg_ = new BlockSvgUnused(block);
-    block.unusedSvg_.render(block.svgGroup_, block.RTL);
-  }
 }
 
 /**

@@ -2255,10 +2255,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:1.0.9":
-  version: 1.0.9
-  resolution: "@code-dot-org/dance-party@npm:1.0.9"
-  checksum: 736bb504f28921e65f0b794692ce8b01eef8b198f12b5b4db21a7bbb925f8406d4e197b95c31919bd4679057b4fa9771c8cfe54fba54144f3b9174a9d4d1a135
+"@code-dot-org/dance-party@npm:1.0.14":
+  version: 1.0.14
+  resolution: "@code-dot-org/dance-party@npm:1.0.14"
+  checksum: b94f537b52284f3ec0ffa3f42fb005e31670fe132d67cc6a0917c7bf64f16ba34e2f3ef86382a9cd05eac2076dd874931cb77597ec7f6c9bc08fe9f513cf0afd
   languageName: node
   linkType: hard
 
@@ -2362,14 +2362,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/piskel@npm:0.13.0-cdo.12":
-  version: 0.13.0-cdo.12
-  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.12"
+"@code-dot-org/piskel@npm:0.13.0-cdo.13":
+  version: 0.13.0-cdo.13
+  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.13"
   dependencies:
     messageformat: ^2.3.0
   bin:
     piskel-root: misc/scripts/piskel-root
-  checksum: cb027ba26fa220eb1d442de536b26954864523317e526db5685b6428214af5830b9692c348d52fe6e6624624b35ee9e0ab350f39ecfd8ee0f563b22aaa3271f8
+  checksum: fb4280827c65fc8ea80151c3eaeacb656a821695ed464c2eb15f7f0b2bc97de96fd6fdd5836276e288d4a7bfb8ee1ed439383c3822d569835f3406c238a04a47
   languageName: node
   linkType: hard
 
@@ -2949,6 +2949,13 @@ __metadata:
     "@jridgewell/resolve-uri": 3.1.0
     "@jridgewell/sourcemap-codec": 1.4.14
   checksum: 0572669f855260808c16fe8f78f5f1b4356463b11d3f2c7c0b5580c8ba1cbf4ae53efe9f627595830856e57dbac2325ac17eb0c3dd0ec42102e6f227cc289c02
+  languageName: node
+  linkType: hard
+
+"@kurkle/color@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "@kurkle/color@npm:0.3.2"
+  checksum: 79e97b31f8f6efb28c69d373f94b0c7480226fe8ec95221f518ac998e156444a496727ce47de6d728eb5c3369288e794cba82cae34253deb0d472d3bfe080e49
   languageName: node
   linkType: hard
 
@@ -7596,14 +7603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bindings@npm:1.2.x":
-  version: 1.2.1
-  resolution: "bindings@npm:1.2.1"
-  checksum: fb542a5721cbeb0a75607a0447ac4d12e3ba8fe12ddf2adbe76814fa9cf3d1236a03ab51d55a7fef1b2d1d9917f4315e8b1cf8b74ff21a6cf9e722e7e363ba5f
-  languageName: node
-  linkType: hard
-
-"bindings@npm:^1.5.0":
+"bindings@npm:^1.3.1, bindings@npm:^1.5.0":
   version: 1.5.0
   resolution: "bindings@npm:1.5.0"
   dependencies:
@@ -7659,7 +7659,7 @@ __metadata:
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
     "@code-dot-org/craft": 0.2.2
-    "@code-dot-org/dance-party": 1.0.9
+    "@code-dot-org/dance-party": 1.0.14
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
     "@code-dot-org/js-interpreter": 1.3.13
     "@code-dot-org/js-numbers": 0.1.0-cdo.0
@@ -7667,7 +7667,7 @@ __metadata:
     "@code-dot-org/ml-activities": 0.0.26
     "@code-dot-org/ml-playground": 0.0.47
     "@code-dot-org/p5.play": 1.3.21-cdo
-    "@code-dot-org/piskel": 0.13.0-cdo.12
+    "@code-dot-org/piskel": 0.13.0-cdo.13
     "@code-dot-org/redactable-markdown": 0.4.0
     "@code-dot-org/remark-plugins": ^1.3.0
     "@codemirror/autocomplete": ^6.1.0
@@ -7715,6 +7715,7 @@ __metadata:
     chai-subset: 1.2.0
     chai-xml: ^0.3.2
     chalk: ^1.1.3
+    chart.js: ^4.4.0
     classnames: ^2.3.2
     codemirror: 5.5
     codemirror-spell-checker: ^1.1.2
@@ -7823,6 +7824,7 @@ __metadata:
     react-beautiful-dnd: ^13.1.0
     react-bootstrap: ^0.33.1
     react-bootstrap-2: "npm:react-bootstrap@^2.7.4"
+    react-chartjs-2: ^5.2.0
     react-color: ^2.17.3
     react-csv: ^2.0.3
     react-datepicker: 1.6.0
@@ -8881,6 +8883,15 @@ canvg@gabelerner/canvg:
     chartjs-color: ^2.1.0
     moment: ^2.10.2
   checksum: cbdc7abe2fa65e4838848e68b035ae6048ebcc512b9057d7cdb6d361e728400d39e3fde75e0b4da815ab43f7890c31787d8f80d4e6ab75a3e80fc75b47cd173c
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "chart.js@npm:4.4.0"
+  dependencies:
+    "@kurkle/color": ^0.3.0
+  checksum: 5ee2d99b78608025525b5790af17178fdaa5adc3294e082deba2718029b0496109ba124f1b08dd1e4c8a04d6e842be7f384f2cfe9a11df8d1c6fe884acece52b
   languageName: node
   linkType: hard
 
@@ -18931,13 +18942,14 @@ es6-shim@latest:
   linkType: hard
 
 "microtime@npm:^2.1.0":
-  version: 2.1.2
-  resolution: "microtime@npm:2.1.2"
+  version: 2.1.9
+  resolution: "microtime@npm:2.1.9"
   dependencies:
-    bindings: 1.2.x
-    nan: 2.4.x
+    bindings: ^1.3.1
+    nan: 2.12.x
     node-gyp: latest
-  checksum: 6825e329116bdf17a29331f9bf0a66f973fb6958b4aeeea57a704fa2b6733d9ec9a0c331080288df69e3c43a01a915165c60fdba66b4167f7eba09683d7ee30d
+    prebuild-install: ^5.2.2
+  checksum: 15169cea16e049cabec04732455eb2e544041b73b0f72518e708a9e63d170fc1947a374f4f2c1a30199ae7fa6810dfbee32cde01cdeb75879f71d846360c6d45
   languageName: node
   linkType: hard
 
@@ -19527,12 +19539,12 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"nan@npm:2.4.x":
-  version: 2.4.0
-  resolution: "nan@npm:2.4.0"
+"nan@npm:2.12.x":
+  version: 2.12.1
+  resolution: "nan@npm:2.12.1"
   dependencies:
     node-gyp: latest
-  checksum: 662e77b96ca0f210c5d0947684360e186a6f1ea6b1a687cd61e9981c16bc823d92de028cedd0dda35d7106693cc26bdb0ef60032a053fb05dfb172d830b8ca28
+  checksum: 51e21868fb1332a7b3a3846cae5dda1e9cbe1f932dc3f8894528bbf72e9a50b442e6e748a658be9f1f5baa01a941afab2dfc0044723cd3a33f08c4151e9e62b2
   languageName: node
   linkType: hard
 
@@ -21796,7 +21808,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"prebuild-install@npm:^5.3.0":
+"prebuild-install@npm:^5.2.2, prebuild-install@npm:^5.3.0":
   version: 5.3.6
   resolution: "prebuild-install@npm:5.3.6"
   dependencies:
@@ -22700,6 +22712,16 @@ es6-shim@latest:
     react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     react-dom: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
   checksum: c37b900cfc6fa25bb36c5fa0d918e473d61000375735c2c4c562258a70f5b708f5908987557f554cc62f7230bd44b6fd9a7b5db5653ff845b3ee3e59e669e68e
+  languageName: node
+  linkType: hard
+
+"react-chartjs-2@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "react-chartjs-2@npm:5.2.0"
+  peerDependencies:
+    chart.js: ^4.1.1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: ace702185be1450e5888a8bcd8b5fc1995067e3b11d236764a67f5567a3d7c32ff16923b8d48d3d39bda6e45135da6c044c9b43fbe8e1978f95aca9d2c0ce348
   languageName: node
   linkType: hard
 

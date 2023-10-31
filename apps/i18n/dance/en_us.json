@@ -1,12 +1,13 @@
 {
- "aiDanceFeedbackAiBlockNoParameters": "Choose 3 emojis that match the mood of the song and prompt AI to generate your stage.",
-  "aiDanceFeedbackAiBlockNotConnectedSetup": "Make sure to connect the `use AI` block to the `setup` block.",
-  "aiDanceFeedbackAiBlockNotConnectedDownArrowEvent": "Make sure to connect the `use AI` block to the `when down pressed` event block.",
-  "aiDanceFeedbackAiConvertToBlocks": "Click on the `use AI` block to convert it into background and foreground code blocks.",
-  "aiDanceFeedbackConnectPressUpArrowEvent": "Make sure to press your “up arrow” key or the orange up arrow ^ button after pressing *\"Run\"*.",
-  "aiDanceFeedbackConnectPressDownArrowEvent": "Make sure to press your “down arrow” key or the orange down arrow button after pressing *\"Run\"*.",
-  "aiDanceFeedbackNoAiBlock": "Drag out the `use AI` block from the toolbox.",
-  "aiDanceFeedbackTinkerAiBlock": "Make sure to choose a new background or foreground effect.",
+  "aiDanceFeedbackAiBlockNoParameters": "Choose 3 emojis that match the mood of the song and prompt AI to generate your stage.",
+  "aiDanceFeedbackAiBlockNoParametersOnEvent": "The stage didn't change after 4 measures. Choose 3 emojis that match the mood of the song and prompt AI to generate your new stage.",
+  "aiDanceFeedbackAiBlockNotConnectedSetup": "Make sure to connect the `AI generate stage` block to the `setup` block.",
+  "aiDanceFeedbackAiEditBlocks": "Click on the `AI generate stage` block then click `Edit Code` to use the background and foreground code blocks.",
+  "aiDanceFeedbackConnectPressUpArrowEvent": "Make sure to press your “up arrow” key or the orange up arrow ▲ button after pressing *\"Run\"*.",
+  "aiDanceFeedbackNoAiBlock": "Drag out the `AI generate stage` block from the toolbox.",
+  "aiDanceFeedbackTinkerAiBlock": "Look at the new coding blocks that AI generated. Try choosing a new background or foreground effect.",
+  "aiDanceNewMove": "You need to add a block to make the dancer do a new move.",
+  "aiDanceStageChangeAfterMeasures": "Make sure to connect the `AI generate stage` block to the `After 4 Measures` event.",
   "danceFeedbackDidntPress": "Make sure to press the arrow keys while your dance is running.",
   "danceFeedbackKeyEvent": "Make sure you attach some code to the <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> block and press the key while your dance is running.",
   "danceFeedbackNeedBackup": "You need to create a group of backup dancers with the <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
@@ -26,5 +27,6 @@
   "danceFeedbackUseSetSize": "Use the `set backup_dancer2 size` block to make that dancer smaller.",
   "danceFeedbackUseSetTint": "Use the `set tint` block to change a dancer's tint.",
   "danceFeedbackUseStartMapping": "Try adding the <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block to your program.",
+  "danceFeedbackKeepCoding": "Keep coding! Something's not quite right yet.",
   "measure": "Measure:"
 }

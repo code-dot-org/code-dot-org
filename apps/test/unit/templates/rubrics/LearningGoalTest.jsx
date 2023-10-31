@@ -68,7 +68,7 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
   });
 
-  it('renders tips', () => {
+  it('renders tips for teachers', () => {
     const wrapper = shallow(
       <LearningGoal
         learningGoal={{
@@ -78,11 +78,28 @@ describe('LearningGoal', () => {
           tips: 'Tips',
         }}
         teacherHasEnabledAi
+        isStudent={false}
       />
     );
     expect(wrapper.find('Heading6')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
+  });
+
+  it('does not render tips for students', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: true,
+          evidenceLevels: [],
+          tips: 'Tips',
+        }}
+        isStudent={true}
+      />
+    );
+    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
   it('shows AI token when AI is enabled', () => {
@@ -96,7 +113,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -111,7 +128,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -126,7 +143,7 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -146,17 +163,6 @@ describe('LearningGoal', () => {
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
-  it('shows down arrow when closed and up arrow when open', () => {
-    const wrapper = shallow(
-      <LearningGoal
-        learningGoal={{learningGoal: 'Testing', evidenceLevels: []}}
-      />
-    );
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-down');
-    wrapper.find('summary').simulate('click');
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-up');
-  });
-
   it('sends event when closed and opened', () => {
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
@@ -168,7 +174,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -178,7 +184,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -238,7 +244,7 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('message');
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {
@@ -270,6 +276,47 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('BodyThreeText').props().children).to.equal(
       'Limited Evidence'
+    );
+  });
+
+  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.NONE,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'No Evidence'
+    );
+  });
+
+  it('passes isStudent down to EvidenceLevels', () => {
+    const props = {
+      learningGoal: {
+        learningGoal: 'Testing',
+        evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+      },
+      submittedEvaluation: {
+        feedback: 'test feedback',
+        understanding: RubricUnderstandingLevels.LIMITED,
+      },
+      canProvideFeedback: false,
+      isStudent: true,
+    };
+    const wrapper = shallow(<LearningGoal {...props} />);
+    expect(wrapper.find('EvidenceLevels').props().isStudent).to.equal(true);
+    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).to.equal(
+      props.submittedEvaluation
+    );
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.equal(
+      props.learningGoal.evidenceLevels
     );
   });
 });

@@ -33,35 +33,40 @@ An overview of each tab is as follows:
 - **Participation:** shows the percentage of 9–12 students enrolled in foundational computer science course by gender, race/ethnicity, English language learners, students who qualify for free or reduced-price meals, and special education students who qualify for services under IDEA or section 504.
 - **Courses that Count:** provides a list of courses that were included in the definition of foundational computer science for each state.  
 
-<div class='tableauPlaceholder' id='viz1665775067242' style='position: relative'>
-	<noscript>
-		<a href='#'>
-			<img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;AccessReport2022&#47;AccessReport&#47;1_rss.png' style='border: none' />
-	</a>
-	</noscript>
-	<object class='tableauViz'  style='display:none;'>
-	<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-	<param name='embed_code_version' value='3' /> 
-	<param name='site_root' value='' />
-	<param name='name' value='AccessReport2022&#47;AccessReport' />
-	<param name='tabs' value='yes' /><param name='toolbar' value='yes' />
-	<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;AccessReport2022&#47;AccessReport&#47;1.png' /> 
-	<param name='animate_transition' value='yes' />
-	<param name='display_static_image' value='yes' />
-	<param name='display_spinner' value='yes' />
-	<param name='display_overlay' value='yes' />
-	<param name='display_count' value='yes' />
-	<param name='language' value='en-US' />
-	<param name='filter' value='publish=yes' /
-	></object>
-	</div>                
+<div class='tableauPlaceholder' id='viz1698706085358' style='position: relative'>
+<noscript>
+<a href='#'>
+<img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;AccessReport2023&#47;BigMap&#47;1_rss.png' style='border: none' />
+</a>
+</noscript>
+<object class='tableauViz'  style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+<param name='embed_code_version' value='3' /> 
+<param name='site_root' value='' />
+<param name='name' value='AccessReport2023&#47;BigMap' />
+<param name='tabs' value='yes' /><param name='toolbar' value='yes' />
+<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;AccessReport2023&#47;BigMap&#47;1.png' /> 
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+<param name='language' value='en-US' /></object></div>                
 <script type='text/javascript'>                    
-	var divElement = document.getElementById('viz1665775067242');                    									
-	var vizElement = divElement.getElementsByTagName('object')[0]; 
-	vizElement.style.width='1000px';vizElement.style.height='2250px';                    
-	var scriptElement = document.createElement('script');                    
-	scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-	vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+  var divElement = document.getElementById('viz1698706085358');                    
+  var vizElement = divElement.getElementsByTagName('object')[0];                    
+  if ( divElement.offsetWidth > 800 ) { 
+    vizElement.style.width='1000px';vizElement.style.height='2450px';
+  } 
+  else if ( divElement.offsetWidth > 500 ) { 
+    vizElement.style.width='1000px';vizElement.style.height='2450px';
+  } 
+  else { 
+    vizElement.style.width='100%';vizElement.style.height='1950px';
+  }                     
+  var scriptElement = document.createElement('script');                    
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 </script>
 
 Learn more about our [data sources](https://code.org/yourschool/about). Underlying data was contributed by various organizations, including the Computer Science Teachers Association (CSTA), University of Texas at Austin, the College Board, Technology Education and Literacy in Schools (TEALS), Project Lead the Way, BootUp PD, and many state education agencies. 

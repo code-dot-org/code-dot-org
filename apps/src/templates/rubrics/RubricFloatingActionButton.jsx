@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 const icon = require('@cdo/static/ai-fab-background.png');
@@ -17,15 +17,43 @@ export default function RubricFloatingActionButton({
   currentLevelName,
   reportingData,
 }) {
-  const [isOpen, setIsOpen] = useState(!!studentLevelInfo);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const eventData = useMemo(() => {
+    return {
+      ...reportingData,
+      viewingStudentWork: !!studentLevelInfo,
+      viewingEvaluationLevel: rubric.level.name === currentLevelName,
+    };
+  }, [reportingData, studentLevelInfo, rubric.level.name, currentLevelName]);
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_CLOSED_FROM_FAB_EVENT
-      : EVENTS.RUBRIC_OPENED_FROM_FAB_EVENT;
-    analyticsReporter.sendEvent(eventName, reportingData);
+      ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
+      : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
+    analyticsReporter.sendEvent(eventName, eventData);
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (!!studentLevelInfo) {
+      analyticsReporter.sendEvent(
+        EVENTS.TA_RUBRIC_ON_STUDENT_WORK_LOADED,
+        eventData
+      );
+
+      const fireUnloadEvent = () =>
+        analyticsReporter.sendEvent(
+          EVENTS.TA_RUBRIC_ON_STUDENT_WORK_UNLOADED,
+          eventData
+        );
+      window.addEventListener('beforeunload', fireUnloadEvent);
+
+      return () => {
+        window.removeEventListener('beforeunload', fireUnloadEvent);
+      };
+    }
+  }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
   return (
     <div id="fab-contained">
