@@ -1,0 +1,53 @@
+:ruby
+  slide_item = [
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_aquatic),
+      image: "/images/mc/minecraft-activity-aquatic.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_aquatic),
+      url: CDO.studio_url("/s/aquatic/lessons/1/levels/1"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_aquatic)
+    },
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_journey),
+      image: "/images/mc/minecraft-activity-journey.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_journey),
+      url: CDO.studio_url("/s/hero/lessons/1/levels/1"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_journey)
+    },
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_adventurer),
+      image: "/images/mc/minecraft-activity-adventurer.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_adventurer),
+      url: CDO.studio_url("/s/mc/lessons/1/levels/1"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_adventurer)
+    },
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_designer),
+      image: "/images/mc/minecraft-activity-designer.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_designer),
+      url: CDO.studio_url("/s/minecraft/lessons/1/levels/1"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_designer)
+    },
+  ]
+
+.carousel-wrapper#minecraft_cdo_activities
+  .carousel.carousel--collections{style: "height: 515px"}
+    .slides
+      - slide_item.each do |slide_item|
+        .slide
+          .slide-content
+            .action-block.action-block--one-col.flex-space-between
+              .content-wrapper
+                %p.overline
+                  =hoc_s(:module_label_grades)
+                  =hoc_s(:module_grade_2_12)
+                %h3
+                  = slide_item[:title]
+                %img{src: "#{slide_item[:image]}", alt: ""}
+                %p.body-three
+                  = slide_item[:desc]
+              .content-footer
+                %a.link-button.has-external-link{href: "#{slide_item[:url]}", "aria-label": "#{slide_item[:aria_label]}"}
+                  =hoc_s(:call_to_action_get_started)
+
+  = view :carousel_pagination, carousel_id: "minecraft_cdo_activities-pagination", carousel_index: "1"

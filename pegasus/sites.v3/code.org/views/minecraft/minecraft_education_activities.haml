@@ -1,7 +1,6 @@
 :ruby
   activity_item = [
     {
-      overline: hoc_s(:module_grade_2_12),
       title: hoc_s(:minecraft_education_activity_title_2022),
       image: "/images/mc/minecraft-activity-estate-escape-2022.png",
       desc: hoc_s(:minecraft_education_activity_desc_2022),
@@ -9,7 +8,6 @@
       aria_label: hoc_s(:aria_label_call_to_action_minecraft_2022)
     },
     {
-      overline: hoc_s(:module_grade_2_12),
       title: hoc_s(:minecraft_education_activity_title_2021),
       image: "/images/mc/minecraft-activity-timecraft-2021.png",
       desc: hoc_s(:minecraft_education_activity_desc_2021),
@@ -17,7 +15,6 @@
       aria_label: hoc_s(:aria_label_call_to_action_minecraft_2021)
     },
     {
-      overline: hoc_s(:module_grade_2_12),
       title: hoc_s(:minecraft_education_activity_title_2020),
       image: "/images/mc/minecraft-activity-gen-ai-for-earth-2020.png",
       desc: hoc_s(:minecraft_education_activity_desc_2020),
@@ -50,7 +47,7 @@
       .content-wrapper
         %p.overline
           =hoc_s(:module_label_grades)
-          = activity_item[:overline]
+          =hoc_s(:module_grade_2_12)
         %h3
           = activity_item[:title]
         %img{src: "#{activity_item[:image]}", alt: ""}

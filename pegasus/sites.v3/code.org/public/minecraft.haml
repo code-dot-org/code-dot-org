@@ -16,13 +16,14 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:heading_available_on_code_dot_org)
     %p=hoc_s(:minecraft_activities_desc)
+    = view :"minecraft/minecraft_activities_carousel"
 
 = view :section_divider_line
 
 %section
   .wrapper
     %h2=hoc_s(:minecraft_education_activities_heading)
-    = view :"minecraft/minecraft_activities"
+    = view :"minecraft/minecraft_education_activities"
 
 = view :section_divider_line
 
