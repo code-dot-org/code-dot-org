@@ -1,102 +1,127 @@
 {
   "items": [
     {
+      "emoji": "💩", 
       "id": "poopy",
       "name": "poopy"
     },
     {
+      "emoji": "🥰",
       "id": "romantic",
       "name": "romantic"
     },
     {
+      "emoji": "🎉",
       "id": "party",
       "name": "party"
     },
     {
+      "emoji": "🤪",
       "id": "silly",
       "name": "silly"
     },
     {
+      "emoji": "✨",
       "id": "sparkle",
       "name": "sparkle"
     },
     {
+      "emoji": "😀",
       "id": "happy",
       "name": "happy"
     },
     {
+      "emoji": "🪄",
       "id": "magic",
       "name": "magic"
     },
     {
+      "emoji": "👻",
       "id": "spooky",
       "name": "spooky"
     },
     {
+      "emoji": "😚",
       "id": "cute",
       "name": "cute"
     },
     {
+      "emoji": "😎",
       "id": "funky",
       "name": "funky"
     },
     {
+      "emoji": "🌊",
       "id": "wavy",
       "name": "wavy"
     },
     {
+      "emoji": "💡",
       "id": "lights",
       "name": "lights"
     },
     {
+      "emoji": "🌈",
       "id": "rainbow",
       "name": "rainbow"
     },
     {
+      "emoji": "🤖",
       "id": "robot",
       "name": "robot"
     },
     {
+      "emoji": "😵‍💫",
       "id": "chaotic",
       "name": "chaotic"
     },
     {
+      "emoji": "🪩",
       "id": "disco",
       "name": "disco"
     },
     {
+      "emoji": "😌",
       "id": "zen",
       "name": "zen"
     },
     {
+      "emoji": "💨",
       "id": "fast",
       "name": "fast"
     },
     {
+      "emoji": "👿",
       "id": "evil",
       "name": "evil"
     },
     {
+      "emoji": "🥶",
       "id": "cold",
       "name": "cold"
     },
     {
+      "emoji": "🚀",
       "id": "cosmic",
       "name": "cosmic"
     },
     {
+      "emoji": "😭",
       "id": "sad",
       "name": "sad"
     },
     {
+      "emoji": "📰",
       "id": "black-and-white",
       "name": "black and white"
     },
     {
+      "emoji": "🔥",
       "id": "warm",
       "name": "warm"
     },
     {
+      "emoji": "❄️",
       "id": "cool",
       "name": "cool"
     }
