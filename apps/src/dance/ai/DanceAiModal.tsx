@@ -71,8 +71,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
-  const BAD_RESULTS_COUNT = 3;
-  const GENERATING_SUBSTEP_COUNT = 3;
+  const BAD_RESULTS_COUNT = 7;
+  const GENERATING_SUBSTEP_COUNT = 2;
 
   const inputLibraryFilename = 'ai-inputs';
   const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
@@ -158,7 +158,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       if (mode === Mode.GENERATING) {
         let currentGeneratingStep = [...generatingStep];
 
-        if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT-1) {
+        if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT - 1) {
           // bump substep.
           currentGeneratingStep[1]++;
         } else if (currentGeneratingStep[0] < BAD_RESULTS_COUNT) {
@@ -176,7 +176,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         console.log('end tick', currentGeneratingStep);
       }
     },
-    mode === Mode.GENERATING ? 1500 : undefined
+    mode === Mode.GENERATING ? 1000 : undefined
   );
 
   const getScore = (scores: any) => {
@@ -324,10 +324,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const botImage =
     mode === Mode.GENERATING &&
-    generatingStep[0] < SLOT_COUNT &&
-    generatingStep[1] >= 2
+    generatingStep[0] < BAD_RESULTS_COUNT &&
+    generatingStep[1] >= 1
       ? aiBotNo
-      : mode === Mode.GENERATING && generatingStep[1] >= 2
+      : mode === Mode.GENERATING && generatingStep[1] >= 1
       ? aiBotYes
       : aiBotBorder;
 
@@ -522,11 +522,46 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               </div>
             </div>
           )}
+          {mode === Mode.GENERATING && /*generatingStep[1] >= 1 && */ (
+            <div className={moduleStyles.score}>
+              <div className={moduleStyles.barContainer}>
+                <div
+                  className={moduleStyles.barFill}
+                  style={{
+                    width: Math.round(
+                      2 *
+                        getScore(
+                          allResults.current[
+                            generatingStep[0] > BAD_RESULTS_COUNT
+                              ? BAD_RESULTS_COUNT
+                              : generatingStep[0]
+                          ].scores
+                        ) *
+                        10
+                    ),
+                  }}
+                >
+                  &nbsp;
+                </div>
+              </div>
+              <div className={moduleStyles.text}>
+                {Math.round(
+                  getScore(
+                    allResults.current[
+                      generatingStep[0] > BAD_RESULTS_COUNT
+                        ? BAD_RESULTS_COUNT
+                        : generatingStep[0]
+                    ].scores
+                  ) * 10
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {(mode === Mode.GENERATING || mode === Mode.RESULTS) && (
           <div
-            key={'preview-' + (generatingStep[0] === 4 ? 3 : generatingStep[0])}
+            key={'preview-' + generatingStep[0]}
             id="preview-area"
             className={moduleStyles.previewArea}
           >
@@ -551,41 +586,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       );
                     }}
                   />
-                  {mode === Mode.GENERATING && generatingStep[1] >= 1 && (
-                    <div className={moduleStyles.score}>
-                      <div className={moduleStyles.barContainer}>
-                        <div
-                          className={moduleStyles.barFill}
-                          style={{
-                            height: Math.round(
-                              2 *
-                                getScore(
-                                  allResults.current[
-                                    generatingStep[0] > BAD_RESULTS_COUNT
-                                      ? BAD_RESULTS_COUNT
-                                      : generatingStep[0]
-                                  ].scores
-                                ) *
-                                10
-                            ),
-                          }}
-                        >
-                          &nbsp;
-                        </div>
-                      </div>
-                      <div className={moduleStyles.text}>
-                        {Math.round(
-                          getScore(
-                            allResults.current[
-                              generatingStep[0] > BAD_RESULTS_COUNT
-                                ? BAD_RESULTS_COUNT
-                                : generatingStep[0]
-                            ].scores
-                          ) * 10
-                        )}
-                      </div>
-                    </div>
-                  )}
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
                   {mode === Mode.RESULTS && (

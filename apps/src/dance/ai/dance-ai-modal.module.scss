@@ -10,6 +10,15 @@ $ai-modal-border-width: 8px;
 $result-green: rgb(86 197 104);
 $result-red: rgb(235 87 87);
 
+@keyframes preview-right-to-normal {
+  0% {
+    left: 52%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -253,7 +262,7 @@ $result-red: rgb(235 87 87);
     .botArea {
       position: absolute;
       width: 100%;
-      height: 200px;
+      height: 300px;
       top: 10px;
       left: 0;
       pointer-events: none;
@@ -310,15 +319,33 @@ $result-red: rgb(235 87 87);
               display: block;
             }
           }
+        }
+      }
 
-          .sideBeamImage {
-            top: 0;
-            left: 90%;
-            width: 100px;
+      .score {
+        position: absolute;
+        left: 40px;
+        top: 180px;
+
+        .barContainer {
+          background-color: rgb(56 55 55);
+          width: 80px;
+          height: 20px;
+          position: relative;
+
+          .barFill {
             position: absolute;
-            animation: appear1 .25s;
-            rotate: 270deg;
+            top: 0;
+            left: 0;
+            height: 20px;
+            background-color: rgb(16 189 233);
+            transition: transform 0.4s;
           }
+        }
+
+        .text {
+          font-size: 24px;
+          margin-top: 10px;
         }
       }
     }
@@ -365,7 +392,7 @@ $result-red: rgb(235 87 87);
       display: flex;
       align-items: center;
       margin-top: 10px;
-      animation: appear1 2s;
+      animation: appear 0.7s, preview-right-to-normal 0.7s;
 
       .flipCard {
         position: absolute;
@@ -398,33 +425,6 @@ $result-red: rgb(235 87 87);
 
         &Back {
           transform: rotateY(180deg) translateX(50%);
-        }
-      }
-
-      .score {
-        padding: 20px;
-        position: absolute;
-        top: 40px;
-        right: -80px;
-
-        .barContainer {
-          background-color: rgb(56 55 55);
-          width: 20px;
-          height: 80px;
-          position: relative;
-
-          .barFill {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 20px;
-            background-color: rgb(16 189 233);
-          }
-        }
-
-        .text {
-          font-size: 24px;
-          margin-top: 10px;
         }
       }
     }
