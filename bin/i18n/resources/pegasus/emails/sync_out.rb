@@ -3,7 +3,6 @@
 require 'fileutils'
 
 require_relative '../../../i18n_script_utils'
-require_relative '../../../utils/pegasus_markdown'
 require_relative '../emails'
 
 module I18n
@@ -12,18 +11,24 @@ module I18n
       module Emails
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
-            return unless File.file?(crowdin_file_path)
+            crowdin_dir_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            return if File.directory?(crowdin_dir_path)
 
             unless I18nScriptUtils.source_lang?(language)
-              # Distributes the localization
-              target_i18n_file_name = crowdin_file_name.gsub(/en.md/, "#{language[:locale_s]}.md")
-              target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, target_i18n_file_name)
-              I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
+              DIR.glob('*.md', base: crowdin_dir_path) do |crowdin_file_subpath|
+                # `hoc_signup_2015_receipt.md` => `hoc_signup_2015_receipt_es-ES.md`
+                # `hoc_signup_2023_receipt_en.md` => `hoc_signup_2023_receipt_es-ES.md`
+                target_file_subpath = crowdin_file_subpath.sub(/(_en.md|.md)$/, "_#{language[:locale_s]}.md")
+
+                target_file_path = File.join(ORIGIN_DIR_PATH, target_file_subpath)
+                crowdin_file_path = File.join(crowdin_locale_dir_path, crowdin_file_subpath)
+
+                I18nScriptUtils.copy_file(crowdin_file_path, target_file_path)
+              end
             end
 
-            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
-            I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            i18n_dir_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME)
+            I18nScriptUtils.rename_dir(crowdin_dir_path, i18n_dir_path)
           end
         end
       end

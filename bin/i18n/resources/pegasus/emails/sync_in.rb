@@ -16,8 +16,8 @@ module I18n
           ].freeze
 
           def process
-            LOCALIZABLE_FILE_SUBPATHS.each do |file|
-              I18nScriptUtils.copy_file(`#{ORIGIN_DIR_PATH}/#{file}`, I18N_SOURCE_DIR_PATH)
+            LOCALIZABLE_FILE_SUBPATHS.each do |file_name|
+              I18nScriptUtils.copy_file(File.join(ORIGIN_DIR_PATH, file_name), File.join(I18N_SOURCE_DIR_PATH, file_name))
             end
           end
         end
