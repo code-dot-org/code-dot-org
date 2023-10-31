@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-16 19:56:42 UTC",
+    "serialized_at": "2023-10-17 14:08:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +96,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break\n\n\n**Objectives**\n* Participants reflect on the industry practices seen in the code.org curriculum\n\n**Suggested Time:** 15 minutes\n",
+        "overview": "**Purpose:**\nDebrief the asynchronous work, allowing teachers to reflect on the project they saw over the break.\n\n\n**Objectives**\n* Participants reflect on the industry practices seen in the code.org curriculum\n\n**Suggested Time:** 15 minutes\n",
         "student_overview": "**You will**\n* Reflect on the industry practices seen in the code.org curriculum"
       },
       "seeding_key": {
