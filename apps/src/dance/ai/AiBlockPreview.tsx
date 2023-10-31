@@ -1,5 +1,5 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
 import {generateBlocksFromResult} from './utils';
 
@@ -20,12 +20,9 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
   const refTimer = useRef<number | null>(null);
 
-  const [done, setDone] = useState<boolean>(false);
-
   useEffect(() => {
     refTimer.current = window.setTimeout(
       () => {
-        setDone(true);
         onComplete();
         if (refTimer.current) {
           clearTimeout(refTimer.current);
@@ -44,23 +41,25 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
 
   // Build out the blocks.
   useEffect(() => {
-    if (!done) {
-      const emptyBlockXml = Blockly.utils.xml.textToDom('<xml></xml>');
-      const previewWorkspace: Workspace =
-        Blockly.BlockSpace.createReadOnlyBlockSpace(
-          blockPreviewContainerRef.current,
-          emptyBlockXml,
-          {}
-        );
+    const emptyBlockXml = Blockly.utils.xml.textToDom('<xml></xml>');
+    const previewWorkspace: Workspace =
+      Blockly.BlockSpace.createReadOnlyBlockSpace(
+        blockPreviewContainerRef.current,
+        emptyBlockXml,
+        {}
+      );
 
-      const blocksSvg = generateBlocksFromResult(previewWorkspace, resultJson);
-      blocksSvg.forEach((blockSvg: BlockSvg) => {
-        blockSvg.initSvg();
-        blockSvg.render();
-      });
-      Blockly.svgResize(previewWorkspace as WorkspaceSvg);
-    }
-  }, [blockPreviewContainerRef, resultJson, done]);
+    const blocksSvg = generateBlocksFromResult(previewWorkspace, resultJson);
+    blocksSvg.forEach((blockSvg: BlockSvg) => {
+      blockSvg.initSvg();
+      blockSvg.render();
+    });
+    Blockly.svgResize(previewWorkspace as WorkspaceSvg);
+
+    return () => {
+      previewWorkspace.dispose();
+    };
+  }, [blockPreviewContainerRef, resultJson]);
 
   return (
     <div id={fadeIn ? 'fade-in' : undefined}>

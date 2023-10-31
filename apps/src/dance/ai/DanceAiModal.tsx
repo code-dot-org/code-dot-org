@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -272,6 +272,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   }
 
+  const onBlockPreviewDone = useCallback(() => {
+    if (mode === Mode.GENERATING) {
+      setGeneratingDone(true);
+    } else if (mode === Mode.RESULTS) {
+      setShowPreview(true);
+      setMode(Mode.RESULTS_FINAL);
+      setTypingDone(true);
+    }
+  }, [mode, setGeneratingDone, setShowPreview, setTypingDone]);
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -489,15 +499,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               <AiBlockPreview
                 fadeIn={mode === Mode.GENERATING}
                 resultJson={resultJson}
-                onComplete={() => {
-                  if (mode === Mode.GENERATING) {
-                    setGeneratingDone(true);
-                  } else if (mode === Mode.RESULTS) {
-                    setShowPreview(true);
-                    setMode(Mode.RESULTS_FINAL);
-                    setTypingDone(true);
-                  }
-                }}
+                onComplete={onBlockPreviewDone}
               />
             </div>
           )}
