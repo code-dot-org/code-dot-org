@@ -6,13 +6,14 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {BlockSvg, Workspace} from 'blockly/core';
+import {FieldDropdown, Workspace} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput} from '../types';
+import {AiOutput, FieldKey} from '../types';
+import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
@@ -59,6 +60,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
+  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -67,8 +69,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
-
-  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
@@ -84,6 +84,29 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setInputs(JSON.parse(currentValue).inputs);
     }
   }, [currentAiModalField]);
+
+  const getLabels = () => {
+    const tempWorkspace = new Workspace();
+    const blocksSvg = generateBlocks(tempWorkspace);
+
+    const foregroundLabels = getLabelMap(
+      blocksSvg[0].getField('EFFECT') as FieldDropdown
+    );
+    const backgroundLabels = getLabelMap(
+      blocksSvg[1].getField('EFFECT') as FieldDropdown
+    );
+    const paletteLabels = getLabelMap(
+      blocksSvg[1].getField('PALETTE') as FieldDropdown
+    );
+
+    tempWorkspace.dispose();
+
+    return {
+      [FieldKey.FOREGROUND_EFFECT]: foregroundLabels,
+      [FieldKey.BACKGROUND_EFFECT]: backgroundLabels,
+      [FieldKey.BACKGROUND_PALETTE]: paletteLabels,
+    };
+  };
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;
@@ -173,38 +196,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setResultJson(fullResultJson);
   };
 
-  /**
-   * Generates blocks from the AI result in the main workspace, and attaches
-   * them to each other.
-   */
-  const generateBlocksFromResult = useCallback(
-    (workspace: Workspace): [BlockSvg, BlockSvg] => {
-      const params = JSON.parse(resultJson);
-
-      const blocksSvg: [BlockSvg, BlockSvg] = [
-        workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-        workspace.newBlock(
-          'Dancelab_setBackgroundEffectWithPaletteAI'
-        ) as BlockSvg,
-      ];
-
-      // Foreground block.
-      blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
-
-      // Background block.
-      blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-      blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
-
-      // Connect the blocks.
-      blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-
-      return blocksSvg;
-    },
-    [resultJson]
-  );
-
   const handleConvertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
+    const blocksSvg = generateBlocksFromResult(
+      Blockly.getMainWorkspace(),
+      resultJson
+    );
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -502,7 +498,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             >
               <AiBlockPreview
                 fadeIn={mode === Mode.GENERATING}
-                generateBlocksFromResult={generateBlocksFromResult}
+                resultJson={resultJson}
                 onComplete={onBlockPreviewDone}
               />
             </div>
@@ -513,7 +509,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           showPreview && (
             <div id="preview-area" className={moduleStyles.previewArea}>
               <AiVisualizationPreview
-                blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+                blocks={generateBlocksFromResult(
+                  Blockly.getMainWorkspace(),
+                  resultJson
+                )}
               />
             </div>
           )}
@@ -523,6 +522,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={JSON.parse(resultJson)}
+              labelMaps={getLabels()}
             />
           </div>
         )}

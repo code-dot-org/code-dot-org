@@ -97,46 +97,11 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:03.158+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2_b\"},{\"changed_at\":\"2023-10-30 15:30:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:31:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:35:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:38:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:45:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:47:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:03.158+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2_b\"},{\"changed_at\":\"2023-10-30 15:30:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:31:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:35:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:38:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:45:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:47:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 23:26:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:26:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:27:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="Dancelab_whenSetup" id=";fui020!Iaz!kp-n0K[8" movable="false" x="60" y="46">
-          <statement name="DO">
-            <block type="Dancelab_ai" id="$t|1h(lDU)g@x0QEjCKi">
-              <field name="VALUE">{"inputs":["rainbow","party","sparkle"],"backgroundEffect":"sparkles","backgroundColor":"warm","foregroundEffect":"color_lights"}</field>
-              <next>
-                <block type="Dancelab_makeNewDanceSpriteGroup" id="oWSy9:P-H52:7V`dqyo+">
-                  <field name="N">10</field>
-                  <field name="COSTUME">"PINEAPPLE"</field>
-                  <field name="LAYOUT">"circle"</field>
-                  <next>
-                    <block type="Dancelab_makeAnonymousDanceSprite" id="-a9aM{7I9v?xs^67zj9N">
-                      <field name="COSTUME">"SLOTH"</field>
-                      <field name="LOCATION">{x: 200, y: 200}</field>
-                      <next>
-                        <block type="Dancelab_changeMoveEachLR" id="K{#p7Lx-6L`Zof@Yaa}a">
-                          <field name="GROUP">sprites</field>
-                          <field name="MOVE">"rand"</field>
-                          <field name="DIR">-1</field>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="Dancelab_atTimestampNotAfter" id="S4!uAzkx{%vw@UFZX8hY" deletable="false" movable="false" editable="false" x="68" y="307">
-          <field name="TIMESTAMP">2</field>
-          <field name="UNIT">"measures"</field>
-        </block>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K" x="35" y="49">
