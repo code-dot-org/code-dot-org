@@ -13,7 +13,7 @@ import pickle
 import json
 from HoC2023AiHelperFunctions import *
 import openai
-openai.api_key = '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'
+openai.api_key = ''
 
 # Load the most recent Ada model as of 10/23
 EMBEDDING_MODEL = 'text-embedding-ada-002'
@@ -146,7 +146,7 @@ def retrieve_embedding(string: str,
     embedding_cache,
     model: str = EMBEDDING_MODEL,
 ) -> list:
-    """Return embedding of given string, using a cache to avoid recomputing."""
+    # Return embedding of given string, using a cache to avoid recomputing.
     if (string, model) not in embedding_cache.keys():
         embedding_cache[(string, model)] = get_embedding(string, model)
         with open(cache_path, "wb") as embedding_cache_file:
@@ -154,7 +154,12 @@ def retrieve_embedding(string: str,
     return embedding_cache[(string, model)]
 
 # Retrieve embeddings for input emojis, palettes, backgrounds, and foregrounds in that order
+# Use emojis as inputs.
 option_lists = [emojis_list, palette_model_descriptive_names, background_effect_model_descriptive_names, foreground_effect_model_descriptive_names]
+# Use emoji ids (phrases) as inputs.
+
+# option_lists = [emojis_map.values(), palette_model_descriptive_names, background_effect_model_descriptive_names, foreground_effect_model_descriptive_names]
+
 embeddings = []
 # Final output should be list of lists structured as [[[emoji1], [emoji2], ...], [[palette1]...]...]
 # Where embeddings[0] = all emoji embeddings, [1] = palettes, [2] = background, [3] = foreground
@@ -206,14 +211,15 @@ foreground_output['output'] = [foreground_effects_map[fg] for fg in foreground_o
 palette_output['output'] = [palettes_map[pal] for pal in palette_output['output']]
 
 # For testing purposes (temporary until model is decided):
-ada_emoji = '-ada-emoji.json'
-ada_phrase = '-ada-phrase.json'
-spacy_emoji = '-space-emoji.json'
-spacy_phrase = '-spacy-phrase.json'
+ada_emoji = 'ada-emoji'
+ada_phrase = 'ada-phrase'
+spacy_emoji = 'space-emoji'
+spacy_phrase = 'spacy-phrase'
+test_model = ada_emoji
 # Write output to cached files
-cached_palette_map = 'apps/static/dance/ai/model/cached-palette-map' + ada_emoji
-cached_background_map = 'apps/static/dance/ai/model/cached-background-map' + ada_emoji
-cached_foreground_map = 'apps/static/dance/ai/model/cached-foreground-map' + ada_emoji
+cached_palette_map = 'apps/static/dance/ai/model/' + test_model + '/cached-palette-map-' + test_model + '.json'
+cached_background_map = 'apps/static/dance/ai/model/' + test_model + '/cached-background-map-' + test_model + '.json'
+cached_foreground_map = 'apps/static/dance/ai/model/' + test_model + '/cached-foreground-map-' + test_model + '.json'
 
 with open(cached_palette_map, "w") as json_file:
     json_file.write(json.dumps(palette_output))

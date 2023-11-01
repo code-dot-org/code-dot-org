@@ -3,9 +3,9 @@ const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
 
-import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
-import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
-import CachedForegrounds from '@cdo/static/dance/ai/model/cached-spacy-foreground-map.json';
+import CachedPalettes from '@cdo/static/dance/ai/model/cached-palette-map.json';
+import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-background-map.json';
+import CachedForegrounds from '@cdo/static/dance/ai/model/cached-foreground-map.json';
 
 import {
   Chart as ChartJS,
