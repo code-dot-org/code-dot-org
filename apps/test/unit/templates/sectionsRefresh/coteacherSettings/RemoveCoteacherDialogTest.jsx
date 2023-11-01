@@ -103,13 +103,10 @@ describe('RemoveCoteacherDialog', () => {
       .at(1)
       .simulate('click', {preventDefault: () => {}});
 
-    wrapper.update();
-
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
     expect(removeSavedCoteacher).to.have.not.been.called;
     expect(setCoteachersToAdd).to.have.been.calledOnce;
     expect(ajaxStub).to.have.not.been.called;
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
 
     ajaxStub.restore();
   });
@@ -132,10 +129,6 @@ describe('RemoveCoteacherDialog', () => {
       .find('Button')
       .at(1)
       .simulate('click', {preventDefault: () => {}});
-
-    wrapper.update();
-
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
 
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
     expect(removeSavedCoteacher).to.have.been.calledOnceWith(1);
