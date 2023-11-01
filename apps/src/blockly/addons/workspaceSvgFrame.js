@@ -13,18 +13,16 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * @param {Workspace} workspace - The workspace associated with the frame.
    * @param {string} text - The text to display in the frame.
    * @param {string} className - The CSS class name for styling.
-   * @param {string} textColor - The color for the frame's text.
-   * @param {string} headerColor - The color for the frame's header.
+   * @param {Function} getColor - Returns the color for the frame's header.
    */
-  constructor(workspace, text, className, textColor, headerColor) {
+  constructor(workspace, text, className, getColor) {
     className = className || 'blocklyWorkspaceSvgFrame';
     text = text || msg.function();
     super(
       workspace,
       text,
       className,
-      textColor,
-      headerColor,
+      getColor,
       frameSizes.WORKSPACE_HEADER_HEIGHT
     );
 
@@ -64,7 +62,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     let height =
       this.element_.getMetricsManager().getMetrics().contentHeight +
       frameSizes.MARGIN_TOP +
-      frameSizes.MARGIN_BOTTOM +
+      frameSizes.MARGIN_BOTTOM * 2 +
       frameSizes.WORKSPACE_HEADER_HEIGHT;
     // Increase the frame size to the full workspace.
     // Get the height and width of the rendered workspace, not including toolbox

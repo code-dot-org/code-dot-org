@@ -152,10 +152,17 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
 // Not used in Music Lab or wherever the modal function is enabled.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+    const workspace = this.workspace;
+    const getBlockColor = function () {
+      const blockStyles = workspace.getTheme().blockStyles;
+      const blockStyle = blockStyles.procedure_blocks;
+      return blockStyle.colourPrimary;
+    };
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.function(),
-      'blocklyFunctionalFrame'
+      'blocklyFunctionalFrame',
+      getBlockColor
     );
 
     this.setOnChange(function () {

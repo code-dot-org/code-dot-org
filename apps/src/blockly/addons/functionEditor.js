@@ -179,10 +179,21 @@ export default class FunctionEditor {
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
 
+    const workspace = this.editorWorkspace;
+    // Used to create and render an SVG frame instance.
+    const getBlockColor = function () {
+      const blockStyles = workspace.getTheme().blockStyles;
+      const blockStyle = isBehavior
+        ? blockStyles.behavior_blocks
+        : blockStyles.procedure_blocks;
+      return blockStyle.colourPrimary;
+    };
+
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
       isBehavior ? msg.behaviorEditorHeader() : msg.function(),
-      'blocklyWorkspaceSvgFrame'
+      'blocklyWorkspaceSvgFrame',
+      getBlockColor
     );
     this.editorWorkspace.svgFrame_.render();
   }
