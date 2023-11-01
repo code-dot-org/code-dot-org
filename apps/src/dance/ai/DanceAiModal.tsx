@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -11,7 +11,7 @@ import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput, FieldKey} from '../types';
+import {AiOutput, FieldKey, GeneratedEffect, Scores} from '../types';
 import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
@@ -75,7 +75,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const SLOT_COUNT = 3;
 
   // How many low-scoring results we show before the chosen one.
-  const BAD_RESULTS_COUNT = 7;
+  const BAD_GENERATED_RESULTS_COUNT = 4;
 
   // How many substeps for each step in our generating process.
   const GENERATING_SUBSTEP_COUNT = 2;
@@ -83,7 +83,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const inputLibraryFilename = 'ai-inputs';
   const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
 
-  const allResults = useRef<any[]>([]);
+  const generatedEffects = useRef<GeneratedEffect[]>([]);
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
@@ -106,10 +106,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     if (currentValue) {
       setMode(Mode.RESULTS);
       setInputs(JSON.parse(currentValue).inputs);
-      setGeneratingStep([BAD_RESULTS_COUNT, 0]);
+      setGeneratingStep([BAD_GENERATED_RESULTS_COUNT, 0]);
 
-      allResults.current = [];
-      allResults.current[BAD_RESULTS_COUNT] = {
+      generatedEffects.current = [];
+      generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = {
         results: JSON.parse(currentValue),
       };
     }
@@ -170,14 +170,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
-  const addScores = (scores: any) => {
-    const total =
-      scores.backgroundEffectScore +
-      scores.foregroundEffectScore +
-      scores.backgroundColorScore;
-    return total;
-  };
-
   const handleGenerateClick = () => {
     startAi();
     setMode(Mode.GENERATING);
@@ -210,7 +202,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleUseClick = () => {
     currentAiModalField?.setValue(
-      JSON.stringify({inputs, ...allResults.current[BAD_RESULTS_COUNT].results})
+      JSON.stringify({
+        inputs,
+        ...generatedEffects.current[BAD_GENERATED_RESULTS_COUNT].results,
+      })
     );
     dispatch(setCurrentAiModalField(undefined));
   };
@@ -225,12 +220,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       if (mode === Mode.GENERATING) {
         // We do a deep copy into a new array to ensure that
         // a re-render is triggered at the end of this work.
-        let currentGeneratingStep = [...generatingStep];
+        const currentGeneratingStep = [...generatingStep];
 
         if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT - 1) {
           // Bump substep.
           currentGeneratingStep[1]++;
-        } else if (currentGeneratingStep[0] < BAD_RESULTS_COUNT) {
+        } else if (currentGeneratingStep[0] < BAD_GENERATED_RESULTS_COUNT) {
           // Bump step and reset substep;
           currentGeneratingStep[0]++;
           currentGeneratingStep[1] = 0;
@@ -249,22 +244,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const startAi = async () => {
     const result = chooseEffects(inputs, true);
 
-    allResults.current = [];
+    generatedEffects.current = [];
 
     // Grab some bad results too.
-    for (let i = 0; i < BAD_RESULTS_COUNT; i++) {
-      allResults.current[i] = chooseEffects(inputs, false);
+    for (let i = 0; i < BAD_GENERATED_RESULTS_COUNT; i++) {
+      generatedEffects.current[i] = chooseEffects(inputs, false);
     }
 
-    allResults.current[BAD_RESULTS_COUNT] = result;
+    generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = result;
 
-    console.log('all results', allResults);
+    console.log('all results', generatedEffects);
   };
 
   const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(allResults.current[generatingStep[0]].results)
+      JSON.stringify(generatedEffects.current[generatingStep[0]].results)
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -316,7 +311,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const botImage =
     mode === Mode.GENERATING &&
-    generatingStep[0] < BAD_RESULTS_COUNT &&
+    generatingStep[0] < BAD_GENERATED_RESULTS_COUNT &&
     generatingStep[1] >= 1
       ? aiBotNo
       : mode === Mode.GENERATING && generatingStep[1] >= 1
@@ -397,6 +392,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             ? ''
             : mode === Mode.PROCESSING && processingDone
             ? ''
+            : mode === Mode.GENERATING && botImage === aiBotYes
+            ? 'A.I. is generating this effect.'
             : mode === Mode.GENERATING
             ? 'A.I. is finding the best effect to generate.'
             : mode === Mode.RESULTS && currentToggle === 'ai-block'
@@ -516,41 +513,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               </div>
             </div>
           )}
-          {mode === Mode.GENERATING && (
-            <div className={moduleStyles.score}>
-              <div className={moduleStyles.barContainer}>
-                <div
-                  className={moduleStyles.barFill}
-                  style={{
-                    width: Math.round(
-                      2 *
-                        addScores(
-                          allResults.current[
-                            generatingStep[0] > BAD_RESULTS_COUNT
-                              ? BAD_RESULTS_COUNT
-                              : generatingStep[0]
-                          ].scores
-                        ) *
-                        10
-                    ),
-                  }}
-                >
-                  &nbsp;
-                </div>
-              </div>
-              <div className={moduleStyles.text}>
-                {Math.round(
-                  addScores(
-                    allResults.current[
-                      generatingStep[0] > BAD_RESULTS_COUNT
-                        ? BAD_RESULTS_COUNT
-                        : generatingStep[0]
-                    ].scores
-                  ) * 10
-                )}
-              </div>
-            </div>
-          )}
         </div>
 
         {(mode === Mode.GENERATING || mode === Mode.RESULTS) && (
@@ -577,7 +539,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     blocks={generateBlocksFromResult(
                       Blockly.getMainWorkspace(),
                       JSON.stringify(
-                        allResults.current[generatingStep[0]].results
+                        generatedEffects.current[generatingStep[0]].results
                       )
                     )}
                   />
@@ -590,7 +552,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     >
                       <AiBlockPreview
                         resultJson={JSON.stringify(
-                          allResults.current[generatingStep[0]].results
+                          generatedEffects.current[generatingStep[0]].results
                         )}
                       />
                     </div>
@@ -605,7 +567,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <AiExplanationView
               inputs={inputs}
-              result={allResults.current[BAD_RESULTS_COUNT]}
+              results={
+                generatedEffects.current[BAD_GENERATED_RESULTS_COUNT].results
+              }
               labelMaps={getLabels()}
             />
           </div>

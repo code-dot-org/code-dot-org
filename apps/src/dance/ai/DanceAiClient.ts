@@ -2,6 +2,8 @@ import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-ba
 import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cached-spacy-foreground-map.json';
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 
+import {GeneratedEffect} from '../types';
+
 export type CachedWeightsMapping = {
   emojiAssociations: {[key: string]: number[]};
   output: string[];
@@ -17,7 +19,10 @@ const CachedPalettes: CachedWeightsMapping = UntypedCachedPalettes;
  * @returns: a JSON string representing an object containing the effects that were chosen, for
  * example: {"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}
  */
-export function chooseEffects(emojis: string[], topOptions: boolean): any {
+export function chooseEffects(
+  emojis: string[],
+  topOptions: boolean
+): GeneratedEffect {
   // Obtain final summed output weight based off input received
   const outputTypes: CachedWeightsMapping[] = [
     CachedBackgrounds,
@@ -62,9 +67,9 @@ export function chooseEffects(emojis: string[], topOptions: boolean): any {
       foregroundEffect: foregroundEffectOption[1],
     },
     scores: {
-      backgroundEffectScore: backgroundEffectOption[0],
-      backgroundColorScore: backgroundColorOption[0],
-      foregroundEffectScore: foregroundEffectOption[0],
+      backgroundEffect: backgroundEffectOption[0],
+      backgroundColor: backgroundColorOption[0],
+      foregroundEffect: foregroundEffectOption[0],
     },
   };
 

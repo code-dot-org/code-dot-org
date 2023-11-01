@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
-import {LabelMaps, FieldKey} from '../types';
+import {LabelMaps, FieldKey, Results} from '../types';
 
 import CachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palette-map.json';
 import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-spacy-background-map.json';
@@ -29,11 +29,9 @@ ChartJS.register(
   Legend
 );
 
-type Result = {[key in FieldKey]: string};
-
 interface AiExplanationViewProps {
   inputs: string[];
-  result: Result;
+  results: Results;
   labelMaps: LabelMaps;
 }
 
@@ -54,7 +52,7 @@ interface Fields {
  */
 const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
   inputs,
-  result,
+  results,
   labelMaps,
 }) => {
   const [currentFieldKey, setCurrentFieldKey] = useState(
@@ -91,7 +89,7 @@ const AiExplanationView: React.FunctionComponent<AiExplanationViewProps> = ({
         ticks: {
           color: function (context) {
             const translations = currentField.labels;
-            const key = result[currentFieldKey];
+            const key = results[currentFieldKey];
             const translation = translations[key];
 
             if (translation && context.tick.label === translation) {
