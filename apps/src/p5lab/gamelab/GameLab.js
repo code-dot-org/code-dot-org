@@ -74,7 +74,6 @@ export default class GameLab extends P5Lab {
 
   runButtonClick() {
     // For AI Rubrics Pilot
-    console.log(this.level.name);
     if (
       experiments.isEnabled('ai-rubrics') &&
       hasScriptData('script[data-rubricdata]')
