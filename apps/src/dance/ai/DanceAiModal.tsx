@@ -282,7 +282,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = () => {
     }
     if (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH) {
       showUseButton = true;
-      showConvertButton = true;
     }
   }
 
