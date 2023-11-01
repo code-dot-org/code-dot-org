@@ -157,7 +157,7 @@ for options_list_name in options_lists.keys():
 similarities_map = {}
 # similarities_map is a dictionary of dictionaries, one dictionary for each output (palette, background effect, and foreground effect).
 # Each of the output's dictionary contains keys which are the emoji id names and values which are the
-# similarity score comparing the emoji (key) and each of the output items.
+# list of similarity scores comparing the emoji (key) and each of the output items.
 # For example, similarities_map[PALETTES] is a dictionary with first key-value assigned as
 # 'poopy': [0.772, 0.769, 0.775, 0.785, ...]
 # 0.772 is the similarity score between the 'poopy' emoji and the first palette, 'autumn'.
@@ -165,9 +165,9 @@ similarities_map = {}
 for outputs_list_name in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
     similarities_map[outputs_list_name] = calculate_similarity_score(embeddings[EMOJIS], embeddings[outputs_list_name], emojis_map)
 
-# association_output_map contains 3 dictionary per output (palette, background effect, and foreground effect)..
-# The first key in each dictionary is 'emojiAssociations' and the value is the corresponding similarities_map from above.
-# The second key in each dictionary is the 'output' and the value is the corresponding blockly_ids list for the output.
+# association_output_map contains 3 dictionaries, one per output (palette, background effect, and foreground effect).
+# The first key is 'emojiAssociations' and the value is the corresponding dictionary from similarities_map (see above).
+# The second key is 'output' and the value is the corresponding blockly_ids list for the output.
 association_output_map = {}
 for outputs_list_name in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
     association_output_map[outputs_list_name] = {'emojiAssociations': similarities_map[outputs_list_name], 'output': blockly_ids_lists_map[outputs_list_name]}
