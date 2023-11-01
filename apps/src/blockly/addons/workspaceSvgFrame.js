@@ -18,12 +18,14 @@ export default class WorkspaceSvgFrame extends SvgFrame {
   constructor(workspace, text, className, getColor) {
     className = className || 'blocklyWorkspaceSvgFrame';
     text = text || msg.function();
+    const fontSize = 16;
     super(
       workspace,
       text,
       className,
       getColor,
-      frameSizes.WORKSPACE_HEADER_HEIGHT
+      frameSizes.WORKSPACE_HEADER_HEIGHT,
+      fontSize
     );
 
     const frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;

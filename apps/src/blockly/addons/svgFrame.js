@@ -13,8 +13,9 @@ export default class SvgFrame {
    * @param {string} [className] - The CSS class name for styling.
    * @param {Function} [getColor] - Get the color for the frame's header. This function should return a color value.
    * @param {number} [headerHeight] - An optional override for the header size, used for workspace frames.
+   * @param {number} [fontSize] - An optional override for the size of the header text.
    */
-  constructor(element, text, className, getColor, headerHeight) {
+  constructor(element, text, className, getColor, headerHeight, fontSize) {
     this.element_ = element;
     this.text = text || msg.block();
     this.className = className || 'svgFrame';
@@ -23,6 +24,7 @@ export default class SvgFrame {
     this.baseColor = getBaseColor(this.headerColor);
     this.textColor = color.white;
     this.headerHeight = headerHeight || frameSizes.BLOCK_HEADER_HEIGHT;
+    this.fontSize = fontSize || 12;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -102,7 +104,7 @@ export default class SvgFrame {
       'text',
       {
         class: 'blocklyText',
-        style: `font-size: 12pt;fill: ${this.textColor}`,
+        style: `font-size: ${this.fontSize}pt;fill: ${this.textColor}`,
         x: frameX + frameSizes.MARGIN_SIDE,
         y: frameTextVerticalPosition,
         'dominant-baseline': 'central',
