@@ -6,8 +6,7 @@ import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
 
 interface AiVisualizationPreviewProps {
-  generateBlocks: () => BlockSvg[];
-  //blocks: BlockSvg[];
+  blocks: BlockSvg[];
 }
 
 const PREVIEW_DIV_ID = 'ai-preview';
@@ -17,19 +16,17 @@ const PREVIEW_DIV_ID = 'ai-preview';
  */
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
-> = ({generateBlocks}) => {
+> = ({blocks}) => {
   const songMetadata = useSelector(
     (state: {dance: DanceState}) => state.dance.currentSongMetadata
   );
 
   // Generate setup code for previewing the given blocks.
   const generateSetupCode = useCallback((): string => {
-    const blocks: BlockSvg[] = generateBlocks();
     if (blocks.length === 0) {
       console.log('No blocks to preview');
       return '';
     }
-
     // Create a temporary setup block
     const setup: BlockSvg = Blockly.getMainWorkspace().newBlock(
       'Dancelab_whenSetup'
@@ -45,7 +42,7 @@ const AiVisualizationPreview: React.FunctionComponent<
     // Remove the temp setup block from the workspace so it doesn't remain after preview
     Blockly.getMainWorkspace().removeTopBlock(setup);
     return Blockly.getGenerator().blockToCode(setup);
-  }, []);
+  }, [blocks]);
 
   useEffect(() => {
     if (songMetadata === undefined) {
@@ -64,7 +61,7 @@ const AiVisualizationPreview: React.FunctionComponent<
     return () => {
       executor.destroy();
     };
-  }, []);
+  }, [blocks, generateSetupCode, songMetadata]);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
