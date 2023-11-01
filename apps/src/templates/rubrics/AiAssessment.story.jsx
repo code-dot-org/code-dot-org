@@ -1,5 +1,6 @@
 import React from 'react';
 import AiAssessment from './AiAssessment';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 export default {
   title: 'AiAssessment',
@@ -7,12 +8,7 @@ export default {
 };
 
 const Template = args => (
-  <AiAssessment
-    isAiAssessed={true}
-    studentName={'Ada'}
-    studentSubmitted={true}
-    {...args}
-  />
+  <AiAssessment isAiAssessed studentName={'Ada'} studentSubmitted {...args} />
 );
 
 export const NotAiAssessed = Template.bind({});
@@ -21,20 +17,34 @@ NotAiAssessed.args = {
   aiEvaluation: null,
 };
 
-export const LowUnderstandingLowConfidence = Template.bind({});
-LowUnderstandingLowConfidence.args = {
-  isAiAssessed: true,
+export const LimitedUnderstandingLowConfidence = Template.bind({});
+LimitedUnderstandingLowConfidence.args = {
   aiEvaluation: {
-    understanding: 1,
+    understanding: RubricUnderstandingLevels.LIMITED,
     ai_confidence: 1,
   },
 };
 
-export const HighUnderstandingLowConfidence = Template.bind({});
-HighUnderstandingLowConfidence.args = {
-  isAiAssessed: true,
+export const ExtensiveUnderstandingMediumConfidence = Template.bind({});
+ExtensiveUnderstandingMediumConfidence.args = {
   aiEvaluation: {
-    understanding: 3,
+    understanding: RubricUnderstandingLevels.EXTENSIVE,
+    ai_confidence: 2,
+  },
+};
+
+export const LimitedUnderstandingHighConfidence = Template.bind({});
+LimitedUnderstandingHighConfidence.args = {
+  aiEvaluation: {
+    understanding: RubricUnderstandingLevels.CONVINCING,
+    ai_confidence: 3,
+  },
+};
+
+export const NoUnderstandingLowConfidence = Template.bind({});
+NoUnderstandingLowConfidence.args = {
+  aiEvaluation: {
+    understanding: RubricUnderstandingLevels.NONE,
     ai_confidence: 1,
   },
 };
