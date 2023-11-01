@@ -484,20 +484,16 @@ img.video_thumbnail {
 
 .main {
   padding: 10px;
-
-  &:not(:has(.visual-block)) {
-    a:link, a:visited, a:active {
-      @include main-font-bold;
-      color: $brand_secondary_default;
-      background-color: transparent;
-      text-decoration: underline;
-
-      &:hover {
-        color: $brand_secondary_dark;
-      }
-    }
+  a:link, a:visited, a:hover, a:active {
+    @include main-font-bold;
+    color: $brand_secondary_default;
+    background-color: transparent;
+    text-decoration: underline;
   }
-
+  a:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
   }
