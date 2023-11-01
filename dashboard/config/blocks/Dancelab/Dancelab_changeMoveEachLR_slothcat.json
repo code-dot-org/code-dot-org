@@ -1,7 +1,7 @@
 {
   "category": "Groups",
   "config": {
-    "func": "Dancelab_changeMoveEachLR_slothcat",
+    "func": "changeMoveEachLR_slothcat",
     "blockText": "{GROUP} do {MOVE} {DIR} forever",
     "style": "lab_blocks",
     "args": [
