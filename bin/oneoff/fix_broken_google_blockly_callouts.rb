@@ -2,20 +2,38 @@
 
 require_relative '../../dashboard/config/environment'
 
+DRY_RUN = true
+
 # This script finds callouts written for CDO Blockly and adds duplicate versions of those
 # callouts for Google Blockly. If the Google Blockly version already exists for the level,
 # we don't add a new callout. This script can therefore be run multiple times on the same levels.
 # It checks for callouts on flyouts (element id contains .svgFlyoutGroup),
 # in the workspace (element id contains .svgGroup), and on toolbox
 # categories (element id contains :*.label).
-def process_levels
+def fix_callouts
+  if DRY_RUN
+    puts "THIS IS A DRY RUN"
+  else
+    puts "THIS IS A FULL RUN"
+  end
+  puts "***POETRY***"
+  process_levels(Poetry.all)
+  puts "***DANCE***"
+  process_levels(Dancelab.all)
+  puts "***BOUNCE***"
+  process_levels(Bounce.all)
+  puts "***FLAPPY***"
+  process_levels(Flappy.all)
+end
+
+def process_levels(levels)
   svg_flyout_id_matcher = /\.svgFlyoutGroup \[block-id="(.*)"\]/
   blockly_flyout_id_matcher = /\.blocklyFlyout \[data-id="(.*)"\]/
   svg_ws_id_matcher = /\.svgGroup \[block-id="(.*)"\]/
   blockly_ws_id_matcher = /\.blocklySvg \[data-id="(.*)"\]/
   category_matcher = /\[id=':(.*)\.label'\]/
   fixed_category_matcher = /\[id='blockly-(.*)\.label'\]/
-  Poetry.all.each do |level|
+  levels.each do |level|
     next unless level.callout_json
     callouts = JSON.parse(level.callout_json)
     broken_block_ids = []
@@ -58,17 +76,19 @@ def process_levels
     block_ids_to_fix = broken_block_ids.difference(fixed_block_ids)
     category_ids_to_fix = broken_category_ids.difference(fixed_category_ids)
     next if block_ids_to_fix.empty? && category_ids_to_fix.empty?
-    puts "***Updating #{level.name}***"
+    puts "***Updating #{block_ids_to_fix.length + category_ids_to_fix.length} callouts on #{level.name}***"
     add_new_callouts(block_ids_to_fix, broken_block_callouts, callouts)
     add_new_callouts(category_ids_to_fix, broken_category_callouts, callouts)
     if add_ids_to_blocks(block_ids_to_fix, level, broken_callouts)
       level.callout_json = JSON.generate(callouts)
-      level.save!(touch: false)
+      unless DRY_RUN
+        level.save!(touch: false)
+      end
     else
       puts "Could not update #{level.name}"
     end
-  rescue
-    puts "Failed on #{level.name}"
+  rescue => exception
+    puts "Failed on #{level.name} with error #{exception.message}"
   end
 end
 
@@ -169,4 +189,4 @@ def clear_ids_from_blocks(blocks)
   end
 end
 
-process_levels
+fix_callouts
