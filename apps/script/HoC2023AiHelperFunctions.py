@@ -1,4 +1,15 @@
 import json
+from openai.embeddings_utils import (
+    get_embedding,
+    distances_from_embeddings,
+    tsne_components_from_embeddings,
+    chart_from_components,
+    indices_of_nearest_neighbors_from_distances,
+)
+import pandas as pd
+import pickle 
+import openai
+openai.api_key = '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' # Replace with your OpenAI API key
 
 def get_json_object(file):
     block_config_file = open(file)
@@ -61,3 +72,50 @@ def create_map_print_options(options_name, model_descriptive_names, blockly_ids_
         options_map[model_descriptive_name] = blockly_id
         print (model_descriptive_name + ' | ' + blockly_id + ' | ' + user_facing_names_list[i])
     return options_map
+
+# Load the most recent Ada model as of October 2023.
+EMBEDDING_MODEL = 'text-embedding-ada-002'
+
+# This function loads the embeddings cache file if present, and otherwise creates a new file.
+def load_embedding_cache(path):
+    try:
+        embedding_cache = pd.read_pickle(path)
+    except FileNotFoundError:
+        embedding_cache = {}
+    with open(path, "wb") as embedding_cache_file:
+        pickle.dump(embedding_cache, embedding_cache_file)    
+    return embedding_cache
+
+# This function retrieves embeddings from the cache if present, and otherwise requests the embedding
+# via the Open AI API
+def retrieve_embedding(string: str,
+    cache_path: str,
+    embedding_cache,
+    model: str = EMBEDDING_MODEL,
+) -> list:
+    # If the string is not already in the embedding cache, request embedding via
+    # get_embedding and store in cache. Otherwise, retrieve from cache.
+    if (string, model) not in embedding_cache.keys():
+        embedding_cache[(string, model)] = get_embedding(string, model)
+        with open(cache_path, "wb") as embedding_cache_file:
+            pickle.dump(embedding_cache, embedding_cache_file)
+    return embedding_cache[(string, model)]
+
+def calculate_similarity_score(input_embeddings, output_embeddings, emojis_map):
+    # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
+    # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
+    # Cosine similarity is preferable as we can easily sum them together to take a max value later
+    similarities = [distances_from_embeddings(input_vector, output_embeddings, distance_metric='cosine')
+                            for input_vector in input_embeddings]
+    
+    # Conversion to pandas DataFrame for ease of manipulation
+    similarities = pd.DataFrame(similarities)
+    # We use the emoji_ids and not the emoji Unicode as index for use by client
+    similarities.index = emojis_map.values()
+    similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
+
+    # Conversion to required JSON lookup format
+    similarities_dict = similarities.transpose().to_dict()
+    for emoji_id in similarities_dict:
+        similarities_dict[emoji_id] = list(similarities_dict[emoji_id].values())
+    return similarities_dict

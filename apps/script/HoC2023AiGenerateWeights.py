@@ -1,22 +1,8 @@
 # Script to generate the associated output weights contained in files like cached-spacy-background-map.json
 # that are used to calculate final effects output HoC2023.
 # Run this Python script from the code-dot-org root directory.
-from openai.embeddings_utils import (
-    get_embedding,
-    distances_from_embeddings,
-    tsne_components_from_embeddings,
-    chart_from_components,
-    indices_of_nearest_neighbors_from_distances,
-)
-import pandas as pd
-import pickle 
 import json
 from HoC2023AiHelperFunctions import *
-import openai
-openai.api_key = ''
-
-# Load the most recent Ada model as of 10/23
-EMBEDDING_MODEL = 'text-embedding-ada-002'
 
 # Get the list of emoji names and their corresponding emoji ids
 emojis_list, emojis_map = get_ai_emoji_inputs()
@@ -109,101 +95,57 @@ foreground_effect_model_descriptive_names = [
 ]
 foreground_effects_map = create_map_print_options('foreground_effects', foreground_effect_model_descriptive_names, foreground_effect_blockly_ids_list, foreground_effect_user_facing_names_list)
 
-palette_dict = {}
-background_dict = {}
-foreground_dict = {}
+# We use cache files to store ada's raw embedding outputs to reduce Open AI query costs.
+# An embedding is a vector (list) of floating point numbers, and embeddings are used to
+# measure the relatedness of text strings. The distance between two vectors measures
+# their relatedness. https://platform.openai.com/docs/guides/embeddings
+# These caches are stored as pickle files; python's native way to serialize data.
+embedding_paths = {
+    'emojis': 'apps/static/dance/ai/model/input_embeddings.pkl',
+    'palettes': 'apps/static/dance/ai/model/palette_embeddings.pkl',
+    'background_effects': 'apps/static/dance/ai/model/background_embeddings.pkl',
+    'foreground_effects': 'apps/static/dance/ai/model/foreground_embeddings.pkl'
+}
 
-# Define caches to store ada's raw embedding outputs to reduce query costs
-# These caches are stored as pickle files; python's native way to serialize data
-embedding_paths = ['apps/static/dance/ai/model/input_embeddings.pkl',
-'apps/static/dance/ai/model/palette_embeddings.pkl',
-'apps/static/dance/ai/model/background_embeddings.pkl',
-'apps/static/dance/ai/model/foreground_embeddings.pkl']
-input_path = embedding_paths[0]
-palette_path = embedding_paths[1]
-background_path = embedding_paths[2]
-foreground_path = embedding_paths[3]
+embeddings_caches = {}
+for path in embedding_paths.keys():
+    embeddings_caches[path] = load_embedding_cache(path)
 
-def load_embedding_cache(path):
-    # load the cache if it exists, and save a copy to disk
-    try:
-        embedding_cache = pd.read_pickle(path)
-    except FileNotFoundError:
-        embedding_cache = {}
-    with open(path, "wb") as embedding_cache_file:
-        pickle.dump(embedding_cache, embedding_cache_file)
-    return embedding_cache
-
-caches = [load_embedding_cache(path) for path in embedding_paths]
-input_cache = caches[0]
-palette_cache = caches[1]
-background_cache = caches[2]
-foreground_cache = caches[3]
-
-# Define a function to retrieve embeddings from the cache if present, and otherwise request via the API
-def retrieve_embedding(string: str,
-    cache_path: str,
-    embedding_cache,
-    model: str = EMBEDDING_MODEL,
-) -> list:
-    # Return embedding of given string, using a cache to avoid recomputing.
-    if (string, model) not in embedding_cache.keys():
-        embedding_cache[(string, model)] = get_embedding(string, model)
-        with open(cache_path, "wb") as embedding_cache_file:
-            pickle.dump(embedding_cache, embedding_cache_file)
-    return embedding_cache[(string, model)]
-
-# Retrieve embeddings for input emojis, palettes, backgrounds, and foregrounds in that order
+# Retrieve embeddings for input emojis, palettes, background efects, and foreground effects.
 # Use emojis as inputs.
-option_lists = [emojis_list, palette_model_descriptive_names, background_effect_model_descriptive_names, foreground_effect_model_descriptive_names]
-# Use emoji ids (phrases) as inputs.
+options_lists = {
+    'emojis': emojis_list,
+    'palettes': palette_model_descriptive_names,
+    'background_effects': background_effect_model_descriptive_names,
+    'foreground_effects': foreground_effect_model_descriptive_names
+}
 
-# option_lists = [emojis_map.values(), palette_model_descriptive_names, background_effect_model_descriptive_names, foreground_effect_model_descriptive_names]
+# Use emoji ids (phrases) as inputs as a comparison.
+# options_lists = {
+#     emojis: emojis_map.values(),
+#     palettes: palette_model_descriptive_names,
+#     background_effects: background_effect_model_descriptive_names,
+#     foreground_effects: foreground_effect_model_descriptive_names
+# }
 
-embeddings = []
-# Final output should be list of lists structured as [[[emoji1], [emoji2], ...], [[palette1]...]...]
-# Where embeddings[0] = all emoji embeddings, [1] = palettes, [2] = background, [3] = foreground
-for i in range (0, 4):
-    embeddings.append([retrieve_embedding(string=item, 
-                                          cache_path=embedding_paths[i],
-                                          embedding_cache=caches[i])
-                                          for item in option_lists[i]])
+embeddings = {}
+# embeddings is a dictionary with four lists
+# 'emojis': [[emoji1_embedding], [emoji2_embedding], ...]
+# 'palettes: [[palette1+embedding], [palette2_embedding], ...]
+for options_list_name in options_lists.keys():
+    embeddings[options_list_name] = [retrieve_embedding(string=item,
+                                                        cache_path=embedding_paths[options_list_name],
+                                                        embedding_cache=embeddings_caches[options_list_name])
+                                                        for item in options_lists[options_list_name]]
+                                    
 
-emoji_embeddings = embeddings[0]
-palette_embeddings = embeddings[1]
-background_embeddings = embeddings[2]
-foreground_embeddings = embeddings[3]
-
-def calculate_similarity_score(input_embeddings, output_embeddings):
-    # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
-    # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
-    # Cosine similarity is preferable as we can easily sum them together to take a max value later
-    similarities = [distances_from_embeddings(input_vector, output_embeddings, distance_metric='cosine')
-                            for input_vector in input_embeddings]
-    
-    # Conversion to pandas DataFrame for ease of manipulation
-    similarities = pd.DataFrame(similarities)
-    # We use the emoji_ids as index for use by client
-    similarities.index = emojis_map.values()
-    similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
-
-    # Conversion to required JSON lookup format
-    similarities_dict = similarities.transpose().to_dict()
-    for emoji_id in similarities_dict:
-        similarities_dict[emoji_id] = list(similarities_dict[emoji_id].values())
-    return similarities_dict
-
-palette_dict = calculate_similarity_score(emoji_embeddings, palette_embeddings)
-background_dict = calculate_similarity_score(emoji_embeddings, background_embeddings)
-foreground_dict = calculate_similarity_score(emoji_embeddings, foreground_embeddings)
+palette_dict = calculate_similarity_score(embeddings['emojis'], embeddings['palettes'], emojis_map)
+background_dict = calculate_similarity_score(embeddings['emojis'], embeddings['background_effects'], emojis_map)
+foreground_dict = calculate_similarity_score(embeddings['emojis'], embeddings['foreground_effects'], emojis_map)
 
 background_output = {'emojiAssociations': background_dict, 'output': background_effect_model_descriptive_names}
 palette_output = {'emojiAssociations': palette_dict, 'output': palette_model_descriptive_names}
 foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effect_model_descriptive_names}
-
-background_output['modelDescriptiveNames'] = background_output['output']
-palette_output['modelDescriptiveNames'] = palette_output['output']
-foreground_output['modelDescriptiveNames'] = foreground_output['output']
 
 # Modify output to reflect blockly id names.
 background_output['output'] = [background_effects_map[bg] for bg in background_output['output']]
