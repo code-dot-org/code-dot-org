@@ -21,12 +21,12 @@
   "measure": "Measure:",
   "danceAiNewMove": "⚠️ You need to add a block to make the dancer do a new move.",
   "danceAiFeedbackNeedNewDancer": "⚠️ You need to make a dancer.",
-  "danceAiFeedbackAiBlockNoParameters": "⚠️ Choose three emojis for A.I. to generate effects.",
+  "danceAiFeedbackAiBlockNoParameters": "⚠️ Choose three emojis for A.I. to generate the effect.",
   "danceAiFeedbackAiBlockNotConnectedSetup": "⚠️ Connect the `A.I. generate effect` block to the `setup` block.",
   "danceAiFeedbackNoAiBlock": "⚠️ Add the `A.I. generate effect` block to setup.",
-  "danceAiCustomize": "⚠️ You need to change the effects. You can either regenerate the effects, start over with new emojis, or customize the code A.I. created.",
+  "danceAiCustomize": "⚠️ You need to change the effect. You can either regenerate the effect, start over with new emojis, or customize the code A.I. created.",
   "danceAiFeedbackConnectPressUpArrowEvent": "⚠️ Press up arrow ▲ button after pressing *\"Run\"*.",
   "danceAiFeedbackKeyPress": "⚠️ You pressed a key, but your dancer didn't do a new move.",
-  "danceAiFeedbackAiBlockNoParametersOnEvent": "⚠️ The effects didn't change after 2 measures. Choose three emojis for A.I. to generate effects.",
+  "danceAiFeedbackAiBlockNoParametersOnEvent": "⚠️ The effect didn't change after 2 measures. Choose three emojis for A.I. to generate the effect.",
   "danceAiStageChangeAfterMeasures": "⚠️ Connect the `A.I. generate effect` block to the `After 2 Measures` event."
 }
