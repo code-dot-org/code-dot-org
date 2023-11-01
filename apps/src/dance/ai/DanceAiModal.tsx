@@ -6,12 +6,13 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {BlockSvg, Workspace} from 'blockly/core';
+import {FieldDropdown, Workspace} from 'blockly/core';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput} from '../types';
+import {AiOutput, FieldKey} from '../types';
+import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 import color from '@cdo/apps/util/color';
 
@@ -110,6 +111,29 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setInputs(JSON.parse(currentValue).inputs);
     }
   }, [currentAiModalField]);
+
+  const getLabels = () => {
+    const tempWorkspace = new Workspace();
+    const blocksSvg = generateBlocks(tempWorkspace);
+
+    const foregroundLabels = getLabelMap(
+      blocksSvg[0].getField('EFFECT') as FieldDropdown
+    );
+    const backgroundLabels = getLabelMap(
+      blocksSvg[1].getField('EFFECT') as FieldDropdown
+    );
+    const paletteLabels = getLabelMap(
+      blocksSvg[1].getField('PALETTE') as FieldDropdown
+    );
+
+    tempWorkspace.dispose();
+
+    return {
+      [FieldKey.FOREGROUND_EFFECT]: foregroundLabels,
+      [FieldKey.BACKGROUND_EFFECT]: backgroundLabels,
+      [FieldKey.BACKGROUND_PALETTE]: paletteLabels,
+    };
+  };
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;
@@ -231,39 +255,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     console.log('all results', allResults);
   };
 
-  /**
-   * Generates blocks from the AI result in the main workspace, and attaches
-   * them to each other.
-   */
-  const generateBlocksFromResult = useCallback(
-    (workspace: Workspace): [BlockSvg, BlockSvg] => {
-      const params = allResults.current[generatingStep[0]].results;
-      console.log('generate blocks', generatingStep, params);
-
-      const blocksSvg: [BlockSvg, BlockSvg] = [
-        workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-        workspace.newBlock(
-          'Dancelab_setBackgroundEffectWithPaletteAI'
-        ) as BlockSvg,
-      ];
-
-      // Foreground block.
-      blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
-
-      // Background block.
-      blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-      blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
-
-      // Connect the blocks.
-      blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-
-      return blocksSvg;
-    },
-    []
-  );
-
   const handleConvertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
+    const blocksSvg = generateBlocksFromResult(
+      Blockly.getMainWorkspace(),
+      JSON.stringify(allResults.current[generatingStep[0]].results)
+    );
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -582,7 +578,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                 >
                   <AiVisualizationPreview
                     blocks={generateBlocksFromResult(
-                      Blockly.getMainWorkspace()
+                      Blockly.getMainWorkspace(),
+                      JSON.stringify(
+                        allResults.current[generatingStep[0]].results
+                      )
                     )}
                   />
                 </div>
@@ -593,7 +592,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       className={moduleStyles.blockPreview}
                     >
                       <AiBlockPreview
-                        generateBlocksFromResult={generateBlocksFromResult}
+                        resultJson={JSON.stringify(
+                          allResults.current[generatingStep[0]].results
+                        )}
                       />
                     </div>
                   )}
@@ -608,6 +609,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={allResults.current[BAD_RESULTS_COUNT]}
+              labelMaps={getLabels()}
             />
           </div>
         )}
