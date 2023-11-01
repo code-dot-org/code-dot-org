@@ -36,6 +36,9 @@ const createStubbedCoteacherDialog = coteacherToRemove => {
 };
 
 describe('RemoveCoteacherDialog', () => {
+  afterEach(() => {
+    $.ajax.restore();
+  });
   it('does not show dialog when coteacher to remove not supplied', () => {
     const wrapper = shallow(
       <RemoveCoteacherDialog
@@ -86,8 +89,6 @@ describe('RemoveCoteacherDialog', () => {
     expect(removeSavedCoteacher).to.have.not.been.called;
     expect(setCoteachersToAdd).to.have.not.been.called;
     expect(ajaxStub).to.have.not.been.called;
-
-    ajaxStub.restore();
   });
   it('Remove unsubmitted', () => {
     const {
@@ -107,8 +108,6 @@ describe('RemoveCoteacherDialog', () => {
     expect(removeSavedCoteacher).to.have.not.been.called;
     expect(setCoteachersToAdd).to.have.been.calledOnce;
     expect(ajaxStub).to.have.not.been.called;
-
-    ajaxStub.restore();
   });
   it('Remove submitted', () => {
     const submittedCoteacher = {
@@ -134,6 +133,5 @@ describe('RemoveCoteacherDialog', () => {
     expect(removeSavedCoteacher).to.have.been.calledOnceWith(1);
     expect(setCoteachersToAdd).to.have.not.been.called;
     expect(ajaxStub).to.have.been.calledOnce;
-    ajaxStub.restore();
   });
 });
