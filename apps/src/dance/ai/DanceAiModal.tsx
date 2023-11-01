@@ -71,8 +71,13 @@ function useInterval(callback: () => void, delay: number | undefined) {
 const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
+  // How many emojis are to be selected.
   const SLOT_COUNT = 3;
+
+  // How many low-scoring results we show before the chosen one.
   const BAD_RESULTS_COUNT = 7;
+
+  // How many substeps for each step in our generating process.
   const GENERATING_SUBSTEP_COUNT = 2;
 
   const inputLibraryFilename = 'ai-inputs';
@@ -95,20 +100,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
+  // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
-
     if (currentValue) {
       setMode(Mode.RESULTS);
+      setInputs(JSON.parse(currentValue).inputs);
+      setGeneratingStep([BAD_RESULTS_COUNT, 0]);
 
       allResults.current = [];
       allResults.current[BAD_RESULTS_COUNT] = {
         results: JSON.parse(currentValue),
       };
-
-      setGeneratingStep([BAD_RESULTS_COUNT, 0]);
-
-      setInputs(JSON.parse(currentValue).inputs);
     }
   }, [currentAiModalField]);
 
@@ -135,7 +138,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     };
   };
 
-  const getImageUrl = (id: string) => {
+  const getEmojiImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/emoji/${id}.svg`;
   };
 
@@ -148,7 +151,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       return {
         id: item.id,
         name: item.name,
-        url: getImageUrl(item.id),
+        url: getEmojiImageUrl(item.id),
         available: !inputs.includes(item.id),
       };
     });
@@ -167,43 +170,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
-  const handleResultsClick = () => {
-    setMode(Mode.RESULTS);
-  };
-
-  const handleExplanationClick = () => {
-    setMode(Mode.EXPLANATION);
-  };
-
-  useInterval(
-    () => {
-      console.log('begin tick');
-
-      if (mode === Mode.GENERATING) {
-        let currentGeneratingStep = [...generatingStep];
-
-        if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT - 1) {
-          // bump substep.
-          currentGeneratingStep[1]++;
-        } else if (currentGeneratingStep[0] < BAD_RESULTS_COUNT) {
-          // bump step and reset substep;
-          currentGeneratingStep[0]++;
-          currentGeneratingStep[1] = 0;
-        } else {
-          // leave these values but go to results.
-          setMode(Mode.RESULTS);
-        }
-
-        // one-shot update of step & substep.
-        setGeneratingStep(currentGeneratingStep);
-
-        console.log('end tick', currentGeneratingStep);
-      }
-    },
-    mode === Mode.GENERATING ? 1000 : undefined
-  );
-
-  const getScore = (scores: any) => {
+  const addScores = (scores: any) => {
     const total =
       scores.backgroundEffectScore +
       scores.foregroundEffectScore +
@@ -217,17 +184,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleStartOverClick = () => {
-    setMode(Mode.SELECT_INPUTS);
     setInputs([]);
     setCurrentInputSlot(0);
     setProcessingDone(false);
     setGeneratingStep([0, 0]);
+    setMode(Mode.SELECT_INPUTS);
   };
 
   const handleRegenerateClick = () => {
     setProcessingDone(false);
     setGeneratingStep([0, 0]);
-
     handleGenerateClick();
   };
 
@@ -235,16 +201,56 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setMode(Mode.PROCESSING);
     setTimeout(() => {
       handleGenerateClick();
-      //setProcessingDone(true);
     }, 4000);
   };
+
+  const handleExplanationClick = () => {
+    setMode(Mode.EXPLANATION);
+  };
+
+  const handleUseClick = () => {
+    currentAiModalField?.setValue(
+      JSON.stringify({inputs, ...allResults.current[BAD_RESULTS_COUNT].results})
+    );
+    dispatch(setCurrentAiModalField(undefined));
+  };
+
+  const handleLeaveExplanation = () => {
+    setMode(Mode.RESULTS);
+  };
+
+  // Animate through the generating process.
+  useInterval(
+    () => {
+      if (mode === Mode.GENERATING) {
+        // We do a deep copy into a new array to ensure that
+        // a re-render is triggered at the end of this work.
+        let currentGeneratingStep = [...generatingStep];
+
+        if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT - 1) {
+          // Bump substep.
+          currentGeneratingStep[1]++;
+        } else if (currentGeneratingStep[0] < BAD_RESULTS_COUNT) {
+          // Bump step and reset substep;
+          currentGeneratingStep[0]++;
+          currentGeneratingStep[1] = 0;
+        } else {
+          // Leave these values intact, and go to theresults.
+          setMode(Mode.RESULTS);
+        }
+
+        // One-shot update of step & substep.
+        setGeneratingStep(currentGeneratingStep);
+      }
+    },
+    mode === Mode.GENERATING ? 1000 : undefined
+  );
 
   const startAi = async () => {
     const result = chooseEffects(inputs, true);
 
     allResults.current = [];
 
-    const badResultsList: any = [];
     // Grab some bad results too.
     for (let i = 0; i < BAD_RESULTS_COUNT; i++) {
       allResults.current[i] = chooseEffects(inputs, false);
@@ -298,17 +304,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
-  const handleUseClick = () => {
-    currentAiModalField?.setValue(
-      JSON.stringify({inputs, ...allResults.current[BAD_RESULTS_COUNT].results})
-    );
-    dispatch(setCurrentAiModalField(undefined));
-  };
-
-  const handleLeaveExplanation = () => {
-    setMode(Mode.RESULTS);
-  };
-
   const showUseButton =
     mode === Mode.RESULTS &&
     currentToggle === 'ai-block' &&
@@ -347,7 +342,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               key={index}
               style={{
                 backgroundImage:
-                  inputs[index] && `url(${getImageUrl(inputs[index])}`,
+                  inputs[index] && `url(${getEmojiImageUrl(inputs[index])}`,
               }}
               className={moduleStyles.emojiSlot}
               title={getItemName(inputs[index])}
@@ -473,7 +468,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     {inputs[index] && (
                       <div
                         style={{
-                          backgroundImage: `url(${getImageUrl(inputs[index])}`,
+                          backgroundImage: `url(${getEmojiImageUrl(
+                            inputs[index]
+                          )}`,
                         }}
                         className={moduleStyles.inputItem}
                         title={getItemName(inputs[index])}
@@ -520,14 +517,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             </div>
           )}
           {mode === Mode.GENERATING && (
-            /*generatingStep[1] >= 1 && */ <div className={moduleStyles.score}>
+            <div className={moduleStyles.score}>
               <div className={moduleStyles.barContainer}>
                 <div
                   className={moduleStyles.barFill}
                   style={{
                     width: Math.round(
                       2 *
-                        getScore(
+                        addScores(
                           allResults.current[
                             generatingStep[0] > BAD_RESULTS_COUNT
                               ? BAD_RESULTS_COUNT
@@ -543,7 +540,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               </div>
               <div className={moduleStyles.text}>
                 {Math.round(
-                  getScore(
+                  addScores(
                     allResults.current[
                       generatingStep[0] > BAD_RESULTS_COUNT
                         ? BAD_RESULTS_COUNT
@@ -673,16 +670,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               className={moduleStyles.button}
             />
           )}
-
-          {/*mode === Mode.GENERATING && generatingStep[0] >= 4 && (
-            <Button
-              id="results-button"
-              text={'Continue'}
-              onClick={handleResultsClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )*/}
 
           {showConvertButton && (
             <Button
