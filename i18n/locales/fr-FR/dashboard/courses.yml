@@ -69,6 +69,8 @@ fr:
           title: Les Découvertes de l’Informatique
         vpl-csa-2023:
           title: Formation professionnelle virtuelle CSA
+        self-paced-pl-csd-unit1-2023:
+          title: Enseignement de la résolution de problèmes et de l'informatique
     resources:
       curriculum/csd/2017:
         name: Programme

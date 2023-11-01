@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-26 02:41:08 UTC",
+    "serialized_at": "2023-10-26 18:16:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -260,6 +260,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1"
+        ],
         "progression": "Introduction to this Module"
       },
       "bonus": false,
@@ -282,6 +285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_-self-paced-unit1"
+        ],
         "progression": "Unit 1 - Problem Solving and Computing Overview"
       },
       "bonus": false,
@@ -304,6 +310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U1_-self-paced-unit1"
+        ],
         "progression": "Unit 1 - Problem Solving and Computing Overview"
       },
       "bonus": false,
@@ -326,6 +335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_-self-paced-unit1"
+        ],
         "progression": "Unit 1 - Problem Solving and Computing Overview"
       },
       "bonus": false,

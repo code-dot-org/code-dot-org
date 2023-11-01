@@ -1,264 +1,264 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+title: راهنمای نحوه ساعات کد برای داوطلبان
 ---
 
-# How to volunteer with a school or classroom
+# نحوه داوطلبانه در مدرسه یا کلاس درس
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### هزاران معلم به دنبال داوطلبان برای الهام بخش دانش آموزان هستند. امروز تفاوت ایجاد کنید!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>ثبت نام برای داوطلب</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+تفکر محاسباتی به پرورش مهارت های حل مسئله، منطق و خلاقیت کمک می کند. و تکنولوژی در حال تغییر همه صنایع روی کره زمین است. دانش آموزان امروزه باید یاد بگیرند که چگونه تکنولوژی ایجاد کنند، نه فقط از آن استفاده کنند.
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+«ساعت کد» یک مقدمه یک ساعته به علوم کامپیوتر است که طراحی شده است تا «کد» را از بین ببرد و نشان دهد که هر کس می تواند اصول را یاد بگیرد و مشارکت در حوزه علوم کامپیوتر را گسترش دهد. شما می توانید به افزایش آگاهی از جنبش علوم کامپیوتر کمک کنید و داوطلبانه الهام بخش دانشجویان بیشتری برای امتحان علوم کامپیوتر، به ویژه زنان جوان و دانشجویان از گروههای نژادی و قومی حاشیه شده تاریخی
 
-- [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [چه کسانی می توانند داوطلب شوند؟](#who-can-volunteer)
+- [چرا داوطلب؟](#why-volunteer)
+- [چگونه داوطلبان انتخاب می شوند؟](#selection)
+- [اگر بخواهم در یک مدرسه خاص داوطلب شوم چه می شود؟](#choose-a-school)
+- [نحوه آماده سازی](#how-to-prepare)
+- [هنگامی که میزبان یک رویداد هستید](#hosting-an-event)
+- [گزارش را در مورد ساعت کد گسترش دهید](#promote-hour-of-code)
+- [راه های بیشتر برای پشتیبانی از ساعت کد](#support-hour-of-code)
+- [سوالات متداولانه](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+چه به صورت مجازی، حضوری یا با شرکت خود داوطلبانه باشید، تلاش های شما می تواند تأثیر زیادی بر نحوه دیدن دانش آموزان علوم کامپیوتر و پتانسیل خود داشته باشد. اگر هنوز سوالی دارید، به مجموعه [ابزار داوطلبانه ما نگاهی بیندازید]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## چه کسانی می توانند داوطلب شوند؟
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+هر کس علاقه مند به آموزش علوم کامپیوتر و افزایش تنوع در فناوری می تواند داوطلب باشد! ما دوست داریم داوطلبان از همه زمینه ها شرکت کنند. Hour of Code دارای طیف گسترده ای از فعالیت ها برای تمام سنین و سطوح مهارت است، بنابراین برای داوطلبانه نیازی به یک متخصص برنامه نویسی ندارید!
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+شما می توانید سخنران مهمان در کلاس درس باشید یا به یک معلم کمک کنید تا این فعالیت را انجام دهد. [امروز ثبت نام کنید](https://code.org/volunteer) تا دانشجویان را برای ادامه یادگیری علوم کامپیوتر الهام دهید.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## چرا داوطلب؟
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+علوم کامپیوتر حوزه تعیین کننده قرن بیست و یکم است، اما اکثر مدارس هنوز آن را تدریس نمی کنند. یک ساعت کد ممکن است بیشترین دسترسی به علوم کامپیوتر باشد که این دانشجویان در یک سال مشخص دریافت می کنند. با داوطلبانه، می توانید آوردن CS را به کلاس درس خود برای معلمان حتی آسان تر کنید.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+برخی از توصیفات داوطلبان قبلی را بررسی کنید:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
+- بهترین بخش تجربه من این بود که کل کلاس ها زنان و افراد رنگین بودند. برای آینده صنعت ما شانس رسیدن و هیجان زدن به این کودکان وجود دارد.»
+- به ویژه از تشویق دختران جوان در تکنولوژی لذت بردم. احساس می کردم به نسل بعدی در منطقه محلی خود کمک می کنم.»
+- دوست داشتم ببینم که بچه ها چقدر هیجان زده بودند. یک نکته شگفت انگیز این بود که معلمان متوجه شدند که برخی از دانش آموزانی که از لحاظ علمی خوب کار نکردند، در تفکر مثل یک توسعه دهنده و کمک به دیگران برتر بودند و به آنها جایی می دهند تا اعتماد به نفس کنند.»
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>ثبت نام برای داوطلب</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## چگونه داوطلبان انتخاب می شوند؟
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+معلمان می توانند در نقشه داوطلبان ما [جستجو کنند](http://code.org/volunteer/local). اگر در نزدیکی کلاس درس آنها قرار دارید، معلمان پروفایل شما را روی نقشه بررسی می کنند، بنابراین سعی کنید تا جایی که ممکن است تکمیل کنید تا احتمال تماس یک معلم با شما را افزایش دهید.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+پس از انتخاب، معلم از طریق پلتفرم داوطلبانه با شما تماس خواهد گرفت (ما هرگز آدرس ایمیل شما را با معلم به اشتراک نمی گذاریم). با آنها همکاری کنید تا تعیین کنید که چگونه می توانید به بهترین شکل در رویداد آنها کمک کنید و آیا به صورت حضوری یا داوطلبانه به صورت مجازی بازدید می کنید.
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+اگر درخواست های زیادی از معلمان دریافت می کنید، همیشه می توانید با کلیک بر روی لینک ارائه شده در پایین هر درخواست ایمیل از معلم، ترجیحات خود را به روز کنید یا عضویت خود را لغو کنید.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## اگر بخواهم در یک مدرسه خاص داوطلب شوم چه می شود؟
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+برای داوطلبانه شدن مجبور نیستید از نقشه داوطلبانه ما استفاده کنید! در واقع، توصیه می کنیم اگر کلاس درسی وجود دارد که دوست دارید با آن داوطلب شوید، مستقیماً با معلمان و مدیران تماس بگیرید.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+برای شروع: اگر والدین یا سرپرست هستید، [این ایمیل را](https://hourofcode.com/us/promote/resources#help-schools) به معلم فرزندتان ارسال کنید تا به او کمک کند یک ساعت کد را اجرا کند. - اگر مدرسه دیگری را در ذهن دارید، به وب سایت آنها مراجعه کنید تا مخاطبین مناسب برای تماس با آنها مانند مدیر یا معاون مدیر، مربیان فناوری یا علوم کامپیوتر یا حتی PTSA مدرسه پیدا کنید. شما همچنین می توانید با سازمان هایی مانند باشگاه های دخ & تران پسران آمریکا، Junior Achievement، شعبه YMCA و موارد دیگر برای میزبانی یک رویداد همکاری کنید. - اگر نمی توانید مدرسه ای را پیدا کنید که میزبان یک ساعت کد باشد، می توانید داوطلبانه به اجرای رویداد خود با شرکت خود کمک کنید. راهنمای نح [وه استفاده برای شرکت ها را بررسی کنید](https://hourofcode.com/us/how-to/companies) تا بیشتر بدانید و الهام بگیرید.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## نحوه آماده سازی
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+چه از راه دور و چه حضوری در یک رویداد Hour of Code شرکت کنید، اگر از قبل این آماده سازی ها را انجام دهید، تجربه بسیار راحتتر خواهید داشت.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### ملاقات با سازماندهنده
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+اگر در کلاس درس داوطلبانه هستید، این تدارکات را قبل از زمان با معلم صحبت کنید:
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology?
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early.
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity.
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together.
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time.
+- نقش شما در این رویداد اگر در فناوری کار می کنید، ممکن است از شما خواسته شود که تجربیات شخصی یا داستان خود را به اشتراک بگذارید: چگونه در یک شغل در فناوری شرکت کردید؟ چرا علوم کامپیوتر برای شما مهم است؟ چه کارهایی را که به عنوان بخشی از شغل خود انجام می دهید و چه ارتباطی با تکنولوژی دارد؟
+- اگر حضوری داوطلب می شوید، مطمئن شوید که هر دو دستورالعمل های بهداشت و ایمنی محلی و مدرسه را درک می کنید. بسته به روش های آنها ممکن است لازم باشد کمی زودتر وارد شوید.
+- اگر شما به صورت مجازی یا حضوری داوطلبانه خواهید بود، زیرا این می تواند تعیین کند که چه زمانی باید حضور داشته باشید و در چه ظرفیت وجود داشته باشید.
+- اگر به صورت مجازی داوطلبانه هستید، با معلم همکاری کنید تا بهترین پلتفرم ویدیویی کنفرانس را برای استفاده تعیین کنید و سعی کنید یک دوره آزمایشی از رویداد را با هم انجام دهید.
+- اگر معلم فعالیت های ساعت کد را برای این رویداد از پیش تعیین کرده است، آگاه باشید تا بتوانید آنها [را قبل از](https://hourofcode.com/us/learn) زمان بررسی کنید.
 
-### Think about your participants
+### به شرکت کنندگان خود فکر کنید
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate.
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code.
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- دانش آموزانی که با آنها صحبت خواهید کرد و چه چیزی ممکن است با آنها واکنش داشته باشد، در نظر بگیرید. به عنوان یک داوطلب، می توانید به آنها کمک کنید تا متوجه شوند که محاسبات در همه جا وجود دارد و آنها نیز می توانند دانشمندان کامپیوتر شوند. سن، زمینه و هویت جنسیتی آنها را در نظر بگیرید و با موضوعاتی آماده شوید که ممکن است منافع آنها را جذب کند. در اینجا راهنمایی های اضافی در مورد چگونگی اله [ام بخش زنان جو](http://code.org/girls) ان برای شرکت وجود دارد.
+- دانش آموزان را هیجان زده کنید! با معلم کار کنید تا یک ویدیوی الهام [بخش را انتخاب کنید](https://hourofcode.com/us/promote/resources#videos) که می تواند به تمرکز کلاس کمک کند و آنها را برای انجام یک ساعت کد هیجان زده کند.
+- اگر شما یک داوطلب مجازی هستید، در نظر بگیرید که چند اسلاید به عنوان بخشی از ارائه خود بسازید تا به تعامل دانش آموزان کمک کنید.
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+به منابع بیشتری نیاز دارید؟ [این نکات دیگر را بررسی کنید](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## هنگامی که میزبان یک رویداد هستید
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+اگر میزبان یک رویداد با کلاس درس هستید، از برنامه نمونه برای راهنمایی شما استفاده کنید. برنامه توافق شده برای روز را تأیید کنید و هر نکته مکالمه را از قبل با معلم بحث کنید. اگر از نظر فیزیکی از کلاس بازدید می کنید، مطمئن شوید که با مدرسه وارد شوید و در روز رویداد خود به معلم سلام کنید.
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+اگر به فکر میزبانی ساعت کد در خانه یا در جامعه هستید، توصیه می کنیم به برخی از راهنمای نحوه عمق ما برای [والدین](https://hourofcode.com/us/how-to/parents) و سا [زمان ها یا شرکت ها نگاهی بیندازید](https://hourofcode.com/us/how-to/companies).
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### ۱. این ویدئو چگونه را تماشا کنید <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### ۲. تعیین تاریخ، فرمت و مکان برای رویداد خود
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+با مدرسه یا معلم کار کنید تا در مورد آنچه بیشتر منطقی است بحث کنید. ما رویدادهایی را دیده ایم که م [جازی](https://hourofcode.com/us/how-to/virtual) یا حضوری، در دفتر شرکت یا در جامعه برگزار می شود و برای دانش آموزان در تمام سنین! همچنین می توانید نگاهی به سایر شرکای شرکتی</a> و اه داکنندگان در گذشته [برای](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) برخی ایده های الهام بخش انجام داده اند نگاهی بیندازید.</p> 
 
 <br />
 
-#### Sample Agenda:
+#### دستور کار نمونه:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|زمان | موضوع دستور کار | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 دقیقه | نمایش یک [ویدئو الهام بخش | |5-10 دقیقه](https://hourofcode.com/us/promote/resources#videos)| خود را معرفی کنید و درباره دانش آموزان بیشتر بدانید: کجا کار می کنید، چه کار می کنید و چه چیزی را در شغل خود بیشتر دوست دارید؟ چه چیزی یا چه کسانی به شما الهام گرفتند؟ چگونه به علوم کامپیوتر علاقه مند شدید؟ آیا شما یک مربی داشتید؟ از دانش آموزان سؤالات بپرسید و برای Q&A وقت بگذارید. | | 30-60 دقیقه | کد! اگر رویداد شما حضوری است، این زمان برای پاسخ به سوالات و راهنمایی دانش آموزان در معماهای سخت است. سعی کنید به طور مستقیم به آنها راه حل ارائه ندهید، در عوض سعی کنید از آنها سؤال بپرسید تا بتوانند به خودشان پاسخ دهند که چه اشتباه رخ داده است، و دانش آموزان را تشویق کنید که اگر سوالی دارند از یکدیگر بپرسند. اگر به صورت مجازی داوطلبانه هستید، با معلم در مورد بهترین رویکرد کار کنید. ممکن است منطقی تر باشد که در پایان جلسه بازگردید تا ببینید که دانش آموزان چه پیشرفت هایی داشته اند. | | |1-3 دقیقه | از همه تشکر کنید و کلمات جدایی الهام بخش را به اشتراک بگذارید. هر یک از سواگ های شرکت خود را تقسیم کنید (برچسب ها فو[ق ال](#celebrate) عاده هستند)! | | <br />
 
-#### Other ideas to add to your event
+#### ایده های دیگر برای اضافه کردن به رویداد شما
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- نحوه تأثیر فناوری بر زندگی ما را توضیح دهید، با نمونه هایی که دانشجویان از همه زمینه ها به آنها اهمیت خواهند داد - درباره فناوری صحبت کنید که زندگی را نجات می دهد، به مردم کمک می کند، و مردم
+- اگر شما یک شرکت فناوری هستید، محصولات سرگرم کننده و نوآورانه آزمایشی شرکت شما روی آن کار می کند. اگر شما یک شرکت فناوری نیستید، در مورد نحوه استفاده شرکت شما از فناوری برای حل مشکلات و تحقق اهداف صحبت کنید.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- اگر گروهی از کارکنان دارید که رویداد شما را تسهیل می کنند یا داوطلبانه در یک مدرسه محلی هستند، سفارش تی شرت [سفارشی برای گروه خود را](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) در نظر بگیرید.
 
-### 3. Plan your technology needs
+### ۳. نیازهای فناوری خود را برنامه ریزی
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### دستگاه ها:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! برای فعالیت های جدا شدن، به سادگی بخش فناوری کلاس درس را فیلتر کنید تا گزینه های «بدون کامپیوتر یا دستگاه» را نشان دهید.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **فعالیت های آزمای** ش بر روی کامپیوتر یا دستگاه ها. اطمینان حاصل کنید که آنها در مرورگرها با صدا و ویدئو به درستی کار می کنند
+- **دستگاه های کافی ندارید؟** از برنامه نویسی جفت استفاده کنید. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+- **برای شرکت کنندگان خود** هدفون ارائه دهید یا از آنها بخواهید که اگر آموزشی هایی را امتحان می کنند که با صداها بهترین کار می کنند، از آنها بخواهید که خودشان را به همراه داشته باشند.
+- **پهنای باند کم دارید**؟ برنامه ریزی کنید فیلم ها را در جلوی رویداد نمایش دهید، بنابراین هر شرکت کننده فیلم های خود را دانلود نمی کند. یا فعالیت های جدا شده/آفلاین را امتحان کنید.
 
-#### Virtual Events:
+#### رویدادهای مجازی:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+اگر رویداد شما قرار است مجازی باشد، می خواهید قبل از رویداد خود در مورد پلتفرم کنفرانس خود تصمیم بگیرید (و آن را آزمایش کنید). این امر ممکن است بر تعداد دانش آموزانی که احساس راحتی می کنید در آنها تأثیر بگذارد، بنابراین بهتر است قبل از دعوت به کلاس درس یا تبلیغ رویداد خود این موضوع را تعیین کنید. برای ایده هایی در مورد چگونگی اجرای ساعت کد از راه دور، نکات ما را برای یک [رویداد مجازی Hour of Code را بخوانید](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### ۴. یک فعالیت را انتخاب کنید
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+ما انواع آموزش های سرگرم کننده و هدایت دانش آموزان را برای همه گروه های سنی و سطوح تجربه ارائه می دهیم. برای دانش آموزان بسیار محبوب است که آموزش های خود را امتحان کنند، اگرچه ممکن است بخواهید این رویداد را با یک ویدیوی الهام بخش [آغاز کنید تا همه](https://hourofcode.com/us/promote/resources#videos) با هم تماشا کنند.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">فعالیت ها را بررسی کنید</a> و از قبل تصمیم بگیرید که آیا می خواهید یک آموزش واحد برای همه مهمانان خود انتخاب کنید یا اجازه دهید هر کودک خودش را انتخاب کند. **تمامی فعالیت های Hour of Code** نیاز به حداقل زمان آماده سازی دارند و به طور خودکار هدایت می شوند - به شرکت کنندگان اجازه می دهد تا با سرعت و سطح مهارت خود کار کنند.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+هنگامی که یک نقشه راه محکم برای رویداد خود داشته باشید، می توانید دعوت دانش آموزان، مدرسه یا جامعه بزرگتر را شروع کنید. توصیه می کنیم با مدرسه محلی که با آن ارتباط دارید شروع کنید یا نقشه [رویداد](https://hourofcode.com/us/map) های ساعت کد ما را مرور کنید.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### ۵. جشن بگیرید
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+بعد از اینکه دانشجویان یا مهمانان ساعت کد خود را تکمیل کردند، زمان آن رسیده است که موفقیت آنها را جشن بگی در اینجا چند ایده برای سرگرم کننده تر کردن رویداد شما آورده شده است:
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [به اشتراک گذاری]({{ urls/certificates }}) گواهینامه ها برای شرکت کنندگان و دانش
+- [چاپ «من یک ساعت کد انجام دادم! برچسب ها»]({{ promote/resources_stickers }}) یا جوایز و جایزه های دیگر را در فروشگاه آمازون [Code.org پیدا کنید.](https://code.org/shop)
+- عکس ها و فیلم های رویداد Hour of Code خود را در رسانه های اجتماعی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا بتوانیم موفقیت شما را نیز برجسته کنیم!
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## گزارش را در مورد ساعت کد گسترش دهید
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+یکی از بهترین راه های کمک، گسترش کلمه و تبلیغ ساعت کد است.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### ۱. رویداد خود را ثبت کنید
 
-هنگامی که شما [ثبت نام ساعت خود را از رویداد کد](/#join)، شما ارتباطات ایمیل مفید با اخبار و راهنمایی برای میزبانی یک ساعت موفق از کد دریافت خواهید کرد. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+هنگامی که در [رویداد Hour of Code خود ثبت نام می کنید](/events)، ارتباطات ایمیلی مفید با اخبار و نکات برای میزبانی یک ساعت کد موفق دریافت خواهید کرد. همچنین به این ترتیب می توانید به مدارس محلی یا والدین اطلاع دهید که شما میزبان یک رویداد در نزدیکی آنها هستید.
 
-### 2. Post on Social Media
+### ۲. ارسال در رسانه های اجتماعی
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+به افزایش آگاهی از جنبش علوم کامپیوتر با این محتوای نمونه برای ارسال در رسانه های اجتماعی و به اشتراک گذاری با کارمندان خود کمک کنید.
 
-#### Hour of Code general announcement
+#### اعلامیه عمومی ساعت کد
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- علوم کامپیوتر جهان ما را تغییر می دهد. به دانش آموزان کمک کنید که با یکی #HourOfCode شروع می شود بخشی از این تغییر باشند. https://hourofcode.com/
+- فقط از تکنولوژی استفاده نکنید بلکه یاد بگیرید چگونه آن را بسازید. به فرد کمک کنید که با #HourOfCode شروع کند. https://hourofcode.com/
 
-#### Stats
+#### آمار
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- آیا میدانستید که تنها ۵۳ درصد از مدارس ایالات متحده علوم کامپیوتر را تدریس میکنند؟ به هر دانش آموز این فرصت را بدهید که یکی را یاد بگیرد #HourOfCode https://hourofcode.com/
+- در ایالات متحده تنها ۲۶ درصد از متخصصان نرم افزار زنان هستند. با استفاده از #HourOfCode https://hourofcode.com/ زنان جوان بیشتری را به علوم کامپیوتر معرفی کنید
+- ۶۷ درصد از مشاغل محاسباتی در ایالات متحده در بخش فناوری نیستند. کمک به قرار دادن علوم کامپیوتر در برنامه درسی استاندارد با #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### خودتان را ایجاد کنید
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- یکی از #HourOfCode می تواند منجر به [داستان خود را پر کنید]. https://hourofcode.com/
+- من از #HourOfCode حمایت می کنم زیرا [افکار خود را پر کنید]. به ما بپیوندید https://hourofcode.com
 
-#### Engineer-specific
+#### مهندسی خاص
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- اگر اولین خط کد شما زندگی شما را تغییر داد، به دانش آموزان نزدیک شما کمک کنید اولین #HourOfCode خود را بنویسند https://code.org/volunteer
+- اگر کد کردن را یاد گرفتید، داستان شما چیست؟ از طریق اولین #HourOfCode https://code.org/volunteer به یک دانش آموز نزدیک شما الهام بدهید
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">در</a> باره پوسترها، فیلم ها، برچسب ها و راه های دیگر برای تبلیغ رویداد خود در جامعه خود بیشتر بدانید.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## راه های بیشتر برای پشتیبانی از ساعت کد
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- آگاهی را با استفاده از سوا [گ Code.org گسترش](https://store.code.org/) دهید (تمام درآمد به حمایت از دسترسی دانشجویان بیشتر به آموزش علوم کامپیوتر می شود).
+- هنگام خرید از [Amazon](https://code.org/donate/amazonsmile)Smile استفاده از Code.org را انتخاب کنید.
+- از مدیرعامل خود بخواهید که یک ایمیل در سراسر شرکت ارسال کند که بر اهمیت علوم کامپیوتر تأکید می کند و کارمندان را تشویق می کند تا این خبر را گ
+- با همکاران در یک کمپین دادن لذت ب [برید.](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)
+- [این درخواست را امضا](https://code.org/promote) کنید تا مطمئن شوید که هر دانش آموز فرصت یادگیری علوم کامپیوتر را دارد.
+- [](https://code.org/donate) به Code.org کمک کنید تا بتوانیم منابع آموزشی خود را رایگان و برای همه در دسترس نگه داریم.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+برای پیشنهادات بیشتر در مورد چگونگی پشتیبانی از Code.org و ساعت کد، به code.org/help مراجعه [کنید](https://code.org/help)
 
 * * *
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## سوالات متداولانه
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### هنوز یک معلم با من تماس نگرفته است. چگونه می توانم همچنان داوطلب باشم؟
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
-
-
-### How long do classroom visits last for?
-
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
+سعی کنید مدارس محلی را جستجو کنید و با مدیر/معلم/دفتر مقام تماس بگیرید و بپرسید که چگونه می توانید کمک کنید.  
 
 
-### What age group is the Hour of Code activity appropriate for?
+### بازدید کلاس درس چقدر طول می کشد؟
 
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
-
-
-### How do I get selected as a technical volunteer or guest speaker?
-
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+بازدید حضوری در کلاس درس معمولاً 60-90 دقیقه طول می کشد و بازدید کلاس مجازی معمولاً 20-30 دقیقه طول می کشد.   
 
 
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
+### فعالیت ساعت کد برای چه گروه سنی مناسب است؟
+
+Code.org و شرکای ما تمام فعالیت های Hour of Code را طراحی می کنند تا دانش آموزان تمام سطوح پایه (K-12) را از همه زمینه ها درگیر کنند. همه - حتی بزرگسالان - می توانند از بازی لذت ببرند!   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+### چگونه می توانم به عنوان یک داوطلب فنی یا سخنران مهمان انتخاب شوم؟
+
+معلمان در نقشه داوطلبانه ما به دنبال داوط [لبان خواهند](https://code.org/volunteer/local)بود. سعی کنید پروفایل خود را تا حد ممکن کامل کنید تا احتمال انتخاب معلم شما را افزایش دهید. اگر در مورد چگونگی داوطلبانه شدن ترجیح دارید، مانند سخنران مهمان بودن یا پشتیبانی فنی، لطفا این را در توضیحات نمایه خود نشان دهید.   
+
+
+پس از انتخاب، یک معلم از طریق پلتفرم داوطلبانه با شما تماس خواهد گرفت (آدرس ایمیل شما هرگز با معلم به اشتراک گذاشته نمی شود). اگر درخواست های زیادی از معلمان دریافت می کنید، همیشه می توانید با کلیک بر روی لینک برای ویرایش اطلاعات یا لغو اشتراک خود، که در پایین هر ایمیل از معلم ارائه شده است، ترجیحات خود را به روز کنید.   
+
+
+[<button>ثبت نام برای داوطلب</button>]({{ urls/volunteer }})

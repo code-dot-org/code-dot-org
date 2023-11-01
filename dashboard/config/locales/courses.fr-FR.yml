@@ -148,6 +148,8 @@ fr:
           description_short: Apprenez les concepts fondamentaux de l’Informatique.
         mike-test:
           title: Les bases de l'Informatique
+        self-paced-pl-csd-unit1-2023:
+          title: Enseignement de la résolution de problèmes et de l'informatique
         vpl-csa-2023:
           title: Formation professionnelle virtuelle CSA
     resources:

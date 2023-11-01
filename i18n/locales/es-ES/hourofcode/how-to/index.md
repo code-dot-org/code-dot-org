@@ -72,7 +72,7 @@ Ahora que has planificado tu evento, ¡es hora de comenzar a difundirlo!
 
 ### Informa a los voluntarios cuando se registren a tu evento
 
-Cuando [inscribas tu evento de la Hora del Código](/#join), recibirás útiles comunicaciones por correo electrónico con noticias y consejos para organizar con éxito la Hora del Código. También es la forma en que puedes informar a los voluntarios locales de que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre Ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
+Cuando te [inscribas en tu evento de la Hora del Código](/events), recibirás comunicaciones útiles por correo electrónico con noticias y consejos para organizar una Hora del Código exitosa. También es la forma en que puedes informar a los voluntarios locales de que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre Ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
 
 ### ¡Genera entusiasmo entre tus estudiantes!
 

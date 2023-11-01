@@ -1,158 +1,240 @@
-# Script to generate the associated output weights contained in files like cached-spacy-background-map.json that are used to calculate final effects output HoC2023
+# Script to generate the associated output weights contained in files like cached-spacy-background-map.json
+# that are used to calculate final effects output HoC2023.
+# Run this Python script from the code-dot-org root directory.
+# python apps/script/HoC2023AiGenerateWeights.py
+# At the bottom of this file are background effects, palettes and foreground effects in the order they appear in the dropdowns.
+# When this file is run and the three cached data files are replaced in apps/static/dance/ai/model,
+# please update comments lists below with output of this script.
+
 import spacy
-import json
+from HoC2023AiHelperFunctions import *
 
-# Load the spaCy model
-nlp = spacy.load("en_core_web_md")
+# Load the spaCy natural language processing model - English tokenizer, tagger, parser and NER (named entity recognition)
+nlp = spacy.load("en_core_web_lg")
 
-# Define your "id" (emojis) and foreground/background/palette lists
-# For items like backgrounds/foregrounds, certain values were adjusted to reflect the most context-rich but open-ended word within the phrase
-# e.g. "ripples_random" is adjusted to "ripples", "smiling_poop" -> "poop", etc.
-# This was done due to spacy interpreting underscored phrases as a unique word and phrases such as "smiling poop" not correlating highly with most anything within a internet scraped corpus
-id = ["poopy", "romantic", "party", "silly", "sparkle", "happy", "magic", "spooky", "cute", "funky", "wavy", "lights", "rainbow", "robot", "chaotic", "disco", "zen", "fast", "evil", "cold", "cosmic", "sad", "black-and-white", "warm", "cool"]
-palettes = ["cool", "electronic", "ice cream", "neon", 'rave', "tropical","vintage",'warm', 'greyscale', 'sky', 'ocean', 'sunrise', 'sunset', 'spring', 'summer', 'autumn', 'winter', 'twinkling', 'rainbow', 'roses']
-backgrounds = ['circles',
-    'color',
+# Get the list of emoji names and their corresponding emoji ids
+emoji_names_list, emojis_map = get_ai_emoji_inputs()
+
+background_effect_blockly_ids_list, background_effect_user_facing_names_list = get_background_effects()
+palette_blockly_ids_list, palette_user_facing_names_list = get_palettes()
+foreground_effect_blockly_ids_list, foreground_effect_user_facing_names_list = get_foreground_effects()
+
+# We rename foreground/background effects and palettes as their model_descriptive_name
+# to better reflect the actual output of the effect or color.
+# Below, we store them in maps for which the key is the model_descriptive_name and the
+# value is the corresponding blockly_id.
+
+background_effect_model_descriptive_names = [
+    'moving shapes',
+    'flower petals',
+    'pulse',
+    'clouds',
+    'solid colors',
     'diamonds',
     'disco',
-    'fireworks',
+    'firework',
+    'flowers',
+    'light grid',
+    'stars',
+    'groovy shapes',
     'swirl',
     'kaleidoscope',
-    'lasers',
-    'splatter',
+    'laser beam',
+    'paint splatter',
     'rainbow',
-    'snowflakes',
-    'text',
+    'dots',
+    'circles',
+    'snow fall',
+    'words',
     'galaxy',
     'sparkles',
     'spiral',
-    'disco',
-    'stars',
-    'music',
-    'ripples',
-    'random',
-    'quads',
-    'flowers',
+    'squares',
     'squiggles',
-    'stars',
-    'petals',
-    'clouds',
-    'grid',
     'starburst',
-  ]
+    'twinkle',
+    'sound wave'
+]
+background_effects_map = create_map_print_options('background_effects', background_effect_model_descriptive_names, background_effect_blockly_ids_list, background_effect_user_facing_names_list)
 
-foregrounds = [
+palette_model_descriptive_names = [
+    'autumn',
+    'black and white',
+    'green blue',
+    'electronic',
+    'grayscale',
+    'creamy pastel',
+    'rainbow pastel',
+    'neon',
+    'blue',
+    'bright rainbow',
+    'roses',
+    'pink blue',
+    'green',
+    'flower',
+    'coral',
+    'purple',
+    'sweet candy rainbow',
+    'orange',
+    'retro',
+    'red orange',
+    'icy blue'
+]
+palettes_map = create_map_print_options('palettes', palette_model_descriptive_names, palette_blockly_ids_list, palette_user_facing_names_list)
+
+foreground_effect_model_descriptive_names = [
     'bubbles',
-    'confetti',
     'hearts',
-    'music',
-    'pineapples',
-    'pizzas',
+    'confetti',
+    'emojis',
+    'heart',
+    'music notes',
+    'rainbow paint',
+    'pineapple',
+    'pizza',
     'poop',
     'rain',
-    'rainbows',
-    'smile',
+    'rainbow',
+    'smily face',
     'spotlight',
-    'lights',
-    'tacos',
-    'emojis',
-    'hearts',
+    'stage lights',
     'stars',
-    'paint',
-  ]
+    'taco'
+]
+foreground_effects_map = create_map_print_options('foreground_effects', foreground_effect_model_descriptive_names, foreground_effect_blockly_ids_list, foreground_effect_user_facing_names_list)
 
-palettedict = {}
-bgdict = {}
-fgdict = {}
+palette_dict = {}
+background_dict = {}
+foreground_dict = {}
 
 # Calculate and print similarity scores
-for id_word in id:
+for emoji_name in emoji_names_list:
     palette_scores = []
-    for palette_word in palettes:
-        id_token = nlp(id_word)
+    for palette_word in palette_model_descriptive_names:
+        id_token = nlp(emoji_name)
         palette_token = nlp(palette_word)
         similarity_score = id_token.similarity(palette_token)
         palette_scores.append(round(similarity_score, 2))
-    
-    bg_scores = []
-    for bg_word in backgrounds:
-        id_token = nlp(id_word)
-        bg_token = nlp(bg_word)
-        similarity_score = id_token.similarity(bg_token)
-        bg_scores.append(round(similarity_score, 2))
-        
-    fg_scores = []
-    for fg_word in foregrounds:
-        id_token = nlp(id_word)
-        fg_token = nlp(fg_word)
-        similarity_score = id_token.similarity(fg_token)
-        fg_scores.append(round(similarity_score, 2))
-        
-    palettedict[id_word] = palette_scores
-    bgdict[id_word] = bg_scores
-    fgdict[id_word] = fg_scores
 
-paletteoutput = {'emojiAssociations': palettedict, 'output': palettes}
-bgoutput = {'emojiAssociations': bgdict, 'output': backgrounds}
-fgoutput = {'emojiAssociations': fgdict, 'output': foregrounds}
+    background_scores = []
+    for background_word in background_effect_model_descriptive_names:
+        id_token = nlp(emoji_name)
+        background_token = nlp(background_word)
+        similarity_score = id_token.similarity(background_token)
+        background_scores.append(round(similarity_score, 2))
 
-# Modify output to reflect true file names as stored within our typescript codebase
-bgoutput['output'] = [
-    'circles',
-    'color_cycle',
-    'diamonds',
-    'disco_ball',
-    'fireworks',
-    'swirl',
-    'kaleidoscope',
-    'lasers',
-    'splatter',
-    'rainbow',
-    'snowflakes',
-    'text',
-    'galaxy',
-    'sparkles',
-    'spiral',
-    'disco',
-    'stars',
-    'music_wave',
-    'ripples',
-    'ripples_random',
-    'quads',
-    'flowers',
-    'squiggles',
-    'growing_stars',
-    'blooming_petals',
-    'clouds',
-    'frosted_grid',
-    'starburst',
-  ]
+    foreground_scores = []
+    for foreground_word in foreground_effect_model_descriptive_names:
+        id_token = nlp(emoji_name)
+        foreground_token = nlp(foreground_word)
+        similarity_score = id_token.similarity(foreground_token)
+        foreground_scores.append(round(similarity_score, 2))
 
-fgoutput['output'] = [
-    'bubbles',
-    'confetti',
-    'hearts_red',
-    'music_notes',
-    'pineapples',
-    'pizzas',
-    'smiling_poop',
-    'rain',
-    'floating_rainbows',
-    'smile_face',
-    'spotlight',
-    'color_lights',
-    'raining_tacos',
-    'emojis',
-    'hearts_colorful',
-    'exploding_stars',
-    'paint_drip',
-]
+    emoji_id = emojis_map[emoji_name]
+    palette_dict[emoji_id] = palette_scores
+    background_dict[emoji_id] = background_scores
+    foreground_dict[emoji_id] = foreground_scores
 
-with open("apps/static/dance/ai/model/cached-spacy-palette-map", "w") as json_file:
-    json_file.write(json.dumps(paletteoutput))
+background_output = {'emojiAssociations': background_dict, 'output': background_effect_model_descriptive_names}
+palette_output = {'emojiAssociations': palette_dict, 'output': palette_model_descriptive_names}
+foreground_output = {'emojiAssociations': foreground_dict, 'output': foreground_effect_model_descriptive_names}
 
-with open("apps/static/dance/ai/model/cached-spacy-background-map", "w") as json_file:
-    json_file.write(json.dumps(bgoutput))
-    
-with open("apps/static/dance/ai/model/cached-spacy-foreground-map", "w") as json_file:
-    json_file.write(json.dumps(fgoutput))
+background_output['pythonNames'] = background_output['output']
+palette_output['pythonNames'] = palette_output['output']
+foreground_output['pythonNames'] = foreground_output['output']
+
+# Modify output to reflect blockly id names.
+background_output['output'] = [background_effects_map[bg] for bg in background_output['output']]
+foreground_output['output'] = [foreground_effects_map[fg] for fg in foreground_output['output']]
+palette_output['output'] = [palettes_map[pal] for pal in palette_output['output']]
+
+with open("apps/static/dance/ai/model/cached-spacy-palette-map.json", "w") as json_file:
+    json_file.write(json.dumps(palette_output))
+
+with open("apps/static/dance/ai/model/cached-spacy-background-map.json", "w") as json_file:
+    json_file.write(json.dumps(background_output))
+
+with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as json_file:
+    json_file.write(json.dumps(foreground_output))
+
+# Below are background effects, palettes and foreground effects in the order they appear in the dropdowns.
+# When this file is run and the three cached data files are replaced in apps/static/dance/ai/model,
+# please update comments lists below with output of this script.
+# This script is run from the code-dot-org root directory.
+# python apps/script/HoC2023AiGenerateWeights.py
+
+# BACKGROUND EFFECTS
+# model_descriptive_name | blockly_id | blockly_user_facing_name
+# moving shapes | quads | Angles
+# flower petals | blooming_petals | Blooming Petals
+# pulse | circles | Circles
+# clouds | clouds | Clouds
+# solid colors | color_cycle | Colors
+# diamonds | diamonds | Diamonds
+# disco | disco_ball | Disco Ball
+# firework | fireworks | Fireworks
+# flowers | flowers | Flowers
+# light grid | frosted_grid | Frosted Grid
+# stars | growing_stars | Growing Stars
+# groovy shapes | higher_power | Higher Power
+# swirl | swirl | Hypno
+# kaleidoscope | kaleidoscope | Kaleidoscope
+# laser beam | lasers | Laser Dance Floor
+# paint splatter | splatter | Paint Splatter
+# rainbow | rainbow | Rainbow
+# dots | ripples_random | Random Ripples
+# circles | ripples | Ripples
+# snow fall | snowflakes | Snow
+# words | text | Song Names
+# galaxy | galaxy | Space
+# sparkles | sparkles | Sparkles
+# spiral | spiral | Spiral
+# squares | disco | Squares
+# squiggles | squiggles | Squiggles
+# starburst | starburst | Starburst
+# twinkle | stars | Stars
+# sound wave | music_wave | Waves
+
+# PALETTES
+# model_descriptive_name | blockly_id | blockly_user_facing_name
+# autumn | autumn | Autumn
+# black and white | rave | Black and White
+# green blue | cool | Cool
+# electronic | electronic | Electronic
+# grayscale | grayscale | Grayscale
+# creamy pastel | iceCream | Ice Cream
+# rainbow pastel | default | Light
+# neon | neon | Neon
+# blue | ocean | Ocean
+# bright rainbow | rainbow | Rainbow
+# roses | roses | Roses
+# pink blue | sky | Sky
+# green | spring | Spring
+# flower | summer | Summer
+# coral | sunrise | Sunrise
+# purple | sunset | Sunset
+# sweet candy rainbow | tropical | Tropical
+# orange | twinkling | Twinkling
+# retro | vintage | Vintage
+# red orange | warm | Warm
+# icy blue | winter | Winter
+
+# FOREGROUND EFFECTS
+# model_descriptive_name | blockly_id | blockly_user_facing_name
+# bubbles | bubbles | Bubbles
+# hearts | hearts_colorful | Colorful Hearts
+# confetti | confetti | Confetti
+# emojis | emojis | Emojis
+# heart | hearts_red | Hearts
+# music notes | music_notes | Music Notes
+# rainbow paint | paint_drip | Paint Drip
+# pineapple | pineapples | Pineapples
+# pizza | pizzas | Pizzas
+# poop | smiling_poop | Poop
+# rain | rain | Rain
+# rainbow | floating_rainbows | Rainbows
+# smily face | smile_face | Smiles
+# spotlight | spotlight | Spotlight
+# stage lights | color_lights | Stage Lights
+# stars | exploding_stars | Starburst
+# taco | raining_tacos | Tacos

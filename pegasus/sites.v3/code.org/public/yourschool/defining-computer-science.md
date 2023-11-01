@@ -19,15 +19,32 @@ Our definition of computer science was developed by the Computer Science Teacher
 
 _Computer science is the study of computers and algorithms, including their principles, their hardware and software designs, their implementation, and their impact on society._
 
-Learning computer science means learning how tocreate new technologies, rather than simply usingthem. Although many schools offer their studentssome exposure to computer science in a limitedcapacity such as an Hour of Code, this reportfocuses on schools that teach a foundationalcomputer science course. These are schools wherestudents learn computer science during the schoolday and spend a minimum amount of time per semester applying learned concepts throughprogramming (at least 20 hours of programming forgrades 9–12 high schools). Although computerscience is broader than programming, some directprogramming experience is integral to learning thefundamental concepts. It is also used as a definingcharacteristic to differentiate foundational computerscience courses from other more advanced ornon-foundational courses, or from generaltechnology courses. Although some schools mayintegrate computer science and programminginstruction in other courses, the Access Report onlyincludes courses that are coded as computerscience.  
+Learning computer science means learning how to
+create new technologies, rather than simply using
+them. Although many schools offer their students
+some exposure to computer science in a limited
+capacity such as an Hour of Code, this report
+focuses on schools that teach a foundational
+computer science course. These are schools where
+students learn computer science during the school
+day and spend a minimum amount of time per semester applying learned concepts through
+programming (at least 20 hours of programming for
+grades 9–12 high schools). Although computer
+science is broader than programming, some direct
+programming experience is integral to learning the
+fundamental concepts. It is also used as a defining
+characteristic to differentiate foundational computer
+science courses from other more advanced or
+non-foundational courses, or from general
+technology courses. Although some schools may
+integrate computer science and programming
+instruction in other courses, the Access Report only
+includes courses that are coded as computer
+science.  
 
 Each school on our map fits into one of four possible categories:
-1. __Need information.__ This means we don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool) or [send the survey](https://code.org/yourschool/letter) to someone at the school who can fill it out.
+1. __Need information.__ This means we don’t have information yet for this school. If your school is in this category, please [fill out the survey](https://code.org/yourschool).
 1. __Offers a computer science class.__ This means that we have data for this school that indicates that it offers a computer science class. 
 1. __Historically offered computer science.__ We have data that indicates that this school has taught CS in the past 2 years and we have not received updated information this year. 
-1. __Offers limited or no computer science.__ This means that we have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computer science education opportunities, like after school programs, clubs, or Hour of Code events.
-1. __Historically did not offer computer science.__ We have data that indicates that this school did not teach CS in the past 2 years and we have not received updated information this year. 
-1. __Inconsistent data__. This means that we have  conflicting data points for this school that we have not resolved. If your school is in the category, it may help to get more data. Please fill out the survey [fill out the survey](https://code.org/yourschool) or [send the survey](https://code.org/yourschool/letter) to someone at the school who can fill out the survey. 
-
-Once we have collected a sufficient amount of information on a school with inconsistent data, we compare responses based on the volume and source to gauge its computer science offering. 
-
+1. __Offers no computer science.__ This means that we have data for this school indicating the school does not offer any computer science classes during the day that include minimum requirements as defined above. This school may offer other computer science education opportunities, like after school programs, clubs, or Hour of Code events.
+1. __Historically did not offer computer science.__ We have data that indicates that this school did not teach CS in the past 2 years and we have not received updated information this year.

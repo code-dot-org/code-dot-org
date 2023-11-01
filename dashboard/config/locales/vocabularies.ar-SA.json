@@ -1946,7 +1946,7 @@
           "definition": "تحويل صورة إلى ضوضاء، وتدريب الذكاء الاصطناعي لعكس العملية"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (شبكة الخصومة التوليدية)",
+          "word": "GAN (الشبكة التوليدية المتنافسة)",
           "definition": "طريقة لاستخدام نموذجين متنافسين للذكاء الاصطناعي لتوليد شيء ما"
         },
         "artificial_intelligence/how-ai-works/2023": {
