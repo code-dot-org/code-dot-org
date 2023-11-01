@@ -422,8 +422,7 @@ Applab.init = function (config) {
     }));
   }
   Applab.channelId = config.channel;
-  // TODO: unfirebase
-  Applab.storage = initFirebaseStorage({
+  Applab.storage = initFirebaseStorage({ // TODO: unfirebase
     channelId: config.channel,
     firebaseName: config.firebaseName,
     firebaseAuthToken: config.firebaseAuthToken,
