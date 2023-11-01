@@ -126,17 +126,15 @@ GoogleBlockly.Extensions.registerMutator(
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
-    const workspace = this.workspace;
-    const getBlockColor = function () {
-      const blockStyles = workspace.getTheme().blockStyles;
-      const blockStyle = blockStyles.behavior_blocks;
-      return blockStyle.colourPrimary;
+    // Used to create and render an SVG frame instance.
+    const getColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this);
     };
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.behaviorEditorHeader(),
       'blocklyFunctionalFrame',
-      getBlockColor
+      getColor
     );
 
     this.setOnChange(function () {
