@@ -73,6 +73,8 @@ describe('RemoveCoteacherDialog', () => {
       ajaxStub,
     } = createStubbedCoteacherDialog({instructorEmail: 'newsaurus@code.org'});
 
+    expect(wrapper.find('AccessibleDialog').length).to.equal(1);
+
     wrapper
       .find('Button')
       .at(0)
@@ -84,9 +86,8 @@ describe('RemoveCoteacherDialog', () => {
     expect(removeSavedCoteacher).to.have.not.been.called;
     expect(setCoteachersToAdd).to.have.not.been.called;
     expect(ajaxStub).to.have.not.been.called;
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
 
-    $.ajax.restore();
+    ajaxStub.restore();
   });
   it('Remove unsubmitted', () => {
     const {
@@ -110,7 +111,7 @@ describe('RemoveCoteacherDialog', () => {
     expect(ajaxStub).to.have.not.been.called;
     expect(wrapper.find('AccessibleDialog')).to.be.empty;
 
-    $.ajax.restore();
+    ajaxStub.restore();
   });
   it('Remove submitted', () => {
     const submittedCoteacher = {
@@ -140,6 +141,6 @@ describe('RemoveCoteacherDialog', () => {
     expect(removeSavedCoteacher).to.have.been.calledOnceWith(1);
     expect(setCoteachersToAdd).to.have.not.been.called;
     expect(ajaxStub).to.have.been.calledOnce;
-    $.ajax.restore();
+    ajaxStub.restore();
   });
 });

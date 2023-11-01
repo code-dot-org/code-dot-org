@@ -189,12 +189,11 @@ describe('CoteacherSettings', () => {
 
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
+    expect(wrapper.find('RemoveCoteacherDialog').length).to.equal(1);
     expect(dialog.find('Button')).to.have.lengthOf(2);
     expect(dialog.find('StrongText').dive().text()).to.contain(
       'Remove coelophysis@code.org'
     );
-    dialog = wrapper.find('RemoveCoteacherDialog').dive();
-    expect(dialog).to.be.empty;
   });
   it('cancel remove does nothing', () => {
     let coteachersToAdd = ['coelophysis@code.org'];
