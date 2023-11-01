@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -235,31 +235,32 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
    * Generates blocks from the AI result in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResult = (
-    workspace: Workspace
-  ): [BlockSvg, BlockSvg] => {
-    const params = allResults.current[generatingStep[0]].results;
-    console.log('generate blocks', generatingStep, params);
+  const generateBlocksFromResult = useCallback(
+    (workspace: Workspace): [BlockSvg, BlockSvg] => {
+      const params = allResults.current[generatingStep[0]].results;
+      console.log('generate blocks', generatingStep, params);
 
-    const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-      workspace.newBlock(
-        'Dancelab_setBackgroundEffectWithPaletteAI'
-      ) as BlockSvg,
-    ];
+      const blocksSvg: [BlockSvg, BlockSvg] = [
+        workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
+        workspace.newBlock(
+          'Dancelab_setBackgroundEffectWithPaletteAI'
+        ) as BlockSvg,
+      ];
 
-    // Foreground block.
-    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+      // Foreground block.
+      blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
 
-    // Background block.
-    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+      // Background block.
+      blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
+      blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
 
-    // Connect the blocks.
-    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+      // Connect the blocks.
+      blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
 
-    return blocksSvg;
-  };
+      return blocksSvg;
+    },
+    [allResults, generatingStep]
+  );
 
   const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
@@ -522,8 +523,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               </div>
             </div>
           )}
-          {mode === Mode.GENERATING && /*generatingStep[1] >= 1 && */ (
-            <div className={moduleStyles.score}>
+          {mode === Mode.GENERATING && (
+            /*generatingStep[1] >= 1 && */ <div className={moduleStyles.score}>
               <div className={moduleStyles.barContainer}>
                 <div
                   className={moduleStyles.barFill}
@@ -561,7 +562,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         {(mode === Mode.GENERATING || mode === Mode.RESULTS) && (
           <div
-            key={'preview-' + generatingStep[0]}
+            key={'preview-' /*+ generatingStep[0]*/}
             id="preview-area"
             className={moduleStyles.previewArea}
           >
@@ -580,11 +581,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                   className={moduleStyles.flipCardFront}
                 >
                   <AiVisualizationPreview
-                    generateBlocks={() => {
-                      return generateBlocksFromResult(
-                        Blockly.getMainWorkspace()
-                      );
-                    }}
+                    blocks={generateBlocksFromResult(
+                      Blockly.getMainWorkspace()
+                    )}
                   />
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
