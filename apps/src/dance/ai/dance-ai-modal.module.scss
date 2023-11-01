@@ -325,7 +325,7 @@ $result-red: rgb(235 87 87);
       .score {
         position: absolute;
         left: 40px;
-        top: 180px;
+        top: 200px;
 
         .barContainer {
           background-color: rgb(56 55 55);
@@ -339,7 +339,7 @@ $result-red: rgb(235 87 87);
             left: 0;
             height: 20px;
             background-color: rgb(16 189 233);
-            transition: transform 0.4s;
+            transition: width 0.4s;
           }
         }
 
