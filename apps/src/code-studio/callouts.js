@@ -39,6 +39,7 @@ export default function createCallouts(callouts) {
 
   // Update callout positions when a blockly editor is scrolled.
   $(window).on('block_space_metrics_set', handleWorkspaceResizeOrScroll);
+  // Update callout positions when the browser is resized.
   window.addEventListener('resize', handleWorkspaceResizeOrScroll);
 
   $(window).on('droplet_change', function (e, dropletEvent) {
