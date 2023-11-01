@@ -27,6 +27,7 @@ export interface DanceState {
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
+  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
@@ -37,6 +38,7 @@ const initialState: DanceState = {
   aiOutput: AiOutput.AI_BLOCK,
   isRunning: false,
   currentSongMetadata: undefined,
+  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -172,6 +174,9 @@ const danceSlice = createSlice({
     ) => {
       state.currentAiModalField = action.payload;
     },
+    setAiModalOpenedFromFlyout: (state, action: PayloadAction<boolean>) => {
+      state.aiModalOpenedFromFlyout = action.payload;
+    },
     setAiOutput: (state, action: PayloadAction<AiOutput>) => {
       state.aiOutput = action.payload;
     },
@@ -184,6 +189,7 @@ export const {
   setRunIsStarting,
   setCurrentSongMetadata,
   setCurrentAiModalField,
+  setAiModalOpenedFromFlyout,
   setAiOutput,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
