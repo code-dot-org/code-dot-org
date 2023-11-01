@@ -12,12 +12,14 @@ import pandas as pd
 import pickle 
 import json
 from HoC2023AiHelperFunctions import *
+import openai
+openai.api_key = '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'
 
 # Load the most recent Ada model as of 10/23
 EMBEDDING_MODEL = 'text-embedding-ada-002'
 
 # Get the list of emoji names and their corresponding emoji ids
-emoji_names_list, emojis_map = get_ai_emoji_inputs()
+emojis_list, emojis_map = get_ai_emoji_inputs()
 
 background_effect_blockly_ids_list, background_effect_user_facing_names_list = get_background_effects()
 palette_blockly_ids_list, palette_user_facing_names_list = get_palettes()
@@ -152,7 +154,7 @@ def retrieve_embedding(string: str,
     return embedding_cache[(string, model)]
 
 # Retrieve embeddings for input emojis, palettes, backgrounds, and foregrounds in that order
-option_lists = [emoji_names_list, palette_model_descriptive_names, background_effect_model_descriptive_names, foreground_effect_model_descriptive_names]
+option_lists = [emojis_list, palette_model_descriptive_names, background_effect_model_descriptive_names, foreground_effect_model_descriptive_names]
 embeddings = []
 # Final output should be list of lists structured as [[[emoji1], [emoji2], ...], [[palette1]...]...]
 # Where embeddings[0] = all emoji embeddings, [1] = palettes, [2] = background, [3] = foreground
@@ -176,13 +178,14 @@ def calculate_similarity_score(input_embeddings, output_embeddings):
     
     # Conversion to pandas DataFrame for ease of manipulation
     similarities = pd.DataFrame(similarities)
-    similarities.index = emoji_names_list
+    # We use the emoji_ids as index for use by client
+    similarities.index = emojis_map.values()
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format
     similarities_dict = similarities.transpose().to_dict()
-    for emoji in similarities_dict:
-        similarities_dict[emoji] = list(similarities_dict[emoji].values())
+    for emoji_id in similarities_dict:
+        similarities_dict[emoji_id] = list(similarities_dict[emoji_id].values())
     return similarities_dict
 
 palette_dict = calculate_similarity_score(emoji_embeddings, palette_embeddings)
@@ -202,13 +205,23 @@ background_output['output'] = [background_effects_map[bg] for bg in background_o
 foreground_output['output'] = [foreground_effects_map[fg] for fg in foreground_output['output']]
 palette_output['output'] = [palettes_map[pal] for pal in palette_output['output']]
 
-with open("apps/static/dance/ai/model/cached-spacy-palette-map.json", "w") as json_file:
+# For testing purposes (temporary until model is decided):
+ada_emoji = '-ada-emoji.json'
+ada_phrase = '-ada-phrase.json'
+spacy_emoji = '-space-emoji.json'
+spacy_phrase = '-spacy-phrase.json'
+# Write output to cached files
+cached_palette_map = 'apps/static/dance/ai/model/cached-palette-map' + ada_emoji
+cached_background_map = 'apps/static/dance/ai/model/cached-background-map' + ada_emoji
+cached_foreground_map = 'apps/static/dance/ai/model/cached-foreground-map' + ada_emoji
+
+with open(cached_palette_map, "w") as json_file:
     json_file.write(json.dumps(palette_output))
 
-with open("apps/static/dance/ai/model/cached-spacy-background-map.json", "w") as json_file:
+with open(cached_background_map, "w") as json_file:
     json_file.write(json.dumps(background_output))
     
-with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as json_file:
+with open(cached_foreground_map, "w") as json_file:
     json_file.write(json.dumps(foreground_output))
 
 # Below are background effects, palettes and foreground effects in the order they appear in the dropdowns.
