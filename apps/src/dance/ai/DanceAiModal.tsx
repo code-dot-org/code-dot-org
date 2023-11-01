@@ -249,17 +249,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const startAi = async () => {
     const result = chooseEffects(inputs, true);
-
     generatedEffects.current = [];
-
-    // Grab some bad results too.
     for (let i = 0; i < BAD_GENERATED_RESULTS_COUNT; i++) {
       generatedEffects.current[i] = chooseEffects(inputs, false);
     }
-
     generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = result;
-
-    console.log('all results', generatedEffects);
   };
 
   const handleConvertBlocks = () => {
@@ -407,7 +401,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             : mode === Mode.RESULTS && currentToggle === 'code'
             ? 'Did you know? A.I. wrote this code to generate the effect.'
             : mode === Mode.EXPLANATION
-            ? "Each emoji contributes to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
+            ? "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
             : undefined}
         </div>
 
