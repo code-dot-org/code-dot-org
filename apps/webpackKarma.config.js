@@ -35,7 +35,7 @@ const karmaConfig = {
             localeDoNotImportTest('@cdo/weblab/locale'),
           ]),
           ...{
-            firebase: path.resolve(__dirname, 'test/util/MockFirebase.js'),
+            firebase: path.resolve(__dirname, 'test/util/MockFirebase.js'), // TODO: unfirebase
             // Use mock-firmata to unit test playground-io maker components
             firmata: 'mock-firmata/mock-firmata',
           },
