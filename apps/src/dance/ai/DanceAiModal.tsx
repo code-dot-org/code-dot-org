@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback, useRef} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -259,7 +259,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       return blocksSvg;
     },
-    [resultJson]
+    []
   );
 
   const handleConvertBlocks = () => {
@@ -331,16 +331,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       : mode === Mode.GENERATING && generatingStep[1] >= 1
       ? aiBotYes
       : aiBotBorder;
-
-  const onBlockPreviewDone = useCallback(() => {
-    if (mode === Mode.GENERATING) {
-      setGeneratingDone(true);
-    } else if (mode === Mode.RESULTS) {
-      setShowPreview(true);
-      setMode(Mode.RESULTS_FINAL);
-      setTypingDone(true);
-    }
-  }, [mode, setGeneratingDone, setShowPreview, setTypingDone]);
 
   return (
     <AccessibleDialog
