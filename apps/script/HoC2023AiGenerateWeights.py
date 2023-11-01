@@ -190,7 +190,7 @@ def calculate_similarity_score(input_embeddings, output_embeddings):
 
 palette_dict = calculate_similarity_score(emoji_embeddings, palette_embeddings)
 background_dict = calculate_similarity_score(emoji_embeddings, background_embeddings)
-foreground_embeddings = calculate_similarity_score(emoji_embeddings, foreground_embeddings)
+foreground_dict = calculate_similarity_score(emoji_embeddings, foreground_embeddings)
 
 background_output = {'emojiAssociations': background_dict, 'output': background_effect_model_descriptive_names}
 palette_output = {'emojiAssociations': palette_dict, 'output': palette_model_descriptive_names}
