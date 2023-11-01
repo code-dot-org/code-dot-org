@@ -115,14 +115,14 @@ for emoji_name in emoji_names_list:
         palette_token = nlp(palette_word)
         similarity_score = id_token.similarity(palette_token)
         palette_scores.append(round(similarity_score, 2))
-    
+
     background_scores = []
     for background_word in background_effect_model_descriptive_names:
         id_token = nlp(emoji_name)
         background_token = nlp(background_word)
         similarity_score = id_token.similarity(background_token)
         background_scores.append(round(similarity_score, 2))
-        
+
     foreground_scores = []
     for foreground_word in foreground_effect_model_descriptive_names:
         id_token = nlp(emoji_name)
@@ -153,7 +153,7 @@ with open("apps/static/dance/ai/model/cached-spacy-palette-map.json", "w") as js
 
 with open("apps/static/dance/ai/model/cached-spacy-background-map.json", "w") as json_file:
     json_file.write(json.dumps(background_output))
-    
+
 with open("apps/static/dance/ai/model/cached-spacy-foreground-map.json", "w") as json_file:
     json_file.write(json.dumps(foreground_output))
 
