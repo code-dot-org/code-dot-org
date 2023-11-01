@@ -40,27 +40,15 @@ describe('RemoveCoteacherDialog', () => {
     $.ajax.restore();
   });
   it('does not show dialog when coteacher to remove not supplied', () => {
-    const wrapper = shallow(
-      <RemoveCoteacherDialog
-        coteacherToRemove={null}
-        setCoteacherToRemove={() => {}}
-        removeSavedCoteacher={() => {}}
-        setCoteachersToAdd={() => {}}
-      />
-    );
+    const {wrapper} = createStubbedCoteacherDialog(null);
 
     expect(wrapper).to.be.empty;
   });
 
   it('show dialog when coteacher to remove supplied', () => {
-    const wrapper = shallow(
-      <RemoveCoteacherDialog
-        coteacherToRemove={{instructorEmail: 'newsaurus@code.org'}}
-        setCoteacherToRemove={() => {}}
-        removeSavedCoteacher={() => {}}
-        setCoteachersToAdd={() => {}}
-      />
-    );
+    const {wrapper} = createStubbedCoteacherDialog({
+      instructorEmail: 'newsaurus@code.org',
+    });
 
     expect(wrapper.find('Button')).to.have.lengthOf(2);
     expect(wrapper.find('StrongText').dive().text()).to.contain(
