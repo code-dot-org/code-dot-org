@@ -1,5 +1,6 @@
-require 'honeybadger/ruby'
+require 'active_support'
 require 'cdo/shared_cache'
+require 'honeybadger/ruby'
 
 # A multilayered caching interface intended for use by Cdo::DynamicConfig. Ties
 # together three different components:
