@@ -681,7 +681,7 @@
   hoc_page_lead_activity_heading: "Lead an Hour of Code Activity"
   hoc_page_lead_activity_desc: "With more than 700 activities to choose from with classifications by grade level, experience, and inclusion of AI, your choices are vast. When you know your plans, please [register your activity](%{register_activity_url}) so we can celebrate all the events happening across the globe."
   hoc_page_activity_minecraft_desc: "Build and explore with Minecraft! Learn basic computer science skills with lots of different Minecraft activities to choose from."
-  hoc_page_how_ai_works_desc: "Learn the inner workings of ChatGPT, computer vision, and other AI concepts, explained by the people who created these technologies through videos are accompanying lesson plans."
+  hoc_page_how_ai_works_desc: "Learn the inner workings of ChatGPT, computer vision, and other AI concepts, explained by the people who created these technologies through videos and accompanying lesson plans."
   hoc_page_how_ai_works_title: "Lesson Plans: How AI Works"
   hoc_page_ai_101_heading: "Engage with AI 101 for Teachers"
   hoc_page_ai_101_desc: "AI 101 for Teachers is a five-part professional learning video series that will demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes."
