@@ -19,14 +19,15 @@
   "danceFeedbackUseSetTint": "Use the `set tint` block to change a dancer's tint.",
   "danceFeedbackUseStartMapping": "Try adding the <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block to your program.",
   "measure": "Measure:",
-  "danceAiNewMove": "⚠️ You need to add a block to make the dancer do a new move.",
+  "danceAiFeedbackNewMove": "⚠️ You need to add a block to make the dancer do a new move.",
   "danceAiFeedbackNeedNewDancer": "⚠️ You need to make a dancer.",
   "danceAiFeedbackAiBlockNoParameters": "⚠️ Choose three emojis for A.I. to generate the effect.",
+  "danceAiFeedbackAiBlockInWorkspaceWithNoParameters": "⚠️ There is an `A.I. generate effect` block without emojis chosen. Choose three emojis for A.I. to generate the effect",
   "danceAiFeedbackAiBlockNotConnectedSetup": "⚠️ Connect the `A.I. generate effect` block to the `setup` block.",
   "danceAiFeedbackNoAiBlock": "⚠️ Add the `A.I. generate effect` block to setup.",
-  "danceAiCustomize": "⚠️ You need to change the effect. You can either regenerate the effect, start over with new emojis, or customize the code A.I. created.",
-  "danceAiFeedbackConnectPressUpArrowEvent": "⚠️ Press up arrow ▲ button after pressing *\"Run\"*.",
+  "danceAiFeedbackCustomize": "⚠️ You need to change the effect. You can either regenerate the effect, start over with new emojis, or customize the code A.I. created.",
+  "danceAiFeedbackConnectPressUpArrowEvent": "⚠️ Press the up arrow ▲ button after pressing *\"Run\"*.",
   "danceAiFeedbackKeyPress": "⚠️ You pressed a key, but your dancer didn't do a new move.",
   "danceAiFeedbackAiBlockNoParametersOnEvent": "⚠️ The effect didn't change after 2 measures. Choose three emojis for A.I. to generate the effect.",
-  "danceAiStageChangeAfterMeasures": "⚠️ Connect the `A.I. generate effect` block to the `After 2 Measures` event."
+  "danceAiFeedbackEffectChangeAfterMeasures": "⚠️ Connect the `A.I. generate effect` block to the `after 2 Measures` event."  
 }
