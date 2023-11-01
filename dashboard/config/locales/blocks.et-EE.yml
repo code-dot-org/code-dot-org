@@ -55,6 +55,11 @@ et:
             '"measures"': ühikud
             '"seconds"': sekundit
         text: pärast {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ühikud
+            '"seconds"': sekundit
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -441,6 +446,24 @@ et:
             '"spiral"': Spiraal
             '"swirl"': Hypno
             '"text"': Laulu pealkiri
+        text: |-
+          määra taustaefekt
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"color_cycle"': Värvid
+            '"diamonds"': Teemantid
+            '"disco"': Ruudud
+            '"none"': Mitte ükski
+            '"rainbow"': Vikerkaar
+            '"rand"': "(Juhuslik)"
+            '"snowflakes"': Lumi
+            '"spiral"': Spiraal
+            '"swirl"': Hypno
+            '"text"': Laulu pealkiri
+          PALETTE:
+            '"rainbow"': Vikerkaar
         text: |-
           määra taustaefekt
           {PALETTE} {EFFECT}

@@ -527,7 +527,7 @@ uk:
         what_is_an_event: Що таке подія?
         teaching_cs_pair_programming: 'Вивчаємо Основи інформатики: Програмування в парах'
         teaching_problem_solving: 'Вивчаємо Основи інформатики: Навчаємось вирішувати проблеми'
-        csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим дизайну'
+        csd_applab_designmode: 'Дослідження інформатики: Лабораторія застосунків - Режим дизайну'
         csd_pair_programming: Парне програмування
         csd_gamelab_functions: Виклик та визначення функцій
         csd_applab_parameters: Функції з параметрами
@@ -544,7 +544,7 @@ uk:
         oceans_machine_learning: Машинне навчання
         oceans_societal_implications: Соціальні наслідки
         hoc_dance_congrats_2019: Танцювальна вечірка 2019 — Вечірка триває!
-        hoc_dance_warmup_2019: Танцювальна вечірка 2019 — Розминка
+        hoc_dance_warmup_2019: Танцювальна вечірка — Розминка
         hoc_dance_events_2019: Танцювальна вечірка 2019 — Події
         hoc_dance_measures_2019: Танцювальна вечірка 2019 — Такти
         hoc_dance_properties_2019: Танцювальна вечірка 2019 — Властивості
@@ -569,12 +569,14 @@ uk:
         CS_Changing_Everything: Інформатика змінює все
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_sprite_properties: Властивості спрайтів
-        csc-starquilts-intro: Кодуємо геометричний зірковий узор
+        csc-starquilts-intro: Кодування геометричного зіркового узору
         csc-mapmakers-intro: Кодування інтерактивних карт
         csc-ecosystems-intro: Імітація морської екосистеми
         csc_animal_adaptations_intro: Моделювання адаптацій тварин
+        csc_bookcovers_intro: Кодування обкладинки книги
         what-is-creativity: Що таке креативність?
         code-break: Зробіть перерву на код
+        se-cv-intro-to-lessons: 'Програмна інженерія та комп''ютерний зір: Вступ до уроків'
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

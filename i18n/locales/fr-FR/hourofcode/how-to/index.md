@@ -72,7 +72,7 @@ Faites la promotion de l’Heure de Code auprès d’autres enseignants qui voud
 
 ### Informez les bénévoles en enregistrant votre événement 
 
-Après avoir finalisé [votre inscription à l'événement Heure du code](/#join), vous recevrez des messages électroniques utiles contenant des nouvelles et des conseils pour organiser l'Heure du code avec succès. C’est aussi de cette manière que vous informerez vos volontaires locaux que votre école y participe. Les volontaires sont une excellente ressource, et peuvent venir parler à votre classe d'informatique ou simplement aider vos élèves avec les activités de l'Heure de Code. 
+Lorsque vous vous [inscrivez à une Heure de code](/events), vous recevrez des communications électroniques précieuses contenant des informations et des conseils pour organiser efficacement un évènement Heure de code. C’est aussi de cette manière que vous informerez vos volontaires locaux que votre école y participe. Les volontaires sont une excellente ressource, et peuvent venir parler à votre classe d'informatique ou simplement aider vos élèves avec les activités de l'Heure de Code. 
 
 ### Stimulez vos élèves 
 

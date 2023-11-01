@@ -2,6 +2,15 @@
 ar:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |-
+          إذا {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': أكثر من اللازم
+            '"just right"': مناسب تمامًا
+            '"too little"': أقل من اللازم
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -71,6 +80,11 @@ ar:
             MOVES.Rest: لا شيء
       Dancelab_atTimestamp:
         text: بعد {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': اجرائات
+            '"seconds"': ثوان
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"measures"': اجرائات
@@ -243,7 +257,7 @@ ar:
       Dancelab_eval:
         text: تقييم{CODE}
       Dancelab_everySeconds:
-        text: 'كل {N} {UNIT} '
+        text: 'كرر كل {N} {UNIT} '
         options:
           UNIT:
             '"measures"': اجرائات
@@ -581,6 +595,50 @@ ar:
             '"iceCream"': آيس كريم
             '"default"': ضوء
             '"neon"': نيون
+            '"tropical"': استوائي
+            '"vintage"': عتيق
+            '"warm"': الأحمر بدرجاته
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: عيّن تأثيرات الخلفية {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': لا شيء
+            '"rand"': "(عشوائي)"
+            '"circles"': نفق
+            '"quads"': زوايا
+            '"color_cycle"': ألوان
+            '"diamonds"': الماس
+            '"disco_ball"': كرة ديسكو
+            '"fireworks"': مفرقعات
+            '"flowers"': زهور
+            '"growing_stars"': النجوم المتنامية
+            '"higher_power"': قوة أعلى
+            '"swirl"': هيبنو
+            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"lasers"': أرضية رقص بالليزر
+            '"splatter"': رشاش الطلاء
+            '"rainbow"': ألوان
+            '"ripples_random"': تموجات عشوائية
+            '"ripples"': تموجات
+            '"snowflakes"': ثلج
+            '"text"': عنوان الأغنية
+            '"squiggles"': سكويغلز
+            '"galaxy"': الفضاء
+            '"sparkles"': بريق
+            '"spiral"': حلزوني
+            '"disco"': مربعات
+            '"starburst"': النجمي
+            '"stars"': نجوم
+            '"music_wave"': أمواج
+          PALETTE:
+            '"rave"': أسود وأبيض
+            '"cool"': الأزرق بدرجاته
+            '"electronic"': إلكتروني
+            '"iceCream"': آيس كريم
+            '"default"': ضوء
+            '"neon"': نيون
+            '"ocean"': المحيط
+            '"rainbow"': ألوان
             '"tropical"': استوائي
             '"vintage"': عتيق
             '"warm"': الأحمر بدرجاته
@@ -1015,13 +1073,13 @@ ar:
       FunctionBlocks_communicate:
         text: التواصل {VAR1} مع {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
-        text: اصنع {NUM} نقوش متحركة {ANIMATION_NAME} جديدة {BEHAVIOR}
+        text: اصنع {NUM} كائنات متحركة {ANIMATION_NAME} جديدة {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: قم بتمثيل {NUM} النقوش المتحركة {ANIMATION_NAME} الجديدة [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}قُل{TEXT1}"
       gamelab_addBehaviorSimple:
-        text: العفريت {SPRITE} يبدا {BEHAVIOR}
+        text: الكائن {SPRITE} يبدأ {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE} يحصل على الهدف {TARGET} إلى {OPT}"
         options:
@@ -1055,11 +1113,11 @@ ar:
             '"direction"': اتجاه الحركة
             '"speed"': السرعة
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} اللمسات {SPRITE2}"
+        text: "{CONDITION} {SPRITE1} يلمس {SPRITE2}"
         options:
           CONDITION:
             '"when"': عندما
-            '"while"': التكرار طالما
+            '"while"': بينما
       gamelab_clickedOn:
         text: عند النقر على {SPRITE}
       gamelab_clickedSpritePointer:
@@ -1092,7 +1150,7 @@ ar:
       gamelab_edgesDisplace:
         text: حواف كتلة {SPRITE} من التحرك
       gamelab_everyInterval:
-        text: 'كل {N} {UNIT} '
+        text: 'كرر كل {N} {UNIT} '
         options:
           UNIT:
             '"seconds"': ثوان
@@ -1194,7 +1252,7 @@ ar:
         options:
           CONDITION:
             '"when"': عندما
-            '"while"': التكرار طالما
+            '"while"': بينما
           KEY:
             '"up"': الأعلى
             '"down"': الأسفل
@@ -1425,7 +1483,7 @@ ar:
       gamelab_resetTimer:
         text: مؤقت إعادة الضبط
       gamelab_setAnimation:
-        text: تغيير {THIS} زي ل {ANIMATION}
+        text: تغيير {THIS} الزي ل {ANIMATION}
       gamelab_setBackground:
         text: عيّن لون الخلفية {COLOR}
       gamelab_setBackgroundImage:
@@ -1527,11 +1585,17 @@ ar:
         options:
           CONDITION:
             '"when"': عندما
-            '"while"': التكرار طالما
+            '"while"': بينما
       gamelab_spriteSay:
         text: "{SPRITE} قُل {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}قُل{TEXT1}لمدة{NUM}ثوانٍ"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} يفكر {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} يفكر {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} يفكر {THOUGHT}"
       gamelab_startAvoiding:
         text: "{SPRITE} يبدأ في تجنب {TARGET}"
       gamelab_startFollowing:
@@ -1638,7 +1702,7 @@ ar:
       KatiesBlocks_tumbling:
         text: الشقلبة
       Mikelab_addBehaviorSimple:
-        text: العفريت {SPRITE} يبدا {BEHAVIOR}
+        text: الكائن {SPRITE} يبدأ {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'أضافه بيانات التدريب: {NAME},{LOCATION}'
         options:
@@ -1674,6 +1738,8 @@ ar:
             "{x: 300, y: 100}": أعلى اليمين
             "{x: 100, y: 300}": أسفل اليسار
             "{x: 300, y: 300}": أسفل اليمين
+      Mikelab_destroy:
+        text: إزالة {SPRITE}
       Mikelab_eval:
         text: تقييم{CODE}
       Mikelab_getNext:
@@ -2400,6 +2466,19 @@ ar:
           DIR:
             right: إلى اليمين ↻
             left: إلى اليسار ↺
+      ecosystems_catchMe:
+        text: يصطاد {THIS}
+      ecosystems_eat:
+        text: يأكل {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           إذا {CONDITION} ={SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': أكثر من اللازم
+            '"just right"': مناسب تمامًا
+            '"too little"': أقل من اللازم
       ecosystems_int10:
         text: "{VALUE}"
         options:
@@ -2414,6 +2493,24 @@ ar:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: 'اصنع {N} جديدًا {GROUP} بين الموقع س: {X} ص: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: اصنع {NUM} كائنات {ANIMATION_NAME} جديدة في {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: اصنع {NUM} كائنات {ANIMATION_NAME} جديدة في {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": الأعلى
+            "{x1:0, x2:400, y1:150, y2:250}": المنتصف
+            "{x1:0, x2:400, y1:0, y2:200}": الأسفل
+      ecosystems_randomLocationWithinRange:
+        text: س حد أدنى{X1}س حد أقصى{X2}ص حد أدنى{Y1}ص حد أقصى{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": الأعلى
+            "{x1:0, x2:400, y1:0, y2:200}": الأسفل
       storylab_printText:
         text: طباعة {TEXT}
       storylab_setForegroundEffect2:

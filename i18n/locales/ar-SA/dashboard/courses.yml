@@ -69,6 +69,8 @@ ar:
           title: مقدمات علم الحاسوب
         vpl-csa-2023:
           title: التعلم المهني الافتراضي CSA
+        self-paced-pl-csd-unit1-2023:
+          title: تعليم حل المشكلات والحوسبة
     resources:
       curriculum/csd/2017:
         name: المناهج

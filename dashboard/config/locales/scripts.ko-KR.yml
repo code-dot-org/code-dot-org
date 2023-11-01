@@ -544,7 +544,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             lessonGroup-6:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
             게임 또는 스토리를 만드세요.
           title: 과정 B (2022)
@@ -1577,6 +1577,21 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 설문조사
+        csc-ecosystems-2023:
+          description: |-
+            ## 모듈에 권장하는 예습
+
+            \*\*과학 자료: \*\* 학생들은 수업 1과 2에서 해양 생물 생태계를 연구합니다. 학생들이 해양생태계와 친숙해지도록 이 [해양 동물 동영상](https://www.youtube.com/watch?v=8adtdg0N2-g)(9:42)을 추천합니다.
+
+            수업 2에서는 지속 가능한 어업 방식 몇 가지를 코딩합니다. 배경지식을 쌓고 현실 세계와의 연관성을 심화할 자료들을 참고하세요: [남획의 이해](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)(몬터레이 베이 아쿠아리움 자료) 또는 [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)(아동 도서).
+
+            \*\*컴퓨터 과학 자료: \*\* 본 모듈에서는 컴퓨터 과학을 처음 접하는 학생들에게는 어려울 수 있는 새로운 코딩 개념을 배웁니다. Code.org 스프라이트 랩에 익숙하지 않은 학생이라면 툴의 기본 기능을 익히기 위해 [스프라이트 랩과 함께하는 헤엄치는 물고기](https://studio.code.org/s/coursee-2022/lessons/3)(55분)를 미리 사용해 보기를 권합니다.
+
+            본 모듈에서는 조건문이라는 고급 컴퓨터 과학 개념도 사용합니다. 학생들은 단계적으로 이 개념을 학습하게 되지만, 조건문 입문 언플러그드 활동인 [조건문 카드](https://studio.code.org/s/coursed-2022/lessons/12)(50분)를 예습한다면 도움이 될 것입니다.
+          lessons:
+            lesson-3:
+              name: 나만의 에코시스템을 코딩하세요 (2023)
+          title: 해양 생태계 시뮬레이션 (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -5415,6 +5430,16 @@ ko:
           student_description: '단계 2 온라인: 혼합된 여름 공부'
         sconyers:
           title: 트레이시의 플레이그라운드
+        self-paced-pl-csd-unit1-2-2023:
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을
+            주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및
+            컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장
+            시간:** 30분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는
+            데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제
+            해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장
+            시간:** 30분"
+          title: '모듈 1: 문제 해결과 컴퓨팅 교습 준비'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
@@ -5671,10 +5696,19 @@ ko:
         virtual-pl-csa-summer-2024-day1:
           title: 1 일차
         virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: 소개
+          lessons:
+            lesson-7:
+              name: 소개
           title: 1 일차
         virtual-pl-csa-summer-day2:
           title: 2 일차
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: 소개
           title: 3일차
         virtual-pl-csa-summer-day4:
           title: 4일차
@@ -5708,6 +5742,9 @@ ko:
         virtual-pl-csp-summer-day1:
           title: 1 일차
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: 소개
           title: 2 일차
         virtual-pl-csp-summer-day3:
           title: 3일차

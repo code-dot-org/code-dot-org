@@ -6105,6 +6105,28 @@ id:
           title: 'Modul 2: Menavigasi Code.org'
         self-paced-pl-csa2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+          title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
         self-paced-pl-csd1-2021:
           description: |-
             Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
@@ -6753,10 +6775,19 @@ id:
         virtual-pl-csa-summer-2024-day1:
           title: Hari 1
         virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pendahuluan
+          lessons:
+            lesson-7:
+              name: Pendahuluan
           title: Hari 1
         virtual-pl-csa-summer-day2:
           title: Hari 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pendahuluan
           title: Hari 3
         virtual-pl-csa-summer-day4:
           title: Hari 4
@@ -6789,6 +6820,9 @@ id:
         virtual-pl-csp-summer-day1:
           title: Hari 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pendahuluan
           title: Hari 2
         virtual-pl-csp-summer-day3:
           title: Hari 3

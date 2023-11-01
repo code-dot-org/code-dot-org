@@ -9,7 +9,6 @@ import * as sinon from 'sinon';
 const DanceParty = require('@code-dot-org/dance-party/src/p5.dance');
 
 describe('ProgramExecutor', () => {
-  let clock: sinon.SinonFakeTimers;
   let nativeAPI: typeof DanceParty,
     validationCode: string,
     onEventsChanged,
@@ -30,7 +29,6 @@ describe('ProgramExecutor', () => {
     programExecutor: ProgramExecutor;
 
   beforeEach(() => {
-    clock = sinon.useFakeTimers();
     nativeAPI = {
       addCues: sinon.stub(),
       registerValidation: sinon.stub(),
@@ -45,7 +43,7 @@ describe('ProgramExecutor', () => {
       p5_: {
         redraw: sinon.stub(),
       },
-      setForegroundEffectsInPreviewMode: sinon.stub(),
+      livePreview: sinon.stub(),
     };
 
     validationCode = 'validationCode';
@@ -93,7 +91,6 @@ describe('ProgramExecutor', () => {
   });
 
   afterEach(() => {
-    clock.restore();
     sinon.restore();
   });
 
@@ -127,24 +124,23 @@ describe('ProgramExecutor', () => {
     expect(nativeAPI.play).to.have.been.calledWith(currentSongMetadata);
   });
 
-  it('compiles and draws a frame on preview', async () => {
+  it('compiles and runs live preview on when calling livePreview', async () => {
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
 
-    await programExecutor.preview();
-    clock.tick(1);
+    await programExecutor.livePreview(currentSongMetadata);
 
-    expect(nativeAPI.setForegroundEffectsInPreviewMode).to.have.been
-      .calledTwice;
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
     const events = evalWithEvents.firstCall.args[1];
     expect(Object.keys(events)).to.have.members(expectedHooks.map(h => h.name));
     expect(runUserSetup).to.have.been.calledOnce;
-    expect(nativeAPI.p5_.redraw).to.have.been.calledOnce;
+    expect(nativeAPI.livePreview).to.have.been.calledWithExactly(
+      currentSongMetadata
+    );
   });
 
   it('resets the native API on reset', () => {

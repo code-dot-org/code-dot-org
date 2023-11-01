@@ -8,7 +8,7 @@ title: Valanda kodas Kaip vadovas
 
 ### Prisijunkite prie judėjimo ir supažindinkite savo studentus su kompiuterių mokslu atlikdami šiuos veiksmus.
 
-Students today should learn how to create technology, not just use it.
+Studentai šiandien turėtų išmokti kurti technologijas, o ne tik ja naudotis.
 
 Kodo valandos bandymas yra paprastas ir įdomus būdas supažindinti studentus su informatika, galbūt pirmą kartą! Raskite veiklą, atitinkančią jūsų nustatymą, nesvarbu, ar tai būtų klasėje, ar po pamokų, asmeniškai ar virtualiai. Pažvelkite į mūsų [dalyvavimo vadovą, jei vis dar turite klausimų]({{ localized_files/participation_guide }}) patikrinę toliau nurodytus veiksmus:
 
@@ -19,7 +19,7 @@ Kodo valandos bandymas yra paprastas ir įdomus būdas supažindinti studentus s
 - [Kaip pradėti savo Kodo valandą stiprią](#how-to-start)
 - [Gauti kodavimą](#code)
 - [Švęskite savo studentų sėkmę](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Kiti kodo valandos ištekliai pedagogams](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Kai [užsiregistruosite savo “Hour of Code” įvykį](/#join), gausite naudingų el. Pašto pranešimų su naujienomis ir patarimais, kaip sėkmingai sukurti “Hour of Code”. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+[Užsiregistravę “Hour of Code” renginyje](/events), gausite naudingų pranešimų el. Paštu su naujienomis ir patarimais, kaip surengti sėkmingą “Hour of Code”. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Spausdin]({{ urls/certificates }}) kite pažymėjimus savo studentams.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Bendrinkite savo “Hour of Code” renginio nuotraukas ir vaizdo įrašus socialinėje žiniasklaidoje. Naudokite #HourOfCode ir @codeorg, kad galėtume pabrėžti ir jūsų sėkmę!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Kiti valandos kodo ištekliai pedagogams:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Peržiūrėkite “K [odo valandos” DUK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 

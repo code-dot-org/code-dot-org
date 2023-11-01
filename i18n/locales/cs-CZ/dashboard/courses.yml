@@ -58,6 +58,8 @@ cs:
           title: Objevování informatiky
         vpl-csa-2023:
           title: CSA Virtuální profesionální učení
+        self-paced-pl-csd-unit1-2023:
+          title: Výuka řešení problémů a výpočetní technika
     resources:
       curriculum/csd/2017:
         name: Obsah kurzu

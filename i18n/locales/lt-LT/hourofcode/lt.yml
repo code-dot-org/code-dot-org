@@ -5,6 +5,11 @@ lt:
   language: Lietuvių
   front_title: Prisijunkite prie didžiausio mokymosi renginio istorijoje, %{campaign_date}
   coming_soon: Jau greitai
+  new: Nauja
+  hours_of_code_served: Įteikiamos kodo valandos
+  hoc_stat_languages: Studentai mokosi daugiau nei 45 kalbų
+  hoc_stat_hours_served: Daugiau nei 100M studentai bandė valandą kodo
+  hoc_stat_females: Studentės sudaro 50% “Hour of Code” dalyvių
   campaign_date_start_short: Gruodžio 5 d
   campaign_date_start_long: Gruodžio 5 d
   campaign_date_short: Gruodis 5-11
@@ -36,9 +41,19 @@ lt:
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 2022 m. Spalio 1 d. - 2022 m. Gruodžio 18 d
   hoc2023_header: Kūrybiškumas su AI
+  hoc2023_hero_desc_homepage: Prisijunkite prie milijonų visame pasaulyje organizuodami
+    valandą kodavimo, su dirbtiniu intelektu ar be jo, ir sužinokite, kaip dirbtinis
+    intelektas veikia. Bet kas ir bet kur gali tai padaryti. Nereikia patirties.
+  hoc2023_hero_desc_learn_page: Šiais metais mes pakeliame “Hour of Code” į naujas
+    aukštumas, siūlydami kodavimo galimybes, apimančias tiek dirbtinio intelekto (AI),
+    tiek ne AI komponentus.
   hoc2023_social_creativity_with_ai_title: Kodo valanda - ką sukursite?
   hoc2023_social_creativity_with_ai_desc: Naudokite kompiuterių mokslą, kad galėtumėte
     tyrinėti ir sužinoti apie AI!
+  hoc2023_what_is_hoc_desc: "“Kodo valanda” yra nemokamas įvadas į informatiką per
+    įdomus užsiėmimus ir vaizdo įrašus, skirtus visų įgūdžių lygių besimokantiesiems.
+    Šių metų kodavimo ir dirbtinio intelekto šventę remia daugiau nei 400 partnerių,
+    20 000 pedagogų ir 58 000 savanorių."
   hoc2022_header: Naršyti, žaisti, kurti!
   social_hoc2022_explore_play_create: Naudokite kompiuterių mokslą, kad galėtumėte
     tyrinėti, žaisti ir kurti!
@@ -51,6 +66,9 @@ lt:
     muzika iš “Disney” “Encanto” ir dar daugiau!"
   social_hoc2023_dance: "“Beyoncé”, “BTS”, “Harry Styles”, “Lizzo”, “Lil Nas X”, Selena
     Gomez, muzika iš “Disney” “Encanto” ir dar daugiau!"
+  social_hoc2023_dance_v2: Atėjo laikas sutvarkyti savo daiktus! Sukurkite savo šokių
+    vakarėlį, kuriame yra Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
+    Rosalía ir dar daugiau hitai!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Sužinokite šiandien, sukurkite šviesesnį rytojų.
@@ -173,6 +191,7 @@ lt:
   social_ai_title: Sužinokite apie dirbtinį intelektą (AI) | Code.org
   social_ai_desc: Įrankiai, padedantys mokiniams ir mokytojams pritraukti dirbtinio
     intelekto į klasę.
+  social_videos_desc: Įtraukiantys informatikos vaizdo įrašai įvairaus amžiaus besimokantiesiems.
   pl_superhero_title: Padėkite studentams tapti superherojais!
   pl_superhero_desc: Prisijunkite prie mūsų labai palaikančios profesinės mokymosi
     programos vidurinių ir aukštųjų mokyklų pedagogams.
@@ -203,6 +222,15 @@ lt:
   device_laptop: Nešiojamas kompiuteris
   device_desktop_computer: Stalinis kompiuteris
   device_mobile_device: Mobilusis įrenginys
+  for_everyone: Visiems
+  for_students_teacher_led_learning: 'Mokiniams: mokytojo vadovaujamas mokymasis'
+  for_students_teacher_led_lessons: 'Mokiniams: Mokytojų vedamos pamokos'
+  professional_development: Profesinis tobulėjimas
+  how_ai_works_video_series: Kaip dirbtinis intelektas veikia vaizdo įrašų serijoje
+  learn_how_ai_works: Sužinokite, kaip dirbtinis intelektas veikia
+  ai_101_for_educators: AI 101 pedagogams
+  learn_about_ai_impacts: Sužinokite apie AI poveikį
+  hoc_ai_activities: "“Code AI” veiklos valanda"
   subscribe_to_emails_heading: Prenumeruoti el. Laiškus
   subscribe_to_emails_desc: Skaitykite apie tai, kas vyksta Code.org ir informatikos
     švietimo per ketvirčio atnaujinimus per mūsų adresų sąrašą.
@@ -257,21 +285,32 @@ lt:
     patarimų, įžvalgų ir palaikymo iš kitų pedagogų.
   required_materials: 'Reikalingos medžiagos:'
   optional_materials: 'Pasirenkamos medžiagos:'
+  for_students: Studentams
+  for_educators: Pedagogams
+  call_to_action_host_hoc: Surenkite kodo valandą
   call_to_action_hold_an_event: Surengti renginį
   call_to_action_register_event: Užregistruokite savo renginį
+  call_to_action_register_your_hoc: Užregistruokite savo kodo valandą
   call_to_action_select_activity: Pasirinkite veiklą
   call_to_action_start_activity: Pradėkite veiklą
   call_to_action_get_certificates: Gauti sertifikatus
   call_to_action_go_beyond_hoc: Peržengti kodo valandą
+  call_to_action_explore_all_hoc_activities: Peržiūrėkite visas “Hour of Code” veiklas
+    iš “Code.org”
+  call_to_action_start_dance_party: Pradėkite šokių vakarėlį
+  call_to_action_start_part_02: Pradėkite antrąją dalį
+  call_to_action_start_unplugged_activity: Pradėkite išjungtą veiklą
   call_to_action_view_promo_resources: Peržiūrėti reklamos išteklius
   call_to_action_learn_more: Sužinokite daugiau
   call_to_action_watch_now: Žiūrėti dabar
   call_to_action_try_activity: Pabandykite veiklą
   call_to_action_try_activities: Išbandykite veiklą
+  call_to_action_try_hoc_ai_activities: Išbandykite “Hour of Code AI” veiklą
   call_to_action_explore_activities: Naršykite veiklą
   call_to_action_explore_ai: Naršykite AI
   call_to_action_explore_unit: Naršyti vienetą
   call_to_action_explore_curriculum: Naršyti mokymo programą
+  call_to_action_explore_curricula: Naršyti mokymo programas
   call_to_action_explore_curriculum_options: Naršyti mokymo programos galimybes
   call_to_action_explore_lessons: Naršyti pamokas
   call_to_action_explore_modules: Naršyti modulius
@@ -354,6 +393,11 @@ lt:
   call_to_action_learn_about_advocacy: Sužinokite apie mūsų propagavimą
   call_to_action_visit_store: Apsilankykite parduotuvėje
   call_to_action_view_faqs: Peržiūrėti daugiau DUK
+  call_to_action_applications_open: Dabar atidarytos programos
+  call_to_action_apply_cs_ambassador: Pateikite paraišką būti CS ambasadoriumi
+  call_to_action_coming_soon: Netrukus!
+  call_to_action_learn_how_ai_works: Sužinokite, kaip veikia AI
+  call_to_action_learn_about_ai: Sužinokite apie AI
   aria_label_call_to_action_hoc_how_to_educators: Peržiūrėkite pedagogų vadovą
   aria_label_call_to_action_hoc_how_to_companies: Peržiūrėkite įmonių vadovą
   aria_label_call_to_action_hoc_how_to_districts: Peržiūrėkite rajonų vadovą
@@ -365,6 +409,10 @@ lt:
   aria_label_call_to_action_hoc_how_to_volunteers: Peržiūrėkite savanorių vadovą
   aria_label_call_to_action_hoc_how_to_virtual_events: Peržiūrėkite virtualių įvykių
     vadovą
+  aria_label_call_to_action_dance_01: Pradėkite šokių vakarėlio veiklą
+  aria_label_call_to_action_dance_02: Pradėkite antrąją “Dance Party” veiklos dalį
+  aria_label_call_to_action_dance_unplugged: Pradėkite “Dance Party” veiklą be prijungto
+    tinklo
   aria_label_call_to_action_afe: Sužinokite daugiau apie “Amazon Future Engineer”
   aria_label_call_to_action_teaching_csf: Pradėkite “Teaching Computer Science Fundamentals”
     profesinio mokymosi programą
@@ -484,11 +532,25 @@ lt:
   curriculum_name_creating_apps_with_devices: Programėlių kūrimas su įrenginiais
   curriculum_name_poetry: Kodavimas su poezija
   curriculum_name_dance_party: Šokių vakarėlis
+  curriculum_name_dance_party_02: Toliau šokite
+  curriculum_name_dance_party_unplugged: Šokių vakarėlis Unplugged
+  curriculum_name_dance_party_ai_edition: 'Šokių vakarėlis: AI leidimas'
   curriculum_name_problem_solving_computing: Problemų sprendimas & Kompiuterija
   curriculum_name_web_development: Interneto svetainių kūrimas
   curriculum_name_interactive_animations_games: Interaktyvios animacijos ir žaidimai
   curriculum_name_design_process: Projektavimo procesas
   curriculum_name_data_society: Duomenys ir visuomenė
+  curriculum_desc_dance_party_01: Šioje įvadinėje veikloje naudokite kodą, kad įvairūs
+    spalvingi simboliai krūtų pereiti prie animacinių fonų ir optimistiškos muzikos.
+  curriculum_desc_dance_party_02: Išplėstomis projekto idėjomis perženkite įžanginę
+    pamoką. Peržiūrėkite sudėtingesnių šokių vakarėlių pavyzdžių biblioteką.
+  curriculum_desc_dance_party_unplugged: Įjunkite savo griovelį - nereikia kompiuterio!
+    Sužinokite, kaip kodavimo sąvokos, kaip ir įvykiai, gali būti naudojamos šokėjo
+    choreografijai sinchronizuoti.
+  curriculum_desc_dance_party_ai_edition: Sužinokite apie dirbtinio intelekto (AI)
+    koncepcijas, kad sukurtumėte savo virtualų šokių vakarėlį, kuriame demonstruojami
+    geriausi šiandienos menininkai. Su dešimtys dainų pasirinkti, pasiekti kiekvieną
+    studentą nesvarbu jų muzikos skonį. Atėjo laikas sutvarkyti savo daiktus!
   curriculum_desc_csf: Laisvas pradinių mokymo programų rinkinys, supažindinantis
     studentus su pagrindinėmis informatikos koncepcijomis.
   curriculum_desc_csf_express: Išmokite kurti kompiuterines programas, lavinti problemų
@@ -580,7 +642,7 @@ lt:
   module_label_prerequisites: 'Būtinos sąlygos:'
   module_label_level: 'Lygis:'
   module_label_topics: 'Temos:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Prietaisai:'
   module_label_tools: 'Programavimo įrankiai:'
   module_label_professional_learning: 'Profesinis mokymasis:'
   module_label_languages: 'Palaikomos kalbos:'
@@ -602,12 +664,16 @@ lt:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Vaikų darželis
   module_grade_grade_01: 1 klasė
@@ -615,6 +681,12 @@ lt:
   module_grade_grade_03: 3 klasė
   module_grade_grade_04: 4 klasė
   module_grade_grade_05: 5 klasė
+  module_age_05_07: Amžius 5-7
+  module_age_07: Amžius nuo 7 metų
+  module_age_07_11: Amžius 7—11
+  module_age_11: Amžius nuo 11 metų
+  module_age_13: Amžius nuo 13 metų
+  module_age_all_age: Visų amžiaus grupių
   module_grade_k_5_teachers: K-5 Mokytojai
   module_grade_6_10_teachers: 6-10 Mokytojai
   module_grade_9_12_teachers: 9-12 Mokytojai
@@ -709,6 +781,58 @@ lt:
     kataloge
   heading_csa_ai: Ieškote dalykų, kuriuos reikia padaryti po AP® egzamino?
   heading_bring_cs_to_students: Atneškite kompiuterių mokslą studentams
+  heading_cs_ambassador_program: CS ambasadoriaus programa
+  heading_featured_student_projects: Teminiai studentų projektai
+  heading_start_hoc_with_videos: Pradėkite savo kodo valandą su įkvepiančiais vaizdo
+    įrašais
+  cs_ambassador_subhead: Jei esate vidurinės mokyklos studentas aistringai skatinti
+    daugiau jaunų moterų imtis informatikos jūsų mokykloje, tada mums reikia jūsų!
+  cs_ambassador_desc: Kompiuterių mokslas paliečia kiekvieną sritį, įskaitant mediciną,
+    pramogas, sportą, švietimą, verslą, madą ir verslumą. Tačiau tik 5% vidurinės
+    mokyklos amžiaus jaunų moterų lanko informatikos pamokas. Ambasadoriai gali padėti
+    panaikinti šį lyčių atotrūkį, skatindami savo bendraamžius lankyti informatikos
+    klasę.
+  cs_ambassador_application_date: Paraiškos skelbiamos iki 2023 m. lapkričio 8 d.
+  cs_ambassador_application_subhead: Dirbkite su mokytoju, kad pateiktumėte savo paraišką
+    šiandien
+  cs_ambassador_application_questions: Klausimai? Prašome susisiekti su [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Ką veikia CS ambasadoriai?
+  cs_ambassador_do_desc: CS ambasadoriai skatina jaunas moteris ištirti šią temą ir
+    pakelti viena kitą aukštyn, kai jie atgauti savo vietą informatikos. CS ambasadoriai
+    bendrauja su savo bendraamžiais, kad pasidalintų savo jauduliu ir meile kompiuterių
+    mokslui. Jie lankosi klasėse, per pietus rengia stalus ir kalba susirinkimuose
+    ir klubo susirinkimuose. CS ambasadoriai dirba su mokytojais ir mokyklų administratoriais,
+    siekdami sugriauti stereotipus, kurie sulaiko jaunas moteris atgal.
+  cs_ambassador_steps_heading: Ko man reikia norint tapti CS ambasadoriumi?
+  cs_ambassador_steps_list_title_01: Aistra
+  cs_ambassador_steps_list_title_02: Patirtis CS kursuose
+  cs_ambassador_steps_list_title_03: Mokykla, siūlanti CS
+  cs_ambassador_steps_list_desc_01: Aistra skatinti jaunas moteris jūsų mokykloje
+    lankyti informatikos pamokas
+  cs_ambassador_steps_list_desc_02: 'Paėmę metų trukmės informatikos klasę 2022—23
+    mokslo metais ar anksčiau (rekomenduojama: CS principai arba AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Dalyvaukite vidurinėje mokykloje, kuri reguliariai
+    siūlo metų trukmės kompiuterių mokslo kursą (rekomenduojama: CS principai arba
+    AP® CSA)'
+  cs_ambassador_benefits_heading: Programos privalumai
+  cs_ambassador_benefits_list_title_01: Nacionalinė bendruomenė
+  cs_ambassador_benefits_list_title_02: Bendruomenės tarnyba
+  cs_ambassador_benefits_list_title_03: Pripažinimas
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Sertifikatas
+  cs_ambassador_benefits_list_title_06: Patirtys
+  cs_ambassador_benefits_list_desc_01: Prieiga prie nacionalinės jaunų lyderių bendruomenės,
+    įsipareigojusios panaikinti lyčių atotrūkį informatikos srityje.
+  cs_ambassador_benefits_list_desc_02: Bendruomenės tarnybos valandas ir galimybę
+    pelnyti [JAV prezidento savanorių tarnybos apdovanojimą] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Pripažinimas 2023—2024 m. ambasadoriumi ir
+    tinkamas būti pagerbtas Code.org ambasadoriaus šlovės muziejuje.
+  cs_ambassador_benefits_list_desc_04: Būkite identifikuoti kaip CS ambasadorius per
+    specialius “Code.org” firminius drabužius, lipdukus ir dar daugiau!
+  cs_ambassador_benefits_list_desc_05: Oficialus dalyvavimo pažymėjimas iš Code.org.
+  cs_ambassador_benefits_list_desc_06: Įgykite patirties ir istorijų pasidalinti savo
+    kolegijos paraišką, CV ir dar daugiau!
   professional_learning_section_desc: Gaukite reikiamą paramą, kai ruošiatės mokyti.
     Mokytojai mėgsta tai, su daugiau nei 90% reitingą tai geriausias profesinis tobulėjimas
     kada nors!
@@ -757,6 +881,13 @@ lt:
     Laiškus apie “Code.org” kompiuterių mokslo principus ir gaukite naudingų priminimų,
     patarimų ir atnaujinimų, siunčiamų tiesiai į gautuosius.
   subscribe_form_section_unsubscribe: Galite atsisakyti prenumeratos bet kuriuo metu.
+  dance_hero_heading: Koduokite šokių vakarėlį
+  dance_featuring_songs_by_short: 'Pateikiamos dainos:'
+  dance_featuring_songs_by_long: "“Dance Party” apima dainas:"
+  dance_and_more: ir dar daugiau
+  dance_choose_activity: Pasirinkite savo šokių vakarėlį
+  dance_afe_disclaimer: Menininkai, kurių muzika naudojama šiame vadove, nepalaiko
+    ir nepritaria “Amazon” kaip licencijuojant jų muzikos naudojimą Code.org.
   blockchain_hero_heading: Kaip veikia “Blockchain”
   blockchain_hero_desc: Pasinerkite į “blockchain” pasaulį naudodamiesi “Kaip veikia
     “Blockchain”, mūsų nauja vaizdo įrašų serija ir pridedamomis pamokomis!
@@ -865,6 +996,12 @@ lt:
   ai_curriculum_grades_05: 'Klasės lygiai: 9-12'
   ai_curriculum_btn_aria_label_05: Naršykite programinės įrangos inžinerijos ir kompiuterinės
     vizijos modulį
+  ai_curriculum_title_06: Generacinio AI poveikis visuomenei
+  ai_curriculum_desc_06: Ištirkite generatyvinio AI poveikį iš skirtingų perspektyvų,
+    tada bendradarbiaukite kaip komanda, kad sugalvotumėte gaires, kurios atitiktų
+    daugiausiai visų dalyvių poreikių.
+  ai_curriculum_btn_aria_label_06: Peržiūrėti generatyvaus AI poveikio visuomenei
+    pamokų planą
   ai_carousel_heading: 'Ką mokytojai sako apie AI su Code.org:'
   ai_carousel_quote_01: Ši pamoka taip pat suteikė galimybę mano mokiniams pamatyti,
     kad klasifikavimo sistemose yra nuomonės elementas. Vėliau, kai pradėjome matyti,
@@ -1856,6 +1993,9 @@ lt:
     visoje JAV ir dešimt politikos sričių, kurias rekomenduojame valstybėms priimti,
     kad kompiuterių mokslas taptų pagrindiniu visiems studentams. Be to, sužinokite,
     kaip galite paskatinti pokyčius savo būsenoje.
+  yw_page_top_heading: Jaunos moterys informatikoje
+  yw_page_top_desc: Tapkite CS ambasadoriumi ir būkite dalimi mažinant lyčių atotrūkį
+    kompiuterių moksle.
   hoc_live: Valanda Code Live
   hoc_live_sign_up_title: Užsiregistruokite “Hour of Code Live”
   hoc_live_learn_title: Sužinokite su “Code Live” valanda
@@ -2223,10 +2363,16 @@ lt:
     įvadas, naudojant įdomius vadovėlius, rodančius, kad kas nors gali išmokti pagrindus.
     Šią tradicinę kampaniją remia daugiau kaip 400 partnerių ir 200 000 pedagogų visame
     pasaulyje.
+  hoc_homepage_registration_desc: Jūsų klasė ar grupė gali prisijungti prie milijonų
+    visame pasaulyje daro Kodo valanda! Registracija į kasmetinę Informatikos ugdymo
+    savaitės šventę prasideda spalio mėnesį. Tačiau “Hour of Code” yra prieinama ištisus
+    metus.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Perskaitykite mūsų “How-to guide”]
     (%{howto_guide_url}), kad suplanuotumėte savo klasės renginį."
   hoc_homepage_highlights_heading: Valanda kodo akcentai
   hoc_homepage_organized_by: Kodo valandą organizuoja [Code.org](%{codeorg_url}).
+  hoc_events_heading: Registruokitės, kad surengtumėte kodo valandą
+  hoc_events_jump_to_map: Pereiti prie kodo valandos žemėlapio
   signup_closed: Registracija į Kodo valandą dabar uždaryta. Prašome dar kartą patikrinti
     spalio mėnesį, kad užsiregistruosite į kitą Kodo valandą.
   signup_registration_not_required: Jums nereikia registruotis dalyvauti! Kodo valanda
@@ -2337,6 +2483,7 @@ lt:
   map_title: Kodo žemėlapio valanda
   map_header: "# Programavimo valandos renginiai pasaulyje"
   map_header_count_year: "%{event_count} renginių užregistruota %{year}"
+  map_header_count_year_so_far: "%{event_count} Iki šiol užregistruoti įvykiai %{year}"
   see_all_events: Peržiūrėti visus renginius
   map_header_company: "# pagal organizatorius"
   map_header_country: "# į %{country}"
@@ -2350,6 +2497,7 @@ lt:
     puslapyje.</a>
   map_warning_markdown: Išsamų įvykių sąrašą galima peržiūrėti [įvykių puslapyje.]
     (%{events_url})
+  map_view_all_events: Peržiūrėkite visą “Hour of Code” renginių sąrašą [here](%{events_url}).
   meta_tag_og_title: Štai ir Programavimo valanda
   meta_tag_og_description: Kodo valanda yra pasaulinis judėjimas, pasiekiantis dešimtis
     milijonų įvairaus amžiaus studentų 180+ šalių ir daugiau nei 45 kalbų.
@@ -2371,13 +2519,6 @@ lt:
     už palaikymą @codeorg)'
   hoc_faq_title: DUK
   hoc_faq_what_is_hoc_q: Kas yra "Programavimo valanda"?
-  hoc_faq_what_is_hoc_a: Kodo valanda prasidėjo kaip vienos valandos informatikos
-    įvadas, skirtas demystifikuoti “kodą”, parodyti, kad kas nors gali išmokti pagrindus
-    ir išplėsti dalyvavimą informatikos srityje. Nuo to laiko tai tapo pasaulinėmis
-    pastangomis švęsti kompiuterių mokslą, pradedant 1 valandos kodavimo veikla, bet
-    plečiasi ir baigiant visomis bendruomenės pastangomis. Peržiūrėkite <a href='%{tutorials}'>vadovėlius
-    ir veiklą.</a>Šią tradicinę kampaniją remia daugiau kaip <a href='%{partners}'>400
-    partnerių</a> ir 200 000 pedagogų visame pasaulyje.
   hoc_faq_what_is_hoc_a_markdown: Kodo valanda prasidėjo kaip vienos valandos informatikos
     įvadas, skirtas demystifikuoti “kodą”, parodyti, kad kas nors gali išmokti pagrindus
     ir išplėsti dalyvavimą informatikos srityje. Nuo to laiko tai tapo pasaulinėmis
@@ -2387,12 +2528,6 @@ lt:
     (%{partners}) ir 200 000 pedagogų visame pasaulyje.
   hoc_faq_last_year: Išbandykite pamokėles
   hoc_faq_when_is_hoc_q: Kada vyks "Programavimo valanda"?
-  hoc_faq_when_is_hoc_a: Kodo valanda vyksta kiekvienais metais per <a href='%{csedweek_url}'>Kompiuterių
-    mokslo švietimo savaitę</a>. “ %{campaign_date_year} Computer Science Education
-    Week” bus %{campaign_date_full}, bet jūs galite surengti “Code” valandą ištisus
-    metus. Kompiuterių mokslo švietimo savaitė vyksta kasmet pripažinimo Kompiuterija
-    pionierius <a href='%{grace_hopper}'>Admirolas Grace Murray Hopper</a> (gruodžio
-    9, 1906) gimtadienį.
   hoc_faq_when_is_hoc_a_markdown: Kodekso valanda vyksta kiekvienais metais per [Kompiuterių
     mokslo švietimo savaitę] (%{csedweek_url}). %{campaign_date_year} kompiuterių
     mokslo švietimo savaitė bus %{campaign_date_full}, bet jūs galite surengti Kodo
@@ -2400,51 +2535,28 @@ lt:
     kompiuterijos pradininko gimtadienį [admirolas Grace Murray Hopper] (%{grace_hopper})
     (1906 m. Gruodžio 9 d.).
   hoc_faq_why_cs_q: Kodėl informatika?
-  hoc_faq_why_cs_a: "<i>Kiekvienam</i> moksleiviui gali praversti informatikos/programavimo
-    žinios. Tai lavina mąstymą, kūrybiškumą, organizacinius gebėjimus. Anksti su tuo
-    susipažinę, vaikai turės gerus pamatus 21 amžiaus karjerai. Išsamiau: <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: _Every_ studentas turėtų turėti galimybę mokytis informatikos.
     Tai padeda ugdyti problemų sprendimo įgūdžius, logiką ir kūrybiškumą. Pradėję
     anksti, studentai turės sėkmės pagrindą bet 21 amžiaus karjeros kelyje. Žiūrėti
     daugiau statistikos [here](%{stats_url}).
   hoc_faq_how_participate_q: Kaip dalyvauti Kodekso valandoje?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Pradėkite planuoti čia</a> peržiūrėdami
-    mūsų “how-to guide”. Galite organizuoti “Hour of Code” renginį savo mokykloje
-    ar savo bendruomenėje &mdash; , pavyzdžiui, neakivaizdiniame klube, ne pelno siekiančiame
-    ar darbe. Arba tiesiog išbandykite patys, kai atvyks %{campaign_date} ."
   hoc_faq_how_participate_a_markdown: "[Pradėkite planuoti čia] (%{howto}) peržiūrėdami
     mūsų “how-to guide”. Galite organizuoti “Hour of Code” renginį savo mokykloje
     ar bendruomenėje, pavyzdžiui, neakivaizdiniame klube, ne pelno siekiančiame ar
     darbe. Arba tiesiog išbandykite patys, kai atvyks %{campaign_date} ."
   hoc_faq_behind_hoc_q: Kas yra už Kodo valandos?
-  hoc_faq_behind_hoc_a: Kodekso valandą organizuoja “Code.org” ir skatina “Hour of
-    Code Review” komitetas, taip pat precedento neturinti <a href='%{partner_url}'>partnerių</a>
-    koalicija, kuri susibūrė palaikyti “Code Hour” - įskaitant “Microsoft”, “Apple”,
-    “Amazon”, Amerikos berniukų ir mergaičių klubus ir koledžo valdybą.
   hoc_faq_behind_hoc_a_markdown: Kodekso valandą organizuoja “Code.org” ir skatina
     “Hour of Code Review” komitetas, taip pat precedento neturinti [partners](%{partner_url})
     koalicija, kuri susibūrė palaikyti “Code Hour” - įskaitant “Microsoft”, “Apple”,
     “Amazon”, Amerikos berniukų ir mergaičių klubus ir koledžo valdybą.
   hoc_faq_host_q: Aš nieko neišmanau apie programavimą. Ar vis tiek galiu organizuoti
     renginį?
-  hoc_faq_host_a: Žinoma. Valanda kodas veikla yra savarankiškai vadovaujasi. Viskas,
-    ką jums reikia padaryti, tai <a href='%{codeorg_url}/learn'>išbandyti mūsų dabartinius
-    vadovėlius</a>, pasirinkti norimą pamoką ir pasirinkti valandą &mdash; mes rūpinamės
-    likusia dalimi. Mes taip pat turime galimybių kiekvienam amžiui ir patirties lygiui,
-    nuo darželio ir iki. Pradėkite planuoti savo renginį perskaitydami mūsų <a href='/how-to'>,
-    kaip vadovauti</a>.
   hoc_faq_host_a_markdown: Žinoma. Valanda kodas veikla yra savarankiškai vadovaujasi.
     Viskas, ką jums reikia padaryti, tai [išbandyti mūsų dabartinius vadovėlius] (%{codeorg_url}/learn),
     pasirinkti norimą pamoką ir pasirinkti valandą - mes pasirūpiname likusia dalimi.
     Mes taip pat turime galimybių kiekvienam amžiui ir patirties lygiui, nuo darželio
     ir iki. Pradėkite planuoti savo renginį skaitydami mūsų [kaip vadovauti] (%{howto}).
   hoc_faq_devices_q: Kokius prietaisus turėčiau naudoti savo studentams?
-  hoc_faq_devices_a: Code.org vadovėliai veikia visuose įrenginiuose ir naršyklėse.
-    Jūs galite pamatyti daugiau informacijos apie Code.org anketa pamoka tech poreikius
-    čia. <a href='%{codeorg_url}/educate/it'></a>Technika poreikius ne Code.org samouczków
-    galima rasti <a href='%{codeorg_url}/learn'>%{partner_url}/learn pamoka konkretus
-    aprašymas</a> . Nepamirškite, kad mes taip pat siūlome <a href='%{unplugged_url}'>unplugged
-    veiklą,</a> jei jūsų mokykla negali sutalpinti vadovėliai!
   hoc_faq_devices_a_markdown: Code.org vadovėliai veikia visuose įrenginiuose ir naršyklėse.
     Jūs galite pamatyti daugiau informacijos apie Code.org anketa pamoka technologijų
     poreikius [here](/educate/it).%{codeorg_url}Technika poreikius ne Code.org samouczków
@@ -2452,18 +2564,6 @@ lt:
     aprašymo. Nepamirškite, mes taip pat siūlome [unplugged veikla] (%{unplugged_url}),
     jei jūsų mokykla negali sutalpinti vadovėliai!
   hoc_faq_need_computers_q: Ar kiekvienam dalyviui reikia kompiuterio?
-  hoc_faq_need_computers_a: Ne. Mes turime “Hour of Code” vadovėlių, kurie veikia
-    asmeniniuose kompiuteriuose, išmaniuosiuose telefonuose, planšetiniuose kompiuteriuose
-    ir kai kuriuose, kuriems nereikia kompiuterio! Galite prisijungti visur, kur esate,
-    su viskuo, ką turite. <p><i>Štai keletas variantų:</i> <br> <ul> <li><b>Darbas
-    poromis.</b> <a href='%{pair_programming_research}'>Tyrimai rodo, kad</a> studentai
-    geriausiai mokosi programuodami <a href='%{pair_programming_video}'>porą</a>,
-    dalindamiesi kompiuteriu ir dirbdami kartu. Skatinkite savo mokinius padvigubinti.
-    <li><b>Naudokite projektuojamą ekraną.</b> Jei turite projektorių ir ekraną, skirtą
-    prie interneto prijungtam kompiuteriui, visa jūsų grupė kartu gali atlikti “Hour
-    of Code”. Žiūrėkite vaizdo porcijas kartu ir paeiliui spręskite galvosūkius ar
-    atsakydami į klausimus. <li><b>Eiti atjungtas.</b> Mes siūlome <a href='%{unplugged_url}'>samouczków,
-    kad nereikia kompiuterio</a> ne visiems. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Ne. Mes turime “Hour of Code” vadovėlių, kurie veikia asmeniniuose kompiuteriuose, išmaniuosiuose telefonuose, planšetiniuose kompiuteriuose ir kai kuriuose, kuriems nereikia kompiuterio! Galite prisijungti visur, kur esate, su viskuo, ką turite.
 
@@ -2473,38 +2573,21 @@ lt:
     - **Naudokite projektuojamą ekraną.** Jei turite projektorių ir ekraną prie interneto prijungtam kompiuteriui, visa jūsų grupė kartu gali atlikti “Hour of Code”. Žiūrėkite vaizdo porcijas kartu ir paeiliui spręskite galvosūkius ar atsakydami į klausimus.
     - **Eiti unplugged.** Mes siūlome [vadovėliai, kuriems nereikia kompiuterio] () ne visi.%{unplugged_url}
   hoc_faq_international_q: Aš esu <country>. Kaip dalyvauti tarptautiniu mastu?
-  hoc_faq_international_a: Kiekvienas gali organizuoti “Hour of Code” renginį bet
-    kurioje pasaulio vietoje. Praėjusiais metais studentai visame pasaulyje prisijungė
-    prie Kodekso valandos. Sužinokite daugiau <a href='/promote'>čia</a>.
   hoc_faq_international_a_markdown: Kiekvienas gali organizuoti “Hour of Code” renginį
     bet kurioje pasaulio vietoje. Praėjusiais metais studentai visame pasaulyje prisijungė
     prie Kodekso valandos. Sužinokite daugiau [here](%{promote}).
   hoc_faq_tutorial_q: Kaip aš galiu padaryti “Hour of Code” pamoką?
-  hoc_faq_tutorial_a: Jei jus domina tapti mokymo partneriu, <a href='/tutorial-guidelines'>peržiūrėkite
-    mūsų gaires ir instrukcijas</a>. Norėtume surengti įvairias patrauklias galimybes,
-    tačiau pagrindinis tikslas yra optimizuoti studentų ir mokytojų, kurie yra nauji
-    informatikos srityje, patirtį.
   hoc_faq_tutorial_a_markdown: Jei jus domina tapti mokymo partneriu, [žr. mūsų gaires
     ir instrukcijas] (%{tutorial_guidelines}). Norėtume surengti įvairias patrauklias
     galimybes, tačiau pagrindinis tikslas yra optimizuoti studentų ir mokytojų, kurie
     yra nauji informatikos srityje, patirtį.
   hoc_faq_account_q: Ar moksleiviai turi būti prisiregistravę?
-  hoc_faq_account_a: Ne, čia nebūtina jokia registracija. Tik norintiems dalyvauti
-    <a href='http://code.org/learn/beyond'>kituose kursuose</a>, reikia registruotis,
-    kad būtų išsaugoma, kas jau padaryta.
   hoc_faq_account_a_markdown: Ne. Studentams nereikia jokio registracijos ar prisijungimo,
     kad išbandytų kodo valandą. Daugumai [tolesnių kursų] (%{codeorg_url}/mokytis/už
     jos ribų) reikia sukurti paskyrą, kad būtų išsaugota studentų pažanga. Be to,
     užsiregistravus Kodo valandai, automatiškai nesukuria “Code Studio” paskyros.
     Jei norite sukurti paskyras savo studentams, atlikite šiuos [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Kokią veiklą turėčiau daryti su vidurinių mokyklų moksleiviais?
-  hoc_faq_high_school_a: Mūsų “Žvaigždžių karai” ir “Minecraft” pamokos puikiai tinka
-    aukštųjų mokyklų moksleiviams, ypač “Žvaigždžių karų” “JavaScript” versijai ir
-    nemokamam žaidimo lygiui abiejose pamokose. Pakaitomis, mes rekomenduojame išbandyti
-    vieną iš pradedančiųjų samouczków apie <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    pradėti, pavyzdžiui, pamoka su Angry Birds arba su Anna ir Elsa. Vidurinės mokyklos
-    studentas turėtų sugebėti baigti vieną iš jų per 30 minučių ir tada išbandyti
-    pažangesnę “JavaScript” pamoką, pvz., “Khan Academy” ar “CodeHS”.
   hoc_faq_high_school_a_markdown: Mūsų “Žvaigždžių karai” ir “Minecraft” pamokos puikiai
     tinka aukštųjų mokyklų moksleiviams, ypač “Žvaigždžių karų” “JavaScript” versijai
     ir nemokamam žaidimo lygiui abiejose pamokose. Pakaitomis, mes rekomenduojame
@@ -2514,11 +2597,6 @@ lt:
     pažangesnę “JavaScript” pamoką, pvz., “Khan Academy” ar “CodeHS”.
   hoc_faq_scratch_q: Aš darau “Scratch for Hour of Code”, bet ką daryti, jei mano
     mokiniai turi “iPad”, o ne nešiojamuosius kompiuterius?
-  hoc_faq_scratch_a: "“Scratch” neveikia planšetiniuose kompiuteriuose. Jei jūsų mokiniai
-    yra jauni, jie gali naudoti “ScratchJR iPad” programą (ankstyviems skaitytojams).
-    Jei pažvelgsite į vadovėlius <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    galite rasti kitų vadovėlių, kurie veikia “iPad” - iš “Code.org”, “Tynker”, “Lightbot”
-    ar “CodesPark”."
   hoc_faq_scratch_a_markdown: "“Scratch” neveikia planšetiniuose kompiuteriuose. Jei
     jūsų mokiniai yra jauni, jie gali naudoti “ScratchJR iPad” programą (ankstyviems
     skaitytojams). Jei pažvelgsite į [%{partner_url}/learn] (%{codeorg_url}/learn)
@@ -2526,13 +2604,6 @@ lt:
     “Tynker”, “Lightbot” ar “CodeSpark”."
   hoc_faq_count_hoc_q: Kaip jūs skaičiuojate Kodo valandas?
   hoc_faq_map_q: Kodėl aš nematau savo taško žemėlapyje?
-  hoc_faq_map_a: Labai atsiprašome, kad nematote savo įvykio “Hour of Code” žemėlapyje.
-    Dėl dešimčių tūkstančių organizatorių, kurie užsiregistruoja, žemėlapis sujungia
-    duomenis ir rodo vieną tašką keliems renginiams. Jei spustelėsite <a href='%{events_url}'>įvykių
-    puslapio</a> nuorodą po žemėlapiu, būsite nukreipti į visų įvykių sąrašą pagal
-    būseną ir ten rasite savo įvykį. Be to, atsižvelgiant į tūkstančius žmonių, užsiregistravusių
-    “Hour of Code”, žemėlapio ir įvykių sąrašo atnaujinimas paprastai trunka 48 valandas.
-    Patikrinkite atgal per kelias dienas!
   hoc_faq_map_a_markdown: Labai atsiprašome, kad nematote savo įvykio “Hour of Code”
     žemėlapyje. Dėl dešimčių tūkstančių organizatorių, kurie užsiregistruoja, žemėlapis
     sujungia duomenis ir rodo vieną tašką keliems renginiams. Jei spustelėsite [įvykių
@@ -2540,11 +2611,6 @@ lt:
     sąrašą pagal būseną ir ten galite rasti savo įvykį. Be to, atsižvelgiant į tūkstančius
     žmonių, užsiregistravusių “Hour of Code”, žemėlapio ir įvykių sąrašo atnaujinimas
     paprastai trunka 48 valandas. Patikrinkite atgal per kelias dienas!
-  hoc_faq_count_hoc_a: "“Code Tracker” valanda nėra tikslus naudojimo matavimas. Stebėdami
-    dalyvavimą “Code Hour of Code”, mes puikiai neskaičiuojame unikalių studentų ID,
-    ypač todėl, kad nereikalaujame, kad studentai prisijungtų ar užsiregistruotų.
-    Todėl mes tiek per daug skaičiuojame, tiek per mažai skaičiuojame dalyvius tuo
-    pačiu metu. Perskaitykite visą informaciją <a href='%{codeorg_url}/loc'>čia</a>."
   hoc_faq_count_hoc_a_markdown: 'Stebėdami dalyvavimą “Kodo valandoje”, mes puikiai
     neskaičiuojame unikalių studentų ID. Kodėl? Iš dalies todėl, kad nenorime trinties
     raginimas “prisijungti/užsiregistruoti” prieš mokiniui ar klasei bandant mokytis
@@ -2560,23 +2626,6 @@ lt:
     todėl mes nežiūrime, kad “Code” stebėjimo priemonė būtų tiksli naudojimo priemonė.
     Tai tikrai teisinga kryptingai ir rodo, kad dalyvavo dešimtys milijonų studentų.'
   hoc_faq_one_hour_q: Kiek galima išmokti per valandą?
-  hoc_faq_one_hour_a: Kodekso valandos tikslas nėra išmokyti niekam tapti ekspertu
-    kompiuterių mokslininku per vieną valandą. Vienos valandos pakanka tik tam, kad
-    sužinotumėte, jog informatika yra linksma ir kūrybinga, kad ji prieinama bet kokio
-    amžiaus, visiems studentams, nepriklausomai nuo jų fono. Šios kampanijos sėkmės
-    matas nėra tas, kiek CS studentai mokosi - sėkmė atsispindi plačiame lyčių ir
-    etninių bei socialinių ir ekonominių grupių dalyvavime, o dėl to didėjantis registravimas
-    ir dalyvavimas, kurį matome CS kursuose visais lygiais. Milijonai dalyvaujančių
-    mokytojų ir studentų nusprendė peržengti vieną valandą - mokytis visą dieną ar
-    visą savaitę ar ilgiau, ir daugelis studentų nusprendė užsiregistruoti visame
-    kurse (ar net koledžo dur), kaip rezultatas. <br/><br/> Be studentų, dar vienas
-    “besimokantysis” yra pedagogas, kuris po valandos įgyja pasitikėjimą, kad jie
-    gali mokyti informatikos, nors jie gali neturėti kolegijos laipsnio kaip kompiuterių
-    mokslininkas. Dešimtys tūkstančių mokytojų nusprendžia toliau tęsti informatiką,
-    lankydami PD arba siūlydami tolesnius internetinius kursus, arba abu. Tai taip
-    pat taikoma mokyklų administratoriams, kurie supranta, kad informatika yra tai,
-    ko nori jų mokiniai, o jų mokytojai sugeba. <br/><br/> Visų pirma, tai, ką visi
-    dalyviai gali išmokti per valandą, yra tai, kad mes galime tai padaryti.
   hoc_faq_one_hour_a_markdown: |-
     Kodekso valandos tikslas nėra išmokyti niekam tapti ekspertu kompiuterių mokslininku per vieną valandą. Vienos valandos pakanka tik tam, kad sužinotumėte, jog informatika yra linksma ir kūrybinga, kad ji prieinama bet kokio amžiaus, visiems studentams, nepriklausomai nuo jų fono. Šios kampanijos sėkmės matas nėra tas, kiek CS studentai mokosi - sėkmę atspindi platus dalyvavimas lyčių, rasinių/etninių ir socialinių bei ekonominių grupių veikloje, o dėl to padidėjęs registravimas ir dalyvavimas, kurį matome CS kursuose visais lygio lygiais. Milijonai dalyvaujančių mokytojų ir studentų nusprendė peržengti vieną valandą - mokytis visą dieną ar visą savaitę ar ilgiau, ir daugelis studentų nusprendė užsiregistruoti visame kurse (ar net koledžo dur), kaip rezultatas.
 
@@ -2584,38 +2633,27 @@ lt:
 
     Visų pirma, tai, ką visi dalyviai gali išmokti per valandą, yra tai, kad mes galime tai padaryti.
   hoc_faq_more_questions_q: Vis dar turite daugiau klausimų?
-  hoc_faq_more_questions_a: Pabandykite rasti atsakymą mūsų <a href='http://support.code.org'>palaikymo
-    forume</a>.
   hoc_faq_more_questions_a_markdown: Pabandykite rasti atsakymą mūsų [paramos forume]
     (http://support.code.org).
   hoc_faq_keep_learning_q: Kaip toliau mokytis po Kodo valandos?
-  hoc_faq_keep_learning_a: Kiekvienas gali bet kuriuo metu surengti Kodo valandą.
-    Pamokos lieka ištisus metus. Galite tikėtis, kad visi mūsų vadovėliai ir mokymo
-    programos bus prieinami mūsų svetainėje visam laikui. Prašome eiti į <a href='/promote'>mūsų
-    išteklių</a> renginių kaip vadovus ir kitus išteklius, kurie padės padaryti jūsų
-    valandos kodo įvykis sėkmingas.
   hoc_faq_keep_learning_a_markdown: Kiekvienas gali bet kuriuo metu surengti Kodo
     valandą. Pamokos lieka ištisus metus. Galite tikėtis, kad visi mūsų vadovėliai
     ir mokymo programos bus prieinami mūsų svetainėje visam laikui. Prašome eiti į
     [mūsų ištekliai] (%{promote}) renginio kaip vadovus ir kitus išteklius, kad jūsų
     valandos kodas įvykis būtų sėkmingas.
   hoc_faq_certificates_q: Kur galiu atspausdinti savo studentų pažymėjimus?
-  hoc_faq_certificates_a: Eikite į mūsų <a href='%{codeorg_url}/certificates'>sertifikatų
-    puslapį</a> , kur anksčiau laiko galite atsispausdinti sertifikatus visai klasei.
-    Taip pat galite atsispausdinti <a href='%{codeorg_url}/certificates?course=mc'>specialius
-    pažymėjimus</a> studentams, atliekantiems “Minecraft” pamoką.
-  hoc_faq_certificates_a_markdown: Eikite į mūsų [sertifikatų puslapį] (%{codeorg_url}/sertifikatai),
-    kur anksčiau laiko galite atsispausdinti sertifikatus visai savo klasei. Taip
-    pat galite atsispausdinti [specialius sertifikatus] (%{codeorg_url}/sertifikatai?
-    course=mc) studentams, atliekantiems “Minecraft” pamoką.
+  hoc_faq_certificates_answer_markdown: Eikite į mūsų [sertifikatų puslapį] (%{certificates_url}),
+    kur galite anksčiau laiko atsispausdinti visos savo klasės sertifikatus.
   hoc_faq_logo_q: Ar yra apribojimų, kaip galiu naudoti “Hour of Code” logotipą ar
     pavadinimą?
-  hoc_faq_logo_a: Kodo valanda yra prekės ženklas. Nenorime užkirsti kelio jo naudojimui,
-    tačiau norime įsitikinti, kad jo naudojimas atitinka keletą ribų. Žr. <a href='%{logo_url}'>šias
-    naudojimo</a>gaires.
   hoc_faq_logo_a_markdown: Kodo valanda yra prekės ženklas. Nenorime užkirsti kelio
     jo naudojimui, tačiau norime įsitikinti, kad jo naudojimas atitinka keletą ribų.
     Žr. [šios naudojimo rekomendacijos] (%{logo_url}).
+  hoc_faq_bug_q: "“Hour of Code” veikloje radau klaidą! Ką turėčiau daryti?"
+  hoc_faq_bug_a_markdown: |-
+    O ne! Jei “Hour of Code” veikloje susidūrėte su klaida - pirmiausia patikrinkite veiklos, kurioje esate, URL. Jei URL prasideda studio.code.org, mūsų Code.org palaikymo komanda gali padėti! Spustelėkite klaustuko piktogramą viršutiniame dešiniajame ekrano kampe, tada išskleidžiamajame meniu pasirinkite “Pranešti apie problemą”.
+
+    Jei URL neprasideda nuo studio.code.org, greičiausiai dirbate su trečiosios šalies veikla ir turėsite susisiekti su tos įmonės palaikymo komanda, kad gautumėte tolesnės pagalbos.
   stats_hoc_2013_image_alt: Statistika nuo 2013 Valanda Kodo
   stats_growth: Mūsų svetainė greičiausiai pasiekė 15 mln. žmonių.
   stats_i18n: Studentai mokosi daugiau nei 45 kalbų
@@ -13402,7 +13440,7 @@ lt:
   hoc_how_to_faq_answer_devices_02: Jei įrenginiai yra riboti arba nepasiekiami, pabandykite
     [pora programavimas] (%{pair_url}) arba ištirti mūsų [unplugged veiklą] (%{unplugged_url})
     mokytis be jokių prietaisų ne visi!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Kas gali savanoriauti?
   hoc_how_to_faq_answer_volunteer: Kiekvienas, aistringas kompiuterių mokslo švietimui
     ir didėjančiai technologijų įvairovei, gali būti savanoris! Norėtume, kad dalyvautų
     visų sluoksnių savanoriai. Kodo valanda pasižymi daugybe įvairių veiklų, skirtų
@@ -13416,7 +13454,7 @@ lt:
   hoc_how_to_faq_answer_account: Studentams išbandyti kodo valandą nereikia registracijos
     ar prisijungimo. Prisiregistravus prie kodo valandos, automatiškai nesukuriama
     Code.org paskyra.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Kiti kodo valandos ištekliai pedagogams
   hoc_how_to_resources_promo_heading: Reklaminiai ištekliai
   hoc_how_to_resources_promo_desc: Raskite visus reikalingus išteklius - spausdintinius
     ir skaitmeninius - kad atkreiptumėte dėmesį į savo kodo valandą.
@@ -13488,6 +13526,22 @@ lt:
     Naudokite #HourOfCode ir @codeorg, kad galėtume pabrėžti ir jūsų sėkmę!'
   hoc_how_to_step_07_educators_desc_02: Taip pat galite atsispausdinti savo studentams
     pažymėjimus, kad parodytumėte savo pasiekimus!
+  hoc_ai_top_desc: Kiekvienas gali sužinoti apie AI, nesvarbu, ar esate klasės mokinys,
+    ar pedagogas, atrakinantis mokymo ateitį su AI ir apie jį.
+  hoc_ai_how_ai_works_video_series_desc: Ši trumpų vaizdo įrašų serija supažindins
+    jus su tuo, kaip veikia dirbtinis intelektas ir kodėl tai svarbu. Tada įsigilinkite
+    į tokias problemas kaip algoritminis šališkumas ir AI sprendimų priėmimo etika.
+  hoc_ai_learn_how_ai_works_desc: Pasinerkite į dirbtinio intelekto pasaulį naudodami
+    pamokas “Kaip dirbtinis intelektas veikia”, suporuotas su mūsų vaizdo įrašų serija,
+    supažindinančia jus su dirbtinio intelekto veikimu ir kodėl tai svarbu.
+  hoc_ai_101_for_educators_desc: Atraskite novatorišką dirbtinio intelekto (AI) pasaulį
+    ir jo transformacinį potencialą švietime naudodami mūsų pamatinę internetinę mokymosi
+    seriją mokytojams.
+  hoc_ai_impacts_desc: Įtraukite savo klasę mokytojų vadovaujamomis pamokomis, kuriose
+    nagrinėjamas dirbtinio intelekto poveikis ir kviečiama besimokančiuosius galvoti
+    apie kai kurių AI problemų sprendimus.
+  hoc_ai_activities_desc: Šios visiškai naujos “Hour of Code” veiklos įdomiai ir įtraukiamai
+    supažindina vartotojus su dirbtinio intelekto pasauliu.
   team_page_full_team_alt_text: Beveik 100 Code.org darbuotojų, atitinkančių mėlynus
     ir geltonus marškinėlius, pozuoja viešbučio konferencijų salėje, skirtoje įmonės
     vasaros 2022 m. Codechella renginiui.
@@ -14024,6 +14078,24 @@ lt:
   video_library_page_not_hacked_video_title_6: 'Kaip neįsilaužti: pranešimų siuntimas
     ir atsisiuntimai'
   video_library_page_not_hacked_video_title_7: 'Kaip ne gauti nulaužė: Įdiekite atnaujinimus'
+  thank_you_page_main_title: Dėkojame, kad padėjote kurti judėjimą
+  thank_you_page_description: "“Code.org Advocacy Coalition” nori padėkoti šimtams
+    tūkstančių vietos čempionų ir advokatų, įskaitant mokytojus, bendruomenės narius,
+    tyrėjus, ne pelno siekiančias organizacijas, universitetus, korporacijas ir vyriausybines
+    institucijas, palaikiusias viziją, kad kiekvienas kiekvienos mokyklos studentas
+    nusipelno galimybės mokytis informatikos. Dėkojame už palaikymą šiam judėjimui."
+  thank_you_page_members_section_title: 'Ir visiems Code.org advokatūros koalicijos
+    nariams:'
+  thank_you_page_individual_organization_title: 'Dėkojame šiems asmenims ir organizacijoms
+    už indėlį rengiant šią ataskaitą:'
+  thank_you_page_individual_organization_description: Kompiuterių mokslo švietimo
+    prižiūrėtojai kiekvienoje valstybinėje švietimo agentūroje, Kolegijos valdyba,
+    Della Cronin, Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle
+    Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Dėkojame šiame pranešime cituojamiems mokiniams
+    ir mokytojams:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Apie mus
   about_us_page_hero_description: Code.org® yra švietimo inovacijų ne pelno siekianti
     organizacija, skirta vizijai, kad kiekvienas mokinys kiekvienoje mokykloje turi
@@ -14176,6 +14248,120 @@ lt:
     nueiti ilgą kelią, kad pasiektume lėšų rinkimo tikslą, kuris palaikys šią viziją.
   about_page_donors_link_1: Padarykite aukas
   about_page_donors_link_2: "[žr. mūsų donorų sąrašą] (%{donors_url})"
+  teach_ai_title: Realaus pasaulio pavyzdžiai. Praktiniai ištekliai.
+  teach_ai_description: "“AI Guidance for Schools Toolkit” yra šaltinis politikos
+    formuotojams, mokyklų vadovams ir darbuotojams parengti pradines AI gaires savo
+    mokyklose."
+  teach_ai_button_label: Peržiūrėkite įrankių rinkinį
+  middle_high_page_main_title: Mokymasis 11 metų ir vyresniems
+  middle_high_page_main_description: Tyrinėkite kompiuterių mokslo pasaulį naudodami
+    įtraukiančius vaizdo įrašus, savarankiškus vadovėlius, programavimo veiklą ir
+    dar daugiau!
+  middle_high_page_hero_title: Pradėkite nuo “Hour of Code”
+  middle_high_page_hero_description: Sužinokite informatikos pagrindus naudodamiesi
+    nemokama “Hour of Code” veikla, kurioje yra “drag-and-drop” kodavimo blokai. Galima
+    rinktis iš šimtų valandų trukmės variantų!
+  middle_high_page_hourofcode_link: Susipažinkite su “Hour of Code” veikla
+  middle_high_page_modules_title: Programavimo moduliai vyresniems studentams
+  middle_high_page_modules_description: Pritaikyta iš mūsų CS atradimų ir CS principų
+    kursų, šie trumpi, savarankiški moduliai vidurinių ir vidurinių mokyklų studentams
+    yra puikus būdas išmokti sąvokas, kurios span visas programavimo kalbas ir įrankius.
+  middle_high_page_modules_card_title_1: Įvadas į žaidimų laboratoriją
+  middle_high_page_modules_card_title_2: Vėžlių programavimas “App Lab”
+  middle_high_page_modules_card_title_3: Įvykiais paremtas programavimas “App Lab”
+  middle_high_page_modules_card_description_1: Judėkite savo tempu šiame įvade į mūsų
+    “Game Lab” aplinką, kai programuojate animaciją, interaktyvų meną ir žaidimus.
+  middle_high_page_modules_card_description_2: Atrakinkite galimybę kurti turtingas,
+    interaktyvias programas su “JavaScript” programoje “App Lab”!
+  middle_high_page_modules_card_description_3: Eikite savo tempu naudodami šį įvadą
+    į “App Lab” programavimo aplinką, kurioje studentai naudoja “JavaScript”, kad
+    sukurtų interaktyvias programas.
+  middle_high_page_modules_card_link: Išbandykite
+  middle_high_page_make_your_own_title: Sukurkite savo programas, žaidimus ir tinklalapius
+  middle_high_page_make_your_own_description: 'Be kursų, mes turime programavimo įrankius,
+    kurie leidžia jums ištirti savo kūrybiškumą ir padaryti kažką nuostabaus. '
+  middle_high_page_make_your_own_card_title_1: "“App Lab”"
+  middle_high_page_make_your_own_card_title_2: Žaidimų laboratorija
+  middle_high_page_make_your_own_card_title_3: Žiniatinklio laboratorija
+  middle_high_page_make_your_own_card_descrpition_1: "“App Lab” yra programavimo aplinka,
+    kurioje galite kurti paprastas programas. Sukurkite programą, kodą “JavaScript”
+    naudodami blokus arba tekstą, tada bendrinkite programą per kelias sekundes."
+  middle_high_page_make_your_own_card_descrpition_2: "“Game Lab” yra programavimo
+    aplinka, kurioje galite kurti paprastas animacijas ir žaidimus su objektais ir
+    simboliais, kurie sąveikauja tarpusavyje."
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab yra programavimo aplinka,
+    kurioje galite sukurti paprastus tinklalapius naudojant HTML ir CSS. Sukurkite
+    savo tinklalapius ir bendrinkite savo svetainę per kelias sekundes.
+  middle_high_page_make_your_own_card_link: Sužinokite daugiau
+  middle_high_page_additional_resources_title: Papildomi ištekliai
+  middle_high_page_additional_resources_description: Yra tiek daug būdų toliau tyrinėti
+    informatiką! Naršykite mūsų vaizdo įrašų bibliotekoje arba sužinokite daugiau
+    apie įdomias karjeras kompiuterių mokslo srityje.
+  middle_high_page_video_library_title: Atraskite mūsų vaizdo įrašų biblioteką
+  middle_high_page_video_library_description: Sužinokite kompiuterių mokslo pagrindus
+    per trumpus 5-10 minučių vaizdo įrašus tokiomis temomis kaip dirbtinis intelektas,
+    internetas, kaip kompiuteriai veikia, kaip ne gauti nulaužė, blockchain, karjeros,
+    ir dar daugiau!
+  middle_high_page_video_library_link: Peržiūrėti vaizdo įrašų biblioteką
+  middle_high_page_cs_journeys_title: Eikite toliau su CS Journeys
+  middle_high_page_cs_journeys_description: Ženkite kitą žingsnį savo kompiuterinių
+    mokslų kelionėje. Ištirkite karjerą, mentorystės galimybes, internetinius kursus,
+    stipendijas, stažuotes ir dar daugiau!
+  middle_high_page_cs_journeys_link: Susipažinkite su CS Journeys
+  middle_high_page_cs_title: Kompiuterių mokslai klasėje
+  middle_high_page_cs_description: Šiuos kursus turėtų vesti mokytojas! Jei norite,
+    kad jie būtų mokomi jūsų mokykloje, apsvarstykite galimybę dirbti su mokytoju,
+    kad atneštumėte juos į savo klasę.
+  middle_high_page_cs_card_title_1: CS atradimai
+  middle_high_page_cs_card_title_2: CS principai
+  middle_high_page_cs_card_title_3: AP Kompiuterių mokslas A
+  middle_high_page_cs_card_description_1: Laisvas pradinių mokymo programų rinkinys,
+    supažindinantis studentus su pamatinėmis kompiuterių mokslo koncepcijomis ir iššūkiai
+    jiems ištirti, kaip kompiuterija ir technologijos gali paveikti pasaulį.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Supažindinkite studentus su programinės
+    įrangos inžinerija ir objektiniu dizainu, kol jie mokosi “Java” programavimo kalbos
+    šioje nemokamoje mokymo programoje, skirtoje “AP® Computer Science A” (AP® CSA).
+  middle_high_page_cs_link_1: Susipažinkite su CS Dicoveries
+  middle_high_page_cs_link_2: Naršyti CS principus
+  middle_high_page_cs_link_3: Susipažinkite su CSA
+  elemeentary_page_main_title: Mokymasis nuo 5 iki 11 metų
+  elementary_page_main_description: Tyrinėkite kompiuterių mokslo pasaulį naudodami
+    įtraukiančius vaizdo įrašus, savarankiškus vadovėlius, programavimo veiklą ir
+    dar daugiau!
+  elementary_page_own_pace_title: Tęskite mokymąsi savo tempu
+  elementary_page_own_pace_description: Sukurti piešinius, žaidimus, ir dar daugiau
+    šių dviejų puikių variantų studentams pradėti nuo jų pačių mokytis informatikos
+    pagrindus.
+  elementary_page_own_pace_card_title_1: "“Pre-Reader Express” kursas"
+  elementary_page_own_pace_card_title_2: Ekspresinis kursas
+  elementary_page_own_pace_card_description_1: Išmokite informatikos savo tempu! Išmokite
+    kurti kompiuterines programas, lavinkite problemų sprendimo įgūdžius ir dirbkite
+    per smagius iššūkius! Kurkite žaidimus ir kūrybinius projektus, kuriais galėtumėte
+    pasidalinti su draugais, šeima ir mokytojais.
+  elementary_page_own_pace_link_1: Pradėkite išankstinį skaitytojo kursą
+  elementary_page_own_pace_link_2: Pradėkite greitąjį kursą
+  elementary_page_make_your_own_games_title: Sukurkite savo animacijas ir žaidimus
+  elementary_page_make_your_own_games_card_title_1: "“Sprite” laboratorija"
+  elementary_page_make_your_own_games_card_description_1: Laikas būti kūrybingam!
+    Naudokite bloku pagrįstą kodavimą, kad “Sprite Lab” padarytumėte kažką kvailo,
+    saldaus ar išorinio erdvinio. Vienintelė riba yra jūsų vaizduotė!
+  elementary_page_make_your_own_games_link: Išbandykite “Sprite Lab”
+  elementary_page_computer_science_title: Kompiuterių mokslai klasėje
+  elementary_page_computer_science_description: Šiuos kursus turėtų vesti mokytojas!
+    Jei norite, kad jie būtų mokomi jūsų mokykloje, paprašykite tėvų ar globėjų dirbti
+    su mokytoju, kad jie atneštų juos į jūsų klasę.
+  elementary_page_computer_science_card_title_1: Kompiuterių mokslo pagrindai
+  elementary_page_computer_science_card_title_2: Kompiuterių mokslo jungtys
+  elementary_page_computer_science_description_1: Laisvas pradinių mokymo programų
+    rinkinys, supažindinantis studentus su pamatinėmis kompiuterių mokslo koncepcijomis
+    ir iššūkiai jiems ištirti, kaip kompiuterija ir technologijos gali paveikti pasaulį.
+  elementary_page_computer_science_description_2: Užmegzkite ryšius tarp informatikos
+    (CS) ir kitų dalykų, tokių kaip matematika, kalbos menas, mokslas ir socialiniai
+    tyrimai.
   language_code:
     ar: arabiškas
     az: Azerbaidžaniečių

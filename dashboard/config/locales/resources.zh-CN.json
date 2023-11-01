@@ -5850,7 +5850,7 @@
         },
         "ecosystems/csc-ecosystems/2023": {
           "name": "模拟海洋生态系统",
-          "url": "https://docs.google.com/presentation/d/1BzrjzXA9Wmnnbq8OTRrYUodMF1Ow8YMS0I9TEVMdBAE/",
+          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
           "type": "幻灯片"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
@@ -9371,6 +9371,9 @@
           "name": "视频：Aloe Blacc文本压缩",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "视频"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "资源"
         }
       }
     }

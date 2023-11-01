@@ -55,7 +55,7 @@ en:
             '2.00': large
             '3.00': extra large
       Dancelab_ai:
-        text: "[IMAGE][0]generate [VALUE][1] stage"
+        text: "[IMAGE][0]generate [VALUE][1] effects"
       Dancelab_alternateMoves:
         text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
         options:
@@ -101,6 +101,12 @@ en:
             MOVES.Rest: None
       Dancelab_atTimestamp:
         text: after [TIMESTAMP][0] [UNIT][1]
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': measures

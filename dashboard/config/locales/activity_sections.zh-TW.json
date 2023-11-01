@@ -34748,7 +34748,7 @@
           ]
         },
         "27072520-22af-4745-9796-4757916f6ffa": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **顯示：**當學生到達最後階段時，請他們按右上角的白色資訊圖標。這會顯示人工智慧機器人用來協助做出決定的特徵。在這裏的例子中，人工智慧機器人學到了在做出決定時顏色最重要，眼睛最不重要。\n\n讓學生在活動指南中記錄最重要和最不重要的特徵。\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **討論：**_人工智慧機器人認為最重要的特徵是什麼？這些特徵是您期望最重要的嗎？_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **顯示：**當學生到達最後階段時，請他們按右上角的白色資訊圖示。這會顯示人工智慧機器人用來協助做出決定的特徵。在這裏的例子中，人工智慧機器人學到了在做出決定時顏色最重要，眼睛最不重要。\n\n讓學生在活動指南中記錄最重要和最不重要的特徵。\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **討論：**_人工智慧機器人認為最重要的特徵是什麼？這些特徵是您期望最重要的嗎？_"
         },
         "b01b4a09-82e8-4567-a4ff-251fd3379ff4": {
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **討論目標：**學生可能會發現人工智慧機器人認為某些特徵很重要而實際上與他們的詞語完全無關。例如，在嘗試確定魚是否為紅色時，認為魚的嘴很重要。學生可以通過在人工智慧機器人接受的魚類中尋找模式來驗證這一點 - 也許他們的所有示例魚都碰巧具有相同類型的嘴巴，而人工智慧機器人誤認為這很重要。"
@@ -34835,7 +34835,7 @@
           "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **詞彙：**顯示帶今天課程詞彙的幻燈片"
         },
         "6b3d0a2a-474a-4205-bb58-ca2f818a023e": {
-          "description": "-   \\*\\*演算法 \\*\\* - 解決問題或做出決定的一系列步驟\n-   **網路** - 連接在一起的物品集合。遵循這些連接可以代表演算法中的步驟，就像流程圖。"
+          "description": "-   \\*\\*演算法 \\*\\* - 解決問題或做出決定的一系列步驟\n-   **網絡** - 連接在一起的物品集合。遵循這些連接可以代表演算法中的步驟，就像流程圖。"
         },
         "d2f9b793-92df-4ef6-9200-00a07d1c6e9f": {
           "description": "今天我們要創建我們自己的圖像識別**演算法**。演算法是解決問題或做出決定的一系列步驟。我們將創建一個使用**網絡**來做出決定的演算法，就像視訊中那樣"
@@ -35016,7 +35016,7 @@
           "description": "**重新分組：**當學生開始設定自己喜歡的組合時，將班級重新分組"
         },
         "5cea7b20-fbdc-4011-a8b1-6f8b165d13c5": {
-          "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **這樣做：**Jenna是一個 _喜歡_珍珠奶茶的學生。有一個名為「珍珠奶茶技巧：獨特的風味組合」的視訊。她試圖找到一個將該視訊推到前3名視訊的組合。你能幫助她嗎？"
+          "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **這樣做：**Jenna是一個_喜歡_珍珠奶茶的學生。有一個名為「珍珠奶茶技巧：獨特的風味組合」的視訊。她試圖找到一個將該視訊推到前3名視訊的組合。你能幫助她嗎？"
         },
         "c0afbded-7891-407a-81eb-771dc761964e": {
           "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **流通：**在這裏給學生幾分鐘時間嘗試組合不同的內容創作者，讓視訊出現在前3名。顯然地：該視訊根據當前的內容創作者選擇決不會出現在前3名，因此學生實際上無法完成這項任務。這是故意的，旨在激發活動的最後部分。"
@@ -35072,7 +35072,7 @@
           "description": "\\*\\* 開始使用Code.org：\\*\\* 請考慮觀看我們的[Code.org入門](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM)視訊系列，瞭解如何瀏覽課程計劃、設定課堂部分以及Code.org平台的其他重要功能。如果您希望閱讀或列印說明，每個視訊還有一篇支持文章 - [點擊此處瞭解更多](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-)。\n\n\\*\\* 設定課堂部分：\\*\\* 您可以使用Code.org中的課堂部分來管理您的學生，查看學生的進度並分配特定的課程 - [點擊此處瞭解更多](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)。\n\n如果您使用的是學習管理系統，可能還有附加步驟將您的課程與Code.org同步：\n\n-   [點擊此處](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync)瞭解使用Google課堂設定課程的步驟\n-   [點擊此處](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync)瞭解使用Clever設定課程的步驟\n\n**成為認證教師：**課程計劃和關卡擁有附加資源和認證教師答案要點，這是一個快速的過程，可以驗證您在教育機構中的職位。[點擊此處填寫表格](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform)，您應該可以在約1個工作日內訪問認證教師資源。\n\n**為教師提供的支持：**您可以透過我們的[教師人工智慧101系列](https://code.org/ai/pl/101)，進一步瞭解如何將人工智慧課程帶入您的課堂。教師人工智慧101是一個免費的基礎線上專業學習系列，適用於任何對人工智慧（AI）的開創性世界及其教育潛力感興趣的教師和教育工作者。"
         },
         "45605ee0-ef53-4106-9c49-f5841ce346fe": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **提示：**只用一個詞完成以下句子：\n\n-   謝謝\\_\\_\\_。\n-   請給我買一個\\_\\_\\_。\n-   視訓遊戲\\_\\_\\_。\n-   在春天我喜歡在外面玩，因為\\_\\_\\_。"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **提示：**只用一個詞完成以下句子：\n\n-   謝謝\\_\\_\\_。\n-   請給我買一個\\_\\_\\_。\n-   視訊遊戲\\_\\_\\_。\n-   在春天我喜歡在外面玩，因為\\_\\_\\_。"
         },
         "48679dd4-ea32-456f-9a89-707a1eebd246": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **討論：**與鄰座比較你的答案。你們在哪裏選擇了相同的詞？你們在哪裏選擇了不同的詞？"
@@ -35151,7 +35151,7 @@
           "description": "**重新分組：**讓學生關閉小部件並重新集中為一個整體班級"
         },
         "6f874c77-a3a5-49d8-8e46-8117a350c084": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **討論：**當你和你的鄰座在第一頁底部比較你的「傷心」故事時：這些故事有什麼共同點？他們有什麼不同？為什麼？"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **討論：**當你和你的鄰座比較第一頁底部的「傷心」故事時：這些故事有什麼共同點？它們有什麼不同？為什麼？"
         },
         "d29bf5d3-d632-40ce-bc5a-b77fdc6a2b04": {
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **討論目標：**學生可能發現用同一個「聲音」講述的故事有更多相似的詞語，但選擇不同的詞語仍然意味著不同的故事出來了。這是為了幫助學生開始圍繞關於大型語言模型是否具有創造性和/或智能這一總結問題擁有一個框架。",
@@ -35221,7 +35221,7 @@
           "description": "\\*\\* 開始使用Code.org：\\*\\* 請考慮觀看我們的[Code.org入門](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM)視訊系列，瞭解如何瀏覽課程計劃、設定課堂部分以及Code.org平台的其他重要功能。如果您希望閱讀或列印說明，每個視訊還有一篇支持文章 - [點擊此處瞭解更多](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-)。\n\n\\*\\* 設定課堂部分：\\*\\* 您可以使用Code.org中的課堂部分來管理您的學生，查看學生的進度並分配特定的課程 - [點擊此處瞭解更多](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)。\n\n如果您使用的是學習管理系統，可能還有附加步驟將您的課程與Code.org同步：\n\n-   [點擊此處](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync)瞭解使用Google課堂設定課程的步驟\n-   [點擊此處](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync)瞭解使用Clever設定課程的步驟\n\n**成為認證教師：**課程計劃和關卡擁有附加資源和認證教師答案要點，這是一個快速的過程，可以驗證您在教育機構中的職位。[點擊此處填寫表格](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform)，您應該可以在約1個工作日內訪問認證教師資源。\n\n**為教師提供的支持：**您可以透過我們的[教師人工智慧101系列](https://code.org/ai/pl/101)，進一步瞭解如何將人工智慧課程帶入您的課堂。教師人工智慧101是一個免費的基礎線上專業學習系列，適用於任何對人工智慧（AI）的開創性世界及其教育潛力感興趣的教師和教育工作者。"
         },
         "859813e4-1007-4147-800e-1f1f961473b3": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **提示：** \n\n1.  轉向合作夥伴\n2.  從5倒數，在數1時都叫出動物的名字\n3.  1分鐘時間，每人繪製這一個2種動物的組合\n4.  比較你們的圖像 - 哪些細節相似，哪些不同？\n5.  與另一個合作夥伴分享你的圖像 - 他們能猜出提示是什麼嗎？",
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **提示：** \n\n1.  轉向合作夥伴\n2.  從5倒數，在數1時都叫出動物的名字\n3.  1分鐘時間，每人繪製一個這2種動物的組合\n4.  比較你們的圖像 - 哪些細節相似，哪些不同？\n5.  與另一個合作夥伴分享你的圖像 - 他們能猜出提示是什麼嗎？",
           "tips": [
             "**致謝：**Code.org課程團隊非常感謝計算機科學教師Terence Stone，他在幾年前的Code.org培訓中熱情洋溢地引出了這個想法。"
           ]
