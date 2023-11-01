@@ -17,8 +17,8 @@ import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
-import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
+import {initFirebaseStorage} from '../storage/firebaseStorage'; // TODO: unfirebase
+import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata'; // TODO: unfirebase
 import {
   getProjectDatabase,
   getSharedDatabase,
@@ -422,6 +422,7 @@ Applab.init = function (config) {
     }));
   }
   Applab.channelId = config.channel;
+  // TODO: unfirebase
   Applab.storage = initFirebaseStorage({
     channelId: config.channel,
     firebaseName: config.firebaseName,
@@ -561,6 +562,7 @@ Applab.init = function (config) {
     project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    // TODO: unfirebase
     Applab.storage.clearAllData(
       () => console.log('success'),
       err => console.log(err)
@@ -803,12 +805,14 @@ Applab.init = function (config) {
   return loader;
 };
 
+// TODO: unfirebase
 async function initDataTab(levelOptions) {
-  const channelExists = await Applab.storage.channelExists();
+  const channelExists = await Applab.storage.channelExists(); // TODO: unfirebase
   if (levelOptions.dataTables) {
-    Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
+    Applab.storage.populateTable(levelOptions.dataTables).catch(outputError); // TODO: unfirebase
   }
   if (levelOptions.dataProperties) {
+    // TODO: unfirebase
     Applab.storage.populateKeyValue(
       levelOptions.dataProperties,
       () => {},
@@ -816,7 +820,7 @@ async function initDataTab(levelOptions) {
     );
   }
   if (levelOptions.dataLibraryTables) {
-    const libraryManifest = await Applab.storage.getLibraryManifest();
+    const libraryManifest = await Applab.storage.getLibraryManifest(); // TODO: unfirebase
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
@@ -825,12 +829,14 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else if (datasetInfo.current) {
+          // TODO: unfirebase
           Applab.storage.addCurrentTableToProject(
             table,
             () => console.log('success'),
             outputError
           );
         } else {
+          // TODO: unfirebase
           Applab.storage.copyStaticTable(
             table,
             () => console.log('success'),
@@ -917,6 +923,7 @@ function setupReduxSubscribers(store) {
       tableType.PROJECT
     );
 
+    // TODO: unfirebase
     // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
     Applab.storage
       .getLibraryManifest()
@@ -1113,7 +1120,7 @@ Applab.reset = function () {
     jsInterpreterLogger.detach();
   }
 
-  Applab.storage.resetRecordListener();
+  Applab.storage.resetRecordListener(); // TODO: unfirebase
 
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
@@ -1350,6 +1357,7 @@ function onInterfaceModeChange(mode) {
 }
 
 function onDataPreview(tableName) {
+  // TODO: unfirebase
   onColumnsChange(getSharedDatabase(), tableName, columnNames => {
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
@@ -1379,7 +1387,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   getPathRef(projectStorageRef, 'keys').off('value');
   getPathRef(projectStorageRef, `tables/${oldTableName}/records`).off('value');
   getPathRef(sharedStorageRef, `tables/${oldTableName}/records`).off('value');
-  getColumnsRef(getProjectDatabase(), oldTableName).off();
+  getColumnsRef(getProjectDatabase(), oldTableName).off(); // TODO: unfirebase
 
   switch (view) {
     case DataView.PROPERTIES:
