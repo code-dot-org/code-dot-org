@@ -1,5 +1,5 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
 
 interface AiBlockPreviewProps {
@@ -13,6 +13,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   generateBlocksFromResult,
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
+  const refTimer = useRef<number | null>(null);
 
   // Build out the blocks.
   useEffect(() => {
@@ -30,7 +31,11 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       blockSvg.render();
     });
     Blockly.svgResize(previewWorkspace as WorkspaceSvg);
-  }, []);
+
+    return () => {
+      previewWorkspace.dispose();
+    };
+  }, [blockPreviewContainerRef, generateBlocksFromResult]);
 
   return (
     <span ref={blockPreviewContainerRef} className={moduleStyles.container} />

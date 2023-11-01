@@ -36,6 +36,7 @@ export default class ProgramExecutor {
   private onEventsChanged?: () => void;
 
   private livePreviewActive = false;
+  private currentlyPlayingSong: string | null = null;
 
   constructor(
     container: string,
@@ -158,7 +159,11 @@ export default class ProgramExecutor {
   }
 
   reset() {
-    Sounds.getSingleton().stopAllAudio();
+    // Only stop audio if this executor had started playing a song.
+    if (this.currentlyPlayingSong) {
+      audioCommands.stopSound({url: this.currentlyPlayingSong});
+      this.currentlyPlayingSong = null;
+    }
     this.nativeAPI.reset();
     this.livePreviewActive = false;
   }
@@ -168,7 +173,7 @@ export default class ProgramExecutor {
   }
 
   destroy() {
-    this.livePreviewActive = false;
+    this.reset();
     this.nativeAPI.teardown();
   }
 
@@ -254,10 +259,22 @@ export default class ProgramExecutor {
     callback: (playSuccess: boolean) => void,
     onEnded: () => void
   ) {
+    const callbackWrapper = (playSuccess: boolean) => {
+      if (playSuccess) {
+        this.currentlyPlayingSong = url;
+      }
+      callback(playSuccess);
+    };
+
+    const onEndedWrapper = () => {
+      this.currentlyPlayingSong = null;
+      onEnded();
+    };
+
     audioCommands.playSound({
-      url: url,
-      callback: callback,
-      onEnded,
+      url,
+      callback: callbackWrapper,
+      onEnded: onEndedWrapper,
     });
   }
 }
