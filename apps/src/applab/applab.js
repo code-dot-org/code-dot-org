@@ -20,11 +20,11 @@ import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage'; // TODO: unfirebase
 import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata'; // TODO: unfirebase
 import {
-  getProjectDatabase,
-  getSharedDatabase,
-  getPathRef,
-  unescapeFirebaseKey,
-} from '../storage/firebaseUtils';
+  getProjectDatabase, // TODO: unfirebase
+  getSharedDatabase, // TODO: unfirebase
+  getPathRef, // TODO: unfirebase
+  unescapeFirebaseKey, // TODO: unfirebase
+} from '../storage/firebaseUtils'; // TODO: unfirebase
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -562,8 +562,7 @@ Applab.init = function (config) {
     project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    // TODO: unfirebase
-    Applab.storage.clearAllData(
+    Applab.storage.clearAllData( // TODO: unfirebase
       () => console.log('success'),
       err => console.log(err)
     );
@@ -812,8 +811,7 @@ async function initDataTab(levelOptions) {
     Applab.storage.populateTable(levelOptions.dataTables).catch(outputError); // TODO: unfirebase
   }
   if (levelOptions.dataProperties) {
-    // TODO: unfirebase
-    Applab.storage.populateKeyValue(
+    Applab.storage.populateKeyValue( // TODO: unfirebase
       levelOptions.dataProperties,
       () => {},
       outputError
@@ -829,15 +827,13 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else if (datasetInfo.current) {
-          // TODO: unfirebase
-          Applab.storage.addCurrentTableToProject(
+          Applab.storage.addCurrentTableToProject( // TODO: unfirebase
             table,
             () => console.log('success'),
             outputError
           );
         } else {
-          // TODO: unfirebase
-          Applab.storage.copyStaticTable(
+          Applab.storage.copyStaticTable( // TODO: unfirebase
             table,
             () => console.log('success'),
             outputError
@@ -903,45 +899,44 @@ function setupReduxSubscribers(store) {
   // Initialize redux's list of tables from firebase, and keep it up to date as
   // new tables are added and removed.
   let subscribeToTable = function (tableRef, tableType) {
-    tableRef.on('child_added', snapshot => {
+    tableRef.on('child_added', snapshot => { // TODO: unfirebase
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
+      tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
       store.dispatch(addTableName(tableName, tableType));
     });
-    tableRef.on('child_removed', snapshot => {
+    tableRef.on('child_removed', snapshot => { // TODO: unfirebase
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
+      tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
       store.dispatch(deleteTableName(tableName));
     });
   };
 
   if (store.getState().pageConstants.hasDataMode) {
-    subscribeToTable(
-      getPathRef(getProjectDatabase(), 'counters/tables'),
+    subscribeToTable( // TODO: unfirebase
+      getPathRef(getProjectDatabase(), 'counters/tables'), // TODO: unfirebase
       tableType.PROJECT
     );
 
-    // TODO: unfirebase
     // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
-    Applab.storage
+    Applab.storage // TODO: unfirebase
       .getLibraryManifest()
       .then(result => store.dispatch(setLibraryManifest(result)));
     // /v3/channels/<channel_id>/current_tables tracks which
     // current tables the project has imported. Here we initialize the
     // redux list of current tables and keep it in sync
-    let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables');
+    let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables'); // TODO: unfirebase
     currentTableRef.on('child_added', snapshot => {
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
+      tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
       store.dispatch(addTableName(tableName, tableType.SHARED));
     });
     currentTableRef.on('child_removed', snapshot => {
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
+      tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
       store.dispatch(deleteTableName(tableName));
     });
   }
@@ -1356,12 +1351,11 @@ function onInterfaceModeChange(mode) {
   requestAnimationFrame(() => showHideWorkspaceCallouts());
 }
 
-function onDataPreview(tableName) {
-  // TODO: unfirebase
-  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
+function onDataPreview(tableName) {// TODO: unfirebase
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => { // TODO: unfirebase  
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
-  getPathRef(getSharedDatabase(), `storage/tables/${tableName}/records`).once(
+  getPathRef(getSharedDatabase(), `storage/tables/${tableName}/records`).once( // TODO: unfirebase
     'value',
     snapshot => {
       getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
@@ -1378,15 +1372,15 @@ function onDataViewChange(view, oldTableName, newTableName) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
 
-  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
-  const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
+  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage'); // TODO: unfirebase
+  const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage'); // TODO: unfirebase
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
   // only unlistening from 'value' events here.
-  getPathRef(projectStorageRef, 'keys').off('value');
-  getPathRef(projectStorageRef, `tables/${oldTableName}/records`).off('value');
-  getPathRef(sharedStorageRef, `tables/${oldTableName}/records`).off('value');
+  getPathRef(projectStorageRef, 'keys').off('value'); // TODO: unfirebase
+  getPathRef(projectStorageRef, `tables/${oldTableName}/records`).off('value'); // TODO: unfirebase
+  getPathRef(sharedStorageRef, `tables/${oldTableName}/records`).off('value'); // TODO: unfirebase
   getColumnsRef(getProjectDatabase(), oldTableName).off(); // TODO: unfirebase
 
   switch (view) {
@@ -1403,7 +1397,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
             keyValueData = Object.assign({}, keyValueData);
           }
           keyValueData = _.mapKeys(keyValueData, (_, key) =>
-            unescapeFirebaseKey(key)
+            unescapeFirebaseKey(key) // TODO: unfirebase
           );
           getStore().dispatch(updateKeyValueData(keyValueData));
         }
@@ -1413,20 +1407,20 @@ function onDataViewChange(view, oldTableName, newTableName) {
       let newTableType = getStore().getState().data.tableListMap[newTableName];
       let storageRef;
       if (newTableType === tableType.SHARED) {
-        storageRef = getPathRef(
+        storageRef = getPathRef( // TODO: unfirebase
           sharedStorageRef,
           `tables/${newTableName}/records`
         );
       } else {
-        storageRef = getPathRef(
+        storageRef = getPathRef( // TODO: unfirebase
           projectStorageRef,
           `tables/${newTableName}/records`
         );
       }
-      onColumnsChange(
+      onColumnsChange( // TODO: unfirebase
         newTableType === tableType.PROJECT
-          ? getProjectDatabase()
-          : getSharedDatabase(),
+          ? getProjectDatabase() // TODO: unfirebase
+          : getSharedDatabase(), // TODO: unfirebase
         newTableName,
         columnNames => {
           getStore().dispatch(updateTableColumns(newTableName, columnNames));
