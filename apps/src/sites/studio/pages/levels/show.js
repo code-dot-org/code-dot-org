@@ -55,11 +55,10 @@ function initPage() {
     );
   }
 
-  if (
-    (experiments.isEnabled('ai-rubrics') ||
-      experiments.isEnabled('non-ai-rubrics')) &&
-    hasScriptData('script[data-rubricdata]')
-  ) {
+  const inRubricsPilot =
+    experiments.isEnabled('ai-rubrics') ||
+    experiments.isEnabled('non-ai-rubrics');
+  if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
