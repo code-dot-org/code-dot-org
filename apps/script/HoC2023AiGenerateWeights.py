@@ -145,7 +145,7 @@ options_lists = {
 embeddings = {}
 # embeddings is a dictionary with four lists of embeddings:
 # EMOJIS: [[emoji1_embedding], [emoji2_embedding], ...]
-# PALETTES: [[palette1+embedding], [palette2_embedding], ...]
+# PALETTES: [[palette1_embedding], [palette2_embedding], ...]
 # BACKGROUND_EFFECTS: [[background_effect1_embedding], [background_effect2_embedding], ...]
 # FOREGROUND_EFFECTS: [[foreground_effect1_embedding], [foreground_effect2_embedding], ...]
 for options_list_name in options_lists.keys():
