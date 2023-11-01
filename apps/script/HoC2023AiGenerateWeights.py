@@ -120,14 +120,6 @@ options_lists = {
     'foreground_effects': foreground_effect_model_descriptive_names
 }
 
-# Use emoji ids (phrases) as inputs as a comparison.
-# options_lists = {
-#     emojis: emojis_map.values(),
-#     palettes: palette_model_descriptive_names,
-#     background_effects: background_effect_model_descriptive_names,
-#     foreground_effects: foreground_effect_model_descriptive_names
-# }
-
 embeddings = {}
 # embeddings is a dictionary with four lists
 # 'emojis': [[emoji1_embedding], [emoji2_embedding], ...]
