@@ -46,10 +46,10 @@
  * @property {boolean} hideSource
  * @property {string} share
  * @property {string} labUserId
- * @property {string} firebaseName
- * @property {string} firebaseSharedAuthToken
- * @property {string} firebaseAuthToken
- * @property {string} firebaseChannelIdSuffix
+ * @property {string} firebaseName // TODO: unfirebase
+ * @property {string} firebaseSharedAuthToken // TODO: unfirebase
+ * @property {string} firebaseAuthToken // TODO: unfirebase
+ * @property {string} firebaseChannelIdSuffix // TODO: unfirebase
  * @property {boolean} isSignedIn
  * @property {boolean} pinWorkspaceToBottom
  * @property {boolean} hasVerticalScrollbars

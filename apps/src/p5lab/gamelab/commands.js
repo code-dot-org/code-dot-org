@@ -25,7 +25,7 @@ gamelabCommands.getUserId = function () {
 gamelabCommands.getKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError;
-  studioApp().storage.getKeyValue(opts.key, onSuccess, onError);
+  studioApp().storage.getKeyValue(opts.key, onSuccess, onError); // TODO: unfirebase?
 };
 
 gamelabCommands.handleReadValue = function (opts, value) {
@@ -37,7 +37,7 @@ gamelabCommands.handleReadValue = function (opts, value) {
 gamelabCommands.setKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError;
-  studioApp().storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  studioApp().storage.setKeyValue(opts.key, opts.value, onSuccess, onError); // TODO: unfirebase?
 };
 
 gamelabCommands.handleSetKeyValue = function (opts) {
