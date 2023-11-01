@@ -45,6 +45,9 @@ interface DanceAiProps {
   onClose: () => void;
 }
 
+// Steps in our generating process have a step and a substep.
+type GeneratingStep = [number, number];
+
 // Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 function useInterval(callback: () => void, delay: number | undefined) {
   const savedCallback = useRef<() => void>();
@@ -77,8 +80,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   // How many low-scoring results we show before the chosen one.
   const BAD_GENERATED_RESULTS_COUNT = 4;
 
-  // How many substeps for each step in our generating process.
+  // How many substeps for each step in the generating process.
   const GENERATING_SUBSTEP_COUNT = 2;
+
+  // How long we spend in each substep in the generating process.
+  const GENERATION_SUBSTEP_DURATION = 1000;
 
   const inputLibraryFilename = 'ai-inputs';
   const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
@@ -89,7 +95,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
-  const [generatingStep, setGeneratingStep] = useState<number[]>([0, 0]);
+  const [generatingStep, setGeneratingStep] = useState<GeneratingStep>([0, 0]);
   const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
 
   const currentAiModalField = useSelector(
@@ -220,7 +226,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       if (mode === Mode.GENERATING) {
         // We do a deep copy into a new array to ensure that
         // a re-render is triggered at the end of this work.
-        const currentGeneratingStep = [...generatingStep];
+        const currentGeneratingStep: GeneratingStep = [...generatingStep];
 
         if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT - 1) {
           // Bump substep.
@@ -238,7 +244,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         setGeneratingStep(currentGeneratingStep);
       }
     },
-    mode === Mode.GENERATING ? 1000 : undefined
+    mode === Mode.GENERATING ? GENERATION_SUBSTEP_DURATION : undefined
   );
 
   const startAi = async () => {
