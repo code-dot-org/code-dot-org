@@ -104,9 +104,12 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EDITED: 'Dance Party AI Background Edited',
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
-  DANCE_PARTY_VIDEO_PRESENTED: 'Dance Party Video Presented',
-  DANCE_PARTY_VIDEO_STARTED: 'Dance Party Video Started',
-  DANCE_PARTY_VIDEO_COMPLETED: 'Dance Party Video Completed',
+
+  // videos
+  VIDEO_LOADED: 'Video Loaded',
+  VIDEO_STARTED: 'Video Started',
+  VIDEO_PAUSED: 'Video Paused',
+  VIDEO_ENDED: 'Video Played To Completion',
 
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
   TEACHER_HOC_CONGRATS_PAGE_VISITED:
