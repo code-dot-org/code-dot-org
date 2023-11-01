@@ -140,9 +140,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     if (currentInputSlot < SLOT_COUNT) {
       setInputs([...inputs, id]);
       setCurrentInputSlot(currentInputSlot + 1);
-      analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_EMOJI_USED, {
-        emoji: id,
-      });
     }
   };
 
@@ -212,6 +209,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleConvertBlocks = () => {
+    const params = JSON.parse(resultJson);
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
+      emojis: inputs,
+      backgroundEffect: params.backgroundEffect,
+      backgroundColor: params.backgroundColor,
+      foregroundEffect: params.foregroundEffect,
+    });
+
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
       resultJson
@@ -268,6 +273,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleExplanationClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
+      emojis: inputs,
+    });
     setMode(Mode.EXPLANATION);
   };
 
