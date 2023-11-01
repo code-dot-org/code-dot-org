@@ -14,11 +14,6 @@ module I18n
           DATASETS_MANIFEST_FILE_PATH = CDO.dir('apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json').freeze
           DATASETS_DIR_PATH = CDO.dir('apps/node_modules/@code-dot-org/ml-playground/public/datasets').freeze
 
-          BLOCKLY_CORE_I18N_SOURCE_DIR = CDO.dir(I18N_SOURCE_DIR, BLOCKLY_CORE_DIR_NAME).freeze
-          I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
-          ML_PLAYGROUND_I18N_SOURCE_DIR = File.join(I18N_SOURCE_DIR_PATH, 'ml-playground').freeze
-          DATASETS_I18N_SOURCE_DIR = File.join(ML_PLAYGROUND_I18N_SOURCE_DIR, 'datasets').freeze
-
           def process
             prepare_blockly_core_files
             progress_bar.progress = 40
