@@ -357,7 +357,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           ))}
         </div>
-        &nbsp; effects
+        &nbsp; effect
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
@@ -388,10 +388,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               }}
             >
               <button key={0} type="button" value={'ai-block'}>
-                Preview
+                Effect
               </button>
               <button key={1} type="button" value={'code'}>
-                Custom code
+                Code
               </button>
             </ToggleGroup>
           </div>
@@ -400,19 +400,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         <div id="text-area" className={moduleStyles.textArea}>
           {' '}
           {mode === Mode.SELECT_INPUTS
-            ? 'Choose three emoji for the mood of the effects.'
+            ? 'Choose three emojis.'
             : mode === Mode.PROCESSING && !processingDone
-            ? 'A.I. is processing your input.'
+            ? ''
             : mode === Mode.PROCESSING && processingDone
-            ? 'A.I. is ready to generate effects!'
+            ? ''
             : mode === Mode.GENERATING
-            ? 'A.I. is generating effects based on the emojis.'
+            ? 'A.I. is finding the best effect to generate.'
             : mode === Mode.RESULTS && currentToggle === 'ai-block'
-            ? 'A.I. generated effects for your dance party!'
+            ? 'A.I. generated this effect.'
             : mode === Mode.RESULTS && currentToggle === 'code'
-            ? 'A.I. internally generated this code for the effects.'
+            ? 'Did you know? A.I. wrote this code to generate the effect.'
             : mode === Mode.EXPLANATION
-            ? 'These are the associations between the emojis and this effect.'
+            ? "Each emoji contributes to A.I.'s decision. Here are five possible effects and the calculations that A.I made."
             : undefined}
         </div>
 
@@ -654,7 +654,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
               id="select-all-sections-button"
-              text={'Process'}
+              text={'Generate'}
               onClick={handleProcessClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -673,7 +673,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.GENERATING && generatingStep[0] >= 4 && (
+          {/*mode === Mode.GENERATING && generatingStep[0] >= 4 && (
             <Button
               id="results-button"
               text={'Continue'}
@@ -681,12 +681,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
-          )}
+          )*/}
 
           {showConvertButton && (
             <Button
               id="convert-button"
-              text={'Use custom code'}
+              text={'Use code'}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -695,7 +695,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {showUseButton && (
             <Button
               id="use-button"
-              text={'Use'}
+              text={'Use effect'}
               onClick={handleUseClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
