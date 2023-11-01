@@ -69,7 +69,7 @@ export default function CoteacherSettings({
       <div className={styles.settings}>
         <AddCoteacher
           sectionId={sectionId}
-          coteachers={coteachers}
+          numCoteachers={coteachers.length}
           coteachersToAdd={coteachersToAdd}
           setCoteachersToAdd={setCoteachersToAdd}
           addError={addError}

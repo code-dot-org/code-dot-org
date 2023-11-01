@@ -12,7 +12,7 @@ import styles from './coteacher-settings.module.scss';
 
 export default function AddCoteacher({
   sectionId,
-  coteachers,
+  numCoteachers,
   coteachersToAdd,
   setCoteachersToAdd,
   addError,
@@ -22,37 +22,47 @@ export default function AddCoteacher({
 
   const getInputErrorMessage = useCallback(
     email => {
-      if (email === '') {
+      const trimmedEmail = email.trim();
+      if (trimmedEmail === '') {
         return Promise.resolve(i18n.coteacherAddNoEmail());
       }
-      if (!isEmail(email)) {
-        return Promise.resolve(i18n.coteacherAddInvalidEmail({email}));
+      if (!isEmail(trimmedEmail)) {
+        return Promise.resolve(i18n.coteacherAddInvalidEmail({trimmedEmail}));
       }
-      if (coteachersToAdd.some(coteacher => coteacher === email)) {
-        return Promise.resolve(i18n.coteacherAddAlreadyAdded({email}));
+      if (coteachersToAdd.some(coteacher => coteacher === trimmedEmail)) {
+        console.log('lfm already exists', trimmedEmail);
+        return Promise.resolve(i18n.coteacherAddAlreadyExists({trimmedEmail}));
       }
 
-      const params = {email: email, ...(sectionId && {section_id: sectionId})};
+      const params = {
+        email: trimmedEmail,
+        ...(sectionId && {section_id: sectionId}),
+      };
 
+      console.log('lfm what');
       return new Promise(resolve => {
+        console.log('lfm fuck');
         return $.ajax({
           url: `/api/v1/section_instructors/check`,
           method: 'GET',
           dataType: 'json',
           contentType: 'application/json; charset=utf-8',
           data: params,
-        })
-          .done(() => {
+          success: () => {
+            console.log('lfm resolved');
             resolve('');
-          })
-          .fail((jqXHR, textStatus, errorThrown) => {
-            console.log('lfm', jqXHR, textStatus, errorThrown);
-
+          },
+          fail: (jqXHR, _textStatus, errorThrown) => {
+            console.log('lfm failed', jqXHR.responseText, errorThrown);
             if (errorThrown === 'Not Found') {
-              resolve(i18n.coteacherAddNoAccount({email}));
+              resolve(i18n.coteacherAddNoAccount({email: trimmedEmail}));
             }
+            if (errorThrown === 'Forbidden') {
+              resolve(i18n.coteacherUnableToEditCoteachers());
+            }
+
             if (jqXHR.responseText.includes('already invited')) {
-              resolve(i18n.coteacherAddAlreadyExists({email}));
+              resolve(i18n.coteacherAddAlreadyExists({email: trimmedEmail}));
             }
             if (jqXHR.responseText.includes('section full')) {
               resolve(i18n.coteacherAddSectionFull());
@@ -60,11 +70,11 @@ export default function AddCoteacher({
             if (jqXHR.responseText.includes('inviting self')) {
               resolve(i18n.coteacherCannotInviteSelf());
             }
-            if (errorThrown === 'Forbidden') {
-              resolve(i18n.coteacherUnableToEditCoteachers());
-            }
-            resolve(i18n.coteacherUnknownValidationError({email}));
-          });
+            resolve(
+              i18n.coteacherUnknownValidationError({email: trimmedEmail})
+            );
+          },
+        });
       });
     },
     [coteachersToAdd, sectionId]
@@ -75,6 +85,7 @@ export default function AddCoteacher({
       e.preventDefault();
       const newEmail = inputValue;
       getInputErrorMessage(newEmail).then(errorMessage => {
+        console.log('lfm why', errorMessage, newEmail);
         setAddError(errorMessage);
 
         if (errorMessage === '') {
@@ -109,6 +120,10 @@ export default function AddCoteacher({
     [handleAddEmail]
   );
 
+  const isMaxCoteachers = useCallback(() => {
+    return numCoteachers >= 5;
+  }, [numCoteachers]);
+
   const getErrorOrCount = () => {
     if (addError) {
       return (
@@ -122,7 +137,7 @@ export default function AddCoteacher({
     } else {
       return (
         <Figcaption className={styles.inputDescription}>
-          {i18n.coteacherCount({count: coteachers.length})}
+          {i18n.coteacherCount({count: numCoteachers})}
         </Figcaption>
       );
     }
@@ -135,7 +150,7 @@ export default function AddCoteacher({
         <input
           className={classNames(styles.input, !!addError && styles.inputError)}
           type="text"
-          disabled={coteachers.length >= 5}
+          disabled={isMaxCoteachers()}
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleSubmitAddEmail}
@@ -147,7 +162,7 @@ export default function AddCoteacher({
           type="submit"
           text={i18n.coteacherAddButton()}
           onClick={handleAddEmail}
-          disabled={coteachers.length >= 5}
+          disabled={isMaxCoteachers()}
         />
       </div>
       {getErrorOrCount()}
@@ -157,7 +172,7 @@ export default function AddCoteacher({
 
 AddCoteacher.propTypes = {
   sectionId: PropTypes.number,
-  coteachers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  numCoteachers: PropTypes.number.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string).isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
   addError: PropTypes.string,
