@@ -25,6 +25,23 @@ describe I18n::Utils::SyncOutBase do
       I18n::Metrics.expects(:report_runtime).with(described_class.name, 'sync-out').once
       described_class.perform
     end
+
+    it 'reports the runtime metric with ResourceParent::ResourceChild' do
+      module I18n
+        module Resources
+          module ResourceParent
+            module ResourceChild
+              class SyncOut < I18n::Utils::SyncOutBase
+              end
+            end
+          end
+        end
+      end
+
+      I18n::Metrics.expects(:report_runtime).with('ResourceParent::ResourceChild', 'sync-out').once
+
+      I18n::Resources::ResourceParent::ResourceChild::SyncOut.perform
+    end
   end
 
   describe '#process' do
