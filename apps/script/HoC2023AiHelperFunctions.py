@@ -8,13 +8,13 @@ def get_json_object(file):
 def get_ai_emoji_inputs():
     emojis_json_object = get_json_object('apps/static/dance/ai/ai-inputs.json')
     emojis_map = {}
-    emoji_names_list = []
-    for emoji in emojis_json_object['items']:
-        name = emoji['name']
-        id = emoji['id']
-        emojis_map[name] = id
-        emoji_names_list.append(name)
-    return emoji_names_list, emojis_map
+    emojis_list = []
+    for emoji_item in emojis_json_object['items']:
+        emoji = emoji_item['emoji']
+        id = emoji_item['id']
+        emojis_map[emoji] = id
+        emojis_list.append(emoji)
+    return emojis_list, emojis_map
 
 # options are either background_effect_options, foreground_effect_options, or palette_options.
 # isEffects is `true` if the options are for foreground or background.
