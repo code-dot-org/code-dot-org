@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
@@ -14,12 +14,6 @@ export default function AiAssessment({
   aiConfidence,
   learningGoalKey,
 }) {
-  const [aiFeedback, setAIFeedback] = useState('');
-
-  const radioAiFeedbackCallback = radioButtonData => {
-    setAIFeedback(radioButtonData);
-  };
-
   return (
     <div>
       <Heading6>{i18n.aiAssessment()}</Heading6>
@@ -33,11 +27,7 @@ export default function AiAssessment({
         />
       </div>
       <div>
-        <AiAssessmentFeedback
-          learningGoalKey={learningGoalKey}
-          radioAiFeedbackCallback={radioAiFeedbackCallback}
-          aiFeedback={aiFeedback}
-        />
+        <AiAssessmentFeedback learningGoalKey={learningGoalKey} />
       </div>
     </div>
   );

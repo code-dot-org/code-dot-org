@@ -1,16 +1,69 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyThreeText,
+  EmText,
+  Heading6,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import Button from '@cdo/apps/templates/Button';
 
-export default function AiAssessmentFeedback({
-  learningGoalKey,
-  radioAiFeedbackCallback,
-  aiFeedback,
-}) {
+export default function AiAssessmentFeedback({learningGoalKey}) {
   const radioGroupName = `ai-assessment-feedback-${learningGoalKey}`;
+  const thumbsupval = 'thumbsup';
+  const thumbsdownval = 'thumbsdown';
+
+  const [aiFeedback, setAIFeedback] = useState('');
+  const [aiSubmitted, setAISubmitted] = useState(false);
+  const [aiFalsePos, setAIFalsePos] = useState(false);
+  const [aiFalseNeg, setAIFalseNeg] = useState(false);
+  const [aiVague, setAIVague] = useState(false);
+  const [aiFeedbackOther, setAIFeedbackOther] = useState(false);
+  const [aiOtherContent, setAIOtherContent] = useState('');
+  const [aiFeedbackReceived, setAIFeedbackReceived] = useState(false);
+
+  // Timer vars for feedback received flag
+  const receivedTimer = useRef();
+  const disappearAfter = 20000;
+
+  const radioAiFeedbackCallback = radioButtonData => {
+    setAIFeedback(radioButtonData);
+  };
+
+  const submitAiFeedbackCallback = () => {
+    const bodyData = JSON.stringify({
+      learningGoalKey: learningGoalKey,
+      aiFalseNeg: aiFalseNeg,
+      aiFalsePos: aiFalsePos,
+      aiVague: aiVague,
+      aiOther: aiFeedbackOther,
+      aiOtherContent: aiOtherContent,
+    });
+    // TODO: http put ai feedback json data
+    console.log(bodyData);
+
+    setAISubmitted(true);
+    setAIFeedbackReceived(true);
+
+    receivedTimer.current = setTimeout(() => {
+      setAIFeedbackReceived(false);
+    }, disappearAfter);
+  };
+
+  const cancelAiFeedbackCallback = () => {
+    //reset all vars
+    setAIFeedback('');
+    setAISubmitted(false);
+    setAIFalsePos(false);
+    setAIFalseNeg(false);
+    setAIVague(false);
+    setAIFeedbackOther(false);
+    setAIOtherContent('');
+  };
 
   return (
     <div>
@@ -19,13 +72,13 @@ export default function AiAssessmentFeedback({
         <label>
           <span
             className={
-              aiFeedback === 'thumbsup'
+              aiFeedback === thumbsupval
                 ? style.aiFeedbackThumbsUpChecked
                 : style.aiFeedbackThumbsUp
             }
             aria-hidden="true"
           >
-            {aiFeedback === 'thumbsup' ? (
+            {aiFeedback === thumbsupval ? (
               <FontAwesome icon="thumbs-up" />
             ) : (
               <FontAwesome icon="thumbs-o-up" />
@@ -35,24 +88,24 @@ export default function AiAssessmentFeedback({
             type="radio"
             className={style.aiFeedbackRadio}
             name={radioGroupName}
-            value="thumbsup"
+            value={thumbsupval}
             onChange={() => {
-              radioAiFeedbackCallback('thumbsup');
+              radioAiFeedbackCallback(thumbsupval);
             }}
-            checked={aiFeedback === 'thumbsup'}
+            checked={aiFeedback === thumbsupval}
           />
         </label>
 
         <label>
           <span
             className={
-              aiFeedback === 'thumbsdown'
+              aiFeedback === thumbsdownval
                 ? style.aiFeedbackThumbsDownChecked
                 : style.aiFeedbackThumbsDown
             }
             aria-hidden="true"
           >
-            {aiFeedback === 'thumbsdown' ? (
+            {aiFeedback === thumbsdownval ? (
               <FontAwesome icon="thumbs-down" />
             ) : (
               <FontAwesome icon="thumbs-o-down" />
@@ -62,20 +115,93 @@ export default function AiAssessmentFeedback({
             type="radio"
             className={style.aiFeedbackRadio}
             name={radioGroupName}
-            value="thumbsdown"
+            value={thumbsdownval}
             onChange={() => {
-              radioAiFeedbackCallback('thumbsdown');
+              radioAiFeedbackCallback(thumbsdownval);
             }}
-            checked={aiFeedback === 'thumbsdown'}
+            checked={aiFeedback === thumbsdownval}
           />
         </label>
+        {aiFeedbackReceived && (
+          <EmText className={style.aiFeedbackReceived}>
+            {i18n.aiFeedbackReceived()}
+          </EmText>
+        )}
       </div>
+
+      {!aiSubmitted && aiFeedback === thumbsdownval && (
+        <div>
+          <Heading6>{i18n.aiFeedbackNegativeWhy()}</Heading6>
+          <Checkbox
+            label={i18n.aiFeedbackFalsePos()}
+            size="s"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIFalsePos(!aiFalsePos);
+            }}
+            checked={aiFalsePos}
+          />
+          <Checkbox
+            label={i18n.aiFeedbackFalseNeg()}
+            size="s"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIFalseNeg(!aiFalseNeg);
+            }}
+            checked={aiFalseNeg}
+          />
+          <Checkbox
+            label={i18n.aiFeedbackVague()}
+            size="s"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIVague(!aiVague);
+            }}
+            checked={aiVague}
+          />
+          <Checkbox
+            label={i18n.other()}
+            size="s"
+            name="aiNegativeFeedbackGroup"
+            onChange={() => {
+              setAIFeedbackOther(!aiFeedbackOther);
+            }}
+            checked={aiFeedbackOther}
+          />
+          {aiFeedbackOther && (
+            <div className={style.aiFeedbackOther}>
+              <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
+              <textarea
+                className={style.aiFeedbackTextbox}
+                onChange={e => {
+                  setAIOtherContent(e.target.value);
+                }}
+                type="text"
+              />
+            </div>
+          )}
+          <div className={style.submitFeedbackRow}>
+            <div className={style.submitFeedbackButtons}>
+              <Button
+                text={i18n.cancel()}
+                color={Button.ButtonColor.neutralDark}
+                onClick={cancelAiFeedbackCallback}
+                className={style.submitToStudentButton}
+              />
+              <Button
+                text={i18n.submit()}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                onClick={submitAiFeedbackCallback}
+                className={style.submitToStudentButton}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 AiAssessmentFeedback.propTypes = {
   learningGoalKey: PropTypes.string,
-  radioAiFeedbackCallback: PropTypes.func,
-  aiFeedback: PropTypes.string,
 };
