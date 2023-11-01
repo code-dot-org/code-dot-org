@@ -38,14 +38,14 @@
       "upButton",
       "downButton"
     ],
+    "video_key": "hoc_dance_events_2019",
+    "validation_code": "if (nativeAPI.getTime(\"measures\") > 5) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "video_key": "hoc_dance_events_2019",
-    "validation_code": "if (nativeAPI.getTime(\"measures\") > 5) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}\r\n"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2023-10-30 19:35:19 +0000\",\"changed\":[\"published\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:35:30 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:48:43 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:49:53 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:50:33 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:51:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:52:06 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:52:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:52:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:53:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:00:18 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:01:28 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:06:09 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:07:41 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:40:02 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:44:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:49:28 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 21:04:52 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30 19:35:19 +0000\",\"changed\":[\"published\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:35:30 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:48:43 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:49:53 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:50:33 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:51:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:52:06 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:52:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:52:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 19:53:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:00:18 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:01:28 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:06:09 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:07:41 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:40:02 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:44:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:49:28 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 21:04:52 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:30:29 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:30:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:58:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2023-10-31 19:29:51 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 23:16:03 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:16:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -58,11 +58,11 @@
               <field name="VALUE">{"inputs":["robot","lights","black-and-white"],"backgroundEffect":"frosted_grid","backgroundColor":"rave","foregroundEffect":"paint_drip"}</field>
               <next>
                 <block type="Dancelab_makeAnonymousDanceSprite" id="7{(SzN!#pQ:10jy{/0aZ">
-                  <field name="COSTUME">"DUCK"</field>
+                  <field name="COSTUME" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DUCK"</field>
                   <field name="LOCATION">{x: 100, y: 300}</field>
                   <next>
                     <block type="Dancelab_makeAnonymousDanceSprite" id="pWD0R]Ii)s_$[i0*11Ug">
-                      <field name="COSTUME">"DOG"</field>
+                      <field name="COSTUME" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DOG"</field>
                       <field name="LOCATION">{x: 300, y: 300}</field>
                     </block>
                   </next>
@@ -75,7 +75,7 @@
           <field name="KEY">"left"</field>
           <next>
             <block type="Dancelab_doMoveEachLR" id="%P#23qj5gGpEBnpxF%~`" movable="false">
-              <field name="GROUP">"DUCK"</field>
+              <field name="GROUP" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DUCK"</field>
               <field name="MOVE">MOVES.Dab</field>
               <field name="DIR">-1</field>
             </block>
@@ -85,7 +85,7 @@
           <field name="KEY">"right"</field>
           <next>
             <block type="Dancelab_doMoveEachLR" id="B)/#Gk0`{1$0n.3JxN0h" movable="false">
-              <field name="GROUP">"DOG"</field>
+              <field name="GROUP" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DOG"</field>
               <field name="MOVE">MOVES.Kick</field>
               <field name="DIR">-1</field>
             </block>
@@ -93,5 +93,8 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
   </blocks>
 </Dancelab>

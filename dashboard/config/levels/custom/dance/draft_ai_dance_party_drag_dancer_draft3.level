@@ -69,12 +69,15 @@
       "astronautintheocean_maskedwolf",
       "good4u_oliviarodrigo"
     ],
+    "block_pools": [
+      "Dancelab"
+    ],
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:02.035+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_drag_dancer_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_drag_dancer_b\"},{\"changed_at\":\"2023-10-30 15:28:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:02.035+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_drag_dancer_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_drag_dancer_b\"},{\"changed_at\":\"2023-10-30 15:28:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:46:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 17:54:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 17:56:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2023-10-31 17:57:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2023-10-31 18:00:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 20:36:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 20:52:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 22:59:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:05:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -87,12 +90,12 @@
     <toolbox_blocks>
       <xml>
         <block type="Dancelab_makeAnonymousDanceSprite" id="1" x="54" y="185">
-          <field name="COSTUME" config="&quot;CAT&quot;, &quot;SLOTH&quot;">"CAT"</field>
+          <field name="COSTUME" config="&quot;CAT&quot;,&quot;SLOTH&quot;">"CAT"</field>
           <field name="LOCATION">{x: 200, y: 200}</field>
         </block>
-        <block type="Dancelab_changeMoveEachLR" id=";9ub`bxQsC=JlWr0O9N^" x="60" y="275">
-          <field name="GROUP">"CAT"</field>
-          <field name="MOVE">MOVES.ClapHigh</field>
+        <block type="Dancelab_changeMoveEachLR" id="|y+CWEBlleENO5MU(?yL" x="67" y="265">
+          <field name="GROUP" config="&quot;CAT&quot;,&quot;SLOTH&quot;">"CAT"</field>
+          <field name="MOVE">"next"</field>
           <field name="DIR">-1</field>
         </block>
       </xml>

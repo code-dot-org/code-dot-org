@@ -83,7 +83,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:02.699+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_drag_ai_sad_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_drag_ai_sad_b\"},{\"changed_at\":\"2023-10-30 14:50:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:37:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:02.699+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_drag_ai_sad_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_drag_ai_sad_b\"},{\"changed_at\":\"2023-10-30 14:50:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:37:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 23:02:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:03:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:11:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -93,11 +93,11 @@
         <block type="Dancelab_whenSetup" id="LXzbE_lO4Lwn.`wXpDe2" deletable="false" movable="false" x="20" y="20">
           <statement name="DO">
             <block type="Dancelab_makeAnonymousDanceSprite" id=";H],)@7Aw*-dzna)%X;Z">
-              <field name="COSTUME">"MOOSE"</field>
+              <field name="COSTUME" config="&quot;BEAR&quot;,&quot;CAT&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"MOOSE"</field>
               <field name="LOCATION">{x: 200, y: 200}</field>
               <next>
                 <block type="Dancelab_changeMoveEachLR" id="hu7r]sURT_hQ{uQY*7?L">
-                  <field name="GROUP">"MOOSE"</field>
+                  <field name="GROUP" config="&quot;BEAR&quot;,&quot;CAT&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"MOOSE"</field>
                   <field name="MOVE">MOVES.Kick</field>
                   <field name="DIR">-1</field>
                 </block>
@@ -113,11 +113,11 @@
           <field name="VALUE"/>
         </block>
         <block type="Dancelab_makeAnonymousDanceSprite" id="[mgcjPN78~^U5aB}P50j" x="54" y="131">
-          <field name="COSTUME">"MOOSE"</field>
+          <field name="COSTUME" config="&quot;BEAR&quot;,&quot;CAT&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"MOOSE"</field>
           <field name="LOCATION">{x: 200, y: 200}</field>
         </block>
         <block type="Dancelab_changeMoveEachLR" id="cZzy+)*:T~.JUS8sb;BJ" x="57" y="231">
-          <field name="GROUP">"MOOSE"</field>
+          <field name="GROUP" config="&quot;BEAR&quot;,&quot;CAT&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"MOOSE"</field>
           <field name="MOVE">MOVES.Kick</field>
           <field name="DIR">-1</field>
         </block>

@@ -15,11 +15,7 @@
     ],
     "hide_animation_mode": true,
     "show_type_hints": true,
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -34,9 +30,13 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "default_song": "introtoshamstep_47SOUL"
+    "default_song": "introtoshamstep_47SOUL",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2023-10-30 21:44:06 +0000\",\"changed\":[\"published\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30 21:44:06 +0000\",\"changed\":[\"published\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 17:57:13 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 18:00:31 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
