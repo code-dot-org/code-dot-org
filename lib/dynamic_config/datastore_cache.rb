@@ -1,4 +1,3 @@
-require 'active_support'
 require 'cdo/shared_cache'
 require 'honeybadger/ruby'
 
