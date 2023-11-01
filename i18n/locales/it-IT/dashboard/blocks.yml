@@ -77,6 +77,11 @@ it:
           UNIT:
             '"measures"': battute
             '"seconds"': secondi
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': battute
+            '"seconds"': secondi
       Dancelab_changeColorBy:
         text: modifica {COLOR} {METHOD} di {AMOUNT}
         options:
@@ -584,6 +589,53 @@ it:
             '"iceCream"': Gelati
             '"default"': Chiaro
             '"neon"': Neon
+            '"tropical"': Tropicale
+            '"vintage"': Vintage
+            '"warm"': Rossi
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          imposta effetto di sfondo
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nessuno
+            '"rand"': "(Casuale)"
+            '"circles"': Tunnel
+            '"quads"': Angoli
+            '"clouds"': Nuvole
+            '"color_cycle"': Colori
+            '"diamonds"': Diamanti
+            '"disco_ball"': Palla da discoteca
+            '"fireworks"': Fuochi d'artificio
+            '"flowers"': Fiori
+            '"growing_stars"': Stelle nascenti
+            '"higher_power"': Higher Power
+            '"swirl"': Ipnotico
+            '"kaleidoscope"': Caleidoscopio
+            '"lasers"': Pista da ballo del laser
+            '"splatter"': Bolle
+            '"rainbow"': Arcobaleno
+            '"ripples_random"': Increspature casuali
+            '"ripples"': Increspature
+            '"snowflakes"': Neve
+            '"text"': Titolo della canzone
+            '"squiggles"': Ghirigori
+            '"galaxy"': Spazio
+            '"sparkles"': Scintille
+            '"spiral"': Spirale
+            '"disco"': Quadrati
+            '"starburst"': Esplosione di stelle
+            '"stars"': Stelle
+            '"music_wave"': Onde
+          PALETTE:
+            '"rave"': Bianco e nero
+            '"cool"': Blu
+            '"electronic"': Elettronica
+            '"iceCream"': Gelati
+            '"default"': Chiaro
+            '"neon"': Neon
+            '"ocean"': Oceano
+            '"rainbow"': Arcobaleno
             '"tropical"': Tropicale
             '"vintage"': Vintage
             '"warm"': Rossi

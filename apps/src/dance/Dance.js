@@ -182,6 +182,7 @@ Dance.prototype.init = function (config) {
           <DanceVisualizationColumn
             showFinishButton={showFinishButton}
             setSong={this.setSongCallback.bind(this)}
+            resetProgram={this.reset.bind(this)}
           />
         }
         onMount={onMount}
@@ -508,14 +509,18 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
-  const danceMessage = message ? danceMsg[message]() : '';
-
+  // Assign danceMessage the value of the message key if the key exists.
+  // Otherwise, assign it an empty string.
+  const danceMessage = danceMsg[message] ? danceMsg[message]() : '';
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
     this.message = danceMessage;
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = danceMessage;
+    // This message is a general message for users to keep coding since something is 'not quite right'.
+    // This is the general validation feedback given if the validation string key is not found.
+    const keepCodingMsg = danceMsg.danceFeedbackKeepCoding();
+    this.message = danceMessage.length === 0 ? keepCodingMsg : danceMessage;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }

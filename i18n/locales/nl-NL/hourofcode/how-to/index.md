@@ -19,7 +19,7 @@ Trying an Hour of Code is een eenvoudige en leuke manier om leerlingen kennis te
 - [Hoe sterk te beginnen met je 'Hour of Code'](#how-to-start)
 - [Coding verkrijgen](#code)
 - [Vier het succes van uw studenten](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Andere Hour of Code-bronnen voor docenten](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Wanneer je je [aanmeldt voor je Hour of Code-evenement](/#join), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Wanneer je je [aanmeldt voor je Hour of Code-evenement](/events), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Certificaten afdrukken]({{ urls/certificates }}) voor je leerlingen.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-25 19:50:17 UTC",
+    "serialized_at": "2023-10-31 19:30:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1629,7 +1629,7 @@
       "key": "e3707139-7993-4579-a970-946374624b6d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to come up with as many questions as they think would help them get the information they need to be helpful.\n",
         "name": "Preview the Lesson\r"
       },
       "seeding_key": {
@@ -4237,18 +4237,6 @@
       }
     },
     {
-      "name": "Unit 3 Journal - Example",
-      "url": "https://docs.google.com/presentation/d/1Jf3Z3mZWso9rpEhMPVb6ZhNTwXB12yL0XKEtfkdbtoQ/edit?usp=drive_link",
-      "key": "unit_3_journal_-_example",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_journal_-_example"
-      }
-    },
-    {
       "name": "Unit 3 Interactive Notebook Journal",
       "url": "https://docs.google.com/presentation/d/1P8Iz5X_NiTUx8fBJGtKcQPQfGaR9O9ujIWBJp_H6WtQ/edit?usp=drive_link",
       "key": "unit_3_journal_-_interactive_notebook",
@@ -4326,12 +4314,6 @@
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
         "resource.key": "unit_3_journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "unit_3_journal_-_example"
       }
     },
     {

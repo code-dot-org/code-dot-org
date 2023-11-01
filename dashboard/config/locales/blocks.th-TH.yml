@@ -73,6 +73,11 @@ th:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
         text: หลังจาก {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ห้องดนตรี
+            '"seconds"': วินาที
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -566,6 +571,51 @@ th:
             '"electronic"': ไฟฟ้า
             '"iceCream"': ไอศกรีม
             '"neon"': นีออน
+            '"rave"': ขาวดำ
+            '"tropical"': ทรอปิคอล
+            '"vintage"': วินเทจ
+            '"warm"': แดง
+        text: |-
+          "กำหนดแบ็กกราวนด์เอฟเฟกต์
+          {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': อุโมงค์
+            '"color_cycle"': สี
+            '"diamonds"': เพชร
+            '"disco"': สี่เหลี่ยมจัตุรัส
+            '"disco_ball"': บอลดิสโก้
+            '"fireworks"': พลุ
+            '"flowers"': ดอกไม้
+            '"galaxy"': พื้นที่
+            '"growing_stars"': ดาวเปล่งแสง
+            '"kaleidoscope"': ภาพลานตา
+            '"lasers"': ฟลอร์เต้นรำเลเซอร์
+            '"music_wave"': คลื่น
+            '"none"': ไม่มี
+            '"quads"': มุม
+            '"rainbow"': สายรุ้ง
+            '"rand"': "(สุ่ม)"
+            '"ripples"': ระลอกคลื่น
+            '"ripples_random"': สุ่มระลอกคลื่น
+            '"snowflakes"': หิมะ
+            '"sparkles"': ประกาย
+            '"spiral"': วงก้นหอย
+            '"splatter"': สาดสี
+            '"squiggles"': เส้นขะยุกขะยิก
+            '"starburst"': ดาวกระจาย
+            '"stars"': ดาว
+            '"swirl"': ฮิปโน
+            '"text"': ชื่อเพลง
+          PALETTE:
+            '"cool"': น้ำเงิน
+            '"default"': อ่อน
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': ไอศกรีม
+            '"neon"': นีออน
+            '"ocean"': มหาสมุทร
+            '"rainbow"': สายรุ้ง
             '"rave"': ขาวดำ
             '"tropical"': ทรอปิคอล
             '"vintage"': วินเทจ

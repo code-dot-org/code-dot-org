@@ -135,7 +135,7 @@ Yordam berishning eng yaxshi usullaridan biri bu haqida ma'lumotlarni tarqatish 
 
 ### 1. Tadbiringizni ro'yxatdan o'tkazing
 
-Siz [Dasturlash Soati tadbirini](/#join) ro‘yxatdan o‘tkazganingizda, sizga yangiliklar va Dasturlash Soatini muvaffaqiyatli o‘tkazish bo‘yicha maslahatlar bilan foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy maktablar yoki ota-onalarga ular yaqinida tadbir o'tkazayotganligingiz haqida xabar berishingiz mumkin.
+Kod soati [tadbiriga ro'yxatdan o'tganingizda](/events), muvaffaqiyatli Kod soati o'tkazish bo'yicha yangiliklar va maslahatlar bilan foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy maktablar yoki ota-onalarga ular yaqinida tadbir o'tkazayotganligingiz haqida xabar berishingiz mumkin.
 
 ### 2. Ijtimoiy tarmoqlarga joylang
 

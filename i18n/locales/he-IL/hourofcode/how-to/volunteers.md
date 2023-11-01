@@ -133,7 +133,7 @@ Hour of Code הוא מבוא בן שעה אחת למדעי המחשב שנועד
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- אם יש לכם קבוצת צוות שתנחה את האירוע שלכם או תתנדב בבית ספר מקומי, שקלו להזמין [חולצות בהתאמה אישית ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) לקבוצה שלכם.
+- אם יש לך קבוצת צוות שתקל על האירוע שלך או התנדב בבית ספר מקומי, שקול להזמין חולצות טריקו [מותאמות אישית](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) לקבוצה שלך.
 
 ### 3. Plan your technology needs
 
@@ -186,7 +186,7 @@ The best Hour of Code experience includes Internet-connected computers. אבל �
 
 ### 1. Register Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. כך גם תוכלו ליידע בתי ספר מקומיים או הורים שאתם מארחים אירוע קרוב אליהם.
+כשאתה נר [שם לאירוע Hour of Code שלך](/events), תקבל הודעות דוא"ל מועילות עם חדשות וטיפים לאירוח שעת קוד מוצלחת. כך גם תוכלו ליידע בתי ספר מקומיים או הורים שאתם מארחים אירוע קרוב אליהם.
 
 ### 2. Post on Social Media
 
