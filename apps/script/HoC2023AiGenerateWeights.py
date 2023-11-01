@@ -100,7 +100,7 @@ foreground_effects_map = create_map_print_options('foreground_effects', foregrou
 # measure the relatedness of text strings. The distance between two vectors measures
 # their relatedness. https://platform.openai.com/docs/guides/embeddings
 # These caches are stored as pickle files; python's native way to serialize data.
-embedding_paths = {
+embeddings_paths = {
     'emojis': 'apps/static/dance/ai/model/input_embeddings.pkl',
     'palettes': 'apps/static/dance/ai/model/palette_embeddings.pkl',
     'background_effects': 'apps/static/dance/ai/model/background_embeddings.pkl',
@@ -108,8 +108,8 @@ embedding_paths = {
 }
 
 embeddings_caches = {}
-for path in embedding_paths.keys():
-    embeddings_caches[path] = load_embedding_cache(path)
+for path in embeddings_paths.keys():
+    embeddings_caches[path] = load_embeddings_cache(path)
 
 # Retrieve embeddings for input emojis, palettes, background efects, and foreground effects.
 # Use emojis as inputs.
@@ -121,9 +121,11 @@ options_lists = {
 }
 
 embeddings = {}
-# embeddings is a dictionary with four lists
+# embeddings is a dictionary with four lists of embeddings:
 # 'emojis': [[emoji1_embedding], [emoji2_embedding], ...]
 # 'palettes: [[palette1+embedding], [palette2_embedding], ...]
+# 'background_effects': [[background_effect1_embedding], [background_effect2_embedding], ...]
+# 'foreground_effects': [[foreground_effect1_embedding], [foreground_effect2_embedding], ...]
 for options_list_name in options_lists.keys():
     embeddings[options_list_name] = [retrieve_embedding(string=item,
                                                         cache_path=embedding_paths[options_list_name],

@@ -77,7 +77,7 @@ def create_map_print_options(options_name, model_descriptive_names, blockly_ids_
 EMBEDDING_MODEL = 'text-embedding-ada-002'
 
 # This function loads the embeddings cache file if present, and otherwise creates a new file.
-def load_embedding_cache(path):
+def load_embeddings_cache(path):
     try:
         embedding_cache = pd.read_pickle(path)
     except FileNotFoundError:
@@ -86,8 +86,8 @@ def load_embedding_cache(path):
         pickle.dump(embedding_cache, embedding_cache_file)    
     return embedding_cache
 
-# This function retrieves embeddings from the cache if present, and otherwise requests the embedding
-# via the Open AI API
+# This function retrieves an embedding for a string from the cache if present, and otherwise requests
+# the embedding via the Open AI API
 def retrieve_embedding(string: str,
     cache_path: str,
     embedding_cache,
@@ -101,17 +101,24 @@ def retrieve_embedding(string: str,
             pickle.dump(embedding_cache, embedding_cache_file)
     return embedding_cache[(string, model)]
 
+# This function calculates the similarity score between an input enmbedding and a list of output embeddings.
 def calculate_similarity_score(input_embeddings, output_embeddings, emojis_map):
-    # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
-    # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
-    # Cosine similarity is preferable as we can easily sum them together to take a max value later
+    # distance_from_embeddings returns a list of distances between the input embedding and each output embedding
+    # https://github.com/openai/openai-python/blob/284c1799070c723c6a553337134148a7ab088dd8/openai/embeddings_utils.py#L139
+    # Thus, similarities is an array of arrays of distances, with each subarray representing the distances between
+    # from an input embedding to each output embedding.    
     similarities = [distances_from_embeddings(input_vector, output_embeddings, distance_metric='cosine')
                             for input_vector in input_embeddings]
     
     # Conversion to pandas DataFrame for ease of manipulation
     similarities = pd.DataFrame(similarities)
+    
     # We use the emoji_ids and not the emoji Unicode as index for use by client
     similarities.index = emojis_map.values()
+    
+    # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
+    # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
+    # Cosine similarity is preferable as we can easily sum them together to take a max value later
     similarities = similarities.apply(lambda x: round((x-1)*-1, 3), axis = 0)
 
     # Conversion to required JSON lookup format
