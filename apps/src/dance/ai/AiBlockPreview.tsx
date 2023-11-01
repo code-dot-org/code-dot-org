@@ -60,7 +60,10 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     if (!blockPreviewContainerRef.current || !workspaceRef.current) {
       return;
     }
-    const blocksSvg = generateBlocksFromResult(workspaceRef.current);
+    const blocksSvg = generateBlocksFromResult(
+      workspaceRef.current,
+      resultJson
+    );
     blocksSvg.forEach((blockSvg: BlockSvg) => {
       blockSvg.initSvg();
       blockSvg.render();
@@ -70,7 +73,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     return () => {
       workspaceRef.current?.clear();
     };
-  }, [blockPreviewContainerRef, generateBlocksFromResult]);
+  }, [blockPreviewContainerRef, resultJson]);
 
   // Dispose of the workspace on unmount.
   useEffect(() => () => workspaceRef.current?.dispose(), []);
