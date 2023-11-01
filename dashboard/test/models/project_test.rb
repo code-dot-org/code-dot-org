@@ -12,11 +12,11 @@ class ProjectTest < ActiveSupport::TestCase
 
   test "Project owner account must have existed for a week to publish" do
     project_owner = create :student
-    project = build :project, owner: project_owner
+    project = create :project, owner: project_owner
     refute project.owner_existed_long_enough_to_publish?
 
     project_owner = create :student, created_at: Time.now - 8.days
-    project = build :project, owner: project_owner
+    project = create :project, owner: project_owner
 
     assert project.owner_existed_long_enough_to_publish?
   end
