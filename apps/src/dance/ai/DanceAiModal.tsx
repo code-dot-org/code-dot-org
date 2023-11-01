@@ -413,7 +413,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             : mode === Mode.RESULTS && currentToggle === 'code'
             ? 'Did you know? A.I. wrote this code to generate the effect.'
             : mode === Mode.EXPLANATION
-            ? "Each emoji contributes to A.I.'s decision. Here are five possible effects and the calculations that A.I made."
+            ? "Each emoji contributes to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
             : undefined}
         </div>
 
@@ -523,8 +523,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               </div>
             </div>
           )}
-          {mode === Mode.GENERATING && /*generatingStep[1] >= 1 && */ (
-            <div className={moduleStyles.score}>
+          {mode === Mode.GENERATING && (
+            /*generatingStep[1] >= 1 && */ <div className={moduleStyles.score}>
               <div className={moduleStyles.barContainer}>
                 <div
                   className={moduleStyles.barFill}
@@ -581,11 +581,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                   className={moduleStyles.flipCardFront}
                 >
                   <AiVisualizationPreview
-                    generateBlocks={() => {
-                      return generateBlocksFromResult(
-                        Blockly.getMainWorkspace()
-                      );
-                    }}
+                    blocks={generateBlocksFromResult(
+                      Blockly.getMainWorkspace()
+                    )}
                   />
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
