@@ -5,6 +5,7 @@ import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
+
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
@@ -424,6 +425,11 @@ Dance.prototype.afterInject_ = function () {
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
+  console.log('playSong', url);
+  if (Sounds.getSingleton().soundsById[url].isPlaying()) {
+    audioCommands.stopSound({url: url});
+  }
+
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -442,6 +448,9 @@ Dance.prototype.reset = function () {
   if (clickToRunImage) {
     clickToRunImage.style.display = 'block';
   }
+  console.log('reset triggered');
+  console.log(Sounds.getSingleton().soundsById);
+  // console.log(Sounds.getSingleton().getPlayingSounds())
 
   Sounds.getSingleton().stopAllAudio();
 
@@ -459,6 +468,8 @@ Dance.prototype.reset = function () {
   if (this.usesPreview) {
     this.preview();
   }
+  console.log(Sounds.getSingleton().soundsById);
+  console.log('00000000');
 };
 
 /**

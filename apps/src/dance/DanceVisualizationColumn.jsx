@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
@@ -6,79 +6,178 @@ import BelowVisualization from '../templates/BelowVisualization';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+// import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
-// import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
-export const SongSelector = Radium(
-  class extends React.Component {
-    static propTypes = {
-      enableSongSelection: PropTypes.bool,
-      setSong: PropTypes.func.isRequired,
-      selectedSong: PropTypes.string,
-      songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOn: PropTypes.bool.isRequired,
-    };
+export const SongSelector = ({
+  selectedSong,
+  levelIsRunning,
+  setSong,
+  songData,
+  enableSongSelection,
+  filterOn,
+}) => {
+  // const [songInPreview, setSongInPreview] = useState(false);
+  // useEffect(() => {
+  //   console.log('songInPreview', songInPreview);
+  //   console.log('levelIsRunning', levelIsRunning);
+  //   console.log('selectedSong', selectedSong);
+  //   if (songInPreview && (levelIsRunning || songInPreview !== selectedSong)) {
+  //     console.log('stop playing song')
+  //     audioCommands.stopSound({url: songData[songInPreview]?.url});
+  //     console.log(songData[songInPreview]?.url)
+  //     setSongInPreview(null);
+  //   }
+  //   console.log('-=-=-=-');
+  // }, [songData, songInPreview, levelIsRunning, selectedSong]);
 
-    changeSong = event => {
+  const songKeys = getFilteredSongKeys(songData, filterOn);
+  const changeSong = useCallback(
+    event => {
       const songId = event.target.value;
-      this.props.setSong(songId);
-    };
+      setSong(songId);
+    },
+    [setSong]
+  );
 
-    render() {
-      const {selectedSong, songData, enableSongSelection, filterOn} =
-        this.props;
+  return (
+    <div id="song-selector-wrapper">
+      <label>
+        <b>{i18n.selectSong()}</b>
+      </label>
+      <button
+        type="button"
+        onClick={() => {
+          console.log('start playing song');
+          audioCommands.playSound({
+            url: `${songData[selectedSong].url}`,
+            callback: () => {
+              // setSongInPreview(true);
+              // console.log(songInPreview)
+              setTimeout(() => {
+                console.log('stop playing song');
+                // console.log(levelIsRunning, songInPreview);
+                if (!levelIsRunning) {
+                  audioCommands.stopSound({url: songData[selectedSong].url});
+                  console.log('end song - ', songData[selectedSong].url);
+                  // setSongInPreview(false);
+                }
+              }, 10000);
+              console.log('callback');
+            },
+            onEnded: () => {
+              // setSongInPreview(false);
+              console.log('end');
+            },
+          });
+        }}
+      >
+        Preview song
+      </button>
+      <select
+        id="song_selector"
+        style={styles.selectStyle}
+        onChange={changeSong}
+        value={selectedSong}
+        disabled={!enableSongSelection}
+      >
+        {songKeys.map((option, i) => (
+          <option key={i} value={option}>
+            {songData[option].title}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
 
-      const songKeys = getFilteredSongKeys(songData, filterOn);
+SongSelector.propTypes = {
+  enableSongSelection: PropTypes.bool,
+  levelIsRunning: PropTypes.bool,
+  setSong: PropTypes.func.isRequired,
+  selectedSong: PropTypes.string,
+  songData: PropTypes.objectOf(PropTypes.object).isRequired,
+  filterOn: PropTypes.bool.isRequired,
+};
 
-      return (
-        <div id="song-selector-wrapper">
-          <label>
-            <b>{i18n.selectSong()}</b>
-          </label>
-          {/*<button type="button"*/}
-          {/*onClick={ () => {*/}
-          {/*    console.log('start playing song');*/}
-          {/*    audioCommands.playSound({*/}
-          {/*    url: songData[selectedSong].url,*/}
-          {/*    callback: () => {*/}
-          {/*    setTimeout(() => {*/}
-          {/*    audioCommands.stopSound({url: songData[selectedSong].url});*/}
-          {/*}, 10000);*/}
-          {/*    console.log('callback');*/}
-          {/*},*/}
-          {/*    onEnded: () => {*/}
-          {/*    console.log('end');*/}
-          {/*    // onEnded();*/}
-          {/*    // this.studioApp_.toggleRunReset('run');*/}
-          {/*},*/}
-          {/*});*/}
-          {/*}}>*/}
-          {/*    Preview song*/}
-          {/*</button>*/}
-          <select
-            id="song_selector"
-            style={styles.selectStyle}
-            onChange={this.changeSong}
-            value={selectedSong}
-            disabled={!enableSongSelection}
-          >
-            {songKeys.map((option, i) => (
-              <option key={i} value={option}>
-                {songData[option].title}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    }
-  }
-);
+// export const SongSelector = Radium(
+//   class extends React.Component {
+//     static propTypes = {
+//       enableSongSelection: PropTypes.bool,
+//       levelIsRunning: PropTypes.bool,
+//       setSong: PropTypes.func.isRequired,
+//       selectedSong: PropTypes.string,
+//       songData: PropTypes.objectOf(PropTypes.object).isRequired,
+//       filterOn: PropTypes.bool.isRequired,
+//     };
+//
+//     changeSong = event => {
+//       const songId = event.target.value;
+//       this.props.setSong(songId);
+//     };
+//
+//     render() {
+//       const {
+//         selectedSong,
+//         songData,
+//         enableSongSelection,
+//         filterOn,
+//         hideRunButton,
+//       } = this.props;
+//
+//       const songKeys = getFilteredSongKeys(songData, filterOn);
+//
+//       return (
+//         <div id="song-selector-wrapper">
+//           <label>
+//             <b>{i18n.selectSong()}</b>
+//           </label>
+//           <button
+//             type="button"
+//             onClick={() => {
+//               console.log('start playing song');
+//               audioCommands.playSound({
+//                 url: songData[selectedSong].url,
+//                 callback: () => {
+//                   setTimeout(() => {
+//                     audioCommands.stopSound({url: songData[selectedSong].url});
+//                   }, 10000);
+//                   console.log('callback');
+//                 },
+//                 onEnded: () => {
+//                   console.log('end');
+//                   // onEnded();
+//                   // this.studioApp_.toggleRunReset('run');
+//                 },
+//               });
+//             }}
+//           >
+//             Preview song
+//           </button>
+//           <select
+//             id="song_selector"
+//             style={styles.selectStyle}
+//             onChange={this.changeSong}
+//             value={selectedSong}
+//             disabled={!enableSongSelection}
+//           >
+//             {songKeys.map((option, i) => (
+//               <option key={i} value={option}>
+//                 {songData[option].title}
+//               </option>
+//             ))}
+//           </select>
+//         </div>
+//       );
+//     }
+//   }
+// );
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
@@ -102,8 +201,8 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-    Turn the song filter off
-  */
+                  Turn the song filter off
+                */
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };
@@ -119,11 +218,11 @@ class DanceVisualizationColumn extends React.Component {
   }
 
   render() {
+    const {levelIsRunning} = this.props;
+    // console.log('levelIsRunning', levelIsRunning);
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
-    // const {nativeApi} = this.props;
-    // console.log(nativeApi);
 
     const imgSrc = filenameToImgUrl['click-to-run'];
 
@@ -145,6 +244,7 @@ class DanceVisualizationColumn extends React.Component {
           {!this.props.isShareView && (
             <SongSelector
               enableSongSelection={enableSongSelection}
+              levelIsRunning={levelIsRunning}
               setSong={this.props.setSong}
               selectedSong={this.props.selectedSong}
               songData={this.props.songData}

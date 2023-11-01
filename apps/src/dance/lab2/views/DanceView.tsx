@@ -112,6 +112,7 @@ const DanceView: React.FunctionComponent = () => {
             selectedSong={selectedSong}
             songData={songData}
             filterOn={filterOn}
+            levelIsRunning={isRunning}
           />
           <div
             id={DANCE_VISUALIZATION_ID}
