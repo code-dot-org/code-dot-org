@@ -602,3 +602,33 @@ i.infoAlertIcon {
   position: absolute;
   height: 0
 }
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+.aiFeedbackTextbox {
+  height: 60px;
+  width: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.submitFeedbackRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.submitFeedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aiFeedbackReceived {
+  margin-left: auto;
+}
