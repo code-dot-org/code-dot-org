@@ -780,7 +780,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["level_source_id"], name: "index_level_sources_multi_types_on_level_source_id"
   end
 
-  create_table "levels", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "levels", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "game_id"
     t.string "name", null: false
     t.datetime "created_at"
@@ -792,8 +792,8 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.string "type"
     t.string "md5"
     t.boolean "published", default: false, null: false
-    t.text "notes"
-    t.text "audit_log"
+    t.text "notes", size: :medium
+    t.text "audit_log", size: :medium
     t.index ["game_id"], name: "index_levels_on_game_id"
     t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
@@ -1641,7 +1641,7 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id"
   end
 
-  create_table "resources", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "resources", id: :integer, charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "url", null: false
     t.string "key", null: false
@@ -1651,6 +1651,13 @@ ActiveRecord::Schema.define(version: 2023_10_26_235831) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
+  end
+
+  create_table "resources_scripts", id: false, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "script_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["resource_id", "script_id"], name: "index_resources_scripts_on_resource_id_and_script_id"
+    t.index ["script_id", "resource_id"], name: "index_resources_scripts_on_script_id_and_resource_id", unique: true
   end
 
   create_table "rubric_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
