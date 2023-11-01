@@ -1,6 +1,7 @@
 - data = {}
 - data[:is_csa] = @script.csa?
 - data[:level_type] = @level.type
+- data[:level_validated] = !!@level.properties["encrypted_validation"]
 - data[:has_ai_tutor_access] = @current_user.has_ai_tutor_access?
 
 - content_for(:head) do

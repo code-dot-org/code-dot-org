@@ -13,18 +13,21 @@ function initPage() {
   const shouldRenderAITutorPanel =
     aiTutorPanelData.has_ai_tutor_access && aiTutorPanelData.is_csa;
   if (shouldRenderAITutorPanel) {
-    renderAITutorPanel(aiTutorPanelData.level_type);
+    renderAITutorPanel(
+      aiTutorPanelData.level_type,
+      aiTutorPanelData.level_validated
+    );
   }
 }
 
-function renderAITutorPanel(levelType) {
+function renderAITutorPanel(levelType, isLevelValidated) {
   const div = document.createElement('div');
   div.setAttribute('id', 'ai-tutor-panel-container');
   const store = getStore();
 
   ReactDOM.render(
     <Provider store={store}>
-      <AITutorPanel levelType={levelType} />
+      <AITutorPanel levelType={levelType} isLevelValidated={isLevelValidated} />
     </Provider>,
     div
   );
