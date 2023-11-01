@@ -41,3 +41,13 @@ export enum AiOutput {
   GENERATED_BLOCKS = 'generated_blocks',
   BOTH = 'both',
 }
+
+export type LabelMaps = {
+  [key in FieldKey]: {[id: string]: string};
+};
+
+export enum FieldKey {
+  BACKGROUND_EFFECT = 'backgroundEffect',
+  FOREGROUND_EFFECT = 'foregroundEffect',
+  BACKGROUND_PALETTE = 'backgroundColor',
+}
