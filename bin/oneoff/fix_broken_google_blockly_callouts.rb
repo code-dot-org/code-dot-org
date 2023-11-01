@@ -20,10 +20,6 @@ def fix_callouts
   process_levels(Poetry.all)
   puts "***DANCE***"
   process_levels(Dancelab.all)
-  puts "***BOUNCE***"
-  process_levels(Bounce.all)
-  puts "***FLAPPY***"
-  process_levels(Flappy.all)
 end
 
 def process_levels(levels)
@@ -79,7 +75,7 @@ def process_levels(levels)
     puts "***Updating #{block_ids_to_fix.length + category_ids_to_fix.length} callouts on #{level.name}***"
     add_new_callouts(block_ids_to_fix, broken_block_callouts, callouts)
     add_new_callouts(category_ids_to_fix, broken_category_callouts, callouts)
-    if add_ids_to_blocks(block_ids_to_fix, level, broken_callouts)
+    if add_ids_to_blocks(block_ids_to_fix, level, broken_block_callouts)
       level.callout_json = JSON.generate(callouts)
       unless DRY_RUN
         level.save!(touch: false)
