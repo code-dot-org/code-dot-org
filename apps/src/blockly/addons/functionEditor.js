@@ -14,6 +14,7 @@ import {
 import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
+import {frameSizes} from './cdoConstants';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -179,10 +180,16 @@ export default class FunctionEditor {
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
 
+    // Used to create and render an SVG frame instance.
+    const getDefinitionBlockColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this.block);
+    };
+
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
       isBehavior ? msg.behaviorEditorHeader() : msg.function(),
-      'blocklyWorkspaceSvgFrame'
+      'blocklyWorkspaceSvgFrame',
+      getDefinitionBlockColor
     );
     this.editorWorkspace.svgFrame_.render();
   }
@@ -344,11 +351,14 @@ export default class FunctionEditor {
    * @returns Block configuration with x and y coordinates
    */
   addEditorWorkspaceBlockConfig(blockConfig) {
-    return {
+    // Position the blocks within the workspace svg frame.
+    const x = frameSizes.MARGIN_SIDE + 5;
+    const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
+    const returnValue = {
       ...blockConfig,
       movable: false,
-      x: 20,
-      y: 40,
+      x,
+      y,
     };
   }
 
