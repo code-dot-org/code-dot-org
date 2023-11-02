@@ -1,18 +1,21 @@
-# Script to generate the associated output weights contained in files like cached-spacy-background-map.json
+# Script to generate the associated output weights contained in files like cached_background_effects_map.json
 # that are used to calculate final effects output HoC2023.
-# Run this Python script from the code-dot-org root directory.
+# Run this Python script from the code-dot-org root directory. 
+# Before running the script, you must assign the openai.api_key with your Open AI API key
+# the in Hoc2023AiHelperFunctions.py file.
 # python apps/script/HoC2023AiGenerateWeights.py
-# At the bottom of this file are background effects, palettes and foreground effects in the order they appear in the dropdowns.
+# At the bottom of this file are background effects, palettes and foreground effects in the order
+# that they appear in the dropdowns.
 # When this file is run and the three cached data files are replaced in apps/static/dance/ai/model,
-# please update comments lists below with output of this script.
+# please update in comments the lists with output of this script at the bottom of this file.
 
 import json
 from HoC2023AiHelperFunctions import *
 
-# Get the list of emoji model_descriptive_names and their corresponding emoji ids
+# Get the list of emoji model_descriptive_names and their corresponding emoji ids.
 emoji_model_descriptive_names_list, emojis_map = get_ai_emoji_inputs()
 
-# get the background effects, foreground effects, and palettes lists (blockly_ids and user_facing_names)
+# Get the background effects, foreground effects, and palettes lists (blockly_ids and user_facing_names).
 background_effect_blockly_ids_list, background_effect_user_facing_names_list = get_background_effects()
 palette_blockly_ids_list, palette_user_facing_names_list = get_palettes()
 foreground_effect_blockly_ids_list, foreground_effect_user_facing_names_list = get_foreground_effects()
