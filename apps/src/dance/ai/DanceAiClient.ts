@@ -4,6 +4,11 @@ import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached-spacy-palet
 
 import {GeneratedEffect} from '../types';
 
+export enum ChooseEffectsQuality {
+  GOOD = 'good',
+  BAD = 'bad',
+}
+
 export type CachedWeightsMapping = {
   emojiAssociations: {[key: string]: number[]};
   output: string[];
@@ -12,16 +17,31 @@ export type CachedWeightsMapping = {
 const CachedBackgrounds: CachedWeightsMapping = UntypedCachedBackgrounds;
 const CachedForegrounds: CachedWeightsMapping = UntypedCachedForegrounds;
 const CachedPalettes: CachedWeightsMapping = UntypedCachedPalettes;
+
 /**
- * Chooses the foreground, background, and palette effects that are most closely associated with
- * the emojis the user selected.
+ * Chooses a random background effect, background color, and foreground effect associated
+ * with the emojis the user selected.  If quality is GOOD, then choose one of the best
+ * associated; if quality is BAD, then choose one of the worst associated.  Also return
+ * the score for each returned value.
  * @param {array} emojis: the list of emojis the user selected
- * @returns: a JSON string representing an object containing the effects that were chosen, for
- * example: {"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}
+ * @param {ChooseEffectsQuality} quality: whether we want good or bad scoring effects
+ * @returns: an object containing the effects that were chosen, and their scores, for example:
+ * {
+ *   "results: {
+ *     "backgroundEffect": "sparkles",
+ *     "backgroundColor": "cool",
+ *     "foregroundEffect": "bubbles"
+ *   },
+ *   "scores": {
+ *     "backgroundEffect": 0.1,
+ *     "backgroundColor":  0.2,
+ *     "foregroundEffect": 0.3
+ *   }
+ * }
  */
 export function chooseEffects(
   emojis: string[],
-  topOptions: boolean
+  quality: ChooseEffectsQuality
 ): GeneratedEffect {
   // Obtain final summed output weight based off input received
   const outputTypes: CachedWeightsMapping[] = [
@@ -38,9 +58,10 @@ export function chooseEffects(
   const outputOptions: [number, string][][] = outputWeights.map(
     (weightVector, i) => {
       const optionsAll = obtainOptions(weightVector, outputTypes[i]);
-      const options = topOptions
-        ? optionsAll.slice(0, numRandomOptions)
-        : optionsAll.slice(-numRandomOptions);
+      const options =
+        quality === ChooseEffectsQuality.GOOD
+          ? optionsAll.slice(0, numRandomOptions)
+          : optionsAll.slice(-numRandomOptions);
       return options;
     }
   );

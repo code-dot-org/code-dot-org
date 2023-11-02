@@ -7,7 +7,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {closeAiModal, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {FieldDropdown, Workspace} from 'blockly/core';
-import {chooseEffects} from './DanceAiClient';
+import {chooseEffects, ChooseEffectsQuality} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
@@ -241,10 +241,13 @@ const DanceAiModal: React.FunctionComponent = () => {
   );
 
   const startAi = async () => {
-    const result = chooseEffects(inputs, true);
+    const result = chooseEffects(inputs, ChooseEffectsQuality.GOOD);
     generatedEffects.current = [];
     for (let i = 0; i < BAD_GENERATED_RESULTS_COUNT; i++) {
-      generatedEffects.current[i] = chooseEffects(inputs, false);
+      generatedEffects.current[i] = chooseEffects(
+        inputs,
+        ChooseEffectsQuality.BAD
+      );
     }
     generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = result;
   };
