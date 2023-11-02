@@ -44,26 +44,32 @@ function reorganizeAndWrapSlides(carouselId, cardsList) {
   slideItems.forEach((slideItem) => slideItem.remove());
 }
 
-function handleScreenSize(carouselId) {
-  if (windowWidth > 639 && windowWidth < 799) {
+function handleScreenSize(carouselId, cardsList) {
+  if (windowWidth < 639) {
     reorganizeAndWrapSlides(carouselId, 1);
-    console.log("639 - 799");
-  } else if (windowWidth > 799) {
+    console.log("> 639");
+  } else if (
+    windowWidth > 639 &&
+    windowWidth < 959 &&
+    carouselId === "minecraft_cdo_activities"
+  ) {
     reorganizeAndWrapSlides(carouselId, 2);
-    console.log("> 800");
+    console.log("639 - 959");
+  } else if (windowWidth > 959) {
+    reorganizeAndWrapSlides(carouselId, cardsList);
+    console.log("> 960");
   }
 }
 
 $(document).ready(function () {
   let idMinecraftActivities = "#minecraft_cdo_activities";
-  handleScreenSize("minecraft_cdo_activities");
+  handleScreenSize("minecraft_cdo_activities", 3);
   $(idMinecraftActivities + " .slides").carouFredSel({
     auto: false,
     pagination: "#minecraft_cdo_activities-pagination",
     prev: "#prev_1",
     next: "#next_1",
     responsive: true,
-    height: "490",
     scroll: 1,
     swipe: {
       onTouch: true,
@@ -71,7 +77,7 @@ $(document).ready(function () {
     },
   });
   let idInspirationalVideo = "#inspirational_works_collection";
-  handleScreenSize("inspirational_works_collection");
+  handleScreenSize("inspirational_works_collection", 2);
   $(idInspirationalVideo + " .slides").carouFredSel({
     auto: false,
     pagination: "#inspirational_works_collection_pagination",

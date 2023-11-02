@@ -31,12 +31,12 @@
   ]
 
 .carousel-wrapper#minecraft_cdo_activities
-  .carousel.carousel--collections{style: "height: 515px"}
+  .carousel.blocks
     .slides
       - slide_item.each do |slide_item|
         .slide
           .slide-content
-            .action-block.action-block--one-col.flex-space-between
+            .action-block.action-block--one-col
               .content-wrapper
                 %p.overline
                   =hoc_s(:module_label_grades)
@@ -44,7 +44,7 @@
                 %h3
                   = slide_item[:title]
                 %img{src: "#{slide_item[:image]}", alt: ""}
-                %p.body-three
+                %p.body-three.no-margin-bottom
                   = slide_item[:desc]
               .content-footer
                 %a.link-button.has-external-link{href: "#{slide_item[:url]}", "aria-label": "#{slide_item[:aria_label]}"}
