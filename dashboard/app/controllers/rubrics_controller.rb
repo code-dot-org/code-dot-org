@@ -113,13 +113,14 @@ class RubricsController < ApplicationController
     @user = User.find_by(id: user_id)
     return head :forbidden unless @user&.student_of?(current_user)
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
-    return head :forbidden unless is_ai_experiment_enabled
-
     # Find the rubric (must have something to evaluate)
     return head :bad_request unless @rubric
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
@@ -141,10 +142,11 @@ class RubricsController < ApplicationController
     @user = User.find_by(id: user_id)
     return head :forbidden unless @user&.student_of?(current_user)
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
-    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
