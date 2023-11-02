@@ -11,7 +11,7 @@ import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput, FieldKey, GeneratedEffect, Scores} from '../types';
+import {AiOutput, FieldKey, GeneratedEffect} from '../types';
 import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
@@ -39,6 +39,11 @@ type AiModalItem = {
 
 // Steps in our generating process have a step and a substep.
 type GeneratingStep = [number, number];
+
+enum Toggle {
+  AI_BLOCK = 'aiBlock',
+  CODE = 'code',
+}
 
 // Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 function useInterval(callback: () => void, delay: number | undefined) {
@@ -89,7 +94,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const [inputs, setInputs] = useState<string[]>([]);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingStep, setGeneratingStep] = useState<GeneratingStep>([0, 0]);
-  const [currentToggle, setCurrentToggle] = useState<string>('ai-block');
+  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -291,12 +296,12 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const showUseButton =
     mode === Mode.RESULTS &&
-    currentToggle === 'ai-block' &&
+    currentToggle === Toggle.AI_BLOCK &&
     (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
   const showConvertButton =
     mode === Mode.RESULTS &&
-    currentToggle === 'code' &&
+    currentToggle === Toggle.CODE &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   let botImage = aiBotBorder;
@@ -359,14 +364,14 @@ const DanceAiModal: React.FunctionComponent = () => {
             <ToggleGroup
               selected={currentToggle}
               activeColor={color.teal}
-              onChange={(value: string) => {
+              onChange={(value: Toggle) => {
                 setCurrentToggle(value);
               }}
             >
-              <button key={0} type="button" value={'ai-block'}>
+              <button key={0} type="button" value={Toggle.AI_BLOCK}>
                 Effect
               </button>
-              <button key={1} type="button" value={'code'}>
+              <button key={1} type="button" value={Toggle.CODE}>
                 Code
               </button>
             </ToggleGroup>
@@ -385,9 +390,9 @@ const DanceAiModal: React.FunctionComponent = () => {
             ? 'A.I. is generating this effect.'
             : mode === Mode.GENERATING
             ? 'A.I. is finding the best effect to generate.'
-            : mode === Mode.RESULTS && currentToggle === 'ai-block'
+            : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
             ? 'A.I. generated this effect.'
-            : mode === Mode.RESULTS && currentToggle === 'code'
+            : mode === Mode.RESULTS && currentToggle === Toggle.CODE
             ? 'Did you know? A.I. wrote this code to generate the effect.'
             : mode === Mode.EXPLANATION
             ? "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
@@ -507,7 +512,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 className={classNames(
                   moduleStyles.flipCardInner,
                   mode === Mode.RESULTS &&
-                    currentToggle === 'code' &&
+                    currentToggle === Toggle.CODE &&
                     moduleStyles.flipCardInnerFlipped
                 )}
               >
