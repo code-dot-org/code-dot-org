@@ -54,11 +54,12 @@ options = {
 
 # embeddings is a dictionary with four lists of embeddings: one for each of the four options above.
 embeddings = {}
-for category in options.keys():
-    embeddings[category] = [retrieve_embedding(string=item,
-                                                        cache_path=embeddings_paths[category],
-                                                        embedding_cache=embeddings_caches[category])
-                                                        for item in options[category]]
+for category, options in options.items():
+    embeddings[category] = [retrieve_embedding(string=option,
+                                                cache_path=embeddings_paths[category],
+                                                embedding_cache=embeddings_caches[category])
+                                for option in options
+                            ]
 
 # similarities is a dictionary of dictionaries, one dictionary for each output (palette, background effect, and foreground effect).
 # Each of the output's dictionary contains keys which are the emoji id names and values which are the

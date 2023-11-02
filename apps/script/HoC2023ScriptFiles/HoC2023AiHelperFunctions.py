@@ -75,8 +75,8 @@ def load_embeddings_cache(path):
         embedding_cache = pd.read_pickle(path)
     except FileNotFoundError:
         embedding_cache = {}
-    with open(path, "wb") as embedding_cache_file:
-        pickle.dump(embedding_cache, embedding_cache_file)    
+        with open(path, "wb") as embedding_cache_file:
+            pickle.dump(embedding_cache, embedding_cache_file)    
     return embedding_cache
 
 # This function retrieves an embedding for a string from the cache if present, and otherwise requests
