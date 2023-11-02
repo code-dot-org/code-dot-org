@@ -150,8 +150,10 @@ export function isBlockLocationUnset(block) {
   return x === defaultX && y === defaultY;
 }
 
-export const getDefaultLocation = workspace => {
+export const getDefaultLocation = workspaceOverride => {
+  const workspace = workspaceOverride || Blockly.getMainWorkspace();
   const isRTL = workspace.RTL;
+
   const {viewWidth = 0} = workspace.getMetrics();
   const defaultX = isRTL ? viewWidth : 0;
   const defaultY = 0;
@@ -159,13 +161,18 @@ export const getDefaultLocation = workspace => {
   return {defaultX, defaultY};
 };
 
-export const resetBlockLocations = blocks => {
+// See addEditorWorkspaceBlockConfig on the FunctionEditor for
+// the list of properties to undo here
+export const resetEditorWorkspaceBlockConfig = blocks => {
   if (_.isEmpty(blocks)) {
     return;
   }
+
   blocks.forEach(block => {
-    const {defaultX, defaultY} = getDefaultLocation(block.workspace);
-    block.moveTo(defaultX, defaultY);
+    const {defaultX, defaultY} = getDefaultLocation();
+    block.x = defaultX;
+    block.y = defaultY;
+    block.movable = true;
   });
 };
 
