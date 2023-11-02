@@ -50,16 +50,14 @@ export function chooseEffects(
   const foregroundOptions: [number, string][] = outputOptions[1];
   const paletteOptions: [number, string][] = outputOptions[2];
 
+  // Choose random values.
   const backgroundEffectOption =
     backgroundOptions[Math.floor(Math.random() * backgroundOptions.length)];
-
   const backgroundColorOption =
     paletteOptions[Math.floor(Math.random() * paletteOptions.length)];
-
   const foregroundEffectOption =
     foregroundOptions[Math.floor(Math.random() * foregroundOptions.length)];
 
-  // Choose random value from top scoring options.
   const chosenEffects = {
     results: {
       backgroundEffect: backgroundEffectOption[1],
@@ -100,7 +98,7 @@ function calculateOutputWeightsVector(
 }
 
 /**
- * Simple selection function that returns the top N number of "classifications"
+ * Simple selection function that returns all "classifications"
  * @param {*} outputWeights desired output weight vector to precalculate based on
  * @param {*} associatedOutputJson, precalculated vector weights for each possible type of output (e.g. BackgroundsEffects, ForegroundEffects, etc.)
  * @returns 1d array of tuples in the format ([score], [output key]) e.g. ("0.51", "circles")
