@@ -26,6 +26,7 @@ describe('ProgramExecutor', () => {
     currentSongMetadata: SongMetadata,
     characters: string[],
     timestamps: number[],
+    code: string,
     programExecutor: ProgramExecutor;
 
   beforeEach(() => {
@@ -76,16 +77,17 @@ describe('ProgramExecutor', () => {
 
     validationFunction = sinon.stub();
     getValidationCallback.returns(validationFunction);
+    code = 'code';
 
     programExecutor = new ProgramExecutor(
       'container',
-      () => 'code',
       () => undefined,
       false,
       false,
       undefined,
       validationCode,
       onEventsChanged,
+      '',
       nativeAPI
     );
   });
@@ -105,7 +107,7 @@ describe('ProgramExecutor', () => {
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
 
-    await programExecutor.execute(currentSongMetadata);
+    await programExecutor.execute(code, currentSongMetadata);
 
     expect(computeCharactersReferenced).to.have.been.calledOnce;
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledWith(
@@ -114,6 +116,8 @@ describe('ProgramExecutor', () => {
     expect(evalWithEvents).to.have.been.calledOnce;
     const events = evalWithEvents.firstCall.args[1];
     expect(Object.keys(events)).to.have.members(expectedHooks.map(h => h.name));
+    const fullCode = evalWithEvents.firstCall.args[2];
+    expect(fullCode?.includes(code)).to.be.true;
     expect(runUserSetup).to.have.been.calledOnce;
     expect(getCueList).to.have.been.calledOnce;
     expect(nativeAPI.addCues).to.have.been.calledWithExactly(timestamps);
@@ -124,23 +128,42 @@ describe('ProgramExecutor', () => {
     expect(nativeAPI.play).to.have.been.calledWith(currentSongMetadata);
   });
 
-  it('compiles and runs live preview on when calling livePreview', async () => {
+  it('compiles and runs live preview on when calling startLivePreview', async () => {
     const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
     evalWithEvents.returns({
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
 
-    await programExecutor.livePreview(currentSongMetadata);
+    await programExecutor.startLivePreview(code, currentSongMetadata);
 
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
     const events = evalWithEvents.firstCall.args[1];
     expect(Object.keys(events)).to.have.members(expectedHooks.map(h => h.name));
+    const fullCode = evalWithEvents.firstCall.args[2];
+    expect(fullCode?.includes(code)).to.be.true;
     expect(runUserSetup).to.have.been.calledOnce;
     expect(nativeAPI.livePreview).to.have.been.calledWithExactly(
       currentSongMetadata
     );
+  });
+
+  it('does nothing if updateLivePreview is called before startLivePreview', async () => {
+    await programExecutor.updateLivePreview(code, currentSongMetadata);
+    expect(nativeAPI.livePreview).to.not.have.been.called;
+  });
+
+  it('updates live preview if called after startLivePreview', async () => {
+    const expectedHooks = [{name: 'runUserSetup', func: runUserSetup}];
+    evalWithEvents.returns({
+      hooks: expectedHooks,
+      interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
+    });
+
+    await programExecutor.startLivePreview(code, currentSongMetadata);
+    await programExecutor.updateLivePreview(code, currentSongMetadata);
+    expect(nativeAPI.livePreview).to.have.been.calledTwice;
   });
 
   it('resets the native API on reset', () => {
