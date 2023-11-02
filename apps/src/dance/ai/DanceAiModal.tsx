@@ -4,7 +4,7 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {setCurrentAiModalField, DanceState} from '../danceRedux';
+import {closeAiModal, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {FieldDropdown, Workspace} from 'blockly/core';
 import {chooseEffects} from './DanceAiClient';
@@ -37,10 +37,6 @@ type AiModalItem = {
   emoji: string;
 };
 
-interface DanceAiProps {
-  onClose: () => void;
-}
-
 // Steps in our generating process have a step and a substep.
 type GeneratingStep = [number, number];
 
@@ -71,7 +67,7 @@ const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
-const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
+const DanceAiModal: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   // How many emojis are to be selected.
@@ -97,6 +93,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
+  );
+
+  const aiModalOpenedFromFlyout = useSelector(
+    (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
   );
 
   const aiOutput = useSelector(
@@ -201,7 +201,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         ...generatedEffects.current[BAD_GENERATED_RESULTS_COUNT].results,
       })
     );
-    dispatch(setCurrentAiModalField(undefined));
+    onClose();
   };
 
   const handleLeaveExplanation = () => {
@@ -283,9 +283,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       origBlock.dispose(false);
 
       // End modal.
-      dispatch(setCurrentAiModalField(undefined));
+      onClose();
     }
   };
+
+  const onClose = () => dispatch(closeAiModal());
 
   const showUseButton =
     mode === Mode.RESULTS &&
@@ -316,7 +318,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
         <img src={aiBotBorder} className={moduleStyles.botImage} alt="A.I." />
         generate &nbsp;
-        <div className={moduleStyles.inputsContainer}>
+        <div
+          className={moduleStyles.inputsContainer}
+          onClick={handleStartOverClick}
+        >
           {Array.from(Array(SLOT_COUNT).keys()).map(index => {
             const item = getItem(inputs[index]);
             return (
@@ -488,7 +493,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                   alt="A.I. Beam"
                 />
                 <img
-                  src={aiBotBorder}
+                  src={botImage}
                   className={moduleStyles.image}
                   alt="A.I."
                 />
@@ -624,6 +629,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
+              disabled={aiModalOpenedFromFlyout}
             />
           )}
           {showUseButton && (
