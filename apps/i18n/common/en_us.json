@@ -1002,7 +1002,7 @@
   "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "enable": "Enable",
   "enableAITutor": "Enable AI Tutor",
-  "enableAITutorTooltip": "Turning this on will give students in your section access to AI Tutor on certain 4AP CSA levels.",
+  "enableAITutorTooltip": "Turning this on will give students in your section access to AI Tutor on certain AP CSA levels.",
   "enableCodeReview": "Enable Code Review",
   "enableTtsAutoplay": "Automatically read instructions aloud to students? (Only certain courses and web browsers)",
   "enableTtsAutoplayToggle": "Automatically read instructions aloud to students",
