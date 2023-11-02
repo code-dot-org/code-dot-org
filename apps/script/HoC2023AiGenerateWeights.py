@@ -9,8 +9,8 @@
 import json
 from HoC2023AiHelperFunctions import *
 
-# Get the list of emoji names and their corresponding emoji ids
-emojis_list, emojis_map = get_ai_emoji_inputs()
+# Get the list of emoji model_descriptive_names and their corresponding emoji ids
+emoji_model_descriptive_names_list, emojis_map = get_ai_emoji_inputs()
 
 # get the background effects, foreground effects, and palettes lists (blockly_ids and user_facing_names)
 background_effect_blockly_ids_list, background_effect_user_facing_names_list = get_background_effects()
@@ -136,7 +136,7 @@ for path in embeddings_paths.keys():
 # Retrieve embeddings for input emojis, palettes, background efects, and foreground effects.
 # Use emojis as inputs.
 options_lists = {
-    EMOJIS: emojis_list,
+    EMOJIS: emoji_model_descriptive_names_list,
     PALETTES: model_descriptive_names_map[PALETTES],
     BACKGROUND_EFFECTS: model_descriptive_names_map[BACKGROUND_EFFECTS],
     FOREGROUND_EFFECTS: model_descriptive_names_map[FOREGROUND_EFFECTS]
