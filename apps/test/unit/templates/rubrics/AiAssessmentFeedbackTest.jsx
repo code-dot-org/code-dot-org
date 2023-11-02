@@ -14,7 +14,7 @@ describe('AiAssessmentFeedback', () => {
     expect(wrapper.find('Checkbox')).to.have.lengthOf(4);
   });
 
-  it('displays textbox when other checkbox is selected', () => {
+  it('displays textbox when checkbox labelled "other" is selected', () => {
     const wrapper = shallow(<AiAssessmentFeedback {...props} />);
     wrapper.find('input').at(1).simulate('change');
     wrapper.find('Checkbox').at(3).simulate('change');
