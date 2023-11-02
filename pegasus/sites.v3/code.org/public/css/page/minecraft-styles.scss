@@ -107,7 +107,7 @@
     .action-block {
       min-width: 300px;
       max-width: 304px;
-      height: 500px;
+      height: 560px;
       margin: 0 auto;
       justify-content: space-between;
 
@@ -121,6 +121,7 @@
 
       @media (max-width: $width-md) {
         max-width: 420px;
+        height: 580px;
       }
 
       @media (max-width: $width-sm) {
