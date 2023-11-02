@@ -275,11 +275,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       initialFocus={false}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img
-          src={aiBotBorder}
-          className={moduleStyles.botImage}
-          alt="A.I. Bot"
-        />
+        <img src={aiBotBorder} className={moduleStyles.botImage} alt="A.I." />
         generate &nbsp;
         <div className={moduleStyles.inputsContainer}>
           {Array.from(Array(SLOT_COUNT).keys()).map(index => {
@@ -444,12 +440,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       !processingDone &&
                       moduleStyles.beamImageVisible
                   )}
-                  alt="A.I. Bot Beam"
+                  alt="A.I. Beam"
                 />
                 <img
                   src={aiBotBorder}
                   className={moduleStyles.image}
-                  alt="A.I. Bot"
+                  alt="A.I."
                 />
               </div>
             </div>
