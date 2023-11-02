@@ -6,10 +6,11 @@ from openai.embeddings_utils import (
     chart_from_components,
     indices_of_nearest_neighbors_from_distances,
 )
+from constants import *
 import pandas as pd
 import pickle 
 import openai
-openai.api_key = '' # Replace with your OpenAI API key
+openai.api_key = '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' # Replace with your OpenAI API key
 
 def get_json_object(file):
     block_config_file = open(file)
@@ -72,9 +73,6 @@ def create_map_print_options(options_name, model_descriptive_names, blockly_ids_
         options_map[model_descriptive_name] = blockly_id
         print (model_descriptive_name + ' | ' + blockly_id + ' | ' + user_facing_names_list[i])
     return options_map
-
-# Load the most recent Ada model as of October 2023.
-EMBEDDING_MODEL = 'text-embedding-ada-002'
 
 # This function loads the embeddings cache file if present, and otherwise creates a new file.
 def load_embeddings_cache(path):
