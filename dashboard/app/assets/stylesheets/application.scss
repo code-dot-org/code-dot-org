@@ -485,15 +485,23 @@ img.video_thumbnail {
 .main {
   padding: 10px;
 
-  &:not(:has(.visual-block)) {
-    a:link, a:visited, a:active {
-      @include main-font-bold;
-      color: $brand_secondary_default;
-      background-color: transparent;
-      text-decoration: underline;
+  a:link, a:visited, a:hover, a:active {
+    @include main-font-bold;
+    color: $brand_secondary_default;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
+
+  a:link, a:visited, a:active {
+    &:has(.visual-block) {
+      text-decoration: unset;
 
       &:hover {
-        color: $brand_secondary_dark;
+        text-decoration: underline;
       }
     }
   }
