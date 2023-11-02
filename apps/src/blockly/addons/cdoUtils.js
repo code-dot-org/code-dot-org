@@ -463,3 +463,7 @@ function simplifyBlockState(block, variableMap) {
 
   return result;
 }
+
+export function getBlockColor(block) {
+  return block.style.colourPrimary;
+}
