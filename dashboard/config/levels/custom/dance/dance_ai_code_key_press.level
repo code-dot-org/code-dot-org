@@ -1,8 +1,7 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
-  "created_at": "2023-10-30T13:44:02.000Z",
+  "created_at": "2023-11-02T02:31:37.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -76,15 +75,11 @@
       "astronautintheocean_maskedwolf",
       "good4u_oliviarodrigo",
       "iliketomoveit_william"
-    ],
-    "encrypted_examples": [
-
     ]
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:02.257+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_1_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_1_b\"},{\"changed_at\":\"2023-10-30 15:27:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:02:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:02:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:08:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:44:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:50:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:51:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:51:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:52:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 23:18:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:18:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-11-01 18:10:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:22:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:34:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:44:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:44:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 20:23:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 21:32:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 01:13:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 01:15:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 02:15:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:31:37.654+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_1_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_1_draft3\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
