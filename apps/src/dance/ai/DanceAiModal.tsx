@@ -224,7 +224,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           currentGeneratingStep[0]++;
           currentGeneratingStep[1] = 0;
         } else {
-          // Leave these values intact, and go to theresults.
+          // Leave these values intact, and go to the results.
           setMode(Mode.RESULTS);
         }
 
@@ -299,14 +299,11 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentToggle === 'code' &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
-  const botImage =
-    mode === Mode.GENERATING &&
-    generatingStep[0] < BAD_GENERATED_RESULTS_COUNT &&
-    generatingStep[1] >= 1
-      ? aiBotNo
-      : mode === Mode.GENERATING && generatingStep[1] >= 1
-      ? aiBotYes
-      : aiBotBorder;
+  let botImage = aiBotBorder;
+  if (mode === Mode.GENERATING && generatingStep[1] >= 1) {
+    botImage =
+      generatingStep[0] < BAD_GENERATED_RESULTS_COUNT ? aiBotNo : aiBotYes;
+  }
 
   return (
     <AccessibleDialog
@@ -492,11 +489,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                   )}
                   alt="A.I. Beam"
                 />
-                <img
-                  src={botImage}
-                  className={moduleStyles.image}
-                  alt="A.I."
-                />
+                <img src={botImage} className={moduleStyles.image} alt="A.I." />
               </div>
             </div>
           )}
@@ -614,9 +607,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             <Button
               id="generate-button"
               text={'Generate'}
-              onClick={() => {
-                handleGenerateClick();
-              }}
+              onClick={handleGenerateClick()}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
