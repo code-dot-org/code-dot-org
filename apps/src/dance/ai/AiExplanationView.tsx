@@ -4,9 +4,9 @@ import color from '@cdo/apps/util/color';
 import {CachedWeightsMapping} from './DanceAiClient';
 import {LabelMaps, FieldKey} from '../types';
 
-import CachedPalettes from '@cdo/static/dance/ai/model/cached-palette-map.json';
-import CachedBackgrounds from '@cdo/static/dance/ai/model/cached-background-map.json';
-import CachedForegrounds from '@cdo/static/dance/ai/model/cached-foreground-map.json';
+import CachedPalettes from '@cdo/static/dance/ai/model/cached_palettes_map.json';
+import CachedBackgrounds from '@cdo/static/dance/ai/model/cached_background_effects_map.json';
+import CachedForegrounds from '@cdo/static/dance/ai/model/cached_foreground_effects_map.json';
 
 import {
   Chart as ChartJS,

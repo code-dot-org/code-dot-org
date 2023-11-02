@@ -171,27 +171,10 @@ for outputs_list_name in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
 association_output_map = {}
 for outputs_list_name in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
     association_output_map[outputs_list_name] = {'emojiAssociations': similarities_map[outputs_list_name], 'output': blockly_ids_lists_map[outputs_list_name]}
-
-# For testing purposes (temporary until model is decided):
-ada_emoji = 'ada-emoji'
-ada_phrase = 'ada-phrase'
-spacy_emoji = 'space-emoji'
-spacy_phrase = 'spacy-phrase'
-TEST_MODEL = ada_emoji
-
-# Write output to cache files storing associations and used by client.
-cached_palette_associations = 'apps/static/dance/ai/model/' + TEST_MODEL + '/cached-palette-map-' + TEST_MODEL + '.json'
-cached_background_associations = 'apps/static/dance/ai/model/' + TEST_MODEL + '/cached-background-map-' + TEST_MODEL + '.json'
-cached_foreground_associations = 'apps/static/dance/ai/model/' + TEST_MODEL + '/cached-foreground-map-' + TEST_MODEL + '.json'
-
-with open(cached_palette_associations, "w") as json_file:
-    json_file.write(json.dumps(association_output_map[PALETTES]))
-
-with open(cached_background_associations, "w") as json_file:
-    json_file.write(json.dumps(association_output_map[BACKGROUND_EFFECTS]))
-    
-with open(cached_foreground_associations, "w") as json_file:
-    json_file.write(json.dumps(association_output_map[FOREGROUND_EFFECTS]))
+    # Write output to cache files storing associations and used by client.
+    path = 'apps/static/dance/ai/model/cached_' + outputs_list_name + '_map.json'
+    with open(path, "w") as json_file:
+        json_file.write(json.dumps(association_output_map[outputs_list_name]))
 
 # Below are background effects, palettes and foreground effects in the order they appear in the dropdowns.
 # When this file is run and the three cached data files are replaced in apps/static/dance/ai/model,
