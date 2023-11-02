@@ -25,7 +25,9 @@
 
 %section.steps
   .wrapper
+
     = view :"how-to/steps/side-nav/side_nav_educators"
+
     %div.steps-wrapper
       - steps_educators_index.times do |index|
         .step{id: "step-0#{index + 1}", class:"#{'divider-accent' if index === 0 || index === 5 || index === 7}"}

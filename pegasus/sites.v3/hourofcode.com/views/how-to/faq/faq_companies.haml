@@ -1,9 +1,3 @@
-- faq_educators_index = 4
-
-- faq_eduactors_question = [hoc_s(:hoc_how_to_faq_question_volunteer), hoc_s(:hoc_how_to_faq_question_organize_specific_school), hoc_s(:hoc_how_to_faq_question_prepare), hoc_s(:hoc_how_to_faq_question_when_company_host)]
-
-- faq_educators_answer = [hoc_s(:hoc_how_to_faq_answer_volunteer), hoc_s(:hoc_how_to_faq_answer_organize_specific_school, markdown: :inline, locals:{email_url: resolve_url("/promote/resources#help-schools"), sample_text_url: resolve_url("/promote/resources#help-schools")}), "", hoc_s(:hoc_how_to_faq_answer_when_company_host, markdown: :inline, locals: {campaign_date: campaign_date("full")})]
-
 %section.faq.bg-neutral-light
   .wrapper
     .flex-container
@@ -11,22 +5,6 @@
         =hoc_s(:heading_faq)
       %a.link-button.secondary{href: resolve_url("/faq")}
         =hoc_s(:call_to_action_view_faqs)
-    - faq_educators_index.times do |index|
       %details
-        %summary
-          = faq_eduactors_question[index]
-        %p
-          = faq_educators_answer[index]
-        - if index === 0
-          %a{href: resolve_url("/how-to/volunteers")}
-            =hoc_s(:call_to_action_become_a_volunteer_today)
-        - if index === 2
-          %ul
-            %li
-              =hoc_s(:hoc_how_to_faq_answer_prepare_01)
-            %li
-              =hoc_s(:hoc_how_to_faq_answer_prepare_02)
-            %li
-              =hoc_s(:hoc_how_to_faq_answer_prepare_03, markdown: :inline, locals:{video_url: resolve_url("/promote/resources#videos")})
-            %li
-              =hoc_s(:hoc_how_to_faq_answer_prepare_04)
+        %summary=hoc_s(:hoc_how_to_faq_question_when_company_host)
+        %p=hoc_s(:hoc_how_to_faq_answer_when_company_host, markdown: :inline, locals:{campaign_date: campaign_date("full")})
