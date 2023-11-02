@@ -25,6 +25,11 @@ class SectionsController < ApplicationController
 
     @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
+    @section['primaryInstructor'] = {
+      email: existing_section.teacher.email,
+      name: existing_section.teacher.name,
+    }
+
     @section = @section.to_json.camelize
   end
 
