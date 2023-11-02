@@ -9,10 +9,7 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     @teacher3 = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @section2 = create(:section, user: @teacher, login_type: 'word')
-    # These are auto-created for the section creator
-    @si1 = @section.instructors.first
-    @si2 = @section2.instructors.first
-    @si3 = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
+    @si_coteacher = create(:section_instructor, section: @section2, instructor: @teacher2, status: :active)
     @full_section = create(:section, user: @teacher2, login_type: 'word')
     (Section::INSTRUCTOR_LIMIT - 1).times do
       create(:section_instructor, section: @full_section, instructor: create(:teacher), status: :active)
@@ -110,9 +107,9 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'non-instructor cannot remove other instructor' do
     sign_in @teacher3
-    delete :destroy, params: {id: @si3.id}
+    delete :destroy, params: {id: @si_coteacher.id}
     assert_response :forbidden
-    assert @si3.reload.deleted_at.nil?
+    assert @si_coteacher.reload.deleted_at.nil?
   end
 
   test 'instructor cannot remove section owner' do
