@@ -13677,3 +13677,14 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Dance Party: A.I. Edition'
+          lesson_groups: {}
+          name: dance-ai-2023
+          title: 'Dance Party: A.I. Edition'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

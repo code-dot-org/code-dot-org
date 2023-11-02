@@ -74,10 +74,10 @@ export default class GameLab extends P5Lab {
 
   runButtonClick() {
     // For AI Rubrics Pilot
-    if (
-      experiments.isEnabled('ai-rubrics') &&
-      hasScriptData('script[data-rubricdata]')
-    ) {
+    const inRubricsPilot =
+      experiments.isEnabled('ai-rubrics') ||
+      experiments.isEnabled('non-ai-rubrics');
+    if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
       const rubricData = getScriptData('rubricdata');
       const teacherId = getStore().getState().currentUser.userId;
       const {rubric, studentLevelInfo} = rubricData;
