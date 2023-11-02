@@ -2284,7 +2284,13 @@ StudioApp.prototype.handleIframeEmbedAppAndCode_ = function () {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function (config) {
-  if (!config.level.libraries && config.level.startLibraries) {
+  // If we have start libraries and we either don't have libraries or we
+  // should ignore existing code (due to an embedded level, for example)
+  // use the start libraries.
+  if (
+    (!config.level.libraries || config.ignoreLastAttempt) &&
+    config.level.startLibraries
+  ) {
     config.level.libraries = JSON.parse(config.level.startLibraries);
   }
   if (!config.level.libraries) {
