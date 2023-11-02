@@ -1,10 +1,11 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
+import {generateBlocksFromResult} from './utils';
 
 interface AiBlockPreviewProps {
   fadeIn: boolean;
-  generateBlocksFromResult: (workspace: Workspace) => [BlockSvg, BlockSvg];
+  resultJson: string;
   onComplete: () => void;
 }
 
@@ -13,7 +14,7 @@ interface AiBlockPreviewProps {
  */
 const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
   fadeIn,
-  generateBlocksFromResult,
+  resultJson,
   onComplete,
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
@@ -48,7 +49,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
         {}
       );
 
-    const blocksSvg = generateBlocksFromResult(previewWorkspace);
+    const blocksSvg = generateBlocksFromResult(previewWorkspace, resultJson);
     blocksSvg.forEach((blockSvg: BlockSvg) => {
       blockSvg.initSvg();
       blockSvg.render();
@@ -58,7 +59,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     return () => {
       previewWorkspace.dispose();
     };
-  }, [blockPreviewContainerRef, generateBlocksFromResult]);
+  }, [blockPreviewContainerRef, resultJson]);
 
   return (
     <div id={fadeIn ? 'fade-in' : undefined}>
