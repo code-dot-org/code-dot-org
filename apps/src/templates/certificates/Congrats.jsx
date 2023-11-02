@@ -320,13 +320,11 @@ export default function Congrats(props) {
 Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
-  MCShareLink: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
-  hideDancePartyFollowUp: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
