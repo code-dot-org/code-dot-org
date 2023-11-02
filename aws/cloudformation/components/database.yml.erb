@@ -194,7 +194,9 @@
 <%  end -%>
     Properties:
       ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"
-      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
+      # Production cluster has not been imported into this Stack, so pass the Secret that stores the writer endpoint
+      # instead of `!GetAtt AuroraCluster.Endpoint.Address`
+      DBWriterEndpointSecret: !Ref DBWriterEndpointConfig
       # Credentials for SQL admin user that will create/update/delete this SQL user resource.
       DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
       # Credentials (username and password) for the SQL User this Resource is provisioning.
@@ -227,7 +229,9 @@
 <%  end -%>
     Properties:
       ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"
-      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
+      # Production cluster has not been imported into this Stack, so pass the Secret that stores the writer endpoint
+      # instead of `!GetAtt AuroraCluster.Endpoint.Address`
+      DBWriterEndpointSecret: !Ref DBWriterEndpointConfig
       # Credentials for SQL admin user that will create/update/delete this SQL user resource.
       DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
       # Credentials (username and password) for the SQL User this Resource is provisioning.
