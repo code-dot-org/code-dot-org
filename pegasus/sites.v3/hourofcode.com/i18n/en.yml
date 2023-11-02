@@ -722,7 +722,7 @@
   dance_afe_disclaimer: "The artists whose music are used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org."
 
   minecraft_hero_heading: "Minecraft Hour of Code Tutorials"
-  minecraft_activities_desc: "All tutorials are available in many languages and compatible with modern browsers and tablets."
+  minecraft_activities_desc: "All tutorials are available in many languages and compatible with modern browsers and tablets. Don't have internet? [Download the offline version of Minecraft Adventurer!](%{offline_url})"
   minecraft_cdo_activity_title_aquatic: "Minecraft Voyage Aquatic"
   minecraft_cdo_activity_desc_aquatic: "Build and explore with Minecraft! Use your creativity and problem solving skills to explore and build underwater worlds with code."
   minecraft_cdo_activity_title_journey: "Minecraft Hero's Journey"

@@ -17,7 +17,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2=hoc_s(:heading_available_on_code_dot_org)
-    %p=hoc_s(:minecraft_activities_desc)
+    %p=hoc_s(:minecraft_activities_desc, markdown: :inline, locals: {offline_url: CDO.studio_url("/download/mc")})
     = view :"minecraft/minecraft_activities_carousel"
 
 = view :section_divider_line
