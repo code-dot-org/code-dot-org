@@ -41,8 +41,8 @@ embeddings_paths = {
 }
 
 embeddings_caches = {}
-for path in embeddings_paths.keys():
-    embeddings_caches[path] = load_embeddings_cache(path)
+for category, path in embeddings_paths.items():
+    embeddings_caches[category] = load_embeddings_cache(path)
 
 # Retrieve embeddings using model_descriptive_names for input emojis, palettes, background effects, and foreground effects.
 options = {
