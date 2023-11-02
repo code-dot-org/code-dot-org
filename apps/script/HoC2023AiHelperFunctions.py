@@ -9,7 +9,7 @@ from openai.embeddings_utils import (
 import pandas as pd
 import pickle 
 import openai
-openai.api_key = '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' # Replace with your OpenAI API key
+openai.api_key = '' # Replace with your OpenAI API key
 
 def get_json_object(file):
     block_config_file = open(file)
