@@ -4,11 +4,7 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {
-  setCurrentAiModalField,
-  setAiModalOpenedFromFlyout,
-  DanceState,
-} from '../danceRedux';
+import {closeAiModal, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {FieldDropdown, Workspace} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
@@ -43,11 +39,7 @@ type AiModalReturnedItem = {
   available: boolean;
 };
 
-interface DanceAiProps {
-  onClose: () => void;
-}
-
-const DanceAiModal: React.FunctionComponent<DanceAiProps> = () => {
+const DanceAiModal: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
@@ -252,10 +244,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = () => {
     onClose();
   };
 
-  const onClose = () => {
-    dispatch(setCurrentAiModalField(undefined));
-    dispatch(setAiModalOpenedFromFlyout(false));
-  };
+  const onClose = () => dispatch(closeAiModal());
 
   const handleExplanationClick = () => {
     setMode(Mode.EXPLANATION);
