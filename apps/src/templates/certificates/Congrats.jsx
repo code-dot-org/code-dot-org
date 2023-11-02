@@ -4,8 +4,6 @@ import Certificate from './Certificate';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './certificate_batch.module.scss';
 import i18n from '@cdo/locale';
-import StudentsBeyondHoc from './StudentsBeyondHoc';
-import TeachersBeyondHoc from './TeachersBeyondHoc';
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import {
@@ -19,17 +17,6 @@ export default function Congrats(props) {
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
    * @returns {string} The category type the specific tutorial belongs to i.e. 'dance', 'applab', etc
    */
-  const getTutorialType = tutorial =>
-    ({
-      dance: 'dance',
-      'dance-2019': 'dance',
-      'applab-intro': 'applab',
-      aquatic: '2018Minecraft',
-      hero: '2017Minecraft',
-      minecraft: 'pre2017Minecraft',
-      mc: 'pre2017Minecraft',
-      oceans: 'oceans',
-    }[tutorial] || 'other');
 
   /**
    * Renders links to certificate alternatives when there is a special event going on.
@@ -78,13 +65,11 @@ export default function Congrats(props) {
   const {
     tutorial,
     certificateId,
-    MCShareLink,
     userType,
     under13,
     language,
     randomDonorTwitter,
     randomDonorName,
-    hideDancePartyFollowUp,
     initialCertificateImageUrl,
     isHocTutorial,
     nextCourseScriptName,
@@ -201,10 +186,8 @@ export default function Congrats(props) {
       link: 'https://code.org/educate/professional-development-online',
     },
   ];
-  const isEnglish = language === 'en';
-  const tutorialType = getTutorialType(tutorial);
 
-  return isHocTutorial ? (
+  return (
     <div className={style.wrapper}>
       <div className={style.certificateContainer}>
         <Certificate
@@ -220,137 +203,116 @@ export default function Congrats(props) {
         </Certificate>
       </div>
 
-      <div className={style.continueBeyond}>
-        <Heading3 className={style.textCenter}>
-          {i18n.continueBeyondHourOfCode()}
-        </Heading3>
-        <div
-          className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
-        >
-          {curriculaData.map((item, index) => (
+      {isHocTutorial ? (
+        <div>
+          <div className={style.continueBeyond}>
+            <Heading3 className={style.textCenter}>
+              {i18n.continueBeyondHourOfCode()}
+            </Heading3>
             <div
-              className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
-              key={index}
+              className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
             >
-              <div className={style.contentWrapper}>
-                <BodyTwoText className={style.overline}>
-                  {item.grade}
-                </BodyTwoText>
-                <Heading3>{item.title}</Heading3>
-                <img src={item.image} alt="" />
-                <BodyTwoText>{item.description}</BodyTwoText>
-              </div>
-              <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link}>
-                  {item.buttonText}
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-        <hr />
-
-        <div className={style.textCenter}>
-          <Heading4>{i18n.discoverMore()}</Heading4>
-          <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
-          <div className={style.imageContainer}>
-            {curriculumCatalogImages.map((item, index) => (
-              <img key={index} src={item} alt="" />
-            ))}
-          </div>
-          {userType === 'student' ? (
-            <div className={style.studentButtonsContainer}>
-              <a
-                className={`${style.linkButton} ${style.catalogButton}`}
-                href={'https://code.org/student/elementary'}
-              >
-                {i18n.learningForAgesRange({
-                  youngestAge: '5',
-                  oldestAge: '11',
-                })}
-              </a>
-              <a
-                className={`${style.linkButton} ${style.catalogButton}`}
-                href={'https://code.org/student/middle-high'}
-              >
-                {i18n.learningForAgesPlus({age: '11'})}
-              </a>
-            </div>
-          ) : (
-            <a
-              className={`${style.linkButton} ${style.catalogButton}`}
-              href={'/catalog'}
-            >
-              {i18n.viewCurriculumCatalog()}
-            </a>
-          )}
-        </div>
-      </div>
-
-      {userType !== 'student' && (
-        <div className={style.professionalLearning}>
-          <div
-            className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
-          >
-            {professionalLearning.map((item, index) => (
-              <div
-                className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
-                key={index}
-              >
-                <div className={style.contentWrapper}>
-                  <img
-                    src={item.image}
-                    alt=""
-                    className={style.professionalLearningImage}
-                  />
-                  <Heading3>{item.title}</Heading3>
-                  <BodyTwoText>{item.description}</BodyTwoText>
+              {curriculaData.map((item, index) => (
+                <div
+                  className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+                  key={index}
+                >
+                  <div className={style.contentWrapper}>
+                    <BodyTwoText className={style.overline}>
+                      {item.grade}
+                    </BodyTwoText>
+                    <Heading3>{item.title}</Heading3>
+                    <img src={item.image} alt="" />
+                    <BodyTwoText>{item.description}</BodyTwoText>
+                  </div>
+                  <div className={style.contentFooter}>
+                    <a className={style.linkButton} href={item.link}>
+                      {item.buttonText}
+                    </a>
+                  </div>
                 </div>
-                <div className={style.contentFooter}>
-                  <a className={style.linkButton} href={item.link}>
-                    {item.buttonText}
+              ))}
+            </div>
+            <hr />
+
+            <div className={style.textCenter}>
+              <Heading4>{i18n.discoverMore()}</Heading4>
+              <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
+              <div className={style.imageContainer}>
+                {curriculumCatalogImages.map((item, index) => (
+                  <img key={index} src={item} alt="" />
+                ))}
+              </div>
+              {userType === 'student' ? (
+                <div className={style.studentButtonsContainer}>
+                  <a
+                    className={`${style.linkButton} ${style.catalogButton}`}
+                    href={'https://code.org/student/elementary'}
+                  >
+                    {i18n.learningForAgesRange({
+                      youngestAge: '5',
+                      oldestAge: '11',
+                    })}
+                  </a>
+                  <a
+                    className={`${style.linkButton} ${style.catalogButton}`}
+                    href={'https://code.org/student/middle-high'}
+                  >
+                    {i18n.learningForAgesPlus({age: '11'})}
                   </a>
                 </div>
-              </div>
-            ))}
+              ) : (
+                <a
+                  className={`${style.linkButton} ${style.catalogButton}`}
+                  href={'/catalog'}
+                >
+                  {i18n.viewCurriculumCatalog()}
+                </a>
+              )}
+            </div>
           </div>
+
+          {userType !== 'student' && (
+            <div className={style.professionalLearning}>
+              <div
+                className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
+              >
+                {professionalLearning.map((item, index) => (
+                  <div
+                    className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+                    key={index}
+                  >
+                    <div className={style.contentWrapper}>
+                      <img
+                        src={item.image}
+                        alt=""
+                        className={style.professionalLearningImage}
+                      />
+                      <Heading3>{item.title}</Heading3>
+                      <BodyTwoText>{item.description}</BodyTwoText>
+                    </div>
+                    <div className={style.contentFooter}>
+                      <a className={style.linkButton} href={item.link}>
+                        {item.buttonText}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div>
+          <GraduateToNextLevel
+            scriptName={nextCourseScriptName}
+            courseTitle={nextCourseTitle}
+            courseDesc={nextCourseDesc}
+          />
+          <hr className={style.divider} />
+          <PetitionCallToAction tutorial={tutorial} />
         </div>
       )}
-    </div>
-  ) : (
-    <div style={style.container}>
-      <Certificate
-        tutorial={tutorial}
-        certificateId={certificateId}
-        randomDonorTwitter={randomDonorTwitter}
-        randomDonorName={randomDonorName}
-        under13={under13}
-        initialCertificateImageUrl={initialCertificateImageUrl}
-        isHocTutorial={isHocTutorial}
-      >
-        {renderExtraCertificateLinks(language, tutorial)}
-      </Certificate>
-      {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
-      {isHocTutorial && (
-        <StudentsBeyondHoc
-          completedTutorialType={tutorialType}
-          MCShareLink={MCShareLink}
-          userType={userType}
-          under13={under13}
-          isEnglish={isEnglish}
-          hideDancePartyFollowUp={hideDancePartyFollowUp}
-        />
-      )}
-      {!isHocTutorial && (
-        <GraduateToNextLevel
-          scriptName={nextCourseScriptName}
-          courseTitle={nextCourseTitle}
-          courseDesc={nextCourseDesc}
-        />
-      )}
-      {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
-      <hr style={style.divider} />
-      <PetitionCallToAction tutorial={tutorial} />
     </div>
   );
 }
