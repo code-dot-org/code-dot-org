@@ -745,7 +745,7 @@
   minecraft_education_activity_title_2020: "Minecraft AI for Earth"
   minecraft_education_activity_desc_2020: "Program the Minecraft Agent to collect data about forest fires. Learn coding basics and explore a real-world example of artificial intelligence."
   minecraft_resources_desc_01: "Utilize this on demand [free course](%{course_url}) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEdWeek, %{campaign_date}."
-  minecraft_resources_desc_02: "Inspire STEM passion in K-12 learners with 200hr of computer science curriculum, from block to python, supported by professional development."
+  minecraft_resources_desc_02: "Inspire STEM passion in K-12 learners with 200 hours of computer science curriculum, from block to python, supported by professional development."
 
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
