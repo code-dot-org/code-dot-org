@@ -4,6 +4,10 @@ import Certificate from './Certificate';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './certificate_batch.module.scss';
 import i18n from '@cdo/locale';
+import StudentsBeyondHoc from './StudentsBeyondHoc';
+import TeachersBeyondHoc from './TeachersBeyondHoc';
+import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import {
   BodyTwoText,
   Heading3,
@@ -15,6 +19,17 @@ export default function Congrats(props) {
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
    * @returns {string} The category type the specific tutorial belongs to i.e. 'dance', 'applab', etc
    */
+  const getTutorialType = tutorial =>
+    ({
+      dance: 'dance',
+      'dance-2019': 'dance',
+      'applab-intro': 'applab',
+      aquatic: '2018Minecraft',
+      hero: '2017Minecraft',
+      minecraft: 'pre2017Minecraft',
+      mc: 'pre2017Minecraft',
+      oceans: 'oceans',
+    }[tutorial] || 'other');
 
   /**
    * Renders links to certificate alternatives when there is a special event going on.
@@ -63,13 +78,18 @@ export default function Congrats(props) {
   const {
     tutorial,
     certificateId,
+    MCShareLink,
     userType,
     under13,
     language,
     randomDonorTwitter,
     randomDonorName,
+    hideDancePartyFollowUp,
     initialCertificateImageUrl,
     isHocTutorial,
+    nextCourseScriptName,
+    nextCourseTitle,
+    nextCourseDesc,
   } = props;
 
   const teacherCourses = [
@@ -181,8 +201,10 @@ export default function Congrats(props) {
       link: 'https://code.org/educate/professional-development-online',
     },
   ];
+  const isEnglish = language === 'en';
+  const tutorialType = getTutorialType(tutorial);
 
-  return (
+  return isHocTutorial ? (
     <div className={style.wrapper}>
       <div className={style.certificateContainer}>
         <Certificate
@@ -295,17 +317,57 @@ export default function Congrats(props) {
         </div>
       )}
     </div>
+  ) : (
+    <div style={style.container}>
+      <Certificate
+        tutorial={tutorial}
+        certificateId={certificateId}
+        randomDonorTwitter={randomDonorTwitter}
+        randomDonorName={randomDonorName}
+        under13={under13}
+        initialCertificateImageUrl={initialCertificateImageUrl}
+        isHocTutorial={isHocTutorial}
+      >
+        {renderExtraCertificateLinks(language, tutorial)}
+      </Certificate>
+      {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
+      {isHocTutorial && (
+        <StudentsBeyondHoc
+          completedTutorialType={tutorialType}
+          MCShareLink={MCShareLink}
+          userType={userType}
+          under13={under13}
+          isEnglish={isEnglish}
+          hideDancePartyFollowUp={hideDancePartyFollowUp}
+        />
+      )}
+      {!isHocTutorial && (
+        <GraduateToNextLevel
+          scriptName={nextCourseScriptName}
+          courseTitle={nextCourseTitle}
+          courseDesc={nextCourseDesc}
+        />
+      )}
+      {userType === 'signedOut' && isEnglish && <TeachersBeyondHoc />}
+      <hr style={style.divider} />
+      <PetitionCallToAction tutorial={tutorial} />
+    </div>
   );
 }
 
 Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
+  MCShareLink: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
+  hideDancePartyFollowUp: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
+  nextCourseScriptName: PropTypes.string,
+  nextCourseTitle: PropTypes.string,
+  nextCourseDesc: PropTypes.string,
 };
