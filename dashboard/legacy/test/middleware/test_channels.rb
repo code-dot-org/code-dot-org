@@ -21,6 +21,7 @@ class ChannelsTest < Minitest::Test
     assert_equal 'world', response['hello']
   end
 
+  # Test comment
   def test_create_published_channel
     old_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
     ChannelsApi.any_instance.stubs(:current_user).returns(old_user)

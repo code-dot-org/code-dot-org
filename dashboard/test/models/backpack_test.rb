@@ -11,6 +11,7 @@ class BackpackTest < ActiveSupport::TestCase
     @storage_id = fake_storage_id_for_user_id(@user.id)
   end
 
+  # test comment
   test 'find_or_create creates project if backpack does not exist' do
     Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     backpack = Backpack.find_or_create(@user.id, 'fake-ip')
