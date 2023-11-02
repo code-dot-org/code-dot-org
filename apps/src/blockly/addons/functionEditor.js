@@ -168,7 +168,6 @@ export default class FunctionEditor {
           NAME: procedure.getName(),
         },
         deletable: false,
-        movable: false,
       };
 
       this.block = Blockly.serialization.blocks.append(
@@ -176,6 +175,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
 
@@ -344,12 +344,12 @@ export default class FunctionEditor {
    * @returns Block configuration with x and y coordinates
    */
   addEditorWorkspaceBlockConfig(blockConfig) {
-    const returnValue = {
+    return {
       ...blockConfig,
+      movable: false,
       x: 20,
       y: 40,
     };
-    return returnValue;
   }
 
   // Copy all procedure models from the hidden definition workspace to the editor workspace,
