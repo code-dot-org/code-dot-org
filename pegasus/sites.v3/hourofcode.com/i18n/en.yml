@@ -676,7 +676,7 @@
 
   hoc_page_what_is_hoc_heading: "What is Hour of Code?"
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
-  hoc_page_desc_2023: "In 2023, Hour of Code is exploring the limitless realms of creativity empowered by AI! Whether you or your students are experienced coders or you are setting out on your very first computer science expedition, this Hour of Code promises an extraordinary voyage."
+  hoc_page_desc_2023: "This year Hour of Code is exploring the limitless realms of creativity empowered by AI! Whether you or your students are experienced coders or you are setting out on your very first computer science expedition, this Hour of Code promises an extraordinary voyage."
   hoc_page_place_to_start: "There are several places you can start, choose which one is right for you and your students:"
   hoc_page_lead_activity_heading: "Lead an Hour of Code Activity"
   hoc_page_lead_activity_desc: "With more than 700 activities to choose from with classifications by grade level, experience, and inclusion of AI, your choices are vast. When you know your plans, please [register your activity](%{register_activity_url}) so we can celebrate all the events happening across the globe."
