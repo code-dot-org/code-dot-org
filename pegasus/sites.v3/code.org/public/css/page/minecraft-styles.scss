@@ -32,12 +32,8 @@
       background-image: url("/images/banners/banner-bg-maze-squares-light.png");
       background-position: center;
       background-repeat: repeat;
-      background-size: 230px, 30%;
-      z-index: 2;
-
-      @media screen and (max-width: $width-sm) {
-        background-size: 50%;
-      }
+      background-size: contain;
+      z-index: 1;
     }
   }
 

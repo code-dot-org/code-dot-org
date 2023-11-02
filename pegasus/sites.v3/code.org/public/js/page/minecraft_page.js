@@ -57,7 +57,7 @@ function handleScreenSize(carouselId, cardsList) {
     console.log("639 - 959");
   } else if (windowWidth > 959) {
     reorganizeAndWrapSlides(carouselId, cardsList);
-    console.log("> 960");
+    console.log("> 959");
   }
 }
 
