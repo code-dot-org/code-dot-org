@@ -100,6 +100,12 @@ $ai-modal-border-width: 8px;
         width: 35px;
         height: 35px;
         margin-right: 6px;
+
+        &Icon {
+          width: 35px;
+          height: 35px;
+          margin: 0;
+        }
       }
     }
 
@@ -147,14 +153,6 @@ $ai-modal-border-width: 8px;
         animation: appear1 2s;
 
         .item {
-          @include remove-button-styles;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          width: 40px;
-          height: 40px;
-          margin: 8px;
-          float: left;
           opacity: 0.3;
 
           &Available {
@@ -210,12 +208,6 @@ $ai-modal-border-width: 8px;
             position: absolute;
             top: 0;
             left: 0;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 40px;
-            height: 40px;
-            margin: 8px;
             pointer-events: all;
           }
         }
@@ -319,7 +311,7 @@ $ai-modal-border-width: 8px;
     .generatingArea {
       position: absolute;
       top: 0;
-      width: calc(100% - 20px)
+      width: calc(100% - 20px);
     }
 
     .explanationArea {
@@ -359,5 +351,19 @@ $ai-modal-border-width: 8px;
     &SmallText {
       font-size: 12px;
     }
+  }
+}
+
+.emojiIcon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+
+  &Button {
+    @include remove-button-styles;
+    margin: 8px;
   }
 }
