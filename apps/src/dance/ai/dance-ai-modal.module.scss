@@ -124,6 +124,12 @@ $result-red: rgb(235 87 87);
         width: 35px;
         height: 35px;
         margin-right: 6px;
+
+        &Icon {
+          width: 35px;
+          height: 35px;
+          margin: 0;
+        }
       }
     }
 
@@ -191,14 +197,6 @@ $result-red: rgb(235 87 87);
         animation: appear1 2s;
 
         .item {
-          @include remove-button-styles;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          width: 40px;
-          height: 40px;
-          margin: 8px;
-          float: left;
           opacity: 0.3;
 
           &Available {
@@ -254,12 +252,6 @@ $result-red: rgb(235 87 87);
             position: absolute;
             top: 0;
             left: 0;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 40px;
-            height: 40px;
-            margin: 8px;
             pointer-events: all;
           }
         }
@@ -482,5 +474,19 @@ $result-red: rgb(235 87 87);
     &SmallText {
       font-size: 12px;
     }
+  }
+}
+
+.emojiIcon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+
+  &Button {
+    @include remove-button-styles;
+    margin: 8px;
   }
 }
