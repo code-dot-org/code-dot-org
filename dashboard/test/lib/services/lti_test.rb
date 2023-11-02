@@ -20,6 +20,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       aud: 'some-aud',
       iss: 'http://some-iss.com',
       @custom_claims_key => {
+        display_name: 'hansolo',
         full_name: 'Han Solo',
         given_name: 'Han',
         family_name: 'Solo',
@@ -33,7 +34,20 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert user
     assert_equal user.user_type, User::TYPE_TEACHER
     # TODO: Probably need to test for more of the name cases, since we have multiple fallbacks depending on what kind of name we get in the id_token
+    assert_equal user.name, @id_token[@custom_claims_key][:display_name]
+
+    @id_token[@custom_claims_key][:display_name] = nil
+    user = Services::Lti.initialize_lti_user(@id_token)
     assert_equal user.name, @id_token[@custom_claims_key][:full_name]
+
+    @id_token[@custom_claims_key][:full_name] = nil
+    user = Services::Lti.initialize_lti_user(@id_token)
+    assert_equal user.name, @id_token[@custom_claims_key][:family_name]
+
+    @id_token[@custom_claims_key][:family_name] = nil
+    user = Services::Lti.initialize_lti_user(@id_token)
+    assert_equal user.name, @id_token[@custom_claims_key][:given_name]
+
     refute user.authentication_options.empty?
     assert_equal user.authentication_options[0].credential_type, AuthenticationOption::LTI_V1
     assert_equal user.authentication_options[0].authentication_id, Policies::Lti.generate_auth_id(@id_token)
@@ -45,7 +59,15 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert student_user
     assert_equal student_user.user_type, User::TYPE_STUDENT
     # TODO: Probably need to test for more of the name cases, since we have multiple fallbacks depending on what kind of name we get in the id_token
-    assert_equal student_user.name, @id_token[@custom_claims_key][:full_name]
+    assert_equal student_user.name, @id_token[@custom_claims_key][:display_name]
     assert_equal student_user.family_name, @id_token[@custom_claims_key][:family_name]
+
+    @id_token[@custom_claims_key][:display_name] = nil
+    student_user = Services::Lti.initialize_lti_user(@id_token)
+    assert_equal student_user.name, @id_token[@custom_claims_key][:full_name]
+
+    @id_token[@custom_claims_key][:full_name] = nil
+    student_user = Services::Lti.initialize_lti_user(@id_token)
+    assert_equal student_user.name, @id_token[@custom_claims_key][:given_name]
   end
 end
