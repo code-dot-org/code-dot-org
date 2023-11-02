@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Sprite Lab
 
-##### Sprite Lab is a learning tool that allows students to learn about sprites, sprite behaviors, and events.  A sprite is an image or character in your coding program.  An event in computer science is an action that causes something to happen.
+##### Sprite Lab is a block-based programming environment that allows students to create simple animations and games with objects and characters that interact with each other. Students learn about sprites, sprite behaviors, and events. A **sprite** is an image or character in your coding program. An **event** in computer science is an action that causes something to happen.
+
+<img src="https://images.code.org/a894570c22ef9e7d50f9492f380807cf-image-1698850418800.png" alt="Image CS Discoveries students" width="225px" style="border-radius:10px; float:left; margin: 0 40px 20px 20px;">
 
 ## You will:
 
@@ -15,4 +17,6 @@ markdown <<MARKDOWN
 ### **Suggested time:** 5 minutes
 
 ## Let's keep learning! 
+
+
 MARKDOWN

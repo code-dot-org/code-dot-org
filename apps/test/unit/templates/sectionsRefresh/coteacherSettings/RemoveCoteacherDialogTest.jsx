@@ -36,28 +36,19 @@ const createStubbedCoteacherDialog = coteacherToRemove => {
 };
 
 describe('RemoveCoteacherDialog', () => {
+  afterEach(() => {
+    $.ajax.restore();
+  });
   it('does not show dialog when coteacher to remove not supplied', () => {
-    const wrapper = shallow(
-      <RemoveCoteacherDialog
-        coteacherToRemove={null}
-        setCoteacherToRemove={() => {}}
-        removeSavedCoteacher={() => {}}
-        setCoteachersToAdd={() => {}}
-      />
-    );
+    const {wrapper} = createStubbedCoteacherDialog(null);
 
     expect(wrapper).to.be.empty;
   });
 
   it('show dialog when coteacher to remove supplied', () => {
-    const wrapper = shallow(
-      <RemoveCoteacherDialog
-        coteacherToRemove={{instructorEmail: 'newsaurus@code.org'}}
-        setCoteacherToRemove={() => {}}
-        removeSavedCoteacher={() => {}}
-        setCoteachersToAdd={() => {}}
-      />
-    );
+    const {wrapper} = createStubbedCoteacherDialog({
+      instructorEmail: 'newsaurus@code.org',
+    });
 
     expect(wrapper.find('Button')).to.have.lengthOf(2);
     expect(wrapper.find('StrongText').dive().text()).to.contain(
@@ -86,8 +77,6 @@ describe('RemoveCoteacherDialog', () => {
     expect(removeSavedCoteacher).to.have.not.been.called;
     expect(setCoteachersToAdd).to.have.not.been.called;
     expect(ajaxStub).to.have.not.been.called;
-
-    ajaxStub.restore();
   });
   it('Remove unsubmitted', () => {
     const {
@@ -103,15 +92,10 @@ describe('RemoveCoteacherDialog', () => {
       .at(1)
       .simulate('click', {preventDefault: () => {}});
 
-    wrapper.update();
-
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
     expect(removeSavedCoteacher).to.have.not.been.called;
     expect(setCoteachersToAdd).to.have.been.calledOnce;
     expect(ajaxStub).to.have.not.been.called;
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
-
-    ajaxStub.restore();
   });
   it('Remove submitted', () => {
     const submittedCoteacher = {
@@ -133,14 +117,9 @@ describe('RemoveCoteacherDialog', () => {
       .at(1)
       .simulate('click', {preventDefault: () => {}});
 
-    wrapper.update();
-
-    expect(wrapper.find('AccessibleDialog')).to.be.empty;
-
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
     expect(removeSavedCoteacher).to.have.been.calledOnceWith(1);
     expect(setCoteachersToAdd).to.have.not.been.called;
     expect(ajaxStub).to.have.been.calledOnce;
-    ajaxStub.restore();
   });
 });

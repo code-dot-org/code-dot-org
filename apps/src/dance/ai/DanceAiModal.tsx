@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -6,16 +6,17 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {BlockSvg, Workspace} from 'blockly/core';
+import {FieldDropdown, Workspace} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
 import {chooseEffects} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput} from '../types';
-
-const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
-const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
+import {AiOutput, FieldKey} from '../types';
+import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
+import aiBotBorder from '@cdo/static/dance/ai/ai-bot-border.png';
+import aiBotBeam from '@cdo/static/dance/ai/blue-scanner.png';
 
 enum Mode {
   SELECT_INPUTS = 'selectInputs',
@@ -29,26 +30,21 @@ enum Mode {
 type AiModalItem = {
   id: string;
   name: string;
-};
-
-type AiModalReturnedItem = {
-  id: string;
-  name: string;
-  url: string;
-  available: boolean;
+  emoji: string;
 };
 
 interface DanceAiProps {
   onClose: () => void;
 }
 
+const getImageUrl = (id: string) => {
+  return `/blockly/media/dance/ai/emoji/${id}.svg`;
+};
+
 const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
-
-  const inputLibraryFilename = 'ai-inputs';
-  const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
@@ -59,6 +55,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingDone, setGeneratingDone] = useState<boolean>(false);
   const [typingDone, setTypingDone] = useState<boolean>(false);
+  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -67,8 +64,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
-
-  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
@@ -85,8 +80,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   }, [currentAiModalField]);
 
-  const getImageUrl = (id: string) => {
-    return `/blockly/media/dance/ai/emoji/${id}.svg`;
+  const getLabels = () => {
+    const tempWorkspace = new Workspace();
+    const blocksSvg = generateBlocks(tempWorkspace);
+
+    const foregroundLabels = getLabelMap(
+      blocksSvg[0].getField('EFFECT') as FieldDropdown
+    );
+    const backgroundLabels = getLabelMap(
+      blocksSvg[1].getField('EFFECT') as FieldDropdown
+    );
+    const paletteLabels = getLabelMap(
+      blocksSvg[1].getField('PALETTE') as FieldDropdown
+    );
+
+    tempWorkspace.dispose();
+
+    return {
+      [FieldKey.FOREGROUND_EFFECT]: foregroundLabels,
+      [FieldKey.BACKGROUND_EFFECT]: backgroundLabels,
+      [FieldKey.BACKGROUND_PALETTE]: paletteLabels,
+    };
   };
 
   const getAllItems = (slotIndex: number) => {
@@ -94,21 +108,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       return [];
     }
 
-    return inputLibrary.items.map((item: AiModalItem) => {
+    return inputLibraryJson.items.map(item => {
       return {
-        id: item.id,
-        name: item.name,
-        url: getImageUrl(item.id),
+        ...item,
         available: !inputs.includes(item.id),
       };
     });
   };
 
-  const getItemName = (id: string) => {
-    return inputLibrary.items.find(
-      (item: AiModalReturnedItem) => item.id === id
-    )?.name;
-  };
+  const getItem = (id: string) =>
+    inputLibraryJson.items.find(item => item.id === id);
 
   const handleItemClick = (id: string) => {
     if (currentInputSlot < SLOT_COUNT) {
@@ -173,37 +182,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setResultJson(fullResultJson);
   };
 
-  /**
-   * Generates blocks from the AI result in the main workspace, and attaches
-   * them to each other.
-   */
-  const generateBlocksFromResult = (
-    workspace: Workspace
-  ): [BlockSvg, BlockSvg] => {
-    const params = JSON.parse(resultJson);
-
-    const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-      workspace.newBlock(
-        'Dancelab_setBackgroundEffectWithPaletteAI'
-      ) as BlockSvg,
-    ];
-
-    // Foreground block.
-    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
-
-    // Background block.
-    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
-
-    // Connect the blocks.
-    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-
-    return blocksSvg;
-  };
-
   const handleConvertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
+    const blocksSvg = generateBlocksFromResult(
+      Blockly.getMainWorkspace(),
+      resultJson
+    );
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -275,6 +258,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   }
 
+  const onBlockPreviewDone = useCallback(() => {
+    if (mode === Mode.GENERATING) {
+      setGeneratingDone(true);
+    } else if (mode === Mode.RESULTS) {
+      setShowPreview(true);
+      setMode(Mode.RESULTS_FINAL);
+      setTypingDone(true);
+    }
+  }, [mode, setGeneratingDone, setShowPreview, setTypingDone]);
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -282,20 +275,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       initialFocus={false}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img src={aiBotBorder} className={moduleStyles.botImage} />
+        <img src={aiBotBorder} className={moduleStyles.botImage} alt="A.I." />
         generate &nbsp;
         <div className={moduleStyles.inputsContainer}>
-          {Array.from(Array(SLOT_COUNT).keys()).map(index => (
-            <div
-              key={index}
-              style={{
-                backgroundImage:
-                  inputs[index] && `url(${getImageUrl(inputs[index])}`,
-              }}
-              className={moduleStyles.emojiSlot}
-              title={getItemName(inputs[index])}
-            />
-          ))}
+          {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+            const item = getItem(inputs[index]);
+            return (
+              <div key={index} className={moduleStyles.emojiSlot}>
+                {item && (
+                  <EmojiIcon
+                    item={item}
+                    className={moduleStyles.emojiSlotIcon}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
         &nbsp; effects
         <div
@@ -359,25 +354,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         >
           {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
-              {getAllItems(currentInputSlot).map(
-                (item: AiModalReturnedItem) => {
-                  return (
-                    <button
-                      type={'button'}
-                      key={item.id}
-                      onClick={() => item.available && handleItemClick(item.id)}
-                      style={{
-                        backgroundImage: `url(${item.url})`,
-                      }}
-                      className={classNames(
-                        moduleStyles.item,
-                        item.available && moduleStyles.itemAvailable
-                      )}
-                      title={item.name}
-                    />
-                  );
-                }
-              )}
+              {getAllItems(currentInputSlot).map(item => {
+                return (
+                  <EmojiIcon
+                    item={item}
+                    onClick={() => item.available && handleItemClick(item.id)}
+                    className={classNames(
+                      moduleStyles.item,
+                      item.available && moduleStyles.itemAvailable
+                    )}
+                  />
+                );
+              })}
             </div>
           )}
         </div>
@@ -394,6 +382,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             (mode === Mode.PROCESSING && !processingDone)) && (
             <div className={moduleStyles.prompt}>
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+                const item = getItem(inputs[index]);
                 return (
                   <div key={index} className={moduleStyles.inputContainer}>
                     {index === currentInputSlot && (
@@ -409,13 +398,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     )}
                     <div className={moduleStyles.inputBackground}>&nbsp;</div>
 
-                    {inputs[index] && (
-                      <div
-                        style={{
-                          backgroundImage: `url(${getImageUrl(inputs[index])}`,
-                        }}
+                    {item && (
+                      <EmojiIcon
+                        item={item}
                         className={moduleStyles.inputItem}
-                        title={getItemName(inputs[index])}
                       />
                     )}
                   </div>
@@ -454,8 +440,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       !processingDone &&
                       moduleStyles.beamImageVisible
                   )}
+                  alt="A.I. Beam"
                 />
-                <img src={aiBotBorder} className={moduleStyles.image} />
+                <img
+                  src={aiBotBorder}
+                  className={moduleStyles.image}
+                  alt="A.I."
+                />
               </div>
             </div>
           )}
@@ -491,16 +482,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             >
               <AiBlockPreview
                 fadeIn={mode === Mode.GENERATING}
-                generateBlocksFromResult={generateBlocksFromResult}
-                onComplete={() => {
-                  if (mode === Mode.GENERATING) {
-                    setGeneratingDone(true);
-                  } else if (mode === Mode.RESULTS) {
-                    setShowPreview(true);
-                    setMode(Mode.RESULTS_FINAL);
-                    setTypingDone(true);
-                  }
-                }}
+                resultJson={resultJson}
+                onComplete={onBlockPreviewDone}
               />
             </div>
           )}
@@ -510,7 +493,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           showPreview && (
             <div id="preview-area" className={moduleStyles.previewArea}>
               <AiVisualizationPreview
-                blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
+                blocks={generateBlocksFromResult(
+                  Blockly.getMainWorkspace(),
+                  resultJson
+                )}
               />
             </div>
           )}
@@ -520,6 +506,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <AiExplanationView
               inputs={inputs}
               result={JSON.parse(resultJson)}
+              labelMaps={getLabels()}
             />
           </div>
         )}
@@ -601,6 +588,37 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         </div>
       </div>
     </AccessibleDialog>
+  );
+};
+
+interface EmojiIconProps {
+  item: AiModalItem;
+  onClick?: () => void;
+  className?: string;
+}
+
+const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
+  item,
+  onClick,
+  className,
+}) => {
+  const isButton = onClick !== undefined;
+  const Tag = isButton ? 'button' : 'div';
+  return (
+    <Tag
+      type={isButton ? 'button' : undefined}
+      key={item.id}
+      onClick={onClick}
+      style={{
+        backgroundImage: `url(${getImageUrl(item.id)})`,
+      }}
+      className={classNames(
+        moduleStyles.emojiIcon,
+        isButton && moduleStyles.emojiIconButton,
+        className
+      )}
+      title={item.emoji}
+    />
   );
 };
 
