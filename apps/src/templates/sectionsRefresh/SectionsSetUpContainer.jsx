@@ -20,6 +20,7 @@ import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import CoteacherSettings from './CoteacherSettings';
 
@@ -275,6 +276,7 @@ export default function SectionsSetUpContainer({
     // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
     // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
+      experiments.isEnabled('ai-tutor-toggle') &&
       sections[0].course.displayName === 'Computer Science A';
 
     return renderExpandableSection(
