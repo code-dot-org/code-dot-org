@@ -354,7 +354,8 @@ export default class FunctionEditor {
     // Position the blocks within the workspace svg frame.
     const x = frameSizes.MARGIN_SIDE + 5;
     const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
-    const returnValue = {
+
+    return {
       ...blockConfig,
       movable: false,
       x,
