@@ -14,6 +14,9 @@ import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog'
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import Button from '@cdo/apps/templates/Button';
+
+const currentTimeoutsMap = {};
 
 export const SongSelector = ({
   selectedSong,
@@ -24,6 +27,47 @@ export const SongSelector = ({
   filterOn,
 }) => {
   const [songInPreview, setSongInPreview] = useState(false);
+  // const [currentTimeoutsMap, setCurrentTimeouts] = useState({});
+
+  const onPreviewBtnClick = useCallback(() => {
+    if (songInPreview) {
+      console.log('double click stop playing song');
+      audioCommands.stopSound({url: songData[selectedSong].url});
+      setSongInPreview(false);
+    } else {
+      console.log('start playing song');
+      audioCommands.playSound({
+        url: `${songData[selectedSong].url}`,
+        callback: () => {
+          setSongInPreview(true);
+          // console.log(songInPreview)
+          const timeoutID = setTimeout(() => {
+            console.log('stop playing song');
+            // console.log(levelIsRunning, songInPreview);
+            if (!levelIsRunning) {
+              audioCommands.stopSound({url: songData[selectedSong].url});
+              console.log('end song - ', songData[selectedSong].url);
+              setSongInPreview(false);
+            }
+          }, 10000);
+
+          currentTimeoutsMap[selectedSong] = timeoutID;
+          console.log('callback');
+        },
+        onEnded: () => {
+          console.log('------------------');
+          console.log(currentTimeoutsMap[selectedSong]);
+          currentTimeoutsMap[selectedSong] &&
+            clearTimeout(currentTimeoutsMap[selectedSong]);
+
+          delete currentTimeoutsMap[selectedSong];
+
+          setSongInPreview(false);
+          console.log('end');
+        },
+      });
+    }
+  }, [levelIsRunning, selectedSong, songData, songInPreview]);
   // useEffect(() => {
   //   console.log('songInPreview', songInPreview);
   //   console.log('levelIsRunning', levelIsRunning);
@@ -51,42 +95,19 @@ export const SongSelector = ({
       <label>
         <b>{i18n.selectSong()}</b>
       </label>
-      <button
+      <Button
         type="button"
         disabled={levelIsRunning}
-        onClick={() => {
-          if (songInPreview) {
-            console.log('double click stop playing song');
-            audioCommands.stopSound({url: songData[selectedSong].url});
-            setSongInPreview(false);
-          } else {
-            console.log('start playing song');
-            audioCommands.playSound({
-              url: `${songData[selectedSong].url}`,
-              callback: () => {
-                setSongInPreview(true);
-                // console.log(songInPreview)
-                setTimeout(() => {
-                  console.log('stop playing song');
-                  // console.log(levelIsRunning, songInPreview);
-                  if (!levelIsRunning) {
-                    audioCommands.stopSound({url: songData[selectedSong].url});
-                    console.log('end song - ', songData[selectedSong].url);
-                    setSongInPreview(false);
-                  }
-                }, 10000);
-                console.log('callback');
-              },
-              onEnded: () => {
-                setSongInPreview(false);
-                console.log('end');
-              },
-            });
-          }
-        }}
+        color={Button.ButtonColor.neutralDark}
+        icon={
+          !levelIsRunning && songInPreview
+            ? ' fa-solid fa-stop'
+            : ' fa-solid fa-play'
+        }
+        onClick={onPreviewBtnClick}
       >
-        {!levelIsRunning && songInPreview ? 'Stop Preview' : 'Preview'} song
-      </button>
+        {/*{!levelIsRunning && songInPreview ? 'Stop Preview' : 'Preview'} song*/}
+      </Button>
       <select
         id="song_selector"
         style={styles.selectStyle}
@@ -208,8 +229,8 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-                    Turn the song filter off
-                  */
+                                    Turn the song filter off
+                                  */
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };
