@@ -12,7 +12,7 @@ module I18n
       module Emails
         class SyncIn < I18n::Utils::SyncInBase
           LOCALIZABLE_FILE_SUBPATHS = %w[
-            hoc_signup_2023_receipt_en.md
+            hoc_signup_2023_receipt.md
           ].freeze
 
           def process
