@@ -10,7 +10,7 @@ from constants import *
 import pandas as pd
 import pickle 
 import openai
-openai.api_key = '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' # Replace with your OpenAI API key
+openai.api_key = '' # Replace with your OpenAI API key
 
 def get_json_object(file):
     block_config_file = open(file)
