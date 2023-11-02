@@ -16,13 +16,13 @@ import {
   unloadSong,
   loadSongMetadata,
 } from './songs';
-import GoogleBlockly from 'blockly/core';
+import {Field} from 'blockly';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: GoogleBlockly.Field;
+  currentAiModalField?: Field;
   aiOutput?: AiOutput;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
@@ -174,7 +174,7 @@ const danceSlice = createSlice({
     openAiModal: (
       state,
       action: PayloadAction<{
-        modalField: GoogleBlockly.Field;
+        modalField: Field;
         fromFlyout: boolean;
       }>
     ) => {
