@@ -80,6 +80,7 @@ class XhrProxyController < ApplicationController
     data.nasa.gov
     data.weather.gov.hk
     dataservice.accuweather.com
+    decimeta.info
     deckofcardsapi.com
     distanza.org
     githubusercontent.com
