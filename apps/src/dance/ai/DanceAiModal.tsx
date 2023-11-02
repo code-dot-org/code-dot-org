@@ -33,14 +33,6 @@ type AiModalItem = {
   emoji: string;
 };
 
-type AiModalReturnedItem = {
-  id: string;
-  name: string;
-  url: string;
-  available: boolean;
-  emoji: string;
-};
-
 interface DanceAiProps {
   onClose: () => void;
 }
@@ -111,10 +103,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     };
   };
 
-  const getImageUrl = (id: string) => {
-    return `/blockly/media/dance/ai/emoji/${id}.svg`;
-  };
-
   const getAllItems = (slotIndex: number) => {
     if (slotIndex >= SLOT_COUNT) {
       return [];
@@ -123,7 +111,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     return inputLibraryJson.items.map(item => {
       return {
         ...item,
-        url: getImageUrl(item.id),
         available: !inputs.includes(item.id),
       };
     });
