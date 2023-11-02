@@ -47,7 +47,7 @@
                 %p.body-three.no-margin-bottom
                   = slide_item[:desc]
               .content-footer
-                %a.link-button.has-external-link{href: "#{slide_item[:url]}", "aria-label": "#{slide_item[:aria_label]}"}
+                %a.link-button{href: "#{slide_item[:url]}", "aria-label": "#{slide_item[:aria_label]}"}
                   =hoc_s(:call_to_action_get_started)
 
   = view :carousel_pagination, carousel_id: "minecraft_cdo_activities-pagination", carousel_index: "1"
