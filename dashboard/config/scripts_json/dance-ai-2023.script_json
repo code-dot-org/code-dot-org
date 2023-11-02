@@ -1,0 +1,506 @@
+{
+  "script": {
+    "name": "dance-ai-2023",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2023"
+    },
+    "new_name": null,
+    "family_name": "dance-ai",
+    "serialized_at": "2023-11-02 02:38:48 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "dance-ai-2023"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Dance Party: A.I. Edition",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "58bdb8b5-159d-4b7a-aae7-d250213c1379",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Dance Party"
+      },
+      "seeding_key": {
+        "activity_section.key": "58bdb8b5-159d-4b7a-aae7-d250213c1379",
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6"
+      }
+    },
+    {
+      "key": "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf",
+      "position": 2,
+      "properties": {
+        "progression_name": "Let's dance"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf",
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6"
+      }
+    },
+    {
+      "key": "e150925b-003d-4acd-a87c-5aca4d8b1a89",
+      "position": 3,
+      "properties": {
+        "progression_name": "Use A.I. to generate effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89",
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6"
+      }
+    },
+    {
+      "key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542",
+      "position": 4,
+      "properties": {
+        "progression_name": "Code events to add interaction"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542",
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6"
+      }
+    },
+    {
+      "key": "7f2f14df-e85e-4dea-bf5a-5d9537baca14",
+      "position": 5,
+      "properties": {
+        "progression_name": "Final Dance Party Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f2f14df-e85e-4dea-bf5a-5d9537baca14",
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Dance Party"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_intro_video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "58bdb8b5-159d-4b7a-aae7-d250213c1379"
+      },
+      "level_keys": [
+        "dance_ai_intro_video"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Let's dance"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_dancer_and_dance_move"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf"
+      },
+      "level_keys": [
+        "dance_ai_dancer_and_dance_move"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Use A.I. to generate effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_generate_effect"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89"
+      },
+      "level_keys": [
+        "dance_ai_generate_effect"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Use A.I. to generate effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_generate_effect_again"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89"
+      },
+      "level_keys": [
+        "dance_ai_generate_effect_again"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Use A.I. to generate effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_customize_effect"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89"
+      },
+      "level_keys": [
+        "dance_ai_customize_effect"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code events to add interaction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_try_key_press"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      },
+      "level_keys": [
+        "dance_ai_try_key_press"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Code events to add interaction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_code_key_press"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      },
+      "level_keys": [
+        "dance_ai_code_key_press"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Code events to add interaction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_try_at_measure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      },
+      "level_keys": [
+        "dance_ai_try_at_measure"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Code events to add interaction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_code_at_measure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      },
+      "level_keys": [
+        "dance_ai_code_at_measure"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Dance Party Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "7f2f14df-e85e-4dea-bf5a-5d9537baca14"
+      },
+      "level_keys": [
+        "dance_ai_freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_intro_video",
+        "script_level.level_keys": [
+          "dance_ai_intro_video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "58bdb8b5-159d-4b7a-aae7-d250213c1379"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_dancer_and_dance_move",
+        "script_level.level_keys": [
+          "dance_ai_dancer_and_dance_move"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_generate_effect",
+        "script_level.level_keys": [
+          "dance_ai_generate_effect"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_generate_effect_again",
+        "script_level.level_keys": [
+          "dance_ai_generate_effect_again"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_customize_effect",
+        "script_level.level_keys": [
+          "dance_ai_customize_effect"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "e150925b-003d-4acd-a87c-5aca4d8b1a89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_try_key_press",
+        "script_level.level_keys": [
+          "dance_ai_try_key_press"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_code_key_press",
+        "script_level.level_keys": [
+          "dance_ai_code_key_press"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_try_at_measure",
+        "script_level.level_keys": [
+          "dance_ai_try_at_measure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_code_at_measure",
+        "script_level.level_keys": [
+          "dance_ai_code_at_measure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_freeplay",
+        "script_level.level_keys": [
+          "dance_ai_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dance-ai-2023",
+        "activity_section.key": "7f2f14df-e85e-4dea-bf5a-5d9537baca14"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
