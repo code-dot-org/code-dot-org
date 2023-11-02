@@ -1199,6 +1199,7 @@ var projects = (module.exports = {
           // project's 'last saved' time shown in the UI may be inaccurate for
           // all projects that were saved while emergency mode was active.
           if (appOptions.reduceChannelUpdates && initialSaveComplete) {
+            console.log('Skipping channel metadata update');
             this.onUpdateChannel(callback, null, current);
           } else {
             this.updateChannels_(callback);
