@@ -35,15 +35,15 @@ def get_blockly_ids_and_user_facing_names(options, isEffects):
     if isEffects:
         options.remove(['None', '"none"'])
         options.remove(['(Random)', '"rand"'])
-    blockly_ids_list = []
-    user_facing_names_list = []
+    blockly_ids = []
+    user_facing_names = []
     # option_pair is an array with two elements [blockly_id, user_facing_name]
     for option_pair in options:
         user_facing_name = option_pair[0]
         blockly_id = option_pair[1].replace('\"', '')
-        blockly_ids_list.append(blockly_id)
-        user_facing_names_list.append(user_facing_name)
-    return blockly_ids_list, user_facing_names_list
+        blockly_ids.append(blockly_id)
+        user_facing_names.append(user_facing_name)
+    return blockly_ids, user_facing_names
 
 
 def get_background_effects():
@@ -62,17 +62,12 @@ def get_palettes():
     palette_options = set_background_effect_json_object['config']['args'][1]['options']
     return get_blockly_ids_and_user_facing_names(palette_options, False)
 
-def create_map_print_options(options_name, model_descriptive_names, blockly_ids_list, user_facing_names_list):
+def print_options(category, model_descriptive_names, blockly_ids, user_facing_names):
     # options_map contains model_descriptive_name as key and blockly_id as value.
-    options_map = {}
-    print(options_name.upper())
+    print(category.upper())
     print('model_descriptive_name | blockly_id | blockly_user_facing_name')
     for i in range(len(model_descriptive_names)):
-        model_descriptive_name = model_descriptive_names[i]
-        blockly_id = blockly_ids_list[i]
-        options_map[model_descriptive_name] = blockly_id
-        print (model_descriptive_name + ' | ' + blockly_id + ' | ' + user_facing_names_list[i])
-    return options_map
+        print (model_descriptive_names[i] + ' | ' + blockly_ids[i] + ' | ' + user_facing_names[i])
 
 # This function loads the embeddings cache file if present, and otherwise creates a new file.
 def load_embeddings_cache(path):

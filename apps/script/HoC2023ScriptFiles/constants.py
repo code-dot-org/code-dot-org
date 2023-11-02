@@ -1,5 +1,13 @@
 EMBEDDING_MODEL = 'text-embedding-ada-002' # The most recent Ada model as of October 2023.
 
+# Constants for 4 option lists.
+EMOJIS = 'emojis'
+PALETTES = 'palettes'
+BACKGROUND_EFFECTS = 'background_effects'
+FOREGROUND_EFFECTS = 'foreground_effects'
+
+# We rename foreground/background effects and palettes as their model_descriptive_name
+# to better reflect the actual output of the effect or color.
 BACKGROUND_EFFECT_MODEL_DESCRIPTIVE_NAMES = [
     'moving shapes',
     'flower petals',

@@ -7,6 +7,18 @@ the in Hoc2023AiHelperFunctions.py file.
 Run `HoC2023AiGenerateWeights.py` from the code-dot-org root directory using the following command:
 `python apps/script/HoC2023ScriptFiles/HoC2023AiGenerateWeights.py`
 
+Note that the script generates/updates 3 files in apps/static/dance/ai/model:
+- cached_background_effects_map.json
+- cached_foreground_effects_map.json
+- cached_palettes_map.json
+
+These files store association values measuring the similarity between an emoji and each output.
+Embeddings from Open AI's Ada model are used to compute these values.
+An embedding is a vector (list) of floating point numbers, and embeddings are used to
+measure the relatedness of text strings. The distance between two vectors measures
+their relatedness. https://platform.openai.com/docs/guides/embeddings
+We also store embeddings in caches files as as pickle files, python's native way to serialize data.
+
 Below are background effects, palettes and foreground effects in the order that they appear in the dropdowns. When this file is run and the three cached data files are replaced in apps/static/dance/ai/model, please update the lists below with the output from this script.
 
 BACKGROUND EFFECTS
