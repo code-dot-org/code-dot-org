@@ -23,6 +23,8 @@
   "danceAiModalExplanationButton": "Learn more",
   "danceAiModalRegenerateButton": "Regenerate",
   "danceAiModalExplanation": "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I made.",
+  "danceAiBotAlt": "A.I.",
+  "danceAiBotBeamAlt": "A.I. Beam",
   "danceFeedbackDidntPress": "Make sure to press the arrow keys while your dance is running.",
   "danceFeedbackKeyEvent": "Make sure you attach some code to the <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> block and press the key while your dance is running.",
   "danceFeedbackNeedBackup": "You need to create a group of backup dancers with the <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
