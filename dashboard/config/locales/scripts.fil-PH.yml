@@ -3908,7 +3908,7 @@ fil:
           description_short: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code
           student_description: Gamitin ang mga bloke ng code para madala sina Steve
             o Alex sa isang pakikipagsapalaran sa mundo ng Minecraft na ito.
-          title: Minecraft na Hour of Code
+          title: Tagapaglakbay sa Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4759,6 +4759,17 @@ fil:
           lesson_groups:
             csd3_2:
               display_name: 'Kabanata 2: Paggawa ng mga Laro'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Panimula
+          lessons:
+            lesson-7:
+              name: Panimula
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Panimula
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4781,6 +4792,10 @@ fil:
           lessons:
             lesson-3:
               name: Pagtatasa
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Panimula
         virustest:
           description_short: 'Gumamit ng Sprite Lab upang gumawa ng isang simulasyon
             mula sa isang lumitaw na virus. '

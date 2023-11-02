@@ -210,7 +210,7 @@
           "id": "آواکادو"
         },
         "beans": {
-          "id": "لوبیا"
+          "id": "حبوبات"
         },
         "cheese": {
           "id": "پنیر"
@@ -232,7 +232,7 @@
           "id": "آواکادو"
         },
         "beans": {
-          "id": "لوبیا"
+          "id": "حبوبات"
         },
         "corn": {
           "id": "ذرت"
@@ -336,7 +336,7 @@
   "modelCardPossibleValuesMaximum": "حداکثر",
   "modelCardPossibleValuesMinimum": "حداقل",
   "navigateBack": "بازگشت",
-  "navigateDone": "تمام کن",
+  "navigateDone": "پایان",
   "navigateForward": "ادامه",
   "predictButton": "پیشبینی کردن",
   "saveProgress": "ذخيره",

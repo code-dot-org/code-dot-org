@@ -2548,7 +2548,7 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algoritmo",
-          "definition": "una serie de pasos para resolver un problema o tomar una decisión"
+          "definition": "una serie de pasos para resolver un problema o tomar una decisión."
         },
         "network/how-ai-works/2023": {
           "word": "Red",
@@ -2556,7 +2556,7 @@
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Modelo de Lenguaje Grande (LLM)",
-          "definition": "una forma de propósito general de IA que se entrena en un cuerpo de conocimiento muy, muy grande"
+          "definition": "una forma de IA de propósito general que se entrena con un corpus de conocimientos muy, muy amplio."
         },
         "model/how-ai-works/2023": {
           "word": "Modelo",
@@ -2572,7 +2572,7 @@
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Inteligencia Artificial",
-          "definition": "la capacidad de las máquinas para aprender y resolver problemas."
+          "definition": "la capacidad que tienen las máquinas para aprender y resolver problemas."
         },
         "ethics/how-ai-works/2023": {
           "word": "Ética",
@@ -2892,26 +2892,6 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compresión sin pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Código",
-          "definition": "(v) escribir instrucciones para un ordenador."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Programa",
-          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Estado de ánimo",
-          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Línea",
-          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
         }
       }
     }

@@ -332,7 +332,7 @@ pt:
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         mc:
-          title: Hora do Código Minecraft
+          title: Aventureiro de Minecraft
           description: Use blocos de código para levar Steve ou Alex a uma aventura pelo mundo do Minecraft.
           description_short: Explore o mundo de Minecraft usando códigos.
           student_description: Use blocos de código para levar Steve ou Alex a uma aventura pelo mundo do Minecraft.
@@ -3440,6 +3440,8 @@ pt:
               display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo
+        dance-unplugged:
+          title: Festa de dança desconectada
         csc-things:
           name: coisas do CSC
           title: Descarga do cérebro do CSC
@@ -4996,3 +4998,55 @@ pt:
           title: Módulo 7
         vpl-csd-2023-m8:
           title: Módulo 8
+        virtual-pl-csa-summer-2024-day1:
+          title: Dia 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
+          title: Dia 2
+        virtual-pl-csp-summer-day3:
+          title: Dia 3
+        virtual-pl-csp-summer-day4:
+          title: Dia 4
+        virtual-pl-csa-summer-day2:
+          title: Dia 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
+          title: Dia 3
+        virtual-pl-csa-summer-day4:
+          title: Dia 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
+          title: Dia 1
+        virtual-pl-csp-summer-day1:
+          title: Dia 1
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Módulo 1: Preparação para ensinar sobre Resolução de Problemas e computação'
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos

@@ -170,7 +170,7 @@ fi:
           description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
           student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
         mc:
-          title: Minecraft Koodaustunti
+          title: Minecraft seikkailija
           description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman
           description_short: Tutki Minecraft-maailmaa koodin kautta
           student_description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman
@@ -1971,3 +1971,18 @@ fi:
               display_name: Ehtolausekkeet
             lessonGroup-5:
               display_name: Muuttujat
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Johdanto
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Johdanto
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Johdanto
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Johdanto

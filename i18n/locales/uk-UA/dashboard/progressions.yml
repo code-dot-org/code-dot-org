@@ -69,10 +69,10 @@ uk:
       Button Circuits: Кнопкові схеми
       Buttons and Switch: Кнопки та перемикач
       CS Discoveries Post-Course Survey: Опитування після курсу CS Discoveries
-      CS Discoveries Post-course Survey: Опитування після курсу Відкриття інформатики
+      CS Discoveries Post-course Survey: Опитування після курсу Дослідження інформатики
       CSS Classes: Класи CSS
       CSS Text Properties: Властивості тексту CSS
-      CSS and Style Sheets: CSS та таблиці стилів
+      CSS and Style Sheets: CSS та аркуші (таблиці) стилів
       Cake Defender: Торт захисник
       Challenge: Виклик
       Challenge Levels: Завдання рівнів
@@ -93,6 +93,9 @@ uk:
       Check-In Survey: Вхідне опитування
       Checking for a Winner: Перевірка переможця
       'Choice Levels: Customize Your App': 'Рівні вибору: Налаштування свого застосунку'
+      'Circuit Playground: Buzzer': 'Circuit Playground: зумер'
+      'Circuit Playground: Color LEDs': 'Circuit Playground: кольорові світлодіоди'
+      'Circuit Playground: LEDs': 'Circuit Playground: LED-лампочки'
       Circuits and Logic: Схеми та логіка
       Club Datasets: Набори даних клубу
       Code Prediction: Прогнозування коду
@@ -103,14 +106,14 @@ uk:
       Collisions: Зіткнення
       Collisions in Games: Зіткнення в Іграх
       Color LEDs: Кольорові LEDи
-      Combining Projects: Об'єднання проектів
+      Combining Projects: Об'єднання проєктів
       Combining Representations: Поєднання типів кодування
       Conditionals with Cards - Unplugged Activity: Умови з картами - Безмашинна вправа
       'Conditionals: If Statements': 'Умовні умови: Якщо заяви'
       Control Your Player: Керування гравцем
-      Course E Artist Project: Курс E Виконавець проекту
+      Course E Artist Project: Курс E Виконавець проєкту
       'Course E: Play Lab Project': 'Курс E: Проєкт Ігрової Студії'
-      Course F Artist Project: Курс F Виконавчий проект
+      Course F Artist Project: Курс F Виконавчий проєкт
       'Course F: Artist Project': 'Курс F: Проєкт Художника'
       'Course F: Artist Project - Revise': 'Курс F: Проєкт Художника - Перегляд'
       'Course F: Play Lab Project': 'Курс F: Проєкт Ігрової Студії'
@@ -141,7 +144,7 @@ uk:
       Design a Screen for your App: Створення екрану застосунка
       Design an AI App - AI Lab: Розробка Застосунка ШІ - Лабораторія ШІ
       Design an AI App - App Lab: Розробка Застосунка ШІ - Програмна Лабораторія
-      Designing Screens with Code: Проектування екранів за допомогою коду
+      Designing Screens with Code: Проєктування екранів за допомогою коду
       Designing for Accessibility: Проєктування для доступності
       Digital Sharing - Unplugged Activity: Цифровий обмін - Безмашинна вправа
       Draw Your Background: Намалюй своє тло
@@ -151,7 +154,8 @@ uk:
       Driver Alert System: Система оповіщення водія
       Editing Images: Редагування зображень
       Emotion Machine Example: Приклад машини емоцій
-      End of Course Projects: Кінець курсових проектів
+      End of Course Projects: Кінець курсових проєктів
+      Event Types: Типи подій
       Events: Події
       Events and Linking Screens: Події та зв'язування екранів
       Events and Properties: Події та властивості
@@ -266,25 +270,25 @@ uk:
       Medical Dataset Model Cards: Картки моделі Медичних наборів даних
       Medical Priority App: Застосунок «Медичний пріоритет»
       'Minecraft: Hero''s Journey': 'Minecraft: Подорож героя'
-      'Mini-Project: About Me': 'Міні-проект: Про мене'
-      'Mini-Project: Alien Dance Moves': 'Міні-проект: Чужорідні танцювальні ходи'
-      'Mini-Project: Alien Dance Party': 'Міні-проект: Інопланетна танцювальна вечірка'
-      'Mini-Project: Create a Virtual Pet': 'Міні-проект: Створюємо віртуального домашнього улюбленця'
+      'Mini-Project: About Me': 'Міні-проєкт: Про мене'
+      'Mini-Project: Alien Dance Moves': 'Міні-проєкт: Чужорідні танцювальні ходи'
+      'Mini-Project: Alien Dance Party': 'Міні-проєкт: Інопланетна танцювальна вечірка'
+      'Mini-Project: Create a Virtual Pet': 'Міні-проєкт: Створюємо віртуального домашнього улюбленця'
       'Mini-Project: Outbreak Simulator': 'Міні-проєкт: Симулятор спалаху'
-      'Mini-Project: Royal Battle': 'Міні-проект: Королівська битва'
-      "Mini-Project: Snowflake #1": "Міні-проект: Сніжинка #1"
-      "Mini-Project: Snowflake #2": "Міні-проект: Сніжинка #2"
+      'Mini-Project: Royal Battle': 'Міні-проєкт: Королівська битва'
+      "Mini-Project: Snowflake #1": "Міні-проєкт: Сніжинка #1"
+      "Mini-Project: Snowflake #2": "Міні-проєкт: Сніжинка #2"
       'Mini-Project: Sticker Art': 'Міні-проєкт: Дизайн наліпки'
-      'Mini-Project: Swimming Fish': 'Міні-проект: Плавання риби'
-      'Mini-Project: Swimming Fish (continued)': 'Міні-проект: Плавання риби (продовження)'
+      'Mini-Project: Swimming Fish': 'Міні-проєкт: Плавання риби'
+      'Mini-Project: Swimming Fish (continued)': 'Міні-проєкт: Плавання риби (продовження)'
       'Mini-Project: User Input Programs': 'Міні-проєкт: Програми з введенням даних користувачем'
-      'Mini-Project: Virtual Pet': 'Міні-проект: Віртуальний вихованець'
-      'Mini-project: Chase Game': 'Міні-проект: гра "Квач"'
+      'Mini-Project: Virtual Pet': 'Міні-проєкт: Віртуальний вихованець'
+      'Mini-project: Chase Game': 'Міні-проєкт: гра "Квач"'
       'Mini-project: Flappy Game': 'Міні-проєкт: гра "Пурх"'
-      'Mini-project: Interactive Poster': 'Міні-проект: Інтерактивний плакат'
-      'Mini-project: Jorge the Dog': 'Міні-проект: Собака Хорхе'
+      'Mini-project: Interactive Poster': 'Міні-проєкт: Інтерактивний плакат'
+      'Mini-project: Jorge the Dog': 'Міні-проєкт: Собака Хорхе'
       'Mini-project: Sticker Art': 'Міні-проєкт: Дизайн наліпки'
-      'Mini-project: Sticker Design': 'Міні-проект: Дизайн наклейки'
+      'Mini-project: Sticker Design': 'Міні-проєкт: Дизайн наклейки'
       Modify simulation variables: Змінити змінні моделювання
       Modifying Arrays: Змінення та створення масивів
       Modifying and Creating Arrays: Змінення та створення масивів
@@ -320,6 +324,7 @@ uk:
       Player Controls: Керування для гравця
       Playing Notes: Відтворення нот
       Playing with Notes: Відтворення з нотатками
+      Polling Events: Події опитування
       Post-Course Survey Instructions: Інструкції з опитування після курсу
       Practice: Практика
       Predict: Прогнозування
@@ -330,7 +335,7 @@ uk:
       Project - Background and Variables: Проєкт - тло та змінні
       Project - Sprites and Interactions: Проєкт - Спрайти та взаємодії
       Project Guide: План проєкту
-      Project Work: Робота над проектом
+      Project Work: Робота над проєктом
       Properties: Властивості
       Prototype an Innovation: Створіть прототип інновації
       Publishing Your Website: Публікація свого вебсайту
@@ -350,6 +355,7 @@ uk:
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
       Representing Images: Кодування зображень
+      Responding to Board Events: Реагування на події плати
       Responding to User Input: Відповідь на введення користувача
       Review: Огляд
       Review Your Animated Scene: Перевірка своєї анімованої сцени
@@ -359,7 +365,8 @@ uk:
       Review Your Scene: Перевірка сцени
       'Review: CSS': 'Повторення: CSS'
       'Review: HTML': 'Повторення: HTML'
-      Revise Sprite Lab Project: Переглянути проект Sprite Lab
+      Revise Sprite Lab Project: Переглянути проєкт Sprite Lab
+      Revisiting the Counter Pattern: Повертаючись до зміни лічильника
       Run a simulation: Запустити симуляцію
       Safari App: Застосунок Сафарі
       Safari Model: Модель Сафарі
@@ -411,7 +418,7 @@ uk:
       The Big Event - Unplugged Activity: Велика подія - Безмашинна вправа
       The Buzzer: Зумер
       The Collector: Колекціонер
-      The Counter Pattern: Шаблон лічильника
+      The Counter Pattern: Зміна лічильника
       The Draw Loop: Цикл малювання
       The Harvester: Фермерка
       The Internet - Unplugged Activity: Інтернет - Безмашинна вправа
@@ -426,6 +433,7 @@ uk:
       Updating Your Prototype: Оновлення прототипу
       Upload Your Images: Завантаження зображень
       User Interface: Інтерфейс користувача
+      Using Accelerometer Events: Використання подій акселерометра
       Using Arrays: Використання масивів
       Using HTML Tags: Використання тегів HTML
       Using Training Data: Використання навчальних даних
@@ -557,5 +565,6 @@ uk:
       'You Choose: Improve Your App': 'Твій вибір: покращення свого застосунку'
       'You Choose: Restaurant Recommendations': 'Твій вибір: Рекомендації ресторану'
       Your Personal Website: Ваш Власний Вебсайт
-      Your Team Project: Ваш командний проект
-      Zoo Predictions: Пронозування тварин
+      Your Team Project: Ваш командний проєкт
+      Zoo Predictions: Прогнозування тварин
+      getProperty: getProperty

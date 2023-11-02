@@ -1,90 +1,90 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Мектептен кейінгі уақытқа арналған код сағатына арналған нұсқаулық
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Мектептен кейінгі сабақтар мен үйірмелерде бір код сағатын қалай үйрету керек
 
 ### Қозғалысқа қосылыңыз және осы қадамдармен оқушыларыңызды информатикамен таныстырыңыз.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Есептеу ойлау проблемаларды шешу дағдыларын, логиканы және шығармашылықты дамытуға көмектеседі. Технология планетадағы барлық саланы өзгертуде. Оқушылар бүгінгі таңда технологияны жай ғана қолданып қана қоймай, қалай жасау керектігін үйренуі керек. Ерте бастай отырып, олар 21 ғасырдың кез келген мансаптық жолында табысқа жетудің негізіне ие болады.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Код сағатын сынап көру - студенттерді информатикамен таныстырудың қарапайым және көңілді тәсілі, мүмкін, бірінші рет. Егер сіз көмектесетін қосымша қолдар жинағын алғыңыз келсе, мектептен кейінгі сыныпта немесе клубта код сағатын жүргіз</a> уге көмектесетін жергілікті ерікті таба аласыз.</p> 
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Код сағатын қашықтан да орналастыруға болады! Жұмысты бастау үшін виртуалды “Код сағаты” іс-шарасын өткізу бойынша [кеңестерімізді қараңыз](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Осы нұсқаулық бейнені қараңыз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-## 2. Choose a tutorial
+## 2. Оқулықты таңдаңыз
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Біз әр түрлі серіктестер [жасаған барлық жастағы қатысушыларға]({{ urls/learn }}) арналған түрлі көңілді, сағаттық оқулықтарды ұсынамыз. [Оларды сынап көріңіз!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Кодекс сағатының барлық оқулықтары ұйымдастырушылар үшін ең аз дайындық уақытын** қажет етеді және олар өздігінен басқарылады - бұл балаларға өз қарқыны мен шеберлік деңгейінде жұмыс істеуге мүмкіндік береді.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Мектептен кейінгі код сағатына сабақ жоспары қажет пе?** Бұл [үлгіні қараңыз](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Код сағатыңызды насихаттаңыз
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Осы құрал [дармен код сағатыңызды насихаттаңыз]({{ urls/promote }}) және басқаларды өз іс-шараларын өткізуге шақырыңыз.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Технологиялық қажеттіліктеріңізді жоспарлаңыз - компьютерлер міндетті емес
 
-Ең үздік "Кодтау Сағатының" тәжиребесі интернетке байланған компьютерлерді қамтиды. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Ең үздік "Кодтау Сағатының" тәжиребесі интернетке байланған компьютерлерді қамтиды. Бірақ та компьютерлер әрбір оқушыда болуы **міндетті емес**, тіпті ешбір компьютерді қолданбай-ақ та сабақты өткізуіңізге болады.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Өткізу қабілеті төмен бе?** Сыныптың алдыңғы жағында бейнелерді көрсетуді жоспарлаңыз, сондықтан әр оқушы өз бейнелерін жүктемейді. Немесе ажыратылған/желіден тыс оқулықтарды қолданып көріңіз.
 
 Егер де, сіздің көрсететін сабақ бейнеролигіңіз жақсы сапалы дыбысты талап етсе, құлаққаптарды таратып немесе қатысушыларға алдын-ала өздерінің құлаққаптарын әкелулерін сұраңыз.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Қатысушылар бір-бірлерімен жұптасқанда, бір-бірлеріне көмек көрсетіп, ұйымдастырушыға көп жүк түсірмейді. Олар компьютерлік саланың жағымды да басқа адамдармен араласу мүмкінділігін көреді.
+**Компьютер немесе басқа да электроникалық жабдық жетпей жатыр ма?</a> Ол кезде, оқушыларыңызды жұп жұппен отырғызып сабақ өткізіңіз. Қатысушылар бір-бірлерімен жұптасқанда, бір-бірлеріне көмек көрсетіп, ұйымдастырушыға көп жүк түсірмейді. Олар компьютерлік саланың жағымды да басқа адамдармен араласу мүмкінділігін көреді.</p> 
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Код сағатын шабыттандыратын бейнемен бастаңыз
 
 Оқушыларға компьютер мен интернеттің, цифрлық технологияның әр адам өміріндегі рөлі жайлы айтып және оларды ынталандыра, "Кодтау Сағатын" тиімді етіңіз.
 
 **Жігерлендіруші бейнероликті көрсетіңіз:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Билл Гейтс, Марк Цукерберг және NBA жұлдызы Крис Бош бейнеленген Code.org іске қосу бейнесінің түпнұсқасы - [1 минуттық](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минут](https://www.youtube.com/watch?v=nKIu9yen5nc)тық және [9 минуттық](https://www.youtube.com/watch?v=dU1xS07N-FA) нұсқалар бар.
+- Дү [ниежүзілік код сағаты бейне](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Президент Обама барлық студенттерді информатика пәнін үйренуге шақырды](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Қосымша шабыттандыратын бейнелерді мына [жерден табыңыз](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Компьютерлік салада қабілетіңіз мүлде жоқ болса да, уайымдамаңыз. Мына "Кодтау Сағатымен" таныстыратын бірнеше пікірлерге көз жүгіртіп шығыңыз:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Балаларға тән ұғымды мысалдар келтіріп, қазіргі таңдағы технологияның өмірімізге деген ықпалын түсінідіріңіз. (Кейбір адамдардың өмірлерін құтқарған, көмек көрсеткен, жақындастырған, т.б. қосымшалар туралы айтып берсеңіз болады)
 - "Кодтауды" қажет ететін күнделікті қолданыстағы керек - жарақтар тізімін жасап көрсетіңіз.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Қыздарды информатикаға қызықтыруға арналған кеңестерді мына [жерден қараңыз]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Қосымша басшылық қажет пе?** Бұл [үлгі сабақ жоспарын жүктеп алыңыз](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Код!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Қатысушыларды іс-әрекетке** бағыттау - Оқулық сілтемесін тақтаға жазыңыз. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Біреу қиындықтарға тап болған кезде жауап беруге болады:** - “Мен білмеймін. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Егер біреу ерте аяқтаса не істеу керек?** - Қатысушыларды [hourofcode.com/learn сайтында Кодтың сағатының тағы бір әрекетін сынап көруге шақырыңыз]({{ urls/learn }}) - Немесе, қиындыққа тап болған басқаларға көмектесуді ерте аяқтағандардан сұраңыз.
 
-## 7. Celebrate
+## 7. Мерекелеу
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Студенттеріңізге сертификат]({{ urls/certificates }}) тарды басып шығарыңыз.
+- [Басып шығарыңыз “Мен код сағаты жасадым!”]({{ promote/resources_stickers }}) студенттеріңізге арналған жапсырмалар.
+- [Қатысушылар](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) үшін арнайы футболкаларға тапсырыс беріңіз
 - Әлеуметтік жүйелерге "Кодтау Сағатынан" жиналған суреттер мен видеоларды салып, біз де сіздің табысыңызды жариялауымыз үшін #HourOfCode хэштэгін, және де @codeorg аккаунтын белгілеңіз!
 
-## Other Hour of Code resources for educators
+## Тәрбиешілерге арналған код сағатының басқа ресурстары
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Алдыңғы "Кодтау Сағаты" ұйымдастырушыларының [ең үздік тәжірибелері](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).
+- Біздің Оқытушының “К [од сағаты” вебинарының нұсқаулығының жазбасын қараңыз](https://youtu.be/EJeMeSW2-Mw).
+- Кеңес пен қолдау алып, ой - пікірмен бөлісу үшін ["Кодтау Сағаты Форумына"](http://forum.code.org/c/plc/hour-of-code) кіріп көріңіз.
 - ["Кодтау Сағаты" FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) қайтадан қарап шығыңыз.
 
 ## "Кодтау Cағаты" - ол не?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+"Кодтау Сағаты" - технологияны біліп, танып, үйретуге және де ойындар мен қосымшалар жасалу жолдарына апарар ең бірінші жол. Студенттерге саяхаттарын жалғастыруға көмектесіңіз және оларды Интернет [те көбірек білуге шақырыңыз](/beyond)!
 
 {{ signup_button }}

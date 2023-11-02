@@ -1031,6 +1031,8 @@ mi:
           description: Neke atu i te kotahi haora, anei ethahi wero ano.
           student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
           title: Me Kanikani Tonu
+        dance-unplugged:
+          title: Te Pāti Kanikani Purukore
         dlp19-csd-mod-fit:
           lesson_groups:
             content:
@@ -1246,7 +1248,7 @@ mi:
           description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
           student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve,
             i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
-          title: Hour of Code Mahimaina
+          title: Kiri Māia Mahimaina
         minecraft:
           description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i
             tāu ake whakaputanga Mahimaina.
@@ -1440,7 +1442,22 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kupu Whakataki
+          lessons:
+            lesson-7:
+              name: Kupu Whakataki
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kupu Whakataki
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Kupu Whakataki
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Kupu Whakataki

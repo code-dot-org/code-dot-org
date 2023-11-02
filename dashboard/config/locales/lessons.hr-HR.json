@@ -257,6 +257,27 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Slovkanje"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Petlje"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Događaji"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Varijable"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Petlja brojača"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Lab likova"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Vesele karte"
         },
@@ -458,9 +479,6 @@
         "coursef-2023/The Internet": {
           "name": "Internet"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Sat programiranja 2013"
-        },
         "artist/Artist": {
           "name": "Umjetnik"
         },
@@ -490,12 +508,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Minecraft Sat Kodiranja"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Laboratorij igara"
@@ -835,6 +847,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstremni izazov - sveobuhvatno"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Sat programiranja 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Slagalica"

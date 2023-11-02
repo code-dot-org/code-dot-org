@@ -5,36 +5,56 @@ mr:
   language: मराठी
   front_title: आजवरच्या सर्वात मोठ्या शिकण्याच्या कार्यक्रमात या, %{campaign_date}
   coming_soon: लवकरच येत आहे
-  campaign_date_start_short: 5 डिसेंबर
-  campaign_date_start_long: 5 डिसेंबर
-  campaign_date_short: 5-11 डिसेंबर
-  campaign_date_full: 5-11 डिसेंबर
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 डिसेंबर 2022
+  new: New
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: विद्यार्थी 45 पेक्षा अधिक भाषांमध्ये शिक्षण घेत आहेत
+  hoc_stat_hours_served: 100M पेक्षा जास्त विद्यार्थ्यांनी कोडचा एक तास वापरून पाहिला
+    आहे
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  campaign_date_start_short: 4 डिसेंबर
+  campaign_date_start_long: 4 डिसेंबर
+  campaign_date_short: 4-10 डिसेंबर
+  campaign_date_full: 4-10 डिसेंबर
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 डिसेंबर 2023
   nonus_campaign_date_start_short: 1 ऑक्टोबर
   nonus_campaign_date_start_long: 1 ऑक्टोबर
   nonus_campaign_date_short: 1 ऑक्टोबर - 18 डिसेंबर
   nonus_campaign_date_full: 1 ऑक्टोबर - 18 डिसेंबर
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 ऑक्टोबर 2022 - 18 डिसेंबर 2022
   latam_campaign_date_start_short: 1 ऑक्टोबर
   latam_campaign_date_start_long: 1 ऑक्टोबर
   latam_campaign_date_short: 1 ऑक्टोबर - 18 डिसेंबर
   latam_campaign_date_full: 1 ऑक्टोबर - 18 डिसेंबर
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 ऑक्टोबर 2022 - 18 डिसेंबर 2022
   europe_campaign_date_start_short: 10 ऑक्टोबर
   europe_campaign_date_start_long: 10 ऑक्टोबर
   europe_campaign_date_short: 10-25 ऑक्टोबर
   europe_campaign_date_full: 10-25 ऑक्टोबर
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10-25 ऑक्टोबर 2020
   africa_campaign_date_start_short: 1 ऑक्टोबर
   africa_campaign_date_start_long: 1 ऑक्टोबर
   africa_campaign_date_short: 1-31 ऑक्टोबर
   africa_campaign_date_full: 1-31 ऑक्टोबर
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: " 1-31 ऑक्टोबर 2020"
+  hoc2023_header: AI सह सर्जनशीलता
+  hoc2023_hero_desc_homepage: Join millions across the globe in organizing an hour
+    of coding, with or without AI and learning how AI works. Anyone, anywhere can
+    do it. No experience needed.
+  hoc2023_hero_desc_learn_page: This year, we're taking Hour of Code to new heights
+    by offering coding opportunities that encompass both artificial intelligence (AI)
+    and non-AI components.
+  hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
+  hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
+    about AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: एक्सप्लोर करा, खेळा, तयार करा!
   social_hoc2022_explore_play_create: एक्सप्लोर करण्यासाठी, खेळण्यासाठी आणि तयार करण्यासाठी
     संगणक विज्ञानाचा वापर करा!
@@ -47,6 +67,9 @@ mr:
     च्या “Encanto” मधले संगीत आणि आणखी बरेच काही!
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: आज शिका, उद्याचे उज्ज्वल भविष्य घडवा.
@@ -157,6 +180,7 @@ mr:
     it's important.
   social_ai_title: Learn about artificial intelligence (AI) | Code.org
   social_ai_desc: Tools to help students and teachers bring AI into the classroom.
+  social_videos_desc: Engaging computer science videos for learners of all ages.
   pl_superhero_title: Help students become superheroes!
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
@@ -167,6 +191,41 @@ mr:
   curriculum_launch_2023_desc: सीएससी, सीएसपी, सीएसडी आणि बरेच काही - तसेच नवीन अभ्यासक्रम
     कॅटलॉग आणि हे सर्व शोधण्यात तुम्हाला मदत करण्यासाठी पुन्हा डिझाइन केलेले टीच पेज!
   in_partnership_with: च्या भागीदारीत
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Support our work and wear the movement with pride. Our hats
+    have been worn by President Obama and celebrities too.
+  spread_the_word_heading: याचा प्रचार करा
+  spread_the_word_desc: Amplify our impact by sharing Code.org with your network.
+    From social media to email updates, discover how you can help us reach more educators,
+    students, and advocates.
+  follow_us_heading: Follow us on social media
+  follow_us_desc: Stay up to date with us on social media and share our posts with
+    your network to stay informed and help drive awareness.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Laptop
+  device_desktop_computer: Desktop Computer
+  device_mobile_device: Mobile Device
+  for_everyone: सर्वांसाठी
+  for_students_teacher_led_learning: 'विद्यार्थ्यांसाठी: शिक्षकांच्या नेतृत्वात शिक्षण'
+  for_students_teacher_led_lessons: 'विद्यार्थ्यांसाठी: शिक्षकांच्या नेतृत्वात धडे'
+  professional_development: व्यावसायिक विकास
+  how_ai_works_video_series: How AI Works Video Series
+  learn_how_ai_works: Learn How AI Works
+  ai_101_for_educators: AI 101 for Educators
+  learn_about_ai_impacts: Learn about the Impacts of AI
+  hoc_ai_activities: Hour of Code AI Activities
+  subscribe_to_emails_heading: Subscribe to emails
+  subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
+    science education through quarterly updates via our mailing list.
+  subscribe_to_emails_intl: Subscribe to international updates
+  promote_code_dot_org_heading: Promote Code.org
+  promote_code_dot_org_desc: Promote computer science in your area with the help of
+    stats, quotes, and videos.
   afe_partnership_logo_alt: Amazon फ्यूचर इंजिनियर लोगो
   afe_partnership_thanks_desc: Amazonफ्युचर इंजिनिअर्स हा लहानपणापासून ते करिअरपर्यंतचा
     सर्वसमावेशक कार्यक्रम आहे जो कमी उत्पन्न असलेल्या आणि इतर वंचित मुलांना आणि तरुणांना
@@ -185,21 +244,61 @@ mr:
   curricula_title_high: High School Curricula
   curricula_desc_high: Browse the compelling courses and activities that invite you
     and your high school students to dig deeper into computer science.
+  for_administrators_heading: For administrators
+  for_administrators_desc: Join the thousands of schools who have already incorporated
+    computer science into their curriculum.
+  for_parents_heading: पालकांसाठी
+  for_parents_desc: You can help encourage your student's school to offer or expand
+    computer science education.
+  for_educators_heading: शिक्षकांसाठी
+  for_educators_desc: Start teaching today — no computer science experience necessary
+    — with our professional learning workshops.
   students_label: विद्यार्थी
   teachers_label: शिक्षक
+  educators_label: Educators
+  companies_label: Companies
+  districts_label: Districts
+  school_assemblies_label: School Assemblies
+  parents_label: Parents
+  public_officials_label: Public Officials
+  volunteers_label: Volunteers
+  virtual_events_label: Virtual Events
   teacher_label_csf: 'CS फंडामेंटल्स शिक्षक '
   teacher_label_csd: CS डिस्कव्हरीज शिक्षक
   teacher_label_csp: 'CS प्रिंसिपल्स शिक्षक '
   teacher_label_csc: 'CS कनेक्शन्स शिक्षक '
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Teacher Forum
+  teacher_forum_desc: Visit the Hour of Code Teacher Forum to get advice, insight
+    and support from other educators.
   required_materials: 'आवश्यक साहित्य:'
   optional_materials: 'वैकल्पिक साहित्य:'
-  call_to_action_explore_roles: Explore open roles
+  for_students: For students
+  for_educators: शिक्षकांसाठी
+  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_hold_an_event: Hold an event
+  call_to_action_register_event: Register your event
+  call_to_action_register_your_hoc: तुमचा आवर ऑफ कोड रजिस्टर करा
+  call_to_action_select_activity: Select an activity
+  call_to_action_start_activity: Start an activity
+  call_to_action_get_certificates: Get certificates
+  call_to_action_go_beyond_hoc: Go beyond the Hour of Code
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_view_promo_resources: View promo resources
   call_to_action_learn_more: अधिक जाणून घ्या
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
+  call_to_action_try_activities: उपक्रम करून पहा
+  call_to_action_try_hoc_ai_activities: Try Hour of Code AI activities
+  call_to_action_explore_activities: क्रियाकलाप एक्सप्लोर करा
+  call_to_action_explore_ai: Explore AI
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
+  call_to_action_explore_curricula: अभ्यासक्रम एक्सप्लोर करा
   call_to_action_explore_curriculum_options: अभ्यासक्रमाचे पर्याय एक्सप्लोर करा
   call_to_action_explore_lessons: Explore lessons
   call_to_action_explore_modules: Explore modules
@@ -250,6 +349,7 @@ mr:
   call_to_action_find_self_paced_modules: सेल्फ-पेस मॉड्यूल्स शोधा
   call_to_action_join_teacher_forums: टिचर फोरममध्ये सामील व्हा
   call_to_action_explore_teacher_forums: शिक्षक मंच एक्सप्लोर करा
+  call_to_action_explore_teacher_forum: Explore teacher forum
   call_to_action_explore_career_resources: करिअर संसाधने एक्सप्लोर करा
   call_to_action_watch_videos: व्हिडिओज पहा
   call_to_action_download_posters: पोस्टर डाऊनलोड करा
@@ -266,11 +366,40 @@ mr:
   call_to_action_notify_available: Notify me when available
   call_to_action_register_early_access: Register for early access
   call_to_action_open_positions: View open positions
+  call_to_action_explore_roles: Explore open roles
   call_to_action_get_guide: Get the guide
   call_to_action_donate_to_cdo: Donate to Code.org
   call_to_action_start_fundraiser: Start a fundraiser
   call_to_action_view_donation_policy: View donation policy
   call_to_action_view_donate_bitpay: Donate with BitPay
+  call_to_action_make_a_donation: Make a donation
+  call_to_action_other_ways_to_give: Other ways to give
+  call_to_action_become_partner_usa: Become a United States partner
+  call_to_action_become_partner_intl: Become an international partner
+  call_to_action_become_a_volunteer: Become a volunteer
+  call_to_action_start_translating: Start translating
+  call_to_action_learn_about_advocacy: Learn about our advocacy
+  call_to_action_visit_store: Visit the store
+  call_to_action_view_faqs: View more FAQs
+  call_to_action_applications_open: Applications now open
+  call_to_action_apply_cs_ambassador: Apply to be a CS Ambassador
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
+  aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
+  aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
+  aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
+  aria_label_call_to_action_hoc_how_to_school_assemblies: View how-to guide for School
+    Assemblies
+  aria_label_call_to_action_hoc_how_to_parents: View how-to guide for Parents
+  aria_label_call_to_action_hoc_how_to_public_officials: View how-to guide for Public
+    Officials
+  aria_label_call_to_action_hoc_how_to_volunteers: View how-to guide for Volunteers
+  aria_label_call_to_action_hoc_how_to_virtual_events: View how-to guide for Virtual
+    Events
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -389,11 +518,25 @@ mr:
   curriculum_name_creating_apps_with_devices: डिव्हाइसेससह अॅप्स तयार करणे
   curriculum_name_poetry: कवितेसह कोडिंग
   curriculum_name_dance_party: डान्स पार्टी
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: 'समस्या सोडवणे आणि कम्प्युटिंग '
   curriculum_name_web_development: वेब डेव्हलपमेंट
   curriculum_name_interactive_animations_games: इंटरएक्टिव्ह अॅनिमेशन आणि गेम्स
   curriculum_name_design_process: डिझाईन प्रक्रिया
   curriculum_name_data_society: डेटा आणि सोसायटी
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Free set of elementary curricula that introduces students to
     the foundational concepts of computer science.
   curriculum_desc_csf_express: संगणक प्रोग्राम करायला शिका, समस्या सोडवण्याची कौशल्ये
@@ -506,12 +649,16 @@ mr:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: बालवाडी
   module_grade_grade_01: ग्रेड 1
@@ -519,6 +666,12 @@ mr:
   module_grade_grade_03: ग्रेड 3
   module_grade_grade_04: ग्रेड 4
   module_grade_grade_05: ग्रेड 5
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 शिक्षक
   module_grade_6_10_teachers: 6-10 शिक्षक
   module_grade_9_12_teachers: 9-12 शिक्षक
@@ -610,6 +763,57 @@ mr:
   heading_explore_curriculum_catalog: Explore all of our courses in the Curriculum
     Catalog
   heading_csa_ai: Looking for things to do after the AP® exam?
+  heading_bring_cs_to_students: Bring computer science to students
+  heading_cs_ambassador_program: CS Ambassador Program
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: If you're a high school student passionate about encouraging
+    more young women to take computer science at your school, then we need you!
+  cs_ambassador_desc: Every field, including medicine, entertainment, sports, education,
+    business, fashion, and entrepreneurship is touched by computer science. Yet only
+    5% of high school aged young women take computer science classes. Ambassadors
+    can help close this gender gap by encouraging their peers to take a computer science
+    class.
+  cs_ambassador_application_date: Applications open until November 8th, 2023
+  cs_ambassador_application_subhead: Work with a teacher to submit your application
+    today
+  cs_ambassador_application_questions: Questions? Please contact [youngwomen@code.org](%{email_url})
+  cs_ambassador_do_heading: What do CS Ambassadors do?
+  cs_ambassador_do_desc: CS Ambassadors encourage young women to explore the subject,
+    and lift each other up as they reclaim their place in computer science. CS Ambassadors
+    connect with their peers to share their excitement and love of computer science.
+    They visit classrooms, host tables at lunch, and speak at assemblies and club
+    meetings. CS Ambassadors work with teachers and school administrators to breakdown
+    stereotypes that hold young women back.
+  cs_ambassador_steps_heading: What do I need to become a CS Ambassador?
+  cs_ambassador_steps_list_title_01: Passion
+  cs_ambassador_steps_list_title_02: Experience in a CS Course
+  cs_ambassador_steps_list_title_03: School that offers CS
+  cs_ambassador_steps_list_desc_01: A passion for encouraging young women at your
+    school to take computer science classes
+  cs_ambassador_steps_list_desc_02: 'Have completed or is currently enrolled in a
+    year-long computer science class (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Attend a high school that regularly offers a
+    year-long computer science course (recommended: CS Principles or AP® CSA)'
+  cs_ambassador_benefits_heading: Program benefits
+  cs_ambassador_benefits_list_title_01: National community
+  cs_ambassador_benefits_list_title_02: Community service
+  cs_ambassador_benefits_list_title_03: Recognition
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certificate
+  cs_ambassador_benefits_list_title_06: Experiences
+  cs_ambassador_benefits_list_desc_01: Access to a national community of young leaders
+    committed to closing the gender gap in computer science.
+  cs_ambassador_benefits_list_desc_02: Community service hours and the opportunity
+    to earn the [U.S. Presidential Volunteer Service Award](%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Recognition as a 2023-2024 Ambassador and eligible
+    to be honored in the Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Be identified as a CS Ambassador through special
+    Code.org branded apparel, stickers, and more!
+  cs_ambassador_benefits_list_desc_05: Official certificate of participation from
+    Code.org.
+  cs_ambassador_benefits_list_desc_06: Gain experiences and stories to share on your
+    college application, resume and more!
   professional_learning_section_desc: तुम्ही शिकवण्याची तयारी करत असताना तुम्हाला
     आवश्यक असलेली मदत मिळवा. शिक्षकांना ते आवडते, 90% पेक्षा जास्त लोकांनी याला आतापर्यंतचा
     सर्वोत्तम व्यावसायिक विकास म्हणून रेट केले आहे!
@@ -658,6 +862,13 @@ mr:
     Computer Science Principles and get helpful reminders, tips, and updates sent
     right to your inbox.
   subscribe_form_section_unsubscribe: You can unsubscribe at any time.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -759,6 +970,11 @@ mr:
   ai_curriculum_grades_05: 'Grade Levels: 9-12'
   ai_curriculum_btn_aria_label_05: Explore the Software Engineering & Computer Vision
     module
+  ai_curriculum_title_06: Societal Impact of Generative AI
+  ai_curriculum_desc_06: Investigate the impact of generative AI from different perspectives,
+    then collaborate as a team to come up with guidelines that address the most needs
+    from all participants.
+  ai_curriculum_btn_aria_label_06: View Societal Impact of Generative AI lesson plan
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -866,14 +1082,15 @@ mr:
   ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
     incorporating artificial intelligence in educational environments. This session
-    will provide concrete strategies, resources, and real-world examples, all aimed
-    at understanding the potential biases of AI, and the ethical considerations that
+    provides concrete strategies, resources, and real-world examples, all aimed at
+    understanding the potential biases of AI, and the ethical considerations that
     come with it.
   ai_pl_101_video_title_5: Bringing AI to the Classroom
   ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
     utilizing AI educational tools, and leveraging AI for student assessment. With
     a rich blend of theory, practical examples, and resources, it aims to empower
     educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_resources_5: Guide to Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
     in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
     AI. Hear how these new technologies work directly from the experts: Mira Murati,
@@ -884,6 +1101,8 @@ mr:
     dipping their toes in, as well as advanced tools for those looking to maximize
     their potential.
   ai_pl_101_resources_3: AI Prompts for Transforming Student Learning
+  ai_pl_101_resources_section_title: More ways to learn about AI
+  ai_pl_101_resources_guide: 'Companion guide:'
   how_ai_works_hero_heading: AI कसे काम करते
   how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
     series and accompanying lessons!
@@ -1717,6 +1936,32 @@ mr:
   donate_tabs_bitpay_desc: Embrace the future of giving with cryptocurrency. Through
     BitPay, your digital currency can directly support Code.org's endeavors in expanding
     computer science education.
+  help_page_top_heading: How you can help
+  help_page_top_desc: Support our mission to make computer science accessible for
+    every child, everywhere. Your efforts help us inspire future innovators and bridge
+    the tech education gap.
+  help_page_top_subhead: Make a donation to Code.org
+  help_page_top_desc_02: We're working to give every student the opportunity to learn
+    computer science — both online AND in schools, where we establish permanent courses
+    and train teachers. For every dollar you donate, one child is introduced to computer
+    science.
+  help_page_partners_heading: Become a partner
+  help_page_partners_desc: Code.org works with other nonprofit organizations as partners
+    to help spread computer science in a local, sustainable fashion. Learn more about
+    our program.
+  help_page_volunteer_heading: Volunteer in a classroom
+  help_page_volunteer_desc: Volunteer to teach the Hour of Code or be a guest speaker
+    in a local classroom. Sign up to hear about opportunities near you.
+  help_page_translate_heading: Help us translate
+  help_page_translate_desc: Volunteers have translated our tutorials in over 45 languages.
+    Help us continue to expand our tutorials for students around the world!
+  help_page_speak_for_cs_heading: Speak up for computer science education
+  help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
+    U.S. and the ten policies we recommend states adopt to make computer science foundational
+    for all students. Plus, find out how you can drive change in your state.
+  yw_page_top_heading: Young Women in Computer Science
+  yw_page_top_desc: Become a CS Ambassador and be a part of closing the gender gap
+    in computer science.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -2089,11 +2334,14 @@ mr:
     परिचय आहे, जो मूलभूत गोष्टी कोणीही शिकू शकतो हे दाखवण्यासाठी मजेदार ट्यूटोरियल
     वापरतो. या तळागाळातील मोहिमेला जगभरातील 400 पेक्षा जास्त भागीदार आणि 200,000 शिक्षकांचा
     पाठिंबा आहे.
+  hoc_homepage_registration_desc: 'प्रार्थना '
   hoc_homepage_what_is_hoc_cta_how_to_guide: तुमच्या वर्गासाठी इव्हेंट प्लॅन करण्यासाठी[आमचे  How-to
     guide वाचा ](%{howto_guide_url})
   hoc_homepage_highlights_heading: अवर ऑफ कोड चे हायलाइट्स
   hoc_homepage_organized_by: अवर ऑफ कोड [Code.org](%{codeorg_url}) द्वारे आयोजित केला
     जातो.
+  hoc_events_heading: एक तासाचा कोड होस्ट करण्यासाठी नोंदणी करा
+  hoc_events_jump_to_map: अवर ऑफ कोडच्या  नकाशावर जा
   signup_closed: कोडचा ताससाठी नोंदणी आता बंद झालेली आहे. पुढच्या कोडचा ताससाठी साइन
     अप करण्यासाठी ऑक्टोबर महिन्यात पुन्हा प्रयत्न करा.
   signup_registration_not_required: भाग घेण्यासाठी तुम्हाला नोंदणी करण्याची गरज नाही!
@@ -2125,8 +2373,8 @@ mr:
   signup_event_entire_school_label: माझी संपूर्ण शाळा यात भाग घेते आहे
   signup_event_location_label: कार्यक्रमाची जागा
   signup_event_location_error: कार्यक्रमाची जागा आवश्यक आहे.
-  signup_special_event_flag_label: माझ्या कार्यक्रमात संपूर्ण डिस्ट्रिक्ट, समुदायाचे
-    सदस्य आणि/ किंवा इतर प्लॅन आहेत ज्यामुळे कार्यक्रम एक तासापेक्षा अधिक चालेल
+  signup_special_event_flag_label: माझ्या कार्यक्रमात संपूर्ण जिल्हा, समुदायाचे सदस्य
+    आणि/ किंवा इतर प्लॅन आहेत ज्यामुळे कार्यक्रम एक तासापेक्षा अधिक चालेल
   signup_special_event_details_label: विशेष कार्यक्रम म्हणून हायलाइट होण्यासाठी अर्ज
     करा
   signup_send_posters_flag_label: माझ्या शाळेला किंवा संस्थेला <a href= "/resources/promote#posters">पोस्टर्स</a>
@@ -2139,7 +2387,7 @@ mr:
     सॉफ्टवेअर इंजिनियरला शोधण्यात माझी मदत करा
   signup_email_preference_opt_in: आम्ही तुम्हाला Code.org च्या अभ्यासक्रमाबद्दल, स्थानिक
     संधींबद्दल किंवा कॉम्प्युटर सायंस संबंधी इतर बातम्यांबद्दल ईमेल पाठवू शकतो का?
-  signup_email_preference_privacy: "(आमचे गोपनीयता धोरण पारा)"
+  signup_email_preference_privacy: "(आमचे गोपनीयता धोरण पहा)"
   signup_email_preference_yes: होय
   signup_email_preference_yes_elementary: Yes - Send me updates on Elementary School
     Resources
@@ -2201,6 +2449,8 @@ mr:
   map_title: कोडचा तास नकाशा
   map_header: "# कोडचा तास 2017 साठी नोंदणी केलेल्या कार्यक्रमांची संख्या"
   map_header_count_year: "%{year} मध्ये %{event_count} कार्यक्रमांची नोंदणी झाली"
+  map_header_count_year_so_far: " %{year} मध्ये आतापर्यंत %{event_count} घटनांची नोंदणी
+    झाली"
   see_all_events: सर्व कार्यक्रम पाहा
   map_header_company: "# आयोजक कंपनी प्रमाणे"
   map_header_country: "# %{country} मध्ये"
@@ -2214,6 +2464,8 @@ mr:
     पानावर</a> पाहाता येईल.
   map_warning_markdown: कार्यक्रमांची संपूर्ण यादी [कार्यक्रमांच्या पेजवर](%{events_url})
     पाहता येईल.
+  map_view_all_events: कोड इव्हेंटच्या तासांची संपूर्ण यादी [here](%{events_url})
+    पहा.
   meta_tag_og_title: 'कोडचा तास: या चळवळीत सामील व्हा'
   meta_tag_og_description: कोडचा तास ही एक वैश्विक चळवळ असून 180+ देशांमधील कोट्यावधी
     विद्यार्थ्यांपर्यंत 45 पेक्षा अधिक भाषांमध्ये पोहोचते.
@@ -2233,14 +2485,6 @@ mr:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: वारंवार विचारले जाणारे प्रश्न
   hoc_faq_what_is_hoc_q: कोडचा तास काय आहे?
-  hoc_faq_what_is_hoc_a: अवर ऑफ कोडची सुरुवात संगणक शास्त्राची एका तासात ओळख या कार्यक्रमापासून
-    झाली होती, यात "कोड"वरील रहस्याचे आवरण दूर करण्याचा हेतू होता, जेणेकरून हे कळेल
-    की कोणीही मूलभूत तत्त्वे शिकू शकते आणि संगणक शास्त्राच्या क्षेत्रात अधिकाधिक लोक
-    भाग घेऊ शकतील. तेव्हापासून आता हा कार्यक्रम संगणक शास्त्र साजरे करण्यासाठीचा एक
-    जागतिक प्रयास झालेला आहे, याची सुरुवात 1 तासाच्या कोडिंगच्या कृतींनी होते, पण
-    यात निरनिराळ्या प्रकारचे सामुदायिक प्रयत्नसुद्धा सामील झालेले आहेत. <a href='%{tutorials}'>आमची
-    ट्युटोरीयल्स आणि कृती]</a>पाहा. ही तळागाळासाठीची चळवळ जगभरातील <a href='%{partners}'>400
-    पेक्षा जास्त भागीदार</a> आणि 2,00,000 शिक्षक मिळून चालवतात.
   hoc_faq_what_is_hoc_a_markdown: अवर ऑफ कोडची सुरुवात संगणक शास्त्राची एका तासात
     ओळख या कार्यक्रमापासून झाली होती, यात "कोड"वरील रहस्याचे आवरण दूर करण्याचा हेतू
     होता, जेणेकरून हे कळेल की कोणीही मूलभूत तत्त्वे शिकू शकते आणि संगणक शास्त्राच्या
@@ -2251,12 +2495,6 @@ mr:
     जगभरातील [400 पेक्षा जास्त भागीदार] (%{partners}) आणि 2,00,000 शिक्षक मिळून चालवतात.
   hoc_faq_last_year: ट्युटोरीयल्स वापरून पाहा
   hoc_faq_when_is_hoc_q: कोडचा तास केव्हा आहे?
-  hoc_faq_when_is_hoc_a: अवर ऑफ कोडचा कार्यक्रम दरवर्षी [संगणक शास्त्र शिक्षण सप्ताह]
-    (%{csedweek_url}) दरम्यान होतो. %{campaign_date_year} चा संगणक शास्त्र शिक्षण
-    सप्ताह %{campaign_date_full} रोजी होणार आहे, पण तुम्ही अवर ऑफ कोड संपूर्ण वर्षभर
-    आयोजित करू शकता. कॉम्प्युटिंगचे अग्रदूत [अॅडमिरल ग्रेस मरे हॉपर] (%{grace_hopper})
-    (9 डिसेंबर 1906) यांच्या वाढदिवसाच्या निमित्ताने संगणक शास्त्र शिक्षण सप्ताह दरवर्षी
-    आयोजित केला जातो.
   hoc_faq_when_is_hoc_a_markdown: अवर ऑफ कोडचा कार्यक्रम दरवर्षी [संगणक शास्त्र शिक्षण
     सप्ताह] (%{csedweek_url}) दरम्यान होतो. %{campaign_date_year} चा संगणक शास्त्र
     शिक्षण सप्ताह %{campaign_date_full} रोजी होणार आहे, पण तुम्ही अवर ऑफ कोड संपूर्ण
@@ -2264,30 +2502,17 @@ mr:
     (9 डिसेंबर 1906) यांच्या वाढदिवसाच्या निमित्ताने संगणक शास्त्र शिक्षण सप्ताह दरवर्षी
     आयोजित केला जातो.
   hoc_faq_why_cs_q: संगणक शास्त्र कशासाठी?
-  hoc_faq_why_cs_a: "<i>प्रत्येक</i>विद्यार्थ्याला संगणक शास्त्र शिकण्याची संधी मिळाली
-    पाहिजे. त्यामुळे समस्या सोडवण्याचे कौशल्य, लॉजिक आणि कल्पकतेला खतपाणी घातले जाते.
-    लवकर सुरुवात केल्यास, विद्यार्थ्यांनी 21 व्या शतकातल्या कोणत्याही करीयरचा मार्ग
-    निवडला तरीही त्यातल्या यशाची पायाभरणी होईल. अधिक सांख्यिकी <a href='%{stats_url}'>येथे</a>
-    पहा."
   hoc_faq_why_cs_a_markdown: _प्रत्येक_विद्यार्थ्याला संगणक शास्त्र शिकण्याची संधी
     मिळाली पाहिजे. त्यामुळे समस्या सोडवण्याचे कौशल्य, लॉजिक आणि कल्पकतेला खतपाणी घातले
     जाते. लवकर सुरुवात केल्यास, विद्यार्थ्यांनी 21 व्या शतकातल्या कोणत्याही करीयरचा
     मार्ग निवडला तरीही त्यातल्या यशाची पायाभरणी होईल. अधिक सांख्यिकी पहा [here](%{stats_url}).
   hoc_faq_how_participate_q: मला अवर ऑफ कोडमध्ये कसा भाग घेता येईल?
-  hoc_faq_how_participate_a: आमच्या "कसे करावे” मार्गदर्शिकेच्या आधारे <a href=’/how-to’>इथे
-    प्लॅनिंग सुरू करा</a>. तुम्ही तुमच्या शाळेत किंवा तुमच्या समुदायात कोडचा तास कार्यक्रम
-    आयोजित करू शकता &mdash; जसे एखाद्या क्लबमध्ये, परोपकारी संस्थेमध्ये किंवा ऑफिसमध्ये.
-    किंवा, %{campaign_date} च्या दिवशी स्वतः सुद्धा करून पाहू शकता.
   hoc_faq_how_participate_a_markdown: आमच्या "कसे करावे” मार्गदर्शिकेच्या आधारे [इथे
     प्लॅनिंग सुरू करा](%{howto}). तुम्ही तुमच्या शाळेत किंवा तुमच्या समुदायात अवर
     ऑफ कोड कार्यक्रम आयोजित करू शकता — उदा. अभ्यासाव्यतिरिक्त छंदांच्या क्लबमध्ये,
     ना-नफा संस्थेमध्ये किंवा ऑफिसमध्ये. किंवा %{campaign_date} च्या दिवशी स्वतः सुद्धा
     करून पाहू शकता.
   hoc_faq_behind_hoc_q: कोडचा तास कोणाची चळवळ आहे?
-  hoc_faq_behind_hoc_a: कोडचा तास, कोडचा तास आणि कॉम्प्युटर सायंस शिक्षण सप्ताह <a
-    href='%{partner_url}'>सल्लागार आणि समालोचन समिती</a> द्वारे चालवला जातो, तसेच
-    कोडचा तास कार्यक्रमाचे समर्थन भागीदारांची एक अभूतपूर्व युती करते &mdash; यात Microsoft,
-    Apple, Amazon, बॉइज अँड गर्ल्स क्लब ऑफ अमेरिका आणि कॉलेज बोर्ड सामील आहेत.
   hoc_faq_behind_hoc_a_markdown: अवर ऑफ कोड हा अवर ऑफ कोड आणि संगणक शास्त्र शिक्षण
     सप्ताह [सल्लागार आणि आढावा समिती] (%{partner_url}) तसेच अवर ऑफ कोड कार्यक्रमाला
     पाठींबा देण्यासाठी एकत्र आलेल्या अभूतपूर्व भागीदारांच्या एक युतीद्वारे - ज्यात
@@ -2295,12 +2520,6 @@ mr:
     सामील आहेत, चालवला जातो.
   hoc_faq_host_q: मला कोडींगबद्दल काहीच माहिती नाही. तरीही मला हा कार्यक्रम होस्ट
     करता येईल का?
-  hoc_faq_host_a: नक्कीच. अवर ऑफ कोडमधील कृती स्व-मार्गदर्शित आहेत. तुम्हाला फक्त
-    <a href='%{codeorg_url}/learn'>आमची सध्याची ट्युटोरीयल्स करून पाहावी</a> लागतील,
-    तुम्हाला पाहिजे असलेले ट्युटोरीयल निवडा आणि एक तासाची वेळ निवडा &mdash; उरलेली
-    सर्व कामे आमच्यावर सोडा. आमच्याकडे प्रत्येक वयासाठी आणि अनुभवाच्या प्रत्येक स्तरासाठी
-    पर्याय आहेत - ते बालवाडीपासून सुरू होतात. आमची <a href='/how-to'>"कसे करावे” मार्गदर्शिका</a>
-    वाचून तुमच्या कार्यक्रमाचे नियोजन सुरू करा.
   hoc_faq_host_a_markdown: अर्थातच. अवर ऑफ कोडमधील सर्व कृती स्व-मार्गदर्शित आहेत.
     तुम्हाला फक्त हे करायचे आहे की [आमची सध्याची ट्युटोरीयल्स करून बघा] (%{codeorg_url}/learn),
     तुम्हाला पाहिजे असलेले ट्युटोरीयल निवडा आणि एक तासभराची वेळ निवडा  —  उरलेली सर्व
@@ -2308,12 +2527,6 @@ mr:
     प्रत्येक स्तरासाठी पर्यायसुद्धा आहेत. आमची [कसे करावे](%{howto}) मार्गदर्शिका
     वाचून तुमच्या कार्यक्रमाचे नियोजन सुरू करा.
   hoc_faq_devices_q: मला माझ्या विद्यार्थ्यांसाठी कुठल्या डिव्हाइस वापरायला हव्यात?
-  hoc_faq_devices_a: Code.org ट्युटोरीयल्स सर्व डिव्हायसेस आणि ब्राऊझर्सवर चालतात.
-    तुम्ही Code.org ट्युटोरीयल्सच्या तांत्रिक गरजांबद्दल अधिक माहिती [here](%{codeorg_url}/educate/it)
-    येथे पाहू शकता. Code.org व्यतिरिक्त इतर ट्युटोरीयल्सच्या तांत्रिक गरजा [%{partner_url}/learn](%{codeorg_url}/learn)
-    येथे त्या ट्युटोरीयलच्या विशिष्ट माहितीमध्ये कळू शकतात. जर तुमच्या शाळेत ट्युटोरीयल्स
-    घेणे शक्य नसेल तर आम्ही [अनप्लग्ड कृतीसुद्धा] (%{unplugged_url}) उपलब्ध करून दिल्या
-    आहेत, हे विसरू नका!
   hoc_faq_devices_a_markdown: Code.org ट्युटोरीयल्स सर्व डिव्हायसेस आणि ब्राऊझर्सवर
     चालतात. तुम्ही Code.org ट्युटोरीयल्सच्या तांत्रिक गरजांबद्दल अधिक माहिती [here](%{codeorg_url}/educate/it)
     येथे पाहू शकता. Code.org व्यतिरिक्त इतर  ट्युटोरीयल्सच्या तांत्रिक गरजा [%{partner_url}/learn](%{codeorg_url}/learn)
@@ -2321,18 +2534,6 @@ mr:
     घेणे शक्य नसेल तर आम्ही  [अनप्लग्ड कृतीसुद्धा] (%{unplugged_url})  उपलब्ध करून
     दिल्या आहेत, हे विसरू नका!
   hoc_faq_need_computers_q: मला प्रत्येका सहभागीसाठी कॉम्प्युटर लागेल का?
-  hoc_faq_need_computers_a: नाही. आमचे कोडचा तासचे ट्यूटोरियल पीसीवर, स्मार्टफोनवर,
-    टॅबलेट्सवर काम करतात, आणि काही ट्यूटोरियल्ससाठी तर कॉम्प्युटरची गरज सुद्धा पडत
-    नाही! तुम्ही जिथे असाल तिथे, तुमच्यापाशी जे असेल ते वापरून यात सामील होऊ शकता.
-    <p><i>हे काही पर्याय आहेत:</i><br><ul><li><b> जोडी बनवून काम करा.</b> <a href=’%{pair_programming_research}’>शोधांमध्ये
-    असे आढळले आहे</a> की <a href=’%{pair_programming_video}’>जोडी बनवून काम</a> केल्याने,
-    कॉम्प्युटर शेअर करून आणि एकत्र काम केल्याने विद्यार्थी सर्वात चांगल्या रीतिने
-    शिकतात. तुमच्या विद्यार्थ्यांना जोडी बनवायला सांगा. <li><b>स्क्रीनवर प्रोजेक्ट
-    करा.</b> जर तुमच्याकडे वेब-कनेक्टेड कॉम्प्युटरला जोडायला एखादे प्रोजेक्टर आणि
-    स्क्रीन असतील, तर तुमचा संपूर्ण समूह कोडचा तास एकत्र करू शकेल. व्हिडिओ एकत्र पाहा
-    आणि आळीपाळीने कोडी सोडवा किंवा प्रश्नांची उत्तरे द्या. <li><b>अनप्लग व्हा.</b>
-    आमचे असेही <a href=’%{unplugged_url}’>ट्यूटोरियल्स आहेत ज्यांत कॉम्प्युटरची गरज
-    पडत नाही</a>. </ul>
   hoc_faq_need_computers_a_markdown: |-
     नाही. आमची अवर ऑफ कोड ट्युटोरीयल्स पीसीज, स्मार्टफोन्स, टॅबलेट्सवर चालतात आणि काहींसाठी अजिबात कॉम्प्युटर लागत नाही! तुम्ही जिथे कुठे आहात तिथून आणि तुमच्याकडे जे काही आहे त्यासह तुम्ही सहभागी होऊ शकता.
 
@@ -2343,29 +2544,16 @@ mr:
     - **अनप्लग्ड काम करा.** आमच्याकडे अजिबात [कॉम्प्युटर न लागणारी ट्युटोरीयल्स](%{unplugged_url}) सुद्धा आहेत.
   hoc_faq_international_q: मी <country> मध्ये आहे. मी आंतरराष्ट्रीय पातळीवर यात कसा
     भाग घेऊ?
-  hoc_faq_international_a: कोडचा तास कार्यक्रम कोणी ही, जगभरात कुठे ही आयोजित करू
-    शकते. गेल्या वर्षी जगभरातील विद्यार्थी कोडचा ताससाठी एकत्र जमले होते. <A href=’/promote’>इथे</a>
-    अधिक जाणून घ्या.
   hoc_faq_international_a_markdown: अवर ऑफ कोड कार्यक्रम जगभरात कोणीही कुठेही आयोजित
     करू शकतो. मागच्या वर्षी, जगभरातील विद्यार्थी अवर ऑफ कोडसाठी एकत्र आले होते. अधिक
     जाणून घ्या [here](%{promote}).
   hoc_faq_tutorial_q: मला अवर ऑफ कोडचे ट्यूटोरियल कसे निर्माण करता येईल?
-  hoc_faq_tutorial_a: जर तुम्हाला ट्यूटोरियल भागीदार व्हायचे असेल, तर <a href=’/tutorial-guidelines’>आमचे
-    दिशानिर्देश आणि सूचना पाहा</a>. आम्हाला अनेक प्रकारचे आकर्षक पर्याय द्यायला आवडेल,
-    पण मुख्य म्हणजे आम्हाला अशा विद्यार्थ्यांसाठी आणि शिक्षकांसाठी हा अनुभव उत्कृष्ट
-    करायचा आहे ज्यांच्यासाठी कॉम्प्युटर सायंसचे क्षेत्र नवीन आहे.
   hoc_faq_tutorial_a_markdown: जर तुम्हाला ट्युटोरीयल भागीदार होण्यात स्वारस्य असेल
     तर [आमची मार्गदर्शक तत्त्वे आणि सूचना](%{tutorial_guidelines}) पहा. आम्हाला विविध
     प्रकारचे रंजक पर्याय उपलब्ध करायचे आहेत, पण प्राथमिक ध्येय संगणक शास्त्राशी अपरिचित
     असणाऱ्या विद्यार्थ्यांचा आणि शिक्षकांचा अनुभव अतिशय चांगला असेल, हे सुनिश्चित
     करणे, असे आहे.
   hoc_faq_account_q: विद्यार्थ्यांना स्वतःचा अकाउंट वापरून लॉग ऑन करावे लागेल का?
-  hoc_faq_account_a: नाही. कोडचा तास करून पाहाण्यासाठी विद्यार्थ्यांना साइन अप किंवा
-    लॉग इन करण्याची गरज नाही. <A href=’%{codeorg_url}/learn/beyond’>नंतर केल्या जाणाऱ्या
-    बहुतांश अभ्यासक्रमांसाठी</a> विद्यार्थ्यांची प्रगती सेव्ह करण्यासाठी अकाउंट बनवावा
-    लागतो. तसेच, कोडचा ताससाठी साइन अप केल्याने कोड स्टूडियोचा अकाउंट आपोआप निर्माण
-    केला जात नाही. जर तुम्हाला तुमच्या विद्यार्थ्यांसाठी अकाउंट बनवायचे असतील, तर
-    कृपया या <a href=’https://youtu.be/_smeIV_KISE’>सूचनांचे</a> पालन करा.
   hoc_faq_account_a_markdown: अजिबात नाही. अवर ऑफ कोड करून पाहण्यासाठी विद्यार्थ्यांनी
     साईन अप करणे किंवा लॉगिन करणे आवश्यक नाही. बहुतांशी [पाठपुरावा अभ्यासक्रमांमध्ये](%{codeorg_url}/learn/beyond))
     विद्यार्थ्याची प्रगती सेव्ह करण्यासाठी खाते तयार करावे लागते. तसेच, अवर ऑफ कोडसाठी
@@ -2374,13 +2562,6 @@ mr:
     अनुसरण करा.
   hoc_faq_high_school_q: मला हाय स्कूलच्या विद्यार्थ्यांसोबत करण्यासाठी कुठल्या कृती
     निवडायला हव्यात?
-  hoc_faq_high_school_a: 'आमची स्टार वॉर्स आणि माईनक्राफ्ट ट्युटोरीयल्स- विशेषत: स्टार
-    वॉर्सचे जावा स्क्रिप्ट व्हर्जन आणि दोन्ही ट्युटोरीयल्सची फ्री प्ले व्हर्जन्स हायस्कूलमधल्या
-    विद्यार्थ्यांसाठी चांगली आहेत. दुसरा पर्याय म्हणजे आम्ही [%{partner_url}/learn](%{codeorg_url}/learn)
-    वरील नवशिक्यांच्या ट्युटोरीयल्समधील एक करून बघण्याची शिफारस करतो, उदा. अँग्री
-    बर्ड्स किंवा अॅना आणि एल्साबरोबर कोड लिहा. हायस्कूलमधील विद्यार्थी यातील एखादे
-    ट्युटोरीयल 30 मिनिटात पूर्ण करू शकला पाहिजे आणि नंतर Khan Academy किंवा CodeHS
-    सारखे जावा स्क्रिप्टमधले अधिक प्रगत ट्युटोरीयल करण्याचा प्रयत्न करू शकेल.'
   hoc_faq_high_school_a_markdown: 'आमची स्टार वॉर्स आणि माईनक्राफ्ट ट्युटोरीयल्स-
     विशेषत:  स्टार वॉर्सचे जावा स्क्रिप्ट व्हर्जन आणि दोन्ही ट्युटोरीयल्सची फ्री प्ले
     व्हर्जन्स हायस्कूलमधल्या विद्यार्थ्यांसाठी चांगली आहेत. दुसरा पर्याय म्हणजे आम्ही
@@ -2391,24 +2572,12 @@ mr:
     ट्युटोरीयल करण्याचा प्रयत्न करू शकेल.'
   hoc_faq_scratch_q: मी अवर ऑफ कोड साठी Scratch निवडणार आहे, पण जर माझ्या विद्यार्थ्यांकडे
     लॅपटॉप ऐवजी आयपॅड असतील तर?
-  hoc_faq_scratch_a: स्क्रॅच टॅबलेट्सवर रन होत नाही. जर विद्यार्थी लहान असतील तर ते
-    ScratchJR iPad अॅप (सुरुवातीच्या वाचकांसाठी) वापरू शकतात. जर तुम्ही [%{partner_url}/learn](%{codeorg_url}/learn)
-    वरील ट्युटोरीयल्स पाहिलीत तर तुम्हाला Code.org, Tynker, Lightbot किंवा CodeSpark
-    वरील iPads चालणारी इतर ट्युटोरीयल्स दिसतील.
   hoc_faq_scratch_a_markdown: 'स्क्रॅच टॅबलेट्सवर रन होत नाही. जर विद्यार्थी लहान  नसतील
     तर ते ScratchJR iPad अॅप (सुरुवातीच्या वाचकांसाठी) वापरू शकतात. जर तुम्ही  [%{partner_url}/learn](%{codeorg_url}/learn)
     वरील ट्युटोरीयल्स पाहिलीत तर तुम्हाला Code.org, Tynker, Lightbot किंवा  CodeSpark
     वरील iPads चालणारी इतर ट्युटोरीयल्स दिसतील. '
   hoc_faq_count_hoc_q: अवर ऑफ कोडची मोजणी कशी केली जाते?
   hoc_faq_map_q: मला नकाशावर माझा ठिपका का दिसत नाही?
-  hoc_faq_map_a: तुम्हाला तुमचा कोडचा तासचा कार्यक्रम नकाशावर दिसत नाही याबद्दल आम्ही
-    दिलगीर आहोत. हजारोच्या संख्येने संस्था साइन अप करीत असल्यामुळे, नकाशामध्ये त्यांची
-    माहिती एकीकृत केली जाते आणि अनेक कार्यक्रमांसाठी एकच चिह्न दर्शवले जाते. जर तुम्ही
-    नकाशाखालच्या <a href='%{events_url}’>कार्यक्रमांचे पान</a> लिंकवर क्लिक केलेत,
-    तर तुम्हाला सर्व कार्यक्रमांची राज्यवार यादी तिथे दिसेल आणि तुमचा कार्यक्रम तुम्हाला
-    त्या यादीमध्ये दिसेल. तसेच, कोडचा ताससाठी हजारोच्या संख्येने लोक साइन अप करीत
-    असल्यामुळे, नकाशाला आणि कार्यक्रमांच्या यादीला अपडेट होण्यासाठी साधारण 48 तास
-    लागतात. काही दिवसांनी पुन्हा तपासा!
   hoc_faq_map_a_markdown: 'तुम्हाला अवर ऑफ कोड नकाशावर तुमचा कार्यक्रम दिसत नाही,
     याबद्दल आम्ही दिलगीर आहोत. हजारो आयोजक साईन अप करत असल्यामुळे, नकाशा डेटा एकत्र
     करतो आणि अनेक कार्यक्रमांसाठी एकच बिंदू दर्शवतात. जर तुम्ही नकाशाखाली [कार्यक्रमाच्या
@@ -2416,35 +2585,12 @@ mr:
     यादीकडे पाठवले जाईल आणि तिथे तुम्हाला तुमचा कार्यक्रम यादीत दिसेल. त्याशिवाय,
     अवर ऑफ कोडसाठी हजारो लोक साईन अप करत असल्याने, नकाशा आणि कार्यक्रमांची यादी अपडेट
     होण्यासाठी सामान्यपणे 48 तास लागतात. काही दिवसांनी पुन्हा पहा! '
-  hoc_faq_count_hoc_a: 'अवर ऑफ कोड ट्रॅकर म्हणजे वापराचे अचूक मोजमाप नाही. अवर ऑफ
-    कोडमधील सहभाग ट्रॅक करताना आम्ही विद्यार्थ्यांचे वेगवेगळे IDs मोजत नाही, कारण
-    विशेषत: आम्हाला विद्यार्थ्यांनी लॉग इन किंवा नोंदणी करणे आवश्यक नसते. परिणामी,
-    आम्ही एकाच वेळी विद्यार्थ्यांची कमाल संख्या आणि किमान संख्या मोजतो. <a href=''%{codeorg_url}/loc''>येथे</a>
-    सर्व तपशील पहा. '
   hoc_faq_count_hoc_a_markdown: 'अवर ऑफ कोड ट्रॅकर म्हणजे वापराचे अचूक मोजमाप नाही.
     अवर ऑफ कोडमधील सहभाग ट्रॅक करताना आम्ही विद्यार्थ्यांचे वेगवेगळे IDs मोजत नाही,
     कारण विशेषत: आम्हाला विद्यार्थ्यांनी लॉग इन किंवा नोंदणी करणे आवश्यक नसते. परिणामी,
     आम्ही एकाच वेळी विद्यार्थ्यांची कमाल संख्या आणि किमान संख्या मोजतो. येथे सर्व
     तपशील पहा [here](%{codeorg_url}/loc).'
   hoc_faq_one_hour_q: एका तासात कोणी किती शिकू शकेल?
-  hoc_faq_one_hour_a: कोडचा तासचे उद्दिष्ट कोणालाही एका तासात कॉम्प्युटर सायंसमध्ये
-    तज्ञ करण्याचे नाही. एका तासात फक्त एवढे कळू शकते की कॉम्प्युटर सायंस मजेशीर आणि
-    सर्जनशील आहे, ते कुठल्याही वयाच्या, सर्व विद्यार्थ्यांसाठी सुलभ आहे, मग त्यांची
-    पार्श्वभूमी कशीही असो. या चळवळीच्या यशाची मोजणी यावरून नाही केली जात की विद्यार्थी
-    किती कॉम्प्युटर सायंस शिकले - यश यात आहे की भाग घेणाऱ्यांमध्ये लिंग, वांशिकता
-    आणि सामाजिक-आर्थिक गटांची किती विविधता होती आणि सर्व वर्गातील विद्यार्थी कॉम्प्युटर
-    सायंस शिकण्यासाठी आणि त्यात भाग घेण्यासाठी किती अधिक संख्येने पुढे येतात. कोट्यावधी
-    शिक्षक आणि विद्यार्थ्यांनी एका तासापेक्षा अधिक शिकायचे ठरवले आहे - एक संपूर्ण
-    दिवस, एक पूर्ण आठवडा किंवा यापेक्षा अधिक, आणि परिणामी अनेक विद्यार्थ्यांनी एका
-    संपूर्ण अभ्यासक्रमात (किंवा कॉलेजच्या डिग्रीसाठी सुद्धा) नाव नोंदवायचे ठरवले आहे.
-    <Br/><br/>विद्यार्थ्यांशिवाय इतर "शिकणारा” स्वतः शिक्षकसुद्धा असतात ज्यांना एका
-    तासानंतर हा आत्मविश्वास येतो की ते कॉम्प्युटर सायंस शिकवू शकतात, मग त्यांनी या
-    विषयात पदवी घेतलेली नसली तरीही हरकत नसते. हजारोच्या संख्येने शिक्षकांनी कॉम्प्युटर
-    सायंसमध्ये पुढे जाण्याचे ठरवले आहे, एकतर पीडी हाती घेऊन, किंवा फॉलो-ऑन ऑनलाइन
-    अभ्यासक्रम करून, किंवा दोन्ही करून. तीच कथा शाळेच्या व्यवस्थापकांची सुद्धा आहे,
-    ज्यांना आता कळायला लागले आहे की कॉम्प्युटर सायंस त्यांच्या विद्यार्थ्यांना पाहिजे
-    आहे आणि त्यांचे शिक्षक ते शिकवण्यात समर्थ आहेत. <br/><br/>सर्वात महत्त्वाची गोष्ट
-    म्हणजे, सर्व भाग घेणाऱ्यांना या एका तासामध्ये हे कळते की ते हे करू शकतात.
   hoc_faq_one_hour_a_markdown: |+
     अवर ऑफ कोडचे ध्येय कोणालाही एका तासात तज्ज्ञ संगणक शास्त्रज्ञ बनवणे असे नाही. फक्त संगणक शास्त्र हे मजेशीर आणि कल्पक आहे हे, ते कोणतीही पार्श्वभूमी असलेल्या सर्व वयांसाठी, सर्व विद्यार्थ्यांसाठी  उपलब्ध आहे हे  समजण्यासाठी एक तास पुरेसा आहे. या मोहिमेच्या यशाचे मोजमाप विद्यार्थी संगणक शास्त्र किती शिकले हे नसून  - विविध लिंगांच्या आणि वांशिक तसेच सामाजिक-आर्थिक गटांच्या लोकांनी किती व्यापकपणे सहभाग घेतला आणि सर्व इयत्तांच्या पातळ्यांवरील संगणक शास्त्राच्या अभ्यासक्रमांसाठी वाढणारी नोंदणी आणि सहभाग आम्हाला दिसून येतो, यात आहे. सहभागी होणाऱ्या लक्षावधी शिक्षकांनी आणि विद्यार्थ्यांनी अवर ऑफ कोडच्या पलीकडे जायचे ठरवले आहे - आणि संपूर्ण दिवस किंवा संपूर्ण आठवडा किंवा त्याहीपेक्षा जास्त काळ शिकायचे ठरवले आहे आणि अनेक विद्यार्थ्यांनी संपूर्ण अभ्यासक्रमासाठी (किंवा अगदी कॉलेजमधला मुख्य विषय म्हणून) नोंदणी करायचे ठरवले आहे.
 
@@ -2453,16 +2599,9 @@ mr:
     आणि सर्वांत महत्त्वाचे म्हणजे या तासात सर्व विद्यार्थी हे शिकतात की आपण सगळेजण हे करू शकतात.
 
   hoc_faq_more_questions_q: अजून काही प्रश्न विचारायचे आहेत का?
-  hoc_faq_more_questions_a: आमच्या <a href='http://support.code.org'>सपोर्ट फोरम</a>
-    मध्ये उत्तर शोधण्याचा प्रयत्न करा.
   hoc_faq_more_questions_a_markdown: आमच्या [सपोर्ट फोरम](http://support.code.org)
     मध्ये उत्तर शोधण्याचा प्रयत्न करा.
   hoc_faq_keep_learning_q: मला अवर ऑफ कोड नंतर शिक्षण कसे सुरू ठेवता येईल?
-  hoc_faq_keep_learning_a: कोणी ही, कधी ही अवर ऑफ कोड आयोजित करू शकते. याचे ट्यूटोरियल्स
-    वर्षभर उपलब्ध असतात. तुम्हाला आमचे ट्यूटोरियल्स आणि अभ्यासक्रम आमच्या साइटवर नेहेमी
-    मिळू शकतील. कृपया कार्यक्रमासाठी "कसे करावे” मार्गदर्शिका आणि इतर संसाधनांसाठी
-    <a href=’/promote’>आमची संसाधने</a> वर जा आणि तुमच्या कोडचा तास कार्यक्रम सफल
-    करण्यात मदत करा.
   hoc_faq_keep_learning_a_markdown: कोणीही कोणत्याही वेळी अवर ऑफ कोड इव्हेंट होस्ट
     करू शकते. ट्युटोरीयल्स वर्षभर उपलब्ध असतात. आमची सर्व ट्युटोरीयल्स आणि अभ्यासक्रम
     आमच्या साईटवर कायमचा असतील, अशी तुम्ही अपेक्षा करू शकता. तुमचा अवर ऑफ कोड कार्यक्रम
@@ -2470,23 +2609,18 @@ mr:
     आणि इतर संसाधने पहा.
   hoc_faq_certificates_q: मला माझ्या विद्यार्थ्यांसाठी प्रमाणपत्रे कुठून प्रिंट करता
     येतील?
-  hoc_faq_certificates_a: आमच्या [प्रमाणपत्रे पृष्ठावर](%{codeorg_url}/certificates)
-    जा, जिथून तुम्ही तुमच्या संपूर्ण वर्गासाठी आधीच प्रमाणपत्रे प्रिंट करून ठेवू शकता.
-    माईनक्राफ्ट ट्युटोरीयल करणाऱ्या विद्यार्थ्यांसाठी तुम्ही [खास प्रमाणपत्रे](%{codeorg_url}/certificates?course=mc)
-    सुद्धा प्रिंट करू शकता.
-  hoc_faq_certificates_a_markdown: आमच्या [प्रमाणपत्रे पृष्ठावर](%{codeorg_url}/certificates)
-    जा, जिथून तुम्ही तुमच्या संपूर्ण वर्गासाठी आधीच प्रमाणपत्रे प्रिंट करून ठेवू शकता.
-    माईनक्राफ्ट ट्युटोरीयल करणाऱ्या विद्यार्थ्यांसाठी तुम्ही [खास प्रमाणपत्रे](%{codeorg_url}/certificates?course=mc)
-    सुद्धा प्रिंट करू शकता.
+  hoc_faq_certificates_answer_markdown: Go to our [certificates page](%{certificates_url})
+    where you can print certificates for your entire class ahead of time.
   hoc_faq_logo_q: माझ्या अवर ऑफ कोड चा  लोगो किंवा नावाच्या वापरावर काही बंधने आहेत
     का?
-  hoc_faq_logo_a: कोडचा तास हा एक ट्रेडमार्क आहे. आम्हाला याचा उपयोग नाही करू द्यायचा
-    असे नाही, पण याचा उपयोग काही मर्यादांप्रमाणेच झाला पाहिजे याची आम्हाला खात्री
-    करून घ्यायची असते. कृपया <a href=’%{logo_url}’>उपयोगासाठी मार्गदर्शक तत्त्वे</a>
-    पाहा.
   hoc_faq_logo_a_markdown: अवर ऑफ कोड ट्रेडमार्क करण्यात आलेला आहे. आम्हाला त्याच्या
     वापरावर निर्बंध घालायचा नाही पण त्याचा वापर काही मर्यादेत असेल हे आम्हाला सुनिश्चित
     करायचे आहे. कृपया [ही वापराची मार्गदर्शक तत्त्वे] (%{logo_url}) पहा.
+  hoc_faq_bug_q: I found a bug in an Hour of Code activity! What should I do?
+  hoc_faq_bug_a_markdown: |-
+    Oh no! If you've come across a bug in an Hour of Code activity - first check the URL for the activity you are on. If the URL starts with studio.code.org, our Code.org Support team can help! Click the question mark icon in the upper right corner of your screen, then select "Report a problem" from the dropdown menu.
+
+    If the URL does not start with studio.code.org, you are likely working on a third party activity and will need to reach out to that company's support team for further assistance.
   stats_hoc_2013_image_alt: 2013 च्या कोडचा तासची आकडेवारी
   stats_growth: 1.5 कोटी उपयोगकर्त्यांपर्यंत सर्वात जलद पोचला.
   stats_i18n: विद्यार्थी 45 पेक्षा अधिक भाषांमध्ये शिक्षण घेत आहेत
@@ -2496,7 +2630,7 @@ mr:
   stats_pinterest: 'Pinterest: 2 वर्षे'
   stats_instagram: Instagram 14 महिने
   stats_hoc: 'कोडचा तास: 5 दिवस'
-  stats_global: 10 कोटीपेक्षा अधिक विद्यार्थ्यांनी कोडचा तास केलेला आहे
+  stats_global: 100M पेक्षा जास्त विद्यार्थ्यांनी कोडचा एक तास वापरून पाहिला आहे
   stats_girls_more: गेल्या 70 वर्षांमध्ये सर्वात अधिक मुलींनी कॉम्प्युटर सायंस करून
     पाहिले
   stats_females: संगणक शास्त्रात हायस्कूल अभ्यासक्रमांमध्ये, विद्यापीठांच्या अभ्यासक्रमांमध्ये
@@ -2591,10 +2725,10 @@ mr:
   event: कार्यक्रम
   events: कार्यक्रम
   highlights_title: मुख्य अंश
-  highlights_header: कोडचा तासच्या हायलाइट्स
+  highlights_header: अवर ऑफ कोड चे हायलाइट्स
   highlights_description: कोडचा तास माहिमेतील आमचे काही आवडते क्षण.
   highlights_previous: आधीच्या वर्षांमधील ठळक घटना
-  highlights_see_more: अधिकठळक वैशिष्ट्ये पहा
+  highlights_see_more: आणखी हायलाइट्स पाहा
   highlights_readmore: आणखी वाचा
   highlights_watchvideo: व्हिडिओ पहा
   highlights_facebook: Facebook वर शेयर करा
@@ -11173,7 +11307,7 @@ mr:
   tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
   tutorial_sasmap_name: 'Show With Code: Features on a Map'
   tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
-  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_sasdata_name: SAS DataFly
   tutorial_carnegiesensabot_name: Sensabot Challenge
   tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
   tutorial_kinderadd_name: Adding and Subtracting with KIBO
@@ -12953,6 +13087,139 @@ mr:
   all: सर्व
   dont_know: मला माहीत नाही
   language_label: भाषा
+  before_hoc: Before Hour of Code
+  day_of_hoc: Day of Hour of Code
+  after_hoc: After Hour of Code
+  step_01: Step 1
+  step_02: Step 2
+  step_03: Step 3
+  step_04: Step 4
+  step_05: Step 5
+  step_06: Step 6
+  step_07: Step 7
+  step_08: Step 8
+  hoc_how_to_top_heading: Your guide to Hour of Code
+  hoc_how_to_top_desc: Tailored how-to guides for the best Hour of Code experience.
+  hoc_how_to_top_view_guide: View guide for
+  hoc_how_to_nav_main_aria_label: Choose a guide
+  hoc_how_to_nav_sidebar_aria_label: Sidebar navigation
+  hoc_how_to_educators_intro_heading: तुमचा अवर ऑफ कोड कसा प्लॅन करावा
+  hoc_how_to_educators_intro_desc: The Hour of Code is a one-hour introduction to
+    computer science, using fun tutorials to show that anybody can learn the basics.  This
+    year, we're taking Hour of Code to new heights by offering coding opportunities
+    that encompass both artificial intelligence (AI) and non-AI components. Whether
+    you or your students are experienced coders or you all are setting out on your
+    very first computer science expedition, this Hour of Code promises an extraordinary
+    voyage.
+  hoc_how_to_faq_question_prerequisites: What are the prerequisites for doing an Hour
+    of Code?
+  hoc_how_to_faq_answer_prerequisites: The Hour of Code is simple to run — even for
+    beginners. You don't need experience in computer science or teaching in order
+    to inspire students to explore, create, and learn something new.
+  hoc_how_to_faq_question_devices: What devices do I need to run an Hour of Code?
+  hoc_how_to_faq_answer_devices_01: 'Devices you can use:'
+  hoc_how_to_faq_answer_devices_02: If devices are limited or unavailable, try [pair
+    programming](%{pair_url}) or explore our [unplugged activities](%{unplugged_url})
+    to learn without any devices at all!
+  hoc_how_to_faq_question_volunteer: कोण स्वयंसेवक होऊ शकते?
+  hoc_how_to_faq_answer_volunteer: Anyone passionate about computer science education
+    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
+    of all backgrounds participate. The Hour of Code features a large variety of activities
+    for all ages and skill levels, so you don't need to be a programming expert to
+    volunteer!
+  hoc_how_to_faq_question_full_hour: Will the Hour of Code take a full hour?
+  hoc_how_to_faq_answer_full_hour: Many students will be able to finish their activities
+    in less than an hour, and that's okay! Students can continue to learn while other
+    students complete their activity.
+  hoc_how_to_faq_question_account: विद्यार्थ्यांना स्वतःचा अकाउंट वापरून लॉग ऑन करावे
+    लागेल का?
+  hoc_how_to_faq_answer_account: No signup or login is required for students to try
+    the Hour of Code. Signing up for the Hour of Code does NOT automatically create
+    a Code.org account.
+  hoc_how_to_resources_heading_educators: शिक्षकांसाठी इतर अवर ऑफ कोड संसाधने
+  hoc_how_to_resources_promo_heading: Promotional Resources
+  hoc_how_to_resources_promo_desc: Find all the resources you need—print and digital—to
+    bring attention to your Hour of Code.
+  hoc_how_to_resources_discover_heading: Discover Activities
+  hoc_how_to_resources_discover_desc: Explore a wide selection of one-hour tutorials
+    designed for all ages in over 45 languages.
+  hoc_how_to_step_label_plan: Plan where and when you'll do your Hour of Code
+  hoc_how_to_step_label_choose_activity: Choose your activity
+  hoc_how_to_step_label_test_activity: Test out your activity
+  hoc_how_to_step_label_register_event: Register your event
+  hoc_how_to_step_label_tell: Tell your students, school, and community
+  hoc_how_to_step_label_get_coding: Get coding!
+  hoc_how_to_step_label_celebrate: Celebrate
+  hoc_how_to_step_label_beyond_hoc: Beyond Hour of Code
+  hoc_how_to_step_beyond_hoc_subhead: It doesn't end here!
+  hoc_how_to_step_beyond_hoc_desc: Computer science doesn't have to end with the Hour
+    of Code! While 90% of parents want their child to learn computer science, most
+    schools still don't teach it. Learn how to bring CS to your child's school today.
+  hoc_how_to_step_01_educators_subhead: Select an event time and space that works
+    for the number of students and devices you have available.
+  hoc_how_to_step_01_educators_desc_01: What spaces are available for you to do your
+    Hour of Code? Consider the tech capabilities of your space, and the kinds of devices
+    you expect your students to work on. Students can work on tutorials on a single
+    device, take turns using a shared device, or try a tutorial together on a classroom
+    whiteboard. There are even unplugged tutorials that can be completed with no devices
+    at all. Unplugged options can be done anywhere—even outdoors!
+  hoc_how_to_step_01_educators_desc_02: People around the world join the Hour of Code
+    celebration during CS Education Week %{campaign_date} when the latest tutorials
+    and activities are released. But you can do an Hour of Code any day of the year!
+  hoc_how_to_step_02_educators_desc_01: Explore activities based on your group's age,
+    experience, interests, and more. It's popular for students to try self-led tutorials,
+    though many activities include lesson plans for teachers to guide discussion or
+    extend the activity as well.
+  hoc_how_to_step_02_educators_desc_02: Decide ahead of time if you want to choose
+    a single tutorial for all of your students, or let each child pick their own.
+  hoc_how_to_step_02_educators_desc_03: This year, you and your students can [learn
+    all about AI](%ai_url) through tutorials, lesson plans, and our new How AI Works
+    video series.
+  hoc_how_to_step_03_educators_desc_01: Try out the tutorial yourself before you get
+    into the classroom so you can answer questions!
+  hoc_how_to_step_03_educators_desc_02: You can also test tutorials on student computers
+    or devices to ensure they support sound and video. Have low bandwidth? Plan to
+    show videos at the front of the class, so each student isn't downloading their
+    own videos.
+  hoc_how_to_step_03_educators_desc_03: Consider providing headphones for your class,
+    or ask students to bring their own, if the tutorial you choose works best with
+    sound.
+  hoc_how_to_step_04_educators_desc_01: When you register your Hour of Code event,
+    you'll receive helpful emails with news and tips for hosting a successful Hour
+    of Code. It's also how you can let local volunteers know your school is participating.
+    Volunteers are a great resource and can come speak to your class about computer
+    science or help your students with Hour of Code activities.
+  hoc_how_to_step_05_educators_desc_01: Get your students excited for the event by
+    sharing [inspirational videos](%{videos_url}) highlighting diverse people and
+    creative ways that computer science can be used in the real world.
+  hoc_how_to_step_05_educators_desc_02: Share your Hour of Code plans with other teachers
+    who may want to join in on the fun! This is also a great opportunity to reach
+    out to your school's Parent Teacher Student Association or share in parent newsletters,
+    letting them know what their children are learning.
+  hoc_how_to_step_06_educators_desc_01: Direct your students to the activity, maybe
+    by sharing the link on the board or through your classroom's learning management
+    system. Your students may encounter challenges—that's okay! Learning to program
+    is like learning a new language; you won't be fluent right away. If you don't
+    know the answer, you can figure it out together.
+  hoc_how_to_step_07_educators_desc_01: 'Be sure to celebrate success! Share photos
+    and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too!'
+  hoc_how_to_step_07_educators_desc_02: You can also print certificates for your students
+    to show off their achievement!
+  hoc_ai_top_desc: Anyone can learn about AI, whether you're a student in the classroom
+    or an educator unlocking the future of teaching with and about AI.
+  hoc_ai_how_ai_works_video_series_desc: This series of short videos will introduce
+    you to how artificial intelligence works and why it matters. Then delve into issues
+    like algorithmic bias and the ethics of AI decision-making.
+  hoc_ai_learn_how_ai_works_desc: Dive into the world of AI with "How AI Works," lessons
+    paired with our video series introducing you to how AI works and why it matters.
+  hoc_ai_101_for_educators_desc: शिक्षकांसाठी आमच्या विनामूल्य ऑनलाइन शिक्षण मालिकेसह
+    शिक्षणातील कृत्रिम बुद्धिमत्तेची (AI) परिवर्तनीय क्षमता शोधा.
+  hoc_ai_impacts_desc: Engage your classroom with  teacher-led lessons that explore
+    the impacts of artificial intelligence and invite learners to think of solutions
+    to some of AI's issues.
+  hoc_ai_activities_desc: These all-new Hour of Code activities introduce users to
+    the world of artificial intelligence in a fun, engaging way.
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
     Codechella event.
@@ -13461,6 +13728,11 @@ mr:
   video_library_page_inspirational_video_title_11: कोणीही शिकू शकते (1 मिनिट)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA Celebrates Hour of Code (2
+    min)
+  video_library_page_inspirational_video_title_14: It's More Than A Game (1 min)
+  video_library_page_inspirational_video_title_15: Create With Computer Science (1
+    min)
   video_library_page_not_hacked_video_title_1: 'How Not To Get Hacked: Introduction'
   video_library_page_not_hacked_video_title_2: 'How Not To Get Hacked: Passwords'
   video_library_page_not_hacked_video_title_3: 'How Not To Get Hacked: Authentication
@@ -13471,6 +13743,276 @@ mr:
   video_library_page_not_hacked_video_title_6: 'How Not To Get Hacked: Messaging and
     Downloads'
   video_library_page_not_hacked_video_title_7: 'How Not To Get Hacked: Install Updates'
+  thank_you_page_main_title: Thank You for Helping to Build a Movement
+  thank_you_page_description: The Code.org Advocacy Coalition wishes to thank the
+    hundreds of thousands of local champions and advocates, including teachers, community
+    members, researchers, nonprofits, universities, corporations, and government institutions
+    who have supported the vision that every student in every school deserves the
+    opportunity to learn computer science. Thank you for your support of this movement.
+  thank_you_page_members_section_title: 'And to all the members of the Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Thank you to the following individuals
+    and organizations for their contributions to this report:'
+  thank_you_page_individual_organization_description: Computer science education supervisors
+    at each state education agency, College Board, Della Cronin, Stuart Dexler, Katharine
+    Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Thank you to the students and teachers
+    quoted in this report:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
+  about_us_page_title: आमच्याविषयी
+  about_us_page_hero_description: Code.org® is an education innovation nonprofit dedicated
+    to the vision that every student in every school has the opportunity to learn
+    computer science as part of their core K-12 education. We expand access to computer
+    science in schools, with a focus on increasing participation by young women and
+    students from other underrepresented groups.  The leading provider of K-12 computer
+    science curriculum in the largest school districts in the United States, Code.org
+    also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged
+    more than 15% of all students in the world. Code.org is supported by generous
+    donors including Microsoft, Amazon, Google and [many others.](%{others_url})
+  about_us_page_section_title_1: Over 80 million students and 2 million teachers on
+    Code.org
+  about_us_page_statistic_figcaption: Code.org participation from the 2021-2022 school
+    year. [See disaggregated data.](%{data_url})
+  about_us_page_statistic_description: Code.org increases diversity in computer science
+    by reaching students of all backgrounds where they are — at their skill-level,
+    in their schools, and in ways that inspire them to keep learning. The vast majority
+    of the students on Code.org are from student groups historically underrepresented
+    in computer science. Increasing diversity in computer science is foundational
+    to our work, and [we encourage you to read more about our efforts](%{diversity_url}).
+  about_us_page_section_title_2: Code.org in the News
+  about_us_page_section_news_description: See all past [news and announcements](%{news_url})
+  about_us_page_section_table: Our goals and metrics
+  about_us_page_section_table_header_1: Code.org Goal
+  about_us_page_section_table_header_2: Accomplishment
+  abous_page_section_table_cell_1_1: Improve diversity in CS *(US students)*
+  abous_page_section_table_cell_1_2: 45% of Code.org students are young women, 50%
+    are students from marginalized racial and ethnic groups, and 46% of US students
+    are in high needs schools. Read more about [our approach to diversity.](%{diversity_url})
+  about_page_section_table_cell_2_1: Inspire students
+  about_page_section_table_cell_2_2: Tens of millions have tried the [Hour of Code](%{hour_url}).
+    (426,370,561 served. 49% female)
+  about_page_section_table_cell_3_1: Reach classrooms
+  about_page_section_table_cell_3_2: 591,636 teachers have signed up to teach our
+    intro courses on [Code Studio](%{code_studio_url}) and 19,177,297 students are
+    enrolled.
+  about_page_section_table_cell_4_1: Prep new CS teachers
+  about_page_section_table_cell_4_2: We've prepared more than 106,000 new teachers
+    to teach CS across grades K-12. Learn about our [professional learning programs.](%{learning_programs_url})
+  about_page_section_table_cell_5_1: Change school district curriculum
+  about_page_section_table_cell_5_2: We've partnered with [180+ of the largest school
+    districts](%{schoold_disctrict_url}) and 60 regional partners to [add CS to school
+    curriculum](%{cs_curriculum_url}). [Learn about becoming a regional partner.](%{regional_partner_url})
+  about_page_section_table_cell_6_1: Set up policies to support CS
+  about_page_section_table_cell_6_2: "[Policies changed in 50 U.S. states](%{states_url})
+    to establish CS education standards, make CS courses count towards high school
+    graduation, etc. [(details)](%{details_url})"
+  about_page_section_table_cell_7_1: Go global
+  about_page_section_table_cell_7_2: Our courses are available in over 67 languages,
+    used in 180+ countries.
+  about_page_section_table_under_label: 'Source: Code Studio Activity and [surveys
+    of participating educators](%{educators_url})'
+  about_page_section_title_3: More information, history, and philosophy
+  about_page_section_more_description_1: 'In 2013, Code.org was launched by twin brothers
+    [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url})
+    promoting computer science. This video became #1 on YouTube for a day, and 15,000
+    schools reached out to us for help. Since then, we''ve expanded from a bootstrapped
+    staff of volunteers to build a full organization supporting a worldwide movement.
+    We believe that a quality computer science education should be available to every
+    child, not just a lucky few.'
+  about_page_section_more_description_2: 'To support our goal, we do work across the
+    education spectrum: designing our own courses or partnering with others, training
+    teachers, partnering with large school districts, helping change government policies,
+    expanding internationally via partnerships, and marketing to break stereotypes.'
+  about_page_section_more_description_3: Our work builds upon [decades of effort,
+    by countless organizations and individuals](%{efforts_url}) who have helped establish,
+    fund, and spread computer science education. We're thankful to benefit from the
+    tireless help of the broader computer science education community, and [we thank
+    all the partners and individuals who have supported our impact over the years](%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
+  about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why
+    computer science is for all (VIDEO)](%{tedx_url})"
+  about_page_section_title_4: A unifying approach in a divided world
+  about_page_section_specific_title_1: A unifying approach in a divided world
+  about_page_section_specific_title_2: Our commitment to accessibility
+  about_page_section_specific_title_3: विनामूल्य अभ्यासक्रमाला आणि ओपन सोर्स तंत्रज्ञानाला
+    असलेली आमची बांधिलकी
+  about_page_section_specific_title_4: Code.org Advocacy Coalition
+  about_page_section_specific_title_5: K-12 Computer Science Framework
+  about_page_section_specific_title_6: Code.org Donors
+  about_page_section_specific_title_7: आम्हाला फॉलो करा
+  about_page_section_specific_title_8: Code.org चा आंतरराष्ट्रीय विस्तार
+  about_page_section_specific_description_1: Code.org's global role in the K-12 computer
+    science movement is only possible because we use a unifying approach across diverse
+    and often divided stakeholders. At a time of increasing polarization, the idea
+    of increasing opportunity for students unites people from across the political
+    spectrum. Code.org's team members, students, teachers, and supporters have diverse
+    and diverging viewpoints, and they are all welcome in our mission. [Read more.](%{read_more_url})
+  about_page_section_specific_description_2: Code.org believes computer science is
+    foundational for all students and we are committed to equity, access, and opportunity
+    in our organizational [values.](%{values_url}) To achieve this goal, we work to
+    identify and eliminate barriers that prevent the inclusion and full participation
+    of students and educators with disabilities. To learn more about our efforts,
+    see our [accessibility statement.](%{accessibility_url})
+  about_page_section_specific_description_3: All curriculum resources and tutorials
+    we author will forever be free to use and openly licensed under a [Creative Commons](%{commons_url})
+    license, allowing others to make derivative education resources for non-commercial
+    purposes. If you are interested in licensing our materials for commercial purposes,
+    [contact us](%{contact_us_url}). Our courses are translated for worldwide use
+    or by speakers of different languages. Our technology is developed as an [open
+    source project.](%{open_source_url})
+  about_page_section_specific_description_4: The [Code.org Advocacy Coalition](%{advocacy_url})
+    is a bipartisan coalition of corporations and nonprofits that work together to
+    help establish US federal and state policies to expand and sustain access to K-12
+    computer science and to broaden participation and diversity in the field. We bring
+    together [Republican and Democratic political leaders](%{leaders_url}) in common
+    cause supporting expanding access to and participation in K-12 computer science.
+  about_page_section_specific_description_5: Code.org is a member of the steering
+    committee that helped establish the [K-12 Computer Science Framework](%{framework_url})
+    - a high-level guide for states, districts, and organizations implementing computer
+    science education. The Framework has won the support of hundreds of academics,
+    K-12 educators, software companies, nonprofits, and states.
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url})
+    about progress in the K-12 computer science movement and about the work of Code.org.
+    Or follow Code.org on social media:"
+  about_page_section_specific_description_8: Over 40% of our website traffic comes
+    from outside of the United States and that number continues to climb. In order
+    to expand global access to computer science, our team works closely with [more
+    than 100 international partners](%{partners_url}), helping them to promote the
+    Hour of Code, advocate for policy change, and train teachers. We are making computer
+    science part of the international education discourse by partnering with ministries
+    of education from around the world and working with international organizations
+    like the Organization for Economic Co-operation and Development and the United
+    Nations Educational, Scientific and Cultural Organization.
+  about_page_section_donors_description_1: Code.org® is a registered public 501c3
+    nonprofit, with support from the general public. We are grateful for the generous
+    support we've received from [individuals and organizations](%{individuals_url})
+    who support our vision.
+  about_page_section_donors_description_2: Codes accomplishments (above) demonstrate
+    our ability to leverage those dollars into strong outcomes. But given our nonprofit
+    ambition that every child in every school should have access to computer science
+    — to become literate citizens in today's digital world and to test their interests
+    in exploring CS further as a career — we have a long way to go to meet a fundraising
+    goal that will support that vision.
+  about_page_donors_link_1: Make a donations
+  about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+  teach_ai_title: Real-world Examples. Practical Resources.
+  teach_ai_description: The AI Guidance for Schools Toolkit is a resource for policymakers,
+    school leaders, and staff to develop initial guidance on AI in their schools.
+  teach_ai_button_label: View the Toolkit
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: गेम लॅबची ओळख
+  middle_high_page_modules_card_title_2: अॅप लॅबमध्ये टर्टल प्रोग्रॅमिंग
+  middle_high_page_modules_card_title_3: अॅप लॅबमध्ये इव्हेंट ड्रीव्हन टर्टल प्रोग्रॅमिंग
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: अॅप लॅब
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: गेम लॅब हे एक असे प्रोग्रॅमिंग
+    एन्व्हायर्नमेंट आहे जिथे तुम्ही एकमेकांशी संवाद साधणाऱ्या वस्तू आणि पात्रे वापरून
+    सोपी अॅनिमेशन्स आणि गेम्स बनवू शकता.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: अधिक जाणून घ्या
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_description_1: मोफत वर्षभराचा कोर्स जो विद्यार्थ्यांना
+    संगणक विज्ञानाच्या मूलभूत संकल्पनांचा परिचय करून देतो आणि संगणक आणि तंत्रज्ञान
+    जगावर कसा प्रभाव टाकू शकतो हे शोधण्यासाठी त्यांना आव्हान देतो.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Introduce students to software engineering
+    and object-oriented design while they learn the Java programming language in this
+    free curriculum for AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_2: Explore CS Principles
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: एक्स्प्रेस अभ्यासक्रम
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_card_title_1: स्प्राइट लॅब
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
+  elementary_page_computer_science_card_title_1: Computer Science Fundamentals
+  elementary_page_computer_science_card_title_2: संगणक विज्ञान कनेक्शन्स
+  elementary_page_computer_science_description_1: मोफत वर्षभराचा कोर्स जो विद्यार्थ्यांना
+    संगणक विज्ञानाच्या मूलभूत संकल्पनांचा परिचय करून देतो आणि संगणक आणि तंत्रज्ञान
+    जगावर कसा प्रभाव टाकू शकतो हे शोधण्यासाठी त्यांना आव्हान देतो.
+  elementary_page_computer_science_description_2: संगणक विज्ञान (CS) आणि इतर विषय
+    जसे की गणित, भाषा कला, विज्ञान आणि सामाजिक अभ्यास यांच्यात संबंध निर्माण करा.
   language_code:
     ar: Arabic
     az: Azerbaijani

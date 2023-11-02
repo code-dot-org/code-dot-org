@@ -58,6 +58,7 @@ class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count / 2
   SOURCE_LOCALE = 'en-US'.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -313,7 +314,7 @@ class I18nScriptUtils
   # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
   # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
   def self.to_js_locale(locale)
-    locale.tr('-', '_').downcase
+    locale.to_s.tr('-', '_').downcase
   end
 
   # Wraps hash in correct format to be loaded by our i18n backend.
@@ -384,6 +385,22 @@ class I18nScriptUtils
   def self.write_file(file_path, content)
     FileUtils.mkdir_p(File.dirname(file_path))
     File.write(file_path, content)
+  end
+
+  # Writes json file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_json_file(file_path, data)
+    write_file file_path, JSON.pretty_generate(data)
+  end
+
+  # Writes yaml file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_yaml_file(file_path, data)
+    write_file file_path, to_crowdin_yaml(data)
   end
 
   # Copies file

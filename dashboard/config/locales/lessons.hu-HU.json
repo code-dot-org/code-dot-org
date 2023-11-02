@@ -503,6 +503,15 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Betüző méh"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Első lépések"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "A számítógép-tudomány alapjai"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Tervezés"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
         },
@@ -748,6 +757,27 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Királyi csata eseményekkel"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ciklusok"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Események"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Feltételek"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Függvények"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "változók"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Számláló ciklusok"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite labor"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Online környezetem biztonsága"
@@ -1223,6 +1253,15 @@
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Királyi csata eseményekkel"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Első lépések"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "A számítógép-tudomány alapjai"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Tervezés"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba",
@@ -1998,9 +2037,6 @@
           "overview": "⚠️ Ez a lecke azoknak az osztálytermeknek szól, amelyek a teljes [How AI Works videósorozatot](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) egyetlen nap alatta\\*\\* szeretnék bemutatni\\*\\*. Nem célja, hogy az egység többi órájával sorrendben tanítsák, amely minden videót egy-egy nap bemutat.\n\nA diákok követik az egyes videókat a videó szókincsének egyeztetésével, majd válaszolnak az egyes videókkal kapcsolatos reflexiós kérdésre. Az óraterv és a diák nagyon ritkák és nyitottak, hogy lehetővé tegyék az improvizációt és a testreszabást, hogy illeszkedjenek az osztályterembe.",
           "preparation": "-   Nyomtassa ki a tevékenységi útmutatót\n-   Vetítse ki a diákat egy videoprojektoron"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kódolás órája 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "student_overview": "Az oktatócsomag végén a diákok képesek lesznek egy korábban elkezdett projektet egy „Válassz saját kalandot”, „Üdvözlőkártya” vagy „Személyiségkvíz” alkalmazássá fejleszteni. A code.org/applab oldalon bemutatott további projektek építését is lehet folytatni.\n\nJó szórakozást az App Lab segítségével elvégzendő Kódolás órájához!"
         },
@@ -2101,7 +2137,7 @@
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
         },
         "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft Kódolás órája tervező",
+          "name": "Minecraft Kódolás Órája tervező",
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra.",
           "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
         },
@@ -2110,9 +2146,6 @@
           "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Először a diákok szemetet próbálnak eltávolítani az óceánból és a tárgyakat \"hal\" vagy \"nem hal\" kategóriába sorolják. Ezután a tanulóknak ki kell bővíteniük az adathalmazt más tengeri élőlénnyel. A foglalkozás második részében a tanulók maguk választanak címkéket, amelyeket a véletlenszerűen generált halak képeire helyeznek. Ezeket az adatokat egy gépi tanuló modellben használják, amely ezután képes lesz arra, hogy önállóan címkézzen fel új képeket."
         },
         "outbreak/Outbreak": {
-          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
-          "preparation": "- Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n- Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
-          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
           "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
         },
         "playlab/Play Lab": {
@@ -2134,9 +2167,6 @@
         "text-compression/Text Compression": {
           "name": "Szöveg tömörítése",
           "student_overview": "Egy bizonyos ponton elérjük a fizikai határát annak, hogy milyen gyorsan tudunk biteket küldeni, és ezért, ha szeretnénk nagyobb információ mennyiséget gyorsabban küldeni, akkor meg kell próbálni ugyanannyi információt kevesebb biten tárolni - tömöríteni kell az adatokat.  "
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Hangulat tanulmányozása"
         },
         "allthethings/Jigsaw": {
           "name": "Kirakós játék"
@@ -2504,12 +2534,18 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrém kihívás - Átfogó"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kódolás órája 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Kirakós játék",
           "overview": "Ez a leckében a diákok megismerik, hogy mire számíthatnak egy számítógépes laborban. A lecke egy rövid megbeszéléssel kezdődik a számítógépes laborban való megfelelő viselkedésről, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
           "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
           "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel az osztályban a diákok lényegében azonos szintre kerülnek, amikor majd feladványokat kell megoldaniuk. Ez a lecke remek lehetőséget nyújt arra is, hogy megismerjék a számítógépes hardver alapvető kifejezéseit, többek között az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" kifejezéseket, attól függően, hogy milyen eszközt használnak.",
           "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Hangulat tanulmányozása"
         }
       }
     }

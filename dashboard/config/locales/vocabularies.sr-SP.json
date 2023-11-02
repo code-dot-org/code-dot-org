@@ -392,14 +392,6 @@
         "debugging/minecraft/unversioned": {
           "word": "Отклањање грешака"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Отклањање грешака"
         },
@@ -417,26 +409,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Отклањање грешака"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         }
       }
     }

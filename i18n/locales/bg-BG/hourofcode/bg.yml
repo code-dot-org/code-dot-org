@@ -6,36 +6,55 @@ bg:
   front_title: Присъединете се към най-голямото обучение събитие в историята, 7-13
     декември 2015 г.
   coming_soon: Очаквайте скоро
-  campaign_date_start_short: 6 дек.
-  campaign_date_start_long: 6 декември
-  campaign_date_short: Декември 7-13
-  campaign_date_full: Декември 7-13
-  campaign_date_year: '2022'
-  campaign_date_full_year: 6-12 декември 2021
-  nonus_campaign_date_start_short: 1 октомври
-  nonus_campaign_date_start_long: 1 октомври
-  nonus_campaign_date_short: 1 октомври - 18 декември
-  nonus_campaign_date_full: 1 октомври - декември 18
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 октомври 2022 г. - 18 декември 2022 г.
-  latam_campaign_date_start_short: 1 октомври
-  latam_campaign_date_start_long: 1 октомври
-  latam_campaign_date_short: 1 октомври - 18 декември
-  latam_campaign_date_full: 1 октомври - декември 18
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 октомври 2022 г. - 18 декември 2022 г.
-  europe_campaign_date_start_short: 1 октомври
-  europe_campaign_date_start_long: 1 октомври
-  europe_campaign_date_short: 1 октомври - 18 декември
-  europe_campaign_date_full: 1 октомври - декември 18
-  europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: 1 октомври 2022 г. - 18 декември 2022 г.
-  africa_campaign_date_start_short: 1 октомври
-  africa_campaign_date_start_long: 1 октомври
-  africa_campaign_date_short: 1 октомври - 18 декември
-  africa_campaign_date_full: 1 октомври - декември 18
-  africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1 октомври 2022 г. - 18 декември 2022 г.
+  new: Ново
+  hours_of_code_served: Часове на обслужване на кода
+  hoc_stat_languages: Учениците се учат на 40 езика
+  hoc_stat_hours_served: Над 100 М ученици са участвали в Hour of Code
+  hoc_stat_females: Студентките съставляват 50% от участниците в Hour of Code
+  campaign_date_start_short: 4 дек.
+  campaign_date_start_long: 4 декември
+  campaign_date_short: Декември 4-10
+  campaign_date_full: Декември 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 декември 2023 г.
+  nonus_campaign_date_start_short: 5 септември
+  nonus_campaign_date_start_long: 5 септември
+  nonus_campaign_date_short: 5 септември  - 17 декември
+  nonus_campaign_date_full: 5 септември  - 17 декември
+  nonus_campaign_date_year: '2023'
+  nonus_campaign_date_full_year: 5 септември 2023 г. - 17 декември 2023 г.
+  latam_campaign_date_start_short: 5 септември
+  latam_campaign_date_start_long: 5 септември
+  latam_campaign_date_short: 5 септември  - 17 декември
+  latam_campaign_date_full: 5 септември  - 17 декември
+  latam_campaign_date_year: '2023'
+  latam_campaign_date_full_year: 5 септември 2023 г. - 17 декември 2023 г.
+  europe_campaign_date_start_short: 5 септември
+  europe_campaign_date_start_long: 5 септември
+  europe_campaign_date_short: 5 септември  - 17 декември
+  europe_campaign_date_full: 5 септември  - 17 декември
+  europe_campaign_date_year: '2023'
+  europe_campaign_date_full_year: 5 септември 2023 г. - 17 декември 2023 г.
+  africa_campaign_date_start_short: 5 септември
+  africa_campaign_date_start_long: 5 септември
+  africa_campaign_date_short: 5 септември  - 17 декември
+  africa_campaign_date_full: 5 септември  - 17 декември
+  africa_campaign_date_year: '2023'
+  africa_campaign_date_full_year: 5 септември 2023 г. - 17 декември 2023 г.
+  hoc2023_header: Творчество с AI
+  hoc2023_hero_desc_homepage: Присъединете се към милиони по целия свят, за да организирате
+    час кодиране, със или без AI и да научите как работи AI. Всеки, навсякъде може
+    да го направи. Не е необходим опит.
+  hoc2023_hero_desc_learn_page: Тази година издигаме Hour of Code на нови висоти,
+    като предлагаме възможности за кодиране, които обхващат както изкуствения интелект
+    (AI), така и не-AI компоненти.
+  hoc2023_social_creativity_with_ai_title: Час на кода - Какво ще създадете?
+  hoc2023_social_creativity_with_ai_desc: Използвайте компютърни науки, за да изследвате
+    и да научите повече за AI!
+  hoc2023_what_is_hoc_desc: Часът на кода е безплатно въведение в компютърните науки
+    чрез забавни дейности и видеоклипове за учащи от всички нива на умения. Тази година
+    честването на кодирането и изкуствения интелект се подкрепя от над 400 партньори,
+    20 000 преподаватели и 58 000 доброволци.
   hoc2022_header: Разгледайте, играйте, създайте!
   social_hoc2022_explore_play_create: Използвайте компютърни науки, за да изследвате,
     играете и създавате!
@@ -48,6 +67,9 @@ bg:
     Гомес, музика от „Енканто“ на Дисни и още!
   social_hoc2023_dance: С участието на Бионсе, BTS, Хари Стайлс, Лизо, Лил Нас Х,
     Селена Гомес, музика от „Енканто“ на Дисни и още!
+  social_hoc2023_dance_v2: Време е да подпирате нещата си! Създайте свое собствено
+    танцово парти с хитове от Майли Сайръс, BTS, Lil Nas X, Хари Стайлс, Ники Минай,
+    Розалия и други!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Научете днес, изграждане на по-светло утре.
@@ -171,6 +193,8 @@ bg:
   social_ai_title: Научете повече за изкуствения интелект (AI) | Code.org
   social_ai_desc: Инструменти, които помагат на учениците и учителите да въведат AI
     в класната стая.
+  social_videos_desc: Ангажиращи видеоклипове по компютърни науки за учащи от всички
+    възрасти.
   pl_superhero_title: Помогнете на учениците да станат супергерои!
   pl_superhero_desc: Присъединете се към нашата силно подкрепяща програма за професионално
     обучение за преподаватели от средните и гимназиалните училища.
@@ -183,6 +207,41 @@ bg:
     на учебните програми и преработена страница за обучение, за да ви помогне да намерите
     всичко!
   in_partnership_with: В партньорство с
+  shop_code_dot_org_heading: Магазин Код.org
+  shop_code_dot_org_desc: Подкрепете нашата работа и носете движението с гордост.
+    Нашите шапки са били носени от президента Обама и известни личности също.
+  spread_the_word_heading: Разпространение на новината
+  spread_the_word_desc: Увеличете нашето въздействие, като споделяте Code.org с вашата
+    мрежа. От социалните медии до актуализациите по имейл, открийте как можете да
+    ни помогнете да достигнем до повече преподаватели, студенти и застъпници.
+  follow_us_heading: Следвайте ни в социалните медии
+  follow_us_desc: Бъдете в крак с нас в социалните медии и споделяйте нашите публикации
+    с вашата мрежа, за да бъдете информирани и да помогнете за повишаване на осведомеността.
+  facebook: Фейсбук
+  twitter: Туитър
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: ТикТок
+  device_tablet: Таблетката
+  device_laptop: лаптоп
+  device_desktop_computer: Настолен компютър
+  device_mobile_device: Мобилно устройство
+  for_everyone: За всички
+  for_students_teacher_led_learning: 'За учениците: Учене, ръководено от учителя'
+  for_students_teacher_led_lessons: 'За учениците: уроци, ръководени от учители'
+  professional_development: Професионално развитие
+  how_ai_works_video_series: Как работи AI Видео серии
+  learn_how_ai_works: Научете как работи AI
+  ai_101_for_educators: AI 101 за преподаватели
+  learn_about_ai_impacts: Научете за въздействието на изкуствения интелект
+  hoc_ai_activities: Час на кода Дейности с изкуствен интелект
+  subscribe_to_emails_heading: Абонирайте се за имейли
+  subscribe_to_emails_desc: Прочетете за това, което се случва в Code.org и в обучението
+    по компютърни науки чрез тримесечни актуализации чрез нашия пощенски списък.
+  subscribe_to_emails_intl: Абонирайте се за международни актуализации
+  promote_code_dot_org_heading: Насърчаване на Code.org
+  promote_code_dot_org_desc: Насърчавайте компютърните науки във вашия район с помощта
+    на статистики, цитати и видеоклипове.
   afe_partnership_logo_alt: Лого на бъдещия инженер на Amazon
   afe_partnership_thanks_desc: Amazon Future Engineer е цялостна програма за детство
     към кариера, която вдъхновява, образова и обучава деца и млади хора с ниски доходи
@@ -201,21 +260,62 @@ bg:
   curricula_title_high: Учебни програми за гимназия
   curricula_desc_high: Разгледайте завладяващите курсове и дейности, които канят вас
     и вашите ученици от гимназията да копаете по-дълбоко в компютърните науки.
+  for_administrators_heading: За администратори
+  for_administrators_desc: Присъединете се към хилядите училища, които вече са включили
+    компютърни науки в учебната си програма.
+  for_parents_heading: За родителите
+  for_parents_desc: Можете да помогнете да насърчите училището на ученика си да предлага
+    или разширява образованието по компютърни науки.
+  for_educators_heading: За преподаватели
+  for_educators_desc: Започнете да преподавате днес - не е необходим опит в областта
+    на компютърните науки - с нашите професионални учебни семинари.
   students_label: Ученици
   teachers_label: Учители
+  educators_label: Преподаватели
+  companies_label: Фирми
+  districts_label: Области
+  school_assemblies_label: Училищни събрания
+  parents_label: Родители
+  public_officials_label: Държавни служители
+  volunteers_label: Доброволци
+  virtual_events_label: Виртуални събития
   teacher_label_csf: CS Основи учител
   teacher_label_csd: CS Открития Учител
   teacher_label_csp: CS Принципи Учител
   teacher_label_csc: CS Връзки Учител
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Форум за учители
+  teacher_forum_desc: Посетете Форума за учители по час на код, за да получите съвет,
+    прозрение и подкрепа от други преподаватели.
   required_materials: 'Необходими материали:'
   optional_materials: 'Допълнителни материали:'
-  call_to_action_explore_roles: Разгледайте отворените роли
+  for_students: За студенти
+  for_educators: За преподаватели
+  call_to_action_host_hoc: Водете час на кода
+  call_to_action_hold_an_event: Провеждане на събитие
+  call_to_action_register_event: Регистрирайте събитието
+  call_to_action_register_your_hoc: Регистрирайте своя час на кода
+  call_to_action_select_activity: Изберете дейност
+  call_to_action_start_activity: Започнете дейност
+  call_to_action_get_certificates: Вземете сертификати
+  call_to_action_go_beyond_hoc: Излезте отвъд Часа на кода
+  call_to_action_explore_all_hoc_activities: Разгледайте всички дейности по Час на
+    кода от Code.org
+  call_to_action_start_dance_party: Започнете танцово парти
+  call_to_action_start_part_02: Започнете част втора
+  call_to_action_start_unplugged_activity: Стартирайте изключената дейност
+  call_to_action_view_promo_resources: Вижте промоционални ресурси
   call_to_action_learn_more: Научи повече
   call_to_action_watch_now: Гледайте сега
   call_to_action_try_activity: Опитайте дейност
+  call_to_action_try_activities: Опитайте дейности
+  call_to_action_try_hoc_ai_activities: Опитайте дейности с изкуствен интелект „Час
+    на код“
+  call_to_action_explore_activities: Разгледайте дейности
+  call_to_action_explore_ai: Разгледайте AI
   call_to_action_explore_unit: Разгледайте единица
   call_to_action_explore_curriculum: Разгледайте учебната програма
+  call_to_action_explore_curricula: Разгледайте учебните програми
   call_to_action_explore_curriculum_options: Разгледайте опциите за учебна програма
   call_to_action_explore_lessons: Разгледайте уроците
   call_to_action_explore_modules: Разгледайте модулите
@@ -266,6 +366,7 @@ bg:
   call_to_action_find_self_paced_modules: Намерете самоусъвършенствани модули
   call_to_action_join_teacher_forums: Присъединете се към учителски форуми
   call_to_action_explore_teacher_forums: Разгледайте форумите на учителите
+  call_to_action_explore_teacher_forum: Разгледайте форума за учители
   call_to_action_explore_career_resources: Разгледайте кариерните ресурси
   call_to_action_watch_videos: Гледайте видеоклиповете
   call_to_action_download_posters: Изтегляне на плакати
@@ -282,11 +383,46 @@ bg:
   call_to_action_notify_available: Уведоми ме, когато е налична
   call_to_action_register_early_access: Регистрирайте се за ранен достъп
   call_to_action_open_positions: Преглед на отворени позиции
+  call_to_action_explore_roles: Разгледайте отворените роли
   call_to_action_get_guide: Вземете ръководството
   call_to_action_donate_to_cdo: Дарете на Code.org
   call_to_action_start_fundraiser: Започнете набиране на средства
   call_to_action_view_donation_policy: Вижте политиката за дарения
   call_to_action_view_donate_bitpay: Дарете с BitPay
+  call_to_action_make_a_donation: Направете дарение
+  call_to_action_other_ways_to_give: Други начини за даване
+  call_to_action_become_partner_usa: Станете партньор на САЩ
+  call_to_action_become_partner_intl: Станете международен партньор
+  call_to_action_become_a_volunteer: Станете доброволец
+  call_to_action_start_translating: Започнете да превеждате
+  call_to_action_learn_about_advocacy: Научете повече за нашето застъпничество
+  call_to_action_visit_store: Посетете магазина
+  call_to_action_view_faqs: Вижте още често задавани въпроси
+  call_to_action_applications_open: Приложенията вече са отворени
+  call_to_action_apply_cs_ambassador: Кандидатствайте за посланик на CS
+  call_to_action_coming_soon: Скоро!
+  call_to_action_learn_how_ai_works: Научете как работи AI
+  call_to_action_learn_about_ai: Научете повече за AI
+  aria_label_call_to_action_hoc_how_to_educators: Вижте ръководство за инструкции
+    за преподаватели
+  aria_label_call_to_action_hoc_how_to_companies: Вижте ръководство за инструкции
+    за компании
+  aria_label_call_to_action_hoc_how_to_districts: Вижте ръководство за ръководство
+    за райони
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Вижте ръководството за инструкции
+    за училищни събрания
+  aria_label_call_to_action_hoc_how_to_parents: Вижте ръководство за родители
+  aria_label_call_to_action_hoc_how_to_public_officials: Вижте ръководство за ръководство
+    за държавни длъжностни лица
+  aria_label_call_to_action_hoc_how_to_volunteers: Вижте ръководство с инструкции
+    за доброволци
+  aria_label_call_to_action_hoc_how_to_virtual_events: Вижте ръководство с инструкции
+    за виртуални събития
+  aria_label_call_to_action_dance_01: Започнете дейността на танцовото парти
+  aria_label_call_to_action_dance_02: Започнете втора част от дейността на Танцовото
+    парти
+  aria_label_call_to_action_dance_unplugged: Започнете дейността без връзка с танцовото
+    парти
   aria_label_call_to_action_afe: Научете повече за бъдещия инженер на Amazon
   aria_label_call_to_action_teaching_csf: Започнете обучението по компютърни науки
     Основи на професионалното обучение
@@ -407,11 +543,25 @@ bg:
   curriculum_name_creating_apps_with_devices: Създаване на приложения с устройства
   curriculum_name_poetry: Кодиране с поезия
   curriculum_name_dance_party: Танцувално парти
+  curriculum_name_dance_party_02: Продължавайте да танцувате
+  curriculum_name_dance_party_unplugged: Танцово парти без електричество
+  curriculum_name_dance_party_ai_edition: 'Танцово парти: AI издание'
   curriculum_name_problem_solving_computing: Решаване на проблеми & Изчисляване
   curriculum_name_web_development: Уеб програмиране
   curriculum_name_interactive_animations_games: Интерактивни анимации и игри
   curriculum_name_design_process: Процесът на проектиране
   curriculum_name_data_society: Данни и общество
+  curriculum_desc_dance_party_01: В тази уводна дейност използвайте код, за да накарате
+    различни цветни герои да преминат към анимирани фонове и оптимистична музика.
+  curriculum_desc_dance_party_02: Преминете отвъд уводния урок с разширени идеи за
+    проекти. Разгледайте библиотека с примери за по-сложни танцови партита.
+  curriculum_desc_dance_party_unplugged: Включете си ритъма - не е необходим компютър!
+    Научете как концепциите за кодиране, като събития, могат да се използват за синхронизиране
+    на хореографията на танцьорката.
+  curriculum_desc_dance_party_ai_edition: Научете за концепциите за изкуствен интелект
+    (AI), за да създадете свое собствено виртуално танцово парти, показващо днешните
+    топ артисти. С десетки песни, от които да избирате, достигнете до всеки ученик,
+    независимо от музикалния му вкус. Време е да подпирате нещата си!
   curriculum_desc_csf: Безплатен набор от елементарни учебни програми, които запознават
     студентите с основополагащите концепции на компютърните науки.
   curriculum_desc_csf_express: Научете се да създавате компютърни програми, да развивате
@@ -510,7 +660,7 @@ bg:
   module_label_prerequisites: 'Предпоставки:'
   module_label_level: 'Ниво:'
   module_label_topics: 'Теми:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Устройства:'
   module_label_tools: 'Инструменти за програмиране:'
   module_label_professional_learning: 'Професионално обучение:'
   module_label_languages: 'Поддържани езици:'
@@ -532,12 +682,16 @@ bg:
   module_grade_k_5: К-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: К-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Детска градина
   module_grade_grade_01: 1 клас
@@ -545,6 +699,12 @@ bg:
   module_grade_grade_03: 3 клас
   module_grade_grade_04: Клас 4
   module_grade_grade_05: 5 клас
+  module_age_05_07: Възраст 5-7
+  module_age_07: Възраст 7+
+  module_age_07_11: Възраст 7-11
+  module_age_11: Възраст 11+
+  module_age_13: Възраст 13+
+  module_age_all_age: Всички възрасти
   module_grade_k_5_teachers: К-5 Учители
   module_grade_6_10_teachers: 6-10 Учители
   module_grade_9_12_teachers: 9-12 Учители
@@ -642,6 +802,59 @@ bg:
   heading_explore_curriculum_catalog: Разгледайте всички наши курсове в каталога на
     учебните програми
   heading_csa_ai: Търсите неща за вършене след изпита AP®?
+  heading_bring_cs_to_students: Донесете компютърни науки на учениците
+  heading_cs_ambassador_program: Програма за посланици на CS
+  heading_featured_student_projects: Представени студентски проекти
+  heading_start_hoc_with_videos: Започнете своя час на кода с вдъхновяващи видеоклипове
+  cs_ambassador_subhead: Ако сте ученик в гимназията, страстен към насърчаването на
+    повече млади жени да вземат компютърни науки във вашето училище, тогава имаме
+    нужда от вас!
+  cs_ambassador_desc: Всяка област, включително медицина, развлечения, спорт, образование,
+    бизнес, мода и предприемачество, е докосната от компютърните науки. И все пак
+    само 5% от младите жени в гимназиална възраст посещават часове по компютърни науки.
+    Посланиците могат да помогнат за премахване на тази разлика между половете, като
+    насърчат своите връстници да вземат клас по компютърни науки.
+  cs_ambassador_application_date: Кандидатурите са отворени до 8 ноември 2023 г.
+  cs_ambassador_application_subhead: Работете с учител, за да подадете заявлението
+    си днес
+  cs_ambassador_application_questions: Въпроси? Моля, свържете се с [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Какво правят посланиците на CS?
+  cs_ambassador_do_desc: Посланиците на CS насърчават младите жени да изследват темата
+    и да се повдигат взаимно, докато си върнат мястото в компютърните науки. Посланиците
+    на CS се свързват със своите връстници, за да споделят вълнението и любовта си
+    към компютърните науки. Те посещават класни стаи, организират маси на обяд и говорят
+    на събрания и клубни срещи. Посланиците на CS работят с учители и училищни администратори,
+    за да разрушат стереотипите, които задържат младите жени назад.
+  cs_ambassador_steps_heading: Какво ми е необходимо, за да стана посланик на CS?
+  cs_ambassador_steps_list_title_01: Страстта
+  cs_ambassador_steps_list_title_02: Опит в CS курс
+  cs_ambassador_steps_list_title_03: Училище, което предлага CS
+  cs_ambassador_steps_list_desc_01: Страстта към насърчаването на младите жени във
+    вашето училище да вземат часове по компютърни науки
+  cs_ambassador_steps_list_desc_02: 'Взели сте едногодишен клас по компютърни науки
+    през учебната 2022-23 година или по-рано (препоръчва се: CS Principles или AP®
+    CSA)'
+  cs_ambassador_steps_list_desc_03: 'Посещавайте гимназия, която редовно предлага
+    едногодишен курс по компютърни науки (препоръчва се: CS Principles или AP® CSA)'
+  cs_ambassador_benefits_heading: Ползи от програмата
+  cs_ambassador_benefits_list_title_01: Национална общност
+  cs_ambassador_benefits_list_title_02: Обществено обслужване
+  cs_ambassador_benefits_list_title_03: Признаване
+  cs_ambassador_benefits_list_title_04: Сваг
+  cs_ambassador_benefits_list_title_05: Сертификат
+  cs_ambassador_benefits_list_title_06: Преживявания
+  cs_ambassador_benefits_list_desc_01: Достъп до национална общност от млади лидери,
+    ангажирани да премахнат разликата между половете в компютърните науки.
+  cs_ambassador_benefits_list_desc_02: Часове за обществено обслужване и възможност
+    да спечелите [наградата за доброволческа служба на президента на САЩ] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Признание за посланик 2023-2024 г. и отговарящо
+    на условията за отличие в Залата на славата на посланиците на Code.org.
+  cs_ambassador_benefits_list_desc_04: Бъдете идентифицирани като посланик на CS чрез
+    специално облекло с марка Code.org, стикери и други!
+  cs_ambassador_benefits_list_desc_05: Официален сертификат за участие от Code.org.
+  cs_ambassador_benefits_list_desc_06: Придобийте опит и истории, които да споделите
+    във вашата кандидатура за колеж, автобиография и други!
   professional_learning_section_desc: Получете подкрепата, от която се нуждаете, докато
     се подготвяте да преподавате. Учителите го обичат, като над 90% го класират за
     най-доброто професионално развитие досега!
@@ -691,6 +904,14 @@ bg:
     относно принципите на компютърните науки на Code.org и получавайте полезни напомняния,
     съвети и актуализации, изпратени директно до вашата пощенска кутия.
   subscribe_form_section_unsubscribe: Можете да се отпишете по всяко време.
+  dance_hero_heading: Кодирайте танцово парти
+  dance_featuring_songs_by_short: 'Съдържание на песни от:'
+  dance_featuring_songs_by_long: 'Танцовото парти включва песни от:'
+  dance_and_more: и още
+  dance_choose_activity: Изберете вашето танцово парти
+  dance_afe_disclaimer: Изпълнителите, чиято музика се използва в този урок, не спонсорират
+    или одобряват Amazon като част от лицензирането на използването на тяхната музика
+    на Code.org.
   blockchain_hero_heading: Как работи блокчейн
   blockchain_hero_desc: Потопете се в света на блокчейн с „Как работи блокчейн“, нашата
     нова видео серия и съпътстващи уроци!
@@ -800,6 +1021,12 @@ bg:
   ai_curriculum_grades_05: 'Клас нива: 9-12'
   ai_curriculum_btn_aria_label_05: Разгледайте модула за софтуерно инженерство и компютърно
     виждане
+  ai_curriculum_title_06: Общественото въздействие на генеративния AI
+  ai_curriculum_desc_06: Проучете въздействието на генеративния AI от различни гледни
+    точки, след което си сътрудничете като екип, за да измислите насоки, които отговарят
+    на най-много нужди на всички участници.
+  ai_curriculum_btn_aria_label_06: Вижте общественото въздействие на плана за уроци
+    за генеративен AI
   ai_carousel_heading: 'Какво казват учителите за AI с Code.org:'
   ai_carousel_quote_01: Този урок също даде възможност на моите ученици да видят,
     че има елемент на мнение в системите за класификация. По-късно, когато започнахме
@@ -925,6 +1152,7 @@ bg:
     на AI за оценка на учениците. С богата комбинация от теория, практически примери
     и ресурси, тя има за цел да даде възможност на преподавателите да се ориентират
     в пейзажа на ИИ и да подобрят опита за учене на учениците.
+  ai_pl_101_resources_5: Ръководство за осигуряване на отговорен подход към AI
   ai_pl_101_video_desc_6: 'Научете повече за новата технология, движеща големите промени
     в AI, включваща два нови видеоклипа на големи езикови модели (като ChatGPT) и
     Generative AI. Чуйте как тези нови технологии работят директно от експертите:
@@ -936,6 +1164,8 @@ bg:
     тези, които просто потапят пръстите на краката си, както и усъвършенствани инструменти
     за тези, които искат да увеличат максимално потенциала си.
   ai_pl_101_resources_3: AI подсказва за трансформиране на ученето на учениците
+  ai_pl_101_resources_section_title: Още начини да научите повече за AI
+  ai_pl_101_resources_guide: 'Ръководство за спътник:'
   how_ai_works_hero_heading: Как работи AI
   how_ai_works_hero_desc: Потопете се в света на AI с „Как работи AI“, нашата видео
     серия и съпътстващи уроци!
@@ -1804,6 +2034,34 @@ bg:
   donate_tabs_bitpay_desc: Прегърнете бъдещето на даването с криптовалута. Чрез BitPay
     вашата цифрова валута може директно да подкрепи начинанията на Code.org в разширяването
     на образованието по компютърни науки.
+  help_page_top_heading: Как можете да помогнете
+  help_page_top_desc: Подкрепете нашата мисия да направим компютърните науки достъпни
+    за всяко дете, навсякъде. Вашите усилия ни помагат да вдъхновим бъдещите новатори
+    и да преодолеем разликата в технологичното образование.
+  help_page_top_subhead: Направете дарение на Code.org
+  help_page_top_desc_02: Работим, за да дадем възможност на всеки ученик да учи компютърни
+    науки — както онлайн, така и в училищата, където установяваме постоянни курсове
+    и обучаваме учители. За всеки долар, който дарите, едно дете се запознава с компютърните
+    науки.
+  help_page_partners_heading: Станете партньор
+  help_page_partners_desc: Code.org работи с други организации с нестопанска цел като
+    партньори, за да помогне за разпространението на компютърните науки по местен,
+    устойчив начин. Научете повече за нашата програма.
+  help_page_volunteer_heading: Доброволец в класна стая
+  help_page_volunteer_desc: Доброволец да преподава Часът на кода или да бъде гост
+    лектор в местна класна стая. Регистрирайте се, за да чуете за възможностите близо
+    до вас.
+  help_page_translate_heading: Помогнете ни да преведем
+  help_page_translate_desc: Доброволците преведоха нашите уроци на над 45 езика. Помогнете
+    ни да продължим да разширяваме нашите уроци за студенти по целия свят!
+  help_page_speak_for_cs_heading: Говорете за компютърни науки образование
+  help_page_speak_for_cs_desc: Научете повече за застъпническата работа на Code.org
+    в САЩ и десетте политики, които препоръчваме държавите да приемат, за да направят
+    компютърните науки основополагащи за всички студенти. Плюс това, разберете как
+    можете да управлявате промяната във вашето състояние.
+  yw_page_top_heading: Младите жени в компютърните науки
+  yw_page_top_desc: Станете посланик на CS и бъдете част от премахването на разликата
+    между половете в компютърните науки.
   hoc_live: Час на кода на живо
   hoc_live_sign_up_title: Регистрирайте се за Час на кода на живо
   hoc_live_learn_title: Научете с Час на кода на живо
@@ -2178,10 +2436,16 @@ bg:
     науки, използвайки забавни уроци, за да покаже, че всеки може да научи основите.
     Тази кампания на обикновените хора се подкрепя от над 400 партньори и 200 000
     преподаватели по целия свят.
+  hoc_homepage_registration_desc: Вашият клас или група може да се присъедини към
+    милиони по целия свят, правейки Часът на кода! Регистрацията за годишния празник
+    на Седмицата на образованието по компютърни науки започва през октомври. Въпреки
+    това, Часът на кода е достъпен целогодишно.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Прочетете нашето ръководство за употреба]
     (%{howto_guide_url}), за да планирате събитие за вашия клас."
   hoc_homepage_highlights_heading: Акценти на часа на кода
   hoc_homepage_organized_by: Часът на кода се организира от [Code.org](%{codeorg_url}).
+  hoc_events_heading: Регистрирайте се, за да организирате час на кода
+  hoc_events_jump_to_map: Преминете към картата „Часът на кода“
   signup_closed: Регистрацията за Часа на кода вече е затворена. Моля, проверете отново
     през октомври, за да се регистрирате за следващия Час на кода.
   signup_registration_not_required: Не е необходимо да се регистрирате, за да участвате!
@@ -2292,6 +2556,8 @@ bg:
   map_title: Часът на кода карта
   map_header: Hour of Code събития по света
   map_header_count_year: "%{event_count} събития регистрирани в %{year}"
+  map_header_count_year_so_far: "%{event_count} събития, регистрирани до момента в
+    %{year}"
   see_all_events: Виж всички събития
   map_header_company: "# организатори от компании"
   map_header_country: "# в %{country}"
@@ -2306,6 +2572,7 @@ bg:
     събития страницата.</a>
   map_warning_markdown: Пълен списък на събитията може да бъде разгледан на [страница
     събития.] (%{events_url})
+  map_view_all_events: Вижте пълен списък на събитията „Час на кода [here]“ (%{events_url}).
   meta_tag_og_title: Часът на кодирането наближава
   meta_tag_og_description: Hour of Code е глобално движение, достигащо до десетки
     милиони ученици от 180+ страни на над 30 езика. Допустима възраст от 4 до 104.
@@ -2326,9 +2593,6 @@ bg:
     %{random_donor} за подкрепата @codeorg)'
   hoc_faq_title: Често задавани въпроси
   hoc_faq_what_is_hoc_q: Какво е Hour of Code?
-  hoc_faq_what_is_hoc_a: Hour of Code е един час въведение в компютърните науки, предназначен
-    да демитологизира програмирането и да се покаже, че всеки може да научи основите.<a
-    href='%{codeorg_url}'>Вижте уроците ни</a>.
   hoc_faq_what_is_hoc_a_markdown: Часът на кода започна като едночасово въведение
     в компютърните науки, предназначено да демистифицира „кода“, да покаже, че всеки
     може да научи основите и да разшири участието в областта на компютърните науки.
@@ -2339,12 +2603,6 @@ bg:
     свят.
   hoc_faq_last_year: Опитайте уроците
   hoc_faq_when_is_hoc_q: Кога се провеждаHour of Code?
-  hoc_faq_when_is_hoc_a: Всеки може да бъде организатор на Hour of Code събитие по
-    всяко време, но целта на масовата кампания е десетки милиони ученици да пробват
-    Hour of Code %{campaign_date}, като част от <a href='http://csedweek.org'> Седмицата
-    на компютърните науки и образованието </a>. В точно определен <i>час ли е</i>?
-    Не. Можете да направите своя Hour of Code по всяко време през тази седмица. (И
-    по всяко друго време).
   hoc_faq_when_is_hoc_a_markdown: Часът на кода се провежда всяка година по време
     на [Седмица на образованието по компютърни науки] (%{csedweek_url}). Седмицата
     на образованието по %{campaign_date_year} компютърни науки ще бъде %{campaign_date_full},
@@ -2353,43 +2611,22 @@ bg:
     компютърния пионер [адмирал Грейс Мъри Хопър] (%{grace_hopper}) (9 декември 1906
     г.).
   hoc_faq_why_cs_q: Защо компютърни науки?
-  hoc_faq_why_cs_a: "<i>Всеки</i> ученик трябва да има възможност да изучава компютърни
-    науки. Те помагат за възпитаване на умения в решаване на проблеми, логика и креативност.
-    Когато започнат да ги изучават по- рано, учениците ще имат основа за успешна кариера
-    в 21-ви век. Вижте повече статистика на <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: Ученикът трябва да има възможност да учи компютърни науки.
     Той помага да се подхранват умения за решаване на проблеми, логика и творчество.
     Като се започне рано, студентите ще имат основа за успех във всеки 21-ви век кариера
     път. Вижте повече статистики [here](%{stats_url}).
   hoc_faq_how_participate_q: Как да участвам в Hour of Code?
-  hoc_faq_how_participate_a: <a href='target-resources-how-to'> Започнете да планирате
-    тук</a> чрез преглед на нашия наръчник 'Указания". Можете да организирате Hour
-    of Code събитие във Вашето училище или във Вашата общност &mdash; като и в извънкласни
-    клубове, с нестопанска цел или на работното място. Или, просто го пробвйте сами
-    когато %{campaign_date} дойде времето.
   hoc_faq_how_participate_a_markdown: "[Започнете да планирате тук] (%{howto}), като
     прегледате нашето ръководство за инструкции. Можете да организирате събитие Hour
     of Code във вашето училище или във вашата общност — например в извънкласен клуб,
     с нестопанска цел или на работното място. Или просто опитайте сами, когато пристигне
     %{campaign_date} ."
   hoc_faq_behind_hoc_q: Кой стои зад Hour of Code?
-  hoc_faq_behind_hoc_a: Hour of Code е организиран от <a href='http://code.org'>Code.org</a>
-    с нестопанска цел, посветен на разширяване използването и изучаването на компютърни
-    науки в повече училища, както и увеличаване броя на жените, занимаващи се с програмиране.
-    <a href='%{codeorg_url}/about/partners'>Безпрецедентен брой партньори</a> са се
-    обединили в подкрепа на Часът на кодирането &mdash; включително Microsoft, Apple,
-    Amazon, момчета и момичета от Клуб Америка и College Board.
   hoc_faq_behind_hoc_a_markdown: Часът на кода е организиран от Code.org и задвижван
     от Комитета за преглед на Часа на кода, както и безпрецедентна коалиция от [partners](%{partner_url}),
     които се събраха, за да подкрепят Часа на кода - включително Microsoft, Apple,
     Amazon, Boys and Girls Clubs of America и College Board.
   hoc_faq_host_q: Аз не умея да програмирам. Може ли все пак да регистрирам събитие?
-  hoc_faq_host_a: Разбира се. Дейностите в Hour of Code са самонасочващи. Всичко,
-    което трябва да направите е, <a href='%{codeorg_url}/learn'> да пробвате нашите
-    текущи уроци</a>и да изберете тези, които ще са Ви необходими в рамките на Вашия
-    Час &mdash; Ние ще се погрижим за останалото. Подготвили сме варианти за всяка
-    възраст и ниво на опит, от детската градина и нагоре. Започнете да планирате Вашето
-    събитие като прочетете нашите <a href='/resources/how-to'> съвети</a>.
   hoc_faq_host_a_markdown: Разбира се. Дейностите по „Час на кода“ са самостоятелно
     ръководени. Всичко, което трябва да направите, е [опитайте нашите текущи уроци]
     (%{codeorg_url}/learn), изберете урока, който искате, и изберете час - ние се
@@ -2397,11 +2634,6 @@ bg:
     от детска градина и нагоре. Започнете да планирате събитието си, като прочетете
     нашето [как да насочвате] (%{howto}).
   hoc_faq_devices_q: Какви устройства трябва да използвам с моите ученици?
-  hoc_faq_devices_a: Code.org уроците работят на всички устройства и браузъри. Можете
-    да видите повече информация за технологичните нужди на Code.org уроците в <a href='%{codeorg_url}/educate/it'>.
-    Техническите нужди на Code.org партньорските уроци можете да намерите на <a href=''%{codeorg_url}/learn'>
-    in the tutorial specific description. Не забравяйте, ние също предлагаме дейности
-    без компютър, ако вашето училище не може да стартира другите уроци!
   hoc_faq_devices_a_markdown: Code.org уроци работят на всички устройства и браузъри.
     Можете да видите повече информация за техническите нужди [here]на ръководството
     на Code.org (/educate/it).%{codeorg_url}Техническите нужди за не-Code.org уроци
@@ -2409,17 +2641,6 @@ bg:
     описание на урока. Не забравяйте, че предлагаме и [изключени дейности] (%{unplugged_url}),
     ако вашето училище не може да побере уроците!
   hoc_faq_need_computers_q: Трябва ли компютър за всеки участник?
-  hoc_faq_need_computers_a: Не. Имаме уроци в Hour of Code, които работят на компютри,
-    смартфони, таблетки и някои, които не изискват компютър! Можете да се присъедините,
-    където и да сте, с каквото имате. <p><i>Ето няколко възможности:</i> <br><ul><li><b>Работа
-    по двойки,.</b> Изследванията показват, че учениците учат най-добре програмирането
-    <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>когато
-    са по двойки</a>, споделят компютъра и работят заедно. Насърчете вашите ученици
-    да се разделят на двойки. <li><b>Използвайте мултимедиен проектор и екран.</b>
-    Ако имате проектор и екран, свързани към компютър с интернет връзка, направете
-    Часът на кодирането с цялата си група. Гледайте видео клиповете заедно и нека
-    учениците се редуват в решаването на пъзели или в отговарянето на въпроси. <li><b>Опитайте
-    ънплъгд уроците.</b> Ние предлагаме уроци, които не изискват компютър.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Не. Имаме уроци за Hour of Code, които работят на компютри, смартфони, таблети и някои, които изобщо не изискват компютър! Можете да се присъедините, където и да сте, с каквото и да имате.
 
@@ -2429,26 +2650,15 @@ bg:
     - **Използвайте проектиран екран.** Ако имате проектор и екран за WEB свързан компютър, цялата ви група може да направи Hour of Code заедно. Гледайте видео порции заедно и се редувайте да решавате пъзели или да отговаряте на въпроси.
     - **Go unplugged.** Ние предлагаме [уроци, които не изискват компютър] () на всички.%{unplugged_url}
   hoc_faq_international_q: Аз съм от <country>. Как да участвам в международен план?
-  hoc_faq_international_a: Всеки може да организира Hour of Code събитие, навсякъде
-    по света. Миналата година ученици по целия свят се присъединиха за Hour of Code
-    събитието. Научете повече <a href='/promote'> тук</a>.
   hoc_faq_international_a_markdown: Всеки може да организира събитие Hour of Code
     навсякъде по света. Миналата година студентите по целия свят се обединиха за Часа
     на кода. Научете повече [here](%{promote}).
   hoc_faq_tutorial_q: Как да направя  урок за Часът на кодирането?
-  hoc_faq_tutorial_a: Ако сте заинтересувани да станете наш партньор в създаването
-    на уроци, <a href='/tutorial-guidelines'>вижте нашите указания и инструкции</a>.
-    Бихме искали да има разнообразие от възможности за ангажиране, но основната цел
-    е да се оптимизира опитът на учениците и учителите, за които компютърните науки
-    са новост.
   hoc_faq_tutorial_a_markdown: Ако се интересувате да станете партньор за уроци, [вижте
     нашите указания и инструкции] (%{tutorial_guidelines}). Бихме искали да бъде домакин
     на различни възможности за ангажиране, но основната цел е да се оптимизира опита
     за студенти и учители, които са нови за компютърни науки.
   hoc_faq_account_q: Учениците трябва да влезнат  с акаунт?
-  hoc_faq_account_a: Не. Абсолютно не е необходима регистрация и не се изисква такава
-    за учениците, които пробват Hour of Code. Повечето от <a href='%{codeorg_url}/learn/beyond'>follow-on
-    courses</a> изискват създаване на акаунт за да се следи напредъка на ученика.
   hoc_faq_account_a_markdown: Не. Абсолютно не се изисква регистрация или влизане,
     за да могат учениците да изпробват Часа на кода. Повечето от [последващите курсове]
     (%{codeorg_url}/научи/отвъд) изискват създаване на акаунт, за да се запази напредъка
@@ -2456,11 +2666,6 @@ bg:
     акаунт в Code Studio. Ако искате да създадете акаунти за вашите ученици, моля,
     следвайте тези [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Коя от дейностите трябва да направя с учениците от училище?
-  hoc_faq_high_school_a: За всички възрасти препоръчваме да опитате един от начинаещите
-    уроци на <a href='http://code.org/learn'> Code.org/learn</a> за да започнете,подходящ
-    урок е този, с ядосаните птици или с Анна и Елза. Гимназиалните ученици трябва
-    да могат  да приключат един от тях за поне 30 минути и след това да опитат уроците
-    за по-напреднали в JavaScript, като Khan Academy или CodeHS.
   hoc_faq_high_school_a_markdown: Нашите уроци за Междузвездни войни и Minecraft са
     чудесни за гимназистите, особено версията на Star Wars JavaScript и нивото на
     безплатна игра и на двата урока. Алтернативно препоръчваме да опитате един от
@@ -2470,11 +2675,6 @@ bg:
     урок в JavaScript, като Кан Академия или CodeHS.
   hoc_faq_scratch_q: Аз ще използвам Scratch за Hour of Code, но какво става, ако
     учениците ми работят на iPad, а не на лаптопи?
-  hoc_faq_scratch_a: Scratch не е предвиден за таблетки. Ако учениците са малки, те
-    могат да използват ScratchJR iPad приложението (за не можещи да четат). Ако погледнете
-    в ръководството на <a href='http://code.org/learn'> Code.org/learn</a>, можете
-    да намерите и други уроци, които работят на iPad - от Code.org, Tynker, Lightbot
-    или CodeSpark.
   hoc_faq_scratch_a_markdown: Драскотините не се изпълняват на таблети. Ако вашите
     ученици са млади, те могат да използват приложението ScratchJR iPad (за ранни
     читатели). Ако погледнете уроците на [%{partner_url}/learn] (%{codeorg_url}/learn),
@@ -2482,13 +2682,6 @@ bg:
     Lightbot или CodeSpark.
   hoc_faq_count_hoc_q: Как да се броят участниците в Hour of Code?
   hoc_faq_map_q: Защо не виждам моята точка на картата?
-  hoc_faq_map_a: Ние сме съжаляваме, че не вие виждате събитието си на Hour of Code
-    картата. Поради това, че десетки хиляди организатори се регистрират на картата,
-    понякога няколко събития се показват с една точка. Ако щракнете върху номера над
-    картата, вие ще бъдете насочен към списък с всички събития от държавата и ще намерите
-    вашето събитие, изброено там. Освен това предвид че хиляди хора се записват за
-    Hour of Code, списъка на картата и събитията се актуализира обикновено за 48 часа.
-    Проверете отново след няколко дни!
   hoc_faq_map_a_markdown: Толкова съжаляваме, че не виждате събитието си на картата
     на Часа на кода. Поради десетките хиляди организатори, които се регистрират, картата
     обобщава данните и показва една точка за няколко събития. Ако щракнете върху връзката
@@ -2497,9 +2690,6 @@ bg:
     Освен това, предвид хилядите хора, които се регистрират за Часа на кода, списъкът
     с карти и събития обикновено отнема 48 часа, за да се актуализира. Проверете отново
     след няколко дни!
-  hoc_faq_count_hoc_a: Брояча на Hour of Code не се използва за точно изброяване на
-    участниците. Ние не броим всеки участвал ученик, защото няма изискване за регистрация.
-    Като резултат се получава една приблизитена сума. Прочетете повече <a href='%{codeorg_url}/loc'>тук</a>.
   hoc_faq_count_hoc_a_markdown: 'Ние не броим уникалните студентски идентификационни
     номера перфектно, когато проследяваме участието в Часа на кода. Защо? Отчасти
     защото не искаме триенето на подкана да „влезте/регистрираме“, преди ученик или
@@ -2516,23 +2706,6 @@ bg:
     Hour of Code tracker да бъде точна мярка за използване. Това със сигурност е правилно
     насочено и показва, че много десетки милиони студенти са участвали.'
   hoc_faq_one_hour_q: Колко може да се научи за един час?
-  hoc_faq_one_hour_a: Целта на Hour of Code е не да научи всички да станат експерти
-    в компютърните науки за един час. Един час е достатъчен само да научат, че компютърни
-    науки са забавни и творчески, че те са достъпни на всички възрасти, за всички
-    ученици, независимо от произхода. Мярката за успеха на тази кампания не е колко
-    ученици ще учат CS - успеха е в широкото участие на момичета и момчета, етнически
-    и социално-бедни икономически групи и в резултат увеличение на записалите се за
-    участие в CS курсове на всички нива и степени. Милиони от участващите учители
-    и ученици решават да отидат отвъд един час - за да учат за ден или една седмица
-    или по-дълго, а много други са решили да се запишат в целия курс (или дори в колеж).
-    <br/> <br/> Освен учениците, друг "обучаем" е учителя, който печели увереност
-    след Hour of Code, че може да учи компютърни науки, въпреки че той няма да придобие
-    колежанска степен като компютърен учен. Десетки хиляди учители са решили да продължат
-    по-нататък, учейки компютърни науки или да посещават PD, да пробват предлаганите
-    онлайн курсове, или и двете. Това се отнася и за училищните администратори, които
-    осъзнават, че компютърните науки са нещо, в което искат техните ученици и техните
-    учители да успеят. <br/> <br/> Преди всичко, това, което ние можем да предложим
-    е всички участници могат да учат в Hour of Code.
   hoc_faq_one_hour_a_markdown: |-
     Целта на Часа на кодекса не е да научи никого да стане експерт компютърен учен за един час. Един час е достатъчен само, за да научите, че компютърните науки са забавни и креативни, че са достъпни на всички възрасти, за всички ученици, независимо от фона. Мярката за успех на тази кампания не е в това колко учат учениците от CS - успехът се отразява в широкото участие между полови, расови/етнически и социално-икономически групи и произтичащото от това увеличение на записването и участието, което виждаме в курсовете по CS на всички нива на клас. Милиони участващи учители и студенти са решили да надхвърлят един час - да учат за цял ден или цяла седмица или повече, а в резултат на това много студенти са решили да се запишат в цял курс (или дори в колеж).
 
@@ -2540,38 +2713,27 @@ bg:
 
     Преди всичко това, което всички участници могат да научат за един час, е, че можем да направим това.
   hoc_faq_more_questions_q: Все още имате въпроси?
-  hoc_faq_more_questions_a: Опитайте да намерите отговор в нашият <a href='http://support.code.org'>
-    форум за поддръжка</a>.
   hoc_faq_more_questions_a_markdown: Опитайте да намерите отговор в нашия [форум за
     поддръжка] (http://support.code.org).
   hoc_faq_keep_learning_q: Как да продължим след Hour of Code?
-  hoc_faq_keep_learning_a: Всеки може да бъде домакин на Hour of Code по всяко време.
-    Уроците ще са използваеми през цялата година. Можете да очаквате всички наши уроци
-    и учебната програма да бъде на разположение на нашия сайт постоянно. Моля отидете
-    и вижте <a href='/promote'> нашите ресурси</a> ръководство за организиране на
-    събитие и други ресурси, за да ни помогнете да направим вашият Hour of Code успешно
-    събитие.
   hoc_faq_keep_learning_a_markdown: Всеки може да бъде домакин на Час на кода по всяко
     време. Уроците остават целогодишно. Можете да очаквате всички наши уроци и учебни
     програми да бъдат достъпни на нашия сайт за вечни времена. Моля, посетете [нашите
     ресурси] (%{promote}) за ръководства за събития и други ресурси, за да направите
     вашето събитие Hour of Code успешно.
   hoc_faq_certificates_q: Къде мога да отпечатам сертификатите за моите ученици?
-  hoc_faq_certificates_a: Посетете нашата <a href='%{codeorg_url}/certificates'> страницата
-    "сертификати"</a> където можете да отпечатате бързо и лесно сертификати за целия
-    клас.
-  hoc_faq_certificates_a_markdown: Отидете на нашата [страница сертификати] (%{codeorg_url}/сертификати),
-    където можете да отпечатате сертификати за целия си клас преди време. Можете също
-    така да отпечатате [специални сертификати] (%{codeorg_url}/сертификати? курс =
-    mc) за студенти, които правят урока на Minecraft.
+  hoc_faq_certificates_answer_markdown: Отидете на нашата [страница с сертификати]
+    (%{certificates_url}), където можете да отпечатате сертификати за целия си клас
+    предварително.
   hoc_faq_logo_q: Има ли ограничения в използването на "часът на кода" лого или име?
-  hoc_faq_logo_a: Час на код е търговска марка. Ние не искаме да забраним нейното
-    използване, но ние искаме да се уверим, че използването се вписва в рамките на
-    няколко ограничения. Моля, вижте <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    тези указания за употреба</a>.
   hoc_faq_logo_a_markdown: Часът на кода е запазена марка. Не искаме да предотвратяваме
     използването му, но искаме да се уверим, че използването му се вписва в рамките
     на няколко ограничения. Моля, вижте [тези указания за употреба] (%{logo_url}).
+  hoc_faq_bug_q: Намерих бъг в дейност „Час на кода“! Какво трябва да направя?
+  hoc_faq_bug_a_markdown: |-
+    О, не! Ако сте попаднали на грешка в дейност „Час на кода“ - първо проверете URL адреса за дейността, в която се занимавате. Ако URL адресът започва с studio.code.org, нашият екип за поддръжка на Code.org може да ви помогне! Щракнете върху иконата на въпросителния знак в горния десен ъгъл на екрана, след което изберете „Докладване на проблем“ от падащото меню.
+
+    Ако URL адресът не започва с studio.code.org, вероятно работите върху дейност на трета страна и ще трябва да се свържете с екипа за поддръжка на тази компания за допълнителна помощ.
   stats_hoc_2013_image_alt: Статистика от 2013 за Hour of Code
   stats_growth: Това беше най-бързия начин за достигане на 15 милиона потребители.
   stats_i18n: Учениците се учат на 40 езика
@@ -13451,6 +13613,149 @@ bg:
   all: Всички
   dont_know: Не знам.
   language_label: Език
+  before_hoc: Преди час на кода
+  day_of_hoc: Ден на Часът на Код
+  after_hoc: След час на кода
+  step_01: Стъпка 1
+  step_02: Стъпка 2
+  step_03: Стъпка 3
+  step_04: Стъпка 4
+  step_05: Стъпка 5
+  step_06: Стъпка 6
+  step_07: Стъпка 7
+  step_08: Стъпка 8
+  hoc_how_to_top_heading: Вашето ръководство за Час на кода
+  hoc_how_to_top_desc: Персонализирани ръководства за инструкции за най-доброто изживяване
+    на Час на код.
+  hoc_how_to_top_view_guide: Вижте ръководството за
+  hoc_how_to_nav_main_aria_label: Изберете ръководство
+  hoc_how_to_nav_sidebar_aria_label: Странична навигация
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: Часът на кода е едночасово въведение в компютърните
+    науки, използвайки забавни уроци, за да покаже, че всеки може да научи основите.
+    Тази година ние извеждаме Часа на код на нови висоти, като предлагаме възможности
+    за кодиране, които обхващат както изкуствения интелект (AI), така и не-AI компоненти.
+    Независимо дали вие или вашите ученици сте опитни кодери или всички вие тръгвате
+    на първата си експедиция по компютърни науки, този Час на кодекса обещава изключително
+    пътуване.
+  hoc_how_to_faq_question_prerequisites: Какви са предпоставките за извършване на
+    Час на код?
+  hoc_how_to_faq_answer_prerequisites: Часът на кода е лесен за изпълнение - дори
+    и за начинаещи. Не се нуждаете от опит в компютърните науки или преподаването,
+    за да вдъхновите учениците да изследват, създават и научават нещо ново.
+  hoc_how_to_faq_question_devices: Какви устройства са ми необходими, за да стартирам
+    един час на код?
+  hoc_how_to_faq_answer_devices_01: 'Устройства, които можете да използвате:'
+  hoc_how_to_faq_answer_devices_02: Ако устройствата са ограничени или недостъпни,
+    опитайте [двойно програмиране] (%{pair_url}) или проучете нашите [изключени дейности]
+    (%{unplugged_url}), за да научите без никакви устройства!
+  hoc_how_to_faq_question_volunteer: Кой може да бъде доброволец?
+  hoc_how_to_faq_answer_volunteer: Всеки страстен по компютърни науки образование
+    и увеличаване на разнообразието в технологиите може да бъде доброволец! Ще се
+    радваме да видим доброволци от всички среди да участват. Часът на кода включва
+    голямо разнообразие от дейности за всички възрасти и нива на умения, така че не
+    е нужно да сте експерт по програмиране, за да доброволец!
+  hoc_how_to_faq_question_full_hour: Ще отнеме ли часът на кода цял час?
+  hoc_how_to_faq_answer_full_hour: Много ученици ще могат да завършат дейностите си
+    за по-малко от час и това е добре! Учениците могат да продължат да учат, докато
+    другите ученици завършват дейността си.
+  hoc_how_to_faq_question_account: Учениците трябва да влезнат  с акаунт?
+  hoc_how_to_faq_answer_account: Не се изисква регистрация или вход, за да могат учениците
+    да изпробват Часа на кода. Регистрирането за Часа на кода НЕ създава автоматично
+    акаунт в Code.org.
+  hoc_how_to_resources_heading_educators: Други ресурси за педагози
+  hoc_how_to_resources_promo_heading: Промоционални ресурси
+  hoc_how_to_resources_promo_desc: Намерете всички ресурси, от които се нуждаете -
+    печатни и цифрови - за да обърнете внимание на вашия Час на код.
+  hoc_how_to_resources_discover_heading: Открийте дейности
+  hoc_how_to_resources_discover_desc: Разгледайте богат избор от едночасови уроци,
+    предназначени за всички възрасти на над 45 езика.
+  hoc_how_to_step_label_plan: Планирайте къде и кога ще направите своя Час на код
+  hoc_how_to_step_label_choose_activity: Изберете вашата дейност
+  hoc_how_to_step_label_test_activity: Изпробвайте дейността си
+  hoc_how_to_step_label_register_event: Регистрирайте събитието
+  hoc_how_to_step_label_tell: Кажете на вашите ученици, училище и общност
+  hoc_how_to_step_label_get_coding: Вземете кодиране!
+  hoc_how_to_step_label_celebrate: Празнувайте
+  hoc_how_to_step_label_beyond_hoc: Отвъд часа на кода
+  hoc_how_to_step_beyond_hoc_subhead: Тук не свършва!
+  hoc_how_to_step_beyond_hoc_desc: Компютърните науки не трябва да завършват с Часа
+    на кода! Докато 90% от родителите искат детето им да учи компютърни науки, повечето
+    училища все още не го преподават. Научете как да донесете CS в училището на вашето
+    дете днес.
+  hoc_how_to_step_01_educators_subhead: Изберете време и пространство на събитието,
+    което работи за броя на учениците и устройствата, които имате на разположение.
+  hoc_how_to_step_01_educators_desc_01: Какви места са на разположение, за да направите
+    своя Час на код? Помислете за технологичните възможности на вашето пространство
+    и видовете устройства, върху които очаквате вашите ученици да работят. Учениците
+    могат да работят по уроци на едно устройство, да се редуват с помощта на споделено
+    устройство или да опитат урок заедно на бяла дъска в класната стая. Има дори изключени
+    уроци, които могат да бъдат завършени без никакви устройства. Опциите за изключване
+    могат да се правят навсякъде - дори на открито!
+  hoc_how_to_step_01_educators_desc_02: Хората по целия свят се присъединяват към
+    честването на Часа на кода по време на Седмицата на образованието на CS, %{campaign_date}
+    когато се публикуват най-новите уроци и дейности. Но можете да направите Час на
+    код всеки ден от годината!
+  hoc_how_to_step_02_educators_desc_01: Разгледайте дейности въз основа на възрастта,
+    опита, интересите и др. Популярно е учениците да изпробват саморъководени уроци,
+    въпреки че много дейности включват планове за уроци за учителите, които да ръководят
+    дискусията или да разширят дейността.
+  hoc_how_to_step_02_educators_desc_02: Решете предварително дали искате да изберете
+    един урок за всичките си ученици или оставете всяко дете да избере свой собствен.
+  hoc_how_to_step_02_educators_desc_03: Тази година вие и вашите ученици можете да
+    [научите всичко за AI] (%ai_url) чрез уроци, планове за уроци и нашата нова видео
+    серия Как работи AI.
+  hoc_how_to_step_03_educators_desc_01: Изпробвайте урока сами, преди да влезете в
+    класната стая, за да можете да отговорите на въпроси!
+  hoc_how_to_step_03_educators_desc_02: Можете също така да тествате уроци на ученически
+    компютри или устройства, за да сте сигурни, че поддържат звук и видео. Имате ниска
+    честотна лента? Планирайте да показвате видеоклипове в предната част на класа,
+    така че всеки ученик да не изтегля собствени видеоклипове.
+  hoc_how_to_step_03_educators_desc_03: Помислете за предоставянето на слушалки за
+    вашия клас или помолете учениците да донесат свои собствени, ако избраният от
+    вас урок работи най-добре със звука.
+  hoc_how_to_step_04_educators_desc_01: Когато регистрирате събитието „Час на кода“,
+    ще получавате полезни имейли с новини и съвети за провеждане на успешен Час на
+    код. Това е и начинът, по който можете да уведомите местните доброволци, че вашето
+    училище участва. Доброволците са чудесен ресурс и могат да дойдат да говорят с
+    вашия клас за компютърни науки или да помогнат на учениците си с дейности по Час
+    на код.
+  hoc_how_to_step_05_educators_desc_01: Развълнувайте учениците си за събитието, като
+    споделите [вдъхновяващи видеоклипове] (%{videos_url}), подчертавайки разнообразни
+    хора и творчески начини, по които компютърните науки могат да се използват в реалния
+    свят.
+  hoc_how_to_step_05_educators_desc_02: Споделете плановете си за час на код с други
+    учители, които може да искат да се присъединят към забавлението! Това също е чудесна
+    възможност да се свържете с асоциацията на учителите на родителите на вашето училище
+    или да споделите в бюлетини за родители, като ги уведомите какво учат децата им.
+  hoc_how_to_step_06_educators_desc_01: Насочете учениците си към дейността, може
+    би чрез споделяне на връзката на дъската или чрез системата за управление на обучението
+    на вашата класна стая. Вашите ученици могат да срещнат предизвикателства - това
+    е добре! Да се научиш да програмираш е като изучаването на нов език; няма да говориш
+    свободно веднага. Ако не знаете отговора, можете да го разберете заедно.
+  hoc_how_to_step_07_educators_desc_01: 'Не забравяйте да празнувате успеха! Споделяйте
+    снимки и видеоклипове от вашето събитие „Час на код“ в социалните медии. Използвайте
+    #HourOfCode и @codeorg, за да можем да подчертаем и вашия успех!'
+  hoc_how_to_step_07_educators_desc_02: Можете също така да отпечатате сертификати
+    за вашите ученици, за да покажат постиженията си!
+  hoc_ai_top_desc: Всеки може да научи за изкуствения интелект, независимо дали сте
+    ученик в класната стая или преподавател, който отключва бъдещето на преподаването
+    със и за ИИ.
+  hoc_ai_how_ai_works_video_series_desc: Тази поредица от кратки видеоклипове ще ви
+    запознае с това как работи изкуственият интелект и защо има значение. След това
+    се задълбочете в въпроси като алгоритмични пристрастия и етиката на вземането
+    на решения при изкуствен интелект.
+  hoc_ai_learn_how_ai_works_desc: Потопете се в света на изкуствения интелект с уроци
+    „Как работи AI“, съчетани с нашата видео поредица, която ви запознава с начина,
+    по който AI работи и защо той има значение.
+  hoc_ai_101_for_educators_desc: Открийте новаторския свят на изкуствения интелект
+    (AI) и неговия трансформиращ потенциал в образованието с нашата основополагаща
+    серия за онлайн обучение за учители.
+  hoc_ai_impacts_desc: Ангажирайте класната си стая с уроци, водени от учители, които
+    изследват въздействието на изкуствения интелект и канят обучаемите да измислят
+    решения на някои от проблемите на изкуствения интелект.
+  hoc_ai_activities_desc: Тези изцяло нови дейности „Час на кода“ запознават потребителите
+    със света на изкуствения интелект по забавен и ангажиращ начин.
   team_page_full_team_alt_text: Близо 100 служители на Code.org в съвпадащи сини и
     жълти тениски позират в хотелска конферентна зала за събитието на компанията през
     лятото на 2022 Codechella.
@@ -13983,6 +14288,10 @@ bg:
   video_library_page_inspirational_video_title_11: Всеки може да се научи (1 мин.)
   video_library_page_inspirational_video_title_12: Ло Ке Фалта Ен Нуестрас Ескуела
     (2 мин)
+  video_library_page_inspirational_video_title_13: НАСА празнува Часа на кода (2 мин)
+  video_library_page_inspirational_video_title_14: Това е повече от игра (1 мин)
+  video_library_page_inspirational_video_title_15: Създаване с компютърни науки (1
+    мин)
   video_library_page_not_hacked_video_title_1: 'Как да не се хакнат: Въведение'
   video_library_page_not_hacked_video_title_2: 'Как да не се хакнат: Пароли'
   video_library_page_not_hacked_video_title_3: 'Как да не се хакнат: Удостоверяване
@@ -13994,6 +14303,297 @@ bg:
     и изтегляния'
   video_library_page_not_hacked_video_title_7: 'Как да не получите хакнат: Инсталирайте
     актуализации'
+  thank_you_page_main_title: Благодаря ви, че помогнахте за изграждането на движение
+  thank_you_page_description: Коалицията за застъпничество Code.org желае да благодари
+    на стотици хиляди местни шампиони и адвокати, включително учители, членове на
+    общността, изследователи, организации с нестопанска цел, университети, корпорации
+    и държавни институции, които подкрепиха визията, че всеки ученик във всяко училище
+    заслужава възможността да научи компютърни науки. Благодаря ви за подкрепата на
+    това движение.
+  thank_you_page_members_section_title: 'И към всички членове на коалицията за застъпничество
+    Code.org:'
+  thank_you_page_individual_organization_title: 'Благодарим на следните лица и организации
+    за техния принос към този доклад:'
+  thank_you_page_individual_organization_description: Надзорници по компютърни науки
+    във всяка държавна образователна агенция, Колежен съвет, Дела Кронин, Стюарт Декслър,
+    Катрин Мейсис, Антъни Оуен, Шон Робъртс, Кайл Троян, Пат Йонгпрадит
+  thank_you_page_teachers_students_title: 'Благодаря на учениците и учителите, цитирани
+    в този доклад:'
+  thank_you_page_teachers_students_description: Тес Кампион, Уила Кампион, Джейми
+    Делерме, Синди Нориега, Тара Водопич
+  about_us_page_title: За нас
+  about_us_page_hero_description: Code.org® е образователна иновационна организация
+    с нестопанска цел, посветена на визията, че всеки ученик във всяко училище има
+    възможност да научи компютърни науки като част от основното си образование K-12.
+    Ние разширяваме достъпа до компютърни науки в училищата, с акцент върху увеличаването
+    на участието на млади жени и ученици от други недостатъчно представени групи.
+    Водещият доставчик на учебна програма по компютърни науки К-12 в най-големите
+    училищни райони в САЩ, Code.org организира и ежегодната кампания [Час на кода]
+    (%{hour_url}), в която са ангажирани повече от 15% от всички ученици в света.
+    Code.org се поддържа от щедри донори, включително Microsoft, Amazon, Google и
+    [много други.] ()%{others_url}
+  about_us_page_section_title_1: Над 80 милиона ученици и 2 милиона учители в Code.org
+  about_us_page_statistic_figcaption: Участие на Code.org от учебната 2021-2022 година.
+    [Вижте дезагрегирани данни.] ()%{data_url}
+  about_us_page_statistic_description: Code.org увеличава разнообразието в компютърните
+    науки, като достига до ученици от всички среди, където се намират — на ниво умения,
+    в техните училища и по начини, които ги вдъхновяват да продължат да учат. По-голямата
+    част от студентите на Code.org са от студентски групи, исторически недостатъчно
+    представени в компютърните науки. Увеличаването на разнообразието в компютърните
+    науки е основополагащо за нашата работа и [насърчаваме ви да прочетете повече
+    за нашите усилия] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org в новините
+  about_us_page_section_news_description: Вижте всички минали [новини и съобщения]
+    (%{news_url})
+  about_us_page_section_table: Нашите цели и показатели
+  about_us_page_section_table_header_1: Цел на Code.org
+  about_us_page_section_table_header_2: Постижение
+  abous_page_section_table_cell_1_1: Подобряване на разнообразието в CS * (студенти
+    от САЩ) *
+  abous_page_section_table_cell_1_2: 45% от учениците на Code.org са млади жени, 50%
+    са ученици от маргинализирани расови и етнически групи, а 46% от учениците в САЩ
+    са в училища с високи нужди. Прочетете повече за [нашия подход към многообразието.%{diversity_url}]
+  about_page_section_table_cell_2_1: Вдъхновете учениците
+  about_page_section_table_cell_2_2: Десетки милиони са опитали [Часът на кодекса]
+    (%{hour_url}). (426 370,561 обслужени. 49% жени)
+  about_page_section_table_cell_3_1: Достигнете класни стаи
+  about_page_section_table_cell_3_2: 591 636 учители са се регистрирали, за да преподават
+    нашите интро курсове на [Code Studio] (%{code_studio_url}) и 19 177.297 ученици
+    са записани.
+  about_page_section_table_cell_4_1: Подгответе нови CS учители
+  about_page_section_table_cell_4_2: Подготвили сме повече от 106 000 нови учители,
+    които да преподават CS в клас K-12. Научете повече за нашите [програми за професионално
+    обучение.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Промяна на училищната област учебна програма
+  about_page_section_table_cell_5_2: Ние си партнирахме с [180+ от най-големите училищни
+    райони] (%{schoold_disctrict_url}) и 60 регионални партньори за [добавяне на CS
+    към учебната програма] (%{cs_curriculum_url}). [Научете как да станете регионален
+    партньор.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Настройване на политики за поддръжка на CS
+  about_page_section_table_cell_6_2: "[Политиките са променени в 50 щата в САЩ] (%{states_url})
+    за установяване на стандарти за образование на CS, да се накарат курсовете на
+    CS да се отчитат за завършване на гимназията и т.н. [(подробности)] (%{details_url})"
+  about_page_section_table_cell_7_1: Отидете глобално
+  about_page_section_table_cell_7_2: Нашите курсове са достъпни на над 67 езика, използвани
+    в над 180 държави.
+  about_page_section_table_under_label: 'Източник: Code Studio Activity и [проучвания
+    на участващите преподаватели] (%{educators_url})'
+  about_page_section_title_3: Повече информация, история и философия
+  about_page_section_more_description_1: 'През 2013 г. Code.org е стартиран от братя
+    близнаци [Hadi](%{hadi_url}) и [Али Партови] (%{partovi_url}) с () популяризиране
+    на компютър [video]ните%{video_url}науки. Това видео стана #1 в YouTube за един
+    ден и 15 000 училища се обърнаха към нас за помощ. Оттогава се разширихме от стартиран
+    персонал от доброволци, за да изградим цялостна организация, подкрепяща световно
+    движение. Вярваме, че качественото образование по компютърни науки трябва да бъде
+    достъпно за всяко дете, а не само за малцина късметлии.'
+  about_page_section_more_description_2: 'За да подкрепим нашата цел, ние работим
+    в целия образователен спектър: проектиране на собствени курсове или партньорство
+    с други, обучение на учители, партньорство с големи училищни райони, подпомагане
+    на промяна на правителствените политики, разширяване в международен план чрез
+    партньорства и маркетинг за разбиване на стереотипите.'
+  about_page_section_more_description_3: Нашата работа се основава на [десетилетия
+    усилия, от безброй организации и лица] (%{efforts_url}), които са помогнали за
+    създаването, финансирането и разпространението на образованието по компютърни
+    науки. Благодарни сме, че се възползваме от неуморната помощ на по-широката образователна
+    общност по компютърни науки и [благодарим на всички партньори и лица, които подкрепиха
+    нашето въздействие през годините] (%{partners_url})).
+  about_page_section_more_list_1: "[Годишен доклад на Code.org 2021] (%{report_url})
+    (Минали доклади: [2020] [2019](%{past_url_1}), (%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Нашите основни ценности и насоки за съобщения]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Нашата учебна програма и педагогическа философия]
+    (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx разговор от нашия основател Хади Партови
+    за това защо компютърните науки са за всички (ВИДЕО)] ()%{tedx_url}"
+  about_page_section_title_4: Обединяващ подход в един разделен свят
+  about_page_section_specific_title_1: Обединяващ подход в един разделен свят
+  about_page_section_specific_title_2: Нашият ангажимент за достъпност
+  about_page_section_specific_title_3: Нашият ангажимент за безплатна учебна програма
+    и технологии с отворен код
+  about_page_section_specific_title_4: Коалиция за застъпничество Code.org
+  about_page_section_specific_title_5: Рамка за компютърни науки K-12
+  about_page_section_specific_title_6: Донори на Code.org
+  about_page_section_specific_title_7: Следвайте ни
+  about_page_section_specific_title_8: Международният обхват на Code.org
+  about_page_section_specific_description_1: Глобалната роля на Code.org в движението
+    за компютърни науки K-12 е възможна само защото използваме обединяващ подход между
+    различни и често разделени заинтересовани страни. Във време на нарастваща поляризация
+    идеята за увеличаване на възможностите за студентите обединява хора от целия политически
+    спектър. Членовете на екипа на Code.org, ученици, учители и поддръжници имат разнообразни
+    и различни гледни точки и всички те са добре дошли в нашата мисия. [Прочетете
+    повече.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org вярва, че компютърните науки
+    са основополагащи за всички студенти и ние сме ангажирани с справедливост, достъп
+    и възможности в нашата организация [values.](%{values_url}) За да постигнем тази
+    цел, ние работим за идентифициране и премахване на бариерите, които пречат на
+    включването и пълното участие на ученици и преподаватели с увреждания. За да научите
+    повече за нашите усилия, вижте нашата [декларация за достъпност.] (%{accessibility_url})
+  about_page_section_specific_description_3: Всички учебни ресурси и уроци, които
+    авторираме, завинаги ще бъдат свободни за използване и открито лицензирани по
+    лиценз [Creative Commons] (%{commons_url}), което позволява на другите да правят
+    производни образователни ресурси за нетърговски цели. Ако се интересувате от лицензиране
+    на нашите материали за търговски цели, [свържете се с нас] (%{contact_us_url}).
+    Нашите курсове са преведени за световна употреба или от говорители на различни
+    езици. Нашата технология е разработена като [проект с отворен код.] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
+    е двупартийна коалиция от корпорации и организации с нестопанска цел, които работят
+    заедно, за да помогнат за установяването на федерални и държавни политики на САЩ
+    за разширяване и поддържане на достъпа до компютърни науки К-12 и за разширяване
+    на участието и разнообразието в областта. Ние обединяваме [републикански и демократични
+    политически лидери] (%{leaders_url}) в обща кауза, подкрепящи разширяването на
+    достъпа до и участието в компютърните науки K-12."
+  about_page_section_specific_description_5: Code.org е член на управителния комитет,
+    който спомогна за създаването на [K-12 Computer Science Framework] (%{framework_url})
+    - ръководство на високо ниво за държави, области и организации, осъществяващи
+    образование по компютърни науки. Рамката спечели подкрепата на стотици учени,
+    преподаватели на K-12, софтуерни компании, организации с нестопанска цел и държави.
+  about_page_section_specific_description_6: Code.org IRS форма 990 за [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}) и [2021](%{irs_url_8}). [Политика за
+    дарения.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Регистрирайте се, за да получавате
+    актуализации на състоянието] (%{sign_up_url}) за напредъка в движението за компютърни
+    науки K-12 и за работата на Code.org. Или следвайте Code.org в социалните медии:"
+  about_page_section_specific_description_8: Над 40% от трафика на нашия уебсайт идва
+    извън Съединените щати и този брой продължава да се покачва. За да разшири глобалния
+    достъп до компютърните науки, нашият екип работи в тясно сътрудничество с [повече
+    от 100 международни партньори] (%{partners_url}), като им помага да популяризират
+    Часа на кодекса, да се застъпват за промяна на политиката и да обучават учители.
+    Ние правим компютърните науки част от международния образователен дискурс, като
+    си партнираме с министерства на образованието от цял свят и работим с международни
+    организации като Организацията за икономическо сътрудничество и развитие и Организацията
+    на обединените нации за образование, наука и култура.
+  about_page_section_donors_description_1: Code.org® е регистрирана публична организация
+    с нестопанска цел 501c3, с подкрепата на широката общественост. Благодарни сме
+    за щедрата подкрепа, която получихме от [лица и организации] (%{individuals_url}),
+    които подкрепят нашата визия.
+  about_page_section_donors_description_2: Постиженията на кодове (по-горе) демонстрират
+    способността ни да използваме тези долари в силни резултати. Но като се има предвид
+    амбицията ни с нестопанска цел, че всяко дете във всяко училище трябва да има
+    достъп до компютърни науки - да стане грамотни граждани в днешния дигитален свят
+    и да тества интересите си за по-нататъшно изследване на CS като кариера - имаме
+    дълъг път да постигнем цел за набиране на средства, която ще подкрепи тази визия.
+  about_page_donors_link_1: Направете дарения
+  about_page_donors_link_2: "[вижте нашия списък с донори] (%{donors_url})"
+  teach_ai_title: Примери от реалния свят. Практически ресурси.
+  teach_ai_description: Инструментът за ръководство за изкуствен интелект за училища
+    е ресурс за политиците, училищните ръководители и персонала, за да разработят
+    първоначални насоки за изкуствения интелект в техните училища.
+  teach_ai_button_label: Преглед на инструментариума
+  middle_high_page_main_title: Обучение за възраст 11 и повече
+  middle_high_page_main_description: Разгледайте света на компютърните науки с ангажиращи
+    видеоклипове, самостоятелни уроци, дейности по програмиране и други!
+  middle_high_page_hero_title: Започнете с Часът на кода
+  middle_high_page_hero_description: Научете основите на компютърните науки с безплатни
+    дейности „Час на кода“, включващи блокове за кодиране с плъзгане и пускане. Има
+    стотици часови опции, от които да избирате!
+  middle_high_page_hourofcode_link: Разгледайте дейностите по Час на кода
+  middle_high_page_modules_title: Модули за програмиране за по-възрастни ученици
+  middle_high_page_modules_description: Адаптирани от нашите курсове CS Discovery
+    и CS Principles, тези кратки, самостоятелни модули за ученици от средните и средните
+    училища са чудесен начин да научите концепции, които обхващат всички езици и инструменти
+    за програмиране.
+  middle_high_page_modules_card_title_1: Въведение в Game Lab
+  middle_high_page_modules_card_title_2: Програмиране на костенурки в App Lab
+  middle_high_page_modules_card_title_3: Програмиране, управлявано от събития в App
+    Lab
+  middle_high_page_modules_card_description_1: Движете се със собственото си темпо
+    в това въведение в нашата среда на Game Lab, докато програмирате анимации, интерактивно
+    изкуство и игри.
+  middle_high_page_modules_card_description_2: Отключете възможността да създавате
+    богати, интерактивни приложения с JavaScript в App Lab!
+  middle_high_page_modules_card_description_3: Продължете със собственото си темпо
+    с това въведение в средата за програмиране App Lab, в която учениците използват
+    JavaScript за създаване на интерактивни приложения.
+  middle_high_page_modules_card_link: Изпробвайте го
+  middle_high_page_make_your_own_title: Създайте свои собствени приложения, игри и
+    уеб страници
+  middle_high_page_make_your_own_description: 'В допълнение към курсовете имаме инструменти
+    за програмиране, които ви позволяват да изследвате креативността си и да направите
+    нещо невероятно. '
+  middle_high_page_make_your_own_card_title_1: Лаборатория за приложения
+  middle_high_page_make_your_own_card_title_2: Лаборатория за игри
+  middle_high_page_make_your_own_card_title_3: Уеб лаборатория
+  middle_high_page_make_your_own_card_descrpition_1: App Lab е среда за програмиране,
+    в която можете да създавате прости приложения. Проектирайте приложение, код в
+    JavaScript с блокове или текст, след което споделете приложението си за секунди.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab е среда за програмиране,
+    в която можете да правите прости анимации и игри с обекти и герои, които взаимодействат
+    помежду си.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab е среда за програмиране,
+    в която можете да създавате прости уеб страници с помощта на HTML и CSS. Проектирайте
+    уеб страниците си и споделете сайта си за секунди.
+  middle_high_page_make_your_own_card_link: Научи повече
+  middle_high_page_additional_resources_title: Допълнителни ресурси
+  middle_high_page_additional_resources_description: Има толкова много начини за по-нататъшно
+    изследване на компютърните науки! Разгледайте нашата видео библиотека или научете
+    повече за вълнуващите кариери в областта на компютърните науки.
+  middle_high_page_video_library_title: Открийте нашата видео библиотека
+  middle_high_page_video_library_description: Научете основите на компютърните науки
+    чрез кратки 5-10 минутни видеоклипове на теми като изкуствен интелект, интернет,
+    как работят компютрите, как да не бъдете хакнати, блокчейн, кариери и други!
+  middle_high_page_video_library_link: Преглед на видео библиотеката
+  middle_high_page_cs_journeys_title: Отидете по-далеч с CS Journeys
+  middle_high_page_cs_journeys_description: Направете следващата стъпка във вашето
+    пътешествие по компютърни науки. Разгледайте кариери, възможности за менторство,
+    онлайн курсове, стипендии, стажове и други!
+  middle_high_page_cs_journeys_link: Разгледайте CS Journeys
+  middle_high_page_cs_title: Компютърни науки в класната стая
+  middle_high_page_cs_description: Тези курсове трябва да се ръководят от учител!
+    Ако искате да ги видите да се преподават във вашето училище, помислете за работа
+    с учител, за да ги доведете във вашия клас.
+  middle_high_page_cs_card_title_1: CS Открития
+  middle_high_page_cs_card_title_2: Принципи на CS
+  middle_high_page_cs_card_title_3: AP Компютърни науки A
+  middle_high_page_cs_card_description_1: Безплатен набор от елементарни учебни програми,
+    които запознават студентите с основополагащите концепции на компютърните науки
+    и ги предизвикват да проучат как изчислителните технологии и технологиите могат
+    да повлияят на света.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Запознайте студентите със софтуерното инженерство
+    и обектно-ориентирания дизайн, докато учат езика за програмиране Java в тази безплатна
+    учебна програма за AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Разгледайте CS Dicoveries
+  middle_high_page_cs_link_2: Разгледайте принципите на CS
+  middle_high_page_cs_link_3: Разгледайте CSA
+  elemeentary_page_main_title: Обучение за възраст от 5 до 11 години
+  elementary_page_main_description: Разгледайте света на компютърните науки с ангажиращи
+    видеоклипове, самостоятелни уроци, дейности по програмиране и други!
+  elementary_page_own_pace_title: Продължете да учите със собственото си темпо
+  elementary_page_own_pace_description: Създавайте рисунки, игри и други в тези две
+    отлични опции, за да могат учениците да започнат самостоятелно да изучават основите
+    на компютърните науки.
+  elementary_page_own_pace_card_title_1: Пред-читателски експресен курс
+  elementary_page_own_pace_card_title_2: Експресен курс
+  elementary_page_own_pace_card_description_1: Научете компютърни науки със собственото
+    си темпо! Научете се да създавате компютърни програми, да развивате умения за
+    решаване на проблеми и да работите през забавни предизвикателства! Направете игри
+    и творчески проекти, които да споделяте с приятели, семейство и учители.
+  elementary_page_own_pace_link_1: Започнете курс преди четене
+  elementary_page_own_pace_link_2: Започнете експресен курс
+  elementary_page_make_your_own_games_title: Направете свои собствени анимации и игри
+  elementary_page_make_your_own_games_card_title_1: Спрайт Лаборатория
+  elementary_page_make_your_own_games_card_description_1: Време е да станете креативни!
+    Използвайте кодиране, базирано на блокове, за да направите нещо глупаво, сладко
+    или външно пространство в Sprite Lab. Единствената граница е вашето въображение!
+  elementary_page_make_your_own_games_link: Опитайте Спрайт Лаборатория
+  elementary_page_computer_science_title: Компютърни науки в класната стая
+  elementary_page_computer_science_description: Тези курсове трябва да се ръководят
+    от учител! Ако искате да ги видите да се преподават във вашето училище, помолете
+    родител или настойник да работи с учител, за да ги доведе във вашия клас.
+  elementary_page_computer_science_card_title_1: Основи на компютърните науки
+  elementary_page_computer_science_card_title_2: Компютърни науки връзки
+  elementary_page_computer_science_description_1: Безплатен набор от елементарни учебни
+    програми, които запознават студентите с основополагащите концепции на компютърните
+    науки и ги предизвикват да проучат как изчислителните технологии и технологиите
+    могат да повлияят на света.
+  elementary_page_computer_science_description_2: Направете връзки между компютърните
+    науки (CS) и други предмети като математика, езикови изкуства, наука и социални
+    изследвания.
   language_code:
     ar: арабски
     az: азербайджански

@@ -674,6 +674,18 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Abella ortogràfica"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Primers passos"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fonaments de la informàtica"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificació"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Propers passos"
+        },
         "csd1-2019/The Problem Solving Process": {
           "name": "El procés de resolució de problemes"
         },
@@ -1105,6 +1117,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Una batalla real amb esdeveniments"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Seqüenciació"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Esdeveniments"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionals"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles \"for\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratori de personatges"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Seguretat al meu barri d'internet"
@@ -2509,6 +2545,18 @@
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   (Opcional) Esculliu un parell de trencaclosques per fer en grup amb tota la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
           "purpose": "En aquesta activitat en línia, els alumnes aprendran a utilitzar esdeveniments al Laboratori de Jocs. Començaran configurant el cavaller perquè es mogui en prémer una tecla de fletxa, i després podran demostrar la resta d'habilitats que han adquirit al llarg d'aquest curs, com l'ús de seqüències i bucles, al trencaclosques de joc lliure que hi ha al final.",
           "student_overview": "Fes servir esdeveniments per crear una història o un joc interactiu."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Primers passos"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fonaments de la informàtica"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificació"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Propers passos"
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "El procés de resolució de problemes"
@@ -4604,9 +4652,6 @@
           "overview": "⚠️ Aquesta lliçó està pensada per a aules que vulguin mostrar tota la sèrie de vídeos [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) en un **sol dia**. No es pretén ensenyar en seqüència amb les altres lliçons d'aquesta unitat, que introdueix cada vídeo un dia a la vegada.\n\nEls estudiants segueixen juntament amb cada vídeo fent coincidir el vocabulari del vídeo, i després respondre a una pregunta de reflexió sobre cada vídeo. El pla de lliçons i les diapositives són molt escasses i obertes per permetre que la improvisació i la personalització s'adaptin a la vostra aula.",
           "preparation": "-   Imprimir la guia d'activitats\n-   Projectar les diapositives en un videoprojector"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hora de codi 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Introducció a App Lab"
         },
@@ -4758,9 +4803,10 @@
           "student_overview": "Primer, els alumnes classificaran objectes com a “peix” o “no peix” per netejar l’oceà de brutícia. Després, hauran d’ampliar el conjunt de dades d’entrenament per incloure-hi altres criatures marines que viuen a l’aigua. A la segona part de l’activitat, triaran les seves pròpies etiquetes per aplicar-les a peixos generats de manera aleatòria. Aquest conjunt de dades d’entrenament serveix  per crear un model d’aprenentatge automàtic que després hauria de ser capaç d’etiquetar imatges noves per si sol."
         },
         "outbreak/Outbreak": {
-          "overview": "Aquesta lliçó combina el **desenvolupament d'habilitats** relacionades amb els esdeveniments i un **miniprojecte** on podran crear la seva pròpia simulació per ordinador al Laboratori d'Sprites. Els alumnes analitzaran la simulació per entendre com de ràpid es pot propagar un virus i què es pot fer per frenar-lo. ",
-          "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
-          "purpose": "En la lliçó anterior, els alumnes van recopilar i interpretar dades a partir d'una simulació senzilla. En aquesta, els alumnes seguiran les instruccions per programar el seu propi model de simulació. Els alumnes aplicaran els seus coneixements previs sobre els brots de virus en el món real a un escenari fictici. ",
+          "name": "Programem una simulació",
+          "overview": "En aquesta lliçó, els alumnes de totes les edats obtenen una experiència introductòria a la codificació i la informàtica en un entorn segur i de suport. Aquesta lliçó combina el **desenvolupament d'habilitats** relacionades amb els esdeveniments i un **miniprojecte** on podran crear la seva pròpia simulació per ordinador al Laboratori d'Sprites. Els alumnes analitzaran la simulació per entendre com de ràpid es pot propagar un virus i què es pot fer per frenar-lo. ",
+          "preparation": "### Una setmana abans de l’Hora del Codi\n\n-   Reviseu la [Guia del professor de l’Hora del Codi](https://hourofcode.com/us/how-to) i les [Millors pràctiques de professors efectius](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) per començar a planificar l’esdeveniment de l’Hora del Codi.\n\n-   [Registreu l’esdeveniment de l’Hora del Codi](https://hourofcode.com/us) si voleu rebre suport per la classe, pòsters amb descomptes o participar en el sorteig de robòtica (només als EUA).\n\n-   Reviseu i completeu el tutorial en línia: [Brots](https://studio.code.org/s/outbreak/) \n\n-   Assegureu-vos de provar-lo abans de demanar als alumnes que el facin.\n\n-   Comproveu els vostres equips i decidiu si us cal resoldre alguna incidència abans de fer l’Hora del Codi.\n\n### Un dia abans de l’Hora del Codi\n\n-   Cada alumne que acabi l’activitat rebrà un [certificat](https://studio.code.org/certificates/batch). Imprimiu-ne un 4 per tots perquè us sigui més fàcil repartir-los al final de l’Hora del Codi.\n\n-   (Opcional) Animeu els alumnes a portar auriculars per fer-los servir durant l’activitat.",
+          "purpose": "En aquesta lliçó, els alumnes seguiran les instruccions per programar el seu propi model de simulació. Els alumnes aplicaran els seus coneixements previs sobre els brots de virus en el món real a un escenari fictici. ",
           "student_overview": "Ha arribat un virus a la Ciutat dels Monstres! Aprèn a crear un simulador de virus i ajuda els monstres a recuperar la salut."
         },
         "playlab/Play Lab": {
@@ -4796,12 +4842,6 @@
         },
         "text-compression/Text Compression": {
           "name": "Compressió de text"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters i Setters"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget comptaquilòmetres"
         },
         "allthethings/Jigsaw": {
           "name": "Puzzle"
@@ -4859,6 +4899,9 @@
         },
         "allthethings/lesson-49": {
           "name": "Música"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters i Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD Estudiant Post-Curs Enquesta ('18-'19)"
@@ -5157,9 +5200,15 @@
         "course4/Super Challenge - Functions and Parameters": {
           "name": "Súper-repte - funcions i paràmetres"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora de codi 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "student_overview": "Fes clic i arrossega per completar els trencaclosques."
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget comptaquilòmetres"
         }
       }
     }

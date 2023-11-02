@@ -437,6 +437,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Stávengilvu"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Álgge"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "DihtorDiehtaga Vuođut"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Geahča Ovddasguvlui"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Hálddašit Vuođđoáššiid: Sekveanssaiguin"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Hálddašit Vuođđoáššiid: Mohkit"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Hálddašit Vuođđoáššiid: Eavttut"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Hálddašit Vuođđoáššiid: Funkšuvnnat"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Hálddašit Vuođđoáššiid: Dáhpáhusat"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Buoremus Práksisat Oahpahit DihtorDiehtaga"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Pláne"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Boahttevaš Lávkkit"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Láidehus ČuolbmaČoavdimii"
         },
@@ -626,6 +659,12 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Stávengilvu"
         },
+        "k5-onlinepd-2019/Events": {
+          "name": "Dáhpáhusaid"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite-lab"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Movttegis Kárttat"
         },
@@ -793,6 +832,39 @@
         },
         "coursef-2021/AI for Oceans": {
           "name": "AI Mearaide"
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Álgge"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "DihtorDiehtaga Vuođut"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Geahča Ovddasguvlui"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Hálddašit Vuođđoáššiid: Sekveanssaiguin"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Hálddašit Vuođđoáššiid: Mohkit"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Hálddašit Vuođđoáššiid: Eavttut"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Hálddašit Vuođđoáššiid: Funkšuvnnat"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Hálddašit Vuođđoáššiid: Dáhpáhusat"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Buoremus Práksisat Oahpahit DihtorDiehtaga"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Pláne"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Boahttevaš Lávkkit"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Láidehus ČuolbmaČoavdimii"
@@ -1028,9 +1100,6 @@
         "coursef-2023/AI For Oceans": {
           "name": "AI Mearaide"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodendiibmu 2013"
-        },
         "artist/Artist": {
           "name": "Dáiddár"
         },
@@ -1055,12 +1124,6 @@
         "oceans/Oceans": {
           "name": "AI Mearaide"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Speallan-lab"
         },
@@ -1069,45 +1132,6 @@
         },
         "text-compression/Text Compression": {
           "name": "TeakstaKomprimeren"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Dáhpáhus Stivrejuvvon Prográmmeren"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Frekveansa Analysa"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Várddus ja Bajásbidjan Instrukšuvnnat"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Oahppis Oahppái - Sáddet Bihtáid juhkkojuvvon Wire mielde"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Oahppis Oahppái - Sáddet Nummariid"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Oahppis Oahppái - Sáddet Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Njuolggosádde dieđuid"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routarat ja čujuhusat"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Páhkat ja Luohttevašvuohta"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS Manuála"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automahtalaš DNS-noda"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Friddjaspeallan Interneahtta Simulator"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Maze": {
           "name": "Labirynta"
@@ -1225,6 +1249,9 @@
         },
         "allthethings/lesson-49": {
           "name": "Musihkka"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Dáhpáhus Stivrejuvvon Prográmmeren"
         },
         "course1/Happy Maps": {
           "name": "Movttegis Kárttat"
@@ -1448,6 +1475,42 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Ekstrema Hástalus - Viiddis"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frekveansa Analysa"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodendiibmu 2013"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Várddus ja Bajásbidjan Instrukšuvnnat"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Oahppis Oahppái - Sáddet Bihtáid juhkkojuvvon Wire mielde"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Oahppis Oahppái - Sáddet Nummariid"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Oahppis Oahppái - Sáddet Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Njuolggosádde dieđuid"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routarat ja čujuhusat"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Páhkat ja Luohttevašvuohta"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manuála"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automahtalaš DNS-noda"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Friddjaspeallan Interneahtta Simulator"
+        },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Čáhppes ja Vilges Neavvagat"
         },
@@ -1462,6 +1525,9 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Ivdne Pikseleren Friddjaspeallan"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

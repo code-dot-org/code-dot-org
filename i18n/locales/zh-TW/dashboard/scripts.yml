@@ -470,7 +470,7 @@ zh-TW:
           description_short: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
           student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         mc:
-          title: 一小時玩 Minecraft
+          title: Minecraft 探險家
           description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
           description_short: 透過程式碼探索 Minecraft 世界。
           student_description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
@@ -8278,3 +8278,170 @@ zh-TW:
           lessons:
             lesson-1:
               name: 我們的 AI 道德守則
+        virtual-pl-csa-summer-2024-day1:
+          title: 第 1 天
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: 介紹
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 2 天
+        virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: 非同步第 1 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 3 天
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 4 天
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: 閉幕式
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-2:
+              name: 非同步第 1 部分
+            lesson-3:
+              name: 同步部分 2
+            lesson-4:
+              name: 非同步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 2 天
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: 介紹
+            lesson-2:
+              name: 非同步第 1 部分
+            lesson-4:
+              name: 非同步第 2 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 3 天
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-2:
+              name: 非同步第 1 部分
+            lesson-4:
+              name: 非同步第 2 部分
+            lesson-5:
+              name: 工坊揭幕戰
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 4 天
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: 工坊揭幕戰
+            lesson-2:
+              name: 非同步第 1 部分
+            lesson-3:
+              name: 同步部分 2
+            lesson-4:
+              name: 非同步第 2 部分
+            lesson-13:
+              name: 閉幕式
+            lesson-16:
+              name: 閉幕式
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: '第五天 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-2:
+              name: 非同步第 1 部分
+            lesson-3:
+              name: 同步部分 2
+            lesson-4:
+              name: 非同步第 2 部分
+            lesson-7:
+              name: 介紹
+            lesson-8:
+              name: 工坊揭幕戰
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+            lessonGroup-7:
+              display_name: 介紹
+          title: 第 1 天
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 同步部分 2
+            lessonGroup-4:
+              display_name: 非同步第 1 部分
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          title: 第 1 天
+        self-paced-pl-csd-unit1-2-2023:
+          title: 模組1：準備問題解決和計算教學
+          description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"

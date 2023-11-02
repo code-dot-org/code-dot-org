@@ -922,6 +922,15 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
+
         resources :ml_models, only: [:show, :destroy] do
           collection do
             get 'names'
@@ -1044,11 +1053,14 @@ Dashboard::Application.routes.draw do
     resources :rubrics, only: [:create, :edit, :new, :update] do
       member do
         get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        post 'run_ai_evaluations_for_user'
         post 'submit_evaluations'
       end
     end
 
-    resources :learning_goal_evaluations, only: [:create, :update] do
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation

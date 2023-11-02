@@ -143,7 +143,7 @@ uz:
           description_short: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada o‘z Star Wars o‘yiningizni yarating.
           student_description: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada o‘z Star Wars o‘yiningizni yarating.
         mc:
-          title: Maynkraft Dasturlash soati
+          title: Minecraft Sarguzashtchi
           description: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning.
           description_short: Minecraft dunyosini kod orqali o'rganing.
           student_description: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning.
@@ -4406,3 +4406,33 @@ uz:
           title: Modul 7
         vpl-csd-2023-m8:
           title: Modul 8
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-kun
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kirish
+          title: 2-kun
+        virtual-pl-csp-summer-day3:
+          title: 3-kun
+        virtual-pl-csp-summer-day4:
+          title: 4-kun
+        virtual-pl-csa-summer-day2:
+          title: 2-kun
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kirish
+          title: 3-kun
+        virtual-pl-csa-summer-day4:
+          title: 4-kun
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kirish
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kirish
+          title: 1-kun
+        virtual-pl-csp-summer-day1:
+          title: 1-kun

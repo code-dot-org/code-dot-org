@@ -35,17 +35,17 @@ title: الدليل الإرشادي الخاص بنشاطات "ساعة من ا
 
 * * *
 
-## Example plan for a school assembly or event
+## مثال لخطة تجمع أو حدث مدرسي
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**حدث:** انطلاق أسبوع تعليم علوم الكمبيوتر على مستوى المدرسة
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**التاريخ:** {{ campaign_date/start_short }} (بداية أسبوع تعليم علوم الكمبيوتر)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**التوقيت:** خلال اليوم الدراسي. يفضل أن يكون الحدث في منتصف الصباح. حوالي ساعة.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**الموقع:** قاعة التجمع بالمدرسة (مثل المسرح وصالة الألعاب الرياضية والكافتيريا)
 
-## Run of Show
+## بدء العرض
 
 | التوقيت              | الإجراءات                                                                                                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |

@@ -834,7 +834,7 @@
           "description": "Identifikojnë kur një loop mund të përdoret për të thjeshtuar një veprim të përsëritur."
         },
         "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": "Përdorin një kombinim të komandave sekuenciale dhe të loops për të lëvizur dhe kryer veprime."
+          "description": "Përdorni një kombinim të komandave sekuenciale dhe të loops për të lëvizur dhe kryer veprime."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Identifikojnë përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
@@ -867,13 +867,13 @@
           "description": "Identifikojnë veprimet që lidhen me eventet hyrëse."
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
-          "description": "Mbledhin dhe regjistrojnë të dhëna rreth sasisë së objekteve reale ose karaktereve në një ekran"
+          "description": "Mbledhin dhe regjistroni të dhëna rreth sasisë së objekteve reale ose karaktereve në një ekran"
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Krijojnë një grafik me shtylla dhe grafik rrethorë për të përfaqësuar të dhëna të thjeshta."
+          "description": "Krijoni një grafik me shtylla dhe grafik rrethorë për të përfaqësuar të dhëna të thjeshta."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Bëjnë krahasime midis vizualizimeve të të dhënave të bëra nga të tjerët dhe përdorin ato për të bërë një parashikim."
+          "description": "Bëni krahasime midis vizualizimeve të të dhënave të bëra nga të tjerët dhe përdorin ato për të bërë një parashikim."
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "Kodojnë shkronjat në formë binare."
@@ -1543,12 +1543,6 @@
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
-        },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": ""
         },
         "0476cbe2-4b38-4943-8a29-10e8f9307666": {
           "description": " Komunikojnë dhe bashkëpunojnë me shokët e klasës për të zgjidhur një problem "
@@ -4209,7 +4203,7 @@
           "description": "Shkruajnë një program për një detyrë të caktuar i cili lëshon një komandë të vetme."
         },
         "fb49b7eb-67bc-4cad-a644-710007c9a805": {
-          "description": "Përdorin një kombinim të komandave sekuenciale dhe të loops për të lëvizur dhe kryer veprime."
+          "description": "Përdorni një kombinim të komandave sekuenciale dhe të loops për të lëvizur dhe kryer veprime."
         },
         "066a899e-a5f0-403e-9269-977d85c2147b": {
           "description": "Dallojnë komandat që duhet të përsëriten në loops dhe komandat që duhet të përdoren vetë."
@@ -4242,13 +4236,13 @@
           "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "45c7489d-b2b5-4773-8ca4-706ebfb4b7c1": {
-          "description": "Bëjnë krahasime midis vizualizimeve të të dhënave të bëra nga të tjerët dhe përdorin ato për të bërë një parashikim."
+          "description": "Bëni krahasime midis vizualizimeve të të dhënave të bëra nga të tjerët dhe përdorin ato për të bërë një parashikim."
         },
         "d3ff4345-57a2-4fb6-b60b-90f9d259894d": {
-          "description": "Mbledhin dhe regjistrojnë të dhëna rreth sasisë së objekteve reale ose karaktereve në një ekran"
+          "description": "Mbledhin dhe regjistroni të dhëna rreth sasisë së objekteve reale ose karaktereve në një ekran"
         },
         "eb342a3b-6b44-4788-94b5-370406763c79": {
-          "description": "Krijojnë një grafik me shtylla dhe grafik rrethorë për të përfaqësuar të dhëna të thjeshta."
+          "description": "Krijoni një grafik me shtylla dhe grafik rrethorë për të përfaqësuar të dhëna të thjeshta."
         },
         "3623af29-f5f4-4abb-b6c1-9971c501707c": {
           "description": "Lidhin idenë e ruajtjes së shkronjave në letër me idenë e ruajtjes së informacionit në një kompjuter."
@@ -5167,15 +5161,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Përdor terminologjinë e duhur kur i referoheni një mouse kompjuteri, trackpad ose ekrani me prekje (touchscreen)."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Zhvillojnë programe që u përgjigjen eventeve në kohë."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": ""
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": ""
         }
       }
     }

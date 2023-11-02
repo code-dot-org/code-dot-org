@@ -2292,6 +2292,8 @@ nn:
           description: Gå vidare etter den første timen med større prosjektidear.
           student_description: Gå vidare etter den første timen med større prosjektidear.
           title: Dans vidare
+        dance-unplugged:
+          title: Dansefest utan datamaskin
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -2765,7 +2767,7 @@ nn:
           description_short: Utforsk ei Minecraft-verd gjennom kode
           student_description: Bruk kodeblokker for å ta Steve eller Alex med på eit
             eventyr gjennom denne Minecraft-verda
-          title: Kodetimen med Minecraft
+          title: Minecraft-eventyrar
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3090,9 +3092,24 @@ nn:
               display_name: Innhald
             csd3_2:
               display_name: 'Kapittel 2: Bygge spel'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon
+          lessons:
+            lesson-7:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduksjon
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduksjon
         web-development-2023:
           lesson_groups:

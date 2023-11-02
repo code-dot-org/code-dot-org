@@ -23,13 +23,9 @@ module Policies
     test 'can find an existing level file from a variety of directories' do
       level = create(:level)
       level_files = [
-        # Check in the old default location
-        'config/scripts/levels',
-        # Check in the new default location
+        # Check in the default location
         'config/levels/custom',
         # Also check nested and deeply-nested subdirectories
-        'config/scripts/levels/foo',
-        'config/scripts/levels/foo/bar/baz',
         'config/levels/custom/foo',
         'config/levels/custom/foo/bar/baz',
       ].map {|dir| Rails.root.join(dir, "#{level.name}.level")}
@@ -48,8 +44,8 @@ module Policies
     test 'will raise if multiple .level files found with the same name' do
       level = create(:level)
       level_files = [
-        'config/scripts/levels',
-        'config/levels/custom',
+        'config/levels/custom/foo',
+        'config/levels/custom/bar',
       ].map {|dir| Rails.root.join(dir, "#{level.name}.level").to_s}
       level_files.each do |level_file|
         FileUtils.mkdir_p(File.dirname(level_file))

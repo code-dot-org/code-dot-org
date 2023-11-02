@@ -1433,6 +1433,9 @@
           "name": "Funkcijas ar parametriem",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funkcijas"
+        },
         "the_counter_pattern_2/csd/2023": {
           "type": "Video"
         },
@@ -1815,11 +1818,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

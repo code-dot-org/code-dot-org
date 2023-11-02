@@ -16,7 +16,7 @@ cd apps
 
 # Machine setup (macOS with Homebrew)
 brew install node
-npm install -g yarn@1.22.5
+corepack enable
 
 # Perform first full build
 yarn

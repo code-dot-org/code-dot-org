@@ -323,14 +323,6 @@
         "debugging/minecraft/unversioned": {
           "word": "Odpravljanje napak"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Odpravljanje napak"
         },
@@ -348,26 +340,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Odpravljanje napak"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Koda",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         }
       }
     }

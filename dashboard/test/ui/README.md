@@ -95,7 +95,7 @@ Run one feature in one saucelabs browser against your local machine with html ou
 
 `./runner.rb -l -f features/big_game_remix.feature -c Chrome --html`
 
-Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect and api_key for eyes testing described in See Also below)
 
 `./runner.rb -l -f features/angle_helper.feature -c Chrome --html --eyes`
 

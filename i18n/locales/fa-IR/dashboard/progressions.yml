@@ -5,11 +5,11 @@ fa:
       8-Bit Binary Number Widget: ویجت 8 بیتی عدد دودویی
       AI Lab and Isaac's Data: آزمایشگاه هوش مصنوعی و داده های Isaac
       AI Lab and Kim's Data: آزمایشگاه هوش مصنوعی و داده های Kim
-      AI Machine Learning - Video: یادگیری ماشینی هوش مصنوعی - فیلم
+      AI Machine Learning - Video: یادگیری ماشینی هوش مصنوعی - ویدئو
       'AI for Oceans: Fish vs Not Fish': 'هوش مصنوعی برای Oceans: با ماهی و بدون ماهی'
       'AI for Oceans: Types of Fish': 'هوش مصنوعی برای Oceans: انواع ماهی'
-      'AI: Impact on Society - Video': 'هوش مصنوعی: اثر بر جامعه - فیلم'
-      'AI: Training Data & Bias - Video': 'هوش مصنوعی: داده های آموزشی و سوگیری - فیلم'
+      'AI: Impact on Society - Video': 'هوش مصنوعی: تاثیر بر جامعه - ویدئو'
+      'AI: Training Data & Bias - Video': 'هوش مصنوعی: داده‌های آموزشی و بایاس - ویدئو'
       Accelerometer Events: رویدادهای شتاب سنج
       Add Content and HTML: افزودن محتوا و زبان نشانه گذاری فوق متن (HTML)
       Add Content and Structure to Your Page: افزودن محتوا و ساختار به صفحه خود
@@ -91,7 +91,7 @@ fa:
       Code Prediction: پیشبینی کد
       Code Your Own Flappy Game: کدنویسی بازی فلاپی خود
       Code Your Page: کدنویسی صفحه خود
-      Collector Game: بازی گردآورنده
+      Collector Game: بازی جمع‌کننده
       Collision Detection: تشخیص تصادم
       Collisions: تلاقی ها
       Collisions in Games: تلاقی ها در بازی
@@ -122,7 +122,7 @@ fa:
       Dance Crews: گروه رقص
       Data Visualization: به تصویر در آوردن داده ها
       De-bugging with the Step Button: اشکال زدایی با دکمه Step
-      Debugging: رفع اشکال
+      Debugging: رفع باگ
       Debugging with the Step Button: اشکال زدایی با دکمه Step
       'Demo App: Interactive Card': 'نمونه نمایشی برنامه: کارت تعاملی'
       Demo Apps: نمونه نمایشی برنامه ها
@@ -254,7 +254,7 @@ fa:
       Measures: اندازه‌ها
       Medical Dataset Model Cards: نمونه کارتهای مجموعه داده های پزشکی
       Medical Priority App: برنامه اولویت پزشکی
-      'Minecraft: Hero''s Journey': 'ماینکرافت: سفر قهرمانان'
+      'Minecraft: Hero''s Journey': 'ماین‌کرفت: سفر قهرمانان'
       'Mini-Project: About Me': 'پروژه کوچک: درباره من'
       'Mini-Project: Alien Dance Moves': 'پروژه کوچک: حرکتهای Alien Dance'
       'Mini-Project: Alien Dance Party': 'پروژه کوچک: Alien Dance Party'
@@ -399,7 +399,7 @@ fa:
       Styling with Classes: سبک دادن با کلاسها
       Styling your Website: سبک دادن به وبسایت خود
       Teach A.I. a new word: آموختن یک واژه جدید به هوش مصنوعی
-      Teach AI a New Word: آموختن واژه جدید به هوش مصنوعی
+      Teach AI a New Word: آموزش واژه جدید به هوش مصنوعی
       'Technique: Frequency Analysis': 'تکنیک: تحلیل بسامد'
       Terminology Recap: ضبط اصطلاحات
       Text Compression: فشرده‌سازی متن
@@ -415,7 +415,7 @@ fa:
       Top Websites: برترین وبسایتها
       Train AI to Clean the Ocean: به هوش مصنوعی یاد بدهید که اقیانوس را تمیز کند
       Train a Model in AI Lab: آموزش به یک نمونه در آزمایشگاه هوش مصنوعی
-      Train an AI to Clean the Ocean: آموزش پاک کردن Ocean به یک هوش مصنوعی
+      Train an AI to Clean the Ocean: به یک هوش مصنوعی آموزش دهید که اقیانوس را تمیز کند
       UI Element Properties: ویژگیهای اجزای UI
       Ultimate Shoe Recommender: نسخه نهایی پیشنهاد کفش
       Unit 5 Lesson 1 Overview: نمای کلی درس 1 واحد 5
@@ -462,7 +462,7 @@ fa:
       'Video: De-bugging with the Step Button': 'ویدئو: رفع باگ با دکمه استپ (Step)'
       'Video: Debugging': 'فیلم: اشکال زدایی'
       'Video: Debugging with Scrat ': 'فیلم: اشکال زدایی با Scrat '
-      'Video: Debugging with the Step Button': 'ویدئو: اشکال زدایی با دکمه استپ (Step)'
+      'Video: Debugging with the Step Button': 'ویدئو: رفع باگ با دکمه استپ'
       'Video: Events': 'فیلم: رویدادها'
       'Video: Events in App Lab': 'فیلم: رویدادها در App Lab'
       'Video: Follow The Digital Trail': 'فیلم: پیروی از رد دیجیتال'
@@ -486,11 +486,11 @@ fa:
       'Video: Introducing Sprite Lab': 'ویدئو: معرفی لابراتوار اسپرایت'
       'Video: Introduction to Play Lab': 'ویدئو: معرفی لابراتوار بازی'
       'Video: Introduction to Variables': 'فیلم: معرفی و متغیرها'
-      'Video: Loops in Artist': 'ویدئو: حلقه ها در هنرمند'
+      'Video: Loops in Artist': 'ویدئو: حلقه‌ها در هنرمند'
       'Video: Loops with the Artist': 'ویدئو: حلقه ها با هنرمند'
       'Video: Lots of Sprites': 'فیلم: اسپرایت‌های بسیار'
       'Video: Managing Disagreement': 'فیلم: اختلاف مدیریت'
-      'Video: Maze Intro - Programming with Blocks': 'فیلم: معرفی Maze: برنامه نویسی با بلوک'
+      'Video: Maze Intro - Programming with Blocks': 'ویدئو: معرفی ماز: برنامه نویسی با بلوک'
       'Video: Maze Intro - Programming with Blocks ': 'ویدئو: معرفی ماز: برنامه نویسی با بلوک '
       'Video: Maze Intro: Programming with Blocks': 'ویدئو: معرفی ماز: برنامه نویسی با بلوک‌ها'
       'Video: Measures': 'فیلم: سنجه های'
@@ -511,8 +511,8 @@ fa:
       'Video: Outbreak Simulator: Thinking Like a Scientist': 'فیلم: شبیه ساز شیوع: مثل دانشمندان اندیشیدن'
       'Video: Pair Programming': 'فیلم: برنامه نویسی دونفره'
       'Video: Pair Programming ': 'فیلم: برنامه نویسی دونفره'
-      'Video: Programming with Blocks': 'فیلم: برنامه نویسی با بلوک'
-      'Video: Programming with Rey and BB-8': 'فیلم: برنامه نویسی با Rey و BB-8'
+      'Video: Programming with Blocks': 'ویدئو: برنامه نویسی با بلوک'
+      'Video: Programming with Rey and BB-8': 'فیلم: برنامه نویسی با رِی و بی‌بی-8'
       'Video: Properties': 'ویدئو: ویژگی‌ها'
       'Video: Publishing Your Website': 'فیلم: انتشار وبسایت خود'
       'Video: Repeat Blocks': 'فیلم: بلوک های تکرار شونده'
@@ -526,8 +526,8 @@ fa:
       'Video: Text and Prompts': 'ویدئو: متن و دستورها'
       'Video: The Artist in Code Studio': 'ویدئو: هنرمند در استودیوی کدنویسی'
       'Video: The Big Event - Unplugged Activity': 'فیلم: رویداد بزرگ - فعالیت بدون کار با رایانه'
-      'Video: The Collector': 'فیلم: گردآورنده'
-      'Video: The Harvester': 'فیلم: هاروستر'
+      'Video: The Collector': 'ویدئو: گردآورنده'
+      'Video: The Harvester': 'ویدئو: دروگر'
       'Video: Training Data & Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Training Data and Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Unplugged Variables in Envelopes': 'ویدئو: متغیرهای بدون اتصال در پاکت'

@@ -35,11 +35,7 @@
   },
   "https://studio.code.org/s/applab-2hour/lessons/1/levels/10": {
     "short_instructions": "Fix the layout of the bullseye game. (Click to see full instructions)",
-    "long_instructions": "# Layering and Deleting\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\" style=\"width: 200px; float: right\">User interface elements can overlap one another, so you'll want the ability to change the order or **depth** at which each one is rendered. \n\nIf you **scroll to the bottom of the Properties tab** you'll find buttons which allow you to easily **delete or change the depth** of an element.\n\n-   **Delete an Element** by selecting it (clicking on it) in the design view and then clicking **Delete** in the properties tab.\n-   **Change the depth** of elements by using the double or single arrows.\n    -   Click the double arrow to send all the way to front or back.\n    -   Click the single arrow to move up or down one layer.\n\n# Do This:\n\nUse the **delete** and **depth** tools to **create the \"After\" image**\n\n<table>\n<tr>\n\t<th style=\"text-align:center\">Before</th>\n    <th style=\"text-align:center\">After</th>\n</tr>\n<tr>\n\t<td align=center><img src=\"https://images.code.org/023f749ecb58c91869a4eacab6701203-image-1444685187662.png\" style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\" style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>",
-    "start_html": {
-      "LET'S PLAY BULLSEYE": "LET'S PLAY BULLSEYE",
-      "Click the Bullseye!": "Click the Bullseye!"
-    }
+    "long_instructions": "# Layering and Deleting\n\n<img src=\"https://images.code.org/9e620f70869de438c4f0c66663686876-image-1444678130772.gif\" style=\"width: 200px; float: right\">User interface elements can overlap one another, so you'll want the ability to change the order or **depth** at which each one is rendered. \n\nIf you **scroll to the bottom of the Properties tab** you'll find buttons which allow you to easily **delete or change the depth** of an element.\n\n-   **Delete an Element** by selecting it (clicking on it) in the design view and then clicking **Delete** in the properties tab.\n-   **Change the depth** of elements by using the double or single arrows.\n    -   Click the double arrow to send all the way to front or back.\n    -   Click the single arrow to move up or down one layer.\n\n# Do This:\n\nUse the **delete** and **depth** tools to **create the \"After\" image**\n\n<table>\n<tr>\n\t<th style=\"text-align:center\">Before</th>\n    <th style=\"text-align:center\">After</th>\n</tr>\n<tr>\n\t<td align=center><img src=\"https://images.code.org/023f749ecb58c91869a4eacab6701203-image-1444685187662.png\" style=\"width:200px ; border: solid 1px black\"></td>\n    <td style=\"text-align:center\"><img src=\"https://images.code.org/e45fc7d451c071683fd3b59466b106b0-image-1444684677212.png\" style=\"width:200px; border: solid 1px black\"></td>\n</tr>\n</table>"
   },
   "https://studio.code.org/s/applab-2hour/lessons/2/levels/1": {
     "dsls": {
@@ -59,12 +55,7 @@
   },
   "https://studio.code.org/s/applab-2hour/lessons/2/levels/4": {
     "short_instructions": "Update the ID names and `console.log` messages to match the correct button. (Click to see full instructions.)",
-    "long_instructions": "# Updating IDs and Debugging with Console Log\n\nHere we have a couple buttons with event handlers and `console.log` statements, but they are all switched around!\n\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log` messages to match the correct button?**\n\n# Do This\n\n-   **Change the IDs** of the buttons in Design Mode to more descriptive names.\n\n-   Switch to Code Mode and notice that the **ID pulldowns have been updated to include the new IDs**. (You still need to select the correct ID from the pulldown menu.)\n\n-   **Update the `console.log` messages** to match the buttons.",
-    "start_html": {
-      "Red Button!": "Red Button!",
-      "Click me!": "Click me!",
-      "I'm a button!": "I'm a button!"
-    }
+    "long_instructions": "# Updating IDs and Debugging with Console Log\n\nHere we have a couple buttons with event handlers and `console.log` statements, but they are all switched around!\n\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log` messages to match the correct button?**\n\n# Do This\n\n-   **Change the IDs** of the buttons in Design Mode to more descriptive names.\n\n-   Switch to Code Mode and notice that the **ID pulldowns have been updated to include the new IDs**. (You still need to select the correct ID from the pulldown menu.)\n\n-   **Update the `console.log` messages** to match the buttons."
   },
   "https://studio.code.org/s/applab-2hour/lessons/2/levels/5": {
     "dsls": {
@@ -80,27 +71,13 @@
     "long_instructions": "# Switching Screens\n\nYou can set which screen is showing in your app with the `setScreen()` command. If you're working in blocks you can select which screen you want to switch to from a dropdown.\n\n[][0]\n\n# Do This\n\nYou'll use an `onEvent()` block with `setScreen()` to make the two buttons in your app switch between the two screen.\n\n-   Drag out two `onEvent()` blocks\n-   Set the IDs for your `onEvent()` blocks for each of your two buttons\n-   Place a `setScreen` block inside each of the `onEvent` blocks.\n-   Choose the appropriate screen from the dropdown of each `setScreen` block.\n-   Test out your app to make sure your buttons let you switch back and forth between the two screens"
   },
   "https://studio.code.org/s/applab-2hour/lessons/2/levels/8": {
-    "long_instructions": "# Navigating\n\nOnce you start adding multiple screens to an app, you need to make sure that users can always get where they want to go. In the next two levels you'll learn how to make sure a user can always get back to the \"homepage\" of your app.\n\n# Do This\n\nHere's an app with four different pages, but only the \"red\" screen is linked so far. In this level you'll make the other two buttons take the user to the correct screen.\n\n-   Add two `onEvent()` blocks, one each for the \"greenButton\" and \"blueButton\"\n-   Use the `setScreen()` block to make each button switch to the appropriate screen\n-   Test your app to make sure both buttons work. For example, when you click the green button you should go to the green screen.",
-    "start_html": {
-      "Red": "Red",
-      "Green": "Green",
-      "Blue": "Blue"
-    }
+    "long_instructions": "# Navigating\n\nOnce you start adding multiple screens to an app, you need to make sure that users can always get where they want to go. In the next two levels you'll learn how to make sure a user can always get back to the \"homepage\" of your app.\n\n# Do This\n\nHere's an app with four different pages, but only the \"red\" screen is linked so far. In this level you'll make the other two buttons take the user to the correct screen.\n\n-   Add two `onEvent()` blocks, one each for the \"greenButton\" and \"blueButton\"\n-   Use the `setScreen()` block to make each button switch to the appropriate screen\n-   Test your app to make sure both buttons work. For example, when you click the green button you should go to the green screen."
   },
   "https://studio.code.org/s/applab-2hour/lessons/2/levels/9": {
-    "long_instructions": "# Navigating Back\n\nSomeone using your app can now get to each of the red, green, and blue pages, but they can't get back to the homepage. You can add buttons and event handlers of your own to help them do this.\n\n# Do This\n\nCreate buttons and event handlers to help a user navigate back to the \"home\" screen\n\n-   Use Design Mode to create a button inside each of the \"red\", \"green\", and \"blue\" screens. Make sure to give them descriptive IDs.\n-   Back in your code drag in three `onEvent()` blocks, one for each of the three buttons you made.\n-   Inside each `onEvent()` block use the `setScreen()` block that switches back to your \"home\" screen.\n-   Test your app. You should now be able to navigate back to the home screen from each of the other three.",
-    "start_html": {
-      "Red": "Red",
-      "Green": "Green",
-      "Blue": "Blue"
-    }
+    "long_instructions": "# Navigating Back\n\nSomeone using your app can now get to each of the red, green, and blue pages, but they can't get back to the homepage. You can add buttons and event handlers of your own to help them do this.\n\n# Do This\n\nCreate buttons and event handlers to help a user navigate back to the \"home\" screen\n\n-   Use Design Mode to create a button inside each of the \"red\", \"green\", and \"blue\" screens. Make sure to give them descriptive IDs.\n-   Back in your code drag in three `onEvent()` blocks, one for each of the three buttons you made.\n-   Inside each `onEvent()` block use the `setScreen()` block that switches back to your \"home\" screen.\n-   Test your app. You should now be able to navigate back to the home screen from each of the other three."
   },
   "https://studio.code.org/s/applab-2hour/lessons/3/levels/1": {
-    "long_instructions": "# Controlling Visibility\n\nEarlier in this lesson, when we were proposing ways to simplify the quiz app, we mentioned that it was possible to show or hide design elements with code. App Lab has two functions that let you control the visibility of an element:\n\n-   `hideElement()` makes the specified element invisible\n-   `showElement()` makes the specified element visible\n\n# Do This\n\nThe provided app has an image and two buttons.\n\n-   Attach an event handler to the \"Hide\" button that hides the image when clicked\n-   Attach an event handler to the \"Show\" button that shows the image when clicked",
-    "start_html": {
-      "Hide": "Hide",
-      "Show": "Show"
-    }
+    "long_instructions": "# Controlling Visibility\n\nEarlier in this lesson, when we were proposing ways to simplify the quiz app, we mentioned that it was possible to show or hide design elements with code. App Lab has two functions that let you control the visibility of an element:\n\n-   `hideElement()` makes the specified element invisible\n-   `showElement()` makes the specified element visible\n\n# Do This\n\nThe provided app has an image and two buttons.\n\n-   Attach an event handler to the \"Hide\" button that hides the image when clicked\n-   Attach an event handler to the \"Show\" button that shows the image when clicked"
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/1": {
     "dsls": {
@@ -108,23 +85,10 @@
     }
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/2": {
-    "long_instructions": "# setScreen\n\nLets start with a setter you have used before `setScreen()`. \n\n-   Make the About Me button on the Home page go to the About Me page.\n-   Make the Back button on the About Me go to the Home page.",
-    "start_html": {
-      "My Awesome App": "My Awesome App",
-      "About Me": "About Me",
-      "All About Me!": "All About Me!",
-      "I'm taking computer science class at school!": "I'm taking computer science class at school!",
-      "Back": "Back"
-    }
+    "long_instructions": "# setScreen\n\nLets start with a setter you have used before `setScreen()`. \n\n-   Make the About Me button on the Home page go to the About Me page.\n-   Make the Back button on the About Me go to the Home page."
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/3": {
-    "long_instructions": "# setText\n\nWe are going to start making an alarm app. We have already set up an event handler for the \"triggerAlarmButton\" which will change the \"statusLabel\" text to ON when clicked. Can you make the stop alarm button change the text to OFF when clicked?",
-    "start_html": {
-      "Alarm:": "Alarm:",
-      "Trigger Alarm": "Trigger Alarm",
-      "Stop Alarm": "Stop Alarm",
-      "OFF": "OFF"
-    }
+    "long_instructions": "# setText\n\nWe are going to start making an alarm app. We have already set up an event handler for the \"triggerAlarmButton\" which will change the \"statusLabel\" text to ON when clicked. Can you make the stop alarm button change the text to OFF when clicked?"
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/4": {
     "long_instructions": "# Hide and Show\n\nIt is a little weird that both buttons are on the screen at the same time. You don't need the stop alarm button until the alarm is on. Can you make the buttons only show when they are needed?\n\n-   You will want the stop alarm button to be hidden when the program starts. You can do this in design mode.\n\nHint: When you click the trigger alarm button, you should change the text, hide the trigger alarm button, _and_ show the stop alarm button."
@@ -136,18 +100,10 @@
     "long_instructions": "# setText and getText\n\nOften you will want to get the text of a UI Element and use it to set the text of another element on the screen. Can you get the text from the dropdown when the user picks a new input and use it to set the text of the \"choiceDisplay\" label."
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/7": {
-    "long_instructions": "# setText and getText\n\nYou've seen how to use getText and setText already. Can you make this app get the text the user typed once they hit enter and show it in the text area at the bottom?\n\n_Tip: The \"change\" event is triggered when the user clicks \"enter\" in a field. Use an event handler for the text input watching for the \"change\" event._",
-    "start_html": {
-      "Type Here: ": "Type Here: ",
-      "Output Area:": "Output Area:"
-    }
+    "long_instructions": "# setText and getText\n\nYou've seen how to use getText and setText already. Can you make this app get the text the user typed once they hit enter and show it in the text area at the bottom?\n\n_Tip: The \"change\" event is triggered when the user clicks \"enter\" in a field. Use an event handler for the text input watching for the \"change\" event._"
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/8": {
-    "long_instructions": "# getNumber\n\n**Starter Code:** The program tries to update the valueDisplay whenever the slider value changes but it always sets the value to 10.\n\nCan you use `getNumber()` to get the value of the slider and update the valueDisplay as it changes?",
-    "start_html": {
-      "????": "????",
-      "Value:": "Value:"
-    }
+    "long_instructions": "# getNumber\n\n**Starter Code:** The program tries to update the valueDisplay whenever the slider value changes but it always sets the value to 10.\n\nCan you use `getNumber()` to get the value of the slider and update the valueDisplay as it changes?"
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/9": {
     "dsls": {
@@ -156,12 +112,7 @@
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/10": {
     "display_name": "getNumber",
-    "long_instructions": "# getNumber\n\n**Starter Code:** This program creates a simple calculator but **there is something wrong with it. Try putting in 2 + 2.**\n\nWe can fix this by using `getNumber()` instead of `getText()`. Can you fix the program by changing `getText()` to `getNumber()`?",
-    "start_html": {
-      "+": "+",
-      "???": "???",
-      "=": "="
-    }
+    "long_instructions": "# getNumber\n\n**Starter Code:** This program creates a simple calculator but **there is something wrong with it. Try putting in 2 + 2.**\n\nWe can fix this by using `getNumber()` instead of `getText()`. Can you fix the program by changing `getText()` to `getNumber()`?"
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/11": {
     "dsls": {
@@ -169,18 +120,12 @@
     }
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/12": {
-    "long_instructions": "# setProperty\n\n**Starter Code:** There is one call to `setProperty()` which sets the text-color to blue when you run the program.\n\nCan you add more calls to `setProperty()` that change other things about the text when you run the program? Try to change at least 3 more things.",
-    "start_html": {
-      "How does setProperty work??": "How does setProperty work??"
-    }
+    "long_instructions": "# setProperty\n\n**Starter Code:** There is one call to `setProperty()` which sets the text-color to blue when you run the program.\n\nCan you add more calls to `setProperty()` that change other things about the text when you run the program? Try to change at least 3 more things."
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/13": {
     "long_instructions": "# setProperty image\n\n**Note:** This level starts in Design Mode.\n\nThere is an image element set up for you but it does not show when you leave Design Mode because it has not been told what image to display. \n\n-   Use the `setProperty()` command to set the image of the UI Image Element on the screen."
   },
   "https://studio.code.org/s/applab-2hour/lessons/4/levels/14": {
-    "long_instructions": "# setProperty background-color\n\nChange the `background-color` of a button to a new random color each time it is clicked using `setProperty()`.",
-    "start_html": {
-      "Click Me!": "Click Me!"
-    }
+    "long_instructions": "# setProperty background-color\n\nChange the `background-color` of a button to a new random color each time it is clicked using `setProperty()`."
   }
 }

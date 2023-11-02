@@ -2888,6 +2888,8 @@ hu:
           student_description: Egy óra elteltével is folytathatod a bulit további
             projektötletekkel.
           title: Táncolj tovább
+        dance-unplugged:
+          title: Offline táncos buli
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -3315,7 +3317,7 @@ hu:
           description_short: Fedezd fel a Minecraft világát kódolással
           student_description: Használj blokkokat a programozáshoz és kalandozz el
             Steve-vel vagy Alexszel a Minecraft világába
-          title: Minecraft Kódolás Órája
+          title: Minecraft kaland
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -3661,6 +3663,17 @@ hu:
           lesson_groups:
             content:
               display_name: Tartalom
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Bevezető
+          lessons:
+            lesson-7:
+              name: Bevezető
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Bevezető
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3669,6 +3682,10 @@ hu:
           lessons:
             lesson-3:
               name: Értékelés
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Bevezető
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:

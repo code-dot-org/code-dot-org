@@ -674,6 +674,9 @@
         "functions_with_parameters/csd/2023": {
           "name": "Functions with Parameters"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Functions"
+        },
         "functions_3/csd/2023": {
           "name": "Functions"
         },
@@ -859,11 +862,6 @@
         },
         "pair_programming/pre-express/2023": {
           "name": "Pair Programming"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

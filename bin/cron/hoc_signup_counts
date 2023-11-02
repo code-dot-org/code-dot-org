@@ -36,10 +36,10 @@ def main
   # Transform the data into more accessible hashes of the form
   # {'' => 1, 'Afghanistan' => 2, ...}
   country_counts = country_counts.map do |country_and_count_hash|
-    Hash[country_and_count_hash[:country], country_and_count_hash[:count]]
+    {country_and_count_hash[:country] => country_and_count_hash[:count]}
   end.reduce({}, :merge)
   us_state_counts = us_state_counts.map do |state_and_count_hash|
-    Hash[state_and_count_hash[:state], state_and_count_hash[:count]]
+    {state_and_count_hash[:state] => state_and_count_hash[:count]}
   end.reduce({}, :merge)
 
   Properties.set(

@@ -278,7 +278,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
         end
 
         it 'distributes the Crowdin file with merged I18n source file content' do
-          expected_target_i18n_file_content = <<-JS.gsub(/^ {12}/, '')
+          expected_target_i18n_file_content = <<~JS
             Blockly.Msg.BLOCKLY_CORE = "Crowdin \\"translation\\"";
             Blockly.Msg.BLOCKLY_CORE_2 = "Source 2 \\"translation\\"";
           JS

@@ -67,10 +67,7 @@ export default class SocialShare extends Component {
           </a>
         )}
         <a href={this.props.print} className="social-print-link">
-          <button
-            type="button"
-            style={{background: color.charcoal, ...styles.shareButton}}
-          >
+          <button type="button" style={styles.printButton}>
             <i className="fa fa-print" />
             {' ' + i18n.print()}
           </button>
@@ -84,5 +81,11 @@ const styles = {
   shareButton: {
     color: color.white,
     minWidth: 40,
+  },
+  printButton: {
+    backgroundColor: 'transparent',
+    borderColor: color.black,
+    borderWidth: '1px',
+    padding: '10px 20px',
   },
 };

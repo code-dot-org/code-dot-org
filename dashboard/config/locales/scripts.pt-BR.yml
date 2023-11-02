@@ -220,6 +220,11 @@ pt:
             lesson-1:
               name: Nosso Código de Ética em I.A.
         ai-temp:
+          lessons:
+            lesson-6:
+              name: "[Lição Visão Computacional]"
+          student_description: Aprenda como a IA funciona participando de diferentes
+            experiências e assistindo à série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
           title: Como funciona a IA
         aiml-2021:
           description: |-
@@ -507,6 +512,10 @@ pt:
           name: bola de basquete
           student_description: Escolha seu time e faça um jogo de basquete
           title: Escolha seu time e faça um jogo de basquete
+        blockchain-2023:
+          student_description: Aprenda como o Blockchain funciona participando de
+            diferentes experiências imersivas e assistindo à série de vídeos [Como
+            o Blockchain funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf)!
         classic-hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
@@ -1561,6 +1570,11 @@ pt:
           title: Suporte com programação baseada em texto
         csa-pl-test:
           name: csa-pl-teste
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          title: Engenharia de Software e Visão Computacional
         csa-self-paced-pl:
           description: "Este módulo foi projetado para orientar o usuário no uso das
             ferramentas que serão utilizadas em apoio à aprendizagem dos alunos ao
@@ -1573,6 +1587,16 @@ pt:
               display_name: Navegação no Code.org
           name: csa-self-paced-pl
           title: Navegação pelo Code.org para professores-piloto do CSA
+        csa-software-engineering:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          lessons:
+            lesson-7:
+              name: Pré-pesquisa Engenharia de Software e Visão Computacional
+            lesson-8:
+              name: Pós-pesquisa Engenharia de Software e Visão Computacional
+          title: Engenharia de Software e Visão Computacional
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -1903,6 +1927,30 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Questionário
+        csc-ecosystems-2023:
+          description: "## Trabalho prévio sugerido para este módulo. Alunos de\n\n\\*_Ciências_
+            devem simular um ecossistema de vida marinha nas Lições 1 e 2. Para desenvolver
+            familiaridade com esse ecossistema, recomendamos este [Vídeo sobre Animais
+            do Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos).
+            \n\nNa Lição 2, os alunos vão codificar diversas práticas de pesca sustentável.
+            Eis aqui alguns textos para desenvolver conhecimentos sobre os fundamentos
+            e se aprofundar nas conexões com o mundo real: [Compreenda a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
+            (Artigo sobre o Aquário da Baía de Monterey), ou [Mw,kwa Talks to Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)
+            (livro infantil).\n\n \\*_Ciência da Computação:_ Neste módulo, os alunos
+            vão aprender novos conceitos de codificação que podem ser difíceis para
+            alunos novatos em ciência da computação. Se os alunos não estiverem familiarizados
+            com o laboratório de fadas do Code.org, recomendamos que experimentem
+            o [Peixes Nadando com o Laboratório de Fadas](https://studio.code.org/s/coursee-2022/lessons/3)
+            (55 minutos) para uma introdução básica à ferramenta. \n\nEste módulo
+            também utiliza um conceito avançado de CC conhecido como declarações condicionais.
+            Os alunos aprendem esse conceito de forma gradual, mas alguns podem se
+            beneficiar participando desta atividade introdutória offline sobre declarações
+            condicionais: [Declarações condicionais com cartas](https://studio.code.org/s/coursed-2022/lessons/12)
+            (50 minutos)."
+          lessons:
+            lesson-3:
+              name: Codifique seu próprio ecossistema (2023)
+          title: Simulação de um ecossistema marinho (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -2449,7 +2497,7 @@ pt:
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           lesson_groups:
             csd2_1v2:
-              display_name: 'Capítulo 1: Criando Páginas da Web'
+              display_name: 'Capítulo 1: Criando Páginas Web'
             csd2_2v2:
               display_name: 'Capítulo 2: Sites com Várias Páginas'
             cspSurvey:
@@ -2458,7 +2506,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Desenvolvimento Web ('22-'23)
         csd2-2023:
           description: |-
@@ -2512,7 +2560,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         csd2-dlp:
           description: Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para
@@ -5797,7 +5845,7 @@ pt:
             com seus amigos! (Esta versão é para conexões lentas)
           title: Festa de Dança (Baixa Largura de Banda)
         dance-unplugged:
-          title: Hour of Code - Festa Dançante - Desconectado
+          title: Hora do Código - Festa Dançante - Desconectado
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -6501,7 +6549,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         focus-on-coding3-2023:
           description: |-
@@ -6793,7 +6841,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         focus-on-creativity3-2023:
           description: |-
@@ -7322,7 +7370,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
         focus-on-design-with-purpose3-2023:
           description: "A unidade de Processo de Design faz com que os alunos deixem
@@ -8052,6 +8100,10 @@ pt:
             Era do Gelo!
           title: Labirinto clássico
         how-ai-works-2023:
+          student_description: |-
+            Aprenda como a IA funciona participando de diferentes experiências e assistindo à série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
+
+            \*\*Quer lecionar essas lições? \*\* [Clique aqui para ver os planos de aula dessas lições](/s/how-ai-works-2023?viewAs=Instructor)
           title: Como funciona a IA
         iceage:
           description: Crie uma história ou faça um jogo com o Laboratório da Era
@@ -8200,7 +8252,7 @@ pt:
           description_short: Explore o mundo de Minecraft usando códigos.
           student_description: Use blocos de código para levar Steve ou Alex a uma
             aventura pelo mundo do Minecraft.
-          title: Hora do Código Minecraft
+          title: Aventureiro de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -8696,6 +8748,21 @@ pt:
           title: 'Módulo 2: Navegação no Code.org'
         self-paced-pl-csa2-2023:
           title: 'Módulo 2: Navegação no Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: "Este módulo de aprendizagem profissional foi projetado para
+            ajudar você a se preparar para lecionar a unidade de Solução de Problemas
+            e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos
+            no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado
+            para ajudar você a se preparar para lecionar a unidade de Solução de Problemas
+            e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional,
+            você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação.
+            \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos
+            no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+          title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e
+            computação'
         self-paced-pl-csd1-2021:
           description: "Este módulo é uma breve introdução para o Code.org e para
             este curso de aprendizagem profissional. \n\n**Você vai:**\n\n-   Ver
@@ -9285,6 +9352,25 @@ pt:
               display_name: Conteúdo
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Dia 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
+          lessons:
+            lesson-7:
+              name: Introdução
+          title: Dia 1
+        virtual-pl-csa-summer-day2:
+          title: Dia 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
+          title: Dia 3
+        virtual-pl-csa-summer-day4:
+          title: Dia 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -9311,6 +9397,17 @@ pt:
           lessons:
             lesson-3:
               name: Avaliação
+        virtual-pl-csp-summer-day1:
+          title: Dia 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
+          title: Dia 2
+        virtual-pl-csp-summer-day3:
+          title: Dia 3
+        virtual-pl-csp-summer-day4:
+          title: Dia 4
         virustest:
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
             de vírus. '
@@ -9663,7 +9760,7 @@ pt:
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
             HTML e CSS. Você também praticará habilidades valiosas de programação
-            como depuração, usar recursos e trabalho em equipe.
+            como depuração, uso de recursos e trabalho em equipe.
         workshop-maker:
           description: Essa progressão de nível destina-se a acompanhar um workshop
             presencial do Maker Toolkit. O objetivo não é ensinar a ferramenta ou
