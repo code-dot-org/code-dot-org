@@ -4,7 +4,6 @@ import Certificate from './Certificate';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './certificate_batch.module.scss';
 import i18n from '@cdo/locale';
-import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import {
   BodyTwoText,
@@ -309,8 +308,6 @@ export default function Congrats(props) {
             courseTitle={nextCourseTitle}
             courseDesc={nextCourseDesc}
           />
-          <hr className={style.divider} />
-          <PetitionCallToAction tutorial={tutorial} />
         </div>
       )}
     </div>
