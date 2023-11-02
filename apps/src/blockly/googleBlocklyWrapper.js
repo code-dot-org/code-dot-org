@@ -650,8 +650,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     workspace.addChangeListener(adjustCalloutsOnViewportChange);
     workspace
       .getFlyout()
-      .getWorkspace()
-      .addChangeListener(adjustCalloutsOnViewportChange);
+      ?.getWorkspace()
+      ?.addChangeListener(adjustCalloutsOnViewportChange);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
