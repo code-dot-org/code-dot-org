@@ -11,4 +11,9 @@ class TeacherMailerPreview < ActionMailer::Preview
     teacher = build :teacher, email: 'fake_email@fake.com'
     TeacherMailer.new_teacher_email(teacher)
   end
+
+  def hour_of_code_tutorial_preview
+    teacher = build :teacher, email: 'newteacher@fake.com'
+    TeacherMailer.hoc_tutorial_email(teacher)
+  end
 end
