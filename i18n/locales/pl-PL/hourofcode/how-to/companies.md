@@ -16,8 +16,8 @@ Biorąc udział w kampanii Godzina Kodowania, Twoja firma może pomóc zwiększy
 
 Zapoznaj się z poniższymi krokami, aby rozpocząć, i zabacz nasz [przewodnik dla partnerów korporacyjnych](/files/hoc-corporate-toolkit.pdf), aby dowiedzieć się, jak zainteresować swoją firmę Godziną Kodowania.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Połącz się z lokalną szkołą](#connect-with-a-school)
+- [ Zachęć pracowników do wolontariatu w szkole.](#encourage-employees)
 - [ Zorganizuj własne wydarzenie Godziny Kodowania.](#host-hour-of-code)
 - [Promuj Godzinę Kodowania](#promote-hour-of-code)
 - [Wiele innych sposobów wspierania Godziny Kodowania](#support-hour-of-code)
@@ -26,31 +26,31 @@ Zapoznaj się z poniższymi krokami, aby rozpocząć, i zabacz nasz [przewodnik 
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Połącz się z lokalną szkołą
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Zawsze najlepiej zacząć lokalnie, ze szkołami, z którymi Ty lub Twoi pracownicy macie silny związek, takich jak alma mater, szkoła dla dzieci lub lokalna organizacja lub szkoła, która koncentruje się na obsłudze populacji, która była historycznie niedostatecznie reprezentowana w informatyce.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Stamtąd możesz odwiedzić stronę internetową szkoły, aby znaleźć odpowiednie kontakty, z którymi możesz się skontaktować, takie jak dyrektor, wicedyrektor, instruktorzy technologii lub informatyki, a nawet szkolny PTSA. Możesz także współpracować z organizacjami takimi jak Boys & Girls Clubs of America, oddział YMCA, i nie tylko, aby współprowadzić wydarzenie.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Jeśli nie jesteś w stanie połączyć się ze szkołą, [skontaktuj się z nami](https://support.code.org/hc/en-us/requests/new), a my, o ile będzie taka możliwość, połączymy Cię z jednym z naszych lokalnych partnerów.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Zachęć pracowników do wolontariatu w szkole.
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Jednym z najbardziej satysfakcjonujących sposobów uczestniczenia w Godzinie Kodowania jest wolontariat w pobliskiej szkole, osobiście lub wirtualnie. A co najlepsze, wcale nie musisz być inżynierem, aby zgłosić się na ochotnika. Nadal możesz zapewnić uczniom znaczące doświadczenie, dzieląc się własnym doświadczeniem zawodowym i tym, jak CS lub technologia wpłynęły na twoją rolę.
 
 [<button>Zapisz się jako wolontariusz</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Gdy wolontariusz się zarejestruje, nauczyciel może przejrzeć jego profil na naszej [mapie wolontariuszy](https://code.org/volunteer/local) – dlatego przesyłane profile powinny być możliwie jak najbardziej pełne. Jeśli dobrze pasujesz do klasy, nauczyciel skontaktuje się z Tobą za pośrednictwem platformy (nigdy nie udostępnimy nauczycielowi Twojego adresu e-mail). Następnie możesz uzgodnić szczegóły bezpośrednio z nauczycielem[, aby okazać się możliwie najlepszym ochotnikiem w wybranej klasie](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Aby uzyskać więcej wskazówek na temat wolontariatu i przykładowych informacji, które zaciekawią Twoją firmę Godziną Kodowania, zapoznaj się z naszym [przewodnikiem dla partnerów korporacyjnych]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -136,7 +136,7 @@ Jednym z najlepszych sposobów wsparcia jest rozpowszechnienie informacji i prom
 
 ### 1. Zarejestruj swoje wydarzenie.
 
-Gdy [ zarejestrujesz swoją Godzinę Kodowania](/#join), otrzymasz mail z pomocnymi wiadomościami i wskazówkami na temat organizacji udanej Godziny Kodowania. W ten sposób możesz również powiadomić swoje miejscowe szkoły lub rodziców, że będziesz gospodarzem wydarzenia w ich okolicy.
+Kiedy [zarejestrujesz się na wydarzenie Godziny Kodowania](/events), otrzymasz pomocne wiadomości e-mail z wiadomościami i wskazówkami dotyczącymi udanej Godziny Kodowania. W ten sposób możesz również powiadomić swoje miejscowe szkoły lub rodziców, że będziesz gospodarzem wydarzenia w ich okolicy.
 
 ### 2. Publikuj w mediach społecznościowych
 
@@ -163,7 +163,7 @@ Pomóż zwiększyć świadomość ruchu związanego z informatyką przy pomocy p
 - Jeśli Twój pierwszy wiersz kodu zmienił Twoje życie, pomóż uczniom w pobliżu napisać ich pierwszą #HourOfCode https://code.org/volunteer
 - Jeśli nauczyłeś się kodować - jaka jest Twoja historia? Zainspiruj ucznia obok Ciebie prowadząc go przez #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Znajdź więcej</a> plakatów, filmów, naklejek i innych sposobów promowania wydarzenia wśród społeczności.
 
 * * *
 

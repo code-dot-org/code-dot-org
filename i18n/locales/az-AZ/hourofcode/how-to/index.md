@@ -8,7 +8,7 @@ title: Kod Saatı Necə Bələdçi
 
 ### Hərəkətə qoşulun və tələbələrinizi bu addımlarla kompüter elmləri ilə tanış edin.
 
-Students today should learn how to create technology, not just use it.
+Bu gün tələbələr yalnız istifadə etməklə deyil, texnologiyanı necə yaratmağı öyrənməlidirlər.
 
 Bir Saat Kodunu sınamaq, tələbələri kompüter elmləri ilə tanış etmək üçün sadə və əyləncəli bir yoldur, bəlkə də ilk dəfə! İstər sinifdə, istərsə də məktəbdən sonra, şəxsən və ya virtual olaraq ayarınıza uyğun bir fəaliyyət tapın. Aşağıdakı addımları</a> yoxladıqdan sonra hələ də suallarınız varsa, iştirak bələdçimizə nəzər salın:</p> 
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Kod Saatı tədbirinizə [qeydiyyatdan keçdiyiniz zaman](/#join), uğurlu Kod Saatına ev sahibliyi etmək üçün xəbərlər və məsləhətlər ilə faydalı e-poçt ünsiyyətləri alacaqsınız. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kod Saatı [tədbirinizə qeydiyyatdan keçdiyiniz zaman uğurlu Kod Saatına ev sahibliyi etmək üçün xəbərlər və tövsiyələrlə faydalı e-poçt ünsiyyətləri alacaqsınız.](/events) It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -139,9 +139,9 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [Tələbələriniz]({{ urls/certificates }}) üçün sertifikatları çap edin.
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-    - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+    - Kod Saatı tədbirinizin şəkillərini və videolarını sosial mediada paylaşın. #HourOfCode və @codeorg istifadə edin ki, uğurunuzu da vurğulaya bilərik!
     
     * * *
     
@@ -153,7 +153,7 @@ Direct students to the activity
     ## Müəllimlər üçün digər Kod Saatı mənbələri:
     
     - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-    - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+    - Kod Saatı [Suallarını nəzərdən keçirin](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
     
     ### Kod Saatından sonra nə gəlir?
     

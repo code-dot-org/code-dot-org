@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### මෙම පියවර සමඟ ව්යාපාරයට සම්බන්ධ වී ඔබේ සිසුන් පරිගණක විද්යාවට හඳුන්වා දෙන්න.
 
-Students today should learn how to create technology, not just use it.
+අද සිසුන් ඉගෙන ගත යුත්තේ තාක්ෂණය නිර්මාණය කරන්නේ කෙසේද යන්න මිස එය භාවිතා කිරීම පමණක් නොවේ.
 
 පැය සංග්රහයක් උත්සාහ කිරීම පරිගණක විද්යාවට සිසුන් හඳුන්වා දීම සඳහා සරල හා විනෝදජනක ක්රමයකි, සමහර විට පළමු වරට! පන්තියේ හෝ පාසලෙන් පසු, පුද්ගලිකව හෝ අතථ්ය වේවා, ඔබේ සැකසුමට ගැලපෙන ක්රියාකාරකමක් සොයා ගන්න. පහත පියවර පරීක්ෂා</a> කිරීමෙන් පසු ඔබට තවමත් ප්රශ්න ඇත්නම් අපගේ සහභාගීත්ව මාර්ගෝපදේශය දෙස බලන්න:</p> 
 
@@ -21,7 +21,7 @@ Students today should learn how to create technology, not just use it.
 - [ඔබේ පැය කේතය ශක්තිමත් ලෙස ආරම්භ කරන්නේ කෙසේද](#how-to-start)
 - [කේතීකරණය ලබා ගන්න](#code)
 - [ඔබේ සිසුන්ගේ සාර්ථකත්වය සමරන්න](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [අධ්යාපනඥයන් සඳහා වෙනත් පැය සංග්රහය සම්පත්](#other-resources)
 
 * * *
 
@@ -78,7 +78,7 @@ Students today should learn how to create technology, not just use it.
     
     ### Let Volunteers Know by Registering Your Event
     
-    ඔබ ඔබේ පැය සංග්රහයේ අවස්ථාවට [අත්සන් කරන විට](/#join), ඔබ සංග්රහයේ සාර්ථක පැය සත්කාරකත්වය සඳහා ප්රවෘත්ති සහ ඉඟි සමග ප්රයෝජනවත් ඊ-තැපැල් සන්නිවේදන ලැබෙනු ඇත. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+    ඔබ ඔබේ කේත පැ [ය අවස්ථාවට ලියාපදිංචි වූ විට](/events), සාර්ථක කේත පැය සත්කාරකත්වය සඳහා ප්රවෘත්ති සහ ඉඟි සමඟ ප්රයෝජනවත් විද්යුත් තැපැල් සන්නිවේදන ඔබට ලැබෙනු ඇත. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
     
     ### Get your Students Excited
     
@@ -151,9 +151,9 @@ Students today should learn how to create technology, not just use it.
         
         [/col-33]
         
-        - [Print certificates]({{ urls/certificates }}) for your students.
+        - [ඔබේ සිසුන්]({{ urls/certificates }}) සඳහා සහතික මුද්රණය කරන්න.
         - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-        - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+        - ඔබේ හෝර් ඔෆ් කෝඩ් උත්සවයේ ඡායාරූප සහ වීඩියෝ සමාජ මාධ්ය ඔස්සේ බෙදා ගන්න. #HourOfCode සහ @codeorg භාවිතා කරන්න එවිට අපට ඔබේ සාර්ථකත්වය ද ඉස්මතු කළ හැකිය!
         
         * * *
         
@@ -165,7 +165,7 @@ Students today should learn how to create technology, not just use it.
         ## අධ්යාපනඥයින් සඳහා කේත සම්පත් වෙනත් පැය:
         
         - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-        - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+        - කේත [පැය නිතර අසන පැය සමාලෝචනය](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)කරන්න.
         
         ### කේත වේලාවෙන් පසුව පැමිණෙන්නේ කුමක්ද?
         

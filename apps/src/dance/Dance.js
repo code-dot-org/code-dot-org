@@ -182,6 +182,7 @@ Dance.prototype.init = function (config) {
           <DanceVisualizationColumn
             showFinishButton={showFinishButton}
             setSong={this.setSongCallback.bind(this)}
+            resetProgram={this.reset.bind(this)}
           />
         }
         onMount={onMount}
@@ -488,8 +489,7 @@ Dance.prototype.preview = async function () {
   const previewDraw = () => {
     this.nativeAPI.setEffectsInPreviewMode(true);
 
-    // the user setup hook initializes effects,
-    // needs to happen in preview mode for some effects (eg, tacos)
+    // Calls each effect's init() step.
     this.hooks.find(v => v.name === 'runUserSetup').func();
 
     // redraw() (rather than draw()) is p5's recommended way
@@ -500,7 +500,8 @@ Dance.prototype.preview = async function () {
   };
 
   // This is the mechanism p5 uses to queue draws,
-  // so we do the same so we end up after any queued draws.
+  // so we use the same mechanism to ensure that
+  // this preview is drawn after any queued draw calls.
   window.requestAnimationFrame(previewDraw);
 };
 
@@ -508,14 +509,18 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
-  const danceMessage = message ? danceMsg[message]() : '';
-
+  // Assign danceMessage the value of the message key if the key exists.
+  // Otherwise, assign it an empty string.
+  const danceMessage = danceMsg[message] ? danceMsg[message]() : '';
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
     this.message = danceMessage;
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = danceMessage;
+    // This message is a general message for users to keep coding since something is 'not quite right'.
+    // This is the general validation feedback given if the validation string key is not found.
+    const keepCodingMsg = danceMsg.danceFeedbackKeepCoding();
+    this.message = danceMessage.length === 0 ? keepCodingMsg : danceMessage;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }

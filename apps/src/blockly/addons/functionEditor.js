@@ -12,6 +12,9 @@ import {
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
 import CdoMetricsManager from './cdoMetricsManager';
+import WorkspaceSvgFrame from './workspaceSvgFrame';
+import {BLOCK_TYPES} from '../constants';
+import {frameSizes} from './cdoConstants';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -152,6 +155,7 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
+
       Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.
@@ -167,11 +171,27 @@ export default class FunctionEditor {
         deletable: false,
         movable: false,
       };
+
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
+    const type = procedureType || existingProcedureBlock.type;
+    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+
+    // Used to create and render an SVG frame instance.
+    const getDefinitionBlockColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this.block);
+    };
+
+    this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
+      this.editorWorkspace,
+      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      'blocklyWorkspaceSvgFrame',
+      getDefinitionBlockColor
+    );
+    this.editorWorkspace.svgFrame_.render();
   }
 
   /**
@@ -331,10 +351,13 @@ export default class FunctionEditor {
    * @returns Block configuration with x and y coordinates
    */
   addEditorWorkspaceBlockConfig(blockConfig) {
+    // Position the blocks within the workspace svg frame.
+    const x = frameSizes.MARGIN_SIDE + 5;
+    const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
     const returnValue = {
       ...blockConfig,
-      x: 20,
-      y: 20,
+      x,
+      y,
     };
     return returnValue;
   }
@@ -382,6 +405,10 @@ export default class FunctionEditor {
       // Dispose of all non-procedure-definition top blocks (aka orphaned blocks)
       // and propagate the delete event to the hidden workspace.
       orphanedBlocks.forEach(block => block.dispose(false));
+    }
+    const workspaceSvgFrame = this.editorWorkspace.svgFrame_;
+    if (workspaceSvgFrame) {
+      workspaceSvgFrame.dispose();
     }
 
     // Now call clear() to have Blockly handle the rest of the workspace clearing.

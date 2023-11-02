@@ -71,6 +71,11 @@ vi:
             '"measures"': nhịp
             '"seconds"': giây
         text: sau {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': nhịp
+            '"seconds"': giây
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -565,6 +570,51 @@ vi:
             '"electronic"': ไฟฟ้า
             '"iceCream"': Kem
             '"neon"': Đèn Neon
+            '"rave"': Đen và trắng
+            '"tropical"': Nhiệt đới
+            '"vintage"': Cổ điển
+            '"warm"': Đỏ
+        text: |-
+          đặt hiệu ứng nền
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Đường hầm
+            '"color_cycle"': Màu sắc
+            '"diamonds"': Kim cương
+            '"disco"': Hình vuông
+            '"disco_ball"': Bóng Disco
+            '"fireworks"': พลุ
+            '"flowers"': Bông hoa
+            '"galaxy"': Không gian
+            '"growing_stars"': Ngôi sao lớn dần
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kính vạn hoa
+            '"lasers"': Sàn nhảy laze
+            '"none"': Không có
+            '"quads"': Góc
+            '"rainbow"': Cầu vồng
+            '"rand"': "(Ngẫu nhiên)"
+            '"ripples"': Gợn sóng
+            '"ripples_random"': Gợn sóng ngẫu nhiên
+            '"snowflakes"': Tuyết
+            '"sparkles"': Lấp lánh
+            '"spiral"': Xoắn ốc
+            '"splatter"': Tiếng lộp độp của sơn
+            '"squiggles"': Nét nguệch ngoạc
+            '"starburst"': Lóe sáng
+            '"stars"': Sao
+            '"swirl"': Thôi miên
+            '"text"': Tiêu đề bài hát
+          PALETTE:
+            '"cool"': Xanh
+            '"default"': Sáng
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': Kem
+            '"neon"': Đèn Neon
+            '"ocean"': Đại dương
+            '"rainbow"': Cầu vồng
             '"rave"': Đen và trắng
             '"tropical"': Nhiệt đới
             '"vintage"': Cổ điển

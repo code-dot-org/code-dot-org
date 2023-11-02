@@ -924,6 +924,7 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        get 'section_instructors/check', to: 'section_instructors#check'
         resources :section_instructors, only: [:index, :create, :destroy] do
           member do
             put 'accept'
@@ -931,7 +932,6 @@ Dashboard::Application.routes.draw do
           end
         end
         get 'section_instructors/:section_id', to: 'section_instructors#show'
-        get 'section_instructors/check', to: 'section_instructors#check'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do

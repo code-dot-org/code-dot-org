@@ -57,7 +57,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-20T22:27:48.041+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-20T22:27:48.041+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play\"},{\"changed_at\":\"2023-10-27 19:34:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -88,23 +88,16 @@
     </start_blocks>
     <toolbox_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <category name="World">
+        <category name="Default">
           <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K">
             <field name="VALUE"/>
           </block>
-          <block type="Dancelab_randomColor" id="/1_E++EquQ9DaBZcRjKV"/>
-          <block type="Dancelab_mixColors" id="+1?Tp42JvSOSdT014:T8">
-            <value name="COLOR1">
-              <shadow type="colour_picker" id="UYDUH)GQ.l+#K)f)KHOG">
-                <field name="COLOUR">#ff0000</field>
-              </shadow>
-            </value>
-            <value name="COLOR2">
-              <shadow type="colour_picker" id="Xw,D5#.!^+%_E13]:O`,">
-                <field name="COLOUR">#000099</field>
-              </shadow>
-            </value>
+          <block type="Dancelab_makeAnonymousDanceSprite" id="7:rltquj36+Y=:_,h84;">
+            <field name="COSTUME">"CAT"</field>
+            <field name="LOCATION">{x: 200, y: 100}</field>
           </block>
+        </category>
+        <category name="New">
           <block type="Dancelab_changeColorBy" id="`g8,5vrDz1^FJ|@Y)FS2">
             <field name="METHOD">"hue"</field>
             <value name="COLOR">
@@ -120,10 +113,6 @@
           </block>
         </category>
         <category name="Dancers">
-          <block type="Dancelab_makeAnonymousDanceSprite" id="7:rltquj36+Y=:_,h84;">
-            <field name="COSTUME">"CAT"</field>
-            <field name="LOCATION">{x: 200, y: 100}</field>
-          </block>
           <block type="Dancelab_makeNewDanceSpriteGroup" id="k0!O`iKO#7e2/K//6~3-">
             <field name="N">20</field>
             <field name="COSTUME">"BEAR"</field>
