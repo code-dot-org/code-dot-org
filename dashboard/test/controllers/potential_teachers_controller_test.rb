@@ -12,7 +12,7 @@ class PotentialTeachersControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "should get show for a potential teacher" do
+  test "show returns correct information for a potential teacher" do
     course_offering = create :course_offering, key: 'course-offering-1', display_name: "Test"
     example_potential_teacher = create :potential_teacher, name: 'foosbars', email: 'foobar@example.com', source_course_offering_id: course_offering.id
 
