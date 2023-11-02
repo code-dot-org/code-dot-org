@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
@@ -23,7 +23,7 @@ export const SongSelector = ({
   enableSongSelection,
   filterOn,
 }) => {
-  // const [songInPreview, setSongInPreview] = useState(false);
+  const [songInPreview, setSongInPreview] = useState(false);
   // useEffect(() => {
   //   console.log('songInPreview', songInPreview);
   //   console.log('levelIsRunning', levelIsRunning);
@@ -53,32 +53,39 @@ export const SongSelector = ({
       </label>
       <button
         type="button"
+        disabled={levelIsRunning}
         onClick={() => {
-          console.log('start playing song');
-          audioCommands.playSound({
-            url: `${songData[selectedSong].url}`,
-            callback: () => {
-              // setSongInPreview(true);
-              // console.log(songInPreview)
-              setTimeout(() => {
-                console.log('stop playing song');
-                // console.log(levelIsRunning, songInPreview);
-                if (!levelIsRunning) {
-                  audioCommands.stopSound({url: songData[selectedSong].url});
-                  console.log('end song - ', songData[selectedSong].url);
-                  // setSongInPreview(false);
-                }
-              }, 10000);
-              console.log('callback');
-            },
-            onEnded: () => {
-              // setSongInPreview(false);
-              console.log('end');
-            },
-          });
+          if (songInPreview) {
+            console.log('double click stop playing song');
+            audioCommands.stopSound({url: songData[selectedSong].url});
+            setSongInPreview(false);
+          } else {
+            console.log('start playing song');
+            audioCommands.playSound({
+              url: `${songData[selectedSong].url}`,
+              callback: () => {
+                setSongInPreview(true);
+                // console.log(songInPreview)
+                setTimeout(() => {
+                  console.log('stop playing song');
+                  // console.log(levelIsRunning, songInPreview);
+                  if (!levelIsRunning) {
+                    audioCommands.stopSound({url: songData[selectedSong].url});
+                    console.log('end song - ', songData[selectedSong].url);
+                    setSongInPreview(false);
+                  }
+                }, 10000);
+                console.log('callback');
+              },
+              onEnded: () => {
+                setSongInPreview(false);
+                console.log('end');
+              },
+            });
+          }
         }}
       >
-        Preview song
+        {!levelIsRunning && songInPreview ? 'Stop Preview' : 'Preview'} song
       </button>
       <select
         id="song_selector"
@@ -201,8 +208,8 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-                  Turn the song filter off
-                */
+                    Turn the song filter off
+                  */
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };
