@@ -549,3 +549,86 @@ i.infoAlertIcon {
   font-weight: 900;
   line-height: 125%;
 }
+
+.aiFeedbackRow {
+  display:flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.aiFeedbackThumbsUpChecked {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: $product_affirmative_default;
+}
+
+.aiFeedbackThumbsUp {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $light_affirmative_100;
+    color: $product_affirmative_default;
+  }
+}
+
+.aiFeedbackThumbsDownChecked {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: $product_negative_default;
+}
+
+.aiFeedbackThumbsDown {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $product_negative_light;
+    color: $product_negative_default;
+  }
+}
+
+.aiFeedbackRadio {
+  opacity: 0;
+  position: absolute;
+  height: 0
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+.aiFeedbackTextbox {
+  height: 60px;
+  width: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.submitFeedbackRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.submitFeedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aiFeedbackReceived {
+  margin-left: auto;
+}
