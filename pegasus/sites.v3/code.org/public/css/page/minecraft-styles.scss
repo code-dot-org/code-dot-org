@@ -1,0 +1,184 @@
+// Custom styles for code.org/minecraft
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import "breakpoints";
+
+// Hero banner
+.hero-banner-basic {
+
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #3B7043 47.21%, #6dab41 100.96%);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/banners/banner-bg-maze-squares-light.png");
+      background-position: center;
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: 1;
+    }
+  }
+
+  .text-wrapper {
+    width: 100%;
+
+    @media (min-width: $width-sm) and (max-width: $width-md) {
+      width: 60%;
+    }
+  }
+
+  figure {
+    position: absolute;
+    right: 2rem;
+    bottom: -4rem;
+
+    @media (max-width: $width-sm) {
+      left: 0;
+      right: 0;
+      bottom: -12rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 230px;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding-bottom: 12rem;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+// Carousel styles
+.carousel-wrapper {
+  padding-bottom: 0;
+
+  @media (max-width: 1279px) {
+    overflow: hidden;
+  }
+
+  .slides {
+    position: relative !important;
+    text-align: unset !important;
+  }
+
+  .slide {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+.carousel {
+  margin: 1rem 0 2rem;
+
+  @media screen and (max-width: $width-sm) {
+    margin: 0 0 2rem;
+  }
+
+  &.blocks {
+
+    .action-block {
+      min-width: 300px;
+      max-width: 304px;
+      height: 560px;
+      margin: 0 auto;
+      justify-content: space-between;
+
+      &:hover {
+        cursor: auto;
+      }
+
+      p {
+        font-family: var(--main-font);
+      }
+
+      @media (max-width: $width-md) {
+        max-width: 420px;
+        height: 580px;
+      }
+
+      @media (max-width: $width-sm) {
+        height: auto;
+      }
+    }
+
+    @media (min-width: 640px) {
+      position: relative;
+
+      .slides {
+        width: 300%;
+        display: flex;
+      }
+    }
+  }
+
+  &.videos {
+
+    .video-wrapper {
+      min-width: 18.75rem;
+      max-width: 26.25rem;
+      margin: 0;
+
+      .video_caption_link {
+        text-align: justify;
+      }
+    }
+
+    @media (min-width: 640px) {
+      position: relative;
+
+      .slides {
+        width: 300%;
+        height: 26rem;
+        display: flex;
+      }
+
+      .slide {
+        height: 285px;
+
+        .action-block {
+          width: 48%;
+          margin: 0;
+        }
+      }
+
+      .video-wrapper {
+        min-width: 420px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slides {
+        height: 15rem !important;
+        display: flex;
+      }
+    }
+  }
+}
