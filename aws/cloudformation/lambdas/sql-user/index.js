@@ -38,8 +38,23 @@ exports.handler = async (event, context) => {
     event.PhysicalResourceId || dbCredentialSQLUser.username;
   let responseData = event.ResponseData || {};
 
+  // A CloudFormation template Resource must either populate the Property `DBWriterEndpointSecret`
+  // or the Property DBServerHost.
+  let dbServerHost;
+  if (props.DBWriterEndpointSecret) {
+    const getDBEndpointWriterCommand = new GetSecretValueCommand({
+      SecretId: props.DBWriterEndpointSecret,
+    });
+    const dbEndpointWriterResponse = await secretsClient.send(
+      getDBEndpointWriterCommand
+    );
+    dbServerHost = dbEndpointWriterResponse.SecretString;
+  } else if (props.DBServerHost) {
+    dbServerHost = props.DBServerHost;
+  }
+
   const connection = mysql.createConnection({
-    host: props.DBServerHost,
+    host: dbServerHost,
     user: dbCredentialAdmin.username,
     password: dbCredentialAdmin.password,
     connectTimeout: 10000,
