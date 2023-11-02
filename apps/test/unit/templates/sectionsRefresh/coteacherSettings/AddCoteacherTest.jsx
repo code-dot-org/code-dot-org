@@ -15,6 +15,8 @@ const DEFAULT_PROPS = {
 
 const makeSpyWithAssertions = (assertions, done) =>
   sinon.spy(function (params) {
+    // this is necessary to get an actual error message.
+    // Otherwise it gets swallowed by the spy after the test is done.
     try {
       assertions(params);
     } catch (e) {

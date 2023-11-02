@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import $ from 'jquery';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
@@ -28,15 +27,16 @@ export default function RemoveCoteacherDialog({
         closeRemoveDialog();
         return;
       }
-      $.ajax({
-        url: `/api/v1/section_instructors/${coteacher.id}`,
-        method: 'DELETE',
-      })
-        .done(() => {
+      fetch(`/api/v1/section_instructors/${coteacher.id}`, {
+        type: 'DELETE',
+      }).then(response => {
+        if (response.ok) {
           removeSavedCoteacher(coteacher.id);
           closeRemoveDialog();
-        })
-        .fail(closeRemoveDialog);
+        } else {
+          closeRemoveDialog();
+        }
+      });
     },
     [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
   );
