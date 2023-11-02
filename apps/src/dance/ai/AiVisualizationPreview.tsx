@@ -1,5 +1,5 @@
 import {BlockSvg} from 'blockly';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 import {DanceState} from '../danceRedux';
 import ProgramExecutor from '../lab2/ProgramExecutor';
@@ -21,8 +21,19 @@ const AiVisualizationPreview: React.FunctionComponent<
     (state: {dance: DanceState}) => state.dance.currentSongMetadata
   );
 
+  const executorRef = useRef<ProgramExecutor | null>(null);
+  // Create the executor on mount to make sure the preview div exists.
+  useEffect(() => {
+    executorRef.current = new ProgramExecutor(
+      PREVIEW_DIV_ID,
+      () => undefined, // no-op on puzzle complete
+      true, // treat this as a readonly workspace
+      false // no replay log
+    );
+  }, []);
+
   // Generate setup code for previewing the given blocks.
-  const generateSetupCode = useCallback((): string => {
+  const generateSetupCode = (blocks: BlockSvg[]): string => {
     if (blocks.length === 0) {
       console.log('No blocks to preview');
       return '';
@@ -42,26 +53,20 @@ const AiVisualizationPreview: React.FunctionComponent<
     // Remove the temp setup block from the workspace so it doesn't remain after preview
     Blockly.getMainWorkspace().removeTopBlock(setup);
     return Blockly.getGenerator().blockToCode(setup);
-  }, [blocks]);
+  };
 
   useEffect(() => {
-    if (songMetadata === undefined) {
+    if (songMetadata === undefined || executorRef.current === null) {
       return;
     }
-    // Create a new program executor whenever preview code changes
-    // to ensure that P5 is destroyed and reloaded correctly.
-    const executor: ProgramExecutor = new ProgramExecutor(
-      PREVIEW_DIV_ID,
-      generateSetupCode,
-      () => undefined, // no-op on puzzle complete
-      true, // treat this as a readonly workspace
-      false // no replay log
-    );
-    executor.livePreview(songMetadata);
-    return () => {
-      executor.destroy();
-    };
-  }, [blocks, generateSetupCode, songMetadata]);
+
+    const code = generateSetupCode(blocks);
+    if (!executorRef.current.isLivePreviewRunning()) {
+      executorRef.current.startLivePreview(code, songMetadata);
+    } else {
+      executorRef.current.updateLivePreview(code, songMetadata);
+    }
+  }, [songMetadata, blocks]);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -76,6 +81,9 @@ const AiVisualizationPreview: React.FunctionComponent<
       }
     }
   }, [containerRef]);
+
+  // Destroy on unmount
+  useEffect(() => () => executorRef.current?.destroy(), []);
 
   return (
     <div>
