@@ -45,6 +45,7 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
 experiments.AI_RUBRICS = 'ai-rubrics';
+experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 experiments.HOC_TUTORIAL_DIALOG = 'hocTutorialDialog';
 
 /**
