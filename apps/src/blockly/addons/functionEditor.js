@@ -15,6 +15,7 @@ import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
+import CdoTrashcan from './cdoTrashcan';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -100,6 +101,9 @@ export default class FunctionEditor {
     );
 
     this.setUpEditorWorkspaceChangeListeners();
+
+    const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
+    functionEditorTrashcan.init();
   }
 
   hide() {

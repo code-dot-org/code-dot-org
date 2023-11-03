@@ -178,8 +178,8 @@ export function getBlockFields(block) {
   return fields;
 }
 
-export function getToolboxType() {
-  const workspace = Blockly.getMainWorkspace();
+export function getToolboxType(workspaceOverride) {
+  const workspace = workspaceOverride || Blockly.getMainWorkspace();
   if (!workspace) {
     return;
   }
@@ -194,10 +194,10 @@ export function getToolboxType() {
   }
 }
 
-export function getToolboxWidth() {
-  const workspace = Blockly.getMainWorkspace();
+export function getToolboxWidth(workspaceOverride) {
+  const workspace = workspaceOverride || Blockly.getMainWorkspace();
   const metrics = workspace.getMetrics();
-  switch (getToolboxType()) {
+  switch (getToolboxType(workspace)) {
     case ToolboxType.CATEGORIZED:
       return metrics.toolboxWidth;
     case ToolboxType.UNCATEGORIZED:
