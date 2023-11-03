@@ -12,6 +12,7 @@
   "danceAiFeedbackNeedNewDancer": "⚠️ You need to make a dancer.",
   "danceAiFeedbackNewMove": "⚠️ You need to add a block to make the dancer do a new move.",
   "danceAiFeedbackNoAiBlock": "⚠️ Add the `A.I. generate effect` block to setup.",
+  "danceAiFeedbackNoNewMove": "⚠️ Your dancer didn't do a new move. Keep trying!",
   "danceAiModalHeading": "generate {input} effect",
   "danceAiModalChooseEmoji": "Choose three emojis.",
   "danceAiModalGenerateButton": "Generate",
