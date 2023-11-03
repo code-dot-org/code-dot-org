@@ -1,129 +1,129 @@
 {
   "items": [
     {
+      "emoji": "💩", 
       "id": "poopy",
-      "name": "poopy",
-      "emoji": "💩"
+      "modelDescriptiveName": "poopy"
     },
     {
+      "emoji": "🥰",
       "id": "romantic",
-      "name": "romantic",
-      "emoji": "😍"
+      "modelDescriptiveName": "romantic"
     },
     {
+      "emoji": "🎉",
       "id": "party",
-      "name": "party",
-      "emoji": "🎉"
+      "modelDescriptiveName": "party"
     },
     {
+      "emoji": "🤪",
       "id": "silly",
-      "name": "silly",
-      "emoji": "😜"
+      "modelDescriptiveName": "silly"
     },
     {
+      "emoji": "✨",
       "id": "sparkle",
-      "name": "sparkle",
-      "emoji": "✨"
+      "modelDescriptiveName": "sparkle"
     },
     {
+      "emoji": "😀",
       "id": "happy",
-      "name": "happy",
-      "emoji": "😀"
+      "modelDescriptiveName": "happy"
     },
     {
+      "emoji": "🪄",
       "id": "magic",
-      "name": "magic",
-      "emoji": "🪄"
+      "modelDescriptiveName": "magic"
     },
     {
+      "emoji": "👻",
       "id": "spooky",
-      "name": "spooky",
-      "emoji": "👻"
+      "modelDescriptiveName": "spooky"
     },
     {
+      "emoji": "😚",
       "id": "cute",
-      "name": "cute",
-      "emoji": "😙"
+      "modelDescriptiveName": "cute"
     },
     {
+      "emoji": "😎",
       "id": "funky",
-      "name": "funky",
-      "emoji": "😎"
+      "modelDescriptiveName": "funky"
     },
     {
+      "emoji": "🌊",
       "id": "wavy",
-      "name": "wavy",
-      "emoji": "🌊"
+      "modelDescriptiveName": "wavy"
     },
     {
+      "emoji": "💡",
       "id": "lights",
-      "name": "lights",
-      "emoji": "💡"
+      "modelDescriptiveName": "lights"
     },
     {
+      "emoji": "🌈",
       "id": "rainbow",
-      "name": "rainbow",
-      "emoji": "🌈"
+      "modelDescriptiveName": "rainbow"
     },
     {
+      "emoji": "🤖",
       "id": "robot",
-      "name": "robot",
-      "emoji": "🤖"
+      "modelDescriptiveName": "robot"
     },
     {
+      "emoji": "😵‍💫",
       "id": "chaotic",
-      "name": "chaotic",
-      "emoji": "😵‍💫"
+      "modelDescriptiveName": "chaotic"
     },
     {
+      "emoji": "🪩",
       "id": "disco",
-      "name": "disco",
-      "emoji": "🪩"
+      "modelDescriptiveName": "disco"
     },
     {
+      "emoji": "😌",
       "id": "zen",
-      "name": "zen",
-      "emoji": "😌"
+      "modelDescriptiveName": "zen"
     },
     {
+      "emoji": "💨",
       "id": "fast",
-      "name": "fast",
-      "emoji": "🫨"
+      "modelDescriptiveName": "fast"
     },
     {
+      "emoji": "👿",
       "id": "evil",
-      "name": "evil",
-      "emoji": "👿"
+      "modelDescriptiveName": "evil"
     },
     {
+      "emoji": "🥶",
       "id": "cold",
-      "name": "cold",
-      "emoji": "🥶"
+      "modelDescriptiveName": "cold"
     },
     {
+      "emoji": "🚀",
       "id": "cosmic",
-      "name": "cosmic",
-      "emoji": "🚀"
+      "modelDescriptiveName": "cosmic"
     },
     {
+      "emoji": "😭",
       "id": "sad",
-      "name": "sad",
-      "emoji": "😭"
+      "modelDescriptiveName": "sad"
     },
     {
+      "emoji": "📰",
       "id": "black-and-white",
-      "name": "black and white",
-      "emoji": "📰"
+      "modelDescriptiveName": "black-and-white"
     },
     {
+      "emoji": "🔥",
       "id": "warm",
-      "name": "warm",
-      "emoji": "🔥"
+      "modelDescriptiveName": "warm"
     },
     {
+      "emoji": "❄️",
       "id": "cool",
-      "name": "cool",
-      "emoji": "❄️"
+      "modelDescriptiveName": "cool"
     }
   ]
 }
