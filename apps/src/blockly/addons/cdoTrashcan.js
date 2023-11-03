@@ -1,10 +1,10 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
-  constructor(workspace, idSuffix) {
+  constructor(workspace) {
     super();
     this.workspace = workspace;
-    this.id = `cdoTrashcan-${idSuffix}`;
+    this.id = `cdoTrashcan-${this.getSafeWorkspaceId()}`;
 
     /**
      * Current open/close state of the lid.
@@ -50,17 +50,26 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.workspace.recordDragTargets();
   }
 
+  getSafeWorkspaceId() {
+    // Google Blockly's workspace ids are randomly generated and can
+    // include invalid characters for element ids. Remove everything
+    // except alphanumeric characters and whitespace, then collapse
+    // multiple adjacent whitespace to single spaces.
+    return this.workspace.id.replace(/[^\w\s\']|_/g, '').replace(/\s+/g, ' ');
+  }
+
   createTrashcanSvg() {
+    const idSuffix = this.getSafeWorkspaceId();
     this.svgGroup_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.G,
-      {class: `blocklyTrash-${this.id}`},
+      {class: `blocklyTrash`},
       this.container
     );
 
     // trashcan body
     const bodyClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
-      {id: `blocklyTrashBodyClipPath-${this.id}`},
+      {id: `blocklyTrashBodyClipPath-${idSuffix}`},
       this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
@@ -84,7 +93,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': `url(#blocklyTrashBodyClipPath-${this.id})`,
+        'clip-path': `url(#blocklyTrashBodyClipPath-${idSuffix})`,
       },
       this.svgGroup_
     );
@@ -97,7 +106,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     // trashcan lid
     const lidClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
-      {id: `blocklyTrashLidClipPath-${this.id}`},
+      {id: `blocklyTrashLidClipPath-${idSuffix}`},
       this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
@@ -112,7 +121,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': `url(#blocklyTrashLidClipPath-${this.id})`,
+        'clip-path': `url(#blocklyTrashLidClipPath-${idSuffix})`,
       },
       this.svgGroup_
     );
