@@ -2,7 +2,6 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
 import {SongMetadata} from '../types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import * as danceMsg from '../locale';
-import Sounds from '@cdo/apps/Sounds';
 import {ASSET_BASE} from '../constants';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import utils from '../utils';
@@ -158,7 +157,7 @@ export default class ProgramExecutor {
     }
 
     this.hooks.runUserSetup();
-    this.nativeAPI.livePreview(songMetadata);
+    this.nativeAPI.livePreview(utils.getSongMetadataForPreview(songMetadata));
   }
 
   isLivePreviewRunning() {
