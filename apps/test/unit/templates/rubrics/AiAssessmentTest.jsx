@@ -9,6 +9,7 @@ describe('AiAssessment', () => {
     studentName: 'Jane Doe',
     aiUnderstandingLevel: 3,
     aiConfidence: 70,
+    learningGoalKey: 'learning_goal',
   };
 
   it('renders AiAssessmentBox if it is assessessed by AI', () => {
@@ -26,5 +27,13 @@ describe('AiAssessment', () => {
     expect(wrapper.find('AiAssessmentBox').props().aiConfidence).to.equal(
       props.aiConfidence
     );
+  });
+
+  it('render AIAssessmentFeedback element', () => {
+    const wrapper = shallow(<AiAssessment {...props} />);
+    expect(wrapper.find('AiAssessmentFeedback')).to.have.lengthOf(1);
+    expect(
+      wrapper.find('AiAssessmentFeedback').props().learningGoalKey
+    ).to.equal(props.learningGoalKey);
   });
 });
