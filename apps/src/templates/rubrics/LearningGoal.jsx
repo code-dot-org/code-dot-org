@@ -37,6 +37,8 @@ export default function LearningGoal({
   aiConfidence,
   submittedEvaluation,
   isStudent,
+  feedbackAdded,
+  setFeedbackAdded,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -104,6 +106,9 @@ export default function LearningGoal({
       .then(() => {
         setIsAutosaving(false);
         setAutosaved(true);
+        if (!feedbackAdded) {
+          setFeedbackAdded(true);
+        }
       })
       .catch(error => {
         console.log(error);
@@ -307,6 +312,8 @@ LearningGoal.propTypes = {
   aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
 };
 
 const AiToken = () => {
