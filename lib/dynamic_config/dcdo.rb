@@ -53,7 +53,8 @@ class DCDOBase < DynamicConfigBase
       gender: DCDO.get('gender', false),
       'show-coteacher-ui': DCDO.get('show-coteacher-ui', false),
       'amplitude-video-event-sample-rate': DCDO.get('amplitude-video-event-sample-rate', false),
-      'amplitude-dance-party-ai-sample-rate': DCDO.get('amplitude-dance-party-ai-sample-rate', false)
+      'amplitude-dance-party-ai-sample-rate': DCDO.get('amplitude-dance-party-ai-sample-rate', false),
+      'amplitude-event-sample-rate': DCDO.get('amplitude-event-sample-rate', false)
     }
   end
 end
