@@ -33,6 +33,9 @@
         "ro-RO",
         "ru-RU",
         "sk-SK",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
         "zh-TW"
       ],
       "tts": true,
@@ -40,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2023-08-31 17:21:59 UTC",
+    "serialized_at": "2023-11-01 17:41:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

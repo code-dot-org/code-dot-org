@@ -49,10 +49,6 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import BlockSvgUnused, {
-  onBlockClickDragDelete,
-  onThemeChange,
-} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
@@ -65,7 +61,7 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {disableOrphans} from './eventHandlers';
+import {adjustCalloutsOnViewportChange, disableOrphans} from './eventHandlers';
 
 const options = {
   contextMenu: true,
@@ -405,22 +401,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     googleBlocklyMixin.call(this, mixinObj, true);
   };
 
-  blocklyWrapper.BlockSvg.prototype.addUnusedBlockFrame = function () {
-    if (!this.unusedSvg_) {
-      this.unusedSvg_ = new BlockSvgUnused(this);
-      this.unusedSvg_.render();
-    }
-  };
-
-  blocklyWrapper.BlockSvg.prototype.isUnused = function () {
+  blocklyWrapper.BlockSvg.prototype.isDisabled = function () {
     return this.disabled;
-  };
-
-  blocklyWrapper.BlockSvg.prototype.removeUnusedBlockFrame = function () {
-    if (this.unusedSvg_) {
-      this.unusedSvg_.dispose();
-      this.unusedSvg_ = null;
-    }
   };
 
   blocklyWrapper.BlockSvg.prototype.getHexColour = function () {
@@ -470,21 +452,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.fieldRow;
   };
 
+  // Called by StudioApp, but only implemented for CDO Blockly.
   blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
-    function () {
-      blocklyWrapper.browserEvents.bind(
-        blocklyWrapper.mainBlockSpace.getCanvas(),
-        blocklyWrapper.BlockSpace.EVENTS.RUN_BUTTON_CLICKED,
-        blocklyWrapper.mainBlockSpace,
-        function () {
-          this.getTopBlocks().forEach(block => {
-            if (block.disabled) {
-              block.addUnusedBlockFrame();
-            }
-          });
-        }
-      );
-    };
+    function () {};
 
   blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(block => !block.disabled);
@@ -667,14 +637,21 @@ function initializeBlocklyWrapper(blocklyInstance) {
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
-    workspace.addChangeListener(onBlockClickDragDelete);
-    workspace.addChangeListener(onThemeChange);
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
     }
+
+    // When either the main workspace or the toolbox workspace viewport
+    // changes, adjust any callouts so they stay pointing to the appropriate
+    // location.
+    workspace.addChangeListener(adjustCalloutsOnViewportChange);
+    workspace
+      .getFlyout()
+      ?.getWorkspace()
+      ?.addChangeListener(adjustCalloutsOnViewportChange);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)

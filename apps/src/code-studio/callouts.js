@@ -38,10 +38,9 @@ export default function createCallouts(callouts) {
   });
 
   // Update callout positions when a blockly editor is scrolled.
-  $(window).on('block_space_metrics_set', function () {
-    snapCalloutsToTargets();
-    showHideWorkspaceCallouts();
-  });
+  $(window).on('block_space_metrics_set', handleWorkspaceResizeOrScroll);
+  // Update callout positions when the browser is resized.
+  window.addEventListener('resize', handleWorkspaceResizeOrScroll);
 
   $(window).on('droplet_change', function (e, dropletEvent) {
     switch (dropletEvent) {
@@ -202,6 +201,13 @@ export function addCallouts(callouts) {
       $(selector).qtip(config).qtip('show');
     }
   });
+  // Ensure any callouts pointing to hidden elements are hidden.
+  showHideWorkspaceCallouts();
+}
+
+export function handleWorkspaceResizeOrScroll() {
+  snapCalloutsToTargets();
+  showHideWorkspaceCallouts();
 }
 
 /**
@@ -265,7 +271,7 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
         calloutsHiddenByContainerVisibility[api.id] = true;
       }
 
-      if (target && target.overlaps(container).length > 0) {
+      if (target && elementIsInContainer(target, container)) {
         if (calloutsHiddenByScrolling[api.id]) {
           api.show();
           delete calloutsHiddenByScrolling[api.id];
@@ -294,4 +300,16 @@ function reverseDirection(token) {
     default:
       return token;
   }
+}
+
+// Return true if the element is fully contained within the container.
+function elementIsInContainer(element, container) {
+  var elementRect = element[0].getBoundingClientRect();
+  var containerRect = container[0].getBoundingClientRect();
+  return (
+    elementRect.left >= containerRect.left &&
+    elementRect.right <= containerRect.right &&
+    elementRect.top >= containerRect.top &&
+    elementRect.bottom <= containerRect.bottom
+  );
 }
