@@ -40,6 +40,15 @@ const EVENTS = {
   // Marketing site pages
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
 
+  // Amazon future engineer
+  AFE_START: 'AFE Start',
+  AFE_SIGN_IN_BUTTON_PRESS: 'AFE Sign In Button Press',
+  AFE_SIGN_UP_BUTTON_PRESS: 'AFE Sign Up Button Press',
+  AFE_SUBMIT_SCHOOL_INFO: 'AFE Submit School Info',
+  AFE_INELIGIBLE: 'AFE Ineligible',
+  AFE_CONTINUE: 'AFE Continue',
+  AFE_SUBMIT: 'AFE Submit',
+
   // Sections
   COMPLETED_EVENT: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
