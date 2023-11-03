@@ -70,7 +70,7 @@ class AnalyticsReporter {
     const sampleRateString = sampleRate
       ? `[SAMPLE RATE ${sampleRate} for ${eventGroup}]`
       : '';
-    if (sampleRate < 0 || Math.random() > sampleRate) {
+    if (sampleRate < 0 || (sampleRate > 0 && Math.random() > sampleRate)) {
       this.log(
         `[SKIPPED SAMPLED EVENT]${sampleRateString}${eventName}. Payload: ${JSON.stringify(
           {
