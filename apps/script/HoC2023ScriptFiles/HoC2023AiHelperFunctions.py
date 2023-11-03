@@ -6,7 +6,7 @@ from openai.embeddings_utils import (
     chart_from_components,
     indices_of_nearest_neighbors_from_distances,
 )
-from constants import *ai
+from constants import *
 import pandas as pd
 import pickle 
 import openai
