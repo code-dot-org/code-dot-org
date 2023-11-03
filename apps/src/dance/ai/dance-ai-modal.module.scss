@@ -344,6 +344,10 @@ $ai-modal-border-width: 8px;
   .button {
     font-size: 16px;
 
+    &:disabled {
+      pointer-events: none;
+    }
+
     &NoMargin {
       margin: 0;
     }

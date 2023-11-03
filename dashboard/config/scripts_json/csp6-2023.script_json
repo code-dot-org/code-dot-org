@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-30 21:34:10 UTC",
+    "serialized_at": "2023-11-02 23:25:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2313,7 +2313,13 @@
       "properties": {
         "description": "**Levels 3-4:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
         "name": "Traversal Patterns",
-        "progression_name": "Traversal Patterns"
+        "progression_name": "Traversal Patterns",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s):  \n- Write iteration statements to traverse a list. \n- Determine the result of an algorithm that includes list traversals.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=sharing)\n\n**Sample Response for Instructors**\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2815843a-607d-421a-a710-a89ee57ae819",

@@ -4,7 +4,7 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {setCurrentAiModalField, DanceState} from '../danceRedux';
+import {closeAiModal, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {FieldDropdown, Workspace} from 'blockly/core';
 import AiGeneratingView from './AiGeneratingView';
@@ -29,19 +29,14 @@ enum Mode {
 
 type AiModalItem = {
   id: string;
-  name: string;
   emoji: string;
 };
-
-interface DanceAiProps {
-  onClose: () => void;
-}
 
 const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
-const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
+const DanceAiModal: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
@@ -59,6 +54,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
+  );
+
+  const aiModalOpenedFromFlyout = useSelector(
+    (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
   );
 
   const aiOutput = useSelector(
@@ -221,14 +220,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       origBlock.dispose(false);
 
       // End modal.
-      dispatch(setCurrentAiModalField(undefined));
+      onClose();
     }
   };
 
   const handleUseClick = () => {
     currentAiModalField?.setValue(resultJson);
-    dispatch(setCurrentAiModalField(undefined));
+    onClose();
   };
+
+  const onClose = () => dispatch(closeAiModal());
 
   const handleExplanationClick = () => {
     setMode(Mode.EXPLANATION);
@@ -570,6 +571,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
+              disabled={aiModalOpenedFromFlyout}
             />
           )}
           {showUseButton && (
