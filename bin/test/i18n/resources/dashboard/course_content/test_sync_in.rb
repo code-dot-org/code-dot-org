@@ -1,6 +1,5 @@
 require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/dashboard/course_content/sync_in'
-require 'json'
 
 class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def setup
@@ -395,7 +394,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     level.authored_hints = [
       {
         hint_id:       'expected_level_authored_hint_id',
-        hint_markdown: <<-XML.strip.gsub(/^ {10}/, '')
+        hint_markdown: <<~XML.strip
           <xml>
             <block type="text">
               <title name="TEXT">expected_text</title>
@@ -500,7 +499,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
     level = FactoryBot.build(:level)
-    level.short_instructions = <<-XML.strip.gsub(/^ {6}/, '')
+    level.short_instructions = <<~XML.strip
       <xml>
         <block type="text">
           <title name="TEXT">expected_text</title>
@@ -533,7 +532,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
     level = FactoryBot.build(:level)
-    level.long_instructions = <<-XML.strip.gsub(/^ {6}/, '')
+    level.long_instructions = <<~XML.strip
       <xml>
         <block type="text">
           <title name="TEXT">expected_text</title>

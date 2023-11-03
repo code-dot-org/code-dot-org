@@ -7,13 +7,14 @@
   "user_id": 182,
   "properties": {
     "uses_preview": "true",
+    "aiOutput": "both",
     "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
     "hide_animation_mode": "true",
     "show_type_hints": "true",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -41,19 +42,16 @@
     "name_suffix": "_draft",
     "skip_autosave": true,
     "default_song": "breakmysoul_beyonce",
-    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "long_instructions": "###**Nice work!** \r\nNow use AI Bot and the skills you just learned to code a dance party of your own.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "upButton",
       "downButton"
     ],
-    "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "video_key": "hoc_dance_events_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "tts_short_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
-    "tts_long_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "preload_asset_list": null,
@@ -62,7 +60,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-04T21:23:44.489+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_10_draft\\\"\"],\"cloned_from\":\"Dance_2019_10_draft\"},{\"changed_at\":\"2023-10-04 21:23:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-04T21:23:44.489+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_10_draft\\\"\"],\"cloned_from\":\"Dance_2019_10_draft\"},{\"changed_at\":\"2023-10-04 21:23:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-06 22:01:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"tts_short_instructions_override\",\"tts_long_instructions_override\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-12 14:46:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:46:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 14:46:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-12 20:59:50 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -71,8 +69,8 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="Dancelab_whenSetup" id="{vM#jv*-}QGNwT5jw~Y+" deletable="false" movable="false" x="16" y="16">
           <statement name="DO">
-            <block type="Dancelab_ai" id="34A,eBSE~a99,SZAsxH4">
-              <field name="VALUE">{  "backgroundColor": "neon",  "backgroundEffect": "galaxy",  "foregroundEffect": "floating_rainbows",  "explanation": "I chose a neon background with a galaxy effect to create a futuristic and space-like atmosphere, and added floating rainbows to represent the colorful and magical nature of the astronaut exploring planets and atoms."}</field>
+            <block type="Dancelab_ai" id="A?kiObB1UjY0E#nXCgvr">
+              <field name="VALUE">{"inputs":["funky","cosmic","rainbow"],"backgroundEffect":"kaleidoscope","backgroundColor":"neon","foregroundEffect":"floating_rainbows"}</field>
               <next>
                 <block type="Dancelab_makeNewDanceSpriteGroup" id="SZMJgn/]Vm39Di=pg/#g">
                   <field name="N">12</field>

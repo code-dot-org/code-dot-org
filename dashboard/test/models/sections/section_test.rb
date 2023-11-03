@@ -471,7 +471,8 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -520,7 +521,63 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
+  end
+
+  test 'summarize: section with a coteacher' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section
+      coteacher_user = create :teacher
+      primary_section_instructor_id = section.section_instructors[0].id
+      coteacher_section_instructor = section.add_instructor(coteacher_user.email, current_user)
+      section.reload
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        assignedTitle: '',
+        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
+        currentUnitTitle: '',
+        linkToCurrentUnit: '',
+        courseVersionName: nil,
+        numberOfStudents: 0,
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        code: section.code,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        login_type: "email",
+        participant_type: 'student',
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
+        course_id: nil,
+        script: {id: nil, name: nil, project_sharing: nil},
+        studentCount: 0,
+        grades: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+        restrict_section: false,
+        is_assigned_csa: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -572,7 +629,9 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -617,7 +676,8 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -780,6 +840,41 @@ class SectionTest < ActiveSupport::TestCase
     @section.update_code_review_expiration(false)
     @section.save
     assert_nil @section.code_review_expires_at
+  end
+
+  test 'section create adds section instructor' do
+    assert_difference 'SectionInstructor.count' do
+      section = create(:section)
+      instructor = section.instructors.first
+      assert_equal instructor, section.user
+    end
+  end
+
+  test 'section update fixes section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.status = :declined
+    si.save!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
+  test 'section update fixes soft-deleted section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.destroy!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed again!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
   end
 
   def set_up_code_review_groups

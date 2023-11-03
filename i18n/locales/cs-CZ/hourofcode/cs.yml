@@ -3,38 +3,57 @@ cs:
   site_name: HODINA PROGRAMOVÁNÍ
   hour_of_code: Hodina programování
   language: Čeština
-  front_title: Připojte se k největší vzdělávací akce v dějinách, Prosinec 7-13, 2015
+  front_title: Připojte se k největší vzdělávací akce v dějinách během  %{campaign_date}
   coming_soon: Bude to brzy
-  campaign_date_start_short: 5. prosince
-  campaign_date_start_long: 5. prosince
-  campaign_date_short: 5. až 11. prosince
-  campaign_date_full: 5. až 11. prosince
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5. až 11. prosince 2022
-  nonus_campaign_date_start_short: 1. října
-  nonus_campaign_date_start_long: 1. října
-  nonus_campaign_date_short: 1. října až 18. prosince
-  nonus_campaign_date_full: 1. října až 18. prosince
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1. října 2022 až 18. prosince 2022
-  latam_campaign_date_start_short: 1. října
-  latam_campaign_date_start_long: 1. října
-  latam_campaign_date_short: 1. října až 18. prosince
-  latam_campaign_date_full: 1. října až 18. prosince
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1. října 2022 až 18. prosince 2022
-  europe_campaign_date_start_short: 1. října
-  europe_campaign_date_start_long: 1. října
-  europe_campaign_date_short: 1. října až 18. prosince
-  europe_campaign_date_full: 1. října až 18. prosince
-  europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: 1. října 2022 až 18. prosince 2022
-  africa_campaign_date_start_short: 1. října
-  africa_campaign_date_start_long: 1. října
-  africa_campaign_date_short: 1. října až 18. prosince
-  africa_campaign_date_full: 1. října až 18. prosince
-  africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1. října 2022 až 18. prosince 2022
+  new: Nový
+  hours_of_code_served: Hodiny obsluhy kódu
+  hoc_stat_languages: Studenti se učí ve více než 45 jazycích
+  hoc_stat_hours_served: Přes 100 milionů studentů zkusilo Hodinu programování
+  hoc_stat_females: Studentky tvoří 50% účastníků Hodiny kódu
+  campaign_date_start_short: 4. prosince
+  campaign_date_start_long: 4. prosince
+  campaign_date_short: 4. - 10. prosince
+  campaign_date_full: 4. až 10. prosince
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4. - 10. prosince 2023
+  nonus_campaign_date_start_short: 5. září
+  nonus_campaign_date_start_long: 5. září
+  nonus_campaign_date_short: 5. září až 17. prosince
+  nonus_campaign_date_full: 5. září až 17. prosince
+  nonus_campaign_date_year: '2023'
+  nonus_campaign_date_full_year: 5. září 2023 až 17. prosince 2023
+  latam_campaign_date_start_short: 5. září
+  latam_campaign_date_start_long: 5. září
+  latam_campaign_date_short: 5. září až 17. prosince
+  latam_campaign_date_full: 5. září až 17. prosince
+  latam_campaign_date_year: '2023'
+  latam_campaign_date_full_year: 5. září 2023 až 17. prosince 2023
+  europe_campaign_date_start_short: 5. září
+  europe_campaign_date_start_long: 5. září
+  europe_campaign_date_short: 5. září až 17. prosince
+  europe_campaign_date_full: 5. září až 17. prosince
+  europe_campaign_date_year: '2023'
+  europe_campaign_date_full_year: 5. září 2023 až 17. prosince 2023
+  africa_campaign_date_start_short: 5. září
+  africa_campaign_date_start_long: 5. září
+  africa_campaign_date_short: 5. září až 17. prosince
+  africa_campaign_date_full: 5. září až 17. prosince
+  africa_campaign_date_year: '2023'
+  africa_campaign_date_full_year: 5. září 2023 až 17. prosince 2023
+  hoc2023_header: Kreativita s AI
+  hoc2023_hero_desc_homepage: Připojte se k milionům lidí po celém světě a zorganizujte
+    hodinu kódování, s AI nebo bez ní, a naučte se, jak AI funguje. Kdokoli, kdekoli
+    to může udělat. Nejsou potřeba žádné zkušenosti.
+  hoc2023_hero_desc_learn_page: Letos posuneme Hodinu kódu do nových výšin tím, že
+    nabízíme možnosti kódování, které zahrnují jak umělou inteligenci (AI), tak komponenty
+    jiné než AI.
+  hoc2023_social_creativity_with_ai_title: Hodina kódu - Co vytvoříte?
+  hoc2023_social_creativity_with_ai_desc: Využijte informatiku k prozkoumání a poznávání
+    AI!
+  hoc2023_what_is_hoc_desc: Hodina kódu je bezplatný úvod do informatiky prostřednictvím
+    zábavných aktivit a videí pro studenty všech úrovní dovedností. Letošní oslavu
+    programování a umělé inteligence podporuje více než 400 partnerů, 20 000 pedagogů
+    a 58 000 dobrovolníků.
   hoc2022_header: Bádejte, hrajte, vytvářejte!
   social_hoc2022_explore_play_create: Používejte počítačovou vědu k bádání, hraní
     a vytváření!
@@ -47,6 +66,9 @@ cs:
     Nas X, Selena Gomez, hudba z Disneyho „Encanto,“ a další!
   social_hoc2023_dance: Představujeme Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X,
     Selena Gomez, hudbu z Disneyho „Encanto“ a další!
+  social_hoc2023_dance_v2: Je čas, abyste si věci rozebrali! Vytvořte si vlastní taneční
+    párty s hity Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía a
+    dalších!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Učte se dnes, vybudujte zářnější zítřek.
@@ -170,17 +192,54 @@ cs:
   social_ai_title: Další informace o umělé inteligenci (AI) | Code.org
   social_ai_desc: Nástroje, které pomáhají studentům a učitelům přinést umělou inteligenci
     do učebny.
+  social_videos_desc: Poutavá videa z informatiky pro studenty všech věkových kategorií.
   pl_superhero_title: Pomozte studentům stát se superhrdiny!
   pl_superhero_desc: Připojte se k našemu vysoce podpůrnému programu profesionálního
     učení pro pedagogy středních a středních škol.
   teach_ai_homepage_banner_title: AI vzdělávání pro svět
   teach_ai_homepage_banner_desc: Code.org je součástí TeachAI, který se věnuje zmocnění
     pedagogů všude, aby učili s AI a umělou inteligencí.
-  curriculum_launch_2023_title: Naše učební osnovy prošly úžasnými změnami
+  curriculum_launch_2023_title: Úžasné novinky v našich učebních osnovách
   curriculum_launch_2023_desc: Aktualizovali jsme kurzy Mezipředmětové vztahy v informatice,
     Principy informatiky, Objevování informatiky a další. Navíc jsme přidali Katalog
     kurzů a přepracovanou stránku Učení, aby se vám kurzy lépe hledaly.
   in_partnership_with: Ve spolupráci s
+  shop_code_dot_org_heading: Nakupujte Code.org
+  shop_code_dot_org_desc: Podpořte naši práci a noste pohyb s hrdostí. Naše klobouky
+    nosí prezident Obama i celebrity.
+  spread_the_word_heading: Rozšiřujte povědomí
+  spread_the_word_desc: Zesilte náš dopad sdílením Code.org s vaší sítí. Od sociálních
+    médií po e-mailové aktualizace, zjistěte, jak nám můžete pomoci oslovit více pedagogů,
+    studentů a obhájců.
+  follow_us_heading: Sledujte nás na sociálních sítích
+  follow_us_desc: Zůstaňte s námi v obraze na sociálních médiích a sdílejte naše příspěvky
+    se svou sítí, abyste zůstali informováni a pomohli zvyšovat povědomí.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: tableta
+  device_laptop: Notebook
+  device_desktop_computer: Stolní počítač
+  device_mobile_device: Mobilní zařízení
+  for_everyone: Pro všechny
+  for_students_teacher_led_learning: 'Pro studenty: Učení vedené učitelem'
+  for_students_teacher_led_lessons: 'Pro studenty: Lekce vedené učitelem'
+  professional_development: Profesní rozvoj
+  how_ai_works_video_series: Jak funguje AI Série videí
+  learn_how_ai_works: Zjistěte, jak funguje AI
+  ai_101_for_educators: AI 101 pro pedagogy
+  learn_about_ai_impacts: Zjistěte více o dopadech AI
+  hoc_ai_activities: Aktivity Hour of Code AI
+  subscribe_to_emails_heading: Přihlásit se k odběru e-mailů
+  subscribe_to_emails_desc: Přečtěte si o tom, co se děje na Code.org a ve vzdělávání
+    informatiky prostřednictvím čtvrtletních aktualizací prostřednictvím našeho seznamu
+    adresátů.
+  subscribe_to_emails_intl: Přihlaste se k odběru mezinárodních novinek
+  promote_code_dot_org_heading: Propagujte Code.org
+  promote_code_dot_org_desc: Propagujte informatiku ve vaší oblasti pomocí statistik,
+    citace, a videa.
   afe_partnership_logo_alt: Logo Amazon Future Engineer
   afe_partnership_thanks_desc: Inženýr budoucnosti (Amazon Future Engineer)* je komplexní
     program pro děti a mladistvé z nízkopříjmových či jinak znevýhodněných rodin,
@@ -200,21 +259,61 @@ cs:
   curricula_title_high: Středoškolské osnovy
   curricula_desc_high: Prohlédněte si přesvědčivé kurzy a aktivity, které vás a vaše
     studenty středních škol zvou, abyste se hlouběji ponořili do informatiky.
+  for_administrators_heading: Pro administrátory
+  for_administrators_desc: Připojte se k tisícům škol, které již do svých učebních
+    osnov začlenily informatiku.
+  for_parents_heading: Pro rodiče
+  for_parents_desc: Můžete pomoci povzbudit školu svého studenta, aby nabídla nebo
+    rozšířila vzdělávání v oblasti informatiky.
+  for_educators_heading: Pro učitele
+  for_educators_desc: Začněte učit ještě dnes - nejsou nutné žádné zkušenosti s informatikou
+    - s našimi odbornými vzdělávacími workshopy.
   students_label: Studenti, žáci
   teachers_label: Učitelé
+  educators_label: Pedagogové
+  companies_label: Společnosti
+  districts_label: Okresy
+  school_assemblies_label: Školní shromáždění
+  parents_label: Rodiče
+  public_officials_label: Veřejní úředníci
+  volunteers_label: Dobrovolníci
+  virtual_events_label: Virtuální události
   teacher_label_csf: 'Základy informatiky: učitel'
   teacher_label_csd: CS Discoveries Učitel
   teacher_label_csp: 'Principy informatiky: učitel'
   teacher_label_csc: 'Mezipředmětové vztahy v informatice: učitel'
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Fórum pro učitele
+  teacher_forum_desc: Navštivte Fórum pro učitele Hour of Code, kde získáte rady,
+    přehled a podporu od ostatních pedagogů.
   required_materials: 'Požadované materiály:'
   optional_materials: 'Volitelné materiály:'
-  call_to_action_explore_roles: Prozkoumejte otevřené role
+  for_students: Pro studenty
+  for_educators: Pro učitele
+  call_to_action_host_hoc: Uspořádejte hodinu kódu
+  call_to_action_hold_an_event: Pořádat událost
+  call_to_action_register_event: Zaregistrujte svou akci
+  call_to_action_register_your_hoc: Zaregistrujte si svou Hodinu programování
+  call_to_action_select_activity: Vyberte aktivitu
+  call_to_action_start_activity: Zahájení aktivity
+  call_to_action_get_certificates: Získat certifikáty
+  call_to_action_go_beyond_hoc: Překročte Hodinu kódu
+  call_to_action_explore_all_hoc_activities: Prozkoumejte všechny aktivity Hour of
+    Code na webu Code.org
+  call_to_action_start_dance_party: Spusťte taneční párty
+  call_to_action_start_part_02: Začátek druhé části
+  call_to_action_start_unplugged_activity: Spusťte odpojenou aktivitu
+  call_to_action_view_promo_resources: Zobrazit propagační zdroje
   call_to_action_learn_more: Dozvědět se více
   call_to_action_watch_now: Sledovat nyní
   call_to_action_try_activity: Vyzkoušejte aktivitu
+  call_to_action_try_activities: Vyzkoušejte aktivity
+  call_to_action_try_hoc_ai_activities: Vyzkoušejte aktivity Hour of Code AI
+  call_to_action_explore_activities: Prozkoumejte aktivity
+  call_to_action_explore_ai: Prozkoumejte AI
   call_to_action_explore_unit: Prozkoumejte jednotku
   call_to_action_explore_curriculum: Prozkoumejte kurikulum
+  call_to_action_explore_curricula: Prozkoumat učební osnovy
   call_to_action_explore_curriculum_options: Prozkoumat možnosti učebních osnov
   call_to_action_explore_lessons: Prozkoumejte lekce
   call_to_action_explore_modules: Prozkoumejte moduly
@@ -265,6 +364,7 @@ cs:
   call_to_action_find_self_paced_modules: Najděte moduly s vlastním tempem
   call_to_action_join_teacher_forums: Připojte se k fórům učitelů
   call_to_action_explore_teacher_forums: Prozkoumat fórum pro učitele
+  call_to_action_explore_teacher_forum: Prozkoumejte fórum pro učitele
   call_to_action_explore_career_resources: Prozkoumejte kariérní zdroje
   call_to_action_watch_videos: Sledovat videa
   call_to_action_download_posters: Stáhnout plakáty
@@ -281,11 +381,40 @@ cs:
   call_to_action_notify_available: Informujte mě, až bude k dispozici
   call_to_action_register_early_access: Zaregistrujte se pro předběžný přístup
   call_to_action_open_positions: Zobrazení otevřených pozic
+  call_to_action_explore_roles: Prozkoumejte otevřené role
   call_to_action_get_guide: Získejte průvodce
   call_to_action_donate_to_cdo: Přispějte na Code.org
   call_to_action_start_fundraiser: Spusťte sbírku
   call_to_action_view_donation_policy: Zobrazit zásady darování
   call_to_action_view_donate_bitpay: Přispějte pomocí BitPay
+  call_to_action_make_a_donation: Udělejte dar
+  call_to_action_other_ways_to_give: Další způsoby, jak dát
+  call_to_action_become_partner_usa: Staňte se partnerem Spojených států
+  call_to_action_become_partner_intl: Staňte se mezinárodním partnerem
+  call_to_action_become_a_volunteer: Staňte se dobrovolníkem
+  call_to_action_start_translating: Začněte překládat
+  call_to_action_learn_about_advocacy: Zjistěte více o naší advokacii
+  call_to_action_visit_store: Navštivte obchod
+  call_to_action_view_faqs: Zobrazit více často kladených dotazů
+  call_to_action_applications_open: Přihlášky jsou nyní otevřené
+  call_to_action_apply_cs_ambassador: Přihlaste se jako velvyslanec CS
+  call_to_action_coming_soon: Již brzy!
+  call_to_action_learn_how_ai_works: Zjistěte, jak funguje umělá inteligence
+  call_to_action_learn_about_ai: Další informace o umělé inteligenci
+  aria_label_call_to_action_hoc_how_to_educators: Podívejte se na návod pro pedagogy
+  aria_label_call_to_action_hoc_how_to_companies: Zobrazit průvodce návody pro společnosti
+  aria_label_call_to_action_hoc_how_to_districts: Zobrazit průvodce návody pro okresy
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Zobrazit příručku pro školní
+    shromáždění
+  aria_label_call_to_action_hoc_how_to_parents: Zobrazit příručku pro rodiče
+  aria_label_call_to_action_hoc_how_to_public_officials: Zobrazit příručku pro veřejné
+    úředníky
+  aria_label_call_to_action_hoc_how_to_volunteers: Zobrazit návod pro dobrovolníky
+  aria_label_call_to_action_hoc_how_to_virtual_events: Podívejte se na průvodce virtuálními
+    událostmi
+  aria_label_call_to_action_dance_01: Spusťte aktivitu Taneční párty
+  aria_label_call_to_action_dance_02: Začněte druhou část aktivity Dance Party
+  aria_label_call_to_action_dance_unplugged: Spusťte odpojenou aktivitu Dance Party
   aria_label_call_to_action_afe: Další informace o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začněte odborný vzdělávací program Teaching
     Computer Science Fundamentals
@@ -401,11 +530,25 @@ cs:
   curriculum_name_creating_apps_with_devices: Tvorba aplikací pomocí nástrojů
   curriculum_name_poetry: Programování s Poezií
   curriculum_name_dance_party: Taneční párty
+  curriculum_name_dance_party_02: Pokračujte v tanci
+  curriculum_name_dance_party_unplugged: Taneční párty Unplugged
+  curriculum_name_dance_party_ai_edition: 'Taneční párty: AI Edition'
   curriculum_name_problem_solving_computing: Řešení problémů a práce s počítačem
   curriculum_name_web_development: Vývoj webových stránek
   curriculum_name_interactive_animations_games: Interaktivní animace a hry
   curriculum_name_design_process: Proces navrhování
   curriculum_name_data_society: Data a společnost
+  curriculum_desc_dance_party_01: V této úvodní aktivitě použijte kód k tomu, aby
+    se různé barevné postavy přesunuly k animovanému pozadí a pozitivní hudbě.
+  curriculum_desc_dance_party_02: Jděte nad rámec úvodního tutoriálu s rozšířenými
+    nápady na projekty. Projděte si knihovnu příkladů složitějších tanečních večírků.
+  curriculum_desc_dance_party_unplugged: Pusťte se do hry - není potřeba žádný počítač!
+    Zjistěte, jak lze kódovací koncepty, jako události, použít k synchronizaci choreografie
+    tanečníků.
+  curriculum_desc_dance_party_ai_edition: Zjistěte více o konceptech umělé inteligence
+    (AI) a vytvořte si vlastní virtuální taneční párty představující dnešní nejlepší
+    umělce. S desítkami skladeb, ze kterých si můžete vybrat, oslovíte každého studenta
+    bez ohledu na jeho hudební vkus. Je čas, abyste si věci rozebrali!
   curriculum_desc_csf: Volný soubor základních učebních osnov, který seznamuje studenty
     se základními koncepty informatiky.
   curriculum_desc_csf_express: Naučte se vytvářet počítačové programy, rozvíjejte
@@ -519,12 +662,16 @@ cs:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2—12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Předškoláci
   module_grade_grade_01: 1. ročník
@@ -532,6 +679,12 @@ cs:
   module_grade_grade_03: 3. ročník
   module_grade_grade_04: 4. ročník
   module_grade_grade_05: 5. ročník
+  module_age_05_07: Věk 5-7
+  module_age_07: Věk 7+
+  module_age_07_11: Věk 7-11
+  module_age_11: Věk 11+
+  module_age_13: Věk 13+
+  module_age_all_age: Všechny věkové kategorie
   module_grade_k_5_teachers: K-5 Učitelé
   module_grade_6_10_teachers: 6-10 Učitelé
   module_grade_9_12_teachers: 9-12 Učitelé
@@ -625,6 +778,57 @@ cs:
   heading_explore_curriculum_catalog: Prozkoumejte všechny naše kurzy v katalogu učebních
     osnov
   heading_csa_ai: Hledáte co dělat po zkoušce AP®?
+  heading_bring_cs_to_students: Přineste studentům informatiku
+  heading_cs_ambassador_program: Program velvyslance CS
+  heading_featured_student_projects: Doporučené studentské projekty
+  heading_start_hoc_with_videos: Začněte svou Hodinu kódu inspirativními videi
+  cs_ambassador_subhead: Pokud jste studentem střední školy, který je nadšený povzbuzováním
+    více mladých žen, aby ve vaší škole studovaly informatiku, pak tě potřebujeme!
+  cs_ambassador_desc: Počítačová věda se dotýká každého oboru, včetně medicíny, zábavy,
+    sportu, vzdělávání, obchodu, módy a podnikání. Přesto pouze 5% mladých žen ve
+    středoškolském věku navštěvuje kurzy informatiky. Velvyslanci mohou pomoci překonat
+    tento rozdíl mezi pohlavími tím, že povzbudí své vrstevníky, aby absolvovali kurz
+    informatiky.
+  cs_ambassador_application_date: Přihlášky otevřené do 8. listopadu 2023
+  cs_ambassador_application_subhead: Spolupracujte s učitelem a odešlete svou žádost
+    ještě dnes
+  cs_ambassador_application_questions: Otázky? Kontaktujte prosím [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Co dělají velvyslanci CS?
+  cs_ambassador_do_desc: Ambasadoři CS povzbuzují mladé ženy, aby prozkoumaly toto
+    téma, a navzájem se zvedají, když získávají zpět své místo v počítačové vědě.
+    Ambasadoři CS se spojují se svými vrstevníky, aby se podělili o své vzrušení a
+    lásku k počítačové vědě. Navštěvují učebny, hostí stoly na oběd, a mluví na shromážděních
+    a klubových schůzích. Ambasadoři CS spolupracují s učiteli a správci škol na rozbití
+    stereotypů, které brzdí mladé ženy.
+  cs_ambassador_steps_heading: Co potřebuji, abych se stal velvyslancem CS?
+  cs_ambassador_steps_list_title_01: Vášeň
+  cs_ambassador_steps_list_title_02: Zkušenosti v kurzu CS
+  cs_ambassador_steps_list_title_03: Škola, která nabízí CS
+  cs_ambassador_steps_list_desc_01: Vášeň pro povzbuzení mladých žen ve vaší škole,
+    aby chodily na kurzy informatiky
+  cs_ambassador_steps_list_desc_02: 'Absolvovali roční kurz informatiky ve školním
+    roce 2022-23 nebo dříve (doporučeno: CS Principles nebo AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Navštěvujte střední školu, která pravidelně nabízí
+    roční kurz informatiky (doporučeno: CS Principles nebo AP® CSA)'
+  cs_ambassador_benefits_heading: Výhody programu
+  cs_ambassador_benefits_list_title_01: Národní společenství
+  cs_ambassador_benefits_list_title_02: Veřejná služba
+  cs_ambassador_benefits_list_title_03: Uznání
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certifikát
+  cs_ambassador_benefits_list_title_06: Zkušenosti
+  cs_ambassador_benefits_list_desc_01: Přístup k národní komunitě mladých vůdců, kteří
+    se zavázali odstranit genderovou mezeru v informatice.
+  cs_ambassador_benefits_list_desc_02: Hodiny komunitních služeb a příležitost získat
+    [Cena prezidentské dobrovolnické služby USA] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Uznání jako velvyslanec 2023-2024 a způsobilý
+    být oceněn v Síni slávy ambasadorů Code.org.
+  cs_ambassador_benefits_list_desc_04: Buďte identifikováni jako velvyslanec CS prostřednictvím
+    speciálního oblečení, samolepek a dalších značkových oděvů Code.org!
+  cs_ambassador_benefits_list_desc_05: Oficiální osvědčení o účasti od Code.org.
+  cs_ambassador_benefits_list_desc_06: Získejte zkušenosti a příběhy, které můžete
+    sdílet ve své přihlášce na vysokou školu, životopis a další!
   professional_learning_section_desc: Získejte podporu potřebnou k přípravě na učení,
     kterou doporučují samotní učitelé. Až 90 % z nich kurz považuje za ten nejlepší
     program pro profesní rozvoj.
@@ -657,7 +861,7 @@ cs:
   support_and_questions_section_desc: Náš tým podpory vám rád zodpoví jakékoliv otázky
     ohledně toho, jak začít učit s Code.org. Na fóru pro učitele se také můžete zeptat
     kolegů na jejich zkušenosti.
-  subscribe_form_section_title: Přihlaste se k odběru aktualizací
+  subscribe_form_section_title: Přihlaste se k odběru novinek
   subscribe_form_section_desc_csa: Přihlaste se k odběru měsíčních e-mailů o AP® Computer
     Science A společnosti Code.org a získejte užitečné připomenutí, tipy a aktualizace
     zasílané přímo do vaší doručené pošty.
@@ -674,6 +878,13 @@ cs:
     informatiky Code.org a získejte užitečné připomenutí, tipy a aktualizace zasílané
     přímo do vaší doručené pošty.
   subscribe_form_section_unsubscribe: Z odběru se můžete kdykoli odhlásit.
+  dance_hero_heading: Kódujte taneční párty
+  dance_featuring_songs_by_short: 'Obsahující písně:'
+  dance_featuring_songs_by_long: 'Dance Party obsahuje písně od:'
+  dance_and_more: a více
+  dance_choose_activity: Vyberte si taneční párty
+  dance_afe_disclaimer: Umělci, jejichž hudba je použita v tomto tutoriálu, nesponzorují
+    ani neschvalují Amazon jako součást licencování používání své hudby na Code.org.
   blockchain_hero_heading: Jak funguje blockchain
   blockchain_hero_desc: Ponořte se do světa blockchainu s „Jak funguje blockchain“,
     naší nové video série a doprovodných lekcí!
@@ -779,6 +990,11 @@ cs:
   ai_curriculum_grades_05: 'Úrovně stupně: 9-12'
   ai_curriculum_btn_aria_label_05: Prozkoumejte modul Softwarové inženýrství a počítačové
     vidění
+  ai_curriculum_title_06: Společenský dopad generativní AI
+  ai_curriculum_desc_06: Prozkoumejte dopad generativní umělé inteligence z různých
+    perspektiv a poté spolupracujte jako tým a vypracujte pokyny, které řeší nejvíce
+    potřeb všech účastníků.
+  ai_curriculum_btn_aria_label_06: Zobrazit společenský dopad generativní umělé inteligence
   ai_carousel_heading: 'Co říkají učitelé o AI s Code.org:'
   ai_carousel_quote_01: Tato lekce také dala mým studentům příležitost vidět, že v
     klasifikačních systémech existuje prvek názoru. Později, když jsme začali vidět,
@@ -895,6 +1111,7 @@ cs:
     vzdělávacích nástrojů AI a využití AI pro hodnocení studentů. Díky bohaté kombinaci
     teorie, praktických příkladů a zdrojů si klade za cíl umožnit pedagogům orientovat
     se v prostředí AI a zlepšit zkušenosti studentů s učením.
+  ai_pl_101_resources_5: Průvodce zajištěním odpovědného přístupu k umělé inteligenci
   ai_pl_101_video_desc_6: 'Zjistěte více o nové technologii, která vede k velkým změnám
     v umělé inteligenci, která obsahuje dvě nová videa o velkých jazykových modelech
     (například ChatGPT) a Generative AI. Poslechněte si, jak tyto nové technologie
@@ -906,6 +1123,8 @@ cs:
     kteří si jen ponoří prsty na nohou, stejně jako pokročilé nástroje pro ty, kteří
     chtějí maximalizovat svůj potenciál.
   ai_pl_101_resources_3: AI výzvy k transformaci učení studentů
+  ai_pl_101_resources_section_title: Další způsoby, jak se dozvědět o AI
+  ai_pl_101_resources_guide: 'Průvodce společníkem:'
   how_ai_works_hero_heading: Jak funguje umělá inteligence
   how_ai_works_hero_desc: Ponořte se do světa AI pomocí „Jak AI funguje“, naší video
     série a doprovodných lekcí!
@@ -1140,9 +1359,8 @@ cs:
     180 zemích.
   farsi_page_support_heading: Vaše podpora a váš hlas
   farsi_page_support_heading_02: Děkujeme za váš zájem o Code.org v perštině.
-  farsi_page_support_get_updates: "[Zaregistrujte se] (%{form_url}) dozvědět se více
-    o tomto konkrétním projektu a získat aktuální informace o jeho inscenovaných datech
-    vydání."
+  farsi_page_support_get_updates: "[Zaregistrovat se] (%{form_url}), abyste se dozvěděli
+    více o tomto konkrétním projektu a byli informováni o jeho postupných datech vydání."
   farsi_page_support_contact_us: Pokud chcete tuto iniciativu podpořit nebo se dozvědět
     více, prosím [kontaktujte nás] (%{contact_link}) nebo darujte níže.
   farsi_page_compliance_heading: Dodržování předpisů na podporu překladů do perštiny
@@ -1744,6 +1962,33 @@ cs:
   donate_tabs_bitpay_desc: Přijměte budoucnost dávání pomocí kryptoměny. Prostřednictvím
     BitPay může vaše digitální měna přímo podporovat úsilí Code.org o rozšiřování
     vzdělávání v oblasti informatiky.
+  help_page_top_heading: Jak můžete pomoci
+  help_page_top_desc: Podpořte naše poslání zpřístupnit informatiku každému dítěti
+    a všude. Vaše úsilí nám pomáhá inspirovat budoucí inovátory a překlenout mezeru
+    v oblasti technologického vzdělávání.
+  help_page_top_subhead: Přispějte na Code.org
+  help_page_top_desc_02: Pracujeme na tom, abychom každému studentovi poskytli příležitost
+    učit se informatiku - jak online, tak ve školách, kde zakládáme stálé kurzy a
+    školíme učitele. Za každý dolar, který darujete, se jedno dítě seznámí s informatikou.
+  help_page_partners_heading: Staňte se partnerem
+  help_page_partners_desc: Code.org spolupracuje s dalšími neziskovými organizacemi
+    jako partneři, aby pomohl šířit informatiku místním, udržitelným způsobem. Zjistěte
+    více o našem programu.
+  help_page_volunteer_heading: Dobrovolník ve třídě
+  help_page_volunteer_desc: Dobrovolně vyučujte Hodinu kódu nebo buďte hostujícím
+    řečníkem v místní třídě. Zaregistrujte se a dozvíte se o příležitostech ve vašem
+    okolí.
+  help_page_translate_heading: Pomozte nám přeložit
+  help_page_translate_desc: Dobrovolníci přeložili naše výukové programy do více než
+    45 jazyků. Pomozte nám pokračovat v rozšiřování našich výukových programů pro
+    studenty z celého světa!
+  help_page_speak_for_cs_heading: Mluvte o vzdělávání v oblasti informatiky
+  help_page_speak_for_cs_desc: Zjistěte více o advokační práci Code.org v USA a deseti
+    zásadách, které státům doporučujeme přijmout, aby byla informatika základem pro
+    všechny studenty. Navíc zjistěte, jak můžete řídit změnu ve svém stavu.
+  yw_page_top_heading: Mladé ženy v informatice
+  yw_page_top_desc: Staňte se velvyslancem CS a zapojte se do odstraňování genderových
+    rozdílů v informatice.
   hoc_live: Hodina kódu naživo
   hoc_live_sign_up_title: Přihlaste se k odběru Hour of Code Live
   hoc_live_learn_title: Učte se s Hour of Code Live
@@ -1863,13 +2108,12 @@ cs:
     „Souhlasím“ souhlasíte s ukládáním cookies na vašem počítači nebo zařízení.
   cookie_banner_more_information: Viz Zásady ochrany osobních údajů společnosti Code.org.
   cookie_banner_accept: Souhlasím
-  front_header_banner: Připojte se k největší vzdělávací akce v dějinách, Prosinec
-    7-13, 2015
+  front_header_banner: Připojte se k největší vzdělávací akce v dějinách během  %{campaign_date}
   front_intro_default: Hodina kódu je celosvětová akce, které se účastní desítky milionů
     žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci
     Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované
     žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>
-  front_intro_default_2: Globální hnutí ve více než 180 zemích
+  front_intro_default_2: Globální hnutí ve více než 180 zemích.
   front_watch_video: Podívejte se na nové video
   front_watch_regular_video: Podívejte se na video
   front_volunteers: Hledáme technické dobrovolníky
@@ -2051,7 +2295,7 @@ cs:
     nám ji představit stovce milionů.
   front_join_us_description_short: Informatika je základ pro každého studenta.
   front_join_us_button: Připojte se k nám
-  front_what_is_hoc: 'Co je Hodina kódu? '
+  front_what_is_hoc: 'Co je to Hodina programování? '
   front_join_us_header: Každý se může naučit základy a ještě se přitom pobavit!
   front_join_us_volunteer_header: Dobrovolníci pro hodinu kódu
   front_join_us_tutorials: Vyberte si svůj tutoriál k Hour of Code!
@@ -2110,10 +2354,16 @@ cs:
     věd pomocí zábavných výukových kurzů, které vám předvedou, že naučit se základy
     může každý. Tuto veřejnou kampaň podporuje přes 400 partnerů a 200 000 vzdělavatelů
     z celého světa.
+  hoc_homepage_registration_desc: Vaše třída nebo skupina se mohou připojit k milionům
+    lidí po celém světě, kteří dělají Hodinu programování! Registrace na každoroční
+    oslavu Týdne vzdělávání v počítačové vědě začíná v říjnu. Hodina programování
+    je však k dispozici po celý rok.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Přečtěte si náš Návodný průvodce](%{howto_guide_url}),
     abyste mohli naplánovat akci pro Vaši třídu."
   hoc_homepage_highlights_heading: Významné body hodiny programování
   hoc_homepage_organized_by: Hodinu programování organizuje [Code.org](%{codeorg_url}).
+  hoc_events_heading: Zaregistrujte se jako organizátor Hodiny programování
+  hoc_events_jump_to_map: Přejít na mapu Hodina programování
   signup_closed: Registrace na Hodinu kódu je nyní uzavřena. Zkontrolujte prosím znovu
     v říjnu a zaregistrujte se na další Hodinu kódu.
   signup_registration_not_required: Jestliže se chcete zúčastnit, nemusíte se registrovat!
@@ -2131,7 +2381,8 @@ cs:
     kódu je aktuálně uzavřena, ale stále můžete [hostit Hodinu kódu] (%{hoc_activities_url})
     a připojit se k oslavě na sociálních médiích! Zveřejňujte zábavné obrázky nebo
     video z vaší akce pomocí hashtagu #HourOfCode!'
-  signup_header: Uspořádejte Hodinu kódu během %{campaign_date} a zde ji zaregistrujte.
+  signup_header: Uspořádejte Hodinu kódu během %{campaign_date} a zaregistrujte ji
+    tady.
   signup_name_label: Vaše jméno
   signup_name_error: Jméno je vyžadováno.
   signup_email_label: Váš email
@@ -2144,7 +2395,8 @@ cs:
   signup_event_entire_school_label: Moje celá škola se zúčastní
   signup_event_location_label: Místo akce (volitelné)
   signup_event_location_error: Je vyžadováno místo události.
-  signup_special_event_flag_label: Zvýrazněte moji zvláštní událost
+  signup_special_event_flag_label: Moje akce zapojí celý okres, celou organizaci,
+    členy společenství nebo jiné speciální plány přesahující jednu hodinu
   signup_special_event_details_label: Podrobnosti o zvláštních událostech
   signup_send_posters_flag_label: Zašlete <a href= "/resources#posters"> plakáty</a>
     do mé školy nebo organizace
@@ -2218,6 +2470,8 @@ cs:
   map_title: Mapa Hodiny kódu
   map_header: "# akcí Hodiny kódu na celém světě"
   map_header_count_year: "%{event_count} přihlášených akcí %{year}"
+  map_header_count_year_so_far: V roce %{year} bylo zatím zaregistrováno %{event_count}
+    událostí
   see_all_events: Zobrazit všechny události
   map_header_company: "# od firemních organizátorů"
   map_header_country: "# v České republice (%{country})"
@@ -2231,6 +2485,7 @@ cs:
     Všechny registrované události s platnou adresou lze zobrazit na <a href='%{events_url}'>
     stránce událostí.</a>
   map_warning_markdown: Kompletní seznam událostí lze zobrazit na [stránce událostí.](%{events_url})
+  map_view_all_events: 'Úplný seznam událostí Hodiny programování najdete tady: [here](%{events_url}).'
   meta_tag_og_title: Hodina kódu se blíží
   meta_tag_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od
@@ -2251,15 +2506,7 @@ cs:
   twitter_default_text_donor: 'Zúčastním se letošního #HourOfCode, že? (Díky %{random_donor}
     za podporu @codeorg)'
   hoc_faq_title: Nejčastější dotazy
-  hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
-  hoc_faq_what_is_hoc_a: Hodina kódu začala jako hodinový úvod do počítačové vědy
-    navržený tak, aby demystifikoval programování a ukázal, že základy se může naučit
-    každý – a aby otevřel dveře k počítačové vědě více studentům. Od té doby se z
-    ní stala celosvětová záležitost – dnes je to oslava počítačové vědy, která začíná
-    hodinovými programovacími aktivitami, ale pokračuje celou řadou komunitních kurzů.
-    Podívejte se na <a href='%{tutorials}'>výukové kurzy a aktivity</a>. Tuto všeobecnou
-    kampaň podporuje přes <a href='%{partners}'>400 partnerů</a> a 200 000 pedagogů
-    po celém světě.
+  hoc_faq_what_is_hoc_q: 'Co je to Hodina programování? '
   hoc_faq_what_is_hoc_a_markdown: Hodina kódu začala jako hodinový úvod do počítačové
     vědy navržený tak, aby demystifikoval programování a ukázal, že základy se může
     naučit každý – a aby otevřel dveře k počítačové vědě více studentům. Od té doby
@@ -2270,52 +2517,28 @@ cs:
     světě.
   hoc_faq_last_year: Vyzkoušejte kurzy
   hoc_faq_when_is_hoc_q: Kdy začne Hodina kódu?
-  hoc_faq_when_is_hoc_a: Hodina kódu se koná každý rok v rámci <a href='%{csedweek_url}'>Týdne
-    informatiky</a>. Ten bude v roce %{campaign_date_year} probíhat %{campaign_date_full},
-    ale Hodinu kódu můžete uspořádat kdykoli během celého roku. Týden informatiky
-    se každoročně koná na počest průkopnice počítačových věd <a href='%{grace_hopper}'>admirálky
-    Grace Murray Hopperové</a> v den jejích narozenin (9. prosince 1906).
   hoc_faq_when_is_hoc_a_markdown: Hodina kódu se koná každý rok v rámci [Týdne informatiky](%{csedweek_url}).
     Ten bude v roce %{campaign_date_year} probíhat %{campaign_date_full}, ale Hodinu
     kódu můžete uspořádat kdykoli během celého roku. Týden informatiky se každoročně
     koná na počest průkopnice počítačových věd [admirálky Grace Murray Hopperové](%{grace_hopper})
     v den jejích narozenin (9. prosince 1906).
   hoc_faq_why_cs_q: Proč informatika?
-  hoc_faq_why_cs_a: "<i>Každý</i> student by měl mít možnost učit se informatiku –
-    díky ní může rozvíjet schopnost řešit problémy, logické myšlení a tvořivost. Když
-    studenti začnou včas, dostanou základ pro budoucí úspěch v jakékoli kariérní dráze,
-    která je ve 21. století čeká. Na další statistiky se můžete podívat <a href='%{stats_url}'>tady</a>."
   hoc_faq_why_cs_a_markdown: _Každý_ student by měl mít možnost učit se informatiku
     – díky ní může rozvíjet schopnost řešit problémy, logické myšlení a tvořivost.
     Když studenti začnou včas, dostanou základ pro budoucí úspěch v jakékoli kariérní
     dráze, která je ve 21. století čeká. Na další statistiky se můžete podívat [tady](%{stats_url}).
   hoc_faq_how_participate_q: Jak se Hodiny kódu zúčastním?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Začít plánovat můžete tady</a> – přečtením
-    našeho průvodce. Hodinu kódu můžete uapořádat ve škole nebo v jiném zařízení –
-    třeba ve volnočasovém centru, neziskové organizaci nebo v práci. Anebo si Hodinu
-    kódu vyzkoušejte %{campaign_date} sami."
   hoc_faq_how_participate_a_markdown: "[Začít plánovat můžete tady](%{howto}) – přečtením
     našeho průvodce. Hodinu kódu můžete uapořádat ve škole nebo v jiném zařízení –
     třeba ve volnočasovém centru, neziskové organizaci nebo v práci. Anebo si Hodinu
     kódu vyzkoušejte %{campaign_date} sami."
   hoc_faq_behind_hoc_q: Kdo stojí za Hodinou kódu?
-  hoc_faq_behind_hoc_a: Hodinu kódu pomáhají zajišťovat <a href='%{partner_url}'>Poradní
-    a kontrolní výbory</a> vzdělávacího programu Hodina kódu a Týden informatiky,
-    stejně jako spolupracující partneři, kterí se dali bezprecedentním způsobem dohromady,
-    aby Hodinu kódu podpořili – jsou mezi nimi společnosti Microsoft, Apple, Amazon,
-    Boys and Girls Clubs of America a College Board.
   hoc_faq_behind_hoc_a_markdown: Hodinu kódu pomáhají zajišťovat [Poradní a kontrolní
     výbory](%{partner_url}) vzdělávacího programu Hodina kódu a Týden informatiky,
     stejně jako spolupracující partneři, kterí se dali bezprecedentním způsobem dohromady,
     aby Hodinu kódu podpořili – jsou mezi nimi společnosti Microsoft, Apple, Amazon,
     Boys and Girls Clubs of America a College Board.
   hoc_faq_host_q: O kódování nic nevím. Můžu událost uspořádat?
-  hoc_faq_host_a: Samozřejmě. Aktivity Hodiny kódu probíhají pod vlastním vedením.
-    Jediné, co musíte udělat, je  <a href='%{codeorg_url}/learn'>vyzkoušet naše aktuální
-    výukové kurzy</a>, vybrat si kurz podle vlastních preferencí a zvolit hodinu –
-    o zbytek se postaráme my. K dispozici jsou možnosti pro všechny věkové kategorie
-    a všechny úrovně zkušeností – od dětí školkového věku dál. Chcete-li začít plánovat
-    akci, nejprve si přečtěte našeho <a href='/how-to'>průvodce</a>.
   hoc_faq_host_a_markdown: Samozřejmě. Aktivity Hodiny kódu probíhají pod vlastním
     vedením. Jediné, co musíte udělat, je [vyzkoušet naše aktuální výukové kurzy](%{codeorg_url}/learn),
     vybrat si kurz podle vlastních preferencí a zvolit hodinu – o zbytek se postaráme
@@ -2323,13 +2546,6 @@ cs:
     – od dětí školkového věku dál. Chcete-li začít plánovat akci, nejprve si přečtěte
     našeho [průvodce](%{howto}).
   hoc_faq_devices_q: Na jakých zařízeních by měli studenti pracovat?
-  hoc_faq_devices_a: Výukové kurzy Code.org fungují na všech zařízeních a ve všech
-    prohlížečích. Další informace o technických požadavcích na výukové kurzy Code.org
-    najdete <a href='%{codeorg_url}/educate/it'>tady</a>. Technické požadavky na výukové
-    kurzy od jiných poskytovatelů než Code.org najdete na  <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    v popisu konkrétního výukového kurzu. Pokud vaše škola nedisponuje vybavením potřebným
-    k pořádání výukových kurzů, nezapomeňte, že nabízíme také <a href='%{unplugged_url}'>aktivity
-    bez počítače</a>.
   hoc_faq_devices_a_markdown: Výukové kurzy Code.org fungují na všech zařízeních a
     ve všech prohlížečích. Další informace o technických požadavcích na výukové kurzy
     Code.org najdete [tady](%{codeorg_url}/educate/it). Technické požadavky na výukové
@@ -2337,17 +2553,6 @@ cs:
     v popisu konkrétního výukového kurzu. Pokud vaše škola nedisponuje vybavením potřebným
     k pořádání výukových kurzů, nezapomeňte, že nabízíme také [aktivity bez počítače](%{unplugged_url}).
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
-  hoc_faq_need_computers_a: Ne. Máme výukové kurzy Hodiny kódu, které fungují na počítačích,
-    smartphonech a tabletech, a dokonce i takové, které se úplně obejdou bez počítače.
-    Můžete se přidat odkudkoli a s jakýmkoli vybavením. <p><i>Tady je několik možností:</i>
-    <br> <ul> <li><b>Práce ve dvojicích.</b> <a href='%{pair_programming_research}'>Výzkumy
-    ukazují</a>, že studenti se nejlépe učí při <a href='%{pair_programming_video}'>programování
-    ve dvojicích</a>, když sdílejí počítač a pracují společně. Nechte studenty, ať
-    utvoří dvojice. <li><b>Projekce na plátno.</b> Pokud máte projektor a plátno a
-    můžete připojit počítač s internetem, může celá skupina absolvovat Hodinu kódu
-    společně. Sledujte videa ve skupině a střídejte se při řešení úkolů a zodpovídání
-    otázek. <li><b>Výuka bez počítače.</b> Nabízíme <a href='%{unplugged_url}'>výukové
-    kurzy, které se úplně obejdou bez počítače</a>. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Ne. Máme výukové kurzy Hodiny kódu, které fungují na počítačích, smartphonech a tabletech, a dokonce i takové, které se úplně obejdou bez počítače. Můžete se přidat odkudkoli a s jakýmkoli vybavením.
 
@@ -2357,40 +2562,21 @@ cs:
     - **Projekce na plátno.** Pokud máte projektor a plátno a můžete připojit počítač s internetem, může celá skupina absolvovat Hodinu kódu společně. Sledujte videa ve skupině a střídejte se při řešení úkolů a zodpovídání otázek.
     - **Výuka bez počítače.** Nabízíme [výukové kurzy, které se úplně obejdou bez počítače](%{unplugged_url}).
   hoc_faq_international_q: 'Kde se nacházím: <country>. Jak se mohu zúčastnit ze zahraničí?'
-  hoc_faq_international_a: Hodinu kódu může uspořádat kdokoli – kdekoli na světě.
-    Minulý rok se při Hodině kódu propojili studenti z celého světa. Více si můžete
-    zjistit <a href='/promote'>tady</a>.
   hoc_faq_international_a_markdown: Hodinu kódu může uspořádat kdokoli – kdekoli na
     světě. Minulý rok se při Hodině kódu propojili studenti z celého světa. Více si
     můžete zjistit [tady](%{promote}).
   hoc_faq_tutorial_q: Jak můžu připravit výukový kurz Hodiny kódu?
-  hoc_faq_tutorial_a: Pokud máte zájem stát se partnerem výukového kurzu, <a href='/tutorial-guidelines'>podívejte
-    se na naše pokyny a instrukce</a>. Rádi bychom nabídli mnoho různých zajímavých
-    možností, ale primárním cílem je optimalizovat zkušenost pro studenty a učitele,
-    pro které jsou počítačové vědy nové.
   hoc_faq_tutorial_a_markdown: Jestliže máte zájem stát se partnerem výukového kurzu,
     [podívejte se na naše pokyny a instrukce](%{tutorial_guidelines}). Rádi bychom
     nabídli mnoho různých zajímavých možností, ale primárním cílem je optimalizovat
     zkušenost pro studenty a učitele, pro které jsou počítačové vědy nové.
   hoc_faq_account_q: Musí se studenti přihlásit pomocí účtu?
-  hoc_faq_account_a: Ne. K tomu, aby si student vyzkoušel Hodinu kódu, nepotřebuje
-    vůbec žádnou registraci ani přihlášení. Většina <a href='%{codeorg_url}/learn/beyond'>pokračovacích
-    kurzů</a> vyžaduje vytvoření účtu k uložení pokroku studenta. Navíc registrací
-    k Hodině kódu NEVYTVÁŘÍTE automaticky účet na Code Studiu. Pokud přesto svým studentům
-    chcete vytvořit účty, postupujte prosím podle následujících <a href='https://youtu.be/_smelV_KISE'>pokynů</a>.
   hoc_faq_account_a_markdown: Ne. K tomu, aby si student vyzkoušel Hodinu kódu, nepotřebuje
     vůbec žádnou registraci ani přihlášení. Většina [pokračovacích kurzů](%{codeorg_url}/learn/beyond)
     vyžaduje vytvoření účtu k uložení pokroku studenta. Navíc registrací k Hodině
     kódu NEVYTVÁŘÍTE automaticky účet na Code Studiu. Pokud přesto svým studentům
     chcete vytvořit účty, postupujte prosím podle následujících [pokynů](%{section_instructions_url}).
   hoc_faq_high_school_q: Kterou aktivitu bych měl(a) dělat se studenty středních škol?
-  hoc_faq_high_school_a: Naše výukové kurzy Hvězdné války a Minecraft jsou ideální
-    pro středoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a volně hratelná
-    úroveň obou těchto výukových kurzů. Případně doporučujeme vyzkoušet na rozjezd
-    některý z našich výukových kurzů pro začátečníky na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
-    například výukový kurz s Angry Birds nebo s Annou a Elsou. Středoškolský student
-    by měl takový kurz zvládnout do 30 minut a pak může vyzkoušet pokročilejší výukový
-    kurz v jazyce JavaScript, například Khan Academy nebo CodeHS.
   hoc_faq_high_school_a_markdown: Naše výukové kurzy Hvězdné války a Minecraft jsou
     ideální pro středoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a
     volně hratelná úroveň obou těchto výukových kurzů. Případně doporučujeme vyzkoušet
@@ -2400,23 +2586,12 @@ cs:
     kurz v jazyce JavaScript, například Khan Academy nebo CodeHS.
   hoc_faq_scratch_q: Používám pro Hodinu kódu Scratch, ale co když mí studenti mají
     iPady, a ne notebooky?
-  hoc_faq_scratch_a: Scratch nelze spouštět na tabletech. Pokud vyučujete mladší studenty,
-    můžou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí číst). Mezi výukovými
-    kurzy na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> najdete takové,
-    které fungují na iPadu – od Code.org, Tynkeru, Lightbotu nebo CodeSparku.
   hoc_faq_scratch_a_markdown: Scratch nelze spouštět na tabletech. Pokud vyučujete
     mladší studenty, můžou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí
     číst). Mezi výukovými kurzy na [%{partner_url}/learn](%{codeorg_url}/learn) najdete
     takové, které fungují na iPadu – od Code.org, Tynkeru, Lightbotu nebo CodeSparku.
   hoc_faq_count_hoc_q: Jak počítáte hodiny kódu?
   hoc_faq_map_q: Proč nevidím svůj bod na mapě?
-  hoc_faq_map_a: Je nám líto, že v mapě Hodiny kódu nevidíte svoji událost. Vzhledem
-    k tomu, že se k Hodině kódu registrují desítky tisíc organizátorů, agreguje mapa
-    data a zobrazuje jednu položku pro několik událostí. Když kliknete na odkaz na
-    <a href='%{events_url}'>stránku událostí</a> pod mapou, budete přesměrování na
-    seznam všech událostí podle států a můžete se dostat ke své události. Navíc se
-    k Hodině kódu registrují tisíce lidí, takže aktualizace mapy a událostí trvá běžně
-    i 48 hodin. Podívejte se sem znovu za pár dní.
   hoc_faq_map_a_markdown: Je nám líto, že v mapě Hodiny kódu nevidíte svoji událost.
     Vzhledem k tomu, že se k Hodině kódu registrují desítky tisíc organizátorů, agreguje
     mapa data a zobrazuje jednu položku pro několik událostí. Když kliknete na odkaz
@@ -2424,35 +2599,12 @@ cs:
     všech událostí podle států a můžete se dostat ke své události. Navíc se k Hodině
     kódu registrují tisíce lidí, takže aktualizace mapy a událostí trvá běžně i 48
     hodin. Podívejte se sem znovu za pár dní.
-  hoc_faq_count_hoc_a: Nástroj na sledování Hodiny kódu neprovádí přesné měření využití.
-    Při sledování účasti na Hodině kódu nepočítáme přesně unikátní ID studentů, zejména
-    proto, že nevyžadujeme, aby se studenti přihlašovali nebo zaregistrovali. V důsledku
-    toho může být počet účastníků nadhodnocený nebo podhodnocený. Všechny podrobnosti
-    si můžete přečíst<a href='%{codeorg_url}/loc'>zde</a>.
   hoc_faq_count_hoc_a_markdown: Nástroj na sledování Hodiny kódu neprovádí přesné
     měření využití. Při sledování účasti na Hodině kódu nepočítáme přesně unikátní
     ID studentů, zejména proto, že nevyžadujeme, aby se studenti přihlašovali nebo
     zaregistrovali. V důsledku toho může být počet účastníků nadhodnocený nebo podhodnocený.
     Všechny podrobnosti si můžete přečíst [zde](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Kolik se toho dá za hodinu naučit?
-  hoc_faq_one_hour_a: Cílem Hodiny kódu není udělat ze studentů za jednu hodinu experty
-    na počítačové vědy. Jedna hodina stačí jen na to, aby zjistili, že počítačová
-    věda je zábavná a tvůrčí, dostupná lidem všech věkových kategorií a vhodná pro
-    všechny studenty bez rozdílu. Měřítkem úspěchu této kampaně není to, kolik se
-    studenti počítačových věd naučí – úspěch odráží široká účast lidí bez ohledu na
-    pohlaví a příslušnost k etnické nebo socioekonomické skupině i výsledný nárůst
-    účasti a zapojení, který pozorujeme u kurzů počítačových věd na všech úrovních.
-    Miliony účastníků, učitelů i studentů, se rozhodly pro více než jednu hodinu –
-    absolvovali celý den, celý týden nebo i déle. A mnozí studenti se pak rozhodli
-    zapsat se na celý kurz (nebo si dokonce zvolili informatiku jako obor na vysoké
-    škole). <br/><br/>Kromě studentů je hodina přínosná i pro pedagoga, který si díky
-    ní uvědomí, že dokáže vyučovat počítačové vědy, i když třeba nemá pro tento předmět
-    univerzitní diplom. Desítky tisíc učitelů se rozhodují rozvíjet se v počítačových
-    vědách dále, ať už absolvováním profesního rozvoje, nebo tím, že nabízí následné
-    online kurzy, případně obojím. A to platí i pro vedení škol, které si uvědomí,
-    že počítačové vědy jsou něčím, co studenti chtějí a co jim učitelé dovedou poskytovat.
-    <br/><br/>Hlavně je ale potřeba zdůraznit, že všichni účastníci se během jedné
-    hodiny dozví především to, že na to mají.
   hoc_faq_one_hour_a_markdown: |-
     Cílem Hodiny kódu není udělat ze studentů za jednu hodinu experty na počítačové vědy. Jedna hodina stačí jen na to, aby zjistili, že počítačová věda je zábavná a tvůrčí, dostupná lidem všech věkových kategorií a vhodná pro všechny studenty bez rozdílu. Měřítkem úspěchu této kampaně není to, kolik se studenti počítačových věd naučí – úspěch odráží široká účast lidí obou pohlaví, různých ras, lidí z odlišných etnických a socioekonomických skupin i výsledný nárůst účasti a zapojení, který pozorujeme u kurzů počítačových věd na všech úrovních. Miliony účastníků, učitelů i studentů, se rozhodly pro více než jednu hodinu – absolvovali celý den, celý týden nebo i déle. A mnozí studenti se pak rozhodli zapsat se na celý kurz (nebo si dokonce zvolili informatiku jako obor na vysoké škole).
 
@@ -2460,47 +2612,36 @@ cs:
 
     Hlavně je ale potřeba zdůraznit, že všichni účastníci se během jedné hodiny dozví především to, že na to mají.
   hoc_faq_more_questions_q: Máte ještě další otázky?
-  hoc_faq_more_questions_a: Zkuste najít odpověď v našem <a href='http://support.code.org'>fóru
-    podpory</a>.
   hoc_faq_more_questions_a_markdown: Zkuste najít odpověď v našem [fóru podpory](http://support.code.org).
   hoc_faq_keep_learning_q: Jak mohu po Hodině kódu pokračovat ve studiu?
-  hoc_faq_keep_learning_a: Hodinu kódu může uspořádat kdokoli a kdykoli. Výukové kurzy
-    jsou dostupné celý rok. Můžete očekávat, že všechny naše výukové kurzy a osnovy
-    budou na našem serveru k dispozici napořád. Podívejte se prosím na <a href='/promote'>naše
-    materiály</a>, kde najdete průvodce k pořádání akcí a další materiály, které vám
-    pomůžou připravit úspěšnou Hodinu kódu.
   hoc_faq_keep_learning_a_markdown: Hodinu kódu může uspořádat kdokoli a kdykoli.
     Výukové kurzy jsou dostupné celý rok. Můžete očekávat, že všechny naše výukové
     kurzy a osnovy budou na našem serveru k dispozici napořád. Podívejte se prosím
     na [naše materiály](%{promote}), kde najdete průvodce k pořádání akcí a další
     materiály, které vám pomůžou připravit úspěšnou Hodinu kódu.
   hoc_faq_certificates_q: Kde mohu vytisknout certifikáty pro své studenty?
-  hoc_faq_certificates_a: Přejděte na naši <a href='%{codeorg_url}/certificates'>stránku
-    s certifikáty</a>, kde si můžete dopředu vytisknout certifikáty pro celou třídu.
-    Dále můžete vytisknout <a href='%{codeorg_url}/certificates?course=mc'>speciální
-    certifikáty</a> pro studenty, kteří absolvují výukový kurz Minecraftu.
-  hoc_faq_certificates_a_markdown: Přejděte na naši [stránku certifikátů](%{codeorg_url}/certificates),
-    kde si můžete předem vytisknout certifikáty pro celou třídu. Dále můžete vytisknout
-    [speciální certifikáty](%{codeorg_url}/certificates?course=mc) pro studenty, kteří
-    absolvují výukový kurz Minecraftu.
+  hoc_faq_certificates_answer_markdown: Přejděte na naši [stránku certifikátů] (%{certificates_url})
+    kde si můžete předem vytisknout certifikáty pro celou třídu.
   hoc_faq_logo_q: Existují omezení ohledně toho, jak mohu používat logo nebo název
     Hodiny kódu?
-  hoc_faq_logo_a: Hour of Code (Hodina kódu) je ochranná známka. Nechceme bránit jejímu
-    používání, ale rádi bychom, aby se toto používání řídilo určitými pravidly. Projděte
-    si prosím <a href='%{logo_url}'>tyto pokyny pro používání</a>.
   hoc_faq_logo_a_markdown: Hour of Code (Hodina kódu) je ochranná známka. Nechceme
     bránit jejímu používání, ale rádi bychom, aby se toto používání řídilo určitými
     pravidly. Projděte si prosím [tyto pokyny pro používání](%{logo_url}).
+  hoc_faq_bug_q: Našel jsem chybu v aktivitě Hour of Code! Co mám dělat?
+  hoc_faq_bug_a_markdown: |-
+    Ach ne! Pokud jste narazili na chybu v aktivitě Hodina kódu - nejprve zkontrolujte adresu URL aktivity, na které se nacházíte. Pokud adresa URL začíná studio.code.org, náš tým podpory Code.org vám může pomoci! Klikněte na ikonu otazníku v pravém horním rohu obrazovky a poté z rozbalovací nabídky vyberte možnost Nahlásit problém.
+
+    Pokud adresa URL nezačíná studio.code.org, pravděpodobně pracujete na aktivitě třetí strany a budete se muset obrátit na tým podpory této společnosti s žádostí o další pomoc.
   stats_hoc_2013_image_alt: Statistika roku 2013 akce Hodina kódu
   stats_growth: Byl to nejrychlejší způsob, jak dosáhnout 15 milionů uživatelů.
-  stats_i18n: Studenti se učí ve 40 jazycích
+  stats_i18n: Studenti se učí ve více než 45 jazycích
   stats_tumblr: 'Tumblr: 3 a půl roku'
   stats_facebook: 'Facebook: 3 roky'
   stats_twitter: 'Twitter: 2 a půl roku'
   stats_pinterest: 'Pinterest: 2 roky'
   stats_instagram: 'Instagram: 14 měsíců'
   stats_hoc: 'Hodina Kódu: 5 dnů'
-  stats_global: Přes 100M studentů zkusilo Hodinu kódu
+  stats_global: Přes 100 milionů studentů zkusilo Hodinu programování
   stats_girls_more: Informatiku si vyzkoušelo více dívek než za posledních 70 let
   stats_females: Účast studentek na docházce do výuky počítačových věd při středoškolských
     a vysokoškolských kurzech a vzdělávání pracovní síly je jen 20-25 %.
@@ -7295,10 +7436,10 @@ cs:
   tutorial_star-wars_string_detail_grades: Stupně 2 a vyšší
   tutorial_gumadventure_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_mchoc_string_detail_grades: Stupně 2 a vyšší
-  tutorial_vidnews_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidnews_string_detail_grades: Od 6. třídy
   tutorial_kodable-pre_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_highseas_string_detail_grades: Pro 2.-8. třídu
-  tutorial_capython_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_capython_string_detail_grades: Od 6. třídy
   tutorial_frzn_string_detail_grades: Stupně 2 a vyšší
   tutorial_cocom_string_detail_grades: Stupně 2 a vyšší
   tutorial_play-lab_string_detail_grades: Stupně 2 a vyšší
@@ -7308,28 +7449,28 @@ cs:
   tutorial_kanopixel_string_detail_grades: Stupně 2 a vyšší
   tutorial_foos_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_tynkerdd_string_detail_grades: Pro 2.-8. třídu
-  tutorial_tynkerana_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkerana_string_detail_grades: Od 6. třídy
   tutorial_vidcard_string_detail_grades: Stupně 2 a vyšší
   tutorial_spritebox_string_detail_grades: Pro 2.-8. třídu
-  tutorial_tynkerch_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkerch_string_detail_grades: Od 6. třídy
   tutorial_lightbot_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tinspire_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tinspire_string_detail_grades: Od 6. třídy
   tutorial_itchbounceball_string_detail_grades: Pro 2.-8. třídu
-  tutorial_vidclim_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_matlab_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidclim_string_detail_grades: Od 6. třídy
+  tutorial_matlab_string_detail_grades: Od 6. třídy
   tutorial_flap_string_detail_grades: Stupně 2 a vyšší
-  tutorial_galaxy_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_galaxy_string_detail_grades: Od 6. třídy
   tutorial_inf_string_detail_grades: Pro 2.-8. třídu
   tutorial_tynkersol_string_detail_grades: Stupně 2 a vyšší
-  tutorial_itchg_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_itchg_string_detail_grades: Od 6. třídy
   tutorial_como_string_detail_grades: Stupně 2 a vyšší
   tutorial_processfound_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tynkerhomo_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkerhomo_string_detail_grades: Od 6. třídy
   tutorial_art_string_detail_grades: Stupně 2 a vyšší
   tutorial_tynkerbrick_string_detail_grades: Stupně 2 a vyšší
-  tutorial_itchbio_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_itchbio_string_detail_grades: Od 6. třídy
   tutorial_itchj_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_tickleo_string_detail_grades: Stupně 2 a vyšší
   tutorial_hopgeo_string_detail_grades: Pro 2.-8. třídu
@@ -7340,86 +7481,86 @@ cs:
   tutorial_livecode_string_detail_grades: Stupně 9 a vyšší
   tutorial_cocomgame_string_detail_grades: Stupně 2 a vyšší
   tutorial_tynkerspin_string_detail_grades: Třídy 2-5
-  tutorial_code-avengers_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_code-avengers_string_detail_grades: Od 6. třídy
   tutorial_tynkercq_string_detail_grades: Třídy 2-5
-  tutorial_cmgame_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cmgame_string_detail_grades: Od 6. třídy
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_texas-instruments_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_cajava_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_qrm_string_detail_grades: Od 6. třídy
+  tutorial_texas-instruments_string_detail_grades: Od 6. třídy
+  tutorial_cajava_string_detail_grades: Od 6. třídy
   tutorial_codehs_string_detail_grades: Stupně 9 a vyšší
   tutorial_hopemo_string_detail_grades: Pro 2.-8. třídu
   tutorial_tynkercm_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterswintergreet_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codestersc_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersc_string_detail_grades: Od 6. třídy
   tutorial_codestersturtle_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_penjee_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_penjee_string_detail_grades: Od 6. třídy
   tutorial_trinket_string_detail_grades: Stupně 2 a vyšší
-  tutorial_frogger_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_frogger_string_detail_grades: Od 6. třídy
   tutorial_tynkereco_string_detail_grades: Pro 2.-8. třídu
   tutorial_mitedarc_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_khan_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_tynkerd_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_khan_string_detail_grades: Od 6. třídy
+  tutorial_tynkerd_string_detail_grades: Od 6. třídy
   tutorial_cdmy_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codestersdance_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codestersbasketball_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_nclkarel_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersdance_string_detail_grades: Od 6. třídy
+  tutorial_codestersbasketball_string_detail_grades: Od 6. třídy
+  tutorial_nclkarel_string_detail_grades: Od 6. třídy
   tutorial_buildpong_string_detail_grades: Stupně 2 a vyšší
   tutorial_tynkerdrones_string_detail_grades: Stupně 2 a vyšší
-  tutorial_carla_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_zulama_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_capost_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_carla_string_detail_grades: Od 6. třídy
+  tutorial_zulama_string_detail_grades: Od 6. třídy
+  tutorial_capost_string_detail_grades: Od 6. třídy
   tutorial_marco_string_detail_grades: Pro 2.-8. třídu
-  tutorial_codestersflappybike_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersflappybike_string_detail_grades: Od 6. třídy
   tutorial_kanopong_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_tynkerright_string_detail_grades: Pro 2.-8. třídu
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkercc_string_detail_grades: Od 6. třídy
   tutorial_bamboo_string_detail_grades: Třídy 2-5
-  tutorial_robojav_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_roboba_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_robojav_string_detail_grades: Od 6. třídy
+  tutorial_roboba_string_detail_grades: Od 6. třídy
   tutorial_knodsnake_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_soccharater_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_silent_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_soccharater_string_detail_grades: Od 6. třídy
+  tutorial_silent_string_detail_grades: Od 6. třídy
   tutorial_robomesh_string_detail_grades: Stupně 2 a vyšší
   tutorial_amaze_string_detail_grades: Stupně 2 a vyšší
   tutorial_codestersds_string_detail_grades: Stupně 2 a vyšší
   tutorial_knodtext_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_alicegar_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codesterstransform_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_flexfrog_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_alicegar_string_detail_grades: Od 6. třídy
+  tutorial_codesterstransform_string_detail_grades: Od 6. třídy
+  tutorial_flexfrog_string_detail_grades: Od 6. třídy
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_robobii_string_detail_grades: Od 6. třídy
   tutorial_robobm_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_codingrobots_string_detail_grades: Stupně 2 a vyšší
-  tutorial_robob_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_robob_string_detail_grades: Od 6. třídy
   tutorial_coders_string_detail_grades: Stupně 9 a vyšší
   tutorial_tynkerhw_string_detail_grades: Pro 2.-8. třídu
   tutorial_tynkermh_string_detail_grades: Pro 2.-8. třídu
-  tutorial_caphoto_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_caphoto_string_detail_grades: Od 6. třídy
   tutorial_mozillahw_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Stupně 2 a vyšší
-  tutorial_scratchg_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_scratchg_string_detail_grades: Od 6. třídy
   tutorial_sjforest_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_sjgreet_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_sjsunset_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_fufafrenz_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Stupně 9 a vyšší
-  tutorial_hummingbird_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_recoloring_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_hummingbird_string_detail_grades: Od 6. třídy
+  tutorial_recoloring_string_detail_grades: Od 6. třídy
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Stupně 2 a vyšší
   tutorial_flocond_string_detail_grades: Stupně 2 a vyšší
   tutorial_floloops_string_detail_grades: Stupně 2 a vyšší
-  tutorial_pgts_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_pgts_string_detail_grades: Od 6. třídy
   tutorial_ozo_string_detail_grades: Všechny věkové kategorie
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterstj_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlclocked_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlclocked_string_detail_grades: Od 6. třídy
   tutorial_baubles_string_detail_grades: Pro 2.-8. třídu
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Stupně 2 a vyšší
@@ -7441,11 +7582,11 @@ cs:
   tutorial_ijournalist_string_detail_grades: Pro 2.-8. třídu
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_tlchex_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlchex_string_detail_grades: Od 6. třídy
   tutorial_tickles_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozogame_string_detail_grades: Všechny věkové kategorie
   tutorial_vidcodeio_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlcbrain_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlcbrain_string_detail_grades: Od 6. třídy
   tutorial_hopquiz_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_unfortunate_string_detail_grades: Třídy 2-5
   tutorial_cha_string_detail_grades: 6.–8. třída (11–13 let)
@@ -7454,7 +7595,7 @@ cs:
   tutorial_tlcpixel_string_detail_grades: Pro 2.-8. třídu
   tutorial_introrobo_string_detail_grades: Třídy 2-5
   tutorial_tlcinvis_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlcjflap_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlcjflap_string_detail_grades: Od 6. třídy
   tutorial_procolor_string_detail_grades: Předběžný čtenář - stupeň 8
   tutorial_spiralsfinch_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozoi_string_detail_grades: Všechny věkové kategorie
@@ -7466,32 +7607,32 @@ cs:
   tutorial_mazefinch_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_tlccc_string_detail_grades: Pro 2.-8. třídu
   tutorial_tlcdoodle_string_detail_grades: Pro 2.-8. třídu
-  tutorial_tlcpunch_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlcpunch_string_detail_grades: Od 6. třídy
   tutorial_finchfract_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tlcmind_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlcmind_string_detail_grades: Od 6. třídy
   tutorial_tlctelebot_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlcaus_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlcaus_string_detail_grades: Od 6. třídy
   tutorial_tlcmicro_string_detail_grades: Stupně 2 a vyšší
   tutorial_imathematician_string_detail_grades: Pro 2.-8. třídu
-  tutorial_tlcmagic_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tlcmagic_string_detail_grades: Od 6. třídy
   tutorial_scratchmus_string_detail_grades: Pro 2.-8. třídu
   tutorial_scratchanim_string_detail_grades: Pro 2.-8. třídu
   tutorial_scratchfly_string_detail_grades: Pro 2.-8. třídu
   tutorial_tynkerarc_string_detail_grades: Stupně 2 a vyšší
-  tutorial_grokffpython_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_grokffblock_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_grokeliza_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokffpython_string_detail_grades: Od 6. třídy
+  tutorial_grokffblock_string_detail_grades: Od 6. třídy
+  tutorial_grokeliza_string_detail_grades: Od 6. třídy
   tutorial_tynkercan_string_detail_grades: Stupně 2 a vyšší
-  tutorial_grokflags_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokflags_string_detail_grades: Od 6. třídy
   tutorial_robomind_string_detail_grades: Pro 2.-8. třídu
   tutorial_adventureq_string_detail_grades: Třídy 2-5
-  tutorial_khan-es_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_kpt_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_kpl_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_khe_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_kfr_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_app-inventor_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_blockly_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_khan-es_string_detail_grades: Od 6. třídy
+  tutorial_kpt_string_detail_grades: Od 6. třídy
+  tutorial_kpl_string_detail_grades: Od 6. třídy
+  tutorial_khe_string_detail_grades: Od 6. třídy
+  tutorial_kfr_string_detail_grades: Od 6. třídy
+  tutorial_app-inventor_string_detail_grades: Od 6. třídy
+  tutorial_blockly_string_detail_grades: Od 6. třídy
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: Všechny věkové kategorie
   tutorial_code-combat_string_detail_grades: do-not-show
@@ -7507,7 +7648,7 @@ cs:
   tutorial_scratch_string_detail_grades: Třídy 2-5
   tutorial_bayes_string_detail_grades: Všechny věkové kategorie
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_hrm_string_detail_grades: Od 6. třídy
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Předběžný čtenář - stupeň 8
@@ -7523,7 +7664,7 @@ cs:
   tutorial_spherov_string_detail_grades: Stupně 2 a vyšší
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_alicesims_string_detail_grades: Od 6. třídy
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_tap_string_detail_grades: Stupně 2 a vyšší
@@ -7542,50 +7683,50 @@ cs:
   tutorial_solopython_string_detail_grades: Stupně 9 a vyšší
   tutorial_kodableint_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_kodableadv_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_tynkertj_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_wolframa_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_wolframm_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_wolframspi_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_wolframsph_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_wolframp_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_wolframn_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkertj_string_detail_grades: Od 6. třídy
+  tutorial_wolframa_string_detail_grades: Od 6. třídy
+  tutorial_wolframm_string_detail_grades: Od 6. třídy
+  tutorial_wolframspi_string_detail_grades: Od 6. třídy
+  tutorial_wolframsph_string_detail_grades: Od 6. třídy
+  tutorial_wolframp_string_detail_grades: Od 6. třídy
+  tutorial_wolframn_string_detail_grades: Od 6. třídy
   tutorial_soloweb_string_detail_grades: Stupně 9 a vyšší
   tutorial_khanweb_string_detail_grades: Stupně 2 a vyšší
-  tutorial_khandata_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_khandata_string_detail_grades: Od 6. třídy
   tutorial_googlelogo_string_detail_grades: Pro 2.-8. třídu
-  tutorial_playtune_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_playtune_string_detail_grades: Od 6. třídy
   tutorial_computeit_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterssj_string_detail_grades: Pro 2.-8. třídu
-  tutorial_cmchat_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cmchat_string_detail_grades: Od 6. třídy
   tutorial_tynkerdb_string_detail_grades: Třídy 2-5
-  tutorial_cmbuild_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cmbuild_string_detail_grades: Od 6. třídy
   tutorial_robotrattle_string_detail_grades: Pro 2.-8. třídu
   tutorial_codestersh_string_detail_grades: Pro 2.-8. třídu
-  tutorial_codehsdigipixel_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ccbinary_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codehsturtle_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_grokhd_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_grokem_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsdigipixel_string_detail_grades: Od 6. třídy
+  tutorial_ccbinary_string_detail_grades: Od 6. třídy
+  tutorial_codehsturtle_string_detail_grades: Od 6. třídy
+  tutorial_grokhd_string_detail_grades: Od 6. třídy
+  tutorial_grokem_string_detail_grades: Od 6. třídy
   tutorial_kodmaze_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_codestersa_string_detail_grades: Pro 2.-8. třídu
   tutorial_cmdodo_string_detail_grades: Stupně 3-5
   tutorial_tynkerspace_string_detail_grades: Třídy 2-5
   tutorial_gfbloons_string_detail_grades: Stupně 9 a vyšší
   tutorial_raspipong_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehsvr_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsvr_string_detail_grades: Od 6. třídy
   tutorial_codesterstp_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_codestersbb_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_gfcrossyroad_string_detail_grades: Stupně 9 a vyšší
   tutorial_googleww_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehsjsapp_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsjsapp_string_detail_grades: Od 6. třídy
   tutorial_gfmihi_string_detail_grades: Stupně 9 a vyšší
   tutorial_hopdropphone_string_detail_grades: Pro 2.-8. třídu
   tutorial_techfaa_string_detail_grades: Univerzita
   tutorial_codehsjsgraph_string_detail_grades: Stupně 9 a vyšší
-  tutorial_thunkable_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_thunkable_string_detail_grades: Od 6. třídy
   tutorial_hopcrossyroad_string_detail_grades: Pro 2.-8. třídu
   tutorial_switchglitch_string_detail_grades: Třídy 2-5
-  tutorial_codecar_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codecar_string_detail_grades: Od 6. třídy
   tutorial_codesterscp_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_grokpetblock_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_techbim_string_detail_grades: Univerzita
@@ -7597,8 +7738,8 @@ cs:
   tutorial_myradream_string_detail_grades: Pro 2.-8. třídu
   tutorial_thinkfun_string_detail_grades: Pro 2.-8. třídu
   tutorial_hopfireworks_string_detail_grades: Pro 2.-8. třídu
-  tutorial_grokspace_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codehspython_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokspace_string_detail_grades: Od 6. třídy
+  tutorial_codehspython_string_detail_grades: Od 6. třídy
   tutorial_codehsjava_string_detail_grades: Stupně 9 a vyšší
   tutorial_techioda_string_detail_grades: Univerzita
   tutorial_grokmonster_string_detail_grades: Třídy 2-5
@@ -7606,39 +7747,39 @@ cs:
   tutorial_techga_string_detail_grades: Univerzita
   tutorial_techioan_string_detail_grades: Univerzita
   tutorial_techiogsr_string_detail_grades: Univerzita
-  tutorial_groktunnel_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_stemcod_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_groktunnel_string_detail_grades: Od 6. třídy
+  tutorial_stemcod_string_detail_grades: Od 6. třídy
   tutorial_techikb_string_detail_grades: Univerzita
   tutorial_kanostreet_string_detail_grades: Třídy 2-5
   tutorial_codemojijs_string_detail_grades: Třídy 2-5
   tutorial_techapf_string_detail_grades: Univerzita
   tutorial_techfpjs_string_detail_grades: Univerzita
   tutorial_techlinq_string_detail_grades: Univerzita
-  tutorial_gpbcatapult_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_quorumastro_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gpbcatapult_string_detail_grades: Od 6. třídy
+  tutorial_quorumastro_string_detail_grades: Od 6. třídy
   tutorial_alicewonder_string_detail_grades: Třídy 2-5
   tutorial_rginter_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_cssgrid_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cssgrid_string_detail_grades: Od 6. třídy
   tutorial_jshero_string_detail_grades: Stupně 9 a vyšší
   tutorial_codemojipy_string_detail_grades: Třídy 2-5
-  tutorial_nclabdrone_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gpbcircle_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gpbpaint_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_cocomarcade_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_nclabdrone_string_detail_grades: Od 6. třídy
+  tutorial_gpbcircle_string_detail_grades: Od 6. třídy
+  tutorial_gpbpaint_string_detail_grades: Od 6. třídy
+  tutorial_cocomarcade_string_detail_grades: Od 6. třídy
   tutorial_beetik_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_codedj_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_rgadvan_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codedj_string_detail_grades: Od 6. třídy
+  tutorial_rgadvan_string_detail_grades: Od 6. třídy
   tutorial_codehsrn_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehswd_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehswd_string_detail_grades: Od 6. třídy
   tutorial_turtlerobot_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_ozoevo_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ozoexped_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ozoevo_string_detail_grades: Od 6. třídy
+  tutorial_ozoexped_string_detail_grades: Od 6. třídy
   tutorial_ozojourney_string_detail_grades: Pro 2.-8. třídu
   tutorial_ozocodes_string_detail_grades: Všechny věkové kategorie
   tutorial_ozoeclipse_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ozosimulator_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ozoalgorithm_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ozotimer_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ozosimulator_string_detail_grades: Od 6. třídy
+  tutorial_ozoalgorithm_string_detail_grades: Od 6. třídy
+  tutorial_ozotimer_string_detail_grades: Od 6. třídy
   tutorial_ozohabits_string_detail_grades: Všechny věkové kategorie
   tutorial_ozoprogram_string_detail_grades: Pro 2.-8. třídu
   tutorial_ozopair_string_detail_grades: Stupně 2 a vyšší
@@ -7661,9 +7802,9 @@ cs:
   tutorial_lbvariables_string_detail_grades: Pro 2.-8. třídu
   tutorial_lbfunctions_string_detail_grades: Pro 2.-8. třídu
   tutorial_lblogic_string_detail_grades: Stupně 2 a vyšší
-  tutorial_lbworld_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_lbworld_string_detail_grades: Od 6. třídy
   tutorial_lbloops_string_detail_grades: Pro 2.-8. třídu
-  tutorial_lbtug_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_lbtug_string_detail_grades: Od 6. třídy
   tutorial_lbpotato_string_detail_grades: Stupně 2 a vyšší
   tutorial_lbguitar_string_detail_grades: Stupně 2 a vyšší
   tutorial_lbio_string_detail_grades: Pro 2.-8. třídu
@@ -7672,14 +7813,14 @@ cs:
   tutorial_wonzoo_string_detail_grades: Třídy 2-5
   tutorial_wontrip_string_detail_grades: Pro 2.-8. třídu
   tutorial_woncollect_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_wonsecret_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wonsecret_string_detail_grades: Od 6. třídy
   tutorial_hsscience_string_detail_grades: Pro 2.-8. třídu
-  tutorial_popculture_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_popculture_string_detail_grades: Od 6. třídy
   tutorial_legorobust_string_detail_grades: Stupně 2 a vyšší
   tutorial_legoplants_string_detail_grades: Stupně 2 a vyšší
-  tutorial_legopark_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_legodetect_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_legolight_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_legopark_string_detail_grades: Od 6. třídy
+  tutorial_legodetect_string_detail_grades: Od 6. třídy
+  tutorial_legolight_string_detail_grades: Od 6. třídy
   tutorial_alexa_string_detail_grades: Stupně 9 a vyšší
   tutorial_grokpetmicro_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_pirateplunder_string_detail_grades: Pro 2.-8. třídu
@@ -7688,23 +7829,23 @@ cs:
   tutorial_cajump_string_detail_grades: Pro 2.-8. třídu
   tutorial_carest_string_detail_grades: Pro 2.-8. třídu
   tutorial_accai_string_detail_grades: Pro 2.-8. třídu
-  tutorial_vceclipse_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_pmzero_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vceclipse_string_detail_grades: Od 6. třídy
+  tutorial_pmzero_string_detail_grades: Od 6. třídy
   tutorial_hsela_string_detail_grades: Pro 2.-8. třídu
   tutorial_ticklear_string_detail_grades: Pro 2.-8. třídu
   tutorial_bcrobot_string_detail_grades: Pro 2.-8. třídu
-  tutorial_bcsnow_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bcsnow_string_detail_grades: Od 6. třídy
   tutorial_ifly_string_detail_grades: Stupně 2 a vyšší
   tutorial_idowedo_string_detail_grades: Pro 2.-8. třídu
-  tutorial_diggindwarf_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_diggindwarf_string_detail_grades: Od 6. třídy
   tutorial_spheroit_string_detail_grades: Stupně 2 a vyšší
   tutorial_gameofcodes_string_detail_grades: Stupně 2 a vyšší
-  tutorial_blocklygames_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_spherohello_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_spheroarcade_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_bcpy1_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_bcpy2_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_bcjs1_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blocklygames_string_detail_grades: Od 6. třídy
+  tutorial_spherohello_string_detail_grades: Od 6. třídy
+  tutorial_spheroarcade_string_detail_grades: Od 6. třídy
+  tutorial_bcpy1_string_detail_grades: Od 6. třídy
+  tutorial_bcpy2_string_detail_grades: Od 6. třídy
+  tutorial_bcjs1_string_detail_grades: Od 6. třídy
   tutorial_bcjs2_string_detail_grades: Stupně 9 a vyšší
   tutorial_3dbearmars_string_detail_grades: Pro 2.-8. třídu
   tutorial_bitsboxyak_string_detail_grades: Pro 2.-8. třídu
@@ -7712,27 +7853,27 @@ cs:
   tutorial_blockscadbirdhouses_string_detail_grades: Třídy 2-5
   tutorial_blockscadclock_string_detail_grades: Stupně 9 a vyšší
   tutorial_blockscaddinner_string_detail_grades: Třídy 2-5
-  tutorial_blockscadicecream_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blockscadicecream_string_detail_grades: Od 6. třídy
   tutorial_blockscadpizza_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_blockscadsugar_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_bsgridlight_string_detail_grades: Stupně 2 a vyšší
-  tutorial_bpartscratch_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_bpartvid_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bpartscratch_string_detail_grades: Od 6. třídy
+  tutorial_bpartvid_string_detail_grades: Od 6. třídy
   tutorial_bpenglishscratch_string_detail_grades: Pro 2.-8. třídu
   tutorial_bpenglishvid_string_detail_grades: Pro 2.-8. třídu
   tutorial_bphealthscratch_string_detail_grades: Stupně 2 a vyšší
-  tutorial_bphealthvid_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bphealthvid_string_detail_grades: Od 6. třídy
   tutorial_bpmathscratch_string_detail_grades: Třídy 2-5
-  tutorial_bpmathvid_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bpmathvid_string_detail_grades: Od 6. třídy
   tutorial_bpmlkscratch_string_detail_grades: Pro 2.-8. třídu
   tutorial_bpmlkvid_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_bpsafetyscratch_string_detail_grades: Třídy 2-5
   tutorial_bpsafetyvid_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_bpsciencescratch_string_detail_grades: Třídy 2-5
   tutorial_bpsciencevid_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_bptechscratch_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_bptechvid_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_caflags_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bptechscratch_string_detail_grades: Od 6. třídy
+  tutorial_bptechvid_string_detail_grades: Od 6. třídy
+  tutorial_caflags_string_detail_grades: Od 6. třídy
   tutorial_matariki_string_detail_grades: Třídy 2-5
   tutorial_carestaurant_string_detail_grades: Stupně 2 a vyšší
   tutorial_casea_string_detail_grades: Třídy 2-5
@@ -7740,36 +7881,36 @@ cs:
   tutorial_ccwslimer_string_detail_grades: Pro 2.-8. třídu
   tutorial_codinggalaxy_string_detail_grades: Předběžný čtenář - stupeň 8
   tutorial_boatrace_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ccplay_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ccplay_string_detail_grades: Od 6. třídy
   tutorial_grinch_string_detail_grades: Pro 2.-8. třídu
   tutorial_codehsart_string_detail_grades: Stupně 9 a vyšší
   tutorial_codehsbitcoin_string_detail_grades: Stupně 9 a vyšší
   tutorial_codehsblockchain_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehscipher_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehscipher_string_detail_grades: Od 6. třídy
   tutorial_codehscollision_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehsmath_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codehsmusic_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codehssports_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsmath_string_detail_grades: Od 6. třídy
+  tutorial_codehsmusic_string_detail_grades: Od 6. třídy
+  tutorial_codehssports_string_detail_grades: Od 6. třídy
   tutorial_codemojipizza_string_detail_grades: Pro 2.-8. třídu
-  tutorial_moonlander_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_moonlander_string_detail_grades: Od 6. třídy
   tutorial_sushicards_string_detail_grades: Pro 2.-8. třídu
   tutorial_codesparkcreate_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_hardvsoft_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_codestersecard_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_codesterslogo_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codesterstshirt_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codesterslogo_string_detail_grades: Od 6. třídy
+  tutorial_codesterstshirt_string_detail_grades: Od 6. třídy
   tutorial_codewards_string_detail_grades: Pro 2.-8. třídu
   tutorial_olympics_string_detail_grades: Pro 2.-8. třídu
   tutorial_codinismhero_string_detail_grades: Stupně 2 a vyšší
   tutorial_discovery_string_detail_grades: Stupně 2 a vyšší
   tutorial_csfirstname_string_detail_grades: Stupně 2 a vyšší
-  tutorial_edisonmove_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_edisonspider_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_edisonmove_string_detail_grades: Od 6. třídy
+  tutorial_edisonspider_string_detail_grades: Od 6. třídy
   tutorial_edisonspotlight_string_detail_grades: Pro 2.-8. třídu
-  tutorial_firiapython_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gamefrootsquid_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_duckpiano_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gpsound_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_firiapython_string_detail_grades: Od 6. třídy
+  tutorial_gamefrootsquid_string_detail_grades: Od 6. třídy
+  tutorial_duckpiano_string_detail_grades: Od 6. třídy
+  tutorial_gpsound_string_detail_grades: Od 6. třídy
   tutorial_groklearningpython_string_detail_grades: Stupně 9 a vyšší
   tutorial_htmltimetravel_string_detail_grades: Stupně 9 a vyšší
   tutorial_hp_flappy_string_detail_grades: Stupně 9 a vyšší
@@ -7779,32 +7920,32 @@ cs:
   tutorial_imake_string_detail_grades: Předběžný čtenář - 1. stupeň
   tutorial_imorse_string_detail_grades: Pro 2.-8. třídu
   tutorial_kanohp_string_detail_grades: Pro 2.-8. třídu
-  tutorial_khanwebpages_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_khanwebpages_string_detail_grades: Od 6. třídy
   tutorial_kibobowl_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_kibodance_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_buildcharacters_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_designgames_string_detail_grades: Třídy 2-5
   tutorial_makelevels_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_wizard_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wizard_string_detail_grades: Od 6. třídy
   tutorial_mbscratchcards_string_detail_grades: Stupně 2 a vyšší
   tutorial_mbswiftplaygrounds_string_detail_grades: Stupně 2 a vyšší
-  tutorial_mbbuttons_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_meteor_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ballbounce_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_mitcodi_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_mitdoodle_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_talktome_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_mobilecspmap_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_mbbuttons_string_detail_grades: Od 6. třídy
+  tutorial_meteor_string_detail_grades: Od 6. třídy
+  tutorial_ballbounce_string_detail_grades: Od 6. třídy
+  tutorial_mitcodi_string_detail_grades: Od 6. třídy
+  tutorial_mitdoodle_string_detail_grades: Od 6. třídy
+  tutorial_talktome_string_detail_grades: Od 6. třídy
+  tutorial_mobilecspmap_string_detail_grades: Od 6. třídy
   tutorial_ozorandom_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozotroll_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_peblioart_string_detail_grades: Stupně 9 a vyšší
-  tutorial_astropi_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_astropi_string_detail_grades: Od 6. třídy
   tutorial_rgart_string_detail_grades: Třídy 2-5
   tutorial_rgengineer_string_detail_grades: Třídy 2-5
   tutorial_rgmath_string_detail_grades: Třídy 2-5
   tutorial_rgscience_string_detail_grades: Třídy 2-5
   tutorial_rgtech_string_detail_grades: Třídy 2-5
-  tutorial_robotmagic3d_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_robotmagic3d_string_detail_grades: Od 6. třídy
   tutorial_robotmagicflappy_string_detail_grades: Stupně 9 a vyšší
   tutorial_scratchadventure_string_detail_grades: Stupně 2 a vyšší
   tutorial_scratchtalk_string_detail_grades: Stupně 2 a vyšší
@@ -7812,14 +7953,14 @@ cs:
   tutorial_scratchjrtwinkle_string_detail_grades: Předběžný čtenář
   tutorial_spherocomm_string_detail_grades: Pro 2.-8. třídu
   tutorial_spherocommunity_string_detail_grades: Třídy 2-5
-  tutorial_spherofunctions_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherofunctions_string_detail_grades: Od 6. třídy
   tutorial_spheroinfrared_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_spherolightsensor_string_detail_grades: Pro 2.-8. třídu
   tutorial_spheromansion_string_detail_grades: Pro 2.-8. třídu
   tutorial_roadblocks_string_detail_grades: Pro 2.-8. třídu
-  tutorial_spherotext2_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_spherotext3_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_spherotext4_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherotext2_string_detail_grades: Od 6. třídy
+  tutorial_spherotext3_string_detail_grades: Od 6. třídy
+  tutorial_spherotext4_string_detail_grades: Od 6. třídy
   tutorial_spheroraptor_string_detail_grades: Pro 2.-8. třídu
   tutorial_stempiday_string_detail_grades: 'Stupne 9+ '
   tutorial_stemplanetoids_string_detail_grades: Stupně 9 a vyšší
@@ -7827,106 +7968,106 @@ cs:
   tutorial_algobot_string_detail_grades: Pro 2.-8. třídu
   tutorial_thunkableapps_string_detail_grades: Stupně 9 a vyšší
   tutorial_toxicodedot_string_detail_grades: Pro 2.-8. třídu
-  tutorial_gcactions_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gccomparators_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gcconditions_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gccreate_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gcevents_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gcloops_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_gcvariables_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gcactions_string_detail_grades: Od 6. třídy
+  tutorial_gccomparators_string_detail_grades: Od 6. třídy
+  tutorial_gcconditions_string_detail_grades: Od 6. třídy
+  tutorial_gccreate_string_detail_grades: Od 6. třídy
+  tutorial_gcevents_string_detail_grades: Od 6. třídy
+  tutorial_gcloops_string_detail_grades: Od 6. třídy
+  tutorial_gcvariables_string_detail_grades: Od 6. třídy
   tutorial_beanything_string_detail_grades: Třídy 2-5
   tutorial_change_string_detail_grades: Pro 2.-8. třídu
   tutorial_cooking_string_detail_grades: Třídy 2-5
   tutorial_crystal_string_detail_grades: Stupně 2 a vyšší
-  tutorial_landscape_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_landscape_string_detail_grades: Od 6. třídy
   tutorial_pets_string_detail_grades: Třídy 2-5
   tutorial_petvet_string_detail_grades: Třídy 2-5
-  tutorial_superhero_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_vidcodeplastic_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_vidcodetypeface_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_superhero_string_detail_grades: Od 6. třídy
+  tutorial_vidcodeplastic_string_detail_grades: Od 6. třídy
+  tutorial_vidcodetypeface_string_detail_grades: Od 6. třídy
   tutorial_washustorm_string_detail_grades: Třídy 2-5
   tutorial_activitypackets_string_detail_grades: Předběžný čtenář - stupeň 8
-  tutorial_googlerookie_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_googlerookie_string_detail_grades: Od 6. třídy
   tutorial_tommyturtle_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_mazyad_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_gamemaker_string_detail_grades: Stupně 2 a vyšší
   tutorial_duckrace_string_detail_grades: Stupně 2 a vyšší
-  tutorial_allcancodeapps_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_allcancodeapps_string_detail_grades: Od 6. třídy
   tutorial_n2y_string_detail_grades: Předčtenář a vyšší
   tutorial_microsoftarcade_string_detail_grades: Stupně 2 a vyšší
   tutorial_csfirstunplugged_string_detail_grades: Pro 2.-8. třídu
-  tutorial_toxicodepython_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_toxicodepython_string_detail_grades: Od 6. třídy
   tutorial_codecombatozaria_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_vidcodedate_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodedate_string_detail_grades: Od 6. třídy
   tutorial_codemonkeyspace_string_detail_grades: Pro 2.-8. třídu
   tutorial_codespeakhappy_string_detail_grades: Pro 2.-8. třídu
-  tutorial_grokimage_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokimage_string_detail_grades: Od 6. třídy
   tutorial_icomputelearn_string_detail_grades: Předběžný čtenář - stupeň 8
   tutorial_rpstress_string_detail_grades: Stupně 2 a vyšší
   tutorial_bsdcause_string_detail_grades: Stupně 9 a vyšší
   tutorial_vidcodeanimoji_string_detail_grades: Stupně 2 a vyšší
   tutorial_vidcodeanimojies_string_detail_grades: Stupně 2 a vyšší
-  tutorial_bsdinspire_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_tttractor_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bsdinspire_string_detail_grades: Od 6. třídy
+  tutorial_tttractor_string_detail_grades: Od 6. třídy
   tutorial_codeillusionmickey_string_detail_grades: Pro 2.-8. třídu
   tutorial_scigirlsquest_string_detail_grades: Pro 2.-8. třídu
   tutorial_codespeakbreathe_string_detail_grades: Stupně 2 a vyšší
-  tutorial_vidcodeface_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_educodemaze_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_educoderace_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodeface_string_detail_grades: Od 6. třídy
+  tutorial_educodemaze_string_detail_grades: Od 6. třídy
+  tutorial_educoderace_string_detail_grades: Od 6. třídy
   tutorial_codespeakchatbot_string_detail_grades: Pro 2.-8. třídu
-  tutorial_gamefrootgames_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gamefrootgames_string_detail_grades: Od 6. třídy
   tutorial_codespeakgrandparent_string_detail_grades: Pro 2.-8. třídu
-  tutorial_educodekingdom_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educodekingdom_string_detail_grades: Od 6. třídy
   tutorial_codehsdata_string_detail_grades: Stupně 9 a vyšší
-  tutorial_educodecake_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ttsecond_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_bsdtrivia_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educodecake_string_detail_grades: Od 6. třídy
+  tutorial_ttsecond_string_detail_grades: Od 6. třídy
+  tutorial_bsdtrivia_string_detail_grades: Od 6. třídy
   tutorial_csfirstdialogue_string_detail_grades: Pro 2.-8. třídu
   tutorial_codemonkeybeaver_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_codestersdistance_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_itchspace_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersdistance_string_detail_grades: Od 6. třídy
+  tutorial_itchspace_string_detail_grades: Od 6. třídy
   tutorial_vidcodemagic_string_detail_grades: Stupně 2 a vyšší
   tutorial_vidcodemagices_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codespeakmeal_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codespeakmeal_string_detail_grades: Od 6. třídy
   tutorial_itchfish_string_detail_grades: Pro 2.-8. třídu
-  tutorial_bsdwebsite_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bsdwebsite_string_detail_grades: Od 6. třídy
   tutorial_codespeaktime_string_detail_grades: Pro 2.-8. třídu
-  tutorial_itchwebcam_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_itchwebcam_string_detail_grades: Od 6. třídy
   tutorial_itchball_string_detail_grades: Pro 2.-8. třídu
   tutorial_ttrace_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_plethora_string_detail_grades: Stupně 2 a vyšší
-  tutorial_educodesecret_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_itchshapes_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educodesecret_string_detail_grades: Od 6. třídy
+  tutorial_itchshapes_string_detail_grades: Od 6. třídy
   tutorial_codeguppytext_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_vidcodeplastiche_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodeplastiche_string_detail_grades: Od 6. třídy
   tutorial_educativechatbot_string_detail_grades: Stupně 9 a vyšší
-  tutorial_educodebasics_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codehsdesign_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_htmlacademyphp_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educodebasics_string_detail_grades: Od 6. třídy
+  tutorial_codehsdesign_string_detail_grades: Od 6. třídy
+  tutorial_htmlacademyphp_string_detail_grades: Od 6. třídy
   tutorial_gamefrootdistance_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterscovid_string_detail_grades: 'Stupne 6-8 '
   tutorial_ttbunker_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_cuttle_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cuttle_string_detail_grades: Od 6. třídy
   tutorial_bsdjokes_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_rptree_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codestersunity_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codesterssoccer_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_rptree_string_detail_grades: Od 6. třídy
+  tutorial_codestersunity_string_detail_grades: Od 6. třídy
+  tutorial_codesterssoccer_string_detail_grades: Od 6. třídy
   tutorial_breakoutlock_string_detail_grades: Pro 2.-8. třídu
-  tutorial_thunkablemask_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_thunkablemask_string_detail_grades: Od 6. třídy
   tutorial_cafarming_string_detail_grades: Pro 2.-8. třídu
   tutorial_blocksmithyeti_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codecapture_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codecapture_string_detail_grades: Od 6. třídy
   tutorial_codehslitter_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_bsdocean_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_itchplatformer_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codejika_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_itchplatformer_string_detail_grades: Od 6. třídy
+  tutorial_codejika_string_detail_grades: Od 6. třídy
   tutorial_gamefrootclicker_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_rmagicequity_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_ttfreestyle_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_ozobotcolor2_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozobotcolor3_string_detail_grades: Stupně 2 a vyšší
-  tutorial_clcarbon_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_clcarbon_string_detail_grades: Od 6. třídy
   tutorial_kodablebasics_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_scigirlscc_string_detail_grades: Stupně 2 a vyšší
   tutorial_irobotpicture_string_detail_grades: Pro 2.-8. třídu
@@ -7938,15 +8079,15 @@ cs:
   tutorial_kcjheroines_string_detail_grades: Pro 2.-8. třídu
   tutorial_ozobotvalue_string_detail_grades: Třídy 2-5
   tutorial_icodebytes_string_detail_grades: Předběžný čtenář
-  tutorial_clfashion2_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ai4all_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_cldata_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_clfashion2_string_detail_grades: Od 6. třídy
+  tutorial_ai4all_string_detail_grades: Od 6. třídy
+  tutorial_cldata_string_detail_grades: Od 6. třídy
   tutorial_spheroinputs_string_detail_grades: Pro 2.-8. třídu
   tutorial_edisoncount_string_detail_grades: Pro 2.-8. třídu
   tutorial_spheroloops_string_detail_grades: Pro 2.-8. třídu
   tutorial_kiboprogram_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_hellorubycsin60_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_clfashion1_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_clfashion1_string_detail_grades: Od 6. třídy
   tutorial_irobottraffic_string_detail_grades: Třídy 2-5
   tutorial_edisonmystery_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_microbitseaturtles_string_detail_grades: 6.–8. třída (11–13 let)
@@ -7954,17 +8095,17 @@ cs:
   tutorial_imagilabs_string_detail_grades: Pro 2.-8. třídu
   tutorial_irobotsimulator_string_detail_grades: Pro 2.-8. třídu
   tutorial_irobotkind_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_firiavirtual_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_firiavirtual_string_detail_grades: Od 6. třídy
   tutorial_irobotguesscode_string_detail_grades: Pro 2.-8. třídu
   tutorial_ozobotnouns_string_detail_grades: Třídy 2-5
-  tutorial_nasa3d_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_blupants_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_nasa3d_string_detail_grades: Od 6. třídy
+  tutorial_blupants_string_detail_grades: Od 6. třídy
   tutorial_legodance_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_nearpodcoding_string_detail_grades: Stupně 9 a vyšší
   tutorial_kcjplastic_string_detail_grades: Stupně 2 a vyšší
   tutorial_legojourney_string_detail_grades: Pro 2.-8. třídu
   tutorial_legohopper_string_detail_grades: Pro 2.-8. třídu
-  tutorial_catrobatembroidery_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_catrobatembroidery_string_detail_grades: Od 6. třídy
   tutorial_irobotphone_string_detail_grades: Pro 2.-8. třídu
   tutorial_codeguppydraw_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_codejumper_string_detail_grades: Pro 2.-8. třídu
@@ -10731,42 +10872,42 @@ cs:
     datech a zaujatosti a přitom bádejte nad etickými otázkami a nad tím, jak lze
     UI používat k řešení problémů světa.
   tutorial_scratchimagine_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codesterspsa_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codesterspsa_string_detail_grades: Od 6. třídy
   tutorial_googlehero_string_detail_grades: Pro 2.-8. třídu
-  tutorial_codestersbball_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersbball_string_detail_grades: Od 6. třídy
   tutorial_scratchcartoon_string_detail_grades: Stupně 2 a vyšší
   tutorial_codemonkeyjr_string_detail_grades: Předběžný čtenář
   tutorial_bananatales_string_detail_grades: Pro 2.-8. třídu
   tutorial_scratchtales_string_detail_grades: Pro 2.-8. třídu
-  tutorial_msemoji_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_cacolor_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_msemoji_string_detail_grades: Od 6. třídy
+  tutorial_cacolor_string_detail_grades: Od 6. třídy
   tutorial_kodablebeach_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_tynkeren_string_detail_grades: Pro 2.-8. třídu
-  tutorial_tynkerjavapro_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkerjavapro_string_detail_grades: Od 6. třídy
   tutorial_grasshopperhack_string_detail_grades: Stupně 9 a vyšší
   tutorial_pbskids_string_detail_grades: Předčtenářská třída 5
   tutorial_nclabdata_string_detail_grades: Stupně 9 a vyšší
   tutorial_grasshopperphoto_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tynkerpyland_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkerpyland_string_detail_grades: Od 6. třídy
   tutorial_codeitimages_string_detail_grades: Stupně 2 a vyšší
   tutorial_hyperpadenemy_string_detail_grades: Stupně 9 a vyšší
   tutorial_tynkerpro_string_detail_grades: Pro 2.-8. třídu
-  tutorial_trashtag_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_trashtag_string_detail_grades: Od 6. třídy
   tutorial_casiege_string_detail_grades: Pro 2.-8. třídu
-  tutorial_thunkableyeet_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_vidcodedeal_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_thunkableyeet_string_detail_grades: Od 6. třídy
+  tutorial_vidcodedeal_string_detail_grades: Od 6. třídy
   tutorial_codehsgeno_string_detail_grades: Stupně 9 a vyšší
   tutorial_hyperpadpong_string_detail_grades: Stupně 9 a vyšší
   tutorial_tynkerland_string_detail_grades: Pro 2.-8. třídu
-  tutorial_trinketgirl_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_trinketgirl_string_detail_grades: Od 6. třídy
   tutorial_rpimosquito_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_tynkermars_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_cityx_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_vidcodemap_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkermars_string_detail_grades: Od 6. třídy
+  tutorial_cityx_string_detail_grades: Od 6. třídy
+  tutorial_vidcodemap_string_detail_grades: Od 6. třídy
   tutorial_robotmagicfarm_string_detail_grades: Pro 2.-8. třídu
-  tutorial_codehstriangle_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehstriangle_string_detail_grades: Od 6. třídy
   tutorial_ttwhitehouse_string_detail_grades: Stupně 2 a vyšší
-  tutorial_modulo_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_modulo_string_detail_grades: Od 6. třídy
   tutorial_codingtown_string_detail_grades: Třídy 2-5
   tutorial_kanoart_string_detail_grades: Třídy 2-5
   tutorial_dragonscript_string_detail_grades: Stupně 9 a vyšší
@@ -10774,34 +10915,34 @@ cs:
   tutorial_htmlmuffin_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_microsoftpizza_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_stemc_blckhole_string_detail_grades: Stupně 9 a vyšší
-  tutorial_careconfigure_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_careconfigure_string_detail_grades: Od 6. třídy
   tutorial_rpiscratch_string_detail_grades: Třídy 2-5
   tutorial_ozaria_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ttovum_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ttovum_string_detail_grades: Od 6. třídy
   tutorial_ttpassage_string_detail_grades: Pro 2.-8. třídu
   tutorial_tynkerhtmlen_string_detail_grades: Stupně 2 a vyšší
   tutorial_ttfrog_string_detail_grades: Pro 2.-8. třídu
   tutorial_codemojijava_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_ccfirewall_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ccfirewall_string_detail_grades: Od 6. třídy
   tutorial_htmljs_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_ttaqueducts_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_vtgame_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_baroborav_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vtgame_string_detail_grades: Od 6. třídy
+  tutorial_baroborav_string_detail_grades: Od 6. třídy
   tutorial_baroboobstacle_string_detail_grades: Stupně 2 a vyšší
-  tutorial_pbstorytelling_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_pbstorytelling_string_detail_grades: Od 6. třídy
   tutorial_kibosnow_string_detail_grades: Předčtenářská třída 5
   tutorial_kibohappy_string_detail_grades: Předčtenářská třída 5
   tutorial_rubylove_string_detail_grades: Předčtenářská třída 8
   tutorial_spherosmiles_string_detail_grades: Stupně 2 a vyšší
   tutorial_spherobaby_string_detail_grades: Předběžný čtenář - stupeň 8
-  tutorial_toxarchitect_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_toxarchitect_string_detail_grades: Od 6. třídy
   tutorial_idodge_string_detail_grades: Pro 2.-8. třídu
-  tutorial_firiacodebot_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_firiacodebot_string_detail_grades: Od 6. třídy
   tutorial_modlighthouse_string_detail_grades: Předčtenář a vyšší
   tutorial_spherogreen_string_detail_grades: Pro 2.-8. třídu
   tutorial_ozopopstar_string_detail_grades: Pro 2.-8. třídu
-  tutorial_eddesign_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_edshapeup_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_eddesign_string_detail_grades: Od 6. třídy
+  tutorial_edshapeup_string_detail_grades: Od 6. třídy
   tutorial_ozocolor_string_detail_grades: Pro 2.-8. třídu
   tutorial_icomputeeggs_string_detail_grades: Pro 2.-8. třídu
   tutorial_rootunplugged_string_detail_grades: Pro 2.-8. třídu
@@ -10809,20 +10950,20 @@ cs:
   tutorial_peblioportraits_string_detail_grades: Stupně 9 a vyšší
   tutorial_rootcodebreak_string_detail_grades: Pro 2.-8. třídu
   tutorial_microbit14_string_detail_grades: Pro 2.-8. třídu
-  tutorial_barobomoon_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_barobomoon_string_detail_grades: Od 6. třídy
   tutorial_eddog_string_detail_grades: Třídy 2-6
   tutorial_microbit15_string_detail_grades: Pro 2.-8. třídu
   tutorial_unity_string_detail_grades: Stupně 9 a vyšší
-  tutorial_blockscadtarget_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blockscadtarget_string_detail_grades: Od 6. třídy
   tutorial_tcadicicles_string_detail_grades: Třídy 7-8
-  tutorial_blockscadscale_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blockscadscale_string_detail_grades: Od 6. třídy
   tutorial_tcadloops_string_detail_grades: Třídy 5-6
   tutorial_phidgets_string_detail_grades: Stupně 9 a vyšší
-  tutorial_modvariables_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_modvariables_string_detail_grades: Od 6. třídy
   tutorial_codestersmicro_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_codestersdata_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_ikodexmas_string_detail_grades: Třídy 2-5
-  tutorial_rpisensehat_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_rpisensehat_string_detail_grades: Od 6. třídy
   tutorial_mee_string_detail_grades: Stupně 2 a vyšší
   tutorial_kuborobo_string_detail_grades: Předběžný čtenář - 8. ročníky
   tutorial_ai-oceans_string_detail_grades: Od 3. třídy
@@ -11691,76 +11832,76 @@ cs:
   tutorial_codemonkeyjump_string_detail_grades: Pro 2.-8. třídu
   tutorial_poemart_string_detail_grades: Pro 2.-8. třídu
   tutorial_kodablehero_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_cacloud_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cacloud_string_detail_grades: Od 6. třídy
   tutorial_blocksmithbot_string_detail_grades: Pro 2.-8. třídu
   tutorial_hatchmario_string_detail_grades: Stupně 2 a vyšší
   tutorial_microsoftforest_string_detail_grades: Stupně 2 a vyšší
-  tutorial_blackbirdscreen_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blackbirdscreen_string_detail_grades: Od 6. třídy
   tutorial_toxicodecompute2_string_detail_grades: Stupně 2 a vyšší
   tutorial_minecrafttimecraft_string_detail_grades: Stupně 2 a vyšší
-  tutorial_blackbirdtether_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blackbirdtether_string_detail_grades: Od 6. třídy
   tutorial_ob_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codeartportrait_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codeartportrait_string_detail_grades: Od 6. třídy
   tutorial_shelly_string_detail_grades: Pro 2.-8. třídu
   tutorial_weavly_string_detail_grades: Pro 2.-8. třídu
   tutorial_codespeakpassword_string_detail_grades: Stupně 2 a vyšší
   tutorial_kodableshapes_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_nasabinary_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_nasabinary_string_detail_grades: Od 6. třídy
   tutorial_3dmaker_string_detail_grades: Pro 2.-8. třídu
   tutorial_itchstart_string_detail_grades: Pro 2.-8. třídu
   tutorial_hopsub_string_detail_grades: Pro 2.-8. třídu
   tutorial_itchmundos_string_detail_grades: Stupně 2 a vyšší
   tutorial_itchtenacity_string_detail_grades: Stupně 2 a vyšší
   tutorial_kcjskiing_string_detail_grades: Stupně 2 a vyšší
-  tutorial_groksecurity_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_creaticode_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_groksecurity_string_detail_grades: Od 6. třídy
+  tutorial_creaticode_string_detail_grades: Od 6. třídy
   tutorial_kcjhockey_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ttdungeon_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ttdungeon_string_detail_grades: Od 6. třídy
   tutorial_ccai_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_bsdai_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bsdai_string_detail_grades: Od 6. třídy
   tutorial_stemdata_string_detail_grades: Stupně 9 a vyšší
-  tutorial_thunkableinfo_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_educodespace_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_thunkableinfo_string_detail_grades: Od 6. třídy
+  tutorial_educodespace_string_detail_grades: Od 6. třídy
   tutorial_kcjtennis_string_detail_grades: Stupně 2 a vyšší
-  tutorial_robotmagictower_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ttdragons_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_robotmagictower_string_detail_grades: Od 6. třídy
+  tutorial_ttdragons_string_detail_grades: Od 6. třídy
   tutorial_kcjarchery_string_detail_grades: Stupně 2 a vyšší
   tutorial_ttsprouts_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ttmaze_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ttmaze_string_detail_grades: Od 6. třídy
   tutorial_codetribe_string_detail_grades: Pro 2.-8. třídu
   tutorial_ttcanyon_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_kcjxtrail_string_detail_grades: Pro 2.-8. třídu
   tutorial_codespeakroad_string_detail_grades: Pro 2.-8. třídu
-  tutorial_educodelair_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educodelair_string_detail_grades: Od 6. třídy
   tutorial_ibmhourofz_string_detail_grades: Stupně 9 a vyšší
-  tutorial_gamefrootbacteria_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_educodeforest_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_educodehorus_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codespeakpokemon_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gamefrootbacteria_string_detail_grades: Od 6. třídy
+  tutorial_educodeforest_string_detail_grades: Od 6. třídy
+  tutorial_educodehorus_string_detail_grades: Od 6. třídy
+  tutorial_codespeakpokemon_string_detail_grades: Od 6. třídy
   tutorial_stemholiday_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_codespeakpixel_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_codespellsnexus_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codespeakpixel_string_detail_grades: Od 6. třídy
+  tutorial_codespellsnexus_string_detail_grades: Od 6. třídy
   tutorial_carnegieslime_string_detail_grades: Pro 2.-8. třídu
   tutorial_ozotown_string_detail_grades: Stupně 2 a vyšší
   tutorial_milnedash_string_detail_grades: Předběžný čtenář
   tutorial_microbitpet_string_detail_grades: Pro 2.-8. třídu
   tutorial_spherotriad_string_detail_grades: Stupně 2 a vyšší
   tutorial_spheropassword_string_detail_grades: Pro 2.-8. třídu
-  tutorial_codequilt_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codequilt_string_detail_grades: Od 6. třídy
   tutorial_ozoshape1_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozoshape2_string_detail_grades: Stupně 2 a vyšší
   tutorial_hopescape_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozorace_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_ozoequestrian_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_irobotpizza_string_detail_grades: Pro 2.-8. třídu
-  tutorial_ai4alldance_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_ai4allneural_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ai4alldance_string_detail_grades: Od 6. třídy
+  tutorial_ai4allneural_string_detail_grades: Od 6. třídy
   tutorial_spheroinout_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_edisonblueprint_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_edisonblueprint_string_detail_grades: Od 6. třídy
   tutorial_edisonmaze_string_detail_grades: Pro 2.-8. třídu
   tutorial_milnefunctions_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_sasmap_string_detail_grades: Třídy 2-5
-  tutorial_firstrobotics_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_firstrobotics_string_detail_grades: Od 6. třídy
   tutorial_sasdata_string_detail_grades: Stupně 2 a vyšší
   tutorial_carnegiesensabot_string_detail_grades: Pro 2.-8. třídu
   tutorial_robotical4_string_detail_grades: Třídy 2-5
@@ -11768,13 +11909,13 @@ cs:
   tutorial_imagipython_string_detail_grades: Pro 2.-8. třídu
   tutorial_robotical2_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_robotical3_string_detail_grades: Třídy 2-5
-  tutorial_blockscadvirus_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blockscadvirus_string_detail_grades: Od 6. třídy
   tutorial_robotical1_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_irobotshapes_string_detail_grades: Předběžný čtenář
   tutorial_irobotparts_string_detail_grades: Předběžný čtenář
   tutorial_irobottools_string_detail_grades: Předběžný čtenář
   tutorial_kindercar_string_detail_grades: Předběžný čtenář
-  tutorial_caavatar_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_caavatar_string_detail_grades: Od 6. třídy
   tutorial_hello_string_platforms: Všechny moderní prohlížeče, Android tablet, iPad,
     Windows phone, telefon Android, iPhone
   tutorial_raspispace_string_platforms: Všechny moderní prohlížeče, Android tablet,
@@ -12550,20 +12691,20 @@ cs:
   tutorial_codeclubspells_string_detail_grades: Třídy 2-5
   tutorial_coderdojoanime_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_coderdojotarget_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_creaticodescratch_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_creaticodescratch_string_detail_grades: Od 6. třídy
   tutorial_bbsierpinski_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_bbstopwatch_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bbstopwatch_string_detail_grades: Od 6. třídy
   tutorial_idrpatterns_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_idrshapes_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_edisondetect_string_detail_grades: Pro 2.-8. třídu
-  tutorial_edisonmusical_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_edisonmusical_string_detail_grades: Od 6. třídy
   tutorial_codemonkeydiglit_string_detail_grades: Pro 2.-8. třídu
   tutorial_bsdrockpaper_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_microbitreaction_string_detail_grades: Třídy 2-5
   tutorial_kinderanimal_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_kindersinger_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_microbitwwn_string_detail_grades: Třídy 2-5
-  tutorial_grokcyberlive_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokcyberlive_string_detail_grades: Od 6. třídy
   tutorial_codemojimaze_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_codemojisnake_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_carnegietoxibots_string_detail_grades: Pro 2.-8. třídu
@@ -12571,10 +12712,10 @@ cs:
   tutorial_carnegiespike_string_detail_grades: Pro 2.-8. třídu
   tutorial_spheroincolor_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_kcjdominos_string_detail_grades: Pro 2.-8. třídu
-  tutorial_spherocolortheory_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherocolortheory_string_detail_grades: Od 6. třídy
   tutorial_codecombatesports_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_spherodigdisplay_string_detail_grades: Pro 2.-8. třídu
-  tutorial_spherorvrincolor_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherorvrincolor_string_detail_grades: Od 6. třídy
   tutorial_clbinary_string_detail_grades: Stupně 2 a vyšší
   tutorial_sascollabcode_string_detail_grades: Předběžný čtenář +
   tutorial_codecombatgoblins_string_detail_grades: 6.–8. třída (11–13 let)
@@ -12594,7 +12735,7 @@ cs:
   tutorial_rodocodehr_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_microbitdice_string_detail_grades: Třídy 2-5
   tutorial_madflashcard_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_madappwars_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_madappwars_string_detail_grades: Od 6. třídy
   tutorial_kodablepuppies_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_googlesuperhero_string_detail_grades: Pro 2.-8. třídu
   tutorial_googlename _string_detail_grades: Pro 2.-8. třídu
@@ -12604,9 +12745,9 @@ cs:
   tutorial_hatchxrspace_string_detail_grades: Stupně 2 a vyšší
   tutorial_hatchxrtrex_string_detail_grades: Stupně 2 a vyšší
   tutorial_blocksmithguinea_string_detail_grades: Stupně 2 a vyšší
-  tutorial_pickcodeshapes_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_pickcodeshapes_string_detail_grades: Od 6. třídy
   tutorial_codesterssketch_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_pickcodechatbot_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_pickcodechatbot_string_detail_grades: Od 6. třídy
   tutorial_codestersfish_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_codestershedgehog_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_pickcodeggame_string_detail_grades: Stupně 9 a vyšší
@@ -12616,7 +12757,7 @@ cs:
   tutorial_thunkablescavenger_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_codeillusionfund_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_codeillusiongoofybeg_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codeillusiongoofyint_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codeillusiongoofyint_string_detail_grades: Od 6. třídy
   tutorial_robotmagicescape_string_detail_grades: Stupně 2 a vyšší
   tutorial_codespeakclimate_string_detail_grades: Stupně 2 a vyšší
   tutorial_codespeaktwinkle_string_detail_grades: Předběžný čtenář - 1. stupeň
@@ -12626,7 +12767,7 @@ cs:
   tutorial_prstemalexa_string_detail_grades: Stupně 9 a vyšší
   tutorial_coderzfarm_string_detail_grades: Pro 2.-8. třídu
   tutorial_intelinofield_string_detail_grades: Předběžný čtenář - stupeň 5
-  tutorial_cablockchain_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cablockchain_string_detail_grades: Od 6. třídy
   tutorial_nasaparachute_string_detail_grades: Třídy 2-5
   tutorial_nasascratch_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_nasaorbit_string_detail_grades: 6.–8. třída (11–13 let)
@@ -12634,8 +12775,8 @@ cs:
   tutorial_nasalunar_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_meeestate_string_detail_grades: Stupně 2 a vyšší
   tutorial_imagipixelart_string_detail_grades: Pro 2.-8. třídu
-  tutorial_kcjhealth_string_detail_grades: Známky 6+ (11 a vyšší)
-  tutorial_msftwakanda_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_kcjhealth_string_detail_grades: Od 6. třídy
+  tutorial_msftwakanda_string_detail_grades: Od 6. třídy
   tutorial_nafbrand_string_detail_grades: Stupně 9 a vyšší
   tutorial_rpccw_string_platforms: Všechny moderní prohlížeče, Android tablet, iPad,
     Windows phone, telefon Android, iPhone
@@ -13020,6 +13161,141 @@ cs:
   all: Vše
   dont_know: Nevím
   language_label: Jazyk
+  before_hoc: Před hodinou kódu
+  day_of_hoc: Den Hodiny kódu
+  after_hoc: Po hodině kódu
+  step_01: Krok 1
+  step_02: Krok 2
+  step_03: Krok 3
+  step_04: Krok 4
+  step_05: Krok 5
+  step_06: Krok 6
+  step_07: Krok 7
+  step_08: Krok 8
+  hoc_how_to_top_heading: Váš průvodce Hour of Code
+  hoc_how_to_top_desc: Návody přizpůsobené na míru pro nejlepší zážitek z Hour of
+    Code.
+  hoc_how_to_top_view_guide: Zobrazit průvodce pro
+  hoc_how_to_nav_main_aria_label: Vyberte si průvodce
+  hoc_how_to_nav_sidebar_aria_label: Navigace na bočním panelu
+  hoc_how_to_educators_intro_heading: Jak naplánovat vaši Hodinu kódu
+  hoc_how_to_educators_intro_desc: Hodina kódu je hodinový úvod do informatiky, pomocí
+    zábavných výukových programů, které ukazují, že se základy může naučit kdokoli.
+    Letos posuneme Hodinu kódu do nových výšin tím, že nabízíme možnosti kódování,
+    které zahrnují jak umělou inteligenci (AI), tak komponenty jiné než AI. Ať už
+    jste vy nebo vaši studenti zkušení programátoři, nebo se všichni vydáte na svou
+    úplně první výpravu v oblasti informatiky, tato Hodina kódu slibuje mimořádnou
+    plavbu.
+  hoc_how_to_faq_question_prerequisites: Jaké jsou předpoklady pro provedení Hodiny
+    kódu?
+  hoc_how_to_faq_answer_prerequisites: Hodina kódu je jednoduchá na spuštění - dokonce
+    i pro začátečníky. Nepotřebujete zkušenosti v oblasti informatiky nebo výuky,
+    abyste inspirovali studenty k prozkoumání, tvorbě a učení se něčemu novému.
+  hoc_how_to_faq_question_devices: Jaká zařízení potřebuji ke spuštění Hodiny kódu?
+  hoc_how_to_faq_answer_devices_01: 'Zařízení, která můžete použít:'
+  hoc_how_to_faq_answer_devices_02: Pokud jsou zařízení omezená nebo nedostupná, zkuste
+    [párové programování] (%{pair_url}) nebo prozkoumejte naše [odpojené aktivity]
+    (%{unplugged_url}), abyste se učili bez jakýchkoli zařízení vůbec!
+  hoc_how_to_faq_question_volunteer: Kdo se může stát dobrovolníkem?
+  hoc_how_to_faq_answer_volunteer: Dobrovolníkem může být každý, kdo má zájem o vzdělávání
+    v oblasti informatiky a zvyšující se rozmanitost v technologii! Rádi bychom viděli,
+    jak se účastní dobrovolníci všech prostředí. Hodina kódu nabízí širokou škálu
+    aktivit pro všechny věkové kategorie a úrovně dovedností, takže nemusíte být odborníkem
+    na programování, abyste se dobrovolně přihlásili!
+  hoc_how_to_faq_question_full_hour: Bude Hodina kódu trvat celou hodinu?
+  hoc_how_to_faq_answer_full_hour: Mnoho studentů bude moci dokončit své aktivity
+    za méně než hodinu, a to je v pořádku! Studenti se mohou dále učit, zatímco ostatní
+    studenti dokončí svou činnost.
+  hoc_how_to_faq_question_account: Musí se studenti přihlásit pomocí účtu?
+  hoc_how_to_faq_answer_account: Aby studenti mohli vyzkoušet Hodinu kódu, není vyžadována
+    žádná registrace ani přihlášení. Registrace na Hodinu kódu NEautomaticky vytvoří
+    účet Code.org.
+  hoc_how_to_resources_heading_educators: Další zdroje k Hodině Kódu pro vyučující
+  hoc_how_to_resources_promo_heading: Propagační zdroje
+  hoc_how_to_resources_promo_desc: Najděte všechny zdroje, které potřebujete - tištěné
+    i digitální -, abyste upoutali pozornost na svou Hodinu kódu.
+  hoc_how_to_resources_discover_heading: Objevte aktivity
+  hoc_how_to_resources_discover_desc: Prozkoumejte široký výběr hodinových výukových
+    programů určených pro všechny věkové kategorie ve více než 45 jazycích.
+  hoc_how_to_step_label_plan: Naplánujte si, kde a kdy budete hrát Hodinu kódu
+  hoc_how_to_step_label_choose_activity: Vyberte si svou aktivitu
+  hoc_how_to_step_label_test_activity: Vyzkoušejte svou aktivitu
+  hoc_how_to_step_label_register_event: Zaregistrujte svou akci
+  hoc_how_to_step_label_tell: Řekněte svým studentům, škole a komunitě
+  hoc_how_to_step_label_get_coding: Získejte kódování!
+  hoc_how_to_step_label_celebrate: Oslavit
+  hoc_how_to_step_label_beyond_hoc: Za hodinou kódu
+  hoc_how_to_step_beyond_hoc_subhead: Tady to nekončí!
+  hoc_how_to_step_beyond_hoc_desc: Počítačová věda nemusí skončit Hodinou kódu! Zatímco
+    90% rodičů chce, aby se jejich dítě učilo informatiku, většina škol ji stále neučí.
+    Naučte se, jak přivést CS do školy vašeho dítěte ještě dnes.
+  hoc_how_to_step_01_educators_subhead: Vyberte čas a prostor události, který odpovídá
+    počtu studentů a zařízení, která máte k dispozici.
+  hoc_how_to_step_01_educators_desc_01: Jaké prostory máte k dispozici pro svou Hodinu
+    kódu? Zvažte technické možnosti vašeho prostoru a druhy zařízení, na kterých očekáváte,
+    že vaši studenti budou pracovat. Studenti mohou pracovat na výukových programech
+    na jednom zařízení, střídat se pomocí sdíleného zařízení nebo vyzkoušet výukový
+    program společně na tabuli ve třídě. Existují dokonce i odpojené výukové programy,
+    které lze dokončit bez jakýchkoli zařízení. Odpojené možnosti lze provádět kdekoli
+    - dokonce i venku!
+  hoc_how_to_step_01_educators_desc_02: Lidé z celého světa se připojují k oslavě
+    Hodiny kódu během Týdne vzdělávání CS, %{campaign_date} kdy jsou vydány nejnovější
+    výukové programy a aktivity. Hodinu kódu však můžete udělat každý den v roce!
+  hoc_how_to_step_02_educators_desc_01: Prozkoumejte aktivity založené na věku vaší
+    skupiny, zkušenosti, zájmy, a více. Pro studenty je populární vyzkoušet výukové
+    programy vedené samostatně, ačkoli mnoho aktivit zahrnuje plány lekcí pro učitele,
+    které vedou diskusi nebo také rozšiřují aktivitu.
+  hoc_how_to_step_02_educators_desc_02: Rozhodněte se předem, zda chcete vybrat jeden
+    výukový program pro všechny své studenty, nebo nechte každé dítě vybrat si vlastní.
+  hoc_how_to_step_02_educators_desc_03: Letos se vy a vaši studenti můžete [dozvědět
+    se vše o AI] (%ai_url) prostřednictvím výukových programů, plánů lekcí a naší
+    nové série videí Jak AI funguje.
+  hoc_how_to_step_03_educators_desc_01: Než se dostanete do učebny, vyzkoušejte si
+    výukový program sami, abyste mohli odpovědět na otázky!
+  hoc_how_to_step_03_educators_desc_02: Můžete také otestovat výukové programy na
+    studentských počítačích nebo zařízeních, abyste se ujistili, že podporují zvuk
+    a video. Máte nízkou šířku pásma? Plánujte zobrazovat videa v přední části třídy,
+    aby si každý student nestahoval svá vlastní videa.
+  hoc_how_to_step_03_educators_desc_03: Zvažte poskytnutí sluchátek pro vaši třídu,
+    nebo požádejte studenty, aby si přinesli vlastní, pokud vybraný výukový program
+    nejlépe funguje se zvukem.
+  hoc_how_to_step_04_educators_desc_01: Když zaregistrujete událost Hodina kódu, obdržíte
+    užitečné e-maily s novinkami a tipy pro pořádání úspěšné Hodiny kódu. Je to také
+    způsob, jak můžete informovat místní dobrovolníky, že se vaše škola účastní. Dobrovolníci
+    jsou skvělým zdrojem a mohou přijít mluvit do vaší třídy o počítačové vědě nebo
+    pomoci svým studentům s aktivitami Hodiny kódu.
+  hoc_how_to_step_05_educators_desc_01: Nechte své studenty nadchnout událostí sdílením
+    [inspirativní videa] (%{videos_url}) zdůrazňující různé lidi a kreativní způsoby,
+    jak lze počítačovou vědu použít v reálném světě.
+  hoc_how_to_step_05_educators_desc_02: Sdílejte své plány Hodiny kódu s dalšími učiteli,
+    kteří se možná budou chtít zapojit do zábavy! Je to také skvělá příležitost oslovit
+    studentskou asociaci rodičů učitelů vaší školy nebo sdílet zpravodaje rodičů a
+    dát jim vědět, co se jejich děti učí.
+  hoc_how_to_step_06_educators_desc_01: Nasměrujte své studenty na aktivitu, možná
+    sdílením odkazu na tabuli nebo prostřednictvím systému řízení učení ve vaší třídě.
+    Vaši studenti se mohou setkat s výzvami - to je v pořádku! Naučit se programovat
+    je jako naučit se nový jazyk; hned nebudete plynule mluvit. Pokud neznáte odpověď,
+    můžete na to přijít společně.
+  hoc_how_to_step_07_educators_desc_01: 'Nezapomeňte oslavit úspěch! Sdílejte fotografie
+    a videa z vaší události Hodina kódu na sociálních médiích. Použijte #HourOfCode
+    a @codeorg, abychom mohli zdůraznit i váš úspěch!'
+  hoc_how_to_step_07_educators_desc_02: Můžete také vytisknout certifikáty pro své
+    studenty, aby předvedli své úspěchy!
+  hoc_ai_top_desc: O umělé inteligenci se může dozvědět kdokoli, ať už jste student
+    ve třídě nebo pedagog, který odemyká budoucnost výuky s AI a o ní.
+  hoc_ai_how_ai_works_video_series_desc: Tato série krátkých videí vás seznámí s tím,
+    jak umělá inteligence funguje a proč na ní záleží. Poté se ponořte do problémů,
+    jako je algoritmická předpojatost a etika rozhodování o umělé inteligenci.
+  hoc_ai_learn_how_ai_works_desc: Ponořte se do světa umělé inteligence pomocí lekcí
+    „How AI Works“ spárovaných s naší sérií videí, která vás seznámí s tím, jak AI
+    funguje a proč na ní záleží.
+  hoc_ai_101_for_educators_desc: Objevte průlomový potenciál umělé inteligence (AI)
+    ve vzdělávání s naším bezplatným online školením pro učitele.
+  hoc_ai_impacts_desc: Zapojte svou třídu lekcemi vedenými učiteli, které zkoumají
+    dopady umělé inteligence a vyzývají studenty, aby přemýšleli o řešení některých
+    problémů umělé inteligence.
+  hoc_ai_activities_desc: Tyto zcela nové aktivity Hodiny kódu představí uživatelům
+    svět umělé inteligence zábavným a poutavým způsobem.
   team_page_full_team_alt_text: Téměř 100 zaměstnanců Code.org v odpovídajících modrých
     a žlutých tričkách pózuje v hotelové konferenční místnosti pro firemní letní akci
     Codechella 2022.
@@ -13523,6 +13799,10 @@ cs:
   video_library_page_inspirational_video_title_11: Každý se může učit (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA slaví Hodinu kódu (2 minuty)
+  video_library_page_inspirational_video_title_14: Je to víc než hra (1 min)
+  video_library_page_inspirational_video_title_15: Vytvořit pomocí informatiky (1
+    min)
   video_library_page_not_hacked_video_title_1: 'Jak se nenechat hacknout: Úvod'
   video_library_page_not_hacked_video_title_2: 'Jak se nenechat hacknout: Hesla'
   video_library_page_not_hacked_video_title_3: 'Jak se nenechat hacknout: Ověřování
@@ -13534,6 +13814,285 @@ cs:
     stahování'
   video_library_page_not_hacked_video_title_7: 'Jak se nenechat hacknout: Nainstalujte
     aktualizace'
+  thank_you_page_main_title: Děkujeme za pomoc při budování hnutí
+  thank_you_page_description: Koalice Code.org Advocacy Coalition by ráda poděkovala
+    stovkám tisíc místních šampionů a obhájců, včetně učitelů, členů komunity, výzkumných
+    pracovníků, neziskových organizací, univerzit, korporací a vládních institucí,
+    kteří podpořili vizi, že každý student v každé škole si zaslouží příležitost učit
+    se počítačové vědy. Děkuji vám za podporu tohoto hnutí.
+  thank_you_page_members_section_title: 'A všem členům Coalition Advocacy Coalition
+    Code.org:'
+  thank_you_page_individual_organization_title: 'Děkujeme následujícím jednotlivcům
+    a organizacím za jejich příspěvky k této zprávě:'
+  thank_you_page_individual_organization_description: Vedoucí vzdělávání v oblasti
+    informatiky v každé státní vzdělávací agentuře, College Board, Della Cronin, Stuart
+    Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Děkuji studentům a učitelům citovaným v
+    této zprávě:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campionová, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
+  about_us_page_title: O nás
+  about_us_page_hero_description: Code.org® je vzdělávací inovační nezisková organizace
+    zaměřená na vizi, že každý student v každé škole má příležitost učit se počítačové
+    vědy jako součást svého základního vzdělávání K-12. Rozšiřujeme přístup k informatice
+    ve školách, se zaměřením na zvýšení účasti mladých žen a studentů z jiných nedostatečně
+    zastoupených skupin. Code.org, přední poskytovatel kurikula informatiky K-12 v
+    největších školních čtvrtích ve Spojených státech, také organizuje každoroční
+    kampaň [Hour of Code] (%{hour_url}), která zapojila více než 15% všech studentů
+    na světě. Code.org je podporován velkorysými dárci, jako jsou Microsoft, Amazon,
+    Google a [mnoho dalších].%{others_url}
+  about_us_page_section_title_1: Více než 80 milionů studentů a 2 miliony učitelů
+    na Code.org
+  about_us_page_statistic_figcaption: Účast Code.org od školního roku 2021-2022. [Viz
+    rozčleněné údaje.] ()%{data_url}
+  about_us_page_statistic_description: Code.org zvyšuje rozmanitost v oblasti informatiky
+    tím, že oslovuje studenty všech prostředí, kde jsou - na úrovni jejich dovedností,
+    ve svých školách a způsoby, které je inspirují k dalšímu učení. Drtivá většina
+    studentů na Code.org pochází ze studentských skupin historicky nedostatečně zastoupených
+    v informatice. Zvyšování rozmanitosti v informatice je základem naší práce, a
+    [doporučujeme vám přečíst si více o našem úsilí] (%{diversity_url}).
+  about_us_page_section_title_2: Code.org ve zprávách
+  about_us_page_section_news_description: Zobrazit všechny minulé [novinky a oznámení]
+    (%{news_url})
+  about_us_page_section_table: Naše cíle a metriky
+  about_us_page_section_table_header_1: Cíl Code.org
+  about_us_page_section_table_header_2: Úspěch
+  abous_page_section_table_cell_1_1: Zlepšit rozmanitost v CS * (studenti USA) *
+  abous_page_section_table_cell_1_2: 45% studentů Code.org jsou mladé ženy, 50% jsou
+    studenti z marginalizovaných rasových a etnických skupin a 46% amerických studentů
+    je na školách s vysokými potřebami. Přečtěte si více o [našem přístupu k rozmanitosti.]
+    (%{diversity_url})
+  about_page_section_table_cell_2_1: Inspirujte studenty
+  about_page_section_table_cell_2_2: Desítky milionů vyzkoušely [Hodinu kódu] (%{hour_url}).
+    (426 370 561 sloužilo. 49% žen)
+  about_page_section_table_cell_3_1: Oslovte učebny
+  about_page_section_table_cell_3_2: 591,636 učitelů se přihlásilo k výuce našich
+    úvodních kurzů na [Code Studio] (%{code_studio_url}) a je zapsáno 19 177 297 studentů.
+  about_page_section_table_cell_4_1: Připravte nové učitele CS
+  about_page_section_table_cell_4_2: Připravili jsme více než 106 000 nových učitelů
+    pro výuku CS ve třídách K-12. Zjistěte více o našich [profesionálních vzdělávacích
+    programech.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Změňte osnovy školního obvodu
+  about_page_section_table_cell_5_2: Navázali jsme partnerství s [180+ z největších
+    školních obvodů] (%{schoold_disctrict_url}) a 60 regionálními partnery, abychom
+    [přidali CS do školních osnov] (%{cs_curriculum_url}). [Další informace o tom,
+    jak se stát regionálním partnerem.] (%{regional_partner_url})
+  about_page_section_table_cell_6_1: Nastavení zásad pro podporu CS
+  about_page_section_table_cell_6_2: "[Zásady změněny v 50 státech USA] (%{states_url})
+    za účelem stanovení vzdělávacích standardů CS, aby se kurzy CS počítaly k maturitě
+    na střední škole atd. [(podrobnosti)] (%{details_url})"
+  about_page_section_table_cell_7_1: Přejít na globální
+  about_page_section_table_cell_7_2: Naše kurzy jsou k dispozici ve více než 67 jazycích,
+    které se používají ve více než 180 zemích.
+  about_page_section_table_under_label: 'Zdroj: Aktivita Code Studio a [průzkumy zúčastněných
+    pedagogů] (%{educators_url})'
+  about_page_section_title_3: Více informací, historie a filozofie
+  about_page_section_more_description_1: 'V roce 2013 byl Code.org spuštěn dvojčaty
+    [Hadi](%{hadi_url}) a [Ali Partovi] (%{partovi_url}) s (%{video_url}) propagací
+    [video]počítačové vědy. Toto video se stalo #1 na YouTube na jeden den a 15 000
+    škol nás požádalo o pomoc. Od té doby jsme se rozšířili z početného personálu
+    dobrovolníků, abychom vybudovali plnou organizaci podporující celosvětové hnutí.
+    Věříme, že kvalitní vzdělávání v oblasti informatiky by mělo být k dispozici každému
+    dítěti, nejen několika šťastlivcům.'
+  about_page_section_more_description_2: 'Abychom podpořili náš cíl, pracujeme napříč
+    spektrem vzdělávání: navrhujeme vlastní kurzy nebo spolupracujeme s ostatními,
+    školíme učitele, spolupracujeme s velkými školními obvody, pomáháme měnit vládní
+    politiky, rozšiřujeme se na mezinárodní úrovni prostřednictvím partnerství a marketing
+    za účelem prolomení stereotypů.'
+  about_page_section_more_description_3: Naše práce staví na [desetiletích úsilí nesčetných
+    organizací a jednotlivců] (%{efforts_url}), kteří pomohli založit, financovat
+    a šířit vzdělávání v oblasti informatiky. Jsme vděční, že můžeme těžit z neúnavné
+    pomoci širší komunity vzdělávání v oblasti informatiky, a [děkujeme všem partnerům
+    a jednotlivcům, kteří v průběhu let podporovali náš dopad] (%{partners_url})).
+  about_page_section_more_list_1: "[Výroční zpráva Code.org 2021] (%{report_url})
+    (Minulé zprávy: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Naše základní hodnoty a pokyny pro zasílání zpráv]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Naše učební osnovy a filozofie pedagogiky] (%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx přednáška našeho zakladatele Hadi Partoviho
+    o tom, proč je informatika pro všechny (VIDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Sjednocující přístup v rozděleném světě
+  about_page_section_specific_title_1: Sjednocující přístup v rozděleném světě
+  about_page_section_specific_title_2: Náš závazek k přístupnosti
+  about_page_section_specific_title_3: 'Jsme oddáni volným osnovám a technice založené
+    na otevřeném zdrojovém kódu '
+  about_page_section_specific_title_4: Koalice advokacie Code.org
+  about_page_section_specific_title_5: Rámec informatiky K-12
+  about_page_section_specific_title_6: Dárci Code.org
+  about_page_section_specific_title_7: Sledujte nás
+  about_page_section_specific_title_8: Mezinárodní působnost Code.org
+  about_page_section_specific_description_1: Globální role Code.org v hnutí informatiky
+    K-12 je možná pouze proto, že používáme sjednocující přístup napříč různými a
+    často rozdělenými zúčastněnými stranami. V době rostoucí polarizace, myšlenka
+    zvyšování příležitostí pro studenty spojuje lidi z celého politického spektra.
+    Členové týmu Code.org, studenti, učitelé a příznivci mají různorodé a rozdílné
+    názory a všichni jsou vítáni v naší misi. [Přečtěte si více.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org věří, že informatika je základem
+    pro všechny studenty a jsme odhodláni k rovnosti, přístupu a příležitostem v naší
+    organizaci [values.](%{values_url}) Abychom dosáhli tohoto cíle, pracujeme na
+    identifikaci a odstranění překážek, které brání začlenění a plné účasti studentů
+    a pedagogů se zdravotním postižením. Chcete-li se dozvědět více o našem úsilí,
+    podívejte se na naše [prohlášení o přístupnosti] (%{accessibility_url})
+  about_page_section_specific_description_3: Všechny zdroje kurikula a výukové programy,
+    které vytváříme, budou navždy volně k použití a budou otevřeně licencovány na
+    základě licence [Creative Commons] (%{commons_url}), což ostatním umožní vytvářet
+    odvozené vzdělávací zdroje pro nekomerční účely. Pokud máte zájem o licencování
+    našich materiálů pro komerční účely, [kontaktujte nás] (%{contact_us_url}). Naše
+    kurzy jsou přeloženy pro celosvětové použití nebo mluvčími různých jazyků. Naše
+    technologie je vyvíjena jako projekt s otevřeným zdrojovým kódem%{open_source_url}.
+  about_page_section_specific_description_4: Code.org Advocacy Coalition (Code.org
+    Advocacy Coalition%{advocacy_url}) je dvoustranná koalice korporací a neziskových
+    organizací, které spolupracují na vytváření federálních a státních politik USA
+    s cílem rozšířit a udržet přístup k počítačové vědě K-12 a rozšířit účast a rozmanitost
+    v této oblasti. Spojujeme [republikánské a demokratické politické vůdce] (%{leaders_url})
+    ve společné věci podporující rozšiřování přístupu a účasti na počítačové vědě
+    K-12.
+  about_page_section_specific_description_5: Code.org je členem řídícího výboru, který
+    pomohl vytvořit [K-12 Computer Science Framework] (%{framework_url}) - průvodce
+    na vysoké úrovni pro státy, okresy a organizace provádějící vzdělávání v oblasti
+    informatiky. Rámec získal podporu stovek akademiků, pedagogů K-12, softwarových
+    společností, neziskových organizací a států.
+  about_page_section_specific_description_6: Formulář IRS Code.org 990 pro [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019]()%{irs_url_6}), [2020](%{irs_url_7}), a [2021](%{irs_url_8}). [Zásady darování.]
+    (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Přihlaste se k odběru aktualizací stavu]
+    (%{sign_up_url}) o pokroku v hnutí informatiky K-12 a o práci Code.org. Nebo sledujte
+    Code.org na sociálních médiích:"
+  about_page_section_specific_description_8: Více než 40% návštěvnosti našich webových
+    stránek pochází ze zemí mimo Spojené státy a toto číslo stále stoupá. Abychom
+    rozšířili globální přístup k informatice, náš tým úzce spolupracuje s [více než
+    100 mezinárodními partnery] (%{partners_url}), pomáhá jim propagovat Hodinu kódu,
+    prosazovat změnu politiky a školit učitele. Počítačová věda je součástí mezinárodního
+    vzdělávacího diskurzu tím, že spolupracujeme s ministerstvy školství z celého
+    světa a spolupracujeme s mezinárodními organizacemi, jako je Organizace pro hospodářskou
+    spolupráci a rozvoj a Organizace spojených národů pro vzdělávání, vědu a kulturu.
+  about_page_section_donors_description_1: Code.org® je registrovaná veřejná nezisková
+    organizace 501c3 s podporou široké veřejnosti. Jsme vděční za velkorysou podporu,
+    kterou jsme obdrželi od [jednotlivců a organizací] (%{individuals_url}), kteří
+    podporují naši vizi.
+  about_page_section_donors_description_2: Úspěchy kódů (výše) ukazují naši schopnost
+    využít tyto dolary k silným výsledkům. Ale vzhledem k naší neziskové ambici, že
+    každé dítě v každé škole by mělo mít přístup k informatice - stát se gramotnými
+    občany v dnešním digitálním světě a otestovat své zájmy v dalším zkoumání CS jako
+    kariéry - máme před sebou dlouhou cestu ke splnění cíle získávání finančních prostředků,
+    který tuto vizi podpoří.
+  about_page_donors_link_1: Udělejte dary
+  about_page_donors_link_2: "[viz náš seznam dárců] (%{donors_url})"
+  teach_ai_title: Příklady reálného světa. Praktické zdroje.
+  teach_ai_description: Sada nástrojů AI Guidance for Schools je zdrojem pro tvůrce
+    politik, vedoucí škol a zaměstnance, aby vytvořili počáteční pokyny k AI ve svých
+    školách.
+  teach_ai_button_label: Zobrazit sadu nástrojů
+  middle_high_page_main_title: Učení pro děti od 11 let
+  middle_high_page_main_description: Prozkoumejte svět informatiky pomocí poutavých
+    videí, výukových programů s vlastním tempem, programovacích aktivit a dalších!
+  middle_high_page_hero_title: Začínáme s hodinou kódu
+  middle_high_page_hero_description: Naučte se základy informatiky pomocí bezplatných
+    aktivit Hodiny kódu, které obsahují bloky kódování drag-and-drop. Na výběr jsou
+    stovky hodinových možností!
+  middle_high_page_hourofcode_link: Prozkoumejte aktivity Hour of Code
+  middle_high_page_modules_title: Programovací moduly pro starší studenty
+  middle_high_page_modules_description: Tyto krátké moduly pro studenty středních
+    a středních škol, přizpůsobené našim kurzům CS Discoveries a CS Principles, jsou
+    skvělým způsobem, jak se naučit koncepty, které pokrývají všechny programovací
+    jazyky a nástroje.
+  middle_high_page_modules_card_title_1: Úvod do Laboratoře aplikací
+  middle_high_page_modules_card_title_2: Programování želvy v Laboratoři aplikací
+  middle_high_page_modules_card_title_3: Programování založené na událostech v laboratoři
+    aplikací
+  middle_high_page_modules_card_description_1: Pohybujte se svým vlastním tempem v
+    tomto úvodu do našeho prostředí Game Lab při programování animací, interaktivního
+    umění a her.
+  middle_high_page_modules_card_description_2: Odemkněte schopnost vytvářet bohaté,
+    interaktivní aplikace pomocí JavaScriptu v App Lab!
+  middle_high_page_modules_card_description_3: Jděte svým vlastním tempem s tímto
+    úvodem do programovacího prostředí App Lab, ve kterém studenti používají JavaScript
+    k vytváření interaktivních aplikací.
+  middle_high_page_modules_card_link: Zkuste to
+  middle_high_page_make_your_own_title: Vytvořte si vlastní aplikace, hry a webové
+    stránky
+  middle_high_page_make_your_own_description: 'Kromě kurzů máme programovací nástroje,
+    které vám umožní prozkoumat vaši kreativitu a udělat něco úžasného. '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: Herní laboratoř
+  middle_high_page_make_your_own_card_title_3: Webová laboratoř
+  middle_high_page_make_your_own_card_descrpition_1: App Lab je programovací prostředí,
+    kde můžete vytvářet jednoduché aplikace. Navrhněte aplikaci, kódujte v JavaScriptu
+    pomocí bloků nebo textu a poté aplikaci sdílejte během několika sekund.
+  middle_high_page_make_your_own_card_descrpition_2: Laboratoř her je programovací
+    prostředí, kde můžete tvořit jednoduché animace a hry - se vzájemně interagujícími
+    objekty a postavami.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab je programovací prostředí,
+    kde můžete vytvářet jednoduché webové stránky pomocí HTML a CSS. Navrhněte své
+    webové stránky a sdílejte své stránky během několika sekund.
+  middle_high_page_make_your_own_card_link: Dozvědět se více
+  middle_high_page_additional_resources_title: Další zdroje
+  middle_high_page_additional_resources_description: Existuje tolik způsobů, jak dále
+    prozkoumat informatiku! Prohlédněte si naši knihovnu videí, nebo se dozvíte více
+    o vzrušujících kariérách v oblasti informatiky.
+  middle_high_page_video_library_title: Objevte naši knihovnu videí
+  middle_high_page_video_library_description: Naučte se základy informatiky prostřednictvím
+    krátkých 5-10 minutových videí na témata, jako je umělá inteligence, internet,
+    jak počítače fungují, jak se nenechat hacknout, blockchain, kariéra a další!
+  middle_high_page_video_library_link: Zobrazit knihovnu videí
+  middle_high_page_cs_journeys_title: Jděte dál s CS Journeys
+  middle_high_page_cs_journeys_description: Udělejte další krok na své cestě počítačové
+    vědy. Prozkoumejte kariéru, mentorské příležitosti, online kurzy, stipendia, stáže
+    a další!
+  middle_high_page_cs_journeys_link: Prozkoumejte CS Journeys
+  middle_high_page_cs_title: Počítačová věda ve třídě
+  middle_high_page_cs_description: Tyto kurzy by měl vést učitel! Pokud byste je chtěli
+    vidět vyučovat ve vaší škole, zvažte spolupráci s učitelem, abyste je přivedli
+    do vaší třídy.
+  middle_high_page_cs_card_title_1: CS Objevy
+  middle_high_page_cs_card_title_2: Zásady CS
+  middle_high_page_cs_card_title_3: AP Počítačová věda A
+  middle_high_page_cs_card_description_1: Bezplatné celoroční učební osnovy, které
+    studenty seznámí se základními koncepty informatiky a budou je motivovat k přemýšlení
+    nad tím, jak počítače a technologie ovlivňují svět.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Seznámit studenty se softwarovým inženýrstvím
+    a objektově orientovaným designem, zatímco se učí programovací jazyk Java v tomto
+    bezplatném kurikulu pro AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Prozkoumejte CS Dicoveries
+  middle_high_page_cs_link_2: Prozkoumejte principy CS
+  middle_high_page_cs_link_3: Prozkoumejte CSA
+  elemeentary_page_main_title: Učení pro děti od 5 do 11 let
+  elementary_page_main_description: Prozkoumejte svět informatiky pomocí poutavých
+    videí, výukových programů s vlastním tempem, programovacích aktivit a dalších!
+  elementary_page_own_pace_title: Pokračujte v učení svým vlastním tempem
+  elementary_page_own_pace_description: Vytvářejte kresby, hry a další v těchto dvou
+    vynikajících možnostech pro studenty, kteří se sami začínají učit základy informatiky.
+  elementary_page_own_pace_card_title_1: Expresní kurz před čtenářem
+  elementary_page_own_pace_card_title_2: Rychlý kurz
+  elementary_page_own_pace_card_description_1: Naučte se informatiku svým vlastním
+    tempem! Naučte se vytvářet počítačové programy, rozvíjet dovednosti při řešení
+    problémů a pracovat se zábavnými výzvami! Vytvářejte hry a kreativní projekty,
+    které můžete sdílet s přáteli, rodinou a učiteli.
+  elementary_page_own_pace_link_1: Začít kurz před čtenářem
+  elementary_page_own_pace_link_2: Spusťte expresní kurz
+  elementary_page_make_your_own_games_title: Vytvořte si vlastní animace a hry
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Je čas být kreativní! Pomocí
+    blokového kódování vytvořte ve Sprite Lab něco hloupého, sladkého nebo vesmírného.
+    Jediným limitem je vaše představivost!
+  elementary_page_make_your_own_games_link: Vyzkoušejte Sprite Lab
+  elementary_page_computer_science_title: Počítačová věda ve třídě
+  elementary_page_computer_science_description: Tyto kurzy by měl vést učitel! Pokud
+    byste je chtěli vidět vyučovat ve vaší škole, požádejte rodiče nebo opatrovníka,
+    aby spolupracoval s učitelem a přivedl je do vaší třídy.
+  elementary_page_computer_science_card_title_1: Základy informatiky
+  elementary_page_computer_science_card_title_2: Napojení na počítačovou vědu
+  elementary_page_computer_science_description_1: Bezplatné celoroční učební osnovy,
+    které studenty seznámí se základními koncepty informatiky a budou je motivovat
+    k přemýšlení nad tím, jak počítače a technologie ovlivňují svět.
+  elementary_page_computer_science_description_2: Objevujte souvislosti mezi informatikou
+    a jinými předměty, např. matematikou, jazyky, vědou a sociálními studii.
   language_code:
     ar: arabština
     az: ázerbájdžánský

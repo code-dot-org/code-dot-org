@@ -4032,7 +4032,7 @@ sk:
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na
             dobrodružstvo po svete Minecraftu.
-          title: Minecraft Hodina Kódu
+          title: 'Minecraft: Dobrodruh'
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4365,6 +4365,28 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Vyučujeme CS Connections
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
         self-paced-pl-csd5-2023:
           title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
         soccer:
@@ -4382,14 +4404,14 @@ sk:
           student_description: Pomiešaj športy
           title: Naprogramuj si vlastný zápas
         spritelab:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         spritelab-effects-challenge:
           description_audience: Stredne pokročilí / pokročilí užívatelia Sprite Lab
           description_short: Prijmi výzvu a vytvor v Sprite Lab vlastný efekt postavičiek!
           name: spritelab-effects-challenge
           title: Výzva Efekty postavičiek
         spritelab-simple:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         starwars:
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
             v ďalekej galaxii.
@@ -4535,6 +4557,20 @@ sk:
               display_name: Obsah
             csd3_2:
               display_name: 'Kapitola 2: Tvorba hier'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Úvod
+          lessons:
+            lesson-7:
+              name: Úvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Úvod
+          title: Deň 3
+        virtual-pl-csa-summer-day4:
+          title: Deň 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4559,6 +4595,16 @@ sk:
           lessons:
             lesson-3:
               name: Hodnotenie
+          title: Deň 5
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Úvod
+        virtual-pl-csp-summer-day3:
+          title: Deň 3
+        virtual-pl-csp-summer-day4:
+          title: Deň 4
+        virtual-pl-csp-summer-day5:
           title: Deň 5
         virustest:
           description_short: Pomocou programu Sprite Lab vytvorte simuláciu nákazy

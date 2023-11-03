@@ -61,7 +61,6 @@ bn:
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
           student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
         mc:
-          title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
         CSDU3-Draft:
@@ -997,3 +996,18 @@ bn:
               display_name: শর্তযুক্ত
             lessonGroup-5:
               display_name: চলকগুলো
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: ভূমিকা
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ভূমিকা

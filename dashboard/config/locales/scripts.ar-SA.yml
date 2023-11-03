@@ -3317,10 +3317,20 @@ ar:
         csc-ecosystems-2022:
           name: csc - النظم البيئية - 2022
         csc-ecosystems-2023:
+          description: |-
+            ## التحضير المقترح لهذه الوحدة
+
+            **علوم:** سيقوم الطلاب بمحاكاة نظام بيئة الحياة البحرية في الدروس ١ و ٢. لبناء للتعرف على هذا النظام، نوصي بمشاهدة هذا [فيديو حيوانات المحيط](https://www.youtube.com/watch?v=8adtdg0N2-g) (مدته 9:42 دقيقة).
+
+            في الدرس ٢، سيقوم الطلاب ببرمجة ممارسات صيد مستدامة عدة. فيما يلي بعض القراءات لبناء بعض المعرفة الأساسية وتعميق الارتباط بالعالم الحقيقي: [فهم مشكلة الصيد المفرط](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (مقال من متحف خليج مونتيري)، أو [ماكوا يتحدث مع الطائر الغواص](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (كتاب للأطفال).
+
+            **علوم الحاسوب:** في هذه الوحدة، سيتعلم الطلاب مفاهيم برمجة جديدة قد تكون صعبة بالنسبة للطلاب الجدد في علوم الحاسوب. إذا لم يكن الطلاب على دراية بمختبر الكائنات التابع لموقع Code.org، نوصي بتجربة [الأسماك السابحة بواسطة مختبر الكائنات](https://studio.code.org/s/coursee-2022/lessons/3) (مدته 55 دقيقة) للحصول على مقدمة أساسية حول هذه الأداة.
+
+            تستخدم هذه الوحدة أيضًا مفهومًا متقدمًا في علوم الحاسوب يُسمى "الجمل الشرطية". يتعلم الطلاب هذا المفهوم بطريقة متدرجة، ولكن بعض الطلاب قد يستفيدون من المشاركة أولاً في هذا النشاط غير البرمجي كمقدمة لتعلم الجمل الشرطية البرمجية: [الجمل الشرطية باستخدام البطاقات](https://studio.code.org/s/coursed-2022/lessons/12) (مدته 50 دقيقة).
           lessons:
             lesson-3:
-              name: قم بترميز النظام البيئي الخاص بك (2023)
-          title: محاكاة النظام البيئي البحري
+              name: قم ببرمجة النظام البيئي الخاص بك ٢٠٢٣
+          title: محاكاة النظام البيئي البحري ٢٠٢٣
         csc-fables-2022:
           name: خرافات CSC - 2022
         csc-function-machines-pilot:
@@ -3382,7 +3392,7 @@ ar:
           description: هذه مجرد أعمال قيد التنفيذ :)
           lesson_groups:
             lessonGroup-2:
-              display_name: ورق سكراتش
+              display_name: مسودة
           lessons:
             lesson-2:
               name: غلاف كتاب
@@ -9171,6 +9181,25 @@ ar:
             ، وشخصية القنفذ سكارت من فيلم عصر الجليد (Ice Age) !
           title: المتاهة الكلاسيكية
         how-ai-works-2023:
+          description: |-
+            تكمل هذه الدروس سلسلة[0] مقاطع الفيديو [كيف يعمل الذكاء الاصطناعي]. يقترن كل درس بفيديو واحد من السلسلة، للتعمق في المفاهيم المقدمة في مقاطع الفيديو. تركز الدروس على إنشاء تجربة أولى مثيرة للطلاب، حيث يشارك الطلاب في نشاط أو محاكاة ثم يفكرون في التجربة كطريقة لبناء فهم حول الذكاء الاصطناعي وبناء التعاطف مع أولئك المتأثرين به. تركز بعض الدروس بشكل أكبر على التكنولوجيا وراء الذكاء الاصطناعي، بينما تركز الدروس الأخرى على التأثيرات المجتمعية والاعتبارات الأخلاقية للذكاء الاصطناعي.
+
+            \*\* الدعم للمعلمين: \*\* يمكنك معرفة المزيد حول إدخال دروس الذكاء الاصطناعي إلى الفصل الدراسي الخاص بك من خلال [سلسلة الذكاء الاصطناعي ١٠١ للمعلمين](https://code.org/ai/pl/101). الذكاء الاصطناعي ١٠١ للمعلمين هي سلسلة تعليمية مهنية تأسيسية مجانية عبر الإنترنت لأي معلم ومعلم مهتم بالعالم الرائد للذكاء الاصطناعي (AI) وإمكاناته التحويلية في التعليم.
+
+            \*\* خيارات التنفيذ: \*\* انقر فوق أحد الخيارات أدناه للتوسيع وعرض المزيد من التفاصيل.
+
+            :: التفاصيل [<span style="font-size: 1em; font-weight: bold;">«أريد تعليمهم جميعًا!»</span>] يمكن تدريس
+            الدروس١-٧ كتسلسل مدته ٧ أيام، حيث يركز كل يوم على مقطع فيديو فردي من سلسلة الفيديو ويتعمق في المفاهيم المقدمة. يجب أن تخفي الفصول الدراسية التي تسير في هذا الاتجاه الدرس ٨، الذي لا يتناسب مع هذا التسلسل. [انقر هنا لمعرفة المزيد عن إخفاء الدرس](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            ::
+
+            :: التفاصيل [<span style="font-size: 1em; font-weight: bold;">«أريد تدريس درس معين أو دمج درس في فصل آخر»</span>] يمكن
+            لكل درس أن يستخدم بمفرده ويتم تدريسه بشكل مستقل عن الآخرين. يعد هذا مفيدًا بشكل خاص إذا كنت ترغب في دمج درس في موضوع آخر أو فصل دراسي موجود في علوم الكمبيوتر أو الذكاء الاصطناعي أو التعليم العام. يجب أن تخفي الفصول الدراسية التي تسير في هذا الاتجاه جميع الدروس باستثناء تلك التي تريد تدريسها. [انقر هنا لمعرفة المزيد عن إخفاء الدرس](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            :: التفاصيل [<span style="font-size: 1em; font-weight: bold;">«لدي يوم واحد فقط»</span>] تم تصميم
+            الدرس ٨ للفصول الدراسية التي ترغب في تقديم الذكاء الاصطناعي للطلاب، ولكن لديها يوم واحد فقط للقيام بذلك. يوفر هذا الدرس أداة تدوين للطلاب حيث يشاهد الفصل تسلسل الفيديو بأكمله. يجب أن تخفي الفصول الدراسية التي تسير في هذا الاتجاه جميع الدروس باستثناء الدرس ٨. [انقر هنا لمعرفة المزيد عن إخفاء الدرس](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            ::
+            <br />
+            <br />
           title: كيف يعمل الذكاء الاصطناعي
         iceage:
           description: أنشئ قصة أو صمم لعبة باستخدام مختبر لعبة العصر الجليدي!
@@ -9338,7 +9367,7 @@ ar:
           description_short: استكشف عالم Minecraft عن طريق الكود.
           student_description: استخدم القطع البرمجية لأخذ ستيف و ألكس في مغامرة في
             عالم ماين كرافت.
-          title: ساعة من البرمجة مع ماين كرافت
+          title: مغامر في Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-2:
@@ -10148,6 +10177,28 @@ ar:
             لخلق تجارب تعليمية إيجابية في علوم الكمبيوتر.\n\n\\*\\*الوقت المقترح:
             \\*\\* 75 دقيقة"
           title: تعليم اتصالات علوم الكمبيوتر للميسرين فقط
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            تم تصميم وحدة التعلم الاحترافية هذه لمساعدتك في التحضير لتدريس وحدة حل المشكلات والحوسبة في Code.org.
+
+            \*\* في وحدة التعلم الاحترافية هذه، ستقوم بالآتي: \*\*
+
+            -   التعرف على مقدمة في حل المشكلات والحوسبة.
+            -   ممارسة المفاهيم الأساسية المُدرجة في الوحدة.
+            -   اكتشاف مشاريع نهاية الفصل.
+
+            \*\* الوقت المقترح:\*\* 30 دقيقة
+          student_description: |-
+            تم تصميم وحدة التعلم الاحترافية هذه لمساعدتك في التحضير لتدريس وحدة حل المشكلات والحوسبة في Code.org.
+
+            \*\* في وحدة التعلم الاحترافية هذه، ستقوم بالآتي: \*\*
+
+            -   التعرف على مقدمة في حل المشكلات والحوسبة.
+            -   ممارسة المفاهيم الأساسية المُدرجة في الوحدة.
+            -   اكتشاف مشاريع نهاية الفصل.
+
+            \*\* الوقت المقترح:\*\* 30 دقيقة
+          title: 'الوحدة 1: التحضير لتدريس حل المشكلات والحوسبة'
         self-paced-pl-csd1-2021:
           description: "هذه الوحدة عبارة عن مقدمة قصيرة لكل من Code.org ودورة التعلم
             المهني هذه. \n\n\\*\\*سوف تقوم بما يلي: \\*\\*\n\n-   احصل على مقدمة عن
@@ -10888,6 +10939,108 @@ ar:
               display_name: محتوى
             csd3_2:
               display_name: 'الفصل 2: إنشاء الألعاب'
+        virtual-pl-csa-summer-2024-day1:
+          title: اليوم 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+            lessonGroup-7:
+              display_name: مقدمة
+          lessons:
+            lesson-2:
+              name: الجزء 1 غير المتزامن
+            lesson-3:
+              name: الجزء المتزامن 2
+            lesson-4:
+              name: الجزء 2 غير المتزامن
+            lesson-7:
+              name: مقدمة
+            lesson-8:
+              name: افتتاحية ورشة العمل
+          title: اليوم 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          lessons:
+            lesson-2:
+              name: الجزء 1 غير المتزامن
+            lesson-3:
+              name: الجزء المتزامن 2
+            lesson-4:
+              name: الجزء 2 غير المتزامن
+          title: اليوم 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          lessons:
+            lesson-1:
+              name: مقدمة
+            lesson-2:
+              name: الجزء 1 غير المتزامن
+            lesson-4:
+              name: الجزء 2 غير المتزامن
+          title: اليوم 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          lessons:
+            lesson-2:
+              name: الجزء 1 غير المتزامن
+            lesson-4:
+              name: الجزء 2 غير المتزامن
+            lesson-5:
+              name: افتتاحية ورشة العمل
+          title: اليوم 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          lessons:
+            lesson-1:
+              name: افتتاحية ورشة العمل
+            lesson-13:
+              name: مراسم الختام
+            lesson-16:
+              name: مراسم الختام
+            lesson-2:
+              name: الجزء 1 غير المتزامن
+            lesson-3:
+              name: الجزء المتزامن 2
+            lesson-4:
+              name: الجزء 2 غير المتزامن
+          title: 'اليوم الخامس '
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -10989,6 +11142,67 @@ ar:
               name: استعراض ورش عمل العام الدراسي
             lesson-9:
               name: التحضير للسنة
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء المتزامن 2
+            lessonGroup-4:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          title: اليوم 1
+        virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          lessons:
+            lesson-5:
+              name: مقدمة
+          title: اليوم 2
+        virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          lessons:
+            lesson-2:
+              name: الجزء 1 غير المتزامن
+          title: اليوم 3
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+            lessonGroup-5:
+              display_name: الجزء 2 غير المتزامن
+          title: اليوم 4
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الجزء المتزامن 1
+            lessonGroup-3:
+              display_name: الجزء 1 غير المتزامن
+            lessonGroup-4:
+              display_name: الجزء المتزامن 2
+          lessons:
+            lesson-6:
+              name: مراسم الختام
         virustest:
           description_short: 'استخدم Sprite Lab لبرمجة محاكاة من انتشار فيروس. '
           lesson_groups:

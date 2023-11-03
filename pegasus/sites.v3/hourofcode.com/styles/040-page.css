@@ -1,8 +1,9 @@
 :root {
   /* Colors */
-  --brand_primary_light: #d5f1f4;
+  --brand_primary_light: #d6f2f5;
   --brand_primary_default: #008b9a;
   --brand_primary_dark: #176870;
+  --brand_secondary_light: #c7b4df;
   --brand_secondary_default: #5c3f7f;
   --brand_secondary_dark: #432d5c;
   --neutral_white: #FFFFFF;
@@ -19,15 +20,29 @@
   --neutral_dark: #292F36;
   --orange: #ffa400; /* legacy color */
   /* Typography */
-  --main-font-regular: "Gotham 4r", sans-serif;
-  --main-font-italics: "Gotham 4i", sans-serif;
-  --main-font-bold: "Gotham 5r", sans-serif;
-  --main-font-extra-bold: "Gotham 7r", sans-serif;
-  --main-font-bold-italics: "Gotham 7i", sans-serif;
+  --main-font: 'Metropolis', sans-serif;
+  --thin-font-weight: 100;
+  --extra-light-font-weight: 200;
+  --light-font-weight: 300;
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semi-bold-font-weight: 600;
+  --bold-font-weight: 700;
+  --extra-bold-font-weight: 800;
+  --black-font-weight: 900;
+  /* Border radius */
+  --border-radius: 4px;
 }
 
+html {
+  height: 100%;
+}
+
+
 body {
-  font-family: var(--main-font-regular);
+  background-color: var(--neutral_white);
+  height: 100%;
+  font-family: var(--main-font);
   font-size: 14px;
   line-height: 22px;
   color: var(--neutral_dark);
@@ -36,7 +51,8 @@ body {
 
 h1,
 .heading-xxl {
-  font-family: var(--main-font-extra-bold);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-size: 2rem;
   line-height: 1.16;
   margin: 1.75em 0 0.5em 0;
@@ -44,7 +60,8 @@ h1,
 
 h2,
 .heading-xl {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1.5rem;
   line-height: 1.24;
   margin: 1em 0 0.5em 0;
@@ -53,7 +70,8 @@ h2,
 
 h3,
 .heading-lg {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1.125rem;
   line-height: 1.28;
   margin-bottom: 0.5em;
@@ -61,7 +79,8 @@ h3,
 
 h4,
 .heading-md {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.32;
   margin-bottom: 0.5em;
@@ -69,7 +88,8 @@ h4,
 
 h5,
 .heading-sm {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.40;
   margin-bottom: 0.5em;
@@ -77,7 +97,8 @@ h5,
 
 h6,
 .heading-xs {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.48;
   margin-bottom: 0.5em;
@@ -114,14 +135,16 @@ p {
 
 figcaption,
 .video_caption_link {
-  font-family: var(--main-font-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 0.875rem;
   margin: 0.5em 0 1em;
   line-height: 1.4;
 }
 
 .overline-one {
-  font-family: var(--main-font-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.875rem;
@@ -130,7 +153,8 @@ figcaption,
 }
 
 .overline-two {
-  font-family: var(--main-font-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.75rem;
@@ -139,7 +163,8 @@ figcaption,
 }
 
 .overline-three {
-  font-family: var(--main-font-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.625rem;
@@ -152,7 +177,8 @@ hr {
 }
 
 a {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   transition: all .2s ease-in-out;
 }
 
@@ -184,18 +210,20 @@ blockquote p {
 }
 
 strong {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
-  font-style: normal;
+  font-family: var(--main-font);
+  font-style: italic;
 }
 
 strong em,
 em strong {
-  font-family: 'Gotham 7i', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
+  font-style: italic;
 }
 
 ul {
@@ -240,6 +268,8 @@ td {
   border-style: solid;
   padding: 15px;
 }
+
+.flex-container { display: flex; }
 
 /* Centers a block-level element */
 .centered { text-align: center !important; }
@@ -487,15 +517,15 @@ a.link-button,
 button {
   align-items: flex-start;
   background-color: var(--brand_secondary_default);
-  border: 1px solid var(--brand_secondary_default);
+  border: 2px solid var(--brand_secondary_default);
   border-radius: 4px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
-  font-weight: normal;
   letter-spacing: normal;
   margin: 0;
   padding: 0.5rem 1rem;
@@ -508,6 +538,39 @@ button {
 a.link-button:hover,
 button:hover {
   background-color: var(--brand_secondary_dark);
+  border-color: var(--brand_secondary_dark);
+}
+
+a.link-button.secondary {
+  background: none;
+  border: 2px solid var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
+}
+
+a.link-button.secondary:hover {
+  background-color: var(--neutral_dark10);
+}
+
+a.link-button.secondary {
+  background: none;
+  border: 2px solid var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
+}
+
+a.link-button.secondary:hover {
+  background-color: var(--neutral_dark10);
+}
+
+a.link-button.white {
+  background-color: var(--neutral_light);
+  border-color: var(--neutral_light);
+  color: var(--neutral_dark);
+}
+
+a.link-button.secondary.white {
+  background: none;
+  border-color: var(--neutral_white);
+  color: var(--neutral_white);
 }
 
 .continue-btn{
@@ -534,10 +597,10 @@ button:hover {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #7765a1;
+  background: var(--brand_secondary_light);
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: var(--brand_secondary_default);
 }
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
@@ -556,12 +619,13 @@ button:hover {
 a.lines_of_code_link {
   color:white;
   text-decoration:none;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 label {
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 .required {

@@ -10,7 +10,6 @@ chef_client_updater 'install' do
 end
 
 include_recipe 'apt'
-include_recipe 'sudo-user'
 
 include_recipe 'cdo-apps::hostname'
 
@@ -108,6 +107,9 @@ include_recipe 'cdo-postfix'
 include_recipe 'cdo-cloudwatch-agent'
 include_recipe 'cdo-syslog'
 
+# Production analytics utilities.
+include_recipe 'cdo-analytics' if %w[production-daemon production-console].include?(node.name)
+
 include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
 include_recipe 'cdo-apps::build'
@@ -140,9 +142,6 @@ include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
 
 # only the i18n server needs the i18n recipe
 include_recipe 'cdo-i18n' if node.name == 'i18n'
-
-# Production analytics utilities.
-include_recipe 'cdo-analytics' if %w[production-daemon production-console].include?(node.name)
 
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']

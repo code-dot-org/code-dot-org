@@ -778,6 +778,8 @@ sr:
           description: Иди даље од првог часа са новим идејама за пројекте.
           student_description: Иди даље од првог часа са новим идејама за пројекте.
           title: Настави плес
+        dance-unplugged:
+          title: Плесна журка без интернета
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -976,7 +978,6 @@ sr:
           description_short: Истражите Мајнкрафт свет кроз кôд
           student_description: Користите блокове кода да поведете Стива или Алекс
             у авантуру кроз овај Мајнкрафт свет.
-          title: Мајнкрафт час програмирања
         minecraft:
           description: Програмирај животиње и друга Minecraft створења у својој верзији
             Minecraft-а.

@@ -49,6 +49,7 @@ ko:
       Assessment: 평가
       Attribution: 권한 정보
       Back and Forth: 앞뒤로
+      Balance an Ecosystem: 생태계 균형 조정하기
       Basic Conditionals: 기본 조건
       Bass, Mid, and Treble: 저음, 중간음, 고음
       Be a Super Digital Citizen: 슈퍼 디지털 시민 되기
@@ -82,8 +83,9 @@ ko:
       'Challenge: RGB Colors': '도전: RGB 색상'
       Challenges: 도전
       Change: 변경
+      Check For Understanding: 이해도 확인하기
       Check Your Work: 작업 확인
-      Check for Understanding: 이해 여부 확인
+      Check for Understanding: 이해도 확인하기
       Check-In Survey: 체크인 설문조사
       Checking for a Winner: 당첨자 확인
       'Choice Levels: Customize Your App': '선택 레벨: 앱 사용자 지정'
@@ -144,6 +146,8 @@ ko:
       Draw a Background: 배경 그리기
       Drawing: 그리기
       Driver Alert System: 드라이버 경보 시스템
+      Ecosystems Simulation: 생태계 시뮬레이션
+      Ecosystems Video: 생태계 동영상
       End of Course Projects: 과정말 프로젝트
       Escape Room Example: 방 탈출 예시
       Events: 이벤트
@@ -183,6 +187,7 @@ ko:
       Follow the Algorithm - Unplugged Activity: 알고리즘 따라가기 - 언플러그드 활동
       Follow the Mouse: 쥐를 따르라
       Fonts and Style: 글꼴 및 스타일
+      Food Chain Setup: 먹이 사슬 설정하기
       FoodFight: 푸드파이터
       For Loop Fun - Unplugged Activity: For 루프 펀 - 언플러그드 활동
       For Loops: 반복을 위한
@@ -207,6 +212,7 @@ ko:
       How to Create a Simple Function: 단순 함수를 만드는 방법
       How to Make a Sprite: 스프라이트 만드는 방법
       Ice Age Loops: 아이스 에이지 루프
+      If... then... Conditional Statements: If-then 조건문
       Images and Sounds: 이미지와 소리
       Import Your Model: 모델 불러오기
       Import a Model: 모델 불러오기
@@ -277,7 +283,7 @@ ko:
       'Mini-project: Chase Game': '미니 프로젝트: 체이스 게임'
       'Mini-project: Flappy Game': '미니 프로젝트: 플래피 게임'
       'Mini-project: Interactive Poster': '미니 프로젝트: 인터랙티브 포스터'
-      'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 호르헤 '
+      'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 코코'
       'Mini-project: Sticker Art': '미니 프로젝트: 스티커 아트'
       'Mini-project: Sticker Design': '미니 프로젝트: 스티커 디자인'
       Modify simulation variables: 시뮬레이션 변수 수정
@@ -384,16 +390,20 @@ ko:
       Share Out: 공유하기
       Share Your App: 앱 공유하기
       Share Your Pages: 페이지 공유
+      Share Your Simulation: 시뮬레이션 공유하기
       Share Your Stylesheets: 스타일시트 공유
       Shoe Recommendation Survey: 구두 추천 설문조사
       Shoe Recommender: 구두 추천
       Side Scroller: 사이드 스크롤러
       Simple Circuits: 단순 회로
-      Skill Building: 실력 쌓기
+      Skill Building: 실력 향상
       Skill-Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
       Social Sleuth: 소셜 탐정
+      Solution 1 - Fishing Zone: '해결책 1: 어획 구역'
+      Solution 2 - Fishing Season: '해결책 2: 어획 시기'
+      Solution 3 - Fishing Limits: '해결책 3: 어획 한도'
       Songwriting - Functions Unplugged Activity: 작사 - 함수 언플러그드 활동
       Speed it Up, Slow it Down: 속도를 높여요, 속도는 낮춰요
       Sprite Lab Example Project: 스프라이트 랩 예 프로젝트
@@ -415,6 +425,7 @@ ko:
       The Big Event - Unplugged Activity: 빅 이벤트 - 언플러그드 활동
       The Buzzer: 버저 
       The Collector: 컬렉터
+      The Food Chain: 먹이 사슬
       The Harvester: 수확인
       The Internet - Unplugged Activity: 인터넷 - 언플러그드 활동
       The Power of Words - Unplugged Activity: 말의 힘 - 언플러그드 활동

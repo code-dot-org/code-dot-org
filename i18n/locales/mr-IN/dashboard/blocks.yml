@@ -67,6 +67,11 @@ mr:
           UNIT:
             '"measures"': मापे
             '"seconds"': सेकंद
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': मापे
+            '"seconds"': सेकंद
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD} ला {AMOUNT} ने बदला"
         options:
@@ -516,6 +521,43 @@ mr:
             '"iceCream"': आईसक्रीम
             '"default"': प्रकाश
             '"neon"': निऑन
+            '"tropical"': उष्णकटिबंधीय
+            '"vintage"': व्हिंटेज
+            '"warm"': उबदार
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          set background effect
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': कुठलेच नाही
+            '"rand"': "(Previous)"
+            '"circles"': वर्तुळे
+            '"color_cycle"': रंग
+            '"diamonds"': हिरे
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': फटाके
+            '"swirl"': हिप्नो
+            '"kaleidoscope"': कॅलिडोस्कोप
+            '"lasers"': लेसर डांस फ्लोर
+            '"splatter"': पेंट फवारणी
+            '"rainbow"': इंद्रधनुष्य
+            '"snowflakes"': हिमवर्षाव
+            '"text"': गाण्यांची नावे
+            '"galaxy"': स्पेस
+            '"sparkles"': स्पार्कल्स
+            '"spiral"': नागमोडी
+            '"disco"': चौरस
+            '"stars"': तारे
+          PALETTE:
+            '"rave"': काळा आणि पांढरा
+            '"cool"': मस्त
+            '"electronic"': इलेक्ट्रॉनिक
+            '"iceCream"': आईसक्रीम
+            '"default"': प्रकाश
+            '"neon"': निऑन
+            '"ocean"': समुद्र
+            '"rainbow"': इंद्रधनुष्य
             '"tropical"': उष्णकटिबंधीय
             '"vintage"': व्हिंटेज
             '"warm"': उबदार

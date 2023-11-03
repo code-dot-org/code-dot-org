@@ -4,6 +4,7 @@ pt:
     attributes:
       user:
         age: Idade
+        ai_settings_header: Configurações de I.A.
         current_password: Senha atual
         edit_header: Editar Detalhes da Conta
         email: E-mail
@@ -1308,7 +1309,7 @@ pt:
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
     horas) para o Ensino Fundamental
   try_reloading: Tente recarregar a página
-  unit_prefix: Unidade %{n}
+  unit_prefix: Unidade  %{n}
   unplugged_activity: Atividade off-line
   unsubmit: Cancelar envio
   upsell:

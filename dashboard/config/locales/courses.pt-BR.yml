@@ -170,7 +170,7 @@ pt:
           title: Fundamentos de Ciência da Computação
     resources:
       csd_implementation_guide/csd/2022:
-        url: "<https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview>"
+        url: https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview
       curriculum/csd/2017:
         name: Currículo
       curriculum/csd/2018:

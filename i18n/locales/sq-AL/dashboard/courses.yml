@@ -76,6 +76,9 @@ sq:
           version_title: '2023'
         vpl-csd-2023:
           version_title: '2023'
+        virtual-pl-csa-summer-2024: {}
+        virtual-pl-csp-summer-2024: {}
+        self-paced-pl-csd-unit1-2023: {}
     resources:
       curriculum/csd/2017:
         name: Plani mësimor

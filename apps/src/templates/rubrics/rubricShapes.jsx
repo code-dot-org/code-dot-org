@@ -33,4 +33,17 @@ export const studentLevelInfoShape = PropTypes.shape({
   timeSpentMinutes: PropTypes.number,
   attempts: PropTypes.number,
   lastAttempt: PropTypes.string,
+  user_id: PropTypes.number,
+});
+
+export const submittedEvaluationShape = PropTypes.shape({
+  id: PropTypes.number,
+  feedback: PropTypes.string,
+  understanding: PropTypes.number,
+});
+
+export const aiEvaluationShape = PropTypes.shape({
+  learning_goal_id: PropTypes.number.isRequired,
+  understanding: PropTypes.number.isRequired,
+  ai_confidence: PropTypes.number,
 });

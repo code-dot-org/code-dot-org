@@ -160,14 +160,19 @@ input[type=submit] {
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   border-radius: $border-radius;
-  padding: .625rem 1rem;
+  padding: .75rem 1rem;
   margin: 0.5rem 0;
   font-size: 1rem;
-  font-family: 'Gotham 5r', sans-serif;
-  line-height: 1.2;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  line-height: 1.05;
   text-decoration: none;
   text-align: center;
   transition: all ease-in-out .2s;
+
+  @media screen and (max-width: $width-sm) {
+    line-height: 1.2;
+  }
 
   &:hover {
     color: white;
@@ -185,11 +190,12 @@ input[type=submit] {
     }
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     cursor: default;
     background-color: $neutral_dark20;
     border: 2px solid $neutral_dark20;
-    color: $neutral_white;
+    color: $neutral_dark70;
   }
 }
 
@@ -252,6 +258,21 @@ ul {
     @include body-three;
   }
 
+  // Clear spacing and list dots
+  &.clear-styles {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0;
+      text-indent: 0;
+
+      &:before {
+        content: "";
+      }
+    }
+  }
+
   // Lists that use icons next to content
   &.icon-bullet-list {
     margin: 1rem 0;
@@ -284,7 +305,7 @@ ul {
       }
 
       i {
-        font-size: 1.875rem;
+        font-size: 2rem;
       }
 
       h3 {
@@ -458,6 +479,26 @@ ol.steps-list {
   margin: unset;
   padding: unset;
 
+  &.four-col {
+    li {
+      width: 20%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &.three-col {
+    li {
+      width: 28%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
   li {
     padding-left: 0 !important;
     text-indent: 0 !important;
@@ -465,12 +506,7 @@ ol.steps-list {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    width: 20%;
     margin: 3rem 0 2.5rem;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
 
     a.link-button,
     button,
@@ -577,6 +613,7 @@ form {
     display: block;
     text-align: left;
     font-size: 1rem;
+    font-weight: var(--semi-bold-font-weight);
   }
 
   input, select {
@@ -586,7 +623,8 @@ form {
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
-    font-family: $gotham-regular, sans-serif;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 1rem;
     transition: all ease-in-out .2s;
 
@@ -635,6 +673,20 @@ form {
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
+
+  .new {
+    color: var(--neutral_white);
+    background: var(--brand_accent_default);
+    font-size: 0.75rem;
+    font-family: var(--main-font);
+    font-weight: var(--medium-font-weight);
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: -2px -8px 0 0;
+    padding: 6px 8px 5px;
+    border-radius: 1rem;
+  }
 
   h3 {
     width: 100%;
@@ -722,6 +774,10 @@ form {
 
   h3 {
     @include heading-sm;
+
+    &.heading-md {
+      @include heading-md
+    }
   }
 
   figure.video-responsive {

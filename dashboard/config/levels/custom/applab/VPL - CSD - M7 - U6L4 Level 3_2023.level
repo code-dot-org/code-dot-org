@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-08-01T18:04:45.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Comparing Input Methods - App Lab\r\n\r\n_Recall Unit 4: Design Process, provides students with prior knowledge using App Lab when responding to events using the Circuit Playground in Unit 6.  Unit 6, Lesson 3:  Updating Screen Elements revisits App Lab as well._\r\n\r\nRun the code and answer the following questions:\r\n\r\n1. What is the source of input?\r\n2. Where and how does the program check for input?\r\n3. What does the program do when it gets the correct input?\r\n4. What is the program doing when there is no input?",
+    "long_instructions": "# Comparing Input Methods - App Lab\r\n\r\n_Recall that **Unit 4: The Design Process** provides students with prior knowledge using App Lab when responding to events using a device in **Unit 6: Creating Apps with Devices**.  Unit 6, Lesson 1:  Intro to App Lab revisits App Lab as well._\r\n___\r\n\r\n##### Run the code and answer the following questions:\r\n\r\n##### 1. What is the source of input?\r\n##### 2. Where and how does the program check for input?\r\n##### 3. What does the program do when it gets the correct input?\r\n##### 4. What is the program doing when there is no input?",
     "instructions_important": "false",
     "start_blocks": "button(\"button\", \"Click Me!\");\r\nonEvent(\"button\", \"click\", function(event) {\r\n  setProperty(\"button\", \"x\", randomNumber(0, 220));\r\n  setProperty(\"button\", \"y\", randomNumber(0, 350));\r\n});",
     "is_k1": "false",
@@ -52,11 +53,13 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-08-01T18:04:45.768+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - M7 - U6L4 Level 3_2022\\\"\"],\"cloned_from\":\"VPL - CSD - M7 - U6L4 Level 3_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-01T18:04:45.768+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - M7 - U6L4 Level 3_2022\\\"\"],\"cloned_from\":\"VPL - CSD - M7 - U6L4 Level 3_2022\"},{\"changed_at\":\"2023-10-12 18:28:38 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

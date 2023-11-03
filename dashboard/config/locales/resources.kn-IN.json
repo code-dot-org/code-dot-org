@@ -5045,7 +5045,6 @@
           "type": "ಸಂಪನ್ಮೂಲ"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "ವೀಡಿಯೊ"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -6428,6 +6427,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "ನಿಯತಾಂಕಗಳೊಂದಿಗೆ ಕಾರ್ಯಗಳು",
           "type": "ವೀಡಿಯೊ"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "ಕಾರ್ಯಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "ಸ್ಲೈಡ್ಗಳು"
@@ -8477,10 +8480,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "ವೀಡಿಯೊ"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "ಕವಿತೆಗಳ ಪಟ್ಟಿ",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "ಸ್ಲೈಡ್ಗಳು"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
         }
       }
     }

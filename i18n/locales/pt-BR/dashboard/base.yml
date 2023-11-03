@@ -52,6 +52,7 @@ pt:
         age: 'Idade'
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
+        ai_settings_header: 'Configurações de I.A.'
         finish_sign_up_header: 'Finalize a criação da sua conta'
         finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org <strong>%{email}</strong>.'
@@ -1259,7 +1260,7 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
-  unit_prefix: "Unidade %{n}"
+  unit_prefix: "Unidade  %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Feedback do Professor"
   lesson_lock:

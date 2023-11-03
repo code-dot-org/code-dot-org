@@ -5,36 +5,56 @@ az:
   language: Azərbaycan dili
   front_title: Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date}
   coming_soon: Tezliklə
-  campaign_date_start_short: 5 dek.
-  campaign_date_start_long: 5 dekabr
-  campaign_date_short: 5-11 dekabr
-  campaign_date_full: 5-11 dekabr
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 dekabr 2022
-  nonus_campaign_date_start_short: 1 Okt.
-  nonus_campaign_date_start_long: 1 Oktyabr
-  nonus_campaign_date_short: 1 Okt. - 18 Dek.
-  nonus_campaign_date_full: 1 oktyabr - 18 dekabr
-  nonus_campaign_date_year: '2022'
+  new: Yeni
+  hours_of_code_served: Xidmət edilən kod saatları
+  hoc_stat_languages: Şagirdlər 40 dildə öyrənir
+  hoc_stat_hours_served: Kod Saatını 100 milyondan çox şagir sınaqdan keçirdi
+  hoc_stat_females: Qadın tələbələr Hour of Code iştirakçılarının 50% -ni təşkil edir
+  campaign_date_start_short: 4 dek.
+  campaign_date_start_long: 4 dekabr
+  campaign_date_short: 4-10 dek.
+  campaign_date_full: 4-10 dekabr
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 dekabr 2023
+  nonus_campaign_date_start_short: 5 sentyabr
+  nonus_campaign_date_start_long: Sentyabr 5
+  nonus_campaign_date_short: 5 sentyabr - 17 dekabr
+  nonus_campaign_date_full: 5 sentyabr - 17 dekabr
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 Oktyabr, 2020 - 18 Dekabr, 2020
-  latam_campaign_date_start_short: 1 Okt.
-  latam_campaign_date_start_long: 1 Oktyabr
-  latam_campaign_date_short: 1 Okt. - 18 Dek.
-  latam_campaign_date_full: 1 oktyabr - 18 dekabr
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_start_short: 5 sentyabr
+  latam_campaign_date_start_long: Sentyabr 5
+  latam_campaign_date_short: 5 sentyabr - 17 dekabr
+  latam_campaign_date_full: 5 sentyabr - 17 dekabr
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 Oktyabr, 2020 - 18 Dekabr, 2020
   europe_campaign_date_start_short: 10 Okt.
   europe_campaign_date_start_long: 10 Oktyabr
   europe_campaign_date_short: 10-25 Okt.
   europe_campaign_date_full: 10-25 Oktyabr
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10-25 Oktyabr, 2020
-  africa_campaign_date_start_short: 1 Okt.
-  africa_campaign_date_start_long: 1 Oktyabr
+  africa_campaign_date_start_short: 5 sentyabr
+  africa_campaign_date_start_long: Sentyabr 5
   africa_campaign_date_short: 1-31 Okt.
   africa_campaign_date_full: 1-31 Oktyabr
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1-31 Oktyabr, 2020
+  hoc2023_header: AI ilə yaradıcılıq
+  hoc2023_hero_desc_homepage: Süni intellekt (Sİ) mövzsusuna toxunan və ya toxunmayan
+    bir kod saatı təşkil etmək və Sİ-nin necə işlədiyini öyrənmək üçün dünyanın hər
+    yerində milyonlarla qoşulun. Hər kəs, hər yerdə bunu edə bilər. Hər hansı ilkin
+    təcrübəyə ehtiyac yoxdur.
+  hoc2023_hero_desc_learn_page: Bu il həm süni intellekt (Sİ), həm də qeyri-Sİ komponentlərini
+    əhatə edən proqramlaşdırma imkanları təklif edərək Kod Saatını yeni zirvələrə
+    qaldırırıq.
+  hoc2023_social_creativity_with_ai_title: Kod Saatı - Nə yaradacaqsınız?
+  hoc2023_social_creativity_with_ai_desc: AI haqqında araşdırmaq və öyrənmək üçün
+    kompüter elmindən istifadə edin!
+  hoc2023_what_is_hoc_desc: Kod Saatı bütün bacarıq səviyyələrində olan öyrənənlər
+    üçün əyləncəli fəaliyyətlər və videolar vasitəsilə kompüter elminə pulsuz girişdir.
+    Bu ilki həm kodlaşdırma, həm də AI qeyd edilməsi 400-dən çox tərəfdaş, 20.000
+    müəllim və 58.000 könüllü tərəfindən dəstəklənir.
   hoc2022_header: Kəşf et, oyna, yarat!
   social_hoc2022_explore_play_create: İnformatikanı kəşf etmək, oynamaq və yaratmaq
     üçün istifadə edin!
@@ -47,6 +67,9 @@ az:
     “Encanto” musiqisi və daha çoxunu təqdim edir!
   social_hoc2023_dance: Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     Disneyin “Encanto” musiqisi və daha çox!
+  social_hoc2023_dance_v2: Əşyalarınızı dayandırmağın vaxtı gəldi! Miley Cyrus, BTS,
+    Lil Nas X, Harry Styles, Nicki Minaj, Rosalía və daha çoxlarının hitləri ilə öz
+    rəqs partiyanızı yaradın!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Bu gün öyrənin, sabah daha parlaq gələcək qurun.
@@ -172,6 +195,7 @@ az:
   social_ai_title: Süni intellekt haqqında məlumat əldə edin | Code.org
   social_ai_desc: Tələbələrə və müəllimlərə süni intellekti sinifə gətirməyə kömək
     edəcək vasitələr.
+  social_videos_desc: Hər yaşda olan tələbələr üçün maraqlı informatika videoları.
   pl_superhero_title: Tələbələrə super qəhrəman olmağa kömək edin!
   pl_superhero_desc: Orta və orta məktəb müəllimləri üçün yüksək dəstəkləyən Peşəkar
     Öyrənmə Proqramımıza qoşulun.
@@ -183,6 +207,43 @@ az:
     Kurikulum Kataloqu və hamısını tapmağınıza kömək etmək üçün yenidən işlənmiş Öyrətmə
     səhifəsi!
   in_partnership_with: İlə ortaqlıqda
+  shop_code_dot_org_heading: Mağaza Code.org
+  shop_code_dot_org_desc: İşimizə dəstək olun və hərəkəti qürurla geyin. Şapkalarımızı
+    prezident Obama və məşhurlar da taxdılar.
+  spread_the_word_heading: Hərkəsə səsimizi yayın
+  spread_the_word_desc: Code.org -u şəbəkənizlə paylaşaraq təsirimizi artırın. Sosial
+    mediadan tutmuş e-poçt yeniləmələrinə qədər daha çox müəllim, tələbə və vəkilə
+    çatmağımıza necə kömək edə biləcəyinizi kəşf edin.
+  follow_us_heading: Bizi sosial mediada izləyə
+  follow_us_desc: Sosial mediada bizimlə bu günə qədər xəbərdar olun və məlumatlı
+    olmaq və məlumatlılığı artırmaq üçün yazılarımızı şəbəkənizlə paylaşın.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  device_tablet: Tablet
+  device_laptop: Laptop
+  device_desktop_computer: Masaüstü Kompüter
+  device_mobile_device: Mobil cihaz
+  for_everyone: Hər kəs üçün
+  for_students_teacher_led_learning: 'Tələbələr üçün: Müəllim tərəfindən idarə olunan
+    öyrənmə'
+  for_students_teacher_led_lessons: 'Tələbələr üçün: Müəllim tərəfindən idarə olunan
+    dərslər'
+  professional_development: Peşəkar inkişaf
+  how_ai_works_video_series: AI Video Seriyası Necə İşləyir
+  learn_how_ai_works: AI necə işlədiyini öyrənin
+  ai_101_for_educators: Tərbiyəçilər üçün AI 101
+  learn_about_ai_impacts: AI-nin təsirləri haqqında məlumat əldə edin
+  hoc_ai_activities: Kod Saatı AI Fəaliyyətləri
+  subscribe_to_emails_heading: E-poçtlara abunə olun
+  subscribe_to_emails_desc: Code.org saytında və kompüter elmləri təhsilində baş verənlər
+    haqqında oxuyun rüblük yenilikləri poçt siyahımız vasitəsilə.
+  subscribe_to_emails_intl: Beynəlxalq yeniləmələrə abunə olun
+  promote_code_dot_org_heading: Code.org təşviq
+  promote_code_dot_org_desc: Statistikalar, sitatlar və videoların köməyi ilə bölgənizdə
+    kompüter elmlərini təşviq edin.
   afe_partnership_logo_alt: Amazon Future Engineer loqosu
   afe_partnership_thanks_desc: Amazon Future Engineer, aşağı gəlirli və digər əlverişsiz
     uşaqları və gəncləri kompüter elmləri sahəsində karyera qurmağa ruhlandırmaq,
@@ -201,21 +262,61 @@ az:
   curricula_title_high: Lisey Kurikulumları
   curricula_desc_high: Sizi və lisey şagirdlərinizi kompüter elmlərini daha dərindən
     araşdırmağa dəvət edən cəlbedici kurslara və fəaliyyətlərə göz atın.
+  for_administrators_heading: Administratorlar üçün
+  for_administrators_desc: Kompüter elmlərini tədris proqramına daxil etmiş minlərlə
+    məktəbə qoşulun.
+  for_parents_heading: Valideynlər üçün
+  for_parents_desc: Şagirdinizin məktəbini kompüter elmləri təhsili təklif etməyə
+    və ya genişləndirməyə təşviq edə bilərsiniz.
+  for_educators_heading: Təlimçilər üçün
+  for_educators_desc: Peşəkar öyrənmə seminarlarımızla bu gün tədrisə başlayın - kompüter
+    elmləri təcrübəsi lazım deyil.
   students_label: Şagirdlər
   teachers_label: Müəllimlər
+  educators_label: Tərbiyəçilər
+  companies_label: Şirkətlər
+  districts_label: Bölgələr
+  school_assemblies_label: Məktəb Məclisləri
+  parents_label: Valideynlər
+  public_officials_label: Dövlət məmurları
+  volunteers_label: könüllülər
+  virtual_events_label: Virtual Hadisələr
   teacher_label_csf: CS Əsasları Müəllim
   teacher_label_csd: CS Discoveries Müəllimi
   teacher_label_csp: CS Prinsipləri Müəllim
   teacher_label_csc: CS Əlaqələri Müəllim
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: Müəllim forumu
+  teacher_forum_desc: Digər müəllimlərdən məsləhət, fikir və dəstək almaq üçün Kod
+    Saatı Müəllim Forumunu ziyarət edin.
   required_materials: 'Tələb olunan materiallar:'
   optional_materials: 'Könüllü materiallar:'
-  call_to_action_explore_roles: Açıq rolları araşdırın
+  for_students: Tələbələr üçün
+  for_educators: Təlimçilər üçün
+  call_to_action_host_hoc: Kod saatına ev sahibliyi edin
+  call_to_action_hold_an_event: Tədbir keçirin
+  call_to_action_register_event: Tədbirinizi qeydiyyata alın
+  call_to_action_register_your_hoc: Kod saatınızı qeydiyyatdan keçirin
+  call_to_action_select_activity: Bir fəaliyyət seçin
+  call_to_action_start_activity: Bir fəaliyyətə başlayın
+  call_to_action_get_certificates: Sertifikatlar alın
+  call_to_action_go_beyond_hoc: Kod Saatından kənara çıxın
+  call_to_action_explore_all_hoc_activities: Code.org saytından bütün Hour of Code
+    fəaliyyətlərini araşdırın
+  call_to_action_start_dance_party: Rəqs partiyasına başlayın
+  call_to_action_start_part_02: İkinci hissəyə başlayın
+  call_to_action_start_unplugged_activity: Şəbəkdən çıxarılmış fəaliyyətə başlayın
+  call_to_action_view_promo_resources: Promo resurslarına baxın
   call_to_action_learn_more: Daha ətraflı
   call_to_action_watch_now: İndi baxın
   call_to_action_try_activity: Fəaliyyəti sınayın
+  call_to_action_try_activities: Fəaliyyətləri sınayın
+  call_to_action_try_hoc_ai_activities: Hour of Code AI fəaliyyətlərini sınayın
+  call_to_action_explore_activities: Fəaliyyətləri araşdırın
+  call_to_action_explore_ai: AI-ni araşdırın
   call_to_action_explore_unit: Bölməni araşdırın
   call_to_action_explore_curriculum: Kurikulumu araşdırın
+  call_to_action_explore_curricula: Kurikulumları araşdırın
   call_to_action_explore_curriculum_options: Kurikulum seçimlərini araşdırın
   call_to_action_explore_lessons: Dərsləri araşdırın
   call_to_action_explore_modules: Modulları araşdırın
@@ -266,6 +367,7 @@ az:
   call_to_action_find_self_paced_modules: Öz-özünə inkişaf edən modulları tapın
   call_to_action_join_teacher_forums: Müəllim forumlarına qoşulun
   call_to_action_explore_teacher_forums: Müəllim forumlarını araşdırın
+  call_to_action_explore_teacher_forum: Müəllim forumunu araşdırın
   call_to_action_explore_career_resources: Karyera resurslarını araşdırın
   call_to_action_watch_videos: Videolara baxın
   call_to_action_download_posters: Afişaları yüklə
@@ -283,11 +385,43 @@ az:
   call_to_action_notify_available: Mövcud olduqda mənə bildirin
   call_to_action_register_early_access: Erkən giriş üçün qeydiyyatdan keçin
   call_to_action_open_positions: Açıq mövqelərə baxın
+  call_to_action_explore_roles: Açıq rolları araşdırın
   call_to_action_get_guide: Bələdçi alın
   call_to_action_donate_to_cdo: Code.org saytına ianə edin
   call_to_action_start_fundraiser: Bir fandreyzerə başlayın
   call_to_action_view_donation_policy: Bağış siyasətinə baxın
   call_to_action_view_donate_bitpay: BitPay ilə ianə edin
+  call_to_action_make_a_donation: Bağış edin
+  call_to_action_other_ways_to_give: Verməyin digər yolları
+  call_to_action_become_partner_usa: Amerika Birləşmiş Ştatları tərəfdaşı ol
+  call_to_action_become_partner_intl: Beynəlxalq tərəfdaş ol
+  call_to_action_become_a_volunteer: Könüllü ol
+  call_to_action_start_translating: Tərcümə etməyə başlayın
+  call_to_action_learn_about_advocacy: Vəkilliyimiz haqqında məlumat əldə edin
+  call_to_action_visit_store: Mağazanı ziyarət edin
+  call_to_action_view_faqs: Daha çox suallar baxın
+  call_to_action_applications_open: Ərizə qəbulu artıq açıqdır
+  call_to_action_apply_cs_ambassador: İnformatika Səfiri olmaq üçün müraciət edin
+  call_to_action_coming_soon: Tezliklə!
+  call_to_action_learn_how_ai_works: AI necə işlədiyini öyrənin
+  call_to_action_learn_about_ai: AI haqqında məlumat əldə edin
+  aria_label_call_to_action_hoc_how_to_educators: Müəllimlər üçün necə təlimatına
+    baxın
+  aria_label_call_to_action_hoc_how_to_companies: Şirkətlər üçün necə təlimatına baxın
+  aria_label_call_to_action_hoc_how_to_districts: Bölgələr üçün necə təlimatına baxın
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Məktəb Məclisləri üçün necə
+    təlimatına baxın
+  aria_label_call_to_action_hoc_how_to_parents: Valideynlər üçün necə təlimatına baxın
+  aria_label_call_to_action_hoc_how_to_public_officials: Dövlət məmurları üçün necə
+    təlimatına baxın
+  aria_label_call_to_action_hoc_how_to_volunteers: Könüllülər üçün necə təlimatına
+    bax
+  aria_label_call_to_action_hoc_how_to_virtual_events: Virtual Hadisələr üçün necə
+    təlimatına baxın
+  aria_label_call_to_action_dance_01: Dance Party fəaliyyətinə başlayın
+  aria_label_call_to_action_dance_02: Dance Party fəaliyyətinin ikinci hissəsinə başlayın
+  aria_label_call_to_action_dance_unplugged: Dance Party şəbəkəsindən çıxan fəaliyyətə
+    başlayın
   aria_label_call_to_action_afe: Amazon Future Engineer haqqında daha çox məlumat
     əldə edin
   aria_label_call_to_action_teaching_csf: Tədris Kompüter Elmlərinin Əsasları peşəkar
@@ -405,11 +539,26 @@ az:
   curriculum_name_creating_apps_with_devices: Cihazlarla Proqramlar Yaratmaq
   curriculum_name_poetry: Şeir ilə kodlaşdırma
   curriculum_name_dance_party: Rəqs şənliyi
+  curriculum_name_dance_party_02: Rəqs etməyə davam edin
+  curriculum_name_dance_party_unplugged: Rəqs partiyası elektrik şəbəkəsindən çıxar
+  curriculum_name_dance_party_ai_edition: 'Rəqs partiyası: AI nəşri'
   curriculum_name_problem_solving_computing: Problemlərin həlli və hesablama
   curriculum_name_web_development: Veb İnkişafı
   curriculum_name_interactive_animations_games: İnteraktiv Animasiyalar və Oyunlar
   curriculum_name_design_process: Dizayn prosesi
   curriculum_name_data_society: Məlumat və Cəmiyyət
+  curriculum_desc_dance_party_01: Bu giriş fəaliyyətində, müxtəlif rəngarəng personajların
+    cizgi fonlarına və optimal musiqiyə keçməsini təmin etmək üçün koddan istifadə
+    edin.
+  curriculum_desc_dance_party_02: Genişləndirilmiş layihə ideyaları ilə giriş təlimatından
+    kənara çıxın Daha mürəkkəb rəqs partiyalarının nümunələri kitabxanasına baxın.
+  curriculum_desc_dance_party_unplugged: Yivinizi işə salın - kompüterə ehtiyac yoxdur!
+    Hadisələr kimi kodlaşdırma anlayışlarının rəqqas xoreoqrafiyasını sinxronlaşdırmaq
+    üçün necə istifadə edilə biləcəyini öyrənin.
+  curriculum_desc_dance_party_ai_edition: Bu günün ən yaxşı sənətçilərini nümayiş
+    etdirən öz virtual rəqs partiyanızı yaratmaq üçün süni intellekt (AI) konsepsiyaları
+    haqqında məlumat əldə edin. Seçmək üçün onlarla mahnı ilə musiqi zövqündən asılı
+    olmayaraq hər tələbəyə çatır. Əşyalarınızı dayandırmağın vaxtı gəldi!
   curriculum_desc_csf: Tələbələri kompüter elminin təməl anlayışları ilə tanış edən
     pulsuz ibtidai tədris proqramı.
   curriculum_desc_csf_express: Kompüter proqramları yaratmağı, problem həll etmə bacarıqlarını
@@ -508,7 +657,7 @@ az:
   module_label_prerequisites: 'İlkin şərtlər:'
   module_label_level: 'Səviyyə:'
   module_label_topics: 'Mövzular:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Cihazlar:'
   module_label_tools: 'Proqramlaşdırma vasitələri:'
   module_label_professional_learning: 'Peşəkar Öyrənmə:'
   module_label_languages: 'Dəstəklənən Dillər:'
@@ -530,12 +679,16 @@ az:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Uşaq bağçası
   module_grade_grade_01: 1-ci sinif
@@ -543,6 +696,12 @@ az:
   module_grade_grade_03: 3-cü sinif
   module_grade_grade_04: 4-cü sinif
   module_grade_grade_05: 5-ci sinif
+  module_age_05_07: 5-7 yaş
+  module_age_07: 7 yaşdan yuxarı
+  module_age_07_11: 7-11 yaş
+  module_age_11: 11 yaşdan yuxarı
+  module_age_13: 13 yaşdan yuxarı
+  module_age_all_age: Bütün yaşlar
   module_grade_k_5_teachers: K-5 Müəllimlər
   module_grade_6_10_teachers: 6-10 Müəllimlər
   module_grade_9_12_teachers: 9-12 Müəllimlər
@@ -636,6 +795,59 @@ az:
   heading_these_lessons_will: 'Bu dərslər:'
   heading_explore_curriculum_catalog: Kurikulum Kataloqunda bütün kurslarımızı araşdırın
   heading_csa_ai: AP® imtahanından sonra ediləcək işlər axtarırsınız?
+  heading_bring_cs_to_students: Şagirdlərə kompüter elmləri gətirin
+  heading_cs_ambassador_program: İnformatika Səfiri Proqramı
+  heading_featured_student_projects: Seçilmiş tələbə layihələri
+  heading_start_hoc_with_videos: Kod Saatınıza ilham verən videolarla başlayın
+  cs_ambassador_subhead: Əgər siz məktəbinizdə daha çox gənc qadını kompüter elmləri
+    almağa təşviq etmək həvəsli bir orta məktəb tələbəsinizsə, onda sizə ehtiyacımız
+    var!
+  cs_ambassador_desc: Tibb, əyləncə, idman, təhsil, biznes, moda və sahibkarlıq daxil
+    olmaqla hər sahəyə kompüter elmləri toxunur. Yenə də orta məktəb yaşlı gənc qadınların
+    yalnız 5% -i kompüter elmləri dərsləri keçir Səfirlər həmyaşıdlarını kompüter
+    elmləri dərsinə keçməyə təşviq edərək bu gender fərqini aradan qaldırmağa kömək
+    edə bilərlər.
+  cs_ambassador_application_date: Müraciətlər 8 Noyabr 2023 tarixinə qədər açıqdır
+  cs_ambassador_application_subhead: Bu gün ərizənizi təqdim etmək üçün bir müəllim
+    ilə işləyin
+  cs_ambassador_application_questions: Suallar? [youngwomen@code.org] ilə əlaqə saxlayın
+    (%{email_url})
+  cs_ambassador_do_heading: CS səfirləri nə edirlər?
+  cs_ambassador_do_desc: CS səfirləri gənc qadınları mövzunu araşdırmağa və kompüter
+    elmindəki yerlərini bərpa edərkən bir-birlərini yüksəltməyə təşviq edirlər. CS
+    səfirləri həmyaşıdları ilə əlaqə qurur və kompüter elminə olan həyəcanlarını və
+    sevgisini bölüşür Sinif otaqlarını ziyarət edirlər, naharda masalar qəbul edirlər,
+    iclaslarda və klub iclaslarında danışırlar. CS səfirləri gənc qadınları geri çəkən
+    stereotipləri pozmaq üçün müəllimlər və məktəb idarəçiləri ilə işləyir
+  cs_ambassador_steps_heading: CS səfiri olmaq üçün nə lazımdır?
+  cs_ambassador_steps_list_title_01: Ehtiras
+  cs_ambassador_steps_list_title_02: CS kursunda təcrübə
+  cs_ambassador_steps_list_title_03: CS təklif edən məktəb
+  cs_ambassador_steps_list_desc_01: Məktəbinizdəki gənc qadınları kompüter elmləri
+    dərslərinə keçməyə təşviq etmək həvəsi
+  cs_ambassador_steps_list_desc_02: '2022-23 tədris ilində və ya daha əvvəl bir illik
+    kompüter elmləri dərsi keçmisiniz (tövsiyə olunur: CS Prinsipləri və ya AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Mütəmadi olaraq bir illik kompüter elmləri kursu
+    təklif edən bir orta məktəbdə iştirak edin (tövsiyə olunur: CS Prinsipləri və
+    ya AP® CSA)'
+  cs_ambassador_benefits_heading: Proqram faydaları
+  cs_ambassador_benefits_list_title_01: Milli icma
+  cs_ambassador_benefits_list_title_02: İctimai xidmət
+  cs_ambassador_benefits_list_title_03: Tanınma
+  cs_ambassador_benefits_list_title_04: Hədiyyələr
+  cs_ambassador_benefits_list_title_05: Sertifikat
+  cs_ambassador_benefits_list_title_06: Təcrübələr
+  cs_ambassador_benefits_list_desc_01: Kompüter elmindəki gender fərqini aradan qaldırmağa
+    sadiq olan gənc liderlərin milli cəmiyyətinə giriş.
+  cs_ambassador_benefits_list_desc_02: İcma xidməti saatları və [ABŞ Prezidentin Könüllü
+    Xidməti Mükafatı] qazanmaq imkanı (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: 2023-2024 Səfir kimi tanınmaq və Code.org Səfir
+    Şöhrət Zalında təltif olunmaq hüququ.
+  cs_ambassador_benefits_list_desc_04: Xüsusi Code.org markalı geyimlər, stikerlər
+    və s. vasitəsilə CS səfiri kimi tanının!
+  cs_ambassador_benefits_list_desc_05: Code.org-dan rəsmi iştirak sertifikatı.
+  cs_ambassador_benefits_list_desc_06: Kollec müraciətinizdə, CV və daha çoxunda bölüşmək
+    üçün təcrübə və hekayələr qazanın!
   professional_learning_section_desc: Öyrətməyə hazırlaşarkən sizə lazım olan dəstəyi
     alın. Müəllimlər bunu sevirlər, 90% -dən çoxu bu günə qədər ən yaxşı peşəkar inkişafdır!
   professional_learning_section_desc_short: Öyrətməyə hazırlaşarkən sizə lazım olan
@@ -683,6 +895,14 @@ az:
     aylıq e-poçt almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
     faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
   subscribe_form_section_unsubscribe: İstənilən vaxt abunəlikdən çıxa bilərsiniz.
+  dance_hero_heading: Rəqs partiyasını kodlayın
+  dance_featuring_songs_by_short: 'Mahnıları təqdim edir:'
+  dance_featuring_songs_by_long: 'Dance Party tərəfindən mahnılar daxildir:'
+  dance_and_more: və daha çox
+  dance_choose_activity: Rəqs partiyanızı seçin
+  dance_afe_disclaimer: Bu təlimatda musiqisi istifadə olunan sənətçilər, musiqlərinin
+    Code.org saytına istifadəsinin lisenziyalaşdırılması çərçivəsində Amazonu sponsorluq
+    etmirlər və ya təsdiqləmirlər.
   blockchain_hero_heading: Blockchain necə işləyir
   blockchain_hero_desc: Yeni video seriyamız və müşayiət olunan dərslərimiz “Blockchain
     necə işləyir” ilə blockchain dünyasına dalış!
@@ -791,6 +1011,11 @@ az:
   ai_curriculum_grades_05: 'Sinif səviyyələri: 9-12'
   ai_curriculum_btn_aria_label_05: Proqram Mühəndisliyi və Kompüter Görmə modulunu
     araşdırın
+  ai_curriculum_title_06: Generativ AI-nin ictimai təsiri
+  ai_curriculum_desc_06: Generativ süni intellektin təsirini fərqli baxımlardan araşdırın,
+    sonra bütün iştirakçıların ən çox ehtiyaclarını ödəən təlimatlar hazırlamaq üçün
+    bir komanda olaraq əməkdaşlıq edin.
+  ai_curriculum_btn_aria_label_06: Generativ AI dərs planının ictimai təsirinə baxın
   ai_carousel_heading: 'Code.org ilə AI haqqında müəllimlərin dedikləri:'
   ai_carousel_quote_01: Bu dərs həm də şagirdlərimə təsnifat sistemlərində fikir elementinin
     olduğunu görmək imkanı verdi. Daha sonra, AI -də qərəzin necə nəticələnə biləcəyini
@@ -916,6 +1141,8 @@ az:
     və resursların zəngin qarışığı ilə o, pedaqoqlara süni intellekt mənzərəsində
     naviqasiya etmək və tələbə öyrənmə təcrübələrini artırmaq üçün səlahiyyət verməyi
     hədəfləyir.
+  ai_pl_101_resources_5: Süni intellektə məsuliyyətli yanaşmanın təmin edilməsi üçün
+    təlimat
   ai_pl_101_video_desc_6: 'Böyük Dil Modelləri (ChatGPT kimi) və Generative AI -də
     iki yeni video təqdim edən süni intellektdəki böyük dəyişiklikləri idarə edən
     yeni texnologiya haqqında daha çox məlumat əldə edin. Bu yeni texnologiyaların
@@ -928,6 +1155,9 @@ az:
     üçün qabaqcıl alətlər daxildir.
   ai_pl_101_resources_3: Tələbə öyrənməsini dəyişdirmək üçün süni intellekt təklif
     edir
+  ai_pl_101_resources_section_title: Süni intellekt haqqında məlumat əldə etməyin
+    daha çox yolu
+  ai_pl_101_resources_guide: 'Yoldaş bələdçisi:'
   how_ai_works_hero_heading: AI necə işləyir
   how_ai_works_hero_desc: "“AI necə işləyir”, video seriyamız və müşayiət olunan dərslərimizlə
     AI dünyasına dalın!"
@@ -1778,6 +2008,33 @@ az:
   donate_tabs_bitpay_desc: kriptovalyutası ilə verilməsi gələcəyini əhatə. BitPay
     vasitəsilə rəqəmsal valyutanız Code.org-un kompüter elmləri təhsilini genişləndirmək
     səylərini birbaşa dəstəkləyə bilər.
+  help_page_top_heading: Necə kömək edə bilərsən
+  help_page_top_desc: Kompüter elmini hər bir uşaq üçün, hər yerdə əlçatan etmək missiyamızı
+    dəstəkləyirik. Səyləriniz gələcək yenilikçiləri ruhlandırmağa və texnoloji təhsil
+    boşluğunu aradan qaldırmağa kömək edir.
+  help_page_top_subhead: Code.org saytına ianə edin
+  help_page_top_desc_02: Hər bir tələbəyə kompüter elmlərini öyrənmək imkanı vermək
+    üçün çalışırıq - həm onlayn, həm də məktəblərdə, burada daimi kurslar qururuq
+    və müəllim hazırlayırıq. Bağışladığınız hər dollar üçün bir uşaq kompüter elmləri
+    ilə tanış olur.
+  help_page_partners_heading: Tərəfdaş ol
+  help_page_partners_desc: Code.org, kompüter elminin yerli, davamlı bir şəkildə yayılmasına
+    kömək etmək üçün tərəfdaş olaraq digər qeyri-kommersiya təşkilatları ilə işləyir.
+    Proqramımız haqqında daha çox məlumat əldə edin.
+  help_page_volunteer_heading: Sinifdə könüllü
+  help_page_volunteer_desc: Kod Saatını öyrətmək və ya yerli sinifdə qonaq natiq olmaq
+    üçün könüllü olun. Yaxınlıqdakı imkanlar haqqında eşitmək üçün qeydiyyatdan keçin.
+  help_page_translate_heading: Tərcümə etməyimizə kömək edin
+  help_page_translate_desc: Könüllülər dərsliklərimizi 45-dən çox dilə tərcümə ediblər.
+    Dünyadakı tələbələr üçün dərslərimizi genişləndirməyə davam etməyimizə kömək edin!
+  help_page_speak_for_cs_heading: Kompüter elmləri təhsili üçün danışın
+  help_page_speak_for_cs_desc: Code.org-un ABŞ -da vəkillik işləri və dövlətlərin
+    kompüter elmini bütün tələbələr üçün təməl halına gətirmək üçün qəbul etmələrini
+    tövsiyə etdiyimiz on siyasət haqqında daha çox məlumat əldə edin. Üstəlik, vəziyyətinizdə
+    dəyişikliyi necə idarə edə biləcəyinizi öyrənin.
+  yw_page_top_heading: İnformatikada Gənc Qadınlar
+  yw_page_top_desc: CS səfiri olun və kompüter elmindəki gender fərqinin aradan qaldırılmasının
+    bir hissəsi olun.
   hoc_live: Kod Saatı Canlı
   hoc_live_sign_up_title: Canlı Kod Saatı üçün qeydiyyatdan keçin
   hoc_live_learn_title: Kod Saatı Canlı ilə məlumat əldə edin
@@ -2147,11 +2404,16 @@ az:
     öyrənə biləcəyini göstərmək üçün hazırlanmış əyləncəli dərsliklər vasitəsilə informatikaya
     bir saatlıq giriş kursudur. Bu ictimai kampaniya bütün dünyada 400-dən çox tərəfdaş
     və 200000 təhsil insanı tərəfindən dəstəklənir.
+  hoc_homepage_registration_desc: Sinifiniz və ya qrupunuz, Kod Saatını həyata keçirən
+    dünyada milyonlarla yerə qoşula bilər! İllik Kompüter Elmləri Təhsil Həftəsi qeyd
+    üçün qeydiyyat oktyabr ayında başlayır. Baxmayaraq ki, Kod Saatı il boyu mövcuddur.
   hoc_homepage_what_is_hoc_cta_how_to_guide: Sinfinizdə bir tədbir planlaşdırmaq üçün
     [Təlimatımızı oxuyun](%{howto_guide_url}).
   hoc_homepage_highlights_heading: Kod saatı vurğulanır
   hoc_homepage_organized_by: Kod Saatı "[Code.org](%{codeorg_url})" tərəfindən təşkil
     olunur.
+  hoc_events_heading: Kod saatı keçirmək üçün qeydiyyatdan keçin
+  hoc_events_jump_to_map: Kod Saatı xəritəsinə keçin
   signup_closed: Kod Saatı üçün qeydiyyat artıq bağlıdır. Növbəti Kod Saatı üçün qeydiyyatdan
     keçmək üçün oktyabr ayında yenidən yoxlayın.
   signup_registration_not_required: İştirak etmək üçün qeydiyyatdan keçməyinizə ehtiyac
@@ -2258,6 +2520,8 @@ az:
   map_title: Kod Saatı xəritəsi
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
   map_header_count_year: "%{year} üçün %{event_count} tədbir qeydiyyata alınıb"
+  map_header_count_year_so_far: "%{event_count} indiyə qədər qeydə alınmış hadisələr
+    %{year}"
   see_all_events: Bütün tədbirləri nəzərdən keçirin
   map_header_company: "# şirkətlər tərəfindən"
   map_header_country: 'ölkənizdə (%{country}) # tədbir'
@@ -2271,6 +2535,7 @@ az:
     baxmaq olar.
   map_warning_markdown: Tədbirlərin tam siyahısına [tərbirlər səhifəsi](%{events_url})ndə
     baxmaq olar.
+  map_view_all_events: Kod Saatı hadisələrinin tam siyahısına bax [here]ın (%{events_url}).
   meta_tag_og_title: Kod Saatı gəlir
   meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla
     şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
@@ -2292,10 +2557,6 @@ az:
     dəstəklədiyiniz %{random_donor} üçün təşəkkür edirik)'
   hoc_faq_title: Tez-tez verilən suallar
   hoc_faq_what_is_hoc_q: 'Kod Saatı nədir? '
-  hoc_faq_what_is_hoc_a: Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək,
-    hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya
-    bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən
-    keçirin</a>.
   hoc_faq_what_is_hoc_a_markdown: Kod Saatı, “kodu” demystifikasiya etmək, hər kəsin
     əsasları öyrənə biləcəyini göstərmək və kompüter elmləri sahəsində iştirakını
     genişləndirmək üçün hazırlanmış kompüter elminə bir saatlıq giriş olaraq başladı.
@@ -2306,38 +2567,22 @@ az:
     tərəfindən dəstəklənir.
   hoc_faq_last_year: Dərslikləri sınaqdan keçirin
   hoc_faq_when_is_hoc_q: Kod Saatı nə vaxtdır?
-  hoc_faq_when_is_hoc_a: Kod Saatı hər il <a href='%{csedweek_url}'>Kompüter Elmləri
-    Təhsili Həftəsi</a>ərzində baş verir. %{campaign_date_year} Kompüter Elmləri Təhsil
-    Həftəsi %{campaign_date_full}olacaq, ancaq bütün il boyu bir Saat Kod keçirə bilərsiniz.
-    Kompüter Elmləri Təhsil Həftəsi hər il hesablama pioneri <a href='%{grace_hopper}'>Admiral
-    Grace Murray Hopper</a> (9 dekabr 1906) doğum gününün tanınması ilə keçirilir.
   hoc_faq_when_is_hoc_a_markdown: Kod Saatı hər il [Kompüter Elmləri Təhsil Həftəsi]
     (%{csedweek_url}) zamanı baş verir. %{campaign_date_year} Kompüter Elmləri Təhsil
     Həftəsi %{campaign_date_full}olacaq, ancaq bütün il boyu bir Saat Kod keçirə bilərsiniz.
     Kompüter Elmləri Təhsil Həftəsi hər il hesablama pioneri [Admiral Grace Murray
     Hopper] (%{grace_hopper}) (9 dekabr 1906) doğum günü münasibətilə keçirilir.
   hoc_faq_why_cs_q: Nəyə görə informatika?
-  hoc_faq_why_cs_a: "<i>21-ci əsrdə hər bir tələbənin </i> informatikaya yiyələnmək
-    üçün imkanı olmalıdır. İnformatikanın əsaslarını bilmək kreativliyi və problem
-    həll etmək bacarığını inkişaf etdirir.  21-ci əsrdə hər hansı sahədə karyera uğuruna
-    nail olmaq üçün, erkən yaşdan  başlamaq lazımdır. Daha ətraflı: <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: _Hər bir tələbənin kompüter elmlərini öyrənmək imkanı
     olmalıdır. Problem həll etmə bacarıqlarını, məntiqi və yaradıcılığı inkişaf etdirməyə
     kömək edir. Erkən başlayaraq tələbələr 21-ci əsrin istənilən karyera yolunda uğur
     qazanmaq üçün təməl əldə edəcəklər. Daha çox statistikaya baxın [here](%{stats_url}).
   hoc_faq_how_participate_q: Kod Saatında necə iştirak edə bilərəm?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Burada planlaşdırmağa başlayın</a>
-    Necə etməli bələdçimizi nəzərdən keçirərək. Siz məktəbinizdə və ya cəmiyyətinizdə
-    &mdash; sinifdənkənar klubda, qeyri-kommersiya və ya iş yerində olduğu kimi Kod
-    Saatı tədbiri təşkil edə bilərsiniz. Və ya %{campaign_date} gələndə özünüzü sınayın."
   hoc_faq_how_participate_a_markdown: "[Burada planlaşdırmağa başlayın] (%{howto})
     necə aparacağımızı nəzərdən keçirərək. Məktəbinizdə və ya cəmiyyətinizdə bir Hour
     of Code tədbiri təşkil edə bilərsiniz - məsələn, məktəbdənkənar klubda, qeyri-kommersiya
     və ya iş yerində. Və ya %{campaign_date} gələndə özünüz sınayın."
   hoc_faq_behind_hoc_q: Kod Saatının arxasında kim durur?
-  hoc_faq_behind_hoc_a: |-
-    Kod Saatı "Code.org" tərəfindən təşkil edilir, <a href='http://code.org'>Code.org</a> informatika təhsilinin əhatə dairəsinin genişləndirilməsi, bu sahədə az təmsil olunan qadınlar və rəngli tələbələrin iştirak sayının artırılmasına xidmət edən ictimai qeyri-kommersiya təşkilatıdır.
-    "Microsoft", "Apple", "Amazon", "Boys and Girls Clubs of America" və "the College Board" &mdash; kimi <a href='http://code.org/about/partners'> təşkilatlar</a>bir araya gəldilər və Kod Saatına təstək vermək üçün misilsiz bir birlik yaratdılar.
   hoc_faq_behind_hoc_a_markdown: Kod Saatı Code.org tərəfindən təşkil edilir və Kod
     Saatı Baxış Komitəsi, habelə Microsoft, Apple, Amazon, Oğlanlar və Qızlar daxil
     olmaqla Kod Saatını dəstəkləmək üçün bir araya gələn [partners](%{partner_url})
@@ -2345,24 +2590,12 @@ az:
     Şurası.
   hoc_faq_host_q: Mən proqramlaşdırma barədə heç nə bilmirəm. Mən də tədbir təşkil
     edə bilərəm?
-  hoc_faq_host_a: Əlbətdə. Kod Saatı fəaliyyətləri özünü idarə edir. Sizə lazım olan
-    tək şey <a href='%{codeorg_url}/learn'>cari dərslərimizi sınamaq</a>, istədiyiniz
-    dərsliyi seçmək və qalanlarının qayğısına qaldığımız bir saat &mdash; seçin. Uşaq
-    bağçasından başlayaraq hər yaşa və təcrübə səviyyəsinə uyğun seçimlərimiz də var.
-    Tədbirinizi <a href='/how-to'>necə bələdçi edəcəyimizi oxuyaraq planlaşdırmağa
-    başlayın</a>.
   hoc_faq_host_a_markdown: Əlbətdə. Kod Saatı fəaliyyətləri özünü idarə edir. Etməli
     olduğunuz tək şey [hazırkı dərslərimizi sınayın] (%{codeorg_url}/öyrən), istədiyiniz
     təlimatı seçin və bir saat seçin - qalanını biz öz üzərimizə götürürük. Uşaq bağçasından
     başlayaraq hər yaşa və təcrübə səviyyəsinə uyğun seçimlərimiz də var. Tədbirinizi
     [necə bələdçi] oxuyaraq planlaşdırmağa başlayın (%{howto}).
   hoc_faq_devices_q: Tələbələrim üçün hansı cihazlardan istifadə etməliyəm?
-  hoc_faq_devices_a: Code.org dərsləri bütün cihazlarda və brauzerlərdə işləyir. Code.org-un
-    təlim texnologiyası <a href='%{codeorg_url}/educate/it'>ehtiyacları haqqında daha
-    çox məlumatı burada görə bilərsiniz.</a>Qeyri-Code.org dərslikləri üçün texniki
-    ehtiyaclar dərsliyin xüsusi</a> təsvirində <a href='%{codeorg_url}/learn'>%{partner_url}/öyrənə
-    bilərsiniz. Unutmayın ki, məktəbiniz dərsləri qəbul edə</a> bilmirsə, şəbəkədən
-    çıxarılan fəaliyyətlər də təklif <a href='%{unplugged_url}'>edirik!
   hoc_faq_devices_a_markdown: Code.org dərsləri bütün cihazlarda və brauzerlərdə işləyir.
     Code.org-un dərs texnologiyası ehtiyacları [here](%{codeorg_url}/educate/it) haqqında
     daha çox məlumatı görə bilərsiniz. Qeyri-Code.org dərslikləri üçün texniki ehtiyacları
@@ -2370,18 +2603,6 @@ az:
     tapa bilərsiniz. Unutmayın ki, məktəbiniz dərsləri yerləşdirə bilmirsə, [şəbəkədən
     çıxarılan fəaliyyətlər] (%{unplugged_url}) təklif edirik!
   hoc_faq_need_computers_q: Hər bir iştirakçı üçün kompüter lazımdırmı?
-  hoc_faq_need_computers_a: Xeyr. Kompüter, smartfon, planşetdə işləyən Kod Saatı
-    dərslikləri var, bəzi dərsliklər üçün isə heç kompüterə gərək də yoxdur! Siz olduğunuz
-    yerdə, istənilən şərtlə tədbirə qoşula bilərsiniz. <p><i>Bəzi imkanları təqdim
-    edirik:</i> <br> <ul> <li><b>Cüt-cüt işləyin.</b> Tədqiqatlar göstərir ki, şagirdlər
-    <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>yoldaşlı
-    işləyəndə </a>, kompüteri bölüşəndə, birlikdə işləyəndə daha yaxşı nəticə əldə
-    edirlər. Şagirdlərinizi birlikdə işləməyə həvəsləndirin. <li><b>Proyektordan istifadə
-    edin.</b> Əgər sizə proyektor və lövhə, internetə qoşulmuş kompüter varsa, bütün
-    sinif Kod Saatında birlikdə çalışa bilər. Videolara birlikdə baxın, tapmacaları
-    birlikdə tapın, suallara birlikdə cavab axtarın. <li><b>Avadanlıqsız da işləmək
-    olar.</b> Elə dərsliklər təqdim edirik ki, onların heç kompüterə ehtiyacı yoxdur.
-    </ul>
   hoc_faq_need_computers_a_markdown: |-
     Xeyr. Kompüterlərdə, smartfonlarda, planşetlərdə və heç bir kompüter tələb etməyən bəzilərində işləyən Hour of Code dərslərimiz var! Harada olursunuzsa olun, nə varsa qoşula bilərsiniz.
 
@@ -2391,27 +2612,15 @@ az:
     - ** Proqnozlaşdırılan ekrandan istifadə edin.** Bir Web bağlı kompüter üçün bir proyektor və ekran varsa, bütün qrup birlikdə Kod Saatı edə bilərsiniz. Birlikdə video hissələrinə baxın və növbə ilə bulmacalar həll edin və ya suallara cavab verin.
     - **Unplugged.** Biz [heç bir kompüter tələb Dərsliklər] () bütün təklif edirik.%{unplugged_url}
   hoc_faq_international_q: "<country> indi olduğum ölkədir. Buradan necə iştirak edim?"
-  hoc_faq_international_a: Hər kəs dünyanın istənilən yerində bir Hour of Code tədbiri
-    təşkil edə bilər. Keçən il dünya miqyasında tələbələr Kod Saatı üçün bir araya
-    gəldilər. Daha çox məlumat əldə edin <a href='/promote'>burada</a>.
   hoc_faq_international_a_markdown: Hər kəs dünyanın istənilən yerində bir Hour of
     Code tədbiri təşkil edə bilər. Keçən il dünya miqyasında tələbələr Kod Saatı üçün
     bir araya gəldilər. Daha çox məlumat əldə edin [here](%{promote}).
   hoc_faq_tutorial_q: Mən Kod Saatı üçün çalışmanı necə hazırlaya bilərəm?
-  hoc_faq_tutorial_a: Əgər siz çalışmaların hazırlanması üçün bizimlə əməkdaşlıq etməkdə
-    maraqlısınızsa, <a href='target-tutorial-guidelines'>  ünvanında yerləşən bələdçi
-    və təlimatlarla tanış olun</a>. Biz müxtəlif çür çalışmaları toplamaq istəyirik,
-    amma əsas məqsədimiz bu təcrübəni informatika sahəsində yeni olan müəllim və şagirdlər
-    üçün ən uyğun hala gətirməkdir.
   hoc_faq_tutorial_a_markdown: Dərslik ortağı olmaq istəyirsinizsə, [təlimatlarımıza
     və təlimatlarımıza baxın] (%{tutorial_guidelines}). Müxtəlif cəlbedici seçimlərə
     ev sahibliyi etmək istərdik, amma əsas məqsəd kompüter elminə yeni gələn tələbələr
     və müəllimlər üçün təcrübəni optimallaşdırmaqdır.
   hoc_faq_account_q: Şagirdlərin bir hesabdan istifadə edərək daxil olması lazımdır?
-  hoc_faq_account_a: Yox. Kod Saatını sınaqdan keçirmək üçün şagirdlərə heç bir qeydiyyat
-    və ya daxil olmaq tələb olunmur. Most of the <a href='http://code.org/learn/beyond'>Növbəti
-    kurslar</a>ın çoxu şagirdlərin nailiyyətlərini yadda saxlamaq üçün bir hesabın
-    açılmasını tələb edir.
   hoc_faq_account_a_markdown: Xeyr. Tələbələrin Kod Saatını sınamaq üçün heç bir qeydiyyat
     və ya giriş tələb olunmur. [İzləmə kurslarının] əksəriyyəti (%{codeorg_url}/öyrənmək/kənarda)
     tələbə tərəqqisini xilas etmək üçün hesab yaratmağı tələb edir. Ayrıca, Kod Saatı
@@ -2419,13 +2628,6 @@ az:
     üçün hesablar yaratmaq istəyirsinizsə, lütfən, bu [instructions](%{section_instructions_url})
     -ə əməl edin.
   hoc_faq_high_school_q: Orta məktəb şagirdləri ilə hansı fəaliyyətlə məşğul olmalıyam?
-  hoc_faq_high_school_a: Ulduz Döyüşləri və Minecraft dərsliklərimiz orta məktəb şagirdləri
-    üçün əladır, xüsusən də Star Wars JavaScript versiyası və hər iki dərslikdə pulsuz
-    oyun səviyyəsi. Alternativ olaraq, başlanğıc dərsliklərindən birini sınamağı məsləhət
-    görürük <a href='%{codeorg_url}/learn'>%{partner_url}/öyrənmək</a> başlamaq üçün,
-    məsələn, Angry Birds və ya Anna və Elsa ilə dərs vəsaiti. Lisey şagirdi bunlardan
-    birini 30 dəqiqə ərzində bitirə bilməli və sonra JavaScript-də Khan Academy və
-    ya CodeHS kimi daha inkişaf etmiş bir təlimatı sınaya bilər.
   hoc_faq_high_school_a_markdown: Ulduz Döyüşləri və Minecraft dərsliklərimiz orta
     məktəb şagirdləri üçün əladır, xüsusən də Star Wars JavaScript versiyası və hər
     iki dərslikdə pulsuz oyun səviyyəsi. Alternativ olaraq, Angry Birds və ya Anna
@@ -2435,24 +2637,12 @@ az:
     Academy və ya CodeHS kimi daha inkişaf etmiş bir təlimatı sınaya bilər.
   hoc_faq_scratch_q: Mən kodu saat üçün Scratch edirəm, lakin nə mənim tələbə iPads
     daha çox noutbuk var?
-  hoc_faq_scratch_a: '"Scratch" planşetlərdə işləmir. Əgər şagirdlərinizin yaşı azdırsa,
-    onda "iPad" proqram əlavəsi "ScratchJR"dan (oxumağı yeni öyrənənlər üçün) istifadə
-    edə bilərlər. Əgər <a href=''http://code.org/learn''>Code.org/learn</a> ünvanındakı
-    dərsliklərə baxsanız, "iPad"də işləyən digər dərslikləri tapa bilərsiniz - "Code.org"dan,
-    "Tynker", "Lightbot" və ya "CodeSpark" dan.'
   hoc_faq_scratch_a_markdown: Çizilmə tabletlərdə işləmir. Tələbələriniz gəncdirsə,
     ScratchJr iPad tətbiqindən istifadə edə bilərlər (erkən oxucular üçün). [%{partner_url}/learn]
     (%{codeorg_url}/learn) üzərindəki dərsliklərə baxsanız, iPad-lərdə işləyən digər
     dərsləri - Code.org, Tynker, Lightbot və ya CodeMark-dan tapa bilərsiniz.
   hoc_faq_count_hoc_q: Kod Saatı tədbirlərini necə sayırsınız?
   hoc_faq_map_q: Nəyə görə xəritədə öz nöqtəmi görmürəm?
-  hoc_faq_map_a: Tədbirinizi Kod Saatı xəritəsində görmədiyiniz üçün çox üzr istəyirik.
-    Qeydiyyatdan keçən on minlərlə təşkilatçı olduğuna görə xəritə məlumatları birləşdirir
-    və bir neçə tədbir üçün bir nöqtəni göstərir. Xəritənin altındakı <a href='%{events_url}'>hadisələr
-    səhifəsi</a> linkinə klikləsəniz, dövlət üzrə bütün hadisələrin siyahısına yönəldiləcək
-    və tədbirinizi orada tapa bilərsiniz. Əlavə olaraq, Kod Saatı üçün qeydiyyatdan
-    keçən minlərlə insanı nəzərə alsaq, xəritə və hadisə siyahısının yenilənməsi adətən
-    48 saat çəkir. Bir neçə gündən sonra yenidən yoxlayın!
   hoc_faq_map_a_markdown: Tədbirinizi Kod Saatı xəritəsində görmədiyiniz üçün çox
     üzr istəyirik. Qeydiyyatdan keçən on minlərlə təşkilatçı olduğuna görə xəritə
     məlumatları birləşdirir və bir neçə tədbir üçün bir nöqtəni göstərir. Xəritənin
@@ -2461,11 +2651,6 @@ az:
     Əlavə olaraq, Kod Saatı üçün qeydiyyatdan keçən minlərlə insanı nəzərə alsaq,
     xəritə və hadisə siyahısının yenilənməsi adətən 48 saat çəkir. Bir neçə gündən
     sonra yenidən yoxlayın!
-  hoc_faq_count_hoc_a: Kod Saatı izləyicisi istifadənin dəqiq ölçülməsi deyil. Kod
-    Saatında iştirakını izləyərkən unikal tələbə şəxsiyyətlərini mükəmməl saymırıq,
-    xüsusən də tələbələrin daxil olmasını və ya qeydiyyatdan keçməsini tələb etmədiyimiz
-    üçün. Nəticədə, eyni zamanda həm iştirakçıları həddindən artıq sayırıq, həm də
-    az sayırıq. Bütün təfərrüatları oxuyun <a href='%{codeorg_url}/loc'>burada</a>.
   hoc_faq_count_hoc_a_markdown: 'Kod Saatı iştirakını izləyərkən unikal tələbə şəxsiyyətlərini
     mükəmməl saymırıq. Niyə? Qismən bir tələbə və ya sinif otağının ilk dəfə öyrənməyə
     çalışmasından əvvəl “giriş/qeydiyyatdan keçmək” istəmədiyimiz üçün və qismən də
@@ -2480,25 +2665,6 @@ az:
     dəqiq bir istifadə ölçüsü olaraq görmürük. Əlbəttə ki, istiqamətli düzgündür və
     on milyonlarla tələbənin iştirak etdiyini göstərir.'
   hoc_faq_one_hour_q: Bir saat ərzində nə qədər öyrənə bilərəm?
-  hoc_faq_one_hour_a: Kodlama Saatının məqsədi, kimsəyə bir saat içində mütəxəssis
-    bir kompüter alimi olmağı öyrətmək deyil. Bir saat, tələbələr keçmişinə asılı
-    olmayaraq, hər yaşda əlçatan olması səbəbiylə, yalnız kompüter elmlərinin əyləncəli
-    və yaradıcı olduğunu öyrənmək üçün kifayətdir. Bu kampaniyanın müvəffəqiyyət ölçüsü,
-    Kompüter elmlərində tələbələr nə qədər öyrəndiyi deyil. Müvəffəqiyyət, cinsiyyət,
-    etnik və sosial-iqtisadi qruplar arasında geniş iştirak və bunun nəticəsində bütün
-    sinif səviyyələrində Kompüter Elmləri dərslərində gördüyümüz qeydiyyatdan və iştirak
-    artımına əks olunar. Milyonlarla iştirakçı müəllim və şagird bir saatdan daha
-    irəli getməyə qərar verdilər - bütün bir gün və ya bir həftə və ya daha uzun müddət
-    öyrənmək və bunun nəticəsində bir çox şagird bütün bir kursa (hətta bütün fəaliyyətlərə)
-    qeydiyyatdan olmağa qərar verdilər.<br/> <br/> Tələbə yanında başqa bir "şagird",
-    kompüter alimi olaraq kollec diplomuna sahib olmamasına baxmayaraq, bir saatlıq
-    təhsillə kompüter elmlərini öğretebilecekleri mövzusunda özünə güvənən pedaqoqların.
-    On minlərlə müəllim, kompüter elmlərinə davam etmək, Professional İnkişaf təhsillərini
-    (PD) iştirak etmək, təqib edən online dərsləri təqdim etmək ya da hər ikisini
-    birdən etmək üçün qərar verirlər. Və bu, kompüter elmini şagirdlərinin istədiyi
-    və müəllimlərinin edə biləcəyini fərq edən məktəb rəhbərləri üçün də etibarlıdır.<br/>
-    <br/> Hər şeydən əvvəl, bizim edə biləcəyimiz tək şey, bütün iştirakçıların bir
-    saat içində öğrenecekleridir.
   hoc_faq_one_hour_a_markdown: |-
     Kod Saatının məqsədi heç kimə bir saatda mütəxəssis kompüter alimi olmağı öyrətmək deyil. Kompüter elminin əyləncəli və yaradıcı olduğunu, mənşəyindən asılı olmayaraq bütün tələbələr üçün hər yaşda əlçatan olduğunu öyrənmək üçün bir saat kifayətdir. Bu kampaniyanın müvəffəqiyyət ölçüsü CS tələbələrinin nə qədər öyrənməsində deyil - müvəffəqiyyət gender, irqi/etnik və sosial-iqtisadi qruplar arasında geniş iştirakda və nəticədə CS kurslarında gördüyümüz qeydiyyat və iştirakın artmasında əks olunur. sinif səviyyələri. Milyonlarla iştirakçı müəllim və tələbə bir saatdan kənara çıxmaq qərarına gəldi - bir gün və ya bir həftə və ya daha uzun müddət öyrənmək və bir çox tələbə nəticədə bütün bir kursa (və ya hətta bir kollec ixtisasına) yazılmağa qərar verdi.
 
@@ -2506,37 +2672,26 @@ az:
 
     Hər şeydən əvvəl, bütün iştirakçıların bir saat ərzində öyrənə biləcəyi şey bunu edə biləcəyimizdir.
   hoc_faq_more_questions_q: Hələ də suallarınız var?
-  hoc_faq_more_questions_a: "<a href='http://support.code.org'>dəstək forumunda</a>suallarınıza
-    cavab axtarın."
   hoc_faq_more_questions_a_markdown: "[Dəstək forumumuzda] cavab tapmağa çalışın (http://support.code.org)."
   hoc_faq_keep_learning_q: Kod Saatından sonra öyrənməyə necə davam edim?
-  hoc_faq_keep_learning_a: Hər kəs istənilən vaxt bir Saat Koduna ev sahibliyi edə
-    bilər. Dərsliklər il boyu qalır. Bütün dərsliklərimizin və tədris proqramımızın
-    saytımızda əbədi olaraq mövcud olmasını gözləyə bilərsiniz. Kod Saatı tədbirinizin
-    uğurlu olmasına kömək etmək</a> üçün tədbir təlimatları və digər resurslar üçün
-    <a href='/promote'>resurslarımıza daxil olun.
   hoc_faq_keep_learning_a_markdown: Hər kəs istənilən vaxt bir Saat Koduna ev sahibliyi
     edə bilər. Dərsliklər il boyu qalır. Bütün dərsliklərimizin və tədris proqramımızın
     saytımızda əbədi olaraq mövcud olmasını gözləyə bilərsiniz. Kod Saatı tədbirinizin
     uğurlu olmasına kömək etmək üçün tədbirin necə aparılması təlimatları və digər
     mənbələr üçün [resurslarımız] (%{promote}) ünvanına daxil olun.
   hoc_faq_certificates_q: Tələbələrim üçün sertifikatları harada çap edə bilərəm?
-  hoc_faq_certificates_a: Bütün sinifiniz üçün <a href='%{codeorg_url}/certificates'>sertifikatları
-    vaxtından əvvəl çap edə</a> biləcəyiniz sertifikatlar səhifəmizə keçin. Minecraft
-    təlimatı ilə məşğul olan tələbələr</a> üçün <a href='%{codeorg_url}/certificates?course=mc'>xüsusi
-    sertifikatlar da çap edə bilərsiniz.
-  hoc_faq_certificates_a_markdown: Bütün sinifiniz üçün sertifikatları vaxtından əvvəl
-    çap edə biləcəyiniz [sertifikatlar səhifəmizə] (%{codeorg_url}/sertifikat) keçin.
-    Siz həmçinin çap edə bilərsiniz [xüsusi sertifikatlar] (%{codeorg_url}/sertifikatlar?
-    kurs = mc) Minecraft dərsliyini edən tələbələr üçün.
+  hoc_faq_certificates_answer_markdown: Bütün sinifiniz üçün sertifikatları vaxtından
+    əvvəl çap edə biləcəyiniz [sertifikatlar səhifəmizə] (%{certificates_url}) gedin.
   hoc_faq_logo_q: Kod Saatı loqotipini və ya adını necə istifadə edə biləcəyimə dair
     məhdudiyyətlər varmı?
-  hoc_faq_logo_a: Kod Saatı ticarət nişanıdır. İstifadənin qarşısını almaq istəmirik,
-    amma istifadəsinin bir neçə həddə uyğun olduğundan əmin olmaq istəyirik. Zəhmət
-    olmasa istifadə üçün <a href='%{logo_url}'>bu təlimatlara baxın</a>.
   hoc_faq_logo_a_markdown: Kod Saatı ticarət nişanıdır. İstifadənin qarşısını almaq
     istəmirik, amma istifadəsinin bir neçə həddə uyğun olduğundan əmin olmaq istəyirik.
     Zəhmət olmasa [istifadə üçün bu təlimatlara] baxın (%{logo_url}).
+  hoc_faq_bug_q: Kod saatı fəaliyyətində bir səhv tapdım! Nə etməliyəm?
+  hoc_faq_bug_a_markdown: |-
+    Oh yox! Bir Saat Kod fəaliyyətində bir səhvə rast gəlmisinizsə - əvvəlcə məşğul olduğunuz fəaliyyətin URL-ni yoxlayın. URL studio.code.org ilə başlayırsa, Code.org Dəstək komandamız kömək edə bilər! Ekranınızın yuxarı sağ küncündəki sual işarəsi simgesini vurun, sonra açılan menyudan “Problem bildirin” seçin.
+
+    URL studio.code.org ilə başlamırsa, çox güman ki, üçüncü tərəf fəaliyyəti üzərində işləyirsiniz və əlavə yardım üçün həmin şirkətin dəstək qrupu ilə əlaqə saxlamalısınız.
   stats_hoc_2013_image_alt: 2013-cü ildəki Kod Saatına aid statistika
   stats_growth: İstifadəçi sayını 15 milyona ən tez çatdıran.
   stats_i18n: Şagirdlər 40 dildə öyrənir
@@ -13366,6 +13521,143 @@ az:
   all: Hamısı
   dont_know: Bilmirəm
   language_label: Dil
+  before_hoc: Kod Saatından əvvəl
+  day_of_hoc: Kod Saatı Günü
+  after_hoc: Kod Saatından sonra
+  step_01: Addım 1
+  step_02: Addım 2
+  step_03: Addım 3
+  step_04: Addım 4
+  step_05: Addım 5
+  step_06: Addım 6
+  step_07: Addım 7
+  step_08: Addım 8
+  hoc_how_to_top_heading: Kod Saatı üçün bələdçiniz
+  hoc_how_to_top_desc: Ən yaxşı Kod Saatı təcrübəsi üçün necə hazırlanmış təlimatlar.
+  hoc_how_to_top_view_guide: Üçün təlimatına baxın
+  hoc_how_to_nav_main_aria_label: Bir bələdçi seçin
+  hoc_how_to_nav_sidebar_aria_label: Sidebar naviqasiya
+  hoc_how_to_educators_intro_heading: Kod Saatınızı necə planlaşdırmalı
+  hoc_how_to_educators_intro_desc: Kod Saatı hər kəsin əsasları öyrənə biləcəyini
+    göstərmək üçün əyləncəli dərslərdən istifadə edərək kompüter elminə bir saatlıq
+    girişdir. Bu il həm süni intellekt (AI), həm də qeyri-AI komponentlərini əhatə
+    edən kodlaşdırma imkanları təklif edərək Kod Saatını yeni zirvələrə aparırıq.
+    İstər siz, istərsə də tələbələriniz təcrübəli kodlayıcılar olsun, istərsə də hamınız
+    ilk kompüter elmləri ekspedisiyanıza çıxsanız da, bu Kod Saatı fövqəladə bir səyahət
+    vəd edir.
+  hoc_how_to_faq_question_prerequisites: Kod Saatı etmək üçün ilkin şərtlər hansılardır?
+  hoc_how_to_faq_answer_prerequisites: Kod Saatı işləmək sadədir - hətta yeni başlayanlar
+    üçün də. Şagirdləri yeni bir şey araşdırmağa, yaratmağa və öyrənməyə ruhlandırmaq
+    üçün kompüter elmləri və ya tədris sahəsində təcrübəyə ehtiyacınız yoxdur.
+  hoc_how_to_faq_question_devices: Bir Saat Kodu işlətmək üçün hansı cihazlara ehtiyacım
+    var?
+  hoc_how_to_faq_answer_devices_01: 'İstifadə edə biləcəyiniz cihazlar:'
+  hoc_how_to_faq_answer_devices_02: Cihazlar məhdud və ya əlçatmazdırsa, heç bir cihaz
+    olmadan öyrənmək üçün [cüt proqramlaşdırma] (%{pair_url}) cəhd edin və ya [unplugged
+    fəaliyyətimizi] (%{unplugged_url}) araşdırın!
+  hoc_how_to_faq_question_volunteer: Kim könüllü ola bilər?
+  hoc_how_to_faq_answer_volunteer: Kompüter elmləri təhsili və texnoloji müxtəlifliyin
+    artmasına həvəsli olan hər kəs könüllü ola bilər! Bütün mənşəli könüllülərin iştirak
+    etdiyini görmək istərdik. Kod Saatı hər yaş və bacarıq səviyyələri üçün müxtəlif
+    fəaliyyətlərə malikdir, buna görə könüllü olmaq üçün proqramlaşdırma mütəxəssisi
+    olmağa ehtiyac yoxdur!
+  hoc_how_to_faq_question_full_hour: Kod Saatı tam bir saat çəkəcəkmi?
+  hoc_how_to_faq_answer_full_hour: Bir çox tələbə fəaliyyətlərini bir saatdan az müddətdə
+    bitirə biləcəklər və bu yaxşıdır! Digər tələbələr fəaliyyətlərini tamamlayarkən
+    tələbələr öyrənməyə davam edə bilərlər.
+  hoc_how_to_faq_question_account: Şagirdlərin bir hesabdan istifadə edərək daxil
+    olması lazımdır?
+  hoc_how_to_faq_answer_account: Tələbələrin Kod Saatını sınamaları üçün qeydiyyatdan
+    keçmə və ya giriş tələb olunmur. Kod Saatı üçün qeydiyyatdan keçmək avtomatik
+    olaraq Code.org hesabı yaratmır.
+  hoc_how_to_resources_heading_educators: Təlimçilər üçün digər Kod Saatı materialları
+  hoc_how_to_resources_promo_heading: Promosyon Resursları
+  hoc_how_to_resources_promo_desc: Kod Saatınıza diqqət yetirmək üçün lazım olan bütün
+    mənbələri - çap və rəqəmsal tapın.
+  hoc_how_to_resources_discover_heading: Fəaliyyət kəşf
+  hoc_how_to_resources_discover_desc: 45-dən çox dildə bütün yaş üçün nəzərdə tutulmuş
+    bir saatlıq dərslərin geniş seçimini araşdırın.
+  hoc_how_to_step_label_plan: Kod Saatınızı harada və nə vaxt edəcəyinizi planlaşdırın
+  hoc_how_to_step_label_choose_activity: Fəaliyyətinizi seçin
+  hoc_how_to_step_label_test_activity: Fəaliyyətinizi sınayın
+  hoc_how_to_step_label_register_event: Tədbirinizi qeydiyyata alın
+  hoc_how_to_step_label_tell: Şagirdlərinizə, məktəbinizə və cəmiyyətə deyin
+  hoc_how_to_step_label_get_coding: Kodlaşdırma əldə edin!
+  hoc_how_to_step_label_celebrate: Qeyd edin
+  hoc_how_to_step_label_beyond_hoc: Kod Saatından kənarda
+  hoc_how_to_step_beyond_hoc_subhead: Burada bitmir!
+  hoc_how_to_step_beyond_hoc_desc: Kompüter elmləri Kod Saatı ilə bitmək məcburiyyətində
+    deyil! Valideynlərin 90% -i uşağının kompüter elmlərini öyrənməsini istəsə də,
+    əksər məktəblər hələ də bunu öyrətmir. Bu gün uşağınızın məktəbinə CS gətirməyi
+    öyrənin.
+  hoc_how_to_step_01_educators_subhead: Mövcud tələbələrin və cihazların sayı üçün
+    işləyən bir hadisə vaxtı və məkanı seçin.
+  hoc_how_to_step_01_educators_desc_01: Kod Saatınızı etmək üçün hansı boşluqlar mövcuddur?
+    Məkanınızın texnoloji imkanlarını və tələbələrinizin üzərində işləməsini gözlədiyiniz
+    cihazların növlərini nəzərdən keçirin. Tələbələr tək bir cihazda dərsliklər üzərində
+    işləyə, paylaşılan bir cihazdan istifadə edərək növbə ala və ya sinif lövhəsində
+    birlikdə bir dərslik sınaya bilərlər. Hətta heç bir cihaz olmadan tamamlana bilən
+    unplugged dərsliklər var. Aşırılmış seçimlər hər yerdə - hətta açıq havada da
+    edilə bilər!
+  hoc_how_to_step_01_educators_desc_02: Dünyadakı insanlar ən son dərsliklər və fəaliyyətlər
+    yayımlandıqda CS Təhsil Həftə %{campaign_date} si zamanı Kod Saatı qeyd etməsinə
+    qoşulurlar. Ancaq ilin istənilən günündə Kod Saatı edə bilərsiniz!
+  hoc_how_to_step_02_educators_desc_01: Qrupunuzun yaşı, təcrübəsi, maraqları və daha
+    çoxuna əsaslanan fəaliyyətləri araşdırın. Şagirdlərin özləri idarə etdiyi dərsləri
+    sınaması populyardır, baxmayaraq ki, bir çox fəaliyyətə müəllimlərin müzakirəyə
+    rəhbərlik etmək və ya fəaliyyəti genişləndirmək üçün dərs planları daxildir.
+  hoc_how_to_step_02_educators_desc_02: Bütün şagirdləriniz üçün tək bir dərslik seçmək
+    və ya hər bir uşağın özünü seçməsinə icazə verin, vaxtından əvvəl qərar verin.
+  hoc_how_to_step_02_educators_desc_03: Bu il siz və şagirdləriniz dərslər, dərs planları
+    və yeni AI necə işlədiyi video seriyamız vasitəsilə [AI haqqında hər şeyi öyrənə
+    bilərsiniz] (%ai_url).
+  hoc_how_to_step_03_educators_desc_01: Suallara cavab verə bilmək üçün sinifə girməzdən
+    əvvəl dərsliyi özünüz sınayın!
+  hoc_how_to_step_03_educators_desc_02: Səs və videonu dəstəkləmələrini təmin etmək
+    üçün tələbə kompüterlərində və ya cihazlarda dərsləri sınaqdan keçirə bilərsiniz.
+    Aşağı bant genişliyi varmı? Sinifin ön hissəsində videoları göstərməyi planlaşdırın,
+    buna görə hər bir tələbə öz videolarını yükləməz.
+  hoc_how_to_step_03_educators_desc_03: Seçdiyiniz dərslik səslə ən yaxşı işləyirsə,
+    sinifiniz üçün qulaqlıq təmin etməyi düşünün və ya tələbələrdən özlərini gətirmələrini
+    xahiş edin.
+  hoc_how_to_step_04_educators_desc_01: Kod Saatı tədbirinizi qeydiyyatdan keçirdiyiniz
+    zaman uğurlu Kod Saatına ev sahibliyi etmək üçün xəbərlər və tövsiyələr olan faydalı
+    e-poçtlar alacaqsınız. Yerli könüllülərə məktəbinizin iştirak etdiyini necə bildirə
+    biləcəyiniz də budur. Könüllülər əla mənbədir və sinifinizə kompüter elmləri haqqında
+    danışa və ya şagirdlərinizə Kod Saatı fəaliyyətlərində kömək edə bilərlər.
+  hoc_how_to_step_05_educators_desc_01: Müxtəlif insanları və kompüter elminin real
+    dünyada istifadə edilə biləcəyi yaradıcı yollarını vurğulayan [ruhlandırıcı videolar]
+    (%{videos_url}) paylaşaraq tələbələrinizi hadisə üçün həyəcanlandırın.
+  hoc_how_to_step_05_educators_desc_02: Kod Saatı planlarınızı əyləncəyə qoşulmaq
+    istəyə biləcək digər müəllimlərlə paylaşın! Bu, həm də məktəbinizin Valideyn Müəllim
+    Tələbə Dərnəyinə müraciət etmək və ya uşaqlarının nə öyrəndiklərini bildirərək
+    valideyn bülletenlərində paylaşmaq üçün əla bir fürsətdir.
+  hoc_how_to_step_06_educators_desc_01: Şagirdlərinizi fəaliyyətə yönəldin, bəlkə
+    də lövhədəki linki paylaşaraq və ya sinifinizin öyrənmə idarəetmə sistemi vasitəsilə.
+    Şagirdləriniz çətinliklərlə qarşılaşa bilər - bu yaxşıdır! Proqramlaşdırmağı öyrənmək
+    yeni bir dil öyrənmək kimidir; dərhal səlis bilməyəcəksiniz. Cavabı bilmirsinizsə,
+    bunu birlikdə anlaya bilərsiniz.
+  hoc_how_to_step_07_educators_desc_01: 'Uğurları qeyd etdiyinizə əmin olun! Kod Saatı
+    tədbirinizin fotolarını və videolarını sosial mediada paylaşın. Uğurunuzu da vurğulamaq
+    üçün #HourOfCode və @codeorg istifadə edin!'
+  hoc_how_to_step_07_educators_desc_02: Tələbələrinizin nailiyyətlərini nümayiş etdirmək
+    üçün sertifikatlar da çap edə bilərsiniz!
+  hoc_ai_top_desc: İstər sinifdə tələbə olsanız, istərsə də AI ilə tədrisin gələcəyini
+    açan bir pedaqoq olmağınızdan asılı olmayaraq hər kəs AI haqqında öyrənə bilər.
+  hoc_ai_how_ai_works_video_series_desc: Bu qısa videolar sizi süni intellektin necə
+    işlədiyini və bunun niyə vacibliyi ilə tanış edəcək. Sonra alqoritmik qərəz və
+    AI qərar vermə etikası kimi məsələləri araşdırın.
+  hoc_ai_learn_how_ai_works_desc: "“AI necə işləyir” dərsləri ilə AI dünyasına dalın,
+    sizi AI necə işlədiyini və bunun niyə vacib olduğunu tanıdıran video seriyamızla
+    birləşdirilmiş dərslər."
+  hoc_ai_101_for_educators_desc: Müəllimlər üçün əsas onlayn öyrənmə seriyamızla süni
+    intellektin (AI) təməlqoyma dünyasını və təhsildəki transformativ potensialını
+    kəşf edin.
+  hoc_ai_impacts_desc: Sinifinizi süni intellektin təsirlərini araşdıran və şagirdləri
+    süni intellektin bəzi problemlərinin həlli yollarını düşünməyə dəvət edən müəllimlərin
+    rəhbərlik etdiyi dərslərlə cəlb edin.
+  hoc_ai_activities_desc: Bu tamamilə yeni Kod Saatı fəaliyyətləri istifadəçiləri
+    süni intellekt dünyası ilə əyləncəli, cəlbedici bir şəkildə tanış edir.
   team_page_full_team_alt_text: Uyğun mavi və sarı köynəklərdə 100-ə yaxın Code.org
     işçisi şirkətin yay 2022 Codechella tədbiri üçün otel konfrans salonunda poza
     verir.
@@ -13889,6 +14181,9 @@ az:
   video_library_page_inspirational_video_title_11: Hər kəs öyrənə bilər (1 dəqiqə)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 dəq)
+  video_library_page_inspirational_video_title_13: NASA Kod Saatını qeyd edir (2 dəq)
+  video_library_page_inspirational_video_title_14: Bir oyundan daha çoxdur (1 dəq)
+  video_library_page_inspirational_video_title_15: Kompüter Elmləri ilə Yarat (1 dəq)
   video_library_page_not_hacked_video_title_1: 'Hacked almaq üçün necə: Giriş'
   video_library_page_not_hacked_video_title_2: 'Hacked almaq üçün necə: Şifrələr'
   video_library_page_not_hacked_video_title_3: 'Hacked almaq üçün necə: Authentication
@@ -13899,6 +14194,293 @@ az:
   video_library_page_not_hacked_video_title_6: 'Hacked almaq üçün necə: Mesajlaşma
     və Yükləmələr'
   video_library_page_not_hacked_video_title_7: 'Hacked almaq üçün necə: Updates Install'
+  thank_you_page_main_title: Hərəkat qurmağa kömək etdiyiniz üçün təşəkkür edirik
+  thank_you_page_description: Code.org Vəkillik Koalisiyası, hər məktəbdəki hər bir
+    tələbənin kompüter elmlərini öyrənmək fürsətinə layiq olduğu vizyonunu dəstəkləyən
+    müəllimlər, icma üzvləri, tədqiqatçılar, qeyri-kommersiya təşkilatları, universitetlər,
+    korporasiyalar və dövlət qurumları da daxil olmaqla yüz minlərlə yerli çempion
+    və vəkillərə təşəkkür etmək istəyir. Bu hərəkatı dəstəklədiyiniz üçün təşəkkür
+    edirəm.
+  thank_you_page_members_section_title: 'Və Code.org Vəkillik Koalisiyasının bütün
+    üzvlərinə:'
+  thank_you_page_individual_organization_title: 'Bu hesabata verdikləri töhfələrə
+    görə aşağıdakı şəxslərə və təşkilatlara təşəkkür edirik:'
+  thank_you_page_individual_organization_description: Hər bir dövlət təhsil agentliyində
+    kompüter elmləri təhsili nəzarətçiləri, Kollec Şurası, Della Cronin, Stuart Dexler,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Bu hesabatda göstərilən tələbələrə və müəllimlərə
+    təşəkkür edirik:'
+  thank_you_page_teachers_students_description: Tess Campion, Villa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopiç
+  about_us_page_title: Haqqımızda
+  about_us_page_hero_description: Code.org®, hər məktəbdəki hər bir şagirdin əsas
+    K-12 təhsilinin bir hissəsi olaraq kompüter elmlərini öyrənmək imkanına sahib
+    olduğu görmə qabiliyyətinə həsr olunmuş təhsil innovasiyası qeyri-kommersiya təşkilatıdır.
+    Gənc qadınların və digər az təmsil olunan qruplardan olan tələbələrin iştirakının
+    artırılmasına diqqət yetirərək məktəblərdə kompüter elminə çıxışı genişləndiririk.
+    ABŞ-ın ən böyük məktəb rayonlarında K-12 kompüter elmləri kurikulumunun aparıcı
+    təminatçısı olan Code.org həmçinin dünyanın bütün tələbələrinin 15% -dən çoxunu
+    cəlb edən illik [Kod Saatı] (%{hour_url}) kampaniyasını təşkil edir. Code.org,
+    Microsoft, Amazon, Google və [bir çox başqaları da daxil olmaqla səxavətli donorlar
+    tərəfindən dəstəklənir.] ()%{others_url}
+  about_us_page_section_title_1: Code.org saytında 80 milyondan çox tələbə və 2 milyon
+    müəllim
+  about_us_page_statistic_figcaption: 2021-2022 tədris ilindən Code.org iştirakı.
+    [Ayrılmış məlumatlara baxın.] ()%{data_url}
+  about_us_page_statistic_description: Code.org, bacarıq səviyyəsində, məktəblərində
+    və öyrənməyə davam etməyə ruhlandıran yollarla olan bütün mənşəli tələbələrə çatmaqla
+    kompüter elmindəki müxtəlifliyi artırır. Code.org saytındakı tələbələrin böyük
+    əksəriyyəti tarixən kompüter elmlərində az təmsil olunan tələbə qruplarındadır.
+    Kompüter elmində müxtəlifliyin artması işimizin əsasını təşkil edir və [səylərimiz
+    haqqında daha çox oxumağa təşviq edirik] (%{diversity_url}).
+  about_us_page_section_title_2: Xəbərlərdə Code.org
+  about_us_page_section_news_description: Bütün keçmişə baxın [xəbərlər və elanlar]
+    (%{news_url})
+  about_us_page_section_table: Məqsədlərimiz və ölçümüz
+  about_us_page_section_table_header_1: Code.org Məqsəd
+  about_us_page_section_table_header_2: Uğurluq
+  abous_page_section_table_cell_1_1: CS-də müxtəlifliyin yaxşılaşdırılması* (ABŞ tələbələri)
+    *
+  abous_page_section_table_cell_1_2: Code.org tələbələrinin 45% -i gənc qadınlar,
+    50% -i marginallaşmış irqi və etnik qruplardan olan tələbələrdir və ABŞ tələbələrinin
+    46% -i yüksək ehtiyaclı məktəblərdədir. Haqqında daha çox oxuyun [müxtəlifliyə
+    yanaşmamız.] (%{diversity_url})
+  about_page_section_table_cell_2_1: Şagirdləri ilham
+  about_page_section_table_cell_2_2: On milyonlarla [Kod Saatı] (%{hour_url}) sınadı.
+    (426,370.561 xidmət etdi. 49% qadın)
+  about_page_section_table_cell_3_1: Sinif otaqlarına çatın
+  about_page_section_table_cell_3_2: "[Code Studio] (%{code_studio_url}) üzrə giriş
+    kurslarımızı öyrətmək üçün 591.636 müəllim qeydiyyatdan keçdi və 19.177.297 tələbə
+    qeydiyyatdan keçmişdir."
+  about_page_section_table_cell_4_1: Yeni CS müəllimləri hazırlayın
+  about_page_section_table_cell_4_2: K-12 siniflərində CS öyrətmək üçün 106.000-dən
+    çox yeni müəllim hazırladıq. [Peşəkar öyrənmə proqramlarımız haqqında məlumat
+    əldə edin.] (%{learning_programs_url})
+  about_page_section_table_cell_5_1: Məktəb rayon kurikulum dəyişdirin
+  about_page_section_table_cell_5_2: "[Məktəb kurikulumuna CS əlavə etmək] () üçün
+    [180+ ən böyük məktəb rayonları] (%{schoold_disctrict_url}) və 60 regional tərəfdaşla
+    əməkdaşlıq etdik.%{cs_curriculum_url}[Regional tərəfdaş olmaq haqqında məlumat
+    əldə edin.] (%{regional_partner_url})"
+  about_page_section_table_cell_6_1: CS dəstəkləmək üçün siyasət qurun
+  about_page_section_table_cell_6_2: "[ABŞ-ın 50 əyalətində siyasət dəyişdi] (%{states_url})
+    CS təhsil standartlarını qurmaq, CS kurslarını orta məktəbin məzuniyyətinə qədər
+    saymaq və s. [(Ətraflı məlumat)] (%{details_url})"
+  about_page_section_table_cell_7_1: Qlobal gedin
+  about_page_section_table_cell_7_2: Kurslarımız 67-dən çox dildə mövcuddur, 180 ölkədə
+    istifadə olunur.
+  about_page_section_table_under_label: 'Mənbə: Code Studio Activity və [iştirak edən
+    müəllimlərin sorğuları] (%{educators_url})'
+  about_page_section_title_3: Daha çox məlumat, tarix və fəlsəfə
+  about_page_section_more_description_1: '2013-cü ildə Code.org əkiz qardaşlar [Hadi](%{hadi_url})
+    və [Əli Partovi] () tərəfindən kompüter elmlərini təbliğ edən bir [video](%{partovi_url}%{video_url})
+    ilə işə salınmışdır. Bu video bir gün ərzində YouTube-da #1 oldu və 15.000 məktəb
+    kömək üçün bizə müraciət etdi. O vaxtdan bəri, dünya miqyasında hərəkatı dəstəkləyən
+    tam bir təşkilat qurmaq üçün könüllülərdən ibarət bootstrapped heyətindən genişləndik.
+    İnanırıq ki, keyfiyyətli kompüter elmləri təhsili yalnız şanslı bir neçə uşaq
+    üçün deyil, hər bir uşaq üçün əlçatan olmalıdır.'
+  about_page_section_more_description_2: 'Hədəfimizi dəstəkləmək üçün biz təhsil spektri
+    boyunca işləyirik: öz kurslarımızı dizayn etmək və ya başqaları ilə tərəfdaşlıq
+    etmək, müəllimlər hazırlamaq, böyük məktəb bölgələri ilə əməkdaşlıq etmək, hökumət
+    siyasətlərini dəyişdirməyə kömək etmək, tərəfdaşlıq yolu ilə beynəlxalq səviyyədə
+    genişləndirmək və stereotipləri pozmaq üçün marketinq.'
+  about_page_section_more_description_3: İşimiz kompüter elmləri təhsilinin yaradılmasına,
+    maliyyələşdirilməsinə və yayılmasına kömək edən saysız%{efforts_url}-hesabsız
+    təşkilat və fərdlərin onilliklər boyu davam edən səylərə əsaslanır. Daha geniş
+    kompüter elmləri təhsili cəmiyyətinin yorulmaz köməyindən faydalanmağımıza görə
+    minnətdarıq və [illər ərzində təsirimizi dəstəkləyən bütün tərəfdaşlara və şəxslərə
+    təşəkkür edirik] (%{partners_url})).
+  about_page_section_more_list_1: "[Code.org 2021 İllik Hesabatı] (%{report_url})
+    (Keçmiş hesabatlar: [2020] [2019](%{past_url_1}%{past_url_2}), (), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_2: "[Əsas dəyərlərimiz və mesajlaşma qaydalarımız]
+    (%{core_url})"
+  about_page_section_more_list_3: "[Bizim kurikulum və pedaqogika fəlsəfəmiz] (%{curriculum_url})"
+  about_page_section_more_list_4: "[Kompüter elminin niyə hamı üçün olduğu barədə
+    qurucumuz Hadi Partovinin TEDx söhbəti (VİDEO)] ()%{tedx_url}"
+  about_page_section_title_4: Bölünmüş bir dünyada birləşdirici yanaşma
+  about_page_section_specific_title_1: Bölünmüş bir dünyada birləşdirici yanaşma
+  about_page_section_specific_title_2: Əlçatanlığa bağlılığımız
+  about_page_section_specific_title_3: Ödənişsiz tədris proqramı və açıq mənbə texnologiyası
+    üzrə öhdəliyimiz
+  about_page_section_specific_title_4: Code.org Vəkillik Koalisiyası
+  about_page_section_specific_title_5: K-12 Kompüter Elmləri Çərçivəsi
+  about_page_section_specific_title_6: Code.org Donorlar
+  about_page_section_specific_title_7: Bizi izləyin
+  about_page_section_specific_title_8: Code.org beynəlxalq səviyyədə
+  about_page_section_specific_description_1: Code.org -in K-12 kompüter elmləri hərəkatında
+    qlobal rolu yalnız müxtəlif və tez-tez bölünmüş maraqlı tərəflər arasında birləşdirici
+    bir yanaşma istifadə etdiyimiz üçün mümkündür. Artan qütbləşmə dövründə tələbələr
+    üçün imkanların artırılması ideyası siyasi spektrdəki insanları birləşdirir. Code.org
+    komanda üzvləri, tələbələr, müəllimlər və tərəfdarları müxtəlif və fərqli fikirlərə
+    malikdirlər və hamısı missiyamızda xoş gəlmisiniz. [Daha çox oxu.] (%{read_more_url})
+  about_page_section_specific_description_2: Code.org, kompüter elminin bütün tələbələr
+    üçün təməl olduğuna inanır və təşkilatımızda bərabərlik, giriş və imkanlara sadiqik
+    [values.](%{values_url}) Bu məqsədə çatmaq üçün tələbələrin və müəllimlərin daxil
+    edilməsinə və tam iştirakına mane olan maneələri müəyyən etmək və aradan qaldırmaq
+    üçün çalışırıq. əlilliyi. Səylərimiz haqqında daha çox məlumat əldə etmək üçün
+    [əlçatanlıq bəyanatımıza baxın.] (%{accessibility_url})
+  about_page_section_specific_description_3: Müəllif etdiyimiz bütün kurikulum resursları
+    və dərslikləri, başqalarına qeyri-kommersiya məqsədləri üçün törəmə təhsil mənbələri
+    hazırlamağa imkan verən [Creative Commons] (%{commons_url}) lisenziyası altında
+    əbədi olaraq istifadə etməkdə sərbəst və açıq şəkildə lisenziyalı olacaq. Materiallarımızı
+    kommersiya məqsədləri üçün lisenziyalaşdırmaqda maraqlanırsınızsa, [bizimlə əlaqə
+    saxlayın] (%{contact_us_url}). Kurslarımız dünya miqyasında istifadə üçün və ya
+    müxtəlif dillərdə danışanlar tərəfindən tərcümə olunur. Texnologiyamız [açıq mənbə
+    layihəsi.] (%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url}),
+    K-12 kompüter elminə çıxışı genişləndirmək və davam etdirmək və sahədə iştirakı
+    və müxtəlifliyi genişləndirmək üçün ABŞ-ın federal və əyalət siyasətlərinin qurulmasına
+    kömək etmək üçün birlikdə çalışan korporasiyaların və qeyri-kommersiya təşkilatlarının
+    ikitərəfli koalisiyasıdır. K-12 kompüter elminə girişin genişləndirilməsini və
+    iştirakını dəstəkləyən ortaq cəhətdən [Respublikaçı və Demokratik siyasi liderləri]
+    (%{leaders_url}) bir araya gətiririk."
+  about_page_section_specific_description_5: Code.org, kompüter elmləri təhsili həyata
+    keçirən dövlətlər, rayonlar və təşkilatlar üçün yüksək səviyyəli bələdçi [K-12
+    Computer Science Framework] (%{framework_url}) yaradılmasına kömək edən idarəetmə
+    komitəsinin üzvüdür. Çərçivə yüzlərlə akademik, K-12 müəllimlərinin, proqram şirkətlərinin,
+    qeyri-kommersiya təşkilatlarının və dövlətlərin dəstəyini qazandı.
+  about_page_section_specific_description_6: Code.org IRS forması 990 üçün [2014]
+    [2015](%{irs_url_1}%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}),
+    (), [2018](%{irs_url_5}) [2019]%{irs_url_6}), [2020](%{irs_url_7}) və [2021](%{irs_url_8}).
+    [Bağışlama Siyasəti.] (%{donation_policy_url})
+  about_page_section_specific_description_7: "[Status yeniləmələrini almaq üçün qeydiyyatdan
+    keçin] (%{sign_up_url}) K-12 kompüter elmləri hərəkatında irəliləyiş və Code.org
+    işi haqqında. Və ya sosial mediada Code.org saytını izləyin:"
+  about_page_section_specific_description_8: Veb saytımızın trafikinin 40% -dən çoxu
+    ABŞ xaricindən gəlir və bu rəqəm yüksəlməyə davam edir. Kompüter elminə qlobal
+    girişi genişləndirmək üçün komandamız [100-dən çox beynəlxalq tərəfdaş] (%{partners_url})
+    ilə sıx əməkdaşlıq edir, onlara Kod Saatını tanıtmağa, siyasət dəyişikliyini müdafiə
+    etməyə və müəllimləri hazırlamağa kömək edir. Biz dünyanın hər yerindən təhsil
+    nazirlikləri ilə əməkdaşlıq edərək, İqtisadi Əməkdaşlıq və İnkişaf Təşkilatı və
+    Birləşmiş Millətlər Təşkilatı Təhsil, Elm və Mədəniyyət Təşkilatı kimi beynəlxalq
+    təşkilatlarla əməkdaşlıq edərək kompüter elmlərini beynəlxalq təhsil diskursunun
+    bir hissəsi edirik.
+  about_page_section_donors_description_1: Code.org® geniş ictimaiyyətin dəstəyi ilə
+    qeydiyyatdan keçmiş ictimai 501c3 qeyri-kommersiya təşkilatıdır. Vizyonumuzu dəstəkləyən
+    [fərdlərdən və təşkilatlardan] (%{individuals_url}) aldığımız səxavətli dəstəyə
+    görə minnətdarıq.
+  about_page_section_donors_description_2: Kodların nailiyyətləri (yuxarıda) bu dollarları
+    güclü nəticələrə çatdırmaq qabiliyyətimizi nümayiş etdirir. Ancaq hər məktəbdəki
+    hər bir uşağın kompüter elminə çıxışı olması - bugünkü rəqəmsal dünyada savadlı
+    vətəndaş olmaq və karyera olaraq CS -ni daha da araşdırmaqda maraqlarını sınamaq
+    üçün - bu görmə qabiliyyətini dəstəkləyən bir vəsait toplamaq məqsədi çatmaq üçün
+    uzun bir yolumuz var.
+  about_page_donors_link_1: Bağışlar edin
+  about_page_donors_link_2: "[donorların siyahısına baxın] (%{donors_url})"
+  teach_ai_title: Real dünya nümunələri. Praktik Resurslar.
+  teach_ai_description: Məktəblər üçün AI Təlimatı Tooldəsti siyasətçilər, məktəb
+    rəhbərləri və işçilər üçün məktəblərində AI ilə bağlı ilkin təlimatlar hazırlamaq
+    üçün bir mənbədir.
+  teach_ai_button_label: Alət dəstinə baxın
+  middle_high_page_main_title: 11 yaş və yuxarı yaşlar üçün öyrənmə
+  middle_high_page_main_description: Maraqlı videolar, öz-özünə işləyən dərsliklər,
+    proqramlaşdırma fəaliyyətləri və s. ilə kompüter elmləri dünyasını araşdırın!
+  middle_high_page_hero_title: Kod saatı ilə başlayın
+  middle_high_page_hero_description: Sürükləmə və buraxma kodlaşdırma bloklarını özündə
+    cəmləşdirən pulsuz Kod Saatı fəaliyyətləri ilə kompüter elminin əsaslarını öyrənin.
+    Seçmək üçün yüzlərlə saatlıq seçim var!
+  middle_high_page_hourofcode_link: Kod saatı fəaliyyətlərini araşdırın
+  middle_high_page_modules_title: Yaşlı tələbələr üçün proqramlaşdırma modulları
+  middle_high_page_modules_description: CS Kəşfləri və CS Prinsipləri kurslarımızdan
+    uyğunlaşdırılmış, orta və orta məktəb şagirdləri üçün bu qısa, öz-özünə işləyən
+    modullar bütün proqramlaşdırma dillərini və alətlərini əhatə edən anlayışları
+    öyrənmək üçün əla bir yoldur.
+  middle_high_page_modules_card_title_1: Game Laboratoriyasına giriş
+  middle_high_page_modules_card_title_2: App Laboratoriyasında tısbağa proqramlaşdırması
+  middle_high_page_modules_card_title_3: App Laboratoriyasında Hadisəyə əsaslanan
+    proqramlaşdırma
+  middle_high_page_modules_card_description_1: Animasiyalar, interaktiv sənət və oyunları
+    proqramlaşdırarkən Game Lab mühitimizə bu girişdə öz sürətinizlə hərəkət edin.
+  middle_high_page_modules_card_description_2: App Laboratoriyasında JavaScript ilə
+    zəngin, interaktiv tətbiqlər yaratmaq qabiliyyətini açın!
+  middle_high_page_modules_card_description_3: Tələbələrin interaktiv tətbiqlər yaratmaq
+    üçün JavaScript-dən istifadə etdikləri App Lab proqramlaşdırma mühitinə bu girişlə
+    öz sürətinizlə gedin.
+  middle_high_page_modules_card_link: Bunu sınayın
+  middle_high_page_make_your_own_title: Öz Proqramlarınızı, Oyunlarınızı və Veb Səhifələrinizi
+    Yaradın
+  middle_high_page_make_your_own_description: 'Kurslara əlavə olaraq yaradıcılığınızı
+    araşdırmağa və heyrətamiz bir şey etməyə imkan verən proqramlaşdırma vasitələrimiz
+    var. '
+  middle_high_page_make_your_own_card_title_1: Tətbiq Laboratoriyası
+  middle_high_page_make_your_own_card_title_2: Oyun Laboratoriyası
+  middle_high_page_make_your_own_card_title_3: Veb Laboratoriyası
+  middle_high_page_make_your_own_card_descrpition_1: App Lab sadə tətbiqlər yarada
+    biləcəyiniz bir proqramlaşdırma mühitidir. Bloklar və ya mətn ilə JavaScript-də
+    bir proqram, kod dizayn edin, sonra saniyələr ərzində tətbiqinizi paylaşın.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab, bir-biri ilə qarşılıqlı
+    əlaqədə olan obyektlər və personajlarla sadə animasiyalar və oyunlar edə biləcəyiniz
+    proqramlaşdırma mühitidir.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab HTML və CSS istifadə
+    edərək sadə veb səhifələr yarada biləcəyiniz bir proqramlaşdırma mühitidir. Veb
+    səhifələrinizi dizayn edin və saytınızı saniyələr ərzində paylaşın.
+  middle_high_page_make_your_own_card_link: Daha ətraflı
+  middle_high_page_additional_resources_title: Əlavə Resurslar
+  middle_high_page_additional_resources_description: Kompüter elmini daha da araşdırmağın
+    bir çox yolu var! Video kitabxanamıza baxın və ya kompüter elmləri sahəsində maraqlı
+    karyeralar haqqında daha çox məlumat əldə edin.
+  middle_high_page_video_library_title: Video Kitabxanamızı kəşf edin
+  middle_high_page_video_library_description: Süni intellekt, İnternet, kompüterlərin
+    necə işləməsi, necə sındırılmamaq, blockchain, karyera və s. kimi mövzularda qısa
+    5-10 dəqiqəlik videolar vasitəsilə kompüter elminin əsaslarını öyrənin!
+  middle_high_page_video_library_link: Video kitabxanasına baxın
+  middle_high_page_cs_journeys_title: CS Journeys ilə daha irəli gedin
+  middle_high_page_cs_journeys_description: Kompüter elmləri səyahətinizdə növbəti
+    addımı atın. Karyera, mentorluq imkanları, onlayn kursları, təqaüdləri, təcrübələri
+    və daha çoxunu araşdırın!
+  middle_high_page_cs_journeys_link: CS Journeys ilə tanış olun
+  middle_high_page_cs_title: Sinifdə Kompüter Elmləri
+  middle_high_page_cs_description: Bu kursları bir müəllim rəhbərlik etməlidir! Onların
+    məktəbinizdə öyrədilməsini görmək istəyirsinizsə, onları sinifinizə gətirmək üçün
+    bir müəllimlə işləməyi düşünün.
+  middle_high_page_cs_card_title_1: CS kəşfləri
+  middle_high_page_cs_card_title_2: CS prinsipləri
+  middle_high_page_cs_card_title_3: AP Kompüter Elmləri A
+  middle_high_page_cs_card_description_1: Tələbələri kompüter elminin əsas anlayışları
+    ilə tanış edən və hesablama və texnologiyanın dünyaya necə təsir edə biləcəyini
+    araşdırmağa çağıran pulsuz ibtidai tədris proqramları dəsti.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Tələbələri AP® Computer Science A (AP® CSA)
+    üçün bu pulsuz tədris proqramında Java proqramlaşdırma dilini öyrənərkən proqram
+    mühəndisliyi və obyekt yönümlü dizaynla tanış edin.
+  middle_high_page_cs_link_1: CS Dicoveries ilə tanış olun
+  middle_high_page_cs_link_2: CS Prinsiplərini araşdırın
+  middle_high_page_cs_link_3: CSA-nı araşdırın
+  elemeentary_page_main_title: 5 ilə 11 yaş arasında öyrənmə
+  elementary_page_main_description: Maraqlı videolar, öz-özünə işləyən dərsliklər,
+    proqramlaşdırma fəaliyyətləri və s. ilə kompüter elmləri dünyasını araşdırın!
+  elementary_page_own_pace_title: Öz sürətinizlə öyrənməyə davam edin
+  elementary_page_own_pace_description: Şagirdlərin kompüter elminin əsaslarını öyrənməyə
+    başlamaq üçün bu iki əla variantda rəsmlər, oyunlar və daha çoxunu yaradın.
+  elementary_page_own_pace_card_title_1: Əvvəlki Reader Ekspress Kursu
+  elementary_page_own_pace_card_title_2: Ekspress Kurs
+  elementary_page_own_pace_card_description_1: Kompüter elmini öz sürətinizlə öyrənin!
+    Kompüter proqramları yaratmağı, problem həll etmə bacarıqlarını inkişaf etdirməyi
+    və əyləncəli çətinliklər üzərində işləməyi öyrənin! Dostlarınız, ailənizlə və
+    müəllimlərlə bölüşmək üçün oyunlar və yaradıcı layihələr hazırlayın.
+  elementary_page_own_pace_link_1: Əvvəlki oxucu kursuna başlayın
+  elementary_page_own_pace_link_2: Ekspres Kursa Başlayın
+  elementary_page_make_your_own_games_title: Öz Animasiyalarınızı və Oyunlarınızı
+    Yaradın
+  elementary_page_make_your_own_games_card_title_1: Sprite Laboratoriyası
+  elementary_page_make_your_own_games_card_description_1: Yaradıcı olmağın vaxtı!
+    Sprite Laboratoriyasında axmaq, şirin və ya xarici bir şey etmək üçün blok əsaslı
+    kodlaşdırmadan istifadə edin. Yeganə məhdud təsəvvürünüzdür!
+  elementary_page_make_your_own_games_link: Sprite Laboratoriyasını sınayın
+  elementary_page_computer_science_title: Sinifdə Kompüter Elmləri
+  elementary_page_computer_science_description: Bu kursları bir müəllim rəhbərlik
+    etməlidir! Onların məktəbinizdə öyrədilməsini görmək istəyirsinizsə, valideyndən
+    və ya qəyyumdan onları sinifinizə gətirmək üçün müəllimlə işləməsini xahiş edin.
+  elementary_page_computer_science_card_title_1: Kompüter elminin əsasları
+  elementary_page_computer_science_card_title_2: Kompüter Elmləri Əlaqələri
+  elementary_page_computer_science_description_1: Tələbələri kompüter elminin əsas
+    anlayışları ilə tanış edən və hesablama və texnologiyanın dünyaya necə təsir edə
+    biləcəyini araşdırmağa çağıran pulsuz ibtidai tədris proqramları dəsti.
+  elementary_page_computer_science_description_2: Kompüter elmləri (CS) ilə riyaziyyat,
+    dil sənəti, elm və sosial elmlər kimi digər fənlər arasında əlaqə qurun.
   language_code:
     ar: Ərəb
     az: Azərbaycan

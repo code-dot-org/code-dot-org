@@ -50,6 +50,7 @@ export default function RubricsContainer({
       learningGoal: '',
       aiEnabled: false,
       position: nextPosition,
+      tips: null,
       learningGoalEvidenceLevelsAttributes: [
         {
           teacherDescription: '',
@@ -146,6 +147,7 @@ export default function RubricsContainer({
       setSaveNotificationText,
       rubric,
       learningGoalList,
+      setLearningGoalList,
       selectedLevelForAssessment,
       lessonId
     );

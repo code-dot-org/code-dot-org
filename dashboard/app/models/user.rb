@@ -104,6 +104,7 @@ class User < ApplicationRecord
   #     child account policy.
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
+  #   ai_rubrics_disabled: Turns off AI assessment for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -140,6 +141,7 @@ class User < ApplicationRecord
     us_state
     country_code
     family_name
+    ai_rubrics_disabled
   )
 
   attr_accessor(
@@ -1502,6 +1504,10 @@ class User < ApplicationRecord
   # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
   def under_13?
     age.nil? || age.to_i < 13
+  end
+
+  def over_21?
+    !age.nil? && age.to_i >= 21
   end
 
   def mute_music?

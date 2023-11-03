@@ -5802,14 +5802,13 @@
           "type": "Kaynak"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Video"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
           "type": "Slaytlar"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -5857,7 +5856,7 @@
           "type": "Slaytlar"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -5947,7 +5946,7 @@
           "type": "Slaytlar"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -5965,11 +5964,11 @@
           "name": "Tüm Dersler için Kaynak Listesi"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Deniz Ekosisteminin Simüle Edilmesinde Standartlar ",
+          "name": " Deniz Ekosisteminin Simülasyonunda Standartlar",
           "type": "Kaynak"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Bir Deniz Ekosistemini Simüle Eden Kelime Bilgisi",
+          "name": "Deniz Ekosistemini Simüle Etmede Kelime Bilgisi",
           "type": "Kaynak"
         },
         "ecosystems/csc-ecosystems/2023": {
@@ -5987,7 +5986,7 @@
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -6052,7 +6051,7 @@
           "type": "Kaynak"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -6140,7 +6139,7 @@
           "url": "/s/csc-zaman kapsülü-2023/sözcü"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -6243,7 +6242,7 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "CS Connections Açılış Sayfası",
+          "name": "CS Bağlantıları Açılış Sayfası",
           "url": "https://code.org/educate/csc",
           "type": "Kaynak"
         },
@@ -7422,6 +7421,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "Fonksiyon parametreleri",
           "type": "Video"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Fonksiyonlar",
+          "type": "Slaytlar"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "Slaytlar"
@@ -9212,7 +9215,7 @@
           "type": "Video"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+          "url": "https://docs.google.com/document/d/19J30X8eWuYCwvVEIPthWVYMJqPhtm6RVwA_ZYVwpPA8"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "Yapay Zeka Nasıl Çalışır - Eğitim Verileri ve Önyargı",
@@ -9225,7 +9228,7 @@
           "type": "Video"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "url": "https://docs.google.com/presentation/d/1q4WeWF42FCSI6h7wr1yGeFVIoE17NCqPGHzGXhpNaCU/",
           "type": "Slaytlar"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
@@ -9248,7 +9251,7 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "Yedi Segment Ekran Manipülatif",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "url": "https://docs.google.com/document/d/1pnKln2bbDQG4-Q30ng-vEHfWaucmFYidCT7qkB9YFcg"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "Bir Sinir Ağı Ne Görür?",
@@ -9551,10 +9554,32 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Şiir Listesi",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "Slaytlar"
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Kaynak"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/125Xbt87t3o4JHuDtTNxM2QX7F1tvqmm4nl6oPRLswx8"
         }
       }
     }

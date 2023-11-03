@@ -596,6 +596,12 @@ FactoryBot.define do
     end
   end
 
+  factory :section_instructor do
+    instructor {create(:teacher)}
+    section {create(:section)}
+    status {:active}
+  end
+
   factory :game do
     sequence(:name) {|n| "game#{n}.com"}
     app {"maze"}
@@ -1083,6 +1089,12 @@ FactoryBot.define do
       after(:create) do |lesson|
         activity = create :lesson_activity, lesson: lesson
         create :activity_section, lesson_activity: activity
+      end
+    end
+
+    trait :with_lesson_group do
+      after(:create) do |lesson|
+        create(:lesson_group, script: lesson.script, lessons: [lesson]) unless lesson.lesson_group
       end
     end
   end
@@ -1829,10 +1841,6 @@ FactoryBot.define do
     teacher_description {"Description for teacher"}
   end
 
-  factory :learning_goal_evaluation do
-    association :learning_goal
-  end
-
   factory :learning_goal_teacher_evaluation do
     association :learning_goal
     association :teacher, factory: :teacher
@@ -1840,9 +1848,23 @@ FactoryBot.define do
     understanding {0}
   end
 
+  factory :rubric_ai_evaluation do
+    transient do
+      student {create :student}
+    end
+
+    user {student}
+    project_id {789}
+    association :requester, factory: :teacher
+    association :rubric
+    status {1}
+    project_version {"1"}
+  end
+
   factory :learning_goal_ai_evaluation do
     association :learning_goal
-    association :user, factory: :student
+    association :rubric_ai_evaluation
     understanding {0}
+    ai_confidence {1}
   end
 end

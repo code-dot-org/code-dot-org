@@ -2512,7 +2512,7 @@ bg:
           description_short: Изследвайте Minecraft света чрез код.
           student_description: Използвайте блокове с код, за да въведете Steve или
             Alex в приключението чрез този Minecraft свят.
-          title: Minecraft Hour of Code
+          title: Minecraft авантюрист
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -2839,6 +2839,17 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Въведение
+          lessons:
+            lesson-7:
+              name: Въведение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Въведение
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2847,6 +2858,10 @@ bg:
           lessons:
             lesson-3:
               name: Оценка
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Въведение
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

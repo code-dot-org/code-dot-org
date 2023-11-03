@@ -138,6 +138,7 @@ it:
         ai-classroom-test:
           title: Laboratorio IA - Test in aula
         ai-ethics:
+          description_audience: da 11 a 17 anni
           title: Il nostro codice etico sulla IA
         ai-ethics-2021:
           description_audience: Da 11 a 17 anni
@@ -2348,7 +2349,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) per far sapere al team del piano di studi di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) per far sapere al team del piano di studi di Code.org com'è andata l'unità.
           description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1v2:
@@ -2579,7 +2580,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) per far sapere al team del programma di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) per far sapere al team del programma di Code.org com'è andata l'unità.
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
@@ -2760,7 +2761,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) per far sapere al team del curriculum di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) per far sapere al team del curriculum di Code.org com'è andata l'unità.
           description_short: "  Scopri come progettare un programma che soddisfi le
             esigenze dei tuoi utenti."
           lesson_groups:
@@ -3017,7 +3018,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) per far sapere al team del curriculum di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) per far sapere al team del curriculum di Code.org com'è andata l'unità.
           description_short: Scopri come le persone utilizzano i computer per risolvere
             problemi relativi ai dati.
           lesson_groups:
@@ -4305,6 +4306,7 @@ it:
             con i tuoi amici! (Versione per connessioni lente)
           title: Ballando col codice (versione per connessioni lente)
         dance-unplugged:
+          description_audience: da 5 a 17 anni
           title: Ora del Codice - Ballando col codice - Lezione tradizionale
         dani-june-2020-test:
           lesson_groups:
@@ -5307,7 +5309,7 @@ it:
           description_short: Esplora il mondo di Minecraft attraverso il codice.
           student_description: Usa i blocchi di codice per avventurarti nel mondo
             di Minecraft con Steve o Alex.
-          title: L'Ora del Codice con Minecraft
+          title: Un'avventura con Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -5798,6 +5800,23 @@ it:
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           title: Informatica nello Sviluppo Professionale scientifico fase 2b
+        self-paced-pl-csd-unit1-2-2023:
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+          title: 'Modulo 1: preparazione all''insegnamento della risoluzione dei problemi
+            e dell''informatica'
         self-paced-pl-csd5-2022:
           title: Insegnare IA e Apprendimento Automatico
         self-paced-pl-csd5-2023:
@@ -5981,6 +6000,25 @@ it:
               display_name: Contenuto
             csd3_2:
               display_name: 'Capitolo 2: Realizzazione di giochi'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1° giorno
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduzione
+          lessons:
+            lesson-7:
+              name: Introduzione
+          title: 1° giorno
+        virtual-pl-csa-summer-day2:
+          title: 2° giorno
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduzione
+          title: 3° giorno
+        virtual-pl-csa-summer-day4:
+          title: 4° giorno
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6007,6 +6045,19 @@ it:
           lessons:
             lesson-3:
               name: Valutazione
+          title: Giorno 5
+        virtual-pl-csp-summer-day1:
+          title: 1° giorno
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduzione
+          title: 2° giorno
+        virtual-pl-csp-summer-day3:
+          title: 3° giorno
+        virtual-pl-csp-summer-day4:
+          title: 4° giorno
+        virtual-pl-csp-summer-day5:
           title: Giorno 5
         virustest:
           description_short: Usa Sprite Lab per creare una simulazione di un'epidemia

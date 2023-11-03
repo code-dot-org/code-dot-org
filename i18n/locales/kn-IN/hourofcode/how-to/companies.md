@@ -16,8 +16,8 @@ title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಮಾಡುವುದು ಹೇಗ
 
 ಆರಂಭಿಸಲು ಈ ಕೆಳಗಿನ ಹಂತಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್‌ ಬಗ್ಗೆ ನಿಮ್ಮ ಕಂಪನಿಯಲ್ಲಿ ಹೇಗೆ ಉತ್ಸಾಹ ಮೂಡಿಸುವುದು ಎಂಬ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ಮಾಹಿತಿಗಾಗಿ [ಕಾರ್ಪೊರೇಟ್‌ ಪಾಲುದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶನಗಳನ್ನು](/files/hoc-corporate-toolkit.pdf) ನೋಡಿ.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [ಸ್ಥಳೀಯ ಶಾಲೆಯೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಿ](#connect-with-a-school)
+- [ತರಗತಿಯಲ್ಲಿ ಸ್ವಯಂಸೇವೆ ಮಾಡುವಂತೆ ಉದ್ಯೋಗಿಗಳಿಗೆ ಪ್ರೋತ್ಸಾಹ ನೀಡಿ](#encourage-employees)
 - [ನಿಮ್ಮದೇ ಅವರ್ ಆಫ್ ಕೋಡ್ ಈವೆಂಟ್ ಅನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ](#host-hour-of-code)
 - [ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಿ](#promote-hour-of-code)
 - [ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಬೆಂಬಲಿಸಲು ಇನ್ನಷ್ಟು ವಿಧಾನಗಳು](#support-hour-of-code)
@@ -26,31 +26,31 @@ title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಮಾಡುವುದು ಹೇಗ
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## ಸ್ಥಳೀಯ ಶಾಲೆಯೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಿ
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಾರಂಭಿಸುವುದು ಯಾವಾಗಲೂ ಉತ್ತಮವಾಗಿದೆ, ನೀವು ಅಥವಾ ನಿಮ್ಮ ಉದ್ಯೋಗಿಗಳು ಬಲವಾದ ಸಂಪರ್ಕವನ್ನು ಹೊಂದಿರುವ ಶಾಲೆಗಳೊಂದಿಗೆ, ಅಲ್ಮಾ ಮೇಟರ್, ಮಗುವಿನ ಶಾಲೆ, ಅಥವಾ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದಲ್ಲಿ ಐತಿಹಾಸಿಕವಾಗಿ ಹಿಂದುನಿರೂಪಿಸಲ್ಪಟ್ಟ ಜನಸಂಖ್ಯೆಗೆ ಸೇವೆ ಸಲ್ಲಿಸುವತ್ತ ಕೇಂದ್ರೀಕರಿಸಿದ ಸ್ಥಳೀಯ ಸಂಸ್ಥೆ ಅಥವಾ ಶಾಲೆಯಂತೆ.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+ಅಲ್ಲಿಂದ, ಪ್ರಾಂಶುಪಾಲರು, ಉಪಪ್ರಾಂಶುಪಾಲರು, ತಂತ್ರಜ್ಞಾನ ಅಥವಾ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಬೋಧಕರು ಅಥವಾ ಶಾಲೆಯ ಪಿಟಿಎಸ್ಎ ನಂತಹ ಸಂಪರ್ಕಗಳನ್ನು ತಲುಪಲು ಸೂಕ್ತ ಸಂಪರ್ಕಗಳನ್ನು ಹುಡುಕಲು ನೀವು ಶಾಲೆಯ ವೆಬ್ಸೈಟ್ಗೆ ಭೇಟಿ ನೀಡಬಹುದು. ಈವೆಂಟ್ ಅನ್ನು ಸಹ-ಆಯೋಜಿಸಲು ನೀವು ಬಾಯ್ಸ್ ಗರ್ & ಲ್ಸ್ ಕ್ಲಬ್ಸ್ ಆಫ್ ಅಮೇರಿಕಾ, ವೈಎಂಸಿಎ ಶಾಖೆ ಮತ್ತು ಹೆಚ್ಚಿನದಂತಹ ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ಸಹ ಪಾಲುದಾರರಾಗಬಹುದು.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+ಶಾಲೆಯ ಸಂಪರ್ಕ ಸಾಧ್ಯವಾಗದಿದ್ದರೆ, ದಯವಿಟ್ಟು [ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ](https://support.code.org/hc/en-us/requests/new). ನಾವು ಸಾಧ್ಯವಿದ್ದಲ್ಲಿ ನಮ್ಮ ಸ್ಥಳೀಯ ಪಾಲುದಾರರೊಬ್ಬರ ಮೂಲಕ ಸಂಪರ್ಕ ಸಾಧಿಸುತ್ತೇವೆ.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## ತರಗತಿಯಲ್ಲಿ ಸ್ವಯಂಸೇವೆ ಮಾಡುವಂತೆ ಉದ್ಯೋಗಿಗಳಿಗೆ ಪ್ರೋತ್ಸಾಹ ನೀಡಿ
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+ಅವರ್ ಆಫ್ ಕೋಡ್‌ನಲ್ಲಿ ಭಾಗವಹಿಸುವ ಅತ್ಯಂತ ಸಂತೃಪ್ತಿಕರ ವಿಧಾನವೆಂದರೆ, ಸ್ಥಳೀಯ ತರಗತಿಯ ಜೊತೆಗೆ ಖುದ್ದಾಗಿ ಅಥವಾ ವರ್ಚುವಲ್ ಆಗಿ ಸ್ವಯಂಸೇವೆ ಸಲ್ಲಿಸುವುದಾಗಿದೆ. ಎಲ್ಲಕ್ಕಿಂತ ಉತ್ತಮವಾಗಿ, ಸ್ವಯಂಸೇವೆ ಮಾಡಲು ನೀವು ಇಂಜಿನಿಯರ್ ಆಗಿರಬೇಕಿಲ್ಲ. ನಿಮ್ಮ ಸ್ವಂತ ವೃತ್ತಿ ಅನುಭವವನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಮೂಲಕ ಮತ್ತು ಸಿಎಸ್ ಅಥವಾ ತಂತ್ರಜ್ಞಾನವು ನಿಮ್ಮ ಪಾತ್ರದ ಮೇಲೆ ಹೇಗೆ ಪರಿಣಾಮ ಬೀರಿದೆ ಎಂಬುದನ್ನು ನೀವು ಇನ್ನೂ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅರ್ಥಪೂರ್ಣ ಅನುಭವವನ್ನು ಒದಗಿಸಬಹುದು.
 
 [<button>ಸ್ವಯಂಸೇವೆಗೆ ಸೈನ್ ಅಪ್ ಮಾಡಿ</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+ಸ್ವಯಂಸೇವಕರು ನೋಂದಣಿ ಮಾಡಿಕೊಂಡ ನಂತರ, ನಮ್ಮ [ಸ್ವಯಂಸೇವಕರ ನಕ್ಷೆಯಲ್ಲಿ](https://code.org/volunteer/local) ಅವರ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಶಿಕ್ಷಕರು ಪರಿಶೀಲಿಸಬಹುದು. ಹೀಗಾಗಿ ಪ್ರೊಫೈಲ್‌ ಎಷ್ಟು ಸಾಧ್ಯವೋ ಅಷ್ಟು ಸಂಪೂರ್ಣವಾಗಿರಬೇಕು. ನೀವು ಅವರ ತರಗತಿಗೆ ಉತ್ತಮವಾಗಿ ಹೊಂದುತ್ತಿದ್ದರೆ, ಪ್ಲಾಟ್‌ಫಾರಂ ಮೂಲಕ ಒಬ್ಬ ಶಿಕ್ಷಕರು ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತಾರೆ (ಶಿಕ್ಷಕರ ಜೊತೆಗೆ ನೀವು ಎಂದಿಗೂ ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದಿಲ್ಲ). ನಂತರ ನೀವು, [ತಮ್ಮ ತರಗತಿಯಲ್ಲಿ ಉತ್ತಮ ಸ್ವಯಂಸೇವೆ ಒದಗಿಸುವುದು ಹೇಗೆ](https://hourofcode.com/us/how-to/volunteers) ಎಂಬುದರ ಕುರಿತು ಶಿಕ್ಷಕರ ಜೊತೆಗೆ ನೇರವಾಗಿ ವಿವರಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು.
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+ಅವರ್ ಆಫ್ ಕೋಡ್‌ ಬಗ್ಗೆ ನಿಮ್ಮ ಕಂಪನಿಯಲ್ಲಿ ಉತ್ಸಾಹ ಮೂಡಿಸುವುದಕ್ಕಾಗಿ ಮಾದರಿ ಸಂದೇಶ ಕಳುಹಿಸಲು ಮತ್ತು ಸ್ವಯಂಸೇವೆಯ ಕುರಿತು ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ, ನಮ್ಮ [ಕಾರ್ಪೊರೇಟ್ ಪಾಲುದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶಿ]({{ localized_files/hoc_corporate_toolkit }}) ಅನ್ನು ನೋಡಿ.
 
 * * *
 
@@ -135,7 +135,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 ### 1. ನಿಮ್ಮ ಈವೆಂಟ್ ರಿಜಿಸ್ಟರ್ ಮಾಡಿ
 
-ನೀವು [ಅವರ್ ಆಫ್ ಕೋಡ್ ಈವೆಂಟ್‌ಗೆ ಸೈನ್ ಅಪ್ ಮಾಡಿದಾಗ](/#join), ಯಶಸ್ವಿ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಹೋಸ್ಟ್‌ ಮಾಡಲು ಸುದ್ದಿ ಮತ್ತು ಸಲಹೆಗಳೊಂದಿಗೆ ಸಹಾಯಕ ಇಮೇಲ್ ಸಂವಹನಗಳನ್ನು ನೀವು ಪಡೆಯುತ್ತೀರಿ. ನೀವು ಸಮೀಪದಲ್ಲಿ ಈವೆಂಟ್ ನಡೆಸುತ್ತಿದ್ದೀರಿ ಎಂದು ಸ್ಥಳೀಯ ಶಾಲೆಗಳು ಅಥವಾ ಪಾಲಕರಿಗೆ ತಿಳಿಸುವ ವಿಧಾನವೂ ಆಗಿದೆ.
+ನಿಮ್ಮ ಅವರ್ ಆಫ್ [ಕೋಡ್ ಈವೆಂಟ್ ಅನ್ನು ನೀವು ಸೈನ್ ಅಪ್ ಮಾಡಿದಾಗ](/events), ಯಶಸ್ವಿ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಹೋಸ್ಟ್ ಮಾಡಲು ಸುದ್ದಿ ಮತ್ತು ಸಲಹೆಗಳೊಂದಿಗೆ ಸಹಾಯಕವಾದ ಇಮೇಲ್ ಸಂವಹನಗಳನ್ನು ನೀವು ಸ್ವೀಕರಿಸುತ್ತೀರಿ. ನೀವು ಸಮೀಪದಲ್ಲಿ ಈವೆಂಟ್ ನಡೆಸುತ್ತಿದ್ದೀರಿ ಎಂದು ಸ್ಥಳೀಯ ಶಾಲೆಗಳು ಅಥವಾ ಪಾಲಕರಿಗೆ ತಿಳಿಸುವ ವಿಧಾನವೂ ಆಗಿದೆ.
 
 ### 2. ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮದಲ್ಲಿ ಪೋಸ್ಟ್ ಮಾಡಿ
 
@@ -162,7 +162,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 - ನಿಮ್ಮ ಮೊದಲ ಕೋಡ್ ಸಾಲು ನಿಮ್ಮ ಜೀವನವನ್ನು ಬದಲಿಸಿದರೆ, ನಿಮ್ಮ ಸುತ್ತಮುತ್ತಲಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ತಮ್ಮ ಮೊದಲ #HourOfCode https://code.org/volunteer ಅನ್ನು ಬರೆಯಲು ಸಹಾಯ ಮಾಡಿ.
 - ನೀವು ಕೋಡ್ ಮಾಡಲು ಕಲಿತಿದ್ದೀರಿ ಎಂದಾದರೆ, ನಿಮ್ಮ ಕಥೆ ಹೇಳಿಕೊಳ್ಳಬಹುದೇ? ನಿಮ್ಮ ಸುತ್ತಲಿನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅವರ ಮೊದಲ #HourOfCode https://code.org/volunteer ನಲ್ಲಿ ಸ್ಫೂರ್ತಿ ಒದಗಿಸಿ.
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">ನಿಮ್ಮ ಸಮುದಾಯಕ್ಕೆ ನಿಮ್ಮ</a> ಈವೆಂಟ್ ಅನ್ನು ಉತ್ತೇಜಿಸಲು ಹೆಚ್ಚಿನ ಪೋಸ್ಟರ್ಗಳು, ವೀಡಿಯೊಗಳು, ಸ್ಟಿಕ್ಕರ್ಗಳು ಮತ್ತು ಇತರ ಮಾರ್ಗಗಳನ್ನು ಹುಡುಕಿ.
 
 * * *
 

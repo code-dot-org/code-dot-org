@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-05 19:27:31 UTC",
+    "serialized_at": "2023-10-25 20:43:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,7 +77,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Purpose:**\nKick off the week! Get to know the people you are with and understand what will happen during the week.\n\n**Objectives:**\n\n* Participants have started to get to know others at the workshop.\n* Participants know what we’re doing this week.\n* Participants will generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Participants use a shared definition for identity.\n\n**Suggested time:** 50 minutes\n",
+        "overview": "**Purpose:**\nKick off the week! Get to know the people you are with and understand what will happen during the week.\n\n**Objectives:**\n\n* Participants have started to get to know others at the workshop.\n* Participants know what we’re doing this week.\n* Participants will generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Participants use a shared definition for identity.\n\n**Suggested time:** 53 minutes\n",
         "student_overview": "**You will:**\n\n* Get to know others at the workshop.\n* Know what we’re doing this week.\n* Generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Use a shared definition for identity."
       },
       "seeding_key": {
@@ -95,7 +95,7 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2023/lessons/3/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2023/lessons/3/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
         "preparation": "* Have scissors ready for groups to create [r shape_cutouts/virtual-pl-csp-summer/2024] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1-_Vfwz51mO8PpNobJt8T5XG1-YjBdsdJi5uD25-26PE/edit?usp=sharing)",
         "student_overview": "Develop a system for creating and ordering patterns of shapes.",
         "unplugged": true
@@ -141,12 +141,29 @@
       }
     },
     {
-      "key": "Asynchronous Part 1",
-      "name": "Lesson Planning: Understanding the Lesson",
+      "key": "lesson-5",
+      "name": "Introduction to Asynchronous Activities",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants navigate to the CSP Virtual PL Workshop Course and gain an understanding of how to use it and of what is expected of them regarding submittables. \n\n**Objectives:**\n* Participants are able to navigate to the CSP Virtual PL Workshop Course\n* Participants understand types of asynchronous activities and the variety of ways to submit work in the CSP Virtual PL Workshop Course.\n\n**Suggested time:** 10 minutes\n",
+        "student_overview": "**You will:**\n\n* Participants are able to navigate to the CSP Virtual PL Workshop Course\n* Participants understand types of asynchronous activities and the variety of ways to submit work in the CSP Virtual PL Workshop Course."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Lesson Planning: Understanding the Lesson",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n"
@@ -160,12 +177,12 @@
     {
       "key": "Async Debrief",
       "name": "Binary Number Systems",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
-        "overview": "**Purpose:**\nWe show that binary numbers don't need to be scary and this doesn't need to be overly math-y. This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students.\n\n**Objectives:**\n\n* Participants will be able to use the binary number system to translate between decimal and binary representations of a number.\n* Participants will see how the two model lessons help provide a mental model and motivation for the binary number system.\n\n**Suggested time:** 35 minutes",
+        "overview": "**Purpose:**\nWe show that binary numbers don't need to be scary and this doesn't need to be overly math-y. This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students.\n\n**Objectives:**\n\n* Participants will be able to use the binary number system to translate between decimal and binary representations of a number.\n* Participants will see how the two model lessons help provide a mental model and motivation for the binary number system.\n\n**Suggested time:** 37 minutes",
         "student_overview": "**You will:**\n\n* Use the binary number system to translate between decimal and binary representations of a number.\n* See how the two model lessons help provide a mental model and motivation for the binary number system.\n"
       },
       "seeding_key": {
@@ -177,10 +194,10 @@
     {
       "key": "Lesson Planning: Make a Plan",
       "name": "Plugged and Unplugged",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "**Purpose:** Before we get to lesson planning, we want to introduce different types of lessons and the importance of mental models in both. This approach allows us to be more explicit about the teacher's role in each of these lessons - specifically, that the teacher needs to check for understanding in both of these lessons constantly. This foreshadows tomorrow's topic of “the teacher's role”.\n\n\n\n**Objectives:**\n* Participants can explain the similarities and differences between Unplugged and Plugged lessons.\n* Participants can explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Participants experience joining a section in Code Studio.\n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will:**\n* Explain the similarities and differences between Unplugged and Plugged lessons.\n* Explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Experience joining a section in Code Studio."
@@ -194,12 +211,12 @@
     {
       "key": "Instructional Strategies",
       "name": "Teacher's Role in the Classroom",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nWe are using this session to kick off the day and proactively discuss the role of the teacher, even in lessons that focus on discovery. We want teachers new to CS to feel comfortable with their role in the room as “lead learner” but also as one who creates classroom experiences for students while building their own CS knowledge.\n\n**Objectives:**\n\n* Participants can describe teaching and learning strategies used in the curriculum.\n* Participants can describe the influence they have over culture and student success in a CS classroom.\n\n\n**Suggested time:** 30 minutes",
+        "overview": "**Purpose:**\nWe are using this session to kick off the day and proactively discuss the role of the teacher, even in lessons that focus on discovery. We want teachers new to CS to feel comfortable with their role in the room as “lead learner” but also as one who creates classroom experiences for students while building their own CS knowledge.\n\n**Objectives:**\n\n* Participants can describe teaching and learning strategies used in the curriculum.\n* Participants can describe the influence they have over culture and student success in a CS classroom.\n\n\n**Suggested time:** 28 minutes",
         "student_overview": "**You will:**\n\n* Describe teaching and learning strategies used in the curriculum.\n* Describe the influence they have over culture and student success in a CS classroom."
       },
       "seeding_key": {
@@ -211,10 +228,10 @@
     {
       "key": "Asynchronous Part 2",
       "name": "Lesson Planning: Prepare Your Lesson",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nIn this session, participants will create a plan for how to teach their lesson during a 40 minute TLO session. This plan should consider contingency plans if the lesson goes faster than expected, and consideration for how the teaching group will use formative assessment throughout the lesson to know that \"learners\" are making the needed progress toward the learning goals.\n\n**Objectives:**\n* Participants have developed a run-of-show and tech plan for their lesson.\n* Participants have developed contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Participants have a plan for formative assessment during the lesson.\n* Participants make sure everyone in the teaching group has a role.\n\n**Suggested time:** 75 minutes",
         "student_overview": "**You will:**\n\n* Develop a run-of-show and tech plan for their lesson.\n* Develop contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Plan for formative assessment during the lesson.\n* Make sure everyone in the teaching group has a role.\n"
@@ -301,6 +318,18 @@
       "seeding_key": {
         "lesson_activity.key": "307430dc-6fa4-4964-babc-44df858eab22",
         "lesson.key": "Navigating the Codeorg Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "32193d68-f5fd-4bd8-adca-78b645f4719f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32193d68-f5fd-4bd8-adca-78b645f4719f",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csp-summer-day1"
       }
@@ -572,6 +601,16 @@
       }
     },
     {
+      "key": "d36a785b-5ad8-4462-9cae-fe9d3767b43f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d36a785b-5ad8-4462-9cae-fe9d3767b43f",
+        "lesson_activity.key": "32193d68-f5fd-4bd8-adca-78b645f4719f"
+      }
+    },
+    {
       "key": "58cbd724-4155-428c-b0af-00d8f90fb6ba",
       "position": 1,
       "properties": {
@@ -653,6 +692,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3_1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -675,6 +717,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1_1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -697,6 +742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async1.5_1"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -719,6 +767,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async2_1"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -741,6 +792,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async3_1"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -763,6 +817,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async4_1"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -785,6 +842,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async5_1"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -807,6 +867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-async6_1"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -829,6 +892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources1_1"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -959,7 +1025,7 @@
   "resources": [
     {
       "name": "2023 Virtual CSP Summer Workshop - Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/1MhL-WxbG7ZqMYyYhvJ2m74FHLeM_2dLzzSZOH-MmvVY/edit#heading=h.z84jwpltvqnh",
+      "url": "https://docs.google.com/document/d/1sfEyKamZF3xCAuOcZbqwCA_Upy6RpGi1uF3bX7eBKxo/edit",
       "key": "2023_virtual_csp_summer_workshop_-_day_1_agenda",
       "properties": {
       },
@@ -969,7 +1035,7 @@
     },
     {
       "name": "2023 Virtual CSP Summer Workshop - Day 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1aKaFm5imjjW6SXjkPcI1URUfTPiYb-9A-khgzPHg9-c/edit#slide=id.gdc8b0dc810_0_182",
+      "url": "https://docs.google.com/presentation/d/1wkHDEdZ8tU0OSJajVVNt-2g1tyRb8d0CSxElTjNuwmY/edit#slide=id.gdc8b0dc810_0_182",
       "key": "2023_virtual_csp_summer_workshop_-_day_1_slides",
       "properties": {
       },

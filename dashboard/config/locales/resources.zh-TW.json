@@ -5673,7 +5673,6 @@
           "type": "資源"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "影片"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -7295,6 +7294,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "函式帶參數",
           "type": "影片"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "函式",
+          "type": "幻燈片"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "幻燈片"
@@ -9037,12 +9040,12 @@
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "AI 如何運作-訓練資料與偏見",
+          "name": "人工智慧如何運行 - 訓練數據和偏見",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "影片"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "AI 如何運作-什麼是機器學習？",
+          "name": "人工智慧如何運行 - 什麼是機器學習？",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "影片"
         },
@@ -9051,25 +9054,25 @@
           "type": "幻燈片"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] 電腦視覺網路",
+          "name": "[Example] 計算機視覺網絡",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
-          "name": "電腦視覺",
+          "name": "計算機視覺",
           "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
           "type": "幻燈片"
         },
         "computer_vision_network/how-ai-works/2023": {
-          "name": "電腦視覺網路",
+          "name": "計算機視覺網絡",
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "AI 如何運作：電腦視覺如何運作",
+          "name": "人工智慧如何運行：計算機視覺如何運行",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "影片"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "七個區段顯示操作",
+          "name": "七段顯示器操控",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
@@ -9078,7 +9081,7 @@
           "type": "影片"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "AI 如何運作：神經網路如何運作",
+          "name": "人工智慧如何運行：神經網絡如何運行",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "影片"
         },
@@ -9092,36 +9095,36 @@
           "type": "幻燈片"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "WeTube 內容創作者",
+          "name": "WeTube內容創作者",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "資源"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "（可選）伊麗莎活動指南",
+          "name": "（可選）Eliza活動指南",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "生成式法學碩士",
+          "name": "生成式大型語言模型",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "幻燈片"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "AI 如何運作：聊天機器人和大語言模型（第 1 部分）",
+          "name": "人工智慧如何運行：聊天機器人和大型語言模型（第1部分）",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "影片"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "AI 如何運作：聊天機器人和大語言模型（第 2 部分）",
+          "name": "人工智慧如何運行：聊天機器人和大型語言模型（第2部分）",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "影片"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] 詞彙和視頻指南",
+          "name": "[Key] 詞彙和視訊指南",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "答案鍵"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
-          "name": "視頻和詞彙指南",
+          "name": "視訊和詞彙指南",
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
@@ -9138,58 +9141,58 @@
           "type": "資源"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "（可選）GAN 遊戲活動指南",
+          "name": "（可選）GAN遊戲活動指南",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "生成圖像",
+          "name": "生成式圖像",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "幻燈片"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] 生成圖像活動指南",
+          "name": "[Key] 生成式圖像活動指南",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "答案鍵"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "name": "AI 如何運作：創造力和想像力",
+          "name": "人工智慧如何運行：創造力和想像力",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "影片"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] 嘈雜的圖像活動",
+          "name": "[Exemplar] 噪聲圖像活動",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "嘈雜的圖像部件活動指南",
+          "name": "噪聲圖像小部件活動指南",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "用戶指南：噪點圖像小部件",
+          "name": "用戶指南：噪聲圖像小部件",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "資源"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
-          "name": "視頻和詞彙指南",
+          "name": "視訊和詞彙指南",
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
         },
         "algorithmic_bias/how-ai-works/2023": {
-          "name": "算法偏差",
+          "name": "演算法偏見",
           "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
           "type": "幻燈片"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
-          "name": "AI 如何運作-社會影響",
+          "name": "人工智慧如何運行 - 社會影響",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "影片"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "分享有關我們圖像裁剪算法的知識（Twitter）",
+          "name": "分享有關我們的圖像裁剪演算法的知識（Twitter）",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "資源"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "Twitter 表示，它的圖像裁剪算法有偏見，所以它正在放棄它（CNN）",
+          "name": "Twitter表示其圖像裁剪算法有偏見，所以正在將其放棄（CNN）",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "資源"
         },
@@ -9204,7 +9207,7 @@
           "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "AI 如何運作-隱私和工作的未來",
+          "name": "人工智慧如何運行 - 隱私和工作的未來",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "影片"
         },
@@ -9221,12 +9224,12 @@
           "type": "幻燈片"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "name": "AI 如何運作：道德與人工智慧：平等存取和演算法偏差",
+          "name": "人工智慧如何運行：道德與人工智慧：平等訪問和演算法偏見",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "影片"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "name": "AI 如何運作：道德與 AI：隱私與工作的未來",
+          "name": "人工智慧如何運行：道德與人工智慧：隱私和工作的未來",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "影片"
         },
@@ -9236,12 +9239,12 @@
           "type": "影片"
         },
         "how_ai_works_training_data_and_bias/how-ai-works/2023": {
-          "name": "AI 如何運作：訓練資料與偏見",
+          "name": "人工智慧如何運行：訓練數據和偏見",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "影片"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "AI 如何運作：什麼是機器學習？",
+          "name": "人工智慧如何運行：什麼是機器學習？",
           "url": "https://youtu.be/KHbwOetbmbs",
           "type": "影片"
         },
@@ -9369,10 +9372,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "影片"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "詩歌列表",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "幻燈片"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "資源"
         }
       }
     }

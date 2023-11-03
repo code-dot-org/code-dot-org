@@ -2888,7 +2888,7 @@
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
           "name": "Nuestro código de ética de la Inteligencia artificial [Template]",
-          "url": "https://docs.google.com/presentation/d/1RqtvxP6y7ZnYmcutz15u9Tv3C6RK-wNy/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/presentation/d/1RqtvxP6y7ZnYmcutz15u9Tv3C6RK-wNy/view",
           "type": "Diapositivas"
         },
         "create_an_ml_app_-_project_guide/csd/2021": {
@@ -9043,7 +9043,6 @@
           "type": "Recurso"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Vídeo"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -9215,7 +9214,7 @@
         },
         "ecosystems/csc-ecosystems/2023": {
           "name": "Cómo simular un ecosistema marino",
-          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+          "url": "https://docs.google.com/presentation/d/1VahcbHciDmb_KMEfLavzO3-t3Ukxyn6djZQfVZCPwGU/view",
           "type": "Diapositivas"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
@@ -11837,6 +11836,10 @@
           "url": "https://youtu.be/5UMKeMPCa7E",
           "type": "Vídeo"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funciones",
+          "type": "Diapositivas"
+        },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "name": "Ejemplo 1 - Silueta de Ciudad",
           "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
@@ -12370,7 +12373,7 @@
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
           "name": "Nuestro código de ética de la Inteligencia artificial [Template]",
-          "url": "https://docs.google.com/presentation/d/1RqtvxP6y7ZnYmcutz15u9Tv3C6RK-wNy/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/presentation/d/1RqtvxP6y7ZnYmcutz15u9Tv3C6RK-wNy/view",
           "type": "Diapositivas"
         },
         "create_an_ml_app/csd/2023": {
@@ -13993,7 +13996,7 @@
           "type": "Diapositivas"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] Red de Visión por Computación",
+          "name": "[Example] Red de Visión por Computadora",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing",
           "type": "Ejemplo"
         },
@@ -14003,22 +14006,22 @@
           "type": "Diapositivas"
         },
         "computer_vision_network/how-ai-works/2023": {
-          "name": "Red de Visión por Computación",
+          "name": "Red de Visión por Computadora",
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
           "type": "Guía de Actividades"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "Cómo funciona la IA: Cómo funciona la visión por computadora",
+          "name": "Cómo funciona la IA: Cómo funciona la visión por computadora.",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "Vídeo"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "Manipulante de pantalla de siete segmentos",
+          "name": "Manipulativo: Pantalla de Siete Segmentos",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
           "type": "Guía de Actividades"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
-          "name": "Lo que ve una red neuronal",
+          "name": "¿Qué es lo que una red neuronal puede ver?",
           "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "Vídeo"
         },
@@ -14043,7 +14046,7 @@
           "type": "Recurso"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(Opcional) Eliza Guía de Actividades",
+          "name": "(Opcional) Guía de Actividades - Eliza",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
           "type": "Guía de Actividades"
         },
@@ -14063,7 +14066,7 @@
           "type": "Vídeo"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] Vocab y video guía",
+          "name": "[Key] Vocabulario y Video Guía",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "Guía de respuestas"
         },
@@ -14073,17 +14076,17 @@
           "type": "Guía de Actividades"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Guía de actividades del simulador de voz escrita",
+          "name": "[Ejemplar] Guía de actividades del simulador de voz escrita",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
           "type": "Ejemplo"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "Guía escrita del simulador de voz",
+          "name": "Guía del Simulador de Voz Escrita",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
           "type": "Guía de Actividades"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "Guía del usuario de Simulador de voz escrita",
+          "name": "Guía de usuario del Simulador de voz escrita",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "Recurso"
         },
@@ -14103,22 +14106,22 @@
           "type": "Guía de respuestas"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "name": "Cómo funciona la IA: creatividad e imaginación",
+          "name": "Cómo funciona la IA: Creatividad e Imaginación",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "Vídeo"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Actividad de imagen ruidosa",
+          "name": "[Ejemplar] Actividad de Imagen Ruidosa",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
           "type": "Ejemplo"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "Guía de actividades del widget de imagen ruidosa",
+          "name": "Guía de actividades Widget de Imagen Ruidosa",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
           "type": "Guía de Actividades"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "Guía del usuario: Widget de imagen de ruido",
+          "name": "Guía del usuario: Widget de Imagen Ruidosa",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "Recurso"
         },
@@ -14143,7 +14146,7 @@
           "type": "Recurso"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "Twitter dice que su algoritmo de recorte de imágenes estaba sesgado, por lo que lo está deshaciendo (CNN)",
+          "name": "Twitter dice que su algoritmo de recorte de imágenes estaba sesgado, por lo que lo está eliminando (CNN)",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "Recurso"
         },
@@ -14161,13 +14164,13 @@
           "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "Cómo funciona la IA: privacidad y futuro del trabajo",
+          "name": "¿Cómo funciona la IA?: La privacidad y el futuro del trabajo",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Vídeo"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
           "name": "Nuestro código de ética de la Inteligencia artificial [Template]",
-          "url": "https://docs.google.com/presentation/d/1RqtvxP6y7ZnYmcutz15u9Tv3C6RK-wNy/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/presentation/d/1RqtvxP6y7ZnYmcutz15u9Tv3C6RK-wNy/view",
           "type": "Diapositivas"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
@@ -14186,7 +14189,7 @@
           "type": "Vídeo"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "name": "Cómo funciona la IA: Ética e IA: privacidad y el futuro del trabajo",
+          "name": "Cómo funciona la IA: Ética e IA: La privacidad y el futuro del trabajo",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Vídeo"
         },
@@ -14211,12 +14214,12 @@
           "type": "Vídeo"
         },
         "vocabulary_matching/how-ai-works/2023": {
-          "name": "Coincidencia de Vocabulario",
+          "name": "Unir el vocabulario y sus definiciones",
           "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
           "type": "Guía de Actividades"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
-          "name": "[Key] Coincidencia de Vocabulario",
+          "name": "[Key] Unir el vocabulario y sus definiciones",
           "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
           "type": "Guía de respuestas"
         },
@@ -14335,10 +14338,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Vídeo"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Lista de Poemas",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "Diapositivas"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Recurso"
         }
       }
     }

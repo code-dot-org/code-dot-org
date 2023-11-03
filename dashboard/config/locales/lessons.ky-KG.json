@@ -296,6 +296,21 @@
         "pre-express-2019/Loops in Artist": {
           "name": "Циклдар менен бакчаларды тартуу"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Циклдер"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Окуялар"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Шартуулар"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функциялар"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Өзгөрмөлөр"
+        },
         "coursea-2020/Ocean Scene with Loops": {
           "name": "Океан көрүнүшү циклдар менен"
         },
@@ -592,9 +607,6 @@
         "pre-express-2023/Drawing Gardens with Loops": {
           "name": "Циклдар менен бакчаларды тартуу"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Код сааты 2013"
-        },
         "artist/Artist": {
           "name": "Сүрөтчү"
         },
@@ -615,15 +627,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Код сааты, Minecraft дизайнери"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Код сааты 2017 чогултуучу"
         },
         "allthethings/Jigsaw": {
           "name": "Jigsaw"
@@ -802,8 +805,14 @@
         "course4/Artist Binary": {
           "name": "Сүрөтчү бинардык система"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Код сааты 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Код сааты 2017 чогултуучу"
         }
       }
     }

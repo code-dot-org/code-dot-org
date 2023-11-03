@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Guide pratique de l'heure de code pour les activités parascolaires
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 La pensée informatique permet de développer les aptitudes à la résolution des problèmes, la logique et la créativité. Et la technologie est en train de créer de grands changements dans tous les secteurs du monde. Les apprenants d'aujourd'hui doivent savoir comment créer de la technologie, et pas seulement l'utiliser. En commençant tôt, ils disposeront d'une bonne base pour réussir dans n'importe quel domaine professionnel du XXIe siècle.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Essayer une heure de code est une façon simple et amusante d'initier les élèves à l'informatique, peut-être pour la toute première fois. Si vous avez besoin d'un coup de main supplémentaire pour vous aider, vous pouvez trouver un bénévole [local pour vous aider]({{ urls/volunteer_local }}) à organiser une heure de code dans votre classe ou votre club après l'école.
 
 ### Une Heure de Code peut aussi s'animer à distance ! Pour commencer, consultez nos [conseils pour organiser un événement Une Heure de Code virtuel](https://hourofcode.com/us/how-to/virtual).
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Choisir un tutoriel
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Nous proposons une variété de tutoriels [amusants d'une heure]({{ urls/learn }}) pour les participants de tous âges, créés par divers partenaires. [Essayez-les !]({{ urls/learn }})
 
 **Tous les tutoriels Heure de Code** demandent un temps de préparation minime, et sont autoguidés - ce qui permet aux enfants de travailler à leurs propres vitesse et niveau de compétences.
 
@@ -30,7 +30,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. Faire la promotion de votre Heure de Code
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Faites la promotion de votre heure de code [grâce à ces outils]({{ urls/promote }}) et encouragez les autres à organiser leurs propres événements.
 
 ## 4) Déterminez quels sont vos besoins en matériel - vous n'avez pas forcément besoin d'ordinateur
 
@@ -63,17 +63,17 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## 6) Programmez !
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Trouvez le lien, listé dans les [informations pour le tutoriel choisi]({{ urls/learn }}), sous le nombre des participants. 
+**Dirigez les participants vers l'activité** - Écrivez le lien du didacticiel sur un tableau blanc. Trouvez le lien, listé dans les [informations pour le tutoriel choisi]({{ urls/learn }}), sous le nombre des participants. 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. "« Réfléchissons-y ensemble. » - « La technologie ne fonctionne pas toujours de la manière qu’on le souhaiterait. » - « Apprendre à programmer, c’est comme apprendre une nouvelle langue ; vous devez parler couramment tout de suite. »" 
+**Quand quelqu'un rencontre des difficultés, il est normal de répondre :** - « Je ne sais pas. "« Réfléchissons-y ensemble. » - « La technologie ne fonctionne pas toujours de la manière qu’on le souhaiterait. » - « Apprendre à programmer, c’est comme apprendre une nouvelle langue ; vous devez parler couramment tout de suite. »" 
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Que faire si quelqu'un termine plus tôt ?** - Encouragez les participants à essayer une autre activité de l'Heure de code sur [hourofcode.com/learn]({{ urls/learn }}) - Ou demandez à ceux qui ont terminé plus tôt d'aider ceux qui rencontrent des difficultés.
 
 ## 7. Fêter
 
 - [Imprimez des certificats]({{ urls/certificates }}) pour vos élèves.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Imprimer « J'ai fait une heure de code ! »]({{ promote/resources_stickers }}) autocollants pour vos élèves.
+- [Commandez des t-shirts personnalisés](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) pour les participants.
 - Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !
 
 ## Autres ressources de l'Heure de Code pour les enseignants
@@ -85,6 +85,6 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## Et après l'Heure de Code ?
 
-L'Heure de Code n'est que la première étape pour en apprendre plus sur le fonctionnement des nouvelles technologies et comment créer des applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+L'Heure de Code n'est que la première étape pour en apprendre plus sur le fonctionnement des nouvelles technologies et comment créer des applications. Aidez les élèves à poursuivre leur parcours et encouragez-les à en [apprendre davantage en ligne](/beyond) !
 
 {{ signup_button }}

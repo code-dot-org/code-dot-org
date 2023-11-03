@@ -1311,26 +1311,6 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kód",
-          "definition": "(v) instrukciók írása számítógéphez."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Esemény",
-          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Hangulat",
-          "definition": "érzés, atmoszféra vagy érzelem kifejezése művészetben vagy írásban"
-        },
-        "line/poem-art/unversioned": {
-          "word": "Sor",
-          "definition": "(költészet) - egy vers kisebb, sorba rendezett egysége, amely a jobb lapszélen végződik."
         }
       }
     }

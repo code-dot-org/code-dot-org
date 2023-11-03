@@ -1,4 +1,11 @@
 @import 'color.scss';
+@import '../../mixins.scss';
+
+$ai-block-color: rgb(64 68 73);
+$ai-block-border-color: rgb(121 124 128);
+$ai-block-inputs-border-color: rgb(121 124 128);
+$ai-modal-header-height: 50px;
+$ai-modal-border-width: 8px;
 
 @keyframes appear {
   0% {
@@ -11,9 +18,7 @@
 
 // Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
-  0% {
-    opacity: 0;
-  }
+  0%,
   50% {
     opacity: 0;
   }
@@ -22,42 +27,122 @@
   }
 }
 
-
 @keyframes center-to-left {
   0% {
     left: 50%;
   }
   100% {
-    left: 5%;
+    left: 10%;
+  }
+}
+
+// 0.5 second pause, then scan over 2.5 seconds
+@keyframes scan-left-to-right {
+  0%,
+  16.6% {
+    left: calc(50% - 65px);
+  }
+  100% {
+    left: calc(50% + 65px);
+  }
+}
+
+@keyframes center-to-left {
+  0% {
+    left: calc(50% + 65px);
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+@keyframes right-to-center {
+  0% {
+    left: 83%;
+  }
+  100% {
+    left: 45%;
   }
 }
 
 .dialog {
   max-width: initial !important;
-  width: 800px !important;
-  height: 380px;
+  width: 824px !important;
+  height: 454px;
+  padding: 0 !important;
+  border: solid 1px $ai-block-border-color;
+  background-color: $ai-block-color !important;
+
+  .headerArea {
+    width: calc(100% - 2 * $ai-modal-border-width);
+    height: 50px;
+    background-color: $ai-block-color;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 $ai-modal-border-width;
+    margin-top: $ai-modal-border-width;
+
+    .botImage {
+      width: 24px;
+      margin: 0 18px 0 12px;
+    }
+
+    .inputsContainer {
+      display: flex;
+      padding: 5px;
+      border-radius: 4px;
+      gap: 6px;
+      border: solid 2px $ai-block-inputs-border-color;
+
+      .emojiSlot {
+        width: 35px;
+        height: 35px;
+        margin-right: 6px;
+
+        &Icon {
+          width: 35px;
+          height: 35px;
+          margin: 0;
+        }
+      }
+    }
+
+    &Right {
+      margin-left: auto;
+    }
+  }
 
   .innerArea {
-    width: 100%;
-    height: 100%;
+    margin: $ai-modal-border-width;
+    // There is a border on the left and right.
+    width: calc(100% - 2 * $ai-modal-border-width);
+    // There is a border at the top and bottom, and a third between the header
+    // and the inner area.
+    height: calc(100% - $ai-modal-header-height - 3 * $ai-modal-border-width);
     position: relative;
     user-select: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
 
     .textArea {
       position: absolute;
       width: 100%;
       height: 20px;
-      top: 10px;
+      bottom: 50px;
       left: 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
     }
 
     .inputsArea {
       position: absolute;
-      width: calc(100% - 170px);
+      width: 550px;
       height: 190px;
-      top: 72px;
+      top: 22px;
       left: 170px;
 
       .itemContainer {
@@ -68,13 +153,6 @@
         animation: appear1 2s;
 
         .item {
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          width: 40px;
-          height: 40px;
-          margin: 8px;
-          float: left;
           opacity: 0.3;
 
           &Available {
@@ -89,14 +167,14 @@
       position: absolute;
       width: 100%;
       height: 70px;
-      top: 260px;
+      top: 210px;
       left: 0;
       pointer-events: none;
 
       .prompt {
-        margin-left: 140px;
         display: flex;
         align-items: center;
+        justify-content: center;
         font-size: 18px;
         margin-top: 14px;
 
@@ -130,12 +208,6 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 40px;
-            height: 40px;
-            margin: 8px;
             pointer-events: all;
           }
         }
@@ -146,79 +218,156 @@
       position: absolute;
       width: 100%;
       height: 200px;
-      top: 60px;
+      top: 10px;
       left: 0;
       pointer-events: none;
+      z-index: 1;
 
       .botContainer {
         flex: 0 0 140px;
 
         .bot {
-          width: 110px;
           position: absolute;
-          transform: translateX(-50px);
+          transform: translateX(-50%);
 
           &AppearCentered {
-            left: 50%;
+            left: calc(50% - 65px);
             animation: appear 2s;
+          }
+
+          &ScanLeftToRight {
+            animation: scan-left-to-right 3s;
+            left: calc(50% + 65px);
           }
 
           &CenterToLeft {
             animation: center-to-left 1.75s;
-            left: 5%;
+            left: 10%;
           }
 
           &Left {
-            left: 5%;
+            left: 10%;
+          }
+
+          .image {
+            position: relative;
+            width: 110px;
+            animation: appear1 0.5s;
+          }
+
+          .beamImage {
+            top: 140px;
+            left: 50%;
+            width: 100px;
+            position: absolute;
+            transform: translateX(-50%);
+            animation: appear1 0.25s;
+            display: none;
+
+            &Visible {
+              display: block;
+            }
           }
         }
-      }
-
-      .spinner {
-        position: absolute;
-        top: 60px;
-        left: calc(50% + 100px);
       }
     }
 
     .outputsArea {
       position: absolute;
-      width: calc(100% - 120px);
-      margin-left: 120px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
       height: 270px;
-      top: 60px;
+      top: 10px;
       left: 0;
 
-      .pre {
-        white-space: pre-wrap;
-        word-break: initial;
-        overflow: scroll;
-        font-size: 14px;
-      }
+      .blockPreview {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 45%;
+        top: 60px;
 
-      .code {
-        max-height: 80px;
-      }
+        &Right {
+          left: 83%;
+        }
 
-      .explanation {
-        max-height: 60px;
+        &RightToCenter {
+          animation: right-to-center 2s;
+          left: 45%;
+        }
       }
+    }
+
+    .previewArea {
+      position: absolute;
+      height: 200px;
+      right: 5px;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      animation: appear1 2s;
+    }
+
+    .generatingArea {
+      position: absolute;
+      top: 0;
+      width: calc(100% - 20px);
+    }
+
+    .explanationArea {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 280px;
+      top: 5px;
+      left: 0;
     }
 
     .buttonsArea {
       height: 44px;
       margin-top: auto;
       display: flex;
-      align-items: flex-end;
-      flex-direction: column;
+      justify-content: flex-end;
+      flex-direction: row;
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
 
-      .button {
-        font-size: 16px;
+      &Left {
+        margin-right: auto;
       }
     }
+  }
+
+  .button {
+    font-size: 16px;
+
+    &:disabled {
+      pointer-events: none;
+    }
+
+    &NoMargin {
+      margin: 0;
+    }
+
+    &SmallText {
+      font-size: 12px;
+    }
+  }
+}
+
+.emojiIcon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+
+  &Button {
+    @include remove-button-styles;
+    margin: 8px;
   }
 }

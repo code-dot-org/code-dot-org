@@ -106,6 +106,7 @@ az-AZ:
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - {}
+        title: Çox seçimli labirint
       2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
@@ -185,6 +186,7 @@ az-AZ:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        title: Rəssam uyğunluğu
       2-3 bee conditionals multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
@@ -442,6 +444,7 @@ az-AZ:
         content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Hansı bloklar tapmacanı həll edir?
+        title: Çox seçimli labirint
       Begin planning your project:
         content1: Burada təsvir edin
       Begin planning your project_2018:
@@ -765,10 +768,10 @@ az-AZ:
 
       CSD U1 MC Q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sensorlu ekran
+        - text: Mİkrofon
+        - text: Danışan
+        - text: Monitor
         - {}
       CSD U1 MC Q2_2023:
         answers:
@@ -781,8 +784,8 @@ az-AZ:
         - {}
       CSD U1 MC Q3_2023:
         answers:
-        - {}
-        - {}
+        - text: Proqramlar
+        - text: Şəkillər
         - text: Musiqi
         - text: Yer
         - {}
@@ -813,9 +816,9 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Hazırlamaq
+        - text: Əks etdirmək
+        - text: Çalış
         - text: Təyin et
       CSD U1 Test:
         title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
@@ -823,34 +826,34 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - text: Divarın rənglənməsi.
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Hazırlamaq
+        - text: Əks etdirmək
+        - text: Çalış
         - text: Təyin et
       CSD U1 Test PSP match_2021:
         answers:
         - {}
         - {}
-        - {}
+        - text: Divarın rənglənməsi.
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Hazırlamaq
+        - text: Əks etdirmək
+        - text: Çalış
         - text: Təyin et
       CSD U1 Test PSP match_2022:
         answers:
         - {}
         - {}
-        - {}
+        - text: Divarın rənglənməsi.
         - {}
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Hazırlamaq
+        - text: Əks etdirmək
+        - text: Çalış
         - text: Təyin et
       CSD U1 Test define a computer:
         answers:
@@ -861,6 +864,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U1 Test define a computer_2021:
         answers:
         - {}
@@ -870,6 +874,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U1 Test define a computer_2022:
         answers:
         - {}
@@ -879,6 +884,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U1 Test define problem:
         answers:
         - {}
@@ -887,6 +893,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 4
       CSD U1 Test define problem_2021:
         answers:
         - {}
@@ -895,6 +902,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 4
       CSD U1 Test define problem_2022:
         answers:
         - {}
@@ -903,6 +911,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 4
       CSD U1 Test_2021:
         title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
       CSD U1 Test_2022:
@@ -1251,9 +1260,9 @@ az-AZ:
         answers:
         - {}
         - {}
+        - text: Etiket
         - {}
-        - {}
-        - {}
+        - text: Element
         questions:
         - {}
       CSD U2 MC Q2_2023:
@@ -1292,6 +1301,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U2 MC Q7_2023:
         answers:
         - {}
@@ -1318,7 +1328,7 @@ az-AZ:
         questions:
         - text: rəng
         - {}
-        - {}
+        - text: Üzgəc
       CSD U2 PSP Programming:
         markdown: |-
           # Proqramlaşdırma üçün Problemin Həlli Prosesi
@@ -1439,6 +1449,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 3
       CSD U2 Test Classes_pilot_2021:
         answers:
         - {}
@@ -1448,6 +1459,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 3
       CSD U2 Test Classes_pilot_2022:
         answers:
         - {}
@@ -1457,6 +1469,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 3
       CSD U2 Test ContentStructureStyle:
         answers:
         - {}
@@ -1514,24 +1527,27 @@ az-AZ:
       CSD U2 Test Debug:
         answers:
         - text: Ancaq 1
+        - text: Yalnız 3
         - {}
         - {}
         - {}
-        - {}
+        title: Sual 4
       CSD U2 Test Debug_pilot_2021:
         answers:
         - text: Ancaq 1
+        - text: Yalnız 3
         - {}
         - {}
         - {}
-        - {}
+        title: Sual 4
       CSD U2 Test Debug_pilot_2022:
         answers:
         - text: Ancaq 1
+        - text: Yalnız 3
         - {}
         - {}
         - {}
-        - {}
+        title: Sual 4
       CSD U2 Test HTML Usage:
         answers:
         - {}
@@ -1541,6 +1557,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U2 Test HTML Usage_pilot_2021:
         answers:
         - {}
@@ -1550,6 +1567,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U2 Test HTML Usage_pilot_2022:
         answers:
         - {}
@@ -1559,6 +1577,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U2 Test code styles:
         answers:
         - {}
@@ -1568,6 +1587,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 6
       CSD U2 Test code styles_pilot_2021:
         answers:
         - {}
@@ -1577,6 +1597,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 6
       CSD U2 Test code styles_pilot_2022:
         answers:
         - {}
@@ -1586,6 +1607,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 6
       CSD U2 Test code stylesheet:
         answers:
         - {}
@@ -1593,6 +1615,7 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Sual 5
       CSD U2 Test code stylesheet_pilot_2021:
         answers:
         - {}
@@ -1600,6 +1623,7 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Sual 5
       CSD U2 Test code stylesheet_pilot_2022:
         answers:
         - {}
@@ -1607,6 +1631,7 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Sual 5
       CSD U2 Top Websites:
         markdown: |-
           # ABŞ-da ən yaxşı veb saytlar
@@ -1964,6 +1989,12 @@ az-AZ:
           Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
       CSD U2L2 - Chal_2023:
         display_name: Çağırış Səviyyələri
+      CSD U3 - Interactive Card - ExampleChoice_2022:
+        description: mərhələ
+        display_name: interaktiv
+      CSD U3 - Interactive Card - ExampleChoice_2023:
+        description: mərhələ
+        display_name: interaktiv
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -2658,10 +2689,10 @@ az-AZ:
       CSD U3 MC Q1_2023:
         answers:
         - {}
+        - text: "'həcm'"
+        - text: "'ən ucadan'"
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "'səssiz'"
         questions:
         - {}
       CSD U3 MC Q2_2023:
@@ -2682,6 +2713,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U3 MC Q5_2023:
         answers:
         - {}
@@ -2726,10 +2758,10 @@ az-AZ:
         - text: enlik
         - text: hündürlük
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: parametr1
+        - text: parametr2
+        - text: parametr3
+        - text: parametr4
       CSD U3 Match Q3_2023:
         answers:
         - {}
@@ -2862,142 +2894,157 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: dəyişənlər
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U3 Test clean code_pilot_2021:
         answers:
         - {}
         - {}
         - {}
-        - {}
+        - text: dəyişənlər
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U3 Test clean code_pilot_2022:
         answers:
         - {}
         - {}
         - {}
-        - {}
+        - text: dəyişənlər
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U3 Test comment:
         answers:
         - {}
+        - text: Atlanmaq
+        - text: Aşağı düşmək
         - {}
         - {}
-        - {}
-        - {}
+        markdown: gərək
         questions:
         - text: Sətir 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sıra 11
+        - text: Sıra 14
+        - text: Sıra 17
+        - text: Sıra 19
+        title: Sual 6
       CSD U3 Test comment_pilot_2021:
         answers:
         - {}
+        - text: Atlanmaq
+        - text: Aşağı düşmək
         - {}
         - {}
-        - {}
-        - {}
+        markdown: gərək
         questions:
         - text: Sətir 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sıra 11
+        - text: Sıra 14
+        - text: Sıra 17
+        - text: Sıra 19
+        title: Sual 6
       CSD U3 Test comment_pilot_2022:
         answers:
         - {}
+        - text: Atlanmaq
+        - text: Aşağı düşmək
         - {}
         - {}
-        - {}
-        - {}
+        markdown: gərək
         questions:
         - text: Sətir 5
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sıra 11
+        - text: Sıra 14
+        - text: Sıra 17
+        - text: Sıra 19
+        title: Sual 6
       CSD U3 Test debugging:
         answers:
+        - text: Yalnız 3
         - {}
         - {}
         - {}
         - {}
-        - {}
+        title: Sual 5
       CSD U3 Test debugging_pilot_2021:
         answers:
+        - text: Yalnız 3
         - {}
         - {}
         - {}
         - {}
-        - {}
+        title: Sual 5
       CSD U3 Test debugging_pilot_2022:
         answers:
+        - text: Yalnız 3
         - {}
         - {}
         - {}
         - {}
-        - {}
+        title: Sual 5
       CSD U3 Test functions:
         answers:
         - {}
         - {}
         - {}
         - {}
-        - {}
+        - text: fərqli
         questions:
-        - {}
+        - text: Funksiyalar
       CSD U3 Test functions_pilot_2021:
         answers:
         - {}
         - {}
         - {}
         - {}
-        - {}
+        - text: fərqli
         questions:
-        - {}
+        - text: Funksiyalar
       CSD U3 Test functions_pilot_2022:
         answers:
         - {}
         - {}
         - {}
         - {}
-        - {}
+        - text: fərqli
         questions:
-        - {}
+        - text: Funksiyalar
       CSD U3 Test planning:
         answers:
+        - text: məqsəd
+        - text: dəyişənlər
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        - text: şəkil
         questions:
-        - {}
+        - text: başlanğıc
+        title: Sual 4
       CSD U3 Test planning_pilot_2021:
         answers:
+        - text: məqsəd
+        - text: dəyişənlər
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        - text: şəkil
         questions:
-        - {}
+        - text: başlanğıc
+        title: Sual 4
       CSD U3 Test planning_pilot_2022:
         answers:
+        - text: məqsəd
+        - text: dəyişənlər
         - {}
         - {}
-        - {}
-        - {}
-        - {}
+        - text: şəkil
         questions:
-        - {}
+        - text: başlanğıc
+        title: Sual 4
       CSD U3 Test variables:
         answers:
         - text: iyirmi
@@ -3007,6 +3054,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 3
       CSD U3 Test variables_pilot_2021:
         answers:
         - text: iyirmi
@@ -3016,6 +3064,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 3
       CSD U3 Test variables_pilot_2022:
         answers:
         - text: iyirmi
@@ -3025,6 +3074,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Sual 3
       CSD U3 Using the Game Design Process SLFP:
         markdown: |-
           # Baxış
@@ -3061,7 +3111,7 @@ az-AZ:
 
 
 
-          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?
+          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?l
       CSD U3 combining rep_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3073,7 +3123,7 @@ az-AZ:
 
 
 
-          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?
+          ### Onu deşifrə etmək üçün sizə hansı məlumat lazımdır?l
       CSD U3 drawSprites placement match:
         answers:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -3144,6 +3194,7 @@ az-AZ:
             AM.png
         - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
             AM.png
+        content1: istehsal edir
         questions:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
             AM.png,300px
@@ -3163,6 +3214,7 @@ az-AZ:
             AM.png
         - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
             AM.png
+        content1: istehsal edir
         questions:
         - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
             AM.png,300px
@@ -3172,6 +3224,12 @@ az-AZ:
             AM.png
         - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png
+      CSD U3 drawing challenges_2021:
+        display_name: 'Rəsm çətinlikləri '
+      CSD U3 drawing challenges_2022:
+        display_name: 'Rəsm çətinlikləri '
+      CSD U3 drawing challenges_2023:
+        display_name: 'Rəsm çətinlikləri '
       CSD U3 drawing practice choice_2021:
         display_name: Praktika
       CSD U3 drawing practice choice_2022:
@@ -3221,25 +3279,29 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Müsahibə zamanı bir istifadəçi ehtiyacı qeyd etdi: "Şəhərimiz həqiqətən
+            gözəldir, lakin son vaxtlar icmamızda zibil və zibilliklə bağlı bəzi problemlər
+            yaranıb". Aşağıdakılardan hansı istifadəçinin ehtiyaclarını ödəmək üçün
+            strategiya deyil?'
       CSD U4 MC Q4_2023:
         answers:
+        - text: Düymə
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Açılan
+        - text: 'Radio düyməsi '
+        - text: Onay qutusu
         questions:
         - {}
       CSD U4 MC Q5_2023:
         answers:
         - {}
-        - {}
+        - text: 'Növbəti ekrana keçın '
         - {}
         - {}
         - {}
         questions:
         - {}
+        title: Sual 1
       CSD U4 MC Q8_2023:
         answers:
         - {}
@@ -3265,11 +3327,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Böyük mətn
+        - text: Çoxlu rənglər
+        - text: Səs xəbardarlıqları
+        - text: Parol kilidi
+        - text: Qara və ağ seçim
       CSD U4 test feature match_2021:
         answers:
         - {}
@@ -3278,11 +3340,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Böyük mətn
+        - text: Çoxlu rənglər
+        - text: Səs xəbardarlıqları
+        - text: Parol kilidi
+        - text: Qara və ağ seçim
       CSD U4 test feature match_2022:
         answers:
         - {}
@@ -3291,11 +3353,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Böyük mətn
+        - text: Çoxlu rənglər
+        - text: Səs xəbardarlıqları
+        - text: Parol kilidi
+        - text: Qara və ağ seçim
       CSD U4 test needs multi:
         answers:
         - {}
@@ -3511,12 +3573,12 @@ az-AZ:
 
           ! []
 
-          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png).
         teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
           Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
           biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
           nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
-          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)l"
       CSD U5 Encryption 1_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3528,12 +3590,12 @@ az-AZ:
 
           ! []
 
-          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png).
         teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
           Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
           biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
           nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
-          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)l"
       CSD U5 Encryption 1_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3545,12 +3607,12 @@ az-AZ:
 
           ! []
 
-          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png).
         teacher_markdown: "Mesajın özü pişi, baş barmaqları aşağı və qəzəbli üzdür.
           Tələbələr emojilərin öz şərhlərini tapıb əylənə bilərlər. Mümkün şərhlərdən
           biri budur ki, göndərən pişi gözləyirdi, almadı və qəzəbləndi, lakin emojilərin
           nə demək olduğuna dair \"doğru\" cavab yoxdur.\n    \n(Sağdakı müəllim panelinə
-          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)"
+          keçərək və tələbə kimi baxmaq üçün bu mesajı gizlədin.)l"
       CSD U5 Encryption 2:
         content1: Burada təsvir edin
         markdown: |-
@@ -3559,7 +3621,7 @@ az-AZ:
           ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
 
           * Bu ikili sətri deşifrə edə bilərsinizmi?
-          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?.
       CSD U5 Encryption 2_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3568,7 +3630,7 @@ az-AZ:
           ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
 
           * Bu ikili sətri deşifrə edə bilərsinizmi?
-          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?.
       CSD U5 Encryption 2_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3577,7 +3639,7 @@ az-AZ:
           ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
 
           * Bu ikili sətri deşifrə edə bilərsinizmi?
-          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?
+          * Onu deşifrə etməzdən əvvəl nəyi bilməlisiniz?.
       CSD U5 L13 SFLP Interpreting Data:
         content1: Burada təsvir edin
         markdown: |-
@@ -3610,8 +3672,10 @@ az-AZ:
         - {}
       CSD U5 MC Q3_2023:
         answers:
-        - {}
-        - {}
+        - text: Doğru
+        - text: |2-
+
+            Yanlış
         questions:
         - {}
       CSD U5 MC Q4_2023:
@@ -3634,11 +3698,11 @@ az-AZ:
         - {}
       CSD U5 MC Q6_2023:
         answers:
+        - text: Salam
+        - text: Hə
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Xeyr
+        - text: Bəlkə
         questions:
         - {}
       CSD U5 MC Q7_2023:
@@ -3690,7 +3754,7 @@ az-AZ:
 
           What if they were able to order two cakes with icing?
 
-          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?/
       CSD U5 crosstab warmup_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3713,7 +3777,7 @@ az-AZ:
 
           What if they were able to order two cakes with icing?
 
-          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?/
       CSD U5 crosstab warmup_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3736,7 +3800,7 @@ az-AZ:
 
           What if they were able to order two cakes with icing?
 
-          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?
+          Hər iki seçimi bilmək bizə hansı növ tortlar sifariş etməli olduğumuzu daha yaxşı anlamağa necə kömək edir?/
       CSD U5 data visualization:
         content1: Burada təsvir edin
         markdown: |-
@@ -3747,7 +3811,7 @@ az-AZ:
 
 
           ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
-          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?/
       CSD U5 data visualization_2018:
         content1: Burada təsvir edin
         markdown: |-
@@ -3758,7 +3822,7 @@ az-AZ:
 
 
           ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
-          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?/
       CSD U5 data visualization_2018_2019:
         content1: Burada təsvir edin
         markdown: |-
@@ -3769,9 +3833,10 @@ az-AZ:
 
 
           ### Hansı ev heyvanının ən populyar olduğuna dair bir insanın qərar verməsini asanlaşdırır?
-          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?
+          ### Hansı kompüterin qərar qəbul etməsini asanlaşdırır?/
       CSD U5 student record:
         content1: Burada təsvir edin
+        markdown: "<h4>"
         teacher_markdown: |-
           [/key]
           **Bayt 0:** Şagird 9-cu sinifdədir.
@@ -3784,9 +3849,10 @@ az-AZ:
 
           [/key]
 
-          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.,
       CSD U5 student record_2018:
         content1: Burada təsvir edin
+        markdown: "<h4>"
         teacher_markdown: |-
           [/key]
           **Bayt 0:** Şagird 9-cu sinifdədir.
@@ -3799,9 +3865,10 @@ az-AZ:
 
           [/key]
 
-          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.,
       CSD U5 student record_2018_2019:
         content1: Burada təsvir edin
+        markdown: "<h4>"
         teacher_markdown: |-
           [/key]
           **Bayt 0:** Şagird 9-cu sinifdədir.
@@ -3814,7 +3881,9 @@ az-AZ:
 
           [/key]
 
-          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.
+          Səviyyəni göstərdiyiniz zaman bu xananı gizlətmək üçün bu səhifənin sağ tərəfindəki müəllim panelinə klikləyin və "Tələbə kimi bax" seçimini seçin.,
+      CSD U5 test:
+        title: Məlumat və Cəmiyyət Layihədən Sonra Test
       CSD U5 test clean multi:
         answers:
         - text: Xeyr, məlumatları bir qrafikə qoymadan əvvəl dəyişdirmək vicdansızlıqdır.
@@ -3844,7 +3913,10 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bir sinif sinif səfərinə hara getəcəyinə qərar vermək üçün bir sorğu
+            keçirdi və hər seçimin nə qədər populyar olduğunu görmək üçün bir cədvəl
+            hazırlamaq istəyirlər. Diaqram yaratmadan əvvəl məlumatlarda hər hansı
+            bir dəyişiklik etməlidirlərmi?
       CSD U5 test crosstab multi:
         answers:
         - text: it
@@ -3953,6 +4025,12 @@ az-AZ:
         - {}
         questions:
         - {}
+      CSD U5 test_2021:
+        title: Məlumat və Cəmiyyət Layihədən Sonra Test
+      CSD U5 test_2022:
+        title: Məlumat və Cəmiyyət Layihədən Sonra Test
+      CSD U5 test_2023:
+        title: Məlumat və Cəmiyyət Layihədən Sonra Test
       CSD U6 - Accelerometer - Chal_2023a_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - Accelerometer - Chal_2222:
@@ -3981,6 +4059,16 @@ az-AZ:
         display_name: Çağırış Səviyyələri
       CSD U6 - Combine Inputs - Chal_mb2022:
         display_name: Çağırış Səviyyələri
+      CSD U6 - Design - prototype1_2023:
+        content1: Prototip A
+      CSD U6 - Design - prototype2_2023:
+        content1: Prototip B
+      CSD U6 - Design - prototype3_2023:
+        content1: Prototip  C
+      CSD U6 - Design - prototype4_2023:
+        content1: Prototip D
+      CSD U6 - Design - prototype5_2023:
+        content1: Prototip E
       CSD U6 - If Variables - Chal_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - If Variables - Chal_2222:
@@ -4057,8 +4145,8 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - text: İstilik sensoru
+        - text: zil
         - {}
         questions:
         - {}
@@ -4074,17 +4162,17 @@ az-AZ:
       CSD U6 MC Q2_2023:
         answers:
         - {}
+        - text: Düymə
+        - text: Temperatur
         - {}
-        - {}
-        - {}
-        - {}
+        - text: səs
         questions:
         - {}
       CSD U6 MC Q2_6b2023:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Düymə
+        - text: Temperatur
         - {}
         - text: Işıq
         questions:
@@ -4460,6 +4548,10 @@ az-AZ:
         display_name: Praktika
       CSD web draw loop practice choice_2023:
         display_name: Praktika
+      CSD web mouse practice choice_2022:
+        description: aktivitasiya
+      CSD web mouse practice choice_2023:
+        description: aktivitasiya
       CSD web movement practice choice_2021:
         display_name: Praktika
       CSD web movement practice choice_2022:
@@ -4846,6 +4938,43 @@ az-AZ:
 
           * [CNet] (https://www.cnet.com/smart-home/)
           * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+      CSDU6 Innovation_2021:
+        markdown: |-
+          # İnnovasiya Araşdırması
+
+          Baxmaq üçün aşağıdakı mövzulardan birini seçin. Siz kateqoriyanızla əlaqəli ən son innovativ hesablama cihazları haqqında məlumat tapmaq istəyə bilərsiniz.
+
+          ## Geyilən Texnologiya
+          Geyinilə bilən texnologiya istifadəçi tərəfindən geyinilmək üçün nəzərdə tutulmuş istənilən hesablama formasını əhatə edir, istər geyimə daxil edilmiş olsun, istərsə də aksessuar kimi. Ağıllı addımölçənlər kimi bir çox geyilə bilən qurğular sağlamlıq və təhlükəsizliklə bir qədər üst-üstə düşür, çünki cihaz həm taxıla bilər, həm də şəxsi sağlamlığınızı yaxşılaşdırmaq üçün nəzərdə tutulub.
+
+          ## Sağlamlıq və təhlükəsizlik
+          Geniş mövzuya həm istehlakçı texnologiyası (sağlamlığınızı və ya təhlükəsizliyinizi yaxşılaşdırmaq üçün istifadə edə biləcəyiniz şeylər), həm də peşəkar texnologiya (həkim və ya digər peşəkarın istifadə edə biləcəyi avadanlıq) daxildir.
+
+          ## Kənd təsərrüfatı
+          Kənd təsərrüfatı açıq mövzu olmaya bilər, lakin texnoloji yeniliklər bizim əkinçiliklə bağlı yanaşmamıza böyük təsir göstərib. Buraya kompüterlərin mövcud təsərrüfat avadanlığına daxil edilməsi, məhsulların monitorinqi üçün sensorlar və robotların istifadəsi, səmərəliliyi və davamlılığı artırmaq üçün məlumatların təhlili daxildir.
+
+          ## İstehsalat
+          Sürətli prototipləşdirmə, sənaye robotikası və avtomatlaşdırma sahəsindəki irəliləyişlər malların necə istehsal olunduğuna böyük təsir göstərmişdir. İstər münasib qiymətə kiçik miqyaslı istehsalı (3D printerlər və lazer kəsicilər kimi) təmin edən texnologiya, istərsə də kompüterlərin zavod işlərinə inteqrasiyası olsun, burada araşdırmaq üçün çoxlu maraqlı sahələr var.
+
+          ## İncəsənət və dizayn
+          Bədii ifadə və hesablamanın kəsişməsi təsirli və gözlənilməz nəticələr verə bilər. İncəsənət və dizaynla əlaqəli kommersiya məhsullarını tapmaq ehtimalınız az olsa da, hər cür hesablama cihazlarından yaradıcı və ifadəli şəkildə istifadə edən çoxlu sayda evdə hazırlanmış əsərlər tapacaqsınız.
+
+          ## Ağıllı Ev
+          Ehtiyaclarınızı anlayan və hətta gözləyən bir evin xəyalı hər zamankindən daha yaxındır. İstər açıq şəkildə səs əmrləri ilə idarə olunsun, istərsə də dəyişən şərtlərə nəzarət etmək və onlara cavab vermək üçün sensorlardan istifadə etməklə, ağıllı ev cihazları evin ətrafında istənilən sayda gündəlik və ya təkrarlanan tapşırıqların öhdəsindən gəlir.
+
+
+          # Araşdırma Mülahizələri
+
+          Mövzunuzla bağlı cihazları araşdırarkən aşağıdakı mülahizələri nəzərə alın:
+
+          * Proqram proqramları üzərində hardware əsaslı həllərə diqqət yetirin
+          * Köhnə xəbərlər üzərində son yeniliklərə diqqət yetirin
+          * Sizi maraqlandıran şeyləri izləyin
+
+          # Araşdırmanıza Başlayın
+
+          Tədqiqatınıza başlamaq üçün tövsiyə olunan veb-saytlar üçün müəlliminizlə əlaqə saxlayın. Xüsusi ideyalar üçün internetdə axtarışa başlamaq üçün yuxarıdakı bəzi açar sözlərdən də istifadə edə bilərsiniz. Misal üçün, hələ yerdən çıxmamış məhsulları görmək üçün müxtəlif kütləni maliyyələşdirən vebsaytlara (məsələn, Kickstarter və Indiegogo kimi) baxmağı düşünün.
+        teacher_markdown: istifadə etmək
       CSP PD Example Question 1:
         answers:
         - {}
@@ -5005,6 +5134,21 @@ az-AZ:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif">
 
           </div>
+      Design a Screen for your App_2018:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2018_2019:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2021:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2022:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
+      Design a Screen for your App_2023:
+        markdown: Siz/sən edəcəks(-ən/-iniz) olacaqs(-an/-ınız)
+        teacher_markdown: tərtib etmək, dizayn etmək
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |-
           # Əlçatanlıq üçün dizayn
@@ -5075,37 +5219,41 @@ az-AZ:
         - ''
         title: Mətn müqaviləsi
       Example App Types_2018:
-        markdown: "# Tətbiq növlərinə nümunə\n\nAşağıdakı səviyyələrdə bir neçə fərqli
-          tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər
-          üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir
-          verəcəklər.\n\nHər bir nümunə tətbiq üçün:\n\n* Necə işlədiyini öyrənmək
-          üçün nümunəni klikləyin.\n* Fəaliyyət bələdçinizdə tapdığınız hər hansı
-          bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə
-          üçün istifadə edildiyini qeyd edin.\n* Qruplarınızla bu tətbiqin və hər
-          hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini
-          müzakirə edin.\n\n# Funksionallıq haqqında bir qeyd\n\nBu tətbiqlər _prototypes_
-          dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla
-          qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən
-          istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər
-          sual eyni şəkildə cavab verəcəkdir.\n\nİnteraktiv bir prototipə diqqət yetirməklə
-          əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji
-          sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. "
+        markdown: |-
+          # Tətbiq növlərinə nümunə
+
+          Aşağıdakı səviyyələrdə bir neçə fərqli tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir verəcəklər.
+
+          Hər bir nümunə tətbiq üçün:
+
+          * Necə işlədiyini öyrənmək üçün nümunəni klikləyin.
+          * Fəaliyyət bələdçinizdə tapdığınız hər hansı bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə üçün istifadə edildiyini qeyd edin.
+          * Qruplarınızla bu tətbiqin və hər hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini müzakirə edin.
+
+          # Funksionallıq haqqında bir qeyd
+
+          Bu tətbiqlər _prototypes_ dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər sual eyni şəkildə cavab verəcəkdir.
+
+          İnteraktiv bir prototipə diqqət yetirməklə əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. nümunənümunə
+        teacher_markdown: fəaliyyət
       Example App Types_2018_2019:
-        markdown: "# Tətbiq növlərinə nümunə\n\nAşağıdakı səviyyələrdə bir neçə fərqli
-          tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər
-          üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir
-          verəcəklər.\n\nHər bir nümunə tətbiq üçün:\n\n* Necə işlədiyini öyrənmək
-          üçün nümunəni klikləyin.\n* Fəaliyyət bələdçinizdə tapdığınız hər hansı
-          bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə
-          üçün istifadə edildiyini qeyd edin.\n* Qruplarınızla bu tətbiqin və hər
-          hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini
-          müzakirə edin.\n\n# Funksionallıq haqqında bir qeyd\n\nBu tətbiqlər _prototypes_
-          dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla
-          qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən
-          istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər
-          sual eyni şəkildə cavab verəcəkdir.\n\nİnteraktiv bir prototipə diqqət yetirməklə
-          əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji
-          sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. "
+        markdown: |-
+          # Tətbiq növlərinə nümunə
+
+          Aşağıdakı səviyyələrdə bir neçə fərqli tətbiq nümunəsi görürsünüz. Onlar sizə fərqli məqsədləri olan tətbiqlər üçün UI -nin (İstifadəçi İnterfeysi) necə görünə biləcəyi barədə sizə fikir verəcəklər.
+
+          Hər bir nümunə tətbiq üçün:
+
+          * Necə işlədiyini öyrənmək üçün nümunəni klikləyin.
+          * Fəaliyyət bələdçinizdə tapdığınız hər hansı bir xüsusiyyəti və ya istifadəçi interfeysi elementlərini və onların nə üçün istifadə edildiyini qeyd edin.
+          * Qruplarınızla bu tətbiqin və hər hansı bir UI xüsusiyyətinin seçdiyiniz mövzuya necə tətbiq oluna biləcəyini müzakirə edin.
+
+          # Funksionallıq haqqında bir qeyd
+
+          Bu tətbiqlər _prototypes_ dır; onlar bir istifadəçinin əsas funksionallıqdan narahat olmayaraq dizaynla qarşılıqlı əlaqə qurmasına imkan verir. Məsələn, Sorğu-Sual Tətbiqindən istifadə etdiyiniz zaman, hansı sualı seçməyinizdən asılı olmayaraq, hər sual eyni şəkildə cavab verəcəkdir.
+
+          İnteraktiv bir prototipə diqqət yetirməklə əvvəlcə istifadəçilərin tətbiqinizi necə işlədə bilməsi üçün çox enerji sərf etməzdən əvvəl necə istifadə edə biləcəyi haqqında çox şey öyrənə bilərsiniz. nümunənümunə
+        teacher_markdown: fəaliyyət
       GettingLoopy-Unplugged:
         markdown: |-
           # Dövr Etmək
@@ -5657,6 +5805,36 @@ az-AZ:
           # Mahnı yazmaq
 
           Funksiyaların təyin edilməsi və çağırılması haqqında öyrənmək üçün mahnıda xor anlayışından istifadə et.
+      Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      Student End of Unit Survey - Intro+TeacherMD_csd4_2023:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+      Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+      Student End of Unit Survey - Intro+TeacherMD_csd5_2023:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələrinizin sorğunu tamamladıqları halda, müəllim sorğusunu tez doldurmağınızdan məmnun olarıq
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+      Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün bölmənin sonu sorğuları:** Tələbələriniz sorğunu tamamladıqları halda, biz sizə qısa bir müəllim sorğusunu doldurduğunuz üçün təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+      Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
+        teacher_markdown: |-
+          **Müəllimlər üçün bölmənin sonu sorğuları:** Tələbələriniz sorğunu tamamladıqları halda, biz sizə qısa bir müəllim sorğusunu doldurduğunuz üçün təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - {}
@@ -5734,9 +5912,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5745,9 +5923,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5756,9 +5934,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5767,9 +5945,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5778,9 +5956,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5789,9 +5967,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5800,9 +5978,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -5811,9 +5989,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6052,75 +6230,78 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-ch1-pulse-survey-q1_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-ch1-pulse-survey-q2_2022:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-ch1-pulse-survey-q2_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-ch1-pulse-survey-q3_2021:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6129,9 +6310,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6140,9 +6321,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6151,9 +6332,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6162,9 +6343,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6173,9 +6354,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6184,9 +6365,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6195,9 +6376,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6206,128 +6387,146 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       aiml-intro-pulse-survey-q1_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       aiml-intro-pulse-survey-q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       aiml-intro-pulse-survey-q2_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Bu, AI və Maşın Öyrənməsi haqqında ilk öyrəndiyim şeydir
+        - text: 'Daha kiçik AI fəaliyyətləri etmişəm (məsələn: bir saat kod), amma
+            bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq AI və Machine Learning üzrə dərslər almışam və ya daha uzun
+            onlayn dərslər etmişəm
         questions:
-        - {}
+        - text: Süni intellekt və Maşın Öyrənmə ilə bağlı əvvəllər hansı təcrübələriniz
+            olub?
       aiml-intro-pulse-survey-q2_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Bu, AI və Maşın Öyrənməsi haqqında ilk öyrəndiyim şeydir
+        - text: 'Daha kiçik AI fəaliyyətləri etmişəm (məsələn: bir saat kod), amma
+            bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq AI və Machine Learning üzrə dərslər almışam və ya daha uzun
+            onlayn dərslər etmişəm
         questions:
-        - {}
+        - text: Süni intellekt və Maşın Öyrənmə ilə bağlı əvvəllər hansı təcrübələriniz
+            olub?
       aiml-intro-pulse-survey-q2_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Bu, AI və Maşın Öyrənməsi haqqında ilk öyrəndiyim şeydir
+        - text: 'Daha kiçik AI fəaliyyətləri etmişəm (məsələn: bir saat kod), amma
+            bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq AI və Machine Learning üzrə dərslər almışam və ya daha uzun
+            onlayn dərslər etmişəm
         questions:
-        - {}
+        - text: Süni intellekt və Maşın Öyrənmə ilə bağlı əvvəllər hansı təcrübələriniz
+            olub?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-intro-pulse-survey-q3_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: AI və Maşın Öyrənmə anlayışlarını başa düşürəm və izah edə bilərəm
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-intro-pulse-survey-q4_2022:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-intro-pulse-survey-q4_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Problemi həll etmək və ya öz maraqlarım üçün proqramlar yaratmağı
+            bilirəm
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6336,9 +6535,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6347,9 +6546,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6358,9 +6557,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6369,9 +6568,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6380,9 +6579,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6391,9 +6590,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6402,9 +6601,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6426,9 +6625,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6437,9 +6636,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6498,9 +6697,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6509,9 +6708,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -6520,9 +6719,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
@@ -6531,9 +6730,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
@@ -6542,9 +6741,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
@@ -6553,9 +6752,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
@@ -6832,9 +7031,13 @@ az-AZ:
         - {}
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
-        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
-        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
+          text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+        - feedback: Düzgün! Scrat yanlış istiqamətə çevrilir və palıd qozasına çatmayacaq
+            çatmayacaq.
+          text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
+          text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
             et" blokları yoxdur.
         - feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
           text: Scrat birinci blokdan hərəkət etməyəcək.
@@ -6843,9 +7046,13 @@ az-AZ:
             problem var?
       courseC_multi_maze_debugging8_predict12022_2023:
         answers:
-        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
-        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
-        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
+          text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+        - feedback: Düzgün! Scrat yanlış istiqamətə çevrilir və palıd qozasına çatmayacaq
+            çatmayacaq.
+          text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - feedback: Scrat palıd qozasına çatmayacaq, çünki o, səhv yola dönür.
+          text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
             et" blokları yoxdur.
         - feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
           text: Scrat birinci blokdan hərəkət etməyəcək.
@@ -7354,7 +7561,11 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Görünüşümüzə mane olan bir bulud var. "Çalış" düyməsini basdıqdan
+            sonra bulud yox olacaq. Bu buludun altında bir çiçək ola bilər. Çiçək
+            varsa, arı bir dəfə nektar toplamalı olacaq. Əgər çiçək yoxdursa, arı
+            heç nə etməməlidir. Aşağıdakı kodu yaxşıca nəzərdən keçirin. Sizcə, "Çalış"
+            düyməsini kliklədikdən sonra nə baş verəcək?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
@@ -7909,6 +8120,7 @@ az-AZ:
           text: Zombi dərhal sağa dönəcək və ilişib qalacaq.
         - feedback: Yanlış. Bu kodda, düz gedə biləcəyini görmək üçün * əvvəl * sağa
             dönmə axtarır. Bu səbəbdən tapmaca uğursuz olur.
+          text: Zombi onu günəbaxana aparacaq.
         - feedback: Yanlış. Zombi yalnız sağa dönmə və ya düz yol axtarır. Heç vaxt
             sola dönməyə baxmır, ona görə də dərhal ilişib qalır.
         - feedback: Bu kodda, düz gedə biləcəyini görmək üçün * əvvəl * sağa dönmə
@@ -7919,23 +8131,33 @@ az-AZ:
       courseD_multi_maze_until10_predict22022:
         answers:
         - feedback: Düzgün!
-        - {}
-        - {}
-        - {}
+          text: Zombi düzgün yoldan keçəcək və daimii olaraq geri və irəli gedəcək.
+        - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
+            gedəcək.
+          text: Zombi onu günəbaxana aparacaq.
+        - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
+            gedəcək.
+        - feedback: Bu kodda zombi düzgün yoldan keçəcək və əbədi olaraq irəli-geri
+            gedəcək.
         questions:
         - {}
       courseD_multi_maze_until10_predict22022_2023:
         answers:
         - feedback: Düzgün!
-        - {}
-        - {}
-        - {}
+          text: Zombi düzgün yoldan keçəcək və daimii olaraq geri və irəli gedəcək.
+        - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
+            gedəcək.
+          text: Zombi onu günəbaxana aparacaq.
+        - feedback: Səhv. Zombi düzgün yoldan keçəcək və əbədi olaraq geri və irəli
+            gedəcək.
+        - feedback: Bu kodda zombi düzgün yoldan keçəcək və əbədi olaraq irəli-geri
+            gedəcək.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - text: Bilmirəm.
         questions:
@@ -7943,7 +8165,7 @@ az-AZ:
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - text: Bilmirəm.
         questions:
@@ -7951,7 +8173,7 @@ az-AZ:
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - text: Bilmirəm.
         questions:
@@ -7960,7 +8182,7 @@ az-AZ:
         answers:
         - correct: true
           feedback: Düzgün!
-        - {}
+        - text: Zombi onu günəbaxana aparacaq.
         - {}
         - {}
         questions:
@@ -8203,72 +8425,72 @@ az-AZ:
       courseE_prediction_artistFunction1:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction12022:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2018:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_2021:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_copy:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
       courseE_prediction_artistFunction1_dani:
         answers:
         - {}
-        - {}
-        - {}
+        - text: Rəssam tək xətt çəkəcək.
+        - text: Rəssam üst-üstə düşən iki kvadrat çəkəcəkdir.
         - {}
         questions:
         - {}
@@ -8382,6 +8604,12 @@ az-AZ:
           göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
           başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
         display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_events_freeplay:
+        display_name: Tədbirlər - Pulsuz Oyun
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        display_name: Tədbirlər - Pulsuz Oyun
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
+        display_name: Tədbirlər - Pulsuz Oyun
       courseF_events_practice:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
@@ -8884,6 +9112,12 @@ az-AZ:
         content1: Test Markdown Dərslik Səhifəsi
       courseF_project_exemplars_2019_2020:
         content1: Test Markdown Dərslik Səhifəsi
+      courseF_sprites_freeplay:
+        display_name: Sprites - Pulsuz Oyun
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        display_name: Sprites - Pulsuz Oyun
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        display_name: Sprites - Pulsuz Oyun
       courseF_sprites_practice:
         description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
           çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
@@ -8963,36 +9197,66 @@ az-AZ:
         display_name: Mətn və təcrübə göstərişlər
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Düzdü! 5 rəqəmi dəyişəndə saxlanılır və sonra sprayt danışanda
+            yenidən istifadə olunur.
+          text: Dovşan "5" deyəcək.
+        - feedback: Səhv. Bu proqramda sorğu yoxdur. Nömrə birbaşa kodda təyin olunur.
+          text: Dovşan spritesi hansı nömrə yazıldığını söyləyəcək.
+        - feedback: Səhv. `count` dəyişəndir. Bu blok işə salındıqda, saxlanan nömrəni
+            alır. Dovşan "5" deyəcək.
+          text: Dovşan "say" deyəcək.
+        - feedback: Səhv. 5 rəqəmi dəyişəndə saxlanılır və sprayt danışanda istifadə
+            olunur.
+          text: Heç nə baş verməyəcək, çünki 'saymaq' rəqəm deyil.
         questions:
-        - {}
+        - text: 'Proqnoz verin: Dovşan nə deyəcək?'
       courseF_variables2_predict2_multi2022_-2022-2_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Düzdü! 5 rəqəmi dəyişəndə saxlanılır və sonra sprayt danışanda
+            yenidən istifadə olunur.
+          text: Dovşan "5" deyəcək.
+        - feedback: Səhv. Bu proqramda sorğu yoxdur. Nömrə birbaşa kodda təyin olunur.
+          text: Dovşan spritesi hansı nömrə yazıldığını söyləyəcək.
+        - feedback: Səhv. `count` dəyişəndir. Bu blok işə salındıqda, saxlanan nömrəni
+            alır. Dovşan "5" deyəcək.
+          text: Dovşan "say" deyəcək.
+        - feedback: Səhv. 5 rəqəmi dəyişəndə saxlanılır və sprayt danışanda istifadə
+            olunur.
+          text: Heç nə baş verməyəcək, çünki 'saymaq' rəqəm deyil.
         questions:
-        - {}
+        - text: 'Proqnoz verin: Dovşan nə deyəcək?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Səhvdir. Nömrə dəyişəndə saxlanılır və yerkökü spriteləri yaratmaq
+            üçün istifadə olunur.
+          text: Proqram istənilən qeyd olunmuş nömrəni çap edəcək.
+        - feedback: Səhvdir. Nömrə dəyişəndə saxlanılır və yerkökü spriteləri yaratmaq
+            üçün istifadə olunur.
+          text: Dovşan spritesi hansı nömrə yazıldığını söyləyəcək.
+        - feedback: Düzdü! Hazırlanmış spritlərin sayı dəyişəndə saxlanılan nömrəyə
+            uyğundur
+          text: Proqram o qədər yeni yerkökü spriteləri düzəldəcək.
+        - feedback: Səhv. Rəqəm dəyişəndə saxlanılır və yerkökü spritləri yaratmaq
+            üçün istifadə olunur.
+          text: Heç nə baş verməyəcək, çünki 'saymaq' rəqəm deyil.
         questions:
-        - {}
+        - text: 'Proqnoz verin: sorğuya nömrə yazdıqdan sonra nə baş verəcək?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: Səhvdir. Nömrə dəyişəndə saxlanılır və yerkökü spriteləri yaratmaq
+            üçün istifadə olunur.
+          text: Proqram istənilən qeyd olunmuş nömrəni çap edəcək.
+        - feedback: Səhvdir. Nömrə dəyişəndə saxlanılır və yerkökü spriteləri yaratmaq
+            üçün istifadə olunur.
+          text: Dovşan spritesi hansı nömrə yazıldığını söyləyəcək.
+        - feedback: Düzdü! Hazırlanmış spritlərin sayı dəyişəndə saxlanılan nömrəyə
+            uyğundur
+          text: Proqram o qədər yeni yerkökü spriteləri düzəldəcək.
+        - feedback: Səhv. Rəqəm dəyişəndə saxlanılır və yerkökü spritləri yaratmaq
+            üçün istifadə olunur.
+          text: Heç nə baş verməyəcək, çünki 'saymaq' rəqəm deyil.
         questions:
-        - {}
+        - text: 'Proqnoz verin: sorğuya nömrə yazdıqdan sonra nə baş verəcək?'
       courseF_variables_predict_multi:
         answers:
         - {}
@@ -9135,6 +9399,8 @@ az-AZ:
         - text: Sprite rəngləri dəyişəcək.
         questions:
         - {}
+      csc_bookcover_extensions_choice_2023:
+        display_name: Kitab örtüyünüzü genişləndirin!
       csc_ecosystems_matching_cfu:
         answers:
         - {}
@@ -9167,9 +9433,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məncə kompyuter elmləri maraqlıdır.
@@ -9178,9 +9444,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9189,9 +9455,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9200,9 +9466,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -9211,9 +9477,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -9222,9 +9488,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
@@ -9233,9 +9499,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən mətəbdə çox yaxşı oxuyuram.
@@ -9244,9 +9510,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9255,9 +9521,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9266,9 +9532,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9277,9 +9543,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9288,9 +9554,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9299,9 +9565,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
@@ -9310,9 +9576,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
@@ -9322,9 +9588,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -9333,9 +9599,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -9344,9 +9610,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -9355,9 +9621,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
@@ -9366,9 +9632,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
@@ -9377,9 +9643,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -9399,7 +9665,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U2-I-learned:
@@ -9418,7 +9684,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U3-I-learned:
@@ -9437,7 +9703,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U4-I-learned:
@@ -9456,7 +9722,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U5-I-learned:
@@ -9475,7 +9741,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-U6-I-learned:
@@ -9494,7 +9760,7 @@ az-AZ:
         - {}
         - {}
         - text: Çox
-        - {}
+        - text: Bu mənim sevimli vahidim idi!
         questions:
         - {}
       csd-post-survey-2018-markdown-with-link-to-survey:
@@ -9615,15 +9881,15 @@ az-AZ:
         - text: Xeyr
         - text: Bunun nə olduğuna əmin deyiləm
         questions:
-        - {}
+        - text: Veb İnkişafı
       csd-post-survey-2019-I like cs:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9632,9 +9898,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9643,9 +9909,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9654,9 +9920,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9665,9 +9931,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9676,9 +9942,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9687,9 +9953,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9853,9 +10119,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9864,12 +10130,12 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       csd-post-survey-unit1-preamble:
         content1: Burada təsvir edin
       csd-post-survey-unit2-preamble:
@@ -9892,14 +10158,16 @@ az-AZ:
         title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
       csd-pre-survey-levelgroup_21_22_2022:
         title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      csd-pre-survey-levelgroup_21_22_2023:
+        title: Tələbələrin Kursqabağı Sorğusu
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9908,9 +10176,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9919,9 +10187,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9930,9 +10198,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9941,9 +10209,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9952,9 +10220,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9963,9 +10231,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9974,9 +10242,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9985,9 +10253,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -9996,9 +10264,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10007,9 +10275,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10018,9 +10286,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10029,9 +10297,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10040,9 +10308,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10051,9 +10319,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10062,9 +10330,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10073,9 +10341,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10084,9 +10352,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10095,9 +10363,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10106,9 +10374,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10117,9 +10385,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10128,9 +10396,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10139,9 +10407,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10150,9 +10418,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10161,9 +10429,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10172,9 +10440,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10183,9 +10451,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10194,9 +10462,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10205,9 +10473,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10216,9 +10484,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10227,9 +10495,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10238,9 +10506,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10249,9 +10517,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10260,9 +10528,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10271,9 +10539,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10282,9 +10550,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10293,9 +10561,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10304,9 +10572,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10315,9 +10583,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10326,9 +10594,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10337,9 +10605,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10348,9 +10616,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10359,9 +10627,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10370,9 +10638,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10381,9 +10649,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10392,9 +10660,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10403,9 +10671,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10414,9 +10682,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10425,9 +10693,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10436,9 +10704,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10447,9 +10715,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10458,9 +10726,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10469,9 +10737,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10480,9 +10748,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10491,9 +10759,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10502,9 +10770,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10513,9 +10781,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10524,9 +10792,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10535,9 +10803,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10546,9 +10814,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10557,9 +10825,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10568,9 +10836,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10579,9 +10847,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10590,9 +10858,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10601,9 +10869,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10612,9 +10880,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10623,9 +10891,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10634,9 +10902,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10645,9 +10913,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10656,9 +10924,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10667,9 +10935,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10678,9 +10946,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10689,9 +10957,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10700,9 +10968,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10711,9 +10979,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10722,9 +10990,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10733,9 +11001,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10744,9 +11012,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10755,9 +11023,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10766,9 +11034,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10777,9 +11045,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10788,9 +11056,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10799,9 +11067,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10810,9 +11078,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10821,9 +11089,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10832,9 +11100,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10843,9 +11111,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10854,9 +11122,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10865,9 +11133,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10876,9 +11144,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10887,9 +11155,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10898,9 +11166,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10909,9 +11177,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10920,9 +11188,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10931,9 +11199,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10942,9 +11210,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10953,9 +11221,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10964,9 +11232,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10975,9 +11243,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10986,9 +11254,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -10997,9 +11265,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11008,9 +11276,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11019,9 +11287,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11030,9 +11298,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11041,9 +11309,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11052,9 +11320,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11063,9 +11331,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11074,9 +11342,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11085,9 +11353,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11096,9 +11364,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11107,9 +11375,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11118,9 +11386,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11129,9 +11397,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11140,9 +11408,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11151,9 +11419,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11162,9 +11430,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11173,9 +11441,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11184,9 +11452,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11195,9 +11463,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11206,9 +11474,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11217,9 +11485,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11228,9 +11496,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11239,9 +11507,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11250,9 +11518,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11261,9 +11529,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11272,9 +11540,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11283,9 +11551,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11294,9 +11562,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11305,9 +11573,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11316,9 +11584,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11327,9 +11595,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11338,9 +11606,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11349,9 +11617,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11360,9 +11628,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11371,9 +11639,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11382,9 +11650,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11393,9 +11661,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11404,9 +11672,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11415,9 +11683,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11426,9 +11694,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11437,9 +11705,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11448,9 +11716,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11459,9 +11727,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11470,9 +11738,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11481,9 +11749,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11492,9 +11760,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11503,9 +11771,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11514,9 +11782,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11525,9 +11793,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11536,9 +11804,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11547,9 +11815,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11558,9 +11826,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11569,9 +11837,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11580,9 +11848,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11591,9 +11859,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11602,9 +11870,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11613,9 +11881,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11624,9 +11892,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11635,9 +11903,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11646,9 +11914,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11657,9 +11925,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11668,9 +11936,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11679,9 +11947,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11690,9 +11958,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11701,9 +11969,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11712,9 +11980,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11723,9 +11991,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11734,9 +12002,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11745,9 +12013,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11756,9 +12024,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11767,9 +12035,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11778,9 +12046,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11789,9 +12057,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11800,9 +12068,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11811,9 +12079,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11822,9 +12090,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11833,9 +12101,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11844,9 +12112,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11855,9 +12123,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11866,9 +12134,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11877,9 +12145,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11888,9 +12156,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11899,9 +12167,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11910,9 +12178,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11921,9 +12189,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11932,9 +12200,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11943,9 +12211,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11954,9 +12222,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11965,9 +12233,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11976,9 +12244,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11987,9 +12255,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -11998,9 +12266,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12009,9 +12277,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12020,9 +12288,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12031,9 +12299,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12042,9 +12310,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12053,9 +12321,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12064,9 +12332,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12075,9 +12343,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12086,9 +12354,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12097,9 +12365,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12108,9 +12376,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12119,9 +12387,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12130,9 +12398,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12141,9 +12409,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12152,9 +12420,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12163,9 +12431,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12174,9 +12442,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12185,9 +12453,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12196,9 +12464,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12207,9 +12475,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12218,9 +12486,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12229,9 +12497,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12240,9 +12508,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12251,9 +12519,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12262,9 +12530,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12273,9 +12541,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12284,9 +12552,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12295,9 +12563,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12306,9 +12574,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12317,9 +12585,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12328,9 +12596,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12339,9 +12607,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12350,9 +12618,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12361,9 +12629,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12372,9 +12640,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12383,9 +12651,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12394,9 +12662,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12405,9 +12673,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12416,9 +12684,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12427,9 +12695,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12438,9 +12706,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12449,9 +12717,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12460,9 +12728,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12471,9 +12739,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12482,9 +12750,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12493,9 +12761,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12504,9 +12772,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12515,9 +12783,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12526,9 +12794,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12537,9 +12805,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12548,9 +12816,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12559,9 +12827,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12570,9 +12838,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12581,9 +12849,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12592,9 +12860,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12603,9 +12871,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12614,9 +12882,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12625,9 +12893,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12636,9 +12904,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12647,9 +12915,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12658,9 +12926,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12669,9 +12937,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12680,9 +12948,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12691,9 +12959,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12856,9 +13124,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən mətəbdə çox yaxşı oxuyuram.
@@ -12867,9 +13135,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12878,9 +13146,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məncə kompyuter elmləri maraqlıdır.
@@ -12889,9 +13157,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənmək bacarığım var.
@@ -12900,9 +13168,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12911,9 +13179,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12922,9 +13190,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12933,9 +13201,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -12944,9 +13212,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -12955,9 +13223,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -12966,9 +13234,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -12977,9 +13245,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
@@ -12988,9 +13256,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
@@ -12999,20 +13267,20 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyəndim.
       csp-post-survey-2017-q1_2018:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən mətəbdə çox yaxşı oxuyuram.
@@ -13021,9 +13289,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
@@ -13033,9 +13301,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13044,9 +13312,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13055,9 +13323,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13066,9 +13334,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13077,9 +13345,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13088,9 +13356,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13099,9 +13367,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13110,9 +13378,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13121,9 +13389,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13132,9 +13400,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13143,9 +13411,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edir.
@@ -13154,9 +13422,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13165,9 +13433,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
@@ -13176,9 +13444,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
@@ -13187,9 +13455,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -13198,9 +13466,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -13209,9 +13477,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13229,9 +13497,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -13240,9 +13508,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -13251,9 +13519,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
@@ -13262,9 +13530,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
@@ -13273,9 +13541,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -13302,9 +13570,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13514,9 +13782,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən mətəbdə çox yaxşı oxuyuram.
@@ -13525,9 +13793,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13536,9 +13804,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13547,9 +13815,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13558,9 +13826,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13569,9 +13837,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -13580,9 +13848,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məncə kompyuter elmləri maraqlıdır.
@@ -13591,9 +13859,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məncə kompyuter elmləri maraqlıdır.
@@ -13602,9 +13870,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənmək bacarığım var.
@@ -13613,9 +13881,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənmək bacarığım var.
@@ -13624,9 +13892,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
@@ -13636,9 +13904,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
@@ -13648,9 +13916,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
@@ -13660,9 +13928,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
@@ -13672,9 +13940,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
@@ -13684,9 +13952,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Aydın cavabı olmayan kompüter elmləri problemi ilə qarşılaşdığımda,
@@ -13696,9 +13964,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Aydın cavabı olmayan kompüter elmləri problemi ilə qarşılaşdığımda,
@@ -13708,9 +13976,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -13719,9 +13987,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -13730,9 +13998,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -13741,9 +14009,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -13752,9 +14020,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
@@ -13763,9 +14031,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -13774,9 +14042,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -13785,9 +14053,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -13796,9 +14064,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -13807,9 +14075,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
@@ -13818,9 +14086,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
@@ -13829,9 +14097,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
@@ -13840,9 +14108,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsini bəyənəcəm.
@@ -13851,9 +14119,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsini bəyənəcəm.
@@ -13862,9 +14130,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsini bəyənəcəm.
@@ -13873,9 +14141,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsini bəyənəcəm.
@@ -13884,9 +14152,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsini bəyənəcəm.
@@ -13895,9 +14163,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən mətəbdə çox yaxşı oxuyuram.
@@ -13906,9 +14174,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
@@ -13918,9 +14186,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
@@ -13929,9 +14197,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
@@ -13940,9 +14208,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
@@ -13951,9 +14219,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
@@ -13962,9 +14230,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
@@ -13973,9 +14241,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
@@ -13984,9 +14252,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində yaxşı qiymət almaq üçün nə etməli olduğumu
@@ -13996,9 +14264,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində yaxşı qiymət almaq üçün nə etməli olduğumu
@@ -14008,9 +14276,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
@@ -14019,9 +14287,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
@@ -14030,9 +14298,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
@@ -14041,9 +14309,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
@@ -14052,9 +14320,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
@@ -14063,9 +14331,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
@@ -14074,9 +14342,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bu informatika dərsində digər tələbələr kimi mənə də
@@ -14086,9 +14354,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bu informatika dərsində digər tələbələr kimi mənə də
@@ -14098,9 +14366,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bu informatika dərsində özümü hiss edəcəm.
@@ -14109,9 +14377,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Düşünürəm ki, bu informatika dərsində özümü hiss edəcəm.
@@ -14120,9 +14388,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Hesab edirəm ki, bu informatika dərsində fikirlərim ciddi qəbul olunacaq.
@@ -14131,9 +14399,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Hesab edirəm ki, bu informatika dərsində fikirlərim ciddi qəbul olunacaq.
@@ -14142,9 +14410,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənə elə gəlir ki, mənim kimi insanlar üçün bu informatika sinfinə
@@ -14154,9 +14422,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənə elə gəlir ki, mənim kimi insanlar üçün bu informatika sinfinə
@@ -14166,9 +14434,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Boş vaxtlarımda informatika ilə məşğul oluram.
@@ -14177,9 +14445,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Boş vaxtlarımda informatika ilə məşğul oluram.
@@ -14188,9 +14456,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edəcək.
@@ -14199,9 +14467,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edəcək.
@@ -14210,9 +14478,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
@@ -14221,9 +14489,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
@@ -14232,9 +14500,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
@@ -14244,9 +14512,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -14255,9 +14523,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -14266,9 +14534,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -14277,9 +14545,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -14288,9 +14556,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -14299,9 +14567,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
@@ -14310,9 +14578,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -14321,9 +14589,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -14332,9 +14600,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -14343,9 +14611,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -14354,9 +14622,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -14365,9 +14633,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -14376,9 +14644,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən narahatam ki, bu sinifdəki müəllim və ya tələbələr mənim kompüter
@@ -14388,9 +14656,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən narahatam ki, bu sinifdəki müəllim və ya tələbələr mənim kompüter
@@ -14458,9 +14726,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -14469,9 +14737,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -14480,9 +14748,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -14491,9 +14759,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
@@ -14502,9 +14770,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14539,9 +14807,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14550,9 +14818,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14561,9 +14829,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14572,9 +14840,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14583,9 +14851,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14594,9 +14862,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
@@ -14605,9 +14873,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdəki insanlar nəyisə yaxşı bacardığımı görürlər.
@@ -14616,9 +14884,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdəki insanlar nəyisə yaxşı bacardığımı görürlər.
@@ -14627,9 +14895,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
@@ -14638,9 +14906,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
@@ -14649,9 +14917,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdəki digər şagirdlər mənim fikirlərimi ciddi qəbul edirlər.
@@ -14660,9 +14928,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdəki digər şagirdlər mənim fikirlərimi ciddi qəbul edirlər.
@@ -14671,9 +14939,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
@@ -14682,9 +14950,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
@@ -14693,9 +14961,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -14704,9 +14972,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -14715,9 +14983,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -14726,9 +14994,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -14737,9 +15005,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
@@ -15060,9 +15328,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15080,9 +15348,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
@@ -15091,9 +15359,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
@@ -15102,9 +15370,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
@@ -15113,54 +15381,66 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
       intro-pulse-survey-q1_csd1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd2_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd3_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd4_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd5_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q1_csd6_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Kompüter elmləri haqqında ilk öyrəndiyim budur
+        - text: 'Daha kiçik kompüter elmləri fəaliyyətləri etmişəm (məsələn: bir saat
+            kod), amma bu mənim ilk daha uzun sinifimdir'
+        - text: Mən artıq kompüter elmləri üzrə dərslər almışam və ya daha uzun onlayn
+            dərslər etmişəm
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı əvvəlki hansı təcrübələriniz var?
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - {}
@@ -15170,11 +15450,11 @@ az-AZ:
         - {}
       intro-pulse-survey-q2_csd2_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: birinci
+        - text: aktivitasiya
+        - text: sinif
         questions:
-        - {}
+        - text: nə
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - {}
@@ -15208,141 +15488,141 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
-        - {}
+        - text: informatika
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15351,9 +15631,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15362,9 +15642,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15373,9 +15653,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15384,9 +15664,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15395,12 +15675,14 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
+      intro-pulse-survey_csd2_2023:
+        title: sorğu
       made-choices-about-assignments:
         answers:
         - text: Heç vaxt
@@ -15414,6 +15696,10 @@ az-AZ:
         display_name: Tətbiqinizi özəlləşdirin
       ml-club app-choice parent_2022:
         display_name: Tətbiqinizi özəlləşdirin
+        teacher_markdown: |
+          **Tələbələrə dəstək: ** Bu səviyyələr şagirdlərin əvvəlki dərslərdə tamamladığı oxşar fərdiləşdirmələrə bənzəyir. Şagirdlər ilişib qalırsa, onları bu əvvəlki dərslərə istinad etməyi düşünün:
+          - Hər bir xüsusiyyət üçün birdən çox ekran əlavə etmək: [Dərs 13 - Tətbiqlərin fərdiləşdirilməsi] (../.. /13/səviyyələr/2)
+          - Yaranan proqnoz üçün birdən çox ekran əlavə etmək: [Dərs 10 - App Laboratoriyasında Model Kartları] (../.. /10/səviyyələr/5)
       ml-club app-choice parent_2023:
         display_name: Tətbiqinizi özəlləşdirin
       ml-intro app lab-book recommender 5-2021:
@@ -15427,9 +15713,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15438,9 +15724,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15449,9 +15735,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15460,9 +15746,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15481,9 +15767,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15492,9 +15778,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15504,7 +15790,7 @@ az-AZ:
       pre-assessment survey q1:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15514,7 +15800,7 @@ az-AZ:
       pre-assessment survey q10:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15524,7 +15810,7 @@ az-AZ:
       pre-assessment survey q11:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15534,7 +15820,7 @@ az-AZ:
       pre-assessment survey q12:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15544,7 +15830,7 @@ az-AZ:
       pre-assessment survey q13:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15554,7 +15840,7 @@ az-AZ:
       pre-assessment survey q14:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15564,7 +15850,7 @@ az-AZ:
       pre-assessment survey q15:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15574,7 +15860,7 @@ az-AZ:
       pre-assessment survey q16:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15584,7 +15870,7 @@ az-AZ:
       pre-assessment survey q17:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15594,7 +15880,7 @@ az-AZ:
       pre-assessment survey q18:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15604,7 +15890,7 @@ az-AZ:
       pre-assessment survey q19:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15614,7 +15900,7 @@ az-AZ:
       pre-assessment survey q2:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15625,7 +15911,7 @@ az-AZ:
       pre-assessment survey q20:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15635,7 +15921,7 @@ az-AZ:
       pre-assessment survey q21:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15645,7 +15931,7 @@ az-AZ:
       pre-assessment survey q22:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15655,7 +15941,7 @@ az-AZ:
       pre-assessment survey q23:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15711,7 +15997,7 @@ az-AZ:
       pre-assessment survey q3:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15734,7 +16020,7 @@ az-AZ:
       pre-assessment survey q4:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15745,7 +16031,7 @@ az-AZ:
       pre-assessment survey q5:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15755,7 +16041,7 @@ az-AZ:
       pre-assessment survey q6:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15765,7 +16051,7 @@ az-AZ:
       pre-assessment survey q7:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15775,7 +16061,7 @@ az-AZ:
       pre-assessment survey q8:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15785,7 +16071,7 @@ az-AZ:
       pre-assessment survey q9:
         answers:
         - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         - {}
         - {}
@@ -15848,9 +16134,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - {}
@@ -15917,7 +16203,7 @@ az-AZ:
         - {}
         - {}
         - text: Neytral
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Kompüter elmləri əyləncəlidir.
@@ -15946,9 +16232,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
@@ -15957,9 +16243,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
@@ -15968,9 +16254,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
@@ -15979,9 +16265,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
@@ -15990,9 +16276,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
@@ -16001,9 +16287,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Mən narahatam ki, başqaları məni kompüter elmində daha az bacarıqlı
@@ -16013,9 +16299,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.
@@ -16024,9 +16310,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.
@@ -16035,9 +16321,9 @@ az-AZ:
         - {}
         - {}
         - {}
+        - text: heç biri
         - {}
-        - {}
-        - {}
+        - text: Razılaşmamaq
         - {}
         questions:
         - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.

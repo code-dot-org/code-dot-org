@@ -1766,12 +1766,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Crea una animación interactiva utilizando sprites y eventos."
-        },
         "0476cbe2-4b38-4943-8a29-10e8f9307666": {
           "description": " Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "
         },
@@ -5565,7 +5559,7 @@
           "description": " Aplicar el proceso de resolución de problemas para entrenar a una computadora en\\\n la resolución de un problema"
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Describir cómo se construye la visión por computadora de capas que combinan componentes más pequeños en una predicción final"
+          "description": "Describir como la visión por computadora se construye a partir de capas que combinan componentes más pequeños en una predicción final."
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
           "description": "Explicar la necesidad de diversas perspectivas a la hora de crear sistemas de recomendación"
@@ -5574,22 +5568,22 @@
           "description": "Utilizar los pesos de una neurona artificial para ajustar los resultados de un sistema de recomendación"
         },
         "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Discutir los efectos secundarios positivos y negativos de estos modelos"
+          "description": "Analizar los efectos secundarios positivos y negativos de estos modelos."
         },
         "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Colabore con la IA para crear un documento de texto creativo"
+          "description": "Colabora con la IA para crear un documento de texto creativo"
         },
         "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Describir que tener una gran cantidad de texto del que aprender permite que las computadoras parezcan inteligentes en forma escrita"
+          "description": "Describir que disponer de una gran cantidad de texto del que aprender permite que las computadoras parezcan inteligentes cuando escriben."
         },
         "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discutir si estos modelos son creativos o no y quién es el dueño de estas imágenes"
+          "description": "Analizar si estos modelos son creativos o no y quién es el dueño de estas imágenes."
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Describir que la IA puede generar imágenes de aspecto bastante realista a través de un proceso conocido como difusión, donde un modelo aprende a dibujar detalles al revertir los detalles"
+          "description": "Describir que la IA puede generar imágenes de aspecto bastante realista a través de un proceso conocido como difusión, en donde un modelo aprende a dibujar detalles al revertirlos."
         },
         "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "La razón sobre qué tipos de tareas no debe ser completada por un algoritmo"
+          "description": "La razón acerca de qué tipos de tareas no deben ser completadas por un algoritmo"
         },
         "62d59302-d8ba-4c91-a304-9e7cdecf634f": {
           "description": "Definir la inteligencia artificial (IA) con sus propias palabras, utilizando como ejemplo las tecnologías presentes en su vida cotidiana."
@@ -5911,15 +5905,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Desarrollar programas que respondan a eventos cronometrados."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Ilustrar los cambios de humor de un poema."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Representar el lenguaje figurado y literal en un texto."
         }
       }
     }

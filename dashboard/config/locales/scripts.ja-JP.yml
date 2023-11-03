@@ -1379,6 +1379,21 @@ ja:
               display_name: 内容
             lessonGroup-5:
               display_name: アンケート
+        csc-ecosystems-2023:
+          description: |-
+            ## このモジュールにお勧めの事前学習
+
+            **科学:** 生徒はレッスン 1 と 2 で海洋生物の生態系をシミュレートします。この生態系に慣れるために、この[ 海洋生物の動画 ](https://www.youtube.com/watch?v=8adtdg0N2-g)(9分42秒)をお勧めします。
+
+            レッスン2では、生徒たちは持続可能な漁業をいくつかコード化します。背景知識を築き、現実世界とのつながりを深めるために、次のような読み物があります：[乱獲を理解する](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)（モントレー湾水族館の記事）、または[Mw,kwaはアビと話す](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)（児童書）。
+
+            **コンピュータサイエンス:** このモジュールでは、コンピュータサイエンスが初めての生徒には難しいかもしれない新しいコーディングの概念を学びます。もし生徒がCode.orgのスプライトラボに慣れていない場合は、ツールの基本的な紹介として[ スプライトラボで泳ぐ魚 ](https://studio.code.org/s/coursee-2022/lessons/3)(55分)を試してみることをお勧めします。
+
+            このモジュールでは、条件文と呼ばれる高度なCSの概念も使用します。生徒たちはこの概念を基礎的な方法で学びますが、最初にこの条件文入門のアンプラグド・アクティビティに取り組むとよい生徒もいるでしょう：[ カードを使った条件文](https://studio.code.org/s/coursed-2022/lessons/12)(50分)。
+          lessons:
+            lesson-3:
+              name: 独自のエコシステムをコード化する（2023年）
+          title: 海洋生態系のシミュレーション（2023年）
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -4251,7 +4266,7 @@ ja:
           description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
           description_short: プログラムを通して、Minecraftの世界を探検しましょう。
           student_description: コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！
-          title: Minecraft Hour of Code プログラミング入門
+          title: Minecraftアドベンチャー
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4597,6 +4612,14 @@ ja:
           title: モジュール2：Code. orgの操作方法
         self-paced-pl-csa2-2023:
           title: モジュール2：Code. orgの操作方法
+        self-paced-pl-csd-unit1-2-2023:
+          description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。
+            \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
+            \  チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
+          student_description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。
+            \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
+            \  チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
+          title: 'モジュール 1: 問題解決と計算を教えるための準備'
         self-paced-pl-csd1-2021:
           description: |-
             このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
@@ -5170,6 +5193,25 @@ ja:
               display_name: 内容
             csd3_2:
               display_name: '第2章: ゲームを作る'
+        virtual-pl-csa-summer-2024-day1:
+          title: 1日目
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: はじめに
+          lessons:
+            lesson-7:
+              name: はじめに
+          title: 1日目
+        virtual-pl-csa-summer-day2:
+          title: 2日目
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: はじめに
+          title: 3日目
+        virtual-pl-csa-summer-day4:
+          title: 4日目
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5196,6 +5238,17 @@ ja:
           lessons:
             lesson-3:
               name: 評価
+        virtual-pl-csp-summer-day1:
+          title: 1日目
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: はじめに
+          title: 2日目
+        virtual-pl-csp-summer-day3:
+          title: 3日目
+        virtual-pl-csp-summer-day4:
+          title: 4日目
         vpl-csa-2023-m1:
           title: モジュール1
         vpl-csa-2023-m2:

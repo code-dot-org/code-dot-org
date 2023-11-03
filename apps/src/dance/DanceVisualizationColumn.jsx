@@ -1,6 +1,4 @@
 import React from 'react';
-import {getStore} from '../redux';
-import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -11,6 +9,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
+import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
 
@@ -70,7 +69,9 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
+    over21: PropTypes.bool.isRequired,
     currentAiModalField: PropTypes.object,
+    resetProgram: PropTypes.func.isRequired,
   };
 
   state = {
@@ -84,6 +85,16 @@ class DanceVisualizationColumn extends React.Component {
     this.setState({filterOn: false});
   };
 
+  componentDidUpdate(prevProps) {
+    // Reset the program when the AI modal is opened
+    if (
+      prevProps.currentAiModalField === undefined &&
+      this.props.currentAiModalField
+    ) {
+      this.props.resetProgram();
+    }
+  }
+
   render() {
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
@@ -94,10 +105,16 @@ class DanceVisualizationColumn extends React.Component {
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
+    const isSignedIn =
+      this.props.userType === 'teacher' || this.props.userType === 'student';
+
     return (
       <div>
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
+        )}
+        {(this.props.over21 || this.props.userType === 'teacher') && (
+          <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
         )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
@@ -132,11 +149,7 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && (
-            <DanceAiModal
-              onClose={() => getStore().dispatch(setCurrentAiModalField(false))}
-            />
-          )}
+          {this.props.currentAiModalField && <DanceAiModal />}
         </div>
       </div>
     );
@@ -175,6 +188,7 @@ export default connect(state => ({
   selectedSong: state.dance.selectedSong,
   userType: state.currentUser.userType,
   under13: state.currentUser.under13,
+  over21: state.currentUser.over21,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
   currentAiModalField: state.dance.currentAiModalField,
