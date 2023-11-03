@@ -51,7 +51,7 @@ module PartialRegistration
   end
 
   def self.cache_key(user)
-    if user.provider == User::PROVIDER_MIGRATED && !user.authentication_options.empty?
+    if user.migrated? && user.authentication_options.present?
       ao = user.authentication_options.first
       "#{ao.credential_type}-#{ao.authentication_id}-partial-sso-migrated"
     elsif user.uid.present?

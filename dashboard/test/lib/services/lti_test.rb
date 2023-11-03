@@ -33,7 +33,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     user = Services::Lti.initialize_lti_user(@id_token)
     assert user
     assert_equal user.user_type, User::TYPE_TEACHER
-    # TODO: Probably need to test for more of the name cases, since we have multiple fallbacks depending on what kind of name we get in the id_token
     assert_equal user.name, @id_token[@custom_claims_key][:display_name]
 
     @id_token[@custom_claims_key][:display_name] = nil
@@ -58,7 +57,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     student_user = Services::Lti.initialize_lti_user(@id_token)
     assert student_user
     assert_equal student_user.user_type, User::TYPE_STUDENT
-    # TODO: Probably need to test for more of the name cases, since we have multiple fallbacks depending on what kind of name we get in the id_token
     assert_equal student_user.name, @id_token[@custom_claims_key][:display_name]
     assert_equal student_user.family_name, @id_token[@custom_claims_key][:family_name]
 
