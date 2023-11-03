@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
@@ -55,7 +55,10 @@ function initPage() {
     );
   }
 
-  if (experiments.isEnabled('ai-rubrics')) {
+  const inRubricsPilot =
+    experiments.isEnabled('ai-rubrics') ||
+    experiments.isEnabled('non-ai-rubrics');
+  if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
@@ -75,6 +78,7 @@ function initPage() {
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
           currentLevelName={config.level_name}
+          aiEnabled={experiments.isEnabled('ai-rubrics')}
         />,
         rubricFabMountPoint
       );

@@ -13,13 +13,20 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * @param {Workspace} workspace - The workspace associated with the frame.
    * @param {string} text - The text to display in the frame.
    * @param {string} className - The CSS class name for styling.
-   * @param {string} textColor - The color for the frame's text.
-   * @param {string} headerColor - The color for the frame's header.
+   * @param {Function} getColor - Returns the color for the frame's header.
    */
-  constructor(workspace, text, className, textColor, headerColor) {
-    className = className || 'blocklyWorkspaceFrame';
+  constructor(workspace, text, className, getColor) {
+    className = className || 'blocklyWorkspaceSvgFrame';
     text = text || msg.function();
-    super(workspace, text, className, textColor, headerColor);
+    const fontSize = 16;
+    super(
+      workspace,
+      text,
+      className,
+      getColor,
+      frameSizes.WORKSPACE_HEADER_HEIGHT,
+      fontSize
+    );
 
     const frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;
     const frameY =
@@ -38,7 +45,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
   addBrowserResizeListener() {
     window.addEventListener('resize', () => {
       // Frame size can depend upon workspace size, so we re-render.
-      this.render(this.element_.svgGroup_, this.element_.RTL);
+      this.render();
     });
   }
 
@@ -57,8 +64,8 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     let height =
       this.element_.getMetricsManager().getMetrics().contentHeight +
       frameSizes.MARGIN_TOP +
-      frameSizes.MARGIN_BOTTOM +
-      frameSizes.HEADER_HEIGHT;
+      frameSizes.MARGIN_BOTTOM * 2 +
+      frameSizes.WORKSPACE_HEADER_HEIGHT;
     // Increase the frame size to the full workspace.
     // Get the height and width of the rendered workspace, not including toolbox
     const viewMetrics = this.element_.getMetricsManager().getViewMetrics();
@@ -79,7 +86,10 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     this.frameClipRect_.setAttribute('y', frameY);
     this.frameBase_.setAttribute('y', frameY);
     this.frameHeader_.setAttribute('y', frameY);
-    this.frameText_.setAttribute('y', frameY + frameSizes.HEADER_HEIGHT / 2);
+    this.frameText_.setAttribute(
+      'y',
+      frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2
+    );
   }
 }
 

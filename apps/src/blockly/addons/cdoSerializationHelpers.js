@@ -1,12 +1,12 @@
-import BlockSvgUnused from './blockSvgUnused';
 import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
 
-const {HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} = frameSizes;
-const SVG_FRAME_HEIGHT = HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
+const {BLOCK_HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} =
+  frameSizes;
+const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
 const SVG_FRAME_SIDE_PADDING = MARGIN_SIDE;
-const SVG_FRAME_TOP_PADDING = HEADER_HEIGHT + MARGIN_TOP;
+const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
 
@@ -101,7 +101,6 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
  * @return {object} the cursor with updated coordinates
  */
 function positionBlockWithCursor(block, cursor) {
-  addUnusedFrame(block);
   if (isBlockLocationUnset(block)) {
     block.moveTo(getNewLocation(block, cursor));
     cursor.y += getCursorYAdjustment(block);
@@ -117,7 +116,7 @@ function positionBlockWithCursor(block, cursor) {
  * @param {number} cursor.y - a y-coordinate for moving a block
  */
 export function getNewLocation(block, cursor) {
-  const blockHasFrameSvg = !!block.functionalSvg_ || !!block.unusedSvg_;
+  const blockHasFrameSvg = !!block.functionalSvg_;
   const blockTopPadding = blockHasFrameSvg ? SVG_FRAME_TOP_PADDING : 0;
   const blockSidePadding = blockHasFrameSvg ? SVG_FRAME_SIDE_PADDING : 0;
   const isRTL = block.workspace.RTL;
@@ -135,7 +134,7 @@ export function getNewLocation(block, cursor) {
  */
 export function getCursorYAdjustment(block) {
   const blockHeight = block.getHeightWidth().height;
-  const blockHasFrameSvg = !!block.functionalSvg_ || !!block.unusedSvg_;
+  const blockHasFrameSvg = !!block.functionalSvg_;
   const blockVerticalPadding =
     VERTICAL_SPACE_BETWEEN_BLOCKS + (blockHasFrameSvg ? SVG_FRAME_HEIGHT : 0);
   return blockHeight + blockVerticalPadding;
@@ -156,17 +155,6 @@ export function isBlockLocationUnset(block) {
   };
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultLocation.x && y === defaultLocation.y;
-}
-
-/**
- * Adds an svg frame around a block to signal that it is unused.
- * @param {Blockly.Block} block - a Blockly block
- */
-function addUnusedFrame(block) {
-  if (block.isUnused() && !block.unusedSvg_) {
-    block.unusedSvg_ = new BlockSvgUnused(block);
-    block.unusedSvg_.render(block.svgGroup_, block.RTL);
-  }
 }
 
 /**

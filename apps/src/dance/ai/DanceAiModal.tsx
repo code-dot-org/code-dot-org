@@ -1,92 +1,165 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {setCurrentAiModalField, DanceState} from '../danceRedux';
+import {closeAiModal, DanceState} from '../danceRedux';
 import classNames from 'classnames';
-import {BlockSvg, Workspace} from 'blockly/core';
-import AiGeneratingView from './AiGeneratingView';
-import {chooseEffects} from './DanceAiClient';
+import {FieldDropdown, Workspace} from 'blockly/core';
+import {chooseEffects, ChooseEffectsQuality} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput} from '../types';
+import {AiOutput, FieldKey, GeneratedEffect} from '../types';
+import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import color from '@cdo/apps/util/color';
+const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 
-const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
-const aiBotBeam = require('@cdo/static/dance/ai/blue-scanner.png');
+import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
+
+import aiBotBorder from '@cdo/static/dance/ai/bot/ai-bot-border.png';
+import aiBotYes from '@cdo/static/dance/ai/bot/ai-bot-yes.png';
+import aiBotNo from '@cdo/static/dance/ai/bot/ai-bot-no.png';
+import aiBotBeam from '@cdo/static/dance/ai/bot/blue-scanner.png';
 
 enum Mode {
   SELECT_INPUTS = 'selectInputs',
   PROCESSING = 'processing',
   GENERATING = 'generating',
   RESULTS = 'results',
-  RESULTS_FINAL = 'resultsFinal',
   EXPLANATION = 'explanation',
 }
 
 type AiModalItem = {
   id: string;
-  name: string;
+  emoji: string;
 };
 
-type AiModalReturnedItem = {
-  id: string;
-  name: string;
-  url: string;
-  available: boolean;
+// Progress in the generating mode has a step and a substep.
+// Each step is a now effect, while each substep shows progress for
+// the generation of that effect.
+type GeneratingProgress = {
+  step: number;
+  subStep: number;
 };
 
-interface DanceAiProps {
-  onClose: () => void;
+type GeneratedEffects = {
+  badEffects: GeneratedEffect[];
+  goodEffect?: GeneratedEffect;
+};
+
+enum Toggle {
+  AI_BLOCK = 'aiBlock',
+  CODE = 'code',
 }
 
-const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
+// Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
+function useInterval(callback: () => void, delay: number | undefined) {
+  const savedCallback = useRef<() => void>();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      if (savedCallback.current) {
+        savedCallback.current();
+      }
+    }
+    if (delay !== undefined) {
+      const id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
+
+const getImageUrl = (id: string) => {
+  return `/blockly/media/dance/ai/emoji/${id}.svg`;
+};
+
+const DanceAiModal: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
+  // How many emojis are to be selected.
   const SLOT_COUNT = 3;
 
-  const inputLibraryFilename = 'ai-inputs';
-  const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
+  // How many low-scoring results we show before the chosen one.
+  const BAD_GENERATED_RESULTS_COUNT = 4;
+
+  // How many substeps for each step in the generating process.
+  const GENERATING_SUBSTEP_COUNT = 2;
+
+  // How long we spend in each substep in the generating process.
+  const GENERATION_SUBSTEP_DURATION = 1000;
+
+  const generatedEffects = useRef<GeneratedEffects>({
+    badEffects: [],
+    goodEffect: undefined,
+  });
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [resultJson, setResultJson] = useState<string>('');
-  const [generatingNodesDone, setGeneratingNodesDone] =
-    useState<boolean>(false);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
-  const [generatingDone, setGeneratingDone] = useState<boolean>(false);
-  const [typingDone, setTypingDone] = useState<boolean>(false);
+  const [generatingProgress, setGeneratingProgress] =
+    useState<GeneratingProgress>({
+      step: 0,
+      subStep: 0,
+    });
+  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
+  );
+
+  const aiModalOpenedFromFlyout = useSelector(
+    (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
   );
 
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
-  const [showPreview, setShowPreview] = useState<boolean>(false);
-
+  // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
-
     if (currentValue) {
-      setMode(Mode.RESULTS_FINAL);
-
-      // The block value will be set to this JSON.
-      setResultJson(currentValue);
-
-      setShowPreview(true);
-
+      setMode(Mode.RESULTS);
       setInputs(JSON.parse(currentValue).inputs);
+      setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
+
+      generatedEffects.current = {
+        badEffects: [],
+        goodEffect: {results: JSON.parse(currentValue)},
+      };
     }
   }, [currentAiModalField]);
 
-  const getImageUrl = (id: string) => {
-    return `/blockly/media/dance/ai/emoji/${id}.svg`;
+  const getLabels = () => {
+    const tempWorkspace = new Workspace();
+    const blocksSvg = generateBlocks(tempWorkspace);
+
+    const foregroundLabels = getLabelMap(
+      blocksSvg[0].getField('EFFECT') as FieldDropdown
+    );
+    const backgroundLabels = getLabelMap(
+      blocksSvg[1].getField('EFFECT') as FieldDropdown
+    );
+    const paletteLabels = getLabelMap(
+      blocksSvg[1].getField('PALETTE') as FieldDropdown
+    );
+
+    tempWorkspace.dispose();
+
+    return {
+      [FieldKey.FOREGROUND_EFFECT]: foregroundLabels,
+      [FieldKey.BACKGROUND_EFFECT]: backgroundLabels,
+      [FieldKey.BACKGROUND_PALETTE]: paletteLabels,
+    };
   };
 
   const getAllItems = (slotIndex: number) => {
@@ -94,21 +167,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       return [];
     }
 
-    return inputLibrary.items.map((item: AiModalItem) => {
+    return inputLibraryJson.items.map(item => {
       return {
-        id: item.id,
-        name: item.name,
-        url: getImageUrl(item.id),
+        ...item,
         available: !inputs.includes(item.id),
       };
     });
   };
 
-  const getItemName = (id: string) => {
-    return inputLibrary.items.find(
-      (item: AiModalReturnedItem) => item.id === id
-    )?.name;
-  };
+  const getItem = (id: string) =>
+    inputLibraryJson.items.find(item => item.id === id);
 
   const handleItemClick = (id: string) => {
     if (currentInputSlot < SLOT_COUNT) {
@@ -117,93 +185,111 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
-  const handleResultsClick = () => {
-    setMode(Mode.RESULTS);
-  };
-
-  const handleResultsFinalClick = () => {
-    setMode(Mode.RESULTS_FINAL);
-  };
-
   const handleGenerateClick = () => {
     startAi();
     setMode(Mode.GENERATING);
   };
 
-  const handleRegenerateClick = () => {
-    // Reset state
-    setTypingDone(false);
-    setResultJson('');
-    setShowPreview(false);
+  const handleStartOverClick = () => {
+    setInputs([]);
+    setCurrentInputSlot(0);
     setProcessingDone(false);
-    setGeneratingNodesDone(false);
-    setGeneratingDone(false);
+    setGeneratingProgress({step: 0, subStep: 0});
+    setMode(Mode.SELECT_INPUTS);
+  };
 
+  const handleRegenerateClick = () => {
+    setProcessingDone(false);
+    setGeneratingProgress({step: 0, subStep: 0});
     handleGenerateClick();
   };
 
   const handleProcessClick = () => {
     setMode(Mode.PROCESSING);
     setTimeout(() => {
-      setProcessingDone(true);
+      handleGenerateClick();
     }, 4000);
   };
 
-  const startAi = async () => {
-    const responseJsonString = chooseEffects(inputs);
-    const result = JSON.parse(responseJsonString);
-
-    // "Pick" a subset of fields to be used.  Specifically, we exclude the
-    // explanation, since we don't want it becoming part of the code.
-    const pickedResult = (({
-      backgroundEffect,
-      backgroundColor,
-      foregroundEffect,
-    }) => ({
-      backgroundEffect,
-      backgroundColor,
-      foregroundEffect,
-    }))(result);
-
-    const fullResult = {inputs, ...pickedResult};
-
-    const fullResultJson = JSON.stringify(fullResult);
-
-    // The block value will be set to this JSON.
-    setResultJson(fullResultJson);
+  const handleExplanationClick = () => {
+    setMode(Mode.EXPLANATION);
   };
 
-  /**
-   * Generates blocks from the AI result in the main workspace, and attaches
-   * them to each other.
-   */
-  const generateBlocksFromResult = (
-    workspace: Workspace
-  ): [BlockSvg, BlockSvg] => {
-    const params = JSON.parse(resultJson);
+  const handleUseClick = () => {
+    currentAiModalField?.setValue(
+      JSON.stringify({
+        inputs,
+        ...generatedEffects.current.goodEffect?.results,
+      })
+    );
+    onClose();
+  };
 
-    const blocksSvg: [BlockSvg, BlockSvg] = [
-      workspace.newBlock('Dancelab_setForegroundEffectExtended') as BlockSvg,
-      workspace.newBlock(
-        'Dancelab_setBackgroundEffectWithPaletteAI'
-      ) as BlockSvg,
-    ];
+  const handleLeaveExplanation = () => {
+    setMode(Mode.RESULTS);
+  };
 
-    // Foreground block.
-    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+  // One-shot update of step & substep.
+  const updateGeneratingProgress = (progress: GeneratingProgress) => {
+    // Do a deep copy into a new object to ensure that a re-render
+    // is triggered at the end of this work.
+    const currentProgress: GeneratingProgress = {
+      ...progress,
+    };
 
-    // Background block.
-    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+    if (currentProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
+      // Bump substep.
+      currentProgress.subStep++;
+    } else if (currentProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      // Bump step and reset substep.
+      currentProgress.step++;
+      currentProgress.subStep = 0;
+    } else {
+      // Leave these values intact, and go to the results.
+      setMode(Mode.RESULTS);
+    }
 
-    // Connect the blocks.
-    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+    return currentProgress;
+  };
 
-    return blocksSvg;
+  // Animate through the generating process.
+  useInterval(
+    () => {
+      if (mode === Mode.GENERATING) {
+        setGeneratingProgress(updateGeneratingProgress);
+      }
+    },
+    mode === Mode.GENERATING ? GENERATION_SUBSTEP_DURATION : undefined
+  );
+
+  const startAi = async () => {
+    generatedEffects.current = {
+      badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
+        () => chooseEffects(inputs, ChooseEffectsQuality.BAD)
+      ),
+      goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
+    };
+  };
+
+  const getCurrentGeneratedEffect = () => {
+    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      return generatedEffects.current.badEffects[generatingProgress.step];
+    } else if (generatedEffects.current.goodEffect) {
+      return generatedEffects.current.goodEffect;
+    } else {
+      return undefined;
+    }
   };
 
   const handleConvertBlocks = () => {
-    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
+    if (!generatedEffects.current.goodEffect) {
+      return;
+    }
+
+    const blocksSvg = generateBlocksFromResult(
+      Blockly.getMainWorkspace(),
+      JSON.stringify(generatedEffects.current.goodEffect)
+    );
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -238,117 +324,118 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       origBlock.dispose(false);
 
       // End modal.
-      dispatch(setCurrentAiModalField(undefined));
+      onClose();
     }
   };
 
-  const handleUseClick = () => {
-    currentAiModalField?.setValue(resultJson);
-    dispatch(setCurrentAiModalField(undefined));
-  };
+  const onClose = () => dispatch(closeAiModal());
 
-  const handleExplanationClick = () => {
-    setMode(Mode.EXPLANATION);
-  };
+  const showUseButton =
+    mode === Mode.RESULTS &&
+    currentToggle === Toggle.AI_BLOCK &&
+    (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
-  const handleStartOverClick = () => {
-    setMode(Mode.SELECT_INPUTS);
-    setInputs([]);
-    setCurrentInputSlot(0);
-    setTypingDone(false);
-    setResultJson('');
-    setShowPreview(false);
-    setProcessingDone(false);
-    setGeneratingNodesDone(false);
-    setGeneratingDone(false);
-  };
+  const showConvertButton =
+    mode === Mode.RESULTS &&
+    currentToggle === Toggle.CODE &&
+    (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
-  let showConvertButton = false;
-  let showUseButton = false;
-
-  if ((mode === Mode.RESULTS && typingDone) || mode === Mode.RESULTS_FINAL) {
-    if (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH) {
-      showConvertButton = true;
-    }
-    if (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH) {
-      showUseButton = true;
-    }
+  let botImage = aiBotBorder;
+  if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
+    botImage =
+      generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
+        ? aiBotNo
+        : aiBotYes;
   }
+
+  const currentGeneratedEffect = getCurrentGeneratedEffect();
 
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
       onClose={onClose}
       initialFocus={false}
+      styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img src={aiBotBorder} className={moduleStyles.botImage} />
+        <img src={aiBotBorder} className={moduleStyles.botImage} alt="A.I." />
         generate &nbsp;
-        <div className={moduleStyles.inputsContainer}>
-          {Array.from(Array(SLOT_COUNT).keys()).map(index => (
-            <div
-              key={index}
-              style={{
-                backgroundImage:
-                  inputs[index] && `url(${getImageUrl(inputs[index])}`,
-              }}
-              className={moduleStyles.emojiSlot}
-              title={getItemName(inputs[index])}
-            />
-          ))}
+        <div
+          className={moduleStyles.inputsContainer}
+          onClick={handleStartOverClick}
+        >
+          {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+            const item = getItem(inputs[index]);
+            return (
+              <div key={index} className={moduleStyles.emojiSlot}>
+                {item && (
+                  <EmojiIcon
+                    item={item}
+                    className={moduleStyles.emojiSlotIcon}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
-        &nbsp; effects
+        &nbsp; effect
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
         >
-          {mode === Mode.RESULTS_FINAL && (
-            <Button
-              id="explanation-button"
-              text={'Explanation'}
-              onClick={handleExplanationClick}
-              color={Button.ButtonColor.white}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonNoMargin,
-                moduleStyles.buttonSmallText
-              )}
-            />
-          )}
-          {mode === Mode.EXPLANATION && (
-            <Button
-              id="results-final-button"
-              text={'Back to Results'}
-              onClick={handleResultsFinalClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonNoMargin,
-                moduleStyles.buttonSmallText
-              )}
-            />
-          )}
+          <button
+            className={moduleStyles.closeButton}
+            data-dismiss="modal"
+            type="button"
+            onClick={onClose}
+          >
+            <i className="fa fa-close" aria-hidden={true} />
+            <span className="sr-only">Close</span>
+          </button>
         </div>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
+        {mode === Mode.RESULTS && (
+          <div
+            id="toggle-area"
+            className={moduleStyles.toggleArea}
+            style={{zIndex: mode === Mode.RESULTS ? 1 : 0}}
+          >
+            <ToggleGroup
+              selected={currentToggle}
+              activeColor={color.teal}
+              onChange={(value: Toggle) => {
+                setCurrentToggle(value);
+              }}
+            >
+              <button key={0} type="button" value={Toggle.AI_BLOCK}>
+                Effect
+              </button>
+              <button key={1} type="button" value={Toggle.CODE}>
+                Code
+              </button>
+            </ToggleGroup>
+          </div>
+        )}
+
         <div id="text-area" className={moduleStyles.textArea}>
           {' '}
           {mode === Mode.SELECT_INPUTS
-            ? 'Choose three emoji for the mood of the effects.'
+            ? 'Choose three emojis.'
             : mode === Mode.PROCESSING && !processingDone
-            ? 'A.I. is processing your input.'
-            : mode === Mode.PROCESSING && processingDone
-            ? 'A.I. is ready to generate effects!'
-            : mode === Mode.GENERATING
-            ? 'A.I. is generating code based on the emojis.'
-            : mode === Mode.RESULTS && !typingDone
             ? ''
-            : mode === Mode.RESULTS && typingDone
-            ? 'A.I. generated code for your dance party!'
-            : mode === Mode.RESULTS_FINAL
-            ? 'A.I. generated code for your dance party!'
+            : mode === Mode.PROCESSING && processingDone
+            ? ''
+            : mode === Mode.GENERATING && botImage === aiBotYes
+            ? 'A.I. is generating this effect.'
+            : mode === Mode.GENERATING
+            ? 'A.I. is finding the best effect to generate.'
+            : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
+            ? 'A.I. generated this effect.'
+            : mode === Mode.RESULTS && currentToggle === Toggle.CODE
+            ? 'Did you know? A.I. wrote this code to generate the effect.'
             : mode === Mode.EXPLANATION
-            ? 'These are the associations between the emojis and this effect.'
+            ? "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
             : undefined}
         </div>
 
@@ -359,25 +446,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         >
           {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
-              {getAllItems(currentInputSlot).map(
-                (item: AiModalReturnedItem) => {
-                  return (
-                    <button
-                      type={'button'}
-                      key={item.id}
-                      onClick={() => item.available && handleItemClick(item.id)}
-                      style={{
-                        backgroundImage: `url(${item.url})`,
-                      }}
-                      className={classNames(
-                        moduleStyles.item,
-                        item.available && moduleStyles.itemAvailable
-                      )}
-                      title={item.name}
-                    />
-                  );
-                }
-              )}
+              {getAllItems(currentInputSlot).map((item, index) => {
+                return (
+                  <EmojiIcon
+                    key={index}
+                    item={item}
+                    onClick={() => item.available && handleItemClick(item.id)}
+                    className={classNames(
+                      moduleStyles.item,
+                      item.available && moduleStyles.itemAvailable
+                    )}
+                  />
+                );
+              })}
             </div>
           )}
         </div>
@@ -394,6 +475,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             (mode === Mode.PROCESSING && !processingDone)) && (
             <div className={moduleStyles.prompt}>
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+                const item = getItem(inputs[index]);
                 return (
                   <div key={index} className={moduleStyles.inputContainer}>
                     {index === currentInputSlot && (
@@ -409,13 +491,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     )}
                     <div className={moduleStyles.inputBackground}>&nbsp;</div>
 
-                    {inputs[index] && (
-                      <div
-                        style={{
-                          backgroundImage: `url(${getImageUrl(inputs[index])}`,
-                        }}
+                    {item && (
+                      <EmojiIcon
+                        item={item}
                         className={moduleStyles.inputItem}
-                        title={getItemName(inputs[index])}
                       />
                     )}
                   </div>
@@ -429,8 +508,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {((mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT) ||
             mode === Mode.PROCESSING ||
             mode === Mode.GENERATING ||
-            mode === Mode.RESULTS ||
-            mode === Mode.RESULTS_FINAL) && (
+            mode === Mode.RESULTS) && (
             <div className={moduleStyles.botContainer}>
               <div
                 className={classNames(
@@ -441,7 +519,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     ? moduleStyles.botScanLeftToRight
                     : mode === Mode.GENERATING
                     ? moduleStyles.botCenterToLeft
-                    : mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL
+                    : mode === Mode.RESULTS
                     ? moduleStyles.botLeft
                     : undefined
                 )}
@@ -454,103 +532,112 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                       !processingDone &&
                       moduleStyles.beamImageVisible
                   )}
+                  alt="A.I. Beam"
                 />
-                <img src={aiBotBorder} className={moduleStyles.image} />
+                <img src={botImage} className={moduleStyles.image} alt="A.I." />
               </div>
             </div>
           )}
         </div>
 
-        <div id="generating-area" className={moduleStyles.generatingArea}>
-          {mode === Mode.GENERATING && (
-            <AiGeneratingView
-              imageUrls={inputs.map(input => {
-                return getImageUrl(input);
-              })}
-              onComplete={() => {
-                setGeneratingNodesDone(true);
-              }}
-            />
-          )}
-        </div>
-
-        <div className={moduleStyles.outputsArea}>
-          {((mode === Mode.GENERATING && generatingNodesDone) ||
-            mode === Mode.RESULTS ||
-            mode === Mode.RESULTS_FINAL) && (
-            <div
-              id="generating-block-preview"
-              className={classNames(
-                moduleStyles.blockPreview,
-                mode === Mode.GENERATING
-                  ? moduleStyles.blockPreviewRight
-                  : mode === Mode.RESULTS
-                  ? moduleStyles.blockPreviewRightToCenter
-                  : undefined
-              )}
-            >
-              <AiBlockPreview
-                fadeIn={mode === Mode.GENERATING}
-                generateBlocksFromResult={generateBlocksFromResult}
-                onComplete={() => {
-                  if (mode === Mode.GENERATING) {
-                    setGeneratingDone(true);
-                  } else if (mode === Mode.RESULTS) {
-                    setShowPreview(true);
-                    setMode(Mode.RESULTS_FINAL);
-                    setTypingDone(true);
-                  }
-                }}
-              />
+        {(mode === Mode.GENERATING || mode === Mode.RESULTS) && (
+          <div
+            key={'preview-' + generatingProgress.step}
+            id="preview-area"
+            className={moduleStyles.previewArea}
+          >
+            <div id="flip-card" className={moduleStyles.flipCard}>
+              <div
+                id="flip-card-inner"
+                className={classNames(
+                  moduleStyles.flipCardInner,
+                  mode === Mode.RESULTS &&
+                    currentToggle === Toggle.CODE &&
+                    moduleStyles.flipCardInnerFlipped
+                )}
+              >
+                <div
+                  id="flip-card-front"
+                  className={moduleStyles.flipCardFront}
+                >
+                  <AiVisualizationPreview
+                    blocks={generateBlocksFromResult(
+                      Blockly.getMainWorkspace(),
+                      JSON.stringify(currentGeneratedEffect?.results)
+                    )}
+                  />
+                </div>
+                <div id="flip-card-back" className={moduleStyles.flipCardBack}>
+                  {mode === Mode.RESULTS && (
+                    <div
+                      id="block-preview"
+                      className={moduleStyles.blockPreview}
+                    >
+                      <AiBlockPreview
+                        resultJson={JSON.stringify(
+                          currentGeneratedEffect?.results
+                        )}
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
-        {(mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL) &&
-          showPreview && (
-            <div id="preview-area" className={moduleStyles.previewArea}>
-              <AiVisualizationPreview
-                blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
-              />
-            </div>
-          )}
-
-        {mode === Mode.EXPLANATION && (
+        {mode === Mode.EXPLANATION && currentGeneratedEffect && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <AiExplanationView
               inputs={inputs}
-              result={JSON.parse(resultJson)}
+              results={currentGeneratedEffect.results}
+              labelMaps={getLabels()}
             />
           </div>
         )}
 
-        <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          {mode === Mode.RESULTS_FINAL && (
-            <div
-              id="buttons-area-left"
-              className={moduleStyles.buttonsAreaLeft}
-            >
-              <Button
-                id="start-over-button"
-                text={'Start over'}
-                onClick={handleStartOverClick}
-                color={Button.ButtonColor.white}
-                className={classNames(moduleStyles.button)}
-              />
+        <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
+          {mode === Mode.RESULTS && (
+            <div>
               <Button
                 id="regenerate"
-                text={'Regenerate'}
                 onClick={handleRegenerateClick}
                 color={Button.ButtonColor.white}
                 className={classNames(moduleStyles.button)}
+              >
+                <i className="fa fa-refresh" />
+              </Button>
+              <Button
+                id="explanation-button"
+                text={'?'}
+                onClick={handleExplanationClick}
+                color={Button.ButtonColor.white}
+                className={moduleStyles.button}
               />
             </div>
           )}
 
+          {mode === Mode.EXPLANATION && (
+            <Button
+              id="results-final-button"
+              text={'Back'}
+              onClick={handleLeaveExplanation}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              className={moduleStyles.button}
+            />
+          )}
+        </div>
+
+        <div id="buttons-area" className={moduleStyles.buttonsArea}>
+          <div
+            id="buttons-area-left"
+            className={moduleStyles.buttonsAreaLeft}
+          />
+
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
               id="select-all-sections-button"
-              text={'Process'}
+              text={'Generate'}
               onClick={handleProcessClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -561,46 +648,65 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             <Button
               id="generate-button"
               text={'Generate'}
-              onClick={handleGenerateClick}
+              onClick={handleGenerateClick()}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
           )}
 
-          {mode === Mode.GENERATING && generatingDone && (
-            <Button
-              id="results-button"
-              text={'Show effects'}
-              onClick={handleResultsClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
           {showConvertButton && (
             <Button
               id="convert-button"
-              text={'Edit code'}
+              text={'Use code'}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
+              disabled={aiModalOpenedFromFlyout}
             />
           )}
           {showUseButton && (
             <Button
               id="use-button"
-              text={'Use'}
+              text={'Use effect'}
               onClick={handleUseClick}
-              color={
-                showConvertButton
-                  ? Button.ButtonColor.white
-                  : Button.ButtonColor.brandSecondaryDefault
-              }
+              color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
           )}
         </div>
       </div>
     </AccessibleDialog>
+  );
+};
+
+interface EmojiIconProps {
+  item: AiModalItem;
+  onClick?: () => void;
+  className?: string;
+}
+
+const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
+  item,
+  onClick,
+  className,
+}) => {
+  const isButton = onClick !== undefined;
+  const Tag = isButton ? 'button' : 'div';
+  return (
+    <Tag
+      type={isButton ? 'button' : undefined}
+      key={item.id}
+      onClick={onClick}
+      style={{
+        backgroundImage: `url(${getImageUrl(item.id)})`,
+      }}
+      className={classNames(
+        moduleStyles.emojiIcon,
+        isButton && moduleStyles.emojiIconButton,
+        className
+      )}
+      title={item.emoji}
+    />
   );
 };
 
