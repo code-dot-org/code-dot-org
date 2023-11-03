@@ -38,7 +38,10 @@ type AiModalItem = {
 };
 
 // Steps in our generating process have a step and a substep.
-type GeneratingStep = [number, number];
+type Progress = {
+  step: number;
+  subStep: number;
+};
 
 enum Toggle {
   AI_BLOCK = 'aiBlock',
@@ -93,7 +96,10 @@ const DanceAiModal: React.FunctionComponent = () => {
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
-  const [generatingStep, setGeneratingStep] = useState<GeneratingStep>([0, 0]);
+  const [generatingProgress, setGeneratingProgress] = useState<Progress>({
+    step: 0,
+    subStep: 0,
+  });
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
 
   const currentAiModalField = useSelector(
@@ -114,7 +120,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     if (currentValue) {
       setMode(Mode.RESULTS);
       setInputs(JSON.parse(currentValue).inputs);
-      setGeneratingStep([BAD_GENERATED_RESULTS_COUNT, 0]);
+      setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
       generatedEffects.current = [];
       generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = {
@@ -178,13 +184,13 @@ const DanceAiModal: React.FunctionComponent = () => {
     setInputs([]);
     setCurrentInputSlot(0);
     setProcessingDone(false);
-    setGeneratingStep([0, 0]);
+    setGeneratingProgress({step: 0, subStep: 0});
     setMode(Mode.SELECT_INPUTS);
   };
 
   const handleRegenerateClick = () => {
     setProcessingDone(false);
-    setGeneratingStep([0, 0]);
+    setGeneratingProgress({step: 0, subStep: 0});
     handleGenerateClick();
   };
 
@@ -217,24 +223,26 @@ const DanceAiModal: React.FunctionComponent = () => {
   useInterval(
     () => {
       if (mode === Mode.GENERATING) {
-        // We do a deep copy into a new array to ensure that
+        // We do a deep copy into a new object to ensure that
         // a re-render is triggered at the end of this work.
-        const currentGeneratingStep: GeneratingStep = [...generatingStep];
+        const currentGeneratingProgress: Progress = {...generatingProgress};
 
-        if (currentGeneratingStep[1] < GENERATING_SUBSTEP_COUNT - 1) {
+        if (currentGeneratingProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
           // Bump substep.
-          currentGeneratingStep[1]++;
-        } else if (currentGeneratingStep[0] < BAD_GENERATED_RESULTS_COUNT) {
+          currentGeneratingProgress.subStep++;
+        } else if (
+          currentGeneratingProgress.step < BAD_GENERATED_RESULTS_COUNT
+        ) {
           // Bump step and reset substep;
-          currentGeneratingStep[0]++;
-          currentGeneratingStep[1] = 0;
+          currentGeneratingProgress.step++;
+          currentGeneratingProgress.subStep = 0;
         } else {
           // Leave these values intact, and go to the results.
           setMode(Mode.RESULTS);
         }
 
         // One-shot update of step & substep.
-        setGeneratingStep(currentGeneratingStep);
+        setGeneratingProgress(currentGeneratingProgress);
       }
     },
     mode === Mode.GENERATING ? GENERATION_SUBSTEP_DURATION : undefined
@@ -255,7 +263,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(generatedEffects.current[generatingStep[0]].results)
+      JSON.stringify(generatedEffects.current[generatingProgress.step].results)
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -308,9 +316,11 @@ const DanceAiModal: React.FunctionComponent = () => {
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   let botImage = aiBotBorder;
-  if (mode === Mode.GENERATING && generatingStep[1] >= 1) {
+  if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
     botImage =
-      generatingStep[0] < BAD_GENERATED_RESULTS_COUNT ? aiBotNo : aiBotYes;
+      generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
+        ? aiBotNo
+        : aiBotYes;
   }
 
   return (
@@ -505,7 +515,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
         {(mode === Mode.GENERATING || mode === Mode.RESULTS) && (
           <div
-            key={'preview-' + generatingStep[0]}
+            key={'preview-' + generatingProgress.step}
             id="preview-area"
             className={moduleStyles.previewArea}
           >
@@ -527,7 +537,8 @@ const DanceAiModal: React.FunctionComponent = () => {
                     blocks={generateBlocksFromResult(
                       Blockly.getMainWorkspace(),
                       JSON.stringify(
-                        generatedEffects.current[generatingStep[0]].results
+                        generatedEffects.current[generatingProgress.step]
+                          .results
                       )
                     )}
                   />
@@ -540,7 +551,8 @@ const DanceAiModal: React.FunctionComponent = () => {
                     >
                       <AiBlockPreview
                         resultJson={JSON.stringify(
-                          generatedEffects.current[generatingStep[0]].results
+                          generatedEffects.current[generatingProgress.step]
+                            .results
                         )}
                       />
                     </div>
