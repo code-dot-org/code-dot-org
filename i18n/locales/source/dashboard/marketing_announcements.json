@@ -94,6 +94,11 @@
       "title": "AI 101 for Teachers",
       "body": "Discover the groundbreaking world of Artificial Intelligence (AI) and its transformative potential in education with our comprehensive online learning series for teachers.",
       "buttonText": "Learn more"
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more"
     }
   }
 }
