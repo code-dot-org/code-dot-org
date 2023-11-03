@@ -13,7 +13,6 @@
   "danceAiFeedbackNewMove": "⚠️ You need to add a block to make the dancer do a new move.",
   "danceAiFeedbackNoAiBlock": "⚠️ Add the `A.I. generate effect` block to setup.",
   "danceAiFeedbackNoNewMove": "⚠️ Your dancer didn't do a new move. Keep trying!",
-  "danceAiFeedbackNoNewMoveDetailed": "⚠️ Your dancer didn't do a new move. Check the following:\n- the same dancer must be selected in the `make a new dancer` block and the `dancers do dance move` block\n- the `make a new dancer` block must be placed before the `dancers do dance move` block.",
   "danceAiFeedbackSequence": "⚠️ Check the order of your blocks. The `make a new dancer` block must be placed before the `dancers do dance move` block.",
   "danceAiModalHeading": "generate {input} effect",
   "danceAiModalChooseEmoji": "Choose three emojis.",
