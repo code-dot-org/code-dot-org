@@ -230,39 +230,40 @@ const DanceAiModal: React.FunctionComponent = () => {
     setMode(Mode.RESULTS);
   };
 
+  // One-shot update of step & substep.
+  const updateGeneratingProgress = (progress: GeneratingProgress) => {
+    // Do a deep copy into a new object to ensure that a re-render
+    // is triggered at the end of this work.
+    const currentProgress: GeneratingProgress = {
+      ...progress,
+    };
+
+    if (currentProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
+      // Bump substep.
+      currentProgress.subStep++;
+    } else if (currentProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      // Bump step and reset substep.
+      currentProgress.step++;
+      currentProgress.subStep = 0;
+    } else {
+      // Leave these values intact, and go to the results.
+      setMode(Mode.RESULTS);
+    }
+
+    return currentProgress;
+  };
+
   // Animate through the generating process.
   useInterval(
     () => {
       if (mode === Mode.GENERATING) {
-        // We do a deep copy into a new object to ensure that
-        // a re-render is triggered at the end of this work.
-        const currentGeneratingProgress: GeneratingProgress = {
-          ...generatingProgress,
-        };
-
-        if (currentGeneratingProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
-          // Bump substep.
-          currentGeneratingProgress.subStep++;
-        } else if (
-          currentGeneratingProgress.step < BAD_GENERATED_RESULTS_COUNT
-        ) {
-          // Bump step and reset substep;
-          currentGeneratingProgress.step++;
-          currentGeneratingProgress.subStep = 0;
-        } else {
-          // Leave these values intact, and go to the results.
-          setMode(Mode.RESULTS);
-        }
-
-        // One-shot update of step & substep.
-        setGeneratingProgress(currentGeneratingProgress);
+        setGeneratingProgress(updateGeneratingProgress);
       }
     },
     mode === Mode.GENERATING ? GENERATION_SUBSTEP_DURATION : undefined
   );
 
   const startAi = async () => {
-    const result = chooseEffects(inputs, ChooseEffectsQuality.GOOD);
     generatedEffects.current = {
       badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
         () => chooseEffects(inputs, ChooseEffectsQuality.BAD)
@@ -282,6 +283,10 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleConvertBlocks = () => {
+    if (!generatedEffects.current.goodEffect) {
+      return;
+    }
+
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
       JSON.stringify(generatedEffects.current.goodEffect)
