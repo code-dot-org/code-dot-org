@@ -55,17 +55,10 @@ window.onYouTubeIframeAPIReady = function () {
   const player = new YT.Player('video', {
     events: {
       onReady: function (event) {
-        analyticsReporter.sendEvent(
-          EVENTS.VIDEO_LOADED,
-          {
-            url: location.href,
-            video: player.getVideoUrl(),
-          },
-          {
-            useSampling: true,
-            sampleRateFlag: 'amplitude-video-event-sample-rate',
-          }
-        );
+        analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
+          url: location.href,
+          video: player.getVideoUrl(),
+        });
       },
       onStateChange: function (state) {
         const amplitudeEventMap = {
@@ -76,17 +69,10 @@ window.onYouTubeIframeAPIReady = function () {
 
         const amplitudeEvent = amplitudeEventMap[state.data];
         if (amplitudeEvent) {
-          analyticsReporter.sendEvent(
-            amplitudeEvent,
-            {
-              url: location.href,
-              video: player.getVideoUrl(),
-            },
-            {
-              useSampling: true,
-              sampleRateFlag: 'amplitude-video-event-sample-rate',
-            }
-          );
+          analyticsReporter.sendEvent(amplitudeEvent, {
+            url: location.href,
+            video: player.getVideoUrl(),
+          });
         }
 
         if (state.data === YT.PlayerState.ENDED) {

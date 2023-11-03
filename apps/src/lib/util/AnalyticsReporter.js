@@ -47,11 +47,7 @@ class AnalyticsReporter {
     identify(identifyObj);
   }
 
-  sendEvent(
-    eventName,
-    payload,
-    {useSampling = false, sampleRateFlag = 'amplitude-event-sample-rate'} = {}
-  ) {
+  sendEvent(eventName, payload) {
     // we can accept an optional 3rd parameter of an options object.
     // Valid flags include:
     //   useSampling - boolean true/false - whether to look to the DCDO.logSampleRate
@@ -70,11 +66,11 @@ class AnalyticsReporter {
     // however, if it -is- defined, then it should be a floating point number
     // indicating the % of the time we want to track the event.
     // i.e., 0.25 means we want to track 25% of the events.
-    const sampleRate = DCDO.get(sampleRateFlag);
+    const sampleRates = DCDO.get('amplitude-event-sample-rates', {});
+    const sampleRate = sampleRates[eventName];
 
-    const sampleRateString =
-      useSampling && sampleRate ? `[SAMPLE RATE ${sampleRate}]` : '';
-    if (useSampling && sampleRate && Math.random() > sampleRate) {
+    const sampleRateString = sampleRate ? `[SAMPLE RATE ${sampleRate}]` : '';
+    if (sampleRate && Math.random() > sampleRate) {
       this.log(
         `[SKIPPED SAMPLED EVENT]${sampleRateString}${eventName}. Payload: ${JSON.stringify(
           {

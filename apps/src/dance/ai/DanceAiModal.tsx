@@ -140,16 +140,9 @@ const DanceAiModal: React.FunctionComponent = () => {
   const handleGenerateClick = () => {
     startAi();
 
-    analyticsReporter.sendEvent(
-      EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED,
-      {
-        emojis: inputs,
-      },
-      {
-        useSampling: true,
-        sampleRateFlag: 'amplitude-dance-party-ai-sample-rate',
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
+      emojis: inputs,
+    });
 
     setMode(Mode.GENERATING);
   };
@@ -163,16 +156,9 @@ const DanceAiModal: React.FunctionComponent = () => {
     setGeneratingNodesDone(false);
     setGeneratingDone(false);
 
-    analyticsReporter.sendEvent(
-      EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED,
-      {
-        emojis: inputs,
-      },
-      {
-        useSampling: true,
-        sampleRateFlag: 'amplitude-dance-party-ai-sample-rate',
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
+      emojis: inputs,
+    });
 
     handleGenerateClick();
   };
@@ -210,19 +196,12 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const handleConvertBlocks = () => {
     const params = JSON.parse(resultJson);
-    analyticsReporter.sendEvent(
-      EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED,
-      {
-        emojis: inputs,
-        backgroundEffect: params.backgroundEffect,
-        backgroundColor: params.backgroundColor,
-        foregroundEffect: params.foregroundEffect,
-      },
-      {
-        useSampling: true,
-        sampleRateFlag: 'amplitude-dance-party-ai-sample-rate',
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
+      emojis: inputs,
+      backgroundEffect: params.backgroundEffect,
+      backgroundColor: params.backgroundColor,
+      foregroundEffect: params.foregroundEffect,
+    });
 
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
@@ -269,49 +248,28 @@ const DanceAiModal: React.FunctionComponent = () => {
   const handleUseClick = () => {
     currentAiModalField?.setValue(resultJson);
     const params = JSON.parse(resultJson);
-    analyticsReporter.sendEvent(
-      EVENTS.DANCE_PARTY_AI_BACKGROUND_USED,
-      {
-        emojis: params.inputs,
-        backgroundEffect: params.backgroundEffect,
-        backgroundColor: params.backgroundColor,
-        foregroundEffect: params.foregroundEffect,
-      },
-      {
-        useSampling: true,
-        sampleRateFlag: 'amplitude-dance-party-ai-sample-rate',
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
+      emojis: params.inputs,
+      backgroundEffect: params.backgroundEffect,
+      backgroundColor: params.backgroundColor,
+      foregroundEffect: params.foregroundEffect,
+    });
     onClose();
   };
 
   const onClose = () => dispatch(closeAiModal());
 
   const handleExplanationClick = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED,
-      {
-        emojis: inputs,
-      },
-      {
-        useSampling: true,
-        sampleRateFlag: 'amplitude-dance-party-ai-sample-rate',
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
+      emojis: inputs,
+    });
     setMode(Mode.EXPLANATION);
   };
 
   const handleStartOverClick = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED,
-      {
-        emojis: inputs,
-      },
-      {
-        useSampling: true,
-        sampleRateFlag: 'amplitude-dance-party-ai-sample-rate',
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
+      emojis: inputs,
+    });
     setMode(Mode.SELECT_INPUTS);
     setInputs([]);
     setCurrentInputSlot(0);
