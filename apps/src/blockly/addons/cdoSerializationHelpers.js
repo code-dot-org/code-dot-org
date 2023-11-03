@@ -93,58 +93,66 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
     SETUP_TYPES,
     false
   );
+  const blocksWithPositions = orderedBlocksSetupFirst.filter(
+    block => !isBlockLocationUnset(block)
+  );
+  const blocksWithoutPositions = orderedBlocksSetupFirst.filter(block =>
+    isBlockLocationUnset(block)
+  );
+  const setBlockColliders = [];
+  blocksWithPositions.forEach(block => {
+    const collider = getCollider(block);
+    setBlockColliders.push(collider);
+  });
+  blocksWithoutPositions.forEach(block => {
+    let collider = getCollider(block);
+    setBlockColliders.sort((a, b) => {
+      const sumA = a.y + a.height;
+      const sumB = b.y + b.height;
 
-  orderedBlocksSetupFirst.forEach(block => {
-    positionBlockWithCursor(block, cursor);
+      if (sumA < sumB) {
+        return -1;
+      }
+      if (sumA > sumB) {
+        return 1;
+      }
+      return 0;
+    });
+    setBlockColliders.forEach(setBlockCollider => {
+      if (
+        (collider.y <= setBlockCollider.y &&
+          collider.y + setBlockCollider.height >= setBlockCollider.y) ||
+        (collider.y >= setBlockCollider.y &&
+          setBlockCollider.y + setBlockCollider.height >= collider.y)
+      ) {
+        const newPos = {
+          x: 32,
+          y:
+            setBlockCollider.y +
+            setBlockCollider.height +
+            VERTICAL_SPACE_BETWEEN_BLOCKS +
+            SVG_FRAME_TOP_PADDING,
+        };
+        block.moveTo(newPos);
+        collider = getCollider(block);
+      }
+    });
+    setBlockColliders.push(collider);
   });
 }
 
-/**
- * Use a cursor to position a block on a workspace (if it does not already have a position)
- * @param {Blockly.Block} block - the block to be moved
- * @param {object} cursor - a location for moving a block, if needed
- * @param {number} cursor.x - an x-coordinate for moving a block
- * @param {number} cursor.y - a y-coordinate for moving a block
- * @return {object} the cursor with updated coordinates
- */
-function positionBlockWithCursor(block, cursor) {
-  if (isBlockLocationUnset(block)) {
-    block.moveTo(getNewLocation(block, cursor));
-  }
-  cursor.y += getCursorYAdjustment(block);
-  return cursor;
-}
-
-/**
- * Determines where the current block should be positioned, based on the cursor
- * @param {Blockly.Block} block - the block to be moved
- * @param {object} cursor - a location for moving a block, if needed
- * @param {number} cursor.x - an x-coordinate for moving a block
- * @param {number} cursor.y - a y-coordinate for moving a block
- */
-export function getNewLocation(block, cursor) {
-  const blockHasFrameSvg = !!block.functionalSvg_;
-  const blockTopPadding = blockHasFrameSvg ? SVG_FRAME_TOP_PADDING : 0;
-  const blockSidePadding = blockHasFrameSvg ? SVG_FRAME_SIDE_PADDING : 0;
-  const isRTL = block.workspace.RTL;
-  const newLocation = {
-    x: cursor.x + (isRTL ? -blockSidePadding : blockSidePadding),
-    y: cursor.y + blockTopPadding,
+function getCollider(block) {
+  let collider = {
+    ...block.getRelativeToSurfaceXY(),
+    ...block.getHeightWidth(),
   };
-  return newLocation;
-}
-
-/**
- * Determines the amount to move the cursor down, based on the block that was just positioned.
- * @param {Blockly.Block} block - the block that was just moved
- * @return {number} - the distance to move the cursor down in preparation for the next move
- */
-export function getCursorYAdjustment(block) {
-  const blockHeight = block.getHeightWidth().height;
-  const blockHasFrameSvg = !!block.functionalSvg_;
-  const blockVerticalPadding =
-    VERTICAL_SPACE_BETWEEN_BLOCKS + (blockHasFrameSvg ? SVG_FRAME_HEIGHT : 0);
-  return blockHeight + blockVerticalPadding;
+  if (block.functionalSvg_) {
+    collider.y -= SVG_FRAME_TOP_PADDING;
+    collider.height += SVG_FRAME_HEIGHT;
+    collider.x -= SVG_FRAME_SIDE_PADDING;
+    collider.width += SVG_FRAME_SIDE_PADDING * 2;
+  }
+  return collider;
 }
 
 /**
