@@ -51,3 +51,14 @@ export enum FieldKey {
   FOREGROUND_EFFECT = 'foregroundEffect',
   BACKGROUND_PALETTE = 'backgroundColor',
 }
+
+export type Results = {[key in FieldKey]: string};
+
+export type Scores = {
+  [key in FieldKey]: number;
+};
+
+export interface GeneratedEffect {
+  results: Results;
+  scores?: Scores;
+}
