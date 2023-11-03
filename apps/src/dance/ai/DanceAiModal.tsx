@@ -32,7 +32,6 @@ enum Mode {
 
 type AiModalItem = {
   id: string;
-  name: string;
   emoji: string;
 };
 
