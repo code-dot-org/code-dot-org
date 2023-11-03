@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
@@ -201,15 +200,11 @@ describe('CoteacherSettings', () => {
 
     expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
   });
-  it('Remove submitted', () => {
+  it('Remove submitted', done => {
     const setCoteachersToAddSpy = sinon.spy();
 
-    const ajaxStub = sinon.stub($, 'ajax').returns({
-      done: successCallback => {
-        successCallback();
-        return {fail: () => {}};
-      },
-    });
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true}));
 
     const wrapper = shallow(
       <CoteacherSettings
@@ -219,6 +214,7 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
+
     let dialog = wrapper.find('RemoveCoteacherDialog').dive();
     expect(dialog).to.be.empty;
 
@@ -241,11 +237,15 @@ describe('CoteacherSettings', () => {
 
     wrapper.update();
 
-    expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
-    const table = wrapper.find('CoteacherTable').dive();
-    expect(table.find('tr')).to.have.lengthOf(2);
-    expect(setCoteachersToAddSpy).to.have.not.been.called;
-    expect(ajaxStub).to.have.been.calledOnce;
-    $.ajax.restore();
+    // Need to wait for updates to finish
+    setTimeout(() => {
+      expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
+      const table = wrapper.find('CoteacherTable').dive();
+      expect(table.find('tr')).to.have.lengthOf(2);
+      expect(setCoteachersToAddSpy).to.have.not.been.called;
+      expect(fetchSpy).to.have.been.calledOnce;
+      fetchSpy.restore();
+      done();
+    }, 50);
   });
 });

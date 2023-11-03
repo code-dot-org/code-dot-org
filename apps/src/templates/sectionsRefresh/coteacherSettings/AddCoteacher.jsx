@@ -138,7 +138,7 @@ export default function AddCoteacher({
         <input
           className={classNames(styles.input, !!addError && styles.inputError)}
           type="text"
-          disabled={isMaxCoteachers()}
+          disabled={isMaxCoteachers}
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleSubmitAddEmail}
@@ -150,7 +150,7 @@ export default function AddCoteacher({
           type="submit"
           text={i18n.coteacherAddButton()}
           onClick={handleAddEmail}
-          disabled={isMaxCoteachers()}
+          disabled={isMaxCoteachers}
         />
       </div>
       {getErrorOrCount()}
