@@ -23,7 +23,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
   And I click selector "#ui-floatingActionButton" once I see it
-  And I click selector ".src-templates-rubrics-rubrics-module__learningGoalHeader strong:contains(Code Quality)" once I see it
+  And I click selector "strong:contains(Code Quality)" once I see it
   And I wait until element "span:contains(Extensive Evidence)" is visible
   Then I click selector "span:contains(Extensive Evidence)"
   And I click selector "#ui-teacherFeedback" once I see it
@@ -32,12 +32,18 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I click selector "#ui-submitFeedbackButton" once I see it
   And I wait until element "p:contains(Feedback submitted at)" is visible
 
+  # Check that the teacher can see submitted feedback
+  Then I reload the page
+  And I click selector "#ui-floatingActionButton" once I see it
+  And I click selector "strong:contains(Code Quality)" once I see it
+  And I wait until element "textarea:contains(Nice work Lillian!)" is visible
+
   # The teacher given feedback is recieved by the student
-  Then I sign in as "Lillian"
+  Then I sign in as "Lillian" and go home
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=ai-rubrics"
   And I click selector ".uitest-taRubricTab" once I see it
   And I wait until element "p:contains(Extensive Evidence)" is visible
-  And I click selector ".src-templates-rubrics-rubrics-module__learningGoalHeader strong:contains(Code Quality)" once I see it
+  And I click selector "strong:contains(Code Quality)" once I see it
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
 
