@@ -131,7 +131,7 @@ module ScriptConstants
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
-      MINECRAFT_AI_NAME = 'generation_ai'.freeze,
+      MINECRAFT_AI_NAME = 'generation-ai'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
