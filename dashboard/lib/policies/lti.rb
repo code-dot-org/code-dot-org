@@ -44,7 +44,7 @@ class Policies::Lti
   end
 
   def self.issuer(user)
-    auth_options = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
+    auth_options = user.authentication_options.find(&:lti?)
     if auth_options
       return auth_options.authentication_id.split('|').first
     end
