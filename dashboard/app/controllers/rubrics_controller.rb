@@ -194,7 +194,7 @@ class RubricsController < ApplicationController
 
   def ai_evaluated_at
     RubricAiEvaluation.
-      where(rubric_id: @rubric.id, user_id: @user.id).
+      where(rubric_id: @rubric.id, user_id: @user.id, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
       order(updated_at: :desc).
       first&.
       created_at
