@@ -102,10 +102,7 @@ export default class FunctionEditor {
 
     this.setUpEditorWorkspaceChangeListeners();
 
-    const functionEditorTrashcan = new CdoTrashcan(
-      this.editorWorkspace,
-      /*id suffix for css*/ 1
-    );
+    const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
     functionEditorTrashcan.init();
   }
 

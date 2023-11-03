@@ -669,7 +669,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       behaviorsFlyoutCategory
     );
 
-    const trashcan = new CdoTrashcan(workspace, /*id suffix for css*/ 0);
+    const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
     // Hidden workspace where we can put function definitions.
