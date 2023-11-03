@@ -4,6 +4,7 @@ import AITutorPanelContainer from '@cdo/apps/code-studio/components/aiTutor/aiTu
 import CompilationAssistant from './compilationAssistant';
 import ValidationAssistant from './validationAssistant';
 
+// Container component for AI Tutor tools: Compilation Assistant, Validation Assistant and General Chat.
 export default class AITutorPanel extends React.Component {
   static propTypes = {
     levelType: PropTypes.string,
