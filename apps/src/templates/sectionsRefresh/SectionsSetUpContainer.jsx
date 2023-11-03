@@ -21,7 +21,7 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
-import CoteacherSettings from './CoteacherSettings';
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -312,9 +312,8 @@ export default function SectionsSetUpContainer({
       () => (
         <CoteacherSettings
           sectionInstructors={sections[0].sectionInstructors}
-          addCoteacher={newCoteacher =>
-            setCoteachersToAdd(existing => [newCoteacher, ...existing])
-          }
+          primaryTeacher={sections[0].primaryInstructor}
+          setCoteachersToAdd={setCoteachersToAdd}
           coteachersToAdd={coteachersToAdd}
         />
       ),
