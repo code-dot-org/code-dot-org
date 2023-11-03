@@ -158,7 +158,7 @@ module TextToSpeech
     end
   end
 
-  def tts_should_update_short_instructions?(update_all = false)
+  def tts_should_update_short_instructions?(update_all: false)
     relevant_property = tts_short_instructions_override ? 'tts_short_instructions_override' : 'short_instructions'
     return tts_should_update(relevant_property, update_all)
   end
@@ -211,7 +211,7 @@ module TextToSpeech
     end
   end
 
-  def tts_should_update_long_instructions?(update_all = false)
+  def tts_should_update_long_instructions?(update_all: false)
     # Long instruction audio should be updated if the relevant long
     # instructions property on the level itself was updated, or if the levels
     # contained by this level were updated (since we treat contained level
@@ -226,11 +226,11 @@ module TextToSpeech
     end
   end
 
-  def tts_update(update_all = false)
+  def tts_update(update_all: false)
     context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all)
+    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all: update_all)
 
-    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all)
+    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?(update_all: update_all)
 
     if authored_hints && (tts_should_update('authored_hints', update_all))
       hints = JSON.parse(authored_hints)

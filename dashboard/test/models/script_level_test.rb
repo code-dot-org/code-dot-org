@@ -676,7 +676,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = true
-    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
   end
 
   # Bubble Choice parent levels mid-lesson redirect to next level.
@@ -699,7 +699,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     script_levels[0].stubs(:end_of_lesson?).returns false
     bubble_choice_parent = true
-    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
   end
 
   # Bubble Choice sublevels redirect to their parent level.
@@ -711,7 +711,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = false
-    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
   end
 
   # For script where show_unit_overview_between_lessons? == true
@@ -984,7 +984,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
-    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context, false)}
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context, use_existing_level_keys: false)}
 
     assert_equal [script_level.levels.first.key], seeding_key['script_level.level_keys']
   end

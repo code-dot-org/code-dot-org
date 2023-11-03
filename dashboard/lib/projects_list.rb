@@ -35,7 +35,7 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       Projects.new(storage_id).get_active_projects.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -64,7 +64,7 @@ module ProjectsList
 
       projects_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
 
@@ -273,7 +273,7 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil, with_library = false)
+    def get_project_row_data(project, channel_id, student = nil, with_library: false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
 
