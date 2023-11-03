@@ -37,8 +37,10 @@ type AiModalItem = {
   emoji: string;
 };
 
-// Steps in our generating process have a step and a substep.
-type Progress = {
+// Progress in the generating mode has a step and a substep.
+// Each step is a now effect, while each substep shows progress for
+// the generation of that effect.
+type GeneratingProgress = {
   step: number;
   subStep: number;
 };
@@ -104,10 +106,11 @@ const DanceAiModal: React.FunctionComponent = () => {
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [processingDone, setProcessingDone] = useState<boolean>(false);
-  const [generatingProgress, setGeneratingProgress] = useState<Progress>({
-    step: 0,
-    subStep: 0,
-  });
+  const [generatingProgress, setGeneratingProgress] =
+    useState<GeneratingProgress>({
+      step: 0,
+      subStep: 0,
+    });
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
 
   const currentAiModalField = useSelector(
@@ -233,7 +236,9 @@ const DanceAiModal: React.FunctionComponent = () => {
       if (mode === Mode.GENERATING) {
         // We do a deep copy into a new object to ensure that
         // a re-render is triggered at the end of this work.
-        const currentGeneratingProgress: Progress = {...generatingProgress};
+        const currentGeneratingProgress: GeneratingProgress = {
+          ...generatingProgress,
+        };
 
         if (currentGeneratingProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
           // Bump substep.
