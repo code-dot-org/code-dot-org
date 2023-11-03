@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import classnames from 'classnames';
@@ -75,6 +75,7 @@ export default function LearningGoal({
   const handleFeedbackChange = event => {
     if (studentLevelInfo.user_id && learningGoal.id) {
       if (autosaveTimer.current) {
+        console.log('clearing timer' + autosaveTimer.current);
         clearTimeout(autosaveTimer.current);
       }
       teacherFeedback.current = event.target.value;
@@ -82,10 +83,11 @@ export default function LearningGoal({
       autosaveTimer.current = setTimeout(() => {
         autosave();
       }, saveAfter);
+      console.log('setting timer' + autosaveTimer.current);
     }
   };
 
-  const autosave = () => {
+  const autosave = useCallback(() => {
     setAutosaved(false);
     setIsAutosaving(true);
     setErrorAutosaving(false);
@@ -115,8 +117,9 @@ export default function LearningGoal({
         setIsAutosaving(false);
         setErrorAutosaving(true);
       });
+    console.log('clearing timer' + autosaveTimer.current);
     clearTimeout(autosaveTimer.current);
-  };
+  }, [studentLevelInfo, learningGoal, learningGoalEval]);
 
   useEffect(() => {
     if (studentLevelInfo && learningGoal.id) {
@@ -149,20 +152,23 @@ export default function LearningGoal({
   }, [studentLevelInfo, learningGoal]);
 
   // Callback to retrieve understanding data from EvidenceLevels
-  const radioButtonCallback = radioButtonData => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
-      ...(reportingData || {}),
-      learningGoalId: learningGoal.id,
-      learningGoal: learningGoal.learningGoal,
-      newlySelectedEvidenceLevel: radioButtonData,
-      previouslySelectedEvidenceLevel: understandingLevel.current,
-    });
-    setDisplayUnderstanding(radioButtonData);
-    understandingLevel.current = radioButtonData;
-    if (!isAutosaving) {
-      autosave();
-    }
-  };
+  const radioButtonCallback = useCallback(
+    radioButtonData => {
+      analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
+        ...(reportingData || {}),
+        learningGoalId: learningGoal.id,
+        learningGoal: learningGoal.learningGoal,
+        newlySelectedEvidenceLevel: radioButtonData,
+        previouslySelectedEvidenceLevel: understandingLevel.current,
+      });
+      setDisplayUnderstanding(radioButtonData);
+      understandingLevel.current = radioButtonData;
+      if (!isAutosaving) {
+        autosave();
+      }
+    },
+    [isAutosaving, reportingData, learningGoal, understandingLevel, autosave]
+  );
 
   const renderAutoSaveTextbox = () => {
     return (
