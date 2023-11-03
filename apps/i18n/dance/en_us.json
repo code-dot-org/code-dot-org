@@ -7,7 +7,7 @@
   "danceAiFeedbackCustomize": "⚠️ You need to change the effect A.I. generated. You can either regenerate the effects, customize the code A.I. created, or start over with new emojis.",
   "danceAiFeedbackEffectChangeAfterMeasures": "⚠️ Connect the `A.I. generate effect` block to the `after 2 Measures` event.",
   "danceAiFeedbackKeyPress": "⚠️ You pressed a key, but your dancer didn't do a new move.",
-  "danceAiFeedbackKeyPressRightOrLeft": "⚠️ Make sure to press at least one of the arrow keys while your dance is running.",
+  "danceAiFeedbackKeyPressRightOrLeft": "⚠️ Make sure to press the right or left arrow key while your dance is running.",
   "danceAIFeedbackMatchDancer": "⚠️ You must have the same dancer selected in the make new dancer block and the dancer do new move block.",
   "danceAiFeedbackNeedNewDancer": "⚠️ You need to make a dancer.",
   "danceAiFeedbackNewMove": "⚠️ You need to add a block to make the dancer do a new move.",  
