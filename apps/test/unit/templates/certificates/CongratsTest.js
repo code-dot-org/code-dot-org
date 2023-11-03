@@ -4,8 +4,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
-import TeachersBeyondHoc from '@cdo/apps/templates/certificates/TeachersBeyondHoc';
-import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
@@ -37,32 +35,6 @@ describe('Congrats', () => {
       );
       expect(wrapper.find(GraduateToNextLevel).exists()).to.be.true;
     });
-
-    it(`renders a PetitionCallToAction component with tutorial for user type ${userType}`, () => {
-      const wrapper = shallow(
-        <Congrats {...defaultProps} userType={userType} tutorial="coursea" />
-      );
-      expect(wrapper.find(PetitionCallToAction).exists()).to.be.true;
-      expect(wrapper.find(PetitionCallToAction).props().tutorial).to.not.be
-        .undefined;
-    });
-  });
-
-  it('renders a TeachersBeyondHoc component, for teachers', () => {
-    const wrapper = shallow(<Congrats {...defaultProps} userType="teacher" />);
-    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
-  });
-
-  it('renders a TeachersBeyondHoc component, for signed out', () => {
-    const wrapper = shallow(
-      <Congrats {...defaultProps} userType="signedOut" />
-    );
-    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
-  });
-
-  it('does not render a TeachersBeyondHoc component, for students', () => {
-    const wrapper = shallow(<Congrats {...defaultProps} userType="student" />);
-    expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;
   });
 
   //HOC tutorial tests
