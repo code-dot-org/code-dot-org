@@ -124,13 +124,15 @@ class DatastoreCacheTest < ActiveSupport::TestCase
 
     initial_value = 'initial test value'
     @datastore_cache.set(test_key, initial_value)
-    assert_equal({test_key => initial_value}, CDO.shared_cache.read(second_cache.shared_cache_key))
+    assert_equal({test_key => initial_value}, CDO.shared_cache.read(@datastore_cache.shared_cache_key))
+    assert_equal({}, CDO.shared_cache.read(second_cache.shared_cache_key))
     assert_equal initial_value, @datastore_cache.get(test_key)
     second_cache.update_local_cache
     assert_nil second_cache.get(test_key)
 
     updated_value = 'updated test value'
     second_cache.set(test_key, updated_value)
+    assert_equal({test_key => initial_value}, CDO.shared_cache.read(@datastore_cache.shared_cache_key))
     assert_equal({test_key => updated_value}, CDO.shared_cache.read(second_cache.shared_cache_key))
     @datastore_cache.update_local_cache
     assert_equal initial_value, @datastore_cache.get(test_key)
