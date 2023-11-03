@@ -16,17 +16,18 @@ import {
   unloadSong,
   loadSongMetadata,
 } from './songs';
-import GoogleBlockly from 'blockly/core';
+import {Field} from 'blockly';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: GoogleBlockly.Field;
+  currentAiModalField?: Field;
   aiOutput?: AiOutput;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
+  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
@@ -37,6 +38,7 @@ const initialState: DanceState = {
   aiOutput: AiOutput.AI_BLOCK,
   isRunning: false,
   currentSongMetadata: undefined,
+  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -166,14 +168,22 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
-    setCurrentAiModalField: (
-      state,
-      action: PayloadAction<GoogleBlockly.Field | undefined>
-    ) => {
-      state.currentAiModalField = action.payload;
-    },
     setAiOutput: (state, action: PayloadAction<AiOutput>) => {
       state.aiOutput = action.payload;
+    },
+    openAiModal: (
+      state,
+      action: PayloadAction<{
+        modalField: Field;
+        fromFlyout: boolean;
+      }>
+    ) => {
+      state.currentAiModalField = action.payload.modalField;
+      state.aiModalOpenedFromFlyout = action.payload.fromFlyout;
+    },
+    closeAiModal: state => {
+      state.currentAiModalField = undefined;
+      state.aiModalOpenedFromFlyout = false;
     },
   },
 });
@@ -183,7 +193,8 @@ export const {
   setSelectedSong,
   setRunIsStarting,
   setCurrentSongMetadata,
-  setCurrentAiModalField,
   setAiOutput,
+  openAiModal,
+  closeAiModal,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
