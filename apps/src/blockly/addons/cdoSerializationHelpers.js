@@ -11,6 +11,13 @@ const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
 
+export function hasBlocks(workspaceSerialization) {
+  return (
+    !_.isEmpty(workspaceSerialization) &&
+    _.has(workspaceSerialization, 'blocks.blocks')
+  );
+}
+
 /**
  * Converts XML serialization to JSON using a temporary unrendered workspace.
  * @param {xml} xml - workspace serialization, current/legacy format
@@ -26,7 +33,7 @@ export function convertXmlToJson(xml) {
   const xmlBlocks = Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
-  if (xmlBlocks.length && stateToLoad.blocks) {
+  if (xmlBlocks.length && hasBlocks(stateToLoad)) {
     // Create a map of ids (key) and block serializations (value).
     const blockIdMap = stateToLoad.blocks.blocks.reduce(
       (map, blockJson) => map.set(blockJson.id, blockJson),
@@ -164,18 +171,13 @@ export const getDefaultLocation = workspaceOverride => {
 
 // See addEditorWorkspaceBlockConfig on the FunctionEditor for
 // the list of properties to undo here
-export const resetEditorWorkspaceBlockConfig = blocks => {
-  if (_.isEmpty(blocks)) {
-    return;
-  }
-
+export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
   blocks.forEach(block => {
     const {defaultX, defaultY} = getDefaultLocation();
     block.x = defaultX;
     block.y = defaultY;
     block.movable = true;
   });
-};
 
 /**
  * Reorders an array of blocks based on the given blockOrderMap.
@@ -201,7 +203,10 @@ export function getCombinedSerialization(
   mainWorkspaceSerialization,
   hiddenWorkspaceSerialization
 ) {
-  if (_.isEmpty(hiddenWorkspaceSerialization)) {
+  if (
+    !hasBlocks(hiddenWorkspaceSerialization) ||
+    !hasBlocks(mainWorkspaceSerialization)
+  ) {
     return mainWorkspaceSerialization;
   }
 

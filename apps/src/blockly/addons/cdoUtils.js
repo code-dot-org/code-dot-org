@@ -14,6 +14,7 @@ import {
 import {
   convertXmlToJson,
   getCombinedSerialization,
+  hasBlocks,
   positionBlocksOnWorkspace,
   resetEditorWorkspaceBlockConfig,
 } from './cdoSerializationHelpers';
@@ -106,7 +107,7 @@ function parseSource(source) {
  * exported for unit testing
  */
 export function moveHiddenProcedures(source = {}, procedureTypesToHide = []) {
-  if (procedureTypesToHide.length === 0 || !_.has(source, 'blocks.blocks')) {
+  if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
     return {mainSource: {}, hiddenDefinitionSource: {}};
   }
 
@@ -277,7 +278,9 @@ export function getCode(workspace, getSourceAsJson) {
 
   // Blocks rendered in the hidden workspace get extra properties that need to be
   // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
+  if (hasBlocks(hiddenWorkspaceSerialization)) {
+    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
+  }
 
   const combinedSerialization = getCombinedSerialization(
     mainWorkspaceSerialization,
@@ -411,12 +414,11 @@ export function getSimplifiedStateForFlyout(serialization) {
     variableMap[variable.id] = variable.name;
   });
 
-  const blocksList =
-    serialization.blocks && serialization.blocks.blocks
-      ? serialization.blocks.blocks.map(block =>
-          simplifyBlockState(block, variableMap)
-        )
-      : [];
+  const blocksList = hasBlocks(serialization)
+    ? serialization.blocks.blocks.map(block =>
+        simplifyBlockState(block, variableMap)
+      )
+    : [];
 
   return blocksList;
 }
