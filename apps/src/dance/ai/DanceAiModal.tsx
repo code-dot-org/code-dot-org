@@ -43,6 +43,11 @@ type Progress = {
   subStep: number;
 };
 
+type GeneratedEffects = {
+  badEffects: GeneratedEffect[];
+  goodEffect?: GeneratedEffect;
+};
+
 enum Toggle {
   AI_BLOCK = 'aiBlock',
   CODE = 'code',
@@ -90,7 +95,10 @@ const DanceAiModal: React.FunctionComponent = () => {
   // How long we spend in each substep in the generating process.
   const GENERATION_SUBSTEP_DURATION = 1000;
 
-  const generatedEffects = useRef<GeneratedEffect[]>([]);
+  const generatedEffects = useRef<GeneratedEffects>({
+    badEffects: [],
+    goodEffect: undefined,
+  });
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
@@ -122,9 +130,9 @@ const DanceAiModal: React.FunctionComponent = () => {
       setInputs(JSON.parse(currentValue).inputs);
       setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
-      generatedEffects.current = [];
-      generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = {
-        results: JSON.parse(currentValue),
+      generatedEffects.current = {
+        badEffects: [],
+        goodEffect: {results: JSON.parse(currentValue)},
       };
     }
   }, [currentAiModalField]);
@@ -209,7 +217,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentAiModalField?.setValue(
       JSON.stringify({
         inputs,
-        ...generatedEffects.current[BAD_GENERATED_RESULTS_COUNT].results,
+        ...generatedEffects.current.goodEffect?.results,
       })
     );
     onClose();
@@ -250,20 +258,28 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const startAi = async () => {
     const result = chooseEffects(inputs, ChooseEffectsQuality.GOOD);
-    generatedEffects.current = [];
-    for (let i = 0; i < BAD_GENERATED_RESULTS_COUNT; i++) {
-      generatedEffects.current[i] = chooseEffects(
-        inputs,
-        ChooseEffectsQuality.BAD
-      );
+    generatedEffects.current = {
+      badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
+        () => chooseEffects(inputs, ChooseEffectsQuality.BAD)
+      ),
+      goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
+    };
+  };
+
+  const getCurrentGeneratedEffect = () => {
+    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      return generatedEffects.current.badEffects[generatingProgress.step];
+    } else if (generatedEffects.current.goodEffect) {
+      return generatedEffects.current.goodEffect;
+    } else {
+      return undefined;
     }
-    generatedEffects.current[BAD_GENERATED_RESULTS_COUNT] = result;
   };
 
   const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(generatedEffects.current[generatingProgress.step].results)
+      JSON.stringify(generatedEffects.current.goodEffect)
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -322,6 +338,8 @@ const DanceAiModal: React.FunctionComponent = () => {
         ? aiBotNo
         : aiBotYes;
   }
+
+  const currentGeneratedEffect = getCurrentGeneratedEffect();
 
   return (
     <AccessibleDialog
@@ -536,10 +554,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                   <AiVisualizationPreview
                     blocks={generateBlocksFromResult(
                       Blockly.getMainWorkspace(),
-                      JSON.stringify(
-                        generatedEffects.current[generatingProgress.step]
-                          .results
-                      )
+                      JSON.stringify(currentGeneratedEffect?.results)
                     )}
                   />
                 </div>
@@ -551,8 +566,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                     >
                       <AiBlockPreview
                         resultJson={JSON.stringify(
-                          generatedEffects.current[generatingProgress.step]
-                            .results
+                          currentGeneratedEffect?.results
                         )}
                       />
                     </div>
@@ -563,13 +577,11 @@ const DanceAiModal: React.FunctionComponent = () => {
           </div>
         )}
 
-        {mode === Mode.EXPLANATION && (
+        {mode === Mode.EXPLANATION && currentGeneratedEffect && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <AiExplanationView
               inputs={inputs}
-              results={
-                generatedEffects.current[BAD_GENERATED_RESULTS_COUNT].results
-              }
+              results={currentGeneratedEffect.results}
               labelMaps={getLabels()}
             />
           </div>
