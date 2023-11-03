@@ -19,80 +19,80 @@ measure the relatedness of text strings. The distance between two vectors measur
 their relatedness. https://platform.openai.com/docs/guides/embeddings
 We also store embeddings in caches files as as pickle files, python's native way to serialize data.
 
-Below are background effects, palettes and foreground effects in the order that they appear in the dropdowns. When this file is run and the three cached data files are replaced in apps/static/dance/ai/model, please update the lists below with the output from this script.
+Below are palettes, background effects, and foreground effects in the order that they appear in the dropdowns. When this file is run and the three cached data files are replaced in apps/static/dance/ai/model, please update the lists below with the output from this script.
 
-BACKGROUND EFFECTS
-model_descriptive_name | blockly_id | blockly_user_facing_name
-moving shapes | quads | Angles
-flower petals | blooming_petals | Blooming Petals
-pulse | circles | Circles
-clouds | clouds | Clouds
-solid colors | color_cycle | Colors
-diamonds | diamonds | Diamonds
-disco | disco_ball | Disco Ball
-firework | fireworks | Fireworks
-flowers | flowers | Flowers
-light grid | frosted_grid | Frosted Grid
-stars | growing_stars | Growing Stars
-groovy shapes | higher_power | Higher Power
-swirl | swirl | Hypno
-kaleidoscope | kaleidoscope | Kaleidoscope
-laser beam | lasers | Laser Dance Floor
-paint splatter | splatter | Paint Splatter
-rainbow | rainbow | Rainbow
-dots | ripples_random | Random Ripples
-circles | ripples | Ripples
-snow fall | snowflakes | Snow
-words | text | Song Names
-galaxy | galaxy | Space
-sparkles | sparkles | Sparkles
-spiral | spiral | Spiral
-squares | disco | Squares
-squiggles | squiggles | Squiggles
-starburst | starburst | Starburst
-twinkle | stars | Stars
-sound wave | music_wave | Waves
+PALETTES  
+model_descriptive_name | blockly_id | blockly_user_facing_name  
+autumn | autumn | Autumn  
+black and white | rave | Black and White  
+green blue | cool | Cool  
+electronic | electronic | Electronic  
+grayscale | grayscale | Grayscale  
+creamy pastel | iceCream | Ice Cream  
+rainbow pastel | default | Light  
+neon | neon | Neon  
+blue | ocean | Ocean  
+bright rainbow | rainbow | Rainbow  
+roses | roses | Roses  
+pink blue | sky | Sky  
+green | spring | Spring  
+flower | summer | Summer  
+coral | sunrise | Sunrise  
+purple | sunset | Sunset  
+sweet candy rainbow | tropical | Tropical  
+orange | twinkling | Twinkling  
+retro | vintage | Vintage  
+red orange | warm | Warm  
+icy blue | winter | Winter  
 
-PALETTES
-model_descriptive_name | blockly_id | blockly_user_facing_name
-autumn | autumn | Autumn
-black and white | rave | Black and White
-green blue | cool | Cool
-electronic | electronic | Electronic
-grayscale | grayscale | Grayscale
-creamy pastel | iceCream | Ice Cream
-rainbow pastel | default | Light
-neon | neon | Neon
-blue | ocean | Ocean
-bright rainbow | rainbow | Rainbow
-roses | roses | Roses
-pink blue | sky | Sky
-green | spring | Spring
-flower | summer | Summer
-coral | sunrise | Sunrise
-purple | sunset | Sunset
-sweet candy rainbow | tropical | Tropical
-orange | twinkling | Twinkling
-retro | vintage | Vintage
-red orange | warm | Warm
-icy blue | winter | Winter
+BACKGROUND_EFFECTS  
+model_descriptive_name | blockly_id | blockly_user_facing_name  
+moving shapes | quads | Angles  
+flower petals | blooming_petals | Blooming Petals  
+pulse | circles | Circles  
+clouds | clouds | Clouds  
+solid colors | color_cycle | Colors  
+diamonds | diamonds | Diamonds  
+disco | disco_ball | Disco Ball  
+firework | fireworks | Fireworks  
+flowers | flowers | Flowers  
+light grid | frosted_grid | Frosted Grid  
+stars | growing_stars | Growing Stars  
+groovy shapes | higher_power | Higher Power  
+swirl | swirl | Hypno  
+kaleidoscope | kaleidoscope | Kaleidoscope  
+laser beam | lasers | Laser Dance Floor  
+paint splatter | splatter | Paint Splatter  
+rainbow | rainbow | Rainbow  
+dots | ripples_random | Random Ripples  
+circles | ripples | Ripples  
+snow fall | snowflakes | Snow  
+words | text | Song Names  
+galaxy | galaxy | Space  
+sparkles | sparkles | Sparkles  
+spiral | spiral | Spiral  
+squares | disco | Squares  
+squiggles | squiggles | Squiggles  
+starburst | starburst | Starburst  
+twinkle | stars | Stars  
+sound wave | music_wave | Waves  
 
-FOREGROUND EFFECTS
-model_descriptive_name | blockly_id | blockly_user_facing_name
-bubbles | bubbles | Bubbles
-hearts | hearts_colorful | Colorful Hearts
-confetti | confetti | Confetti
-emojis | emojis | Emojis
-heart | hearts_red | Hearts
-music notes | music_notes | Music Notes
-rainbow paint | paint_drip | Paint Drip
-pineapple | pineapples | Pineapples
-pizza | pizzas | Pizzas
-poop | smiling_poop | Poop
-rain | rain | Rain
-rainbow | floating_rainbows | Rainbows
-smily face | smile_face | Smiles
-spotlight | spotlight | Spotlight
-stage lights | color_lights | Stage Lights
-stars | exploding_stars | Starburst
-taco | raining_tacos | Tacos
+FOREGROUND_EFFECTS  
+model_descriptive_name | blockly_id | blockly_user_facing_name  
+bubbles | bubbles | Bubbles  
+hearts | hearts_colorful | Colorful Hearts  
+confetti | confetti | Confetti  
+emojis | emojis | Emojis  
+heart | hearts_red | Hearts  
+music notes | music_notes | Music Notes  
+rainbow paint | paint_drip | Paint Drip  
+pineapple | pineapples | Pineapples  
+pizza | pizzas | Pizzas  
+poop | smiling_poop | Poop  
+rain | rain | Rain  
+rainbow | floating_rainbows | Rainbows  
+smily face | smile_face | Smiles  
+spotlight | spotlight | Spotlight  
+stage lights | color_lights | Stage Lights  
+stars | exploding_stars | Starburst  
+taco | raining_tacos | Tacos  

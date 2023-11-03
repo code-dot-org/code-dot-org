@@ -54,11 +54,11 @@ options = {
 
 # embeddings is a dictionary with four lists of embeddings: one for each of the four options above.
 embeddings = {}
-for category, options in options.items():
-    embeddings[category] = [retrieve_embedding(string=option,
+for category, descriptive_names in options.items():
+    embeddings[category] = [retrieve_embedding(string=descriptive_name,
                                                 cache_path=embeddings_paths[category],
                                                 embedding_cache=embeddings_caches[category])
-                                for option in options
+                                for descriptive_name in descriptive_names
                             ]
 
 # similarities is a dictionary of dictionaries, one dictionary for each output (palette, background effect, and foreground effect).

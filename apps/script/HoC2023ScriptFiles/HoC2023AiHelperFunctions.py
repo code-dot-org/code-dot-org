@@ -19,14 +19,14 @@ def get_json_object(file):
 
 def get_ai_emoji_inputs():
     emojis_json_object = get_json_object('apps/static/dance/ai/ai-inputs.json')
-    emojis_map = {}
-    emoji_model_descriptive_names_list = []
+    emojis = {}
+    emoji_model_descriptive_names = []
     for emoji_item in emojis_json_object['items']:
         model_descriptive_name = emoji_item['modelDescriptiveName']
         id = emoji_item['id']
-        emojis_map[model_descriptive_name] = id
-        emoji_model_descriptive_names_list.append(model_descriptive_name)
-    return emoji_model_descriptive_names_list, emojis_map
+        emojis[model_descriptive_name] = id
+        emoji_model_descriptive_names.append(model_descriptive_name)
+    return emoji_model_descriptive_names, emojis
 
 # options are either background_effect_options, foreground_effect_options, or palette_options.
 # isEffects is `true` if the options are for foreground or background.
@@ -64,10 +64,10 @@ def get_palettes():
 
 def print_options(category, model_descriptive_names, blockly_ids, user_facing_names):
     # options_map contains model_descriptive_name as key and blockly_id as value.
-    print(category.upper())
-    print('model_descriptive_name | blockly_id | blockly_user_facing_name')
+    print(category.upper() + '  ')
+    print('model_descriptive_name | blockly_id | blockly_user_facing_name  ')
     for i in range(len(model_descriptive_names)):
-        print (model_descriptive_names[i] + ' | ' + blockly_ids[i] + ' | ' + user_facing_names[i])
+        print (model_descriptive_names[i] + ' | ' + blockly_ids[i] + ' | ' + user_facing_names[i] + '  ')
 
 # This function loads the embeddings cache file if present, and otherwise creates a new file.
 def load_embeddings_cache(path):
@@ -95,7 +95,7 @@ def retrieve_embedding(string: str,
     return embedding_cache[(string, model)]
 
 # This function calculates the similarity score between an input enmbedding and a list of output embeddings.
-def calculate_similarity_score(input_embeddings, output_embeddings, emojis_map):
+def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
     # distance_from_embeddings returns a list of distances between the input embedding and each output embedding
     # https://github.com/openai/openai-python/blob/284c1799070c723c6a553337134148a7ab088dd8/openai/embeddings_utils.py#L139
     # Thus, similarities is an array of arrays of distances, with each subarray representing the distances between
@@ -107,7 +107,7 @@ def calculate_similarity_score(input_embeddings, output_embeddings, emojis_map):
     similarities = pd.DataFrame(similarities)
     
     # We use the emoji_ids and not the emoji Unicode as index for use by client
-    similarities.index = emojis_map.values()
+    similarities.index = emojis.values()
     
     # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
     # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
