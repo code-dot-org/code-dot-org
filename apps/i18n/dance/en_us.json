@@ -4,7 +4,7 @@
   "danceAiFeedbackAiBlockNotConnectedSetup": "⚠️ Connect the `A.I. generate effect` block to the `setup` block.",
   "danceAiFeedbackAiBlockNoParametersOnEvent": "⚠️ The effect didn't change after 2 measures. Choose three emojis for A.I. to generate the effect.",
   "danceAiFeedbackConnectPressUpArrowEvent": "⚠️ Press the up arrow ▲ button after pressing *\"Run\"*.",
-  "danceAiFeedbackCustomize": "⚠️ You need to change the effect A.I. generated. You can either regenerate the effects, customize the code A.I. created, or start over with new emojis.",
+  "danceAiFeedbackCustomize": "⚠️ You need to change the effect A.I. generates. You can either regenerate the effect, customize the code A.I. writes, or start over with new emojis.",
   "danceAiFeedbackEffectChangeAfterMeasures": "⚠️ Connect the `A.I. generate effect` block to the `after 2 Measures` event.",
   "danceAiFeedbackKeyPress": "⚠️ You pressed a key, but your dancer didn't do a new move.",
   "danceAiFeedbackKeyPressRightOrLeft": "⚠️ Make sure to press the right or left arrow key while your dance is running.",
