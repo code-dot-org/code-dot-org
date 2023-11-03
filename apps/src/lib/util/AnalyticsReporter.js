@@ -13,6 +13,8 @@ import {
   isDevelopmentEnvironment,
 } from '../../utils';
 
+import DCDO from '@cdo/apps/dcdo';
+
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 
@@ -45,7 +47,44 @@ class AnalyticsReporter {
     identify(identifyObj);
   }
 
-  sendEvent(eventName, payload) {
+  sendEvent(
+    eventName,
+    payload,
+    {useSampling = false, sampleRateFlag = 'amplitude-event-sample-rate'} = {}
+  ) {
+    // we can accept an optional 3rd parameter of an options object.
+    // Valid flags include:
+    //   useSampling - boolean true/false - whether to look to the DCDO.logSampleRate
+    //   sampleRateFlag - the DCDO flag we look to to determine the sample rate for this event.
+
+    // if useSampling is true, then we pull out the DCDO value of the sampleRateFlag.
+    // if we're sampling, then look to our DCDO flag to the event sample rate.
+    // the sampleRate should be a floating point number indicating the percentage of events
+    // to track. i.e. 0.25 means we track 25% of the events.
+    // if it is 0 or undefined, we track all events.
+
+    // finally, if we are sampling, and we have a sample rate AND our random number is > the sampleRate
+    // then we simply bow out and do nothing.
+    // look to our DCDO flags to the event sample rate.
+    // if it's not defined, then we just proceed as normal.
+    // however, if it -is- defined, then it should be a floating point number
+    // indicating the % of the time we want to track the event.
+    // i.e., 0.25 means we want to track 25% of the events.
+    const sampleRate = DCDO.get(sampleRateFlag);
+
+    const sampleRateString =
+      useSampling && sampleRate ? `[SAMPLE RATE ${sampleRate}]` : '';
+    if (useSampling && sampleRate && Math.random() > sampleRate) {
+      this.log(
+        `[SKIPPED SAMPLED EVENT]${sampleRateString}${eventName}. Payload: ${JSON.stringify(
+          {
+            payload,
+          }
+        )}`
+      );
+      return;
+    }
+
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         logToCloud.addPageAction(
@@ -59,7 +98,11 @@ class AnalyticsReporter {
         track(eventName, payload);
       }
     } else {
-      this.log(`${eventName}. Payload: ${JSON.stringify({payload})}`);
+      this.log(
+        `${sampleRateString}${eventName}. Payload: ${JSON.stringify({
+          payload,
+        })}`
+      );
     }
   }
 
