@@ -32,10 +32,8 @@ export default function RemoveCoteacherDialog({
       }).then(response => {
         if (response.ok) {
           removeSavedCoteacher(coteacher.id);
-          closeRemoveDialog();
-        } else {
-          closeRemoveDialog();
         }
+        closeRemoveDialog();
       });
     },
     [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]

@@ -110,9 +110,7 @@ export default function AddCoteacher({
     [handleAddEmail]
   );
 
-  const isMaxCoteachers = useCallback(() => {
-    return numCoteachers >= 5;
-  }, [numCoteachers]);
+  const isMaxCoteachers = numCoteachers >= 5;
 
   const getErrorOrCount = () => {
     if (addError) {
