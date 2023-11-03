@@ -1,10 +1,10 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
-  constructor(workspace) {
+  constructor(workspace, idSuffix) {
     super();
     this.workspace = workspace;
-    this.id = `cdoTrashcan-${this.workspace.id}`;
+    this.id = `cdoTrashcan-${idSuffix}`;
 
     /**
      * Current open/close state of the lid.
@@ -53,14 +53,14 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   createTrashcanSvg() {
     this.svgGroup_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.G,
-      {class: `blocklyTrash-${this.workspace.id}`},
+      {class: `blocklyTrash-${this.id}`},
       this.container
     );
 
     // trashcan body
     const bodyClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
-      {id: `blocklyTrashBodyClipPath-${this.workspace.id}`},
+      {id: `blocklyTrashBodyClipPath-${this.id}`},
       this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
@@ -84,7 +84,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': `url(#blocklyTrashBodyClipPath-${this.workspace.id})`,
+        'clip-path': `url(#blocklyTrashBodyClipPath-${this.id})`,
       },
       this.svgGroup_
     );
@@ -97,7 +97,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     // trashcan lid
     const lidClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
-      {id: `blocklyTrashLidClipPath-${this.workspace.id}`},
+      {id: `blocklyTrashLidClipPath-${this.id}`},
       this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
@@ -112,7 +112,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': `url(#blocklyTrashLidClipPath-${this.workspace.id})`,
+        'clip-path': `url(#blocklyTrashLidClipPath-${this.id})`,
       },
       this.svgGroup_
     );
