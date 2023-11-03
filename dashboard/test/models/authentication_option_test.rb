@@ -59,8 +59,8 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     auth_id = TEST_LTI_AUTH_ID
     valid_option = create :authentication_option, credential_type: cred_type, authentication_id: auth_id
     assert valid_option.valid?
-    # invalid_option = create :authentication_option, credential_type: cred_type, authentication_id: 'nope'
-    # refute invalid_option.valid?
+    invalid_option = build :authentication_option, credential_type: cred_type, authentication_id: 'nope'
+    refute invalid_option.valid?
   end
 
   test 'deleted authentication options do not affect uniqueness' do
@@ -282,6 +282,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     # even if there already exists a different user account with that same
     # email.
     AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
+      # Auth options with a LTI_V1 credential type validates for a particular format for authentication_id
       if credential_type == AuthenticationOption::LTI_V1
         auth_id = TEST_LTI_AUTH_ID
         option = build :authentication_option, credential_type: credential_type, authentication_id: auth_id
@@ -294,8 +295,9 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   end
 
   test "untrusted emails do not violate uniqueness for trusted emails" do
+    # Not including LTI credential types here as it would require a specific authentication_id format
     untrusted = create :authentication_option,
-      credential_type: AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.sample
+      credential_type: AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.excluding([AuthenticationOption::LTI_V1]).sample
     assert untrusted.valid?
 
     trusted = create :authentication_option,
