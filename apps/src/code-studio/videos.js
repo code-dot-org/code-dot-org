@@ -52,12 +52,12 @@ function onVideoEnded() {
 var currentVideoOptions;
 window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
-  const p = new YT.Player('video', {
+  const player = new YT.Player('video', {
     events: {
       onReady: function (event) {
         analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
           url: location.href,
-          video: p.getVideoUrl(),
+          video: player.getVideoUrl(),
         });
       },
       onStateChange: function (state) {
@@ -71,7 +71,7 @@ window.onYouTubeIframeAPIReady = function () {
         if (amplitudeEvent) {
           analyticsReporter.sendEvent(amplitudeEvent, {
             url: location.href,
-            video: p.getVideoUrl(),
+            video: player.getVideoUrl(),
           });
         }
 
