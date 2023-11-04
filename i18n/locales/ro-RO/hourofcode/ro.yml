@@ -6,10 +6,10 @@ ro:
   front_title: Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}
   coming_soon: În curând
   new: Nou
-  hours_of_code_served: Ore de cod servite
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Elevii învaţa în peste 45 de limbi
   hoc_stat_hours_served: Peste 100M de elevi au încercat o Hour of Code
-  hoc_stat_females: Studentele reprezintă 50% dintre participanții la Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 dec.
   campaign_date_start_long: 4 decembrie
   campaign_date_short: 4-10 dec.
@@ -50,10 +50,10 @@ ro:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Ce vei crea?
   hoc2023_social_creativity_with_ai_desc: Utilizați informatica pentru a explora și
     a afla despre AI!
-  hoc2023_what_is_hoc_desc: Ora de cod este o introducere gratuită în informatică
-    prin activități distractive și videoclipuri pentru cursanții de toate nivelurile
-    de calificare. Sărbătoarea din acest an atât a codificării, cât și a AI este susținută
-    de peste 400 de parteneri, 20.000 de educatori și 58.000 de voluntari.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Explorează, Joacă-Te, Creează!
   social_hoc2022_explore_play_create: Utilizează informatica pentru a explora, a te
     juca și a crea!
@@ -66,9 +66,9 @@ ro:
     Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
   social_hoc2023_dance: Cu Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     muzică din „Encanto” de la Disney și multe altele!
-  social_hoc2023_dance_v2: Este timpul să vă strângeți lucrurile! Creați-vă propria
-    petrecere de dans cu hituri de Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki
-    Minaj, Rosalía și multe altele!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Învață astăzi, construiește un viitor mai bun.
@@ -294,9 +294,9 @@ ro:
     informații și sprijin de la alți educatori.
   required_materials: 'Materiale Necesare:'
   optional_materials: 'Materiale Opționale:'
-  for_students: Pentru studenți
+  for_students: For students
   for_educators: Pentru educatori/profesori
-  call_to_action_host_hoc: Găzduiește o oră de cod
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Organizați un eveniment
   call_to_action_register_event: Înregistrați-vă evenimentul
   call_to_action_register_your_hoc: Înregistrează-ți Hour of Code
@@ -304,11 +304,11 @@ ro:
   call_to_action_start_activity: Începeți o activitate
   call_to_action_get_certificates: Obțineți certificate
   call_to_action_go_beyond_hoc: Mergeți dincolo de Ora Codului
-  call_to_action_explore_all_hoc_activities: Explorați toate activitățile Hour of
-    Code de la Code.org
-  call_to_action_start_dance_party: Începeți petrecerea de dans
-  call_to_action_start_part_02: Începeți partea a doua
-  call_to_action_start_unplugged_activity: Începeți activitatea deconectată
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Vizualizați resursele promoționale
   call_to_action_learn_more: Aflați mai multe
   call_to_action_watch_now: Uita-te acum
@@ -406,9 +406,9 @@ ro:
   call_to_action_view_faqs: Vezi mai multe Întrebări frecvente
   call_to_action_applications_open: Aplicațiile sunt acum deschise
   call_to_action_apply_cs_ambassador: Aplică pentru a fi Ambasador CS
-  call_to_action_coming_soon: În curând!
-  call_to_action_learn_how_ai_works: Aflați cum funcționează AI
-  call_to_action_learn_about_ai: Aflați mai multe despre AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Vizualizați ghidul instrucțiunilor
     pentru educatori
   aria_label_call_to_action_hoc_how_to_companies: Vizualizați ghidul de instrucțiuni
@@ -425,9 +425,9 @@ ro:
     pentru voluntari
   aria_label_call_to_action_hoc_how_to_virtual_events: Vizualizați ghidul de instrucțiuni
     pentru evenimente virtuale
-  aria_label_call_to_action_dance_01: Începeți activitatea Dance Party
-  aria_label_call_to_action_dance_02: Începeți partea a doua a activității Dance Party
-  aria_label_call_to_action_dance_unplugged: Începeți activitatea Dance Party deconectată
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -547,28 +547,25 @@ ro:
   curriculum_name_creating_apps_with_devices: Crearea de Aplicații cu ajutorul Dispozitivelor
   curriculum_name_poetry: Codificarea cu Poezia
   curriculum_name_dance_party: Petrecere de dans
-  curriculum_name_dance_party_02: Continuă să dansezi
-  curriculum_name_dance_party_unplugged: Petrecere de dans dezactivată
-  curriculum_name_dance_party_ai_edition: 'Petrecere de dans: Ediția AI'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Rezolvarea Problemelor & Calculul
   curriculum_name_web_development: Dezvoltare Web
   curriculum_name_interactive_animations_games: Animații & Jocuri Interactive
   curriculum_name_design_process: Procesul de Proiectare
   curriculum_name_data_society: Date & Societate
-  curriculum_desc_dance_party_01: În această activitate introductivă, utilizați codul
-    pentru a face o varietate de personaje colorate să treacă la fundaluri animate
-    și muzică optimistă.
-  curriculum_desc_dance_party_02: Mergeți dincolo de tutorialul introductiv cu idei
-    extinse de proiecte. Răsfoiți o bibliotecă de exemple de petreceri de dans mai
-    complexe.
-  curriculum_desc_dance_party_unplugged: Începeți-vă canalul - nu este nevoie de computer!
-    Aflați cum conceptele de codare, cum ar fi evenimentele, pot fi utilizate pentru
-    a sincroniza coregrafia dansatorului.
-  curriculum_desc_dance_party_ai_edition: Aflați despre conceptele de inteligență
-    artificială (AI) pentru a vă crea propria petrecere virtuală de dans prezentând
-    artiști de top de astăzi. Cu zeci de melodii din care să alegeți, ajungeți la
-    fiecare student, indiferent de gustul lor muzical. Este timpul să vă strângeți
-    lucrurile!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Set gratuit de programe elementare care introduce elevii în
     conceptele fundamentale ale informaticii.
   curriculum_desc_csf_express: Învățați să creați programe de calculator, să dezvolți
@@ -708,12 +705,12 @@ ro:
   module_grade_grade_03: Clasa 3
   module_grade_grade_04: Clasa 4
   module_grade_grade_05: Clasa 5
-  module_age_05_07: Vârsta 5-7
-  module_age_07: Vârsta 7+
-  module_age_07_11: Vârsta 7-11
-  module_age_11: Vârsta 11+
-  module_age_13: Vârsta 13+
-  module_age_all_age: Toate vârstele
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: Profesori K-5 (grădiniță-cl. 5-a)
   module_grade_6_10_teachers: Profesori 6-10
   module_grade_9_12_teachers: Profesori 9-12
@@ -811,8 +808,8 @@ ro:
   heading_csa_ai: Căutați lucruri de făcut după examenul AP®?
   heading_bring_cs_to_students: Aduceți informatica studenților
   heading_cs_ambassador_program: Programul Ambasadorului CS
-  heading_featured_student_projects: Proiecte studențești recomandate
-  heading_start_hoc_with_videos: Începeți-vă Hour of Code cu videoclipuri inspiraționale
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Dacă ești un elev de liceu pasionat de încurajarea mai multor
     femei tinere să ia informatică la școala ta, atunci avem nevoie de tine!
   cs_ambassador_desc: Fiecare domeniu, inclusiv medicina, divertismentul, sportul,
@@ -911,14 +908,13 @@ ro:
     Principiile de Informatică ale Code.org și pentru a primi mementouri utile, sfaturi
     și actualizări trimise direct în căsuța de e-mail.
   subscribe_form_section_unsubscribe: Vă puteți dezabona în orice moment.
-  dance_hero_heading: Codificați o petrecere de dans
-  dance_featuring_songs_by_short: 'Cu melodii de:'
-  dance_featuring_songs_by_long: 'Dance Party include melodii de:'
-  dance_and_more: și mai mult
-  dance_choose_activity: Alege-ți petrecerea de dans
-  dance_afe_disclaimer: Artiștii a căror muzică este folosită în acest tutorial nu
-    sponsorizează sau aprobă Amazon ca parte a licențierii utilizării muzicii lor
-    către Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Cum funcționează Blockchain
   blockchain_hero_desc: Scufundați-vă în lumea blockchain-ului cu „Cum funcționează
     Blockchain”, noua noastră serie video și lecțiile însoțitoare!
@@ -14561,8 +14557,8 @@ ro:
     recunoscători că beneficiem de ajutorul neobosit al comunității mai largi de educație
     în domeniul informaticii și [mulțumim tuturor partenerilor și persoanelor care
     au susținut impactul nostru de-a lungul anilor] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org Raport anual 2021] (%{report_url}) (Rapoarte
-    anterioare: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
     [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Valorile noastre de bază și liniile directoare
     de mesagerie] (%{core_url})"
@@ -14613,10 +14609,10 @@ ro:
     un ghid la nivel înalt pentru state, districte și organizații care implementează
     educația informatică. Cadrul a câștigat sprijinul a sute de academicieni, educatori
     K-12, companii de software, organizații non-profit și state.
-  about_page_section_specific_description_6: Formularul IRS Code.org 990 pentru [2014](%{irs_url_1}),
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
     [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019]()%{irs_url_6}), [2020](%{irs_url_7}) și [2021](%{irs_url_8}). [Politica
-    de donație.] (%{donation_policy_url})
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
   about_page_section_specific_description_7: "[Înscrieți-vă pentru a primi actualizări
     de stare] (%{sign_up_url}) despre progresul mișcării informatice K-12 și despre
     activitatea Code.org. Sau urmăriți Code.org pe social media:"
@@ -14647,72 +14643,66 @@ ro:
     pentru factorii de decizie, liderii și personalul din școli pentru îndrumarea
     inițială cu ajutorul IA în școlile lor.
   teach_ai_button_label: Vizualizați setul de instrumente
-  middle_high_page_main_title: Învățare pentru vârste de 11 ani și peste
-  middle_high_page_main_description: Explorați lumea informaticii cu videoclipuri
-    captivante, tutoriale în ritm propriu, activități de programare și multe altele!
-  middle_high_page_hero_title: Începeți cu Hour of Code
-  middle_high_page_hero_description: Aflați elementele fundamentale ale informaticii
-    cu activități gratuite Hour of Code, cu blocuri de codare drag-and-drop. Există
-    sute de opțiuni de o oră din care să alegeți!
-  middle_high_page_hourofcode_link: Explorați activitățile Hour of Code
-  middle_high_page_modules_title: Module de programare pentru elevii mai mari
-  middle_high_page_modules_description: Adaptate de la cursurile noastre CS Discoveries
-    și CS Principles, aceste module scurte, în ritm propriu, pentru elevii de gimnaziu
-    și liceu sunt o modalitate excelentă de a învăța concepte care acoperă toate limbajele
-    și instrumentele de programare.
-  middle_high_page_modules_card_title_1: Introducere în Laboratorul pentru jocuri
-  middle_high_page_modules_card_title_2: Programarea țestoaselor în Laboratorul pentru
-    aplicații
-  middle_high_page_modules_card_title_3: Programare influențată de evenimente în Laboratorul
-    pentru aplicații
-  middle_high_page_modules_card_description_1: Mișcă-te în ritmul tău în această introducere
-    în mediul nostru Game Lab în timp ce programezi animații, artă interactivă și
-    jocuri.
-  middle_high_page_modules_card_description_2: Deblocați capacitatea de a crea aplicații
-    bogate și interactive cu JavaScript în App Lab!
-  middle_high_page_modules_card_description_3: Mergeți în ritmul propriu cu această
-    introducere în mediul de programare App Lab, în care elevii folosesc JavaScript
-    pentru a crea aplicații interactive.
-  middle_high_page_modules_card_link: Încearcă-l
-  middle_high_page_make_your_own_title: Creați-vă propriile aplicații, jocuri și pagini
-    web
-  middle_high_page_make_your_own_description: 'În plus față de cursuri, avem instrumente
-    de programare care vă permit să vă explorați creativitatea și să faceți ceva uimitor. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Laboratorul de Aplicații
-  middle_high_page_make_your_own_card_title_2: Laboratorul de jocuri
-  middle_high_page_make_your_own_card_title_3: Laborator Web
-  middle_high_page_make_your_own_card_descrpition_1: App Lab este un mediu de programare
-    în care puteți crea aplicații simple. Proiectați o aplicație, codificați în JavaScript
-    fie cu blocuri, fie cu text, apoi partajați-vă aplicația în câteva secunde.
-  middle_high_page_make_your_own_card_descrpition_2: Laboratorul pentru jocuri este
-    un mediu de programare în care puteți realiza animații și jocuri simple cu obiecte
-    și personaje care interacționează între ele.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab este un mediu de programare
-    în care puteți face pagini web simple folosind HTML și CSS. Proiectați-vă paginile
-    web și partajați-vă site-ul în câteva secunde.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Aflați mai multe
-  middle_high_page_additional_resources_title: Resurse suplimentare
-  middle_high_page_additional_resources_description: Există atât de multe modalități
-    de a explora în continuare informatica! Răsfoiți biblioteca noastră video sau
-    aflați mai multe despre cariere interesante în domeniul informaticii.
-  middle_high_page_video_library_title: Descoperiți biblioteca noastră video
-  middle_high_page_video_library_description: Aflați elementele de bază ale informaticii
-    prin videoclipuri scurte de 5-10 minute pe subiecte precum inteligența artificială,
-    internetul, modul în care funcționează computerele, cum să nu fiți piratat, blockchain,
-    cariere și multe altele!
-  middle_high_page_video_library_link: Vizualizați biblioteca video
-  middle_high_page_cs_journeys_title: Mergeți mai departe cu CS Journeys
-  middle_high_page_cs_journeys_description: Faceți următorul pas în călătoria dvs.
-    în informatică. Explorați cariere, oportunități de mentorat, cursuri online, burse,
-    stagii și multe altele!
-  middle_high_page_cs_journeys_link: Explorați CS Journeys
-  middle_high_page_cs_title: Informatica în clasă
-  middle_high_page_cs_description: Aceste cursuri ar trebui să fie conduse de un profesor!
-    Dacă doriți să le vedeți predate la școala dvs., luați în considerare să lucrați
-    cu un profesor pentru a-i aduce la clasa dvs.
-  middle_high_page_cs_card_title_1: Descoperiri CS
-  middle_high_page_cs_card_title_2: Principiile CS
-  middle_high_page_cs_card_title_3: AP Informatică A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Set gratuit de programe școlare pentru învățământul
     elementar care îi introduce pe elevi în conceptele fundamentale ale informaticii
     și îi provoacă să exploreze modul în care informatica și tehnologia pot avea un
@@ -14724,34 +14714,34 @@ ro:
   middle_high_page_cs_card_description_3: Prezentați studenților inginerie software
     și design orientat pe obiecte în timp ce învață limbajul de programare Java în
     acest curriculum gratuit pentru AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explorați CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Explorați principiile CS
-  middle_high_page_cs_link_3: Explorați CSA
-  elemeentary_page_main_title: Învățarea pentru vârste cuprinse între 5 și 11 ani
-  elementary_page_main_description: Explorați lumea informaticii cu videoclipuri captivante,
-    tutoriale în ritm propriu, activități de programare și multe altele!
-  elementary_page_own_pace_title: Continuă să înveți în ritmul propriu
-  elementary_page_own_pace_description: Creați desene, jocuri și multe altele în aceste
-    două opțiuni excelente pentru studenții care încep să învețe singuri elementele
-    de bază ale informaticii.
-  elementary_page_own_pace_card_title_1: Curs Pre-Reader Express
-  elementary_page_own_pace_card_title_2: Curs expres
-  elementary_page_own_pace_card_description_1: Învață informatica în ritmul tău! Învață
-    să creezi programe de calculator, să dezvolți abilități de rezolvare a problemelor
-    și să lucrezi prin provocări distractive! Creați jocuri și proiecte creative pe
-    care să le împărtășiți prietenilor, familiei și profesorilor.
-  elementary_page_own_pace_link_1: Începeți cursul pre-cititor
-  elementary_page_own_pace_link_2: Începeți cursul Express
-  elementary_page_make_your_own_games_title: Creează-ți propriile animații și jocuri
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Laboratorul Sprite
-  elementary_page_make_your_own_games_card_description_1: E timpul să devii creativ!
-    Utilizați codificarea bazată pe blocuri pentru a face ceva prost, dulce sau spațios
-    în Sprite Lab. Singura limită este imaginația ta!
-  elementary_page_make_your_own_games_link: Încercați Sprite Lab
-  elementary_page_computer_science_title: Informatica în clasă
-  elementary_page_computer_science_description: Aceste cursuri ar trebui să fie conduse
-    de un profesor! Dacă doriți să le vedeți învățați la școala dvs., cereți unui
-    părinte sau tutore să lucreze cu un profesor pentru a-i aduce la clasa dvs.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Bazele informaticii
   elementary_page_computer_science_card_title_2: Conexiunile Informaticii
   elementary_page_computer_science_description_1: Set gratuit de programe școlare

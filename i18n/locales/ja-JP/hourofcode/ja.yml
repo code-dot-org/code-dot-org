@@ -6,10 +6,10 @@ ja:
   front_title: "%{campaign_date} は、史上最大の学習イベントに参加しよう"
   coming_soon: 近日公開
   new: 新規
-  hours_of_code_served: コード提供時間
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: 45以上の言語で生徒たちが学んでいます
   hoc_stat_hours_served: 1億人以上の生徒がアワー・オブ・コードを体験しました
-  hoc_stat_females: Hour of Codeの参加者の50％を女子学生が占めています
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 12月4日
   campaign_date_start_long: 12月4日
   campaign_date_short: 12月4日～10日
@@ -45,8 +45,10 @@ ja:
   hoc2023_hero_desc_learn_page: 今年は、人工知能（AI）と非AIコンポーネントの両方を網羅するコーディングの機会を提供することで、アワー・オブ・コードを新たな高みへと導きます。
   hoc2023_social_creativity_with_ai_title: "『アワー・オブ・コード』-あなたなら何を作りますか？"
   hoc2023_social_creativity_with_ai_desc: コンピュータサイエンスを使ってAIを探求し、学びましょう！
-  hoc2023_what_is_hoc_desc: Hour of Codeは、あらゆるスキルレベルの学習者を対象とした、楽しいアクティビティやビデオを通じて、コンピューターサイエンスを無料で紹介しています。今年のコーディングと
-    AI の祭典は、400 を超えるパートナー、2 万人の教育者、58,000 人のボランティアによって支えられています。
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: 探って、遊んで、作ろう！
   social_hoc2022_explore_play_create: コンピューターサイエンスで、探って、遊んで、作ろう！
   codeorg_homepage_hoc2022_body: 宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります。
@@ -54,7 +56,9 @@ ja:
   hoc2022_codeorg_description: 第10回「コードの時間」がこの世からおさらば！ 一緒に探検、プレイ、創造しましょう。
   social_hoc2022_dance: ビヨンセ、ハリー・スタイルズ、リッツォ、リル・ナズ・エックス、セレーナ・ゴメス、ディズニーの「エンカント」の音楽などをフィーチャー！
   social_hoc2023_dance: ビヨンセ、防弾少年団、ハリー・スタイルズ、リッツォ、リル・ナズ・エックス、セレーナ・ゴメス、ディズニーの「エンカント」の音楽などをフィーチャー！
-  social_hoc2023_dance_v2: さあ、準備を整える時が来ました！マイリー・サイラス、BTS、リル・ナズ・エックス、ハリー・スタイルズ、ニッキー・ミナージュ、ロザリアなどのヒット曲をフィーチャーした自分だけのダンスパーティーを作ろう！
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  今日から学び、明るい明日を築く。  "
@@ -200,9 +204,9 @@ ja:
   teacher_forum_desc: アワー・オブ・コード 教師フォーラムにアクセスして、他の教育者からアドバイス、洞察、サポートを受けてください。
   required_materials: 必要な教材：
   optional_materials: オプションの教材：
-  for_students: 学生用
+  for_students: For students
   for_educators: 教育関係者向け
-  call_to_action_host_hoc: ホスト 1 時間分のコード
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: イベントを開催
   call_to_action_register_event: イベントを登録する
   call_to_action_register_your_hoc: アワー・オブ・コードを登録する
@@ -210,10 +214,11 @@ ja:
   call_to_action_start_activity: アクティビティの開始
   call_to_action_get_certificates: 証明書の取得
   call_to_action_go_beyond_hoc: "「アワー・オブ・コード」の先へ"
-  call_to_action_explore_all_hoc_activities: Code.org の「アワー・オブ・コード」のアクティビティをすべて見る
-  call_to_action_start_dance_party: ダンスパーティーを始める
-  call_to_action_start_part_02: パート 2 を開始
-  call_to_action_start_unplugged_activity: アンプラグドアクティビティを開始
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: プロモーションリソースを見る
   call_to_action_learn_more: もっと詳しく知る
   call_to_action_watch_now: 今すぐ見る
@@ -309,9 +314,9 @@ ja:
   call_to_action_view_faqs: よくある質問をもっと見る
   call_to_action_applications_open: アプリケーションがオープンしました
   call_to_action_apply_cs_ambassador: CSアンバサダーに応募する
-  call_to_action_coming_soon: 近日公開！
-  call_to_action_learn_how_ai_works: AI の仕組みを学ぶ
-  call_to_action_learn_about_ai: AI について知る
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: 教育者向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_companies: 企業向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_districts: 地区向けハウツーガイドを見る
@@ -320,9 +325,9 @@ ja:
   aria_label_call_to_action_hoc_how_to_public_officials: 公務員向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_volunteers: ボランティア向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_virtual_events: バーチャルイベント向けハウツーガイドを見る
-  aria_label_call_to_action_dance_01: ダンスパーティーアクティビティを開始する
-  aria_label_call_to_action_dance_02: ダンスパーティーアクティビティのパート2を開始
-  aria_label_call_to_action_dance_unplugged: ダンスパーティーアンプラグドアクティビティを開始する
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Amazon フューチャーエンジニアの詳細はこちら
   aria_label_call_to_action_teaching_csf: コンピュータサイエンスの基礎を教える専門学習プログラムを開始
   aria_label_call_to_action_teaching_csd: ティーチング・コンピュータ・サイエンス・ディスカバリーズの専門学習プログラムを開始
@@ -405,18 +410,25 @@ ja:
   curriculum_name_creating_apps_with_devices: デバイスを使ったアプリの作成
   curriculum_name_poetry: 詩によるコーディング
   curriculum_name_dance_party: ダンスパーティー
-  curriculum_name_dance_party_02: キープ・オン・ダンス
-  curriculum_name_dance_party_unplugged: ダンス・パーティー・アンプラグド
-  curriculum_name_dance_party_ai_edition: ダンスパーティー:AI エディション
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: 問題解決とコンピューティング
   curriculum_name_web_development: ウェブ開発
   curriculum_name_interactive_animations_games: インタラクティブなアニメーションとゲーム
   curriculum_name_design_process: 設計プロセス
   curriculum_name_data_society: データと社会
-  curriculum_desc_dance_party_01: この入門アクティビティでは、コードを使って色とりどりのさまざまなキャラクターをアニメーションの背景や明るい音楽に合わせて動かします。
-  curriculum_desc_dance_party_02: 入門用チュートリアルの域を超えて、プロジェクトのアイディアを広げましょう。より複雑なダンスパーティーの例を集めたライブラリーをご覧ください。
-  curriculum_desc_dance_party_unplugged: パソコン不要でグルーヴを始めましょう！イベントなどのコーディングコンセプトを使ってダンサーの振り付けを同期させる方法を学びましょう。
-  curriculum_desc_dance_party_ai_edition: 人工知能 (AI) の概念を学んで、今日のトップアーティストを紹介する独自のバーチャルダンスパーティーを作りましょう。数十曲から選べるので、音楽の好みに関係なく、すべての生徒に届きます。今こそ自分の曲を披露する時です！
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: コンピュータサイエンスの基本概念を学生に紹介する無料の初等カリキュラムセット。
   curriculum_desc_csf_express: コンピュータプログラムの作成、問題解決能力の開発、楽しい課題に取り組みながら学びます！ゲームや創造的なプロジェクトを作り、友達や家族、先生と共有しましょう。
   curriculum_desc_csf_express_pre_reader: パズルを解いたり、アニメーションのシーンを作ったりして、ドラッグ＆ドロップのブロックコーディングの基礎を学びましょう。アートや簡単なゲームを作って、友達や家族、先生と共有しましょう。
@@ -500,12 +512,12 @@ ja:
   module_grade_grade_03: 3年生
   module_grade_grade_04: 4年生
   module_grade_grade_05: 5年生
-  module_age_05_07: 5歳から7歳まで
-  module_age_07: 対象年齢:7歳以上
-  module_age_07_11: 7歳から11歳
-  module_age_11: 対象年齢:11歳以上
-  module_age_13: 対象年齢:13歳以上
-  module_age_all_age: 全年齢対象
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5教師
   module_grade_6_10_teachers: 6-10教師
   module_grade_9_12_teachers: 9-12教師
@@ -587,8 +599,8 @@ ja:
   heading_csa_ai: AP® 試験後にやることをお探しですか？
   heading_bring_cs_to_students: 学生にコンピュータサイエンスをもたらす
   heading_cs_ambassador_program: CS アンバサダープログラム
-  heading_featured_student_projects: 注目の学生プロジェクト
-  heading_start_hoc_with_videos: インスピレーションを与える動画でHour of Codeを始めましょう
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: より多くの若い女性に学校でコンピュータサイエンスを学ぶよう奨励することに情熱を注いでいる高校生なら、私たちにはあなたが必要です！
   cs_ambassador_desc: 医療、エンターテインメント、スポーツ、教育、ビジネス、ファッション、起業家精神など、あらゆる分野がコンピュータサイエンスの影響を受けています。しかし、高校生の若い女性のうち、コンピュータサイエンスの授業を受けるのはわずか
     5% です。アンバサダーは、仲間にコンピュータサイエンスの授業を受けるよう勧めることで、この男女格差を埋める手助けをすることができます。
@@ -640,12 +652,13 @@ ja:
   subscribe_form_section_desc_csf: サインアップすると、Code.orgのコンピュータサイエンスの基礎に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
   subscribe_form_section_desc_csp: サインアップすると、Code.orgのコンピュータサイエンス原則に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
   subscribe_form_section_unsubscribe: 購読はいつでも解除できます。
-  dance_hero_heading: コード・ア・ダンス・パーティー
-  dance_featuring_songs_by_short: '収録曲:'
-  dance_featuring_songs_by_long: ダンスパーティーには以下の曲が含まれています：
-  dance_and_more: そしてもっと
-  dance_choose_activity: ダンスパーティーをお選びください
-  dance_afe_disclaimer: このチュートリアルで音楽を使用するアーティストは、Code.org への音楽の使用許諾の一環として、Amazon を後援または推奨しているわけではありません。
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: ブロックチェーンの仕組み
   blockchain_hero_desc: 新しいビデオシリーズとそれに付随するレッスンである「How Blockchain Works」で、ブロックチェーンの世界に飛び込みましょう！
   blockchain_intro_heading: ブロックチェーンの仕組みを見る
@@ -9322,69 +9335,100 @@ ja:
   teach_ai_title: 実世界の例。実用的なリソース。
   teach_ai_description: 学校向けAIガイダンスツールキットは、政策立案者、学校指導者、職員が学校におけるAIに関する初期ガイダンスを作成するためのリソースです。
   teach_ai_button_label: ツールキットを見る
-  middle_high_page_main_title: 11歳以上の学習
-  middle_high_page_main_description: 魅力的なビデオ、自分のペースで進められるチュートリアル、プログラミングアクティビティなどで、コンピューターサイエンスの世界を探検しましょう！
-  middle_high_page_hero_title: Hour of Codeで始めよう
-  middle_high_page_hero_description: コーディングブロックをドラッグアンドドロップできる無料のHour of Codeアクティビティで、コンピューターサイエンスの基礎を学びましょう。何百種類ものオプションから選べます！
-  middle_high_page_hourofcode_link: Hour of Codeのアクティビティを見る
-  middle_high_page_modules_title: 年長生向けプログラミングモジュール
-  middle_high_page_modules_description: CS DiscoverysとCS Principlesのコースを基にした、中学生と高校生向けの短い自習型モジュールは、あらゆるプログラミング言語とツールにまたがる概念を学ぶのに最適な方法です。
-  middle_high_page_modules_card_title_1: ゲームラボ入門
-  middle_high_page_modules_card_title_2: アプリラボ内のタートルプログラミング
-  middle_high_page_modules_card_title_3: アプリラボ内のイベント主導プログラミング
-  middle_high_page_modules_card_description_1: この Game Lab 環境の入門編で、アニメーション、インタラクティブアート、ゲームをプログラミングしながら、自分のペースで進んでください。
-  middle_high_page_modules_card_description_2: App Labで、JavaScriptを使用してリッチでインタラクティブなアプリを作成する機能をアンロックしましょう！
-  middle_high_page_modules_card_description_3: このApp Labプログラミング環境の入門編を読んで、自分のペースで進んでください。この環境では、学生がJavaScriptを使用してインタラクティブなアプリを作成します。
-  middle_high_page_modules_card_link: 試してみてください
-  middle_high_page_make_your_own_title: 独自のアプリ、ゲーム、ウェブページを作成
-  middle_high_page_make_your_own_description: 'コースに加えて、創造性を探求して素晴らしいものを作ることができるプログラミングツールもあります。 '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: アプリラボ
-  middle_high_page_make_your_own_card_title_2: ゲーム ラボ
-  middle_high_page_make_your_own_card_title_3: ウェブ ラボ
-  middle_high_page_make_your_own_card_descrpition_1: App Labは、簡単なアプリを作ることができるプログラミング環境です。アプリを設計し、ブロックまたはテキストを使用して
-    JavaScript でコーディングすれば、あっという間にアプリを共有できます。
-  middle_high_page_make_your_own_card_descrpition_2: ゲームラボは互いに交流するオブジェクトとキャラクターを使用してシンプルなアニメーションとゲームを作成できるプログラミング環境です。
-  middle_high_page_make_your_own_card_descrpition_3: Web Labは、HTMLとCSSを使って簡単なウェブページを作ることができるプログラミング環境です。Web
-    ページをデザインして、サイトを数秒で共有できます。
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: もっと詳しく知る
-  middle_high_page_additional_resources_title: その他のリソース
-  middle_high_page_additional_resources_description: コンピュータサイエンスをさらに探求する方法はたくさんあります！ビデオライブラリを閲覧するか、コンピューターサイエンス分野でのエキサイティングなキャリアについて詳しく学んでください。
-  middle_high_page_video_library_title: ビデオライブラリをご覧ください
-  middle_high_page_video_library_description: 人工知能、インターネット、コンピューターの仕組み、ハッキングされないようにする方法、ブロックチェーン、キャリアなどのトピックに関する5～10分の短いビデオを通じて、コンピューターサイエンスの基礎を学びましょう。
-  middle_high_page_video_library_link: ビデオライブラリを見る
-  middle_high_page_cs_journeys_title: CS ジャーニーでさらに先へ
-  middle_high_page_cs_journeys_description: コンピュータサイエンスの旅の次の一歩を踏み出しましょう。キャリア、メンターシップの機会、オンラインコース、奨学金、インターンシップなどを探りましょう！
-  middle_high_page_cs_journeys_link: CS ジャーニーを見る
-  middle_high_page_cs_title: 教室でのコンピュータサイエンス
-  middle_high_page_cs_description: これらのコースは教師が主導する必要があります！学校で教えてもらいたい場合は、教師と協力してクラスに連れて行ってもらうことを検討してください。
-  middle_high_page_cs_card_title_1: CS ディスカバリーズ
-  middle_high_page_cs_card_title_2: CSの原則
-  middle_high_page_cs_card_title_3: APコンピュータサイエンスA
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: コンピュータ・サイエンスの基礎概念を紹介し、コンピューティングとテクノロジーがどのように世界に影響を与えることができるかを探求する1年間の無料カリキュラム。
   middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
     students to the foundational concepts of computer science and challenges them
     to explore how computing and technology can impact the world. Can be taught as
     an introductory class and as an AP course.
   middle_high_page_cs_card_description_3: AP® Computer Science A (AP® CSA) 向けのこの無料カリキュラムで、学生にJavaプログラミング言語を学びながら、ソフトウェアエンジニアリングとオブジェクト指向設計を紹介してください。
-  middle_high_page_cs_link_1: CS ディスカバリーを見る
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: CS 原則の詳細を見る
-  middle_high_page_cs_link_3: CSAについて知る
-  elemeentary_page_main_title: 5歳から11歳までの学習
-  elementary_page_main_description: 魅力的なビデオ、自分のペースで進められるチュートリアル、プログラミングアクティビティなどで、コンピューターサイエンスの世界を探検しましょう！
-  elementary_page_own_pace_title: 自分のペースで学習を続ける
-  elementary_page_own_pace_description: コンピューターサイエンスの基礎を自分で学習し始める学生にとって、この2つの優れたオプションで絵やゲームなどを作成できます。
-  elementary_page_own_pace_card_title_1: プレリーダー・エクスプレス・コース
-  elementary_page_own_pace_card_title_2: お急ぎコース
-  elementary_page_own_pace_card_description_1: 自分のペースでコンピュータサイエンスを学びましょう！コンピュータープログラムの作成方法を学び、問題解決スキルを磨き、楽しいチャレンジに取り組みましょう！ゲームやクリエイティブなプロジェクトを作って、友達、家族、先生と共有しましょう。
-  elementary_page_own_pace_link_1: プレリーダーコースを開始
-  elementary_page_own_pace_link_2: エクスプレスコースを開始
-  elementary_page_make_your_own_games_title: 自分だけのアニメーションやゲームを作ろう
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: スプライト・ラボ
-  elementary_page_make_your_own_games_card_description_1: クリエイティブになる時が来ました！Sprite
-    Lab では、ブロックベースのコーディングを使って、馬鹿げたもの、甘いもの、あるいは宇宙の域を超えたものを作りましょう。限界は想像力だけです！
-  elementary_page_make_your_own_games_link: スプライトラボをお試しください
-  elementary_page_computer_science_title: 教室でのコンピュータサイエンス
-  elementary_page_computer_science_description: これらのコースは教師が主導する必要があります！学校で教えてもらいたい場合は、保護者または保護者に教師と協力してクラスに連れて行ってもらうよう依頼してください。
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: コンピュータサイエンスの基礎
   elementary_page_computer_science_card_title_2: コンピューター・サイエンス・コネクション
   elementary_page_computer_science_description_1: コンピュータ・サイエンスの基礎概念を紹介し、コンピューティングとテクノロジーがどのように世界に影響を与えることができるかを探求する1年間の無料カリキュラム。

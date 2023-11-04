@@ -6,10 +6,10 @@ mn:
   front_title: Түүхэн дэх хамгийн том сургалтын арга хэмжээнд нэгдээрэй, %{campaign_date}
   coming_soon: Тун удахгүй
   new: Шинэ
-  hours_of_code_served: Кодын үйлчилсэн цаг
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Оюутнууд 45 гаруй хэл дээр сурч байна
   hoc_stat_hours_served: 100M гаруй оюутнууд нэг цагийн кодын цагийг туршиж үзсэн
-  hoc_stat_females: Эмэгтэй оюутнууд Hour of Code оролцогчдын 50% -ийг эзэлдэг
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 12-р сарын 4
   campaign_date_start_long: оны арванхоёрдугаар сарын 4
   campaign_date_short: 12-р сарын 4-10
@@ -54,10 +54,10 @@ mn:
   hoc2023_social_creativity_with_ai_title: Кодын цаг - Та юу үүсгэх вэ?
   hoc2023_social_creativity_with_ai_desc: АИ-ийн талаар судлах, сурахын тулд компьютерийн
     шинжлэх ухааныг ашигла!
-  hoc2023_what_is_hoc_desc: The Hour of Code нь бүх ур чадварын түвшний суралцагчдад
-    зориулсан хөгжилтэй үйл ажиллагаа, видеогоор дамжуулан компьютерийн шинжлэх ухааны
-    үнэгүй танилцуулга юм. Энэ жилийн кодчилол болон АИ-ийн аль алиных нь баярыг 400
-    гаруй түншүүд, 20,000 сурган хүмүүжүүлэгч, 58,000 сайн дурынхан дэмжиж байна.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Судлах, Тоглох, Бүтээх!
   social_hoc2022_explore_play_create: Ашиглах компьютерийн шинжлэх ухаан судлах, тоглох,
     ба бий болгох!
@@ -70,9 +70,9 @@ mn:
     “Encanto” киноны хөгжим, бусад!
   social_hoc2023_dance: Бейонсе, BTS, Харри Стайл, Лиззо, Лил Нас X, Селена Гомез,
     Диснейн “Encanto” киноны хөгжим болон бусад олон зүйлийг багтаасан!
-  social_hoc2023_dance_v2: Эд зүйлээ туулах цаг болжээ! Майли Сайрус, BTS, Lil Nas
-    X, Харри Стилс, Ники Минаж, Розалия гэх мэт хит бүхий өөрийн бүжгийн үдэшлэгийг
-    бий болгох!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Өнөөдөр суралц, гэрэл гэгээтэй маргааш бий болгох.
@@ -297,9 +297,9 @@ mn:
     тулд Кодын цагийн багш нарын форумд зочилно уу.
   required_materials: 'Шаардлагатай материал:'
   optional_materials: 'Нэмэлт материал:'
-  for_students: Оюутнуудад
+  for_students: For students
   for_educators: Сурган хүмүүжүүлэгчдэд
-  call_to_action_host_hoc: Кодын цагийг зохион байгуулна
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Үйл явдал зохион байгтун
   call_to_action_register_event: Үйл явдлаа бүртгүүлэх
   call_to_action_register_your_hoc: Кодын цагаа бүртгүүлнэ үү
@@ -307,11 +307,11 @@ mn:
   call_to_action_start_activity: Үйл ажиллагаа эхлүүлэх
   call_to_action_get_certificates: Гэрчилгээ авах
   call_to_action_go_beyond_hoc: Кодын цагаас цааш явах
-  call_to_action_explore_all_hoc_activities: Code.org дээрээс Кодын цагийн бүх үйл
-    ажиллагааг судлах
-  call_to_action_start_dance_party: Бүжгийн үдэшлэг эхлэх
-  call_to_action_start_part_02: Хоёр хэсгийг эхлээрэй
-  call_to_action_start_unplugged_activity: Залгагдаагүй үйл ажиллагааг эхлүүлээрэй
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Сурталчилгааны нөөцийг харах
   call_to_action_learn_more: Илүү ихийг олж мэдэх
   call_to_action_watch_now: Одоо үзэх
@@ -408,9 +408,9 @@ mn:
   call_to_action_view_faqs: Илүү олон асуултуудыг үзэх
   call_to_action_applications_open: Програмууд одоо нээгдэж байна
   call_to_action_apply_cs_ambassador: CS Элчин сайд болох өргөдөл гаргах
-  call_to_action_coming_soon: Удахгүй ирнэ!
-  call_to_action_learn_how_ai_works: AI хэрхэн ажилладаг талаар мэдэж аваарай
-  call_to_action_learn_about_ai: АИ-ийн талаар мэдэж аваарай
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Сурган хүмүүжүүлэгчдэд зориулсан
     гарын авлагыг үзэх
   aria_label_call_to_action_hoc_how_to_companies: Компаниудад зориулсан гарын авлагыг
@@ -427,11 +427,9 @@ mn:
     авлагыг үзэх
   aria_label_call_to_action_hoc_how_to_virtual_events: Виртуаль үйл явдлын гарын авлагыг
     харах
-  aria_label_call_to_action_dance_01: Бүжгийн үдэшлэгийн үйл ажиллагааг эхлүүл
-  aria_label_call_to_action_dance_02: Бүжгийн үдэшлэгийн үйл ажиллагааны хоёрдугаар
-    хэсгийг эхлүүлээрэй
-  aria_label_call_to_action_dance_unplugged: Бүжгийн үдэшлэгийн үйл ажиллагааг залгаагүй
-    эхлүүлээрэй
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Амазоны ирээдүйн инженер талаар илүү ихийг олж мэдэх
   aria_label_call_to_action_teaching_csf: Заах Компьютерийн шинжлэх ухааны үндэс мэргэжлийн
     сургалтын хөтөлбөрийг эхлүүлэх
@@ -548,27 +546,25 @@ mn:
   curriculum_name_creating_apps_with_devices: Төхөөрөмжүүдтэй Апп үүсгэх
   curriculum_name_poetry: Яруу найраг нь кодлох
   curriculum_name_dance_party: Бүжгийн үдэшлэг
-  curriculum_name_dance_party_02: Бүжиглэсээр байгаарай
-  curriculum_name_dance_party_unplugged: Бүжгийн үдэшлэг нь залгагдаагүй
-  curriculum_name_dance_party_ai_edition: 'Бүжгийн үдэшлэг: AI хэвлэл'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Асуудал шийдвэрлэх & Computing
   curriculum_name_web_development: Вэб хөгжүүлэлт
   curriculum_name_interactive_animations_games: Интерактив анимаци ба тоглоомууд
   curriculum_name_design_process: Дизайн үйл явц
   curriculum_name_data_society: Мэдээлэл ба нийгэм
-  curriculum_desc_dance_party_01: Энэ танилцуулах үйл ажиллагаанд, өнгө өнгийн тэмдэгтүүд
-    нь янз бүрийн хөдөлгөөнт дэвсгэр болон upbeat хөгжим нь алхам уналтын болгох кодыг
-    ашиглах.
-  curriculum_desc_dance_party_02: Өргөтгөсөн төслийн санаануудаар танилцуулах заавраас
-    цааш явна уу. Илүү нарийн төвөгтэй бүжгийн үдэшлэгийн жишээнүүдийн номын санг
-    үзэх.
-  curriculum_desc_dance_party_unplugged: Ховилоо асаагаач - компьютер шаардлагагүй!
-    Үйл явдлууд шиг кодлох ойлголтуудыг бүжигчин хореографийг синхрончлоход хэрхэн
-    ашиглаж болохыг мэдэж аваарай.
-  curriculum_desc_dance_party_ai_edition: Өнөөгийн шилдэг уран бүтээлчдийг харуулсан
-    өөрийн виртуаль бүжгийн үдэшлэгийг бий болгохын тулд хиймэл оюун ухаан (AI) үзэл
-    баримтлалын талаар мэдэж аваарай. Сонгох олон арван дуунуудаараа оюутан бүрт тэдний
-    хөгжмийн амт хамаагүй хүрдэг. Эд зүйлээ туулах цаг болжээ!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Оюутнуудад компьютерийн шинжлэх ухааны суурь үзэл баримтлалыг
     танилцуулах анхан шатны сургалтын хөтөлбөрийн үнэгүй багц.
   curriculum_desc_csf_express: Компьютерийн програм зохиож, асуудал шийдвэрлэх ур
@@ -703,12 +699,12 @@ mn:
   module_grade_grade_03: 3-р анги
   module_grade_grade_04: 4-р анги
   module_grade_grade_05: 5-р анги
-  module_age_05_07: 5-7 насныхан
-  module_age_07: 7+ насныхан
-  module_age_07_11: 7-11 насныхан
-  module_age_11: 11+ насныхан
-  module_age_13: 13+ насныхан
-  module_age_all_age: Бүх насныхан
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 багш нар
   module_grade_6_10_teachers: 6-10 багш нар
   module_grade_9_12_teachers: 9-12 багш нар
@@ -803,8 +799,8 @@ mn:
   heading_csa_ai: AP® шалгалтын дараа хийх зүйлийг хайж байна уу?
   heading_bring_cs_to_students: Оюутнуудад компьютерийн шинжлэх ухааныг авчрах
   heading_cs_ambassador_program: CS Элчин сайдын хөтөлбөр
-  heading_featured_student_projects: Оюутны онцлох төслүүд
-  heading_start_hoc_with_videos: Кодын цагаа урам зоригтой видеогоор эхлүүлээрэй
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Хэрэв та өөрийн сургуульд компьютерийн шинжлэх ухааныг авахыг
     илүү залуу эмэгтэйчүүдийг урамшуулах талаар хүсэл эрмэлзэлтэй ахлах сургуулийн
     оюутан бол бид танд хэрэгтэй!
@@ -901,14 +897,13 @@ mn:
     талаар сар бүр имэйл хүлээн авахын тулд гарын үсэг зурж, таны ирсэн мэйлд зөв
     илгээсэн сануулга, зөвлөмж, шинэчлэлтүүдийг аваарай.
   subscribe_form_section_unsubscribe: Та ямар ч үед бүртгэлээс хасах боломжтой.
-  dance_hero_heading: Бүжгийн үдэшлэгийг кодлох
-  dance_featuring_songs_by_short: 'Онцлох дуунууд:'
-  dance_featuring_songs_by_long: Бүжгийн үдэшлэгт дараахь дуунууд орно.
-  dance_and_more: болон түүнээс дээш
-  dance_choose_activity: Бүжгийн үдэшлэгээ сонгоорой
-  dance_afe_disclaimer: Энэ заавар нь тэдний хөгжим ашиглаж байгаа уран бүтээлчид
-    нь Code.org өөрсдийн хөгжмийн ашиглалтыг лиценз олгох нэг хэсэг болгон Амазоныг
-    ивээн тэтгэх эсвэл баталж байгаа юм биш юм.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Блокчейн хэрхэн ажилладаг
   blockchain_hero_desc: нь blockchain ертөнцөд шумбах “Хэрхэн Blockchain ажил,” Манай
     шинэ видео цуврал болон дагалдах хичээл!
@@ -14304,71 +14299,66 @@ mn:
     сургуулийн удирдагчид, ажилтнуудад сургуулиуддаа АИ-ийн талаархи анхны удирдамжийг
     боловсруулах нөөц юм.
   teach_ai_button_label: Хэрэгслийн багцыг харах
-  middle_high_page_main_title: 11 ба түүнээс дээш насныханд суралцах
-  middle_high_page_main_description: Компьютерийн шинжлэх ухааны ертөнцийг сонирхол
-    татахуйц видео, бие даасан хичээлүүд, програмчлалын үйл ажиллагаа болон бусад
-    зүйлсээр судлаарай!
-  middle_high_page_hero_title: Кодын цагийн тусламжтайгаар эхлээрэй
-  middle_high_page_hero_description: Чирэх ба унагах кодлох блокуудыг багтаасан үнэгүй
-    Hour of Code үйл ажиллагаануудаар компьютерийн шинжлэх ухааны үндсийг суралцаарай.
-    Олон зуун цагийн сонголтыг сонгох боломжтой!
-  middle_high_page_hourofcode_link: Кодын цагийн үйл ажиллагааг судлаарай
-  middle_high_page_modules_title: Ахмад оюутнуудад зориулсан програмчлалын модулиуд
-  middle_high_page_modules_description: Манай CS Discovery болон CS зарчмуудын хичээлүүдээс
-    зохицож, дунд болон ахлах ангийн сурагчдад зориулсан эдгээр богино, өөрөө хурдацтай
-    модулиуд нь бүх програмчлалын хэл, хэрэгслийг хамарсан ойлголтуудыг сурах гайхалтай
-    арга юм.
-  middle_high_page_modules_card_title_1: Тоглоомын лабораторийн танилцуулга
-  middle_high_page_modules_card_title_2: Апп лаборатори дахь яст мэлхий програмчлал
-  middle_high_page_modules_card_title_3: Апп лаборатори дахь үйл явдалд тулгуурласан
-    програмчлал
-  middle_high_page_modules_card_description_1: Хөдөлгөөнт дүрс, интерактив урлаг,
-    тоглоомуудыг програмчлахдаа манай Game Lab орчны энэхүү танилцуулгад өөрийн хурдаар
-    хөдөлж үзээрэй.
-  middle_high_page_modules_card_description_2: App Lab дахь JavaScript-тэй баялаг,
-    интерактив апп-ууд хийх чадварыг онгойлгоорой!
-  middle_high_page_modules_card_description_3: Оюутнууд интерактив апп үүсгэхийн тулд
-    JavaScript-ийг ашигладаг App Lab програмчлалын орчинд энэхүү танилцуулгыг өөрийн
-    хурдаар явж үзээрэй.
-  middle_high_page_modules_card_link: Үүнийг туршиж үзээрэй
-  middle_high_page_make_your_own_title: Өөрийн програм, тоглоом, вэб хуудсыг бүтээх
-  middle_high_page_make_your_own_description: 'Курсуудаас гадна бидэнд таны бүтээлч
-    сэтгэлгээг судлах, гайхалтай зүйл хийх боломжийг олгодог програмчлалын хэрэгслүүд
-    бий. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Апп Лаб
-  middle_high_page_make_your_own_card_title_2: Тоглоомын лаборатори
-  middle_high_page_make_your_own_card_title_3: Вэб лаборатори
-  middle_high_page_make_your_own_card_descrpition_1: App Lab бол энгийн апп хийх боломжтой
-    програмчлалын орчин юм. Апп, кодыг JavaScript дээр блок эсвэл текстээр боловсруулж,
-    дараа нь секундын дотор програмаа хуваалцаарай.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab бол өөр хоорондоо харилцан
-    үйлчлэх объект, тэмдэгтүүдтэй энгийн анимэйшн, тоглоом хийх боломжтой програмчлалын
-    орчин юм.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab нь HTML болон CSS ашиглан
-    энгийн вэб хуудсуудыг хийх боломжтой програмчлалын орчин юм. Вэб хуудсуудаа зохион
-    бүтээж, сайтаа секундын дотор хуваалцаарай.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Илүү ихийг олж мэдэх
-  middle_high_page_additional_resources_title: Нэмэлт эх үүсвэр
-  middle_high_page_additional_resources_description: Компьютерийн шинжлэх ухааныг
-    цаашид судлах маш олон арга бий! Манай видео номын санг үзэх, эсвэл компьютерийн
-    шинжлэх ухааны салбарт сэтгэл хөдөлгөм карьерын талаар илүү ихийг мэдэж аваарай.
-  middle_high_page_video_library_title: Манай видео номын санг олж мэдээрэй
-  middle_high_page_video_library_description: Хиймэл оюун ухаан, интернэт, компьютер
-    хэрхэн ажилладаг, хэрхэн хакердахгүй байх, блокчейн, карьер гэх мэт сэдвүүдээр
-    5-10 минутын богино видео бичлэгүүдээр компьютерийн шинжлэх ухааны үндсийг сур!
-  middle_high_page_video_library_link: Видео номын санг үзэх
-  middle_high_page_cs_journeys_title: CS Journeys-ийн тусламжтайгаар цааш явна уу
-  middle_high_page_cs_journeys_description: Компьютерийн шинжлэх ухааны аялалдаа дараагийн
-    алхамыг хий. Карьер, менторшийн боломж, онлайн сургалт, тэтгэлэг, дадлага болон
-    бусад зүйлсийг судлаарай!
-  middle_high_page_cs_journeys_link: CS аялалыг судлаарай
-  middle_high_page_cs_title: Анги дахь компьютерийн шинжлэх ухаан
-  middle_high_page_cs_description: Эдгээр сургалтуудыг багш удирдах ёстой! Хэрэв та
-    тэднийг сургуульдаа зааж байгааг харахыг хүсвэл хичээлдээ авчрахын тулд багштай
-    хамтран ажиллахыг бодож үзээрэй.
-  middle_high_page_cs_card_title_1: CS нээлтүүд
-  middle_high_page_cs_card_title_2: CS зарчмууд
-  middle_high_page_cs_card_title_3: AP Компьютерийн шинжлэх ухаан A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Оюутнуудад компьютерийн шинжлэх ухааны үндсэн
     ойлголтуудыг танилцуулж, тооцоолол, технологи нь дэлхийд хэрхэн нөлөөлж болохыг
     судлахад бэрхшээлтэй жилийн турш үнэгүй сургалтын хөтөлбөр юм.
@@ -14379,36 +14369,34 @@ mn:
   middle_high_page_cs_card_description_3: Оюутнуудыг AP® Computer Science A (AP® CSA)
     -д зориулсан энэхүү үнэгүй сургалтын хөтөлбөрт Java програмчлалын хэлийг сурч
     байхдаа програм хангамжийн инженерчлэл, объект хандалтат дизайнтай танилцуул.
-  middle_high_page_cs_link_1: CS Диковеритэй танилцана уу
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: CS зарчмуудыг судлах
-  middle_high_page_cs_link_3: CSA-г судлаарай
-  elemeentary_page_main_title: 5-11 насныханд суралцах
-  elementary_page_main_description: Компьютерийн шинжлэх ухааны ертөнцийг сонирхол
-    татахуйц видео, бие даасан хичээлүүд, програмчлалын үйл ажиллагаа болон бусад
-    зүйлсээр судлаарай!
-  elementary_page_own_pace_title: Өөрийнхөө хурдаар үргэлжлүүлэн суралцаарай
-  elementary_page_own_pace_description: Оюутнууд компьютерийн шинжлэх ухааны үндсийг
-    сурах өөрсдөө эхэлж буй эдгээр хоёр маш сайн сонголтуудад зураг, тоглоом, болон
-    түүнээс дээш бий болгох.
-  elementary_page_own_pace_card_title_1: Уншигчийн өмнөх экспресс курс
-  elementary_page_own_pace_card_title_2: Экспресс курс
-  elementary_page_own_pace_card_description_1: Компьютерийн шинжлэх ухааныг өөрийн
-    хурдаар сур! Компьютерийн програм үүсгэж сурах, асуудал шийдвэрлэх ур чадварыг
-    хөгжүүлэх, хөгжилтэй сорилтуудыг даван туулж ажиллаарай! Найз нөхөд, гэр бүл,
-    багш нартайгаа хуваалцах тоглоом, бүтээлч төсөл хий.
-  elementary_page_own_pace_link_1: Уншигчийн өмнөх сургалтыг эхлүүлээрэй
-  elementary_page_own_pace_link_2: Экспресс сургалтыг эхлүүлэх
-  elementary_page_make_your_own_games_title: Өөрийнхөө хөдөлгөөнт дүрс, тоглоомуудыг
-    хий
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Спрайт лаборатори
-  elementary_page_make_your_own_games_card_description_1: Бүтээлч байх цаг! Sprite
-    Lab-д мунхаг, чихэрлэг, эсвэл гадна-spacey зүйлийг хийхийн тулд блок дээр суурилсан
-    кодчилолыг ашиглана уу. Цорын ганц хязгаар бол таны төсөөлөл юм!
-  elementary_page_make_your_own_games_link: Sprite Lab-ийг туршиж үзээрэй
-  elementary_page_computer_science_title: Анги дахь компьютерийн шинжлэх ухаан
-  elementary_page_computer_science_description: Эдгээр сургалтуудыг багш удирдах ёстой!
-    Хэрэв та тэднийг сургуульдаа зааж байгааг харахыг хүсвэл эцэг эх, асран хамгаалагчаас
-    хичээлдээ авчрахын тулд багштай хамтран ажиллахыг хүс.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Компьютерийн шинжлэх ухааны үндэс
   elementary_page_computer_science_card_title_2: Компьютерийн шинжлэх ухааны холболтууд
   elementary_page_computer_science_description_1: Оюутнуудад компьютерийн шинжлэх
