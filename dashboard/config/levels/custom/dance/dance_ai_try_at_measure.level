@@ -6,6 +6,7 @@
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
+    "uses_preview": "true",
     "skin": "dance",
     "block_pools": [
       "Dancelab"
