@@ -488,7 +488,7 @@ class Blockly < Level
       )
 
       localized_json = translation_json.merge(translations.stringify_keys)
-      library_source.gsub!(translation_text, JSON.generate(localized_json))
+      library_source.gsub!(translation_text, JSON.pretty_generate(localized_json))
       level_libraries[index] = library
     end
     JSON.generate(level_libraries)

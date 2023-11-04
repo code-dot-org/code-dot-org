@@ -1238,55 +1238,83 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
   end
 
-  test 'localizes start_libraries' do
-    test_locale = 'te-ST'
-    level_name = 'test localize start_libraries'
-    i18n_library_name = 'i18n_library_test'
-    level = create(
-      :level,
-      :blockly,
-      name: level_name,
-      )
-
-    # Create a start_libraries blockly level JSON structure containing the
-    # a translatable library and a non-translatable library.
-    start_libraries = JSON.generate(
-      [{name: i18n_library_name,
-        description: "Test Library that gets translated",
-        source: "var TRANSLATIONTEXT = {\n \"test_key_1\": \"expected_string_1\",\"test_key_2\": \"expected_string_2\"\n};\n\n//This library is translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"},
-       {name: "non_translated_library",
-        description: "Test Library that does not get translated",
-        source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
-    )
-
-    # Add translation mapping to the I18n backend
-    custom_i18n = {
-      'data' => {
-        'start_libraries' => {
-          level_name => {
-            i18n_library_name => {
-              test_key_1: 'localized_string_1'
+  class I18nStartLibrariesTest < BlocklyTest
+    setup do
+      test_locale = 'te-ST'
+      @level_name = 'test localize start_libraries'
+      @i18n_library_name = 'i18n_library_test'
+      @level = create(
+        :level,
+        :blockly,
+        name: @level_name,
+        )
+      # Add translation mapping to the I18n backend
+      custom_i18n_libraries = {
+        'data' => {
+          'start_libraries' => {
+            @level_name => {
+              @i18n_library_name => {
+                test_key_1: 'localized_string_1'
+              }
             }
           }
         }
       }
-    }
-    I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
+      I18n.locale = test_locale
+      I18n.backend.store_translations test_locale, custom_i18n_libraries
+    end
 
-    # Localized output to be tested
-    localized_start_libraries = level.localized_start_libraries(start_libraries)
+    teardown do
+      @level.destroy
+      I18n.locale = I18n.default_locale
+    end
 
-    # Expected output
-    localized_library = JSON.generate(
-      [{name: i18n_library_name,
-        description: "Test Library that gets translated",
-        source: "var TRANSLATIONTEXT = {\n \"test_key_1\": \"localized_string_1\",\"test_key_2\": \"expected_string_2\"\n};\n\n//This library is translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"},
-       {name: "non_translated_library",
-        description: "Test Library that does not get translated",
-        source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
-    )
-    assert_equal localized_library, localized_start_libraries
+    test 'localizes start_libraries when i18n_library is present' do
+      # Create a start_libraries JSON structure containing a translatable library and a non-translatable library.
+      start_libraries = JSON.generate(
+        [{name: @i18n_library_name,
+          description: "Test Library that gets translated",
+          source: "var TRANSLATIONTEXT = {\n \"test_key_1\": \"expected_string_1\",\n \"test_key_2\": \"expected_string_2\"\n};\n\n//This library is translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"},
+         {name: "non_translated_library",
+          description: "Test Library that does not get translated",
+          source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
+      )
+
+      # Localized output to be tested
+      localized_start_libraries = @level.localized_start_libraries(start_libraries)
+
+      # Expected output
+      expected_localized_library = JSON.generate(
+        [{name: @i18n_library_name,
+          description: "Test Library that gets translated",
+          source: "var TRANSLATIONTEXT = {\n  \"test_key_1\": \"localized_string_1\",\n  \"test_key_2\": \"expected_string_2\"\n};\n\n//This library is translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"},
+         {name: "non_translated_library",
+          description: "Test Library that does not get translated",
+          source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
+      )
+      assert_equal expected_localized_library, localized_start_libraries
+    end
+
+    test 'does not localize start_libraries when there is not an i18n library' do
+      # Create a start_libraries blockly level JSON structure containing the
+      # a translatable library and a non-translatable library.
+      start_libraries = JSON.generate(
+        [{name: "non_translated_library",
+          description: "Test Library that does not get translated",
+          source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
+      )
+
+      # Localized output to be tested
+      localized_start_libraries = @level.localized_start_libraries(start_libraries)
+
+      # Expected output
+      expected_localized_library = JSON.generate(
+        [{name: "non_translated_library",
+          description: "Test Library that does not get translated",
+          source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
+      )
+      assert_equal expected_localized_library, localized_start_libraries
+    end
   end
 
   test 'get_localized_property returns property translation when level should be localized' do
