@@ -233,12 +233,14 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleUseClick = () => {
-    const params = JSON.parse(resultJson);
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
-      emojis: params.inputs,
-      backgroundEffect: params.backgroundEffect,
-      backgroundColor: params.backgroundColor,
-      foregroundEffect: params.foregroundEffect,
+      emojis: inputs,
+      backgroundEffect:
+        generatedEffects.current.goodEffect?.results.backgroundEffect,
+      backgroundColor:
+        generatedEffects.current.goodEffect?.results.backgroundColor,
+      foregroundEffect:
+        generatedEffects.current.goodEffect?.results.foregroundEffect,
     });
 
     currentAiModalField?.setValue(
@@ -307,12 +309,14 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleConvertBlocks = () => {
-    const params = JSON.parse(resultJson);
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
       emojis: inputs,
-      backgroundEffect: params.backgroundEffect,
-      backgroundColor: params.backgroundColor,
-      foregroundEffect: params.foregroundEffect,
+      backgroundEffect:
+        generatedEffects.current.goodEffect?.results.backgroundEffect,
+      backgroundColor:
+        generatedEffects.current.goodEffect?.results.backgroundColor,
+      foregroundEffect:
+        generatedEffects.current.goodEffect?.results.foregroundEffect,
     });
 
     if (!generatedEffects.current.goodEffect) {
