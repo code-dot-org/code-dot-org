@@ -6,10 +6,10 @@ sq:
   front_title: Bashkohuni eventit më të madh në histori, %{campaign_date}
   coming_soon: Së shpejti
   new: I ri
-  hours_of_code_served: Orët e shërbimit të kodit
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Nxënësit mësojnë në mbi 45 gjuhë
   hoc_stat_hours_served: Më shumë se 100M nxënës kanë provuar Orën e Kodit
-  hoc_stat_females: Studentët femra përbëjnë 50% të pjesëmarrësve të Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 dhjetor
   campaign_date_start_long: 4 dhjetor
   campaign_date_short: 4-10 dhjetor
@@ -40,7 +40,7 @@ sq:
   africa_campaign_date_full: 5 shtator - 17 dhjetor
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
-  hoc2023_header: Kreativiteti me AI
+  hoc2023_header: Krijueshmëria me AI
   hoc2023_hero_desc_homepage: Bashkohuni me miliona njerëz në të gjithë globin në
     organizimin e një ore kodimi, me ose pa AI dhe duke mësuar se si funksionon AI.
     Çdokush, kudo mund ta bëjë atë. Nuk ka nevojë për përvojë.
@@ -50,10 +50,10 @@ sq:
   hoc2023_social_creativity_with_ai_title: Ora e Kodimit - Çfarë do të krijoni?
   hoc2023_social_creativity_with_ai_desc: Përdorni shkencat kompjuterike për të eksploruar
     dhe mësuar rreth AI!
-  hoc2023_what_is_hoc_desc: Ora e Kodit është një hyrje falas në shkencat kompjuterike
-    përmes aktiviteteve argëtuese dhe videove për nxënësit e të gjitha niveleve të
-    aftësive. Festimi i këtij viti i kodimit dhe AI mbështetet nga mbi 400 partnerë,
-    20,000 edukatorë dhe 58,000 vullnetarë.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Eksploro, Luaj, Krijo!
   social_hoc2022_explore_play_create: 'Perdorni shekncat kompjuterike, te eksploroni,
     luani dhe krijoni! '
@@ -66,9 +66,9 @@ sq:
     X, Selena Gomez, muzike nga filmi "Enchanted" i Disneyt dhe shume befasi te tjera! '
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, muzikë nga Disney “Encanto”, dhe më shumë!
-  social_hoc2023_dance_v2: Është koha për të ngritur gjërat tuaja! Krijoni festën
-    tuaj të vallëzimit me hite nga Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki
-    Minaj, Rosalía dhe më shumë!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Meso sot, nderto nje te ardhme me te ndritur per neser
@@ -283,21 +283,21 @@ sq:
     njohuri dhe mbështetje nga edukatorët e tjerë.
   required_materials: 'Materialet e kërkuara:'
   optional_materials: 'Materialet opsionale:'
-  for_students: Për studentët
+  for_students: For students
   for_educators: Për mësuesit
-  call_to_action_host_hoc: Organizoni një orë të kodit
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Mbajeni një ngjarje
   call_to_action_register_event: Regjistroni ngjarjen tuaj
-  call_to_action_register_your_hoc: Regjistroni Orën tuaj të Kodit
+  call_to_action_register_your_hoc: Regjistroni Orën tuaj të Kodimit
   call_to_action_select_activity: Zgjidhni një aktivitet
   call_to_action_start_activity: Filloni një aktivitet
   call_to_action_get_certificates: Merrni certifikata
   call_to_action_go_beyond_hoc: Shkoni përtej Orës së Kodit
-  call_to_action_explore_all_hoc_activities: Eksploroni të gjitha aktivitetet e Hour
-    of Code nga Code.org
-  call_to_action_start_dance_party: Filloni festën e kërcimit
-  call_to_action_start_part_02: Filloni pjesën e dytë
-  call_to_action_start_unplugged_activity: Filloni aktivitetin e shkëputur
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Shikoni burimet promovuese
   call_to_action_learn_more: Mëso më shumë
   call_to_action_watch_now: Shikoni tani
@@ -393,9 +393,9 @@ sq:
   call_to_action_view_faqs: Shikoni më shumë FAQ
   call_to_action_applications_open: Aplikimet tashmë të hapura
   call_to_action_apply_cs_ambassador: Aplikoni për të qenë ambasador i CS
-  call_to_action_coming_soon: Vjen së shpejti!
-  call_to_action_learn_how_ai_works: Mësoni se si funksionon AI
-  call_to_action_learn_about_ai: Mësoni rreth AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Shikoni udhëzuesin për edukatorët
   aria_label_call_to_action_hoc_how_to_companies: Shikoni udhëzuesin për kompanitë
   aria_label_call_to_action_hoc_how_to_districts: Shikoni udhëzuesin për rrethet
@@ -407,11 +407,9 @@ sq:
   aria_label_call_to_action_hoc_how_to_volunteers: Shikoni udhëzuesin për vullnetarët
   aria_label_call_to_action_hoc_how_to_virtual_events: Shikoni udhëzuesin për ngjarjet
     virtuale
-  aria_label_call_to_action_dance_01: Filloni aktivitetin e Dance Party
-  aria_label_call_to_action_dance_02: Filloni pjesën e dytë të aktivitetit të Dance
-    Party
-  aria_label_call_to_action_dance_unplugged: Filloni aktivitetin e Dance Party pa
-    pluhur
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Mësoni më shumë rreth Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Filloni programin e mësimdhënies së Shkencave
     Kompjuterike Bazat e
@@ -529,26 +527,25 @@ sq:
   curriculum_name_creating_apps_with_devices: Krijimi i aplikacioneve me pajisje
   curriculum_name_poetry: Kodimi me poezi
   curriculum_name_dance_party: Festë Vallëzimi
-  curriculum_name_dance_party_02: Vazhdoni të vallëzoni
-  curriculum_name_dance_party_unplugged: Festa e Vallëzimit e Shkëputur
-  curriculum_name_dance_party_ai_edition: 'Festa e Vallëzimit: Edicioni AI'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Zgjidhja e Problemeve & Computing
   curriculum_name_web_development: Zhvillim Web
   curriculum_name_interactive_animations_games: Animacione Interaktive & Lojëra
   curriculum_name_design_process: Procesi i Dizajnit
   curriculum_name_data_society: Të dhënat & Shoqëria
-  curriculum_desc_dance_party_01: Në këtë aktivitet hyrës, përdorni kodin për të bërë
-    një shumëllojshmëri personazhesh shumëngjyrëshe që të bëjnë një lëvizje në sfonde
-    të animuara dhe muzikë optimiste.
-  curriculum_desc_dance_party_02: Shkoni përtej tutorialit hyrës me ide të zgjeruara
-    të projektit. Shfletoni një bibliotekë shembujsh të festave më komplekse të vallëzimit.
-  curriculum_desc_dance_party_unplugged: Ndizni gropën tuaj - nuk ka nevojë për kompjuter!
-    Mësoni se si konceptet e kodimit, si ngjarjet, mund të përdoren për të sinkronizuar
-    koreografinë e valltarit.
-  curriculum_desc_dance_party_ai_edition: Mësoni rreth koncepteve të inteligjencës
-    artificiale (AI) për të krijuar festën tuaj virtuale të vallëzimit duke shfaqur
-    artistët kryesorë të sotëm. Me dhjetëra këngë për të zgjedhur, arrini çdo student
-    pavarësisht shijes së tyre muzikore. Është koha për të ngritur gjërat tuaja!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Set falas i kurrikulave fillore që i njofton studentët me konceptet
     themelore të shkencave kompjuterike.
   curriculum_desc_csf_express: Mësoni të krijoni programe kompjuterike, të zhvilloni
@@ -687,12 +684,12 @@ sq:
   module_grade_grade_03: Klasa 3
   module_grade_grade_04: Klasa 4
   module_grade_grade_05: Klasa 5
-  module_age_05_07: Moshat 5-7
-  module_age_07: Mosha 7+
-  module_age_07_11: Mosha 7-11 vjeç
-  module_age_11: Mosha 11+
-  module_age_13: Mosha 13+
-  module_age_all_age: Të gjitha moshat
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Mësuesit
   module_grade_6_10_teachers: 6-10 Mësues
   module_grade_9_12_teachers: 9-12 Mësues
@@ -789,8 +786,8 @@ sq:
   heading_csa_ai: Duke kërkuar për gjëra për të bërë pas provimit AP®?
   heading_bring_cs_to_students: Sillni shkenca kompjuterike për studentët
   heading_cs_ambassador_program: Programi i Ambasadorëve CS
-  heading_featured_student_projects: Projekte të veçanta studentore
-  heading_start_hoc_with_videos: Filloni Orën tuaj të Kodit me video frymëzuese
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Nëse jeni një nxënës i shkollës së mesme i pasionuar për
     të inkurajuar më shumë gra të reja që të marrin shkenca kompjuterike në shkollën
     tuaj, atëherë ne kemi nevojë për ju!
@@ -891,14 +888,13 @@ sq:
     me Parimet e Shkencave Kompjuterike të Code.org dhe merrni përkujtime, këshilla
     dhe azhurnime të dobishme të dërguara direkt në kutinë tuaj postare.
   subscribe_form_section_unsubscribe: Ju mund të çabonoheni në çdo kohë.
-  dance_hero_heading: Kodoni një festë vallëzimi
-  dance_featuring_songs_by_short: 'Duke shfaqur këngë nga:'
-  dance_featuring_songs_by_long: 'Dance Party përfshin këngë nga:'
-  dance_and_more: dhe më shumë
-  dance_choose_activity: Zgjidhni festën tuaj të kërcimit
-  dance_afe_disclaimer: Artistët, muzika e të cilëve përdoret në këtë tutorial nuk
-    po sponsorizojnë ose mbështesin Amazon si pjesë e licencimit të përdorimit të
-    muzikës së tyre në Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Si funksionon Blockchain
   blockchain_hero_desc: Zhytuni në botën e blockchain me “How Blockchain Works”, seritë
     tona të reja video dhe mësimet shoqëruese!
@@ -2424,15 +2420,15 @@ sq:
     mund të mësojë bazat. Kjo fushatë bazë mbështetet nga mbi 400 partnerë dhe 200,000
     edukatorë në mbarë botën.
   hoc_homepage_registration_desc: Klasa ose grupi juaj mund të bashkohen me miliona
-    njerëz në të gjithë botën duke bërë Orën e Kodit! Regjistrimi për festimin vjetor
-    të Javës së Edukimit të Shkencave Kompjuterike fillon në tetor Megjithatë, Ora
-    e Kodit është në dispozicion gjatë gjithë vitit.
+    njerëz në të gjithë botën duke marrë pjesë në Orën e Kodimit! Regjistrimi për
+    festimin vjetor të Javës së Edukimit të Shkencave Kompjuterike fillon në tetor.
+    Megjithatë, Ora e Kodimit është në dispozicion gjatë gjithë vitit.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lexoni udhëzuesin tonë Si-për] (%{howto_guide_url})
     për të planifikuar një ngjarje për klasën tuaj."
   hoc_homepage_highlights_heading: Pikat kryesore të Orës së Kodimit
   hoc_homepage_organized_by: Ora e Kodimit organizohet nga [Code.org](%{codeorg_url}).
-  hoc_events_heading: Regjistrohuni për të organizuar një orë kodi
-  hoc_events_jump_to_map: Shko në hartën e Orës së Kodit
+  hoc_events_heading: Regjistrohuni për të organizuar një Orë Kodimi
+  hoc_events_jump_to_map: Shko në hartën e Orës së Kodimit
   signup_closed: Regjistrimi për Orën e Kodimit tani është mbyllur. Ju lutemi kontrolloni
     përsëri në tetor për t'u regjistruar në Orën tjetër të Kodimit.
   signup_registration_not_required: 'Nuk keni nevoje te regjistroheni ne menyre qe
@@ -2465,7 +2461,9 @@ sq:
   signup_event_entire_school_label: e gjithë shkolla ime merr pjesë
   signup_event_location_label: Lokacioni i eventit (opsional)
   signup_event_location_error: Vendndodhja e ngjarjes është e nevojshme.
-  signup_special_event_flag_label: Thekso eventin tim të veçantë
+  signup_special_event_flag_label: Ngjarja ime do të përfshijë një rreth të tërë,
+    një organizatë të tërë, anëtarë të komunitetit dhe/ose plane të tjera të veçanta
+    për më shumë se një orë
   signup_special_event_details_label: Aplikoni për tu vlerësuar si event i vecantë
   signup_send_posters_flag_label: Dërgo <a href= "/resources#posters">postera</a>
     në shkollën apo organizatën time
@@ -2555,7 +2553,7 @@ sq:
   map_legend_cs_tech_jam: Evente speciale
   map_warning: 'Lista e plote e ngjarjeve mund te shikohet ne faqen e eventit. '
   map_warning_markdown: Lista e plote e eventeve mund te shikohet ne faqen e eventit.
-  map_view_all_events: Shihni një listë të plotë të ngjarjeve të Hour [here]of Code
+  map_view_all_events: Shihni një listë të plotë të ngjarjeve të Orës [here]së Kodimit
     (%{events_url}).
   meta_tag_og_title: Ora e Kodimit po vjen
   meta_tag_og_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra
@@ -2830,7 +2828,7 @@ sq:
   highlights_description: Disa nga momentet tona të preferuara nga fushata e Orës
     së Kodimit.
   highlights_previous: Momentet kyqe te viteve te kaluara.
-  highlights_see_more: Shini me shume momente kyqe.
+  highlights_see_more: Shihni më shumë Momente Kryesore
   highlights_readmore: Lexo më shumë
   highlights_watchvideo: Shiko videon
   highlights_facebook: Shpërndaje në Facebook
@@ -14650,71 +14648,66 @@ sq:
     politikëbërësit, udhëheqësit e shkollave dhe stafin për të zhvilluar udhëzime
     fillestare mbi AI në shkollat e tyre.
   teach_ai_button_label: Shikoni Toolkit
-  middle_high_page_main_title: Mësimi për moshat 11 vjeç e lart
-  middle_high_page_main_description: Eksploroni botën e shkencave kompjuterike me
-    video tërheqëse, udhëzime të vetë-ritmit, aktivitete programimi dhe më shumë!
-  middle_high_page_hero_title: Filloni me Hour of Code
-  middle_high_page_hero_description: Mësoni bazat e shkencave kompjuterike me aktivitetet
-    falas të Hour of Code, që përfshijnë blloqe kodimi drag-and-drop. Ka qindra opsione
-    për orë për të zgjedhur!
-  middle_high_page_hourofcode_link: Eksploroni aktivitetet e Hour of Code
-  middle_high_page_modules_title: Modulet e programimit për studentët më të vjetër
-  middle_high_page_modules_description: Përshtatur nga kurset tona të Zbulimeve të
-    CS dhe Parimeve të CS, këto module të shkurtra, të vetë-ritmit për studentët e
-    shkollave të mesme dhe të mesme janë një mënyrë e shkëlqyeshme për të mësuar koncepte
-    që përfshijnë të gjitha gjuhët dhe mjetet e programimit.
-  middle_high_page_modules_card_title_1: Hyrje në Game Lab
-  middle_high_page_modules_card_title_2: Programimi i breshkave në App Lab
-  middle_high_page_modules_card_title_3: Programimi i drejtuar nga ngjarjet në App
-    Lab
-  middle_high_page_modules_card_description_1: Lëvizni me ritmin tuaj në këtë hyrje
-    në mjedisin tonë të Game Lab ndërsa programoni animacione, art interaktiv dhe
-    lojëra.
-  middle_high_page_modules_card_description_2: Zhbllokoni aftësinë për të bërë aplikacione
-    të pasura dhe interaktive me JavaScript në App Lab!
-  middle_high_page_modules_card_description_3: Shkoni me ritmin tuaj me këtë hyrje
-    në mjedisin e programimit App Lab, në të cilin studentët përdorin JavaScript për
-    të krijuar aplikacione interaktive.
-  middle_high_page_modules_card_link: Provoni
-  middle_high_page_make_your_own_title: Bëni aplikacionet, lojërat dhe faqet tuaja
-    në internet
-  middle_high_page_make_your_own_description: 'Përveç kurseve, ne kemi mjete programimi
-    që ju lejojnë të eksploroni kreativitetin tuaj dhe të bëni diçka të mahnitshme. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Laboratori i aplikacionit
-  middle_high_page_make_your_own_card_title_2: Laboratori i lojës
-  middle_high_page_make_your_own_card_title_3: Laboratori i Uebit
-  middle_high_page_make_your_own_card_descrpition_1: App Lab është një mjedis programimi
-    ku mund të bëni aplikacione të thjeshta. Krijoni një aplikacion, kod në JavaScript
-    me blloqe ose tekst, pastaj ndani aplikacionin tuaj brenda sekondave.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab është një mjedis programimi
-    ku mund të bëni animacione dhe lojëra të thjeshta me objekte dhe personazhe që
-    ndërveprojnë me njëri-tjetrin.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab është një mjedis programimi
-    ku mund të bëni faqe të thjeshta në internet duke përdorur HTML dhe CSS. Projektoni
-    faqet tuaja të internetit dhe ndani faqen tuaj në sekonda.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Mëso më shumë
-  middle_high_page_additional_resources_title: Burime shtesë
-  middle_high_page_additional_resources_description: Ka shumë mënyra për të eksploruar
-    më tej shkencat kompjuterike! Shfletoni bibliotekën tonë të videove, ose mësoni
-    më shumë rreth karrierave emocionuese në fushën e shkencave kompjuterike.
-  middle_high_page_video_library_title: Zbuloni bibliotekën tonë të videove
-  middle_high_page_video_library_description: Mësoni bazat e shkencave kompjuterike
-    përmes videove të shkurtra 5-10 minutash mbi tema si inteligjenca artificiale,
-    interneti, mënyra se si funksionojnë kompjuterët, si të mos hakohen, blockchain,
-    karriera dhe më shumë!
-  middle_high_page_video_library_link: Shikoni bibliotekën e videove
-  middle_high_page_cs_journeys_title: Shkoni më tej me CS Journeys
-  middle_high_page_cs_journeys_description: Bëni hapin tjetër në udhëtimin tuaj të
-    shkencave kompjuterike. Eksploroni karrierat, mundësitë e mentorimit, kurse në
-    internet, bursa, praktika dhe më shumë!
-  middle_high_page_cs_journeys_link: Eksploroni CS Journeys
-  middle_high_page_cs_title: Shkenca kompjuterike në klasë
-  middle_high_page_cs_description: Këto kurse duhet të udhëhiqen nga një mësues! Nëse
-    dëshironi t'i shihni ata të mësohen në shkollën tuaj, konsideroni të punoni me
-    një mësues për t'i sjellë në klasën tuaj.
-  middle_high_page_cs_card_title_1: Zbulimet e CS
-  middle_high_page_cs_card_title_2: Parimet e CS
-  middle_high_page_cs_card_title_3: AP Shkenca Kompjuterike A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Set falas i kurrikulave elementare që i
     prezanton studentët me konceptet themelore të shkencave kompjuterike dhe i sfidon
     ata për të eksploruar se si informatika dhe teknologjia mund të ndikojnë në botë.
@@ -14725,34 +14718,34 @@ sq:
   middle_high_page_cs_card_description_3: Prezantoni studentët me inxhinierinë e softuerit
     dhe dizajnin e orientuar drejt objekteve ndërsa ata mësojnë gjuhën e programimit
     Java në këtë program falas për AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Eksploroni CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Eksploroni Parimet CS
-  middle_high_page_cs_link_3: Eksploroni CSA
-  elemeentary_page_main_title: Mësimi për moshat 5 deri në 11 vjeç
-  elementary_page_main_description: Eksploroni botën e shkencave kompjuterike me video
-    tërheqëse, udhëzime të vetë-ritmit, aktivitete programimi dhe më shumë!
-  elementary_page_own_pace_title: Vazhdoni të mësoni me ritmin tuaj
-  elementary_page_own_pace_description: Krijoni vizatime, lojëra dhe më shumë në këto
-    dy opsione të shkëlqyera për studentët që fillojnë të mësojnë vetë bazat e shkencave
-    kompjuterike.
-  elementary_page_own_pace_card_title_1: Kursi Express Para-Reader
-  elementary_page_own_pace_card_title_2: Kursi Express
-  elementary_page_own_pace_card_description_1: Mësoni shkencat kompjuterike me ritmin
-    tuaj! Mësoni të krijoni programe kompjuterike, të zhvilloni aftësi për zgjidhjen
-    e problemeve dhe të punoni përmes sfidave argëtuese Bëni lojëra dhe projekte krijuese
-    për të ndarë me miqtë, familjen dhe mësuesit.
-  elementary_page_own_pace_link_1: Filloni kursin para lexuesit
-  elementary_page_own_pace_link_2: Filloni kursin Express
-  elementary_page_make_your_own_games_title: Bëni animacionet dhe lojërat tuaja
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Koha për t'u bërë krijues!
-    Përdorni kodimin e bazuar në bllok për të bërë diçka budallallëk, të ëmbël ose
-    të jashtme hapësinore në Sprite Lab. Kufiri i vetëm është imagjinata juaj!
-  elementary_page_make_your_own_games_link: Provoni Sprite Lab
-  elementary_page_computer_science_title: Shkenca kompjuterike në klasë
-  elementary_page_computer_science_description: Këto kurse duhet të udhëhiqen nga
-    një mësues! Nëse dëshironi t'i shihni ata të mësohen në shkollën tuaj, kërkoni
-    një prind ose kujdestar të punojë me një mësues për t'i sjellë në klasën tuaj.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Bazat e shkencave kompjuterike
   elementary_page_computer_science_card_title_2: Lidhjet Shkenca Kompjut
   elementary_page_computer_science_description_1: Set falas i kurrikulave elementare

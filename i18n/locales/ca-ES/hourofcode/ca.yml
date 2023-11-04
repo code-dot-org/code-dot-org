@@ -6,11 +6,10 @@ ca:
   front_title: Uneix-te a l'esdeveniment d'aprenentatge més gran de la història, %{campaign_date}
   coming_soon: Properament
   new: Nou
-  hours_of_code_served: Hores de codi servit
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Els estudiants aprenen en més de 45 idiomes
   hoc_stat_hours_served: Més de 100M estudiants han provat una Hora de Codi
-  hoc_stat_females: Els estudiants femenins constitueixen el 50% dels participants
-    de l'Hora del Codi
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 de desembre
   campaign_date_start_long: 4 de desembre
   campaign_date_short: 4-10 de desembre
@@ -51,10 +50,10 @@ ca:
   hoc2023_social_creativity_with_ai_title: Hora del Codi - Què crearàs?
   hoc2023_social_creativity_with_ai_desc: Utilitzeu la informàtica per explorar i
     aprendre sobre IA!
-  hoc2023_what_is_hoc_desc: L'Hora del Codi és una introducció gratuïta a la informàtica
-    a través d'activitats divertides i vídeos per a aprenents de tots els nivells
-    d'habilitat. La celebració d'aquest any de la codificació i la IA compta amb el
-    suport de més de 400 socis, 20.000 educadors i 58.000 voluntaris.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Explora, juga i crea!
   social_hoc2022_explore_play_create: Utilitza les ciències informàtiques per explorar,
     jugar i crear!
@@ -67,9 +66,9 @@ ca:
     música de “Encanto” de Disney i molt més!
   social_hoc2023_dance: Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     música de “Encanto” de Disney i molt més!
-  social_hoc2023_dance_v2: És hora de punxar les teves coses! Crea la teva pròpia
-    festa de ball amb èxits de Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
-    Rosalía i molt més!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Apren avui, construeix un futur més prometedor.
@@ -287,9 +286,9 @@ ca:
     assessorament, coneixement i suport d'altres educadors.
   required_materials: 'Materials necessaris:'
   optional_materials: 'Materials opcionals:'
-  for_students: Per a estudiants
+  for_students: For students
   for_educators: Per a educadors
-  call_to_action_host_hoc: Aconsegueix una hora de codi
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Celebrar un esdeveniment
   call_to_action_register_event: Registra el teu esdeveniment
   call_to_action_register_your_hoc: Registra la teva Hora de Codi
@@ -297,11 +296,11 @@ ca:
   call_to_action_start_activity: Comença una activitat
   call_to_action_get_certificates: Obtenir certificats
   call_to_action_go_beyond_hoc: Anar més enllà de l'Hora del Codi
-  call_to_action_explore_all_hoc_activities: Explora totes les activitats d'Hora del
-    Codi des de Code.org
-  call_to_action_start_dance_party: Comença la festa de ball
-  call_to_action_start_part_02: Comença la segona part
-  call_to_action_start_unplugged_activity: Iniciar l'activitat desconnectada
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Veure recursos promocionals
   call_to_action_learn_more: Saber-ne més
   call_to_action_watch_now: Veure ara
@@ -398,9 +397,9 @@ ca:
   call_to_action_view_faqs: Veure més preguntes freqüents
   call_to_action_applications_open: Les aplicacions ja estan obertes
   call_to_action_apply_cs_ambassador: Sol·liciteu ser ambaixador de CS
-  call_to_action_coming_soon: Pròximament!
-  call_to_action_learn_how_ai_works: Coneix com funciona la IA
-  call_to_action_learn_about_ai: Obteniu informació sobre la IA
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Veure guia per a educadors
   aria_label_call_to_action_hoc_how_to_companies: Veure guia per a empreses
   aria_label_call_to_action_hoc_how_to_districts: Veure guia per als districtes
@@ -412,11 +411,9 @@ ca:
   aria_label_call_to_action_hoc_how_to_volunteers: Veure guia per a voluntaris
   aria_label_call_to_action_hoc_how_to_virtual_events: Veure guia per a esdeveniments
     virtuals
-  aria_label_call_to_action_dance_01: Comença l'activitat de Ball Party
-  aria_label_call_to_action_dance_02: Comença la segona part de l'activitat de Ball
-    Party
-  aria_label_call_to_action_dance_unplugged: Comença l'activitat de Dance Party sense
-    plugged
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -536,27 +533,25 @@ ca:
   curriculum_name_creating_apps_with_devices: Creació d'Apps amb Dispositius
   curriculum_name_poetry: Codificar amb Poetry
   curriculum_name_dance_party: Festa de ball
-  curriculum_name_dance_party_02: Segueix ballant
-  curriculum_name_dance_party_unplugged: Festa de ball Unplugged
-  curriculum_name_dance_party_ai_edition: 'Festa de ball: Edició AI'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Resolució de problemes i informàtica
   curriculum_name_web_development: Desenvolupament Web
   curriculum_name_interactive_animations_games: Animacions i jocs interactius
   curriculum_name_design_process: El procés de disseny
   curriculum_name_data_society: Dades i societat
-  curriculum_desc_dance_party_01: En aquesta activitat introductòria, utilitzar el
-    codi per fer una varietat de personatges colorits bust un moviment a fons animats
-    i música optimista.
-  curriculum_desc_dance_party_02: Anar més enllà del tutorial introductori amb idees
-    de projectes esteses. Navega per una biblioteca d'exemples de festes de ball més
-    complexes.
-  curriculum_desc_dance_party_unplugged: 'Engegueu el vostre solc: no necessiteu ordinador!
-    Aprendre com els conceptes de codificació, com els esdeveniments, es poden utilitzar
-    per sincronitzar la coreografia ballarina.'
-  curriculum_desc_dance_party_ai_edition: Obteniu informació sobre els conceptes d'intel·ligència
-    artificial (IA) per crear la vostra pròpia festa virtual de dansa mostrant els
-    millors artistes actuals. Amb desenes de cançons per triar, arribar a cada alumne
-    sense importar el seu gust musical. És hora de punxar les teves coses!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Conjunt gratuït de currículums elementals que introdueix l'alumne
     en els conceptes fundacionals de la informàtica.
   curriculum_desc_csf_express: Aprendre a crear programes informàtics, desenvolupar
@@ -696,12 +691,12 @@ ca:
   module_grade_grade_03: Grau 3
   module_grade_grade_04: Grau 4
   module_grade_grade_05: Grau 5
-  module_age_05_07: Edats 5-7
-  module_age_07: Edats de 7 anys més
-  module_age_07_11: Edats 7-11 anys
-  module_age_11: Edats 11+
-  module_age_13: Edats 13+
-  module_age_all_age: Totes les edats
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: Professor P-5
   module_grade_6_10_teachers: Professors 6-10
   module_grade_9_12_teachers: Professors 9-12
@@ -800,8 +795,8 @@ ca:
   heading_csa_ai: Busques coses a fer després de l'examen AP®?
   heading_bring_cs_to_students: Apropar la informàtica als estudiants
   heading_cs_ambassador_program: Programa d'Ambaixadors CS
-  heading_featured_student_projects: Projectes destacats d'estudiants
-  heading_start_hoc_with_videos: Comença la teva Hora del Codi amb vídeos inspiradors
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Si ets un estudiant de secundària apassionat per animar a
     més dones joves a cursar informàtica a la teva escola, llavors et necessitem!
   cs_ambassador_desc: Tots els camps, inclosos la medicina, l'entreteniment, els esports,
@@ -900,14 +895,13 @@ ca:
     sobre els principis de Ciències de la Computació de Code.org i obteniu recordatoris
     útils, consells i actualitzacions enviades directament a la safata d'entrada.
   subscribe_form_section_unsubscribe: Pots donar-te de baixa en qualsevol moment.
-  dance_hero_heading: Codifica una festa de ball
-  dance_featuring_songs_by_short: 'Amb cançons de:'
-  dance_featuring_songs_by_long: 'Dance Party inclou cançons de:'
-  dance_and_more: i més
-  dance_choose_activity: Tria la teva festa de ball
-  dance_afe_disclaimer: Els artistes la música dels quals s'utilitza en aquest tutorial
-    no estan patrocinant ni avalant Amazon com a part de la llicència d'ús de la seva
-    música a Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Com funciona la Cadena de blocs
   blockchain_hero_desc: Submergeix-te en el món de la cadena de blocs amb "Com funciona
     la Cadena de blocs", la nostra nova sèrie de vídeos i les lliçons que l'acompanyen!
@@ -14684,72 +14678,66 @@ ca:
     responsables polítics, els líders escolars i el personal desenvolupin orientació
     inicial sobre la IA a les seves escoles.
   teach_ai_button_label: Veure el Toolkit
-  middle_high_page_main_title: Aprenentatge per a 11 anys i més
-  middle_high_page_main_description: Explora el món de la informàtica amb vídeos atractius,
-    tutorials autònoms, activitats de programació i molt més!
-  middle_high_page_hero_title: Comença amb Hora del Codi
-  middle_high_page_hero_description: Aprèn els fonaments de la informàtica amb activitats
-    gratuïtes d'Hora del Codi, amb blocs de codificació d'arrossegar i deixar anar.
-    Hi ha centenars d'opcions d'una hora per triar!
-  middle_high_page_hourofcode_link: Explora les activitats de l'Hora del Codi
-  middle_high_page_modules_title: Mòduls de programació per a estudiants majors
-  middle_high_page_modules_description: Adaptats dels nostres cursos CS Discovery
-    i CS Principles, aquests mòduls curts i autoritme per a estudiants de grau mitjà
-    i batxillerat són una gran manera d'aprendre conceptes que abasten tots els llenguatges
-    i eines de programació.
-  middle_high_page_modules_card_title_1: Introducció al Game Lab
-  middle_high_page_modules_card_title_2: Programació de tortugues a App Lab
-  middle_high_page_modules_card_title_3: Programació basada en esdeveniments en App
-    Lab
-  middle_high_page_modules_card_description_1: Moveu al vostre ritme en aquesta introducció
-    al nostre entorn Game Lab mentre programeu animacions, art interactiu i jocs.
-  middle_high_page_modules_card_description_2: Desbloquejar la possibilitat de fer
-    aplicacions riques, interactives amb JavaScript al App Lab!
-  middle_high_page_modules_card_description_3: Aneu al vostre ritme amb aquesta introducció
-    a l'entorn de programació App Lab, en què els estudiants utilitzen JavaScript
-    per crear aplicacions interactives.
-  middle_high_page_modules_card_link: Prova-ho
-  middle_high_page_make_your_own_title: Fes les teves pròpies aplicacions, jocs i
-    pàgines web
-  middle_high_page_make_your_own_description: 'A més dels cursos, disposem d''eines
-    de programació que et permeten explorar la teva creativitat i fer alguna cosa
-    increïble. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Laboratori de jocs
-  middle_high_page_make_your_own_card_title_3: Laboratori web
-  middle_high_page_make_your_own_card_descrpition_1: App Lab és un entorn de programació
-    on es poden fer aplicacions senzilles. Dissenya una aplicació, codi en JavaScript
-    ja sigui amb blocs o text i després compartir la seva aplicació en qüestió de
-    segons.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab és un entorn de programació
-    on es poden fer animacions i jocs senzills amb objectes i personatges que interactuen
-    entre ells.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab és un entorn de programació
-    on es poden fer pàgines web senzilles utilitzant HTML i CSS. Dissenya les teves
-    pàgines web i comparteix el teu lloc en qüestió de segons.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Saber-ne més
-  middle_high_page_additional_resources_title: Recursos addicionals
-  middle_high_page_additional_resources_description: Hi ha tantes maneres d'explorar
-    més la informàtica! Navegueu per la nostra videoteca o obteniu més informació
-    sobre carreres emocionants en el camp de les ciències de la computació.
-  middle_high_page_video_library_title: Descobreix la nostra Videoteca
-  middle_high_page_video_library_description: Apreneu els conceptes bàsics de la informàtica
-    a través de vídeos curts de 5-10 minuts sobre temes com la intel·ligència artificial,
-    Internet, com funcionen els ordinadors, com no ser piratejats, blockchain, carreres
-    i molt més!
-  middle_high_page_video_library_link: Veure videoteca
-  middle_high_page_cs_journeys_title: Aneu més enllà amb CS Journeys
-  middle_high_page_cs_journeys_description: Fes el següent pas en el teu viatge en
-    informàtica. Explora carreres, oportunitats de mentoria, cursos en línia, beques,
-    pràctiques i molt més!
-  middle_high_page_cs_journeys_link: Explora CS Journeys
-  middle_high_page_cs_title: La informàtica a l'aula
-  middle_high_page_cs_description: Aquests cursos han de ser dirigits per un professor!
-    Si voleu veure'ls ensenyats a la vostra escola, considereu treballar amb un professor
-    per portar-los a la vostra classe.
-  middle_high_page_cs_card_title_1: Descobriments CS
-  middle_high_page_cs_card_title_2: Principis CS
-  middle_high_page_cs_card_title_3: AP Informàtica A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Currículum gratuït d'un any que introdueix
     els estudiants en els conceptes fundacionals de la informàtica i els repta a explorar
     com la informàtica i la tecnologia poden impactar en el món.
@@ -14761,34 +14749,34 @@ ca:
     del programari i el disseny orientat a objectes mentre aprenen el llenguatge de
     programació Java en aquest pla d'estudis gratuït per a AP® Computer Science A
     (AP® CSA).
-  middle_high_page_cs_link_1: Explora CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Explora els principis CS
-  middle_high_page_cs_link_3: Explora CSA
-  elemeentary_page_main_title: Aprenentatge per a edats de 5 a 11 anys
-  elementary_page_main_description: Explora el món de la informàtica amb vídeos atractius,
-    tutorials autònoms, activitats de programació i molt més!
-  elementary_page_own_pace_title: Continua aprenent al teu ritme
-  elementary_page_own_pace_description: Crear dibuixos, jocs, i molt més en aquestes
-    dues excel·lents opcions perquè els estudiants comencin pel seu compte aprenent
-    els conceptes bàsics de la informàtica.
-  elementary_page_own_pace_card_title_1: Curs Exprés Pre-Lector
-  elementary_page_own_pace_card_title_2: Curs Exprés
-  elementary_page_own_pace_card_description_1: Aprèn informàtica al teu ritme! Aprèn
-    a crear programes informàtics, desenvolupar habilitats de resolució de problemes,
-    i treballar a través de reptes divertits! Feu jocs i projectes creatius per compartir
-    amb amics, familiars i professors.
-  elementary_page_own_pace_link_1: Comença el curs pre-lector
-  elementary_page_own_pace_link_2: Comença el curs exprés
-  elementary_page_make_your_own_games_title: Fes les teves pròpies animacions i jocs
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: És hora de ser creatius!
-    Utilitzeu la codificació basada en blocs per fer alguna cosa ximple, dolça o externa
-    a Sprite Lab. L'únic límit és la teva imaginació!
-  elementary_page_make_your_own_games_link: Proveu Sprite Lab
-  elementary_page_computer_science_title: La informàtica a l'aula
-  elementary_page_computer_science_description: Aquests cursos han de ser dirigits
-    per un professor! Si voleu veure'ls ensenyats a la vostra escola, demaneu a un
-    pare o tutor que treballi amb un professor per portar-los a la vostra classe.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Fonaments de Ciències informàtiques
   elementary_page_computer_science_card_title_2: Connexions Informàtiques
   elementary_page_computer_science_description_1: Currículum gratuït d'un any que

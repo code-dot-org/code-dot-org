@@ -9,7 +9,7 @@ is:
   hours_of_code_served: Veittar Klukkustundir kóðunar
   hoc_stat_languages: Nemendur eru að læra á 40 tungumálum
   hoc_stat_hours_served: Yfir 100m nemendur hafa prófað Klukkustund kóðunar
-  hoc_stat_females: Kvennemar eru 50% þátttakenda í Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4. des.
   campaign_date_start_long: 4. desember
   campaign_date_short: 4. - 10. des.
@@ -278,7 +278,7 @@ is:
     og stuðning frá öðrum kennurum.
   required_materials: 'Nauðsynleg efni:'
   optional_materials: 'Valfrjálst efni:'
-  for_students: Fyrir nemendur
+  for_students: For students
   for_educators: Fyrir fræðara
   call_to_action_host_hoc: Sjá um Klukkustund kóðunar
   call_to_action_hold_an_event: Halda viðburð
@@ -388,9 +388,9 @@ is:
   call_to_action_view_faqs: Skoða fleiri algengar spurningar
   call_to_action_applications_open: Umsóknir eru nú opnar
   call_to_action_apply_cs_ambassador: Sækja um að vera CS sendiherra
-  call_to_action_coming_soon: Kemur fljótlega!
+  call_to_action_coming_soon: Coming soon!
   call_to_action_learn_how_ai_works: Lærðu hvernig AI-gervigreind virkar
-  call_to_action_learn_about_ai: Lærðu um AI
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Skoða leiðbeiningar fyrir kennara
   aria_label_call_to_action_hoc_how_to_companies: Skoða leiðbeiningar fyrir fyrirtæki
   aria_label_call_to_action_hoc_how_to_districts: Skoða leiðbeiningar fyrir héruð
@@ -402,7 +402,7 @@ is:
   aria_label_call_to_action_hoc_how_to_volunteers: Skoða leiðbeiningar fyrir sjálfboðaliða
   aria_label_call_to_action_hoc_how_to_virtual_events: Skoða leiðbeiningar fyrir sýndarviðburði
   aria_label_call_to_action_dance_01: Byrja á Danspartí verkefninu
-  aria_label_call_to_action_dance_02: Byrjaðu hluta 2 í Dance Party starfseminni
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
   aria_label_call_to_action_dance_unplugged: Byrja á Danspartýi án nets
   aria_label_call_to_action_afe: Lærðu meira um Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Byrjaðu Kennsla Tölvunarfræði Undirstöðuatriði
@@ -658,12 +658,12 @@ is:
   module_grade_grade_03: 3. bekkur
   module_grade_grade_04: 4. bekkur
   module_grade_grade_05: 5. bekkur
-  module_age_05_07: Aldur 5-7
-  module_age_07: Aldur 7+
-  module_age_07_11: Aldur 7-11
-  module_age_11: Aldur 11+
-  module_age_13: Aldur 13+
-  module_age_all_age: Allir aldurshópar
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Kennarar
   module_grade_6_10_teachers: 6-10 Kennarar
   module_grade_9_12_teachers: 9-12 Kennarar
@@ -754,7 +754,7 @@ is:
   heading_csa_ai: Ertu að leita að hlutum til að gera eftir AP® prófið?
   heading_bring_cs_to_students: Koma tölvunarfræði til nemenda
   heading_cs_ambassador_program: CS sendiherraáætlun
-  heading_featured_student_projects: Valin verkefni nemenda
+  heading_featured_student_projects: Featured student projects
   heading_start_hoc_with_videos: Byrjaðu þína Klukkustund kóðunar á hvetjandi myndböndum
   cs_ambassador_subhead: Ef þú ert menntaskólanemi ástríðufullur um að hvetja fleiri
     ungar konur til að taka tölvunarfræði í skólanum þínum, þá þurfum við þig!
@@ -13925,7 +13925,7 @@ is:
   teach_ai_description: AI Guidance for Schools Toolkit er úrræði fyrir stefnumótendur,
     leiðtoga skóla og starfsfólk til að þróa fyrstu leiðbeiningar um AI í skólum sínum.
   teach_ai_button_label: Skoða verkfærasafnið
-  middle_high_page_main_title: Nám fyrir 11 ára og eldri
+  middle_high_page_main_title: Learning for Ages 11 and Up
   middle_high_page_main_description: Kannaðu heim tölvunarfræðinnar í gegnum grípandi
     myndbönd, námskeið á eigin hraða, forritunarverkefni og fleira!
   middle_high_page_hero_title: Byrja á Klukkustund kóðunar
@@ -13933,7 +13933,7 @@ is:
     verkefnum Klukkustundar kóðunar, sem nota draganlega kubba til að forrita. Það
     er hægt að velja úr hundruðum klukkustundar langra verkefna!
   middle_high_page_hourofcode_link: Kannaðu verkefni Klukkustundar kóðunar
-  middle_high_page_modules_title: Forritunareiningar fyrir eldri nemendur
+  middle_high_page_modules_title: Programming Modules for Older Students
   middle_high_page_modules_description: Þessar stuttu, tímafrjálsu einingar eru valdar
     úr CS Discovery og CS Principles námskeiðum okkar og aðlagaðar fyrir mið- og framhaldsskólanemendur
     og eru frábær leið til að læra almenn hugtök sem koma fyrir í öllum forritunarmálum
@@ -13944,50 +13944,49 @@ is:
   middle_high_page_modules_card_description_1: Farðu á eigin hraða í þessari kynningu
     á umhverfinu í Leikjasmiðju okkar þar sem þú forritar hreyfingar, gagnvirka list
     og leiki.
-  middle_high_page_modules_card_description_2: Opnaðu getu til að búa til ríkur, gagnvirk
-    forrit með JavaScript í App Lab!
-  middle_high_page_modules_card_description_3: Farðu á eigin hraða með þessari kynningu
-    á forritunarumhverfi App Lab, þar sem nemendur nota JavaScript til að búa til
-    gagnvirk forrit.
-  middle_high_page_modules_card_link: Prófaðu það
-  middle_high_page_make_your_own_title: Búðu til þín eigin forrit, leiki og vefsíður
-  middle_high_page_make_your_own_description: 'Auk námskeiða höfum við forritunartæki
-    sem láta þig kanna sköpunargáfu þína og gera eitthvað ótrúlegt. '
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Leikjatölvur
-  middle_high_page_make_your_own_card_title_3: Vefrannsóknarstofa
-  middle_high_page_make_your_own_card_descrpition_1: App Lab er forritunarumhverfi
-    þar sem þú getur búið til einföld forrit. Hannaðu app, kóða í JavaScript með annaðhvort
-    blokkum eða texta, deildu síðan forritinu þínu á nokkrum sekúndum.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab er forritunarumhverfi
-    þar sem hægt er að búa til einföld hreyfimyndir og leiki með hlutum og persónum
-    sem hafa samskipti sín á milli.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab er forritunarumhverfi
-    þar sem hægt er að búa til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður
-    þínar og deildu síðunni þinni á nokkrum sekúndum.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Nánar
-  middle_high_page_additional_resources_title: Viðbótarúrræði
-  middle_high_page_additional_resources_description: Það eru svo margar leiðir til
-    að kanna tölvunarfræði frekar! Skoðaðu myndbandasafnið okkar, eða lærðu meira
-    um spennandi starfsferil á tölvunarfræðisviðinu.
-  middle_high_page_video_library_title: Uppgötvaðu myndbandasafnið okkar
-  middle_high_page_video_library_description: Lærðu grunnatriði tölvunarfræðinnar
-    í gegnum stutt 5-10 mínútna myndbönd um efni eins og gervigreind, internetið,
-    hvernig tölvur virka, hvernig á að fá ekki tölvusnápur, blockchain, starfsframa
-    og fleira!
-  middle_high_page_video_library_link: Skoða myndbandasafn
-  middle_high_page_cs_journeys_title: Farðu lengra með CS Journeys
-  middle_high_page_cs_journeys_description: Taktu næsta skref í tölvunarfræðiferðinni
-    þinni. Kannaðu starfsferil, leiðbeiningatækifæri, námskeið á netinu, námsstyrki,
-    starfsnám og fleira!
-  middle_high_page_cs_journeys_link: Kannaðu CS Journeys
-  middle_high_page_cs_title: Tölvunarfræði í kennslustofunni
-  middle_high_page_cs_description: Þessi námskeið ætti að vera stýrt af kennara! Ef
-    þú vilt sjá þau kennd í skólanum þínum skaltu íhuga að vinna með kennara til að
-    koma þeim í bekkinn þinn.
-  middle_high_page_cs_card_title_1: CS uppgötvanir
-  middle_high_page_cs_card_title_2: CS meginreglur
-  middle_high_page_cs_card_title_3: AP Tölvunarfræði A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Frjáls setja af grunnskóla námskrár sem
     kynnir nemendum að foundational hugtök tölvunarfræði og skorar á þá að kanna hvernig
     computing og tækni geta haft áhrif á heiminn.
@@ -13998,34 +13997,34 @@ is:
   middle_high_page_cs_card_description_3: Kynntu nemendum hugbúnaðarverkfræði og hlutbundna
     hönnun meðan þeir læra Java forritunarmálið í þessari ókeypis námskrá fyrir AP®
     tölvunarfræði A (AP® CSA).
-  middle_high_page_cs_link_1: Kannaðu CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Kannaðu meginreglur CS
-  middle_high_page_cs_link_3: Kannaðu CSA
-  elemeentary_page_main_title: Nám fyrir aldurinn 5 til 11
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
   elementary_page_main_description: Kannaðu heim tölvunarfræðinnar í gegnum grípandi
     myndbönd, námskeið á eigin hraða, forritunarverkefni og fleira!
-  elementary_page_own_pace_title: Haltu áfram að læra á eigin hraða
-  elementary_page_own_pace_description: Búa til teikningar, leiki, og fleira í þessum
-    tveimur framúrskarandi valkostum fyrir nemendur að byrja á eigin læra grunnatriði
-    tölvunarfræði.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express námskeið
-  elementary_page_own_pace_card_title_2: Hraðnámskeið
-  elementary_page_own_pace_card_description_1: Lærðu tölvunarfræði á þínum hraða!
-    Lærðu að búa til tölvuforrit, þróa færni til að leysa vandamál og vinna í gegnum
-    skemmtilegar áskoranir! Gerðu leiki og skapandi verkefni til að deila með vinum,
-    fjölskyldu og kennurum.
-  elementary_page_own_pace_link_1: Byrjaðu námskeið fyrir lesara
-  elementary_page_own_pace_link_2: Byrjaðu hraðnámskeið
-  elementary_page_make_your_own_games_title: Búðu til þína eigin hreyfimyndir og leiki
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Tími til að verða skapandi!
-    Notaðu blokk-undirstaða kóðun til að gera eitthvað kjánalegt, sætt, eða outter-spacey
-    í Sprite Lab. Eina takmarkið er ímyndunaraflið þitt!
-  elementary_page_make_your_own_games_link: Prófaðu Sprite Lab
-  elementary_page_computer_science_title: Tölvunarfræði í kennslustofunni
-  elementary_page_computer_science_description: Þessi námskeið ætti að vera stýrt
-    af kennara! Ef þú vilt sjá þau kennd í skólanum þínum skaltu biðja foreldri eða
-    forráðamann um að vinna með kennara til að koma þeim í bekkinn þinn.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Tölvunarfræði Grundvallaratriði
   elementary_page_computer_science_card_title_2: Tölvunarfræði Tengingar
   elementary_page_computer_science_description_1: Frjáls setja af grunnskóla námskrár

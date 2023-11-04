@@ -285,7 +285,7 @@ sr:
     and support from other educators.
   required_materials: 'Required Materials:'
   optional_materials: 'Optional Materials:'
-  for_students: For students
+  for_students: За студенте
   for_educators: За наставнике
   call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Hold an event
@@ -397,8 +397,8 @@ sr:
   call_to_action_applications_open: Applications now open
   call_to_action_apply_cs_ambassador: Apply to be a CS Ambassador
   call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_learn_how_ai_works: Сазнајте како то ВИ ради
+  call_to_action_learn_about_ai: Научите о ВИ
   aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
   aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
   aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
@@ -683,7 +683,7 @@ sr:
   module_age_07_11: Ages 7-11
   module_age_11: Ages 11+
   module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_all_age: Сви узрасти
   module_grade_k_5_teachers: K-5 Teachers
   module_grade_6_10_teachers: 6-10 Teachers
   module_grade_9_12_teachers: 9-12 Teachers

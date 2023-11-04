@@ -4,29 +4,29 @@ title: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
 
 # Dziękujemy za rejestrację jako organizator Godziny Kodowania!
 
-<br /> ** Godzina Kodowania odbędzie się {{campaign_date / full}} Będziemy informować o nowych samouczkach i aktualizacjach, gdy tylko się pojawią. Co możesz zrobić w międzyczasie? **
+<br /> **Godzina Kodowania trwa w trakcie, {{ campaign_date/full }} a my będziemy w kontakcie z nowymi samouczkami i innymi ekscytującymi aktualizacjami, gdy się pojawią. W międzyczasie, co możesz teraz zrobić?**
 
-## Rozpowszechniaj informacje w swojej szkole i pośród znajomych
+## 1. Rozpowszechniaj informacje w swojej szkole i społeczności
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Właśnie dołączyłeś do ruchu Godzina Kodowania. Powiedz znajomym z **#HourOfCode**!
 
-{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nie musisz być w szkole, by poznać nowe umiejętności. Invite a local politician or policy maker to visit your school for the Hour of Code. Może to pomóc w tworzeniu wsparcia dla informatyki w Twojej okolicy poza tą jedną godziną.
+{{ social_media_hoc }} <br /> Zachęcaj innych do udziału [z naszymi przykładowymi mailami.]({{ promote/sample_emails }}) Skontaktuj się z dyrektorem i rzuć wyzwanie każdej klasie w Twojej szkole, aby się zarejestrowała. Rekrutuj lokalną grupę - klub harcerzy chłopców/dziewcząt, kościół, uniwersytet, grupę weteranów, związek zawodowy, a nawet przyjaciół. Nie musisz być w szkole, by poznać nowe umiejętności. Zaproś lokalnego polityka do odwiedzenia Twojej szkoły na Godzinę Kodowania. Może to pomóc w tworzeniu wsparcia dla informatyki w Twojej okolicy poza tą jedną godziną.
 
-Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
+Użyj tych [plakatów, banerów, naklejek, filmów i nie tylko]({{ promote/resources }}) dla własnego wydarzenia.
 
-## 2. Znajdź lokalnego wolontariusza, by pomógł Ci z tym wydarzeniem.
+## 2. Znajdź lokalnego wolontariusza, by pomógł Ci z tym wydarzeniem
 
-[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Przeszukaj naszą mapę wolontariuszy]({{ urls/volunteer_local }}) w poszukiwaniu wolontariuszy, którzy mogą odwiedzić Twoją klasę lub udostępnić zdalnie czat wideo, aby zainspirować uczniów zakresem możliwości informatyki.
 
-## 7. Zaplanuj swoją Godzinę Kodowania
+## 3. Zaplanuj swoją Godzinę Kodowania
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+Wybierz ćwiczenie [Godziny Kodowania](https://hourofcode.com/learn) dla swojej klasy i [ zapoznaj się z tym poradnikiem]({{ urls/how_to_guide }}).
 
 ### 4. Zaopatrz się w trofea
 
-Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
+Zamów materiały, które pomogą uczniom podekscytować się Twoim wydarzeniem, udając się do [sklepu Amazon](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220) Code.org. Zamów plakaty, zestawy Godziny Kodowania, naklejki i nie tylko! Ale pospiesz się, zapasy są ograniczone.
 
-# Po ukończeniu Godziny Kodowania
+# Wyjdź poza Godzinę Kodowania
 
 {{ go_beyond_hoc }}
 

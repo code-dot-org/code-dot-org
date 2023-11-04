@@ -6,10 +6,10 @@ az:
   front_title: Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date}
   coming_soon: Tezliklə
   new: Yeni
-  hours_of_code_served: Xidmət edilən kod saatları
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Şagirdlər 40 dildə öyrənir
   hoc_stat_hours_served: Kod Saatını 100 milyondan çox şagir sınaqdan keçirdi
-  hoc_stat_females: Qadın tələbələr Hour of Code iştirakçılarının 50% -ni təşkil edir
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 dek.
   campaign_date_start_long: 4 dekabr
   campaign_date_short: 4-10 dek.
@@ -51,10 +51,10 @@ az:
   hoc2023_social_creativity_with_ai_title: Kod Saatı - Nə yaradacaqsınız?
   hoc2023_social_creativity_with_ai_desc: AI haqqında araşdırmaq və öyrənmək üçün
     kompüter elmindən istifadə edin!
-  hoc2023_what_is_hoc_desc: Kod Saatı bütün bacarıq səviyyələrində olan öyrənənlər
-    üçün əyləncəli fəaliyyətlər və videolar vasitəsilə kompüter elminə pulsuz girişdir.
-    Bu ilki həm kodlaşdırma, həm də AI qeyd edilməsi 400-dən çox tərəfdaş, 20.000
-    müəllim və 58.000 könüllü tərəfindən dəstəklənir.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Kəşf et, oyna, yarat!
   social_hoc2022_explore_play_create: İnformatikanı kəşf etmək, oynamaq və yaratmaq
     üçün istifadə edin!
@@ -67,9 +67,9 @@ az:
     “Encanto” musiqisi və daha çoxunu təqdim edir!
   social_hoc2023_dance: Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     Disneyin “Encanto” musiqisi və daha çox!
-  social_hoc2023_dance_v2: Əşyalarınızı dayandırmağın vaxtı gəldi! Miley Cyrus, BTS,
-    Lil Nas X, Harry Styles, Nicki Minaj, Rosalía və daha çoxlarının hitləri ilə öz
-    rəqs partiyanızı yaradın!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Bu gün öyrənin, sabah daha parlaq gələcək qurun.
@@ -291,9 +291,9 @@ az:
     Saatı Müəllim Forumunu ziyarət edin.
   required_materials: 'Tələb olunan materiallar:'
   optional_materials: 'Könüllü materiallar:'
-  for_students: Tələbələr üçün
+  for_students: For students
   for_educators: Təlimçilər üçün
-  call_to_action_host_hoc: Kod saatına ev sahibliyi edin
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Tədbir keçirin
   call_to_action_register_event: Tədbirinizi qeydiyyata alın
   call_to_action_register_your_hoc: Kod saatınızı qeydiyyatdan keçirin
@@ -301,11 +301,11 @@ az:
   call_to_action_start_activity: Bir fəaliyyətə başlayın
   call_to_action_get_certificates: Sertifikatlar alın
   call_to_action_go_beyond_hoc: Kod Saatından kənara çıxın
-  call_to_action_explore_all_hoc_activities: Code.org saytından bütün Hour of Code
-    fəaliyyətlərini araşdırın
-  call_to_action_start_dance_party: Rəqs partiyasına başlayın
-  call_to_action_start_part_02: İkinci hissəyə başlayın
-  call_to_action_start_unplugged_activity: Şəbəkdən çıxarılmış fəaliyyətə başlayın
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Promo resurslarına baxın
   call_to_action_learn_more: Daha ətraflı
   call_to_action_watch_now: İndi baxın
@@ -402,9 +402,9 @@ az:
   call_to_action_view_faqs: Daha çox suallar baxın
   call_to_action_applications_open: Ərizə qəbulu artıq açıqdır
   call_to_action_apply_cs_ambassador: İnformatika Səfiri olmaq üçün müraciət edin
-  call_to_action_coming_soon: Tezliklə!
-  call_to_action_learn_how_ai_works: AI necə işlədiyini öyrənin
-  call_to_action_learn_about_ai: AI haqqında məlumat əldə edin
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Müəllimlər üçün necə təlimatına
     baxın
   aria_label_call_to_action_hoc_how_to_companies: Şirkətlər üçün necə təlimatına baxın
@@ -418,10 +418,9 @@ az:
     bax
   aria_label_call_to_action_hoc_how_to_virtual_events: Virtual Hadisələr üçün necə
     təlimatına baxın
-  aria_label_call_to_action_dance_01: Dance Party fəaliyyətinə başlayın
-  aria_label_call_to_action_dance_02: Dance Party fəaliyyətinin ikinci hissəsinə başlayın
-  aria_label_call_to_action_dance_unplugged: Dance Party şəbəkəsindən çıxan fəaliyyətə
-    başlayın
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Amazon Future Engineer haqqında daha çox məlumat
     əldə edin
   aria_label_call_to_action_teaching_csf: Tədris Kompüter Elmlərinin Əsasları peşəkar
@@ -539,26 +538,25 @@ az:
   curriculum_name_creating_apps_with_devices: Cihazlarla Proqramlar Yaratmaq
   curriculum_name_poetry: Şeir ilə kodlaşdırma
   curriculum_name_dance_party: Rəqs şənliyi
-  curriculum_name_dance_party_02: Rəqs etməyə davam edin
-  curriculum_name_dance_party_unplugged: Rəqs partiyası elektrik şəbəkəsindən çıxar
-  curriculum_name_dance_party_ai_edition: 'Rəqs partiyası: AI nəşri'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problemlərin həlli və hesablama
   curriculum_name_web_development: Veb İnkişafı
   curriculum_name_interactive_animations_games: İnteraktiv Animasiyalar və Oyunlar
   curriculum_name_design_process: Dizayn prosesi
   curriculum_name_data_society: Məlumat və Cəmiyyət
-  curriculum_desc_dance_party_01: Bu giriş fəaliyyətində, müxtəlif rəngarəng personajların
-    cizgi fonlarına və optimal musiqiyə keçməsini təmin etmək üçün koddan istifadə
-    edin.
-  curriculum_desc_dance_party_02: Genişləndirilmiş layihə ideyaları ilə giriş təlimatından
-    kənara çıxın Daha mürəkkəb rəqs partiyalarının nümunələri kitabxanasına baxın.
-  curriculum_desc_dance_party_unplugged: Yivinizi işə salın - kompüterə ehtiyac yoxdur!
-    Hadisələr kimi kodlaşdırma anlayışlarının rəqqas xoreoqrafiyasını sinxronlaşdırmaq
-    üçün necə istifadə edilə biləcəyini öyrənin.
-  curriculum_desc_dance_party_ai_edition: Bu günün ən yaxşı sənətçilərini nümayiş
-    etdirən öz virtual rəqs partiyanızı yaratmaq üçün süni intellekt (AI) konsepsiyaları
-    haqqında məlumat əldə edin. Seçmək üçün onlarla mahnı ilə musiqi zövqündən asılı
-    olmayaraq hər tələbəyə çatır. Əşyalarınızı dayandırmağın vaxtı gəldi!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Tələbələri kompüter elminin təməl anlayışları ilə tanış edən
     pulsuz ibtidai tədris proqramı.
   curriculum_desc_csf_express: Kompüter proqramları yaratmağı, problem həll etmə bacarıqlarını
@@ -696,12 +694,12 @@ az:
   module_grade_grade_03: 3-cü sinif
   module_grade_grade_04: 4-cü sinif
   module_grade_grade_05: 5-ci sinif
-  module_age_05_07: 5-7 yaş
-  module_age_07: 7 yaşdan yuxarı
-  module_age_07_11: 7-11 yaş
-  module_age_11: 11 yaşdan yuxarı
-  module_age_13: 13 yaşdan yuxarı
-  module_age_all_age: Bütün yaşlar
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Müəllimlər
   module_grade_6_10_teachers: 6-10 Müəllimlər
   module_grade_9_12_teachers: 9-12 Müəllimlər
@@ -797,8 +795,8 @@ az:
   heading_csa_ai: AP® imtahanından sonra ediləcək işlər axtarırsınız?
   heading_bring_cs_to_students: Şagirdlərə kompüter elmləri gətirin
   heading_cs_ambassador_program: İnformatika Səfiri Proqramı
-  heading_featured_student_projects: Seçilmiş tələbə layihələri
-  heading_start_hoc_with_videos: Kod Saatınıza ilham verən videolarla başlayın
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Əgər siz məktəbinizdə daha çox gənc qadını kompüter elmləri
     almağa təşviq etmək həvəsli bir orta məktəb tələbəsinizsə, onda sizə ehtiyacımız
     var!
@@ -895,14 +893,13 @@ az:
     aylıq e-poçt almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
     faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
   subscribe_form_section_unsubscribe: İstənilən vaxt abunəlikdən çıxa bilərsiniz.
-  dance_hero_heading: Rəqs partiyasını kodlayın
-  dance_featuring_songs_by_short: 'Mahnıları təqdim edir:'
-  dance_featuring_songs_by_long: 'Dance Party tərəfindən mahnılar daxildir:'
-  dance_and_more: və daha çox
-  dance_choose_activity: Rəqs partiyanızı seçin
-  dance_afe_disclaimer: Bu təlimatda musiqisi istifadə olunan sənətçilər, musiqlərinin
-    Code.org saytına istifadəsinin lisenziyalaşdırılması çərçivəsində Amazonu sponsorluq
-    etmirlər və ya təsdiqləmirlər.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Blockchain necə işləyir
   blockchain_hero_desc: Yeni video seriyamız və müşayiət olunan dərslərimiz “Blockchain
     necə işləyir” ilə blockchain dünyasına dalış!
@@ -14372,70 +14369,66 @@ az:
     rəhbərləri və işçilər üçün məktəblərində AI ilə bağlı ilkin təlimatlar hazırlamaq
     üçün bir mənbədir.
   teach_ai_button_label: Alət dəstinə baxın
-  middle_high_page_main_title: 11 yaş və yuxarı yaşlar üçün öyrənmə
-  middle_high_page_main_description: Maraqlı videolar, öz-özünə işləyən dərsliklər,
-    proqramlaşdırma fəaliyyətləri və s. ilə kompüter elmləri dünyasını araşdırın!
-  middle_high_page_hero_title: Kod saatı ilə başlayın
-  middle_high_page_hero_description: Sürükləmə və buraxma kodlaşdırma bloklarını özündə
-    cəmləşdirən pulsuz Kod Saatı fəaliyyətləri ilə kompüter elminin əsaslarını öyrənin.
-    Seçmək üçün yüzlərlə saatlıq seçim var!
-  middle_high_page_hourofcode_link: Kod saatı fəaliyyətlərini araşdırın
-  middle_high_page_modules_title: Yaşlı tələbələr üçün proqramlaşdırma modulları
-  middle_high_page_modules_description: CS Kəşfləri və CS Prinsipləri kurslarımızdan
-    uyğunlaşdırılmış, orta və orta məktəb şagirdləri üçün bu qısa, öz-özünə işləyən
-    modullar bütün proqramlaşdırma dillərini və alətlərini əhatə edən anlayışları
-    öyrənmək üçün əla bir yoldur.
-  middle_high_page_modules_card_title_1: Game Laboratoriyasına giriş
-  middle_high_page_modules_card_title_2: App Laboratoriyasında tısbağa proqramlaşdırması
-  middle_high_page_modules_card_title_3: App Laboratoriyasında Hadisəyə əsaslanan
-    proqramlaşdırma
-  middle_high_page_modules_card_description_1: Animasiyalar, interaktiv sənət və oyunları
-    proqramlaşdırarkən Game Lab mühitimizə bu girişdə öz sürətinizlə hərəkət edin.
-  middle_high_page_modules_card_description_2: App Laboratoriyasında JavaScript ilə
-    zəngin, interaktiv tətbiqlər yaratmaq qabiliyyətini açın!
-  middle_high_page_modules_card_description_3: Tələbələrin interaktiv tətbiqlər yaratmaq
-    üçün JavaScript-dən istifadə etdikləri App Lab proqramlaşdırma mühitinə bu girişlə
-    öz sürətinizlə gedin.
-  middle_high_page_modules_card_link: Bunu sınayın
-  middle_high_page_make_your_own_title: Öz Proqramlarınızı, Oyunlarınızı və Veb Səhifələrinizi
-    Yaradın
-  middle_high_page_make_your_own_description: 'Kurslara əlavə olaraq yaradıcılığınızı
-    araşdırmağa və heyrətamiz bir şey etməyə imkan verən proqramlaşdırma vasitələrimiz
-    var. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Tətbiq Laboratoriyası
-  middle_high_page_make_your_own_card_title_2: Oyun Laboratoriyası
-  middle_high_page_make_your_own_card_title_3: Veb Laboratoriyası
-  middle_high_page_make_your_own_card_descrpition_1: App Lab sadə tətbiqlər yarada
-    biləcəyiniz bir proqramlaşdırma mühitidir. Bloklar və ya mətn ilə JavaScript-də
-    bir proqram, kod dizayn edin, sonra saniyələr ərzində tətbiqinizi paylaşın.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab, bir-biri ilə qarşılıqlı
-    əlaqədə olan obyektlər və personajlarla sadə animasiyalar və oyunlar edə biləcəyiniz
-    proqramlaşdırma mühitidir.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab HTML və CSS istifadə
-    edərək sadə veb səhifələr yarada biləcəyiniz bir proqramlaşdırma mühitidir. Veb
-    səhifələrinizi dizayn edin və saytınızı saniyələr ərzində paylaşın.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Daha ətraflı
-  middle_high_page_additional_resources_title: Əlavə Resurslar
-  middle_high_page_additional_resources_description: Kompüter elmini daha da araşdırmağın
-    bir çox yolu var! Video kitabxanamıza baxın və ya kompüter elmləri sahəsində maraqlı
-    karyeralar haqqında daha çox məlumat əldə edin.
-  middle_high_page_video_library_title: Video Kitabxanamızı kəşf edin
-  middle_high_page_video_library_description: Süni intellekt, İnternet, kompüterlərin
-    necə işləməsi, necə sındırılmamaq, blockchain, karyera və s. kimi mövzularda qısa
-    5-10 dəqiqəlik videolar vasitəsilə kompüter elminin əsaslarını öyrənin!
-  middle_high_page_video_library_link: Video kitabxanasına baxın
-  middle_high_page_cs_journeys_title: CS Journeys ilə daha irəli gedin
-  middle_high_page_cs_journeys_description: Kompüter elmləri səyahətinizdə növbəti
-    addımı atın. Karyera, mentorluq imkanları, onlayn kursları, təqaüdləri, təcrübələri
-    və daha çoxunu araşdırın!
-  middle_high_page_cs_journeys_link: CS Journeys ilə tanış olun
-  middle_high_page_cs_title: Sinifdə Kompüter Elmləri
-  middle_high_page_cs_description: Bu kursları bir müəllim rəhbərlik etməlidir! Onların
-    məktəbinizdə öyrədilməsini görmək istəyirsinizsə, onları sinifinizə gətirmək üçün
-    bir müəllimlə işləməyi düşünün.
-  middle_high_page_cs_card_title_1: CS kəşfləri
-  middle_high_page_cs_card_title_2: CS prinsipləri
-  middle_high_page_cs_card_title_3: AP Kompüter Elmləri A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Tələbələri kompüter elminin əsas anlayışları
     ilə tanış edən və hesablama və texnologiyanın dünyaya necə təsir edə biləcəyini
     araşdırmağa çağıran pulsuz ibtidai tədris proqramları dəsti.
@@ -14446,34 +14439,34 @@ az:
   middle_high_page_cs_card_description_3: Tələbələri AP® Computer Science A (AP® CSA)
     üçün bu pulsuz tədris proqramında Java proqramlaşdırma dilini öyrənərkən proqram
     mühəndisliyi və obyekt yönümlü dizaynla tanış edin.
-  middle_high_page_cs_link_1: CS Dicoveries ilə tanış olun
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: CS Prinsiplərini araşdırın
-  middle_high_page_cs_link_3: CSA-nı araşdırın
-  elemeentary_page_main_title: 5 ilə 11 yaş arasında öyrənmə
-  elementary_page_main_description: Maraqlı videolar, öz-özünə işləyən dərsliklər,
-    proqramlaşdırma fəaliyyətləri və s. ilə kompüter elmləri dünyasını araşdırın!
-  elementary_page_own_pace_title: Öz sürətinizlə öyrənməyə davam edin
-  elementary_page_own_pace_description: Şagirdlərin kompüter elminin əsaslarını öyrənməyə
-    başlamaq üçün bu iki əla variantda rəsmlər, oyunlar və daha çoxunu yaradın.
-  elementary_page_own_pace_card_title_1: Əvvəlki Reader Ekspress Kursu
-  elementary_page_own_pace_card_title_2: Ekspress Kurs
-  elementary_page_own_pace_card_description_1: Kompüter elmini öz sürətinizlə öyrənin!
-    Kompüter proqramları yaratmağı, problem həll etmə bacarıqlarını inkişaf etdirməyi
-    və əyləncəli çətinliklər üzərində işləməyi öyrənin! Dostlarınız, ailənizlə və
-    müəllimlərlə bölüşmək üçün oyunlar və yaradıcı layihələr hazırlayın.
-  elementary_page_own_pace_link_1: Əvvəlki oxucu kursuna başlayın
-  elementary_page_own_pace_link_2: Ekspres Kursa Başlayın
-  elementary_page_make_your_own_games_title: Öz Animasiyalarınızı və Oyunlarınızı
-    Yaradın
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Laboratoriyası
-  elementary_page_make_your_own_games_card_description_1: Yaradıcı olmağın vaxtı!
-    Sprite Laboratoriyasında axmaq, şirin və ya xarici bir şey etmək üçün blok əsaslı
-    kodlaşdırmadan istifadə edin. Yeganə məhdud təsəvvürünüzdür!
-  elementary_page_make_your_own_games_link: Sprite Laboratoriyasını sınayın
-  elementary_page_computer_science_title: Sinifdə Kompüter Elmləri
-  elementary_page_computer_science_description: Bu kursları bir müəllim rəhbərlik
-    etməlidir! Onların məktəbinizdə öyrədilməsini görmək istəyirsinizsə, valideyndən
-    və ya qəyyumdan onları sinifinizə gətirmək üçün müəllimlə işləməsini xahiş edin.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Kompüter elminin əsasları
   elementary_page_computer_science_card_title_2: Kompüter Elmləri Əlaqələri
   elementary_page_computer_science_description_1: Tələbələri kompüter elminin əsas

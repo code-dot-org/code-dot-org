@@ -7,12 +7,11 @@ po:
     de 2015
   coming_soon: Brevemente
   new: Novo
-  hours_of_code_served: Horas de código veiculadas
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Os estudantes estão aprendendo em mais de 45 idiomas
   hoc_stat_hours_served: Mais de 100 milhões de estudantes já experimentaram uma Hora
     do Código
-  hoc_stat_females: Estudantes do sexo feminino representam 50% dos participantes
-    da Hora do Código
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 Dez.
   campaign_date_start_long: 4 de dezembro
   campaign_date_short: 4-10 dez.
@@ -53,10 +52,10 @@ po:
   hoc2023_social_creativity_with_ai_title: Hour of Code - O que você vai criar?
   hoc2023_social_creativity_with_ai_desc: Use a ciência da computação para explorar
     e aprender sobre IA!
-  hoc2023_what_is_hoc_desc: A Hora do Código é uma introdução gratuita à ciência da
-    computação por meio de atividades e vídeos divertidos para alunos de todos os
-    níveis de habilidade. A celebração deste ano da codificação e da IA é apoiada
-    por mais de 400 parceiros, 20.000 educadores e 58.000 voluntários.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Explore, jogue, crie!
   social_hoc2022_explore_play_create: Use a ciência da computação para explorar, jogar
     e criar!
@@ -69,9 +68,9 @@ po:
     músicas de “Encanto” da Disney e muito mais!
   social_hoc2023_dance: Com Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     músicas de “Encanto” da Disney e muito mais!
-  social_hoc2023_dance_v2: É hora de exibir suas coisas! Crie sua própria festa dançante
-    com sucessos de Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía
-    e muito mais!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Aprenda hoje, construa um futuro melhor.
@@ -294,9 +293,9 @@ po:
     ideias e apoio de outros educadores.
   required_materials: 'Materiais necessários:'
   optional_materials: 'Materiais opcionais:'
-  for_students: Para estudantes
+  for_students: For students
   for_educators: Para educadores
-  call_to_action_host_hoc: Organize uma Hora do Código
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Realize um evento
   call_to_action_register_event: Registre seu evento
   call_to_action_register_your_hoc: Registre sua Hora do Código
@@ -304,11 +303,11 @@ po:
   call_to_action_start_activity: Iniciar uma atividade
   call_to_action_get_certificates: Obtenha certificados
   call_to_action_go_beyond_hoc: Vá além da Hora do Código
-  call_to_action_explore_all_hoc_activities: Explore todas as atividades da Hora do
-    Código da Code.org
-  call_to_action_start_dance_party: Comece uma festa de dança
-  call_to_action_start_part_02: Comece a segunda parte
-  call_to_action_start_unplugged_activity: Inicie a atividade desconectada
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Veja os recursos promocionais
   call_to_action_learn_more: Saiba mais
   call_to_action_watch_now: Assista agora
@@ -405,9 +404,9 @@ po:
   call_to_action_view_faqs: Veja mais perguntas frequentes
   call_to_action_applications_open: As inscrições já estão abertas
   call_to_action_apply_cs_ambassador: Inscreva-se para ser um embaixador do CS
-  call_to_action_coming_soon: Em breve!
-  call_to_action_learn_how_ai_works: Saiba como a IA funciona
-  call_to_action_learn_about_ai: Saiba mais sobre IA
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Veja o guia prático para educadores
   aria_label_call_to_action_hoc_how_to_companies: Veja o guia prático para empresas
   aria_label_call_to_action_hoc_how_to_districts: Veja o guia prático para distritos
@@ -419,10 +418,9 @@ po:
   aria_label_call_to_action_hoc_how_to_volunteers: Veja o guia prático para voluntários
   aria_label_call_to_action_hoc_how_to_virtual_events: Veja o guia prático para eventos
     virtuais
-  aria_label_call_to_action_dance_01: Comece a atividade Dance Party
-  aria_label_call_to_action_dance_02: Comece a segunda parte da atividade Dance Party
-  aria_label_call_to_action_dance_unplugged: Inicie a atividade desconectada do Dance
-    Party
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Saiba mais sobre o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
@@ -543,27 +541,25 @@ po:
   curriculum_name_creating_apps_with_devices: Criação de Aplicações com Dispositivos
   curriculum_name_poetry: Codificando com poesia
   curriculum_name_dance_party: Festa de dança
-  curriculum_name_dance_party_02: Continue dançando
-  curriculum_name_dance_party_unplugged: Festa de dança desconectada
-  curriculum_name_dance_party_ai_edition: 'Festa de dança: edição AI'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Resolução de problemas e Computação
   curriculum_name_web_development: Desenvolvimento Web
   curriculum_name_interactive_animations_games: Animações e Jogos Interativos
   curriculum_name_design_process: O Processo de Conceção
   curriculum_name_data_society: Dados e Sociedade
-  curriculum_desc_dance_party_01: Nesta atividade introdutória, use o código para
-    fazer com que vários personagens coloridos mudem para planos de fundo animados
-    e músicas animadas.
-  curriculum_desc_dance_party_02: Vá além do tutorial introdutório com ideias de projetos
-    estendidos. Navegue por uma biblioteca de exemplos de festas dançantes mais complexas.
-  curriculum_desc_dance_party_unplugged: Comece seu ritmo, sem precisar de um computador!
-    Saiba como conceitos de codificação, como eventos, podem ser usados para sincronizar
-    coreografias de dançarinos.
-  curriculum_desc_dance_party_ai_edition: Aprenda sobre os conceitos de inteligência
-    artificial (IA) para criar sua própria festa de dança virtual apresentando os
-    melhores artistas da atualidade. Com dezenas de músicas para escolher, alcance
-    todos os alunos, independentemente de seu gosto musical. É hora de exibir suas
-    coisas!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Conjunto gratuito de currículos elementares que apresenta aos
     alunos os conceitos fundamentais da ciência da computação.
   curriculum_desc_csf_express: Aprenda a criar programas de computador, desenvolver
@@ -701,12 +697,12 @@ po:
   module_grade_grade_03: Nível de escolaridade 3
   module_grade_grade_04: Nível de escolaridade 4
   module_grade_grade_05: Nível de escolaridade 5
-  module_age_05_07: De 5 a 7 anos
-  module_age_07: A partir de 7 anos
-  module_age_07_11: De 7 a 11 anos
-  module_age_11: Maiores de 11 anos
-  module_age_13: A partir de 13 anos
-  module_age_all_age: Todas as idades
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: Professores do ensino fundamental e médio
   module_grade_6_10_teachers: 6-10 professores
   module_grade_9_12_teachers: 9-12 professores
@@ -806,8 +802,8 @@ po:
   heading_csa_ai: Procurando coisas para fazer após o exame AP®?
   heading_bring_cs_to_students: Leve a ciência da computação aos estudantes
   heading_cs_ambassador_program: Programa CS Ambassador
-  heading_featured_student_projects: Projetos estudantis em destaque
-  heading_start_hoc_with_videos: Comece sua Hora do Código com vídeos inspiradores
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Se você é uma estudante do ensino médio apaixonada por incentivar
     mais moças a cursarem ciência da computação em sua escola, precisamos de você!
   cs_ambassador_desc: Todos os campos, incluindo medicina, entretenimento, esportes,
@@ -908,14 +904,13 @@ po:
     os Princípios de Ciência da Computação da Code.org e receber lembretes, dicas
     e atualizações úteis diretamente na sua caixa de entrada.
   subscribe_form_section_unsubscribe: Você pode cancelar a assinatura a qualquer momento.
-  dance_hero_heading: Programe uma festa dançante
-  dance_featuring_songs_by_short: 'Apresentando músicas de:'
-  dance_featuring_songs_by_long: 'Dance Party inclui músicas de:'
-  dance_and_more: e muito mais
-  dance_choose_activity: Escolha sua festa de dança
-  dance_afe_disclaimer: Os artistas cujas músicas são usadas neste tutorial não estão
-    patrocinando ou endossando a Amazon como parte do licenciamento do uso de suas
-    músicas para a Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Como funciona o Blockchain
   blockchain_hero_desc: Mergulhe no mundo do blockchain com “How Blockchain Works”,
     nossa nova série de vídeos e as aulas que a acompanham!
@@ -14634,71 +14629,66 @@ po:
     recurso para formuladores de políticas, líderes escolares e funcionários desenvolverem
     orientações iniciais sobre IA em suas escolas.
   teach_ai_button_label: Veja o kit de ferramentas
-  middle_high_page_main_title: Aprendizagem para maiores de 11 anos
-  middle_high_page_main_description: Explore o mundo da ciência da computação com
-    vídeos envolventes, tutoriais individualizados, atividades de programação e muito
-    mais!
-  middle_high_page_hero_title: Comece com a Hora do Código
-  middle_high_page_hero_description: Aprenda os fundamentos da ciência da computação
-    com atividades gratuitas da Hora do Código, com blocos de codificação de arrastar
-    e soltar. Há centenas de opções de uma hora para você escolher!
-  middle_high_page_hourofcode_link: Explore as atividades da Hora do Código
-  middle_high_page_modules_title: Módulos de programação para estudantes mais velhos
-  middle_high_page_modules_description: Adaptados de nossos cursos CS Discoveries
-    e CS Principles, esses módulos curtos e individualizados para estudantes do ensino
-    fundamental e médio são uma ótima maneira de aprender conceitos que abrangem todas
-    as linguagens e ferramentas de programação.
-  middle_high_page_modules_card_title_1: Introdução ao Game Lab
-  middle_high_page_modules_card_title_2: Programação Turtle no App Lab
-  middle_high_page_modules_card_title_3: Programação orientada por eventos no App
-    Lab
-  middle_high_page_modules_card_description_1: Siga seu próprio ritmo nesta introdução
-    ao nosso ambiente de Game Lab enquanto programa animações, arte interativa e jogos.
-  middle_high_page_modules_card_description_2: Desbloqueie a capacidade de criar aplicativos
-    ricos e interativos com JavaScript no App Lab!
-  middle_high_page_modules_card_description_3: Siga seu próprio ritmo com esta introdução
-    ao ambiente de programação do App Lab, no qual os alunos usam JavaScript para
-    criar aplicativos interativos.
-  middle_high_page_modules_card_link: Experimente
-  middle_high_page_make_your_own_title: Crie seus próprios aplicativos, jogos e páginas
-    da Web
-  middle_high_page_make_your_own_description: 'Além dos cursos, temos ferramentas
-    de programação que permitem que você explore sua criatividade e crie algo incrível. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Laboratório de jogos
-  middle_high_page_make_your_own_card_title_3: Laboratório Web
-  middle_high_page_make_your_own_card_descrpition_1: O App Lab é um ambiente de programação
-    onde você pode criar aplicativos simples. Crie um aplicativo, codifique em JavaScript
-    com blocos ou texto e compartilhe seu aplicativo em segundos.
-  middle_high_page_make_your_own_card_descrpition_2: O Game Lab é um ambiente de programação
-    onde você pode criar animações e jogos simples com objetos e personagens que interagem
-    entre si.
-  middle_high_page_make_your_own_card_descrpition_3: O Web Lab é um ambiente de programação
-    onde você pode criar páginas web simples usando HTML e CSS. Crie suas páginas
-    da web e compartilhe seu site em segundos.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Saiba mais
-  middle_high_page_additional_resources_title: Recursos adicionais
-  middle_high_page_additional_resources_description: Há muitas maneiras de explorar
-    ainda mais a ciência da computação! Navegue pela nossa biblioteca de vídeos ou
-    saiba mais sobre carreiras empolgantes no campo da ciência da computação.
-  middle_high_page_video_library_title: Descubra nossa biblioteca de vídeos
-  middle_high_page_video_library_description: Aprenda o básico da ciência da computação
-    por meio de vídeos curtos de 5 a 10 minutos sobre tópicos como inteligência artificial,
-    Internet, como os computadores funcionam, como não ser hackeado, blockchain, carreiras
-    e muito mais!
-  middle_high_page_video_library_link: Exibir biblioteca de vídeos
-  middle_high_page_cs_journeys_title: Vá mais longe com CS Journeys
-  middle_high_page_cs_journeys_description: Dê o próximo passo em sua jornada pela
-    ciência da computação. Explore carreiras, oportunidades de orientação, cursos
-    on-line, bolsas de estudo, estágios e muito mais!
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
   middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Ciência da Computação na Sala de Aula
-  middle_high_page_cs_description: Esses cursos devem ser ministrados por um professor!
-    Se você gostaria de vê-las ensinadas em sua escola, considere trabalhar com um
-    professor para trazê-las para sua classe.
-  middle_high_page_cs_card_title_1: Descobertas do CS
-  middle_high_page_cs_card_title_2: Princípios CS
-  middle_high_page_cs_card_title_3: AP Ciência da Computação A
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Currículo gratuito com duração de um ano
     que apresenta aos alunos os conceitos fundamentais da ciência informática e os
     desafia a explorar a maneira como a computação e a tecnologia podem afetar o mundo.
@@ -14709,34 +14699,34 @@ po:
   middle_high_page_cs_card_description_3: Apresente aos alunos a engenharia de software
     e o design orientado a objetos enquanto eles aprendem a linguagem de programação
     Java neste currículo gratuito para AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore as descobertas do CS
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Explore os princípios de CS
-  middle_high_page_cs_link_3: Conheça o CSA
-  elemeentary_page_main_title: Aprendizagem para crianças de 5 a 11 anos
-  elementary_page_main_description: Explore o mundo da ciência da computação com vídeos
-    envolventes, tutoriais individualizados, atividades de programação e muito mais!
-  elementary_page_own_pace_title: Continue aprendendo no seu próprio ritmo
-  elementary_page_own_pace_description: Crie desenhos, jogos e muito mais nessas duas
-    excelentes opções para que os alunos comecem a aprender sozinhos os fundamentos
-    da ciência da computação.
-  elementary_page_own_pace_card_title_1: Curso Pre-Reader Express
-  elementary_page_own_pace_card_title_2: Curso expresso
-  elementary_page_own_pace_card_description_1: Aprenda ciência da computação no seu
-    próprio ritmo! Aprenda a criar programas de computador, desenvolver habilidades
-    de resolução de problemas e superar desafios divertidos! Crie jogos e projetos
-    criativos para compartilhar com amigos, familiares e professores.
-  elementary_page_own_pace_link_1: Comece o curso de pré-leitura
-  elementary_page_own_pace_link_2: Comece o curso expresso
-  elementary_page_make_your_own_games_title: Crie suas próprias animações e jogos
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: É hora de ser criativo!
-    Use a codificação baseada em blocos para criar algo tolo, agradável ou com espaço
-    sideral no Sprite Lab. O único limite é a sua imaginação!
-  elementary_page_make_your_own_games_link: Experimente o Sprite Lab
-  elementary_page_computer_science_title: Ciência da Computação na Sala de Aula
-  elementary_page_computer_science_description: Esses cursos devem ser ministrados
-    por um professor! Se você gostaria de vê-los ensinados em sua escola, peça a um
-    pai ou responsável que trabalhe com um professor para trazê-los para sua classe.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Fundamentos da Ciência da Computação
   elementary_page_computer_science_card_title_2: Conexões de ciência da computação
   elementary_page_computer_science_description_1: Currículo gratuito com duração de
