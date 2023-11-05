@@ -77,7 +77,7 @@ function numberListToString(numberList) {
 }
 
 /**
- * @param userBlocks {BlockSVG[]} BlockSvg array from user's workspace
+ * @param userBlocks {BlockSvg[]} BlockSvg array from user's workspace
  * @returns array of block objects with four attributes: type, id, nextBlockType, and nextBlockId.
  */
 function getUserBlocksWithNextBlock(userBlocks) {
