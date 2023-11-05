@@ -397,8 +397,6 @@ const DanceAiModal: React.FunctionComponent = () => {
   const lastInputItem =
     currentInputSlot > 0 ? getItem(inputs[currentInputSlot - 1]) : undefined;
 
-  console.log(mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT);
-
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
