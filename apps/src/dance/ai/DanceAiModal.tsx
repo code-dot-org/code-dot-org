@@ -106,6 +106,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const [mode, setMode] = useState(Mode.INITIAL);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
+  const [inputAddCount, setInputAddCount] = useState<number>(0);
   const [generatingProgress, setGeneratingProgress] =
     useState<GeneratingProgress>({
       step: 0,
@@ -187,6 +188,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       if (currentInputSlot < SLOT_COUNT) {
         setInputs([...inputs, id]);
         setCurrentInputSlot(currentInputSlot + 1);
+        setInputAddCount(inputAddCount + 1);
       }
     } else {
       // Remove item from inputs.
@@ -488,7 +490,7 @@ const DanceAiModal: React.FunctionComponent = () => {
         <div id="bot-area" className={moduleStyles.botArea}>
           {mode === Mode.SELECT_INPUTS && lastInputItem && (
             <div
-              key={lastInputItem.id}
+              key={inputAddCount}
               id="flying-emoji"
               className={moduleStyles.flyingEmoji}
             >
