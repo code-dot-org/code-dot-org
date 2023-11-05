@@ -36,6 +36,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
+import blocklyUtils from '@cdo/apps/blockly/utils';
 
 const ButtonState = {
   UP: 0,
@@ -402,6 +403,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
+    isChildBlockOfTopBlock: this.isChildBlockOfTopBlock.bind(this),
   });
 
   // Expose an interface for testing
@@ -429,6 +431,22 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
       this.studioApp_.toggleRunReset('run');
     },
   });
+};
+
+Dance.prototype.isChildBlockOfTopBlock = function (
+  searchBlockType,
+  topBlockType,
+  userBlocks
+) {
+  console.log('inside Dance.js');
+  console.log('searchBlock', searchBlockType);
+  console.log('topBlock', topBlockType);
+  console.log('userBlocks', userBlocks);
+  return blocklyUtils.isChildBlockOfTopBlock(
+    searchBlockType,
+    topBlockType,
+    userBlocks
+  );
 };
 
 /**
@@ -648,9 +666,9 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  const userBlockTypes = Blockly.getMainWorkspace()
-    .getAllBlocks()
-    .map(block => block.type);
+  const userBlocks = Blockly.getMainWorkspace().getAllBlocks();
+  const userBlockTypes = userBlocks.map(block => block.type);
+  this.nativeAPI.setUserBlocks(userBlocks);
   return new Promise((resolve, reject) => {
     this.nativeAPI.play(
       songMetadata,

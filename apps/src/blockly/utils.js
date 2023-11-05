@@ -1,11 +1,11 @@
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
 
-export function capitalizeFirstLetter(string) {
+function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function parseSoundPathString(text) {
+function parseSoundPathString(text) {
   // Example string paths:
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
@@ -38,7 +38,7 @@ export function parseSoundPathString(text) {
  * @param rangeString {string} printer-style range, e.g., "1,2,4-6"
  * @returns  array of numbers
  */
-export function printerStyleNumberRangeToList(rangeString) {
+function printerStyleNumberRangeToList(rangeString) {
   const rangeStringNoSpaces = rangeString.replace(/ /g, '');
   const rangeItems = rangeStringNoSpaces.split(',');
   const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "4-6"
@@ -65,7 +65,7 @@ export function printerStyleNumberRangeToList(rangeString) {
  * @param numberList array of numbers
  * @returns  numberString {string}
  */
-export function numberListToString(numberList) {
+function numberListToString(numberList) {
   let numberString = numberList.reduce((str, curr) => {
     str = str + curr + ',';
     return str;
@@ -75,3 +75,46 @@ export function numberListToString(numberList) {
   }
   return numberString;
 }
+
+function getUserBlocksWithNextBlock(userBlocks) {
+  const userBlocksWithNextBlock = [];
+  userBlocks.forEach(b => {
+    let block = {type: b.type, id: b.id};
+    if (b.childBlocks_[0]) {
+      block.nextBlockType = b.childBlocks_[0].type;
+      block.nextBlockId = b.childBlocks_[0].id;
+    }
+    userBlocksWithNextBlock.push(block);
+  });
+  return userBlocksWithNextBlock;
+}
+
+function isChildBlockOfTopBlock(searchBlockType, topBlockType, userBlocks) {
+  console.log('inside utils');
+  console.log('searchBlockType', searchBlockType);
+  console.log('topBlockType', topBlockType);
+  console.log('userBlocks', userBlocks);
+  let userBlocksWithNextBlock = getUserBlocksWithNextBlock(userBlocks);
+  console.log('userBlocksWithNextBlock', userBlocksWithNextBlock);
+  let currentBlock = userBlocksWithNextBlock.find(b => b.type === topBlockType);
+  console.log('currentBlock - before while loop', currentBlock);
+  while (currentBlock?.nextBlockType) {
+    console.log('currentBlock.nextBlockType', currentBlock.nextBlockType);
+    if (currentBlock.nextBlockType === searchBlockType) {
+      return true;
+    }
+    currentBlock = userBlocksWithNextBlock.find(
+      b => b.id === currentBlock.nextBlockId
+    );
+    console.log('currentBlock', currentBlock);
+  }
+  return false;
+}
+
+export default {
+  capitalizeFirstLetter,
+  parseSoundPathString,
+  printerStyleNumberRangeToList,
+  numberListToString,
+  isChildBlockOfTopBlock,
+};
