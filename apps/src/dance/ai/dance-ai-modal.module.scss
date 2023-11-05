@@ -67,55 +67,6 @@ $result-red: rgb(235 87 87);
   }
 }
 
-// Fade in for 1 seconds after a 1 second delay.
-@keyframes appear1 {
-  0%,
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes center-to-left {
-  0% {
-    left: 50%;
-  }
-  100% {
-    left: 10%;
-  }
-}
-
-// 0.5 second pause, then scan over 2.5 seconds
-@keyframes scan-left-to-right {
-  0%,
-  16.6% {
-    left: calc(50% - 65px);
-  }
-  100% {
-    left: calc(50% + 65px);
-  }
-}
-
-@keyframes center-to-left {
-  0% {
-    left: calc(50% + 65px);
-  }
-  100% {
-    left: 10%;
-  }
-}
-
-@keyframes right-to-center {
-  0% {
-    left: 83%;
-  }
-  100% {
-    left: 45%;
-  }
-}
-
 .modalBackdrop {
   position: fixed;
   top: 0;
@@ -130,7 +81,7 @@ $result-red: rgb(235 87 87);
 .dialog {
   max-width: initial !important;
   width: 824px !important;
-  height: 454px;
+  height: 494px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
@@ -215,12 +166,16 @@ $result-red: rgb(235 87 87);
 
     .textArea {
       position: absolute;
-      width: 100%;
-      height: 20px;
+      width: 70%;
+      height: 50px;
       bottom: 14px;
-      left: 0;
       text-align: center;
       font-size: 18px;
+      transform: translateX(-50%);
+      left: 50%;
+      line-height: 25px;
+      border-top: solid 1px $neutral_light;
+      padding-top: 4px;
     }
 
     .inputsArea {
@@ -319,38 +274,6 @@ $result-red: rgb(235 87 87);
       }
     }
 
-    .outputsArea {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 270px;
-      top: 40px;
-      left: 0;
-
-      .blockPreview {
-        position: absolute;
-        transform: translateX(-50%);
-        left: 45%;
-        top: 60px;
-        backface-visibility: hidden;
-        transition: transform 0.8s;
-
-        &Right {
-          left: 83%;
-        }
-
-        &RightToCenter {
-          animation: right-to-center 2s;
-          left: 45%;
-        }
-
-        &Hide {
-          transform: rotateY(180deg);
-        }
-      }
-    }
-
     .previewArea {
       position: absolute;
       width: 500px;
@@ -394,6 +317,10 @@ $result-red: rgb(235 87 87);
 
         &Back {
           transform: rotateY(180deg) translateX(50%);
+
+          .blockPreview {
+            margin-top: 50px
+          }
         }
       }
     }
