@@ -438,10 +438,6 @@ Dance.prototype.isChildBlockOfTopBlock = function (
   topBlockType,
   userBlocks
 ) {
-  console.log('inside Dance.js');
-  console.log('searchBlock', searchBlockType);
-  console.log('topBlock', topBlockType);
-  console.log('userBlocks', userBlocks);
   return blocklyUtils.isChildBlockOfTopBlock(
     searchBlockType,
     topBlockType,
