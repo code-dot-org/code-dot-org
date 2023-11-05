@@ -28,6 +28,45 @@ $result-red: rgb(235 87 87);
   }
 }
 
+// Bot head opens for 1 second after a 1 second delay.
+@keyframes bot-head-open {
+  0%, 50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-60deg);
+  }
+}
+
+// Bot head closes for 1 second after a 1 second delay.
+@keyframes bot-head-close {
+  0%, 50% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// Emoji moves across linearly but downwards with acceleration.
+@keyframes flying-emoji-x {
+  0% {
+    left: 150px;
+  }
+  100% {
+    left: 100px;
+  }
+}
+
+@keyframes flying-emoji-y {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100px;
+  }
+}
+
 // Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
   0%,
@@ -120,6 +159,7 @@ $result-red: rgb(235 87 87);
       margin: 0 10px;
       background-color: $ai-block-inputs-color;
       border: solid 2px $ai-block-inputs-border-color;
+      cursor: pointer;
 
       .emojiSlot {
         width: 35px;
@@ -185,140 +225,69 @@ $result-red: rgb(235 87 87);
 
     .inputsArea {
       position: absolute;
-      width: 550px;
+      width: 305px;
       height: 190px;
       top: 22px;
-      left: 170px;
+      left: 320px;
 
-      .itemContainer {
-        background-color: $neutral_dark10;
-        border-radius: 4px;
-        padding: 12px;
-        height: 166px;
-        animation: appear1 2s;
+      .item {
+        opacity: 0.3;
 
-        .item {
-          opacity: 0.3;
-
-          &Available {
-            cursor: pointer;
-            opacity: 1;
-          }
-        }
-      }
-    }
-
-    .promptArea {
-      position: absolute;
-      width: 100%;
-      height: 70px;
-      top: 210px;
-      left: 0;
-      pointer-events: none;
-
-      .prompt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        margin-top: 14px;
-
-        .inputContainer {
-          position: relative;
-          margin: 0 4px;
-
-          .arrowDown {
-            position: absolute;
-            top: -14px;
-            margin-left: 18px;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 14px solid $neutral_dark10;
-
-            &FirstAppear {
-              animation: appear1 2s;
-            }
-          }
-
-          .inputBackground {
-            background-color: $neutral_dark10;
-            border-radius: 4px;
-            width: 56px;
-            height: 56px;
-          }
-
-          .inputItem {
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: all;
-          }
+        &Available {
+          cursor: pointer;
+          opacity: 1;
         }
       }
     }
 
     .botArea {
       position: absolute;
-      width: 100%;
-      height: 300px;
-      top: 10px;
+      width: 260px;
+      height: 280px;
+      top: 50px;
       left: 0;
       pointer-events: none;
       z-index: 1;
 
+      .flyingEmoji {
+        position: absolute;
+        left: 110px;
+        top: 100px;
+
+        animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
+      }
+
       .botContainer {
-        flex: 0 0 140px;
+        height: 260px;
 
-        .bot {
+        .botHead {
+          width: 115px;
+          left: 72px;
           position: absolute;
+          top: 23px;
+          transform-origin: bottom left;
+          transition: transform 0.5s;
+          transform: rotate(0deg);
+
+          &Open {
+            transform: rotate(-60deg);
+          }
+        }
+
+        .botBody {
+          width: 130px;
           transform: translateX(-50%);
+          left: 50%;
+          position: absolute;
+          top: 100px;
+        }
 
-          &AppearCentered {
-            left: calc(50% - 65px);
-            animation: appear 2s;
-          }
+        animation: appear 0.5s;
+        pointer-events: auto;
 
-          &ScanLeftToRight {
-            animation: scan-left-to-right 3s;
-            left: calc(50% + 65px);
-          }
-
-          &CenterToLeft {
-            animation: center-to-left 1.75s;
-            left: 10%;
-          }
-
-          &Left {
-            left: 10%;
-          }
-
-          .image {
-            position: relative;
-            width: 110px;
-            animation: appear1 0.5s;
-            pointer-events: auto;
-
-            &:hover {
-              transform: scale(1.03, 1.03);
-              transition: 0.1s ease-in-out;
-            }
-          }
-
-          .beamImage {
-            top: 140px;
-            left: 50%;
-            width: 100px;
-            position: absolute;
-            transform: translateX(-50%);
-            animation: appear1 0.25s;
-            display: none;
-
-            &Visible {
-              display: block;
-            }
-          }
+        &:hover {
+          transform: scale(1.03, 1.03);
+          transition: 0.1s ease-in-out;
         }
       }
 
@@ -496,6 +465,16 @@ $result-red: rgb(235 87 87);
 
   &Button {
     @include remove-button-styles;
-    margin: 8px;
+    width: 52px;
+    height: 52px;
+    margin: 4px;
+    background-size: 40px;
+    background-color: $neutral_light;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &Highlighted {
+      background-color: $teal;
+    }
   }
 }
