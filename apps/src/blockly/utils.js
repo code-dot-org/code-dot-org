@@ -90,23 +90,15 @@ function getUserBlocksWithNextBlock(userBlocks) {
 }
 
 function isChildBlockOfTopBlock(searchBlockType, topBlockType, userBlocks) {
-  console.log('inside utils');
-  console.log('searchBlockType', searchBlockType);
-  console.log('topBlockType', topBlockType);
-  console.log('userBlocks', userBlocks);
   let userBlocksWithNextBlock = getUserBlocksWithNextBlock(userBlocks);
-  console.log('userBlocksWithNextBlock', userBlocksWithNextBlock);
   let currentBlock = userBlocksWithNextBlock.find(b => b.type === topBlockType);
-  console.log('currentBlock - before while loop', currentBlock);
   while (currentBlock?.nextBlockType) {
-    console.log('currentBlock.nextBlockType', currentBlock.nextBlockType);
     if (currentBlock.nextBlockType === searchBlockType) {
       return true;
     }
     currentBlock = userBlocksWithNextBlock.find(
       b => b.id === currentBlock.nextBlockId
     );
-    console.log('currentBlock', currentBlock);
   }
   return false;
 }
