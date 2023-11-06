@@ -14,8 +14,9 @@ class TeacherMailerPreview < ActionMailer::Preview
 
   def hour_of_code_tutorial_preview
     teacher = build :teacher, email: 'newteacher@fake.com'
-    lesson = create :lesson
-    lesson_plan_html_url = lesson&.lesson_plan_html_url
+    # 'oceans' course offering was chosen arbitrarily
+    lessons = CourseOffering.find_by(key: 'oceans')&.latest_published_version('en-us')&.units&.first&.lessons
+    lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
     TeacherMailer.hoc_tutorial_email(teacher, lesson_plan_html_url)
   end
 end
