@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Usa o bloco `definir o tamanho do dançarino_secundário2` para tornar esse dançarino mais pequeno.",
   "danceFeedbackUseSetTint": "Usa o bloco `definir matiz` para mudar o tom da cor do dançarino.",
   "danceFeedbackUseStartMapping": "Tenta adicionar o bloco <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicórnio_direito</title><title name=\"PROPERTY\">\"escala\"</title><title name=\"RANGE\">\"baixo\"</title></block></xml> ao teu programa.",
+  "danceFeedbackKeepCoding": "Continua a tentar! Ainda falta alguma coisa.",
   "measure": "Compasso:"
 }
