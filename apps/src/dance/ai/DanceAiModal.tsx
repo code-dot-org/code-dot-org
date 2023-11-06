@@ -10,8 +10,7 @@ import {FieldDropdown, Workspace} from 'blockly/core';
 import {chooseEffects, ChooseEffectsQuality} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import AiExplanationView from './AiExplanationView';
-import {AiOutput, FieldKey, GeneratedEffect} from '../types';
+import {AiOutput, FieldKey, GeneratedEffect, Scores} from '../types';
 import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
@@ -274,14 +273,26 @@ const DanceAiModal: React.FunctionComponent = () => {
     };
   };
 
-  const getCurrentGeneratedEffect = () => {
-    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
-      return generatedEffects.current.badEffects[generatingProgress.step];
+  const getGeneratedEffect = (step: number) => {
+    if (step < BAD_GENERATED_RESULTS_COUNT) {
+      return generatedEffects.current.badEffects[step];
     } else if (generatedEffects.current.goodEffect) {
       return generatedEffects.current.goodEffect;
     } else {
       return undefined;
     }
+  };
+
+  const getScores = (step: number) => {
+    const effect = getGeneratedEffect(step);
+
+    const defaultValue: Scores = {
+      backgroundEffect: 0,
+      foregroundEffect: 0,
+      backgroundColor: 0,
+    };
+
+    return effect?.scores ? effect.scores : defaultValue;
   };
 
   const handleConvertBlocks = () => {
@@ -392,7 +403,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       return <span key={index}>{part}</span>;
     });
 
-  const currentGeneratedEffect = getCurrentGeneratedEffect();
+  const currentGeneratedEffect = getGeneratedEffect(generatingProgress.step);
 
   const lastInputItem =
     currentInputSlot > 0 ? getItem(inputs[currentInputSlot - 1]) : undefined;
@@ -571,13 +582,23 @@ const DanceAiModal: React.FunctionComponent = () => {
           </div>
         )}
 
+        {mode === Mode.GENERATING && (
+          <div id="score-area" className={moduleStyles.scoreArea}>
+            <Score scores={getScores(generatingProgress.step)} />
+          </div>
+        )}
+
         {mode === Mode.EXPLANATION && currentGeneratedEffect && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
-            <AiExplanationView
-              inputs={inputs}
-              results={currentGeneratedEffect.results}
-              labelMaps={getLabels()}
-            />
+            {Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).map(
+              index => {
+                return (
+                  <div style={{left: index * 70}}>
+                    <Score scores={getScores(index)} />
+                  </div>
+                );
+              }
+            )}
           </div>
         )}
 
@@ -691,6 +712,29 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
       )}
       title={item.emoji}
     />
+  );
+};
+
+interface ScoreProps {
+  scores: Scores;
+}
+
+const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
+  return (
+    <div className={moduleStyles.scoreContainer}>
+      <div
+        className={moduleStyles.barFill}
+        style={{
+          height: Math.round(scores.backgroundEffect * 20),
+        }}
+      >
+        &nbsp;
+      </div>
+
+      <div className={moduleStyles.text}>
+        {Math.round(scores.backgroundEffect * 20)}
+      </div>
+    </div>
   );
 };
 
