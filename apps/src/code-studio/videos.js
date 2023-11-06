@@ -50,6 +50,12 @@ function onVideoEnded() {
 }
 
 var currentVideoOptions;
+// YouTube's API requires this function to be in a global window context,
+// and (I think) due to call order inside of the `createVideoWithFallback` function, it
+// doesn't actually exist until after the first video load if it's defined here as `function onYouTubeIframeReady`.
+// But if we define it directly onto the window object, it will properly exist the first time the video is opened.
+
+// This is a good candidate to circle back to and refactor.
 window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
   const player = new YT.Player('video', {
