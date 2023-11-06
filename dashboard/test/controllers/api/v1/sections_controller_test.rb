@@ -96,6 +96,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
+  # TODO(TEACH-721): This test is expected to fail after the post-backfill code cleanup.
+  test 'returns owned section even if no SectionInstructor exists' do
+    broken_section = create(:section, user: @teacher, login_type: 'word')
+    # Remove auto-created SectionInstructor to simulate old section that hasn't been backfilled.
+    broken_section.section_instructors.first.really_destroy!
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, broken_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
   # It's easy to accidentally grant admins permission to `index` all sections
   # in the database - a huge query that we don't want to permit.  Admin users
   # should therefore only get their own sections when indexing sections,
