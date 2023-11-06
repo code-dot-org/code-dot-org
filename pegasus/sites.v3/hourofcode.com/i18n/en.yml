@@ -309,6 +309,7 @@
   call_to_action_explore_teacher_forums: "Explore teacher forums"
   call_to_action_explore_teacher_forum: "Explore teacher forum"
   call_to_action_explore_career_resources: "Explore career resources"
+  call_to_action_explore_stats_infographics: "Explore statistics & infographics"
   call_to_action_watch_videos: "Watch videos"
   call_to_action_download_posters: "Download posters"
   call_to_action_contact_support: "Contact Code.org support"
@@ -8556,6 +8557,8 @@
   hoc_how_to_resources_discover_desc: "Explore a wide selection of one-hour tutorials designed for all ages in over 45 languages."
   hoc_how_to_resources_get_involved_heading: "How to Get Involved"
   hoc_how_to_resources_get_involved_desc: "Help spread the word about Hour of Code! Discover ways to get your community involved."
+  hoc_how_to_resources_hoc_stats_heading: "Hour of Code Statistics"
+  hoc_how_to_resources_hoc_stats_desc: "Use sample messaging and infographics as you look for ways to promote the Hour of Code in your district communication to stakeholders. Find impactful infographics and statistics to share with your community!"
 
   hoc_how_to_step_label_plan: "Plan where and when you'll do your Hour of Code"
   hoc_how_to_step_label_choose_activity: "Choose your activity"
