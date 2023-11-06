@@ -15,6 +15,7 @@ import {AiOutput, FieldKey, GeneratedEffect} from '../types';
 import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
+const i18n = require('../locale');
 
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
@@ -104,7 +105,6 @@ const DanceAiModal: React.FunctionComponent = () => {
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [processingDone, setProcessingDone] = useState<boolean>(false);
   const [generatingProgress, setGeneratingProgress] =
     useState<GeneratingProgress>({
       step: 0,
@@ -193,13 +193,11 @@ const DanceAiModal: React.FunctionComponent = () => {
   const handleStartOverClick = () => {
     setInputs([]);
     setCurrentInputSlot(0);
-    setProcessingDone(false);
     setGeneratingProgress({step: 0, subStep: 0});
     setMode(Mode.SELECT_INPUTS);
   };
 
   const handleRegenerateClick = () => {
-    setProcessingDone(false);
     setGeneratingProgress({step: 0, subStep: 0});
     handleGenerateClick();
   };
@@ -348,6 +346,47 @@ const DanceAiModal: React.FunctionComponent = () => {
         : aiBotYes;
   }
 
+  const headerValue = () => {
+    return (
+      <div
+        className={moduleStyles.inputsContainer}
+        onClick={handleStartOverClick}
+      >
+        {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+          const item = getItem(inputs[index]);
+          return (
+            <div key={index} className={moduleStyles.emojiSlot}>
+              {item && (
+                <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
+              )}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // The header comes from a localized string like this: "generate {input} effect".
+  // We split the localized string on the "{input}", and rebuild the HTML but with
+  // the emoji box in place of that "{input}".
+  const INPUT_KEY = '__CDO_INPUTS__';
+  const headerTextSplit = i18n
+    .danceAiModalHeading({input: INPUT_KEY})
+    .split(INPUT_KEY);
+  const headerContent = [0, 1, 2]
+    .map(index => {
+      if (index === 0) {
+        return headerTextSplit[0];
+      } else if (index === 1) {
+        return headerValue();
+      } else {
+        return headerTextSplit[1];
+      }
+    })
+    .map((part: string, index: number) => {
+      return <span key={index}>{part}</span>;
+    });
+
   const currentGeneratedEffect = getCurrentGeneratedEffect();
 
   return (
@@ -358,27 +397,12 @@ const DanceAiModal: React.FunctionComponent = () => {
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img src={aiBotBorder} className={moduleStyles.botImage} alt="A.I." />
-        generate &nbsp;
-        <div
-          className={moduleStyles.inputsContainer}
-          onClick={handleStartOverClick}
-        >
-          {Array.from(Array(SLOT_COUNT).keys()).map(index => {
-            const item = getItem(inputs[index]);
-            return (
-              <div key={index} className={moduleStyles.emojiSlot}>
-                {item && (
-                  <EmojiIcon
-                    item={item}
-                    className={moduleStyles.emojiSlotIcon}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
-        &nbsp; effect
+        <img
+          src={aiBotBorder}
+          className={moduleStyles.botImage}
+          alt={i18n.danceAiModalBotAlt()}
+        />
+        {headerContent}
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
@@ -390,7 +414,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             onClick={onClose}
           >
             <i className="fa fa-close" aria-hidden={true} />
-            <span className="sr-only">Close</span>
+            <span className="sr-only">{i18n.danceAiModalClose()}</span>
           </button>
         </div>
       </div>
@@ -409,10 +433,10 @@ const DanceAiModal: React.FunctionComponent = () => {
               }}
             >
               <button key={0} type="button" value={Toggle.AI_BLOCK}>
-                Effect
+                {i18n.danceAiModalEffectButton()}
               </button>
               <button key={1} type="button" value={Toggle.CODE}>
-                Code
+                {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>
           </div>
@@ -421,21 +445,17 @@ const DanceAiModal: React.FunctionComponent = () => {
         <div id="text-area" className={moduleStyles.textArea}>
           {' '}
           {mode === Mode.SELECT_INPUTS
-            ? 'Choose three emojis.'
-            : mode === Mode.PROCESSING && !processingDone
-            ? ''
-            : mode === Mode.PROCESSING && processingDone
-            ? ''
+            ? i18n.danceAiModalChooseEmoji()
             : mode === Mode.GENERATING && botImage === aiBotYes
-            ? 'A.I. is generating this effect.'
+            ? i18n.danceAiModalGenerating()
             : mode === Mode.GENERATING
-            ? 'A.I. is finding the best effect to generate.'
+            ? i18n.danceAiModalFinding()
             : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
-            ? 'A.I. generated this effect.'
+            ? i18n.danceAiModalEffect()
             : mode === Mode.RESULTS && currentToggle === Toggle.CODE
-            ? 'Did you know? A.I. wrote this code to generate the effect.'
+            ? i18n.danceAiModalCode()
             : mode === Mode.EXPLANATION
-            ? "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
+            ? i18n.danceAiModalExplanation()
             : undefined}
         </div>
 
@@ -471,8 +491,7 @@ const DanceAiModal: React.FunctionComponent = () => {
               mode === Mode.SELECT_INPUTS || mode === Mode.PROCESSING ? 1 : 0,
           }}
         >
-          {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.PROCESSING && !processingDone)) && (
+          {(mode === Mode.SELECT_INPUTS || mode === Mode.PROCESSING) && (
             <div className={moduleStyles.prompt}>
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
                 const item = getItem(inputs[index]);
@@ -528,13 +547,15 @@ const DanceAiModal: React.FunctionComponent = () => {
                   src={aiBotBeam}
                   className={classNames(
                     moduleStyles.beamImage,
-                    mode === Mode.PROCESSING &&
-                      !processingDone &&
-                      moduleStyles.beamImageVisible
+                    mode === Mode.PROCESSING && moduleStyles.beamImageVisible
                   )}
-                  alt="A.I. Beam"
+                  alt={i18n.danceAiModalBotBeamAlt()}
                 />
-                <img src={botImage} className={moduleStyles.image} alt="A.I." />
+                <img
+                  src={botImage}
+                  className={moduleStyles.image}
+                  alt={i18n.danceAiModalBotAlt()}
+                />
               </div>
             </div>
           )}
@@ -600,18 +621,10 @@ const DanceAiModal: React.FunctionComponent = () => {
           {mode === Mode.RESULTS && (
             <div>
               <Button
-                id="regenerate"
-                onClick={handleRegenerateClick}
-                color={Button.ButtonColor.white}
-                className={classNames(moduleStyles.button)}
-              >
-                <i className="fa fa-refresh" />
-              </Button>
-              <Button
                 id="explanation-button"
                 text={'?'}
                 onClick={handleExplanationClick}
-                color={Button.ButtonColor.white}
+                color={Button.ButtonColor.neutralDark}
                 className={moduleStyles.button}
               />
             </div>
@@ -620,7 +633,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {mode === Mode.EXPLANATION && (
             <Button
               id="results-final-button"
-              text={'Back'}
+              text={i18n.danceAiModalBack()}
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -629,26 +642,30 @@ const DanceAiModal: React.FunctionComponent = () => {
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          <div
-            id="buttons-area-left"
-            className={moduleStyles.buttonsAreaLeft}
-          />
+          <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
+            {mode === Mode.RESULTS && (
+              <Button
+                id="regenerate"
+                onClick={handleRegenerateClick}
+                color={Button.ButtonColor.neutralDark}
+                className={classNames(moduleStyles.button)}
+              >
+                <i
+                  className={classNames(
+                    'fa fa-refresh',
+                    moduleStyles.buttonIcon
+                  )}
+                />
+                {i18n.danceAiModalRegenerateButton()}
+              </Button>
+            )}
+          </div>
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
               id="select-all-sections-button"
-              text={'Generate'}
+              text={i18n.danceAiModalGenerateButton()}
               onClick={handleProcessClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
-
-          {mode === Mode.PROCESSING && processingDone && (
-            <Button
-              id="generate-button"
-              text={'Generate'}
-              onClick={handleGenerateClick()}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
@@ -657,7 +674,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {showConvertButton && (
             <Button
               id="convert-button"
-              text={'Use code'}
+              text={i18n.danceAiModalUseCodeButton()}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -667,7 +684,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {showUseButton && (
             <Button
               id="use-button"
-              text={'Use effect'}
+              text={i18n.danceAiModalUseEffectButton()}
               onClick={handleUseClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
