@@ -141,8 +141,7 @@ class EvaluateRubricJob < ApplicationJob
     # Check for PII / sharing failures
     # Get the 2-character language code from the user's preferred locale
     locale = (user.locale || 'en')[0...2]
-    share_failure = ShareFiltering.find_share_failure(code, locale, exceptions: true)
-    raise "ShareFailure #{share_failure.type}" if share_failure
+    ShareFiltering.find_share_failure(code, locale, exceptions: true)
 
     openai_params = get_openai_params(lesson_s3_name, code)
     ai_evaluations = get_openai_evaluations(openai_params)
