@@ -7560,6 +7560,8 @@ pl:
               name: 'Eksploracja lekcji: U1L8 - Dziedziczenie'
             lesson-9:
               name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7623,6 +7625,8 @@ pl:
               name: Asynchroniczna Część 2
             lesson-5:
               name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
             lesson-10:
               name: Przejście do trybu asynchronicznego
             lesson-13:

@@ -184,6 +184,7 @@ export default function RubricContent({
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
             <Button
+              id="ui-submitFeedbackButton"
               text={i18n.submitToStudent()}
               color={Button.ButtonColor.brandSecondaryDefault}
               onClick={submitFeedbackToStudent}
