@@ -8760,8 +8760,9 @@
         },
         "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
           "tips": [
-            null
-          ]
+            "**Selecionando as Melhorias:** Os alunos podem precisar de ajuda para pensar em boas melhorias em seus aplicativos. Por exemplo, se vários usuários estão reclamando de um texto pequeno, eles podem tentar aumentar o tamanho da fonte na tela que estão melhorando. Eles também podem optar por adicionar uma configuração de “tamanho do texto” na página “Configurações”. Sempre há muitas melhorias em um aplicativo que podem gerar o efeito desejado. Para esta lição, é mais importante que a mudança atenda de forma razoável à necessidade que eles escolheram. Haverá mais oportunidades de investigar o que é razoável mudar na interface de usuário de um aplicativo posteriormente na unidade. "
+          ],
+          "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "6c56c6d8-505f-450b-af78-6589752885e9": {
           "name": "Diário"
@@ -19229,8 +19230,9 @@
         },
         "e127492b-ea87-427d-b492-3367ba4434a4": {
           "tips": [
-            null
-          ]
+            "**Selecionando as Melhorias:** Os alunos podem precisar de ajuda para pensar em boas melhorias em seus aplicativos. Por exemplo, se vários usuários estão reclamando de um texto pequeno, eles podem tentar aumentar o tamanho da fonte na tela que estão melhorando. Eles também podem optar por adicionar uma configuração de “tamanho do texto” na página “Configurações”. Sempre há muitas melhorias em um aplicativo que podem gerar o efeito desejado. Para esta lição, é mais importante que a mudança atenda de forma razoável à necessidade que eles escolheram. Haverá mais oportunidades de investigar o que é razoável mudar na interface de usuário de um aplicativo posteriormente na unidade. "
+          ],
+          "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "b6e821e1-623c-489c-a3a2-8c7b392c38d6": {
           "name": "Diário"
@@ -30896,8 +30898,9 @@
         },
         "72e65375-942e-4c50-8bb6-3e0d0728c959": {
           "tips": [
-            null
-          ]
+            "**Selecionando as Melhorias:** Os alunos podem precisar de ajuda para pensar em boas melhorias em seus aplicativos. Por exemplo, se vários usuários estão reclamando de um texto pequeno, eles podem tentar aumentar o tamanho da fonte na tela que estão melhorando. Eles também podem optar por adicionar uma configuração de “tamanho do texto” na página “Configurações”. Sempre há muitas melhorias em um aplicativo que podem gerar o efeito desejado. Para esta lição, é mais importante que a mudança atenda de forma razoável à necessidade que eles escolheram. Haverá mais oportunidades de investigar o que é razoável mudar na interface de usuário de um aplicativo posteriormente na unidade. "
+          ],
+          "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "eaf2312f-f3a1-4d8e-9e9f-dec26b2ef9a4": {
           "tips": [
@@ -40804,6 +40807,24 @@
         },
         "e1f805fd-4df7-4e66-9903-2a8c91ad5990": {
           "description": "**Faça Isso:** Os alunos devem trabalhar em grupos para criar pilhas de tiras de papel para que cada pilha seja uma categoria de feedback. As categorias devem corresponder às necessidades ou aos problemas semelhantes aos abordados pelo feedback. Por exemplo, vários comentários podem ser sobre o fato de a fonte ser muito pequena para ser lida. Ao categorizar o feedback, eles também devem discutir em quais categorias gostariam de se concentrar e por quê.\n\n**Circule:** Monitore o progresso dos alunos, pedindo aos grupos que expliquem como estão formando suas categorias. Não há um agrupamento correto de feedback aqui, mas os alunos devem estar preparados para justificar suas categorias. Peça aos alunos que expliquem quais categorias eles escolheram como mais importantes de serem abordadas e por quê.\n\n**Compartilhe:** Depois que todos os grupos categorizarem seus comentários, peça algumas sugestões dos tipos de categorias que eles criaram."
+        },
+        "10d99ae6-1017-4eee-bd4b-f29db65a8188": {
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+        },
+        "c4c179f9-0c8f-4b1e-9968-951378f3fa2d": {
+          "description": "#### Possíveis Melhorias"
+        },
+        "2d61b6e8-fd6b-419b-83d4-0feba34d7e59": {
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+        },
+        "df6e2da4-8b9e-4ca2-b29f-cb6b7de0cf75": {
+          "description": "#### Possíveis Melhorias"
+        },
+        "2063e374-9886-493e-8aac-18fbfdbb1089": {
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+        },
+        "28cc4fbb-0d1e-476a-9a6f-215664f77306": {
+          "description": "#### Possíveis Melhorias"
         }
       }
     }

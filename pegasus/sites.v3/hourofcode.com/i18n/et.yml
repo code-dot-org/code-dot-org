@@ -6,10 +6,10 @@ et:
   front_title: Võta osa ajaloo suurimast õpisündmusest %{campaign_date}
   coming_soon: Tuleb peagi
   new: Uus
-  hours_of_code_served: Koodi teenindamise tunnid
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Õpilased õpivad enam kui 45 keeles
   hoc_stat_hours_served: Üle 100 miljoni õpilase on KoodiTund läbi teinud
-  hoc_stat_females: Naisõpilased moodustavad 50% Hour of Code osalejatest
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4. detsember
   campaign_date_start_long: 4. detsember
   campaign_date_short: 4.-10. detsember
@@ -50,10 +50,10 @@ et:
   hoc2023_social_creativity_with_ai_title: Kooditund - Mida te loote?
   hoc2023_social_creativity_with_ai_desc: Kasutage arvutiteadust, et uurida ja õppida
     AI!
-  hoc2023_what_is_hoc_desc: Kooditunn on tasuta sissejuhatus arvutiteadusse lõbusate
-    tegevuste ja videote kaudu kõigi oskuste tasemel õppijatele. Sel aastal nii kodeerimise
-    kui ka tehisintellekti tähistamist toetab üle 400 partneri, 20 000 õpetajat ja
-    58 000 vabatahtlikku.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: uurida, mängida, luua!
   social_hoc2022_explore_play_create: Kasutage arvutiteadust, et uurida, mängida ja
     luua!
@@ -66,8 +66,9 @@ et:
     Disney „Encanto” ja palju muud!
   social_hoc2023_dance: Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     muusika Disney „Encanto” ja palju muud!
-  social_hoc2023_dance_v2: On aeg oma asju toetada! Looge oma tantsupidu, kus osalevad
-    Miley Cyruse, BTS-i, Lil Nas X, Harry Stylesi, Nicki Minaji, Rosalía ja muu hittid!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Õppige täna, ehitage homme heledam.
@@ -279,9 +280,9 @@ et:
     koolitajate ülevaade ja tugi.
   required_materials: 'Nõutavad materjalid:'
   optional_materials: 'Valikulised materjalid:'
-  for_students: Õpilastele
+  for_students: For students
   for_educators: Haridustöötajatele
-  call_to_action_host_hoc: Korraldage kooditund
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Sündmuse hoidmine
   call_to_action_register_event: Registreeri oma üritus
   call_to_action_register_your_hoc: Registreeri oma koodiaeg
@@ -289,11 +290,11 @@ et:
   call_to_action_start_activity: Alustage tegevust
   call_to_action_get_certificates: Hankige sertifikaadid
   call_to_action_go_beyond_hoc: Minge kaugemale koodi tunnist
-  call_to_action_explore_all_hoc_activities: Tutvuge kõigi kooditunni tegevustega
-    saidilt Code.org
-  call_to_action_start_dance_party: Alustage tantsupidu
-  call_to_action_start_part_02: Alustage teist osa
-  call_to_action_start_unplugged_activity: Alustage vooluvõrku ühendatud tegevust
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Vaata promo ressursse
   call_to_action_learn_more: Rohkem lugemist
   call_to_action_watch_now: Vaadake kohe
@@ -389,9 +390,9 @@ et:
   call_to_action_view_faqs: Vaata veel KKK-d
   call_to_action_applications_open: Rakendused on nüüd avatud
   call_to_action_apply_cs_ambassador: Kandideerige CS suursaadikuks
-  call_to_action_coming_soon: Tuleb varsti!
-  call_to_action_learn_how_ai_works: Siit saate teada, kuidas AI töötab
-  call_to_action_learn_about_ai: Lisateave tehisintellekti kohta
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Vaadake õpetajate juhendit
   aria_label_call_to_action_hoc_how_to_companies: Vaadake ettevõtete juhendit
   aria_label_call_to_action_hoc_how_to_districts: Vaadake linnaosade juhendit
@@ -402,10 +403,9 @@ et:
   aria_label_call_to_action_hoc_how_to_volunteers: Vaadake vabatahtlike juhendit
   aria_label_call_to_action_hoc_how_to_virtual_events: Vaadake virtuaalsete sündmuste
     juhendit
-  aria_label_call_to_action_dance_01: Alustage tantsupeo tegevust
-  aria_label_call_to_action_dance_02: Alustage tantsupeo tegevuse teist osa
-  aria_label_call_to_action_dance_unplugged: Alustage tantsupidu vooluvõrgust lahti
-    ühendatud tegevust
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Lisateave Amazon Future Engineeri kohta
   aria_label_call_to_action_teaching_csf: Alusta õpetamine arvutiteaduse alused professionaalne
     õppe programm
@@ -515,26 +515,25 @@ et:
   curriculum_name_creating_apps_with_devices: Rakenduste loomine seadmetega
   curriculum_name_poetry: Kodeerimine luulega
   curriculum_name_dance_party: Tantsuõhtu
-  curriculum_name_dance_party_02: Jätkake tantsimist
-  curriculum_name_dance_party_unplugged: Tantsupidu vooluvõrgust ühendamata
-  curriculum_name_dance_party_ai_edition: 'Tantsupidu: AI väljaanne'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Probleemide lahendamine ja arvutustehnika
   curriculum_name_web_development: Veebiarendus
   curriculum_name_interactive_animations_games: Interaktiivsed animatsioonid ja mängud
   curriculum_name_design_process: Projekteerimise protsess
   curriculum_name_data_society: Andmed ja ühiskond
-  curriculum_desc_dance_party_01: Selles sissejuhatavas tegevuses, kasutage koodi,
-    et mitmesugused värvilised tegelased saaksid liikuda animeeritud taustale ja optimistlikule
-    muusikale.
-  curriculum_desc_dance_party_02: Laiendatud projektiideedega minge sissejuhatavast
-    õpetusest kaugemale. Sirvige keerukamate tantsupidude näidete raamatukogu.
-  curriculum_desc_dance_party_unplugged: Pange oma soon sisse - arvutit pole vaja!
-    Siit saate teada, kuidas kodeerimiskontseptsioone, nagu sündmusi, saab kasutada
-    tantsija koreograafia sünkroonimiseks.
-  curriculum_desc_dance_party_ai_edition: Siit saate teada tehisintellekti (AI) kontseptsioonide
-    kohta, et luua oma virtuaalne tantsupidu, mis tutvustab tänapäeva tippkunstnikke.
-    Kümnete laulude vahel, mille vahel valida, jõuavad iga õpilaseni olenemata nende
-    muusikamaitsest. On aeg oma asju toetada!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Tasuta komplekt elementaarne õppekavad, mis tutvustab õpilastele
     foundational mõisted infotehnoloogia.
   curriculum_desc_csf_express: Õpi looma arvutiprogramme, arendama probleemide lahendamise
@@ -663,12 +662,12 @@ et:
   module_grade_grade_03: 3. aste
   module_grade_grade_04: 4. aste
   module_grade_grade_05: 5. aste
-  module_age_05_07: Vanused 5-7
-  module_age_07: Vanused 7+
-  module_age_07_11: Vanused 7-11
-  module_age_11: Vanused 11+
-  module_age_13: Vanus 13+
-  module_age_all_age: Igas vanuses
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Õpetajad
   module_grade_6_10_teachers: 6-10 Õpetajad
   module_grade_9_12_teachers: 9-12 Õpetajad
@@ -759,8 +758,8 @@ et:
   heading_csa_ai: Kas otsite asju teha pärast AP® eksamit?
   heading_bring_cs_to_students: Tooge arvutiteadus õpilastele
   heading_cs_ambassador_program: CS suursaadiku programm
-  heading_featured_student_projects: Soovitatavad õpilasprojektid
-  heading_start_hoc_with_videos: Alustage oma kooditundi inspireerivate videotega
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Kui olete keskkooliõpilane, kes on kirglik julgustada rohkem
     noori naisi oma koolis arvutiteadust õppima, siis vajame teid!
   cs_ambassador_desc: Arvutiteadus puudutab kõiki valdkondi, sealhulgas meditsiini,
@@ -854,13 +853,13 @@ et:
     Code.org arvutiteaduse põhimõtete kohta ning saada kasulikke meeldetuletusi, näpunäiteid
     ja värskendusi, mis saadetakse otse teie postkasti.
   subscribe_form_section_unsubscribe: Saate igal ajal tellimusest loobuda.
-  dance_hero_heading: Kodeerige tantsupidu
-  dance_featuring_songs_by_short: 'Esitavad laulud:'
-  dance_featuring_songs_by_long: 'Tantsupidu sisaldab laule, mille autor on:'
-  dance_and_more: ja rohkem
-  dance_choose_activity: Valige oma tantsupidu
-  dance_afe_disclaimer: Artistid, kelle muusikat selles õpetuses kasutatakse, ei sponsoreeri
-    ega toeta Amazoni osana oma muusika kasutamise litsentsimisest Code.org saidil.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Kuidas Blockchain töötab
   blockchain_hero_desc: Sukelduda maailma blockchain koos „Kuidas Blockchain töötab,”
     meie uus video seeria ja kaasnevad õppetunnid!
@@ -13802,68 +13801,66 @@ et:
     koolijuhtidele ja töötajatele ressurss, et töötada välja esialgsed juhendid tehisintellekti
     kohta oma koolides.
   teach_ai_button_label: Vaadake tööriistakomplekti
-  middle_high_page_main_title: Õppimine 11-aastastele ja vanematele
-  middle_high_page_main_description: Avastage arvutiteaduse maailma kaasahaaravate
-    videote, isetempooliste õpetuste, programmeerimistegevuste ja muuga!
-  middle_high_page_hero_title: Alustage kooditunniga
-  middle_high_page_hero_description: Õppige arvutiteaduse põhialuseid tasuta kooditunni
-    tegevustega, mis sisaldavad lohistamist ja kustutamist kodeerivaid plokke. Valida
-    on sadade tunnipikkuste võimaluste vahel!
-  middle_high_page_hourofcode_link: Tutvuge kooditunni tegevustega
-  middle_high_page_modules_title: Programmeerimismoodulid vanematele õpilastele
-  middle_high_page_modules_description: Kohandatud meie CS-avastuste ja CS-põhimõtete
-    kursustest, need lühikesed, iseseisvad moodulid keskkooliõpilastele ja keskkooliõpilastele
-    on suurepärane võimalus õppida mõisteid, mis hõlmavad kõiki programmeerimiskeeli
-    ja tööriistu.
-  middle_high_page_modules_card_title_1: Sissejuhatus Game Labisse
-  middle_high_page_modules_card_title_2: Kilpkonna programmeerimine rakenduslaboris
-  middle_high_page_modules_card_title_3: Sündmustel põhinev programmeerimine rakenduste
-    laboris
-  middle_high_page_modules_card_description_1: Selles meie Game Labi keskkonna sissejuhatuses
-    liikuge oma tempos, kui programmeerite animatsioone, interaktiivset kunsti ja
-    mänge.
-  middle_high_page_modules_card_description_2: Avage rakenduste laboris võimalus teha
-    JavaScripti abil rikkalikke interaktiivseid rakendusi!
-  middle_high_page_modules_card_description_3: Minge oma tempos selle sissejuhatusega
-    App Labi programmeerimiskeskkonda, kus õpilased kasutavad interaktiivsete rakenduste
-    loomiseks JavaScripti.
-  middle_high_page_modules_card_link: Proovige seda
-  middle_high_page_make_your_own_title: Looge oma rakendused, mängud ja veebilehed
-  middle_high_page_make_your_own_description: 'Lisaks kursustele on meil programmeerimisvahendid,
-    mis võimaldavad teil uurida oma loovust ja teha midagi hämmastavat. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Rakenduse laboratoorium
-  middle_high_page_make_your_own_card_title_2: Mängulabor
-  middle_high_page_make_your_own_card_title_3: Veebilabor
-  middle_high_page_make_your_own_card_descrpition_1: App Lab on programmeerimiskeskkond,
-    kus saate teha lihtsaid rakendusi. Kujundage rakendus, koodi JavaScripti abil
-    kas plokkide või tekstiga, seejärel jagage oma rakendust sekunditega.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab on programmeerimiskeskkond,
-    kus saate teha lihtsaid animatsioone ja mänge üksteisega suhtlevate objektide
-    ja tegelastega.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab on programmeerimiskeskkond,
-    kus saate HTML-i ja CSS-i abil teha lihtsaid veebilehti. Kujundage oma veebilehed
-    ja jagage oma saiti sekunditega.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Rohkem lugemist
-  middle_high_page_additional_resources_title: Täiendavad ressursid
-  middle_high_page_additional_resources_description: Arvutiteaduse edasiseks uurimiseks
-    on nii palju võimalusi! Sirvige meie videoteeki, või saate lisateavet põnevate
-    karjääride kohta arvutiteaduse valdkonnas.
-  middle_high_page_video_library_title: Avastage meie videoteek
-  middle_high_page_video_library_description: Õppige arvutiteaduse põhitõdesid lühikeste
-    5-10 minutiste videote kaudu sellistel teemadel nagu tehisintellekt, Internet,
-    kuidas arvutid töötavad, kuidas mitte häkkida, plokiahela, karjäär ja palju muud!
-  middle_high_page_video_library_link: Vaata videoteeki
-  middle_high_page_cs_journeys_title: Minge kaugemale CS Journeys
-  middle_high_page_cs_journeys_description: Tehke järgmine samm oma arvutiteaduse
-    teekonnal. Avastage karjääri, mentorlusvõimalusi, veebikursusi, stipendiume, praktikaid
-    ja palju muud!
-  middle_high_page_cs_journeys_link: Tutvuge CS Journey'iga
-  middle_high_page_cs_title: Arvutiteadus klassiruumis
-  middle_high_page_cs_description: Neid kursusi peaks juhtima õpetaja! Kui soovite,
-    et neid oma koolis õpetataks, kaaluge õpetajaga koostööd, et nad oma klassi tuua.
-  middle_high_page_cs_card_title_1: CS avastused
-  middle_high_page_cs_card_title_2: CS põhimõtted
-  middle_high_page_cs_card_title_3: AP arvutiteadus A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Tasuta komplekt elementaarne õppekavad,
     mis tutvustab õpilastele foundational mõisted infotehnoloogia ja väljakutseid
     neid uurida, kuidas arvuti ja tehnoloogia võib mõjutada maailma.
@@ -13874,34 +13871,34 @@ et:
   middle_high_page_cs_card_description_3: Tutvustage õpilastele tarkvaratehnika ja
     objektorienteeritud disaini, kui nad õpivad Java programmeerimiskeelt selles tasuta
     õppekavas AP® Computer Science A (AP® CSA) jaoks.
-  middle_high_page_cs_link_1: Avastage CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Tutvu CS põhimõtetega
-  middle_high_page_cs_link_3: Tutvuge CSA-ga
-  elemeentary_page_main_title: Õppimine vanuses 5 kuni 11
-  elementary_page_main_description: Avastage arvutiteaduse maailma kaasahaaravate
-    videote, isetempooliste õpetuste, programmeerimistegevuste ja muuga!
-  elementary_page_own_pace_title: Jätkake õppimist oma tempos
-  elementary_page_own_pace_description: Looge jooniseid, mänge ja palju muud nendes
-    kahes suurepärases võimaluses, et õpilased hakkavad ise arvutiteaduse põhitõdede
-    õppimist alustama.
-  elementary_page_own_pace_card_title_1: Eellugeja ekspresskurskursus
-  elementary_page_own_pace_card_title_2: Ekspresskursus
-  elementary_page_own_pace_card_description_1: Õppige arvutiteadust oma tempos! Õppige
-    looma arvutiprogramme, arendama probleemide lahendamise oskusi ja töötama läbi
-    lõbusate väljakutsete! Tehke mänge ja loomingulisi projekte, mida jagada sõprade,
-    pere ja õpetajatega.
-  elementary_page_own_pace_link_1: Alustage lugejaeelset kursust
-  elementary_page_own_pace_link_2: Alustage ekspresskursust
-  elementary_page_make_your_own_games_title: Tehke oma animatsioonid ja mängud
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Aeg olla loominguline! Kasutage
-    plokkipõhist kodeerimist, et teha Sprite Labis midagi rumalat, magusat või välimist
-    ruumilist. Ainus piir on teie kujutlusvõime!
-  elementary_page_make_your_own_games_link: Proovige Sprite Labi
-  elementary_page_computer_science_title: Arvutiteadus klassiruumis
-  elementary_page_computer_science_description: Neid kursusi peaks juhtima õpetaja!
-    Kui soovite, et neid teie koolis õpetataks, paluge vanemal või eestkostjal töötada
-    koos õpetajaga, et nad teie klassi tuua.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Arvutiteaduse alused
   elementary_page_computer_science_card_title_2: Arvutiteaduse ühendused
   elementary_page_computer_science_description_1: Tasuta komplekt elementaarne õppekavad,

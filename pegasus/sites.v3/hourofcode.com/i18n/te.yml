@@ -1,15 +1,15 @@
 ---
 te:
   site_name: HOUR of CODE
-  hour_of_code: Hour of Code
+  hour_of_code: అవర్ ఆఫ్ కోడ్
   language: ఆంగ్ల
   front_title: చరిత్రలోనే అతిపెద్ద ఈవెంట్‌లో చేరండి, %{campaign_date}
   coming_soon: త్వరలోనే వస్తుంది
   new: కొత్త
-  hours_of_code_served: కోడ్ సేవ చేసిన గంటలు
-  hoc_stat_languages: విద్యార్థులు 45 కంటే ఎక్కువ భాషల్లో నేర్చుకుంటున్నారు
-  hoc_stat_hours_served: 100 మిలియన్లకు పైగా విద్యార్థులు అవర్ ఆఫ్ కోడ్ ప్రయత్నించారు
-  hoc_stat_females: అవర్ ఆఫ్ కోడ్ పాల్గొనేవారిలో మహిళా విద్యార్థులు 50% ఉన్నారు
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: విద్యార్థులు 45 కు పైగా భాషలలో నేర్చుకుంటున్నారు
+  hoc_stat_hours_served: 100 మిలియన్లకు పైగా విద్యార్థులు ఒక అవర్ ఆఫ్ కోడ్ ప్రయత్నించారు
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: డిసె. 4
   campaign_date_start_long: డిసెంబరు 4
   campaign_date_short: డిసె. 4-10
@@ -40,7 +40,7 @@ te:
   africa_campaign_date_full: అక్టోబర్ 1 - డిసెంబర్ 18
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: అక్టోబర్ 1, 2022 - డిసెంబర్ 18, 2022
-  hoc2023_header: AI తో సృజనాత్మకత
+  hoc2023_header: కృత్రిమ మేధస్సు (AI)తో సృజనాత్మకత
   hoc2023_hero_desc_homepage: AI తో లేదా లేకుండా ఒక గంట కోడింగ్ నిర్వహించడం మరియు
     AI ఎలా పనిచేస్తుందో నేర్చుకోవడంలో ప్రపంచవ్యాప్తంగా లక్షలాది మందికి చేరండి. ఎవరైనా,
     ఎక్కడైనా దీన్ని చేయగలరు. అనుభవం అవసరం లేదు.
@@ -50,10 +50,10 @@ te:
   hoc2023_social_creativity_with_ai_title: కోడ్ యొక్క గంట - మీరు ఏమి సృష్టిస్తారు?
   hoc2023_social_creativity_with_ai_desc: AI గురించి అన్వేషించడానికి మరియు తెలుసుకోవడానికి
     కంప్యూటర్ సైన్స్ ఉపయోగించండి!
-  hoc2023_what_is_hoc_desc: ది అవర్ ఆఫ్ కోడ్ అనేది అన్ని నైపుణ్య స్థాయిల అభ్యాసకుల
-    కోసం సరదా కార్యకలాపాలు మరియు వీడియోల ద్వారా కంప్యూటర్ సైన్స్కు ఉచిత పరిచయం. కోడింగ్
-    మరియు AI రెండింటి యొక్క ఈ సంవత్సరం వేడుకకు 400 పైగా భాగస్వాములు, 20,000 మంది అధ్యాపకులు
-    మరియు 58,000 వాలంటీర్లు మద్దతు ఇస్తున్నారు.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: అన్వేషించండి, ఆడండి, సృష్టించండి!
   social_hoc2022_explore_play_create: అన్వేషించడానికి, ఆడటానికి మరియు సృష్టించడానికి
     కంప్యూటర్ సైన్సును ఉపయోగించుకోండి!
@@ -67,9 +67,9 @@ te:
     గోమెజ్ నటించారు, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరెన్నో!
   social_hoc2023_dance: బియాన్స్, బిటిఎస్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్,
     సెలెనా గోమెజ్, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరిన్ని నటించారు!
-  social_hoc2023_dance_v2: మీ విషయాలను కొట్టడానికి సమయం ఆసన్నమైంది! మిలే సైరస్, బిటిఎస్,
-    లిల్ నాస్ ఎక్స్, హ్యారీ స్టైల్స్, నిక్కి మినాజ్, రోసాలియా మరియు మరిన్ని హిట్లు
-    నటించిన మీ స్వంత నృత్య పార్టీని సృష్టించండి!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: ఈ రోజు నేర్చుకోండి, రేపు ప్రకాశవంతంగా నిర్మించండి.
@@ -224,9 +224,9 @@ te:
   device_laptop: ల్యాప్టాప్
   device_desktop_computer: డెస్క్టాప్ కంప్యూటర్
   device_mobile_device: మొబైల్ పరికరం
-  for_everyone: ప్రతి ఒక్కరికీ
-  for_students_teacher_led_learning: 'విద్యార్థుల కోసం: ఉపాధ్యాయుల నేతృత్వంలోని అభ్యాసం'
-  for_students_teacher_led_lessons: 'విద్యార్థుల కోసం: ఉపాధ్యాయుల నేతృత్వంలోని పాఠాలు'
+  for_everyone: ప్రతి ఒక్కరి కొరకూ
+  for_students_teacher_led_learning: 'విద్యార్థుల కోసం: ఉపాధ్యాయుల నేతృత్వంలో అభ్యసనం'
+  for_students_teacher_led_lessons: 'విద్యార్థుల కోసం: ఉపాధ్యాయుల నేతృత్వంలో పాఠాలు'
   professional_development: వృత్తిపరమైన అభివృద్ధి
   how_ai_works_video_series: AI వీడియో సిరీస్ ఎలా పనిచేస్తుంది
   learn_how_ai_works: AI ఎలా పనిచేస్తుందో తెలుసుకోండి
@@ -288,21 +288,21 @@ te:
     అవర్ ఆఫ్ కోడ్ టీచర్ ఫోరమ్ను సందర్శించండి.
   required_materials: 'కావలసిన సామాగ్రి:'
   optional_materials: 'ఐచ్ఛిక సామాగ్రి:'
-  for_students: విద్యార్థులకు
+  for_students: For students
   for_educators: బోధకుల కోసం
-  call_to_action_host_hoc: ఒక అవర్ ఆఫ్ కోడ్ను హోస్ట్ చేయండి
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: ఈవెంట్ను పట్టుకోండి
   call_to_action_register_event: మీ ఈవెంట్ను నమోదు చేయండి
-  call_to_action_register_your_hoc: మీ అవర్ ఆఫ్ కోడ్ను నమోదు చేయండి
+  call_to_action_register_your_hoc: మీ అవర్ ఆఫ్ కోడ్‌ని రిజిస్టర్ చేసుకోండి
   call_to_action_select_activity: కార్యాచరణను ఎంచుకోండి
   call_to_action_start_activity: కార్యాచరణను ప్రారంభించండి
   call_to_action_get_certificates: సర్టిఫికెట్లు పొందండి
   call_to_action_go_beyond_hoc: కోడ్ గంట దాటి వెళ్ళండి
-  call_to_action_explore_all_hoc_activities: Code.org నుండి అన్ని అవర్ ఆఫ్ కోడ్ కార్యకలాపాలను
-    అన్వేషించండి
-  call_to_action_start_dance_party: డాన్స్ పార్టీ ప్రారంభించండి
-  call_to_action_start_part_02: రెండవ భాగాన్ని ప్రారంభించండి
-  call_to_action_start_unplugged_activity: అన్ప్లగ్ చేసిన కార్యాచరణను ప్రారంభించండి
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: ప్రోమో వనరులను చూడండి
   call_to_action_learn_more: మరింత తెలుసుకోండి
   call_to_action_watch_now: ఇప్పుడే చూడండి
@@ -398,9 +398,9 @@ te:
   call_to_action_view_faqs: మరిన్ని తరచుగా అడిగే ప్రశ్నలు చూడండి
   call_to_action_applications_open: అప్లికేషన్లు ఇప్పుడు తెరిచి ఉన్నాయి
   call_to_action_apply_cs_ambassador: సిఎస్ అంబాసిడర్గా ఉండటానికి దరఖాస్తు చేసుకోండి
-  call_to_action_coming_soon: త్వరలో వస్తుంది!
-  call_to_action_learn_how_ai_works: AI ఎలా పనిచేస్తుందో తెలుసుకోండి
-  call_to_action_learn_about_ai: AI గురించి తెలుసుకోండి
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: అధ్యాపకుల కోసం ఎలా మార్గదర్శిని
     చూడండి
   aria_label_call_to_action_hoc_how_to_companies: కంపెనీల కోసం ఎలా మార్గదర్శిని చూడండి
@@ -414,11 +414,9 @@ te:
   aria_label_call_to_action_hoc_how_to_volunteers: వాలంటీర్ల కోసం ఎలా గైడ్ను చూడండి
   aria_label_call_to_action_hoc_how_to_virtual_events: వర్చువల్ ఈవెంట్స్ కోసం ఎలా
     మార్గదర్శిని చూడండి
-  aria_label_call_to_action_dance_01: డాన్స్ పార్టీ కార్యాచరణను ప్రారంభించండి
-  aria_label_call_to_action_dance_02: డాన్స్ పార్టీ కార్యాచరణ యొక్క రెండవ భాగాన్ని
-    ప్రారంభించండి
-  aria_label_call_to_action_dance_unplugged: డాన్స్ పార్టీ అన్ప్లగ్డ్ కార్యాచరణను
-    ప్రారంభించండి
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: అమెజాన్ ఫ్యూచర్ ఇంజనీర్ గురించి మరింత తెలుసుకోండి
   aria_label_call_to_action_teaching_csf: టీచింగ్ కంప్యూటర్ సైన్స్ ఫండమెంటల్స్ ప్రొఫెషనల్
     లెర్నింగ్ ప్రోగ్రామ్ను ప్రారంభించండి
@@ -534,25 +532,25 @@ te:
   curriculum_name_creating_apps_with_devices: ఉపకరణాలతో యాప్స్ సృష్టించుట
   curriculum_name_poetry: కవిత్వముతో కోడింగ్ చేయుట
   curriculum_name_dance_party: డాన్స్ పార్టీ
-  curriculum_name_dance_party_02: డ్యాన్స్ చేస్తూనే ఉండండి
-  curriculum_name_dance_party_unplugged: డాన్స్ పార్టీ అన్ప్లగ్ చేయబడింది
-  curriculum_name_dance_party_ai_edition: 'డాన్స్ పార్టీ: AI ఎడిషన్'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: సమస్యా పరిష్కారం మరియు కంప్యూటింగ్
   curriculum_name_web_development: వెబ్ రూపకల్పన
   curriculum_name_interactive_animations_games: ఇంటరాక్టివ్ యానిమేషన్లు మరియు గేమ్స్
   curriculum_name_design_process: డిజైన్ ప్రక్రియ
   curriculum_name_data_society: డేటా మరియు సొసైటీ
-  curriculum_desc_dance_party_01: ఈ పరిచయ కార్యాచరణలో, రంగుల పాత్రలు వివిధ యానిమేటెడ్
-    నేపథ్యాలు మరియు అప్బీట్ సంగీతం ఒక తరలింపు ప్రతిమ చేయడానికి కోడ్ ఉపయోగించండి.
-  curriculum_desc_dance_party_02: విస్తరించిన ప్రాజెక్ట్ ఆలోచనలతో పరిచయ ట్యుటోరియల్కు
-    మించి వెళ్లండి. మరింత క్లిష్టమైన నృత్య పార్టీల ఉదాహరణల లైబ్రరీని బ్రౌజ్ చేయండి.
-  curriculum_desc_dance_party_unplugged: మీ గాడిని ప్రారంభించండి-కంప్యూటర్ అవసరం లేదు!
-    ఈవెంట్స్ వంటి కోడింగ్ భావనలను ఎలా ఉపయోగించవచ్చో తెలుసుకోండి డ్యాన్సర్ కొరియోగ్రఫీని
-    సమకాలీకరించడానికి.
-  curriculum_desc_dance_party_ai_edition: నేటి అగ్ర కళాకారులను ప్రదర్శించే మీ స్వంత
-    వర్చువల్ నృత్య పార్టీని రూపొందించడానికి కృత్రిమ మేధస్సు (AI) భావనల గురించి తెలుసుకోండి.
-    ఎంచుకోవడానికి డజన్ల కొద్దీ పాటలతో, వారి సంగీత రుచి ఉన్నా ప్రతి విద్యార్థి చేరుకోవడానికి.
-    మీ విషయాలను కొట్టడానికి సమయం ఆసన్నమైంది!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: కంప్యూటర్ సైన్స్ యొక్క పునాది భావనలకు విద్యార్థులను పరిచయం
     చేసే ప్రాథమిక పాఠ్యాంశాల ఉచిత సమితి.
   curriculum_desc_csf_express: కంప్యూటర్ ప్రోగ్రాములను సృష్టించడం నేర్చుకోండి, సమస్యా
@@ -691,12 +689,12 @@ te:
   module_grade_grade_03: గ్రేడ్ 3
   module_grade_grade_04: గ్రేడ్ 4
   module_grade_grade_05: గ్రేడ్ 5
-  module_age_05_07: వయస్సు 5-7
-  module_age_07: వయస్సు 7+
-  module_age_07_11: వయస్సు 7-11
-  module_age_11: వయస్సు 11+
-  module_age_13: వయస్సు 13+
-  module_age_all_age: అన్ని వయసుల
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 టీచర్లు
   module_grade_6_10_teachers: 6-10 టీచర్లు
   module_grade_9_12_teachers: 9-12 టీచర్లు
@@ -794,8 +792,8 @@ te:
   heading_csa_ai: AP® పరీక్ష తర్వాత చేయవలసిన పనుల కోసం చూస్తున్నారా?
   heading_bring_cs_to_students: కంప్యూటర్ సైన్స్ విద్యార్థులకు తీసుకురండి
   heading_cs_ambassador_program: సిఎస్ అంబాసిడర్ ప్రోగ్రామ్
-  heading_featured_student_projects: ఫీచర్ చేసిన విద్యార్థి ప్రాజెక్టులు
-  heading_start_hoc_with_videos: స్ఫూర్తిదాయకమైన వీడియోలతో మీ అవర్ ఆఫ్ కోడ్ను ప్రారంభించండి
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: మీరు మీ పాఠశాలలో కంప్యూటర్ సైన్స్ తీసుకోవడానికి ఎక్కువ మంది
     యువతులను ప్రోత్సహించాలనే మక్కువ ఉన్నత పాఠశాల విద్యార్థి అయితే, అప్పుడు మాకు మీరు
     అవసరం!
@@ -896,14 +894,13 @@ te:
     నెలవారీ ఇమెయిల్లను స్వీకరించడానికి సైన్ అప్ చేయండి మరియు సహాయకరమైన రిమైండర్లు,
     చిట్కాలు మరియు నవీకరణలను మీ ఇన్బాక్స్కు పంపించండి.
   subscribe_form_section_unsubscribe: మీరు ఎప్పుడైనా చందాను తొలగించవచ్చు.
-  dance_hero_heading: డాన్స్ పార్టీని కోడ్ చేయండి
-  dance_featuring_songs_by_short: 'నటించిన పాటలు:'
-  dance_featuring_songs_by_long: 'డాన్స్ పార్టీలో పాటలు ఉన్నాయి:'
-  dance_and_more: మరియు మరిన్ని
-  dance_choose_activity: మీ డాన్స్ పార్టీని ఎంచుకోండి
-  dance_afe_disclaimer: ఈ ట్యుటోరియల్ లో వీరి సంగీతం ఉపయోగిస్తారు కళాకారులు Code.org
-    వారి సంగీతం యొక్క లైసెన్సింగ్ ఉపయోగం భాగంగా అమెజాన్ స్పాన్సర్ లేదా ఆమోదించడం
-    లేదు.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: బ్లాక్చెయిన్ ఎలా పనిచేస్తుంది
   blockchain_hero_desc: "“హౌ బ్లాక్చెయిన్ వర్క్స్” తో బ్లాక్చెయిన్ ప్రపంచంలోకి ప్రవేశించండి,
     మా కొత్త వీడియో సిరీస్ మరియు దానితో పాటు పాఠాలు!"
@@ -2154,7 +2151,7 @@ te:
     చేరుకుంటున్న ఒక ప్రపంచవ్యాప్త ఉద్యమం. ఎవరైనా, ఎక్కడైనా అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను
     నిర్వహించవచ్‌ఉ. ఒన్ అవర్ ట్యుటోరియల్స్ 45 కంటే ఎక్కువ భాషల్లో అందుబాటులో ఉన్నాయి.
     అనుభవం అవసరం లేదు. <strong>వయస్సులు 4 నుండి 104.</strong>
-  front_intro_default_2: 180+ దేశాలలో ఒక ప్రపంచవ్యాప్త ఉద్యమం.
+  front_intro_default_2: 180+ దేశాలలో ప్రపంచవ్యాప్తమైన ఒక ఉద్యమం.
   front_watch_video: కొత్త వీడియో చూడండి
   front_watch_regular_video: వీడియో చూడండి
   front_volunteers: టెక్నికల్ వాలెంటీర్లు కావాలి
@@ -2398,15 +2395,15 @@ te:
     ఒక-గంటసేపు పరిచయము. ఈ అట్టడుగు స్థాయి ప్రచారోద్యమం ప్రపంచవ్యాప్తంగా 400 భాగస్వాములు
     మరియు 200,000 విద్యావేత్తలచే మద్దతు ఇవ్వబడింది.  '
   hoc_homepage_registration_desc: మీ తరగతి లేదా సమూహం అవర్ ఆఫ్ కోడ్ చేస్తూ ప్రపంచవ్యాప్తంగా
-    మిలియన్ల మంది చేరవచ్చు! వార్షిక కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ వేడుకకు రిజిస్ట్రేషన్
-    అక్టోబర్లో ప్రారంభమవుతుంది. అయినప్పటికీ, అవర్ ఆఫ్ కోడ్ ఏడాది పొడవునా అందుబాటులో
-    ఉంది.
+    మిలియన్ల మందిని చేరుకోవచ్చు! వార్షిక కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వారోత్సవ సంబరాలకు
+    రిజిస్ట్రేషన్ అక్టోబరులో ప్రారంభమవుతుంది. అయినప్పటికీ, అవర్ ఆఫ్ కోడ్ ఏడాది పొడవునా
+    అందుబాటులో ఉంటుంది.
   hoc_homepage_what_is_hoc_cta_how_to_guide: మీ తరగతికి ఒక ఈవెంటును ప్రణాళిక చేసుకోవడానికి
     [ఎలా దారిచూపాలో పైకి చదవండి](%{howto_guide_url}).
   hoc_homepage_highlights_heading: అవర్ ఆఫ్ కోడ్ ముఖ్యాంశాలు
   hoc_homepage_organized_by: అవర్ ఆఫ్ కోడ్ [Code.org](%{codeorg_url})చే ఏర్పాటు చేయబడింది.
-  hoc_events_heading: ఒక అవర్ ఆఫ్ కోడ్ను హోస్ట్ చేయడానికి నమోదు చేయండి
-  hoc_events_jump_to_map: అవర్ ఆఫ్ కోడ్ మ్యాప్కు వెళ్లండి
+  hoc_events_heading: ఒక అవర్ ఆఫ్ కోడ్ కి ఆతిథ్యమివ్వడానికి రిజిస్టర్ చేసుకోండి
+  hoc_events_jump_to_map: అవర్ ఆఫ్ కోడ్ మ్యాపుకు దాటి వెళ్లండి
   signup_closed: అవర్ ఆఫ్ కోడ్ కోసం రిజిస్ట్రేషన్ ఇప్పుడు ముగిసింది. తరువాతి అవర్
     ఆఫ్ కోడ్ కోసం సైన్ అప్ చేయడానికి దయచేసి అక్టోబరులో తిరిగి చెక్ చేయండి.
   signup_registration_not_required: పాల్గొనడానికి మీరు రిజిస్టర్ చేయనవసరం లేదు! అవర్
@@ -2439,9 +2436,9 @@ te:
   signup_event_entire_school_label: మా మొత్తం పాఠశాల పాల్గొంటున్నది
   signup_event_location_label: ఈవెంట్ స్థానం
   signup_event_location_error: ఈవెంట్ స్థానం అవసరం.
-  signup_special_event_flag_label: మా ఈవెంట్ ఒక గంట పరిధి దాటి వెళ్లడానికి మొత్తం
-    జిల్లాను, కమ్యూనిటీ లోని సభ్యులను మరియు/లేదా ఇతర ప్రత్యేక ప్రణాళికలను కలుపుకుని
-    పోతుంది
+  signup_special_event_flag_label: మా ఈవెంట్ ఒక గంట పరిధిని దాటి వెళ్లడానికి గాను
+    మొత్తం జిల్లాను, ఒక సంస్థ అంతటినీ, కమ్యూనిటీ లోని సభ్యులను మరియు/లేదా ఇతర ప్రత్యేక
+    ప్రణాళికలను ఇమిడి ఉంటుంది
   signup_special_event_details_label: ఒక ప్రత్యేక ఈవెంట్‌గా హైలైట్ చేయబడటానికి అప్లై
     చేయండి
   signup_send_posters_flag_label: మా పాఠశాల లేక సంస్థకు <a href= "/resources/promote#posters">posters</a>
@@ -2454,7 +2451,7 @@ te:
     ఇంజనీరును వెతకడంలో నాకు సహాయపడండి
   signup_email_preference_opt_in: మేము Code.org కోర్సులు, స్థానిక అవకాశాలు లేక ఇతర
     కంప్యూటర్ సైన్స్ న్యూస్ గురించి అప్‌డేట్స్ మీకు ఇమెయిల్ చేయవచ్చా?
-  signup_email_preference_privacy: "(మా గోప్యత పాలసీ చూడండి)"
+  signup_email_preference_privacy: "(మా గోప్యతా పాలసీ చూడండి)"
   signup_email_preference_yes: అవును
   signup_email_preference_yes_elementary: అవును - ఎలిమెంటరీ స్కూల్ వనరులపై నాకు నవీకరణలను
     పంపండి
@@ -2518,7 +2515,8 @@ te:
   map_title: అవర్ ఆఫ్ కోడ్ మ్యాప్
   map_header: 'అవర్ ఆఫ్ కోడ్ 2017 కోసం # ఈవెంట్లు రిజిస్టర్ చేయబడ్డాయి'
   map_header_count_year: "%{event_count} ఈవెంట్లు రిజిస్టర్ చేయబడ్డాయి %{year}"
-  map_header_count_year_so_far: "%{event_count} ఇప్పటివరకు నమోదైన సంఘటనలు %{year}"
+  map_header_count_year_so_far: "%{event_count} ఇప్పటివరకు రిజిస్టరు అయిన ఈవెంట్లు
+    %{year}"
   see_all_events: అన్ని ఈవెంట్లు చూడండి
   map_header_company: 'కంపెనీ నిర్వాహకుల ద్వారా #'
   map_header_country: "%{country} లో #"
@@ -2530,7 +2528,7 @@ te:
   map_legend_cs_tech_jam: ప్రత్యేక ఈవెంట్
   map_warning: ఈవెంట్ల పూర్తి లిస్టును <a href='%{events_url}'>ఈవెంట్స్ పేజీలో చూడవచ్చు.</a>
   map_warning_markdown: సంఘటనల పూర్తి జాబితాను [ఈవెంట్స్ పేజీలో చూడవచ్చు.] (%{events_url})
-  map_view_all_events: అవర్ ఆఫ్ కోడ్ ఈవెంట్ల పూర్తి జాబితాను [here]చూడండి (%{events_url}).
+  map_view_all_events: అవర్ ఆఫ్ కోడ్ ఈవెంట్ల యొక్క పూర్తి జాబితాను [here]చూడండి (%{events_url}).
   meta_tag_og_title: 'అవర్ ఆఫ్ కోడ్: ఉద్యమంలో చేరండి'
   meta_tag_og_description: ఆఅవర్ ఆఫ్ కోడ్ 180+ దేశాలలో మరియు 45కు పైగా భాషల్లో అన్ని
     వయస్సుల లక్షలాది విద్యార్థులను చేరుకుంటున్న ఒక ప్రపంచవ్యాప్త ఉద్యమం.
@@ -2692,14 +2690,14 @@ te:
     URL studio.code.org తో ప్రారంభం కాకపోతే, మీరు అవకాశం మూడవ పార్టీ కార్యాచరణపై పని చేస్తున్నారు మరియు మరింత సహాయం కోసం ఆ సంస్థ యొక్క మద్దతు బృందాన్ని చేరుకోవాలి.
   stats_hoc_2013_image_alt: 2013 అవర్ ఆఫ్ కోడ్ మ్యాప్ నుండి గణాంకాలు
   stats_growth: ఇది 15 మిలియన్ల యూజర్లను చేరిన అత్యంత వేగవంతమైనది.
-  stats_i18n: విద్యార్థులు 45 కంటే ఎక్కువ భాషల్లో నేర్చుకుంటున్నారు
+  stats_i18n: విద్యార్థులు 45 కు పైగా భాషలలో నేర్చుకుంటున్నారు
   stats_tumblr: 'Tumblr: 3.5 సంవత్సరాలు'
   stats_facebook: 'Facebook: 3 సంవత్సరాలు'
   stats_twitter: 'Twitter: 2.5 సంవత్సరాలు'
   stats_pinterest: 'Pinterest: 2 సంవత్సరాలు'
   stats_instagram: 'Instagram: 14 నెలలు'
   stats_hoc: 'అవర్ ఆఫ్ కోడ్: 5 రోజులు'
-  stats_global: 100 మిలియన్లకు పైగా విద్యార్థులు అవర్ ఆఫ్ కోడ్ ప్రయత్నించారు
+  stats_global: 100 మిలియన్లకు పైగా విద్యార్థులు ఒక అవర్ ఆఫ్ కోడ్ ప్రయత్నించారు
   stats_girls_more: గత 70 సంవత్సరాలలో కంటే ఎక్కువ బాలికలు కంప్యూటర్ సైన్స్‌ను ప్రయత్నించారు
   stats_females: ఉన్నత పాఠశాల కోర్సులు, యూనివర్శిటీ కోర్సులు మరియు వర్క్‌ఫోర్స్‌లోని
     మహిళా విద్యార్థులలో కేవలం 20-25% కంప్యూటర్ సైన్స్‌లో పాల్గొంటున్నారు.
@@ -2791,7 +2789,7 @@ te:
   event: ఈవెంట్
   events: ఈవెంట్లు
   highlights_title: హైలైట్స్
-  highlights_header: అవర్ ఆఫ్ కోడ్ హైలైట్స్
+  highlights_header: అవర్ ఆఫ్ కోడ్ ముఖ్యాంశాలు
   highlights_description: అవర్ ఆఫ్ కోడ్ ఉద్యమం నుండి మాకు నచ్చిన కొన్ని క్షణాలు.
   highlights_previous: మునుపటి సంవత్సరాల నుండి ముఖ్యాంశాలు
   highlights_see_more: మరిన్ని ముఖ్యాంశాలను చూడండి
@@ -14423,71 +14421,66 @@ te:
     నాయకులు మరియు సిబ్బందికి వారి పాఠశాలల్లో AI పై ప్రారంభ మార్గదర్శకత్వాన్ని అభివృద్ధి
     చేయడానికి ఒక వనరు.
   teach_ai_button_label: టూల్కిట్ను చూడండి
-  middle_high_page_main_title: 11 మరియు అంతకంటే ఎక్కువ వయస్సులకు నేర్చుకోవడం
-  middle_high_page_main_description: నిమగ్నమైన వీడియోలు, స్వీయ-వేగంతో కూడిన ట్యుటోరియల్స్,
-    ప్రోగ్రామింగ్ కార్యకలాపాలు మరియు మరెన్నో కంప్యూటర్ సైన్స్ ప్రపంచాన్ని అన్వేషించండి!
-  middle_high_page_hero_title: అవర్ ఆఫ్ కోడ్తో ప్రారంభించండి
-  middle_high_page_hero_description: డ్రాగ్-అండ్-డ్రాప్ కోడింగ్ బ్లాక్స్ నటించిన ఉచిత
-    అవర్ ఆఫ్ కోడ్ కార్యకలాపాలతో కంప్యూటర్ సైన్స్ యొక్క ఫండమెంటల్స్ తెలుసుకోండి. ఎంచుకోవడానికి
-    వందలాది గంటల పొడవు ఎంపికలు ఉన్నాయి!
-  middle_high_page_hourofcode_link: అవర్ ఆఫ్ కోడ్ కార్యకలాపాలను అన్వేషించండి
-  middle_high_page_modules_title: పాత విద్యార్థుల కోసం ప్రోగ్రామింగ్ మాడ్యూల్స్
-  middle_high_page_modules_description: మా CS డిస్కవరీలు మరియు CS ప్రిన్సిపల్స్ కోర్సుల
-    నుండి స్వీకరించబడిన, మధ్య మరియు ఉన్నత పాఠశాల విద్యార్థులకు ఈ చిన్న, స్వీయ-వేగంతో
-    కూడిన మాడ్యూల్స్ అన్ని ప్రోగ్రామింగ్ భాషలు మరియు సాధనాలను విస్తరించే భావనలను నేర్చుకోవడానికి
-    గొప్ప మార్గం.
-  middle_high_page_modules_card_title_1: గేమ్ ల్యాబ్ పరిచయం
-  middle_high_page_modules_card_title_2: యాప్ ల్యాబ్‌లో టర్టల్ ప్రోగ్రామింగ్
-  middle_high_page_modules_card_title_3: యాప్ ల్యాబ్‌లో ఈవెంట్-డ్రివెన్ ప్రోగ్రామింగ్
-  middle_high_page_modules_card_description_1: మీరు యానిమేషన్లు, ఇంటరాక్టివ్ ఆర్ట్
-    మరియు ఆటలను ప్రోగ్రామ్ చేస్తున్నప్పుడు మా గేమ్ ల్యాబ్ పర్యావరణానికి ఈ పరిచయంలో
-    మీ స్వంత వేగంతో కదలండి.
-  middle_high_page_modules_card_description_2: యాప్ ల్యాబ్లో జావాస్క్రిప్ట్తో రిచ్,
-    ఇంటరాక్టివ్ అనువర్తనాలను తయారుచేసే సామర్థ్యాన్ని అన్లాక్ చేయండి!
-  middle_high_page_modules_card_description_3: యాప్ ల్యాబ్ ప్రోగ్రామింగ్ వాతావరణానికి
-    ఈ పరిచయంతో మీ స్వంత వేగంతో వెళ్లండి, దీనిలో విద్యార్థులు ఇంటరాక్టివ్ అనువర్తనాలను
-    సృష్టించడానికి జావాస్క్రిప్ట్ను ఉపయోగిస్తారు.
-  middle_high_page_modules_card_link: దీన్ని ప్రయత్నించండి
-  middle_high_page_make_your_own_title: మీ స్వంత అనువర్తనాలు, ఆటలు మరియు వెబ్పేజీలను
-    తయారు చేయండి
-  middle_high_page_make_your_own_description: 'కోర్సులు పాటు, మేము మీరు మీ సృజనాత్మకత
-    అన్వేషించడానికి మరియు అద్భుతమైన ఏదో చేయడానికి వీలు ప్రోగ్రామింగ్ టూల్స్ ఉన్నాయి. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: యాప్ ల్యాబ్
-  middle_high_page_make_your_own_card_title_2: గేమ్ ల్యాబ్
-  middle_high_page_make_your_own_card_title_3: వెబ్ ల్యాబ్
-  middle_high_page_make_your_own_card_descrpition_1: యాప్ ల్యాబ్ అనేది ప్రోగ్రామింగ్
-    ఎన్విరాన్మెంట్, ఇక్కడ మీరు సాధారణ అనువర్తనాలను తయారు చేయవచ్చు. బ్లాక్స్ లేదా టెక్స్ట్
-    గాని తో జావాస్క్రిప్ట్ లో ఒక అనువర్తనం, కోడ్ రూపకల్పన, అప్పుడు సెకన్లలో మీ అనువర్తనం
-    భాగస్వామ్యం.
-  middle_high_page_make_your_own_card_descrpition_2: ఒకదానితో ఒకటి ఇంటరాక్ట్ అయ్యే
-    వస్తువులు మరియు పాత్రలతో సరళమైన అనిమేషన్లు మరియు గేమ్స్ మీరు తయారు చేయగల ప్రోగ్రామింగ్
-    వాతావరణం గేమ్ ల్యాబ్.
-  middle_high_page_make_your_own_card_descrpition_3: వెబ్ ల్యాబ్ అనేది ప్రోగ్రామింగ్
-    వాతావరణం, ఇక్కడ మీరు HTML మరియు CSS ఉపయోగించి సాధారణ వెబ్ పేజీలను తయారు చేయవచ్చు.
-    మీ వెబ్ పేజీలను రూపొందించండి మరియు సెకన్లలో మీ సైట్ను భాగస్వామ్యం చేయండి.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: మరింత తెలుసుకోండి
-  middle_high_page_additional_resources_title: అదనపు వనరులు
-  middle_high_page_additional_resources_description: కంప్యూటర్ సైన్స్ను మరింత అన్వేషించడానికి
-    చాలా మార్గాలు ఉన్నాయి! మా వీడియో లైబ్రరీని బ్రౌజ్ చేయండి లేదా కంప్యూటర్ సైన్స్
-    రంగంలో ఉత్తేజకరమైన కెరీర్ల గురించి మరింత తెలుసుకోండి.
-  middle_high_page_video_library_title: మా వీడియో లైబ్రరీని కనుగొనండి
-  middle_high_page_video_library_description: ఆర్టిఫిషియల్ ఇంటెలిజెన్స్, ఇంటర్నెట్,
-    కంప్యూటర్లు ఎలా పనిచేస్తాయో, హ్యాక్ అవ్వకూడదో, బ్లాక్చైన్, కెరీర్లు, ఇంకా మరెన్నో
-    అంశాలపై చిన్న 5-10 నిమిషాల వీడియోల ద్వారా కంప్యూటర్ సైన్స్ యొక్క ప్రాథమికాలను
-    తెలుసుకోండి!
-  middle_high_page_video_library_link: వీడియో లైబ్రరీని చూడండి
-  middle_high_page_cs_journeys_title: CS జర్నీలతో మరింత ముందుకు వెళ్లండి
-  middle_high_page_cs_journeys_description: మీ కంప్యూటర్ సైన్స్ ప్రయాణంలో తదుపరి దశను
-    తీసుకోండి. కెరీర్లు, మెంటర్షిప్ అవకాశాలు, ఆన్లైన్ కోర్సులు, స్కాలర్షిప్లు, ఇంటర్న్షిప్లు
-    మరియు మరిన్ని అన్వేషించండి!
-  middle_high_page_cs_journeys_link: CS జర్నీలను అన్వేషించండి
-  middle_high_page_cs_title: తరగతి గదిలో కంప్యూటర్ సైన్స్
-  middle_high_page_cs_description: ఈ కోర్సులను ఉపాధ్యాయుడు నడిపించాలి! మీరు వాటిని
-    మీ పాఠశాలలో బోధించడాన్ని చూడాలనుకుంటే, వారిని మీ తరగతికి తీసుకురావడానికి ఉపాధ్యాయుడితో
-    కలిసి పనిచేయడాన్ని పరిగణించండి.
-  middle_high_page_cs_card_title_1: సిఎస్ ఆవిష్కరణలు
-  middle_high_page_cs_card_title_2: CS సూత్రాలు
-  middle_high_page_cs_card_title_3: ఏపీ కంప్యూటర్ సైన్స్ ఎ
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: ఉచిత సంవత్సర-కాలపు పాఠ్యాంశాలు కంప్యూటర్
     సైన్స్ యొక్క ప్రాథమిక భావజాలాలను విద్యార్థులకు పరిచయం చేస్తాయి మరియు కంప్యూటింగ్
     మరియు సాంకేతికత ప్రపంచాన్ని ఎలా ప్రభావితం చేస్తాయో అన్వేషించడానికి వారికి సవాలు
@@ -14499,35 +14492,34 @@ te:
   middle_high_page_cs_card_description_3: AP® కంప్యూటర్ సైన్స్ A (AP® CSA) కోసం ఈ
     ఉచిత పాఠ్యాంశాల్లో జావా ప్రోగ్రామింగ్ భాషను నేర్చుకునేటప్పుడు సాఫ్ట్వేర్ ఇంజనీరింగ్
     మరియు ఆబ్జెక్ట్-ఓరియెంటెడ్ డిజైన్కు విద్యార్థులను పరిచయం చేయండి.
-  middle_high_page_cs_link_1: CS డికోవరీలను అన్వేషించండి
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: CS సూత్రాలను అన్వేషించండి
-  middle_high_page_cs_link_3: CSA అన్వేషించండి
-  elemeentary_page_main_title: 5 నుండి 11 సంవత్సరాల వయస్సులో నేర్చుకోవడం
-  elementary_page_main_description: నిమగ్నమైన వీడియోలు, స్వీయ-వేగంతో కూడిన ట్యుటోరియల్స్,
-    ప్రోగ్రామింగ్ కార్యకలాపాలు మరియు మరెన్నో కంప్యూటర్ సైన్స్ ప్రపంచాన్ని అన్వేషించండి!
-  elementary_page_own_pace_title: మీ స్వంత వేగంతో నేర్చుకోవడం కొనసాగించండి
-  elementary_page_own_pace_description: విద్యార్థులు కంప్యూటర్ సైన్స్ యొక్క ప్రాథమికాలను
-    నేర్చుకోవడం వారి స్వంత ప్రారంభించడానికి ఈ రెండు అద్భుతమైన ఎంపికలు లో డ్రాయింగ్లు,
-    గేమ్స్, మరియు మరిన్ని సృష్టించండి.
-  elementary_page_own_pace_card_title_1: ప్రీ-రీడర్ ఎక్స్ప్రెస్ కోర్సు
-  elementary_page_own_pace_card_title_2: ఎక్స్‌ప్రెస్ కోర్సు
-  elementary_page_own_pace_card_description_1: మీ స్వంత వేగంతో కంప్యూటర్ సైన్స్ నేర్చుకోండి!
-    కంప్యూటర్ ప్రోగ్రామ్లను సృష్టించడం, సమస్య-పరిష్కార నైపుణ్యాలను అభివృద్ధి చేయడం
-    మరియు సరదా సవాళ్ల ద్వారా పని చేయడం నేర్చుకోండి! స్నేహితులు, కుటుంబం మరియు ఉపాధ్యాయులతో
-    భాగస్వామ్యం చేయడానికి ఆటలు మరియు సృజనాత్మక ప్రాజెక్టులు చేయండి.
-  elementary_page_own_pace_link_1: ప్రీ-రీడర్ కోర్సు ప్రారంభించండి
-  elementary_page_own_pace_link_2: ఎక్స్ప్రెస్ కోర్సు ప్రారంభించండి
-  elementary_page_make_your_own_games_title: మీ స్వంత యానిమేషన్లు మరియు ఆటలను తయారు
-    చేయండి
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: స్ప్రైట్ ల్యాబ్
-  elementary_page_make_your_own_games_card_description_1: సృజనాత్మకంగా మారడానికి సమయం!
-    స్ప్రైట్ ల్యాబ్లో వెర్రి, తీపి లేదా బయటి-స్పేసీ ఏదైనా చేయడానికి బ్లాక్-ఆధారిత
-    కోడింగ్ను ఉపయోగించండి. ఏకైక పరిమితి మీ ఊహ!
-  elementary_page_make_your_own_games_link: స్ప్రైట్ ల్యాబ్ ప్రయత్నించండి
-  elementary_page_computer_science_title: తరగతి గదిలో కంప్యూటర్ సైన్స్
-  elementary_page_computer_science_description: ఈ కోర్సులను ఉపాధ్యాయుడు నడిపించాలి!
-    మీరు వాటిని మీ పాఠశాలలో బోధించడాన్ని చూడాలనుకుంటే, వారిని మీ తరగతికి తీసుకురావడానికి
-    ఉపాధ్యాయుడితో పనిచేయమని తల్లిదండ్రులు లేదా సంరక్షకుడిని అడగండి.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: కంప్యూటర్ సైన్స్ ఫండమెంటల్స్
   elementary_page_computer_science_card_title_2: కంప్యూటర్ సైన్స్ కనెక్షన్‌లు
   elementary_page_computer_science_description_1: ఉచిత సంవత్సర-కాలపు పాఠ్యాంశాలు కంప్యూటర్
