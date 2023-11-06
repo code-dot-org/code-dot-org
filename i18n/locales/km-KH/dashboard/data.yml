@@ -100,7 +100,7 @@ km:
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_intro: ការណែនាំ
         C4_loops_zombie: ប្រតិបត្តិដដែលៗ
-        C4_variables_artist: អថេរ - សិល្បករ
+        C4_variables_artist: អថេរ - វិចិត្រករ
         C4_conditionals: លក្ខខណ្ឌ
         CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
         CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
@@ -149,10 +149,10 @@ km:
         CSF_loops_AB: ប្រតិបត្តិដដែលៗ
         CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
         CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
-        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
-        MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
+        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរផ្សងព្រេងក្នុងដែនទឹក'
+        MC_2018_loops: 'Minecraft: ដំណើរផ្សងព្រេងក្នុងដែនទឹក (ធ្វើឡើងវិញរហូតដល់)'
         mc_2018_conditionals: 'Minecraft: ដំណើរផ្សងព្រេងក្នុងទឹក ដោយប្រើលក្ខខណ្ឌ'
-        mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_closing: 'Minecraft: អបអរសាទរអ្នកបានបញ្ចប់ដំណើរផ្សងព្រេងក្នុងដែនទឹក'
         hoc_dance_warmup: កម្មវិធីរាំ - ការចាប់ផ្ដើម
         hoc_dance_events: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
         hoc_dance_properties: ជប់លៀងរាំ - លក្ខណៈសម្បត្តិ 

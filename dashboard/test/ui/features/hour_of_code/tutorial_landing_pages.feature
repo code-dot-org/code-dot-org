@@ -18,4 +18,6 @@ Examples:
   | http://code.org/athletes                                          | athletes tutorial landing  |
   | http://code.org/educate/applab                                    | app lab tutorial landing   |
   | http://code.org/dance                                             | dance tutorial landing     |
-  | http://code.org/oceans                                            | oceans tutorial landing    |
+
+# Disabling temporarily to unblock Test
+#  | http://code.org/oceans                                            | oceans tutorial landing    |

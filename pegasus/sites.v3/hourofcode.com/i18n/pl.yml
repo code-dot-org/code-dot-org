@@ -2,9 +2,15 @@
 pl:
   site_name: GODZINA KODOWANIA
   hour_of_code: Godzina Kodowania
-  language: Polski
+  language: Angielski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
+  new: Nowość
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: Uczniowie przyswajają wiedzę w ponad 40 językach
+  hoc_stat_hours_served: Ponad 100 milionów uczniów wzięło już udział w wydarzeniu
+    w ramach Godziny Kodowania
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 grudnia
   campaign_date_start_long: 4 grudnia
   campaign_date_short: 4-10 grudnia
@@ -36,9 +42,20 @@ pl:
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
   hoc2023_header: Kreatywność z AI
-  hoc2023_social_creativity_with_ai_title: Godzina kodowania - co stworzysz?
-  hoc2023_social_creativity_with_ai_desc: Skorzystaj z informatyki, aby odkrywać i
+  hoc2023_hero_desc_homepage: Dołącz do milionów ludzi na całym świecie, aby zorganizować
+    Godzinę Kodowania, ze sztuczną inteligencją lub bez niej i uczyć się, jak działa
+    sztuczna inteligencja. Każdy, gdziekolwiek może to zrobić. Nie potrzeba żadnego
+    doświadczenia.
+  hoc2023_hero_desc_learn_page: W tym roku wynosimy Godzinę Kodowania na nowy poziom,
+    oferując możliwości kodowania, które obejmują zarówno komponenty sztucznej inteligencji
+    (AI), jak i inne niż sztuczna inteligencja.
+  hoc2023_social_creativity_with_ai_title: Godzina Kodowania - co stworzysz?
+  hoc2023_social_creativity_with_ai_desc: Korzystaj z informatyki, aby odkrywać i
     poznawać sztuczną inteligencję!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Odkrywaj, graj, twórz!
   social_hoc2022_explore_play_create: Korzystaj z informatyki, by odkrywać, grać i
     tworzyć!
@@ -49,8 +66,11 @@ pl:
     do nas, aby dowiedzieć się czegoś nowego, i świetnie się bawić przy tworzeniu.
   social_hoc2022_dance: Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, muzyka z filmu Disneya „Encanto,” i więcej!
-  social_hoc2023_dance: Zawiera Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selenę
-    Gomez, muzykę z Disneya „Encanto” i nie tylko!
+  social_hoc2023_dance: Występują Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, muzyka z filmu Disneya „Encanto” i wiele więcej!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Ucz się dzisiaj, buduj jaśniejsze jutro.
@@ -69,9 +89,8 @@ pl:
   hoc2020_ai_header: Odkrywaj sztuczną inteligencję
   hoc2020_ai_description: "Sztuczna inteligencja i uczenie maszynowe oddziałują na
     cały nasz świat. Dołącz do nas i zgłębiaj zagadnienie sztucznej inteligencji w
-    nowej serii filmów wideo, przechodź szkolenie korzystając z programu \"Sztuczna
-    inteligencja na rzecz oceanów\" tłumaczonego na 25 języków, omawiaj zagadnienia
-    etyczne i sztuczną inteligencję i wiele innych...\n\n"
+    nowej serii filmów, trenuj AI dla oceanów w 25 językach, omawiaj zagadnienia etyczne
+    związane z AI i wiele innych...\n\n"
   hoc2019_header: Ucz się informatyki. Zmieniaj świat!
   hoc2019_header_line1_mobile: Ucz się informatyki.
   hoc2019_header_line2_mobile: Zmieniaj świat!
@@ -169,7 +188,7 @@ pl:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
-  social_maker_title: Jestem Stwórcą!
+  social_maker_title: Jestem Twórcą!
   social_maker_desc: Code.org fizyczne zasoby obliczeniowe i twórcy dla klas 6-12.
   social_blockchain_title: Jak działa Blockchain
   social_blockchain_desc: Filmy i lekcje, które badają, czym jest blockchain i dlaczego
@@ -177,6 +196,7 @@ pl:
   social_ai_title: Dowiedz się więcej o sztucznej inteligencji (AI) | Code.org
   social_ai_desc: Narzędzia pomagające uczniom i nauczycielom wprowadzić sztuczną
     inteligencję do klasy.
+  social_videos_desc: Angażujące filmy informatyczne dla uczniów w każdym wieku.
   pl_superhero_title: Pomóż uczniom stać się superbohaterami!
   pl_superhero_desc: Dołącz do naszego bardzo wspierającego programu profesjonalnego
     uczenia się dla nauczycieli gimnazjów i szkół średnich.
@@ -204,10 +224,19 @@ pl:
   linked_in: LinkedIn
   instagram: Instagram
   tik_tok: TikTok
-  device_tablet: Tabletki
+  device_tablet: Tablet
   device_laptop: Laptop
   device_desktop_computer: Komputer stacjonarny
   device_mobile_device: Urządzenie mobilne
+  for_everyone: Dla wszystkich
+  for_students_teacher_led_learning: 'Dla uczniów: uczenie się pod okiem nauczyciela'
+  for_students_teacher_led_lessons: 'Dla uczniów: lekcje prowadzone przez nauczyciela'
+  professional_development: Rozwój zawodowy
+  how_ai_works_video_series: Jak działa AI Seria filmów
+  learn_how_ai_works: Dowiedz się, jak działa sztuczna inteligencja
+  ai_101_for_educators: AI 101 dla nauczycieli
+  learn_about_ai_impacts: Dowiedz się o wpływie sztucznej inteligencji
+  hoc_ai_activities: Aktywności AI w ramach Godziny Kodowania
   subscribe_to_emails_heading: Subskrybuj e-maile
   subscribe_to_emails_desc: Przeczytaj o tym, co dzieje się w Code.org i edukacji
     informatycznej poprzez kwartalne aktualizacje za pośrednictwem naszej listy mailingowej.
@@ -215,7 +244,7 @@ pl:
   promote_code_dot_org_heading: Promuj Code.org
   promote_code_dot_org_desc: Promuj informatykę w swojej okolicy za pomocą statystyk,
     cytatów i filmów.
-  afe_partnership_logo_alt: Logo Inżyniera Przyszłości
+  afe_partnership_logo_alt: Logo Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer to kompleksowy program od dzieciństwa
     do kariery, który ma inspirować, edukować i szkolić dzieci i młodzież o niskich
     dochodach i innych znajdujących się w niekorzystnej sytuacji, aby kontynuować
@@ -223,14 +252,14 @@ pl:
   grade_level: Poziom klasy
   grade_level_label_elementary: Szkoła podstawowa
   grade_level_label_middle: Gimnazjum
-  grade_level_label_high: liceum
-  curricula_title_elementary: Programy nauczania w szkole podstawowej
-  curricula_desc_elementary: Przeglądaj zabawę, bezpłatne kursy i zajęcia, które zapraszają
-    do odkrywania informatyki z uczniami szkoły podstawowej.
-  curricula_title_middle: Programy nauczania w gimnazjum
+  grade_level_label_high: Szkoła średnia
+  curricula_title_elementary: Programy nauczania dla szkoły podstawowej
+  curricula_desc_elementary: Przeglądaj zabawne i bezpłatne kursy i zajęcia, które
+    zapraszają do odkrywania informatyki z uczniami szkoły podstawowej.
+  curricula_title_middle: Programy nauczania dla gimnazjum
   curricula_desc_middle: Przeglądaj angażujące oferty, które umożliwiają Tobie i Twoim
     uczniom gimnazjum wspólne odkrywanie informatyki.
-  curricula_title_high: Programy nauczania w szkole średniej
+  curricula_title_high: Programy nauczania dla szkoły średniej
   curricula_desc_high: Przeglądaj atrakcyjne kursy i zajęcia, które zapraszają Ciebie
     i Twoich uczniów szkół średnich do głębszego zagłębienia się w informatykę.
   for_administrators_heading: Dla administratorów
@@ -240,13 +269,13 @@ pl:
   for_parents_desc: Możesz pomóc zachęcić szkołę swojego ucznia do oferowania lub
     rozszerzania edukacji informatycznej.
   for_educators_heading: Dla nauczycieli
-  for_educators_desc: Rozpocznij nauczanie już dziś - bez doświadczenia informatyki
-    - dzięki naszym profesjonalnym warsztatom edukacyjnym.
+  for_educators_desc: Rozpocznij nauczanie już dziś - nie jest wymagane żadne doświadczenie
+    w informatyce - dzięki naszym profesjonalnym warsztatom edukacyjnym.
   students_label: Uczniowie
   teachers_label: Nauczyciele
   educators_label: Nauczyciele
   companies_label: Przedsiębiorstwa
-  districts_label: Dzielnice
+  districts_label: Dystrykty
   school_assemblies_label: Zespoły szkolne
   parents_label: Rodzice
   public_officials_label: Urzędnicy publiczni
@@ -262,25 +291,36 @@ pl:
     wgląd i wsparcie od innych nauczycieli.
   required_materials: 'Wymagane materiały:'
   optional_materials: 'Materiały opcjonalne:'
+  for_students: Dla uczniów
+  for_educators: Dla nauczycieli
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Zorganizuj wydarzenie
   call_to_action_register_event: Zarejestruj swoje wydarzenie
+  call_to_action_register_your_hoc: Zarejestruj swoją Godzinę Kodowania
   call_to_action_select_activity: Wybierz aktywność
   call_to_action_start_activity: Rozpocznij aktywność
   call_to_action_get_certificates: Uzyskaj certyfikaty
-  call_to_action_go_beyond_hoc: Wyjdź poza Godzinę Kodeksu
-  call_to_action_view_promo_resources: Wyświetl zasoby promocyjne
+  call_to_action_go_beyond_hoc: Wyjdź poza Godzinę Kodowania
+  call_to_action_explore_all_hoc_activities: Przeglądaj wszystkie działania Godziny
+    Kodowania z Code.org
+  call_to_action_start_dance_party: Rozpocznij potańcówkę
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Rozpocznij aktywność bez komputera
+  call_to_action_view_promo_resources: Przejrzyj zasoby promocyjne
   call_to_action_learn_more: Dowiedz się więcej
   call_to_action_watch_now: Obejrzyj teraz
   call_to_action_try_activity: Wypróbuj aktywność
-  call_to_action_try_activities: Wypróbuj działania
-  call_to_action_explore_activities: Eksploruj działania
-  call_to_action_explore_ai: Eksploruj AI
+  call_to_action_try_activities: Wypróbuj aktywności
+  call_to_action_try_hoc_ai_activities: Wypróbuj aktywności AI z Godziną Kodowania
+  call_to_action_explore_activities: Odkrywaj aktywności
+  call_to_action_explore_ai: Poznaj AI
   call_to_action_explore_unit: Poznaj jednostkę
   call_to_action_explore_curriculum: Poznaj program nauczania
+  call_to_action_explore_curricula: Poznaj programy nauczania
   call_to_action_explore_curriculum_options: Poznaj opcje programu nauczania
   call_to_action_explore_lessons: Przeglądaj lekcje
-  call_to_action_explore_modules: Poznaj moduły
-  call_to_action_explore_module: Eksploruj moduł
+  call_to_action_explore_modules: Przeglądaj moduły
+  call_to_action_explore_module: Przeglądaj moduł
   call_to_action_explore_workshops: Poznaj warsztaty
   call_to_action_explore_course: Poznaj kurs
   call_to_action_explore_courses: Przeglądaj kursy
@@ -288,7 +328,7 @@ pl:
   call_to_action_explore_widgets: Przeglądaj widżety
   call_to_action_explore_choice_level: Poznaj przykładowy poziom wyboru
   call_to_action_explore_collection: Przeglądaj kolekcję
-  call_to_action_explore_unplugged_lesson: Przeglądaj lekcje bez wtyczki
+  call_to_action_explore_unplugged_lesson: Przeglądaj lekcje bez komputera
   call_to_action_explore_csf: Poznaj podstawy CS
   call_to_action_explore_csd: Poznaj CS Discoveries
   call_to_action_explore_csp: Poznaj zasady CS
@@ -296,7 +336,7 @@ pl:
   call_to_action_explore_csa: Poznaj AP® Computer Science A
   call_to_action_explore_csa_short: Poznaj AP® CSA
   call_to_action_explore_maker: Poznaj programy nauczania Maker
-  call_to_action_explore_hoc: Zapoznaj się z samouczkami „Godzina kodowania”
+  call_to_action_explore_hoc: Zapoznaj się z samouczkami Godziny Kodowania
   call_to_action_explore_hoc_short: Poznaj Godzinę Kodowania
   call_to_action_try_app_lab: Wypróbuj App Lab
   call_to_action_view_lesson_plan: Zobacz plan lekcji
@@ -329,7 +369,7 @@ pl:
   call_to_action_explore_teacher_forums: Przeglądaj fora nauczycieli
   call_to_action_explore_teacher_forum: Poznaj forum nauczycieli
   call_to_action_explore_career_resources: Przeglądaj zasoby dotyczące kariery
-  call_to_action_watch_videos: Oglądać filmy
+  call_to_action_watch_videos: Obejrzyj filmy
   call_to_action_download_posters: Pobierz plakaty
   call_to_action_contact_support: Skontaktuj się z pomocą techniczną Code.org
   call_to_action_pick_units: Wybierz jednostki
@@ -359,17 +399,25 @@ pl:
   call_to_action_learn_about_advocacy: Dowiedz się więcej o naszym rzecznictwie
   call_to_action_visit_store: Odwiedź sklep
   call_to_action_view_faqs: Zobacz więcej często zadawanych pytań
+  call_to_action_applications_open: Aplikacje już otwarte
+  call_to_action_apply_cs_ambassador: Złóż wniosek, aby zostać ambasadorem informatyki
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Zobacz poradnik dla nauczycieli
   aria_label_call_to_action_hoc_how_to_companies: Zobacz poradnik dla firm
-  aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dzielnic
-  aria_label_call_to_action_hoc_how_to_school_assemblies: Zobacz poradnik dotyczący
-    zespołów szkolnych
+  aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dystryktów
+  aria_label_call_to_action_hoc_how_to_school_assemblies: Zobacz poradnik dla zespołów
+    szkolnych
   aria_label_call_to_action_hoc_how_to_parents: Zobacz poradnik dla rodziców
   aria_label_call_to_action_hoc_how_to_public_officials: Zobacz poradnik dla urzędników
     publicznych
   aria_label_call_to_action_hoc_how_to_volunteers: Zobacz poradnik dla wolontariuszy
   aria_label_call_to_action_hoc_how_to_virtual_events: Zobacz poradnik dotyczący wydarzeń
     wirtualnych
+  aria_label_call_to_action_dance_01: Rozpocznij potańcówkę
+  aria_label_call_to_action_dance_02: Rozpocznij drugą część potańcówki
+  aria_label_call_to_action_dance_unplugged: Rozpocznij potańcówkę bez komputera
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program nauczania
     nauczania podstaw informatyki
@@ -437,7 +485,7 @@ pl:
   aria_label_call_to_action_csf_course_d: Zobacz szczegóły kursu D
   aria_label_call_to_action_csf_course_e: Zobacz szczegóły kursu E
   aria_label_call_to_action_csf_course_f: Zobacz szczegóły kursu F
-  aria_label_call_to_action_ai_pl_101_videos: Obejrzyj filmy AI 101 for Teachers
+  aria_label_call_to_action_ai_pl_101_videos: Obejrzyj filmy AI 101 dla nauczycieli
   aria_label_call_to_action_ai_teaching_module: Poznaj moduł Teaching AI i Machine
     Learning
   aria_label_call_to_action_how_ai_works_lesson_01: Zobacz szczegóły lekcji Wprowadzenie
@@ -466,28 +514,41 @@ pl:
   curriculum_name_csf_course_d: Kurs D
   curriculum_name_csf_course_e: Kurs E
   curriculum_name_csf_course_f: Kurs F
-  curriculum_name_csf_no_device: Brak urządzenia/odłączony
-  curriculum_name_csf_self_paced: Lekcja we własnym tempie
+  curriculum_name_csf_no_device: Brak urządzenia/bez komputera
+  curriculum_name_csf_self_paced: Lekcja z własnym tempem
   curriculum_name_csf_teacher_led: Lekcja prowadzona przez nauczyciela
-  curriculum_name_csd: Informatyka Odkrycia
+  curriculum_name_csd: Odkrycia informatyki
   curriculum_name_csp: Zasady informatyki
-  curriculum_name_csc: Połączenia informatyki
-  curriculum_name_csa: Informatyka A
+  curriculum_name_csc: Powiązania informatyki
+  curriculum_name_csa: AP® Informatyka A
   curriculum_name_csa_ai: Inżynieria oprogramowania i wizja komputerowa
   curriculum_name_csc_02: Dowolny moduł połączeń CS
-  curriculum_name_ai: AI [sztuczna inteligencja] i nauka maszynowa
+  curriculum_name_ai: AI i uczenie maszynowe
   curriculum_name_artificial_intelligence: Sztuczna inteligencja (AI)
-  curriculum_name_maker: Stwórca
+  curriculum_name_maker: Twórca
   curriculum_name_maker_cp: Tworzenie aplikacji za pomocą urządzeń (Circuit Playground)
   curriculum_name_maker_microbit: Tworzenie aplikacji z urządzeniami (micro:bit)
   curriculum_name_creating_apps_with_devices: Tworzenie aplikacji za pomocą urządzeń
   curriculum_name_poetry: Kodowanie z poezją
   curriculum_name_dance_party: Potańcówka
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Potańcówka bez komputera
+  curriculum_name_dance_party_ai_edition: 'Potańcówka: edycja AI'
   curriculum_name_problem_solving_computing: Rozwiązywanie problemów i informatyka
   curriculum_name_web_development: Tworzenie stron internetowych
   curriculum_name_interactive_animations_games: Interaktywne animacje i gry
   curriculum_name_design_process: Proces projektowania
   curriculum_name_data_society: Dane & Społeczeństwo
+  curriculum_desc_dance_party_01: W tym ćwiczeniu wprowadzającym użyj kodu, aby różnorodne
+    kolorowe postacie przeniosły się do animowanego tła i optymistycznej muzyki.
+  curriculum_desc_dance_party_02: Wyjdź poza samouczek wprowadzający z rozszerzonymi
+    pomysłami na projekt. Przejrzyj bibliotekę przykładów bardziej złożonych potańcówek.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Dowiedz się o koncepcjach sztucznej inteligencji
+    (AI), aby stworzyć własną wirtualną potańcówkę prezentującą dzisiejszych najlepszych
+    artystów. Z dziesiątkami piosenek do wyboru, docieraj do każdego ucznia bez względu
+    na jego gust muzyczny. Nadszedł czas, aby pochwalić się swoimi rzeczami!
   curriculum_desc_csf: Bezpłatny zestaw podstawowych programów nauczania, który wprowadza
     studentów w podstawowe koncepcje informatyki.
   curriculum_desc_csf_express: Naucz się tworzyć programy komputerowe, rozwijać umiejętności
@@ -606,12 +667,16 @@ pl:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: W wieku 2–8 lat
+  module_grade_2_12: W wieku 2–12 lat
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Przedszkole
   module_grade_grade_01: Stopień 1
@@ -619,6 +684,12 @@ pl:
   module_grade_grade_03: Klasa 3
   module_grade_grade_04: Klasa 4
   module_grade_grade_05: Klasa 5
+  module_age_05_07: W wieku 5-7 lat
+  module_age_07: W wieku 7+ lat
+  module_age_07_11: W wieku 7-11 lat
+  module_age_11: W wieku 11+ lat
+  module_age_13: W wieku 13+ lat
+  module_age_all_age: Wszystkie grupy wiekowe
   module_grade_k_5_teachers: Nauczyciele K-5
   module_grade_6_10_teachers: 6-10 Nauczycieli
   module_grade_9_12_teachers: 9-12 Nauczycieli
@@ -713,6 +784,57 @@ pl:
     nauczania
   heading_csa_ai: Szukasz rzeczy do zrobienia po egzaminie AP®?
   heading_bring_cs_to_students: Przynieś informatykę studentom
+  heading_cs_ambassador_program: Program Ambasadorów Informatyki
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: Jeśli jesteś uczniem liceum, który pasjonuje się zachęcaniem
+    większej liczby młodych kobiet do studiowania informatyki w Twojej szkole, wtedy
+    Cię potrzebujemy!
+  cs_ambassador_desc: Każda dziedzina, w tym medycyna, rozrywka, sport, edukacja,
+    biznes, moda i przedsiębiorczość, jest dotknięta informatyką. Jednak tylko 5%
+    młodych kobiet w wieku licealnym uczęszcza na lekcje informatyki. Ambasadorzy
+    mogą pomóc zlikwidować tę różnicę między płciami, zachęcając swoich rówieśników
+    do wzięcia udziału w zajęciach informatyki.
+  cs_ambassador_application_date: Zgłoszenia otwarte do 8 listopada 2023 r.
+  cs_ambassador_application_subhead: Współpracuj z nauczycielem, aby złożyć wniosek
+    już dziś
+  cs_ambassador_application_questions: Pytania? Prosimy o kontakt [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Czym zajmują się ambasadorzy informatyki?
+  cs_ambassador_do_desc: Ambasadorzy CS zachęcają młode kobiety do zgłębiania tego
+    tematu, i podnoszą się nawzajem, gdy odzyskują swoje miejsce w informatyce. Ambasadorzy
+    CS łączą się ze swoimi rówieśnikami, aby podzielić się emocjami i zamiłowaniem
+    do informatyki. Odwiedzają sale lekcyjne, goszczą stoły w porze lunchu, przemawiają
+    na zgromadzeniach i spotkaniach klubowych. Ambasadorzy CS współpracują z nauczycielami
+    i administratorami szkół, aby przełamać stereotypy, które powstrzymują młode kobiety.
+  cs_ambassador_steps_heading: Czego potrzebuję, aby zostać ambasadorem informatyki?
+  cs_ambassador_steps_list_title_01: Pasja
+  cs_ambassador_steps_list_title_02: Doświadczenie na kursie informatyki
+  cs_ambassador_steps_list_title_03: Szkoła, która oferuje informatkę
+  cs_ambassador_steps_list_desc_01: Pasja do zachęcania młodych kobiet w Twojej szkole
+    do uczęszczania na zajęcia z informatyki
+  cs_ambassador_steps_list_desc_02: 'Uczęszczałeś na całoroczne zajęcia z informatyki
+    w roku szkolnym 2022-23 lub wcześniej (zalecane: Zasady Informatyki lub AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Uczęszczaj do liceum, które regularnie oferuje
+    roczny kurs informatyki (zalecane: Zasady Informatyki lub AP® CSA)'
+  cs_ambassador_benefits_heading: Korzyści z programu
+  cs_ambassador_benefits_list_title_01: Wspólnota narodowa
+  cs_ambassador_benefits_list_title_02: Służba społeczna
+  cs_ambassador_benefits_list_title_03: Uznanie
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certyfikat
+  cs_ambassador_benefits_list_title_06: Doświadczenia
+  cs_ambassador_benefits_list_desc_01: Dostęp do krajowej społeczności młodych liderów
+    zaangażowanych w zlikwidowanie różnicy między płciami w informatyce.
+  cs_ambassador_benefits_list_desc_02: Godziny pracy społecznej i możliwość zdobycia
+    [Nagrody Prezydenckiej Wolontariatu USA] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Uznanie ambasadora 2023-2024 i uprawnione do
+    uhonorowania w Galerii Sław Ambasadorów Code.org.
+  cs_ambassador_benefits_list_desc_04: Zostań zidentyfikowanym jako ambasador CS poprzez
+    specjalną odzież, naklejki i nie tylko z marką Code.org!
+  cs_ambassador_benefits_list_desc_05: Oficjalny certyfikat uczestnictwa z Code.org.
+  cs_ambassador_benefits_list_desc_06: Zdobywaj doświadczenia i historie, którymi
+    możesz się podzielić w swojej aplikacji na studia, CV i nie tylko!
   professional_learning_section_desc: Uzyskaj wsparcie, którego potrzebujesz, przygotowując
     się do nauczania. Nauczyciele to uwielbiają, a ponad 90% uplasuje go za najlepszy
     rozwój zawodowy w historii!
@@ -762,6 +884,13 @@ pl:
     i aktualizacje wysyłane bezpośrednio do Twojej skrzynki odbiorczej.
   subscribe_form_section_unsubscribe: Możesz zrezygnować z subskrypcji w dowolnym
     momencie.
+  dance_hero_heading: Koduj potańcówkę
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Potańcówka zawiera piosenki:'
+  dance_and_more: i więcej
+  dance_choose_activity: Wybierz swoją potańcówkę
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Jak działa Blockchain
   blockchain_hero_desc: Zanurz się w świecie blockchain dzięki „How Blockchain Works”,
     naszej nowej serii filmów i towarzyszącym lekcjom!
@@ -809,7 +938,7 @@ pl:
   teachai_launch_blog_desc_02: TeaChai ma na celu zintegrowanie edukacji AI z programami
     nauczania na poziomie podstawowym i średnim na całym świecie poprzez nowe raporty,
     zalecenia polityczne, i możliwości zaangażowania publicznego.
-  ai_pl_callout_title: Dołącz do nas w AI EmpowerED!
+  ai_pl_callout_title: AI 101 dla nauczycieli
   ai_pl_callout_desc_01: Odkryj transformacyjny potencjał sztucznej inteligencji (AI)
     w edukacji dzięki naszej bezpłatnej serii szkoleń online dla nauczycieli.
   ai_pl_callout_desc_02: Zapisz się na „Chat przy kominku z Salem Khanem i Hadi Partovi”,
@@ -820,7 +949,7 @@ pl:
     w jaki żyjemy, pracujemy i uczymy się.
   ai_intro_heading: Po co uczyć się o sztucznej inteligencji?
   ai_intro_video_title: Dlaczego AI ma znaczenie z Deb Raji
-  ai_intro_video_caption_link: Zapoznaj się z pełną serią Intro to AI
+  ai_intro_video_caption_link: Zapoznaj się z pełną serią Wprowadzenia do AI
   ai_intro_list_title_01: Podstawowa wiedza
   ai_intro_list_desc_01: Rozbudzaj zainteresowanie uczniów technologią i pomóż im
     głębiej zrozumieć otaczający ich świat.
@@ -836,7 +965,7 @@ pl:
     dla Ciebie i Twoich uczniów.
   ai_why_link_01: Poznaj programy nauczania AI
   ai_why_link_02: Zobacz profesjonalne opcje uczenia się
-  ai_why_link_03: Oglądaj filmy AI
+  ai_why_link_03: Oglądaj filmy o AI
   ai_curricula_heading: Programy nauczania AI
   ai_curricula_desc: Zapoznaj się z różnymi ofertami programów nauczania AI, które
     spełniają różnorodne potrzeby w klasie.
@@ -871,6 +1000,12 @@ pl:
   ai_curriculum_grades_05: 'Poziomy ocen: 9-12'
   ai_curriculum_btn_aria_label_05: Poznaj moduł Inżynieria oprogramowania i wizja
     komputerowa
+  ai_curriculum_title_06: Społeczny wpływ generatywnej sztucznej inteligencji
+  ai_curriculum_desc_06: Zbadaj wpływ generatywnej sztucznej inteligencji z różnych
+    perspektyw, a następnie współpracuj jako zespół, aby opracować wytyczne, które
+    zaspokoją największe potrzeby wszystkich uczestników.
+  ai_curriculum_btn_aria_label_06: Zobacz społeczny wpływ generatywnej sztucznej inteligencji
+    plan lekcji
   ai_carousel_heading: 'Co nauczyciele mówią o sztucznej inteligencji z Code.org:'
   ai_carousel_quote_01: Ta lekcja dała również moim uczniom możliwość zobaczenia,
     że w systemach klasyfikacji istnieje element opinii. Później, kiedy zaczęliśmy
@@ -916,7 +1051,7 @@ pl:
     K-12. Oferuj bezpłatny rozwój zawodowy, seminaria internetowe, prezentacje konferencyjne
     i możliwości uczenia się peer-to-peer.
   ai_resources_btn_aria_label_03: Zapoznaj się ze stroną internetową AI for Teachers
-  ai_pl_101_hero_heading: Dołącz do nas w AI EmpowerED!
+  ai_pl_101_hero_heading: AI 101 dla nauczycieli
   ai_pl_101_hero_desc: Odkryj transformacyjny potencjał sztucznej inteligencji (AI)
     w edukacji dzięki naszej bezpłatnej serii szkoleń online dla nauczycieli.
   ai_pl_101_hero_desc_02: Kompleksowa seria nauczania online dla nauczycieli.
@@ -1418,10 +1553,10 @@ pl:
   csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
-  csp_page_curriculum_glance_tools: Laboratorium aplikacji
+  csp_page_curriculum_glance_tools: App Lab
   csp_page_curriculum_glance_professional_learning: Warsztaty prowadzone przez facylitatora,
     moduły we własnym tempie
-  csp_page_curriculum_glance_professional_languages: Polski
+  csp_page_curriculum_glance_professional_languages: Angielski
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csp_page_quote: Can I just say I LOVE Code.org? It's my first year teaching AP CS
@@ -1537,7 +1672,7 @@ pl:
   csd_page_intro_heading: Elastyczny program nauczania dostosowany do Twoich potrzeb
   csd_page_intro_list_01: Elastyczny program wprowadzający
   csd_page_intro_list_02: Szerokość tematów
-  csd_page_intro_list_03: Nie potrzeba wcześniejszego doświadczenia
+  csd_page_intro_list_03: Nie jest wymagane wcześniejsze doświadczenie
   csd_page_intro_list_04: Zbuduj wiele różnych typów projektów
   csd_page_intro_list_05: Ekscytujące i zabawne
   csd_page_quote: Ten program nauczania jest all inclusive, dobrze zorganizowany,
@@ -1550,7 +1685,7 @@ pl:
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
   csd_page_curriculum_glance_professional_learning: Warsztaty prowadzone przez facylitatora,
     moduły we własnym tempie
-  csd_page_curriculum_glance_professional_languages: Polski
+  csd_page_curriculum_glance_professional_languages: Angielski
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: Wybór odpowiedniego kursu CS Discoveries dla Twojej
@@ -1647,7 +1782,7 @@ pl:
   csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csc_page_curriculum_glance_tools: Laboratorium Sprite
   csc_page_curriculum_glance_professional_learning: Moduły we własnym tempie
-  csc_page_curriculum_glance_professional_languages: Polski
+  csc_page_curriculum_glance_professional_languages: Angielski
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csc_page_quote: Bardzo doceniam to, jak dokładne i szybkie są lekcje. Nie znam informatyki,
@@ -1778,7 +1913,7 @@ pl:
   csa_page_curriculum_glance_devices: Laptop, Chromebook
   csa_page_curriculum_glance_tools: Laboratorium Java
   csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
-  csa_page_curriculum_glance_languages: Polski
+  csa_page_curriculum_glance_languages: Angielski
   csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
   csa_page_quote: I could tell last year how different and better this curriculum
@@ -1893,6 +2028,9 @@ pl:
     w Stanach Zjednoczonych i dziesięciu zasadach, które zalecamy stanom przyjąć,
     aby informatyka była podstawą dla wszystkich studentów. Plus, dowiedz się, jak
     możesz wprowadzić zmiany w swoim stanie.
+  yw_page_top_heading: Młode kobiety w informatyce
+  yw_page_top_desc: Zostań Ambasadorem CS i bądź częścią zmniejszania różnic między
+    płciami w informatyce.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
   hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
@@ -2020,7 +2158,7 @@ pl:
     każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są
     dostępne w ponad 40 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina
     kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>
-  front_intro_default_2: Globalny ruch w 180+ krajach.
+  front_intro_default_2: Globalny trend w ponad 180 krajach.
   front_watch_video: Obejrzyj nowy film
   front_watch_regular_video: Obejrzyj wideo
   front_volunteers: Potrzebni są wolontariusze techniczni
@@ -2201,7 +2339,7 @@ pl:
     przybliżyć ją 100 milionom uczniów.
   front_join_us_description_short: Informatyka jest podstawą dla każdego dla ucznia.
   front_join_us_button: Dołącz do nas
-  front_what_is_hoc: Czym jest Godzina kodowania?
+  front_what_is_hoc: Czym jest Godzina Kodowania?
   front_join_us_header: Każdy może nauczyć się podstaw dobrze się przy tym bawiąc!
   front_join_us_volunteer_header: Wolontariusze na Godzinę Kodowania
   front_join_us_tutorials: Wybierz swój samouczek dla Godziny Kodowania!
@@ -2261,10 +2399,16 @@ pl:
     do informatyki, wykorzystujące zabawne samouczki, aby pokazać, że każdy może nauczyć
     się podstaw. Ta oddolna inicjatywa jest wspierana przez ponad 400 partnerów i
     200 000 nauczycieli na całym świecie.
+  hoc_homepage_registration_desc: Twoja klasa lub grupa może dołączyć do milionów
+    innych osób na całym świecie podczas Godziny Kodowania! Rejestracja na doroczne
+    obchody Tygodnia Edukacji Informatycznej rozpoczyna się w październiku. Wydarzenia
+    w ramach Godziny Kodowania odbywają się jednak przez cały rok.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Przeczytaj nasz przewodnik](%{howto_guide_url}),
     aby zaplanować wydarzenie dla swojej klasy."
   hoc_homepage_highlights_heading: Atrakcje Godziny Kodowania
   hoc_homepage_organized_by: Godzina Kodowania jest organizowana przez [Code.org](%{codeorg_url}).
+  hoc_events_heading: Zarejestruj się, aby zorganizować Godzinę Kodowania
+  hoc_events_jump_to_map: Przejdź do mapy Godzina Kodowania
   signup_closed: Rejestracja do Godziny Kodowania jest teraz zamknięta. Proszę sprawdzić
     ponownie w październiku, by zapisać się do następnej Godziny Kodowania.
   signup_registration_not_required: Nie musisz się rejestrować, aby wziąć udział!
@@ -2295,7 +2439,9 @@ pl:
   signup_event_entire_school_label: Cała moja szkoła uczestniczy
   signup_event_location_label: Miejsce wydarzenia
   signup_event_location_error: Wymagane jest miejsce wydarzenia.
-  signup_special_event_flag_label: Wyeksponuj moje specjalne wydarzenie
+  signup_special_event_flag_label: Moje wydarzenie obejmie całą dzielnicę, całą organizację,
+    członków społeczności oraz/lub zakłada realizację innych specjalnych planów, wykraczających
+    poza ramy czasowe godziny
   signup_special_event_details_label: Szczegóły wydarzenia specjalnego
   signup_send_posters_flag_label: Wyślij <a href= "/resources/promote#posters"> plakaty</a>
     do mojej szkoły lub organizacji (USA tylko, do wyczerpania zapasów)
@@ -2374,6 +2520,8 @@ pl:
   map_header: "# wydarzeń Hour of Code na całym świecie"
   map_header_count_year: "%{event_count} wydarzenia zarejestrowane dla Godziny Kodowania
     %{year}"
+  map_header_count_year_so_far: "%{event_count} wydarzeń zarejestrowanych do tej pory
+    w %{year}"
   see_all_events: Zobacz wszystkie wydarzenia
   map_header_company: "# przez organizatorów firmy"
   map_header_country: "# w %{country}"
@@ -2387,6 +2535,8 @@ pl:
     wydarzeń. Wszystkie zarejestrowane wydarzenia z prawidłowym adresem mogą być wyświetlane
     na <a href='%{events_url}'> stronie wydarzeń.</a>
   map_warning_markdown: Pełna lista wydarzeń, które można przeglądać na [stronie wydarzeń.](%{events_url})
+  map_view_all_events: Zobacz pełną listę wydarzeń organizowanych w ramach Godzina
+    Kodowania [here](%{events_url}).
   meta_tag_og_title: Zbliża się Godzina Kodowania
   meta_tag_og_description: The Hour of Code to globalny ruch docierający do dziesiątek
     milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek
@@ -2407,15 +2557,7 @@ pl:
   twitter_default_text_donor: 'Biorę udział w tegorocznym #HourOfCode, prawda? (Dzięki
     %{random_donor} za wsparcie @codeorg)'
   hoc_faq_title: FAQ - Najczęściej zadawane pytania
-  hoc_faq_what_is_hoc_q: Czym jest Godzina kodowania?
-  hoc_faq_what_is_hoc_a: Godzina kodowania to jednogodzinne wprowadzenie do informatyki,
-    mające na celu demistyfikację "code" - programowania - i pokazanie, że każdy może
-    nauczyć się podstaw i poszerzyć swój udział w obszarze informatyki. Od tego czasu
-    ta inicjatywa stała się ogólnoświatowym wydarzeniem na rzecz informatyki, zapoczątkowana
-    1 godziną programowania, rozwijaja się następnie jako różnorodne przedsięwzięcia
-    środowiska. Sprawdź <a href='%{tutorials}'> samouczki i działania </a>. Ta kampania
-    jest wspierana przez ponad <a href='%{partners}'> 400 partnerów </a> i 200 000
-    nauczycieli na całym świecie.
+  hoc_faq_what_is_hoc_q: Czym jest Godzina Kodowania?
   hoc_faq_what_is_hoc_a_markdown: Godzina kodowania to jednogodzinne wprowadzenie
     do informatyki, mające na celu demistyfikację "code" - programowania - i pokazanie,
     że każdy może nauczyć się podstaw i poszerzyć swój udział w obszarze informatyki.
@@ -2426,12 +2568,6 @@ pl:
     na całym świecie.
   hoc_faq_last_year: Wypróbuj samouczki
   hoc_faq_when_is_hoc_q: Kiedy jest Godzina Kodowania?
-  hoc_faq_when_is_hoc_a: Godzina kodowania odbywa się każdego roku podczas <a href='%{csedweek_url}'>
-    Tygodnia Edukacji Informatycznej</a>. %{campaign_date_year} Tydzień Edukacji Informatycznej
-    odbędzie się %{campaign_date_full}, ale możesz organizować Godzinę Kodowania przez
-    cały rok. Tydzień Edukacji Informatycznej odbywa się co roku dla uhonorowania
-    pioniera informatyki, <a href='%{grace_hopper}'> Admirał Grace Murray Hopper</a>,
-    urodzonej 9 grudnia 1906.
   hoc_faq_when_is_hoc_a_markdown: Godzina kodowania odbywa się każdego roku podczas
     [Tygodnia Edukacji Informatycznej](%{csedweek_url}). %{campaign_date_year} Tydzień
     Edukacji Informatycznej odbędzie się %{campaign_date_full}, ale możesz organizować
@@ -2439,40 +2575,22 @@ pl:
     co roku dla uhonorowania pioniera informatyki,  [pani Admirał Grace Murray Hopper](%{grace_hopper})
     (rodzonej 9 grudnia 1906).
   hoc_faq_why_cs_q: Dlaczego informatyka?
-  hoc_faq_why_cs_a: "<i>Każdy</i> uczeń powinien mieć możliwość nauki informatyki.
-    Pomaga ona rozwijać umiejętności rozwiązywania problemów, logicznego myślenia
-    i kreatywności. Dzięki rozpoczęciu nauki wcześnie, uczniowie zdobędą podstawy
-    dla przyszłych sukcesów na jakiejkolwiek ścieżce zawodowej w XXI wieku. Zobacz
-    więcej statystyk na <a href='%{stats_url}'>here</a>."
   hoc_faq_why_cs_a_markdown: _Każdy_uczeń powinien mieć możliwość nauki informatyki.
     Pomaga ona rozwijać umiejętności rozwiązywania problemów, logicznego myślenia
     i kreatywności. Dzięki rozpoczęciu nauki wcześnie, uczniowie zdobędą podstawy
     dla przyszłych sukcesów na jakiejkolwiek ścieżce zawodowej w XXI wieku. Zobacz
     więcej statystyk [tutaj](%{stats_url}).
   hoc_faq_how_participate_q: Jak mogę wziąć udział w Godzinie Kodowania?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Rozpocznij planowanie tutaj</a> przeglądając
-    nasz przewodnik. Możesz zorganizować Godzinę Kodowania w swojej szkole lub w okolicy
-    &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy. Albo po
-    prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}."
   hoc_faq_how_participate_a_markdown: '[Rozpocznij planowanie tutaj](%{howto}) przeglądając
     nasz przewodnik. Możesz zorganizować "Godzinę kodowania" w swojej szkole lub w
     okolicy &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy.
     Albo po prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}.'
   hoc_faq_behind_hoc_q: Kto jest odpowiedzialny za Godzinę Kodowania?
-  hoc_faq_behind_hoc_a: Godzina Kodowania jest organizowana przez Code.org i prowadzona
-    przez Komitet Rewizyjny Godziny Kodowania jak również przez bezprecedensową koalicję  <a
-    href='%{partnerów_url}'> </a>, którzy wspólnie wspierają Godzinę Kodowania, wśród
-    nich Microsoft, Apple, Amazon, Boys i Girls Clubs of America oraz Rada Kolegiów.
   hoc_faq_behind_hoc_a_markdown: Godzina Kodowania jest organizowana przez Code.org
     i prowadzona przez Komitet Rewizyjny Godziny Kodowania jak również przez bezprecedensową
     koalicję  [partners](%{partner_url}), którzy wspólnie wspierają Godzinę Kodowania,
     wśród nich Microsoft, Apple, Amazon, Boys i Girls Clubs of America oraz Rada Kolegiów.
   hoc_faq_host_q: Nic nie wiem o kodowaniu. Czy nadal mogę zorganizować wydarzenie?
-  hoc_faq_host_a: Oczywiście. Ćwiczenia Godziny Kodowania możesz wykonywać samodzielnie.
-    Jedyne co musisz zrobić to <a href='%{codeorg_url}/learn'>spróbować naszych samouczków</a>,
-    wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą.
-    Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola
-    wzwyż. Zacznij planowanie swojego wydarzenia poprzez przeczytanie naszych <a href=''how-to'>przewodników</a>.
   hoc_faq_host_a_markdown: Oczywiście. Aktywności Godziny Kodowania możesz wykonywać
     samodzielnie. Jedyne co musisz zrobić to [wypróbować nasze samouczki] (%{codeorg_url}/learn),
     wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą.
@@ -2480,13 +2598,6 @@ pl:
     wzwyż. Zacznij planowanie swojego wydarzenia od przeczytania naszego [przewodnika,
     jak to robić] (%{howto}).
   hoc_faq_devices_q: Jakich urządzeń powinienem użyć z moimi uczniami?
-  hoc_faq_devices_a: Samouczki Code.org działają na wszystkich urządzeniach i we wszystkich
-    przeglądarkach. Więcej informacji o wymaganiach technicznych samouczków Code.org
-    można znaleźć <a href='%{codeorg_url}/educate/it'>tutaj</a>. Wymagania techniczne
-    dla pozostałych samouczków można znaleźć na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    w opisie danego samouczka. Nie zapomnij, że oferujemy również <a href='%{unplugged_url}'>aktywności
-    bez użycia komputera</a>, jeśli Twoja szkoła nie dysponuje zapleczem technicznym
-    potrzebnym dla samouczków!
   hoc_faq_devices_a_markdown: Samouczki Code.org działają na wszystkich urządzeniach
     i we wszystkich przeglądarkach. Więcej informacji o wymaganiach technicznych samouczków
     Code.org można znaleźć [here](%{codeorg_url}/educate/it). Wymagania techniczne
@@ -2495,18 +2606,6 @@ pl:
     "unplugged" - bez użycia komputera] (%{unplugged_url}), jeśli Twoja szkoła nie
     dysponuje zapleczem technicznym potrzebnym dla samouczków!
   hoc_faq_need_computers_q: Czy potrzebuję komputerów dla każdego uczestnika?
-  hoc_faq_need_computers_a: Nie. Mamy samouczki dla Godziny Kodowania na komputery
-    PC, smartfony, tablety i takie, które nie wymagają w ogóle żadnych urządzeń! Możesz
-    przyłączyć się gdziekolwiek jesteś i jakikolwiek masz sprzęt. <p><i>Oto kilka
-    opcji:</i> <br><ul><li><b>Pracujcie w parach.</b> <a href='%{pair_programming_research}'>
-    Badania pokazują </a>, że uczniowie najlepiej uczą się <a href='%{pair_programming_video}'>
-    programując w parach</a>, korzystając ze wspólnego komputera pracując razem. Zachęć
-    swoich uczniów, aby połączyli się w pary. <li><b>Użyj projektora.</b> Jeśli masz
-    komputer z dostępem do Internetu połączony z projektorem, cała Twoja klasa może
-    wspólnie uczestniczyć w Godzinie Kodowania na ekranie. Oglądajcie razem fragmenty
-    i na zmianę rozwiązujcie łamigłówki i znajdujcie odpowiedzi na pytania. <li><b>Uczcie
-    się bez komputerów.</b> Oferujemy <a href='%{unplugged_url}'> samouczki, które
-    nie wymagają komputera </a> at all. </ul>
   hoc_faq_need_computers_a_markdown: "Nie. Mamy samouczki dla Godziny Kodowania na
     komputery PC, smartfony, tablety i takie, które w ogóle nie wymagają komputerów!
     Możesz przyłączyć się gdziekolwiek jesteś i jakikolwiek masz sprzęt. \n\n_Oto
@@ -2519,28 +2618,15 @@ pl:
     rozwiązujcie łamigłówki i odpowiadajcie na pytania. \n- **Przejdźcie na tryb \"unplugged\"
     - bez komputera.** Oferujemy [samouczki, które nie wygają komputera] (%{unplugged_url})."
   hoc_faq_international_q: Jestem w <country>. Jak mogę uczestniczyć na arenie międzynarodowej?
-  hoc_faq_international_a: Każdy może zorganizować Godzinę Kodowania, gdziekolwiek
-    na całym świecie. W ubiegłym roku uczniowie na całym świecie uczestniczyli w Godzinie
-    Kodowania. Dowiedz się więcej <a href='/promote'>tutaj</a>.
   hoc_faq_international_a_markdown: Każdy może zorganizować wydarzenie Godziny Kodowania,
     gdziekolwiek na całym świecie. W ubiegłym roku uczniowie na całym świecie uczestniczyli
     w Godzinie Kodowania. Dowiedz się więcej [here] (%{promote}).
   hoc_faq_tutorial_q: Jak mogę utworzyć samouczek dla Godziny Kodowania?
-  hoc_faq_tutorial_a: Jeśli jesteś zainteresowany by być partnerem samouczków, <a
-    href='target-tutorial-guidelines'> zobacz nasze wskazówki i instrukcje</a>. Chcielibyśmy
-    zrealizować wiele angażujących działań, ale głównym celem jest, aby uczniowie
-    i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia.
   hoc_faq_tutorial_a_markdown: Jeśli jesteś zainteresowany, by być partnerem samouczków,  [zobacz
     nasze wskazówki i instrukcje](%{tutorial_guidelines}). Chcielibyśmy zrealizować
     wiele angażujących działań, ale głównym celem jest, aby uczniowie i nauczyciele,
     którzy zaczynają przygodę z informatyką, mieli jak największe korzyści.
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
-  hoc_faq_account_a: Nie. Rejestracja i logowanie nie są wymagane, aby wypróbować
-    Godzinę Kodowania. Większość <a href='%{codeorg_url}/learn/beyond'>kursów</a>
-    wymaga utworzenia konta jedynie aby zapisywać postępy uczniów. Także, rejestracja
-    do Godziny Kodowania nie powoduje automatycznego utworzenia konta na Code Studio.
-    Jeśli chcesz utworzyć konta dla swoich uczniów, to postępuj zgodnie z następującymi
-    <a href='https://youtu.be/_smelV_KISE'>instrukcjami</a>.
   hoc_faq_account_a_markdown: Nie. Rejestracja i logowanie nie są wymagane, aby wypróbować
     Godzinę Kodowania. Większość [dalszych - kursów] (%{codeorg_url}/learn/beyond)
     wymaga utworzenia konta jedynie, aby zapisywać postępy uczniów. Także, rejestracja
@@ -2548,13 +2634,6 @@ pl:
     Jeśli chcesz utworzyć konta dla swoich uczniów, to postępuj zgodnie z następującymi
     [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Jakie zadania powinienem wykonywać z uczniami ze szkół średnich?
-  hoc_faq_high_school_a: Nasze samouczki dla Star Wars i Minecraft są świetne dla
-    uczniów ze szkół średnich, zwłaszcza w wersji Star Wars JavaScript, a oba samouczki
-    - na poziomie swobodnej zabawy. Podobnie, polecamy wypróbowanie jednego z samouczków
-    dla początkujących na <a href='%{codeorg_url}/learn'>%{partner_url}/start</a>,
-    by zacząć, takich jak samouczki z Angry Birds lub Anną i Elsą. Uczeń szkoły średniej
-    powinien być w stanie je ukończyć w 30 minut, a potem może spróbować bardziej
-    zaawansowanych na Khan Academy lub CodeHS.
   hoc_faq_high_school_a_markdown: Nasze samouczki dla Star Wars i Minecraft są świetne
     dla uczniów ze szkół średnich, zwłaszcza w wersji Star Wars JavaScript, a oba
     samouczki - na poziomie swobodnej zabawy. Podobnie, polecamy wypróbowanie jednego
@@ -2564,11 +2643,6 @@ pl:
     bardziej zaawansowanych samouczków w JavaScript, takich jak Khan Academy lub CodeHS.
   hoc_faq_scratch_q: Podczas Godziny Kodowania używam Scratcha, ale co jeśli moi uczniowie
     używają iPadów zamiast laptopów?
-  hoc_faq_scratch_a: Scratch nie działa na tabletach. Jeśli uczniowie są młodzi, mogą
-    używać aplikacji ScratchJS dla iPada (dla początkujących w czytaniu). Jeśli spojrzysz
-    na samouczki na <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, możesz
-    znaleźć inne samouczki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot
-    lub CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch nie działa na tabletach. Jeśli uczniowie są
     młodzi, mogą użyć aplikacji ScratchJS dla iPada (dla początkujących w czytaniu).
     Jeśli przejrzysz poradniki na [%{partner_url}/learn](%{codeorg_url}/learn), możesz
@@ -2576,14 +2650,6 @@ pl:
     lub CodeSpark.
   hoc_faq_count_hoc_q: Jak liczyć Godziny Kodowania?
   hoc_faq_map_q: Dlaczego nie widzę na mapie mojego znacznika?
-  hoc_faq_map_a: Przykro nam, że nie widzisz organizowanego przez Ciebie wydarzenia
-    na mapie Godziny Kodowania. W inicjatywie biorą udział dziesiątki tysięcy osób,
-    a mapa agreguje dane i wyświetla jeden punkt dla wielu wydarzeń. Jeśli klikniesz
-    <a href='%{events_url}'>events page</a> link poniżej mapy, zostaniesz przekierowana
-    na listę wszystkich wydarzeń z podziałem na kraje; tam znajdziesz organizowane
-    przez siebie wydarzenie. Ponadto, ponieważ tysiące osób zapisują się na Godzinę
-    Kodowania, uaktualnienie mapy i listy wydarzeń zazwyczaj zajmuje 48 godzin. Sprawdź
-    ponownie za kilka dni!
   hoc_faq_map_a_markdown: Przykro nam, że nie widzisz organizowanego przez Ciebie
     wydarzenia na mapie Godziny Kodowania. W inicjatywie biorą udział dziesiątki tysięcy
     osób, a mapa agreguje dane i wyświetla jeden punkt dla wielu wydarzeń. Jeśli klikniesz
@@ -2592,12 +2658,6 @@ pl:
     przez siebie wydarzenie. Ponadto, ponieważ tysiące osób zapisują się na Godzinę
     Kodowania, uaktualnienie mapy i listy wydarzeń zazwyczaj zajmuje 48 godzin. Sprawdź
     ponownie za kilka dni!
-  hoc_faq_count_hoc_a: Śledzenie udziału w Godzinie Kodowania nie jest dokładnym pomiarem
-    uczestnictwa. Nie liczymy dokładnie unikatowych identyfikatorów uczniów, kiedy
-    śledzimy udział w Godzinie Kodowania zwłaszcza, że nie wymagamy, aby uczniowie
-    się logowali czy rejestrowali. W rezultacie w tym samym czasie zarówno przeszacowujemy
-    jak i niedoszacowujemy liczbę uczestników. Przeczytaj o wszystkich szczegółach
-    <a href='%{codeorg_url}/loc'>tutaj</a>.
   hoc_faq_count_hoc_a_markdown: Śledzenie udziału w Godzinie Kodowania nie jest dokładnym
     pomiarem uczestnictwa. Nie liczymy dokładnie unikatowych identyfikatorów uczniów,
     kiedy śledzimy udział w Godzinie Kodowania zwłaszcza, że nie wymagamy, aby uczniowie
@@ -2605,24 +2665,6 @@ pl:
     jak i niedoszacowujemy liczbę uczestników. Zapoznaj się ze wszystkimi szczegółami
     [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Ile mogę się nauczyć w ciągu godziny?
-  hoc_faq_one_hour_a: Celem Godziny Kodowania nie jest wyszkolenie kogokolwiek na
-    eksperta informatyki w ciągu godziny. Godzina wystarczy jednak by dowiedzieć się,
-    że informatyka jest przyjemna i kreatywna, dostępna w każdym wieku, dla wszystkich
-    uczniów, niezależnie od środowiska i doświadczenia. Miarą sukcesu tej inicjatywy
-    nie jest jak dużo informatyki uczniowie się nauczą - sukces jest odzwierciedlony
-    szerokim uczestnictwem reprezentantów różnych płci oraz grup etnicznych i społeczno-ekonomicznych,
-    a w rezultacie wzrostem zainteresowania informatyką na różnych etapach edukacji.
-    Miliony nauczycieli i uczniów postanowiły wykroczyć poza godzinę - uczyć się przez
-    cały dzień lub cały tydzień albo nawet dłużej, a wiele uczniów postanowiło zapisać
-    się na dodatkowy kurs, zajęcia lub nawet studiować informatykę.<br/><br/> Oprócz
-    uczniów, dodatkowym "uczącym się" jest osoba prowadząca zajęcia, która po godzinie
-    zdobywa więcej pewności, że może uczyć informatyki, nawet jeśli nie ma specjalistycznego
-    wykształcenia w tym kierunku. Dziesiątki tysięcy nauczycieli postanawiają iść
-    o krok dalej, formalnie podnosząc swoje kwalifikacje w zakresie informatyki lub
-    oferując kursy online, lub jedno i drugie. To samo dotyczy osób zarządzających
-    szkołą, które uświadamiają sobie, że informatyka jest czymś, czego uczniowie chcą,
-    a nauczyciele są w stanie uczyć.<br/><br/>Ponadto, wszyscy uczestnicy mogą w ciągu
-    godziny przekonać się, że jesteśmy w stanie tego dokonać.
   hoc_faq_one_hour_a_markdown: |-
     Celem Godziny Kodowania nie jest wyszkolenie kogokolwiek na eksperta informatyki w ciągu godziny. Godzina wystarczy jednak, by dowiedzieć się, że informatyka jest przyjemna i kreatywna, dostępna w każdym wieku, dla wszystkich uczniów, niezależnie od przygotowania. Miarą sukcesu tej inicjatywy nie jest ilość przyswojonej przez uczniów wiedzy z dziedziny informatyki - sukces jest odzwierciedlony szerokim uczestnictwem reprezentantów różnych płci oraz grup etnicznych i społeczno-ekonomicznych, a w rezultacie wzrostem zainteresowania informatyką na różnych etapach edukacji. Miliony uczestniczących nauczycieli i uczniów postanowiły przekroczyć jedną godzinę - aby uczyć się przez cały dzień lub cały tydzień albo nawet dłużej, a wielu uczniów w wyniku tego postanowiło zapisać się na cały kurs (lub nawet obrać informatykę jako główny kierunek studiów).
 
@@ -2630,47 +2672,37 @@ pl:
 
     Przede wszystkim, wszyscy uczestnicy mogą w ciągu godziny przekonać się, że jesteśmy w stanie tego dokonać.
   hoc_faq_more_questions_q: Masz więcej pytań?
-  hoc_faq_more_questions_a: Spróbuj znaleźć odpowiedź na naszym <a href='http://support.code.org'>forum
-    wsparcia</a>.
   hoc_faq_more_questions_a_markdown: Spróbuj znaleźć odpowiedź na naszym [forum wsparcia]
     (http://support.code.org).
   hoc_faq_keep_learning_q: Jak kontynuować naukę po Godzinie Kodowania?
-  hoc_faq_keep_learning_a: Każdy może organizować Godzinę Kodowania w dowolnym czasie.
-    Samouczki działają przez cały rok. Możesz oczekiwać, że nasze samouczki i program
-    nauczania będą dostępne na naszej stronie przez cały czas. Przejdź proszę do <a
-    href='/promote'>our resources</a>, aby znaleźć przewodniki do wydarzeń oraz inne
-    materiały, które pomogą sprawić, że Twoja Godzina Kodowania będzie sukcesem.
   hoc_faq_keep_learning_a_markdown: Każdy może organizować Godzinę Kodowania w dowolnym
     czasie. Samouczki działają przez cały rok. Możesz oczekiwać, że nasze samouczki
     i program nauczania będą dostępne na naszej stronie przez cały czas. Przejdź proszę
     do [naszych zasobów] (%{promote}), aby znaleźć przewodniki jak to się robi oraz
     inne materiały, które pomogą sprawić, że Twoja Godzina Kodowania okaże się sukcesem.
   hoc_faq_certificates_q: Gdzie mogę wydrukować certyfikaty dla moich uczniów?
-  hoc_faq_certificates_a: Przejdź do naszej <a href='%{codeorg_url}/certificates'>strony
-    certyfikatów</a>, gdzie możesz wydrukować dyplomy dla całej swojej klasy w dowolnej
-    chwili, nawet z wyprzedzeniem. Możesz także wydrukować <a href='%{codeorg_url}/certificates?course=mc'>specjalne
-    certyfikaty</a> dla uczniów korzystających z samouczka Minecraft.
-  hoc_faq_certificates_a_markdown: Przejdź do naszej [strony certyfikatów](%{codeorg_url}/certificates),
-    gdzie możesz wydrukować dyplomy dla całej swojej klasy w dowolnej chwili, nawet
-    z wyprzedzeniem. Możesz także wydrukować [specjalne certyfikaty](%{codeorg_url}/certificates?course=mc)
-    dla uczniów korzystających z samouczka Minecraft.
+  hoc_faq_certificates_answer_markdown: Przejdź do naszej strony [certyfikatów] (%{certificates_url}),
+    gdzie możesz wydrukować certyfikaty dla całej klasy z wyprzedzeniem.
   hoc_faq_logo_q: Czy są ograniczenia związane z używaniem logo i nazwy Godziny Kodowania?
-  hoc_faq_logo_a: Godzina Kodowania jest znakiem towarowym. Nie chcemy ogarniczać
-    jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Prosimy
-    zapoznać się <a href='%{logo_url}'> z tymi wytycznymi korzystania</a>.
   hoc_faq_logo_a_markdown: Godzina Kodowania jest znakiem towarowym. Nie chcemy ogarniczać
     jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Prosimy
     zapoznać się z [tymi wytycznymi korzystania] (%{logo_url}).
+  hoc_faq_bug_q: Znalazłem błąd w aktywności Godziny Kodowania! Co powinienem zrobić?
+  hoc_faq_bug_a_markdown: |-
+    Och nie! Jeśli natknąłeś się na błąd w aktywności Godzina Kodowania - najpierw sprawdź adres URL aktywności, w której się zajmujesz. Jeśli adres URL zaczyna się od studio.code.org, nasz zespół wsparcia Code.org może pomóc! Kliknij ikonę znaku zapytania w prawym górnym rogu ekranu, a następnie wybierz „Zgłoś problem” z menu rozwijanego.
+
+    Jeśli adres URL nie zaczyna się od studio.code.org, prawdopodobnie pracujesz nad działalnością strony trzeciej i będziesz musiał skontaktować się z zespołem wsparcia tej firmy w celu uzyskania dalszej pomocy.
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
-  stats_i18n: Uczniowie uczą się w 40 językach
+  stats_i18n: Uczniowie przyswajają wiedzę w ponad 40 językach
   stats_tumblr: 'Tumblr: 3,5 roku'
   stats_facebook: 'Facebook: 3 lata'
   stats_twitter: 'Twitter: 2,5 roku'
   stats_pinterest: 'Pinterest: 2 lata'
   stats_instagram: 'Instagram: 14 miesięcy'
   stats_hoc: 'Godzina kodowania: 5 dni'
-  stats_global: Ponad 100 milionów uczniów próbowało Godzinę Kodowania
+  stats_global: Ponad 100 milionów uczniów wzięło już udział w wydarzeniu w ramach
+    Godziny Kodowania
   stats_girls_more: Więcej dziewczynek spróbowało swoich sił w informatyce niż przez
     ostatnie 70 lat
   stats_females: Kobiety w informatyce mają udział tylko 20% w kursach w szkołach
@@ -2713,7 +2745,7 @@ pl:
   resources_banner_howto_text: Instrukcje
   resources_banner_howto_button: Zasoby dla nauczycieli, rodziców i jednostek organizujących
     Godzinę Kodowania.
-  handouts_section: Przekaż te materiały informacyjne
+  handouts_section: Podziel się tymi materiałami informacyjnymi
   handouts_onepager: Propaguj informację za pomocą tej ulotki
   handouts_brochure: Przekaż tę broszurę nauczycielom i szkołom
   handouts_participationguide: Zaplanuj swoją Godzinę Kodowania za pomocą tego poradnika
@@ -2766,11 +2798,11 @@ pl:
   event: wydarzenie
   events: wydarzenia
   highlights_title: Najważniejsze wydarzenia
-  highlights_header: Atrakcje Godziny Kodowania
+  highlights_header: Najciekawsze wydarzenia Godziny Kodowania
   highlights_description: Niektóre z naszych ulubionych momentów z kampanii Godziny
     Kodowania.
   highlights_previous: Najważniejsze atrakcje poprzednich lat
-  highlights_see_more: Zobacz więcej atrakcji
+  highlights_see_more: Zobacz więcej najciekawszych wydarzeń
   highlights_readmore: Czytaj więcej
   highlights_watchvideo: Obejrzyj wideo
   highlights_facebook: Udostępnij na Facebooku
@@ -3342,8 +3374,8 @@ pl:
   tutorial_rgmath_name: RoboGarden STEAM - Matematyka
   tutorial_rgscience_name: RoboGarden STEAM - Nauki ścisłe
   tutorial_rgtech_name: RoboGarden STEAM - Technologia
-  tutorial_robotmagic3d_name: Animuj logo 3D
-  tutorial_robotmagicflappy_name: Ptak Flappy Bird 3D
+  tutorial_robotmagic3d_name: " Animowanie logo 3D"
+  tutorial_robotmagicflappy_name: Flappy Bird 3D
   tutorial_scratchadventure_name: Animuj grę przygodową
   tutorial_scratchtalk_name: Twórz animacje, które mówią
   tutorial_scratchjrstory_name: Możemy stworzyć historię razem!
@@ -11829,7 +11861,7 @@ pl:
   tutorial_ccfirewall_string_detail_programming_languages: Bloki
   tutorial_htmljs_string_detail_programming_languages: JavaScript
   tutorial_ttaqueducts_string_detail_programming_languages: JavaScript, CoffeeScript
-  tutorial_vtgame_string_detail_programming_languages: Polski
+  tutorial_vtgame_string_detail_programming_languages: Angielski
   tutorial_baroborav_string_detail_programming_languages: Bloki, C/C++
   tutorial_baroboobstacle_string_detail_programming_languages: Bloki, C/C++
   tutorial_pbstorytelling_string_detail_programming_languages: Twine (wariant Harlowe)
@@ -12310,49 +12342,49 @@ pl:
     hiszpański (Meksyk), turecki, wietnamski
   tutorial_raspispace_language: arabski, niderlandzki, angielski, francuski, grecki,
     hiszpański, polski, japoński
-  tutorial_codemonkeyjump_language: Polski
+  tutorial_codemonkeyjump_language: Angielski
   tutorial_poemart_language: bułgarski, korsykański, duński, holenderski, estoński,
     francuski, gruziński, niemiecki, węgierski, islandzki, indonezyjski, irlandzki,
     japoński, nepalski, norweski (Bokmål), norweski (Nynorsk), Inne, paszto, portugalski
     (Brazylia), portugalski (Portugalia), rumuński, serbski (cyrylica), hiszpański
     (Hiszpania), hiszpański (Meksyk), turecki, wietnamski
-  tutorial_kodablehero_language: Polski
+  tutorial_kodablehero_language: Angielski
   tutorial_cacloud_language: angielski, angielski (brytyjski)
-  tutorial_blocksmithbot_language: Polski
-  tutorial_hatchmario_language: Polski
-  tutorial_microsoftforest_language: Polski
-  tutorial_blackbirdscreen_language: Polski
-  tutorial_toxicodecompute2_language: Polski
+  tutorial_blocksmithbot_language: Angielski
+  tutorial_hatchmario_language: Angielski
+  tutorial_microsoftforest_language: Angielski
+  tutorial_blackbirdscreen_language: Angielski
+  tutorial_toxicodecompute2_language: Angielski
   tutorial_minecrafttimecraft_language: Bułgarski, Chiński (uproszczony), Chiński
     (tradycyjny), Czeski, Duński, Holenderski, Angielski, Fiński, Francuski, Grecki,
     Węgierski, Indonezyjski, Włoski, Japoński, Koreański, Norweski (Bokmål), Norweski
     (Nynorsk), Polski, Portugalski (Brazylia), Portugalski (Portugalia), Rosyjski,
     Słoweński, Hiszpański (Meksyk), Szwedzki, Turecki, Ukraiński
-  tutorial_blackbirdtether_language: Polski
+  tutorial_blackbirdtether_language: Angielski
   tutorial_ob_language: arabski, chiński (uproszczony), chiński (tradycyjny), czeski,
     duński, holenderski, angielski, francuski, grecki, hindi, indonezyjski, włoski,
     japoński, koreański, malajski, inne, portugalski (Brazylia), portugalski (Portugalia),
     rumuński, serbski (cyrylica), słoweński, hiszpański (Hiszpania), hiszpański (Meksyk),
     szwedzki, tamilski, tajski, turecki, ukraiński, urdu (Pakistan), wietnamski
-  tutorial_codeartportrait_language: Polski
+  tutorial_codeartportrait_language: Angielski
   tutorial_shelly_language: Angielski, Polski
-  tutorial_weavly_language: Polski
-  tutorial_codespeakpassword_language: Polski
+  tutorial_weavly_language: Angielski
+  tutorial_codespeakpassword_language: Angielski
   tutorial_codecombatozaria_language: Angielski, Angielski (Wielka Brytania), Hiszpański
     (Hiszpania), Hiszpański (Meksyk)
-  tutorial_kodableshapes_language: Polski
-  tutorial_nasabinary_language: Polski
-  tutorial_3dmaker_language: Polski
-  tutorial_itchstart_language: Polski
+  tutorial_kodableshapes_language: Angielski
+  tutorial_nasabinary_language: Angielski
+  tutorial_3dmaker_language: Angielski
+  tutorial_itchstart_language: Angielski
   tutorial_hopsub_language: Chiński (uproszczony), angielski, hiszpański (Hiszpania),
     hiszpański (Meksyk)
   tutorial_itchmundos_language: hiszpański (Meksyk)
   tutorial_itchtenacity_language: hiszpański (Meksyk)
   tutorial_kcjskiing_language: Angielski, Francuski
-  tutorial_groksecurity_language: Polski
+  tutorial_groksecurity_language: Angielski
   tutorial_creaticode_language: Chiński (uproszczony), Chiński (tradycyjny), Angielski
   tutorial_kcjhockey_language: Angielski, Francuski
-  tutorial_ttdungeon_language: Polski
+  tutorial_ttdungeon_language: Angielski
   tutorial_ccai_language: arabski, bułgarski, kataloński, chiński (uproszczony), chiński
     (tradycyjny), czeski, duński, holenderski, angielski, angielski (Wielka Brytania),
     fiński, francuski, galicyjski, niemiecki, grecki, hebrajski, węgierski, indonezyjski,
@@ -12361,64 +12393,64 @@ pl:
     rumuński, rosyjski, serbski (cyrylica), słoweński, hiszpański (Hiszpania), hiszpański
     ( Meksyk), szwedzki, tajski, turecki, ukraiński, wietnamski
   tutorial_bsdai_language: angielski, angielski (brytyjski)
-  tutorial_stemdata_language: Polski
-  tutorial_thunkableinfo_language: Polski
-  tutorial_educodespace_language: Polski
+  tutorial_stemdata_language: Angielski
+  tutorial_thunkableinfo_language: Angielski
+  tutorial_educodespace_language: Angielski
   tutorial_kcjtennis_language: Angielski, Francuski
-  tutorial_robotmagictower_language: Polski
-  tutorial_ttdragons_language: Polski
+  tutorial_robotmagictower_language: Angielski
+  tutorial_ttdragons_language: Angielski
   tutorial_kcjarchery_language: Angielski, Francuski
-  tutorial_ttsprouts_language: Polski
-  tutorial_ttmaze_language: Polski
+  tutorial_ttsprouts_language: Angielski
+  tutorial_ttmaze_language: Angielski
   tutorial_codetribe_language: angielski, angielski (brytyjski)
-  tutorial_ttcanyon_language: Polski
+  tutorial_ttcanyon_language: Angielski
   tutorial_kcjxtrail_language: Angielski, Francuski
-  tutorial_codespeakroad_language: Polski
-  tutorial_educodelair_language: Polski
+  tutorial_codespeakroad_language: Angielski
+  tutorial_educodelair_language: Angielski
   tutorial_ibmhourofz_language: angielski, angielski (brytyjski)
-  tutorial_gamefrootbacteria_language: Polski
-  tutorial_educodeforest_language: Polski
-  tutorial_educodehorus_language: Polski
-  tutorial_codespeakpokemon_language: Polski
-  tutorial_stemholiday_language: Polski
-  tutorial_codespeakpixel_language: Polski
-  tutorial_codespellsnexus_language: Polski
-  tutorial_carnegieslime_language: Polski
-  tutorial_ozotown_language: Polski
-  tutorial_milnedash_language: Polski
+  tutorial_gamefrootbacteria_language: Angielski
+  tutorial_educodeforest_language: Angielski
+  tutorial_educodehorus_language: Angielski
+  tutorial_codespeakpokemon_language: Angielski
+  tutorial_stemholiday_language: Angielski
+  tutorial_codespeakpixel_language: Angielski
+  tutorial_codespellsnexus_language: Angielski
+  tutorial_carnegieslime_language: Angielski
+  tutorial_ozotown_language: Angielski
+  tutorial_milnedash_language: Angielski
   tutorial_microbitpet_language: Angielski, Hiszpański (Meksyk), Francuski, Chorwacki,
     Koreański, Portugalski (Brazylia), Portugalski (Portugalia), Serbski, Chiński
     (uproszczony)
-  tutorial_spherotriad_language: Polski
-  tutorial_spheropassword_language: Polski
-  tutorial_codequilt_language: Polski
-  tutorial_ozoshape1_language: Polski
-  tutorial_ozoshape2_language: Polski
+  tutorial_spherotriad_language: Angielski
+  tutorial_spheropassword_language: Angielski
+  tutorial_codequilt_language: Angielski
+  tutorial_ozoshape1_language: Angielski
+  tutorial_ozoshape2_language: Angielski
   tutorial_hopescape_language: Chiński (uproszczony), angielski, hiszpański (Hiszpania),
     hiszpański (Meksyk)
-  tutorial_ozorace_language: Polski
-  tutorial_ozoequestrian_language: Polski
-  tutorial_irobotpizza_language: Polski
-  tutorial_ai4alldance_language: Polski
-  tutorial_ai4allneural_language: Polski
-  tutorial_spheroinout_language: Polski
-  tutorial_edisonblueprint_language: Polski
-  tutorial_edisonmaze_language: Polski
-  tutorial_milnefunctions_language: Polski
-  tutorial_sasmap_language: Polski
-  tutorial_firstrobotics_language: Polski
-  tutorial_sasdata_language: Polski
-  tutorial_carnegiesensabot_language: Polski
-  tutorial_robotical4_language: Polski
+  tutorial_ozorace_language: Angielski
+  tutorial_ozoequestrian_language: Angielski
+  tutorial_irobotpizza_language: Angielski
+  tutorial_ai4alldance_language: Angielski
+  tutorial_ai4allneural_language: Angielski
+  tutorial_spheroinout_language: Angielski
+  tutorial_edisonblueprint_language: Angielski
+  tutorial_edisonmaze_language: Angielski
+  tutorial_milnefunctions_language: Angielski
+  tutorial_sasmap_language: Angielski
+  tutorial_firstrobotics_language: Angielski
+  tutorial_sasdata_language: Angielski
+  tutorial_carnegiesensabot_language: Angielski
+  tutorial_robotical4_language: Angielski
   tutorial_kinderadd_language: angielski, angielski (brytyjski)
   tutorial_imagipython_language: Angielski, Szwedzki
-  tutorial_robotical2_language: Polski
-  tutorial_robotical3_language: Polski
-  tutorial_blockscadvirus_language: Polski
-  tutorial_robotical1_language: Polski
-  tutorial_irobotshapes_language: Polski
-  tutorial_irobotparts_language: Polski
-  tutorial_irobottools_language: Polski
+  tutorial_robotical2_language: Angielski
+  tutorial_robotical3_language: Angielski
+  tutorial_blockscadvirus_language: Angielski
+  tutorial_robotical1_language: Angielski
+  tutorial_irobotshapes_language: Angielski
+  tutorial_irobotparts_language: Angielski
+  tutorial_irobottools_language: Angielski
   tutorial_kindercar_language: angielski, angielski (brytyjski)
   tutorial_caavatar_language: angielski, angielski (brytyjski)
   tutorial_hello_string_detail_grades: Klasy 2+
@@ -13963,6 +13995,23 @@ pl:
     #HourOfCode i @codeorg, abyśmy mogli podkreślić również Twój sukces!'
   hoc_how_to_step_07_educators_desc_02: Możesz także wydrukować certyfikaty dla swoich
     uczniów, aby pochwalić się swoimi osiągnięciami!
+  hoc_ai_top_desc: Każdy może dowiedzieć się o sztucznej inteligencji, niezależnie
+    od tego, czy jesteś uczniem w klasie, czy nauczycielem, który odblokowuje przyszłe
+    nauczanie za pomocą sztucznej inteligencji i o niej.
+  hoc_ai_how_ai_works_video_series_desc: Ta seria krótkich filmów przedstawi Ci, jak
+    działa sztuczna inteligencja i dlaczego ma ona znaczenie. Następnie zagłęb się
+    w kwestie takie jak stronniczość algorytmiczna i etyka podejmowania decyzji przez
+    sztuczną inteligencję.
+  hoc_ai_learn_how_ai_works_desc: Zanurz się w świat sztucznej inteligencji dzięki
+    lekcjom „Jak działa sztuczna inteligencja” w połączeniu z naszą serią filmów przedstawiających,
+    jak działa sztuczna inteligencja i dlaczego ma ona znaczenie.
+  hoc_ai_101_for_educators_desc: Odkryj transformacyjny potencjał sztucznej inteligencji
+    (AI) w edukacji dzięki naszej bezpłatnej serii szkoleń online dla nauczycieli.
+  hoc_ai_impacts_desc: Zaangażuj swoją klasę lekcjami prowadzonymi przez nauczycieli,
+    które badają wpływ sztucznej inteligencji i zachęcają uczniów do zastanowienia
+    się nad rozwiązaniami niektórych problemów związanych z sztuczną inteligencją.
+  hoc_ai_activities_desc: Te zupełnie nowe aktywności Godziny Kodowania wprowadzają
+    użytkowników w świat sztucznej inteligencji w zabawny, angażujący sposób.
   team_page_full_team_alt_text: Prawie 100 pracowników Code.org w dopasowanych niebieskich
     i żółtych koszulkach pozuje w hotelowej sali konferencyjnej na letnie wydarzenie
     Codechella firmy 2022.
@@ -14281,7 +14330,7 @@ pl:
     Gry i Animacja'
   csa_ai_page_curriculum_accessibility_features: Szczegółowe informacje można znaleźć
     w sekcji FAQ
-  csa_ai_page_curriculum_languages_support: Polski
+  csa_ai_page_curriculum_languages_support: Angielski
   csa_ai_page_article_title_1: Buduj z Copilot
   csa_ai_page_article_description_1: Uczniowie uczą się, jak używać GitHub Copilot
     jako programisty par do wyjaśniania istniejącego kodu, znajdowania i naprawiania
@@ -14502,6 +14551,23 @@ pl:
   video_library_page_not_hacked_video_title_6: 'Jak nie dać się zhakować: wiadomości
     i pliki do pobrania'
   video_library_page_not_hacked_video_title_7: 'Jak się nie zhakować: Zainstaluj aktualizacje'
+  thank_you_page_main_title: Dziękujemy za pomoc w budowaniu ruchu
+  thank_you_page_description: Code.org Advocacy Coalition pragnie podziękować setkom
+    tysięcy lokalnych bohaterów i adwokatów, w tym nauczycielom, członkom społeczności,
+    naukowcom, organizacjom non-profit, uniwersytetom, korporacjom i instytucjom rządowym,
+    którzy poparli wizję, że każdy uczeń w każdej szkole zasługuje na możliwość nauki
+    informatyki. Dziękujemy za wsparcie dla tego ruchu.
+  thank_you_page_members_section_title: 'I do wszystkich członków Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Dziękujemy następującym osobom i
+    organizacjom za wkład w ten raport:'
+  thank_you_page_individual_organization_description: Opiekunowie edukacji informatycznej
+    w każdej państwowej agencji oświatowej, College Board, Della Cronin, Stuart Dexler,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Dziękujemy uczniom i nauczycielom cytowanym
+    w tym raporcie:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: O Nas
   about_us_page_hero_description: Code.org® jest organizacją non-profit zajmującą
     się innowacjami edukacyjnymi poświęconą wizji, że każdy uczeń w każdej szkole
@@ -14658,6 +14724,118 @@ pl:
     tę wizję.
   about_page_donors_link_1: Złóż darowizny
   about_page_donors_link_2: "[zobacz naszą listę darczyńców] (%{donors_url})"
+  teach_ai_title: Przykłady ze świata rzeczywistego. Zasoby praktyczne.
+  teach_ai_description: AI Guidance for Schools Toolkit to źródło informacji dla decydentów,
+    liderów szkół i pracowników w celu opracowania wstępnych wskazówek dotyczących
+    sztucznej inteligencji w ich szkołach.
+  teach_ai_button_label: Zobacz zestaw narzędzi
+  middle_high_page_main_title: Nauka dla osób w wieku 11 lat i starszych
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Wprowadzenie do Game Lab
+  middle_high_page_modules_card_title_2: Programowania żółwia w App Lab
+  middle_high_page_modules_card_title_3: Programowanie sterowane zdarzeniami w App
+    Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: Dowiedz się więcej
+  middle_high_page_additional_resources_title: Dodatkowe zasoby
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Odkryj naszą bibliotekę filmów
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: Przejrzyj bibliotekę filmów
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Informatyka w klasie
+  middle_high_page_cs_description: Kursy te powinny być prowadzone przez nauczyciela!
+    Jeśli chcesz, aby były nauczane w Twojej szkole, rozważ współpracę z nauczycielem,
+    aby zabrać ich do klasy.
+  middle_high_page_cs_card_title_1: Odkrycia informatyki
+  middle_high_page_cs_card_title_2: Zasady informatyki
+  middle_high_page_cs_card_title_3: AP Informatyka A
+  middle_high_page_cs_card_description_1: Bezpłatny roczny program nauczania, który
+    wprowadza uczniów w podstawowe koncepcje informatyki i zachęca ich do zbadania,
+    w jaki sposób informatyka i technologia mogą wpływać na świat.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Zapoznaj studentów z inżynierią oprogramowania
+    i projektowaniem obiektowym, ucząc się języka programowania Java w tym bezpłatnym
+    programie nauczania dla AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Poznaj Odkrycia informatyki
+  middle_high_page_cs_link_2: Poznaj zasady CS
+  middle_high_page_cs_link_3: Poznaj CSA
+  elemeentary_page_main_title: Nauka dla osób w wieku od 5 do 11 lat
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Kontynuuj naukę we własnym tempie
+  elementary_page_own_pace_description: Twórz rysunki, gry i nie tylko w tych dwóch
+    doskonałych opcjach dla uczniów, którzy rozpoczynają samodzielną naukę podstaw
+    informatyki.
+  elementary_page_own_pace_card_title_1: Kurs ekspresowy dla nieumiejących czytać
+  elementary_page_own_pace_card_title_2: Kurs ekspresowy
+  elementary_page_own_pace_card_description_1: Naucz się informatyki we własnym tempie!
+    Naucz się tworzyć programy komputerowe, rozwijać umiejętności rozwiązywania problemów
+    i radzić sobie z zabawnymi wyzwaniami! Twórz gry i kreatywne projekty, którymi
+    możesz dzielić się z przyjaciółmi, rodziną i nauczycielami.
+  elementary_page_own_pace_link_1: Rozpocznij kurs dla nieumiejących czytać
+  elementary_page_own_pace_link_2: Rozpocznij kurs ekspresowy
+  elementary_page_make_your_own_games_title: Twórz własne animacje i gry
+  elementary_page_make_your_own_games_card_title_1: Laboratorium Sprite
+  elementary_page_make_your_own_games_card_description_1: Czas na kreatywność! Użyj
+    kodowania opartego na blokach, aby stworzyć coś głupiego, słodkiego lub kosmicznego
+    w Sprite Lab. Jedynym ograniczeniem jest Twoja wyobraźnia!
+  elementary_page_make_your_own_games_link: Wypróbuj Sprite Lab
+  elementary_page_computer_science_title: Informatyka w klasie
+  elementary_page_computer_science_description: Kursy te powinny być prowadzone przez
+    nauczyciela! Jeśli chcesz, aby nauczali w Twojej szkole, poproś rodzica lub opiekuna
+    o współpracę z nauczycielem, aby zabrać ich do klasy.
+  elementary_page_computer_science_card_title_1: Podstawy informatyki
+  elementary_page_computer_science_card_title_2: Powiązania informatyki
+  elementary_page_computer_science_description_1: Bezpłatny roczny program nauczania,
+    który wprowadza uczniów w podstawowe koncepcje informatyki i zachęca ich do zbadania,
+    w jaki sposób informatyka i technologia mogą wpływać na świat.
+  elementary_page_computer_science_description_2: Nawiąż powiązania między informatyką
+    (CS) a innymi przedmiotami, takimi jak matematyka, sztuki językowe, nauki ścisłe
+    i nauki społeczne.
   language_code:
     ar: arabski
     az: azerbejdżański
@@ -14672,7 +14850,7 @@ pl:
     de: Niemiec
     dv: Dhivehi
     el: Grek
-    en: Polski
+    en: Angielski
     es: Hiszpan
     et: estoński
     eu: Basków
@@ -14704,40 +14882,40 @@ pl:
     lv: łotewski
     mi: Maorys
     mk: Macedończyk
-    mn: mongolski
+    mn: Mongolski
     mr: Marathi
-    ms: malajski
+    ms: Malajski
     mt: Maltański
-    my: Birmańczyk
-    ne: nepalski
+    my: Birmański
+    ne: Nepalski
     nl: Holenderski
     nn: Norweski (Nynorsk)
     false: Norweski (Bokmål)
     pl: Polskie
     ps: Paszto
     pt: portugalski
-    ro: rumuński
-    ru: rosyjski
+    ro: Rumuński
+    ru: Rosyjski
     se: Północni Samowie
     si: Syngaleski
-    sk: słowacki
-    sl: słoweński
-    sq: albański
-    sr: serbski
+    sk: Słowacki
+    sl: Słoweński
+    sq: Albański
+    sr: Serbski
     sv: Szwedzki
     sw: Kiswahili
     ta: Tamilski
-    te: telugu
+    te: Telugu
     tg: Tadżycki
     th: Tajski
     tl: Tagalski
-    tr: turecki
-    uk: ukraiński
+    tr: Turecki
+    uk: Ukraiński
     ur: Urdu
-    uz: Uzbek
-    vi: wietnamski
+    uz: Uzbecki
+    vi: Wietnamski
     zh: Chiński (uproszczony)
-    zu: Zulusów
+    zu: Zulu
   locale_code:
     ar-sa: arabski
     az-az: azerbejdżański
@@ -14752,8 +14930,8 @@ pl:
     dv-mv: Dhivehi
     el-gr: Grek
     en-gb: Angielski (Wielka Brytania)
-    en-us: Polski
-    es-es: hiszpański (Hiszpania)
+    en-us: Angielski
+    es-es: Hiszpański (Hiszpania)
     es-mx: hiszpański (Meksyk)
     et-ee: estoński
     eu-es: Basków
@@ -14785,12 +14963,12 @@ pl:
     lv-lv: łotewski
     mi-nz: Maorys
     mk-mk: Macedończyk
-    mn-mn: mongolski
+    mn-mn: Mongolski
     mr-in: Marathi
-    ms-my: malajski
+    ms-my: Malajski
     mt-mt: Maltański
-    my-mm: Birmańczyk
-    ne-np: nepalski
+    my-mm: Birmański
+    ne-np: Nepalski
     nl-nl: Holenderski
     nn-no: Norweski (Nynorsk)
     no-no: Norweski (Bokmål)
@@ -14798,27 +14976,27 @@ pl:
     ps-af: Paszto
     pt-br: Portugalski (Brazylia)
     pt-pt: Portugalski (Portugalia)
-    ro-ro: rumuński
-    ru-ru: rosyjski
+    ro-ro: Rumuński
+    ru-ru: Rosyjski
     se-fi: Północni Samowie
     si-lk: Syngaleski
-    sk-sk: słowacki
-    sl-si: słoweński
-    sq-al: albański
-    sr-sp: serbski
+    sk-sk: Słowacki
+    sl-si: Słoweński
+    sq-al: Albański
+    sr-sp: Serbski
     sv-se: Szwedzki
     ta-in: Tamilski
-    te-in: telugu
+    te-in: Telugu
     tg-tj: Tadżycki
     th-th: Tajski
-    tr-tr: turecki
-    uk-ua: ukraiński
+    tr-tr: Turecki
+    uk-ua: Ukraiński
     ur-in: Urdu (Indie)
     ur-pk: Urdu (Pakistan)
-    uz-uz: Uzbek
-    vi-vn: wietnamski
+    uz-uz: Uzbecki
+    vi-vn: Wietnamski
     zh-cn: Chiński (uproszczony)
     zh-hans: Chiński (uproszczony)
     zh-hant: Chiński (tradycyjny)
     zh-tw: Chiński (tradycyjny)
-    zu-za: Zulusów
+    zu-za: Zulu

@@ -46,6 +46,11 @@ bs:
             '"measures"': taktovi
             '"seconds"': sekunde
         text: nakon {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': taktovi
+            '"seconds"': sekunde
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -483,6 +488,41 @@ bs:
             '"electronic"': Elektronski
             '"iceCream"': Sladoled
             '"neon"': Neon
+            '"rave"': Crno-bijelo
+            '"tropical"': Tropsko
+            '"vintage"': Starinsko
+            '"warm"': Vruće
+        text: |-
+          podesi efekat pozadine
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Krugovi
+            '"color_cycle"': Boje
+            '"diamonds"': Dijamanti
+            '"disco"': Kvadrati
+            '"disco_ball"': Disko lopta
+            '"fireworks"': Vatromet
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Plesni podij laser
+            '"none"': Nijedno
+            '"rainbow"': Duge
+            '"rand"': "(Slučajna)"
+            '"snowflakes"': Snijeg
+            '"sparkles"': Svtlucanje
+            '"spiral"': Spirala
+            '"splatter"': Prosute boje
+            '"stars"': Zvijezde
+            '"swirl"': Nilski konj
+            '"text"': Imena pjesama
+          PALETTE:
+            '"cool"': Cool
+            '"default"': Svjetlo
+            '"electronic"': Elektronski
+            '"iceCream"': Sladoled
+            '"neon"': Neon
+            '"rainbow"': Duge
             '"rave"': Crno-bijelo
             '"tropical"': Tropsko
             '"vintage"': Starinsko

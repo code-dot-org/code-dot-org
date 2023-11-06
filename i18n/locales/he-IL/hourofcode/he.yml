@@ -5,39 +5,52 @@ he:
   language: עברית
   front_title: הצטרף לאירוע הלמידה הגדול בהסטוריה %{campaign_date}
   coming_soon: בקרוב
-  campaign_date_start_short: 5 בדצמבר
-  campaign_date_start_long: 5 בדצמבר
-  campaign_date_short: 5-11 בדצמבר
-  campaign_date_full: 5-11 בדצמבר
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 בדצמבר, 2022
-  nonus_campaign_date_start_short: אוקטובר 1
-  nonus_campaign_date_start_long: אוקטובר 1
-  nonus_campaign_date_short: באוקטובר - 18 בדצמבר
-  nonus_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  nonus_campaign_date_year: '2022'
+  new: חדש
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: התלמידים לומדים בלמעלה מ- 45 שפות
+  hoc_stat_hours_served: מעל 100 מיליון תלמידים ניסו שעה של קוד
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  campaign_date_start_short: 4 בדצמבר
+  campaign_date_start_long: 4 בדצמבר
+  campaign_date_short: 4-10 בדצמבר
+  campaign_date_full: 4-10 בדצמבר
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 דצמבר, 2023
+  nonus_campaign_date_start_short: ספטמבר 5
+  nonus_campaign_date_start_long: ספטמבר 5
+  nonus_campaign_date_short: 5 בספטמבר - 17 בדצמבר
+  nonus_campaign_date_full: 5 בספטמבר - 17 בדצמבר
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  latam_campaign_date_start_short: אוקטובר 1
-  latam_campaign_date_start_long: אוקטובר 1
-  latam_campaign_date_short: באוקטובר - 18 בדצמבר
-  latam_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_start_short: ספטמבר 5
+  latam_campaign_date_start_long: ספטמבר 5
+  latam_campaign_date_short: 5 בספטמבר - 17 בדצמבר
+  latam_campaign_date_full: 5 בספטמבר - 17 בדצמבר
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  europe_campaign_date_start_short: אוקטובר 1
-  europe_campaign_date_start_long: אוקטובר 1
-  europe_campaign_date_short: באוקטובר - 18 בדצמבר
-  europe_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_start_short: ספטמבר 5
+  europe_campaign_date_start_long: ספטמבר 5
+  europe_campaign_date_short: 5 בספטמבר - 17 בדצמבר
+  europe_campaign_date_full: 5 בספטמבר - 17 בדצמבר
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  africa_campaign_date_start_short: אוקטובר 1
-  africa_campaign_date_start_long: אוקטובר 1
-  africa_campaign_date_short: באוקטובר - 18 בדצמבר
-  africa_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_start_short: ספטמבר 5
+  africa_campaign_date_start_long: ספטמבר 5
+  africa_campaign_date_short: 5 בספטמבר - 17 בדצמבר
+  africa_campaign_date_full: 5 בספטמבר - 17 בדצמבר
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   hoc2023_header: יצירתיות עם AI
+  hoc2023_hero_desc_homepage: הצטרפו למיליונים ברחבי העולם בארגון שעה של קידוד, עם
+    או בלי AI וללמוד כיצד AI עובד. כל אחד, בכל מקום יכול לעשות את זה. אין צורך בניסיון.
+  hoc2023_hero_desc_learn_page: השנה, אנו לוקחים את שעת הקוד לגבהים חדשים על ידי הצעת
+    הזדמנויות קידוד הכוללות רכיבים של בינה מלאכותית (AI) וגם רכיבים שאינם בינה מלאכותית.
   hoc2023_social_creativity_with_ai_title: שעת קוד - מה תיצור?
   hoc2023_social_creativity_with_ai_desc: השתמש במדעי המחשב כדי לחקור וללמוד על AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: גלו, שחקו, צרו!
   social_hoc2022_explore_play_create: השתמשו במדעי המחשב כדי לגלות, לשחק וליצור!
   codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, עשו מהלך - יש כל כך הרבה
@@ -49,6 +62,9 @@ he:
     מוזיקה מ"אנקאנטו" של דיסני, ועוד!
   social_hoc2023_dance: בהשתתפות ביונסה, BTS, הארי סטיילס, ליזו, ליל נאס X, סלינה
     גומז, מוזיקה מ"אנקנטו "של דיסני ועוד!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: למדו היום, צרו מחר מזהיר.
@@ -158,6 +174,7 @@ he:
   social_blockchain_desc: סרטונים ושיעורים הבוחנים מהו בלוקצ'יין ומדוע הוא חשוב.
   social_ai_title: למד על בינה מלאכותית (AI) | Code.org
   social_ai_desc: כלים שיעזרו לתלמידים ולמורים להכניס AI לכיתה.
+  social_videos_desc: סרטוני מדעי המחשב מרתקים ללומדים בכל הגילאים.
   pl_superhero_title: עזרו לתלמידים להפוך לגיבורי על!
   pl_superhero_desc: הצטרף לתכנית הלמידה המקצועית התומכת ביותר שלנו למחנכים בחטיבות
     הביניים והתיכון.
@@ -187,6 +204,15 @@ he:
   device_laptop: מחשב נייד
   device_desktop_computer: מחשב שולחני
   device_mobile_device: מכשיר נייד
+  for_everyone: עבור כולם
+  for_students_teacher_led_learning: 'לתלמידים: למידה בהנחיית מורים'
+  for_students_teacher_led_lessons: 'לתלמידים: שיעורים בהנחיית מורים'
+  professional_development: פיתוח מקצועי
+  how_ai_works_video_series: איך AI עובד סדרת וידאו
+  learn_how_ai_works: למד כיצד AI עובד
+  ai_101_for_educators: בינה מלאכותית 101 למחנכים
+  learn_about_ai_impacts: למד על ההשפעות של AI
+  hoc_ai_activities: פעילויות AI של שעת קוד
   subscribe_to_emails_heading: הירשם למיילים
   subscribe_to_emails_desc: קרא על מה שקורה ב- Code.org ובחינוך למדעי המחשב באמצעות
     עדכונים רבעוניים באמצעות רשימת התפוצה שלנו.
@@ -240,21 +266,32 @@ he:
     אחרים.
   required_materials: 'חומרים נדרשים:'
   optional_materials: 'חומרים אופציונליים:'
+  for_students: For students
+  for_educators: למורים
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: ערכו אירוע
   call_to_action_register_event: רשום את האירוע שלך
+  call_to_action_register_your_hoc: רשום את שעת הקוד שלך
   call_to_action_select_activity: בחר פעילות
   call_to_action_start_activity: התחל פעילות
   call_to_action_get_certificates: קבל אישורים
   call_to_action_go_beyond_hoc: מעבר לשעת הקוד
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: הצג משאבי פרומו
   call_to_action_learn_more: למד עוד
   call_to_action_watch_now: צפו עכשיו
   call_to_action_try_activity: נסה פעילות
   call_to_action_try_activities: נסה פעילויות
+  call_to_action_try_hoc_ai_activities: נסה פעילויות AI של שעת הקוד
   call_to_action_explore_activities: חקור פעילויות
   call_to_action_explore_ai: חקור את AI
   call_to_action_explore_unit: חקור את היחידה
   call_to_action_explore_curriculum: חקור את תוכנית הלימודים
+  call_to_action_explore_curricula: חקור תוכניות לימודים
   call_to_action_explore_curriculum_options: חקור אפשרויות תכנית לימודים
   call_to_action_explore_lessons: חקור שיעורים
   call_to_action_explore_modules: חקור מודולים
@@ -337,6 +374,11 @@ he:
   call_to_action_learn_about_advocacy: למד על הסנגור שלנו
   call_to_action_visit_store: בקר בחנות
   call_to_action_view_faqs: הצג שאלות נפוצות נוספות
+  call_to_action_applications_open: בקשות פתוחות כעת
+  call_to_action_apply_cs_ambassador: הגש בקשה להיות שגריר מדעי המחשב
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: צפה במדריך הדרכה למחנכים
   aria_label_call_to_action_hoc_how_to_companies: צפה במדריך הדרכה לחברות
   aria_label_call_to_action_hoc_how_to_districts: צפה במדריך הדרכה למחוזות
@@ -346,6 +388,9 @@ he:
   aria_label_call_to_action_hoc_how_to_public_officials: צפה במדריך הדרכה לפקידי ציבור
   aria_label_call_to_action_hoc_how_to_volunteers: צפה במדריך הדרכה למתנדבים
   aria_label_call_to_action_hoc_how_to_virtual_events: צפה במדריך הדרכה לאירועים וירטואליים
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -451,11 +496,25 @@ he:
   curriculum_name_creating_apps_with_devices: יצירת אפליקציות עם מכשירים
   curriculum_name_poetry: קידוד עם שירה
   curriculum_name_dance_party: מסיבת ריקודים
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: פתרון בעיות ומחשוב
   curriculum_name_web_development: פיתוח אתרים
   curriculum_name_interactive_animations_games: אנימציות ומשחקים אינטראקטיביים
   curriculum_name_design_process: תהליך העיצוב
   curriculum_name_data_society: נתונים וחברה
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: סט חינם של תוכניות לימוד יסודיות המציג לתלמידים את המושגים
     הבסיסיים של מדעי המחשב.
   curriculum_desc_csf_express: למד ליצור תוכנות מחשב, לפתח מיומנויות לפתרון בעיות
@@ -561,12 +620,16 @@ he:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: גן ילדים
   module_grade_grade_01: כיתה א
@@ -574,6 +637,12 @@ he:
   module_grade_grade_03: כיתה ג '
   module_grade_grade_04: כיתה ד
   module_grade_grade_05: כיתה ה '
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: מורים K-5
   module_grade_6_10_teachers: 6-10 מורים
   module_grade_9_12_teachers: 9-12 מורים
@@ -661,6 +730,53 @@ he:
   heading_explore_curriculum_catalog: חקור את כל הקורסים שלנו בקטלוג תכניות הלימודים
   heading_csa_ai: מחפש דברים לעשות לאחר בחינת AP®?
   heading_bring_cs_to_students: הביאו את מדעי המחשב לסטודנטים
+  heading_cs_ambassador_program: תכנית שגריר למדעי המחשב
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: אם אתה תלמיד תיכון נלהב לעודד נשים צעירות יותר ללמוד מדעי
+    המחשב בבית הספר שלך, אז אנחנו צריכים אותך!
+  cs_ambassador_desc: כל תחום, כולל רפואה, בידור, ספורט, חינוך, עסקים, אופנה ויזמות
+    נוגעים במדעי המחשב. עם זאת, רק 5% מהנשים הצעירות בגילאי התיכון לומדות שיעורי מדעי
+    המחשב. שגרירים יכולים לעזור לסגור את הפער המגדרי הזה על ידי עידוד בני גילם לקחת
+    שיעור מדעי המחשב.
+  cs_ambassador_application_date: הבקשות פתוחות עד 8 בנובמבר 2023
+  cs_ambassador_application_subhead: עבוד עם מורה כדי להגיש את בקשתך עוד היום
+  cs_ambassador_application_questions: שאלות? אנא צרו קשר עם [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: מה עושים שגרירי CS?
+  cs_ambassador_do_desc: שגרירי הפקולטה למדעי המחשב מעודדים נשים צעירות לחקור את הנושא,
+    ולהרם זו את זו כשהן מחזירות את מקומן במדעי המחשב. שגרירי מדעי המחשב מתחברים לעמיתיהם
+    כדי לחלוק את ההתרגשות והאהבה שלהם למדעי המחשב. הם מבקרים בכיתות, מארחים שולחנות
+    בארוחת הצהריים ומדברים באסיפות ובישיבות מועדונים. שגרירי מדעי המחשב עובדים עם
+    מורים ומנהלי בתי ספר לפירוק סטריאוטיפים המעכבים נשים צעירות.
+  cs_ambassador_steps_heading: מה אני צריך כדי להיות שגריר מדעי המחשב?
+  cs_ambassador_steps_list_title_01: תשוקה
+  cs_ambassador_steps_list_title_02: ניסיון בקורס מדעי המחשב
+  cs_ambassador_steps_list_title_03: בית ספר המציע CS
+  cs_ambassador_steps_list_desc_01: תשוקה לעודד נשים צעירות בבית הספר שלך לקחת שיעורי
+    מדעי המחשב
+  cs_ambassador_steps_list_desc_02: 'השתתפו בשיעור מדעי המחשב בן שנה בשנת הלימודים
+    2022-23 או קודם לכן (מומלץ: עקרונות CS או AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'למד בבית ספר תיכון המציע באופן קבוע קורס מדעי
+    המחשב בן שנה (מומלץ: עקרונות CS או AP® CSA)'
+  cs_ambassador_benefits_heading: הטבות התוכנית
+  cs_ambassador_benefits_list_title_01: הקהילה הלאומית
+  cs_ambassador_benefits_list_title_02: שירות קהילתי
+  cs_ambassador_benefits_list_title_03: הכרה
+  cs_ambassador_benefits_list_title_04: סוואג
+  cs_ambassador_benefits_list_title_05: תעודה
+  cs_ambassador_benefits_list_title_06: חוויות
+  cs_ambassador_benefits_list_desc_01: גישה לקהילה לאומית של מנהיגים צעירים המחויבים
+    לסגור את הפער המגדרי במדעי המחשב.
+  cs_ambassador_benefits_list_desc_02: שעות שירות קהילתי וההזדמנות לזכות ב [פרס שירות
+    ההתנדבות לנשיאות ארה"ב] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: הכרה כשגריר 2023-2024 וזכאי לכבוד בהיכל התהילה
+    של השגריר של Code.org.
+  cs_ambassador_benefits_list_desc_04: תזהה כשגריר CS באמצעות הלבשה מיוחדת ממותגת
+    Code.org, מדבקות ועוד!
+  cs_ambassador_benefits_list_desc_05: תעודת השתתפות רשמית מ- Code.org.
+  cs_ambassador_benefits_list_desc_06: צבר חוויות וסיפורים לחלוק בבקשת המכללה שלך,
+    קורות החיים ועוד!
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -707,6 +823,13 @@ he:
     מדעי המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים הנשלחים ישירות לתיבת
     הדואר הנכנס שלך.
   subscribe_form_section_unsubscribe: אתה יכול לבטל את המנוי בכל עת.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: איך עובד בלוקצ'יין
   blockchain_hero_desc: לצלול לתוך העולם של blockchain עם "איך Blockchain עובד", סדרת
     הווידאו החדשה שלנו ושיעורים נלווים!
@@ -799,6 +922,11 @@ he:
   ai_curriculum_btn_aria_label_04: גלה כיצד AI עובד שיעורים
   ai_curriculum_grades_05: 'רמות כיתה: 9-12'
   ai_curriculum_btn_aria_label_05: חקור את מודול הנדסת תוכנה וראיית מחשב
+  ai_curriculum_title_06: השפעה חברתית של AI גנרטיבי
+  ai_curriculum_desc_06: חקור את ההשפעה של AI גנרטיבי מנקודות מבט שונות, ולאחר מכן
+    שתף פעולה כצוות כדי להמציא הנחיות העונות על הצרכים הרבים ביותר של כל המשתתפים.
+  ai_curriculum_btn_aria_label_06: צפה בהשפעה החברתית של מערך שיעורים בינה מלאכותית
+    גנרטיבית
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -1681,6 +1809,8 @@ he:
   help_page_speak_for_cs_desc: למידע נוסף על עבודת הסנגור של Code.org ברחבי ארה"ב
     ועל עשר המדיניות שאנו ממליצים למדינות לאמץ כדי להפוך את מדעי המחשב לבסיס לכל התלמידים.
     בנוסף, גלה כיצד תוכל להניע שינוי במצבך.
+  yw_page_top_heading: נשים צעירות במדעי המחשב
+  yw_page_top_desc: הפוך לשגריר למדעי המחשב ולהיות חלק מסגירת הפער המגדרי במדעי המחשב.
   hoc_live: שעה של קוד בשידור חי
   hoc_live_sign_up_title: הירשם לשעה של קוד בשידור חי
   hoc_live_learn_title: למד עם שעה של קוד בשידור חי
@@ -2027,10 +2157,15 @@ he:
   hoc_homepage_what_is_hoc_description: תוכנית Hour of Code היא מבוא של שעה אחת למדעי
     המחשב, המשתמשת בערכות לימוד מהנות כדי להראות שכל אחד יכול ללמוד את הבסיס. בקמפיין
     קהילתי זה תומכים יותר מ-400 שותפים ו-200,000 מחנכים ברחבי העולם.
+  hoc_homepage_registration_desc: הכיתה או הקבוצה שלך יכולים להצטרף למיליונים ברחבי
+    העולם לעשות את שעת הקוד! ההרשמה לחגיגת שבוע החינוך למדעי המחשב השנתי מתחילה באוקטובר.
+    עם זאת, שעת הקוד זמינה כל השנה.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "\\[קראו את המדריך](%\\{howto_guide_url}%)
     כדי לתכנן אירוע לכיתתכם."
   hoc_homepage_highlights_heading: עיקרי הדברים של Hour of Code
   hoc_homepage_organized_by: Hour of Code מאורגנת ע"י \[Code.org](%\{codeorg_url}).
+  hoc_events_heading: הירשם לארח שעת קוד
+  hoc_events_jump_to_map: קפוץ למפת שעת הקוד
   signup_closed: ההרשמה לשעת הקוד סגורה כעת. אנא בדוק שוב באוקטובר כדי להירשם לשעת
     הקוד הבאה.
   signup_registration_not_required: אתה לא צריך להירשם כדי להשתתף! פעילויות שעת הקוד
@@ -2129,6 +2264,7 @@ he:
   map_title: מפת "שעה של קוד"
   map_header: "# אירועים של Hour of Code ברחבי העולם"
   map_header_count_year: "%{event_count} אירועים רשומים ב %{year}"
+  map_header_count_year_so_far: "%{event_count} אירועים שנרשמו עד כה ב %{year}"
   see_all_events: לרשימת כל האירועים
   map_header_company: "# לפי החברה המארגנת"
   map_header_country: "# ב %{country}"
@@ -2141,6 +2277,7 @@ he:
   map_warning: המפה של "שעה של קוד" מציגה את 200,000 האירועים הרשומים הראשונים בלבד.
     כל האירועים הרשומים עם כתובת תקפה ניתנים לצפייה ב<a href='%{events_url}'>דף האירועים</a>
   map_warning_markdown: רשימה מלאה של האירועים ניתן לראות ב [דף אירועים.] (%{events_url})
+  map_view_all_events: ראה רשימה מלאה של אירועי שעת הקוד [here](%{events_url}).
   meta_tag_og_title: Hour of Code מגיע
   meta_tag_og_description: Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים
     ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.
@@ -2160,9 +2297,6 @@ he:
     על התמיכה ב- @codeorg)'
   hoc_faq_title: שאלות נפוצות
   hoc_faq_what_is_hoc_q: מהו Hour of Code?
-  hoc_faq_what_is_hoc_a: '"שעה של הקוד" היא שעה אחת של מבוא למדעי המחשב, שנועדו להסביר
-    מה זה קוד ולהראות כי כל אחד יכול ללמוד את היסודות של מדעי המחשב. <a href=''http://code.org/learn''>
-    בדוק את הלימוד</a>.'
   hoc_faq_what_is_hoc_a_markdown: שעת הקוד החלה כמבוא בן שעה למדעי המחשב, שנועד לבטל
     את המיסטיציה של "קוד", להראות שכל אחד יכול ללמוד את היסודות ולהרחיב את ההשתתפות
     בתחום מדעי המחשב. מאז הפך למאמץ עולמי לחגוג את מדעי המחשב, החל בפעילויות קידוד
@@ -2171,40 +2305,21 @@ he:
     חינוך ברחבי העולם.
   hoc_faq_last_year: נסה את חומר הלימוד
   hoc_faq_when_is_hoc_q: מתי הHour of Code?
-  hoc_faq_when_is_hoc_a: שעת הקוד מתקיימת מדי שנה במהלך <a href='%{csedweek_url}'>שבוע
-    החינוך למדעי המחשב</a>. שבוע החינוך למדעי המחשב %{campaign_date_year} יהיה %{campaign_date_full},
-    אך תוכלו לארח שעה של קוד כל השנה. שבוע החינוך למדעי המחשב מתקיים מדי שנה כהוקרה
-    ליום הולדתו של חלוץ המחשוב <a href='%{grace_hopper}'>אדמירל גרייס מוריי הופר</a>
-    (9 בדצמבר 1906).
   hoc_faq_when_is_hoc_a_markdown: Hour of Code מתקיים מדי שנה במהלך [שבוע לימוד מדעי
     המחשב]%{csedweek_url}. שבוע לימוד מדעי המחשב %{campaign_date_year} ייערך בתאריך
     %{campaign_date_full}, אולם באפשרותכם לקיים Hour of Code כל ימות השנה. שבוע לימוד
     מדעי המחשב נערך מדי שנה כמעין מחוות הוקרה בתאריך הולדתה של חלוצת המחשוב [אדמירל
     גרייס מוריי הופר](%{grace_hopper}) (ה-9 בדצמבר, 1906).
   hoc_faq_why_cs_q: De ce tehnologia computerelor?
-  hoc_faq_why_cs_a: "<i>כל</i> תלמיד צריך את ההזדמנות ללמוד מדעי המחשב.  זה מסייעת
-    לטפח מיומנויות לפתרון בעיות, לוגיקה ויצירתיות. על ידי התחלה מוקדמת, לתלמידים יהיה
-    בסיס להצלחה בכל נתיב הקריירה המאה ה-21. ראה סטטיסטיקה ב- <a href='http://code.org'>
-    Code.org</a>."
   hoc_faq_why_cs_a_markdown: לכל תלמיד מגיעה ההזדמנות ללמוד מדעי המחשב. תחום זה תורם
     לפיתוח מיומנויות של פתרון בעיות, לוגיקה ויצירתיות. התחלה בגיל צעיר תסלול לתלמידים
     את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here](%{stats_url}).
   hoc_faq_how_participate_q: כיצד ניתן להשתתף ב-לHour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>התחל לתכנן כאן</a> על ידי עיון במדריך
-    ההדרכה שלנו. אתה יכול לארגן אירוע Hour of Code בבית הספר שלך או בקהילה שלך &mdash;
-    כמו במועדון חוץ-לימודי, ללא מטרות רווח או בעבודה. או, פשוט לנסות את זה בעצמך כאשר
-    %{campaign_date} מגיע."
   hoc_faq_how_participate_a_markdown: "[התחילו לתכנן כאן](%{howto}) על ידי עיון במדריך
     שלנו. ניתן לארגן אירוע של שעת הקוד בבית הספר שלכם או בקהילתכם - למשל במוסד של
     חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם בבוא
     המועד %{campaign_date}."
   hoc_faq_behind_hoc_q: מי עומד מאחורי Hour of Code?
-  hoc_faq_behind_hoc_a: שעה של הקוד מאורגן על ידי <a href='http://code.org'> Code.org</a>,
-    a חברה הציבורית 501C3 ללא כוונת רווח מוקדשת להרחבת השתתפות במדעי המחשב על-ידי
-    זמינותה בכמה שיותר בבתי ספר, הגדלת השתתפות על-ידי נשים וסטודנטים בעלי צבע עור
-    שונה שאינם מיוצגים כראוי . <a href='http://code.org/about/partners'> קואליציה
-    חסרת תקדים של שותפים</a> באים יחד כדי לתמוך ב-Hour of Code,  בתוחם &mdash; לרבות
-    Microsoft, אפל, אמזון, בנים, בנות מועדונים של אמריקה, הנהלת המכללה.
   hoc_faq_behind_hoc_a_markdown: 'אירוע Hour of Code מנוהל על ידי [ועדת הייעוץ והביקורת]
     של שבוע לימודי "Hour of Code" ומדעי המחשב(%{partner_url}) ועל ידי התאגדות חסרת
     תקדים של שותפים שחברו זה לזה במטרה לתמוך ב-Hour of Code - ובכללם מייקרוסופט, אפל,
@@ -2212,22 +2327,12 @@ he:
 
     '
   hoc_faq_host_q: אני לא יודע דבר אודות כתיבת קוד. . אני עדיין יכול לארח אירוע?
-  hoc_faq_host_a: כמובן. פעילויות שעה של קוד הן בהדרכה עצמית. כל שעליכם לעשות הוא
-    <a href='%{codeorg_url}/learn'>לנסות את ההדרכות הנוכחיות שלנו</a>, לבחור את ההדרכה
-    הרצויה ולבחור שעה &mdash; אנו דואגים לכל השאר. יש לנו גם אפשרויות לכל גיל ורמת
-    ניסיון, החל מהגן ומעלה. התחל לתכנן את האירוע שלך על ידי קריאת <a href='/how-to'>המדריך
-    שלנו</a>.
   hoc_faq_host_a_markdown: כמובן, הפעילויות של Hour of Code מושתתות על הרעיון של הדרכה
     עצמית. כל מה שעליכם לעשות הוא [לנסות את עזרי הלמידה הנוכחיים שלנו](%{codeorg_url}/learn),
     לבחור את השיעור שאתם רוצים ללמוד, לבחור שעה - ואנו נדאג כבר לכל היתר. אנו מציעים
     אפשרויות המתאימות לכל גיל ולכל רמה, לילדים מגילאי גן ילדים ומעלה. התחילו לתכנן
     את האירוע שלכם על ידי קריאת [המדריך](%{howto}) שלנו.
   hoc_faq_devices_q: באילו מכשירים עלי להשתמש עבור התלמידים שלי?
-  hoc_faq_devices_a: הדרכות Code.org פועלות בכל המכשירים והדפדפנים. תוכל לראות מידע
-    נוסף על צרכי הטכנולוגיה של Code.org <a href='%{codeorg_url}/educate/it'>כאן</a>.
-    ניתן למצוא צרכים טכניים עבור הדרכות שאינן Code.org <a href='%{codeorg_url}/learn'>%{partner_url}ב-/learn
-    בתיאור</a> הספציפי של ההדרכה. אל תשכח שאנו מציעים גם פעילויות <a href='%{unplugged_url}'>מנותקות</a>
-    אם בית הספר שלך לא יכול להכיל את ההדרכות!
   hoc_faq_devices_a_markdown: השיעורים באתר Code.or פועלים בכל המכשירים ובכל הדפדפנים.
     ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]
     (%{codeorg_url}/educate/it). צרכים טכנולוגיים של השיעורים שלא במסגרת אתר Code.org
@@ -2235,15 +2340,6 @@ he:
     אל תשכחו גם להציע [פעילויות ללא מחשב] (%{unplugged_url}) אם בית הספר שלכם אינו
     יכול לרכוש את הלומדה!
   hoc_faq_need_computers_q: האם יש צורך מחשבים עבור כל משתתף?
-  hoc_faq_need_computers_a: לא.  יש לנו הדרכות של Hour of Code העובדות על מחשבים אישיים,
-    טלפונים חכמים, טבליות, וכמה הדורשים אין מחשב בכלל! באפשרותך להצטרף בכל מקום שאתה
-    נמצא, עם כל מה שיש לך. <p><i>להלן כמה אפשרויות:</i> <br><ul><li><b>עובדים בזוגות.</b>
-    מחקרים מראים שתלמידים לומדים בצורה הטובה ביותר ב <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>
-    תכנות זוגית</a>, חולקים מחשב ועבודים במשותף. לעודד את התלמידים שלך לחלוק חדר.
-    <li><b>להשתמש המסך מוקרן.</b> אם יש לך מקרן ומסך עבור מחשב המחובר לאינטרנט, הקבוצה
-    כולה שלך יכול לעשות שעה קוד ביחד. לצפות וידאו חלקים יחד וכל אחד בתורו לפתור חידות
-    או לענות על שאלות. <li><b>ללכת מנותק.</b> אנו מציעים הדרכות שאינן הדורשות אין
-    מחשב. </ul>
   hoc_faq_need_computers_a_markdown: |-
     לא. חלק מהשיעורים של Hour of Code מצריכים מחשבים אישיים, סמארטפונים וטאבלטים, ואילו אחרים אינם מצריכים בכלל מחשב! תוכלו להצטרף אלינו בכל מקום, ללא קשר לציוד שיש ברשותכם.
 
@@ -2253,30 +2349,19 @@ he:
     -**שימוש במסך מוקרן.** אם יש לכם מקרן ומחשב מחובר לרשת מחשבים, ניתן לשתף את כל חברי הקבוצה ב-Hour of Code. צפו בקטעי וידאו ביחד ופתרו משחקי פאזל או ענו על שאלות כל אחד לפי התור.
     -**שיעורים ללא מחשב.** אנו מציעים [עזרי למידה שאינם מצריכים מחשב](%{unplugged_url}) בכלל.
   hoc_faq_international_q: אני ב<country>. כיצד ניתן להשתתף באירועה בינלאומי?
-  hoc_faq_international_a: כל אחד יכול לארגן אירוע של שעת קוד, בכל מקום בעולם. בשנה
-    שעברה הצטרפו סטודנטים ברחבי העולם לשעת הקוד. גלה עוד <a href='/promote'>כאן</a>.
   hoc_faq_international_a_markdown: כל אחד יכול לארגן אירוע של שעת קוד, בכל מקום בעולם.
     בשנה שעברה הצטרפו סטודנטים ברחבי העולם לשעת הקוד. גלה עוד [here](%{promote}).
   hoc_faq_tutorial_q: איך אני יכול להכין חומרי הדרכה של Hour of Code?
-  hoc_faq_tutorial_a: אם אתה מעוניין להיות שותף להכנת חומרי לימוד, <a href='target-tutorial-guidelines'>
-    ראה הנחיות והוראות שלנו</a>. נשמח לארח מגוון אפשרויות , אבל המטרה העיקרית היא
-    למטב את חוויית עבור תלמידים ומורים שונים במדעי המחשב.
   hoc_faq_tutorial_a_markdown: אם ברצונכם ללמד באמצעות הלומדה, [ראו קווים מנחים והנחיות
     שלנו](%{tutorial_guidelines}). נשמח להציג מגוון רחב של אפשרויות מרתקות, אולם המטרה
     העיקרית היא למטב את החוויה של תלמידים ומורים העושים את צעדיהם הראשונים בתחום מדעי
     המחשב.
   hoc_faq_account_q: האם סטודנטים צריכים להיכנס למערכת באמצעות חשבון אישי?
-  hoc_faq_account_a: לא. הכניסה לצורך הכרות עם "שעה של קוד" ללא הרשמה . רוב <a href='http://code.org/learn/beyond'>
-    הקורסים המשכית</a> מחייבים יצירת חשבון כדי להציל את התקדמות התלמיד.
   hoc_faq_account_a_markdown: לא. כדי להתנסות בשעת הקוד אין צורך כלל בהרשמה או בהתחברות.
     מרבית [שיעורי ההמשך] (%{codeorg_url}/learn/beyond) מצריכים יצירת חשבון כדי לשמור
     על התקדמות התלמיד. בנוסף, הרשמה לשעת הקוד אינה יוצרת אוטומטית חשבון Code Studio.
     אם ברצונכם ליצור חשבונות לתלמידים שלכם, אנא עקבו אחר [instructions] האלו (https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: איזו פעילות עלי לעשות עם תלמידי התיכון?
-  hoc_faq_high_school_a: בכל הגילאים, אנו ממליצים לנסות, בתור התחלה, את אחד המדריכים
-    למתחיל ב- <a href='http://code.org/learn'>Code.org/learn</a>, למשל המדריך של "ANGRY
-    BIRDS" או של "אנה ואלסה". תלמיד תיכון אמור להצליח לסיים את אחד מאלו ב-30 דקות
-    ויכול אחר-כך לנסות מדריך מתקדם יותר בשפת JavaScript, כמו באתרים Khan Academy  או  CodeHS.
   hoc_faq_high_school_a_markdown: עזרי הלמידה שלנו "מלחמת הכוכבים" ו"מיינקראפט" אידיאליים
     לתלמידי תיכון, במיוחד גרסת ג'אווה סקריפט של "מלחמת הכוכבים" ושלב המשחק החופשי
     בשני השיעורים הללו. לחלופין, אנו ממליצים לנסות את אחד מעזרי הלמידה למתחילים ב-[%{partner_url}/learn](%{codeorg_url}/learn)
@@ -2285,50 +2370,23 @@ he:
     כגון "אקדמיית קהאן" או CodeHS.
   hoc_faq_scratch_q: אני עושה Scratch ל"שעה של קוד", אבל מה אם התלמידים שלי יש iPads
     ולא מחשבים ניידים?
-  hoc_faq_scratch_a: Scratch לא עובד על טאבלטים. אם התלמידים שלך הם צעירים, הם יוכלו
-    להשתמש ScratchJR iPad app (עבור מוקדם-הקוראים). אם תעיינו בההדרכות באתר <a href='http://code.org/learn'>
-    Code.org/learn</a>, תוכלו למצוא הדרכות העובדות על iPads - מ-Code.org, Tynker,
-    Lightbot או CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch לא פועל על טבליות. אם התלמידים שלך צעירים, הם
     יכולים להשתמש באפליקציית ה- iPad ScratchJR (לקוראים מוקדמים). אם אתה מסתכל על
     הדרכות על [%{partner_url}/ללמוד] (%{codeorg_url}/ללמוד), אתה יכול למצוא הדרכות
     אחרות שעובדות על אייפד - מ- Code.org, Tynker, Lightbot או CodesPark.
   hoc_faq_count_hoc_q: איך סופרים את שעות הקוד?
   hoc_faq_map_q: למה אני לא רואה את הנקודה שלי על המפה?
-  hoc_faq_map_a: אנו מצטערים שאינך רואה את האירוע שלך במפת שעת הקוד. בגלל עשרות אלפי
-    המארגנים שנרשמים, המפה צוברת את הנתונים ומציגה נקודה אחת למספר אירועים. אם תלחץ
-    על הקישור <a href='%{events_url}'>אירועים עמוד</a> מתחת למפה תועבר לרשימה של כל
-    האירועים לפי מדינה ותוכל למצוא את האירוע שלך רשום שם. בנוסף, בהתחשב באלפי האנשים
-    שנרשמים לשעת הקוד, בדרך כלל לוקח 48 שעות לעדכן את המפה ורשימת האירועים. בדוק שוב
-    בעוד כמה ימים!
   hoc_faq_map_a_markdown: לצערנו אינכם יכולים לראות את האירוע שלכם במפת Hour of Code.
     בשל עשרות אלפי המארגנים שנרשמו, המפה מקבצת את הנתונים ומציגה נקודה אחת לכמה אירועים.
     לחיצה על הקישור של [דף האירועים](%{events_url}) תוביל אתכם לרשימה של כל האירועים
     לפי מדינה, כך שתוכלו למצוא את האירוע שלכם שם. בנוסף, לנוכח רבבות האנשים הרשומים
     ל-Hour of Code, עדכון המפה ורשימת האירועים אורך 48 שעות. חזרו לבדוק בעוד ימים
     אחדים!
-  hoc_faq_count_hoc_a: גשש שעת הקוד אינו מדידה מדויקת של השימוש. אנו לא סופרים מזהי
-    סטודנטים ייחודיים בצורה מושלמת בעת מעקב אחר השתתפות בשעת הקוד, במיוחד מכיוון שאיננו
-    דורשים מהתלמידים להיכנס או להירשם. כתוצאה מכך, שנינו סופרים יתר על המידה וגם תת-סופרים
-    משתתפים בו זמנית. קרא את כל הפרטים <a href='%{codeorg_url}/loc'>כאן</a>.
   hoc_faq_count_hoc_a_markdown: העוקב של Hour of Code אינו כלי מדויק למדידת השימוש.
     איננו מונים בקפידה מזהים ייחודיים של תלמידים במהלך המעקב אחר השתתפות ב-Hour of
     Code, בעיקר מכיוון שאיננו דורשים מהתלמידים להתחבר או להירשם. משום כך, הספירות
     שלנו מגדילות את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: כמה אפשר ללמוד בשעה?
-  hoc_faq_one_hour_a: המטרה של שעת הקוד היא לא ללמד אף אחד להיות מדען מחשב מומחה בשעה
-    אחת. שעה אחת מספיקה רק כדי ללמוד שמדעי המחשב מהנים ויצירתיים, שהם נגישים בכל הגילאים,
-    לכל התלמידים, ללא קשר לרקע. מדד ההצלחה של קמפיין זה אינו בכמות הלומדים תלמידי
-    מדעי המחשב - ההצלחה באה לידי ביטוי בהשתתפות רחבה בין קבוצות מגדריות ואתניות וסוציו-אקונומיות,
-    וכתוצאה מכך הגידול בהרשמה ובהשתתפות שאנו רואים בקורסי מדעי המחשב בכל רמות הכיתה.
-    מיליוני המורים והתלמידים המשתתפים החליטו ללכת מעבר לשעה אחת - ללמוד במשך יום שלם
-    או שבוע שלם או יותר, ותלמידים רבים החליטו להירשם לקורס שלם (או אפילו למכללה) כתוצאה
-    מכך. <br/><br/> מלבד הסטודנטים, "לומד" נוסף הוא המחנך שזוכה לביטחון לאחר שעה שהם
-    יכולים ללמד מדעי המחשב למרות שאולי אין להם תואר אקדמי כמדען מחשבים. עשרות אלפי
-    מורים מחליטים להמשיך במדעי המחשב, או להשתתף ב- PD או להציע קורסים מקוונים המשך,
-    או שניהם. וזה תקף גם למנהלי בתי ספר, שמבינים שמדעי המחשב הם משהו שתלמידיהם רוצים
-    והמורים שלהם מסוגלים לו. <br/><br/> מעל הכל, מה שכל המשתתפים יכולים ללמוד בשעה
-    הוא שאנחנו יכולים לעשות זאת.
   hoc_faq_one_hour_a_markdown: |-
     המטרה של Hour of Code היא לא להפוך את כולם למומחים למדעי המחשב בתוך שעה. שעה אחת מספיקה רק כדי ללמוד שמדעי המחשב הם תחום מהנה ויצירתי הנגיש לתלמידים בכל הגילאים, ללא קשר לרקע שלהם. מידת ההצלחה של קמפיין זה היא לא עד כמה תלמידי מדעי המחשב לומדים. מידת ההצלחה משתקפת בהשתתפות רחבה חוצת מגדרים, מוצא אתני ומעמד סוציו-אקונומי, ובעלייה הנובעת מכך בשיעור הנרשמים והמשתתפים בקורסים של מדעי המחשב בכל רמות הלימוד. מיליוני המורים והתלמידים החליטו לא להסתפק בשעה אחת בלבד, אלא ללמוד מדעי המחשב למשך יום או שבוע שלם או יותר מכך, ובזכות זאת, תלמידים רבים החליטו להירשם לקורס מקיף (או אפילו כחוג ראשי במוסד להשכלה גבוהה).
 
@@ -2336,33 +2394,24 @@ he:
 
     יותר מכל, מה שכל המשתתפים יכולים ללמוד בשעה - זה הרעיון שאנו מסוגלים לכך.
   hoc_faq_more_questions_q: עדיין יש עוד שאלות?
-  hoc_faq_more_questions_a: נסה למצוא תשובה <a href='http://support.code.org'> בפורום
-    התמיכה  שלנו</a>.
   hoc_faq_more_questions_a_markdown: נסה למצוא תשובה ב [פורום התמיכה] שלנו (http://support.code.org).
   hoc_faq_keep_learning_q: כיצד אוכל להמשיך ללמוד לאחר שעת הקוד?
-  hoc_faq_keep_learning_a: כל אחד יכול לארח שעת קוד בכל עת. ההדרכות נשארות כל השנה.
-    אתה יכול לצפות שכל ההדרכות ותכנית הלימודים שלנו יהיו זמינות באתר שלנו לנצח. אנא
-    עבור אל <a href='/promote'>המשאבים שלנו</a> למדריכי הדרכה לאירועים ומשאבים אחרים
-    שיעזרו להפוך את אירוע שעת הקוד שלך להצלחה.
   hoc_faq_keep_learning_a_markdown: כל אחד יכול לקיים Hour of Code בכל עת. עזרי הלמידה
     עומדים לרשותכם לאורך כל השנה. ניתן ליהנות מנגישות קבועה לכל עזרי הלמידה ותוכנית
     הלימודים שלנו באתר האינטרנט. אנא גשו אל [עזרי הלמידה שלנו](%{promote}) לצורך עיון
     במדריך האירוע ובמקורות נוספים שיסייעו לכם להביא להצלחת האירוע של Hour of Code.
   hoc_faq_certificates_q: היכן ניתן להדפיס תעודות לתלמידים שלי?
-  hoc_faq_certificates_a: עבור אל <a href='%{codeorg_url}/certificates'>האישורים שלנו
-    עמוד</a> שבו תוכל להדפיס אישורים עבור כל הכיתה שלך מבעוד מועד. אתה יכול גם להדפיס
-    <a href='%{codeorg_url}/certificates?course=mc'>תעודות מיוחדות</a> לסטודנטים שעושים
-    את ההדרכה של Minecraft.
-  hoc_faq_certificates_a_markdown: גשו ל[דף התעודות](%{codeorg_url}/certificates),
-    שם תוכלו להדפיס מראש תעודות לכל תלמידי הכיתה. באפשרותם גם להדפיס [תעודות מיוחדות](%{codeorg_url}/certificates?course=mc)
-    לתלמידים הלומדים את השיעור של "מיינקראפט".
+  hoc_faq_certificates_answer_markdown: עבור אל [דף האישורים] שלנו (%{certificates_url})
+    שבו תוכל להדפיס אישורים לכל הכיתה שלך מבעוד מועד.
   hoc_faq_logo_q: האם יש מגבלות כיצד אוכל להשתמש בלוגו או בשם Hour of Code?
-  hoc_faq_logo_a: שעת הקוד היא סימן מסחרי. אנחנו לא רוצים למנוע את השימוש בו, אבל
-    אנחנו רוצים לוודא שהשימוש בו מתאים בתוך כמה גבולות. אנא ראה <a href='%{logo_url}'>הנחיות
-    אלה לשימוש</a>.
   hoc_faq_logo_a_markdown: Hour of Code הוא סימן מסחרי רשום. אין בכוונתנו למנוע את
     השימוש בו, אולם אנו רוצים להבטיח שהשימוש בו נתון להגבלות אחדות. אנא ראו [תנאי
     שימוש](%{logo_url}).
+  hoc_faq_bug_q: מצאתי באג בפעילות שעת קוד! מה עלי לעשות?
+  hoc_faq_bug_a_markdown: |-
+    הו לא! אם נתקלת בבאג בפעילות שעת קוד - בדוק תחילה את כתובת האתר של הפעילות בה אתה נמצא. אם כתובת האתר מתחילה ב- studio.code.org, צוות התמיכה של Code.org שלנו יכול לעזור! לחץ על סמל סימן השאלה בפינה השמאלית העליונה של המסך, ולאחר מכן בחר "דווח על בעיה" מהתפריט הנפתח.
+
+    אם כתובת האתר אינה מתחילה ב- studio.code.org, סביר להניח שאתה עובד על פעילות של צד שלישי ותצטרך לפנות לצוות התמיכה של אותה חברה לקבלת סיוע נוסף.
   stats_hoc_2013_image_alt: סטטיסטיקה של  Hour of Code 2013
   stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de
     utilizatori.
@@ -12274,6 +12323,19 @@ he:
     להדגיש גם את ההצלחה שלך!'
   hoc_how_to_step_07_educators_desc_02: אתה יכול גם להדפיס תעודות לתלמידים שלך כדי
     להראות את ההישגים שלהם!
+  hoc_ai_top_desc: כל אחד יכול ללמוד על בינה מלאכותית, בין אם אתה תלמיד בכיתה או מחנך
+    הפותח את עתיד ההוראה עם ובינה מלאכותית.
+  hoc_ai_how_ai_works_video_series_desc: סדרת סרטונים קצרים זו תציג בפניכם כיצד עובדת
+    בינה מלאכותית ומדוע היא חשובה. ואז התעמקו בנושאים כמו הטיה אלגוריתמית והאתיקה
+    של קבלת החלטות AI.
+  hoc_ai_learn_how_ai_works_desc: צללו לעולם הבינה המלאכותית בעזרת השיעורים "איך AI
+    עובד", יחד עם סדרת הסרטונים שלנו המציגה בפניכם כיצד AI עובד ומדוע זה חשוב.
+  hoc_ai_101_for_educators_desc: גלה את הפוטנציאל הטרנספורמטיבי של בינה מלאכותית (AI)
+    בחינוך עם סדרת הלמידה המקוונת החינמית שלנו למחנכים.
+  hoc_ai_impacts_desc: העסיקו את הכיתה שלכם בשיעורים בהנחיית מורים החוקרים את ההשפעות
+    של בינה מלאכותית ומזמינים את הלומדים לחשוב על פתרונות לחלק מהבעיות של AI.
+  hoc_ai_activities_desc: פעילויות שעת הקוד החדשות הללו מציגות למשתמשים את עולם הבינה
+    המלאכותית בצורה מהנה ומרתקת.
   team_page_full_team_alt_text: כמעט 100 עובדי Code.org בחולצות טריקו תואמות כחולות
     וצהובות מתייצבים בחדר ישיבות במלון לאירוע Codechella בקיץ 2022 של החברה.
   careers_page_code_pride_alt_text: שתי עובדות המציגות נשים מחייכות כשהן אוחזות בקצוות
@@ -12708,6 +12770,20 @@ he:
   video_library_page_not_hacked_video_title_5: 'איך לא להיפרץ: אתרי אינטרנט ו- Wifi'
   video_library_page_not_hacked_video_title_6: 'איך לא להיפרץ: הודעות והורדות'
   video_library_page_not_hacked_video_title_7: 'איך לא להיפרץ: התקן עדכונים'
+  thank_you_page_main_title: תודה שעזרת לבנות תנועה
+  thank_you_page_description: קואליציית ההסברה של Code.org מבקשת להודות למאות אלפי
+    האלופים והתומכים המקומיים, כולל מורים, חברי קהילה, חוקרים, עמותות, אוניברסיטאות,
+    תאגידים ומוסדות ממשלתיים שתמכו בחזון שכל תלמיד בכל בית ספר ראויה להזדמנות ללמוד
+    מדעי המחשב. תודה על תמיכתך בתנועה זו.
+  thank_you_page_members_section_title: 'ולכל חברי קואליציית ההסברה של Code.org:'
+  thank_you_page_individual_organization_title: 'תודה לאנשים ולארגונים הבאים על תרומתם
+    לדוח זה:'
+  thank_you_page_individual_organization_description: מפקחי חינוך למדעי המחשב בכל
+    סוכנות חינוך ממלכתית, מועצת המכללות, דלה קרונין, סטיוארט דקסלר, קתרין מייסי, אנתוני
+    אוון, שון רוברטס, קייל טרויאן, פט יונגפראדיט
+  thank_you_page_teachers_students_title: 'תודה לתלמידים ולמורים המצוטטים בדוח זה:'
+  thank_you_page_teachers_students_description: טס קמפיון, וילה קמפיון, ג'יימי דלרמה,
+    סינדי נוריגה, טרה וודופיץ
   about_us_page_title: אודותינו
   about_us_page_hero_description: Code.org® היא עמותה לחדשנות חינוכית המוקדשת לחזון
     שלכל תלמיד בכל בית ספר יש את ההזדמנות ללמוד מדעי המחשב כחלק מחינוך הליבה שלהם
@@ -12836,6 +12912,115 @@ he:
     יש לנו דרך ארוכה ללכת כדי לעמוד ביעד גיוס תרומות שתתמוך בחזון זה.
   about_page_donors_link_1: תרמו תרומה
   about_page_donors_link_2: "[ראה רשימת התורמים שלנו] (%{donors_url})"
+  teach_ai_title: דוגמאות בעולם האמיתי. משאבים מעשיים.
+  teach_ai_description: ערכת הכלים של הדרכת AI לבתי ספר היא משאב לקובעי מדיניות, מנהיגי
+    בתי ספר וצוות לפתח הדרכה ראשונית בנושא AI בבתי הספר שלהם.
+  teach_ai_button_label: הצג את ערכת הכלים
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: מעבדת אפליקציות
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: למד עוד
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_description_1: תכנית לימודים חינם בת שנה המציגה את התלמידים
+    למושגי היסוד של מדעי המחשב ומאתגרת אותם לחקור כיצד מחשוב וטכנולוגיה יכולים להשפיע
+    על העולם.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: הכירו את התלמידים להנדסת תוכנה ועיצוב מונחה
+    עצמים בזמן שהם לומדים את שפת התכנות Java בתכנית הלימודים החינמית הזו עבור AP®
+    מדעי המחשב A (AP® CSA).
+  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_2: חקור את עקרונות CS
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_card_title_1: מעבדת ספרייט
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
+  elementary_page_computer_science_card_title_1: יסודות מדעי המחשב
+  elementary_page_computer_science_card_title_2: חיבורי מדעי המחשב
+  elementary_page_computer_science_description_1: תכנית לימודים חינם בת שנה המציגה
+    את התלמידים למושגי היסוד של מדעי המחשב ומאתגרת אותם לחקור כיצד מחשוב וטכנולוגיה
+    יכולים להשפיע על העולם.
+  elementary_page_computer_science_description_2: צור קשרים בין מדעי המחשב (CS) ונושאים
+    אחרים כמו מתמטיקה, אמנויות שפה, מדעים ולימודי חברה.
   language_code:
     ar: ערבית
     az: אזרבייז'ני

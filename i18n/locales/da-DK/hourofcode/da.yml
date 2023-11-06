@@ -6,40 +6,54 @@ da:
   front_title: Bliv en del af den største læringsevent nogensinde, den 7.-13. december
     2015
   coming_soon: Kommer snart
-  campaign_date_start_short: 6. dec.
-  campaign_date_start_long: 6. december
-  campaign_date_short: 7.-13. dec.
-  campaign_date_full: 7.-13. december
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5.-11. december 2016
-  nonus_campaign_date_start_short: 1. oktober
-  nonus_campaign_date_start_long: 1. oktober
-  nonus_campaign_date_short: 1. oktober - 18. december
-  nonus_campaign_date_full: 1. oktober - 18. december
-  nonus_campaign_date_year: '2016'
+  new: Ny
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: Elever kan lære på 40 sprog
+  hoc_stat_hours_served: Over 100 millioner elever har prøvet en Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  campaign_date_start_short: 4. Dec.
+  campaign_date_start_long: 4. December
+  campaign_date_short: 4. - 10. december
+  campaign_date_full: 4.-10. December
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4.-10. december 2023
+  nonus_campaign_date_start_short: 5. september
+  nonus_campaign_date_start_long: 5. septembre
+  nonus_campaign_date_short: 5. september - 17. december
+  nonus_campaign_date_full: 5. september - 17. december
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: Oktober 1, 2022 - 18. december 2022
-  latam_campaign_date_start_short: 1. oktober
-  latam_campaign_date_start_long: 1. oktober
-  latam_campaign_date_short: 1. oktober - 18. december
-  latam_campaign_date_full: 1. oktober - 18. december
-  latam_campaign_date_year: '2016'
+  latam_campaign_date_start_short: 5. september
+  latam_campaign_date_start_long: 5. septembre
+  latam_campaign_date_short: 5. september - 17. december
+  latam_campaign_date_full: 5. september - 17. december
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: Oktober 1, 2022 - 18. december 2022
-  europe_campaign_date_start_short: 1. oktober
-  europe_campaign_date_start_long: 1. oktober
-  europe_campaign_date_short: 1. oktober - 18. december
-  europe_campaign_date_full: 1. oktober - 18. december
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_start_short: 5. september
+  europe_campaign_date_start_long: 5. septembre
+  europe_campaign_date_short: 5. september - 17. december
+  europe_campaign_date_full: 5. september - 17. december
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: Oktober 1, 2022 - 18. december 2022
-  africa_campaign_date_start_short: 1. oktober
-  africa_campaign_date_start_long: 1. oktober
-  africa_campaign_date_short: 1. oktober - 18. december
-  africa_campaign_date_full: 1. oktober - 18. december
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_start_short: 5. september
+  africa_campaign_date_start_long: 5. septembre
+  africa_campaign_date_short: 5. september - 17. december
+  africa_campaign_date_full: 5. september - 17. december
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: Oktober 1, 2022 - 18. december 2022
   hoc2023_header: Kreativitet med AI
+  hoc2023_hero_desc_homepage: Slut dig til millioner over hele kloden der organisere
+    en times kodning, med eller uden AI, og lær, hvordan AI fungerer. Alle, hvor som
+    helst kan gøre det. Ingen erfaring nødvendig.
+  hoc2023_hero_desc_learn_page: I år tager vi Hour of Code til nye højder ved at tilbyde
+    kodningsmuligheder, der omfatter både kunstig intelligens (AI) og ikke-AI-komponenter.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Hvad vil du oprette?
   hoc2023_social_creativity_with_ai_desc: Brug datalogi til at udforske og lære om
     AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Udforsk, Spil, Opret!
   social_hoc2022_explore_play_create: Brug datalogi til at udforske, lege og skabe!
   codeorg_homepage_hoc2022_body: Udforsk universet, score et mål, bryde et træk -
@@ -51,6 +65,9 @@ da:
     musik fra Disneys „Encanto“ og mere!
   social_hoc2023_dance: Med Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     musik fra Disneys „Encanto,“ og mere!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Lær i dag, byg en lysere fremtid.
@@ -168,6 +185,7 @@ da:
   social_ai_title: Lær om kunstig intelligens (AI) | Code.org
   social_ai_desc: Værktøjer til at hjælpe elever og lærere med at bringe AI ind i
     klasseværelset.
+  social_videos_desc: Engagerende datalogiske videoer til elever i alle aldre.
   pl_superhero_title: Hjælp eleverne med at blive superhelte!
   pl_superhero_desc: Deltag i vores meget støttende professionelle læringsprogram
     for mellem- og gymnasielærere.
@@ -198,6 +216,15 @@ da:
   device_laptop: Bærbar
   device_desktop_computer: Stationær computer
   device_mobile_device: Mobil enhed
+  for_everyone: For alle
+  for_students_teacher_led_learning: 'For studerende: Lærerledet læring'
+  for_students_teacher_led_lessons: 'For studerende: Lærerledede lektioner'
+  professional_development: Faglig udvikling
+  how_ai_works_video_series: Sådan fungerer AI Videoserie
+  learn_how_ai_works: Lær hvordan AI fungerer
+  ai_101_for_educators: AI grundviden til undervisere
+  learn_about_ai_impacts: Lær om virkningerne af AI
+  hoc_ai_activities: Hour of Code AI-aktiviteter
   subscribe_to_emails_heading: Abonner på e-mails
   subscribe_to_emails_desc: Læs om, hvad der sker på Code.org og i datalogi uddannelse
     gennem kvartalsvise opdateringer via vores mailingliste.
@@ -252,21 +279,32 @@ da:
     fra andre undervisere.
   required_materials: 'Nødvendige materialer:'
   optional_materials: 'Valgfrie materialer:'
+  for_students: For students
+  for_educators: For lærere
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Afhold en begivenhed
   call_to_action_register_event: Tilmeld din begivenhed
+  call_to_action_register_your_hoc: Registrer din Hour of Code
   call_to_action_select_activity: Vælg en aktivitet
   call_to_action_start_activity: Start en aktivitet
   call_to_action_get_certificates: Få certifikater
   call_to_action_go_beyond_hoc: Gå ud over kodens time
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Se kampagneressourcer
   call_to_action_learn_more: Læs mere
   call_to_action_watch_now: Se nu
   call_to_action_try_activity: Prøv aktivitet
   call_to_action_try_activities: Prøv aktiviteter
+  call_to_action_try_hoc_ai_activities: Prøv Hour of Code AI-aktiviteter
   call_to_action_explore_activities: Udforsk aktiviteter
   call_to_action_explore_ai: Udforsk AI
   call_to_action_explore_unit: Udforsk enhed
   call_to_action_explore_curriculum: Udforsk læseplan
+  call_to_action_explore_curricula: Udforsk læseplaner
   call_to_action_explore_curriculum_options: Udforsk muligheder for læseplaner
   call_to_action_explore_lessons: Udforsk lektioner
   call_to_action_explore_modules: Udforsk moduler
@@ -349,6 +387,11 @@ da:
   call_to_action_learn_about_advocacy: Få mere at vide om vores fortalervirksomhed
   call_to_action_visit_store: Besøg butikken
   call_to_action_view_faqs: Se flere ofte stillede spørgsmål
+  call_to_action_applications_open: Der er nu åbent for ansøgninger
+  call_to_action_apply_cs_ambassador: Ansøg om at blive kodningsambassadør
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Se vejledningen til undervisere
   aria_label_call_to_action_hoc_how_to_companies: Se vejledningen til virksomheder
   aria_label_call_to_action_hoc_how_to_districts: Se vejledningen til distrikter
@@ -359,6 +402,9 @@ da:
   aria_label_call_to_action_hoc_how_to_volunteers: Se vejledningen til frivillige
   aria_label_call_to_action_hoc_how_to_virtual_events: Se vejledningen til virtuelle
     begivenheder
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Læs mere om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     professionelle læringsprogram
@@ -471,11 +517,25 @@ da:
   curriculum_name_creating_apps_with_devices: Oprettelse af apps med enheder
   curriculum_name_poetry: Kodning med poesi
   curriculum_name_dance_party: Danse fest
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problemløsning og databehandling
   curriculum_name_web_development: Web udvikling
   curriculum_name_interactive_animations_games: Interaktive animationer og spil
   curriculum_name_design_process: Designprocessen
   curriculum_name_data_society: Data & Samfund
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Gratis sæt elementære læseplaner, der introducerer eleverne
     til de grundlæggende begreber inden for datalogi.
   curriculum_desc_csf_express: Lær at oprette computerprogrammer, udvikle problemløsningsevner,
@@ -564,7 +624,7 @@ da:
   module_label_prerequisites: 'Forudsætninger:'
   module_label_level: 'Niveau:'
   module_label_topics: 'Emner:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Enheder:'
   module_label_tools: 'Programmeringsværktøjer:'
   module_label_professional_learning: 'Professionel læring:'
   module_label_languages: 'Understøttede sprog:'
@@ -586,12 +646,16 @@ da:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Børnehave
   module_grade_grade_01: Grad 1
@@ -599,6 +663,12 @@ da:
   module_grade_grade_03: Grad 3
   module_grade_grade_04: Grad 4
   module_grade_grade_05: Grad 5
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Lærere
   module_grade_6_10_teachers: 6-10 Lærere
   module_grade_9_12_teachers: 9-12 Lærere
@@ -692,6 +762,56 @@ da:
   heading_explore_curriculum_catalog: Udforsk alle vores kurser i Curriculum Catalog
   heading_csa_ai: Leder du efter ting at lave efter AP® eksamen?
   heading_bring_cs_to_students: Bring datalogi til studerende
+  heading_cs_ambassador_program: CS Ambassadørprogram
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: Hvis du er en gymnasieelever, der brænder for at opmuntre
+    flere unge kvinder til at tage datalogi på din skole, så har vi brug for dig!
+  cs_ambassador_desc: Hvert felt, herunder medicin, underholdning, sport, uddannelse,
+    forretning, mode og iværksætteri er berørt af datalogi. Alligevel tager kun 5%
+    af unge kvinder i gymnasiealderen datalogi klasser. Ambassadører kan hjælpe med
+    at lukke denne kønsforskel ved at tilskynde deres jævnaldrende til at tage en
+    datalogisk klasse.
+  cs_ambassador_application_date: Ansøgninger åbner indtil 8. november 2023
+  cs_ambassador_application_subhead: Arbejd med en lærer for at indsende din ansøgning
+    i dag
+  cs_ambassador_application_questions: Spørgsmål? Kontakt venligst [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Hvad gør CS-ambassadører?
+  cs_ambassador_do_desc: CS-ambassadører opfordrer unge kvinder til at udforske emnet,
+    og løfter hinanden op, når de genvinder deres plads inden for datalogi. CS-ambassadører
+    opretter forbindelse til deres jævnaldrende for at dele deres spænding og kærlighed
+    til datalogi. De besøger klasseværelser, er vært for borde til frokost og taler
+    på forsamlinger og klubmøder. CS-ambassadører arbejder sammen med lærere og skoleadministratorer
+    for at nedbryde stereotyper, der holder unge kvinder tilbage.
+  cs_ambassador_steps_heading: Hvad skal jeg bruge for at blive en CS-ambassadør?
+  cs_ambassador_steps_list_title_01: Passion
+  cs_ambassador_steps_list_title_02: Erfaring med et CS-kursus
+  cs_ambassador_steps_list_title_03: Skole, der tilbyder CS
+  cs_ambassador_steps_list_desc_01: En lidenskab for at opmuntre unge kvinder på din
+    skole til at tage datalogiske klasser
+  cs_ambassador_steps_list_desc_02: 'Har taget en årelang datalogklasse i skoleåret
+    2022-23 eller tidligere (anbefalet: CS Principles eller AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Gå på et gymnasium, der regelmæssigt tilbyder
+    et årelangt datalogkursus (anbefales: CS Principles eller AP® CSA)'
+  cs_ambassador_benefits_heading: Programfordele
+  cs_ambassador_benefits_list_title_01: Nationalt samfund
+  cs_ambassador_benefits_list_title_02: Samfundsmæssig tjeneste
+  cs_ambassador_benefits_list_title_03: Anerkendelse
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certifikat
+  cs_ambassador_benefits_list_title_06: Oplevelser
+  cs_ambassador_benefits_list_desc_01: Adgang til et nationalt samfund af unge ledere,
+    der er forpligtet til at lukke kønsforskellen inden for datalogi.
+  cs_ambassador_benefits_list_desc_02: Samfundsservicetimer og muligheden for at optjene
+    [US Presidential Volunteer Service Award] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Anerkendelse som ambassadør for 2023-2024 og
+    berettiget til at blive hædret i Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Bliv identificeret som en CS-ambassadør gennem
+    specielt Code.org mærkede tøj, klistermærker og meget mere!
+  cs_ambassador_benefits_list_desc_05: Officielt certifikat for deltagelse fra Code.org.
+  cs_ambassador_benefits_list_desc_06: Få oplevelser og historier, du kan dele på
+    din college-ansøgning, CV og mere!
   professional_learning_section_desc: Få den støtte, du har brug for, når du forbereder
     dig på at undervise. Lærere elsker det, med over 90%, der placerer det som den
     bedste faglige udvikling nogensinde!
@@ -740,6 +860,13 @@ da:
     Code.org's Computer Science Principles og få nyttige påmindelser, tips og opdateringer
     sendt direkte til din indbakke.
   subscribe_form_section_unsubscribe: Du kan til enhver tid afmelde dig.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Sådan fungerer Blockchain
   blockchain_hero_desc: Dyk ned i blockchain-verdenen med „Sådan fungerer Blockchain“,
     vores nye videoserie og ledsagende lektioner!
@@ -843,6 +970,12 @@ da:
   ai_curriculum_btn_aria_label_04: Udforsk, hvordan AI fungerer lektioner
   ai_curriculum_grades_05: 'Grad Niveauer: 9-12'
   ai_curriculum_btn_aria_label_05: Udforsk Software Engineering & Computer Vision-modulet
+  ai_curriculum_title_06: Samfundsmæssig indvirkning af generativ AI
+  ai_curriculum_desc_06: Undersøg virkningen af generativ AI fra forskellige perspektiver,
+    og samarbejd derefter som et team for at komme med retningslinjer, der imødekommer
+    de fleste behov fra alle deltagere.
+  ai_curriculum_btn_aria_label_06: Se den samfundsmæssige indvirkning af generativ
+    AI-lektionsplan
   ai_carousel_heading: 'Hvad lærere siger om AI med Code.org:'
   ai_carousel_quote_01: Denne lektion gav også mine elever mulighed for at se, at
     der er et element af mening i klassificeringssystemer. Senere, da vi begyndte
@@ -1836,6 +1969,9 @@ da:
   help_page_speak_for_cs_desc: Lær mere om Code.orgs fortalervirksomhed i hele USA
     og de ti politikker, vi anbefaler stater vedtager for at gøre datalogi grundlæggende
     for alle studerende. Plus, find ud af, hvordan du kan skabe ændringer i din tilstand.
+  yw_page_top_heading: Unge kvinder i datalogi
+  yw_page_top_desc: Bliv en CS-ambassadør og vær en del af at lukke kønsforskellen
+    inden for datalogi.
   hoc_live: Time of Code Live
   hoc_live_sign_up_title: Tilmeld dig Hour of Code Live
   hoc_live_learn_title: Lær med Hour of Code Live
@@ -2200,10 +2336,16 @@ da:
     til datalogi, ved hjælp af sjove tutorials for at vise, at enhver kan lære det
     grundlæggende. Denne græsrodskampagne støttes af over 400 partnere og 200.000
     undervisere over hele verden.
+  hoc_homepage_registration_desc: Din klasse eller gruppe kan slutte sig til millioner
+    over hele verden til at deltage i Hour of Code! Tilmelding til den årlige fejring
+    af Computer Science Education Week begynder i oktober. Hour of Code er dog tilgængelig
+    året rundt.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Læs vores vejledning] (%{howto_guide_url})
     for at planlægge en begivenhed til din klasse."
   hoc_homepage_highlights_heading: Hour of Code højdepunkter
   hoc_homepage_organized_by: Hour of Code er organiseret af [Code.org](%{codeorg_url}).
+  hoc_events_heading: Tilmeld dig for at være vært for en Hour of Code
+  hoc_events_jump_to_map: Gå til Hour of Code-kortet
   signup_closed: Tilmelding til Hour of Code er nu lukket. Tjek igen i oktober for
     at tilmelde dig den næste Hour of Code.
   signup_registration_not_required: Du behøver ikke at registrere dig for at deltage!
@@ -2312,6 +2454,8 @@ da:
   map_title: Hour of Code kort
   map_header: "# Hour of Code arrangementer verden over"
   map_header_count_year: "%{event_count} begivenheder registrerede i %{year}"
+  map_header_count_year_so_far: "%{event_count} begivenheder registreret indtil videre
+    i %{year}"
   see_all_events: Se alle arrangementer
   map_header_company: "# arrangeret i samarbejde med"
   map_header_country: "# i %{country}"
@@ -2326,6 +2470,7 @@ da:
     events siden.</a>
   map_warning_markdown: En komplet liste over begivenhederne kan ses på [begivenhedssiden.]
     (%{events_url})
+  map_view_all_events: Se en komplet liste over Hour of Code-begivenheder [here](%{events_url}).
   meta_tag_og_title: Hour of Code nærmer sig
   meta_tag_og_description: Hour of Code er en global bevægelse som når millioner af
     elever i 180+ lande og på mere end 30 sprog. Fra 4 til 104 år.
@@ -2345,9 +2490,6 @@ da:
     for at støtte @codeorg)'
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Hvad er Hour of Code?
-  hoc_faq_what_is_hoc_a: Hour of Code er een times introduktion til at programmere,
-    designed for at afmystificere kode og vise at alle kan lære det grundlæggende.
-    <a href='http://code.org/learn'>Prøv selv øvelserne</a>.
   hoc_faq_what_is_hoc_a_markdown: Hour of Code startede som en times introduktion
     til datalogi, designet til at afmystificere „kode“, for at vise, at enhver kan
     lære det grundlæggende, og at udvide deltagelsen inden for datalogi. Det er siden
@@ -2357,12 +2499,6 @@ da:
     (%{partners}) og 200.000 undervisere over hele verden.
   hoc_faq_last_year: Prøv øvelserne
   hoc_faq_when_is_hoc_q: Hvornår er Hour of Code?
-  hoc_faq_when_is_hoc_a: Enhver kan afholde en Hour of Code når som helst, men det
-    er kampagnens mål at få millioner af elever til at prøve en Hour of Code i perioden
-    %{campaign_date}, for at fejre <a href='http://csedweek.org'>Computer Science
-    Education Week</a>. Er det en bestemt <i>timer</i>? Nej. Du kan afholde Hour of
-    Code når som helst i denne uge. (og hvis du ikke kan i den uge, så gør det gerne
-    ugen før eller efter).
   hoc_faq_when_is_hoc_a_markdown: Hour of code finder sted hvert år i [Uddannelsesuge
     for Datalogi] (%{csedweek_url}).%{campaign_date_year} Uddannelsen i datalogi finder
     sted %{campaign_date_full}, men du kan være vært for en times programmering hele
@@ -2370,69 +2506,33 @@ da:
     datapionerens fødselsdag [Admiral Grace Murray Hopper] (%{grace_hopper}) (9. december
     1906).
   hoc_faq_why_cs_q: Hvorfor programmering?
-  hoc_faq_why_cs_a: "<i>Alle</i> elever bør have mulighed for at lære at programmere.
-    Det hjælper til med at træne problemløsning, logik og kreativitet. Ved at starte
-    tidligt, får eleverne et fundament for succes i et hvilket som helst karriereforløb
-    i det 21. århundrede. Se mere baggrund og statistik på <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: _Hver_studerende skal have mulighed for at lære datalogi.
     Det hjælper med at pleje problemløsningskompetencer, logik og kreativitet. Ved
     at starte tidligt vil de studerende have et fundament for succes i enhver karrierevej
     i det 21. århundrede. Se mere statistik [her] (%{stats_url}).
   hoc_faq_how_participate_q: Hvordan kan jeg deltage i Hour of Code?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Start din planlægning her</a> ved
-    at se vores vejledning. Du kan afholde en Hour of Code på din skole eller i dit
-    lokalområde &mdash; for eksempel i en forening, eller på dit arbejde. Eller prøv
-    det blot selv, når det bliver %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "[Start planlægningen her] (%{howto}) ved at
     gennemgå vores vejledning. Du kan organisere en Hour of code-begivenhed på din
     skole eller i dit samfund - som i en fritidsklub, nonprofit eller på arbejde.
     Eller prøv det selv, når %{campaign_date} ankommer."
   hoc_faq_behind_hoc_q: Hvem står bag Hour of Code?
-  hoc_faq_behind_hoc_a: Hour of Code er organiseret af <a href='http://code.org'>Code.org</a>,
-    en offentlig frivillig organisation dedikeret til at øge deltagelse i datalogi
-    og programmering ved at gøre det tilgængelig i flere skoler, øge andelen af piger
-    og kvinder, og elever fra etniske minoriteter. En  <a href='http://code.org/about/partners'>stor
-    koalition af partnere</a> er gået sammen for at støtte Hour of Code. Den inkluderer
-    bl.a. Microsoft, Apple, Amazon, Boys and Girls Clubs of America og det amerikanske
-    «College Board».
   hoc_faq_behind_hoc_a_markdown: Hour of code er drevet af Hour of Code og datalogiuddannelsesugen
     [Rådgivende og gennemgangsudvalg] (%{partner_url}) samt en hidtil uset koalition
     af partnere, der er kommet sammen for at støtte Hour of Code - inklusive Microsoft,
     Apple, Amazon, Boys and Girls Clubs of America og College Board.
   hoc_faq_host_q: Jeg ved ikke noget om at programmere. Kan jeg stadig være arrangør?
-  hoc_faq_host_a: Selvfølgelig, Hour of Code aktivteter er selv-instruerende. Alt
-    du behøver at gøre er <a href='%{codeorg_url}/learn'>at prøve vores nuværende
-    øvelser</a>, vælg den øvelse du ønsker, og vælg et tidspunkt &mdash; så tager
-    vi os af resten. Vi har øvelser rettet mod enhver alder og erfaring, fra børnehave
-    og op. Start planlægningen af dit arrangement ved at læse vores <a href='/how-to'>«Sådan
-    gør du»-vejledning</a>.
   hoc_faq_host_a_markdown: Selvfølgelig. Hour of code-aktiviteter er selvstyrede.
     Alt hvad du skal gøre er at [prøve vores aktuelle selvstudier] (%{codeorg_url}
     /lær), vælge det ønskede selvstudie og en time - vi tager os af resten. Vi har
     også muligheder for alle aldre og oplevelsesniveauer, fra børnehave og op. Begynd
     at planlægge din begivenhed ved at læse vores [Sådan gør du] ( %{howto}).
   hoc_faq_devices_q: Hvilke enheder eller computere skal jeg bruge til mine elever?
-  hoc_faq_devices_a: Code.org øvelser virker på alle enheder og i alle browsere. Du
-    kan læse mere om tekniske forudsætninger for at bruge Code.org's øvelser <a href='%{codeorg_url}/educate/it'>her</a>.
-    Tekniske forudsætninger for øvelser udenfor Code.org kan du finde <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    i beskrivelsen af de enkelte øvelser. Glem ikke at vi også har <a href='%{unplugged_url}'>unplugged
-    aktiviteter</a> hvis du ikke har adgang til computere eller andre enheder øvelserne
-    kan gennemføres på!
   hoc_faq_devices_a_markdown: Code.org-selvstudier fungerer på alle enheder og browsere.
     Du kan se mere information om Code.orgs tekniske teknologiske behov [here](%{codeorg_url}/uddanne/it).
     Tekniske behov for ikke-Code.org-selvstudier kan findes på [%{partner_url}/lær](%{codeorg_url}/lær)
     i selvstudiets specifikke beskrivelse. Glem ikke, at vi også tilbyder [frakoblede
     aktiviteter](%{unplugged_url}) hvis din skole ikke kan rumme selvstudierne!
   hoc_faq_need_computers_q: Skal jeg have computere til alle deltagere?
-  hoc_faq_need_computers_a: Nej. Vi har Hour of Code øvelser som virker på PCer, smartphones,
-    tablet og endda nogen som slet ikke kræver nogen form for computer! Du kan være
-    med uanset hvor du er, med hvad du end har til rådighed. <p><i>Her er nogen muligheter:</i><br><ul><li><b>Arbejd
-    to og to.</b> Forskning viser at elever lærer bedst gennem  <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>par-programmering</a>,
-    hvor de deler en computer og arbejder sammen. Så få eleverne til at arbejde sammen
-    to og to. <li><b>Brug en projektor.</b> Hvis du har en projektor og en computer
-    med net-adgang, så kan hele din gruppe arbejde sammen i Hour of Code. Se videoerne
-    sammen og løs opgaverne eller svar på spørgsmål på skift. <li><b>Gå unplugged.</b>
-    Vi tilbyder øvelser, som slet ikke kræver nogen form for computer.</ul>
   hoc_faq_need_computers_a_markdown: |-
     Nej. Vi har Hour of code-selvstudier, der fungerer på pc'er, smartphones, tablets og nogle, der slet ikke kræver nogen computer! Du kan deltage, uanset hvor du er, med hvad du end har.
 
@@ -2442,27 +2542,16 @@ da:
     - ** Brug en projiceret skærm. ** Hvis du har en projektor og skærm til en internetforbundet computer, kan hele din gruppe lave en Hour of code sammen. Se videoer sammen og løs gåder skiftevis eller besvar spørgsmål.
     - ** Frakoblet.** Vi tilbyder [selvstudier, der ikke kræver nogen computer] %{unplugged_url}
   hoc_faq_international_q: Jeg er i <country>. Hvordan deltager jeg internationalt?
-  hoc_faq_international_a: Alle kan organisere en Hour of Code begivenhed, overalt
-    i verden. Sidste år deltog elever over hele verden i Hour of Code. Find ud af
-    mere <a href='promote'> her</a>.
   hoc_faq_international_a_markdown: Alle kan organisere en Hour of Code-begivenhed,
     hvor som helst i verden. Sidste år, studerende over hele verden sluttede sig sammen
     til Hour of Code. Find ud af mere [here](%{promote}).
   hoc_faq_tutorial_q: Hvordan kan jeg lave en øvelse eller vejledning til Hour of
     Code?
-  hoc_faq_tutorial_a: Hvis du er interesseret i at blive øvelsespartner, <a href='target-tutorial-guidelines'>så
-    tjek vores retningslinjer og instruktioner</a>. Vi ønsker at tilbyde mange muligheder,
-    men hovedformålet er at elever og lærere som slet ikke kender til programmering
-    skal få den bedst mulige oplevelse.
   hoc_faq_tutorial_a_markdown: Hvis du er interesseret i at blive en selvstudie-partner,
     [se vores retningslinjer og instruktioner](%{tutorial_guidelines}). Vi vil gerne
     være vært for en række spændende muligheder, men det primære mål er at optimere
     oplevelsen for studerende og lærere, der er nye inden for datalogi.
   hoc_faq_account_q: Behøver elever at logge på med en konto?
-  hoc_faq_account_a: Nej. Der kræves ingen form for registrering eller login, for
-    at elever kan deltage i Hour of Code. De fleste af de <a href='http://code.org/learn/beyond'>udvidede
-    kurser</a> kræver at der oprettes konti, så man kan følge elevernes status og
-    fremdrift.
   hoc_faq_account_a_markdown: Nej. Absolut ingen tilmelding eller login kræves for
     studerende for at prøve Hour of code. De fleste af [opfølgningskurser] (%{codeorg_url}
     / lær / udover) kræver oprettelse af konto for at gemme de studerendes fremskridt.
@@ -2470,11 +2559,6 @@ da:
     du ønsker at oprette konti til dine studerende, skal du følge disse [instructions]
     (https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Hvilken aktivitet skal jeg bruge til gymnasieelever?
-  hoc_faq_high_school_a: Uanset alder, anbefaler vi først at prøve en af begynder-øvelserne
-    på <a href='http://code.org/learn'> Code.org/learn</a>, for eksempel øvelsen med
-    Angry Birds eller Anna og Elsa fra Frozen. En gymnasieelev kan ofte gennemføre
-    en af disse på 30 minutter og kan derefter prøve en mere avanceret øvelse i JavaScript,
-    som for eksempel Khan Academy eller CodeHS.
   hoc_faq_high_school_a_markdown: Vores Star Wars- og Minecraft- selvstudier er gode
     til gymnasieelever, især Star Wars JavaScript-versionen og der er gratis afspilningsniveau
     på begge selvstudier. Alternativt anbefaler vi, at du prøver en af begynderstudierne
@@ -2484,22 +2568,12 @@ da:
     studie i JavaScript, såsom Khan Academy eller CodeHS.
   hoc_faq_scratch_q: Jeg bruger Scratch til Hour of Code, men hvad nu hvis mine elever
     har iPads i stedet for bærbare computere?
-  hoc_faq_scratch_a: Scratch kan ikke køre på tablets. Hvis du har yngre elever, kan
-    de bruge ScratchJR iPad appen. Hvis du ser på øvelserne på <a href='http://code.org/learn'>
-    Code.org/learn</a>, kan du finde andre øvelser, som virker på iPads - fra Code.org,
-    Tynker, Lightbot eller CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch kører ikke på tabletter. Hvis dine elever er
     unge, kan de bruge ScratchJR iPad-appen (til tidlige læsere). Hvis du ser på vejledningerne
     på [%{partner_url}/learn] (%{codeorg_url}/learn), kan du finde andre tutorials,
     der fungerer på iPads - fra Code.org, Tynker, Lightbot eller CodePark.
   hoc_faq_count_hoc_q: Hvordan tælles antallet af Hours of Code?
   hoc_faq_map_q: Hvorfor kan jeg ikke se min prik på kortet?
-  hoc_faq_map_a: Vi er så kede af at du ikke ser dit arrangement på Hour of Code-kortet.
-    På grund af de titusindvis af arrangementer, samler kortet flere i en enkelt markør
-    på kortet. Hvis du klikker på tallet over kortet, kommer du til en liste med alle
-    arrangementer, og der kan du finde dit også. Og på grund af de mange tilmeldinger
-    tager det også typisk op til 48 timer før kortet og arrangementslisten er fuldt
-    opdaterede - så kom tilbage om et par dage!
   hoc_faq_map_a_markdown: Vi beklager så meget, at du ikke ser din begivenhed på kortet
     med Hour of code. På grund af de titusindvis af arrangører, der tilmelder sig,
     samler kortet dataene og viser et punkt for flere begivenheder. Hvis du klikker
@@ -2508,33 +2582,12 @@ da:
     der. Derudover tager kortet og begivenhedslisten normalt 48 timer at opdatere
     i betragtning af de tusinder af mennesker, der tilmelder sig Hour of code. Kom
     tilbage om et par dage!
-  hoc_faq_count_hoc_a: Optællingen giver ikke et nøjagtigt mål for deltagelse. Fordi
-    vi ikke kræver at eleverne er logget ind eller registreret kan det ske at nogle
-    elever bliver talt to gange mens elever der par-programmerer for eksempel kun
-    bliver talt en gang. Læs flere detaljer om målingen<a href='http://code.org/loc'>
-    her</a>.
   hoc_faq_count_hoc_a_markdown: Hour of code-trackeren måler ikke helt nøjagtigt.
     Vi tæller ikke unikke studerende-id'er perfekt, når vi sporer deltagelse i Hour
     of code, især fordi vi ikke kræver, at studerende logger ind eller registrerer.
     Derfor optæller vi både over og under deltagere på samme tid. Læs alle detaljer
     [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Hvor meget kan man lære på en time?
-  hoc_faq_one_hour_a: 'Formålet med Hour of Code er ikke at lære enhver at blive datalog
-    på en time. En time er kun nok til at lære, at programmering er sjovt og kreativt
-    og at alle kan arbejde med det uanset alder og baggrund. Målestokken for denne
-    kampagnes succes er ikke, hvor meget       den enkelte deltager lærer - succes''en
-    bliver reflekteret ved udbredt deltagelse på tværs af køn og etnisk og socioøkonomisk
-    baggrund og den efterfølgende stigning i tilmelding til og deltagelse i IT-uddannelser
-    på alle niveauer. Millioner af de lærere og elever som deltager, har besluttet
-    at fortsætte ud over en time - en dag, en uge eller endnu længere. Mange elever
-    har efterfølgende besluttet sig for at tage en IT-uddannelse. Nogle endda på universitetsniveau.<br/><br/>
-    Ud over eleverne er der en anden, der har lært noget: Underviseren som ved at
-    deltage i forløbet har fået selvtillid i forhold til at undervise  i programmering
-    uden nødvendigvis at have en formel uddannelse inden for området. Titusindvis
-    af lærere beslutter sig til at videreuddanne sig. Og skoleledere ser at IT og
-    programmering er noget, som deres elever ønsker og noget, som lærerne er i stand
-    til at undervise i. <br/><br/> Frem for alt: Hvad alle deltagere lærer på en time
-    er, at vi kan gøre alt dette.'
   hoc_faq_one_hour_a_markdown: |-
     Målet med Hour of code er ikke at lære nogen at blive en ekspert og computerforsker på en time. En time er kun nok til at lære, at datalogi er sjovt og kreativt, at det er tilgængeligt i alle aldre, for alle studerende, uanset baggrund. Denne kampagnes mål for succes er ikke, hvor meget CS-studerende lærer - succesen afspejles i en bred deltagelse på tværs af køn, etniske og socioøkonomiske grupper og den deraf følgende stigning i tilmelding og deltagelse, vi ser i CS-kurser på alle klassetrin. Millioner af de deltagende lærere og studerende har besluttet at bruge mere end en time  og lære en hel dag eller en hel uge eller længere, og mange studerende har besluttet at tilmelde sig et helt kursus (eller endda en college-major).
 
@@ -2542,38 +2595,27 @@ da:
 
     Frem for alt kan vi gøre det, som alle deltagere kan lære på en time.
   hoc_faq_more_questions_q: Flere spørgsmål?
-  hoc_faq_more_questions_a: Prøv at finde svaret i vores <a href='http://support.code.org'>support-forum</a>.
   hoc_faq_more_questions_a_markdown: Prøv at finde et svar i vores [support forum]
     (http://support.code.org).
   hoc_faq_keep_learning_q: Hvordan kan jeg fortsætte med at lære efter Hour of Code?
-  hoc_faq_keep_learning_a: Enhver kan afholde Hour of Code på ethvert tidspunkt. Vejledningerne
-    er online hele året. Du kan forvente, at alle vejledninger og alle øvelser er
-    tilgængelige på vores websted i al evighed. Gå til <a href='/promote'>our resources</a>
-    for event how-to guides og andre ressourcer der kan hjælpe dig til at gøre din
-    Hour of Code event til en succes.
   hoc_faq_keep_learning_a_markdown: Enhver kan til enhver tid være vært for en Hour
     of code. Selvstudierne er tilgængelige året rundt. Du kan forvente, at alle vores
     selvstudier og læseplaner er tilgængelige på vores side altid. Gå til [vores ressourcer]
     (%{promote}) for vejledninger til begivenheder og andre ressourcer for at hjælpe
     med at gøre din Hour of code-begivenheden til en succes.
   hoc_faq_certificates_q: Hvor kan jeg finde certifikater til mine elever?
-  hoc_faq_certificates_a: Gå til vores <a href='%{codeorg_url}/certificates'> certifikater
-    side</a> hvor du kan udskrive certifikater for hele din klasse før tid. Du kan
-    også udskrive <a href='%{codeorg_url}/certificates?course=mc'> specielle certifikater</a>
-    for de elever, der laver Minecraft øvelsen.
-  hoc_faq_certificates_a_markdown: Gå til vores [certifikatside] (%{codeorg_url} /
-    certifikater), hvor du kan udskrive certifikater til hele din klasse på forhånd.
-    Du kan også udskrive [specielle certifikater] (%{codeorg_url} / certifikater?
-    Kursus = mc) for studerende, der udfører Minecraft-selvstudie.
+  hoc_faq_certificates_answer_markdown: Gå til vores [certifikatside] (%{certificates_url})
+    hvor du kan udskrive certifikater for hele din klasse på forhånd.
   hoc_faq_logo_q: Er der begrænsninger for hvordan jeg må bruge Hour of Code logo
     og navn?
-  hoc_faq_logo_a: Hour of Code er varemærkebeskyttet. Vi ønsker ikke at forhindre
-    dens anvendelse, men vi ønsker at sikre dens anvendelse passer inden for nogle
-    grænser. Se venligst <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    disse retningslinjer for anvendelse</a>.
   hoc_faq_logo_a_markdown: Hour of code er varemærkebeskyttet. Vi ønsker ikke at forhindre
     brugen af den, men vi vil sikre os, at dets anvendelse passer inden for få grænser.
     Se [disse retningslinjer for brug](%{logo_url}).
+  hoc_faq_bug_q: Jeg fandt en fejl i en Hour of Code-aktivitet! Hvad skal jeg gøre?
+  hoc_faq_bug_a_markdown: |-
+    Åh nej! Hvis du er stødt på en fejl i en Hour of Code-aktivitet - tjek først webadressen for den aktivitet, du er på. Hvis URL'en starter med studio.code.org, kan vores Code.org Support team hjælpe! Klik på spørgsmålstegnikonet øverst til højre på skærmen, og vælg derefter „Rapporter et problem“ i rullemenuen.
+
+    Hvis URL'en ikke starter med studio.code.org, arbejder du sandsynligvis på en tredjepartsaktivitet og bliver nødt til at kontakte virksomhedens supportteam for yderligere hjælp.
   stats_hoc_2013_image_alt: Statistik fra Hour of Code 2013
   stats_growth: Den hurtigste til at nå 15 millioner brugere.
   stats_i18n: Elever kan lære på 40 sprog
@@ -13224,7 +13266,7 @@ da:
   hoc_how_to_faq_answer_devices_02: Hvis enhederne er begrænsede eller utilgængelige,
     kan du prøve [parprogrammering] (%{pair_url}) eller udforsk vores [frakoblede
     aktiviteter] (%{unplugged_url}) for at lære uden nogen enheder overhovedet!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Hvem kan melde sig frivilligt?
   hoc_how_to_faq_answer_volunteer: Enhver, der brænder for datalogisk uddannelse og
     øget mangfoldighed inden for teknologi, kan være frivillig! Vi vil meget gerne
     se frivillige fra alle baggrunde deltage. Hour of Code indeholder et stort udvalg
@@ -13238,7 +13280,7 @@ da:
   hoc_how_to_faq_answer_account: Ingen tilmelding eller login kræves for studerende
     for at prøve Hour of Code. Tilmelding til Hour of Code opretter IKKE automatisk
     en Code.org-konto.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Andre Hour of Code-ressourcer til undervisere
   hoc_how_to_resources_promo_heading: Salgsfremmende ressourcer
   hoc_how_to_resources_promo_desc: Find alle de ressourcer, du har brug for - trykte
     og digitale - for at gøre opmærksom på din Hour of Code.
@@ -13310,6 +13352,22 @@ da:
     så vi også kan fremhæve din succes!'
   hoc_how_to_step_07_educators_desc_02: Du kan også udskrive certifikater for dine
     studerende for at vise deres præstation!
+  hoc_ai_top_desc: Alle kan lære om AI, uanset om du er studerende i klasseværelset
+    eller en underviser, der låser op for fremtiden for undervisning med og om AI.
+  hoc_ai_how_ai_works_video_series_desc: Denne serie af korte videoer introducerer
+    dig til, hvordan kunstig intelligens fungerer, og hvorfor det betyder noget. Dyk
+    derefter ned i spørgsmål som algoritmisk bias og etikken i AI-beslutningstagning.
+  hoc_ai_learn_how_ai_works_desc: Dyk ned i AI-verdenen med „Sådan fungerer AI“, lektioner
+    parret med vores videoserie, der introducerer dig til, hvordan AI fungerer, og
+    hvorfor det betyder noget.
+  hoc_ai_101_for_educators_desc: Oplev den banebrydende verden af kunstig intelligens
+    (AI) og dens transformative potentiale i uddannelse med vores grundlæggende online
+    læringsserie for lærere.
+  hoc_ai_impacts_desc: Engagér din klasse med lærerledede lektioner, der udforsker
+    virkningerne af kunstig intelligens og inviterer eleverne til at tænke på løsninger
+    på nogle af AI-problemerne.
+  hoc_ai_activities_desc: Disse helt nye Hour of Code-aktiviteter introducerer brugerne
+    til en verden af kunstig intelligens på en sjov og engagerende måde.
   team_page_full_team_alt_text: Næsten 100 Code.org-medarbejdere i matchende blå og
     gule t-shirts poserer i et hotelkonferencelokale til virksomhedens sommer 2022
     Codechella-begivenhed.
@@ -13833,6 +13891,23 @@ da:
     og downloads'
   video_library_page_not_hacked_video_title_7: 'Hvordan man ikke bliver hacket: Installer
     opdateringer'
+  thank_you_page_main_title: Tak fordi du hjælper med at opbygge en bevægelse
+  thank_you_page_description: Code.org Advocacy Coalition ønsker at takke de hundredtusinder
+    af lokale forkæmpere og fortalere, herunder lærere, medlemmer af samfundet, forskere,
+    nonprofitorganisationer, universiteter, virksomheder og offentlige institutioner,
+    der har støttet visionen om, at enhver elev på hver skole fortjener muligheden
+    for at lære datalogi. Tak for din støtte til denne bevægelse.
+  thank_you_page_members_section_title: 'Og til alle medlemmer af Code.org Advocacy
+    Coalition:'
+  thank_you_page_individual_organization_title: 'Tak til følgende personer og organisationer
+    for deres bidrag til denne rapport:'
+  thank_you_page_individual_organization_description: Datalogiske uddannelsesvejledere
+    ved hvert statsligt uddannelsesagentur, College Board, Della Cronin, Stuart Dexler,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Tak til de studerende og lærere, der er
+    citeret i denne rapport:'
+  thank_you_page_teachers_students_description: Tess Campion, Villa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Om os
   about_us_page_hero_description: Code.org® er en nonprofit inden for uddannelsesinnovation
     dedikeret til visionen om, at enhver elev på hver skole har mulighed for at lære
@@ -13987,6 +14062,115 @@ da:
     nå et fundraising-mål, der understøtter denne vision.
   about_page_donors_link_1: Giv en donation
   about_page_donors_link_2: "[se vores liste over donorer] (%{donors_url})"
+  teach_ai_title: Eksempler fra den virkelige verden. Praktiske ressourcer.
+  teach_ai_description: AI Guidance for Schools Toolkit er en ressource for beslutningstagere,
+    skoleledere, og personale til at udvikle indledende vejledning om AI i deres skoler.
+  teach_ai_button_label: Se værktøjssættet
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: App-laboratorium
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: Læs mere
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_description_1: Gratis sæt elementære læseplaner, der introducerer
+    eleverne til de grundlæggende begreber inden for datalogi og udfordrer dem til
+    at undersøge, hvordan computing og teknologi kan påvirke verden.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Introducer eleverne til software engineering
+    og objektorienteret design, mens de lærer Java programmeringssprog i denne gratis
+    læseplan for AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_2: Udforsk CS-principper
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
+  elementary_page_computer_science_card_title_1: Grundlæggende om datalogi
+  elementary_page_computer_science_card_title_2: Datalogi forbindelser
+  elementary_page_computer_science_description_1: Gratis sæt elementære læseplaner,
+    der introducerer eleverne til de grundlæggende begreber inden for datalogi og
+    udfordrer dem til at undersøge, hvordan computing og teknologi kan påvirke verden.
+  elementary_page_computer_science_description_2: Lav forbindelser mellem datalogi
+    (CS) og andre fag som matematik, sprogkunst, videnskab og samfundsfag.
   language_code:
     ar: arabisk
     az: Aserbajdsjansk

@@ -359,6 +359,9 @@ Dashboard::Application.routes.draw do
       resources :reference_guides, param: 'key', path: 'guides'
     end
 
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
+
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
     get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%{all}')
@@ -921,6 +924,7 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        get 'section_instructors/check', to: 'section_instructors#check'
         resources :section_instructors, only: [:index, :create, :destroy] do
           member do
             put 'accept'
@@ -928,7 +932,6 @@ Dashboard::Application.routes.draw do
           end
         end
         get 'section_instructors/:section_id', to: 'section_instructors#show'
-        get 'section_instructors/check', to: 'section_instructors#check'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do

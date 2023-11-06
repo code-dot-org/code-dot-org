@@ -1,7 +1,8 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
-const icon = require('@cdo/static/ai-fab-background.png');
+import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -16,6 +17,7 @@ export default function RubricFloatingActionButton({
   studentLevelInfo,
   currentLevelName,
   reportingData,
+  aiEnabled,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -55,9 +57,12 @@ export default function RubricFloatingActionButton({
     }
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
+  const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
+
   return (
     <div id="fab-contained">
       <button
+        id="ui-floatingActionButton"
         className={style.floatingActionButton}
         // I couldn't get an image url to work in the SCSS module, so using an inline style for now
         style={{backgroundImage: `url(${icon})`}}
@@ -70,7 +75,7 @@ export default function RubricFloatingActionButton({
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
         currentLevelName={currentLevelName}
-        initialTeacherHasEnabledAi
+        teacherHasEnabledAi={aiEnabled}
         open={isOpen}
         closeRubric={handleClick}
       />
@@ -83,4 +88,5 @@ RubricFloatingActionButton.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
+  aiEnabled: PropTypes.bool,
 };

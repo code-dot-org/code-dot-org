@@ -1,14 +1,38 @@
-// A custom version of Blockly's Events.disableOrphans that will disable orphans
-// even if the workspace is dragging. This enables the preview to update as soon as
+// Event Handlers for Google Blockly.
+
+import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
+
+// A custom version of Blockly's Events.disableOrphans. This makes a couple
+// changes to the original function.
+
+// First, it will disable orphans even if the workspace is dragging.
+// This enables the preview to update as soon as
 // a block is dragged away from "when run", and for a new block to be
 // immediately disabled until it is attached to the main block.
-// Copied and modified from Blockly/core/events/utils:disableOrphans. The only change from
+// Copied and modified from Blockly/core/events/utils:disableOrphans. The change from
 // the original function was to remove a check on eventWorkspace.isDragging():
 // https://github.com/google/blockly/blob/1e3b5b4c76f24d2274ef4947c1fcf657f0058f11/core/events/utils.ts#L549
+
+// Second, we also run this event if a block change event fired for a block going from
+// enabled to disabled. This is because of a bug in procedure renames.
+// When we rename a procedure it triggers all call blocks to be enabled, whether or not
+// they are orphans. The only event we have for this is the block change event from enabled
+// to disabled, so we run our check on that event to re-enable any orphaned call blocks.
+// This bug is tracked by the Blockly team:
+// https://github.com/google/blockly-samples/issues/2035
 export function disableOrphans(blockEvent) {
+  // This check is for when a block goes from disabled to enabled (value false is enabled).
+  // We need to run the check on this event due to the Blockly bug described above.
+  const isEnabledEvent =
+    blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
+    blockEvent.element === 'disabled' &&
+    !blockEvent.newValue &&
+    blockEvent.oldValue;
+
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
-    blockEvent.type === Blockly.Events.BLOCK_CREATE
+    blockEvent.type === Blockly.Events.BLOCK_CREATE ||
+    isEnabledEvent
   ) {
     if (!blockEvent.workspaceId) {
       return;
@@ -39,5 +63,13 @@ export function disableOrphans(blockEvent) {
         Blockly.Events.setRecordUndo(initialUndoFlag);
       }
     }
+  }
+}
+
+// When the viewport of the workspace is changed (due to scrolling for example),
+// we need to reposition any callouts.
+export function adjustCalloutsOnViewportChange(event) {
+  if (event.type === Blockly.Events.VIEWPORT_CHANGE) {
+    handleWorkspaceResizeOrScroll();
   }
 }

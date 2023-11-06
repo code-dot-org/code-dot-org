@@ -137,6 +137,12 @@
         "CSN-1.D.3": {
           "description": "World Wide Web İnternetdən istifadə edir."
         },
+        "D4.4.3-5": {
+          "description": "Tənqid arqumentləri"
+        },
+        "D4.5.3-5": {
+          "description": "Tənqid izahları"
+        },
         "DAT-1.A.4": {
           "description": "1 bayt 8 bitdir."
         },

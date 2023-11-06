@@ -5238,3 +5238,18 @@ ka:
           description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
         how-ai-works-2023:
           title: როგორ მუშაობს AI
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: შესავალი
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: შესავალი
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: შესავალი
+          lesson_groups:
+            lessonGroup-7:
+              display_name: შესავალი

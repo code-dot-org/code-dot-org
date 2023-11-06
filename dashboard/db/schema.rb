@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_26_194936) do
+ActiveRecord::Schema.define(version: 2023_11_03_160232) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -635,6 +635,20 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
     t.datetime "updated_at", null: false
     t.index ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id"
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
+  end
+
+  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "learning_goal_ai_evaluation_id", null: false
+    t.bigint "teacher_id", null: false
+    t.boolean "ai_feedback_approval", null: false
+    t.boolean "false_positive"
+    t.boolean "false_negative"
+    t.boolean "vague"
+    t.boolean "feedback_other"
+    t.text "other_content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_goal_ai_evaluation_id"], name: "index_feedback_on_learning_goal_ai_evaluation"
   end
 
   create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1463,6 +1477,14 @@ ActiveRecord::Schema.define(version: 2023_10_26_194936) do
     t.datetime "updated_at", null: false
     t.index ["plc_course_id"], name: "index_plc_user_course_enrollments_on_plc_course_id"
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
+  end
+
+  create_table "potential_teachers", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "source_course_offering_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "programming_classes", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

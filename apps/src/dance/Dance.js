@@ -35,8 +35,6 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 import utils from './utils';
 
 const ButtonState = {
@@ -182,6 +180,7 @@ Dance.prototype.init = function (config) {
           <DanceVisualizationColumn
             showFinishButton={showFinishButton}
             setSong={this.setSongCallback.bind(this)}
+            resetProgram={this.reset.bind(this)}
           />
         }
         onMount={onMount}
@@ -402,7 +401,6 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
-    doAi: this.doAi.bind(this),
     resourceLoader: new ResourceLoader(ASSET_BASE),
   });
 
@@ -488,8 +486,7 @@ Dance.prototype.preview = async function () {
   const previewDraw = () => {
     this.nativeAPI.setEffectsInPreviewMode(true);
 
-    // the user setup hook initializes effects,
-    // needs to happen in preview mode for some effects (eg, tacos)
+    // Calls each effect's init() step.
     this.hooks.find(v => v.name === 'runUserSetup').func();
 
     // redraw() (rather than draw()) is p5's recommended way
@@ -500,7 +497,8 @@ Dance.prototype.preview = async function () {
   };
 
   // This is the mechanism p5 uses to queue draws,
-  // so we do the same so we end up after any queued draws.
+  // so we use the same mechanism to ensure that
+  // this preview is drawn after any queued draw calls.
   window.requestAnimationFrame(previewDraw);
 };
 
@@ -508,14 +506,18 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
-  const danceMessage = message ? danceMsg[message]() : '';
-
+  // Assign danceMessage the value of the message key if the key exists.
+  // Otherwise, assign it an empty string.
+  const danceMessage = danceMsg[message] ? danceMsg[message]() : '';
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
     this.message = danceMessage;
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = danceMessage;
+    // This message is a general message for users to keep coding since something is 'not quite right'.
+    // This is the general validation feedback given if the validation string key is not found.
+    const keepCodingMsg = danceMsg.danceFeedbackKeepCoding();
+    this.message = danceMessage.length === 0 ? keepCodingMsg : danceMessage;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -762,37 +764,5 @@ Dance.prototype.captureThumbnailImage = function () {
     captureThumbnailFromCanvas(canvas);
   } else {
     setThumbnailBlobFromCanvas(canvas);
-  }
-};
-
-Dance.prototype.doAi = async function (input) {
-  const systemPrompt =
-    'You are a helper which can accept a request for a mood or atmosphere, and you then generate JSON like the following format: {backgroundColor: "black", backgroundEffect: "splatter", foregroundEffect: "rain"}.  The only valid values for backgroundEffect are circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars.  The only valid values for backgroundColor are rave, cool, electronic, iceCream, neon, tropical, vintage, warm.  The only valid values for foregroundEffect are bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos.  Make sure you always generate all three of those values.  Also, if you receive a request to place a dancer somewhere, then add {setDancer: "true"} to the result JSON.  Also, add a field called "explanation" to the result JSON, which contains a single-sentence explanation of why you chose the values that you did, at the reading level of a 5th-grade school student.';
-
-  const messages = [
-    {
-      role: 'system',
-      content: systemPrompt,
-    },
-    {
-      role: 'user',
-      content: input,
-    },
-  ];
-
-  const response = await HttpClient.post(
-    CHAT_COMPLETION_URL,
-    JSON.stringify({messages}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
-
-  if (response.status === 200) {
-    const res = await response.json();
-    return res.content;
-  } else {
-    return null;
   }
 };

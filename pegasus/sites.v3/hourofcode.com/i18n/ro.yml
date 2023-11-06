@@ -5,40 +5,55 @@ ro:
   language: Română
   front_title: Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}
   coming_soon: În curând
-  campaign_date_start_short: 6 decembrie
-  campaign_date_start_long: 5 decembrie
-  campaign_date_short: 5-11 dec.
-  campaign_date_full: 5-11 decembrie
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 decembrie, 2022
-  nonus_campaign_date_start_short: 1 Oct.
-  nonus_campaign_date_start_long: Octombrie
-  nonus_campaign_date_short: 1 octombrie - 18 decembrie
-  nonus_campaign_date_full: 1 octombrie - 18 decembrie
-  nonus_campaign_date_year: '2022'
+  new: Nou
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: Elevii învaţa în peste 45 de limbi
+  hoc_stat_hours_served: Peste 100M de elevi au încercat o Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  campaign_date_start_short: 4 dec.
+  campaign_date_start_long: 4 decembrie
+  campaign_date_short: 4-10 dec.
+  campaign_date_full: 4-10 decembrie
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 decembrie, 2023
+  nonus_campaign_date_start_short: 5 sept.
+  nonus_campaign_date_start_long: Septembrie 5
+  nonus_campaign_date_short: 5 septembrie - 17 decembrie
+  nonus_campaign_date_full: 5 septembrie - 17 decembrie
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
-  latam_campaign_date_start_short: 1 Oct.
-  latam_campaign_date_start_long: Octombrie
-  latam_campaign_date_short: 1 octombrie - 18 decembrie
-  latam_campaign_date_full: 1 octombrie - 18 decembrie
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_start_short: 5 sept.
+  latam_campaign_date_start_long: Septembrie 5
+  latam_campaign_date_short: 5 septembrie - 17 decembrie
+  latam_campaign_date_full: 5 septembrie - 17 decembrie
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
-  europe_campaign_date_start_short: 1 Oct.
-  europe_campaign_date_start_long: Octombrie
-  europe_campaign_date_short: 1 octombrie - 18 decembrie
-  europe_campaign_date_full: 1 octombrie - 18 decembrie
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_start_short: 5 sept.
+  europe_campaign_date_start_long: Septembrie 5
+  europe_campaign_date_short: 5 septembrie - 17 decembrie
+  europe_campaign_date_full: 5 septembrie - 17 decembrie
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
-  africa_campaign_date_start_short: 1 Oct.
-  africa_campaign_date_start_long: Octombrie
-  africa_campaign_date_short: 1 octombrie - 18 decembrie
-  africa_campaign_date_full: 1 octombrie - 18 decembrie
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_start_short: 5 sept.
+  africa_campaign_date_start_long: Septembrie 5
+  africa_campaign_date_short: 5 septembrie - 17 decembrie
+  africa_campaign_date_full: 5 septembrie - 17 decembrie
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
-  hoc2023_header: Creativitate cu AI
+  hoc2023_header: Creativitate cu IA
+  hoc2023_hero_desc_homepage: Alăturați-vă milioane de oameni din întreaga lume pentru
+    a organiza o oră de codificare, cu sau fără IA și învățați cum funcționează AI.
+    Oricine, oriunde o poate face. Nu este nevoie de experiență.
+  hoc2023_hero_desc_learn_page: Anul acesta, ducem Hour of Code la noi culmi, oferind
+    oportunități de codare care cuprind atât inteligența artificială (AI), cât și
+    componentele non-AI.
   hoc2023_social_creativity_with_ai_title: Hour of Code - Ce vei crea?
   hoc2023_social_creativity_with_ai_desc: Utilizați informatica pentru a explora și
     a afla despre AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Explorează, Joacă-Te, Creează!
   social_hoc2022_explore_play_create: Utilizează informatica pentru a explora, a te
     juca și a crea!
@@ -51,6 +66,9 @@ ro:
     Nas X, Selena Gomez, muzică de la Disney „Encanto” și multe altele!
   social_hoc2023_dance: Cu Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     muzică din „Encanto” de la Disney și multe altele!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Învață astăzi, construiește un viitor mai bun.
@@ -179,6 +197,8 @@ ro:
     și de ce este important.
   social_ai_title: Aflați mai multe despre inteligența artificială (AI) | Code.org
   social_ai_desc: Instrumente pentru a ajuta elevii și profesorii să aducă AI în clasă.
+  social_videos_desc: Videoclipuri captivante de informatică pentru cursanții de toate
+    vârstele.
   pl_superhero_title: Ajutați elevii să devină supereroi!
   pl_superhero_desc: Alăturați-vă programului nostru de învățare profesională extrem
     de susținător pentru educatorii de gimnaziu și liceu.
@@ -211,6 +231,15 @@ ro:
   device_laptop: Laptop
   device_desktop_computer: Computerul desktop
   device_mobile_device: Dispozitiv mobil
+  for_everyone: Pentru toată lumea
+  for_students_teacher_led_learning: 'Pentru elevi: Învățare condusă de profesor'
+  for_students_teacher_led_lessons: 'Pentru elevi: Lecții conduse de profesor'
+  professional_development: Dezvoltare profesională
+  how_ai_works_video_series: Cum funcționează AI Seria video
+  learn_how_ai_works: Aflați cum funcționează AI
+  ai_101_for_educators: AI 101 pentru educatori
+  learn_about_ai_impacts: Aflați mai multe despre impactul AI
+  hoc_ai_activities: Activități AI Hour of Code
   subscribe_to_emails_heading: Abonați-vă la e-mailuri
   subscribe_to_emails_desc: Citiți despre ce se întâmplă pe Code.org și în educația
     informatică prin actualizări trimestriale prin intermediul listei noastre de corespondență.
@@ -265,21 +294,32 @@ ro:
     informații și sprijin de la alți educatori.
   required_materials: 'Materiale Necesare:'
   optional_materials: 'Materiale Opționale:'
+  for_students: For students
+  for_educators: Pentru educatori/profesori
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Organizați un eveniment
   call_to_action_register_event: Înregistrați-vă evenimentul
+  call_to_action_register_your_hoc: Înregistrează-ți Hour of Code
   call_to_action_select_activity: Selectați o activitate
   call_to_action_start_activity: Începeți o activitate
   call_to_action_get_certificates: Obțineți certificate
   call_to_action_go_beyond_hoc: Mergeți dincolo de Ora Codului
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Vizualizați resursele promoționale
   call_to_action_learn_more: Aflați mai multe
   call_to_action_watch_now: Uita-te acum
   call_to_action_try_activity: Încercați activitatea
-  call_to_action_try_activities: Încercați activități
-  call_to_action_explore_activities: Explorați activitățile
+  call_to_action_try_activities: Încearcă activitățile
+  call_to_action_try_hoc_ai_activities: Încercați activitățile Hour of Code AI
+  call_to_action_explore_activities: Explorează activitățile
   call_to_action_explore_ai: Explorați AI
   call_to_action_explore_unit: Explorați unitatea
   call_to_action_explore_curriculum: Explorați curriculumul
+  call_to_action_explore_curricula: Explorați cursurile
   call_to_action_explore_curriculum_options: Explorați opțiunile curriculare
   call_to_action_explore_lessons: Explorați lecțiile
   call_to_action_explore_modules: Explorați modulele
@@ -364,6 +404,11 @@ ro:
     de advocacy
   call_to_action_visit_store: Vizitați magazinul
   call_to_action_view_faqs: Vezi mai multe Întrebări frecvente
+  call_to_action_applications_open: Aplicațiile sunt acum deschise
+  call_to_action_apply_cs_ambassador: Aplică pentru a fi Ambasador CS
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Vizualizați ghidul instrucțiunilor
     pentru educatori
   aria_label_call_to_action_hoc_how_to_companies: Vizualizați ghidul de instrucțiuni
@@ -380,6 +425,9 @@ ro:
     pentru voluntari
   aria_label_call_to_action_hoc_how_to_virtual_events: Vizualizați ghidul de instrucțiuni
     pentru evenimente virtuale
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -499,11 +547,25 @@ ro:
   curriculum_name_creating_apps_with_devices: Crearea de Aplicații cu ajutorul Dispozitivelor
   curriculum_name_poetry: Codificarea cu Poezia
   curriculum_name_dance_party: Petrecere de dans
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Rezolvarea Problemelor & Calculul
   curriculum_name_web_development: Dezvoltare Web
   curriculum_name_interactive_animations_games: Animații & Jocuri Interactive
   curriculum_name_design_process: Procesul de Proiectare
   curriculum_name_data_society: Date & Societate
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Set gratuit de programe elementare care introduce elevii în
     conceptele fundamentale ale informaticii.
   curriculum_desc_csf_express: Învățați să creați programe de calculator, să dezvolți
@@ -626,12 +688,16 @@ ro:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Grădiniță
   module_grade_grade_01: Clasa 1
@@ -639,6 +705,12 @@ ro:
   module_grade_grade_03: Clasa 3
   module_grade_grade_04: Clasa 4
   module_grade_grade_05: Clasa 5
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: Profesori K-5 (grădiniță-cl. 5-a)
   module_grade_6_10_teachers: Profesori 6-10
   module_grade_9_12_teachers: Profesori 9-12
@@ -735,6 +807,56 @@ ro:
     Curriculum
   heading_csa_ai: Căutați lucruri de făcut după examenul AP®?
   heading_bring_cs_to_students: Aduceți informatica studenților
+  heading_cs_ambassador_program: Programul Ambasadorului CS
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: Dacă ești un elev de liceu pasionat de încurajarea mai multor
+    femei tinere să ia informatică la școala ta, atunci avem nevoie de tine!
+  cs_ambassador_desc: Fiecare domeniu, inclusiv medicina, divertismentul, sportul,
+    educația, afacerile, moda și antreprenoriatul este atins de informatică. Cu toate
+    acestea, doar 5% dintre tinerele de liceu iau cursuri de informatică. Ambasadorii
+    pot ajuta la reducerea acestui decalaj de gen încurajându-și colegii să ia o clasă
+    de informatică.
+  cs_ambassador_application_date: Aplicațiile sunt deschise până pe 8 noiembrie 2023
+  cs_ambassador_application_subhead: Lucrați cu un profesor pentru a vă trimite cererea
+    astăzi
+  cs_ambassador_application_questions: Întrebări? Vă rugăm să contactați [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Ce fac ambasadorii CS?
+  cs_ambassador_do_desc: Ambasadorii CS încurajează tinerele femei să exploreze subiectul
+    și să se ridice reciproc în timp ce își recapătă locul în informatică. Ambasadorii
+    CS se conectează cu colegii lor pentru a împărtăși entuziasmul și dragostea lor
+    pentru informatică. Ei vizitează sălile de clasă, găzduiesc mese la prânz și vorbesc
+    la adunări și întâlniri de club. Ambasadorii CS colaborează cu profesorii și administratorii
+    școlii pentru a distruge stereotipurile care țin femeile tinere înapoi.
+  cs_ambassador_steps_heading: De ce am nevoie pentru a deveni ambasador CS?
+  cs_ambassador_steps_list_title_01: Pasiune
+  cs_ambassador_steps_list_title_02: Experiență într-un curs CS
+  cs_ambassador_steps_list_title_03: Școala care oferă CS
+  cs_ambassador_steps_list_desc_01: O pasiune pentru încurajarea tinerelor femei de
+    la școala ta să ia cursuri de informatică
+  cs_ambassador_steps_list_desc_02: 'Ați luat o clasă de informatică de un an în anul
+    școlar 2022-23 sau mai devreme (recomandat: Principiile CS sau AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Participați la un liceu care oferă în mod regulat
+    un curs de informatică de un an (recomandat: Principiile CS sau AP® CSA)'
+  cs_ambassador_benefits_heading: Beneficiile programului
+  cs_ambassador_benefits_list_title_01: Comunitatea națională
+  cs_ambassador_benefits_list_title_02: Serviciu comunitar
+  cs_ambassador_benefits_list_title_03: Recunoaștere
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Certificat
+  cs_ambassador_benefits_list_title_06: Experiențe
+  cs_ambassador_benefits_list_desc_01: Accesul la o comunitate națională de tineri
+    lideri dedicați reducerii decalajului de gen în informatică.
+  cs_ambassador_benefits_list_desc_02: Orele de serviciu comunitar și oportunitatea
+    de a câștiga [Premiul Serviciului de Voluntariat Prezidențial al SUA] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Recunoaștere ca ambasador 2023-2024 și eligibil
+    pentru a fi onorat în Code.org Ambassador Hall of Fame.
+  cs_ambassador_benefits_list_desc_04: Fiți identificați ca ambasador CS prin îmbrăcăminte
+    specială de marcă Code.org, autocolante și multe altele!
+  cs_ambassador_benefits_list_desc_05: Certificat oficial de participare de la Code.org.
+  cs_ambassador_benefits_list_desc_06: Câștigați experiențe și povești pe care să
+    le împărtășiți în cererea dvs. de facultate, CV-ul și multe altele!
   professional_learning_section_desc: Obțineți sprijinul de care aveți nevoie în timp
     ce vă pregătiți să predați. Profesorii o adoră, peste 90% dintre ei considerând-o
     cea mai bună dezvoltare profesională!
@@ -786,6 +908,13 @@ ro:
     Principiile de Informatică ale Code.org și pentru a primi mementouri utile, sfaturi
     și actualizări trimise direct în căsuța de e-mail.
   subscribe_form_section_unsubscribe: Vă puteți dezabona în orice moment.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Cum funcționează Blockchain
   blockchain_hero_desc: Scufundați-vă în lumea blockchain-ului cu „Cum funcționează
     Blockchain”, noua noastră serie video și lecțiile însoțitoare!
@@ -894,6 +1023,12 @@ ro:
   ai_curriculum_grades_05: 'Niveluri de clasă: 9-12'
   ai_curriculum_btn_aria_label_05: Explorați modulul Software Engineering & Computer
     Vision
+  ai_curriculum_title_06: Impactul social al IA generative
+  ai_curriculum_desc_06: Investigați impactul IA generativă din diferite perspective,
+    apoi colaborați ca o echipă pentru a veni cu linii directoare care să răspundă
+    celor mai multe nevoi ale tuturor participanților.
+  ai_curriculum_btn_aria_label_06: Vizualizați planul de lecție al impactului social
+    al IA generativă
   ai_carousel_heading: 'Ce spun profesorii despre AI cu Code.org:'
   ai_carousel_quote_01: Această lecție a oferit, de asemenea, elevilor mei posibilitatea
     de a vedea că există un element de opinie în sistemele de clasificare. Mai târziu,
@@ -1945,6 +2080,9 @@ ro:
     în SUA și cele zece politici pe care le recomandăm statelor să le adopte pentru
     a face informatica fundamentală pentru toți studenții. În plus, aflați cum puteți
     conduce schimbarea în statul dvs.
+  yw_page_top_heading: Femei tinere în informatică
+  yw_page_top_desc: Deveniți ambasador CS și participați la reducerea decalajului
+    de gen în informatică.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Înscrieți-vă la Hour of Code Live
   hoc_live_learn_title: Învață cu Hour of Code Live
@@ -2322,10 +2460,16 @@ ro:
     informatică, utilizând tutoriale distractive pentru a demonstra oricui că poate
     învăța principiile fundamentale. Această campanie fundamentală este sprijinită
     de peste 400 de parteneri și 200.000 de educatori din întreaga lume.
+  hoc_homepage_registration_desc: Clasa sau grupul tău se poate alătura milioanelor
+    de persoane din întreaga lume care participă la Hour of Code! Înscrierile pentru
+    celebrarea anuală a Săptămânii Educației în domeniul Informaticii încep în octombrie.
+    Cu toate acestea, Hour of Code este disponibilă pe tot parcursul anului.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Citește ghidul nostru Cum-să]%{howto_guide_url}
     pentru a planifica un eveniment pentru clasa ta."
   hoc_homepage_highlights_heading: Puncte de atracție Hour of Code
   hoc_homepage_organized_by: Hour of Code este organizat de [Code.org]%{codeorg_url}
+  hoc_events_heading: Înregistrează-te să Găzduiești o Hour of Code
+  hoc_events_jump_to_map: Sari la harta Hour of Code
   signup_closed: Înregistrarea pentru Hour of Code este închisă acum. Verificați din
     nou în luna Octombrie pentru a vă înscrie la următoarea Hour of Code.
   signup_registration_not_required: Nu trebuie să vă înregistrați pentru a participa!
@@ -2359,7 +2503,9 @@ ro:
   signup_event_entire_school_label: Întreaga mea şcoală participă
   signup_event_location_label: Locatie eveniment (opţional)
   signup_event_location_error: Locația evenimentului trebuie precizată.
-  signup_special_event_flag_label: Evidenţiați evenimentul meu special
+  signup_special_event_flag_label: Evenimentul meu va implica un întreg municipiu,
+    o întreagă organizație, membrii unei comunități și/sau alte planuri speciale de
+    peste o oră
   signup_special_event_details_label: Detalii eveniment
   signup_send_posters_flag_label: Doresc <a href= "/resources#posters">postere</a>
     pentru școala sau organizația mea
@@ -2371,7 +2517,7 @@ ro:
     inspira pe elevii mei
   signup_email_preference_opt_in: Sunteți de acord să vă trimitem un e-mail cu actualizările
     cursurilor Code.org, oportunitățile locale sau alte știri despre știința calculatoarelor?
-  signup_email_preference_privacy: "(Vedeți polica noastră de confidențialitate)"
+  signup_email_preference_privacy: "(Vezi polica noastră de confidențialitate)"
   signup_email_preference_yes: Da
   signup_email_preference_yes_elementary: Da - Trimite-mi actualizări despre resursele
     școlii elementare
@@ -2437,6 +2583,8 @@ ro:
   map_header: Evenimentele Hour of Code din întreaga lume
   map_header_count_year: "%{event_count} evenimente înregistrate pentru Ora de Cod
     %{year}"
+  map_header_count_year_so_far: Evenimente %{event_count} înregistrate până acum în
+    %{year}
   see_all_events: Vezi toate evenimentele
   map_header_company: "# de "
   map_header_country: "# în %{country}"
@@ -2451,6 +2599,7 @@ ro:
     pagina de evenimente.</a>
   map_warning_markdown: O listă completă a evenimentelor poate fi vizualizată pe pagina
     [evenimente.] (%{events_url})
+  map_view_all_events: Vezi o listă completă a evenimentelor Hour of Code [here](%{events_url}).
   meta_tag_og_title: Hour of Code se apropie
   meta_tag_og_description: Hour of Code este o mişcare globală care ajunge la zeci
     de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite.
@@ -2472,14 +2621,6 @@ ro:
     %{random_donor} pentru sprijin @codeorg)'
   hoc_faq_title: Întrebări frecvente
   hoc_faq_what_is_hoc_q: Ce reprezintă Hour of Code?
-  hoc_faq_what_is_hoc_a: Ora de Programare reprezinta o introducere de o ora in stiinta
-    computerului si programare, cu scopul de a demistifica limbajul specific si de
-    a arata ca oricine poate invata bazele acestuia. Incearcarea de a apropia elevii
-    de tehnologia computerelor si programare a devenit un efort global. Acesta incepe
-    printr parcurgerea unor activitati de o ora, insa se extinde la tot felul de eforturi
-    ale comunitatii. Iata <a href='%{tutorials}'> tutorialele si activitatile </a>.
-    Aceasta campanie este sustinuta de peste <a href='%{partners}'> 400 de parteneri</a>
-    si 200.000 de educatori din toata lumea.
   hoc_faq_what_is_hoc_a_markdown: Hour of Code (Ora de Programare) a început inițial
     ca o introducere de o oră in tehnologie cu scopul de a arăta că oricine poate
     învăța bazele programarii, astfel încât numarul persoanelor care beneficiază de
@@ -2491,13 +2632,6 @@ ro:
     400 de parteneri</a> și 200.000 de educatori din toata lumea.
   hoc_faq_last_year: Incearca tutorialele
   hoc_faq_when_is_hoc_q: Când se desfășoară Hour of Code?
-  hoc_faq_when_is_hoc_a: Hour of Code are loc in fiecare an in timpul <a href='%{csedweek_url}'>Saptamanii
-    Educatiei in Tehnologia Computerelor</a>. %{campaign_date_year} Aceasta săptămână
-    va fi in %{campaign_date_full}, dar poti organiza un eveniment Hour of Code in
-    orice perioada a anului. Saptamana Educatiei in Tehnologia Computerelor este tinuta
-    in fiecare in an pentru a celebra ziua in care s-a nascut un pionier important
-    in domeniul tehnologiei.<a href='%{grace_hopper}'>Admirarul Grace Murray Hopper</a>(Decembrie
-    9, 1906).
   hoc_faq_when_is_hoc_a_markdown: Hour of Code are loc are loc în fiecare an pe parcursul
     [Săptămânii de Educație în Informatică](%{csedweek_url}). %{campaign_date_year}
     Săptămâna de Educație în Informatică va fi %{campaign_date_full}, dar puteți găzdui
@@ -2505,59 +2639,30 @@ ro:
     se ține anual în semn de apreciere a zilei de naștere a pionierului în calculatoare
     [Amiral Grace Murray Hopper](%{grace_hopper}) (9 decembrie 1906).
   hoc_faq_why_cs_q: De ce tehnologia computerelor si programare?
-  hoc_faq_why_cs_a: "<i>Fiecare</i> elev ar trebui să aibă posibilitatea de a învata
-    tehnologia computerelor. Ajută la dezvoltarea abilităților de rezolvare a problemelor,
-    la dezvoltarea logicii şi creativității. Începând devreme, elevii vor avea o fundaţie
-    pentru succesul în orice carieră din secolul Xxi. Descoperă mai multe statistici
-    <a href='%{stats_url}'>aici</a>."
   hoc_faq_why_cs_a_markdown: _Fiecare elev_ ar trebui să aibă șansa să învețe informatică.
     Nu doar că ajută la cultivarea abilităților de rezolvare a problemelor, dar iti
     dezvoltă și logica și creativitatea. Cu cât incep mai devreme, cu atat elevii
     vor avea o bază, ce le poate folosi în orice carieră a secolului 21. Vezi mai
     multe statistici la [here]%{stats_url}).(
   hoc_faq_how_participate_q: Cum particip la Hour of Code?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Incepe planificarea
-    aici</a> prin revederea ghidulul nostru pas cu pas. Poti organiza un eveniment
-    Hour of Code in scoala sau comunitatea ta &mdash; sau intr-un club extracurricular,
-    non-profit, chiar si la serviciu. De asemenea, poti incerca si singur cand incepe%{campaign_date}
-    campania."
   hoc_faq_how_participate_a_markdown: "[Începe să planifici aici](%{howto}) revizuind
     ghidul nostru de inițiere. Poți organiza un eveniment Hour of Code (Ora de codat)
     fie la școala, fie in cercuri restrânse, ca de exemplu, un club extracuricular,
     non-profit sau, de ce nu, la muncă. Sau, incearca-l chiar tu cand%{campaign_date}
     \ este organizat de altcineva."
   hoc_faq_behind_hoc_q: Cine este în spatele Hour of Code?
-  hoc_faq_behind_hoc_a: Hour of Code este organizată de Code.orgsi și este ținută
-    atât de Hour of Code Review Committee cât și de o grupare de  - <a href='%{partner_url}'>Comitete
-    de Consultanță și Analiză</a> - care s-a alăturat pentru a sprijini Hour of Code
-    - printre care Microsoft, Apple, Amazon, Boys and Girls Clubs of America și Comisia
-    pentru Educație.
   hoc_faq_behind_hoc_a_markdown: Hour of Code este organizată de Code.org si ținută
     atât de Hour of Code Review Committee[Comitetele de Consultanță și Analiză](%{partner_url})
     precum și de o mulțime de parteneri, care s-au alăturat pentru a sprijini Hour
     of Code - inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America și
     Comisia pentru Educație.
   hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
-  hoc_faq_host_a: Desigur. Activităţile Hour of Code sunt autodidacte si pot fi realizate
-    individual. Tot ce trebuie să faceţi este <a href='%{codeorg_url}/learn'> să accesaţi
-    tutorialele noastre</a>, sa alegeţi tutorialul pe care il doriţi şi o oră &mdash;
-    noi vom avea grijă de restul. Avem opţiuni pentru fiecare vârsta si nivel de experienta,
-    de la grădiniţă in sus. Începeți planificarea evenimentului dumneavoastră citind
-    <a href='/resources/how-to'>ghidul de organizare</a>.
   hoc_faq_host_a_markdown: Bineînțeles. Activitățile Hour of Code sunt autoghidate.
     Tot ce trebuie să faci este să [încerci tutorialele noastre prezente](%{codeorg_url}/learn),
     alege tutorialul pe care îl dorești, alege o oră și noi vom avea  grijă de restul.
     Avem de asemenea opțiuni pentru fiecare vârstă și nivel de experiență, de la grădiniță
     în sus. Începe să îți planifici evenimentul prin a citi [cum să  ghidezi](%{howto}).
   hoc_faq_devices_q: Ce dispozitive ar trebui să utilizez pentru elevii mei?
-  hoc_faq_devices_a: Tutorialele Code.org funcționează pe toate dispozitivele și în
-    toate browserele. Puteți vedea mai multe informații referitoare la cerințele de
-    tehnologie pentru tutorialele Code.org <a href='%{codeorg_url}/educate/it'>aici</a>.
-    Cerințele de tehnologie pentru tutoriale care nu aparțin Code.org pot fi găsite
-    la <a href='%{codeorg_url}/learn'>%{partner_url}/află</a> în descrierea specifică
-    a tutorialului respectiv. Nu uitați că oferim, de asemenea,<a href='%{unplugged_url}'>
-    activități de tip unplugged </a>(fără calculator) în condițiile în care școala
-    dvs. nu poate parcurge tutoriale pe calculator!
   hoc_faq_devices_a_markdown: Tutoriale Code.org funcționează pe toate dispozitivele
     și browserele. Poți vedea mai multe informații despre necesitățile tehnice ale
     tutorialelor Code.org [here](%{codeorg_url}/educate/it). Necesitățile tehnice
@@ -2566,17 +2671,6 @@ ro:
     ce nu necesită conectarea la internet](%{unplugged_url}) dacă școala nu poate
     găzdui tutorialele!
   hoc_faq_need_computers_q: Am nevoie de calculator pentru fiecare participant?
-  hoc_faq_need_computers_a: Nu. Avem Tutoriale Hour of Code care funcționează pe PC-uri,
-    smartphone-uri, tablete şi chiar unele care nu necesită nici un calculator! Puteţi
-    organiza oriunde vă aflați, cu orice resurse aveți. <p><i>Iată câteva opţiuni:</i>
-    <br><ul><li><b>Lucru în perechi.</b> <a href='%{pair_programming_research}'>Cercetările
-    arată </a>elevii învaţă cel mai bine<a href='%{pair_programming_video}'> în perechi
-    de lucru</a>, împarțind un computer şi lucrând împreună. Încurajați elevii să
-    formeze perechi de lucru. <li><b>Folosiți un proiector.</b> Dacă aveţi un proiector
-    şi un calculator conectat la internet, întregul grup poate participa la Hour of
-    Code împreună. Urmăriți porțiuni din clipurile video împreună şi rezolvați pe
-    rând puzzle-uri sau răspundeți la întrebări. <li><b>Fără computer.</b> Noi oferim
-    <a href='%{unplugged_url}'>și Tutoriale care nu necesită nici un computer. </ul>
   hoc_faq_need_computers_a_markdown: "Nu. Avem tutoriale pentru Hour of Code care
     lucrează pe calculatoare, smartphonuri, tablete, și unele nu necesită deloc calculatoare!
     Te poți alătura oriunde te-ai afla, cu orice ai la dispoziție.\n\n_Iată câteva
@@ -2589,40 +2683,21 @@ ro:
     rând puzzel-uri sau răspundeți pe rând la întrebări. - **Fiți deconectați.** Oferim
     [tutoriale care nu necesită calculatoare](%{unplugged_url}) deloc."
   hoc_faq_international_q: Eu sunt în <country>. Cum pot participa la nivel internaţional?
-  hoc_faq_international_a: Oricine poate organiza un eveniment Hour of Code, oriunde
-    în lume. Anul trecut, elevi din întreaga lume s-au alăturat pentru a realiza o
-    Ora de Programare. Află mai multe <a href='target-resources'>aici</a>.
   hoc_faq_international_a_markdown: Oricine poate organiza un eveniment Hour of Code,
     oriunde în lume. Anul trecut, studenți din întreaga lume s-au alăturat pentru
     Hour of Code. Aflați mai multe [here](%{promote}).
   hoc_faq_tutorial_q: Cum pot face un tutorial Hour of Code?
-  hoc_faq_tutorial_a: Dacă sunteţi interesat să deveniți partener pentru tutoriale,
-    <a href='/tutorial-guidelines'> consultaţi referințele și instrucţiunile noastre</a>.
-    Ne dorim să oferim o varietate de opţiuni interactive, dar obiectivul principal
-    este de a optimiza experienţa pentru elevi şi profesori care sunt incepatori.
   hoc_faq_tutorial_a_markdown: Dacă ești interesat să devii partener pentru tutoriale,
     [consultă ghidul și instrucțiunile noastre](%{tutorial_guidelines}). Am dori să
     găzduim o varietate de opțiuni antrenante, dar scopul principal este de a optimiza
     experiența pentru studenții și profesorii care sunt noi în informatică.
   hoc_faq_account_q: Elevii trebuie sa se inregistreze folosind un cont?
-  hoc_faq_account_a: Nu. Nu este necesara niciun fel de inregistrare pentru ca elevii
-    sa incerce Ora de Programare. Majoritatea <a href='%{codeorg_url}/learn/beyond'>cursurilor</a>
-    au nevoie de cont doar pentru a salva progresul elevului. De asemenea, inregistrarea
-    entru Hour of ode NU creeaza automat un cont Code Studio. Daca vreti sa creati
-    conturi pentru elevii dumneavoastra, va rugam sa urmai aceste <a href='https://youtu.be/_smelV_KISE'>instructiuni</a>.
   hoc_faq_account_a_markdown: Nu. Nu este nevoie de nicio înscriere sau conectare
     pentru elevi pentru a încerca Hour of Code. Majoritatea [cursurilor urmărite](%{codeorg_url}/learn/beyond)
     necesită crearea unui cont pentru a salva progresul elevului. De asemenea, înscrierea
     la Hour of Code NU creează automat un un cont de Code Studio. Dacă vrei să creezi
     conturi pentru elevii tăi, te rog să urmezi aceste [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Ce activitate o pot realiza cu elevii de liceu?
-  hoc_faq_high_school_a: Tutorialele noastre Star Wars si Minecraft sunt ideale pentru
-    elevii de liceu, in special cel Star Wars JavaScript si nivelurile gratuite de
-    joc de la fiecare tutorial. Ca alternativa, recomandam incercarea unor tutoriale
-    de incepator pe <a href='%{codeorg_url}%{partner_url}/learn'>/learn</a> pentru
-    inceput, cum ar fi tutorialul Angry Birds sau Anna si Elsa. Un elev de liceu ar
-    trebui sa poata termina unul dintre acestea in 30 de minute si apoi poate incerca
-    un tutorial mai avansat in JavaScript, cum ar fi Khan Academy sau CodeHS.
   hoc_faq_high_school_a_markdown: Tutorialele noastre Star Wars și Minecraft sunt
     grozave pentru școlarii mai mari, în special Star Wars versiunea JavaScript și
     nivelul de jucat gratis pentru ambele tutoriale. În mod alternativ, recomandăm
@@ -2632,11 +2707,6 @@ ro:
     un tutorial mai avansat în JavaScript, cum ar fi Khan Academy sau CodeHS.
   hoc_faq_scratch_q: Folosesc programul Scratch pentru Ora de Programare, dar ce se
     intampla daca elevii mei au iPad-uri si nu laptop-uri?
-  hoc_faq_scratch_a: Scratch nu ruleaza pe tablete. Daca elevii tai sunt tineri, pot
-    folosi aplicatia ScratchJR pentru iPad(pentru cei ce inca nu au invatat sa citeasca).
-    Daca urmariti tutorialele de pe <a href='http://code.org/learn'>Code.org/learn</a>,
-    puteti gasi si alte tutoriale care functioneaza pe iPad-uri - Code.org, Tynker,
-    Lightbot, sau CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch nu rulează pe tablete. Dacă elevii dvs. sunt
     tineri, pot folosi aplicația ScratchJR pentru iPad (pentru elevii care încep să
     citească). Dacă vă uitați la tutorialele de pe [%{partner_url}/learn](%{codeorg_url}/learn),
@@ -2644,14 +2714,6 @@ ro:
     Lightbot sau CodeSpark.
   hoc_faq_count_hoc_q: Cum numeri Orele de Programare?
   hoc_faq_map_q: De ce nu pot vedea punctul meu pe hartă?
-  hoc_faq_map_a: Ne pare nespus de rău că nu vă puteți vedea evenimentul dvs. pe harta
-    Hour of Code. Datorită zecilor de mii de organizatori care se înscriu, harta cumulează
-    informațiile și arată un singur punct pentru mai multe evenimente. Dacă faceți
-    clic pe numărul de deasupra hărții, veți fi direcționat(ă) către o listă a tuturor
-    evenimentelor din fiecare stat/regiune și veți găsi evenimentul dvs. afișat acolo.
-    În plus, având în vedere miile de oameni care se înscriu la Ora de Programare,
-    durează cam 48 de ore până când harta și lista evenimentelor se actualizează.
-    Verificați din nou peste câteva zile!
   hoc_faq_map_a_markdown: Ne pare foarte rău că nu vezi evenimentul pe harta Hour
     of Code. Din cauza zecilor de mii de organizatori care se înscriu, harta cumulează
     datele și afișează un punct pentru mai multe evenimente. Dacă dai clic pe [pagina
@@ -2660,35 +2722,12 @@ ro:
     În plus, dat fiind miile de oameni care se conectează la Hour of Code, este nevoie
     de 48 de ore să se actualizeze harta și lista de evenimente. Verifică din nou
     în câteva zile!
-  hoc_faq_count_hoc_a: Nu este o unitate de masurare clara. Nu se numara cont-urile
-    elevilor unici cand urmarim participarea la Hour of Code, in special pentru ca
-    nu le cerem acestora sa se inregistreze. Ca rezultat, am supra estima sau subestima
-    numarul de participanti in acelasi timp. Citeste toate detaliile <a href='%{codeorg_url}/loc'>aici</a>.
   hoc_faq_count_hoc_a_markdown: Localizarea Hour of Code nu este o măsură exactă de
     utilizare. Nu numărăm exact individual ID-ul elevilor atunci când localizăm Hour
     of Code, în special pentru că nu cerem elevilor să se conecteze sau să se înregistreze.
     Drept urmare, ne supraevaluăm sau subevaluăm participanții  în același timp. Citiți
     toate detaliile la [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Cât de mult poate cineva învăța într-o oră?
-  hoc_faq_one_hour_a: Scopul Hour of Code nu e acela de a învăța pe oricine să devină
-    expert în informatică într-o singură oră. O oră este suficientă doar pentru a
-    învăța că tehnologia computerelor este distractivă și creativă, că este accesibilă
-    la orice vârstă, tuturor elevilor, indiferent de proveniență. Măsura succesului
-    acestei campanii nu constă în cât de multă materie învață elevii - succesul este
-    reflectat de participarea pe scară largă, indiferent de sex și grupuri etnice
-    și socio-economice, iar creșterea, ca rezultat, în înscrieri și participare, o
-    vedem în cursurile de informatică de la toate nivelurile. Milioane de profesori
-    și elevi participanți au decis să meargă mai departe de o oră - pentru a învăța
-    o zi întreagă sau o săptămână întreagă sau chiar mai mult, iar mulți elevi au
-    hotarât să se înscrie la un curs întreg (sau chiar studii universitare) ca rezultat.
-    <br/><br/> Înafară de elevi, altcineva care "învață" este educatorul care, după
-    o oră, câștigă încredere că poate preda tehnologia computerelor, chiar dacă ei
-    nu au o diplomă universitară de profil. Zeci de mii de profesori decid să urmeze
-    studiul în continuare, ori participand la PD ori oferind cursuri de continuare
-    online, sau ambele. Și aceasta se aplică și administratorilor de școli, care realizează
-    că tehnologia computerului este ceva ce elevii vor iar profesorii lor sunt capabili
-    sa le ofere. <br/><br/> Mai presus de toate, ceea ce participanții pot învăța
-    într-o oră este că putem să facem și acest lucru.
   hoc_faq_one_hour_a_markdown: "Scopul Hour of Code nu este să înveți pe oricine să
     devină un expert în informatică într-o oră. O oră ajunge doar pentru a învăța
     că informatica este distractivă și creativă, că este accesibilă la orice vârstă,
@@ -2707,16 +2746,8 @@ ro:
     este ceea ce vor elevii, iar profesorii sunt capabili să ofere.\n\nÎn plus, ceea
     ce pot învăța toți participanții într-o oră este că noi putem face asta."
   hoc_faq_more_questions_q: Încă mai ai multe întrebări?
-  hoc_faq_more_questions_a: Încercaţi găsirea unui răspuns în  <a href='http://support.code.org'>
-    forumul nostru de sprijin</a>.
   hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Cum continui să învăț după Hour of Code?
-  hoc_faq_keep_learning_a: Oricine poate găzdui o Oră de Programare oricând. Tutorialele
-    rămân disponibile pe tot parcursul anului. Așteptați-vă să gasiți toate tutorialele
-    noastre și curriculum-ul disponibile pe site-ul nostru la nesfârșit. Vă rugăm
-    mergeți la <a href='/promote'>resursele noastre</a> pentru ghidurile de organizare
-    ale evenimentului și alte resurse care vă ajută să faceți din Ora dvs. de Programare
-    un succes.
   hoc_faq_keep_learning_a_markdown: Oricine poate găzdui o Hour of Code în orice moment.
     Tutorialele rămân active tot anul. Te poți aștepta ca toate tutorialele și programele
     noastre să fie disponibile pe site pentru o perioadă nedeterminată. Mergi la [resursele
@@ -2724,22 +2755,18 @@ ro:
     și alte resurse care să te ajute să faci un succes din evenimentul tău Hour of
     Code.
   hoc_faq_certificates_q: Unde pot printa certificate pentru elevii mei?
-  hoc_faq_certificates_a: Mergeți la a noastră <a href='%{codeorg_url}/certificates'>pagină
-    de certificate</a> de unde puteți printa certificate pentru întreaga clasă încă
-    din timp. Puteți, de asemenea, tipări <a href='%{codeorg_url}/certificates?course=mc'>certificate
-    speciale</a> pentru elevii care participă la tutorialul Minecraft.
-  hoc_faq_certificates_a_markdown: Mergi la [pagina noastră de certificate](%{codeorg_url}/certificate)
-    unde poți tipări în avans certificatele pentru întreaga voastră clasă. Poți, de
-    asemenea, să tipărești  [certificatele speciale](%{codeorg_url}/certificate?course=mc)
-    pentru elevii care fac tutorialul Minecraft.
+  hoc_faq_certificates_answer_markdown: Accesați [pagina certificatelor] (%{certificates_url})
+    de unde puteți imprima din timp certificate pentru întreaga clasă.
   hoc_faq_logo_q: Există limitări la cum pot folosi sigla Hour of Code sau numele?
-  hoc_faq_logo_a: Hour of Code este marcă înregistrată. Nu vrem să prevenim utilizarea
-    acesteia, dar vrem să vă asiguraţi că utilizarea acesteia se încadrează în câteva
-    limite. Vă rugăm să consultaţi <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>
-    aceste orientări pentru utilizare</a>.
   hoc_faq_logo_a_markdown: Hour of Code este marcă înregistrată. Nu vrem să împiedicăm
     utilizarea acesteia, dar dorim să ne asigurăm că utilizarea acesteia se încadrează
     în anumite limite. Consultă [aceste ghiduri de utilizare](%{logo_url}).
+  hoc_faq_bug_q: Am găsit o eroare într-o activitate Hour of Code! Ce ar trebui să
+    fac?
+  hoc_faq_bug_a_markdown: |-
+    Oh, nu! Dacă ați întâlnit o eroare într-o activitate Hour of Code - verificați mai întâi adresa URL pentru activitatea în care vă desfășurați. Dacă adresa URL începe cu studio.code.org, echipa noastră de asistență Code.org vă poate ajuta! Faceți clic pe pictograma semnului de întrebare din colțul din dreapta sus al ecranului, apoi selectați „Raportați o problemă” din meniul derulant.
+
+    Dacă adresa URL nu începe cu studio.code.org, probabil că lucrați la o activitate terță parte și va trebui să contactați echipa de asistență a companiei respective pentru asistență suplimentară.
   stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
   stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de
     utilizatori.
@@ -2750,7 +2777,7 @@ ro:
   stats_pinterest: 'Pinterest: 2 ani'
   stats_instagram: 'Instagram: 14 luni'
   stats_hoc: 'Hour of Code: 5 zile'
-  stats_global: Peste 100 M de elevi au încercat o Ora de Programare
+  stats_global: Peste 100M de elevi au încercat o Hour of Code
   stats_girls_more: Mai multe fete au încercat sa programeze decât în ultimii 70 de
     ani
   stats_females: Participarea femeilor la informatică reprezintă doar 20% dintre cursurile
@@ -2846,11 +2873,11 @@ ro:
   event: Eveniment
   events: Evenimente
   highlights_title: Repere
-  highlights_header: Reperele Hour of Code
+  highlights_header: Atracțiile Hour of Code
   highlights_description: Unele dintre momentele noastre preferate din campania Hour
     of Code.
   highlights_previous: Repere din anii precedenți
-  highlights_see_more: Vedeți mai multe puncte culminante
+  highlights_see_more: Vezi mai multe atracții
   highlights_readmore: Citiți mai mult
   highlights_watchvideo: Urmăriţi clipul video
   highlights_facebook: Distribuie pe Facebook
@@ -13786,7 +13813,8 @@ ro:
   hoc_how_to_faq_answer_account: Nu este necesară înscrierea sau autentificarea pentru
     ca studenții să încerce Ora Codului. Înscrierea la Hour of Code NU creează automat
     un cont Code.org.
-  hoc_how_to_resources_heading_educators: Alte resurse de o oră de cod pentru educatori
+  hoc_how_to_resources_heading_educators: 'Alte resurse Hour of Code pentru cadrele
+    didactice:'
   hoc_how_to_resources_promo_heading: Resurse promoționale
   hoc_how_to_resources_promo_desc: Găsiți toate resursele de care aveți nevoie - tipărite
     și digitale - pentru a atrage atenția asupra Hour of Code.
@@ -13861,6 +13889,23 @@ ro:
     Folosiți #HourOfCode și @codeorg pentru a vă putea evidenția și succesul!'
   hoc_how_to_step_07_educators_desc_02: De asemenea, puteți imprima certificate pentru
     studenții dvs. pentru a-și arăta realizările!
+  hoc_ai_top_desc: Oricine poate învăța despre AI, indiferent dacă ești student în
+    clasă sau un educator care deblochează viitorul predării cu și despre AI.
+  hoc_ai_how_ai_works_video_series_desc: Această serie de videoclipuri scurte vă va
+    prezenta modul în care funcționează inteligența artificială și de ce contează.
+    Apoi, aprofundați probleme precum prejudecățile algoritmice și etica luării deciziilor
+    AI.
+  hoc_ai_learn_how_ai_works_desc: Scufundați-vă în lumea AI cu „Cum funcționează AI”,
+    lecții asociate cu seria noastră video care vă prezintă modul în care funcționează
+    AI și de ce contează.
+  hoc_ai_101_for_educators_desc: Descoperiți potențialul transformațional al inteligenței
+    artificiale (IA) în educație cu ajutorul seriilor noastre gratuite de învățare
+    online pentru educatori.
+  hoc_ai_impacts_desc: Implicați-vă sala de clasă cu lecții conduse de profesori care
+    explorează impactul inteligenței artificiale și invită elevii să se gândească
+    la soluții la unele dintre problemele IA.
+  hoc_ai_activities_desc: Aceste noi activități Hour of Code introduc utilizatorii
+    în lumea inteligenței artificiale într-un mod distractiv și captivant.
   team_page_full_team_alt_text: Aproape 100 de angajați Code.org în tricouri asortate
     albastre și galbene pozează într-o sală de conferințe a hotelului pentru evenimentul
     Codechella din vara anului 2022 al companiei.
@@ -14417,6 +14462,24 @@ ro:
   video_library_page_not_hacked_video_title_6: 'Cum să nu fii piratat: mesagerie și
     descărcări'
   video_library_page_not_hacked_video_title_7: 'Cum să nu fii piratat: Instalați actualizări'
+  thank_you_page_main_title: Vă mulțumim că ați ajutat la construirea unei mișcări
+  thank_you_page_description: Coaliția Code.org Advocacy dorește să mulțumească sutelor
+    de mii de campioni și avocați locali, inclusiv profesori, membri ai comunității,
+    cercetători, organizații nonprofit, universități, corporații și instituții guvernamentale
+    care au susținut viziunea că fiecare elev din fiecare școală merită ocazia de
+    a învăța informatică. Vă mulțumim pentru sprijinul acordat acestei mișcări.
+  thank_you_page_members_section_title: 'Și tuturor membrilor Coaliției de Advocacy
+    Code.org:'
+  thank_you_page_individual_organization_title: 'Vă mulțumim următoarelor persoane
+    și organizații pentru contribuțiile lor la acest raport:'
+  thank_you_page_individual_organization_description: Supraveghetori de educație în
+    domeniul informaticii la fiecare agenție de învățământ de stat, Colegiul Consiliului,
+    Della Cronin, Stuart Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle
+    Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Mulțumim elevilor și profesorilor citați
+    în acest raport:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: Despre noi
   about_us_page_hero_description: Code.org® este o organizație non-profit pentru inovare
     educațională dedicată viziunii că fiecare elev din fiecare școală are posibilitatea
@@ -14575,6 +14638,119 @@ ro:
     care va susține această viziune.
   about_page_donors_link_1: Faceți o donație
   about_page_donors_link_2: "[vezi lista noastră de donatori] (%{donors_url})"
+  teach_ai_title: Exemple din viața de zi cu zi. Resurse practice.
+  teach_ai_description: Setul de instrumente cu ghid AI pentru școli este o resursă
+    pentru factorii de decizie, liderii și personalul din școli pentru îndrumarea
+    inițială cu ajutorul IA în școlile lor.
+  teach_ai_button_label: Vizualizați setul de instrumente
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: Laboratorul de Aplicații
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: Aflați mai multe
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_description_1: Set gratuit de programe școlare pentru învățământul
+    elementar care îi introduce pe elevi în conceptele fundamentale ale informaticii
+    și îi provoacă să exploreze modul în care informatica și tehnologia pot avea un
+    impact asupra lumii.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Prezentați studenților inginerie software
+    și design orientat pe obiecte în timp ce învață limbajul de programare Java în
+    acest curriculum gratuit pentru AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_2: Explorați principiile CS
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_card_title_1: Laboratorul Sprite
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
+  elementary_page_computer_science_card_title_1: Bazele informaticii
+  elementary_page_computer_science_card_title_2: Conexiunile Informaticii
+  elementary_page_computer_science_description_1: Set gratuit de programe școlare
+    pentru învățământul elementar care îi introduce pe elevi în conceptele fundamentale
+    ale informaticii și îi provoacă să exploreze modul în care informatica și tehnologia
+    pot avea un impact asupra lumii.
+  elementary_page_computer_science_description_2: Faceți conexiuni între informatică
+    (CS) și alte materii precum matematica, artele limbajului, știința și studiile
+    sociale.
   language_code:
     ar: arabic
     az: azeră

@@ -83,7 +83,7 @@ Søk etter lokale skoler og ring rektor/lærer/ekspedisjon, og spør hvordan du 
 ### Hvor lenge varer et klasseromsbesøk?
 Et besøk i person til et klasserom varer vanligvis 60-90 minutter mens et besøk i et virtuelt klasserom varer vanligvis 20-30 minutter.
 
-### What age group is the Hour of Code activity appropriate for?
+### Hvilken aldersgruppe passer Hour of Code-aktiviteten for?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

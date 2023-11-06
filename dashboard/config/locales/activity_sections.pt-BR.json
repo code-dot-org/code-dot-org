@@ -383,7 +383,7 @@
           "progression_name": "Formas e o Laço de Desenho"
         },
         "d0abce5e-23db-4b3c-ae93-6bc44a0b400e": {
-          "progression_name": "O laço de desenho"
+          "progression_name": "O Desenho do Laço"
         },
         "01fe979b-e5d4-4c9d-a64f-9fc1887156f7": {
           "progression_name": "Formas e o Laço de Desenho"
@@ -1617,7 +1617,7 @@
           "progression_name": "Formas e o Laço de Desenho"
         },
         "3555c4f2-ed9f-4c28-9f73-5fc27d44fc07": {
-          "progression_name": "O laço de desenho"
+          "progression_name": "O Desenho do Laço"
         },
         "d62b8a9f-6329-4ab4-baf1-72df019672fc": {
           "progression_name": "Formas e o Laço de Desenho"
@@ -2807,7 +2807,7 @@
           "progression_name": "Formas e o Laço de Desenho"
         },
         "4088b01c-c76d-4836-bfc1-7b0d3ce2fe68": {
-          "progression_name": "O laço de desenho"
+          "progression_name": "O Desenho do Laço"
         },
         "f269697b-d250-479d-933b-2deab5e1db6a": {
           "progression_name": "Formas e o Laço de Desenho"
@@ -7820,7 +7820,7 @@
         },
         "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
           "tips": [
-            "Observe que o fundo azul nunca é visível porque é imediatamente atraído pelo fundo vermelho. Também há apenas um ponto amarelo visível, já que à medida que o laço de tração passa por cima e por cima está colocando novos fundos para baixo."
+            "Observe que o plano de fundo azul nunca é visível porque é imediatamente sobreposto pelo plano de fundo vermelho. Além disso, há apenas um ponto amarelo visível, pois à medida que o draw loop passa repetidamente, ele está colocando novos planos de fundo."
           ],
           "progression_name": "Previsão"
         },
@@ -8664,87 +8664,105 @@
           ]
         },
         "77645736-2519-4d27-b58f-460674b37ac3": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Consulte o guia de atividades da aula anterior e liste:\n\n-   O usuário para o qual você está projetando\n-   Sua necessidade ou interesse específico\n-   A solução escolhida para sua necessidade\n\nEm seguida, anote uma ideia para um tipo específico de roupa inteligente que você poderia criar com base na sua solução."
         },
         "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Esta é uma rápida atualização do trabalho que os alunos fizeram na aula anterior e uma oportunidade para que compartilhem diferentes ideias de produtos antes de tomarem uma decisão em grupos para a primeira parte da atividade."
+          ],
+          "description": "**Discuta:** Reserve um minuto para que os alunos relembrem o trabalho da aula passada. Depois de escreverem essas anotações em seus diários, peça-lhes que se revezem para compartilhar essas informações com os colegas do grupo."
         },
         "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
           "tips": [
-            null
+            "**Pesquisa de Roupas Inteligentes:** Se os alunos não estiverem familiarizados com roupas inteligentes, incentive-os a usar a Internet para fazer uma pesquisa inicial sobre como as elas  funcionam ou foram usadas para resolver problemas. Os alunos devem evitar procurar um produto de vestuário inteligente já existente que atenda às necessidades do usuário escolhido, mas podem investigar os usos mais comuns das roupas inteligentes, caso não estejam familiarizados com elas."
           ]
         },
         "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
-          "name": "Tentar"
+          "name": "Tentar",
+          "description": "**Visão Geral:** Leia a visão geral em aula para garantir que os alunos entendam a atividade. Conheça o aspecto de RPG deste projeto, incentivando os alunos a imaginarem que têm todos os recursos de que precisam para concluir essa tarefa.\n\n**Atribua funções:** Peça aos alunos que atribuam funções - um redator, um artista, um cronometrista e um apresentador. Certifique-se de que os alunos tenham clareza sobre suas funções e tarefas durante essa tarefa.\n\n**Faça isso:** Os alunos devem trabalhar juntos para criar um produto de vestuário inteligente que atenda às necessidades de seus usuários. Eles podem usar a discussão durante o aquecimento para ajudar a orientar esse processo. Eles também devem criar um esboço da aparência do design, com setas e rótulos para ajudar a comunicar como o produto funciona. O artista pode desenhar seu produto no guia de atividades ou na cartolina fornecida. Veja o exemplar incluído para ver uma ideia do que os alunos podem acabar criando. Dê aos alunos um limite de tempo e garanta que o cronometrista de cada grupo esteja ciente disso.\n\n**Circular**: monitore os alunos enquanto eles passam pela fase de teste, verificando se as necessidades do usuário estão orientando as decisões de seu produto. Se necessário, lembre os alunos de “entrarem na cabeça” do usuário, semelhante à lição Entendendo seu Usuário."
         },
         "b640029f-89eb-45d2-a087-e6d57d703c12": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Faça Isso:** Peça aos alunos que respondam às perguntas na segunda página do guia de atividades e que se preparem para compartilhar os resultados com seus colegas.\n\n**Circule:** Converse com os alunos enquanto eles resumem suas ideias sobre este guia de reflexão. À medida que os alunos respondem às perguntas, podem fazer alterações de última hora em seus produtos.\n\n**Compartilhe:** Faça com que os grupos se revezem compartilhando os produtos que criaram. Eles devem informar o usuário pretendido e suas necessidades, e como o produto atende a essas necessidades. Quando terminarem, incentive outros grupos a darem feedback na forma de declarações do tipo: “Eu gosto” e “Eu gostaria\"."
         },
         "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
           "name": "Diário",
           "tips": [
-            null
-          ]
+            "**Objetivo:** As respostas variarão, especialmente se os alunos ainda estiverem aprendendo a ter empatia com outros usuários que não sejam eles mesmos. Incentive os alunos a perceberem como o brainstorming e a colaboração entre os colegas podem ser úteis para gerar ideias e pensar fora de suas próprias experiências."
+          ],
+          "description": "\\*\\*Aviso: \\*\\* O que poderia vir a ser um desafio ao criar um produto para alguém que não fosse você? Qual foi a atividade de hoje ou da última aula que o ajudou a enfrentar esse desafio?"
         },
         "9cdb66ed-0a11-469c-86c7-516372ae3eca": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** O que é um aplicativo? Que aplicativos você ou outras pessoas que você conhece usam?"
         },
         "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Esta discussão tem como objetivo apresentar a definição de um aplicativo. A maioria das sugestões fornecidas pelos alunos deve poder ser vinculada a essa definição. Os aplicativos podem fornecer serviços, organizar ou fornecer informações, ou podem ser apenas um jogo ou alguma outra forma de entretenimento. Em todos os casos, você só deve estabelecer um aplicativo como um software criado para atender a um propósito."
+          ],
+          "description": "**Discuta:** Peça aos alunos que anotem suas respostas em um diário e depois peça aos alunos que compartilhem com a turma. Mantenha uma lista contínua de respostas no quadro. Depois que todos tiverem a oportunidade de compartilhar, anote uma proposta de definição compartilhada de um aplicativo como “um software projetado para um propósito”."
         },
         "aa617b29-6e2d-44e6-972d-45bb987419e8": {
-          "name": "Protótipos em Papel"
+          "name": "Protótipos em Papel",
+          "description": "**Em grupos:** Organize os alunos em duplas."
         },
         "889b61a1-6e88-49a4-9250-5e48853f289c": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\nEsses materiais podem ser reutilizados se os alunos não escreverem neles. Você também precisará deles para a próxima atividade da aula."
+          ],
+          "description": "**Distribua:** Distribua uma cópia do guia de atividades de Telas de Interface de Usuários para cada dupla de alunos. Se você ainda não separou as telas, dê aos alunos alguns minutos para fazer isso."
         },
         "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Incentive os alunos a identificar elementos específicos do protótipo que sustentem seus argumentos e a considerar as necessidades do usuário que esse protótipo pode ter sido projetado para atender"
+          ],
+          "description": "**Discuta:** Peça aos alunos que discutam suas ideias em duplas e depois compartilhem-nas com a turma."
         },
         "b7a9b018-0728-4b91-935e-b3ec7c723623": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\n**Guia de Atividades do Computador** Os guias de atividades do computador são usados apenas como referência. Os alunos podem ver as versões digitais durante essa atividade. Se você optar por imprimir o guia, eles poderão ser reutilizados, desde que os alunos sejam instruídos a não escrever neles.\n\n\\*\\*Guia de Atividades do Usuário: \\*\\* O Guia de atividades do usuário pode ser preenchido online ou como uma atividade de diário. Os alunos podem usar uma versão digital do Guia de Atividades como um prompt, copiando os gráficos e as perguntas em seus diários."
+          ],
+          "description": "**Distribua:** Dê a cada um dos _Computadores_ uma cópia do guia de atividades da Experiência do Usuário (computador) e a cada um dos _Usuários_ uma cópia do guia de atividades da Experiência do Usuário (usuário). O guia de atividades do computador só deve ser visto pelo computador e não pelo usuário."
         },
         "45553c85-cb2b-4763-8875-484919a56ced": {
           "tips": [
-            null
-          ]
+            "Os alunos devem conectar experiências específicas do usuário a problemas com o aplicativo e debater como esses problemas podem ser resolvidos. Se necessário, peça aos alunos que relatem incidentes específicos durante o teste que revelaram problemas relacionados ao design."
+          ],
+          "description": "**Discuta:** Peça aos alunos que discutam em duplas e, em seguida, convide cada dupla a compartilhar seus comentários com a turma. Faça uma lista de possíveis melhorias e a exiba de forma que todos possam vê-la (parte da frente da sala de aula)."
         },
         "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
           "name": "Diário",
           "tips": [
-            null
-          ]
+            "Os alunos devem sintetizar a discussão anterior em pontos-chave que sejam acionáveis para uma revisão do design. Eles devem estar claramente relacionados à discussão anterior e verificar se os alunos estão conectando as necessidades do usuário, a experiência do usuário no teste e os recursos específicos do aplicativo."
+          ],
+          "description": "**Prompt:** No início da lição, procuramos prever que necessidades do usuário serão atendidas por esse protótipo. Agora que você experimentou o aplicativo em primeira mão, anote o seguinte:"
         },
         "d4051ea3-89a9-4721-812c-0eaff899cb06": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Pense em um software (como um aplicativo) que você considere difícil de usar. Talvez você não tenha conseguido encontrar algo de que precisava, ou ele estivesse mal organizado ou simplesmente difícil de usar. Do que especificamente você não gostou? Como esse aspecto poderia ser melhorado?"
         },
         "c5dbb48d-d120-4560-b671-bd507f1685b0": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Explore quantos dos problemas que enfrentamos ao usar um aplicativo podem ser resolvidos com alterações na interface do usuário. Isso é principalmente um brainstorming e uma forma de os alunos fazerem conexões pessoais entre os aplicativos que usam todos os dias e a atividade que realizaremos em sala de aula para ajudar a melhorar o design e a interface do usuário de um aplicativo."
+          ],
+          "description": "**Discuta:** Os alunos devem escrever suas ideias em silêncio. Em seguida, passe para uma discussão completa em sala de aula sobre os tipos de problemas que os alunos tiveram com aplicativos no passado. Converse de forma direta sobre o que especificamente faltava sobre a interface do usuário ou a experiência do usuário do aplicativo e continue perguntando como esses aspectos do aplicativo poderiam ser melhorados."
         },
         "bb7169a3-70a1-4264-9141-1abadc51c844": {
-          "name": "Feedback do Protótipo"
+          "name": "Feedback do Protótipo",
+          "description": "**Em grupos:** Coloque os alunos em grupos de 2 ou 3"
         },
         "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\nAs telas de feedback do protótipo e da interface do usuário podem ser reutilizadas, desde que os alunos não escrevam nelas. As Telas da Interface do Usuário já devem ter sido impressas da lição anterior.\n\nO Guia de Atividades pode ser preenchido online ou como uma atividade de diário. Os alunos que concluírem a atividade online podem optar por usar uma ferramenta de desenho online para esboçar a interface de usuário aprimorada ou enviar o esboço separadamente em papel."
+          ],
+          "description": "**Distribua:** Entregue a cada grupo de alunos uma cópia das tiras de papel do Feedback do Protótipo. Se possível, tente cortá-los com antecedência - caso contrário, dê tempo aos alunos para fazerem isso na sala de aula. Você também deve distribuir cópias do recurso Telas da Interface do Usuário ou exibi-las á turma."
         },
         "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
           "tips": [
-            null
-          ]
+            "**Selecionando as Melhorias:** Os alunos podem precisar de ajuda para pensar em boas melhorias em seus aplicativos. Por exemplo, se vários usuários estão reclamando de um texto pequeno, eles podem tentar aumentar o tamanho da fonte na tela que estão melhorando. Eles também podem optar por adicionar uma configuração de “tamanho do texto” na página “Configurações”. Sempre há muitas melhorias em um aplicativo que podem gerar o efeito desejado. Para esta lição, é mais importante que a mudança atenda de forma razoável à necessidade que eles escolheram. Haverá mais oportunidades de investigar o que é razoável mudar na interface de usuário de um aplicativo posteriormente na unidade. "
+          ],
+          "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "6c56c6d8-505f-450b-af78-6589752885e9": {
           "name": "Diário"
@@ -18175,7 +18193,7 @@
         },
         "74e39a1e-2693-4a64-a2ec-c48bac2b2c63": {
           "tips": [
-            "Observe que o fundo azul nunca é visível porque é imediatamente atraído pelo fundo vermelho. Também há apenas um ponto amarelo visível, já que à medida que o laço de tração passa por cima e por cima está colocando novos fundos para baixo."
+            "Observe que o plano de fundo azul nunca é visível porque é imediatamente sobreposto pelo plano de fundo vermelho. Além disso, há apenas um ponto amarelo visível, pois à medida que o draw loop passa repetidamente, ele está colocando novos planos de fundo."
           ],
           "progression_name": "Previsão"
         },
@@ -19116,87 +19134,105 @@
           ]
         },
         "a4596a2a-17fd-4714-8a1d-eb0145de497c": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Consulte o guia de atividades da aula anterior e liste:\n\n-   O usuário para o qual você está projetando\n-   Sua necessidade ou interesse específico\n-   A solução escolhida para sua necessidade\n\nEm seguida, anote uma ideia para um tipo específico de roupa inteligente que você poderia criar com base na sua solução."
         },
         "f1d738b8-2bd2-4268-9553-f2221c41a4b1": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Esta é uma rápida atualização do trabalho que os alunos fizeram na aula anterior e uma oportunidade para que compartilhem diferentes ideias de produtos antes de tomarem uma decisão em grupos para a primeira parte da atividade."
+          ],
+          "description": "**Discuta:** Reserve um minuto para que os alunos relembrem o trabalho da aula passada. Depois de escreverem essas anotações em seus diários, peça-lhes que se revezem para compartilhar essas informações com os colegas do grupo."
         },
         "0f6c027d-5e5a-49c9-96f1-85cddad08e99": {
           "tips": [
-            null
+            "**Pesquisa de Roupas Inteligentes:** Se os alunos não estiverem familiarizados com roupas inteligentes, incentive-os a usar a Internet para fazer uma pesquisa inicial sobre como as elas  funcionam ou foram usadas para resolver problemas. Os alunos devem evitar procurar um produto de vestuário inteligente já existente que atenda às necessidades do usuário escolhido, mas podem investigar os usos mais comuns das roupas inteligentes, caso não estejam familiarizados com elas."
           ]
         },
         "e916fb49-88fb-46e4-9d65-811f5ba52983": {
-          "name": "Tentar"
+          "name": "Tentar",
+          "description": "**Visão Geral:** Leia a visão geral em aula para garantir que os alunos entendam a atividade. Conheça o aspecto de RPG deste projeto, incentivando os alunos a imaginarem que têm todos os recursos de que precisam para concluir essa tarefa.\n\n**Atribua Funções:** Peça aos alunos que atribuam funções - um redator, um artista, um cronometrista e um apresentador. Certifique-se de que os alunos tenham clareza sobre suas funções e tarefas durante essa tarefa.\n\n**Faça Isso:** Os alunos devem trabalhar juntos para criar um produto de vestuário inteligente que atenda às necessidades de seus usuários. Eles podem usar a discussão durante o aquecimento para ajudar a orientar esse processo. Eles também devem criar um esboço da aparência do design, com setas e rótulos para ajudar a comunicar como o produto funciona. O artista pode desenhar seu produto no guia de atividades ou na cartolina fornecida. Veja o exemplar incluído para ver uma ideia do que os alunos podem acabar criando. Dê aos alunos um limite de tempo e garanta que o cronometrista de cada grupo esteja ciente disso.\n\n**Circule**: monitore os alunos enquanto eles passam pela fase de teste, verificando se as necessidades do usuário estão orientando as decisões de seu produto. Se necessário, lembre os alunos de “entrarem na cabeça” do usuário, semelhante à lição Entendendo seu Usuário."
         },
         "beb86e5b-f979-4a92-b8bb-05ea34ffe7ce": {
-          "name": "Reflita"
+          "name": "Refletir",
+          "description": "**Faça Isso:** Peça aos alunos que respondam às perguntas na segunda página do guia de atividades e que se preparem para compartilhar os resultados com seus colegas.\n\n**Circule:** Converse com os alunos enquanto eles resumem suas ideias sobre este guia de reflexão. À medida que os alunos respondem às perguntas, podem fazer alterações de última hora em seus produtos.\n\n**Compartilhe:** Faça com que os grupos se revezem compartilhando os produtos que criaram. Eles devem informar o usuário pretendido e suas necessidades, e como o produto atende a essas necessidades. Quando terminarem, incentive outros grupos a darem feedback na forma de declarações do tipo: “Eu gosto” e “Eu gostaria\"."
         },
         "f79da992-7bd4-43f4-bf6b-9c8784c38d50": {
           "name": "Diário",
           "tips": [
-            null
-          ]
+            "**Objetivo:** As respostas variarão, especialmente se os alunos ainda estiverem aprendendo a ter empatia com outros usuários que não sejam eles mesmos. Incentive os alunos a perceberem como o brainstorming e a colaboração entre os colegas podem ser úteis para gerar ideias e pensar fora de suas próprias experiências."
+          ],
+          "description": "\\*\\*Aviso: \\*\\* O que poderia vir a ser um desafio ao criar um produto para alguém que não fosse você? Qual foi a atividade de hoje ou da última aula que o ajudou a enfrentar esse desafio?"
         },
         "3ac974b5-fa5d-48a6-9db2-2d0203b37cff": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** O que é um aplicativo? Que aplicativos você ou outras pessoas que você conhece usam?"
         },
         "9a81360e-71e2-4dfe-8da8-17985cbdacf9": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Esta discussão tem como objetivo apresentar a definição de um aplicativo. A maioria das sugestões fornecidas pelos alunos deve poder ser vinculada a essa definição. Os aplicativos podem fornecer serviços, organizar ou fornecer informações, ou podem ser apenas um jogo ou alguma outra forma de entretenimento. Em todos os casos, você só deve estabelecer um aplicativo como um software criado para atender a um propósito."
+          ],
+          "description": "**Discuta:** Peça aos alunos que anotem suas respostas em um diário e depois peça aos alunos que compartilhem com a turma. Mantenha uma lista contínua de respostas no quadro. Depois que todos tiverem a oportunidade de compartilhar, anote uma proposta de definição compartilhada de um aplicativo como “um software projetado para um propósito”."
         },
         "f5d82e30-1b57-4e3e-8530-360baf4d6758": {
-          "name": "Protótipos em Papel"
+          "name": "Protótipos em Papel",
+          "description": "**Em grupos:** Organize os alunos em duplas."
         },
         "d61de363-299c-4631-a519-0b8c3e9628df": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\nEsses materiais podem ser reutilizados se os alunos não escreverem neles. Você também precisará deles para a próxima atividade da aula."
+          ],
+          "description": "**Distribua:** Distribua uma cópia do guia de atividades de Telas de Interface de Usuários para cada dupla de alunos. Se você ainda não separou as telas, dê aos alunos alguns minutos para fazer isso."
         },
         "dfef697e-3e7d-4797-992f-ab23891e441e": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Incentive os alunos a identificar elementos específicos do protótipo que sustentem seus argumentos e a considerar as necessidades do usuário que esse protótipo pode ter sido projetado para atender"
+          ],
+          "description": "**Discuta:** Peça aos alunos que discutam suas ideias em duplas e depois compartilhem-nas com a turma."
         },
         "858a955e-bdda-4241-832b-0fe6502f81f8": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\n**Guia de Atividades do Computador** Os guias de atividades do computador são usados apenas como referência. Os alunos podem ver as versões digitais durante essa atividade. Se você optar por imprimir o guia, eles poderão ser reutilizados, desde que os alunos sejam instruídos a não escrever neles.\n\n\\*\\*Guia de Atividades do Usuário: \\*\\* O Guia de atividades do usuário pode ser preenchido online ou como uma atividade de diário. Os alunos podem usar uma versão digital do Guia de Atividades como um prompt, copiando os gráficos e as perguntas em seus diários."
+          ],
+          "description": "**Distribua:** Dê a cada um dos _Computadores_ uma cópia do guia de atividades da Experiência do Usuário (computador) e a cada um dos _Usuários_ uma cópia do guia de atividades da Experiência do Usuário (usuário). O guia de atividades do computador só deve ser visto pelo computador e não pelo usuário."
         },
         "123027f3-78de-45d0-ba7d-662b7c4d49bb": {
           "tips": [
-            null
-          ]
+            "Os alunos devem conectar experiências específicas do usuário a problemas com o aplicativo e debater como esses problemas podem ser resolvidos. Se necessário, peça aos alunos que relatem incidentes específicos durante o teste que revelaram problemas relacionados ao design."
+          ],
+          "description": "**Discuta:** Peça aos alunos que discutam em duplas e, em seguida, convide cada dupla a compartilhar seus comentários com a turma. Faça uma lista de possíveis melhorias e a exiba de forma que todos possam vê-la (parte da frente da sala de aula)."
         },
         "1cd48f88-748a-4f82-920e-688a9a94e1ab": {
           "name": "Diário",
           "tips": [
-            null
-          ]
+            "Os alunos devem sintetizar a discussão anterior em pontos-chave que sejam acionáveis para uma revisão do design. Eles devem estar claramente relacionados à discussão anterior e verificar se os alunos estão conectando as necessidades do usuário, a experiência do usuário no teste e os recursos específicos do aplicativo."
+          ],
+          "description": "**Prompt:** No início da lição, procuramos prever que necessidades do usuário serão atendidas por esse protótipo. Agora que você experimentou o aplicativo em primeira mão, anote o seguinte:"
         },
         "6588d33b-8aa2-45c7-b0a6-f46a6e33ea31": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Pense em um software (como um aplicativo) que você considere difícil de usar. Talvez você não tenha conseguido encontrar algo de que precisava, ou ele estivesse mal organizado ou simplesmente difícil de usar. Do que especificamente você não gostou? Como esse aspecto poderia ser melhorado?"
         },
         "3f37eef0-d473-43d0-9342-f2af777df173": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Explore quantos dos problemas que enfrentamos ao usar um aplicativo podem ser resolvidos com alterações na interface do usuário. Isso é principalmente um brainstorming e uma forma de os alunos fazerem conexões pessoais entre os aplicativos que usam todos os dias e a atividade que realizaremos em sala de aula para ajudar a melhorar o design e a interface do usuário de um aplicativo."
+          ],
+          "description": "**Discuta:** Os alunos devem escrever suas ideias em silêncio. Em seguida, passe para uma discussão completa em sala de aula sobre os tipos de problemas que os alunos tiveram com aplicativos no passado. Converse de forma direta sobre o que especificamente faltava sobre a interface do usuário ou a experiência do usuário do aplicativo e continue perguntando como esses aspectos do aplicativo poderiam ser melhorados."
         },
         "1df3bcb9-5479-488b-9769-c2a61dbe5bec": {
-          "name": "Feedback do Protótipo"
+          "name": "Feedback do Protótipo",
+          "description": "**Em grupos:** Coloque os alunos em grupos de 2 ou 3"
         },
         "22a3e29c-7fa0-4fa9-9b07-df78d19e2729": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\nAs telas de feedback do protótipo e da interface do usuário podem ser reutilizadas, desde que os alunos não escrevam nelas. As Telas da Interface do Usuário já devem ter sido impressas da lição anterior.\n\nO Guia de Atividades pode ser preenchido online ou como uma atividade de diário. Os alunos que concluírem a atividade online podem optar por usar uma ferramenta de desenho online para esboçar a interface de usuário aprimorada ou enviar o esboço separadamente em papel."
+          ],
+          "description": "**Distribua:** Entregue a cada grupo de alunos uma cópia das tiras de papel do Feedback do Protótipo. Se possível, tente cortá-los com antecedência - caso contrário, dê tempo aos alunos para fazerem isso na sala de aula. Você também deve distribuir cópias do recurso Telas da Interface do Usuário ou exibi-las á turma."
         },
         "e127492b-ea87-427d-b492-3367ba4434a4": {
           "tips": [
-            null
-          ]
+            "**Selecionando as Melhorias:** Os alunos podem precisar de ajuda para pensar em boas melhorias em seus aplicativos. Por exemplo, se vários usuários estão reclamando de um texto pequeno, eles podem tentar aumentar o tamanho da fonte na tela que estão melhorando. Eles também podem optar por adicionar uma configuração de “tamanho do texto” na página “Configurações”. Sempre há muitas melhorias em um aplicativo que podem gerar o efeito desejado. Para esta lição, é mais importante que a mudança atenda de forma razoável à necessidade que eles escolheram. Haverá mais oportunidades de investigar o que é razoável mudar na interface de usuário de um aplicativo posteriormente na unidade. "
+          ],
+          "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "b6e821e1-623c-489c-a3a2-8c7b392c38d6": {
           "name": "Diário"
@@ -26486,10 +26522,12 @@
           "description": "Na aula de programação de hoje, você criará uma simulação de um ecossistema. Você começará adicionando um código para representar a cadeia alimentar: os peixes comem as algas e os humanos em barcos pegam os peixes. Mas o ecossistema fica desequilibrado devido ao fato de os humanos tirarem muitos peixes da água. Quando uma espécie de um ecossistema é removida, há um **efeito** no resto dos organismos do sistema. Nesta simulação, os peixes comem as algas em uma taxa normal. Mas quando muitos peixes são capturados e removidos do ecossistema, as algas crescem demais, o que, por sua vez, prejudica o recife de coral."
         },
         "c8103731-20b1-4450-bf84-5a7f726c3984": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Vídeo sobre ecossistemas”\n\n**Faça isso**: Mostre o vídeo de introdução para toda a turma"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Vídeo sobre ecossistemas”\n\n**Faça isso**: Mostre o vídeo de introdução para toda a turma",
+          "progression_name": "Vídeo sobre ecossistemas"
         },
         "37930866-a6ed-47a0-9be5-f009204e8950": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 2 - Teste a simulação”\n\n**Faça isso**: Peça aos alunos que experimentem a simulação inacabada em seus próprios computadores. Faça perguntas orientadoras para ajudá-los a perceber o que está faltando na simulação."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 2 - Teste a simulação”\n\n**Faça isso**: Peça aos alunos que experimentem a simulação inacabada em seus próprios computadores. Faça perguntas orientadoras para ajudá-los a perceber o que está faltando na simulação.",
+          "progression_name": "Simulação de ecossistema"
         },
         "7782afb7-cd17-487c-9b04-547c5476271b": {
           "description": "**Perguntas orientadoras**:\n\n-   O que está mudando na tela?\n-   Plantas e animais estão sendo adicionados? Removido?\n-   Por que existem tantas algas?\n-   O que você esperaria que acontecesse quando o barco tocasse o peixe?\n-   Esse é um ecossistema equilibrado?\n-   A cadeia alimentar está em ação?\n-   O que poderia melhorar essa simulação? \n\n**Objetivo da discussão**: Os alunos reconhecerão que existem muitas algas porque os peixes não as estão comendo. Além disso, o barco não está pegando o peixe. A simulação seria melhor se modelasse a cadeia alimentar: os peixes comem a ágala e as pessoas no barco comem o peixe. "
@@ -26500,7 +26538,8 @@
           ]
         },
         "4965bd27-8ecf-4ca5-9c82-4ecabe2a6ad0": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 3-5 - Codifique a cadeia alimentar”\n\n**Faça isso**: Peça aos alunos que concluam os níveis 3-5 de forma independente para configurar o ecossistema aquático. Eles adicionarão blocos de eventos à simulação para fazer com que os peixes comam as algas e sejam removidos ao tocarem no barco. \n\n**Nível 3** - Os alunos encontram o bloco de eventos `Quando o peixe toca alga` e adicionam um bloco `come o objeto alga` abaixo do evento. \n\n**Nível 4** - Os alunos encontram o bloco de eventos `Quando o barco toca o peixe` e adicionam um bloco `captura o objeto peixe` abaixo do evento.\n\n**Nível 5** - Você pode usar esse nível de correspondência como uma verificação de compreensão e para reforçar o aprendizado nos níveis 3-4. Os alunos arrastam a imagem do código que corresponde ao GIF. Um GIF mostra o peixe comendo algas e o outro GIF mostra o barco pegando peixes. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 3-5 - Codifique a cadeia alimentar”\n\n**Faça isso**: Peça aos alunos que concluam os níveis 3-5 de forma independente para configurar o ecossistema aquático. Eles adicionarão blocos de eventos à simulação para fazer com que os peixes comam as algas e sejam removidos ao tocarem no barco. \n\n**Nível 3** - Os alunos encontram o bloco de eventos `Quando o peixe toca alga` e adicionam um bloco `come o objeto alga` abaixo do evento. \n\n**Nível 4** - Os alunos encontram o bloco de eventos `Quando o barco toca o peixe` e adicionam um bloco `captura o objeto peixe` abaixo do evento.\n\n**Nível 5** - Você pode usar esse nível de correspondência como uma verificação de compreensão e para reforçar o aprendizado nos níveis 3-4. Os alunos arrastam a imagem do código que corresponde ao GIF. Um GIF mostra o peixe comendo algas e o outro GIF mostra o barco pegando peixes. ",
+          "progression_name": "Vídeo sobre ecossistemas"
         },
         "d57207f8-fc64-4d78-a47c-b7030eb457f0": {
           "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Conceito chave”\n\n**Faça isso**: Assim que alguns alunos concluírem o Nível 5, reúna toda a turma para pré-visualizar o Nível 6. Leia os cenários de causa e efeito de algas demais, insuficientes e suficientes. Inicie a conversa após o aquecimento para lembrar os alunos sobre ecossistemas desequilibrados. Nessa simulação, a quantidade de algas faz com que o sistema fique desequilibrado. \n\n-   **Condição** - Algo que um programa verifica para ver se é verdadeiro antes de permitir uma ação.\n\n-   **Condicionais** - Declarações que só funcionam sob determinadas condições.\n\n**Objetivo da discussão**: Os alunos entenderão que os computadores podem verificar se algo é verdadeiro ou falso e 'decidir' qual ação executar com base na resposta."
@@ -26588,11 +26627,13 @@
         },
         "072db4ea-d8ac-439e-ab0e-c8ef67d7b860": {
           "name": "Solução de sobrepesca #2 - Crie uma “temporada de pesca”",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 3-5 - Crie uma temporada de pesca”\n\n**Faça isso**: Peça aos alunos que preencham o código nesses níveis em seu próprio ritmo. Considere reunir o grupo para fazer uma conexão com o texto no Nível 3.\n\n**Nível 3** - Os alunos aprenderão a prática de pesca sustentável #2: Crie uma temporada de pesca. Estabeleça limites sobre quando as pessoas podem pescar. Quando não é época de pesca, o ecossistema tem tempo para se recuperar.\n\n**Nível 4** - Os alunos adicionarão código para criar uma temporada sem pesca.\n\n**Nível 5** - Os alunos adicionarão código para criar uma temporada de pesca que se repita. O ecossistema alternará entre as temporadas de pesca e sem pesca."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 3-5 - Crie uma temporada de pesca”\n\n**Faça isso**: Peça aos alunos que preencham o código nesses níveis em seu próprio ritmo. Considere reunir o grupo para fazer uma conexão com o texto no Nível 3.\n\n**Nível 3** - Os alunos aprenderão a prática de pesca sustentável #2: Crie uma temporada de pesca. Estabeleça limites sobre quando as pessoas podem pescar. Quando não é época de pesca, o ecossistema tem tempo para se recuperar.\n\n**Nível 4** - Os alunos adicionarão código para criar uma temporada sem pesca.\n\n**Nível 5** - Os alunos adicionarão código para criar uma temporada de pesca que se repita. O ecossistema alternará entre as temporadas de pesca e sem pesca.",
+          "progression_name": "Solução 2 - Estação de pesca"
         },
         "48e4c3b2-150f-4524-b1a8-55dfc170c1b6": {
           "name": "Solução de sobrepesca #3 - Limitar o número de peixes capturados",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 6 a 8 - Limite o número de peixes capturados”\n\n**Faça isso**: Peça aos alunos que preencham o código usando as instruções dos níveis 6 a 8 em seu próprio ritmo. Considere reunir o grupo para fazer uma conexão com o texto no Nível 6.\n\n**Nível 6** - Os alunos aprenderão a Prática de Pesca Sustentável #3: Estabeleça limites de pesca. Os cientistas podem ajudar a descobrir quantos peixes podem ser capturados sem causar danos ao oceano. Então, os pescadores saberão pescar apenas aquela quantidade de peixes.\n\n**Nível 7** - Os alunos criarão uma nova variável para rastrear quantos peixes o barco pescou e aumentarão a variável em 1 para cada novo peixe capturado.\n\n**Nível 8** - Os alunos usarão uma condição para definir o limite de pesca e remover o barco assim que ele atingir esse limite."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 6 a 8 - Limite o número de peixes capturados”\n\n**Faça isso**: Peça aos alunos que preencham o código usando as instruções dos níveis 6 a 8 em seu próprio ritmo. Considere reunir o grupo para fazer uma conexão com o texto no Nível 6.\n\n**Nível 6** - Os alunos aprenderão a Prática de Pesca Sustentável #3: Estabeleça limites de pesca. Os cientistas podem ajudar a descobrir quantos peixes podem ser capturados sem causar danos ao oceano. Então, os pescadores saberão pescar apenas aquela quantidade de peixes.\n\n**Nível 7** - Os alunos criarão uma nova variável para rastrear quantos peixes o barco pescou e aumentarão a variável em 1 para cada novo peixe capturado.\n\n**Nível 8** - Os alunos usarão uma condição para definir o limite de pesca e remover o barco assim que ele atingir esse limite.",
+          "progression_name": "Solução 3 - Limites de pesca"
         },
         "676d8a66-e8c0-4388-9600-eb00bf91e63e": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Exibir: Mostra o slide “Nível 9 - Verificar a compreensão”\n\n**O nível 9** é uma verificação final de compreensão. Os alunos examinarão as três práticas de pesca sustentável\ne arrastarão o código até a imagem correspondente.",
@@ -26601,7 +26642,8 @@
         "7e2e90c2-7e89-498f-a565-c2f8956afde0": {
           "tips": [
             "Pode ser útil que os alunos que estão trabalhando no mesmo ritmo se reúnam em duplas ou em pequenos grupos para discutir a pergunta de Nível 9 - Verifique a Compreensão antes de enviar suas respostas. Oriente os alunos a explicar cada linha de código e sua finalidade na simulação. Depois de discutir em pequenos grupos, os alunos devem estar mais bem preparados para responder às perguntas correspondentes. \n\nTambém pode ser útil fornecer aos alunos algumas frases iniciais para suas discussões. Você pode escrevê-las em um pedaço de papel ou no quadro da sala de aula, conforme necessário. \n\n-   O coral permanece saudável nesta simulação porque… \n-   O coral não fica doente nesta simulação porque…"
-          ]
+          ],
+          "progression_name": "Verifique se todos compreenderam"
         },
         "a758b35b-192c-4765-b0f7-f419f9d55a88": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Mostre o que você sabe”\n\n\\*\\*Diga: \\*\\* \n\n-   _Cite TRÊS blocos de código usados na Lição 3: Equilibrando o ecossistema._ - _Descreva DUAS soluções para o problema\n    da sobrepesca._ \n-   _Explique sua ÚNICA parte favorita da lição._ \\*\\*Faça isso\n\n\\*\\*: Peça aos alunos que registrem suas respostas em notas adesivas, em um diário, em um formulário do Google ou em outro sistema de gerenciamento de conteúdo usado em sua classe. \\_Opcional: leitura e discussão estendidas. \\_"
@@ -26632,21 +26674,25 @@
         },
         "81bd8cd7-0a8a-41d4-9ea9-34e285777719": {
           "name": "Análise da cadeia alimentar",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 1 - A cadeia alimentar”\n\n**Faça isso**: Analise o delicado equilíbrio de uma cadeia alimentar usando exemplos de causa e efeito da lição 1."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 1 - A cadeia alimentar”\n\n**Faça isso**: Analise o delicado equilíbrio de uma cadeia alimentar usando exemplos de causa e efeito da lição 1.",
+          "progression_name": "A cadeia alimentar"
         },
         "277c72a1-2eb0-4508-88ab-ea1467d9dc3d": {
-          "description": "A cadeia alimentar é um equilíbrio delicado. Se houver muito de um organismo, pode haver efeitos em outras plantas ou animais. Na simulação marinha com a qual trabalhamos, o impacto humano causou um desequilíbrio no ecossistema. O barco tirou muitos peixes do oceano. Como os peixes comem as algas, removê-las significava que elas cresciam demais. O excesso de algas no ecossistema fez com que o coral morresse."
+          "description": "A cadeia alimentar é um equilíbrio delicado. Se houver muito de um organismo, pode haver efeitos em outras plantas ou animais. Na simulação marinha com a qual trabalhamos, o impacto humano causou um desequilíbrio no ecossistema. O barco tirou muitos peixes do oceano. Como os peixes comem as algas, removê-las significava que elas cresciam demais. O excesso de algas no ecossistema fez com que o coral morresse.",
+          "progression_name": "A cadeia alimentar"
         },
         "09231b15-08f9-4770-8abd-22c1b8c4729e": {
           "name": "Observe, modifique, registre",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 2 - Nível de escolha”\n\n**Faça isso**: entregue a cada aluno uma cópia do Guia de atividades. Revise as seções Observar, Modificar e Registrar antes que os alunos comecem seu nível de escolha no computador. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 2 - Nível de escolha”\n\n**Faça isso**: entregue a cada aluno uma cópia do Guia de atividades. Revise as seções Observar, Modificar e Registrar antes que os alunos comecem seu nível de escolha no computador. ",
+          "progression_name": "Equilíbrio de um ecossistema"
         },
         "0a65cbdc-a7b3-4262-975b-c5963bc30c29": {
           "description": "Nesse nível, há quatro exemplos de ecossistemas que estão enfrentando desafios decorrentes da interferência humana. Você pode escolher qual ecossistema equilibrar. Você será ecologista da floresta tropical, ecologista do deserto, ecologista de zonas úmidas ou ecologista do Ártico? \n\nComece observando a simulação do ecossistema em ação. Anote suas observações em seu caderno de ecologistas. \n\nEm seguida, siga as instruções para modificar o código para ajudar a equilibrar o ecossistema. \n\nExecute a simulação novamente e observe como a alteração no código mudou a simulação. Por fim, registre suas observações sobre as mudanças no Caderno do Ecologista. \n\nVocê pode explorar outro ecossistema se tiver tempo!"
         },
         "9216fede-49ad-4b19-a1d3-aea5e42900a9": {
           "name": "Compartilhar",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 3 - Compartilhe”\n\n**Faça isso**: agrupe os alunos de uma forma aleatória de sua escolha, de preferência com colegas que escolhem um ecossistema diferente para equilibrar. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 3 - Compartilhe”\n\n**Faça isso**: agrupe os alunos de uma forma aleatória de sua escolha, de preferência com colegas que escolhem um ecossistema diferente para equilibrar. ",
+          "progression_name": "Compartilhe sua simulação"
         },
         "7ad0e8a1-2be5-47d2-a203-a6c9c3bb5bd8": {
           "description": "Uma das melhores vantagens da ciência da computação é que geralmente há mais de uma solução correta para um problema. Ao entrar em contato com seu grupo/parceiro, comece explicando o ecossistema que você escolheu e o desafio que ele enfrentou.\n\n1.  Explique a cadeia alimentar em seu ecossistema e como você a codificou.\n2.  Havia muito ou pouco de um organismo?\n\nEm seguida, mostre as modificações que você fez no código e explique como isso mudou a simulação.\n\n3.  Explique as modificações que você fez na simulação.\n4.  O que você notou depois de alterar os valores?"
@@ -27909,7 +27955,7 @@
           "name": "Criador de Histórias",
           "description": "Em seguida, permita que os pares examinem o aplicativo de criação de histórias sozinhos, respondendo a perguntas semelhantes sobre sua entrada e saída. Este aplicativo permite que os alunos insiram informações específicas em um formulário e, em seguida, gerem uma história personalizada com base nas informações fornecidas.",
           "tips": [
-            "Certifique-se de que os alunos estejam identificando entradas e saídas adequadamente. As respostas dos alunos podem variar um pouco, mas devem ser semelhantes às do exemplo fornecido na caixa “Somente para professores” do primeiro nível no Code Studio."
+            null
           ],
           "progression_name": "Aplicativo: Story Creator"
         },
@@ -30782,15 +30828,17 @@
           "name": "Diário"
         },
         "00867e01-dd38-4470-a273-528e615e176a": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Consulte o guia de atividades da aula anterior e liste:\n\n-   O usuário para o qual você está projetando\n-   Sua necessidade ou interesse específico\n-   A solução escolhida para sua necessidade\n\nEm seguida, anote uma ideia para um tipo específico de roupa inteligente que você poderia criar com base na sua solução."
         },
         "9c4f976b-d905-4ad2-a7fc-0aafa7224656": {
           "tips": [
-            null
+            "**Pesquisa de Roupas Inteligentes:** Se os alunos não estiverem familiarizados com roupas inteligentes, incentive-os a usar a Internet para fazer uma pesquisa inicial sobre como as elas  funcionam ou foram usadas para resolver problemas. Os alunos devem evitar procurar um produto de vestuário inteligente já existente que atenda às necessidades do usuário escolhido, mas podem investigar os usos mais comuns das roupas inteligentes, caso não estejam familiarizados com elas."
           ]
         },
         "ac3902da-8c9f-412c-8d73-9cd5b6d4ca9a": {
-          "name": "Tentar"
+          "name": "Tentar",
+          "description": "**Visão Geral:** Leia a visão geral em aula para garantir que os alunos entendam a atividade. Conheça o aspecto de RPG deste projeto, incentivando os alunos a imaginarem que têm todos os recursos de que precisam para concluir essa tarefa.\n\n**Atribua funções:** Peça aos alunos que atribuam funções - um redator, um artista, um cronometrista e um apresentador. Certifique-se de que os alunos tenham clareza sobre suas funções e tarefas durante essa tarefa.\n\n**Faça isso:** Os alunos devem trabalhar juntos para criar um produto de vestuário inteligente que atenda às necessidades de seus usuários. Eles podem usar a discussão durante o aquecimento para ajudar a orientar esse processo. Eles também devem criar um esboço da aparência do design, com setas e rótulos para ajudar a comunicar como o produto funciona. O artista pode desenhar seu produto no guia de atividades ou na cartolina fornecida. Veja o exemplar incluído para ver uma ideia do que os alunos podem acabar criando. Dê aos alunos um limite de tempo e garanta que o cronometrista de cada grupo esteja ciente disso.\n\n**Circular**: monitore os alunos enquanto eles passam pela fase de teste, verificando se as necessidades do usuário estão orientando as decisões de seu produto. Se necessário, lembre os alunos de “entrarem na cabeça” do usuário, semelhante à lição Entendendo seu Usuário."
         },
         "8f191079-75b9-46a5-96b6-efe624e51c6b": {
           "name": "Reflita",
@@ -30802,47 +30850,57 @@
           "name": "Diário"
         },
         "b899ff01-5947-4a20-85c1-4a0c55e8a98b": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** O que é um aplicativo? Que aplicativos você ou outras pessoas que você conhece usam?"
         },
         "ad59925e-fae1-4da6-8fc1-b3a7369ea10d": {
-          "name": "Protótipos em Papel"
+          "name": "Protótipos em Papel",
+          "description": "**Em grupos:** Organize os alunos em duplas."
         },
         "da5b7fd8-805e-433d-9a3d-90a24b452bf7": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\nEsses materiais podem ser reutilizados se os alunos não escreverem neles. Você também precisará deles para a próxima atividade da aula."
+          ],
+          "description": "**Distribua:** Distribua uma cópia do guia de atividades de Telas de Interface de Usuários para cada dupla de alunos. Se você ainda não separou as telas, dê aos alunos alguns minutos para fazer isso."
         },
         "5a8e7a27-8780-44f1-95d9-219ef159dfe9": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\n**Guia de Atividades do Computador** Os guias de atividades do computador são usados apenas como referência. Os alunos podem ver as versões digitais durante essa atividade. Se você optar por imprimir o guia, eles poderão ser reutilizados, desde que os alunos sejam instruídos a não escrever neles.\n\n\\*\\*Guia de Atividades do Usuário: \\*\\* O Guia de atividades do usuário pode ser preenchido online ou como uma atividade de diário. Os alunos podem usar uma versão digital do Guia de Atividades como um prompt, copiando os gráficos e as perguntas em seus diários."
+          ],
+          "description": "**Distribua:** Dê a cada um dos _Computadores_ uma cópia do guia de atividades da Experiência do Usuário (computador) e a cada um dos _Usuários_ uma cópia do guia de atividades da Experiência do Usuário (usuário). O guia de atividades do computador só deve ser visto pelo computador e não pelo usuário."
         },
         "312fdd23-ce37-49b3-9a79-ab403dc8fc67": {
           "tips": [
-            null
-          ]
+            "Os alunos devem conectar experiências específicas do usuário a problemas com o aplicativo e debater como esses problemas podem ser resolvidos. Se necessário, peça aos alunos que relatem incidentes específicos durante o teste que revelaram problemas relacionados ao design."
+          ],
+          "description": "**Discuta:** Peça aos alunos que discutam em duplas e, em seguida, convide cada dupla a compartilhar seus comentários com a turma. Faça uma lista de possíveis melhorias e a exiba de forma que todos possam vê-la (parte da frente da sala de aula)."
         },
         "277a6ecc-7dd1-4511-b7e9-a11f8e0f94c7": {
           "name": "Diário",
           "tips": [
-            null
-          ]
+            "Os alunos devem sintetizar a discussão anterior em pontos-chave que sejam acionáveis para uma revisão do design. Eles devem estar claramente relacionados à discussão anterior e verificar se os alunos estão conectando as necessidades do usuário, a experiência do usuário no teste e os recursos específicos do aplicativo."
+          ],
+          "description": "**Prompt:** No início da lição, procuramos prever que necessidades do usuário serão atendidas por esse protótipo. Agora que você experimentou o aplicativo em primeira mão, anote o seguinte:"
         },
         "2b1f972e-9f36-4367-8839-339f9da31501": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Pense em um software (como um aplicativo) que você considere difícil de usar. Talvez você não tenha conseguido encontrar algo de que precisava, ou ele estivesse mal organizado ou simplesmente difícil de usar. Do que especificamente você não gostou? Como esse aspecto poderia ser melhorado?"
         },
         "edd83ba2-6b66-4bcc-832c-de3b499ff32e": {
-          "name": "Feedback do Protótipo"
+          "name": "Feedback do Protótipo",
+          "description": "**Em grupos:** Coloque os alunos em grupos de 2 ou 3"
         },
         "6211d9c0-525f-404b-803e-1fb8c4bd4c62": {
           "tips": [
-            null
-          ]
+            "**Reduzindo Materiais Impressos**\n\nAs telas de feedback do protótipo e da interface do usuário podem ser reutilizadas, desde que os alunos não escrevam nelas. As Telas da Interface do Usuário já devem ter sido impressas da lição anterior.\n\nO Guia de Atividades pode ser preenchido online ou como uma atividade de diário. Os alunos que concluírem a atividade online podem optar por usar uma ferramenta de desenho online para esboçar a interface de usuário aprimorada ou enviar o esboço separadamente em papel."
+          ],
+          "description": "**Distribua:** Entregue a cada grupo de alunos uma cópia das tiras de papel do Feedback do Protótipo. Se possível, tente cortá-los com antecedência - caso contrário, dê tempo aos alunos para fazerem isso na sala de aula. Você também deve distribuir cópias do recurso Telas da Interface do Usuário ou exibi-las á turma."
         },
         "72e65375-942e-4c50-8bb6-3e0d0728c959": {
           "tips": [
-            null
-          ]
+            "**Selecionando as Melhorias:** Os alunos podem precisar de ajuda para pensar em boas melhorias em seus aplicativos. Por exemplo, se vários usuários estão reclamando de um texto pequeno, eles podem tentar aumentar o tamanho da fonte na tela que estão melhorando. Eles também podem optar por adicionar uma configuração de “tamanho do texto” na página “Configurações”. Sempre há muitas melhorias em um aplicativo que podem gerar o efeito desejado. Para esta lição, é mais importante que a mudança atenda de forma razoável à necessidade que eles escolheram. Haverá mais oportunidades de investigar o que é razoável mudar na interface de usuário de um aplicativo posteriormente na unidade. "
+          ],
+          "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "eaf2312f-f3a1-4d8e-9e9f-dec26b2ef9a4": {
           "tips": [
@@ -40572,6 +40630,201 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Fechamento"
+        },
+        "0aafe4f1-ca8b-4dbc-bf46-97a5a91574ae": {
+          "description": "**Distribua:** Quando os alunos entrarem na sala de aula, redistribua os guias de atividades da aula anterior. Se um aluno estiver ausente, faça com que ele se junte a um grupo já formado e use o mesmo usuário, necessidades e soluções desse grupo."
+        },
+        "233d29c4-7eb9-4004-a440-8b397262d9d8": {
+          "description": "Estamos projetando para muitos usuários e necessidades diferentes. Hoje, concluiremos as etapas Tente e Reflita desta atividade. Seu grupo poderá criar seu próprio produto de vestuário inteligente para seu usuário e compartilhar suas ideias com a turma."
+        },
+        "2ab94314-31c6-4d42-9fb3-e4c4d1885c00": {
+          "description": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**"
+        },
+        "e47eea09-c3ea-4ba3-8b4d-6976340b86ef": {
+          "description": "**Distribua:** O guia de atividades de design centrado no usuário (Tente & Reflita) para cada grupo. Se disponível, distribua também uma cartolina para cada grupo.\n\n#### Design centrado no usuário (experimente e reflita)"
+        },
+        "22e5e073-764b-4970-a333-f3aa33d901ed": {
+          "description": "Eu vi alguns produtos muito criativos enquanto conversava com todos vocês, e estou animada para  ouvir as ideias que vocês vão compartilhar com os outros colegas! Essa é a etapa final do processo de design: compartilhar suas ideias, receber feedback e refletir sobre quais são as próximas etapas."
+        },
+        "9af85d3c-6e77-492b-b1e0-9d63f16ca9b4": {
+          "description": "**Vocabulário**\n\n-   **Aplicativo:** Um software projetado para cumprir um propósito"
+        },
+        "8ea6f5e9-ca3e-43f6-a035-501b5d476d7f": {
+          "description": "Quando você pensa em um aplicativo, provavelmente imagina o produto final. Na última lição, você teve a chance de experimentar a fase inicial do desenvolvimento, quando estávamos discutindo ideias e criando possíveis usuários e necessidades. Nas próximas lições, veremos como podemos usar esse mesmo processo de design para desenvolver um aplicativo para um usuário específico com base em suas necessidades e interesses."
+        },
+        "b9b435a8-7790-4386-b2a9-f6f76af1f9a1": {
+          "description": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?"
+        },
+        "3063baca-d796-4feb-8030-600b71988449": {
+          "description": "**Exiba** as seguintes definições ao abordar a turma\n\n-   **Protótipo** - Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes que seja desenvolvida uma versão final.\n-   **Interface de usuário** - Os elementos visuais de um programa que o usuário controla e interage com o aplicativo. É frequentemente abreviada como UI (User Interface)."
+        },
+        "722cc5f3-47e1-412e-85d4-13a3771d464f": {
+          "description": "O conjunto de telas que acabei de entregar é chamado de protótipo de papel. Um protótipo é um modelo inicial de um produto que permite que sejam testadas suas suposições antes que seja desenvolvida uma versão final. Essa é uma das primeiras etapas no design de um aplicativo e permite que um desenvolvedor teste sua ideia antes de investir muito tempo programando.\n\nOs protótipos em papel são uma maneira rápida e fácil de compartilhar a interface do usuário do seu aplicativo com usuários em potencial. A interface do usuário forma os elementos visuais de um programa que o usuário controla e usa para interagir com o aplicativo. Isso geralmente é abreviado como UI."
+        },
+        "d989fccc-126d-4cd9-afb5-fbf5171d4a52": {
+          "description": "**Prompt:** Com base apenas nas telas, quem você julga ser o principal usuário deste aplicativo? O que você acha que esse aplicativo foi projetado para fazer?"
+        },
+        "042642d9-c1f5-48b6-9382-8a10dbc2eccd": {
+          "description": "Para a atividade de hoje, usaremos esse protótipo em papel para testar nosso aplicativo. Uma pessoa será o usuário, que tentará usar o protótipo em papel. Outra pessoa será o computador, responsável por mudar as telas e reagir ao que o usuário faz. Nosso objetivo é coletar feedback para que possamos dar sugestões e melhorá-lo."
+        },
+        "f6ae2b78-f4b1-4f5b-87b5-3bbb4b9f2f41": {
+          "description": "**Assumindo Funções:** Para cada dupla de alunos, atribua a cada aluno a função de _Computador_ e _Usuário_. Depois que as funções forem atribuídas, faça com que os alunos das duplas fiquem sentados frente a frente."
+        },
+        "6cca8c81-d83c-4316-b8b4-5b2e48069e1c": {
+          "description": "#### Teste de Usuário\n\n**Exibição**: Leia o parágrafo de abertura sobre Casos de Testagem com a turma. Enfatize que os usuários têm uma lista definida de tarefas a serem concluídas, e ambos devem reagir sobre formas de melhorar a experiência. Algumas dessas tarefas podem nem mesmo ser possíveis, o que significa que podemos fazer sugestões de como melhorar o aplicativo e de como concluir a tarefa.\n\n**Modelo:** Esta atividade envolve que os alunos, em duplas, testem o protótipo de papel, com um atuando como _Usuário_ e o outro como _Computador_. O processo básico é o seguinte e deve ser modelado para os alunos antes que trabalhem de forma independente em duplas:\n\n1.  O _Computador_ coloca a tela inicial (aquela intitulada “Txt Ur Grndkds”) na frente do _Usuário_.\n2.  O _Usuário_ seleciona uma tarefa da tabela em seu guia de atividades.\n3.  O _Usuário_ tenta concluir a tarefa “clicando” na tela do protótipo de papel à sua frente.\n4.  Toda vez que o _Usuário_ clica na tela, o _Computador_ consulta o Diagrama de Navegação em seu guia de atividades.\n    -   Se o diagrama de navegação mostrar uma linha conectada ao elemento que foi clicado, deve localizar a tela na outra extremidade da linha e posicioná-la na frente do usuário.\n    -   Se o diagrama de navegação não mostrar uma linha conectada ao elemento que foi clicado, não faça nada.\n5.  Quando o _Usuário_ concluir uma tarefa (ou decidir que é impossível concluí-la no protótipo atual), ele preenche as colunas “O que eu tentei” e “Minha reação” e o computador redefine o aplicativo de volta para a tela inicial.\n\n**Circule**: monitore os alunos enquanto eles trabalham em duplas para concluir essa tarefa. Certifique-se de que os computadores estejam usando as setas guiadas para navegar pelas telas e garanta que os usuários estejam concluindo cada linha de tarefas na tabela. Peça aos alunos que troquem os papéis na metade da tarefa, invertendo os papéis de quem é o usuário e quem é o computador."
+        },
+        "9ed017b1-a7ee-4c38-87f0-8dea971bd9e6": {
+          "description": "**Prompt:** Que problema foi enfrentado por um _Usuário_ ao usar o aplicativo? Como você poderia melhorar o protótipo com base na sua experiência?"
+        },
+        "a0281e07-488a-4ed3-a0f4-fa5454f6a71a": {
+          "description": "Criar e testar um protótipo é uma parte importante do processo de design - olhe todo o feedback que recebemos e as mudanças que precisamos fazer! Quando começarmos a criar nossos próprios aplicativos, uma das nossas primeiras etapas será criar um protótipo em papel para que possamos testar e receber feedback com antecedência, para garantir que estejamos atendendo às necessidades dos nossos usuários."
+        },
+        "9d9b2509-c188-4bcc-a50e-2a9bc92ec04c": {
+          "description": "-   Que necessidade do usuário é bem atendida por esse aplicativo?\n-   Que necessidade do usuário esse aplicativo poderia resolver melhor?\n-   Que necessidade do usuário não foi atendida, mas que você acha que deveria?\n\n**Compartilhe:** Se houver tempo, peça aos alunos que compartilhem suas necessidades. Considere escrever isso no quadro ou em uma cartolina, que poderá ser consultado na próxima lição."
+        },
+        "7bbeb2e8-9312-4daa-b5c4-6b6d6bb1a491": {
+          "description": "Ouvi muitos bons exemplos de como os aplicativos podem ser aprimorados para serem mais acessíveis e atenderem às nossas necessidades. Esse tipo de feedback seria extremamente valioso para os fabricantes desses aplicativos, para que eles pudessem melhorá-los. Na atividade de hoje, daremos uma olhada em alguns comentários do aplicativo que exploramos ontem e veremos como podemos melhorar a interface do usuário com base nesse feedback."
+        },
+        "590542a6-7c3e-4ab3-9038-079cf2171680": {
+          "description": "**Pergunta do Dia:** Como podemos usar o feedback para melhorar um aplicativo?"
+        },
+        "25e2bf05-fed1-4d00-a2c9-b63c80d2b656": {
+          "description": "**Faça Isso:** Os alunos devem trabalhar em grupos para criar pilhas de tiras de papel para que cada pilha seja uma categoria de feedback. As categorias devem corresponder às necessidades ou aos problemas semelhantes aos abordados pelo feedback. Por exemplo, vários comentários podem ser sobre o fato de a fonte ser muito pequena para ser lida. Ao categorizar o feedback, eles também devem discutir em quais categorias gostariam de se concentrar e por quê.\n\n**Circule:** Monitore o progresso dos alunos, pedindo aos grupos que expliquem como estão formando suas categorias. Não há um agrupamento correto de feedback aqui, mas os alunos devem estar preparados para justificar suas categorias. Peça aos alunos que expliquem quais categorias eles escolheram como mais importantes de serem abordadas e por quê.\n\n**Compartilhe:** Depois que todos os grupos categorizarem seus comentários, peça algumas sugestões dos tipos de categorias que eles criaram."
+        },
+        "eedba90d-8e34-46c9-bc05-69a703c41acc": {
+          "description": "**Distribua:** Quando os alunos entrarem na sala de aula, redistribua os guias de atividades da aula anterior. Se um aluno estiver ausente, faça com que ele se junte a um grupo já formado e use o mesmo usuário, necessidades e soluções desse grupo."
+        },
+        "e9aa9047-04a7-4a61-a0d0-555a718d7c2b": {
+          "description": "Estamos projetando para muitos usuários e necessidades diferentes. Hoje, concluiremos as etapas Tente e Reflita desta atividade. Seu grupo poderá criar seu próprio produto de vestuário inteligente para seu usuário e compartilhar suas ideias com a turma."
+        },
+        "afa53a12-e99a-4cf1-bf45-b0a2a8057ef5": {
+          "description": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**"
+        },
+        "50fd54e6-41b7-4d74-9ab4-1c1e8415d870": {
+          "description": "**Distribua:** O guia de atividades de design centrado no usuário (Tente & Reflita) para cada grupo. Se disponível, distribua também uma cartolina para cada grupo.\n\n#### Design centrado no usuário (experimente e reflita)"
+        },
+        "e3fb7f1e-eab8-43d1-93c0-d1591d8e906d": {
+          "description": "Eu vi alguns produtos muito criativos enquanto conversava com todos vocês, e estou animada para  ouvir as ideias que vocês vão compartilhar com os outros colegas! Essa é a etapa final do processo de design: compartilhar suas ideias, receber feedback e refletir sobre quais são as próximas etapas."
+        },
+        "983d9c9d-0dec-48a7-8be3-0bbb137f69ab": {
+          "description": "**Vocabulário**\n\n-   **Aplicativo:** Um software projetado para cumprir um propósito"
+        },
+        "73b4ca4f-6838-432e-99ee-700923de9714": {
+          "description": "Quando você pensa em um aplicativo, provavelmente imagina o produto final. Na última lição, você teve a chance de experimentar a fase inicial do desenvolvimento, quando estávamos discutindo ideias e criando possíveis usuários e necessidades. Nas próximas lições, veremos como podemos usar esse mesmo processo de design para desenvolver um aplicativo para um usuário específico com base em suas necessidades e interesses."
+        },
+        "14f1d5df-e8bf-4053-a49b-9ce271b87e46": {
+          "description": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?"
+        },
+        "6f16adc7-4410-4afc-9e4c-146569cdd52f": {
+          "description": "**Exiba** as seguintes definições ao abordar a turma\n\n-   **Protótipo** - Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes que seja desenvolvida uma versão final.\n-   **Interface de usuário** - Os elementos visuais de um programa que o usuário controla e interage com o aplicativo. É frequentemente abreviada como UI (User Interface)."
+        },
+        "7b90beca-b447-411b-8e23-da42c21604ea": {
+          "description": "O conjunto de telas que acabei de entregar é chamado de protótipo de papel. Um protótipo é um modelo inicial de um produto que permite que sejam testadas suas suposições antes que seja desenvolvida uma versão final. Essa é uma das primeiras etapas no design de um aplicativo e permite que um desenvolvedor teste sua ideia antes de investir muito tempo programando.\n\nOs protótipos em papel são uma maneira rápida e fácil de compartilhar a interface do usuário do seu aplicativo com usuários em potencial. A interface do usuário forma os elementos visuais de um programa que o usuário controla e usa para interagir com o aplicativo. Isso geralmente é abreviado como UI."
+        },
+        "7606db21-7b52-46f2-a33b-dcf478291952": {
+          "description": "**Prompt:** Com base apenas nas telas, quem você julga ser o principal usuário deste aplicativo? O que você acha que esse aplicativo foi projetado para fazer?"
+        },
+        "e31f1e4d-31b2-44ae-902f-543850585f7d": {
+          "description": "Para a atividade de hoje, usaremos esse protótipo em papel para testar nosso aplicativo. Uma pessoa será o usuário, que tentará usar o protótipo em papel. Outra pessoa será o computador, responsável por mudar as telas e reagir ao que o usuário faz. Nosso objetivo é coletar feedback para que possamos dar sugestões e melhorá-lo."
+        },
+        "85944236-f2c0-4c09-a329-b1ec6f693bf5": {
+          "description": "**Assumindo Funções:** Para cada dupla de alunos, atribua a cada aluno a função de _Computador_ e _Usuário_. Depois que as funções forem atribuídas, faça com que os alunos das duplas fiquem sentados frente a frente."
+        },
+        "d6eea790-4f33-4653-9e57-5a5d7f34a1f9": {
+          "description": "#### Teste de Usuário\n\n**Exibição**: Leia o parágrafo de abertura sobre Casos de Testagem com a turma. Enfatize que os usuários têm uma lista definida de tarefas a serem concluídas, e ambos devem reagir sobre formas de melhorar a experiência. Algumas dessas tarefas podem nem mesmo ser possíveis, o que significa que podemos fazer sugestões de como melhorar o aplicativo e de como concluir a tarefa.\n\n**Modelo:** Esta atividade envolve que os alunos, em duplas, testem o protótipo de papel, com um atuando como _Usuário_ e o outro como _Computador_. O processo básico é o seguinte e deve ser modelado para os alunos antes que trabalhem de forma independente em duplas:\n\n1.  O _Computador_ coloca a tela inicial (aquela intitulada “Txt Ur Grndkds”) na frente do _Usuário_.\n2.  O _Usuário_ seleciona uma tarefa da tabela em seu guia de atividades.\n3.  O _Usuário_ tenta concluir a tarefa “clicando” na tela do protótipo de papel à sua frente.\n4.  Toda vez que o _Usuário_ clica na tela, o _Computador_ consulta o Diagrama de Navegação em seu guia de atividades.\n    -   Se o diagrama de navegação mostrar uma linha conectada ao elemento que foi clicado, deve localizar a tela na outra extremidade da linha e posicioná-la na frente do usuário.\n    -   Se o diagrama de navegação não mostrar uma linha conectada ao elemento que foi clicado, não faça nada.\n5.  Quando o _Usuário_ concluir uma tarefa (ou decidir que é impossível concluí-la no protótipo atual), ele preenche as colunas “O que eu tentei” e “Minha reação” e o computador redefine o aplicativo de volta para a tela inicial.\n\n**Circule**: monitore os alunos enquanto eles trabalham em duplas para concluir essa tarefa. Certifique-se de que os computadores estejam usando as setas guiadas para navegar pelas telas e garanta que os usuários estejam concluindo cada linha de tarefas na tabela. Peça aos alunos que troquem os papéis na metade da tarefa, invertendo os papéis de quem é o usuário e quem é o computador."
+        },
+        "deb75344-6ca6-449f-8aea-7efb28d572fa": {
+          "description": "**Prompt:** Que problema foi enfrentado por um _Usuário_ ao usar o aplicativo? Como você poderia melhorar o protótipo com base na sua experiência?"
+        },
+        "5c53a077-efaf-41c1-9e70-6739c2b0dec1": {
+          "description": "Criar e testar um protótipo é uma parte importante do processo de design - olhe todo o feedback que recebemos e as mudanças que precisamos fazer! Quando começarmos a criar nossos próprios aplicativos, uma das nossas primeiras etapas será criar um protótipo em papel para que possamos testar e receber feedback com antecedência, para garantir que estejamos atendendo às necessidades dos nossos usuários."
+        },
+        "aea22d01-3fd2-4584-9f4a-d31a98aae0fe": {
+          "description": "-   Que necessidade do usuário é bem atendida por esse aplicativo?\n-   Que necessidade do usuário esse aplicativo poderia resolver melhor?\n-   Que necessidade do usuário não foi atendida, mas que você acha que deveria?\n\n**Compartilhe:** Se houver tempo, peça aos alunos que compartilhem suas necessidades. Considere escrever isso no quadro ou em uma cartolina, que poderá ser consultado na próxima lição."
+        },
+        "60c0d117-5bd0-4e11-a474-733b6d6d9ed4": {
+          "description": "Ouvi muitos bons exemplos de como os aplicativos podem ser aprimorados para serem mais acessíveis e atenderem às nossas necessidades. Esse tipo de feedback seria extremamente valioso para os fabricantes desses aplicativos, para que eles pudessem melhorá-los. Na atividade de hoje, daremos uma olhada em alguns comentários do aplicativo que exploramos ontem e veremos como podemos melhorar a interface do usuário com base nesse feedback."
+        },
+        "5fff8fe8-310e-4b47-8ccb-e9395e8a6115": {
+          "description": "**Pergunta do Dia:** Como podemos usar o feedback para melhorar um aplicativo?"
+        },
+        "6c49263e-b46f-445c-b623-fe10392c227c": {
+          "description": "**Faça Isso:** Os alunos devem trabalhar em grupos para criar pilhas de tiras de papel para que cada pilha seja uma categoria de feedback. As categorias devem corresponder às necessidades ou aos problemas semelhantes aos abordados pelo feedback. Por exemplo, vários comentários podem ser sobre o fato de a fonte ser muito pequena para ser lida. Ao categorizar o feedback, eles também devem discutir em quais categorias gostariam de se concentrar e por quê.\n\n**Circule:** Monitore o progresso dos alunos, pedindo aos grupos que expliquem como estão formando suas categorias. Não há um agrupamento correto de feedback aqui, mas os alunos devem estar preparados para justificar suas categorias. Peça aos alunos que expliquem quais categorias eles escolheram como mais importantes de serem abordadas e por quê.\n\n**Compartilhe:** Depois que todos os grupos categorizarem seus comentários, peça algumas sugestões dos tipos de categorias que eles criaram."
+        },
+        "fe9aa8cf-961f-4691-b15b-1d9eb8ab89bb": {
+          "progression_name": "Configuração da cadeia alimentar"
+        },
+        "8aa3a6e2-5df5-4f7c-bafa-b5363f7cb1dc": {
+          "progression_name": "Se... então... Declarações condicionais"
+        },
+        "20dd7202-2d0c-4779-8781-6c038fc7746c": {
+          "description": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**"
+        },
+        "6d07b0a5-ba43-4a49-90a2-dca2e8ae8822": {
+          "description": "Eu vi alguns produtos muito criativos enquanto conversava com todos vocês, e estou animada para  ouvir as ideias que vocês vão compartilhar com os outros colegas! Essa é a etapa final do processo de design: compartilhar suas ideias, receber feedback e refletir sobre quais são as próximas etapas."
+        },
+        "e2b99526-9322-4195-ae32-a517133cf45e": {
+          "description": "**Vocabulário**\n\n-   **Aplicativo:** Um software projetado para cumprir um propósito"
+        },
+        "81d34551-5130-4a7e-9204-2d7f57126342": {
+          "description": "Quando você pensa em um aplicativo, provavelmente imagina o produto final. Na última lição, você teve a chance de experimentar a fase inicial do desenvolvimento, quando estávamos discutindo ideias e criando possíveis usuários e necessidades. Nas próximas lições, veremos como podemos usar esse mesmo processo de design para desenvolver um aplicativo para um usuário específico com base em suas necessidades e interesses."
+        },
+        "afa41d96-6d2d-4d42-b67b-1acf63c03941": {
+          "description": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?"
+        },
+        "5f5a0256-1bca-4558-9358-24c7a43aa3f4": {
+          "description": "**Exiba** as seguintes definições ao abordar a turma\n\n-   **Protótipo** - Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes que seja desenvolvida uma versão final.\n-   **Interface de usuário** - Os elementos visuais de um programa que o usuário controla e interage com o aplicativo. É frequentemente abreviada como UI (User Interface)."
+        },
+        "15e60387-e24d-4ebb-aa8d-0067096aedb9": {
+          "description": "O conjunto de telas que acabei de entregar é chamado de protótipo de papel. Um protótipo é um modelo inicial de um produto que permite que sejam testadas suas suposições antes que seja desenvolvida uma versão final. Essa é uma das primeiras etapas no design de um aplicativo e permite que um desenvolvedor teste sua ideia antes de investir muito tempo programando.\n\nOs protótipos em papel são uma maneira rápida e fácil de compartilhar a interface do usuário do seu aplicativo com usuários em potencial. A interface do usuário forma os elementos visuais de um programa que o usuário controla e usa para interagir com o aplicativo. Isso geralmente é abreviado como UI."
+        },
+        "2df407d7-e0b7-4332-a1a4-4f0bea10ffcc": {
+          "description": "**Prompt:** Com base apenas nas telas, quem você julga ser o principal usuário deste aplicativo? O que você acha que esse aplicativo foi projetado para fazer?"
+        },
+        "126876c3-eb38-4e54-8df7-39d339420081": {
+          "description": "Para a atividade de hoje, usaremos esse protótipo em papel para testar nosso aplicativo. Uma pessoa será o usuário, que tentará usar o protótipo em papel. Outra pessoa será o computador, responsável por mudar as telas e reagir ao que o usuário faz. Nosso objetivo é coletar feedback para que possamos dar sugestões e melhorá-lo."
+        },
+        "76a5f2a5-d981-4169-8462-867a188e28aa": {
+          "description": "**Assumindo Funções:** Para cada dupla de alunos, atribua a cada aluno a função de _Computador_ e _Usuário_. Depois que as funções forem atribuídas, faça com que os alunos das duplas fiquem sentados frente a frente."
+        },
+        "08ab48f0-91c5-49d3-bb13-9557bfe6b14d": {
+          "description": "#### Teste de Usuário\n\n**Exibição**: Leia o parágrafo de abertura sobre Casos de Testagem com a turma. Enfatize que os usuários têm uma lista definida de tarefas a serem concluídas, e ambos devem reagir sobre formas de melhorar a experiência. Algumas dessas tarefas podem nem mesmo ser possíveis, o que significa que podemos fazer sugestões de como melhorar o aplicativo e de como concluir a tarefa.\n\n**Modelo:** Esta atividade envolve que os alunos, em duplas, testem o protótipo de papel, com um atuando como _Usuário_ e o outro como _Computador_. O processo básico é o seguinte e deve ser modelado para os alunos antes que trabalhem de forma independente em duplas:\n\n1.  O _Computador_ coloca a tela inicial (aquela intitulada “Txt Ur Grndkds”) na frente do _Usuário_.\n2.  O _Usuário_ seleciona uma tarefa da tabela em seu guia de atividades.\n3.  O _Usuário_ tenta concluir a tarefa “clicando” na tela do protótipo de papel à sua frente.\n4.  Toda vez que o _Usuário_ clica na tela, o _Computador_ consulta o Diagrama de Navegação em seu guia de atividades.\n    -   Se o diagrama de navegação mostrar uma linha conectada ao elemento que foi clicado, deve localizar a tela na outra extremidade da linha e posicioná-la na frente do usuário.\n    -   Se o diagrama de navegação não mostrar uma linha conectada ao elemento que foi clicado, não faça nada.\n5.  Quando o _Usuário_ concluir uma tarefa (ou decidir que é impossível concluí-la no protótipo atual), ele preenche as colunas “O que eu tentei” e “Minha reação” e o computador redefine o aplicativo de volta para a tela inicial.\n\n**Circule**: monitore os alunos enquanto eles trabalham em duplas para concluir essa tarefa. Certifique-se de que os computadores estejam usando as setas guiadas para navegar pelas telas e garanta que os usuários estejam concluindo cada linha de tarefas na tabela. Peça aos alunos que troquem os papéis na metade da tarefa, invertendo os papéis de quem é o usuário e quem é o computador."
+        },
+        "2cd9774d-42c0-44d8-9a4f-42a4dc2741ee": {
+          "description": "**Prompt:** Que problema foi enfrentado por um _Usuário_ ao usar o aplicativo? Como você poderia melhorar o protótipo com base na sua experiência?"
+        },
+        "71726195-14a2-4b84-a1c8-8a2c2cf0a6d4": {
+          "description": "Criar e testar um protótipo é uma parte importante do processo de design - olhe todo o feedback que recebemos e as mudanças que precisamos fazer! Quando começarmos a criar nossos próprios aplicativos, uma das nossas primeiras etapas será criar um protótipo em papel para que possamos testar e receber feedback com antecedência, para garantir que estejamos atendendo às necessidades dos nossos usuários."
+        },
+        "44da1aef-0b45-4914-99b6-16b9266666fa": {
+          "description": "-   Que necessidade do usuário é bem atendida por esse aplicativo?\n-   Que necessidade do usuário esse aplicativo poderia resolver melhor?\n-   Que necessidade do usuário não foi atendida, mas que você acha que deveria?\n\n**Compartilhe:** Se houver tempo, peça aos alunos que compartilhem suas necessidades. Considere escrever isso no quadro ou em uma cartolina, que poderá ser consultado na próxima lição."
+        },
+        "8325a90d-c0f1-4588-8442-d60c22782804": {
+          "description": "Ouvi muitos bons exemplos de como os aplicativos podem ser aprimorados para serem mais acessíveis e atenderem às nossas necessidades. Esse tipo de feedback seria extremamente valioso para os fabricantes desses aplicativos, para que eles pudessem melhorá-los. Na atividade de hoje, daremos uma olhada em alguns comentários do aplicativo que exploramos ontem e veremos como podemos melhorar a interface do usuário com base nesse feedback."
+        },
+        "58b0c85c-cb4e-43c4-8367-eacdd1a767c9": {
+          "description": "**Pergunta do Dia:** Como podemos usar o feedback para melhorar um aplicativo?"
+        },
+        "e1f805fd-4df7-4e66-9903-2a8c91ad5990": {
+          "description": "**Faça Isso:** Os alunos devem trabalhar em grupos para criar pilhas de tiras de papel para que cada pilha seja uma categoria de feedback. As categorias devem corresponder às necessidades ou aos problemas semelhantes aos abordados pelo feedback. Por exemplo, vários comentários podem ser sobre o fato de a fonte ser muito pequena para ser lida. Ao categorizar o feedback, eles também devem discutir em quais categorias gostariam de se concentrar e por quê.\n\n**Circule:** Monitore o progresso dos alunos, pedindo aos grupos que expliquem como estão formando suas categorias. Não há um agrupamento correto de feedback aqui, mas os alunos devem estar preparados para justificar suas categorias. Peça aos alunos que expliquem quais categorias eles escolheram como mais importantes de serem abordadas e por quê.\n\n**Compartilhe:** Depois que todos os grupos categorizarem seus comentários, peça algumas sugestões dos tipos de categorias que eles criaram."
+        },
+        "10d99ae6-1017-4eee-bd4b-f29db65a8188": {
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+        },
+        "c4c179f9-0c8f-4b1e-9968-951378f3fa2d": {
+          "description": "#### Possíveis Melhorias"
+        },
+        "2d61b6e8-fd6b-419b-83d4-0feba34d7e59": {
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+        },
+        "df6e2da4-8b9e-4ca2-b29f-cb6b7de0cf75": {
+          "description": "#### Possíveis Melhorias"
+        },
+        "2063e374-9886-493e-8aac-18fbfdbb1089": {
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+        },
+        "28cc4fbb-0d1e-476a-9a6f-215664f77306": {
+          "description": "#### Possíveis Melhorias"
         }
       }
     }

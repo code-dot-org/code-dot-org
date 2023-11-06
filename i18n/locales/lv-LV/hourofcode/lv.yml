@@ -5,6 +5,12 @@ lv:
   language: Latviešu valoda
   front_title: Pievienojies vēsturē lielākajam mācību pasākumam %{campaign_date}
   coming_soon: Drīzumā
+  new: Jauns
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: Studenti mācās vairāk nekā 45 valodās
+  hoc_stat_hours_served: Vairāk nekā 100 miljoni studentu ir izmēģinājuši Programmēšanas
+    stundu
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: Dec 5
   campaign_date_start_long: 5. decembris
   campaign_date_short: Dec 5-11
@@ -36,9 +42,19 @@ lv:
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 2022. gada 1. oktobris - 2022. gada 18. decembris
   hoc2023_header: Radošums ar mākslīgā intelekta palīdzību
+  hoc2023_hero_desc_homepage: Pievienojieties miljoniem visā pasaulē, organizējot
+    stundu kodēšanas, ar AI vai bez tā, un uzzinot, kā darbojas AI. Ikviens, jebkur
+    var to izdarīt. Pieredze nav nepieciešama.
+  hoc2023_hero_desc_learn_page: Šogad mēs paceļam koda stundu jaunos augstumos, piedāvājot
+    kodēšanas iespējas, kas ietver gan mākslīgā intelekta (AI), gan komponentus, kas
+    nav AI.
   hoc2023_social_creativity_with_ai_title: Kodēšanas stunda - Ko jūs izveidojat?
   hoc2023_social_creativity_with_ai_desc: Izmantojiet datorzinātnes, lai izpētītu
     un uzzinātu par AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Izpētīt, spēlēt, izveidot!
   social_hoc2022_explore_play_create: Izmantojiet datorzinātnes, lai izpētītu, spēlētu
     un radītu!
@@ -51,6 +67,9 @@ lv:
     mūzika no Disneja “Encanto”, un vairāk!
   social_hoc2023_dance: Attēloti Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, mūzika no Disneja “Encanto”, un vairāk!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Uzziniet šodien, izveidojiet gaišāku rītdienu.
@@ -171,6 +190,7 @@ lv:
   social_ai_title: Uzziniet par mākslīgo intelektu (AI) | Code.org
   social_ai_desc: Rīki, kas palīdz skolēniem un skolotājiem ievest mākslīgo intelektu
     klasē.
+  social_videos_desc: Iesaistoši datorzinātņu video visu vecumu skolēniem.
   pl_superhero_title: Palīdzēt studentiem kļūt superheroes!
   pl_superhero_desc: Pievienojieties mūsu augsti atbalstošai profesionālās apmācības
     programmai vidusskolu un vidusskolu pedagogiem.
@@ -201,6 +221,15 @@ lv:
   device_laptop: Klēpjdators
   device_desktop_computer: Galddators
   device_mobile_device: Mobilā ierīce
+  for_everyone: Ikvienam
+  for_students_teacher_led_learning: 'Skolēniem: skolotāju vadīta mācīšanās'
+  for_students_teacher_led_lessons: 'Skolēniem: skolotāju vadītas nodarbības'
+  professional_development: Profesionālā attīstība
+  how_ai_works_video_series: Kā AI darbojas video sērija
+  learn_how_ai_works: Uzziniet, kā darbojas AI
+  ai_101_for_educators: AI 101 pedagogiem
+  learn_about_ai_impacts: Uzziniet par AI ietekmi
+  hoc_ai_activities: Koda stund AI aktivitātes
   subscribe_to_emails_heading: Parakstīties uz e-pastiem
   subscribe_to_emails_desc: Lasiet par to, kas notiek Code.org un datorzinātnes izglītībā,
     izmantojot ceturkšņa atjauninājumus, izmantojot mūsu adresātu sarakstu.
@@ -255,21 +284,32 @@ lv:
     ieskatu un atbalstu no citiem pedagogiem.
   required_materials: 'Nepieciešamie materiāli:'
   optional_materials: 'Izvēles materiāli:'
+  for_students: For students
+  for_educators: Pedagogiem
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Pasākuma turēšana
   call_to_action_register_event: Reģistrējiet savu pasākumu
+  call_to_action_register_your_hoc: Reģistrējiet savu kodu stundu
   call_to_action_select_activity: Izvēlieties aktivitāti
   call_to_action_start_activity: Sāciet darbību
   call_to_action_get_certificates: Iegūstiet sertifikātus
   call_to_action_go_beyond_hoc: Pārsniedziet koda stundu
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Skatīt reklāmas resursus
   call_to_action_learn_more: Uzzināt vairāk
   call_to_action_watch_now: Skatīties tagad
   call_to_action_try_activity: Izmēģināt darbību
   call_to_action_try_activities: Izmēģiniet darbības
+  call_to_action_try_hoc_ai_activities: Izmēģiniet Hour of Code AI aktivitātes
   call_to_action_explore_activities: Izpētiet aktivitātes
   call_to_action_explore_ai: Izpētiet AI
   call_to_action_explore_unit: Izpētīt vienību
   call_to_action_explore_curriculum: Izpētīt mācību plānu
+  call_to_action_explore_curricula: Izpētīt mācību plānus
   call_to_action_explore_curriculum_options: Izpētīt mācību plāna opcijas
   call_to_action_explore_lessons: Izpētiet nodarbības
   call_to_action_explore_modules: Izpētīt moduļus
@@ -352,6 +392,11 @@ lv:
   call_to_action_learn_about_advocacy: Uzziniet par mūsu aizstāvību
   call_to_action_visit_store: Apmeklējiet veikalu
   call_to_action_view_faqs: Skatīt vairāk Bieži uzdotie jautājumi
+  call_to_action_applications_open: Tagad atvērtas lietojumprogrammas
+  call_to_action_apply_cs_ambassador: Piesakieties par CS vēstnieku
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Skatiet instrukciju rokasgrāmatu
     pedagogiem
   aria_label_call_to_action_hoc_how_to_companies: Skatiet rokasgrāmatu uzņēmumiem
@@ -363,6 +408,9 @@ lv:
     amatpersonām
   aria_label_call_to_action_hoc_how_to_volunteers: Skatiet brīvprātīgo rokasgrāmatu
   aria_label_call_to_action_hoc_how_to_virtual_events: Skatiet virtuālo notikumu rokasgrāmatu
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Uzziniet vairāk par Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Sākt mācību datorzinātnes pamati profesionālās
     apmācības programmu
@@ -481,11 +529,25 @@ lv:
   curriculum_name_creating_apps_with_devices: Programmu izveide ar ierīcēm
   curriculum_name_poetry: Kodēšana ar dzeju
   curriculum_name_dance_party: Deju ballīte
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problēmu risināšana un skaitļošana
   curriculum_name_web_development: Tīmekļa izstrāde
   curriculum_name_interactive_animations_games: Interaktīvas animācijas un spēles
   curriculum_name_design_process: Projektēšanas process
   curriculum_name_data_society: Dati un sabiedrība
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Bezmaksas elementāru mācību programmu komplekts, kas iepazīstina
     studentus ar datorzinātņu pamatjēdzieniem.
   curriculum_desc_csf_express: Uzziniet, kā izveidot datorprogrammas, attīstīt problēmu
@@ -576,7 +638,7 @@ lv:
   module_label_prerequisites: 'Priekšnoteikumi:'
   module_label_level: 'Līmenis:'
   module_label_topics: 'Tēmas:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Ierīces:'
   module_label_tools: 'Programmēšanas rīki:'
   module_label_professional_learning: 'Profesionālā apmācība:'
   module_label_languages: 'Atbalstītās valodas:'
@@ -598,12 +660,16 @@ lv:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Bērnudārzs
   module_grade_grade_01: 1. pakāpe
@@ -611,6 +677,12 @@ lv:
   module_grade_grade_03: 3. pakāpe
   module_grade_grade_04: 4. pakāpe
   module_grade_grade_05: 5. pakāpe
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Skolotāji
   module_grade_6_10_teachers: 6-10 Skolotāji
   module_grade_9_12_teachers: 9-12 Skolotāji
@@ -703,6 +775,55 @@ lv:
   heading_explore_curriculum_catalog: Izpētiet visus mūsu kursus Curriculum Catalog
   heading_csa_ai: Vai meklējat lietas, ko darīt pēc AP® eksāmena?
   heading_bring_cs_to_students: Dodiet datorzinātnes studentiem
+  heading_cs_ambassador_program: CS vēstnieku programma
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  cs_ambassador_subhead: Ja esat vidusskolas students, kurš aizraujas ar to, lai mudinātu
+    vairāk jaunu sieviešu apgūt datorzinātnes jūsu skolā, tad mums jūs vajag!
+  cs_ambassador_desc: Datorzinātne skar visas jomas, tostarp medicīnu, izklaidi, sportu,
+    izglītību, uzņēmējdarbību, modi un uzņēmējdarbību. Tomēr tikai 5% vidusskolas
+    vecuma jauno sieviešu apmeklē datorzinātnes nodarbības. Vēstnieki var palīdzēt
+    novērst šo dzimumu atšķirību, mudinot savus vienaudžus apmeklēt datorzinātņu nodarbību.
+  cs_ambassador_application_date: Pieteikumi atvērti līdz 2023. gada 8. novembrim
+  cs_ambassador_application_subhead: Sadarbojieties ar skolotāju, lai iesniegtu pieteikumu
+    šodien
+  cs_ambassador_application_questions: Jautājumi? Lūdzu, sazinieties ar [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Ko dara CS vēstnieki?
+  cs_ambassador_do_desc: CS vēstnieki mudina jaunās sievietes izpētīt šo tēmu un pacelt
+    viena otru, atgūstot savu vietu datorzinātnēs. CS vēstnieki sazinās ar saviem
+    vienaudžiem, lai dalītos savā satraukumā un mīlestībā pret datorzinātnēm. Viņi
+    apmeklē klases, pusdienās rīko galdus un runā sapulcēs un kluba sanāksmēs. CS
+    vēstnieki sadarbojas ar skolotājiem un skolu administratoriem, lai izjauktu stereotipus,
+    kas kavē jaunas sievietes.
+  cs_ambassador_steps_heading: Kas man nepieciešams, lai kļūtu par CS vēstnieku?
+  cs_ambassador_steps_list_title_01: Kaislība
+  cs_ambassador_steps_list_title_02: Pieredze CS kursā
+  cs_ambassador_steps_list_title_03: Skola, kas piedāvā CS
+  cs_ambassador_steps_list_desc_01: Aizraušanās mudināt jaunas sievietes jūsu skolā
+    apmeklēt datorzinātņu nodarbības
+  cs_ambassador_steps_list_desc_02: '2022.-23. mācību gadā vai agrāk esat apmeklējis
+    gadu ilgu datorzinātņu nodarbību (ieteicams: CS Principi vai AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Apmeklējiet vidusskolu, kas regulāri piedāvā
+    gadu ilgu datorzinātņu kursu (ieteicams: CS Principi vai AP® CSA)'
+  cs_ambassador_benefits_heading: Programmas priekšrocības
+  cs_ambassador_benefits_list_title_01: Nacionālā kopiena
+  cs_ambassador_benefits_list_title_02: Sabiedriskais pakalpojums
+  cs_ambassador_benefits_list_title_03: Atzīšana
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Sertifikāts
+  cs_ambassador_benefits_list_title_06: Pieredze
+  cs_ambassador_benefits_list_desc_01: Piekļuve jauno līderu nacionālajai kopienai,
+    kas apņēmusies novērst dzimumu atšķirības datorzinātnēs.
+  cs_ambassador_benefits_list_desc_02: Sabiedriskā darba laiks un iespēja nopelnīt
+    [ASV prezidenta brīvprātīgo dienesta balvu] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Atzinība par 2023—2024 vēstnieku un tiesīga
+    tikt godināta Code.org vēstnieku slavas zālē.
+  cs_ambassador_benefits_list_desc_04: Esiet identificēts kā CS vēstnieks, izmantojot
+    īpašus Code.org zīmola apģērbus, uzlīmes un daudz ko citu!
+  cs_ambassador_benefits_list_desc_05: Oficiāls dalības sertifikāts no Code.org.
+  cs_ambassador_benefits_list_desc_06: Iegūstiet pieredzi un stāstus, lai dalītos
+    par savu koledžas pieteikumu, CV un daudz ko citu!
   professional_learning_section_desc: Saņemiet nepieciešamo atbalstu, kad sagatavojat
     mācīt. Skolotāji to mīl, vairāk nekā 90% ierindojot to par labāko profesionālo
     attīstību jebkad!
@@ -751,6 +872,13 @@ lv:
     par Code.org datorzinātnes principiem un saņemiet noderīgus atgādinājumus, padomus
     un atjauninājumus, kas nosūtīti tieši uz iesūtni.
   subscribe_form_section_unsubscribe: Jūs varat atteikties no abonēšanas jebkurā laikā.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Kā darbojas Blockchain
   blockchain_hero_desc: Nirt blokķēdes pasaulē ar “Kā Blockchain Works”, mūsu jauno
     video sēriju un pavadošās nodarbības!
@@ -857,6 +985,11 @@ lv:
   ai_curriculum_grades_05: 'Pakāpju līmeņi: 9-12'
   ai_curriculum_btn_aria_label_05: Izpētiet programmatūras inženierijas un datora
     redzamības moduli
+  ai_curriculum_title_06: Ģeneratīvā AI ietekme uz sabiedrību
+  ai_curriculum_desc_06: Izpētiet ģeneratīvā AI ietekmi no dažādām perspektīvām, pēc
+    tam sadarbojieties kā komanda, lai izstrādātu vadlīnijas, kas atbilst visu dalībnieku
+    vislielākajām vajadzībām.
+  ai_curriculum_btn_aria_label_06: Skatīt ģeneratīvā AI stundu plāna ietekmi uz sabiedrību
   ai_carousel_heading: 'Ko skolotāji saka par AI ar Code.org:'
   ai_carousel_quote_01: Šī nodarbība arī deva maniem skolēniem iespēju redzēt, ka
     klasifikācijas sistēmās ir viedoklis. Vēlāk, kad mēs sākām redzēt, kā neobjektivitātes
@@ -1834,6 +1967,9 @@ lv:
     ASV un desmit politikas mēs iesakām valstis pieņemt, lai padarītu datorzinātnes
     pamatus visiem studentiem. Turklāt uzziniet, kā jūs varat vadīt izmaiņas savā
     valstī.
+  yw_page_top_heading: Jaunās sievietes datorzinātnēs
+  yw_page_top_desc: Kļūsti par CS vēstnieku un piedalīties dzimumu atšķirību novēršanā
+    datorzinātnēs.
   hoc_live: Live kodēšanas stunda
   hoc_live_sign_up_title: Reģistrējieties Programmstundas tiešraidē
   hoc_live_learn_title: Mācīties ar programēšanas stundu tiešraidē
@@ -2200,10 +2336,15 @@ lv:
     datorzinātnēs, izmantojot jautras pamācības, lai parādītu, ka ikviens var apgūt
     pamatus. Šo kampaņu atbalsta vairāk nekā 400 partneri un 200 000 pedagogu visā
     pasaulē.
+  hoc_homepage_registration_desc: Jūsu klase vai grupa var pievienoties miljoniem
+    visā pasaulē, veicot koda stundu! Reģistrācija ikgadējām datorzinātņu izglītības
+    nedēļas svinībām sākas oktobrī. Tomēr koda stunda ir pieejama visu gadu.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lasiet mūsu How-to guide] (%{howto_guide_url})
     plānot notikumu jūsu klasē."
   hoc_homepage_highlights_heading: Programmēšanas stunda izceļ
   hoc_homepage_organized_by: Programmēšanas stundu organizē [Code.org](%{codeorg_url}).
+  hoc_events_heading: Reģistrējieties, lai rīkotu koda stundu
+  hoc_events_jump_to_map: Pāriet uz kodu stundas karti
   signup_closed: Reģistrācija Programmēšanas stundai tagad ir slēgta. Lūdzu, pārbaudiet
     vēlreiz oktobrī, lai pierakstītos uz nākamo Programēšanas stundu.
   signup_registration_not_required: Lai piedalītos, jums nav jāreģistrējas! Programmēšanas
@@ -2314,6 +2455,7 @@ lv:
   map_title: Programmēšanas stundas karte
   map_header: '#"Programmēšans stunda" pasākumi visā pasaulē'
   map_header_count_year: "%{event_count} notikumi reģistrēti %{year}"
+  map_header_count_year_so_far: "%{event_count} līdz šim reģistrētie notikumi %{year}"
   see_all_events: Skatīt visus pasākumus
   map_header_company: "# sabiedrību organizatori"
   map_header_country: "# %{country}"
@@ -2326,6 +2468,7 @@ lv:
   map_warning: Pilns notikumu saraksts ir apskatāms <a href='%{events_url}'>notikumu
     lapā.</a>
   map_warning_markdown: Pilns notikumu saraksts ir apskatāms [notikumu lapā.] (%{events_url})
+  map_view_all_events: Skatiet pilnu koda stundas notikumu sarakstu [here](%{events_url}).
   meta_tag_og_title: Programmēšanas stunda tuvojas
   meta_tag_og_description: Programmēšas stunda ir starptautiska kustība, kurā piedalās
     ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums
@@ -2348,9 +2491,6 @@ lv:
     %{random_donor} atbalsta @codeorg)'
   hoc_faq_title: Biežāk uzdotie jautājumi
   hoc_faq_what_is_hoc_q: Kas ir "Programmēšanas stunda"?
-  hoc_faq_what_is_hoc_a: Programmēšanas stunda ir vienu stundu garš ievads datorzinībās,
-    kas paredzēts, lai kodēšana kļūtu pieejamāka visiem un pierādītu, ka pamatus var
-    iemācīties ikviens. <a href='http://code.org/learn'>Skati pamācības!</a>
   hoc_faq_what_is_hoc_a_markdown: Programēšanas stunda sākās kā vienas stundas ievads
     datorzinātnēs, kas paredzēts, lai demistizētu “kodu”, lai parādītu, ka ikviens
     var apgūt pamatus, un paplašināt līdzdalību datorzinātņu jomā. Kopš tā laika tā
@@ -2360,12 +2500,6 @@ lv:
     un 200 000 pedagogu visā pasaulē.
   hoc_faq_last_year: Izmēģini pamācības
   hoc_faq_when_is_hoc_q: Kad ir "Programmēšanas stunda"?
-  hoc_faq_when_is_hoc_a: Programmatūras stunda notiek katru gadu <a href='%{csedweek_url}'>datorzinātnes
-    izglītības nedēļas</a>. laikā. %{campaign_date_year} datorzinātnes izglītības
-    nedēļa būs %{campaign_date_full}, bet jūs varat uzņemt Programēšanas stundu visu
-    gadu. Datorzinātnes izglītības nedēļa notiek katru gadu, atzīstot skaitļošanas
-    pioniera dzimšanas dienu <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (1906. gada 9. decembris).
   hoc_faq_when_is_hoc_a_markdown: Programēšanas stunda notiek katru gadu [Datorzinātnes
     izglītības nedēļas] (%{csedweek_url}) laikā. %{campaign_date_year} Datorzinātnes
     izglītības nedēļa būs %{campaign_date_full}, bet jūs varat uzņemt Kodēšanas stundu
@@ -2373,53 +2507,27 @@ lv:
     dienas skaitļošanas pionieris [Admiral Grace Murray Hopper] (%{grace_hopper})
     (9 decembris 1906).
   hoc_faq_why_cs_q: Kas ir datorzinātnes?
-  hoc_faq_why_cs_a: "<i>Katram</i>skolniekam vajadzētu būt iespējai mācīties datorzinātnes.
-    Tas palīdz attīstīt problēmu risināšans spējas, loģiku un kreativitāti. Sākot
-    ātri skolniekiem būs pamats panākumiem 21. gadsimta karjeras kāpnēs.. Skatīt sīkāku
-    statistiku <a href='http://code.org'>Code.org</a>."
   hoc_faq_why_cs_a_markdown: _Every_ studentam vajadzētu būt iespējai apgūt datorzinātnes.
     Tas palīdz attīstīt problēmu risināšanas prasmes, loģiku un radošumu. Sākot agri,
     studentiem būs pamats panākumiem jebkurā 21. gadsimta karjeras ceļā. Skatīt vairāk
     statistiku [here](%{stats_url}).
   hoc_faq_how_participate_q: Kā lai es piedalos "Programmēšanas stunda"?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Sāciet plānot šeit</a> , pārskatot
-    mūsu ceļvedi. Jūs varat organizēt Programēšanas stundas pasākumu savā skolā vai
-    savā kopienā &mdash; , piemēram, ārpusskolas klubā, bezpeļņas vai darbā. Vai arī
-    vienkārši izmēģiniet to pats, kad ierodas %{campaign_date} ."
   hoc_faq_how_participate_a_markdown: "[Sākt plānošanu šeit] (%{howto}), pārskatot
     mūsu norādījumus. Programmatēšanas stundas pasākumu varat organizēt skolā vai
     savā kopienā, piemēram, ārpusskolas klubā, bezpeļņas organizācijā vai darbā. Vai
     arī vienkārši izmēģiniet to pats, kad ierodas %{campaign_date} ."
   hoc_faq_behind_hoc_q: Kas atbild par "Programmēšanas stunda"?
-  hoc_faq_behind_hoc_a: '"Programmēšanas stundu" organizē <a href=''http://code.org''>Code.org</a>,
-    publiska bez peļņas organizācija, kas par savu mēŗķi ir padarījusi, datorzinātņu
-    popularizēšanu, padarīšanu to par pieejamu vairāk skolās un palielināt sieviešu
-    skaitu datorzinātnēs. <a href=''http://code.org/about/partners''>Nepārstāvētu
-    partneru koalīcija </a>ir sanākusi kopā, lai atbalstītu "Programmēšanas stundu",
-    &mdash; ieskaitot Microsoft.'
   hoc_faq_behind_hoc_a_markdown: Programmēšanas stundu organizē Code.org un vada Programmēšanas
     stundas pārskata komiteja, kā arī bezprecedenta koalīcija [partners](%{partner_url}),
     kas sapulcējušies kopā, lai atbalstītu Programmēšanas stundu — tostarp Microsoft,
     Apple, Amazon, Zēnu un Meiteņu klubi Amerikā un Koledžas padome.
   hoc_faq_host_q: Es  neko nesaprotu par kodēšanu. Vai es varu organizēt pasākumu?
-  hoc_faq_host_a: Protams. Programmēšanas stunda aktivitātes ir pašvadāmas. Viss,
-    kas jums jādara, ir <a href='%{codeorg_url}/learn'>izmēģināt mūsu pašreizējās
-    konsultācijas</a>, izvēlēties pamācību, kuru vēlaties, un izvēlēties stundu &mdash;
-    mēs rūpējamies par pārējo. Mums ir arī iespējas katram vecumam un pieredzes līmenim,
-    sākot no bērnudārza un uz augšu. Sāciet plānot savu pasākumu, izlasot mūsu <a
-    href='/how-to'>kā vadīt</a>.
   hoc_faq_host_a_markdown: Protams. Programmēšanas stunda aktivitātes ir pašvadāmas.
     Viss, kas jums jādara, ir [izmēģināt mūsu pašreizējās konsultācijas] (%{codeorg_url}/mācīties),
     izvēlēties vajadzīgo pamācību un izvēlēties stundu — mēs parūpēsimies par pārējo.
     Mums ir arī iespējas katram vecumam un pieredzes līmenim, sākot no bērnudārza
     un uz augšu. Sāciet plānot savu pasākumu, izlasot mūsu [kā vadīt] (%{howto}).
   hoc_faq_devices_q: Kādas ierīces man vajadzētu izmantot saviem skolēniem?
-  hoc_faq_devices_a: Code.org konsultācijas strādā visās ierīcēs un pārlūkprogrammās.
-    Jūs varat redzēt vairāk informācijas par Code.org apmācība tehnoloģiju vajadzībām
-    <a href='%{codeorg_url}/educate/it'>šeit</a>. Tehnoloģijas vajadzības, kas nav
-    Code.org konsultācijas var atrast <a href='%{codeorg_url}/learn'>%{partner_url}uz/mācīties</a>
-    apmācībā konkrētā aprakstā. Neaizmirstiet, ka mēs piedāvājam arī <a href='%{unplugged_url}'>atvienotas
-    darbības,</a> ja jūsu skola nevar uzņemt konsultācijas!
   hoc_faq_devices_a_markdown: Code.org konsultācijas strādā visās ierīcēs un pārlūkprogrammās.
     Jūs varat redzēt vairāk informācijas par Code.org apmācība tehnoloģiju vajadzībām
     [here](%{codeorg_url}/educate/it). Tehnoloģijas vajadzības, kas nav Code.org konsultācijas
@@ -2427,16 +2535,6 @@ lv:
     aprakstā. Neaizmirstiet, ka mēs piedāvājam arī [atvienotas darbības] (%{unplugged_url}),
     ja jūsu skola nevar uzņemt konsultācijas!
   hoc_faq_need_computers_q: Vai man ir nepieciešams dators katram dalībniekam?
-  hoc_faq_need_computers_a: Nē. Mums ir "Programmēšanas stundas" pamācības, kas strādā
-    uz datoriem, viedtālruņiem, planšetdatoriem un ir pamācības, kurām datori nav
-    nepieciešami! Jūs varat piebiedroties jebkurā atrašanāš vietā, ar jebkuru ierīci.
-    <p><i>Šeit ir dažas jūsu iespējas:</i> <br> <ul> <li><b>Strādājat pāros.</b> Pētijumi
-    rāda, ka skolnieki ir efektīvāki <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programmējot
-    pāros</a>,  daloties ar datoru un sadarbojoties.  <li><b>Izmantojat projektoru.</b>
-    Ja jums ir projekts ar ekrānu, pie kura ir pieslēgts dators ar internetu, jūsu
-    grupa var taisīt "Programmēšanas stundu" kopā. Skataties videoklipus kopā un risinat
-    situācijas vai atbildat uz jautājumiem pa kārtai. <li><b>Atslēdzaties.</b>Mēs
-    piedāvājam apmācības, kurām dators nav nepieciešams. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Nr. Mums ir kodēšanas stunda konsultācijas, kas strādā uz datoriem, viedtālruņiem, planšetdatoriem un dažiem, kuriem nav nepieciešams dators vispār! Jūs varat pievienoties, kur jūs esat, ar visu, kas jums ir.
 
@@ -2446,36 +2544,21 @@ lv:
     - **Izmantojiet projicēto ekrānu.** Ja jums ir projektors un ekrāns datoram, kas savienots ar internetu, visa grupa var veikt Kodēšanas stundu kopā. Noskatieties video porcijas kopā un pēc kārtas risinot mīklas vai atbildot uz jautājumiem.
     - **Iet atvienots.** Mēs piedāvājam [konsultācijas, kas prasa ne dators] () vispār.%{unplugged_url}
   hoc_faq_international_q: Esmu <country>. Kā es varu iesaistīties citās valstīs?
-  hoc_faq_international_a: Ikviens var organizēt Programēšanas stundas pasākumu jebkur
-    pasaulē. Pagājušajā gadā studenti visā pasaulē apvienojās programmēšanas stundā.
-    Uzziniet vairāk <a href='/promote'>šeit</a>.
   hoc_faq_international_a_markdown: Ikviens var organizēt Programēšanas stundas pasākumu
     jebkur pasaulē. Pagājušajā gadā studenti visā pasaulē apvienojās programmēšanas
     stundā. Uzziniet vairāk [here](%{promote}).
   hoc_faq_tutorial_q: Kā es varu izveidot "Programmēšanas stunda" apmācību?
-  hoc_faq_tutorial_a: Ja esat ieinteresēti kļūt par apmācības partneri, <a href='target-tutorial-guidelines'>apskatiet
-    musu vadlīnijas un instrukcijas</a>. Mēs vēlētos uzņemties dažādas iesaistīšanās
-    iespējas, bet galvenai mērķis is optimizēt skolēnu pieredzi un skolotājus kuri
-    nav pazīstami ar datorzinātni.
   hoc_faq_tutorial_a_markdown: Ja jūs interesē kļūt par apmācības partneri, [skatiet
     mūsu vadlīnijas un norādījumus] (%{tutorial_guidelines}). Mēs gribētu uzņemt dažādas
     iesaistošas iespējas, bet galvenais mērķis ir optimizēt pieredzi studentiem un
     skolotājiem, kuri ir jauni datorzinātnēs.
   hoc_faq_account_q: Vai skolēniem jāpiesakās, izmantojot kontu?
-  hoc_faq_account_a: Nē. Lai izmēģinātu Programmēšanas stundu, skolēniem nav jāreģistrējas
-    vai jāpieslēdzas. Daļa <a href='http://code.org/learn/beyond'>pašmācības kursu</a>
-    var pieprasīt profila izveidošanu, lai saglabātu iesākto.
   hoc_faq_account_a_markdown: Nr. Pilnīgi nav jāreģistrē vai jāpiesakās, lai studenti
     varētu izmēģināt Programsēšanas stundu. Lielākajai daļai [papildu kursu] (%{codeorg_url}/mācīties/ārpus
     tās) ir nepieciešama konta izveide, lai saglabātu studentu progresu. Turklāt,
     reģistrējoties programdošanas stundai, netiek automātiski izveidots Code Studio
     konts. Ja vēlaties izveidot kontus saviem skolēniem, lūdzu, sekojiet šiem [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Kādas nodarbības būtu piemērotas vidusskolēniem?
-  hoc_faq_high_school_a: Neskatoties uz vecumu, iesakām izmēģināt kādu no iesācēju
-    pamācībām <a href='http://code.org/learn'>Code.org/learn</a>, lai iesāktu, piemēram,
-    pamācību ar pikatjiem putniem vai Annu un Elzu. Vidusskolēniem tās varētu aizņemt
-    30 minūtes, un tad viņi var pamēģināt sarežģītākas pamācības JavaScript, piemēram,
-    Khan Academy vai CodeHS.
   hoc_faq_high_school_a_markdown: Mūsu Star Wars un Minecraft konsultācijas ir lieliski
     piemērotas vidusskolēniem, it īpaši Star Wars JavaScript versijai un bezmaksas
     spēles līmenim abās konsultācijās. Pārmaiņus, mēs iesakām izmēģināt vienu no iesācējiem
@@ -2485,9 +2568,6 @@ lv:
     pamācību JavaScript, piemēram, Khan Academy vai CodeHS.
   hoc_faq_scratch_q: Es programmēšanas stundā izmantoju Scratch, bet ko darīt, ja
     mani skolēni vairāk izmanto iPad nevis datorus?
-  hoc_faq_scratch_a: Scratch nestrādā planšetdatoros. Ja skolēni ir mazi, tad variet
-    uz iPad uzstādīt ScratchJr. Ja pameklēsi pamācības <a href='http://code.org/learn'>code.org</a>,atradīsi
-    citas piemērotas iPad - code.org, Tynker, Lightbot vai CodeSpark.
   hoc_faq_scratch_a_markdown: Planšetdatoros nedarbojas Scratch. Ja jūsu skolēni ir
     jauni, viņi var izmantot ScratchJR iPad lietotni (agrīniem lasītājiem). Ja paskatās
     konsultācijas par [%{partner_url}/mācīties] (%{codeorg_url}/mācīties), jūs varat
@@ -2495,13 +2575,6 @@ lv:
     CodesPark.
   hoc_faq_count_hoc_q: Kā jūs skaitāt kodēšanas stundas?
   hoc_faq_map_q: Kāpēc kartē neredzu punktu?
-  hoc_faq_map_a: Mēs esam tik žēl, ka jūs neredzat savu pasākumu Programmstunda kartē.
-    Tā kā desmitiem tūkstošu organizatoru, kas reģistrējas, karte apkopo datus un
-    parāda vienu punktu vairākiem notikumiem. Noklikšķinot uz <a href='%{events_url}'>notikumu
-    lappuses</a> saites zem kartes, jūs tiksiet novirzīts uz visu notikumu sarakstu
-    pēc valsts un varēsit atrast jūsu notikumu sarakstā. Turklāt, ņemot vērā tūkstošiem
-    cilvēku, kuri reģistrējas Programmēšanas stundai, kartes un notikumu saraksta
-    atjaunināšana parasti ilgst 48 stundas. Pārbaudiet atpakaļ pēc dažām dienām!
   hoc_faq_map_a_markdown: Mēs esam tik žēl, ka jūs neredzat savu pasākumu Programmstunda
     kartē. Tā kā desmitiem tūkstošu organizatoru, kas reģistrējas, karte apkopo datus
     un parāda vienu punktu vairākiem notikumiem. Noklikšķinot uz saites [notikumu
@@ -2509,11 +2582,6 @@ lv:
     pēc štata un varēsit atrast jūsu notikumu sarakstā. Turklāt, ņemot vērā tūkstošiem
     cilvēku, kuri reģistrējas Programmēšanas stundai, kartes un notikumu saraksta
     atjaunināšana parasti ilgst 48 stundas. Pārbaudiet atpakaļ pēc dažām dienām!
-  hoc_faq_count_hoc_a: Programmēšanas stundas pārraudzības rīks nav precīzs lietojuma
-    mērījums. Mēs neskaitām unikālos studentu ID perfekti, izsekojot līdzdalību Programmēšanas
-    stundā, jo īpaši tāpēc, ka mums nav nepieciešams, lai studenti pieteiktos vai
-    reģistrētos. Rezultātā mēs gan pārlieku skaita, gan nepietiekami skaita dalībniekus
-    vienlaikus. Lasīt visu informāciju <a href='%{codeorg_url}/loc'>šeit</a>.
   hoc_faq_count_hoc_a_markdown: 'Mēs neskaitām unikālos studentu ID perfekti, izsekojot
     līdzdalību Programēšanas stundā. Kāpēc? Daļēji tāpēc, ka mēs nevēlamies, lai pamudinātu
     “pieteikties/reģistrēties”, pirms students vai klase mēģina mācīties pirmo reizi,
@@ -2530,23 +2598,6 @@ lv:
     ir precīzs izmantošanas rādītājs. Tas noteikti ir tieši pareizs, un liecina, ka
     daudzi desmiti miljonu studentu ir piedalījušies.'
   hoc_faq_one_hour_q: Cik daudz var mācīties stundā?
-  hoc_faq_one_hour_a: Programmēšanas stundas mērķis nav iemācīt nevienam kļūt par
-    ekspertu datorzinātnieku vienas stundas laikā. Vienu stundu pietiek tikai, lai
-    uzzinātu, ka datorzinātne ir jautra un radoša, ka tā ir pieejama visos vecumos,
-    visiem studentiem neatkarīgi no fona. Šīs kampaņas panākumu pasākums nav, cik
-    daudz CS studenti mācās - panākumi atspoguļojas plašā līdzdalībā dzimumu un etnisko
-    un sociālekonomisko grupu vidū, un no tā izrietošo pieaugumu uzņemšanas un līdzdalības
-    mēs redzam CS kursos visos pakāpju līmeņos. Miljoniem iesaistīto skolotāju un
-    studentu ir nolēmuši pārsniegt vienu stundu - mācīties visu dienu vai veselu nedēļu
-    vai ilgāk, un daudzi studenti ir nolēmuši pieteikties veselā kursā (vai pat koledžas
-    galvenajā) rezultātā. <br/><br/> Bez studentiem, vēl viens “izglītojamais” ir
-    pedagogs, kurš iegūst pārliecību pēc vienas stundas, ka viņi var mācīt datorzinātnes
-    pat tad, ja tie var nebūt koledžas grādu kā datorzinātnieks. Desmitiem tūkstošu
-    skolotāju nolemj turpināt datorzinātnes tālāk, vai nu apmeklējot PD vai piedāvājot
-    turpmākas tiešsaistes kursus, vai abus. Un tas attiecas arī uz skolu administratoriem,
-    kuri saprot, ka datorzinātne ir kaut kas, ko viņu skolēni vēlas un viņu skolotāji
-    spēj. <br/><br/> Pirmām kārtām, ko visi dalībnieki var iemācīties stundā, ir tas,
-    ka mēs to varam izdarīt.
   hoc_faq_one_hour_a_markdown: |-
     Programmēšanas stundas mērķis nav iemācīt nevienam kļūt par ekspertu datorzinātnieku vienas stundas laikā. Vienu stundu pietiek tikai, lai uzzinātu, ka datorzinātne ir jautra un radoša, ka tā ir pieejama visos vecumos, visiem studentiem neatkarīgi no fona. Šīs kampaņas panākumu mērs nav tas, cik daudz CS studenti mācās - panākumi atspoguļojas plašā līdzdalībā dzimumu, rasu/etnisko un sociālekonomisko grupu vidū, kā arī no tā izrietošā uzņemšanas un līdzdalības palielināšanās, ko mēs redzam CS kursos visos līmeņos. Miljoniem iesaistīto skolotāju un studentu ir nolēmuši pārsniegt vienu stundu - mācīties visu dienu vai veselu nedēļu vai ilgāk, un daudzi studenti ir nolēmuši pieteikties veselā kursā (vai pat koledžas galvenajā) rezultātā.
 
@@ -2554,16 +2605,9 @@ lv:
 
     Pirmām kārtām, ko visi dalībnieki var mācīties stundā, ir tas, ka mēs to varam izdarīt.
   hoc_faq_more_questions_q: Vai ir vēl jautājumi?
-  hoc_faq_more_questions_a: Mēģiniet atrast atbildi mūsu <a href='http://support.code.org'>support
-    forum</a>.
   hoc_faq_more_questions_a_markdown: Mēģiniet atrast atbildi mūsu [atbalsta forumā]
     (http://support.code.org).
   hoc_faq_keep_learning_q: Kā es varu turpināt mācīties pēc Programmēšanas stundas?
-  hoc_faq_keep_learning_a: Ikviens var uzņemt Programēšanas stundu jebkurā laikā.
-    Konsultācijas palikt uz augšu visu gadu. Jūs varat sagaidīt, ka visas mūsu konsultācijas
-    un mācību programmas būs pieejamas mūsu mājas lapā uz visiem laikiem. Lūdzu, dodieties
-    uz <a href='/promote'>mūsu resursiem</a> , lai saņemtu ceļvežus un citus resursus,
-    lai palīdzētu padarīt jūsu Programmēšanas stundas notikumu veiksmīgu.
   hoc_faq_keep_learning_a_markdown: Ikviens var uzņemt Programēšanas stundu jebkurā
     laikā. Konsultācijas palikt uz augšu visu gadu. Jūs varat sagaidīt, ka visas mūsu
     konsultācijas un mācību programmas būs pieejamas mūsu mājas lapā uz visiem laikiem.
@@ -2571,22 +2615,18 @@ lv:
     un citus resursus, lai palīdzētu padarīt jūsu Programmēšanas stundas notikumu
     veiksmīgu.
   hoc_faq_certificates_q: Kur es varu izdrukāt sertifikātus saviem studentiem?
-  hoc_faq_certificates_a: Iet uz mūsu <a href='%{codeorg_url}/certificates'>sertifikātu
-    lapu</a> , kur jūs varat izdrukāt sertifikātus visai klasei pirms laika. Jūs varat
-    arī izdrukāt <a href='%{codeorg_url}/certificates?course=mc'>speciālos sertifikātus</a>
-    studentiem, kas veic Minecraft pamācību.
-  hoc_faq_certificates_a_markdown: Iet uz mūsu [sertifikātu lapu] (%{codeorg_url}/sertifikāti),
-    kur jūs varat izdrukāt sertifikātus visai klasei pirms laika. Jūs varat arī izdrukāt
-    [speciālos sertifikātus] (%{codeorg_url}/sertifikāti? kurss = mc) studentiem,
-    kas veic Minecraft pamācību.
+  hoc_faq_certificates_answer_markdown: Dodieties uz mūsu [sertifikātu lapu] (%{certificates_url}),
+    kur pirms laika varat izdrukāt sertifikātus visai klasei.
   hoc_faq_logo_q: Vai pastāv ierobežojumi attiecībā uz to, kā es varu izmantot kodēšanas
     stundas logotipu vai nosaukumu?
-  hoc_faq_logo_a: Kodēšanas stunda ir preču zīme. Mēs negribam novērst tā izmantošanu,
-    bet mēs vēlamies pārliecināties, ka tā lietošana atbilst dažiem ierobežojumiem.
-    Lūdzu, skatiet <a href='%{logo_url}'>šīs lietošanas vadlīnijas</a>.
   hoc_faq_logo_a_markdown: Kodēšanas stunda ir preču zīme. Mēs negribam novērst tā
     izmantošanu, bet mēs vēlamies pārliecināties, ka tā lietošana atbilst dažiem ierobežojumiem.
     Lūdzu, skatiet [šīs lietošanas pamatnostādnes] (%{logo_url}).
+  hoc_faq_bug_q: Es atradu kļūdu Koda stundas aktivitātē! Kas man jādara?
+  hoc_faq_bug_a_markdown: |-
+    Ak nē! Ja Koda stundas aktivitātē esat saskāries ar kļūdu, vispirms pārbaudiet aktivitātes URL. Ja URL sākas ar studio.code.org, mūsu Code.org atbalsta komanda var palīdzēt! Noklikšķiniet uz jautājuma zīmes ikonas ekrāna augšējā labajā stūrī, pēc tam nolaižamajā izvēlnē atlasiet “Ziņot par problēmu”.
+
+    Ja URL nesākas ar studio.code.org, jūs, iespējams, strādājat pie trešās puses darbības, un jums būs jāsazinās ar šī uzņēmuma atbalsta komandu, lai saņemtu papildu palīdzību.
   stats_hoc_2013_image_alt: Statistika no 2013. gada "Programmēšanas stundas"
   stats_growth: Tas sasniedza 15 miljonus lietotājus visātrāk.
   stats_i18n: Studenti mācās vairāk nekā 45 valodās
@@ -13259,7 +13299,7 @@ lv:
   hoc_how_to_faq_answer_devices_02: Ja ierīces ir ierobežotas vai nav pieejamas, mēģiniet
     [pārī programmēšana] (%{pair_url}) vai izpētiet mūsu [atvienotās darbības] (%{unplugged_url}),
     lai mācītos bez jebkādām ierīcēm!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Kas var brīvprātīgi?
   hoc_how_to_faq_answer_volunteer: Ikviens, kas aizraujas ar datorzinātņu izglītību
     un pieaugošo tehnoloģiju daudzveidību, var būt brīvprātīgais! Mēs labprāt redzētu,
     lai piedalītos brīvprātīgie no visām izcelsmēm. Koda stunda piedāvā plašu aktivitāšu
@@ -13273,7 +13313,7 @@ lv:
   hoc_how_to_faq_answer_account: Lai studenti izmēģinātu koda stundu, nav nepieciešama
     reģistrēšanās vai pieteikšanās. Reģistrējoties koda stundai, netiek automātiski
     izveidots Code.org konts.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Citi koda stundas resursi pedagogiem
   hoc_how_to_resources_promo_heading: Reklāmas resursi
   hoc_how_to_resources_promo_desc: Atrodiet visus nepieciešamos resursus — drukātus
     un digitālos —, lai pievērstu uzmanību savai kodeksa stundai.
@@ -13344,6 +13384,21 @@ lv:
     #HourOfCode un @codeorg, lai mēs varētu izcelt arī jūsu panākumus!'
   hoc_how_to_step_07_educators_desc_02: Varat arī izdrukāt sertifikātus saviem studentiem,
     lai parādītu savus sasniegumus!
+  hoc_ai_top_desc: Ikviens var uzzināt par AI neatkarīgi no tā, vai esat klases students
+    vai pedagogs, kas atver mācīšanas nākotni ar AI un par to.
+  hoc_ai_how_ai_works_video_series_desc: Šī īso video sērija iepazīstinās jūs ar to,
+    kā darbojas mākslīgais intelekts un kāpēc tas ir svarīgi. Pēc tam iedziļinieties
+    tādos jautājumos kā algoritmiskā aizspriedumi un AI lēmumu pieņemšanas ētika.
+  hoc_ai_learn_how_ai_works_desc: Iedziļinieties AI pasaulē, izmantojot nodarbības
+    “Kā AI darbojas”, kas ir savienotas pārī ar mūsu video sēriju, kas iepazīstina
+    jūs ar to, kā darbojas AI un kāpēc tas ir svarīgi.
+  hoc_ai_101_for_educators_desc: Atklājiet mākslīgā intelekta revolucionāro pasauli
+    (AI) un tās pārveidojošo potenciālu izglītībā ar mūsu pamatprogrammu tiešsaistes
+    mācību sērijām skolotājiem.
+  hoc_ai_impacts_desc: Iesaistiet savu klasi skolotāju vadītās nodarbībās, kurās pēta
+    mākslīgā intelekta ietekme un aicina izglītojamus domāt par dažu AI problēmu risinājumiem.
+  hoc_ai_activities_desc: Šīs pilnīgi jaunās koda stundas aktivitātes jautrā, saistošā
+    veidā iepazīstina lietotājus ar mākslīgā intelekta pasauli.
   team_page_full_team_alt_text: Gandrīz 100 Code.org darbinieki, kas saskaņo zilos
     un dzeltenos t-kreklus, rada viesnīcas konferenču zālē uzņēmuma 2022 vasaras Codechella
     pasākumam.
@@ -13870,6 +13925,23 @@ lv:
     un lejupielādes'
   video_library_page_not_hacked_video_title_7: 'Kā nevar tikt uzlauzts: instalējiet
     atjauninājumus'
+  thank_you_page_main_title: Paldies, ka palīdzējāt veidot kustību
+  thank_you_page_description: Code.org aizstāvības koalīcija vēlas pateikties simtiem
+    tūkstošu vietējo čempionu un aizstāvju, tostarp skolotājiem, kopienas locekļiem,
+    pētniekiem, bezpeļņas organizācijām, universitātēm, korporācijām un valdības iestādēm,
+    kas atbalstījuši redzējumu, ka katrs skolēns katrā skolā ir pelnījis iespēju apgūt
+    datorzinātnes. Paldies par atbalstu šai kustībai.
+  thank_you_page_members_section_title: 'Un visiem Code.org aizstāvības koalīcijas
+    dalībniekiem:'
+  thank_you_page_individual_organization_title: 'Paldies šādām personām un organizācijām
+    par ieguldījumu šajā ziņojumā:'
+  thank_you_page_individual_organization_description: Datorzinātņu izglītības vadītāji
+    katrā valsts izglītības aģentūrā, Koledžas padome, Della Kronina, Stjuarts Dekslers,
+    Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Paldies skolēniem un skolotājiem, kas citēti
+    šajā ziņojumā:'
+  thank_you_page_teachers_students_description: Tess Campion, Villa Campion, Džeimijs
+    Delerme, Sindija Noriega, Tara Vodopiča
   about_us_page_title: Par mums
   about_us_page_hero_description: Code.org® ir izglītības inovāciju bezpeļņas organizācija,
     kas veltīta redzējumam, ka katram skolēnam katrā skolā ir iespēja apgūt datorzinātnes
@@ -14023,6 +14095,117 @@ lv:
     vākšanas mērķi, kas atbalstīs šo redzējumu.
   about_page_donors_link_1: Veiciet ziedojumus
   about_page_donors_link_2: "[skatiet mūsu donoru sarakstu] (%{donors_url})"
+  teach_ai_title: Reālās pasaules piemēri. Praktiskie resursi.
+  teach_ai_description: AI vadlīniju skolām rīkkopa ir resurss politikas veidotājiem,
+    skolu vadītājiem un darbiniekiem, lai izstrādātu sākotnējos norādījumus par AI
+    savās skolās.
+  teach_ai_button_label: Skatīt rīkkopu
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_card_title_1: Lietojumprogrammu laboratorija
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
+  middle_high_page_make_your_own_card_link: Uzzināt vairāk
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_description_1: Bezmaksas elementāru mācību programmu komplekts,
+    kas iepazīstina studentus ar datorzinātņu pamatjēdzieniem un izaicina viņus izpētīt,
+    kā skaitļošana un tehnoloģijas var ietekmēt pasauli.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Iepazīstiniet studentus ar programmatūras
+    inženieriju un objektorientēto dizainu, kamēr viņi apgūst Java programmēšanas
+    valodu šajā bezmaksas mācību programmā AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_2: Izpētīt CS principus
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_card_title_1: Elfa laboratorija
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
+  elementary_page_computer_science_card_title_1: Datorzinātņu pamati
+  elementary_page_computer_science_card_title_2: Datorzinātņu savienojumi
+  elementary_page_computer_science_description_1: Bezmaksas elementāru mācību programmu
+    komplekts, kas iepazīstina studentus ar datorzinātņu pamatjēdzieniem un izaicina
+    viņus izpētīt, kā skaitļošana un tehnoloģijas var ietekmēt pasauli.
+  elementary_page_computer_science_description_2: Veidot savienojumus starp datorzinātnēm
+    (CS) un citiem priekšmetiem, piemēram, matemātiku, valodu mākslu, zinātni un sociālajiem
+    pētījumiem.
   language_code:
     ar: Arābu valoda
     az: Azerbaidžāņi

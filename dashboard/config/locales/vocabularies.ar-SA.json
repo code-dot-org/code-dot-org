@@ -1220,7 +1220,7 @@
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "الجمل الشرطية",
-          "definition": "البيانات التي تعمل فقط في ظل ظروف معينة"
+          "definition": "العبارات التي تعمل فقط في ظل ظروف معينة"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "النظام البيئي",
@@ -1239,7 +1239,7 @@
           "definition": "نموذج حاسوبي لغرض الدراسة."
         },
         "debug/csc-ecosystems/2023": {
-          "word": "التصحيح",
+          "word": "تصحيح الخطأ البرمجي",
           "definition": "البحث عن الأخطاء أو المشكلات في التعليمات البرمجية وإصلاحها."
         },
         "variable/csc-ecosystems/2023": {
@@ -1946,7 +1946,7 @@
           "definition": "تحويل صورة إلى ضوضاء، وتدريب الذكاء الاصطناعي لعكس العملية"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (شبكة الخصومة التوليدية)",
+          "word": "GAN (الشبكة التوليدية المتنافسة)",
           "definition": "طريقة لاستخدام نموذجين متنافسين للذكاء الاصطناعي لتوليد شيء ما"
         },
         "artificial_intelligence/how-ai-works/2023": {

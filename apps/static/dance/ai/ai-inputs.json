@@ -1,104 +1,129 @@
 {
   "items": [
     {
+      "emoji": "💩", 
       "id": "poopy",
-      "name": "poopy"
+      "modelDescriptiveName": "poopy"
     },
     {
+      "emoji": "🥰",
       "id": "romantic",
-      "name": "romantic"
+      "modelDescriptiveName": "romantic"
     },
     {
+      "emoji": "🎉",
       "id": "party",
-      "name": "party"
+      "modelDescriptiveName": "party"
     },
     {
+      "emoji": "🤪",
       "id": "silly",
-      "name": "silly"
+      "modelDescriptiveName": "silly"
     },
     {
+      "emoji": "✨",
       "id": "sparkle",
-      "name": "sparkle"
+      "modelDescriptiveName": "sparkle"
     },
     {
+      "emoji": "😀",
       "id": "happy",
-      "name": "happy"
+      "modelDescriptiveName": "happy"
     },
     {
+      "emoji": "🪄",
       "id": "magic",
-      "name": "magic"
+      "modelDescriptiveName": "magic"
     },
     {
+      "emoji": "👻",
       "id": "spooky",
-      "name": "spooky"
+      "modelDescriptiveName": "spooky"
     },
     {
+      "emoji": "😚",
       "id": "cute",
-      "name": "cute"
+      "modelDescriptiveName": "cute"
     },
     {
+      "emoji": "😎",
       "id": "funky",
-      "name": "funky"
+      "modelDescriptiveName": "funky"
     },
     {
+      "emoji": "🌊",
       "id": "wavy",
-      "name": "wavy"
+      "modelDescriptiveName": "wavy"
     },
     {
+      "emoji": "💡",
       "id": "lights",
-      "name": "lights"
+      "modelDescriptiveName": "lights"
     },
     {
+      "emoji": "🌈",
       "id": "rainbow",
-      "name": "rainbow"
+      "modelDescriptiveName": "rainbow"
     },
     {
+      "emoji": "🤖",
       "id": "robot",
-      "name": "robot"
+      "modelDescriptiveName": "robot"
     },
     {
+      "emoji": "😵‍💫",
       "id": "chaotic",
-      "name": "chaotic"
+      "modelDescriptiveName": "chaotic"
     },
     {
+      "emoji": "🪩",
       "id": "disco",
-      "name": "disco"
+      "modelDescriptiveName": "disco"
     },
     {
+      "emoji": "😌",
       "id": "zen",
-      "name": "zen"
+      "modelDescriptiveName": "zen"
     },
     {
+      "emoji": "💨",
       "id": "fast",
-      "name": "fast"
+      "modelDescriptiveName": "fast"
     },
     {
+      "emoji": "👿",
       "id": "evil",
-      "name": "evil"
+      "modelDescriptiveName": "evil"
     },
     {
+      "emoji": "🥶",
       "id": "cold",
-      "name": "cold"
+      "modelDescriptiveName": "cold"
     },
     {
+      "emoji": "🚀",
       "id": "cosmic",
-      "name": "cosmic"
+      "modelDescriptiveName": "cosmic"
     },
     {
+      "emoji": "😭",
       "id": "sad",
-      "name": "sad"
+      "modelDescriptiveName": "sad"
     },
     {
+      "emoji": "📰",
       "id": "black-and-white",
-      "name": "black & white"
+      "modelDescriptiveName": "black-and-white"
     },
     {
+      "emoji": "🔥",
       "id": "warm",
-      "name": "warm"
+      "modelDescriptiveName": "warm"
     },
     {
+      "emoji": "❄️",
       "id": "cool",
-      "name": "cool"
+      "modelDescriptiveName": "cool"
     }
   ]
 }
