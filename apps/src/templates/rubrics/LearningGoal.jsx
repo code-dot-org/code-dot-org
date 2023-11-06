@@ -165,6 +165,7 @@ export default function LearningGoal({
         <label className={style.evidenceLevelLabel}>
           <span>{i18n.feedback()}</span>
           <textarea
+            id="ui-teacherFeedback"
             className={style.inputTextbox}
             name="teacherFeedback"
             value={displayFeedback}
@@ -176,7 +177,7 @@ export default function LearningGoal({
           <span className={style.autosaveMessage}>{i18n.saving()}</span>
         ) : (
           autosaved && (
-            <span className={style.autosaveMessage}>
+            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
               <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
             </span>
           )
