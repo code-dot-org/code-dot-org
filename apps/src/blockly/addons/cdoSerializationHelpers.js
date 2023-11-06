@@ -85,6 +85,7 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
 }
 
 function adjustBlockPositions(blocks, workspace) {
+  console.log('adjusting block positions');
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const {RTL} = workspace;
 
@@ -95,78 +96,96 @@ function adjustBlockPositions(blocks, workspace) {
   let x = RTL ? width - padding : padding;
   let y = padding;
 
-  blocks.forEach((block, idx) => {
-    // Blocks that have saved locations (not the default) do not need to be adjusted
-    if (!inDefaultLocation(block)) {
-      return;
+  let existingColliders = [];
+  let blocksToPlace = [];
+  blocks.forEach(block => {
+    if (isBlockLocationUnset(block)) {
+      blocksToPlace.push(block);
+    } else {
+      insertCollider(existingColliders, getCollider(block));
     }
+  });
 
-    var size = block.getHeightWidth();
-    let overlappingBlock = null;
-    while (
-      (overlappingBlock = isOverlapping(
-        x,
-        y,
-        size.width,
-        size.height,
-        idx,
-        blocks
-      )) !== null
-    ) {
-      const overlappingBlockPosition =
-        overlappingBlock.getRelativeToSurfaceXY();
-      const overlappingBlockSize = overlappingBlock.getHeightWidth();
-      // Get the bottom y-coordinate of the overlapping block
-      y = overlappingBlockPosition.y + overlappingBlockSize.height;
-    }
-
-    const hasSvgFrame = !!block.functionalSvg_;
-    block.moveTo(getPaddedLocation(x, y, hasSvgFrame, RTL));
-    y =
-      y + VERTICAL_SPACE_BETWEEN_BLOCKS + (hasSvgFrame ? SVG_FRAME_HEIGHT : 0);
+  blocksToPlace.forEach(block => {
+    let collider = getCollider(block);
+    existingColliders.forEach(existingCollider => {
+      if (isOverlapping(collider, existingCollider)) {
+        y =
+          existingCollider.y +
+          existingCollider.height +
+          VERTICAL_SPACE_BETWEEN_BLOCKS +
+          SVG_FRAME_TOP_PADDING;
+        block.moveTo({x, y});
+        // Collision area must be updated to account for new position
+        collider = getCollider(block);
+      }
+    });
+    insertCollider(existingColliders, collider);
   });
 }
 
-function isOverlapping(x, y, width, height, idx, blocks) {
-  for (var i = 0; i < blocks.length; i++) {
-    var other = blocks[i];
-    const otherPosition = other.getRelativeToSurfaceXY();
-    const otherSize = other.getHeightWidth();
+function getCollider(block) {
+  const position = block.getRelativeToSurfaceXY();
+  const size = block.getHeightWidth();
 
-    // TODO: Can I simplify this check?
-    if (i < idx || !inDefaultLocation(other)) {
-      // Checks if the left edge of the current block is to the left of the right edge of the other block
-      // and the right edge of the current block is to the right of the left edge of the other block
-      var overlapX =
-        x < otherPosition.x + otherSize.width && x + width > otherPosition.x;
-      // Checks if the top edge of the current block is above the bottom edge of the other block
-      // and the bottom edge of the current block is below the top edge of the other block
-      var overlapY =
-        y < otherPosition.y + otherSize.height && y + height > otherPosition.y;
-      if (overlapX && overlapY) {
-        return other;
-      }
-    }
+  const collider = {
+    ...position,
+    ...size,
+  };
+
+  // SVG frames require us to account for additional height and width
+  // TODO: How do we handle RTL here?
+  if (block.functionalSvg_) {
+    collider.x -= SVG_FRAME_SIDE_PADDING;
+    collider.y -= SVG_FRAME_TOP_PADDING;
+    collider.height += SVG_FRAME_HEIGHT;
+    collider.width += SVG_FRAME_SIDE_PADDING * 2;
   }
 
-  return null;
+  return collider;
 }
 
-/**
- * Determines where the current block should be positioned, based on the cursor
- * @param {Blockly.Block} block - the block to be moved
- * @param {number} x - an x-coordinate for moving a block
- * @param {number} y - a y-coordinate for moving a block
- */
-export function getPaddedLocation(x, y, hasSvgFrame, RTL) {
-  const topPadding = hasSvgFrame ? SVG_FRAME_TOP_PADDING : 0;
-  const sidePadding = hasSvgFrame ? SVG_FRAME_SIDE_PADDING : 0;
-
-  x = x + (RTL ? -sidePadding : sidePadding);
-  y = y + topPadding;
-
-  return {x, y};
+function insertCollider(colliders, item) {
+  const sumItem = item.y + item.height;
+  // Returns the index of the first element whose bottom edge is below this one
+  const index = colliders.findIndex(current => {
+    const sumCurrent = current.y + current.height;
+    return sumCurrent > sumItem;
+  });
+  const insertionIndex = index !== -1 ? index : colliders.length;
+  colliders.splice(insertionIndex, 0, item);
 }
+
+function isOverlapping(collider1, collider2) {
+  // Checks if the left edge of collider1 is to the left of the right edge of the other block
+  // and the right edge of collider1 is to the right of the left edge of collider2
+  const overlapX =
+    collider1.x < collider2.x + collider2.width &&
+    collider1.x + collider1.width > collider2.x;
+  // Checks if the top edge of the collider1 is above the bottom edge of the collider2
+  // and the bottom edge of collider1 is below the top edge of collider2
+  const overlapY =
+    collider1.y < collider2.y + collider2.height &&
+    collider1.y + collider1.height > collider2.y;
+
+  return overlapX && overlapY;
+}
+
+// /**
+//  * Determines where the current block should be positioned, based on the cursor
+//  * @param {Blockly.Block} block - the block to be moved
+//  * @param {number} x - an x-coordinate for moving a block
+//  * @param {number} y - a y-coordinate for moving a block
+//  */
+// export function getPaddedLocation(x, y, hasSvgFrame, RTL) {
+//   const topPadding = hasSvgFrame ? SVG_FRAME_TOP_PADDING : 0;
+//   const sidePadding = hasSvgFrame ? SVG_FRAME_SIDE_PADDING : 0;
+
+//   x = x + (RTL ? -sidePadding : sidePadding);
+//   y = y + topPadding;
+
+//   return {x, y};
+// }
 
 /**
  * Determines whether a block needs to be repositioned, based on its current position.
@@ -179,16 +198,16 @@ export function isBlockLocationUnset(block) {
   return x === defaultX && y === defaultY;
 }
 
-/**
- * Determines whether a block needs to be repositioned, based on its current position.
- * @param {Blockly.Block} block - the block being considered
- * @return {boolean} - true if the block is at the top corner of the workspace
- */
-export function inDefaultLocation(block) {
-  const {defaultX, defaultY} = getDefaultLocation(block.workspace);
-  const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-  return x !== defaultX || y !== defaultY;
-}
+// /**
+//  * Determines whether a block needs to be repositioned, based on its current position.
+//  * @param {Blockly.Block} block - the block being considered
+//  * @return {boolean} - true if the block is at the top corner of the workspace
+//  */
+// export function inDefaultLocation(block) {
+//   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
+//   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
+//   return x !== defaultX || y !== defaultY;
+// }
 
 export const getDefaultLocation = workspaceOverride => {
   const workspace = workspaceOverride || Blockly.getMainWorkspace();
