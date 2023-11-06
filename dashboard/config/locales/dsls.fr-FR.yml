@@ -13298,13 +13298,13 @@ fr-FR:
             PM.png)"
         - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
-        markdown: "Regarder ce qui se passe lorsque les sprites se touchent dans les
+        markdown: Regarder ce qui se passe lorsque les sprites se touchent dans les
           deux animations. Ensuite, faire glisser chaque image de code vers l'image
-          qui lui correspond.\n\n"
+          qui lui correspond.
         questions:
         - text: Le bateau attrape le poisson. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
         - text: Les poissons mangent l'algue. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: Associez le code à l'animation
+        title: Associer le code à l'animation
       csc_ecosystems_overfishing_solution2_overview:
         markdown: "> #Sustainable Fishing Practice #2 :\n>># #Create une saison de
           pêche <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"

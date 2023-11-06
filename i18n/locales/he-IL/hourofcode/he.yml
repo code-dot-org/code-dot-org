@@ -6,10 +6,10 @@ he:
   front_title: הצטרף לאירוע הלמידה הגדול בהסטוריה %{campaign_date}
   coming_soon: בקרוב
   new: חדש
-  hours_of_code_served: שעות של קוד מוגש
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: התלמידים לומדים בלמעלה מ- 45 שפות
   hoc_stat_hours_served: מעל 100 מיליון תלמידים ניסו שעה של קוד
-  hoc_stat_females: סטודנטיות מהוות 50% ממשתתפי שעת הקוד
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 בדצמבר
   campaign_date_start_long: 4 בדצמבר
   campaign_date_short: 4-10 בדצמבר
@@ -47,9 +47,10 @@ he:
     הזדמנויות קידוד הכוללות רכיבים של בינה מלאכותית (AI) וגם רכיבים שאינם בינה מלאכותית.
   hoc2023_social_creativity_with_ai_title: שעת קוד - מה תיצור?
   hoc2023_social_creativity_with_ai_desc: השתמש במדעי המחשב כדי לחקור וללמוד על AI!
-  hoc2023_what_is_hoc_desc: שעת הקוד היא מבוא חינם למדעי המחשב באמצעות פעילויות וסרטונים
-    מהנים ללומדים בכל רמות המיומנות. חגיגת הקידוד והבינה המלאכותית השנה נתמכת על ידי
-    למעלה מ -400 שותפים, 20,000 מחנכים ו -58,000 מתנדבים.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: גלו, שחקו, צרו!
   social_hoc2022_explore_play_create: השתמשו במדעי המחשב כדי לגלות, לשחק וליצור!
   codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, עשו מהלך - יש כל כך הרבה
@@ -61,8 +62,9 @@ he:
     מוזיקה מ"אנקאנטו" של דיסני, ועוד!
   social_hoc2023_dance: בהשתתפות ביונסה, BTS, הארי סטיילס, ליזו, ליל נאס X, סלינה
     גומז, מוזיקה מ"אנקנטו "של דיסני ועוד!
-  social_hoc2023_dance_v2: הגיע הזמן לחזק את הדברים שלך! צור מסיבת ריקודים משלך הכוללת
-    להיטים של מיילי סיירוס, BTS, ליל נאס X, הארי סטיילס, ניקי מינאז', רוזליה ועוד!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: למדו היום, צרו מחר מזהיר.
@@ -264,9 +266,9 @@ he:
     אחרים.
   required_materials: 'חומרים נדרשים:'
   optional_materials: 'חומרים אופציונליים:'
-  for_students: לסטודנטים
+  for_students: For students
   for_educators: למורים
-  call_to_action_host_hoc: ארח שעה של קוד
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: ערכו אירוע
   call_to_action_register_event: רשום את האירוע שלך
   call_to_action_register_your_hoc: רשום את שעת הקוד שלך
@@ -274,11 +276,11 @@ he:
   call_to_action_start_activity: התחל פעילות
   call_to_action_get_certificates: קבל אישורים
   call_to_action_go_beyond_hoc: מעבר לשעת הקוד
-  call_to_action_explore_all_hoc_activities: גלו את כל הפעילויות של שעת הקוד באתר
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
     Code.org
-  call_to_action_start_dance_party: התחל מסיבת ריקודים
-  call_to_action_start_part_02: התחל חלק שני
-  call_to_action_start_unplugged_activity: התחל פעילות מנותקת
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: הצג משאבי פרומו
   call_to_action_learn_more: למד עוד
   call_to_action_watch_now: צפו עכשיו
@@ -374,9 +376,9 @@ he:
   call_to_action_view_faqs: הצג שאלות נפוצות נוספות
   call_to_action_applications_open: בקשות פתוחות כעת
   call_to_action_apply_cs_ambassador: הגש בקשה להיות שגריר מדעי המחשב
-  call_to_action_coming_soon: בקרוב!
-  call_to_action_learn_how_ai_works: למד כיצד AI עובד
-  call_to_action_learn_about_ai: למד על AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: צפה במדריך הדרכה למחנכים
   aria_label_call_to_action_hoc_how_to_companies: צפה במדריך הדרכה לחברות
   aria_label_call_to_action_hoc_how_to_districts: צפה במדריך הדרכה למחוזות
@@ -386,10 +388,9 @@ he:
   aria_label_call_to_action_hoc_how_to_public_officials: צפה במדריך הדרכה לפקידי ציבור
   aria_label_call_to_action_hoc_how_to_volunteers: צפה במדריך הדרכה למתנדבים
   aria_label_call_to_action_hoc_how_to_virtual_events: צפה במדריך הדרכה לאירועים וירטואליים
-  aria_label_call_to_action_dance_01: התחל את פעילות מסיבת הריקודים
-  aria_label_call_to_action_dance_02: התחל חלק שני בפעילות מסיבת הריקודים
-  aria_label_call_to_action_dance_unplugged: התחל את הפעילות של מסיבת הריקודים ללא
-    חיבור
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -495,23 +496,25 @@ he:
   curriculum_name_creating_apps_with_devices: יצירת אפליקציות עם מכשירים
   curriculum_name_poetry: קידוד עם שירה
   curriculum_name_dance_party: מסיבת ריקודים
-  curriculum_name_dance_party_02: המשיכו לרקוד
-  curriculum_name_dance_party_unplugged: מסיבת ריקודים לא מחוברת
-  curriculum_name_dance_party_ai_edition: 'מסיבת ריקודים: מהדורת AI'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: פתרון בעיות ומחשוב
   curriculum_name_web_development: פיתוח אתרים
   curriculum_name_interactive_animations_games: אנימציות ומשחקים אינטראקטיביים
   curriculum_name_design_process: תהליך העיצוב
   curriculum_name_data_society: נתונים וחברה
-  curriculum_desc_dance_party_01: בפעילות היכרות זו, השתמש בקוד כדי לגרום למגוון דמויות
-    צבעוניות לעבור לרקעים מונפשים ומוזיקה אופטימית.
-  curriculum_desc_dance_party_02: חרגו מדריכת ההיכרות עם רעיונות מורחבים לפרויקטים.
-    עיין בספרייה של דוגמאות למסיבות ריקודים מורכבות יותר.
-  curriculum_desc_dance_party_unplugged: הפעל את החריץ שלך - אין צורך במחשב! למד כיצד
-    ניתן להשתמש במושגי קידוד, כמו אירועים, לסנכרון כוריאוגרפיה של רקדנים.
-  curriculum_desc_dance_party_ai_edition: למד על מושגי בינה מלאכותית (AI) כדי ליצור
-    מסיבת ריקודים וירטואלית משלך המציגה אמנים מובילים של ימינו. עם עשרות שירים לבחירה,
-    הגע לכל תלמיד לא משנה טעם המוזיקה שלו. הגיע הזמן לחזק את הדברים שלך!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: סט חינם של תוכניות לימוד יסודיות המציג לתלמידים את המושגים
     הבסיסיים של מדעי המחשב.
   curriculum_desc_csf_express: למד ליצור תוכנות מחשב, לפתח מיומנויות לפתרון בעיות
@@ -634,12 +637,12 @@ he:
   module_grade_grade_03: כיתה ג '
   module_grade_grade_04: כיתה ד
   module_grade_grade_05: כיתה ה '
-  module_age_05_07: גילאי 5-7
-  module_age_07: גילאי 7+
-  module_age_07_11: גילאי 7-11
-  module_age_11: גילאי 11+
-  module_age_13: גילאי 13+
-  module_age_all_age: כל הגילאים
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: מורים K-5
   module_grade_6_10_teachers: 6-10 מורים
   module_grade_9_12_teachers: 9-12 מורים
@@ -728,8 +731,8 @@ he:
   heading_csa_ai: מחפש דברים לעשות לאחר בחינת AP®?
   heading_bring_cs_to_students: הביאו את מדעי המחשב לסטודנטים
   heading_cs_ambassador_program: תכנית שגריר למדעי המחשב
-  heading_featured_student_projects: פרויקטים נבחרים לסטודנטים
-  heading_start_hoc_with_videos: התחל את שעת הקוד שלך עם סרטוני השראה
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: אם אתה תלמיד תיכון נלהב לעודד נשים צעירות יותר ללמוד מדעי
     המחשב בבית הספר שלך, אז אנחנו צריכים אותך!
   cs_ambassador_desc: כל תחום, כולל רפואה, בידור, ספורט, חינוך, עסקים, אופנה ויזמות
@@ -820,13 +823,13 @@ he:
     מדעי המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים הנשלחים ישירות לתיבת
     הדואר הנכנס שלך.
   subscribe_form_section_unsubscribe: אתה יכול לבטל את המנוי בכל עת.
-  dance_hero_heading: קוד מסיבת ריקודים
-  dance_featuring_songs_by_short: 'כולל שירים מאת:'
-  dance_featuring_songs_by_long: 'מסיבת הריקודים כוללת שירים מאת:'
-  dance_and_more: ועוד
-  dance_choose_activity: בחר את מסיבת הריקודים שלך
-  dance_afe_disclaimer: האמנים שהמוזיקה שלהם משמשת במדריך זה אינם נותנים חסות או תומכים
-    באמזון כחלק מרישוי השימוש במוזיקה שלהם ל- Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: איך עובד בלוקצ'יין
   blockchain_hero_desc: לצלול לתוך העולם של blockchain עם "איך Blockchain עובד", סדרת
     הווידאו החדשה שלנו ושיעורים נלווים!
@@ -12845,9 +12848,9 @@ he:
     ידי אינספור ארגונים ויחידים] (%{efforts_url}) שעזרו להקים, לממן ולהפיץ חינוך למדעי
     המחשב. אנו מודים להפיק תועלת מהעזרה הבלתי נלאית של קהילת החינוך המדעי הרחבה יותר,
     ו [אנו מודים לכל השותפים והאנשים שתמכו בהשפעה שלנו לאורך השנים] (%{partners_url})).
-  about_page_section_more_list_1: "[דוח שנתי של Code.org 2021] (%{report_url}) (דוחות
-    עבר: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
-    [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[ערכי הליבה והנחיות ההודעות שלנו] (%{core_url})"
   about_page_section_more_list_3: "[תכנית הלימודים והפילוסופיה הפדגוגית שלנו] (%{curriculum_url})"
   about_page_section_more_list_4: "[שיחת TEDx מאת מייסדנו האדי פרטובי על מדוע מדעי
@@ -12885,10 +12888,10 @@ he:
     בהקמת [מסגרת מדעי המחשב K-12] (%{framework_url}) - מדריך ברמה גבוהה למדינות, מחוזות
     וארגונים המיישמים חינוך למדעי המחשב. המסגרת זכתה לתמיכתם של מאות אקדמאים, מחנכים
     K-12, חברות תוכנה, עמותות ומדינות.
-  about_page_section_specific_description_6: טופס מס הכנסה של Code.org 990 עבור [2014]
-    [2015](%{irs_url_1}), (%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}),
-    [2018](%{irs_url_5}), [2019](%{irs_url_6}), [2020](%{irs_url_7}) ו- [2021](%{irs_url_8}).
-    [מדיניות תרומה.] (%{donation_policy_url})
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
   about_page_section_specific_description_7: "[הירשם לקבלת עדכוני סטטוס] (%{sign_up_url})
     על ההתקדמות בתנועה למדעי המחשב K-12 ועל העבודה של Code.org. או עקוב אחר Code.org
     ברשתות החברתיות:"
@@ -12913,63 +12916,66 @@ he:
   teach_ai_description: ערכת הכלים של הדרכת AI לבתי ספר היא משאב לקובעי מדיניות, מנהיגי
     בתי ספר וצוות לפתח הדרכה ראשונית בנושא AI בבתי הספר שלהם.
   teach_ai_button_label: הצג את ערכת הכלים
-  middle_high_page_main_title: למידה לגילאי 11 ומעלה
-  middle_high_page_main_description: חקור את עולם מדעי המחשב עם סרטונים מרתקים, הדרכות
-    בקצב עצמי, פעילויות תכנות ועוד!
-  middle_high_page_hero_title: התחל עם שעת הקוד
-  middle_high_page_hero_description: למד את היסודות של מדעי המחשב עם פעילויות חינם
-    של Hour of Code, הכוללות בלוקי קידוד גרירה ושחרור. ישנן מאות אפשרויות של שעה לבחירה!
-  middle_high_page_hourofcode_link: חקור פעילויות שעת הקוד
-  middle_high_page_modules_title: מודולי תכנות לסטודנטים מבוגרים
-  middle_high_page_modules_description: מודולים קצרים בקצב עצמי לתלמידי חטיבת ביניים
-    ותיכון, מותאמים מהקורסים שלנו לתגליות מדעי המחשב ועקרונות מדעי המחשב, הם דרך מצוינת
-    ללמוד מושגים המשתרעים על פני כל שפות תכנות וכלים.
-  middle_high_page_modules_card_title_1: מבוא למעבדת המשחקים
-  middle_high_page_modules_card_title_2: תכנות צבים במעבדת אפליקציות
-  middle_high_page_modules_card_title_3: תכנות מונחה אירועים במעבדת אפליקציות
-  middle_high_page_modules_card_description_1: התקדם בקצב שלך בהקדמה זו לסביבת מעבדת
-    המשחק שלנו בזמן שאתה מתכנת אנימציות, אמנות אינטראקטיבית ומשחקים.
-  middle_high_page_modules_card_description_2: פתח את היכולת ליצור אפליקציות עשירות
-    ואינטראקטיביות עם JavaScript במעבדת האפליקציות!
-  middle_high_page_modules_card_description_3: לך בקצב שלך עם מבוא זה לסביבת התכנות
-    App Lab, שבה התלמידים משתמשים ב- JavaScript כדי ליצור אפליקציות אינטראקטיביות.
-  middle_high_page_modules_card_link: נסו את זה
-  middle_high_page_make_your_own_title: צור אפליקציות, משחקים ודפי אינטרנט משלך
-  middle_high_page_make_your_own_description: 'בנוסף לקורסים, יש לנו כלי תכנות המאפשרים
-    לך לחקור את היצירתיות שלך ולעשות משהו מדהים. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: מעבדת אפליקציות
-  middle_high_page_make_your_own_card_title_2: מעבדת משחק
-  middle_high_page_make_your_own_card_title_3: מעבדת אינטרנט
-  middle_high_page_make_your_own_card_descrpition_1: App Lab היא סביבת תכנות שבה אתה
-    יכול ליצור אפליקציות פשוטות. תכנן אפליקציה, קוד ב-JavaScript עם בלוקים או טקסט,
-    ואז שתף את האפליקציה שלך תוך שניות.
-  middle_high_page_make_your_own_card_descrpition_2: מעבדת המשחקים היא סביבת תכנות
-    בה תוכלו ליצור אנימציות ומשחקים פשוטים עם אובייקטים ודמויות המקיימות אינטראקציה
-    זו עם זו.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab היא סביבת תכנות שבה אתה
-    יכול ליצור דפי אינטרנט פשוטים באמצעות HTML ו- CSS. עצב את דפי האינטרנט שלך ושתף
-    את האתר שלך תוך שניות.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: למד עוד
-  middle_high_page_additional_resources_title: משאבים נוספים
-  middle_high_page_additional_resources_description: יש כל כך הרבה דרכים לחקור עוד
-    יותר את מדעי המחשב! עיין בספריית הווידיאו שלנו, או למד עוד על קריירות מרגשות בתחום
-    מדעי המחשב.
-  middle_high_page_video_library_title: גלה את ספריית הווידאו שלנו
-  middle_high_page_video_library_description: למד את היסודות של מדעי המחשב באמצעות
-    סרטונים קצרים של 5-10 דקות בנושאים כמו בינה מלאכותית, אינטרנט, איך מחשבים עובדים,
-    איך לא להיפרץ, בלוקצ'יין, קריירה ועוד!
-  middle_high_page_video_library_link: צפה בספריית וידאו
-  middle_high_page_cs_journeys_title: צאו רחוק יותר עם מסעות CS
-  middle_high_page_cs_journeys_description: קח את הצעד הבא במסע מדעי המחשב שלך. חקור
-    קריירות, הזדמנויות חונכות, קורסים מקוונים, מלגות, התמחות ועוד!
-  middle_high_page_cs_journeys_link: גלו מסעות במדעי המחשב
-  middle_high_page_cs_title: מדעי המחשב בכיתה
-  middle_high_page_cs_description: קורסים אלה צריכים להיות מובילים על ידי מורה! אם
-    תרצה לראות אותם נלמדים בבית הספר שלך, שקול לעבוד עם מורה כדי להביא אותם לכיתה
-    שלך.
-  middle_high_page_cs_card_title_1: תגליות מדעי המחשב
-  middle_high_page_cs_card_title_2: עקרונות מדעי המחשב
-  middle_high_page_cs_card_title_3: AP מדעי המחשב א
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: תכנית לימודים חינם בת שנה המציגה את התלמידים
     למושגי היסוד של מדעי המחשב ומאתגרת אותם לחקור כיצד מחשוב וטכנולוגיה יכולים להשפיע
     על העולם.
@@ -12980,32 +12986,34 @@ he:
   middle_high_page_cs_card_description_3: הכירו את התלמידים להנדסת תוכנה ועיצוב מונחה
     עצמים בזמן שהם לומדים את שפת התכנות Java בתכנית הלימודים החינמית הזו עבור AP®
     מדעי המחשב A (AP® CSA).
-  middle_high_page_cs_link_1: חקור את דיקוברי CS
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: חקור את עקרונות CS
-  middle_high_page_cs_link_3: חקור את CSA
-  elemeentary_page_main_title: למידה לגילאי 5 עד 11
-  elementary_page_main_description: חקור את עולם מדעי המחשב עם סרטונים מרתקים, הדרכות
-    בקצב עצמי, פעילויות תכנות ועוד!
-  elementary_page_own_pace_title: המשך ללמוד בקצב שלך
-  elementary_page_own_pace_description: צור רישומים, משחקים ועוד בשתי האפשרויות המצוינות
-    הללו לתלמידים שמתחילים ללמוד בעצמם את היסודות של מדעי המחשב.
-  elementary_page_own_pace_card_title_1: קורס אקספרס טרום קורא
-  elementary_page_own_pace_card_title_2: קורס אקספרס
-  elementary_page_own_pace_card_description_1: למד מדעי המחשב בקצב שלך! למד ליצור
-    תוכנות מחשב, לפתח מיומנויות לפתרון בעיות ולעבוד על אתגרים מהנים! צור משחקים ופרויקטים
-    יצירתיים לשיתוף עם חברים, משפחה ומורים.
-  elementary_page_own_pace_link_1: התחל קורס קדם-קורא
-  elementary_page_own_pace_link_2: התחל קורס אקספרס
-  elementary_page_make_your_own_games_title: הכינו אנימציות ומשחקים משלכם
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: מעבדת ספרייט
-  elementary_page_make_your_own_games_card_description_1: הגיע הזמן להיות יצירתיים!
-    השתמש בקידוד מבוסס בלוקים כדי ליצור משהו מטופש, מתוק או חיצוני במעבדת ספרייט.
-    הגבול היחיד הוא הדמיון שלך!
-  elementary_page_make_your_own_games_link: נסה את מעבדת ספרייט
-  elementary_page_computer_science_title: מדעי המחשב בכיתה
-  elementary_page_computer_science_description: קורסים אלה צריכים להיות מובילים על
-    ידי מורה! אם תרצה לראות אותם נלמדים בבית הספר שלך, בקש מהורה או אפוטרופוס לעבוד
-    עם מורה כדי להביא אותם לכיתה שלך.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: יסודות מדעי המחשב
   elementary_page_computer_science_card_title_2: חיבורי מדעי המחשב
   elementary_page_computer_science_description_1: תכנית לימודים חינם בת שנה המציגה

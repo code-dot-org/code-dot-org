@@ -2504,13 +2504,13 @@ es:
     de más de 400 socios y 200.000 educadores en todo el mundo.
   hoc_homepage_registration_desc: "¡Tu clase o grupo puede unirse a millones de personas
     en todo el mundo que participan en la Hora del Código! La inscripción para la
-    celebración anual de la Semana de la Educación en Ciencias de la Computación comienza
-    en octubre. Sin embargo, Hour of Code está disponible durante todo el año."
+    celebración anual de la Semana de la Educación en Informática comienza en octubre.
+    Sin embargo, la Hora del Código está disponible durante todo el año."
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lee nuestra guía práctica](%{howto_guide_url})
     para planificar un evento para tu clase."
   hoc_homepage_highlights_heading: Lo más destacado de la Hora del Código
   hoc_homepage_organized_by: La Hora del Código está organizada por [Code.org](%{codeorg_url}).
-  hoc_events_heading: Regístrese para organizar una hora de código
+  hoc_events_heading: Regístrate para organizar una Hora del Código
   hoc_events_jump_to_map: Ir al mapa de la Hora del Código
   signup_closed: La inscripción para la Hora del Código está cerrada. Vuelve a intentarlo
     en octubre cuando abramos la inscripción para la siguiente Hora del Código.
@@ -2544,8 +2544,9 @@ es:
   signup_event_entire_school_label: Toda mi escuela participa
   signup_event_location_label: Ubicación del evento
   signup_event_location_error: La ubicación del evento es obligatoria.
-  signup_special_event_flag_label: Mi evento abarcará a todo un distrito, miembros
-    de la comunidad y/u otros planes especiales para ir más allá de una hora
+  signup_special_event_flag_label: Mi evento involucrará a todo un distrito, una organización
+    completa, miembros de la comunidad y/u otros planes especiales para ir más allá
+    de una hora
   signup_special_event_details_label: Solicita que se te destaque como un evento especial
   signup_send_posters_flag_label: Enviar <a href= "/resources/promote#posters">carteles</a>
     a mi escuela u organización (solamente en EE. UU., disponibles hasta agotar existencias)
@@ -2558,7 +2559,7 @@ es:
   signup_email_preference_opt_in: "¿Podemos enviarte actualizaciones de cursos de
     Code.org, oportunidades locales u otras noticias sobre ciencias de la computación
     por correo electrónico?"
-  signup_email_preference_privacy: "(consulta nuestra política de privacidad)"
+  signup_email_preference_privacy: "(Consulta nuestra política de privacidad)"
   signup_email_preference_yes: Sí
   signup_email_preference_yes_elementary: Sí, envíenme actualizaciones sobre los recursos
     de la escuela primaria
@@ -2639,7 +2640,7 @@ es:
     de eventos.</a>
   map_warning_markdown: La lista con todos los eventos se puede ver en la [página
     de eventos](%{events_url})
-  map_view_all_events: Vea una lista completa de los eventos de la Hora del Código
+  map_view_all_events: Ve una lista completa de los eventos de la Hora del Código
     [here](%{events_url}).
   meta_tag_og_title: 'Hora del Código: únete al movimiento'
   meta_tag_og_description: La Hora del Código es un movimiento global que llega a
@@ -14936,68 +14937,69 @@ es:
     atractivos, con tutoriales seguidos a tu propio ritmo, actividades de programación
     y mucho más!"
   middle_high_page_hero_title: Empieza con la Hora del Código
-  middle_high_page_hero_description: Aprenda los fundamentos de la informática con
-    las actividades gratuitas de la Hora del Código, que incluyen bloques de codificación
-    de arrastrar y soltar. ¡Hay cientos de opciones de una hora entre las que elegir!
-  middle_high_page_hourofcode_link: Explore las actividades de la Hora del Código
-  middle_high_page_modules_title: Módulos de programación para estudiantes mayores
-  middle_high_page_modules_description: Adaptados de nuestros cursos CS Discoveries
-    y CS Principles, estos módulos cortos y autodidácticos para estudiantes de secundaria
-    y preparatoria son una excelente manera de aprender conceptos que abarcan todos
-    los lenguajes y herramientas de programación.
-  middle_high_page_modules_card_title_1: Introducción a Laboratorio de juegos
-  middle_high_page_modules_card_title_2: Programación de tortugas en el Laboratorio
-    de aplicaciones
+  middle_high_page_hero_description: Aprende los fundamentos de la informática con
+    las actividades gratuitas de la Hora del Código, que incluyen bloques de programación
+    de arrastrar y soltar. ¡Hay cientos de opciones de una hora de duración entre
+    las que elegir!
+  middle_high_page_hourofcode_link: Explora las actividades de la Hora del Código
+  middle_high_page_modules_title: Módulos de programación para estudiantes más mayores
+  middle_high_page_modules_description: Adaptados de nuestros cursos Descubrimientos
+    de Informática y Principios de Informática, estos módulos breves y autodidácticos
+    para estudiantes de secundaria y bachillerato son una excelente forma de aprender
+    conceptos que abarcan todos los lenguajes y herramientas de programación.
+  middle_high_page_modules_card_title_1: Introducción al Laboratorio de Juegos
+  middle_high_page_modules_card_title_2: Programando Tortugas en el Laboratorio de
+    Aplicaciones
   middle_high_page_modules_card_title_3: Programación basada en eventos en el Laboratorio
-    de aplicaciones
+    de Aplicaciones
   middle_high_page_modules_card_description_1: Muévete a tu propio ritmo en esta introducción
-    a nuestro entorno de laboratorio de juegos mientras programas animaciones, arte
+    a nuestro entorno del Laboratorio de Juegos mientras programas animaciones, arte
     interactivo y juegos.
-  middle_high_page_modules_card_description_2: "¡Desbloquea la capacidad de crear
-    aplicaciones sofisticadas e interactivas con JavaScript en el App Lab!"
-  middle_high_page_modules_card_description_3: Siga su propio ritmo con esta introducción
-    al entorno de programación de App Lab, en la que los alumnos utilizan JavaScript
-    para crear aplicaciones interactivas.
+  middle_high_page_modules_card_description_2: "¡Descubre cómo crear aplicaciones
+    sofisticadas e interactivas con JavaScript en el Laboratorio de Aplicaciones!"
+  middle_high_page_modules_card_description_3: Aprende a programar a tu propio ritmo
+    con esta introducción al entorno de programación del Laboratorio de Aplicaciones,
+    en el que los estudiantes utilizan JavaScript para crear aplicaciones interactivas.
   middle_high_page_modules_card_link: Pruébalo
   middle_high_page_make_your_own_title: Crea tus propias aplicaciones, juegos y páginas
     web
-  middle_high_page_make_your_own_description: 'Además de los cursos, tenemos herramientas
-    de programación que te permiten explorar tu creatividad y crear algo increíble. '
+  middle_high_page_make_your_own_description: Además de cursos, tenemos herramientas
+    de programación que te permiten explorar tu creatividad y hacer algo increíble.
   middle_high_page_make_your_own_card_title_1: Laboratorio de aplicaciones
-  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_2: Laboratorio de Juegos
   middle_high_page_make_your_own_card_title_3: Laboratorio Web
-  middle_high_page_make_your_own_card_descrpition_1: App Lab es un entorno de programación
-    en el que puedes crear aplicaciones sencillas. Diseña una aplicación, codifica
-    en JavaScript con bloques o texto y comparte tu aplicación en cuestión de segundos.
-  middle_high_page_make_your_own_card_descrpition_2: El Laboratorio de juegos es un
-    entorno de programación en donde puedes hacer animaciones simples y juegos con
-    objetos y personajes que interactúan entre ellos.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab es un entorno de programación
-    en el que puede crear páginas web sencillas utilizando HTML y CSS. Diseña tus
-    páginas web y comparte tu sitio en cuestión de segundos.
+  middle_high_page_make_your_own_card_descrpition_1: Laboratorio de Aplicaciones es
+    un entorno de programación donde puedes crear aplicaciones sencillas. Diseña una
+    aplicación, codifícala en JavaScript con bloques o texto y compártela en segundos.
+  middle_high_page_make_your_own_card_descrpition_2: Laboratorio de Juegos es un entorno
+    de programación en el que puedes crear animaciones y juegos sencillos con objetos
+    y personajes que interactúan entre sí.
+  middle_high_page_make_your_own_card_descrpition_3: Laboratorio Web es un entorno
+    de programación en el que puedes crear páginas web sencillas utilizando HTML y
+    CSS. Diseña tus páginas web y comparte tu sitio en cuestión de segundos.
   middle_high_page_make_your_own_card_link: Conoce más
-  middle_high_page_additional_resources_title: Recursos adicionales
-  middle_high_page_additional_resources_description: "¡Hay muchas maneras de explorar
-    más a fondo la informática! Explore nuestra biblioteca de vídeos u obtenga más
-    información sobre carreras interesantes en el campo de la informática."
-  middle_high_page_video_library_title: Descubra nuestra videoteca
-  middle_high_page_video_library_description: "¡Aprenda los conceptos básicos de la
-    informática a través de videos cortos de 5 a 10 minutos sobre temas como la inteligencia
-    artificial, Internet, cómo funcionan las computadoras, cómo no ser pirateado,
-    la cadena de bloques, las carreras y más!"
-  middle_high_page_video_library_link: Ver biblioteca de vídeos
-  middle_high_page_cs_journeys_title: Vaya más allá con CS Journeys
-  middle_high_page_cs_journeys_description: Dé el siguiente paso en su viaje a la
-    informática. ¡Explore carreras, oportunidades de tutoría, cursos en línea, becas,
-    pasantías y más!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Ciencias de la computación en el aula
-  middle_high_page_cs_description: "¡Estos cursos deben ser dirigidos por un profesor!
-    Si quieres que se enseñen en tu escuela, considera la posibilidad de trabajar
-    con un profesor para que los lleve a tu clase."
-  middle_high_page_cs_card_title_1: Descubrimientos de CS
-  middle_high_page_cs_card_title_2: Principios de CS
-  middle_high_page_cs_card_title_3: AP Ciencias de la Computación A
+  middle_high_page_additional_resources_title: Recursos Adicionales
+  middle_high_page_additional_resources_description: "¡Hay muchas formas de profundizar
+    en la informática! Echa un vistazo a nuestra videoteca o infórmate sobre apasionantes
+    carreras en el campo de la informática."
+  middle_high_page_video_library_title: Descubre nuestra Videoteca
+  middle_high_page_video_library_description: Aprende los fundamentos de la informática
+    a través de vídeos cortos de 5-10 minutos sobre temas como la inteligencia artificial,
+    Internet, cómo funcionan los ordenadores, cómo no ser pirateado, blockchain, carreras
+    profesionales, ¡y mucho más!
+  middle_high_page_video_library_link: Ver videoteca
+  middle_high_page_cs_journeys_title: Llega más lejos con Viajes CS
+  middle_high_page_cs_journeys_description: Da el siguiente paso en tu viaje por la
+    informática. Explora carreras, oportunidades de tutoría, cursos online, becas,
+    prácticas y mucho más.
+  middle_high_page_cs_journeys_link: Explora los Viajes CS
+  middle_high_page_cs_title: Informática en la clase
+  middle_high_page_cs_description: "¡Estos cursos deben ser dirigidos por un docente!
+    Si quieres que se impartan en tu centro, considera la posibilidad de colaborar
+    con un profesor para que los imparta en tu clase."
+  middle_high_page_cs_card_title_1: Descubrimientos de la informática
+  middle_high_page_cs_card_title_2: Principios de Informática
+  middle_high_page_cs_card_title_3: AP® Informática A
   middle_high_page_cs_card_description_1: Plan de estudios gratuito de un año que
     presenta a los estudiantes los conceptos fundamentales de la informática y los
     desafía a explorar la forma en que la informática y la tecnología pueden tener
@@ -15009,35 +15011,35 @@ es:
   middle_high_page_cs_card_description_3: Introduzca a los estudiantes en la ingeniería
     de software y el diseño orientado a objetos mientras aprenden el lenguaje de programación
     Java en este plan de estudios gratuito de AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Discoveries
+  middle_high_page_cs_link_1: Explora Descubrimientos de Informática
   middle_high_page_cs_link_2: Explore los principios de CS
   middle_high_page_cs_link_3: Explora CSA
   elemeentary_page_main_title: Aprendizaje para niños de 5 a 11 años
   elementary_page_main_description: "¡Explora el mundo de la informática con vídeos
     atractivos, con tutoriales seguidos a tu propio ritmo, actividades de programación
     y mucho más!"
-  elementary_page_own_pace_title: Continúe aprendiendo a su propio ritmo
-  elementary_page_own_pace_description: Crea dibujos, juegos y más en estas dos excelentes
-    opciones para que los estudiantes comiencen por su cuenta a aprender los conceptos
-    básicos de la informática.
-  elementary_page_own_pace_card_title_1: Curso Pre-Reader Express
-  elementary_page_own_pace_card_title_2: Curso Express
-  elementary_page_own_pace_card_description_1: "¡Aprende informática a tu propio ritmo!
-    ¡Aprende a crear programas de computadora, desarrolla habilidades para resolver
-    problemas y supera desafíos divertidos! Crea juegos y proyectos creativos para
-    compartir con amigos, familiares y profesores."
-  elementary_page_own_pace_link_1: Comience el curso de prelectura
-  elementary_page_own_pace_link_2: Comience el curso exprés
+  elementary_page_own_pace_title: Continúa aprendiendo a tu ritmo
+  elementary_page_own_pace_description: Crea dibujos, juegos y mucho más con estas
+    dos excelentes opciones para estudiantes que se inician por su cuenta en el aprendizaje
+    de los fundamentos de la informática.
+  elementary_page_own_pace_card_title_1: Curso Prelector Exprés
+  elementary_page_own_pace_card_title_2: Curso Exprés
+  elementary_page_own_pace_card_description_1: "¡Aprende informática a tu ritmo! Aprende
+    a crear programas informáticos, desarrolla tu capacidad para resolver problemas
+    y supera divertidos retos. Crea juegos y proyectos creativos para compartir con
+    amigos, familiares y profesores."
+  elementary_page_own_pace_link_1: Iniciar Curso Pre-lector
+  elementary_page_own_pace_link_2: Iniciar Curso Exprés
   elementary_page_make_your_own_games_title: Crea tus propias animaciones y juegos
   elementary_page_make_your_own_games_card_title_1: Laboratorio de sprites
   elementary_page_make_your_own_games_card_description_1: "¡Es hora de ser creativo!
-    Usa la codificación basada en bloques para crear algo gracioso, divertido o que
-    quede fuera del espacio en Sprite Lab. ¡El único límite es tu imaginación!"
-  elementary_page_make_your_own_games_link: Prueba Sprite Lab
-  elementary_page_computer_science_title: Ciencias de la computación en el aula
+    Utiliza la programación basada en bloques para crear algo divertido, dulce o extravagante
+    en el Laboratorio Sprite. ¡El único límite es tu imaginación!"
+  elementary_page_make_your_own_games_link: Prueba Laboratorio Sprite
+  elementary_page_computer_science_title: Informática en la clase
   elementary_page_computer_science_description: "¡Estos cursos deben ser dirigidos
-    por un profesor! Si quieres que se enseñen en tu escuela, pídele a un padre o
-    tutor que trabaje con un maestro para llevarlos a tu clase."
+    por docentes! Si quieres que se impartan en tu centro, pide a uno de tus padres
+    o tutores que colaboren con un profesor para llevarlos a tu clase."
   elementary_page_computer_science_card_title_1: Fundamentos de la informática
   elementary_page_computer_science_card_title_2: Conexiones informáticas
   elementary_page_computer_science_description_1: Plan de estudios gratuito de un

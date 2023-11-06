@@ -6,12 +6,11 @@ uz:
   front_title: Tarixdagi eng katta tadbirga asoslanish:% {campaign_date}
   coming_soon: Tez kunda
   new: Yangi
-  hours_of_code_served: Xizmat qilingan kod soatlari
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: O'quvchilar 45 dan ortiq tillarda o'rganishmoqda
   hoc_stat_hours_served: 100 milliondan ortiq o'quvchilar Dasturlash soatini qatnashib
     ko'rdilar
-  hoc_stat_females: Hour of Code ishtirokchilarining 50 foizini ayol talabalar tashkil
-    qiladi
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4-dekabr
   campaign_date_start_long: 4-dekabr
   campaign_date_short: 4-10-dekabr
@@ -53,10 +52,10 @@ uz:
   hoc2023_social_creativity_with_ai_title: Kod soati - Siz nima yaratasiz?
   hoc2023_social_creativity_with_ai_desc: AIni o'rganish va o'rganish uchun kompyuter
     fanidan foydalaning!
-  hoc2023_what_is_hoc_desc: Kod soati - bu barcha mahorat darajasidagi o'quvchilar
-    uchun qiziqarli tadbirlar va videolar orqali kompyuter faniga bepul kirish. Bu
-    yilgi kodlash va AI nishonlash 400 dan ortiq hamkorlar, 20 ming nafar tarbiyachi
-    va 58 ming ko'ngillilar tomonidan qo'llab-quvvatlanadi.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Taqdiq qiling, O'ynang, Yarating!
   social_hoc2022_explore_play_create: Kompyuter fanlarini tadqiq qilish, o'ynash va
     yaratish uchun foydalaning!
@@ -69,9 +68,9 @@ uz:
     "Encanto" filmidan bo'lgan musiqa va boshqalar ishtirok etdi!
   social_hoc2023_dance: Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     Disneyning "Encanto" filmidan bo'lgan musiqa va boshqalar ishtirok etdi!
-  social_hoc2023_dance_v2: Sizning narsalaringizni ushlab turish vaqti keldi! Miley
-    Cyrus, BTS, Lil Nas X, Garri Styles, Nicki Minaj, Rosalia va boshqalarning xitlari
-    bilan ishlaydigan o'z raqs partiyangizni yarating!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Bugun o‘rganing, ertangi kunni yanada yorqinroq qiling.
@@ -297,9 +296,9 @@ uz:
     uchun Kod soati o'qituvchilari forumiga tashrif buyuring.
   required_materials: 'Kerakli Materiallar:'
   optional_materials: 'Ixtiyoriy Materiallar:'
-  for_students: Talabalar uchun
+  for_students: For students
   for_educators: O‘qituvchilar uchun "
-  call_to_action_host_hoc: Kod soatiga mezbonlik qiling
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Tadbir o'tkazing
   call_to_action_register_event: Tadbiringizni ro'yxatdan o'tkazing
   call_to_action_register_your_hoc: Dasturlash soatingizni ro'yxatdan o'tkazing
@@ -307,11 +306,11 @@ uz:
   call_to_action_start_activity: Faoliyatni boshlang
   call_to_action_get_certificates: Sertifikatlar oling
   call_to_action_go_beyond_hoc: Kod soatidan tashqariga chiqing
-  call_to_action_explore_all_hoc_activities: Code.org saytidan barcha Hour of Code
-    tadbirlarini o'rganing
-  call_to_action_start_dance_party: Raqs partiyasini boshlang
-  call_to_action_start_part_02: Ikkinchi qismni boshlang
-  call_to_action_start_unplugged_activity: Uchib qo'yilgan faoliyatni boshlang
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Promo-manbalarni ko'ring
   call_to_action_learn_more: Ko‘proq ma'lumot olish.
   call_to_action_watch_now: Hoziroq tomosha qiling
@@ -416,9 +415,9 @@ uz:
   call_to_action_view_faqs: Ko'proq tez-tez so'raladigan savollarni ko'rish
   call_to_action_applications_open: Ilovalar endi ochiladi
   call_to_action_apply_cs_ambassador: CS elchisi bo'lish uchun murojaat qiling
-  call_to_action_coming_soon: Tez orada!
-  call_to_action_learn_how_ai_works: AI qanday ishlashini bilib oling
-  call_to_action_learn_about_ai: AI haqida bilib oling
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: O'qituvchilar uchun qanday qo'llanmani
     ko'ring
   aria_label_call_to_action_hoc_how_to_companies: Kompaniyalar uchun qanday qo'llanmani
@@ -435,11 +434,9 @@ uz:
     ko'ring
   aria_label_call_to_action_hoc_how_to_virtual_events: Virtual voqealar uchun qanday
     qo'llanmani ko'ring
-  aria_label_call_to_action_dance_01: Raqs partiyasi faoliyatini boshlang
-  aria_label_call_to_action_dance_02: Raqs partiyasi faoliyatining ikkinchi qismini
-    boshlang
-  aria_label_call_to_action_dance_unplugged: Dance Party faoliyatini plugindan uzilmagan
-    holda boshlang
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -561,27 +558,25 @@ uz:
   curriculum_name_creating_apps_with_devices: Qurilmalar orqali Ilovalarni Yaratish
   curriculum_name_poetry: She'riyat bilan dasturlash
   curriculum_name_dance_party: Raqs Bazmi
-  curriculum_name_dance_party_02: Raqsga tushishni davom eting
-  curriculum_name_dance_party_unplugged: Raqs partiyasi elektr uzilmagan
-  curriculum_name_dance_party_ai_edition: 'Raqs partiyasi: AI nashri'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Muammolarni Yechish va Hisoblash
   curriculum_name_web_development: Veb dasturlash
   curriculum_name_interactive_animations_games: Interaktiv Animatsiyalar va O'yinlar
   curriculum_name_design_process: Dizayn (loyihalash) Jarayoni
   curriculum_name_data_society: 'Ma''lumotlar va jamiyat '
-  curriculum_desc_dance_party_01: Ushbu kirish faoliyatida, rang-barang belgilar turli
-    jonlantirilgan fon va optimist musiqa bir harakat qilish uchun kodni foydalaning.
-  curriculum_desc_dance_party_02: Kengaytirilgan loyiha g'oyalari bilan kirish o'quv
-    qo'llanmasidan tashqariga chiqing. Murakkabroq raqs partiyalari misollari kutubxonasini
-    ko'rib chiqing.
-  curriculum_desc_dance_party_unplugged: Yivni yoqing - kompyuter kerak emas! Voqealar
-    kabi kodlash tushunchalari raqqosa xoreografiyasini sinxronlashtirish uchun qanday
-    ishlatilishi mumkinligini bilib oling.
-  curriculum_desc_dance_party_ai_edition: Bugungi eng yaxshi rassomlarni namoyish
-    etuvchi o'z virtual raqs partiyangizni yaratish uchun sun'iy intellekt (AI) tushunchalari
-    haqida bilib oling. Tanlash uchun qo'shiqlar o'nlab bilan, qat'i nazar, ularning
-    musiqa didi har bir talabaga yetib. Sizning narsalaringizni ushlab turish vaqti
-    keldi!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Talabalarni informatika fanining asosiy tushunchalari bilan
     tanishtiradigan boshlang'ich o'quv dasturlarining bepul to'plami.
   curriculum_desc_csf_express: Kompyuter dasturlarini yaratish, muammolarni yechish
@@ -725,12 +720,12 @@ uz:
   module_grade_grade_03: 3-sinf
   module_grade_grade_04: 4-sinf
   module_grade_grade_05: 5-sinf
-  module_age_05_07: 5-7 yoshlar
-  module_age_07: 7 yoshdan oshgan
-  module_age_07_11: 7-11 yoshlar
-  module_age_11: 11 yoshdan oshgan
-  module_age_13: Yosh 13+
-  module_age_all_age: Barcha yoshlar
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: 'K-5 O''qituvchilari '
   module_grade_6_10_teachers: '6-10 O''qituvchilari '
   module_grade_9_12_teachers: '9-12 O''qituvchilari '
@@ -828,8 +823,8 @@ uz:
   heading_csa_ai: AP® imtihonidan keyin qilinadigan ishlarni qidiryapsizmi?
   heading_bring_cs_to_students: Talabalarga informatika fanini olib keling
   heading_cs_ambassador_program: CS elchisi dasturi
-  heading_featured_student_projects: Tanlangan talabalar loyihalari
-  heading_start_hoc_with_videos: Kod soatini ilhomlantiruvchi videolar bilan boshlang
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Agar maktabingizda kompyuter fanlarini olishga ko'proq yosh
     ayollarni rag'batlantirish haqida ishtiyoqli o'rta maktab o'quvchisi bo'lsangiz,
     unda biz sizga kerak!
@@ -933,14 +928,13 @@ uz:
     elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va foydali eslatmalar,
     maslahatlar va yangilanishlarni to'g'ridan-to'g'ri pochta qutingizga yuboring.
   subscribe_form_section_unsubscribe: Istalgan vaqtda obunani bekor qilishingiz mumkin.
-  dance_hero_heading: Raqs partiyasini kodlang
-  dance_featuring_songs_by_short: 'Muallif qo''shiqlari:'
-  dance_featuring_songs_by_long: 'Dance Party quyidagi qo''shiqlarni o''z ichiga oladi:'
-  dance_and_more: va yana
-  dance_choose_activity: Raqs partiyangizni tanlang
-  dance_afe_disclaimer: Ushbu qo'llanmada musiqasi ishlatiladigan rassomlar Code.org
-    saytiga o'z musiqasidan foydalanishni litsenziyalashning bir qismi sifatida Amazonni
-    homiylik qilmaydilar yoki tasdiqlamaydilar.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Blokcheyn qanday ishlaydi
   blockchain_hero_desc: Bizning yangi “Blokcheyn qanday ishlaydi” videolarimiz va
     qo‘shimcha darslarimiz bilan blokcheyn olamiga sho‘ng‘ing!
@@ -15147,74 +15141,66 @@ uz:
     rahbarlari va xodimlar uchun maktablarida AI bo'yicha dastlabki yo'l-yo'riqlarni
     ishlab chiqish uchun manbaidir.
   teach_ai_button_label: Asboblar to'plamini ko'rish
-  middle_high_page_main_title: 11 va undan katta yoshlar uchun ta'lim
-  middle_high_page_main_description: Joylashtiruvchi videolar, o'z-o'zidan tayyorlangan
-    o'quv qo'llanmalari, dasturlash faoliyati va boshqalar bilan kompyuter fanlari
-    dunyosini o'rganing!
-  middle_high_page_hero_title: Kod soati bilan boshlang
-  middle_high_page_hero_description: Kodlash soati bepul faoliyati bilan kompyuter
-    fanining asoslarini bilib oling, bu kodlash bloklarini sudrab tashlang. Tanlash
-    uchun yuzlab soatlik variantlar mavjud!
-  middle_high_page_hourofcode_link: Kod soati faoliyati bilan tanishing
-  middle_high_page_modules_title: Katta yoshdagi talabalar uchun dasturlash modullari
-  middle_high_page_modules_description: Bizning CS kashfiyotlari va CS Printsiplari
-    kurslaridan moslashtirilgan ushbu qisqa, o'rta va o'rta maktab o'quvchilari uchun
-    o'z-o'zidan ishlaydigan modullar barcha dasturlash tillari va vositalarini qamrab
-    oladigan tushunchalarni o'rganishning ajoyib usuli hisoblanadi.
-  middle_high_page_modules_card_title_1: O'yin laboratoriyasiga kirish
-  middle_high_page_modules_card_title_2: App Laboratoriyasida kaplumbağa dasturlash
-  middle_high_page_modules_card_title_3: App Laboratoriyasida voqealarga asoslangan
-    dasturlash
-  middle_high_page_modules_card_description_1: Animatsiyalar, interaktiv san'at va
-    o'yinlarni dasturlashda Game Lab muhitimizga ushbu kirishda o'z sur'atlaringiz
-    bilan harakat qiling.
-  middle_high_page_modules_card_description_2: App Laboratoriyasida JavaScript bilan
-    boy, interaktiv ilovalar qilish qobiliyatini oching!
-  middle_high_page_modules_card_description_3: Talabalar interaktiv ilovalarni yaratish
-    uchun JavaScript-dan foydalanadigan App Lab dasturlash muhitiga ushbu kirish bilan
-    o'zingizning sur'atlaringiz bilan boring.
-  middle_high_page_modules_card_link: Sinab ko'ring
-  middle_high_page_make_your_own_title: O'zingizning ilovalaringizni, o'yinlaringizni
-    va veb-sahifalaringizni yarating
-  middle_high_page_make_your_own_description: 'Kurslardan tashqari, bizda sizning
-    ijodingizni kashf etish va ajoyib narsa qilish imkonini beradigan dasturlash vositalari
-    mavjud. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Laboratoriya ilovasi
   middle_high_page_make_your_own_card_title_2: Game Lab
   middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab - bu oddiy ilovalarni
-    yaratishingiz mumkin bo'lgan dasturlash muhiti. Ilovani, kodni JavaScript-da bloklar
-    yoki matn bilan loyihalashtiring, so'ngra ilovangizni bir necha soniya ichida
-    baham ko'ring.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab - bu bir-biri bilan
-    o'zaro aloqada bo'lgan ob'ektlar va belgilar bilan oddiy animatsiyalar va o'yinlar
-    qilishingiz mumkin bo'lgan dasturlash muhiti.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab - HTML va CSS yordamida
-    oddiy veb-sahifalar yasashingiz mumkin bo'lgan dasturlash muhiti. Veb-sahifalaringizni
-    loyihalashtiring va saytingizni soniya ichida baham ko'ring.
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Ko‘proq ma'lumot olish.
-  middle_high_page_additional_resources_title: Qo'shimcha manbalar
-  middle_high_page_additional_resources_description: Kompyuter fanini yanada kashf
-    qilishning juda ko'p usullari mavjud! Bizning video kutubxonamizni ko'rib chiqing
-    yoki kompyuter fanlari sohasidagi qiziqarli martabalar haqida ko'proq bilib oling.
-  middle_high_page_video_library_title: Video kutubxonamizni kashf eting
-  middle_high_page_video_library_description: Sun'iy intellekt, Internet, kompyuterlar
-    qanday ishlashi, qanday qilib buzilib ketmaslik, blockchain, martaba va boshqalar
-    kabi mavzularda qisqa 5-10 daqiqalik videolar orqali kompyuter fanining asoslarini
-    bilib oling!
-  middle_high_page_video_library_link: Video kutubxonasini ko'rish
-  middle_high_page_cs_journeys_title: CS Journeys bilan yanada ko'proq boring
-  middle_high_page_cs_journeys_description: Kompyuter fanlari sayohatingizda keyingi
-    qadamni tashlang. Karyera, mentorlik imkoniyatlari, onlayn kurslar, stipendiyalar,
-    stajirovkalar va boshqalarni o'rganing!
-  middle_high_page_cs_journeys_link: CS Journeys bilan tanishing
-  middle_high_page_cs_title: Sinfda kompyuter fanlari
-  middle_high_page_cs_description: Ushbu kurslarni o'qituvchi boshqarishi kerak! Agar
-    siz ularni maktabingizda o'qitishni xohlasangiz, ularni sinfingizga olib kelish
-    uchun o'qituvchi bilan ishlashni o'ylab ko'ring.
-  middle_high_page_cs_card_title_1: CS kashfiyotlari
-  middle_high_page_cs_card_title_2: CS tamoyillari
-  middle_high_page_cs_card_title_3: AP Kompyuter fanlari A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: O'quvchilarni kompyuter fanlarining asosiy
     tushunchalari bilan tanishtiruvchi va kompyuter va texnologiya dunyoga qanday
     ta'sir ko'rsatishini o'rganishga undaydigan bepul boshlang'ich o'quv dasturlari
@@ -15226,38 +15212,34 @@ uz:
   middle_high_page_cs_card_description_3: Talabalarni AP® Computer Science A (AP®
     CSA) uchun ushbu bepul o'quv dasturida Java dasturlash tilini o'rganayotganda
     dasturiy injiniring va ob'ektga yo'naltirilgan dizayn bilan tanishtiring.
-  middle_high_page_cs_link_1: CS Dicoveries bilan tanishing
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: CS tamoyillarini o'rganing
-  middle_high_page_cs_link_3: CSA bilan tanishing
-  elemeentary_page_main_title: 5 yoshdan 11 yoshgacha ta'lim
-  elementary_page_main_description: Joylashtiruvchi videolar, o'z-o'zidan tayyorlangan
-    o'quv qo'llanmalari, dasturlash faoliyati va boshqalar bilan kompyuter fanlari
-    dunyosini o'rganing!
-  elementary_page_own_pace_title: O'zingizning sur'atlaringiz bilan o'rganishni davom
-    eting
-  elementary_page_own_pace_description: Talabalar informatika asoslarini o'zlari o'rganishni
-    boshlashlari uchun ushbu ikkita ajoyib variantda chizmalar, o'yinlar va boshqalarni
-    yarating.
-  elementary_page_own_pace_card_title_1: Oldindan Reader Express kursi
-  elementary_page_own_pace_card_title_2: Ekspress kurs
-  elementary_page_own_pace_card_description_1: Kompyuter fanlarini o'z sur'atlaringiz
-    bilan o'rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko'nikmalarini
-    rivojlantirishni va qiziqarli muammolarni hal qilishni o'rganing! Do'stlaringiz,
-    oilangiz va o'qituvchilaringiz bilan baham ko'rish uchun o'yinlar va ijodiy loyihalar
-    qiling.
-  elementary_page_own_pace_link_1: Oldindan o'quvchi kursini boshlang
-  elementary_page_own_pace_link_2: Ekspress kursini boshlang
-  elementary_page_make_your_own_games_title: O'zingizning animatsiyalar va o'yinlaringizni
-    yarating
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Ijodiy bo'lish vaqti keldi!
-    Sprite Lab-da ahmoqona, shirin yoki tashqi makon qilish uchun blokga asoslangan
-    kodlashdan foydalaning. Yagona chegara sizning tasavvurlaringiz!
-  elementary_page_make_your_own_games_link: Sprite Lab-ni sinab ko'ring
-  elementary_page_computer_science_title: Sinfda kompyuter fanlari
-  elementary_page_computer_science_description: Ushbu kurslarni o'qituvchi boshqarishi
-    kerak! Agar siz ularni maktabingizda o'qitishni xohlasangiz, ota-onadan yoki vasiydan
-    ularni sinfingizga olib kelish uchun o'qituvchi bilan ishlashni so'rang.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Kompyuter fanlari asoslari
   elementary_page_computer_science_card_title_2: Kompyuter fanlari aloqalari
   elementary_page_computer_science_description_1: O'quvchilarni kompyuter fanlarining
