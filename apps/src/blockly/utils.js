@@ -5,7 +5,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function parseSoundPathString(text) {
+export function parseSoundPathString(text) {
   // Example string paths:
   // 'sound://category_board_games/card_dealing_multiple.mp3'
   // 'sound://default.mp3'
@@ -38,7 +38,7 @@ function parseSoundPathString(text) {
  * @param rangeString {string} printer-style range, e.g., "1,2,4-6"
  * @returns  array of numbers
  */
-function printerStyleNumberRangeToList(rangeString) {
+export function printerStyleNumberRangeToList(rangeString) {
   const rangeStringNoSpaces = rangeString.replace(/ /g, '');
   const rangeItems = rangeStringNoSpaces.split(',');
   const rangeRegExp = /^(\d+)-(\d+)$/; // e.g., "4-6"
@@ -65,7 +65,7 @@ function printerStyleNumberRangeToList(rangeString) {
  * @param numberList array of numbers
  * @returns  numberString {string}
  */
-function numberListToString(numberList) {
+export function numberListToString(numberList) {
   let numberString = numberList.reduce((str, curr) => {
     str = str + curr + ',';
     return str;
@@ -75,50 +75,3 @@ function numberListToString(numberList) {
   }
   return numberString;
 }
-
-/**
- * @param userBlocks {BlockSvg[]} BlockSvg array from user's workspace
- * @returns array of block objects with four attributes: type, id, nextBlockType, and nextBlockId.
- */
-function getUserBlocksWithNextBlock(userBlocks) {
-  const userBlocksWithNextBlock = [];
-  userBlocks.forEach(b => {
-    let block = {type: b.type, id: b.id};
-    if (b.childBlocks_[0]) {
-      block.nextBlockType = b.childBlocks_[0].type;
-      block.nextBlockId = b.childBlocks_[0].id;
-    }
-    userBlocksWithNextBlock.push(block);
-  });
-  return userBlocksWithNextBlock;
-}
-
-/**
- * This function is used in validation to check for sequencing of blocks in a user's workspace.
- * Specifically, it checks if the searchBlockType is a child block of the topBlockType.
- * @param searchBlockType {string} blockType to search for
- * @param topBlockType {string} blockType to start from
- * @param userBlocks array of block objects with four attributes: type, id, nextBlockType, and nextBlockId.
- * @returns  true if the searchBlockType is a child block of the topBlockType, false otherwise.
- */
-function isChildBlockOfTopBlock(searchBlockType, topBlockType, userBlocks) {
-  let userBlocksWithNextBlock = getUserBlocksWithNextBlock(userBlocks);
-  let currentBlock = userBlocksWithNextBlock.find(b => b.type === topBlockType);
-  while (currentBlock?.nextBlockType) {
-    if (currentBlock.nextBlockType === searchBlockType) {
-      return true;
-    }
-    currentBlock = userBlocksWithNextBlock.find(
-      b => b.id === currentBlock.nextBlockId
-    );
-  }
-  return false;
-}
-
-export default {
-  capitalizeFirstLetter,
-  parseSoundPathString,
-  printerStyleNumberRangeToList,
-  numberListToString,
-  isChildBlockOfTopBlock,
-};
