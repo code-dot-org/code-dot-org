@@ -43,7 +43,7 @@
               %p.tag
                 =hoc_s(:before_hoc)
               %p
-                =hoc_s(:hoc_how_to_step_events_register_desc_02)
+                =hoc_s(:hoc_how_to_step_events_register_desc_02, markdown: :inline, locals:{map_url: resolve_url("/map")})
               .button-wrapper
                 %a.link-button{href: resolve_url("/events")}
                   =hoc_s(:call_to_action_register_event)

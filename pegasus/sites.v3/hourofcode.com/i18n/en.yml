@@ -8527,7 +8527,7 @@
 
   hoc_how_to_events_intro_heading: "How to organize an Hour of Code assembly or event"
   hoc_how_to_events_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
-  hoc_how_to_events_intro_desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups. "
+  hoc_how_to_events_intro_desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
 
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
@@ -8611,7 +8611,7 @@
   hoc_how_to_step_companies_spread_word_desc_01: "After your event, congratulate your employees with personalized certificates of completion. Share photos and videos of your Hour of Code event and show off your commitment to supporting the computer science movement using #HourOfCode and @codeorg."
 
   hoc_how_to_step_events_register_desc_01: "Register your Hour of Code event to receive early access to information about new activities and special promotions! When 300 or more students participate, you can receive a special engagement kit with t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url}) to qualify."
-  hoc_how_to_step_events_register_desc_02: "You can also view the Hour of Code map to see your event, and know that your dedication is part of a worldwide movement."
+  hoc_how_to_step_events_register_desc_02: "You can also [view the Hour of Code map](%{map_url}) to see your event, and know that your dedication is part of a worldwide movement."
   hoc_how_to_step_events_prepare_desc_01: "Consider where and when you want to hold your event, as well as the tech capabilities of your space. Students can work on their own devices, in pairs on one device, or together as a classroom on a projector, and there are even unplugged tutorials that can be completed with no devices at all!"
   hoc_how_to_step_events_prepare_desc_02: "Send [a letter](%{letter_url}) to an elected official or influential business person and invite them to speak. [Check out our how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour of Code for more info."
   hoc_how_to_step_events_prepare_desc_03: "You may also invite a local politician or local media, such as a local news station, newspaper, or education/tech bloggers. [See our press kit for help](%{press_kit_url})."
