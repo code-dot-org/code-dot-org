@@ -52,6 +52,7 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
+            aiTutorEnabled: false,
             course: {hasTextToSpeech: false, hasLessonExtras: false},
           },
         ]
@@ -200,6 +201,7 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
+      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,
