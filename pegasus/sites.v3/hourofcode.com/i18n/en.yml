@@ -8524,6 +8524,9 @@
   hoc_how_to_companies_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components. "
   hoc_how_to_companies_intro_desc_02: "All of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential."
 
+  hoc_how_to_districts_intro_heading: "Involve a whole school district in an Hour of Code"
+  hoc_how_to_districts_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. Districts who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
+
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
@@ -8558,6 +8561,7 @@
   hoc_how_to_step_label_choose_activity: "Choose your activity"
   hoc_how_to_step_label_choose_activities: "Choose your activities"
   hoc_how_to_step_label_test_activity: "Test out your activity"
+  hoc_how_to_step_label_get_familiar_activities: "Get familiar with the activities"
   hoc_how_to_step_label_register_event: "Register your event"
   hoc_how_to_step_label_tell: "Tell your students, school, and community"
   hoc_how_to_step_label_get_coding: "Get coding!"
@@ -8570,6 +8574,9 @@
   hoc_how_to_step_label_inspire_employees: "Inspire your employees"
   hoc_how_to_step_label_encourage_employees: "Encourage employees to volunteer"
   hoc_how_to_step_label_plan_internal_event: "Plan an internal event"
+  hoc_how_to_step_label_recruit_school_participation: "Recruit school participation"
+  hoc_how_to_step_label_promote_district_involvement: "Promote your district's involvement in Hour of Code"
+  hoc_how_to_step_label_check_out_how_ai_works: "Check out the How AI Works resources"
 
   hoc_how_to_step_beyond_hoc_subhead: "It doesn't end here!"
   hoc_how_to_step_plan_hour_desc_01: "Here's a sample agenda to get you started:"
