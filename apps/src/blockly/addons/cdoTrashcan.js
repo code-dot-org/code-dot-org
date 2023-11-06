@@ -62,7 +62,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     const idSuffix = this.getSafeWorkspaceId();
     this.svgGroup_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.G,
-      {class: `blocklyTrash`},
+      {class: 'blocklyTrash'},
       this.container
     );
 
@@ -275,14 +275,15 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     const delta = 1 / (ANIMATION_FRAMES + 1);
     const previousLidOpen = this.lidOpen_;
     this.lidOpen_ += this.isLidOpen ? delta : -delta;
-
     this.lidOpen_ = Math.min(this.lidOpen_, 1);
     this.lidOpen_ = Math.max(this.lidOpen_, 0);
+
     if (previousLidOpen === 0 && this.lidOpen_ === 0) {
       // We need to animate the first time we see a 0 value (fully closed)
       // but after that we do not need to animate again.
       return;
     }
+
     this.setLidAngle_(this.lidOpen_ * MAX_LID_ANGLE);
 
     const opacity = OPACITY_MIN + this.lidOpen_ * (OPACITY_MAX - OPACITY_MIN);

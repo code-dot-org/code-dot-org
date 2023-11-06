@@ -660,6 +660,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const scrollOptionsPlugin = new ScrollOptions(workspace);
     scrollOptionsPlugin.init();
 
+    const trashcan = new CdoTrashcan(workspace);
+    trashcan.init();
+
     blocklyWrapper.setMainWorkspace(workspace);
 
     // Same flyout callbacks are used for both main workspace categories
@@ -677,10 +680,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       'Behavior',
       behaviorsFlyoutCategory
     );
-
-    const trashcan = new CdoTrashcan(workspace);
-    trashcan.init();
-
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
     // The hidden definition workspace is not rendered, so do not try to add
