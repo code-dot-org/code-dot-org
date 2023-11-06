@@ -27,8 +27,9 @@ class TeacherMailer < ApplicationMailer
     mail to: teacher.email, from: 'teacher@code.org', subject: I18n.t('teacher_mailer.verified_teacher_subject')
   end
 
-  def hoc_tutorial_email(teacher)
+  def hoc_tutorial_email(teacher, lesson_plan_html_url)
     @teacher = teacher
+    @lesson_plan_html_url = lesson_plan_html_url
     mail to: teacher.email,
       subject: I18n.t('hoc_tutorial_email_subject'),
       template_path: 'teacher_mailer',
