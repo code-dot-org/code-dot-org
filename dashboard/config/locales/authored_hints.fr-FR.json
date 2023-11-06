@@ -14400,9 +14400,9 @@
           "CatchUnder": "Le bloc « attraper l'objet » doit être\nconnecté au bas de l'événement « quand le bateau touche le \npoisson ». "
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Placez le bloc de costume à changer à l'intérieur du bloc s'il y a trop d'algues.",
-          "Costume": "S'il y a trop d'algues, le corail sera endommagé. \n\nUtilisez ensuite le bloc de changement de costume.",
-          "TooMuch": "Connectez le bloc « si trop d'algues » à l'événement « Quand le poisson touche des algues »."
+          "BlockInside": "Placer le bloc « changer de costume » à l'intérieur du bloc « si trop d'algues ».",
+          "Costume": "S'il y a trop d'algues, le corail sera endommagé. \n\nUtiliser ensuite le bloc de changement de costume.",
+          "TooMuch": "Connecter le bloc « si trop d'algues » à l'événement « quand un poisson touche l'algue »."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
           "Below": "Continuez à connecter les blocs au bas de l'espace de travail où vous avez terminé le dernier niveau !",
