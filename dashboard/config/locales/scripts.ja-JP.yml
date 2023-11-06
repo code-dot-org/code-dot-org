@@ -3712,6 +3712,10 @@ ja:
               display_name: ステージ 1
             lessonGroup-3:
               display_name: ステージ 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: アワー・オブ・コードのレッスンプランのテンプレート
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -5239,6 +5243,9 @@ ja:
             lesson-3:
               name: 評価
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 非同期アクティビティの入門
           title: 1日目
         virtual-pl-csp-summer-day2:
           lessons:
