@@ -28,4 +28,22 @@ class RubricAiEvaluation < ApplicationRecord
   has_many :learning_goal_ai_evaluations, inverse_of: :rubric_ai_evaluation
 
   validates :status, inclusion: {in: SharedConstants::RUBRIC_AI_EVALUATION_STATUS.values}
+
+  def summarize_debug
+    script_level = rubric.get_script_level
+    {
+      id: id,
+      created_at: created_at,
+      updated_at: updated_at,
+      user_id: user_id,
+      script_level_id: script_level&.id,
+      username: user.username,
+      requester_username: requester&.username,
+      unit_name: script_level&.script&.name,
+      lesson_position: rubric.lesson.absolute_position,
+      level_name: rubric.level.name,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS.invert[status].to_s,
+      num_learning_goal_ai_evaluations: learning_goal_ai_evaluations.count,
+    }
+  end
 end

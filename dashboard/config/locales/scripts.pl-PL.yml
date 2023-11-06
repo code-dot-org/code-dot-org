@@ -9343,6 +9343,8 @@ pl:
           lessons:
             lesson-1:
               name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
             lesson-2:
               name: Asynchroniczna Część 1
             lesson-3:
@@ -9422,6 +9424,8 @@ pl:
               name: Asynchroniczna Część 2
             lesson-5:
               name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
           name: virtual-pl-csa-summer-day5
           title: 'Dzień 5 '
         virtual-pl-csd-summer-day1:

@@ -1,5 +1,4 @@
 import React, {useCallback, useState} from 'react';
-import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -220,7 +219,6 @@ class DanceVisualizationColumn extends React.Component {
     under13: PropTypes.bool.isRequired,
     over21: PropTypes.bool.isRequired,
     currentAiModalField: PropTypes.object,
-    setCurrentAiModalField: PropTypes.func,
     resetProgram: PropTypes.func.isRequired,
   };
 
@@ -229,8 +227,8 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-                                    Turn the song filter off
-                                  */
+    Turn the song filter off
+  */
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };
@@ -302,11 +300,7 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && (
-            <DanceAiModal
-              onClose={() => this.props.setCurrentAiModalField(undefined)}
-            />
-          )}
+          {this.props.currentAiModalField && <DanceAiModal />}
         </div>
       </div>
     );
@@ -339,19 +333,14 @@ const styles = {
   },
 };
 
-export default connect(
-  state => ({
-    isShareView: state.pageConstants.isShareView,
-    songData: state.dance.songData,
-    selectedSong: state.dance.selectedSong,
-    userType: state.currentUser.userType,
-    under13: state.currentUser.under13,
-    over21: state.currentUser.over21,
-    levelIsRunning: state.runState.isRunning,
-    levelRunIsStarting: state.dance.runIsStarting,
-    currentAiModalField: state.dance.currentAiModalField,
-  }),
-  dispatch => ({
-    setCurrentAiModalField: value => dispatch(setCurrentAiModalField(value)),
-  })
-)(DanceVisualizationColumn);
+export default connect(state => ({
+  isShareView: state.pageConstants.isShareView,
+  songData: state.dance.songData,
+  selectedSong: state.dance.selectedSong,
+  userType: state.currentUser.userType,
+  under13: state.currentUser.under13,
+  over21: state.currentUser.over21,
+  levelIsRunning: state.runState.isRunning,
+  levelRunIsStarting: state.dance.runIsStarting,
+  currentAiModalField: state.dance.currentAiModalField,
+}))(DanceVisualizationColumn);
