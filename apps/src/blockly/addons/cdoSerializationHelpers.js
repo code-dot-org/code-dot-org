@@ -170,22 +170,6 @@ function isOverlapping(collider1, collider2) {
   return overlapX && overlapY;
 }
 
-// /**
-//  * Determines where the current block should be positioned, based on the cursor
-//  * @param {Blockly.Block} block - the block to be moved
-//  * @param {number} x - an x-coordinate for moving a block
-//  * @param {number} y - a y-coordinate for moving a block
-//  */
-// export function getPaddedLocation(x, y, hasSvgFrame, RTL) {
-//   const topPadding = hasSvgFrame ? SVG_FRAME_TOP_PADDING : 0;
-//   const sidePadding = hasSvgFrame ? SVG_FRAME_SIDE_PADDING : 0;
-
-//   x = x + (RTL ? -sidePadding : sidePadding);
-//   y = y + topPadding;
-
-//   return {x, y};
-// }
-
 /**
  * Determines whether a block needs to be repositioned, based on its current position.
  * @param {Blockly.Block} block - the block being considered
@@ -196,17 +180,6 @@ export function isBlockLocationUnset(block) {
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultX && y === defaultY;
 }
-
-// /**
-//  * Determines whether a block needs to be repositioned, based on its current position.
-//  * @param {Blockly.Block} block - the block being considered
-//  * @return {boolean} - true if the block is at the top corner of the workspace
-//  */
-// export function inDefaultLocation(block) {
-//   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
-//   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-//   return x !== defaultX || y !== defaultY;
-// }
 
 export const getDefaultLocation = workspaceOverride => {
   const workspace = workspaceOverride || Blockly.getMainWorkspace();
