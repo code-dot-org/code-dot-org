@@ -13920,9 +13920,9 @@ mr:
   middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
     courses, these short, self-paced modules for middle and high school students are
     a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: गेम लॅबची ओळख
-  middle_high_page_modules_card_title_2: अॅप लॅबमध्ये टर्टल प्रोग्रॅमिंग
-  middle_high_page_modules_card_title_3: अॅप लॅबमध्ये इव्हेंट ड्रीव्हन टर्टल प्रोग्रॅमिंग
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
   middle_high_page_modules_card_description_1: Move at your own pace in this introduction
     to our Game Lab environment as you program animations, interactive art, and games.
   middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
@@ -13940,9 +13940,9 @@ mr:
   middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
     where you can make simple apps. Design an app, code in JavaScript with either
     blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: गेम लॅब हे एक असे प्रोग्रॅमिंग
-    एन्व्हायर्नमेंट आहे जिथे तुम्ही एकमेकांशी संवाद साधणाऱ्या वस्तू आणि पात्रे वापरून
-    सोपी अॅनिमेशन्स आणि गेम्स बनवू शकता.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
   middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
     where you can make simple web pages using HTML and CSS. Design your web pages
     and share your site in seconds.
@@ -13989,7 +13989,7 @@ mr:
     two excellent options for students getting started on their own learning the basics
     of computer science.
   elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: एक्स्प्रेस अभ्यासक्रम
+  elementary_page_own_pace_card_title_2: Express Course
   elementary_page_own_pace_card_description_1: Learn computer science at your own
     pace! Learn to create computer programs, develop problem-solving skills, and work
     through fun challenges! Make games and creative projects to share with friends,

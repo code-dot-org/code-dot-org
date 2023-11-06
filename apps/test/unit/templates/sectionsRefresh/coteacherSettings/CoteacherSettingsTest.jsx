@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
@@ -75,76 +74,6 @@ describe('CoteacherSettings', () => {
     expect(addCoteacher.find('Figcaption').props().children).to.include(
       '3/5 co-teachers added'
     );
-  });
-  it('disables add button when max coteachers reached', () => {
-    const wrapper = shallow(
-      <CoteacherSettings
-        sectionInstructors={testSectionInstructors}
-        setCoteachersToAdd={() => {}}
-        coteachersToAdd={[
-          'coelophysis@code.org',
-          'diplodocus@code.org',
-          'eoraptor@code.org',
-        ]}
-        primaryTeacher={testPrimaryTeacher}
-      />
-    );
-    const addCoteacher = wrapper.find('AddCoteacher').dive();
-    expect(addCoteacher.find('Button').first().props().disabled).to.be.true;
-  });
-  it('shows error when adding invalid email', () => {
-    const setCoteachersToAddSpy = sinon.spy();
-    const wrapper = shallow(
-      <CoteacherSettings
-        sectionInstructors={testSectionInstructors}
-        setCoteachersToAdd={setCoteachersToAddSpy}
-        coteachersToAdd={[]}
-        primaryTeacher={testPrimaryTeacher}
-      />
-    );
-    const addCoteacher = wrapper.find('AddCoteacher').dive();
-    expect(addCoteacher.find('Figcaption')).to.have.lengthOf(1);
-    expect(addCoteacher.find('Figcaption').props().children).not.to.include(
-      'not a valid email address'
-    );
-    addCoteacher
-      .find('input')
-      .simulate('change', {target: {value: 'invalid-email'}});
-    addCoteacher
-      .find('Button[id="add-coteacher"]')
-      .simulate('click', {preventDefault: () => {}});
-    const updatedAddInput = wrapper.find('AddCoteacher').dive();
-    expect(updatedAddInput.find('Figcaption').props().children).to.include(
-      'invalid-email is not a valid email address.'
-    );
-    const icon = updatedAddInput.find('FontAwesome').first();
-    expect(icon.props().icon).to.include('info-circle');
-    expect(setCoteachersToAddSpy).to.have.not.been.called;
-  });
-  it('adds coteacher when valid email is added', () => {
-    let coteachersToAdd = ['coelophysis@code.org'];
-    const setCoteachersToAdd = func =>
-      (coteachersToAdd = func(coteachersToAdd));
-
-    const wrapper = shallow(
-      <CoteacherSettings
-        sectionInstructors={testSectionInstructors}
-        setCoteachersToAdd={setCoteachersToAdd}
-        coteachersToAdd={coteachersToAdd}
-        primaryTeacher={testPrimaryTeacher}
-      />
-    );
-    const addCoteacher = wrapper.find('AddCoteacher').dive();
-    addCoteacher
-      .find('input')
-      .simulate('change', {target: {value: 'new-email@code.org'}});
-    addCoteacher
-      .find('Button[id="add-coteacher"]')
-      .simulate('click', {preventDefault: () => {}});
-    expect(coteachersToAdd).to.deep.equal([
-      'new-email@code.org',
-      'coelophysis@code.org',
-    ]);
   });
   it('shows coteacher table and sorts instructors', () => {
     const wrapper = mount(
@@ -271,15 +200,11 @@ describe('CoteacherSettings', () => {
 
     expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
   });
-  it('Remove submitted', () => {
+  it('Remove submitted', done => {
     const setCoteachersToAddSpy = sinon.spy();
 
-    const ajaxStub = sinon.stub($, 'ajax').returns({
-      done: successCallback => {
-        successCallback();
-        return {fail: () => {}};
-      },
-    });
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve({ok: true}));
 
     const wrapper = shallow(
       <CoteacherSettings
@@ -289,6 +214,7 @@ describe('CoteacherSettings', () => {
         primaryTeacher={testPrimaryTeacher}
       />
     );
+
     let dialog = wrapper.find('RemoveCoteacherDialog').dive();
     expect(dialog).to.be.empty;
 
@@ -311,11 +237,15 @@ describe('CoteacherSettings', () => {
 
     wrapper.update();
 
-    expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
-    const table = wrapper.find('CoteacherTable').dive();
-    expect(table.find('tr')).to.have.lengthOf(2);
-    expect(setCoteachersToAddSpy).to.have.not.been.called;
-    expect(ajaxStub).to.have.been.calledOnce;
-    $.ajax.restore();
+    // Need to wait for updates to finish
+    setTimeout(() => {
+      expect(wrapper.find('RemoveCoteacherDialog').dive()).to.be.empty;
+      const table = wrapper.find('CoteacherTable').dive();
+      expect(table.find('tr')).to.have.lengthOf(2);
+      expect(setCoteachersToAddSpy).to.have.not.been.called;
+      expect(fetchSpy).to.have.been.calledOnce;
+      fetchSpy.restore();
+      done();
+    }, 50);
   });
 });

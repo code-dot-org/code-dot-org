@@ -52,10 +52,10 @@ hu:
   hoc2023_social_creativity_with_ai_title: Kódolás órája - Mit fogsz létrehozni?
   hoc2023_social_creativity_with_ai_desc: Használja a számítástechnikát az AI felfedezéséhez
     és megismeréséhez!
-  hoc2023_what_is_hoc_desc: A Kódolás órája ingyenes bevezetés a számítástechnikába
-    szórakoztató tevékenységek és videók révén minden készségszintű tanulók számára.
-    Az idei programozás és a mesterséges intelligencia ünneplését több mint 400 partner,
-    20 000 oktató és 58 000 önkéntes támogatja.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Fedezd fel, játssz és alkoss!
   social_hoc2022_explore_play_create: Használd az informatikát a felfedezéshez, a
     játékhoz és az alkotáshoz!
@@ -68,9 +68,9 @@ hu:
     Gomez, zene a Disney „Encanto,“ c. filmjéből stb!'
   social_hoc2023_dance: Közreműködik Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X,
     Selena Gomez, zene a Disney „Encanto” -ból, és több!
-  social_hoc2023_dance_v2: Itt az ideje, hogy kihúzza a cuccait! Készítsen saját táncpartiját
-    Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía és még sok más
-    slágereivel!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Tanulj ma, és építs egy szebb holnapot.
@@ -296,9 +296,9 @@ hu:
     betekintés és támogatás más oktatóktól.
   required_materials: 'Szükséges anyagok:'
   optional_materials: 'Opcionális anyagok:'
-  for_students: Diákoknak
+  for_students: For students
   for_educators: Oktatóknak
-  call_to_action_host_hoc: A kódolás órájának rendezése
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Esemény megtartása
   call_to_action_register_event: Regisztrálja rendezvényét
   call_to_action_register_your_hoc: Regisztráld a saját Kódolás óráját
@@ -306,11 +306,11 @@ hu:
   call_to_action_start_activity: Tevékenység indítása
   call_to_action_get_certificates: Tanúsítványok megszerzése
   call_to_action_go_beyond_hoc: Menj túl a kódolás óráján
-  call_to_action_explore_all_hoc_activities: Fedezze fel a Code.org összes Hour of
-    Code tevékenységét
-  call_to_action_start_dance_party: Indítsa el a táncpartit
-  call_to_action_start_part_02: Kezdje a második részt
-  call_to_action_start_unplugged_activity: Indítsa el a kikapcsolt tevékenységet
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Promóciós források megtekintése
   call_to_action_learn_more: Tudj meg többet
   call_to_action_watch_now: Nézd meg most
@@ -406,9 +406,9 @@ hu:
   call_to_action_view_faqs: További GYIK megtekintése
   call_to_action_applications_open: Az alkalmazások már megnyílnak
   call_to_action_apply_cs_ambassador: Jelentkezzen CS nagykövetévé
-  call_to_action_coming_soon: Hamarosan!
-  call_to_action_learn_how_ai_works: Ismerje meg, hogyan működik az AI
-  call_to_action_learn_about_ai: Tudjon meg többet az AI-ről
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Tekintse meg az oktatók útmutatóját
   aria_label_call_to_action_hoc_how_to_companies: Útmutató megtekintése a vállalatok
     számára
@@ -422,9 +422,9 @@ hu:
     számára
   aria_label_call_to_action_hoc_how_to_virtual_events: Tekintse meg a virtuális események
     útmutatóját
-  aria_label_call_to_action_dance_01: Indítsa el a Táncparti tevékenységét
-  aria_label_call_to_action_dance_02: Indítsa el a Táncparti tevékenység második részét
-  aria_label_call_to_action_dance_unplugged: Indítsa el a Dance Party unplugged tevékenységet
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -540,26 +540,25 @@ hu:
   curriculum_name_creating_apps_with_devices: Alkalmazások létrehozása eszközökkel
   curriculum_name_poetry: Kódolás költészetgel
   curriculum_name_dance_party: Táncos buli
-  curriculum_name_dance_party_02: Táncolj tovább
+  curriculum_name_dance_party_02: Keep On Dancing
   curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Táncparti: AI kiadás'
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problémamegoldás és számítástechnika
   curriculum_name_web_development: Webfejlesztés
   curriculum_name_interactive_animations_games: Interaktív animációk és játékok
   curriculum_name_design_process: A tervezési folyamat
   curriculum_name_data_society: Adat & Társadalom
-  curriculum_desc_dance_party_01: Ebben a bevezető tevékenységben, használjon kódot,
-    hogy különféle színes karakterek áttérjenek az animált háttérre és az optimista
-    zenére.
-  curriculum_desc_dance_party_02: Lépjen túl a bevezető oktatóanyagon kiterjesztett
-    projektötletekkel. Böngésszen a bonyolultabb táncpartik példáinak könyvtárában.
-  curriculum_desc_dance_party_unplugged: Kapcsolja be a barázdát - nincs szükség számítógépre!
-    Ismerje meg, hogyan használhatók a kódolási fogalmak, például az események, a
-    táncos koreográfia szinkronizálására.
-  curriculum_desc_dance_party_ai_edition: Tudjon meg többet a mesterséges intelligencia
-    (AI) koncepcióiról, hogy létrehozhassa saját virtuális táncpartiját, amely bemutatja
-    a mai legjobb művészeket. Több tucat dal közül választhat, minden diákot elérhet,
-    függetlenül a zenei ízlésétől. Itt az ideje, hogy kihúzza a cuccait!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Ingyenes elemi tantervek, amelyek megismerteti a hallgatókat
     a számítástechnika alapfogalmaival.
   curriculum_desc_csf_express: Tanuljon meg számítógépes programokat létrehozni, fejleszteni
@@ -700,12 +699,12 @@ hu:
   module_grade_grade_03: 3. fokozat
   module_grade_grade_04: 4. fokozat
   module_grade_grade_05: 5. fokozat
-  module_age_05_07: 5-7 éves korig
-  module_age_07: 'Életkor: 7+'
-  module_age_07_11: 7-11 éves kor
-  module_age_11: 'Életkor: 11 év felett'
-  module_age_13: 'Életkor: 13+'
-  module_age_all_age: Minden korosztály
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Tanárok
   module_grade_6_10_teachers: 6-10 Tanárok
   module_grade_9_12_teachers: 9-12 Tanárok
@@ -804,8 +803,8 @@ hu:
   heading_csa_ai: Tennivalókat keres az AP® vizsga után?
   heading_bring_cs_to_students: Hozd el a számítástechnikát a hallgatóknak
   heading_cs_ambassador_program: CS nagykövet program
-  heading_featured_student_projects: Kiemelt hallgatói projektek
-  heading_start_hoc_with_videos: Indítsa el a kódolás óráját inspiráló videókkal
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Ha középiskolás hallgató vagy, aki szenvedélyesen arra ösztönöz,
     hogy több fiatal nőt vegyenek számítástechnikába az iskolájában, akkor szükségünk
     van rád!
@@ -904,14 +903,13 @@ hu:
     számítástechnikai alapelveiről, és hasznos emlékeztetőket, tippeket és frissítéseket
     kapjon közvetlenül a postaládájába.
   subscribe_form_section_unsubscribe: Bármikor leiratkozhat.
-  dance_hero_heading: Kódoljon egy táncpartit
-  dance_featuring_songs_by_short: 'A dalokat tartalmazza:'
-  dance_featuring_songs_by_long: 'A Dance Party dalait tartalmazza:'
-  dance_and_more: és még több
-  dance_choose_activity: Válassza ki a táncpartiját
-  dance_afe_disclaimer: Azok a művészek, akiknek zenéjét ebben az oktatóanyagban használják,
-    nem szponzorálják vagy támogatják az Amazont zenéik használatának engedélyezése
-    részeként a Code.org oldalra.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Hogyan működik a Blockchain
   blockchain_hero_desc: Merüljön el a blokklánc világában a „How Blockchain Works”,
     új videósorozatunk és a kísérő leckék segítségével!
@@ -14444,71 +14442,66 @@ hu:
     az iskolavezetők és a munkatársak számára, hogy kezdeti útmutatást dolgozzanak
     ki az AI-ről iskolájukban.
   teach_ai_button_label: Az eszközkészlet megtekintése
-  middle_high_page_main_title: Tanulás 11 éves és annál idősebb korosztály számára
-  middle_high_page_main_description: Fedezze fel a számítástechnika világát vonzó
-    videókkal, önálló tempójú oktatóanyagokkal, programozási tevékenységekkel és egyebekkel!
-  middle_high_page_hero_title: Első lépések a Hour of Code használatával
-  middle_high_page_hero_description: Ismerje meg a számítástechnika alapjait ingyenes
-    Hour of Code tevékenységekkel, amelyekben a drag-and-drop kódolási blokkokat tartalmaznak.
-    Több száz órás lehetőség közül lehet választani!
-  middle_high_page_hourofcode_link: Fedezze fel a Hour of Code tevékenységeket
-  middle_high_page_modules_title: Programozási modulok idősebb diákok számára
-  middle_high_page_modules_description: A CS Discoveries és a CS Principles tanfolyamainkból
-    adaptálva ezek a rövid, önálló tempójú modulok középiskolás és középiskolás diákok
-    számára nagyszerű módja annak, hogy elsajátítsák az összes programozási nyelvet
-    és eszközt átfogó fogalmak elsajátítására.
-  middle_high_page_modules_card_title_1: Bevezetés a Game Lab modulba
-  middle_high_page_modules_card_title_2: Turtle programozás App Lab-ban
-  middle_high_page_modules_card_title_3: Eseményvezérelt programozás App Lab-ban
-  middle_high_page_modules_card_description_1: Mozogjon a saját tempójában a Game
-    Lab környezetünkbe való bevezetésben, miközben animációkat, interaktív művészetet
-    és játékokat programozol.
-  middle_high_page_modules_card_description_2: Nyissa meg a gazdag, interaktív alkalmazások
-    készítésének képességét JavaScript-tel az App Lab-ban!
-  middle_high_page_modules_card_description_3: Menjen a saját tempójában az App Lab
-    programozási környezetbe való bevezetéssel, amelyben a hallgatók JavaScriptet
-    használnak interaktív alkalmazások létrehozásához.
-  middle_high_page_modules_card_link: Próbáld ki
-  middle_high_page_make_your_own_title: Készítsen saját alkalmazásokat, játékokat
-    és weboldalakat
-  middle_high_page_make_your_own_description: 'A tanfolyamokon kívül vannak olyan
-    programozási eszközeink, amelyek segítségével felfedezheti kreativitását, és valami
-    csodálatos dolgot készíthet. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Játéklaboratórium
-  middle_high_page_make_your_own_card_title_3: Webes laboratórium
-  middle_high_page_make_your_own_card_descrpition_1: Az App Lab egy programozási környezet,
-    ahol egyszerű alkalmazásokat készíthet. Tervezzen egy alkalmazást, kódot JavaScript-ben
-    blokkokkal vagy szöveggel, majd másodpercek alatt ossza meg alkalmazását.
-  middle_high_page_make_your_own_card_descrpition_2: A Game Lab egy olyan programozási
-    környezet, amelyben egyszerű animációkat és játékokat készíthetsz egymással kölcsönhatásban
-    lévő objektumokkal és karakterekkel.
-  middle_high_page_make_your_own_card_descrpition_3: A Web Lab egy programozási környezet,
-    ahol egyszerű weboldalakat készíthet HTML és CSS segítségével. Tervezze meg weboldalait,
-    és másodpercek alatt ossza meg webhelyét.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Tudj meg többet
-  middle_high_page_additional_resources_title: További források
-  middle_high_page_additional_resources_description: Nagyon sok módja van a számítástechnika
-    további felfedezésének! Böngésszen videókönyvtárunkban, vagy tudjon meg többet
-    az izgalmas karrierről a számítástechnika területén.
-  middle_high_page_video_library_title: Fedezze fel videókönyvtárunkat
-  middle_high_page_video_library_description: Ismerje meg a számítástechnika alapjait
-    rövid 5-10 perces videókon keresztül olyan témákról, mint a mesterséges intelligencia,
-    az internet, a számítógépek működése, hogyan ne legyenek feltörve, blokklánc,
-    karrier stb.
-  middle_high_page_video_library_link: Videókönyvtár megtekintése
-  middle_high_page_cs_journeys_title: Menj tovább a CS Journeys segítségével
-  middle_high_page_cs_journeys_description: Tegye meg a következő lépést számítástechnikai
-    útján. Fedezze fel a karriert, mentorálási lehetőségeket, online tanfolyamokat,
-    ösztöndíjakat, szakmai gyakorlatokat és még sok
-  middle_high_page_cs_journeys_link: Fedezze fel a CS Journeys
-  middle_high_page_cs_title: Számítástechnika az osztályteremben
-  middle_high_page_cs_description: Ezeket a tanfolyamokat egy tanárnak kell vezetnie!
-    Ha szeretné látni őket az iskolájában tanítani, fontolja meg egy tanárral való
-    együttműködést, hogy elvigye őket az osztályába.
-  middle_high_page_cs_card_title_1: CS felfedezések
-  middle_high_page_cs_card_title_2: CS alapelvek
-  middle_high_page_cs_card_title_3: AP Számítástechnika A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Ingyenes, egész éves tanterv, amely bemutatja
     a hallgatókat a számítástechnika alapfogalmainak, és kihívást jelent számukra,
     hogy feltárják, hogyan befolyásolhatja a számítástechnika és a technológia a világot.
@@ -14519,34 +14512,34 @@ hu:
   middle_high_page_cs_card_description_3: Mutassa be a hallgatókat a szoftverfejlesztésnek
     és az objektumorientált tervezésnek, miközben megtanulják a Java programozási
     nyelvet ebben az ingyenes tantervben az AP® Computer Science A (AP® CSA) számára.
-  middle_high_page_cs_link_1: Fedezze fel a CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Fedezze fel a CS alapelveket
-  middle_high_page_cs_link_3: Fedezze fel a CSA-t
-  elemeentary_page_main_title: Tanulás 5—11 éves korosztály számára
-  elementary_page_main_description: Fedezze fel a számítástechnika világát vonzó videókkal,
-    önálló tempójú oktatóanyagokkal, programozási tevékenységekkel és egyebekkel!
-  elementary_page_own_pace_title: Folytassa a tanulást a saját tempójában
-  elementary_page_own_pace_description: Készítsen rajzokat, játékokat és egyebeket
-    ebben a két kiváló lehetőségben a hallgatók számára, akik elkezdik önállóan tanulni
-    a számítástechnika alapjait.
-  elementary_page_own_pace_card_title_1: Reader előtti expressz tanfolyam
-  elementary_page_own_pace_card_title_2: Expressz kurzus
-  elementary_page_own_pace_card_description_1: Tanulja meg a számítástechnikát a saját
-    tempójában! Tanuljon meg számítógépes programok létrehozását, fejlessze ki a problémamegoldó
-    készségeket, és dolgozzon át szórakoztató kihívásokkal! Készítsen játékokat és
-    kreatív projekteket, amelyeket megoszthat barátaival, családjával és tanárokkal.
-  elementary_page_own_pace_link_1: Indítsa el az olvasó előtti tanfolyamot
-  elementary_page_own_pace_link_2: Indítsa el az expressz tanfolyamot
-  elementary_page_make_your_own_games_title: Készítsen saját animációkat és játékokat
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Ideje kreatívvá válni! Használjon
-    blokkalapú kódolást, hogy valami ostoba, édes vagy külső szórakozót készítsen
-    a Sprite Labban. Az egyetlen határ a képzeleted!
-  elementary_page_make_your_own_games_link: Próbáld ki a Sprite Lab alkalmazást
-  elementary_page_computer_science_title: Számítástechnika az osztályteremben
-  elementary_page_computer_science_description: Ezeket a tanfolyamokat egy tanárnak
-    kell vezetnie! Ha szeretné látni őket az iskolájában tanítani, kérje meg egy szülőt
-    vagy gyámot, hogy dolgozzon együtt egy tanárral, hogy vigye őket az osztályába.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Számítástechnika alapjai
   elementary_page_computer_science_card_title_2: Számítástechnikai kapcsolatok
   elementary_page_computer_science_description_1: Ingyenes, egész éves tanterv, amely

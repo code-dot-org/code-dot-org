@@ -6,10 +6,10 @@ ps:
   front_title: په تاریخ کې د زده کړې ترټولو لوی پیښې کې ګډون وکړئ، %{campaign_date}
   coming_soon: ډیر ژر
   new: نوی
-  hours_of_code_served: د کوډ ساعتونه خدمت شوی
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: زده کونکي په 45 ژبو کې زده کړه کوي
   hoc_stat_hours_served: له 100M څخه زیاتو زده کونکو د کوډ ساعت هڅه کړې
-  hoc_stat_females: ښځینه زده کوونکي د ساعت د کوډ ګډون کوونکي ۵۰ درصد
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: د دسمبر په 5
   campaign_date_start_long: د دسمبر په 5
   campaign_date_short: دسمبر 5-11
@@ -49,9 +49,10 @@ ps:
   hoc2023_social_creativity_with_ai_title: د کوډ ساعت - تاسو به څه جوړ کړئ؟
   hoc2023_social_creativity_with_ai_desc: د AI په اړه د سپړلو او زده کړې لپاره د کمپیوټر
     ساینس وکاروئ!
-  hoc2023_what_is_hoc_desc: د کوډ ساعت د ټولو مهارتونو کچه زده کوونکو لپاره د تفریحی
-    فعالیتونو او ویډیو له لارې د کمپیوټر ساینس ته وړیا پیژندنه ده د سږ کال د کوډینګ
-    او AI دواړو جشن د 400 شریکان، 20,000 ښوونکو، او 58،000 رضاکارانو لخوا ملاتړ کیږي.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: سپړنه، لوبه وکړئ، جوړ کړئ!
   social_hoc2022_explore_play_create: د سپړلو، لوبې کولو، او رامینځته کولو لپاره د
     کمپیوټر ساینس وکاروئ!
@@ -64,9 +65,9 @@ ps:
     ډیزني «اینکانټو» څخه میوزیک او نور ډیر څه وړاندې کول!
   social_hoc2023_dance: د بیونسي، BTS، هیري سټایلونو، لیزو، لیل ناس ایکس، سیلینا ګومز،
     د ډیزني «اینکانټو» څخه میوزیک او نور ډیر څه وړاندې کول!
-  social_hoc2023_dance_v2: دا وخت دی چې خپل شیان وګرځوئ! خپل ډانس ګوند جوړ کړئ چې
-    د مایلی سایرس، BTS، لیل ناس ایکس، هری سټیلز، نیکی میناج، روزالیا، او نور نور لخوا
-    هیټونه لري!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: نن ورځ زده کړئ، یو روښانه سبا جوړ کړئ.
@@ -275,9 +276,9 @@ ps:
     کوډ ښوونکي ساعت فورم څخه لیدنه وکړئ.
   required_materials: 'اړین توکي:'
   optional_materials: 'اختیاري توکي:'
-  for_students: د زده کونکو لپاره
+  for_students: For students
   for_educators: د ښوونکو لپاره
-  call_to_action_host_hoc: د کوډ یو ساعت کوربه کړئ
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: یوه پیښه ونیسئ
   call_to_action_register_event: خپله پیښه راجستر کړئ
   call_to_action_register_your_hoc: خپل کوډ ساعت ثبت کړئ
@@ -285,11 +286,11 @@ ps:
   call_to_action_start_activity: یو فعالیت پیل کړئ
   call_to_action_get_certificates: سندونه ترلاسه کړئ
   call_to_action_go_beyond_hoc: د کوډ ساعت څخه هاخوا لاړ شئ
-  call_to_action_explore_all_hoc_activities: د Code.org څخه د کوډ ټولې ساعتي فعالیتونه
-    وپلټئ
-  call_to_action_start_dance_party: د رقص پارټۍ پیل کړئ
-  call_to_action_start_part_02: دوه برخه پیل کړئ
-  call_to_action_start_unplugged_activity: غیر پلګ شوی فعالیت پیل کړئ
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: پرومو سرچینې وګورئ
   call_to_action_learn_more: نور زده کړئ
   call_to_action_watch_now: اوس وګورئ
@@ -385,9 +386,9 @@ ps:
   call_to_action_view_faqs: نور پوښتنې وګورئ
   call_to_action_applications_open: غوښتنلیکونه اوس
   call_to_action_apply_cs_ambassador: د CS سفیر وشئ غوښتنه وکړئ
-  call_to_action_coming_soon: ژر راځي!
-  call_to_action_learn_how_ai_works: زده کړئ څنګه AI کار کوي
-  call_to_action_learn_about_ai: د AI په اړه زده کړئ
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: د ښوونکو لپاره څنګه لارښود وګورئ
   aria_label_call_to_action_hoc_how_to_companies: د شرکتونو لپاره لارښود وګورئ
   aria_label_call_to_action_hoc_how_to_districts: د ولسوالیو لپاره لارښود وګورئ
@@ -398,9 +399,9 @@ ps:
     وګورئ
   aria_label_call_to_action_hoc_how_to_volunteers: د رضاکارانو لپاره لارښود وګورئ
   aria_label_call_to_action_hoc_how_to_virtual_events: د مجازی پیښو لپاره لارښود وګورئ
-  aria_label_call_to_action_dance_01: د رقص پارټۍ فعالیت پیل کړئ
-  aria_label_call_to_action_dance_02: د ډانس ګوند فعالیت دوه برخه پیل کړئ
-  aria_label_call_to_action_dance_unplugged: د ډانس ګوند غیر پلګ شوي فعالیت پیل کړئ
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: د ایمیزون راتلونکي انجینر په اړه نور معلومات زده
     کړئ
   aria_label_call_to_action_teaching_csf: د کمپیوټر ساینس اساساتو د مسلکي زده کړې
@@ -508,24 +509,25 @@ ps:
   curriculum_name_creating_apps_with_devices: د وسیلو سره ایپس رامینځته کول
   curriculum_name_poetry: د شعر سره کوډ کول
   curriculum_name_dance_party: د نڅا ګوند
-  curriculum_name_dance_party_02: رقص ته دوام ورکړئ
-  curriculum_name_dance_party_unplugged: ډانس پارٹی غیر پلګ شوی
-  curriculum_name_dance_party_ai_edition: 'د رقص پارټۍ: AI نسخه'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: د ستونزې حل کول او کمپیوټري
   curriculum_name_web_development: ويب پرمختګ
   curriculum_name_interactive_animations_games: متقابل حرکتونه او لوبې
   curriculum_name_design_process: د ډیزاین پروسه
   curriculum_name_data_society: ډاټا او ټولنه
-  curriculum_desc_dance_party_01: په دې پیژندنې فعالیت کې، د کوډ کارول ترڅو ډیری رنګنګ
-    کرکټرونه بست د متحرک پس منظرونو او خوښانه موسیقی ته حرکت وکړي
-  curriculum_desc_dance_party_02: د پروژې پراختیا نظرونو سره د پیژندنې تدریس څخه بهر
-    د ډیر پیچلو رقص ګونډو د بیلګونو کتابتون وګورئ.
-  curriculum_desc_dance_party_unplugged: خپل ځای ترلاسه کړئ - کمپیوټر ته اړتیا نشته!
-    زده کړئ چې څنګه د کوډینګ مفکورې، د پیښو په څنګه، د ډانسر کوریوگرافی
-  curriculum_desc_dance_party_ai_edition: د مصنوعي ذهنیت (AI) مفکورو په اړه زده کړئ
-    ترڅو خپل مجازی رقص ګوند جوړولو لپاره چې نن ورځ لوړ هنر د لسګونو سندرو سره چې له
-    غوره کولو لپاره، هر زده کوونکي ته ورسیږئ چې له دوی د موسیقي دا وخت دی چې ستاسو
-    شیان وګرځوئ!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: د لومړني نصاب وړیا سیټ چې زده کونکي د کمپیوټر ساینس بنسټیز
     مفاهیمو ته معرفي کوي.
   curriculum_desc_csf_express: د کمپیوټر برنامو رامینځته کول زده کړئ، د ستونزې حل
@@ -638,8 +640,8 @@ ps:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
-  module_grade_2_8: ۲-۸
-  module_grade_2_12: ۲-۱۲
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: ۳-۸
   module_grade_k_12: K-12
@@ -655,12 +657,12 @@ ps:
   module_grade_grade_03: 3 ټولګي
   module_grade_grade_04: څلورم ټولګي
   module_grade_grade_05: 5 ټولګي
-  module_age_05_07: عمرونه 5-7
-  module_age_07: عمر 7+
-  module_age_07_11: 7-11 عمر
-  module_age_11: عمر 11+
-  module_age_13: عمر 13+
-  module_age_all_age: ټول عمرونه
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 ښوونکي
   module_grade_6_10_teachers: 6-10 ښوونکي
   module_grade_9_12_teachers: 9-12 ښوونکي
@@ -754,8 +756,8 @@ ps:
   heading_csa_ai: د AP® ازموینې وروسته د ترسره کولو شیانو په لټه کې یاست؟
   heading_bring_cs_to_students: زده کونکو ته د کمپیوټر ساینس راوړئ
   heading_cs_ambassador_program: CS سفیر پروګرام
-  heading_featured_student_projects: ځانګړي محصلینو پرو
-  heading_start_hoc_with_videos: خپل د کوډ ساعت د الهام بخش ویډیوګانو سره پیل کړئ
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: که تاسو د لوړي ښوونځو زده کونکي زده کوونکي یاست چې ستاسو
     په ښوونځي کې د کمپیوټر ساینس واخلو لپاره د نورو ځوانانو ښ
   cs_ambassador_desc: د طب، تفریح، لوبې، زده کړې، سوداګرۍ، فیشن، او سوداګرۍ په شمول
@@ -848,13 +850,13 @@ ps:
     ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه معلومات ترلاسه
     کړئ چې سم ستاسو ان باکس ته لیږل شوي.
   subscribe_form_section_unsubscribe: تاسو کولی شئ په هر وخت کې ګډون لغوه کړئ.
-  dance_hero_heading: د ډانس پارټۍ کوډ کړئ
-  dance_featuring_songs_by_short: 'لخوا سندرې ښودل:'
-  dance_featuring_songs_by_long: د رقص پارټۍ د لخوا سندرې شامل دي
-  dance_and_more: او نور
-  dance_choose_activity: خپل رقص پارټی غوره کړئ
-  dance_afe_disclaimer: هغه هنرمندان چې موسیقی په دې تدریس کې کارول کیږي د ایمیزون
-    د Code.org ته د دوی د موسیقی د جواز کارولو د برخې په توګه سپانسر یا تایید نه کوي.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: بلاکچین څنګه کار کوي
   blockchain_hero_desc: د بلاکچین نړۍ ته د «بلاکچین څنګه کار کوي» سره ډوب کړئ، زموږ
     نوې ویډیو لړۍ او ورسره درسونه!
@@ -13921,64 +13923,66 @@ ps:
   teach_ai_description: د ښوونځیو د وسیلکټ لپاره د AI لارښود د پالیسي جوړونکو، د ښوونځیو
     مشرانو او کارمندانو لپاره یو سرچینه ده ترڅو په خپلو ښوونځیو کې د AI
   teach_ai_button_label: وسیله کټ وګورئ
-  middle_high_page_main_title: د 11 او پورې عمرونو لپاره زده کړه
-  middle_high_page_main_description: د کمپیوټر ساینس نړۍ د ښکیلونکي ویډیوګانونو، ځان
-    ګرځولو تدریس، د پروګرام کولو فعالیتونو او نورو
-  middle_high_page_hero_title: د کوډ ساعته سره پیل کړئ
-  middle_high_page_hero_description: د کمپیوټر ساینس اساسات زده کړئ د وړیا ساعت د
-    کوډ فعالیتونو سره، چې د ډریګ او ډراپ کوډینګ بلاکس په ښکاري د انتخاب کولو لپاره
-    سلګونه ساعته اوږد اختیارونه شتون لري!
-  middle_high_page_hourofcode_link: د کوډ ساعتي فعالیتونه وپلټئ
-  middle_high_page_modules_title: د زړو محصلینو لپاره د پروګرام
-  middle_high_page_modules_description: زموږ د CS کشف او CS اصولو کورسونو څخه تطبیق
-    شوی، دا لنډه، د منځنی او لوړي ښوونځیو محصلینو لپاره دا لنډ، ځان رفتار ماډلونه
-    د مفکورو زده کړو لپاره یو ښه لار دي چې د ټولو پروګرا
-  middle_high_page_modules_card_title_1: د لوبې لابراتوار پیژند
-  middle_high_page_modules_card_title_2: د اپلیکیشن لابراتوار کې د ټر
-  middle_high_page_modules_card_title_3: په اپلیکیشن لاب کې د پیښې پر چلول شوي
-  middle_high_page_modules_card_description_1: زموږ د لوبې لاب چاپیریال ته په دې پیژندنه
-    کې په خپله سرعت حرکت کړئ لکه څنګه چې تاسو انیمیشن، انټرکټي هنر
-  middle_high_page_modules_card_description_2: د اپلیکیشن لابراتوار کې د جاوا اسکریپټ
-    سره د بډایه، انټرکټیشنل ایپس
-  middle_high_page_modules_card_description_3: د اپلیکیشن لاب پروګرامنګ چاپیریال ته
-    د دې پیژندنې سره په خپل سرعت کې لاړ شئ، په کوم کې زده کونکي د انټرکټیشنل
-  middle_high_page_modules_card_link: هڅه وکړئ
-  middle_high_page_make_your_own_title: خپل اپلیکیشنونه، لوبې او ویب پاڼې جوړ کړئ
-  middle_high_page_make_your_own_description: 'د کورسونو سربېره، موږ د پروګرام کولو
-    وسیلې لرو چې تاسو ته اجازه ورکوي چې تاسو ته خپل تخلیق څه '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: ددفتروسایل لابراتوار
-  middle_high_page_make_your_own_card_title_2: لوبې لابراتوار
-  middle_high_page_make_your_own_card_title_3: ویب لاب
-  middle_high_page_make_your_own_card_descrpition_1: د App Lab یوه پروګرامنګ چاپیریال
-    دی چیرې چې تاسو کولی شئ ساده ایپس یو اپلیکیشن ډیزاین کړئ، په جاوا اسکریپټ کې کوډ
-    د بلاکونو یا متن سره، بیا خپل اپلیکیشن په ثانیو
-  middle_high_page_make_your_own_card_descrpition_2: د لوبې لاب یو پروګرام کولو چاپیریال
-    دی چیرې چې تاسو کولی شئ ساده انیمیشن او لوبې جوړ کړئ د اشیا او کرکټرونو سره چې
-    له
-  middle_high_page_make_your_own_card_descrpition_3: ویب لاب یوه پروګرامنګ چاپیریال
-    دی چیرې چې تاسو کولی شئ د HTML او CSS په کارولو سره ساده ویب پاڼې خپل ویب پاڼې
-    ډیزاین کړئ او خپل سایټ په ثانیو کې شریک کړئ.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: نور زده کړئ
-  middle_high_page_additional_resources_title: اضافي سرچینې
-  middle_high_page_additional_resources_description: د کمپیوټر ساینس نور پلټلو لپاره
-    ډیری لارې شتون لري! زموږ د ویډیو کتابتون وګورئ، یا د کمپیوټر ساینس په برخه کې
-    د زړه پورې دندې
-  middle_high_page_video_library_title: زموږ ویډیو کتابتون کشف
-  middle_high_page_video_library_description: د کمپیوټر ساینس اساسات زده کړئ د لنډو
-    5-10 دقیقې ویډیوګانې له لارې د مصنوعي ذهنیت، انټرنیټ، کمپیوټرونه څنګه کار کوي،
-    څنګه د هک نه ترلاسه کول، بلاکچین، کار
-  middle_high_page_video_library_link: ویډیو کتابتون وګور
-  middle_high_page_cs_journeys_title: د CS سفرونو سره نور لاړ شئ
-  middle_high_page_cs_journeys_description: خپل کمپیوټر ساینس سفر کې راتلونکی ګام
-    واخلئ. د دندې، مشورتي فرصتونه، آنلاین کورسونه، بورسونه، انټرنشپ او نور څخه
-  middle_high_page_cs_journeys_link: د CS سفر وګورئ
-  middle_high_page_cs_title: په کلاس کې د کمپیوټر ساینس
-  middle_high_page_cs_description: دا کورسونه باید د یو ښوونکي لخوا مشري وي! که تاسو
-    غواړئ چې دوی په خپل ښوونځي کې تدریس وګورئ، نو د ښوونکي سره کار وکړئ ترڅو دوی خپل
-    ټولګه ته راوړي
-  middle_high_page_cs_card_title_1: CS کشف
-  middle_high_page_cs_card_title_2: د CS اصول
-  middle_high_page_cs_card_title_3: AP کمپیوټر ساینس A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: د لومړني نصاب وړیا سیټ چې زده کونکي د کمپیوټر
     ساینس بنسټیز مفاهیمو ته معرفي کوي او دوی ننګوي چې وپلټي او ټیکنالوژي څنګه نړۍ
     اغیزه کولی شي.
@@ -13989,32 +13993,34 @@ ps:
   middle_high_page_cs_card_description_3: زده کونکي د سافټویر انجینرۍ او اعتراض لرونکي
     ډیزاین ته معرفي کړئ پداسې حال کې چې دوی د AP® کمپیوټر ساینس A (AP® CSA) لپاره
     پدې وړیا نصاب کې د جاوا برنامې ژبه زده کوي.
-  middle_high_page_cs_link_1: د CS ډیکوریز وپلټئ
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: د CS اصول وپلټئ
-  middle_high_page_cs_link_3: د CSA پلټول
-  elemeentary_page_main_title: د 5 تا 11 عمرونو لپاره زده کړه
-  elementary_page_main_description: د کمپیوټر ساینس نړۍ د ښکیلونکي ویډیوګانونو، ځان
-    ګرځولو تدریس، د پروګرام کولو فعالیتونو او نورو
-  elementary_page_own_pace_title: په خپل سرعت زده کړې ته دوام ورکړئ
-  elementary_page_own_pace_description: په دې دوو غوره اختیارونو کې انځورونه، لوبې،
-    او نور یې جوړ کړئ د محصلینو لپاره د خپل زده کړه د کمپیوټر ساینس اساسات د پیل
-  elementary_page_own_pace_card_title_1: مخکې ریډر ایکسپریس کورس
-  elementary_page_own_pace_card_title_2: اکسپرس کورس
-  elementary_page_own_pace_card_description_1: د کمپیوټر ساینس په خپل سرعت زده کړئ!
-    زده کړئ د کمپیوټر پروګرامونو جوړولو، د ستونزې د حل کولو مهارتونو پراختیا، او د
-    تفریحي لوبې او تخلیقی پروژې جوړ کړئ ترڅو ملګرو، کورنۍ او ښوونکو سره شریک کړئ.
-  elementary_page_own_pace_link_1: مخکې لوستونکي کورس پیل کړئ
-  elementary_page_own_pace_link_2: ایکسپریس کورس پیل کړئ
-  elementary_page_make_your_own_games_title: خپل انیمیشن او لوبې جوړ کړئ
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: لابراتوار سپریټ
-  elementary_page_make_your_own_games_card_description_1: د تخلیقی ترلاسه کولو وخت!
-    د بلاک پر بنسټ کوډینګ وکاروئ ترڅو د سپریټ لاب کې یو څه بې زړه، خوړه، یا بیرونی
-    اسپیسی جوړ یوازې حد ستاسو تخیل دی!
-  elementary_page_make_your_own_games_link: د سپریټ لاب هڅه وکړئ
-  elementary_page_computer_science_title: په کلاس کې د کمپیوټر ساینس
-  elementary_page_computer_science_description: دا کورسونه باید د یو ښوونکي لخوا مشري
-    وي! که تاسو غواړئ چې دوی ستاسو په ښوونځي کې تدریس وګورئ، له والدین یا سرپرست غوښتنه
-    وکړئ چې د ښوونکي سره کار وکړي ترڅو دوی ستاسو په
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: د کمپیوټر ساینس اساسات
   elementary_page_computer_science_card_title_2: د کمپیوټر ساینس اړیکې
   elementary_page_computer_science_description_1: د لومړني نصاب وړیا سیټ چې زده کونکي

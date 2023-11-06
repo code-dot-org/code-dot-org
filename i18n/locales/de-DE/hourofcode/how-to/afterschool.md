@@ -38,7 +38,7 @@ Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzu
 
 Testen Sie Tutorials auf den Computern oder Geräten der SchülerInnen. Prüfen Sie, Ton und Video im Browser ordnungsgemäß funktionieren. **Geringe Bandbreite haben?** Abspielen Videos vor der Klasse, sodass jeder Student nicht eigenen Videos herunterladen muss. Oder probieren die ausgesteckt/offline Tutorials.
 
-Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am Besten mit Ton funktioniert.
+Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am besten mit Ton funktioniert.
 
 **Nicht genug Geräte haben?** Benutzen Sie [](https://www.youtube.com/watch?v=vgkahOzFH2Q)Paar-Programmiuerung </a>. Wenn Lernende in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf die Lehrkraft angewiesen. Sie werden dann auch feststellen, dass Informatik sozial und kooperativ ist.
 

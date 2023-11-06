@@ -56,6 +56,7 @@
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
+  codeorg_homepage_hoc2023_body: 'Get ready to strut your stuff and get creative with AI! Create your own dance party featuring hits by your favorite artists.'
   hoc2022_codeorg_title: 'Celebrate Hour of Code with NASA and more'
   hoc2022_codeorg_description: 'The 10th Hour of Code is out of this world! Come explore, play, and create with us.'
   social_hoc2022_dance: "Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's \"Encanto,\" and more!"
@@ -233,6 +234,7 @@
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
   call_to_action_see_volunteer_guide: "See volunteer guide"
   call_to_action_join_advocacy_coalition: "Join the advocacy coalition"
+  call_to_action_become_an_advocate: "Become an advocate"
   call_to_action_explore_all_hoc_activities: "Explore all Hour of Code activities from Code.org"
   call_to_action_start_dance_party: "Start Dance Party"
   call_to_action_start_part_02: "Start part two"

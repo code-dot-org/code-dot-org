@@ -6,10 +6,10 @@ cn:
   front_title: "%{campaign_date}，加入有史以来最大的学习活动"
   coming_soon: 即将推出
   new: 全新
-  hours_of_code_served: 代码服务时长
-  hoc_stat_languages: 学生在用40种语言学习
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: 学生使用超过45种语言学习
   hoc_stat_hours_served: 上亿学生参与过编程一小时
-  hoc_stat_females: 女学生占编程一小时参与者的 50%
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 12月4日
   campaign_date_start_long: 12月4日
   campaign_date_short: 12月4-10日
@@ -45,8 +45,10 @@ cn:
   hoc2023_hero_desc_learn_page: 今年，我们通过提供包含人工智能 (AI) 和非人工智能的编程机会，将《编程一小时》推向新高度。
   hoc2023_social_creativity_with_ai_title: 编程一小时——你会创作什么？
   hoc2023_social_creativity_with_ai_desc: 使用计算机科学来探索和学习 AI！
-  hoc2023_what_is_hoc_desc: "《编程一小时》通过有趣的活动和视频免费介绍计算机科学，适合所有技能水平的学习者。今年的编程和人工智能庆祝活动得到了
-    400 多位合作伙伴、20,000 位教育工作者和 58,000 名志愿者的支持。"
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: 探索，玩耍，创造！
   social_hoc2022_explore_play_create: 使用计算机科学来探索、玩耍和创造！
   codeorg_homepage_hoc2022_body: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多。
@@ -54,8 +56,9 @@ cn:
   hoc2022_codeorg_description: 第10次编程一小时非常好！来和我们一起探索、玩耍和创造吧。
   social_hoc2022_dance: 里面有碧昂丝、哈利·史泰尔斯、丽佐、纳斯小子、塞莱娜·戈麦斯、迪士尼魔法满屋的音乐等等！
   social_hoc2023_dance: 包括碧昂斯、防弹少年团、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、迪士尼《Encanto》中的音乐等等！
-  social_hoc2023_dance_v2: 是时候大放异彩了！创建自己的舞会，欣赏麦莉·赛勒斯、防弹少年团、Lil Nas X、Harry Styles、Nicki
-    Minaj、Rosalía 等人的热门歌曲！
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  马上开始学习，打造更美好的明天。"
@@ -149,9 +152,9 @@ cn:
   device_laptop: 笔记本电脑
   device_desktop_computer: 台式电脑
   device_mobile_device: 移动设备
-  for_everyone: 适合所有人
-  for_students_teacher_led_learning: 对于学生：教师主导的学习
-  for_students_teacher_led_lessons: 对于学生：教师主导的课程
+  for_everyone: 针对所有人
+  for_students_teacher_led_learning: 针对学生：教师主导的学习
+  for_students_teacher_led_lessons: 针对学生：教师主导的课程
   professional_development: 专业发展
   how_ai_works_video_series: AI 如何运作视频系列
   learn_how_ai_works: 了解 AI 的工作原理
@@ -201,9 +204,9 @@ cn:
   teacher_forum_desc: 访问编程一小时教师论坛，从其他教育工作者那里获得建议、见解和支持。
   required_materials: 所需材料：
   optional_materials: 可选材料：
-  for_students: 对于学生
+  for_students: For students
   for_educators: 给教育工作者
-  call_to_action_host_hoc: 举办 “编程一小时”
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: 举办活动
   call_to_action_register_event: 注册您的活动
   call_to_action_register_your_hoc: 注册您的编程一小时
@@ -211,10 +214,11 @@ cn:
   call_to_action_start_activity: 开始一项活动
   call_to_action_get_certificates: 获取证书
   call_to_action_go_beyond_hoc: 超越编程一小时
-  call_to_action_explore_all_hoc_activities: 浏览 Code.org 上的所有 “编程一小时” 活动
-  call_to_action_start_dance_party: 开始舞会
-  call_to_action_start_part_02: 从第二部分开始
-  call_to_action_start_unplugged_activity: 开始不插电的活动
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: 查看促销资源
   call_to_action_learn_more: 了解更多
   call_to_action_watch_now: 立即观看
@@ -310,9 +314,9 @@ cn:
   call_to_action_view_faqs: 查看更多常见问题解答
   call_to_action_applications_open: 现已开放申请
   call_to_action_apply_cs_ambassador: 申请成为 CS 大使
-  call_to_action_coming_soon: 即将推出！
-  call_to_action_learn_how_ai_works: 了解 AI 的工作原理
-  call_to_action_learn_about_ai: 了解 AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
   aria_label_call_to_action_hoc_how_to_districts: 查看各地区的操作指南
@@ -321,9 +325,9 @@ cn:
   aria_label_call_to_action_hoc_how_to_public_officials: 查看公职人员操作指南
   aria_label_call_to_action_hoc_how_to_volunteers: 查看志愿者操作指南
   aria_label_call_to_action_hoc_how_to_virtual_events: 查看虚拟活动的操作指南
-  aria_label_call_to_action_dance_01: 开始舞会活动
-  aria_label_call_to_action_dance_02: 开始舞会活动的第二部分
-  aria_label_call_to_action_dance_unplugged: 不插电就开始 Dance Party 活动
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -406,18 +410,25 @@ cn:
   curriculum_name_creating_apps_with_devices: 使用设备创建应用程序
   curriculum_name_poetry: 诗歌编程
   curriculum_name_dance_party: 舞会
-  curriculum_name_dance_party_02: 继续跳舞
-  curriculum_name_dance_party_unplugged: 不插电的舞会
-  curriculum_name_dance_party_ai_edition: 舞会：AI 版
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: 问题解决和计算
   curriculum_name_web_development: 网络开发
   curriculum_name_interactive_animations_games: 互动动画和游戏
   curriculum_name_design_process: 设计流程
   curriculum_name_data_society: 数据和社会
-  curriculum_desc_dance_party_01: 在这场入门活动中，使用代码让各种色彩缤纷的角色在动画背景和欢快的音乐中大放异彩。
-  curriculum_desc_dance_party_02: 除了入门教程之外，还要提供扩展的项目构想。浏览更复杂的舞会示例库。
-  curriculum_desc_dance_party_unplugged: 开启音乐吧——无需电脑！了解如何使用编程概念（例如事件）来同步舞者的舞蹈编排。
-  curriculum_desc_dance_party_ai_edition: 了解人工智能 (AI) 概念，创建自己的虚拟舞会，展示当今的顶级艺术家。有数十首歌曲可供选择，无论学生的音乐品味如何，都能吸引他们。是时候大放异彩了！
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: 一套免费的初级课程，向学生介绍计算机科学的基本概念。
   curriculum_desc_csf_express: 学习创建计算机程序，培养解决问题的能力，并努力应对有趣的挑战！制作游戏和创意项目，与朋友、家人和老师分享。
   curriculum_desc_csf_express_pre_reader: 通过解谜和创建动画场景，学习拖放式模块编程的基础知识。制作艺术品和简单的游戏，与朋友、家人和老师分享。
@@ -501,12 +512,12 @@ cn:
   module_grade_grade_03: 三年级
   module_grade_grade_04: 四年级
   module_grade_grade_05: 五年级
-  module_age_05_07: 适合 5-7 岁儿童
-  module_age_07: 适合 7 岁及以上儿童
-  module_age_07_11: 适合 7-11 岁
-  module_age_11: 适合 11 岁及以上儿童
-  module_age_13: 适合 13 岁及以上儿童
-  module_age_all_age: 所有年龄段
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5教师
   module_grade_6_10_teachers: 6-10年级教师
   module_grade_9_12_teachers: 9-12年级教师
@@ -588,8 +599,8 @@ cn:
   heading_csa_ai: 想在 AP® 考试结束后做什么？
   heading_bring_cs_to_students: 将计算机科学带给学生
   heading_cs_ambassador_program: CS 大使计划
-  heading_featured_student_projects: 精选学生项目
-  heading_start_hoc_with_videos: 用励志视频开始你的 “编程一小时”
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: 如果你是一名热衷于鼓励更多年轻女性在学校学习计算机科学的高中生，那么我们需要你！
   cs_ambassador_desc: 计算机科学涉及每个领域，包括医学、娱乐、体育、教育、商业、时尚和创业。然而，只有5％的高中年龄年轻女性上计算机科学课。大使可以通过鼓励同龄人上计算机科学课来帮助缩小这种性别差距。
   cs_ambassador_application_date: 申请截止日期为 2023 年 11 月 8 日
@@ -639,12 +650,13 @@ cn:
   subscribe_form_section_desc_csf: 注册即可每月收到有关 Code.org 计算机科学基础知识的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
   subscribe_form_section_desc_csp: 注册即可每月收到有关 Code.org 计算机科学原理的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
   subscribe_form_section_unsubscribe: 您可以随时取消订阅。
-  dance_hero_heading: 编个舞会
-  dance_featuring_songs_by_short: 精选以下歌曲：
-  dance_featuring_songs_by_long: Dance Party 包括以下歌曲：
-  dance_and_more: 还有更多
-  dance_choose_activity: 选择你的舞会
-  dance_afe_disclaimer: 在本教程中使用音乐的艺术家不赞助或认可亚马逊，这是向Code.org许可其音乐使用权的一部分。
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: 区块链是如何运作的
   blockchain_hero_desc: 通过我们的新视频系列 “区块链的工作原理” 和随附的课程，深入了解区块链的世界！
   blockchain_intro_heading: 看看区块链是如何运作的
@@ -1645,12 +1657,12 @@ cn:
   hoc_homepage_join_the_movement_description: 编程一小时全年都可参与，但每年12月，你的班级可以加入世界各地数百万学生的行列，用编程一小时庆祝计算机科学教育周。一年一度的庆祝活动于每年10月开始注册。
   hoc_homepage_what_is_hoc_subhead: 一小时的教程，超过45种语言。不需要经验。编程一小时活动全年都可免费参与。
   hoc_homepage_what_is_hoc_description: 编程一小时是一个小时的计算机科学介绍，使用有趣的教程展示出任何人都可以学习基础知识。这一基层运动得到全球逾400个合作伙伴和20万名教育工作者的支持。
-  hoc_homepage_registration_desc: 你的班级或小组可以加入全球数百万人的行列，参加 “编程一小时”！一年一度的计算机科学教育周庆祝活动将于十月份开始报名。但是，《编程一小时》全年开放。
+  hoc_homepage_registration_desc: 你的班级或小组可以加入全球数百万人的行列，进行编程一小时！一年一度的计算机科学教育周庆祝活动将于十月份开始报名。但是，编程一小时全年开放。
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[阅读我们的操作指南](%{howto_guide_url})为你的班级计划活动。"
   hoc_homepage_highlights_heading: 编程一小时亮点
   hoc_homepage_organized_by: 编程一小时由[Code.org](%{codeorg_url})组织。
-  hoc_events_heading: 注册举办 “编程一小时” 活动
-  hoc_events_jump_to_map: 跳转到 “编程一小时” 地图
+  hoc_events_heading: 注册举办编程一小时活动
+  hoc_events_jump_to_map: 跳转到编程一小时地图
   signup_closed: 编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。
   signup_registration_not_required: 您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a>
     或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。
@@ -1671,7 +1683,7 @@ cn:
   signup_event_entire_school_label: 我的整个学校都在参与
   signup_event_location_label: 活动地址（可选）
   signup_event_location_error: 活动地点是必填的。
-  signup_special_event_flag_label: 突出显示我的特别活动
+  signup_special_event_flag_label: 我的活动将涉及整个地区、整个组织、社区成员和/或其他超越一小时的特别计划
   signup_special_event_details_label: 特别活动的详细信息
   signup_send_posters_flag_label: 给我的学校或组织发送 <a href= "/resources#posters">海报</a>
   signup_send_posters_address_label: 学校或组织的地址
@@ -1727,7 +1739,7 @@ cn:
   map_title: 编程一小时地图
   map_header: 世界各地的《编程一小时》活动
   map_header_count_year: "%{year}年已有%{event_count}个已登记的编程一小时活动"
-  map_header_count_year_so_far: "%{event_count} 到目前为止注册的活动 %{year}"
+  map_header_count_year_so_far: "%{year}年到目前为止已注册%{event_count}个活动"
   see_all_events: 查看所有事件
   map_header_company: "#公司组织"
   map_header_country: "#次在%{country}"
@@ -1739,7 +1751,7 @@ cn:
   map_legend_cs_tech_jam: 特别活动
   map_warning: 您可以在 <a href='%{events_url}'> 活动页面</a>上查看所有已注册的活动。
   map_warning_markdown: 事件的完整列表可以在 [活动页面] 上查看。(%{events_url})
-  map_view_all_events: 查看 “编程一小时” 活动的完整列表 [here](%{events_url})。
+  map_view_all_events: 查看编程一小时活动的完整列表：[here](%{events_url})。
   meta_tag_og_title: 编程一小时活动即将开始
   meta_tag_og_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。
   meta_tag_twitter_title: 编程一小时活动即将开始
@@ -1818,7 +1830,7 @@ cn:
     如果网址不是以 studio.code.org 开头，则您可能正在从事第三方活动，需要联系该公司的支持团队寻求进一步帮助。
   stats_hoc_2013_image_alt: 2013年开始编程一小时活动统计数据
   stats_growth: 它以最快的速度到达 1500 万用户。
-  stats_i18n: 学生在用40种语言学习
+  stats_i18n: 学生使用超过45种语言学习
   stats_tumblr: Tumblr： 3.5 年
   stats_facebook: Facebook： 3 年
   stats_twitter: Twitter： 2.5 年
@@ -1907,7 +1919,7 @@ cn:
   event: 活动
   events: 活动
   highlights_title: 重点
-  highlights_header: 编程一小时重点
+  highlights_header: 编程一小时亮点
   highlights_description: 编程一小时活动的精彩瞬间
   highlights_previous: 往年的亮点
   highlights_see_more: 查看更多亮点
@@ -9445,46 +9457,66 @@ cn:
   teach_ai_title: 真实世界的例子。实用资源。
   teach_ai_description: "《学校人工智能指导工具包》是决策者、学校领导和教职员工制定学校人工智能初步指南的资源。"
   teach_ai_button_label: 查看工具包
-  middle_high_page_main_title: 适合 11 岁及以上儿童学习
-  middle_high_page_main_description: 通过引人入胜的视频、自定进度的教程、编程活动等，探索计算机科学的世界！
-  middle_high_page_hero_title: 开始使用 “编程一小时”
-  middle_high_page_hero_description: 通过免费的 “编程一小时” 活动，学习计算机科学的基础知识，这些活动以拖放式编码块为特色。有数百个小时的选项可供选择！
-  middle_high_page_hourofcode_link: 探索 “编程一小时” 活动
-  middle_high_page_modules_title: 高年级学生编程模块
-  middle_high_page_modules_description: 这些针对初中和高中生的自定进度的简短模块改编自我们的 CS Discoveries
-    和 CS 原理课程，是学习涵盖所有编程语言和工具的概念的好方法。
-  middle_high_page_modules_card_title_1: 游戏实验室入门
-  middle_high_page_modules_card_title_2: 应用实验室中的海龟编程
-  middle_high_page_modules_card_title_3: 应用实验室中的事件驱动编程
-  middle_high_page_modules_card_description_1: 在这篇游戏实验室环境简介中，在编程动画、互动艺术和游戏时，你可以按照自己的节奏移动。
-  middle_high_page_modules_card_description_2: 在应用程序实验室中解锁使用 JavaScript 制作丰富的交互式应用程序的能力！
-  middle_high_page_modules_card_description_3: 阅读这篇 App Lab 编程环境简介，学生使用 JavaScript
-    来创建交互式应用程序，按照自己的节奏前进。
-  middle_high_page_modules_card_link: 试试吧
-  middle_high_page_make_your_own_title: 制作自己的应用程序、游戏和网页
-  middle_high_page_make_your_own_description: '除课程外，我们还提供编程工具，可让您探索自己的创造力并创造令人惊叹的作品。 '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: 应用实验室
-  middle_high_page_make_your_own_card_title_2: 游戏实验室
-  middle_high_page_make_your_own_card_title_3: 网络实验室
-  middle_high_page_make_your_own_card_descrpition_1: App Lab 是一个编程环境，你可以在其中制作简单的应用程序。设计应用程序，在
-    JavaScript 中使用方块或文本进行编码，然后在几秒钟内共享您的应用程序。
-  middle_high_page_make_your_own_card_descrpition_2: 游戏实验室是一个编程环境，你可以在其中使用相互交互的对象和角色制作简单的动画和游戏。
-  middle_high_page_make_your_own_card_descrpition_3: Web 实验室是一个编程环境，您可以在其中使用 HTML
-    和 CSS 制作简单的网页。设计您的网页并在几秒钟内共享您的网站。
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: 了解更多
-  middle_high_page_additional_resources_title: 其他资源
-  middle_high_page_additional_resources_description: 有很多方法可以进一步探索计算机科学！浏览我们的视频库，或详细了解计算机科学领域令人兴奋的职业。
-  middle_high_page_video_library_title: 探索我们的视频库
-  middle_high_page_video_library_description: 通过5-10分钟的简短视频学习计算机科学的基础知识，这些主题包括人工智能、互联网、计算机的工作原理、如何不被黑客攻击、区块链、职业等等！
-  middle_high_page_video_library_link: 查看视频库
-  middle_high_page_cs_journeys_title: 通过 CS 旅程走得更远
-  middle_high_page_cs_journeys_description: 在计算机科学之旅中迈出下一步。探索职业、指导机会、在线课程、奖学金、实习等！
-  middle_high_page_cs_journeys_link: 探索 CS 旅程
-  middle_high_page_cs_title: 课堂上的计算机科学
-  middle_high_page_cs_description: 这些课程应该由老师主持！如果你想看到他们在学校上课，可以考虑与老师合作带他们上课。
-  middle_high_page_cs_card_title_1: CS 发现
-  middle_high_page_cs_card_title_2: CS 原则
-  middle_high_page_cs_card_title_3: AP 计算机科学 A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: 为期一年的免费课程，向学生介绍计算机科学的基本概念，并挑战他们探索计算和技术如何影响世界。
   middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
     students to the foundational concepts of computer science and challenges them
@@ -9492,24 +9524,34 @@ cn:
     an introductory class and as an AP course.
   middle_high_page_cs_card_description_3: 在这个 AP® Computer Science A (AP® CSA) 的免费课程中，向学生介绍软件工程和面向对象的设计，同时学习
     Java 编程语言。
-  middle_high_page_cs_link_1: 探索 CS 发现
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: 探索 CS 原则
-  middle_high_page_cs_link_3: 探索 CSA
-  elemeentary_page_main_title: 适合 5 至 11 岁儿童学习
-  elementary_page_main_description: 通过引人入胜的视频、自定进度的教程、编程活动等，探索计算机科学的世界！
-  elementary_page_own_pace_title: 继续按照自己的节奏学习
-  elementary_page_own_pace_description: 在这两个绝佳的选项中创建绘画、游戏等，让学生自己开始学习计算机科学的基础知识。
-  elementary_page_own_pace_card_title_1: 预读者速成课程
-  elementary_page_own_pace_card_title_2: 快捷课程
-  elementary_page_own_pace_card_description_1: 按照自己的节奏学习计算机科学！学会创建计算机程序，培养解决问题的能力，并应对有趣的挑战！制作游戏和创意项目，与朋友、家人和老师分享。
-  elementary_page_own_pace_link_1: 开始预读课程
-  elementary_page_own_pace_link_2: 开始快速课程
-  elementary_page_make_your_own_games_title: 制作自己的动画和游戏
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: 精灵图实验室
-  elementary_page_make_your_own_games_card_description_1: 是时候发挥创造力了！在 Sprite Lab 中使用基于区块的编码来制作一些愚蠢、甜蜜或太空的东西。唯一的限制是你的想象力！
-  elementary_page_make_your_own_games_link: 试试 Sprite Lab
-  elementary_page_computer_science_title: 课堂上的计算机科学
-  elementary_page_computer_science_description: 这些课程应该由老师主持！如果你想看到他们在学校上课，请家长或监护人与老师合作，带他们上课。
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: 计算机科学基础知识
   elementary_page_computer_science_card_title_2: 计算机科学联系
   elementary_page_computer_science_description_1: 为期一年的免费课程，向学生介绍计算机科学的基本概念，并挑战他们探索计算和技术如何影响世界。
