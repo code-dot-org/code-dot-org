@@ -56,6 +56,7 @@
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
+  codeorg_homepage_hoc2023_body: 'Get ready to strut your stuff and get creative with AI! Create your own dance party featuring hits by your favorite artists.'
   hoc2022_codeorg_title: 'Celebrate Hour of Code with NASA and more'
   hoc2022_codeorg_description: 'The 10th Hour of Code is out of this world! Come explore, play, and create with us.'
   social_hoc2022_dance: "Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's \"Encanto,\" and more!"
@@ -231,11 +232,14 @@
   call_to_action_get_certificates: "Get certificates"
   call_to_action_print_certificates: "Print certificates"
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
+  call_to_action_see_volunteer_guide: "See volunteer guide"
+  call_to_action_join_advocacy_coalition: "Join the advocacy coalition"
   call_to_action_explore_all_hoc_activities: "Explore all Hour of Code activities from Code.org"
   call_to_action_start_dance_party: "Start Dance Party"
   call_to_action_start_part_02: "Start part two"
   call_to_action_start_unplugged_activity: "Start unplugged activity"
   call_to_action_view_promo_resources: "View promo resources"
+  call_to_action_get_involved: "Get involved"
   call_to_action_learn_more: "Learn more"
   call_to_action_watch_now: "Watch now"
   call_to_action_try_activity: "Try activity"
@@ -331,6 +335,7 @@
   call_to_action_become_partner_usa: "Become a United States partner"
   call_to_action_become_partner_intl: "Become an international partner"
   call_to_action_become_a_volunteer: "Become a volunteer"
+  call_to_action_become_a_volunteer_today: "Become a volunteer today!"
   call_to_action_start_translating: "Start translating"
   call_to_action_learn_about_advocacy: "Learn about our advocacy"
   call_to_action_visit_store: "Visit the store"
@@ -8514,6 +8519,10 @@
   hoc_how_to_educators_intro_heading: "How to plan your Hour of Code"
   hoc_how_to_educators_intro_desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code promises an extraordinary voyage."
 
+  hoc_how_to_companies_intro_heading: "How your company can engage with the Hour of Code"
+  hoc_how_to_companies_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components. "
+  hoc_how_to_companies_intro_desc_02: "All of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential."
+
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
@@ -8525,12 +8534,24 @@
   hoc_how_to_faq_answer_full_hour: "Many students will be able to finish their activities in less than an hour, and that's okay! Students can continue to learn while other students complete their activity."
   hoc_how_to_faq_question_account: "Do students need to log on using an account?"
   hoc_how_to_faq_answer_account: "No signup or login is required for students to try the Hour of Code. Signing up for the Hour of Code does NOT automatically create a Code.org account."
+  hoc_how_to_faq_question_organize_specific_school: "How do I organize with a specific school?"
+  hoc_how_to_faq_answer_organize_specific_school: "We recommend reaching out to teachers and administrators directly if there's a classroom you'd like to volunteer with. If you're a parent or guardian, [send this email](%{email_url}) to your child's teacher offering to help them run an Hour of Code. Send an email to the school you have in mind using our [sample text](%{sample_text_url}) as a guide."
+  hoc_how_to_faq_question_prepare: "How do I prepare for Hour of Code?"
+  hoc_how_to_faq_answer_prepare_01: "Try out some of the activities yourself before heading to the classroom."
+  hoc_how_to_faq_answer_prepare_02: "Discuss your role at the event with the teacher. You may want to prepare to share your story: How did you get involved in a career in tech or why is tech important to you?"
+  hoc_how_to_faq_answer_prepare_03: "Get the students excited! [Pick out a video](%{video_url}) to help focus the class and get them excited to do an Hour of Code."
+  hoc_how_to_faq_answer_prepare_04: "If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand."
+  hoc_how_to_faq_question_when_company_host: "When can my company host an Hour of Code event?"
+  hoc_how_to_faq_answer_when_company_host: "People around the world join the Hour of Code celebration during CS Education Week (%{campaign_date}) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!"
 
   hoc_how_to_resources_heading_educators: "Other Hour of Code resources for educators"
+  hoc_how_to_resources_heading_default: "Other Hour of Code resources"
   hoc_how_to_resources_promo_heading: "Promotional Resources"
   hoc_how_to_resources_promo_desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
   hoc_how_to_resources_discover_heading: "Discover Activities"
   hoc_how_to_resources_discover_desc: "Explore a wide selection of one-hour tutorials designed for all ages in over 45 languages."
+  hoc_how_to_resources_get_involved_heading: "How to Get Involved"
+  hoc_how_to_resources_get_involved_desc: "Help spread the word about Hour of Code! Discover ways to get your community involved."
 
   hoc_how_to_step_label_plan: "Plan where and when you'll do your Hour of Code"
   hoc_how_to_step_label_choose_activity: "Choose your activity"
@@ -8544,6 +8565,10 @@
   hoc_how_to_step_label_plan_your_event: "Plan your event"
   hoc_how_to_step_label_plan_your_hour: "Plan your hour"
   hoc_how_to_step_label_help_spread_word: "Help spread the word"
+  hoc_how_to_step_label_connect_with_school: "Connect with a local school"
+  hoc_how_to_step_label_inspire_employees: "Inspire your employees"
+  hoc_how_to_step_label_encourage_employees: "Encourage employees to volunteer"
+  hoc_how_to_step_label_plan_internal_event: "Plan an internal event"
 
   hoc_how_to_step_beyond_hoc_subhead: "It doesn't end here!"
   hoc_how_to_step_plan_hour_desc_01: "Here's a sample agenda to get you started:"
@@ -8551,6 +8576,8 @@
   hoc_how_to_step_choose_activities_desc_01: "This year, the Hour of Code theme is Creativity with Artificial Intelligence (AI). Whether it’s coding new apps and algorithms, generating unique art, or crafting choreography to get us dancing, AI is opening up fresh opportunities for digital expression that expand our understanding of creativity. Make this year special by completing a coding activity AND learning about AI."
   hoc_how_to_step_choose_activities_desc_02: "First, [explore hundreds of coding activities](%{activities_url}) and choose one based on your group's age, experience, interests and more. [These select activities](%{ai_activities_url}) feature artificial intelligence as a key topic or lesson."
   hoc_how_to_step_choose_activities_desc_03: "Then, [learn all about AI](%{ai_url}). Students can watch short videos featuring experts in the field, and there are accompanying lesson plans to extend the activity and guide further discussion. Or, we offer free professional learning for educators to unlock the future of teaching with and about AI."
+
+  hoc_how_to_step_beyond_advocacy_desc_01: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it and hundreds of thousands of jobs go unfilled. Learn how to bring computer science to more schools in your area and advocate for computer science to be a graduation requirement."
 
   hoc_how_to_step_educators_register_desc: "Start with a commitment to doing an Hour of Code with your students by registering your event. When you register, you'll receive helpful emails with news and tips for hosting a successful Hour of Code. You'll also be [put on the map](%{map_url}). The visible totality of our collective efforts demonstrates the global commitment to the computer science movement, which will help us build momentum for systemic change."
   hoc_how_to_step_educators_plan_desc_01: "Before your event, try out the activities yourself so you can ensure they work on student devices and you're prepared to answer questions! Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos."
@@ -8567,6 +8594,13 @@
   hoc_how_to_step_educators_get_coding_desc: "Direct your students to the activity, maybe by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
   hoc_how_to_step_educators_celebrate_desc: "After your event, print certificates of completion and congratulate your students. Share photos and videos of your Hour of Code event and show off your students' achievements using #HourOfCode and @codeorg."
   hoc_how_to_step_educators_beyond_desc: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. To help, our curriculum is web-based and free to use, forever. Learn how to bring CS to your school today."
+
+  hoc_how_to_step_companies_inspire_desc_01: "Share this video at an All Staff meeting or in an email to all employees to show how companies like yours can make a huge impact on the global movement to bring computer science education to all students in all schools through the Hour of Code."
+  hoc_how_to_step_companies_encourage_desc_01: "One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don't have to be an engineer or someone with a technical background in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how computer science or technology has impacted your role. Direct your employees to the volunteer guide to learn more."
+  hoc_how_to_step_companies_plan_desc_01: "The Hour of Code isn't just for K-12 students but for learners of all ages and all skill levels. Connect with your company's events team to host an Hour of Code event for all employees."
+  hoc_how_to_step_companies_plan_desc_02: "Make an early commitment and register your event in advance. When you register, you'll receive helpful emails with news and tips for hosting a successful Hour of Code. You'll also be [put on the map](%{map_url}). The visible totality of our collective efforts demonstrates the global commitment to the computer science movement, which will help us build momentum for systemic change."
+  hoc_how_to_step_companies_choose_activities_desc_03: "Then, [learn all about AI](%{ai_url}). Employees can watch short videos featuring experts in the field."
+  hoc_how_to_step_companies_spread_word_desc_01: "After your event, congratulate your employees with personalized certificates of completion. Share photos and videos of your Hour of Code event and show off your commitment to supporting the computer science movement using #HourOfCode and @codeorg."
 
   hoc_ai_top_desc: "Anyone can learn about AI, whether you're a student in the classroom or an educator unlocking the future of teaching with and about AI."
   hoc_ai_how_ai_works_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
