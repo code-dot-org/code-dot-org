@@ -21,7 +21,11 @@ class Announcements
     return nil unless banner_id_for_page
 
     banner = banners[banner_id_for_page]
-    banner&.merge({id: banner_id_for_page})
+
+    if banner && banner["dcdo"] && DCDO.get(banner["dcdo"], false)
+      return banner.merge({id: banner_id_for_page})
+    end
+    nil
   end
 
   # gets localized special announcement data for a page, or nil if not found
