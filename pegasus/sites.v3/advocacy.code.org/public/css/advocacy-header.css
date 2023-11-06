@@ -44,3 +44,8 @@
     flex-direction: column;
   }
 }
+
+#footer {
+  height: 80px;
+  background-color: #7665a0;
+}
