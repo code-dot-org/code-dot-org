@@ -20,7 +20,7 @@ function getUserBlocksWithNextBlock(userBlocks) {
  * Specifically, it checks if the searchBlockType is a child block of the topBlockType.
  * @param searchBlockType {string} blockType to search for
  * @param topBlockType {string} blockType to start from
- * @param userBlocks array of block objects with four attributes: type, id, nextBlockType, and nextBlockId.
+ * @param userBlocks array of BlockSvg objects from user's workspace
  * @returns  true if the searchBlockType is a child block of the topBlockType, false otherwise.
  */
 function isChildBlockOfTopBlock(searchBlockType, topBlockType, userBlocks) {
