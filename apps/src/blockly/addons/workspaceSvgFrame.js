@@ -53,7 +53,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * Overrides the standard render to create a frame within the element, rather than around it.
    */
   render() {
-    const minWidth = this.frameText_.getBoundingClientRect().width;
+    const minWidth = this.frameText_?.getBoundingClientRect().width;
     let width =
       Math.max(
         minWidth,
@@ -86,7 +86,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     this.frameClipRect_.setAttribute('y', frameY);
     this.frameBase_.setAttribute('y', frameY);
     this.frameHeader_.setAttribute('y', frameY);
-    this.frameText_.setAttribute(
+    this.frameText_?.setAttribute(
       'y',
       frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2
     );
@@ -106,7 +106,6 @@ function onWorkspaceChange(event) {
   if (
     [
       Blockly.Events.DELETE,
-      Blockly.Events.MOVE,
       Blockly.Events.THEME_CHANGE,
       Blockly.Events.VIEWPORT_CHANGE,
     ].includes(event.type)
