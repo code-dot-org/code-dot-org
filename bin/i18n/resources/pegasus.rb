@@ -9,9 +9,9 @@ module I18n
     module Pegasus
       def self.sync_in
         Emails.sync_in
-        # HourOfCode.sync_in
-        # Markdown.sync_in
-        # Mobile.sync_in
+        HourOfCode.sync_in
+        Markdown.sync_in
+        Mobile.sync_in
       end
 
       def self.sync_out
