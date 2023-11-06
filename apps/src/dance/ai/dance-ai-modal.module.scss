@@ -117,6 +117,7 @@ $result-red: rgb(235 87 87);
       padding: 5px;
       border-radius: 4px;
       gap: 6px;
+      margin: 0 10px;
       background-color: $ai-block-inputs-color;
       border: solid 2px $ai-block-inputs-border-color;
 
@@ -477,6 +478,10 @@ $result-red: rgb(235 87 87);
 
     &SmallText {
       font-size: 12px;
+    }
+
+    &Icon {
+      margin-right: 10px;
     }
   }
 }
