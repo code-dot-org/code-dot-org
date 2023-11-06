@@ -71,7 +71,7 @@ class RubricAiEvaluation < ApplicationRecord
     status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION]
   end
 
-  def share_failure?
+  def share_filtering_failure?
     pii_failure? || profanity_failure?
   end
 end
