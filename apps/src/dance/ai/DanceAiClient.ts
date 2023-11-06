@@ -2,6 +2,13 @@ import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cached_backgrou
 import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cached_foreground_effects_map.json';
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached_palettes_map.json';
 
+import {GeneratedEffect} from '../types';
+
+export enum ChooseEffectsQuality {
+  GOOD = 'good',
+  BAD = 'bad',
+}
+
 export type CachedWeightsMapping = {
   emojiAssociations: {[key: string]: number[]};
   output: string[];
@@ -10,14 +17,32 @@ export type CachedWeightsMapping = {
 const CachedBackgrounds: CachedWeightsMapping = UntypedCachedBackgrounds;
 const CachedForegrounds: CachedWeightsMapping = UntypedCachedForegrounds;
 const CachedPalettes: CachedWeightsMapping = UntypedCachedPalettes;
+
 /**
- * Chooses the foreground, background, and palette effects that are most closely associated with
- * the emojis the user selected.
+ * Chooses a random background effect, background color, and foreground effect associated
+ * with the emojis the user selected.  If quality is GOOD, then choose one of the best
+ * associated; if quality is BAD, then choose one of the worst associated.  Also return
+ * the score for each returned value.
  * @param {array} emojis: the list of emojis the user selected
- * @returns: a JSON string representing an object containing the effects that were chosen, for
- * example: {"backgroundEffect":"sparkles","backgroundColor":"cool","foregroundEffect":"bubbles"}
+ * @param {ChooseEffectsQuality} quality: whether we want good or bad scoring effects
+ * @returns: an object containing the effects that were chosen, and their scores, for example:
+ * {
+ *   "results: {
+ *     "backgroundEffect": "sparkles",
+ *     "backgroundColor": "cool",
+ *     "foregroundEffect": "bubbles"
+ *   },
+ *   "scores": {
+ *     "backgroundEffect": 0.1,
+ *     "backgroundColor":  0.2,
+ *     "foregroundEffect": 0.3
+ *   }
+ * }
  */
-export function chooseEffects(emojis: string[]) {
+export function chooseEffects(
+  emojis: string[],
+  quality: ChooseEffectsQuality
+): GeneratedEffect {
   // Obtain final summed output weight based off input received
   const outputTypes: CachedWeightsMapping[] = [
     CachedBackgrounds,
@@ -32,30 +57,42 @@ export function chooseEffects(emojis: string[]) {
   const numRandomOptions = 3;
   const outputOptions: [number, string][][] = outputWeights.map(
     (weightVector, i) => {
-      return obtainTopOptions(numRandomOptions, weightVector, outputTypes[i]);
+      const optionsAll = obtainOptions(weightVector, outputTypes[i]);
+      const options =
+        quality === ChooseEffectsQuality.GOOD
+          ? optionsAll.slice(0, numRandomOptions)
+          : optionsAll.slice(-numRandomOptions);
+      return options;
     }
   );
 
-  // Clarification of which array correlates to which option
+  // Clarification of which array correlates to which option.
   const backgroundOptions: [number, string][] = outputOptions[0];
   const foregroundOptions: [number, string][] = outputOptions[1];
   const paletteOptions: [number, string][] = outputOptions[2];
 
-  // Choose random value from top scoring options
+  // Choose random values.
+  const backgroundEffectOption =
+    backgroundOptions[Math.floor(Math.random() * backgroundOptions.length)];
+  const backgroundColorOption =
+    paletteOptions[Math.floor(Math.random() * paletteOptions.length)];
+  const foregroundEffectOption =
+    foregroundOptions[Math.floor(Math.random() * foregroundOptions.length)];
+
   const chosenEffects = {
-    backgroundEffect:
-      backgroundOptions[
-        Math.floor(Math.random() * backgroundOptions.length)
-      ][1],
-    backgroundColor:
-      paletteOptions[Math.floor(Math.random() * paletteOptions.length)][1],
-    foregroundEffect:
-      foregroundOptions[
-        Math.floor(Math.random() * foregroundOptions.length)
-      ][1],
+    results: {
+      backgroundEffect: backgroundEffectOption[1],
+      backgroundColor: backgroundColorOption[1],
+      foregroundEffect: foregroundEffectOption[1],
+    },
+    scores: {
+      backgroundEffect: backgroundEffectOption[0],
+      backgroundColor: backgroundColorOption[0],
+      foregroundEffect: foregroundEffectOption[0],
+    },
   };
 
-  return JSON.stringify(chosenEffects);
+  return chosenEffects;
 }
 
 /**
@@ -82,14 +119,12 @@ function calculateOutputWeightsVector(
 }
 
 /**
- * Simple selection function that returns the top N number of "classifications"
- * @param {*} numOptions number of top scoring options wanted
+ * Simple selection function that returns all "classifications"
  * @param {*} outputWeights desired output weight vector to precalculate based on
  * @param {*} associatedOutputJson, precalculated vector weights for each possible type of output (e.g. BackgroundsEffects, ForegroundEffects, etc.)
  * @returns 1d array of tuples in the format ([score], [output key]) e.g. ("0.51", "circles")
  */
-function obtainTopOptions(
-  numOptions: number,
+function obtainOptions(
   outputWeights: number[],
   associatedOutputJson: CachedWeightsMapping
 ) {
@@ -101,7 +136,6 @@ function obtainTopOptions(
       ];
       return options;
     })
-    .sort((item1, item2) => item2[0] - item1[0])
-    .slice(0, numOptions);
+    .sort((item1, item2) => item2[0] - item1[0]);
   return topOptions;
 }

@@ -18,7 +18,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Try it out! You control the dance moves.**\r\n- Press <code style=\"color:white; background-color:#FFBD46\">Run</code> to start the song.\r\n- Then press the right or left arrow key <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> to cue your dancers to move. \r\n\r\n",
+    "long_instructions": "**Try it out! You control the dance moves.**\r\n- Press <code style=\"color:white; background-color:#FFBD46\">Run</code> to start the song.\r\n- Then press the right or left arrow <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> to cue your dancers to move. \r\n\r\n",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -39,16 +39,16 @@
       "downButton"
     ],
     "video_key": "hoc_dance_events_2019",
-    "validation_code": "if (!World.validationState.changedMoves) {\r\n  World.validationState.changedMoves = new Set();\r\n}\r\n\r\n//after 1 measure, make sure there are 2 sprites. if not, fail immediately\r\n//if (nativeAPI.getTime(\"measures\") > 1) {\r\n  //if (sprites.length < 2) {\r\n    //nativeAPI.fail(\"danceFeedbackNeedTwoDancers\");\r\n  //}\r\n//}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  //if sprite's current animation is different than previous animation\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    //if previous animation was resting\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.changedMoves.add(index);\r\n    }\r\n  }\r\n  //store previous animation\r\n World.validationState[index]=currentAnimation;\r\n});\r\n\r\nif(nativeAPI.getTime(\"measures\") > 5) {\r\n    if(World.validationState.changedMoves.size >= 1){\r\n      nativeAPI.pass();\r\n    } else if (World.keysPressed.size > 0){\r\n    nativeAPI.fail(\"danceAiFeedbackPressedKey\");\r\n    } else {\r\n    nativeAPI.fail(\"danceAiKeyPressRightOrLeft\");\r\n  }\r\n}\r\n\r\n",
+    "validation_code": "if (!World.validationState.changedMoves) {\r\n  World.validationState.changedMoves = new Set();\r\n}\r\n\r\n//after 1 measure, make sure there are 2 sprites. if not, fail immediately\r\n//if (nativeAPI.getTime(\"measures\") > 1) {\r\n  //if (sprites.length < 2) {\r\n    //nativeAPI.fail(\"danceFeedbackNeedTwoDancers\");\r\n  //}\r\n//}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  //if sprite's current animation is different than previous animation\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    //if previous animation was resting\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.changedMoves.add(index);\r\n    }\r\n  }\r\n  //store previous animation\r\n World.validationState[index]=currentAnimation;\r\n});\r\n\r\nif(nativeAPI.getTime(\"measures\") > 5) {\r\n    if(World.validationState.changedMoves.size >= 1){\r\n      nativeAPI.pass();\r\n    } else if (World.keysPressed.size > 0){\r\n    nativeAPI.fail(\"danceAiFeedbackKeyPressRightOrLeft\");\r\n    } else {\r\n    nativeAPI.fail(\"danceAiFeedbackKeyPressRightOrLeft\");\r\n  }\r\n}\r\n\r\n",
     "callout_json": "[]",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"💡 Your dancers won’t respond to your cues unless the dance is running. \\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4115e85ebe66714a0d31e34b5f882628/dance_ai_try_key_press.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"💡 After you press <code style=\\\"color:white; background-color:#FFBD46\\\">Run</code>, cue your dancers by pressing the  <code style=\\\"color:white; background-color:#FFBD46\\\">◀</code> <code style=\\\"color:white; background-color:#FFBD46\\\">▶</code> right or left arrow keys. \",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/43f2ed4124ac75aa68d0c23e80ebd714/dance_ai_try_key_press.mp3\"}]",
-    "short_instructions": "**Try it out!** \r\nPress Run then press the right or left arrow key ◀ ▶ to cue your dancers to move.",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"💡 Your dancers won’t respond to your cues unless the dance is running. \\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4115e85ebe66714a0d31e34b5f882628/dance_ai_try_key_press.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"💡 After you press <code style=\\\"color:white; background-color:#FFBD46\\\">Run</code>, cue your dancers by pressing the  <code style=\\\"color:white; background-color:#FFBD46\\\">◀</code> <code style=\\\"color:white; background-color:#FFBD46\\\">▶</code> right or left arrow. \",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8ef090c7fc3da4bc6ae48676c1b40343/dance_ai_try_key_press.mp3\"}]",
+    "short_instructions": "**Try it out!** \r\nPress Run. Then press the right or left arrow ◀ ▶ to cue your dancers to move.",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:30:56.071+00:00\",\"changed\":[\"cloned from \\\"events_try_keypress\\\"\"],\"cloned_from\":\"events_try_keypress\"},{\"changed_at\":\"2023-11-02 17:17:44 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 21:47:25 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:30:56.071+00:00\",\"changed\":[\"cloned from \\\"events_try_keypress\\\"\"],\"cloned_from\":\"events_try_keypress\"},{\"changed_at\":\"2023-11-02 17:17:44 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 21:47:25 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 14:17:47 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 17:53:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 17:59:10 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:03:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:36:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:41:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"authored_hints\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,14 +57,14 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="Dancelab_whenSetup" id="7eCgS#hzol`nvsR?w_,e" movable="false" x="172" y="17">
           <statement name="DO">
-            <block type="Dancelab_ai" id="KC[VKO;P4EorwU+8=L$)" movable="false">
+            <block type="Dancelab_ai" id="KC[VKO;P4EorwU+8=L$)" deletable="false" movable="false" editable="false">
               <field name="VALUE">{"inputs":["robot","lights","black-and-white"],"backgroundEffect":"frosted_grid","backgroundColor":"rave","foregroundEffect":"paint_drip"}</field>
               <next>
-                <block type="Dancelab_makeAnonymousDanceSprite" id="7{(SzN!#pQ:10jy{/0aZ" movable="false">
+                <block type="Dancelab_makeAnonymousDanceSprite" id="7{(SzN!#pQ:10jy{/0aZ" movable="false" editable="false">
                   <field name="COSTUME" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DUCK"</field>
                   <field name="LOCATION">{x: 100, y: 300}</field>
                   <next>
-                    <block type="Dancelab_makeAnonymousDanceSprite" id="pWD0R]Ii)s_$[i0*11Ug" movable="false">
+                    <block type="Dancelab_makeAnonymousDanceSprite" id="pWD0R]Ii)s_$[i0*11Ug" movable="false" editable="false">
                       <field name="COSTUME" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DOG"</field>
                       <field name="LOCATION">{x: 300, y: 300}</field>
                     </block>
@@ -77,7 +77,7 @@
         <block type="Dancelab_whenKey" id="Kylw#ESUMs0P@.3;f{:v" deletable="false" movable="false" editable="false" x="38" y="179">
           <field name="KEY">"left"</field>
           <next>
-            <block type="Dancelab_doMoveEachLR" id="%P#23qj5gGpEBnpxF%~`" movable="false">
+            <block type="Dancelab_doMoveEachLR" id="%P#23qj5gGpEBnpxF%~`" movable="false" editable="false">
               <field name="GROUP" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DUCK"</field>
               <field name="MOVE">MOVES.Dab</field>
               <field name="DIR">-1</field>
@@ -87,7 +87,7 @@
         <block type="Dancelab_whenKey" id="w*}TXdA0b;Ru@cmw$%#W" movable="false" editable="false" x="389" y="183">
           <field name="KEY">"right"</field>
           <next>
-            <block type="Dancelab_doMoveEachLR" id="B)/#Gk0`{1$0n.3JxN0h" movable="false">
+            <block type="Dancelab_doMoveEachLR" id="B)/#Gk0`{1$0n.3JxN0h" deletable="false" movable="false" editable="false">
               <field name="GROUP" config="&quot;ALIEN&quot;,&quot;BEAR&quot;,&quot;CAT&quot;,&quot;DOG&quot;,&quot;DUCK&quot;,&quot;FROG&quot;,&quot;MOOSE&quot;,&quot;SLOTH&quot;">"DOG"</field>
               <field name="MOVE">MOVES.Kick</field>
               <field name="DIR">-1</field>
