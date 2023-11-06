@@ -15,6 +15,12 @@ class CurriculumCatalogController < ApplicationController
       @sections_for_teacher = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
     end
 
+    # [REMOVE THIS BEFORE MERGING] Since this isn't hooked up to the dialog yet, this just sends the email when the user visits the catalog page.
+    puts "Visited catalog page"
+    lessons = CourseOffering.find_by(key: 'oceans')&.latest_published_version('en-us')&.units&.first&.lessons
+    lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
+    TeacherMailer.hoc_tutorial_email(current_user, lesson_plan_html_url).deliver_now
+
     @catalog_data = {
       curriculaData: CourseOffering.assignable_published_for_students_course_offerings.sort_by(&:display_name).map {|co| co&.summarize_for_catalog(locale)},
       isEnglish: language == "en",
