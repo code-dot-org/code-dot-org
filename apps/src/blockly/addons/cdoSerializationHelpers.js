@@ -85,7 +85,6 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
 }
 
 function adjustBlockPositions(blocks, workspace) {
-  console.log('adjusting block positions');
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const {RTL} = workspace;
 
