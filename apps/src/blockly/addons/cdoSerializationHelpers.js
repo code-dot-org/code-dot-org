@@ -71,21 +71,8 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
   if (!workspace.rendered) {
     return;
   }
-  const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
-  const padding = viewWidth ? WORKSPACE_PADDING : 0;
-  const width = viewWidth || contentWidth;
-
-  // The "cursor" object tracks a position on the workspace that starts in the top
-  // corner, then moves below each block that gets manually repositioned.
-  let cursor = {
-    x: padding,
-    y: padding,
-  };
-  // If the workspace is RTL, horizontally mirror the starting position.
-  cursor.x = workspace.RTL ? width - cursor.x : cursor.x;
 
   const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
-
   const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
   const orderedBlocksSetupFirst = partitionBlocksByType(
@@ -94,57 +81,91 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
     false
   );
 
-  orderedBlocksSetupFirst.forEach(block => {
-    positionBlockWithCursor(block, cursor);
+  adjustBlockPositions(orderedBlocksSetupFirst, workspace);
+}
+
+function adjustBlockPositions(blocks, workspace) {
+  const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
+  const {RTL} = workspace;
+
+  const padding = viewWidth ? WORKSPACE_PADDING : 0;
+  const width = viewWidth || contentWidth;
+
+  // If the workspace is RTL, horizontally mirror the starting position
+  let x = RTL ? width - padding : padding;
+  let y = padding;
+
+  blocks.forEach((block, idx) => {
+    // Blocks that have saved locations (not the default) do not need to be adjusted
+    if (!inDefaultLocation(block)) {
+      return;
+    }
+
+    var size = block.getHeightWidth();
+    let overlappingBlock = null;
+    while (
+      (overlappingBlock = isOverlapping(
+        x,
+        y,
+        size.width,
+        size.height,
+        idx,
+        blocks
+      )) !== null
+    ) {
+      const overlappingBlockPosition =
+        overlappingBlock.getRelativeToSurfaceXY();
+      const overlappingBlockSize = overlappingBlock.getHeightWidth();
+      // Get the bottom y-coordinate of the overlapping block
+      y = overlappingBlockPosition.y + overlappingBlockSize.height;
+    }
+
+    const hasSvgFrame = !!block.functionalSvg_;
+    block.moveTo(getPaddedLocation(x, y, hasSvgFrame, RTL));
+    y =
+      y + VERTICAL_SPACE_BETWEEN_BLOCKS + (hasSvgFrame ? SVG_FRAME_HEIGHT : 0);
   });
 }
 
-/**
- * Use a cursor to position a block on a workspace (if it does not already have a position)
- * @param {Blockly.Block} block - the block to be moved
- * @param {object} cursor - a location for moving a block, if needed
- * @param {number} cursor.x - an x-coordinate for moving a block
- * @param {number} cursor.y - a y-coordinate for moving a block
- * @return {object} the cursor with updated coordinates
- */
-function positionBlockWithCursor(block, cursor) {
-  if (isBlockLocationUnset(block)) {
-    block.moveTo(getNewLocation(block, cursor));
+function isOverlapping(x, y, width, height, idx, blocks) {
+  for (var i = 0; i < blocks.length; i++) {
+    var other = blocks[i];
+    const otherPosition = other.getRelativeToSurfaceXY();
+    const otherSize = other.getHeightWidth();
+
+    // TODO: Can I simplify this check?
+    if (i < idx || !inDefaultLocation(other)) {
+      // Checks if the left edge of the current block is to the left of the right edge of the other block
+      // and the right edge of the current block is to the right of the left edge of the other block
+      var overlapX =
+        x < otherPosition.x + otherSize.width && x + width > otherPosition.x;
+      // Checks if the top edge of the current block is above the bottom edge of the other block
+      // and the bottom edge of the current block is below the top edge of the other block
+      var overlapY =
+        y < otherPosition.y + otherSize.height && y + height > otherPosition.y;
+      if (overlapX && overlapY) {
+        return other;
+      }
+    }
   }
-  cursor.y += getCursorYAdjustment(block);
-  return cursor;
+
+  return null;
 }
 
 /**
  * Determines where the current block should be positioned, based on the cursor
  * @param {Blockly.Block} block - the block to be moved
- * @param {object} cursor - a location for moving a block, if needed
- * @param {number} cursor.x - an x-coordinate for moving a block
- * @param {number} cursor.y - a y-coordinate for moving a block
+ * @param {number} x - an x-coordinate for moving a block
+ * @param {number} y - a y-coordinate for moving a block
  */
-export function getNewLocation(block, cursor) {
-  const blockHasFrameSvg = !!block.functionalSvg_;
-  const blockTopPadding = blockHasFrameSvg ? SVG_FRAME_TOP_PADDING : 0;
-  const blockSidePadding = blockHasFrameSvg ? SVG_FRAME_SIDE_PADDING : 0;
-  const isRTL = block.workspace.RTL;
-  const newLocation = {
-    x: cursor.x + (isRTL ? -blockSidePadding : blockSidePadding),
-    y: cursor.y + blockTopPadding,
-  };
-  return newLocation;
-}
+export function getPaddedLocation(x, y, hasSvgFrame, RTL) {
+  const topPadding = hasSvgFrame ? SVG_FRAME_TOP_PADDING : 0;
+  const sidePadding = hasSvgFrame ? SVG_FRAME_SIDE_PADDING : 0;
 
-/**
- * Determines the amount to move the cursor down, based on the block that was just positioned.
- * @param {Blockly.Block} block - the block that was just moved
- * @return {number} - the distance to move the cursor down in preparation for the next move
- */
-export function getCursorYAdjustment(block) {
-  const blockHeight = block.getHeightWidth().height;
-  const blockHasFrameSvg = !!block.functionalSvg_;
-  const blockVerticalPadding =
-    VERTICAL_SPACE_BETWEEN_BLOCKS + (blockHasFrameSvg ? SVG_FRAME_HEIGHT : 0);
-  return blockHeight + blockVerticalPadding;
+  x = x + (RTL ? -sidePadding : sidePadding);
+  y = y + topPadding;
+
+  return {x, y};
 }
 
 /**
@@ -156,6 +177,17 @@ export function isBlockLocationUnset(block) {
   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultX && y === defaultY;
+}
+
+/**
+ * Determines whether a block needs to be repositioned, based on its current position.
+ * @param {Blockly.Block} block - the block being considered
+ * @return {boolean} - true if the block is at the top corner of the workspace
+ */
+export function inDefaultLocation(block) {
+  const {defaultX, defaultY} = getDefaultLocation(block.workspace);
+  const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
+  return x !== defaultX || y !== defaultY;
 }
 
 export const getDefaultLocation = workspaceOverride => {
