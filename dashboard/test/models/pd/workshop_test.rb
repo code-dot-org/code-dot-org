@@ -931,7 +931,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Test that scholarship filter works.
     # Set argument to filter to only scholarship teachers to true.
-    assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 2, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
   end
 
   test 'teachers_attending_all_sessions with a teacher who deleted their account' do
@@ -945,14 +945,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       workshop: workshop
 
     # Should return 1 before we've done anything.
-    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 1, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
 
     # Delete the user.
     workshop_participant.destroy!
     workshop.reload
 
     # With no user account, the user doesn't show up in array of attending teachers.
-    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 0, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
 
     # Fully purge the user account's PD records,
     # which removes their user ID from attendances.
@@ -960,7 +960,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.reload
 
     # Should still return 0 once we've fully purged the teacher user ID from the attendance
-    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 0, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
