@@ -615,7 +615,7 @@ module SharedConstants
     RUNNING: 1,
     # Succeeded
     SUCCESS: 2,
-    # General failure (any anything larger)
+    # General failure (along with anything larger)
     FAILURE: 1000,
     # PII Failure
     PII_VIOLATION: 1001,
