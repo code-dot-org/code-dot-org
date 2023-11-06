@@ -7,10 +7,11 @@ el:
     %{campaign_date}
   coming_soon: Προσεχώς
   new: Νέα
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Ώρες εξυπηρέτησης κώδικα
   hoc_stat_languages: Οι μαθητές μαθαίνουν σε πάνω από 45 γλώσσες
   hoc_stat_hours_served: Πάνω από 100εκ μαθητές δοκίμασαν μια Ώρα του Κώδικα
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Οι γυναίκες φοιτητές αποτελούν το 50% των συμμετεχόντων στην Ώρα
+    του Κώδικα
   campaign_date_start_short: 4 Δεκ.
   campaign_date_start_long: 4 Δεκεμβρίου
   campaign_date_short: 4-10 Δεκ.
@@ -52,10 +53,11 @@ el:
   hoc2023_social_creativity_with_ai_title: Ώρα του Κώδικα - Τι θα δημιουργήσετε;
   hoc2023_social_creativity_with_ai_desc: Χρησιμοποιήστε την επιστήμη των υπολογιστών
     για να εξερευνήσετε και να μάθετε για το AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Η Ώρα του Κώδικα είναι μια δωρεάν εισαγωγή στην επιστήμη
+    των υπολογιστών μέσω διασκεδαστικών δραστηριοτήτων και βίντεο για μαθητές όλων
+    των επιπέδων δεξιοτήτων. Ο φετινός εορτασμός τόσο της κωδικοποίησης όσο και της
+    τεχνητής νοημοσύνης υποστηρίζεται από περισσότερους από 400 συνεργάτες, 20.000
+    εκπαιδευτικούς και 58.000 εθελοντές.
   hoc2022_header: Εξερευνήστε, Παίξτε, Δημιουργήστε!
   social_hoc2022_explore_play_create: Χρησιμοποιήστε την εποστήμη των υπολογιστών
     για να εξερευνήσετε, να παίξετε και να δημιουργήσετε!
@@ -68,9 +70,9 @@ el:
     μουσική από το «Encanto» της Disney και πολλά άλλα!
   social_hoc2023_dance: Με τους Beyoncé, BTS, Χάρι Στυλ, Λίζο, Λιλ Νας Χ, Σελένα Γκόμεζ,
     μουσική από το «Encanto» της Disney και πολλά άλλα!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Ήρθε η ώρα να φτιάξετε τα πράγματά σας! Δημιουργήστε το
+    δικό σας χορευτικό πάρτι με επιτυχίες των Miley Cyrus, BTS, Lil Nas X, Harry Styles,
+    Nicki Minaj, Rosalia και πολλά άλλα!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Μάθετε σήμερα, χτίστε ένα καλύτερο αύριο.
@@ -306,21 +308,23 @@ el:
     συμβουλές, πληροφορίες και υποστήριξη από άλλους εκπαιδευτικούς.
   required_materials: 'Απαιτούμενα υλικά:'
   optional_materials: 'Προαιρετικά υλικά:'
-  for_students: For students
+  for_students: Για φοιτητές
   for_educators: Για εκπαιδευτικούς
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Φιλοξενήστε μια Ώρα Κώδικα
   call_to_action_hold_an_event: Πραγματοποιήστε μια εκδήλωση
   call_to_action_register_event: Καταχωρήστε την εκδήλωσή σας
   call_to_action_register_your_hoc: Καταχωρίστε την Ώρα του Κώδικα
   call_to_action_select_activity: Επιλέξτε μια δραστηριότητα
+  call_to_action_select_coding_activity: Επιλέξτε μια δραστηριότητα κωδικοποίησης
   call_to_action_start_activity: Ξεκινήστε μια δραστηριότητα
   call_to_action_get_certificates: Αποκτήστε πιστοποιητικά
+  call_to_action_print_certificates: Εκτύπωση πιστοποιητικών
   call_to_action_go_beyond_hoc: Πηγαίνετε πέρα από την Ώρα του Κώδικα
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Εξερευνήστε όλες τις δραστηριότητες της
+    Ώρας του Κώδικα από το Code.org
+  call_to_action_start_dance_party: Ξεκινήστε το πάρτι χορού
+  call_to_action_start_part_02: Ξεκινήστε το δεύτερο μέρος
+  call_to_action_start_unplugged_activity: Έναρξη μη συνδεδεμένης δραστηριότητας
   call_to_action_view_promo_resources: Προβολή πόρων προσφοράς
   call_to_action_learn_more: Μάθετε περισσότερα
   call_to_action_watch_now: Παρακολουθήστε τώρα
@@ -421,9 +425,9 @@ el:
   call_to_action_view_faqs: Δείτε περισσότερες συχνές ερωτήσεις
   call_to_action_applications_open: Οι αιτήσεις είναι πλέον ανοιχτές
   call_to_action_apply_cs_ambassador: Υποβάλετε αίτηση για να γίνετε Πρέσβης CS
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Έρχεται σύντομα!
+  call_to_action_learn_how_ai_works: Μάθετε πώς λειτουργεί η τεχνητή νοημοσύνη
+  call_to_action_learn_about_ai: Μάθετε για την τεχνητή νοημοσύνη
   aria_label_call_to_action_hoc_how_to_educators: Δείτε τον οδηγό οδηγιών για εκπαιδευτικούς
   aria_label_call_to_action_hoc_how_to_companies: Δείτε τον οδηγό οδηγιών για εταιρείες
   aria_label_call_to_action_hoc_how_to_districts: Δείτε τον οδηγό οδηγιών για Περιφέρειες
@@ -435,9 +439,11 @@ el:
   aria_label_call_to_action_hoc_how_to_volunteers: Δείτε τον οδηγό οδηγιών για εθελοντές
   aria_label_call_to_action_hoc_how_to_virtual_events: Δείτε τον οδηγό οδηγιών για
     εικονικά συμβάντα
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Ξεκινήστε τη δραστηριότητα του πάρτι χορού
+  aria_label_call_to_action_dance_02: Ξεκινήστε το δεύτερο μέρος της δραστηριότητας
+    του Dance Party
+  aria_label_call_to_action_dance_unplugged: Ξεκινήστε τη δραστηριότητα του Dance
+    Party χωρίς σύνδεση
   aria_label_call_to_action_afe: Μάθετε περισσότερα για τον Μηχανικό Μελλοντικού της
     Amazon
   aria_label_call_to_action_teaching_csf: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
@@ -446,6 +452,8 @@ el:
     Διδασκαλία Ανακαλύψεων Επιστήμης Υπολογιστών
   aria_label_call_to_action_teaching_csp: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
     για τις Αρχές της Επιστήμης των Υπολογιστών
+  aria_label_call_to_action_teaching_problem_solving: Ξεκινήστε το πρόγραμμα επαγγελματικής
+    μάθησης Διδασκαλίας Επίλυσης Προβλημάτων και Πληροφορικής
   aria_label_call_to_action_teaching_csc: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
     Διδασκαλίας Computer Science Connections
   aria_label_call_to_action_teaching_ai: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
@@ -464,6 +472,8 @@ el:
     Επιστήμης Υπολογιστών
   aria_label_call_to_action_curriculum_csp: Εξερευνήστε το πρόγραμμα σπουδών Αρχές
     Επιστήμης Υπολογιστών
+  aria_label_call_to_action_curriculum_problem_solving: Εξερευνήστε το πρόγραμμα σπουδών
+    Επίλυση Προβλημάτων και Υπολογιστών
   aria_label_call_to_action_curriculum_csc: Εξερευνήστε το πρόγραμμα σπουδών Συνδέσεις
     Επιστήμης Υπολογιστών
   aria_label_call_to_action_curriculum_ai: Εξερευνήστε το πρόγραμμα σπουδών AI και
@@ -547,6 +557,7 @@ el:
   curriculum_name_csf_teacher_led: Μάθημα με επικεφαλής τον δάσκαλο
   curriculum_name_csd: Ανακαλύψεις Επιστήμης Υπολογιστών
   curriculum_name_csp: Αρχές Επιστήμης Υπολογιστών
+  curriculum_name_problem_solving: Επίλυση Προβλημάτων και Υπολογισμός
   curriculum_name_csc: Συνδέσεις Επιστήμης Υπολογιστών
   curriculum_name_csa: AP® Επιστήμη Υπολογιστών A
   curriculum_name_csa_ai: Μηχανική Λογισμικού & Όραμα Υπολογιστών
@@ -559,25 +570,28 @@ el:
   curriculum_name_creating_apps_with_devices: Δημιουργία εφαρμογών με συσκευές
   curriculum_name_poetry: Κωδικοποίηση με ποίηση
   curriculum_name_dance_party: Πάρτυ χορού
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Συνεχίστε να χορεύετε
+  curriculum_name_dance_party_unplugged: Πάρτι χορού χωρίς σύνδεση
+  curriculum_name_dance_party_ai_edition: 'Πάρτι χορού: Έκδοση AI'
   curriculum_name_problem_solving_computing: Επίλυση Προβλημάτων & Υπολογισμός
   curriculum_name_web_development: Ανάπτυξη Ιστού
   curriculum_name_interactive_animations_games: Διαδραστικά Κινούμενα Σχέδια & Παιχνίδια
   curriculum_name_design_process: Η διαδικασία σχεδιασμού
   curriculum_name_data_society: Δεδομένα & Κοινωνία
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Σε αυτήν την εισαγωγική δραστηριότητα, χρησιμοποιήστε
+    κώδικα για να κάνετε μια ποικιλία πολύχρωμων χαρακτήρων να μετακινηθούν σε κινούμενα
+    υπόβαθρα και αισιόδοξη μουσική.
+  curriculum_desc_dance_party_02: Πηγαίνετε πέρα από το εισαγωγικό σεμινάριο με εκτεταμένες
+    ιδέες έργων. Περιηγηθείτε σε μια βιβλιοθήκη με παραδείγματα πιο σύνθετων χορευτικών
+    πάρτι.
+  curriculum_desc_dance_party_unplugged: Ξεκινήστε το γήπεδο σας - δεν χρειάζεται
+    υπολογιστής! Μάθετε πώς οι έννοιες κωδικοποίησης, όπως εκδηλώσεις, μπορούν να
+    χρησιμοποιηθούν για τον συγχρονισμό της χορογραφίας χορευτών.
+  curriculum_desc_dance_party_ai_edition: Μάθετε για τις έννοιες της τεχνητής νοημοσύνης
+    (AI) για να δημιουργήσετε το δικό σας εικονικό πάρτι χορού που παρουσιάζει τους
+    σημερινούς κορυφαίους καλλιτέχνες. Με δεκάδες τραγούδια για να διαλέξετε, προσεγγίστε
+    κάθε μαθητή ανεξάρτητα από το μουσικό του γούστο. Ήρθε η ώρα να φτιάξετε τα πράγματά
+    σας!
   curriculum_desc_csf: Δωρεάν σύνολο στοιχειωδών προγραμμάτων σπουδών που εισάγει
     τους μαθητές στις θεμελιώδεις έννοιες της επιστήμης των υπολογιστών.
   curriculum_desc_csf_express: Μάθετε να δημιουργείτε προγράμματα υπολογιστών, αναπτύξτε
@@ -720,12 +734,12 @@ el:
   module_grade_grade_03: 3η τάξη
   module_grade_grade_04: 4η τάξη
   module_grade_grade_05: 5η τάξη
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Ηλικίες 5-7
+  module_age_07: Ηλικίες 7+
+  module_age_07_11: Ηλικίες 7-11
+  module_age_11: Ηλικίες 11+
+  module_age_13: Ηλικίες 13+
+  module_age_all_age: Όλες οι ηλικίες
   module_grade_k_5_teachers: Καθηγητές K-5
   module_grade_6_10_teachers: 6-10 Εκπαιδευτικοί
   module_grade_9_12_teachers: 9-12 Εκπαιδευτικοί
@@ -757,6 +771,7 @@ el:
   module_label_teaching_csf: Διδασκαλία Βασικών Επιστημών Υπολογιστών
   module_label_teaching_csd: Διδασκαλία Ανακαλύψεων Πληροφορικής
   module_label_teaching_csp: Διδασκαλία Αρχών Επιστήμης Υπολογιστών
+  module_label_teaching_problem_solving: Διδασκαλία επίλυσης προβλημάτων και υπολογιστών
   module_label_teaching_csc: Διδασκαλία συνδέσεων επιστήμης υπολογιστών
   module_label_teaching_ai: Διδασκαλία AI και μηχανικής μάθησης
   module_label_teaching_maker_cp: Διδασκαλία δημιουργίας εφαρμογών με συσκευές (Circuit
@@ -827,8 +842,8 @@ el:
   heading_csa_ai: Ψάχνετε πράγματα που πρέπει να κάνετε μετά την εξέταση AP®?
   heading_bring_cs_to_students: Φέρτε την επιστήμη των υπολογιστών στους μαθητές
   heading_cs_ambassador_program: Πρόγραμμα Πρεσβευτών CS
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Προτεινόμενα φοιτητικά προγράμματα
+  heading_start_hoc_with_videos: Ξεκινήστε την Ώρα του Κώδικα σας με εμπνευσμένα βίντεο
   cs_ambassador_subhead: Εάν είστε μαθητής γυμνασίου παθιασμένος με την ενθάρρυνση
     περισσότερων νέων γυναικών να παρακολουθήσουν την επιστήμη των υπολογιστών στο
     σχολείο σας, τότε σας χρειαζόμαστε!
@@ -938,13 +953,14 @@ el:
     χρήσιμες υπενθυμίσεις, συμβουλές και ενημερώσεις που αποστέλλονται απευθείας στα
     εισερχόμενά σας.
   subscribe_form_section_unsubscribe: Μπορείτε να διαγραφείτε ανά πάσα στιγμή.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Κωδικοποιήστε ένα χορευτικό πάρτι
+  dance_featuring_songs_by_short: 'Με τραγούδια από:'
+  dance_featuring_songs_by_long: 'Το Dance Party περιλαμβάνει τραγούδια από:'
+  dance_and_more: και πολλά άλλα
+  dance_choose_activity: Επιλέξτε το πάρτι χορού σας
+  dance_afe_disclaimer: Οι καλλιτέχνες των οποίων η μουσική χρησιμοποιείται σε αυτό
+    το σεμινάριο δεν χορηγούν ή υποστηρίζουν το Amazon ως μέρος της άδειας χρήσης
+    της μουσικής τους στο Code.org.
   blockchain_hero_heading: Πώς λειτουργεί το Blockchain
   blockchain_hero_desc: Βουτήξτε στον κόσμο του blockchain με το «Πώς λειτουργεί το
     Blockchain», τη νέα μας σειρά βίντεο και τα συνοδευτικά μαθήματα!
@@ -14373,6 +14389,9 @@ el:
   step_06: Βήμα 6
   step_07: Βήμα 7
   step_08: Βήμα 8
+  what: 'Τι:'
+  when: 'Πότε:'
+  where: 'Όπου:'
   hoc_how_to_top_heading: Ο οδηγός σας για την Ώρα του Κώδικα
   hoc_how_to_top_desc: Προσαρμοσμένοι οδηγοί για την καλύτερη εμπειρία Ώρας Κώδικα.
   hoc_how_to_top_view_guide: Προβολή οδηγού για
@@ -14424,6 +14443,7 @@ el:
     διάρκειας μίας ώρας σχεδιασμένα για όλες τις ηλικίες σε περισσότερες από 45 γλώσσες.
   hoc_how_to_step_label_plan: Σχεδιάστε πού και πότε θα κάνετε την Ώρα του Κώδικα
   hoc_how_to_step_label_choose_activity: Επιλέξτε τη δραστηριότητά σας
+  hoc_how_to_step_label_choose_activities: Επιλέξτε τις δραστηριότητές σας
   hoc_how_to_step_label_test_activity: Δοκιμάστε τη δραστηριότητά σας
   hoc_how_to_step_label_register_event: Καταχωρήστε την εκδήλωσή σας
   hoc_how_to_step_label_tell: Ενημερώστε τους μαθητές, το σχολείο και την κοινότητά
@@ -14431,74 +14451,87 @@ el:
   hoc_how_to_step_label_get_coding: Ξεκινήστε την κωδικοποίηση!
   hoc_how_to_step_label_celebrate: Γιορτάστε
   hoc_how_to_step_label_beyond_hoc: Πέρα από την ώρα του κώδικα
+  hoc_how_to_step_label_plan_your_event: Σχεδιάστε την εκδήλωσή σας
+  hoc_how_to_step_label_plan_your_hour: Προγραμματίστε την ώρα σας
+  hoc_how_to_step_label_help_spread_word: Βοηθήστε στη διάδοση της πληροφορίας
   hoc_how_to_step_beyond_hoc_subhead: Δεν τελειώνει εδώ!
-  hoc_how_to_step_beyond_hoc_desc: Η επιστήμη των υπολογιστών δεν χρειάζεται να τελειώνει
-    με την Ώρα του Κώδικα! Ενώ το 90% των γονέων θέλουν το παιδί τους να μάθει την
-    επιστήμη των υπολογιστών, τα περισσότερα σχολεία εξακολουθούν να μην το διδάσκουν.
-    Μάθετε πώς να φέρετε το CS στο σχολείο του παιδιού σας σήμερα.
-  hoc_how_to_step_01_educators_subhead: Επιλέξτε έναν χρόνο και χώρο εκδήλωσης που
-    να ταιριάζει με τον αριθμό των μαθητών και των συσκευών που έχετε στη διάθεσή
-    σας.
-  hoc_how_to_step_01_educators_desc_01: Ποιοι χώροι είναι διαθέσιμοι για να κάνετε
-    την Ώρα του Κώδικα σας; Εξετάστε τις τεχνολογικές δυνατότητες του χώρου σας και
-    τα είδη συσκευών στις οποίες περιμένετε να εργαστούν οι μαθητές σας. Οι μαθητές
-    μπορούν να εργαστούν σε μαθήματα σε μία μόνο συσκευή, να κάνουν εναλλάξ μια κοινόχρηστη
-    συσκευή ή να δοκιμάσουν ένα σεμινάριο μαζί σε έναν πίνακα της τάξης. Υπάρχουν
-    ακόμη και αποσυνδεδεμένα σεμινάρια που μπορούν να ολοκληρωθούν χωρίς καμία συσκευή.
-    Οι αποσυνδεδεμένες επιλογές μπορούν να γίνουν οπουδήποτε - ακόμη και σε εξωτερικούς
-    χώρους!
-  hoc_how_to_step_01_educators_desc_02: Άνθρωποι σε όλο τον κόσμο συμμετέχουν στον
-    εορτασμό της Ώρας του Κώδικα κατά τη διάρκεια της Εβδομάδας Εκ %{campaign_date}
-    παίδευσης CS, όταν κυκλοφορούν τα πιο πρόσφατα σεμινάρια και δραστηριότητες. Αλλά
-    μπορείτε να κάνετε μια Ώρα Κώδικα οποιαδήποτε μέρα του χρόνου!
-  hoc_how_to_step_02_educators_desc_01: Εξερευνήστε δραστηριότητες με βάση την ηλικία,
-    την εμπειρία, τα ενδιαφέροντα και πολλά άλλα της ομάδας σας. Είναι δημοφιλές για
-    τους μαθητές να δοκιμάζουν αυτοκαθοδηγούμενα σεμινάρια, αν και πολλές δραστηριότητες
-    περιλαμβάνουν σχέδια μαθημάτων για τους εκπαιδευτικούς για να καθοδηγήσουν τη
-    συζήτηση ή να επεκτείνουν τη δραστηριότητα επίσης.
-  hoc_how_to_step_02_educators_desc_02: Αποφασίστε εκ των προτέρων εάν θέλετε να επιλέξετε
-    ένα μόνο σεμινάριο για όλους τους μαθητές σας ή αφήστε κάθε παιδί να επιλέξει
-    το δικό του.
-  hoc_how_to_step_02_educators_desc_03: Φέτος, εσείς και οι μαθητές σας μπορείτε να
-    [μάθετε τα πάντα για την τεχνητή νοημοσύνη] (%ai_url) μέσω σεμιναρίων, σχεδίων
-    μαθημάτων και της νέας σειράς βίντεο How AI Works.
-  hoc_how_to_step_03_educators_desc_01: Δοκιμάστε μόνοι σας το σεμινάριο πριν μπείτε
-    στην τάξη, ώστε να μπορείτε να απαντήσετε σε ερωτήσεις!
-  hoc_how_to_step_03_educators_desc_02: Μπορείτε επίσης να δοκιμάσετε μαθήματα σε
-    υπολογιστές ή συσκευές μαθητών για να βεβαιωθείτε ότι υποστηρίζουν ήχο και βίντεο.
-    Έχετε χαμηλό εύρος ζώνης; Προγραμματίστε να προβάλλετε βίντεο στο μπροστινό μέρος
-    της τάξης, ώστε κάθε μαθητής να μην κατεβάζει τα δικά του βίντεο.
-  hoc_how_to_step_03_educators_desc_03: Εξετάστε το ενδεχόμενο να παρέχετε ακουστικά
-    για την τάξη σας ή ζητήστε από τους μαθητές να φέρουν τα δικά τους, εάν το σεμινάριο
-    που επιλέγετε λειτουργεί καλύτερα με τον ήχο.
-  hoc_how_to_step_04_educators_desc_01: Όταν εγγραφείτε στην εκδήλωση Hour of Code,
+  hoc_how_to_step_plan_hour_desc_01: 'Ακολουθεί ένα δείγμα ατζέντας για να ξεκινήσετε:'
+  hoc_how_to_step_choose_activities_desc_01: Φέτος, το θέμα της Ώρας του Κώδικα είναι
+    η Δημιουργικότητα με Τεχνητή Νοημοσύνη (AI). Είτε πρόκειται για την κωδικοποίηση
+    νέων εφαρμογών και αλγορίθμων, τη δημιουργία μοναδικής τέχνης ή τη δημιουργία
+    χορογραφίας για να μας κάνει να χορέψουμε, η τεχνητή νοημοσύνη ανοίγει νέες ευκαιρίες
+    για ψηφιακή έκφραση που διευρύνουν την κατανόησή μας για τη δημιουργικότητα. Κάντε
+    αυτό το έτος ξεχωριστό ολοκληρώνοντας μια δραστηριότητα κωδικοποίησης ΚΑΙ μαθαίνοντας
+    για την τεχνητή νοημοσύνη.
+  hoc_how_to_step_choose_activities_desc_02: Πρώτα, [εξερευνήστε εκατοντάδες δραστηριότητες
+    κωδικοποίησης] (%{activities_url}) και επιλέξτε μία με βάση την ηλικία της ομάδας
+    σας, εμπειρία, ενδιαφέροντα και άλλα. [Αυτές οι επιλεγμένες δραστηριότητες] (%{ai_activities_url})
+    διαθέτουν την τεχνητή νοημοσύνη ως βασικό θέμα ή μάθημα.
+  hoc_how_to_step_choose_activities_desc_03: Στη συνέχεια, [μάθετε τα πάντα για το
+    AI] (%{ai_url}). Οι μαθητές μπορούν να παρακολουθήσουν σύντομα βίντεο με ειδικούς
+    στον τομέα, και υπάρχουν συνοδευτικά σχέδια μαθημάτων για την επέκταση της δραστηριότητας
+    και την καθοδήγηση περαιτέρω συζήτησης. Ή, προσφέρουμε δωρεάν επαγγελματική μάθηση
+    για εκπαιδευτικούς για να ξεκλειδώσουν το μέλλον της διδασκαλίας με και σχετικά
+    με την τεχνητή νοημοσύνη.
+  hoc_how_to_step_educators_register_desc: Ξεκινήστε με τη δέσμευση να κάνετε μια
+    Ώρα Κώδικα με τους μαθητές σας εγγράφοντας την εκδήλωσή σας. Όταν εγγραφείτε,
     θα λαμβάνετε χρήσιμα μηνύματα ηλεκτρονικού ταχυδρομείου με ειδήσεις και συμβουλές
-    για τη φιλοξενία μιας επιτυχημένης Ώρας Κώδικα. Είναι επίσης ο τρόπος με τον οποίο
-    μπορείτε να ενημερώσετε τους τοπικούς εθελοντές ότι το σχολείο σας συμμετέχει.
-    Οι εθελοντές είναι ένας εξαιρετικός πόρος και μπορούν να έρθουν να μιλήσουν στην
-    τάξη σας για την επιστήμη των υπολογιστών ή να βοηθήσουν τους μαθητές σας με δραστηριότητες
-    Hour of Code.
-  hoc_how_to_step_05_educators_desc_01: Ενθουσιάστε τους μαθητές σας για την εκδήλωση
-    μοιράζοντας [εμπνευσμένα βίντεο] (%{videos_url}) επισημαίνοντας διαφορετικούς
-    ανθρώπους και δημιουργικούς τρόπους με τους οποίους η επιστήμη των υπολογιστών
-    μπορεί να χρησιμοποιηθεί στον πραγματικό κόσμο.
-  hoc_how_to_step_05_educators_desc_02: Μοιραστείτε τα σχέδιά σας για την Ώρα του
-    Κώδικα με άλλους δασκάλους που μπορεί να θέλουν να συμμετάσχουν στη διασκέδαση!
-    Αυτή είναι επίσης μια εξαιρετική ευκαιρία να επικοινωνήσετε με την Ένωση Μαθητών
-    Γονέων Δασκάλων του σχολείου σας ή να μοιραστείτε ενημερωτικά δελτία γονέων, ενημερώνοντάς
+    για τη φιλοξενία μιας επιτυχημένης Ώρας Κώδικα. Θα είστε επίσης [βάλτε στον χάρτη]
+    (%{map_url}). Το ορατό σύνολο των συλλογικών προσπαθειών μας καταδεικνύει την
+    παγκόσμια δέσμευση στο κίνημα της επιστήμης των υπολογιστών, το οποίο θα μας βοηθήσει
+    να οικοδομήσουμε δυναμική για συστημικές αλλαγές.
+  hoc_how_to_step_educators_plan_desc_01: Πριν από την εκδήλωσή σας, δοκιμάστε μόνοι
+    σας τις δραστηριότητες, ώστε να βεβαιωθείτε ότι λειτουργούν σε συσκευές μαθητών
+    και είστε έτοιμοι να απαντήσετε σε ερωτήσεις! Έχετε χαμηλό εύρος ζώνης; Προγραμματίστε
+    να προβάλλετε βίντεο στο μπροστινό μέρος της τάξης, ώστε κάθε μαθητής να μην κατεβάζει
+    τα δικά του βίντεο.
+  hoc_how_to_step_educators_plan_desc_02: Οι άνθρωποι σε όλο τον κόσμο συμμετέχουν
+    συχνά στον εορτασμό της Ώρας του Κώδικα κατά τη διάρκεια της Εβδομάδας Εκ%{campaign_date}παίδευσης
+    Επιστήμης Υπολογιστών (), αλλά μπορείτε να κάνετε μια Ώρα Κώδικα οποιαδήποτε μέρα
+    του χρόνου!
+  hoc_how_to_step_educators_plan_desc_03: Επιλέξτε έναν χώρο που λειτουργεί για τον
+    αριθμό των μαθητών και των συσκευών που έχετε στη διάθεσή σας. Οι μαθητές μπορούν
+    να δοκιμάσουν δραστηριότητες σε μεμονωμένες συσκευές, να μοιράζονται εκ περιτροπής
+    μια συσκευή ή ως τάξη σε έναν πίνακα. Υπάρχουν ακόμη και αποσυνδεδεμένες δραστηριότητες
+    που μπορούν να ολοκληρωθούν χωρίς καθόλου συσκευές, ώστε να μπορούν να γίνουν
+    ακόμη και έξω!
+  hoc_how_to_step_educators_spread_word_desc_01: Βοηθήστε μας να διαδώσουμε τη λέξη
+    στην κοινότητά σας με [αυτά τα πρότυπα email] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Ζητήστε από δύο συναδέλφους να [register](%{register_url})
+    και να φιλοξενήσουν μια δραστηριότητα Ώρας Κώδικα. Αυτοί, με τη σειρά τους, μπορούν
+    να εξασφαλίσουν δύο συναδέλφους, οι οποίοι μπορούν να εξασφαλίσουν δύο συναδέλφους
+    κ.λπ.
+  hoc_how_to_step_educators_spread_word_desc_03: Ζητήστε από τον διευθυντή σας να
+    [φιλοξενήσει μια εκδήλωση σε όλο το σχολείο] ()%{host_url}. Όταν συμμετέχουν 300
+    ή περισσότερα παιδιά, μπορείτε να λάβετε ένα ειδικό κιτ αρραβώνων με μπλουζάκια,
+    αφίσες, αυτοκόλλητα φορητού υπολογιστή και πολλά άλλα. [Μοιραστείτε ολόκληρο το
+    πρόγραμμα σχολικών εκδηλώσεων] (%{share_url}) για να προκριθείτε.
+  hoc_how_to_step_educators_spread_word_desc_04: Επικοινωνήστε με την Ένωση Μαθητών
+    Γονέων Δασκάλων του σχολείου σας ή μοιραστείτε ενημερωτικά δελτία γονέων, ενημερώνοντάς
     τους τι μαθαίνουν τα παιδιά τους.
-  hoc_how_to_step_06_educators_desc_01: 'Κατευθύνετε τους μαθητές σας στη δραστηριότητα,
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 π.μ.: Ξεκινήστε με ένα
+    [εμπνευσμένο βίντεο] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 πμ: Οι μαθητές κάνουν
+    τη δραστηριότητα κωδικοποίησης'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 π.μ.: Οι μαθητές μαθαίνουν
+    για την τεχνητή νοημοσύνη'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 πμ: Ο δάσκαλος δίνει καταληκτικές
+    παρατηρήσεις'
+  hoc_how_to_step_educators_get_coding_desc: 'Κατευθύνετε τους μαθητές σας στη δραστηριότητα,
     ίσως κοινοποιώντας τον σύνδεσμο στον πίνακα ή μέσω του συστήματος διαχείρισης
     μάθησης της τάξης σας. Οι μαθητές σας μπορεί να αντιμετωπίσουν προκλήσεις - αυτό
     είναι εντάξει! Η εκμάθηση προγραμματισμού είναι σαν να μαθαίνεις μια νέα γλώσσα:
     δεν θα είσαι άπταιστος αμέσως. Εάν δεν γνωρίζετε την απάντηση, μπορείτε να το
     καταλάβετε μαζί.'
-  hoc_how_to_step_07_educators_desc_01: 'Φροντίστε να γιορτάσετε την επιτυχία! Μοιραστείτε
-    φωτογραφίες και βίντεο της εκδήλωσής σας Hour of Code στα κοινωνικά μέσα. Χρησιμοποιήστε
-    το #HourOfCode και το @codeorg για να μπορέσουμε να επισημάνουμε και την επιτυχία
-    σας!'
-  hoc_how_to_step_07_educators_desc_02: Μπορείτε επίσης να εκτυπώσετε πιστοποιητικά
-    για τους μαθητές σας για να επιδείξουν το επίτευγμά τους!
+  hoc_how_to_step_educators_celebrate_desc: 'Μετά την εκδήλωσή σας, εκτυπώστε πιστοποιητικά
+    ολοκλήρωσης και συγχαίρετε τους μαθητές σας. Μοιραστείτε φωτογραφίες και βίντεο
+    της εκδήλωσης Ώρα Κώδικα και επιδείξτε τα επιτεύγματα των μαθητών σας χρησιμοποιώντας
+    το #HourOfCode και το @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Η επιστήμη των υπολογιστών δεν χρειάζεται
+    να τελειώνει με την Ώρα του Κώδικα! Ενώ το 90% των γονέων θέλουν το παιδί τους
+    να μάθει την επιστήμη των υπολογιστών, τα περισσότερα σχολεία εξακολουθούν να
+    μην το διδάσκουν. Για να βοηθήσουμε, το πρόγραμμα σπουδών μας είναι διαδικτυακό
+    και δωρεάν για χρήση, για πάντα. Μάθετε πώς να φέρετε το CS στο σχολείο σας σήμερα.
   hoc_ai_top_desc: Οποιοσδήποτε μπορεί να μάθει για την τεχνητή νοημοσύνη, είτε είστε
     μαθητής στην τάξη είτε εκπαιδευτικός που ξεκλειδώνει το μέλλον της διδασκαλίας
     με και για την τεχνητή νοημοσύνη.
@@ -15207,8 +15240,8 @@ el:
     Είμαστε ευγνώμονες που επωφεληθήκαμε από την ακούραστη βοήθεια της ευρύτερης κοινότητας
     εκπαίδευσης στην επιστήμη των υπολογιστών, και [ευχαριστούμε όλους τους συνεργάτες
     και τα άτομα που υποστήριξαν τον αντίκτυπό μας όλα αυτά τα χρόνια] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
-    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+  about_page_section_more_list_1: "[Ετήσια Έκθεση Code.org 2021] (%{report_url}) (Προηγούμενες
+    εκθέσεις: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
     [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Οι βασικές μας αξίες και οι οδηγίες ανταλλαγής
     μηνυμάτων] (%{core_url})"
@@ -15264,10 +15297,10 @@ el:
     εκπαίδευση στην επιστήμη των υπολογιστών. Το Πλαίσιο έχει κερδίσει την υποστήριξη
     εκατοντάδων ακαδημαϊκών, εκπαιδευτικών K-12, εταιρειών λογισμικού, μη κερδοσκοπικών
     οργανισμών και κρατών.
-  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+  about_page_section_specific_description_6: Έντυπο Code.org IRS 990 για [2014](%{irs_url_1}),
     [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
-    Policy.](%{donation_policy_url})
+    [2019]()%{irs_url_6}), [2020](%{irs_url_7}), και [2021](%{irs_url_8}). [Πολιτική
+    δωρεάς.] (%{donation_policy_url})
   about_page_section_specific_description_7: "[Εγγραφείτε για να λαμβάνετε ενημερώσεις
     κατάστασης] (%{sign_up_url}) σχετικά με την πρόοδο στο κίνημα της επιστήμης των
     υπολογιστών K-12 και για το έργο του Code.org. Ή ακολουθήστε το Code.org στα μέσα
@@ -15300,66 +15333,76 @@ el:
     τους υπεύθυνους χάραξης πολιτικής, τους ηγέτες των σχολείων και το προσωπικό για
     να αναπτύξουν αρχική καθοδήγηση σχετικά με την τεχνητή νοημοσύνη στα σχολεία τους.
   teach_ai_button_label: Δείτε την εργαλειοθήκη
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Μάθηση για ηλικίες 11 ετών και άνω
+  middle_high_page_main_description: Εξερευνήστε τον κόσμο της επιστήμης των υπολογιστών
+    με συναρπαστικά βίντεο, σεμινάρια με αυτόματο ρυθμό, δραστηριότητες προγραμματισμού
+    και πολλά άλλα!
+  middle_high_page_hero_title: Ξεκινήστε με την Ώρα του Κώδικα
+  middle_high_page_hero_description: Μάθετε τις βασικές αρχές της επιστήμης των υπολογιστών
+    με δωρεάν δραστηριότητες Ώρας κώδικα, με μπλοκ κωδικοποίησης drag-and-drop. Υπάρχουν
+    εκατοντάδες επιλογές διάρκειας ώρας για να διαλέξετε!
+  middle_high_page_hourofcode_link: Εξερευνήστε τις δραστηριότητες της Ώρας του Κώδικα
+  middle_high_page_modules_title: Ενότητες προγραμματισμού για μεγαλύτερους μαθητές
+  middle_high_page_modules_description: Προσαρμοσμένες από τα μαθήματα CS Discoveries
+    και CS Principles, αυτές οι σύντομες, αυτορυθμισμένες ενότητες για μαθητές γυμνασίου
+    και γυμνασίου είναι ένας πολύ καλός τρόπος για να μάθετε έννοιες που καλύπτουν
+    όλες τις γλώσσες και τα εργαλεία προγραμματισμού.
+  middle_high_page_modules_card_title_1: Εισαγωγή στο Εργαστήριο Παιχνιδιών
+  middle_high_page_modules_card_title_2: Προγραμματισμός χελώνας στο εργαστήριο εφαρμογών
+  middle_high_page_modules_card_title_3: Προγραμματισμός με γνώμονα συμβάντα στο App
+    Lab
+  middle_high_page_modules_card_description_1: Προχωρήστε με τον δικό σας ρυθμό σε
+    αυτήν την εισαγωγή στο περιβάλλον Game Lab καθώς προγραμματίζετε κινούμενα σχέδια,
+    διαδραστική τέχνη, και παιχνίδια.
+  middle_high_page_modules_card_description_2: Ξεκλειδώστε τη δυνατότητα δημιουργίας
+    πλούσιων, διαδραστικών εφαρμογών με JavaScript στο App Lab!
+  middle_high_page_modules_card_description_3: Προχωρήστε με τον δικό σας ρυθμό με
+    αυτήν την εισαγωγή στο περιβάλλον προγραμματισμού App Lab, στο οποίο οι μαθητές
+    χρησιμοποιούν JavaScript για να δημιουργήσουν διαδραστικές εφαρμογές.
+  middle_high_page_modules_card_link: Δοκίμασέ το
+  middle_high_page_make_your_own_title: Δημιουργήστε τις δικές σας εφαρμογές, παιχνίδια
+    και ιστοσελίδες
+  middle_high_page_make_your_own_description: 'Εκτός από τα μαθήματα, έχουμε εργαλεία
+    προγραμματισμού που σας επιτρέπουν να εξερευνήσετε τη δημιουργικότητά σας και
+    να κάνετε κάτι καταπληκτικό. '
   middle_high_page_make_your_own_card_title_1: Εργαστήριο εφαρμογών
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Εργαστήριο Παιχνιδιών
+  middle_high_page_make_your_own_card_title_3: Εργαστήριο Ιστού
+  middle_high_page_make_your_own_card_descrpition_1: Το App Lab είναι ένα περιβάλλον
+    προγραμματισμού όπου μπορείτε να δημιουργήσετε απλές εφαρμογές. Σχεδιάστε μια
+    εφαρμογή, κωδικοποιήστε σε JavaScript είτε με μπλοκ είτε με κείμενο και, στη συνέχεια,
+    μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα.
+  middle_high_page_make_your_own_card_descrpition_2: Το Game Lab είναι ένα περιβάλλον
+    προγραμματισμού όπου μπορείτε να κάνετε απλά κινούμενα σχέδια και παιχνίδια με
+    αντικείμενα και χαρακτήρες που αλληλεπιδρούν μεταξύ τους.
+  middle_high_page_make_your_own_card_descrpition_3: Το Web Lab είναι ένα περιβάλλον
+    προγραμματισμού όπου μπορείτε να δημιουργήσετε απλές ιστοσελίδες χρησιμοποιώντας
+    HTML και CSS. Σχεδιάστε τις ιστοσελίδες σας και μοιραστείτε τον ιστότοπό σας σε
+    δευτερόλεπτα.
   middle_high_page_make_your_own_card_link: Μάθετε περισσότερα
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Πρόσθετοι πόροι
+  middle_high_page_additional_resources_description: Υπάρχουν τόσοι πολλοί τρόποι
+    για να εξερευνήσετε περαιτέρω την επιστήμη των υπολογιστών! Περιηγηθείτε στη βιβλιοθήκη
+    βίντεο ή μάθετε περισσότερα σχετικά με συναρπαστικές σταδιοδρομίες στον τομέα
+    της επιστήμης των υπολογιστών.
+  middle_high_page_video_library_title: Ανακαλύψτε τη Βιβλιοθήκη Βίντεο
+  middle_high_page_video_library_description: Μάθετε τα βασικά της επιστήμης των υπολογιστών
+    μέσω σύντομων βίντεο 5-10 λεπτών σχετικά με θέματα όπως η τεχνητή νοημοσύνη, το
+    Διαδίκτυο, πώς λειτουργούν οι υπολογιστές, πώς να μην παραβιάζονται, blockchain,
+    καριέρα και πολλά άλλα!
+  middle_high_page_video_library_link: Προβολή βιβλιοθήκης βίντεο
+  middle_high_page_cs_journeys_title: Προχωρήστε περαιτέρω με το CS Journeys
+  middle_high_page_cs_journeys_description: Κάντε το επόμενο βήμα στο ταξίδι σας στην
+    επιστήμη των υπολογιστών. Εξερευνήστε σταδιοδρομία, ευκαιρίες καθοδήγησης, διαδικτυακά
+    μαθήματα, υποτροφίες, πρακτική άσκηση και πολλά άλλα!
+  middle_high_page_cs_journeys_link: Εξερευνήστε τα ταξίδια CS
+  middle_high_page_cs_title: Επιστήμη των Υπολογιστών στην τάξη
+  middle_high_page_cs_description: Αυτά τα μαθήματα πρέπει να καθοδηγούνται από έναν
+    δάσκαλο! Αν θέλετε να τα δείτε να διδάσκονται στο σχολείο σας, σκεφτείτε να συνεργαστείτε
+    με έναν δάσκαλο για να τους φέρετε στην τάξη σας.
+  middle_high_page_cs_card_title_1: Ανακαλύψεις CS
+  middle_high_page_cs_card_title_2: Αρχές CS
+  middle_high_page_cs_card_title_3: AP Επιστήμη Υπολογιστών Α
   middle_high_page_cs_card_description_1: Δωρεάν πακέτο προγραμμάτων σπουδών για αρχαρίους
     που εισάγει τους μαθητές στις θεμελιώδεις έννοιες της επιστήμης των υπολογιστών
     και τους προκαλεί να διερευνήσουν πώς η πληροφορική και η τεχνολογία μπορούν να
@@ -15371,34 +15414,38 @@ el:
   middle_high_page_cs_card_description_3: Εισαγάγετε τους μαθητές στη μηχανική λογισμικού
     και τον αντικειμενοστρεφή σχεδιασμό ενώ μαθαίνουν τη γλώσσα προγραμματισμού Java
     σε αυτό το δωρεάν πρόγραμμα σπουδών για AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Εξερευνήστε το CS Dicoveries
   middle_high_page_cs_link_2: Εξερευνήστε τις αρχές CS
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Εξερευνήστε το CSA
+  elemeentary_page_main_title: Μάθηση για ηλικίες 5 έως 11 ετών
+  elementary_page_main_description: Εξερευνήστε τον κόσμο της επιστήμης των υπολογιστών
+    με συναρπαστικά βίντεο, σεμινάρια με αυτόματο ρυθμό, δραστηριότητες προγραμματισμού
+    και πολλά άλλα!
+  elementary_page_own_pace_title: Συνεχίστε να μαθαίνετε με τον δικό σας ρυθμό
+  elementary_page_own_pace_description: Δημιουργήστε σχέδια, παιχνίδια και πολλά άλλα
+    σε αυτές τις δύο εξαιρετικές επιλογές για τους μαθητές που ξεκινούν μόνοι τους
+    να μαθαίνουν τα βασικά της επιστήμης των υπολογιστών.
+  elementary_page_own_pace_card_title_1: Εξπρές μάθημα πριν από τον αναγνώστη
+  elementary_page_own_pace_card_title_2: Γρήγορο μάθημα
+  elementary_page_own_pace_card_description_1: Μάθετε την επιστήμη των υπολογιστών
+    με το δικό σας ρυθμό! Μάθετε να δημιουργείτε προγράμματα υπολογιστών, αναπτύξτε
+    δεξιότητες επίλυσης προβλημάτων και εργαστείτε μέσα από διασκεδαστικές προκλήσεις!
+    Δημιουργήστε παιχνίδια και δημιουργικά έργα για κοινή χρήση με φίλους, οικογένεια
+    και δασκάλους.
+  elementary_page_own_pace_link_1: Ξεκινήστε το μάθημα πριν από τον αναγνώστη
+  elementary_page_own_pace_link_2: Ξεκινήστε το γρήγορο μάθημα
+  elementary_page_make_your_own_games_title: Δημιουργήστε τα δικά σας κινούμενα σχέδια
+    και παιχνίδια
   elementary_page_make_your_own_games_card_title_1: Εργαστήριο Sprite
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Ώρα να γίνετε δημιουργικοί!
+    Χρησιμοποιήστε κωδικοποίηση βάσει μπλοκ για να κάνετε κάτι ανόητο, γλυκό ή εξωδιαστικό
+    στο Sprite Lab. Το μόνο όριο είναι η φαντασία σας!
+  elementary_page_make_your_own_games_link: Δοκιμάστε το εργαστήριο Sprite
+  elementary_page_computer_science_title: Επιστήμη των Υπολογιστών στην τάξη
+  elementary_page_computer_science_description: Αυτά τα μαθήματα πρέπει να καθοδηγούνται
+    από έναν δάσκαλο! Αν θέλετε να τα δείτε να διδάσκονται στο σχολείο σας, ζητήστε
+    από έναν γονέα ή κηδεμόνα να συνεργαστεί με έναν δάσκαλο για να τους φέρει στην
+    τάξη σας.
   elementary_page_computer_science_card_title_1: Βασικές αρχές της επιστήμης των υπολογιστών
   elementary_page_computer_science_card_title_2: Συνδέσεις Επιστήμης Υπολογιστών
   elementary_page_computer_science_description_1: Δωρεάν πακέτο προγραμμάτων σπουδών

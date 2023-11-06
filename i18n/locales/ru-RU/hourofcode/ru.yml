@@ -7,10 +7,10 @@ ru:
     декабря 2015
   coming_soon: Скоро
   new: Новый
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Проведенные «Часы кода»
   hoc_stat_languages: Уроки доступны на 40 языках
   hoc_stat_hours_served: "«Час кода» посетили более 100 миллионов учащихся"
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Студентки составляют 50% участников «Часа кода»
   campaign_date_start_short: 4 декабря
   campaign_date_start_long: 4 декабря
   campaign_date_short: 4-10 декабря
@@ -52,10 +52,10 @@ ru:
   hoc2023_social_creativity_with_ai_title: Час кода — что вы создадите?
   hoc2023_social_creativity_with_ai_desc: Используйте компьютерные науки для изучения
     и изучения искусственного интеллекта!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: "«Час кода» — это бесплатное знакомство с информатикой
+    с помощью увлекательных заданий и видеороликов для учащихся любого уровня подготовки.
+    В этом году празднование, посвященное программированию и искусственному интеллекту,
+    проходит при поддержке более 400 партнеров, 20 000 преподавателей и 58 000 волонтеров."
   hoc2022_header: Учись, играй, твори!
   social_hoc2022_explore_play_create: Информатика помогает учиться, играть и творить!
   codeorg_homepage_hoc2022_body: Исследуйте всселенную, достигайте целей, двигайтесь
@@ -67,9 +67,9 @@ ru:
     Лил Нас Икс, Селены Гомес, музыку из диснеевского «Энканто» и многое другое!
   social_hoc2023_dance: С участием Бейонсе, BTS, Гарри Стайлса, Лиззо, Lil Nas X,
     Селены Гомес, музыки из диснеевского «Энканто» и многого другого!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Пришло время расстегнуть вещи! Устройте собственную танцевальную
+    вечеринку с хитами Майли Сайрус, BTS, Lil Nas X, Гарри Стайлса, Ники Минаж, Розалии
+    и других!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Учитесь сегодня, создавайте светлое будущее.
@@ -298,21 +298,23 @@ ru:
     идеи и поддержку от других преподавателей.
   required_materials: 'Необходимые материалы:'
   optional_materials: 'Дополнительные материалы:'
-  for_students: For students
+  for_students: Для учащихся
   for_educators: Для преподавателей
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Проведите час кода
   call_to_action_hold_an_event: Проведите мероприятие
   call_to_action_register_event: Зарегистрируйте свое мероприятие
   call_to_action_register_your_hoc: Зарегистрируйте свой «Час кода»
   call_to_action_select_activity: Выберите занятие
+  call_to_action_select_coding_activity: Выберите задание по программированию
   call_to_action_start_activity: Начать занятие
   call_to_action_get_certificates: Получите сертификаты
+  call_to_action_print_certificates: Распечатать сертификаты
   call_to_action_go_beyond_hoc: Выйдите за рамки «Часа кода»
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Ознакомьтесь со всеми мероприятиями «Часа
+    кода» на сайте Code.org
+  call_to_action_start_dance_party: Начните танцевальную вечеринку
+  call_to_action_start_part_02: Начните вторую часть
+  call_to_action_start_unplugged_activity: Начните работу без подключения к сети
   call_to_action_view_promo_resources: Смотреть промо-ресурсы
   call_to_action_learn_more: Узнать больше
   call_to_action_watch_now: Смотрите сейчас
@@ -410,9 +412,9 @@ ru:
   call_to_action_view_faqs: Показать больше часто задаваемых вопросов
   call_to_action_applications_open: Заявки уже открыты
   call_to_action_apply_cs_ambassador: Подайте заявку, чтобы стать амбассадором CS
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Скоро!
+  call_to_action_learn_how_ai_works: Узнайте, как работает искусственный интеллект
+  call_to_action_learn_about_ai: Узнайте об искусственном интеллекте
   aria_label_call_to_action_hoc_how_to_educators: Ознакомьтесь с практическим руководством
     для преподавателей
   aria_label_call_to_action_hoc_how_to_companies: Ознакомьтесь с практическим руководством
@@ -429,9 +431,11 @@ ru:
     для волонтеров
   aria_label_call_to_action_hoc_how_to_virtual_events: Ознакомьтесь с практическим
     руководством по виртуальным мероприятиям
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Начните танцевальную вечеринку
+  aria_label_call_to_action_dance_02: Начните вторую часть мероприятия «Танцевальная
+    вечеринка»
+  aria_label_call_to_action_dance_unplugged: Начните танцевальную вечеринку без подключения
+    к сети
   aria_label_call_to_action_afe: Узнайте больше об инженере будущего Amazon
   aria_label_call_to_action_teaching_csf: Начните программу профессионального обучения
     «Преподавание основ компьютерных наук»
@@ -439,6 +443,8 @@ ru:
     «Преподавание открытий в области компьютерных наук»
   aria_label_call_to_action_teaching_csp: Начните программу профессионального обучения
     «Преподавание принципов информатики»
+  aria_label_call_to_action_teaching_problem_solving: Начните программу профессионального
+    обучения по решению проблем преподавания и вычислительной технике
   aria_label_call_to_action_teaching_csc: 'Начать преподавание по программе профессионального
     обучения "Связь с информатикой" '
   aria_label_call_to_action_teaching_ai: Начните программу профессионального обучения
@@ -456,6 +462,8 @@ ru:
     области компьютерных наук»
   aria_label_call_to_action_curriculum_csp: Изучите учебную программу «Принципы компьютерных
     наук»
+  aria_label_call_to_action_curriculum_problem_solving: Изучите учебную программу
+    по решению проблем и вычислениям
   aria_label_call_to_action_curriculum_csc: Посмотреть учебный план "Связь с информатикой"
   aria_label_call_to_action_curriculum_ai: Изучите учебную программу по искусственному
     интеллекту и машинному обучению
@@ -535,6 +543,7 @@ ru:
   curriculum_name_csf_teacher_led: Урок под руководством учителя
   curriculum_name_csd: Открытия в области компьютерных наук
   curriculum_name_csp: Принципы компьютерных наук
+  curriculum_name_problem_solving: Решение задач и вычисления
   curriculum_name_csc: Связь с информатикой
   curriculum_name_csa: Информатика А
   curriculum_name_csa_ai: Программная инженерия и компьютерное зрение
@@ -547,25 +556,27 @@ ru:
   curriculum_name_creating_apps_with_devices: Создание приложений с устройствами
   curriculum_name_poetry: Программирование и поэзия
   curriculum_name_dance_party: Танцевальная вечеринка
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Продолжать танцевать
+  curriculum_name_dance_party_unplugged: Танцевальная вечеринка отключена
+  curriculum_name_dance_party_ai_edition: 'Танцевальная вечеринка: издание AI'
   curriculum_name_problem_solving_computing: Решение задач и вычисления
   curriculum_name_web_development: Веб-разработка
   curriculum_name_interactive_animations_games: Интерактивная анимация и игры
   curriculum_name_design_process: Процесс разработки
   curriculum_name_data_society: Данные и общество
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: В этом вводном задании вы можете с помощью кода
+    заставить разноцветных персонажей перейти к анимированным фонам и веселой музыке.
+  curriculum_desc_dance_party_02: Выйдите за рамки вводного урока и ознакомьтесь с
+    расширенными идеями проектов. Просмотрите библиотеку примеров более сложных танцевальных
+    вечеринок.
+  curriculum_desc_dance_party_unplugged: Не бойтесь — компьютер не нужен! Узнайте,
+    как концепции программирования, такие как мероприятия, можно использовать для
+    синхронизации хореографии танцоров.
+  curriculum_desc_dance_party_ai_edition: Узнайте о концепциях искусственного интеллекта
+    (ИИ), чтобы организовать собственную виртуальную танцевальную вечеринку с участием
+    лучших артистов современности. В вашем распоряжении десятки песен, которые могут
+    понравиться каждому ученику, независимо от его музыкального вкуса. Пришло время
+    заняться творчеством!
   curriculum_desc_csf: Бесплатный набор начальных учебных программ, который знакомит
     учащихся с основополагающими понятиями информатики.
   curriculum_desc_csf_express: Научитесь создавать компьютерные программы, развивайте
@@ -699,12 +710,12 @@ ru:
   module_grade_grade_03: 3 класс
   module_grade_grade_04: 4 класс
   module_grade_grade_05: 5 класс
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Возраст 5-7 лет
+  module_age_07: Возраст 7 лет и старше
+  module_age_07_11: Возраст от 7 до 11 лет
+  module_age_11: Возраст 11 лет и старше
+  module_age_13: Возраст 13+
+  module_age_all_age: Для всех возрастов
   module_grade_k_5_teachers: Учителя К-5
   module_grade_6_10_teachers: Учителя 6-10
   module_grade_9_12_teachers: Учителя 9-12
@@ -736,6 +747,7 @@ ru:
   module_label_teaching_csf: Преподавание основ информатики
   module_label_teaching_csd: Преподавание открытий в области компьютерных наук
   module_label_teaching_csp: Принципы преподавания компьютерных наук
+  module_label_teaching_problem_solving: Обучение решению проблем и вычислениям
   module_label_teaching_csc: Преподавание курса "Связь с информатикой"
   module_label_teaching_ai: Обучение искусственному интеллекту и машинному обучению
   module_label_teaching_maker_cp: Обучение созданию приложений на устройствах (Circuit
@@ -805,8 +817,8 @@ ru:
   heading_csa_ai: Ищете, чем заняться после экзамена AP®?
   heading_bring_cs_to_students: Познакомьте учащихся с информатикой
   heading_cs_ambassador_program: Программа «Посол CS»
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Популярные студенческие проекты
+  heading_start_hoc_with_videos: Начните «Час кода» с вдохновляющих видеороликов
   cs_ambassador_subhead: Если вы учитесь в средней школе и хотите побудить больше
     молодых женщин изучать компьютерные науки в своей школе, тогда вы нужны нам!
   cs_ambassador_desc: Информатика затрагивает каждую область, включая медицину, развлечения,
@@ -902,13 +914,13 @@ ru:
     письма о принципах компьютерных наук Code.org и получать полезные напоминания,
     советы и обновления прямо на свой почтовый ящик.
   subscribe_form_section_unsubscribe: Вы можете отказаться от подписки в любое время.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Запрограммируйте танцевальную вечеринку
+  dance_featuring_songs_by_short: 'С песнями от:'
+  dance_featuring_songs_by_long: 'Dance Party включает песни:'
+  dance_and_more: и многое другое
+  dance_choose_activity: Выберите свою танцевальную вечеринку
+  dance_afe_disclaimer: Исполнители, чья музыка используется в этом уроке, не спонсируют
+    и не поддерживают Amazon в рамках лицензирования использования своей музыки Code.org.
   blockchain_hero_heading: Как работает блокчейн
   blockchain_hero_desc: Погрузитесь в мир блокчейна с помощью нашей новой серии видеороликов
     «Как работает блокчейн» и сопутствующих уроков!
@@ -13664,6 +13676,9 @@ ru:
   step_06: Шаг 6
   step_07: Шаг 7
   step_08: Шаг 8
+  what: 'Что:'
+  when: 'Когда:'
+  where: 'Где:'
   hoc_how_to_top_heading: Ваш путеводитель по «Часу кода»
   hoc_how_to_top_desc: Индивидуальные инструкции, которые помогут вам лучше провести
     «Час кода».
@@ -13714,71 +13729,88 @@ ru:
     разработанных для всех возрастов на более чем 45 языках.
   hoc_how_to_step_label_plan: Спланируйте, где и когда вы проведете «Час кода»
   hoc_how_to_step_label_choose_activity: Выберите вид деятельности
+  hoc_how_to_step_label_choose_activities: Выберите свой вид деятельности
   hoc_how_to_step_label_test_activity: Проверьте свою активность
   hoc_how_to_step_label_register_event: Зарегистрируйте свое мероприятие
   hoc_how_to_step_label_tell: Расскажите своим ученикам, школе и сообществу
   hoc_how_to_step_label_get_coding: Занимайтесь программированием!
   hoc_how_to_step_label_celebrate: Отпраздновать
   hoc_how_to_step_label_beyond_hoc: "«За пределами часа кода»"
+  hoc_how_to_step_label_plan_your_event: Запланируйте свое мероприятие
+  hoc_how_to_step_label_plan_your_hour: Планируйте свой час
+  hoc_how_to_step_label_help_spread_word: Помогите распространить информацию
   hoc_how_to_step_beyond_hoc_subhead: На этом все не заканчивается!
-  hoc_how_to_step_beyond_hoc_desc: Информатика не должна заканчиваться Часом кода!
-    Хотя 90% родителей хотят, чтобы их ребенок изучал компьютерные науки, в большинстве
-    школ их до сих пор не преподают. Узнайте, как использовать компьютерные знания
-    в школе вашего ребенка уже сегодня.
-  hoc_how_to_step_01_educators_subhead: Выберите время и место проведения мероприятия,
-    подходящие для количества учащихся и доступных устройств.
-  hoc_how_to_step_01_educators_desc_01: В каких местах вы можете провести «Час кода»?
-    Ознакомьтесь с техническими возможностями вашего помещения и с какими устройствами
-    вы ожидаете, что ваши ученики будут работать. Учащиеся могут работать над учебными
-    пособиями на одном устройстве, по очереди использовать общее устройство или совместно
-    использовать учебное пособие на доске в классе. Существуют даже учебные пособия,
-    не подключенные к электросети, которые можно выполнять вообще без каких-либо устройств.
-    Варианты, отключенные от сети, можно использовать где угодно, даже на улице!
-  hoc_how_to_step_01_educators_desc_02: Люди по всему миру присоединяются к празднованию
-    Часа кода во время Недели образования в области CS, %{campaign_date} когда выходят
-    новейшие учебные пособия и задания. Но вы можете провести «Час кода» в любой день
-    года!
-  hoc_how_to_step_02_educators_desc_01: Изучите занятия в зависимости от возраста,
-    опыта, интересов и других факторов вашей группы. Учащиеся часто используют самостоятельные
-    учебные пособия, хотя многие занятия включают в себя планы уроков, которые учителя
-    могут также направлять обсуждение или расширять занятие.
-  hoc_how_to_step_02_educators_desc_02: Заранее решите, хотите ли вы выбрать один
-    учебник для всех своих учеников или позволить каждому ребенку выбрать свой собственный.
-  hoc_how_to_step_02_educators_desc_03: В этом году вы и ваши ученики сможете [узнать
-    все об искусственном интеллекте] (%ai_url) с помощью учебных пособий, планов уроков
-    и нашей новой серии видеороликов «Как работает искусственный интеллект».
-  hoc_how_to_step_03_educators_desc_01: Попробуйте самостоятельно, прежде чем войти
-    в класс, чтобы ответить на вопросы!
-  hoc_how_to_step_03_educators_desc_02: Вы также можете протестировать учебные пособия
-    на компьютерах или устройствах учащихся, чтобы убедиться, что они поддерживают
-    звук и видео. У вас низкая пропускная способность? Планируйте показывать видео
-    перед классом, чтобы каждый ученик не загружал свои собственные видео.
-  hoc_how_to_step_03_educators_desc_03: Подумайте о том, чтобы предоставить классу
-    наушники или попросите учащихся взять с собой собственные, если выбранное вами
-    учебное пособие лучше всего подходит для звука.
-  hoc_how_to_step_04_educators_desc_01: Зарегистрировав мероприятие «Час кода», вы
-    получите полезные электронные письма с новостями и советами по успешному проведению
-    «Часа кода». Кроме того, вы можете сообщить местным волонтерам об участии вашей
-    школы. Добровольцы — отличный ресурс. Они могут рассказать вашему классу о компьютерных
-    науках или помочь ученикам в проведении мероприятий «Часа кода».
-  hoc_how_to_step_05_educators_desc_01: Порадуйте своих учеников мероприятием, поделившись
-    [вдохновляющими видеороликами] (%{videos_url}), рассказывающими о разных людях
-    и творческих способах использования компьютерных наук в реальном мире.
-  hoc_how_to_step_05_educators_desc_02: Поделитесь своими планами на «Час кода» с
-    другими учителями, которые, возможно, захотят присоединиться к веселью! Это также
-    отличная возможность обратиться в Ассоциацию родителей, учителей и учащихся вашей
-    школы или поделиться новостями для родителей, рассказывая им о том, чему учатся
-    их дети.
-  hoc_how_to_step_06_educators_desc_01: 'Направьте учеников на это занятие, например,
+  hoc_how_to_step_plan_hour_desc_01: 'Вот примерный план для начала:'
+  hoc_how_to_step_choose_activities_desc_01: В этом году тема «Часа кода» — «Творчество
+    с помощью искусственного интеллекта (ИИ)». Искусственный интеллект открывает новые
+    возможности для цифрового самовыражения, расширяющие наше понимание творчества,
+    будь то написание новых приложений и алгоритмов, создание уникальных произведений
+    искусства или создание хореографии, которая поможет нам танцевать. Сделайте этот
+    год особенным, выполнив задание по программированию и изучив искусственный интеллект.
+  hoc_how_to_step_choose_activities_desc_02: Сначала [изучите сотни заданий по программированию]
+    (%{activities_url}) и выберите одно из них в зависимости от возраста, опыта, интересов
+    и других особенностей вашей группы. [В этих избранных заданиях] (%{ai_activities_url})
+    искусственный интеллект рассматривается в качестве ключевой темы или урока.
+  hoc_how_to_step_choose_activities_desc_03: Затем [узнайте все об искусственном интеллекте]
+    (%{ai_url}). Учащиеся могут посмотреть короткие видеоролики с участием экспертов
+    в этой области, а также сопроводительные планы уроков, которые помогут расширить
+    учебное задание и послужить основой для дальнейшего обсуждения. Кроме того, мы
+    предлагаем преподавателям бесплатное профессиональное обучение, чтобы открыть
+    для себя будущее преподавания с использованием искусственного интеллекта и его
+    изучением.
+  hoc_how_to_step_educators_register_desc: Начните с того, что решите провести «Час
+    программирования» со своими учениками, зарегистрировав свое мероприятие. После
+    регистрации вы получите полезные электронные письма с новостями и советами по
+    успешному проведению «Часа кода». Вы также будете [занесены на карту] (%{map_url}).
+    Видимая совокупность наших коллективных усилий свидетельствует о глобальной приверженности
+    движению в области компьютерных наук, что поможет нам придать импульс системным
+    изменениям.
+  hoc_how_to_step_educators_plan_desc_01: Перед началом мероприятия попробуйте сами,
+    чтобы убедиться, что они работают на устройствах учащихся и готовы ответить на
+    вопросы! У вас низкая пропускная способность? Планируйте показывать видео перед
+    классом, чтобы каждый ученик не загружал свои собственные видео.
+  hoc_how_to_step_educators_plan_desc_02: Люди во всем мире часто присоединяются к
+    празднованию Часа кода во время Недели образования в области компьютерных наук
+    (%{campaign_date}), но вы можете провести «Час кода» в любой день года!
+  hoc_how_to_step_educators_plan_desc_03: Выберите пространство, подходящее для количества
+    учащихся и доступных устройств. Учащиеся могут выполнять задания на отдельных
+    устройствах, по очереди совместно использовать устройство или в классе сидеть
+    на доске. Есть даже задания, не подключенные к электросети, которые можно выполнять
+    без каких-либо устройств, поэтому их можно выполнять даже на улице!
+  hoc_how_to_step_educators_spread_word_desc_01: Помогите нам распространить информацию
+    в вашем сообществе с помощью [этих шаблонов электронной почты] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Попросите двух коллег [register](%{register_url})
+    и проведите мероприятие «Час кода». Они, в свою очередь, могут защитить двух коллег,
+    а кто — двух коллег и т. д.
+  hoc_how_to_step_educators_spread_word_desc_03: Попросите директора [провести общешкольное
+    мероприятие] (%{host_url}). Если в нем примут участие 300 и более детей, вы получите
+    специальный набор для помолвки, включающий футболки, плакаты, наклейки для ноутбуков
+    и многое другое. [Расскажите весь свой план школьных мероприятий] (%{share_url}),
+    чтобы пройти отбор.
+  hoc_how_to_step_educators_spread_word_desc_04: Обратитесь в Ассоциацию родителей
+    и учителей и учащихся вашей школы или поделитесь информационными бюллетенями для
+    родителей, чтобы сообщить им, чему учатся их дети.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Начните с [вдохновляющего
+    видео] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Учащиеся занимаются программированием'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Учащиеся изучают искусственный
+    интеллект'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Учитель выступает с заключительным
+    словом'
+  hoc_how_to_step_educators_get_coding_desc: 'Направьте учеников на это занятие, например,
     поделившись ссылкой на доске или через систему управления обучением в классе.
     Ваши ученики могут столкнуться с трудностями — это нормально! Учиться программированию
     — все равно что изучать новый язык: вы не сможете сразу овладеть им свободно.
     Если вы не знаете ответа на этот вопрос, вы можете найти его вместе.'
-  hoc_how_to_step_07_educators_desc_01: 'Обязательно празднуйте успех! Поделитесь
-    фотографиями и видео с мероприятия «Час кода» в социальных сетях. Используйте
-    #HourOfCode и @codeorg, чтобы мы тоже могли подчеркнуть ваш успех!'
-  hoc_how_to_step_07_educators_desc_02: Вы также можете распечатать сертификаты, чтобы
-    ваши ученики могли продемонстрировать свои достижения!
+  hoc_how_to_step_educators_celebrate_desc: 'После мероприятия распечатайте сертификаты
+    об окончании и поздравите своих учеников. Делитесь фотографиями и видео с мероприятия
+    «Час кода» и демонстрируйте достижения своих учеников, используя хэштеги #HourOfCode
+    и @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Информатика не обязательно должна заканчиваться
+    «Часом кода»! Хотя 90% родителей хотят, чтобы их ребенок изучал информатику, в
+    большинстве школ ее до сих пор не преподают. Чтобы помочь, наша учебная программа,
+    разработанная в Интернете, бесплатна и доступна навсегда. Узнайте, как внедрить
+    компьютерную технику в свою школу уже сегодня.
   hoc_ai_top_desc: Каждый может узнать об искусственном интеллекте, будь то ученик
     в классе или преподаватель, открывающий будущее преподавания с использованием
     искусственного интеллекта и его изучением.
@@ -14523,66 +14555,75 @@ ru:
     школ» — это ресурс, позволяющий политикам, школьным руководителям и сотрудникам
     разработать первоначальное руководство по искусственному интеллекту в своих школах.
   teach_ai_button_label: Ознакомьтесь с набором инструментов
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Обучение для детей 11 лет и старше
+  middle_high_page_main_description: Откройте для себя мир компьютерных наук с помощью
+    увлекательных видеороликов, учебных пособий для самостоятельного изучения, занятий
+    по программированию и многого другого!
+  middle_high_page_hero_title: Начните с акции «Час кода»
+  middle_high_page_hero_description: Изучите основы компьютерных наук с помощью бесплатных
+    заданий «Час кода», включающих перетаскивание блоков кода. На выбор предлагаются
+    сотни вариантов, рассчитанных на целый час!
+  middle_high_page_hourofcode_link: Ознакомьтесь с мероприятиями «Час кода»
+  middle_high_page_modules_title: Модули программирования для старшеклассников
+  middle_high_page_modules_description: Эти короткие модули для самостоятельного изучения,
+    адаптированные на основе наших курсов CS Discoveries и CS Principles, для учащихся
+    средних и старших классов — отличный способ изучить концепции, охватывающие все
+    языки и инструменты программирования.
+  middle_high_page_modules_card_title_1: "«Лаборатория игр», введение"
+  middle_high_page_modules_card_title_2: Программирование с помощью черепашки в «Лаборатории
+    приложений»
+  middle_high_page_modules_card_title_3: Событийно-управляемое программирование в
+    «Лаборатории приложений»
+  middle_high_page_modules_card_description_1: В этом введении в нашу среду Game Lab
+    вы можете двигаться в удобном для вас темпе при программировании анимации, интерактивных
+    рисунков и игр.
+  middle_high_page_modules_card_description_2: Откройте для себя возможность создавать
+    многофункциональные интерактивные приложения с помощью JavaScript в App Lab!
+  middle_high_page_modules_card_description_3: Это введение в среду программирования
+    App Lab, в которой учащиеся используют JavaScript для создания интерактивных приложений
+    в удобном для вас темпе.
+  middle_high_page_modules_card_link: Попробуй сделать это
+  middle_high_page_make_your_own_title: Создавайте собственные приложения, игры и
+    веб-страницы
+  middle_high_page_make_your_own_description: 'Помимо курсов, у нас есть инструменты
+    программирования, которые позволят вам раскрыть свой творческий потенциал и создать
+    что-то потрясающее. '
   middle_high_page_make_your_own_card_title_1: Лаборатория приложений
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Лаборатория игр
+  middle_high_page_make_your_own_card_title_3: Веб-лаборатория
+  middle_high_page_make_your_own_card_descrpition_1: App Lab — это среда программирования,
+    в которой можно создавать простые приложения. Создайте приложение, создайте код
+    на JavaScript, используя блоки или текст, а затем поделитесь своим приложением
+    за считанные секунды.
+  middle_high_page_make_your_own_card_descrpition_2: Лаборатория игр - среда программирования,
+    где можно сделать простые анимации и игры с объектами и персонажами, которые взаимодействуют
+    друг с другом.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab — это среда программирования,
+    в которой можно создавать простые веб-страницы с использованием HTML и CSS. Создавайте
+    свои веб-страницы и делитесь своим сайтом за считанные секунды.
   middle_high_page_make_your_own_card_link: Узнать больше
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Дополнительные ресурсы
+  middle_high_page_additional_resources_description: Есть так много способов для дальнейшего
+    изучения информатики! Просмотрите нашу видеотеку или узнайте больше об увлекательных
+    карьерах в области компьютерных наук.
+  middle_high_page_video_library_title: Откройте для себя нашу видеотеку
+  middle_high_page_video_library_description: Изучите основы компьютерных наук с помощью
+    коротких 5-10 минутных видеороликов на такие темы, как искусственный интеллект,
+    Интернет, работа компьютеров, как не подвергнуться взлому, блокчейн, карьера и
+    многое другое!
+  middle_high_page_video_library_link: Просмотр видеотеки
+  middle_high_page_cs_journeys_title: Идите дальше с CS Journeys
+  middle_high_page_cs_journeys_description: Сделайте следующий шаг на пути к информатике.
+    Узнайте о карьере, возможностях наставничества, онлайн-курсах, стипендиях, стажировках
+    и многом другом!
+  middle_high_page_cs_journeys_link: Откройте для себя путешествия по CS
+  middle_high_page_cs_title: Информатика в классе
+  middle_high_page_cs_description: Эти курсы должен проводить учитель! Если вы хотите,
+    чтобы их преподавали в вашей школе, посоветуйтесь с учителем, который отвезет
+    их в класс.
+  middle_high_page_cs_card_title_1: Открытия CS
+  middle_high_page_cs_card_title_2: Принципы CS
+  middle_high_page_cs_card_title_3: AP Компьютерные науки A
   middle_high_page_cs_card_description_1: Бесплатная годовая учебная программа, которая
     знакомит учащихся с основополагающими концепциями информатики и мотивирует их
     узнать, как вычислительная техника и технологии могут повлиять на мир.
@@ -14593,34 +14634,35 @@ ru:
   middle_high_page_cs_card_description_3: Познакомьте учащихся с разработкой программного
     обеспечения и объектно-ориентированным дизайном, изучая язык программирования
     Java в рамках этой бесплатной учебной программы AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Изучите открытия CS
   middle_high_page_cs_link_2: Изучите принципы CS
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Изучите CSA
+  elemeentary_page_main_title: Обучение для детей от 5 до 11 лет
+  elementary_page_main_description: Откройте для себя мир компьютерных наук с помощью
+    увлекательных видеороликов, учебных пособий для самостоятельного изучения, занятий
+    по программированию и многого другого!
+  elementary_page_own_pace_title: Продолжайте учиться в удобном для вас темпе
+  elementary_page_own_pace_description: Создавайте рисунки, игры и многое другое в
+    этих двух отличных вариантах, которые помогут учащимся начать самостоятельное
+    изучение основ информатики.
+  elementary_page_own_pace_card_title_1: Экспресс-курс для предчтения
+  elementary_page_own_pace_card_title_2: Экспресс-курс
+  elementary_page_own_pace_card_description_1: Изучайте информатику в удобном для
+    вас темпе! Научитесь создавать компьютерные программы, развивайте навыки решения
+    проблем и решайте увлекательные задания! Создавайте игры и творческие проекты,
+    чтобы делиться ими с друзьями, семьей и учителями.
+  elementary_page_own_pace_link_1: Начать курс для предчтения
+  elementary_page_own_pace_link_2: Начните экспресс-курс
+  elementary_page_make_your_own_games_title: Создавайте собственные анимации и игры
   elementary_page_make_your_own_games_card_title_1: Лаборатория спрайтов
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Время проявить творческий
+    подход! Используйте блочное кодирование, чтобы создавать в Sprite Lab что-то глупое,
+    милое или необычное. Единственное ограничение — ваше воображение!
+  elementary_page_make_your_own_games_link: Попробуйте лабораторию спрайтов
+  elementary_page_computer_science_title: Информатика в классе
+  elementary_page_computer_science_description: Эти курсы должен проводить учитель!
+    Если вы хотите, чтобы их преподавали в вашей школе, попросите родителя или опекуна
+    вместе с учителем привести их в ваш класс.
   elementary_page_computer_science_card_title_1: Основы компьютерных наук
   elementary_page_computer_science_card_title_2: Связь с информатикой
   elementary_page_computer_science_description_1: Бесплатная годовая учебная программа,
