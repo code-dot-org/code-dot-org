@@ -54,23 +54,23 @@ class AnalyticsReporter {
     //file, in the EVENT_GROUPS variable. If an event is not listed in that mapping, it defaults to 'ungrouped'
 
     // event groups can define a sample rate, as part of the 'amplitude-event-sample-rates' DCDO flag.
-    // e.g. { 'ungrouped' : 0, 'video-events' : 0.25, 'expensive-events' : -1 }
+    // e.g. { 'ungrouped' : 1, 'video-events' : 0.25, 'expensive-events' : -1 }
     // which would, respectively, log:
     //   all events w/o sampling for 'ungrouped'
     //   video-events at a 25% sampling rate
     //   and explicitly turn off expensive-events
+    // sample rate should be in the range (0,1), exclusive
 
-    // if a eventGroup is not defined or set to 0, then all events will be logged w/o sampling.
+    // if a eventGroup is not defined or set to 0 or 1, then all events will be logged w/o sampling.
     // if set to -1, then nothing will be logged.
 
     const sampleRates = DCDO.get('amplitude-event-sample-rates', {});
     const eventGroup = EVENT_GROUPS[eventName] || 'ungrouped';
-    const sampleRate = sampleRates[eventGroup] || 0;
+    const sampleRate = sampleRates[eventGroup] || 1;
 
-    const sampleRateString = sampleRate
-      ? `[SAMPLE RATE ${sampleRate} for ${eventGroup}]`
-      : '';
-    if (sampleRate < 0 || (sampleRate > 0 && Math.random() > sampleRate)) {
+    const sampleRateString =
+      sampleRate !== 1 ? `[SAMPLE RATE ${sampleRate} for ${eventGroup}]` : '';
+    if (sampleRate < 0 || Math.random() > sampleRate) {
       this.log(
         `[SKIPPED SAMPLED EVENT]${sampleRateString}${eventName}. Payload: ${JSON.stringify(
           {
