@@ -51,13 +51,13 @@ class RubricAiEvaluationTest < ActiveSupport::TestCase
     assert rubric.profanity_failure?
   end
 
-  test 'share_failure? returns true when the status reflects a PII failure' do
+  test 'share_filtering_failure? returns true when the status reflects a PII failure' do
     rubric = create :rubric_ai_evaluation, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
-    assert rubric.share_failure?
+    assert rubric.share_filtering_failure?
   end
 
-  test 'share_failure? returns true when the status reflects a profanity failure' do
+  test 'share_filtering_failure? returns true when the status reflects a profanity failure' do
     rubric = create :rubric_ai_evaluation, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION]
-    assert rubric.share_failure?
+    assert rubric.share_filtering_failure?
   end
 end
