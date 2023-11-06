@@ -6,10 +6,10 @@ sl:
   front_title: Pridružite se največjemu izobraževalnemu dogodku v zgodovini, %{campaign_date}
   coming_soon: Coming Soon
   new: Nov
-  hours_of_code_served: Servisne ure kodeksa
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Učenci se učijo v več kot 45 jezikih
   hoc_stat_hours_served: Več kot 100M učencev se je preizkusilo v Uri za Kodo
-  hoc_stat_females: Študentke predstavljajo 50% udeležencev Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 6. december
   campaign_date_start_long: 4. december
   campaign_date_short: 4. do 10. december
@@ -50,10 +50,10 @@ sl:
   hoc2023_social_creativity_with_ai_title: Ura kode - Kaj boste ustvarili?
   hoc2023_social_creativity_with_ai_desc: Uporabite računalništvo za raziskovanje
     in spoznavanje umetne inteligence!
-  hoc2023_what_is_hoc_desc: Hour of Code je brezplačen uvod v računalništvo s pomočjo
-    zabavnih dejavnosti in videoposnetkov za učence vseh stopenj spretnosti. Letošnje
-    praznovanje kodiranja in umetne inteligence podpira več kot 400 partnerjev, 20.000
-    vzgojiteljev in 58.000 prostovoljcev.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Raziščite, igrajte, ustvarite!
   social_hoc2022_explore_play_create: Uporabite računalništvo za raziskovanje, igranje
     in ustvarjanje!
@@ -66,9 +66,9 @@ sl:
     Gomez, glasba iz Disneyjevega »Encanto« in še več!
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, glasba iz Disneyjevega »Encanto« in še več!
-  social_hoc2023_dance_v2: Čas je, da podprete svoje stvari! Ustvarite svojo plesno
-    zabavo z uspešnicami Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía
-    in še več!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Naučite se danes, jutri zgradite svetlejši.
@@ -281,9 +281,9 @@ sl:
     vpogled in podporo drugih vzgojiteljev.
   required_materials: 'Potrebni materiali:'
   optional_materials: 'Izbirni materiali:'
-  for_students: Za študente
+  for_students: For students
   for_educators: Za učitelje
-  call_to_action_host_hoc: Privoščite uro kode
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Organizirajte dogodek
   call_to_action_register_event: Registrirajte svoj dogodek
   call_to_action_register_your_hoc: Registrirajte svojo uro kodiranja
@@ -291,11 +291,11 @@ sl:
   call_to_action_start_activity: Začnite dejavnost
   call_to_action_get_certificates: Pridobite potrdila
   call_to_action_go_beyond_hoc: Preseči uro kodeksa
-  call_to_action_explore_all_hoc_activities: Raziščite vse dejavnosti Hour of Code
-    s spletnega mesta Code.org
-  call_to_action_start_dance_party: Začnite plesno zabavo
-  call_to_action_start_part_02: Začnite drugi del
-  call_to_action_start_unplugged_activity: Začnite odklopljeno dejavnost
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Oglejte si promocijske vire
   call_to_action_learn_more: Več o tem
   call_to_action_watch_now: Pazi zdaj
@@ -392,9 +392,9 @@ sl:
   call_to_action_view_faqs: Oglejte si več pogostih vprašanj
   call_to_action_applications_open: Prijave so zdaj odprte
   call_to_action_apply_cs_ambassador: Prijavite se za ambasadorja CS
-  call_to_action_coming_soon: Prihaja kmalu!
-  call_to_action_learn_how_ai_works: Naučite se, kako deluje AI
-  call_to_action_learn_about_ai: Preberite več o AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Oglejte si navodila za vzgojitelje
   aria_label_call_to_action_hoc_how_to_companies: Oglejte si navodila za podjetja
   aria_label_call_to_action_hoc_how_to_districts: Oglejte si navodila za okrožja
@@ -406,9 +406,9 @@ sl:
   aria_label_call_to_action_hoc_how_to_volunteers: Oglejte si navodila za prostovoljce
   aria_label_call_to_action_hoc_how_to_virtual_events: Oglejte si navodila za navidezne
     dogodke
-  aria_label_call_to_action_dance_01: Začnite dejavnost Plesne zabave
-  aria_label_call_to_action_dance_02: Začetek drugega dela aktivnosti Dance Party
-  aria_label_call_to_action_dance_unplugged: Začnite dejavnost Dance Party brez priključka
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Preberite več o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začnite program poučevanja računalniških
     znanj Osnove strokovnega učenja
@@ -525,25 +525,25 @@ sl:
   curriculum_name_creating_apps_with_devices: Ustvarjanje aplikacij z napravami
   curriculum_name_poetry: Kodiranje s poezijo
   curriculum_name_dance_party: Plesna zabava
-  curriculum_name_dance_party_02: Nadaljujte s plesom
-  curriculum_name_dance_party_unplugged: Plesna zabava brez priključka
-  curriculum_name_dance_party_ai_edition: 'Plesna zabava: AI izdaja'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Reševanje problemov in računalništvo
   curriculum_name_web_development: Spletni razvoj
   curriculum_name_interactive_animations_games: Interaktivne animacije in igre
   curriculum_name_design_process: Proces oblikovanja
   curriculum_name_data_society: Podatki in družba
-  curriculum_desc_dance_party_01: V tej uvodni dejavnosti uporabite kodo, da različni
-    pisani liki preidejo na animirana ozadja in optimistično glasbo.
-  curriculum_desc_dance_party_02: Presežite uvodno vadnico z razširjenimi projektnimi
-    idejami. Prebrskajte knjižnico primerov bolj zapletenih plesnih zabav.
-  curriculum_desc_dance_party_unplugged: Vklopite svoj žleb - računalnik ni potreben!
-    Naučite se, kako lahko koncepte kodiranja, kot so dogodki, uporabite za sinhronizacijo
-    plesalske koreografije.
-  curriculum_desc_dance_party_ai_edition: Spoznajte koncepte umetne inteligence (AI),
-    da ustvarite svojo virtualno plesno zabavo, ki bo predstavila današnje najboljše
-    umetnike. Z več desetinami pesmi, med katerimi lahko izbirate, dosežete vsakega
-    študenta, ne glede na njihov glasbeni okus. Čas je, da podprete svoje stvari!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Prosti nabor osnovnih učnih načrtov, ki študente uvaja v temeljne
     koncepte računalništva.
   curriculum_desc_csf_express: Naučite se ustvarjati računalniške programe, razvijati
@@ -673,12 +673,12 @@ sl:
   module_grade_grade_03: 3. razred
   module_grade_grade_04: Razred 4
   module_grade_grade_05: 5. razred
-  module_age_05_07: Starost 5-7 let
-  module_age_07: Starost 7+
-  module_age_07_11: Starost 7-11 let
-  module_age_11: Starost 11+
-  module_age_13: Starost 13+
-  module_age_all_age: Vse starosti
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Učitelji
   module_grade_6_10_teachers: 6-10 Učitelji
   module_grade_9_12_teachers: 9-12 Učitelji
@@ -774,8 +774,8 @@ sl:
   heading_csa_ai: Iščete stvari, ki jih morate storiti po izpitu AP®?
   heading_bring_cs_to_students: Prinesite računalništvo študentom
   heading_cs_ambassador_program: Program veleposlanikov CS
-  heading_featured_student_projects: Predstavljeni študentski projekti
-  heading_start_hoc_with_videos: Začnite svojo uro kode z navdihujočimi videoposnetki
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Če ste srednješolec, ki je navdušen nad spodbujanjem več
     mladih žensk, da se ukvarjajo z računalništvom v vaši šoli, potem vas potrebujemo!
   cs_ambassador_desc: Računalništvo se dotakne vsakega področja, vključno z medicino,
@@ -871,14 +871,13 @@ sl:
     o načelih računalništva Code.org in pridobite koristne opomnike, nasvete in posodobitve,
     poslane neposredno v mapo« Prejeto«.
   subscribe_form_section_unsubscribe: Odjavite se lahko kadarkoli.
-  dance_hero_heading: Kodirajte plesno zabavo
-  dance_featuring_songs_by_short: 'Predstavljamo pesmi:'
-  dance_featuring_songs_by_long: 'Dance Party vključuje pesmi:'
-  dance_and_more: in več
-  dance_choose_activity: Izberite svojo plesno zabavo
-  dance_afe_disclaimer: Izvajalci, katerih glasba je uporabljena v tej vadnici, ne
-    sponzorirajo ali podpirajo Amazona kot del licenciranja uporabe njihove glasbe
-    na Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Kako deluje Blockchain
   blockchain_hero_desc: Potopite se v svet blockchaina z »Kako deluje Blockchain«,
     našo novo video serijo in spremljajoče lekcije!
@@ -14110,69 +14109,66 @@ sl:
     politik, vodje šol in osebje za razvoj začetnih smernic o umetni inteligenci v
     svojih šolah.
   teach_ai_button_label: Oglejte si komplet orodij
-  middle_high_page_main_title: Učenje za stare 11 let in več
-  middle_high_page_main_description: Raziščite svet računalništva z privlačnimi videoposnetki,
-    vadnicami z lastnim tempom, programirskimi dejavnostmi in še več!
-  middle_high_page_hero_title: Začnite s Hour of Code
-  middle_high_page_hero_description: Naučite se osnov računalništva z brezplačnimi
-    aktivnostmi Hour of Code, ki vključujejo bloke za kodiranje povleci in spusti.
-    Na izbiro je na stotine ur dolgih možnosti!
-  middle_high_page_hourofcode_link: Raziščite dejavnosti Hour of Code
-  middle_high_page_modules_title: Programski moduli za starejše študente
-  middle_high_page_modules_description: Ti kratki, samostojni moduli za srednješolce
-    in srednješolce, prilagojeni našim tečajem CS Discotories in CS Principles, so
-    odličen način za učenje konceptov, ki zajemajo vse programske jezike in orodja.
-  middle_high_page_modules_card_title_1: Uvod v Game Lab
-  middle_high_page_modules_card_title_2: Programiranje želv v laboratoriju App
-  middle_high_page_modules_card_title_3: Programiranje, ki temelji na dogodkih v laboratoriju
-    App
-  middle_high_page_modules_card_description_1: V tem uvodu v naše okolje Game Lab
-    se premikajte s svojim tempom, ko programirate animacije, interaktivno umetnost
-    in igre.
-  middle_high_page_modules_card_description_2: Odklenite možnost ustvarjanja bogatih,
-    interaktivnih aplikacij z JavaScriptom v App Lab!
-  middle_high_page_modules_card_description_3: Pojdite po svojem tempu s tem uvodom
-    v programsko okolje App Lab, v katerem študenti uporabljajo JavaScript za ustvarjanje
-    interaktivnih aplikacij.
-  middle_high_page_modules_card_link: Preizkusite
-  middle_high_page_make_your_own_title: Ustvarite svoje aplikacije, igre in spletne
-    strani
-  middle_high_page_make_your_own_description: 'Poleg tečajev imamo programska orodja,
-    ki vam omogočajo, da raziskujete svojo ustvarjalnost in naredite nekaj neverjetnega. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: Laboratorij za aplikacije
-  middle_high_page_make_your_own_card_title_2: Igralni laboratorij
-  middle_high_page_make_your_own_card_title_3: Spletni laboratorij
-  middle_high_page_make_your_own_card_descrpition_1: App Lab je programsko okolje,
-    kjer lahko ustvarite preproste aplikacije. Oblikujte aplikacijo, kodo v JavaScriptu
-    z bloki ali besedilom, nato pa aplikacijo delite v nekaj sekundah.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab je programsko okolje,
-    kjer lahko ustvarite preproste animacije in igre s predmeti in liki, ki medsebojno
-    delujejo.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab je programsko okolje,
-    kjer lahko ustvarite preproste spletne strani z uporabo HTML in CSS. Oblikujte
-    svoje spletne strani in delite spletno mesto v nekaj sekundah.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Več o tem
-  middle_high_page_additional_resources_title: Dodatni viri
-  middle_high_page_additional_resources_description: Obstaja toliko načinov za nadaljnje
-    raziskovanje računalništva! Prebrskajte našo video knjižnico ali izvedite več
-    o vznemirljivih karierah na področju računalništva.
-  middle_high_page_video_library_title: Odkrijte našo video knjižnico
-  middle_high_page_video_library_description: Naučite se osnov računalništva s kratkimi
-    5-10 minutnimi videoposnetki o temah, kot so umetna inteligenca, internet, kako
-    delujejo računalniki, kako ne bi vas vdrli, blockchain, kariere in še več!
-  middle_high_page_video_library_link: Oglejte si video knjižnico
-  middle_high_page_cs_journeys_title: Pojdite še dlje s CS Journeys
-  middle_high_page_cs_journeys_description: Naredite naslednji korak na svojem računalniškem
-    potovanju. Raziščite kariere, možnosti mentorstva, spletne tečaje, štipendije,
-    pripravništva in še več!
-  middle_high_page_cs_journeys_link: Raziščite CS Journeys
-  middle_high_page_cs_title: Računalništvo v učilnici
-  middle_high_page_cs_description: Te tečaje mora voditi učitelj! Če bi jih radi videli,
-    da se poučujejo v vaši šoli, razmislite o sodelovanju z učiteljem, da jih pripeljete
-    v svoj razred.
-  middle_high_page_cs_card_title_1: CS odkritja
-  middle_high_page_cs_card_title_2: Načela CS
-  middle_high_page_cs_card_title_3: AP Računalništvo A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Brezplačen nabor osnovnih učnih načrtov,
     ki študente uvaja v temeljne koncepte računalništva in jih izziva, da raziščejo,
     kako lahko računalništvo in tehnologija vplivata na svet.
@@ -14183,33 +14179,34 @@ sl:
   middle_high_page_cs_card_description_3: Uvedite študente s programskim inženiringom
     in objektno usmerjenim dizajnom, medtem ko se učijo programskega jezika Java v
     tem brezplačnem učnem načrtu za AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Raziščite CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Raziščite načela CS
-  middle_high_page_cs_link_3: Raziščite CSA
-  elemeentary_page_main_title: Učenje za starost od 5 do 11 let
-  elementary_page_main_description: Raziščite svet računalništva z privlačnimi videoposnetki,
-    vadnicami z lastnim tempom, programirskimi dejavnostmi in še več!
-  elementary_page_own_pace_title: Nadaljujte z učenjem v svojem tempu
-  elementary_page_own_pace_description: Ustvarite risbe, igre in še več v teh dveh
-    odličnih možnostih za študente, ki se začnejo sami učiti osnov računalništva.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express tečaj
-  elementary_page_own_pace_card_title_2: Ekspresni tečaj
-  elementary_page_own_pace_card_description_1: Naučite se računalništva v svojem tempu!
-    Naučite se ustvarjati računalniške programe, razvijati veščine reševanja problemov
-    in premagati zabavne izzive! Ustvarite igre in ustvarjalne projekte, ki jih lahko
-    delite s prijatelji, družino in učitelji.
-  elementary_page_own_pace_link_1: Začnite tečaj pred bralcem
-  elementary_page_own_pace_link_2: Začnite ekspresni tečaj
-  elementary_page_make_your_own_games_title: Ustvarite lastne animacije in igre
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab au Canada
-  elementary_page_make_your_own_games_card_description_1: Čas je, da postanete ustvarjalni!
-    Uporabite kodiranje na osnovi blokov, da v laboratoriju Sprite ustvarite nekaj
-    neumnega, sladkega ali zunanjega prostora. Edina meja je vaša domišljija!
-  elementary_page_make_your_own_games_link: Preizkusite Sprite Lab
-  elementary_page_computer_science_title: Računalništvo v učilnici
-  elementary_page_computer_science_description: Te tečaje mora voditi učitelj! Če
-    bi radi videli, da jih poučujejo v vaši šoli, prosite starša ali skrbnika, naj
-    sodeluje z učiteljem, da jih pripelje v vaš razred.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Osnove računalništva
   elementary_page_computer_science_card_title_2: Computer Science Povezave
   elementary_page_computer_science_description_1: Brezplačen nabor osnovnih učnih

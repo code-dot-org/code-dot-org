@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-02 23:25:50 UTC",
+    "serialized_at": "2023-11-04 18:34:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1336,6 +1336,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the five levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Develop data abstraction using lists to store multiple elements. \n* Explain how the use of data abstraction manages complexity in the program.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g245e49e7a48_0_0)\n\n**Sample Response for Instructors**"
           }
         ]
       },
@@ -1932,7 +1936,13 @@
       "key": "cac9dbfa-11e2-420c-ba4d-cc15ba3a6f0d",
       "position": 9,
       "properties": {
-        "progression_name": "For Loop Practice"
+        "progression_name": "For Loop Practice",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Determine the result or side effect of iteration statements.*\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0) \n\n**Sample Response for Instructors**\n\n\n\n![](https://images.code.org/8618586759adcfae2539e60b9cbf819d-Screenshot 2023-11-04 at 11.16.43 AM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cac9dbfa-11e2-420c-ba4d-cc15ba3a6f0d",
@@ -1954,7 +1964,13 @@
       "key": "8277a753-5403-4923-a480-2e22c5e2e6cd",
       "position": 11,
       "properties": {
-        "progression_name": "Loops and Screen Elements"
+        "progression_name": "Loops and Screen Elements",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Identify the error.\n* Correct the error.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g296d9c820e5_2_0) You may choose to reuse this debugging journal template if you think it will help support your students becoming stronger debuggers.\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c097084c3ab965c6395296f733095c91-Screenshot 2023-11-03 at 11.23.26 AM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8277a753-5403-4923-a480-2e22c5e2e6cd",

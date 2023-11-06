@@ -6,10 +6,11 @@ pl:
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
   new: Nowość
-  hours_of_code_served: Godziny obsługi kodu
-  hoc_stat_languages: Uczniowie uczą się w 40 językach
-  hoc_stat_hours_served: Ponad 100 milionów uczniów próbowało Godzinę Kodowania
-  hoc_stat_females: Uczennice stanowią 50% uczestników Hour of Code
+  hours_of_code_served: Hours of Code Served
+  hoc_stat_languages: Uczniowie przyswajają wiedzę w ponad 40 językach
+  hoc_stat_hours_served: Ponad 100 milionów uczniów wzięło już udział w wydarzeniu
+    w ramach Godziny Kodowania
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4 grudnia
   campaign_date_start_long: 4 grudnia
   campaign_date_short: 4-10 grudnia
@@ -51,10 +52,10 @@ pl:
   hoc2023_social_creativity_with_ai_title: Godzina Kodowania - co stworzysz?
   hoc2023_social_creativity_with_ai_desc: Korzystaj z informatyki, aby odkrywać i
     poznawać sztuczną inteligencję!
-  hoc2023_what_is_hoc_desc: Godzina Kodowania to bezpłatne wprowadzenie do informatyki
-    poprzez zabawne zajęcia i filmy dla uczniów na wszystkich poziomach umiejętności.
-    Tegoroczne święto zarówno programowania, jak i sztucznej inteligencji jest wspierane
-    przez ponad 400 partnerów, 20 000 edukatorów i 58 000 wolontariuszy.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Odkrywaj, graj, twórz!
   social_hoc2022_explore_play_create: Korzystaj z informatyki, by odkrywać, grać i
     tworzyć!
@@ -67,9 +68,9 @@ pl:
     Gomez, muzyka z filmu Disneya „Encanto,” i więcej!
   social_hoc2023_dance: Występują Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, muzyka z filmu Disneya „Encanto” i wiele więcej!
-  social_hoc2023_dance_v2: Nadszedł czas, aby rozłożyć swoje rzeczy! Stwórz własną
-    imprezę taneczną z hitami Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
-    Rosalii i nie tylko!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Ucz się dzisiaj, buduj jaśniejsze jutro.
@@ -228,7 +229,7 @@ pl:
   device_desktop_computer: Komputer stacjonarny
   device_mobile_device: Urządzenie mobilne
   for_everyone: Dla wszystkich
-  for_students_teacher_led_learning: 'Dla uczniów: Uczenie się prowadzone przez nauczyciela'
+  for_students_teacher_led_learning: 'Dla uczniów: uczenie się pod okiem nauczyciela'
   for_students_teacher_led_lessons: 'Dla uczniów: lekcje prowadzone przez nauczyciela'
   professional_development: Rozwój zawodowy
   how_ai_works_video_series: Jak działa AI Seria filmów
@@ -292,7 +293,7 @@ pl:
   optional_materials: 'Materiały opcjonalne:'
   for_students: Dla uczniów
   for_educators: Dla nauczycieli
-  call_to_action_host_hoc: Zorganizuj Godzinę Kodowania
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Zorganizuj wydarzenie
   call_to_action_register_event: Zarejestruj swoje wydarzenie
   call_to_action_register_your_hoc: Zarejestruj swoją Godzinę Kodowania
@@ -303,7 +304,7 @@ pl:
   call_to_action_explore_all_hoc_activities: Przeglądaj wszystkie działania Godziny
     Kodowania z Code.org
   call_to_action_start_dance_party: Rozpocznij potańcówkę
-  call_to_action_start_part_02: Rozpocznij część drugą
+  call_to_action_start_part_02: Start part two
   call_to_action_start_unplugged_activity: Rozpocznij aktywność bez komputera
   call_to_action_view_promo_resources: Przejrzyj zasoby promocyjne
   call_to_action_learn_more: Dowiedz się więcej
@@ -311,7 +312,7 @@ pl:
   call_to_action_try_activity: Wypróbuj aktywność
   call_to_action_try_activities: Wypróbuj aktywności
   call_to_action_try_hoc_ai_activities: Wypróbuj aktywności AI z Godziną Kodowania
-  call_to_action_explore_activities: Eksploruj działania
+  call_to_action_explore_activities: Odkrywaj aktywności
   call_to_action_explore_ai: Poznaj AI
   call_to_action_explore_unit: Poznaj jednostkę
   call_to_action_explore_curriculum: Poznaj program nauczania
@@ -400,9 +401,9 @@ pl:
   call_to_action_view_faqs: Zobacz więcej często zadawanych pytań
   call_to_action_applications_open: Aplikacje już otwarte
   call_to_action_apply_cs_ambassador: Złóż wniosek, aby zostać ambasadorem informatyki
-  call_to_action_coming_soon: Już wkrótce!
-  call_to_action_learn_how_ai_works: Dowiedz się, jak działa sztuczna inteligencja
-  call_to_action_learn_about_ai: Dowiedz się więcej o sztucznej inteligencji
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Zobacz poradnik dla nauczycieli
   aria_label_call_to_action_hoc_how_to_companies: Zobacz poradnik dla firm
   aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dystryktów
@@ -530,7 +531,7 @@ pl:
   curriculum_name_creating_apps_with_devices: Tworzenie aplikacji za pomocą urządzeń
   curriculum_name_poetry: Kodowanie z poezją
   curriculum_name_dance_party: Potańcówka
-  curriculum_name_dance_party_02: Tańcz dalej
+  curriculum_name_dance_party_02: Keep On Dancing
   curriculum_name_dance_party_unplugged: Potańcówka bez komputera
   curriculum_name_dance_party_ai_edition: 'Potańcówka: edycja AI'
   curriculum_name_problem_solving_computing: Rozwiązywanie problemów i informatyka
@@ -542,9 +543,8 @@ pl:
     kolorowe postacie przeniosły się do animowanego tła i optymistycznej muzyki.
   curriculum_desc_dance_party_02: Wyjdź poza samouczek wprowadzający z rozszerzonymi
     pomysłami na projekt. Przejrzyj bibliotekę przykładów bardziej złożonych potańcówek.
-  curriculum_desc_dance_party_unplugged: Włącz swój rowk - komputer nie jest potrzebny!
-    Dowiedz się, jak koncepcje kodowania, takie jak wydarzenia, mogą być używane do
-    synchronizacji choreografii tancerza.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
   curriculum_desc_dance_party_ai_edition: Dowiedz się o koncepcjach sztucznej inteligencji
     (AI), aby stworzyć własną wirtualną potańcówkę prezentującą dzisiejszych najlepszych
     artystów. Z dziesiątkami piosenek do wyboru, docieraj do każdego ucznia bez względu
@@ -667,8 +667,8 @@ pl:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
-  module_grade_2_8: 2-8
-  module_grade_2_12: 2-12
+  module_grade_2_8: W wieku 2–8 lat
+  module_grade_2_12: W wieku 2–12 lat
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
@@ -684,11 +684,11 @@ pl:
   module_grade_grade_03: Klasa 3
   module_grade_grade_04: Klasa 4
   module_grade_grade_05: Klasa 5
-  module_age_05_07: Wiek 5-7
-  module_age_07: Wiek 7+
-  module_age_07_11: Wiek 7-11
-  module_age_11: Wiek 11+
-  module_age_13: Wiek 13+
+  module_age_05_07: W wieku 5-7 lat
+  module_age_07: W wieku 7+ lat
+  module_age_07_11: W wieku 7-11 lat
+  module_age_11: W wieku 11+ lat
+  module_age_13: W wieku 13+ lat
   module_age_all_age: Wszystkie grupy wiekowe
   module_grade_k_5_teachers: Nauczyciele K-5
   module_grade_6_10_teachers: 6-10 Nauczycieli
@@ -785,9 +785,8 @@ pl:
   heading_csa_ai: Szukasz rzeczy do zrobienia po egzaminie AP®?
   heading_bring_cs_to_students: Przynieś informatykę studentom
   heading_cs_ambassador_program: Program Ambasadorów Informatyki
-  heading_featured_student_projects: Polecane projekty studenckie
-  heading_start_hoc_with_videos: Rozpocznij swoją Godzinę Kodowania od inspirujących
-    filmów
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Jeśli jesteś uczniem liceum, który pasjonuje się zachęcaniem
     większej liczby młodych kobiet do studiowania informatyki w Twojej szkole, wtedy
     Cię potrzebujemy!
@@ -886,13 +885,12 @@ pl:
   subscribe_form_section_unsubscribe: Możesz zrezygnować z subskrypcji w dowolnym
     momencie.
   dance_hero_heading: Koduj potańcówkę
-  dance_featuring_songs_by_short: 'Zawiera piosenki autorstwa:'
+  dance_featuring_songs_by_short: 'Featuring songs by:'
   dance_featuring_songs_by_long: 'Potańcówka zawiera piosenki:'
   dance_and_more: i więcej
-  dance_choose_activity: Wybierz swoją imprezę taneczną
-  dance_afe_disclaimer: Artyści, których muzyka jest używana w tym samouczku, nie
-    sponsorują ani nie popierają Amazon w ramach licencjonowania korzystania z ich
-    muzyki na Code.org.
+  dance_choose_activity: Wybierz swoją potańcówkę
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Jak działa Blockchain
   blockchain_hero_desc: Zanurz się w świecie blockchain dzięki „How Blockchain Works”,
     naszej nowej serii filmów i towarzyszącym lekcjom!
@@ -2031,7 +2029,7 @@ pl:
     aby informatyka była podstawą dla wszystkich studentów. Plus, dowiedz się, jak
     możesz wprowadzić zmiany w swoim stanie.
   yw_page_top_heading: Młode kobiety w informatyce
-  yw_page_top_desc: Zostań ambasadorem CS i bądź częścią likwidacji różnicy między
+  yw_page_top_desc: Zostań Ambasadorem CS i bądź częścią zmniejszania różnic między
     płciami w informatyce.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
@@ -2160,7 +2158,7 @@ pl:
     każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są
     dostępne w ponad 40 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina
     kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>
-  front_intro_default_2: Globalny ruch w 180+ krajach.
+  front_intro_default_2: Globalny trend w ponad 180 krajach.
   front_watch_video: Obejrzyj nowy film
   front_watch_regular_video: Obejrzyj wideo
   front_volunteers: Potrzebni są wolontariusze techniczni
@@ -2341,7 +2339,7 @@ pl:
     przybliżyć ją 100 milionom uczniów.
   front_join_us_description_short: Informatyka jest podstawą dla każdego dla ucznia.
   front_join_us_button: Dołącz do nas
-  front_what_is_hoc: Czym jest Godzina kodowania?
+  front_what_is_hoc: Czym jest Godzina Kodowania?
   front_join_us_header: Każdy może nauczyć się podstaw dobrze się przy tym bawiąc!
   front_join_us_volunteer_header: Wolontariusze na Godzinę Kodowania
   front_join_us_tutorials: Wybierz swój samouczek dla Godziny Kodowania!
@@ -2402,9 +2400,9 @@ pl:
     się podstaw. Ta oddolna inicjatywa jest wspierana przez ponad 400 partnerów i
     200 000 nauczycieli na całym świecie.
   hoc_homepage_registration_desc: Twoja klasa lub grupa może dołączyć do milionów
-    na całym świecie podczas Godziny Kodowania! Rejestracja na coroczne obchody Tygodnia
-    Edukacji Informatycznej rozpoczyna się w październiku. Chociaż, Godzina Kodowania
-    jest dostępna przez cały rok.
+    innych osób na całym świecie podczas Godziny Kodowania! Rejestracja na doroczne
+    obchody Tygodnia Edukacji Informatycznej rozpoczyna się w październiku. Wydarzenia
+    w ramach Godziny Kodowania odbywają się jednak przez cały rok.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Przeczytaj nasz przewodnik](%{howto_guide_url}),
     aby zaplanować wydarzenie dla swojej klasy."
   hoc_homepage_highlights_heading: Atrakcje Godziny Kodowania
@@ -2441,7 +2439,9 @@ pl:
   signup_event_entire_school_label: Cała moja szkoła uczestniczy
   signup_event_location_label: Miejsce wydarzenia
   signup_event_location_error: Wymagane jest miejsce wydarzenia.
-  signup_special_event_flag_label: Wyeksponuj moje specjalne wydarzenie
+  signup_special_event_flag_label: Moje wydarzenie obejmie całą dzielnicę, całą organizację,
+    członków społeczności oraz/lub zakłada realizację innych specjalnych planów, wykraczających
+    poza ramy czasowe godziny
   signup_special_event_details_label: Szczegóły wydarzenia specjalnego
   signup_send_posters_flag_label: Wyślij <a href= "/resources/promote#posters"> plakaty</a>
     do mojej szkoły lub organizacji (USA tylko, do wyczerpania zapasów)
@@ -2535,7 +2535,8 @@ pl:
     wydarzeń. Wszystkie zarejestrowane wydarzenia z prawidłowym adresem mogą być wyświetlane
     na <a href='%{events_url}'> stronie wydarzeń.</a>
   map_warning_markdown: Pełna lista wydarzeń, które można przeglądać na [stronie wydarzeń.](%{events_url})
-  map_view_all_events: Zobacz pełną listę wydarzeń Hour of Code [here](%{events_url}).
+  map_view_all_events: Zobacz pełną listę wydarzeń organizowanych w ramach Godzina
+    Kodowania [here](%{events_url}).
   meta_tag_og_title: Zbliża się Godzina Kodowania
   meta_tag_og_description: The Hour of Code to globalny ruch docierający do dziesiątek
     milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek
@@ -2556,7 +2557,7 @@ pl:
   twitter_default_text_donor: 'Biorę udział w tegorocznym #HourOfCode, prawda? (Dzięki
     %{random_donor} za wsparcie @codeorg)'
   hoc_faq_title: FAQ - Najczęściej zadawane pytania
-  hoc_faq_what_is_hoc_q: Czym jest Godzina kodowania?
+  hoc_faq_what_is_hoc_q: Czym jest Godzina Kodowania?
   hoc_faq_what_is_hoc_a_markdown: Godzina kodowania to jednogodzinne wprowadzenie
     do informatyki, mające na celu demistyfikację "code" - programowania - i pokazanie,
     że każdy może nauczyć się podstaw i poszerzyć swój udział w obszarze informatyki.
@@ -2686,21 +2687,22 @@ pl:
   hoc_faq_logo_a_markdown: Godzina Kodowania jest znakiem towarowym. Nie chcemy ogarniczać
     jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Prosimy
     zapoznać się z [tymi wytycznymi korzystania] (%{logo_url}).
-  hoc_faq_bug_q: Znalazłem błąd w aktywności Godzina Kodowania! Co powinienem zrobić?
+  hoc_faq_bug_q: Znalazłem błąd w aktywności Godziny Kodowania! Co powinienem zrobić?
   hoc_faq_bug_a_markdown: |-
     Och nie! Jeśli natknąłeś się na błąd w aktywności Godzina Kodowania - najpierw sprawdź adres URL aktywności, w której się zajmujesz. Jeśli adres URL zaczyna się od studio.code.org, nasz zespół wsparcia Code.org może pomóc! Kliknij ikonę znaku zapytania w prawym górnym rogu ekranu, a następnie wybierz „Zgłoś problem” z menu rozwijanego.
 
     Jeśli adres URL nie zaczyna się od studio.code.org, prawdopodobnie pracujesz nad działalnością strony trzeciej i będziesz musiał skontaktować się z zespołem wsparcia tej firmy w celu uzyskania dalszej pomocy.
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
-  stats_i18n: Uczniowie uczą się w 40 językach
+  stats_i18n: Uczniowie przyswajają wiedzę w ponad 40 językach
   stats_tumblr: 'Tumblr: 3,5 roku'
   stats_facebook: 'Facebook: 3 lata'
   stats_twitter: 'Twitter: 2,5 roku'
   stats_pinterest: 'Pinterest: 2 lata'
   stats_instagram: 'Instagram: 14 miesięcy'
   stats_hoc: 'Godzina kodowania: 5 dni'
-  stats_global: Ponad 100 milionów uczniów próbowało Godzinę Kodowania
+  stats_global: Ponad 100 milionów uczniów wzięło już udział w wydarzeniu w ramach
+    Godziny Kodowania
   stats_girls_more: Więcej dziewczynek spróbowało swoich sił w informatyce niż przez
     ostatnie 70 lat
   stats_females: Kobiety w informatyce mają udział tylko 20% w kursach w szkołach
@@ -2796,11 +2798,11 @@ pl:
   event: wydarzenie
   events: wydarzenia
   highlights_title: Najważniejsze wydarzenia
-  highlights_header: Atrakcje Godziny Kodowania
+  highlights_header: Najciekawsze wydarzenia Godziny Kodowania
   highlights_description: Niektóre z naszych ulubionych momentów z kampanii Godziny
     Kodowania.
   highlights_previous: Najważniejsze atrakcje poprzednich lat
-  highlights_see_more: Zobacz więcej atrakcji
+  highlights_see_more: Zobacz więcej najciekawszych wydarzeń
   highlights_readmore: Czytaj więcej
   highlights_watchvideo: Obejrzyj wideo
   highlights_facebook: Udostępnij na Facebooku
@@ -14559,8 +14561,8 @@ pl:
     Coalition:'
   thank_you_page_individual_organization_title: 'Dziękujemy następującym osobom i
     organizacjom za wkład w ten raport:'
-  thank_you_page_individual_organization_description: Nadzorcy edukacji informatycznej
-    w każdej państwowej agencji edukacyjnej, College Board, Della Cronin, Stuart Dexler,
+  thank_you_page_individual_organization_description: Opiekunowie edukacji informatycznej
+    w każdej państwowej agencji oświatowej, College Board, Della Cronin, Stuart Dexler,
     Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
   thank_you_page_teachers_students_title: 'Dziękujemy uczniom i nauczycielom cytowanym
     w tym raporcie:'
@@ -14728,60 +14730,59 @@ pl:
     sztucznej inteligencji w ich szkołach.
   teach_ai_button_label: Zobacz zestaw narzędzi
   middle_high_page_main_title: Nauka dla osób w wieku 11 lat i starszych
-  middle_high_page_main_description: Poznaj świat informatyki dzięki angażującym filmom,
-    samouczkom z własnym tempem, zajęciom programistycznym i nie tylko!
-  middle_high_page_hero_title: Rozpocznij pracę z Godziną Kodowania
-  middle_high_page_hero_description: Poznaj podstawy informatyki dzięki darmowym zajęciom
-    Hour of Code, zawierającym bloki kodowania typu „przeciągnij i upuść”. Do wyboru
-    są setki godzinnych opcji!
-  middle_high_page_hourofcode_link: Poznaj działania związane z Godziną Kodowania
-  middle_high_page_modules_title: Moduły programowania dla starszych uczniów
-  middle_high_page_modules_description: Zaadaptowane na podstawie naszych kursów CS
-    Discovery i CS Principles, te krótkie, samodzielne moduły dla uczniów szkół średnich
-    i licealnych to świetny sposób na poznanie koncepcji obejmujących wszystkie języki
-    programowania i narzędzia.
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
   middle_high_page_modules_card_title_1: Wprowadzenie do Game Lab
   middle_high_page_modules_card_title_2: Programowania żółwia w App Lab
   middle_high_page_modules_card_title_3: Programowanie sterowane zdarzeniami w App
     Lab
-  middle_high_page_modules_card_description_1: Poruszaj się we własnym tempie w tym
-    wprowadzeniu do naszego środowiska Game Lab, programując animacje, interaktywną
-    grafikę i gry.
-  middle_high_page_modules_card_description_2: Odblokuj możliwość tworzenia bogatych,
-    interaktywnych aplikacji za pomocą JavaScript w App Lab!
-  middle_high_page_modules_card_description_3: Idź we własnym tempie dzięki temu wprowadzeniu
-    do środowiska programowania App Lab, w którym uczniowie używają JavaScript do
-    tworzenia interaktywnych aplikacji.
-  middle_high_page_modules_card_link: Wypróbuj to
-  middle_high_page_make_your_own_title: Twórz własne aplikacje, gry i strony internetowe
-  middle_high_page_make_your_own_description: 'Oprócz kursów mamy narzędzia programistyczne,
-    które pozwalają odkryć swoją kreatywność i stworzyć coś niesamowitego. '
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Laboratorium Gier (Game Lab)
+  middle_high_page_make_your_own_card_title_2: Game Lab
   middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab to środowisko programistyczne,
-    w którym można tworzyć proste aplikacje. Zaprojektuj aplikację, kod w JavaScript
-    z blokami lub tekstem, a następnie udostępnij aplikację w kilka sekund.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab jest środowiskiem programistycznym,
-    w którym możesz wykonać proste animacje i gry używając obiektów i postaci, które
-    współdziałają ze sobą.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab to środowisko programistyczne,
-    w którym można tworzyć proste strony internetowe za pomocą HTML i CSS. Zaprojektuj
-    swoje strony internetowe i udostępnij swoją witrynę w kilka sekund.
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Dowiedz się więcej
   middle_high_page_additional_resources_title: Dodatkowe zasoby
-  middle_high_page_additional_resources_description: Jest tak wiele sposobów na dalsze
-    odkrywanie informatyki! Przejrzyj naszą bibliotekę wideo lub dowiedz się więcej
-    o ekscytujących karierach w dziedzinie informatyki.
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
   middle_high_page_video_library_title: Odkryj naszą bibliotekę filmów
-  middle_high_page_video_library_description: Poznaj podstawy informatyki dzięki krótkim
-    5-10 minutowym filmom na takie tematy jak sztuczna inteligencja, Internet, jak
-    działają komputery, jak nie dać się zhakować, blockchain, kariery i nie tylko!
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
   middle_high_page_video_library_link: Przejrzyj bibliotekę filmów
-  middle_high_page_cs_journeys_title: Idź dalej dzięki CS Journeys
-  middle_high_page_cs_journeys_description: Zrób kolejny krok w swojej podróży informatycznej.
-    Poznaj kariery, możliwości mentoringu, kursy online, stypendia, staże i nie tylko!
-  middle_high_page_cs_journeys_link: Poznaj CS Journeys
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
   middle_high_page_cs_title: Informatyka w klasie
   middle_high_page_cs_description: Kursy te powinny być prowadzone przez nauczyciela!
     Jeśli chcesz, aby były nauczane w Twojej szkole, rozważ współpracę z nauczycielem,
@@ -14803,8 +14804,8 @@ pl:
   middle_high_page_cs_link_2: Poznaj zasady CS
   middle_high_page_cs_link_3: Poznaj CSA
   elemeentary_page_main_title: Nauka dla osób w wieku od 5 do 11 lat
-  elementary_page_main_description: Poznaj świat informatyki dzięki angażującym filmom,
-    samouczkom z własnym tempem, zajęciom programistycznym i nie tylko!
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
   elementary_page_own_pace_title: Kontynuuj naukę we własnym tempie
   elementary_page_own_pace_description: Twórz rysunki, gry i nie tylko w tych dwóch
     doskonałych opcjach dla uczniów, którzy rozpoczynają samodzielną naukę podstaw

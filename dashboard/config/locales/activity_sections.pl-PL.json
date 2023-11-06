@@ -4973,7 +4973,8 @@
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikacja: Twórca historyjek"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
@@ -9002,7 +9003,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab i dane Isaaca"
         },
         "57e61086-a30b-47d8-ad65-af83a970d437": {
           "name": "Dziennik"
@@ -14278,7 +14280,8 @@
         "52a024ed-055f-4d25-a4f8-52e0a48bff85": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikacja: Twórca historyjek"
         },
         "ed108dd1-16c6-4e7f-9bb5-8d38bd7c86fe": {
           "tips": [
@@ -14885,7 +14888,8 @@
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i strukturę do swojej strony"
         },
         "6fe582a0-4693-4d62-9b6c-2f9f4a753e8e": {
           "progression_name": "Dodaj styl do swojej strony"
@@ -15275,7 +15279,8 @@
         "3a14abd4-7d6f-4742-be18-b32c2faaf3b4": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i HTML"
         },
         "408d2c85-37a0-4ca3-81a7-16bf8d70415b": {
           "progression_name": "Dodaj Styl"
@@ -18782,7 +18787,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab i dane Isaaca"
         },
         "facdc92c-bb56-496c-9a0d-7f483f0d4c52": {
           "name": "Dziennik"
@@ -23494,7 +23500,8 @@
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
           "tips": [
             null
-          ]
+          ],
+          "name": "Wprowadzenie do sztucznej inteligencji"
         },
         "a45155ff-19af-43ac-bf11-6ca4001816f4": {
           "tips": [
@@ -25322,7 +25329,8 @@
         "da48979a-dd8b-4b86-8807-fec8df453f84": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplikacja: Twórca historyjek"
         },
         "1a4ca5a7-53ea-4ff7-b3ee-7258968cd135": {
           "tips": [
@@ -25898,7 +25906,8 @@
         "7aa3a1a8-3fe5-4e82-ad83-0bc7aff94325": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i strukturę do swojej strony"
         },
         "43ee1323-2464-4081-a740-cdf6397fc3e4": {
           "progression_name": "Dodaj styl do swojej strony"
@@ -26248,7 +26257,8 @@
         "4860ef5b-aedc-4828-ae25-0d22347b4ae3": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodaj zawartość i HTML"
         },
         "d331a5e4-050f-40fb-a895-45db32b5ac22": {
           "tips": [
@@ -30161,7 +30171,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI Lab i dane Isaaca"
         },
         "7a6bc17e-4ad8-4aa4-9d09-e8ff23be6a5e": {
           "name": "Dziennik"
@@ -37334,6 +37345,180 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zakończenie"
+        },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "Aplikacja: Ulepszona aplikacja dla zwierząt"
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "Aplikacja: Czy to Twoje urodziny?"
+        },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "Aplikacja: Parki Narodowe"
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "Aplikacja: Ile krajów"
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "Aplikacja: Moje słynne urodziny"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "Aplikacja: Notatnik znaczków"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "Aplikacja: Najszybszy palec"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "Aplikacja: Zgadnij liczbę"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "Aplikacja: Gdzie powinienem mieszkać?"
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "Aplikacja: Outfit Picker"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "Aplikacja: Wyszukiwarka znajomych"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "Aplikacja: Wybierz film dla dzieci"
+        },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "Wyzwanie: Listy"
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "Wyzwanie: Kolory RGB"
+        },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "Dodaj zawartość i strukturę do swojej strony"
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "Dodaj zawartość i HTML"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Dodaj ruch"
+        },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widżet liczb binarnych"
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "8-bitowy widżet liczb binarnych"
+        },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "AI Lab i dane Kima"
+        },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "Alternatywne zbiory danych"
+        },
+        "b335d97a-de6e-4811-9880-83afcc0f6c36": {
+          "progression_name": "Aplikacja: Ulepszona aplikacja dla zwierząt"
+        },
+        "7e98a10f-cf10-42fa-aa50-2fe5f52eb606": {
+          "progression_name": "Aplikacja: Czy to Twoje urodziny?"
+        },
+        "1c949e6e-20aa-4799-8eba-39d904bc433b": {
+          "progression_name": "Aplikacja: Parki Narodowe"
+        },
+        "7dd6fa02-5826-4473-b57a-6ed6cf47f6f8": {
+          "progression_name": "Aplikacja: Ile krajów"
+        },
+        "260e39c6-bbec-4951-a85d-be5257e787df": {
+          "progression_name": "Aplikacja: Moje słynne urodziny"
+        },
+        "dd956117-4160-4bac-93f1-2fc1ca0737d3": {
+          "progression_name": "Aplikacja: Notatnik znaczków"
+        },
+        "fd51d043-b16c-41a2-8c01-550b31c8100b": {
+          "progression_name": "Aplikacja: Najszybszy palec"
+        },
+        "5a010975-342e-485a-8be9-6e534ed26b49": {
+          "progression_name": "Aplikacja: Zgadnij liczbę"
+        },
+        "9e7b45ea-2521-47bc-a453-0c522fe52ec3": {
+          "progression_name": "Aplikacja: Gdzie powinienem mieszkać?"
+        },
+        "286386cc-e586-4d44-bf85-60c800773505": {
+          "progression_name": "Aplikacja: Outfit Picker"
+        },
+        "e6e2ba98-c7fc-428e-9a47-f22073547f0c": {
+          "progression_name": "Aplikacja: Wyszukiwarka znajomych"
+        },
+        "6b3b1859-20d3-4a4f-b929-8336e5c63082": {
+          "progression_name": "Aplikacja: Wybierz film dla dzieci"
+        },
+        "f692bf65-f128-4b88-8078-412b8f55c38d": {
+          "progression_name": "Wyzwanie: Listy"
+        },
+        "22a6da59-048b-4d00-83fb-b86c5d5555fd": {
+          "progression_name": "Wyzwanie: Kolory RGB"
+        },
+        "1a0e8cf1-caac-45a4-be73-d16e4557231c": {
+          "progression_name": "Dodaj ruch"
+        },
+        "4454a825-3e39-4e79-bc6a-012f5029fe21": {
+          "progression_name": "Widżet liczb binarnych"
+        },
+        "8a0f0675-afba-4c25-9de4-b4f8e0eda208": {
+          "progression_name": "8-bitowy widżet liczb binarnych"
+        },
+        "e826b464-2d59-45e0-bed3-02cb13fe7729": {
+          "progression_name": "AI Lab i dane Kima"
+        },
+        "9fbfbd48-7e75-4b54-8dae-d4aa36823cf3": {
+          "progression_name": "Alternatywne zbiory danych"
+        },
+        "8fe0e43f-ea04-4937-b6ba-5bbbb91189af": {
+          "progression_name": "Aplikacja: Ulepszona aplikacja dla zwierząt"
+        },
+        "f02b8562-d5a3-4aa5-a57e-7174d37c3cf5": {
+          "progression_name": "Aplikacja: Czy to Twoje urodziny?"
+        },
+        "db792031-5ec8-4dc8-b3e7-f07cefd645b9": {
+          "progression_name": "Aplikacja: Parki Narodowe"
+        },
+        "8f2f4d6d-c2b4-4483-af0e-59a50dabfdb6": {
+          "progression_name": "Aplikacja: Ile krajów"
+        },
+        "961a001a-b4c3-4038-a5ff-160fe33da60e": {
+          "progression_name": "Aplikacja: Moje słynne urodziny"
+        },
+        "3b140950-5ddf-421b-9acc-6fcc2983a429": {
+          "progression_name": "Aplikacja: Notatnik znaczków"
+        },
+        "b80b646d-9233-4e2e-a531-93d84591fb98": {
+          "progression_name": "Aplikacja: Najszybszy palec"
+        },
+        "feee2403-a8f0-402e-a9f8-957514f214a6": {
+          "progression_name": "Aplikacja: Zgadnij liczbę"
+        },
+        "7d2c7965-0151-4492-be5d-84cacd68005a": {
+          "progression_name": "Aplikacja: Gdzie powinienem mieszkać?"
+        },
+        "45881d31-b805-4b57-8ada-41046c9643bd": {
+          "progression_name": "Aplikacja: Outfit Picker"
+        },
+        "cb0df31d-ec5d-42bd-be39-b1b09bcff75d": {
+          "progression_name": "Aplikacja: Wyszukiwarka znajomych"
+        },
+        "e5804c4b-55a2-4df2-ad40-ab99d97b2d7c": {
+          "progression_name": "Aplikacja: Wybierz film dla dzieci"
+        },
+        "fbf994dd-d94d-4ce3-8ef4-b93078c88c50": {
+          "progression_name": "Wyzwanie: Listy"
+        },
+        "be676d46-8a2a-41ba-873b-860534463ee9": {
+          "progression_name": "Dodaj ruch"
+        },
+        "fc0bc207-e0be-4ef9-a039-e0a8f00fab3d": {
+          "progression_name": "Widżet liczb binarnych"
+        },
+        "b4985025-6849-40c6-8efb-3ff0c0cf6929": {
+          "progression_name": "8-bitowy widżet liczb binarnych"
+        },
+        "7aba2286-6505-47db-b2e4-a50d21d18b48": {
+          "progression_name": "AI Lab i dane Kima"
+        },
+        "2e5a5de3-a67e-44c3-a3a2-9425919aad55": {
+          "progression_name": "Alternatywne zbiory danych"
         }
       }
     }

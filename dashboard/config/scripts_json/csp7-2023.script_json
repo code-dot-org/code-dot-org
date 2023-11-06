@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-02 23:19:10 UTC",
+    "serialized_at": "2023-11-04 17:55:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1795,7 +1795,11 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n"
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n\n**Extension Opportunities:** Levels 1 and 2: Students can add additional features to the two apps in levels 1 and 2 using the library functions made available.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Combine and modify existing algorithms.*\n\n\n[Level 1](https://studio.code.org/s/csp7-2023/lessons/7/levels/1) from this lesson is a good place to check to see how students do with this skill.\n\n**[Example Solution for Instructors](https://studio.code.org/projects/applab/baPQ3qxDV3Lp7AAbF3_ctHvflMD11dpU7vh9evNFii4/view)**"
           }
         ]
       },
@@ -1836,13 +1840,7 @@
       "key": "fdcb0d2a-0a76-40f2-be08-7caf860558b7",
       "position": 6,
       "properties": {
-        "progression_name": "Testing Libraries",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Extension Opportunities:** Levels 1 and 2: Students can add additional features to the two apps in levels 1 and 2 using the library functions made available."
-          }
-        ]
+        "progression_name": "Testing Libraries"
       },
       "seeding_key": {
         "activity_section.key": "fdcb0d2a-0a76-40f2-be08-7caf860558b7",
@@ -4717,6 +4715,20 @@
         "lesson.key": "Libraries Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.J.1"
       }
     },
     {

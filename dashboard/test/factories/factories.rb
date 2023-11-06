@@ -1867,4 +1867,10 @@ FactoryBot.define do
     understanding {0}
     ai_confidence {1}
   end
+
+  factory :potential_teacher do
+    association :source_course_offering
+    name {"foosbars"}
+    email {"foobar@example.com"}
+  end
 end

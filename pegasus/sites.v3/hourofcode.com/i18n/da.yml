@@ -7,10 +7,10 @@ da:
     2015
   coming_soon: Kommer snart
   new: Ny
-  hours_of_code_served: Timer med kode serveret
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Elever kan lære på 40 sprog
   hoc_stat_hours_served: Over 100 millioner elever har prøvet en Hour of Code
-  hoc_stat_females: Kvindelige studerende udgør 50% af deltagerne i Hour of Code
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: 4. Dec.
   campaign_date_start_long: 4. December
   campaign_date_short: 4. - 10. december
@@ -50,10 +50,10 @@ da:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Hvad vil du oprette?
   hoc2023_social_creativity_with_ai_desc: Brug datalogi til at udforske og lære om
     AI!
-  hoc2023_what_is_hoc_desc: Hour of Code er en gratis introduktion til datalogi gennem
-    sjove aktiviteter og videoer for elever på alle færdighedsniveauer. Årets fejring
-    af både kodning og AI støttes af over 400 partnere, 20.000 undervisere og 58.000
-    frivillige.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Udforsk, Spil, Opret!
   social_hoc2022_explore_play_create: Brug datalogi til at udforske, lege og skabe!
   codeorg_homepage_hoc2022_body: Udforsk universet, score et mål, bryde et træk -
@@ -65,9 +65,9 @@ da:
     musik fra Disneys „Encanto“ og mere!
   social_hoc2023_dance: Med Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     musik fra Disneys „Encanto,“ og mere!
-  social_hoc2023_dance_v2: Det er tid til at stramme dine ting! Opret din egen dansefest
-    med hits af Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía og
-    mere!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Lær i dag, byg en lysere fremtid.
@@ -279,9 +279,9 @@ da:
     fra andre undervisere.
   required_materials: 'Nødvendige materialer:'
   optional_materials: 'Valgfrie materialer:'
-  for_students: For studerende
+  for_students: For students
   for_educators: For lærere
-  call_to_action_host_hoc: Vær vært for en time med kode
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Afhold en begivenhed
   call_to_action_register_event: Tilmeld din begivenhed
   call_to_action_register_your_hoc: Registrer din Hour of Code
@@ -289,11 +289,11 @@ da:
   call_to_action_start_activity: Start en aktivitet
   call_to_action_get_certificates: Få certifikater
   call_to_action_go_beyond_hoc: Gå ud over kodens time
-  call_to_action_explore_all_hoc_activities: Udforsk alle Hour of Code-aktiviteter
-    fra Code.org
-  call_to_action_start_dance_party: Start dansefest
-  call_to_action_start_part_02: Start del to
-  call_to_action_start_unplugged_activity: Start aktivitet, der ikke er tilsluttet
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Se kampagneressourcer
   call_to_action_learn_more: Læs mere
   call_to_action_watch_now: Se nu
@@ -389,9 +389,9 @@ da:
   call_to_action_view_faqs: Se flere ofte stillede spørgsmål
   call_to_action_applications_open: Der er nu åbent for ansøgninger
   call_to_action_apply_cs_ambassador: Ansøg om at blive kodningsambassadør
-  call_to_action_coming_soon: Kommer snart!
-  call_to_action_learn_how_ai_works: Få mere at vide om, hvordan AI fungerer
-  call_to_action_learn_about_ai: Få mere at vide om AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Se vejledningen til undervisere
   aria_label_call_to_action_hoc_how_to_companies: Se vejledningen til virksomheder
   aria_label_call_to_action_hoc_how_to_districts: Se vejledningen til distrikter
@@ -402,9 +402,9 @@ da:
   aria_label_call_to_action_hoc_how_to_volunteers: Se vejledningen til frivillige
   aria_label_call_to_action_hoc_how_to_virtual_events: Se vejledningen til virtuelle
     begivenheder
-  aria_label_call_to_action_dance_01: Start dansefestaktiviteten
-  aria_label_call_to_action_dance_02: Start del to af Dance Party-aktiviteten
-  aria_label_call_to_action_dance_unplugged: Start Dance Party-aktiviteten uden forbindelse
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Læs mere om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     professionelle læringsprogram
@@ -517,26 +517,25 @@ da:
   curriculum_name_creating_apps_with_devices: Oprettelse af apps med enheder
   curriculum_name_poetry: Kodning med poesi
   curriculum_name_dance_party: Danse fest
-  curriculum_name_dance_party_02: Bliv ved med at danse
-  curriculum_name_dance_party_unplugged: Dansefest frakoblet
-  curriculum_name_dance_party_ai_edition: 'Dansefest: AI-udgave'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problemløsning og databehandling
   curriculum_name_web_development: Web udvikling
   curriculum_name_interactive_animations_games: Interaktive animationer og spil
   curriculum_name_design_process: Designprocessen
   curriculum_name_data_society: Data & Samfund
-  curriculum_desc_dance_party_01: I denne indledende aktivitet kan du bruge kode til
-    at få en række farverige figurer til at flytte til animerede baggrunde og optimistisk
-    musik.
-  curriculum_desc_dance_party_02: Gå ud over den indledende vejledning med udvidede
-    projektideer. Gennemse et bibliotek med eksempler på mere komplekse dansefester.
-  curriculum_desc_dance_party_unplugged: Kom godt i gang — ingen computer er nødvendig!
-    Lær hvordan kodningskoncepter, som begivenheder, kan bruges til at synkronisere
-    danserkoreografi.
-  curriculum_desc_dance_party_ai_edition: Lær om kunstig intelligens (AI) koncepter
-    for at skabe din egen virtuelle dansefest, der viser dagens bedste kunstnere.
-    Med snesevis af sange at vælge imellem, nå ud til enhver studerende uanset deres
-    musiksmag. Det er tid til at stramme dine ting!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Gratis sæt elementære læseplaner, der introducerer eleverne
     til de grundlæggende begreber inden for datalogi.
   curriculum_desc_csf_express: Lær at oprette computerprogrammer, udvikle problemløsningsevner,
@@ -664,12 +663,12 @@ da:
   module_grade_grade_03: Grad 3
   module_grade_grade_04: Grad 4
   module_grade_grade_05: Grad 5
-  module_age_05_07: Alder 5-7
-  module_age_07: Alder 7+
-  module_age_07_11: Alder 7-11
-  module_age_11: Alder 11+
-  module_age_13: Alder 13+
-  module_age_all_age: Alle aldre
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Lærere
   module_grade_6_10_teachers: 6-10 Lærere
   module_grade_9_12_teachers: 9-12 Lærere
@@ -764,8 +763,8 @@ da:
   heading_csa_ai: Leder du efter ting at lave efter AP® eksamen?
   heading_bring_cs_to_students: Bring datalogi til studerende
   heading_cs_ambassador_program: CS Ambassadørprogram
-  heading_featured_student_projects: Fremhævede studenterprojekter
-  heading_start_hoc_with_videos: Start din Hour of Code med inspirerende videoer
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Hvis du er en gymnasieelever, der brænder for at opmuntre
     flere unge kvinder til at tage datalogi på din skole, så har vi brug for dig!
   cs_ambassador_desc: Hvert felt, herunder medicin, underholdning, sport, uddannelse,
@@ -861,14 +860,13 @@ da:
     Code.org's Computer Science Principles og få nyttige påmindelser, tips og opdateringer
     sendt direkte til din indbakke.
   subscribe_form_section_unsubscribe: Du kan til enhver tid afmelde dig.
-  dance_hero_heading: Kode en dansefest
-  dance_featuring_songs_by_short: 'Med sange af:'
-  dance_featuring_songs_by_long: 'Dance Party indeholder sange af:'
-  dance_and_more: og mere
-  dance_choose_activity: Vælg din dansefest
-  dance_afe_disclaimer: Kunstnerne, hvis musik bruges i denne vejledning, sponsorerer
-    eller støtter ikke Amazon som en del af licensering af brug af deres musik til
-    Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Sådan fungerer Blockchain
   blockchain_hero_desc: Dyk ned i blockchain-verdenen med „Sådan fungerer Blockchain“,
     vores nye videoserie og ledsagende lektioner!
@@ -13987,8 +13985,8 @@ da:
     for at drage fordel af den utrættelige hjælp fra det bredere datalogiske uddannelsessamfund,
     og [vi takker alle partnere og enkeltpersoner, der har støttet vores indflydelse
     gennem årene] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org Årsrapport 2021] (%{report_url}) (Tidligere
-    rapporter: [2020](%{past_url_1}), (), [2019](%{past_url_2}), [2018](%{past_url_3}),
+  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
+    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
     [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Vores kerneværdier og retningslinjer for meddelelser]
     (%{core_url})"
@@ -14036,10 +14034,10 @@ da:
     - en vejledning på højt niveau for stater, distrikter og organisationer, der implementerer
     datalogisk uddannelse. Rammen har vundet støtte fra hundredvis af akademikere,
     K-12-undervisere, softwarevirksomheder, nonprofitorganisationer og stater.
-  about_page_section_specific_description_6: Code.org IRS-formular 990 til [2014](%{irs_url_1}),
-    [2015](%{irs_url_2}), [2016](), (%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019](%{irs_url_6}), [2020](%{irs_url_7}), og [2021](%{irs_url_8}). [Donationspolitik.]
-    (%{donation_policy_url})
+  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
+    Policy.](%{donation_policy_url})
   about_page_section_specific_description_7: "[Tilmeld dig for at modtage statusopdateringer]
     (%{sign_up_url}) om fremskridt i K-12 computervidenskabsbevægelsen og om arbejdet
     med Code.org. Eller følg Code.org på sociale medier:"
@@ -14068,69 +14066,66 @@ da:
   teach_ai_description: AI Guidance for Schools Toolkit er en ressource for beslutningstagere,
     skoleledere, og personale til at udvikle indledende vejledning om AI i deres skoler.
   teach_ai_button_label: Se værktøjssættet
-  middle_high_page_main_title: Læring for 11 år og opefter
-  middle_high_page_main_description: Udforsk computervidenskabens verden med engagerende
-    videoer, selvstændige tutorials, programmeringsaktiviteter, og mere!
-  middle_high_page_hero_title: Kom godt i gang med Hour of Code
-  middle_high_page_hero_description: Lær det grundlæggende inden for datalogi med
-    gratis Hour of Code-aktiviteter, med træk-og-slip-kodningsblokke. Der er hundredvis
-    af timelange muligheder at vælge imellem!
-  middle_high_page_hourofcode_link: Udforsk Hour of Code-aktiviteter
-  middle_high_page_modules_title: Programmeringsmoduler for ældre studerende
-  middle_high_page_modules_description: Disse korte moduler i eget tempo til mellem-
-    og gymnasieelever er tilpasset vores kurser i CS Discoveries og CS Principles
-    og er en fantastisk måde at lære begreber, der spænder over alle programmeringssprog
-    og værktøjer.
-  middle_high_page_modules_card_title_1: Introduktion til Game Lab
-  middle_high_page_modules_card_title_2: Turtle programmering i App Lab
-  middle_high_page_modules_card_title_3: Begivenhedsdrevet programmering i App Lab
-  middle_high_page_modules_card_description_1: Bevæg dig i dit eget tempo i denne
-    introduktion til vores Game Lab-miljø, mens du programmerer animationer, interaktiv
-    kunst, og spil.
-  middle_high_page_modules_card_description_2: Lås op for muligheden for at lave rige,
-    interaktive apps med JavaScript i App Lab!
-  middle_high_page_modules_card_description_3: Gå i dit eget tempo med denne introduktion
-    til App Lab-programmeringsmiljøet, hvor eleverne bruger JavaScript til at oprette
-    interaktive apps.
-  middle_high_page_modules_card_link: Prøv det
-  middle_high_page_make_your_own_title: Lav dine egne apps, spil og websider
-  middle_high_page_make_your_own_description: 'Udover kurser har vi programmeringsværktøjer,
-    der giver dig mulighed for at udforske din kreativitet og lave noget fantastisk. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: App-laboratorium
-  middle_high_page_make_your_own_card_title_2: Spillab
-  middle_high_page_make_your_own_card_title_3: Weblaboratorium
-  middle_high_page_make_your_own_card_descrpition_1: App Lab er et programmeringsmiljø,
-    hvor du kan lave enkle apps. Design en app, kode i JavaScript med enten blokke
-    eller tekst, og del derefter din app på få sekunder.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab er et programmeringsmiljø,
-    hvor du kan lave enkle animationer og spil med objekter og figurer, der interagerer
-    med hinanden.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab er et programmeringsmiljø,
-    hvor du kan lave enkle websider ved hjælp af HTML og CSS. Design dine websider
-    og del dit websted på få sekunder.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Læs mere
-  middle_high_page_additional_resources_title: Yderligere ressourcer
-  middle_high_page_additional_resources_description: Der er så mange måder at udforske
-    datalogi yderligere på! Gennemse vores videobibliotek, eller lær mere om spændende
-    karrierer inden for datalogi.
-  middle_high_page_video_library_title: Oplev vores videobibliotek
-  middle_high_page_video_library_description: Lær det grundlæggende inden for datalogi
-    gennem korte 5-10 minutters videoer om emner som kunstig intelligens, Internettet,
-    hvordan computere fungerer, hvordan man ikke bliver hacket, blockchain, karriere
-    og mere!
-  middle_high_page_video_library_link: Se videobibliotek
-  middle_high_page_cs_journeys_title: Gå længere med CS Journeys
-  middle_high_page_cs_journeys_description: Tag det næste skridt på din datalogiske
-    rejse. Udforsk karrierer, mentormuligheder, online kurser, stipendier, praktikophold
-    og mere!
-  middle_high_page_cs_journeys_link: Udforsk CS Journeys
-  middle_high_page_cs_title: Datalogi i klasseværelset
-  middle_high_page_cs_description: Disse kurser skal ledes af en lærer! Hvis du gerne
-    vil se dem undervist på din skole, kan du overveje at arbejde med en lærer for
-    at bringe dem til din klasse.
-  middle_high_page_cs_card_title_1: CS Opdagelser
-  middle_high_page_cs_card_title_2: CS-principper
-  middle_high_page_cs_card_title_3: AP Datalogi A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Gratis sæt elementære læseplaner, der introducerer
     eleverne til de grundlæggende begreber inden for datalogi og udfordrer dem til
     at undersøge, hvordan computing og teknologi kan påvirke verden.
@@ -14141,34 +14136,34 @@ da:
   middle_high_page_cs_card_description_3: Introducer eleverne til software engineering
     og objektorienteret design, mens de lærer Java programmeringssprog i denne gratis
     læseplan for AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Udforsk CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Udforsk CS-principper
-  middle_high_page_cs_link_3: Udforsk CSA
-  elemeentary_page_main_title: Læring i alderen 5 til 11
-  elementary_page_main_description: Udforsk computervidenskabens verden med engagerende
-    videoer, selvstændige tutorials, programmeringsaktiviteter, og mere!
-  elementary_page_own_pace_title: Fortsæt med at lære i dit eget tempo
-  elementary_page_own_pace_description: Opret tegninger, spil og mere i disse to fremragende
-    muligheder for studerende, der kommer i gang på egen hånd med at lære det grundlæggende
-    i datalogi.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express-kursus
-  elementary_page_own_pace_card_title_2: Ekspresskursus
-  elementary_page_own_pace_card_description_1: Lær datalogi i dit eget tempo! Lær
-    at oprette computerprogrammer, udvikle problemløsningsevner, og arbejd gennem
-    sjove udfordringer! Lav spil og kreative projekter, som du kan dele med venner,
-    familie og lærere.
-  elementary_page_own_pace_link_1: Start forlæserkursus
-  elementary_page_own_pace_link_2: Start ekspreskursus
-  elementary_page_make_your_own_games_title: Lav dine egne animationer og spil
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Tid til at blive kreativ!
-    Brug blokbaseret kodning til at lave noget fjollet, sødt eller udendørsrigt i
-    Sprite Lab. Den eneste grænse er din fantasi!
-  elementary_page_make_your_own_games_link: Prøv Sprite Lab
-  elementary_page_computer_science_title: Datalogi i klasseværelset
-  elementary_page_computer_science_description: Disse kurser skal ledes af en lærer!
-    Hvis du gerne vil se dem undervist på din skole, skal du bede en forælder eller
-    værge om at arbejde sammen med en lærer for at bringe dem til din klasse.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Grundlæggende om datalogi
   elementary_page_computer_science_card_title_2: Datalogi forbindelser
   elementary_page_computer_science_description_1: Gratis sæt elementære læseplaner,
