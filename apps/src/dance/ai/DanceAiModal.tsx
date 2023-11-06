@@ -472,17 +472,20 @@ const DanceAiModal: React.FunctionComponent = () => {
           className={moduleStyles.inputsArea}
           style={{zIndex: mode === Mode.SELECT_INPUTS ? 1 : 0}}
         >
-          {mode === Mode.SELECT_INPUTS &&
-            getAllItems().map((item, index) => {
-              return (
-                <EmojiIcon
-                  key={index}
-                  item={item}
-                  onClick={() => handleItemClick(item.id, item.available)}
-                  isHighlighted={!item.available}
-                />
-              );
-            })}
+          {mode === Mode.SELECT_INPUTS && (
+            <div id="inputs-container" className={moduleStyles.inputsContainer}>
+              {getAllItems().map((item, index) => {
+                return (
+                  <EmojiIcon
+                    key={index}
+                    item={item}
+                    onClick={() => handleItemClick(item.id, item.available)}
+                    isHighlighted={!item.available}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
 
         <div id="bot-area" className={moduleStyles.botArea}>

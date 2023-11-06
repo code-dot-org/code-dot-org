@@ -181,16 +181,20 @@ $result-red: rgb(235 87 87);
     .inputsArea {
       position: absolute;
       width: 305px;
-      height: 190px;
+      height: 305px;
       top: 22px;
       left: 320px;
 
-      .item {
-        opacity: 0.3;
+      .inputsContainer {
+        animation: appear 0.5s;
 
-        &Available {
-          cursor: pointer;
-          opacity: 1;
+        .item {
+          opacity: 0.3;
+
+          &Available {
+            cursor: pointer;
+            opacity: 1;
+          }
         }
       }
     }
@@ -221,7 +225,7 @@ $result-red: rgb(235 87 87);
           position: absolute;
           top: 23px;
           transform-origin: bottom left;
-          transition: transform 0.5s;
+          transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
 
           &Open {
