@@ -1863,7 +1863,7 @@ applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
 
-  Applab.storage.readRecords(
+  Applab.storage.readRecords( // TODO: unfirebase
     opts.table,
     {},
     handleGetColumn.bind(this, opts),
@@ -1918,7 +1918,7 @@ applabCommands.readRecords = function (opts) {
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
+  Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError); // TODO: unfirebase
 };
 
 applabCommands.handleReadRecords = function (opts, records) {
