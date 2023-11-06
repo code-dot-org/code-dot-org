@@ -61,7 +61,7 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {disableOrphans} from './eventHandlers';
+import {adjustCalloutsOnViewportChange, disableOrphans} from './eventHandlers';
 
 const options = {
   contextMenu: true,
@@ -643,6 +643,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
     }
+
+    // When either the main workspace or the toolbox workspace viewport
+    // changes, adjust any callouts so they stay pointing to the appropriate
+    // location.
+    workspace.addChangeListener(adjustCalloutsOnViewportChange);
+    workspace
+      .getFlyout()
+      ?.getWorkspace()
+      ?.addChangeListener(adjustCalloutsOnViewportChange);
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)

@@ -6,10 +6,10 @@ lt:
   front_title: Prisijunkite prie didžiausio mokymosi renginio istorijoje, %{campaign_date}
   coming_soon: Jau greitai
   new: Nauja
-  hours_of_code_served: Įteikiamos kodo valandos
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: Studentai mokosi daugiau nei 45 kalbų
   hoc_stat_hours_served: Daugiau nei 100M studentai bandė valandą kodo
-  hoc_stat_females: Studentės sudaro 50% “Hour of Code” dalyvių
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: Gruodžio 5 d
   campaign_date_start_long: Gruodžio 5 d
   campaign_date_short: Gruodis 5-11
@@ -50,10 +50,10 @@ lt:
   hoc2023_social_creativity_with_ai_title: Kodo valanda - ką sukursite?
   hoc2023_social_creativity_with_ai_desc: Naudokite kompiuterių mokslą, kad galėtumėte
     tyrinėti ir sužinoti apie AI!
-  hoc2023_what_is_hoc_desc: "“Kodo valanda” yra nemokamas įvadas į informatiką per
-    įdomus užsiėmimus ir vaizdo įrašus, skirtus visų įgūdžių lygių besimokantiesiems.
-    Šių metų kodavimo ir dirbtinio intelekto šventę remia daugiau nei 400 partnerių,
-    20 000 pedagogų ir 58 000 savanorių."
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: Naršyti, žaisti, kurti!
   social_hoc2022_explore_play_create: Naudokite kompiuterių mokslą, kad galėtumėte
     tyrinėti, žaisti ir kurti!
@@ -66,9 +66,9 @@ lt:
     muzika iš “Disney” “Encanto” ir dar daugiau!"
   social_hoc2023_dance: "“Beyoncé”, “BTS”, “Harry Styles”, “Lizzo”, “Lil Nas X”, Selena
     Gomez, muzika iš “Disney” “Encanto” ir dar daugiau!"
-  social_hoc2023_dance_v2: Atėjo laikas sutvarkyti savo daiktus! Sukurkite savo šokių
-    vakarėlį, kuriame yra Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
-    Rosalía ir dar daugiau hitai!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Sužinokite šiandien, sukurkite šviesesnį rytojų.
@@ -285,9 +285,9 @@ lt:
     patarimų, įžvalgų ir palaikymo iš kitų pedagogų.
   required_materials: 'Reikalingos medžiagos:'
   optional_materials: 'Pasirenkamos medžiagos:'
-  for_students: Studentams
+  for_students: For students
   for_educators: Pedagogams
-  call_to_action_host_hoc: Surenkite kodo valandą
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: Surengti renginį
   call_to_action_register_event: Užregistruokite savo renginį
   call_to_action_register_your_hoc: Užregistruokite savo kodo valandą
@@ -295,11 +295,11 @@ lt:
   call_to_action_start_activity: Pradėkite veiklą
   call_to_action_get_certificates: Gauti sertifikatus
   call_to_action_go_beyond_hoc: Peržengti kodo valandą
-  call_to_action_explore_all_hoc_activities: Peržiūrėkite visas “Hour of Code” veiklas
-    iš “Code.org”
-  call_to_action_start_dance_party: Pradėkite šokių vakarėlį
-  call_to_action_start_part_02: Pradėkite antrąją dalį
-  call_to_action_start_unplugged_activity: Pradėkite išjungtą veiklą
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: Peržiūrėti reklamos išteklius
   call_to_action_learn_more: Sužinokite daugiau
   call_to_action_watch_now: Žiūrėti dabar
@@ -395,9 +395,9 @@ lt:
   call_to_action_view_faqs: Peržiūrėti daugiau DUK
   call_to_action_applications_open: Dabar atidarytos programos
   call_to_action_apply_cs_ambassador: Pateikite paraišką būti CS ambasadoriumi
-  call_to_action_coming_soon: Netrukus!
-  call_to_action_learn_how_ai_works: Sužinokite, kaip veikia AI
-  call_to_action_learn_about_ai: Sužinokite apie AI
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: Peržiūrėkite pedagogų vadovą
   aria_label_call_to_action_hoc_how_to_companies: Peržiūrėkite įmonių vadovą
   aria_label_call_to_action_hoc_how_to_districts: Peržiūrėkite rajonų vadovą
@@ -409,10 +409,9 @@ lt:
   aria_label_call_to_action_hoc_how_to_volunteers: Peržiūrėkite savanorių vadovą
   aria_label_call_to_action_hoc_how_to_virtual_events: Peržiūrėkite virtualių įvykių
     vadovą
-  aria_label_call_to_action_dance_01: Pradėkite šokių vakarėlio veiklą
-  aria_label_call_to_action_dance_02: Pradėkite antrąją “Dance Party” veiklos dalį
-  aria_label_call_to_action_dance_unplugged: Pradėkite “Dance Party” veiklą be prijungto
-    tinklo
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: Sužinokite daugiau apie “Amazon Future Engineer”
   aria_label_call_to_action_teaching_csf: Pradėkite “Teaching Computer Science Fundamentals”
     profesinio mokymosi programą
@@ -532,25 +531,25 @@ lt:
   curriculum_name_creating_apps_with_devices: Programėlių kūrimas su įrenginiais
   curriculum_name_poetry: Kodavimas su poezija
   curriculum_name_dance_party: Šokių vakarėlis
-  curriculum_name_dance_party_02: Toliau šokite
-  curriculum_name_dance_party_unplugged: Šokių vakarėlis Unplugged
-  curriculum_name_dance_party_ai_edition: 'Šokių vakarėlis: AI leidimas'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: Problemų sprendimas & Kompiuterija
   curriculum_name_web_development: Interneto svetainių kūrimas
   curriculum_name_interactive_animations_games: Interaktyvios animacijos ir žaidimai
   curriculum_name_design_process: Projektavimo procesas
   curriculum_name_data_society: Duomenys ir visuomenė
-  curriculum_desc_dance_party_01: Šioje įvadinėje veikloje naudokite kodą, kad įvairūs
-    spalvingi simboliai krūtų pereiti prie animacinių fonų ir optimistiškos muzikos.
-  curriculum_desc_dance_party_02: Išplėstomis projekto idėjomis perženkite įžanginę
-    pamoką. Peržiūrėkite sudėtingesnių šokių vakarėlių pavyzdžių biblioteką.
-  curriculum_desc_dance_party_unplugged: Įjunkite savo griovelį - nereikia kompiuterio!
-    Sužinokite, kaip kodavimo sąvokos, kaip ir įvykiai, gali būti naudojamos šokėjo
-    choreografijai sinchronizuoti.
-  curriculum_desc_dance_party_ai_edition: Sužinokite apie dirbtinio intelekto (AI)
-    koncepcijas, kad sukurtumėte savo virtualų šokių vakarėlį, kuriame demonstruojami
-    geriausi šiandienos menininkai. Su dešimtys dainų pasirinkti, pasiekti kiekvieną
-    studentą nesvarbu jų muzikos skonį. Atėjo laikas sutvarkyti savo daiktus!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: Laisvas pradinių mokymo programų rinkinys, supažindinantis
     studentus su pagrindinėmis informatikos koncepcijomis.
   curriculum_desc_csf_express: Išmokite kurti kompiuterines programas, lavinti problemų
@@ -681,12 +680,12 @@ lt:
   module_grade_grade_03: 3 klasė
   module_grade_grade_04: 4 klasė
   module_grade_grade_05: 5 klasė
-  module_age_05_07: Amžius 5-7
-  module_age_07: Amžius nuo 7 metų
-  module_age_07_11: Amžius 7—11
-  module_age_11: Amžius nuo 11 metų
-  module_age_13: Amžius nuo 13 metų
-  module_age_all_age: Visų amžiaus grupių
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: K-5 Mokytojai
   module_grade_6_10_teachers: 6-10 Mokytojai
   module_grade_9_12_teachers: 9-12 Mokytojai
@@ -782,9 +781,8 @@ lt:
   heading_csa_ai: Ieškote dalykų, kuriuos reikia padaryti po AP® egzamino?
   heading_bring_cs_to_students: Atneškite kompiuterių mokslą studentams
   heading_cs_ambassador_program: CS ambasadoriaus programa
-  heading_featured_student_projects: Teminiai studentų projektai
-  heading_start_hoc_with_videos: Pradėkite savo kodo valandą su įkvepiančiais vaizdo
-    įrašais
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: Jei esate vidurinės mokyklos studentas aistringai skatinti
     daugiau jaunų moterų imtis informatikos jūsų mokykloje, tada mums reikia jūsų!
   cs_ambassador_desc: Kompiuterių mokslas paliečia kiekvieną sritį, įskaitant mediciną,
@@ -881,13 +879,13 @@ lt:
     Laiškus apie “Code.org” kompiuterių mokslo principus ir gaukite naudingų priminimų,
     patarimų ir atnaujinimų, siunčiamų tiesiai į gautuosius.
   subscribe_form_section_unsubscribe: Galite atsisakyti prenumeratos bet kuriuo metu.
-  dance_hero_heading: Koduokite šokių vakarėlį
-  dance_featuring_songs_by_short: 'Pateikiamos dainos:'
-  dance_featuring_songs_by_long: "“Dance Party” apima dainas:"
-  dance_and_more: ir dar daugiau
-  dance_choose_activity: Pasirinkite savo šokių vakarėlį
-  dance_afe_disclaimer: Menininkai, kurių muzika naudojama šiame vadove, nepalaiko
-    ir nepritaria “Amazon” kaip licencijuojant jų muzikos naudojimą Code.org.
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: Kaip veikia “Blockchain”
   blockchain_hero_desc: Pasinerkite į “blockchain” pasaulį naudodamiesi “Kaip veikia
     “Blockchain”, mūsų nauja vaizdo įrašų serija ir pridedamomis pamokomis!
@@ -14253,68 +14251,66 @@ lt:
     formuotojams, mokyklų vadovams ir darbuotojams parengti pradines AI gaires savo
     mokyklose."
   teach_ai_button_label: Peržiūrėkite įrankių rinkinį
-  middle_high_page_main_title: Mokymasis 11 metų ir vyresniems
-  middle_high_page_main_description: Tyrinėkite kompiuterių mokslo pasaulį naudodami
-    įtraukiančius vaizdo įrašus, savarankiškus vadovėlius, programavimo veiklą ir
-    dar daugiau!
-  middle_high_page_hero_title: Pradėkite nuo “Hour of Code”
-  middle_high_page_hero_description: Sužinokite informatikos pagrindus naudodamiesi
-    nemokama “Hour of Code” veikla, kurioje yra “drag-and-drop” kodavimo blokai. Galima
-    rinktis iš šimtų valandų trukmės variantų!
-  middle_high_page_hourofcode_link: Susipažinkite su “Hour of Code” veikla
-  middle_high_page_modules_title: Programavimo moduliai vyresniems studentams
-  middle_high_page_modules_description: Pritaikyta iš mūsų CS atradimų ir CS principų
-    kursų, šie trumpi, savarankiški moduliai vidurinių ir vidurinių mokyklų studentams
-    yra puikus būdas išmokti sąvokas, kurios span visas programavimo kalbas ir įrankius.
-  middle_high_page_modules_card_title_1: Įvadas į žaidimų laboratoriją
-  middle_high_page_modules_card_title_2: Vėžlių programavimas “App Lab”
-  middle_high_page_modules_card_title_3: Įvykiais paremtas programavimas “App Lab”
-  middle_high_page_modules_card_description_1: Judėkite savo tempu šiame įvade į mūsų
-    “Game Lab” aplinką, kai programuojate animaciją, interaktyvų meną ir žaidimus.
-  middle_high_page_modules_card_description_2: Atrakinkite galimybę kurti turtingas,
-    interaktyvias programas su “JavaScript” programoje “App Lab”!
-  middle_high_page_modules_card_description_3: Eikite savo tempu naudodami šį įvadą
-    į “App Lab” programavimo aplinką, kurioje studentai naudoja “JavaScript”, kad
-    sukurtų interaktyvias programas.
-  middle_high_page_modules_card_link: Išbandykite
-  middle_high_page_make_your_own_title: Sukurkite savo programas, žaidimus ir tinklalapius
-  middle_high_page_make_your_own_description: 'Be kursų, mes turime programavimo įrankius,
-    kurie leidžia jums ištirti savo kūrybiškumą ir padaryti kažką nuostabaus. '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: "“App Lab”"
-  middle_high_page_make_your_own_card_title_2: Žaidimų laboratorija
-  middle_high_page_make_your_own_card_title_3: Žiniatinklio laboratorija
-  middle_high_page_make_your_own_card_descrpition_1: "“App Lab” yra programavimo aplinka,
-    kurioje galite kurti paprastas programas. Sukurkite programą, kodą “JavaScript”
-    naudodami blokus arba tekstą, tada bendrinkite programą per kelias sekundes."
-  middle_high_page_make_your_own_card_descrpition_2: "“Game Lab” yra programavimo
-    aplinka, kurioje galite kurti paprastas animacijas ir žaidimus su objektais ir
-    simboliais, kurie sąveikauja tarpusavyje."
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab yra programavimo aplinka,
-    kurioje galite sukurti paprastus tinklalapius naudojant HTML ir CSS. Sukurkite
-    savo tinklalapius ir bendrinkite savo svetainę per kelias sekundes.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: Sužinokite daugiau
-  middle_high_page_additional_resources_title: Papildomi ištekliai
-  middle_high_page_additional_resources_description: Yra tiek daug būdų toliau tyrinėti
-    informatiką! Naršykite mūsų vaizdo įrašų bibliotekoje arba sužinokite daugiau
-    apie įdomias karjeras kompiuterių mokslo srityje.
-  middle_high_page_video_library_title: Atraskite mūsų vaizdo įrašų biblioteką
-  middle_high_page_video_library_description: Sužinokite kompiuterių mokslo pagrindus
-    per trumpus 5-10 minučių vaizdo įrašus tokiomis temomis kaip dirbtinis intelektas,
-    internetas, kaip kompiuteriai veikia, kaip ne gauti nulaužė, blockchain, karjeros,
-    ir dar daugiau!
-  middle_high_page_video_library_link: Peržiūrėti vaizdo įrašų biblioteką
-  middle_high_page_cs_journeys_title: Eikite toliau su CS Journeys
-  middle_high_page_cs_journeys_description: Ženkite kitą žingsnį savo kompiuterinių
-    mokslų kelionėje. Ištirkite karjerą, mentorystės galimybes, internetinius kursus,
-    stipendijas, stažuotes ir dar daugiau!
-  middle_high_page_cs_journeys_link: Susipažinkite su CS Journeys
-  middle_high_page_cs_title: Kompiuterių mokslai klasėje
-  middle_high_page_cs_description: Šiuos kursus turėtų vesti mokytojas! Jei norite,
-    kad jie būtų mokomi jūsų mokykloje, apsvarstykite galimybę dirbti su mokytoju,
-    kad atneštumėte juos į savo klasę.
-  middle_high_page_cs_card_title_1: CS atradimai
-  middle_high_page_cs_card_title_2: CS principai
-  middle_high_page_cs_card_title_3: AP Kompiuterių mokslas A
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: Laisvas pradinių mokymo programų rinkinys,
     supažindinantis studentus su pamatinėmis kompiuterių mokslo koncepcijomis ir iššūkiai
     jiems ištirti, kaip kompiuterija ir technologijos gali paveikti pasaulį.
@@ -14325,35 +14321,34 @@ lt:
   middle_high_page_cs_card_description_3: Supažindinkite studentus su programinės
     įrangos inžinerija ir objektiniu dizainu, kol jie mokosi “Java” programavimo kalbos
     šioje nemokamoje mokymo programoje, skirtoje “AP® Computer Science A” (AP® CSA).
-  middle_high_page_cs_link_1: Susipažinkite su CS Dicoveries
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: Naršyti CS principus
-  middle_high_page_cs_link_3: Susipažinkite su CSA
-  elemeentary_page_main_title: Mokymasis nuo 5 iki 11 metų
-  elementary_page_main_description: Tyrinėkite kompiuterių mokslo pasaulį naudodami
-    įtraukiančius vaizdo įrašus, savarankiškus vadovėlius, programavimo veiklą ir
-    dar daugiau!
-  elementary_page_own_pace_title: Tęskite mokymąsi savo tempu
-  elementary_page_own_pace_description: Sukurti piešinius, žaidimus, ir dar daugiau
-    šių dviejų puikių variantų studentams pradėti nuo jų pačių mokytis informatikos
-    pagrindus.
-  elementary_page_own_pace_card_title_1: "“Pre-Reader Express” kursas"
-  elementary_page_own_pace_card_title_2: Ekspresinis kursas
-  elementary_page_own_pace_card_description_1: Išmokite informatikos savo tempu! Išmokite
-    kurti kompiuterines programas, lavinkite problemų sprendimo įgūdžius ir dirbkite
-    per smagius iššūkius! Kurkite žaidimus ir kūrybinius projektus, kuriais galėtumėte
-    pasidalinti su draugais, šeima ir mokytojais.
-  elementary_page_own_pace_link_1: Pradėkite išankstinį skaitytojo kursą
-  elementary_page_own_pace_link_2: Pradėkite greitąjį kursą
-  elementary_page_make_your_own_games_title: Sukurkite savo animacijas ir žaidimus
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: "“Sprite” laboratorija"
-  elementary_page_make_your_own_games_card_description_1: Laikas būti kūrybingam!
-    Naudokite bloku pagrįstą kodavimą, kad “Sprite Lab” padarytumėte kažką kvailo,
-    saldaus ar išorinio erdvinio. Vienintelė riba yra jūsų vaizduotė!
-  elementary_page_make_your_own_games_link: Išbandykite “Sprite Lab”
-  elementary_page_computer_science_title: Kompiuterių mokslai klasėje
-  elementary_page_computer_science_description: Šiuos kursus turėtų vesti mokytojas!
-    Jei norite, kad jie būtų mokomi jūsų mokykloje, paprašykite tėvų ar globėjų dirbti
-    su mokytoju, kad jie atneštų juos į jūsų klasę.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: Kompiuterių mokslo pagrindai
   elementary_page_computer_science_card_title_2: Kompiuterių mokslo jungtys
   elementary_page_computer_science_description_1: Laisvas pradinių mokymo programų

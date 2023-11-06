@@ -7,11 +7,11 @@ ta:
     %{campaign_date}
   coming_soon: விரைவில் வரவிருக்கிறது
   new: புதியது
-  hours_of_code_served: சேவை செய்யப்பட்ட குறியீட்டு நேரம்
+  hours_of_code_served: Hours of Code Served
   hoc_stat_languages: 15 க்கும் அதிகமான மொழிகளில் மாணவர்கள் பயில்கிறார்கள்
   hoc_stat_hours_served: 100 மில்லியனுக்கும் அதிகமான மாணவர்கள் ஒரு Hour of Code–ஐ
     முயற்சித்துள்ளார்கள்
-  hoc_stat_females: ஹவர் ஆஃப் கோட் பங்கேற்பாளர்களில் பெண் மாணவர்கள் 50% ஆவர்
+  hoc_stat_females: Female students make up 50% of Hour of Code participants
   campaign_date_start_short: டிச. 4
   campaign_date_start_long: டிசம்பர் 4
   campaign_date_short: டிச. 4-10
@@ -52,10 +52,10 @@ ta:
   hoc2023_social_creativity_with_ai_title: குறியீடு ஹவர் - நீங்கள் என்ன உருவாக்கும்?
   hoc2023_social_creativity_with_ai_desc: AI பற்றி ஆராய மற்றும் அறிய கணினி அறிவியல்
     பயன்படுத்தவும்!
-  hoc2023_what_is_hoc_desc: தி ஹவர் ஆஃப் கோட் என்பது அனைத்து திறன் மட்டங்களிலும் கற்றவர்களுக்கான
-    வேடிக்கையான நடவடிக்கைகள் மற்றும் வீடியோக்கள் மூலம் கணினி அறிவியலுக்கான இலவச அறிமுகமாகும்.
-    குறியீட்டு மற்றும் AI இரண்டின் இந்த ஆண்டு கொண்டாட்டத்தை 400 க்கும் மேற்பட்ட கூட்டாளர்கள்,
-    20,000 கல்வியாளர்கள் மற்றும் 58,000 தன்னார்வலர்கள் ஆதரிக்கின்றனர்.
+  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
+    through fun activities and videos for learners of all skill levels. This year's
+    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
+    and 58,000 volunteers.
   hoc2022_header: ஆராயுங்கள், விளையாடுங்கள், உருவாக்குங்கள்!
   social_hoc2022_explore_play_create: ஆராயவும், விளையாடவும், உருவாக்கவும் கணினி அறிவியலைப்
     பயன்படுத்தவும்!
@@ -68,9 +68,9 @@ ta:
     செலினா கோம்ஸ், டிஸ்னியின் இருந்து இசை “Encanto,” மேலும்!
   social_hoc2023_dance: பியோன்ஸ், BTS, ஹாரி ஸ்டைல்கள், லிசோ, லில் நாஸ் எக்ஸ், செலினா
     கோம்ஸ், டிஸ்னியின் "என்காண்டோ" இசை மற்றும் பலவற்றின் அம்சங்கள்!
-  social_hoc2023_dance_v2: உங்கள் விஷயங்களைத் தடுக்க வேண்டிய நேரம் இது! மைலி சைரஸ்,
-    பிடிஎஸ், லில் நாஸ் எக்ஸ், ஹாரி ஸ்டைல்ஸ், நிக்கி மினாஜ், ரோசாலியா மற்றும் பலவற்றின்
-    வெற்றிகளைக் கொண்ட உங்கள் சொந்த நடன விருந்தை உருவாக்கவும்!
+  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
+    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
+    and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: இன்று கற்றுக் கொள்ளுங்கள், நாளை பிரகாசமாக உருவாக்குங்கள்.
@@ -297,9 +297,9 @@ ta:
     பெற குறியீடு ஆசிரியர் மன்றத்தைப் பார்வையிடவும்
   required_materials: 'தேவையான பொருட்கள்:'
   optional_materials: 'விருப்பப் பொருட்கள்:'
-  for_students: மாணவர்களுக்கு
+  for_students: For students
   for_educators: பயிற்றுவிப்பாளர்களுக்கு
-  call_to_action_host_hoc: ஒரு மணிநேர குறியீட்டை வழங்குங்கள்
+  call_to_action_host_hoc: Host an Hour of Code
   call_to_action_hold_an_event: ஒரு நிகழ்வை நடத்த
   call_to_action_register_event: உங்கள் நிகழ்வை பதிவு செய்யுங்கள்
   call_to_action_register_your_hoc: உங்கள் குறியீட்டு நேரத்தை பதிவு செய்யுங்கள்
@@ -307,11 +307,11 @@ ta:
   call_to_action_start_activity: ஒரு செயல்பாட்டைத் தொடங்குங்கள்
   call_to_action_get_certificates: சான்றிதழ்களைப்
   call_to_action_go_beyond_hoc: குறியீட்டின் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்
-  call_to_action_explore_all_hoc_activities: Code.org இலிருந்து அனைத்து மணி நேரம்
-    குறியீட்டு செயல்பாடுகளையும் ஆராயுங்கள்
-  call_to_action_start_dance_party: நடன விருந்தைத் தொடங்குங்கள்
-  call_to_action_start_part_02: பகுதி இரண்டைத் தொடங்கவும்
-  call_to_action_start_unplugged_activity: இணைக்கப்படாத செயல்பாட்டைத் தொடங்கவும்
+  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+    Code.org
+  call_to_action_start_dance_party: Start Dance Party
+  call_to_action_start_part_02: Start part two
+  call_to_action_start_unplugged_activity: Start unplugged activity
   call_to_action_view_promo_resources: விளம்பர வளங்களைக் காண்க
   call_to_action_learn_more: மேலும் அறிக
   call_to_action_watch_now: இப்பொழுது பார்
@@ -407,9 +407,9 @@ ta:
   call_to_action_view_faqs: மேலும் கேள்விகளைக் காண்க
   call_to_action_applications_open: பயன்பாடுகள் இப்போது திறக்கப்பட்டுள்ள
   call_to_action_apply_cs_ambassador: சிஎஸ் தூதராக விண்ணப்பிக்கவும்
-  call_to_action_coming_soon: விரைவில் வருகிறது!
-  call_to_action_learn_how_ai_works: AI எவ்வாறு செயல்படுகிறது என்பதை அறிக
-  call_to_action_learn_about_ai: AI பற்றி அறிக
+  call_to_action_coming_soon: Coming soon!
+  call_to_action_learn_how_ai_works: Learn how AI works
+  call_to_action_learn_about_ai: Learn about AI
   aria_label_call_to_action_hoc_how_to_educators: கல்வியாளர்களுக்கான வழிகாட்டியைக்
     காண்க
   aria_label_call_to_action_hoc_how_to_companies: நிறுவனங்களுக்கான வழிகாட்டி எப்படி
@@ -426,11 +426,9 @@ ta:
     காண்க
   aria_label_call_to_action_hoc_how_to_virtual_events: மெய்நிகர் நிகழ்வுகளுக்கு வழிகாட்டி
     செய்வது எப்படி
-  aria_label_call_to_action_dance_01: நடன விருந்து செயல்பாட்டைத் தொடங்கவும்
-  aria_label_call_to_action_dance_02: டான்ஸ் பார்ட்டி செயல்பாட்டின் இரண்டு பகுதியைத்
-    தொடங்கவும்
-  aria_label_call_to_action_dance_unplugged: டான்ஸ் பார்ட்டி அன்பிளக் செய்யப்பட்ட
-    செயல்பாட்டைத் தொடங்க
+  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
+  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
   aria_label_call_to_action_afe: அமேசான் எதிர்கால பொறியாளர் பற்றி மேலும் அறிக
   aria_label_call_to_action_teaching_csf: கற்பித்தல் கணினி அறிவியல் அடிப்படைகள் தொழில்முறை
     கற்றல் திட்டத்தைத் தொடங்கவும்
@@ -549,26 +547,25 @@ ta:
   curriculum_name_creating_apps_with_devices: சாதனங்களுடன் பயன்பாடுகளை உருவாக்குதல்
   curriculum_name_poetry: கவிதையுடன் குறியீட்டு முறை
   curriculum_name_dance_party: நடன விருந்து
-  curriculum_name_dance_party_02: தொடர்ந்து நடனம் செய்யுங்கள்
-  curriculum_name_dance_party_unplugged: டான்ஸ் பார்ட்டி அன்பிளக்கட்
-  curriculum_name_dance_party_ai_edition: 'டான்ஸ் பார்ட்டி: AI பதிப்பு'
+  curriculum_name_dance_party_02: Keep On Dancing
+  curriculum_name_dance_party_unplugged: Dance Party Unplugged
+  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
   curriculum_name_problem_solving_computing: சிக்கலைத் தீர்ப்பது & கம்ப்யூட்டிங்
   curriculum_name_web_development: வலை அபிவிருத்தி
   curriculum_name_interactive_animations_games: ஊடாடும் அனிமேஷன்கள் & விளையாட்டுகள்
   curriculum_name_design_process: வடிவமைப்பு செயல்முறை
   curriculum_name_data_society: தரவுகளும் சமுதாயமும்
-  curriculum_desc_dance_party_01: இந்த அறிமுக செயல்பாட்டில், பல்வேறு வண்ணமயமான கதாபாத்திரங்கள்
-    அனிமேஷன் செய்யப்பட்ட பின்னணிகள் மற்றும் உற்சாகமான இசைக்கு நகர்வதற்கு குறியீட்டைப்
-    பயன்படுத்தவும்.
-  curriculum_desc_dance_party_02: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் அறிமுக டுடோரியலுக்கு
-    அப்ப மிகவும் சிக்கலான நடன விருந்துகளின் எடுத்துக்காட்டுகளின் நூலகத்தை உலாவவும்.
-  curriculum_desc_dance_party_unplugged: உங்கள் பள்ளத்தை இயக்கவும் - கணினி தேவையில்லை!
-    நடனக் நடன நடனத்தை ஒத்திசைக்க நிகழ்வுகள் போன்ற குறியீட்டு கருத்துக்களை எவ்வாறு
-    பயன்படுத்தலாம் என்பதை அறிக.
-  curriculum_desc_dance_party_ai_edition: இன்றைய சிறந்த கலைஞர்களைக் காட்டும் உங்கள்
-    சொந்த மெய்நிகர் நடன விருந்தை உருவாக்க செயற்கை நுண்ணறிவு (AI) கருத்துகளைப் பற்றி
-    அறிக. தேர்வு செய்ய டஜன் கணக்கான பாடல்களுடன், ஒவ்வொரு மாணவரையும் அவர்களின் இசை
-    சுவை பொருட்படுத்தாமல் அடையுங்கள். உங்கள் விஷயங்களைத் தடுக்க வேண்டிய நேரம் இது!
+  curriculum_desc_dance_party_01: In this introductory activity, use code to make
+    a variety of colorful characters bust a move to animated backgrounds and upbeat
+    music.
+  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
+    project ideas. Browse a library of examples of more complex dance parties.
+  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
+    how coding concepts, like events, can be used to synchronize dancer choreography.
+  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    With dozens of songs to choose from, reach every student no matter their music
+    taste. It's time to strut your stuff!
   curriculum_desc_csf: கணினி விஞ்ஞானத்தின் அடித்தளக் கருத்துகளுக்கு மாணவர்களை அறிமுகப்படுத்துகின்ற
     தொடக்க பாடத்திட்டத்தின் இலவச தொகுப்பு.
   curriculum_desc_csf_express: கணினி நிரல்களை உருவாக்கவும், சிக்கல்-தீர்க்கும் திறன்களை
@@ -707,12 +704,12 @@ ta:
   module_grade_grade_03: தரம் 3
   module_grade_grade_04: தரம் 4
   module_grade_grade_05: தரம் 5
-  module_age_05_07: வயது 5-7
-  module_age_07: வயது 7+
-  module_age_07_11: வயது 7-11
-  module_age_11: வயது 11+
-  module_age_13: வயது 13+
-  module_age_all_age: அனைத்து வயதினருக்கும்
+  module_age_05_07: Ages 5-7
+  module_age_07: Ages 7+
+  module_age_07_11: Ages 7-11
+  module_age_11: Ages 11+
+  module_age_13: Ages 13+
+  module_age_all_age: All Ages
   module_grade_k_5_teachers: 'K-5 ஆசிரியர்கள் '
   module_grade_6_10_teachers: '6-10 ஆசிரியர்கள் '
   module_grade_9_12_teachers: 9-12 ஆசிரியர்கள்
@@ -810,9 +807,8 @@ ta:
   heading_csa_ai: ஆந்திர® தேர்வில் பிறகு செய்ய விஷயங்களை தேடுவது?
   heading_bring_cs_to_students: மாணவர்களுக்கு கணினி அறிவியலை கொண்டு வாருங்கள்
   heading_cs_ambassador_program: சிஎஸ் தூதர் திட்டம்
-  heading_featured_student_projects: சிறப்பு மாணவர் திட்டங்கள்
-  heading_start_hoc_with_videos: உத்வேகம் தரும் வீடியோக்களுடன் உங்கள் குறியீட்டு நேரத்தைத்
-    தொட
+  heading_featured_student_projects: Featured student projects
+  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
   cs_ambassador_subhead: உங்கள் பள்ளியில் கணினி அறிவியலை எடுக்க அதிகமான இளம் பெண்களை
     ஊக்குவிப்பதில் ஆர்வமாக நீங்கள் ஒரு உயர்நிலைப் பள்ளி மாணவராக இருந்தால், எங்களுக்கு
     நீங்கள் தேவை!
@@ -912,14 +908,13 @@ ta:
     மாதாந்திர மின்னஞ்சல்களைப் பெறவும், உதவிக்குறிப்புகள், உதவிக்குறிப்புகள் மற்றும்
     உங்கள் இன்பாக்ஸிற்கு உரிமை அனுப்பப்படும் புதுப்பிப்புகளைப் பெறவும் பதிவு செய்யவும்.
   subscribe_form_section_unsubscribe: நீங்கள் எந்த நேரத்திலும் குழுவிலக முடியும்.
-  dance_hero_heading: ஒரு நடனக் கட்சியை குறியீடு
-  dance_featuring_songs_by_short: 'பாடல்கள் இடம்பெற்றுள்ளன:'
-  dance_featuring_songs_by_long: 'டான்ஸ் பார்ட்டியில் பாடல்கள் அடங்கும்:'
-  dance_and_more: மற்றும் மேலும்
-  dance_choose_activity: உங்கள் நடன விருந்தைத் தேர்வுசெய்க
-  dance_afe_disclaimer: இந்த டுடோரியலில் இசை பயன்படுத்தப்படும் கலைஞர்கள் Code.org
-    க்கு தங்கள் இசையைப் பயன்படுத்த உரிமம் வழங்குவதன் ஒரு பகுதியாக அமேசானை ஸ்பான்சர்
-    செய்யவோ அங்கீகரிக்கவோ அங்கீகரிக்க
+  dance_hero_heading: Code a Dance Party
+  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
+  dance_and_more: and more
+  dance_choose_activity: Choose your Dance Party
+  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
+    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
   blockchain_hero_heading: பிளாக்செயின் எவ்வாறு செயல்படுகிறது
   blockchain_hero_desc: எங்களின் புதிய வீடியோ தொடர் மற்றும் அதனுடன் இணைந்த பாடங்களுடன்
     "How Blockchain Works" மூலம் பிளாக்செயின் உலகில் முழுக்கு!
@@ -14872,71 +14867,66 @@ ta:
     பள்ளி தலைவர்கள் மற்றும் ஊழியர்கள் தங்கள் பள்ளிகளில் AI குறித்த ஆரம்ப வழிகாட்டுதலை
     உருவாக்குவதற்கான ஒரு வளமாகும்
   teach_ai_button_label: கருவித்தொகுப்பைக் காண்க
-  middle_high_page_main_title: 11 வயது மற்றும் அதற்கு மேற்பட்டவர்களுக்கு கற்றல்
-  middle_high_page_main_description: ஈர்க்கக்கூடிய வீடியோக்கள், சுய வேகமான பயிற்சிகள்,
-    நிரலாக்க நடவடிக்கைகள் மற்றும் பலவற்றுடன் கணினி அறிவியல் உலகை ஆராயுங்கள்!
-  middle_high_page_hero_title: குறியீட்டின் மணிநேரத்துடன் தொடங்குங்கள்
-  middle_high_page_hero_description: டிராக்-அண்ட-டிராப் குறியீட்டு தொகுதிகளைக் கொண்ட
-    இலவச ஹவர் ஆஃப் கோட் செயல்பாடுகளுடன் கணினி அறிவியலின் அடிப்படைகளை அறிக தேர்வு செய்ய
-    நூற்றுக்கணக்கான மணிநேர விருப்பங்கள் உள்ளன!
-  middle_high_page_hourofcode_link: குறியீட்டு மணி நடவடிக்கைகளை ஆராயுங்கள்
-  middle_high_page_modules_title: மூத்த மாணவர்களுக்கான நிரலாக்க தொகுதிகள்
-  middle_high_page_modules_description: எங்கள் சிஎஸ் கண்டுபிடிப்புகள் மற்றும் சிஎஸ்
-    கொள்கைகள் படிப்புகளிலிருந்து ஏற்றவாறு, நடுத்தர மற்றும் உயர்நிலைப் பள்ளி மாணவர்களுக்கான
-    இந்த குறுகிய, சுய வேகமான தொகுதிகள் அனைத்து நிரலாக்க மொழிகளையும் கருவிகளையும் பரப்பும்
-    கருத்துக்களைக் கற்றுக்கொ
-  middle_high_page_modules_card_title_1: விளையாட்டு ஆய்வக அறிமுகம்
-  middle_high_page_modules_card_title_2: பயன்பாட்டு ஆய்வகத்தில் ஆமை நிரலாக்க
-  middle_high_page_modules_card_title_3: பயன்பாட்டு ஆய்வகத்தில் நிகழ்வு-உந்துதல் நிரலாக்க
-  middle_high_page_modules_card_description_1: அனிமேஷன்கள், ஊடாடும் கலை மற்றும் விளையாட்டுகளை
-    நிரல் செய்யும்போது எங்கள் கேம் லேப் சூழலுக்கான இந்த அறிமுகத்தில் உங்கள் சொந்த
-    வேகத்தில் நகரவும்.
-  middle_high_page_modules_card_description_2: ஆப் லேபில் ஜாவாஸ்கிரிப்ட் மூலம் பணக்கூறான,
-    ஊடாடும் பயன்பாடுகளை உருவாக்கும் திறனைத் திறக்கவும்
-  middle_high_page_modules_card_description_3: ஆப் லேப் நிரலாக்க சூழலுக்கான இந்த அறிமுகத்துடன்
-    உங்கள் சொந்த வேகத்தில் செல்லுங்கள், இதில் மாணவர்கள் ஊடாடும் பயன்பாடுகளை உருவாக்க
-    ஜாவாஸ்கிரிப்டைப் பயன்படுத்துகிறார்கள்.
-  middle_high_page_modules_card_link: முயற்சிக்கவும்
-  middle_high_page_make_your_own_title: உங்கள் சொந்த பயன்பாடுகள், விளையாட்டுகள் மற்றும்
-    வலைப்பக்கங்களை உருவாக்கவும்
-  middle_high_page_make_your_own_description: 'படிப்புகளுக்கு கூடுதலாக, உங்கள் படைப்பாற்றலை
-    ஆராய்ந்து அற்புதமான ஒன்றை உருவாக்க அனுமதிக்கும் நிரலாக்க கருவிகள் எங்களிடம் உள்ளன '
+  middle_high_page_main_title: Learning for Ages 11 and Up
+  middle_high_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_description: Learn the fundamentals of computer science with
+    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
+    hundreds of hour-long options to choose from!
+  middle_high_page_hourofcode_link: Explore Hour of Code activities
+  middle_high_page_modules_title: Programming Modules for Older Students
+  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
+    courses, these short, self-paced modules for middle and high school students are
+    a great way to learn concepts that span all programming languages and tools.
+  middle_high_page_modules_card_title_1: Introduction to Game Lab
+  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
+  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
+    to our Game Lab environment as you program animations, interactive art, and games.
+  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
+    apps with JavaScript in the App Lab!
+  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
+    to the App Lab programming environment, in which students use JavaScript to create
+    interactive apps.
+  middle_high_page_modules_card_link: Try it out
+  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
+  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
+    tools that let you explore your creativity and make something amazing. '
   middle_high_page_make_your_own_card_title_1: ஆப் லேப்
-  middle_high_page_make_your_own_card_title_2: விளையாட்டு ஆய்வகம்
-  middle_high_page_make_your_own_card_title_3: வலை ஆய்வகம்
-  middle_high_page_make_your_own_card_descrpition_1: ஆப் லேப் என்பது ஒரு நிரலாக்க
-    சூழலாகும், அங்கு நீங்கள் எளிய பயன்பாடுகளை உருவாக்கலாம். தொகுதிகள் அல்லது உரையுடன்
-    ஒரு பயன்பாட்டை, குறியீட்டை ஜாவாஸ்கிரிப்டில் வடிவமைத்து, பின்னர் உங்கள் பயன்பாட்டை
-    நொடிகளில்
-  middle_high_page_make_your_own_card_descrpition_2: கேம் லேப் என்பது ஒரு நிரலாக்க
-    சூழலாகும், அங்கு நீங்கள் ஒருவருக்கொருவர் தொடர்பு கொள்ளும் பொருள்கள் மற்றும் கதாபாத்திரங்களுடன்
-    எளிய அனிமேஷன்கள் மற்றும் கேம்களை உருவாக்க முடியும்.
-  middle_high_page_make_your_own_card_descrpition_3: வலை லேப் என்பது HTML மற்றும்
-    CSS ஐப் பயன்படுத்தி எளிய வலைப்பக்கங்களை உருவாக்கக்கூடிய ஒரு நிரலாக்க சூழலாகும்.
-    உங்கள் வலைப்பக்கங்களை வடிவமைத்து, உங்கள் தளத்தை நொடிகளில் பகிரவும்.
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
+    where you can make simple apps. Design an app, code in JavaScript with either
+    blocks or text, then share your app in seconds.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
+    where you can make simple animations and games with objects and characters that
+    interact with each other.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
+    where you can make simple web pages using HTML and CSS. Design your web pages
+    and share your site in seconds.
   middle_high_page_make_your_own_card_link: மேலும் அறிக
-  middle_high_page_additional_resources_title: கூடுதல் வளங்கள்
-  middle_high_page_additional_resources_description: கணினி அறிவியலை மேலும் ஆராய பல
-    வழிகள் உள்ளன! எங்கள் வீடியோ நூலகத்தை உலாவவும், அல்லது கணினி அறிவியல் துறையில்
-    அற்புதமான தொழில் பற்றி மேலும் அறிக.
-  middle_high_page_video_library_title: எங்கள் வீடியோ நூலகத்தைக் கண்ட
-  middle_high_page_video_library_description: செயற்கை நுண்ணறிவு, இணையம், கணினிகள்
-    எவ்வாறு செயல்படுகின்றன, எப்படி ஹேக் செய்யக்கூடாது, பிளாக்செயின், தொழில் மற்றும்
-    பல தலைப்புகளில் குறுகிய 5-10 நிமிட வீடியோக்கள் மூலம் கணினி அறிவியலின் அடிப்படைகளை
-    அறிக!
-  middle_high_page_video_library_link: வீடியோ நூலகத்தைக்
-  middle_high_page_cs_journeys_title: சிஎஸ் ஜர்னிகளுடன் மேலும் செல்லுங்கள்
-  middle_high_page_cs_journeys_description: உங்கள் கணினி அறிவியல் பயணத்தில் அடுத்த
-    கட்டத்தை எடுத்துக் கொள்ளுங்கள். தொழில், வழிகாட்டல் வாய்ப்புகள், ஆன்லைன் படிப்புகள்,
-    உதவித்தொகைகள், இன்டர்ன்ஷிப் மற்றும் பல
-  middle_high_page_cs_journeys_link: சிஎஸ் ஜர்னிகளை ஆராயுங்கள்
-  middle_high_page_cs_title: வகுப்பறையில் கணினி அறிவியல்
-  middle_high_page_cs_description: இந்த படிப்புகள் ஒரு ஆசிரியரால் வழிநடத்தப்பட வேண்டும்!
-    உங்கள் பள்ளியில் அவர்கள் கற்பிப்பதைப் பார்க்க விரும்பினால், அவர்களை உங்கள் வகுப்பிற்கு
-    கொண்டு வர ஒரு ஆசிரியருடன் பணியாற்றுவதை கவனியுங்கள்.
-  middle_high_page_cs_card_title_1: சிஎஸ் கண்டுபிடிப்பு
-  middle_high_page_cs_card_title_2: சிஎஸ் கொள்கைகள்
-  middle_high_page_cs_card_title_3: AP கம்ப்யூட்டர் சயின்ஸ்
+  middle_high_page_additional_resources_title: Additional Resources
+  middle_high_page_additional_resources_description: There are so many ways to further
+    explore computer science! Browse our video library, or learn more about exciting
+    careers in the computer science field.
+  middle_high_page_video_library_title: Discover our Video Library
+  middle_high_page_video_library_description: Learn the basics of computer science
+    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
+    how computers work, how not to get hacked, blockchain, careers, and more!
+  middle_high_page_video_library_link: View video library
+  middle_high_page_cs_journeys_title: Go Further with CS Journeys
+  middle_high_page_cs_journeys_description: Take the next step on your computer science
+    journey. Explore careers, mentorship opportunities, online courses, scholarships,
+    internships and more!
+  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_cs_title: Computer Science in the Classroom
+  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
+    like to see them taught at your school, consider working with a teacher to bring
+    them to your class.
+  middle_high_page_cs_card_title_1: CS Discoveries
+  middle_high_page_cs_card_title_2: CS Principles
+  middle_high_page_cs_card_title_3: AP Computer Science A
   middle_high_page_cs_card_description_1: கணினி அறிவியலின் அடித்தளக் கருத்துகளுக்கு
     மாணவர்களை அறிமுகப்படுத்தி, கம்ப்யூட்டிங் மற்றும் தொழில்நுட்பம் எவ்வாறு உலகத்தை
     பாதிக்கும் என்பதை ஆராய அவர்களுக்கு சவால் விடுகிறது.
@@ -14947,36 +14937,34 @@ ta:
   middle_high_page_cs_card_description_3: அவர்கள் AP® கணினி அறிவியல் ஏ (AP® CSA) இந்த
     இலவச பாடத்திட்டத்தில் ஜாவா நிரலாக்க மொழியை கற்று போது மென்பொருள் பொறியியல்
     மற்றும் பொருள் சார்ந்த வடிவமைப்பு மாணவர்கள் அறிமுகம்.
-  middle_high_page_cs_link_1: சிஎஸ் டிகோவரிகளை ஆராயுங்கள்
+  middle_high_page_cs_link_1: Explore CS Dicoveries
   middle_high_page_cs_link_2: சிஎஸ் கோட்பாடுகளை ஆராயுங்கள்
-  middle_high_page_cs_link_3: CSA ஐ ஆராயுங்கள்
-  elemeentary_page_main_title: 5 முதல் 11 வயதினருக்கான கற்றல்
-  elementary_page_main_description: ஈர்க்கக்கூடிய வீடியோக்கள், சுய வேகமான பயிற்சிகள்,
-    நிரலாக்க நடவடிக்கைகள் மற்றும் பலவற்றுடன் கணினி அறிவியல் உலகை ஆராயுங்கள்!
-  elementary_page_own_pace_title: உங்கள் சொந்த வேகத்தில் தொடர்ந்து கற்றுக்கொள்ளுங்கள்
-  elementary_page_own_pace_description: கணினி அறிவியலின் அடிப்படைகளை மாணவர்கள் சொந்தமாகக்
-    கற்றுக்கொள்ளத் தொடங்குவதற்கான இந்த இரண்டு சிறந்த விருப்பங்களில் வரைபடங்கள், விளையாட்டுகள்
-    மற்றும் பலவற்றை உருவாக்கவும்.
-  elementary_page_own_pace_card_title_1: ப்ரீ ரீடர் எக்ஸ்பிரஸ்
-  elementary_page_own_pace_card_title_2: எக்ஸ்பிரஸ் பாடநெறி
-  elementary_page_own_pace_card_description_1: கணினி அறிவியலை உங்கள் சொந்த வேகத்தில்
-    கற்றுக்கொள்ளுங்கள்! கணினி நிரல்களை உருவாக்கவும், சிக்கல் தீர்க்கும் திறன்களை வளர்த்துக்
-    கொள்ளவும், வேடிக்கையான சவால்களின் மூலம் வேலை செய்யவும் நண்பர்கள், குடும்பம் மற்றும்
-    ஆசிரியர்களுடன் பகிர்ந்து கொள்ள விளையாட்டுகள் மற்றும் படைப்பு திட்டங்களை உருவாக்கவும்
-  elementary_page_own_pace_link_1: முன் ரீடர் படிப்பைத் தொடங்க
-  elementary_page_own_pace_link_2: எக்ஸ்பிரஸ் பாடநெறி
-  elementary_page_make_your_own_games_title: உங்கள் சொந்த அனிமேஷன் மற்றும் விளையாட்டுகளை
-    உருவாக்குங்கள்
+  middle_high_page_cs_link_3: Explore CSA
+  elemeentary_page_main_title: Learning for Ages 5 to 11
+  elementary_page_main_description: Explore the world of computer science with engaging
+    videos, self-paced tutorials, programming activities, and more!
+  elementary_page_own_pace_title: Continue Learning at Your Own Pace
+  elementary_page_own_pace_description: Create drawings, games, and more in these
+    two excellent options for students getting started on their own learning the basics
+    of computer science.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
+  elementary_page_own_pace_card_title_2: Express Course
+  elementary_page_own_pace_card_description_1: Learn computer science at your own
+    pace! Learn to create computer programs, develop problem-solving skills, and work
+    through fun challenges! Make games and creative projects to share with friends,
+    family, and teachers.
+  elementary_page_own_pace_link_1: Start Pre-Reader Course
+  elementary_page_own_pace_link_2: Start Express Course
+  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
   elementary_page_make_your_own_games_card_title_1: ஸ்பிரிட் லேப்
-  elementary_page_make_your_own_games_card_description_1: ஆக்கபூர்வமாக இருக்க நேரம்!
-    ஸ்ப்ரைட் ஆய்வகத்தில் வேடிக்கையான, இனிமையான அல்லது வெளிப்புற இடைவெளி ஒன்றை உருவாக்க
-    பிளாக் அடிப்படையிலான குறியீட்டைப் பயன்படுத்தவும். ஒரே வரம்பு உங்கள் கற்பனை!
-  elementary_page_make_your_own_games_link: ஸ்ப்ரைட் லேப் முயற்சி
-  elementary_page_computer_science_title: வகுப்பறையில் கணினி அறிவியல்
-  elementary_page_computer_science_description: இந்த படிப்புகள் ஒரு ஆசிரியரால் வழிநடத்தப்பட
-    வேண்டும்! உங்கள் பள்ளியில் அவர்கள் கற்பிப்பதைக் காண விரும்பினால், ஒரு பெற்றோர்
-    அல்லது பாதுகாவலரிடம் அவர்களை உங்கள் வகுப்பிற்கு கொண்டு வர ஒரு ஆசிரியருடன் பணியாற்றுமாறு
-    கேளுங்கள்.
+  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
+    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
+    The only limit is your imagination!
+  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_computer_science_title: Computer Science in the Classroom
+  elementary_page_computer_science_description: These courses should be led by a teacher!
+    If you'd like to see them taught at your school, ask a parent or guardian to work
+    with a teacher to bring them to your class.
   elementary_page_computer_science_card_title_1: கணினி அறிவியல் அடிப்படைகள்
   elementary_page_computer_science_card_title_2: கணினி அறிவியல் இணைப்புகள்
   elementary_page_computer_science_description_1: கணினி அறிவியலின் அடித்தளக் கருத்துகளுக்கு

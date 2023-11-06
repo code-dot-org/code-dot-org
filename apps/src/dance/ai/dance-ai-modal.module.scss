@@ -1,11 +1,23 @@
 @import 'color.scss';
 @import '../../mixins.scss';
 
-$ai-block-color: rgb(64 68 73);
+$ai-block-color: rgb(86 96 101);
 $ai-block-border-color: rgb(121 124 128);
-$ai-block-inputs-border-color: rgb(121 124 128);
+$ai-block-inputs-color: rgb(63 68 75);
+$ai-block-inputs-border-color: rgba(255 255 255 / 0.6);
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
+$result-green: rgb(86 197 104);
+$result-red: rgb(235 87 87);
+
+@keyframes preview-right-to-normal {
+  0% {
+    left: 52%;
+  }
+  100% {
+    left: 50%;
+  }
+}
 
 @keyframes appear {
   0% {
@@ -65,13 +77,24 @@ $ai-modal-border-width: 8px;
   }
 }
 
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $black;
+  opacity: 0.3;
+  z-index: 1250;
+}
+
 .dialog {
   max-width: initial !important;
   width: 824px !important;
   height: 454px;
   padding: 0 !important;
-  border: solid 1px $ai-block-border-color;
   background-color: $ai-block-color !important;
+  border: solid 1px $ai-block-border-color;
 
   .headerArea {
     width: calc(100% - 2 * $ai-modal-border-width);
@@ -94,6 +117,7 @@ $ai-modal-border-width: 8px;
       padding: 5px;
       border-radius: 4px;
       gap: 6px;
+      background-color: $ai-block-inputs-color;
       border: solid 2px $ai-block-inputs-border-color;
 
       .emojiSlot {
@@ -111,6 +135,16 @@ $ai-modal-border-width: 8px;
 
     &Right {
       margin-left: auto;
+
+      .closeButton {
+        background-color: initial;
+        color: white;
+        border: initial;
+
+        &:hover {
+          box-shadow: initial;
+        }
+      }
     }
   }
 
@@ -128,11 +162,21 @@ $ai-modal-border-width: 8px;
     border-radius: 4px;
     background-color: white;
 
+    .toggleArea  {
+      position: absolute;
+      width: 40%;
+      height: 100px;
+      top: 10px;
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%);
+    }
+
     .textArea {
       position: absolute;
       width: 100%;
       height: 20px;
-      bottom: 50px;
+      bottom: 14px;
       left: 0;
       text-align: center;
       font-size: 18px;
@@ -217,7 +261,7 @@ $ai-modal-border-width: 8px;
     .botArea {
       position: absolute;
       width: 100%;
-      height: 200px;
+      height: 300px;
       top: 10px;
       left: 0;
       pointer-events: none;
@@ -253,6 +297,12 @@ $ai-modal-border-width: 8px;
             position: relative;
             width: 110px;
             animation: appear1 0.5s;
+            pointer-events: auto;
+
+            &:hover {
+              transform: scale(1.03, 1.03);
+              transition: 0.1s ease-in-out;
+            }
           }
 
           .beamImage {
@@ -270,6 +320,33 @@ $ai-modal-border-width: 8px;
           }
         }
       }
+
+      .score {
+        position: absolute;
+        left: 40px;
+        top: 200px;
+
+        .barContainer {
+          background-color: rgb(56 55 55);
+          width: 80px;
+          height: 20px;
+          position: relative;
+
+          .barFill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            background-color: rgb(16 189 233);
+            transition: width 0.4s;
+          }
+        }
+
+        .text {
+          font-size: 24px;
+          margin-top: 10px;
+        }
+      }
     }
 
     .outputsArea {
@@ -278,7 +355,7 @@ $ai-modal-border-width: 8px;
       justify-content: center;
       width: 100%;
       height: 270px;
-      top: 10px;
+      top: 40px;
       left: 0;
 
       .blockPreview {
@@ -286,6 +363,8 @@ $ai-modal-border-width: 8px;
         transform: translateX(-50%);
         left: 45%;
         top: 60px;
+        backface-visibility: hidden;
+        transition: transform 0.8s;
 
         &Right {
           left: 83%;
@@ -295,23 +374,58 @@ $ai-modal-border-width: 8px;
           animation: right-to-center 2s;
           left: 45%;
         }
+
+        &Hide {
+          transform: rotateY(180deg);
+        }
       }
     }
 
     .previewArea {
       position: absolute;
-      height: 200px;
-      right: 5px;
+      width: 500px;
+      height: 280px;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       align-items: center;
       margin-top: 10px;
-      animation: appear1 2s;
-    }
+      animation: appear 0.7s, preview-right-to-normal 0.7s;
 
-    .generatingArea {
-      position: absolute;
-      top: 0;
-      width: calc(100% - 20px);
+      .flipCard {
+        position: absolute;
+        top: 0;
+        perspective: 1400px;
+        width: 100%;
+        height: 100%;
+
+        &Inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+
+          &Flipped {
+            transform: rotateY(180deg);
+          }
+        }
+
+        &Front, &Back {
+          position: absolute;
+          backface-visibility: hidden;
+          left: 50%;
+        }
+
+        &Front {
+          transform: translateX(-50%);
+        }
+
+        &Back {
+          transform: rotateY(180deg) translateX(50%);
+        }
+      }
     }
 
     .explanationArea {
@@ -339,10 +453,23 @@ $ai-modal-border-width: 8px;
         margin-right: auto;
       }
     }
+
+    .buttonsAreaTop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   .button {
     font-size: 16px;
+
+    &:disabled {
+      pointer-events: none;
+    }
 
     &NoMargin {
       margin: 0;
