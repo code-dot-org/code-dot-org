@@ -6,9 +6,6 @@ import {procedureDefMutator} from './mutators/procedureDefMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
 import procedureCallerMutator from './mutators/procedureCallerMutator';
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -112,7 +109,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
   // remove the check on functionEditor workspace id.
   if (
-    useModalFunctionEditor &&
+    Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
     this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
@@ -153,7 +150,7 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
-  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
     const getColor = () => {
       return Blockly.cdoUtils.getBlockColor(this);
     };
@@ -233,7 +230,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
 
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
-  } else if (useModalFunctionEditor) {
+  } else if (Blockly.useModalFunctionEditor) {
     const newFunctionButton = getNewFunctionButtonWithCallback(
       workspace,
       functionDefinitionBlock
