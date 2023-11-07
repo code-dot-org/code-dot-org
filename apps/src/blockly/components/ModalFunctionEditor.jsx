@@ -49,6 +49,7 @@ export default function ModalFunctionEditor() {
   );
 }
 
+// In-line styles are used to avoid conflicting with classes applied by the Button class.
 const buttonStyles = {
   border: `2px solid ${color.neutral_dark}`,
   fontWeight: 'bolder',
