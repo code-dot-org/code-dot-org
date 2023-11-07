@@ -611,7 +611,11 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         {mode === Mode.GENERATING && (
-          <div id="score-area" className={moduleStyles.scoreArea}>
+          <div
+            id="score-area"
+            key={generatingProgress.step}
+            className={moduleStyles.scoreArea}
+          >
             <Score scores={getScores(generatingProgress.step)} />
           </div>
         )}
@@ -773,38 +777,38 @@ interface ScoreProps {
 const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
   const multiplyScores = 10;
 
+  const layers = [
+    {
+      height: scores[0] + scores[1] + scores[2],
+      className: moduleStyles.barFillFirst,
+    },
+    {
+      height: scores[0] + scores[1],
+      className: moduleStyles.barFillSecond,
+    },
+    {
+      height: scores[0],
+      className: moduleStyles.barFillThird,
+    },
+  ];
+
   return (
     <div className={moduleStyles.scoreContainer}>
-      <div
-        className={classNames(moduleStyles.barFill, moduleStyles.barFillFirst)}
-        style={{
-          height: Math.round(
-            (scores[0] + scores[1] + scores[2]) * multiplyScores
-          ),
-        }}
-      >
-        &nbsp;
-      </div>
-      <div
-        className={classNames(moduleStyles.barFill, moduleStyles.barFillSecond)}
-        style={{
-          height: Math.round((scores[0] + scores[1]) * multiplyScores),
-        }}
-      >
-        &nbsp;
-      </div>
-      <div
-        className={classNames(moduleStyles.barFill, moduleStyles.barFillThird)}
-        style={{
-          height: Math.round(scores[0] * multiplyScores),
-        }}
-      >
-        &nbsp;
-      </div>
-
-      <div className={moduleStyles.text}>
-        {Math.round((scores[0] + scores[1] + scores[2]) * multiplyScores)}
-      </div>
+      {layers.map((layer, index) => {
+        return (
+          <div
+            key={index}
+            className={moduleStyles.barContainer}
+            style={{
+              height: Math.round(layer.height * multiplyScores),
+            }}
+          >
+            <div className={classNames(moduleStyles.barFill, layer.className)}>
+              &nbsp;
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

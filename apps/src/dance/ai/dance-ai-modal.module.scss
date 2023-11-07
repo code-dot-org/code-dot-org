@@ -9,9 +9,9 @@ $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
 $result-green: rgb(86 197 104);
 $result-red: rgb(235 87 87);
-$chart-first: #92DBE6;
-$chart-second: #E091AE;
-$chart-third: #FADFA6;
+$chart-first: #79dde8;
+$chart-second: #ee8caf;
+$chart-third: #ffde9e;
 
 @keyframes preview-right-to-normal {
   0% {
@@ -67,6 +67,15 @@ $chart-third: #FADFA6;
   }
   100% {
     top: 100px;
+  }
+}
+
+@keyframes height-zero-to-full {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
   }
 }
 
@@ -328,31 +337,38 @@ $chart-third: #FADFA6;
     }
 
     .scoreContainer {
-      background-color: $neutral_dark20;
+      background-color: $neutral_dark10;
       width: 40px;
       height: 140px;
       position: relative;
       border-radius: 4px;
       overflow: hidden;
 
-      .barFill {
+      .barContainer {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 40px;
-        background-color: rgb(16 189 233);
-        transition: width 0.4s;
 
-        &First {
-          background-color: $chart-first;
-        }
+        .barFill {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          animation: height-zero-to-full 1s;
+          height: 100%;
 
-        &Second {
-          background-color: $chart-second;
-        }
+          &First {
+            background-color: $chart-first;
+          }
 
-        &Third {
-          background-color: $chart-third;
+          &Second {
+            background-color: $chart-second;
+          }
+
+          &Third {
+            background-color: $chart-third;
+          }
         }
       }
 
