@@ -75,7 +75,6 @@ export default function LearningGoal({
   const handleFeedbackChange = event => {
     if (studentLevelInfo.user_id && learningGoal.id) {
       if (autosaveTimer.current) {
-        console.log('clearing timer' + autosaveTimer.current);
         clearTimeout(autosaveTimer.current);
       }
       teacherFeedback.current = event.target.value;
@@ -83,7 +82,6 @@ export default function LearningGoal({
       autosaveTimer.current = setTimeout(() => {
         autosave();
       }, saveAfter);
-      console.log('setting timer' + autosaveTimer.current);
     }
   };
 
@@ -117,7 +115,6 @@ export default function LearningGoal({
         setIsAutosaving(false);
         setErrorAutosaving(true);
       });
-    console.log('clearing timer' + autosaveTimer.current);
     clearTimeout(autosaveTimer.current);
   }, [studentLevelInfo, learningGoal, learningGoalEval]);
 
