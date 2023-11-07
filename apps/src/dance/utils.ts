@@ -1,3 +1,6 @@
+import {SongMetadata} from './types';
+import previewMetadata from '@cdo/static/dance/preview-metadata.json';
+
 // Common utils shared between legacy and Lab2 Dance
 
 function computeCharactersReferenced(studentCode: string): string[] {
@@ -17,6 +20,9 @@ function computeCharactersReferenced(studentCode: string): string[] {
   // Special parsing for the JSON parameter to ai().
   const aiCharactersRegExp = new RegExp(/ai\(([^\)]*)/, 'gm');
   while ((match = aiCharactersRegExp.exec(studentCode))) {
+    if (match[1] === 'undefined') {
+      continue;
+    }
     try {
       const params = JSON.parse(match[1]);
       if (params.dancers && params.dancers.type) {
@@ -46,8 +52,21 @@ function getValidationCallback(validationCode: string): Function {
   );
 }
 
+/**
+ * Returns fixed song metadata for the Dance Party live preview,
+ * updated with the current song's artist and title.
+ */
+function getSongMetadataForPreview(songMetadata: SongMetadata): SongMetadata {
+  return {
+    ...previewMetadata,
+    title: songMetadata.title,
+    artist: songMetadata.artist,
+  };
+}
+
 // Need to use default exports for stubbing these functions in tests
 export default {
   computeCharactersReferenced,
   getValidationCallback,
+  getSongMetadataForPreview,
 };

@@ -21,6 +21,7 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
+import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -81,6 +82,7 @@ export default function SectionsSetUpContainer({
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
+  const [coteachersToAdd, setCoteachersToAdd] = useState([]);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
@@ -156,7 +158,7 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const saveSection = (section, createAnotherSection) => {
+  const saveSection = (section, createAnotherSection, coteachersToAdd) => {
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -199,6 +201,7 @@ export default function SectionsSetUpContainer({
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
       grades: computedGrades,
+      instructor_emails: coteachersToAdd,
       ...section,
     };
 
@@ -306,7 +309,15 @@ export default function SectionsSetUpContainer({
           {tooltip}
         </div>
       ),
-      () => <div>{i18n.coteacherAddInfo()}</div>,
+      () => (
+        <CoteacherSettings
+          sectionId={sections[0].id}
+          sectionInstructors={sections[0].sectionInstructors}
+          primaryTeacher={sections[0].primaryInstructor}
+          setCoteachersToAdd={setCoteachersToAdd}
+          coteachersToAdd={coteachersToAdd}
+        />
+      ),
       isCoteacherOpen,
       toggleIsCoteacherOpen
     );
@@ -372,7 +383,7 @@ export default function SectionsSetUpContainer({
             color={Button.ButtonColor.neutralDark}
             onClick={e => {
               e.preventDefault();
-              saveSection(sections[0], true);
+              saveSection(sections[0], true, coteachersToAdd);
             }}
           />
         )}
@@ -391,7 +402,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            saveSection(sections[0], false);
+            saveSection(sections[0], false, coteachersToAdd);
           }}
         />
       </div>

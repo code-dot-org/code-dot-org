@@ -341,7 +341,7 @@ end
 def puts_script_conclusion
   puts <<-EOS.unindent
 
-   #{bold "Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}"}
+   #{bold "Post a summary of your DOTD shift in the #developers Slack channel. You can find a log of your day at #{LOG_FILE}"}
 
   #{bold "You're done!"}
   EOS

@@ -1190,17 +1190,126 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience, perceptions, and your learning after teaching this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience, perceptions, and your learning after participating in this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "checkbox",
+              "name": "lessons_taught_checkbox",
+              "title": "Which of the following lessons did you teach?",
+              "choices": [
+                {
+                  "value": "lesson_1",
+                  "text": "Lesson 1: GitHub and Copilot Set Up"
+                },
+                {
+                  "value": "lesson_2",
+                  "text": "Lesson 2: Intro to GitHub"
+                },
+                {
+                  "value": "lesson_3",
+                  "text": "Lesson 3: Intro to Copilot"
+                },
+                {
+                  "value": "lesson_4",
+                  "text": "Lesson 4: Build with Copilot"
+                },
+                {
+                  "value": "lesson_5",
+                  "text": "Lesson 5: Intro to AI Models"
+                },
+                {
+                  "value": "lesson_6",
+                  "text": "Lesson 6: Training Your Model"
+                },
+                {
+                  "value": "lesson_7",
+                  "text": "Lesson 7: Using Your Model"
+                }
+              ]
             },
             {
               "type": "html",
-              "name": "section_intro_coding_proficiency",
-              "html": "<h2>General Coding Proficiency</h2>"
+              "name": "section_intro_real_world_tools",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "html": "<h2>Real World Tools</h2>"
             },
             {
               "type": "radiogroup",
-              "name": "st_articulate_coding_decisions",
-              "title": "After participating in this module, what percentage of students do you believe can effectively articulate their coding decisions and processes?",
+              "name": "teacher_comfort_using_ides",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "title": "After teaching this module, how comfortable do you feel using professional IDEs (e.g. VS Code)?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Very comfortable"
+                },
+                {
+                  "value": "4",
+                  "text": "Comfortable"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not too comfortable"
+                },
+                {
+                  "value": "1",
+                  "text": "Not comfortable at all"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "cdo_csa",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "title": "Prior to teaching this module, were your students using Code.org's CSA curriculum and JavaLab tools?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "teacher_comfort_teaching_ides",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "title": "After teaching this module, how comfortable do you feel teaching your students how to transition from education programming tools (e.g. AP CSA Tools) to professional IDEs?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Very comfortable"
+                },
+                {
+                  "value": "4",
+                  "text": "Comfortable"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not too comfortable"
+                },
+                {
+                  "value": "1",
+                  "text": "Not comfortable at all"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "st_made_connections_professional_ides",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "title": "What percentage of students consistently made connections between AP CSA tools and skills and real-world applications during this module?",
               "choices": [
                 {
                   "value": "quintile_5",
@@ -1225,17 +1334,46 @@
               ]
             },
             {
-              "type": "matrix",
-              "name": "effect_communication_matrix",
-              "title": "How impactful were each of the following on students' communication skills?",
-              "columns": [
+              "type": "radiogroup",
+              "name": "st_made_effectively_use_professional_ides",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "title": "What percentage of students were able to effectively use professional IDEs to develop a java program?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "impact_self_perception_students_use_ides",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
+              "title": "After teaching this module, do you believe introducing your students to professional IDEs strengthened their self-perception as capable computer scientists who could pursue a computer science career if they wanted to?",
+              "choices": [
                 {
                   "value": "5",
-                  "text": "Very Effective"
+                  "text": "Strongly Agree"
                 },
                 {
                   "value": "4",
-                  "text": "Effective"
+                  "text": "Agree"
                 },
                 {
                   "value": "3",
@@ -1243,150 +1381,53 @@
                 },
                 {
                   "value": "2",
-                  "text": "Not Too Effective"
+                  "text": "Disagree"
                 },
                 {
                   "value": "1",
-                  "text": "Not Effective At All"
-                },
-                {
-                  "value": "0",
-                  "text": "Not Applicable (Didn't teach it)"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "collaborative_coding_version_control",
-                  "text": "Collaborative coding and version control"
-                },
-                {
-                  "value": "ai_assisted_code",
-                  "text": "AI-assisted code generation"
-                },
-                {
-                  "value": "real_world_applications",
-                  "text": "Real-world applications of code"
-                },
-                {
-                  "value": "ethical_considerations",
-                  "text": "Ethical considerations in coding"
-                },
-                {
-                  "value": "model_training_java_integration",
-                  "text": "Model training and integration in Java"
+                  "text": "Strongly Disagree"
                 }
               ]
             },
             {
               "type": "html",
-              "name": "section_intro_real_world_tools",
-              "html": "<h2>Real World Tools</h2>"
+              "name": "section_intro_ai_tools",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
+              "html": "<h2>Use AI Tools to Generate, Debug, and Edit Code</h2>"
             },
             {
               "type": "radiogroup",
-              "name": "javalab_ides_similarities",
-              "title": "After teaching this module, I can confidently identify similarities between Java Lab and professional IDEs (i.e., VS Code).",
+              "name": "st_adapt_ai_generated_code",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
+              "title": "After completing this module, what percentage of students were able to adapt AI-generated code effectively?",
               "choices": [
                 {
-                  "value": "5",
-                  "text": "Strongly Agree"
+                  "value": "quintile_5",
+                  "text": "90% or more"
                 },
                 {
-                  "value": "4",
-                  "text": "Agree"
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
                 },
                 {
-                  "value": "3",
-                  "text": "Neutral"
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
                 },
                 {
-                  "value": "2",
-                  "text": "Disagree"
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
                 },
                 {
-                  "value": "1",
-                  "text": "Strongly Disagree"
-                }
-              ]
-            },
-            {
-              "type": "radiogroup",
-              "name": "confidence_ides",
-              "title": "Teaching this module significantly boosted my confidence in using professional IDEs (i.e., VS Code).",
-              "choices": [
-                {
-                  "value": "5",
-                  "text": "Strongly Agree"
-                },
-                {
-                  "value": "4",
-                  "text": "Agree"
-                },
-                {
-                  "value": "3",
-                  "text": "Neutral"
-                },
-                {
-                  "value": "2",
-                  "text": "Disagree"
-                },
-                {
-                  "value": "1",
-                  "text": "Strongly Disagree"
-                }
-              ]
-            },
-            {
-              "type": "radiogroup",
-              "name": "additional_content_ai_assisted_coding",
-              "title": "Which of the following would be your FIRST CHOICE to improve or add to better guide students in AI-assisted coding?",
-              "choices": [
-                {
-                  "value": "intro_ai_tools",
-                  "text": "Introduction to AI tools and their relevance"
-                },
-                {
-                  "value": "hands_on_exercises_ai_code",
-                  "text": "Hands-on exercises with AI-generated code"
-                },
-                {
-                  "value": "case_studies",
-                  "text": "Case studies showcasing real-world AI-assisted coding scenarios"
-                },
-                {
-                  "value": "deep_dive_challenges",
-                  "text": "Deep dives into common pitfalls and challenges"
-                },
-                {
-                  "value": "guided_peer_review",
-                  "text": "Guided peer review sessions on AI-generated solutions"
-                },
-                {
-                  "value": "troubleshooting_ai_projects",
-                  "text": "Troubleshooting and debugging AI-assisted projects"
-                },
-                {
-                  "value": "ethical_ai",
-                  "text": "Ethical considerations and responsible use of AI in coding"
-                },
-                {
-                  "value": "compare_traditional_ai",
-                  "text": "Comparing traditional coding with AI-assisted techniques"
-                },
-                {
-                  "value": "other",
-                  "text": "Other"
-                },
-                {
-                  "value": "none",
-                  "text": "None"
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
                 }
               ]
             },
             {
               "type": "radiogroup",
               "name": "ai_generated_code_critique_students",
-              "title": "How often did students critique AI-generated code during the module?",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
+              "title": "How often did students critique AI-generated code during the module?  (i.e. students identified errors or ways to improve AI-generated code)",
               "choices": [
                 {
                   "value": "5",
@@ -1398,7 +1439,7 @@
                 },
                 {
                   "value": "3",
-                  "text": "Sometimes"
+                  "text": "About half the time"
                 },
                 {
                   "value": "2",
@@ -1413,6 +1454,7 @@
             {
               "type": "matrix",
               "name": "ai_code_difficulties_matrix",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
               "title": "How often did you notice the following while students worked with AI-generated code?",
               "columns": [
                 {
@@ -1465,8 +1507,99 @@
             },
             {
               "type": "radiogroup",
-              "name": "st_ability_adapt_ai_generated_code",
-              "title": "After completing this module, what percentage of students improved in their ability to adapt AI-generated code?",
+              "name": "frequency_use_ai_generated_examples",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
+              "title": "How frequently did you use AI-generated examples while teaching this module?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Every lesson"
+                },
+                {
+                  "value": "4",
+                  "text": "Frequently"
+                },
+                {
+                  "value": "3",
+                  "text": "In about half of the lessons"
+                },
+                {
+                  "value": "2",
+                  "text": "Occasionally"
+                },
+                {
+                  "value": "1",
+                  "text": "Never"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "teacher_comfort_ai_generated_examples",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
+              "title": "After teaching this module, how comfortable do you feel using AI to generate real-world examples for your students to critique and modify?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Very comfortable"
+                },
+                {
+                  "value": "4",
+                  "text": "Comfortable"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not too comfortable"
+                },
+                {
+                  "value": "1",
+                  "text": "Not comfortable at all"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "teacher_comfort_ai_tools_teaching",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']",
+              "title": "After teaching this module, how comfortable do you feel using AI tools as part of your teaching practices? (i.e., to draft lesson plans or activities, brainstorm ways to differentiate content or provide extension activities, and/or demonstrate writing or debugging code)",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Very comfortable"
+                },
+                {
+                  "value": "4",
+                  "text": "Comfortable"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not too comfortable"
+                },
+                {
+                  "value": "1",
+                  "text": "Not comfortable at all"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section_ai_models_computer_vision",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_6', 'lesson_7']",
+              "html": "<h2>AI Models and Computer Vision</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "st_integrate_ai_into_java",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_7']",
+              "title": "After completing this module, what percentage of students understand how to effectively incorporate AI models in a Java program?",
               "choices": [
                 {
                   "value": "quintile_5",
@@ -1491,13 +1624,9 @@
               ]
             },
             {
-              "type": "html",
-              "name": "section_ai_models_computer_vision",
-              "html": "<h2>AI Models and Computer Vision</h2>"
-            },
-            {
               "type": "radiogroup",
               "name": "st_limitations_model_training",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_6']",
               "title": "After completing this module, what percentage of students effectively understand the limitations of model training?",
               "choices": [
                 {
@@ -1523,76 +1652,22 @@
               ]
             },
             {
-              "type": "radiogroup",
-              "name": "st_integrate_ai_into_java",
-              "title": "After completing this module, what percentage of students understand how to incorporate AI models in a Java program?",
-              "choices": [
-                {
-                  "value": "quintile_5",
-                  "text": "90% or more"
-                },
-                {
-                  "value": "quintile_4",
-                  "text": "75 - 89%"
-                },
-                {
-                  "value": "quintile_3",
-                  "text": "50 - 74%"
-                },
-                {
-                  "value": "quintile_2",
-                  "text": "25 - 49%"
-                },
-                {
-                  "value": "quintile_1",
-                  "text": "0 - 24%"
-                }
-              ]
-            },
-            {
               "type": "html",
-              "name": "section_teacher_confidence_new_cs_ai_concepts",
-              "html": "<h2>Teacher Confidence with New CS and AI Concepts</h2>"
+              "name": "section_curriculum_feedback",
+              "html": "<h2>Your Feedback and Impressions About Code.org's Software Engineering and Computer Vision Module</h2>"
             },
             {
               "type": "radiogroup",
-              "name": "frequency_use_ai_generated_examples",
-              "title": "How frequently did you utilize AI-generated examples while teaching this module?",
+              "name": "integrate_content_future_lessons",
+              "title": "After teaching this module, how likely are you to integrate some of the tools or resources explored in this module into future lessons?",
               "choices": [
                 {
                   "value": "5",
-                  "text": "Every lesson"
+                  "text": "Very likely"
                 },
                 {
                   "value": "4",
-                  "text": "Frequently"
-                },
-                {
-                  "value": "3",
-                  "text": "About half of the lessons"
-                },
-                {
-                  "value": "2",
-                  "text": "Occasionally"
-                },
-                {
-                  "value": "1",
-                  "text": "Never"
-                }
-              ]
-            },
-            {
-              "type": "radiogroup",
-              "name": "confidence_introducing_new_concepts",
-              "title": "I feel confident in introducing new CS and AI topics to my students.",
-              "choices": [
-                {
-                  "value": "5",
-                  "text": "Strongly Agree"
-                },
-                {
-                  "value": "4",
-                  "text": "Agree"
+                  "text": "Likely"
                 },
                 {
                   "value": "3",
@@ -1600,72 +1675,225 @@
                 },
                 {
                   "value": "2",
-                  "text": "Disagree"
+                  "text": "Not too likely"
                 },
                 {
                   "value": "1",
-                  "text": "Strongly Disagree"
+                  "text": "Not likely at all"
                 }
               ]
             },
             {
-              "type": "html",
-              "name": "section_general_feedback",
-              "html": "<h2>General Feedback</h2>"
-            },
-            {
               "type": "radiogroup",
-              "name": "pacing",
-              "title": "The pacing outlined in the lesson plan worked for me.",
+              "name": "additional_content_ai_assisted_coding",
+              "title": "Which of the following would be your FIRST CHOICE to improve or add to better guide students in AI-assisted coding?",
               "choices": [
                 {
-                  "value": "5",
-                  "text": "Strongly Agree"
+                  "value": "intro_ai_tools",
+                  "text": "Introduction to AI tools and their relevance"
                 },
                 {
-                  "value": "4",
-                  "text": "Agree"
+                  "value": "hands_on_exercises_ai_code",
+                  "text": "Hands-on exercises with AI-generated code"
                 },
                 {
-                  "value": "3",
-                  "text": "Neutral"
+                  "value": "case_studies",
+                  "text": "Case studies showcasing real-world AI-assisted coding scenarios"
                 },
                 {
-                  "value": "2",
-                  "text": "Disagree"
+                  "value": "deep_dive_challenges",
+                  "text": "Deep dives into common pitfalls and challenges of AI-generated code"
                 },
                 {
-                  "value": "1",
-                  "text": "Strongly Disagree"
+                  "value": "guided_peer_review",
+                  "text": "Guided peer review sessions on AI-generated solutions"
+                },
+                {
+                  "value": "troubleshooting_ai_projects",
+                  "text": "Troubleshooting and debugging AI-assisted projects"
+                },
+                {
+                  "value": "ethical_ai",
+                  "text": "Ethical considerations and responsible use of AI in coding"
+                },
+                {
+                  "value": "compare_traditional_ai",
+                  "text": "Comparing traditional coding with AI-assisted techniques"
+                },
+                {
+                  "value": "other",
+                  "text": "Other"
+                },
+                {
+                  "value": "none",
+                  "text": "None"
                 }
               ]
             },
             {
               "type": "radiogroup",
               "name": "reason_didnt_finish",
-              "title": "Did you finish the module?",
+              "visibleIf": "{lessons_taught_checkbox} <> ['lesson_1', 'lesson_2', 'lesson_3', 'lesson_4', 'lesson_5', 'lesson_6', 'lesson_7']",
+              "title": "What was the main reason why you didn't teach all lessons in this module?",
               "choices": [
                 {
-                  "value": "finished",
-                  "text": "Yes, I finished the module."
-                },
-                {
                   "value": "no_time",
-                  "text": "No, I didn't have enough time."
+                  "text": "I didn't have enough time"
                 },
                 {
-                  "value": "no_difficult_to_teach",
-                  "text": "No, it was too difficult to teach."
+                  "value": "difficult_to_teach",
+                  "text": "It was too difficult to teach"
                 },
                 {
-                  "value": "no_difficult_for_students",
-                  "text": "My students found it too difficult."
+                  "value": "difficult_for_students",
+                  "text": "My students found it too difficult"
                 },
                 {
-                  "value": "no_other",
-                  "text": "No, for other reasons."
+                  "value": "content_already_covered",
+                  "text": "I had already covered that content"
+                },
+                {
+                  "value": "other",
+                  "text": "For other reasons"
                 }
               ]
+            },
+            {
+              "type": "matrix",
+              "name": "effectiveness_teaching_materials",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2', 'lesson_3', 'lesson_4', 'lesson_5', 'lesson_6', 'lesson_7']",
+              "title": "Were the materials included in the following lessons effective to support your students’ learning?",
+              "columns": [
+                {
+                  "value": "5",
+                  "text": "Very effective"
+                },
+                {
+                  "value": "4",
+                  "text": "Effective"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not too effective"
+                },
+                {
+                  "value": "1",
+                  "text": "Not effective at all"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "professional_ides",
+                  "text": "Lessons about using professional IDEs (GitHub)",
+                  "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']"
+                },
+                {
+                  "value": "ai_generated_code",
+                  "text": "Lessons about AI-generated code and using Copilot",
+                  "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']"
+                },
+                {
+                  "value": "ai_models_computer_vision",
+                  "text": "Lessons about AI models and computer vision",
+                  "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_5', 'lesson_6', 'lesson_7']"
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "relevance_content",
+              "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2', 'lesson_3', 'lesson_4', 'lesson_5', 'lesson_6', 'lesson_7']",
+              "title": "Do you believe the content of these lessons was relevant to your students?",
+              "columns": [
+                {
+                  "value": "5",
+                  "text": "Extremely relevant"
+                },
+                {
+                  "value": "4",
+                  "text": "Relevant"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not too relevant"
+                },
+                {
+                  "value": "1",
+                  "text": "Not relevant at all"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "professional_ides",
+                  "text": "Lessons about using professional IDEs (GitHub)",
+                  "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']"
+                },
+                {
+                  "value": "ai_generated_code",
+                  "text": "Lessons about AI-generated code and using Copilot",
+                  "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_3', 'lesson_4']"
+                },
+                {
+                  "value": "ai_models_computer_vision",
+                  "text": "Lessons about AI models and computer vision",
+                  "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_5', 'lesson_6', 'lesson_7']"
+                }
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "other_feedback_FR",
+              "title": "Is there anything else you’d like to tell us about your experience teaching Code.org's Software Engineering and Computer Vision module?",
+              "cols": 60,
+              "rows": 3
+            },
+            {
+              "type": "radiogroup",
+              "name": "permission",
+              "title": "I give Code.org permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
+              "choices": [
+                {
+                  "value": "yes_with_name",
+                  "text": "Yes, I give permission to quote me and use my name."
+                },
+                {
+                  "value": "yes_anon",
+                  "text": "Yes, I give permission to quote me, but I want to be anonymous."
+                },
+                {
+                  "value": "no",
+                  "text": "No, I do not give permission to quote me."
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "can_contact",
+              "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Code.org's curriculum?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "contact_email",
+              "visibleIf": "{can_contact} = 'yes'",
+              "title": "Please enter the email address where we can contact you to gather additional feedback about Code.org's curriculum."
             }
           ]
         },
