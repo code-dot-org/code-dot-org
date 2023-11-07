@@ -52,10 +52,6 @@ export enum FieldKey {
   BACKGROUND_PALETTE = 'backgroundColor',
 }
 
-export type Results = {[key in FieldKey]: string};
+export type GeneratedEffect = {[key in FieldKey]: string};
 
-export type Scores = number[];
-
-export interface GeneratedEffect {
-  results: Results;
-}
+export type GeneratedEffectScores = number[];

@@ -80,11 +80,9 @@ export function chooseEffects(
     foregroundOptions[Math.floor(Math.random() * foregroundOptions.length)];
 
   const chosenEffects = {
-    results: {
-      backgroundEffect: backgroundEffectOption[1],
-      backgroundColor: backgroundColorOption[1],
-      foregroundEffect: foregroundEffectOption[1],
-    },
+    backgroundEffect: backgroundEffectOption[1],
+    backgroundColor: backgroundColorOption[1],
+    foregroundEffect: foregroundEffectOption[1],
   };
 
   return chosenEffects;
@@ -98,13 +96,13 @@ export function getGeneratedEffectScores(
   const scores = emojis.map(
     emoji =>
       CachedBackgrounds['emojiAssociations'][emoji][
-        CachedBackgrounds['output'].indexOf(effect.results.backgroundEffect)
+        CachedBackgrounds['output'].indexOf(effect.backgroundEffect)
       ] +
       CachedForegrounds['emojiAssociations'][emoji][
-        CachedForegrounds['output'].indexOf(effect.results.foregroundEffect)
+        CachedForegrounds['output'].indexOf(effect.foregroundEffect)
       ] +
       CachedPalettes['emojiAssociations'][emoji][
-        CachedPalettes['output'].indexOf(effect.results.backgroundColor)
+        CachedPalettes['output'].indexOf(effect.backgroundColor)
       ]
   );
 
