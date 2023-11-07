@@ -280,4 +280,15 @@ Feature: Curriculum Catalog Page
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
   
+  
+   # Curriculum Catalog Filter tests
+   @no_mobile
+  Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
+    Given I am on "http://studio.code.org/catalog"
+    Then I wait until element "#grade-dropdown" is visible
+
+    Then I click selector "#grade-dropdown-button"
+
+    And I wait until element "span:contains(Kindergarten)" is visible
+    Then I click selector "span:contains(Select all)"
 
