@@ -475,11 +475,11 @@ pl:
         aws-demo:
           title: Demo AWS
         basketball:
-          description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description_short: Wybierz swoją drużynę i zrób grę w koszykówkę
+          description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description_short: Wybierz swoją drużynę i utwórz grę w koszykówkę
           name: piłka do kosza
-          student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          title: Wybierz swoją drużynę i zrób grę w koszykówkę
+          student_description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          title: Wybierz swoją drużynę i utwórz grę w koszykówkę
         blockchain-2023:
           description: To jest jednostka na Blockchain!
           lessons:
@@ -6771,7 +6771,7 @@ pl:
             lesson-11:
               name: Proces rozwiązywania problemów z programowaniem
           name: urządzenia-2022
-          title: Tworzenie aplikacji dla urządzeń
+          title: Tworzenie aplikacji z urządzeniami (Circuit Playground)
         devices-2023:
           lesson_groups:
             lessonGroup-3:
@@ -9343,6 +9343,8 @@ pl:
           lessons:
             lesson-1:
               name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
             lesson-2:
               name: Asynchroniczna Część 1
             lesson-3:
@@ -9422,6 +9424,8 @@ pl:
               name: Asynchroniczna Część 2
             lesson-5:
               name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
           name: virtual-pl-csa-summer-day5
           title: 'Dzień 5 '
         virtual-pl-csd-summer-day1:
@@ -9649,6 +9653,8 @@ pl:
               name: Wstęp
             lesson-6:
               name: Witamy w opisie kursu i egzaminu
+            lesson-8:
+              name: Poprzednio w… Jednostka 1 Lekcja 8
           name: virtual-pl-csp-summer-day2
           title: Dzień 2
         virtual-pl-csp-summer-day3:

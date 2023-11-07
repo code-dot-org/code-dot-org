@@ -1349,7 +1349,8 @@
           "type": "वीडीयो"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
-          "type": "स्लाइड्स"
+          "type": "स्लाइड्स",
+          "url": "https://docs.google.com/presentation/d/1FW6Jj3roF8vsxaeMGdRWEm0TUZ08dTiDnCZDB5TsE2g"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "स्लाइड्स"
@@ -4153,7 +4154,8 @@
           "type": "वीडीयो"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
-          "type": "स्लाइड्स"
+          "type": "स्लाइड्स",
+          "url": "https://docs.google.com/presentation/d/1FW6Jj3roF8vsxaeMGdRWEm0TUZ08dTiDnCZDB5TsE2g"
         },
         "create_an_ml_app/csd/2022": {
           "type": "शीर्षक"
@@ -7405,7 +7407,8 @@
           "type": "वीडीयो"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "type": "स्लाइड्स"
+          "type": "स्लाइड्स",
+          "url": "https://docs.google.com/presentation/d/1FW6Jj3roF8vsxaeMGdRWEm0TUZ08dTiDnCZDB5TsE2g"
         },
         "create_an_ml_app/csd/2023": {
           "type": "शीर्षक"
@@ -8856,7 +8859,7 @@
           "type": "वीडीयो"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+          "url": "https://docs.google.com/document/d/183IIxo-e7-wdHXN6vqb7dUdV8vpyirG_NNVNgqgnK24/"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "ए.आई. कैसे काम करता है - प्रशिक्षण डेटा और पक्षपात",
@@ -8869,21 +8872,21 @@
           "type": "वीडीयो"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "url": "https://docs.google.com/presentation/d/1qpaxTmn6S-L8Qzqv3EDVyeE8Zrs8pO4ajv4TOiiKfyk/",
           "type": "स्लाइड्स"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[उदाहरण] कंप्यूटर विज़न नेटवर्क",
-          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1I_L_n0-B7xXaLyx3rlBo_PQZyZpzCO1MKV4EJHMkWU8"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "कम्प्यूटर विज़न",
-          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+          "url": "https://docs.google.com/presentation/d/1vU0bepnWx5URrIoIwCLtj84N0YIUdtl49KQzt2db6_Y/",
           "type": "स्लाइड्स"
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "कंप्यूटर विज़न नेटवर्क",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+          "url": "https://docs.google.com/document/d/17tCyGYoB6wnMenkaWFLlgfZADhQVXNLVaw3xZ1zs9QE"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
           "name": "ए.आई. कैसे काम करता है: कंप्यूटर विज़न कैसे काम करता है",
@@ -8892,7 +8895,7 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "सेवेन सेगमेंट डिस्प्ले मैनिपुलेटिव",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "url": "https://docs.google.com/document/d/1j4uyu25mWOIOQpxlABu0viuXPRx8wd53375TgqTqs00"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "न्यूरल नेटवर्क क्या देखता है",
@@ -8906,25 +8909,25 @@
         },
         "neural_networks/how-ai-works/2023": {
           "name": "न्यूरल नेटवर्क",
-          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1l2ro5F-ORsUnq68HfgBSMt0POFr9TIGq3hHNmRZi8LA"
         },
         "neural_networks_1/how-ai-works/2023": {
           "name": "न्यूरल नेटवर्क",
-          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+          "url": "https://docs.google.com/presentation/d/1np235Ro5AEHCOdCk6aEZXTRvcwyf_4J39v7EC9KWtpE",
           "type": "स्लाइड्स"
         },
         "wetube_content_creators/how-ai-works/2023": {
           "name": "WeTube सामग्री निर्माता",
-          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1KCaY_pjgzNyE78riI_EBsEXo9XVcsY8gX7EkcxqE-RY",
           "type": "रिसोर्स"
         },
         "eliza_activity_guide/how-ai-works/2023": {
           "name": "(वैकल्पिक) एलिज़ा गतिविधि मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+          "url": "https://docs.google.com/document/d/15FkjMfPfU7SktEy-WpFs6cYF96mq-j0Bg3I_ZIXB_vw/"
         },
         "generative_llm/how-ai-works/2023": {
           "name": "जनरेटिव एलएलएम",
-          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
+          "url": "https://docs.google.com/presentation/d/13hJwJi4NA6b_lTxooHlojpzBsHWc07W8zGz_dE76TU0",
           "type": "स्लाइड्स"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
@@ -8939,38 +8942,38 @@
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
           "name": "[Key] वोकैब और वीडियो मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
+          "url": "https://docs.google.com/document/d/1DO64X2yOJf8uV-q7rnF-dd4AhWWn-DcjqYzXNYciCDQ/",
           "type": "उत्तर कुंजी"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
           "name": "वीडियो और शब्दावली मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+          "url": "https://docs.google.com/document/d/1Q_TXTr-3Ja1InaOAmWQxFWCJZJQUO1tFvuDtRNbzT_w/"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] लिखित वॉइस सिम्युलेटर गतिविधि मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+          "url": "https://docs.google.com/document/d/1RRssjquHhvOeGB2UMu5dpGC6nvHwrevqEsiC99K10fw"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "लिखित वॉयस सिम्युलेटर मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+          "url": "https://docs.google.com/document/d/1XHvv5l7h_5Xx6qp1x9yTMJVYaf-SjHAMx7GaNWXbur4"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
           "name": "लिखित वॉयस सिम्युलेटर उपयोगकर्ता मार्गदर्शिका",
-          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
+          "url": "https://docs.google.com/presentation/d/1TAUvygFG56U9eCHfIs5H8FiNlbnjs4Spz7KqQEI4UAY",
           "type": "रिसोर्स"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(वैकल्पिक) GAN गेम गतिविधि मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+          "url": "https://docs.google.com/document/d/1UsHQ0PMVYYUKQcYeh9gcht0mf0XnJ8NfLsC68VbCJrA"
         },
         "generative_images/how-ai-works/2023": {
           "name": "जनरेटिव इमेजिस",
-          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
+          "url": "https://docs.google.com/presentation/d/1UbOzhPiRHcgKSDWnB7YgBARBwAAjacFnqWQ9zOPnkuY",
           "type": "स्लाइड्स"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
           "name": "[Key] जनरेटिव इमेज गतिविधि मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
+          "url": "https://docs.google.com/document/d/16YlryL_QJSaf0Ti1zFE-wtzhy3FCmZto5f4wu4g1dP8",
           "type": "उत्तर कुंजी"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
@@ -8980,24 +8983,24 @@
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] नॉइज़ी इमेज गतिविधि",
-          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+          "url": "https://docs.google.com/document/d/13_I8OZMBGOM-xDzKj2HD6nr684JwtXGBMt7cQQxMOtg"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "नॉइज़ी इमेज विजेट गतिविधि मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+          "url": "https://docs.google.com/document/d/1VbL2RGiq3xdu9fQACJlfcW3e6-w8EIgtnIsEBV-JZLU"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "उपयोगकर्ता मार्गदर्शिका: नॉइज़ इमेज विजेट",
-          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
+          "url": "https://docs.google.com/presentation/d/1iPFQaZzJ63gEH3-XGmFMxZDJ2wgeklLU3SgU4CrmVFM",
           "type": "रिसोर्स"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
           "name": "वीडियो और शब्दावली मार्गदर्शिका",
-          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1SdSoAHsRvu9r9XLmMD8dDzoMHBeO0wOTan1UpceGadw"
         },
         "algorithmic_bias/how-ai-works/2023": {
           "name": "एल्गोरिदमिक पक्षपात",
-          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
+          "url": "https://docs.google.com/presentation/d/10G-fYh-G_KKLwpZkoiy179VvYNjmwioW1fsv22wdcIQ/",
           "type": "स्लाइड्स"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
@@ -9016,14 +9019,14 @@
           "type": "रिसोर्स"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
+          "url": "https://docs.google.com/presentation/d/1VwXo5Z7ZeRrxmnYRuXXtDy4pDCjtSB8nVJU4VtwbyNA",
           "type": "स्लाइड्स"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
           "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1h69vegG1R6FQpz4tILhH5B6iKhGjx7bcQkZ3TTswCJY/"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
           "name": "ए.आई. कैसे काम करता है - गोपनीयता और काम का भविष्य",
@@ -9031,7 +9034,8 @@
           "type": "वीडीयो"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
-          "type": "स्लाइड्स"
+          "type": "स्लाइड्स",
+          "url": "https://docs.google.com/presentation/d/1FW6Jj3roF8vsxaeMGdRWEm0TUZ08dTiDnCZDB5TsE2g"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
@@ -9039,7 +9043,7 @@
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "AI कैसे काम करता है",
-          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+          "url": "https://docs.google.com/presentation/d/16PaCmHdBXN_I6G2fIqACxq5dMkD5-1UDLJqyN5Z0UDA",
           "type": "स्लाइड्स"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
@@ -9073,7 +9077,7 @@
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "शब्दावली मिलान",
-          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+          "url": "https://docs.google.com/document/d/1KRLA46dL0yU79Yi7bjPnCXmQtaIJJfbB9ORnUvSh5jI"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
           "name": "[Key] शब्दावली मिलान",
@@ -9193,6 +9197,30 @@
         },
         "web_development_-_extra_code_in_challenge_levels/csd/2023": {
           "type": "रिसोर्स"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s"
         }
       }
     }

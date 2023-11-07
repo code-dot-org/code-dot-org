@@ -36,15 +36,15 @@ Pentru mai multe informații despre cum pot deveni angajații tăi voluntari Hou
 ## 3. Alege o activitate
 Oferim o varietate de [activități distractive de o oră]({{ urls/learn }}) pentru participanți de toate vârstele, create de diferiți parteneri. [Încearcă-le acum!]({{ urls/learn }})
 
-Toate activitățile din cadrul Orei de cod necesită un timp foarte scurt de pregătire inițială și sunt însoțite de un ghide ce le permite participanților să lucreze în ritmul lor din diverse locații
+**Toate activitățile Hour of Code** necesită un timp minim de pregătire și sunt concepute pentru a fi parcurse independent, permițând participanților să lucreze în ritmul și la nivelul propriu de competență.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Stabilește-ți nevoile tehnologice, calculatoarele sunt opționale
+## 4. Planifică necesarul de echipamente - calculatoarele sunt opționale
 
-Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Nu ai nevoie de un calculator pentru fiecare participant ba chiar poți să desfășori O oră de cod fără calculator
+Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Însă **nu ai** nevoie de un computer pentru fiecare participant, chiar poți să organizezi Hour of Code fără niciun calculator.
 
-Pregătirea! Urmează acești pași înainte de a începe evenimentul:
+**Planifică!** Urmează acești pași înainte de a începe evenimentul:
 
 - Testează activitățile pe calculatoare sau alte dispozitive Asigură-te că merg bine în browser-e cu sunet și video
 - Oferă participanților căști sau spune-le să aducă daca activitatea aleasă necesită sunet
