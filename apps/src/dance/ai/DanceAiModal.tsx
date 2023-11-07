@@ -116,6 +116,10 @@ const DanceAiModal: React.FunctionComponent = () => {
       subStep: 0,
     });
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
+  const [minMax, setMinMax] = useState<{min: number; max: number}>({
+    min: 0,
+    max: 3,
+  });
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -275,6 +279,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
+    setMinMax(getMinMax());
   };
 
   const getGeneratedEffect = (step: number) => {
@@ -414,6 +419,24 @@ const DanceAiModal: React.FunctionComponent = () => {
   const previewSizeSmall = 90;
 
   const labels = getLabels();
+
+  const getMinMax = () => {
+    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
+      (accumulator: {min: number; max: number}, currentValue: number) => {
+        const scores = getScores(currentValue);
+        const min = Math.min(...scores);
+        const max = Math.max(...scores);
+        if (min < accumulator.min) {
+          return {min: min, max: accumulator.max};
+        } else if (max > accumulator.max) {
+          return {min: accumulator.min, max: max};
+        } else {
+          return accumulator;
+        }
+      },
+      {min: Infinity, max: 0}
+    );
+  };
 
   return (
     <AccessibleDialog
@@ -593,7 +616,10 @@ const DanceAiModal: React.FunctionComponent = () => {
 
         {mode === Mode.GENERATING && (
           <div id="score-area" className={moduleStyles.scoreArea}>
-            <Score scores={getScores(generatingProgress.step)} />
+            <Score
+              scores={getScores(generatingProgress.step)}
+              minMax={minMax}
+            />
           </div>
         )}
 
@@ -603,7 +629,7 @@ const DanceAiModal: React.FunctionComponent = () => {
               index => {
                 return (
                   <div key={index}>
-                    <Score scores={getScores(index)} />
+                    <Score scores={getScores(index)} minMax={minMax} />
 
                     <div
                       className={moduleStyles.visualizationContainer}
@@ -756,19 +782,29 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 
 interface ScoreProps {
   scores: Scores;
+  minMax: {min: number; max: number};
 }
 
-const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
+const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
   const multiplyScores = 10;
+
+  const range = minMax.max - minMax.min;
+  const getScaledNumerator = (scores: Scores) => {
+    return scores.reduce(
+      (scaledSum: number, score: number) => (scaledSum += score - minMax.min),
+      0
+    );
+  };
+
+  const getHeight = (scores: Scores) =>
+    Math.round((getScaledNumerator(scores) / (range * 3)) * 140);
 
   return (
     <div className={moduleStyles.scoreContainer}>
       <div
         className={classNames(moduleStyles.barFill, moduleStyles.barFillFirst)}
         style={{
-          height: Math.round(
-            (scores[0] + scores[1] + scores[2]) * multiplyScores
-          ),
+          height: getHeight(scores),
         }}
       >
         &nbsp;
@@ -776,7 +812,7 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
       <div
         className={classNames(moduleStyles.barFill, moduleStyles.barFillSecond)}
         style={{
-          height: Math.round((scores[0] + scores[1]) * multiplyScores),
+          height: getHeight(scores.slice(0, 2)),
         }}
       >
         &nbsp;
@@ -784,14 +820,10 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
       <div
         className={classNames(moduleStyles.barFill, moduleStyles.barFillThird)}
         style={{
-          height: Math.round(scores[0] * multiplyScores),
+          height: getHeight(scores.slice(0, 1)),
         }}
       >
         &nbsp;
-      </div>
-
-      <div className={moduleStyles.text}>
-        {Math.round((scores[0] + scores[1] + scores[2]) * multiplyScores)}
       </div>
     </div>
   );
