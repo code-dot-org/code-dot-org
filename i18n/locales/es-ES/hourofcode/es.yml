@@ -6,7 +6,7 @@ es:
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
   new: Nuevo
-  hours_of_code_served: Horas de código atendidas
+  hours_of_code_served: Horas de Código atendidas
   hoc_stat_languages: Los estudiantes aprenden en más de 45 idiomas
   hoc_stat_hours_served: Más de 100 millones de estudiantes han probado la Hora del
     Código
@@ -54,7 +54,7 @@ es:
   hoc2023_what_is_hoc_desc: La Hora del Código es una introducción gratuita a la informática
     a través de actividades divertidas y vídeos para estudiantes con cualquier nivel
     de habilidad. La celebración de este año de la programación y la inteligencia
-    artificial cuenta con el apoyo de más de 400 socios, 20 000 educadores y 58 000
+    artificial cuenta con el apoyo de más de 400 socios, 20.000 educadores y 58.000
     voluntarios.
   hoc2022_header: "¡Explora, Juega, Crea!"
   social_hoc2022_explore_play_create: Utiliza la informática para explorar, jugar
@@ -68,8 +68,8 @@ es:
     Gomez, la película de Disney «Encanto» y más!"
   social_hoc2023_dance: "¡Con Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, música de «Encanto» de Disney y más!"
-  social_hoc2023_dance_v2: "¡Es la hora de presumir de tus creaciones! ¡Crea tu propia
-    fiesta de baile usando éxitos de Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki
+  social_hoc2023_dance_v2: "¡Es la hora de presumir tus creaciones! ¡Crea tu propia
+    fiesta de baile con éxitos de Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki
     Minaj, Rosalía y más!"
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
@@ -300,21 +300,23 @@ es:
     consejos, información y apoyo de otros educadores.
   required_materials: 'Materiales obligatorios:'
   optional_materials: 'Materiales opcionales:'
-  for_students: Para alumnos
+  for_students: Para estudiantes
   for_educators: Para profesores
-  call_to_action_host_hoc: Programa una Hora del Código
+  call_to_action_host_hoc: Organiza una Hora del Código
   call_to_action_hold_an_event: Organiza un evento
   call_to_action_register_event: Registra tu evento
   call_to_action_register_your_hoc: Registra tu Hora del Código
   call_to_action_select_activity: Selecciona una actividad
+  call_to_action_select_coding_activity: Selecciona una actividad de programación
   call_to_action_start_activity: Iniciar una actividad
   call_to_action_get_certificates: Obtener certificados
+  call_to_action_print_certificates: Imprimir certificados
   call_to_action_go_beyond_hoc: Ve más allá de la Hora del Código
   call_to_action_explore_all_hoc_activities: Explora todas las actividades de la Hora
-    del Código que hay en Code.org
+    del Código en Code.org
   call_to_action_start_dance_party: Crea una fiesta de baile
-  call_to_action_start_part_02: Comenzar el apartado 2
-  call_to_action_start_unplugged_activity: Inicia una actividad sin conexión
+  call_to_action_start_part_02: Comenzar la segunda parte
+  call_to_action_start_unplugged_activity: Iniciar actividad fuera de línea
   call_to_action_view_promo_resources: Ver recursos promocionales
   call_to_action_learn_more: Conoce más
   call_to_action_watch_now: Ver ahora
@@ -410,9 +412,9 @@ es:
   call_to_action_view_faqs: Ver más preguntas frecuentes
   call_to_action_applications_open: Las solicitudes ya están abiertas
   call_to_action_apply_cs_ambassador: Solicita ser embajador de CS
-  call_to_action_coming_soon: "¡Muy pronto!"
+  call_to_action_coming_soon: "¡Próximamente!"
   call_to_action_learn_how_ai_works: Aprende cómo funciona la IA
-  call_to_action_learn_about_ai: Aprende acerca de la IA
+  call_to_action_learn_about_ai: Aprende sobre la IA
   aria_label_call_to_action_hoc_how_to_educators: Ver la guía práctica para educadores
   aria_label_call_to_action_hoc_how_to_companies: Ver la guía práctica para empresas
   aria_label_call_to_action_hoc_how_to_districts: Ver la guía práctica para distritos
@@ -424,11 +426,11 @@ es:
   aria_label_call_to_action_hoc_how_to_volunteers: Ver la guía práctica para voluntarios
   aria_label_call_to_action_hoc_how_to_virtual_events: Ver la guía práctica para eventos
     virtuales
-  aria_label_call_to_action_dance_01: Inicia la actividad de Fiesta de Baile
-  aria_label_call_to_action_dance_02: Inicia segunda parte de la actividad Fiesta
-    de Baile
-  aria_label_call_to_action_dance_unplugged: Inicia desconectado la actividad Fiesta
-    de Baile
+  aria_label_call_to_action_dance_01: Inicia la actividad 'Fiesta de baile'
+  aria_label_call_to_action_dance_02: Inicia la segunda parte de la actividad 'Fiesta
+    de baile'
+  aria_label_call_to_action_dance_unplugged: Inicia la actividad fuera de línea 'Fiesta
+    de baile'
   aria_label_call_to_action_afe: Más información sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Comience el programa de aprendizaje profesional
     para la enseñanza de los fundamentos de la informática
@@ -436,6 +438,8 @@ es:
     Teaching Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Comience el programa de aprendizaje profesional
     para la enseñanza de los principios de la informática
+  aria_label_call_to_action_teaching_problem_solving: Inicia el programa de aprendizaje
+    profesional de enseñanza de resolución de problemas y computación
   aria_label_call_to_action_teaching_csc: Comience el programa de aprendizaje profesional
     Teaching Computer Science Connections
   aria_label_call_to_action_teaching_ai: Inicie el programa de aprendizaje profesional
@@ -454,6 +458,8 @@ es:
     en ciencias de la computación
   aria_label_call_to_action_curriculum_csp: Explore el plan de estudios de Principios
     de Ciencias de la Computación
+  aria_label_call_to_action_curriculum_problem_solving: Explora el plan de estudios
+    de resolución de problemas e informática
   aria_label_call_to_action_curriculum_csc: Explore el plan de estudios de Computer
     Science Connections
   aria_label_call_to_action_curriculum_ai: Explore el plan de estudios de IA y aprendizaje
@@ -536,6 +542,7 @@ es:
   curriculum_name_csf_teacher_led: Lección dirigida por el profesor
   curriculum_name_csd: Descubrimientos en ciencias de la computación
   curriculum_name_csp: Principios de informática
+  curriculum_name_problem_solving: Resolución de problemas e informática
   curriculum_name_csc: Conexiones informáticas
   curriculum_name_csa: AP® Ciencias de la Computación A
   curriculum_name_csa_ai: Ingeniería de software y visión artificial
@@ -548,27 +555,27 @@ es:
   curriculum_name_creating_apps_with_devices: Creación de aplicaciones con dispositivos
   curriculum_name_poetry: Codificación con poesía
   curriculum_name_dance_party: Fiesta de baile
-  curriculum_name_dance_party_02: Mantente bailando
-  curriculum_name_dance_party_unplugged: Fiesta de baile sin necesidad de conexión
-  curriculum_name_dance_party_ai_edition: Edición mediante IA de una fiesta de baile
+  curriculum_name_dance_party_02: Sigue bailando
+  curriculum_name_dance_party_unplugged: Fiesta de baile fuera de línea
+  curriculum_name_dance_party_ai_edition: 'Fiesta de baile: edición de IA'
   curriculum_name_problem_solving_computing: Resolución de problemas e informática
   curriculum_name_web_development: Desarrollo web
   curriculum_name_interactive_animations_games: Animaciones interactivas y juegos
   curriculum_name_design_process: El proceso de diseño
   curriculum_name_data_society: Datos y sociedad
-  curriculum_desc_dance_party_01: En esta actividad de introducción, usa codificación
-    para hacer que personajes variados y coloridos se muevan con fondos animados y
-    música alegre.
-  curriculum_desc_dance_party_02: Ve más allá del tutorial de introducción usando
-    ideas de ampliadas de proyectos. Explora una biblioteca de ejemplos de fiestas
-    de baile más complejas.
-  curriculum_desc_dance_party_unplugged: Déjate llevar por tu ritmo, ¡No necesitas
-    ordenador! Descubre cómo los conceptos de programación, como los eventos, se pueden
-    utilizar para sincronizar las coreografías de los bailarines.
+  curriculum_desc_dance_party_01: En esta actividad de introducción, usa la programación
+    para hacer que una variedad de personajes coloridos se muevan con fondos animados
+    y música alegre.
+  curriculum_desc_dance_party_02: Ve más allá del tutorial de introducción con ideas
+    ampliadas de proyectos. Explora una biblioteca de ejemplos de fiestas de baile
+    más complejas.
+  curriculum_desc_dance_party_unplugged: Déjate llevar por tu ritmo, ¡no necesitas
+    un ordenador! Aprende cómo los conceptos de programación, como los eventos, pueden
+    utilizarse para sincronizar las coreografías de los bailarines.
   curriculum_desc_dance_party_ai_edition: Aprende conceptos de inteligencia artificial
-    (IA) para crear su propia fiesta de baile virtual con los mejores artistas de
-    la actualidad. Con docenas de canciones entre las que elegir, llega a todos los
-    estudiantes sin importar sus gustos musicales. ¡Es hora de presumir de lo tuyo!
+    (IA) para crear tu propia fiesta de baile virtual con los mejores artistas de
+    la actualidad. Con docenas de canciones para elegir, llega a todos los estudiantes
+    sin importar sus gustos musicales. ¡Es hora de presumir tus creaciones!
   curriculum_desc_csf: Conjunto gratuito de planes de estudio de primaria que presenta
     a los estudiantes los conceptos fundamentales de la informática.
   curriculum_desc_csf_express: "¡Aprende a crear programas de ordenador, desarrolla
@@ -693,8 +700,8 @@ es:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
-  module_grade_2_8: '2.8'
-  module_grade_2_12: '2.12'
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
@@ -713,9 +720,9 @@ es:
   module_age_05_07: De 5 a 7 años de edad
   module_age_07: Para mayores de 7 años
   module_age_07_11: De 7 a 11 años de edad
-  module_age_11: Para 11 años de edad o más
-  module_age_13: A partir de los 13 años de edad
-  module_age_all_age: Para cualquier edad
+  module_age_11: Para mayores de 11 años
+  module_age_13: Para mayores de 13 años
+  module_age_all_age: Para todas las edades
   module_grade_k_5_teachers: Maestros de K-5
   module_grade_6_10_teachers: 6-10 maestros
   module_grade_9_12_teachers: 9-12 maestros
@@ -747,6 +754,7 @@ es:
   module_label_teaching_csf: Enseñanza de los fundamentos de la informática
   module_label_teaching_csd: Enseñanza de descubrimientos en ciencias de la computación
   module_label_teaching_csp: Principios de enseñanza de la informática
+  module_label_teaching_problem_solving: Enseñanza de resolución de problemas e informática
   module_label_teaching_csc: Conexiones para la enseñanza de la informática
   module_label_teaching_ai: Enseñanza de IA y aprendizaje automático
   module_label_teaching_maker_cp: Enseñar a crear aplicaciones con dispositivos (Circuit
@@ -815,8 +823,8 @@ es:
   heading_csa_ai: "¿Busca qué hacer después del examen AP®?"
   heading_bring_cs_to_students: Lleva la informática a los estudiantes
   heading_cs_ambassador_program: Programa de embajadores de CS
-  heading_featured_student_projects: Proyectos destacados estudiantiles
-  heading_start_hoc_with_videos: Empieza tu Hora del Código viendo vídeos inspiradores
+  heading_featured_student_projects: Proyectos estudiantiles destacados
+  heading_start_hoc_with_videos: Comienza tu Hora del Código viendo vídeos inspiradores
   cs_ambassador_subhead: Si eres una estudiante de secundaria apasionada por animar
     a más mujeres jóvenes a estudiar informática en tu escuela, ¡te necesitamos!
   cs_ambassador_desc: Todos los campos, incluidos la medicina, el entretenimiento,
@@ -921,14 +929,14 @@ es:
     sobre los principios de informática de Code.org y reciba recordatorios, consejos
     y actualizaciones útiles directamente en su bandeja de entrada.
   subscribe_form_section_unsubscribe: Puedes darte de baja en cualquier momento.
-  dance_hero_heading: Codifica una fiesta de baile
-  dance_featuring_songs_by_short: 'Incluyendo canciones de:'
-  dance_featuring_songs_by_long: 'Dance Party permite usar canciones de:'
+  dance_hero_heading: Programa una fiesta de baile
+  dance_featuring_songs_by_short: 'Con canciones de:'
+  dance_featuring_songs_by_long: 'La fiesta de baile incluye canciones de:'
   dance_and_more: y mucho más
-  dance_choose_activity: Elige tu Fiesta de Baile
-  dance_afe_disclaimer: Los artistas, cuya música se utiliza en este tutorial, no
-    patrocinan ni apoyan a Amazon en la concesión de licencias de uso de su música
-    a Code.org.
+  dance_choose_activity: Elige tu fiesta de baile
+  dance_afe_disclaimer: "* Los artistas cuya música se utiliza en este tutorial no
+    patrocinan ni apoyan a Amazon como parte de las licencias de uso de su música
+    en Code.org.\n\n"
   blockchain_hero_heading: Cómo funciona la cadena de bloques
   blockchain_hero_desc: "¡Sumérjase en el mundo de la cadena de bloques con «Cómo
     funciona la cadena de bloques», nuestra nueva serie de vídeos y las lecciones
@@ -14027,6 +14035,9 @@ es:
   step_06: Paso 6
   step_07: Paso 7
   step_08: Paso 8
+  what: 'Qué:'
+  when: 'Cuándo:'
+  where: 'Dónde:'
   hoc_how_to_top_heading: Tu guía de La Hora del Código
   hoc_how_to_top_desc: Guías prácticas personalizadas para brindar la mejor experiencia
     en la Hora del Código.
@@ -14076,75 +14087,88 @@ es:
     una hora diseñados para todas las edades en más de 45 idiomas.
   hoc_how_to_step_label_plan: Planifica dónde y cuándo harás tu Hora del Código
   hoc_how_to_step_label_choose_activity: Elige tu actividad
+  hoc_how_to_step_label_choose_activities: Elige tus actividades
   hoc_how_to_step_label_test_activity: Pon a prueba tu actividad
   hoc_how_to_step_label_register_event: Registra tu evento
   hoc_how_to_step_label_tell: Cuéntale a tus estudiantes, a la escuela y a la comunidad
   hoc_how_to_step_label_get_coding: "¡Empieza a programar!"
   hoc_how_to_step_label_celebrate: Celebra
   hoc_how_to_step_label_beyond_hoc: Más allá de la Hora del Código
+  hoc_how_to_step_label_plan_your_event: Planifica tu evento
+  hoc_how_to_step_label_plan_your_hour: Planifica tu hora
+  hoc_how_to_step_label_help_spread_word: Ayuda a correr la voz
   hoc_how_to_step_beyond_hoc_subhead: "¡No termina aquí!"
-  hoc_how_to_step_beyond_hoc_desc: "¡La informática no tiene por qué terminar con
-    la Hora del Código! Si bien el 90% de los padres quieren que sus hijos aprendan
-    informática, la mayoría de las escuelas aún no la enseñan. Aprende a llevar la
-    informática a la escuela de tu hijo hoy mismo."
-  hoc_how_to_step_01_educators_subhead: Selecciona la hora y el espacio del evento
-    que se adapte a la cantidad de estudiantes y dispositivos que tengas disponibles.
-  hoc_how_to_step_01_educators_desc_01: "¿Qué espacios están disponibles para que
-    hagas tu Hora del Código? Ten en cuenta las capacidades tecnológicas de tu espacio
-    y los tipos de dispositivos con los que esperas que trabajen tus alumnos. Los
-    estudiantes pueden trabajar en los tutoriales en un solo dispositivo, alternar
-    en un dispositivo compartido o probar juntos un tutorial en la pizarra del aula.
-    Incluso hay tutoriales fuera de línea que se pueden completar sin ningún dispositivo.
-    Las opciones fuera de línea se pueden realizar en cualquier lugar, ¡incluso al
-    aire libre!"
-  hoc_how_to_step_01_educators_desc_02: Personas de todo el mundo se unen a la celebración
-    de la Hora del Código durante la Semana de la Educación Informática, %{campaign_date},
-    cuando se publican los últimos tutoriales y actividades. ¡Pero puedes celebrar
-    la Hora del Código cualquier día del año!
-  hoc_how_to_step_02_educators_desc_01: Explora las actividades según la edad, la
-    experiencia, los intereses y más de tu grupo. Es habitual que los estudiantes
-    prueben los tutoriales autoguiados, aunque muchas actividades incluyen planes
-    de lecciones para que los profesores guíen el debate o amplíen la actividad.
-  hoc_how_to_step_02_educators_desc_02: Decide con anticipación si deseas elegir un
-    solo tutorial para todos tus alumnos o dejar que cada niño elija el suyo.
-  hoc_how_to_step_02_educators_desc_03: Este año, tus alumnos y tú pueden [aprender
-    todo sobre la IA](%ai_url) a través de tutoriales, planes de lecciones y nuestra
-    nueva serie de vídeos sobre cómo funciona la IA.
-  hoc_how_to_step_03_educators_desc_01: "¡Prueba el tutorial tú mismo antes de entrar
-    al aula para que puedas responder preguntas!"
-  hoc_how_to_step_03_educators_desc_02: También puedes probar los tutoriales en los
-    ordenadores o dispositivos de los estudiantes para asegurarte de que sean compatibles
-    con el sonido y el vídeo. ¿Tienes poco ancho de banda? Planifica mostrar los vídeos
-    al frente de la clase para que cada estudiante no tenga que descargar sus propios
-    vídeos.
-  hoc_how_to_step_03_educators_desc_03: Considera la posibilidad de proporcionar auriculares
-    para tu clase o pide a los estudiantes que lleven los suyos propios si el tutorial
-    que elijas funciona mejor con sonido.
-  hoc_how_to_step_04_educators_desc_01: Cuando registres tu evento de la Hora del
-    Código, recibirás correos electrónicos útiles con noticias y consejos para organizar
-    una Hora del Código exitosa. También es la forma en que puedes informar a los
-    voluntarios locales de que tu escuela está participando. Los voluntarios son un
-    gran recurso y pueden ir a hablar con tu clase sobre informática o ayudar a tus
-    alumnos con las actividades de la Hora del Código.
-  hoc_how_to_step_05_educators_desc_01: Haz que tus alumnos se entusiasmen con el
-    evento compartiendo [vídeos inspiradores](%{videos_url}) que destaquen a personas
-    diversas y formas creativas en las que la informática se puede utilizar en el
-    mundo real.
-  hoc_how_to_step_05_educators_desc_02: "¡Comparte tus planes de la Hora del Código
-    con otros profesores que quieran unirse a la diversión! También es una gran oportunidad
-    para comunicarte con la Asociación de padres, profesores y estudiantes de tu escuela
-    o compartir boletines informativos para padres y hacerles saber lo que sus hijos
-    están aprendiendo."
-  hoc_how_to_step_06_educators_desc_01: Dirige a tus alumnos a la actividad, tal vez
-    compartiendo el enlace en la pizarra o a través del sistema de gestión de aprendizaje
-    de tu aula. Es posible que tus alumnos se enfrenten a desafíos, ¡no pasa nada!
-    Aprender a programar es como aprender un nuevo idioma; no lo dominarás de inmediato.
-    Si no sabes la respuesta, podéis averiguarla juntos.
-  hoc_how_to_step_07_educators_desc_01: "¡Asegúrate de celebrar el éxito! Comparte
-    fotos y vídeos de tu evento de la Hora del Código en las redes sociales. ¡Usa
-    #HourOfCode y @codeorg para que también podamos destacar tu éxito!"
-  hoc_how_to_step_07_educators_desc_02: "¡También puedes imprimir certificados para
-    que tus alumnos muestren sus logros!"
+  hoc_how_to_step_plan_hour_desc_01: 'El siguiente es un ejemplo de agenda para comenzar:'
+  hoc_how_to_step_choose_activities_desc_01: Este año, el tema de la Hora del Código
+    es "Creatividad con inteligencia artificial (IA). Ya sea programando nuevas aplicaciones
+    y algoritmos, generando obras de arte únicas o creando coreografías para ponernos
+    a bailar, la IA está abriendo nuevas oportunidades para la expresión digital que
+    amplían nuestra comprensión de la creatividad. Haz que este año sea especial realizando
+    una actividad de programación Y aprendiendo sobre la IA.
+  hoc_how_to_step_choose_activities_desc_02: Primero, [explora cientos de actividades
+    de programación](%{activities_url}) y elige una de acuerdo a la edad, experiencia,
+    intereses y más de tu grupo. [Estas actividades selectas](%{ai_activities_url})
+    incluyen la inteligencia artificial como tema o lección clave.
+  hoc_how_to_step_choose_activities_desc_03: Luego, [aprende todo sobre la IA](%{ai_url}).
+    Los estudiantes pueden ver vídeos cortos que presentan a expertos en la materia
+    que se complementan con planes de lecciones para ampliar la actividad y guiar
+    el debate en profundidad. O bien, ofrecemos formación profesional gratuita para
+    que los educadores descubran el futuro de la enseñanza con y sobre la IA.
+  hoc_how_to_step_educators_register_desc: Empieza con el compromiso de hacer una
+    Hora del Código con tus alumnos registrando tu evento. Cuando te inscribas, recibirás
+    correos electrónicos útiles con noticias y consejos para organizar una Hora del
+    Código exitosa. También te [pondrán en el mapa](%{map_url}). La totalidad visible
+    de nuestros esfuerzos colectivos demuestra el compromiso mundial con el movimiento
+    de la informática, que nos ayudará a impulsar un cambio sistémico.
+  hoc_how_to_step_educators_plan_desc_01: "¡Antes del evento, prueba las actividades
+    para asegurarte de que funcionen en los dispositivos de los estudiantes y de que
+    estés preparado para responder a las preguntas! ¿Tienes poco ancho de banda? Planifica
+    mostrar los vídeos al frente de la clase para que los alumnos no tengan que descargar
+    los vídeos."
+  hoc_how_to_step_educators_plan_desc_02: Personas de todo el mundo suelen unirse
+    a la celebración de la Hora del Código durante la Semana de Educación en Ciencias
+    de la Computación (%{campaign_date}), ¡pero puedes hacer una Hora del Código cualquier
+    día del año!
+  hoc_how_to_step_educators_plan_desc_03: Elige un espacio que se adapte a la cantidad
+    de estudiantes y dispositivos que tengas disponibles. Los estudiantes pueden probar
+    actividades en dispositivos individuales, turnarse para compartir un dispositivo
+    o trabajar en clase en una pizarra blanca. También hay actividades fuera e línea
+    que se pueden realizar sin dispositivos, ¡así que incluso se pueden hacer al aire
+    libre!
+  hoc_how_to_step_educators_spread_word_desc_01: Ayúdanos a correr la voz en tu comunidad
+    con [estas plantillas de correo electrónico](%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Pide a dos colegas que [register](%{register_url})
+    y organicen una actividad de la Hora del Código. Ellos, a su vez, pueden conseguir
+    a dos colegas, quienes pueden conseguir a dos colegas, etc.
+  hoc_how_to_step_educators_spread_word_desc_03: Pídele a tu director que [organice
+    un evento para toda la escuela](%{host_url}). Cuando participen 300 o más niños,
+    puedes recibir un kit de participación especial con camisetas, carteles, pegatinas
+    para portátiles y mucho más. [Comparte todo tu plan de eventos escolares](%{share_url})
+    para calificar.
+  hoc_how_to_step_educators_spread_word_desc_04: Comunícate con la asociación de padres,
+    profesores y estudiantes de tu escuela o compártelos en los boletines informativos
+    para padres para informarles qué están aprendiendo sus hijos.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 a.m.: Comienza con un
+    [vídeo inspirador](%{video_url})'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 a.m.: Los estudiantes
+    realizan su actividad de programación'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 a.m.: Los estudiantes
+    aprenden sobre la IA'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 a.m.: El profesor pronuncia
+    un discurso de clausura'
+  hoc_how_to_step_educators_get_coding_desc: Dirige a tus alumnos a la actividad,
+    tal vez compartiendo el enlace en la pizarra o a través del sistema de gestión
+    de aprendizaje de tu aula. Es posible que tus alumnos se enfrenten a desafíos,
+    ¡no pasa nada! Aprender a programar es como aprender un nuevo idioma; no lo dominarás
+    de inmediato. Si no sabes la respuesta, podéis averiguarla juntos.
+  hoc_how_to_step_educators_celebrate_desc: 'Después del evento, imprime certificados
+    de finalización y felicita a tus alumnos. Comparte fotos y vídeos de tu evento
+    de la Hora del Código y muestra los logros de tus alumnos con #HourOfCode y @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: "¡La informática no tiene por qué terminar
+    con la Hora del Código! Si bien el 90% de los padres quieren que sus hijos aprendan
+    informática, la mayoría de las escuelas aún no la enseñan. Para ayudar, nuestro
+    plan de estudios está basado en la web y será de uso gratuito para siempre. Aprende
+    a llevar la informática a tu escuela hoy mismo."
   hoc_ai_top_desc: Cualquier persona puede aprender sobre la IA, ya sea un estudiante
     en el aula o un educador que abre el futuro de la enseñanza con y acerca de la
     IA.
@@ -14932,73 +14956,73 @@ es:
     es un recurso para que los responsables políticos, los líderes escolares y el
     personal desarrollen una guía inicial sobre la IA en sus escuelas.
   teach_ai_button_label: Ver el kit de herramientas
-  middle_high_page_main_title: Aprendizaje para edades de 11 años o más
+  middle_high_page_main_title: Aprendizaje para mayores de 11 años
   middle_high_page_main_description: "¡Explora el mundo de la informática con vídeos
-    atractivos, con tutoriales seguidos a tu propio ritmo, actividades de programación
-    y mucho más!"
+    atractivos, tutoriales a tu propio ritmo, actividades de programación y mucho
+    más!"
   middle_high_page_hero_title: Empieza con la Hora del Código
   middle_high_page_hero_description: Aprende los fundamentos de la informática con
     las actividades gratuitas de la Hora del Código, que incluyen bloques de programación
-    de arrastrar y soltar. ¡Hay cientos de opciones de una hora de duración entre
-    las que elegir!
+    de arrastrar y soltar. ¡Hay cientos de opciones de una hora de duración para elegir!
   middle_high_page_hourofcode_link: Explora las actividades de la Hora del Código
-  middle_high_page_modules_title: Módulos de programación para estudiantes más mayores
-  middle_high_page_modules_description: Adaptados de nuestros cursos Descubrimientos
-    de Informática y Principios de Informática, estos módulos breves y autodidácticos
-    para estudiantes de secundaria y bachillerato son una excelente forma de aprender
-    conceptos que abarcan todos los lenguajes y herramientas de programación.
-  middle_high_page_modules_card_title_1: Introducción al Laboratorio de Juegos
-  middle_high_page_modules_card_title_2: Programando Tortugas en el Laboratorio de
-    Aplicaciones
-  middle_high_page_modules_card_title_3: Programación basada en eventos en el Laboratorio
-    de Aplicaciones
+  middle_high_page_modules_title: Módulos de programación para estudiantes mayores
+  middle_high_page_modules_description: Adaptados de nuestros cursos 'Descubrimientos
+    de la informática' y 'Principios de la informática', estos módulos breves y a
+    tu propio ritmo para estudiantes de secundaria y bachillerato son una excelente
+    forma de aprender conceptos que abarcan todos los lenguajes y herramientas de
+    programación.
+  middle_high_page_modules_card_title_1: Introducción al laboratorio de juegos
+  middle_high_page_modules_card_title_2: Programación de tortugas en el laboratorio
+    de aplicaciones
+  middle_high_page_modules_card_title_3: Programación basada en eventos en el laboratorio
+    de aplicaciones
   middle_high_page_modules_card_description_1: Muévete a tu propio ritmo en esta introducción
-    a nuestro entorno del Laboratorio de Juegos mientras programas animaciones, arte
+    a nuestro entorno del laboratorio de juegos mientras programas animaciones, arte
     interactivo y juegos.
   middle_high_page_modules_card_description_2: "¡Descubre cómo crear aplicaciones
-    sofisticadas e interactivas con JavaScript en el Laboratorio de Aplicaciones!"
+    sofisticadas e interactivas con JavaScript en el laboratorio de aplicaciones!"
   middle_high_page_modules_card_description_3: Aprende a programar a tu propio ritmo
-    con esta introducción al entorno de programación del Laboratorio de Aplicaciones,
+    con esta introducción al entorno de programación del Laboratorio de aplicaciones,
     en el que los estudiantes utilizan JavaScript para crear aplicaciones interactivas.
   middle_high_page_modules_card_link: Pruébalo
   middle_high_page_make_your_own_title: Crea tus propias aplicaciones, juegos y páginas
     web
   middle_high_page_make_your_own_description: Además de cursos, tenemos herramientas
-    de programación que te permiten explorar tu creatividad y hacer algo increíble.
+    de programación que te permiten explorar tu creatividad y hacer cosas increíbles.
   middle_high_page_make_your_own_card_title_1: Laboratorio de aplicaciones
-  middle_high_page_make_your_own_card_title_2: Laboratorio de Juegos
-  middle_high_page_make_your_own_card_title_3: Laboratorio Web
-  middle_high_page_make_your_own_card_descrpition_1: Laboratorio de Aplicaciones es
-    un entorno de programación donde puedes crear aplicaciones sencillas. Diseña una
-    aplicación, codifícala en JavaScript con bloques o texto y compártela en segundos.
-  middle_high_page_make_your_own_card_descrpition_2: Laboratorio de Juegos es un entorno
-    de programación en el que puedes crear animaciones y juegos sencillos con objetos
-    y personajes que interactúan entre sí.
-  middle_high_page_make_your_own_card_descrpition_3: Laboratorio Web es un entorno
+  middle_high_page_make_your_own_card_title_2: Laboratorio de juegos
+  middle_high_page_make_your_own_card_title_3: Laboratorio web
+  middle_high_page_make_your_own_card_descrpition_1: El laboratorio de aplicaciones
+    es un entorno de programación donde puedes crear aplicaciones sencillas. Diseña
+    una aplicación, prográmala en JavaScript con bloques o texto y compártela en segundos.
+  middle_high_page_make_your_own_card_descrpition_2: El laboratorio de juegos es un
+    entorno de programación en el que puedes crear animaciones y juegos sencillos
+    con objetos y personajes que interactúan entre sí.
+  middle_high_page_make_your_own_card_descrpition_3: El laboratorio web es un entorno
     de programación en el que puedes crear páginas web sencillas utilizando HTML y
     CSS. Diseña tus páginas web y comparte tu sitio en cuestión de segundos.
   middle_high_page_make_your_own_card_link: Conoce más
-  middle_high_page_additional_resources_title: Recursos Adicionales
-  middle_high_page_additional_resources_description: "¡Hay muchas formas de profundizar
-    en la informática! Echa un vistazo a nuestra videoteca o infórmate sobre apasionantes
-    carreras en el campo de la informática."
-  middle_high_page_video_library_title: Descubre nuestra Videoteca
+  middle_high_page_additional_resources_title: Recursos adicionales
+  middle_high_page_additional_resources_description: "¡Hay muchas formas de explorar
+    más a fondo la informática! Echa un vistazo a nuestra videoteca o infórmate sobre
+    apasionantes carreras en el campo de la informática."
+  middle_high_page_video_library_title: Descubre nuestra videoteca
   middle_high_page_video_library_description: Aprende los fundamentos de la informática
     a través de vídeos cortos de 5-10 minutos sobre temas como la inteligencia artificial,
-    Internet, cómo funcionan los ordenadores, cómo no ser pirateado, blockchain, carreras
-    profesionales, ¡y mucho más!
+    Internet, cómo funcionan los ordenadores, cómo evitar ser hackeado, blockchain,
+    carreras profesionales, ¡y mucho más!
   middle_high_page_video_library_link: Ver videoteca
-  middle_high_page_cs_journeys_title: Llega más lejos con Viajes CS
+  middle_high_page_cs_journeys_title: Llega más lejos con viajes por la informática
   middle_high_page_cs_journeys_description: Da el siguiente paso en tu viaje por la
-    informática. Explora carreras, oportunidades de tutoría, cursos online, becas,
+    informática. Explora carreras, oportunidades de tutoría, cursos en línea, becas,
     prácticas y mucho más.
-  middle_high_page_cs_journeys_link: Explora los Viajes CS
-  middle_high_page_cs_title: Informática en la clase
-  middle_high_page_cs_description: "¡Estos cursos deben ser dirigidos por un docente!
-    Si quieres que se impartan en tu centro, considera la posibilidad de colaborar
+  middle_high_page_cs_journeys_link: Explora los viajes por la informática
+  middle_high_page_cs_title: Informática en el aula
+  middle_high_page_cs_description: "¡Estos cursos deben ser dirigidos por un profesor!
+    Si quieres que se enseñen en tu escuela, considera la posibilidad de colaborar
     con un profesor para que los imparta en tu clase."
   middle_high_page_cs_card_title_1: Descubrimientos de la informática
-  middle_high_page_cs_card_title_2: Principios de Informática
+  middle_high_page_cs_card_title_2: Principios de la informática
   middle_high_page_cs_card_title_3: AP® Informática A
   middle_high_page_cs_card_description_1: Plan de estudios gratuito de un año que
     presenta a los estudiantes los conceptos fundamentales de la informática y los
@@ -15011,35 +15035,35 @@ es:
   middle_high_page_cs_card_description_3: Introduzca a los estudiantes en la ingeniería
     de software y el diseño orientado a objetos mientras aprenden el lenguaje de programación
     Java en este plan de estudios gratuito de AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explora Descubrimientos de Informática
+  middle_high_page_cs_link_1: Explorar Descubrimientos de la informática
   middle_high_page_cs_link_2: Explore los principios de CS
-  middle_high_page_cs_link_3: Explora CSA
+  middle_high_page_cs_link_3: Explorar Informática A
   elemeentary_page_main_title: Aprendizaje para niños de 5 a 11 años
   elementary_page_main_description: "¡Explora el mundo de la informática con vídeos
-    atractivos, con tutoriales seguidos a tu propio ritmo, actividades de programación
-    y mucho más!"
-  elementary_page_own_pace_title: Continúa aprendiendo a tu ritmo
+    atractivos, tutoriales a tu propio ritmo, actividades de programación y mucho
+    más!"
+  elementary_page_own_pace_title: Sigue aprendiendo a tu ritmo
   elementary_page_own_pace_description: Crea dibujos, juegos y mucho más con estas
     dos excelentes opciones para estudiantes que se inician por su cuenta en el aprendizaje
     de los fundamentos de la informática.
-  elementary_page_own_pace_card_title_1: Curso Prelector Exprés
-  elementary_page_own_pace_card_title_2: Curso Exprés
-  elementary_page_own_pace_card_description_1: "¡Aprende informática a tu ritmo! Aprende
-    a crear programas informáticos, desarrolla tu capacidad para resolver problemas
-    y supera divertidos retos. Crea juegos y proyectos creativos para compartir con
-    amigos, familiares y profesores."
-  elementary_page_own_pace_link_1: Iniciar Curso Pre-lector
-  elementary_page_own_pace_link_2: Iniciar Curso Exprés
+  elementary_page_own_pace_card_title_1: Curso exprés para prelectores
+  elementary_page_own_pace_card_title_2: Curso exprés
+  elementary_page_own_pace_card_description_1: "¡Aprende informática a tu propio ritmo!
+    ¡Aprende a crear programas informáticos, desarrolla tu capacidad para resolver
+    problemas y supera divertidos retos! Crea juegos y proyectos creativos para compartir
+    con amigos, familiares y profesores."
+  elementary_page_own_pace_link_1: Iniciar curso para prelectores
+  elementary_page_own_pace_link_2: Iniciar curso exprés
   elementary_page_make_your_own_games_title: Crea tus propias animaciones y juegos
   elementary_page_make_your_own_games_card_title_1: Laboratorio de sprites
   elementary_page_make_your_own_games_card_description_1: "¡Es hora de ser creativo!
-    Utiliza la programación basada en bloques para crear algo divertido, dulce o extravagante
-    en el Laboratorio Sprite. ¡El único límite es tu imaginación!"
-  elementary_page_make_your_own_games_link: Prueba Laboratorio Sprite
-  elementary_page_computer_science_title: Informática en la clase
+    Utiliza la programación basada en bloques para crear algo divertido, tierno o
+    extravagante en el Laboratorio Sprite. ¡El único límite es tu imaginación!"
+  elementary_page_make_your_own_games_link: Prueba el laboratorio Sprite
+  elementary_page_computer_science_title: Informática en el aula
   elementary_page_computer_science_description: "¡Estos cursos deben ser dirigidos
-    por docentes! Si quieres que se impartan en tu centro, pide a uno de tus padres
-    o tutores que colaboren con un profesor para llevarlos a tu clase."
+    por un profesor! Si quieres que se enseñen en tu escuela, pide a uno de los padres
+    o tutores que colaboren con un profesor para impartirlos en tu clase."
   elementary_page_computer_science_card_title_1: Fundamentos de la informática
   elementary_page_computer_science_card_title_2: Conexiones informáticas
   elementary_page_computer_science_description_1: Plan de estudios gratuito de un

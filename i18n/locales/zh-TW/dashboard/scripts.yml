@@ -8431,6 +8431,9 @@ zh-TW:
               display_name: 介紹
           title: 第 1 天
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 非同步活動簡介
           lesson_groups:
             lessonGroup-2:
               display_name: 同步零件 1
@@ -8441,6 +8444,10 @@ zh-TW:
             lessonGroup-5:
               display_name: 非同步第 2 部分
           title: 第 1 天
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 一小時玩程式課程計劃模板
         self-paced-pl-csd-unit1-2-2023:
           title: 模組1：準備問題解決和計算教學
           description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-   認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"

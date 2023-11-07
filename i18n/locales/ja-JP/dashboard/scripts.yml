@@ -5218,7 +5218,14 @@ ja:
               display_name: はじめに
           title: 1日目
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 非同期アクティビティの入門
           title: 1日目
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: アワー・オブ・コードのレッスンプランのテンプレート
         self-paced-pl-csd-unit1-2-2023:
           title: 'モジュール 1: 問題解決と計算を教えるための準備'
           description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"

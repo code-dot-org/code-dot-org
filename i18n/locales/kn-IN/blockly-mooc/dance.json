@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "அந்த நடனக் கலைஞரைச் சிறியதாக மாற்ற `செட் காப்பு_டான்சர் 2 அளவு` தொகுதியைப் பயன்படுத்தவும்.",
   "danceFeedbackUseSetTint": "ஒரு நடனக் கலைஞரின் நிறத்தை மாற்ற `செட் டின்ட்` தொகுதியைப் பயன்படுத்தவும்.",
   "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\"> right_unicorn </title><title name=\"PROPERTY\"> \"scale\" </title> </title><title name=\"RANGE\">உங்கள் திட்டத்திற்கு \"பாஸ்\" </title></block></xml>தடு.",
+  "danceFeedbackKeepCoding": "ಕೋಡಿಂಗ್ ಮಾಡುತ್ತಿರಿ! ಏನೋ ಇನ್ನೂ ಸರಿಯಾಗಿಲ್ಲ.",
   "measure": "அளவீடு:"
 }

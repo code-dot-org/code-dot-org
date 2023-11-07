@@ -1750,7 +1750,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
         text: "{CONDITION} {SPRITE1} raakt {SPRITE2}"
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
@@ -1880,7 +1880,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
           KEY:
             '"a"': a
             '"b"': b
@@ -2186,7 +2186,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
         text: "{CONDITION} {SPRITE} geklikt"
       gamelab_spriteSay:
         text: "{SPRITE} zegt {SPEECH}"

@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Gunakan blok `tetapkan saiz penari2_sandaran` untuk menjadikan bilangan penari lebih kecil.",
   "danceFeedbackUseSetTint": "Gunakan blok `tetapkan warna` untuk menukar warna penari.",
   "danceFeedbackUseStartMapping": "Cuba menambah <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> blok kepada atur cara anda.",
+  "danceFeedbackKeepCoding": "Anda menggunakan kesemua jenis blok yang diperlukan tetapi dengan cara yang tidak betul.",
   "measure": "Corak Berirama:"
 }

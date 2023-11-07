@@ -6,10 +6,10 @@ bn:
   front_title: ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, %{campaign_date}
   coming_soon: শীঘ্রই আসছে
   new: নতুন
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: কোড পরিবেশন করার ঘন্টা
   hoc_stat_languages: ছাত্ররা ৪৫টিরও বেশি ভাষায় শিক্ষা গ্রহণ করছে
   hoc_stat_hours_served: ১০০মিরও বেশি শিক্ষার্থী এক ঘন্টা অফ কোড চেষ্টা করেছে
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: মহিলা শিক্ষার্থীরা আওয়ার অফ কোডে অংশগ্রহণকারীদের 50%
   campaign_date_start_short: Dec. 4
   campaign_date_start_long: December 4
   campaign_date_short: Dec. 4-10
@@ -50,10 +50,10 @@ bn:
   hoc2023_social_creativity_with_ai_title: কোড ঘন্টা - আপনি কি তৈরি করবেন?
   hoc2023_social_creativity_with_ai_desc: এআই সম্পর্কে অন্বেষণ এবং শিখতে কম্পিউটার
     বিজ্ঞান ব্যবহার করুন!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: আওয়ার অফ কোড হল সমস্ত দক্ষতার স্তরের শিক্ষার্থীদের জন্য
+    মজাদার ক্রিয়াকলাপ এবং ভিডিওগুলির মাধ্যমে কম্পিউটার বিজ্ঞানের একটি বিনামূল্যে
+    পরি এই বছরের কোডিং এবং এআই উভয়ের উদযাপন 400 টিরও বেশি অংশীদার, 20,000 শিক্ষাবিদ
+    এবং 58,000 স্বেচ্ছাসেবক দ্বারা সমর্থিত।
   hoc2022_header: এক্সপ্লোর করুন, খেলুন, তৈরি করুন!
   social_hoc2022_explore_play_create: কম্পিউটার বিজ্ঞান ব্যবহার করুন অন্বেষণ, খেলা,
     এবং তৈরি!
@@ -66,9 +66,9 @@ bn:
     ডিজনির “এনক্যান্টো” এবং আরও অনেক কিছু থেকে সঙ্গীত সমন্বিত!
   social_hoc2023_dance: বেয়ন্স, বিটিএস, হ্যারি স্টাইলস, লিজো, লিল নাস এক্স, সেলেনা
     গোমেজ, ডিজনির “এনক্যান্টো” এবং আরও অনেক কিছু থেকে সঙ্গীত সমন্বিত!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: এখন আপনার জিনিসগুলি বাঁচানোর সময়! মাইলি সাইরাস, বিটিএস,
+    লিল নাস এক্স, হ্যারি স্টাইলস, নিকি মিনাজ, রোজালিয়া এবং আরও অনেক কিছুর হিট সহ
+    আপনার নিজস্ব নৃত্য পার্টি তৈরি করুন!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: আজকে শিখুন, একটি উজ্জ্বল আগামীকাল তৈরি করুন।
@@ -285,21 +285,23 @@ bn:
     পেতে ঘন্টা অফ কোড টিচার ফোরামে যান।
   required_materials: 'প্রয়োজনীয় উপকরণ:'
   optional_materials: 'ঐচ্ছিক উপকরণ:'
-  for_students: For students
+  for_students: শিক্ষার্থীদের জন্য
   for_educators: শিক্ষকদের জন্য
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: কোডের এক ঘন্টা হোস্ট করুন
   call_to_action_hold_an_event: একটি ইভেন্ট ধরুন
   call_to_action_register_event: আপনার ইভেন্ট নিবন্ধন করুন
   call_to_action_register_your_hoc: আপনার আওয়ার অফ কোড নিবন্ধন করুন
   call_to_action_select_activity: একটি ক্রিয়াকলাপ নির্বাচন করুন
+  call_to_action_select_coding_activity: কোডিং ক্রিয়াকলাপ নির্বাচন
   call_to_action_start_activity: একটি কার্যকলাপ শুরু করুন
   call_to_action_get_certificates: সার্টিফিকেট পান
+  call_to_action_print_certificates: প্রিন্ট সার্টিফিকেট
   call_to_action_go_beyond_hoc: কোডের ঘন্টা ছাড়িয়ে যান
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Code.org থেকে কোডের সমস্ত আওয়ার ক্রিয়াকলাপ
+    অন্বেষণ করুন
+  call_to_action_start_dance_party: নৃত্য পার্টি শুরু করুন
+  call_to_action_start_part_02: দ্বিতীয় অংশ শুরু করুন
+  call_to_action_start_unplugged_activity: আনপ্লাগ করা ক্রিয়াকলাপ শুরু করুন
   call_to_action_view_promo_resources: প্রোমো সংস্থানসমূহ দেখুন
   call_to_action_learn_more: আরও জানুন
   call_to_action_watch_now: এখন দেখুন
@@ -395,9 +397,9 @@ bn:
   call_to_action_view_faqs: আরো FAQ দেখুন
   call_to_action_applications_open: অ্যাপ্লিকেশন এখন খোলা
   call_to_action_apply_cs_ambassador: সিএস রাষ্ট্রদূত হতে আবেদন করুন
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: শীঘ্রই আসছে!
+  call_to_action_learn_how_ai_works: এআই কীভাবে কাজ করে তা শিখুন
+  call_to_action_learn_about_ai: এআই সম্পর্কে জানুন
   aria_label_call_to_action_hoc_how_to_educators: শিক্ষাবিদদের জন্য কীভাবে গাইড দেখুন
   aria_label_call_to_action_hoc_how_to_companies: সংস্থাগুলির জন্য কীভাবে গাইড দেখুন
   aria_label_call_to_action_hoc_how_to_districts: জেলাগুলির জন্য কীভাবে গাইড দেখুন
@@ -410,9 +412,11 @@ bn:
     দেখুন
   aria_label_call_to_action_hoc_how_to_virtual_events: ভার্চুয়াল ইভেন্টগুলির জন্য
     কীভাবে গাইড দেখুন
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: ডান্স পার্টি ক্রিয়াকলাপ শুরু করুন
+  aria_label_call_to_action_dance_02: ডান্স পার্টি ক্রিয়াকলাপের দ্বিতীয় অংশ শুরু
+    করুন
+  aria_label_call_to_action_dance_unplugged: ডান্স পার্টি আনপ্লাগড ক্রিয়াকলাপ শুরু
+    করুন
   aria_label_call_to_action_afe: আমাজন ফিউচার ইঞ্জিনিয়ার সম্পর্কে আরও জানুন
   aria_label_call_to_action_teaching_csf: শিক্ষণ কম্পিউটার বিজ্ঞান মৌলিক পেশাদার লার্নিং
     প্রোগ্রাম শুরু করুন
@@ -420,6 +424,8 @@ bn:
     লার্নিং প্রোগ্রাম শুরু করুন
   aria_label_call_to_action_teaching_csp: শিক্ষণ কম্পিউটার বিজ্ঞান নীতি পেশাদার শেখার
     প্রোগ্রাম শুরু করুন
+  aria_label_call_to_action_teaching_problem_solving: শিক্ষণ সমস্যা সমাধান এবং কম্পিউটিং
+    পেশাদার শেখার প্রোগ্রাম শুরু
   aria_label_call_to_action_teaching_csc: শিক্ষণ কম্পিউটার বিজ্ঞান সংযোগ পেশাদার লার্নিং
     প্রোগ্রাম শুরু করুন
   aria_label_call_to_action_teaching_ai: শিক্ষণ এআই এবং মেশিন লার্নিং পেশাদার লার্নিং
@@ -436,6 +442,8 @@ bn:
   aria_label_call_to_action_curriculum_csd: কম্পিউটার বিজ্ঞান আবিষ্কারের পাঠ্যক্রম
     এক্সপ্লোর করুন
   aria_label_call_to_action_curriculum_csp: কম্পিউটার বিজ্ঞান নীতি পাঠ্যক্রম অন্বেষণ
+  aria_label_call_to_action_curriculum_problem_solving: সমস্যা সমাধান এবং কম্পিউটিং
+    পাঠ্যক্রমটি
   aria_label_call_to_action_curriculum_csc: কম্পিউটার বিজ্ঞান সংযোগ পাঠ্যক্রম অন্বেষণ
   aria_label_call_to_action_curriculum_ai: এআই এবং মেশিন লার্নিং পাঠ্যক্রম এক্সপ্লোর
     করুন
@@ -513,6 +521,7 @@ bn:
   curriculum_name_csf_teacher_led: শিক্ষকের নেতৃত্বে পাঠদান
   curriculum_name_csd: কম্পিউটার বিজ্ঞান আবিষ্কার
   curriculum_name_csp: কম্পিউটার বিজ্ঞানের মূলনীতি
+  curriculum_name_problem_solving: সমস্যা সমাধান এবং কম্পিউটিং
   curriculum_name_csc: কম্পিউটার বিজ্ঞান সংযোগ
   curriculum_name_csa: এপি® কম্পিউটার বিজ্ঞান এ
   curriculum_name_csa_ai: সফটওয়্যার ইঞ্জিনিয়ারিং ও কম্পিউটার ভিশন
@@ -525,25 +534,25 @@ bn:
   curriculum_name_creating_apps_with_devices: ডিভাইসগুলির সাথে অ্যাপ তৈরি করা
   curriculum_name_poetry: কবিতার সাথে কোডিং
   curriculum_name_dance_party: ড্যান্স পার্টি
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: নাচ চালিয়ে যান
+  curriculum_name_dance_party_unplugged: ডান্স পার্টি আনপ্লাগড
+  curriculum_name_dance_party_ai_edition: 'ডান্স পার্টি: এআই সংস্করণ'
   curriculum_name_problem_solving_computing: সমস্যা সমাধান ও কম্পিউটিং
   curriculum_name_web_development: ওয়েব ডেভেলপমেন্ট
   curriculum_name_interactive_animations_games: ইন্টারেক্টিভ অ্যানিমেশন এবং গেম
   curriculum_name_design_process: ডিজাইন প্রসেস
   curriculum_name_data_society: ডাটা অ্যান্ড সোসাইটি
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: এই প্রারম্ভিক ক্রিয়াকলাপে, বিভিন্ন রঙিন চরিত্রগুলি
+    অ্যানিমেটেড ব্যাকগ্রাউন্ড এবং উত্তেজনাপূর্ণ সঙ্গীতে পদক্ষেপ করতে কোড ব্যবহার করুন।
+  curriculum_desc_dance_party_02: বর্ধিত প্রকল্প ধারণা সহ প্রারম্ভিক টিউটোরিয়ালের
+    বাইরে আরও জটিল নাচ পার্টির উদাহরণগুলির একটি লাইব্রেরি ব্রাউজ করুন।
+  curriculum_desc_dance_party_unplugged: আপনার খাঁজ চালু করুন - কোনও কম্পিউটারের প্রয়োজন
+    নেই! ইভেন্টের মতো কোডিং ধারণাগুলি কীভাবে নৃত্যশিল্পী কোরিওগ্রাফিকে সিঙ্ক্রোনাইজ
+    করতে ব্যবহার করা
+  curriculum_desc_dance_party_ai_edition: আজকের শীর্ষ শিল্পীদের প্রদর্শন করে আপনার
+    নিজস্ব ভার্চুয়াল ডান্স পার্টি তৈরি করতে কৃত্রিম বুদ্ধিমত্তা (এআই) ধারণা বেছে
+    নেওয়ার জন্য কয়েক ডজন গান সহ প্রতিটি শিক্ষার্থীর সঙ্গীতের স্বাদ যাই হোক না কেন
+    পৌঁছা এখন আপনার জিনিসগুলি বাঁচানোর সময়!
   curriculum_desc_csf: প্রাথমিক পাঠ্যক্রমের ফ্রি সেট যা শিক্ষার্থীদের কম্পিউটার বিজ্ঞানের
     ভিত্তিগত ধারণাগুলির সাথে পরিচয় করিয়ে দেয়।
   curriculum_desc_csf_express: কম্পিউটার প্রোগ্রাম তৈরি, সমস্যা সমাধানের দক্ষতা বিকাশ,
@@ -675,12 +684,12 @@ bn:
   module_grade_grade_03: গ্রেড ৩
   module_grade_grade_04: ৪র্থ গ্রেড
   module_grade_grade_05: গ্রেড ৫
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: বয়স 5-7
+  module_age_07: বয়স 7+
+  module_age_07_11: বয়স 7-11
+  module_age_11: বয়স 11+
+  module_age_13: বয়স 13+
+  module_age_all_age: সকল বয়স
   module_grade_k_5_teachers: কে-৫ শিক্ষক
   module_grade_6_10_teachers: ৬-১০ জন শিক্ষক
   module_grade_9_12_teachers: ৯-১২ জন শিক্ষক
@@ -712,6 +721,7 @@ bn:
   module_label_teaching_csf: কম্পিউটার বিজ্ঞান মৌলিক বিষয়গুলো
   module_label_teaching_csd: কম্পিউটার বিজ্ঞান আবিষ্কারের শিক্ষাদান
   module_label_teaching_csp: কম্পিউটার বিজ্ঞান নীতিমালা শিক্ষাদান
+  module_label_teaching_problem_solving: সমস্যা সমাধান এবং কম্পিউটিং শিক্ষণ
   module_label_teaching_csc: কম্পিউটার বিজ্ঞান সংযোগ শিক্ষাদান
   module_label_teaching_ai: এআই এবং মেশিন লার্নিং শিক্ষণ
   module_label_teaching_maker_cp: ডিভাইসগুলির সাথে অ্যাপস তৈরি করা শিক্ষণ (সার্কিট
@@ -774,8 +784,9 @@ bn:
   heading_csa_ai: এপি® পরীক্ষার পর কি করতে হবে তা খুঁজছেন?
   heading_bring_cs_to_students: শিক্ষার্থীদের কম্পিউটার বিজ্ঞান আনুন
   heading_cs_ambassador_program: সিএস অ্যাম্বাসেডর প্রো
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: বৈশিষ্ট্যযুক্ত ছাত্র প্রকল্
+  heading_start_hoc_with_videos: অনুপ্রেরণামূলক ভিডিও দিয়ে আপনার আওয়ার অফ কোড শুরু
+    করুন
   cs_ambassador_subhead: আপনি যদি উচ্চ বিদ্যালয়ের ছাত্র আপনার স্কুলে কম্পিউটার বিজ্ঞান
     নিতে আরও তরুণদের উত্সাহিত করার জন্য উত্সাহী হন তবে আমাদের আপনার দরকার!
   cs_ambassador_desc: ওষুধ, বিনোদন, ক্রীড়া, শিক্ষা, ব্যবসা, ফ্যাশন এবং উদ্যোক্তা
@@ -869,13 +880,14 @@ bn:
     ইমেল পেতে সাইন আপ করুন এবং আপনার ইনবক্সে সরাসরি পাঠানো সহায়ক অনুস্মারক, টিপস
     এবং আপডেটগুলি পান।
   subscribe_form_section_unsubscribe: আপনি যে কোন সময় আনসাবস্ক্রাইব করতে পারেন।
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: একটি ডান্স পার্টি কোড করুন
+  dance_featuring_songs_by_short: 'বৈশিষ্ট্যযুক্ত গান দ্বারা:'
+  dance_featuring_songs_by_long: 'ডান্স পার্টির গান অন্তর্ভুক্ত রয়েছে:'
+  dance_and_more: এবং আরো
+  dance_choose_activity: আপনার নৃত্য পার্টি চয়ন করুন
+  dance_afe_disclaimer: এই টিউটোরিয়ালে যাদের সঙ্গীত ব্যবহৃত হয় তাদের শিল্পীরা Code.org
+    এ তাদের সঙ্গীতের ব্যবহারের লাইসেন্সিংয়ের অংশ হিসাবে অ্যামাজনের স্পনসর বা অনুমোদন
+    করছেন না।
   blockchain_hero_heading: ব্লকচাইন কিভাবে কাজ করে
   blockchain_hero_desc: ব্লকচাইনের জগতে ডুব দিন & ldquo; কিভাবে ব্লকচাইন কাজ করে,
     & rdquo; আমাদের নতুন ভিডিও সিরিজ এবং সহগামী পাঠ!
@@ -13346,6 +13358,9 @@ bn:
   step_06: ধাপ 6
   step_07: ধাপ 7
   step_08: ধাপ 8
+  what: 'কি:'
+  when: 'কখন:'
+  where: 'কোথায়:'
   hoc_how_to_top_heading: কোডের ঘন্টা আপনার গাইড
   hoc_how_to_top_desc: কোড অভিজ্ঞতার সেরা ঘন্টা জন্য নির্দেশিকা কিভাবে নির্দেশিকা।
   hoc_how_to_top_view_guide: জন্য গাইড দেখুন
@@ -13392,70 +13407,87 @@ bn:
   hoc_how_to_step_label_plan: আপনি কোথায় এবং কখন আপনার কোডের ঘন্টা করবেন পরিকল্পনা
     করুন
   hoc_how_to_step_label_choose_activity: আপনার ক্রিয়াকলাপ চয়ন করুন
+  hoc_how_to_step_label_choose_activities: আপনার ক্রিয়াকলাপ চয়ন করুন
   hoc_how_to_step_label_test_activity: আপনার ক্রিয়াকলাপ পরীক্ষা করুন
   hoc_how_to_step_label_register_event: আপনার ইভেন্ট নিবন্ধন করুন
   hoc_how_to_step_label_tell: আপনার শিক্ষার্থী, স্কুল এবং সম্প্রদায়কে বলুন
   hoc_how_to_step_label_get_coding: কোডিং পান!
   hoc_how_to_step_label_celebrate: উদযাপন
   hoc_how_to_step_label_beyond_hoc: কোডের ঘন্টা ছাড়িয়ে
+  hoc_how_to_step_label_plan_your_event: আপনার ইভেন্ট পরিকল্পনা করুন
+  hoc_how_to_step_label_plan_your_hour: আপনার ঘন্টা পরিকল্পনা করুন
+  hoc_how_to_step_label_help_spread_word: শব্দ ছড়িয়ে দিতে সহায়তা করুন
   hoc_how_to_step_beyond_hoc_subhead: এখানেই শেষ হয় না!
-  hoc_how_to_step_beyond_hoc_desc: কম্পিউটার বিজ্ঞান কোডের ঘন্টা দিয়ে শেষ হতে হবে
-    না! যদিও 90% বাবা-মা চান তাদের সন্তান কম্পিউটার বিজ্ঞান শিখতে, বেশিরভাগ স্কুল
-    এখনও এটি শেখায় না। আজ আপনার সন্তানের স্কুলে কীভাবে সিএস আনতে হয় তা শিখুন।
-  hoc_how_to_step_01_educators_subhead: একটি ইভেন্টের সময় এবং স্থান নির্বাচন করুন
-    যা আপনার উপলব্ধ শিক্ষার্থী এবং ডিভাইসের সংখ্যার জন্য কাজ করে।
-  hoc_how_to_step_01_educators_desc_01: আপনার কোডের ঘন্টা করার জন্য আপনার জন্য কোন
-    স্পেস উপলব্ধ? আপনার স্পেসের প্রযুক্তিগত ক্ষমতা এবং আপনার শিক্ষার্থীরা যে ধরণের
-    ডিভাইসগুলিতে কাজ করবে তা আপনি আশা করেন তা বিবেচনা করুন। শিক্ষার্থীরা একক ডিভাইসে
-    টিউটোরিয়ালগুলিতে কাজ করতে পারে, একটি ভাগ করা ডিভাইস ব্যবহার করে ঘুরে নিতে পারে
-    বা ক্লাসরুমের হোয়াইটবোর্ডে একসাথে একটি টিউটোরিয়াল চেষ্টা করতে পারে। এমনকি আনপ্লাগড
-    টিউটোরিয়াল রয়েছে যা কোনও ডিভাইস ছাড়াই সম্পন্ন করা যায়। আনপ্লাগড বিকল্পগুলি
-    যে কোনও জায়গায় করা যেতে পারে - এমনকি বাইরে!
-  hoc_how_to_step_01_educators_desc_02: সর্বশেষ টিউটোরিয়াল এবং ক্রিয়াকলাপগুলি প্রকাশিত
-    হলে বিশ্বজুড়ে লোকেরা সিএস এডুকেশন সপ্তাহের %{campaign_date} সময় আওয়ার অফ কোড
-    উদযাপনে যোগ দেয়। তবে আপনি বছরের যে কোনও দিন কোডের একটি ঘন্টা করতে পারেন!
-  hoc_how_to_step_02_educators_desc_01: আপনার গ্রুপের বয়স, অভিজ্ঞতা, আগ্রহ এবং আরও
-    অনেক কিছুর উপর ভিত্তি করে ক্রিয়াকলাপগুলি অন্বেষণ করুন। শিক্ষার্থীদের পক্ষে স্ব-নেতৃত্বাধীন
-    টিউটোরিয়াল চেষ্টা করা জনপ্রিয়, যদিও অনেক ক্রিয়াকলাপে শিক্ষকদের আলোচনার গাইড
-    বা ক্রিয়াকলাপটি প্রসারিত করার জন্য পাঠের পরিকল্পনা অন্তর্ভুক্ত রয়েছে।
-  hoc_how_to_step_02_educators_desc_02: আপনি যদি আপনার সমস্ত শিক্ষার্থীর জন্য একক
-    টিউটোরিয়াল চয়ন করতে চান বা প্রতিটি শিশুকে তাদের নিজস্ব বাছাই করতে চান তবে সময়ের
-    আগে সিদ্ধান্ত নিন।
-  hoc_how_to_step_02_educators_desc_03: এই বছর, আপনি এবং আপনার শিক্ষার্থীরা টিউটোরিয়াল,
-    পাঠ পরিকল্পনা এবং আমাদের নতুন কীভাবে এআই ওয়ার্কস ভিডিও সিরিজের মাধ্যমে [AI সম্পর্কে
-    সমস্ত শিখতে] (%ai_url) করতে পারেন।
-  hoc_how_to_step_03_educators_desc_01: ক্লাসরুমে যাওয়ার আগে টিউটোরিয়ালটি নিজেই
-    চেষ্টা করে দেখুন যাতে আপনি প্রশ্নের উত্তর দিতে পারেন!
-  hoc_how_to_step_03_educators_desc_02: আপনি শিক্ষার্থী কম্পিউটার বা ডিভাইসগুলিতে
-    টিউটোরিয়ালগুলি পরীক্ষা করতে পারেন যাতে তারা শব্দ এবং ভিডিও সমর্থন করে তা নিশ্চিত
-    করতে পারেন। কম ব্যান্ডউইথ আছে? ক্লাসের সামনে ভিডিওগুলি দেখানোর পরিকল্পনা করুন,
-    যাতে প্রতিটি শিক্ষার্থী তাদের নিজস্ব ভিডিও ডাউনলোড করে না।
-  hoc_how_to_step_03_educators_desc_03: আপনার ক্লাসের জন্য হেডফোন সরবরাহ করার কথা
-    বিবেচনা করুন বা শিক্ষার্থীদের তাদের নিজস্ব আনতে বলুন, যদি আপনি বেছে নিয়েছেন যে
-    টিউটোরিয়ালটি শব্দের সাথে সবচেয়ে ভাল কাজ করে।
-  hoc_how_to_step_04_educators_desc_01: আপনি যখন আপনার আওয়ার অফ কোড ইভেন্টটি নিবন্ধন
-    করেন, তখন আপনি কোডের সফল ঘন্টা হোস্টিংয়ের জন্য সংবাদ এবং টিপস সহ সহায়ক ইমেলগুলি
-    পাবেন। এটিও আপনি স্থানীয় স্বেচ্ছাসেবকদের জানাতে পারেন যে আপনার স্কুল অংশগ্রহণ
-    করছে। স্বেচ্ছাসেবকরা একটি দুর্দান্ত সংস্থান এবং কম্পিউটার বিজ্ঞান সম্পর্কে আপনার
-    ক্লাসের সাথে কথা বলতে বা আপনার শিক্ষার্থীদের আওয়ার অফ কোড ক্রিয়াকলাপে সহায়তা
-    করতে পারে।
-  hoc_how_to_step_05_educators_desc_01: আপনার শিক্ষার্থীদের [অনুপ্রেরণামূলক ভিডিও]
-    ভাগ করে ইভেন্টের জন্য উত্তেজিত করুন (%{videos_url}) বিভিন্ন মানুষ এবং সৃজনশীল
-    উপায়গুলি হাইলাইট করে যা বাস্তব বিশ্বে কম্পিউটার বিজ্ঞান ব্যবহার করা যেতে পারে।
-  hoc_how_to_step_05_educators_desc_02: আপনার আওয়ার অফ কোড পরিকল্পনাগুলি অন্যান্য
-    শিক্ষকদের সাথে ভাগ করুন যারা মজাতে যোগদান করতে চাইতে পারেন! এটি আপনার স্কুলের
-    প্যারেন্ট টিচার স্টুডেন্ট অ্যাসোসিয়েশনের কাছে পৌঁছানোর বা পিতামাতার নিউজলেটারগুলিতে
-    ভাগ করে নেওয়ার দুর্দান্ত সুযোগ, তাদের বাচ্চারা কী শিখছে তা তাদের জানাতে দেয়।
-  hoc_how_to_step_06_educators_desc_01: আপনার শিক্ষার্থীদের ক্রিয়াকলাপে নির্দেশ করুন,
-    সম্ভবত বোর্ডে লিঙ্কটি ভাগ করে বা আপনার শ্রেণিকক্ষের লার্নিং ম্যানেজমেন্ট সিস্টেমের
-    মাধ্যমে। আপনার শিক্ষার্থীরা চ্যালেঞ্জের মুখোমুখি হতে পারে - ঠিক আছে! প্রোগ্রাম
-    শেখা একটি নতুন ভাষা শেখার মতো; আপনি এখনই সাবলীল হবেন না। আপনি যদি উত্তরটি না জানেন
-    তবে আপনি একসাথে এটি খুঁজে বের করতে পারেন।
-  hoc_how_to_step_07_educators_desc_01: 'সাফল্য উদযাপন করতে ভুলবেন না! সোশ্যাল মিডিয়ায়
-    আপনার আওয়ার অফ কোড ইভেন্টের ফটো এবং ভিডিওগুলি ভাগ করুন। #HourOfCode এবং @codeorg
-    ব্যবহার করুন যাতে আমরা আপনার সাফল্যও হাইলাইট করতে পারি!'
-  hoc_how_to_step_07_educators_desc_02: আপনি আপনার শিক্ষার্থীদের তাদের কৃতিত্ব প্রদর্শন
-    করার জন্য শংসাপত্রও মুদ্রণ করতে পারেন!
+  hoc_how_to_step_plan_hour_desc_01: 'আপনাকে শুরু করার জন্য এখানে একটি নমুনা এজেন্ডা
+    রয়েছে:'
+  hoc_how_to_step_choose_activities_desc_01: এই বছর, আওয়ার অফ কোড থিম হল ক্রিয়েটিভিটি
+    উইথ আর্টিফিশিয়াল ইন্টেলিজেন্স (এআই)। এটি নতুন অ্যাপ্লিকেশন এবং অ্যালগরিদম কোড
+    করা, অনন্য শিল্প তৈরি করা বা আমাদের নাচের জন্য কোরিওগ্রাফি তৈরি করা হোক না কেন,
+    এআই ডিজিটাল অভিব্যক্তির জন্য নতুন সুযোগ খুলছে যা আমাদের সৃজনশীলতার বোঝাপকে প্রসারিত
+    করে। একটি কোডিং ক্রিয়াকলাপ সম্পন্ন করে এবং এআই সম্পর্কে শিখে এই বছরটিকে বিশেষ
+    করুন।
+  hoc_how_to_step_choose_activities_desc_02: প্রথমত, [শত শত কোডিং ক্রিয়াকলাপ অন্বেষণ
+    করুন] (%{activities_url}) এবং আপনার গ্রুপের বয়স, অভিজ্ঞতা, আগ্রহ এবং আরও অনেক
+    কিছুর ভিত্তিতে একটি চয়ন করুন। [এই নির্বাচিত কার্যক্রম] (%{ai_activities_url})
+    একটি মূল বিষয় বা পাঠ হিসাবে কৃত্রিম বুদ্ধিমত্তা বৈশিষ্ট্য করে।
+  hoc_how_to_step_choose_activities_desc_03: তারপরে, [এআই সম্পর্কে সমস্ত কিছু শিখুন]
+    (%{ai_url})। শিক্ষার্থীরা এই ক্ষেত্রে বিশেষজ্ঞদের বৈশিষ্ট্যযুক্ত সংক্ষিপ্ত ভিডিও
+    দেখতে পারে এবং ক্রিয়াকলাপটি প্রসারিত করতে এবং আরও আলোচনার জন্য পাঠের পরিকল্পনা
+    রয়েছে। অথবা, আমরা শিক্ষকদের জন্য এআই এর সাথে এবং এর সম্পর্কে শিক্ষকতার ভবিষ্যত
+    আনলক করার জন্য বিনামূল্যে পেশাদার শিক্ষার
+  hoc_how_to_step_educators_register_desc: আপনার ইভেন্টটি নিবন্ধন করে আপনার শিক্ষার্থীদের
+    সাথে একটি আওয়ার অফ কোড করার প্রতিশ্রুতি দিয়ে শুরু করুন। আপনি যখন নিবন্ধন করবেন,
+    আপনি একটি সফল আওয়ার অফ কোড হোস্ট করার জন্য সংবাদ এবং টিপস সহ সহায়ক ইমেল পাবেন।
+    আপনাকে [মানচিত্রে রাখা হবে] (%{map_url})। আমাদের সম্মিলিত প্রচেষ্টার দৃশ্যমান
+    সামগ্রিকতা কম্পিউটার বিজ্ঞান আন্দোলনের প্রতি বিশ্বব্যাপী প্রতিশ্রুতি প্রদর্শন
+    করে, যা আমাদের পদ্ধতিগত পরিবর্তনের গতি
+  hoc_how_to_step_educators_plan_desc_01: আপনার ইভেন্টের আগে, ক্রিয়াকলাপগুলি নিজেই
+    চেষ্টা করুন যাতে আপনি নিশ্চিত করতে পারেন যে তারা শিক্ষার্থীদের ডিভাইসে কাজ করে
+    এবং আপনি প্রশ্নের উত্তর দিতে প্রস্তুত! কম ব্যান্ডউইথ আছে? ক্লাসের সামনে ভিডিও
+    দেখানোর পরিকল্পনা করুন, যাতে প্রতিটি শিক্ষার্থী তাদের নিজস্ব ভিডিও ডাউনলোড করে
+    না।
+  hoc_how_to_step_educators_plan_desc_02: বিশ্বজুড়ে লোকেরা প্রায়শই কম্পিউটার সায়েন্স
+    এডুকেশন সপ্তাহের সময় আওয়ার অফ কোড উদযাপনে যোগ দেয় (%{campaign_date}), তবে আপনি
+    বছরের যে কোনও দিন আওয়ার অফ কোড করতে পারেন!
+  hoc_how_to_step_educators_plan_desc_03: আপনার উপলব্ধ শিক্ষার্থী এবং ডিভাইসের সংখ্যার
+    জন্য কাজ করে এমন একটি স্থান চয়ন করুন। শিক্ষার্থীরা পৃথক ডিভাইসে ক্রিয়াকলাপ চেষ্টা
+    করতে পারে, একটি ডিভাইস ভাগ করে নেওয়া বা হোয়াইটবোর্ডে ক্লাস হিসাবে পাল্টে যেতে
+    পারে। এমনকি আনপ্লাগ করা ক্রিয়াকলাপও রয়েছে যা কোনও ডিভাইস ছাড়াই সম্পন্ন করা
+    যায়, তাই সেগুলি এমনকি বাইরেও করা যেতে পারে!
+  hoc_how_to_step_educators_spread_word_desc_01: "[এই ইমেল টেমপ্লেটগুলি] (%{email_url})
+    দিয়ে আপনার সম্প্রদায়ের মধ্যে শব্দটি ছড়িয়ে দিতে আমাদের সহায়তা করুন।"
+  hoc_how_to_step_educators_spread_word_desc_02: দুই সহকর্মীকে [register](%{register_url})
+    এবং একটি আওয়ার অফ কোড ক্রিয়াকলাপ হোস্ট করতে বলুন। তারা, পরিবর্তে, দুই সহকর্মীকে
+    সুরক্ষিত করতে পারে, যারা দুই সহকর্মী ইত্যাদি সুরক্ষিত করতে পারে।
+  hoc_how_to_step_educators_spread_word_desc_03: আপনার অধ্যক্ষকে [একটি স্কুল-ব্যাপী
+    ইভেন্ট হোস্ট করতে] বলুন (%{host_url})। যখন 300 বা ততোধিক শিশু অংশ নেয় তখন আপনি
+    টি-শার্ট, পোস্টার, ল্যাপটপ স্টিকার এবং আরও অনেক কিছু সহ একটি বিশেষ ব্যস্ততা কিট
+    পেতে পারেন। যোগ্যতা অর্জনের জন্য [আপনার পুরো স্কুল ইভেন্ট প্ল্যান শেয়ার করুন]
+    (%{share_url})।
+  hoc_how_to_step_educators_spread_word_desc_04: আপনার স্কুলের প্যারেন্ট টিচার স্টুডেন্ট
+    অ্যাসোসিয়েশনে যোগাযোগ করুন বা পিতামাতার নিউজলেটারে শেয়ার করুন, তাদের শিশুরা
+    কী শিখছে তা জানান।
+  hoc_how_to_step_educators_plan_hour_desc_02: 'সকাল 10:00-10:05: একটি [অনুপ্রেরণামূলক
+    ভিডিও] দিয়ে শুরু করুন ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 সকাল: শিক্ষার্থীরা তাদের
+    কোডিং ক্রিয়াকলাপ করে'
+  hoc_how_to_step_educators_plan_hour_desc_04: 'সকাল 10:45-10:55: শিক্ষার্থীরা এআই
+    সম্পর্কে শিখেছে'
+  hoc_how_to_step_educators_plan_hour_desc_05: 'সকাল 10:55-11:00: শিক্ষক সমাপ্তি মন্তব্য
+    দিয়েছেন'
+  hoc_how_to_step_educators_get_coding_desc: আপনার শিক্ষার্থীদের ক্রিয়াকলাপে নির্দেশ
+    করুন, সম্ভবত বোর্ডে লিঙ্কটি ভাগ করে বা আপনার শ্রেণিকক্ষের লার্নিং ম্যানেজমেন্ট
+    সিস্টেমের মাধ্যমে। আপনার শিক্ষার্থীরা চ্যালেঞ্জের মুখোমুখি হতে পারে - ঠিক আছে!
+    প্রোগ্রাম শেখা একটি নতুন ভাষা শেখার মতো; আপনি এখনই সাবলীল হবেন না। আপনি যদি উত্তরটি
+    না জানেন তবে আপনি একসাথে এটি খুঁজে বের করতে পারেন।
+  hoc_how_to_step_educators_celebrate_desc: 'আপনার ইভেন্টের পরে, সমাপ্তির শংসাপত্র
+    মুদ্রণ করুন এবং আপনার ছাত্রদের অভিনন্দন আপনার আওয়ার অফ কোড ইভেন্টের ফটো এবং ভিডিও
+    শেয়ার করুন এবং #HourOfCode এবং @codeorg ব্যবহার করে আপনার শিক্ষার্থীদের কৃতিত্ব
+    দেখান।'
+  hoc_how_to_step_educators_beyond_desc: কম্পিউটার বিজ্ঞান আওয়ার অফ কোডের সাথে শেষ
+    হতে হবে না! যদিও 90% বাবা-মা চান তাদের সন্তান কম্পিউটার বিজ্ঞান শিখতে চান, বেশিরভাগ
+    স্কুল এখনও এটি শেখায় না সাহায্য করার জন্য, আমাদের পাঠ্যক্রম ওয়েব-ভিত্তিক এবং
+    চিরকাল ব্যবহারের জন্য বিনামূল্যে। আজ কীভাবে আপনার স্কুলে CS আনবেন তা শিখুন।
   hoc_ai_top_desc: যে কেউ এআই সম্পর্কে শিখতে পারে, আপনি শ্রেণিকক্ষের শিক্ষার্থী হোন
     বা এআই এর সাথে শিক্ষার ভবিষ্যত আনলক করা একজন শিক্ষক হোক না কেন।
   hoc_ai_how_ai_works_video_series_desc: ছোট ভিডিওগুলির এই সিরিজটি আপনাকে কৃত্রিম
@@ -14181,66 +14213,68 @@ bn:
     নেতারা এবং কর্মীদের জন্য তাদের স্কুলগুলিতে এআই সম্পর্কে প্রাথমিক নির্দেশিকা বিকাশের
     জন্য একটি সংস্থান।
   teach_ai_button_label: টুলকিট দেখুন
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: 11 বছর বা তার বেশি বয়সের জন্য শেখা
+  middle_high_page_main_description: আকর্ষণীয় ভিডিও, স্ব-গতিযুক্ত টিউটোরিয়াল, প্রোগ্রামিং
+    ক্রিয়াকলাপ এবং আরও অনেক কিছু দিয়ে কম্পিউটার বিজ্ঞানের জগৎ অন্বে
+  middle_high_page_hero_title: আওয়ার অফ কোড দিয়ে শুরু করুন
+  middle_high_page_hero_description: ড্র্যাগ-অ্যান্ড-ড্রপ কোডিং ব্লক সহ বিনামূল্যে
+    আওয়ার অফ কোড ক্রিয়াকলাপগুলির মাধ্যমে কম্পিউটার বিজ্ঞানের মৌলিক চয়ন করার জন্য
+    শত শত ঘন্টা দীর্ঘ বিকল্প রয়েছে!
+  middle_high_page_hourofcode_link: আওয়ার অফ কোডের ক্রিয়াকলাপগুলি
+  middle_high_page_modules_title: পুরানো শিক্ষার্থীদের জন্য প্রোগ্রামিং
+  middle_high_page_modules_description: আমাদের সিএস ডিসকভারি এবং সিএস প্রিন্সিপল কোর্স
+    থেকে অভিযোজিত, মধ্যম এবং উচ্চ বিদ্যালয়ের শিক্ষার্থীদের জন্য এই সংক্ষিপ্ত, স্ব-গতিযুক্ত
+    মডিউলগুলি সমস্ত প্রোগ্রামিং ভাষা এবং সরঞ্জামগুলিকে অন্তর্ভুক্ত ধারণ
+  middle_high_page_modules_card_title_1: গেম ল্যাবের পরিচিতি
+  middle_high_page_modules_card_title_2: অ্যাপ ল্যাবে টার্টল প্রোগ্রামিং
+  middle_high_page_modules_card_title_3: অ্যাপ ল্যাবে ইভেন্ট-চালিত প্রোগ্রামিং
+  middle_high_page_modules_card_description_1: আপনি অ্যানিমেশন, ইন্টারেক্টিভ আর্ট
+    এবং গেমস প্রোগ্রাম করার সময় আমাদের গেম ল্যাব পরিবেশে এই পরিচিতিতে আপনার নিজস্ব
+    গতিতে এগিয়ে যান।
+  middle_high_page_modules_card_description_2: অ্যাপ ল্যাবে জাভাস্ক্রিপ্ট দিয়ে সমৃদ্ধ,
+    ইন্টারেক্টিভ অ্যাপ্লিকেশন তৈরি করার ক্ষমতা আনলক
+  middle_high_page_modules_card_description_3: অ্যাপ ল্যাব প্রোগ্রামিং পরিবেশের এই
+    পরিচিতি দিয়ে আপনার নিজের গতিতে যান, যেখানে শিক্ষার্থীরা ইন্টারেক্টিভ অ্যাপ্লিকেশন
+    তৈরি করতে জাভাস্ক্রিপ্ট ব্যবহার
+  middle_high_page_modules_card_link: চেষ্টা করে দেখুন
+  middle_high_page_make_your_own_title: আপনার নিজস্ব অ্যাপ্লিকেশন, গেমস এবং ওয়েবপেজ
+    তৈরি করুন
+  middle_high_page_make_your_own_description: 'কোর্স ছাড়াও, আমাদের কাছে প্রোগ্রামিং
+    সরঞ্জাম রয়েছে যা আপনাকে আপনার সৃজনশীলতা অন্বেষণ করতে এবং আশ্চর্যজনক কিছু '
   middle_high_page_make_your_own_card_title_1: অ্যাপ ল্যাব
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: গেম ল্যাব
+  middle_high_page_make_your_own_card_title_3: ওয়েব ল্যাব
+  middle_high_page_make_your_own_card_descrpition_1: অ্যাপ ল্যাব একটি প্রোগ্রামিং
+    পরিবেশ যেখানে আপনি সহজ অ্যাপ্লিকেশন তৈরি করতে পারেন। ব্লক বা পাঠ্য দিয়ে জাভাস্ক্রিপ্টে
+    একটি অ্যাপ, কোড ডিজাইন করুন, তারপরে সেকেন্ডের মধ্যে আপনার অ্যাপটি ভাগ করুন।
+  middle_high_page_make_your_own_card_descrpition_2: গেম ল্যাব একটি প্রোগ্রামিং পরিবেশ
+    যেখানে আপনি একে অপরের সাথে যোগাযোগ করে এমন বস্তু এবং চরিত্রগুলির সাথে সহজ অ্যানিমেশন
+    এবং গেম তৈরি করতে পারেন।
+  middle_high_page_make_your_own_card_descrpition_3: ওয়েব ল্যাব একটি প্রোগ্রামিং
+    পরিবেশ যেখানে আপনি এইচটিএমএল এবং সিএসএস ব্যবহার করে সহজ ওয়েব পেজ তৈরি করতে পারেন।
+    আপনার ওয়েব পৃষ্ঠাগুলি ডিজাইন করুন এবং সেকেন্ডের মধ্যে আপনার সাইটটি ভাগ করুন।
   middle_high_page_make_your_own_card_link: আরও জানুন
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: অতিরিক্ত সম্পদ
+  middle_high_page_additional_resources_description: কম্পিউটার বিজ্ঞান আরও অন্বেষণ
+    করার অনেক উপায় রয়েছে! আমাদের ভিডিও লাইব্রেরি ব্রাউজ করুন বা কম্পিউটার বিজ্ঞান
+    ক্ষেত্রে উত্তেজনাপূর্ণ ক্যারিয়ার সম্পর্কে আরও জানুন।
+  middle_high_page_video_library_title: আমাদের ভিডিও লাইব্রেরি আবিষ্কার করুন
+  middle_high_page_video_library_description: কৃত্রিম বুদ্ধিমত্তা, ইন্টারনেট, কম্পিউটারগুলি
+    কীভাবে কাজ করে, কীভাবে হ্যাক না হওয়া যায়, ব্লকচেইন, ক্যারিয়ার এবং আরও অনেক
+    কিছুর মতো বিষয়গুলিতে সংক্ষিপ্ত 5-10 মিনিটের ভিডিওগুলির মাধ্যমে কম্পিউটার বিজ্ঞানের
+  middle_high_page_video_library_link: ভিডিও লাইব্রেরি দেখুন
+  middle_high_page_cs_journeys_title: সিএস জার্নিগুলির সাথে আরও এগিয়ে যান
+  middle_high_page_cs_journeys_description: আপনার কম্পিউটার বিজ্ঞান যাত্রার পরবর্তী
+    পদক্ষেপ নিন। ক্যারিয়ার, মেন্টারশিপের সুযোগ, অনলাইন কোর্স, বৃত্তি, ইন্টার্নশিপ
+    এবং আরও অনেক কিছু অন্
+  middle_high_page_cs_journeys_link: সিএস জার্নি অন্বেষণ করুন
+  middle_high_page_cs_title: ক্লাসরুমে কম্পিউটার বিজ্ঞান
+  middle_high_page_cs_description: এই কোর্সগুলি একজন শিক্ষকের নেতৃত্বে থাকা উচিত!
+    আপনি যদি তাদের আপনার স্কুলে শেখানো দেখতে চান তবে তাদের আপনার ক্লাসে আনার জন্য
+    কোনও শিক্ষকের সাথে কাজ করার বিষয়ে বিবেচনা করুন।
+  middle_high_page_cs_card_title_1: সিএস আবিষ্কার
+  middle_high_page_cs_card_title_2: সিএস নীতিমালা
+  middle_high_page_cs_card_title_3: এপি কম্পিউটার সায়েন্স এ
   middle_high_page_cs_card_description_1: প্রাথমিক পাঠ্যক্রমের বিনামূল্যে সেট যা শিক্ষার্থীদের
     কম্পিউটার বিজ্ঞানের ভিত্তিগত ধারণাগুলির সাথে পরিচয় করিয়ে দেয় এবং কম্পিউটিং
     এবং প্রযুক্তি বিশ্বকে কীভাবে প্রভাবিত করতে পারে তা অন্বেষণ করতে চ্যালেঞ্জ করে।
@@ -14252,34 +14286,35 @@ bn:
     জন্য বিনামূল্যে পাঠ্যক্রমের মধ্যে জাভা প্রোগ্রামিং ভাষা শেখার সময় সফ্টওয়্যার
     ইঞ্জিনিয়ারিং এবং অবজেক্ট ওরিয়েন্টেড ডিজাইনের সাথে শিক্ষার্থীদের পরিচয় করিয়ে
     দিন।
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: সিএস ডিকোভারিজ অন্বেষণ করুন
   middle_high_page_cs_link_2: সিএস মূলনীতি এক্সপ্লোর
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: সিএসএ অন্বেষণ করুন
+  elemeentary_page_main_title: 5 থেকে 11 বছর বয়সের জন্য শেখা
+  elementary_page_main_description: আকর্ষণীয় ভিডিও, স্ব-গতিযুক্ত টিউটোরিয়াল, প্রোগ্রামিং
+    ক্রিয়াকলাপ এবং আরও অনেক কিছু দিয়ে কম্পিউটার বিজ্ঞানের জগৎ অন্বে
+  elementary_page_own_pace_title: আপনার নিজের গতিতে শেখা চালিয়ে যান
+  elementary_page_own_pace_description: শিক্ষার্থীরা কম্পিউটার বিজ্ঞানের মূল বিষয়গুলি
+    শিখতে শুরু করার জন্য এই দুটি দুর্দান্ত বিকল্পে অঙ্কন, গেম এবং আরও অনেক কিছু তৈরি
+    করুন।
+  elementary_page_own_pace_card_title_1: প্রি-রিডার এক্সপ্রেস কোর্
+  elementary_page_own_pace_card_title_2: এক্সপ্রেস কোর্স
+  elementary_page_own_pace_card_description_1: আপনার নিজের গতিতে কম্পিউটার বিজ্ঞান
+    শিখুন! কম্পিউটার প্রোগ্রাম তৈরি করতে শিখুন, সমস্যা সমাধানের দক্ষতা বিকাশ করতে
+    এবং মজাদার চ্যালেঞ্জের মাধ্যমে কাজ বন্ধু, পরিবার এবং শিক্ষকদের সাথে ভাগ করে নেওয়ার
+    জন্য গেম এবং সৃজনশীল প্রকল্প তৈরি করুন।
+  elementary_page_own_pace_link_1: প্রাক-রিডার কোর্স শুরু করুন
+  elementary_page_own_pace_link_2: এক্সপ্রেস কোর্স শুরু করুন
+  elementary_page_make_your_own_games_title: আপনার নিজস্ব অ্যানিমেশন এবং গেমস তৈরি
+    করুন
   elementary_page_make_your_own_games_card_title_1: স্প্রিট ল্যাব
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: সৃজনশীল হওয়ার সময়! স্প্রিট
+    ল্যাবে বোকা, মিষ্টি বা বাইরের স্পেসি কিছু তৈরি করতে ব্লক-ভিত্তিক কোডিং ব্যবহার
+    করুন। একমাত্র সীমা হল আপনার কল্পনা!
+  elementary_page_make_your_own_games_link: স্প্রিট ল্যাব ব্যবহার করে দেখুন
+  elementary_page_computer_science_title: ক্লাসরুমে কম্পিউটার বিজ্ঞান
+  elementary_page_computer_science_description: এই কোর্সগুলি একজন শিক্ষকের নেতৃত্বে
+    থাকা উচিত! আপনি যদি তাদের আপনার স্কুলে শেখানো দেখতে চান তবে কোনও পিতামাতা বা অভিভাবককে
+    আপনার ক্লাসে আনতে কোনও শিক্ষকের সাথে কাজ করতে বলুন।
   elementary_page_computer_science_card_title_1: কম্পিউটার বিজ্ঞান মৌলিক
   elementary_page_computer_science_card_title_2: কম্পিউটার বিজ্ঞান সংযোগ
   elementary_page_computer_science_description_1: প্রাথমিক পাঠ্যক্রমের বিনামূল্যে
