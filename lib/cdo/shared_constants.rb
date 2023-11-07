@@ -615,8 +615,12 @@ module SharedConstants
     RUNNING: 1,
     # Succeeded
     SUCCESS: 2,
-    # General failure
-    FAILURE: 3,
+    # General failure (along with anything larger)
+    FAILURE: 1000,
+    # PII Failure
+    PII_VIOLATION: 1001,
+    # Profanity Failure
+    PROFANITY_VIOLATION: 1002,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(
