@@ -21,7 +21,7 @@ export function hasBlocks(workspaceSerialization) {
 /**
  * Converts XML serialization to JSON using a temporary unrendered workspace.
  * @param {xml} xml - workspace serialization, current/legacy format
- * @return {json} stateToLoad - modern workspace serialization
+ * @returns {json} stateToLoad - modern workspace serialization
  */
 export function convertXmlToJson(xml) {
   const tempWorkspace = new Blockly.Workspace();
@@ -84,6 +84,12 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
   adjustBlockPositions(orderedBlocksSetupFirst, workspace);
 }
 
+/**
+ * Positions blocks with any mix of user-defined positions and default positions (including all of one or the other)
+ * Such that none of the blocks overlap with each other
+ * @param {Array<Blockly.Block>} blocks - The blocks to position
+ * @param {Blockly.Workspace} workspace - The current Blockly workspace
+ */
 function adjustBlockPositions(blocks, workspace) {
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const {RTL} = workspace;
@@ -123,6 +129,15 @@ function adjustBlockPositions(blocks, workspace) {
   });
 }
 
+/**
+ * A "collider" is a an object that contains coordinates and dimensions of a block, adjusted
+ * for anything that affects the area of the workspace it occupies (for now, just the SVG frame)
+ * @typedef {Object} Collider
+ * @property {number} x - The x-coordinate of the block, adjusted for SVG frame padding
+ * @property {number} y - The y-coordinate of the block, adjusted for SVG frame padding
+ * @property {number} height - The height of the block, including the SVG frame height
+ * @property {number} width - The width of the block, accounting for SVG frame width on either side
+ */
 function getCollider(block) {
   const position = block.getRelativeToSurfaceXY();
   const size = block.getHeightWidth();
@@ -144,6 +159,12 @@ function getCollider(block) {
   return collider;
 }
 
+/**
+ * Adds a collider to a list of collider objects while maintaining a top-to-bottom ordering
+ * @param {Array<Collider>} colliders - An array of colliders sorted from top to bottom
+ * @param {Collider} item - A new collider to add to the array in its sorted position
+ * NOTE: This method mutates the input array.
+ */
 function insertCollider(colliders, item) {
   const sumItem = item.y + item.height;
   // Returns the index of the first element whose bottom edge is below this one
@@ -155,6 +176,12 @@ function insertCollider(colliders, item) {
   colliders.splice(insertionIndex, 0, item);
 }
 
+/**
+ * Determines whether two blocks are overlapping based on their coordinates and dimensions
+ * @param {Collider} collider1
+ * @param {Collider} collider2
+ * @returns {boolean} True if the two colliders (representing blocks) overlap
+ */
 function isOverlapping(collider1, collider2) {
   // Checks if the left edge of collider1 is to the left of the right edge of the other block
   // and the right edge of collider1 is to the right of the left edge of collider2
@@ -173,7 +200,7 @@ function isOverlapping(collider1, collider2) {
 /**
  * Determines whether a block needs to be repositioned, based on its current position.
  * @param {Blockly.Block} block - the block being considered
- * @return {boolean} - true if the block is at the top corner of the workspace
+ * @returns {boolean} - true if the block is at the top corner of the workspace
  */
 export function isBlockLocationUnset(block) {
   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
