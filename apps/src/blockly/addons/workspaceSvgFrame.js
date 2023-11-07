@@ -106,6 +106,7 @@ function onWorkspaceChange(event) {
   if (
     [
       Blockly.Events.DELETE,
+      Blockly.Events.MOVE,
       Blockly.Events.THEME_CHANGE,
       Blockly.Events.VIEWPORT_CHANGE,
     ].includes(event.type)
