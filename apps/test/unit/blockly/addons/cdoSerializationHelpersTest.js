@@ -50,51 +50,6 @@ describe('CdoSerializationHelpers', () => {
     });
   });
 
-  describe('isBlockLocationUnset', () => {
-    const workspaceLTR = {RTL: false, getMetrics: () => ({viewWidth: 515})};
-    const workspaceRTL = {RTL: true, getMetrics: () => ({viewWidth: 515})};
-
-    it('should return true for a block at (0, 0) on an LTR workspace', () => {
-      const block = {
-        workspace: workspaceLTR,
-        getRelativeToSurfaceXY: () => ({x: 0, y: 0}),
-      };
-
-      const result = isBlockLocationUnset(block);
-      expect(result).to.be.true;
-    });
-
-    it('should return false for a block at specific coordinates on an LTR workspace', () => {
-      const block = {
-        workspace: workspaceLTR,
-        getRelativeToSurfaceXY: () => ({x: 20, y: 140}),
-      };
-
-      const result = isBlockLocationUnset(block);
-      expect(result).to.be.false;
-    });
-
-    it('should return true for a block at the top-right corner of an RTL workspace', () => {
-      const block = {
-        workspace: workspaceRTL,
-        getRelativeToSurfaceXY: () => ({x: 515, y: 0}),
-      };
-
-      const result = isBlockLocationUnset(block);
-      expect(result).to.be.true;
-    });
-
-    it('should return false for a block at specific coordinates of an RTL workspace', () => {
-      const block = {
-        workspace: workspaceRTL,
-        getRelativeToSurfaceXY: () => ({x: 495, y: 140}),
-      };
-
-      const result = isBlockLocationUnset(block);
-      expect(result).to.be.false;
-    });
-  });
-
   describe('getCombinedSerialization', () => {
     it('should return mainSerialization if otherSerialization is empty', () => {
       const mainSerialization = {
@@ -154,40 +109,6 @@ describe('CdoSerializationHelpers', () => {
     });
   });
 
-  describe('isOverlapping', () => {
-    it('should return true when colliders overlap', () => {
-      const collider1 = {x: 0, y: 0, width: 10, height: 10};
-      const collider2 = {x: 5, y: 5, width: 10, height: 10};
-
-      const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(true);
-    });
-
-    it('should return true when one collider is completely inside the other', () => {
-      const collider1 = {x: 0, y: 0, width: 20, height: 20};
-      const collider2 = {x: 5, y: 5, width: 10, height: 10};
-
-      const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(true);
-    });
-
-    it('should return false when colliders only touch but do not overlap', () => {
-      const collider1 = {x: 0, y: 0, width: 10, height: 10};
-      const collider2 = {x: 10, y: 10, width: 10, height: 10};
-
-      const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(false);
-    });
-
-    it('should return false when colliders do not overlap', () => {
-      const collider1 = {x: 0, y: 0, width: 10, height: 10};
-      const collider2 = {x: 20, y: 20, width: 10, height: 10};
-
-      const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(false);
-    });
-  });
-
   describe('insertCollider', () => {
     it('should insert the collider at the correct position', () => {
       const colliders = [
@@ -236,6 +157,85 @@ describe('CdoSerializationHelpers', () => {
         {y: 20, height: 10},
         {y: 40, height: 10},
       ]);
+    });
+  });
+
+  describe('isBlockLocationUnset', () => {
+    const workspaceLTR = {RTL: false, getMetrics: () => ({viewWidth: 515})};
+    const workspaceRTL = {RTL: true, getMetrics: () => ({viewWidth: 515})};
+
+    it('should return true for a block at (0, 0) on an LTR workspace', () => {
+      const block = {
+        workspace: workspaceLTR,
+        getRelativeToSurfaceXY: () => ({x: 0, y: 0}),
+      };
+
+      const result = isBlockLocationUnset(block);
+      expect(result).to.be.true;
+    });
+
+    it('should return false for a block at specific coordinates on an LTR workspace', () => {
+      const block = {
+        workspace: workspaceLTR,
+        getRelativeToSurfaceXY: () => ({x: 20, y: 140}),
+      };
+
+      const result = isBlockLocationUnset(block);
+      expect(result).to.be.false;
+    });
+
+    it('should return true for a block at the top-right corner of an RTL workspace', () => {
+      const block = {
+        workspace: workspaceRTL,
+        getRelativeToSurfaceXY: () => ({x: 515, y: 0}),
+      };
+
+      const result = isBlockLocationUnset(block);
+      expect(result).to.be.true;
+    });
+
+    it('should return false for a block at specific coordinates of an RTL workspace', () => {
+      const block = {
+        workspace: workspaceRTL,
+        getRelativeToSurfaceXY: () => ({x: 495, y: 140}),
+      };
+
+      const result = isBlockLocationUnset(block);
+      expect(result).to.be.false;
+    });
+  });
+
+  describe('isOverlapping', () => {
+    it('should return true when colliders overlap', () => {
+      const collider1 = {x: 0, y: 0, width: 10, height: 10};
+      const collider2 = {x: 5, y: 5, width: 10, height: 10};
+
+      const result = isOverlapping(collider1, collider2);
+      expect(result).to.equal(true);
+    });
+
+    it('should return true when one collider is completely inside the other', () => {
+      const collider1 = {x: 0, y: 0, width: 20, height: 20};
+      const collider2 = {x: 5, y: 5, width: 10, height: 10};
+
+      const result = isOverlapping(collider1, collider2);
+      expect(result).to.equal(true);
+    });
+
+    it('should return false when colliders only touch but do not overlap', () => {
+      const collider1 = {x: 0, y: 0, width: 10, height: 10};
+      const collider2 = {x: 10, y: 10, width: 10, height: 10};
+
+      const result = isOverlapping(collider1, collider2);
+      expect(result).to.equal(false);
+    });
+
+    it('should return false when colliders do not overlap', () => {
+      const collider1 = {x: 0, y: 0, width: 10, height: 10};
+      const collider2 = {x: 20, y: 20, width: 10, height: 10};
+
+      const result = isOverlapping(collider1, collider2);
+      expect(result).to.equal(false);
     });
   });
 });
