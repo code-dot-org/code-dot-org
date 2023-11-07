@@ -22,9 +22,8 @@ class Announcements
 
     banner = banners[banner_id_for_page]
 
-    if banner && banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
-      #DCDO flag for current banner set to false
-    else
+    #Returns banner if no DCDO flag or if DCDO flag is present and set to true
+    if !(banner && banner["dcdo"] && !DCDO.get(banner["dcdo"], false))
       banner&.merge({id: banner_id_for_page})
     end
   end
