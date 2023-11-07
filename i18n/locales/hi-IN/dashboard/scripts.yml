@@ -4812,7 +4812,14 @@ hi:
               display_name: परिचय
           title: दिन 1
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: असिंक्रोनस गतिविधियों का परिचय
           title: दिन 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: ऑवर ऑफ कोड पाठ योजना टेम्पलेट
         self-paced-pl-csd-unit1-2-2023:
           title: 'मॉड्यूल 1: समस्या समाधान और कंप्यूटिंग की तैयारी'
           description: |-

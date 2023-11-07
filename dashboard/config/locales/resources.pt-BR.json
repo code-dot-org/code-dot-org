@@ -4244,7 +4244,7 @@
           "name": "Pontapé para o Design de Aplicativos"
         },
         "designing_apps_for_good/csd/2022": {
-          "name": "Criando Apps for Good",
+          "name": "Criando Aplicativos do Bem",
           "type": "Slides"
         },
         "market_research/csd/2022": {
@@ -4266,7 +4266,7 @@
           "name": "Explore os Elementos de Interface com o Usuário (IU)"
         },
         "exploring_ui_elements/csd/2022": {
-          "name": "Explorando Elementos de Interface UI",
+          "name": "Explorando Elementos da Interface do Usuário",
           "type": "Slides"
         },
         "design_mode/csd/2022": {
@@ -4403,7 +4403,8 @@
           "name": "Apresentação do Aplicativo"
         },
         "app_presentation_template/csd/2022": {
-          "name": "Modelo de Apresentação do Aplicativo"
+          "name": "Modelo de Apresentação do Aplicativo",
+          "type": "Plataforma de Slides"
         },
         "project_-_app_presentation/csd/2022": {
           "name": "Projeto - Apresentação do App",
@@ -4424,7 +4425,7 @@
           "type": "Slides"
         },
         "representing_information/csd/2022": {
-          "name": "Representando informação",
+          "name": "Representando informações",
           "type": "Guia de Atividades"
         },
         "patterns_and_representation/csd/2022": {
@@ -7877,7 +7878,7 @@
           "name": "Pontapé para o Design de Aplicativos"
         },
         "designing_apps_for_good/csd/2023": {
-          "name": "Criando Apps for Good",
+          "name": "Criando Aplicativos do Bem",
           "type": "Slides"
         },
         "market_research/csd/2023": {
@@ -7902,7 +7903,7 @@
           "name": "Explore os Elementos de Interface com o Usuário (IU)"
         },
         "exploring_ui_elements/csd/2023": {
-          "name": "Explorando Elementos de Interface UI",
+          "name": "Explorando Elementos da Interface do Usuário",
           "type": "Slides"
         },
         "build_a_paper_prototype/csd/2023": {
@@ -10542,6 +10543,9 @@
         },
         "web_development_-_extra_code_in_challenge_levels/csd/2023": {
           "type": "Recurso"
+        },
+        "animal_shapes/csd/2022": {
+          "name": "Formas de Animais"
         }
       }
     }

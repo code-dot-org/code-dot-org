@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Usa el bloque `set backup_dancer2 size` para hacer esa bailarina más pequeña.",
   "danceFeedbackUseSetTint": "Utiliza el bloque `set tint` para cambiar el matiz de una bailarina.",
   "danceFeedbackUseStartMapping": "Prueba a añadir el bloque <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicornio_derecho</title><title name=\"PROPERTY\">\"escala\"</title><title name=\"RANGE\">\"bajo\"</title></block></xml> a tu programa.",
+  "danceFeedbackKeepCoding": "Estás utilizando todos los tipos necesarios de bloques pero no de la manera correcta.",
   "measure": "Medida:"
 }
