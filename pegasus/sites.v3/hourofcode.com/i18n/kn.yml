@@ -6,10 +6,10 @@ kn:
   front_title: ಇತಿಹಾಸದಲ್ಲಿ ಅತಿದೊಡ್ಡ ಕಲಿಕೆಯ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಸೇರಿ, %{campaign_date}
   coming_soon: ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ
   new: ಹೊಸ
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: ಕೋಡ್ ಸೇವೆಯ ಸಮಯ
   hoc_stat_languages: 45 ಕ್ಕೂ ಹೆಚ್ಚು ಭಾಷೆಗಳಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳು ಕಲಿಯುತ್ತಿದ್ದಾರೆ
   hoc_stat_hours_served: 100 ಮಿಲಿಯನ್‌ಗೂ ಹೆಚ್ಚು ವಿದ್ಯಾರ್ಥಿಗಳು ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿದ್ದಾರೆ
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: ಅವರ್ ಆಫ್ ಕೋಡ್ ಭಾಗವಹಿಸುವವರಲ್ಲಿ ಸ್ತ್ರೀ ವಿದ್ಯಾರ್ಥಿಗಳು 50% ರಷ್ಟಿದ್ದಾರೆ
   campaign_date_start_short: ಡಿ. 4
   campaign_date_start_long: ಡಿಸೆಂಬರ್ 4
   campaign_date_short: ಡಿ. 4-10
@@ -52,10 +52,10 @@ kn:
   hoc2023_social_creativity_with_ai_title: ಅವರ್ ಆಫ್ ಕೋಡ್ - ನೀವು ಏನು ರಚಿಸುತ್ತೀರಿ?
   hoc2023_social_creativity_with_ai_desc: AI ಬಗ್ಗೆ ಅನ್ವೇಷಿಸಲು ಮತ್ತು ಕಲಿಯಲು ಕಂಪ್ಯೂಟರ್
     ವಿಜ್ಞಾನವನ್ನು ಬಳಸಿ!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: ಅವರ್ ಆಫ್ ಕೋಡ್ ಎಲ್ಲಾ ಕೌಶಲ್ಯ ಹಂತದ ಕಲಿಯುವವರಿಗೆ ಮೋಜಿನ ಚಟುವಟಿಕೆಗಳು
+    ಮತ್ತು ವೀಡಿಯೊಗಳ ಮೂಲಕ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನಕ್ಕೆ ಉಚಿತ ಪರಿಚಯವಾಗಿದೆ. ಕೋಡಿಂಗ್ ಮತ್ತು ಎಐ ಎರಡರ
+    ಈ ವರ್ಷದ ಆಚರಣೆಯನ್ನು 400 ಕ್ಕೂ ಹೆಚ್ಚು ಪಾಲುದಾರರು, 20,000 ಶಿಕ್ಷಣಾಧಿಕಾರಿಗಳು, ಮತ್ತು 58,000
+    ಸ್ವಯಂಸೇವಕರು ಬೆಂಬಲಿಸುತ್ತಾರೆ.
   hoc2022_header: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
   social_hoc2022_explore_play_create: ಅನ್ವೇಷಿಸಲು, ಪ್ಲೇ ಮಾಡಲು ಮತ್ತು ರಚಿಸಲು ಕಂಪ್ಯೂಟರ್
     ಸೈನ್ಸ್‌ ಬಳಸಿ!
@@ -68,9 +68,9 @@ kn:
     ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ನ ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ!
   social_hoc2023_dance: ಬೆಯಾನ್ಸ್, ಬಿಟಿಎಸ್, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ಲಿ zz ೊ, ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್,
     ಸೆಲೆನಾ ಗೊಮೆಜ್, ಡಿಸ್ನಿಯ “ಎನ್ಕಾಂಟೊ” ಸಂಗೀತ ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳನ್ನು ಒಳಗೊಂಡಿದೆ!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: ನಿಮ್ಮ ವಿಷಯವನ್ನು ತಡೆಗಟ್ಟುವ ಸಮಯ ಇದು! ಮಿಲೆ ಸೈರಸ್, ಬಿಟಿಎಸ್,
+    ಲಿಲ್ ನಾಸ್ ಎಕ್ಸ್, ಹ್ಯಾರಿ ಸ್ಟೈಲ್ಸ್, ನಿಕ್ಕಿ ಮಿನಾಜ್, ರೊಸಾಲಿಯಾ ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳಿಂದ
+    ಹಿಟ್ಗಳನ್ನು ಒಳಗೊಂಡಿರುವ ನಿಮ್ಮ ಸ್ವಂತ ನೃತ್ಯ ಪಾರ್ಟಿಯನ್ನು ರಚಿಸಿ!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: ಇಂದು ಕಲಿಯಿರಿ, ಪ್ರಖರ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಿ.
@@ -287,21 +287,23 @@ kn:
     ಕೋಡ್ ಶಿಕ್ಷಕರ ವೇದಿಕೆಗೆ ಭೇಟಿ ನೀಡಿ.
   required_materials: 'ಅಗತ್ಯವಿರುವ ಸಾಮಗ್ರಿಗಳು:'
   optional_materials: 'ಐಚ್ಛಿಕ ಸಾಮಗ್ರಿಗಳು:'
-  for_students: For students
+  for_students: ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
   for_educators: ಶಿಕ್ಷಣತಜ್ಞರಿಗೆ
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: ಒಂದು ಗಂಟೆಯ ಕೋಡ್ ಅನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ
   call_to_action_hold_an_event: ಈವೆಂಟ್ ಅನ್ನು ಹಿಡಿದುಕೊಳ್ಳಿ
   call_to_action_register_event: ನಿಮ್ಮ ಈವೆಂಟ್ ಅನ್ನು ನೋಂದಾಯಿಸಿ
   call_to_action_register_your_hoc: ನಿಮ್ಮ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ಅನ್ನು ನೋಂದಾಯಿಸಿ
   call_to_action_select_activity: ಚಟುವಟಿಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ
+  call_to_action_select_coding_activity: ಕೋಡಿಂಗ್ ಚಟುವಟಿಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ
   call_to_action_start_activity: ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ
   call_to_action_get_certificates: ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಪಡೆಯಿರಿ
+  call_to_action_print_certificates: ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಮುದ್ರಿಸಿ
   call_to_action_go_beyond_hoc: ಕೋಡ್ ಗಂಟೆಯನ್ನು ಮೀರಿ ಹೋಗಿ
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Code.org ನಿಂದ ಎಲ್ಲಾ ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳನ್ನು
+    ಅನ್ವೇಷಿಸಿ
+  call_to_action_start_dance_party: ನೃತ್ಯ ಪಾರ್ಟಿ ಪ್ರಾರಂಭಿಸಿ
+  call_to_action_start_part_02: ಭಾಗ ಎರಡು ಪ್ರಾರಂಭಿಸಿ
+  call_to_action_start_unplugged_activity: ಅನ್ಪ್ಲಗ್ ಮಾಡಿದ ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ
   call_to_action_view_promo_resources: ಪ್ರೋಮೋ ಸಂಪನ್ಮೂಲಗಳನ್ನು ವೀ
   call_to_action_learn_more: ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   call_to_action_watch_now: ಈಗ ವೀಕ್ಷಿಸಿ
@@ -397,9 +399,9 @@ kn:
   call_to_action_view_faqs: ಇನ್ನಷ್ಟು FAQ ಗಳನ್ನು ವೀಕ್ಷಿಸಿ
   call_to_action_applications_open: ಅಪ್ಲಿಕೇಶನ್ಗಳು ಈಗ ತೆರೆದಿವೆ
   call_to_action_apply_cs_ambassador: ಸಿಎಸ್ ರಾಯಭಾರಿಯಾಗಲು ಅರ್ಜಿ ಸಲ್ಲಿಸಿ
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!
+  call_to_action_learn_how_ai_works: AI ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ತಿಳಿಯಿರಿ
+  call_to_action_learn_about_ai: AI ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
   aria_label_call_to_action_hoc_how_to_educators: ಶಿಕ್ಷಕರಿಗೆ ಹೇಗೆ ಮಾರ್ಗದರ್ಶಿಯನ್ನು
     ವೀಕ್ಷಿಸಿ
   aria_label_call_to_action_hoc_how_to_companies: ಕಂಪನಿಗಳಿಗೆ ಹೇಗೆ ಮಾರ್ಗದರ್ಶಿಯನ್ನು
@@ -415,9 +417,10 @@ kn:
     ವೀಕ್ಷಿಸಿ
   aria_label_call_to_action_hoc_how_to_virtual_events: ವರ್ಚುವಲ್ ಈವೆಂಟ್ಗಳಿಗೆ ಹೇಗೆ ಮಾರ್ಗದರ್ಶಿಯನ್ನು
     ವೀಕ್ಷಿಸಿ
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: ನೃತ್ಯ ಪಾರ್ಟಿ ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ
+  aria_label_call_to_action_dance_02: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಚಟುವಟಿಕೆಯ ಭಾಗ ಎರಡು ಪ್ರಾರಂಭಿಸಿ
+  aria_label_call_to_action_dance_unplugged: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಅನ್ಪ್ಲಗ್ಡ್ ಚಟುವಟಿಕೆಯನ್ನು
+    ಪ್ರಾರಂಭಿಸಿ
   aria_label_call_to_action_afe: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್ ಎಂಜಿನಿಯರ್ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   aria_label_call_to_action_teaching_csf: ಬೋಧನಾ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ವೃತ್ತಿಪರ
     ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
@@ -425,6 +428,8 @@ kn:
     ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
   aria_label_call_to_action_teaching_csp: ಬೋಧನಾ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್ ವೃತ್ತಿಪರ
     ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
+  aria_label_call_to_action_teaching_problem_solving: ಬೋಧನಾ ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್
+    ವೃತ್ತಿಪರ ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
   aria_label_call_to_action_teaching_csc: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಕನೆಕ್ಷನ್ಸ್‌ ಪ್ರೊಫೆಷನಲ್‌
     ಲರ್ನಿಂಗ್ ಪ್ರೋಗ್ರಾಮ್‌ ಬೋಧನೆಯನ್ನು ಆರಂಭಿಸಿ
   aria_label_call_to_action_teaching_ai: ಬೋಧನಾ ಎಐ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆ ವೃತ್ತಿಪರ ಕಲಿಕಾ
@@ -443,6 +448,8 @@ kn:
     ಅನ್ವೇಷಿಸಿ
   aria_label_call_to_action_curriculum_csp: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್ ಪಠ್ಯಕ್ರಮವನ್ನು
     ಅನ್ವೇಷಿಸಿ
+  aria_label_call_to_action_curriculum_problem_solving: ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್
+    ಪಠ್ಯಕ್ರಮವನ್ನು ಅನ್ವೇಷಿಸಿ
   aria_label_call_to_action_curriculum_csc: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಕನೆಕ್ಷನ್ಸ್‌ ಪಠ್ಯಕ್ರಮವನ್ನು
     ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ
   aria_label_call_to_action_curriculum_ai: AI ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆ ಪಠ್ಯಕ್ರಮವನ್ನು ಅನ್ವೇಷಿಸಿ
@@ -522,6 +529,7 @@ kn:
   curriculum_name_csf_teacher_led: ಶಿಕ್ಷಕರ ನೇತೃತ್ವದ ಪಾಠ
   curriculum_name_csd: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಆವಿಷ್ಕಾರಗಳು
   curriculum_name_csp: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ತತ್ವಗಳು
+  curriculum_name_problem_solving: ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್
   curriculum_name_csc: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕನೆಕ್ಷನ್‌ಗಳು
   curriculum_name_csa: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ A
   curriculum_name_csa_ai: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ & ಕಂಪ್ಯೂಟರ್ ವಿಷನ್
@@ -536,25 +544,25 @@ kn:
   curriculum_name_creating_apps_with_devices: ಸಾಧನಗಳೊಂದಿಗೆ ಆ್ಯಪ್‌ಗಳನ್ನು ರಚಿಸುವುದು
   curriculum_name_poetry: ಕವನದ ಜೊತೆಗೆ ಕೋಡಿಂಗ್
   curriculum_name_dance_party: ಡಾನ್ಸ್ ಪಾರ್ಟಿ
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: ನೃತ್ಯ ಮಾಡುವುದನ್ನು ಮುಂದುವರಿಸಿ
+  curriculum_name_dance_party_unplugged: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಅನ್ಪ್ಲಗ್ಡ್
+  curriculum_name_dance_party_ai_edition: 'ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ: ಎಐ ಆವೃತ್ತಿ'
   curriculum_name_problem_solving_computing: ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್
   curriculum_name_web_development: ವೆಬ್ ಅಭಿವೃದ್ಧಿ
   curriculum_name_interactive_animations_games: ಸಂವಾದಾತ್ಮಕ ಅನಿಮೇಷನ್ಗಳು ಮತ್ತು ಆಟಗಳು
   curriculum_name_design_process: ವಿನ್ಯಾಸ ಪ್ರಕ್ರಿಯೆ
   curriculum_name_data_society: ಡೇಟಾ ಮತ್ತು ಸಮಾಜ
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: ಈ ಪರಿಚಯಾತ್ಮಕ ಚಟುವಟಿಕೆಯಲ್ಲಿ, ಬಸ್ಟ್ ವರ್ಣರಂಜಿತ ಪಾತ್ರಗಳು
+    ವಿವಿಧ ಮಾಡಲು ಕೋಡ್ ಬಳಸಿ ಅನಿಮೇಟೆಡ್ ಹಿನ್ನೆಲೆಗಳು ಮತ್ತು ಲವಲವಿಕೆ ಸಂಗೀತ ಒಂದು ನಡೆಯ.
+  curriculum_desc_dance_party_02: ವಿಸ್ತೃತ ಯೋಜನಾ ವಿಚಾರಗಳೊಂದಿಗೆ ಪರಿಚಯಾತ್ಮಕ ಟ್ಯುಟೋರಿಯಲ್
+    ಮೀರಿ ಹೋಗಿ. ಹೆಚ್ಚು ಸಂಕೀರ್ಣವಾದ ನೃತ್ಯ ಪಾರ್ಟಿಗಳ ಉದಾಹರಣೆಗಳ ಗ್ರಂಥಾಲಯವನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ.
+  curriculum_desc_dance_party_unplugged: ನಿಮ್ಮ ತೋಡನ್ನು ಆನ್ ಮಾಡಿ - ಕಂಪ್ಯೂಟರ್ ಅಗತ್ಯವಿಲ್ಲ!
+    ನರ್ತಕಿ ಕೊರಿಯೊಗ್ರಫಿಯನ್ನು ಸಿಂಕ್ರೊನೈಸ್ ಮಾಡಲು ಈವೆಂಟ್ಗಳಂತೆ ಕೋಡಿಂಗ್ ಪರಿಕಲ್ಪನೆಗಳನ್ನು
+    ಹೇಗೆ ಬಳಸಬಹುದು ಎಂಬುದನ್ನು ತಿಳಿಯಿರಿ.
+  curriculum_desc_dance_party_ai_edition: ಇಂದಿನ ಉನ್ನತ ಕಲಾವಿದರನ್ನು ಪ್ರದರ್ಶಿಸುವ ನಿಮ್ಮ
+    ಸ್ವಂತ ವರ್ಚುವಲ್ ನೃತ್ಯ ಪಾರ್ಟಿಯನ್ನು ರಚಿಸಲು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (AI) ಪರಿಕಲ್ಪನೆಗಳ ಬಗ್ಗೆ
+    ತಿಳಿಯಿರಿ. ಆಯ್ಕೆ ಮಾಡಲು ಡಜನ್ಗಟ್ಟಲೆ ಹಾಡುಗಳೊಂದಿಗೆ, ತಮ್ಮ ಸಂಗೀತ ಅಭಿರುಚಿ ಯಾವುದೇ ಪ್ರತಿ
+    ವಿದ್ಯಾರ್ಥಿ ತಲುಪಲು. ನಿಮ್ಮ ವಿಷಯವನ್ನು ತಡೆಗಟ್ಟುವ ಸಮಯ ಇದು!
   curriculum_desc_csf: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಅಡಿಪಾಯದ ಪರಿಕಲ್ಪನೆಗಳಿಗೆ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು
     ಪರಿಚಯಿಸುವ ಪ್ರಾಥಮಿಕ ಪಠ್ಯಕ್ರಮದ ಉಚಿತ ಸೆಟ್.
   curriculum_desc_csf_express: ಕಂಪ್ಯೂಟರ್ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ರಚಿಸಲು ಕಲಿಯಿರಿ, ಸಮಸ್ಯೆ-ಪರಿಹರಿಸುವ
@@ -691,12 +699,12 @@ kn:
   module_grade_grade_03: ಗ್ರೇಡ್ 3
   module_grade_grade_04: ಗ್ರೇಡ್ 4
   module_grade_grade_05: ಗ್ರೇಡ್ 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: ವಯಸ್ಸು 5-7
+  module_age_07: ವಯಸ್ಸು 7+
+  module_age_07_11: ವಯಸ್ಸು 7-11
+  module_age_11: ವಯಸ್ಸು 11+
+  module_age_13: ವಯಸ್ಸು 13+
+  module_age_all_age: ಎಲ್ಲಾ ವಯಸ್ಸಿನವರು
   module_grade_k_5_teachers: K-5 ಶಿಕ್ಷಕರು
   module_grade_6_10_teachers: 6-10 ಶಿಕ್ಷಕರು
   module_grade_9_12_teachers: 9-12 ಶಿಕ್ಷಕರು
@@ -728,6 +736,7 @@ kn:
   module_label_teaching_csf: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ಬೋಧನೆ
   module_label_teaching_csd: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಆವಿಷ್ಕಾರಗಳನ್ನು ಬೋಧಿಸುವುದು
   module_label_teaching_csp: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್ ಬೋಧನೆ
+  module_label_teaching_problem_solving: ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್ ಬೋಧನೆ
   module_label_teaching_csc: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಕನೆಕ್ಷನ್‌ಗಳನ್ನು ಬೋಧಿಸುವುದು
   module_label_teaching_ai: ಎಐ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆ ಬೋಧನೆ
   module_label_teaching_maker_cp: ಸಾಧನಗಳು ಅಪ್ಲಿಕೇಶನ್ಗಳು ರಚಿಸಲಾಗುತ್ತಿದೆ ಬೋಧನೆ (ಸರ್ಕ್ಯೂಟ್
@@ -793,8 +802,8 @@ kn:
   heading_csa_ai: ಎಪಿ® ಪರೀಕ್ಷೆಯಲ್ಲಿ ನಂತರ ಮಾಡಲು ವಿಷಯಗಳನ್ನು ಹುಡುಕುತ್ತಿರುವಿರಾ?
   heading_bring_cs_to_students: ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ತನ್ನಿ
   heading_cs_ambassador_program: ಸಿಎಸ್ ರಾಯಭಾರಿ ಕಾರ್ಯಕ್ರಮ
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: ವೈಶಿಷ್ಟ ವಿದ್ಯಾರ್ಥಿ ಯೋಜನೆಗಳು
+  heading_start_hoc_with_videos: ಸ್ಫೂರ್ತಿದಾಯಕ ವೀಡಿಯೊಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಪ್ರಾರಂಭಿಸಿ
   cs_ambassador_subhead: ನಿಮ್ಮ ಶಾಲೆಯಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ತೆಗೆದುಕೊಳ್ಳಲು ಹೆಚ್ಚು ಯುವತಿಯರನ್ನು
     ಪ್ರೋತ್ಸಾಹಿಸುವ ಬಗ್ಗೆ ನೀವು ಪ್ರೌಢಶಾಲಾ ವಿದ್ಯಾರ್ಥಿ ಭಾವೋದ್ರಿಕ್ತರಾಗಿದ್ದರೆ, ಆಗ ನಮಗೆ ನೀವು
     ಬೇಕು!
@@ -894,13 +903,13 @@ kn:
     ಮಾಸಿಕ ಇಮೇಲ್ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು ಸಹಾಯಕವಾದ ಜ್ಞಾಪನೆಗಳು, ಸಲಹೆಗಳು
     ಮತ್ತು ನವೀಕರಣಗಳನ್ನು ನಿಮ್ಮ ಇನ್ಬಾಕ್ಸ್ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
   subscribe_form_section_unsubscribe: ನೀವು ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಅನ್ಸಬ್ಸ್ಕ್ರೈಬ್ ಮಾಡಬಹುದು.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿಯನ್ನು ಕೋಡ್ ಮಾಡಿ
+  dance_featuring_songs_by_short: 'ಹಾಡುಗಳನ್ನು ಒಳಗೊಂಡಿದೆ:'
+  dance_featuring_songs_by_long: 'ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ ಹಾಡುಗಳನ್ನು ಒಳಗೊಂಡಿದೆ:'
+  dance_and_more: ಮತ್ತು ಹೆಚ್ಚು
+  dance_choose_activity: ನಿಮ್ಮ ನೃತ್ಯ ಪಾರ್ಟಿಯನ್ನು ಆರಿಸಿ
+  dance_afe_disclaimer: ಈ ಟ್ಯುಟೋರಿಯಲ್ ಬಳಸಲಾಗುತ್ತದೆ ಅವರ ಸಂಗೀತ ಕಲಾವಿದರು ಪ್ರಾಯೋಜಕ ಅಥವಾ
+    Code.org ಗೆ ತಮ್ಮ ಸಂಗೀತದ ಬಳಕೆಯ ಪರವಾನಗಿ ಭಾಗವಾಗಿ ಅಮೆಜಾನ್ ಅನುಮೋದಿಸುತ್ತಿಲ್ಲ.
   blockchain_hero_heading: ಬ್ಲಾಕ್ಚೇನ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ
   blockchain_hero_desc: "“ಬ್ಲಾಕ್ಚೇನ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ,” ನಮ್ಮ ಹೊಸ ವೀಡಿಯೊ ಸರಣಿ
     ಮತ್ತು ಅದರ ಜೊತೆಗಿನ ಪಾಠಗಳೊಂದಿಗೆ ಬ್ಲಾಕ್ಚೈನ್ ಜಗತ್ತಿನಲ್ಲಿ ಧುಮುಕುವುದಿಲ್ಲ!"
@@ -13730,6 +13739,9 @@ kn:
   step_06: ಹಂತ 6
   step_07: ಹಂತ 7
   step_08: ಹಂತ 8
+  what: 'ಏನು:'
+  when: 'ಯಾವಾಗ:'
+  where: 'ಎಲ್ಲಿ:'
   hoc_how_to_top_heading: ಕೋಡ್ ಗಂಟೆಗೆ ನಿಮ್ಮ ಮಾರ್ಗದರ್ಶಿ
   hoc_how_to_top_desc: ಅತ್ಯುತ್ತಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನುಭವಕ್ಕಾಗಿ ಹೇಗೆ ಮಾರ್ಗದರ್ಶಿಗಳು.
   hoc_how_to_top_view_guide: ಇದಕ್ಕಾಗಿ ಮಾರ್ಗದರ್ಶಿ ವೀಕ್ಷಿಸಿ
@@ -13776,72 +13788,86 @@ kn:
   hoc_how_to_step_label_plan: ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಎಲ್ಲಿ ಮತ್ತು ಯಾವಾಗ ಮಾಡುತ್ತೀರಿ
     ಎಂದು ಯೋಜಿಸಿ
   hoc_how_to_step_label_choose_activity: ನಿಮ್ಮ ಚಟುವಟಿಕೆಯನ್ನು ಆರಿಸಿ
+  hoc_how_to_step_label_choose_activities: ನಿಮ್ಮ ಚಟುವಟಿಕೆಗಳನ್ನು ಆರಿಸಿ
   hoc_how_to_step_label_test_activity: ನಿಮ್ಮ ಚಟುವಟಿಕೆಯನ್ನು ಪರೀಕ್ಷಿಸಿ
   hoc_how_to_step_label_register_event: ನಿಮ್ಮ ಈವೆಂಟ್ ಅನ್ನು ನೋಂದಾಯಿಸಿ
   hoc_how_to_step_label_tell: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು, ಶಾಲೆ ಮತ್ತು ಸಮುದಾಯಕ್ಕೆ ತಿಳಿಸಿ
   hoc_how_to_step_label_get_coding: ಕೋಡಿಂಗ್ ಪಡೆಯಿರಿ!
   hoc_how_to_step_label_celebrate: ಆಚರಿಸಿ
   hoc_how_to_step_label_beyond_hoc: ಕೋಡ್ ಗಂಟೆ ಮೀರಿ
+  hoc_how_to_step_label_plan_your_event: ನಿಮ್ಮ ಈವೆಂಟ್ ಅನ್ನು ಯೋಜಿಸಿ
+  hoc_how_to_step_label_plan_your_hour: ನಿಮ್ಮ ಗಂಟೆಯನ್ನು ಯೋಜಿಸಿ
+  hoc_how_to_step_label_help_spread_word: ಪದವನ್ನು ಹರಡಲು ಸಹಾಯ ಮಾಡಿ
   hoc_how_to_step_beyond_hoc_subhead: ಇದು ಇಲ್ಲಿ ಕೊನೆಗೊಳ್ಳುವುದಿಲ್ಲ!
-  hoc_how_to_step_beyond_hoc_desc: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವು ಅವರ್ ಆಫ್ ಕೋಡ್ನೊಂದಿಗೆ ಕೊನೆಗೊಳ್ಳಬೇಕಾಗಿಲ್ಲ!
-    90% ಪೋಷಕರು ತಮ್ಮ ಮಗು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಕಲಿಯಬೇಕೆಂದು ಬಯಸಿದರೂ, ಹೆಚ್ಚಿನ ಶಾಲೆಗಳು
-    ಇನ್ನೂ ಅದನ್ನು ಕಲಿಸುವುದಿಲ್ಲ. ಇಂದು ನಿಮ್ಮ ಮಗುವಿನ ಶಾಲೆಗೆ ಸಿಎಸ್ ಅನ್ನು ಹೇಗೆ ತರುವುದು ಎಂಬುದನ್ನು
-    ತಿಳಿಯಿರಿ.
-  hoc_how_to_step_01_educators_subhead: ನೀವು ಲಭ್ಯವಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ಸಾಧನಗಳ
-    ಸಂಖ್ಯೆಗೆ ಕೆಲಸ ಮಾಡುವ ಈವೆಂಟ್ ಸಮಯ ಮತ್ತು ಜಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.
-  hoc_how_to_step_01_educators_desc_01: ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಮಾಡಲು ನಿಮಗೆ ಯಾವ ಸ್ಥಳಗಳು
-    ಲಭ್ಯವಿದೆ? ನಿಮ್ಮ ಜಾಗದ ಟೆಕ್ ಸಾಮರ್ಥ್ಯಗಳನ್ನು ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ಕೆಲಸ ಮಾಡಬೇಕೆಂದು
-    ನೀವು ನಿರೀಕ್ಷಿಸುವ ರೀತಿಯ ಸಾಧನಗಳನ್ನು ಪರಿಗಣಿಸಿ. ವಿದ್ಯಾರ್ಥಿಗಳು ಒಂದೇ ಸಾಧನದಲ್ಲಿ ಟ್ಯುಟೋರಿಯಲ್ಗಳಲ್ಲಿ
-    ಕೆಲಸ ಮಾಡಬಹುದು, ಹಂಚಿಕೆಯ ಸಾಧನವನ್ನು ಬಳಸಿಕೊಂಡು ತಿರುವುಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು ಅಥವಾ
-    ತರಗತಿಯ ವೈಟ್ಬೋರ್ಡ್ನಲ್ಲಿ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಒಟ್ಟಿಗೆ ಪ್ರಯತ್ನಿಸಬಹುದು. ಅನ್ಪ್ಲಗ್ ಮಾಡಿದ
-    ಟ್ಯುಟೋರಿಯಲ್ಗಳೂ ಇವೆ, ಅದನ್ನು ಯಾವುದೇ ಸಾಧನಗಳಿಲ್ಲದೆ ಪೂರ್ಣಗೊಳಿಸಬಹುದು. ಅನ್ಪ್ಲಗ್ ಮಾಡಲಾದ
-    ಆಯ್ಕೆಗಳನ್ನು ಎಲ್ಲಿಯಾದರೂ ಮಾಡಬಹುದು - ಹೊರಾಂಗಣದಲ್ಲಿಯೂ ಸಹ!
-  hoc_how_to_step_01_educators_desc_02: ಇತ್ತೀಚಿನ ಟ್ಯುಟೋರಿಯಲ್ ಮತ್ತು ಚಟುವಟಿಕೆಗಳನ್ನು
-    ಬಿಡುಗಡೆ ಮಾಡ %{campaign_date} ಿದಾಗ ಪ್ರಪಂಚದಾದ್ಯಂತದ ಜನರು ಸಿಎಸ್ ಶಿಕ್ಷಣ ವಾರದ ಸಮಯದಲ್ಲಿ
-    ಅವರ್ ಆಫ್ ಕೋಡ್ ಆಚರಣೆಗೆ ಸೇರುತ್ತಾರೆ. ಆದರೆ ನೀವು ವರ್ಷದ ಯಾವುದೇ ದಿನದಲ್ಲಿ ಒಂದು ಅವರ್ ಆಫ್
-    ಕೋಡ್ ಮಾಡಬಹುದು!
-  hoc_how_to_step_02_educators_desc_01: ನಿಮ್ಮ ಗುಂಪಿನ ವಯಸ್ಸು, ಅನುಭವ, ಆಸಕ್ತಿಗಳು ಮತ್ತು
-    ಹೆಚ್ಚಿನದನ್ನು ಆಧರಿಸಿ ಚಟುವಟಿಕೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ವಿದ್ಯಾರ್ಥಿಗಳು ಸ್ವಯಂ ನೇತೃತ್ವದ ಟ್ಯುಟೋರಿಯಲ್ಗಳನ್ನು
-    ಪ್ರಯತ್ನಿಸುವುದು ಜನಪ್ರಿಯವಾಗಿದೆ, ಆದರೂ ಅನೇಕ ಚಟುವಟಿಕೆಗಳು ಶಿಕ್ಷಕರಿಗೆ ಚರ್ಚೆಗೆ ಮಾರ್ಗದರ್ಶನ
-    ನೀಡಲು ಅಥವಾ ಚಟುವಟಿಕೆಯನ್ನು ವಿಸ್ತರಿಸಲು ಪಾಠ ಯೋಜನೆಗಳನ್ನು ಒಳಗೊಂಡಿವೆ.
-  hoc_how_to_step_02_educators_desc_02: ನಿಮ್ಮ ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಒಂದೇ ಟ್ಯುಟೋರಿಯಲ್
-    ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ನೀವು ಬಯಸಿದರೆ ಅಥವಾ ಪ್ರತಿ ಮಗುವಿಗೆ ತಮ್ಮದೇ ಆದ ಆಯ್ಕೆ ಮಾಡಲು ಅವಕಾಶ
-    ನೀಡಿದರೆ ಸಮಯಕ್ಕೆ ಮುಂಚಿತವಾಗಿ ನಿರ್ಧರಿಸಿ.
-  hoc_how_to_step_02_educators_desc_03: ಈ ವರ್ಷ, ನೀವು ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ಟ್ಯುಟೋರಿಯಲ್ಗಳು,
-    ಪಾಠ ಯೋಜನೆಗಳು ಮತ್ತು ನಮ್ಮ ಹೊಸ ಹೌ ಎಐ ವರ್ಕ್ಸ್ ವೀಡಿಯೊ ಸರಣಿಗಳ ಮೂಲಕ [AI ಬಗ್ಗೆ ಎಲ್ಲವನ್ನೂ
-    ಕಲಿಯಬಹುದು] (%ai_url).
-  hoc_how_to_step_03_educators_desc_01: ನೀವು ತರಗತಿಗೆ ಬರುವ ಮೊದಲು ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು
-    ನೀವೇ ಪ್ರಯತ್ನಿಸಿ ಆದ್ದರಿಂದ ನೀವು ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಬಹುದು!
-  hoc_how_to_step_03_educators_desc_02: ವಿದ್ಯಾರ್ಥಿ ಕಂಪ್ಯೂಟರ್ಗಳು ಅಥವಾ ಸಾಧನಗಳಲ್ಲಿ ಅವರು
-    ಧ್ವನಿ ಮತ್ತು ವೀಡಿಯೊವನ್ನು ಬೆಂಬಲಿಸುತ್ತಾರೆಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನೀವು ಟ್ಯುಟೋರಿಯಲ್ಗಳನ್ನು
-    ಕಡಿಮೆ ಬ್ಯಾಂಡ್ವಿಡ್ತ್ ಹೊಂದಿದ್ದೀರಾ? ವರ್ಗದ ಮುಂಭಾಗದಲ್ಲಿ ವೀಡಿಯೊಗಳನ್ನು ತೋರಿಸಲು ಯೋಜಿಸಿ,
-    ಆದ್ದರಿಂದ ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಯು ತಮ್ಮದೇ ಆದ ವೀಡಿಯೊಗಳನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡುತ್ತಿಲ್ಲ.
-  hoc_how_to_step_03_educators_desc_03: ನಿಮ್ಮ ವರ್ಗಕ್ಕೆ ಹೆಡ್ಫೋನ್ಗಳನ್ನು ಒದಗಿಸುವುದನ್ನು
-    ಪರಿಗಣಿಸಿ, ಅಥವಾ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ತಮ್ಮದೇ ಆದ ತರಲು ಕೇಳಿ, ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ ಟ್ಯುಟೋರಿಯಲ್
-    ಧ್ವನಿಯೊಂದಿಗೆ ಉತ್ತಮವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸಿದರೆ.
-  hoc_how_to_step_04_educators_desc_01: ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಈವೆಂಟ್ ಅನ್ನು ನೀವು ನೋಂದಾಯಿಸಿದಾಗ,
+  hoc_how_to_step_plan_hour_desc_01: 'ನೀವು ಪ್ರಾರಂಭಿಸಲು ಮಾದರಿ ಕಾರ್ಯಸೂಚಿ ಇಲ್ಲಿದೆ:'
+  hoc_how_to_step_choose_activities_desc_01: ಈ ವರ್ಷ, ಅವರ್ ಆಫ್ ಕೋಡ್ ಥೀಮ್ ಕ್ರಿಯೇಟಿವಿಟಿ
+    ವಿತ್ ಆರ್ಟಿಫಿಷಿಯಲ್ ಇಂಟೆಲಿಜೆನ್ಸ್ (ಎಐ) ಆಗಿದೆ. ಇದು ಹೊಸ ಅಪ್ಲಿಕೇಶನ್ಗಳು ಮತ್ತು ಕ್ರಮಾವಳಿಗಳನ್ನು
+    ಕೋಡಿಂಗ್ ಮಾಡುತ್ತಿರಲಿ, ಅನನ್ಯ ಕಲೆಯನ್ನು ಉತ್ಪಾದಿಸುತ್ತದೆಯೇ ಅಥವಾ ನಮ್ಮನ್ನು ನೃತ್ಯ ಮಾಡಲು
+    ಕೊರಿಯೋಗ್ರಫಿಯನ್ನು ಕರಕುಶಲ ಮಾಡುತ್ತಿರಲಿ, ಎಐ ಡಿಜಿಟಲ್ ಅಭಿವ್ಯಕ್ತಿಗೆ ತಾಜಾ ಅವಕಾಶಗಳನ್ನು
+    ತೆರೆಯುತ್ತಿದೆ ಅದು ಸೃಜನಶೀಲತೆಯ ಬಗ್ಗೆ ನಮ್ಮ ತಿಳುವಳಿಕೆಯನ್ನು ವಿಸ್ತರಿಸುತ್ತದೆ. ಕೋಡಿಂಗ್
+    ಚಟುವಟಿಕೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸುವ ಮೂಲಕ ಮತ್ತು AI ಬಗ್ಗೆ ಕಲಿಯುವ ಮೂಲಕ ಈ ವರ್ಷವನ್ನು ವಿಶೇಷವಾಗಿಸಿ.
+  hoc_how_to_step_choose_activities_desc_02: ಮೊದಲನೆಯದಾಗಿ, [ನೂರಾರು ಕೋಡಿಂಗ್ ಚಟುವಟಿಕೆಗಳನ್ನು
+    ಅನ್ವೇಷಿಸಿ] (%{activities_url}) ಮತ್ತು ನಿಮ್ಮ ಗುಂಪಿನ ವಯಸ್ಸು, ಅನುಭವ, ಆಸಕ್ತಿಗಳು ಮತ್ತು
+    ಹೆಚ್ಚಿನದನ್ನು ಆಧರಿಸಿ ಒಂದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. [ಈ ಆಯ್ದ ಚಟುವಟಿಕೆಗಳು] (%{ai_activities_url})
+    ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯನ್ನು ಪ್ರಮುಖ ವಿಷಯವಾಗಿ ಅಥವಾ ಪಾಠವಾಗಿ ಒಳಗೊಂಡಿವೆ.
+  hoc_how_to_step_choose_activities_desc_03: ನಂತರ, [AI ಬಗ್ಗೆ ಎಲ್ಲವನ್ನೂ ತಿಳಿಯಿರಿ] (%{ai_url}).
+    ವಿದ್ಯಾರ್ಥಿಗಳು ಕ್ಷೇತ್ರದ ತಜ್ಞರನ್ನು ಒಳಗೊಂಡಿರುವ ಕಿರು ವೀಡಿಯೊಗಳನ್ನು ವೀಕ್ಷಿಸಬಹುದು, ಮತ್ತು
+    ಚಟುವಟಿಕೆಯನ್ನು ವಿಸ್ತರಿಸಲು ಮತ್ತು ಮತ್ತಷ್ಟು ಚರ್ಚೆಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡಲು ಜತೆಗೂಡಿದ ಪಾಠ
+    ಯೋಜನೆಗಳಿವೆ. ಅಥವಾ, AI ಯೊಂದಿಗೆ ಮತ್ತು ಅದರ ಬಗ್ಗೆ ಬೋಧನೆಯ ಭವಿಷ್ಯವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಲು
+    ನಾವು ಶಿಕ್ಷಣಾರ್ಥಿಗಳಿಗೆ ಉಚಿತ ವೃತ್ತಿಪರ ಕಲಿಕೆಯನ್ನು ನೀಡುತ್ತೇವೆ.
+  hoc_how_to_step_educators_register_desc: ನಿಮ್ಮ ಈವೆಂಟ್ ಅನ್ನು ನೋಂದಾಯಿಸುವ ಮೂಲಕ ನಿಮ್ಮ
+    ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಕೋಡ್ ಅವರ್ ಮಾಡುವ ಬದ್ಧತೆಯೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸಿ. ನೀವು ನೋಂದಾಯಿಸಿದಾಗ,
     ಯಶಸ್ವಿ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಹೋಸ್ಟ್ ಮಾಡಲು ಸುದ್ದಿ ಮತ್ತು ಸಲಹೆಗಳೊಂದಿಗೆ ಸಹಾಯಕವಾದ ಇಮೇಲ್ಗಳನ್ನು
-    ನೀವು ಸ್ವೀಕರಿಸುತ್ತೀರಿ. ನಿಮ್ಮ ಶಾಲೆ ಭಾಗವಹಿಸುತ್ತಿದೆ ಎಂದು ಸ್ಥಳೀಯ ಸ್ವಯಂಸೇವಕರಿಗೆ ನೀವು
-    ಹೇಗೆ ತಿಳಿಸಬಹುದು ಎಂಬುದು ಸಹ ಇದು. ಸ್ವಯಂಸೇವಕರು ಉತ್ತಮ ಸಂಪನ್ಮೂಲವಾಗಿದೆ ಮತ್ತು ಕಂಪ್ಯೂಟರ್
-    ವಿಜ್ಞಾನದ ಬಗ್ಗೆ ನಿಮ್ಮ ತರಗತಿಯೊಂದಿಗೆ ಮಾತನಾಡಬಹುದು ಅಥವಾ ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳೊಂದಿಗೆ
-    ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸಹಾಯ ಮಾಡಬಹುದು.
-  hoc_how_to_step_05_educators_desc_01: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ನೈಜ ಜಗತ್ತಿನಲ್ಲಿ ಬಳಸಬಹುದಾದ
-    ವೈವಿಧ್ಯಮಯ ಜನರನ್ನು ಮತ್ತು ಸೃಜನಶೀಲ ಮಾರ್ಗಗಳನ್ನು ಹೈಲೈಟ್ ಮಾಡುವ [ಸ್ಪೂರ್ತಿದಾಯಕ ವೀಡಿಯೊಗಳು]
-    (%{videos_url}) ಹಂಚಿಕೊಳ್ಳುವ ಮೂಲಕ ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಈವೆಂಟ್ಗಾಗಿ ಉತ್ಸುಕರಾಗಿರಿ.
-  hoc_how_to_step_05_educators_desc_02: ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಯೋಜನೆಗಳನ್ನು ವಿನೋದದಲ್ಲಿ
-    ಸೇರಲು ಬಯಸುವ ಇತರ ಶಿಕ್ಷಕರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ! ನಿಮ್ಮ ಶಾಲೆಯ ಪೋಷಕ ಶಿಕ್ಷಕರ ವಿದ್ಯಾರ್ಥಿ
-    ಸಂಘವನ್ನು ತಲುಪಲು ಅಥವಾ ಪೋಷಕರ ಸುದ್ದಿಪತ್ರಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಲು ಇದು ಉತ್ತಮ ಅವಕಾಶವಾಗಿದೆ,
-    ಅವರ ಮಕ್ಕಳು ಏನು ಕಲಿಯುತ್ತಿದ್ದಾರೆ ಎಂಬುದನ್ನು ಅವರಿಗೆ ತಿಳಿಸುತ್ತದೆ.
-  hoc_how_to_step_06_educators_desc_01: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಚಟುವಟಿಕೆಗೆ ನಿರ್ದೇಶಿಸಿ,
+    ನೀವು ಸ್ವೀಕರಿಸುತ್ತೀರಿ. ನೀವು ಸಹ [ನಕ್ಷೆಯಲ್ಲಿ ಇರಿಸಿ] (%{map_url}) ಆಗುತ್ತೀರಿ. ನಮ್ಮ
+    ಸಾಮೂಹಿಕ ಪ್ರಯತ್ನಗಳ ಗೋಚರ ಪೂರ್ಣತೆಯು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಚಳುವಳಿಯ ಜಾಗತಿಕ ಬದ್ಧತೆಯನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ,
+    ಇದು ವ್ಯವಸ್ಥಿತ ಬದಲಾವಣೆಗೆ ಆವೇಗವನ್ನು ನಿರ್ಮಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ.
+  hoc_how_to_step_educators_plan_desc_01: ನಿಮ್ಮ ಈವೆಂಟ್ಗೆ ಮುಂಚಿತವಾಗಿ, ಚಟುವಟಿಕೆಗಳನ್ನು
+    ನೀವೇ ಪ್ರಯತ್ನಿಸಿ ಆದ್ದರಿಂದ ಅವರು ವಿದ್ಯಾರ್ಥಿ ಸಾಧನಗಳಲ್ಲಿ ಕೆಲಸ ಮಾಡುವುದನ್ನು ನೀವು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಬಹುದು
+    ಮತ್ತು ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಲು ನೀವು ಸಿದ್ಧರಾಗಿದ್ದೀರಿ! ಕಡಿಮೆ ಬ್ಯಾಂಡ್ವಿಡ್ತ್ ಹೊಂದಿದ್ದೀರಾ?
+    ತರಗತಿಯ ಮುಂಭಾಗದಲ್ಲಿ ವೀಡಿಯೊಗಳನ್ನು ತೋರಿಸಲು ಯೋಜನೆ ರೂಪಿಸಿಕೊಳ್ಳಿ, ಆದ್ದರಿಂದ ಪ್ರತಿಯೊಬ್ಬ
+    ವಿದ್ಯಾರ್ಥಿಯು ತಮ್ಮದೇ ಆದ ವೀಡಿಯೊಗಳನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡುತ್ತಿಲ್ಲ.
+  hoc_how_to_step_educators_plan_desc_02: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎಜುಕೇಶನ್ ವೀಕ್ (%{campaign_date})
+    ಸಮಯದಲ್ಲಿ ಪ್ರಪಂಚದಾದ್ಯಂತದ ಜನರು ಸಾಮಾನ್ಯವಾಗಿ ಅವರ್ ಆಫ್ ಕೋಡ್ ಆಚರಣೆಗೆ ಸೇರುತ್ತಾರೆ, ಆದರೆ
+    ನೀವು ವರ್ಷದ ಯಾವುದೇ ದಿನ ಒಂದು ಅವರ್ ಆಫ್ ಕೋಡ್ ಮಾಡಬಹುದು!
+  hoc_how_to_step_educators_plan_desc_03: ನೀವು ಲಭ್ಯವಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ಸಾಧನಗಳ
+    ಸಂಖ್ಯೆಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಜಾಗವನ್ನು ಆರಿಸಿ. ವಿದ್ಯಾರ್ಥಿಗಳು ವೈಯಕ್ತಿಕ ಸಾಧನಗಳಲ್ಲಿ ಚಟುವಟಿಕೆಗಳನ್ನು
+    ಪ್ರಯತ್ನಿಸಬಹುದು, ಸಾಧನವನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ತಿರುವುಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು, ಅಥವಾ ವೈಟ್ಬೋರ್ಡ್ನಲ್ಲಿ
+    ತರಗತಿಯಾಗಿ ಮಾಡಬಹುದು. ಎಲ್ಲಾ ಯಾವುದೇ ಸಾಧನಗಳಿಲ್ಲದೆ ಪೂರ್ಣಗೊಳಿಸಬಹುದಾದ ಅನ್ಪ್ಲಗ್ಡ್ ಚಟುವಟಿಕೆಗಳು
+    ಸಹ ಇವೆ, ಆದ್ದರಿಂದ ಅವುಗಳನ್ನು ಹೊರಗೆ ಸಹ ಮಾಡಬಹುದು!
+  hoc_how_to_step_educators_spread_word_desc_01: "[ಈ ಇಮೇಲ್ ಟೆಂಪ್ಲೇಟ್ಗಳು] (%{email_url})
+    ನೊಂದಿಗೆ ನಿಮ್ಮ ಸಮುದಾಯದಲ್ಲಿ ಪದವನ್ನು ಹರಡಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ."
+  hoc_how_to_step_educators_spread_word_desc_02: "[register](%{register_url}) ಗೆ ಇಬ್ಬರು
+    ಸಹೋದ್ಯೋಗಿಗಳನ್ನು ಕೇಳಿ ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಯನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ. ಅವರು ಪ್ರತಿಯಾಗಿ,
+    ಇಬ್ಬರು ಸಹೋದ್ಯೋಗಿಗಳನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸಬಹುದು, ಇಬ್ಬರು ಸಹೋದ್ಯೋಗಿಗಳು ಇತ್ಯಾದಿಗಳನ್ನು ಭದ್ರಪಡಿಸಬಹುದು."
+  hoc_how_to_step_educators_spread_word_desc_03: "[ಶಾಲಾ-ವ್ಯಾಪಕ ಈವೆಂಟ್ ಅನ್ನು ಆಯೋಜಿಸಲು]
+    ನಿಮ್ಮ ಪ್ರಾಂಶುಪಾಲರನ್ನು ಕೇಳಿ (%{host_url}). 300 ಅಥವಾ ಹೆಚ್ಚಿನ ಮಕ್ಕಳು ಭಾಗವಹಿಸಿದಾಗ,
+    ಟಿ-ಶರ್ಟ್ಗಳು, ಪೋಸ್ಟರ್ಗಳು, ಲ್ಯಾಪ್ಟಾಪ್ ಸ್ಟಿಕ್ಕರ್ಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳೊಂದಿಗೆ ನೀವು
+    ವಿಶೇಷ ನಿಶ್ಚಿತಾರ್ಥದ ಕಿಟ್ ಅನ್ನು ಸ್ವೀಕರಿಸಬಹುದು. ಅರ್ಹತೆ ಪಡೆಯಲು [ನಿಮ್ಮ ಸಂಪೂರ್ಣ ಶಾಲಾ
+    ಈವೆಂಟ್ ಯೋಜನೆಯನ್ನು ಹಂಚ%{share_url}ಿಕೊಳ್ಳಿ] ()."
+  hoc_how_to_step_educators_spread_word_desc_04: ನಿಮ್ಮ ಶಾಲೆಯ ಪೋಷಕ ಶಿಕ್ಷಕರ ವಿದ್ಯಾರ್ಥಿ
+    ಸಂಘವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಪೋಷಕರ ಸುದ್ದಿಪತ್ರಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ, ಅವರ ಮಕ್ಕಳು ಏನು ಕಲಿಯುತ್ತಿದ್ದಾರೆ
+    ಎಂಬುದನ್ನು ಅವರಿಗೆ ತಿಳಿಸಿ.
+  hoc_how_to_step_educators_plan_hour_desc_02: 'ಬೆಳಗ್ಗೆ 10:00-10:05: [ಸ್ಪೂರ್ತಿದಾಯಕ
+    ವೀಡಿಯೊ] ನೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸಿ ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45am: ವಿದ್ಯಾರ್ಥಿಗಳು ತಮ್ಮ
+    ಕೋಡಿಂಗ್ ಚಟುವಟಿಕೆಯನ್ನು ಮಾಡುತ್ತಾರೆ'
+  hoc_how_to_step_educators_plan_hour_desc_04: 'ಬೆಳಿಗ್ಗೆ 10:45-10:55: ವಿದ್ಯಾರ್ಥಿಗಳು
+    AI ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳುತ್ತಾರೆ'
+  hoc_how_to_step_educators_plan_hour_desc_05: 'ಬೆಳಿಗ್ಗೆ 10:55-11:00: ಶಿಕ್ಷಕರು ಮುಕ್ತಾಯದ
+    ಟೀಕೆಗಳನ್ನು ನೀಡುತ್ತಾರೆ'
+  hoc_how_to_step_educators_get_coding_desc: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಚಟುವಟಿಕೆಗೆ ನಿರ್ದೇಶಿಸಿ,
     ಬಹುಶಃ ಮಂಡಳಿಯಲ್ಲಿ ಲಿಂಕ್ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಮೂಲಕ ಅಥವಾ ನಿಮ್ಮ ತರಗತಿಯ ಕಲಿಕಾ ನಿರ್ವಹಣಾ
     ವ್ಯವಸ್ಥೆಯ ಮೂಲಕ. ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ಸವಾಲುಗಳನ್ನು ಎದುರಿಸಬಹುದು - ಅದು ಸರಿ! ಪ್ರೋಗ್ರಾಂ
     ಕಲಿಯುವುದು ಹೊಸ ಭಾಷೆಯನ್ನು ಕಲಿಯುವಂತಾಗಿದೆ; ನೀವು ಈಗಿನಿಂದಲೇ ನಿರರ್ಗಳಾಗಿರುವುದಿಲ್ಲ. ನಿಮಗೆ
     ಉತ್ತರ ತಿಳಿದಿಲ್ಲದಿದ್ದರೆ, ನೀವು ಅದನ್ನು ಒಟ್ಟಿಗೆ ಲೆಕ್ಕಾಚಾರ ಮಾಡಬಹುದು.
-  hoc_how_to_step_07_educators_desc_01: 'ಯಶಸ್ಸನ್ನು ಆಚರಿಸಲು ಮರೆಯದಿರಿ! ನಿಮ್ಮ ಅವರ್ ಆಫ್
-    ಕೋಡ್ ಈವೆಂಟ್ನ ಫೋಟೋಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳನ್ನು ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮದಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ. #HourOfCode
-    ಮತ್ತು @codeorg ಅನ್ನು ಬಳಸಿ ಆದ್ದರಿಂದ ನಾವು ನಿಮ್ಮ ಯಶಸ್ಸನ್ನು ಸಹ ಹೈಲೈಟ್ ಮಾಡಬಹುದು!'
-  hoc_how_to_step_07_educators_desc_02: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ತಮ್ಮ ಸಾಧನೆಯನ್ನು ತೋರಿಸಲು
-    ನೀವು ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಸಹ ಮುದ್ರಿಸಬಹುದು!
+  hoc_how_to_step_educators_celebrate_desc: 'ನಿಮ್ಮ ಈವೆಂಟ್ ನಂತರ, ಪೂರ್ಣಗೊಳಿಸಿದ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು
+    ಮುದ್ರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಅಭಿನಂದಿಸಿ. ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಈವೆಂಟ್ನ ಫೋಟೋಗಳು
+    ಮತ್ತು ವೀಡಿಯೊಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು #HourOfCode ಮತ್ತು @codeorg ಬಳಸಿಕೊಂಡು ನಿಮ್ಮ
+    ವಿದ್ಯಾರ್ಥಿಗಳ ಸಾಧನೆಗಳನ್ನು ತೋರಿಸಿ.'
+  hoc_how_to_step_educators_beyond_desc: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅವರ್ ಆಫ್ ಕೋಡ್ನೊಂದಿಗೆ ಕೊನೆಗೊಳ್ಳಬೇಕಾಗಿಲ್ಲ!
+    90% ಪೋಷಕರು ತಮ್ಮ ಮಗು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಕಲಿಯಬೇಕೆಂದು ಬಯಸಿದರೂ, ಹೆಚ್ಚಿನ ಶಾಲೆಗಳು
+    ಇನ್ನೂ ಅದನ್ನು ಕಲಿಸುವುದಿಲ್ಲ. ಸಹಾಯ ಮಾಡಲು, ನಮ್ಮ ಪಠ್ಯಕ್ರಮವು ವೆಬ್ ಆಧಾರಿತ ಮತ್ತು ಬಳಸಲು
+    ಉಚಿತ, ಶಾಶ್ವತವಾಗಿ. ಇಂದು ನಿಮ್ಮ ಶಾಲೆಗೆ ಸಿಎಸ್ ಅನ್ನು ಹೇಗೆ ತರುವುದು ಎಂಬುದನ್ನು ತಿಳಿಯಿರಿ.
   hoc_ai_top_desc: ನೀವು ತರಗತಿಯಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಯಾಗಿರಲಿ ಅಥವಾ AI ಯೊಂದಿಗೆ ಮತ್ತು ಅದರ ಬಗ್ಗೆ
     ಬೋಧನೆಯ ಭವಿಷ್ಯವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡುವ ವಿದ್ಯಾವಂತರಾಗಿರಲಿ ಯಾರಾದರೂ AI ಬಗ್ಗೆ ಕಲಿಯಬಹುದು.
   hoc_ai_how_ai_works_video_series_desc: ಈ ಕಿರು ವೀಡಿಯೊಗಳ ಸರಣಿಯು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಹೇಗೆ
@@ -14583,66 +14609,72 @@ kn:
     ಮತ್ತು ಸಿಬ್ಬಂದಿಗಳಿಗೆ ತಮ್ಮ ಶಾಲೆಗಳಲ್ಲಿ ಎಐ ಕುರಿತು ಆರಂಭಿಕ ಮಾರ್ಗದರ್ಶನವನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು
     ಸಂಪನ್ಮೂಲವಾಗಿದೆ.
   teach_ai_button_label: ಟೂಲ್ಕಿಟ್ ವೀಕ್ಷಿಸಿ
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: 11 ಮತ್ತು ಅದಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ವಯಸ್ಸಿನವರಿಗೆ ಕಲಿಕೆ
+  middle_high_page_main_description: ಆಕರ್ಷಕ ವೀಡಿಯೊಗಳು, ಸ್ವಯಂ ಗತಿಯ ಟ್ಯುಟೋರಿಯಲ್, ಪ್ರೋಗ್ರಾಮಿಂಗ್
+    ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಜಗತ್ತನ್ನು ಅನ್ವೇಷಿಸಿ
+  middle_high_page_hero_title: ಅವರ್ ಆಫ್ ಕೋಡ್ನೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸಿ
+  middle_high_page_hero_description: ಡ್ರ್ಯಾಗ್-ಅಂಡ್-ಡ್ರಾಪ್ ಕೋಡಿಂಗ್ ಬ್ಲಾಕ್ಗಳನ್ನು ಒಳಗೊಂಡಿರುವ
+    ಉಚಿತ ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಮೂಲಭೂತ ಅಂಶಗಳನ್ನು ತಿಳಿಯಿರಿ.
+    ಆಯ್ಕೆ ಮಾಡಲು ನೂರಾರು ಗಂಟೆಗಳ ಅವಧಿಯ ಆಯ್ಕೆಗಳಿವೆ!
+  middle_high_page_hourofcode_link: ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  middle_high_page_modules_title: ಹಳೆಯ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಾಡ್ಯೂಲ್ಗಳು
+  middle_high_page_modules_description: ನಮ್ಮ ಸಿಎಸ್ ಡಿಸ್ಕವರಿ ಮತ್ತು ಸಿಎಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್
+    ಕೋರ್ಸ್ಗಳಿಂದ ಅಳವಡಿಸಲ್ಪಟ್ಟಿರುವ, ಮಧ್ಯಮ ಮತ್ತು ಪ್ರೌಢಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಈ ಸಣ್ಣ, ಸ್ವಯಂ
+    ಗತಿಯ ಮಾಡ್ಯೂಲ್ಗಳು ಎಲ್ಲಾ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆಗಳು ಮತ್ತು ಪರಿಕರಗಳನ್ನು ವ್ಯಾಪಿಸಿರುವ ಪರಿಕಲ್ಪನೆಗಳನ್ನು
+    ಕಲಿಯಲು ಉತ್ತಮ ಮಾರ್ಗವಾಗಿದೆ.
+  middle_high_page_modules_card_title_1: ಗೇಮ್ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
+  middle_high_page_modules_card_title_2: ಆಪ್‌ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಟರ್ಟಲ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+  middle_high_page_modules_card_title_3: ಆಪ್‌ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+  middle_high_page_modules_card_description_1: ನೀವು ಅನಿಮೇಷನ್ಗಳು, ಸಂವಾದಾತ್ಮಕ ಕಲೆ ಮತ್ತು
+    ಆಟಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡುವಾಗ ನಮ್ಮ ಗೇಮ್ ಲ್ಯಾಬ್ ಪರಿಸರಕ್ಕೆ ಈ ಪರಿಚಯದಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ
+    ವೇಗದಲ್ಲಿ ಚಲಿಸಿ.
+  middle_high_page_modules_card_description_2: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ನಲ್ಲಿ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ನೊಂದಿಗೆ
+    ಶ್ರೀಮಂತ, ಸಂವಾದಾತ್ಮಕ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ಮಾಡುವ ಸಾಮರ್ಥ್ಯವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ!
+  middle_high_page_modules_card_description_3: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಸರಕ್ಕೆ
+    ಈ ಪರಿಚಯದೊಂದಿಗೆ ನಿಮ್ಮ ಸ್ವಂತ ವೇಗದಲ್ಲಿ ಹೋಗಿ, ಇದರಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳು ಸಂವಾದಾತ್ಮಕ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು
+    ರಚಿಸಲು ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಅನ್ನು ಬಳಸುತ್ತಾರೆ.
+  middle_high_page_modules_card_link: ಅದನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  middle_high_page_make_your_own_title: ನಿಮ್ಮ ಸ್ವಂತ ಅಪ್ಲಿಕೇಶನ್ಗಳು, ಆಟಗಳು ಮತ್ತು ವೆಬ್ಪುಟಗಳನ್ನು
+    ತಯಾರಿಸಿ
+  middle_high_page_make_your_own_description: 'ಕೋರ್ಸ್ಗಳ ಜೊತೆಗೆ, ನಿಮ್ಮ ಸೃಜನಶೀಲತೆಯನ್ನು
+    ಅನ್ವೇಷಿಸಲು ಮತ್ತು ಅದ್ಭುತವಾದದ್ದನ್ನು ಮಾಡಲು ನಿಮಗೆ ಅವಕಾಶ ನೀಡುವ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕರಗಳನ್ನು
+    ನಾವು ಹೊಂದಿದ್ದೇವೆ. '
   middle_high_page_make_your_own_card_title_1: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: ಗೇಮ್ ಲ್ಯಾಬ್
+  middle_high_page_make_your_own_card_title_3: ವೆಬ್ ಲ್ಯಾಬ್
+  middle_high_page_make_your_own_card_descrpition_1: ಆಪ್ ಲ್ಯಾಬ್ ಒಂದು ಪ್ರೋಗ್ರಾಮಿಂಗ್
+    ಪರಿಸರವಾಗಿದ್ದು, ಅಲ್ಲಿ ನೀವು ಸರಳ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ತಯಾರಿಸಬಹುದು. ಬ್ಲಾಕ್ಗಳು ಅಥವಾ ಪಠ್ಯ
+    ಎರಡೂ ಜೊತೆ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ರಲ್ಲಿ ಅಪ್ಲಿಕೇಶನ್, ಕೋಡ್ ವಿನ್ಯಾಸ, ನಂತರ ಸೆಕೆಂಡುಗಳಲ್ಲಿ
+    ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ.
+  middle_high_page_make_your_own_card_descrpition_2: ಗೇಮ್ ಲ್ಯಾಬ್ ಎಂಬುದು ಪ್ರೋಗ್ರಾಮಿಂಗ್‌
+    ಪರಿಸರವಾಗಿದ್ದು, ಪರಸ್ಪರ ಸಂವಹನ ನಡೆಸುವ ವಸ್ತುಗಳು ಮತ್ತು ಪಾತ್ರಗಳನ್ನು ಬಳಸಿ ಸರಳ ಆನಿಮೇಶನ್‌ಗಳು
+    ಮತ್ತು ಗೇಮ್‌ಗಳನ್ನು ರಚಿಸಿ.
+  middle_high_page_make_your_own_card_descrpition_3: ವೆಬ್ ಲ್ಯಾಬ್ ನೀವು ಎಚ್ಟಿಎಮ್ಎಲ್
+    ಮತ್ತು ಸಿಎಸ್ಎಸ್ ಬಳಸಿ ಸರಳ ವೆಬ್ ಪುಟಗಳನ್ನು ಮಾಡಬಹುದು ಅಲ್ಲಿ ಒಂದು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಸರವಾಗಿದೆ.
+    ನಿಮ್ಮ ವೆಬ್ ಪುಟಗಳನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಿ ಮತ್ತು ಸೆಕೆಂಡುಗಳಲ್ಲಿ ನಿಮ್ಮ ಸೈಟ್ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಿ.
   middle_high_page_make_your_own_card_link: ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: ಹೆಚ್ಚುವರಿ ಸಂಪನ್ಮೂಲ
+  middle_high_page_additional_resources_description: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಮತ್ತಷ್ಟು
+    ಅನ್ವೇಷಿಸಲು ಅನೇಕ ಮಾರ್ಗಗಳಿವೆ! ನಮ್ಮ ವೀಡಿಯೊ ಲೈಬ್ರರಿಯನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ, ಅಥವಾ ಕಂಪ್ಯೂಟರ್
+    ಸೈನ್ಸ್ ಕ್ಷೇತ್ರದಲ್ಲಿ ಅತ್ಯಾಕರ್ಷಕ ವೃತ್ತಿಜೀವನದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ.
+  middle_high_page_video_library_title: ನಮ್ಮ ವಿಡಿಯೋ ಲೈಬ್ರರಿಯನ್ನು ಅನ್ವೇಷಿಸಿ
+  middle_high_page_video_library_description: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ, ಇಂಟರ್ನೆಟ್, ಕಂಪ್ಯೂಟರ್ಗಳು
+    ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ, ಹ್ಯಾಕ್ ಆಗಬಾರದು ಹೇಗೆ, ಬ್ಲಾಕ್ಚೈನ್, ವೃತ್ತಿಜೀವನ ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳಂತಹ
+    ವಿಷಯಗಳ ಕುರಿತು ಸಣ್ಣ 5-10 ನಿಮಿಷದ ವೀಡಿಯೊಗಳ ಮೂಲಕ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಮೂಲಭೂತ ಅಂಶಗಳನ್ನು
+    ತಿಳಿಯಿರಿ!
+  middle_high_page_video_library_link: ವೀಡಿಯೊ ಲೈಬ್ರರಿಯನ್ನು ವೀಕ್ಷಿಸಿ
+  middle_high_page_cs_journeys_title: ಸಿಎಸ್ ಪ್ರಯಾಣಗಳೊಂದಿಗೆ ಮತ್ತಷ್ಟು ಹೋಗಿ
+  middle_high_page_cs_journeys_description: ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಪ್ರಯಾಣದಲ್ಲಿ ಮುಂದಿನ
+    ಹೆಜ್ಜೆ ಇರಿಸಿ. ವೃತ್ತಿಜೀವನ, ಮಾರ್ಗದರ್ಶನ ಅವಕಾಶಗಳು, ಆನ್ಲೈನ್ ಕೋರ್ಸ್ಗಳು, ವಿದ್ಯಾರ್ಥಿವೇತನಗಳು,
+    ಇಂಟರ್ನ್ಶಿಪ್ಗಳು ಮತ್ತು ಹೆಚ್ಚಿನ
+  middle_high_page_cs_journeys_link: ಸಿಎಸ್ ಪ್ರಯಾಣಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  middle_high_page_cs_title: ತರಗತಿಯಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್
+  middle_high_page_cs_description: ಈ ಕೋರ್ಸ್ಗಳನ್ನು ಶಿಕ್ಷಕನು ನೇತೃತ್ವ ವಹಿಸಬೇಕು! ನಿಮ್ಮ
+    ಶಾಲೆಯಲ್ಲಿ ಅವುಗಳನ್ನು ಕಲಿಸುವುದನ್ನು ನೋಡಲು ನೀವು ಬಯಸಿದರೆ, ಅವರನ್ನು ನಿಮ್ಮ ತರಗತಿಗೆ ತರಲು
+    ಶಿಕ್ಷಕನೊಂದಿಗೆ ಕೆಲಸ ಮಾಡುವುದನ್ನು ಪರಿಗಣಿಸಿ.
+  middle_high_page_cs_card_title_1: ಸಿಎಸ್ ಅನ್ವೇಷಣೆಗಳು
+  middle_high_page_cs_card_title_2: ಸಿಎಸ್ ತತ್ವಗಳು
+  middle_high_page_cs_card_title_3: ಎಪಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎ
   middle_high_page_cs_card_description_1: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಅಡಿಪಾಯದ ಪರಿಕಲ್ಪನೆಗಳಿಗೆ
     ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪರಿಚಯಿಸುವ ಮತ್ತು ಕಂಪ್ಯೂಟಿಂಗ್ ಮತ್ತು ತಂತ್ರಜ್ಞಾನವು ಪ್ರಪಂಚದ ಮೇಲೆ ಹೇಗೆ
     ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂಬುದನ್ನು ಅನ್ವೇಷಿಸಲು ಅವರಿಗೆ ಸವಾಲು ಹಾಕುತ್ತದೆ.
@@ -14653,34 +14685,35 @@ kn:
   middle_high_page_cs_card_description_3: ಎಪಿ® ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎ (ಎಪಿ® ಸಿಎಸ್ಎ) ಗಾಗಿ
     ಈ ಉಚಿತ ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ಜಾವಾ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆಯನ್ನು ಕಲಿಯುವಾಗ ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್
     ಮತ್ತು ಆಬ್ಜೆಕ್ಟ್-ಓರಿಯೆಂಟೆಡ್ ವಿನ್ಯಾಸಕ್ಕೆ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪರಿಚಯಿಸಿ.
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: ಸಿಎಸ್ ಡಿಕೋವರಿಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
   middle_high_page_cs_link_2: ಸಿಎಸ್ ತತ್ವಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: ಸಿಎಸ್ಎ ಅನ್ನು ಅನ್ವೇಷಿಸಿ
+  elemeentary_page_main_title: 5 ರಿಂದ 11 ವಯಸ್ಸಿನವರಿಗೆ ಕಲಿಕೆ
+  elementary_page_main_description: ಆಕರ್ಷಕ ವೀಡಿಯೊಗಳು, ಸ್ವಯಂ ಗತಿಯ ಟ್ಯುಟೋರಿಯಲ್, ಪ್ರೋಗ್ರಾಮಿಂಗ್
+    ಚಟುವಟಿಕೆಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಜಗತ್ತನ್ನು ಅನ್ವೇಷಿಸಿ
+  elementary_page_own_pace_title: ನಿಮ್ಮ ಸ್ವಂತ ವೇಗದಲ್ಲಿ ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಿ
+  elementary_page_own_pace_description: ವಿದ್ಯಾರ್ಥಿಗಳು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಮೂಲಭೂತ ಕಲಿಕೆಯ
+    ತಮ್ಮದೇ ಆದ ಮೇಲೆ ಪ್ರಾರಂಭಿಸಲು ಈ ಎರಡು ಅತ್ಯುತ್ತಮ ಆಯ್ಕೆಗಳಲ್ಲಿ ರೇಖಾಚಿತ್ರಗಳು, ಆಟಗಳು ಮತ್ತು
+    ಹೆಚ್ಚಿನದನ್ನು ರಚಿಸಿ.
+  elementary_page_own_pace_card_title_1: ಪ್ರೀ-ರೀಡರ್ ಎಕ್ಸ್ಪ್ರೆಸ್ ಕೋರ್ಸ್
+  elementary_page_own_pace_card_title_2: ಕೋರ್ಸ್‌ ಎಕ್ಸ್‌ಪ್ರೆಸ್‌ ಮಾಡಿ
+  elementary_page_own_pace_card_description_1: ನಿಮ್ಮ ಸ್ವಂತ ವೇಗದಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು
+    ಕಲಿಯಿರಿ! ಕಂಪ್ಯೂಟರ್ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು ರಚಿಸಲು, ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಕೌಶಲ್ಯಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು
+    ಮತ್ತು ಮೋಜಿನ ಸವಾಲುಗಳ ಮೂಲಕ ಕೆಲಸ ಮಾಡಲು ಕಲಿಯಿರಿ! ಸ್ನೇಹಿತರು, ಕುಟುಂಬ, ಮತ್ತು ಶಿಕ್ಷಕರೊಂದಿಗೆ
+    ಹಂಚಿಕೊಳ್ಳಲು ಆಟಗಳು ಮತ್ತು ಸೃಜನಶೀಲ ಯೋಜನೆಗಳನ್ನು ಮಾಡಿ.
+  elementary_page_own_pace_link_1: ಪ್ರಿ-ರೀಡರ್ ಕೋರ್ಸ್ ಪ್ರಾರಂಭಿಸಿ
+  elementary_page_own_pace_link_2: ಎಕ್ಸ್ಪ್ರೆಸ್ ಕೋರ್ಸ್ ಪ್ರಾರಂಭಿಸಿ
+  elementary_page_make_your_own_games_title: ನಿಮ್ಮ ಸ್ವಂತ ಅನಿಮೇಷನ್ಗಳು ಮತ್ತು ಆಟಗಳನ್ನು
+    ಮಾಡಿ
   elementary_page_make_your_own_games_card_title_1: ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: ಸೃಜನಶೀಲರಾಗಲು ಸಮಯ! ಸ್ಪ್ರೈಟ್
+    ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಿಲ್ಲಿ, ಸಿಹಿ, ಅಥವಾ ಹೊರಗಿನ ಸ್ಪೇಸಿ ಏನನ್ನಾದರೂ ಮಾಡಲು ಬ್ಲಾಕ್ ಆಧಾರಿತ ಕೋಡಿಂಗ್
+    ಬಳಸಿ. ಏಕೈಕ ಮಿತಿ ನಿಮ್ಮ ಕಲ್ಪನೆ!
+  elementary_page_make_your_own_games_link: ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಪ್ರಯತ್ನಿಸಿ
+  elementary_page_computer_science_title: ತರಗತಿಯಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್
+  elementary_page_computer_science_description: ಈ ಕೋರ್ಸ್ಗಳನ್ನು ಶಿಕ್ಷಕನು ನೇತೃತ್ವ ವಹಿಸಬೇಕು!
+    ನಿಮ್ಮ ಶಾಲೆಯಲ್ಲಿ ಅವುಗಳನ್ನು ಕಲಿಸುವುದನ್ನು ನೋಡಲು ನೀವು ಬಯಸಿದರೆ, ಪೋಷಕರು ಅಥವಾ ರಕ್ಷಕರನ್ನು
+    ನಿಮ್ಮ ತರಗತಿಗೆ ತರಲು ಶಿಕ್ಷಕರೊಂದಿಗೆ ಕೆಲಸ ಮಾಡಲು ಕೇಳಿ.
   elementary_page_computer_science_card_title_1: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
   elementary_page_computer_science_card_title_2: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕನೆಕ್ಷನ್‌ಗಳು
   elementary_page_computer_science_description_1: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಅಡಿಪಾಯದ ಪರಿಕಲ್ಪನೆಗಳಿಗೆ

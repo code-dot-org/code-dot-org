@@ -5467,8 +5467,8 @@ pt-BR:
         - {}
       CSD U5 MC Q5_2023:
         answers:
-        - {}
-        - {}
+        - text: Codifique
+        - text: Decodifique
         - {}
         - correct: true
         - {}

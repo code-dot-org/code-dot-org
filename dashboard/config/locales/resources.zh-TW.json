@@ -1399,7 +1399,8 @@
           "type": "影片"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
-          "type": "幻燈片"
+          "type": "幻燈片",
+          "url": "https://docs.google.com/presentation/d/1ooOUbKVTPu2HTynQwzHFf1XMCU82zQ8XlLJnHUDNylg"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "幻燈片"
@@ -4269,7 +4270,8 @@
           "type": "影片"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
-          "type": "幻燈片"
+          "type": "幻燈片",
+          "url": "https://docs.google.com/presentation/d/1ooOUbKVTPu2HTynQwzHFf1XMCU82zQ8XlLJnHUDNylg"
         },
         "create_an_ml_app/csd/2022": {
           "type": "標題 "
@@ -7586,7 +7588,8 @@
           "type": "影片"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "type": "幻燈片"
+          "type": "幻燈片",
+          "url": "https://docs.google.com/presentation/d/1ooOUbKVTPu2HTynQwzHFf1XMCU82zQ8XlLJnHUDNylg"
         },
         "create_an_ml_app/csd/2023": {
           "type": "標題 "
@@ -9037,7 +9040,7 @@
           "type": "影片"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+          "url": "https://docs.google.com/document/d/1Kf6b-GIag3S5Qa723KHWIHgi-r8ZKtRXMdTnZxI094A"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "人工智慧如何運行 - 訓練數據和偏見",
@@ -9050,21 +9053,21 @@
           "type": "影片"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "url": "https://docs.google.com/presentation/d/1RdXgU8OcMmUJNYKIv3zf8nTedNHS5wWDagRA66WFBJo",
           "type": "幻燈片"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] 計算機視覺網絡",
-          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1McJM4oDG3jt_x6irP78vkP4qibNzr4PmiLC5Kb7G3_4"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "計算機視覺",
-          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+          "url": "https://docs.google.com/presentation/d/1hVbVGNgBXgJysVzwUhTNdOZigJXSloL8GRhwAs03lbg",
           "type": "幻燈片"
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "計算機視覺網絡",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+          "url": "https://docs.google.com/document/d/1pq4c0jEWyd2BZ8DZn7mOHYD2nGJ2rjLJdO7npqFQioc"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
           "name": "人工智慧如何運行：計算機視覺如何運行",
@@ -9073,7 +9076,7 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "七段顯示器操控",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "url": "https://docs.google.com/document/d/1aOBynf-EvnXP7t-bl_qxUChWwrR8KvJT-MGQ0Uajcj8"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "神經網絡看到什麼",
@@ -9087,25 +9090,25 @@
         },
         "neural_networks/how-ai-works/2023": {
           "name": "神經網絡",
-          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1HW-sPfaqspC1WQnJG_Wij7R10V0GgdRBZvNuycIlvvk"
         },
         "neural_networks_1/how-ai-works/2023": {
           "name": "神經網絡",
-          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+          "url": "https://docs.google.com/presentation/d/1Tz9mYx5mxsv3rGT-Ygw0RxgwFrVSWl2DiQJYLKJzxXg",
           "type": "幻燈片"
         },
         "wetube_content_creators/how-ai-works/2023": {
           "name": "WeTube內容創作者",
-          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1sqGakBOnqXOa6ka_4ebZu2-HGmeyVKS8EFVmywZb6Z0",
           "type": "資源"
         },
         "eliza_activity_guide/how-ai-works/2023": {
           "name": "（可選）Eliza活動指南",
-          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+          "url": "https://docs.google.com/document/d/13oVdoH-vYkp0UDZPDsPi2yWJ2Ux-35WvwcFuFS0GLjs"
         },
         "generative_llm/how-ai-works/2023": {
           "name": "生成式大型語言模型",
-          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1qPAOQnV9u2RwGgFv-gmRgz_LEDqYdiQS2TUKLkrLEd4",
           "type": "幻燈片"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
@@ -9120,38 +9123,38 @@
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
           "name": "[Key] 詞彙和視訊指南",
-          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
+          "url": "https://docs.google.com/document/d/1_p4Lqe0Cx823709bGDjPLNxfFEt9kYxkDe-jc2rER6I",
           "type": "答案鍵"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
           "name": "視訊和詞彙指南",
-          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+          "url": "https://docs.google.com/document/d/1kMoDrYQGuM6dzPiPT-BzsQ7TuMRKdvuhxrFWbGWkIfw"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] 書面語音模擬器活動指南",
-          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+          "url": "https://docs.google.com/document/d/12rXIQOYpqGK3CO7cuoeiMyJy5Wcfb5NYiYy0f9-Z83g"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "書面語音模擬器指南",
-          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+          "url": "https://docs.google.com/document/d/1rO7_JhOZ37Me0VEnwnqKr6o5cA9uU90DKVJbQePIr5k"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
           "name": "書面語音模擬器用戶指南",
-          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
+          "url": "https://docs.google.com/presentation/d/14LGRH8DufSi5Gh1O5PUFwnb_71Lx5tswlJ-MzfhhBms",
           "type": "資源"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "（可選）GAN遊戲活動指南",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+          "url": "https://docs.google.com/document/d/1By1CDeJhSFa58mS6PGwUWI2Hx0nXAiY0cTtmgp-7dH4"
         },
         "generative_images/how-ai-works/2023": {
           "name": "生成式圖像",
-          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
+          "url": "https://docs.google.com/presentation/d/1ZS7xuS9oQwKtzgbfce1fK-2s5fxq9QTe-YwIcWodY5k",
           "type": "幻燈片"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
           "name": "[Key] 生成式圖像活動指南",
-          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
+          "url": "https://docs.google.com/document/d/1x_pxb2oYWVPRFHxsMSaIDm69GpLUlokbtajk8bwVIjo",
           "type": "答案鍵"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
@@ -9161,24 +9164,24 @@
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] 噪聲圖像活動",
-          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+          "url": "https://docs.google.com/document/d/1AomleiQBqGtcxLq2nOmF6Z5b3mUVj4Q-_M_xtBFKutw"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "噪聲圖像小部件活動指南",
-          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+          "url": "https://docs.google.com/document/d/1V9Lq2hJVkNhHDgJS3s6LEcaplcYz9ew3vyICyWDjc1k"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "用戶指南：噪聲圖像小部件",
-          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
+          "url": "https://docs.google.com/presentation/d/1mUK3n9txNdNgW1O44yK2ZMwnLitEZorktrloVzb2f9M",
           "type": "資源"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
           "name": "視訊和詞彙指南",
-          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1d09L14M8LZaEb75x9RjDNMofdfoaGXGuAlqllk-GWEc"
         },
         "algorithmic_bias/how-ai-works/2023": {
           "name": "演算法偏見",
-          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
+          "url": "https://docs.google.com/presentation/d/1tN8C7Z5dQxMCk2tbRI2q6d7WZekOczjHRN3DHzaIKVQ",
           "type": "幻燈片"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
@@ -9197,14 +9200,14 @@
           "type": "資源"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
+          "url": "https://docs.google.com/presentation/d/1FTKtDbFM869LtElYFaH-j105q5wGXZQM_n4mQw_pcjQ/",
           "type": "幻燈片"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1PkF2m99lzmm2DPLwIH-v1AIEB_rvH5NNl1Vl9NRJraU/"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1qjIIlshx-JzVohGpvv2XkxaN7QAt5mMghxFLBsC3R64"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
           "name": "人工智慧如何運行 - 隱私和工作的未來",
@@ -9212,7 +9215,8 @@
           "type": "影片"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
-          "type": "幻燈片"
+          "type": "幻燈片",
+          "url": "https://docs.google.com/presentation/d/1ooOUbKVTPu2HTynQwzHFf1XMCU82zQ8XlLJnHUDNylg"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
@@ -9220,7 +9224,7 @@
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "人工智慧是如何運作的",
-          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+          "url": "https://docs.google.com/presentation/d/1Ve7nHHAmbZPJZkf4ZnYuYJoEVut8rW4YcQiHXtUTAgw/",
           "type": "幻燈片"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
@@ -9254,7 +9258,7 @@
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "詞彙配對",
-          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+          "url": "https://docs.google.com/document/d/1X535y3Ziskbc-mEzmrphn6NVF_NEm8w3wr47eRDISY4/"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
           "name": "[Key] 詞彙配對",
@@ -9374,6 +9378,30 @@
         },
         "web_development_-_extra_code_in_challenge_levels/csd/2023": {
           "type": "資源"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE"
         }
       }
     }
