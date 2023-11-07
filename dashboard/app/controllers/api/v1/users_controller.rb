@@ -135,7 +135,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {mute_music: !!@user&.mute_music}
   end
 
-  # POST /api/v1/users/sort_by_family_name
+  # POST /api/v1/users/<user_id>/sort_by_family_name
   def post_sort_by_family_name
     return head :unauthorized unless current_user
 
