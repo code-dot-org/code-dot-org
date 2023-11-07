@@ -24,24 +24,24 @@ class DatastoreCacheTest < ActiveSupport::TestCase
   end
 
   test 'local_cache_expired? is updated on refresh and after time passes' do
-    cache = DatastoreCache.new @data_adapter, 'fast expiration', cache_expiration: 0.01
+    cache = DatastoreCache.new @data_adapter, 'fast expiration', cache_expiration: 5
     # Cache starts out fresh
     refute cache.local_cache_expired?
 
     # Cache expires after a configurable time period has elapsed
-    sleep 0.1
+    travel 10.seconds
     assert cache.local_cache_expired?
 
     # Explicitly invoking a refresh will update expiration
     cache.update_local_cache
     refute cache.local_cache_expired?
-    sleep 0.1
+    travel 10.seconds
     assert cache.local_cache_expired?
 
     # As will setting a new value
     cache.set('key', 'val')
     refute cache.local_cache_expired?
-    sleep 0.1
+    travel 10.seconds
     assert cache.local_cache_expired?
   end
 
@@ -51,7 +51,7 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     updated_value = '1, 2, 3'
 
     @data_adapter.set(key, initial_value)
-    cache = DatastoreCache.new @data_adapter, 'fast expiration', cache_expiration: 0.01
+    cache = DatastoreCache.new @data_adapter, 'fast expiration', cache_expiration: 5
     assert_equal initial_value, cache.get(key)
 
     # Local cache is not updated immediately when the shared cache is updated
@@ -62,7 +62,7 @@ class DatastoreCacheTest < ActiveSupport::TestCase
 
     # Local cache is eventually updated after the configurable expiration
     # period has elapsed
-    sleep 0.1
+    travel 10.seconds
     assert cache.local_cache_expired?
     assert_equal updated_value, cache.get(key)
   end
