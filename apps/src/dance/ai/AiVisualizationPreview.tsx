@@ -8,6 +8,7 @@ interface AiVisualizationPreviewProps {
   id: string;
   code: string;
   size: number;
+  durationMs?: number;
 }
 
 /**
@@ -15,7 +16,7 @@ interface AiVisualizationPreviewProps {
  */
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
-> = ({id, code, size}) => {
+> = ({id, code, size, durationMs}) => {
   const songMetadata = useSelector(
     (state: {dance: DanceState}) => state.dance.currentSongMetadata
   );
@@ -37,11 +38,11 @@ const AiVisualizationPreview: React.FunctionComponent<
     }
 
     if (!executorRef.current.isLivePreviewRunning()) {
-      executorRef.current.startLivePreview(code, songMetadata);
+      executorRef.current.startLivePreview(code, songMetadata, durationMs);
     } else {
-      executorRef.current.updateLivePreview(code, songMetadata);
+      executorRef.current.updateLivePreview(code, songMetadata, durationMs);
     }
-  }, [songMetadata, code]);
+  }, [songMetadata, code, durationMs]);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
