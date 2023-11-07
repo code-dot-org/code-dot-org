@@ -1,8 +1,4 @@
-require 'fileutils'
-
 require_relative '../../i18n_script_utils'
-
-Dir[File.expand_path('../hourofcode/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module Resources
@@ -28,3 +24,5 @@ module I18n
     end
   end
 end
+
+Dir[File.expand_path('../hourofcode/**/*.rb', __FILE__)].sort.each {|file| require file}
