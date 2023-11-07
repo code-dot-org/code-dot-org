@@ -4938,6 +4938,10 @@ id:
               display_name: Tahap 1
             lessonGroup-3:
               display_name: Tahap 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: templat rencana pelajaran hour of code
         drafting:
           name: drafting
         e-f-ramp:
@@ -6818,6 +6822,9 @@ id:
             lesson-3:
               name: Penilaian
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Pengantar Kegiatan Asinkron
           title: Hari 1
         virtual-pl-csp-summer-day2:
           lessons:

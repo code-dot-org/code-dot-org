@@ -4464,6 +4464,10 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: Star 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: ऑवर ऑफ कोड पाठ योजना टेम्पलेट
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -6093,6 +6097,9 @@ hi:
             lesson-3:
               name: मूल्यांकन
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: असिंक्रोनस गतिविधियों का परिचय
           title: दिन 1
         virtual-pl-csp-summer-day2:
           lessons:

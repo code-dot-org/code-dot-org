@@ -4518,7 +4518,14 @@ it:
               display_name: Introduzione
           title: 1° giorno
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introduzione alle attività asincrone
           title: 1° giorno
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: modello di piano delle lezioni basato sull'ora del codice
         self-paced-pl-csd-unit1-2-2023:
           title: 'Modulo 1: preparazione all''insegnamento della risoluzione dei problemi e dell''informatica'
           description: "Questo modulo di apprendimento professionale è progettato per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo suggerito:** 30 minuti"

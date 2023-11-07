@@ -6,10 +6,11 @@ hy:
   front_title: Միացեք պատմության մեջ ամենամեծ ուսումնական իրադարձությանը, %{campaign_date}
   coming_soon: Շուտով
   new: Նոր
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Ծառայված կոդի ժամերը
   hoc_stat_languages: Ուսանողները սովորում են ավելի քան 45 լեզուներով
   hoc_stat_hours_served: Ավելի քան 100 ուսանողներ փորձել են “Մեկ ժամ օրենսգրքի”
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Կին ուսանողները կազմում են “Hour of Code” -ի մասնակիցների 50%
+    -ը
   campaign_date_start_short: Դեկտր 5
   campaign_date_start_long: Դեկտեմբերի 5
   campaign_date_short: Դեկտեմբեր-5-11
@@ -50,10 +51,11 @@ hy:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Ինչ կարող եք ստեղծել.
   hoc2023_social_creativity_with_ai_desc: 'Օգտագործեք համակարգչային գիտություն ՝ AI-
     ի մասին ուսումնասիրելու և սովորելու համար:'
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: 'The Hour of Code- ը համակարգչային գիտության անվճար ներածություն
+    է ՝ զվարճալի գործունեության և տեսանյութերի միջոցով բոլոր հմտությունների մակարդակների
+    սովորողների համար: Այս տարվա ինչպես կոդավորման, այնպես էլ արհեստական ինտելեկտի
+    տոնակատարությանն աջակցում են ավելի քան 400 գործընկերներ, 20,000 մանկավարժներ և
+    58,000 կամավորներ:'
   hoc2022_header: Ուսումնասիրել, Խաղալ, Ստեղծել!
   social_hoc2022_explore_play_create: Օգտագործեք համակարգչային գիտություն է ուսումնասիրել,
     խաղալ, եւ ստեղծել!
@@ -66,9 +68,9 @@ hy:
     ը, Սելենա Գոմեսը, Դիսնեյի “Encanto” երաժշտությունը և այլն:'
   social_hoc2023_dance: 'Հատկանշվում են Բեյոնսեն, BTS- ը, Հարի Սթայլզը, Լիզզոն, Լիլ
     Նաս X- ը, Սելենա Գոմեսը, Դիսնեյի “Encanto” երաժշտությունը և այլն:'
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: 'Ժամանակն է զսպել ձեր իրերը: Ստեղծեք ձեր սեփական պարային
+    երեկույթը, որտեղ ներկայացված են Մայլի Սայրուսի, BTS-ի, Լիլ Նաս X-ի, Հարրի Սթայլսի,
+    Նիկի Մինաժի, Ռոզալիայի և այլնի հիթերը:'
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Իմացեք, թե այսօր, կառուցել պայծառ վաղը.
@@ -300,21 +302,23 @@ hy:
     խորհուրդներ, պատկերացումներ և աջակցություն ստանալու համար:'
   required_materials: Պահանջվող նյութեր.
   optional_materials: Լրացուցիչ նյութեր.
-  for_students: For students
+  for_students: Ուսանողների համար
   for_educators: Մանկավարժների համար
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Հյուրընկալեք կոդի ժամ
   call_to_action_hold_an_event: Անցկացնել միջոցառում
   call_to_action_register_event: Գրանցեք ձեր միջոցառումը
   call_to_action_register_your_hoc: Գրանցեք ձեր կոդի ժամը
   call_to_action_select_activity: Ընտրեք գործունեություն
+  call_to_action_select_coding_activity: Ընտրեք կոդավորման գործունեություն
   call_to_action_start_activity: Սկսեք գործունեություն
   call_to_action_get_certificates: Ստացեք վկայականներ
+  call_to_action_print_certificates: Տպել վկայագրեր
   call_to_action_go_beyond_hoc: Գնալ օրենսգրքի ժամից այն կողմ
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Ուսումնասիրեք Cod-ի ժամի բոլոր գործողությունները
+    Code.org- ից
+  call_to_action_start_dance_party: Սկսեք պարային երեկույթը
+  call_to_action_start_part_02: Սկսեք մաս երկրորդ
+  call_to_action_start_unplugged_activity: Սկսեք անջատված գործունեությունը
   call_to_action_view_promo_resources: Դիտեք գովազդային ռեսուրս
   call_to_action_learn_more: Իմանալ ավելին
   call_to_action_watch_now: Դիտեք հիմա
@@ -411,9 +415,9 @@ hy:
   call_to_action_view_faqs: Դիտեք ավելի շատ ՀՏՀ
   call_to_action_applications_open: Դիմումներն այժմ բացված են
   call_to_action_apply_cs_ambassador: Դիմել CS դեսպան լինելու համար
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Գալիս է շուտով!
+  call_to_action_learn_how_ai_works: Իմացեք, թե ինչպես է աշխատում AI
+  call_to_action_learn_about_ai: Իմացեք AI- ի մասին
   aria_label_call_to_action_hoc_how_to_educators: Դիտեք մանկավարժների ուղեցույցը
   aria_label_call_to_action_hoc_how_to_companies: Դիտեք ընկերությունների ուղեցույցը
   aria_label_call_to_action_hoc_how_to_districts: Դիտեք շրջանների ուղեցույցը
@@ -425,9 +429,10 @@ hy:
   aria_label_call_to_action_hoc_how_to_volunteers: Դիտեք կամավորների ուղեցույցը
   aria_label_call_to_action_hoc_how_to_virtual_events: Դիտեք վիրտուալ իրադարձությունների
     ուղեցույցը
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Սկսեք պարային երեկույթի գործունեությունը
+  aria_label_call_to_action_dance_02: Սկսեք պարային երեկույթի գործունեության երկրորդ
+    մասը
+  aria_label_call_to_action_dance_unplugged: Սկսեք Dance Party- ի անջատված գործունեությունը
   aria_label_call_to_action_afe: Իմացեք ավելին Amazon- ի ապագա ինժեների մասին
   aria_label_call_to_action_teaching_csf: Սկսեք դասավանդման համակարգչային գիտության
     հիմունքներ մասնագիտական ուսուցման ծրագիր
@@ -435,6 +440,8 @@ hy:
     հայտնագործություններ մասնագիտական ուսուցման ծրագիր
   aria_label_call_to_action_teaching_csp: Սկսել դասավանդման համակարգչային գիտության
     սկզբունքները մասնագիտական ուսուցման ծրագիր
+  aria_label_call_to_action_teaching_problem_solving: Սկսել Խնդիրների լուծման ուսուցման
+    և հաշվողական մասնագիտական ուսուցման ծրագիրը
   aria_label_call_to_action_teaching_csc: Սկսեք դասավանդման համակարգչային գիտության
     կապեր մասնագիտական ուսուցման ծրագիր
   aria_label_call_to_action_teaching_ai: Սկսեք դասավանդման AI և Machine Learning մասնագիտական
@@ -453,6 +460,8 @@ hy:
     հայտնագործությունների ուսումնական ծրագիրը
   aria_label_call_to_action_curriculum_csp: Ուսումնասիրեք Համակարգչային գիտության
     սկզբունքների ուսումնական ծրագիրը
+  aria_label_call_to_action_curriculum_problem_solving: Ուսումնասիրեք խնդիրների լուծման
+    և հաշվողական ուսումնական ծրագիրը
   aria_label_call_to_action_curriculum_csc: Ուսումնասիրեք համակարգչային գիտության
     կապեր ուսումնական ծրագիրը
   aria_label_call_to_action_curriculum_ai: Ուսումնասիրեք AI և մեքենայական ուսուցման
@@ -537,6 +546,7 @@ hy:
   curriculum_name_csf_teacher_led: Ուսուցիչը ղեկավարեց դասը
   curriculum_name_csd: Համակարգչային գիտության հայտնագործություններ
   curriculum_name_csp: Համակարգչային գիտության սկզբունքները
+  curriculum_name_problem_solving: Խնդիրների լուծում և հաշվարկ
   curriculum_name_csc: Համակարգչային գիտության կապեր
   curriculum_name_csa: AP® Համակարգչային գիտություն A
   curriculum_name_csa_ai: Ծրագրային ապահովման ճարտարագիտություն և համակարգչային տեսողություն
@@ -549,25 +559,25 @@ hy:
   curriculum_name_creating_apps_with_devices: Սարքերի հետ հավելվածների ստեղծում
   curriculum_name_poetry: Կոդավորում պոեզիայի հետ
   curriculum_name_dance_party: Պարի երեկույթ
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Շարունակեք պարել
+  curriculum_name_dance_party_unplugged: Պարային երեկույթն անջատված է
+  curriculum_name_dance_party_ai_edition: Պարային երեկույթ. AI հրատարակություն
   curriculum_name_problem_solving_computing: Խնդիրների լուծում և հաշվարկ
   curriculum_name_web_development: Վեբ ծրագրավորում
   curriculum_name_interactive_animations_games: Ինտերակտիվ անիմացիաներ և խաղեր
   curriculum_name_design_process: Նախագծման գործընթացը
   curriculum_name_data_society: Տվյալներ և հասարակություն
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Այս ներածական գործունեության, օգտագործել կոդը, որպեսզի
+    մի շարք գունագեղ կերպարների կիսանդրին մի քայլ անիմացիոն ֆոններ եւ upbeat երաժշտության.
+  curriculum_desc_dance_party_02: 'Ծրագրի ընդլայնված գաղափարներով անցեք ներածական
+    ձեռնարկից այն կողմ: Թերթիր ավելի բարդ պարային երեկույթների օրինակների գրադարան:'
+  curriculum_desc_dance_party_unplugged: 'Միացրեք ձեր ակոսը. համակարգիչ անհրաժեշտ
+    չէ: Իմացեք, թե ինչպես կոդավորման հասկացությունները, ինչպես իրադարձությունները,
+    կարող են օգտագործվել պարող խորեոգրաֆիայի համաժամացման համար:'
+  curriculum_desc_dance_party_ai_edition: 'Իմացեք արհեստական ինտելեկտի (AI) հասկացությունների
+    մասին ՝ ստեղծելու ձեր սեփական վիրտուալ պարային երեկույթը, որը ցուցադրում է այսօրվա
+    լավագույն արվեստագետներին: Հետ տասնյակ երգերի ընտրել, հասնել յուրաքանչյուր ուսանողի
+    անկախ նրանից, իրենց երաժշտական ճաշակի. Ժամանակն է զսպել ձեր իրերը:'
   curriculum_desc_csf: 'Տարրական ուսումնական ծրագրերի անվճար հավաքածու, որը ուսանողներին
     ծանոթացնում է համակարգչային գիտության հիմնարար հասկացություններին:'
   curriculum_desc_csf_express: 'Սովորեք ստեղծել համակարգչային ծրագրեր, զարգացնել խնդիրներ
@@ -705,12 +715,12 @@ hy:
   module_grade_grade_03: 3-րդ դասարան
   module_grade_grade_04: Դասարան 4
   module_grade_grade_05: 5-րդ դասարան
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Տարիքները 5-7
+  module_age_07: Տարիքներ 7+
+  module_age_07_11: 7-11 տարեկան
+  module_age_11: Տարիքներ 11+
+  module_age_13: Տարիքները 13+
+  module_age_all_age: Բոլոր տարիքները
   module_grade_k_5_teachers: K-5 Ուսուցիչները
   module_grade_6_10_teachers: 6-10 Ուսուցիչներ
   module_grade_9_12_teachers: 9-12 Ուսուցիչներ
@@ -742,6 +752,7 @@ hy:
   module_label_teaching_csf: Համակարգչային գիտության հիմունքների ուսուցում
   module_label_teaching_csd: Համակարգչային գիտության հայտնագործությունների ուսուցում
   module_label_teaching_csp: Համակարգչային գիտության դասավանդման սկզբունքները
+  module_label_teaching_problem_solving: Խնդիրների լուծման և հաշվարկման ուսուցում
   module_label_teaching_csc: Համակարգչային գիտության կապեր
   module_label_teaching_ai: AI- ի և մեքենայական ուսուցման ուսուցում
   module_label_teaching_maker_cp: Ուսուցանում է ստեղծել Apps հետ սարքերի (Circuit
@@ -810,8 +821,8 @@ hy:
   heading_csa_ai: Փնտրում բաներ անել հետո AP® քննության?
   heading_bring_cs_to_students: Համակարգչային գիտություն բերեք ուսանողներին
   heading_cs_ambassador_program: ՔՍ Դեսպանի Ծրագիր
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Առաջարկվող ուսանողական նախագծեր
+  heading_start_hoc_with_videos: Սկսեք ձեր Կոդի ժամը ոգեշնչող տեսանյութերով
   cs_ambassador_subhead: Եթե դուք ավագ դպրոցի աշակերտ կրքոտ է խրախուսել ավելի շատ
     երիտասարդ կանանց վերցնել համակարգչային գիտություն ձեր դպրոցում, ապա մենք պետք
     է ձեզ!
@@ -915,13 +926,14 @@ hy:
     սկզբունքների վերաբերյալ ամսական նամակներ ստանալու և ձեր մուտքի արկղին ուղարկված
     օգտակար հիշեցումներ, խորհուրդներ և թարմացումներ ստանալու համար:'
   subscribe_form_section_unsubscribe: 'Դուք կարող եք բաժանորդագրվել ցանկացած պահի:'
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Կոդավորեք պարային երեկույթ
+  dance_featuring_songs_by_short: Հատկանշական երգեր ՝
+  dance_featuring_songs_by_long: Dance Party- ը ներառում է երգեր ՝
+  dance_and_more: և ավելին
+  dance_choose_activity: Ընտրեք ձեր պարային երեկույթը
+  dance_afe_disclaimer: 'Այն արվեստագետները, որոնց երաժշտությունը օգտագործվում է այս
+    ձեռնարկը չեն հովանավորում կամ հավանություն է տալիս Amazon- ին որպես Code.org-
+    ի իրենց երաժշտության լիցենզավորման օգտագործման մաս:'
   blockchain_hero_heading: Ինչպես է աշխատում բլոկչեյնը
   blockchain_hero_desc: 'Սուզվեք բլոկչեյնի աշխարհ ՝ “Ինչպես է աշխատում Blockchain-
     ը”, մեր նոր տեսահոլովակների շարքը և ուղեկցող դասերը:'
@@ -13830,6 +13842,9 @@ hy:
   step_06: Քայլ 6
   step_07: Քայլ 7
   step_08: Քայլ 8
+  what: 'Ինչ:'
+  when: 'Երբ:'
+  where: 'Որտեղ:'
   hoc_how_to_top_heading: Կոդի ժամի ձեր ուղեցույցը
   hoc_how_to_top_desc: 'Հարմարեցված ուղեցույցներ կոդի ժամի լավագույն փորձի համար:'
   hoc_how_to_top_view_guide: Դիտեք ուղեցույցը
@@ -13877,75 +13892,88 @@ hy:
     որոնք նախատեսված են բոլոր տարիքի համար ավելի քան 45 լեզուներով:'
   hoc_how_to_step_label_plan: Պլանավորեք, թե որտեղ և երբ կկատարեք ձեր կոդի ժամը
   hoc_how_to_step_label_choose_activity: Ընտրեք ձեր գործունեությունը
+  hoc_how_to_step_label_choose_activities: Ընտրեք ձեր գործունեությունը
   hoc_how_to_step_label_test_activity: Փորձարկեք ձեր գործունեությունը
   hoc_how_to_step_label_register_event: Գրանցեք ձեր միջոցառումը
   hoc_how_to_step_label_tell: Ասեք ձեր աշակերտներին, դպրոցին և համայնքին
   hoc_how_to_step_label_get_coding: 'Ստացեք կոդավորում:'
   hoc_how_to_step_label_celebrate: Տոնել
   hoc_how_to_step_label_beyond_hoc: Կոդի ժամից այն կողմ
+  hoc_how_to_step_label_plan_your_event: Պլանավորեք ձեր միջոցառումը
+  hoc_how_to_step_label_plan_your_hour: Պլանավորեք ձեր ժամը
+  hoc_how_to_step_label_help_spread_word: Օգնեք տարածել խոսքը
   hoc_how_to_step_beyond_hoc_subhead: 'Այստեղ չի ավարտվում:'
-  hoc_how_to_step_beyond_hoc_desc: 'Համակարգչային գիտությունը պարտադիր չէ, որ ավարտվի
-    օրենսգրքի ժամով: Մինչ ծնողների 90% -ը ցանկանում է, որ իրենց երեխան համակարգչային
-    գիտություն սովորի, դպրոցների մեծ մասը դեռ չի սովորեցնում այն: Իմացեք, թե ինչպես
-    այսօր CS բերել ձեր երեխայի դպրոց:'
-  hoc_how_to_step_01_educators_subhead: 'Ընտրեք միջոցառման ժամանակ եւ տարածություն,
-    որը աշխատում է ձեր հասանելի ուսանողների եւ սարքերի թվի համար:'
-  hoc_how_to_step_01_educators_desc_01: 'Ի՞նչ տարածքներ կան ձեզ համար ձեր կոդի ժամն
-    անելու համար: Հաշվի առեք ձեր տարածքի տեխնոլոգիական հնարավորությունները և սարքերի
-    տեսակները, որոնց վրա ակնկալում եք, որ ձեր ուսանողները կաշխատեն: Ուսանողները կարող
-    են աշխատել ձեռնարկների վրա մեկ սարքի վրա, հերթափոխով օգտագործել ընդհանուր սարքը
-    կամ միասին փորձել ձեռնարկը դասարանի գրատախտակի վրա: Կան նույնիսկ unplugged ձեռնարկներ,
-    որոնք կարող են ավարտվել առանց սարքերի ընդհանրապես. Անջատված տարբերակները կարելի
-    է անել ցանկացած վայրում՝ նույնիսկ դրսում:'
-  hoc_how_to_step_01_educators_desc_02: 'Ամբողջ աշխարհում մարդիկ միանում են Հաուրի
-    կոդի տոնակատարությանը CS Կրթության շաբաթվա ընթացքում, %{campaign_date} երբ թողարկվում
-    են վերջին ձեռնարկներն ու գործողությունները: Բայց դուք կարող եք անել մեկ ժամ օրենսգրքի
-    տարվա ցանկացած օր:'
-  hoc_how_to_step_02_educators_desc_01: 'Ուսումնասիրեք գործողությունները ՝ հիմնվելով
-    ձեր խմբի տարիքի, փորձի, հետաքրքրությունների և այլնի վրա: Ուսանողների համար հայտնի
-    է փորձել ինքնուրույն ղեկավարվող ձեռնարկներ, չնայած շատ գործողություններ ներառում
-    են դասերի պլաններ ուսուցիչների համար՝ քննարկումը առաջնորդելու կամ գործունեությունը
-    ընդլայնելու համար:'
-  hoc_how_to_step_02_educators_desc_02: 'Որոշեք ժամանակից շուտ, եթե ցանկանում եք ընտրել
-    մեկ ձեռնարկ ձեր բոլոր ուսանողների համար, կամ թող յուրաքանչյուր երեխա ընտրի իր
-    սեփականը:'
-  hoc_how_to_step_02_educators_desc_03: 'Այս տարի դուք և ձեր ուսանողները կարող եք
-    [իմանալ ամեն ինչ AI- ի մասին] (%ai_url) ձեռնարկների, դասերի պլանների և մեր նոր
-    How AI Works վիդեո շարքի միջոցով:'
-  hoc_how_to_step_03_educators_desc_01: 'Փորձեք ինքներդ ձեռնարկը նախքան դասարան մտնելը,
-    որպեսզի կարողանաք պատասխանել հարցերին:'
-  hoc_how_to_step_03_educators_desc_02: 'Դուք կարող եք նաեւ փորձարկել ձեռնարկները
-    ուսանողական համակարգիչների կամ սարքերի ապահովելու համար, որ նրանք աջակցում ձայնային
-    եւ վիդեո. Ունեք ցածր թողունակություն: Պլանավորեք տեսանյութեր ցուցադրել դասի առջևի
-    մասում, այնպես որ յուրաքանչյուր ուսանող չի ներբեռնում իր սեփական տեսանյութերը:'
-  hoc_how_to_step_03_educators_desc_03: 'Մտածեք ձեր դասի համար ականջակալներ տրամադրելու
-    մասին կամ խնդրեք ուսանողներին բերել իրենց սեփականը, եթե ձեր ընտրած ձեռնարկը լավագույնս
-    աշխատում է ձայնի հետ:'
-  hoc_how_to_step_04_educators_desc_01: 'Երբ գրանցում եք ձեր Hour of Code միջոցառումը,
-    դուք կստանաք օգտակար նամակներ `նորություններով և խորհուրդներով `հաջող Hour of
-    Code հյուրընկալելու համար: Դա նաև այն է, թե ինչպես կարող եք տեղացի կամավորներին
-    տեղեկացնել, որ ձեր դպրոցը մասնակցում է: Կամավորները մեծ ռեսուրս են և կարող են
-    գալ խոսել ձեր դասի հետ համակարգչային գիտության մասին կամ օգնել ձեր ուսանողներին
-    կոդի ժամի գործողություններում:'
-  hoc_how_to_step_05_educators_desc_01: 'Ձեռք բերեք ձեր ուսանողներին միջոցառման համար
-    `կիսելով [ոգեշնչող տեսանյութեր] (%{videos_url}) կարեւորելով բազմազան մարդկանց
-    եւ ստեղծագործական ուղիները, որոնք համակարգչային գիտությունը կարող է օգտագործվել
-    իրական աշխարհում:'
-  hoc_how_to_step_05_educators_desc_02: 'Կիսվեք ձեր Hour of Code ծրագրերով այլ ուսուցիչների
-    հետ, ովքեր գուցե ցանկանան միանալ զվարճանքին: Սա նաև հիանալի հնարավորություն է
-    դիմել ձեր դպրոցի ծնողների ուսուցիչների ուսանողների ասոցիացիային կամ կիսվել ծնողների
-    տեղեկագրերով՝ տեղեկացնելով նրանց, թե ինչ են սովորում իրենց երեխաները:'
-  hoc_how_to_step_06_educators_desc_01: 'Ուղղեք ձեր ուսանողներին գործունեությանը,
+  hoc_how_to_step_plan_hour_desc_01: Ահա մի օրինակ օրակարգ ՝ սկսելու համար.
+  hoc_how_to_step_choose_activities_desc_01: 'Այս տարի “Կոդ ժամի” թեման է Ստեղծագործություն
+    արհեստական ինտելեկտով (AI): Անկախ նրանից, թե դա նոր հավելվածների և ալգորիթմների
+    կոդավորումն է, յուրահատուկ արվեստի ստեղծումը կամ խորեոգրաֆիայի պատրաստումը ՝ մեզ
+    պարելու համար, AI- ն նոր հնարավորություններ է բացում թվային արտահայտման համար,
+    որոնք ընդլայնում են ստեղծագործության մասին մեր պատկերացումները: Դարձրեք այս տարին
+    առանձնահատուկ ՝ ավարտելով կոդավորման գործունեություն ԵՒ սովորելով AI- ի մասին:'
+  hoc_how_to_step_choose_activities_desc_02: 'Նախ, [ուսումնասիրել հարյուրավոր կոդավորման
+    գործողություններ] (%{activities_url}) եւ ընտրեք մեկը `ելնելով ձեր խմբի տարիքից,
+    փորձից, հետաքրքրություններից եւ ավելին: [Այս ընտրված գործողությունները] (%{ai_activities_url})
+    ցուցադրում են արհեստական բանականությունը որպես հիմնական թեմա կամ դաս:'
+  hoc_how_to_step_choose_activities_desc_03: 'Այնուհետև, [իմացեք ամեն ինչ AI- ի մասին]
+    (%{ai_url}): Ուսանողները կարող են դիտել կարճ տեսանյութեր, որոնցում ներկայացված
+    են ոլորտի փորձագետներ, և կան ուղեկցող դասերի պլաններ ՝ գործունեությունը ընդլայնելու
+    և հետագա քննարկումը ուղղորդելու համար: Կամ, մենք առաջարկում ենք անվճար մասնագիտական
+    ուսուցում մանկավարժների համար `AI- ով և դրա մասին դասավանդման ապագան բացելու համար:'
+  hoc_how_to_step_educators_register_desc: 'Սկսեք ձեր ուսանողների հետ կոդի ժամ անելու
+    պարտավորությունից `գրանցելով ձեր միջոցառումը: Երբ գրանցվեք, դուք կստանաք օգտակար
+    նամակներ ՝ նորություններով և խորհուրդներով ՝ հաջող “Code Hour” հյուրընկալելու
+    համար: Դուք նույնպես կլինեք [տեղադրեք քարտեզի վրա] (%{map_url}): Մեր հավաքական
+    ջանքերի տեսանելի ամբողջությունը ցույց է տալիս համակարգչային գիտության շարժմանը
+    գլոբալ նվիրվածությունը, ինչը կօգնի մեզ թափ ստեղծել համակարգային փոփոխությունների
+    համար:'
+  hoc_how_to_step_educators_plan_desc_01: 'Նախքան ձեր միջոցառումը, փորձեք աշխատանքները
+    ինքներդ, որպեսզի կարողանաք ապահովել, որ դրանք աշխատում են ուսանողական սարքերի
+    վրա, և դուք պատրաստ եք պատասխանել հարցերին: Ունե՞ք ցածր թողունակություն: Պլանավորեք
+    տեսանյութեր ցուցադրել դասի առջևի մասում, այնպես որ յուրաքանչյուր աշակերտ չի ներբեռնում
+    իր սեփական տեսանյութերը:'
+  hoc_how_to_step_educators_plan_desc_02: Մարդիկ ամբողջ աշխարհում հաճախ միանում են
+    Hour of Code տոնակատարությանը Համակարգչային գիտության կրթության շաբաթվա ընթացքում
+    (%{campaign_date}), բայց դուք կարող եք անել Hour of Code տարվա ցանկացած օր!
+  hoc_how_to_step_educators_plan_desc_03: 'Ընտրեք տարածք, որն աշխատում է ուսանողների
+    թվի եւ սարքերի համար, որոնք դուք ունեք մատչելի: Ուսանողները կարող են փորձել գործունեությունը
+    առանձին սարքերում, հերթով կիսելով սարքը, կամ որպես դասի գրատախտակի վրա: Կան նույնիսկ
+    unplugged գործունեությունը, որը կարող է ավարտվել առանց սարքերի ընդհանրապես, այնպես
+    որ դրանք կարող են նույնիսկ անել դրսում!'
+  hoc_how_to_step_educators_spread_word_desc_01: 'Օգնեք մեզ տարածել խոսքը ձեր համայնքում
+    [այս էլփոստի կաղապարները] (%{email_url}) միջոցով:'
+  hoc_how_to_step_educators_spread_word_desc_02: 'Խնդրեք երկու գործընկերներին [register](%{register_url})
+    և հյուրընկալել “Հուր of Code” գործունեություն: Նրանք, իրենց հերթին, կարող են ապահովել
+    երկու գործընկերների, ովքեր կարող են ապահովել երկու գործընկերների եւ այլն։'
+  hoc_how_to_step_educators_spread_word_desc_03: 'Խնդրեք ձեր տնօրենին [կազմակերպել
+    դպրոցական միջոցառում] (%{host_url}): Երբ մասնակցում են 300 կամ ավելի երեխաներ,
+    կարող եք ստանալ հատուկ ներգրավվածության հավաքածու ՝ շապիկներով, պաստառներով, նոութբուքի
+    կպչուն պիտակներով և ավելին: [Կիսվեք ձեր ամբողջ դպրոցական միջոցառումների պլանով]
+    (%{share_url}) որակավորվելու համար:'
+  hoc_how_to_step_educators_spread_word_desc_04: 'Ձեռք բերեք ձեր դպրոցի ծնողների ուսուցիչների
+    ուսանողների ասոցիացիային կամ կիսվեք ծնողների տեղեկագրերով ՝ տեղեկացնելով նրանց,
+    թե ինչ են սովորում իրենց երեխաները:'
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Սկսեք [ոգեշնչող տեսանյութով]
+    ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Ուսանողները կատարում
+    են իրենց կոդավորման գործունեությունը'
+  hoc_how_to_step_educators_plan_hour_desc_04: 10:45-10:55. Ուսանողները սովորում են
+    AI- ի մասին
+  hoc_how_to_step_educators_plan_hour_desc_05: Ժամը 10:55-11:00. Ուսուցիչը հանդես
+    է եկել փակման խոսքով
+  hoc_how_to_step_educators_get_coding_desc: 'Ուղղեք ձեր ուսանողներին գործունեությանը,
     գուցե ՝ կիսելով տախտակի հղումը կամ ձեր դասարանի ուսուցման կառավարման համակարգի
     միջոցով: Ձեր ուսանողները կարող են բախվել մարտահրավերների, դա լավ է: Ծրագրել սովորելը
     նման է նոր լեզու սովորելուն. դուք անմիջապես չեք տիրապետի: Եթե չգիտեք պատասխանը,
     կարող եք միասին պարզել այն:'
-  hoc_how_to_step_07_educators_desc_01: 'Համոզվեք, որ տոնեք հաջողությունը: Կիսվեք
-    ձեր “Կոդի ժամի” միջոցառման լուսանկարներով և տեսանյութերով սոցիալական ցանցերում:
-    Օգտագործեք #HourOfCode եւ @codeorg, որպեսզի մենք կարողանանք կարեւորել ձեր հաջողությունը,
-    նույնպես!'
-  hoc_how_to_step_07_educators_desc_02: 'Դուք կարող եք նաև տպել վկայականներ ձեր ուսանողների
-    համար ՝ իրենց ձեռքբերումները ցույց տալու համար:'
+  hoc_how_to_step_educators_celebrate_desc: 'Ձեր միջոցառումից հետո տպեք ավարտի վկայականներ
+    և շնորհավորեք ձեր ուսանողներին: Կիսվեք ձեր Hour of Code միջոցառման լուսանկարներով
+    և տեսանյութերով և ցուցադրեք ձեր աշակերտների ձեռքբերումները ՝ օգտագործելով #HourOfCode
+    և @codeorg:'
+  hoc_how_to_step_educators_beyond_desc: 'Համակարգչային գիտությունը պարտադիր չէ, որ
+    ավարտվի Կոդի ժամով: Մինչ ծնողների 90% -ը ցանկանում է, որ իրենց երեխան համակարգչային
+    գիտություն սովորի, դպրոցների մեծ մասը դեռ այն չի սովորեցնում: Օգնելու համար մեր
+    ուսումնական ծրագիրը վեբ վրա հիմնված է և անվճար է օգտագործել, ընդմիշտ: Իմացեք,
+    թե ինչպես այսօր բերել CS ձեր դպրոց:'
   hoc_ai_top_desc: 'Յուրաքանչյուր ոք կարող է սովորել AI- ի մասին, անկախ նրանից, թե
     դուք դասարանում ուսանող եք, թե մանկավարժ, որը բացում է AI- ով և դրա մասին դասավանդման
     ապագան:'
@@ -14719,66 +14747,72 @@ hy:
     մշակողների, դպրոցների ղեկավարների և անձնակազմի համար՝ իրենց դպրոցներում AI- ի
     վերաբերյալ նախնական ուղեցույց մշակելու համար:'
   teach_ai_button_label: Դիտեք գործիքակազմը
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Սովորում 11 և բարձր տարիքի համար
+  middle_high_page_main_description: 'Բացահայտեք համակարգչային գիտության աշխարհը գրավիչ
+    տեսանյութերով, ինքնուրույն ձեռնարկներով, ծրագրավորման գործունեությամբ և ավելին:'
+  middle_high_page_hero_title: Սկսեք կոդի ժամից
+  middle_high_page_hero_description: 'Իմացեք համակարգչային գիտության հիմունքները ՝
+    կոդի ժամի անվճար գործունեությամբ, որոնցում ներկայացված են կոդավորման բլոկներ քաշել
+    և թողնել: Ընտրելու համար կան հարյուրավոր ժամյա տարբերակներ:'
+  middle_high_page_hourofcode_link: Ուսումնասիրեք “Կոդի ժամի” գործունեությունը
+  middle_high_page_modules_title: Ծրագրավորման մոդուլներ տարեց ուսանողների համար
+  middle_high_page_modules_description: 'Հարմարեցված մեր CS հայտնագործությունների
+    և CS սկզբունքների դասընթացներից ՝ միջին և ավագ դպրոցների ուսանողների համար այս
+    կարճ, ինքնուրույն մոդուլները հիանալի միջոց են սովորելու հասկացություններ, որոնք
+    ընդգրկում են ծրագրավորման բոլոր լեզուներն ու գործիքները:'
+  middle_high_page_modules_card_title_1: Խաղային լաբորատորիայի ներածություն
+  middle_high_page_modules_card_title_2: Կրիայի ծրագրավորում հավելվածների լաբորատորիայում
+  middle_high_page_modules_card_title_3: Իրադարձությունների վրա հիմնված ծրագրավորում
+    հավելվածների լաբորատորիայում
+  middle_high_page_modules_card_description_1: 'Շարժվեք ձեր սեփական տեմպերով մեր Game
+    Lab միջավայրի այս ներածությունում, երբ ծրագրում եք անիմացիաներ, ինտերակտիվ արվեստ
+    և խաղեր:'
+  middle_high_page_modules_card_description_2: 'Բացեք JavaScript- ով հարուստ, ինտերակտիվ
+    ծրագրեր պատրաստելու հնարավորությունը App Lab- ում:'
+  middle_high_page_modules_card_description_3: 'Գնացեք ձեր սեփական տեմպերով App Lab
+    ծրագրավորման միջավայրի այս ներածությամբ, որում ուսանողները օգտագործում են JavaScript
+    ինտերակտիվ հավելվածներ ստեղծելու համար:'
+  middle_high_page_modules_card_link: Փորձեք
+  middle_high_page_make_your_own_title: Կազմեք ձեր սեփական ծրագրերը, խաղերը և վեբ
+    էջերը
+  middle_high_page_make_your_own_description: 'Բացի դասընթացներից, մենք ունենք ծրագրավորման
+    գործիքներ, որոնք թույլ են տալիս ուսումնասիրել ձեր ստեղծագործականությունը և զարմանալի
+    բան անել: '
   middle_high_page_make_your_own_card_title_1: Հավելվածների լաբորատորիա
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Խաղային լաբորատորիա
+  middle_high_page_make_your_own_card_title_3: Վեբ լաբորատորիա
+  middle_high_page_make_your_own_card_descrpition_1: 'App Lab- ը ծրագրավորման միջավայր
+    է, որտեղ դուք կարող եք պատրաստել պարզ հավելվածներ։ Նախագծեք հավելված, կոդը JavaScript-ում
+    կամ բլոկներով կամ տեքստով, ապա կիսեք ձեր հավելվածը վայրկյանների ընթացքում:'
+  middle_high_page_make_your_own_card_descrpition_2: 'Game Lab ծրագրավորման միջավայր
+    է, որտեղ դուք կարող եք կատարել պարզ անիմացիաներ և խաղեր օբյեկտների և կերպարների
+    հետ, որոնք փոխազդում են միմյանց հետ:'
+  middle_high_page_make_your_own_card_descrpition_3: 'Web Lab ծրագրավորման միջավայր
+    է, որտեղ դուք կարող եք կազմել պարզ վեբ էջեր օգտագործելով HTML եւ CSS. Նախագծեք
+    ձեր վեբ էջերը եւ կիսեք ձեր կայքը վայրկյանների ընթացքում:'
   middle_high_page_make_your_own_card_link: Իմանալ ավելին
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Լրացուցիչ ռեսուրսներ
+  middle_high_page_additional_resources_description: 'Համակարգչային գիտությունը հետագայում
+    ուսումնասիրելու շատ եղանակներ կան: Թերթեք մեր վիդեո գրադարանը կամ իմացեք ավելին
+    համակարգչային գիտության ոլորտում հետաքրքիր կարիերայի մասին:'
+  middle_high_page_video_library_title: Բացահայտեք մեր Տեսագրադարանը
+  middle_high_page_video_library_description: 'Իմացեք համակարգչային գիտության հիմունքները
+    կարճ 5-10 րոպեանոց տեսանյութերի միջոցով այնպիսի թեմաներով, ինչպիսիք են արհեստական
+    բանականությունը, ինտերնետը, ինչպես են համակարգիչները աշխատում, ինչպես չթալանել,
+    բլոկչեյնը, կարիերան և ավելին:'
+  middle_high_page_video_library_link: Դիտեք վիդեո գրադարանը
+  middle_high_page_cs_journeys_title: Գնալ ավելի առաջ CS Journeys- ի միջոցով
+  middle_high_page_cs_journeys_description: 'Ձեր համակարգչային գիտության ճանապարհորդության
+    հաջորդ քայլը կատարեք: Ուսումնասիրեք կարիերան, մենթորության հնարավորությունները,
+    առցանց դասընթացները, կրթաթոշակները, պրակտիկաները և ավելին:'
+  middle_high_page_cs_journeys_link: Ուսումնասիրեք CS ճանապարհորդությունները
+  middle_high_page_cs_title: Համակարգչային գիտություն դասարանում
+  middle_high_page_cs_description: 'Այս դասընթացները պետք է ղեկավարվեն ուսուցչի կողմից:
+    Եթե ցանկանում եք տեսնել, որ դրանք դասավանդվեն ձեր դպրոցում, մտածեք ուսուցչի հետ
+    աշխատել՝ դրանք ձեր դասարան բերելու համար:'
+  middle_high_page_cs_card_title_1: CS հայտնագործություններ
+  middle_high_page_cs_card_title_2: CS սկզբունքները
+  middle_high_page_cs_card_title_3: AP Համակարգչային գիտություն Ա
   middle_high_page_cs_card_description_1: 'Տարրական ուսումնական ծրագրերի անվճար հավաքածու,
     որը ուսանողներին ծանոթացնում է համակարգչային գիտության հիմնարար հասկացություններին
     և մարտահրավեր է նետում նրանց ՝ ուսումնասիրելու, թե ինչպես կարող են համակարգչությունն
@@ -14790,34 +14824,34 @@ hy:
   middle_high_page_cs_card_description_3: Ներկայացնել ուսանողներին ծրագրային ապահովման
     ճարտարագիտության եւ օբյեկտ կողմնորոշված դիզայնի, իսկ նրանք սովորում են Java ծրագրավորման
     լեզուն այս անվճար ուսումնական ծրագրի համար AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Ուսումնասիրեք CS Դիկովերիաները
   middle_high_page_cs_link_2: Ուսումնասիրեք CS սկզբունքները
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Ուսումնասիրեք CSA
+  elemeentary_page_main_title: Սովորում 5-ից 11 տարեկանների համար
+  elementary_page_main_description: 'Բացահայտեք համակարգչային գիտության աշխարհը գրավիչ
+    տեսանյութերով, ինքնուրույն ձեռնարկներով, ծրագրավորման գործունեությամբ և ավելին:'
+  elementary_page_own_pace_title: Շարունակեք սովորել ձեր սեփական տեմպերով
+  elementary_page_own_pace_description: Ստեղծել նկարներ, խաղեր, եւ ավելի այս երկու
+    գերազանց տարբերակներ ուսանողների համար սկսում են իրենց սեփական սովորելու հիմունքները
+    համակարգչային գիտության.
+  elementary_page_own_pace_card_title_1: Նախաընթերցողի էքսպրես դասընթաց
+  elementary_page_own_pace_card_title_2: Էքսպրես դասընթաց
+  elementary_page_own_pace_card_description_1: 'Սովորեք համակարգչային գիտություն ձեր
+    սեփական տեմպերով: Սովորեք ստեղծել համակարգչային ծրագրեր, զարգացնել խնդիրների լուծման
+    հմտություններ և աշխատել զվարճալի մարտահրավերների միջոցով: Կատարեք խաղեր և ստեղծագործական
+    նախագծեր ընկերների, ընտանիքի և ուսուցիչների հետ կիսվելու համար:'
+  elementary_page_own_pace_link_1: Սկսեք նախաընթերցողի դասընթացը
+  elementary_page_own_pace_link_2: Սկսեք էքսպրես դասընթաց
+  elementary_page_make_your_own_games_title: Կատարեք ձեր սեփական անիմացիաները և խաղերը
   elementary_page_make_your_own_games_card_title_1: Սփրայթ լաբորատորիա
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: 'Ստեղծագործական լինելու
+    ժամանակն է: Օգտագործեք բլոկի վրա հիմնված կոդավորում ՝ Sprite Lab- ում հիմար, քաղցր
+    կամ արտաքին տիեզերական բան դարձնելու համար: Միակ սահմանը ձեր երևակայությունն է:'
+  elementary_page_make_your_own_games_link: Փորձեք Սփրայթ լաբորատորիան
+  elementary_page_computer_science_title: Համակարգչային գիտություն դասարանում
+  elementary_page_computer_science_description: 'Այս դասընթացները պետք է ղեկավարվեն
+    ուսուցչի կողմից: Եթե ցանկանում եք տեսնել, որ դրանք դասավանդվեն ձեր դպրոցում, խնդրեք
+    ծնողին կամ խնամակալին աշխատել ուսուցչի հետ՝ նրանց ձեր դասարան բերելու համար:'
   elementary_page_computer_science_card_title_1: Համակարգչային գիտության հիմունքներ
   elementary_page_computer_science_card_title_2: Համակարգչային գիտության կապեր
   elementary_page_computer_science_description_1: 'Տարրական ուսումնական ծրագրերի անվճար
