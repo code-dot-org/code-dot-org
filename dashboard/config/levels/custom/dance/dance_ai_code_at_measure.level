@@ -79,7 +79,6 @@
       "thunder_imaginedragons",
       "aire_jessejoy",
       "sorry_justinbieber",
-      "somebodylikeyou_keithurban",
       "bornthisway_ladygaga",
       "oldtownroadremix_lilnasx",
       "2beloved_lizzo",
@@ -89,7 +88,16 @@
       "heyya_outkast",
       "highhopes_panicatthedisco",
       "cheapthrills_sia",
-      "iliketomoveit_william"
+      "iliketomoveit_william",
+      "introtoshamstep_47SOUL",
+      "jinglebells_hollywoodchristmas",
+      "dynamite_bts",
+      "wedonttalkaboutbruno_encanto",
+      "dernieredanse_indila",
+      "kidzbop_ificanthaveyou_shawnmendes",
+      "cantholdus_macklemore",
+      "starships_nickiminaj",
+      "despedidaycierre_vanesamartin"
     ],
     "validation_code": "if(!World.validationState.startingStage){\r\n  World.validationState.startingStage={};\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 0.4) {\r\n  // If the AI block is in the user code but the parameters are not defined, fail immediately.\r\n  // Note that if the user adds the AI block to the 'at 4 measures' block and doesn't add params, this\r\n  // error will NOT be triggered. It is only triggered when the AI block is actually executed.\r\n  if (World.aiBlockHasInvalidParams) {\r\n    console.log('failed bc an AI block has undefined params.');\r\n    nativeAPI.fail(\"danceAiFeedbackAiBlockNoParametersOnEvent\");\r\n  }\r\n}\r\n\r\n// Get \"current\" stage at the beginning of the 1st measure\r\nif (nativeAPI.getTime(\"measures\") > 1){\r\n  if (World.validationState.startingStage[0] === undefined) {\r\n    World.validationState.startingStage[0] = World.bg_effect;\r\n    World.validationState.startingStage[1] = World.fg_effect;\r\n    World.validationState.startingStage[2] = nativeAPI.getCurrentPalette();\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 3) {\r\n  //check for new background after start of the 2nd measure\r\n  if (World.validationState.startingStage[0] === World.bg_effect && World.validationState.startingStage[1] === World.fg_effect && World.validationState.startingStage[2] === nativeAPI.getCurrentPalette()) {\r\n    console.log('Failed bc you did not change the stage at 2 measures');\r\n    nativeAPI.fail(\"danceAiFeedbackEffectChangeAfterMeasures\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}\r\n\r\n",
     "encrypted_examples": [
@@ -97,7 +105,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:29.339+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2_draft3\"},{\"changed_at\":\"2023-11-02 21:07:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 21:53:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:23:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:46:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:29.339+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2_draft3\"},{\"changed_at\":\"2023-11-02 21:07:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 21:53:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:23:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:46:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:51:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 22:04:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"song_selection\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 22:05:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 22:09:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
