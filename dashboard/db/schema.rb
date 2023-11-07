@@ -1485,7 +1485,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.integer "source_course_offering_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "receives_marketing"
+    t.boolean "receives_marketing", default: false, null: false
   end
 
   create_table "programming_classes", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
