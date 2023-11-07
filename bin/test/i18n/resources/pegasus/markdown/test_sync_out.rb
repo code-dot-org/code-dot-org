@@ -5,8 +5,8 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
   let(:described_class) {I18n::Resources::Pegasus::Markdown::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
-  let(:i18n_locale) {'expected_i18n_locale'}
+  let(:crowdin_locale) {'Test'}
+  let(:i18n_locale) {'te-ST'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
   let(:is_source_language) {false}
 
