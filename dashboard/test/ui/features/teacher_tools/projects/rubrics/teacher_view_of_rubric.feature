@@ -30,12 +30,15 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I press keys "Nice work Lillian!" for element "#ui-teacherFeedback"
   And I wait to see "#ui-autosaveConfirm"
   And I click selector "#ui-submitFeedbackButton" once I see it
+  And I wait to see "#ui-feedback-submitted-timestamp"
+  And I scroll to "#ui-feedback-submitted-timestamp"
   And I wait until element "p:contains(Feedback submitted at)" is visible
 
   # Check that the teacher can see submitted feedback
   Then I reload the page
   And I click selector "#ui-floatingActionButton" once I see it
   And I click selector "strong:contains(Code Quality)" once I see it
+  And I scroll to "#ui-teacherFeedback"
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
   # The teacher given feedback is recieved by the student
