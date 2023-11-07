@@ -656,11 +656,13 @@ pl:
             '"rand"': "(Losowy)"
             '"circles"': Kółka
             '"quads"': Kąty
+            '"blooming_petals"': Kwitnące płatki
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
             '"disco_ball"': Kula dyskotekowa
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
+            '"frosted_grid"': Matowa siatka
             '"growing_stars"': Powiększające się gwiazdy
             '"higher_power"': Higher Power
             '"swirl"': Hypno
@@ -685,6 +687,7 @@ pl:
             '"rave"': Czarno-białe
             '"cool"': Chłodny
             '"electronic"': Elektroniczny
+            '"grayscale"': Skala szarości
             '"iceCream"': Lody
             '"default"': Jasne
             '"neon"': Neon
@@ -697,6 +700,7 @@ pl:
             '"sunrise"': Wschód słońca
             '"sunset"': Zachód słońca
             '"tropical"': Tropikalne
+            '"twinkling"': Migotanie
             '"vintage"': Starocie
             '"warm"': Ciepły
             '"winter"': Zima

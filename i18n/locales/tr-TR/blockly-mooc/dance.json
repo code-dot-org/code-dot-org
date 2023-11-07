@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Dansçıyı daha küçük yapmak için `arkaplan_dançısı2 boyut ayarla` bloğunu kullanın.",
   "danceFeedbackUseSetTint": "Dansçının rengini değiştirmek için `renk tonu ayarla` bloğunu kullanın.",
   "danceFeedbackUseStartMapping": "Programınıza <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloğunu eklemeyi deneyin.",
+  "danceFeedbackKeepCoding": "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
   "measure": "Ölçü:"
 }

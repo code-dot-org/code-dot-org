@@ -14,5 +14,6 @@
   "danceFeedbackTooManyDancers": "होसियार हुनुहोस् । यदि तपाईंले प्रत्येक २ मापन भित्र नयाँ ब्लक राख्नुभयो भने, तपाईंले धेरै डान्सरहरु सिर्जना गर्नुहुनेछ ।",
   "danceFeedbackUseSetSize": "त्यो डान्सरलाई सानो बनाउन `set backup_dancer2 size`  खण्ड प्रयोग गर्नुहोस् ।",
   "danceFeedbackUseSetTint": "डान्सरको टिन्ट परिवर्तन गर्न `set tint` खण्ड प्रयोग गर्नुहोस् ।",
+  "danceFeedbackKeepCoding": "Keep coding! Something's not quite right yet.",
   "measure": "मापन गर्नुहोस्:"
 }

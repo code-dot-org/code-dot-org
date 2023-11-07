@@ -17,5 +17,6 @@
   "danceFeedbackTooManyDancers": "သတိပြုပါ။ အကယ်၍ သင်သည် block အသစ်တစ်ခုစီတိုင်းကို အတိုင်းအတာ နှစ်ဆစီတိုင်းမှာ ပြုလုပ်ပါက အကသမား အများကြီးဖန်တီးနိုင်မည်ဖြစ်သည်။ ",
   "danceFeedbackUseSetSize": "'set backup_dancer2 size` block ကိုအသုံးပြုပြီး အကသမား ပိုသေးအောင်လုပ်ပါ။",
   "danceFeedbackUseSetTint": " 'set tint'  block ကိုအသုံးပြုပြီး အကသမား၏ အရောင်ပြောင်းပါ။ (or) အကသမား၏ အရောင်ပြောင်းလဲရန်  'set tint'  block ကိုအသုံးပြုပါ။",
-  "danceFeedbackUseStartMapping": "  <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>  block ကို သင့်ပရိုဂရမ်တွင်ထည့်ကြည့်ပါ။  "
+  "danceFeedbackUseStartMapping": "  <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>  block ကို သင့်ပရိုဂရမ်တွင်ထည့်ကြည့်ပါ။  ",
+  "danceFeedbackKeepCoding": "ဆက်လုပ်ပါ တစ်ခုခုလွဲနေပါသေးတယ်."
 }

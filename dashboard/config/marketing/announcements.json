@@ -2,8 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/courses": "ai-launch-2023",
-    "/home": "state-of-cs-2023"
+    "/courses": "hoc-2023",
+    "/home": "hoc-2023"
   },
   "banners": {
     "csleadersprize": {
@@ -168,6 +168,14 @@
       "buttonText": "Read report",
       "buttonUrl": "https://advocacy.code.org/stateofcs",
       "buttonId": "state-of-cs-2023"
+    },
+    "hoc-2023": {
+      "image": "/shared/images/fill-540x300/social-media/hoc2023_social.png",
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/hourofcode",
+      "buttonId": "hoc-2023"
     }
   }
 }

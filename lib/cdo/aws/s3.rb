@@ -245,7 +245,7 @@ module AWS
     # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
     # @param dry_run [Boolean] If true, do not update seeded object tracking.
-    def self.seed_from_file(bucket, key, dry_run = false)
+    def self.seed_from_file(bucket, key, dry_run: false)
       etag = create_client.head_object({bucket: bucket, key: key}).etag
       unless SeededS3Object.exists?(bucket: bucket, key: key, etag: etag)
         AWS::S3.process_file(bucket, key) do |filename|
@@ -320,7 +320,7 @@ module AWS
       # @param [Bool] make_public will cause the uploaded files to be given
       #        public_read permission, and public URLs to be returned.  Otherwise,
       #        files will be private and short-term presigned URLs will be returned.
-      def initialize(bucket, prefix, make_public = false)
+      def initialize(bucket, prefix, make_public: false)
         @bucket = bucket
         @prefix = prefix
         @make_public = make_public

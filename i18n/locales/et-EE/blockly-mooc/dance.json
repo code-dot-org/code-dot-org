@@ -11,5 +11,6 @@
   "danceFeedbackUseSetSize": "Kasuta plokki \"määra tausta_tantsija2 suurus\", et tantsija väiksemaks muuta.",
   "danceFeedbackUseSetTint": "Kasuta `määra toon` plokki, et muuta tantsija värvi.",
   "danceFeedbackUseStartMapping": "Proovi lisada <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">parempoolne_ananass</title><title name=\"PROPERTY\">\"suurus\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> plokk oma programmile.",
+  "danceFeedbackKeepCoding": "Kirjuta edasi! Miski ei ole veel päris õigesti.",
   "measure": "Ühik:"
 }

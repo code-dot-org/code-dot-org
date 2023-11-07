@@ -292,8 +292,10 @@ lt:
   call_to_action_register_event: Užregistruokite savo renginį
   call_to_action_register_your_hoc: Užregistruokite savo kodo valandą
   call_to_action_select_activity: Pasirinkite veiklą
+  call_to_action_select_coding_activity: Pasirinkite kodavimo veiklą
   call_to_action_start_activity: Pradėkite veiklą
   call_to_action_get_certificates: Gauti sertifikatus
+  call_to_action_print_certificates: Spausdinti sertifikatus
   call_to_action_go_beyond_hoc: Peržengti kodo valandą
   call_to_action_explore_all_hoc_activities: Peržiūrėkite visas “Hour of Code” veiklas
     iš “Code.org”
@@ -420,6 +422,8 @@ lt:
     profesinio mokymosi programą
   aria_label_call_to_action_teaching_csp: Pradėkite mokymo kompiuterių mokslo principų
     profesinio mokymosi programą
+  aria_label_call_to_action_teaching_problem_solving: Pradėkite Mokymo problemų sprendimo
+    ir kompiuterijos profesinio mokymosi programą
   aria_label_call_to_action_teaching_csc: Pradėkite profesinio mokymosi programą “Teaching
     Computer Science Connections”
   aria_label_call_to_action_teaching_ai: Pradėkite “Teaching AI” ir “Machine Learning”
@@ -438,6 +442,8 @@ lt:
     mokymo programą
   aria_label_call_to_action_curriculum_csp: Naršykite kompiuterių mokslo principų
     mokymo programą
+  aria_label_call_to_action_curriculum_problem_solving: Susipažinkite su problemų
+    sprendimo ir skaičiavimo mokymo programa
   aria_label_call_to_action_curriculum_csc: Naršykite kompiuterių mokslo jungčių mokymo
     programą
   aria_label_call_to_action_curriculum_ai: Naršykite AI ir mašininio mokymosi mokymo
@@ -520,6 +526,7 @@ lt:
   curriculum_name_csf_teacher_led: Mokytojas vedė pamoką
   curriculum_name_csd: Kompiuterių mokslo atradimai
   curriculum_name_csp: Kompiuterių mokslo principai
+  curriculum_name_problem_solving: Problemų sprendimas ir kompiuterija
   curriculum_name_csc: Kompiuterių mokslo jungtys
   curriculum_name_csa: AP® Kompiuterių Mokslas
   curriculum_name_csa_ai: Programinės įrangos inžinerija ir kompiuterių vizija
@@ -718,6 +725,7 @@ lt:
   module_label_teaching_csf: Kompiuterių mokslo pagrindų mokymas
   module_label_teaching_csd: Mokymo kompiuterių mokslo atradimai
   module_label_teaching_csp: Mokymo kompiuterių mokslo principai
+  module_label_teaching_problem_solving: Mokymas problemų sprendimo ir kompiuterijos
   module_label_teaching_csc: Mokymo Kompiuterių Mokslas Ryšiai
   module_label_teaching_ai: Mokymo dirbtinio intelekto ir mašininio mokymosi
   module_label_teaching_maker_cp: Mokymas kurti programas su įrenginiais (“Circuit
@@ -13418,6 +13426,9 @@ lt:
   step_06: Žingsnis 6
   step_07: Žingsnis 7
   step_08: 8 žingsnis
+  what: 'Kas:'
+  when: 'Kada:'
+  where: 'Kur:'
   hoc_how_to_top_heading: Jūsų kodo valandos vadovas
   hoc_how_to_top_desc: Pritaikyti patarimai, kaip gauti geriausią kodo valandos patirtį.
   hoc_how_to_top_view_guide: Peržiūrėti vadovą
@@ -13463,69 +13474,85 @@ lt:
     visoms amžiaus grupėms, pasirinkimą daugiau nei 45 kalbomis.
   hoc_how_to_step_label_plan: Suplanuokite, kur ir kada atliksite savo kodo valandą
   hoc_how_to_step_label_choose_activity: Pasirinkite savo veiklą
+  hoc_how_to_step_label_choose_activities: Pasirinkite savo veiklą
   hoc_how_to_step_label_test_activity: Išbandykite savo veiklą
   hoc_how_to_step_label_register_event: Užregistruokite savo renginį
   hoc_how_to_step_label_tell: Papasakokite savo mokiniams, mokyklai ir bendruomenei
   hoc_how_to_step_label_get_coding: Gaukite kodavimą!
   hoc_how_to_step_label_celebrate: Švęsti
   hoc_how_to_step_label_beyond_hoc: Už kodo valandos
+  hoc_how_to_step_label_plan_your_event: Suplanuokite savo renginį
+  hoc_how_to_step_label_plan_your_hour: Suplanuokite savo valandą
+  hoc_how_to_step_label_help_spread_word: Padėkite skleisti žodį
   hoc_how_to_step_beyond_hoc_subhead: Čia nesibaigia!
-  hoc_how_to_step_beyond_hoc_desc: Kompiuterių mokslas neturi baigtis kodo valanda!
-    Nors 90% tėvų nori, kad jų vaikas mokytųsi informatikos, dauguma mokyklų vis dar
-    to nemoko. Sužinokite, kaip šiandien atsinešti CS į savo vaiko mokyklą.
-  hoc_how_to_step_01_educators_subhead: Pasirinkite renginio laiką ir erdvę, kuri
-    tinka turimų studentų ir įrenginių skaičiui.
-  hoc_how_to_step_01_educators_desc_01: Kokias erdves galite atlikti savo kodo valandą?
-    Apsvarstykite savo erdvės technines galimybes ir prietaisų tipus, su kuriais tikitės,
-    kad jūsų studentai dirbs. Studentai gali dirbti su vadovėliais viename įrenginyje,
-    paeiliui naudoti bendrą įrenginį arba kartu išbandyti pamoką klasės lentoje. Yra
-    net atjungtas vadovėliai, kurie gali būti baigtas be jokių įrenginių ne visi.
-    Atjungtas parinktis galima atlikti bet kur - net lauke!
-  hoc_how_to_step_01_educators_desc_02: Žmonės visame pasaulyje prisijungia prie “Hour
-    of Code” šventės per CS švietimo savaitę, %{campaign_date} kai išleidžiamos naujausios
-    vadovėliai ir veikla. Bet jūs galite padaryti kodo valandą bet kurią metų dieną!
-  hoc_how_to_step_02_educators_desc_01: Naršykite veiklą pagal savo grupės amžių,
-    patirtį, pomėgius ir dar daugiau. Mokiniams populiaru išbandyti savarankiškai
-    vadovaujamas pamokas, nors daugelyje veiklų yra pamokų planai, skirti mokytojams
-    vadovauti diskusijoms ar išplėsti veiklą.
-  hoc_how_to_step_02_educators_desc_02: Iš anksto nuspręskite, ar norite pasirinkti
-    vieną vadovėlį visiems savo mokiniams, arba leiskite kiekvienam vaikui pasirinkti
-    savo.
-  hoc_how_to_step_02_educators_desc_03: Šiais metais jūs ir jūsų mokiniai galite [sužinoti
-    viską apie AI] (%ai_url) per vadovėlius, pamokų planus ir mūsų naują “How AI Works”
-    vaizdo įrašų seriją.
-  hoc_how_to_step_03_educators_desc_01: Išbandykite vadovėlį patys prieš patekdami
-    į klasę, kad galėtumėte atsakyti į klausimus!
-  hoc_how_to_step_03_educators_desc_02: Taip pat galite išbandyti vadovėlius studentų
-    kompiuteriuose ar įrenginiuose, kad užtikrintumėte, jog jie palaiko garsą ir vaizdo
-    įrašus. Ar mažas pralaidumas? Planuokite rodyti vaizdo įrašus klasės priekyje,
-    kad kiekvienas mokinys neatsisiųstų savo vaizdo įrašų.
-  hoc_how_to_step_03_educators_desc_03: Apsvarstykite galimybę pateikti ausines savo
-    klasei arba paprašykite mokinių atsinešti savo, jei pasirinkta pamoka geriausiai
-    tinka su garsu.
-  hoc_how_to_step_04_educators_desc_01: Kai užregistruosite savo “Hour of Code” renginį,
-    gausite naudingų el. Laiškų su naujienomis ir patarimais, kaip surengti sėkmingą
-    “Hour of Code”. Taip pat galite pranešti vietiniams savanoriams, kad jūsų mokykla
-    dalyvauja. Savanoriai yra puikus šaltinis ir gali ateiti pasikalbėti su jūsų klase
-    apie kompiuterių mokslus arba padėti savo mokiniams atlikti “Hour of Code” veiklą.
-  hoc_how_to_step_05_educators_desc_01: Gaukite savo mokinius susijaudinę dėl renginio
-    dalindamiesi [įkvepiančiais vaizdo įrašais] (%{videos_url}), pabrėžiant įvairius
-    žmones ir kūrybingus būdus, kuriais kompiuterių mokslas gali būti naudojamas realiame
-    pasaulyje.
-  hoc_how_to_step_05_educators_desc_02: Pasidalykite savo “Hour of Code” planais su
-    kitais mokytojais, kurie galbūt norės prisijungti prie linksmybių! Tai taip pat
-    puiki galimybė susisiekti su savo mokyklos tėvų mokytojų mokinių asociacija arba
-    pasidalinti tėvų naujienlaiškiais, pranešdami jiems, ko mokosi jų vaikai.
-  hoc_how_to_step_06_educators_desc_01: Nukreipkite savo mokinius į veiklą, galbūt
+  hoc_how_to_step_plan_hour_desc_01: 'Štai pavyzdinė darbotvarkė, kaip pradėti:'
+  hoc_how_to_step_choose_activities_desc_01: Šiemet “Kodo valandos” tema yra “Kūrybiškumas
+    naudojant dirbtinį intelektą” (AI). Nesvarbu, ar tai naujų programų ir algoritmų
+    kodavimas, unikalaus meno kūrimas, ar choreografijos kūrimas, kad paskatintume
+    mus šokti, dirbtinis intelektas atveria naujas skaitmeninės raiškos galimybes,
+    kurios praplečia mūsų supratimą apie kūrybiškumą. Padarykite šiuos metus ypatingais,
+    atlikdami kodavimo veiklą IR sužinodami apie AI.
+  hoc_how_to_step_choose_activities_desc_02: Pirma, [ištirti šimtus kodavimo veiklos]
+    (%{activities_url}) ir pasirinkti vieną pagal savo grupės amžių, patirtį, interesus
+    ir dar daugiau. [Šiose pasirinktose veiklose] (%{ai_activities_url}) yra dirbtinis
+    intelektas kaip pagrindinė tema ar pamoka.
+  hoc_how_to_step_choose_activities_desc_03: Tada [sužinokite viską apie AI] (%{ai_url}).
+    Studentai gali žiūrėti trumpus vaizdo įrašus, kuriuose dalyvauja šios srities
+    ekspertai, ir yra lydinčių pamokų planų, skirtų išplėsti veiklą ir vadovauti tolesnei
+    diskusijai. Arba siūlome nemokamą profesinį mokymąsi pedagogams, kad atrakintume
+    mokymo ateitį su dirbtiniu intelektu ir apie jį.
+  hoc_how_to_step_educators_register_desc: Pradėkite nuo įsipareigojimo atlikti kodo
+    valandą su savo mokiniais, registruodami savo renginį. Užsiregistravę gausite
+    naudingų el. laiškų su naujienomis ir patarimais, kaip surengti sėkmingą “Hour
+    of Code”. Taip pat būsite [įdėti į žemėlapį] (%{map_url}). Matoma mūsų kolektyvinių
+    pastangų visuma parodo visuotinį įsipareigojimą informatikos judėjimui, kuris
+    padės mums sukurti pagreitį sisteminiams pokyčiams.
+  hoc_how_to_step_educators_plan_desc_01: Prieš renginį išbandykite veiklą patys,
+    kad galėtumėte užtikrinti, kad jie veiktų studentų įrenginiuose ir esate pasirengę
+    atsakyti į klausimus! Turite mažą pralaidumą? Planuokite rodyti vaizdo įrašus
+    klasės priekyje, kad kiekvienas mokinys neatsisiųstų savo vaizdo įrašų.
+  hoc_how_to_step_educators_plan_desc_02: Žmonės visame pasaulyje dažnai prisijungia
+    prie “Hour of Code” šventės per Computer Science Education Week (%{campaign_date}),
+    tačiau jūs galite padaryti “Hour of Code” bet kurią metų dieną!
+  hoc_how_to_step_educators_plan_desc_03: Pasirinkite erdvę, kuri tinka studentų skaičiui
+    ir turimam įrenginiui. Studentai gali išbandyti veiklą atskiruose įrenginiuose,
+    paeiliui dalintis prietaisu arba kaip klasė ant lentos. Yra net neprisijungusių
+    veiklų, kurias galima užbaigti be jokių įrenginių, todėl jas galima atlikti net
+    lauke!
+  hoc_how_to_step_educators_spread_word_desc_01: Padėkite mums skleisti žodį savo
+    bendruomenėje naudodami [šiuos el. pašto šablonus] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Paprašykite dviejų kolegų [register](%{register_url})
+    ir surengti “Hour of Code” veiklą. Jie savo ruožtu gali užsitikrinti du kolegas,
+    kurie gali užsitikrinti du kolegas ir t.t.
+  hoc_how_to_step_educators_spread_word_desc_03: Paprašykite savo direktoriaus [surengti
+    visos mokyklos renginį] (%{host_url}). Kai dalyvauja 300 ar daugiau vaikų, galite
+    gauti specialų sužadėtuvių rinkinį su marškinėliais, plakatais, nešiojamųjų kompiuterių
+    lipdukais ir kt. [Pasidalykite visu savo mokyklos renginių planu] (%{share_url}),
+    kad gautumėte kvalifikaciją.
+  hoc_how_to_step_educators_spread_word_desc_04: Kreipkitės į savo mokyklos tėvų mokytojų
+    studentų asociaciją arba pasidalykite tėvų naujienlaiškiais, pranešdami jiems,
+    ko mokosi jų vaikai.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 val.: Pradėkite nuo [įkvepiančio
+    vaizdo įrašo] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 val.: Studentai atlieka
+    savo kodavimo veiklą'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 val.: Studentai mokosi
+    apie AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 val.: Mokytojas pateikia
+    baigiamąsias pastabas'
+  hoc_how_to_step_educators_get_coding_desc: Nukreipkite savo mokinius į veiklą, galbūt
     pasidalindami nuoroda lentoje arba per savo klasės mokymosi valdymo sistemą. Jūsų
     mokiniai gali susidurti su iššūkiais - tai gerai! Mokymasis programuoti yra tarsi
     naujos kalbos mokymasis; tuoj pat negalėsite laisvai kalbėti. Jei nežinote atsakymo,
     galite jį išsiaiškinti kartu.
-  hoc_how_to_step_07_educators_desc_01: 'Būtinai švęskite sėkmę! Bendrinkite savo
-    “Hour of Code” renginio nuotraukomis ir vaizdo įrašais socialinėje žiniasklaidoje.
-    Naudokite #HourOfCode ir @codeorg, kad galėtume pabrėžti ir jūsų sėkmę!'
-  hoc_how_to_step_07_educators_desc_02: Taip pat galite atsispausdinti savo studentams
-    pažymėjimus, kad parodytumėte savo pasiekimus!
+  hoc_how_to_step_educators_celebrate_desc: 'Po savo renginio atsispausdinkite baigimo
+    pažymėjimus ir pasveikinkite savo studentus. Dalinkitės savo “Hour of Code” renginio
+    nuotraukomis ir vaizdo įrašais ir parodykite savo mokinių pasiekimus naudodami
+    #HourOfCode ir @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Kompiuterių mokslas neturi baigtis kodo valanda!
+    Nors 90% tėvų nori, kad jų vaikas mokytųsi informatikos, dauguma mokyklų vis dar
+    to nemoko. Norėdami padėti, mūsų mokymo programa yra internetinė ir nemokama naudoti
+    amžinai. Sužinokite, kaip šiandien atsinešti CS į savo mokyklą.
   hoc_ai_top_desc: Kiekvienas gali sužinoti apie AI, nesvarbu, ar esate klasės mokinys,
     ar pedagogas, atrakinantis mokymo ateitį su AI ir apie jį.
   hoc_ai_how_ai_works_video_series_desc: Ši trumpų vaizdo įrašų serija supažindins

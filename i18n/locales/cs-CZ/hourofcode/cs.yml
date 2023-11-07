@@ -6,7 +6,7 @@ cs:
   front_title: Připojte se k největší vzdělávací akce v dějinách během  %{campaign_date}
   coming_soon: Bude to brzy
   new: Nový
-  hours_of_code_served: Hodiny obsluhy kódu
+  hours_of_code_served: Odučené Hodiny programování
   hoc_stat_languages: Studenti se učí ve více než 45 jazycích
   hoc_stat_hours_served: Přes 100 milionů studentů zkusilo Hodinu programování
   hoc_stat_females: Studentky tvoří 50% účastníků Hodiny kódu
@@ -50,10 +50,10 @@ cs:
   hoc2023_social_creativity_with_ai_title: Hodina kódu - Co vytvoříte?
   hoc2023_social_creativity_with_ai_desc: Využijte informatiku k prozkoumání a poznávání
     AI!
-  hoc2023_what_is_hoc_desc: Hodina kódu je bezplatný úvod do informatiky prostřednictvím
-    zábavných aktivit a videí pro studenty všech úrovní dovedností. Letošní oslavu
-    programování a umělé inteligence podporuje více než 400 partnerů, 20 000 pedagogů
-    a 58 000 dobrovolníků.
+  hoc2023_what_is_hoc_desc: Hodina programování je bezplatný úvod do počítačové vědy
+    prostřednictvím zábavných aktivit a videí pro studenty všech dovednostních úrovní.
+    Letošní oslavu programování a umělé inteligence podporuje více než 400 partnerů,
+    20 000 pedagogů a 58 000 dobrovolníků.
   hoc2022_header: Bádejte, hrajte, vytvářejte!
   social_hoc2022_explore_play_create: Používejte počítačovou vědu k bádání, hraní
     a vytváření!
@@ -290,16 +290,18 @@ cs:
   optional_materials: 'Volitelné materiály:'
   for_students: Pro studenty
   for_educators: Pro učitele
-  call_to_action_host_hoc: Uspořádejte hodinu kódu
+  call_to_action_host_hoc: Pořádejte Hodinu programování
   call_to_action_hold_an_event: Pořádat událost
   call_to_action_register_event: Zaregistrujte svou akci
   call_to_action_register_your_hoc: Zaregistrujte si svou Hodinu programování
   call_to_action_select_activity: Vyberte aktivitu
+  call_to_action_select_coding_activity: Vyberte aktivitu kódování
   call_to_action_start_activity: Zahájení aktivity
   call_to_action_get_certificates: Získat certifikáty
+  call_to_action_print_certificates: Tisk certifikátů
   call_to_action_go_beyond_hoc: Překročte Hodinu kódu
-  call_to_action_explore_all_hoc_activities: Prozkoumejte všechny aktivity Hour of
-    Code na webu Code.org
+  call_to_action_explore_all_hoc_activities: Prozkoumejte všechny aktivity Hodiny
+    programování na webu Code.org
   call_to_action_start_dance_party: Spusťte taneční párty
   call_to_action_start_part_02: Začátek druhé části
   call_to_action_start_unplugged_activity: Spusťte odpojenou aktivitu
@@ -400,7 +402,7 @@ cs:
   call_to_action_apply_cs_ambassador: Přihlaste se jako velvyslanec CS
   call_to_action_coming_soon: Již brzy!
   call_to_action_learn_how_ai_works: Zjistěte, jak funguje umělá inteligence
-  call_to_action_learn_about_ai: Další informace o umělé inteligenci
+  call_to_action_learn_about_ai: Učte se o umělé inteligenci
   aria_label_call_to_action_hoc_how_to_educators: Podívejte se na návod pro pedagogy
   aria_label_call_to_action_hoc_how_to_companies: Zobrazit průvodce návody pro společnosti
   aria_label_call_to_action_hoc_how_to_districts: Zobrazit průvodce návody pro okresy
@@ -422,6 +424,8 @@ cs:
     Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Spusťte odborný vzdělávací program Principy
     výuky informatiky
+  aria_label_call_to_action_teaching_problem_solving: Spusťte program profesního učení
+    pro řešení problémů a výpočetní techniku
   aria_label_call_to_action_teaching_csc: Spusťte profesionální vzdělávací program
     Teaching Computer Science Connections
   aria_label_call_to_action_teaching_ai: Spusťte program odborného učení výuky umělé
@@ -437,6 +441,8 @@ cs:
     kurz základů informatiky pro předškoláky
   aria_label_call_to_action_curriculum_csd: Prozkoumejte kurikulum objevů informatiky
   aria_label_call_to_action_curriculum_csp: Prozkoumejte osnovy principů informatiky
+  aria_label_call_to_action_curriculum_problem_solving: Prozkoumejte osnovy řešení
+    problémů a výpočetní techniky
   aria_label_call_to_action_curriculum_csc: Prozkoumejte kurikulum Computer Science
     Connections
   aria_label_call_to_action_curriculum_ai: Prozkoumejte kurikulum AI a strojového
@@ -518,6 +524,7 @@ cs:
   curriculum_name_csf_teacher_led: Lekce vedená učitelem
   curriculum_name_csd: Objevy informatiky
   curriculum_name_csp: Principy informatiky
+  curriculum_name_problem_solving: Řešení problémů a práce s počítačem
   curriculum_name_csc: Napojení na počítačovou vědu
   curriculum_name_csa: AP® Počítačová věda A
   curriculum_name_csa_ai: Softwarové inženýrství a počítačové vidění
@@ -716,6 +723,7 @@ cs:
   module_label_teaching_csf: Výuka základů informatiky
   module_label_teaching_csd: Výuka objevů informatiky
   module_label_teaching_csp: Výuka principů informatiky
+  module_label_teaching_problem_solving: Výuka řešení problémů a výpočetní techniky
   module_label_teaching_csc: Výuka propojení informatiky
   module_label_teaching_ai: Výuka umělé inteligence a strojového učení
   module_label_teaching_maker_cp: Výuka vytváření aplikací pomocí zařízení (Circuit
@@ -13172,6 +13180,9 @@ cs:
   step_06: Krok 6
   step_07: Krok 7
   step_08: Krok 8
+  what: 'Co:'
+  when: 'Kdy:'
+  where: 'Kde:'
   hoc_how_to_top_heading: Váš průvodce Hour of Code
   hoc_how_to_top_desc: Návody přizpůsobené na míru pro nejlepší zážitek z Hour of
     Code.
@@ -13219,68 +13230,81 @@ cs:
     programů určených pro všechny věkové kategorie ve více než 45 jazycích.
   hoc_how_to_step_label_plan: Naplánujte si, kde a kdy budete hrát Hodinu kódu
   hoc_how_to_step_label_choose_activity: Vyberte si svou aktivitu
+  hoc_how_to_step_label_choose_activities: Vyberte si své aktivity
   hoc_how_to_step_label_test_activity: Vyzkoušejte svou aktivitu
   hoc_how_to_step_label_register_event: Zaregistrujte svou akci
   hoc_how_to_step_label_tell: Řekněte svým studentům, škole a komunitě
   hoc_how_to_step_label_get_coding: Získejte kódování!
   hoc_how_to_step_label_celebrate: Oslavit
   hoc_how_to_step_label_beyond_hoc: Za hodinou kódu
+  hoc_how_to_step_label_plan_your_event: Naplánujte si akci
+  hoc_how_to_step_label_plan_your_hour: Naplánujte si hodinu
+  hoc_how_to_step_label_help_spread_word: Pomozte šířit slovo
   hoc_how_to_step_beyond_hoc_subhead: Tady to nekončí!
-  hoc_how_to_step_beyond_hoc_desc: Počítačová věda nemusí skončit Hodinou kódu! Zatímco
-    90% rodičů chce, aby se jejich dítě učilo informatiku, většina škol ji stále neučí.
-    Naučte se, jak přivést CS do školy vašeho dítěte ještě dnes.
-  hoc_how_to_step_01_educators_subhead: Vyberte čas a prostor události, který odpovídá
-    počtu studentů a zařízení, která máte k dispozici.
-  hoc_how_to_step_01_educators_desc_01: Jaké prostory máte k dispozici pro svou Hodinu
-    kódu? Zvažte technické možnosti vašeho prostoru a druhy zařízení, na kterých očekáváte,
-    že vaši studenti budou pracovat. Studenti mohou pracovat na výukových programech
-    na jednom zařízení, střídat se pomocí sdíleného zařízení nebo vyzkoušet výukový
-    program společně na tabuli ve třídě. Existují dokonce i odpojené výukové programy,
-    které lze dokončit bez jakýchkoli zařízení. Odpojené možnosti lze provádět kdekoli
-    - dokonce i venku!
-  hoc_how_to_step_01_educators_desc_02: Lidé z celého světa se připojují k oslavě
-    Hodiny kódu během Týdne vzdělávání CS, %{campaign_date} kdy jsou vydány nejnovější
-    výukové programy a aktivity. Hodinu kódu však můžete udělat každý den v roce!
-  hoc_how_to_step_02_educators_desc_01: Prozkoumejte aktivity založené na věku vaší
-    skupiny, zkušenosti, zájmy, a více. Pro studenty je populární vyzkoušet výukové
-    programy vedené samostatně, ačkoli mnoho aktivit zahrnuje plány lekcí pro učitele,
-    které vedou diskusi nebo také rozšiřují aktivitu.
-  hoc_how_to_step_02_educators_desc_02: Rozhodněte se předem, zda chcete vybrat jeden
-    výukový program pro všechny své studenty, nebo nechte každé dítě vybrat si vlastní.
-  hoc_how_to_step_02_educators_desc_03: Letos se vy a vaši studenti můžete [dozvědět
-    se vše o AI] (%ai_url) prostřednictvím výukových programů, plánů lekcí a naší
-    nové série videí Jak AI funguje.
-  hoc_how_to_step_03_educators_desc_01: Než se dostanete do učebny, vyzkoušejte si
-    výukový program sami, abyste mohli odpovědět na otázky!
-  hoc_how_to_step_03_educators_desc_02: Můžete také otestovat výukové programy na
-    studentských počítačích nebo zařízeních, abyste se ujistili, že podporují zvuk
-    a video. Máte nízkou šířku pásma? Plánujte zobrazovat videa v přední části třídy,
+  hoc_how_to_step_plan_hour_desc_01: 'Zde je ukázkový program, který vám pomůže začít:'
+  hoc_how_to_step_choose_activities_desc_01: Letošním tématem Hodiny kódu je Kreativita
+    s umělou inteligencí (AI). Ať už jde o kódování nových aplikací a algoritmů, vytváření
+    jedinečného umění nebo vytváření choreografie, která nás přiměje tančit, AI otevírá
+    nové příležitosti pro digitální vyjádření, které rozšiřují naše chápání kreativity.
+    Udělejte tento rok výjimečným dokončením aktivity kódování A učením se o AI.
+  hoc_how_to_step_choose_activities_desc_02: za prvé, [prozkoumejte stovky aktivit
+    kódování] (%{activities_url}) a vyberte si jeden na základě věku vaší skupiny,
+    zkušenosti, zájmy a další. [Tyto vybrané aktivity] (%{ai_activities_url}) obsahují
+    umělou inteligenci jako klíčové téma nebo lekci.
+  hoc_how_to_step_choose_activities_desc_03: Pak, [dozvíte se vše o AI] (%{ai_url}).
+    Studenti mohou sledovat krátká videa představující odborníky v oboru, a k dispozici
+    jsou doprovodné plány lekcí, které rozšiřují aktivitu a vedou další diskusi. Nebo
+    nabízíme bezplatné profesionální učení pro pedagogy, abychom odemkli budoucnost
+    výuky s AI a o umělé inteligenci.
+  hoc_how_to_step_educators_register_desc: Začněte se závazkem udělat Hodinu kódu
+    se svými studenty registrací vaší události. Když se zaregistrujete, obdržíte užitečné
+    e-maily s novinkami a tipy, jak uspořádat úspěšnou Hodinu kódu. Budete také [dát
+    na mapu] (%{map_url}). Viditelný souhrn našeho kolektivního úsilí demonstruje
+    globální závazek vůči hnutí informatiky, což nám pomůže vybudovat hybnou sílu
+    pro systémové změny.
+  hoc_how_to_step_educators_plan_desc_01: Před vaší akcí, vyzkoušejte aktivity sami,
+    abyste se ujistili, že fungují na studentských zařízeních, a jste připraveni odpovědět
+    na otázky! Máte nízkou šířku pásma? Plánujte zobrazovat videa v přední části třídy,
     aby si každý student nestahoval svá vlastní videa.
-  hoc_how_to_step_03_educators_desc_03: Zvažte poskytnutí sluchátek pro vaši třídu,
-    nebo požádejte studenty, aby si přinesli vlastní, pokud vybraný výukový program
-    nejlépe funguje se zvukem.
-  hoc_how_to_step_04_educators_desc_01: Když zaregistrujete událost Hodina kódu, obdržíte
-    užitečné e-maily s novinkami a tipy pro pořádání úspěšné Hodiny kódu. Je to také
-    způsob, jak můžete informovat místní dobrovolníky, že se vaše škola účastní. Dobrovolníci
-    jsou skvělým zdrojem a mohou přijít mluvit do vaší třídy o počítačové vědě nebo
-    pomoci svým studentům s aktivitami Hodiny kódu.
-  hoc_how_to_step_05_educators_desc_01: Nechte své studenty nadchnout událostí sdílením
-    [inspirativní videa] (%{videos_url}) zdůrazňující různé lidi a kreativní způsoby,
-    jak lze počítačovou vědu použít v reálném světě.
-  hoc_how_to_step_05_educators_desc_02: Sdílejte své plány Hodiny kódu s dalšími učiteli,
-    kteří se možná budou chtít zapojit do zábavy! Je to také skvělá příležitost oslovit
-    studentskou asociaci rodičů učitelů vaší školy nebo sdílet zpravodaje rodičů a
-    dát jim vědět, co se jejich děti učí.
-  hoc_how_to_step_06_educators_desc_01: Nasměrujte své studenty na aktivitu, možná
-    sdílením odkazu na tabuli nebo prostřednictvím systému řízení učení ve vaší třídě.
-    Vaši studenti se mohou setkat s výzvami - to je v pořádku! Naučit se programovat
+  hoc_how_to_step_educators_plan_desc_02: Lidé z celého světa se často připojují k
+    oslavě Hodiny kódu během Týdne vzdělávání v oblasti informatiky (%{campaign_date}),
+    ale Hodinu kódu můžete udělat každý den v roce!
+  hoc_how_to_step_educators_plan_desc_03: Vyberte prostor, který vyhovuje počtu studentů
+    a zařízení, která máte k dispozici. Studenti si mohou vyzkoušet aktivity na jednotlivých
+    zařízeních, střídat sdílení zařízení nebo jako třída na tabuli. Existují dokonce
+    i odpojené činnosti, které lze dokončit bez zařízení vůbec, takže je lze provádět
+    i venku!
+  hoc_how_to_step_educators_spread_word_desc_01: Pomozte nám šířit slovo ve vaší komunitě
+    pomocí [tyto e-mailové šablony] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Požádejte dva kolegy, aby [register](%{register_url})
+    a uspořádali aktivitu Hodina kódu. Oni zase mohou zajistit dva kolegy, kteří mohou
+    zajistit dva kolegy atd.
+  hoc_how_to_step_educators_spread_word_desc_03: Požádejte svého ředitele [uspořádat
+    celoškolní akci] ()%{host_url}. Když se zúčastní 300 a více dětí, můžete získat
+    speciální zásnubní soupravu s tričkami, plakáty, nálepkami na notebook a dalšími.
+    [Sdílejte celý svůj plán školních akcí] (%{share_url}), abyste se kvalifikovali.
+  hoc_how_to_step_educators_spread_word_desc_04: Obraťte se na studentskou asociaci
+    rodičů učitelů vaší školy nebo sdílejte zpravodaje rodičů a dejte jim vědět, co
+    se jejich děti učí.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Začněte [inspirativním
+    videem] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Studenti provádějí svou
+    kódovací aktivitu'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Studenti se učí o AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Učitel dává závěrečné
+    poznámky'
+  hoc_how_to_step_educators_get_coding_desc: Nasměrujte své studenty na aktivitu,
+    možná sdílením odkazu na tabuli nebo prostřednictvím systému řízení učení ve vaší
+    třídě. Vaši studenti se mohou setkat s výzvami - to je v pořádku! Naučit se programovat
     je jako naučit se nový jazyk; hned nebudete plynule mluvit. Pokud neznáte odpověď,
     můžete na to přijít společně.
-  hoc_how_to_step_07_educators_desc_01: 'Nezapomeňte oslavit úspěch! Sdílejte fotografie
-    a videa z vaší události Hodina kódu na sociálních médiích. Použijte #HourOfCode
-    a @codeorg, abychom mohli zdůraznit i váš úspěch!'
-  hoc_how_to_step_07_educators_desc_02: Můžete také vytisknout certifikáty pro své
-    studenty, aby předvedli své úspěchy!
+  hoc_how_to_step_educators_celebrate_desc: 'Po vaší akci, vytiskněte certifikáty
+    o absolvování a blahopřejte svým studentům. Sdílejte fotografie a videa z události
+    Hodina kódu a předveďte úspěchy svých studentů pomocí #HourOfCode a @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Počítačová věda nemusí skončit Hodinou kódu!
+    Zatímco 90% rodičů chce, aby se jejich dítě učilo informatiku, většina škol ji
+    stále neučí. Abychom vám pomohli, naše učební osnovy jsou webové a zdarma k použití,
+    navždy. Naučte se, jak přivést CS do vaší školy ještě dnes.
   hoc_ai_top_desc: O umělé inteligenci se může dozvědět kdokoli, ať už jste student
     ve třídě nebo pedagog, který odemyká budoucnost výuky s AI a o ní.
   hoc_ai_how_ai_works_video_series_desc: Tato série krátkých videí vás seznámí s tím,

@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Úsáid an bloc `socraigh méid damhsóir_tionlacain2` chun an damhsóir sin a chrapadh.",
   "danceFeedbackUseSetTint": "Úsáid an bloc `socraigh imir` chun imir an damhsóra a athrú.",
   "danceFeedbackUseStartMapping": "Bain triail as an mbloc <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">aonbheannach_ar_dheis</title><title name=\"PROPERTY\">\"scála\"</title><title name=\"RANGE\">\"dord\"</title></block></xml>.",
+  "danceFeedbackKeepCoding": "Lean ort ag códú! Níl gach rud i gceart fós.",
   "measure": "Tomhas:"
 }

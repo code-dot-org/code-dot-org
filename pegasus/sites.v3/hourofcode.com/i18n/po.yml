@@ -301,8 +301,10 @@ po:
   call_to_action_register_event: Registre seu evento
   call_to_action_register_your_hoc: Registre sua Hora do Código
   call_to_action_select_activity: Selecione uma atividade
+  call_to_action_select_coding_activity: Selecione uma atividade de codificação
   call_to_action_start_activity: Iniciar uma atividade
   call_to_action_get_certificates: Obtenha certificados
+  call_to_action_print_certificates: Imprimir certificados
   call_to_action_go_beyond_hoc: Vá além da Hora do Código
   call_to_action_explore_all_hoc_activities: Explore todas as atividades da Hora do
     Código da Code.org
@@ -430,6 +432,8 @@ po:
     Teaching Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Inicie o programa de aprendizagem profissional
     de Princípios de Ensino da Ciência da Computação
+  aria_label_call_to_action_teaching_problem_solving: Inicie o programa de ensino,
+    resolução de problemas e aprendizagem profissional de computação
   aria_label_call_to_action_teaching_csc: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Connections
   aria_label_call_to_action_teaching_ai: Inicie o programa de aprendizado profissional
@@ -448,6 +452,8 @@ po:
     Discoveries
   aria_label_call_to_action_curriculum_csp: Explore o currículo dos Princípios da
     Ciência da Computação
+  aria_label_call_to_action_curriculum_problem_solving: Explore o currículo de Resolução
+    de Problemas e Computação
   aria_label_call_to_action_curriculum_csc: Explore o currículo do Computer Science
     Connections
   aria_label_call_to_action_curriculum_ai: Explore o currículo de IA e aprendizado
@@ -531,6 +537,7 @@ po:
   curriculum_name_csf_teacher_led: Aula ministrada por professor
   curriculum_name_csd: Descobertas da ciência da computação
   curriculum_name_csp: Princípios da ciência da computação
+  curriculum_name_problem_solving: Resolução de Problemas e Computação
   curriculum_name_csc: Conexões de ciência da computação
   curriculum_name_csa: AP® Ciência da Computação A
   curriculum_name_csa_ai: Engenharia de software e visão computacional
@@ -738,6 +745,7 @@ po:
   module_label_teaching_csf: Ensino dos fundamentos da ciência da computação
   module_label_teaching_csd: Ensino de descobertas da ciência da computação
   module_label_teaching_csp: Princípios de ensino da ciência da computação
+  module_label_teaching_problem_solving: Ensino de resolução de problemas e computação
   module_label_teaching_csc: Conexões de ensino de ciência da computação
   module_label_teaching_ai: Ensino de IA e aprendizado de máquina
   module_label_teaching_maker_cp: Ensino de criação de aplicativos com dispositivos
@@ -13758,6 +13766,9 @@ po:
   step_06: Etapa 6
   step_07: Etapa 7
   step_08: Etapa 8
+  what: 'O que:'
+  when: 'Quando:'
+  where: 'Onde:'
   hoc_how_to_top_heading: Seu guia para a Hora do Código
   hoc_how_to_top_desc: Guias de instruções personalizados para a melhor experiência
     do Hour of Code.
@@ -13806,73 +13817,88 @@ po:
     hora projetados para todas as idades em mais de 45 idiomas.
   hoc_how_to_step_label_plan: Planeje onde e quando você fará sua Hora do Código
   hoc_how_to_step_label_choose_activity: Escolha sua atividade
+  hoc_how_to_step_label_choose_activities: Escolha suas atividades
   hoc_how_to_step_label_test_activity: Teste sua atividade
   hoc_how_to_step_label_register_event: Registre seu evento
   hoc_how_to_step_label_tell: Conte aos seus alunos, à escola e à comunidade
   hoc_how_to_step_label_get_coding: Comece a programar!
   hoc_how_to_step_label_celebrate: Comemore
   hoc_how_to_step_label_beyond_hoc: Além da Hora do Código
+  hoc_how_to_step_label_plan_your_event: Planeje seu evento
+  hoc_how_to_step_label_plan_your_hour: Planeje sua hora
+  hoc_how_to_step_label_help_spread_word: Ajude a espalhar a notícia
   hoc_how_to_step_beyond_hoc_subhead: Isso não acaba aqui!
-  hoc_how_to_step_beyond_hoc_desc: A ciência da computação não precisa terminar com
-    a Hora do Código! Embora 90% dos pais queiram que seus filhos aprendam ciência
-    da computação, a maioria das escolas ainda não a ensina. Saiba como levar a ciência
-    da computação para a escola de seu filho hoje mesmo.
-  hoc_how_to_step_01_educators_subhead: Selecione um horário e um espaço para o evento
-    que funcionem para o número de alunos e dispositivos disponíveis.
-  hoc_how_to_step_01_educators_desc_01: Quais espaços estão disponíveis para você
-    fazer sua Hora do Código? Considere as capacidades técnicas do seu espaço e os
-    tipos de dispositivos nos quais você espera que seus alunos trabalhem. Os alunos
-    podem trabalhar em tutoriais em um único dispositivo, se revezar usando um dispositivo
-    compartilhado ou experimentar um tutorial juntos no quadro branco da sala de aula.
-    Existem até tutoriais desconectados que podem ser concluídos sem nenhum dispositivo.
-    As opções desconectadas podem ser feitas em qualquer lugar, mesmo ao ar livre!
-  hoc_how_to_step_01_educators_desc_02: Pessoas de todo o mundo participam da celebração
-    da Hora do Código durante a Semana da Educação em Ciência da Computação, %{campaign_date}
-    quando os tutoriais e atividades mais recentes são lançados. Mas você pode fazer
-    uma Hora do Código em qualquer dia do ano!
-  hoc_how_to_step_02_educators_desc_01: Explore atividades com base na idade, experiência,
-    interesses e muito mais do seu grupo. É comum que os alunos experimentem tutoriais
-    autônomos, embora muitas atividades incluam planos de aula para os professores
-    orientarem a discussão ou ampliarem a atividade.
-  hoc_how_to_step_02_educators_desc_02: Decida com antecedência se você deseja escolher
-    um único tutorial para todos os seus alunos ou deixe que cada criança escolha
-    o seu.
-  hoc_how_to_step_02_educators_desc_03: Este ano, você e seus alunos podem [aprender
-    tudo sobre IA] (%ai_url) por meio de tutoriais, planos de aula e nossa nova série
-    de vídeos Como a IA funciona.
-  hoc_how_to_step_03_educators_desc_01: Experimente você mesmo o tutorial antes de
-    entrar na sala de aula para poder responder às perguntas!
-  hoc_how_to_step_03_educators_desc_02: Você também pode testar tutoriais nos computadores
-    ou dispositivos dos alunos para garantir que sejam compatíveis com som e vídeo.
-    Tem baixa largura de banda? Planeje mostrar vídeos na frente da turma, para que
-    cada aluno não baixe seus próprios vídeos.
-  hoc_how_to_step_03_educators_desc_03: Considere fornecer fones de ouvido para sua
-    turma ou peça aos alunos que tragam seus próprios, se o tutorial escolhido funcionar
-    melhor com som.
-  hoc_how_to_step_04_educators_desc_01: Ao registrar seu evento da Hora do Código,
-    você receberá e-mails úteis com notícias e dicas para organizar uma Hora do Código
-    de sucesso. É também como você pode informar aos voluntários locais que sua escola
-    está participando. Os voluntários são um ótimo recurso e podem falar com sua turma
-    sobre ciência da computação ou ajudar seus alunos nas atividades da Hora do Código.
-  hoc_how_to_step_05_educators_desc_01: Deixe seus alunos empolgados com o evento
-    compartilhando [vídeos inspiradores] (%{videos_url}) destacando pessoas diversas
-    e formas criativas pelas quais a ciência da computação pode ser usada no mundo
-    real.
-  hoc_how_to_step_05_educators_desc_02: Compartilhe seus planos da Hora do Código
-    com outros professores que talvez queiram participar da diversão! Essa também
-    é uma ótima oportunidade de entrar em contato com a Associação de Pais e Professores
-    e Alunos de sua escola ou compartilhar boletins informativos para pais, informando
-    o que seus filhos estão aprendendo.
-  hoc_how_to_step_06_educators_desc_01: Direcione seus alunos para a atividade, talvez
-    compartilhando o link no quadro ou por meio do sistema de gerenciamento de aprendizado
-    da sala de aula. Seus alunos podem enfrentar desafios — tudo bem! Aprender a programar
-    é como aprender um novo idioma; você não será fluente imediatamente. Se você não
-    sabe a resposta, você pode descobrir isso juntos.
-  hoc_how_to_step_07_educators_desc_01: 'Não deixe de comemorar o sucesso! Compartilhe
-    fotos e vídeos do seu evento da Hora do Código nas redes sociais. Use #HourOfCode
-    e @codeorg para que possamos destacar seu sucesso também!'
-  hoc_how_to_step_07_educators_desc_02: Você também pode imprimir certificados para
-    que seus alunos mostrem suas conquistas!
+  hoc_how_to_step_plan_hour_desc_01: 'Aqui está um exemplo de agenda para você começar:'
+  hoc_how_to_step_choose_activities_desc_01: Este ano, o tema da Hora do Código é
+    Criatividade com Inteligência Artificial (IA). Seja programando novos aplicativos
+    e algoritmos, gerando arte exclusiva ou criando coreografias para nos fazer dançar,
+    a IA está abrindo novas oportunidades de expressão digital que expandem nossa
+    compreensão da criatividade. Torne este ano especial concluindo uma atividade
+    de programação E aprendendo sobre IA.
+  hoc_how_to_step_choose_activities_desc_02: Primeiro, [explore centenas de atividades
+    de programação] (%{activities_url}) e escolha uma com base na idade, experiência,
+    interesses e muito mais do seu grupo. [Essas atividades selecionadas] (%{ai_activities_url})
+    apresentam inteligência artificial como um tópico ou lição principal.
+  hoc_how_to_step_choose_activities_desc_03: Então, [saiba tudo sobre IA] (%{ai_url}).
+    Os alunos podem assistir a vídeos curtos com especialistas na área, além de planos
+    de aula para ampliar a atividade e orientar discussões adicionais. Ou oferecemos
+    aprendizado profissional gratuito para educadores desbloquearem o futuro do ensino
+    com e sobre a IA.
+  hoc_how_to_step_educators_register_desc: Comece com o compromisso de fazer uma Hora
+    do Código com seus alunos registrando seu evento. Ao se registrar, você receberá
+    e-mails úteis com notícias e dicas para organizar uma Hora do Código bem-sucedida.
+    Você também será [colocado no mapa] (%{map_url}). A totalidade visível de nossos
+    esforços coletivos demonstra o compromisso global com o movimento da ciência da
+    computação, que nos ajudará a criar um impulso para a mudança sistêmica.
+  hoc_how_to_step_educators_plan_desc_01: Antes do evento, experimente você mesmo
+    as atividades para garantir que elas funcionem nos dispositivos dos alunos e que
+    você esteja preparado para responder perguntas! Tem baixa largura de banda? Planeje
+    mostrar vídeos na frente da turma, para que cada aluno não baixe seus próprios
+    vídeos.
+  hoc_how_to_step_educators_plan_desc_02: Pessoas de todo o mundo costumam participar
+    da celebração da Hora do Código durante a Semana da Educação em Ciência da Computação
+    (%{campaign_date}), mas você pode fazer uma Hora do Código em qualquer dia do
+    ano!
+  hoc_how_to_step_educators_plan_desc_03: Escolha um espaço que funcione para o número
+    de alunos e dispositivos que você tem disponíveis. Os alunos podem experimentar
+    atividades em dispositivos individuais, se revezar compartilhando um dispositivo
+    ou em turma em um quadro branco. Existem até atividades desconectadas que podem
+    ser concluídas sem nenhum dispositivo, então elas podem até mesmo ser feitas ao
+    ar livre!
+  hoc_how_to_step_educators_spread_word_desc_01: Ajude-nos a divulgar sua comunidade
+    com [esses modelos de e-mail] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Peça a dois colegas que [register](%{register_url})
+    organizem uma atividade da Hora do Código. Eles, por sua vez, podem proteger dois
+    colegas, quem pode proteger dois colegas, etc.
+  hoc_how_to_step_educators_spread_word_desc_03: Peça ao seu diretor para [organizar
+    um evento para toda a escola] ()%{host_url}. Quando 300 ou mais crianças participarem,
+    você poderá receber um kit especial de noivado com camisetas, pôsteres, adesivos
+    para laptop e muito mais. [Compartilhe todo o seu plano de eventos escolares]
+    (%{share_url}) para se qualificar.
+  hoc_how_to_step_educators_spread_word_desc_04: Entre em contato com a Associação
+    de Pais e Professores e Estudantes da sua escola ou compartilhe boletins informativos
+    para pais, informando o que seus filhos estão aprendendo.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10h00-10h05: Comece com um [vídeo
+    inspirador] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10h05 às 10h45: Estudantes realizam
+    suas atividades de programação'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10h45 às 10h55: Estudantes aprendem
+    sobre IA'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 da manhã: Professor faz
+    comentários finais'
+  hoc_how_to_step_educators_get_coding_desc: Direcione seus alunos para a atividade,
+    talvez compartilhando o link no quadro ou por meio do sistema de gerenciamento
+    de aprendizado da sala de aula. Seus alunos podem enfrentar desafios — tudo bem!
+    Aprender a programar é como aprender um novo idioma; você não será fluente imediatamente.
+    Se você não sabe a resposta, você pode descobrir isso juntos.
+  hoc_how_to_step_educators_celebrate_desc: 'Após o evento, imprima os certificados
+    de conclusão e parabenize seus alunos. Compartilhe fotos e vídeos do seu evento
+    da Hora do Código e mostre as conquistas de seus alunos usando #HourOfCode e @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: A ciência da computação não precisa terminar
+    com a Hora do Código! Embora 90% dos pais queiram que seus filhos aprendam ciência
+    da computação, a maioria das escolas ainda não a ensina. Para ajudar, nosso currículo
+    é baseado na web e de uso gratuito, para sempre. Saiba como levar a ciência da
+    computação para sua escola hoje.
   hoc_ai_top_desc: Qualquer pessoa pode aprender sobre IA, seja você um estudante
     na sala de aula ou um educador, revelando o futuro do ensino com e sobre a IA.
   hoc_ai_how_ai_works_video_series_desc: Esta série de vídeos curtos apresentará como

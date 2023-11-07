@@ -9265,6 +9265,10 @@ fr:
           title: Présentation de l'apprentissage approfondi des principes CS 2021
         dlp21-overview:
           name: Présentation de dlp21
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: Modèle de programme de cours de l'heure de code
         drafting:
           description_audience: Groupe d'informations sur les étudiants du CSP
           title: Mises à jour préliminaires du CSP 2023-24
@@ -12640,6 +12644,9 @@ fr:
               display_name: Asynchrone, partie 1
             lessonGroup-5:
               display_name: Asynchrone, partie 2
+          lessons:
+            lesson-5:
+              name: Présentation des activités asynchrones
           title: Jour 1
         virtual-pl-csp-summer-day2:
           lesson_groups:
