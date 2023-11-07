@@ -1,0 +1,29 @@
+@import "color";
+.songSelectorWrapper {
+
+  .selectStyle {
+    width: calc(100% - 42px);
+  }
+
+  button.previewSongButton {
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    margin: 0 0 10px 8px;
+
+    &.previewActiveButton {
+      color: $neutral_white;
+      background-color: $light_primary_500;
+      border-color: $light_primary_500;
+
+      &:hover {
+        background-color: $light_primary_700;
+        border-color: $light_primary_700;
+      }
+    }
+
+    span {
+      margin: 0;
+    }
+  }
+}
