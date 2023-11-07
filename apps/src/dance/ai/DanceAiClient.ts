@@ -85,14 +85,30 @@ export function chooseEffects(
       backgroundColor: backgroundColorOption[1],
       foregroundEffect: foregroundEffectOption[1],
     },
-    scores: {
-      backgroundEffect: backgroundEffectOption[0],
-      backgroundColor: backgroundColorOption[0],
-      foregroundEffect: foregroundEffectOption[0],
-    },
   };
 
   return chosenEffects;
+}
+
+export function getGeneratedEffectScores(
+  emojis: string[],
+  effect: GeneratedEffect
+) {
+  // Determine the contribution of each input emoji.
+  const scores = emojis.map(
+    emoji =>
+      CachedBackgrounds['emojiAssociations'][emoji][
+        CachedBackgrounds['output'].indexOf(effect.results.backgroundEffect)
+      ] +
+      CachedForegrounds['emojiAssociations'][emoji][
+        CachedForegrounds['output'].indexOf(effect.results.foregroundEffect)
+      ] +
+      CachedPalettes['emojiAssociations'][emoji][
+        CachedPalettes['output'].indexOf(effect.results.backgroundColor)
+      ]
+  );
+
+  return scores;
 }
 
 /**

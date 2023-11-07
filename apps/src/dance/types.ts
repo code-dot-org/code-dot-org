@@ -54,11 +54,8 @@ export enum FieldKey {
 
 export type Results = {[key in FieldKey]: string};
 
-export type Scores = {
-  [key in FieldKey]: number;
-};
+export type Scores = number[];
 
 export interface GeneratedEffect {
   results: Results;
-  scores?: Scores;
 }

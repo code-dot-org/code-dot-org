@@ -9,6 +9,9 @@ $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
 $result-green: rgb(86 197 104);
 $result-red: rgb(235 87 87);
+$chart-first: #92DBE6;
+$chart-second: #E091AE;
+$chart-third: #FADFA6;
 
 @keyframes preview-right-to-normal {
   0% {
@@ -334,6 +337,18 @@ $result-red: rgb(235 87 87);
         width: 40px;
         background-color: rgb(16 189 233);
         transition: width 0.4s;
+
+        &First {
+          background-color: $chart-first;
+        }
+
+        &Second {
+          background-color: $chart-second;
+        }
+
+        &Third {
+          background-color: $chart-third;
+        }
       }
 
       .text {

@@ -7,7 +7,11 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {closeAiModal, DanceState} from '../danceRedux';
 import classNames from 'classnames';
 import {FieldDropdown, Workspace} from 'blockly/core';
-import {chooseEffects, ChooseEffectsQuality} from './DanceAiClient';
+import {
+  chooseEffects,
+  ChooseEffectsQuality,
+  getGeneratedEffectScores,
+} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import {AiOutput, FieldKey, GeneratedEffect, Scores} from '../types';
@@ -285,14 +289,11 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const getScores = (step: number) => {
     const effect = getGeneratedEffect(step);
+    if (effect) {
+      return getGeneratedEffectScores(inputs, effect);
+    }
 
-    const defaultValue: Scores = {
-      backgroundEffect: 0,
-      foregroundEffect: 0,
-      backgroundColor: 0,
-    };
-
-    return effect?.scores ? effect.scores : defaultValue;
+    return [0, 0, 0];
   };
 
   const handleConvertBlocks = () => {
@@ -603,17 +604,18 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
-          {mode === Mode.RESULTS && (
-            <div>
-              <Button
-                id="explanation-button"
-                text={'?'}
-                onClick={handleExplanationClick}
-                color={Button.ButtonColor.neutralDark}
-                className={moduleStyles.button}
-              />
-            </div>
-          )}
+          {mode === Mode.RESULTS &&
+            generatedEffects.current.badEffects.length > 0 && (
+              <div>
+                <Button
+                  id="explanation-button"
+                  text={'?'}
+                  onClick={handleExplanationClick}
+                  color={Button.ButtonColor.neutralDark}
+                  className={moduleStyles.button}
+                />
+              </div>
+            )}
 
           {mode === Mode.EXPLANATION && (
             <Button
@@ -720,19 +722,39 @@ interface ScoreProps {
 }
 
 const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
+  const multiplyScores = 10;
+
   return (
     <div className={moduleStyles.scoreContainer}>
       <div
-        className={moduleStyles.barFill}
+        className={classNames(moduleStyles.barFill, moduleStyles.barFillFirst)}
         style={{
-          height: Math.round(scores.backgroundEffect * 20),
+          height: Math.round(
+            (scores[0] + scores[1] + scores[2]) * multiplyScores
+          ),
+        }}
+      >
+        &nbsp;
+      </div>
+      <div
+        className={classNames(moduleStyles.barFill, moduleStyles.barFillSecond)}
+        style={{
+          height: Math.round((scores[0] + scores[1]) * multiplyScores),
+        }}
+      >
+        &nbsp;
+      </div>
+      <div
+        className={classNames(moduleStyles.barFill, moduleStyles.barFillThird)}
+        style={{
+          height: Math.round(scores[0] * multiplyScores),
         }}
       >
         &nbsp;
       </div>
 
       <div className={moduleStyles.text}>
-        {Math.round(scores.backgroundEffect * 20)}
+        {Math.round((scores[0] + scores[1] + scores[2]) * multiplyScores)}
       </div>
     </div>
   );
