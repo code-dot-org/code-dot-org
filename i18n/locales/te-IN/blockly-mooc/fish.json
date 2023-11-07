@@ -59,7 +59,7 @@
     "cancel": "రద్దు",
     "yes": "అవును",
     "no": "లేదు",
-    "notWord": "లేదు {word}",
+    "notWord": " {word} కాదు",
     "run": "రన్",
     "mostImportantParts": "ఇవి చేప యొక్క ముఖ్యమైన భాగాలు:",
     "clickIndividualFish": "మరింత సమాచారాన్ని చూడటానికి ప్రతి చేప మీద క్లిక్ చేయండి.",

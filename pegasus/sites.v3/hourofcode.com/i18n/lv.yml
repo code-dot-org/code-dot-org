@@ -6,11 +6,11 @@ lv:
   front_title: Pievienojies vēsturē lielākajam mācību pasākumam %{campaign_date}
   coming_soon: Drīzumā
   new: Jauns
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Apkalpotas koda stundas
   hoc_stat_languages: Studenti mācās vairāk nekā 45 valodās
   hoc_stat_hours_served: Vairāk nekā 100 miljoni studentu ir izmēģinājuši Programmēšanas
     stundu
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Sievietes veido 50% no Hour of Code dalībnieku
   campaign_date_start_short: Dec 5
   campaign_date_start_long: 5. decembris
   campaign_date_short: Dec 5-11
@@ -51,10 +51,9 @@ lv:
   hoc2023_social_creativity_with_ai_title: Kodēšanas stunda - Ko jūs izveidojat?
   hoc2023_social_creativity_with_ai_desc: Izmantojiet datorzinātnes, lai izpētītu
     un uzzinātu par AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Koda stunda ir bezmaksas ievads datorzinātnēs, izmantojot
+    jautras aktivitātes un video visu prasmju līmeņu izglītojamiem. Šī gada gan kodēšanas,
+    gan AI svinības atbalsta vairāk nekā 400 partneri, 20 000 pedagogu un 58 000 brīvprātīgo.
   hoc2022_header: Izpētīt, spēlēt, izveidot!
   social_hoc2022_explore_play_create: Izmantojiet datorzinātnes, lai izpētītu, spēlētu
     un radītu!
@@ -67,9 +66,9 @@ lv:
     mūzika no Disneja “Encanto”, un vairāk!
   social_hoc2023_dance: Attēloti Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, mūzika no Disneja “Encanto”, un vairāk!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Ir pienācis laiks balstīt savas lietas! Izveidojiet savu
+    deju ballīti, kurā piedalās Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
+    Rosalía un citu hiti!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Uzziniet šodien, izveidojiet gaišāku rītdienu.
@@ -284,21 +283,23 @@ lv:
     ieskatu un atbalstu no citiem pedagogiem.
   required_materials: 'Nepieciešamie materiāli:'
   optional_materials: 'Izvēles materiāli:'
-  for_students: For students
+  for_students: Studentiem
   for_educators: Pedagogiem
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Sarīkojiet koda stundu
   call_to_action_hold_an_event: Pasākuma turēšana
   call_to_action_register_event: Reģistrējiet savu pasākumu
   call_to_action_register_your_hoc: Reģistrējiet savu kodu stundu
   call_to_action_select_activity: Izvēlieties aktivitāti
+  call_to_action_select_coding_activity: Izvēlieties kodēšanas darbību
   call_to_action_start_activity: Sāciet darbību
   call_to_action_get_certificates: Iegūstiet sertifikātus
+  call_to_action_print_certificates: Izdrukāt sertifikātus
   call_to_action_go_beyond_hoc: Pārsniedziet koda stundu
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Izpētiet visas Hour of Code aktivitātes
+    vietnē Code.org
+  call_to_action_start_dance_party: Sāciet deju ballīti
+  call_to_action_start_part_02: Sāciet otro daļu
+  call_to_action_start_unplugged_activity: Sāciet atvienotu darbību
   call_to_action_view_promo_resources: Skatīt reklāmas resursus
   call_to_action_learn_more: Uzzināt vairāk
   call_to_action_watch_now: Skatīties tagad
@@ -394,9 +395,9 @@ lv:
   call_to_action_view_faqs: Skatīt vairāk Bieži uzdotie jautājumi
   call_to_action_applications_open: Tagad atvērtas lietojumprogrammas
   call_to_action_apply_cs_ambassador: Piesakieties par CS vēstnieku
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Drīzumā!
+  call_to_action_learn_how_ai_works: Uzziniet, kā darbojas AI
+  call_to_action_learn_about_ai: Uzziniet par AI
   aria_label_call_to_action_hoc_how_to_educators: Skatiet instrukciju rokasgrāmatu
     pedagogiem
   aria_label_call_to_action_hoc_how_to_companies: Skatiet rokasgrāmatu uzņēmumiem
@@ -408,9 +409,9 @@ lv:
     amatpersonām
   aria_label_call_to_action_hoc_how_to_volunteers: Skatiet brīvprātīgo rokasgrāmatu
   aria_label_call_to_action_hoc_how_to_virtual_events: Skatiet virtuālo notikumu rokasgrāmatu
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Sāciet Deju ballītes aktivitāti
+  aria_label_call_to_action_dance_02: Sāciet Deju ballītes aktivitātes otro daļu
+  aria_label_call_to_action_dance_unplugged: Sāciet deju ballītes darbību bez strāvas
   aria_label_call_to_action_afe: Uzziniet vairāk par Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Sākt mācību datorzinātnes pamati profesionālās
     apmācības programmu
@@ -418,6 +419,8 @@ lv:
     apmācības programmu
   aria_label_call_to_action_teaching_csp: Sākt mācību datorzinātnes principi profesionālās
     apmācības programma
+  aria_label_call_to_action_teaching_problem_solving: Sāciet mācību problēmu risināšanas
+    un skaitļošanas profesionālās mācību programmu
   aria_label_call_to_action_teaching_csc: Sākt mācību datorzinātnes savienojumi profesionālās
     mācību programmu
   aria_label_call_to_action_teaching_ai: Uzsākt mākslīgā intelekta un mašīnmācīšanās
@@ -435,6 +438,8 @@ lv:
     programmu
   aria_label_call_to_action_curriculum_csp: Izpētiet datorzinātnes principu mācību
     programmu
+  aria_label_call_to_action_curriculum_problem_solving: Izpētiet problēmu risināšanas
+    un skaitļošanas mācību programmu
   aria_label_call_to_action_curriculum_csc: Izpētiet datorzinātnes savienojumu mācību
     plānu
   aria_label_call_to_action_curriculum_ai: Izpētiet mākslīgā intelekta un mašīnmācīšanās
@@ -517,6 +522,7 @@ lv:
   curriculum_name_csf_teacher_led: Skolotāja vadītā nodarbība
   curriculum_name_csd: Datorzinātņu atklājumi
   curriculum_name_csp: Datorzinātņu principi
+  curriculum_name_problem_solving: Problēmu risināšana un skaitļošana
   curriculum_name_csc: Datorzinātņu savienojumi
   curriculum_name_csa: AP® datorzinātnes A
   curriculum_name_csa_ai: Programmatūras inženierija un datoru vīzija
@@ -529,25 +535,25 @@ lv:
   curriculum_name_creating_apps_with_devices: Programmu izveide ar ierīcēm
   curriculum_name_poetry: Kodēšana ar dzeju
   curriculum_name_dance_party: Deju ballīte
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Turpiniet dejot
+  curriculum_name_dance_party_unplugged: Deju ballīte bez strāvas
+  curriculum_name_dance_party_ai_edition: 'Deju ballīte: AI izdevums'
   curriculum_name_problem_solving_computing: Problēmu risināšana un skaitļošana
   curriculum_name_web_development: Tīmekļa izstrāde
   curriculum_name_interactive_animations_games: Interaktīvas animācijas un spēles
   curriculum_name_design_process: Projektēšanas process
   curriculum_name_data_society: Dati un sabiedrība
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Šajā ievada aktivitātē izmantojiet kodu, lai dažādi
+    krāsaini varoņi pārietu uz animētiem foniem un optimistisku mūziku.
+  curriculum_desc_dance_party_02: Iet tālāk par ievada apmācību ar paplašinātām projekta
+    idejām. Pārlūkojiet sarežģītāku deju ballīšu piemēru bibliotēku.
+  curriculum_desc_dance_party_unplugged: Ieslēdziet rievu - dators nav nepieciešams!
+    Uzziniet, kā kodēšanas jēdzienus, piemēram, notikumus, var izmantot dejotāju horeogrāfijas
+    sinhronizēšanai.
+  curriculum_desc_dance_party_ai_edition: Uzziniet par mākslīgā intelekta (AI) koncepcijām,
+    lai izveidotu savu virtuālo deju ballīti, kurā demonstrē mūsdienu labākos māksliniekus.
+    Ar desmitiem dziesmu, no kurām izvēlēties, sasniedziet katru studentu neatkarīgi
+    no viņa mūzikas gaumes. Ir pienācis laiks balstīt savas lietas!
   curriculum_desc_csf: Bezmaksas elementāru mācību programmu komplekts, kas iepazīstina
     studentus ar datorzinātņu pamatjēdzieniem.
   curriculum_desc_csf_express: Uzziniet, kā izveidot datorprogrammas, attīstīt problēmu
@@ -677,12 +683,12 @@ lv:
   module_grade_grade_03: 3. pakāpe
   module_grade_grade_04: 4. pakāpe
   module_grade_grade_05: 5. pakāpe
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Vecums 5-7
+  module_age_07: Vecums no 7 gadiem
+  module_age_07_11: Vecums no 7 līdz 11 gadiem
+  module_age_11: Vecums 11+
+  module_age_13: Vecums no 13 gadiem
+  module_age_all_age: Visi vecumi
   module_grade_k_5_teachers: K-5 Skolotāji
   module_grade_6_10_teachers: 6-10 Skolotāji
   module_grade_9_12_teachers: 9-12 Skolotāji
@@ -714,6 +720,7 @@ lv:
   module_label_teaching_csf: Mācību datorzinātnes pamati
   module_label_teaching_csd: Mācību datorzinātnes atklājumi
   module_label_teaching_csp: Datorzinātņu principu mācīšana
+  module_label_teaching_problem_solving: Problēmu risināšanas un skaitļošanas mācīšana
   module_label_teaching_csc: Mācību datorzinātnes savienojumi
   module_label_teaching_ai: AI un mašīnmācīšanās mācīšana
   module_label_teaching_maker_cp: Aplikāciju izveides mācīšana ar ierīcēm (Circuit
@@ -776,8 +783,8 @@ lv:
   heading_csa_ai: Vai meklējat lietas, ko darīt pēc AP® eksāmena?
   heading_bring_cs_to_students: Dodiet datorzinātnes studentiem
   heading_cs_ambassador_program: CS vēstnieku programma
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Piedāvātie studentu projekti
+  heading_start_hoc_with_videos: Sāciet savu koda stundu ar iedvesmojošiem videoklipiem
   cs_ambassador_subhead: Ja esat vidusskolas students, kurš aizraujas ar to, lai mudinātu
     vairāk jaunu sieviešu apgūt datorzinātnes jūsu skolā, tad mums jūs vajag!
   cs_ambassador_desc: Datorzinātne skar visas jomas, tostarp medicīnu, izklaidi, sportu,
@@ -872,13 +879,13 @@ lv:
     par Code.org datorzinātnes principiem un saņemiet noderīgus atgādinājumus, padomus
     un atjauninājumus, kas nosūtīti tieši uz iesūtni.
   subscribe_form_section_unsubscribe: Jūs varat atteikties no abonēšanas jebkurā laikā.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Kodējiet deju ballīti
+  dance_featuring_songs_by_short: 'Piedāvājot dziesmas:'
+  dance_featuring_songs_by_long: 'Deju ballīte ietver dziesmas:'
+  dance_and_more: un vairāk
+  dance_choose_activity: Izvēlieties savu deju ballīti
+  dance_afe_disclaimer: Mākslinieki, kuru mūzika tiek izmantota šajā apmācībā, nesponsorē
+    vai neapstiprina Amazon kā daļu no savas mūzikas izmantošanas licencēšanas Code.org.
   blockchain_hero_heading: Kā darbojas Blockchain
   blockchain_hero_desc: Nirt blokķēdes pasaulē ar “Kā Blockchain Works”, mūsu jauno
     video sēriju un pavadošās nodarbības!
@@ -13277,6 +13284,9 @@ lv:
   step_06: 6. solis
   step_07: 7. solis
   step_08: 8. solis
+  what: 'Kas:'
+  when: 'Kad:'
+  where: 'Kur:'
   hoc_how_to_top_heading: Jūsu ceļvedis par koda stundu
   hoc_how_to_top_desc: Pielāgoti ceļveži labākajai koda stundas pieredzei.
   hoc_how_to_top_view_guide: Skatīt ceļvedi
@@ -13322,68 +13332,84 @@ lv:
     kas paredzētas visu vecumu cilvēkiem vairāk nekā 45 valodās.
   hoc_how_to_step_label_plan: Plānojiet, kur un kad veiksit savu koda stundu
   hoc_how_to_step_label_choose_activity: Izvēlieties savu darbību
+  hoc_how_to_step_label_choose_activities: Izvēlieties savas aktivitātes
   hoc_how_to_step_label_test_activity: Pārbaudiet savu darbību
   hoc_how_to_step_label_register_event: Reģistrējiet savu pasākumu
   hoc_how_to_step_label_tell: Pastāstiet saviem skolēniem, skolai un kopienai
   hoc_how_to_step_label_get_coding: Iegūstiet kodēšanu!
   hoc_how_to_step_label_celebrate: Svinēt
   hoc_how_to_step_label_beyond_hoc: Ārpus koda stundas
+  hoc_how_to_step_label_plan_your_event: Plānojiet savu pasākumu
+  hoc_how_to_step_label_plan_your_hour: Plānojiet savu stundu
+  hoc_how_to_step_label_help_spread_word: Palīdziet izplatīt vārdu
   hoc_how_to_step_beyond_hoc_subhead: Šeit tas nebeidzas!
-  hoc_how_to_step_beyond_hoc_desc: Datorzinātnei nav jābeidzas ar koda stundu! Lai
-    gan 90% vecāku vēlas, lai viņu bērns apgūtu datorzinātni, lielākā daļa skolu to
-    joprojām nemāca. Uzziniet, kā šodien nogādāt CS bērna skolā.
-  hoc_how_to_step_01_educators_subhead: Atlasiet notikuma laiku un vietu, kas atbilst
-    pieejamo studentu un ierīču skaitam.
-  hoc_how_to_step_01_educators_desc_01: Kādas vietas jums ir pieejamas, lai veiktu
-    savu koda stundu? Apsveriet savas telpas tehnoloģiskās iespējas un to ierīču veidus,
-    pie kuriem jūs sagaidāt, ka studenti strādās. Studenti var strādāt pie apmācībām
-    vienā ierīcē, pēc kārtas, izmantojot koplietojamu ierīci, vai kopā izmēģināt apmācību
-    uz klases tāfeles. Ir pat atvienotas konsultācijas, kuras var pabeigt bez ierīcēm
-    vispār. Atvienotās opcijas var veikt jebkurā vietā — pat ārpus telpām!
-  hoc_how_to_step_01_educators_desc_02: Cilvēki visā pasaulē pievienojas koda stundas
-    svinībām CS izglītības nedēļas laikā, %{campaign_date} kad tiek izlaistas jaunākās
-    konsultācijas un aktivitātes. Bet jūs varat veikt koda stundu jebkurā gada dienā!
-  hoc_how_to_step_02_educators_desc_01: Izpētiet aktivitātes, pamatojoties uz savas
-    grupas vecumu, pieredzi, interesēm un daudz ko citu. Studentiem ir populāri izmēģināt
-    pašvadītas apmācības, lai gan daudzās aktivitātēs ietver stundu plānus skolotājiem,
-    lai vadītu diskusijas vai paplašinātu darbību.
-  hoc_how_to_step_02_educators_desc_02: Pirms laika izlemiet, vai vēlaties izvēlēties
-    vienu apmācību visiem saviem studentiem, vai ļaujiet katram bērnam izvēlēties
-    savu.
-  hoc_how_to_step_02_educators_desc_03: Šogad jūs un jūsu studenti varat [uzzināt
-    visu par AI] (%ai_url), izmantojot apmācības, stundu plānus un mūsu jauno How
-    AI Works video sēriju.
-  hoc_how_to_step_03_educators_desc_01: Pirms iekļūšanas klasē izmēģiniet apmācību
-    pats, lai jūs varētu atbildēt uz jautājumiem!
-  hoc_how_to_step_03_educators_desc_02: Varat arī pārbaudīt apmācības studentu datoros
-    vai ierīcēs, lai nodrošinātu, ka tās atbalsta skaņu un video. Vai ir zems joslas
-    platums? Plānojiet parādīt videoklipus klases priekšpusē, lai katrs students nelejupielādētu
-    savus videoklipus.
-  hoc_how_to_step_03_educators_desc_03: Apsveriet iespēju nodrošināt austiņas savai
-    klasei vai lūdziet skolēniem atnest savas, ja izvēlētā apmācība vislabāk darbojas
-    ar skaņu.
-  hoc_how_to_step_04_educators_desc_01: Reģistrējot savu koda stundas pasākumu, jūs
-    saņemsit noderīgus e-pastus ar jaunumiem un padomiem veiksmīgas koda stundas rīkošanai.
-    Tas ir arī veids, kā jūs varat paziņot vietējiem brīvprātīgajiem, ka jūsu skola
-    piedalās. Brīvprātīgie ir lielisks resurss, un viņi var nākt runāt ar jūsu klasi
-    par datorzinātnēm vai palīdzēt saviem skolēniem veikt koda stundas aktivitātes.
-  hoc_how_to_step_05_educators_desc_01: Iegūstiet savus studentus satraukti par pasākumu,
-    daloties [iedvesmojoši videoklipi] (%{videos_url}), izceļot daudzveidīgus cilvēkus
-    un radošus veidus, kā datorzinātni var izmantot reālajā pasaulē.
-  hoc_how_to_step_05_educators_desc_02: Kopīgojiet savus koda stundas plānus ar citiem
-    skolotājiem, kuri, iespējams, vēlēsies pievienoties jautrībai! Šī ir arī lieliska
-    iespēja sazināties ar savas skolas Vecāku skolotāju studentu asociāciju vai dalīties
-    vecāku biļetenos, ļaujot viņiem uzzināt, ko mācās viņu bērni.
-  hoc_how_to_step_06_educators_desc_01: Virziet savus skolēnus uz aktivitāti, varbūt,
-    kopīgojot saiti uz tāfeles vai izmantojot savas klases mācību vadības sistēmu.
-    Jūsu studenti var saskarties ar izaicinājumiem - tas ir labi! Mācīšanās programmēt
-    ir kā jaunas valodas apguve; jūs uzreiz nevarēsit brīvi. Ja nezināt atbildi, varat
-    to izdomāt kopā.
-  hoc_how_to_step_07_educators_desc_01: 'Noteikti svinēt panākumus! Kopīgojiet sava
-    koda stundas pasākuma fotoattēlus un videoklipus sociālajos medijos. Izmantojiet
-    #HourOfCode un @codeorg, lai mēs varētu izcelt arī jūsu panākumus!'
-  hoc_how_to_step_07_educators_desc_02: Varat arī izdrukāt sertifikātus saviem studentiem,
-    lai parādītu savus sasniegumus!
+  hoc_how_to_step_plan_hour_desc_01: 'Šeit ir darba kārtības paraugs, lai sāktu darbu:'
+  hoc_how_to_step_choose_activities_desc_01: Šogad koda stundas tēma ir Radošums ar
+    mākslīgo intelektu (AI). Neatkarīgi no tā, vai tā ir jaunu lietotņu un algoritmu
+    kodēšana, unikālas mākslas radīšana vai horeogrāfijas veidošana, lai liktu mums
+    dejot, AI paver jaunas iespējas digitālajai izteiksmei, kas paplašina mūsu izpratni
+    par radošumu. Padariet šo gadu īpašu, pabeidzot kodēšanas darbību UN uzzinot par
+    AI.
+  hoc_how_to_step_choose_activities_desc_02: Pirmkārt, [izpētiet simtiem kodēšanas
+    darbību] (%{activities_url}) un izvēlieties vienu, pamatojoties uz grupas vecumu,
+    pieredzi, interesēm un daudz ko citu. [Šajās atlasītajās aktivitātēs] (%{ai_activities_url})
+    kā galvenā tēma vai nodarbība ir mākslīgais intelekts.
+  hoc_how_to_step_choose_activities_desc_03: Tad [uzziniet visu par AI] (%{ai_url}).
+    Studenti var skatīties īsus videoklipus, kuros piedalās šīs jomas eksperti, un
+    ir pievienoti stundu plāni, lai paplašinātu aktivitāti un vadītu turpmākās diskusijas.
+    Vai arī mēs piedāvājam bezmaksas profesionālo mācīšanos pedagogiem, lai atvērtu
+    mācīšanas nākotni ar AI un par to.
+  hoc_how_to_step_educators_register_desc: Sāciet ar apņemšanos kopā ar studentiem
+    veikt koda stundu, reģistrējot savu pasākumu. Reģistrējoties, jūs saņemsiet noderīgus
+    e-pastus ar jaunumiem un padomiem veiksmīgas koda stundas rīkošanai. Jūs arī būsiet
+    [ievietots kartē] (%{map_url}). Mūsu kolektīvo centienu redzamais kopums parāda
+    globālo apņemšanos ievērot datorzinātņu kustību, kas mums palīdzēs veidot impulsu
+    sistēmiskām pārmaiņām.
+  hoc_how_to_step_educators_plan_desc_01: Pirms pasākuma izmēģiniet aktivitātes pats,
+    lai jūs varētu pārliecināties, ka tās darbojas studentu ierīcēs un esat gatavs
+    atbildēt uz jautājumiem! Vai jums ir zems joslas platums? Plānojiet rādīt videoklipus
+    klases priekšpusē, lai katrs students nelejupielādētu savus videoklipus.
+  hoc_how_to_step_educators_plan_desc_02: Cilvēki visā pasaulē bieži pievienojas koda
+    stundas svinībām datorzinātņu izglītības nedēļas laikā (%{campaign_date}), taču
+    jūs varat veikt koda stundu jebkurā gada dienā!
+  hoc_how_to_step_educators_plan_desc_03: Izvēlieties vietu, kas atbilst pieejamo
+    studentu un ierīču skaitam. Studenti var izmēģināt aktivitātes atsevišķās ierīcēs,
+    pēc kārtas koplietot ierīci vai kā klase uz tāfeles. Ir pat atvienotas darbības,
+    kuras var pabeigt bez ierīcēm, tāpēc tās var veikt pat ārpus telpām!
+  hoc_how_to_step_educators_spread_word_desc_01: Palīdziet mums izplatīt vārdu savā
+    kopienā, izmantojot [šīs e-pasta veidnes] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Palūdziet diviem kolēģiem [register](%{register_url})
+    un rīkot kodu stundas aktivitāti. Viņi, savukārt, var nodrošināt divus kolēģus,
+    kuri var nodrošināt divus kolēģus utt.
+  hoc_how_to_step_educators_spread_word_desc_03: Palūdziet savam direktoram [rīkot
+    skolas mēroga pasākumu] (%{host_url}). Ja piedalās 300 vai vairāk bērnu, jūs varat
+    saņemt īpašu saderināšanās komplektu ar t-krekliem, plakātiem, klēpjdatoru uzlīmēm
+    un daudz ko citu. [Kopīgojiet visu skolas pasākumu plānu] (%{share_url}), lai
+    kvalificētos.
+  hoc_how_to_step_educators_spread_word_desc_04: Sazinieties ar savas skolas vecāku
+    skolotāju skolēnu asociāciju vai dalieties vecāku biļetenos, ļaujot viņiem zināt,
+    ko mācās viņu bērni.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Sāciet ar [iedvesmojošu
+    video] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Studenti veic savu kodēšanas
+    darbību'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Studenti uzzina par AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Skolotājs sniedz noslēguma
+    piezīmes'
+  hoc_how_to_step_educators_get_coding_desc: Virziet savus skolēnus uz aktivitāti,
+    varbūt, kopīgojot saiti uz tāfeles vai izmantojot savas klases mācību vadības
+    sistēmu. Jūsu studenti var saskarties ar izaicinājumiem - tas ir labi! Mācīšanās
+    programmēt ir kā jaunas valodas apguve; jūs uzreiz nevarēsit brīvi. Ja nezināt
+    atbildi, varat to izdomāt kopā.
+  hoc_how_to_step_educators_celebrate_desc: 'Pēc pasākuma izdrukājiet pabeigšanas
+    sertifikātus un apsveiciet savus studentus. Kopīgojiet fotoattēlus un videoklipus
+    no sava koda stundas pasākuma un parādiet savus skolēnu sasniegumus, izmantojot
+    #HourOfCode un @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Datorzinātnēm nav jābeidzas ar koda stundu!
+    Lai gan 90% vecāku vēlas, lai viņu bērns apgūtu datorzinātnes, lielākā daļa skolu
+    to joprojām nemāca. Lai palīdzētu, mūsu mācību programma ir balstīta uz tīmekli
+    un bez maksas lietošanai uz visiem laikiem. Uzziniet, kā šodien nogādāt CS savā
+    skolā.
   hoc_ai_top_desc: Ikviens var uzzināt par AI neatkarīgi no tā, vai esat klases students
     vai pedagogs, kas atver mācīšanas nākotni ar AI un par to.
   hoc_ai_how_ai_works_video_series_desc: Šī īso video sērija iepazīstinās jūs ar to,
@@ -14100,66 +14126,68 @@ lv:
     skolu vadītājiem un darbiniekiem, lai izstrādātu sākotnējos norādījumus par AI
     savās skolās.
   teach_ai_button_label: Skatīt rīkkopu
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Mācīšanās 11 gadu vecumam un vecākiem
+  middle_high_page_main_description: Izpētiet datorzinātņu pasauli, izmantojot saistošus
+    videoklipus, pašmācības, programmēšanas aktivitātes un daudz ko citu!
+  middle_high_page_hero_title: Sāciet darbu ar kodu stundu
+  middle_high_page_hero_description: Apgūstiet datorzinātnes pamatus, izmantojot bezmaksas
+    koda stundas aktivitātes, kurās ir velkami un nometiet kodēšanas blokus. Ir simtiem
+    stundu garu iespēju, no kurām izvēlēties!
+  middle_high_page_hourofcode_link: Izpētiet Hour of Code aktivitātes
+  middle_high_page_modules_title: Programmēšanas moduļi vecākiem studentiem
+  middle_high_page_modules_description: Šie īsie, pašmācības moduļi vidusskolēniem
+    un vidusskolēniem, pielāgoti mūsu CS atklājumu un CS principiem, ir lielisks veids,
+    kā apgūt jēdzienus, kas aptver visas programmēšanas valodas un rīkus.
+  middle_high_page_modules_card_title_1: Ievads Game Lab
+  middle_high_page_modules_card_title_2: Bruņurupuču programmēšana lietotņu laboratorijā
+  middle_high_page_modules_card_title_3: Uz notikumiem balstīta programmēšana lietotņu
+    laboratorijā
+  middle_high_page_modules_card_description_1: Programmējot animācijas, interaktīvo
+    mākslu un spēles, pārvietojieties savā tempā šajā ievadā mūsu Game Lab vidē.
+  middle_high_page_modules_card_description_2: Atbloķējiet iespēju izveidot bagātīgas,
+    interaktīvas lietotnes ar JavaScript App Lab!
+  middle_high_page_modules_card_description_3: Dodieties savā tempā, izmantojot šo
+    ievadu App Lab programmēšanas vidē, kurā studenti izmanto JavaScript, lai izveidotu
+    interaktīvas lietotnes.
+  middle_high_page_modules_card_link: Izmēģiniet to
+  middle_high_page_make_your_own_title: Izveidojiet savas lietotnes, spēles un tīmekļa
+    lapas
+  middle_high_page_make_your_own_description: 'Papildus kursiem mums ir programmēšanas
+    rīki, kas ļauj izpētīt savu radošumu un izveidot kaut ko pārsteidzošu. '
   middle_high_page_make_your_own_card_title_1: Lietojumprogrammu laboratorija
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Spēļu laboratorija
+  middle_high_page_make_your_own_card_title_3: Tīmekļa laboratorija
+  middle_high_page_make_your_own_card_descrpition_1: App Lab ir programmēšanas vide,
+    kurā varat izveidot vienkāršas lietotnes. Izveidojiet lietotni, kodu JavaScript
+    ar blokiem vai tekstu, pēc tam dažu sekunžu laikā kopīgojiet lietotni.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab ir programmēšanas vide,
+    kurā varat izveidot vienkāršas animācijas un spēles ar objektiem un varoņiem,
+    kas mijiedarbojas savā starpā.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab ir programmēšanas vide,
+    kurā varat izveidot vienkāršas tīmekļa lapas, izmantojot HTML un CSS. Izveidojiet
+    savas tīmekļa lapas un kopīgojiet vietni dažu sekunžu laikā.
   middle_high_page_make_your_own_card_link: Uzzināt vairāk
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Papildu resursi
+  middle_high_page_additional_resources_description: Ir tik daudz veidu, kā tālāk
+    izpētīt datorzinātnes! Pārlūkojiet mūsu video bibliotēku vai uzziniet vairāk par
+    aizraujošu karjeru datorzinātņu jomā.
+  middle_high_page_video_library_title: Atklājiet mūsu video bibliotēku
+  middle_high_page_video_library_description: Uzziniet datorzinātnes pamatus, izmantojot
+    īsus 5-10 minūšu videoklipus par tādām tēmām kā mākslīgais intelekts, internets,
+    kā darbojas datori, kā netikt uzlauztam, blokķēde, karjera un daudz kas cits!
+  middle_high_page_video_library_link: Skatīt video bibliotēku
+  middle_high_page_cs_journeys_title: Dodieties tālāk ar CS Journeys
+  middle_high_page_cs_journeys_description: Veiciet nākamo soli datorzinātnes ceļojumā.
+    Izpētiet karjeru, mentoringa iespējas, tiešsaistes kursus, stipendijas, praksi
+    un daudz ko citu!
+  middle_high_page_cs_journeys_link: Izpētiet CS ceļojumus
+  middle_high_page_cs_title: Datorzinātne klasē
+  middle_high_page_cs_description: Šos kursus vajadzētu vadīt skolotājam! Ja vēlaties,
+    lai viņus māca jūsu skolā, apsveriet iespēju sadarboties ar skolotāju, lai tos
+    nogādātu savā klasē.
+  middle_high_page_cs_card_title_1: CS atklājumi
+  middle_high_page_cs_card_title_2: CS principi
+  middle_high_page_cs_card_title_3: AP datorzinātne A
   middle_high_page_cs_card_description_1: Bezmaksas elementāru mācību programmu komplekts,
     kas iepazīstina studentus ar datorzinātņu pamatjēdzieniem un izaicina viņus izpētīt,
     kā skaitļošana un tehnoloģijas var ietekmēt pasauli.
@@ -14170,34 +14198,34 @@ lv:
   middle_high_page_cs_card_description_3: Iepazīstiniet studentus ar programmatūras
     inženieriju un objektorientēto dizainu, kamēr viņi apgūst Java programmēšanas
     valodu šajā bezmaksas mācību programmā AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Izpētiet CS Dicoveries
   middle_high_page_cs_link_2: Izpētīt CS principus
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Izpētiet CSA
+  elemeentary_page_main_title: Mācīšanās vecumā no 5 līdz 11 gadiem
+  elementary_page_main_description: Izpētiet datorzinātņu pasauli, izmantojot saistošus
+    videoklipus, pašmācības, programmēšanas aktivitātes un daudz ko citu!
+  elementary_page_own_pace_title: Turpiniet mācīties savā tempā
+  elementary_page_own_pace_description: Šajās divās lieliskajās iespējās izveidojiet
+    zīmējumus, spēles un daudz ko citu, lai studenti paši sāktu apgūt datorzinātnes
+    pamatus.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express kurss
+  elementary_page_own_pace_card_title_2: Ekspress kurss
+  elementary_page_own_pace_card_description_1: Apgūstiet datorzinātnes savā tempā!
+    Iemācieties veidot datorprogrammas, attīstīt problēmu risināšanas prasmes un strādāt
+    ar jautriem izaicinājumiem! Veidojiet spēles un radošus projektus, lai dalītos
+    ar draugiem, ģimeni un skolotājiem.
+  elementary_page_own_pace_link_1: Sāciet pirmslasītāja kursu
+  elementary_page_own_pace_link_2: Sākt ekspress kursu
+  elementary_page_make_your_own_games_title: Izveidojiet savas animācijas un spēles
   elementary_page_make_your_own_games_card_title_1: Elfa laboratorija
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Laiks kļūt radošiem! Izmantojiet
+    bloku kodēšanu, lai Sprite Lab izveidotu kaut ko muļķīgu, saldu vai ārēju kosmosu.
+    Vienīgais ierobežojums ir jūsu iztēle!
+  elementary_page_make_your_own_games_link: Izmēģiniet Sprite Lab
+  elementary_page_computer_science_title: Datorzinātne klasē
+  elementary_page_computer_science_description: Šos kursus vajadzētu vadīt skolotājam!
+    Ja vēlaties, lai viņus māca jūsu skolā, palūdziet vecākiem vai aizbildnim sadarboties
+    ar skolotāju, lai tos nogādātu jūsu klasē.
   elementary_page_computer_science_card_title_1: Datorzinātņu pamati
   elementary_page_computer_science_card_title_2: Datorzinātņu savienojumi
   elementary_page_computer_science_description_1: Bezmaksas elementāru mācību programmu

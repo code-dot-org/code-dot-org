@@ -145,6 +145,8 @@ id:
         mike-test:
           title: Computer Science Fundamentals
     resources:
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw
       curriculum/csd/2017:
         name: Kurikulum
       curriculum/csd/2018:

@@ -10,5 +10,6 @@
   "danceFeedbackTooManyDancers": "Ten coidado! Se poñes un bloque de «crear novo» dentro de «cada 2 compases», crearás un montón de bailaríns.",
   "danceFeedbackUseSetSize": "Usa o bloque «establecer tamaño de bailarín_fondo2» para reducir o tamaño do bailarín.",
   "danceFeedbackUseSetTint": "Usa o bloque «establecer tonalidade» para cambiar a tonalidade dun bailarín.",
-  "danceFeedbackUseStartMapping": "Trata de engadir o bloque <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">dereita_unicornio</title><title name=\"PROPERTY\"> «escala»</title><title name=\"RANGE\">«baixo»</title></block></xml> ao teu programa."
+  "danceFeedbackUseStartMapping": "Trata de engadir o bloque <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">dereita_unicornio</title><title name=\"PROPERTY\"> «escala»</title><title name=\"RANGE\">«baixo»</title></block></xml> ao teu programa.",
+  "danceFeedbackKeepCoding": "Estás a empregar todos os tipos de bloques necesarios pero non do xeito correcto."
 }

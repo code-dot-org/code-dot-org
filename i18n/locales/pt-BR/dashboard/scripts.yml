@@ -5500,12 +5500,19 @@ pt:
               display_name: Introdução
           title: Dia 1
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introdução às atividades assíncronas
           title: Dia 1
         csa-postap-se-and-computer-vision-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capítulo 2: Visão Computacional'
           title: Engenharia de Software e Visão Computacional
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: modelo de plano de aula do Hour of Code
         self-paced-pl-csd-unit1-2-2023:
           title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e computação'
           description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
