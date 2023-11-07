@@ -9384,6 +9384,7 @@
   hoc_how_to_step_label_after_event: "After the event"
 
   hoc_how_to_step_beyond_hoc_subhead: "It doesn't end here!"
+  hoc_how_to_step_beyond_hoc_desc_generic: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
   hoc_how_to_step_plan_hour_desc_01: "Here's a sample agenda to get you started:"
 
   hoc_how_to_step_choose_activities_desc_01: "This year, the Hour of Code theme is Creativity with Artificial Intelligence (AI). Whether it’s coding new apps and algorithms, generating unique art, or crafting choreography to get us dancing, AI is opening up fresh opportunities for digital expression that expand our understanding of creativity. Make this year special by completing a coding activity AND learning about AI."
@@ -9406,7 +9407,6 @@
   hoc_how_to_step_educators_plan_hour_desc_05: "10:55-11:00am: Teacher gives closing remarks"
   hoc_how_to_step_educators_get_coding_desc: "Direct your students to the activity, maybe by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
   hoc_how_to_step_educators_celebrate_desc: "After your event, print certificates of completion and congratulate your students. Share photos and videos of your Hour of Code event and show off your students' achievements using #HourOfCode and @codeorg."
-  hoc_how_to_step_educators_beyond_desc: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. To help, our curriculum is web-based and free to use, forever. Learn how to bring CS to your school today."
 
   hoc_how_to_step_companies_inspire_desc_01: "Share this video at an All Staff meeting or in an email to all employees to show how companies like yours can make a huge impact on the global movement to bring computer science education to all students in all schools through the Hour of Code."
   hoc_how_to_step_companies_encourage_desc_01: "One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don't have to be an engineer or someone with a technical background in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how computer science or technology has impacted your role. Direct your employees to the volunteer guide to learn more."
@@ -9426,7 +9426,7 @@
   hoc_how_to_step_events_register_desc_02: "You can also [view the Hour of Code map](%{map_url}) to see your event, and know that your dedication is part of a worldwide movement."
   hoc_how_to_step_events_prepare_desc_01: "Consider where and when you want to hold your event, as well as the tech capabilities of your space. Students can work on their own devices, in pairs on one device, or together as a classroom on a projector, and there are even unplugged tutorials that can be completed with no devices at all!"
   hoc_how_to_step_events_prepare_desc_02: "Send [a letter](%{letter_url}) to an elected official or influential business person and invite them to speak. [Check out our how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour of Code for more info."
-  hoc_how_to_step_events_prepare_desc_03: "You may also invite a local politician or local media, such as a local news station, newspaper, or education/tech bloggers. [See our press kit for help](%{press_kit_url})."
+  hoc_how_to_step_events_prepare_desc_03: "You may also invite the local media, such as a local news station, newspaper, or education/tech bloggers. [See our press kit for help](%{press_kit_url})."
   hoc_how_to_step_events_plan_hour_desc_02: "10:00 - 10:05 am: Open with one of our [inspirational videos](%{videos_url})."
   hoc_how_to_step_events_plan_hour_desc_03: "10:05 - 10:15 am: Principal gives an intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url})."
   hoc_how_to_step_events_plan_hour_desc_04: "10:15 - 10:30 am: Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives"
@@ -9441,7 +9441,6 @@
   hoc_how_to_step_events_after_desc_04: "Post pictures, videos, or notable quotes from the day on social media. (Publicity or privacy policies may apply.)"
   hoc_how_to_step_events_after_desc_05: "Follow up with volunteers or guests for feedback on how to make next year's event even better."
   hoc_how_to_step_events_after_desc_06: "Reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
-
 
   hoc_ai_top_desc: "Anyone can learn about AI, whether you're a student in the classroom or an educator unlocking the future of teaching with and about AI."
   hoc_ai_how_ai_works_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making."
