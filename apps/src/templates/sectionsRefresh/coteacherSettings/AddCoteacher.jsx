@@ -23,7 +23,7 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
 
   return fetch(
     `/api/v1/section_instructors/check?email=${encodeURIComponent(email)}` +
-      (sectionId && `&section_id=${sectionId}`),
+      (sectionId ? `&section_id=${sectionId}` : ''),
     {
       type: 'GET',
       headers: {
@@ -34,10 +34,10 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
     if (response.ok) {
       return '';
     }
-    if (response.errorThrown === 'Not Found') {
+    if (response.status === 404 && response.statusText === 'Not Found') {
       return i18n.coteacherAddNoAccount({email});
     }
-    if (response.errorThrown === 'Forbidden') {
+    if (response.status === 404 && response.statusText === 'Forbidden') {
       return i18n.coteacherUnableToEditCoteachers();
     }
 
