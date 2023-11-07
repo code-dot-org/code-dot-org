@@ -44,7 +44,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * @param {boolean} sortByFamilyName: True if sorting by family name, false otherwise.
    */
   setSortByFamilyName(sortByFamilyName) {
-    return $.post(`/api/v1/users/sort_by_family_name`, {
+    return $.post(`/api/v1/users/${this.userId}/sort_by_family_name`, {
       sort_by_family_name: sortByFamilyName,
     });
   }

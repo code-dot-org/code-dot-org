@@ -1,9 +1,12 @@
-import {useDispatch, useSelector} from 'react-redux';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useCallback} from 'react';
 import i18n from '@cdo/locale';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+
+const FAMILY_NAME = 'familyName';
+const DISPLAY_NAME = 'displayName';
 
 function SortByNameDropdown({
   sortByStyles,
@@ -11,12 +14,19 @@ function SortByNameDropdown({
   sectionId,
   unitName,
   source,
+  isSortedByFamilyName,
+  setSortByFamilyName,
 }) {
-  const dispatch = useDispatch();
-  const sortByFamilyName = useSelector(
-    state => state.currentUser.isSortedByFamilyName
+  const onSortByFamilyNameChange = useCallback(
+    e => {
+      const newSort = e.target.value === FAMILY_NAME;
+      new UserPreferences().setSortByFamilyName(newSort);
+      setSortByFamilyName(newSort, sectionId, unitName, source);
+    },
+    [sectionId, unitName, source, setSortByFamilyName]
   );
 
+  const selectedValue = isSortedByFamilyName ? FAMILY_NAME : DISPLAY_NAME;
   return (
     <div>
       <div style={sortByStyles}>{i18n.sortBy()}</div>
@@ -24,21 +34,11 @@ function SortByNameDropdown({
         name="familyNameSort"
         aria-label={i18n.sortBy()}
         style={selectStyles}
-        value={sortByFamilyName}
-        onChange={e => {
-          dispatch(
-            setSortByFamilyName(
-              e.target.value === 'true',
-              sectionId,
-              unitName,
-              source
-            )
-          );
-          new UserPreferences().setSortByFamilyName(e.target.value === 'true');
-        }}
+        value={selectedValue}
+        onChange={onSortByFamilyNameChange}
       >
-        <option value={false}>{i18n.displayName()}</option>
-        <option value={true}>{i18n.familyName()}</option>
+        <option value={DISPLAY_NAME}>{i18n.displayName()}</option>
+        <option value={FAMILY_NAME}>{i18n.familyName()}</option>
       </select>
     </div>
   );
@@ -50,6 +50,18 @@ SortByNameDropdown.propTypes = {
   sectionId: PropTypes.number,
   unitName: PropTypes.string,
   source: PropTypes.string,
+  isSortedByFamilyName: PropTypes.bool,
+  setSortByFamilyName: PropTypes.func,
 };
 
-export default SortByNameDropdown;
+export const UnconnectedSortByNameDropdown = SortByNameDropdown;
+
+export default connect(
+  state => ({isSortedByFamilyName: state.currentUser.isSortedByFamilyName}),
+  dispatch => ({
+    setSortByFamilyName: (sortByFamilyName, sectionId, unitName, source) =>
+      dispatch(
+        setSortByFamilyName(sortByFamilyName, sectionId, unitName, source)
+      ),
+  })
+)(SortByNameDropdown);

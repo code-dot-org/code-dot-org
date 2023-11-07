@@ -882,7 +882,7 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
-        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+        post 'users/:user_id/sort_by_family_name', to: 'users#post_sort_by_family_name'
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
