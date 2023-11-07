@@ -5501,7 +5501,14 @@ id:
               display_name: Pendahuluan
           title: Hari 1
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Pengantar Kegiatan Asinkron
           title: Hari 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: templat rencana pelajaran hour of code
         self-paced-pl-csd-unit1-2-2023:
           title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
           description: |-

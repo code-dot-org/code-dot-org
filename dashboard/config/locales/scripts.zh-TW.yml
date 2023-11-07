@@ -6052,6 +6052,10 @@ zh-TW:
           title: 2021 CS 原則深入學習概述
         dlp21-overview:
           name: 概述
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 一小時玩程式課程計劃模板
         drafting:
           description_audience: CSP 學生見解小組
           title: 雲端服務提供者草案更新
@@ -8575,6 +8579,9 @@ zh-TW:
               display_name: 非同步第 1 部分
             lessonGroup-5:
               display_name: 非同步第 2 部分
+          lessons:
+            lesson-5:
+              name: 非同步活動簡介
           title: 第 1 天
         virtual-pl-csp-summer-day2:
           lesson_groups:

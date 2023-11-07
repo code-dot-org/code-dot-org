@@ -1,5 +1,6 @@
 {
   "danceFeedbackDidntPress": "Dansınız devam ederken ok tuşlarına bastığınızdan emin olun.",
+  "danceFeedbackKeepCoding": "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> bloğuna bazı kodlar eklediğinizden emin olun ve dansınız devam ederken tuşa basın.",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> bloğuyla ile bir grup yedek dansçı oluşturmanız gerekir.",
   "danceFeedbackNeedDifferentDance": "Başka bir dans kullanmanız gerekir.",

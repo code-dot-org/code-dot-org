@@ -12,5 +12,6 @@
   "danceFeedbackUseSetSize": "ఆ డాన్సర్‌ను చిన్నగా చేయడానికి ’సెట్ బ్యాక్‌అప్_డాన్సర్2 సైజ్’ బ్లాక్ ఉపయోగించండి.",
   "danceFeedbackUseSetTint": "డాన్సర్ టింట్ మార్చడానికి ’సెట్ టింట్’ బ్లాక్ ఉపయోగించండి.",
   "danceFeedbackUseStartMapping": "మీ ప్రోగ్రాంకు <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> బ్లాక్ జోడించడానికి ప్రయత్నించండి.",
+  "danceFeedbackKeepCoding": "కోడింగ్ ఉంచండి! ఇంకా ఏదో సరైనది కాదు.",
   "measure": "మెజర్:"
 }

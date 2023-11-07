@@ -50,9 +50,9 @@ sk:
   hoc2023_social_creativity_with_ai_title: Hodina kódu - Čo vytvoríte?
   hoc2023_social_creativity_with_ai_desc: Preskúmajte umelú inteligenciu!
   hoc2023_what_is_hoc_desc: Hodina kódu je bezplatný úvod do informatiky prostredníctvom
-    zábavných aktivít a videí. Pre všetkých a bez ohľadu na predchádzajúce skúsenosti.
-    Tohtoročnú oslavu programovania a umelej inteligencie podporuje viac ako 400 partnerov,
-    20 000 pedagógov a 58 000 dobrovoľníkov.
+    zábavných aktivít a videí pre študentov všetkých úrovní zručností. Tohtoročnú
+    oslavu kódovania aj umelej inteligencie podporuje viac ako 400 partnerov, 20 000
+    pedagógov a 58 000 dobrovoľníkov.
   hoc2022_header: Skúmajte, hrajte sa, tvorte!
   social_hoc2022_explore_play_create: Využite informatiku na objavovanie, hranie sa
     a tvorenie!
@@ -65,9 +65,9 @@ sk:
     Gomez, hudba z Disney rozprávky „Encanto“ atď.!
   social_hoc2023_dance: Predstavujeme Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X,
     Selena Gomez, hudbu z Disneyho „Encanto“ a ďalšie!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Je čas rozdrviť svoje veci! Vytvorte si vlastnú tanečnú
+    párty s hitmi Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía
+    a ďalších!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Uč sa už dnes a vytvor lepší zajtrajšok. '
@@ -281,21 +281,23 @@ sk:
     a podporu od iných pedagógov.
   required_materials: 'Potrebné materiály:'
   optional_materials: 'Nepovinné materiály:'
-  for_students: For students
+  for_students: Pre študentov
   for_educators: Pre pedagógov
   call_to_action_host_hoc: Usporiadajte Hodinu kódu
   call_to_action_hold_an_event: Usporiadajte Hodinu kódu
   call_to_action_register_event: Zaregistrujte svoje podujatie
   call_to_action_register_your_hoc: Zaregistrovať Hodinu kódu
   call_to_action_select_activity: Vyberte aktivitu
+  call_to_action_select_coding_activity: Vybrať aktivitu
   call_to_action_start_activity: Spustenie aktivity
   call_to_action_get_certificates: Získajte certifikáty
+  call_to_action_print_certificates: Vytlačiť certifikáty
   call_to_action_go_beyond_hoc: Prejdite nad rámec Hodiny kódu
   call_to_action_explore_all_hoc_activities: Preskúmajte všetky aktivity Hodiny kódu
-    od Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+    z Code.org
+  call_to_action_start_dance_party: Začnite tanečnú párty
+  call_to_action_start_part_02: Začnite druhú časť
+  call_to_action_start_unplugged_activity: Spustite aktivitu bez pripojenia
   call_to_action_view_promo_resources: Zobraziť propagačné materiály
   call_to_action_learn_more: Viac info
   call_to_action_watch_now: Pozerať teraz
@@ -391,7 +393,7 @@ sk:
   call_to_action_view_faqs: Zobraziť viac často kladených otázok
   call_to_action_applications_open: Aplikácie sú teraz otvorené
   call_to_action_apply_cs_ambassador: Prihláste sa na ambasádora CS
-  call_to_action_coming_soon: Coming soon!
+  call_to_action_coming_soon: Už čoskoro!
   call_to_action_learn_how_ai_works: Zistite, ako funguje umelá inteligencia
   call_to_action_learn_about_ai: Zistite viac o umelej inteligencii
   aria_label_call_to_action_hoc_how_to_educators: Zobraziť návod na použitie pre pedagógov
@@ -407,9 +409,9 @@ sk:
     dobrovoľníkov
   aria_label_call_to_action_hoc_how_to_virtual_events: Zobraziť návod na virtuálne
     udalosti
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Začnite aktivitu Dance Party
+  aria_label_call_to_action_dance_02: Začnite druhú časť aktivity Dance Party
+  aria_label_call_to_action_dance_unplugged: Spustite aktivitu Dance Party bez pripojenia
   aria_label_call_to_action_afe: Získajte viac informácií o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Spustite program odborného vzdelávania Teaching
     Computer Science Fundamentals
@@ -417,6 +419,8 @@ sk:
     Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Spustite program odborného vzdelávania princípov
     informatiky
+  aria_label_call_to_action_teaching_problem_solving: Začnite profesionálny vzdelávací
+    program Riešenie problémov a výpočtových procesov
   aria_label_call_to_action_teaching_csc: Zapojte sa do programu odborného vzdelávania
     Medzipredmetové vzťahy v informatike
   aria_label_call_to_action_teaching_ai: Spustite program odborného vzdelávania vo
@@ -432,6 +436,8 @@ sk:
     kurz základov informatiky pre predškolákov
   aria_label_call_to_action_curriculum_csd: Preskúmať kurz Objavujeme informatiku
   aria_label_call_to_action_curriculum_csp: Preskúmať kurz Princípy informatiky
+  aria_label_call_to_action_curriculum_problem_solving: Preskúmajte učebné osnovy
+    riešenia problémov a počítačov
   aria_label_call_to_action_curriculum_csc: Preskúmať kurzy CS Connections
   aria_label_call_to_action_curriculum_ai: Preskúmať kurz Umelá inteligencia a strojové
     učenie
@@ -513,6 +519,7 @@ sk:
   curriculum_name_csf_teacher_led: Lekcia vedená učiteľom
   curriculum_name_csd: Objavy informatiky
   curriculum_name_csp: Princípy informatiky
+  curriculum_name_problem_solving: Riešenie problémov a výpočtová technika
   curriculum_name_csc: Medzipredmetové vzťahy v informatike
   curriculum_name_csa: AP® Počítačová veda A
   curriculum_name_csa_ai: Softvérové inžinierstvo a počítačové videnie
@@ -525,25 +532,26 @@ sk:
   curriculum_name_creating_apps_with_devices: Aplikácie a hardvér
   curriculum_name_poetry: Programovanie s poéziou
   curriculum_name_dance_party: Tanečná párty
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Pokračujte v tancovaní
+  curriculum_name_dance_party_unplugged: Tanečná párty bez pripojenia
+  curriculum_name_dance_party_ai_edition: 'Tanečná párty: AI Edition'
   curriculum_name_problem_solving_computing: Riešenie problémov a počítače
   curriculum_name_web_development: Vývoj webových stránok
   curriculum_name_interactive_animations_games: Interaktívne animácie a hry
   curriculum_name_design_process: Proces návrhu
   curriculum_name_data_society: Dáta a spoločnosť
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: V tejto úvodnej aktivite použite kód, aby rôzne
+    farebné postavy prekonali animované pozadie a optimistickú hudbu.
+  curriculum_desc_dance_party_02: Prejdite nad rámec úvodného tutoriálu s rozšírenými
+    nápadmi na projekt. Prezrite si knižnicu príkladov zložitejších tanečných večierkov.
+  curriculum_desc_dance_party_unplugged: Zapnite si drážku - nie je potrebný žiadny
+    počítač! Zistite, ako je možné kódovacie koncepty, ako napríklad udalosti, použiť
+    na synchronizáciu choreografie tanečníka.
+  curriculum_desc_dance_party_ai_edition: Získajte informácie o konceptoch umelej
+    inteligencie (AI) a vytvorte si vlastnú virtuálnu tanečnú párty predstavujúcu
+    dnešných špičkových umelcov. S desiatkami skladieb, z ktorých si môžete vybrať,
+    osloviť každého študenta bez ohľadu na jeho hudobný vkus. Je čas rozdrviť svoje
+    veci!
   curriculum_desc_csf: Voľný súbor základných učebných osnov, ktoré zoznamujú študentov
     so základnými konceptmi informatiky.
   curriculum_desc_csf_express: Nauč sa vytvárať počítačové programy, rozvíjaj schopnosti
@@ -677,12 +685,12 @@ sk:
   module_grade_grade_03: 3. ročník
   module_grade_grade_04: 4. ročník
   module_grade_grade_05: 5. ročník
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Vek 5-7 rokov
+  module_age_07: Vek 7+
+  module_age_07_11: Vek 7-11 rokov
+  module_age_11: Vek 11+
+  module_age_13: Vek 13+
+  module_age_all_age: Všetky vekové kategórie
   module_grade_k_5_teachers: Učitelia základných škôl
   module_grade_6_10_teachers: Učitelia na 2. stupni ZŠ
   module_grade_9_12_teachers: Učitelia stredných škôl
@@ -714,6 +722,7 @@ sk:
   module_label_teaching_csf: Výučba základov informatiky
   module_label_teaching_csd: Výučba objavov informatiky
   module_label_teaching_csp: Princípy výučby informatiky
+  module_label_teaching_problem_solving: Výučba riešenia problémov a výpočtovej techniky
   module_label_teaching_csc: Medzipredmetové vzťahy a informatika
   module_label_teaching_ai: Výučba AI a strojové učenie
   module_label_teaching_maker_cp: Výučba vytvárania aplikácií pomocou zariadení (Circuit
@@ -779,8 +788,8 @@ sk:
   heading_csa_ai: Hľadáte veci, ktoré by ste mali robiť po skúške AP®?
   heading_bring_cs_to_students: Prineste počítačovú vedu študentom
   heading_cs_ambassador_program: Program ambasádorov CS
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Odporúčané študentské projekty
+  heading_start_hoc_with_videos: Začnite svoju Hodinu kódu inšpiratívnymi videami
   cs_ambassador_subhead: Ak ste študentom strednej školy, ktorý vás zaujíma o povzbudenie
     ďalších mladých žien, aby na vašej škole absolvovali informatiku, potom vás potrebujeme!
   cs_ambassador_desc: Počítačová veda sa dotýka každej oblasti vrátane medicíny, zábavy,
@@ -879,13 +888,13 @@ sk:
     informatiky (CS Principles) od Code.org a každý mesiac dostanete email plný nápadov
     a užitočných rád.
   subscribe_form_section_unsubscribe: Z odberu sa môžete kedykoľvek odhlásiť.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Kódovanie tanečnej párty
+  dance_featuring_songs_by_short: 'Obsahuje piesne od:'
+  dance_featuring_songs_by_long: 'Dance Party obsahuje piesne od:'
+  dance_and_more: a viac
+  dance_choose_activity: Vyberte si tanečnú párty
+  dance_afe_disclaimer: Umelci, ktorých hudba je použitá v tomto návode, nesponzorujú
+    ani nepodporujú Amazon ako súčasť licencovania používania ich hudby na Code.org.
   blockchain_hero_heading: Ako funguje blockchain
   blockchain_hero_desc: Ponorte sa do sveta blockchainu pomocou našej novej série
     videí a sprievodných lekcií „Ako funguje blockchain“!
@@ -13283,6 +13292,9 @@ sk:
   step_06: Krok 6
   step_07: Krok 7
   step_08: Krok 8
+  what: 'Čo:'
+  when: 'Kedy:'
+  where: 'Kde:'
   hoc_how_to_top_heading: Váš sprievodca hodinou kódu
   hoc_how_to_top_desc: Prispôsobené návody na mieru pre najlepší zážitok z hodiny
     kódu.
@@ -13329,69 +13341,84 @@ sk:
     určených pre všetky vekové kategórie vo viac než 45 jazykoch.
   hoc_how_to_step_label_plan: Naplánujte, kde a kedy urobíte svoju Hodinu kódu
   hoc_how_to_step_label_choose_activity: Vyberte si svoju aktivitu
+  hoc_how_to_step_label_choose_activities: Vyberte aktivity
   hoc_how_to_step_label_test_activity: Vyskúšajte svoju aktivitu
   hoc_how_to_step_label_register_event: Zaregistrujte svoje podujatie
   hoc_how_to_step_label_tell: Povedzte svojim študentom, škole a komunite
   hoc_how_to_step_label_get_coding: Získajte kódovanie!
   hoc_how_to_step_label_celebrate: Oslávte
   hoc_how_to_step_label_beyond_hoc: Za hodinou kódu
+  hoc_how_to_step_label_plan_your_event: Naplánujte udalosť
+  hoc_how_to_step_label_plan_your_hour: Naplánujte si hodinu
+  hoc_how_to_step_label_help_spread_word: Pomôžte šíriť povedomie
   hoc_how_to_step_beyond_hoc_subhead: Tu to nekončí!
-  hoc_how_to_step_beyond_hoc_desc: Počítačová veda nemusí končiť Hodinou kódu! Zatiaľ
-    čo 90% rodičov chce, aby sa ich dieťa naučilo informatiku, väčšina škôl to stále
-    nevyučuje. Naučte sa, ako priniesť CS do školy vášho dieťaťa ešte dnes.
-  hoc_how_to_step_01_educators_subhead: Vyberte čas a priestor udalosti, ktorý zodpovedá
-    počtu študentov a zariadení, ktoré máte k dispozícii.
-  hoc_how_to_step_01_educators_desc_01: Aké priestory máte k dispozícii na vykonanie
-    vašej hodiny kódu? Zvážte technologické možnosti vášho priestoru a druhy zariadení,
-    na ktorých očakávate, že vaši študenti budú pracovať. Študenti môžu pracovať na
-    tutoriáloch na jednom zariadení, striedať sa pomocou zdieľaného zariadenia alebo
-    vyskúšať návod spoločne na tabuli v triede. Existujú dokonca aj odpojené návody,
-    ktoré je možné dokončiť bez vôbec žiadnych zariadení. Odpojené možnosti je možné
-    vykonať kdekoľvek - dokonca aj vonku!
-  hoc_how_to_step_01_educators_desc_02: Ľudia z celého sveta sa pripájajú k oslave
-    Hodiny kódu počas týždňa vzdelávania CS, %{campaign_date} keď sú vydané najnovšie
-    tutoriály a aktivity. Hodinu kódu však môžete urobiť každý deň v roku!
-  hoc_how_to_step_02_educators_desc_01: Preskúmajte aktivity založené na veku, skúsenostiach,
-    záujmoch a ďalších. Pre študentov je populárne vyskúšať vlastné tutoriály, hoci
-    mnohé aktivity zahŕňajú plány hodín pre učiteľov, ktoré vedú diskusiu alebo rozšíria
-    aktivitu.
-  hoc_how_to_step_02_educators_desc_02: Rozhodnite sa vopred, či si chcete vybrať
-    jeden výukový program pre všetkých svojich študentov, alebo nechajte každé dieťa
-    vybrať si svoj vlastný.
-  hoc_how_to_step_02_educators_desc_03: Tento rok môžete vy a vaši študenti [dozvedieť
-    sa všetko o AI] (%ai_url) prostredníctvom návodov, plánov hodín a našej novej
-    série videí Ako funguje AI.
-  hoc_how_to_step_03_educators_desc_01: Vyskúšajte si tutoriál sami predtým, ako sa
-    dostanete do triedy, aby ste mohli odpovedať na otázky!
-  hoc_how_to_step_03_educators_desc_02: Môžete tiež otestovať návody na študentských
-    počítačoch alebo zariadeniach, aby ste sa uistili, že podporujú zvuk a video.
-    Máte nízku šírku pásma? Naplánujte zobrazenie videí v prednej časti triedy, takže
-    každý študent nesťahuje svoje vlastné videá.
-  hoc_how_to_step_03_educators_desc_03: Zvážte poskytnutie slúchadiel pre svoju triedu
-    alebo požiadajte študentov, aby si priniesli svoje vlastné, ak výukový program,
-    ktorý si vyberiete, najlepšie funguje so zvukom.
-  hoc_how_to_step_04_educators_desc_01: Po registrácii svojej udalosti dostanete užitočné
-    novinky a tipy na usporiadanie úspešnej Hodiny kódu. Registrácia vám tiež umožní
-    informovať miestnych dobrovoľníkov o účasti vašej školy. Dobrovoľníci sú skvelou
-    pomocou a môžu prísť vašej triede porozprávať viac o praktickom využití infromatiky,
-    alebo vám môžu pomôcť s organizáciou vášho podujatia.
-  hoc_how_to_step_05_educators_desc_01: Nechajte svojich študentov nadšení z udalosti
-    zdieľaním [inšpiratívnych videí] (%{videos_url}) zvýraznením rôznych ľudí a kreatívnych
-    spôsobov, ako je možné počítačovú vedu využiť v reálnom svete.
-  hoc_how_to_step_05_educators_desc_02: Podeľte sa o svoje plány Hodiny kódu s ostatnými
-    učiteľmi, ktorí sa možno budú chcieť zapojiť do zábavy! Je to tiež skvelá príležitosť
-    osloviť asociáciu rodičovských učiteľov vašej školy alebo sa podeliť o rodičovské
-    bulletiny a dať im vedieť, čo sa ich deti učia.
-  hoc_how_to_step_06_educators_desc_01: Nasmerujte svojich študentov na aktivitu,
+  hoc_how_to_step_plan_hour_desc_01: 'Tu je príklad program, ktorým môžete začať:'
+  hoc_how_to_step_choose_activities_desc_01: Tohtoročnou témou Hodiny kódu je Kreativita
+    s umelou inteligenciou (AI). Či už ide o kódovanie nových aplikácií a algoritmov,
+    vytváranie jedinečného umenia alebo tvorbu choreografie, ktorá nás prinúti tancovať,
+    AI otvára nové príležitosti pre digitálne vyjadrenie, ktoré rozširujú naše chápanie
+    kreativity. Urobte tento rok výnimočným dokončením kódovacej aktivity A učením
+    sa o AI.
+  hoc_how_to_step_choose_activities_desc_02: Najprv [preskúmajte stovky aktivít kódovania]
+    (%{activities_url}) a vyberte si jednu na základe veku, skúseností, záujmov a
+    ďalších vecí vašej skupiny. [Tieto vybrané aktivity] (%{ai_activities_url}) obsahujú
+    umelú inteligenciu ako kľúčovú tému alebo lekciu.
+  hoc_how_to_step_choose_activities_desc_03: Potom [dozviete sa všetko o AI] (%{ai_url}).
+    Študenti si môžu pozerať krátke videá s odborníkmi v tejto oblasti a existujú
+    sprievodné plány hodín na rozšírenie aktivity a usmernenie ďalšej diskusie. Alebo
+    ponúkame bezplatné profesionálne vzdelávanie pre pedagógov, aby sme odomkli budúcnosť
+    výučby s AI a o nej.
+  hoc_how_to_step_educators_register_desc: Začnite so záväzkom urobiť Hodinu kódu
+    so svojimi študentmi registráciou vašej udalosti. Keď sa zaregistrujete, dostanete
+    užitočné e-maily s novinkami a tipmi na usporiadanie úspešnej Hour of Code. Budete
+    tiež [umiestnený na mape] (%{map_url}). Viditeľný súhrn nášho kolektívneho úsilia
+    demonštruje globálny záväzok voči hnutiu informatiky, ktoré nám pomôže vybudovať
+    dynamiku systémovej zmeny.
+  hoc_how_to_step_educators_plan_desc_01: Pred podujatím si vyskúšajte aktivity sami,
+    aby ste sa uistili, že fungujú na študentských zariadeniach a ste pripravení odpovedať
+    na otázky! Máte nízku šírku pásma? Naplánujte si zobrazenie videí v prednej časti
+    triedy, aby si každý študent nesťahoval svoje vlastné videá.
+  hoc_how_to_step_educators_plan_desc_02: Ľudia z celého sveta sa často k Hodine kódu
+    propoja počas Týždňa vzdelávania informatiky (%{campaign_date}), ale Hodinu kódu
+    môžete usporiadať ktorýkoľvek deň v roku!
+  hoc_how_to_step_educators_plan_desc_03: Vyberte priestor, ktorý vyhovuje počtu študentov
+    a zariadení, ktoré máte k dispozícii. Študenti môžu vyskúšať aktivity na jednotlivých
+    zariadeniach, striedavo zdieľať zariadenie alebo ako trieda na tabuli. Existujú
+    dokonca aj odpojené činnosti, ktoré je možné dokončiť bez akéhokoľvek zariadenia,
+    takže ich možno vykonať aj vonku!
+  hoc_how_to_step_educators_spread_word_desc_01: Pomôžte nám šíriť informácie vo vašej
+    komunite pomocou [týchto e-mailových šablón] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Požiadajte dvoch kolegov, aby [register](%{register_url})
+    a usporiadali aktivitu Hour of Code. Na druhej strane môžu zabezpečiť dvoch kolegov,
+    ktorí môžu zabezpečiť dvoch kolegov atď.
+  hoc_how_to_step_educators_spread_word_desc_03: Požiadajte svojho riaditeľa, aby
+    [usporiadal celoškolské podujatie] (%{host_url}). Keď sa zúčastní 300 alebo viac
+    detí, môžete získať špeciálnu zásnubnú súpravu s tričkami, plagátmi, samolepkami
+    na notebooky a ďalšími. [Zdieľajte plán celého školského podujatia] (%{share_url}),
+    aby ste sa kvalifikovali.
+  hoc_how_to_step_educators_spread_word_desc_04: Obráťte sa na asociáciu študentov
+    rodičov učiteľov vašej školy alebo zdieľajte informačné bulletiny rodičov a dajte
+    im vedieť, čo sa ich deti učia.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Začnite s [inšpiratívnym
+    videom] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Študenti vykonávajú svoju
+    kódovaciu aktivitu'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45 - 10:55: Študenti sa učia o
+    AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Učiteľ dáva záverečné
+    poznámky'
+  hoc_how_to_step_educators_get_coding_desc: Nasmerujte svojich študentov na aktivitu,
     možno zdieľaním odkazu na tabuli alebo prostredníctvom systému riadenia učenia
     vo vašej triede. Vaši študenti sa môžu stretnúť s výzvami - to je v poriadku!
     Naučiť sa programovať je ako naučiť sa nový jazyk; hneď nebudete hovoriť plynule.
     Ak nepoznáte odpoveď, môžete to prísť spoločne.
-  hoc_how_to_step_07_educators_desc_01: 'Nezabudnite oslavovať úspech! Zdieľajte fotografie
-    a videá z vašej udalosti Hodina kódu na sociálnych sieťach. Použite #HourOfCode
-    a @codeorg, aby sme mohli zdôrazniť aj váš úspech!'
-  hoc_how_to_step_07_educators_desc_02: Môžete tiež vytlačiť certifikáty pre svojich
-    študentov, aby predviedli svoje úspechy!
+  hoc_how_to_step_educators_celebrate_desc: 'Po podujatí vytlačte osvedčenia o ukončení
+    a zablahoželajte svojim študentom. Zdieľajte fotografie a videá z podujatia Hour
+    of Code a ukážte úspechy svojich študentov pomocou #HourOfCode a @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Počítačová veda nemusí končiť Hodinou kódu!
+    Zatiaľ čo 90% rodičov chce, aby sa ich dieťa učilo informatiku, väčšina škôl ju
+    stále nevyučuje. Aby sme pomohli, naše učebné osnovy sú webové a navždy sa dajú
+    bezplatne používať. Naučte sa, ako priniesť CS do svojej školy ešte dnes.
   hoc_ai_top_desc: Každý môže lepšie porozumieť umelej inteligencii. Žiaci, študenti
     aj pedagógovia objavujúci budúcnosť výučby s umelou inteligenciou aj o nej.
   hoc_ai_how_ai_works_video_series_desc: Táto séria krátkych videí vám predstaví,
@@ -14105,66 +14132,68 @@ sk:
     určených pre zákonodarcov, vedenie škôl aj ich zamestnancov pri vytváraní rámca
     pre využitie umelej inteligencie na školách.
   teach_ai_button_label: Zobraziť materiály
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
+  middle_high_page_main_title: Učenie pre vek 11 rokov a viac
+  middle_high_page_main_description: Preskúmajte svet informatiky s pútavými videami,
+    vlastnými tutoriálmi, programovacími aktivitami a ďalšími!
   middle_high_page_hero_title: Začnite s Hodinou kódu
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
+  middle_high_page_hero_description: Naučte sa základy informatiky pomocou bezplatných
+    aktivít Hour of Code, ktoré obsahujú bloky kódovania typu „drag-and-drop“. Na
+    výber sú stovky hodinových možností!
   middle_high_page_hourofcode_link: Preskúmajte aktivity Hodiny kódu
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
+  middle_high_page_modules_title: Programovacie moduly pre starších študentov
+  middle_high_page_modules_description: Tieto krátke, vlastné moduly pre študentov
+    stredných a stredných škôl upravené z našich kurzov CS Discoveries a CS Principles
+    sú skvelým spôsobom, ako sa naučiť koncepty, ktoré pokrývajú všetky programovacie
+    jazyky a nástroje.
+  middle_high_page_modules_card_title_1: Úvod do Game Labu
+  middle_high_page_modules_card_title_2: Programovanie korytnačky v App Labe
+  middle_high_page_modules_card_title_3: Programovanie udalostí v App Labe
+  middle_high_page_modules_card_description_1: Pohybujte sa vlastným tempom v tomto
+    úvode do nášho prostredia Game Lab, keď programujete animácie, interaktívne umenie
+    a hry.
+  middle_high_page_modules_card_description_2: Odomknite možnosť vytvárať bohaté interaktívne
+    aplikácie pomocou JavaScriptu v App Lab!
+  middle_high_page_modules_card_description_3: Choďte vlastným tempom s týmto úvodom
+    do programovacieho prostredia App Lab, v ktorom študenti používajú JavaScript
+    na vytváranie interaktívnych aplikácií.
   middle_high_page_modules_card_link: Vyskúšať
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_make_your_own_title: Vytvorte si vlastné aplikácie, hry a webové
+    stránky
+  middle_high_page_make_your_own_description: 'Okrem kurzov máme aj programovacie
+    nástroje, ktoré vám umožnia preskúmať vašu kreativitu a urobiť niečo úžasné. '
   middle_high_page_make_your_own_card_title_1: App Lab
   middle_high_page_make_your_own_card_title_2: Game Lab
   middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_descrpition_1: App Lab je programovacie prostredie,
+    kde môžete vytvárať jednoduché aplikácie. Navrhnite aplikáciu, kód v JavaScripte
+    s blokmi alebo textom a potom zdieľajte aplikáciu v priebehu niekoľkých sekúnd.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab je programovacie prostredie,
+    v ktorom môžeš vytvárať jednoduché animácie a hry s postavami a predmetmi, ktoré
+    na seba reagujú.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab je programovacie prostredie,
+    kde môžete vytvárať jednoduché webové stránky pomocou HTML a CSS. Navrhnite si
+    webové stránky a zdieľajte svoje stránky v priebehu niekoľkých sekúnd.
   middle_high_page_make_your_own_card_link: Viac info
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
+  middle_high_page_additional_resources_title: Ďalšie zdroje
+  middle_high_page_additional_resources_description: Existuje toľko spôsobov, ako
+    ďalej skúmať informatiku! Prezrite si našu knižnicu videí alebo sa dozviete viac
+    o vzrušujúcej kariére v oblasti informatiky.
   middle_high_page_video_library_title: Preskúmajte videá
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
+  middle_high_page_video_library_description: Naučte sa základy informatiky prostredníctvom
+    krátkych 5-10 minútových videí na témy ako umelá inteligencia, internet, ako fungujú
+    počítače, ako nedostať sa hackermi, blockchain, kariéra a ďalšie!
+  middle_high_page_video_library_link: Zobraziť knižnicu videí
+  middle_high_page_cs_journeys_title: Pokračujte ďalej s CS Journeys
+  middle_high_page_cs_journeys_description: Urobte ďalší krok na svojej ceste informatiky.
+    Preskúmajte kariéru, možnosti mentorstva, online kurzy, štipendiá, stáže a ďalšie!
+  middle_high_page_cs_journeys_link: Preskúmajte CS Journeys
   middle_high_page_cs_title: Informatika v triede
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
+  middle_high_page_cs_description: Tieto kurzy by mal viesť učiteľ! Ak by ste ich
+    chceli vidieť vyučovať vo vašej škole, zvážte spoluprácu s učiteľom, aby ste ich
+    priviedli do vašej triedy.
   middle_high_page_cs_card_title_1: Objavujeme informatiku
   middle_high_page_cs_card_title_2: Princípy Informatiky
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_cs_card_title_3: AP Počítačová veda A
   middle_high_page_cs_card_description_1: Bezplatný jednoročný učebný plán, ktorý
     žiakov oboznámi so základnými informatickými konceptmi a motivuje ich k tomu,
     aby sa zamysleli nad tým, ako výpočtová technika a ďalšie technológie ovplyvňujú
@@ -14178,32 +14207,32 @@ sk:
     bezplatnom učebnom pláne pre AP® Computer Science A (AP® CSA).
   middle_high_page_cs_link_1: Preskúmajte kurz Objavujeme informatiku
   middle_high_page_cs_link_2: Preskúmajte princípy CS
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
+  middle_high_page_cs_link_3: Preskúmajte CSA
+  elemeentary_page_main_title: Učenie pre deti od 5 do 11 rokov
+  elementary_page_main_description: Preskúmajte svet informatiky s pútavými videami,
+    vlastnými tutoriálmi, programovacími aktivitami a ďalšími!
+  elementary_page_own_pace_title: Pokračujte v učení vlastným tempom
+  elementary_page_own_pace_description: Vytvárajte kresby, hry a ďalšie v týchto dvoch
+    vynikajúcich možnostiach pre študentov, ktorí začínajú samostatne učiť sa základy
+    informatiky.
   elementary_page_own_pace_card_title_1: Zrýchlený kurz pre predškolákov
   elementary_page_own_pace_card_title_2: Zrýchlený kurz
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
+  elementary_page_own_pace_card_description_1: Naučte sa informatiku vlastným tempom!
+    Naučte sa vytvárať počítačové programy, rozvíjať zručnosti pri riešení problémov
+    a pracovať na zábavných výzvach! Vytvárajte hry a kreatívne projekty, ktoré môžete
+    zdieľať s priateľmi, rodinou a učiteľmi.
   elementary_page_own_pace_link_1: Začnite kurz pre predškolákov
   elementary_page_own_pace_link_2: Začnite Zrýchlený kurz
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_make_your_own_games_title: Vytvorte si vlastné animácie a hry
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Je čas byť kreatívny! Použite
+    blokové kódovanie na vytvorenie niečoho hlúpeho, sladkého alebo vonkajšieho priestoru
+    v Sprite Lab. Jediným limitom je vaša predstavivosť!
+  elementary_page_make_your_own_games_link: Vyskúšajte Sprite Lab
   elementary_page_computer_science_title: Informatika v triede
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_computer_science_description: Tieto kurzy by mal viesť učiteľ! Ak
+    by ste ich chceli vidieť vyučovať vo vašej škole, požiadajte rodiča alebo opatrovníka,
+    aby spolupracovali s učiteľom, aby ich priviedol do vašej triedy.
   elementary_page_computer_science_card_title_1: Základy informatiky
   elementary_page_computer_science_card_title_2: Medzipredmetové vzťahy v informatike
   elementary_page_computer_science_description_1: Bezplatný jednoročný učebný plán,

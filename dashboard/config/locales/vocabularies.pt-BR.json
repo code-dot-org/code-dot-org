@@ -2520,6 +2520,30 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressão sem perdas",
           "definition": "Algoritmo de compactação de dados que permite que os dados originais sejam reconstruídos com perfeição a partir dos dados compactados. Mais usado para compactação de textos (ex.: compactação em zip)."
+        },
+        "decode/csd/2021": {
+          "word": "Decodifique",
+          "definition": "para mudar a forma como as informações são representadas para que possam ser lidas por uma pessoa"
+        },
+        "encode/csd/2021": {
+          "word": "Codifique",
+          "definition": "para alterar a forma como as informações são representadas para que possam ser lidas por um computador"
+        },
+        "decode/csd/2022": {
+          "word": "Decodifique",
+          "definition": "para mudar a forma como as informações são representadas para que possam ser lidas por uma pessoa"
+        },
+        "encode/csd/2022": {
+          "word": "Codifique",
+          "definition": "para alterar a forma como as informações são representadas para que possam ser lidas por um computador"
+        },
+        "decode/csd/2023": {
+          "word": "Decodifique",
+          "definition": "para mudar a forma como as informações são representadas para que possam ser lidas por uma pessoa"
+        },
+        "encode/csd/2023": {
+          "word": "Codifique",
+          "definition": "para alterar a forma como as informações são representadas para que possam ser lidas por um computador"
         }
       }
     }
