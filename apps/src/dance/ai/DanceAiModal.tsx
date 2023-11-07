@@ -14,7 +14,12 @@ import {
 } from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {AiOutput, FieldKey, GeneratedEffect, Results, Scores} from '../types';
+import {
+  AiOutput,
+  FieldKey,
+  GeneratedEffect,
+  GeneratedEffectScores,
+} from '../types';
 import {
   generateBlocks,
   generateBlocksFromResult,
@@ -149,7 +154,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
             () => chooseEffects(currentInputs, ChooseEffectsQuality.BAD)
           ),
-          goodEffect: {results: JSON.parse(currentValue)},
+          goodEffect: JSON.parse(currentValue),
         };
       } else {
         setTimeout(() => {
@@ -234,7 +239,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentAiModalField?.setValue(
       JSON.stringify({
         inputs,
-        ...generatedEffects.current.goodEffect?.results,
+        ...generatedEffects.current.goodEffect,
       })
     );
     onClose();
@@ -352,11 +357,11 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
-  const getPreviewCode = (results?: Results): string => {
+  const getPreviewCode = (generatedEffect?: GeneratedEffect): string => {
     const tempWorkspace = new Workspace();
     const previewCode = generatePreviewCode(
       tempWorkspace,
-      JSON.stringify(results)
+      JSON.stringify(generatedEffect)
     );
     tempWorkspace.dispose();
     return previewCode;
@@ -584,7 +589,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 >
                   <AiVisualizationPreview
                     id="ai-preview"
-                    code={getPreviewCode(currentGeneratedEffect?.results)}
+                    code={getPreviewCode(currentGeneratedEffect)}
                     size={previewSize}
                   />
                 </div>
@@ -595,9 +600,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                       className={moduleStyles.blockPreview}
                     >
                       <AiBlockPreview
-                        resultJson={JSON.stringify(
-                          currentGeneratedEffect?.results
-                        )}
+                        resultJson={JSON.stringify(currentGeneratedEffect)}
                       />
                     </div>
                   )}
@@ -625,26 +628,21 @@ const DanceAiModal: React.FunctionComponent = () => {
                       className={moduleStyles.visualizationContainer}
                       title={
                         labels.backgroundEffect[
-                          getGeneratedEffect(index)?.results.backgroundEffect ||
-                            0
+                          getGeneratedEffect(index)?.backgroundEffect || 0
                         ] +
                         ' - ' +
                         labels.foregroundEffect[
-                          getGeneratedEffect(index)?.results.foregroundEffect ||
-                            0
+                          getGeneratedEffect(index)?.foregroundEffect || 0
                         ] +
                         ' - ' +
                         labels.backgroundColor[
-                          getGeneratedEffect(index)?.results.backgroundColor ||
-                            0
+                          getGeneratedEffect(index)?.backgroundColor || 0
                         ]
                       }
                     >
                       <AiVisualizationPreview
                         id={'ai-preview-' + index}
-                        code={getPreviewCode(
-                          getGeneratedEffect(index)?.results
-                        )}
+                        code={getPreviewCode(getGeneratedEffect(index))}
                         size={previewSizeSmall}
                       />
                     </div>
@@ -769,7 +767,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 };
 
 interface ScoreProps {
-  scores: Scores;
+  scores: GeneratedEffectScores;
 }
 
 const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
