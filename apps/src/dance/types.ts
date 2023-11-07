@@ -9,9 +9,9 @@ export type SongData = {
 };
 
 type Analysis = {
-  beats: [boolean, boolean, boolean];
+  beats: boolean[];
   centroid: number;
-  energy: [number, number, number];
+  energy: number[];
   time: number;
   volume: number;
 };
