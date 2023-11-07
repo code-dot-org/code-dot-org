@@ -275,8 +275,10 @@ sv:
   call_to_action_register_event: Anmäl ditt evenemang
   call_to_action_register_your_hoc: Registrera din Hour of Code
   call_to_action_select_activity: Välj en aktivitet
+  call_to_action_select_coding_activity: Välj en kodningsaktivitet
   call_to_action_start_activity: Starta en aktivitet
   call_to_action_get_certificates: Skaffa certifikat
+  call_to_action_print_certificates: Skriv ut certifikat
   call_to_action_go_beyond_hoc: Gå bortom kodens timme
   call_to_action_explore_all_hoc_activities: Utforska alla Hour of Code-aktiviteter
     från Code.org
@@ -402,6 +404,8 @@ sv:
     professionellt lärande program
   aria_label_call_to_action_teaching_csp: Starta programmet Undervisning Datavetenskapsprinciper
     för professionellt lärande
+  aria_label_call_to_action_teaching_problem_solving: Starta det professionella inlärningsprogrammet
+    för undervisning i problemlösning och beräkning
   aria_label_call_to_action_teaching_csc: Starta programmet Undervisning Datavetenskap
     Anslutningar professionellt lärande
   aria_label_call_to_action_teaching_ai: Starta det professionella lärandeprogrammet
@@ -419,6 +423,8 @@ sv:
   aria_label_call_to_action_curriculum_csd: Utforska läroplanen för datavetenskap
     Discoveries
   aria_label_call_to_action_curriculum_csp: Utforska läroplanen för datavetenskapsprinciper
+  aria_label_call_to_action_curriculum_problem_solving: Utforska läroplanen för problemlösning
+    och beräkning
   aria_label_call_to_action_curriculum_csc: Utforska läroplanen Computer Science Connections
   aria_label_call_to_action_curriculum_ai: Utforska läroplanen för AI och maskininlärning
   aria_label_call_to_action_curriculum_maker_cp: Utforska läroplanen Skapa appar med
@@ -495,6 +501,7 @@ sv:
   curriculum_name_csf_teacher_led: Lärarledd lektion
   curriculum_name_csd: Datavetenskap Upptäckter
   curriculum_name_csp: Datavetenskapliga principer
+  curriculum_name_problem_solving: Problemlösning och databehandling
   curriculum_name_csc: Datavetenskap Sammanhang
   curriculum_name_csa: AP® Datavetenskap A
   curriculum_name_csa_ai: Programvaruteknik och datorseende
@@ -691,6 +698,7 @@ sv:
   module_label_teaching_csf: Undervisning Datavetenskap Grundläggande
   module_label_teaching_csd: Undervisning Datavetenskap Upptäckter
   module_label_teaching_csp: Undervisning Datavetenskapliga principer
+  module_label_teaching_problem_solving: Undervisning i problemlösning och databehandling
   module_label_teaching_csc: Undervisning i datavetenskap Anslutningar
   module_label_teaching_ai: Undervisning i AI och maskininlärning
   module_label_teaching_maker_cp: Undervisning Skapa appar med enheter (Circuit Playground)
@@ -13236,6 +13244,9 @@ sv:
   step_06: Steg 6
   step_07: Steg 7
   step_08: Steg 8
+  what: 'Vad:'
+  when: 'När:'
+  where: 'Var:'
   hoc_how_to_top_heading: Din guide till Hour of Code
   hoc_how_to_top_desc: Skräddarsydda instruktioner för den bästa Hour of Code-upplevelsen.
   hoc_how_to_top_view_guide: Visa guide för
@@ -13282,69 +13293,83 @@ sv:
     utformade för alla åldrar på över 45 språk.
   hoc_how_to_step_label_plan: Planera var och när du ska göra din Hour of Code
   hoc_how_to_step_label_choose_activity: Välj din aktivitet
+  hoc_how_to_step_label_choose_activities: Välj dina aktiviteter
   hoc_how_to_step_label_test_activity: Testa din aktivitet
   hoc_how_to_step_label_register_event: Anmäl ditt evenemang
   hoc_how_to_step_label_tell: Berätta för dina elever, skola och samhälle
   hoc_how_to_step_label_get_coding: Få kodning!
   hoc_how_to_step_label_celebrate: Fira
   hoc_how_to_step_label_beyond_hoc: Bortom Hour of Code
+  hoc_how_to_step_label_plan_your_event: Planera ditt evenemang
+  hoc_how_to_step_label_plan_your_hour: Planera din timme
+  hoc_how_to_step_label_help_spread_word: Hjälp till att sprida ordet
   hoc_how_to_step_beyond_hoc_subhead: Det slutar inte här!
-  hoc_how_to_step_beyond_hoc_desc: Datavetenskap behöver inte sluta med Hour of Code!
-    Medan 90% av föräldrarna vill att deras barn ska lära sig datavetenskap, undervisar
-    de flesta skolor fortfarande inte det. Lär dig hur du tar med CS till ditt barns
-    skola idag.
-  hoc_how_to_step_01_educators_subhead: Välj en evenemangstid och ett utrymme som
-    fungerar för antalet studenter och enheter du har tillgängliga.
-  hoc_how_to_step_01_educators_desc_01: Vilka platser finns tillgängliga för dig att
-    göra din Hour of Code? Tänk på de tekniska funktionerna i ditt utrymme, och vilka
-    typer av enheter du förväntar dig att dina elever ska arbeta med. Eleverna kan
-    arbeta med självstudier på en enda enhet, turas om att använda en delad enhet
-    eller prova en handledning tillsammans på en whiteboard i klassrummet. Det finns
-    till och med urkopplade tutorials som kan slutföras utan några enheter alls. Okopplade
-    alternativ kan göras var som helst - även utomhus!
-  hoc_how_to_step_01_educators_desc_02: Människor runt om i världen deltar i Hour
-    of Code-firandet under CS Education Week %{campaign_date} när de senaste självstudierna
-    och aktiviteterna släpps. Men du kan göra en Hour of Code vilken dag som helst
-    på året!
-  hoc_how_to_step_02_educators_desc_01: Utforska aktiviteter baserat på din grupps
-    ålder, erfarenhet, intressen, och mer. Det är populärt för elever att prova självledda
-    handledning, även om många aktiviteter inkluderar lektionsplaner för lärare för
-    att vägleda diskussionen eller utöka aktiviteten också.
-  hoc_how_to_step_02_educators_desc_02: Bestäm i förväg om du vill välja en enda handledning
-    för alla dina elever, eller låt varje barn välja sin egen.
-  hoc_how_to_step_02_educators_desc_03: I år kan du och dina elever [lära dig allt
-    om AI] (%ai_url) genom självstudier, lektionsplaner och vår nya How AI Works videoserie.
-  hoc_how_to_step_03_educators_desc_01: Testa handledningen själv innan du går in
-    i klassrummet så att du kan svara på frågor!
-  hoc_how_to_step_03_educators_desc_02: Du kan också testa självstudier på studentdatorer
-    eller enheter för att säkerställa att de stöder ljud och video. Har du låg bandbredd?
-    Planera att visa videor längst fram i klassen, så att varje elev inte laddar ner
-    sina egna videor.
-  hoc_how_to_step_03_educators_desc_03: Överväg att tillhandahålla hörlurar till din
-    klass, eller be eleverna ta med sina egna, om den handledning du väljer fungerar
-    bäst med ljud.
-  hoc_how_to_step_04_educators_desc_01: När du registrerar ditt Hour of Code-evenemang
-    får du användbara e-postmeddelanden med nyheter och tips för att vara värd för
-    en framgångsrik Hour of Code. Det är också hur du kan låta lokala volontärer veta
-    att din skola deltar. Volontärer är en bra resurs och kan komma och prata med
-    din klass om datavetenskap eller hjälpa dina elever med Hour of Code-aktiviteter.
-  hoc_how_to_step_05_educators_desc_01: Få dina elever glada för evenemanget genom
-    att dela [inspirerande videor] (%{videos_url}) som lyfter fram olika människor
-    och kreativa sätt som datavetenskap kan användas i den verkliga världen.
-  hoc_how_to_step_05_educators_desc_02: Dela dina Hour of Code-planer med andra lärare
-    som kanske vill delta i det roliga! Detta är också ett utmärkt tillfälle att nå
-    ut till din skolas föräldralärarstudentförening eller dela i föräldrarnas nyhetsbrev,
-    låta dem veta vad deras barn lär sig.
-  hoc_how_to_step_06_educators_desc_01: Rikta dina elever till aktiviteten, kanske
+  hoc_how_to_step_plan_hour_desc_01: 'Här är en exempelagenda för att komma igång:'
+  hoc_how_to_step_choose_activities_desc_01: I år är temat Hour of Code Kreativitet
+    med artificiell intelligens (AI). Oavsett om det handlar om att koda nya appar
+    och algoritmer, skapa unik konst eller skapa koreografi för att få oss att dansa,
+    AI öppnar nya möjligheter för digitalt uttryck som utökar vår förståelse för kreativitet.
+    Gör detta år speciellt genom att slutföra en kodningsaktivitet OCH lära dig om
+    AI.
+  hoc_how_to_step_choose_activities_desc_02: Först, [utforska hundratals kodningsaktiviteter]
+    (%{activities_url}) och välj en baserat på din grupps ålder, erfarenhet, intressen
+    och mer. [Dessa utvalda aktiviteter] (%{ai_activities_url}) har artificiell intelligens
+    som ett nyckelämne eller lektion.
+  hoc_how_to_step_choose_activities_desc_03: Sedan, [lära dig allt om AI] (%{ai_url}).
+    Eleverna kan titta på korta videor med experter på området, och det finns medföljande
+    lektionsplaner för att utöka aktiviteten och vägleda vidare diskussion. Eller
+    så erbjuder vi gratis professionellt lärande för lärare för att låsa upp framtiden
+    för undervisning med och om AI.
+  hoc_how_to_step_educators_register_desc: Börja med ett åtagande att göra en Hour
+    of Code med dina elever genom att registrera ditt evenemang. När du registrerar
+    dig får du användbara e-postmeddelanden med nyheter och tips för att vara värd
+    för en framgångsrik Hour of Code. Du kommer också att bli [sätta på kartan] (%{map_url}).
+    Den synliga helheten av våra kollektiva ansträngningar visar det globala engagemanget
+    för datavetenskapliga rörelsen, vilket kommer att hjälpa oss att bygga fart för
+    systemisk förändring.
+  hoc_how_to_step_educators_plan_desc_01: Innan ditt evenemang, prova aktiviteterna
+    själv så att du kan se till att de fungerar på studentenheter och du är beredd
+    att svara på frågor! Har du låg bandbredd? Planera att visa videor längst fram
+    i klassen, så att varje elev inte laddar ner sina egna videor.
+  hoc_how_to_step_educators_plan_desc_02: Människor runt om i världen går ofta med
+    i Hour of Code-firandet under Computer Science Education We%{campaign_date}ek
+    (), men du kan göra en Hour of Code vilken dag som helst på året!
+  hoc_how_to_step_educators_plan_desc_03: Välj ett utrymme som fungerar för antalet
+    studenter och enheter du har tillgängliga. Eleverna kan prova aktiviteter på enskilda
+    enheter, turas om att dela en enhet eller som en klass på en whiteboard. Det finns
+    till och med urkopplade aktiviteter som kan slutföras utan några enheter alls,
+    så de kan till och med göras utomhus!
+  hoc_how_to_step_educators_spread_word_desc_01: Hjälp oss att sprida ordet i ditt
+    samhälle med [dessa e-postmallar] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Be två kollegor att [register](%{register_url})
+    och vara värd för en Hour of Code-aktivitet. De kan i sin tur säkra två kollegor,
+    som kan säkra två kollegor etc.
+  hoc_how_to_step_educators_spread_word_desc_03: Be din rektor att [vara värd för
+    ett skolomfattande evenemang] ()%{host_url}. När 300 eller fler barn deltar kan
+    du få ett speciellt förlovningspaket med t-shirts, affischer, laptopklistermärken
+    och mer. [Dela hela din skolevenemangsplan] (%{share_url}) för att kvalificera
+    sig.
+  hoc_how_to_step_educators_spread_word_desc_04: Nå ut till din skolas föräldralärarstudentförening
+    eller dela i nyhetsbrev för föräldrar, låt dem veta vad deras barn lär sig.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Börja med en [inspirerande
+    video] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Eleverna gör sin kodningsaktivitet'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Eleverna lär sig om AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Läraren ger avslutande
+    kommentarer'
+  hoc_how_to_step_educators_get_coding_desc: Rikta dina elever till aktiviteten, kanske
     genom att dela länken på tavlan eller genom klassrummets inlärningshanteringssystem.
     Dina elever kan stöta på utmaningar - det är okej! Att lära sig att programmera
     är som att lära sig ett nytt språk; du kommer inte att vara flytande direkt. Om
     du inte vet svaret kan du räkna ut det tillsammans.
-  hoc_how_to_step_07_educators_desc_01: 'Var noga med att fira framgång! Dela foton
-    och videor från ditt Hour of Code-evenemang på sociala medier. Använd #HourOfCode
-    och @codeorg så att vi också kan lyfta fram din framgång!'
-  hoc_how_to_step_07_educators_desc_02: Du kan också skriva ut certifikat för dina
-    elever för att visa upp sina prestationer!
+  hoc_how_to_step_educators_celebrate_desc: 'Efter ditt evenemang, skriv ut intyg
+    om slutförande och gratulera dina elever. Dela foton och videor från ditt Hour
+    of Code-evenemang och visa upp elevernas prestationer med #HourOfCode och @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Datavetenskap behöver inte sluta med Hour
+    of Code! Medan 90% av föräldrarna vill att deras barn ska lära sig datavetenskap,
+    undervisar de flesta skolor fortfarande inte det. För att hjälpa, vår läroplan
+    är webbaserad och gratis att använda, för alltid. Lär dig hur du tar med CS till
+    din skola idag.
   hoc_ai_top_desc: Vem som helst kan lära sig om AI, oavsett om du är student i klassrummet
     eller en lärare som låser upp framtiden för undervisning med och om AI.
   hoc_ai_how_ai_works_video_series_desc: Denna serie korta videor kommer att introducera

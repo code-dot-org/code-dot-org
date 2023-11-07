@@ -285,8 +285,10 @@ is:
   call_to_action_register_event: Skráðu viðburðinn þinn
   call_to_action_register_your_hoc: Skráðu þína Klukkustund kóðunar
   call_to_action_select_activity: Veldu virkni
+  call_to_action_select_coding_activity: Veldu kóðunarstarfsemi
   call_to_action_start_activity: Byrjaðu virkni
   call_to_action_get_certificates: Fáðu vottorð
+  call_to_action_print_certificates: Prenta skírteini
   call_to_action_go_beyond_hoc: Fara út fyrir klukkutíma kóðans
   call_to_action_explore_all_hoc_activities: Kanna öll verkefni Klukkastundar kóðunar
     frá Code.org
@@ -411,6 +413,8 @@ is:
     faglega nám program
   aria_label_call_to_action_teaching_csp: Byrja Kennsla Computer Science Principles
     faglega nám program
+  aria_label_call_to_action_teaching_problem_solving: Byrjaðu faglega námsáætlunina
+    í kennslu vandamálalausnar og tölvumála
   aria_label_call_to_action_teaching_csc: Byrjaðu Kennsla Tölvunarfræði Tengingar
     faglega nám program
   aria_label_call_to_action_teaching_ai: Byrjaðu kennsluforritið AI og Machine Learning
@@ -427,6 +431,8 @@ is:
     Grundvallaratriði Pre-Reader Express námskeið
   aria_label_call_to_action_curriculum_csd: Kannaðu tölvunarfræði uppgötvanir námskrá
   aria_label_call_to_action_curriculum_csp: Skoða Computer Science Principles námskrá
+  aria_label_call_to_action_curriculum_problem_solving: Kannaðu námskrána um lausnir
+    og tölvumál
   aria_label_call_to_action_curriculum_csc: Skoða tölvunarfræði Tengingar námskrá
   aria_label_call_to_action_curriculum_ai: Kannaðu námskrá AI og vélanáms
   aria_label_call_to_action_curriculum_maker_cp: Kannaðu námskrána Búa til forrit
@@ -499,6 +505,7 @@ is:
   curriculum_name_csf_teacher_led: Kennari leiddi kennslustund
   curriculum_name_csd: Tölvunarfræði Uppgötvanir
   curriculum_name_csp: Tölvunarfræði Meginreglur
+  curriculum_name_problem_solving: Lausn vandamála og tölvunarfræði
   curriculum_name_csc: Tölvunarfræði Tengingar
   curriculum_name_csa: AP® Tölvunarfræði A
   curriculum_name_csa_ai: Hugbúnaðarverkfræði og tölvusjón
@@ -695,6 +702,7 @@ is:
   module_label_teaching_csf: Kennsla Tölvunarfræði Undirstöðuatriði
   module_label_teaching_csd: Kennsla Tölvunarfræði Uppgötvanir
   module_label_teaching_csp: Kennsla Tölvunarfræði Meginreglur
+  module_label_teaching_problem_solving: Kennsla á lausn vandamála og tölvumála
   module_label_teaching_csc: Kennsla Tölvunarfræði Tengingar
   module_label_teaching_ai: Kennsla AI og vélanám
   module_label_teaching_maker_cp: Kennsla Búa til forrit með tækjum (Circuit Playground)
@@ -13112,6 +13120,9 @@ is:
   step_06: Skref 6
   step_07: Skref 7
   step_08: Skref 8
+  what: 'Hvað:'
+  when: 'Hvenær:'
+  where: 'Hvar:'
   hoc_how_to_top_heading: Leiðbeiningar þínar um klukkustund kóðans
   hoc_how_to_top_desc: Sérsniðin leiðbeiningar fyrir bestu upplifun Hour of Code.
   hoc_how_to_top_view_guide: Skoða leiðbeiningar fyrir
@@ -13159,69 +13170,83 @@ is:
   hoc_how_to_step_label_plan: Skipuleggðu hvar og hvenær þú munt gera klukkutímann
     þinn
   hoc_how_to_step_label_choose_activity: Veldu virkni þína
+  hoc_how_to_step_label_choose_activities: Veldu starfsemi þína
   hoc_how_to_step_label_test_activity: Prófaðu virkni þína
   hoc_how_to_step_label_register_event: Skráðu viðburðinn þinn
   hoc_how_to_step_label_tell: Segðu nemendum þínum, skólanum og samfélaginu
   hoc_how_to_step_label_get_coding: Fáðu kóðun!
   hoc_how_to_step_label_celebrate: Fagnaðu
   hoc_how_to_step_label_beyond_hoc: Fyrir utan klukkutíma kóðans
+  hoc_how_to_step_label_plan_your_event: Skipuleggðu viðburðinn þinn
+  hoc_how_to_step_label_plan_your_hour: Skipuleggðu klukkustund þína
+  hoc_how_to_step_label_help_spread_word: Hjálpaðu við að dreifa orðinu
   hoc_how_to_step_beyond_hoc_subhead: Það endar ekki hér!
-  hoc_how_to_step_beyond_hoc_desc: Tölvunarfræði þarf ekki að ljúka með Hour of Code!
-    Þó að 90% foreldra vilja að barnið þeirra læri tölvunarfræði, þá kenna flestir
-    skólar það samt ekki. Lærðu hvernig á að koma með CS í skóla barnsins þíns í dag.
-  hoc_how_to_step_01_educators_subhead: Veldu atburðartíma og rými sem virkar fyrir
-    fjölda nemenda og tækja sem þú hefur í boði.
-  hoc_how_to_step_01_educators_desc_01: Hvaða rými eru í boði fyrir þig til að gera
-    Hour of Code? Íhugaðu tæknigetu rýmis þíns og hvers konar tæki þú ætlast til að
-    nemendur þínir vinni á. Nemendur geta unnið að námskeiðum í einu tæki, tekið á
-    móti með því að nota samnýtt tæki eða prófað einkatími saman á hvítborði í kennslustofunni.
-    Það eru jafnvel unplugged námskeið sem hægt er að ljúka með engum tækjum yfirleitt.
-    Unplugged valkosti er hægt að gera hvar sem er - jafnvel utandyra!
-  hoc_how_to_step_01_educators_desc_02: Fólk um allan heim tekur þátt í Hour of Code
-    hátíðinni á CS Education Week %{campaign_date} þegar nýjustu námskeiðin og starfsemi
-    eru gefin út. En þú getur gert klukkutíma kóða hvaða dag ársins sem er!
-  hoc_how_to_step_02_educators_desc_01: Kannaðu starfsemi miðað við aldur hópsins,
-    reynslu, áhugamál og fleira. Það er vinsælt fyrir nemendur að prófa sjálfstýrt
-    námskeið, þó að margar athafnir feli í sér kennsluáætlanir fyrir kennara til að
-    leiðbeina umræðu eða lengja starfsemina líka.
-  hoc_how_to_step_02_educators_desc_02: Ákveðið fyrirfram hvort þú vilt velja eina
-    einkatími fyrir alla nemendur þína, eða láta hvert barn velja sitt eigið.
-  hoc_how_to_step_02_educators_desc_03: Á þessu ári geturðu og nemendur þínir [lært
-    allt um AI] (%ai_url) með námskeiðum, kennsluáætlunum og nýju myndbandseríunni
-    okkar Hvernig AI Works.
-  hoc_how_to_step_03_educators_desc_01: Prófaðu einkatímann sjálfur áður en þú kemst
-    inn í kennslustofuna svo þú getir svarað spurningum!
-  hoc_how_to_step_03_educators_desc_02: Þú getur einnig prófað námskeið á tölvum eða
-    tækjum nemenda til að tryggja að þau styðji hljóð og myndband. Hafa lágt bandbreidd?
-    Ætlið að sýna myndbönd framan í bekknum, svo hver nemandi sé ekki að hlaða niður
-    eigin myndböndum.
-  hoc_how_to_step_03_educators_desc_03: Íhugaðu að útvega heyrnartól fyrir bekkina
-    þína, eða biðjið nemendur að koma með sitt eigið, ef kennslan sem þú velur virkar
-    best með hljóði.
-  hoc_how_to_step_04_educators_desc_01: Þegar þú skráir Hour of Code atburðinn þinn
-    færðu gagnlegan tölvupóst með fréttum og ábendingum um að hýsa árangursríka Hour
-    of Code. Það er líka hvernig þú getur látið sjálfboðaliða sveitarfélaga vita að
-    skólinn þinn tekur þátt. Sjálfboðaliðar eru frábær úrræði og geta komið talað
-    við bekkina þína um tölvunarfræði eða hjálpað nemendum þínum með starfsemi Hour
-    of Code.
-  hoc_how_to_step_05_educators_desc_01: Fáðu nemendur þína spennt fyrir viðburðinum
-    með því að deila [inspirational videos] (%{videos_url}) sem varpa ljósi á fjölbreytt
-    fólk og skapandi leiðir sem hægt er að nota tölvunarfræði í hinum raunverulega
-    heimi.
-  hoc_how_to_step_05_educators_desc_02: Deildu Hour of Code áætlunum þínum með öðrum
-    kennurum sem gætu viljað taka þátt í skemmtuninni! Þetta er líka frábært tækifæri
-    til að ná til foreldrakennara nemendafélags skólans þíns eða deila í fréttabréfum
-    foreldra og láta þau vita hvað börnin þeirra eru að læra.
-  hoc_how_to_step_06_educators_desc_01: Beindu nemendum þínum að starfseminni, kannski
-    með því að deila tenglinum á borðinu eða í gegnum námsstjórnunarkerfi kennslustofunnar
-    þinnar. Nemendur þínir geta lent í áskorunum - það er allt í lagi! Að læra að
-    forrita er eins og að læra nýtt tungumál; þú munt ekki vera reiprennandi strax.
-    Ef þú veist ekki svarið geturðu fundið það saman.
-  hoc_how_to_step_07_educators_desc_01: 'Vertu viss um að fagna árangri! Deildu myndum
-    og myndböndum af Hour of Code atburðinum þínum á samfélagsmiðlum. Notaðu #HourOfCode
-    og @codeorg svo við getum varpað ljósi á árangur þinn líka!'
-  hoc_how_to_step_07_educators_desc_02: Þú getur líka prentað vottorð fyrir nemendur
-    þína til að sýna árangur sinn!
+  hoc_how_to_step_plan_hour_desc_01: 'Hér er sýnishorn dagskrá til að koma þér af
+    stað:'
+  hoc_how_to_step_choose_activities_desc_01: Í ár er Hour of Code þemað Sköpunargáfa
+    með gervigreind (AI). Hvort sem það er að kóða ný forrit og reiknirit, búa til
+    einstaka list eða föndra choreography til að fá okkur að dansa, þá er AI að opna
+    fersk tækifæri fyrir stafræna tjáningu sem auka skilning okkar á sköpunargáfu.
+    Gerðu þetta ár sérstakt með því að ljúka kóðunarstarfsemi OG læra um AI.
+  hoc_how_to_step_choose_activities_desc_02: Fyrst skaltu [kanna hundruð erfðastarfsemi]
+    (%{activities_url}) og veldu einn miðað við aldur hópsins þíns, reynslu, áhugamál
+    og fleira. [Þessar veldu athafnir] (%{ai_activities_url}) eru með gervigreind
+    sem lykilefni eða kennslustund.
+  hoc_how_to_step_choose_activities_desc_03: Síðan, [læra allt um AI] (%{ai_url}).
+    Nemendur geta horft á stutt myndbönd með sérfræðingum á þessu sviði og fylgja
+    kennsluáætlanir til að lengja starfsemina og leiðbeina frekari umræðu. Eða bjóðum
+    við upp á ókeypis faglegt nám fyrir kennara til að opna framtíð kennslu með og
+    um AI.
+  hoc_how_to_step_educators_register_desc: Byrjaðu með skuldbindingu um að gera Hour
+    of Code með nemendum þínum með því að skrá viðburðinn þinn. Þegar þú skráir þig
+    færðu gagnlegan tölvupóst með fréttum og ráðum til að hýsa vel heppnaða Hour of
+    Code. Þú verður líka [sett á kortið] (%{map_url}). Sýnileg heild sameiginlegrar
+    viðleitni okkar sýnir alþjóðlega skuldbindingu við tölvunarfræðihreyfinguna, sem
+    mun hjálpa okkur að byggja upp skriðþunga fyrir kerfisbreytingar.
+  hoc_how_to_step_educators_plan_desc_01: Fyrir viðburðinn þinn skaltu prófa athafnirnar
+    sjálfur svo þú getir tryggt að þær virki á tækjum nemenda og þú ert tilbúinn að
+    svara spurningum! Ertu með litla bandbreidd? Ætla að sýna myndbönd fremst í bekknum,
+    svo hver nemandi sé ekki að hlaða niður eigin myndböndum.
+  hoc_how_to_step_educators_plan_desc_02: Fólk um allan heim tekur oft þátt í Hour
+    of Code hátíðinni á tölvunarfræðsluviku (%{campaign_date}), en þú getur gert Hour
+    of Code hvaða dag ársins sem er!
+  hoc_how_to_step_educators_plan_desc_03: Veldu pláss sem virkar fyrir fjölda nemenda
+    og tæki sem þú hefur í boði. Nemendur geta prófað athafnir á einstökum tækjum,
+    tekið á móti að deila tæki eða sem bekkur á hvítborð. Það eru jafnvel unplugged
+    starfsemi sem hægt er að ljúka með engin tæki yfirleitt, svo þeir geta jafnvel
+    verið gert úti!
+  hoc_how_to_step_educators_spread_word_desc_01: Hjálpaðu okkur að dreifa orðinu í
+    samfélaginu þínu með [þessum tölvupóstsniðmátum] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Biðjið tvo samstarfsmenn að [register](%{register_url})
+    og hýsa Hour of Code virkni. Þeir geta aftur á móti tryggt tvo samstarfsmenn,
+    sem geta tryggt tvo samstarfsmenn o.s.frv.
+  hoc_how_to_step_educators_spread_word_desc_03: Biddu skólastjóra þinn um að [hýsa
+    viðburð um allan skóla] (%{host_url}). Þegar 300 eða fleiri krakkar taka þátt
+    geturðu fengið sérstaka þátttökusett með stuttermabolum, veggspjöldum, fartölvulímmiðum
+    og fleira. [Deildu allri viðburðaáætlun þinni í skólanum] (%{share_url}) til að
+    uppfylla skilyrði.
+  hoc_how_to_step_educators_spread_word_desc_04: Náðu til foreldrakennara nemendafélags
+    skólans þíns eða deildu í fréttabréfum foreldra og láttu þá vita hvað börnin þeirra
+    eru að læra.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Byrjaðu með [innblástursmyndbandi]
+    ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Nemendur stunda kóðunarstarfsemi
+    sína'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Nemendur læra um AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Kennari flytur lokaathugasemdir'
+  hoc_how_to_step_educators_get_coding_desc: Beindu nemendum þínum að starfseminni,
+    kannski með því að deila tenglinum á borðinu eða í gegnum námsstjórnunarkerfi
+    kennslustofunnar þinnar. Nemendur þínir geta lent í áskorunum - það er allt í
+    lagi! Að læra að forrita er eins og að læra nýtt tungumál; þú munt ekki vera reiprennandi
+    strax. Ef þú veist ekki svarið geturðu fundið það saman.
+  hoc_how_to_step_educators_celebrate_desc: 'Eftir viðburðinn þinn skaltu prenta skírteini
+    um lokið og óska nemendum þínum til hamingju. Deildu myndum og myndböndum af Hour
+    of Code viðburðinum þínum og sýndu árangur nemenda þinna með því að nota #HourOfCode
+    og @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Tölvunarfræði þarf ekki að enda með Hour
+    of Code! Þó að 90% foreldra vilji að barnið þeirra læri tölvunarfræði kenna flestir
+    skólar það samt ekki. Til að hjálpa er námskráin okkar á vefnum og ókeypis í notkun,
+    að eilífu. Lærðu hvernig á að koma með CS í skólann þinn í dag.
   hoc_ai_top_desc: Hver sem er getur lært um AI, hvort sem þú ert nemandi í skólastofunni
     eða kennari sem opnar framtíð kennslu með og um AI.
   hoc_ai_how_ai_works_video_series_desc: Þessi röð af stuttum myndböndum mun kynna

@@ -40,7 +40,7 @@ sq:
   africa_campaign_date_full: 5 shtator - 17 dhjetor
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 tetor 2022 - 18 dhjetor 2022
-  hoc2023_header: Kreativiteti me AI
+  hoc2023_header: Krijueshmëria me AI
   hoc2023_hero_desc_homepage: Bashkohuni me miliona njerëz në të gjithë globin në
     organizimin e një ore kodimi, me ose pa AI dhe duke mësuar se si funksionon AI.
     Çdokush, kudo mund ta bëjë atë. Nuk ka nevojë për përvojë.
@@ -288,10 +288,12 @@ sq:
   call_to_action_host_hoc: Organizoni një orë të kodit
   call_to_action_hold_an_event: Mbajeni një ngjarje
   call_to_action_register_event: Regjistroni ngjarjen tuaj
-  call_to_action_register_your_hoc: Regjistroni Orën tuaj të Kodit
+  call_to_action_register_your_hoc: Regjistroni Orën tuaj të Kodimit
   call_to_action_select_activity: Zgjidhni një aktivitet
+  call_to_action_select_coding_activity: Zgjidhni një aktivitet kodimi
   call_to_action_start_activity: Filloni një aktivitet
   call_to_action_get_certificates: Merrni certifikata
+  call_to_action_print_certificates: Shtypni certifikatat
   call_to_action_go_beyond_hoc: Shkoni përtej Orës së Kodit
   call_to_action_explore_all_hoc_activities: Eksploroni të gjitha aktivitetet e Hour
     of Code nga Code.org
@@ -419,6 +421,8 @@ sq:
     të Zbulimeve të Shkencave Kompjuterike
   aria_label_call_to_action_teaching_csp: Filloni programin e mësimdhënies së parimeve
     të shkencave kompjuterike
+  aria_label_call_to_action_teaching_problem_solving: Filloni programin e mësimit
+    profesional për zgjidhjen e problemeve të mësimdhënies
   aria_label_call_to_action_teaching_csc: Filloni programin e mësimdhënies së shkencave
     kompjuterike Lidhjet
   aria_label_call_to_action_teaching_ai: Filloni programin e mësimit profesional të
@@ -436,6 +440,8 @@ sq:
   aria_label_call_to_action_curriculum_csd: Eksploroni programin e Zbulimeve të Shkencave
     Kompjuteri
   aria_label_call_to_action_curriculum_csp: Eksploroni kurrikulën e Parimeve të Shkencave
+  aria_label_call_to_action_curriculum_problem_solving: Eksploroni kurrikulën e zgjidhjes
+    së problemeve
   aria_label_call_to_action_curriculum_csc: Eksploroni programin e Shkencave Kompjuterike
   aria_label_call_to_action_curriculum_ai: Eksploroni kurrikulën e AI dhe Machine
     Learning
@@ -517,6 +523,7 @@ sq:
   curriculum_name_csf_teacher_led: Mësues udhëhequr mësim
   curriculum_name_csd: Zbulimet e Shkencave Kompjuterike
   curriculum_name_csp: Parimet e Shkencave Kompjut
+  curriculum_name_problem_solving: Zgjidhja e problemeve dhe informatika
   curriculum_name_csc: Lidhjet Shkenca Kompjut
   curriculum_name_csa: AP® Shkenca Kompjuterike A
   curriculum_name_csa_ai: Inxhinieri Softuerësh & Vizioni Komp
@@ -724,6 +731,7 @@ sq:
   module_label_teaching_csf: Bazat e Shkencave Kompjuterike
   module_label_teaching_csd: Zbulimet e Shkencave Kompjuterike
   module_label_teaching_csp: Parimet e Shkencave Kompjuterike
+  module_label_teaching_problem_solving: Mësimdhënia për zgjidhjen e problemeve
   module_label_teaching_csc: Mësimdhënia e lidhjeve të shkencave
   module_label_teaching_ai: Mësimi i AI dhe Mësimi i Makinerisë
   module_label_teaching_maker_cp: Mësimdhënia Krijimi Apps me pajisje (Circuit Playground)
@@ -2424,15 +2432,15 @@ sq:
     mund të mësojë bazat. Kjo fushatë bazë mbështetet nga mbi 400 partnerë dhe 200,000
     edukatorë në mbarë botën.
   hoc_homepage_registration_desc: Klasa ose grupi juaj mund të bashkohen me miliona
-    njerëz në të gjithë botën duke bërë Orën e Kodit! Regjistrimi për festimin vjetor
-    të Javës së Edukimit të Shkencave Kompjuterike fillon në tetor Megjithatë, Ora
-    e Kodit është në dispozicion gjatë gjithë vitit.
+    njerëz në të gjithë botën duke marrë pjesë në Orën e Kodimit! Regjistrimi për
+    festimin vjetor të Javës së Edukimit të Shkencave Kompjuterike fillon në tetor.
+    Megjithatë, Ora e Kodimit është në dispozicion gjatë gjithë vitit.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lexoni udhëzuesin tonë Si-për] (%{howto_guide_url})
     për të planifikuar një ngjarje për klasën tuaj."
   hoc_homepage_highlights_heading: Pikat kryesore të Orës së Kodimit
   hoc_homepage_organized_by: Ora e Kodimit organizohet nga [Code.org](%{codeorg_url}).
-  hoc_events_heading: Regjistrohuni për të organizuar një orë kodi
-  hoc_events_jump_to_map: Shko në hartën e Orës së Kodit
+  hoc_events_heading: Regjistrohuni për të organizuar një Orë Kodimi
+  hoc_events_jump_to_map: Shko në hartën e Orës së Kodimit
   signup_closed: Regjistrimi për Orën e Kodimit tani është mbyllur. Ju lutemi kontrolloni
     përsëri në tetor për t'u regjistruar në Orën tjetër të Kodimit.
   signup_registration_not_required: 'Nuk keni nevoje te regjistroheni ne menyre qe
@@ -2465,7 +2473,9 @@ sq:
   signup_event_entire_school_label: e gjithë shkolla ime merr pjesë
   signup_event_location_label: Lokacioni i eventit (opsional)
   signup_event_location_error: Vendndodhja e ngjarjes është e nevojshme.
-  signup_special_event_flag_label: Thekso eventin tim të veçantë
+  signup_special_event_flag_label: Ngjarja ime do të përfshijë një rreth të tërë,
+    një organizatë të tërë, anëtarë të komunitetit dhe/ose plane të tjera të veçanta
+    për më shumë se një orë
   signup_special_event_details_label: Aplikoni për tu vlerësuar si event i vecantë
   signup_send_posters_flag_label: Dërgo <a href= "/resources#posters">postera</a>
     në shkollën apo organizatën time
@@ -2555,7 +2565,7 @@ sq:
   map_legend_cs_tech_jam: Evente speciale
   map_warning: 'Lista e plote e ngjarjeve mund te shikohet ne faqen e eventit. '
   map_warning_markdown: Lista e plote e eventeve mund te shikohet ne faqen e eventit.
-  map_view_all_events: Shihni një listë të plotë të ngjarjeve të Hour [here]of Code
+  map_view_all_events: Shihni një listë të plotë të ngjarjeve të Orës [here]së Kodimit
     (%{events_url}).
   meta_tag_og_title: Ora e Kodimit po vjen
   meta_tag_og_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra
@@ -2830,7 +2840,7 @@ sq:
   highlights_description: Disa nga momentet tona të preferuara nga fushata e Orës
     së Kodimit.
   highlights_previous: Momentet kyqe te viteve te kaluara.
-  highlights_see_more: Shini me shume momente kyqe.
+  highlights_see_more: Shihni më shumë Momente Kryesore
   highlights_readmore: Lexo më shumë
   highlights_watchvideo: Shiko videon
   highlights_facebook: Shpërndaje në Facebook
@@ -13773,6 +13783,9 @@ sq:
   step_06: Hapi 6
   step_07: Hapi 7
   step_08: Hapi 8
+  what: 'Çfarë:'
+  when: 'Kur:'
+  where: 'Ku:'
   hoc_how_to_top_heading: Udhëzuesi juaj për Orën e Kodit
   hoc_how_to_top_desc: Udhëzues të përshtatur për përvojën më të mirë të Orës së Kodit.
   hoc_how_to_top_view_guide: Shikoni udhëzuesin për
@@ -13822,74 +13835,88 @@ sq:
     një orëshe të dizajnuara për të gjitha moshat në mbi 45 gjuh
   hoc_how_to_step_label_plan: Planifikoni ku dhe kur do të bëni Orën tuaj të Kodit
   hoc_how_to_step_label_choose_activity: Zgjidhni aktivitetin tuaj
+  hoc_how_to_step_label_choose_activities: Zgjidhni aktivitetet tuaja
   hoc_how_to_step_label_test_activity: Testoni aktivitetin tuaj
   hoc_how_to_step_label_register_event: Regjistroni ngjarjen tuaj
   hoc_how_to_step_label_tell: Tregoni studentëve, shkollës dhe komunitetit tuaj
   hoc_how_to_step_label_get_coding: Merrni kodimin!
   hoc_how_to_step_label_celebrate: Festoni
   hoc_how_to_step_label_beyond_hoc: Përtej Orës së Kodit
+  hoc_how_to_step_label_plan_your_event: Planifikoni ngjarjen tuaj
+  hoc_how_to_step_label_plan_your_hour: Planifikoni orën tuaj
+  hoc_how_to_step_label_help_spread_word: Ndihmoni në përhapjen e fjalës
   hoc_how_to_step_beyond_hoc_subhead: Nuk mbaron këtu!
-  hoc_how_to_step_beyond_hoc_desc: Shkenca kompjuterike nuk duhet të përfundojë me
-    Orën e Kodit! Ndërsa 90% e prindërve duan që fëmija i tyre të mësojë shkencat
-    kompjuterike, shumica e shkollave ende nuk e mësojnë atë. Mësoni se si të sillni
-    CS në shkollën e fëmijës tuaj sot.
-  hoc_how_to_step_01_educators_subhead: Zgjidhni një kohë dhe hapësirë ngjarjeje që
-    funksionon për numrin e studentëve dhe pajisjeve që keni në dispozicion.
-  hoc_how_to_step_01_educators_desc_01: Cilat hapësira janë në dispozicion për ju
-    për të bërë Orën tuaj të Kodit? Konsideroni aftësitë teknologjike të hapësirës
-    suaj dhe llojet e pajisjeve që prisni që studentët tuaj të punojnë. Studentët
-    mund të punojnë në mësime në një pajisje të vetme, të bëjnë radhë duke përdorur
-    një pajisje të përbashkët ose të provojnë një tutorial së bashku në një tabelë
-    të bardhë në klasë. Ka edhe mësime të shkëputura që mund të përfundojnë pa pajisje
-    fare. Opsionet e shkëputura mund të bëhen kudo - madje edhe jashtë!
-  hoc_how_to_step_01_educators_desc_02: Njerëzit në mbarë botën bashkohen me festimin
-    e Orës së Kodit gjatë Javës së Arsim %{campaign_date} it të CS kur lëshohen udhëzimet
-    dhe aktivitetet më të fundit. Por ju mund të bëni një orë të kodit çdo ditë të
-    vitit!
-  hoc_how_to_step_02_educators_desc_01: Eksploroni aktivitetet bazuar në moshën, përvojën,
-    interesat dhe më shumë të grupit tuaj. Është popullore për studentët të provojnë
-    mësime të vetë-udhëhequra, megjithëse shumë aktivitete përfshijnë plane mësimore
-    për mësuesit për të udhëhequr diskutimin ose zgjerimin e aktivitetit gjithashtu.
-  hoc_how_to_step_02_educators_desc_02: Vendosni para kohe nëse dëshironi të zgjidhni
-    një tutorial të vetëm për të gjithë nxënësit tuaj, ose le secilin fëmijë të zgjedhë
-    veten.
-  hoc_how_to_step_02_educators_desc_03: Këtë vit, ju dhe studentët tuaj mund të [mësoni
-    gjithçka rreth AI] (%ai_url) përmes mësimeve, planeve mësimesh dhe serisë sonë
-    të re Video How AI Works.
-  hoc_how_to_step_03_educators_desc_01: Provoni vetë tutorialin para se të hyni në
-    klasë në mënyrë që të mund t'i përgjigjeni pyetjeve!
-  hoc_how_to_step_03_educators_desc_02: Ju gjithashtu mund të provoni mësime në kompjuterët
-    ose pajisjet e studentëve për të siguruar që ato mbështesin tingullin dhe videon.
-    Keni bandwidth të ulët? Planifikoni të shfaqni video në pjesën e përparme të klasës,
-    kështu që secili student të mos shkarkojë videot e tyre.
-  hoc_how_to_step_03_educators_desc_03: Konsideroni sigurimin e kufjeve për klasën
-    tuaj, ose kërkoni studentëve të sjellin vetë, nëse udhëzimi që zgjidhni funksionon
-    më mirë me tingullin.
-  hoc_how_to_step_04_educators_desc_01: Kur regjistroni ngjarjen tuaj të Orës së Kodit,
-    do të merrni email të dobishëm me lajme dhe këshilla për të mbajtur një orë të
-    suksesshme të kodit. Është gjithashtu mënyra se si ju mund të tregoni vullnetarët
-    vendas të dinë se shkolla juaj po merr pjesë. Vullnetarët janë një burim i shkëlqyeshëm
-    dhe mund të vijnë të flasin me klasën tuaj për shkencat kompjuterike ose të ndihmojnë
-    studentët tuaj me aktivitetet e Orës së Kodit.
-  hoc_how_to_step_05_educators_desc_01: Bëni nxënësit tuaj të ngazëllyer për ngjarjen
-    duke ndarë [video frymëzuese] (%{videos_url}) duke theksuar njerëz të ndryshëm
-    dhe mënyra krijuese që shkenca kompjuterike mund të përdoret në botën reale.
-  hoc_how_to_step_05_educators_desc_02: Ndani planet tuaja të Orës së Kodit me mësues
-    të tjerë që mund të duan të bashkohen në argëtim! Kjo është gjithashtu një mundësi
-    e shkëlqyeshme për të kontaktuar Shoqatën e Studentëve të Mësuesve të Prindërve
-    të shkollës tuaj ose për të ndarë në gazetat e prindërve, duke i dhënë atyre se
-    çfarë po mësojnë fëmijët
-  hoc_how_to_step_06_educators_desc_01: Drejtoni studentët tuaj në aktivitet, ndoshta
-    duke ndarë lidhjen në bord ose përmes sistemit të menaxhimit të mësimit të klasës
-    tuaj. Studentët tuaj mund të hasin sfida - kjo është në rregull! Të mësuarit për
-    të programuar është si të mësoni një gjuhë të re; ju nuk do të jeni rrjedhshëm
-    menjëherë. Nëse nuk e dini përgjigjen, mund ta kuptoni së bashku.
-  hoc_how_to_step_07_educators_desc_01: 'Sigurohuni që të festoni suksesin! Ndani
-    fotot dhe videot e ngjarjes tuaj të Orës së Kodit në mediat sociale. Përdorni
-    #HourOfCode dhe @codeorg në mënyrë që të mund të nxjerrim në pah edhe suksesin
-    tuaj!'
-  hoc_how_to_step_07_educators_desc_02: Ju gjithashtu mund të printoni certifikata
-    për studentët tuaj për të treguar arritjet e tyre!
+  hoc_how_to_step_plan_hour_desc_01: 'Këtu është një shembull i agjendës për të filluar:'
+  hoc_how_to_step_choose_activities_desc_01: Këtë vit, tema e Ora e Kodit është Kreativiteti
+    me Inteligjencën Artificiale (AI). Pavarësisht nëse bëhet fjalë për kodimin e
+    aplikacioneve dhe algoritmeve të reja, gjenerimin e artit unik ose krijimin e
+    koreografisë për të na bërë të kërcejmë, AI po hap mundësi të reja për shprehjen
+    dixhitale që zgjerojnë kuptimin tonë të krijimtarisë. Bëjeni këtë vit të veçantë
+    duke përfunduar një aktivitet kodimi DHE duke mësuar rreth AI.
+  hoc_how_to_step_choose_activities_desc_02: Së pari, [eksploroni qindra aktivitete
+    kodimi] (%{activities_url}) dhe zgjidhni një bazuar në moshën, përvojën, interesat
+    dhe më shumë të grupit tuaj. [Këto aktivitete të zgjedhura] (%{ai_activities_url})
+    paraqesin inteligjencën artificiale si një temë ose mësim kryesor.
+  hoc_how_to_step_choose_activities_desc_03: Pastaj, [mësoni gjithçka rreth AI] (%{ai_url}).
+    Studentët mund të shikojnë video të shkurtra me ekspertë në këtë fushë, dhe ka
+    plane mësimore shoqëruese për të zgjeruar aktivitetin dhe për të udhëhequr diskutimin
+    e mëtejshëm. Ose, ne ofrojmë mësim profesional falas për edukatorët për të zhbllokuar
+    të ardhmen e mësimdhënies me dhe rreth AI.
+  hoc_how_to_step_educators_register_desc: Filloni me një angazhim për të bërë një
+    orë kodi me studentët tuaj duke regjistruar ngjarjen tuaj. Kur regjistroheni,
+    do të merrni email të dobishëm me lajme dhe këshilla për të organizuar një orë
+    të suksesshme të kodit. Ju gjithashtu do të jeni [vendosur në hartë] (%{map_url}).
+    Tërësia e dukshme e përpjekjeve tona kolektive demonstron angazhimin global ndaj
+    lëvizjes së shkencave kompjuterike, e cila do të na ndihmojë të ndërtojmë vrull
+    për ndryshimet sistemike.
+  hoc_how_to_step_educators_plan_desc_01: Para ngjarjes tuaj, provoni vetë aktivitetet
+    në mënyrë që të siguroheni që ato punojnë në pajisjet e studentëve dhe jeni të
+    gatshëm të përgjigjeni pyetjeve! Keni bandë të ulët? Planifikoni të shfaqni video
+    në pjesën e përparme të klasës, në mënyrë që secili student të mos shkarkojë videot
+    e veta.
+  hoc_how_to_step_educators_plan_desc_02: Njerëzit në të gjithë botën shpesh i bashkohen
+    festimit të Orës së Kodit gjatë Javës së Edukimit të Shkencave Kompjuterike (%{campaign_date}),
+    por ju mund të bëni një Orë të Kodit çdo ditë të vitit!
+  hoc_how_to_step_educators_plan_desc_03: Zgjidhni një hapësirë që funksionon për
+    numrin e studentëve dhe pajisjeve që keni në dispozicion. Studentët mund të provojnë
+    aktivitete në pajisje individuale, të ndajnë me radhë një pajisje ose si klasë
+    në një tabelë të bardhë. Ka edhe aktivitete të shkëputura që mund të përfundojnë
+    pa asnjë pajisje fare, kështu që ato mund të bëhen edhe jashtë!
+  hoc_how_to_step_educators_spread_word_desc_01: Na ndihmoni të përhapim fjalën në
+    komunitetin tuaj me [këto shabllone të postës elektronike] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Kërkoni dy kolegë të [register](%{register_url})
+    dhe të organizojnë një aktivitet të Orës së Kodit. Ata, nga ana tjetër, mund të
+    sigurojnë dy kolegë, të cilët mund të sigurojnë dy kolegë, etj.
+  hoc_how_to_step_educators_spread_word_desc_03: Kërkoni drejtorit tuaj të [organizojë
+    një ngjarje në të gjithë shkollën] (%{host_url}). Kur marrin pjesë 300 ose më
+    shumë fëmijë, ju mund të merrni një komplet të veçantë angazhimi me bluza, postera,
+    afishe laptop dhe më shumë. [Ndani të gjithë planin tuaj të ngjarjeve të shkollës]
+    (%{share_url}) për t'u kualifikuar.
+  hoc_how_to_step_educators_spread_word_desc_04: Kontaktoni Shoqatën e Nxënësve Prindër
+    të Mësuesve të shkollës suaj ose ndani në gazetat prindër, duke i bërë ata të
+    ditur se çfarë po mësojnë fëmijët e tyre
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 e mëngjesit: Filloni me
+    një [video frymëzuese] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 e mëngjesit: Studentët
+    bëjnë aktivitetin e tyre të kodimit'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 e mëngjesit: Studentët
+    mësojnë rreth AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 e mëngjesit: Mësuesi jep
+    vërejtje përfundimtare'
+  hoc_how_to_step_educators_get_coding_desc: Drejtoni studentët tuaj në aktivitet,
+    ndoshta duke ndarë lidhjen në bord ose përmes sistemit të menaxhimit të mësimit
+    të klasës tuaj. Studentët tuaj mund të hasin sfida - kjo është në rregull! Të
+    mësuarit për të programuar është si të mësoni një gjuhë të re; ju nuk do të jeni
+    rrjedhshëm menjëherë. Nëse nuk e dini përgjigjen, mund ta kuptoni së bashku.
+  hoc_how_to_step_educators_celebrate_desc: 'Pas ngjarjes tuaj, printoni certifikatat
+    e përfundimit dhe përgëzoni studentët tuaj. Ndani fotot dhe videot e ngjarjes
+    tuaj Hour of Code dhe tregoni arritjet e nxënësve tuaj duke përdorur #HourOfCode
+    dhe @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Shkenca kompjuterike nuk duhet të përfundojë
+    me Orën e Kodit! Ndërsa 90% e prindërve duan që fëmija i tyre të mësojë shkenca
+    kompjuterike, shumica e shkollave ende nuk i mësojnë atë. Për të ndihmuar, kurrikula
+    jonë është e bazuar në internet dhe falas për t'u përdorur, përgjithmonë. Mësoni
+    se si të sillni CS në shkollën tuaj sot.
   hoc_ai_top_desc: Çdokush mund të mësojë rreth AI, pavarësisht nëse jeni një nxënës
     në klasë ose një edukator që zhbllokon të ardhmen e mësimdhënies me dhe rreth
     AI.

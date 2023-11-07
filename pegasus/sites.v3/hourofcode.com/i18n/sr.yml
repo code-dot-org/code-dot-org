@@ -7,10 +7,10 @@ sr:
     децембра 2014
   coming_soon: Стиже ускоро
   new: New
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Одржани Сати програмирања
   hoc_stat_languages: Студенти уче на 40 језика
   hoc_stat_hours_served: Преко 100 милиона ученика је пробало Сат Програмирања
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Ученици женског пола чине 50% учесника Сата програмирања
   campaign_date_start_short: 7. Дец
   campaign_date_start_long: 4. децембра
   campaign_date_short: 4-10 децембра
@@ -59,10 +59,10 @@ sr:
   hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
   hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
     about AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Сат програмирања је бесплатан увод у рачунарство путем
+    забавних активности и видео снимака, и то за ученике свих нивоа. Ове године ћемо
+    одати почаст и кодирању и ВИ уз подршку више од 400 партнера, 20.000 наставника
+    и 58.000 добровољаца.
   hoc2022_header: Explore, Play, Create!
   social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
   codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
@@ -74,9 +74,9 @@ sr:
     Gomez, music from Disney's "Encanto," and more!
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, music from Disney's "Encanto," and more!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Време је да заблистате! Креирајте своју сопствену плесну
+    журку уз хитове које изводе Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
+    Rosalía и многи други!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -224,14 +224,14 @@ sr:
   device_desktop_computer: Desktop Computer
   device_mobile_device: Mobile Device
   for_everyone: За све
-  for_students_teacher_led_learning: 'За студенте: Учење под вођством наставника'
-  for_students_teacher_led_lessons: 'За студенте: Лекције под вођством наставника'
+  for_students_teacher_led_learning: 'За ученике: Учење под вођством наставника'
+  for_students_teacher_led_lessons: 'За ученике: Лекције под вођством наставника'
   professional_development: Професионалан развој
   how_ai_works_video_series: 'Серија видео лекција: Како ВИ ради?'
-  learn_how_ai_works: Сазнајте како то ВИ ради
+  learn_how_ai_works: 'Сазнајте како то ради ВИ '
   ai_101_for_educators: Основно о ВИ за предаваче
   learn_about_ai_impacts: Сазнајте какав утицај има ВИ
-  hoc_ai_activities: Сат кодирања - активности у вези са ВИ
+  hoc_ai_activities: Сат програмирања - активности у вези са ВИ
   subscribe_to_emails_heading: Subscribe to emails
   subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
     science education through quarterly updates via our mailing list.
@@ -285,27 +285,29 @@ sr:
     and support from other educators.
   required_materials: 'Required Materials:'
   optional_materials: 'Optional Materials:'
-  for_students: For students
+  for_students: За ученике
   for_educators: За наставнике
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Одржите Сат програмирања
   call_to_action_hold_an_event: Hold an event
   call_to_action_register_event: Register your event
-  call_to_action_register_your_hoc: Региструјте свој Сат кодирања
+  call_to_action_register_your_hoc: Региструјте свој Сат програмирања
   call_to_action_select_activity: Select an activity
+  call_to_action_select_coding_activity: Изаберите активност кодирања
   call_to_action_start_activity: Start an activity
   call_to_action_get_certificates: Get certificates
+  call_to_action_print_certificates: Одштампајте сертификате
   call_to_action_go_beyond_hoc: Go beyond the Hour of Code
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Истражите све активности у оквиру Сата
+    програмирања на сајту Code.org
+  call_to_action_start_dance_party: Започните активност "Плесна журка"
+  call_to_action_start_part_02: Започните други део
+  call_to_action_start_unplugged_activity: Започните активност ван мреже
   call_to_action_view_promo_resources: View promo resources
   call_to_action_learn_more: Learn more
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_try_activities: Try activities
-  call_to_action_try_hoc_ai_activities: Сат кодирања - Пробајте неку од активности
+  call_to_action_try_hoc_ai_activities: Сат програмирања - Пробајте неку од активности
     у вези са ВИ
   call_to_action_explore_activities: Explore activities
   call_to_action_explore_ai: Explore AI
@@ -396,9 +398,9 @@ sr:
   call_to_action_view_faqs: View more FAQs
   call_to_action_applications_open: Applications now open
   call_to_action_apply_cs_ambassador: Apply to be a CS Ambassador
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Стиже ускоро!
+  call_to_action_learn_how_ai_works: Сазнајте како то ради ВИ
+  call_to_action_learn_about_ai: Сазнајте више о ВИ
   aria_label_call_to_action_hoc_how_to_educators: View how-to guide for Educators
   aria_label_call_to_action_hoc_how_to_companies: View how-to guide for Companies
   aria_label_call_to_action_hoc_how_to_districts: View how-to guide for Districts
@@ -410,9 +412,10 @@ sr:
   aria_label_call_to_action_hoc_how_to_volunteers: View how-to guide for Volunteers
   aria_label_call_to_action_hoc_how_to_virtual_events: View how-to guide for Virtual
     Events
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Започните активност "Плесна журка"
+  aria_label_call_to_action_dance_02: Започните други део активности "Плесна журка"
+  aria_label_call_to_action_dance_unplugged: Започните активност "Плесна журка" ван
+    мреже
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -420,6 +423,8 @@ sr:
     professional learning program
   aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
     professional learning program
+  aria_label_call_to_action_teaching_problem_solving: Започните професионалан програм
+    учења "Како подучавати решавање проблема и рачунарство"
   aria_label_call_to_action_teaching_csc: Start the Teaching Computer Science Connections
     professional learning program
   aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
@@ -438,6 +443,8 @@ sr:
     curriculum
   aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
     curriculum
+  aria_label_call_to_action_curriculum_problem_solving: Истражите програм "Како подучавати
+    решавање проблема и рачунарство"
   aria_label_call_to_action_curriculum_csc: Explore the Computer Science Connections
     curriculum
   aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
@@ -519,6 +526,7 @@ sr:
   curriculum_name_csf_teacher_led: Teacher led lesson
   curriculum_name_csd: Computer Science Discoveries
   curriculum_name_csp: Computer Science Principles
+  curriculum_name_problem_solving: Problem Solving and Computing
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: AP® Computer Science A
   curriculum_name_csa_ai: Software Engineering & Computer Vision
@@ -531,25 +539,26 @@ sr:
   curriculum_name_creating_apps_with_devices: Creating Apps with Devices
   curriculum_name_poetry: Coding with Poetry
   curriculum_name_dance_party: Dance Party
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Настави да играш
+  curriculum_name_dance_party_unplugged: '"Плесна журка" ван мреже'
+  curriculum_name_dance_party_ai_edition: '"Плесна журка": ВИ издање'
   curriculum_name_problem_solving_computing: Problem Solving & Computing
   curriculum_name_web_development: Web Development
   curriculum_name_interactive_animations_games: Interactive Animations & Games
   curriculum_name_design_process: The Design Process
   curriculum_name_data_society: Data & Society
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: У овој уводној активности, користите код да бисте
+    креирали низ живописник ликова који ђускају уз анимирану позадину и музику која
+    подиже расположење.
+  curriculum_desc_dance_party_02: После уводног водича, наставите са сложенијим идејама
+    за пројекте. Прегледајте библиотеку са примерима сложенијих плесних журки.
+  curriculum_desc_dance_party_unplugged: Нека вас поведе ваш сопствени ритам - није
+    вам потребан рачунар! Сазнајте како се неки концепти кодирања, као што су догађаји,
+    могу употребити за синхронизовање плесне кореографије.
+  curriculum_desc_dance_party_ai_edition: Научите више о концептима вештачке интелигенције
+    (ВИ) како бисте креирали своју сопствену виртуелну плесну журку уз учешће врхунских
+    уметника данашњице. Можете изабрати између десетина песама и тако допрети до сваког
+    ученика без обзира на њихов музички укус. Време је да заблистате!
   curriculum_desc_csf: Free set of elementary curricula that introduces students to
     the foundational concepts of computer science.
   curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
@@ -678,12 +687,12 @@ sr:
   module_grade_grade_03: Grade 3
   module_grade_grade_04: Grade 4
   module_grade_grade_05: Grade 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Узраст од 5 до 7 год.
+  module_age_07: Више од 7 год.
+  module_age_07_11: Узраст од 7 до 11 год.
+  module_age_11: Више од 11 год.
+  module_age_13: Више од 13 год.
+  module_age_all_age: Сви узрасти
   module_grade_k_5_teachers: K-5 Teachers
   module_grade_6_10_teachers: 6-10 Teachers
   module_grade_9_12_teachers: 9-12 Teachers
@@ -715,6 +724,7 @@ sr:
   module_label_teaching_csf: Teaching Computer Science Fundamentals
   module_label_teaching_csd: Teaching Computer Science Discoveries
   module_label_teaching_csp: Teaching Computer Science Principles
+  module_label_teaching_problem_solving: '"Како подучавати решавање проблема и рачунарство"'
   module_label_teaching_csc: Teaching Computer Science Connections
   module_label_teaching_ai: Teaching AI and Machine Learning
   module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
@@ -774,8 +784,9 @@ sr:
   heading_csa_ai: Looking for things to do after the AP® exam?
   heading_bring_cs_to_students: Bring computer science to students
   heading_cs_ambassador_program: CS Ambassador Program
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Истакнути ученички пројекти
+  heading_start_hoc_with_videos: Започните свој Сат програмирања инспиративним видео
+    снимцима
   cs_ambassador_subhead: If you're a high school student passionate about encouraging
     more young women to take computer science at your school, then we need you!
   cs_ambassador_desc: Every field, including medicine, entertainment, sports, education,
@@ -870,13 +881,13 @@ sr:
     Computer Science Principles and get helpful reminders, tips, and updates sent
     right to your inbox.
   subscribe_form_section_unsubscribe: You can unsubscribe at any time.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Напиши код за "Плесну журку"
+  dance_featuring_songs_by_short: 'Укључујући песме аутора:'
+  dance_featuring_songs_by_long: '"Плесна журка" укључује  песме аутора:'
+  dance_and_more: и других
+  dance_choose_activity: Изабери своју "Плесну журку"
+  dance_afe_disclaimer: Уметници чија је музика употребљена у овом водичу не спонзоришу
+    нити подржавају Amazon у оквиру лиценциране употребе њихове музике на сајту Code.org.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -2325,16 +2336,16 @@ sr:
     to computer science, using fun tutorials to show that anybody can learn the basics.
     This grassroots campaign is supported by over 400 partners and 200,000 educators
     worldwide.
-  hoc_homepage_registration_desc: Ваш разред или група се може придружити милионима
-    сличних вама широм света, који се управо региструју за Сат кодирања у оквиру прославе
-    Недеље образовања у области рачунарства, која почиње у октобру. Ипак, треба знати
-    да је Сат кодирања доступан у току целе године.
+  hoc_homepage_registration_desc: Ваш разред или група се могу придружити милионима
+    сличних вама широм света који учествују у Сату програмирања! Регистрација за годишњу
+    прославу Недеље образовања у области рачунарства почиње у октобру. Међутим, Сат
+    програмирања је доступан у току целе године.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
     to plan an event for your class."
   hoc_homepage_highlights_heading: Hour of Code highlights
   hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
-  hoc_events_heading: Региструјте се као домаћин Сата кодирања
-  hoc_events_jump_to_map: Идите на мапу Сата кодирања
+  hoc_events_heading: Региструјте се као домаћин Сата програмирања
+  hoc_events_jump_to_map: Идите на мапу Сата програмирања
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -2457,7 +2468,7 @@ sr:
     регистровани. Листу свих регистрованих догађаја са исправним имејл адресама можете
     видети на <a href='%{events_url}'>страници “догађаји”.</a>
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
-  map_view_all_events: Видите комплетну листу догађаја у оквиру Сата кодирања [here](%{events_url}).
+  map_view_all_events: Видите комплетну листу догађаја - Сат програмирања [here](%{events_url}).
   meta_tag_og_title: Hour of Code се приближава
   meta_tag_og_description: Hour of Code је глобални покрет који досеже милионе ученика
     у 180+ земаља и на преко 30 језика. Узраста од 4 до 104.
@@ -13115,6 +13126,9 @@ sr:
   step_06: Step 6
   step_07: Step 7
   step_08: Step 8
+  what: 'Шта:'
+  when: 'Када:'
+  where: 'Где:'
   hoc_how_to_top_heading: Your guide to Hour of Code
   hoc_how_to_top_desc: Tailored how-to guides for the best Hour of Code experience.
   hoc_how_to_top_view_guide: View guide for
@@ -13122,8 +13136,8 @@ sr:
   hoc_how_to_nav_sidebar_aria_label: Sidebar navigation
   hoc_how_to_educators_intro_heading: How to plan your Hour of Code
   hoc_how_to_educators_intro_desc: The Hour of Code is a one-hour introduction to
-    computer science, using fun tutorials to show that anybody can learn the basics.  This
-    year, we're taking Hour of Code to new heights by offering coding opportunities
+    computer science, using fun tutorials to show that anybody can learn the basics.
+    This year, we're taking Hour of Code to new heights by offering coding opportunities
     that encompass both artificial intelligence (AI) and non-AI components. Whether
     you or your students are experienced coders or you all are setting out on your
     very first computer science expedition, this Hour of Code promises an extraordinary
@@ -13161,67 +13175,87 @@ sr:
     designed for all ages in over 45 languages.
   hoc_how_to_step_label_plan: Plan where and when you'll do your Hour of Code
   hoc_how_to_step_label_choose_activity: Choose your activity
+  hoc_how_to_step_label_choose_activities: Изаберите своје активности
   hoc_how_to_step_label_test_activity: Test out your activity
   hoc_how_to_step_label_register_event: Register your event
   hoc_how_to_step_label_tell: Tell your students, school, and community
   hoc_how_to_step_label_get_coding: Get coding!
   hoc_how_to_step_label_celebrate: Celebrate
   hoc_how_to_step_label_beyond_hoc: Beyond Hour of Code
+  hoc_how_to_step_label_plan_your_event: Испланирајте свој догађај
+  hoc_how_to_step_label_plan_your_hour: Испланирајте свој сат
+  hoc_how_to_step_label_help_spread_word: Помозите да се о нама чује
   hoc_how_to_step_beyond_hoc_subhead: It doesn't end here!
-  hoc_how_to_step_beyond_hoc_desc: Computer science doesn't have to end with the Hour
-    of Code! While 90% of parents want their child to learn computer science, most
-    schools still don't teach it. Learn how to bring CS to your child's school today.
-  hoc_how_to_step_01_educators_subhead: Select an event time and space that works
-    for the number of students and devices you have available.
-  hoc_how_to_step_01_educators_desc_01: What spaces are available for you to do your
-    Hour of Code? Consider the tech capabilities of your space, and the kinds of devices
-    you expect your students to work on. Students can work on tutorials on a single
-    device, take turns using a shared device, or try a tutorial together on a classroom
-    whiteboard. There are even unplugged tutorials that can be completed with no devices
-    at all. Unplugged options can be done anywhere—even outdoors!
-  hoc_how_to_step_01_educators_desc_02: People around the world join the Hour of Code
-    celebration during CS Education Week %{campaign_date} when the latest tutorials
-    and activities are released. But you can do an Hour of Code any day of the year!
-  hoc_how_to_step_02_educators_desc_01: Explore activities based on your group's age,
-    experience, interests, and more. It's popular for students to try self-led tutorials,
-    though many activities include lesson plans for teachers to guide discussion or
-    extend the activity as well.
-  hoc_how_to_step_02_educators_desc_02: Decide ahead of time if you want to choose
-    a single tutorial for all of your students, or let each child pick their own.
-  hoc_how_to_step_02_educators_desc_03: This year, you and your students can [learn
-    all about AI](%ai_url) through tutorials, lesson plans, and our new How AI Works
-    video series.
-  hoc_how_to_step_03_educators_desc_01: Try out the tutorial yourself before you get
-    into the classroom so you can answer questions!
-  hoc_how_to_step_03_educators_desc_02: You can also test tutorials on student computers
-    or devices to ensure they support sound and video. Have low bandwidth? Plan to
-    show videos at the front of the class, so each student isn't downloading their
-    own videos.
-  hoc_how_to_step_03_educators_desc_03: Consider providing headphones for your class,
-    or ask students to bring their own, if the tutorial you choose works best with
-    sound.
-  hoc_how_to_step_04_educators_desc_01: When you register your Hour of Code event,
-    you'll receive helpful emails with news and tips for hosting a successful Hour
-    of Code. It's also how you can let local volunteers know your school is participating.
-    Volunteers are a great resource and can come speak to your class about computer
-    science or help your students with Hour of Code activities.
-  hoc_how_to_step_05_educators_desc_01: Get your students excited for the event by
-    sharing [inspirational videos](%{videos_url}) highlighting diverse people and
-    creative ways that computer science can be used in the real world.
-  hoc_how_to_step_05_educators_desc_02: Share your Hour of Code plans with other teachers
-    who may want to join in on the fun! This is also a great opportunity to reach
-    out to your school's Parent Teacher Student Association or share in parent newsletters,
-    letting them know what their children are learning.
-  hoc_how_to_step_06_educators_desc_01: Direct your students to the activity, maybe
-    by sharing the link on the board or through your classroom's learning management
-    system. Your students may encounter challenges—that's okay! Learning to program
-    is like learning a new language; you won't be fluent right away. If you don't
-    know the answer, you can figure it out together.
-  hoc_how_to_step_07_educators_desc_01: 'Be sure to celebrate success! Share photos
-    and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
-    so we can highlight your success, too!'
-  hoc_how_to_step_07_educators_desc_02: You can also print certificates for your students
-    to show off their achievement!
+  hoc_how_to_step_plan_hour_desc_01: 'Ево примера плана часа како бисте почели:'
+  hoc_how_to_step_choose_activities_desc_01: Ове године, тема Сата програмирања је
+    креативност уз помоћ вештачке интелигенције (ВИ). Било да је у питању програмирање
+    нових апликација и алгоритама, генерисање јединствених примера уметности или развој
+    кореографије како бисмо заиграли, ВИ заиста отвара мноштво нових прилика за дигитално
+    изражавање које проширује наше схватање креативности. Учините ову годину посебном
+    тако што ћете завршити активност кодирања И научити више о ВИ.
+  hoc_how_to_step_choose_activities_desc_02: Најпре, [истражите стотине активности
+    кодирања](%{activities_url}) и одаберите једну од њих на основу узраста ваше групе
+    ученика, искуства, интересовања и осталог. [Ове изабране активности](%{ai_activities_url})
+    представљају вештачку интелигенцију као кључну тему или лекцију.
+  hoc_how_to_step_choose_activities_desc_03: Потом [научите све о ВИ](%{ai_url}).
+    Ученици могу гледати кратке видео снимке у којима се појављују стручњаци из ове
+    области, а ту су и пратећи планови часова како бисте проширили активност и усмеравали
+    даљу дискусију. Или можемо предавачима понудити бесплатну професионалну обуку
+    како би откључали будућност подучавања са и о ВИ.
+  hoc_how_to_step_educators_register_desc: Почните тиме што ћете преузети обавезу
+    да одржите један Сат програмирања са својим ученицима - тако што ћете тај свој
+    догађај регистровати. Када обавите регистрацију, добићете низ корисних мејлова
+    са новостима и саветима за одржавање успешног Сата програмирања. Поред тога, појавићете
+    се [на мапи](%{map_url}).  Заједно, сви ови наши колективни напори демонстрирају
+    глобалну посвећеност покрету који рачунарство чини доступним - што ће нам помоћи
+    да постигнемо моментум довољан за системску промену.
+  hoc_how_to_step_educators_plan_desc_01: Пре самог догађаја, пробајте да сами обавите
+    активности како бисте били сигурни да све ради на уређајима ваших ученика као
+    и да сте спремни да одговарате на питања! Ваш пропусни опсег је низак? Испланирајте
+    да прикажете видео снимке испред разреда тако да није потребно да сви ученици
+    преузимају своје видео снимке.
+  hoc_how_to_step_educators_plan_desc_02: Људи широм света се често придруже прослави
+    Сата програмирања у току Недеље учења рачунарства (%{campaign_date}), али ви можете
+    одржати свој Сат програмирања било када у току године!
+  hoc_how_to_step_educators_plan_desc_03: Изаберите простор који одговара броју ученика
+    и уређајима које имате на располагању. Ученици могу пробати да раде активности
+    на појединачним уређајима, да наизменично раде на истом уређају или да раде у
+    групи на табли. Постоје чак и активности за рад без мреже, које се могу урадити
+    без икаквих уређаја - могу се обавити чак и напољу!
+  hoc_how_to_step_educators_spread_word_desc_01: Помозите нам да се о нама чује у
+    вашој заједници уз помоћ [ових предложака и-мејл порука](%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Замолите двоје колега да се [региструју](%{register_url})
+    и одрже по један Сат програмирања. Они потом могу да обезбеде двоје колега, који
+    могу да обезбеде двоје колега итд.
+  hoc_how_to_step_educators_spread_word_desc_03: Замолите свог директора да [организује
+    догађај за целу школу](%{host_url}). Када учествује 300 или више деце, можете
+    добити посебан поклон за своје ангажовање, који садржи мајице, постере, налепнице
+    за лаптоп и друго. [Поделите свој план догађаја за целу школу](%{share_url}) како
+    бисте се квалификовали.
+  hoc_how_to_step_educators_spread_word_desc_04: Обратите се Удружењу родитеља, наставника
+    и ученика ваше школе или их обавестите путем билтена за родитеље - као би сазнали
+    шта то њихова деца уче.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10.00-10.05: Почните са [iинспиративним
+    видеом](%{video_url})'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10.05-10.45: Ученици обављају своју
+    активност кодирања'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10.45-10.55: Ученици уче о ВИ'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10.55-11.00: Наставник даје завршну
+    реч'
+  hoc_how_to_step_educators_get_coding_desc: Упутите своје ученике на активност, можда
+    тако што ћете линк поделити на табли или путем система за управљање учењем у учионици.
+    Ваши ученици ће можда наићи на изазове - то је у реду! Учење програмирања је као
+    учење новог језика; не можете одмах течно говорити. Ако не знате одговор, можете
+    до њега доћи заједно.
+  hoc_how_to_step_educators_celebrate_desc: 'После вашег догађаја, одштампајте сертификате
+    о завршетку и честитајте својим ученицима. Поделите фотографије и видео снимке
+    са свог Сата програмирања и похвалите се достигнућима својих ученика - употребите
+    #HourOfCode и @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Рачунарство се не мора завршити са Сатом
+    програмирања! Док 90% родитеља жели да њихово дете учи рачунарство, већина школа
+    још увек не подучава томе своје ученике. Како бисмо помогли, наш наставни план
+    се налази на вебу и бесплатан је за коришћење - заувек. Сазнајте како да рачунарство
+    доведете у своју школу још данас!
   hoc_ai_top_desc: Сви могу научити шта је ВИ - тако можете и ви, било да сте студент
     у учионици или предавач који откључава будућност подучавања уз помоћ ВИ и о ВИ.
   hoc_ai_how_ai_works_video_series_desc: Ова серија кратких видео лекција ће вас увести
@@ -13229,15 +13263,15 @@ sr:
     удубити у питања попут алгоритамске пристрасности и етичког аспекта у доношењу
     одлука уз помоћ ВИ.
   hoc_ai_learn_how_ai_works_desc: Уроните у свет вештачке интелигенције у лекцијама
-    "Како ВИ ради?" - те лекције иду у пару са нашом серијом видеа који вас уводе
-    у то како ВИ ради и зашто је све то важно.
+    "Како ВИ ради?" - те лекције иду у пару са нашом серијом видео-снимака који вас
+    уводе у то како ВИ ради и зашто је све то важно.
   hoc_ai_101_for_educators_desc: Discover the groundbreaking world of artificial intelligence
     (AI) and its transformative potential in education with our foundational online
     learning series for teachers.
   hoc_ai_impacts_desc: Надахните своје ученике као наставник лекцијама које ћете ви
     водити и које истражују утицај вештачке интелигенције; потом их позовите да размисле
     о решењима неких од питања у области ВИ.
-  hoc_ai_activities_desc: Ове потпуно нове активности у оквиру Сата кодирања уводе
+  hoc_ai_activities_desc: Ове потпуно нове активности у оквиру Сата програмирања уводе
     кориснике у свет вештачке интелигенције на забаван и занимљив начин.
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
@@ -13928,66 +13962,75 @@ sr:
     је извор информација за креаторе политика, руководиоце школа и остале који су
     укључени у процес развоја почетних водича у овој области у својим школама.
   teach_ai_button_label: Прикажите комплет алата
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Учење за узраст од 11 и више година
+  middle_high_page_main_description: Истражите свет рачунарства уз занимљиве видео
+    снимке, водиче за учење вашим сопственим темпом, активности програмирања и још
+    толико тога!
+  middle_high_page_hero_title: Почните са Сатом програмирања
+  middle_high_page_hero_description: Научите основе рачунарства уз бесплатне активности
+    у оквиру Сата програмирања, у којима ћете превлачити и отпуштати блокове кода.
+    Изаберите између стотина различитих опција од којих свака траје један сат!
+  middle_high_page_hourofcode_link: Истражите активности у оквиру Сата програмирања
+  middle_high_page_modules_title: Модули програмирања за старије ученике
+  middle_high_page_modules_description: Настали прилагођавањем наших курсева "Откријте
+    рачунарство" и "Принципи рачунарства", ови кратки модули које савладавате сопственим
+    темпом су намењени ученицима средњошколског узраста и сјајан су начин да научите
+    концепте заједничке свим програмским језицима и алатима.
+  middle_high_page_modules_card_title_1: Увод у Лабораторију за игре
+  middle_high_page_modules_card_title_2: Програмирање "прати корњачу" у Лабораторији
+    за апликације
+  middle_high_page_modules_card_title_3: Програмирање вођено догађајима у Лабораторији
+    за апликације
+  middle_high_page_modules_card_description_1: Крећите се својим темпом у овом уводу
+    у окружење наше Лабораторије за игре док програмирате анимације, интерактивну
+    уметност и игре.
+  middle_high_page_modules_card_description_2: Откључајте способност развоја богатих
+    интерактивних апликација у језику JavaScript у Лабораторији за апликације!
+  middle_high_page_modules_card_description_3: Напредујте својим сопственим темпом
+    кроз овај увод у окружење Лабораторије за апликације, у којој ученици користе
+    JavaScript да би креирали интерактивне апликације.
+  middle_high_page_modules_card_link: Испробај
+  middle_high_page_make_your_own_title: Креирајте своје сопствене апликације, игре
+    и веб странице
+  middle_high_page_make_your_own_description: Уз курсеве вам можемо понудити и програмерске
+    алате који ће вам омогућити да истражујете своју креативност и креирате нешто
+    заиста невероватно.
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Лабораторија за игре
+  middle_high_page_make_your_own_card_title_3: Веб лабораторија
+  middle_high_page_make_your_own_card_descrpition_1: Лабораторија за апликације је
+    окружење за програмирање у којем можете развијати једноставне апликације. Дизајнирајте
+    апликацију, кодирајте у језику JavaScript користећи или блокове или текст, а потом
+    у пар секунди.своју апликацију поделите.
+  middle_high_page_make_your_own_card_descrpition_2: Лабораторија за игре је окружење
+    за програмирање у којем можете развијати једноставне анимације и игре са објектима
+    и ликовима који остварују међусобну интеракцију.
+  middle_high_page_make_your_own_card_descrpition_3: Веб лабораторија је окружење
+    за програмирање у којем можете креирати једноставне веб странице користећи HTML
+    и CSS. Дизајнирајте своје веб странице и поделите свој сајт за пар секунди.
   middle_high_page_make_your_own_card_link: Learn more
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Додатни ресурси
+  middle_high_page_additional_resources_description: Толико је много начина да наставите
+    да истражујете рачунарство! Прегледајте библиотеку видео снимака или сазнајте
+    више о узбудљивим каријерама у области рачунарства.
+  middle_high_page_video_library_title: Откриј нашу библиотеку видео снимака
+  middle_high_page_video_library_description: Научите основе рачунарства путем кратких
+    видео снимака (5-10 минута) о темама као што су вештачка интелигенција, интернет,
+    како рачунари раде, како да не постанете жртва хаковања, блокчејн технологије,
+    каријера у овој области и још много тога!
+  middle_high_page_video_library_link: Прикажи библиотеку видео снимака
+  middle_high_page_cs_journeys_title: Постигните више са путањама учења рачунарства
+  middle_high_page_cs_journeys_description: Предузмите следећи корак у учењу рачунарства.
+    Истражите каријере, прилике за менторство, онлајн курсеве, стипендије, стажирање
+    и још много тога!
+  middle_high_page_cs_journeys_link: Истражите путање учења рачунарства
+  middle_high_page_cs_title: Рачунарство у учионици
+  middle_high_page_cs_description: Ове курсеве треба да води наставник! Ако бисте
+    желели да их уврстите у програм своје школе, размислите о сарадњи са наставником
+    како бисте их понудили својим ученицима.
+  middle_high_page_cs_card_title_1: Откријте рачунарство
+  middle_high_page_cs_card_title_2: Принципи рачунарства
+  middle_high_page_cs_card_title_3: Advanced Placement (AP) - Рачунарство А
   middle_high_page_cs_card_description_1: Free set of elementary curricula that introduces
     students to the foundational concepts of computer science and challenges them
     to explore how computing and technology can impact the world.
@@ -13998,34 +14041,35 @@ sr:
   middle_high_page_cs_card_description_3: Introduce students to software engineering
     and object-oriented design while they learn the Java programming language in this
     free curriculum for AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Истражите "Откријте рачунарство"
   middle_high_page_cs_link_2: Explore CS Principles
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Истражите CSA
+  elemeentary_page_main_title: Учење за узраст од 5 до 11 година
+  elementary_page_main_description: Истражите свет рачунарства уз занимљиве видео
+    снимке, водиче за учење вашим сопственим темпом, активности програмирања и још
+    толико тога!
+  elementary_page_own_pace_title: Наставите учити својим темпом
+  elementary_page_own_pace_description: Креирајте цртеже, игре и још доста тога у
+    ове две одличне опције за ученике који управо почињу да самостално уче основе
+    рачунарства.
+  elementary_page_own_pace_card_title_1: Експресан курс "Pre-Reader"
+  elementary_page_own_pace_card_title_2: Експресан курс
+  elementary_page_own_pace_card_description_1: Учите рачунарство својим сопственим
+    темпом! Научите да креирате рачунарске програме, да развијате своју вештину решавања
+    проблема и одговарате на забавне изазове! Развијајте игре и креативне пројекте
+    које ћете потом поделити са пријатељима, породицом и наставницима.
+  elementary_page_own_pace_link_1: Започните курс "Pre-Reader"
+  elementary_page_own_pace_link_2: Започните експресан курс
+  elementary_page_make_your_own_games_title: Креирајте сопствене анимације и игре
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Сада је тренутак да испољите
+    креативност! Користећи вештину кодирања путем блокова, направите нешто луцкаасто,
+    слатко или свемирско у Sprite лабораторији. Само је ваша машта граница!
+  elementary_page_make_your_own_games_link: Испробај Sprite лабораторију
+  elementary_page_computer_science_title: Рачунарство у учионици
+  elementary_page_computer_science_description: Ове курсеве треба да води наставник!
+    Ако бисте желели да их уврстите у програм своје школе, затражите од родитеља или
+    старатеља да успостави сарадњу са наставником како бисте их довели у свој разред.
   elementary_page_computer_science_card_title_1: Computer Science Fundamentals
   elementary_page_computer_science_card_title_2: Computer Science Connections
   elementary_page_computer_science_description_1: Free set of elementary curricula
