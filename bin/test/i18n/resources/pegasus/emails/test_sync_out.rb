@@ -27,7 +27,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
     let(:unique_language_code) {'expected_unique_language_code'}
 
     let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
-    let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'emails')}
+    let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'pegasus/emails')}
     let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
     let(:origin_email_file_path) {CDO.dir('pegasus/emails/test.md')}
     let(:email_i18n_file_path) {CDO.dir('pegasus/emails/i18n/test.not-EN.md')}
