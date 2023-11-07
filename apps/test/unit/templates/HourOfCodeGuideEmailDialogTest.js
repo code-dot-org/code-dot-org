@@ -35,7 +35,7 @@ describe('HourOfCodeGuideEmailDialog', () => {
   it('cookie is save when dialog is closed', () => {
     const wrapper = mount(<HourOfCodeGuideEmailDialog {...defaultProps} />);
     var cookieSetStub = sinon.stub(cookies, 'set');
-    wrapper.find('.uitest-no-email-guide').simulate('click');
+    wrapper.find('Button').at(0).simulate('click');
     expect(cookieSetStub).to.have.been.calledWith(
       'HourOfCodeGuideEmailDialogSeen',
       'true',
