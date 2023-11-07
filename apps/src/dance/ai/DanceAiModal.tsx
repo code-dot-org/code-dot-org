@@ -14,8 +14,13 @@ import {
 } from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {AiOutput, FieldKey, GeneratedEffect, Scores} from '../types';
-import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import {AiOutput, FieldKey, GeneratedEffect, Results, Scores} from '../types';
+import {
+  generateBlocks,
+  generateBlocksFromResult,
+  generatePreviewCode,
+  getLabelMap,
+} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 const i18n = require('../locale');
@@ -343,6 +348,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
+  const getPreviewCode = (results?: Results): string => {
+    const tempWorkspace = new Workspace();
+    const previewCode = generatePreviewCode(
+      tempWorkspace,
+      JSON.stringify(results)
+    );
+    tempWorkspace.dispose();
+    return previewCode;
+  };
+
   const onClose = () => dispatch(closeAiModal());
 
   const showUseButton =
@@ -565,10 +580,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 >
                   <AiVisualizationPreview
                     id="ai-preview"
-                    blocks={generateBlocksFromResult(
-                      Blockly.getMainWorkspace(),
-                      JSON.stringify(currentGeneratedEffect?.results)
-                    )}
+                    code={getPreviewCode(currentGeneratedEffect?.results)}
                     size={previewSize}
                   />
                 </div>
@@ -626,9 +638,8 @@ const DanceAiModal: React.FunctionComponent = () => {
                     >
                       <AiVisualizationPreview
                         id={'ai-preview-' + index}
-                        blocks={generateBlocksFromResult(
-                          Blockly.getMainWorkspace(),
-                          JSON.stringify(getGeneratedEffect(index)?.results)
+                        code={getPreviewCode(
+                          getGeneratedEffect(index)?.results
                         )}
                         size={previewSizeSmall}
                       />
