@@ -8845,8 +8845,8 @@
   tutorial_mitstepintrotoml_string_detail_grades: "Grades 6-8"
   tutorial_naflogo_string_detail_grades: "Grades 6+"
   tutorial_madmobile_string_detail_grades: "Grades 6+"
-  tutorial_intelinosmile_string_detail_grades: "Grades 6+"
-  tutorial_intelinoaisign_string_detail_grades: "Pre-reader - Grade 8"
+  tutorial_intelinosmile_string_detail_grades: "Pre-reader - Grade 8"
+  tutorial_intelinoaisign_string_detail_grades: "Grades 2-8"
 
   tutorial_bsimage_string_platforms: "Chrome, Firefox, Safari"
   tutorial_bscomputing_string_platforms: "Unplugged"
@@ -8977,8 +8977,8 @@
   tutorial_mitstepintrotoml_string_platforms: "Unplugged"
   tutorial_naflogo_string_platforms: "All modern browsers"
   tutorial_madmobile_string_platforms: "All modern browsers"
-  tutorial_intelinosmile_string_platforms: "Unplugged"
-  tutorial_intelinoaisign_string_platforms: "Unplugged"
+  tutorial_intelinosmile_string_platforms: "All modern browsers, iPad"
+  tutorial_intelinoaisign_string_platforms: "All modern browsers"
 
   tutorial_bsimage_string_detail_platforms: ""
   tutorial_bscomputing_string_detail_platforms: ""
@@ -9241,8 +9241,8 @@
   tutorial_mitstepintrotoml_string_detail_programming_languages: "Unplugged"
   tutorial_naflogo_string_detail_programming_languages: "JavaScript"
   tutorial_madmobile_string_detail_programming_languages: "JavaScript, HTML, CSS"
-  tutorial_intelinosmile_string_detail_programming_languages: "Unplugged"
-  tutorial_intelinoaisign_string_detail_programming_languages: "Unplugged"
+  tutorial_intelinosmile_string_detail_programming_languages: "Blocks"
+  tutorial_intelinoaisign_string_detail_programming_languages: "Blocks"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
