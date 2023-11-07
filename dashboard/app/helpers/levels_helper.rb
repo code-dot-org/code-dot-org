@@ -62,7 +62,7 @@ module LevelsHelper
   # regenerate the share video. Make sure this is only provided to views with
   # edit permission (ie, the project creator, but not the sharing view)
   def replay_video_view_options(channel = nil)
-    return unless DCDO.get('share_video_generation_enabled', false)
+    return unless DCDO.get('share_video_generation_enabled', true)
 
     signed_url = AWS::S3.presigned_upload_url(
       "cdo-p5-replay-source.s3.amazonaws.com",
