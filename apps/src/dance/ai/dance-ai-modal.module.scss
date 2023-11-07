@@ -319,11 +319,16 @@ $chart-third: #FADFA6;
       height: 280px;
       top: 80px;
       left: 0;
-      gap: 20px;
+      gap: 80px;
+
+      .visualizationContainer {
+        margin-top: 25px;
+        margin-left: -25px;
+      }
     }
 
     .scoreContainer {
-      background-color: rgb(56 55 55);
+      background-color: $neutral_dark20;
       width: 40px;
       height: 140px;
       position: relative;

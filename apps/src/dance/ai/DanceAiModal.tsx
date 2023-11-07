@@ -409,6 +409,12 @@ const DanceAiModal: React.FunctionComponent = () => {
   const lastInputItem =
     currentInputSlot > 0 ? getItem(inputs[currentInputSlot - 1]) : undefined;
 
+  // Visualization preview size, in pixels.
+  const previewSize = 280;
+  const previewSizeSmall = 90;
+
+  const labels = getLabels();
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -558,10 +564,12 @@ const DanceAiModal: React.FunctionComponent = () => {
                   className={moduleStyles.flipCardFront}
                 >
                   <AiVisualizationPreview
+                    id="ai-preview"
                     blocks={generateBlocksFromResult(
                       Blockly.getMainWorkspace(),
                       JSON.stringify(currentGeneratedEffect?.results)
                     )}
+                    size={previewSize}
                   />
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
@@ -594,8 +602,37 @@ const DanceAiModal: React.FunctionComponent = () => {
             {Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).map(
               index => {
                 return (
-                  <div style={{left: index * 70}}>
+                  <div key={index}>
                     <Score scores={getScores(index)} />
+
+                    <div
+                      className={moduleStyles.visualizationContainer}
+                      title={
+                        labels.backgroundEffect[
+                          getGeneratedEffect(index)?.results.backgroundEffect ||
+                            0
+                        ] +
+                        ' - ' +
+                        labels.foregroundEffect[
+                          getGeneratedEffect(index)?.results.foregroundEffect ||
+                            0
+                        ] +
+                        ' - ' +
+                        labels.backgroundColor[
+                          getGeneratedEffect(index)?.results.backgroundColor ||
+                            0
+                        ]
+                      }
+                    >
+                      <AiVisualizationPreview
+                        id={'ai-preview-' + index}
+                        blocks={generateBlocksFromResult(
+                          Blockly.getMainWorkspace(),
+                          JSON.stringify(getGeneratedEffect(index)?.results)
+                        )}
+                        size={previewSizeSmall}
+                      />
+                    </div>
                   </div>
                 );
               }
