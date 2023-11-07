@@ -1,4 +1,3 @@
-import {BlockSvg} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 import {DanceState} from '../danceRedux';
@@ -7,7 +6,7 @@ import moduleStyles from './ai-visualization-preview.module.scss';
 
 interface AiVisualizationPreviewProps {
   id: string;
-  blocks: BlockSvg[];
+  code: string;
   size: number;
 }
 
@@ -16,7 +15,7 @@ interface AiVisualizationPreviewProps {
  */
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
-> = ({id, blocks, size}) => {
+> = ({id, code, size}) => {
   const songMetadata = useSelector(
     (state: {dance: DanceState}) => state.dance.currentSongMetadata
   );
@@ -32,41 +31,17 @@ const AiVisualizationPreview: React.FunctionComponent<
     );
   }, [id]);
 
-  // Generate setup code for previewing the given blocks.
-  const generateSetupCode = (blocks: BlockSvg[]): string => {
-    if (blocks.length === 0) {
-      console.log('No blocks to preview');
-      return '';
-    }
-    // Create a temporary setup block
-    const setup: BlockSvg = Blockly.getMainWorkspace().newBlock(
-      'Dancelab_whenSetup'
-    ) as BlockSvg;
-
-    // Attach the blocks to the setup block
-    setup.getInput('DO')?.connection?.connect(blocks[0].previousConnection);
-
-    if (!Blockly.getGenerator().isInitialized) {
-      Blockly.getGenerator().init(Blockly.getMainWorkspace());
-    }
-
-    // Remove the temp setup block from the workspace so it doesn't remain after preview
-    Blockly.getMainWorkspace().removeTopBlock(setup);
-    return Blockly.getGenerator().blockToCode(setup);
-  };
-
   useEffect(() => {
     if (songMetadata === undefined || executorRef.current === null) {
       return;
     }
 
-    const code = generateSetupCode(blocks);
     if (!executorRef.current.isLivePreviewRunning()) {
       executorRef.current.startLivePreview(code, songMetadata);
     } else {
       executorRef.current.updateLivePreview(code, songMetadata);
     }
-  }, [songMetadata, blocks]);
+  }, [songMetadata, code]);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
