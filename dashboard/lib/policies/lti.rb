@@ -39,7 +39,7 @@ class Policies::Lti
   end
 
   def self.lti?(user)
-    return !user.authentication_options.empty? && user.authentication_options.any? {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
+    return !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
     false
   end
 
