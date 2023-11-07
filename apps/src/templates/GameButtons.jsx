@@ -24,10 +24,6 @@ export const RunButton = Radium(props => (
     id="runButton"
     className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
     style={props.style}
-    /* onClick={(e) => {
-       e.stopPropagation();
-       console.log('check')}
-    }*/
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
     <img src={blankImg} className="run26" alt="" />

@@ -297,7 +297,6 @@ Sounds.prototype.play = function (soundId, options) {
  * played via playURL.
  */
 Sounds.prototype.unload = function (soundId) {
-  console.log('unload sound: ' + soundId);
   delete this.soundsById[soundId];
 };
 
@@ -363,7 +362,6 @@ Sounds.prototype.playBytes = function (id, bytes, playbackOptions) {
  */
 Sounds.prototype.isPlaying = function (id) {
   var sound = this.soundsById[id];
-  // console.log(this.soundsById);
   if (sound) {
     return sound.isPlaying();
   }
@@ -415,9 +413,7 @@ Sounds.prototype.restartPausedSounds = function () {
  */
 Sounds.prototype.stopAllAudio = function () {
   for (let soundId in this.soundsById) {
-    // if (this.soundsById[soundId].isPlaying()) {
     this.soundsById[soundId].stop();
-    // }
   }
 
   _.over(this.onStopAllAudioCallbacks_)();

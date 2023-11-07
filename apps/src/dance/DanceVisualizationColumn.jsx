@@ -33,8 +33,8 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-        Turn the song filter off
-      */
+    Turn the song filter off
+  */
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };

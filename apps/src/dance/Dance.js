@@ -422,8 +422,8 @@ Dance.prototype.afterInject_ = function () {
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
-  console.log('playSong', url);
   if (Sounds.getSingleton().soundsById[url].isPlaying()) {
+    // prevent playing the same song twice simultaneously
     audioCommands.stopSound({url: url});
   }
 
@@ -445,9 +445,6 @@ Dance.prototype.reset = function () {
   if (clickToRunImage) {
     clickToRunImage.style.display = 'block';
   }
-  console.log('reset triggered');
-  console.log(Sounds.getSingleton().soundsById);
-  // console.log(Sounds.getSingleton().getPlayingSounds())
 
   Sounds.getSingleton().stopAllAudio();
 
@@ -465,8 +462,6 @@ Dance.prototype.reset = function () {
   if (this.usesPreview) {
     this.preview();
   }
-  console.log(Sounds.getSingleton().soundsById);
-  console.log('00000000');
 };
 
 /**

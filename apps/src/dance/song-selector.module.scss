@@ -3,6 +3,9 @@
 
   .selectStyle {
     width: calc(100% - 42px);
+    height: 32px;
+    color: $neutral_dark;
+    border-color: $neutral_dark;
   }
 
   button.previewSongButton {
