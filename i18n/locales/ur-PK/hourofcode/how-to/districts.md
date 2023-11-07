@@ -14,11 +14,11 @@ title: آور-آف-کوڈ ھاؤ-ٹو برائے ڈسٹرکٹس (اضلاع)
 
 ### 1 ۔ مقامی سکولوں کو شامل کروائیں
 
-Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
+[اس ای میل]({{ promote/sample_emails }}) اور [استاد کے لیے کیسے کریں گائیڈ]({{ urls/how_to_guide }}) کو شیئر کریں یا نیوز لیٹرز/ضلعی مواصلات میں ایک [مختصر بلرب]({{ promote/stats_url }}) شامل کریں۔ <br />
 
 ### اسکولوں کے لئے نمونہ لاجسٹکس کی منصوبہ بندی فراہم کریں
 
-Share this [sample logistics plan]({{ hoc_logistics_plan }}) with schools to give them ideas of how to organize whole school participation. اس کا کرنا اتنا ہی آسان ہے جیسے میتھ کی کلاس، ھوم روم پیریڈ، یا کمپیوٹر لیب میں تمام ہفتہ چکر لگانا۔
+اسکولوں کے ساتھ اس [نمونہ لاجسٹکس پلان]({{ hoc_logistics_plan }}) شیئر کریں تاکہ انہیں اسکول کی مکمل شرکت کو منظم کرنے کے بارے میں آئیڈیاز مل سکیں۔ اس کا کرنا اتنا ہی آسان ہے جیسے میتھ کی کلاس، ھوم روم پیریڈ، یا کمپیوٹر لیب میں تمام ہفتہ چکر لگانا۔
 
 ### سوشل میڈیا پر اسے پوسٹ کریں
 

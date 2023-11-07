@@ -296,8 +296,10 @@ nl:
   call_to_action_register_event: Meld je evenement aan
   call_to_action_register_your_hoc: Registreer je Hour of Code
   call_to_action_select_activity: Selecteer een activiteit
+  call_to_action_select_coding_activity: Selecteer een coderingsactiviteit
   call_to_action_start_activity: Een activiteit starten
   call_to_action_get_certificates: Certificaten verkrijgen
+  call_to_action_print_certificates: Certificaten afdrukken
   call_to_action_go_beyond_hoc: Ga verder dan het Hour of Code
   call_to_action_explore_all_hoc_activities: Ontdek alle Hour of Code-activiteiten
     van Code.org
@@ -424,6 +426,8 @@ nl:
     Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Start het professionele leerprogramma Teaching
     Computer Science Principles
+  aria_label_call_to_action_teaching_problem_solving: Start het professionele leerprogramma
+    Teaching, Problem Solving and Computing
   aria_label_call_to_action_teaching_csc: Start het professionele leerprogramma Teaching
     Computer Science Connections
   aria_label_call_to_action_teaching_ai: Start het professionele leerprogramma Teaching
@@ -441,6 +445,8 @@ nl:
     Discoveries
   aria_label_call_to_action_curriculum_csp: Ontdek het curriculum Computer Science
     Principles
+  aria_label_call_to_action_curriculum_problem_solving: Ontdek het curriculum voor
+    probleemoplossing en computergebruik
   aria_label_call_to_action_curriculum_csc: Ontdek het curriculum van Computer Science
     Connections
   aria_label_call_to_action_curriculum_ai: Ontdek het curriculum voor AI en machine
@@ -518,6 +524,7 @@ nl:
   curriculum_name_csf_teacher_led: Les onder leiding van de leraar
   curriculum_name_csd: Ontdekkingen in de informatica
   curriculum_name_csp: Principes van de informatica
+  curriculum_name_problem_solving: Probleemoplossing en computergebruik
   curriculum_name_csc: Verbindingen op het gebied van informatica
   curriculum_name_csa: AP® Informatica A
   curriculum_name_csa_ai: Software-engineering en computervisie
@@ -724,6 +731,7 @@ nl:
   module_label_teaching_csf: Onderwijzen in de grondbeginselen van informatica
   module_label_teaching_csd: Informatica en ontdekkingen leren
   module_label_teaching_csp: Informatica-principes aanleren
+  module_label_teaching_problem_solving: Onderwijzen, probleemoplossing en computergebruik
   module_label_teaching_csc: Informatica-connecties aanleren
   module_label_teaching_ai: AI en machine learning aanleren
   module_label_teaching_maker_cp: 'Lesgeven: apps maken met apparaten (Circuit Playground)'
@@ -13565,6 +13573,9 @@ nl:
   step_06: Stap 6
   step_07: Stap 7
   step_08: Stap 8
+  what: 'Wat:'
+  when: 'Wanneer:'
+  where: 'Waar:'
   hoc_how_to_top_heading: Jouw gids voor Hour of Code
   hoc_how_to_top_desc: Op maat gemaakte handleidingen voor de beste Hour of Code-ervaring.
   hoc_how_to_top_view_guide: Bekijk de gids voor
@@ -13612,71 +13623,87 @@ nl:
     een uur, ontworpen voor alle leeftijden, in meer dan 45 talen.
   hoc_how_to_step_label_plan: Plan waar en wanneer je je Hour of Code gaat doen
   hoc_how_to_step_label_choose_activity: Kies je activiteit
+  hoc_how_to_step_label_choose_activities: Kies je activiteiten
   hoc_how_to_step_label_test_activity: Test je activiteit
   hoc_how_to_step_label_register_event: Meld je evenement aan
   hoc_how_to_step_label_tell: Vertel het aan je leerlingen, school en gemeenschap
   hoc_how_to_step_label_get_coding: Begin met coderen!
   hoc_how_to_step_label_celebrate: Vier
   hoc_how_to_step_label_beyond_hoc: Na Hour of Code
+  hoc_how_to_step_label_plan_your_event: Plan je evenement
+  hoc_how_to_step_label_plan_your_hour: Plan je uur
+  hoc_how_to_step_label_help_spread_word: Help mee het woord te verspreiden
   hoc_how_to_step_beyond_hoc_subhead: Hier houdt het niet op!
-  hoc_how_to_step_beyond_hoc_desc: Informatica hoeft niet te eindigen met het Hour
-    of Code! Hoewel 90% van de ouders wil dat hun kind informatica leert, geven de
-    meeste scholen dat nog steeds niet. Leer vandaag nog hoe je CS naar de school
-    van je kind kunt brengen.
-  hoc_how_to_step_01_educators_subhead: Selecteer de tijd en ruimte van een evenement
-    die geschikt zijn voor het aantal studenten en apparaten dat je beschikbaar hebt.
-  hoc_how_to_step_01_educators_desc_01: Welke plekken zijn er beschikbaar om je Hour
-    of Code te doen? Denk aan de technische mogelijkheden van je ruimte en het soort
-    apparaten waarop je van je leerlingen verwacht te werken. Leerlingen kunnen op
-    één apparaat werken, beurtelings op een gedeeld apparaat, of samen een tutorial
-    proberen op een whiteboard in de klas. Er zijn zelfs losgekoppelde tutorials die
-    zonder apparaten kunnen worden voltooid. Onaangesloten opties kunnen overal worden
-    gedaan, zelfs buitenshuis!
-  hoc_how_to_step_01_educators_desc_02: Mensen over de hele wereld nemen deel aan
-    de viering van het Hour of Code tijdens de CS Education Week, %{campaign_date}
-    wanneer de nieuwste tutorials en activiteiten worden vrijgegeven. Maar je kunt
-    elke dag van het jaar een Hour of Code doen!
-  hoc_how_to_step_02_educators_desc_01: Ontdek activiteiten op basis van de leeftijd,
-    ervaring, interesses en meer van je groep. Het is populair voor leerlingen om
-    zelfgeleide tutorials uit te proberen, maar veel activiteiten omvatten ook lesplannen
-    voor docenten om de discussie te begeleiden of om de activiteit uit te breiden.
-  hoc_how_to_step_02_educators_desc_02: Beslis van tevoren of je één enkele tutorial
-    wilt kiezen voor al je leerlingen, of laat elk kind zijn eigen les kiezen.
-  hoc_how_to_step_02_educators_desc_03: Dit jaar kunnen jij en je leerlingen [alles
-    over AI leren] (%ai_url) via tutorials, lesplannen en onze nieuwe How AI Works-videoserie.
-  hoc_how_to_step_03_educators_desc_01: Probeer de tutorial zelf uit voordat je naar
-    de klas gaat, zodat je vragen kunt beantwoorden!
-  hoc_how_to_step_03_educators_desc_02: Je kunt ook tutorials testen op computers
-    of apparaten van studenten om er zeker van te zijn dat ze geluid en video ondersteunen.
-    Heb je een lage bandbreedte? Plan om video's aan de voorkant van de klas te laten
-    zien, zodat niet elke student zijn eigen video's downloadt.
-  hoc_how_to_step_03_educators_desc_03: Overweeg om je klas een koptelefoon mee te
-    nemen, of vraag de leerlingen om hun eigen koptelefoon mee te nemen, als de tutorial
-    die je kiest het beste werkt met geluid.
-  hoc_how_to_step_04_educators_desc_01: Wanneer je je Hour of Code-evenement registreert,
+  hoc_how_to_step_plan_hour_desc_01: 'Hier is een voorbeeldagenda om mee te beginnen:'
+  hoc_how_to_step_choose_activities_desc_01: Het thema van Hour of Code is dit jaar
+    Creativiteit met kunstmatige intelligentie (AI). Of het nu gaat om het coderen
+    van nieuwe apps en algoritmen, het genereren van unieke kunst of het maken van
+    choreografieën om ons aan het dansen te krijgen, AI biedt nieuwe mogelijkheden
+    voor digitale expressie die ons begrip van creativiteit vergroten. Maak dit jaar
+    speciaal door een codeeractiviteit te voltooien EN meer te weten te komen over
+    AI.
+  hoc_how_to_step_choose_activities_desc_02: Eerst [ontdek honderden codeeractiviteiten]
+    (%{activities_url}) en kies er een op basis van de leeftijd, ervaring, interesses
+    en meer van je groep. [Deze geselecteerde activiteiten] (%{ai_activities_url})
+    bevatten kunstmatige intelligentie als een belangrijk onderwerp of les.
+  hoc_how_to_step_choose_activities_desc_03: Dan, [leer alles over AI] (%{ai_url}).
+    Studenten kunnen korte video's bekijken met experts uit het veld, en er zijn bijbehorende
+    lesplannen om de activiteit uit te breiden en verdere discussie te begeleiden.
+    Of we bieden docenten gratis professioneel leren om de toekomst van lesgeven met
+    en over AI te ontsluiten.
+  hoc_how_to_step_educators_register_desc: Begin met de toezegging om een uurtje code
+    te doen met je studenten door je evenement te registreren. Wanneer je je registreert,
     ontvang je nuttige e-mails met nieuws en tips voor het organiseren van een succesvol
-    Hour of Code-evenement. Het is ook de manier waarop je lokale vrijwilligers kunt
-    laten weten dat je school meedoet. Vrijwilligers zijn een geweldige hulpbron en
-    kunnen met je klas over informatica komen praten of je leerlingen helpen met Hour
-    of Code-activiteiten.
-  hoc_how_to_step_05_educators_desc_01: Maak je leerlingen enthousiast voor het evenement
-    door [inspirerende video's] (%{videos_url}) te delen waarin verschillende mensen
-    en creatieve manieren worden belicht waarop informatica in de echte wereld kan
-    worden gebruikt.
-  hoc_how_to_step_05_educators_desc_02: Deel je Hour of Code-abonnementen met andere
-    docenten die misschien mee willen doen! Dit is ook een geweldige kans om contact
-    op te nemen met de Parent Teacher Student Association van je school of deel te
-    nemen in nieuwsbrieven voor ouders, zodat ze weten wat hun kinderen leren.
-  hoc_how_to_step_06_educators_desc_01: Leid je leerlingen naar de activiteit, bijvoorbeeld
-    door de link op het bord te delen of via het leerbeheersysteem van je klas. Je
-    leerlingen kunnen tegen uitdagingen aanlopen, dat is oké! Leren programmeren is
-    als het leren van een nieuwe taal; je spreekt niet meteen vloeiend. Als je het
-    antwoord niet weet, kun je er samen achter komen.
-  hoc_how_to_step_07_educators_desc_01: 'Zorg ervoor dat je het succes viert! Deel
-    foto''s en video''s van je Hour of Code-evenement op sociale media. Gebruik #HourOfCode
-    en @codeorg zodat we ook jouw succes kunnen benadrukken!'
-  hoc_how_to_step_07_educators_desc_02: Je kunt ook certificaten afdrukken zodat je
-    leerlingen kunnen laten zien wat ze hebben bereikt!
+    Hour of Code. Je wordt ook [op de kaart gezet] (%{map_url}). De zichtbare totaliteit
+    van onze gezamenlijke inspanningen toont de wereldwijde toewijding aan de informaticabeweging
+    aan, die ons zal helpen om een impuls te geven aan systemische verandering.
+  hoc_how_to_step_educators_plan_desc_01: Probeer de activiteiten voorafgaand aan
+    je evenement zelf uit, zodat je zeker weet dat ze werken op apparaten van studenten
+    en je bereid bent om vragen te beantwoorden! Heb je een lage bandbreedte? Plan
+    om video's aan de voorkant van de klas te laten zien, zodat niet elke leerling
+    zijn eigen video's downloadt.
+  hoc_how_to_step_educators_plan_desc_02: Mensen over de hele wereld nemen vaak deel
+    aan het Hour of Code-feest tijdens de Computer Science Education Week (%{campaign_date}),
+    maar je kunt elke dag van het jaar een Hour of Code doen!
+  hoc_how_to_step_educators_plan_desc_03: Kies een ruimte die geschikt is voor het
+    aantal studenten en apparaten dat je beschikbaar hebt. Leerlingen kunnen activiteiten
+    uitproberen op afzonderlijke apparaten, om beurten een apparaat delen of als klas
+    op een whiteboard. Er zijn zelfs activiteiten zonder stopcontact die zonder apparaten
+    kunnen worden uitgevoerd, dus ze kunnen zelfs buiten worden gedaan!
+  hoc_how_to_step_educators_spread_word_desc_01: Help ons het nieuws in uw gemeenschap
+    te verspreiden met [deze e-mailsjablonen] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Vraag twee collega's om [register](%{register_url})
+    en organiseer een Hour of Code-activiteit. Zij kunnen op hun beurt twee collega's
+    beveiligen, die twee collega's kunnen beveiligen, enz.
+  hoc_how_to_step_educators_spread_word_desc_03: Vraag je directeur om [een schoolbreed
+    evenement te organiseren] ()%{host_url}. Als er 300 of meer kinderen meedoen,
+    ontvang je een speciale verlovingskit met t-shirts, posters, laptopstickers en
+    meer. [Deel je volledige plan voor schoolevenementen] (%{share_url}) om in aanmerking
+    te komen.
+  hoc_how_to_step_educators_spread_word_desc_04: Neem contact op met de Parent Teacher
+    Student Association van je school of deel ze in de nieuwsbrieven van ouders, zodat
+    ze weten wat hun kinderen leren.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 uur: Begin met een [inspirerende
+    video] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 uur: Leerlingen doen hun
+    codeeractiviteit'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 uur: Studenten leren over
+    AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 uur: Docent geeft slotopmerkingen'
+  hoc_how_to_step_educators_get_coding_desc: Leid je leerlingen naar de activiteit,
+    bijvoorbeeld door de link op het bord te delen of via het leerbeheersysteem van
+    je klas. Je leerlingen kunnen tegen uitdagingen aanlopen, dat is oké! Leren programmeren
+    is als het leren van een nieuwe taal; je spreekt niet meteen vloeiend. Als je
+    het antwoord niet weet, kun je er samen achter komen.
+  hoc_how_to_step_educators_celebrate_desc: 'Druk na je evenement de certificaten
+    van voltooiing af en feliciteer je studenten. Deel foto''s en video''s van je
+    Hour of Code-evenement en laat de prestaties van je leerlingen zien met #HourOfCode
+    en @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Informatica hoeft niet te eindigen met het
+    Hour of Code! Hoewel 90% van de ouders wil dat hun kind informatica leert, geven
+    de meeste scholen daar nog steeds geen les in. Om u daarbij te helpen, is ons
+    curriculum webgebaseerd en voor altijd gratis te gebruiken. Leer vandaag nog hoe
+    je CS naar je school kunt brengen.
   hoc_ai_top_desc: Iedereen kan meer te weten komen over AI, of je nu een student
     in de klas bent of een docent die de toekomst van lesgeven met en over AI ontsluit.
   hoc_ai_how_ai_works_video_series_desc: Deze serie korte video's laat je zien hoe

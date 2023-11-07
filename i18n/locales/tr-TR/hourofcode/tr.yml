@@ -67,9 +67,9 @@ tr:
     "Encanto," müziklerine ve daha fazlasına eşlik edin!
   social_hoc2023_dance: Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     Disney'in “Encanto” ndan müzik ve daha fazlasını içeren!
-  social_hoc2023_dance_v2: Eşyalarını toplamanın zamanı geldi! Miley Cyrus, BTS, Lil
-    Nas X, Harry Styles, Nicki Minaj, Rosalía ve daha fazlasının hitlerinin yer aldığı
-    kendi dans partinizi oluşturun!
+  social_hoc2023_dance_v2: Kendini dansta gösterme zamanı geldi! Miley Cyrus, BTS,
+    Lil Nas X, Harry Styles, Nicki Minaj, Rosalía ve daha fazlasının hitlerinin yer
+    aldığı kendi dans partinizi oluşturun!
   social_hoc2021_cse: "#HourOfCode sırasında #CSEverywhere'i kutluyoruz. Bağlantıları
     keşfedin!"
   hoc2020_header: Bugün öğrenin, daha parlak bir gelecek inşa edin
@@ -298,14 +298,16 @@ tr:
   call_to_action_register_event: Etkinliğinizi kaydedin
   call_to_action_register_your_hoc: Hour of Code programınızı kaydedin
   call_to_action_select_activity: Bir etkinlik seçin
+  call_to_action_select_coding_activity: Bir kodlama aktivitesi seçin
   call_to_action_start_activity: Bir aktivite başlatın
   call_to_action_get_certificates: Sertifika alın
+  call_to_action_print_certificates: Sertifikaları yazdırın
   call_to_action_go_beyond_hoc: Hour of Code'un ötesine geçin
   call_to_action_explore_all_hoc_activities: Code.org'daki tüm Hour of Code etkinliklerini
     keşfedin
   call_to_action_start_dance_party: Dans Partisini Başlat
   call_to_action_start_part_02: İkinci bölüme başla
-  call_to_action_start_unplugged_activity: Takılı olmayan etkinliği başlatın
+  call_to_action_start_unplugged_activity: Bağlantısız etkinliği başlatın
   call_to_action_view_promo_resources: Promosyon kaynaklarını görüntüleyin
   call_to_action_learn_more: Daha fazla bilgi edinin
   call_to_action_watch_now: Şimdi izle
@@ -433,6 +435,8 @@ tr:
     öğrenme programını başlatın
   aria_label_call_to_action_teaching_csp: Bilgisayar Bilimi Öğretimi İlkeleri mesleki
     öğrenme programını başlatın
+  aria_label_call_to_action_teaching_problem_solving: Problem Çözmeyi ve Bilgisayarı
+    Öğretme mesleki öğrenme programını başlatın
   aria_label_call_to_action_teaching_csc: Bilgisayar Bilimleri Bağlantılarını Öğretme
     profesyonel öğrenim programını başlatın
   aria_label_call_to_action_teaching_ai: Öğretim AI ve Makine Öğrenimi profesyonel
@@ -451,6 +455,8 @@ tr:
     keşfedin
   aria_label_call_to_action_curriculum_csp: Bilgisayar Bilimi İlkeleri müfredatını
     keşfedin
+  aria_label_call_to_action_curriculum_problem_solving: Problem Çözme ve Bilgisayarı
+    Öğretme müfredatını keşfedin
   aria_label_call_to_action_curriculum_csc: Bilgisayar Bilimleri Bağlantıları müfredatını
     keşfedin
   aria_label_call_to_action_curriculum_ai: Yapay Zeka ve Makine Öğrenimi müfredatını
@@ -531,6 +537,7 @@ tr:
   curriculum_name_csf_teacher_led: Öğretmen liderliğindeki ders
   curriculum_name_csd: Bilgisayar Bilimi Keşifleri
   curriculum_name_csp: Bilgisayar Bilimi İlkeleri
+  curriculum_name_problem_solving: Problem Çözme ve Hesaplama
   curriculum_name_csc: Bilgisayar Bilimleri Bağlantıları
   curriculum_name_csa: Bilgisayar Bilimleri A
   curriculum_name_csa_ai: Yazılım Mühendisliği ve Bilgisayarla Görme
@@ -544,25 +551,25 @@ tr:
   curriculum_name_poetry: Şiirle Kodlama
   curriculum_name_dance_party: Dans Partisi
   curriculum_name_dance_party_02: Dans etmeye devam et
-  curriculum_name_dance_party_unplugged: Dans Partisi Takılmamış
-  curriculum_name_dance_party_ai_edition: 'Dans Partisi: AI Sürümü'
+  curriculum_name_dance_party_unplugged: Dans Partisi Bağlantısız
+  curriculum_name_dance_party_ai_edition: 'Dans Partisi: AI (Yapay Zeka) Sürümü'
   curriculum_name_problem_solving_computing: Problem Çözme ve Hesaplama
   curriculum_name_web_development: Web Geliştirme
   curriculum_name_interactive_animations_games: İnteraktif Animasyonlar ve Oyunlar
   curriculum_name_design_process: Tasarım Süreci
   curriculum_name_data_society: Veri ve Toplum
   curriculum_desc_dance_party_01: Bu tanıtım etkinliğinde, çeşitli renkli karakterlerin
-    animasyonlu arka planlara ve iyimser müziğe geçmesini sağlamak için kodu kullanın.
+    hareketli arka planlara ve neşeli müziğe geçiş yapmasını sağlamak için kodu kullanın.
   curriculum_desc_dance_party_02: Genişletilmiş proje fikirleriyle giriş eğitiminin
     ötesine geçin. Daha karmaşık dans partilerinin örneklerinden oluşan bir kütüphaneye
     göz atın.
-  curriculum_desc_dance_party_unplugged: Yoğunuzu açın - bilgisayara gerek yok! Olaylar
-    gibi kodlama kavramlarının dansçı koreografisini senkronize etmek için nasıl kullanılabileceğini
-    öğrenin.
-  curriculum_desc_dance_party_ai_edition: Günümüzün en iyi sanatçılarını sergileyen
-    kendi sanal dans partinizi oluşturmak için yapay zeka (AI) kavramları hakkında
-    bilgi edinin. Aralarından seçim yapabileceğiniz düzinelerce şarkı ile, müzik zevkleri
-    ne olursa olsun her öğrenciye ulaşın. Eşyalarını toplamanın zamanı geldi!
+  curriculum_desc_dance_party_unplugged: Hadi kurtlarımızı dökelim - bilgisayara gerek
+    yok! Etkinlikler gibi kodlama konseptlerinin dansçı koreografisini senkronize
+    etmek için nasıl kullanılabileceğini öğrenin.
+  curriculum_desc_dance_party_ai_edition: Günümüzün en iyi sanatçılarının sergilendiği
+    kendi sanal dans partinizi oluşturmak için yapay zeka (AI) konseptleri hakkında
+    bilgi edinin. Aralarından seçim yapabileceğiniz onlarca şarkıyla müzik zevki ne
+    olursa olsun her öğrenciye ulaşın. Kendini dansta gösterme zamanı geldi!
   curriculum_desc_csf: Öğrencileri bilgisayar biliminin temel kavramlarıyla tanıştıran
     ücretsiz ilköğretim müfredatı seti.
   curriculum_desc_csf_express: Bilgisayar programları oluşturmayı, problem çözme becerilerini
@@ -697,11 +704,11 @@ tr:
   module_grade_grade_04: 4. sınıf
   module_grade_grade_05: 5. Sınıf
   module_age_05_07: 5-7 yaş
-  module_age_07: Yaş 7+
+  module_age_07: 7+ Yaş
   module_age_07_11: 7-11 yaş
   module_age_11: Yaş 11+
-  module_age_13: Yaş 13+
-  module_age_all_age: Her Yaşta
+  module_age_13: '13+ Yaş '
+  module_age_all_age: Tüm Yaşlar
   module_grade_k_5_teachers: K-5 Öğretmenleri
   module_grade_6_10_teachers: 6-10 Öğretmenleri
   module_grade_9_12_teachers: 9-12 Öğretmenleri
@@ -733,6 +740,7 @@ tr:
   module_label_teaching_csf: Bilgisayar Bilimi Temellerinin Öğretimi
   module_label_teaching_csd: Bilgisayar Bilimi Keşiflerinin Öğretimi
   module_label_teaching_csp: Bilgisayar Bilimi İlkelerinin Öğretimi
+  module_label_teaching_problem_solving: Problem Çözme ve Bilgisayarı Öğretme Öğretimi
   module_label_teaching_csc: Bilgisayar Bilimleri Bağlantıları Öğretimi
   module_label_teaching_ai: Yapay Zeka ve Makine Öğrenimi Öğretimi
   module_label_teaching_maker_cp: Cihazlarla Uygulama Oluşturma Öğretimi (Devre Oyun
@@ -797,8 +805,7 @@ tr:
   heading_bring_cs_to_students: Bilgisayar bilimini öğrencilere kazandırmak
   heading_cs_ambassador_program: CS Elçisi Programı
   heading_featured_student_projects: Öne çıkan öğrenci projeleri
-  heading_start_hoc_with_videos: Hour of Code programınıza ilham verici videolarla
-    başlayın
+  heading_start_hoc_with_videos: Hour of Code'a ilham verici videolarla başlayın
   cs_ambassador_subhead: Daha fazla genç kadını okulunuzda bilgisayar bilimi almaya
     teşvik etme konusunda tutkulu bir lise öğrencisiyseniz, o zaman size ihtiyacımız
     var!
@@ -895,13 +902,13 @@ tr:
     aylık e-postalar almak ve doğrudan gelen kutunuza gönderilen yararlı hatırlatıcılar,
     ipuçları ve güncellemeler almak için kaydolun.
   subscribe_form_section_unsubscribe: İstediğiniz zaman aboneliğinizi iptal edebilirsiniz.
-  dance_hero_heading: Dans Partisini Kodla
-  dance_featuring_songs_by_short: 'Şunlardan gelen şarkılar:'
-  dance_featuring_songs_by_long: 'Dans Partisi şarkıları içerir:'
+  dance_hero_heading: Bir Dans Partisi Kodla
+  dance_featuring_songs_by_short: 'Şarkılarıyla:'
+  dance_featuring_songs_by_long: 'Dans Partisi şu şarkıcıların şarkılarını içerir:'
   dance_and_more: ve daha fazlası
-  dance_choose_activity: Dans Partinizi Seçin
-  dance_afe_disclaimer: Bu eğitimde müziği kullanılan sanatçılar, müziklerinin Code.org'a
-    lisanslanması kapsamında Amazon'a sponsorluk yapmıyor veya onaylamıyor.
+  dance_choose_activity: Kendi Dans Partinizi Seçin
+  dance_afe_disclaimer: Bu eğitimde müzikleri kullanılan sanatçılar, müziklerinin
+    Code.org'a lisanslanması kapsamında Amazon'a sponsorluk veya destek sağlamamaktadır.
   blockchain_hero_heading: Blockchain Nasıl Çalışır?
   blockchain_hero_desc: Yeni video serimiz ve beraberindeki derslerimiz olan "Blockchain
     Nasıl Çalışır" ile blockchain dünyasına dalın!
@@ -13571,6 +13578,9 @@ tr:
   step_06: Adım 6
   step_07: Adım 7
   step_08: Adım 8
+  what: 'Ne:'
+  when: 'Ne zaman:'
+  where: 'Nerede:'
   hoc_how_to_top_heading: Hour of Code kılavuzunuz
   hoc_how_to_top_desc: En iyi Hour of Code deneyimi için uyarlanmış nasıl yapılır
     kılavuzları.
@@ -13622,72 +13632,86 @@ tr:
   hoc_how_to_step_label_plan: Hour of Code programınızı nerede ve ne zaman yapacağınızı
     planlayın
   hoc_how_to_step_label_choose_activity: Aktivitenizi seçin
+  hoc_how_to_step_label_choose_activities: Aktivitelerinizi seçin
   hoc_how_to_step_label_test_activity: Aktivitenizi test edin
   hoc_how_to_step_label_register_event: Etkinliğinizi kaydedin
   hoc_how_to_step_label_tell: Öğrencilerinize, okulunuza ve topluluğunuza haber verin
   hoc_how_to_step_label_get_coding: Kodlamaya başlayın.
   hoc_how_to_step_label_celebrate: Kutlama yapın
   hoc_how_to_step_label_beyond_hoc: Hour of Code ve Ötesi
+  hoc_how_to_step_label_plan_your_event: Etkinliğinizi planlayın
+  hoc_how_to_step_label_plan_your_hour: Saatinizi planlayın
+  hoc_how_to_step_label_help_spread_word: Haberi yaymaya yardımcı olun
   hoc_how_to_step_beyond_hoc_subhead: Burada bitmiyor.
-  hoc_how_to_step_beyond_hoc_desc: Bilgisayar biliminin Hour of Code ile bitmesi gerekmez.
-    Ebeveynlerin %90'ı çocuklarının bilgisayar bilimini öğrenmesini istiyor olsa da
-    çoğu okulda hâlâ öğretilmiyor. Bilgisayar bilimini çocuğunuzun okuluna nasıl getireceğinizi
-    bugün öğrenin.
-  hoc_how_to_step_01_educators_subhead: Öğrenci ve sahip olduğunuz cihaz sayısına
-    uygun bir etkinlik zamanı ve alanı seçin.
-  hoc_how_to_step_01_educators_desc_01: Hour of Code'unuzu yapmak için uygun hangi
-    alanlar var? Alanınızın teknik yeteneklerini ve öğrencilerinizin üzerinde çalışmasını
-    beklediğiniz cihaz türlerini düşünün. Öğrenciler, öğretici materyaller üzerinde
-    tek bir cihazda çalışabilir, paylaşılan bir cihazı kullanarak sırayla çalışabilir
-    veya bir öğretici materyali sınıf tahtasında hep birlikte deneyebilirler. Hiçbir
-    cihaz olmadan tamamlanabilen bağlantısız eğitimler bile var. Bağlantısız seçenekler
-    her yerde, hatta dışarıda bile yapılabilir.
-  hoc_how_to_step_01_educators_desc_02: Dünyanın dört bir yanından insanlar, en son
-    öğretici materyallerin ve aktivitelerin yayınlandığı CS Eğitim Haftası %{campaign_date}
-    sırasında Hour of Code kutlamasına katılıyor. Ancak yılın istediğiniz günlerinde
-    de Hour of Code yapabilirsiniz.
-  hoc_how_to_step_02_educators_desc_01: Grubunuzun yaşına, deneyimine, ilgi alanlarına
-    ve daha fazlasına göre aktiviteleri keşfedin. Öğrenciler kendi kendine yönlendirmeli
-    öğretici materyalleri denemeyi severler ancak birçok aktivitede öğretmenlerin
-    tartışmaya rehberlik etmesi veya aktivite kapsamını genişletmesi için ders planları
-    vardır.
-  hoc_how_to_step_02_educators_desc_02: Tüm öğrencileriniz için tek bir öğretici materyal
-    mi seçeceksiniz yoksa veya her çocuğun kendi öğretici materyalini seçmesine izin
-    mi vereceksiniz? Buna önceden karar verin.
-  hoc_how_to_step_02_educators_desc_03: Bu yıl, siz ve öğrencileriniz öğretici materyaller,
-    ders planları ve yeni Yapay Zeka Nasıl Çalışır? video serimiz aracılığıyla [yapay
-    zeka hakkında her şeyi öğrenebilirsiniz](%ai_url).
-  hoc_how_to_step_03_educators_desc_01: Sınıfa girmeden önce öğretici materyali deneyin,
-    böylece soruları cevaplayabilirsiniz.
-  hoc_how_to_step_03_educators_desc_02: Ses ve videoyu desteklediklerinden emin olmak
-    için öğrencilerin bilgisayarlarında veya cihazlarında da öğretici materyalleri
-    test edebilirsiniz. Bant genişliği yetersiz mi? Videoları sınıfın tamamına göstermeyi
-    planlayın, böylece öğrenciler kendi videolarını indirmek zorunda kalmaz.
-  hoc_how_to_step_03_educators_desc_03: Seçtiğiniz öğretici materyal en iyi sesli
-    şekilde çalışıyorsa sınıfınız için kulaklık sağlamayı düşünün veya öğrencilerden
-    kendi kulaklıklarını getirmelerini isteyin.
-  hoc_how_to_step_04_educators_desc_01: Hour of Code etkinliğinizi kaydettiğinizde,
-    başarılı bir Hour of Code ev sahipliği yapmak için haberler ve ipuçları içeren
-    faydalı e-postalar alacaksınız. Ayrıca yerel gönüllülere okulunuzun katıldığını
-    da bu şekilde bildirebilirsiniz. Gönüllüler harika bir kaynaktır ve sınıfınıza
-    gelip bilgisayar bilimi hakkında konuşabilir veya Hour of Code etkinliklerinde
-    öğrencilerinize yardımcı olabilirler.
-  hoc_how_to_step_05_educators_desc_01: Bilgisayar biliminin gerçek dünyada hitap
-    ettiği insan çeşitliliğini ve kullanılabileceği yaratıcı yolları vurgulayan [ilham
-    verici videolar](%{videos_url}) paylaşarak öğrencilerinizi etkinlik için heyecanlandırın.
-  hoc_how_to_step_05_educators_desc_02: Hour of Code planlarınızı eğlenceye katılmak
-    isteyebilecek diğer öğretmenlerle paylaşın. Bu aynı zamanda okulunuzun Veli, Öğretmen
-    ve Öğrenci Birliği'ne ulaşmak veya ebeveyn bültenlerinde paylaşmak ve çocuklarının
-    ne öğrendiğini bildirmek için harika bir fırsattır.
-  hoc_how_to_step_06_educators_desc_01: Bağlantıyı tahtada paylaşarak veya sınıfınızın
-    öğrenme yönetim sistemi aracılığıyla öğrencilerinizi aktiviteye yönlendirin. Öğrencileriniz
-    zorluklarla karşılaşabilir; sorun değil. Programlamayı öğrenmek yeni bir dil öğrenmek
-    gibidir; akıcılığı hemen kazanmazsınız. Cevabı bilmiyorsanız birlikte çözebilirsiniz.
-  hoc_how_to_step_07_educators_desc_01: 'Başarıyı kutlamayı unutmayın. Hour of Code
-    etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda
-    #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız.'
-  hoc_how_to_step_07_educators_desc_02: Ayrıca öğrencilerinizin başarılarını gösteren
-    sertifikalar da yazdırabilirsiniz.
+  hoc_how_to_step_plan_hour_desc_01: 'İşte başlamanız için örnek bir gündem:'
+  hoc_how_to_step_choose_activities_desc_01: Bu yılki Hour of Code teması Yapay Zeka
+    (AI) ile Yaratıcılık. Yeni uygulamaları ve algoritmaları kodlarken, benzersiz
+    sanat üretmek veya dans etmemizi sağlamak için koreografi oluşturmak olsun, Yapay
+    Zeka (AI), yaratıcılık anlayışımızı genişleten dijital ifade için yeni fırsatlar
+    sunuyor. Bir kodlama etkinliğini tamamlayarak VE Yapay Zeka (AI) hakkında bilgi
+    edinerek bu yılı özel hale getirin.
+  hoc_how_to_step_choose_activities_desc_02: İlk olarak, [explore hundreds of coding
+    activities] (%{activities_url}) ve grubunuzun yaşına, deneyimine, ilgi alanlarına
+    ve daha fazlasına göre birini seçin. [These select activities] (%{ai_activities_url})
+    yapay zekayı önemli bir konu veya ders olarak içerir.
+  hoc_how_to_step_choose_activities_desc_03: Sonra, [learn all about AI] (%{ai_url}).
+    Öğrenciler bu alandaki uzmanların yer aldığı kısa videolar izleyebilir ve aktiviteyi
+    genişletmek ve daha fazla tartışmaya rehberlik etmek için eşlik eden ders planları
+    vardır. Veya, AI ile ve AI hakkında öğretimin geleceğinin kilidini açmak için
+    eğitimcilere ücretsiz profesyonel öğrenim sunuyoruz.
+  hoc_how_to_step_educators_register_desc: Etkinliğinizi kaydederek öğrencilerinizle
+    bir Hour of Code yapma taahhüdüyle başlayın. Kaydolduğunuzda, başarılı bir Hour
+    of Code ev sahipliği yapmak için haberler ve ipuçları içeren faydalı e-postalar
+    alacaksınız. Ayrıca haritaya işaretleneceksiniz [put on the map] (%{map_url}).
+    Kolektif çabalarımızın görünür bütünlüğü, sistemsel değişim için ivme kazanmamıza
+    yardımcı olacak bilgisayar bilimi hareketine olan küresel bağlılığı göstermektedir.
+  hoc_how_to_step_educators_plan_desc_01: Etkinliğinizden önce, aktiviteleri kendiniz
+    deneyin, böylece öğrenci cihazlarında çalıştıklarından emin olabilirsiniz ve soruları
+    yanıtlamaya hazır olursunuz! Düşük bant genişliğine (internet yavaş) mi sahipsiniz?
+    Videoları sınıfın önünde göstermeyi planlayın, böylece her öğrenci kendi videolarını
+    indirmez.
+  hoc_how_to_step_educators_plan_desc_02: Dünyanın dört bir yanındaki insanlar genellikle
+    Bilgisayar Bilimleri Eğitim Haftası (%{campaign_date}) sırasında Hour of Code
+    kutlamalarına katılır, ancak yılın herhangi bir günü bir Hour of Code yapabilirsiniz!
+  hoc_how_to_step_educators_plan_desc_03: Sahip olduğunuz öğrenci ve cihaz sayısına
+    uygun bir alan seçin. Öğrenciler etkinlikleri kendi cihazlarında deneyebilir,
+    sırayla bir cihazı paylaşabilir veya beyaz tahtada sınıf olarak deneyebilir. Hiçbir
+    cihaz olmadan tamamlanabilen bağlantısız (çevrimdışı) aktiviteler bile var, böylece
+    dışarıda bile yapılabilir!
+  hoc_how_to_step_educators_spread_word_desc_01: " [Bu e-posta şablonları](%{email_url})
+    ile topluluğunuzda haberi yaymamıza yardımcı olun."
+  hoc_how_to_step_educators_spread_word_desc_02: İki meslektaşınızdan [register](%{register_url})
+    dan kaydolmasını ve bir Hour of Code etkinliğine ev sahipliği yapmasını isteyin.
+    Buna karşılık, onlar da iki meslektaşı garantileyebilecek iki meslektaşı garantiler,
+    vb.
+  hoc_how_to_step_educators_spread_word_desc_03: 'Müdürünüzden isteyin [host a school-wide
+    event] (%{host_url}) isteyin. 300 veya daha fazla çocuk katıldığında, tişörtler,
+    posterler, dizüstü bilgisayar çıkartmaları ve daha fazlasını içeren özel bir katılım
+    kiti alabilirsiniz. Hak kazanmak için [Share your whole school event plan](%{share_url}) '
+  hoc_how_to_step_educators_spread_word_desc_04: Okulunuzun Okul Aile Birliği'ne ulaşın
+    veya ebeveyn bültenlerinde paylaşarak çocuklarının ne öğrendiğini bildirin.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: [inspirational video](%{video_url})
+    ile başlayın '
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Öğrenciler kodlama etkinliklerini
+    yaparlar'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Öğrenciler yapay zeka
+    hakkında bilgi ediniyor'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Öğretmen kapanış konuşması
+    yapıyor'
+  hoc_how_to_step_educators_get_coding_desc: Bağlantıyı tahtada paylaşarak veya sınıfınızın
+    öğrenme yönetim sistemi aracılığıyla, öğrencilerinizi aktiviteye yönlendirin.
+    Öğrencileriniz zorluklarla karşılaşabilir - sorun değil! Programlamayı öğrenmek
+    yeni bir dil öğrenmek gibidir; hemen akıcı konuşamayacaksın. Cevabı bilmiyorsanız
+    birlikte çözebilirsiniz.
+  hoc_how_to_step_educators_celebrate_desc: 'Etkinliğinizden sonra, bitirme sertifikalarını
+    yazdırın ve öğrencilerinizi tebrik edin. Hour of Code etkinliğinizin fotoğraflarını
+    ve videolarını paylaşın ve #HourOfCode ve @codeorg kullanarak öğrencilerinizin
+    başarılarını gösterin.'
+  hoc_how_to_step_educators_beyond_desc: Bilgisayar biliminin Hour of Code ile bitmesi
+    gerekmez! Ebeveynlerin% 90'ı çocuklarının bilgisayar bilimini öğrenmesini isterken,
+    çoğu okul hala öğretmiyor. Yardımcı olmak için, müfredatımız web tabanlı ve sonsuza
+    dek kullanımı ücretsizdir. CS (Bilgisayar Bilimi)'yi bugün okulunuza nasıl getireceğinizi
+    öğrenin.
   hoc_ai_top_desc: İster sınıfta bir öğrenci olun, ister yapay zeka ile ve hakkında
     öğretimin geleceğini ortaya çıkaran bir eğitimci olun, herkes yapay zeka hakkında
     bilgi edinebilir.
@@ -14414,42 +14438,43 @@ tr:
     geliştirmeleri için bir kaynaktır.
   teach_ai_button_label: Araç Setini görüntüleyin
   middle_high_page_main_title: 11 yaş ve üstü için öğrenme
-  middle_high_page_main_description: İlgi çekici videolar, kendi tempolu eğitimler,
-    programlama etkinlikleri ve daha fazlasıyla bilgisayar bilimi dünyasını keşfedin!
+  middle_high_page_main_description: İlgi çekici videolar, hızınızı kendiniz belirleyebileceğiniz
+    eğitimler, programlama etkinlikleri ve daha fazlasıyla bilgisayar bilimi dünyasını
+    keşfedin!
   middle_high_page_hero_title: Hour of Code ile Başlayın
   middle_high_page_hero_description: Sürükle ve bırak kodlama blokları içeren ücretsiz
     Hour of Code etkinlikleriyle bilgisayar biliminin temellerini öğrenin. Aralarından
     seçim yapabileceğiniz yüzlerce saat süren seçenek var!
   middle_high_page_hourofcode_link: Hour of Code etkinliklerini keşfedin
-  middle_high_page_modules_title: Yaşlı Öğrenciler için Programlama Modülleri
-  middle_high_page_modules_description: CS Discoveries ve CS Principles kurslarımızdan
-    uyarlanan bu kısa, ortaokul ve lise öğrencileri için kendi tempolu modüller, tüm
-    programlama dillerini ve araçlarını kapsayan kavramları öğrenmenin harika bir
-    yoludur.
+  middle_high_page_modules_title: Daha büyük öğrenciler için Programlama Modülleri
+  middle_high_page_modules_description: CS Discoveries (Keşifleri) ve CS Principles
+    (Prensipleri) kurslarımızdan uyarlanan, ortaokul ve lise öğrencilerine yönelik
+    bu kısa, kendi hızını ayarlayabileceğiniz modüller, tüm programlama dillerini
+    ve araçlarını kapsayan kavramları öğrenmenin harika bir yoludur.
   middle_high_page_modules_card_title_1: Game Lab'a Giriş
   middle_high_page_modules_card_title_2: App Lab'da Kaplumbağa Programlama
   middle_high_page_modules_card_title_3: App Lab'da Olay Odaklı Programlama
   middle_high_page_modules_card_description_1: Animasyonları, etkileşimli sanatları
     ve oyunları programlarken Game Lab ortamımıza giriş bölümünde kendi hızınızda
     hareket edin.
-  middle_high_page_modules_card_description_2: Uygulama Laboratuvarı'nda JavaScript
-    ile zengin, etkileşimli uygulamalar yapma yeteneğinin kilidini açın!
+  middle_high_page_modules_card_description_2: App Lab'da JavaScript ile zengin, etkileşimli
+    uygulamalar yapma yeteneğinin kilidini açın!
   middle_high_page_modules_card_description_3: Öğrencilerin etkileşimli uygulamalar
     oluşturmak için JavaScript'i kullandıkları App Lab programlama ortamına giriş
-    ile kendi hızınıza gidin.
+    ile kendi hızınızda gidin.
   middle_high_page_modules_card_link: Deneyin
   middle_high_page_make_your_own_title: Kendi Uygulamalarınızı, Oyunlarınızı ve Web
     Sayfalarınızı Oluşturun
   middle_high_page_make_your_own_description: 'Kurslara ek olarak, yaratıcılığınızı
     keşfetmenize ve harika bir şey yapmanıza izin veren programlama araçlarımız var. '
   middle_high_page_make_your_own_card_title_1: Uygulama Laboratuvarı
-  middle_high_page_make_your_own_card_title_2: Oyun Laboratuvarı
+  middle_high_page_make_your_own_card_title_2: Game Lab (Oyun Laboratuvarı)
   middle_high_page_make_your_own_card_title_3: Web Laboratuvarı
   middle_high_page_make_your_own_card_descrpition_1: App Lab, basit uygulamalar yapabileceğiniz
     bir programlama ortamıdır. Bir uygulama tasarlayın, bloklar veya metinlerle JavaScript'te
     kodlayın, ardından uygulamanızı saniyeler içinde paylaşın.
   middle_high_page_make_your_own_card_descrpition_2: Game Lab, birbirleriyle etkileşime
-    giren nesneler ve karakterlerle basit animasyonlar ve oyunlar yapabileceğiniz
+    giren, nesneler ve karakterlerle, basit animasyonlar ve oyunlar yapabileceğiniz
     bir programlama ortamıdır.
   middle_high_page_make_your_own_card_descrpition_3: Web Lab, HTML ve CSS kullanarak
     basit web sayfaları yapabileceğiniz bir programlama ortamıdır. Web sayfalarınızı
@@ -14460,16 +14485,16 @@ tr:
     keşfetmenin pek çok yolu var! Video kitaplığımıza göz atın veya bilgisayar bilimi
     alanındaki heyecan verici kariyerler hakkında daha fazla bilgi edinin.
   middle_high_page_video_library_title: Video Kitaplığımızı Keşfedin
-  middle_high_page_video_library_description: Yapay zeka, İnternet, bilgisayarların
-    nasıl çalıştığı, nasıl saldırıya uğramayacağınız, blok zinciri, kariyer ve daha
-    fazlası gibi konularda 5-10 dakikalık kısa videolar aracılığıyla bilgisayar biliminin
+  middle_high_page_video_library_description: Yapay zeka, İnternet, bilgisayarlar
+    nasıl çalışır, nasıl saldırıya uğramayız, blok zinciri, kariyerler ve daha fazlası
+    gibi konularda 5-10 dakikalık kısa videolar aracılığıyla bilgisayar biliminin
     temellerini öğrenin!
-  middle_high_page_video_library_link: Video arşivini görüntüle
-  middle_high_page_cs_journeys_title: CS Journeys ile daha ileri gidin
+  middle_high_page_video_library_link: Video kitaplığını görüntüle
+  middle_high_page_cs_journeys_title: CS Journeys (Yolculukları) ile İlerleyin
   middle_high_page_cs_journeys_description: Bilgisayar bilimi yolculuğunuzda bir sonraki
-    adımı atın. Kariyerleri, mentorluk fırsatlarını, çevrimiçi kursları, bursları,
+    adımı atın. Kariyerleri, mentörlük fırsatlarını, çevrimiçi kursları, bursları,
     stajları ve daha fazlasını keşfedin!
-  middle_high_page_cs_journeys_link: CS Journey'i Keşfedin
+  middle_high_page_cs_journeys_link: CS Journeys'i Keşfedin
   middle_high_page_cs_title: Sınıfta Bilgisayar Bilimleri
   middle_high_page_cs_description: Bu kurslar bir öğretmen tarafından yönetilmelidir!
     Onların okulunuzda öğretilmesini istiyorsanız, onları sınıfınıza getirmek için
@@ -14487,13 +14512,14 @@ tr:
   middle_high_page_cs_card_description_3: AP® Computer Science A (AP® CSA) için bu
     ücretsiz müfredatta Java programlama dilini öğrenirken öğrencileri yazılım mühendisliği
     ve nesne yönelimli tasarımla tanıştırın.
-  middle_high_page_cs_link_1: CS Sözlüklerini Keşfedin
+  middle_high_page_cs_link_1: CS Keşiflerini Keşfedin
   middle_high_page_cs_link_2: CS İlkelerini Keşfedin
   middle_high_page_cs_link_3: CSA'yı Keşfedin
   elemeentary_page_main_title: 5 ila 11 yaş arası öğrenme
-  elementary_page_main_description: İlgi çekici videolar, kendi tempolu eğitimler,
-    programlama etkinlikleri ve daha fazlasıyla bilgisayar bilimi dünyasını keşfedin!
-  elementary_page_own_pace_title: Kendi Hızınızda Öğrenmeye Devamlayın
+  elementary_page_main_description: İlgi çekici videolar, hızınızı kendiniz belirleyebileceğiniz
+    eğitimler, programlama etkinlikleri ve daha fazlasıyla bilgisayar bilimi dünyasını
+    keşfedin!
+  elementary_page_own_pace_title: Kendi Hızınızda Öğrenmeye Devam Edin
   elementary_page_own_pace_description: Bilgisayar biliminin temellerini kendi başlarına
     öğrenmeye başlayan öğrenciler için bu iki mükemmel seçenekle çizimler, oyunlar
     ve daha fazlasını oluşturun.
@@ -14509,8 +14535,8 @@ tr:
     Yapın
   elementary_page_make_your_own_games_card_title_1: Sprite Laboratuvarı
   elementary_page_make_your_own_games_card_description_1: Yaratıcı olma zamanı! Sprite
-    Lab'de aptalca, tatlı veya uzak bir şey yapmak için blok tabanlı kodlama kullanın.
-    Tek sınır hayal gücünüzdür!
+    Lab'de aptalca, tatlı veya dünya-dışı birşey yapmak için blok tabanlı kodlama
+    kullanın. Tek sınır hayal gücünüzdür!
   elementary_page_make_your_own_games_link: Sprite Lab'ı deneyin
   elementary_page_computer_science_title: Sınıfta Bilgisayar Bilimleri
   elementary_page_computer_science_description: Bu kurslar bir öğretmen tarafından

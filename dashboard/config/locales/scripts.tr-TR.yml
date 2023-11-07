@@ -7963,6 +7963,10 @@ tr:
           title: 2021 BB İlkeleri Derinlemesine Öğrenmeye Genel Bakış
         dlp21-overview:
           name: dlp21-genel bakış
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: hour of code ders planı şablonu
         duino:
           description: Arduino'lar ile öğretim için bazı araçları test etme
           student_description: Arduino'lar ile öğretim için bazı araçları test etme
@@ -10455,6 +10459,9 @@ tr:
               display_name: Eşzamansız Bölüm 1
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-5:
+              name: Eşzamansız Faaliyetlere Giriş
           title: Gün 1
         virtual-pl-csp-summer-day2:
           lesson_groups:

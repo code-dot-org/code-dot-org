@@ -304,8 +304,10 @@ ga:
   call_to_action_register_event: Cláraigh d'imeacht
   call_to_action_register_your_hoc: Cláraigh do Uair an Chód
   call_to_action_select_activity: Roghnaigh gníomhaíocht
+  call_to_action_select_coding_activity: Roghnaigh gníomhaíocht códaithe
   call_to_action_start_activity: Cuir tús le gníomhaíocht
   call_to_action_get_certificates: Faigh teastais
+  call_to_action_print_certificates: Teastais phriontáil
   call_to_action_go_beyond_hoc: Téigh níos faide ná Uair an Chód
   call_to_action_explore_all_hoc_activities: Déan iniúchadh ar gach gníomhaíocht Uair
     an Chód ó Code.org
@@ -432,6 +434,8 @@ ga:
     Fionnachtana Eolaíochta Ríomhaireachta Teagaisc
   aria_label_call_to_action_teaching_csp: Cuir tús leis an gclár foghlama gairmiúla
     Prionsabail Eolaíochta Ríomhaireachta Teagaisc
+  aria_label_call_to_action_teaching_problem_solving: Cuir tús leis an gclár foghlama
+    gairmiúil Réitigh Fadhban
   aria_label_call_to_action_teaching_csc: Cuir tús leis an gclár foghlama gairmiúla
     Naisc Eolaíochta Ríomhaireachta Teagaisc
   aria_label_call_to_action_teaching_ai: Cuir tús leis an gclár foghlama gairmiúil
@@ -450,6 +454,8 @@ ga:
     na Ríomheolaíochta
   aria_label_call_to_action_curriculum_csp: Déan iniúchadh ar churaclam Phrionsabail
     na Ríomheolaíochta
+  aria_label_call_to_action_curriculum_problem_solving: Déan iniúchadh ar an churaclam
+    Réitigh Fadhban
   aria_label_call_to_action_curriculum_csc: Déan iniúchadh ar churaclam Naisc na Ríomheolaíochta
   aria_label_call_to_action_curriculum_ai: Déan iniúchadh ar an gcuraclam AI agus
     Foghlama Meaisín
@@ -532,6 +538,7 @@ ga:
   curriculum_name_csf_teacher_led: Ceacht faoi stiúir an mhúinteora
   curriculum_name_csd: Fionnachtana Eolaíochta Ríomhaireachta
   curriculum_name_csp: Prionsabail na Ríomheolaíochta
+  curriculum_name_problem_solving: Réiteach Fadhbanna agus Ríomhaireacht
   curriculum_name_csc: Naisc Eolaíocht Ríomhaireachta
   curriculum_name_csa: AP® Eolaíocht Ríomhaireachta A
   curriculum_name_csa_ai: Innealtóireacht Bogearraí & Fís Ríomhaireachta
@@ -741,6 +748,7 @@ ga:
   module_label_teaching_csf: Teagasc Eolaíocht Ríomhaireachta Bunúsacha
   module_label_teaching_csd: Fionnachtana Eolaíochta Ríomhaireachta a Mhúineadh
   module_label_teaching_csp: Prionsabail na Ríomheolaíochta Teagaisc
+  module_label_teaching_problem_solving: Réiteach fadhbanna agus Ríomhaireacht
   module_label_teaching_csc: Naisc Eolaíochta Ríomhaireachta a Mhúineadh
   module_label_teaching_ai: AI agus Foghlaim Meaisín a Mhúineadh
   module_label_teaching_maker_cp: Aipeanna a Chruthú le Gléasanna (Clós Súgartha Cuarda)
@@ -13925,6 +13933,9 @@ ga:
   step_06: Céim 6
   step_07: Céim 7
   step_08: Céim 8
+  what: 'Cad:'
+  when: 'Nuair a bhíonn:'
+  where: 'Cá háit:'
   hoc_how_to_top_heading: Do threoir maidir le Uair an Chód
   hoc_how_to_top_desc: Treoracha conas a chur in oiriúint don eispéireas Uair an Chód
     is fearr.
@@ -13976,76 +13987,89 @@ ga:
   hoc_how_to_step_label_plan: Pleanáil cá háit agus cathain a dhéanfaidh tú do Uair
     an Chód
   hoc_how_to_step_label_choose_activity: roghnaigh do ghníomhaíocht
+  hoc_how_to_step_label_choose_activities: Roghnaigh na gníomhaíochtaí
   hoc_how_to_step_label_test_activity: Tástáil amach do ghníomhaíocht
   hoc_how_to_step_label_register_event: Cláraigh d'imeacht
   hoc_how_to_step_label_tell: Inis do mhic léinn, do scoil agus do phobal
   hoc_how_to_step_label_get_coding: Faigh códú!
   hoc_how_to_step_label_celebrate: Ceiliúradh
   hoc_how_to_step_label_beyond_hoc: Beyond Uair an Chód
+  hoc_how_to_step_label_plan_your_event: Pleanáil d'imeacht
+  hoc_how_to_step_label_plan_your_hour: Pleanáil do uair an chloig
+  hoc_how_to_step_label_help_spread_word: Cuidigh leis an focal a scaipeadh
   hoc_how_to_step_beyond_hoc_subhead: Ní chríochnaíonn sé anseo!
-  hoc_how_to_step_beyond_hoc_desc: Ní gá go mbeadh eolaíocht ríomhaireachta deireadh
-    leis an Uair an Chód! Cé go bhfuil 90% de na tuismitheoirí ag iarraidh a leanbh
-    eolaíocht ríomhaireachta a fhoghlaim, ní mhúineann an chuid is mó de na Foghlaim
-    conas CS a thabhairt chuig scoil do pháiste inniu.
-  hoc_how_to_step_01_educators_subhead: Roghnaigh am agus spás imeachta a oibríonn
-    do líon na mac léinn agus na bhfeistí atá ar fáil agat.
-  hoc_how_to_step_01_educators_desc_01: Cad iad na spásanna atá ar fáil duit chun
-    do Uair an Chód a dhéanamh? Smaoinigh ar chumais ardteicneolaíochta do spás, agus
-    na cineálacha feistí a bhfuil súil agat go n-oibreoidh do mhic léinn orthu. Is
-    féidir le mic léinn oibriú ar ranganna teagaisc ar ghléas amháin, casadh a dhéanamh
-    ag baint úsáide as gléas roinnte, nó triail a bhaint as teagaisc le chéile ar
-    chlár bán seomra ranga. Tá fiú ranganna teagaisc neamhphlugáilte ann is féidir
-    a chomhlánú gan aon ghléasanna ar chor ar bith. Is féidir roghanna neamhphlugáilte
-    a dhéanamh áit ar bith - fiú lasmuigh!
-  hoc_how_to_step_01_educators_desc_02: Téann daoine ar fud an domhain isteach sa
-    cheiliúradh Uair an Chód le linn Seachtain Oideachais CS %{campaign_date} nuair
-    a scaoiltear na ranganna teagaisc agus na gníomhaíochtaí Ach is féidir leat Uair
-    an Chód a dhéanamh lá ar bith den bhliain!
-  hoc_how_to_step_02_educators_desc_01: Déan iniúchadh ar ghníomhaíochtaí bunaithe
-    ar aois, taithí, leasanna agus go leor eile do ghrúpa. Tá an-tóir ar mhic léinn
-    ranganna teagaisc féin-stiúir a thriail, cé go n-áirítear go leor gníomhaíochtaí
-    pleananna ceachta do mhúinteoirí chun plé a threorú nó an ghníomhaíocht a leathnú
-  hoc_how_to_step_02_educators_desc_02: Déan cinneadh roimh am más mian leat teagaisc
-    amháin a roghnú do gach ceann de do mhic léinn, nó lig do gach leanbh a roghnú
-    a gcuid féin.
-  hoc_how_to_step_02_educators_desc_03: I mbliana, is féidir leat féin agus do mhic
-    léinn [gach rud a fhoghlaim faoi AI] (%ai_url) trí ranganna teagaisc, pleananna
-    ceachta, agus ár sraith físe nua How AI Works.
-  hoc_how_to_step_03_educators_desc_01: Bain triail as an teagaisc tú féin sula dtéann
-    tú isteach sa seomra ranga ionas gur féidir leat ceisteanna a fhreagairt!
-  hoc_how_to_step_03_educators_desc_02: Is féidir leat ranganna teagaisc a thástáil
-    freisin ar ríomhairí nó ar ghléasanna mac léinn chun a chinntiú go dtacaíonn An
-    bhfuil bandaleithead íseal agat? Plean físeáin a thaispeáint ag tosaigh an ranga,
-    ionas nach bhfuil gach mac léinn ag íoslódáil a gcuid físeáin féin.
-  hoc_how_to_step_03_educators_desc_03: Smaoinigh ar chluasáin a sholáthar do do rang,
-    nó iarr ar mhic léinn a gcuid féin a thabhairt, má oibríonn an teagaisc a roghnaíonn
-    tú is fearr le fuaim.
-  hoc_how_to_step_04_educators_desc_01: Nuair a chláraíonn tú d'imeacht Uair an Chód,
-    gheobhaidh tú ríomhphoist chabhracha le nuacht agus leideanna chun Uair Chód rathúil
-    a óstáil. Tá sé freisin mar is féidir leat a chur in iúl do shaorálaithe áitiúla
-    go bhfuil do scoil rannpháirteach. Is acmhainn iontach iad saorálaithe agus is
-    féidir leo teacht labhairt le do rang faoi eolaíocht ríomhaireachta nó cabhrú
-    le do mhic léinn le gníomhaíochtaí Uair an Chód.
-  hoc_how_to_step_05_educators_desc_01: Cuir do mhic léinn ar bís don ócáid trí [físeáin
-    inspioráideacha] a roinnt (%{videos_url}) ag cur béime ar dhaoine éagsúla agus
-    ar bhealaí cruthaitheacha gur féidir eolaíocht ríomhaireachta a úsáid sa saol
-    fíor.
-  hoc_how_to_step_05_educators_desc_02: Comhroinn do phleananna Uair an Chód le múinteoirí
-    eile ar mhaith leo páirt a ghlacadh ar an spraoi! Is deis iontach é seo freisin
-    teagmháil a dhéanamh le Cumann Mac Léinn Tuismitheoirí Múinteoirí do scoile nó
-    a roinnt i nuachtlitreacha tuismitheoirí, ag cur in iúl dóibh cad atá ag foghlaim
-    a leanaí.
-  hoc_how_to_step_06_educators_desc_01: Déan do mhic léinn a threorú chuig an ngníomhaíocht,
-    b'fhéidir tríd an nasc a roinnt ar an mbord nó trí chóras bainistíochta foghlama
-    do sheomra ranga. D'fhéadfadh dúshláin a bheith ag do mhic léinn - tá sin ceart
-    go leor! Tá foghlaim clár cosúil le teanga nua a fhoghlaim; ní bheidh tú líofa
-    láithreach. Mura bhfuil an freagra ar eolas agat, is féidir leat é a dhéanamh
-    amach le chéile.
-  hoc_how_to_step_07_educators_desc_01: 'Bí cinnte rath a cheiliúradh! Comhroinn grianghraif
-    agus físeáin de d''ócáid Uair an Chód ar na meáin shóisialta. Úsáid #HourOfCode
-    agus @codeorg ionas gur féidir linn aird a tharraingt ar do rath, freisin!'
-  hoc_how_to_step_07_educators_desc_02: Is féidir leat teastais a phriontáil freisin
-    do do mhic léinn chun a n-éacht a thaispeáint!
+  hoc_how_to_step_plan_hour_desc_01: 'Seo clár oibre samplach chun tú a thosú:'
+  hoc_how_to_step_choose_activities_desc_01: I mbliana, is é téama Uair an Chód Cruthaitheacht
+    le Intleacht Saorga (AI). Cibé an bhfuil sé ag códú aipeanna agus halgartaim nua,
+    ealaín uathúil a ghiniúint, nó córaagrafaíocht a cheardú chun damhsa a chur orainn,
+    tá AI ag oscailt deiseanna úra le haghaidh léiriú digiteach a leathnaíonn ár dtuiscint
+    ar chruth Déan an bhliain seo speisialta trí ghníomhaíocht chódú a chríochnú AGUS
+    foghlaim faoi AI.
+  hoc_how_to_step_choose_activities_desc_02: Ar dtús, [iniúchadh na céadta gníomhaíochtaí
+    códaithe] (%{activities_url}) agus roghnaigh ceann bunaithe ar aois, taithí, spéiseanna
+    agus go leor eile do ghrúpa. Cuimsíonn faisnéis shaorga [Na gníom%{ai_activities_url}haíochtaí
+    roghnaithe seo] () mar phríomhábhar nó ceacht.
+  hoc_how_to_step_choose_activities_desc_03: Ansin, [foghlaim gach rud faoi AI] (%{ai_url}).
+    Is féidir le mic léinn féachaint ar fhíseáin ghearra ina bhfuil saineolaithe sa
+    réimse, agus tá pleananna ceachta ag gabháil leis chun an ghníomhaíocht a leathnú
+    agus tuilleadh Nó, cuirimid foghlaim ghairmiúil saor in aisce ar fáil d'oideachasóirí
+    chun todhchaí na teagasc a dhíghlasáil le
+  hoc_how_to_step_educators_register_desc: Tosaigh le tiomantas Uair an Chód a dhéanamh
+    le do mhic léinn trí d'imeacht a chlárú. Nuair a chláraíonn tú, gheobhaidh tú
+    ríomhphoist chabhrach le nuacht agus leideanna chun Uair an Chód rathúil a óstáil.
+    Beidh tú freisin [cuir ar an léarscáil] (%{map_url}). Taispeánann iomláine infheicthe
+    ár n-iarrachtaí comhchoiteanna an tiomantas domhanda don ghluaiseacht ríomheolaíochta,
+    rud a chabhróidh linn móiminteam a thógáil d'athrú
+  hoc_how_to_step_educators_plan_desc_01: Roimh d'imeacht, bain triail as na gníomhaíochtaí
+    féin ionas gur féidir leat a chinntiú go n-oibríonn siad ar ghléasanna mac léinn
+    agus go bhfuil tú sásta ceisteanna a fhreagairt! An bhfuil bandaleithead íseal
+    agat? Plean físeáin a thaispeáint ag tosaigh an ranga, ionas nach bhfuil gach
+    mac léinn ag íoslódáil a gcuid físeáin féin.
+  hoc_how_to_step_educators_plan_desc_02: Is minic a théann daoine ar fud an domhain
+    isteach i gceiliúradh Uair an Chód le linn Seachtain Oideachais Eolaíochta Ríomhaireachta
+    (%{campaign_date}), ach is féidir leat Uair an Chód a dhéanamh lá ar bith den
+    bhliain!
+  hoc_how_to_step_educators_plan_desc_03: Roghnaigh spás a oibríonn do líon na mac
+    léinn agus na bhfeistí atá ar fáil agat. Is féidir le mic léinn triail a bhaint
+    as gníomhaíochtaí ar ghléasanna aonair, seans a roinnt gléas, nó mar rang ar chlár
+    bán. Tá fiú gníomhaíochtaí neamhphlugáilte ann is féidir a chríochnú gan aon ghléasanna
+    ar chor ar bith, ionas gur féidir iad a dhéanamh lasmuigh fiú!
+  hoc_how_to_step_educators_spread_word_desc_01: Cuidigh linn an focal a scaipeadh
+    i do phobal le [na teimpléid ríomhphoist seo] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Iarr ar bheirt chomhghle [register]ac%{register_url}aithe
+    gníomhaíocht Uair an Chód () agus a óstáil. Is féidir leo, ar a seal, beirt chomhghleacaí
+    a dhaingniú, ar féidir leo beirt chomhghleacaí a dhaingniú,
+  hoc_how_to_step_educators_spread_word_desc_03: Iarr ar do phríomhoide imeacht ar
+    fud na scoile a óstáil] (%{host_url}). Nuair a ghlacann 300 páiste nó níos mó
+    páiste páirt, is féidir leat trealamh rannpháirtíochta speisialta a fháil le t-léinte,
+    póstaeir, greamáin ríomhaire glúine [Comhroinn do phlean imeachta scoile iomlán]
+    (%{share_url}) chun cáiliú.
+  hoc_how_to_step_educators_spread_word_desc_04: Téigh i dteagmháil le Cumann Mac
+    Léinn Tuismitheoirí Múinteoirí do scoile nó roinn i nuachtlitreacha tuismitheoirí,
+    ag cur in iúl dóibh cad atá á fhoghlaim
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05am: Tosaigh le [físeán
+    inspioráideach] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45am: Déanann mic léinn a
+    ngníomhaíocht códaithe'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55am: Foghlaimíonn mic léinn
+    faoi AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00am: Tugann múinteoir ráitis
+    deiridh'
+  hoc_how_to_step_educators_get_coding_desc: Déan do mhic léinn a threorú chuig an
+    ngníomhaíocht, b'fhéidir tríd an nasc a roinnt ar an mbord nó trí chóras bainistíochta
+    foghlama do sheomra ranga. D'fhéadfadh dúshláin a bheith ag do mhic léinn - tá
+    sin ceart go leor! Tá foghlaim clár cosúil le teanga nua a fhoghlaim; ní bheidh
+    tú líofa láithreach. Mura bhfuil an freagra ar eolas agat, is féidir leat é a
+    dhéanamh amach le chéile.
+  hoc_how_to_step_educators_celebrate_desc: 'Tar éis d''ócáid, priontáil deimhnithe
+    críochnaithe agus comhghairdeas a dhéanamh le do Roinn grianghraif agus físeáin
+    d''imeacht Uair an Chód agus taispeáin éachtaí do mhic léinn ag baint úsáide as
+    #HourOfCode agus @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Ní gá go gcaithfidh ríomhaireacht deireadh
+    a chur leis an Uair an Chód! Cé gur mian le 90% de thuismitheoirí go bhfoghlaimíonn
+    a leanbh ríomheolaíocht, ní mhúineann mórchuid na scoileanna é fós. Chun cabhrú,
+    tá ár gcuraclam bunaithe ar an ngréasán agus saor in aisce le húsáid go deo. Foghlaim
+    conas CS a thabhairt chuig do scoil inniu.
   hoc_ai_top_desc: Is féidir le duine ar bith foghlaim faoi AI, cibé an mac léinn
     sa seomra ranga tú nó oideoir a dhíghlasálann todhchaí na múinteoireachta le AI
     agus faoi.

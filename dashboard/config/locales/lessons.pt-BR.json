@@ -159,7 +159,7 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2017/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2017/Market Research": {
           "name": "Pesquisa de mercado"
@@ -924,7 +924,7 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2018/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2018/Market Research": {
           "name": "Pesquisa de mercado"
@@ -1782,7 +1782,7 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2019/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2019/Market Research": {
           "name": "Pesquisa de mercado"
@@ -3054,7 +3054,7 @@
           "student_overview": "**Pergunta do Dia: Como posso desenvolver um protótipo de aplicativo para um usuário?**\n\nNesta lição, você usará a entrevista com um colega de classe da lição anterior para criar ideias de aplicativos que atendam às necessidades de seus usuários."
         },
         "csd4-2021/Designing Apps for Good": {
-          "name": "Criando Apps for Good",
+          "name": "Criando Aplicativos do Bem",
           "student_overview": "**Pergunta do Dia: O que é um App for Good que queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
         },
         "csd4-2021/Market Research": {
@@ -3062,7 +3062,7 @@
           "student_overview": "**Pergunta do Dia: Como podemos usar os aplicativos existentes como inspiração para nossos próprios aplicativos?**\n\nNesta lição, você mergulhará no desenvolvimento de aplicativos explorando os aplicativos existentes que podem atender usuários semelhantes aos do aplicativo em que você está trabalhando."
         },
         "csd4-2021/Exploring UI Elements": {
-          "name": "Explorando Elementos de Interface UI",
+          "name": "Explorando Elementos da Interface do Usuário",
           "student_overview": "**Pergunta do Dia: Quais elementos da interface do usuário serão úteis para nosso aplicativo?**\n\nNesta lição, você explorará alguns exemplos de aplicativos criados no App Lab e usará esses exemplos para ajudar a criar seu primeiro protótipo em papel do seu aplicativo."
         },
         "csd4-2021/Paper Prototypes": {
@@ -3113,7 +3113,9 @@
           "name": "Representação Importa"
         },
         "csd5-2021/Patterns and Representation": {
-          "name": "Padrões e Representações"
+          "name": "Padrões e Representações",
+          "overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, os alunos criam seu próprio sistema para representar informações. Eles começam discutindo todos os diferentes sistemas que já usam para representar respostas de sim e não. Em seguida, eles trabalham em pequenos grupos para criar um sistema que possa representar qualquer letra do alfabeto usando apenas uma única pilha de cartas. Os cartões usados têm um dos 6 desenhos possíveis (6 animais, 6 cores, etc.) e, portanto, para representar todo o alfabeto, os alunos precisarão usar padrões de vários cartões para representar cada letra. Os alunos criam mensagens com seus sistemas e trocam mensagens com outros grupos para garantir que o sistema funcione conforme o esperado. Na discussão final, a turma analisa todos os prós e contras dos diferentes sistemas. Eles discutem as semelhanças entre os sistemas que funcionaram e reconhecem que há muitas soluções possíveis para eventuais problemas. O importante é que todos usem o mesmo sistema arbitrário para se comunicar.",
+          "purpose": "Nesta lição, os alunos podem explorar por si mesmos as qualidades de um bom sistema para representar informações. Eles devem descobrir, ao criar e testar seus sistemas, que\n\n1.  normalmente existem muitos sistemas possíveis para representar informações\n2.  as pessoas devem concordar com um conjunto comum de regras para que um sistema funcione.\n\nOs recursos dos sistemas que os alunos criam nesta lição servem como ponto de referência para as próximas aulas, quando os alunos explorarão os sistemas de representação realmente usados em computadores.\n\nNa próxima lição, os alunos conhecerão o conceito de binário e como os computadores usam sinais liga-desliga ou “0 e 1” para representar informações. Embora esse conceito seja sugerido na atividade introdutória de sim e não, ele não deve ser introduzido até a próxima lição."
         },
         "csd5-2021/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias"
@@ -4604,15 +4606,15 @@
           "student_overview": "**Pergunta do Dia: Como posso desenvolver um protótipo de aplicativo para um usuário?**\n\nNesta lição, você usará a entrevista com um colega de classe da lição anterior para criar ideias de aplicativos que atendam às necessidades de seus usuários."
         },
         "csd4-2022/Designing Apps for Good": {
-          "name": "Criando Apps for Good",
-          "student_overview": "**Pergunta do Dia: O que é um App for Good que queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
+          "name": "Criando Aplicativos do Bem",
+          "student_overview": "**Pergunta do Dia: Que Aplicativo do Bem queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
         },
         "csd4-2022/Market Research": {
           "name": "Pesquisa de mercado",
           "student_overview": "**Pergunta do Dia: Como podemos usar os aplicativos existentes como inspiração para nossos próprios aplicativos?**\n\nNesta lição, você mergulhará no desenvolvimento de aplicativos explorando os aplicativos existentes que podem atender usuários semelhantes aos do aplicativo em que você está trabalhando."
         },
         "csd4-2022/Exploring UI Elements": {
-          "name": "Explorando Elementos de Interface UI",
+          "name": "Explorando Elementos da Interface do Usuário",
           "student_overview": "**Pergunta do Dia: Quais elementos da interface do usuário serão úteis para nosso aplicativo?**\n\nNesta lição, você explorará alguns exemplos de aplicativos criados no App Lab e usará esses exemplos para ajudar a criar seu primeiro protótipo em papel do seu aplicativo."
         },
         "csd4-2022/Build a Paper Prototype": {
@@ -4625,7 +4627,7 @@
         },
         "csd4-2022/Design Mode in App Lab": {
           "name": "Modo de Design no App Lab",
-          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar o App Lab e o Design Mode para criar aplicativos? \\*\\*\n\nNesta lição, você trabalhará com sua equipe para começar a criar a próxima iteração do seu aplicativo no App Lab."
+          "student_overview": "**Pergunta do Dia: Como podemos usar o App Lab e o Design Mode para criar aplicativos?**\n\nNesta lição, você trabalhará com sua equipe para começar a criar a próxima iteração do seu aplicativo no App Lab."
         },
         "csd4-2022/Build a Digital Prototype": {
           "name": "Crie um Protótipo Digital",
@@ -4669,7 +4671,10 @@
         },
         "csd5-2022/Patterns and Representation": {
           "name": "Padrões e Representações",
-          "student_overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, você irá criar um sistema para representar informações trabalhando em grupo. O objetivo é criar um sistema que possa representar qualquer letra do alfabeto usando apenas um único conjunto de cartas."
+          "student_overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, você irá criar um sistema para representar informações trabalhando em grupo. O objetivo é criar um sistema que possa representar qualquer letra do alfabeto usando apenas um único conjunto de cartas.",
+          "overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, os alunos criam seu próprio sistema para representar informações. Eles começam discutindo todos os diferentes sistemas que já usam para representar respostas de sim e não. Em seguida, eles trabalham em pequenos grupos para criar um sistema que possa representar qualquer letra do alfabeto usando apenas uma única pilha de cartas. Os cartões usados têm um dos 6 desenhos possíveis (6 animais, 6 cores, etc.) e, portanto, para representar todo o alfabeto, os alunos precisarão usar padrões de vários cartões para representar cada letra. Os alunos criam mensagens com seus sistemas e trocam mensagens com outros grupos para garantir que o sistema funcione conforme o esperado. Na discussão final, a turma analisa todos os prós e contras dos diferentes sistemas. Eles discutem as semelhanças entre os sistemas que funcionaram e reconhecem que há muitas soluções possíveis para eventuais problemas. O importante é que todos usem o mesmo sistema arbitrário para se comunicar.",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada dupla ou trio\n-   Imprima e recorte uma cópia do recurso manipulativo para cada grupo de 2 a 3\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "purpose": "Nesta lição, os alunos podem explorar por si mesmos as qualidades de um bom sistema para representar informações. Eles devem descobrir, ao criar e testar seus sistemas, que\n\n1.  normalmente existem muitos sistemas possíveis para representar informações\n2.  as pessoas devem concordar com um conjunto comum de regras para que um sistema funcione.\n\nOs recursos dos sistemas que os alunos criam nesta lição servem como ponto de referência para as próximas aulas, quando os alunos explorarão os sistemas de representação realmente usados em computadores.\n\nNa próxima lição, os alunos conhecerão o conceito de binário e como os computadores usam sinais liga-desliga ou “0 e 1” para representar informações. Embora esse conceito seja sugerido na atividade introdutória de sim e não, ele não deve ser introduzido até a próxima lição."
         },
         "csd5-2022/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias",
@@ -6079,13 +6084,13 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2023/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2023/Market Research": {
           "name": "Pesquisa de mercado"
         },
         "csd4-2023/Exploring UI Elements": {
-          "name": "Explorando Elementos de Interface UI"
+          "name": "Explorando Elementos da Interface do Usuário"
         },
         "csd4-2023/Build a Paper Prototype": {
           "name": "Crie um Protótipo de Papel"
@@ -6124,7 +6129,8 @@
           "name": "Representação Importa"
         },
         "csd5-2023/Patterns and Representation": {
-          "name": "Padrões e Representações"
+          "name": "Padrões e Representações",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada dupla ou trio\n-   Imprima e recorte uma cópia do recurso manipulativo para cada grupo de 2 a 3\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2023/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias"
