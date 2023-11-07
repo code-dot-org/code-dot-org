@@ -152,8 +152,13 @@ describe('ProgramExecutor', () => {
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
+    const durationMs = 1000;
 
-    await programExecutor.startLivePreview(code, currentSongMetadata);
+    await programExecutor.startLivePreview(
+      code,
+      currentSongMetadata,
+      durationMs
+    );
 
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
@@ -163,7 +168,8 @@ describe('ProgramExecutor', () => {
     expect(fullCode?.includes(code)).to.be.true;
     expect(runUserSetup).to.have.been.calledOnce;
     expect(nativeAPI.livePreview).to.have.been.calledWithExactly(
-      previewMetadata
+      previewMetadata,
+      durationMs
     );
   });
 
