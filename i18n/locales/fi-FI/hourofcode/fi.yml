@@ -6,10 +6,10 @@ fi:
   front_title: Tule mukaan historian suurimpaan oppimistapahtumaan %{campaign_date}
   coming_soon: Tulossa pian
   new: Uusi
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Koodin palvelutunnit
   hoc_stat_languages: Opiskelijat oppivat yli 45 kielellä
   hoc_stat_hours_served: Yli 100 miljoonaa opiskelijaa on kokeillut Hour of Codea
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Naisopiskelijat muodostavat 50% Hour of Code -osallistujista
   campaign_date_start_short: 4. joulukuuta
   campaign_date_start_long: Joulukuu 4
   campaign_date_short: Joulukuu 4-10
@@ -50,10 +50,10 @@ fi:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Mitä luot?
   hoc2023_social_creativity_with_ai_desc: Käytä tietojenkäsittelytiedettä tutkiaksesi
     ja oppiaksesi tekoälystä!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Hour of Code on ilmainen johdatus tietojenkäsittelytieteeseen
+    hauskojen aktiviteettien ja videoiden avulla kaikilla taitotasoilla oleville oppijoille.
+    Tämän vuoden sekä koodauksen että tekoälyn juhlaa tukee yli 400 kumppania, 20
+    000 opettajaa ja 58 000 vapaaehtoista.
   hoc2022_header: Tutkia, pelata, luoda!
   social_hoc2022_explore_play_create: Käytä tietojenkäsittelytiedettä tutkiaksesi,
     pelataksesi ja luodaksesi!
@@ -66,9 +66,9 @@ fi:
     musiikkia Disneyn ”Encantosta” ja paljon muuta!
   social_hoc2023_dance: Mukana Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, musiikkia Disneyn ”Encantosta” ja paljon muuta!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: On aika puristaa tavarasi! Luo oma tanssijuhla, jossa on
+    Miley Cyrusin, BTS:n, Lil Nas X:n, Harry Stylesin, Nicki Minajin, Rosalían ja
+    muiden hittejä!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Opi tänään, rakenna kirkkaampi huominen.
@@ -282,21 +282,23 @@ fi:
     ja tukea muilta opettajilta.
   required_materials: 'Vaaditut materiaalit:'
   optional_materials: 'Valinnaiset materiaalit:'
-  for_students: For students
+  for_students: Opiskelijoille
   for_educators: Opettajille
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Järjestä tunti koodia
   call_to_action_hold_an_event: Tapahtuman pitäminen
   call_to_action_register_event: Rekisteröi tapahtumasi
   call_to_action_register_your_hoc: Rekisteröi Hour of Code
   call_to_action_select_activity: Valitse aktiviteetti
+  call_to_action_select_coding_activity: Valitse koodausaktiviteetti
   call_to_action_start_activity: Aloita toiminta
   call_to_action_get_certificates: Hanki sertifikaatit
+  call_to_action_print_certificates: Tulosta sertifikaatit
   call_to_action_go_beyond_hoc: Mene Koodin tunti pidemmälle
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Tutustu kaikkiin Hour of Code -aktiviteetteihin
+    Code.org-sivustolta
+  call_to_action_start_dance_party: Aloita tanssijuhlat
+  call_to_action_start_part_02: Aloita toinen osa
+  call_to_action_start_unplugged_activity: Aloita irrotettu toiminta
   call_to_action_view_promo_resources: Tarkastele kampanjaresursseja
   call_to_action_learn_more: Lue lisää
   call_to_action_watch_now: Katso nyt
@@ -392,9 +394,9 @@ fi:
   call_to_action_view_faqs: Näytä lisää usein kysyttyjä kysymyksiä
   call_to_action_applications_open: Hakemukset nyt auki
   call_to_action_apply_cs_ambassador: Hae CS-lähettilääksi
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Tulossa pian!
+  call_to_action_learn_how_ai_works: Lue, miten tekoäly toimii
+  call_to_action_learn_about_ai: Lue lisää tekoälystä
   aria_label_call_to_action_hoc_how_to_educators: Katso opettajien ohjeopas
   aria_label_call_to_action_hoc_how_to_companies: Katso ohjeet yrityksille
   aria_label_call_to_action_hoc_how_to_districts: Katso piirien ohjeopas
@@ -404,9 +406,9 @@ fi:
   aria_label_call_to_action_hoc_how_to_volunteers: Katso ohjeet vapaaehtoisille
   aria_label_call_to_action_hoc_how_to_virtual_events: Tarkastele virtuaalitapahtumien
     opasta
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Aloita Tanssijuhlatoiminto
+  aria_label_call_to_action_dance_02: Aloita Tanssijuhlatoiminnan toinen osa
+  aria_label_call_to_action_dance_unplugged: Aloita Dance Party -toiminnon irroittaminen
   aria_label_call_to_action_afe: Lue lisää Amazon Future Engineeristä
   aria_label_call_to_action_teaching_csf: Aloita Teaching Computer Science Fundamentals
     ammatillinen oppimisohjelma
@@ -414,6 +416,8 @@ fi:
     ammatillinen oppimisohjelma
   aria_label_call_to_action_teaching_csp: Aloita Teaching Computer Science Principles
     ammatillinen oppimisohjelma
+  aria_label_call_to_action_teaching_problem_solving: Aloita opettamisen ongelmanratkaisun
+    ja laskennan ammatillinen oppimisohjelma
   aria_label_call_to_action_teaching_csc: Aloita Teaching Computer Science Connections
     ammatillinen oppimisohjelma
   aria_label_call_to_action_teaching_ai: Aloita Teaching AI ja Machine Learning ammatillinen
@@ -432,6 +436,8 @@ fi:
     opetussuunnitelmaan
   aria_label_call_to_action_curriculum_csp: Tutustu tietojenkäsittelytieteen periaatteiden
     opetussuunnitelmaan
+  aria_label_call_to_action_curriculum_problem_solving: Tutustu ongelmanratkaisun
+    ja tietojenkäsittelyn opetussuunnitelmaan
   aria_label_call_to_action_curriculum_csc: Tutustu Computer Science Connections -opetussuunnitelmaan
   aria_label_call_to_action_curriculum_ai: Tutustu tekoälyn ja koneoppimisen opetussuunnitelmaan
   aria_label_call_to_action_curriculum_maker_cp: Tutustu sovellusten luominen laitteilla
@@ -508,6 +514,7 @@ fi:
   curriculum_name_csf_teacher_led: Opettajan johtama oppitunti
   curriculum_name_csd: Tietojenkäsittelytieteen löydöt
   curriculum_name_csp: Tietojenkäsittelytieteen periaatteet
+  curriculum_name_problem_solving: Ongelmanratkaisu ja tietojenkäsittely
   curriculum_name_csc: Tietojenkäsittelytieteen yhteydet
   curriculum_name_csa: AP® Tietojenkäsittelytiede A
   curriculum_name_csa_ai: Ohjelmistotekniikka ja tietokonenäkö
@@ -520,25 +527,26 @@ fi:
   curriculum_name_creating_apps_with_devices: Sovellusten luominen laitteilla
   curriculum_name_poetry: Koodaus runouden kanssa
   curriculum_name_dance_party: Tanssibileet
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Jatka tanssimista
+  curriculum_name_dance_party_unplugged: Tanssijuhlat irrotettu
+  curriculum_name_dance_party_ai_edition: 'Tanssijuhlat: AI-painos'
   curriculum_name_problem_solving_computing: Ongelmanratkaisu ja tietojenkäsittely
   curriculum_name_web_development: Web-kehitys
   curriculum_name_interactive_animations_games: Interaktiiviset animaatiot ja pelit
   curriculum_name_design_process: Suunnitteluprosessi
   curriculum_name_data_society: Data & Yhteiskunta
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Tässä johdantotoiminnassa, käytä koodia saadaksesi
+    erilaisia värikkäitä hahmoja siirtymään animoituihin taustoihin ja pirteään musiikkiin.
+  curriculum_desc_dance_party_02: Siirry johdanto-opetusohjelman ulkopuolelle laajennettujen
+    projektiideoiden avulla. Selaa kirjastoa, jossa on esimerkkejä monimutkaisemmista
+    tanssijuhlista.
+  curriculum_desc_dance_party_unplugged: Aloita urasi - tietokonetta ei tarvita! Opi
+    kuinka koodauskäsitteitä, kuten tapahtumia, voidaan käyttää tanssijan koreografian
+    synkronointiin.
+  curriculum_desc_dance_party_ai_edition: Tutustu tekoälyn (AI) konsepteihin luodaksesi
+    oman virtuaalisen tanssijuhlan, jossa esitellään tämän päivän huippuartisteja.
+    Valittavana on kymmeniä kappaleita, jotka tavoittavat jokaisen opiskelijan musiikkimausta
+    riippumatta. On aika puristaa tavarasi!
   curriculum_desc_csf: Ilmainen joukko perusopetussuunnitelmia, jotka tutustuttavat
     opiskelijat tietojenkäsittelytieteen peruskäsitteisiin.
   curriculum_desc_csf_express: Opi luomaan tietokoneohjelmia, kehittämään ongelmanratkaisutaitoja
@@ -652,7 +660,7 @@ fi:
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
   module_grade_2_8: 2-8
-  module_grade_2_12: 2-12
+  module_grade_2_12: 2—12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
@@ -668,12 +676,12 @@ fi:
   module_grade_grade_03: Luokka 3
   module_grade_grade_04: Luokka 4
   module_grade_grade_05: Luokka 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: 5—7-vuotiaat
+  module_age_07: Iät 7+
+  module_age_07_11: Iät 7-11
+  module_age_11: Iät 11+
+  module_age_13: Ikät 13+
+  module_age_all_age: Kaikenikäiset
   module_grade_k_5_teachers: K-5 Opettajat
   module_grade_6_10_teachers: 6-10 Opettajat
   module_grade_9_12_teachers: 9-12 Opettajat
@@ -705,6 +713,7 @@ fi:
   module_label_teaching_csf: Tietojenkäsittelytieteen perusteiden opettaminen
   module_label_teaching_csd: Tietojenkäsittelytieteen löytöjen opettaminen
   module_label_teaching_csp: Tietojenkäsittelytieteen periaatteiden opettaminen
+  module_label_teaching_problem_solving: Ongelmanratkaisun ja tietojenkäsittelyn opettaminen
   module_label_teaching_csc: Tietojenkäsittelytieteen yhteyksien opettaminen
   module_label_teaching_ai: Tekoälyn ja koneoppimisen opettaminen
   module_label_teaching_maker_cp: Sovellusten luomisen opettaminen laitteilla (Circuit
@@ -769,8 +778,8 @@ fi:
   heading_csa_ai: Etsitkö tekemistä AP® -kokeen jälkeen?
   heading_bring_cs_to_students: Tuo tietojenkäsittelytiede opiskelijoille
   heading_cs_ambassador_program: CS-lähettiläsohjelma
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Suositellut opiskelijaprojektit
+  heading_start_hoc_with_videos: Aloita Hour of Code inspiroivien videoiden avulla
   cs_ambassador_subhead: Jos olet lukiolainen, joka on intohimoinen kannustamaan enemmän
     nuoria naisia opiskelemaan tietojenkäsittelytiedettä koulussa, sitten tarvitsemme
     sinua!
@@ -868,13 +877,14 @@ fi:
     Code.orgin tietojenkäsittelytieteen periaatteista ja saat hyödyllisiä muistutuksia,
     vinkkejä ja päivityksiä suoraan postilaatikkoosi.
   subscribe_form_section_unsubscribe: Voit peruuttaa tilauksen milloin tahansa.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Koodaa tanssijuhlat
+  dance_featuring_songs_by_short: 'Mukana kappaleita:'
+  dance_featuring_songs_by_long: 'Dance Party sisältää kappaleita:'
+  dance_and_more: ja enemmän
+  dance_choose_activity: Valitse tanssijuhlat
+  dance_afe_disclaimer: Taiteilijat, joiden musiikkia käytetään tässä opetusohjelmassa,
+    eivät sponsoroi tai tue Amazonia osana musiikkinsa käyttöoikeuksien lisensointia
+    Code.org-sivustolle.
   blockchain_hero_heading: Kuinka Blockchain toimii
   blockchain_hero_desc: Sukella blockchainin maailmaan ”Kuinka Blockchain toimii”,
     uuden videosarjamme ja siihen liittyvien oppituntien avulla!
@@ -13329,6 +13339,9 @@ fi:
   step_06: Vaihe 6
   step_07: Vaihe 7
   step_08: Vaihe 8
+  what: 'Mitä:'
+  when: 'Kun:'
+  where: 'Missä:'
   hoc_how_to_top_heading: Opas Hour of Code -ohjelmaan
   hoc_how_to_top_desc: Räätälöidyt ohjeet parhaan Hour of Code -kokemuksen takaamiseksi.
   hoc_how_to_top_view_guide: Katso opas
@@ -13376,70 +13389,82 @@ fi:
     jotka on suunniteltu kaiken ikäisille yli 45 kielellä.
   hoc_how_to_step_label_plan: Suunnittele, missä ja milloin teet Hour of Code -ohjelman
   hoc_how_to_step_label_choose_activity: Valitse aktiviteettisi
+  hoc_how_to_step_label_choose_activities: Valitse aktiviteettisi
   hoc_how_to_step_label_test_activity: Testaa aktiivisuuttasi
   hoc_how_to_step_label_register_event: Rekisteröi tapahtumasi
   hoc_how_to_step_label_tell: Kerro oppilaille, koululle ja yhteisölle
   hoc_how_to_step_label_get_coding: Hanki koodaus!
   hoc_how_to_step_label_celebrate: Juhli
   hoc_how_to_step_label_beyond_hoc: Koodin tunnin jälkeen
+  hoc_how_to_step_label_plan_your_event: Suunnittele tapahtumasi
+  hoc_how_to_step_label_plan_your_hour: Suunnittele tunti
+  hoc_how_to_step_label_help_spread_word: Auta levittämään sanaa
   hoc_how_to_step_beyond_hoc_subhead: Se ei lopu tähän!
-  hoc_how_to_step_beyond_hoc_desc: Tietojenkäsittelytieteen ei tarvitse päättyä koodin
-    tuntiin! Vaikka 90% vanhemmista haluaa lapsensa oppivan tietojenkäsittelytiedettä,
-    useimmat koulut eivät edelleenkään opeta sitä. Opi tuomaan CS lapsesi kouluun
-    tänään.
-  hoc_how_to_step_01_educators_subhead: Valitse tapahtuman aika ja tila, joka sopii
-    käytettävissäsi olevien opiskelijoiden ja laitteiden määrään.
-  hoc_how_to_step_01_educators_desc_01: Mitä tiloja sinulla on käytettävissä Hour
-    of Code -tapahtumasi tekemiseen? Harkitse tilasi teknisiä ominaisuuksia ja laitteita,
-    joiden kanssa odotat oppilaidesi työskentelevän. Oppilaat voivat työskennellä
-    opetusohjelmien parissa yhdellä laitteella, käyttää vuorotellen jaettua laitetta
-    tai kokeilla opetusohjelmaa yhdessä luokkahuoneen taululla. On jopa irrotettuja
-    opetusohjelmia, jotka voidaan suorittaa ilman laitteita. Irrotettavat vaihtoehdot
-    voidaan tehdä missä tahansa - jopa ulkona!
-  hoc_how_to_step_01_educators_desc_02: Ihmiset ympäri maailmaa liittyvät Hour of
-    Code -juhlaan CS Education Weekin aikana, %{campaign_date} kun uusimmat opetusohjelmat
-    ja aktiviteetit julkaistaan. Mutta voit tehdä Hour of Code -ohjelman minä tahansa
-    vuoden päivänä!
-  hoc_how_to_step_02_educators_desc_01: Tutustu aktiviteetteihin ryhmäsi iän, kokemuksen,
-    kiinnostuksen kohteiden ja muun perusteella. Opiskelijoiden on suosittua kokeilla
-    itseohjattuja opetusohjelmia, vaikka monet aktiviteetit sisältävät opettajien
-    oppituntisuunnitelmia keskustelun ohjaamiseksi tai toiminnan laajentamiseksi.
-  hoc_how_to_step_02_educators_desc_02: Päätä etukäteen, haluatko valita yhden opetusohjelman
-    kaikille opiskelijoillesi, vai anna jokaisen lapsen valita omansa.
-  hoc_how_to_step_02_educators_desc_03: Tänä vuonna sinä ja oppilaasi voit [oppia
-    kaiken tekoälystä] (%ai_url) opetusohjelmien, tuntisuunnitelmien ja uuden How
-    AI Works -videosarjan avulla.
-  hoc_how_to_step_03_educators_desc_01: Kokeile opetusohjelmaa itse ennen kuin pääset
-    luokkahuoneeseen, jotta voit vastata kysymyksiin!
-  hoc_how_to_step_03_educators_desc_02: Voit myös testata opetusohjelmia opiskelijoiden
-    tietokoneilla tai laitteilla varmistaaksesi, että ne tukevat ääntä ja videota.
-    Onko sinulla alhainen kaistanleveys? Suunnittele videoiden näyttäminen luokan
-    edessä, jotta jokainen oppilas ei lataa omia videoitaan.
-  hoc_how_to_step_03_educators_desc_03: Harkitse kuulokkeiden tarjoamista luokallesi
-    tai pyydä oppilaita tuomaan omat, jos valitsemasi opetusohjelma toimii parhaiten
-    äänen kanssa.
-  hoc_how_to_step_04_educators_desc_01: Kun rekisteröit Hour of Code -tapahtuman,
-    saat hyödyllisiä sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen
-    Hour of Code -tapahtuman järjestämiseen. Näin voit myös kertoa paikallisille vapaaehtoisille,
-    että koulusi osallistuu. Vapaaehtoiset ovat loistava resurssi ja voivat tulla
-    puhumaan luokallesi tietojenkäsittelytieteestä tai auttaa oppilaitasi Hour of
-    Code -toiminnoissa.
-  hoc_how_to_step_05_educators_desc_01: Saa oppilaat innostumaan tapahtumasta jakamalla
-    [inspiroivia videoita] (%{videos_url}) korostamalla erilaisia ihmisiä ja luovia
-    tapoja, joilla tietojenkäsittelytiedettä voidaan käyttää todellisessa maailmassa.
-  hoc_how_to_step_05_educators_desc_02: Jaa Hour of Code -suunnitelmasi muiden opettajien
-    kanssa, jotka saattavat haluta osallistua hauskanpitoon! Tämä on myös loistava
-    tilaisuus ottaa yhteyttä koulusi vanhempien opettajien opiskelijayhdistykseen
-    tai jakaa vanhempien uutiskirjeitä kertoen heille, mitä heidän lapsensa oppivat.
-  hoc_how_to_step_06_educators_desc_01: Ohjaa oppilaat aktiviteettiin, ehkä jakamalla
+  hoc_how_to_step_plan_hour_desc_01: 'Tässä on esimerkkiesityslista, jonka avulla
+    pääset alkuun:'
+  hoc_how_to_step_choose_activities_desc_01: Tänä vuonna Hour of Code -teemana on
+    Luovuus tekoälyllä (AI). Olipa kyse uusien sovellusten ja algoritmien koodaamisesta,
+    ainutlaatuisen taiteen luomisesta tai koreografian luomisesta, joka saa meidät
+    tanssimaan, tekoäly avaa uusia mahdollisuuksia digitaaliseen ilmaisuun, jotka
+    laajentavat ymmärrystämme luovuudesta. Tee tästä vuodesta erityinen suorittamalla
+    koodaustoiminta JA oppimalla tekoälystä.
+  hoc_how_to_step_choose_activities_desc_02: Ensimmäinen, [tutki satoja koodaustoimintoja]
+    (%{activities_url}) ja valitse yksi ryhmäsi iän, kokemuksen, kiinnostuksen kohteiden
+    ja muun perusteella. [Nämä valitut toiminnot] (%{ai_activities_url}) sisältävät
+    tekoälyn keskeisenä aiheena tai oppituntina.
+  hoc_how_to_step_choose_activities_desc_03: Sitten, [opi kaikki tekoälystä] (%{ai_url}).
+    Opiskelijat voivat katsella lyhyitä videoita alan asiantuntijoista, ja mukana
+    on tuntisuunnitelmia toiminnan laajentamiseksi ja jatkokeskustelun ohjaamiseksi.
+    Tai tarjoamme opettajille ilmaista ammatillista oppimista, jotta voimme avata
+    opetuksen tulevaisuuden tekoälyn avulla ja siitä.
+  hoc_how_to_step_educators_register_desc: Aloita sitoutumalla tekemään Hour of Code
+    oppilaidesi kanssa rekisteröimällä tapahtumasi. Kun rekisteröidyt, saat hyödyllisiä
+    sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen Hour of Code -tapahtuman
+    järjestämiseen. Sinut tulee myös [laitetaan kartalle] (%{map_url}). Kollektiivisten
+    ponnistelujemme näkyvä kokonaisuus osoittaa maailmanlaajuisen sitoutumisen tietojenkäsittelyliikkeeseen,
+    mikä auttaa meitä rakentamaan vauhtia systeemiseen muutokseen.
+  hoc_how_to_step_educators_plan_desc_01: Ennen tapahtumaasi, kokeile aktiviteetteja
+    itse, jotta voit varmistaa, että ne toimivat opiskelijoiden laitteilla ja olet
+    valmis vastaamaan kysymyksiin! Onko sinulla alhainen kaistanleveys? Suunnittele
+    videoiden näyttäminen luokan edessä, jotta jokainen oppilas ei lataa omia videoitaan.
+  hoc_how_to_step_educators_plan_desc_02: Ihmiset ympäri maailmaa liittyvät usein
+    Hour of Code -juhlaan tietojenkäsittelytieteen koulutusviikon aikana (%{campaign_date}),
+    mutta voit tehdä Hour of Code -tunnin minä tahansa vuoden päivänä!
+  hoc_how_to_step_educators_plan_desc_03: Valitse tila, joka sopii käytettävissäsi
+    olevien opiskelijoiden ja laitteiden lukumäärälle. Oppilaat voivat kokeilla toimintoja
+    yksittäisillä laitteilla, jakaa laitteen vuorotellen tai luokkana taululla. On
+    jopa irrotettuja toimintoja, jotka voidaan suorittaa ilman laitteita, joten ne
+    voidaan tehdä jopa ulkona!
+  hoc_how_to_step_educators_spread_word_desc_01: Auta meitä levittämään sanaa yhteisössäsi
+    [nämä sähköpostimallit] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Pyydä kahta kollegaa [register](%{register_url})
+    ja isännöimään Hour of Code -aktiviteettia. He puolestaan voivat turvata kaksi
+    kollegaa, jotka voivat turvata kaksi kollegaa jne.
+  hoc_how_to_step_educators_spread_word_desc_03: Pyydä rehtoria [isännöi koko koulun
+    laajuista tapahtumaa] ()%{host_url}. Kun vähintään 300 lasta osallistuu, voit
+    saada erityisen kihlajaispaketin, jossa on t-paitoja, julisteita, kannettavan
+    tietokoneen tarroja ja paljon muuta. [Jaa koko koulun tapahtumasuunnitelma] (%{share_url})
+    kelpuuttaaksesi.
+  hoc_how_to_step_educators_spread_word_desc_04: Ota yhteyttä koulusi vanhempien opettajien
+    opiskelijayhdistykseen tai jaa vanhempien uutiskirjeitä, kerro heille, mitä heidän
+    lapsensa oppivat.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Aloita [inspiroivalla
+    videolla] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Opiskelijat tekevät koodaustoimintansa'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Opiskelijat oppivat tekoälystä'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10.55-11.00: Opettaja antaa päätöspuheenvuorot'
+  hoc_how_to_step_educators_get_coding_desc: Ohjaa oppilaat aktiviteettiin, ehkä jakamalla
     linkki taululla tai luokkahuoneesi oppimisen hallintajärjestelmän kautta. Oppilaasi
     voivat kohdata haasteita - se on okei! Ohjelmoinnin oppiminen on kuin uuden kielen
     oppiminen; et ole sujuvaa heti. Jos et tiedä vastausta, voit selvittää sen yhdessä.
-  hoc_how_to_step_07_educators_desc_01: 'Muista juhlia menestystä! Jaa valokuvia ja
-    videoita Hour of Code -tapahtumastasi sosiaalisessa mediassa. Käytä #HourOfCode
-    ja @codeorg, jotta voimme korostaa myös menestystäsi!'
-  hoc_how_to_step_07_educators_desc_02: Voit myös tulostaa todistuksia opiskelijoillesi
-    osoittaaksesi saavutuksiaan!
+  hoc_how_to_step_educators_celebrate_desc: 'Tulosta tapahtuman jälkeen todistukset
+    suorittamisesta ja onnittele opiskelijoita. Jaa valokuvia ja videoita Hour of
+    Code -tapahtumasta ja esittele oppilaidesi saavutuksia #HourOfCode- ja @codeorg
+    -sovellusten avulla.'
+  hoc_how_to_step_educators_beyond_desc: Tietojenkäsittelytieteen ei tarvitse päättyä
+    koodin tuntiin! Vaikka 90% vanhemmista haluaa lapsensa oppivan tietojenkäsittelytiedettä,
+    useimmat koulut eivät edelleenkään opeta sitä. Auttaaksemme opetussuunnitelmamme
+    on verkkopohjainen ja ilmainen, ikuisesti. Opi tuomaan CS kouluusi tänään.
   hoc_ai_top_desc: Kuka tahansa voi oppia tekoälystä, olitpa sitten luokkahuoneen
     opiskelija tai opettaja, joka avaa opetuksen tulevaisuuden tekoälyn avulla ja
     siitä.
@@ -14081,8 +14106,8 @@ fi:
     Olemme kiitollisia voidessamme hyötyä laajemman tietojenkäsittelytieteen koulutusyhteisön
     väsymättömästä avusta, ja [kiitämme kaikkia kumppaneita ja yksilöitä, jotka ovat
     tukeneet vaikutustamme vuosien varrella] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
-    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+  about_page_section_more_list_1: "[Code.org Vuosikertomus 2021] (%{report_url}) (Aiemmat
+    rapor [2020]tit: (%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
     [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Perusarvomme ja viestintäohjeemme] (%{core_url})"
   about_page_section_more_list_3: "[Opetussuunnitelmamme ja pedagogiikan filosofia]
@@ -14132,10 +14157,10 @@ fi:
     tason opas valtioille, piireille ja organisaatioille, jotka toteuttavat tietojenkäsittelytieteen
     koulutusta. Kehys on voittanut satojen tutkijoiden, K-12-kouluttajien, ohjelmistoyritysten,
     voittoa tavoittelemattomien järjestöjen ja osavaltioiden tuen.
-  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
-    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
-    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_6: Code.org IRS lomake 990 [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), (), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019]()%{irs_url_6}), [2020](%{irs_url_7}) ja [2021](%{irs_url_8}). [Lahjoituskäytäntö.]
+    (%{donation_policy_url})
   about_page_section_specific_description_7: "[Rekisteröidy saadaksesi tilapäivityksiä]
     (%{sign_up_url}) K-12-tietojenkäsittelyliikkeen edistymisestä ja Code.orgin työstä.
     Tai seuraa Code.org sosiaalisessa mediassa:"
@@ -14166,66 +14191,68 @@ fi:
     koulujen johtajille ja henkilökunnalle kehittääkseen alustavia ohjeita tekoälystä
     kouluissaan.
   teach_ai_button_label: Näytä työkalupakki
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Oppiminen 11-vuotiaille ja sitä vanhemmille
+  middle_high_page_main_description: Tutustu tietojenkäsittelytieteen maailmaan kiinnostavien
+    videoiden, itsetempoisten opetusohjelmien, ohjelmointitoimintojen ja muiden avulla!
+  middle_high_page_hero_title: Aloita Hour of Code -palvelun käyttö
+  middle_high_page_hero_description: Opi tietojenkäsittelytieteen perusteet ilmaisilla
+    Hour of Code -toiminnoilla, joissa on vedä ja pudota -koodauslohkoja. Valittavana
+    on satoja tunnin mittaisia vaihtoehtoja!
+  middle_high_page_hourofcode_link: Tutustu Hour of Code -aktiviteetteihin
+  middle_high_page_modules_title: Ohjelmointimoduulit vanhemmille opiskelijoille
+  middle_high_page_modules_description: CS Discoveries- ja CS Principles -kursseistamme
+    mukautetut lyhyet, itsetempoiset moduulit keskiasteen ja lukion opiskelijoille
+    ovat loistava tapa oppia käsitteitä, jotka kattavat kaikki ohjelmointikielet ja
+    työkalut.
+  middle_high_page_modules_card_title_1: Johdatus Game Labiin
+  middle_high_page_modules_card_title_2: Kilpikonnaohjelmointi App Labissa
+  middle_high_page_modules_card_title_3: Tapahtumalähtöinen ohjelmointi App Labissa
+  middle_high_page_modules_card_description_1: Siirry omaan tahtiisi tässä Game Lab
+    -ympäristön johdannossa, kun ohjelmoit animaatioita, interaktiivista taidetta
+    ja pelejä.
+  middle_high_page_modules_card_description_2: Avaa kyky tehdä rikkaita, interaktiivisia
+    sovelluksia JavaScriptin avulla App Labissa!
+  middle_high_page_modules_card_description_3: Mene omaan tahtiisi tässä johdannossa
+    App Lab -ohjelmointiympäristöön, jossa opiskelijat luovat interaktiivisia sovelluksia
+    JavaScriptin avulla.
+  middle_high_page_modules_card_link: Kokeile
+  middle_high_page_make_your_own_title: Luo omia sovelluksia, pelejä ja verkkosivuja
+  middle_high_page_make_your_own_description: 'Kurssien lisäksi meillä on ohjelmointityökaluja,
+    joiden avulla voit tutkia luovuuttasi ja tehdä jotain hämmästyttävää. '
   middle_high_page_make_your_own_card_title_1: Sovellus Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Pelilaboratorio
+  middle_high_page_make_your_own_card_title_3: Verkkolaboratorio
+  middle_high_page_make_your_own_card_descrpition_1: App Lab on ohjelmointiympäristö,
+    jossa voit tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa JavaScriptillä
+    joko lohkoilla tai tekstillä ja jaa sovelluksesi sekunneissa.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab on ohjelmointiympäristö,
+    jossa voit tehdä yksinkertaisia animaatioita ja pelejä esineillä ja hahmoilla,
+    jotka ovat vuorovaikutuksessa keskenään.
+  middle_high_page_make_your_own_card_descrpition_3: 'Web Lab on ohjelmointiympäristö,
+    jossa voit tehdä yksinkertaisia verkkosivuja HTML: n ja CSS: n avulla. Suunnittele
+    verkkosivusi ja jaa sivustosi muutamassa sekunnissa.'
   middle_high_page_make_your_own_card_link: Lue lisää
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Lisäresurssit
+  middle_high_page_additional_resources_description: On niin monia tapoja tutkia edelleen
+    tietojenkäsittelytiedettä! Selaa videokirjastoamme tai lue lisää jännittävistä
+    urista tietojenkäsittelytieteen alalla.
+  middle_high_page_video_library_title: Tutustu videokirjastoomme
+  middle_high_page_video_library_description: Opi tietojenkäsittelytieteen perusteet
+    lyhyiden 5-10 minuutin videoiden avulla aiheista, kuten tekoäly, Internet, tietokoneiden
+    toiminta, kuinka ei hakkeroida, lohkoketju, ura ja paljon muuta!
+  middle_high_page_video_library_link: Katso videokirjasto
+  middle_high_page_cs_journeys_title: Mene pidemmälle CS Journeys -sovelluksella
+  middle_high_page_cs_journeys_description: Ota seuraava askel tietojenkäsittelytieteen
+    matkallasi. Tutustu uraan, mentorointimahdollisuuksiin, verkkokursseihin, apurahoihin,
+    harjoittelupaikkoihin ja muuhun!
+  middle_high_page_cs_journeys_link: Tutustu CS Journeys
+  middle_high_page_cs_title: Tietojenkäsittelytiede luokkahuoneessa
+  middle_high_page_cs_description: Näitä kursseja tulisi johtaa opettaja! Jos haluat
+    nähdä heitä opetettavana koulussa, harkitse työskentelyä opettajan kanssa tuodaksesi
+    heidät luokallesi.
+  middle_high_page_cs_card_title_1: CS Löydöt
+  middle_high_page_cs_card_title_2: CS-periaatteet
+  middle_high_page_cs_card_title_3: AP Tietojenkäsittelytiede A
   middle_high_page_cs_card_description_1: Ilmainen joukko perusopetussuunnitelmia,
     jotka tutustuttavat opiskelijat tietojenkäsittelytieteen peruskäsitteisiin ja
     haastaa heidät tutkimaan, miten laskenta ja tekniikka voivat vaikuttaa maailmaan.
@@ -14236,34 +14263,34 @@ fi:
   middle_high_page_cs_card_description_3: 'Esittele opiskelijat ohjelmistotekniikkaan
     ja oliosuunnitteluun, kun he oppivat Java-ohjelmointikielen tässä ilmaisessa AP®
     Computer Science A: n (AP® CSA) opetussuunnitelmassa.'
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Tutustu CS Dicoveries
   middle_high_page_cs_link_2: Tutustu CS -periaatteisiin
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Tutustu CSA:han
+  elemeentary_page_main_title: Oppiminen 5—11-vuotiaille
+  elementary_page_main_description: Tutustu tietojenkäsittelytieteen maailmaan kiinnostavien
+    videoiden, itsetempoisten opetusohjelmien, ohjelmointitoimintojen ja muiden avulla!
+  elementary_page_own_pace_title: Jatka oppimista omassa tahdissasi
+  elementary_page_own_pace_description: Luo piirustuksia, pelejä ja paljon muuta näissä
+    kahdessa erinomaisessa vaihtoehdossa opiskelijoille, jotka aloittavat tietojenkäsittelytieteen
+    perusteiden oppimisen.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express -kurssi
+  elementary_page_own_pace_card_title_2: Pikakurssi
+  elementary_page_own_pace_card_description_1: Opi tietojenkäsittelytiedettä omaan
+    tahtiisi! Opi luomaan tietokoneohjelmia, kehittämään ongelmanratkaisutaitoja ja
+    selviytymään hauskoista haasteista! Tee pelejä ja luovia projekteja jaettavaksi
+    ystävien, perheen ja opettajien kanssa.
+  elementary_page_own_pace_link_1: Aloita Pre-Reader -kurssi
+  elementary_page_own_pace_link_2: Aloita pikakurssi
+  elementary_page_make_your_own_games_title: Tee omia animaatioita ja pelejä
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Aika olla luova! Käytä lohkopohjaista
+    koodausta tehdäksesi jotain typerää, suloista tai ulkoavaraista Sprite Labissa.
+    Ainoa raja on mielikuvitus!
+  elementary_page_make_your_own_games_link: Kokeile Sprite Labia
+  elementary_page_computer_science_title: Tietojenkäsittelytiede luokkahuoneessa
+  elementary_page_computer_science_description: Näitä kursseja tulisi johtaa opettaja!
+    Jos haluat nähdä heitä opetettavan koulussa, pyydä vanhempaa tai huoltajaa työskentelemään
+    opettajan kanssa tuomaan heidät luokallesi.
   elementary_page_computer_science_card_title_1: Tietojenkäsittelytieteen perusteet
   elementary_page_computer_science_card_title_2: Tietojenkäsittelytieteen yhteydet
   elementary_page_computer_science_description_1: Ilmainen joukko perusopetussuunnitelmia,

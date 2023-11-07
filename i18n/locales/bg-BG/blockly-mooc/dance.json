@@ -17,5 +17,6 @@
   "danceFeedbackTooManyDancers": "Внимавай! Ако поставищ \"направи нов\" блок във \"всеки 2 размера\", ще създадеш много танцьори.",
   "danceFeedbackUseSetSize": "Използвай блока `set backup_dancer2 size`, за да направиш този танцьор по-малък.",
   "danceFeedbackUseSetTint": "\"Настройка на нюанса\" се използва за промяна на оттенъка на танцьор.",
-  "danceFeedbackUseStartMapping": "Опитай да добавиш <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"мащаб\"</title><title name=\"RANGE\">\"бас\"</title></block></xml> блока към твоята програма."
+  "danceFeedbackUseStartMapping": "Опитай да добавиш <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"мащаб\"</title><title name=\"RANGE\">\"бас\"</title></block></xml> блока към твоята програма.",
+  "danceFeedbackKeepCoding": "Продължи да опитваш. Нещо все още не е по правилния начин."
 }

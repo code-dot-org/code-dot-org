@@ -251,7 +251,7 @@
                   }
                 }
               },
-              "name": "wiskundige"
+              "name": "Wiskunde"
             },
             "micro_bit": {
               "expressions": {
@@ -760,7 +760,7 @@
                   }
                 }
               },
-              "name": "wiskundige"
+              "name": "Wiskunde"
             },
             "sprites": {
               "expressions": {

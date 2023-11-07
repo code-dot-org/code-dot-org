@@ -9237,6 +9237,10 @@ es:
           title: 2021 Descripción General de Deeper Learning en Principios de Informática
         dlp21-overview:
           name: dlp21-descripción
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: plantilla de plan de lecciones de la hora del código
         drafting:
           name: borrador
         duino:
@@ -12207,6 +12211,9 @@ es:
               display_name: Asíncronos Parte 1
             lessonGroup-5:
               display_name: Asíncronos Parte 2
+          lessons:
+            lesson-5:
+              name: Introducción a las actividades asincrónicas
           title: Día 1
         virtual-pl-csp-summer-day2:
           lesson_groups:

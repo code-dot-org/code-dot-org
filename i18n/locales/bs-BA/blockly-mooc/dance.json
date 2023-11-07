@@ -10,5 +10,6 @@
   "danceFeedbackUseSetSize": "Iskoristite blok `postavi dodatni_plesac2 veličina` kako bi ste smanjili plesača.",
   "danceFeedbackUseSetTint": "Upotrijebite blok `podesi nijansu` kako bi promjenili boju plesača.",
   "danceFeedbackUseStartMapping": "Probajte da dodate <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"basovi\"</title></block></xml> blok vašem programu.",
+  "danceFeedbackKeepCoding": "Koristiš sve potrebne vrste blokova, ali na pogrešan način.",
   "measure": "Taktovi:"
 }
