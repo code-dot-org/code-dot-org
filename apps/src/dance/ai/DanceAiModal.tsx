@@ -12,7 +12,12 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput, FieldKey, GeneratedEffect} from '../types';
-import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import {
+  generateBlocks,
+  generateBlocksFromResult,
+  generatePreviewCode,
+  getLabelMap,
+} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 const i18n = require('../locale');
@@ -331,6 +336,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
+  const getPreviewCode = (): string => {
+    const tempWorkspace = new Workspace();
+    const previewCode = generatePreviewCode(
+      tempWorkspace,
+      JSON.stringify(currentGeneratedEffect?.results)
+    );
+    tempWorkspace.dispose();
+    return previewCode;
+  };
+
   const onClose = () => dispatch(closeAiModal());
 
   const showUseButton =
@@ -545,12 +560,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                   id="flip-card-front"
                   className={moduleStyles.flipCardFront}
                 >
-                  <AiVisualizationPreview
-                    blocks={generateBlocksFromResult(
-                      Blockly.getMainWorkspace(),
-                      JSON.stringify(currentGeneratedEffect?.results)
-                    )}
-                  />
+                  <AiVisualizationPreview code={getPreviewCode()} />
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
                   {mode === Mode.RESULTS && (
