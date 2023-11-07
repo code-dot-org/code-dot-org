@@ -12,14 +12,14 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
   end
 
   describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Pegasus::Emails::SyncOut.any_instance.expects(:execute).once
+    it 'calls #process' do
+      I18n::Resources::Pegasus::Emails::SyncOut.any_instance.expects(:process).once
 
       I18n::Resources::Pegasus::Emails::SyncOut.perform
     end
   end
 
-  describe '#execute' do
+  describe '#process' do
     let(:sync_out) {I18n::Resources::Pegasus::Emails::SyncOut.new}
 
     let(:crowdin_locale) {'Not English'}
@@ -63,7 +63,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
       expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
       expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
 
-      sync_out.execute
+      sync_out.process
     end
 
     context 'when a "view" Crowdin file exists' do
@@ -79,7 +79,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
         expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
         expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
 
-        sync_out.execute
+        sync_out.process
       end
     end
 
@@ -95,7 +95,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
         expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
         expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
 
-        sync_out.execute
+        sync_out.process
       end
     end
 
@@ -112,7 +112,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
         expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
         expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
 
-        sync_out.execute
+        sync_out.process
       end
     end
   end
