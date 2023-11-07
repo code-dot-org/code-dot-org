@@ -157,10 +157,10 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
-      factory :ai_chat_access do
-        after(:create) do |ai_chat_access|
-          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
-          ai_chat_access.save
+      factory :ai_tutor_access do
+        after(:create) do |ai_tutor_access|
+          ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
+          ai_tutor_access.save
         end
       end
       factory :facilitator do
