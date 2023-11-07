@@ -1069,6 +1069,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update]
+
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
