@@ -7,7 +7,7 @@ import Button from '@cdo/apps/templates/Button';
 import {SongData} from '@cdo/apps/dance/types';
 import moduleStyles from '@cdo/apps/dance/song-selector.module.scss';
 
-const i18n = require('@cdo/locale');
+const commonI18n = require('@cdo/locale');
 
 const currentTimeoutsMap: {[key: string]: ReturnType<typeof setTimeout>} = {};
 
@@ -32,38 +32,29 @@ const SongSelector: React.FC<SongSelectorProps> = ({
 
   const onPreviewBtnClick = useCallback(() => {
     if (songInPreview) {
-      console.log('double click stop playing song');
       audioCommands.stopSound({url: songData[selectedSong].url});
       setSongInPreview(false);
     } else {
-      console.log('start playing song');
       audioCommands.playSound({
         url: `${songData[selectedSong].url}`,
         callback: () => {
           setSongInPreview(true);
-          // console.log(songInPreview)
           const timeoutID = setTimeout(() => {
-            console.log('stop playing song');
             if (!levelIsRunning) {
               audioCommands.stopSound({url: songData[selectedSong].url});
-              console.log('end song - ', songData[selectedSong].url);
               setSongInPreview(false);
             }
           }, 10000);
 
           currentTimeoutsMap[selectedSong] = timeoutID;
-          console.log('callback');
         },
         onEnded: () => {
-          console.log('------------------');
-          console.log(currentTimeoutsMap[selectedSong]);
           currentTimeoutsMap[selectedSong] &&
             clearTimeout(currentTimeoutsMap[selectedSong]);
 
           delete currentTimeoutsMap[selectedSong];
 
           setSongInPreview(false);
-          console.log('end');
         },
       });
     }
@@ -84,7 +75,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
       className={moduleStyles.songSelectorWrapper}
     >
       <label>
-        <b>{i18n.selectSong()}</b>
+        <b>{commonI18n.selectSong()}</b>
       </label>
 
       <select
