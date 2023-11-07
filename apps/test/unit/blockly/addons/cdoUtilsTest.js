@@ -311,7 +311,7 @@ describe('CdoUtils', () => {
       const result = getCode(workspaceStub, true);
 
       expect(saveStub).to.have.been.calledTwice;
-      expect(getHiddenDefinitionWorkspaceStub).to.have.been.calledTwice;
+      expect(getHiddenDefinitionWorkspaceStub).to.have.been.calledOnce;
       expect(getCombinedSerializationStub).to.have.been.calledOnce;
       expect(getCombinedSerializationStub.getCall(0).args).to.deep.equal([
         singleSerializationStub,

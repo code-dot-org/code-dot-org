@@ -2,8 +2,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import {
   addPositionsToState,
   getCombinedSerialization,
-  getCursorYAdjustment,
-  getNewLocation,
   isBlockLocationUnset,
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 
@@ -46,67 +44,6 @@ describe('addPositionsToState', () => {
       x: 0,
       y: 0,
     });
-  });
-});
-
-describe('getNewLocation', () => {
-  it('should determine the new location based on the cursor', () => {
-    const block = {workspace: {RTL: false}};
-    const cursor = {x: 16, y: 16};
-    const newLocation = getNewLocation(block, cursor);
-
-    expect(newLocation).to.deep.equal({x: 16, y: 16});
-  });
-
-  it('should determine the new location for blocks with SVG frames', () => {
-    const block = {
-      functionalSvg_: {},
-      workspace: {RTL: false},
-    };
-    const cursor = {x: 16, y: 100};
-    const newLocation = getNewLocation(block, cursor);
-
-    // Horizontal SVG frame offset is 15.
-    // Vertical SVG frame offset is 35.
-    expect(newLocation).to.deep.equal({x: 31, y: 135});
-  });
-
-  it('should determine the new location for blocks with SVG frames in RTL mode', () => {
-    const block = {
-      functionalSvg_: {},
-      workspace: {RTL: true},
-    };
-    // For RTL workspaces, we position blocks from the left.
-    const cursor = {x: 515, y: 150};
-    const newLocation = getNewLocation(block, cursor);
-
-    expect(newLocation).to.deep.equal({x: 500, y: 185});
-  });
-});
-
-describe('getCursorYAdjustment', () => {
-  it('should determine the cursor Y adjustment based on the block height and padding', () => {
-    const block = {
-      getHeightWidth: () => ({height: 20, width: 100}),
-    };
-    const cursorYAdjustment = getCursorYAdjustment(block);
-
-    // Vertical spacing between blocks is 10
-    expect(cursorYAdjustment).to.equal(30);
-  });
-
-  it('should determine the cursor Y adjustment when an svg frame is present', () => {
-    const block = {
-      id: 'block6',
-      type: 'procedures_defnoreturn',
-      functionalSvg_: {},
-      getHeightWidth: () => ({height: 50, width: 150}),
-    };
-
-    const cursorYAdjustment = getCursorYAdjustment(block);
-
-    // SVG adds 40 to frame (+10 for vertical spacing between blocks)
-    expect(cursorYAdjustment).to.equal(100);
   });
 });
 
