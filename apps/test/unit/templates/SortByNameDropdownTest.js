@@ -51,7 +51,7 @@ describe('SortByNameDropdown', () => {
     wrapper.find('select').simulate('change', {target: {value: 'familyName'}});
 
     expect($.post).to.have.been.calledOnceWith(
-      '/api/v1/users/me/sort_by_family_name',
+      '/api/v1/users/sort_by_family_name',
       {
         sort_by_family_name: true,
       }
