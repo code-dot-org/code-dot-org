@@ -139,12 +139,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     if (mode === Mode.INITIAL) {
       const currentValue = currentAiModalField?.getValue();
       if (currentValue) {
+        const currentInputs = JSON.parse(currentValue).inputs;
+
         setMode(Mode.RESULTS);
-        setInputs(JSON.parse(currentValue).inputs);
+        setInputs(currentInputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
-          badEffects: [],
+          badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
+            () => chooseEffects(currentInputs, ChooseEffectsQuality.BAD)
+          ),
           goodEffect: {results: JSON.parse(currentValue)},
         };
       } else {
@@ -652,18 +656,17 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
-          {mode === Mode.RESULTS &&
-            generatedEffects.current.badEffects.length > 0 && (
-              <div>
-                <Button
-                  id="explanation-button"
-                  text={'?'}
-                  onClick={handleExplanationClick}
-                  color={Button.ButtonColor.neutralDark}
-                  className={moduleStyles.button}
-                />
-              </div>
-            )}
+          {mode === Mode.RESULTS && (
+            <div>
+              <Button
+                id="explanation-button"
+                text={'?'}
+                onClick={handleExplanationClick}
+                color={Button.ButtonColor.neutralDark}
+                className={moduleStyles.button}
+              />
+            </div>
+          )}
 
           {mode === Mode.EXPLANATION && (
             <Button
