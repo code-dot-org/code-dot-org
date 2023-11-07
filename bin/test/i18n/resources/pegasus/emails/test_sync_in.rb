@@ -34,7 +34,7 @@ describe I18n::Resources::Pegasus::Emails::SyncIn do
       it 'prepares i18n source file' do
         I18n::Resources::Pegasus::Emails::SyncIn.stub_const(:LOCALIZABLE_FILE_SUBPATHS, [origin_emails_file_subpath]) do
           execution_sequence = sequence('execution')
-          expected_i18n_source_file_path = CDO.dir('i18n/locales/source/emails/test.md')
+          expected_i18n_source_file_path = CDO.dir('i18n/locales/source/pegasus/emails/test.md')
 
           I18nScriptUtils.expects(:copy_file).with(origin_emails_file_path, expected_i18n_source_file_path).in_sequence(execution_sequence)
           I18n::Utils::PegasusMarkdown.expects(:sanitize_file_header).with(expected_i18n_source_file_path).in_sequence(execution_sequence)
