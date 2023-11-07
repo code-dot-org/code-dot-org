@@ -281,7 +281,7 @@ fa:
         hoc-impact-study:
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
         sports:
-          name: ورزشها
+          name: ورزش‌ها
         csp3-support:
           lesson_groups:
             required:
@@ -509,7 +509,7 @@ fa:
         aquatic:
           title: 'ماین‌کرفت: سفر آبی'
           description_short: از خلاقیت و مهارت های حل مسئله خود برای کشف و ساختن جهان‌های زیر آب با کد استفاده کنید!
-          name: آبزی، آبی
+          name: آبزی
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1062,7 +1062,7 @@ fa:
             outbreak:
               display_name: شبیه‌ساز همه‌گیری
             debugging:
-              display_name: رفع اشکال
+              display_name: رفع باگ
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -1507,6 +1507,7 @@ fa:
               display_name: حلقه‌ها
             csf_events:
               display_name: رویدادها
+          title: دوره فشرده مقدماتی
           description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
           student_description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
         cs4all-invasive-species:
@@ -1933,3 +1934,18 @@ fa:
           lessons:
             lesson-1:
               name: منشور اخلاقی هوش مصنوعی ما
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: مقدمه
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: مقدمه
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: مقدمه
+          lesson_groups:
+            lessonGroup-7:
+              display_name: مقدمه

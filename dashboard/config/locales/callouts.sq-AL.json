@@ -344,44 +344,44 @@
           "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
         },
         "CourseD_Dance_2020_06": {
-          "dance_party_11_5_groups": "Bllok i Ri!"
+          "dance_party_11_5_groups": "Bllok i ri!"
         },
         "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Bllok i Ri!"
+          "dance_party_11_5_groups": "Bllok i ri!"
         },
         "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Bllok i Ri!"
+          "dance_party_11_5_groups": "Bllok i ri!"
         },
         "CourseD_Dance_2020_06_2023": {
-          "dance_party_11_5_groups": "Bllok i Ri!"
+          "dance_party_11_5_groups": "Bllok i ri!"
         },
         "CourseD_Dance_2020_07": {
-          "setprop_hint": "Bllok i Ri!"
+          "setprop_hint": "Bllok i ri!"
         },
         "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Bllok i Ri!"
+          "setprop_hint": "Bllok i ri!"
         },
         "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Bllok i Ri!"
+          "setprop_hint": "Bllok i ri!"
         },
         "CourseD_Dance_2020_07_2023": {
-          "setprop_hint": "Bllok i Ri!"
+          "setprop_hint": "Bllok i ri!"
         },
         "CourseD_Dance_2020_09": {
-          "new_block_3": "Bllok i Ri!",
-          "new_block_4": "Bllok i Ri!"
+          "new_block_3": "Bllok i ri!",
+          "new_block_4": "Bllok i ri!"
         },
         "CourseD_Dance_2020_092022": {
-          "new_block_3": "Bllok i Ri!",
-          "new_block_4": "Bllok i Ri!"
+          "new_block_3": "Bllok i ri!",
+          "new_block_4": "Bllok i ri!"
         },
         "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Bllok i Ri!",
-          "new_block_4": "Bllok i Ri!"
+          "new_block_3": "Bllok i ri!",
+          "new_block_4": "Bllok i ri!"
         },
         "CourseD_Dance_2020_09_2023": {
-          "new_block_3": "Bllok i Ri!",
-          "new_block_4": "Bllok i Ri!"
+          "new_block_3": "Bllok i ri!",
+          "new_block_4": "Bllok i ri!"
         },
         "CourseD_Dance_Party_01": {
           "dance_callout_01": "Shtoni këtë bllok në programin tuaj!"
@@ -393,11 +393,11 @@
           "dance_callout_04": "Shtoni këtë bllok në programin tuaj!"
         },
         "CourseD_Dance_Party_06": {
-          "dance_callout_06": "Shtoni vallezuesin tuaj te ri ketu."
+          "dance_callout_06": "Shtoni vallëzuesin tuaj të ri këtu."
         },
         "CourseD_Dance_Party_11": {
-          "dance_callout_11_a": "Bllok i Ri!",
-          "dance_callout_11_b": "Bllok i Ri!"
+          "dance_callout_11_a": "Bllok i ri!",
+          "dance_callout_11_b": "Bllok i ri!"
         },
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
@@ -429,14 +429,14 @@
           "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
         },
         "Dance_2019_06": {
-          "dance_party_11_5_groups": "Bllok i Ri!"
+          "dance_party_11_5_groups": "Bllok i ri!"
         },
         "Dance_2019_07": {
-          "setprop_hint": "Bllok i Ri!"
+          "setprop_hint": "Bllok i ri!"
         },
         "Dance_2019_09": {
-          "new_block_3": "Bllok i Ri!",
-          "new_block_4": "Bllok i Ri!"
+          "new_block_3": "Bllok i ri!",
+          "new_block_4": "Bllok i ri!"
         },
         "Dance_Party_01": {
           "dance_callout_01": "Shtoni këtë bllok në programin tuaj!"
@@ -448,11 +448,11 @@
           "dance_callout_04": "Shtoni këtë bllok në programin tuaj!"
         },
         "Dance_Party_06": {
-          "dance_callout_06": "Shtoni vallezuesin tuaj te ri ketu."
+          "dance_callout_06": "Shtoni vallëzuesin tuaj të ri këtu."
         },
         "Dance_Party_11": {
-          "dance_callout_11_a": "Bllok i Ri!",
-          "dance_callout_11_b": "Bllok i Ri!"
+          "dance_callout_11_a": "Bllok i ri!",
+          "dance_callout_11_b": "Bllok i ri!"
         },
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
@@ -1528,7 +1528,7 @@
           "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
         },
         "helloworld_animals_costumes": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_animals_events": {
           "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
@@ -1547,11 +1547,11 @@
           "hello_world_say": "Përdoreni këtë bllok për të bërë sprites te flasin."
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new": "Bllok i ri!",
           "hello_world_new_block": "Bllok i Ri!!!!"
         },
         "helloworld_animals_sounds": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_bugs_behaviors_2023": {
           "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
@@ -1569,7 +1569,7 @@
           "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
         },
         "helloworld_emoji_costumes": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_emoji_events": {
           "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
@@ -1588,11 +1588,11 @@
           "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_emoji_sizes": {
-          "hello_world_new": "Bllok i Ri!",
-          "hello_world_new_block": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!",
+          "hello_world_new_block": "Bllok i ri!"
         },
         "helloworld_emoji_sounds": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_backgrounds": {
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
@@ -1631,16 +1631,16 @@
           "hw_Run": "Kliko këtu së pari!"
         },
         "helloworld_food_costumes": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_costumes_2023": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_events": {
           "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
@@ -1697,32 +1697,32 @@
           "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_food_sizes": {
-          "hello_world_new": "Bllok i Ri!",
-          "hello_world_new_block": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!",
+          "hello_world_new_block": "Bllok i ri!"
         },
         "helloworld_food_sizes_2023": {
-          "hello_world_new": "Bllok i Ri!",
-          "hello_world_new_block": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!",
+          "hello_world_new_block": "Bllok i ri!"
         },
         "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Bllok i Ri!",
-          "hello_world_new_block": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!",
+          "hello_world_new_block": "Bllok i ri!"
         },
         "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Bllok i Ri!",
-          "hello_world_new_block": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!",
+          "hello_world_new_block": "Bllok i ri!"
         },
         "helloworld_food_sounds": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_sounds_2023": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
@@ -1734,7 +1734,7 @@
           "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
         },
         "helloworld_retro_costumes": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "helloworld_retro_events": {
           "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
@@ -1753,11 +1753,11 @@
           "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
         },
         "helloworld_retro_sizes": {
-          "hello_world_new": "Bllok i Ri!",
-          "hello_world_new_block": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!",
+          "hello_world_new_block": "Bllok i ri!"
         },
         "helloworld_retro_sounds": {
-          "hello_world_new": "Bllok i Ri!"
+          "hello_world_new": "Bllok i ri!"
         },
         "ml-customize apps-choice3": {
           "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
@@ -1868,10 +1868,10 @@
           "CSD_AI_L11_weather": "Kjo është karakteristika e motit"
         },
         "poetry_hoc_addSprites": {
-          "poetry_sprite": "Bllok i Ri!"
+          "poetry_sprite": "Bllok i ri!"
         },
         "poetry_hoc_addSprites_2023": {
-          "poetry_sprite": "Bllok i Ri!"
+          "poetry_sprite": "Bllok i ri!"
         },
         "poetry_hoc_backgroundEffects": {
           "run_button": "Testoni animacionin tuaj me këtë buton. "
@@ -1880,42 +1880,42 @@
           "run_button": "Testoni animacionin tuaj me këtë buton. "
         },
         "poetry_hoc_events1": {
-          "poetry_event": "Bllok i Ri!",
-          "poetry_foreground": "Bllok i Ri!"
+          "poetry_event": "Bllok i ri!",
+          "poetry_foreground": "Bllok i ri!"
         },
         "poetry_hoc_events1_2023": {
-          "poetry_event": "Bllok i Ri!",
-          "poetry_foreground": "Bllok i Ri!"
+          "poetry_event": "Bllok i ri!",
+          "poetry_foreground": "Bllok i ri!"
         },
         "poetry_hoc_freeplay": {
-          "poetry_new_block": "Bllok i Ri!"
+          "poetry_new_block": "Bllok i ri!"
         },
         "poetry_hoc_freeplay_2023": {
-          "poetry_new_block": "Bllok i Ri!"
+          "poetry_new_block": "Bllok i ri!"
         },
         "poetry_hoc_sounds": {
-          "poetry_music": "Bllok i Ri!",
-          "poetry_sound": "Bllok i Ri!"
+          "poetry_music": "Bllok i ri!",
+          "poetry_sound": "Bllok i ri!"
         },
         "poetry_hoc_sounds_2023": {
-          "poetry_music": "Bllok i Ri!",
-          "poetry_sound": "Bllok i Ri!"
+          "poetry_music": "Bllok i ri!",
+          "poetry_sound": "Bllok i ri!"
         },
         "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "Bllok i Ri!",
-          "poetry_sprite_stops": "Bllok i Ri!"
+          "poetry_sprite_begins": "Bllok i ri!",
+          "poetry_sprite_stops": "Bllok i ri!"
         },
         "poetry_hoc_spriteBehaviors_2023": {
-          "poetry_sprite_begins": "Bllok i Ri!",
-          "poetry_sprite_stops": "Bllok i Ri!"
+          "poetry_sprite_begins": "Bllok i ri!",
+          "poetry_sprite_stops": "Bllok i ri!"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_remove_sprite": "Bllok i Ri!",
-          "poetry_set_sprite": "Bllok i Ri!"
+          "poetry_remove_sprite": "Bllok i ri!",
+          "poetry_set_sprite": "Bllok i ri!"
         },
         "poetry_hoc_spriteSizes_2023": {
-          "poetry_remove_sprite": "Bllok i Ri!",
-          "poetry_set_sprite": "Bllok i Ri!"
+          "poetry_remove_sprite": "Bllok i ri!",
+          "poetry_set_sprite": "Bllok i ri!"
         }
       }
     }

@@ -217,6 +217,7 @@ km:
     thank_you: <a href="https://code.org/about/partners">
     tos: លក្ខខណ្ឌ
     tos_short: លក្ខខណ្ឌ
+    trademark: ចងចាំថាត្រូវឆ្ពោះទៅមុខរវាងរង្វិលជុំនីមួយៗ ដូច្នេះអ្នកទៅដល់ផ្កានីមួយៗ។
     translate: ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក
     try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
   gender:
@@ -510,7 +511,7 @@ km:
     try_hoc: សាក​ល្បង Hour of Code សិន
   signin_form:
     login: អ៊ីម៉ែល
-    login_username: Email or Username
+    login_username: អ៊ីមែល ឬ ឈ្មោះ​អ្នក​ប្រើប្រាស់
     password: ពាក្យ​សម្ងាត់
     remember: ចងចាំ​ខ្ញុំ
     submit: ចូល​គណនី

@@ -1,8 +1,8 @@
 ---
-title: Hour of Code How-to Guide for parents
+title: Valideynlər üçün Kod Saatı Təlimatı
 ---
 
-# How to do an Hour of Code with your child
+# Kod Saatını öz uşağınızla necə keçirə bilərsiniz
 
 Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
@@ -16,7 +16,7 @@ The Hour of Code is simple to run - even for beginners. You don’t need experie
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>PDF formatında təlimata baxın</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -87,7 +87,7 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 - Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity
 - [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Share photos and videos of your at-home Hour of Code on social media. [#HourOfCode](https://twitter.com/hashtag/hourofcode) və [@codeorg istifadə edin ki,](https://twitter.com/codeorg) uğurunuzu da vurğulaya bilərik!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
@@ -95,4 +95,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>PDF formatında təlimata baxın</button>]({{ localized_files/hourofcode_parent_how_to }})

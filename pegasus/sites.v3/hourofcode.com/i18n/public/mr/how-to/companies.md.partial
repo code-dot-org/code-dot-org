@@ -19,7 +19,7 @@ nav: how_to_nav
 सुरुवात करण्‍यासाठी खालील पायर्‍या पहा आणि तुमच्‍या कंपनीला आवर ऑफ कोडबद्दल उत्‍साहित कसे करावे याविषयी अधिक माहितीसाठी आमचे [कॉर्पोरेट पार्टनर्स साठी गाइड ](/files/hoc-corporate-toolkit.pdf) पहा.
 
 - [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [कर्मचाऱ्यांना वर्गासाठी स्वयंसेवक म्हणून काम करायला प्रोत्साहन द्या](#encourage-employees)
 - [तुमचा स्वत:चा अवर ऑफ कोड कार्यक्रम होस्ट करा](#host-hour-of-code)
 - [कोडच्या तासाचा प्रचार करा ](#promote-hour-of-code)
 - [अवर ऑफ कोडला मदत करण्याचे इतर काही मार्ग](#support-hour-of-code)
@@ -36,23 +36,23 @@ It's always best to start locally, with schools that you or your employees have 
 
 From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+तुम्ही शाळेशी संपर्क साधू शकत नसलात तर कृपया [आमच्याशी संपर्क साधा](https://support.code.org/hc/en-us/requests/new) आणि शक्य असेल तर आम्ही तुमचा आमच्या एखाद्या स्थानिक भागीदाराशी संपर्क करून देऊ.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## कर्मचाऱ्यांना वर्गासाठी स्वयंसेवक म्हणून काम करायला प्रोत्साहन द्या
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+अवर ऑफ कोडमध्ये सहभागी होण्याचा एक सर्वांत समाधानकारक मार्ग म्हणजे स्थानिक वर्गासाठी प्रत्यक्ष किंवा व्हर्च्युअली स्वयंसेवक म्हणून काम करणे. सर्वांत चांगली गोष्ट म्हणजे स्वयंसेवक होण्यासाठी तुम्ही इंजिनीअर असण्याची गरज नाही. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
 [<button>स्वयंसेवक होण्यासाठी साईन अप करा</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+एका स्वयंसेवकाने नोंदणी केली की शिक्षक त्यांची प्रोफाईल [स्वयंसेवक नकाशावर ](https://code.org/volunteer/local) बघू शकतात, त्यामुळे प्रोफाईल्स शक्य तितक्या पूर्ण करून सबमिट कराव्यात. जर तुम्ही वर्गासाठी सुयोग्य असाल तर शिक्षक तुमच्याशी प्लॅटफॉर्मद्वारे संपर्क साधतील(आम्ही तुमचा ईमेल पत्ता शिक्षकाशी कधीही शेअर करणार नाही). नंतर तुम्ही [त्यांच्या वर्गासाठी स्वयंसेवक म्हणून सर्वोत्तम काम कसे करावे ](https://hourofcode.com/us/how-to/volunteers) याच्या तपशिलाविषयी थेट शिक्षकाशी बोलू शकता.
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+स्वयंसेवक म्हणून काम करण्यासाठी अधिक मार्गदर्शन आणि तुमच्या कंपनीची अवर ऑफ कोडबद्दलची उत्सुकता वाढवण्यासाठी, आमचे [कॉर्पोरेट भागीदारांसाठी मार्गदर्शक]({{ localized_files/hoc_corporate_toolkit }}) वाचा.
 
 * * *
 
@@ -137,7 +137,7 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 ### 1. तुमच्या कार्यक्रमाची नोंदणी करा
 
-जेव्हा तुम्ही [तुमचा अवर ऑफ कोड इव्हेंट साइन अप कराल](/#join), तेव्हा तुम्हाला बातम्यांसह उपयुक्त ईमेल संप्रेषणे आणि कोडचा तास यशस्वी होस्ट करण्यासाठी टिपा प्राप्त होतील. त्यामुळे तुम्ही स्थानिक शाळांना किंवा पालकांना तुम्ही त्यांच्याजवळ कार्यक्रम होस्ट करत आहात, हेसुद्धा समजेल.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. त्यामुळे तुम्ही स्थानिक शाळांना किंवा पालकांना तुम्ही त्यांच्याजवळ कार्यक्रम होस्ट करत आहात, हेसुद्धा समजेल.
 
 ### 2. सोशल मिडीयावर पोस्ट करा
 

@@ -169,14 +169,19 @@ pl:
           version_title: "'23-24"
         focus-on-hardware-2023:
           title: Skoncentruj się na sprzęcie
+          version_title: "'23-'24"
         focus-on-data-2023:
           title: Skoncentruj się na danych
+          version_title: "'23-'24"
         focus-on-design-with-purpose-2023:
           title: Skoncentruj się na projektowaniu z celem
+          version_title: "'23-'24"
         focus-on-coding-2023:
           title: Skoncentruj się na kodowaniu
+          version_title: "'23-'24"
         focus-on-impact-in-society-2023:
           title: Skoncentruj się na wpływie w społeczeństwie
+          version_title: "'23-'24"
         vpl-csd-summer-ci-2023:
           title: Badania programu Odkryć informatycznych
           version_title: "'23-'24"
@@ -220,6 +225,11 @@ pl:
           title: virtual-pl-csp-summer-2024
           description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się do nauczania zasad informatyki.\n-   Przećwiczysz kluczowe pojęcia z programu nauczania zasad informatyki.\n-   Zwiększysz zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów. \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną pracę."
           description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do nauczania zasad informatyki.\n-   Przećwiczą kluczowe pojęcia z programu nauczania zasad informatyki.\n-   Zwiększą zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów. \n-   Staną się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+        self-paced-pl-csd-unit1-2023:
+          title: Nauczanie rozwiązywania problemów i informatyki
+          description_student: "## Witamy\n\nWitamy w bezpłatnej samodzielnej nauce online Code.org dla nauczycieli, aby rozpocząć nauczanie z Code.org! Po ukończeniu tego profesjonalnego doświadczenia edukacyjnego, \\*\\* będziesz gotowy, aby rozpocząć nauczanie Jednostki 1 CSD Code.org - Rozwiązywanie problemów i informatyka\\*\\* ze swoimi uczniami.\n\n### Znajdź sposób uczenia się, który Ci odpowiada\n\n-   **Podążaj we własnym tempie:** To samodzielne doświadczenie uczenia się ma na celu umożliwienie Ci kontroli nad własną nauką. Sugerowane czasy są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym temp.**\n\n-   **Wybierz treści dla siebie:** Treści są uporządkowane w sugerowanym postępie dla nauczycieli nowych zarówno w Code.org, jak i Jednostce 1 CSD - Rozwiązywanie problemów i informatyka. Możesz jednak **angażować się w kolejności materiału, która najlepiej spełnia Twoje potrzeby.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść bezpośrednio do Przygotowanie do nauczania rozwiązywania problemów i informatyki. "
+          description_teacher: "## Witamy\n\nWitamy w bezpłatnej samodzielnej nauce online Code.org dla nauczycieli, aby rozpocząć nauczanie z Code.org! Po ukończeniu tego profesjonalnego doświadczenia edukacyjnego, \\*\\* będziesz gotowy, aby rozpocząć nauczanie Jednostki 1 CSD Code.org - Rozwiązywanie problemów i informatyka\\*\\* ze swoimi uczniami.\n\n### Znajdź sposób uczenia się, który Ci odpowiada\n\n-   **Podążaj we własnym tempie:** To samodzielne doświadczenie uczenia się ma na celu umożliwienie Ci kontroli nad własną nauką. Sugerowane czasy są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym temp.**\n\n-   **Wybierz treści dla siebie:** Treści są uporządkowane w sugerowanym postępie dla nauczycieli nowych zarówno w Code.org, jak i Jednostce 1 CSD - Rozwiązywanie problemów i informatyka. Możesz jednak **angażować się w kolejności materiału, która najlepiej spełnia Twoje potrzeby.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść bezpośrednio do Przygotowanie do nauczania rozwiązywania problemów i informatyki. "
+          version_title: "'23-'24"
     resources:
       curriculum/csd/2017:
         name: Program nauczania

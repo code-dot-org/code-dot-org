@@ -85,6 +85,8 @@ ca:
           title: Ensenyar els principis bàsics de la informàtica
         vpl-csa-2023:
           title: Aprenentatge Professional Virtual CSA
+        self-paced-pl-csd-unit1-2023:
+          title: Ensenyament de la resolució de problemes i la informàtica
     resources:
       curriculum/csd/2017:
         name: Pla d'estudis

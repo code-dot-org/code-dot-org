@@ -421,9 +421,6 @@
   volunteer_engineer_submission_subtitle_generic: '2015 දෙසැම්බර් 7 සිට 13 දක්වා, මෙම වසරේ දී ගුරුවරුන් 100,000ක් Hour of Code වැඩසටහන් ඔවුන්ගේ පන්ති කාමර තුළ පවත්වනවා. ඔවුන්ට ඔබගේ සහය අවශ්‍යයි! '
   volunteer_engineer_submission_subtitle_specific: "ගුරුවරුන් %{num_teachers} කට ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නන් අවශ්‍යයි.<br>ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නන් %{num_volunteers} ලියාපදිංචි වී ඇත. ඔවුන් සමඟ එක් වන්න."
   volunteer_engineer_submission_intro_background: "Hour of Code කියන්නෙ පරිඝණක විද්‍යාව හදුන්වාදීම සඳහා පැයක් හදුන්වාදීපු, රටවල් 180කට වඩා මිලියන ගනනාවක් සම්බන්දවුනු එක්තරා ගෝලීය ව්‍යාපරයක්.දෙසැම්බර් 7 සිට13 දක්වා ඇති පරිඝණක විද්‍යාව අධ්‍යණය සතියේ අප හා එක්වන්න."
-  volunteer_engineer_submission_intro_recruit: 'ගුරුවරුන් සමග  කවුරුන්හෝ සම්බන්දවනවානම් කැමත්තක් දක්වාවි.<span style="font-family: ''Gotham 7r'', sans-serif;">පරිඝණක විද්‍යාව පිළිබඳව අධ්‍යනයට මහත් කැමත්ත</span>පන්තිකාමරය තුලදී උපකාර කල හැකි කවුරුන් හෝ උපකාර කිරීමට හැකි<span style="font-family: ''Gotham 7r'', sans-serif;">ආස්වාදයක්</span>පරිඝණක විද්‍යාව පිලිබඳව ඇති පුළුල් හැකියාවන්  කතා කරන ඔවුන්ගේ ශිෂ්‍යයයින්(වීඩියො චැට්  මගින් හෝ සම්බන්දවීමෙන්). '
-  volunteer_engineer_submission_intro_signup: "ඔබ පරිගණක විද්‍යාව හදාරණ ශිෂ්‍යයෙක් හෝ මෘදුකාංග ක්ෂේත්‍රයේ වෘත්තිකයෙක් නම්, කරුණාකර පහත තොරතුරු සඳහන් කරන්න. <span class=\"form-required-field\">*</span> ලකුණු ඇති තොරතුරු සැපයීම අනිවාර්ය වේ."
-  volunteer_engineer_submission_intro_links: "ඔබ ස්වේච්ඡාවෙන් ඉදිරිපත් වන අය සොයන ගුරුවරයෙක්ද? ඔබ ආසන්නයේ ස්වෙච්ඡාවෙන් ඉදිරිපත් වෙන්නන් <a href=\"%{volunteer_local}\">ස්වේච්ඡා සිතියම්</a>."
   volunteer_engineer_submission_update_information: "ඔබගේ තොරතුරු යාවත්කාලීන කරන්න"
   volunteer_engineer_submission_header_shared: "ස්වේච්ඡා සිතියම් හරහා ගුරුවරුන් වෙත බෙදාහැරෙන තොරතුරු"
   volunteer_engineer_submission_field_name: "නම"

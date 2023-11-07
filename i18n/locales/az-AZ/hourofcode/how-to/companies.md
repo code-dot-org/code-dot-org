@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Şirkətlər üçün Kod Saatı Təlimatı
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Şirkətinizin Kod Saatı ilə necə məşğul ola bilər
 
-### Find out how you and your employees can inspire students to try computer science!
+### Siz və işçilərinizin tələbələri kompüter elmini sınamağa necə ilham verə biləcəyini öyrənin!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Hesablama düşüncəsi problem həll etmək bacarıqlarını, məntiqini və yaradıcılığını inkişaf etdirməyə kömək edir. Və texnologiya planetin hər sənayenini dəyişdirir. Bu gün tələbələr yalnız istifadə etməklə deyil, texnologiyanı necə yaratmağı öyrənməlidirlər. Erkən başlayaraq, 21-ci əsrin hər hansı bir karyera yolunda uğur qazanmaq üçün bir təməl olacaqlar.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+Kod Saatı kampaniyası zamanı şirkətinizin kompüter elmləri hərəkatı haqqında məlumatlılığın artırılmasına kömək edə bilər. İstər fərd kimi könüllü olmağınızdan asılı olmayaraq, istərsə də şirkətiniz üçün bir tədbir planlaşdırmağınızdan asılı olmayaraq, bütün səyləriniz marjinal irqi və etnik qruplardan olan gənc qadınların və tələbələrin kompüter elminə və öz potensialına baxmalarına böyük təsir göstərə bilər.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Başlamaq üçün aşağıdakı addımlara baxın və şirkətinizi Kod Saatı ilə [bağlı necə həyəcanlandıracağınız barədə daha çox məlumat üçün korporativ tərəfdaş](/files/hoc-corporate-toolkit.pdf) lar üçün bələdçimizə baxın.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Yerli məktəblə əlaqə qurun](#connect-with-a-school)
+- [İşçiləri sinifdə könüllü olmağa təşviq edin](#encourage-employees)
+- [Öz Kod Saatı tədbirinizə ev sahibliyi edin](#host-hour-of-code)
 - [Kod Saatını təbliğ edin](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Kod Saatını dəstəkləməyin daha çox yolu](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Yerli məktəblə əlaqə qurun
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Alma mater, uşaq məktəbi və ya kompüter elmlərində tarixən az təmsil olunmuş əhaliyə xidmət etməyə yönəlmiş yerli təşkilat və ya məktəb kimi sizin və ya işçilərinizin güclü əlaqəsi olan məktəblərlə yerli başlamaq həmişə yaxşıdır.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Oradan, direktor, direktor müavini, texnologiya və ya kompüter elmləri müəllimləri və ya hətta məktəbin PTSA kimi əlaqə saxlamaq üçün müvafiq əlaqələr tapmaq üçün məktəbin veb saytına daxil ola bilərsiniz. Tədbirə birgə ev sahibliyi etmək üçün Amerikanın Boys Q & ızlar Klubları, YMCA filialı və s. kimi təşkilatlarla da tərəfdaşlıq edə bilərsiniz.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Bir məktəblə əlaqə qura bilmirsinizsə, bizimlə əla [qə saxlayın və mümkünsə sizi yerli tərəfdaşlarımız](https://support.code.org/hc/en-us/requests/new) dan biri ilə əlaqə saxlayacağıq.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## İşçiləri sinifdə könüllü olmağa təşviq edin
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Kod Saatında iştirak etməyin ən dolğun yollarından biri yerli sinifdə şəxsən və ya virtual olaraq könüllü olmaqdır. Ən yaxşısı, könüllü olmaq üçün mühəndis olmaq lazım deyil. Öz karyera təcrübənizi və CS və ya texnologiyanın rolunuza necə təsir etdiyini bölüşərək tələbələrə hələ də mənalı bir təcrübə təqdim edə bilərsiniz.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Könüllülüyə yazılın</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Bir könüllü qeydiyyatdan keçdikdən sonra müəllim [könüllü xəritəmizdə öz profillərini nəzərdən keçirə bilər](https://code.org/volunteer/local) - buna görə profillər mümkün qədər tam təqdim edilməlidir. Əgər siz onların sinifinə uyğun olsanız, bir müəllim platforma vasitəsilə sizinlə əlaqə saxlayacaq (e-poçt ünvanınızı heç vaxt müəllimlə paylaşmayacağıq). Daha sonra siniflərində ən yaxşı şəkildə necə könüllü olmaq barədə tə [fərrüatları birbaşa müəllimlə əlaqələndirə bilərsiniz](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Şirkətinizi Kod Saatı ilə bağlı həyəcanlandırmaq üçün könüllülük və nümunə mesajlaşma ilə bağlı daha çox təlimat üçün korporativ tərəfdaşlar üçün [bələdçimizə bax]({{ localized_files/hoc_corporate_toolkit }})ın.
 
 * * *
 
-<h4><font color="00adbc"><i>"Uşaqların nə gədər həyacanlı olduğunu görmək çox xoş idi.". One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>"Uşaqların nə gədər həyacanlı olduğunu görmək çox xoş idi.". Təəccüblü bir şey, müəllimlərin akademik baxımdan yaxşı nəticə verməyən bəzi tələbələrin tərtibatçı kimi düşünməkdə və başqalarına kömək etməkdə üstün olduqlarını gördükləri idi - onlara özlərini inamlı hiss etmək üçün bir yer verdilər.</i></font></h4>
 
--Hour of Code volunteer
+-Kod saatı könüllü
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Öz Kod Saatı tədbirinizə ev sahibliyi edin
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Əlavə mil getmək istəyirsinizsə, şirkətinizdə Kod saatı tədbirinə də ev sahibliyi edə bilər. Tədbirə ev sahibliyi etmək üçün xüsusi bir düstur yoxdur, ona görə də sizi yaradıcı olmağı tövsiyə edirik! İşçilərimizin kiçik olduğunu nəzərə alsaq (amma güclü!) , Code.org-da Kod Saatı tədbirlərini əlaqələndirməyə həsr olunmuş bir qrup yoxdur. Bununla birlikdə, başlamaq üçün bəzi məsləhətlər var.
 
 ### 1. Necə edilir videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Tədbiriniz üçün bir tarix, format və yeri müəyyənləşdirin
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+[Virtual və ya şəxsən, şirkət ofisində](https://hourofcode.com/us/how-to/virtual) və ya cəmiyyətdə və hər yaşda olan tələbələr üçün keçirilən tədbirləri gördük! Bəzi ruhlandırıcı fikirlər üçün digər [korporativ tərəfdaşların](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) və [donor](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) ların keçmişdə nə etdiklərinə də nəzər sala bilərsiniz.
 
 <br />
 
-#### Sample Agenda:
+#### Nümunə gündəm:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Siz nələr və kimlər ilham verib? İnformatika sahəsinə marağınız necə yarandı? Bu sahədə öncədən rəhbəriniz olub mu? Şagirdlərə sual verin və S&C'a (Sual və Cavab) vaxt ayırınız. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Vaxt | Gündəm məsələsi | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 dəqiqə | Ruhlandırıcı video göstərin | |5-10 dəqiqə</a>| Özünüzü tanıtın və tələbələr haqqında daha çox məlumat əldə edin: Harada işləyirsiniz, nə edirsiniz və işinizdə nəyi ən çox sevirsiniz?  Siz nələr və kimlər ilham verib? İnformatika sahəsinə marağınız necə yarandı? Bu sahədə öncədən rəhbəriniz olub mu? Şagirdlərə sual verin və S&C'a (Sual və Cavab) vaxt ayırınız. | | 30-60 dəqiqə | Kod! Tədbiriniz şəxsən keçərsə, suallara cavab vermək və tələbələrə çətin bulmacalar vasitəsilə yönəltmək vaxtıdır. Onlara həlli açıq şəkildə verməməyə çalışın, bunun əvəzinə onlara sual verməyə çalışın ki, nəyin səhv getdiyini özlərinə cavab verə bilsinlər və tələbələri sualları varsa bir-birlərindən soruşmağa təşviq edin. Əgər faktiki olaraq könüllü olsanız, ən yaxşı yanaşmanın nə ola biləcəyi üzərində müəllimlə işləyin. Şagirdlərin nə irəliləyiş əldə etdiklərini görmək üçün sessiyanın sonunda qayıtmağın daha mənalı ola bilər. | | |1-3 dəqiqə | Hər kəsə təşəkkür edin və ruhlandırıcı ayrılma sözləri paylaşın. Şirkətinizdən hər hansı birini paylayın (sti[kerlər möhtə](#celebrate) şəmdir)! | | <br /></p> 
 
-#### Other ideas to add to your event
+#### Tədbirinizə əlavə etmək üçün digər fikirlər
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Texnologiyanın həyatımıza necə təsir etdiyini, bütün mənşəli tələbələrin əhəmiyyət verəcəyi nümunələrlə izah edin - həyatları xilas edən, insanlara kömək edən, insanları əlaqələndirən texnologiyadan danışın.
+- Əgər siz texnoloji şirkətinizsə, şirkətinizin üzərində işlədiyi əyləncəli, yenilikçi məhsulları demo edin. Texnoloji şirkət deyilsinizsə, şirkətinizin problemləri həll etmək və məqsədlərə çatmaq üçün texnologiyadan istifadə yollarını müzakirə edin.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 
-### 3. Plan your technology needs
+### 3. Texnologiya ehtiyaclarınızı planlaşdırın
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Cihazlar:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Şəbəkdən çıxarılmış fəaliyyətlər üçün sadəcə “Kompüter və ya cihaz yoxdur” seçimlərini göstərmək üçün Sinif Texnologiyası bölməsini süzün.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. Şagirdlər yoldaşlı işləyəndə bir-briniə kömək edirlər və müəllimdən daha az asılı olurlar. Onlar həm də görərlər ki, informatika ictimai və kollektiv bir sahədir.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Kompüterlərdə** və ya cihazlarda test fəaliyyətləri. Səs və video olan brauzerlərdə düzgün işlədiklərindən əmin olun.
+- **Kifayət qədər cihazınız yoxdur?** Cüt proqramlaşdırmadan istifadə edin. Şagirdlər yoldaşlı işləyəndə bir-briniə kömək edirlər və müəllimdən daha az asılı olurlar. Onlar həm də görərlər ki, informatika ictimai və kollektiv bir sahədir.
+- **İştirak** çılarınız üçün qulaqlıq verin və ya səslərlə ən yaxşı işləyən dərsləri sınamaqlarsa, özlərini gətirmələrini xahiş edin.
+- **Bant genişliyi aşağı varm**ı? Tədbirin ön hissəsində videoları göstərməyi planlaşdırın, belə ki, hər bir iştirakçı öz videolarını yükləməsin. Və ya elektrik şəbəkəsindən çıxarılma/oflayn fəaliyyətləri sınayın.
 
-#### Virtual Events:
+#### Virtual Tədbirlər:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Tədbiriniz virtual olacaqsa, tədbirinizdən əvvəl konfrans platformanız barədə qərar vermək (və sınamaq) istəyəcəksiniz. Bu, rahat hiss etdiyiniz tələbələrin sayına təsir edə bilər, buna görə də sinifə dəvət etməzdən və ya tədbirinizi tanıtmazdan əvvəl bunu müəyyənləşdirmək yaxşıdır. Uzaqdan Kod Saatını necə idarə etmək barədə fikirlər üçün virtual Kod Saatı tədbiri üçün məsləhətlərimizi oxuyun</a>. </p> 
 
-### 4. Choose an activity
+### 4. Bir fəaliyyət seçin
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Biz bütün yaş qrupları və təcrübə səviyyələri üçün müxtəlif əyləncəli, tələbə tərəfindən idarə olunan dərsliklər təqdim edirik. Tələbələrin özünə idarə olunan dərsləri sınaması məşhurdur, baxmayaraq ki, tədbirə hər kəsin birlikdə baxması üçün ru [hlandırıcı bir video ilə](https://hourofcode.com/us/promote/resources#videos) başlamaq istəyə bilərsiniz.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Fəaliyyətləri araşdırın və bütün qonaqlarınız üçün tək bir dərslik seçmək istəyirsinizsə və ya hər uşağın özünü seçməsinə icazə ver</a> in, əvvəlcədən qərar verin. **Bütün Kod Saatı fəaliyyətləri minimum hazır** lıq vaxtı tələb edir və öz-özünə rəhbərlik edir - iştirakçılara öz sürəti və bacarıq səviyyəsində işləməyə imkan verir.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Tədbiriniz üçün möhkəm bir yol xəritəsinə sahib olduqdan sonra şagirdləri, məktəbi və ya daha böyük icmanı dəvət etməyə başlaya bilərsiniz. Münasibətiniz olan yerli məktəbdən başlamağı və ya Kod Saatı tədbir [](https://hourofcode.com/us/map) lərinin xəritəmizə baxmağı məsləhət görürük.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Qeyd edin
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Tələbələr və ya qonaqlar Kod Saatını tamamladıqdan sonra uğurlarını qeyd etməyin vaxtı gəldi. Tədbirinizi daha da əyləncəli etmək üçün bəzi fikirlər:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Çap et “Bir saat Kod etdim! stikerlər”]({{ promote/resources_stickers }}) və ya [Code.org Amazon Mağazasında digər mükafatlar və swag tapın.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. [#HourOfCode](https://twitter.com/hashtag/hourofcode) və [@codeorg istifadə edin ki,](https://twitter.com/codeorg) uğurunuzu da vurğulaya bilərik!
 
 * * *
 
@@ -129,56 +129,57 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Kod Saatını təbliğ edin
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Kömək etməyin ən yaxşı yollarından biri sözü yaymaq və Kod Saatını təbliğ etməkdir.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Tədbirinizi Qeydiyyat
 
-Kod Saatı tədbirinizə [qeydiyyatdan keçdiyiniz zaman](/#join), uğurlu Kod Saatına ev sahibliyi etmək üçün xəbərlər və məsləhətlər ilə faydalı e-poçt ünsiyyətləri alacaqsınız. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Kod Saatı [tədbirinizə qeydiyyatdan keçdiyiniz zaman uğurlu Kod Saatına ev sahibliyi etmək üçün xəbərlər və tövsiyələrlə faydalı e-poçt ünsiyyətləri alacaqsınız.](/events) Yerli məktəblərə və ya valideynlərə yaxınlıqda bir tədbir keçirdiyinizi necə bildirə bilərsiniz.
 
-### 2. Post on Social Media
+### 2. Sosial Mediada yazın
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Sosial mediada yerləşdirmək və işçilərinizlə bölüşmək üçün bu nümunə məzmunla kompüter elmləri hərəkatı haqqında məlumatlılığı artırmağa kömək edin.
 
-#### Hour of Code general announcement
+#### Kod saatı ümumi elan
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Kompüter elmləri dünyamızı dəyişir. Tələbələrə #HourOfCode -dən başlayaraq bu dəyişikliyin bir hissəsi olmasına kömək edin. https://hourofcode.com/
+- Yalnız texnologiyadan istifadə etməyin - onu necə quracağınızı öyrənin. Kiməsə #HourOfCode ilə başlamağa kömək edin. https://hourofcode.com/
 
-#### Stats
+#### Statistikalar
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- ABŞ məktəblərinin yalnız 53% -də kompüter elmləri öyrədiklərini bilirdinizmi? Hər tələbəyə birini öyrənmək şansı verin #HourOfCode https://hourofcode.com/
+- ABŞ-da proqram mütəxəssislərinin yalnız 26% -i qadındır. Daha çox gənc qadını kompüter elmləri ilə tanış edin #HourOfCode https://hourofcode.com/
+- ABŞ-da hesablama işlərinin 67% -i texnologiya sektorunda deyil. Kompüter elmlərini standart kurikuluma qoymağa kömək edin #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Özünüzü yaradın
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Bir #HourOfCode [hekayənizi doldurun] gətirib çıxara bilər. https://hourofcode.com/
+- #HourOfCode -ı dəstəkləyirəm, çünki [düşüncələrinizi doldurun]. Bizə qoşulun https://hourofcode.com
 
-#### Engineer-specific
+#### Mühəndisə xas
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- İlk kod sətiriniz həyatınızı dəyişdirsə, yaxınlığınızdakı tələbələrə ilk #HourOfCode yazmağa kömək edin https://code.org/volunteer
+- Kodlamağı öyrənmisinizsə - hekayəniz nədir? İlk #HourOfCode https://code.org/volunteer vasitəsilə yaxınlığınızdakı tələbəni ruhlandırın
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Tədbirin</a> izi icmanıza tanıtmaq üçün daha çox afişalar, video, stikerlər və digər yollar tapın.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Kod Saatını dəstəkləməyin daha çox yolu
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
-
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
-
-{{ signup_button }}
+- [Code.org swag geyinərək məlumatlılığı yayın](https://store.code.org/) (bütün gəlirlər daha çox tələbənin kompüter elmləri təhsili əldə etməsinə kömək etməyə yönəldilir).
+- [AmazonSmile -da alış -veriş edərkən Code.org-dan faydalanmağı seçin](https://code.org/donate/amazonsmile).
+- CEO şirkətinizdən kompüter elminin əhəmiyyətini vurğulayan və işçiləri bu sözü yaymağa təşviq edən bir e-poçt göndərməsini xahiş edin.
+- Hədiyyə kampani</a>yasında iş yoldaşları ilə əy lənin.</li> 
+    
+    - [Hər bir tələbənin kompü](https://code.org/promote) ter elmlərini öyrənmək imkanı olduğundan əmin olmaq üçün bu ərizəni imzalayın.
+    - [Code.org-](https://code.org/donate) a bağışlayın ki, təhsil resurslarımızı pulsuz və hamı üçün əlçatan saxlaya bilərik.</ul> 
+    
+    Code.org və Kod Saatını necə dəstəkləmək barədə daha çox təklif üçün Code.org/help saytına daxil olun [](https://code.org/help)
+    
+    {{ signup_button }}

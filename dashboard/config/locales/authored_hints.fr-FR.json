@@ -14393,16 +14393,16 @@
           "Hint1": "Nous avons besoin de plus de grenouilles ! Modifiez le nombre de grenouilles pour qu'il soit supérieur à 0."
         },
         "csc_ecosystems_ocean_algae_2023": {
-          "Connect": "Assurez-vous que le bloc d'alimentation est connecté au bloc d'événements. \n\nIls devraient s'assembler comme des pièces de puzzle !"
+          "Connect": "S'assurer que le bloc « manger » est bien connecté au bloc événement. \n\nIls devraient s'assembler comme des pièces de puzzle !"
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "Utilisez le bloc d'objets de capture pour que le bateau attrape le poisson",
-          "CatchUnder": "Le bloc d'objets de capture doit être\nconnecté sous l'événement où le bateau touche le \npoisson."
+          "Catch": "Utiliser le bloc « attraper l'objet » pour faire que le bateau attrape le poisson",
+          "CatchUnder": "Le bloc « attraper l'objet » doit être\nconnecté au bas de l'événement « quand le bateau touche le \npoisson ». "
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Placez le bloc de costume à changer à l'intérieur du bloc s'il y a trop d'algues.",
-          "Costume": "S'il y a trop d'algues, le corail sera endommagé. \n\nUtilisez ensuite le bloc de changement de costume.",
-          "TooMuch": "Connectez le bloc « si trop d'algues » à l'événement « Quand le poisson touche des algues »."
+          "BlockInside": "Placer le bloc « changer de costume » à l'intérieur du bloc « si trop d'algues ».",
+          "Costume": "S'il y a trop d'algues, le corail sera endommagé. \n\nUtiliser ensuite le bloc de changement de costume.",
+          "TooMuch": "Connecter le bloc « si trop d'algues » à l'événement « quand un poisson touche l'algue »."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
           "Below": "Continuez à connecter les blocs au bas de l'espace de travail où vous avez terminé le dernier niveau !",
@@ -14410,7 +14410,7 @@
           "TooLittle": "Connectez le bloc d'algues « si trop peu » à l'événement « Quand le poisson touche des algues »."
         },
         "csc_ecosystems_ocean_fish_2023": {
-          "No Code": "Il n'y a encore rien à coder. Il suffit d'observer ce système en action. "
+          "No Code": "Il n'y a encore rien à coder pour l'instant. Il suffit d'observer ce système en action. "
         },
         "csc_ecosystems_ocean_justright_algae": {
           "Bellow": "Continuez à connecter les blocs au bas de l'espace de travail où vous avez terminé le dernier niveau !",
