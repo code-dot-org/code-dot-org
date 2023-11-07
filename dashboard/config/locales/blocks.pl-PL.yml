@@ -652,6 +652,7 @@ pl:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Kwitnące płatki
             '"circles"': Kółka
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
@@ -659,6 +660,7 @@ pl:
             '"disco_ball"': Kula dyskotekowa
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
+            '"frosted_grid"': Matowa siatka
             '"galaxy"': Przestrzeń
             '"growing_stars"': Powiększające się gwiazdy
             '"higher_power"': Higher Power
@@ -685,6 +687,7 @@ pl:
             '"cool"': Chłodny
             '"default"': Jasne
             '"electronic"': Elektroniczny
+            '"grayscale"': Skala szarości
             '"iceCream"': Lody
             '"neon"': Neon
             '"ocean"': Ocean
@@ -697,6 +700,7 @@ pl:
             '"sunrise"': Wschód słońca
             '"sunset"': Zachód słońca
             '"tropical"': Tropikalne
+            '"twinkling"': Migotanie
             '"vintage"': Starocie
             '"warm"': Ciepły
             '"winter"': Zima

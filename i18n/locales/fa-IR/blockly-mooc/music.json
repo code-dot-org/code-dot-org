@@ -22,7 +22,7 @@
   "blockly_blockRepeat": "تکرار {num} بار",
   "blockly_blockRepeatTooltip": "تکرار کن",
   "blockly_blockRest": "استراحت برای {duration}",
-  "blockly_blockRestTooltip": "بقیه",
+  "blockly_blockRestTooltip": "استراحت",
   "blockly_blockSetLocationNextMeasure": "رفتن به اندازه بعدی",
   "blockly_blockSetLocationNextMeasureTooltip": "رفتن به اندازه بعدی",
   "blockly_blockSetEffect": "تنظیم {effect} تا {value}",
@@ -57,6 +57,7 @@
   "share": "به اشتراک گذاری",
   "shareComingSoon": "امکان اشتراک‌گذاری در دست ساخت است. به زودی دوباره بررسی کنید.\n\n",
   "startOver": "از نو شروع کن",
+  "upload": "بارگذاری",
   "panelHeaderInstructions": "دستورالعمل ها",
   "panelHeaderWorkspace": "فضای کار",
   "continue": "ادامه"

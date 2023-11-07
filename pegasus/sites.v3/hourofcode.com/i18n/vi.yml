@@ -6,10 +6,10 @@ vi:
   front_title: Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}
   coming_soon: Sắp diễn ra
   new: Mới
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Giờ lập trình đã được tổ chức
   hoc_stat_languages: Các em học sinh đang học bằng hơn 45 ngôn ngữ
   hoc_stat_hours_served: Hơn 100 triệu học sinh đã thử học Giờ lập trình
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Học sinh nữ chiếm 50% số người tham gia Hour of Code
   campaign_date_start_short: Ngày 4 tháng 12
   campaign_date_start_long: Ngày 4 tháng 12
   campaign_date_short: Ngày 4-10 tháng 12
@@ -58,10 +58,10 @@ vi:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Bạn sẽ tạo ra những gì?
   hoc2023_social_creativity_with_ai_desc: Sử dụng khoa học máy tính để khám phá và
     tìm hiểu về AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Giờ lập trình là phần giới thiệu miễn phí về khoa học
+    máy tính thông qua các hoạt động và video thú vị dành cho người học ở mọi cấp
+    độ kỹ năng. Lễ kỷ niệm cả lập trình và AI năm nay được hỗ trợ bởi hơn 400 đối
+    tác, 20.000 nhà giáo và 58.000 tình nguyện viên.
   hoc2022_header: Khám phá, vui chơi, sáng tạo!
   social_hoc2022_explore_play_create: Sử dụng khoa học máy tính để khám phá, vui chơi
     và sáng tạo!
@@ -74,9 +74,9 @@ vi:
     Selena Gomez, âm nhạc từ “Encanto” của Disney và nhiều nghệ sĩ khác!
   social_hoc2023_dance: Với sự góp mặt của Beyoncé, BT, Harry Styles, Lizzo, Lil Nas
     X, Selena Gomez, âm nhạc từ “Encanto” của Disney và nhiều hơn nữa!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Đã đến lúc chuẩn bị đồ đạc của bạn! Tạo bữa tiệc khiêu
+    vũ của riêng bạn với các bản hit của Miley Cyrus, BTS, Lil Nas X, Harry Styles,
+    Nicki Minaj, Rosalía, v.v.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Học lập trình hôm nay, xây dựng tươi lai tươi sáng hơn ngày mai.
@@ -299,21 +299,23 @@ vi:
     thông tin chi tiết và hỗ trợ từ các nhà giáo dục khác.
   required_materials: 'Tài liệu bắt buộc:'
   optional_materials: 'Tài liệu không bắt buộc:'
-  for_students: For students
+  for_students: Dành cho học sinh
   for_educators: Đối với nhà giáo dục
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Tổ chức Giờ lập trình
   call_to_action_hold_an_event: Tổ chức một sự kiện
   call_to_action_register_event: Đăng ký sự kiện của bạn
   call_to_action_register_your_hoc: Đăng ký Giờ lập trình của bạn
   call_to_action_select_activity: Chọn một hoạt động
+  call_to_action_select_coding_activity: Chọn một hoạt động mã hóa
   call_to_action_start_activity: Bắt đầu một hoạt động
   call_to_action_get_certificates: Nhận chứng chỉ
+  call_to_action_print_certificates: In giấy chứng nhận
   call_to_action_go_beyond_hoc: Vượt xa hơn Giờ Mã
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Khám phá tất cả các hoạt động Giờ lập
+    trình từ Code.org
+  call_to_action_start_dance_party: Bắt đầu tiệc khiêu vũ
+  call_to_action_start_part_02: Bắt đầu phần hai
+  call_to_action_start_unplugged_activity: Bắt đầu hoạt động đã ngắt kết nối
   call_to_action_view_promo_resources: Xem tài nguyên khuyến mãi
   call_to_action_learn_more: Tìm hiểu thêm
   call_to_action_watch_now: Xem ngay
@@ -411,9 +413,9 @@ vi:
   call_to_action_view_faqs: Xem thêm Câu hỏi thường gặp
   call_to_action_applications_open: Các ứng dụng hiện đang mở
   call_to_action_apply_cs_ambassador: Đăng ký làm Đại sứ CS
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Sắp ra mắt!
+  call_to_action_learn_how_ai_works: Tìm hiểu cách thức hoạt động của AI
+  call_to_action_learn_about_ai: Tìm hiểu về AI
   aria_label_call_to_action_hoc_how_to_educators: Xem hướng dẫn hướng dẫn cho các
     nhà giáo dục
   aria_label_call_to_action_hoc_how_to_companies: Xem hướng dẫn hướng dẫn cho Công
@@ -429,9 +431,10 @@ vi:
     nguyện viên
   aria_label_call_to_action_hoc_how_to_virtual_events: Xem hướng dẫn hướng dẫn cho
     sự kiện ảo
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Bắt đầu hoạt động Dance Party
+  aria_label_call_to_action_dance_02: Bắt đầu phần hai của hoạt động Dance Party
+  aria_label_call_to_action_dance_unplugged: Bắt đầu hoạt động không cắm điện của
+    Dance Party
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -439,6 +442,8 @@ vi:
     Teaching Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Bắt đầu chương trình Teaching Computer Science
     Principles Professional learning
+  aria_label_call_to_action_teaching_problem_solving: Bắt đầu chương trình giảng dạy
+    giải quyết vấn đề và máy tính chuyên nghiệp
   aria_label_call_to_action_teaching_csc: Bắt đầu chương trình đào tạo chuyên môn
     Giảng dạy kết nối khoa học máy tính
   aria_label_call_to_action_teaching_ai: Bắt đầu chương trình học tập chuyên nghiệp
@@ -457,6 +462,8 @@ vi:
     Khoa học Máy tính
   aria_label_call_to_action_curriculum_csp: Khám phá chương trình giảng dạy Nguyên
     tắc Khoa học Máy tính
+  aria_label_call_to_action_curriculum_problem_solving: Khám phá chương trình Giải
+    quyết vấn đề và Máy tính
   aria_label_call_to_action_curriculum_csc: Khám phá chương trình đào tạo Kết nối
     khoa học máy tính
   aria_label_call_to_action_curriculum_ai: Khám phá chương trình giảng dạy AI và Machine
@@ -538,6 +545,7 @@ vi:
   curriculum_name_csf_teacher_led: Bài học với giáo viên
   curriculum_name_csd: Khám phá Khoa học Máy tính
   curriculum_name_csp: Các nguyên tắc khoa học máy tính
+  curriculum_name_problem_solving: Giải quyết vấn đề và tính toán
   curriculum_name_csc: Kết nối khoa học máy tính
   curriculum_name_csa: Khoa học máy tính A
   curriculum_name_csa_ai: Kỹ thuật phần mềm & Computer Vision
@@ -550,25 +558,27 @@ vi:
   curriculum_name_creating_apps_with_devices: Tạo ứng dụng bằng thiết bị
   curriculum_name_poetry: Lập trình bằng bài thơ
   curriculum_name_dance_party: Tiệc khiêu vũ
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Tiếp tục nhảy múa
+  curriculum_name_dance_party_unplugged: Tiệc khiêu vũ không cắm điện
+  curriculum_name_dance_party_ai_edition: 'Bữa tiệc khiêu vũ: Phiên bản AI'
   curriculum_name_problem_solving_computing: Giải quyết vấn đề và tính toán
   curriculum_name_web_development: Phát triển web
   curriculum_name_interactive_animations_games: Tương tác hoạt hình & game
   curriculum_name_design_process: Quy trình thiết kế
   curriculum_name_data_society: Dữ liệu và xã hội
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Trong hoạt động giới thiệu này, hãy sử dụng mã để
+    làm cho nhiều nhân vật đầy màu sắc chuyển sang hình nền hoạt hình và âm nhạc lạc
+    quan.
+  curriculum_desc_dance_party_02: Vượt ra ngoài hướng dẫn giới thiệu với các ý tưởng
+    dự án mở rộng. Duyệt qua thư viện các ví dụ về các bữa tiệc khiêu vũ phức tạp
+    hơn.
+  curriculum_desc_dance_party_unplugged: Hãy bắt đầu cuộc sống của bạn — không cần
+    máy tính! Tìm hiểu cách các khái niệm mã hóa, như các sự kiện, có thể được sử
+    dụng để đồng bộ hóa vũ đạo vũ công.
+  curriculum_desc_dance_party_ai_edition: Tìm hiểu về các khái niệm trí tuệ nhân tạo
+    (AI) để tạo bữa tiệc khiêu vũ ảo của riêng bạn giới thiệu các nghệ sĩ hàng đầu
+    hiện nay. Với hàng chục bài hát để lựa chọn, tiếp cận mọi học sinh bất kể sở thích
+    âm nhạc của họ. Đã đến lúc chuẩn bị đồ đạc của bạn!
   curriculum_desc_csf: Bộ chương trình giảng dạy tiểu học miễn phí giới thiệu cho
     học sinh các khái niệm cơ bản của khoa học máy tính.
   curriculum_desc_csf_express: Hãy học cách tạo các chương trình máy tính, phát triển
@@ -705,12 +715,12 @@ vi:
   module_grade_grade_03: 'Lớp 3:'
   module_grade_grade_04: 'Lớp 4:'
   module_grade_grade_05: 'Lớp 5:'
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Lứa tuổi 5-7
+  module_age_07: Tuổi 7+
+  module_age_07_11: Tuổi 7-11
+  module_age_11: Tuổi từ 11 tuổi trở lên
+  module_age_13: Độ tuổi 13+
+  module_age_all_age: Mọi lứa tuổi
   module_grade_k_5_teachers: Giáo viên lớp K-5
   module_grade_6_10_teachers: Giáo viên lớp 6-10
   module_grade_9_12_teachers: Giáo viên lớp 9-12
@@ -742,6 +752,7 @@ vi:
   module_label_teaching_csf: Dạy các nguyên tắc cơ bản về khoa học máy tính
   module_label_teaching_csd: Dạy khám phá khoa học máy tính
   module_label_teaching_csp: Dạy các nguyên tắc khoa học máy tính
+  module_label_teaching_problem_solving: Giảng dạy giải quyết vấn đề và máy tính
   module_label_teaching_csc: Giảng dạy kết nối khoa học máy tính
   module_label_teaching_ai: Dạy AI và học máy
   module_label_teaching_maker_cp: Dạy tạo ứng dụng với thiết bị (Circuit Playground)
@@ -808,8 +819,9 @@ vi:
   heading_csa_ai: Tìm kiếm những việc cần làm sau kỳ thi AP®?
   heading_bring_cs_to_students: Mang khoa học máy tính đến với sinh viên
   heading_cs_ambassador_program: Chương trình Đại sứ CS
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Dự án sinh viên nổi bật
+  heading_start_hoc_with_videos: Bắt đầu Hour of Code của bạn với các video truyền
+    cảm hứng
   cs_ambassador_subhead: Nếu bạn là một học sinh trung học đam mê khuyến khích nhiều
     phụ nữ trẻ theo học khoa học máy tính tại trường của bạn, thì chúng tôi cần bạn!
   cs_ambassador_desc: Mọi lĩnh vực, bao gồm y học, giải trí, thể thao, giáo dục, kinh
@@ -911,13 +923,14 @@ vi:
     Khoa học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được
     gửi ngay đến hộp thư đến của bạn.
   subscribe_form_section_unsubscribe: Bạn có thể hủy đăng ký bất cứ lúc nào.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Mã hóa một bữa tiệc khiêu vũ
+  dance_featuring_songs_by_short: 'Có các bài hát của:'
+  dance_featuring_songs_by_long: 'Dance Party bao gồm các bài hát của:'
+  dance_and_more: và nhiều hơn nữa
+  dance_choose_activity: Chọn bữa tiệc khiêu vũ của bạn
+  dance_afe_disclaimer: Các nghệ sĩ có âm nhạc được sử dụng trong hướng dẫn này không
+    tài trợ hoặc chứng thực Amazon như một phần của việc cấp phép sử dụng âm nhạc
+    của họ cho Code.org.
   blockchain_hero_heading: Cách thức hoạt động của Blockchain
   blockchain_hero_desc: Đi sâu vào thế giới blockchain với “Cách thức hoạt động của
     Blockchain”, loạt video mới của chúng tôi và các bài học kèm theo!
@@ -13828,6 +13841,9 @@ vi:
   step_06: Bước 6
   step_07: Bước 7
   step_08: Bước 8
+  what: 'Cái gì:'
+  when: 'Khi nào:'
+  where: 'Ở đâu:'
   hoc_how_to_top_heading: Hướng dẫn của bạn về Hour of Code
   hoc_how_to_top_desc: Hướng dẫn hướng dẫn phù hợp để có trải nghiệm Hour of Code
     tốt nhất.
@@ -13877,74 +13893,88 @@ vi:
     giờ được thiết kế cho mọi lứa tuổi bằng hơn 45 ngôn ngữ.
   hoc_how_to_step_label_plan: Lập kế hoạch nơi và thời điểm bạn sẽ thực hiện Giờ Mã
   hoc_how_to_step_label_choose_activity: Chọn hoạt động của bạn
+  hoc_how_to_step_label_choose_activities: Chọn hoạt động của bạn
   hoc_how_to_step_label_test_activity: Kiểm tra hoạt động của bạn
   hoc_how_to_step_label_register_event: Đăng ký sự kiện của bạn
   hoc_how_to_step_label_tell: Nói với học sinh, trường học và cộng đồng của bạn
   hoc_how_to_step_label_get_coding: Nhận mã hóa!
   hoc_how_to_step_label_celebrate: Kỷ niệm
   hoc_how_to_step_label_beyond_hoc: Vượt qua giờ mã
+  hoc_how_to_step_label_plan_your_event: Lên kế hoạch cho sự kiện của bạn
+  hoc_how_to_step_label_plan_your_hour: Lên kế hoạch giờ của bạn
+  hoc_how_to_step_label_help_spread_word: Giúp truyền bá
   hoc_how_to_step_beyond_hoc_subhead: Nó không kết thúc ở đây!
-  hoc_how_to_step_beyond_hoc_desc: Khoa học máy tính không nhất thiết phải kết thúc
-    với Giờ Mã! Trong khi 90% phụ huynh muốn con mình học khoa học máy tính, hầu hết
-    các trường vẫn không dạy nó. Tìm hiểu cách mang CS đến trường của con bạn ngay
-    hôm nay.
-  hoc_how_to_step_01_educators_subhead: Chọn thời gian và không gian sự kiện phù hợp
-    với số lượng sinh viên và thiết bị bạn có sẵn.
-  hoc_how_to_step_01_educators_desc_01: Những không gian nào có sẵn để bạn thực hiện
-    Giờ Mã? Hãy xem xét khả năng công nghệ của không gian của bạn và các loại thiết
-    bị mà bạn mong đợi sinh viên của mình làm việc. Học sinh có thể làm việc trên
-    các hướng dẫn trên một thiết bị duy nhất, thay phiên nhau sử dụng thiết bị dùng
-    chung hoặc thử hướng dẫn cùng nhau trên bảng trắng lớp học. Thậm chí còn có các
-    hướng dẫn không cắm điện có thể được hoàn thành mà không cần thiết bị nào cả.
-    Các tùy chọn đã rút phích cắm có thể được thực hiện ở bất cứ đâu — ngay cả ngoài
-    trời!
-  hoc_how_to_step_01_educators_desc_02: Mọi người trên khắp thế giới tham gia lễ kỷ
-    niệm Giờ Mã trong Tuần lễ Giáo dục CS %{campaign_date} khi các hướng dẫn và hoạt
-    động mới nhất được phát hành. Nhưng bạn có thể thực hiện Hour of Code bất kỳ ngày
-    nào trong năm!
-  hoc_how_to_step_02_educators_desc_01: Khám phá các hoạt động dựa trên độ tuổi, kinh
-    nghiệm, sở thích của nhóm bạn và hơn thế nữa. Học sinh thường thử các bài hướng
-    dẫn tự hướng dẫn, mặc dù nhiều hoạt động bao gồm kế hoạch bài học cho giáo viên
-    để hướng dẫn thảo luận hoặc mở rộng hoạt động.
-  hoc_how_to_step_02_educators_desc_02: Quyết định trước nếu bạn muốn chọn một hướng
-    dẫn duy nhất cho tất cả học sinh của bạn, hoặc để mỗi đứa trẻ tự chọn.
-  hoc_how_to_step_02_educators_desc_03: Năm nay, bạn và học sinh của bạn có thể [tìm
-    hiểu tất cả về AI] (%ai_url) thông qua các hướng dẫn, kế hoạch bài học và loạt
-    video Cách thức hoạt động của AI mới của chúng tôi.
-  hoc_how_to_step_03_educators_desc_01: Hãy tự mình thử hướng dẫn trước khi bạn vào
-    lớp học để bạn có thể trả lời các câu hỏi!
-  hoc_how_to_step_03_educators_desc_02: Bạn cũng có thể kiểm tra hướng dẫn trên máy
-    tính hoặc thiết bị của sinh viên để đảm bảo chúng hỗ trợ âm thanh và video. Có
-    băng thông thấp? Lên kế hoạch hiển thị video ở phía trước lớp học, vì vậy mỗi
-    học sinh không tải xuống video của riêng mình.
-  hoc_how_to_step_03_educators_desc_03: Cân nhắc cung cấp tai nghe cho lớp học của
-    bạn hoặc yêu cầu học sinh mang theo, nếu hướng dẫn bạn chọn phù hợp nhất với âm
-    thanh.
-  hoc_how_to_step_04_educators_desc_01: Khi đăng ký sự kiện Giờ Mã, bạn sẽ nhận được
-    email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Đó cũng là
-    cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham
-    gia. Tình nguyện viên là một nguồn tài nguyên tuyệt vời và có thể đến nói chuyện
-    với lớp của bạn về khoa học máy tính hoặc giúp học sinh của bạn với các hoạt động
-    Giờ Mã.
-  hoc_how_to_step_05_educators_desc_01: Làm cho sinh viên của bạn hào hứng với sự
-    kiện này bằng cách chia sẻ [video truyền cảm hứng] (%{videos_url}) nêu bật những
-    con người đa dạng và những cách sáng tạo mà khoa học máy tính có thể được sử dụng
-    trong thế giới thực.
-  hoc_how_to_step_05_educators_desc_02: Chia sẻ kế hoạch Giờ Mã của bạn với các giáo
-    viên khác, những người có thể muốn tham gia vào cuộc vui! Đây cũng là một cơ hội
-    tuyệt vời để liên hệ với Hiệp hội Sinh viên Giáo viên Phụ huynh của trường bạn
-    hoặc chia sẻ trong các bản tin phụ huynh, cho họ biết những gì con họ đang học.
-  hoc_how_to_step_06_educators_desc_01: Hướng học sinh của bạn đến hoạt động, có thể
-    bằng cách chia sẻ liên kết trên bảng hoặc thông qua hệ thống quản lý học tập của
-    lớp học của bạn. Học sinh của bạn có thể gặp phải những thách thức - không sao
-    cả! Học lập trình giống như học một ngôn ngữ mới; bạn sẽ không thành thạo ngay
-    lập tức. Nếu bạn không biết câu trả lời, bạn có thể cùng nhau tìm ra nó.
-  hoc_how_to_step_07_educators_desc_01: 'Hãy chắc chắn ăn mừng thành công! Chia sẻ
-    hình ảnh và video về sự kiện Giờ Mã của bạn trên phương tiện truyền thông xã hội.
-    Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể làm nổi bật thành công
-    của bạn!'
-  hoc_how_to_step_07_educators_desc_02: Bạn cũng có thể in chứng chỉ cho học sinh
-    của mình để thể hiện thành tích của họ!
+  hoc_how_to_step_plan_hour_desc_01: 'Dưới đây là một chương trình làm việc mẫu để
+    giúp bạn bắt đầu:'
+  hoc_how_to_step_choose_activities_desc_01: Năm nay, chủ đề Hour of Code là Sáng
+    tạo với trí tuệ nhân tạo (AI). Cho dù đó là mã hóa các ứng dụng và thuật toán
+    mới, tạo ra nghệ thuật độc đáo hoặc tạo vũ đạo để khiến chúng ta nhảy múa, AI
+    đang mở ra những cơ hội mới cho biểu hiện kỹ thuật số giúp mở rộng hiểu biết của
+    chúng ta về sự sáng tạo. Làm cho năm nay trở nên đặc biệt bằng cách hoàn thành
+    một hoạt động mã hóa VÀ tìm hiểu về AI.
+  hoc_how_to_step_choose_activities_desc_02: Đầu tiên, [khám phá hàng trăm hoạt động
+    mã hóa] (%{activities_url}) và chọn một hoạt động dựa trên độ tuổi, kinh nghiệm,
+    sở thích của nhóm bạn và hơn thế nữa. [Những hoạt động chọn lọc này] (%{ai_activities_url})
+    giới thiệu trí tuệ nhân tạo như một chủ đề hoặc bài học chính.
+  hoc_how_to_step_choose_activities_desc_03: Sau đó, [tìm hiểu tất cả về AI] (%{ai_url}).
+    Học sinh có thể xem các video ngắn giới thiệu các chuyên gia trong lĩnh vực này
+    và có các kế hoạch bài học đi kèm để mở rộng hoạt động và hướng dẫn thảo luận
+    thêm. Hoặc, chúng tôi cung cấp dịch vụ học tập chuyên nghiệp miễn phí cho các
+    nhà giáo dục để mở khóa tương lai của việc giảng dạy với và về AI.
+  hoc_how_to_step_educators_register_desc: Bắt đầu với cam kết thực hiện Hour of Code
+    với học sinh của bạn bằng cách đăng ký sự kiện của bạn. Khi đăng ký, bạn sẽ nhận
+    được email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Bạn
+    cũng sẽ được [đưa lên bản đồ] (%{map_url}). Toàn bộ nỗ lực tập thể của chúng ta
+    thể hiện cam kết toàn cầu đối với phong trào khoa học máy tính, điều này sẽ giúp
+    chúng ta xây dựng động lực cho sự thay đổi hệ thống.
+  hoc_how_to_step_educators_plan_desc_01: Trước sự kiện của bạn, hãy tự mình thử các
+    hoạt động để bạn có thể đảm bảo chúng hoạt động trên các thiết bị của sinh viên
+    và bạn đã sẵn sàng trả lời các câu hỏi! Có băng thông thấp? Lên kế hoạch hiển
+    thị video ở phía trước lớp học, vì vậy mỗi học sinh không tải xuống video của
+    riêng mình.
+  hoc_how_to_step_educators_plan_desc_02: Mọi người trên khắp thế giới thường tham
+    gia lễ kỷ niệm Giờ Mã trong Tuần lễ Giáo dục Khoa học Máy tính (%{campaign_date}),
+    nhưng bạn có thể thực hiện Hour of Code bất kỳ ngày nào trong năm!
+  hoc_how_to_step_educators_plan_desc_03: Chọn một không gian phù hợp với số lượng
+    sinh viên và thiết bị bạn có sẵn. Học sinh có thể thử các hoạt động trên các thiết
+    bị riêng lẻ, thay phiên nhau chia sẻ thiết bị hoặc như một lớp học trên bảng trắng.
+    Thậm chí có những hoạt động không cắm điện có thể được hoàn thành mà không cần
+    thiết bị nào cả, vì vậy chúng thậm chí có thể được thực hiện bên ngoài!
+  hoc_how_to_step_educators_spread_word_desc_01: Giúp chúng tôi truyền bá thông tin
+    trong cộng đồng của bạn với [các mẫu email này] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Yêu cầu hai đồng nghiệp [register](%{register_url})
+    và tổ chức một hoạt động Hour of Code. Đến lượt họ, họ có thể đảm bảo hai đồng
+    nghiệp, những người có thể đảm bảo hai đồng nghiệp, v.v.
+  hoc_how_to_step_educators_spread_word_desc_03: Yêu cầu hiệu trưởng của bạn [tổ chức
+    một sự kiện toàn trường] ()%{host_url}. Khi 300 trẻ em trở lên tham gia, bạn có
+    thể nhận được một bộ đính hôn đặc biệt với áo phông, áp phích, nhãn dán máy tính
+    xách tay, v.v. [Chia sẻ kế hoạch sự kiện toàn trường của bạn] (%{share_url}) để
+    đủ điều kiện.
+  hoc_how_to_step_educators_spread_word_desc_04: Liên hệ với Hiệp hội Sinh viên Giáo
+    viên Phụ huynh của trường bạn hoặc chia sẻ trong các bản tin phụ huynh, cho họ
+    biết những gì con họ đang học.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 sáng: Bắt đầu với một
+    [video truyền cảm hứng] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 sáng: Học sinh thực hiện
+    hoạt động mã hóa của họ'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 sáng: Học sinh tìm hiểu
+    về AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 sáng: Giáo viên phát biểu
+    kết thúc'
+  hoc_how_to_step_educators_get_coding_desc: Hướng học sinh của bạn đến hoạt động,
+    có thể bằng cách chia sẻ liên kết trên bảng hoặc thông qua hệ thống quản lý học
+    tập của lớp học của bạn. Học sinh của bạn có thể gặp phải những thách thức - không
+    sao cả! Học lập trình giống như học một ngôn ngữ mới; bạn sẽ không thành thạo
+    ngay lập tức. Nếu bạn không biết câu trả lời, bạn có thể cùng nhau tìm ra nó.
+  hoc_how_to_step_educators_celebrate_desc: 'Sau sự kiện của bạn, in giấy chứng nhận
+    hoàn thành và chúc mừng sinh viên của bạn. Chia sẻ ảnh và video về sự kiện Giờ
+    Mã của bạn và thể hiện thành tích của học sinh bằng cách sử dụng #HourOfCode và
+    @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Khoa học máy tính không nhất thiết phải kết
+    thúc với Hour of Code! Trong khi 90% phụ huynh muốn con mình học khoa học máy
+    tính, hầu hết các trường vẫn không dạy nó. Để giúp đỡ, chương trình giảng dạy
+    của chúng tôi dựa trên web và miễn phí để sử dụng, mãi mãi. Tìm hiểu làm thế nào
+    để mang CS đến trường của bạn ngay hôm nay.
   hoc_ai_top_desc: Bất cứ ai cũng có thể tìm hiểu về AI, cho dù bạn là học sinh trong
     lớp hay một nhà giáo dục mở khóa tương lai của việc giảng dạy với và về AI.
   hoc_ai_how_ai_works_video_series_desc: Loạt video ngắn này sẽ giới thiệu cho bạn
@@ -14635,8 +14665,8 @@ vi:
     tôi rất biết ơn được hưởng lợi từ sự giúp đỡ không mệt mỏi của cộng đồng giáo
     dục khoa học máy tính rộng lớn hơn và [chúng tôi cảm ơn tất cả các đối tác và
     cá nhân đã hỗ trợ tác động của chúng tôi trong những năm qua] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 Annual Report](%{report_url}) (Past
-    reports: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
+  about_page_section_more_list_1: "[Báo cáo thường niên năm 2021 của Code.org] (%{report_url})
+    (Báo cáo [2020]trước đây: [2019](%{past_url_1}), (%{past_url_2}), [2018](%{past_url_3}),
     [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
   about_page_section_more_list_2: "[Các giá trị cốt lõi và hướng dẫn nhắn tin của
     chúng tôi] (%{core_url})"
@@ -14690,10 +14720,10 @@ vi:
     dẫn cấp cao cho các tiểu bang, quận, và tổ chức thực hiện giáo dục khoa học máy
     tính. Khung đã giành được sự ủng hộ của hàng trăm học giả, nhà giáo dục K-12,
     công ty phần mềm, tổ chức phi lợi nhuận và tiểu bang.
-  about_page_section_specific_description_6: Code.org IRS form 990 for [2014](%{irs_url_1}),
-    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation
-    Policy.](%{donation_policy_url})
+  about_page_section_specific_description_6: Mẫu đơn 990 của IRS của Code.org cho
+    [2014] [2015](%{irs_url_1}%{irs_url_2}), [2016](), (%{irs_url_3}), [2017](%{irs_url_4}),
+    [2018](%{irs_url_5}), [2019](%{irs_url_6}), [2020](%{irs_url_7}) và [2021](%{irs_url_8}).
+    [Chính sách quyên góp.] (%{donation_policy_url})
   about_page_section_specific_description_7: "[Đăng ký để nhận cập nhật trạng thái]
     (%{sign_up_url}) về tiến bộ trong phong trào khoa học máy tính K-12 và về công
     việc của Code.org. Hoặc theo dõi Code.org trên phương tiện truyền thông xã hội:"
@@ -14724,66 +14754,72 @@ vi:
     dành cho các nhà hoạch định chính sách, lãnh đạo trường học và nhân viên để phát
     triển hướng dẫn ban đầu về AI trong trường học của họ.
   teach_ai_button_label: Xem Bộ công cụ
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Học tập cho lứa tuổi 11 trở lên
+  middle_high_page_main_description: Khám phá thế giới khoa học máy tính với các video
+    hấp dẫn, hướng dẫn tự theo nhịp độ, hoạt động lập trình và hơn thế nữa!
+  middle_high_page_hero_title: Bắt đầu với Hour of Code
+  middle_high_page_hero_description: Tìm hiểu các nguyên tắc cơ bản của khoa học máy
+    tính với các hoạt động Hour of Code miễn phí, có các khối mã hóa kéo và thả. Có
+    hàng trăm tùy chọn kéo dài một giờ để lựa chọn!
+  middle_high_page_hourofcode_link: Khám phá các hoạt động Hour of Code
+  middle_high_page_modules_title: Mô-đun lập trình cho học sinh lớn tuổi
+  middle_high_page_modules_description: Được dựa trên các khóa học Khám phá CS và
+    Nguyên tắc CS của chúng tôi, các mô-đun ngắn, có nhịp độ tự lập này dành cho học
+    sinh trung học cơ sở và trung học phổ thông là một cách tuyệt vời để học các khái
+    niệm bao gồm tất cả các ngôn ngữ và công cụ lập trình.
+  middle_high_page_modules_card_title_1: Giới thiệu về Game Lab
+  middle_high_page_modules_card_title_2: Lập trình Chú rùa trong App Lab
+  middle_high_page_modules_card_title_3: Lập trình hướng sự kiện trong App Lab
+  middle_high_page_modules_card_description_1: Di chuyển theo tốc độ của riêng bạn
+    trong phần giới thiệu này về môi trường Game Lab của chúng tôi khi bạn lập trình
+    hình ảnh động, nghệ thuật tương tác và trò chơi.
+  middle_high_page_modules_card_description_2: Mở khóa khả năng tạo ra các ứng dụng
+    tương tác phong phú với JavaScript trong App Lab!
+  middle_high_page_modules_card_description_3: Đi theo nhịp độ của riêng bạn với phần
+    giới thiệu về môi trường lập trình App Lab này, trong đó sinh viên sử dụng JavaScript
+    để tạo các ứng dụng tương tác.
+  middle_high_page_modules_card_link: Hãy thử
+  middle_high_page_make_your_own_title: Tạo ứng dụng, trò chơi và trang web của riêng
+    bạn
+  middle_high_page_make_your_own_description: 'Ngoài các khóa học, chúng tôi có các
+    công cụ lập trình cho phép bạn khám phá sự sáng tạo của mình và tạo ra một cái
+    gì đó tuyệt vời. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Phòng thí nghiệm trò chơi
+  middle_high_page_make_your_own_card_title_3: Phòng thí nghiệm Web
+  middle_high_page_make_your_own_card_descrpition_1: App Lab là một môi trường lập
+    trình nơi bạn có thể tạo các ứng dụng đơn giản. Thiết kế một ứng dụng, viết mã
+    bằng JavaScript bằng khối hoặc văn bản, sau đó chia sẻ ứng dụng của bạn trong
+    vài giây.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab là môi trường lập trình
+    để bạn có thể tạo các hoạt ảnh và game đơn giản bằng các đối tượng và nhân vật
+    tương tác với nhau.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab là một môi trường lập
+    trình nơi bạn có thể tạo các trang web đơn giản bằng HTML và CSS. Thiết kế trang
+    web của bạn và chia sẻ trang web của bạn trong vài giây.
   middle_high_page_make_your_own_card_link: Tìm hiểu thêm
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Tài nguyên bổ sung
+  middle_high_page_additional_resources_description: Có rất nhiều cách để khám phá
+    thêm khoa học máy tính! Duyệt qua thư viện video của chúng tôi hoặc tìm hiểu thêm
+    về sự nghiệp thú vị trong lĩnh vực khoa học máy tính.
+  middle_high_page_video_library_title: Khám phá Thư viện Video của chúng tôi
+  middle_high_page_video_library_description: Tìm hiểu những điều cơ bản về khoa học
+    máy tính thông qua các video ngắn 5-10 phút về các chủ đề như trí tuệ nhân tạo,
+    Internet, cách máy tính hoạt động, cách không bị hack, blockchain, nghề nghiệp
+    và hơn thế nữa!
+  middle_high_page_video_library_link: Xem thư viện video
+  middle_high_page_cs_journeys_title: Đi xa hơn với CS Journeys
+  middle_high_page_cs_journeys_description: Thực hiện bước tiếp theo trong hành trình
+    khoa học máy tính của bạn. Khám phá nghề nghiệp, cơ hội cố vấn, khóa học trực
+    tuyến, học bổng, thực tập và hơn thế nữa!
+  middle_high_page_cs_journeys_link: Khám phá CS Journeys
+  middle_high_page_cs_title: Khoa học máy tính trong lớp học
+  middle_high_page_cs_description: Những khóa học này nên được dẫn dắt bởi một giáo
+    viên! Nếu bạn muốn thấy họ được dạy tại trường của bạn, hãy cân nhắc làm việc
+    với một giáo viên để đưa họ đến lớp của bạn.
+  middle_high_page_cs_card_title_1: Khám phá CS
+  middle_high_page_cs_card_title_2: Nguyên tắc CS
+  middle_high_page_cs_card_title_3: AP Khoa học máy tính A
   middle_high_page_cs_card_description_1: Giáo trình miễn phí kéo dài một năm sẽ giới
     thiệu cho học viên các khái niệm cơ bản của khoa học máy tính và khuyến khích
     họ khám phá cách máy tính và công nghệ tác động đến thế giới.
@@ -14794,34 +14830,35 @@ vi:
   middle_high_page_cs_card_description_3: Giới thiệu sinh viên về kỹ thuật phần mềm
     và thiết kế hướng đối tượng trong khi họ học ngôn ngữ lập trình Java trong chương
     trình giảng dạy miễn phí này cho AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Khám phá CS Dicoveries
   middle_high_page_cs_link_2: Khám phá các nguyên tắc CS
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Khám phá CSA
+  elemeentary_page_main_title: Học tập cho lứa tuổi từ 5 đến 11
+  elementary_page_main_description: Khám phá thế giới khoa học máy tính với các video
+    hấp dẫn, hướng dẫn tự theo nhịp độ, hoạt động lập trình và hơn thế nữa!
+  elementary_page_own_pace_title: Tiếp tục học theo tốc độ của riêng bạn
+  elementary_page_own_pace_description: Tạo bản vẽ, trò chơi và hơn thế nữa trong
+    hai lựa chọn tuyệt vời này để học sinh bắt đầu tự học những điều cơ bản về khoa
+    học máy tính.
+  elementary_page_own_pace_card_title_1: Khóa học Pre-Reader Express
+  elementary_page_own_pace_card_title_2: Khóa học cấp tốc
+  elementary_page_own_pace_card_description_1: Học khoa học máy tính theo tốc độ của
+    riêng bạn! Học cách tạo các chương trình máy tính, phát triển kỹ năng giải quyết
+    vấn đề và vượt qua những thử thách thú vị! Tạo các trò chơi và dự án sáng tạo
+    để chia sẻ với bạn bè, gia đình và giáo viên.
+  elementary_page_own_pace_link_1: Bắt đầu khóa học trước khi đọc
+  elementary_page_own_pace_link_2: Bắt đầu khóa học Express
+  elementary_page_make_your_own_games_title: Tạo hình ảnh động và trò chơi của riêng
+    bạn
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Đã đến lúc sáng tạo! Sử
+    dụng mã hóa dựa trên khối để tạo ra một cái gì đó ngớ ngẩn, ngọt ngào hoặc ngoài
+    không gian trong Sprite Lab. Giới hạn duy nhất là trí tưởng tượng của bạn!
+  elementary_page_make_your_own_games_link: Dùng thử Sprite Lab
+  elementary_page_computer_science_title: Khoa học máy tính trong lớp học
+  elementary_page_computer_science_description: Những khóa học này nên được dẫn dắt
+    bởi một giáo viên! Nếu bạn muốn thấy họ được dạy tại trường của bạn, hãy yêu cầu
+    phụ huynh hoặc người giám hộ làm việc với giáo viên để đưa họ đến lớp của bạn.
   elementary_page_computer_science_card_title_1: Các nguyên tắc cơ bản về khoa học
     máy tính
   elementary_page_computer_science_card_title_2: Kết nối khoa học máy tính

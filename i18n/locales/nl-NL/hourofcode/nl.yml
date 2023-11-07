@@ -7,10 +7,10 @@ nl:
     december, 2015
   coming_soon: Binnenkort beschikbaar
   new: Nieuw
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Uren code die wordt geserveerd
   hoc_stat_languages: Leerlingen leren in 40 talen
   hoc_stat_hours_served: Meer dan 100M leerlingen hebben 'Hour of Code' geprobeerd
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Vrouwelijke studenten vormen 50% van de Hour of Code-deelnemers
   campaign_date_start_short: 4 dec.
   campaign_date_start_long: 4 december
   campaign_date_short: 4-10 dec
@@ -51,10 +51,10 @@ nl:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Wat ga jij maken?
   hoc2023_social_creativity_with_ai_desc: Gebruik computerwetenschap om AI te ontdekken
     en te leren kennen!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: The Hour of Code is een gratis kennismaking met informatica
+    door middel van leuke activiteiten en video's voor leerlingen van alle vaardigheidsniveaus.
+    De viering van zowel codering als AI wordt dit jaar ondersteund door meer dan
+    400 partners, 20.000 docenten en 58.000 vrijwilligers.
   hoc2022_header: Ontdek, speel, creëer!
   social_hoc2022_explore_play_create: Gebruik informatica om te ontdekken, te spelen
     en te creëren!
@@ -67,9 +67,9 @@ nl:
     muziek uit Disney's „Encanto” en meer!
   social_hoc2023_dance: Met Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     muziek uit Disney's „Encanto” en meer!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Het is tijd om je spullen te laten zien! Creëer je eigen
+    dansfeest met hits van Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj,
+    Rosalía en meer!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Leer vandaag, bouw een mooiere morgen.  "
@@ -289,21 +289,23 @@ nl:
     ondersteuning van andere docenten.
   required_materials: 'Benodigde materialen:'
   optional_materials: 'Optionele materialen:'
-  for_students: For students
+  for_students: Voor studenten
   for_educators: Voor leerkrachten
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Organiseer een uur code
   call_to_action_hold_an_event: Een evenement houden
   call_to_action_register_event: Meld je evenement aan
   call_to_action_register_your_hoc: Registreer je Hour of Code
   call_to_action_select_activity: Selecteer een activiteit
+  call_to_action_select_coding_activity: Selecteer een coderingsactiviteit
   call_to_action_start_activity: Een activiteit starten
   call_to_action_get_certificates: Certificaten verkrijgen
+  call_to_action_print_certificates: Certificaten afdrukken
   call_to_action_go_beyond_hoc: Ga verder dan het Hour of Code
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Ontdek alle Hour of Code-activiteiten
+    van Code.org
+  call_to_action_start_dance_party: Start het dansfeest
+  call_to_action_start_part_02: Begin deel twee
+  call_to_action_start_unplugged_activity: De activiteit zonder stekker starten
   call_to_action_view_promo_resources: Promotiemateriaal bekijken
   call_to_action_learn_more: Meer informatie
   call_to_action_watch_now: Nu kijken
@@ -400,9 +402,9 @@ nl:
   call_to_action_view_faqs: Bekijk meer veelgestelde vragen
   call_to_action_applications_open: Aanvragen zijn nu geopend
   call_to_action_apply_cs_ambassador: Meld je aan om CS Ambassador te worden
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Binnenkort beschikbaar!
+  call_to_action_learn_how_ai_works: Ontdek hoe AI werkt
+  call_to_action_learn_about_ai: Meer informatie over AI
   aria_label_call_to_action_hoc_how_to_educators: Bekijk de handleiding voor docenten
   aria_label_call_to_action_hoc_how_to_companies: Bekijk de handleiding voor bedrijven
   aria_label_call_to_action_hoc_how_to_districts: Bekijk de instructiegids voor districten
@@ -414,9 +416,9 @@ nl:
   aria_label_call_to_action_hoc_how_to_volunteers: Bekijk de handleiding voor vrijwilligers
   aria_label_call_to_action_hoc_how_to_virtual_events: Bekijk de handleiding voor
     virtuele evenementen
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Start de Dance Party-activiteit
+  aria_label_call_to_action_dance_02: Start deel twee van de Dance Party-activiteit
+  aria_label_call_to_action_dance_unplugged: De activiteit Dance Party unplugged starten
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -424,6 +426,8 @@ nl:
     Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Start het professionele leerprogramma Teaching
     Computer Science Principles
+  aria_label_call_to_action_teaching_problem_solving: Start het professionele leerprogramma
+    Teaching, Problem Solving and Computing
   aria_label_call_to_action_teaching_csc: Start het professionele leerprogramma Teaching
     Computer Science Connections
   aria_label_call_to_action_teaching_ai: Start het professionele leerprogramma Teaching
@@ -441,6 +445,8 @@ nl:
     Discoveries
   aria_label_call_to_action_curriculum_csp: Ontdek het curriculum Computer Science
     Principles
+  aria_label_call_to_action_curriculum_problem_solving: Ontdek het curriculum voor
+    probleemoplossing en computergebruik
   aria_label_call_to_action_curriculum_csc: Ontdek het curriculum van Computer Science
     Connections
   aria_label_call_to_action_curriculum_ai: Ontdek het curriculum voor AI en machine
@@ -518,6 +524,7 @@ nl:
   curriculum_name_csf_teacher_led: Les onder leiding van de leraar
   curriculum_name_csd: Ontdekkingen in de informatica
   curriculum_name_csp: Principes van de informatica
+  curriculum_name_problem_solving: Probleemoplossing en computergebruik
   curriculum_name_csc: Verbindingen op het gebied van informatica
   curriculum_name_csa: AP® Informatica A
   curriculum_name_csa_ai: Software-engineering en computervisie
@@ -530,25 +537,27 @@ nl:
   curriculum_name_creating_apps_with_devices: Apps maken met apparaten
   curriculum_name_poetry: Coderen met poëzie
   curriculum_name_dance_party: Dansfeest
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Blijf dansen
+  curriculum_name_dance_party_unplugged: Dansfeest zonder stekker
+  curriculum_name_dance_party_ai_edition: 'Dansfeest: AI-editie'
   curriculum_name_problem_solving_computing: Probleemoplossing en computergebruik
   curriculum_name_web_development: Webontwikkeling
   curriculum_name_interactive_animations_games: Interactieve animaties en games
   curriculum_name_design_process: Het ontwerpproces
   curriculum_name_data_society: Data en maatschappij
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Gebruik in deze introductieactiviteit code om verschillende
+    kleurrijke personages de overstap te laten maken naar geanimeerde achtergronden
+    en vrolijke muziek.
+  curriculum_desc_dance_party_02: Ga verder dan de inleidende handleiding met uitgebreide
+    projectideeën. Bekijk een bibliotheek met voorbeelden van complexere dansfeesten.
+  curriculum_desc_dance_party_unplugged: Ga lekker aan de slag, geen computer nodig!
+    Ontdek hoe coderingsconcepten, zoals gebeurtenissen, kunnen worden gebruikt om
+    de choreografie van dansers te synchroniseren.
+  curriculum_desc_dance_party_ai_edition: Kom meer te weten over concepten op het
+    gebied van kunstmatige intelligentie (AI) om je eigen virtuele dansfeest te organiseren
+    met de beste artiesten van vandaag. Met tientallen liedjes om uit te kiezen bereik
+    je elke student, ongeacht hun muzieksmaak. Het is tijd om je spullen te laten
+    zien!
   curriculum_desc_csf: Gratis set elementaire curricula die studenten kennis laat
     maken met de basisconcepten van de informatica.
   curriculum_desc_csf_express: Leer computerprogramma's te maken, probleemoplossende
@@ -685,12 +694,12 @@ nl:
   module_grade_grade_03: Graad 3
   module_grade_grade_04: Graad 4
   module_grade_grade_05: Graad 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Leeftijden 5-7
+  module_age_07: Vanaf 7 jaar
+  module_age_07_11: Leeftijden 7-11
+  module_age_11: Leeftijden 11+
+  module_age_13: Vanaf 13 jaar
+  module_age_all_age: Alle leeftijden
   module_grade_k_5_teachers: K-5 leraren
   module_grade_6_10_teachers: 6-10 leraren
   module_grade_9_12_teachers: 9-12 leraren
@@ -722,6 +731,7 @@ nl:
   module_label_teaching_csf: Onderwijzen in de grondbeginselen van informatica
   module_label_teaching_csd: Informatica en ontdekkingen leren
   module_label_teaching_csp: Informatica-principes aanleren
+  module_label_teaching_problem_solving: Onderwijzen, probleemoplossing en computergebruik
   module_label_teaching_csc: Informatica-connecties aanleren
   module_label_teaching_ai: AI en machine learning aanleren
   module_label_teaching_maker_cp: 'Lesgeven: apps maken met apparaten (Circuit Playground)'
@@ -786,8 +796,8 @@ nl:
   heading_csa_ai: Op zoek naar dingen om te doen na het AP® -examen?
   heading_bring_cs_to_students: Informatica naar studenten brengen
   heading_cs_ambassador_program: CS Ambassador-programma
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Uitgelichte studentenprojecten
+  heading_start_hoc_with_videos: Begin je Hour of Code met inspirerende video's
   cs_ambassador_subhead: Als je een middelbare scholier bent die graag meer jonge
     vrouwen aanmoedigt om informatica op jouw school te gaan volgen, dan hebben we
     je nodig!
@@ -887,13 +897,14 @@ nl:
     Science Principles van Code.org te ontvangen en nuttige herinneringen, tips en
     updates rechtstreeks in uw inbox te ontvangen.
   subscribe_form_section_unsubscribe: Je kunt je op elk moment uitschrijven.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Programmeer een dansfeest
+  dance_featuring_songs_by_short: 'Met liedjes van:'
+  dance_featuring_songs_by_long: 'Dance Party bevat liedjes van:'
+  dance_and_more: en meer
+  dance_choose_activity: Kies jouw dansfeest
+  dance_afe_disclaimer: De artiesten van wie de muziek in deze handleiding wordt gebruikt,
+    sponsoren of onderschrijven Amazon niet als onderdeel van een licentie voor het
+    gebruik van hun muziek aan Code.org.
   blockchain_hero_heading: Hoe Blockchain werkt
   blockchain_hero_desc: Duik in de wereld van blockchain met „How Blockchain Works”,
     onze nieuwe videoserie en bijbehorende lessen!
@@ -13562,6 +13573,9 @@ nl:
   step_06: Stap 6
   step_07: Stap 7
   step_08: Stap 8
+  what: 'Wat:'
+  when: 'Wanneer:'
+  where: 'Waar:'
   hoc_how_to_top_heading: Jouw gids voor Hour of Code
   hoc_how_to_top_desc: Op maat gemaakte handleidingen voor de beste Hour of Code-ervaring.
   hoc_how_to_top_view_guide: Bekijk de gids voor
@@ -13609,71 +13623,87 @@ nl:
     een uur, ontworpen voor alle leeftijden, in meer dan 45 talen.
   hoc_how_to_step_label_plan: Plan waar en wanneer je je Hour of Code gaat doen
   hoc_how_to_step_label_choose_activity: Kies je activiteit
+  hoc_how_to_step_label_choose_activities: Kies je activiteiten
   hoc_how_to_step_label_test_activity: Test je activiteit
   hoc_how_to_step_label_register_event: Meld je evenement aan
   hoc_how_to_step_label_tell: Vertel het aan je leerlingen, school en gemeenschap
   hoc_how_to_step_label_get_coding: Begin met coderen!
   hoc_how_to_step_label_celebrate: Vier
   hoc_how_to_step_label_beyond_hoc: Na Hour of Code
+  hoc_how_to_step_label_plan_your_event: Plan je evenement
+  hoc_how_to_step_label_plan_your_hour: Plan je uur
+  hoc_how_to_step_label_help_spread_word: Help mee het woord te verspreiden
   hoc_how_to_step_beyond_hoc_subhead: Hier houdt het niet op!
-  hoc_how_to_step_beyond_hoc_desc: Informatica hoeft niet te eindigen met het Hour
-    of Code! Hoewel 90% van de ouders wil dat hun kind informatica leert, geven de
-    meeste scholen dat nog steeds niet. Leer vandaag nog hoe je CS naar de school
-    van je kind kunt brengen.
-  hoc_how_to_step_01_educators_subhead: Selecteer de tijd en ruimte van een evenement
-    die geschikt zijn voor het aantal studenten en apparaten dat je beschikbaar hebt.
-  hoc_how_to_step_01_educators_desc_01: Welke plekken zijn er beschikbaar om je Hour
-    of Code te doen? Denk aan de technische mogelijkheden van je ruimte en het soort
-    apparaten waarop je van je leerlingen verwacht te werken. Leerlingen kunnen op
-    één apparaat werken, beurtelings op een gedeeld apparaat, of samen een tutorial
-    proberen op een whiteboard in de klas. Er zijn zelfs losgekoppelde tutorials die
-    zonder apparaten kunnen worden voltooid. Onaangesloten opties kunnen overal worden
-    gedaan, zelfs buitenshuis!
-  hoc_how_to_step_01_educators_desc_02: Mensen over de hele wereld nemen deel aan
-    de viering van het Hour of Code tijdens de CS Education Week, %{campaign_date}
-    wanneer de nieuwste tutorials en activiteiten worden vrijgegeven. Maar je kunt
-    elke dag van het jaar een Hour of Code doen!
-  hoc_how_to_step_02_educators_desc_01: Ontdek activiteiten op basis van de leeftijd,
-    ervaring, interesses en meer van je groep. Het is populair voor leerlingen om
-    zelfgeleide tutorials uit te proberen, maar veel activiteiten omvatten ook lesplannen
-    voor docenten om de discussie te begeleiden of om de activiteit uit te breiden.
-  hoc_how_to_step_02_educators_desc_02: Beslis van tevoren of je één enkele tutorial
-    wilt kiezen voor al je leerlingen, of laat elk kind zijn eigen les kiezen.
-  hoc_how_to_step_02_educators_desc_03: Dit jaar kunnen jij en je leerlingen [alles
-    over AI leren] (%ai_url) via tutorials, lesplannen en onze nieuwe How AI Works-videoserie.
-  hoc_how_to_step_03_educators_desc_01: Probeer de tutorial zelf uit voordat je naar
-    de klas gaat, zodat je vragen kunt beantwoorden!
-  hoc_how_to_step_03_educators_desc_02: Je kunt ook tutorials testen op computers
-    of apparaten van studenten om er zeker van te zijn dat ze geluid en video ondersteunen.
-    Heb je een lage bandbreedte? Plan om video's aan de voorkant van de klas te laten
-    zien, zodat niet elke student zijn eigen video's downloadt.
-  hoc_how_to_step_03_educators_desc_03: Overweeg om je klas een koptelefoon mee te
-    nemen, of vraag de leerlingen om hun eigen koptelefoon mee te nemen, als de tutorial
-    die je kiest het beste werkt met geluid.
-  hoc_how_to_step_04_educators_desc_01: Wanneer je je Hour of Code-evenement registreert,
+  hoc_how_to_step_plan_hour_desc_01: 'Hier is een voorbeeldagenda om mee te beginnen:'
+  hoc_how_to_step_choose_activities_desc_01: Het thema van Hour of Code is dit jaar
+    Creativiteit met kunstmatige intelligentie (AI). Of het nu gaat om het coderen
+    van nieuwe apps en algoritmen, het genereren van unieke kunst of het maken van
+    choreografieën om ons aan het dansen te krijgen, AI biedt nieuwe mogelijkheden
+    voor digitale expressie die ons begrip van creativiteit vergroten. Maak dit jaar
+    speciaal door een codeeractiviteit te voltooien EN meer te weten te komen over
+    AI.
+  hoc_how_to_step_choose_activities_desc_02: Eerst [ontdek honderden codeeractiviteiten]
+    (%{activities_url}) en kies er een op basis van de leeftijd, ervaring, interesses
+    en meer van je groep. [Deze geselecteerde activiteiten] (%{ai_activities_url})
+    bevatten kunstmatige intelligentie als een belangrijk onderwerp of les.
+  hoc_how_to_step_choose_activities_desc_03: Dan, [leer alles over AI] (%{ai_url}).
+    Studenten kunnen korte video's bekijken met experts uit het veld, en er zijn bijbehorende
+    lesplannen om de activiteit uit te breiden en verdere discussie te begeleiden.
+    Of we bieden docenten gratis professioneel leren om de toekomst van lesgeven met
+    en over AI te ontsluiten.
+  hoc_how_to_step_educators_register_desc: Begin met de toezegging om een uurtje code
+    te doen met je studenten door je evenement te registreren. Wanneer je je registreert,
     ontvang je nuttige e-mails met nieuws en tips voor het organiseren van een succesvol
-    Hour of Code-evenement. Het is ook de manier waarop je lokale vrijwilligers kunt
-    laten weten dat je school meedoet. Vrijwilligers zijn een geweldige hulpbron en
-    kunnen met je klas over informatica komen praten of je leerlingen helpen met Hour
-    of Code-activiteiten.
-  hoc_how_to_step_05_educators_desc_01: Maak je leerlingen enthousiast voor het evenement
-    door [inspirerende video's] (%{videos_url}) te delen waarin verschillende mensen
-    en creatieve manieren worden belicht waarop informatica in de echte wereld kan
-    worden gebruikt.
-  hoc_how_to_step_05_educators_desc_02: Deel je Hour of Code-abonnementen met andere
-    docenten die misschien mee willen doen! Dit is ook een geweldige kans om contact
-    op te nemen met de Parent Teacher Student Association van je school of deel te
-    nemen in nieuwsbrieven voor ouders, zodat ze weten wat hun kinderen leren.
-  hoc_how_to_step_06_educators_desc_01: Leid je leerlingen naar de activiteit, bijvoorbeeld
-    door de link op het bord te delen of via het leerbeheersysteem van je klas. Je
-    leerlingen kunnen tegen uitdagingen aanlopen, dat is oké! Leren programmeren is
-    als het leren van een nieuwe taal; je spreekt niet meteen vloeiend. Als je het
-    antwoord niet weet, kun je er samen achter komen.
-  hoc_how_to_step_07_educators_desc_01: 'Zorg ervoor dat je het succes viert! Deel
-    foto''s en video''s van je Hour of Code-evenement op sociale media. Gebruik #HourOfCode
-    en @codeorg zodat we ook jouw succes kunnen benadrukken!'
-  hoc_how_to_step_07_educators_desc_02: Je kunt ook certificaten afdrukken zodat je
-    leerlingen kunnen laten zien wat ze hebben bereikt!
+    Hour of Code. Je wordt ook [op de kaart gezet] (%{map_url}). De zichtbare totaliteit
+    van onze gezamenlijke inspanningen toont de wereldwijde toewijding aan de informaticabeweging
+    aan, die ons zal helpen om een impuls te geven aan systemische verandering.
+  hoc_how_to_step_educators_plan_desc_01: Probeer de activiteiten voorafgaand aan
+    je evenement zelf uit, zodat je zeker weet dat ze werken op apparaten van studenten
+    en je bereid bent om vragen te beantwoorden! Heb je een lage bandbreedte? Plan
+    om video's aan de voorkant van de klas te laten zien, zodat niet elke leerling
+    zijn eigen video's downloadt.
+  hoc_how_to_step_educators_plan_desc_02: Mensen over de hele wereld nemen vaak deel
+    aan het Hour of Code-feest tijdens de Computer Science Education Week (%{campaign_date}),
+    maar je kunt elke dag van het jaar een Hour of Code doen!
+  hoc_how_to_step_educators_plan_desc_03: Kies een ruimte die geschikt is voor het
+    aantal studenten en apparaten dat je beschikbaar hebt. Leerlingen kunnen activiteiten
+    uitproberen op afzonderlijke apparaten, om beurten een apparaat delen of als klas
+    op een whiteboard. Er zijn zelfs activiteiten zonder stopcontact die zonder apparaten
+    kunnen worden uitgevoerd, dus ze kunnen zelfs buiten worden gedaan!
+  hoc_how_to_step_educators_spread_word_desc_01: Help ons het nieuws in uw gemeenschap
+    te verspreiden met [deze e-mailsjablonen] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Vraag twee collega's om [register](%{register_url})
+    en organiseer een Hour of Code-activiteit. Zij kunnen op hun beurt twee collega's
+    beveiligen, die twee collega's kunnen beveiligen, enz.
+  hoc_how_to_step_educators_spread_word_desc_03: Vraag je directeur om [een schoolbreed
+    evenement te organiseren] ()%{host_url}. Als er 300 of meer kinderen meedoen,
+    ontvang je een speciale verlovingskit met t-shirts, posters, laptopstickers en
+    meer. [Deel je volledige plan voor schoolevenementen] (%{share_url}) om in aanmerking
+    te komen.
+  hoc_how_to_step_educators_spread_word_desc_04: Neem contact op met de Parent Teacher
+    Student Association van je school of deel ze in de nieuwsbrieven van ouders, zodat
+    ze weten wat hun kinderen leren.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 uur: Begin met een [inspirerende
+    video] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 uur: Leerlingen doen hun
+    codeeractiviteit'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 uur: Studenten leren over
+    AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 uur: Docent geeft slotopmerkingen'
+  hoc_how_to_step_educators_get_coding_desc: Leid je leerlingen naar de activiteit,
+    bijvoorbeeld door de link op het bord te delen of via het leerbeheersysteem van
+    je klas. Je leerlingen kunnen tegen uitdagingen aanlopen, dat is oké! Leren programmeren
+    is als het leren van een nieuwe taal; je spreekt niet meteen vloeiend. Als je
+    het antwoord niet weet, kun je er samen achter komen.
+  hoc_how_to_step_educators_celebrate_desc: 'Druk na je evenement de certificaten
+    van voltooiing af en feliciteer je studenten. Deel foto''s en video''s van je
+    Hour of Code-evenement en laat de prestaties van je leerlingen zien met #HourOfCode
+    en @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Informatica hoeft niet te eindigen met het
+    Hour of Code! Hoewel 90% van de ouders wil dat hun kind informatica leert, geven
+    de meeste scholen daar nog steeds geen les in. Om u daarbij te helpen, is ons
+    curriculum webgebaseerd en voor altijd gratis te gebruiken. Leer vandaag nog hoe
+    je CS naar je school kunt brengen.
   hoc_ai_top_desc: Iedereen kan meer te weten komen over AI, of je nu een student
     in de klas bent of een docent die de toekomst van lesgeven met en over AI ontsluit.
   hoc_ai_how_ai_works_video_series_desc: Deze serie korte video's laat je zien hoe
@@ -14436,66 +14466,68 @@ nl:
     beleidsmakers, schoolleiders en personeel om initiële richtlijnen over AI op hun
     scholen te ontwikkelen.
   teach_ai_button_label: Bekijk de toolkit
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Leren voor kinderen van 11 jaar en ouder
+  middle_high_page_main_description: Ontdek de wereld van de informatica met boeiende
+    video's, tutorials in je eigen tempo, programmeeractiviteiten en meer!
+  middle_high_page_hero_title: Ga aan de slag met Hour of Code
+  middle_high_page_hero_description: Leer de grondbeginselen van de informatica met
+    gratis Hour of Code-activiteiten, inclusief codeerblokken met slepen en neerzetten.
+    Er zijn honderden opties van een uur om uit te kiezen!
+  middle_high_page_hourofcode_link: Ontdek de activiteiten van Hour of Code
+  middle_high_page_modules_title: Programmeermodules voor oudere studenten
+  middle_high_page_modules_description: Deze korte modules in eigen tempo voor middelbare
+    en middelbare scholieren zijn aangepast aan onze cursussen CS Discoveries en CS
+    Principles en zijn een geweldige manier om concepten te leren die alle programmeertalen
+    en tools omvatten.
+  middle_high_page_modules_card_title_1: Game Lab Introductie
+  middle_high_page_modules_card_title_2: Turtle Programmeren in App Lab
+  middle_high_page_modules_card_title_3: Event-Driven Programmeren in App Lab
+  middle_high_page_modules_card_description_1: Beweeg in je eigen tempo in deze introductie
+    tot onze Game Lab-omgeving terwijl je animaties, interactieve kunst en games programmeert.
+  middle_high_page_modules_card_description_2: Ontgrendelt de mogelijkheid om rijke,
+    interactieve apps te maken met JavaScript in het App Lab!
+  middle_high_page_modules_card_description_3: Ga in je eigen tempo aan de slag met
+    deze kennismaking met de App Lab-programmeeromgeving, waarin leerlingen JavaScript
+    gebruiken om interactieve apps te maken.
+  middle_high_page_modules_card_link: Probeer het uit
+  middle_high_page_make_your_own_title: Maak je eigen apps, games en webpagina's
+  middle_high_page_make_your_own_description: 'Naast cursussen hebben we programmeertools
+    waarmee je je creativiteit kunt ontdekken en iets geweldigs kunt maken. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Gamelab
+  middle_high_page_make_your_own_card_title_3: Weblab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab is een programmeeromgeving
+    waar je eenvoudige apps kunt maken. Ontwerp een app, codeer in JavaScript met
+    blokken of tekst en deel je app vervolgens binnen enkele seconden.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab is een programmeeromgeving
+    waarin je eenvoudige animaties en games kan maken met objecten en personages die
+    met elkaar interageren.
+  middle_high_page_make_your_own_card_descrpition_3: Weblab is een programmeeromgeving
+    waar je eenvoudige webpagina's kunt maken met HTML en CSS. Ontwerp uw webpagina's
+    en deel uw site in enkele seconden.
   middle_high_page_make_your_own_card_link: Meer informatie
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Aanvullende bronnen
+  middle_high_page_additional_resources_description: Er zijn zoveel manieren om de
+    informatica verder te verkennen! Blader door onze videobibliotheek of kom meer
+    te weten over interessante carrières in de informatica.
+  middle_high_page_video_library_title: Ontdek onze videobibliotheek
+  middle_high_page_video_library_description: Leer de basisprincipes van de informatica
+    door middel van korte video's van 5-10 minuten over onderwerpen als kunstmatige
+    intelligentie, het internet, hoe computers werken, hoe je niet gehackt wordt,
+    blockchain, carrières en meer!
+  middle_high_page_video_library_link: Bekijk de videobibliotheek
+  middle_high_page_cs_journeys_title: Ga verder met CS Journeys
+  middle_high_page_cs_journeys_description: Zet de volgende stap op je reis op het
+    gebied van informatica. Ontdek carrières, mentorschapsmogelijkheden, online cursussen,
+    beurzen, stages en meer!
+  middle_high_page_cs_journeys_link: Ontdek CS-reizen
+  middle_high_page_cs_title: Informatica in de klas
+  middle_high_page_cs_description: Deze cursussen moeten worden gegeven door een docent!
+    Als je wilt dat ze op jouw school worden onderwezen, overweeg dan om met een leraar
+    samen te werken om ze naar je klas te brengen.
+  middle_high_page_cs_card_title_1: CS Ontdekkingen
+  middle_high_page_cs_card_title_2: CS-principes
+  middle_high_page_cs_card_title_3: AP Computerwetenschappen A
   middle_high_page_cs_card_description_1: Gratis curriculum van een jaar dat studenten
     kennis laat maken met de fundamentele concepten van de informatica en hen uitdaagt
     om te ontdekken hoe computers en technologie de wereld kunnen beïnvloeden.
@@ -14506,34 +14538,35 @@ nl:
   middle_high_page_cs_card_description_3: Laat studenten kennismaken met software-engineering
     en objectgeoriënteerd ontwerp terwijl ze de programmeertaal Java leren in dit
     gratis curriculum voor AP® Computer Science A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Ontdek de ontdekkingen van CS
   middle_high_page_cs_link_2: Ontdek de CS-principes
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Ontdek CSA
+  elemeentary_page_main_title: Leren voor kinderen van 5 tot 11 jaar
+  elementary_page_main_description: Ontdek de wereld van de informatica met boeiende
+    video's, tutorials in je eigen tempo, programmeeractiviteiten en meer!
+  elementary_page_own_pace_title: Blijf leren in je eigen tempo
+  elementary_page_own_pace_description: Maak tekeningen, spelletjes en meer in deze
+    twee uitstekende opties voor studenten die zelf aan de slag gaan met het leren
+    van de basisprincipes van informatica.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express-cursus
+  elementary_page_own_pace_card_title_2: Expres Cursus
+  elementary_page_own_pace_card_description_1: Leer informatica in je eigen tempo!
+    Leer computerprogramma's maken, probleemoplossende vaardigheden ontwikkelen en
+    leuke uitdagingen aangaan! Maak games en creatieve projecten om te delen met vrienden,
+    familie en docenten.
+  elementary_page_own_pace_link_1: De Pre-Reader-cursus starten
+  elementary_page_own_pace_link_2: Express-cursus starten
+  elementary_page_make_your_own_games_title: Maak je eigen animaties en games
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Tijd om creatief aan de
+    slag te gaan! Gebruik codering op basis van blokken om iets geks, liefs of buitengewoons
+    te maken in Sprite Lab. De enige beperking is je verbeelding!
+  elementary_page_make_your_own_games_link: Probeer Sprite Lab
+  elementary_page_computer_science_title: Informatica in de klas
+  elementary_page_computer_science_description: Deze cursussen moeten worden gegeven
+    door een docent! Als je wilt dat ze op jouw school worden onderwezen, vraag dan
+    een ouder of verzorger om met een leraar samen te werken om ze naar je klas te
+    brengen.
   elementary_page_computer_science_card_title_1: Grondbeginselen van de informatica
   elementary_page_computer_science_card_title_2: Verbindingen op het gebied van informatica
   elementary_page_computer_science_description_1: Gratis curriculum van een jaar dat

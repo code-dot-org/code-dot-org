@@ -9351,7 +9351,7 @@ ar-SA:
           target=\"_blank\">هذا المورد</a> لمشاركة التعليقات مع شريكك.\n\n"
       csc_ecosystemes_foodchain_info:
         markdown: "\n##** تحتوي جميع النظم البيئية على سلسلة غذائية _متوازنة بدقة_
-          **\n## # السلسلة الغذائية للنظام البيئي البحري: .\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          **\n### السلسلة الغذائية للنظام البيئي البحري:\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
           style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###١. توفر الشمس
           الطاقة لعملية التمثيل الضوئي التي تحدث في الطحالب.\n>###٢. الطحالب تؤكل
           من قِبل الأسماك.\n>###٣. يتم صيد الأسماك وأكلها من قِبل البشر الذين يستخدمون
@@ -9391,11 +9391,10 @@ ar-SA:
         questions:
         - text: |-
             قم بإنشاء منطقة صيد للقوارب
-
-             (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)[]!
+            ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
             ابدأ موسم الصيد وموسم عدم الصيد
-            (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)[]!
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
         - text: "ضع حدودًا للصيد\n(https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)[]! "
         title: قم بمطابقة الكود مع الصورة
       csc_ecosystems_matching_conditionals:
@@ -9413,10 +9412,10 @@ ar-SA:
         questions:
         - text: |-
             الطحالب الصغيرة جدًا تجعل الأسماك تغادر.
-            ! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+            ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            الكثير من الطحالب تجعل المرجان مريضًا. <br>
-             (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)[]!
+            الكثير من الطحالب يجعل المرجان مريضًا. <br>
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: |-
             تسمح الكمية المناسبة من الطحالب للمرجان المريض بالشفاء والحفاظ على صحة الأسماك أيضًا.
             ! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
@@ -9432,7 +9431,9 @@ ar-SA:
 
 
         questions:
-        - text: القارب يصطاد السمك.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: |
+            القارب يصطاد السمك.
+             ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
         - text: |-
             الأسماك تأكل الطحالب.
             ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
@@ -9465,11 +9466,11 @@ ar-SA:
           ستقوم ببرمجة **ثلاث ممارسات صيد مستدامة مختلفة** للمساعدة في حماية النظم
           البيئية للمحيطات.\n\n<br>\n\n###لقراءة المزيد عن الحلول المستدامة لمحيطاتنا:
           <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">انقر هنا</a>\n<br>\n<br>\n\n># ممارسات الصيد المستدامة
-          #١:\n>>## مناطق الصيد <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          target=\"_blank\">انقر هنا</a>\n<br>\n<br>\n\n>#ممارسات الصيد المستدامة
+          #١:\n>>## مناطق الصيد \n<img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**يمكن لقوارب الصيد
-          الصيد فقط في المناطق المخصصة. بعض المناطق محظورة على قوارب الصيد حتى يتمكن
-          النظام البيئي من التعافي. ** \n<br>\n<br>\n\n\n"
+          فقط في المناطق المخصصة. بعض المناطق محظورة على قوارب الصيد حتى يتمكن النظام
+          البيئي من التعافي.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
         markdown: "##شارك محاكاة النظام البيئي الخاص بك!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
           PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###** علماء

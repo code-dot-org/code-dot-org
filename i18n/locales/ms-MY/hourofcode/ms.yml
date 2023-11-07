@@ -6,10 +6,10 @@ ms:
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
   new: Baru
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Waktu Perkhidmatan Hours of Code
   hoc_stat_languages: Pelajar belajar dalam lebih daripada 45 bahasa
   hoc_stat_hours_served: Lebih daripada 100J pelajar telah mencuba Jam Kod
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Pelajar perempuan membentuk 50% daripada peserta Hour of Code
   campaign_date_start_short: 4 Dis
   campaign_date_start_long: 4 Disember
   campaign_date_short: 4-10 Dis.
@@ -50,10 +50,10 @@ ms:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Apa yang akan anda buat?
   hoc2023_social_creativity_with_ai_desc: Gunakan sains komputer untuk meneroka dan
     belajar tentang AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Hour of Code ialah pengenalan percuma kepada sains komputer
+    melalui aktiviti dan video yang menyeronokkan untuk pelajar daripada semua peringkat
+    kemahiran. Sambutan bagi pengekodan dan AI pada tahun ini disokong oleh lebih
+    400 rakan kongsi, 20,000 pendidik dan 58,000 sukarelawan.
   hoc2022_header: Meneroka, Bermain, Mencipta!
   social_hoc2022_explore_play_create: Gunakan sains komputer untuk meneroka, bermain
     dan mencipta!
@@ -66,9 +66,9 @@ ms:
     Gomez, muzik dari “Encanto,” dan banyak lagi!
   social_hoc2023_dance: Menampilkan Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X,
     Selena Gomez, muzik dari “Encanto” Disney, dan banyak lagi!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Sudah tiba masanya untuk menyusun barangan anda! Buat pesta
+    tarian anda sendiri yang menampilkan hits oleh Miley Cyrus, BTS, Lil Nas X, Harry
+    Styles, Nicki Minaj, Rosalía, dan banyak lagi!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Belajar hari ini, untuk membina masa depan lebih cerah.  '
@@ -296,21 +296,23 @@ ms:
     dan sokongan daripada pendidik lain.
   required_materials: 'Bahan yang Diperlukan:'
   optional_materials: 'Bahan Pilihan:'
-  for_students: For students
+  for_students: Untuk pelajar
   for_educators: Untuk warga pendidik
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Mengacarakan Hour of Code
   call_to_action_hold_an_event: Pegang acara
   call_to_action_register_event: Daftar acara anda
   call_to_action_register_your_hoc: Daftarkan Hour of Code anda
   call_to_action_select_activity: Pilih aktiviti
+  call_to_action_select_coding_activity: Pilih aktiviti pengekodan
   call_to_action_start_activity: Mulakan aktiviti
   call_to_action_get_certificates: Dapatkan sijil
+  call_to_action_print_certificates: Cetak sijil
   call_to_action_go_beyond_hoc: Melangkaui Jam Kod
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+  call_to_action_explore_all_hoc_activities: Terokai semua aktiviti Hour of Code daripada
     Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_start_dance_party: Mulakan Parti Tarian
+  call_to_action_start_part_02: Mulakan bahagian dua
+  call_to_action_start_unplugged_activity: Mulakan aktiviti yang tidak terputus
   call_to_action_view_promo_resources: Lihat sumber promo
   call_to_action_learn_more: Ketahui lebih lanjut
   call_to_action_watch_now: Tonton sekarang
@@ -406,9 +408,9 @@ ms:
   call_to_action_view_faqs: Lihat lebih banyak Soalan Lazim
   call_to_action_applications_open: Permohonan kini dibuka
   call_to_action_apply_cs_ambassador: Memohon untuk menjadi Duta CS
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Akan datang tidak lama lagi!
+  call_to_action_learn_how_ai_works: Ketahui cara AI berfungsi
+  call_to_action_learn_about_ai: Ketahui tentang AI
   aria_label_call_to_action_hoc_how_to_educators: Lihat panduan cara untuk Pendidik
   aria_label_call_to_action_hoc_how_to_companies: Lihat panduan cara untuk Syarikat
   aria_label_call_to_action_hoc_how_to_districts: Lihat panduan cara untuk Daerah
@@ -420,9 +422,9 @@ ms:
   aria_label_call_to_action_hoc_how_to_volunteers: Lihat panduan cara untuk Sukarelawan
   aria_label_call_to_action_hoc_how_to_virtual_events: Lihat panduan cara untuk Acara
     Maya
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Mulakan aktiviti Parti Tarian
+  aria_label_call_to_action_dance_02: Mulakan bahagian kedua aktiviti Parti Tarian
+  aria_label_call_to_action_dance_unplugged: Mulakan aktiviti Dance Party tanpa plug
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -431,6 +433,8 @@ ms:
     Penemuan Sains Komputer Pengajaran
   aria_label_call_to_action_teaching_csp: Mulakan program pembelajaran profesional
     Prinsip Sains Komputer Pengajaran
+  aria_label_call_to_action_teaching_problem_solving: Mulakan program pembelajaran
+    profesional Penyelesaian Masalah Pengajaran dan Pengkomputeran
   aria_label_call_to_action_teaching_csc: Mulakan program pembelajaran profesional
     Pengajaran Sambungan Sains Komputer
   aria_label_call_to_action_teaching_ai: Mulakan program pembelajaran profesional
@@ -446,6 +450,8 @@ ms:
     Asas Sains Komputer
   aria_label_call_to_action_curriculum_csd: Terokai kurikulum Penemuan Sains Komputer
   aria_label_call_to_action_curriculum_csp: Terokai kurikulum Prinsip Sains Komputer
+  aria_label_call_to_action_curriculum_problem_solving: Terokai kurikulum Penyelesaian
+    Masalah dan Pengkomputeran
   aria_label_call_to_action_curriculum_csc: Terokai kurikulum Rangkaian Sains Komputer
   aria_label_call_to_action_curriculum_ai: Terokai kurikulum AI dan Pembelajaran Mesin
   aria_label_call_to_action_curriculum_maker_cp: Terokai kurikulum Mencipta Aplikasi
@@ -521,6 +527,7 @@ ms:
   curriculum_name_csf_teacher_led: Guru memimpin pelajar untuk pembelajaran
   curriculum_name_csd: Penemuan Sains Komputer
   curriculum_name_csp: Prinsip Sains Komputer
+  curriculum_name_problem_solving: Penyelesaian Masalah dan Pengkomputeran
   curriculum_name_csc: Rangkaian Sains Komputer
   curriculum_name_csa: Sains Komputer A
   curriculum_name_csa_ai: Kejuruteraan Perisian & Visi Komputer
@@ -533,25 +540,26 @@ ms:
   curriculum_name_creating_apps_with_devices: Mewujudkan Apl dengan Peranti
   curriculum_name_poetry: Pengekodan dengan Puisi
   curriculum_name_dance_party: Majlis Tari-Menari
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Teruskan Menari
+  curriculum_name_dance_party_unplugged: Parti Tarian Unplugged
+  curriculum_name_dance_party_ai_edition: 'Parti Tarian: Edisi AI'
   curriculum_name_problem_solving_computing: Penyelesaian Masalah & Pengkomputeran
   curriculum_name_web_development: Pembangunan Web
   curriculum_name_interactive_animations_games: Interaktif Animasi & Permainan
   curriculum_name_design_process: Proses Reka Bentuk
   curriculum_name_data_society: Data & Masyarakat
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Dalam aktiviti pengenalan ini, gunakan kod untuk
+    membuat pelbagai watak berwarna-warni bergerak ke latar belakang animasi dan muzik
+    yang gembira.
+  curriculum_desc_dance_party_02: Melampaui tutorial pengenalan dengan idea projek
+    lanjutan. Semak imbas perpustakaan contoh pesta tarian yang lebih kompleks.
+  curriculum_desc_dance_party_unplugged: Hidupkan alur anda—tiada komputer diperlukan!
+    Ketahui bagaimana konsep pengekodan, seperti acara, boleh digunakan untuk menyegerakkan
+    koreografi penari.
+  curriculum_desc_dance_party_ai_edition: Ketahui tentang konsep kecerdasan buatan
+    (AI) untuk membuat pesta tarian maya anda sendiri yang mempamerkan artis terkemuka
+    hari ini. Dengan berpuluh-puluh lagu untuk dipilih, sampai kepada setiap pelajar
+    tidak kira citarasa muzik mereka. Sudah tiba masanya untuk menyusun barangan anda!
   curriculum_desc_csf: Set kurikulum asas percuma yang memperkenalkan pelajar kepada
     konsep asas sains komputer.
   curriculum_desc_csf_express: Belajar untuk membuat program komputer, membangunkan
@@ -689,12 +697,12 @@ ms:
   module_grade_grade_03: Gred 3
   module_grade_grade_04: Gred 4
   module_grade_grade_05: Gred 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Umur 5-7
+  module_age_07: Umur 7+
+  module_age_07_11: Umur 7-11
+  module_age_11: Umur 11+
+  module_age_13: Umur 13+
+  module_age_all_age: Semua Umur
   module_grade_k_5_teachers: Guru K-5
   module_grade_6_10_teachers: Guru 6-10
   module_grade_9_12_teachers: Guru 9-12
@@ -726,6 +734,7 @@ ms:
   module_label_teaching_csf: Mengajar Asas Sains Komputer
   module_label_teaching_csd: Mengajar Penemuan Sains Komputer
   module_label_teaching_csp: Mengajar Prinsip Sains Komputer
+  module_label_teaching_problem_solving: Mengajar Penyelesaian Masalah dan Pengkomputeran
   module_label_teaching_csc: Mengajar Rangkaian Sains Komputer
   module_label_teaching_ai: Mengajar AI dan Pembelajaran Mesin
   module_label_teaching_maker_cp: Mengajar Membuat Aplikasi dengan Peranti (Taman
@@ -791,8 +800,8 @@ ms:
   heading_csa_ai: Mencari perkara yang perlu dilakukan selepas peperiksaan AP®?
   heading_bring_cs_to_students: Membawa sains komputer kepada pelajar
   heading_cs_ambassador_program: Program Duta CS
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Projek pelajar yang diketengahkan
+  heading_start_hoc_with_videos: Mulakan Hour of Code anda dengan video inspirasi
   cs_ambassador_subhead: Jika anda seorang pelajar sekolah menengah yang berminat
     untuk menggalakkan lebih ramai wanita muda untuk mengambil sains komputer di sekolah
     anda, maka kami memerlukan anda!
@@ -894,13 +903,14 @@ ms:
     yang dihantar terus ke peti masuk anda.
   subscribe_form_section_unsubscribe: Anda boleh berhenti melanggan pada bila-bila
     masa.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Kod Parti Tarian
+  dance_featuring_songs_by_short: 'Memaparkan lagu oleh:'
+  dance_featuring_songs_by_long: 'Parti Tarian termasuk lagu oleh:'
+  dance_and_more: dan banyak lagi
+  dance_choose_activity: Pilih Parti Tarian anda
+  dance_afe_disclaimer: Artis yang muziknya digunakan dalam tutorial ini tidak menaja
+    atau menyokong Amazon sebagai sebahagian daripada pelesenan penggunaan muzik mereka
+    ke Code.org.
   blockchain_hero_heading: Bagaimana Blockchain Berfungsi
   blockchain_hero_desc: Selami dunia blockchain dengan “How Blockchain Works,” siri
     video baru kami dan pelajaran yang disertakan!
@@ -13862,6 +13872,9 @@ ms:
   step_06: Langkah 6
   step_07: Langkah 7
   step_08: Langkah 8
+  what: 'Apa:'
+  when: 'Bila:'
+  where: 'Di mana:'
   hoc_how_to_top_heading: Panduan anda untuk Jam Kod
   hoc_how_to_top_desc: Panduan cara yang disesuaikan untuk pengalaman Hour of Code
     terbaik.
@@ -13912,71 +13925,89 @@ ms:
   hoc_how_to_step_label_plan: Rancang di mana dan bila anda akan melakukan Hour of
     Code anda
   hoc_how_to_step_label_choose_activity: Pilih aktiviti anda
+  hoc_how_to_step_label_choose_activities: Pilih aktiviti anda
   hoc_how_to_step_label_test_activity: Uji aktiviti anda
   hoc_how_to_step_label_register_event: Daftar acara anda
   hoc_how_to_step_label_tell: Beritahu pelajar, sekolah, dan komuniti anda
   hoc_how_to_step_label_get_coding: Dapatkan pengekodan!
   hoc_how_to_step_label_celebrate: Raikan
   hoc_how_to_step_label_beyond_hoc: Di luar Jam Kod
+  hoc_how_to_step_label_plan_your_event: Rancang acara anda
+  hoc_how_to_step_label_plan_your_hour: Rancang jam anda
+  hoc_how_to_step_label_help_spread_word: Membantu menyebarkan perkataan
   hoc_how_to_step_beyond_hoc_subhead: Ia tidak berakhir di sini!
-  hoc_how_to_step_beyond_hoc_desc: Sains komputer tidak perlu berakhir dengan Jam
-    Kod! Walaupun 90% ibu bapa mahu anak mereka belajar sains komputer, kebanyakan
-    sekolah masih tidak mengajarnya. Ketahui cara membawa CS ke sekolah anak anda
-    hari ini.
-  hoc_how_to_step_01_educators_subhead: Pilih masa dan ruang acara yang sesuai untuk
-    bilangan pelajar dan peranti yang anda ada.
-  hoc_how_to_step_01_educators_desc_01: Apakah ruang yang tersedia untuk anda lakukan
-    Jam Kod anda? Pertimbangkan keupayaan teknologi ruang anda, dan jenis peranti
-    yang anda harapkan untuk bekerja oleh pelajar anda. Pelajar boleh mengusahakan
-    tutorial pada satu peranti, bergilir-gilir menggunakan peranti yang dikongsi,
-    atau mencuba tutorial bersama di papan putih bilik darjah. Terdapat juga tutorial
-    yang dicabut yang boleh diselesaikan tanpa peranti sama sekali. Pilihan yang tidak
-    dicabut boleh dilakukan di mana sahaja — walaupun di luar rumah!
-  hoc_how_to_step_01_educators_desc_02: Orang di seluruh dunia menyertai sambutan
-    Hour of Code semasa Minggu Pendidikan CS %{campaign_date} apabila tutorial dan
-    aktiviti terkini dikeluarkan. Tetapi anda boleh melakukan Jam Kod pada bila-bila
-    hari sepanjang tahun!
-  hoc_how_to_step_02_educators_desc_01: Terokai aktiviti berdasarkan umur, pengalaman,
-    minat dan banyak lagi kumpulan anda. Sangat popular bagi pelajar untuk mencuba
-    tutorial yang dipimpin sendiri, walaupun banyak aktiviti termasuk rancangan pelajaran
-    untuk guru untuk membimbing perbincangan atau melanjutkan aktiviti juga.
-  hoc_how_to_step_02_educators_desc_02: Tentukan lebih awal jika anda ingin memilih
-    tutorial tunggal untuk semua pelajar anda, atau biarkan setiap anak memilih sendiri.
-  hoc_how_to_step_02_educators_desc_03: Tahun ini, anda dan pelajar anda boleh [belajar
-    semua tentang AI] (%ai_url) melalui tutorial, rancangan pelajaran, dan siri video
-    How AI Works baharu kami.
-  hoc_how_to_step_03_educators_desc_01: Cuba tutorial sendiri sebelum anda masuk ke
-    dalam kelas supaya anda boleh menjawab soalan!
-  hoc_how_to_step_03_educators_desc_02: Anda juga boleh menguji tutorial pada komputer
-    atau peranti pelajar untuk memastikan mereka menyokong bunyi dan video. Mempunyai
-    jalur lebar yang rendah? Rancang untuk menunjukkan video di bahagian depan kelas,
-    jadi setiap pelajar tidak memuat turun video mereka sendiri.
-  hoc_how_to_step_03_educators_desc_03: Pertimbangkan untuk menyediakan fon kepala
-    untuk kelas anda, atau minta pelajar membawa mereka sendiri, jika tutorial yang
-    anda pilih berfungsi dengan baik dengan bunyi.
-  hoc_how_to_step_04_educators_desc_01: Apabila anda mendaftarkan acara Hour of Code
-    anda, anda akan menerima e-mel yang berguna dengan berita dan petua untuk menganjurkan
-    Hour of Code yang berjaya. Ini juga cara anda boleh memberitahu sukarelawan tempatan
-    mengetahui sekolah anda mengambil bahagian. Sukarelawan adalah sumber yang hebat
-    dan boleh datang bercakap dengan kelas anda tentang sains komputer atau membantu
-    pelajar anda dengan aktiviti Hour of Code.
-  hoc_how_to_step_05_educators_desc_01: Dapatkan pelajar anda teruja untuk acara itu
-    dengan berkongsi [video inspirasi] (%{videos_url}) menonjolkan pelbagai orang
-    dan cara kreatif bahawa sains komputer boleh digunakan di dunia nyata.
-  hoc_how_to_step_05_educators_desc_02: Kongsi rancangan Hour of Code anda dengan
-    guru lain yang mungkin ingin menyertai keseronokan! Ini juga merupakan peluang
-    terbaik untuk menghubungi Persatuan Pelajar Guru Ibu Bapa sekolah anda atau berkongsi
-    surat berita ibu bapa, memberitahu mereka apa yang anak-anak mereka belajar.
-  hoc_how_to_step_06_educators_desc_01: Arahkan pelajar anda ke aktiviti tersebut,
+  hoc_how_to_step_plan_hour_desc_01: 'Berikut adalah agenda contoh untuk memulakan
+    anda:'
+  hoc_how_to_step_choose_activities_desc_01: Tahun ini, tema Hour of Code adalah Kreativiti
+    dengan Kecerdasan Buatan (AI). Sama ada pengekodan aplikasi dan algoritma baharu,
+    menjana seni yang unik, atau membuat koreografi untuk membuat kita menari, AI
+    membuka peluang baru untuk ekspresi digital yang memperluas pemahaman kita tentang
+    kreativiti. Jadikan tahun ini istimewa dengan melengkapkan aktiviti pengekodan
+    DAN belajar tentang AI.
+  hoc_how_to_step_choose_activities_desc_02: Pertama, [terokai beratus-ratus aktiviti
+    pengekodan] (%{activities_url}) dan pilih satu berdasarkan umur, pengalaman, minat
+    kumpulan anda dan banyak lagi. [Aktiviti pilihan ini] (%{ai_activities_url}) menampilkan
+    kecerdasan buatan sebagai topik atau pelajaran utama.
+  hoc_how_to_step_choose_activities_desc_03: Kemudian, [pelajari semua tentang AI]
+    (%{ai_url}). Pelajar boleh menonton video pendek yang menampilkan pakar dalam
+    bidang ini, dan terdapat rancangan pelajaran yang disertakan untuk memperluas
+    aktiviti dan membimbing perbincangan selanjutnya. Atau, kami menawarkan pembelajaran
+    profesional percuma untuk pendidik untuk membuka kunci masa depan pengajaran dengan
+    dan mengenai AI.
+  hoc_how_to_step_educators_register_desc: Mulakan dengan komitmen untuk melakukan
+    Hour of Code dengan pelajar anda dengan mendaftarkan acara anda. Apabila anda
+    mendaftar, anda akan menerima e-mel berguna dengan berita dan petua untuk menganjurkan
+    Hour of Code yang berjaya. Anda juga akan [letakkan di peta] (%{map_url}). Kesemua
+    usaha kolektif kami yang dapat dilihat menunjukkan komitmen global terhadap gerakan
+    sains komputer, yang akan membantu kita membina momentum untuk perubahan sistemik.
+  hoc_how_to_step_educators_plan_desc_01: Sebelum acara anda, cuba sendiri aktiviti
+    supaya anda dapat memastikan ia berfungsi pada peranti pelajar dan anda bersedia
+    untuk menjawab soalan! Mempunyai lebar jalur yang rendah? Rancang untuk menunjukkan
+    video di bahagian depan kelas, supaya setiap pelajar tidak memuat turun video
+    mereka sendiri.
+  hoc_how_to_step_educators_plan_desc_02: Orang di seluruh dunia sering menyertai
+    perayaan Hour of Code semasa Minggu Pendidikan Sains Komputer (%{campaign_date}),
+    tetapi anda boleh melakukan Hour of Code setiap hari sepanjang tahun!
+  hoc_how_to_step_educators_plan_desc_03: Pilih ruang yang berfungsi untuk bilangan
+    pelajar dan peranti yang anda ada. Pelajar boleh mencuba aktiviti pada peranti
+    individu, bergilir-gilir berkongsi peranti, atau sebagai kelas di papan putih.
+    Terdapat juga aktiviti yang tidak terputus palam yang boleh diselesaikan tanpa
+    peranti sama sekali, jadi ia juga boleh dilakukan di luar!
+  hoc_how_to_step_educators_spread_word_desc_01: Bantu kami menyebarkan berita dalam
+    komuniti anda dengan [templat e-mel ini] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Tanya dua rakan sekerja untuk [register](%{register_url})
+    dan menganjurkan aktiviti Hour of Code. Mereka, pada gilirannya, dapat menjamin
+    dua rakan sekerja, yang dapat menjamin dua rakan sekerja, dll.
+  hoc_how_to_step_educators_spread_word_desc_03: Minta pengetua anda untuk [menjadi
+    tuan rumah acara seluruh sekolah] (%{host_url}). Apabila 300 atau lebih kanak-kanak
+    mengambil bahagian, anda boleh menerima kit pertunangan khas dengan t-shirt, poster,
+    pelekat komputer riba dan banyak lagi. [Kongsi rancangan acara sekolah anda] (%{share_url})
+    untuk memenuhi syarat.
+  hoc_how_to_step_educators_spread_word_desc_04: Hubungi Persatuan Pelajar Guru Ibu
+    Bapa sekolah anda atau kongsi dalam surat berita ibu bapa, memberitahu mereka
+    apa yang sedang dipelajari oleh anak-anak mereka.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 pagi: Mulakan dengan [video
+    inspirasi] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 pagi: Pelajar melakukan
+    aktiviti pengekodan mereka'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 pagi: Pelajar belajar
+    tentang AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 pagi: Guru memberi ucapan
+    penutup'
+  hoc_how_to_step_educators_get_coding_desc: Arahkan pelajar anda ke aktiviti tersebut,
     mungkin dengan berkongsi pautan di papan atau melalui sistem pengurusan pembelajaran
     bilik darjah anda. Pelajar anda mungkin menghadapi cabaran-tidak mengapa! Belajar
     untuk program adalah seperti belajar bahasa baru; anda tidak akan fasih dengan
     segera. Sekiranya anda tidak tahu jawapannya, anda boleh memikirkannya bersama.
-  hoc_how_to_step_07_educators_desc_01: 'Pastikan untuk meraikan kejayaan! Kongsi
-    foto dan video acara Hour of Code anda di media sosial. Gunakan #HourOfCode dan
-    @codeorg supaya kami dapat menyerlahkan kejayaan anda juga!'
-  hoc_how_to_step_07_educators_desc_02: Anda juga boleh mencetak sijil untuk pelajar
-    anda untuk menunjukkan pencapaian mereka!
+  hoc_how_to_step_educators_celebrate_desc: 'Selepas acara anda, cetak sijil penyiapan
+    dan mengucapkan tahniah kepada pelajar anda. Kongsi foto dan video acara Hour
+    of Code anda dan tunjukkan pencapaian pelajar anda menggunakan #HourOfCode dan
+    @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Sains komputer tidak perlu berakhir dengan
+    Hour of Code! Walaupun 90% ibu bapa mahu anak mereka belajar sains komputer, kebanyakan
+    sekolah masih tidak mengajarnya. Untuk membantu, kurikulum kami adalah berasaskan
+    web dan percuma untuk digunakan, selama-lamanya. Ketahui cara membawa CS ke sekolah
+    anda hari ini.
   hoc_ai_top_desc: Sesiapa sahaja boleh belajar tentang AI, sama ada anda seorang
     pelajar di dalam kelas atau pendidik yang membuka kunci masa depan pengajaran
     dengan dan mengenai AI.
@@ -14729,66 +14760,72 @@ ms:
     pemimpin sekolah, dan kakitangan untuk mengembangkan panduan awal mengenai AI
     di sekolah mereka.
   teach_ai_button_label: Lihat Toolkit
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Pembelajaran untuk Umur 11 ke atas
+  middle_high_page_main_description: Terokai dunia sains komputer dengan video yang
+    menarik, tutorial berpantas sendiri, aktiviti pengaturcaraan dan banyak lagi!
+  middle_high_page_hero_title: Bermula dengan Hour of Code
+  middle_high_page_hero_description: Ketahui asas-asas sains komputer dengan aktiviti
+    Hour of Code percuma, yang menampilkan blok pengekodan seret dan lepas. Terdapat
+    beratus-ratus pilihan selama jam untuk dipilih!
+  middle_high_page_hourofcode_link: Terokai aktiviti Hour of Code
+  middle_high_page_modules_title: Modul Pengaturcaraan untuk Pelajar Lebih Tua
+  middle_high_page_modules_description: Diadaptasi daripada kursus CS Discovery dan
+    Prinsip CS kami, modul pendek dan berkelajuan sendiri ini untuk pelajar sekolah
+    menengah dan menengah adalah cara terbaik untuk mempelajari konsep yang merangkumi
+    semua bahasa dan alat pengaturcaraan.
+  middle_high_page_modules_card_title_1: Pengenalan kepada Makmal Permainan
+  middle_high_page_modules_card_title_2: Pengaturcaraan Penyu di dalam Makmal Aplikasi
+  middle_high_page_modules_card_title_3: Pengaturcaraan Pacuan Peristiwa di dalam
+    Makmal Aplikasi
+  middle_high_page_modules_card_description_1: Bergerak mengikut kadar anda sendiri
+    dalam pengenalan ini ke persekitaran Makmal Permainan kami semasa anda memprogram
+    animasi, seni interaktif dan permainan.
+  middle_high_page_modules_card_description_2: Buka kunci keupayaan untuk membuat
+    aplikasi yang kaya dan interaktif dengan JavaScript di App Lab!
+  middle_high_page_modules_card_description_3: Pergi mengikut kadar anda sendiri dengan
+    pengenalan ini ke persekitaran pengaturcaraan App Lab, di mana pelajar menggunakan
+    JavaScript untuk membuat aplikasi interaktif.
+  middle_high_page_modules_card_link: Sila cubanya
+  middle_high_page_make_your_own_title: Buat Aplikasi, Permainan dan Laman Web Anda
+    Sendiri
+  middle_high_page_make_your_own_description: 'Sebagai tambahan kepada kursus, kami
+    mempunyai alat pengaturcaraan yang membolehkan anda meneroka kreativiti anda dan
+    membuat sesuatu yang menakjubkan. '
   middle_high_page_make_your_own_card_title_1: Makmal Aplikasi
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Makmal Permainan
+  middle_high_page_make_your_own_card_title_3: Makmal Web
+  middle_high_page_make_your_own_card_descrpition_1: App Lab adalah persekitaran pengaturcaraan
+    di mana anda boleh membuat aplikasi mudah. Reka bentuk aplikasi, kod dalam JavaScript
+    dengan blok atau teks, kemudian kongsi aplikasi anda dalam beberapa saat.
+  middle_high_page_make_your_own_card_descrpition_2: Makmal Permainan ialah persekitaran
+    pengaturcaraan yang anda boleh membuat animasi dan permainan mudah dengan menggunakan
+    objek dan watak yang saling berinteraksi antara satu sama lain.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab adalah persekitaran pengaturcaraan
+    di mana anda boleh membuat laman web mudah menggunakan HTML dan CSS. Reka bentuk
+    laman web anda dan kongsi laman web anda dalam beberapa saat.
   middle_high_page_make_your_own_card_link: Ketahui lebih lanjut
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Sumber Tambahan
+  middle_high_page_additional_resources_description: Terdapat begitu banyak cara untuk
+    meneroka lebih lanjut sains komputer! Semak imbas perpustakaan video kami, atau
+    ketahui lebih lanjut mengenai kerjaya yang menarik dalam bidang sains komputer.
+  middle_high_page_video_library_title: Temui Perpustakaan Video kami
+  middle_high_page_video_library_description: Ketahui asas-asas sains komputer melalui
+    video pendek 5-10 minit mengenai topik seperti kecerdasan buatan, Internet, bagaimana
+    komputer berfungsi, bagaimana untuk tidak digodam, blockchain, kerjaya, dan banyak
+    lagi!
+  middle_high_page_video_library_link: Lihat perpustakaan video
+  middle_high_page_cs_journeys_title: Melangkah lebih jauh dengan CS Journeys
+  middle_high_page_cs_journeys_description: Ambil langkah seterusnya dalam perjalanan
+    sains komputer anda. Terokai kerjaya, peluang bimbingan, kursus dalam talian,
+    biasiswa, magang dan banyak lagi!
+  middle_high_page_cs_journeys_link: Terokai CS Journeys
+  middle_high_page_cs_title: Sains Komputer di Bilik Darjah
+  middle_high_page_cs_description: Kursus-kursus ini harus diketuai oleh seorang guru!
+    Jika anda ingin melihat mereka diajar di sekolah anda, pertimbangkan untuk bekerja
+    dengan guru untuk membawa mereka ke kelas anda.
+  middle_high_page_cs_card_title_1: Penemuan CS
+  middle_high_page_cs_card_title_2: Prinsip CS
+  middle_high_page_cs_card_title_3: AP Sains Komputer A
   middle_high_page_cs_card_description_1: Kurikulum sepanjang tahun percuma yang memperkenalkan
     pelajar kepada konsep asas sains komputer dan mencabar mereka untuk meneroka bagaimana
     pengkomputeran dan teknologi boleh memberi kesan kepada dunia.
@@ -14800,34 +14837,34 @@ ms:
     perisian dan reka bentuk berorientasikan objek semasa mereka mempelajari bahasa
     pengaturcaraan Java dalam kurikulum percuma ini untuk AP® Sains Komputer A (AP®
     CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Terokai CS Dicoveries
   middle_high_page_cs_link_2: Terokai Prinsip CS
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Terokai CSA
+  elemeentary_page_main_title: Pembelajaran untuk Umur 5 hingga 11
+  elementary_page_main_description: Terokai dunia sains komputer dengan video yang
+    menarik, tutorial berpantas sendiri, aktiviti pengaturcaraan dan banyak lagi!
+  elementary_page_own_pace_title: Teruskan Belajar dengan Kadar Anda Sendiri
+  elementary_page_own_pace_description: Buat lukisan, permainan, dan banyak lagi dalam
+    dua pilihan yang sangat baik ini untuk pelajar memulakan pembelajaran sendiri
+    asas-asas sains komputer.
+  elementary_page_own_pace_card_title_1: Kursus Ekspres Pra-Pembaca
+  elementary_page_own_pace_card_title_2: Kursus Ekspres
+  elementary_page_own_pace_card_description_1: Belajar sains komputer dengan kadar
+    anda sendiri! Belajar untuk membuat program komputer, mengembangkan kemahiran
+    menyelesaikan masalah, dan bekerja melalui cabaran yang menyeronokkan! Buat permainan
+    dan projek kreatif untuk dikongsi dengan rakan, keluarga, dan guru.
+  elementary_page_own_pace_link_1: Mulakan Kursus Pra-Pembaca
+  elementary_page_own_pace_link_2: Mulakan Kursus Ekspres
+  elementary_page_make_your_own_games_title: Buat Animasi dan Permainan Anda Sendiri
   elementary_page_make_your_own_games_card_title_1: Makmal Sprite
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Masa untuk menjadi kreatif!
+    Gunakan pengekodan berasaskan blok untuk membuat sesuatu yang bodoh, manis atau
+    luar ruang di Sprite Lab. Satu-satunya had adalah imaginasi anda!
+  elementary_page_make_your_own_games_link: Cuba Sprite Lab
+  elementary_page_computer_science_title: Sains Komputer di Bilik Darjah
+  elementary_page_computer_science_description: Kursus-kursus ini harus diketuai oleh
+    seorang guru! Jika anda ingin melihat mereka diajar di sekolah anda, minta ibu
+    bapa atau penjaga untuk bekerja dengan guru untuk membawa mereka ke kelas anda.
   elementary_page_computer_science_card_title_1: Asas Sains Komputer
   elementary_page_computer_science_card_title_2: Rangkaian Sains Komputer
   elementary_page_computer_science_description_1: Kurikulum sepanjang tahun percuma
