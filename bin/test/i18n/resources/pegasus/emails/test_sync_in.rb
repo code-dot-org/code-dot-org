@@ -12,14 +12,14 @@ describe I18n::Resources::Pegasus::Emails::SyncIn do
   end
 
   describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Pegasus::Emails::SyncIn.any_instance.expects(:execute).once
+    it 'calls #process' do
+      I18n::Resources::Pegasus::Emails::SyncIn.any_instance.expects(:process).once
 
       I18n::Resources::Pegasus::Emails::SyncIn.perform
     end
   end
 
-  describe '#execute' do
+  describe '#process' do
     let(:sync_in) {I18n::Resources::Pegasus::Emails::SyncIn.new}
 
     before do
@@ -39,7 +39,7 @@ describe I18n::Resources::Pegasus::Emails::SyncIn do
           I18nScriptUtils.expects(:copy_file).with(origin_emails_file_path, expected_i18n_source_file_path).in_sequence(execution_sequence)
           I18n::Utils::PegasusMarkdown.expects(:sanitize_file_header).with(expected_i18n_source_file_path).in_sequence(execution_sequence)
 
-          sync_in.execute
+          sync_in.process
         end
       end
     end

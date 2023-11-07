@@ -15,7 +15,7 @@ module I18n
             return if File.directory?(crowdin_dir_path)
 
             unless I18nScriptUtils.source_lang?(language)
-              DIR.glob('*.md', base: crowdin_dir_path) do |crowdin_file_subpath|
+              Dir.glob('*.md', base: crowdin_dir_path) do |crowdin_file_subpath|
                 # `hoc_signup_2015_receipt.md` => `hoc_signup_2015_receipt_es-ES.md`
                 # `hoc_signup_2023_receipt_en.md` => `hoc_signup_2023_receipt_es-ES.md`
                 target_file_subpath = crowdin_file_subpath.sub(/(_en.md|.md)$/, "_#{language[:locale_s]}.md")
