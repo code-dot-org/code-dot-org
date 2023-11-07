@@ -1067,7 +1067,7 @@
       "CSD U3 Sprites text location_2023": {
         "display_name": "Add Text: Score",
         "bubble_choice_description": "Add text to this scene to display the score.",
-        "long_instructions": "<img src=\"https://images.code.org/e3e4b97da51df18a5651e1985b326833-image-1663805107282.png\" style=\"float: right; width: 400px; margin-left: 20px;\">\r\n\r\n# Missing Score\r\n\r\nThis image of a game is missing the score! Oh no! Can you help by adding text to to match the image to the right?\r\n\r\n# Do This:\r\n\r\n1) ::: details [Add text to the scene so that it matches the scene in the picture.]\r\n   - Use two of the [`text()`(#4dd0e1)](/docs/ide/gamelab/expressions/text) blocks.\r\n   - *Hint: you will also need to use the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) and [`textSize();`(#4dd0e1)](/docs/ide/gamelab/expressions/textSize) blocks to get the score to look right*\r\n:::\r\n"
+        "long_instructions": "<img src=\"https://images.code.org/e3e4b97da51df18a5651e1985b326833-image-1663805107282.png\" style=\"float: right; width: 400px; margin-left: 20px;\">\r\n\r\n# Missing Score\r\n\r\nThis image of a game is missing the score! Oh no! Can you help by adding text to match the image to the right?\r\n\r\n# Do This:\r\n\r\n1) ::: details [Add text to the scene so that it matches the scene in the picture.]\r\n   - Use two of the [`text()`(#4dd0e1)](/docs/ide/gamelab/expressions/text) blocks.\r\n   - *Hint: you will also need to use the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) and [`textSize();`(#4dd0e1)](/docs/ide/gamelab/expressions/textSize) blocks to get the score to look right*\r\n:::\r\n"
       }
     }
   },

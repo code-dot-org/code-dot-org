@@ -6,10 +6,10 @@ ga:
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Ag teacht go luath
   new: Nua
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: Uaireanta an Chód a sheirbhe
   hoc_stat_languages: Tá an scoláire ag foghlaim i mbreis agus 45 teanga
   hoc_stat_hours_served: Rinne níos mó ná 100M mac léinn uair an Chóid a thriail
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: Is ionann mic léinn mná 50% de rannpháirtithe Uair an Chód
   campaign_date_start_short: 5 Nollaig
   campaign_date_start_long: nollaig 5
   campaign_date_short: Nollaig 5-11
@@ -50,10 +50,10 @@ ga:
   hoc2023_social_creativity_with_ai_title: Uair an Chóid - Cad a chruthóidh tú?
   hoc2023_social_creativity_with_ai_desc: Bain úsáid as ríomheolaíocht chun iniúchadh
     a dhéanamh agus foghlaim faoi AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: Is réamhrá saor in aisce ar ríomheolaíocht í an Uair an
+    Chód trí ghníomhaíochtaí spraoi agus físeáin d'fhoghlaimeoirí de gach leibhéal
+    scileanna Tacaíonn os cionn 400 comhpháirtí, 20,000 oideachasóir, agus 58,000
+    saorach deonach le ceiliúradh i mbliana ar chódú agus AI araon.
   hoc2022_header: Déan iniúchadh, Play, Cruthaigh!
   social_hoc2022_explore_play_create: Bain úsáid as ríomheolaíocht chun iniúchadh,
     imirt, agus a chruthú!
@@ -67,9 +67,9 @@ ga:
     Gomez, ceol ó Disney “Encanto,” agus níos mó!
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, ceol ó Disney “Encanto,” agus níos mó!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: Tá sé in am do chuid rudaí a bhrú! Cruthaigh do chóisir
+    damhsa féin ina bhfuil buaití le Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki
+    Minaj, Rosalía, agus go leor eile!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Foghlaim inniu, tóg amárach níos gile.
@@ -297,21 +297,23 @@ ga:
     léargas agus tacaíocht a fháil ó oideachasóirí eile.
   required_materials: 'Ábhair Riachtanacha:'
   optional_materials: 'Ábhair Roghnach:'
-  for_students: For students
+  for_students: Do mhic léinn
   for_educators: Do oideachasóirí
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: Óstach Uair an Chód
   call_to_action_hold_an_event: Coinnigh ócáid
   call_to_action_register_event: Cláraigh d'imeacht
   call_to_action_register_your_hoc: Cláraigh do Uair an Chód
   call_to_action_select_activity: Roghnaigh gníomhaíocht
+  call_to_action_select_coding_activity: Roghnaigh gníomhaíocht códaithe
   call_to_action_start_activity: Cuir tús le gníomhaíocht
   call_to_action_get_certificates: Faigh teastais
+  call_to_action_print_certificates: Teastais phriontáil
   call_to_action_go_beyond_hoc: Téigh níos faide ná Uair an Chód
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Déan iniúchadh ar gach gníomhaíocht Uair
+    an Chód ó Code.org
+  call_to_action_start_dance_party: Tosaigh Páirtí Damhsa
+  call_to_action_start_part_02: Tosaigh cuid a dó
+  call_to_action_start_unplugged_activity: Cuir tús le gníomhaíocht díphlugá
   call_to_action_view_promo_resources: Féach ar acmhainní promo
   call_to_action_learn_more: Níos mó a fhoghlaim
   call_to_action_watch_now: Bí ag faire anois
@@ -408,9 +410,9 @@ ga:
   call_to_action_view_faqs: Féach níos mó Ceisteanna Coitianta
   call_to_action_applications_open: Oscailte iarratais anois
   call_to_action_apply_cs_ambassador: Déan iarratas a bheith ina Ambasadóir CS
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: Ag teacht go luath!
+  call_to_action_learn_how_ai_works: Foghlaim conas a oibríonn AI
+  call_to_action_learn_about_ai: Foghlaim faoi AI
   aria_label_call_to_action_hoc_how_to_educators: Féach treoir conas-chun do Oideachasóirí
   aria_label_call_to_action_hoc_how_to_companies: Féach treoir conas-chun do Chuideachtaí
   aria_label_call_to_action_hoc_how_to_districts: Féach treoir conas-chun do Cheantair
@@ -422,9 +424,9 @@ ga:
   aria_label_call_to_action_hoc_how_to_volunteers: Féach treoir conas-chun do Oibrithe
   aria_label_call_to_action_hoc_how_to_virtual_events: Féach treoir conas le haghaidh
     Imeachtaí Fíorúla
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: Cuir tús le gníomhaíocht na Páirtí
+  aria_label_call_to_action_dance_02: Cuir tús le cuid a dó de ghníomhaíocht na Páirtí
+  aria_label_call_to_action_dance_unplugged: Cuir tús leis an gCóisir Damhsa gan phlugáil
   aria_label_call_to_action_afe: Níos mó a fhoghlaim faoi Innealtóir Todhchaí Amazon
   aria_label_call_to_action_teaching_csf: Tosaigh an Teagasc Eolaíocht Ríomhaireachta
     Bunúsaigh clár foghlama gairmiúla
@@ -432,6 +434,8 @@ ga:
     Fionnachtana Eolaíochta Ríomhaireachta Teagaisc
   aria_label_call_to_action_teaching_csp: Cuir tús leis an gclár foghlama gairmiúla
     Prionsabail Eolaíochta Ríomhaireachta Teagaisc
+  aria_label_call_to_action_teaching_problem_solving: Cuir tús leis an gclár foghlama
+    gairmiúil Réitigh Fadhban
   aria_label_call_to_action_teaching_csc: Cuir tús leis an gclár foghlama gairmiúla
     Naisc Eolaíochta Ríomhaireachta Teagaisc
   aria_label_call_to_action_teaching_ai: Cuir tús leis an gclár foghlama gairmiúil
@@ -450,6 +454,8 @@ ga:
     na Ríomheolaíochta
   aria_label_call_to_action_curriculum_csp: Déan iniúchadh ar churaclam Phrionsabail
     na Ríomheolaíochta
+  aria_label_call_to_action_curriculum_problem_solving: Déan iniúchadh ar an churaclam
+    Réitigh Fadhban
   aria_label_call_to_action_curriculum_csc: Déan iniúchadh ar churaclam Naisc na Ríomheolaíochta
   aria_label_call_to_action_curriculum_ai: Déan iniúchadh ar an gcuraclam AI agus
     Foghlama Meaisín
@@ -532,6 +538,7 @@ ga:
   curriculum_name_csf_teacher_led: Ceacht faoi stiúir an mhúinteora
   curriculum_name_csd: Fionnachtana Eolaíochta Ríomhaireachta
   curriculum_name_csp: Prionsabail na Ríomheolaíochta
+  curriculum_name_problem_solving: Réiteach Fadhbanna agus Ríomhaireacht
   curriculum_name_csc: Naisc Eolaíocht Ríomhaireachta
   curriculum_name_csa: AP® Eolaíocht Ríomhaireachta A
   curriculum_name_csa_ai: Innealtóireacht Bogearraí & Fís Ríomhaireachta
@@ -544,25 +551,27 @@ ga:
   curriculum_name_creating_apps_with_devices: Aipeanna a chruthú le Gléasanna
   curriculum_name_poetry: Códú le Filíocht
   curriculum_name_dance_party: Páirtí Rince
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: Coinnigh ar Damhsa
+  curriculum_name_dance_party_unplugged: Páirtí Damhsa Díphlugáilte
+  curriculum_name_dance_party_ai_edition: 'Cóisir Damhsa: Eagrán AI'
   curriculum_name_problem_solving_computing: Réiteach Fadhbanna & Ríomhaireacht
   curriculum_name_web_development: Forbairt Gréasáin
   curriculum_name_interactive_animations_games: Beochan & Cluichí Idirghníomhacha
   curriculum_name_design_process: An Próiseas Dearaidh
   curriculum_name_data_society: Sonraí & Sochaí
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: Sa ghníomhaíocht tosaigh seo, bain úsáid as cód
+    chun éagsúlacht carachtair ildaite a chur ar bhogadh chuig cúlraí beoite agus
+    ceol uasach.
+  curriculum_desc_dance_party_02: Téigh níos faide ná an rang teagaisc tosaigh le
+    smaointe thionscadail Brabhsáil leabharlann samplaí de pháirtithe damhsa níos
+    casta.
+  curriculum_desc_dance_party_unplugged: Faigh do ghrúb ar aghaidh - níl aon ríomhaire
+    ag teastáil Foghlaim conas is féidir coincheapa códaithe, cosúil le himeachtaí,
+    a úsáid chun córagrafaíocht damhsóra a shion
+  curriculum_desc_dance_party_ai_edition: Foghlaim faoi choincheapa intleachta shaorga
+    (AI) chun do chóisir damhsa fíorúil féin a chruthú ag taispeáint na n-ealaíontóirí
+    Le mórán amhráin le roghnú as, sroich gach mac léinn is cuma cén blas ceoil. Tá
+    sé in am do chuid rudaí a bhrú!
   curriculum_desc_csf: Sraith saor in aisce de churaclaim tosaigh a thugann coincheapa
     bunúsacha na ríomheolaíochta do mhic léinn.
   curriculum_desc_csf_express: Foghlaim conas cláir ríomhaire a chruthú, scileanna
@@ -702,12 +711,12 @@ ga:
   module_grade_grade_03: Grád 3
   module_grade_grade_04: Grád 4
   module_grade_grade_05: Grád 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: Aois 5-7
+  module_age_07: Aois 7+
+  module_age_07_11: Aois 7-11
+  module_age_11: Aois 11+
+  module_age_13: Aois 13+
+  module_age_all_age: Gach Aois
   module_grade_k_5_teachers: K-5 Múinteoirí
   module_grade_6_10_teachers: 6-10 Múinteoirí
   module_grade_9_12_teachers: 9-12 Múinteoirí
@@ -739,6 +748,7 @@ ga:
   module_label_teaching_csf: Teagasc Eolaíocht Ríomhaireachta Bunúsacha
   module_label_teaching_csd: Fionnachtana Eolaíochta Ríomhaireachta a Mhúineadh
   module_label_teaching_csp: Prionsabail na Ríomheolaíochta Teagaisc
+  module_label_teaching_problem_solving: Réiteach fadhbanna agus Ríomhaireacht
   module_label_teaching_csc: Naisc Eolaíochta Ríomhaireachta a Mhúineadh
   module_label_teaching_ai: AI agus Foghlaim Meaisín a Mhúineadh
   module_label_teaching_maker_cp: Aipeanna a Chruthú le Gléasanna (Clós Súgartha Cuarda)
@@ -805,8 +815,8 @@ ga:
   heading_csa_ai: Ag féachaint do rudaí a dhéanamh tar éis an scrúdú AP®?
   heading_bring_cs_to_students: An eolaíocht ríomhaireachta a thabhairt do mhic léinn
   heading_cs_ambassador_program: Clár Ambasadóirí CS
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: Tionscadail scoláire
+  heading_start_hoc_with_videos: Cuir tús le d'Uair an Chód le físeáin inspioráideacha
   cs_ambassador_subhead: Más mac léinn ardscoile thú atá paiseanta faoi níos mó mná
     óga a spreagadh chun ríomheolaíocht a ghlacadh ag do scoil, ansin teastaíonn tú
     uainn!
@@ -906,13 +916,14 @@ ga:
     Eolaíocht Ríomhaireachta Code.org agus meabhrúcháin cabhrach, leideanna, agus
     nuashonruithe a sheoladh ceart chun do bhosca a fháil.
   subscribe_form_section_unsubscribe: Is féidir leat díliostáil ag am ar bith.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: Cód Cóisir Damhsa
+  dance_featuring_songs_by_short: 'Tá amhráin ag:'
+  dance_featuring_songs_by_long: 'Cuimsíonn Dance Party amhráin le:'
+  dance_and_more: agus níos mó
+  dance_choose_activity: Roghnaigh do Páirtí Damhsa
+  dance_afe_disclaimer: Níl na healaíontóirí a n-úsáidtear a gceol sa rang teagaisc
+    seo ag urraíocht nó ag fhormhuiniú ar Amazon mar chuid d'úsáid a gceol a cheadúnú
+    chuig Code.org.
   blockchain_hero_heading: Conas a Oibríonn Blockchain
   blockchain_hero_desc: Léim isteach i saol na blockchain le “Conas a Oibríonn Blockchain,”
     ár sraith físeán nua agus ceachtanna a ghabhann leis!
@@ -13922,6 +13933,9 @@ ga:
   step_06: Céim 6
   step_07: Céim 7
   step_08: Céim 8
+  what: 'Cad:'
+  when: 'Nuair a bhíonn:'
+  where: 'Cá háit:'
   hoc_how_to_top_heading: Do threoir maidir le Uair an Chód
   hoc_how_to_top_desc: Treoracha conas a chur in oiriúint don eispéireas Uair an Chód
     is fearr.
@@ -13973,76 +13987,89 @@ ga:
   hoc_how_to_step_label_plan: Pleanáil cá háit agus cathain a dhéanfaidh tú do Uair
     an Chód
   hoc_how_to_step_label_choose_activity: roghnaigh do ghníomhaíocht
+  hoc_how_to_step_label_choose_activities: Roghnaigh na gníomhaíochtaí
   hoc_how_to_step_label_test_activity: Tástáil amach do ghníomhaíocht
   hoc_how_to_step_label_register_event: Cláraigh d'imeacht
   hoc_how_to_step_label_tell: Inis do mhic léinn, do scoil agus do phobal
   hoc_how_to_step_label_get_coding: Faigh códú!
   hoc_how_to_step_label_celebrate: Ceiliúradh
   hoc_how_to_step_label_beyond_hoc: Beyond Uair an Chód
+  hoc_how_to_step_label_plan_your_event: Pleanáil d'imeacht
+  hoc_how_to_step_label_plan_your_hour: Pleanáil do uair an chloig
+  hoc_how_to_step_label_help_spread_word: Cuidigh leis an focal a scaipeadh
   hoc_how_to_step_beyond_hoc_subhead: Ní chríochnaíonn sé anseo!
-  hoc_how_to_step_beyond_hoc_desc: Ní gá go mbeadh eolaíocht ríomhaireachta deireadh
-    leis an Uair an Chód! Cé go bhfuil 90% de na tuismitheoirí ag iarraidh a leanbh
-    eolaíocht ríomhaireachta a fhoghlaim, ní mhúineann an chuid is mó de na Foghlaim
-    conas CS a thabhairt chuig scoil do pháiste inniu.
-  hoc_how_to_step_01_educators_subhead: Roghnaigh am agus spás imeachta a oibríonn
-    do líon na mac léinn agus na bhfeistí atá ar fáil agat.
-  hoc_how_to_step_01_educators_desc_01: Cad iad na spásanna atá ar fáil duit chun
-    do Uair an Chód a dhéanamh? Smaoinigh ar chumais ardteicneolaíochta do spás, agus
-    na cineálacha feistí a bhfuil súil agat go n-oibreoidh do mhic léinn orthu. Is
-    féidir le mic léinn oibriú ar ranganna teagaisc ar ghléas amháin, casadh a dhéanamh
-    ag baint úsáide as gléas roinnte, nó triail a bhaint as teagaisc le chéile ar
-    chlár bán seomra ranga. Tá fiú ranganna teagaisc neamhphlugáilte ann is féidir
-    a chomhlánú gan aon ghléasanna ar chor ar bith. Is féidir roghanna neamhphlugáilte
-    a dhéanamh áit ar bith - fiú lasmuigh!
-  hoc_how_to_step_01_educators_desc_02: Téann daoine ar fud an domhain isteach sa
-    cheiliúradh Uair an Chód le linn Seachtain Oideachais CS %{campaign_date} nuair
-    a scaoiltear na ranganna teagaisc agus na gníomhaíochtaí Ach is féidir leat Uair
-    an Chód a dhéanamh lá ar bith den bhliain!
-  hoc_how_to_step_02_educators_desc_01: Déan iniúchadh ar ghníomhaíochtaí bunaithe
-    ar aois, taithí, leasanna agus go leor eile do ghrúpa. Tá an-tóir ar mhic léinn
-    ranganna teagaisc féin-stiúir a thriail, cé go n-áirítear go leor gníomhaíochtaí
-    pleananna ceachta do mhúinteoirí chun plé a threorú nó an ghníomhaíocht a leathnú
-  hoc_how_to_step_02_educators_desc_02: Déan cinneadh roimh am más mian leat teagaisc
-    amháin a roghnú do gach ceann de do mhic léinn, nó lig do gach leanbh a roghnú
-    a gcuid féin.
-  hoc_how_to_step_02_educators_desc_03: I mbliana, is féidir leat féin agus do mhic
-    léinn [gach rud a fhoghlaim faoi AI] (%ai_url) trí ranganna teagaisc, pleananna
-    ceachta, agus ár sraith físe nua How AI Works.
-  hoc_how_to_step_03_educators_desc_01: Bain triail as an teagaisc tú féin sula dtéann
-    tú isteach sa seomra ranga ionas gur féidir leat ceisteanna a fhreagairt!
-  hoc_how_to_step_03_educators_desc_02: Is féidir leat ranganna teagaisc a thástáil
-    freisin ar ríomhairí nó ar ghléasanna mac léinn chun a chinntiú go dtacaíonn An
-    bhfuil bandaleithead íseal agat? Plean físeáin a thaispeáint ag tosaigh an ranga,
-    ionas nach bhfuil gach mac léinn ag íoslódáil a gcuid físeáin féin.
-  hoc_how_to_step_03_educators_desc_03: Smaoinigh ar chluasáin a sholáthar do do rang,
-    nó iarr ar mhic léinn a gcuid féin a thabhairt, má oibríonn an teagaisc a roghnaíonn
-    tú is fearr le fuaim.
-  hoc_how_to_step_04_educators_desc_01: Nuair a chláraíonn tú d'imeacht Uair an Chód,
-    gheobhaidh tú ríomhphoist chabhracha le nuacht agus leideanna chun Uair Chód rathúil
-    a óstáil. Tá sé freisin mar is féidir leat a chur in iúl do shaorálaithe áitiúla
-    go bhfuil do scoil rannpháirteach. Is acmhainn iontach iad saorálaithe agus is
-    féidir leo teacht labhairt le do rang faoi eolaíocht ríomhaireachta nó cabhrú
-    le do mhic léinn le gníomhaíochtaí Uair an Chód.
-  hoc_how_to_step_05_educators_desc_01: Cuir do mhic léinn ar bís don ócáid trí [físeáin
-    inspioráideacha] a roinnt (%{videos_url}) ag cur béime ar dhaoine éagsúla agus
-    ar bhealaí cruthaitheacha gur féidir eolaíocht ríomhaireachta a úsáid sa saol
-    fíor.
-  hoc_how_to_step_05_educators_desc_02: Comhroinn do phleananna Uair an Chód le múinteoirí
-    eile ar mhaith leo páirt a ghlacadh ar an spraoi! Is deis iontach é seo freisin
-    teagmháil a dhéanamh le Cumann Mac Léinn Tuismitheoirí Múinteoirí do scoile nó
-    a roinnt i nuachtlitreacha tuismitheoirí, ag cur in iúl dóibh cad atá ag foghlaim
-    a leanaí.
-  hoc_how_to_step_06_educators_desc_01: Déan do mhic léinn a threorú chuig an ngníomhaíocht,
-    b'fhéidir tríd an nasc a roinnt ar an mbord nó trí chóras bainistíochta foghlama
-    do sheomra ranga. D'fhéadfadh dúshláin a bheith ag do mhic léinn - tá sin ceart
-    go leor! Tá foghlaim clár cosúil le teanga nua a fhoghlaim; ní bheidh tú líofa
-    láithreach. Mura bhfuil an freagra ar eolas agat, is féidir leat é a dhéanamh
-    amach le chéile.
-  hoc_how_to_step_07_educators_desc_01: 'Bí cinnte rath a cheiliúradh! Comhroinn grianghraif
-    agus físeáin de d''ócáid Uair an Chód ar na meáin shóisialta. Úsáid #HourOfCode
-    agus @codeorg ionas gur féidir linn aird a tharraingt ar do rath, freisin!'
-  hoc_how_to_step_07_educators_desc_02: Is féidir leat teastais a phriontáil freisin
-    do do mhic léinn chun a n-éacht a thaispeáint!
+  hoc_how_to_step_plan_hour_desc_01: 'Seo clár oibre samplach chun tú a thosú:'
+  hoc_how_to_step_choose_activities_desc_01: I mbliana, is é téama Uair an Chód Cruthaitheacht
+    le Intleacht Saorga (AI). Cibé an bhfuil sé ag códú aipeanna agus halgartaim nua,
+    ealaín uathúil a ghiniúint, nó córaagrafaíocht a cheardú chun damhsa a chur orainn,
+    tá AI ag oscailt deiseanna úra le haghaidh léiriú digiteach a leathnaíonn ár dtuiscint
+    ar chruth Déan an bhliain seo speisialta trí ghníomhaíocht chódú a chríochnú AGUS
+    foghlaim faoi AI.
+  hoc_how_to_step_choose_activities_desc_02: Ar dtús, [iniúchadh na céadta gníomhaíochtaí
+    códaithe] (%{activities_url}) agus roghnaigh ceann bunaithe ar aois, taithí, spéiseanna
+    agus go leor eile do ghrúpa. Cuimsíonn faisnéis shaorga [Na gníom%{ai_activities_url}haíochtaí
+    roghnaithe seo] () mar phríomhábhar nó ceacht.
+  hoc_how_to_step_choose_activities_desc_03: Ansin, [foghlaim gach rud faoi AI] (%{ai_url}).
+    Is féidir le mic léinn féachaint ar fhíseáin ghearra ina bhfuil saineolaithe sa
+    réimse, agus tá pleananna ceachta ag gabháil leis chun an ghníomhaíocht a leathnú
+    agus tuilleadh Nó, cuirimid foghlaim ghairmiúil saor in aisce ar fáil d'oideachasóirí
+    chun todhchaí na teagasc a dhíghlasáil le
+  hoc_how_to_step_educators_register_desc: Tosaigh le tiomantas Uair an Chód a dhéanamh
+    le do mhic léinn trí d'imeacht a chlárú. Nuair a chláraíonn tú, gheobhaidh tú
+    ríomhphoist chabhrach le nuacht agus leideanna chun Uair an Chód rathúil a óstáil.
+    Beidh tú freisin [cuir ar an léarscáil] (%{map_url}). Taispeánann iomláine infheicthe
+    ár n-iarrachtaí comhchoiteanna an tiomantas domhanda don ghluaiseacht ríomheolaíochta,
+    rud a chabhróidh linn móiminteam a thógáil d'athrú
+  hoc_how_to_step_educators_plan_desc_01: Roimh d'imeacht, bain triail as na gníomhaíochtaí
+    féin ionas gur féidir leat a chinntiú go n-oibríonn siad ar ghléasanna mac léinn
+    agus go bhfuil tú sásta ceisteanna a fhreagairt! An bhfuil bandaleithead íseal
+    agat? Plean físeáin a thaispeáint ag tosaigh an ranga, ionas nach bhfuil gach
+    mac léinn ag íoslódáil a gcuid físeáin féin.
+  hoc_how_to_step_educators_plan_desc_02: Is minic a théann daoine ar fud an domhain
+    isteach i gceiliúradh Uair an Chód le linn Seachtain Oideachais Eolaíochta Ríomhaireachta
+    (%{campaign_date}), ach is féidir leat Uair an Chód a dhéanamh lá ar bith den
+    bhliain!
+  hoc_how_to_step_educators_plan_desc_03: Roghnaigh spás a oibríonn do líon na mac
+    léinn agus na bhfeistí atá ar fáil agat. Is féidir le mic léinn triail a bhaint
+    as gníomhaíochtaí ar ghléasanna aonair, seans a roinnt gléas, nó mar rang ar chlár
+    bán. Tá fiú gníomhaíochtaí neamhphlugáilte ann is féidir a chríochnú gan aon ghléasanna
+    ar chor ar bith, ionas gur féidir iad a dhéanamh lasmuigh fiú!
+  hoc_how_to_step_educators_spread_word_desc_01: Cuidigh linn an focal a scaipeadh
+    i do phobal le [na teimpléid ríomhphoist seo] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Iarr ar bheirt chomhghle [register]ac%{register_url}aithe
+    gníomhaíocht Uair an Chód () agus a óstáil. Is féidir leo, ar a seal, beirt chomhghleacaí
+    a dhaingniú, ar féidir leo beirt chomhghleacaí a dhaingniú,
+  hoc_how_to_step_educators_spread_word_desc_03: Iarr ar do phríomhoide imeacht ar
+    fud na scoile a óstáil] (%{host_url}). Nuair a ghlacann 300 páiste nó níos mó
+    páiste páirt, is féidir leat trealamh rannpháirtíochta speisialta a fháil le t-léinte,
+    póstaeir, greamáin ríomhaire glúine [Comhroinn do phlean imeachta scoile iomlán]
+    (%{share_url}) chun cáiliú.
+  hoc_how_to_step_educators_spread_word_desc_04: Téigh i dteagmháil le Cumann Mac
+    Léinn Tuismitheoirí Múinteoirí do scoile nó roinn i nuachtlitreacha tuismitheoirí,
+    ag cur in iúl dóibh cad atá á fhoghlaim
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05am: Tosaigh le [físeán
+    inspioráideach] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45am: Déanann mic léinn a
+    ngníomhaíocht códaithe'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55am: Foghlaimíonn mic léinn
+    faoi AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00am: Tugann múinteoir ráitis
+    deiridh'
+  hoc_how_to_step_educators_get_coding_desc: Déan do mhic léinn a threorú chuig an
+    ngníomhaíocht, b'fhéidir tríd an nasc a roinnt ar an mbord nó trí chóras bainistíochta
+    foghlama do sheomra ranga. D'fhéadfadh dúshláin a bheith ag do mhic léinn - tá
+    sin ceart go leor! Tá foghlaim clár cosúil le teanga nua a fhoghlaim; ní bheidh
+    tú líofa láithreach. Mura bhfuil an freagra ar eolas agat, is féidir leat é a
+    dhéanamh amach le chéile.
+  hoc_how_to_step_educators_celebrate_desc: 'Tar éis d''ócáid, priontáil deimhnithe
+    críochnaithe agus comhghairdeas a dhéanamh le do Roinn grianghraif agus físeáin
+    d''imeacht Uair an Chód agus taispeáin éachtaí do mhic léinn ag baint úsáide as
+    #HourOfCode agus @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Ní gá go gcaithfidh ríomhaireacht deireadh
+    a chur leis an Uair an Chód! Cé gur mian le 90% de thuismitheoirí go bhfoghlaimíonn
+    a leanbh ríomheolaíocht, ní mhúineann mórchuid na scoileanna é fós. Chun cabhrú,
+    tá ár gcuraclam bunaithe ar an ngréasán agus saor in aisce le húsáid go deo. Foghlaim
+    conas CS a thabhairt chuig do scoil inniu.
   hoc_ai_top_desc: Is féidir le duine ar bith foghlaim faoi AI, cibé an mac léinn
     sa seomra ranga tú nó oideoir a dhíghlasálann todhchaí na múinteoireachta le AI
     agus faoi.
@@ -14813,66 +14840,70 @@ ga:
     do lucht déanta beartais, do cheannairí scoile agus do fhoireann chun treoir tosaigh
     ar AI a fhorbairt ina scoileanna.
   teach_ai_button_label: Féach ar an bhFoireann Uirlisí
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: Foghlaim d'aois 11 agus níos sine
+  middle_high_page_main_description: Déan iniúchadh ar shaol na heolaíochta ríomhaireachta
+    le físeáin tarraingteacha, ranganna teagaisc féin-luasacha, gníomhaíochtaí cláir
+  middle_high_page_hero_title: Tosaigh le Uair an Chód
+  middle_high_page_hero_description: Foghlaim buneilimintí na ríomheolaíochta le gníomhaíochtaí
+    Uair an Chód saor in aisce, ina bhfuil bloic chódú tarraing-agus-titim Tá na céadta
+    roghanna uair an chloig le roghnú as!
+  middle_high_page_hourofcode_link: Déan iniúchadh ar ghníomhaíochtaí Uair
+  middle_high_page_modules_title: Modúil Clárúcháin do Mhic Léinn
+  middle_high_page_modules_description: Oiriúnaithe ónár gcúrsaí Fionnachtana CS agus
+    Prionsabail CS, is bealach iontach iad na modúil ghearra féin-luas seo do mhic
+    léinn meánscoile agus ardscoile chun coincheapa a fhoghlaim a chuimsíonn gach
+    teanga agus uirlis cláir.
+  middle_high_page_modules_card_title_1: Réamhrá ar Game Lab
+  middle_high_page_modules_card_title_2: Clárú Turtair i App Lab
+  middle_high_page_modules_card_title_3: Clárú Tiomáinte ar Imeachtaí i App Lab
+  middle_high_page_modules_card_description_1: Bogadh ar do luas féin san réamhrá
+    seo chuig ár dtimpeallacht Game Lab agus tú ag clárú beochan, ealaín idirghníomhach
+    agus cluichí.
+  middle_high_page_modules_card_description_2: Díghlasáil an cumas aipeanna saibhre,
+    idirghníomhacha a dhéanamh le JavaScript sa App Lab!
+  middle_high_page_modules_card_description_3: Téigh ar do luas féin leis an réamhrá
+    seo chuig timpeallacht ríomhchláraithe App Lab, ina n-úsáideann mic léinn JavaScript
+    chun aipeanna idirghníomhacha a chruthú.
+  middle_high_page_modules_card_link: Bain triail as
+  middle_high_page_make_your_own_title: Déan Do Aipeanna, Cluichí agus Leathanaigh
+    Gréasáin Féin
+  middle_high_page_make_your_own_description: 'Chomh maith le cúrsaí, tá uirlisí cláir
+    againn a ligeann duit do chruthaitheacht a iniúchadh agus rud iontach a dhéanamh. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: Cluiche Lab
+  middle_high_page_make_your_own_card_title_3: Saotharlann Gréasáin
+  middle_high_page_make_your_own_card_descrpition_1: Is timpeallacht cláir é App Lab
+    inar féidir leat aipeanna simplí a dhéanamh. Dearadh aip, cód i JavaScript le
+    bloic nó téacs, ansin roinn d'aip i soicindí.
+  middle_high_page_make_your_own_card_descrpition_2: Is timpeallacht cláir é Game
+    Lab inar féidir leat beochan agus cluichí simplí a dhéanamh le rudaí agus carachtair
+    a idirghníomhaíonn lena chéile.
+  middle_high_page_make_your_own_card_descrpition_3: Is timpeallacht cláraithe é Web
+    Lab inar féidir leat leathanaigh ghréasáin simplí a dhéanamh ag baint úsáide as
+    HTML agus CSS. Dearadh do leathanaigh ghréasáin agus roinn do shuíomh i soicindí.
   middle_high_page_make_your_own_card_link: Níos mó a fhoghlaim
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Acmhainní Breise
+  middle_high_page_additional_resources_description: Tá an oiread sin bealaí ann chun
+    ríomheolaíocht a iniúchadh tuilleadh! Brabhsáil ár leabharlann físe, nó foghlaim
+    níos mó faoi ghairmeacha spreagúla i réimse na ríomheolaíochta.
+  middle_high_page_video_library_title: Faigh amach ár Leabharlann Físe
+  middle_high_page_video_library_description: Foghlaim buneilimintí na ríomheolaíochta
+    trí fhíseáin ghearra 5-10 nóiméad ar ábhair cosúil le hintleacht shaorga, an Idirlíon,
+    conas a oibríonn ríomhairí, conas gan hacáil, blockchain, gairmeacha beatha, agus
+    go leor eile!
+  middle_high_page_video_library_link: Féach ar leabharlann físe
+  middle_high_page_cs_journeys_title: Téigh níos faide le CS Journeys
+  middle_high_page_cs_journeys_description: Tóg an chéad chéim eile ar do thuras eolaíochta
+    ríomhaireachta. Déan iniúchadh ar shlí bheatha, deiseanna meantóireachta, cúrsaí
+    ar líne, scoláireachtaí, inté
+  middle_high_page_cs_journeys_link: Déan iniúchadh ar CS Journeys
+  middle_high_page_cs_title: Eolaíocht Ríomhaireachta sa Seomra ranga
+  middle_high_page_cs_description: Ba chóir go mbeadh múinteoir faoi stiúir na cúrsaí
+    seo! Más mian leat iad a fheiceáil ag múineadh ag do scoil, smaoinigh ar oibriú
+    le múinteoir chun iad a thabhairt chuig do rang.
+  middle_high_page_cs_card_title_1: Fionnachtana CS
+  middle_high_page_cs_card_title_2: Prionsabail CS
+  middle_high_page_cs_card_title_3: AP Eolaíocht Ríomhaireachta A
   middle_high_page_cs_card_description_1: Tacar bunchuraclaim saor in aisce a thugann
     coincheapa bunúsacha na ríomheolaíochta don scoláire agus a thugann dúshlán dóibh
     iniúchadh a dhéanamh ar conas is féidir le ríomhaireacht agus teicneolaíocht dul
@@ -14884,34 +14915,35 @@ ga:
   middle_high_page_cs_card_description_3: Mic léinn a thabhairt isteach chun innealtóireacht
     bogearraí agus dearadh réad-dhírithe agus iad ag foghlaim an teanga cláir Java
     sa churaclam saor in aisce do AP® Eolaíocht Ríomhaireachta A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Déan iniúchadh ar CS Dicoveries
   middle_high_page_cs_link_2: Déan iniúchadh ar Prionsabail CS
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: Déan iniúchadh ar CSA
+  elemeentary_page_main_title: Foghlaim d'aois 5 go 11
+  elementary_page_main_description: Déan iniúchadh ar shaol na heolaíochta ríomhaireachta
+    le físeáin tarraingteacha, ranganna teagaisc féin-luasacha, gníomhaíochtaí cláir
+  elementary_page_own_pace_title: Lean ar aghaidh ag Foghlaim ag do luas féin
+  elementary_page_own_pace_description: Cruthaigh líníochtaí, cluichí agus go leor
+    eile sa dá rogha den scoth seo do mhic léinn ag tosú ar a gcuid buneilimintí na
+    ríomheolaíochta a fhoghlaim féin.
+  elementary_page_own_pace_card_title_1: Cúrsa Réamh-Léitheoir Express
+  elementary_page_own_pace_card_title_2: Cúrsa Express
+  elementary_page_own_pace_card_description_1: Foghlaim ríomheolaíocht ar do luas
+    féin! Foghlaim cláir ríomhaireachta a chruthú, scileanna réiteach fadhbanna a
+    fhorbairt, agus oibriú trí dhú Déan cluichí agus tionscadail chruthaitheacha le
+    roinnt le cairde, teaghlach agus múinteoirí.
+  elementary_page_own_pace_link_1: Cuir tús le Cúrsa Réamh-
+  elementary_page_own_pace_link_2: Tosaigh Cúrsa Express
+  elementary_page_make_your_own_games_title: Déan Do Beochan agus Cluichí Féin
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Am a bheith cruthaitheach!
+    Úsáid códú bloc-bhunaithe chun rud éigin amaí, milis nó spásach seachtrach a dhéanamh
+    i Sprite Lab. Is é an t-aon teorainn ná do shamhlaíocht!
+  elementary_page_make_your_own_games_link: Bain triail as Sprite Lab
+  elementary_page_computer_science_title: Eolaíocht Ríomhaireachta sa Seomra ranga
+  elementary_page_computer_science_description: Ba chóir go mbeadh múinteoir faoi
+    stiúir na cúrsaí seo! Más mian leat iad a fheiceáil ag múineadh ag do scoil, iarr
+    ar thuismitheoir nó caomhnóir oibriú le múinteoir chun iad a thabhairt chuig do
+    rang.
   elementary_page_computer_science_card_title_1: Bunúsacha Eolaíochta Ríomhaireachta
   elementary_page_computer_science_card_title_2: Naisc Eolaíocht Ríomhaireachta
   elementary_page_computer_science_description_1: Tacar bunchuraclaim saor in aisce

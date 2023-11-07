@@ -7,10 +7,10 @@ th:
     ณ วันที่ %{campaign_date}
   coming_soon: เร็วๆ นี้
   new: ใหม่
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: 'ให้บริการ Hours of Code '
   hoc_stat_languages: นักเรียนกำลังเรียนได้มากกว่า 45 ภาษา
   hoc_stat_hours_served: นักเรียนกว่า 100 ล้านคนเข้าร่วมกิจกรรม Hour of Code
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: นักเรียนหญิงคิดเป็น 50% ของผู้เข้าร่วม Hour of Code
   campaign_date_start_short: 4 ธ.ค.
   campaign_date_start_long: 4 ธันวาคม
   campaign_date_short: 4 - 10 ธ.ค.
@@ -49,10 +49,9 @@ th:
   hoc2023_social_creativity_with_ai_title: Hour of Code - สิ่งที่คุณจะสร้าง?
   hoc2023_social_creativity_with_ai_desc: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจและเรียนรู้เกี่ยวกับ
     AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: The Hour of Code เป็นการแนะนำวิทยาการคอมพิวเตอร์ฟรีผ่านกิจกรรมและวิดีโอที่สนุกสนานสำหรับผู้เรียนทุกระดับ
+    การเฉลิมฉลองทั้งการเขียนโค้ดและ AI ในปีนี้ได้รับการสนับสนุนจากพันธมิตรมากกว่า
+    400 ราย นักการศึกษา 20,000 ราย และอาสาสมัคร 58,000 ราย
   hoc2022_header: สำรวจ เล่น สร้าง!
   social_hoc2022_explore_play_create: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจ เล่น และสร้าง!
   codeorg_homepage_hoc2022_body: สำรวจจักรวาล ยิงประตู ทำลายการเคลื่อนไหว — มีหลายวิธีที่จะลองใช้วิทยาการคอมพิวเตอร์
@@ -62,9 +61,8 @@ th:
     Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจาก "Encanto" ของดิสนีย์และอีกมากมาย!
   social_hoc2023_dance: มี Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     เพลงจากดิสนีย์ “Encanto” และอื่น ๆ อีกมากมาย!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: ถึงเวลาที่จะวางสิ่งของของคุณแล้ว!สร้างปาร์ตี้เต้นของคุณเองที่มีเพลงฮิตของ
+    Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía และอีกมากมาย!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่เราสร้างขึ้นเอง  "
@@ -243,21 +241,23 @@ th:
   teacher_forum_desc: เยี่ยมชมฟอรัมผู้สอนชั่วโมงแห่งรหัสเพื่อรับคำแนะนำ ข้อมูลเชิงลึกและการสนับสนุนจากนักการศึกษาคนอื่น
   required_materials: 'อุปกรณ์ที่จำเป็น:'
   optional_materials: 'อุปกรณ์เสริม:'
-  for_students: For students
+  for_students: สำหรับผู้เรียน
   for_educators: สำหรับครู
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: จัดงาน Hour of Code
   call_to_action_hold_an_event: จัดกิจกรรม
   call_to_action_register_event: ลงทะเบียนกิจกรรมของคุณ
   call_to_action_register_your_hoc: ลงทะเบียน Hour of Code ของคุณ
   call_to_action_select_activity: เลือกกิจกรรม
+  call_to_action_select_coding_activity: เลือกกิจกรรมการเข้ารหัส
   call_to_action_start_activity: เริ่มกิจกรรม
   call_to_action_get_certificates: รับใบรับรอง
+  call_to_action_print_certificates: พิมพ์ใบรับรอง
   call_to_action_go_beyond_hoc: ไปให้ไกลกว่า Hour of Code
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
+  call_to_action_explore_all_hoc_activities: สำรวจกิจกรรม Hour of Code ทั้งหมดจาก
     Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_start_dance_party: เริ่มปาร์ตี้เต้นรำ
+  call_to_action_start_part_02: เริ่มตอนที่สอง
+  call_to_action_start_unplugged_activity: เริ่มกิจกรรมที่ถอดปลั๊ก
   call_to_action_view_promo_resources: ดูแหล่งข้อมูลโปรโมชั่น
   call_to_action_learn_more: เรียน​รู้​เพิ่ม​เติม
   call_to_action_watch_now: รับชมเลย
@@ -353,9 +353,9 @@ th:
   call_to_action_view_faqs: ดูคำถามที่พบบ่อยเพิ่มเติม
   call_to_action_applications_open: แอพพลิเคชั่นเปิดอยู่แล้ว
   call_to_action_apply_cs_ambassador: สมัครเป็นเอกอัครราชทูต CS
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: เร็ว ๆ นี้!
+  call_to_action_learn_how_ai_works: เรียนรู้ว่า AI ทำงานอย่างไร
+  call_to_action_learn_about_ai: เรียนรู้เกี่ยวกับ AI
   aria_label_call_to_action_hoc_how_to_educators: ดูคำแนะนำวิธีการสำหรับนักการศึกษา
   aria_label_call_to_action_hoc_how_to_companies: ดูคำแนะนำวิธีการสำหรับบริษัท
   aria_label_call_to_action_hoc_how_to_districts: ดูคำแนะนำวิธีการสำหรับอำเภอ
@@ -364,13 +364,14 @@ th:
   aria_label_call_to_action_hoc_how_to_public_officials: ดูคำแนะนำวิธีการสำหรับเจ้าหน้าที่ของรัฐ
   aria_label_call_to_action_hoc_how_to_volunteers: ดูคำแนะนำวิธีการสำหรับอาสาสมัคร
   aria_label_call_to_action_hoc_how_to_virtual_events: ดูคำแนะนำวิธีการสำหรับกิจกรรมเสมือน
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: เริ่มกิจกรรมปาร์ตี้เต้นรำ
+  aria_label_call_to_action_dance_02: เริ่มส่วนที่สองของกิจกรรมปาร์ตี้เต้นรำ
+  aria_label_call_to_action_dance_unplugged: เริ่มกิจกรรมปาร์ตี้แดนซ์แบบถอดปลั๊ก
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csp: เริ่มการสอนหลักสูตรวิชาชีพ หลักการวิทยาการคอมพิวเตอร์
+  aria_label_call_to_action_teaching_problem_solving: เริ่มโปรแกรมการเรียนรู้ระดับมืออาชีพการแก้ปัญหาการสอนและการคำนวณ
   aria_label_call_to_action_teaching_csc: เริ่มโปรแกรมการเรียนรู้ระดับมืออาชีพของการสอนการเชื่อมต่อวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_ai: เริ่มการสอน AI และโปรแกรมการเรียนรู้แบบมืออาชีพของเครื่องจักร
   aria_label_call_to_action_teaching_maker_cp: เริ่มโปรแกรมการเรียนรู้ระดับมืออาชีพในการสอนการสร้างแอปด้วยอุปกรณ์
@@ -382,6 +383,7 @@ th:
   aria_label_call_to_action_curriculum_csf_express_pre_reader: สำรวจความรู้เร่งด่วนล่วงหน้าความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_curriculum_csd: สำรวจหลักสูตรการค้นพบวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_curriculum_csp: ศึกษาหลักสูตรหลักการวิทยาการคอมพิวเตอร์
+  aria_label_call_to_action_curriculum_problem_solving: สำรวจหลักสูตรการแก้ปัญหาและการคำนวณ
   aria_label_call_to_action_curriculum_csc: สำรวจหลักสูตรการเชื่อมต่อวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_curriculum_ai: สำรวจหลักสูตร AI และแมชชีนเลิร์นนิง
   aria_label_call_to_action_curriculum_maker_cp: สำรวจหลักสูตรการสร้างแอปด้วยอุปกรณ์
@@ -439,6 +441,7 @@ th:
   curriculum_name_csf_teacher_led: บทเรียนผู้นำการสอน
   curriculum_name_csd: การค้นพบวิทยาการคอมพิวเตอร์
   curriculum_name_csp: หลักการวิทยาการคอมพิวเตอร์
+  curriculum_name_problem_solving: การแก้ปัญหาและการคำนวณ
   curriculum_name_csc: การเชื่อมต่อวิทยาการคอมพิวเตอร์
   curriculum_name_csa: วิทยาการคอมพิวเตอร์ A
   curriculum_name_csa_ai: วิศวกรรมซอฟต์แวร์ & วิสัยทัศน์คอมพิวเตอร์
@@ -451,25 +454,21 @@ th:
   curriculum_name_creating_apps_with_devices: การสร้างแอปด้วยอุปกรณ์
   curriculum_name_poetry: การเข้ารหัสด้วยบทกวี
   curriculum_name_dance_party: งานเลี้ยงเต้นรำ
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: เต้นต่อไป
+  curriculum_name_dance_party_unplugged: ปาร์ตี้เต้นรำไม่มีปลั๊ก
+  curriculum_name_dance_party_ai_edition: 'ปาร์ตี้เต้นรำ: รุ่น AI'
   curriculum_name_problem_solving_computing: การแก้ปัญหาและการคำนวณ
   curriculum_name_web_development: การพัฒนาเว็บ
   curriculum_name_interactive_animations_games: แอนิเมชั่นและเกมแบบโต้ตอบ
   curriculum_name_design_process: ขั้นตอนการออกแบบ
   curriculum_name_data_society: ข้อมูลและสังคม
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: ในกิจกรรมเบื้องต้นนี้ ให้ใช้โค้ดเพื่อทำให้ตัวละครที่มีสีสันที่หลากหลายย้ายไปสู่พื้นหลังภาพเคลื่อนไหวและเพลงที่สวยงาม
+  curriculum_desc_dance_party_02: ก้าวไปไกลกว่าบทช่วยสอนเบื้องต้นด้วยแนวคิดโครงการเพิ่มเติมเรียกดูห้องสมุดตัวอย่างของปาร์ตี้เต้นที่ซับซ้อนมากขึ้น
+  curriculum_desc_dance_party_unplugged: เปิดร่องของคุณ—ไม่จำเป็นต้องใช้คอมพิวเตอร์!เรียนรู้ว่าแนวคิดการเข้ารหัส
+    เช่น เหตุการณ์ สามารถใช้เพื่อซิงโครไนซ์ท่าเต้นของนักเต้นได้อย่างไร
+  curriculum_desc_dance_party_ai_edition: เรียนรู้เกี่ยวกับแนวคิดปัญญาประดิษฐ์ (AI)
+    เพื่อสร้างปาร์ตี้เต้นเสมือนของคุณเองเพื่อแสดงศิลปินชั้นนำในปัจจุบันมีเพลงให้เลือกหลายสิบเพลง
+    เข้าถึงนักเรียนทุกคนไม่ว่าจะชอบดนตรีของพวกเขาถึงเวลาที่จะวางสิ่งของของคุณแล้ว!
   curriculum_desc_csf: ชุดหลักสูตรประถมศึกษาฟรีที่แนะนำนักเรียนให้รู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
   curriculum_desc_csf_express: เรียนรู้การสร้างโปรแกรมคอมพิวเตอร์ พัฒนาทักษะการแก้ปัญหา
     และทำงานผ่านความท้าทายที่สนุกสนาน! สร้างเกมและโปรเจ็กต์ที่สร้างสรรค์เพื่อแชร์กับเพื่อนๆ
@@ -576,12 +575,12 @@ th:
   module_grade_grade_03: เกรด 3
   module_grade_grade_04: เกรด 4
   module_grade_grade_05: เกรด 5
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: อายุ 5-7 ปี
+  module_age_07: อายุ 7 ปีขึ้นไป
+  module_age_07_11: อายุ 7-11 ปี
+  module_age_11: อายุ 11 ปีขึ้นไป
+  module_age_13: อายุ 13 ปีขึ้นไป
+  module_age_all_age: ทุกวัย
   module_grade_k_5_teachers: ผู้สอน K-5
   module_grade_6_10_teachers: ผู้สอน 6-10
   module_grade_9_12_teachers: ผู้สอน 9-12
@@ -613,6 +612,7 @@ th:
   module_label_teaching_csf: การสอนความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
   module_label_teaching_csd: การสอนการค้นพบวิทยาการคอมพิวเตอร์
   module_label_teaching_csp: การสอนวิทยาการคอมพิวเตอร์ หลักการ
+  module_label_teaching_problem_solving: การสอนการแก้ปัญหาและการคำนวณ
   module_label_teaching_csc: การสอนการเชื่อมต่อวิทยาการคอมพิวเตอร์
   module_label_teaching_ai: การสอน AI และแมชชีนเลิร์นนิง
   module_label_teaching_maker_cp: การสอนการสร้างแอปด้วยอุปกรณ์ (สนามเด็กเล่น)
@@ -670,8 +670,8 @@ th:
   heading_csa_ai: กำลังมองหาสิ่งที่ต้องทำหลังจากการสอบ AP®?
   heading_bring_cs_to_students: นำวิทยาการคอมพิวเตอร์มาให้นักเรียน
   heading_cs_ambassador_program: โปรแกรมเอกอัครราชทูต CS
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: โครงการนักเรียนที่โดดเด่น
+  heading_start_hoc_with_videos: เริ่มต้นชั่วโมงแห่งรหัสของคุณด้วยวิดีโอที่สร้างแรงบันดาลใจ
   cs_ambassador_subhead: หากคุณเป็นนักเรียนมัธยมปลายที่หลงใหลในการสนับสนุนให้หญิงสาวมากขึ้นมาเรียนวิทยาการคอมพิวเตอร์ที่โรงเรียนของคุณ
     เราต้องการคุณ!
   cs_ambassador_desc: ทุกสาขา รวมถึงการแพทย์ ความบันเทิง กีฬา การศึกษา ธุรกิจ แฟชั่น
@@ -742,13 +742,13 @@ th:
   subscribe_form_section_desc_csp: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Computer
     Science Principles ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
   subscribe_form_section_unsubscribe: คุณสามารถยกเลิกการสมัครได้ตลอดเวลา
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: เข้ารหัสปาร์ตี้เต้นรำ
+  dance_featuring_songs_by_short: 'มีเพลงโดย:'
+  dance_featuring_songs_by_long: 'ปาร์ตี้เต้นรำประกอบด้วยเพลงโดย:'
+  dance_and_more: และอื่น ๆ
+  dance_choose_activity: เลือกปาร์ตี้เต้นรำของคุณ
+  dance_afe_disclaimer: ศิลปินที่ใช้เพลงในบทช่วยสอนนี้ไม่ได้สนับสนุนหรือรับรองจาก
+    Amazon เป็นส่วนหนึ่งของการอนุญาตให้ใช้เพลงของพวกเขาไปยัง Code.org
   blockchain_hero_heading: วิธีการทำงานของบล็อกเชน
   blockchain_hero_desc: ดำดิ่งสู่โลกของบล็อกเชนด้วย “วิธีการทำงานของ Blockchain” วิดีโอชุดใหม่ของเราและบทเรียนประกอบ!
   blockchain_intro_heading: ดูว่าบล็อกเชนทำงานอย่างไร
@@ -10808,6 +10808,9 @@ th:
   step_06: ขั้นตอนที่ 6
   step_07: ขั้นตอนที่ 7
   step_08: ขั้นตอนที่ 8
+  what: 'อะไร:'
+  when: 'เมื่อ:'
+  where: 'ที่ไหน:'
   hoc_how_to_top_heading: คำแนะนำของคุณเกี่ยวกับ Hour of Code
   hoc_how_to_top_desc: 'คู่มือวิธีการปรับให้เหมาะกับประสบการณ์ Hour of Code ที่ดีที่สุด '
   hoc_how_to_top_view_guide: ดูคู่มือสำหรับ
@@ -10845,51 +10848,64 @@ th:
     45 ภาษา
   hoc_how_to_step_label_plan: วางแผนที่ไหนและเมื่อไหร่ที่คุณจะทำ Hour of Code ของคุณ
   hoc_how_to_step_label_choose_activity: เลือกกิจกรรมของคุณ
+  hoc_how_to_step_label_choose_activities: เลือกกิจกรรมของคุณ
   hoc_how_to_step_label_test_activity: ทดสอบกิจกรรมของคุณ
   hoc_how_to_step_label_register_event: ลงทะเบียนกิจกรรมของคุณ
   hoc_how_to_step_label_tell: บอกนักเรียน โรงเรียน และชุมชนของคุณ
   hoc_how_to_step_label_get_coding: เรียนรู้รหัส!
   hoc_how_to_step_label_celebrate: ฉลอง
   hoc_how_to_step_label_beyond_hoc: นอกเหนือจาก Hour of Code
+  hoc_how_to_step_label_plan_your_event: วางแผนกิจกรรมของคุณ
+  hoc_how_to_step_label_plan_your_hour: วางแผนชั่วโมงของคุณ
+  hoc_how_to_step_label_help_spread_word: ช่วยเผยแพร่ข่าว
   hoc_how_to_step_beyond_hoc_subhead: มันไม่ได้จบที่นี่!
-  hoc_how_to_step_beyond_hoc_desc: วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบด้วย Hour of
-    Code! แม้ว่าผู้ปกครอง 90% ต้องการให้บุตรหลานเรียนวิทยาการคอมพิวเตอร์ แต่โรงเรียนส่วนใหญ่ก็ยังไม่สอน
-    เรียนรู้วิธีนำวิทยาการคอมพิวเตอร์มาสู่โรงเรียนของบุตรหลานของคุณวันนี้
-  hoc_how_to_step_01_educators_subhead: เลือกเวลาและพื้นที่กิจกรรมที่เหมาะกับจำนวนนักเรียนและอุปกรณ์ที่คุณมี
-  hoc_how_to_step_01_educators_desc_01: คุณมีพื้นที่ว่างอะไรบ้างในการทำ Hour of Code?
-    พิจารณาความสามารถด้านเทคโนโลยีในพื้นที่ของคุณ และประเภทอุปกรณ์ที่คุณคาดหวังให้นักเรียนใช้งาน
-    นักเรียนสามารถทำกิจกรรมบนอุปกรณ์เครื่องเดียวกัน โดยผลัดกันใช้อุปกรณ์ที่ใช้ร่วมกัน
-    หรือลองฝึกสอนร่วมกันบนไวท์บอร์ดในห้องเรียน มีแม้กระทั่งบทช่วยสอนแบบออฟไลน์ที่สามารถทำได้โดยไม่ต้องใช้อุปกรณ์เลย
-    ตัวเลือกแบบออฟไลน์สามารถทำได้ทุกที่—แม้แต่กลางแจ้ง!
-  hoc_how_to_step_01_educators_desc_02: ผู้คนทั่วโลกเข้าร่วมการเฉลิมฉลอง Hour of Code
-    ในช่วงสัปดาห์การศึกษา CS %{campaign_date} ซึ่งมีการเผยแพร่บทเรียนแนะนำและกิจกรรมล่าสุด
-    แต่คุณสามารถทำ Hour of Code ได้ทุกวันตลอดทั้งปี!
-  hoc_how_to_step_02_educators_desc_01: สำรวจกิจกรรมตามอายุ ประสบการณ์ ความสนใจ และอื่นๆ
-    ของกลุ่มของคุณเป็นที่นิยมสำหรับนักเรียนที่จะลองใช้บทเรียนด้วยตนเอง แม้ว่ากิจกรรมหลายอย่างจะมีแผนการสอนสำหรับผู้สอนเพื่อเป็นแนวทางในการอภิปรายหรือขยายกิจกรรมเช่นกัน
-  hoc_how_to_step_02_educators_desc_02: ตัดสินใจล่วงหน้าหากคุณต้องการเลือกบทช่วยสอนเดียวสำหรับนักเรียนทุกคนของคุณหรือปล่อยให้เด็กแต่ละคนเลือกของตัวเอง
-  hoc_how_to_step_02_educators_desc_03: ในปีนี้ คุณและนักเรียนของคุณสามารถ [เรียนรู้ทั้งหมดเกี่ยวกับ
-    AI](%ai_url) ผ่านบทเรียน แผนการสอน และซีรีส์วิดีโอ AI ทำงานอย่างไรชุดใหม่ของเรา
-  hoc_how_to_step_03_educators_desc_01: ลองใช้บทช่วยสอนด้วยตัวคุณเองก่อนเข้าห้องเรียนเพื่อให้คุณสามารถตอบคำถาม!
-  hoc_how_to_step_03_educators_desc_02: คุณยังสามารถทดสอบบทเรียนบนคอมพิวเตอร์หรืออุปกรณ์ของนักเรียนเพื่อให้แน่ใจว่าพวกเขาสนับสนุนเสียงและวิดีโอมีแบนด์วิดท์ต่ำ?
-    วางแผนที่จะแสดงวิดีโอที่ด้านหน้าของชั้นเรียนดังนั้นนักเรียนแต่ละคนจะไม่ดาวน์โหลดวิดีโอของตัวเอง
-  hoc_how_to_step_03_educators_desc_03: จัดหาหูฟังสำหรับชั้นเรียนของคุณ หรือให้นักเรียนนำมาเอง
-    ถ้าการสอนที่คุณเลือกใช้งานได้ดีกับเสียง
-  hoc_how_to_step_04_educators_desc_01: เมื่อคุณลงทะเบียนกิจกรรม Hour of Code คุณจะได้รับอีเมลที่เป็นประโยชน์พร้อมข่าวสารและเคล็ดลับในการจัดงาน
-    Hour of Code ให้ประสบความสำเร็จ นอกจากนี้ยังเป็นวิธีที่คุณสามารถแจ้งให้อาสาสมัครในพื้นที่ทราบว่าโรงเรียนของคุณเข้าร่วมด้วย
-    อาสาสมัครเป็นแหล่งข้อมูลที่ดีเยี่ยมและสามารถมาพูดคุยกับชั้นเรียนเกี่ยวกับวิทยาการคอมพิวเตอร์หรือช่วยเหลือนักเรียนในกิจกรรม
-    Hour of Code
-  hoc_how_to_step_05_educators_desc_01: ทำให้นักเรียนของคุณตื่นเต้นกับกิจกรรมด้วยการแบ่งปัน
-    [วิดีโอที่สร้างแรงบันดาลใจ](%{videos_url}) เน้นผู้คนหลากหลายและวิธีการสร้างสรรค์ที่วิทยาศาสตร์คอมพิวเตอร์สามารถใช้ได้ในโลกแห่งความเป็นจริง
-  hoc_how_to_step_05_educators_desc_02: แบ่งปันแผน Hour of Code ของคุณกับผู้สอนคนอื่นๆ
-    ที่ต้องการเข้าร่วมในความสนุก! นี่เป็นโอกาสที่ดีในการติดต่อสมาคมนักเรียน ผู้สอน
-    ผู้ปกครองของโรงเรียนของคุณหรือแบ่งปันจดหมายข่าวผู้ปกครองแจ้งให้พวกเขารู้ว่าลูกๆ
-    กำลังเรียนรู้อะไร
-  hoc_how_to_step_06_educators_desc_01: แนะนำให้นักเรียนเข้าร่วมกิจกรรม โดยอาจแชร์ลิงก์บนกระดานหรือผ่านระบบบริหารจัดการการเรียนรู้ในห้องเรียน
+  hoc_how_to_step_plan_hour_desc_01: 'นี่คือวาระตัวอย่างเพื่อช่วยให้คุณเริ่มต้น:'
+  hoc_how_to_step_choose_activities_desc_01: ในปีนี้ธีม Hour of Code คือ ความคิดสร้างสรรค์ด้วยปัญญาประดิษฐ์
+    (AI)ไม่ว่าจะเป็นการเขียนโค้ดแอพและอัลกอริทึมใหม่ สร้างศิลปะที่ไม่เหมือนใคร หรือสร้างท่าเต้นเพื่อทำให้เราเต้นรำ
+    AI กำลังเปิดโอกาสใหม่สำหรับการแสดงออกทางดิจิทัลที่ขยายความเข้าใจของเราเกี่ยวกับความคิดสร้างสรรค์ทำให้ปีนี้เป็นพิเศษด้วยการทำกิจกรรมการเขียนโค้ดและเรียนรู้เกี่ยวกับ
+    AI
+  hoc_how_to_step_choose_activities_desc_02: ขั้นแรก [สำรวจกิจกรรมการเข้ารหัสหลายร้อยรายการ]
+    (%{activities_url}) และเลือกกิจกรรมตามอายุ ประสบการณ์ ความสนใจ และอื่นๆ ของกลุ่มของคุณ[กิจกรรมที่เลือกเหล่านี้]
+    (%{ai_activities_url}) นำปัญญาประดิษฐ์เป็นหัวข้อสำคัญหรือบทเรียน
+  hoc_how_to_step_choose_activities_desc_03: จากนั้น [เรียนรู้ทั้งหมดเกี่ยวกับ AI]
+    (%{ai_url})นักเรียนสามารถรับชมวิดีโอสั้น ๆ ที่มีผู้เชี่ยวชาญในสาขา และมีแผนการสอนที่มาพร้อมเพื่อขยายกิจกรรมและแนะนำการอภิปรายต่อไปหรือเราเสนอการเรียนรู้ระดับมืออาชีพฟรีสำหรับนักการศึกษาเพื่อปลดล็อกอนาคตของการสอนด้วยและเกี่ยวกับ
+    AI
+  hoc_how_to_step_educators_register_desc: เริ่มต้นด้วยความมุ่งมั่นที่จะทำ Hour of
+    Code กับนักเรียนของคุณโดยการลงทะเบียนกิจกรรมของคุณเมื่อคุณลงทะเบียน คุณจะได้รับอีเมลที่เป็นประโยชน์พร้อมข่าวสารและเคล็ดลับในการจัดงาน
+    Hour of Code ที่ประสบความสำเร็จนอกจากนี้คุณยังจะ [ใส่บนแผนที่] (%{map_url})ความพยายามร่วมของเราที่มองเห็นได้ทั้งหมดแสดงให้เห็นถึงความมุ่งมั่นระดับโลกต่อขบวนการวิทยาศาสตร์คอมพิวเตอร์
+    ซึ่งจะช่วยให้เราสร้างโมเมนตัมสำหรับการเปลี่ยนแปลงของระบบ
+  hoc_how_to_step_educators_plan_desc_01: ก่อนกิจกรรมของคุณ ลองทำกิจกรรมด้วยตัวคุณเองเพื่อให้แน่ใจว่าพวกเขาทำงานบนอุปกรณ์ของนักเรียนและคุณพร้อมที่จะตอบคำถาม!มีแบนด์วิดท์ต่ำ?วางแผนที่จะแสดงวิดีโอที่ด้านหน้าชั้นเรียน
+    ดังนั้นนักเรียนแต่ละคนจะไม่ดาวน์โหลดวิดีโอของตัวเอง
+  hoc_how_to_step_educators_plan_desc_02: ผู้คนทั่วโลกมักจะเข้าร่วมงานเฉลิมฉลอง Hour
+    of Code ในช่วงสัปดาห์การศึกษาวิทยาการคอมพิวเตอร์ (%{campaign_date}) แต่คุณสามารถทำชั่วโมงแห่งรหัสได้ทุกวันของปี!
+  hoc_how_to_step_educators_plan_desc_03: เลือกพื้นที่ที่เหมาะสมกับจำนวนนักเรียนและอุปกรณ์ที่คุณมีนักเรียนสามารถลองทำกิจกรรมบนอุปกรณ์แต่ละเครื่อง
+    แบ่งปันอุปกรณ์ หรือเป็นชั้นเรียนบนไวท์บอร์ดนอกจากนี้ยังมีกิจกรรมที่ถอดปลั๊กที่สามารถทำได้โดยไม่มีอุปกรณ์เลย
+    ดังนั้นจึงสามารถทำได้ภายนอกด้วย!
+  hoc_how_to_step_educators_spread_word_desc_01: ช่วยเราเผยแพร่ข่าวในชุมชนของคุณด้วย
+    [เทมเพลตอีเมลเหล่านี้] (%{email_url})
+  hoc_how_to_step_educators_spread_word_desc_02: ขอให้เพื่อนร่วมงานสอง [register]คน%{register_url}ไปที่
+    () และเป็นเจ้าภาพกิจกรรม Hour of Codeในทางกลับกันพวกเขาสามารถรักษาความปลอดภัยเพื่อนร่วมงานสองคนซึ่งสามารถรักษาความปลอดภัยเพื่อนร่วมงานสองคนได้
+    ฯลฯ
+  hoc_how_to_step_educators_spread_word_desc_03: ขอให้ครูใหญ่ของคุณให้ [เป็นเจ้าภาพกิจกรรมทั่วทั้งโรงเรียน]
+    (%{host_url})เมื่อเด็กเข้าร่วม 300 คนขึ้นไป คุณสามารถรับชุดหมั้นพิเศษพร้อมเสื้อยืด
+    โปสเตอร์ สติกเกอร์แล็ปท็อป และอื่นๆ[แบ่งปันแผนกิจกรรมทั้งโรงเรียนของคุณ] (%{share_url})
+    เพื่อให้คุณสมบัติ
+  hoc_how_to_step_educators_spread_word_desc_04: ติดต่อสมาคมนักเรียนครูผู้ปกครองของโรงเรียนของคุณหรือแบ่งปันจดหมายข่าวของผู้ปกครอง
+    เพื่อให้พวกเขาทราบว่าลูก ๆ กำลังเรียนรู้อะไร
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 น.: เริ่มต้นด้วย [วิดีโอสร้างแรงบันดาลใจ]
+    ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 น.: นักเรียนทำกิจกรรมการเข้ารหัส'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 น.: นักเรียนเรียนรู้เกี่ยวกับ
+    AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 น.: ครูแสดงคำพูดปิดท้าย'
+  hoc_how_to_step_educators_get_coding_desc: แนะนำให้นักเรียนเข้าร่วมกิจกรรม โดยอาจแชร์ลิงก์บนกระดานหรือผ่านระบบบริหารจัดการการเรียนรู้ในห้องเรียน
     นักเรียนของคุณอาจเผชิญกับความท้าทาย—ไม่เป็นไร! การเรียนรู้การเขียนโปรแกรมก็เหมือนกับการเรียนรู้ภาษาใหม่
     คุณจะไม่คล่องทันที หากคุณไม่ทราบคำตอบคุณสามารถคิดออกร่วมกันได้
-  hoc_how_to_step_07_educators_desc_01: 'อย่าลืมเฉลิมฉลองความสำเร็จ! แชร์รูปภาพและวิดีโอของกิจกรรม
-    Hour of Code ของคุณบนโซเชียลมีเดียใช้ #HourOfCode และ @codeorg เพื่อให้เราสามารถเน้นความสำเร็จของคุณได้เช่นกัน!'
-  hoc_how_to_step_07_educators_desc_02: คุณยังสามารถพิมพ์ใบรับรองให้นักเรียนของคุณเพื่อแสดงถึงความสำเร็จของพวกเขา!
+  hoc_how_to_step_educators_celebrate_desc: 'หลังจากงานของคุณให้พิมพ์ใบรับรองการจบและแสดงความยินดีกับนักเรียนของคุณแบ่งปันรูปภาพและวิดีโอของกิจกรรม
+    Hour of Code และแสดงความสำเร็จของนักเรียนของคุณโดยใช้ #HourOfCode และ @codeorg'
+  hoc_how_to_step_educators_beyond_desc: วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบลงด้วยชั่วโมงแห่งรหัส!ในขณะที่ผู้ปกครอง
+    90% ต้องการให้ลูกเรียนรู้วิทยาการคอมพิวเตอร์ แต่โรงเรียนส่วนใหญ่ยังไม่สอนมันเพื่อความช่วยเหลือ
+    หลักสูตรของเราเป็นเว็บและใช้งานได้ฟรีตลอดไปเรียนรู้วิธีนำทาง CS มาที่โรงเรียนของคุณวันนี้
   hoc_ai_top_desc: ทุกคนสามารถเรียนรู้เกี่ยวกับ AI ไม่ว่าคุณจะเป็นนักเรียนในห้องเรียนหรือนักการศึกษาที่ปลดล็อกอนาคตของการสอนด้วยและเกี่ยวกับ
     AI
   hoc_ai_how_ai_works_video_series_desc: วิดีโอสั้นชุดนี้จะแนะนำให้คุณรู้จักกับปัญญาประดิษฐ์ทำงานอย่างไรและเหตุใดจึงสำคัญจากนั้นเจาะลึกประเด็นต่างๆ
@@ -11432,66 +11448,55 @@ th:
   teach_ai_description: AI Guidance for Schools Toolkit เป็นแหล่งข้อมูลสำหรับผู้กำหนดนโยบาย
     ผู้นำโรงเรียน และพนักงานเพื่อพัฒนาคำแนะนำเบื้องต้นเกี่ยวกับ AI ในโรงเรียนของตน
   teach_ai_button_label: ดูชุดเครื่องมือ
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: การเรียนรู้สำหรับอายุ 11 ปีขึ้นไป
+  middle_high_page_main_description: สำรวจโลกแห่งวิทยาการคอมพิวเตอร์ด้วยวิดีโอที่น่าสนใจ
+    บทช่วยสอนแบบมีจังหวะด้วยตนเอง กิจกรรมการเขียนโปรแกรม และอื่น ๆ อีกมากมาย!
+  middle_high_page_hero_title: เริ่มต้นใช้งาน Hour of Code
+  middle_high_page_hero_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์ด้วยกิจกรรม
+    Hour of Code ฟรี ซึ่งมีบล็อกการเข้ารหัสแบบลากและวางมีตัวเลือกนานหลายร้อยชั่วโมงให้เลือก!
+  middle_high_page_hourofcode_link: สำรวจกิจกรรมชั่วโมงแห่งรหัส
+  middle_high_page_modules_title: โมดูลการเขียนโปรแกรมสำหรับนักเรียนที่มีอายุมากกว่า
+  middle_high_page_modules_description: ดัดแปลงจากหลักสูตร CS Discovery และ CS Principles
+    ของเรา โมดูลสั้น ๆ เหล่านี้สำหรับนักเรียนมัธยมต้นและมัธยมปลายเป็นวิธีที่ยอดเยี่ยมในการเรียนรู้แนวคิดที่ครอบคลุมภาษาและเครื่องมือการเขียนโปรแกรมทั้งหมด
+  middle_high_page_modules_card_title_1: เกมแลปพื้นฐาน
+  middle_high_page_modules_card_title_2: การเขียนโปรแกรมให้กับเต่าในแอปแลป
+  middle_high_page_modules_card_title_3: การเขียนโปรแกรมตามเหตุการณ์ในแอปแลป
+  middle_high_page_modules_card_description_1: เคลื่อนไหวตามจังหวะของคุณเองในการแนะนำสภาพแวดล้อม
+    Game Lab ของเราในขณะที่คุณตั้งโปรแกรมภาพเคลื่อนไหว ศิลปะแบบโต้ตอบ และเกม
+  middle_high_page_modules_card_description_2: ปลดล็อกความสามารถในการสร้างแอพที่หลากหลายและโต้ตอบด้วย
+    JavaScript ใน App Lab!
+  middle_high_page_modules_card_description_3: ก้าวไปตามจังหวะของคุณเองด้วยการแนะนำสภาพแวดล้อมการเขียนโปรแกรม
+    App Lab ซึ่งนักเรียนใช้ JavaScript เพื่อสร้างแอพแบบโต้ตอบ
+  middle_high_page_modules_card_link: ลองเลย
+  middle_high_page_make_your_own_title: สร้างแอป เกม และหน้าเว็บของคุณเอง
+  middle_high_page_make_your_own_description: 'นอกจากหลักสูตรแล้ว เรายังมีเครื่องมือการเขียนโปรแกรมที่ช่วยให้คุณสำรวจความคิดสร้างสรรค์ของคุณและสร้างสิ่งที่น่าทึ่ง '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: ห้องปฏิบัติการเกม
+  middle_high_page_make_your_own_card_title_3: ห้องปฏิบัติการเว็บ
+  middle_high_page_make_your_own_card_descrpition_1: App Lab เป็นสภาพแวดล้อมการเขียนโปรแกรมที่คุณสามารถสร้างแอพที่เรียบง่ายออกแบบแอป
+    โค้ดใน JavaScript ด้วยบล็อกหรือข้อความ จากนั้นแชร์แอปของคุณในไม่กี่วินาที
+  middle_high_page_make_your_own_card_descrpition_2: เกมแลปคือสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถทำภาพเคลื่อนไหวง่าย
+    ๆ หรือจะสร้างเกมด้วยวัตถุและตัวละครที่จะโต้ตอบกัน
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab เป็นสภาพแวดล้อมการเขียนโปรแกรมที่คุณสามารถสร้างหน้าเว็บที่เรียบง่ายโดยใช้
+    HTML และ CSSออกแบบหน้าเว็บของคุณและแชร์ไซต์ของคุณในไม่กี่วินาที
   middle_high_page_make_your_own_card_link: เรียน​รู้​เพิ่ม​เติม
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: ทรัพยากรเพิ่มเติม
+  middle_high_page_additional_resources_description: มีหลายวิธีในการสำรวจวิทยาการคอมพิวเตอร์เพิ่มเติม!เรียกดูไลบรารีวิดีโอของเราหรือเรียนรู้เพิ่มเติมเกี่ยวกับอาชีพที่น่าตื่นเต้นในสาขาวิทยาการคอมพิวเตอร์
+  middle_high_page_video_library_title: ค้นพบไลบรารีวิดีโอของเรา
+  middle_high_page_video_library_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์ผ่านวิดีโอสั้น
+    5-10 นาทีในหัวข้อต่างๆ เช่น ปัญญาประดิษฐ์ อินเทอร์เน็ต วิธีการทำงานของคอมพิวเตอร์
+    วิธีที่จะไม่ถูกแฮ็ก บล็อกเชน อาชีพ และอื่นๆ อีกมากมาย!
+  middle_high_page_video_library_link: ดูไลบรารีวิดีโอ
+  middle_high_page_cs_journeys_title: ก้าวไปไกลขึ้นด้วย CS Journeys
+  middle_high_page_cs_journeys_description: ก้าวต่อไปในการเดินทางวิทยาศาสตร์คอมพิวเตอร์ของคุณสำรวจอาชีพ
+    โอกาสในการให้คำปรึกษา หลักสูตรออนไลน์ ทุนการศึกษา การฝึกงาน และอื่นๆ อีกมากมาย!
+  middle_high_page_cs_journeys_link: สำรวจ CS Journeys
+  middle_high_page_cs_title: วิทยาการคอมพิวเตอร์ในห้องเรียน
+  middle_high_page_cs_description: หลักสูตรเหล่านี้ควรนำโดยครู!หากคุณต้องการเห็นพวกเขาสอนที่โรงเรียนของคุณ
+    ลองทำงานร่วมกับครูเพื่อนำพวกเขาไปที่ชั้นเรียนของคุณ
+  middle_high_page_cs_card_title_1: การค้นพบ CS
+  middle_high_page_cs_card_title_2: หลักการ CS
+  middle_high_page_cs_card_title_3: AP วิทยาการคอมพิวเตอร์ A
   middle_high_page_cs_card_description_1: หลักสูตรฟรีตลอดทั้งปีที่แนะนำให้นักเรียนรู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
     และท้าทายให้พวกเขาสำรวจว่าคอมพิวเตอร์และเทคโนโลยีสามารถส่งผลกระทบต่อโลกได้อย่างไร
   middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
@@ -11500,34 +11505,29 @@ th:
     an introductory class and as an AP course.
   middle_high_page_cs_card_description_3: แนะนำนักเรียนให้รู้จักกับวิศวกรรมซอฟต์แวร์และการออกแบบเชิงวัตถุในขณะที่พวกเขาเรียนรู้ภาษาการเขียนโปรแกรมภาษาจาวาในหลักสูตรฟรีสำหรับ
     AP® Computer Science A (AP® CSA) นี้
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: สำรวจ CS ไดโคเวอรี่
   middle_high_page_cs_link_2: สำรวจหลักการบริการลูกค้า
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: สำรวจ CSA
+  elemeentary_page_main_title: การเรียนรู้สำหรับอายุ 5 ถึง 11
+  elementary_page_main_description: สำรวจโลกแห่งวิทยาการคอมพิวเตอร์ด้วยวิดีโอที่น่าสนใจ
+    บทช่วยสอนแบบมีจังหวะด้วยตนเอง กิจกรรมการเขียนโปรแกรม และอื่น ๆ อีกมากมาย!
+  elementary_page_own_pace_title: เรียนรู้ต่อไปตามจังหวะของคุณเอง
+  elementary_page_own_pace_description: สร้างภาพวาด เกม และอีกมากมายในตัวเลือกที่ยอดเยี่ยมทั้งสองนี้สำหรับนักเรียนที่เริ่มเรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์ของตนเอง
+  elementary_page_own_pace_card_title_1: หลักสูตรด่วนพรีรีเดอร์
+  elementary_page_own_pace_card_title_2: หลักสูตร Express
+  elementary_page_own_pace_card_description_1: เรียนรู้วิทยาการคอมพิวเตอร์ตามจังหวะของคุณเอง!เรียนรู้ที่จะสร้างโปรแกรมคอมพิวเตอร์
+    พัฒนาทักษะการแก้ปัญหา และทำงานผ่านความท้าทายที่สนุกสนาน!สร้างเกมและโครงการสร้างสรรค์เพื่อแบ่งปันกับเพื่อน
+    ครอบครัว และครู
+  elementary_page_own_pace_link_1: เริ่มหลักสูตรก่อนผู้อ่าน
+  elementary_page_own_pace_link_2: เริ่มหลักสูตรด่วน
+  elementary_page_make_your_own_games_title: สร้างภาพเคลื่อนไหวและเกมของคุณเอง
   elementary_page_make_your_own_games_card_title_1: สไปรท์แล็บ
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: ถึงเวลาที่จะสร้างสรรค์!ใช้การเข้ารหัสตามบล็อกเพื่อสร้างสิ่งที่โง่เขลาหวานหรือนอกเหนือชั้นนอกใน
+    Sprite Labขีด จำกัด เพียงอย่างเดียวคือจินตนาการของคุณ!
+  elementary_page_make_your_own_games_link: ลองใช้สไพรท์ แล็บ
+  elementary_page_computer_science_title: วิทยาการคอมพิวเตอร์ในห้องเรียน
+  elementary_page_computer_science_description: หลักสูตรเหล่านี้ควรนำโดยครู!หากคุณต้องการเห็นพวกเขาสอนที่โรงเรียนของคุณ
+    ขอให้พ่อแม่หรือผู้ปกครองทำงานกับครูเพื่อนำพวกเขาไปที่ชั้นเรียนของคุณ
   elementary_page_computer_science_card_title_1: ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
   elementary_page_computer_science_card_title_2: การเชื่อมต่อวิทยาการคอมพิวเตอร์
   elementary_page_computer_science_description_1: หลักสูตรฟรีตลอดทั้งปีที่แนะนำให้นักเรียนรู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์

@@ -294,21 +294,23 @@ de:
     und Unterstützung von anderen Pädagogen zu erhalten.
   required_materials: 'Obligatorische Materialien:'
   optional_materials: 'Optionale Materialien:'
-  for_students: Für Teilnehmer
+  for_students: Für SchhülerInnen
   for_educators: Für Lehrer
   call_to_action_host_hoc: Organisiere eine Hour of Code
   call_to_action_hold_an_event: Halten Sie eine Veranstaltung ab
   call_to_action_register_event: Registriere deine Veranstaltung
   call_to_action_register_your_hoc: Registrieren Sie Ihre Hour of Code
   call_to_action_select_activity: Wählen Sie eine Aktivität aus
+  call_to_action_select_coding_activity: Wählen Sie eine Codierungsaktivität
   call_to_action_start_activity: Starte eine Aktivität
   call_to_action_get_certificates: Holen Sie sich Zertifikate
+  call_to_action_print_certificates: Urkunden drucken
   call_to_action_go_beyond_hoc: Gehen Sie über die Hour of Code hinaus
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: Entdecke alle Aktivitäten von Hour of
+    Code unter Code.org
+  call_to_action_start_dance_party: Starte die Tanzparty
+  call_to_action_start_part_02: Beginne Teil zwei
+  call_to_action_start_unplugged_activity: Unplugged-Aktivität starten
   call_to_action_view_promo_resources: Ressourcen für Werbeaktionen anzeigen
   call_to_action_learn_more: Erfahre mehr
   call_to_action_watch_now: Jetzt ansehen
@@ -408,7 +410,7 @@ de:
   call_to_action_apply_cs_ambassador: Bewerben Sie sich als CS-Botschafter
   call_to_action_coming_soon: Bald verfügbar
   call_to_action_learn_how_ai_works: Erfahre wie KI funktioniert
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_learn_about_ai: Erfahre mehr über KI
   aria_label_call_to_action_hoc_how_to_educators: Anleitung für Pädagogen ansehen
   aria_label_call_to_action_hoc_how_to_companies: Anleitung für Unternehmen ansehen
   aria_label_call_to_action_hoc_how_to_districts: Anleitung für Distrikte anzeigen
@@ -420,7 +422,7 @@ de:
   aria_label_call_to_action_hoc_how_to_volunteers: Anleitung für Freiwillige ansehen
   aria_label_call_to_action_hoc_how_to_virtual_events: Anleitung für virtuelle Veranstaltungen
     ansehen
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
+  aria_label_call_to_action_dance_01: Starte die Tanzparty-Aktivität
   aria_label_call_to_action_dance_02: Starte Teil zwei der Tanzparty-Aktivität
   aria_label_call_to_action_dance_unplugged: Starte die Tanzparty Unplugged-Aktivität
   aria_label_call_to_action_afe: Erfahren Sie mehr über Amazon Future Engineer
@@ -430,6 +432,8 @@ de:
     Teaching Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Starten Sie das professionelle Lernprogramm
     Teaching Computer Science Principles
+  aria_label_call_to_action_teaching_problem_solving: Starten Sie das professionelle
+    Lernprogramm für Unterricht, Problemlösung und Informatik
   aria_label_call_to_action_teaching_csc: Beginnen Sie das berufliches Lernprogramm
     zum Unterrichten der Verbindungen zur Informatik
   aria_label_call_to_action_teaching_ai: Starten Sie das professionelle Lernprogramm
@@ -448,6 +452,8 @@ de:
     Science Discoveries
   aria_label_call_to_action_curriculum_csp: Erkunden Sie den Lehrplan „Grundlagen
     der Informatik“
+  aria_label_call_to_action_curriculum_problem_solving: Erkunden Sie den Lehrplan
+    für Problemlösung und Informatik
   aria_label_call_to_action_curriculum_csc: Lehrplan Verbindungen zur Informatik ansehen
   aria_label_call_to_action_curriculum_ai: Erkunden Sie den Lehrplan für KI und maschinelles
     Lernen
@@ -528,6 +534,7 @@ de:
   curriculum_name_csf_teacher_led: Unterricht unter Leitung des Lehrers
   curriculum_name_csd: Entdeckungen der Informatik
   curriculum_name_csp: Prinzipien der Informatik
+  curriculum_name_problem_solving: Problemlösung und Datenverarbeitung
   curriculum_name_csc: Verbindungen zur Informatik
   curriculum_name_csa: Informatik A
   curriculum_name_csa_ai: Softwaretechnik und Computer Vision
@@ -735,6 +742,7 @@ de:
   module_label_teaching_csf: Vermittlung von Grundlagen der Informatik
   module_label_teaching_csd: Entdeckungen der Informatik vermitteln
   module_label_teaching_csp: Grundlagen der Informatik vermitteln
+  module_label_teaching_problem_solving: Problemlösen und Rechnen unterrichten
   module_label_teaching_csc: Unterrichten der Verbindungen zur Informatik
   module_label_teaching_ai: KI und maschinelles Lernen unterrichten
   module_label_teaching_maker_cp: 'Unterricht: Apps mit Geräten erstellen (Circuit
@@ -800,7 +808,7 @@ de:
   heading_bring_cs_to_students: Bringen Sie Informatik zu Schülern
   heading_cs_ambassador_program: CS-Botschafter-Programm
   heading_featured_student_projects: Ausgewählte Teilnehmerprojekte
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_start_hoc_with_videos: Beginne deine Hour of Code mit inspirierenden Videos
   cs_ambassador_subhead: Wenn du eine Schülerin bist, die sich leidenschaftlich dafür
     einsetzt, mehr junge Frauen zu ermutigen, Informatik an deiner Schule als Fach
     zu wählen, dann brauchen wir dich!
@@ -900,10 +908,10 @@ de:
     und Updates direkt in Ihren Posteingang zu erhalten.
   subscribe_form_section_unsubscribe: Sie können sich jederzeit abmelden.
   dance_hero_heading: Programmiere eine Tanzparty
-  dance_featuring_songs_by_short: 'Featuring songs by:'
+  dance_featuring_songs_by_short: 'Mit Songs von:'
   dance_featuring_songs_by_long: 'Tanzparty enthält Songs von:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
+  dance_and_more: und mehr
+  dance_choose_activity: Wähle deine Tanzparty
   dance_afe_disclaimer: Die Künstler, deren Musik in diesem Tutorial verwendet wird,
     sponsern oder unterstützen Amazon nicht im Rahmen der Nutzungs-Lizenzierung ihrer
     Musik an Code.org.
@@ -13899,6 +13907,9 @@ de:
   step_06: Schritt 6
   step_07: Schritt 7
   step_08: 8. Schritt
+  what: 'Was:'
+  when: 'Wann:'
+  where: 'Wo:'
   hoc_how_to_top_heading: Ihr Leitfaden für Hour of Code
   hoc_how_to_top_desc: Maßgeschneiderte Anleitungen für das beste Hour of Code-Erlebnis.
   hoc_how_to_top_view_guide: Leitfaden ansehen für
@@ -13950,77 +13961,93 @@ de:
     Tutorials für alle Altersgruppen in über 45 Sprachen.
   hoc_how_to_step_label_plan: Plane, wo und wann du deine Hour of Code machst
   hoc_how_to_step_label_choose_activity: Wähle deine Aktivität
+  hoc_how_to_step_label_choose_activities: Wählen Sie Ihre Aktivitäten
   hoc_how_to_step_label_test_activity: Teste deine Aktivität
   hoc_how_to_step_label_register_event: Registriere deine Veranstaltung
   hoc_how_to_step_label_tell: Erzähle es deinen Schülern, der Schule und der Gemeinde
   hoc_how_to_step_label_get_coding: Fange an zu programmieren!
   hoc_how_to_step_label_celebrate: Feiert
   hoc_how_to_step_label_beyond_hoc: Jenseits von Hour of Code
+  hoc_how_to_step_label_plan_your_event: Plane deine Veranstaltung
+  hoc_how_to_step_label_plan_your_hour: Plane deine Stunde
+  hoc_how_to_step_label_help_spread_word: Helfen Sie mit, das Wort zu verbreiten
   hoc_how_to_step_beyond_hoc_subhead: Es endet nicht hier!
-  hoc_how_to_step_beyond_hoc_desc: Informatik muss nicht mit der Hour of Code enden!
-    Während 90% der Eltern wollen, dass ihr Kind Informatik lernt, unterrichten die
-    meisten Schulen es immer noch nicht. Erfahren Sie noch heute, wie Sie Informatik
-    an die Schule Ihres Kindes bringen können.
-  hoc_how_to_step_01_educators_subhead: Wählen Sie eine Veranstaltungszeit und einen
-    Veranstaltungsort aus, der für die Anzahl der verfügbaren Schüler und Geräte geeignet
-    ist.
-  hoc_how_to_step_01_educators_desc_01: Welche Räume stehen dir für deine Hour of
-    Code zur Verfügung? Berücksichtigen Sie die technischen Möglichkeiten Ihres Raums
-    und die Art der Geräte, auf denen Ihre Schüler voraussichtlich arbeiten werden.
-    Die Schüler können auf einem einzigen Gerät an Tutorials arbeiten, abwechselnd
-    ein gemeinsam genutztes Gerät verwenden oder gemeinsam ein Tutorial auf einem
-    Whiteboard im Klassenzimmer ausprobieren. Es gibt sogar Tutorials ohne Stromversorgung,
-    die ganz ohne Geräte abgeschlossen werden können. Optionen ohne Netzanschluss
-    können überall ausgeführt werden — sogar im Freien!
-  hoc_how_to_step_01_educators_desc_02: Menschen auf der ganzen Welt nehmen an der
-    Feier zur Hour of Code während der CS Education Week teil, %{campaign_date} wenn
-    die neuesten Tutorials und Aktivitäten veröffentlicht werden. Aber du kannst an
-    jedem Tag des Jahres eine Hour of Code veranstalten!
-  hoc_how_to_step_02_educators_desc_01: Erkunden Sie Aktivitäten, die auf dem Alter,
-    der Erfahrung, den Interessen und mehr Ihrer Gruppe basieren. Es ist bei Schülern
-    sehr beliebt, Tutorials in Eigenregie auszuprobieren, obwohl viele Aktivitäten
-    Unterrichtspläne für Lehrer beinhalten, um Diskussionen zu leiten oder die Aktivität
-    zu erweitern.
-  hoc_how_to_step_02_educators_desc_02: Entscheiden Sie im Voraus, ob Sie ein einzelnes
-    Tutorial für alle Ihre Schüler auswählen möchten oder jedes Kind sein eigenes
-    auswählen lassen möchten.
-  hoc_how_to_step_02_educators_desc_03: In diesem Jahr können Sie und Ihre Schüler
-    anhand von Tutorials, Unterrichtsplänen und unserer neuen Videoserie How AI Works
-    [alles über KI] (%ai_url) erfahren.
-  hoc_how_to_step_03_educators_desc_01: Probiere das Tutorial selbst aus, bevor du
-    ins Klassenzimmer gehst, damit du Fragen beantworten kannst!
-  hoc_how_to_step_03_educators_desc_02: Sie können Tutorials auch auf Schülercomputern
-    oder -geräten testen, um sicherzustellen, dass sie Ton und Video unterstützen.
-    Haben Sie eine geringe Bandbreite? Planen Sie, Videos vor der Klasse zu zeigen,
+  hoc_how_to_step_plan_hour_desc_01: 'Hier ist ein Beispiel für eine Agenda, um Ihnen
+    den Einstieg zu erleichtern:'
+  hoc_how_to_step_choose_activities_desc_01: In diesem Jahr lautet das Hour of Code-Thema
+    Kreativität mit künstlicher Intelligenz (KI). Ob es darum geht, neue Apps und
+    Algorithmen zu programmieren, einzigartige Kunst zu generieren oder Choreografien
+    zu entwerfen, die uns zum Tanzen bringen — KI eröffnet neue Möglichkeiten des
+    digitalen Ausdrucks, die unser Verständnis von Kreativität erweitern. Machen Sie
+    dieses Jahr zu etwas Besonderem, indem Sie eine Programmieraktivität abschließen
+    UND etwas über KI lernen.
+  hoc_how_to_step_choose_activities_desc_02: Erkunden Sie zunächst [Hunderte von Programmieraktivitäten]
+    (%{activities_url}) und wählen Sie eine aus, die dem Alter, der Erfahrung, den
+    Interessen und mehr Ihrer Gruppe entspricht. [Diese ausgewählten Aktivitäten]
+    (%{ai_activities_url}) behandeln künstliche Intelligenz als zentrales Thema oder
+    Lektion.
+  hoc_how_to_step_choose_activities_desc_03: Dann [lerne alles über KI] (%{ai_url}).
+    Die Schüler können sich kurze Videos mit Experten auf diesem Gebiet ansehen, und
+    es gibt begleitende Unterrichtspläne, um die Aktivität zu erweitern und weitere
+    Diskussionen anzuregen. Oder wir bieten Pädagogen kostenloses professionelles
+    Lernen an, um die Zukunft des Unterrichts mit und über KI zu eröffnen.
+  hoc_how_to_step_educators_register_desc: Beginnen Sie mit der Verpflichtung, mit
+    Ihren Schülern eine Hour of Code zu veranstalten, indem Sie Ihre Veranstaltung
+    registrieren. Wenn du dich registrierst, erhältst du hilfreiche E-Mails mit Neuigkeiten
+    und Tipps für die Ausrichtung einer erfolgreichen Hour of Code. Du wirst auch
+    [auf die Karte gesetzt] (%{map_url}). Die sichtbare Gesamtheit unserer kollektiven
+    Bemühungen zeigt das globale Engagement für die Informatikbewegung, das uns helfen
+    wird, eine Dynamik für den systemischen Wandel aufzubauen.
+  hoc_how_to_step_educators_plan_desc_01: Probieren Sie die Aktivitäten vor Ihrer
+    Veranstaltung selbst aus, damit Sie sicherstellen können, dass sie auf den Geräten
+    der Schüler funktionieren, und Sie bereit sind, Fragen zu beantworten! Haben Sie
+    eine geringe Bandbreite? Planen Sie, die Videos vorne in der Klasse zu zeigen,
     damit nicht jeder Schüler seine eigenen Videos herunterlädt.
-  hoc_how_to_step_03_educators_desc_03: Erwägen Sie, Kopfhörer für Ihre Klasse bereitzustellen,
-    oder bitten Sie die Schüler, ihre eigenen mitzubringen, wenn das von Ihnen gewählte
-    Tutorial am besten mit Ton funktioniert.
-  hoc_how_to_step_04_educators_desc_01: Wenn du deine Hour of Code-Veranstaltung registrierst,
-    erhältst du hilfreiche E-Mails mit Neuigkeiten und Tipps für die Ausrichtung einer
-    erfolgreichen Hour of Code. Auf diese Weise kannst du auch lokale Freiwillige
-    darüber informieren, dass deine Schule teilnimmt. Freiwillige sind eine großartige
-    Ressource. Sie können in Ihrer Klasse über Informatik sprechen oder Ihren Schülern
-    bei Hour of Code-Aktivitäten helfen.
-  hoc_how_to_step_05_educators_desc_01: Begeistern Sie Ihre Schüler für die Veranstaltung,
-    indem Sie [inspirierende Videos] (%{videos_url}) teilen, in denen verschiedene
-    Menschen und kreative Möglichkeiten vorgestellt werden, wie Informatik in der
-    realen Welt eingesetzt werden kann.
-  hoc_how_to_step_05_educators_desc_02: Teile deine Hour of Code-Pläne mit anderen
-    Lehrern, die vielleicht mitmachen möchten! Das ist auch eine tolle Gelegenheit,
-    Kontakt mit der Eltern-Lehrer-Schülervereinigung deiner Schule aufzunehmen oder
-    in Newslettern für Eltern darüber zu informieren, was ihre Kinder gerade lernen.
-  hoc_how_to_step_06_educators_desc_01: 'Leiten Sie Ihre Schüler zu der Aktivität
+  hoc_how_to_step_educators_plan_desc_02: Menschen auf der ganzen Welt nehmen oft
+    an der Hour of Code-Feier während der Computer Science Education Week teil (%{campaign_date}),
+    aber Sie können eine Hour of Code an jedem Tag des Jahres veranstalten!
+  hoc_how_to_step_educators_plan_desc_03: Wählen Sie einen Bereich, der für die Anzahl
+    der Schüler und Geräte, die Ihnen zur Verfügung stehen, geeignet ist. Die Schüler
+    können Aktivitäten auf einzelnen Geräten ausprobieren, abwechselnd ein Gerät teilen
+    oder als Klasse auf einem Whiteboard arbeiten. Es gibt sogar Aktivitäten ohne
+    Netzanschluss, die ganz ohne Geräte ausgeführt werden können, sodass sie sogar
+    draußen ausgeführt werden können!
+  hoc_how_to_step_educators_spread_word_desc_01: Helfen Sie uns mit [diesen E-Mail-Vorlagen]
+    (%{email_url}), das in Ihrer Community bekannt zu machen.
+  hoc_how_to_step_educators_spread_word_desc_02: Bitten Sie zwei Kollegen um [register](%{register_url})
+    und veranstalten Sie eine Hour of Code-Aktivität. Sie wiederum können zwei Kollegen
+    gewinnen, die wiederum zwei Kollegen sichern können usw.
+  hoc_how_to_step_educators_spread_word_desc_03: Bitten Sie Ihren Schulleiter, [eine
+    schulweite Veranstaltung auszurichten] ()%{host_url}. Wenn 300 oder mehr Kinder
+    teilnehmen, können Sie ein besonderes Verlobungsset mit T-Shirts, Postern, Laptop-Aufklebern
+    und mehr erhalten. [Teile uns deinen gesamten Veranstaltungsplan mit] (%{share_url}),
+    um dich zu qualifizieren.
+  hoc_how_to_step_educators_spread_word_desc_04: Wenden Sie sich an die Eltern-Lehrer-Schüler-Vereinigung
+    Ihrer Schule oder teilen Sie sie in Eltern-Newslettern mit, um sie darüber zu
+    informieren, was ihre Kinder lernen.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 Uhr: Beginne mit einem
+    [inspirierenden Video] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 Uhr: Die Schüler machen
+    ihre Programmiertätigkeit'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 Uhr: Schüler lernen etwas
+    über KI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 Uhr: Der Lehrer hält eine
+    abschließende Bemerkung'
+  hoc_how_to_step_educators_get_coding_desc: 'Leiten Sie Ihre Schüler zu der Aktivität
     weiter, indem Sie den Link vielleicht an der Tafel oder über das Lernmanagementsystem
     Ihres Klassenzimmers teilen. Ihre Schüler könnten auf Herausforderungen stoßen
     — das ist okay! Programmieren lernen ist wie das Erlernen einer neuen Sprache:
     Sie werden es nicht sofort fließend beherrschen. Wenn Sie die Antwort nicht kennen,
     können Sie sie gemeinsam herausfinden.'
-  hoc_how_to_step_07_educators_desc_01: 'Feiern Sie unbedingt den Erfolg! Teilen Sie
-    Fotos und Videos von Ihrer Hour of Code-Veranstaltung in den sozialen Medien.
-    Verwende #HourOfCode und @codeorg, damit wir auch deinen Erfolg hervorheben können!'
-  hoc_how_to_step_07_educators_desc_02: Sie können auch Zertifikate ausdrucken, damit
-    Ihre Schüler ihre Leistungen unter Beweis stellen können!
+  hoc_how_to_step_educators_celebrate_desc: 'Drucken Sie nach Ihrer Veranstaltung
+    die Abschlussbescheinigungen aus und gratulieren Sie Ihren Studierenden. Teilen
+    Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung und zeigen Sie die Leistungen
+    Ihrer Schüler mit #HourOfCode und @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Informatik muss nicht mit der Hour of Code
+    enden! Obwohl 90% der Eltern möchten, dass ihr Kind Informatik lernt, wird sie
+    an den meisten Schulen immer noch nicht unterrichtet. Um Ihnen zu helfen, ist
+    unser Lehrplan webbasiert und kann für immer kostenlos genutzt werden. Erfahren
+    Sie noch heute, wie Sie CS an Ihre Schule bringen können.
   hoc_ai_top_desc: Jeder kann etwas über KI lernen, egal ob Sie ein Schüler im Klassenzimmer
     sind oder ein Pädagoge, der die Zukunft des Unterrichts mit und über KI erschließt.
   hoc_ai_how_ai_works_video_series_desc: In dieser Reihe von Kurzvideos erfahren Sie,
@@ -14804,7 +14831,7 @@ de:
   middle_high_page_main_title: Lernen ab 11 Jahren
   middle_high_page_main_description: Entdecke die Welt der Informatik mit spannenden
     Videos, Tutorials zum Selbststudium, Programmieraktivitäten und vielem mehr!
-  middle_high_page_hero_title: Get Started with Hour of Code
+  middle_high_page_hero_title: Erste Schritte mit Hour of Code
   middle_high_page_hero_description: Lerne die Grundlagen der Informatik mit kostenlosen
     "Hour of Code"-Aktivitäten, die Drag-and-Drop-Blöcke enthalten. Es gibt Hunderte
     von einstündigen Optionen zur Auswahl!
@@ -14819,49 +14846,52 @@ de:
   middle_high_page_modules_card_title_3: Ereignisgesteuerte Programmierung im App-Lab
   middle_high_page_modules_card_description_1: In dieser Einführung in unsere Game-Lab-Umgebung
     programmierst du in deinem eigenen Tempo Animationen, interaktive Kunst und Spiele.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_modules_card_description_2: Eröffnen Sie im App Lab die Möglichkeit,
+    umfangreiche, interaktive Apps mit JavaScript zu erstellen!
+  middle_high_page_modules_card_description_3: Gehen Sie mit dieser Einführung in
+    die App Lab-Programmierumgebung in Ihrem eigenen Tempo vor, in der die Schüler
+    JavaScript verwenden, um interaktive Apps zu erstellen.
+  middle_high_page_modules_card_link: Probiere es aus
+  middle_high_page_make_your_own_title: Erstelle deine eigenen Apps, Spiele und Webseiten
+  middle_high_page_make_your_own_description: 'Zusätzlich zu den Kursen haben wir
+    Programmierwerkzeuge, mit denen Sie Ihrer Kreativität freien Lauf lassen und etwas
+    Tolles kreieren können. '
   middle_high_page_make_your_own_card_title_1: App Lab
-  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_2: Spielelabor
   middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_descrpition_1: App Lab ist eine Programmierumgebung,
+    in der Sie einfache Apps erstellen können. Entwerfen Sie eine App, programmieren
+    Sie in JavaScript entweder mit Blöcken oder Text und teilen Sie Ihre App dann
+    in Sekundenschnelle.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab ist eine Programmierumgebung,
+    in der Sie einfache Animationen und Spiele mit Objekten und Figuren erstellen
+    können, die miteinander interagieren.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab ist eine Programmierumgebung,
+    in der Sie einfache Webseiten mit HTML und CSS erstellen können. Entwerfen Sie
+    Ihre Webseiten und teilen Sie Ihre Website in Sekundenschnelle.
   middle_high_page_make_your_own_card_link: Erfahre mehr
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: Zusätzliche Ressourcen
+  middle_high_page_additional_resources_description: Es gibt so viele Möglichkeiten,
+    die Informatik weiter zu erforschen! Stöbern Sie in unserer Videothek oder erfahren
+    Sie mehr über spannende Karrieren im Bereich Informatik.
+  middle_high_page_video_library_title: Entdecken Sie unsere Videothek
+  middle_high_page_video_library_description: Erlernen Sie die Grundlagen der Informatik
+    in kurzen 5—10-minütigen Videos zu Themen wie künstliche Intelligenz, Internet,
+    Funktionsweise von Computern, wie man nicht gehackt wird, Blockchain, Karriere
+    und mehr!
+  middle_high_page_video_library_link: Videothek ansehen
+  middle_high_page_cs_journeys_title: Gehen Sie noch weiter mit CS Journeys
+  middle_high_page_cs_journeys_description: Machen Sie den nächsten Schritt auf Ihrer
+    Informatik-Reise. Entdecken Sie Karrieren, Mentorenmöglichkeiten, Online-Kurse,
+    Stipendien, Praktika und mehr!
+  middle_high_page_cs_journeys_link: Erkunden Sie CS Journeys
+  middle_high_page_cs_title: Informatik im Unterricht
+  middle_high_page_cs_description: Diese Kurse sollten von einem Lehrer geleitet werden!
+    Wenn du möchtest, dass sie an deiner Schule unterrichtet werden, erwäge, mit einem
+    Lehrer zusammenzuarbeiten, um sie in deine Klasse zu bringen.
+  middle_high_page_cs_card_title_1: CS-Entdeckungen
+  middle_high_page_cs_card_title_2: CS-Prinzipien
+  middle_high_page_cs_card_title_3: AP Informatik A
   middle_high_page_cs_card_description_1: Kostenlose Lehrpläne für den Grundschulbereich,
     die Schülerinnen und Schüler mit den grundlegenden Informatikkonzepten vertraut
     machen und sie herausfordern, sich damit zu befassen, wie Computer und Technologie
@@ -14873,34 +14903,36 @@ de:
   middle_high_page_cs_card_description_3: Führen Sie die Schüler in diesem kostenlosen
     Lehrplan für AP® Computer Science A (AP® CSA) in Softwaretechnik und objektorientiertes
     Design ein, während sie gleichzeitig die Programmiersprache Java lernen.
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: Erkunden Sie CS Discoveries
   middle_high_page_cs_link_2: Erkunden Sie die CS-Prinzipien
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
+  middle_high_page_cs_link_3: Entdecke CSA
+  elemeentary_page_main_title: Lernen für Kinder im Alter von 5 bis 11 Jahren
   elementary_page_main_description: Entdecke die Welt der Informatik mit spannenden
     Videos, Tutorials zum Selbststudium, Programmieraktivitäten und vielem mehr!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  elementary_page_own_pace_title: Lernen Sie weiter in Ihrem eigenen Tempo
+  elementary_page_own_pace_description: Erstellen Sie Zeichnungen, Spiele und mehr
+    mit diesen beiden hervorragenden Optionen für Schüler, die mit dem Erlernen der
+    Grundlagen der Informatik auf eigene Faust beginnen.
+  elementary_page_own_pace_card_title_1: Express-Kurs für Pre-Reader
+  elementary_page_own_pace_card_title_2: Expresskurs
+  elementary_page_own_pace_card_description_1: Lerne Informatik in deinem eigenen
+    Tempo! Lerne, Computerprogramme zu erstellen, Fähigkeiten zur Problemlösung zu
+    entwickeln und lustige Herausforderungen zu meistern! Erstelle Spiele und kreative
+    Projekte, um sie mit Freunden, Familie und Lehrern zu teilen.
+  elementary_page_own_pace_link_1: Pre-Reader-Kurs starten
+  elementary_page_own_pace_link_2: Express-Kurs starten
+  elementary_page_make_your_own_games_title: Erstelle deine eigenen Animationen und
+    Spiele
   elementary_page_make_your_own_games_card_title_1: Sprite Lab
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: Zeit, kreativ zu werden!
+    Verwende blockbasiertes Programmieren, um in Sprite Lab etwas Dummes, Süßes oder
+    Außerirdisches zu machen. Die einzige Grenze ist deine Vorstellungskraft!
+  elementary_page_make_your_own_games_link: Testen Sie Sprite Lab
+  elementary_page_computer_science_title: Informatik im Unterricht
+  elementary_page_computer_science_description: Diese Kurse sollten von einem Lehrer
+    geleitet werden! Wenn du möchtest, dass sie an deiner Schule unterrichtet werden,
+    bitte einen Elternteil oder Erziehungsberechtigten, mit einem Lehrer zusammenzuarbeiten,
+    um sie in deine Klasse mitzubringen.
   elementary_page_computer_science_card_title_1: Grundlagen der Informatik
   elementary_page_computer_science_card_title_2: Verbindungen zur Informatik
   elementary_page_computer_science_description_1: Kostenlose Lehrpläne für den Grundschulbereich,
