@@ -56,7 +56,12 @@ describe('SortByNameDropdown', () => {
         sort_by_family_name: true,
       }
     );
-    expect(setSortSpy).to.have.been.calledOnce;
+    expect(setSortSpy).to.have.been.calledOnceWith(
+      true,
+      sectionId,
+      unitName,
+      source
+    );
     $.post.restore();
   });
 });
