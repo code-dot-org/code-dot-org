@@ -6001,6 +6001,14 @@ columns:
     default_function:
     collation:
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_tutor_enabled
+    sql_type_metadata: *20
+    'null': true
+    default: '0'
+    default_function:
+    collation:
+    comment:
   seed_info:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
