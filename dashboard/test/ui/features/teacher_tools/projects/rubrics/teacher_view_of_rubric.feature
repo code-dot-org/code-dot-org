@@ -30,6 +30,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I press keys "Nice work Lillian!" for element "#ui-teacherFeedback"
   And I wait to see "#ui-autosaveConfirm"
   And I click selector "#ui-submitFeedbackButton" once I see it
+  And I wait to see "#ui-feedback-submitted-timestamp"
   And I wait until element "p:contains(Feedback submitted at)" is visible
 
   # Check that the teacher can see submitted feedback
