@@ -7,10 +7,6 @@ import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -125,7 +121,7 @@ GoogleBlockly.Extensions.registerMutator(
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
-  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
     // Used to create and render an SVG frame instance.
     const getColor = () => {
       return Blockly.cdoUtils.getBlockColor(this);
@@ -173,7 +169,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
-  } else if (useModalFunctionEditor) {
+  } else if (Blockly.useModalFunctionEditor) {
     const newBehaviorButton = getNewBehaviorButtonWithCallback(
       workspace,
       behaviorDefinitionBlock

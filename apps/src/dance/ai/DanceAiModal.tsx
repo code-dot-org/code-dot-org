@@ -14,8 +14,18 @@ import {
 } from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {AiOutput, FieldKey, GeneratedEffect, Scores} from '../types';
-import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import {
+  AiOutput,
+  FieldKey,
+  GeneratedEffect,
+  GeneratedEffectScores,
+} from '../types';
+import {
+  generateBlocks,
+  generateBlocksFromResult,
+  generatePreviewCode,
+  getLabelMap,
+} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 const i18n = require('../locale');
@@ -23,10 +33,12 @@ const i18n = require('../locale');
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 import aiBotBorder from '@cdo/static/dance/ai/bot/ai-bot-border.png';
-import aiBotHead from '@cdo/static/dance/ai/bot/ai-bot-head.png';
-import aiBotBody from '@cdo/static/dance/ai/bot/ai-bot-body.png';
-import aiBotYes from '@cdo/static/dance/ai/bot/ai-bot-yes.png';
-import aiBotNo from '@cdo/static/dance/ai/bot/ai-bot-no.png';
+import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
+import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
+import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
+import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
+import aiBotHeadNo from '@cdo/static/dance/ai/bot/ai-bot-head-no.png';
+import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
 
 enum Mode {
   INITIAL = 'initial',
@@ -105,6 +117,10 @@ const DanceAiModal: React.FunctionComponent = () => {
     badEffects: [],
     goodEffect: undefined,
   });
+  const minMax = useRef<{min: number; max: number}>({
+    min: 0,
+    max: 3,
+  });
 
   const [mode, setMode] = useState(Mode.INITIAL);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
@@ -116,10 +132,6 @@ const DanceAiModal: React.FunctionComponent = () => {
       subStep: 0,
     });
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
-  const [minMax, setMinMax] = useState<{min: number; max: number}>({
-    min: 0,
-    max: 3,
-  });
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -138,13 +150,17 @@ const DanceAiModal: React.FunctionComponent = () => {
     if (mode === Mode.INITIAL) {
       const currentValue = currentAiModalField?.getValue();
       if (currentValue) {
+        const currentInputs = JSON.parse(currentValue).inputs;
+
         setMode(Mode.RESULTS);
-        setInputs(JSON.parse(currentValue).inputs);
+        setInputs(currentInputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
-          badEffects: [],
-          goodEffect: {results: JSON.parse(currentValue)},
+          badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
+            () => chooseEffects(currentInputs, ChooseEffectsQuality.BAD)
+          ),
+          goodEffect: JSON.parse(currentValue),
         };
       } else {
         setTimeout(() => {
@@ -229,7 +245,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentAiModalField?.setValue(
       JSON.stringify({
         inputs,
-        ...generatedEffects.current.goodEffect?.results,
+        ...generatedEffects.current.goodEffect,
       })
     );
     onClose();
@@ -272,14 +288,32 @@ const DanceAiModal: React.FunctionComponent = () => {
     mode === Mode.GENERATING ? GENERATION_SUBSTEP_DURATION : undefined
   );
 
-  const startAi = async () => {
+  const startAi = () => {
     generatedEffects.current = {
       badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
         () => chooseEffects(inputs, ChooseEffectsQuality.BAD)
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
-    setMinMax(getMinMax());
+    minMax.current = calculateMinMax();
+  };
+
+  const calculateMinMax = () => {
+    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
+      (accumulator: {min: number; max: number}, currentValue: number) => {
+        const scores = getScores(currentValue);
+        const min = Math.min(...scores);
+        const max = Math.max(...scores);
+        if (min < accumulator.min) {
+          return {min: min, max: accumulator.max};
+        } else if (max > accumulator.max) {
+          return {min: accumulator.min, max: max};
+        } else {
+          return accumulator;
+        }
+      },
+      {min: Infinity, max: 0}
+    );
   };
 
   const getGeneratedEffect = (step: number) => {
@@ -348,6 +382,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
+  const getPreviewCode = (generatedEffect?: GeneratedEffect): string => {
+    const tempWorkspace = new Workspace();
+    const previewCode = generatePreviewCode(
+      tempWorkspace,
+      JSON.stringify(generatedEffect)
+    );
+    tempWorkspace.dispose();
+    return previewCode;
+  };
+
   const onClose = () => dispatch(closeAiModal());
 
   const showUseButton =
@@ -360,12 +404,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentToggle === Toggle.CODE &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
-  let botImage = aiBotBorder;
+  let aiBotHead = aiBotHeadNormal;
+  let aiBotBody = aiBotBodyNormal;
   if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
-    botImage =
-      generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
-        ? aiBotNo
-        : aiBotYes;
+    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      aiBotHead = aiBotHeadNo;
+      aiBotBody = aiBotBodyNo;
+    } else {
+      aiBotHead = aiBotHeadYes;
+      aiBotBody = aiBotBodyYes;
+    }
   }
 
   const headerValue = () => {
@@ -419,24 +467,6 @@ const DanceAiModal: React.FunctionComponent = () => {
   const previewSizeSmall = 90;
 
   const labels = getLabels();
-
-  const getMinMax = () => {
-    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
-      (accumulator: {min: number; max: number}, currentValue: number) => {
-        const scores = getScores(currentValue);
-        const min = Math.min(...scores);
-        const max = Math.max(...scores);
-        if (min < accumulator.min) {
-          return {min: min, max: accumulator.max};
-        } else if (max > accumulator.max) {
-          return {min: accumulator.min, max: max};
-        } else {
-          return accumulator;
-        }
-      },
-      {min: Infinity, max: 0}
-    );
-  };
 
   return (
     <AccessibleDialog
@@ -495,7 +525,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {' '}
           {mode === Mode.SELECT_INPUTS
             ? i18n.danceAiModalChooseEmoji()
-            : mode === Mode.GENERATING && botImage === aiBotYes
+            : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
             ? i18n.danceAiModalGenerating()
             : mode === Mode.GENERATING
             ? i18n.danceAiModalFinding()
@@ -588,10 +618,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 >
                   <AiVisualizationPreview
                     id="ai-preview"
-                    blocks={generateBlocksFromResult(
-                      Blockly.getMainWorkspace(),
-                      JSON.stringify(currentGeneratedEffect?.results)
-                    )}
+                    code={getPreviewCode(currentGeneratedEffect)}
                     size={previewSize}
                   />
                 </div>
@@ -602,9 +629,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                       className={moduleStyles.blockPreview}
                     >
                       <AiBlockPreview
-                        resultJson={JSON.stringify(
-                          currentGeneratedEffect?.results
-                        )}
+                        resultJson={JSON.stringify(currentGeneratedEffect)}
                       />
                     </div>
                   )}
@@ -615,7 +640,11 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         {mode === Mode.GENERATING && (
-          <div id="score-area" className={moduleStyles.scoreArea}>
+          <div
+            id="score-area"
+            key={generatingProgress.step}
+            className={moduleStyles.scoreArea}
+          >
             <Score
               scores={getScores(generatingProgress.step)}
               minMax={minMax}
@@ -635,27 +664,21 @@ const DanceAiModal: React.FunctionComponent = () => {
                       className={moduleStyles.visualizationContainer}
                       title={
                         labels.backgroundEffect[
-                          getGeneratedEffect(index)?.results.backgroundEffect ||
-                            0
+                          getGeneratedEffect(index)?.backgroundEffect || 0
                         ] +
                         ' - ' +
                         labels.foregroundEffect[
-                          getGeneratedEffect(index)?.results.foregroundEffect ||
-                            0
+                          getGeneratedEffect(index)?.foregroundEffect || 0
                         ] +
                         ' - ' +
                         labels.backgroundColor[
-                          getGeneratedEffect(index)?.results.backgroundColor ||
-                            0
+                          getGeneratedEffect(index)?.backgroundColor || 0
                         ]
                       }
                     >
                       <AiVisualizationPreview
                         id={'ai-preview-' + index}
-                        blocks={generateBlocksFromResult(
-                          Blockly.getMainWorkspace(),
-                          JSON.stringify(getGeneratedEffect(index)?.results)
-                        )}
+                        code={getPreviewCode(getGeneratedEffect(index))}
                         size={previewSizeSmall}
                       />
                     </div>
@@ -667,18 +690,17 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
-          {mode === Mode.RESULTS &&
-            generatedEffects.current.badEffects.length > 0 && (
-              <div>
-                <Button
-                  id="explanation-button"
-                  text={'?'}
-                  onClick={handleExplanationClick}
-                  color={Button.ButtonColor.neutralDark}
-                  className={moduleStyles.button}
-                />
-              </div>
-            )}
+          {mode === Mode.RESULTS && (
+            <div>
+              <Button
+                id="explanation-button"
+                text={'?'}
+                onClick={handleExplanationClick}
+                color={Button.ButtonColor.neutralDark}
+                className={moduleStyles.button}
+              />
+            </div>
+          )}
 
           {mode === Mode.EXPLANATION && (
             <Button
@@ -781,50 +803,54 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 };
 
 interface ScoreProps {
-  scores: Scores;
+  scores: GeneratedEffectScores;
   minMax: {min: number; max: number};
 }
 
 const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
-  const multiplyScores = 10;
-
   const range = minMax.max - minMax.min;
-  const getScaledNumerator = (scores: Scores) => {
+  const getScaledNumerator = (scores: GeneratedEffectScores) => {
     return scores.reduce(
       (scaledSum: number, score: number) => (scaledSum += score - minMax.min),
       0
     );
   };
 
-  const getHeight = (scores: Scores) =>
+  const getHeight = (scores: GeneratedEffectScores) =>
     Math.round((getScaledNumerator(scores) / (range * 3)) * 140);
+
+  const layers = [
+    {
+      height: getHeight(scores),
+      className: moduleStyles.barFillFirst,
+    },
+    {
+      height: getHeight(scores.slice(0, 2)),
+      className: moduleStyles.barFillSecond,
+    },
+    {
+      height: getHeight(scores.slice(0, 1)),
+      className: moduleStyles.barFillThird,
+    },
+  ];
 
   return (
     <div className={moduleStyles.scoreContainer}>
-      <div
-        className={classNames(moduleStyles.barFill, moduleStyles.barFillFirst)}
-        style={{
-          height: getHeight(scores),
-        }}
-      >
-        &nbsp;
-      </div>
-      <div
-        className={classNames(moduleStyles.barFill, moduleStyles.barFillSecond)}
-        style={{
-          height: getHeight(scores.slice(0, 2)),
-        }}
-      >
-        &nbsp;
-      </div>
-      <div
-        className={classNames(moduleStyles.barFill, moduleStyles.barFillThird)}
-        style={{
-          height: getHeight(scores.slice(0, 1)),
-        }}
-      >
-        &nbsp;
-      </div>
+      {layers.map((layer, index) => {
+        return (
+          <div
+            key={index}
+            className={moduleStyles.barContainer}
+            style={{
+              height: layer.height,
+            }}
+          >
+            <div className={classNames(moduleStyles.barFill, layer.className)}>
+              &nbsp;
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
