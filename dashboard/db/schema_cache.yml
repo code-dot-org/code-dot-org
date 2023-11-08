@@ -4610,6 +4610,14 @@ columns:
     comment:
   - *32
   - *33
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: receives_marketing
+    sql_type_metadata: *20
+    'null': false
+    default: '0'
+    default_function:
+    collation:
+    comment:
   programming_classes:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -12964,7 +12972,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20231103160232
+version: 20231107182805
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

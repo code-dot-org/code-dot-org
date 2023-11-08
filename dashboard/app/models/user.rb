@@ -471,6 +471,16 @@ class User < ApplicationRecord
   has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
 
+  has_many :section_instructors, foreign_key: 'instructor_id'
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
+  has_many :sections_instructed, through: :active_section_instructors, source: :section
+
+  # TODO once the backfill creates SectionInstructors for every section owner,
+  # this method can be deleted and its references replaced by sections_instructed
+  def sections_owned_or_instructed
+    (sections + sections_instructed).uniq
+  end
+
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
