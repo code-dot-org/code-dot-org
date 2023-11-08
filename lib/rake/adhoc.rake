@@ -1,4 +1,6 @@
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
+require lib_dir 'cdo/aws/resource_management/aws_instance_killer.rb'
+
 include TimedTaskWithLogging
 
 namespace :adhoc do

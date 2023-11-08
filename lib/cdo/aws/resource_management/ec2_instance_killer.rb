@@ -1,3 +1,4 @@
+require 'aws_resource_killer'
 class EC2InstanceKiller < AwsResourceKiller
   def initialize(opts = {})
     @filters = opts[:aws_filters]
