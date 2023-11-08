@@ -66,12 +66,8 @@
   text-align: center;
   color: $white;
   line-height: 1.4;
-  max-width: 70%;
+  max-width: 860px;
   margin: 2rem auto 4rem;
-
-  @media screen and (max-width: $width-md) {
-    max-width: 100%;
-  }
 
   h1, h2 {
     color: $white
