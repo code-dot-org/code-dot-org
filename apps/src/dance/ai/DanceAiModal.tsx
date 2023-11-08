@@ -12,7 +12,12 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput, FieldKey, GeneratedEffect} from '../types';
-import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import {
+  generateBlocks,
+  generateBlocksFromResult,
+  generatePreviewCode,
+  getLabelMap,
+} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 const i18n = require('../locale');
@@ -20,10 +25,12 @@ const i18n = require('../locale');
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 import aiBotBorder from '@cdo/static/dance/ai/bot/ai-bot-border.png';
-import aiBotHead from '@cdo/static/dance/ai/bot/ai-bot-head.png';
-import aiBotBody from '@cdo/static/dance/ai/bot/ai-bot-body.png';
-import aiBotYes from '@cdo/static/dance/ai/bot/ai-bot-yes.png';
-import aiBotNo from '@cdo/static/dance/ai/bot/ai-bot-no.png';
+import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
+import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
+import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
+import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
+import aiBotHeadNo from '@cdo/static/dance/ai/bot/ai-bot-head-no.png';
+import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
 
 enum Mode {
   INITIAL = 'initial',
@@ -331,6 +338,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
+  const getPreviewCode = (): string => {
+    const tempWorkspace = new Workspace();
+    const previewCode = generatePreviewCode(
+      tempWorkspace,
+      JSON.stringify(currentGeneratedEffect?.results)
+    );
+    tempWorkspace.dispose();
+    return previewCode;
+  };
+
   const onClose = () => dispatch(closeAiModal());
 
   const showUseButton =
@@ -343,12 +360,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentToggle === Toggle.CODE &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
-  let botImage = aiBotBorder;
+  let aiBotHead = aiBotHeadNormal;
+  let aiBotBody = aiBotBodyNormal;
   if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
-    botImage =
-      generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
-        ? aiBotNo
-        : aiBotYes;
+    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      aiBotHead = aiBotHeadNo;
+      aiBotBody = aiBotBodyNo;
+    } else {
+      aiBotHead = aiBotHeadYes;
+      aiBotBody = aiBotBodyYes;
+    }
   }
 
   const headerValue = () => {
@@ -454,7 +475,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {' '}
           {mode === Mode.SELECT_INPUTS
             ? i18n.danceAiModalChooseEmoji()
-            : mode === Mode.GENERATING && botImage === aiBotYes
+            : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
             ? i18n.danceAiModalGenerating()
             : mode === Mode.GENERATING
             ? i18n.danceAiModalFinding()
@@ -545,12 +566,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                   id="flip-card-front"
                   className={moduleStyles.flipCardFront}
                 >
-                  <AiVisualizationPreview
-                    blocks={generateBlocksFromResult(
-                      Blockly.getMainWorkspace(),
-                      JSON.stringify(currentGeneratedEffect?.results)
-                    )}
-                  />
+                  <AiVisualizationPreview code={getPreviewCode()} />
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
                   {mode === Mode.RESULTS && (
