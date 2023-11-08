@@ -95,5 +95,5 @@ class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCa
   test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: -> {@teacher}, response: :success
-  test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :teacher, response: :not_found
 end

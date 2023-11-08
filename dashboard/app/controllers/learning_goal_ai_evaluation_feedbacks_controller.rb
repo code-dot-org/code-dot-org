@@ -13,9 +13,9 @@ class LearningGoalAiEvaluationFeedbacksController < ApplicationController
   end
 
   def get_by_ai_evaluation_id
-    @learning_goal_ai_evaluation_feedback = LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation_id: ai_eval_feedback_params[:learning_goal_ai_evaluation_id])
-    return head :not_found unless @learning_goal_ai_evaluation_feedback
-    render json: @learning_goal_ai_evaluation_feedback
+    learning_goal_ai_evaluation_feedback = LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation_id: ai_eval_feedback_params[:learning_goal_ai_evaluation_id])
+    return head :not_found unless learning_goal_ai_evaluation_feedback&.all? {|feedback| feedback.teacher_id == current_user.id}
+    render json: learning_goal_ai_evaluation_feedback
   end
 
   private def ai_eval_feedback_params
