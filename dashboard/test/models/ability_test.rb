@@ -939,17 +939,13 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'users with ai tutor access through section enablement can access Open AI chat completion endpoint' do
-    # create teacher
-    # enroll teacher in experiment
-    # section = create :section, teacher: teacher
-    # enable AI Tutor for section
-    # create student, add them to the section
-    # assert Ability.new(student).can? :chat_completion, :openai_chat
+    student = create :student_with_ai_tutor_access
+    assert Ability.new(student).can? :chat_completion, :openai_chat
   end
 
   test 'user without ai tutor access cannot access Open AI chat completion endpoint' do
-    levelbuilder = create :levelbuilder
-    refute Ability.new(levelbuilder).can? :chat_completion, :openai_chat
+    student = create :student_without_ai_tutor_access
+    refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
   private

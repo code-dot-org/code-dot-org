@@ -12,9 +12,15 @@ class OpenaiChatControllerTest < ActionController::TestCase
   user: :student,
   method: :post,
   params: {messages: [{role: "user", content: "Say this is a test!"}]},
-  response: :bad_request
+  response: :forbidden
 
   # User with ai tutor access disabled is unable to access the chat completion endpoint
+  test_user_gets_response_for :chat_completion,
+  user: :student_without_ai_tutor_access,
+  name: "Student with AI Tutor disabled",
+  method: :post,
+  params: {messages: [{role: "user", content: "Say this is a test!"}]},
+  response: :forbidden
 
   # User with ai tutor access from permissions, post request with a messages param returns a success
   test_user_gets_response_for :chat_completion,
@@ -24,6 +30,11 @@ class OpenaiChatControllerTest < ActionController::TestCase
   response: :success
 
   # User with ai tutor access from experiment and section enablement, post request with a messages param returns a success
+  test_user_gets_response_for :chat_completion,
+  user: :student_with_ai_tutor_access,
+  method: :post,
+  params: {messages: [{role: "user", content: "Say this is a test!"}]},
+  response: :success
 
   # A post request without a messages param returns a bad request
   test_user_gets_response_for :chat_completion,
@@ -31,6 +42,4 @@ class OpenaiChatControllerTest < ActionController::TestCase
   method: :post,
   params: {},
   response: :bad_request
-
-  # A post request with a messages param returns a success
 end
