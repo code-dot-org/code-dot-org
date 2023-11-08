@@ -210,11 +210,13 @@ export default function RubricContent({
               </BodyThreeText>
             )}
             {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <BodyThreeText>
-                {i18n.feedbackSubmittedAt({
-                  timestamp: lastSubmittedTimestamp,
-                })}
-              </BodyThreeText>
+              <div id="ui-feedback-submitted-timestamp">
+                <BodyThreeText>
+                  {i18n.feedbackSubmittedAt({
+                    timestamp: lastSubmittedTimestamp,
+                  })}
+                </BodyThreeText>
+              </div>
             )}
           </div>
         </div>
