@@ -10,6 +10,7 @@ class EC2InstanceForDeletion
     @instance = instance
     @deletion_tag = opts[:deletion_tag]
     @minimum_time_stopped_in_seconds = opts[:minimum_time_stopped_in_seconds]
+    @dry_run = opts[:dry_run]
   end
 
   # Method used to check if an instance can be deleted
@@ -62,8 +63,10 @@ class EC2InstanceForDeletion
     unless @instance.can_be_deleted? && @instance.has_deletion_tag?(@deletion_tag)
       raise Error("Cannot delete instance")
     end
-    cloudformation = Aws::CloudFormation::Client.new
-    cloudformation.delete_stack(stack_name: @instance.get_stack_name)
+    unless @dry_run
+      cloudformation = Aws::CloudFormation::Client.new
+      cloudformation.delete_stack(stack_name: @instance.get_stack_name)
+    end
   end
 
   # Return true if the stack attach should not be removed by the script since it is critical to code.org infrastructure
@@ -72,7 +75,9 @@ class EC2InstanceForDeletion
   end
 
   def tag_for_deletion
-    @instance.create_tags(true, {tags: [{key: @deletion_tag, value: Time.now.to_s}]})
+    unless @dry_run
+      @instance.create_tags(true, {tags: [{key: @deletion_tag, value: Time.now.to_s}]})
+    end
   end
 
   def has_deletion_tag?
