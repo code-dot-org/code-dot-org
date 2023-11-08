@@ -89,6 +89,7 @@ const CODE_STUDIO_ENTRIES = {
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
+  'regional_partners/regional_partner_search': './src/sites/studio/pages/regional_partners/regional_partner_search.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
