@@ -12,7 +12,7 @@ module I18n
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
             crowdin_dir_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
-            return if File.directory?(crowdin_dir_path)
+            return unless File.directory?(crowdin_dir_path)
 
             unless I18nScriptUtils.source_lang?(language)
               Dir.glob('*.md', base: crowdin_dir_path) do |crowdin_file_subpath|
@@ -20,10 +20,12 @@ module I18n
                 # `hoc_signup_2023_receipt_en.md` => `hoc_signup_2023_receipt_es-ES.md`
                 target_file_subpath = crowdin_file_subpath.sub(/(_en.md|.md)$/, "_#{language[:locale_s]}.md")
 
-                target_file_path = File.join(ORIGIN_DIR_PATH, target_file_subpath)
-                crowdin_file_path = File.join(crowdin_locale_dir_path, crowdin_file_subpath)
+                target_file_path = File.join(ORIGIN_DIR_PATH, 'i18n', target_file_subpath)
+                crowdin_file_path = File.join(crowdin_dir_path, crowdin_file_subpath)
+                origin_markdown_file_path = File.join(ORIGIN_DIR_PATH, crowdin_file_subpath)
 
                 I18nScriptUtils.copy_file(crowdin_file_path, target_file_path)
+                I18n::Utils::PegasusMarkdown.restore_file_header(origin_markdown_file_path, target_file_path)
               end
             end
 
