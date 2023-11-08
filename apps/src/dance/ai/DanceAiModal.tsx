@@ -66,6 +66,11 @@ type GeneratedEffects = {
   goodEffect?: GeneratedEffect;
 };
 
+type MinMax = {
+  min: number;
+  max: number;
+};
+
 enum Toggle {
   AI_BLOCK = 'aiBlock',
   CODE = 'code',
@@ -94,15 +99,17 @@ function useInterval(callback: () => void, delay: number | undefined) {
   }, [delay]);
 }
 
+const SCORE_VISUALIZATION_HEIGHT = 140;
+
+// How many emojis are to be selected.
+const SLOT_COUNT = 3;
+
 const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
 const DanceAiModal: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-
-  // How many emojis are to be selected.
-  const SLOT_COUNT = 3;
 
   // How many low-scoring results we show before the chosen one.
   const BAD_GENERATED_RESULTS_COUNT = 4;
@@ -119,6 +126,10 @@ const DanceAiModal: React.FunctionComponent = () => {
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
     goodEffect: undefined,
+  });
+  const minMaxAssociations = useRef<MinMax>({
+    min: 0,
+    max: 3,
   });
 
   const [mode, setMode] = useState(Mode.INITIAL);
@@ -297,7 +308,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       : undefined
   );
 
-  const startAi = async () => {
+  const startAi = () => {
     generatedEffects.current = {
       badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
         () => chooseEffects(inputs, ChooseEffectsQuality.BAD)
@@ -463,6 +474,31 @@ const DanceAiModal: React.FunctionComponent = () => {
   const previewSizeSmall = 90;
 
   const labels = getLabels();
+
+  const calculateMinMax = () => {
+    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
+      (accumulator: MinMax, currentValue: number) => {
+        const scores = getScores(currentValue);
+        const min = Math.min(...scores);
+        const max = Math.max(...scores);
+        if (min < accumulator.min) {
+          accumulator.min = min;
+        }
+        if (max > accumulator.max) {
+          accumulator.max = max;
+        }
+        return accumulator;
+      },
+      {min: Infinity, max: 0}
+    );
+  };
+
+  if (
+    generatedEffects.current.goodEffect &&
+    generatedEffects.current.badEffects.length === BAD_GENERATED_RESULTS_COUNT
+  ) {
+    minMaxAssociations.current = calculateMinMax();
+  }
 
   return (
     <AccessibleDialog
@@ -641,7 +677,10 @@ const DanceAiModal: React.FunctionComponent = () => {
             key={generatingProgress.step}
             className={moduleStyles.scoreArea}
           >
-            <Score scores={getScores(generatingProgress.step)} />
+            <Score
+              scores={getScores(generatingProgress.step)}
+              minMax={minMaxAssociations.current}
+            />
           </div>
         )}
 
@@ -672,7 +711,10 @@ const DanceAiModal: React.FunctionComponent = () => {
               {Array.from(Array(explanationProgress + 1).keys()).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
-                    <Score scores={getScores(index)} />
+                    <Score
+                      scores={getScores(index)}
+                      minMax={minMaxAssociations.current}
+                    />
 
                     <div
                       className={moduleStyles.visualizationColumn}
@@ -823,22 +865,35 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 
 interface ScoreProps {
   scores: GeneratedEffectScores;
+  minMax: MinMax;
 }
 
-const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
-  const multiplyScores = 10;
+const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
+  const range = minMax.max - minMax.min;
+  const getScaledNumerator = (scores: GeneratedEffectScores) => {
+    return scores.reduce(
+      (scaledSum: number, score: number) => (scaledSum += score - minMax.min),
+      0
+    );
+  };
+
+  const getHeight = (scores: GeneratedEffectScores) =>
+    Math.round(
+      (getScaledNumerator(scores) / (range * SLOT_COUNT)) *
+        SCORE_VISUALIZATION_HEIGHT
+    );
 
   const layers = [
     {
-      height: scores[0] + scores[1] + scores[2],
+      height: getHeight(scores),
       className: moduleStyles.barFillFirst,
     },
     {
-      height: scores[0] + scores[1],
+      height: getHeight([scores[0], scores[1]]),
       className: moduleStyles.barFillSecond,
     },
     {
-      height: scores[0],
+      height: getHeight([scores[0]]),
       className: moduleStyles.barFillThird,
     },
   ];
@@ -851,7 +906,7 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores}) => {
             key={index}
             className={moduleStyles.barContainer}
             style={{
-              height: Math.round(layer.height * multiplyScores),
+              height: layer.height,
             }}
           >
             <div className={classNames(moduleStyles.barFill, layer.className)}>
