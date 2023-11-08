@@ -695,14 +695,6 @@ class User < ApplicationRecord
     migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
-  def primary_contact_info
-    return super unless Policies::Lti.lti?(self)
-    @primary_contact_info ||= begin
-      ao_with_email = authentication_options.find {|ao| ao.email.present?}
-      ao_with_email || nil
-    end
-  end
-
   # Locate an SSO user by SSO provider and associated user id.
   # @param [String] type A credential type / provider type.  In the future this
   #   should always be one of the valid credential types from AuthenticationOption
