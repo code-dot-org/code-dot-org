@@ -18,7 +18,7 @@ export function hasBlocks(workspaceSerialization) {
   );
 }
 
-function getX(block, workspace) {
+function getXCoordinate(block, workspace) {
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
@@ -28,6 +28,14 @@ function getX(block, workspace) {
   let horizontalOffset = block.functionalSvg_ ? 2 * padding : padding;
   // If the workspace is RTL, horizontally mirror the starting position
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
+}
+
+function getSpaceBetweenBlocks(block) {
+  let verticalSpace = VERTICAL_SPACE_BETWEEN_BLOCKS;
+  if (block.functionalSvg_) {
+    verticalSpace += SVG_FRAME_TOP_PADDING;
+  }
+  return verticalSpace;
 }
 
 /**
@@ -115,7 +123,7 @@ function adjustBlockPositions(blocks, workspace) {
 
   let y = WORKSPACE_PADDING;
   blocksToPlace.forEach(block => {
-    let x = getX(block, workspace);
+    let x = getXCoordinate(block, workspace);
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
     block.moveTo({x, y});
@@ -126,9 +134,7 @@ function adjustBlockPositions(blocks, workspace) {
         y =
           existingCollider.y +
           existingCollider.height +
-          VERTICAL_SPACE_BETWEEN_BLOCKS +
-          SVG_FRAME_TOP_PADDING;
-
+          getSpaceBetweenBlocks(block);
         block.moveTo({x, y});
         collider = getCollider(block);
       }
