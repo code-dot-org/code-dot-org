@@ -1872,5 +1872,6 @@ FactoryBot.define do
     association :source_course_offering
     name {"foosbars"}
     email {"foobar@example.com"}
+    receives_marketing {true}
   end
 end
