@@ -60,6 +60,7 @@ export default class FunctionEditor {
         metricsManager: CdoMetricsManager,
       },
       renderer: options.renderer,
+      rtl: options.rtl,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox: options.toolbox,
       trashcan: false, // Don't use default trashcan.

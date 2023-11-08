@@ -27,8 +27,20 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       frameSizes.WORKSPACE_HEADER_HEIGHT,
       fontSize
     );
-
-    const frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;
+    let frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;
+    if (this.element_.RTL) {
+      const contentWidth = this.element_
+        .getMetricsManager()
+        .getMetrics().contentWidth;
+      const viewWidth = this.element_
+        .getMetricsManager()
+        .getViewMetrics().width;
+      let offset = 0;
+      if (contentWidth > viewWidth) {
+        offset = contentWidth - viewWidth;
+      }
+      frameX = frameSizes.MARGIN_SIDE / 2 - offset;
+    }
     const frameY =
       frameSizes.MARGIN_TOP -
       this.element_.getMetricsManager().getMetrics().viewTop;
@@ -75,7 +87,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       height,
       viewMetrics.height - frameSizes.MARGIN_TOP - frameSizes.MARGIN_BOTTOM
     );
-    super.render(width, height);
+    super.render(width, height, true);
 
     const frameY =
       frameSizes.MARGIN_TOP -
@@ -90,6 +102,27 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       'y',
       frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2
     );
+    if (this.element_.RTL) {
+      const contentWidth =
+        this.element_.getMetricsManager().getMetrics().contentWidth +
+        2 * frameSizes.MARGIN_SIDE;
+      const viewWidth =
+        this.element_.getMetricsManager().getViewMetrics().width -
+        frameSizes.MARGIN_SIDE;
+      let offset = 0;
+      if (contentWidth > viewWidth) {
+        offset = contentWidth - viewWidth;
+      }
+      const frameX = frameSizes.MARGIN_SIDE / 2 - offset;
+
+      this.frameClipRect_.setAttribute('x', frameX);
+      this.frameHeader_.setAttribute('x', frameX);
+      this.frameBase_.setAttribute('x', frameX);
+      // this.frameText_.setAttribute(
+      //   'x',
+      //   300
+      // );
+    }
   }
 }
 

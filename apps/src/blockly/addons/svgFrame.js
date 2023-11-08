@@ -175,7 +175,8 @@ export default class SvgFrame {
       this.frameClipRect_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameHeader_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameBase_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
-      this.frameText_.setAttribute('x', -width + 2 * frameSizes.MARGIN_SIDE);
+      const frameTextX = -this.frameText_?.getBoundingClientRect().width;
+      this.frameText_?.setAttribute('x', frameTextX);
     }
   }
 
