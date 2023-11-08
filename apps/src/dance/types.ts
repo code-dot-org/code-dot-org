@@ -62,3 +62,7 @@ export interface GeneratedEffect {
   results: Results;
   scores?: Scores;
 }
+
+export interface AiFieldValue extends Results {
+  inputs: string[];
+}

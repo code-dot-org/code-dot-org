@@ -11,7 +11,7 @@ import {chooseEffects, ChooseEffectsQuality} from './DanceAiClient';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
-import {AiOutput, FieldKey, GeneratedEffect} from '../types';
+import {AiFieldValue, AiOutput, FieldKey, GeneratedEffect} from '../types';
 import {
   generateBlocks,
   generateBlocksFromResult,
@@ -136,15 +136,16 @@ const DanceAiModal: React.FunctionComponent = () => {
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === Mode.INITIAL) {
-      const currentValue = currentAiModalField?.getValue();
-      if (currentValue) {
+      const currentValueString = currentAiModalField?.getValue();
+      if (currentValueString) {
+        const currentValue: AiFieldValue = JSON.parse(currentValueString);
         setMode(Mode.RESULTS);
-        setInputs(JSON.parse(currentValue).inputs);
+        setInputs(currentValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
           badEffects: [],
-          goodEffect: {results: JSON.parse(currentValue)},
+          goodEffect: {results: currentValue},
         };
       } else {
         setTimeout(() => {
@@ -226,12 +227,15 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleUseClick = () => {
-    currentAiModalField?.setValue(
-      JSON.stringify({
-        inputs,
-        ...generatedEffects.current.goodEffect?.results,
-      })
-    );
+    if (!generatedEffects.current.goodEffect) {
+      // Effect should exist when Use is clicked
+      return;
+    }
+    const currentValue: AiFieldValue = {
+      inputs,
+      ...generatedEffects.current.goodEffect?.results,
+    };
+    currentAiModalField?.setValue(JSON.stringify(currentValue));
     onClose();
   };
 
@@ -298,7 +302,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(generatedEffects.current.goodEffect)
+      generatedEffects.current.goodEffect.results
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -339,10 +343,14 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const getPreviewCode = (): string => {
+    if (!currentGeneratedEffect?.results) {
+      return '';
+    }
+
     const tempWorkspace = new Workspace();
     const previewCode = generatePreviewCode(
       tempWorkspace,
-      JSON.stringify(currentGeneratedEffect?.results)
+      currentGeneratedEffect?.results
     );
     tempWorkspace.dispose();
     return previewCode;
@@ -574,11 +582,11 @@ const DanceAiModal: React.FunctionComponent = () => {
                       id="block-preview"
                       className={moduleStyles.blockPreview}
                     >
-                      <AiBlockPreview
-                        resultJson={JSON.stringify(
-                          currentGeneratedEffect?.results
-                        )}
-                      />
+                      {currentGeneratedEffect?.results && (
+                        <AiBlockPreview
+                          results={currentGeneratedEffect.results}
+                        />
+                      )}
                     </div>
                   )}
                 </div>
