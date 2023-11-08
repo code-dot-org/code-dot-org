@@ -115,7 +115,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const BAD_GENERATED_RESULTS_COUNT = 4;
 
   // How many substeps for each step in the generating process.
-  const GENERATING_SUBSTEP_COUNT = 2;
+  const GENERATING_SUBSTEP_COUNT = 3;
 
   // How long we spend in each substep in the generating process.
   const GENERATION_SUBSTEP_DURATION = 1000;
@@ -394,7 +394,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
-  if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
+  if (mode === Mode.GENERATING && generatingProgress.subStep >= 2) {
     if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
       aiBotHead = aiBotHeadNo;
       aiBotBody = aiBotBodyNo;
@@ -403,6 +403,12 @@ const DanceAiModal: React.FunctionComponent = () => {
       aiBotBody = aiBotBodyYes;
     }
   }
+
+  const explanationKeyDotColor = [
+    moduleStyles.dotFirst,
+    moduleStyles.dotSecond,
+    moduleStyles.dotThird,
+  ];
 
   const headerValue = () => {
     return (
@@ -652,7 +658,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           </div>
         )}
 
-        {mode === Mode.GENERATING && (
+        {mode === Mode.GENERATING && generatingProgress.subStep >= 1 && (
           <div
             id="score-area"
             key={generatingProgress.step}
@@ -667,41 +673,66 @@ const DanceAiModal: React.FunctionComponent = () => {
 
         {mode === Mode.EXPLANATION && currentGeneratedEffect && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
-            {Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).map(
-              index => {
+            <div className={moduleStyles.key}>
+              {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+                const item = getItem(inputs[index]);
                 return (
-                  <div key={index}>
-                    <Score
-                      scores={getScores(index)}
-                      minMax={minMaxAssociations.current}
-                    />
-
+                  <div key={index} className={moduleStyles.emojiSlot}>
                     <div
-                      className={moduleStyles.visualizationContainer}
-                      title={
-                        labels.backgroundEffect[
-                          getGeneratedEffect(index)?.backgroundEffect || 0
-                        ] +
-                        ' - ' +
-                        labels.foregroundEffect[
-                          getGeneratedEffect(index)?.foregroundEffect || 0
-                        ] +
-                        ' - ' +
-                        labels.backgroundColor[
-                          getGeneratedEffect(index)?.backgroundColor || 0
-                        ]
-                      }
-                    >
-                      <AiVisualizationPreview
-                        id={'ai-preview-' + index}
-                        code={getPreviewCode(getGeneratedEffect(index))}
-                        size={previewSizeSmall}
+                      className={classNames(
+                        moduleStyles.dot,
+                        explanationKeyDotColor[index]
+                      )}
+                    />
+                    {item && (
+                      <EmojiIcon
+                        item={item}
+                        className={moduleStyles.emojiSlotIcon}
                       />
-                    </div>
+                    )}
                   </div>
                 );
-              }
-            )}
+              })}
+            </div>
+            <div className={moduleStyles.visualizationContainer}>
+              {Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).map(
+                index => {
+                  return (
+                    <div
+                      key={index}
+                      className={moduleStyles.visualizationColumn}
+                    >
+                      <Score
+                        scores={getScores(index)}
+                        minMax={minMaxAssociations.current}
+                      />
+                      <div
+                        className={moduleStyles.visualizationColumn}
+                        title={
+                          labels.backgroundEffect[
+                            getGeneratedEffect(index)?.backgroundEffect || 0
+                          ] +
+                          ' - ' +
+                          labels.foregroundEffect[
+                            getGeneratedEffect(index)?.foregroundEffect || 0
+                          ] +
+                          ' - ' +
+                          labels.backgroundColor[
+                            getGeneratedEffect(index)?.backgroundColor || 0
+                          ]
+                        }
+                      >
+                        <AiVisualizationPreview
+                          id={'ai-preview-' + index}
+                          code={getPreviewCode(getGeneratedEffect(index))}
+                          size={previewSizeSmall}
+                        />
+                      </div>
+                    </div>
+                  );
+                }
+              )}
+            </div>
           </div>
         )}
 
