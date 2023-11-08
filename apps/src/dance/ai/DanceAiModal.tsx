@@ -108,7 +108,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const BAD_GENERATED_RESULTS_COUNT = 4;
 
   // How many substeps for each step in the generating process.
-  const GENERATING_SUBSTEP_COUNT = 2;
+  const GENERATING_SUBSTEP_COUNT = 3;
 
   // How long we spend in each substep in the generating process.
   const GENERATION_SUBSTEP_DURATION = 1000;
@@ -383,7 +383,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
-  if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
+  if (mode === Mode.GENERATING && generatingProgress.subStep >= 2) {
     if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
       aiBotHead = aiBotHeadNo;
       aiBotBody = aiBotBodyNo;
@@ -622,7 +622,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           </div>
         )}
 
-        {mode === Mode.GENERATING && (
+        {mode === Mode.GENERATING && generatingProgress.subStep >= 1 && (
           <div
             id="score-area"
             key={generatingProgress.step}
