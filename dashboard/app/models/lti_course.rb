@@ -20,7 +20,9 @@
 #  index_on_course_id_and_lti_integration_id   (course_id,lti_integration_id)
 #
 class LtiCourse < ApplicationRecord
-  validates_presence_of :lti_integration_id, :lti_deployment_id, :context_id
+  belongs_to :lti_integration
+  belongs_to :lti_deployment
+  validates :context_id, presence: true
   validates_uniqueness_of :context_id, scope: :lti_integration_id
   validates :nrps_url, url: {allow_nil: true}
 end

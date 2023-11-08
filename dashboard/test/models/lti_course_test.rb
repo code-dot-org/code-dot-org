@@ -2,7 +2,7 @@ require "test_helper"
 
 class LtiCourseTest < ActiveSupport::TestCase
   test "should validate required fields" do
-    refute build(:lti_course, lti_integration: nil).valid? "lti_integration is required"
+    refute build(:lti_course, lti_integration: nil, lti_deployment: create(:lti_deployment)).valid? "lti_integration is required"
     refute build(:lti_course, lti_deployment: nil).valid? "lti_deployment is required"
   end
 
