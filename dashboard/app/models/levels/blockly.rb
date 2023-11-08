@@ -773,6 +773,7 @@ class Blockly < Level
       studio_ask
       math_change
       gamelab_textVariableJoin
+      gamelab_ifVarEquals
     ]
 
     # Localize each 'catch-all' block type.
@@ -780,7 +781,7 @@ class Blockly < Level
       block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
         # Find all <title/field name="VAR" /> blocks and maybe update their
         # content if there exists a localization key for them.
-        block.xpath("./#{tag}[@name=\"VAR\"]").each do |var|
+        block.xpath("./#{tag}[@name=\"VAR\" or @name=\"NUM\"]").each do |var|
           localized_name = I18n.t(
             var.content,
             scope: [:data, :variable_names],
