@@ -60,6 +60,7 @@ end
 # @param [Integer] section_id
 # @returns [Boolean] true if the current user is the owner of the given section.
 #          Note: NOT always true for admins.
+# TODO: do we need to change this?
 def owns_section?(section_id)
   return false unless section_id && current_user_id
   DASHBOARD_DB[:sections].where(id: section_id, user_id: current_user_id).any?
