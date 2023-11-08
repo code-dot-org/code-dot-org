@@ -1868,6 +1868,17 @@ FactoryBot.define do
     ai_confidence {1}
   end
 
+  factory :learning_goal_ai_evaluation_feedback do
+    association :learning_goal_ai_evaluation
+    teacher_id {0}
+    ai_feedback_approval {false}
+    false_positive {false}
+    false_negative {false}
+    vague {false}
+    feedback_other {true}
+    other_content {'other'}
+  end
+
   factory :potential_teacher do
     association :source_course_offering
     name {"foosbars"}
