@@ -54,13 +54,13 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
           return i18n.coteacherCannotInviteSelf();
         }
 
-        console.error(response);
+        console.error('Coteacher validation error', response);
         return i18n.coteacherUnknownValidationError({
           email,
         });
       })
       .catch(e => {
-        console.error(e, response);
+        console.error('Coteacher validation error', e, response);
         return i18n.coteacherUnknownValidationError({
           email,
         });
