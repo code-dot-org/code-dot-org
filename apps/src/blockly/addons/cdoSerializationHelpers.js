@@ -18,6 +18,18 @@ export function hasBlocks(workspaceSerialization) {
   );
 }
 
+function getX(block, workspace) {
+  const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
+  const padding = viewWidth ? WORKSPACE_PADDING : 0;
+  const width = viewWidth || contentWidth;
+
+  // Multiplier accounts for the fact that blocks with SVG frames need twice as much padding
+  // so their edges don't touch the edge of the workspace
+  let horizontalOffset = block.functionalSvg_ ? 2 * padding : padding;
+  // If the workspace is RTL, horizontally mirror the starting position
+  return block.workspace.isRTL ? width - horizontalOffset : horizontalOffset;
+}
+
 /**
  * Converts XML serialization to JSON using a temporary unrendered workspace.
  * @param {xml} xml - workspace serialization, current/legacy format
@@ -91,16 +103,6 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
  * @param {Blockly.Workspace} workspace - The current Blockly workspace
  */
 function adjustBlockPositions(blocks, workspace) {
-  const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
-  const {RTL} = workspace;
-
-  const padding = viewWidth ? WORKSPACE_PADDING : 0;
-  const width = viewWidth || contentWidth;
-
-  // If the workspace is RTL, horizontally mirror the starting position
-  let x = RTL ? width - padding : padding;
-  let y = padding;
-
   let existingColliders = [];
   let blocksToPlace = [];
   blocks.forEach(block => {
@@ -111,8 +113,11 @@ function adjustBlockPositions(blocks, workspace) {
     }
   });
 
+  let y = WORKSPACE_PADDING;
   blocksToPlace.forEach(block => {
+    let x = getX(block, workspace);
     let collider = getCollider(block);
+
     existingColliders.forEach(existingCollider => {
       if (isOverlapping(collider, existingCollider)) {
         y =
