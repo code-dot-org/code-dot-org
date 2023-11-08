@@ -9338,6 +9338,7 @@
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
   hoc_how_to_faq_answer_devices_01: "Devices you can use:"
   hoc_how_to_faq_answer_devices_02: "If devices are limited or unavailable, try [pair programming](%{pair_url}) or explore our [unplugged activities](%{unplugged_url}) to learn without any devices at all!"
+  hoc_how_to_faq_answer_devices_02_v2: "If you don't have a device at home, explore our [unplugged activities](%{unplugged_url}) to learn without any devices at all!"
   hoc_how_to_faq_question_volunteer: "Who can volunteer?"
   hoc_how_to_faq_answer_volunteer: "Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We'd love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don't need to be a programming expert to volunteer!"
   hoc_how_to_faq_question_full_hour: "Will the Hour of Code take a full hour?"
