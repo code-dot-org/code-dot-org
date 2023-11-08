@@ -1791,6 +1791,7 @@
   hoc_faq_why_cs_a_markdown: "_Every_ student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats [here](%{stats_url})."
   hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit, or at work."
+  hoc_faq_how_participate_a_v2_markdown: "[Start planning here](%{howto}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit, or at work."
   hoc_faq_behind_hoc_q: 'Who is behind the Hour of Code?'
   hoc_faq_behind_hoc_a_markdown: "The Hour of Code is organized by Code.org and driven by the Hour of Code Review Committee as well as an unprecedented coalition of [partners](%{partner_url}) that have come together to support the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America, and the College Board."
   hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
@@ -9328,6 +9329,10 @@
   hoc_how_to_events_intro_heading: "How to organize an Hour of Code assembly or event"
   hoc_how_to_events_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
   hoc_how_to_events_intro_desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
+
+  hoc_how_to_public_officials_intro_heading: "Hosting an elected official at your Hour of Code"
+  hoc_how_to_public_officials_intro_desc_01: "Inviting an elected official to your Hour of Code event will show your representative the impact and need for computer science education, and your students will be inspired by a role model in government."
+  hoc_how_to_public_officials_intro_desc_02: "In order to run a successful Hour of Code event while engaging elected officials, complete these tasks prior to the elected official attending your school. The task includes coordination with their point of contact, media invitations, waivers, and planning your agenda."
 
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
