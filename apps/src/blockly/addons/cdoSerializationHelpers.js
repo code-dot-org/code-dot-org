@@ -170,7 +170,7 @@ function getCollider(block) {
  * @param {Collider} item - A new collider to add to the array in its sorted position
  * NOTE: This method mutates the input array.
  */
-function insertCollider(colliders, item) {
+export function insertCollider(colliders, item) {
   const sumItem = item.y + item.height;
   // Returns the index of the first element whose bottom edge is below this one
   const index = colliders.findIndex(current => {
@@ -187,7 +187,7 @@ function insertCollider(colliders, item) {
  * @param {Collider} collider2
  * @returns {boolean} True if the two colliders (representing blocks) overlap
  */
-function isOverlapping(collider1, collider2) {
+export function isOverlapping(collider1, collider2) {
   // Checks if the left edge of collider1 is to the left of the right edge of the other block
   // and the right edge of collider1 is to the right of the left edge of collider2
   const overlapX =
