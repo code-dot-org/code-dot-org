@@ -23,15 +23,13 @@ document.body.addEventListener("click", (event) => {
 // Sticky scroller styles on steps section navigation
 window.addEventListener("DOMContentLoaded", () => {
   const options = {
-    rootMargin: "-20% 0px -80%",
+    rootMargin: "-10% 0px -90%",
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(
-        `nav.steps-nav ul a[href="#${id}"]`
-      );
+      const navLink = document.querySelector(`nav.steps-nav a[href="#${id}"]`);
 
       if (entry.intersectionRatio > 0) {
         navLink.parentElement.classList.add("active");

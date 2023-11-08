@@ -2910,6 +2910,10 @@
         "courseD_bee_conditionals8_2023": {
           "courseD_bee_conditionals8_a": "**זכור:** החידה הזו משתנה בכל ריצה חדשה. \n\nאתה תזדקק להשתמש בבלוק התניה (\"אם\" או \"אם/אחרת\") כדי לפתור את החידה."
         },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "עליך להוסיף את הבלוק 'זוז שמאלה' לאירוע 'כאשר חץ שמאלה' כדי לגרום למשחק הזה לעבוד:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "אל תשכח ללחוץ על \"הפעלה\" ולהעביר את היד לסל על מנת לפתור את החידה הזו."
+        },
         "courseD_collector_debugging1": {
           "courseD_collector_debugging1_c": "זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.  "
         },

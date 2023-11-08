@@ -102,4 +102,10 @@ export const SongTitlesToArtistTwitterHandle = {
   // 2023 Songs
   butter_bts: 'BTS',
   dynamite_bts: 'BTS',
+  bizcochito_rosalia: 'Rosalia',
+  cupid_fiftyfifty: 'we_fiftyfifty',
+  flowers_mileycyrus: 'MileyCyrus',
+  illegalweapon20_jasminesandlasgarrysandhu: 'JasmineSandlas',
+  likeagirl_lizzo: 'Lizzo',
+  wafflehouse_jonasbrothers: 'JonasBrothers',
 };

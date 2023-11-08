@@ -2,8 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/courses": "ai-launch-2023",
-    "/home": "ai-pl-launch-2023"
+    "/courses": "hoc-2023",
+    "/home": "hoc-2023"
   },
   "banners": {
     "csleadersprize": {
@@ -160,6 +160,22 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/ai/pl/101",
       "buttonId": "ai-pl-launch-2023"
+    },
+    "state-of-cs-2023": {
+      "image": "/shared/images/announcement/announcement_socs2023.png",
+      "title": "2023 State of Computer Science Education",
+      "body": "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data.",
+      "buttonText": "Read report",
+      "buttonUrl": "https://advocacy.code.org/stateofcs",
+      "buttonId": "state-of-cs-2023"
+    },
+    "hoc-2023": {
+      "image": "/shared/images/fill-540x300/social-media/hoc2023_social.png",
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/hourofcode",
+      "buttonId": "hoc-2023"
     }
   }
 }

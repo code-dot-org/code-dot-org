@@ -21,8 +21,7 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Slides.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(execution_sequence)
-
-      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/unplugged.en.yml'), CDO.dir('i18n/locales/source/dashboard/unplugged.yml')).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::UnpluggedContent.expects(:sync_in).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_in
     end
@@ -47,6 +46,8 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Slides.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::UnpluggedContent.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::TextToSpeech.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out
     end

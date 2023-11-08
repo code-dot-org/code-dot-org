@@ -69,6 +69,11 @@ nl:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': maten
+            '"seconds"': seconden
       Dancelab_changeColorBy:
         text: verander {COLOR} {METHOD} met {AMOUNT}
         options:
@@ -557,6 +562,49 @@ nl:
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rood
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "achtergrondeffect
+          {PALETTE} {EFFECT} instellen"
+        options:
+          EFFECT:
+            '"none"': Geen
+            '"rand"': "(Willekeurig)"
+            '"circles"': Tunnel
+            '"quads"': Hoeken
+            '"color_cycle"': Kleuren
+            '"diamonds"': Ruiten
+            '"disco_ball"': Discobal
+            '"fireworks"': Vuurwerk
+            '"flowers"': Bloemen
+            '"growing_stars"': Groeiende sterren
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"splatter"': Verfspetters
+            '"rainbow"': Regenboog
+            '"ripples_random"': Willekeurige rimpelingen
+            '"ripples"': Rimpelingen
+            '"snowflakes"': Sneeuw
+            '"text"': Titel van het lied
+            '"squiggles"': Kronkels
+            '"galaxy"': Ruimte
+            '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
+            '"disco"': Vierkanten
+            '"starburst"': Sterrenvorming
+            '"stars"': Sterren
+            '"music_wave"': Golven
+          PALETTE:
+            '"rave"': Zwart-wit
+            '"cool"': Blauw
+            '"electronic"': Elektronisch
+            '"iceCream"': Ijsco
+            '"default"': Licht
+            '"neon"': Neon
+            '"rainbow"': Regenboog
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rood
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
@@ -1000,7 +1048,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
       gamelab_clickedSpritePointer:
@@ -1127,7 +1175,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
           KEY:
             '"up"': omhoog
             '"down"': omlaag
@@ -1422,7 +1470,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
       gamelab_spriteSay:
         text: "{SPRITE} zegt {SPEECH}"
       gamelab_spriteSayTime:

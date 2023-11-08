@@ -14,6 +14,7 @@ import {
   BodyThreeText,
   BodyFourText,
   ExtraStrongText,
+  StrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -36,6 +37,8 @@ export default function LearningGoal({
   aiConfidence,
   submittedEvaluation,
   isStudent,
+  feedbackAdded,
+  setFeedbackAdded,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -56,14 +59,16 @@ export default function LearningGoal({
   const saveAfter = 2000;
 
   const handleClick = () => {
-    const eventName = isOpen
-      ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
-      : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
-    analyticsReporter.sendEvent(eventName, {
-      ...(reportingData || {}),
-      learningGoalKey: learningGoal.key,
-      learningGoal: learningGoal.learningGoal,
-    });
+    if (!isStudent) {
+      const eventName = isOpen
+        ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
+        : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
+      analyticsReporter.sendEvent(eventName, {
+        ...(reportingData || {}),
+        learningGoalKey: learningGoal.key,
+        learningGoal: learningGoal.learningGoal,
+      });
+    }
     setIsOpen(!isOpen);
   };
 
@@ -101,6 +106,9 @@ export default function LearningGoal({
       .then(() => {
         setIsAutosaving(false);
         setAutosaved(true);
+        if (!feedbackAdded) {
+          setFeedbackAdded(true);
+        }
       })
       .catch(error => {
         console.log(error);
@@ -142,6 +150,13 @@ export default function LearningGoal({
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
+      ...(reportingData || {}),
+      learningGoalId: learningGoal.id,
+      learningGoal: learningGoal.learningGoal,
+      newlySelectedEvidenceLevel: radioButtonData,
+      previouslySelectedEvidenceLevel: understandingLevel.current,
+    });
     setDisplayUnderstanding(radioButtonData);
     understandingLevel.current = radioButtonData;
     if (!isAutosaving) {
@@ -155,6 +170,7 @@ export default function LearningGoal({
         <label className={style.evidenceLevelLabel}>
           <span>{i18n.feedback()}</span>
           <textarea
+            id="ui-teacherFeedback"
             className={style.inputTextbox}
             name="teacherFeedback"
             value={displayFeedback}
@@ -166,7 +182,7 @@ export default function LearningGoal({
           <span className={style.autosaveMessage}>{i18n.saving()}</span>
         ) : (
           autosaved && (
-            <span className={style.autosaveMessage}>
+            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
               <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
             </span>
           )
@@ -200,22 +216,8 @@ export default function LearningGoal({
     <details className={style.learningGoalRow}>
       <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
-          {isOpen && (
-            <FontAwesome
-              icon="angle-up"
-              onClick={() => setIsOpen(false)}
-              className={style.arrowIcon}
-            />
-          )}
-          {!isOpen && (
-            <FontAwesome
-              icon="angle-down"
-              onClick={() => setIsOpen(true)}
-              className={style.arrowIcon}
-            />
-          )}
           {/*TODO: [DES-321] Label-two styles here*/}
-          <span>{learningGoal.learningGoal}</span>
+          <StrongText>{learningGoal.learningGoal}</StrongText>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && displayUnderstanding === invalidUnderstanding && (
@@ -239,7 +241,7 @@ export default function LearningGoal({
           )}
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
-              {submittedEvaluation.understanding && (
+              {submittedEvaluation.understanding !== null && (
                 <BodyThreeText>
                   {
                     UNDERSTANDING_LEVEL_STRINGS[
@@ -271,6 +273,7 @@ export default function LearningGoal({
                 studentName={studentLevelInfo.name}
                 aiConfidence={aiConfidence}
                 aiUnderstandingLevel={aiUnderstanding}
+                learningGoalKey={learningGoal.key}
               />
             </div>
           )}
@@ -285,7 +288,7 @@ export default function LearningGoal({
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
           />
-          {learningGoal.tips && (
+          {learningGoal.tips && !isStudent && (
             <div>
               <Heading6>{i18n.tipsForEvaluation()}</Heading6>
               <div className={style.learningGoalTips}>
@@ -310,6 +313,8 @@ LearningGoal.propTypes = {
   aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
 };
 
 const AiToken = () => {

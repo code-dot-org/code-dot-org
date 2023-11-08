@@ -8,7 +8,7 @@ title: Guide til Hour of Code
 
 ### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin.
 
-Students today should learn how to create technology, not just use it.
+Eleverne i dag skal lære at skabe teknologi, ikke bare bruge den.
 
 At prøve en Hour of Code er en enkel og sjov måde at introducere studerende til datalogi, måske for første gang! Find en aktivitet, der passer til dine omgivelser, hvad enten det er i klassen eller efter skoletid, personligt eller virtuelt. Tag et kig på vores [deltagelsesguide, hvis du stadig har spørgsmål]({{ localized_files/participation_guide }}) efter at have tjekket nedenstående trin:
 
@@ -19,7 +19,7 @@ At prøve en Hour of Code er en enkel og sjov måde at introducere studerende ti
 - [Sådan starter du din Hour of Code stærk](#how-to-start)
 - [Få kodning](#code)
 - [Fejr dine studerendes succes](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Andre Hour of Code-ressourcer til undervisere](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Når du [tilmelder dig din Hour of Code-begivenhed](/#join), modtager du nyttige e-mail-meddelelser med nyheder og tip til at være vært for en vellykket Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Når du [tilmelder dig din Hour of Code-begivenhed](/events), modtager du nyttige e-mail-meddelelser med nyheder og tip til at være vært for en vellykket Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Udskriv certifikater]({{ urls/certificates }}) til dine studerende.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 

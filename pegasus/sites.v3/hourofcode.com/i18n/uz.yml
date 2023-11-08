@@ -5,6 +5,13 @@ uz:
   language: Ingliz
   front_title: Tarixdagi eng katta tadbirga asoslanish:% {campaign_date}
   coming_soon: Tez kunda
+  new: Yangi
+  hours_of_code_served: O'talgan "Dasturlash Soatlari"
+  hoc_stat_languages: O'quvchilar 45 dan ortiq tillarda o'rganishmoqda
+  hoc_stat_hours_served: 100 milliondan ortiq o'quvchilar Dasturlash soatini qatnashib
+    ko'rdilar
+  hoc_stat_females: Hour of Code ishtirokchilarining 50 foizini ayol talabalar tashkil
+    qiladi
   campaign_date_start_short: 4-dekabr
   campaign_date_start_long: 4-dekabr
   campaign_date_short: 4-10-dekabr
@@ -35,10 +42,21 @@ uz:
   africa_campaign_date_full: 1-31-oktyabr
   africa_campaign_date_year: 2023-yil
   africa_campaign_date_full_year: 2020-yil 11-31-oktyabr
-  hoc2023_header: AI bilan ijodkorlik
+  hoc2023_header: SI bilan ijodkorlik
+  hoc2023_hero_desc_homepage: Butun dunyo bo'ylab millionlab kishilarga qo'shiling,
+    AI bilan yoki bo'lmasdan bir soatlik kodlashni tashkil eting va AI qanday ishlashini
+    o'rganing. Har kim, har qanday joyda buni amalga oshirishi mumkin. Tajriba kerak
+    emas.
+  hoc2023_hero_desc_learn_page: Bu yil biz sun'iy intellekt (AI) va AI bo'lmagan komponentlarni
+    o'z ichiga olgan kodlash imkoniyatlarini taklif qilib, Kod soatini yangi balandliklarga
+    olib chiqmoqdamiz.
   hoc2023_social_creativity_with_ai_title: Kod soati - Siz nima yaratasiz?
   hoc2023_social_creativity_with_ai_desc: AIni o'rganish va o'rganish uchun kompyuter
     fanidan foydalaning!
+  hoc2023_what_is_hoc_desc: Dasturlash soati - bu mahorati turli xil darajada bo'lgan
+    o'quvchilar uchun qiziqarli mashg'ulotlar va video roliklar orqali kompyuter fanlariga
+    bepul kirish imkoniyati. Dasturlash va SI-ning bu yilgi nishonlanishini 400 dan
+    ortiq hamkorlar, 20 000 nafar o'qituvchilar va 58 000 volontyorlar qo'llab-quvvatlamoqda.
   hoc2022_header: Taqdiq qiling, O'ynang, Yarating!
   social_hoc2022_explore_play_create: Kompyuter fanlarini tadqiq qilish, o'ynash va
     yaratish uchun foydalaning!
@@ -51,6 +69,9 @@ uz:
     "Encanto" filmidan bo'lgan musiqa va boshqalar ishtirok etdi!
   social_hoc2023_dance: Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     Disneyning "Encanto" filmidan bo'lgan musiqa va boshqalar ishtirok etdi!
+  social_hoc2023_dance_v2: Sizning narsalaringizni ushlab turish vaqti keldi! Miley
+    Cyrus, BTS, Lil Nas X, Garri Styles, Nicki Minaj, Rosalia va boshqalarning xitlari
+    bilan ishlaydigan o'z raqs partiyangizni yarating!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Bugun o‘rganing, ertangi kunni yanada yorqinroq qiling.
@@ -175,6 +196,7 @@ uz:
   social_ai_title: Sun'iy intellekt (SI) haqida bilib oling | Code.org
   social_ai_desc: Oʻquvchilar va o'qituvchilarga SIni sinfga olib kirishga yordam
     beruvchi vositalar.
+  social_videos_desc: Barcha yoshdagi o'quvchilar uchun qiziqarli informatika videolari.
   pl_superhero_title: Oʻquvchilarga super qahramon bo'lishga yordam bering!
   pl_superhero_desc: O'rta va yuqori sinf o'qituvchilari uchun yuqori darajada ko'mak
     beruvchi Professional ta'lim dasturimizga qo'shiling.
@@ -208,6 +230,17 @@ uz:
   device_laptop: Noutbuk
   device_desktop_computer: Ish stoli kompyuter
   device_mobile_device: Mobil qurilma
+  for_everyone: Har birimiz uchun
+  for_students_teacher_led_learning: 'O''quvchilar uchun: O''qituvchi boshchiligidagi
+    ta''lim'
+  for_students_teacher_led_lessons: 'O''quvchilar uchun: O''qituvchi boshchiligidagi
+    darslar'
+  professional_development: Kasbiy rivojlanish
+  how_ai_works_video_series: AI video seriyasini qanday ishlaydi
+  learn_how_ai_works: AI qanday ishlashini bilib oling
+  ai_101_for_educators: Tarbiyachilar uchun AI 101
+  learn_about_ai_impacts: AI ta'siri haqida bilib oling
+  hoc_ai_activities: Kod AI faoliyati soati
   subscribe_to_emails_heading: Elektron pochta xabarlariga obuna bo'ling
   subscribe_to_emails_desc: Code.org saytida va informatika ta'limida nima bo'layotgani
     haqida bizning pochta ro'yxatimiz orqali har chorakda yangilanishlar orqali o'qing.
@@ -264,21 +297,36 @@ uz:
     uchun Kod soati o'qituvchilari forumiga tashrif buyuring.
   required_materials: 'Kerakli Materiallar:'
   optional_materials: 'Ixtiyoriy Materiallar:'
+  for_students: O'quvchilar uchun
+  for_educators: O‘qituvchilar uchun "
+  call_to_action_host_hoc: '"Dastrulash Soati"ni o''tkazing'
   call_to_action_hold_an_event: Tadbir o'tkazing
   call_to_action_register_event: Tadbiringizni ro'yxatdan o'tkazing
+  call_to_action_register_your_hoc: Dasturlash soatingizni ro'yxatdan o'tkazing
   call_to_action_select_activity: Faoliyatni tanlang
+  call_to_action_select_coding_activity: Kodlash faoliyatini tanlang
   call_to_action_start_activity: Faoliyatni boshlang
   call_to_action_get_certificates: Sertifikatlar oling
+  call_to_action_print_certificates: Sertifikatlarni chop etish
   call_to_action_go_beyond_hoc: Kod soatidan tashqariga chiqing
+  call_to_action_explore_all_hoc_activities: 'Barcha "Dasturlash Soati" mashg''ulotlarini
+    Code.org veb-saytidan o''rganib chiqing  '
+  call_to_action_start_dance_party: Raqs partiyasini boshlang
+  call_to_action_start_part_02: Ikkinchi qismni boshlang
+  call_to_action_start_unplugged_activity: Uchib qo'yilgan faoliyatni boshlang
   call_to_action_view_promo_resources: Promo-manbalarni ko'ring
   call_to_action_learn_more: Ko‘proq ma'lumot olish.
   call_to_action_watch_now: Hoziroq tomosha qiling
   call_to_action_try_activity: Mashg'ulotni sinab ko'ring
-  call_to_action_try_activities: Faoliyatni sinab ko'ring
-  call_to_action_explore_activities: Faoliyatlarni o'rganing
+  call_to_action_try_activities: Mashg'ulotlarni sinab ko'ring
+  call_to_action_try_hoc_ai_activities: Hour of Code AI faoliyatini sinab ko'ring
+  call_to_action_explore_activities: 'Mashg''ulotlarni o''rganib chiqing
+
+    '
   call_to_action_explore_ai: AI ni o'rganing
   call_to_action_explore_unit: Bo'limni o'rganib chiqing
   call_to_action_explore_curriculum: O'quv dasturini o'rganib chiqing
+  call_to_action_explore_curricula: O'quv dasturlarini o'rganing
   call_to_action_explore_curriculum_options: O'quv dasturining variantlarini o'rganib
     chiqing
   call_to_action_explore_lessons: Darslarni o'rganing
@@ -368,6 +416,11 @@ uz:
   call_to_action_learn_about_advocacy: Bizning targ'ibotimiz haqida bilib oling
   call_to_action_visit_store: Do'konga tashrif buyuring
   call_to_action_view_faqs: Ko'proq tez-tez so'raladigan savollarni ko'rish
+  call_to_action_applications_open: Ilovalar endi ochiladi
+  call_to_action_apply_cs_ambassador: CS elchisi bo'lish uchun murojaat qiling
+  call_to_action_coming_soon: Tez orada!
+  call_to_action_learn_how_ai_works: SI qanday ishlashi haqida bilib oling
+  call_to_action_learn_about_ai: SI haqida bilib oling
   aria_label_call_to_action_hoc_how_to_educators: O'qituvchilar uchun qanday qo'llanmani
     ko'ring
   aria_label_call_to_action_hoc_how_to_companies: Kompaniyalar uchun qanday qo'llanmani
@@ -384,6 +437,11 @@ uz:
     ko'ring
   aria_label_call_to_action_hoc_how_to_virtual_events: Virtual voqealar uchun qanday
     qo'llanmani ko'ring
+  aria_label_call_to_action_dance_01: Raqs partiyasi faoliyatini boshlang
+  aria_label_call_to_action_dance_02: Raqs partiyasi faoliyatining ikkinchi qismini
+    boshlang
+  aria_label_call_to_action_dance_unplugged: Dance Party faoliyatini plugindan uzilmagan
+    holda boshlang
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -391,6 +449,8 @@ uz:
     professional ta'lim dasturini boshlang
   aria_label_call_to_action_teaching_csp: Kompyuter fanlari tamoyillarini o'qitish
     professional ta'lim dasturini boshlang
+  aria_label_call_to_action_teaching_problem_solving: Muammolarni yechish va hisoblashni
+    o'qitish professional ta'lim dasturini ishga tushirish
   aria_label_call_to_action_teaching_csc: Kompyuter fanlari aloqalarini o'qitish professional
     ta'lim dasturini boshlang
   aria_label_call_to_action_teaching_ai: SI va mashinaviy o'rganishni o'qitish professional
@@ -409,6 +469,8 @@ uz:
     dasturini o'rganib chiqing
   aria_label_call_to_action_curriculum_csp: Kompyuter Fanlari tamoyillari o'quv dasturini
     o'rganib chiqing
+  aria_label_call_to_action_curriculum_problem_solving: Muammolarni hal qilish va
+    hisoblash o'quv dasturini o'rganing
   aria_label_call_to_action_curriculum_csc: Kompyuter Fanlari aloqalari o'quv dasturini
     o'rganib chiqing
   aria_label_call_to_action_curriculum_ai: SI va mashinaviy o'rganish o'quv dasturini
@@ -493,6 +555,7 @@ uz:
   curriculum_name_csf_teacher_led: O'qituvchi tomonidan olib boriluvchi dars
   curriculum_name_csd: Kompyuter Fanlari Kashfiyotlari
   curriculum_name_csp: Kompyuter fani tamoyillari
+  curriculum_name_problem_solving: Muammolarni Yechish va Hisoblash
   curriculum_name_csc: Kompyuter fanlari aloqalari
   curriculum_name_csa: Kompyuter fanlari A
   curriculum_name_csa_ai: Dasturiy ta'minot muhandisligi va kompyuter ko'rinishi
@@ -505,11 +568,27 @@ uz:
   curriculum_name_creating_apps_with_devices: Qurilmalar orqali Ilovalarni Yaratish
   curriculum_name_poetry: She'riyat bilan dasturlash
   curriculum_name_dance_party: Raqs Bazmi
+  curriculum_name_dance_party_02: Raqsga tushishni davom eting
+  curriculum_name_dance_party_unplugged: Raqs partiyasi elektr uzilmagan
+  curriculum_name_dance_party_ai_edition: 'Raqs partiyasi: AI nashri'
   curriculum_name_problem_solving_computing: Muammolarni Yechish va Hisoblash
   curriculum_name_web_development: Veb dasturlash
   curriculum_name_interactive_animations_games: Interaktiv Animatsiyalar va O'yinlar
   curriculum_name_design_process: Dizayn (loyihalash) Jarayoni
   curriculum_name_data_society: 'Ma''lumotlar va jamiyat '
+  curriculum_desc_dance_party_01: Ushbu kirish faoliyatida, rang-barang belgilar turli
+    jonlantirilgan fon va optimist musiqa bir harakat qilish uchun kodni foydalaning.
+  curriculum_desc_dance_party_02: Kengaytirilgan loyiha g'oyalari bilan kirish o'quv
+    qo'llanmasidan tashqariga chiqing. Murakkabroq raqs partiyalari misollari kutubxonasini
+    ko'rib chiqing.
+  curriculum_desc_dance_party_unplugged: Yivni yoqing - kompyuter kerak emas! Voqealar
+    kabi kodlash tushunchalari raqqosa xoreografiyasini sinxronlashtirish uchun qanday
+    ishlatilishi mumkinligini bilib oling.
+  curriculum_desc_dance_party_ai_edition: Bugungi eng yaxshi rassomlarni namoyish
+    etuvchi o'z virtual raqs partiyangizni yaratish uchun sun'iy intellekt (AI) tushunchalari
+    haqida bilib oling. Tanlash uchun qo'shiqlar o'nlab bilan, qat'i nazar, ularning
+    musiqa didi har bir talabaga yetib. Sizning narsalaringizni ushlab turish vaqti
+    keldi!
   curriculum_desc_csf: Talabalarni informatika fanining asosiy tushunchalari bilan
     tanishtiradigan boshlang'ich o'quv dasturlarining bepul to'plami.
   curriculum_desc_csf_express: Kompyuter dasturlarini yaratish, muammolarni yechish
@@ -636,12 +715,16 @@ uz:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 5-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 7-12
   module_grade_9_12: 9-12
   module_grade_kindergarten: Bolalar bog'chasi
   module_grade_grade_01: 1-sinf
@@ -649,6 +732,12 @@ uz:
   module_grade_grade_03: 3-sinf
   module_grade_grade_04: 4-sinf
   module_grade_grade_05: 5-sinf
+  module_age_05_07: 5-7 yoshlar
+  module_age_07: 7 yoshdan oshgan
+  module_age_07_11: 7-11 yoshlar
+  module_age_11: 11 yoshdan oshgan
+  module_age_13: Yosh 13+
+  module_age_all_age: Barcha yoshlar
   module_grade_k_5_teachers: 'K-5 O''qituvchilari '
   module_grade_6_10_teachers: '6-10 O''qituvchilari '
   module_grade_9_12_teachers: '9-12 O''qituvchilari '
@@ -680,6 +769,7 @@ uz:
   module_label_teaching_csf: Kompyuter fanlari asoslarini o'qitish
   module_label_teaching_csd: Kompyuter fanlari kashfiyotlarini o'qitish
   module_label_teaching_csp: Kompyuter fanlari tamoyillarini o'qitish
+  module_label_teaching_problem_solving: Muammolarni hal qilish va hisoblashni o'qitish
   module_label_teaching_csc: Kompyuter fanlari aloqalarini o'qitish
   module_label_teaching_ai: SI va mashinaviy o'rganishni o'qitish
   module_label_teaching_maker_cp: 'Vositalar (Circuit Playground) yordamida ilovalarni
@@ -745,6 +835,61 @@ uz:
     o'rganing
   heading_csa_ai: AP® imtihonidan keyin qilinadigan ishlarni qidiryapsizmi?
   heading_bring_cs_to_students: Talabalarga informatika fanini olib keling
+  heading_cs_ambassador_program: CS elchisi dasturi
+  heading_featured_student_projects: Tanlangan talabalar loyihalari
+  heading_start_hoc_with_videos: Kod soatini ilhomlantiruvchi videolar bilan boshlang
+  cs_ambassador_subhead: Agar maktabingizda kompyuter fanlarini olishga ko'proq yosh
+    ayollarni rag'batlantirish haqida ishtiyoqli o'rta maktab o'quvchisi bo'lsangiz,
+    unda biz sizga kerak!
+  cs_ambassador_desc: Har bir sohaga, jumladan tibbiyot, ko'ngilochar, sport, ta'lim,
+    biznes, moda va tadbirkorlikka informatika tegadi. Shunga qaramay, o'rta maktab
+    yoshidagi yosh ayollarning atigi 5 foizi informatika darslarini oladi. Elchilar
+    tengdoshlarini kompyuter fanlari darsiga o'tishga undash orqali ushbu gender tafovutini
+    yopishga yordam berishi mumkin.
+  cs_ambassador_application_date: Arizalar 2023 yil 8 noyabrgacha ochiladi
+  cs_ambassador_application_subhead: Bugun arizangizni topshirish uchun o'qituvchi
+    bilan ishlang
+  cs_ambassador_application_questions: Savollarmi? Iltimos, [youngwomen@code.org]
+    bilan bog'laning (%{email_url})
+  cs_ambassador_do_heading: CS elchilari nima qilishadi?
+  cs_ambassador_do_desc: CS elchilari yosh ayollarni ushbu mavzuni o'rganishga undashadi
+    va ular kompyuter fanlarida o'z o'rnini qaytarib olishda bir-birlarini ko'tarishadi.
+    CS elchilari o'zlarining qiziqishlari va kompyuter faniga bo'lgan sevgisini baham
+    ko'rish uchun tengdoshlari bilan bog'lanishadi. Ular sinflarga tashrif buyurishadi,
+    tushlikda stol uyushtiradi va yig'ilishlar va klub yig'ilishlarida so'zlashadi.
+    CS elchilari yosh ayollarni orqaga ushlab turadigan stereotiplarni buzish uchun
+    o'qituvchilar va maktab ma'murlari bilan ishlaydi.
+  cs_ambassador_steps_heading: CS elchisi bo'lish uchun nima kerak?
+  cs_ambassador_steps_list_title_01: Ehtiros
+  cs_ambassador_steps_list_title_02: CS kursida tajriba
+  cs_ambassador_steps_list_title_03: CS taklif qiladigan maktab
+  cs_ambassador_steps_list_desc_01: Maktabingizdagi yosh ayollarni informatika darslarini
+    olishga undash ishtiyoqi
+  cs_ambassador_steps_list_desc_02: '2022-23 o''quv yilida yoki undan oldin bir yil
+    davomida kompyuter fanlari sinfini olganingiz (tavsiya etiladi: CS Printsiplari
+    yoki AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Muntazam ravishda bir yil davomida kompyuter
+    fanlari kursini taklif qiladigan o''rta maktabga qatnashing (tavsiya etiladi:
+    CS Printsiplari yoki AP® CSA)'
+  cs_ambassador_benefits_heading: Dastur imtiyozlari
+  cs_ambassador_benefits_list_title_01: Milliy hamjamiyat
+  cs_ambassador_benefits_list_title_02: Jamiyat xizmati
+  cs_ambassador_benefits_list_title_03: Tan olish
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Sertifikat
+  cs_ambassador_benefits_list_title_06: Tajribalar
+  cs_ambassador_benefits_list_desc_01: Kompyuter fanlaridagi gender tafovutini yopishga
+    majbur bo'lgan yosh yetakchilarning milliy jamoasiga kirish.
+  cs_ambassador_benefits_list_desc_02: Jamiyat xizmati soatlari va [AQSh prezidentining
+    ko'ngillilar xizmati mukofotini] olish imkoniyati (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: 2023-2024 yilgi elchi sifatida tan olinishi
+    va Code.org Elchisi Shuhrat zalida sharafga sazovor bo'lish huquqiga ega.
+  cs_ambassador_benefits_list_desc_04: Maxsus Code.org markali kiyimlar, stikerlar
+    va boshqalar orqali CS elchisi sifatida aniqlang!
+  cs_ambassador_benefits_list_desc_05: Code.org saytidan ishtirok etish to'g'risidagi
+    rasmiy guvohnoma.
+  cs_ambassador_benefits_list_desc_06: Kollej arizangiz, rezyumeingiz va boshqalar
+    haqida baham ko'rish uchun tajriba va hikoyalarni orttiring!
   professional_learning_section_desc: O'qitishga tayyorgarlik ko'rayotganda kerakli
     yordamni oling. O'qituvchilar buni yaxshi ko'radilar, 90% dan ortig'i bu eng yaxshi
     kasbiy rivojlanish reytingiga ega!
@@ -796,6 +941,14 @@ uz:
     elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va foydali eslatmalar,
     maslahatlar va yangilanishlarni to'g'ridan-to'g'ri pochta qutingizga yuboring.
   subscribe_form_section_unsubscribe: Istalgan vaqtda obunani bekor qilishingiz mumkin.
+  dance_hero_heading: Raqs partiyasini kodlang
+  dance_featuring_songs_by_short: 'Muallif qo''shiqlari:'
+  dance_featuring_songs_by_long: 'Dance Party quyidagi qo''shiqlarni o''z ichiga oladi:'
+  dance_and_more: va yana
+  dance_choose_activity: Raqs partiyangizni tanlang
+  dance_afe_disclaimer: Ushbu qo'llanmada musiqasi ishlatiladigan rassomlar Code.org
+    saytiga o'z musiqasidan foydalanishni litsenziyalashning bir qismi sifatida Amazonni
+    homiylik qilmaydilar yoki tasdiqlamaydilar.
   blockchain_hero_heading: Blokcheyn qanday ishlaydi
   blockchain_hero_desc: Bizning yangi “Blokcheyn qanday ishlaydi” videolarimiz va
     qo‘shimcha darslarimiz bilan blokcheyn olamiga sho‘ng‘ing!
@@ -907,6 +1060,12 @@ uz:
   ai_curriculum_grades_05: 'Sinf darajalari: 9-12'
   ai_curriculum_btn_aria_label_05: Dasturiy ta'minot muhandisligi va kompyuterni ko'rish
     modulini o'rganing
+  ai_curriculum_title_06: Generativ AI ning ijtimoiy ta'siri
+  ai_curriculum_desc_06: Generativ AI ta'sirini turli nuqtai nazardan o'rganing, keyin
+    barcha ishtirokchilarning eng ko'p ehtiyojlarini qondiradigan ko'rsatmalarni ishlab
+    chiqish uchun jamoa sifatida hamkorlik qiling.
+  ai_curriculum_btn_aria_label_06: Generativ AI dars rejasining ijtimoiy ta'sirini
+    ko'rish
   ai_carousel_heading: 'Code.org yordamida o''qituvchilar AI haqida nima deyishadi:'
   ai_carousel_quote_01: Bu dars, shuningdek, o'quvchilarimga tasniflash tizimlarida
     fikr elementi borligini ko'rish imkoniyatini berdi. Keyinchalik, biz sun'iy intellektda
@@ -1981,6 +2140,9 @@ uz:
     biz shtatlarga barcha talabalar uchun informatika asosini yaratish uchun tavsiya
     qilgan o'nta siyosat haqida ko'proq bilib oling. Bundan tashqari, o'zingizning
     holatingizda qanday o'zgarishlarni amalga oshirishingiz mumkinligini bilib oling.
+  yw_page_top_heading: Kompyuter fanlaridagi yosh ayollar
+  yw_page_top_desc: CS elchisi bo'ling va kompyuter fanida gender tafovutini yopishning
+    bir qismi bo'ling.
   hoc_live: Dasturlash soati jonli efir
   hoc_live_sign_up_title: Dasturlash soati jonli efiriga ro'yxatdan o'ting
   hoc_live_learn_title: Kod soatini jonli efirda o'rganing
@@ -2107,7 +2269,9 @@ uz:
     soati tadbirini tashkillashtirishi mumkin. Bir soatlik darslar 45dan ortiq tillarda
     mavjud. Hech qanday tajriba talab qilinmaydi.<strong>4 yoshdan 104 yoshgacha barcha
     uchun</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: '180 dan ortiq davlatlardagi global harakat.
+
+    '
   front_watch_video: Yangi videoni koʻring
   front_watch_regular_video: Videoni ko‘ring
   front_volunteers: Texnik ko‘ngillilarni taklif qilamiz
@@ -2360,11 +2524,18 @@ uz:
     mumkinligini ko'rsatish uchun qiziqarli darsliklardan foydalaniladi. Ushbu ommaviy
     kampaniya butun dunyo bo'ylab 400 dan ortiq hamkorlar va 200 000 o'qituvchilar
     tomonidan qo'llab-quvvatlanadi.
+  hoc_homepage_registration_desc: Sizning sinfingiz yoki guruhingiz Dasturlash soati
+    orqali butun dunyo bo'ylab millionlab qatnashchilarga qo'shilishlari mumkin! Yillik
+    Computer Science Education Week (Kompyuter fanlari ta'lim haftaligi) bayramiga
+    ro'yxatdan o'tish oktyabr oyida boshlanadi. Biroq, Dasturlash soati dasturi yil
+    davomida faoliyat olib boradi.
   hoc_homepage_what_is_hoc_cta_how_to_guide: Sinfingiz uchun tadbir rejalashtirish
     uchun [Amaliy qoʻllanmamizni oʻqing](%{howto_guide_url}).
   hoc_homepage_highlights_heading: Dasturlash Soatining diqqatga sazovor joylari
   hoc_homepage_organized_by: DAsturlash Soati [Code.org](%{codeorg_url}) tomonidan
     tashkil etilgan.
+  hoc_events_heading: Dasturlash soatini o'tkazish uchun ro'yxatdan o'ting
+  hoc_events_jump_to_map: Dasturlash Soati xaritasiga o'ting
   signup_closed: Kod soati uchun ro‘yxatdan o‘tish endi yopildi. Iltimos, keyingi
     kod soatiga yozilish uchun oktyabr oyida yana tekshiring. '
   signup_registration_not_required: Ishtirok etish uchun ro‘yxatdan o‘tishingiz shart
@@ -2398,8 +2569,9 @@ uz:
   signup_event_entire_school_label: Mening butun maktabim qatnashmoqda '
   signup_event_location_label: Tadbir o‘tkaziladigan joy '
   signup_event_location_error: Tadbirni o‘tkazish joyi talab qilinadi. '
-  signup_special_event_flag_label: Mening tadbirim butun bir tumanni, jamoat a'zolarini
-    va/yoki boshqa bir soatni o‘z ichiga olgan boshqa rejalarni o‘z ichiga oladi '
+  signup_special_event_flag_label: Mening tadbirimda butun tuman, butun tashkilot,
+    jamoatchilik vakillari qatnashadi va/yoki bir soatdan ko'p davom etuvchi boshqa
+    maxsus rejalarni o‘z ichiga oladi.
   signup_special_event_details_label: Maxsus tadbir sifatida ta'kidlash uchun murojaat
     qiling '
   signup_send_posters_flag_label: <a href= "/resources/promote#posters"> plakatlar
@@ -2414,7 +2586,7 @@ uz:
   signup_email_preference_opt_in: Sizga elektron pochta orqali Code.org kurslarimiz,
     mahalliy imkoniyatlarimiz yoki boshqa kompyuter fanlari yangiliklari to‘g‘risida
     xabar yuborishimiz mumkinmi?
-  signup_email_preference_privacy: "(Maxfiylik siyosatimizga qarang)"
+  signup_email_preference_privacy: "(Bizning maxfiylik siyosatimizga qarang)"
   signup_email_preference_yes: Ha
   signup_email_preference_yes_elementary: Ha - Menga boshlang'ich maktab manbalari
     haqida yangiliklarni yuboring
@@ -2483,6 +2655,8 @@ uz:
   map_title: Dasturlash soati xaritasi
   map_header: 'Dasturlash soatiga 2017 # ro‘yxatdan o‘tkazildi'
   map_header_count_year: "%{year_count} da ro‘yxatdan o‘tgan%{event_count} ta tadbir"
+  map_header_count_year_so_far: "%{event_count} ta tadbir %{year} gacha ro'yxatdan
+    o'tgan\n"
   see_all_events: Barcha tadbirlarni ko‘rish '
   map_header_company: "# kompaniya tashkilotchilari tomonidan"
   map_header_country: "#  %{country} da"
@@ -2496,6 +2670,7 @@ uz:
     sahifasida ko‘rish mumkin. </a> "
   map_warning_markdown: Tadbirlarning to‘liq ro‘yxatini [tadbirlar sahifasida ko‘rish
     mumkin.](%{events_url}) "
+  map_view_all_events: Dasturlash soati tadbirlarining to'liq ro'yxatiga qarang [here](%{events_url}).
   meta_tag_og_title: 'Dasturlash soati: Harakatga qo''shiling'
   meta_tag_og_description: Dasturlash soati - bu 180 dan ortiq mamlakatlarda va 45
     dan ortiq tillarda o‘n millionlab har xil yoshdagi talabalarni qamrab oluvchi
@@ -2516,14 +2691,6 @@ uz:
     (@codeorg -ni qo''llab-quvvatlaganingiz uchun rahmat %{random_donor} )'
   hoc_faq_title: Ko‘p beriladigan savollar
   hoc_faq_what_is_hoc_q: Dasturlash soati nima o‘zi?
-  hoc_faq_what_is_hoc_a: 'Dasturlash soati" kompyuter faniga bir soatlik kirish sifatida
-    boshlandi, u  "kod " ni demistifikatsiya qilish, har qanday odam asoslarini o‘rganishi
-    mumkinligini ko‘rsatish va kompyuter fanlari sohasidagi ishtirokini kengaytirish
-    uchun mo‘ljallangan. O‘shandan beri kompyuter fanini nishonlash uchun butun dunyo
-    bo‘ylab harakat bo‘lib qoldi, 1 soatlik kodlash tadbirlaridan boshlab, ammo jamoatchilikning
-    barcha harakatlariga qadar kengaytirildi. <a href=''%{tutorials}''> darsliklar
-    va mashg‘ulotlar </a> bilan tanishing. Ushbu boshlang‘ich kampaniyani <a href=''%{partners}''>
-    400 sherik </a> va dunyo bo‘ylab 200,000 o‘qituvchilar qo‘llab-quvvatlamoqda. '
   hoc_faq_what_is_hoc_a_markdown: 'Dasturlash soati" kompyuter faniga bir soatlik
     kirish sifatida boshlandi, u "kodni" demistifikatsiya qilish, har kimning asoslarini
     o‘rganishi mumkinligini ko‘rsatish va informatika sohasidagi ishtirokini kengaytirish
@@ -2534,13 +2701,6 @@ uz:
     va dunyo bo‘ylab 200,000 o‘qituvchilar qo‘llab-quvvatlamoqda. '
   hoc_faq_last_year: Darslarni sinab ko‘ring
   hoc_faq_when_is_hoc_q: Dasturlash soati qachon?
-  hoc_faq_when_is_hoc_a: Kod soati har yili <a href='%{csedweek_url}'> kompyuter fanlari
-    bo‘yicha ta'lim haftaligi </a> da bo‘lib o‘tadi. %{Camping_date_year} Kompyuter
-    fanlari bo‘yicha ta'lim haftaligi%{camp_date_full} bo‘ladi, ammo siz butun yil
-    davomida bir soatlik Kodni o‘tkazishingiz mumkin. Kompyuter fanlari bo‘yicha ta'lim
-    haftaligi har yili kompyuter kashshofi <a href='%{grace_hopper}'> Admiral Greys
-    Murray Hopper </a> ning tug‘ilgan kuni munosabati bilan o‘tkaziladi (9-dekabr,
-    1906). "
   hoc_faq_when_is_hoc_a_markdown: Kod soati har yili [Kompyuter fanlari bo‘yicha ta'lim
     haftaligi](%{csedweek_url}) davomida o‘tkaziladi. %{Camping_date_year} Kompyuter
     fanlari bo‘yicha ta'lim haftaligi%{camp_date_full} bo‘ladi, ammo siz butun yil
@@ -2548,34 +2708,18 @@ uz:
     haftaligi har yili kompyuter kashshofi [Admiral Greys Myurrey Hopper](%{grace_hopper})
     tug‘ilgan kuniga (1906 yil 9-dekabr) bag‘ishlab o‘tkaziladi. "
   hoc_faq_why_cs_q: Nega informatika?
-  hoc_faq_why_cs_a: "<i> Har bir </i> talaba informatika fanini o‘rganish imkoniyatiga
-    ega bo‘lishi kerak. Bu muammolarni hal qilish ko‘nikmalarini, mantiq va ijodkorlikni
-    rivojlantirishga yordam beradi. Dastlabki bosqichdan boshlab talabalar 21-asrning
-    istalgan martaba yo‘lida muvaffaqiyatga erishish uchun asos yaratadilar. Boshqa
-    statistik ma'lumotlarni <a href='%{stats_url}'> bu yerda </a> ko‘ring. "
   hoc_faq_why_cs_a_markdown: _Har bir talaba kompyuter fanini o‘rganish imkoniyatiga
     ega bo‘lishi kerak. Bu muammolarni hal qilish ko‘nikmalarini, mantiqiy va ijodkorlikni
     rivojlantirishga yordam beradi. Erta boshlash orqali talabalar 21-asrning har
     qanday martaba yo‘lida muvaffaqiyat qozonish uchun poydevorga ega bo‘lishadi.
     Boshqa statistikalarni [bu yerda] ko‘ring (%{stats_url}). "
   hoc_faq_how_participate_q: Kod soatida qanday ishtirok etaman? '
-  hoc_faq_how_participate_a: '<a href=''/how-to‘> Qanday qilib qo‘llanma bilan tanishib
-    chiqib, bu yerda rejalashtirishni boshlang </a>. Siz maktabingizda yoki jamoangizda
-    va maktabda, masalan, sinfdan tashqari to‘garakda" Dasturlash soati "tadbirini
-    tashkil qilishingiz mumkin, notijorat yoki ish joyida. Yoki%{promotion_date} kelganda
-    o‘zingizni sinab ko‘ring. '
   hoc_faq_how_participate_a_markdown: '[Bu yerda rejalashtirishni boshlang](%{howto})
     bizning qo‘llanmamizni ko‘rib chiqish bilan. Siz maktabingizda yoki jamoangizda,
     masalan, maktabdan tashqari klubda, notijorat yoki ish joyingizda" Dasturlash
     soati "tadbirini tashkil qilishingiz mumkin. Yoki ,%{promotion_date} kelganda
     uni o‘zingiz sinab ko‘ring. '
   hoc_faq_behind_hoc_q: Dasturlash soati ortida kim turibdi? '
-  hoc_faq_behind_hoc_a: Dasturlash soati, "Dasturlash soati" va kompyuter fanlari
-    bo‘yicha ta'lim haftaligi <a href='%{partner_url}'> maslahat va ko‘rib chiqish
-    qo‘mitalari </a> hamda shuningdek, qo‘llab-quvvatlash uchun birlashgan sheriklarning
-    misli ko‘rilmagan koalitsiyasi tomonidan boshqariladi. Kod soati & mdash; shu
-    jumladan Microsoft, Apple, Amazon, Amerika O‘g‘il bolalar va qizlar klublari va
-    kollej kengashi. "
   hoc_faq_behind_hoc_a_markdown: Dasturlash soati, Dasturlash soati va kompyuter fanlari
     bo‘yicha ta'lim haftaligi [maslahat va ko‘rib chiqish qo‘mitalari](%{partner_url})
     hamda Kodeks soatini qo‘llab-quvvatlash uchun yig‘ilgan sheriklarning misli ko‘rilmagan
@@ -2583,13 +2727,6 @@ uz:
     qizlar klublari va kollej kengashi. "
   hoc_faq_host_q: Kodlash haqida hech narsa bilmayman. Hali ham tadbir o‘tkaza olamanmi?
     "
-  hoc_faq_host_a: Albatta. Kod soati bo‘yicha tadbirlar o‘z-o‘zini boshqaradi. Siz
-    qilishingiz kerak bo‘lgan narsa - <a href='%{codeorg_url}/learn'> hozirgi o‘quv
-    qo‘llanmalarni sinab ko‘rish </a>, kerakli qo‘llanmani tanlash va bir soatni tanlash
-    & mdash; qolganlari bilan shug‘ullanamiz. Shuningdek, bizda bolalar bog‘chasidan
-    boshlab va har bir yosh va tajriba uchun imkoniyatlar mavjud. O‘zingizning tadbiringizni
-    rejalashtirishni <a href='/how-to‘> qanday yo‘l-yo‘riq olish haqida </a> o‘qib
-    chiqing. "
   hoc_faq_host_a_markdown: Albatta. Kod soati bo‘yicha tadbirlar o‘z-o‘zini boshqaradi.
     Siz qilishingiz kerak bo‘lgan narsa - [bizning hozirgi o‘quv qo‘llanmalarni sinab
     ko‘ring](%{codeorg_url}/learn), kerakli qo‘llanmani tanlang va bir soatni tanlang
@@ -2599,13 +2736,6 @@ uz:
     "
   hoc_faq_devices_q: O‘quvchilarim uchun qanday qurilmalardan foydalanishim kerak?
     "
-  hoc_faq_devices_a: Code.org o‘quv qo‘llanmalari barcha qurilmalar va brauzerlarda
-    ishlaydi. Code.org o‘quv texnik ehtiyojlari haqida ko‘proq ma'lumotni <a href='%{codeorg_url}/educate/it'>
-    bu yerda ko‘rishingiz mumkin </a>. Non-Code.org o‘quv qo‘llanmalarining texnik
-    ehtiyojlarini o‘quv qo‘llanmasining o‘ziga xos tavsifida <a href='%{codeorg_url}/learn'>%{partner_url}/learn
-    </a> saytida topish mumkin. Shuni unutmangki, agar sizning maktabingiz o‘quv qo‘llanmalariga
-    sig‘dira olmasa, biz <a href='%{unplugged_url}'> elektrdan tashqari ishlarni </a>
-    taklif etamiz! "
   hoc_faq_devices_a_markdown: Code.org o‘quv qo‘llanmalari barcha qurilmalar va brauzerlarda
     ishlaydi. Code.org o‘quv qo‘llanmalarining texnik ehtiyojlari haqida ko‘proq ma'lumotni
     [bu yerda] ko‘rishingiz mumkin (%{codeorg_url}/educate/it). Non-Code.org o‘quv
@@ -2613,41 +2743,22 @@ uz:
     sahifasida topish mumkin. Shuni unutmangki, agar sizning maktabingiz o‘quv qo‘llanmalariga
     mos kelmasa, biz [ajratilgan harakatlar](%{unplugged_url}) taklif qilamiz. "
   hoc_faq_need_computers_q: Har bir ishtirokchi uchun menga kompyuter kerakmi? »
-  hoc_faq_need_computers_a: Yo‘q. Bizda shaxsiy kompyuterlarda, smartfonlarda, planshetlarda
-    ishlaydigan va ba'zilariga umuman kompyuter talab qilinmaydigan bir soatlik darsliklar
-    mavjud! Qaerda bo‘lsangiz ham, bor narsangizga qo‘shilishingiz mumkin. <p> <i>
-    Bu yerda bir nechta variant mavjud
   hoc_faq_need_computers_a_markdown: Yo‘q. Bizda shaxsiy kompyuterlarda, smartfonlarda,
     planshetlarda ishlaydigan va ba'zilariga umuman kompyuter talab qilinmaydigan
     bir soatlik darsliklar mavjud! Qaerda bo‘lishingizdan qat'i nazar, bor narsangizga
     qo‘shilishingiz mumkin. \n \n_Mana bir nechta variant
   hoc_faq_international_q: Men <mamlakat> daman. Men xalqaro miqyosda qanday ishtirok
     etaman? "
-  hoc_faq_international_a: Har bir inson dunyoning istalgan nuqtasida "Hour of Code"
-    tadbirini tashkil qilishi mumkin. O‘tgan yili butun dunyo bo‘ylab talabalar "Dasturlash
-    soati" uchun birlashdilar. <a href='/promote'> bu yerda </a> haqida ko‘proq bilib
-    oling. "
   hoc_faq_international_a_markdown: Har bir inson dunyoning istalgan nuqtasida "Hour
     of Code" tadbirini tashkil qilishi mumkin. O‘tgan yili butun dunyo bo‘ylab talabalar
     "Dasturlash soati" uchun birlashdilar. Batafsil ma'lumot [bu yerda](%{promote}).
     "
   hoc_faq_tutorial_q: Qanday qilib bir soatlik darslikni tayyorlashim mumkin? '
-  hoc_faq_tutorial_a: Agar o‘qituvchi sherik bo‘lishni xohlasangiz, <a href='/tutorial-guidelines'>bizning
-    ko‘rsatmalarimizga va ko‘rsatmalariga qarang</a>. Biz turli xil qiziqarli variantlarni
-    qabul qilmoqchimiz, lekin asosiy maqsad kompyuter fanlari bilan yangi tanishgan
-    talabalar va o‘qituvchilar uchun tajribani optimallashtirishdir.
   hoc_faq_tutorial_a_markdown: Agar o‘qituvchi sherik bo‘lishni xohlasangiz, [bizning
     ko‘rsatmalarimizga va ko‘rsatmalarimizga qarang](%{tutorial_guidelines}). Biz
     turli xil qiziqarli variantlarni qabul qilmoqchimiz, lekin asosiy maqsad kompyuter
     fanlari bilan yangi tanishgan talabalar va o‘qituvchilar uchun tajribani optimallashtirishdir.
   hoc_faq_account_q: Talabalar akkaunt yordamida tizimga kirishlari kerakmi? "
-  hoc_faq_account_a: Yo‘q. Kodeks soatini sinab ko‘rish uchun talabalarga ro‘yxatdan
-    o‘tish yoki kirish shart emas. <a href='%{codeorg_url}/learn/beyond'> keyingi
-    kurslar </a> ning aksariyati talabalarning rivojlanishini saqlash uchun hisob
-    yaratishni talab qiladi. Shuningdek, "Kod soati" da ro‘yxatdan o‘tish avtomatik
-    ravishda Code Studio hisob qaydnomasini yaratmaydi. Agar siz talabalaringiz uchun
-    akkaunt yaratmoqchi bo‘lsangiz, iltimos, ushbu <a href='https://youtu.be/_smelV_KISE'>
-    ko‘rsatmalariga </a> amal qiling. "
   hoc_faq_account_a_markdown: Yo‘q. Kodeks soatini sinab ko‘rish uchun talabalarga
     ro‘yxatdan o‘tish yoki kirish shart emas. [Davomiy kurslar](%{codeorg_url}/learn/beyond)
     aksariyat qismi talabalarning rivojlanishini saqlab qolish uchun hisob yaratishni
@@ -2657,15 +2768,6 @@ uz:
     amal qiling. "
   hoc_faq_high_school_q: O‘rta maktab o‘quvchilari bilan qaysi mashg‘ulotni bajarishim
     kerak? "
-  hoc_faq_high_school_a: Bizning "Yulduzli urushlar" va "Minecraft" darsliklari o‘rta
-    maktab o‘quvchilari uchun juda yaxshi, ayniqsa "Yulduzlar jangi" ning JavaScript
-    versiyasi va ikkala o‘quv qo‘llanmasidagi bepul o‘yin darajasi. Shu bilan bir
-    qatorda biz boshlash uchun <a href='%{codeorg_url}/learn'>%{partner_url}/learn
-    </a> dagi boshlang‘ich o‘quv qo‘llanmalaridan birini sinab ko‘rishni maslahat
-    beramiz, masalan Angry Birds yoki Anna va Elsa singari o‘quv qo‘llanmalari. O‘rta
-    maktab o‘quvchisi shulardan birini 30 daqiqada tugatishi kerak va JavaScript-dagi
-    yanada takomillashtirilgan o‘quv qo‘llanmasini sinab ko‘rishi mumkin, masalan,
-    Khan Academy yoki CodeHS. "
   hoc_faq_high_school_a_markdown: Bizning "Yulduzli urushlar" va "Minecraft" darsliklari
     o‘rta maktab o‘quvchilari uchun juda yaxshi, ayniqsa "Yulduzlar jangi" ning JavaScript
     versiyasi va ikkala o‘quv qo‘llanmasidagi bepul o‘yin darajasi. Shu bilan bir
@@ -2677,11 +2779,6 @@ uz:
     "
   hoc_faq_scratch_q: Men "Dasturlash soati uchun Scratch" qilyapman, lekin mening
     o‘quvchilarimda noutbukdan ko‘ra iPad bo‘lsa nima bo‘ladi? "
-  hoc_faq_scratch_a: Scratch planshetlarda ishlamaydi. Agar sizning o‘quvchilaringiz
-    yosh bo‘lsa, ular ScratchJR iPad dasturidan foydalanishlari mumkin (erta o‘qiydiganlar
-    uchun). Agar siz <a href='%{codeorg_url}/learn'>%{partner_url}/learn </a> dagi
-    o‘quv qo‘llanmalarini ko‘rib chiqsangiz, iPad-da ishlaydigan boshqa o‘quv qo‘llanmalarini
-    topishingiz mumkin - Code.org, Tynker, Lightbot, yoki CodeSpark. "
   hoc_faq_scratch_a_markdown: Scratch planshetlarda ishlamaydi. Agar sizning o‘quvchilaringiz
     yosh bo‘lsa, ular ScratchJR iPad dasturidan foydalanishlari mumkin (erta o‘qiydiganlar
     uchun). Agar siz [%{partner_url}/learn](%{codeorg_url}/learn) bo‘yicha qo‘llanmalarni
@@ -2689,14 +2786,6 @@ uz:
     mumkin - Code.org, Tynker, Lightbot yoki CodeSpark. "
   hoc_faq_count_hoc_q: Soat kodini qanday hisoblaysiz? "
   hoc_faq_map_q: Nega men xaritada o‘z nuqtaimni ko‘rmayapman? "
-  hoc_faq_map_a: Tadbiringizni "Kodlar soati" xaritasida ko‘rmaganingizdan juda afsusdamiz.
-    Ro‘yxatdan o‘tgan o‘n minglab tashkilotchilar tufayli xarita ma'lumotlarni birlashtiradi
-    va bir nechta voqealar uchun bitta nuqtani ko‘rsatadi. Agar xarita ostidagi <a
-    href='%{events_url}'> voqealar sahifasi </a> havolasini bosgan bo‘lsangiz, siz
-    barcha tadbirlar ro‘yxatiga davlat bo‘yicha yo‘naltirilasiz va u erda o‘z voqeangizni
-    topishingiz mumkin. Bundan tashqari, minglab odamlarning "Kodlar soati" ga yozilishini
-    hisobga olsak, xaritani va voqealar ro‘yxatini yangilash odatda 48 soat davom
-    etadi. Bir necha kundan keyin tekshirib ko‘ring! "
   hoc_faq_map_a_markdown: Tadbiringizni "Kodlar soati" xaritasida ko‘rmaganingizdan
     juda afsusdamiz. Ro‘yxatdan o‘tgan o‘n minglab tashkilotchilar tufayli xarita
     ma'lumotlarni birlashtiradi va bir nechta voqealar uchun bitta nuqtani ko‘rsatadi.
@@ -2705,12 +2794,6 @@ uz:
     u erda o‘z voqeangizni topishingiz mumkin. Bundan tashqari, minglab odamlarning
     "Kodlar soati" ga yozilishini hisobga olsak, xaritani va voqealar ro‘yxatini yangilash
     odatda 48 soat davom etadi. Bir necha kundan keyin tekshirib ko‘ring! "
-  hoc_faq_count_hoc_a: Hour of the tracker - bu aniq foydalanishni o‘lchash emas.
-    Biz Kodeks soatidagi ishtirokni kuzatishda noyob talaba guvohnomalarini mukammal
-    hisobga olmaymiz, ayniqsa talabalardan tizimga kirishni yoki ro‘yxatdan o‘tishni
-    talab qilmaymiz. Natijada, biz bir vaqtning o‘zida ishtirokchilarni ortiqcha va
-    kam hisoblaymiz. Barcha tafsilotlarni <a href='%{codeorg_url}/loc'> bu yerda o‘qing
-    </a>. "
   hoc_faq_count_hoc_a_markdown: Hour of the tracker - bu aniq foydalanishni o‘lchash
     emas. Biz Kodeks soatidagi ishtirokni kuzatishda noyob talaba guvohnomalarini
     mukammal hisobga olmaymiz, ayniqsa talabalardan tizimga kirishni yoki ro‘yxatdan
@@ -2718,25 +2801,6 @@ uz:
     hisoblaymiz va hisoblamaymiz. Barcha ma'lumotlarni [bu yerda] o‘qing (%{codeorg_url}/loc).
     "
   hoc_faq_one_hour_q: Bir soat ichida qancha o‘rganish mumkin? "
-  hoc_faq_one_hour_a: Kodlar soatining maqsadi biror kimga bir soat ichida kompyuter
-    mutaxassisi bo'lishni o'rgatish emas. Bir soat informatika qiziqarli va ijodiy
-    ekanligini, har qanday yoshda, har bir o'quvchiga, kelib chiqishidan qat'iy nazar,
-    foydalanish mumkinligini bilib olish uchun yetarli. Ushbu aksiya muvaffaqiyatining
-    mezoni CS talabalarining qanchalik ko'p ma'lumot olishida emas - bu muvaffaqiyat
-    gender, etnik va ijtimoiy-iqtisodiy guruhlarda keng ishtirok etishidadir, natijani
-    biz barcha darajadagi informatika kurslarida talabalar soni va ishtirokining ko'payishida
-    ko'rmoqdamiz. Ishtirok etgan millionlab o'qituvchilar va talabalar bir soatdan
-    keyin o'qishni davom etishga qaror qildilar - butun kun yoki butun bir hafta yoki
-    undan ko'proq vaqt davomida o'rganishga va ko'plab talabalar natijada butun kursga
-    (yoki hatto kollej mutaxassisligiga) yozilishga qaror qilishdi. <br/> <br/> Talabalardan
-    tashqari yana bir "o'rganuvchi" - bu bir soatdan so'ng, kompyuter fanlari bo'yicha
-    kollej diplomiga ega bo'lmasada, informatika fanidan dars bera olishiga ishonch
-    hosil qilgan tarbiyachidir. O'n minglab o'qituvchilar kompyuter fanlarini o'rganishni
-    davom ettirishga qaror qilishadi, yoki kurslarda qatnashish yoki onlayn kurslarda
-    o'qish yoki ikkalasini ham taklif qilishadi. Va bu maktab ma'murlariga ham tegishli
-    bo'lib, ular informatika o'quvchilari xohlagan va o'qituvchilari qobiliyatga ega
-    narsa ekanligini tushunishadi. <br/> <br/> Eng muhimi, barcha ishtirokchilar bir
-    soat ichida o'rganadigan narsa - bu biz buni qila olishimizdir. '
   hoc_faq_one_hour_a_markdown: "Kodlar soatining maqsadi biror kimga bir soat ichida
     kompyuter mutaxassisi bo'lishni o'rgatish emas. Bir soat informatika qiziqarli
     va ijodiy ekanligini, har qanday yoshda, har bir o'quvchiga, kelib chiqishidan
@@ -2757,17 +2821,10 @@ uz:
     qobiliyatga ega narsa ekanligini tushunishadi. \n\nEng muhimi, barcha ishtirokchilar
     bir soat ichida o'rganadigan narsa - bu biz buni qila olishimizdir. '"
   hoc_faq_more_questions_q: Yana savollaringiz bormi? "
-  hoc_faq_more_questions_a: Javobni <a href = 'http-dan qidirib ko‘ring
   hoc_faq_more_questions_a_markdown: Javobni [qo‘llab-quvvatlash forumida] (http.)
     Qidirib ko‘ring
   hoc_faq_keep_learning_q: Kod soati tugagandan so‘ng qanday qilib o‘qishni davom
     ettirishim kerak? "
-  hoc_faq_keep_learning_a: Har bir inson istalgan vaqtda Dasturlash soatini o'tkazishi
-    mumkin. O'quv qo'llanmalari yil davomida ishlaydi. Bizning barcha o'quv qo'llanmalarimiz
-    va o'quv dasturlarimiz bizning saytda hamisha mavjud bo'lishini kutishingiz mumkin.
-    Iltimos, bizning Dasturlash soati tadbirini muvaffaqiyatli o'tkazishga yordam
-    beradigan tadbirlarni o'tkazish bo'yicha ko'rsatmalar va boshqa manbalar uchun
-    <a href='/promote'>bizning manbalarga</a> o'ting.
   hoc_faq_keep_learning_a_markdown: Har bir inson istalgan vaqtda Dasturlash soatini
     o'tkazishi mumkin. O'quv qo'llanmalari yil davomida ishlaydi. Bizning barcha o'quv
     qo'llanmalarimiz va o'quv dasturlarimiz bizning saytda hamisha mavjud bo'lishini
@@ -2776,34 +2833,29 @@ uz:
     manbalar uchun [bizning manbalarga](%{promote}) o'ting.
   hoc_faq_certificates_q: Talabalarim uchun sertifikatlarni qayerda chop etishim mumkin?
     "
-  hoc_faq_certificates_a: <a href='%{codeorg_url}/certificates'> sertifikatlar sahifamizga
-    </a> o‘ting, bu yerda butun sinfingiz uchun sertifikatlarni muddatidan oldin chop
-    etishingiz mumkin. Shuningdek, siz Minecraft darsini bajarayotgan talabalar uchun
-    <a href='%{codeorg_url}/certificates?course=mc'> maxsus sertifikatlarni </a> chop
-    etishingiz mumkin. "
-  hoc_faq_certificates_a_markdown: Bizning [sertifikatlar sahifamizga] o‘ting (%{codeorg_url}/sertifikatlar),
-    unda siz butun sinfingiz uchun sertifikatlarni oldindan chop etishingiz mumkin.
-    Minecraft o‘quv qo‘llanmasini bajarayotgan talabalar uchun [maxsus sertifikatlar](%{codeorg_url}/sertifikatlar?
-    Kurs = mc) ni chop etishingiz mumkin. "
+  hoc_faq_certificates_answer_markdown: Bizning [sertifikatlar sahifasi] (%{certificates_url})
+    ga o'ting, bu erda butun sinfingiz uchun sertifikatlarni muddatidan oldin chop
+    etishingiz mumkin.
   hoc_faq_logo_q: 'Hour of Code" ning logotipi yoki ismidan qanday foydalanishim cheklanganmi? '
-  hoc_faq_logo_a: Kodning soati savdo belgisi bilan belgilanadi. Biz uning ishlatilishiga
-    to‘sqinlik qilmoqchi emasmiz, lekin uning ishlatilishi bir necha chegaralarga
-    to‘g‘ri kelishiga ishonch hosil qilishni xohlaymiz. <a href='%{logo_url}'> foydalanish
-    bo‘yicha ushbu ko‘rsatmalarga </a> qarang. "
   hoc_faq_logo_a_markdown: Kodning soati savdo belgisi bilan belgilanadi. Biz uning
     ishlatilishiga to‘sqinlik qilmoqchi emasmiz, lekin uning ishlatilishi bir necha
     chegaralarga to‘g‘ri kelishiga ishonch hosil qilishni xohlaymiz. Iltimos, ushbu
     foydalanish ko‘rsatmalariga qarang (%{logo_url}). "
+  hoc_faq_bug_q: Men “Kod soati” faoliyatida xatoni topdim! Nima qilishim kerak?
+  hoc_faq_bug_a_markdown: |-
+    Oh yo'q! Agar siz Kod soati faoliyatida xatoga duch kelsangiz - avval siz ishlayotgan faoliyat uchun URL manzilini tekshiring. URL studio.code.org bilan boshlansa, bizning Code.org Qo'llab-quvvatlash guruhimiz yordam berishi mumkin! Ekraningizning yuqori o'ng burchagidagi savol belgisi belgisini bosing, keyin ochiladigan menyudan “Muammo haqida xabar berish” -ni tanlang.
+
+    URL studio.code.org dan boshlanmasa, ehtimol siz uchinchi tomon faoliyati ustida ishlaysiz va keyingi yordam uchun ushbu kompaniyaning qo'llab-quvvatlash guruhiga murojaat qilishingiz kerak bo'ladi.
   stats_hoc_2013_image_alt: 2013-yilgi soatlarning statistikasi "
   stats_growth: Bu eng tezkor bo‘lib, 15 million foydalanuvchini qamrab oldi. "
-  stats_i18n: Talabalar 45 dan ortiq tillarda bilim olishmoqda "
+  stats_i18n: O'quvchilar 45 dan ortiq tillarda o'rganishmoqda
   stats_tumblr: 'Tumblr: 3.5 yil'
   stats_facebook: 'Facebook: 3 yil'
   stats_twitter: 'Twitter: 2.5 yil'
   stats_pinterest: 'Pinterest: 2 yil'
   stats_instagram: 'Instagram: 14 oy'
   stats_hoc: 'Dasturlash soati: 5 kun'
-  stats_global: 100 milliondan ortiq talabalar bir soatlik kodni sinab ko‘rishdi "
+  stats_global: 100 milliondan ortiq o'quvchilar Dasturlash soatini qatnashib ko'rdilar
   stats_girls_more: So‘nggi 70 yilga qaraganda ko‘proq qizlar kompyuter fanini sinab
     ko‘rishdi "
   stats_females: Ayol talabalarning kompyuter fanida ishtirok etishi o‘rta maktab
@@ -2904,10 +2956,10 @@ uz:
   event: Tadbir
   events: Tadbirlar
   highlights_title: Ajratilganlar
-  highlights_header: Kodning asosiy soatlari
+  highlights_header: Dasturlash Soatining asosiy jihatlari
   highlights_description: '"Dasturlash soati" aksiyasidagi ba''zi sevimli daqiqalarimiz.'
   highlights_previous: O‘tgan yillardagi muhim voqealar
-  highlights_see_more: Boshqa muhim voqealarni ko‘ring
+  highlights_see_more: Ko'proq asosiy jihatlarni ko‘rish
   highlights_readmore: Ko‘proq bilish
   highlights_watchvideo: Videoni ko‘ring
   highlights_facebook: Facebook-da ulashish
@@ -14187,6 +14239,9 @@ uz:
   step_06: 6-qadam
   step_07: 7-qadam
   step_08: 8-qadam
+  what: 'Nima:'
+  when: 'Qachon:'
+  where: 'Qaerda:'
   hoc_how_to_top_heading: Kod soati bo'yicha qo'llanma
   hoc_how_to_top_desc: Eng yaxshi kod soati tajribasi uchun moslashtirilgan qo'llanmalar.
   hoc_how_to_top_view_guide: Qo'llanmani ko'rish
@@ -14238,78 +14293,106 @@ uz:
     bir soatlik qo'llanmalarning keng tanlovini o'rganing.
   hoc_how_to_step_label_plan: Kod soatingizni qaerda va qachon bajarishingizni rejalashtiring
   hoc_how_to_step_label_choose_activity: Faoliyatingizni tanlang
+  hoc_how_to_step_label_choose_activities: Faoliyatingizni tanlang
   hoc_how_to_step_label_test_activity: Faoliyatingizni sinab ko'ring
   hoc_how_to_step_label_register_event: Tadbiringizni ro'yxatdan o'tkazing
   hoc_how_to_step_label_tell: O'quvchilaringizga, maktabingizga va jamoangizga ayting
   hoc_how_to_step_label_get_coding: Kodlashni oling!
   hoc_how_to_step_label_celebrate: Nishonlang
   hoc_how_to_step_label_beyond_hoc: Kod soatidan tashqarida
+  hoc_how_to_step_label_plan_your_event: Tadbiringizni rejalashtiring
+  hoc_how_to_step_label_plan_your_hour: Soatingizni rejalashtiring
+  hoc_how_to_step_label_help_spread_word: So'zni tarqatishga yordam bering
   hoc_how_to_step_beyond_hoc_subhead: Bu erda tugamaydi!
-  hoc_how_to_step_beyond_hoc_desc: Kompyuter fanlari Kod soati bilan tugashi shart
-    emas! Ota-onalarning 90 foizi farzandining kompyuter fanini o'rganishini xohlasa-da,
-    aksariyat maktablar hali ham uni o'rgatmaydilar. Bugun bolangizning maktabiga
-    CSni qanday olib kelishni bilib oling.
-  hoc_how_to_step_01_educators_subhead: Sizda mavjud bo'lgan talabalar va qurilmalar
-    soni uchun ishlaydigan voqea vaqti va bo'sh joyini tanlang.
-  hoc_how_to_step_01_educators_desc_01: Kod soatini bajarish uchun qanday bo'sh joylar
-    mavjud? O'zingizning makoningizning texnologik imkoniyatlarini va talabalaringiz
-    qanday ishlashini kutgan qurilmalar turlarini ko'rib chiqing. Talabalar bitta
-    qurilmada o'quv qo'llanmalari ustida ishlashlari, birgalikda qurilma yordamida
-    navbat bilan o'tishlari yoki sinf taxtasida birgalikda o'quv qo'llanmasini sinab
-    ko'rishlari mumkin. Hatto hech qanday qurilmalar bilan bajarilishi mumkin bo'lgan
-    unplugged qo'llanmalar ham mavjud. Uzib qo'yilgan variantlarni har qanday joyda,
-    hatto ochiq havoda ham amalga oshirish mumkin!
-  hoc_how_to_step_01_educators_desc_02: Dunyo bo'ylab odamlar CS ta'lim haftaligida
-    eng so'nggi o'quv qo'llanmalari va tadbirlari chiqar %{campaign_date} ilganda
-    Kod soati bayramiga qo'shilishadi. Ammo siz yilning istalgan kunida kod soatini
-    qilishingiz mumkin!
-  hoc_how_to_step_02_educators_desc_01: Guruhingizning yoshi, tajribasi, qiziqishlari
-    va boshqalarga qarab faoliyatni o'rganing. Talabalar o'z-o'zidan boshqariladigan
-    o'quv qo'llanmalarini sinab ko'rishlari mashhur, ammo ko'plab tadbirlar o'qituvchilar
-    uchun munozarani boshqarish yoki faoliyatni kengaytirish uchun dars rejalarini
-    o'z ichiga oladi.
-  hoc_how_to_step_02_educators_desc_02: Agar siz barcha talabalaringiz uchun bitta
-    o'quv qo'llanmasini tanlashni xohlasangiz yoki har bir bolaga o'zlarini tanlasangiz,
-    oldindan qaror qiling.
-  hoc_how_to_step_02_educators_desc_03: Bu yil siz va o'quvchilaringiz [AI haqida
-    hamma narsani bilib olishlari] (%ai_url) darsliklar, dars rejalari va bizning
-    yangi Qanday AI ishlaydi video seriyamiz orqali.
-  hoc_how_to_step_03_educators_desc_01: Savollarga javob berishingiz uchun sinfga
-    kirishdan oldin o'quv qo'llanmasini o'zingiz sinab ko'ring!
-  hoc_how_to_step_03_educators_desc_02: Shuningdek, ovoz va videoni qo'llab-quvvatlashini
-    ta'minlash uchun talabalar kompyuterlari yoki qurilmalarida darsliklarni sinab
-    ko'rishingiz mumkin. Kam tarmoqli kengligi bormi? Sinfning old qismida videolarni
-    ko'rsatishni rejalashtiring, shuning uchun har bir talaba o'z videolarini yuklab
-    olmaydi.
-  hoc_how_to_step_03_educators_desc_03: Sizning sinfingiz uchun minigarniturani taqdim
-    qilishni o'ylab ko'ring yoki o'quvchilardan o'zlarini olib kelishlarini so'rang,
-    agar siz tanlagan o'quv qo'llanma ovoz bilan eng yaxshi ishlasa.
-  hoc_how_to_step_04_educators_desc_01: Kod soati tadbirini ro'yxatdan o'tkazganingizda,
-    siz muvaffaqiyatli kod soatini o'tkazish bo'yicha yangiliklar va maslahatlar bilan
-    foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy ko'ngillilarga
-    sizning maktabingiz ishtirok etayotganini qanday qilib bildirishingiz mumkin.
-    Ko'ngillilar ajoyib manba bo'lib, sizning sinfingizga kompyuter fanlari haqida
-    gaplashishlari yoki talabalaringizga kod soati faoliyatida yordam berishlari mumkin.
-  hoc_how_to_step_05_educators_desc_01: Talabalaringizni [ilhomlantiruvchi videolar]
-    bilan baham ko'rish orqali tadbir uchun hayajonlaning (%{videos_url}) turli xil
-    odamlarni va kompyuter fanidan haqiqiy dunyoda foydalanish mumkin bo'lgan ijodiy
-    usullarni ta'kidlaydi.
-  hoc_how_to_step_05_educators_desc_02: Kod soati rejalaringizni o'yin-kulgiga qo'shilishni
-    xohlaydigan boshqa o'qituvchilar bilan baham ko'ring! Bu, shuningdek, maktabingizning
-    Ota-onalar o'qituvchilari talabalar uyushmasi bilan bog'lanish yoki ota-onalar
-    axborot byulletenlarida bo'lishish uchun ajoyib imkoniyatdir, ularga farzandlari
-    nimani o'rganayotganini bildiradi.
-  hoc_how_to_step_06_educators_desc_01: Talabalaringizni faoliyatga yo'naltiring,
+  hoc_how_to_step_plan_hour_desc_01: 'Ishni boshlash uchun namunaviy kun tartibi:'
+  hoc_how_to_step_choose_activities_desc_01: Bu yil Kod soati mavzusi Sun'iy intellekt
+    (AI) bilan ijoddir. Yangi ilovalar va algoritmlarni kodlash, noyob san'at yaratish
+    yoki raqsga tushish uchun xoreografiya yaratish bo'ladimi, AI ijod haqidagi tushunchamizni
+    kengaytiradigan raqamli ifoda uchun yangi imkoniyatlarni ochmoqda. Kodlash faoliyatini
+    yakunlash VA AI haqida bilib olish orqali bu yilni maxsus qiling.
+  hoc_how_to_step_choose_activities_desc_02: Birinchidan, [yuzlab kodlash faoliyatini
+    kashf eting] (%{activities_url}) va guruhingizning yoshi, tajribasi, qiziqishlari
+    va boshqalarga asoslanib birini tanlang. [Ushbu tanlangan tadbirlar] (%{ai_activities_url})
+    sun'iy intellektni asosiy mavzu yoki dars sifatida ko'rsatadi.
+  hoc_how_to_step_choose_activities_desc_03: Keyin, [AI haqida hamma narsani bilib
+    oling] (%{ai_url}). Talabalar soha mutaxassislari aks etgan qisqa videolarni tomosha
+    qilishlari mumkin va faoliyatni kengaytirish va keyingi muhokamalarga rahbarlik
+    qilish uchun hamrohlik dars rejalari mavjud. Yoki, biz AI bilan va haqida o'qitishning
+    kelajagini ochish uchun ta'lim oluvchilar uchun bepul professional o'rganishni
+    taklif etamiz.
+  hoc_how_to_step_educators_register_desc: Tadbiringizni ro'yxatdan o'tkazish orqali
+    talabalaringiz bilan Kod soatini amalga oshirish majburiyati bilan boshlang. Ro'yxatdan
+    o'tganingizda, muvaffaqiyatli Kod soatiga mezbonlik qilish bo'yicha yangiliklar
+    va maslahatlar bilan foydali elektron pochta xabarlarini olasiz. Bundan tashqari,
+    siz [xaritaga qo'yilasiz] (%{map_url}). Bizning jamoaviy sa'y-harakatlarimizning
+    ko'rinadigan jamiyati informatika harakatiga global sodiqlikni namoyish etadi,
+    bu bizga tizimli o'zgarishlar uchun tezlikni oshirishga yordam beradi.
+  hoc_how_to_step_educators_plan_desc_01: Tadbiringizdan oldin tadbirlarni o'zingiz
+    sinab ko'ring, shunda ularning talabalar qurilmalarida ishlashiga ishonch hosil
+    qilishingiz va savollarga javob berishga tayyorsiz! Kam tarmoqli kengligi bormi?
+    Sinfning old qismida videolarni namoyish qilishni rejalashtiring, shuning uchun
+    har bir talaba o'z videolarini yuklab olmaydi.
+  hoc_how_to_step_educators_plan_desc_02: Butun dunyo bo'ylab odamlar ko'pincha Computer
+    Science Education Week (%{campaign_date}) paytida Kod soati bayramiga qo'shilishadi,
+    lekin siz yilning har qanday kunida Kodning soati qilishingiz mumkin!
+  hoc_how_to_step_educators_plan_desc_03: Sizda mavjud bo'lgan talabalar va qurilmalar
+    soni uchun ishlaydigan bo'sh joyni tanlang. Talabalar individual qurilmalarda
+    faoliyatni sinab ko'rishlari, navbat bilan qurilmani almashish yoki doskada sinf
+    sifatida olishlari mumkin. Hatto hech qanday qurilmalar bilan yakunlanishi mumkin
+    bo'lgan unplugged tadbirlar ham mavjud, shuning uchun ular hatto tashqarida ham
+    amalga oshirilishi mumkin!
+  hoc_how_to_step_educators_spread_word_desc_01: Bizga [ushbu elektron pochta shablonlari]
+    (%{email_url}) bilan hamjamiyatingizda so'zni tarqatishga yordam bering.
+  hoc_how_to_step_educators_spread_word_desc_02: Ikki hamkasbdan [register](%{register_url})
+    va Kod soati faoliyatiga mezbonlik qilishni so'rang. Ular, o'z navbatida, ikkita
+    hamkasbini xavfsizlashtirishi mumkin, ikkita hamkasbini xavfsizlashtirishi mumkin
+    va hokazo.
+  hoc_how_to_step_educators_spread_word_desc_03: Direktoringizdan [maktab miqyosidagi
+    tadbirga mezbonlik qilishni] so'rang (%{host_url}). 300 yoki undan ortiq bolalar
+    ishtirok etganda, siz futbolkalar, plakatlar, noutbuk stikerlari va boshqalar
+    bilan maxsus nishon to'plamini olishingiz mumkin. [Butun maktabdagi tadbir rejangizni
+    baham ko'ring] (%{share_url}) saralash uchun.
+  hoc_how_to_step_educators_spread_word_desc_04: Maktabingizning ota-onalar o'qituvchilari
+    talabalar assotsiatsiyasiga murojaat qiling yoki farzandlari nimani o'rganayotganini
+    xabar berib, ota-onalar axborot byulletenlarida ulashing.
+  hoc_how_to_step_educators_plan_hour_desc_02: 'Soat 10:00-10:05: [ilhomlantiruvchi
+    video] bilan boshlang ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Talabalar kodlash faoliyatini
+    amalga oshiradilar'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Talabalar AI haqida bilib
+    olishadi'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: O''qituvchi yakuniy fikrlarni
+    beradi'
+  hoc_how_to_step_educators_get_coding_desc: Talabalaringizni faoliyatga yo'naltiring,
     ehtimol taxtadagi havolani baham ko'rish yoki sinfingizning o'rganishni boshqarish
     tizimi orqali. Sizning talabalaringiz qiyinchiliklarga duch kelishlari mumkin
     - bu yaxshi! Dasturni o'rganish yangi tilni o'rganishga o'xshaydi; siz darhol
     ravon bilmaysiz. Agar siz javobni bilmasangiz, uni birgalikda tushunishingiz mumkin.
-  hoc_how_to_step_07_educators_desc_01: 'Muvaffaqiyatni nishonlashga ishonch hosil
-    qiling! Ijtimoiy tarmoqlarda “Kod soati” tadbirining fotosuratlari va videolarini
-    baham ko''ring. #HourOfCode va @codeorg dan foydalaning, shunda biz sizning muvaffaqiyatingizni
-    ham ta''kidlashimiz mumkin!'
-  hoc_how_to_step_07_educators_desc_02: Shuningdek, talabalaringiz o'z yutuqlarini
-    namoyish qilish uchun sertifikatlarni chop etishingiz mumkin!
+  hoc_how_to_step_educators_celebrate_desc: 'Tadbiringizdan so''ng yakunlanganligi
+    haqidagi guvohnomalarni chop eting va talabalaringizni tabriklang. Hour of Code
+    tadbiringizning fotosuratlari va videolarini baham ko''ring va #HourOfCode va
+    @codeorg yordamida talabalarning yutuqlaringizni namoyish eting.'
+  hoc_how_to_step_educators_beyond_desc: Kompyuter fanlari Kod soati bilan tugashi
+    shart emas! Ota-onalarning 90 foizi farzandining informatika fanini o'rganishini
+    istasa-da, aksariyat maktablar hali ham uni o'rgatmaydi. Yordam berish uchun bizning
+    o'quv dasturimiz veb-ga asoslangan va abadiy foydalanish uchun bepul. Bugun maktabingizga
+    CS olib kelishni bilib oling.
+  hoc_ai_top_desc: Har kim AI haqida bilib olishi mumkin, sinfda talaba bo'lasizmi
+    yoki AI bilan va bu haqda o'qitishning kelajagini ochadigan tarbiyachi bo'lasizmi.
+  hoc_ai_how_ai_works_video_series_desc: Ushbu qisqa videolar sizni sun'iy intellekt
+    qanday ishlashi va nima uchun muhimligi bilan tanishtiradi. Keyin algoritmik tarafkashlik
+    va AI qaror qabul qilishning etikasi kabi masalalarni o'rganing.
+  hoc_ai_learn_how_ai_works_desc: "“AI qanday ishlaydi” bilan AI dunyosiga sho'ng'ing,
+    bizning video seriyamiz bilan birlashtirilgan darslar sizni AI qanday ishlashi
+    va nima uchun muhimligi bilan tanishtiradi."
+  hoc_ai_101_for_educators_desc: O'qituvchilar uchun bepul onlayn o'quv tizimimiz
+    orqali ta'limdagi sun'iy intellektning (SI) o'zgartiruvchan imkoniyatlarini kashf
+    eting.
+  hoc_ai_impacts_desc: Sinfingizni sun'iy intellektning ta'sirini o'rganadigan va
+    o'quvchilarni AI muammolarining ayrim echimlarini o'ylashga taklif qiladigan o'qituvchi
+    boshchiligidagi darslar bilan jalb qiling.
+  hoc_ai_activities_desc: Ushbu yangi “Kod soati” tadbirlari foydalanuvchilarni sun'iy
+    intellekt dunyosi bilan qiziqarli va qiziqarli tarzda tanishtiradi.
   team_page_full_team_alt_text: Code.org saytining 100 ga yaqin xodimi ko'k va sariq
     futbolkalarga mos keladigan 2022 yilgi Codechella tadbiri uchun mehmonxonaning
     konferentsiya zalida suratga tushishadi.
@@ -14902,6 +14985,24 @@ uz:
     va yuklab olishlar'
   video_library_page_not_hacked_video_title_7: 'Qanday qilib buzilmaslik kerak: Yangilanishlarni
     o''rnating'
+  thank_you_page_main_title: Harakatni qurishga yordam berganingiz uchun tashakkur
+  thank_you_page_description: Code.org Advokatlik Koalitsiyasi yuz minglab mahalliy
+    chempion va himoyachilarga, shu jumladan o'qituvchilar, jamoa a'zolari, tadqiqotchilar,
+    notijorat tashkilotlar, universitetlar, korporatsiyalar va davlat muassasalariga
+    minnatdorchilik bildiradi, ular har bir maktabdagi har bir talaba kompyuter fanini
+    o'rganish imkoniga loyiq degan tasavvurni qo'llab-quvvatladi. Ushbu harakatni
+    qo'llab-quvvatlaganingiz uchun tashakkur.
+  thank_you_page_members_section_title: 'Va Code.org advokatlik koalitsiyasining barcha
+    a''zolariga:'
+  thank_you_page_individual_organization_title: 'Quyidagi shaxslar va tashkilotlarga
+    ushbu hisobotga qo''shgan hissalari uchun rahmat:'
+  thank_you_page_individual_organization_description: Har bir davlat ta'lim agentligida
+    kompyuter fanlari ta'lim nazoratchilari, Kollej kengashi, Della Cronin, Stuart
+    Dexler, Katharin Macys, Entoni Ouen, Sean Roberts, Kayl Troyan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Ushbu hisobotda keltirilgan talabalar va
+    o''qituvchilarga rahmat:'
+  thank_you_page_teachers_students_description: Tess Kampion, Villa Kampion, Jeymi
+    Delerme, Sindi Noriega, Tara Vodopich
   about_us_page_title: Biz haqimizda
   about_us_page_hero_description: Code.org® - bu har bir maktabdagi har bir talaba
     o'zlarining asosiy K-12 ta'limining bir qismi sifatida kompyuter fanlarini o'rganish
@@ -15064,6 +15165,130 @@ uz:
     kerak. bu qarashni qo'llab-quvvatlaydigan maqsad.
   about_page_donors_link_1: Xayr-ehson qiling
   about_page_donors_link_2: "[donorlar ro'yxatiga qarang] (%{donors_url})"
+  teach_ai_title: Haqiqiy dunyo misollari. Amaliy manbalar.
+  teach_ai_description: Maktablar uchun AI Guidance Toolkit siyosatchilar, maktab
+    rahbarlari va xodimlar uchun maktablarida AI bo'yicha dastlabki yo'l-yo'riqlarni
+    ishlab chiqish uchun manbaidir.
+  teach_ai_button_label: Asboblar to'plamini ko'rish
+  middle_high_page_main_title: 11 va undan katta yoshlar uchun ta'lim
+  middle_high_page_main_description: Joylashtiruvchi videolar, o'z-o'zidan tayyorlangan
+    o'quv qo'llanmalari, dasturlash faoliyati va boshqalar bilan kompyuter fanlari
+    dunyosini o'rganing!
+  middle_high_page_hero_title: Kod soati bilan boshlang
+  middle_high_page_hero_description: Kodlash soati bepul faoliyati bilan kompyuter
+    fanining asoslarini bilib oling, bu kodlash bloklarini sudrab tashlang. Tanlash
+    uchun yuzlab soatlik variantlar mavjud!
+  middle_high_page_hourofcode_link: Kod soati faoliyati bilan tanishing
+  middle_high_page_modules_title: Katta yoshdagi talabalar uchun dasturlash modullari
+  middle_high_page_modules_description: Bizning CS kashfiyotlari va CS Printsiplari
+    kurslaridan moslashtirilgan ushbu qisqa, o'rta va o'rta maktab o'quvchilari uchun
+    o'z-o'zidan ishlaydigan modullar barcha dasturlash tillari va vositalarini qamrab
+    oladigan tushunchalarni o'rganishning ajoyib usuli hisoblanadi.
+  middle_high_page_modules_card_title_1: O'yin laboratoriyasiga kirish
+  middle_high_page_modules_card_title_2: App Laboratoriyasida kaplumbağa dasturlash
+  middle_high_page_modules_card_title_3: App Laboratoriyasida voqealarga asoslangan
+    dasturlash
+  middle_high_page_modules_card_description_1: Animatsiyalar, interaktiv san'at va
+    o'yinlarni dasturlashda Game Lab muhitimizga ushbu kirishda o'z sur'atlaringiz
+    bilan harakat qiling.
+  middle_high_page_modules_card_description_2: App Laboratoriyasida JavaScript bilan
+    boy, interaktiv ilovalar qilish qobiliyatini oching!
+  middle_high_page_modules_card_description_3: Talabalar interaktiv ilovalarni yaratish
+    uchun JavaScript-dan foydalanadigan App Lab dasturlash muhitiga ushbu kirish bilan
+    o'zingizning sur'atlaringiz bilan boring.
+  middle_high_page_modules_card_link: Sinab ko'ring
+  middle_high_page_make_your_own_title: O'zingizning ilovalaringizni, o'yinlaringizni
+    va veb-sahifalaringizni yarating
+  middle_high_page_make_your_own_description: 'Kurslardan tashqari, bizda sizning
+    ijodingizni kashf etish va ajoyib narsa qilish imkonini beradigan dasturlash vositalari
+    mavjud. '
+  middle_high_page_make_your_own_card_title_1: Laboratoriya ilovasi
+  middle_high_page_make_your_own_card_title_2: Game Lab
+  middle_high_page_make_your_own_card_title_3: Web Lab
+  middle_high_page_make_your_own_card_descrpition_1: App Lab - bu oddiy ilovalarni
+    yaratishingiz mumkin bo'lgan dasturlash muhiti. Ilovani, kodni JavaScript-da bloklar
+    yoki matn bilan loyihalashtiring, so'ngra ilovangizni bir necha soniya ichida
+    baham ko'ring.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab - bu bir-biri bilan
+    o'zaro aloqada bo'lgan ob'ektlar va belgilar bilan oddiy animatsiyalar va o'yinlar
+    qilishingiz mumkin bo'lgan dasturlash muhiti.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab - HTML va CSS yordamida
+    oddiy veb-sahifalar yasashingiz mumkin bo'lgan dasturlash muhiti. Veb-sahifalaringizni
+    loyihalashtiring va saytingizni soniya ichida baham ko'ring.
+  middle_high_page_make_your_own_card_link: Ko‘proq ma'lumot olish.
+  middle_high_page_additional_resources_title: Qo'shimcha manbalar
+  middle_high_page_additional_resources_description: Kompyuter fanini yanada kashf
+    qilishning juda ko'p usullari mavjud! Bizning video kutubxonamizni ko'rib chiqing
+    yoki kompyuter fanlari sohasidagi qiziqarli martabalar haqida ko'proq bilib oling.
+  middle_high_page_video_library_title: Video kutubxonamizni kashf eting
+  middle_high_page_video_library_description: Sun'iy intellekt, Internet, kompyuterlar
+    qanday ishlashi, qanday qilib buzilib ketmaslik, blockchain, martaba va boshqalar
+    kabi mavzularda qisqa 5-10 daqiqalik videolar orqali kompyuter fanining asoslarini
+    bilib oling!
+  middle_high_page_video_library_link: Video kutubxonasini ko'rish
+  middle_high_page_cs_journeys_title: CS Journeys bilan yanada ko'proq boring
+  middle_high_page_cs_journeys_description: Kompyuter fanlari sayohatingizda keyingi
+    qadamni tashlang. Karyera, mentorlik imkoniyatlari, onlayn kurslar, stipendiyalar,
+    stajirovkalar va boshqalarni o'rganing!
+  middle_high_page_cs_journeys_link: CS Journeys bilan tanishing
+  middle_high_page_cs_title: Sinfda kompyuter fanlari
+  middle_high_page_cs_description: Ushbu kurslarni o'qituvchi boshqarishi kerak! Agar
+    siz ularni maktabingizda o'qitishni xohlasangiz, ularni sinfingizga olib kelish
+    uchun o'qituvchi bilan ishlashni o'ylab ko'ring.
+  middle_high_page_cs_card_title_1: CS kashfiyotlari
+  middle_high_page_cs_card_title_2: CS tamoyillari
+  middle_high_page_cs_card_title_3: AP Kompyuter fanlari A
+  middle_high_page_cs_card_description_1: O'quvchilarni kompyuter fanlarining asosiy
+    tushunchalari bilan tanishtiruvchi va kompyuter va texnologiya dunyoga qanday
+    ta'sir ko'rsatishini o'rganishga undaydigan bepul boshlang'ich o'quv dasturlari
+    to'plami.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Talabalarni AP® Computer Science A (AP®
+    CSA) uchun ushbu bepul o'quv dasturida Java dasturlash tilini o'rganayotganda
+    dasturiy injiniring va ob'ektga yo'naltirilgan dizayn bilan tanishtiring.
+  middle_high_page_cs_link_1: CS Dicoveries bilan tanishing
+  middle_high_page_cs_link_2: CS tamoyillarini o'rganing
+  middle_high_page_cs_link_3: CSA bilan tanishing
+  elemeentary_page_main_title: 5 yoshdan 11 yoshgacha ta'lim
+  elementary_page_main_description: Joylashtiruvchi videolar, o'z-o'zidan tayyorlangan
+    o'quv qo'llanmalari, dasturlash faoliyati va boshqalar bilan kompyuter fanlari
+    dunyosini o'rganing!
+  elementary_page_own_pace_title: O'zingizning sur'atlaringiz bilan o'rganishni davom
+    eting
+  elementary_page_own_pace_description: Talabalar informatika asoslarini o'zlari o'rganishni
+    boshlashlari uchun ushbu ikkita ajoyib variantda chizmalar, o'yinlar va boshqalarni
+    yarating.
+  elementary_page_own_pace_card_title_1: Oldindan Reader Express kursi
+  elementary_page_own_pace_card_title_2: Ekspress kurs
+  elementary_page_own_pace_card_description_1: Kompyuter fanlarini o'z sur'atlaringiz
+    bilan o'rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko'nikmalarini
+    rivojlantirishni va qiziqarli muammolarni hal qilishni o'rganing! Do'stlaringiz,
+    oilangiz va o'qituvchilaringiz bilan baham ko'rish uchun o'yinlar va ijodiy loyihalar
+    qiling.
+  elementary_page_own_pace_link_1: Oldindan o'quvchi kursini boshlang
+  elementary_page_own_pace_link_2: Ekspress kursini boshlang
+  elementary_page_make_your_own_games_title: O'zingizning animatsiyalar va o'yinlaringizni
+    yarating
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab
+  elementary_page_make_your_own_games_card_description_1: Ijodiy bo'lish vaqti keldi!
+    Sprite Lab-da ahmoqona, shirin yoki tashqi makon qilish uchun blokga asoslangan
+    kodlashdan foydalaning. Yagona chegara sizning tasavvurlaringiz!
+  elementary_page_make_your_own_games_link: Sprite Lab-ni sinab ko'ring
+  elementary_page_computer_science_title: Sinfda kompyuter fanlari
+  elementary_page_computer_science_description: Ushbu kurslarni o'qituvchi boshqarishi
+    kerak! Agar siz ularni maktabingizda o'qitishni xohlasangiz, ota-onadan yoki vasiydan
+    ularni sinfingizga olib kelish uchun o'qituvchi bilan ishlashni so'rang.
+  elementary_page_computer_science_card_title_1: Kompyuter fanlari asoslari
+  elementary_page_computer_science_card_title_2: Kompyuter fanlari aloqalari
+  elementary_page_computer_science_description_1: O'quvchilarni kompyuter fanlarining
+    asosiy tushunchalari bilan tanishtiruvchi va kompyuter va texnologiya dunyoga
+    qanday ta'sir ko'rsatishini o'rganishga undaydigan bepul boshlang'ich o'quv dasturlari
+    to'plami.
+  elementary_page_computer_science_description_2: Kompyuter Fanlari (CS) va matematika,
+    til fani, fan va ijtimoiy fanlar kabi boshqa fanlar o'rtasida aloqa o'rnating.
   language_code:
     ar: Arab
     az: Ozarbayjoncha

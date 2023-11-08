@@ -6,12 +6,12 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "AI Dance Party October Pilot - Group B",
+      "pilot_experiment": "draft-hoc-dp-2-b",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "draft-hoc-dp-2-b",
-    "serialized_at": "2023-10-20 22:48:35 UTC",
+    "serialized_at": "2023-10-30 14:36:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -241,6 +241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro_b"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -263,6 +266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer_b"
+        ],
         "progression": "Code a Dancer and Moves"
       },
       "bonus": false,
@@ -285,6 +291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1_b"
+        ],
         "progression": "Key Press Events 1"
       },
       "bonus": false,
@@ -307,6 +316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_b"
+        ],
         "progression": "Generate with AI for Happy Song"
       },
       "bonus": false,
@@ -329,6 +341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_sad_b"
+        ],
         "progression": "Generate with AI for Sad Song"
       },
       "bonus": false,
@@ -351,6 +366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_Drag_ai_happy_debug_b"
+        ],
         "progression": "Generate with AI for a Song then edit code"
       },
       "bonus": false,
@@ -373,6 +391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_2_b"
+        ],
         "progression": "On measure Events"
       },
       "bonus": false,
@@ -395,6 +416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_free_play_b"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,

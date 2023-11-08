@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-06 18:11:38 UTC",
+    "serialized_at": "2023-10-30 21:30:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3271,6 +3271,17 @@
       }
     },
     {
+      "name": "All Vocabulary",
+      "url": "/s/csp5-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Assessment Day - Data",
       "url": "https://docs.google.com/presentation/d/18tJ6kC-TCmAxEJTN3n4TTiFsKBltoKv7bI3AbNe4WPA/edit?usp=sharing",
       "key": "assessment_day_-_data",
@@ -3931,6 +3942,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csp5-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_vocabulary",
         "script.name": "csp5-2023"
       }
@@ -4098,6 +4115,18 @@
       "seeding_key": {
         "lesson.key": "Learning from Data",
         "vocabulary.key": "metadata"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning",
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning",
+        "vocabulary.key": "information"
       }
     }
   ],

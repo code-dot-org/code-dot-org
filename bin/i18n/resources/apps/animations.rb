@@ -7,8 +7,8 @@ module I18n
     module Apps
       module Animations
         DIR_NAME = 'animations'.freeze
-        I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, DIR_NAME)).freeze
-        SPRITELAB_FILE_NAME = 'spritelab_animation_library.json'.freeze
+        FILE_NAME = 'spritelab_animation_library.json'.freeze
+        I18N_SOURCE_FILE_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME, FILE_NAME).freeze
 
         def self.sync_in
           SyncIn.perform

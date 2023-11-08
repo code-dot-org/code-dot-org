@@ -17,10 +17,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   end
 
   # GET /api/v1/sections
-  # Get the set of sections owned by the current user
+  # Get the set of sections taught by the current user
   def index
     prevent_caching
-    render json: current_user.sections.map(&:summarize_without_students)
+    render json: current_user.sections_owned_or_instructed.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
@@ -70,7 +70,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     return head :bad_request unless section.persisted?
 
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email)}
+    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script @unit if @unit
@@ -114,7 +114,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     # Add all coteachers specified in params
-    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email)}
+    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
 
     render json: section.summarize
   end

@@ -135,7 +135,7 @@ Trabaje con la escuela o el maestro para discutir qué tiene más sentido. Hemos
 - Explica formas en las que la tecnología impacta en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (tecnologías que salvan vidas, tecnologías que ayudan a las personas, las conectan, etc.)
 - Si eres una empresa de tecnología, muestra productos divertidos e innovadores en los que esté trabajando tu empresa. Si no eres una empresa de tecnología, analiza las formas en que tu empresa utiliza la tecnología para resolver problemas y lograr objetivos.
 - Invita a ingenieros de software de tu empresa a que hablen acerca de por qué decidieron estudiar ciencias de la computación y en qué proyectos trabajan.
-- Si tienes un grupo de personal que facilitará tu evento o se ofrecerá como voluntario en una escuela local, considera encargar [camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para tu grupo.
+- Si tiene un grupo de personal que facilitará su evento o será voluntario en una escuela local, considere la posibilidad de pedir camisetas [personalizadas](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) para su grupo.
 
 ### 3. Planifica tus necesidades tecnológicas
 
@@ -190,7 +190,7 @@ Una de las mejores formas de colaborar es difundir y promover la Hora del Códig
 
 ### 1. Registra tu evento
 
-Cuando [inscribas tu evento de la Hora del Código](/#join), recibirás útiles comunicaciones por correo electrónico con noticias y consejos para organizar con éxito la Hora del Código. También puedes informar de ello a las escuelas de tu ciudad o a los padres que estás organizando un evento cerca de ellos.
+Cuando te [inscribas en tu evento de la Hora del Código](/events), recibirás comunicaciones útiles por correo electrónico con noticias y consejos para organizar una Hora del Código exitosa. También puedes informar de ello a las escuelas de tu ciudad o a los padres que estás organizando un evento cerca de ellos.
 
 ### 2. Publica en las redes sociales
 

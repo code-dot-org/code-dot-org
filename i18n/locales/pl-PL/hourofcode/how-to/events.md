@@ -35,17 +35,17 @@ Udostępnij zdjęcia swojego wydarzenia na Facebooku i Twitterze i użyj hashtag
 
 * * *
 
-## Example plan for a school assembly or event
+## Przykładowy plan szkolnego zgromadzenia lub wydarzenia
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Event:** Zgromadzenie rozpoczęcia tygodnia edukacji informatycznej w całej szkole
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (początek Tygodnia Edukacji Informatycznej)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Time:** W ciągu dnia szkolnego. Preferowane poranne wydarzenie. Około 1 godzina.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Location:** Szkolna sala konferencyjna (np. teatr, siłownia, kawiarnia)
 
-## Run of Show
+## Program imprezy
 
 | Godzina       | Program                                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |

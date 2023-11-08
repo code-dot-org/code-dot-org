@@ -1848,10 +1848,29 @@ FactoryBot.define do
     understanding {0}
   end
 
+  factory :rubric_ai_evaluation do
+    transient do
+      student {create :student}
+    end
+
+    user {student}
+    project_id {789}
+    association :requester, factory: :teacher
+    association :rubric
+    status {1}
+    project_version {"1"}
+  end
+
   factory :learning_goal_ai_evaluation do
     association :learning_goal
-    association :user, factory: :student
-    association :requester, factory: :teacher
+    association :rubric_ai_evaluation
     understanding {0}
+    ai_confidence {1}
+  end
+
+  factory :potential_teacher do
+    association :source_course_offering
+    name {"foosbars"}
+    email {"foobar@example.com"}
   end
 end

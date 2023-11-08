@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: ऑवर ऑफ़ कोड आफ्टर-स्कूल के लिए हाउ-टू गाइड
 ---
 
 {{ signup_button }}
@@ -10,7 +10,7 @@ title: Hour of Code How-to Guide for After-school
 
 कम्प्यूटेशनल सोच समस्या सुलझाने के कौशल, तर्कक्षमता और रचनात्मकता के विकास में मदद करती है। साथ में, तकनीक दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है। आज, छात्रों को तकनीक के इस्तेमाल से आगे बढ़ कर इसे बनाने के बारे में सीखना शुरू करना चाहिए। जल्दी शुरुआत करने से, उनके पास 21वीं सदी के किसी भी करियर में सफलता की नींव होगी।
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+एक घंटे का कोड आज़माना छात्रों को कंप्यूटर विज्ञान से परिचित कराने का एक सरल और मजेदार तरीका है, शायद पहली बार। यदि आप मदद करने के लिए हाथों का एक अतिरिक्त सेट चाहते हैं, तो आप अपने स्कूल के बाद की कक्षा या क्लब में एक घंटे का कोड चलाने में मदद</a> करने के लिए एक स्थानीय स्वयंसेवक ढूंढ सकते हैं।</p> 
 
 ### ऑवर ऑफ़ कोड को दूर से भी होस्ट किया जा सकता है! आरंभ करने के लिए, हमारी [वर्चुअल ऑवर ऑफ़ कोड इवेंट को होस्ट करने के लिए नुस्ख़े](https://hourofcode.com/us/how-to/virtual) देखें। 
 
@@ -20,7 +20,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. एक शिक्षण चुनें
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+हम सभी उम्र के प्रतिभागियों के</a> लिए विभिन्न प्रकार के मजेदार, घंटे-लंबे ट्यूटोरियल प्रदान करते हैं, जो विभिन्न भागीदारों द्वारा बनाए गए हैं। [उन्हें आज़माएं!]({{ urls/learn }})</p> 
 
 **ऑवर ऑफ़ कोड के सभी ट्यूटोरियल** को सिखाने हेतु, आयोजकों को तैयारी करने में बहुत कम समय की आवश्यकता पड़ेगी, क्योंकि ये सभी ट्यूटोरियल आत्म निर्देशित हैं जिससे प्रत्येक छात्र अपनी गति और कौशल स्तर के हिसाब से सीख सकता है।
 
@@ -28,11 +28,11 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 **क्या आपको स्कूल के बाद अवर ऑफ कोड के लिए अध्ययन योजना की आवश्यकता है?** उसके लिए यह [टेम्पलेट](/files/AfterschoolEducatorLessonPlanOutline.docx) देखिये|
 
-## 3. Promote your Hour of Code
+## 3। अपने ऑवर ऑफ़ कोड का प्रचार करें
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+इन टूल के [साथ अपने ऑवर ऑफ़ कोड का प्रचार करें]({{ urls/promote }}) और दूसरों को अपने स्वयं के ईवेंट होस्ट करने के लिए प्रोत्साहित करें।
 
-## 4. Plan your technology needs - computers are optional
+## 4। अपनी तकनीकी ज़रूरतों की योजना बनाएं - कंप्यूटर वैकल्पिक हैं
 
 अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. लेकिन आपको हर बच्चे के लिए कंप्यूटर की ज़रूरत **नहीं हैं**, यहाँ तक कि, किसी कंप्यूटर के बिना भी आप ऑवर ऑफ़ कोड उपयोग कर सकते हैं।
 
@@ -50,41 +50,41 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - मूल code.org उद्घाटन वीडियो, बिल गेट्स, मार्क जकरबर्ग और एनबीए स्टार क्रिस बॉश की प्रस्तुति सहित - [1 मिनट](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 मिनट](https://www.youtube.com/watch?v=nKIu9yen5nc), और <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA ">9 मिनट</a> के संस्करणों में उपलब्ध हैं।
 - The [ऑवर ऑफ़ कोड की विश्व व्यापक वीडियो](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- [राष्ट्रपति ओबामा ने सभी छात्रों से कंप्यूटर विज्ञान सीखने का आह्वान किया](https://www.youtube.com/watch?v=6XvmhE1J9PY)।
 - और प्रेरणादायक वीडियोस पाएँ [यहाँ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **अगर आप संगणक शास्त्र में बिलकुल नए है तो भी ठीक है| अवर ओफ कोड में आपके क्रियाकलाप का परिचय देने के लिए कुछ सुझाव:**
 
 - तकनीक अपने जीवन को कैसे प्रभावित कर रहा है, ये बच्चे समझ सके ऐसे उदहारण देके, बताइए (जीवन सुरक्षा में, लोगोंको मदत करने में, इक दुसरसे मिलाने के लिया जो तकनीक और एप्लीकेशन का इस्तेमाल होता है उसके बारेमे बोलिए).
 - रोजमर्रा की जिंदगी में संगणक प्रणाली (कोड) का उपयोग करने वाली चीज़ें सूचीबद्ध करें ।
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- लड़कियों को कंप्यूटर साइंस में दिलचस्पी दिलाने के टिप्स [यहां देखें]({{ urls/girls }})।
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**और मार्गदर्शन चाहिए?** इस [टेम्पलेट पाठ योजना को डाउनलोड करें](/files/AfterschoolEducatorLessonPlanOutline.docx)।
 
-## 6. Code!
+## 6। कोड!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**प्रतिभागियों को गतिविधि के लिए निर्देशित करें** - एक व्हाइटबोर्ड पर ट्यूटोरियल लिंक लिखें। Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. आइए इसे एक साथ समझें।" - “प्रौद्योगिकी हमेशा हमारे इच्छित तरीके से काम नहीं करती है।” - “प्रोग्राम सीखना एक नई भाषा सीखने जैसा है; आप तुरंत धाराप्रवाह नहीं होंगे।”
+**जब किसी को मुश्किलें आती हैं, तो जवाब देना ठीक है:** - “मुझे नहीं पता। आइए इसे एक साथ समझें।" - “प्रौद्योगिकी हमेशा हमारे इच्छित तरीके से काम नहीं करती है।” - “प्रोग्राम सीखना एक नई भाषा सीखने जैसा है; आप तुरंत धाराप्रवाह नहीं होंगे।”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**अगर कोई जल्दी खत्म कर दे तो क्या करें?** - प्रतिभागियों को [hourofcode.com/learn पर एक और घंटे की कोड गतिविधि आज़माने के लिए प्रोत्साहित करें]({{ urls/learn }}) - या, जो जल्दी खत्म कर लेते हैं उनसे उन लोगों की मदद करने के लिए कहें जिन्हें परेशानी हो रही है।
 
-## 7. Celebrate
+## 7। जश्न मनाएं
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [अपने छात्रों]({{ urls/certificates }}) के लिए प्रमाणपत्र प्रिंट करें।
+- [“मैंने एक घंटे का कोड किया!” प्रिंट करें]({{ promote/resources_stickers }}) आपके छात्रों के लिए स्टिकर।
+- [प्रतिभागियों के](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) लिए कस्टम टी-शर्ट ऑर्डर करें।
 - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
 
-## Other Hour of Code resources for educators
+## शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन
 
 - अवर ओफ कोड के पूर्व संचालकोंद्वारा इस्तमाल की गयी [ सर्वोत्तम प्रथाओं ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) को देखे।
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- हमारे [एजुकेटर्स गाइड टू द ऑवर ऑफ कोड वेबिनार](https://youtu.be/EJeMeSW2-Mw)की रिकॉर्डिंग देखें।
 - मशवरा प्राप्त करने के लिए, अन्य संयोजकोसे अधिक आकलन और मदत के लिए [अवर ओफ कोड अड्डे पर](http://forum.code.org/c/plc/hour-of-code) तशरीफ़ लाये.
 - [ऑवर ऑफ़ कोड के अक्सर पूछे जाने वाले प्रश्न ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) पर एक बार फिर से नज़र डालें।
 
 ## अवर ओफ कोड के बाद क्या?
 
-तकनीक कैसे काम करता है और साॅफ्टवेअर अप्लिकेशन कैसे बनाते है ये जानने के लिए, अवर ओफ कोड ये पहेला पायदान है. Help students continue their journey and encourage them to [learn more online](/beyond)!
+तकनीक कैसे काम करता है और साॅफ्टवेअर अप्लिकेशन कैसे बनाते है ये जानने के लिए, अवर ओफ कोड ये पहेला पायदान है. छात्रों को अपनी यात्रा जारी रखने में मदद करें और उन्हें और अधिक ऑनलाइन [सीखने के लिए प्रोत्साहित](/beyond)करें!
 
 {{ signup_button }}
