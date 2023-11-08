@@ -62,10 +62,9 @@
 }
 
 .table {
-  width: 100%;
   border-left: 1px solid $light_gray_200;
   border-right: 1px solid $light_gray_200;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   &Row {
     display: flex;
