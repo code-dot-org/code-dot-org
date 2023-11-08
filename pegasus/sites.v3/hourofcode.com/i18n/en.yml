@@ -1791,7 +1791,6 @@
   hoc_faq_why_cs_a_markdown: "_Every_ student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats [here](%{stats_url})."
   hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit, or at work."
-  hoc_faq_how_participate_a_v2_markdown: "[Start planning here](%{howto}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit, or at work."
   hoc_faq_behind_hoc_q: 'Who is behind the Hour of Code?'
   hoc_faq_behind_hoc_a_markdown: "The Hour of Code is organized by Code.org and driven by the Hour of Code Review Committee as well as an unprecedented coalition of [partners](%{partner_url}) that have come together to support the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America, and the College Board."
   hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
@@ -9475,10 +9474,9 @@
   hoc_how_to_step_public_officials_get_coding_desc_01: "To ensure the elected officials feel welcome and engaged, greet the elected official at the door of the event to show them where to go and answer any questions they may have. It is always great to have a student help greet them!"
   hoc_how_to_step_public_officials_get_coding_desc_02: "Take pictures during the event to commemorate the visit and to post on your organization's social media networks. (Publicity or privacy policies may apply)."
   hoc_how_to_step_public_officials_get_coding_desc_03: "Make sure the agenda is running smoothly and that it remains on track to end on time. The official may have other visits or meetings scheduled following your event."
-  hoc_how_to_step_public_officials_get_coding_desc_03: "Make sure the agenda is running smoothly and that it remains on track to end on time. The official may have other visits or meetings scheduled following your event."
   hoc_how_to_step_public_officials_after_list_01: "Celebrate! [Print certificates](%{certificate_url}) of completion and congratulate your students."
   hoc_how_to_step_public_officials_after_list_02: "Thank the official for their time and offer to answer any follow-up questions they may have."
-  hoc_how_to_step_public_officials_after_list_03: "Post pictures, videos, or notable quotes from the day on social media with #HourOfCode and @codeorg. (Publicity or privacy policies may apply)."
+  hoc_how_to_step_public_officials_after_list_03: "Post pictures, videos, or notable quotes from the day on social media with #HourOfCode and @codeorg. (Publicity or privacy policies may apply.)"
   hoc_how_to_step_public_officials_after_list_04: "Send the official a follow-up thank you note. It's especially thoughtful to get students to sign!"
   hoc_how_to_step_public_officials_after_list_05: "Follow up with the staff point person on each side for feedback on how to make next year’s event even better."
 
