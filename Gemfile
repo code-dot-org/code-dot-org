@@ -73,6 +73,9 @@ group :development do
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
+  # For auto-generateing the ActiveRecord model diagram found in README.md.
+  # If you want to run `rake update-readme-erd`, you'll need graphviz: https://graphviz.org/download/
+  gem "rails-erd"
 end
 
 # Rack::Cache middleware used in development/test;
