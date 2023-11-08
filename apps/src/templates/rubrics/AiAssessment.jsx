@@ -5,6 +5,7 @@ import style from './rubrics.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
 import AiAssessmentFeedback from './AiAssessmentFeedback';
+import {aiEvaluationShape} from './rubricShapes';
 const icon = require('@cdo/static/ai-bot.png');
 
 export default function AiAssessment({
@@ -13,6 +14,7 @@ export default function AiAssessment({
   aiUnderstandingLevel,
   aiConfidence,
   learningGoalKey,
+  aiInfo,
 }) {
   return (
     <div>
@@ -27,7 +29,10 @@ export default function AiAssessment({
         />
       </div>
       <div>
-        <AiAssessmentFeedback learningGoalKey={learningGoalKey} />
+        <AiAssessmentFeedback
+          learningGoalKey={learningGoalKey}
+          aiInfo={aiInfo}
+        />
       </div>
     </div>
   );
@@ -39,4 +44,5 @@ AiAssessment.propTypes = {
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
   learningGoalKey: PropTypes.string,
+  aiInfo: aiEvaluationShape,
 };

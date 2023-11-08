@@ -47,6 +47,7 @@ export default function RubricContainer({
           return response.json();
         })
         .then(data => {
+          console.log(data);
           setAiEvaluations(data);
         })
         .catch(error => {

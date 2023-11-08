@@ -8,6 +8,7 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
   submittedEvaluationShape,
+  aiEvaluationShape,
 } from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -39,6 +40,7 @@ export default function LearningGoal({
   isStudent,
   feedbackAdded,
   setFeedbackAdded,
+  aiInfo,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -274,6 +276,7 @@ export default function LearningGoal({
                 aiConfidence={aiConfidence}
                 aiUnderstandingLevel={aiUnderstanding}
                 learningGoalKey={learningGoal.key}
+                aiInfo={aiInfo}
               />
             </div>
           )}
@@ -315,6 +318,7 @@ LearningGoal.propTypes = {
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
+  aiInfo: aiEvaluationShape,
 };
 
 const AiToken = () => {

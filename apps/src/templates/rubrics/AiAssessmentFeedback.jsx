@@ -2,6 +2,8 @@ import React, {useState, useRef} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
+import {aiEvaluationShape} from './rubricShapes';
+// import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   BodyThreeText,
   EmText,
@@ -12,8 +14,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import Button from '@cdo/apps/templates/Button';
 
-export default function AiAssessmentFeedback({learningGoalKey}) {
+export default function AiAssessmentFeedback({learningGoalKey, aiInfo}) {
   const radioGroupName = `ai-assessment-feedback-${learningGoalKey}`;
+  // const radioGroupName = `ai-assessment-feedback-${aiInfo.learning_goal_id}`;
   const thumbsupval = 'thumbsup';
   const thumbsdownval = 'thumbsdown';
 
@@ -32,6 +35,7 @@ export default function AiAssessmentFeedback({learningGoalKey}) {
 
   const radioAiFeedbackCallback = radioButtonData => {
     setAIFeedback(radioButtonData);
+    // TODO: http put ai feedback json data iff thumbsup
   };
 
   const submitAiFeedbackCallback = () => {
@@ -204,4 +208,5 @@ export default function AiAssessmentFeedback({learningGoalKey}) {
 
 AiAssessmentFeedback.propTypes = {
   learningGoalKey: PropTypes.string,
+  aiInfo: aiEvaluationShape,
 };
