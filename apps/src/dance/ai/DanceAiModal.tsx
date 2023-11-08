@@ -169,6 +169,8 @@ const DanceAiModal: React.FunctionComponent = () => {
           ),
           goodEffect: JSON.parse(currentValue),
         };
+        minMaxAssociations.current =
+          JSON.parse(currentValue).minMaxAssociations;
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
@@ -253,6 +255,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       JSON.stringify({
         inputs,
         ...generatedEffects.current.goodEffect,
+        minMaxAssociations: minMaxAssociations.current,
       })
     );
     onClose();
