@@ -250,11 +250,11 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
       emojis: inputs,
-      ...generatedEffects.current.goodEffect?.results,
+      ...generatedEffects.current.goodEffect.results,
     });
     const currentValue: AiFieldValue = {
       inputs,
-      ...generatedEffects.current.goodEffect?.results,
+      ...generatedEffects.current.goodEffect.results,
     };
     currentAiModalField?.setValue(JSON.stringify(currentValue));
     onClose();
