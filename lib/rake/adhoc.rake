@@ -46,6 +46,21 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     @cfn.delete
   end
 
+  desc 'Cleanup stopped adhoc environment instances and all of its AWS resources'
+  timed_task_with_logging cleanup_stale_instances: :environment do
+    STOPPED_AT_TAG = 'STOPPED AT'.freeze
+    filters = {
+      'instance-state-name' => 'stopped',
+      'tag:environment' => 'adhoc',
+      'tag:aws:cloudformation:logical-id' => 'WebServer',
+    }.map {|k, v| {name: k, values: [v]}}
+
+    MINIMUM_STOPPED_TIME_IN_SECS = 6 * 86400
+    opts = {aws_filters: filters, deletion_tag: STOPPED_AT_TAG, minimum_time_stopped_in_seconds: MINIMUM_STOPPED_TIME_IN_SECS}
+    ec2_instance_killer = EC2InstanceKiller(opts)
+    ec2_instance_killer.delete
+  end
+
   desc 'Validate adhoc CloudFormation template.'
   timed_task_with_logging validate: :environment do
     @cfn.validate
