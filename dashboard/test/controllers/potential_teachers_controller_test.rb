@@ -15,7 +15,7 @@ class PotentialTeachersControllerTest < ActionDispatch::IntegrationTest
 
   test "show returns correct information for a potential teacher" do
     course_offering = create :course_offering, key: 'course-offering-1', display_name: "Test"
-    example_potential_teacher = create :potential_teacher, source_course_offering_id: course_offering.id, receives_marketing: true
+    example_potential_teacher = create :potential_teacher, source_course_offering_id: course_offering.id
 
     get "/potential_teachers/#{example_potential_teacher.id}"
 
