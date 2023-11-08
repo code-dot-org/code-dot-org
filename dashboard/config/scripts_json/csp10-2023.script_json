@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-04 18:08:03 UTC",
+    "serialized_at": "2023-11-07 19:54:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -679,7 +679,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Compare multiple algorithms to determine if they yield the same side effect or result*\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit#slide=id.g24cbae510b7_0_100)\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c9f55c9f1b052fce6f62d8569709f071-Screenshot 2023-11-03 at 1.46.31 PM.png)"
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?</i>\n\n[Unit Journal Template](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit#slide=id.g24cbae510b7_0_100)\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c9f55c9f1b052fce6f62d8569709f071-Screenshot 2023-11-03 at 1.46.31 PM.png)"
           }
         ]
       },
