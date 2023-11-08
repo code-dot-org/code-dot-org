@@ -3,12 +3,12 @@
     {
       "emoji": "💩", 
       "id": "poopy",
-      "modelDescriptiveName": "cyclone swirl"
+      "modelDescriptiveName": "poopy funny stinky"
     },
     {
       "emoji": "🥰",
       "id": "romantic",
-      "modelDescriptiveName": "romantic hearts"
+      "modelDescriptiveName": "romantic hearts cozy warm"
     },
     {
       "emoji": "🎉",
@@ -16,9 +16,9 @@
       "modelDescriptiveName": "party celebrate"
     },
     {
-      "emoji": "🤪",
-      "id": "silly",
-      "modelDescriptiveName": "silly zany"
+      "emoji": "💎",
+      "id": "diamond",
+      "modelDescriptiveName": "diamond gem stone geometric"
     },
     {
       "emoji": "✨",
@@ -31,29 +31,29 @@
       "modelDescriptiveName": "happy grin"
     },
     {
-      "emoji": "🪄",
-      "id": "magic",
-      "modelDescriptiveName": "geometric grid"
+      "emoji": "👑",
+      "id": "crown",
+      "modelDescriptiveName": "crown geometric grid round gems"
     },
     {
       "emoji": "👻",
       "id": "spooky",
-      "modelDescriptiveName": "jack-o-lantern fall"
+      "modelDescriptiveName": "ghost autumn spooky"
     },
     {
-      "emoji": "😚",
-      "id": "cute",
-      "modelDescriptiveName": "candy"
+      "emoji": "🌀",
+      "id": "cyclone",
+      "modelDescriptiveName": "cyclone swirl icy blue"
     },
     {
-      "emoji": "😎",
-      "id": "funky",
-      "modelDescriptiveName": "sunglasses cool"
+      "emoji": "⚽",
+      "id": "soccor_ball",
+      "modelDescriptiveName": "soccer ball black-and-white geometric"
     },
     {
       "emoji": "🌊",
       "id": "wavy",
-      "modelDescriptiveName": "waves water"
+      "modelDescriptiveName": "waves water ocean"
     },
     {
       "emoji": "💡",
@@ -73,32 +73,32 @@
     {
       "emoji": "😵‍💫",
       "id": "chaotic",
-      "modelDescriptiveName": "wavy ripple"
+      "modelDescriptiveName": "wavy ripple hypnotic turbulent chaotic"
     },
     {
       "emoji": "🪩",
       "id": "disco",
-      "modelDescriptiveName": "disco ball party"
+      "modelDescriptiveName": "disco ball party grid"
     },
     {
-      "emoji": "😌",
-      "id": "zen",
-      "modelDescriptiveName": "savoring food hungry"
+      "emoji": "🎨",
+      "id": "art_palette",
+      "modelDescriptiveName": "art paint palette"
     },
     {
-      "emoji": "💨",
-      "id": "fast",
-      "modelDescriptiveName": "flower"
+      "emoji": "🌹",
+      "id": "flower",
+      "modelDescriptiveName": "flower springtime"
     },
     {
-      "emoji": "👿",
-      "id": "evil",
+      "emoji": "🎵",
+      "id": "music_notes",
       "modelDescriptiveName": "music notes sound"
     },
     {
       "emoji": "🥶",
       "id": "cold",
-      "modelDescriptiveName": "sun warm"
+      "modelDescriptiveName": "icy winter cold"
     },
     {
       "emoji": "🚀",
@@ -106,24 +106,24 @@
       "modelDescriptiveName": "rocket space"
     },
     {
-      "emoji": "😭",
-      "id": "sad",
-      "modelDescriptiveName": "sad tears"
+      "emoji": "🌱",
+      "id": "plant",
+      "modelDescriptiveName": "green plant springtime"
     },
     {
-      "emoji": "📰",
-      "id": "black-and-white",
-      "modelDescriptiveName": "black-and-white"
+      "emoji": "😋",
+      "id": "savoring_food",
+      "modelDescriptiveName": "savory hungry food"
     },
     {
       "emoji": "🔥",
       "id": "warm",
-      "modelDescriptiveName": "hot fire"
+      "modelDescriptiveName": "hot fire sun"
     },
     {
-      "emoji": "❄️",
-      "id": "cool",
-      "modelDescriptiveName": "ice cream"
+      "emoji": "🍦",
+      "id": "ice_cream",
+      "modelDescriptiveName": "ice cream sweet summer fruit"
     }
   ]
 }
