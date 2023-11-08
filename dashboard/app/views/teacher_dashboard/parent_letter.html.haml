@@ -32,7 +32,7 @@
     script_data = {}
     script_data[:studioOrigin] = CDO.studio_url('', CDO.default_scheme)
     script_data[:pegasusOrigin] = CDO.code_org_url('', CDO.default_scheme)
-    script_data[:sections] = @current_user.sections_owned_or_instructed
+    script_data[:sections] = @sections
     script_data[:section] = @section_summary
     script_data[:userName] = @current_user.short_name
     script_data[:localeCode] = request.locale

@@ -2257,8 +2257,9 @@ class User < ApplicationRecord
     under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
-  # Get a section a user is in that is assigned to this script. Look first for
-  # sections they are in as a student, otherwise sections they are the owner of
+  # Get a section a user is in that is assigned to this script.
+  # Look first for sections they are in as a student.
+  # Otherwise sections they are an instructor of.
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id} ||
       sections_owned_or_instructed.find {|section| section.script_id == script.id}
