@@ -66,15 +66,20 @@
   text-align: center;
   color: $white;
   line-height: 1.4;
+  max-width: 70%;
+  margin: 2rem auto 4rem;
+
+  @media screen and (max-width: $width-md) {
+    max-width: 100%;
+  }
 
   h1, h2 {
     color: $white
   }
 
   h1 {
-    font-size: 3.5rem;
-    font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-size: 4rem;
+    font-family: var(--barlowSemiCondensed-semibold);
     margin: 0 auto 0.5em;
 
     @media screen and (max-width: $width-lg) {
@@ -94,19 +99,14 @@
     margin: 0 auto 1rem;
     font-family: var(--main-font);
     font-size: 1.25rem;
-
-    @media screen and (max-width: $width-md) {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 
   // The Hour of Code is coming/here text
   p {
-    font-size: 2em;
+    font-size: 1.5rem;
     font-family: var(--main-font);
-    font-weight: var(--bold-font-weight);
+    font-weight: var(--semi-bold-font-weight);
+    margin-bottom: 0.25rem;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.75em;

@@ -135,16 +135,24 @@ export default class ProgramExecutor {
   /**
    * Show a live preview of the program. Compiles student code and calls on the native API to run the live preview.
    */
-  async startLivePreview(code: string, songMetadata: SongMetadata) {
+  async startLivePreview(
+    code: string,
+    songMetadata: SongMetadata,
+    durationMs?: number
+  ) {
     this.reset();
     this.livePreviewActive = true;
-    await this.updateLivePreview(code, songMetadata);
+    await this.updateLivePreview(code, songMetadata, durationMs);
   }
 
   /**
    * Update the currently playing live preview.
    */
-  async updateLivePreview(code: string, songMetadata: SongMetadata) {
+  async updateLivePreview(
+    code: string,
+    songMetadata: SongMetadata,
+    durationMs?: number
+  ) {
     if (!this.livePreviewActive) {
       console.warn('Update live preview called before starting live preview');
       return;
@@ -157,7 +165,10 @@ export default class ProgramExecutor {
     }
 
     this.hooks.runUserSetup();
-    this.nativeAPI.livePreview(utils.getSongMetadataForPreview(songMetadata));
+    this.nativeAPI.livePreview(
+      utils.getSongMetadataForPreview(songMetadata),
+      durationMs
+    );
   }
 
   isLivePreviewRunning() {
