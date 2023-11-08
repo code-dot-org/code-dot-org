@@ -9328,6 +9328,10 @@
   hoc_how_to_events_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
   hoc_how_to_events_intro_desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
 
+  hoc_how_to_parents_intro_heading: "How to do an Hour of Code with your child"
+  hoc_how_to_parents_intro_desc_01: "Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but recent studies show: children who study computer science perform better in other subjects, excel at problem-solving, and are 17% more likely to enroll in college."
+  hoc_how_to_parents_intro_desc_02: "You and your child can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!"
+
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
