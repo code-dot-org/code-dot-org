@@ -53,3 +53,24 @@ export const getLabelMap = (
   });
   return map;
 };
+
+/**
+ * Generate code that can be executed to preview the output of the AI-generated blocks.
+ */
+export const generatePreviewCode = (
+  workspace: Workspace,
+  resultJsonString: string
+): string => {
+  const blocks = generateBlocksFromResult(workspace, resultJsonString);
+  // Create a temporary setup block
+  const setup: BlockSvg = workspace.newBlock('Dancelab_whenSetup') as BlockSvg;
+
+  // Attach the blocks to the setup block
+  setup.getInput('DO')?.connection?.connect(blocks[0].previousConnection);
+
+  if (!Blockly.getGenerator().isInitialized) {
+    Blockly.getGenerator().init(workspace);
+  }
+
+  return Blockly.getGenerator().blockToCode(setup);
+};
