@@ -169,8 +169,6 @@ const DanceAiModal: React.FunctionComponent = () => {
           ),
           goodEffect: JSON.parse(currentValue),
         };
-        minMaxAssociations.current =
-          JSON.parse(currentValue).minMaxAssociations;
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
@@ -255,7 +253,6 @@ const DanceAiModal: React.FunctionComponent = () => {
       JSON.stringify({
         inputs,
         ...generatedEffects.current.goodEffect,
-        minMaxAssociations: minMaxAssociations.current,
       })
     );
     onClose();
@@ -305,25 +302,6 @@ const DanceAiModal: React.FunctionComponent = () => {
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
-    minMaxAssociations.current = calculateMinMax();
-  };
-
-  const calculateMinMax = () => {
-    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
-      (accumulator: MinMax, currentValue: number) => {
-        const scores = getScores(currentValue);
-        const min = Math.min(...scores);
-        const max = Math.max(...scores);
-        if (min < accumulator.min) {
-          return {min: min, max: accumulator.max};
-        } else if (max > accumulator.max) {
-          return {min: accumulator.min, max: max};
-        } else {
-          return accumulator;
-        }
-      },
-      {min: Infinity, max: 0}
-    );
   };
 
   const getGeneratedEffect = (step: number) => {
@@ -477,6 +455,31 @@ const DanceAiModal: React.FunctionComponent = () => {
   const previewSizeSmall = 90;
 
   const labels = getLabels();
+
+  const calculateMinMax = () => {
+    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
+      (accumulator: MinMax, currentValue: number) => {
+        const scores = getScores(currentValue);
+        const min = Math.min(...scores);
+        const max = Math.max(...scores);
+        if (min < accumulator.min) {
+          accumulator.min = min;
+        }
+        if (max > accumulator.max) {
+          accumulator.max = max;
+        }
+        return accumulator;
+      },
+      {min: Infinity, max: 0}
+    );
+  };
+
+  if (
+    generatedEffects.current.goodEffect &&
+    generatedEffects.current.badEffects.length === BAD_GENERATED_RESULTS_COUNT
+  ) {
+    minMaxAssociations.current = calculateMinMax();
+  }
 
   return (
     <AccessibleDialog
