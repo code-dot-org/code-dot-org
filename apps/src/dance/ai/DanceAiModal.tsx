@@ -101,15 +101,15 @@ function useInterval(callback: () => void, delay: number | undefined) {
 
 const SCORE_VISUALIZATION_HEIGHT = 140;
 
+// How many emojis are to be selected.
+const SLOT_COUNT = 3;
+
 const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
 const DanceAiModal: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-
-  // How many emojis are to be selected.
-  const SLOT_COUNT = 3;
 
   // How many low-scoring results we show before the chosen one.
   const BAD_GENERATED_RESULTS_COUNT = 4;
@@ -865,7 +865,8 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
 
   const getHeight = (scores: GeneratedEffectScores) =>
     Math.round(
-      (getScaledNumerator(scores) / (range * 3)) * SCORE_VISUALIZATION_HEIGHT
+      (getScaledNumerator(scores) / (range * SLOT_COUNT)) *
+        SCORE_VISUALIZATION_HEIGHT
     );
 
   const layers = [
@@ -874,11 +875,11 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
       className: moduleStyles.barFillFirst,
     },
     {
-      height: getHeight(scores.slice(0, 2)),
+      height: getHeight([scores[0], scores[1]]),
       className: moduleStyles.barFillSecond,
     },
     {
-      height: getHeight(scores.slice(0, 1)),
+      height: getHeight([scores[0]]),
       className: moduleStyles.barFillThird,
     },
   ];
