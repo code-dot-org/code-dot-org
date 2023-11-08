@@ -15,6 +15,12 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
 import fontConstants from '@cdo/apps/fontConstants';
+import {
+  BodyThreeText,
+  Heading2,
+  Heading3,
+} from '../componentLibrary/typography';
+import Button from './Button';
 
 const WorkshopCard = props => {
   return (
@@ -178,6 +184,28 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
+        {this.state.nominated && (
+          <div>
+            <Heading3>
+              Congratulations on your nomination for a scholarship!
+            </Heading3>
+            <BodyThreeText>
+              You’ve been nominated as a talented, passionate educator who can
+              bring computer science to the students at your school. Your local
+              partner will have your nomination as they consider your
+              application for the regional scholarships or discounts they have
+              available. Grant funding is limited, so apply soon if you are
+              interested.
+            </BodyThreeText>
+          </div>
+        )}
+        <div>
+          <Heading2>Find your local workshop and apply</Heading2>
+          <BodyThreeText>
+            Look up details of the Professional Learning Program in your region
+            by submitting your zip code below.
+          </BodyThreeText>
+        </div>
         {this.state.showZip && (
           <form onSubmit={this.handleZipSubmit}>
             <label style={styles.schoolZipLabel}>School ZIP Code:</label>
@@ -495,14 +523,18 @@ class RegionalPartnerSearch extends Component {
 
 const styles = {
   schoolZipLabel: {
+    display: 'inline-block',
     marginRight: 40,
   },
   zipInput: {
+    display: 'inline-block',
     height: 28,
+    padding: '1px 2px',
+    margin: 0,
   },
   zipSubmit: {
-    marginTop: 20,
     display: 'inline-block',
+    marginTop: 20,
     marginLeft: 10,
   },
   hr: {
@@ -600,11 +632,12 @@ const StartApplicationButton = ({
   }
 
   const button = (
-    <a className={className} id={id} target={target} href={link}>
-      <button type="button" style={styles.bigButton}>
-        {buttonText}
-      </button>
-    </a>
+    <Button
+      color="brandSecondaryDefault"
+      text={buttonText}
+      href={link}
+      target={target}
+    />
   );
 
   if (buttonOnly) {
