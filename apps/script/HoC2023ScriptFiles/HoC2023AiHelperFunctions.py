@@ -10,7 +10,7 @@ from constants import *
 import pandas as pd
 import pickle 
 import openai
-openai.api_key = '' # Replace with your OpenAI API key
+openai.api_key = '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' # Replace with your OpenAI API key
 
 def get_json_object(file):
     block_config_file = open(file)
@@ -107,7 +107,9 @@ def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
     similarities = pd.DataFrame(similarities)
     
     # We use the emoji_ids and not the emoji Unicode as index for use by client
-    similarities.index = emojis.values()
+    # similarities.index = emojis.values()
+    # temp change to emoji modelDescriptiveName
+    similarities.index = emojis.keys()
     
     # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
     # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship

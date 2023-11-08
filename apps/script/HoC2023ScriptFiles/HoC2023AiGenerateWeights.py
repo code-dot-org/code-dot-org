@@ -72,7 +72,8 @@ for output_category in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
 # Write output to cache files storing associations and used by client.
 association_output = {}
 for output_category in [PALETTES, BACKGROUND_EFFECTS, FOREGROUND_EFFECTS]:
-    association_output[output_category] = {'emojiAssociations': similarities[output_category], 'output': blockly_ids[output_category]}
+    association_output[output_category] = {'emojiAssociations': similarities[output_category], 'output': blockly_ids[output_category], 'modelDescriptiveNames': model_descriptive_names[output_category]}
+    print ('association_output[output_category]: ' + str(association_output[output_category]))  
     path = 'apps/static/dance/ai/model/cached_' + output_category + '_map.json'
     with open(path, "w") as json_file:
         json_file.write(json.dumps(association_output[output_category]))

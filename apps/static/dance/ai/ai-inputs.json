@@ -3,112 +3,112 @@
     {
       "emoji": "💩", 
       "id": "poopy",
-      "modelDescriptiveName": "poopy"
+      "modelDescriptiveName": "cyclone swirl"
     },
     {
       "emoji": "🥰",
       "id": "romantic",
-      "modelDescriptiveName": "romantic"
+      "modelDescriptiveName": "romantic hearts"
     },
     {
       "emoji": "🎉",
       "id": "party",
-      "modelDescriptiveName": "party"
+      "modelDescriptiveName": "party celebrate"
     },
     {
       "emoji": "🤪",
       "id": "silly",
-      "modelDescriptiveName": "silly"
+      "modelDescriptiveName": "silly zany"
     },
     {
       "emoji": "✨",
       "id": "sparkle",
-      "modelDescriptiveName": "sparkle"
+      "modelDescriptiveName": "sparkly star"
     },
     {
       "emoji": "😀",
       "id": "happy",
-      "modelDescriptiveName": "happy"
+      "modelDescriptiveName": "happy grin"
     },
     {
       "emoji": "🪄",
       "id": "magic",
-      "modelDescriptiveName": "magic"
+      "modelDescriptiveName": "geometric grid"
     },
     {
       "emoji": "👻",
       "id": "spooky",
-      "modelDescriptiveName": "spooky"
+      "modelDescriptiveName": "jack-o-lantern fall"
     },
     {
       "emoji": "😚",
       "id": "cute",
-      "modelDescriptiveName": "cute"
+      "modelDescriptiveName": "candy"
     },
     {
       "emoji": "😎",
       "id": "funky",
-      "modelDescriptiveName": "funky"
+      "modelDescriptiveName": "sunglasses cool"
     },
     {
       "emoji": "🌊",
       "id": "wavy",
-      "modelDescriptiveName": "wavy"
+      "modelDescriptiveName": "waves water"
     },
     {
       "emoji": "💡",
       "id": "lights",
-      "modelDescriptiveName": "lights"
+      "modelDescriptiveName": "stars light"
     },
     {
       "emoji": "🌈",
       "id": "rainbow",
-      "modelDescriptiveName": "rainbow"
+      "modelDescriptiveName": "prism"
     },
     {
       "emoji": "🤖",
       "id": "robot",
-      "modelDescriptiveName": "robot"
+      "modelDescriptiveName": "electronic"
     },
     {
       "emoji": "😵‍💫",
       "id": "chaotic",
-      "modelDescriptiveName": "chaotic"
+      "modelDescriptiveName": "wavy ripple"
     },
     {
       "emoji": "🪩",
       "id": "disco",
-      "modelDescriptiveName": "disco"
+      "modelDescriptiveName": "disco ball party"
     },
     {
       "emoji": "😌",
       "id": "zen",
-      "modelDescriptiveName": "zen"
+      "modelDescriptiveName": "savoring food hungry"
     },
     {
       "emoji": "💨",
       "id": "fast",
-      "modelDescriptiveName": "fast"
+      "modelDescriptiveName": "flower"
     },
     {
       "emoji": "👿",
       "id": "evil",
-      "modelDescriptiveName": "evil"
+      "modelDescriptiveName": "music notes sound"
     },
     {
       "emoji": "🥶",
       "id": "cold",
-      "modelDescriptiveName": "cold"
+      "modelDescriptiveName": "sun warm"
     },
     {
       "emoji": "🚀",
       "id": "cosmic",
-      "modelDescriptiveName": "cosmic"
+      "modelDescriptiveName": "rocket space"
     },
     {
       "emoji": "😭",
       "id": "sad",
-      "modelDescriptiveName": "sad"
+      "modelDescriptiveName": "sad tears"
     },
     {
       "emoji": "📰",
@@ -118,12 +118,12 @@
     {
       "emoji": "🔥",
       "id": "warm",
-      "modelDescriptiveName": "warm"
+      "modelDescriptiveName": "hot fire"
     },
     {
       "emoji": "❄️",
       "id": "cool",
-      "modelDescriptiveName": "cool"
+      "modelDescriptiveName": "ice cream"
     }
   ]
 }
