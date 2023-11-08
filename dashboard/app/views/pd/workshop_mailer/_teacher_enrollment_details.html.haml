@@ -55,12 +55,7 @@
 %p
   Thank you,
   %br
-  - if @workshop.course == Pd::Workshop::COURSE_CSF
-    Sam Morris
-    %br
-    Regional Partner Network Manager, Code.org
-  - else
-    = @workshop.organizer.name
+  = @workshop.organizer.name
 
 %p
   P.S. Connect with other computer science teachers on Twitter
