@@ -34,10 +34,10 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
     if (response.ok) {
       return '';
     }
-    if (response.status === 404 && response.statusText === 'Not Found') {
+    if (response.status === 404) {
       return i18n.coteacherAddNoAccount({email});
     }
-    if (response.status === 403 && response.statusText === 'Forbidden') {
+    if (response.status === 403) {
       return i18n.coteacherUnableToEditCoteachers();
     }
 
@@ -53,11 +53,14 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
         if (json.error.includes('inviting self')) {
           return i18n.coteacherCannotInviteSelf();
         }
+
+        console.error(response);
         return i18n.coteacherUnknownValidationError({
           email,
         });
       })
-      .catch(() => {
+      .catch(e => {
+        console.error(e, response);
         return i18n.coteacherUnknownValidationError({
           email,
         });
