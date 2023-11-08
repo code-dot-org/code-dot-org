@@ -12,7 +12,7 @@ class EC2InstanceKiller < AwsResourceKiller
     instances_that_can_be_deleted = []
     instances.each do |instance|
       ec2_instance = EC2InstanceForDeletion(instance, {deletion_tag: @deletion_tag, minimum_time_stopped_in_seconds: @minimum_time_stopped_in_seconds, dry_run: @dry_run})
-      next unless ec2_instance.can_be_deleted
+      next unless ec2_instance.can_be_deleted?
       instances_that_can_be_deleted << ec2_instance
     end
     return instances_that_can_be_deleted
@@ -39,7 +39,7 @@ class EC2InstanceKiller < AwsResourceKiller
     end
 
     instances_to_delete.each do |instance|
-      if instance.can_be_deleted && instance.has_deletion_tag(tag)
+      if instance.can_be_deleted? && instance.has_deletion_tag?(tag)
         instance.delete
       end
     end

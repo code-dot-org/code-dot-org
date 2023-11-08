@@ -48,15 +48,16 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
 
   desc 'Cleanup stopped adhoc environment instances and all of its AWS resources'
   timed_task_with_logging cleanup_stale_instances: :environment do
-    STOPPED_AT_TAG = 'STOPPED AT'.freeze
-    filters = {
+    FILTERS = {
       'instance-state-name' => 'stopped',
       'tag:environment' => 'adhoc',
       'tag:aws:cloudformation:logical-id' => 'WebServer',
     }.map {|k, v| {name: k, values: [v]}}
 
+    STOPPED_AT_TAG = 'STOPPED AT'.freeze
     MINIMUM_STOPPED_TIME_IN_SECS = 6 * 86400
-    opts = {aws_filters: filters, deletion_tag: STOPPED_AT_TAG, minimum_time_stopped_in_seconds: MINIMUM_STOPPED_TIME_IN_SECS}
+    DRY_RUN = true
+    opts = {aws_filters: FILTERS, deletion_tag: STOPPED_AT_TAG, minimum_time_stopped_in_seconds: MINIMUM_STOPPED_TIME_IN_SECS, dry_run: DRY_RUN}
     ec2_instance_killer = EC2InstanceKiller(opts)
     ec2_instance_killer.delete
   end
