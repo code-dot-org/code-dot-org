@@ -52,6 +52,7 @@ class DCDOBase < DynamicConfigBase
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
       'show-coteacher-ui': DCDO.get('show-coteacher-ui', false),
+      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {})
     }
   end
 end
