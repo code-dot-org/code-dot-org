@@ -7,23 +7,16 @@ class OpenaiChatControllerTest < ActionController::TestCase
     OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({status: 200, json: {}})
   end
 
-  # User without ai_chat_access is unable to access the chat completion endpoint
+  #  A post request without a messages param returns a bad request
   test_user_gets_response_for :chat_completion,
-  user: :levelbuilder,
-  method: :post,
-  params: {messages: [{role: "user", content: "Say this is a test!"}]},
-  response: :forbidden
-
-  # With ai_chat_access, a post request without a messages param returns a bad request
-  test_user_gets_response_for :chat_completion,
-  user: :ai_chat_access,
+  user: :student,
   method: :post,
   params: {},
   response: :bad_request
 
-  # With ai_chat_access, a post request with a messages param returns a success
+  # A post request with a messages param returns a success
   test_user_gets_response_for :chat_completion,
-  user: :ai_chat_access,
+  user: :student,
   method: :post,
   params: {messages: [{role: "user", content: "Say this is a test!"}]},
   response: :success
