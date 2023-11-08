@@ -252,11 +252,11 @@ class ScriptLevelsController < ApplicationController
 
     if @script.can_be_instructor?(current_user)
       if params[:section_id]
-        @section = current_user.sections.find_by(id: params[:section_id])
+        @section = current_user.sections_owned_or_instructed.find_by(id: params[:section_id])
         @user = @section&.students&.find_by(id: params[:user_id])
       # If we have no url param and only one section make sure that is the section we are using
-      elsif current_user.sections.length == 1
-        @section = current_user.sections[0]
+      elsif current_user.sections_owned_or_instructed.length == 1
+        @section = current_user.sections_owned_or_instructed[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
       # This errs on the side of showing the warning by only if the script we are in
@@ -436,8 +436,8 @@ class ScriptLevelsController < ApplicationController
       if section.user == current_user
         @section = section
       end
-    elsif current_user.try(:sections).try(:where, hidden: false).try(:count) == 1
-      @section = current_user.sections.where(hidden: false).first
+    elsif current_user.try(:sections_owned_or_instructed).try(:where, hidden: false).try(:count) == 1
+      @section = current_user.sections_owned_or_instructed.where(hidden: false).first
     end
   end
 

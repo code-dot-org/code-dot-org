@@ -479,10 +479,10 @@ class User < ApplicationRecord
   # this method can be deleted and its references replaced by sections_instructed
   def sections_owned_or_instructed
     Section.
-      left_outer_joins(:active_section_instructors).
+      includes(:active_section_instructors).
       where('section_instructors.instructor_id' => id).
       or(Section.where(user_id: id)).
-      uniq
+      distinct
   end
 
   # Relationships (sections_as_students/followeds/teachers) from being a
@@ -1879,7 +1879,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher = student? ? [] : sections_owned_or_instructed.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
@@ -1914,7 +1914,7 @@ class User < ApplicationRecord
 
   # return the id of the section the user most recently created.
   def last_section_id
-    teacher? ? sections.where(hidden: false).last&.id : nil
+    teacher? ? sections_owned_or_instructed.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
@@ -2188,7 +2188,7 @@ class User < ApplicationRecord
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
       # to be owned by teachers.
-      sections.empty?
+      sections_owned_or_instructed.empty?
     end
   end
 
@@ -2261,7 +2261,7 @@ class User < ApplicationRecord
   # sections they are in as a student, otherwise sections they are the owner of
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id} ||
-      sections.find {|section| section.script_id == script.id}
+      sections_owned_or_instructed.find {|section| section.script_id == script.id}
   end
 
   def lesson_extras_enabled?(unit)
@@ -2594,13 +2594,13 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   private def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
+    @grades_being_taught ||= sections_owned_or_instructed.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
+    @curriculums_being_taught ||= sections_owned_or_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2612,11 +2612,11 @@ class User < ApplicationRecord
   end
 
   private def hidden_lesson_ids(sections)
-    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
+    return sections_owned_or_instructed.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   private def hidden_unit_ids(sections)
-    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
+    return sections_owned_or_instructed.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
@@ -2630,7 +2630,7 @@ class User < ApplicationRecord
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
-    sections.each do |section|
+    sections_owned_or_instructed.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section

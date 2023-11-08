@@ -637,7 +637,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "learning_goal_ai_evaluation_id", null: false
     t.bigint "teacher_id", null: false
     t.boolean "ai_feedback_approval", null: false
@@ -651,7 +651,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.index ["learning_goal_ai_evaluation_id"], name: "index_feedback_on_learning_goal_ai_evaluation"
   end
 
-  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "rubric_ai_evaluation_id", null: false
     t.bigint "learning_goal_id", null: false
     t.integer "understanding"
@@ -1479,7 +1479,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
-  create_table "potential_teachers", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "potential_teachers", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.integer "source_course_offering_id"
@@ -1668,7 +1668,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
-  create_table "rubric_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "rubric_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "requester_id", null: false
     t.bigint "rubric_id", null: false
