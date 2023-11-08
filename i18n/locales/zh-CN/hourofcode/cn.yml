@@ -6,8 +6,8 @@ cn:
   front_title: "%{campaign_date}，加入有史以来最大的学习活动"
   coming_soon: 即将推出
   new: 全新
-  hours_of_code_served: 代码服务时长
-  hoc_stat_languages: 学生在用40种语言学习
+  hours_of_code_served: 已服务的编程一小时
+  hoc_stat_languages: 学生使用超过45种语言学习
   hoc_stat_hours_served: 上亿学生参与过编程一小时
   hoc_stat_females: 女学生占编程一小时参与者的 50%
   campaign_date_start_short: 12月4日
@@ -45,8 +45,7 @@ cn:
   hoc2023_hero_desc_learn_page: 今年，我们通过提供包含人工智能 (AI) 和非人工智能的编程机会，将《编程一小时》推向新高度。
   hoc2023_social_creativity_with_ai_title: 编程一小时——你会创作什么？
   hoc2023_social_creativity_with_ai_desc: 使用计算机科学来探索和学习 AI！
-  hoc2023_what_is_hoc_desc: "《编程一小时》通过有趣的活动和视频免费介绍计算机科学，适合所有技能水平的学习者。今年的编程和人工智能庆祝活动得到了
-    400 多位合作伙伴、20,000 位教育工作者和 58,000 名志愿者的支持。"
+  hoc2023_what_is_hoc_desc: 编程一小时通过有趣的活动和视频免费介绍计算机科学，适合所有技能水平的学习者。今年的编程和人工智能庆祝活动得到了超过400个合作伙伴、20,000名教育工作者和58,000名志愿者的支持。
   hoc2022_header: 探索，玩耍，创造！
   social_hoc2022_explore_play_create: 使用计算机科学来探索、玩耍和创造！
   codeorg_homepage_hoc2022_body: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多。
@@ -149,9 +148,9 @@ cn:
   device_laptop: 笔记本电脑
   device_desktop_computer: 台式电脑
   device_mobile_device: 移动设备
-  for_everyone: 适合所有人
-  for_students_teacher_led_learning: 对于学生：教师主导的学习
-  for_students_teacher_led_lessons: 对于学生：教师主导的课程
+  for_everyone: 针对所有人
+  for_students_teacher_led_learning: 针对学生：教师主导的学习
+  for_students_teacher_led_lessons: 针对学生：教师主导的课程
   professional_development: 专业发展
   how_ai_works_video_series: AI 如何运作视频系列
   learn_how_ai_works: 了解 AI 的工作原理
@@ -201,17 +200,19 @@ cn:
   teacher_forum_desc: 访问编程一小时教师论坛，从其他教育工作者那里获得建议、见解和支持。
   required_materials: 所需材料：
   optional_materials: 可选材料：
-  for_students: 对于学生
+  for_students: 针对学生
   for_educators: 给教育工作者
-  call_to_action_host_hoc: 举办 “编程一小时”
+  call_to_action_host_hoc: 举办编程一小时
   call_to_action_hold_an_event: 举办活动
   call_to_action_register_event: 注册您的活动
   call_to_action_register_your_hoc: 注册您的编程一小时
   call_to_action_select_activity: 选择一项活动
+  call_to_action_select_coding_activity: 选择编程活动
   call_to_action_start_activity: 开始一项活动
   call_to_action_get_certificates: 获取证书
+  call_to_action_print_certificates: 打印证书
   call_to_action_go_beyond_hoc: 超越编程一小时
-  call_to_action_explore_all_hoc_activities: 浏览 Code.org 上的所有 “编程一小时” 活动
+  call_to_action_explore_all_hoc_activities: 浏览Code.org上的所有编程一小时活动
   call_to_action_start_dance_party: 开始舞会
   call_to_action_start_part_02: 从第二部分开始
   call_to_action_start_unplugged_activity: 开始不插电的活动
@@ -311,8 +312,8 @@ cn:
   call_to_action_applications_open: 现已开放申请
   call_to_action_apply_cs_ambassador: 申请成为 CS 大使
   call_to_action_coming_soon: 即将推出！
-  call_to_action_learn_how_ai_works: 了解 AI 的工作原理
-  call_to_action_learn_about_ai: 了解 AI
+  call_to_action_learn_how_ai_works: 了解AI如何运行
+  call_to_action_learn_about_ai: 了解AI
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
   aria_label_call_to_action_hoc_how_to_districts: 查看各地区的操作指南
@@ -328,6 +329,7 @@ cn:
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
   aria_label_call_to_action_teaching_csp: 启动 “计算机科学原理教学” 专业学习计划
+  aria_label_call_to_action_teaching_problem_solving: 启动 “教学问题解决和计算专业学习计划”
   aria_label_call_to_action_teaching_csc: 开始教授计算机科学联系专业学习计划
   aria_label_call_to_action_teaching_ai: 启动 “教学 AI 和机器学习” 专业学习计划
   aria_label_call_to_action_teaching_maker_cp: 开始教学 “使用设备创建应用程序”（Circuit Playground）专业学习计划
@@ -338,6 +340,7 @@ cn:
   aria_label_call_to_action_curriculum_csf_express_pre_reader: 探索计算机科学基础准读者速成课程
   aria_label_call_to_action_curriculum_csd: 探索 “计算机科学发现” 课程
   aria_label_call_to_action_curriculum_csp: 探索计算机科学原理课程
+  aria_label_call_to_action_curriculum_problem_solving: 探索问题解决和计算课程
   aria_label_call_to_action_curriculum_csc: 探索计算机科学联系课程
   aria_label_call_to_action_curriculum_ai: 探索 AI 和机器学习课程
   aria_label_call_to_action_curriculum_maker_cp: 探索使用设备创建应用程序（Circuit Playground）课程
@@ -394,6 +397,7 @@ cn:
   curriculum_name_csf_teacher_led: 教师主导课程
   curriculum_name_csd: 计算机科学发现
   curriculum_name_csp: 计算机科学原理
+  curriculum_name_problem_solving: 问题解决和计算
   curriculum_name_csc: 计算机科学联系
   curriculum_name_csa: 计算机科学A
   curriculum_name_csa_ai: 软件工程与计算机视觉
@@ -538,6 +542,7 @@ cn:
   module_label_teaching_csf: 教授计算机科学基础知识
   module_label_teaching_csd: 教授计算机科学发现
   module_label_teaching_csp: 教授计算机科学原理
+  module_label_teaching_problem_solving: 教学 “问题解决与计算”
   module_label_teaching_csc: 教授计算机科学联系
   module_label_teaching_ai: 教学 AI 和机器学习
   module_label_teaching_maker_cp: 教学用设备创建应用程序（Circuit Playground
@@ -1645,12 +1650,12 @@ cn:
   hoc_homepage_join_the_movement_description: 编程一小时全年都可参与，但每年12月，你的班级可以加入世界各地数百万学生的行列，用编程一小时庆祝计算机科学教育周。一年一度的庆祝活动于每年10月开始注册。
   hoc_homepage_what_is_hoc_subhead: 一小时的教程，超过45种语言。不需要经验。编程一小时活动全年都可免费参与。
   hoc_homepage_what_is_hoc_description: 编程一小时是一个小时的计算机科学介绍，使用有趣的教程展示出任何人都可以学习基础知识。这一基层运动得到全球逾400个合作伙伴和20万名教育工作者的支持。
-  hoc_homepage_registration_desc: 你的班级或小组可以加入全球数百万人的行列，参加 “编程一小时”！一年一度的计算机科学教育周庆祝活动将于十月份开始报名。但是，《编程一小时》全年开放。
+  hoc_homepage_registration_desc: 你的班级或小组可以加入全球数百万人的行列，进行编程一小时！一年一度的计算机科学教育周庆祝活动将于十月份开始报名。但是，编程一小时全年开放。
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[阅读我们的操作指南](%{howto_guide_url})为你的班级计划活动。"
   hoc_homepage_highlights_heading: 编程一小时亮点
   hoc_homepage_organized_by: 编程一小时由[Code.org](%{codeorg_url})组织。
-  hoc_events_heading: 注册举办 “编程一小时” 活动
-  hoc_events_jump_to_map: 跳转到 “编程一小时” 地图
+  hoc_events_heading: 注册举办编程一小时活动
+  hoc_events_jump_to_map: 跳转到编程一小时地图
   signup_closed: 编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。
   signup_registration_not_required: 您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a>
     或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。
@@ -1671,7 +1676,7 @@ cn:
   signup_event_entire_school_label: 我的整个学校都在参与
   signup_event_location_label: 活动地址（可选）
   signup_event_location_error: 活动地点是必填的。
-  signup_special_event_flag_label: 突出显示我的特别活动
+  signup_special_event_flag_label: 我的活动将涉及整个地区、整个组织、社区成员和/或其他超越一小时的特别计划
   signup_special_event_details_label: 特别活动的详细信息
   signup_send_posters_flag_label: 给我的学校或组织发送 <a href= "/resources#posters">海报</a>
   signup_send_posters_address_label: 学校或组织的地址
@@ -1727,7 +1732,7 @@ cn:
   map_title: 编程一小时地图
   map_header: 世界各地的《编程一小时》活动
   map_header_count_year: "%{year}年已有%{event_count}个已登记的编程一小时活动"
-  map_header_count_year_so_far: "%{event_count} 到目前为止注册的活动 %{year}"
+  map_header_count_year_so_far: "%{year}年到目前为止已注册%{event_count}个活动"
   see_all_events: 查看所有事件
   map_header_company: "#公司组织"
   map_header_country: "#次在%{country}"
@@ -1739,7 +1744,7 @@ cn:
   map_legend_cs_tech_jam: 特别活动
   map_warning: 您可以在 <a href='%{events_url}'> 活动页面</a>上查看所有已注册的活动。
   map_warning_markdown: 事件的完整列表可以在 [活动页面] 上查看。(%{events_url})
-  map_view_all_events: 查看 “编程一小时” 活动的完整列表 [here](%{events_url})。
+  map_view_all_events: 查看编程一小时活动的完整列表：[here](%{events_url})。
   meta_tag_og_title: 编程一小时活动即将开始
   meta_tag_og_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。
   meta_tag_twitter_title: 编程一小时活动即将开始
@@ -1818,7 +1823,7 @@ cn:
     如果网址不是以 studio.code.org 开头，则您可能正在从事第三方活动，需要联系该公司的支持团队寻求进一步帮助。
   stats_hoc_2013_image_alt: 2013年开始编程一小时活动统计数据
   stats_growth: 它以最快的速度到达 1500 万用户。
-  stats_i18n: 学生在用40种语言学习
+  stats_i18n: 学生使用超过45种语言学习
   stats_tumblr: Tumblr： 3.5 年
   stats_facebook: Facebook： 3 年
   stats_twitter: Twitter： 2.5 年
@@ -1907,7 +1912,7 @@ cn:
   event: 活动
   events: 活动
   highlights_title: 重点
-  highlights_header: 编程一小时重点
+  highlights_header: 编程一小时亮点
   highlights_description: 编程一小时活动的精彩瞬间
   highlights_previous: 往年的亮点
   highlights_see_more: 查看更多亮点
@@ -9019,6 +9024,9 @@ cn:
   step_06: 第 6 步
   step_07: 第 7 步
   step_08: 第 8 步
+  what: 什么：
+  when: 什么时候：
+  where: 在哪里：
   hoc_how_to_top_heading: 你的编程一小时指南
   hoc_how_to_top_desc: 量身定制的操作指南，打造最佳编程一小时体验。
   hoc_how_to_top_view_guide: 查看指南
@@ -9048,34 +9056,43 @@ cn:
   hoc_how_to_resources_discover_desc: 探索专为所有年龄段设计的超过 45 种语言的一小时教程。
   hoc_how_to_step_label_plan: 计划你将在何时何地完成编程一小时
   hoc_how_to_step_label_choose_activity: 选择你的活动
+  hoc_how_to_step_label_choose_activities: 选择你的活动
   hoc_how_to_step_label_test_activity: 测试一下你的活动
   hoc_how_to_step_label_register_event: 注册您的活动
   hoc_how_to_step_label_tell: 告诉你的学生、学校和社区
   hoc_how_to_step_label_get_coding: 开始编程！
   hoc_how_to_step_label_celebrate: 庆祝
   hoc_how_to_step_label_beyond_hoc: 超越编程一小时
+  hoc_how_to_step_label_plan_your_event: 计划您的活动
+  hoc_how_to_step_label_plan_your_hour: 计划好你的时间
+  hoc_how_to_step_label_help_spread_word: 帮助传播信息
   hoc_how_to_step_beyond_hoc_subhead: 还没到此结束！
-  hoc_how_to_step_beyond_hoc_desc: 计算机科学不必以 “编程一小时” 结束！尽管90％的家长希望孩子学习计算机科学，但大多数学校仍然不教计算机科学。立即学习如何将
-    CS 带到孩子的学校。
-  hoc_how_to_step_01_educators_subhead: 选择适合学生人数和可用设备数量的活动时间和空间。
-  hoc_how_to_step_01_educators_desc_01: 有哪些空间可供你参加 “编程一小时”？考虑一下你所在空间的技术能力，以及你期望学生使用的设备类型。学生可以在单台设备上学习教程，使用共享设备轮流学习，或者在课堂白板上一起尝试教程。甚至还有不插电的教程，无需任何设备即可完成。不插电的选项可以在任何地方完成，即使在户外也是如此！
-  hoc_how_to_step_01_educators_desc_02: 在 CS 教育周期间，世界各地的人们都会参加编程一小时庆祝活动，届 %{campaign_date}
-    时将发布最新的教程和活动。但是你可以在一年中的任何一天做 Hour of Code！
-  hoc_how_to_step_02_educators_desc_01: 根据小组的年龄、经验、兴趣等探索活动。学生尝试自学教程很受欢迎，尽管许多活动都包括供教师指导讨论或扩展活动的教学计划。
-  hoc_how_to_step_02_educators_desc_02: 提前决定是要为所有学生选择一个教程，还是让每个孩子自己选择教程。
-  hoc_how_to_step_02_educators_desc_03: 今年，你和你的学生可以通过教程、教学计划和我们全新的人工智能工作原理视频系列 [全面了解人工智能]
-    (%ai_url)。
-  hoc_how_to_step_03_educators_desc_01: 在进入教室之前亲自尝试一下教程，这样你就可以回答问题了！
-  hoc_how_to_step_03_educators_desc_02: 您也可以在学生的计算机或设备上测试教程，以确保它们支持声音和视频。带宽不足？计划在课堂前面播放视频，这样每个学生就不会下载自己的视频了。
-  hoc_how_to_step_03_educators_desc_03: 如果你选择的教程在声音方面效果最好，可以考虑为你的课堂提供耳机，或者让学生自带耳机。
-  hoc_how_to_step_04_educators_desc_01: 注册编程一小时活动后，您将收到有用的电子邮件，其中包含成功举办 “编程一小时” 的新闻和小贴士。这也是让当地志愿者知道你的学校正在参与的方法。志愿者是一个很好的资源，他们可以来你的课堂上谈论计算机科学，或者帮助你的学生进行
-    “编程一小时” 活动。
-  hoc_how_to_step_05_educators_desc_01: 通过分享 [鼓舞人心的视频] (%{videos_url})，重点介绍不同的人群和在现实世界中使用计算机科学的创造性方式，让你的学生为这次活动感到兴奋。
-  hoc_how_to_step_05_educators_desc_02: 与其他可能想一起享受乐趣的老师分享你的 “编程一小时” 计划！这也是一个很好的机会，可以联系学校的家长教师学生协会或分享家长时事通讯，让他们知道孩子正在学习什么。
-  hoc_how_to_step_06_educators_desc_01: 可以通过在黑板上共享链接或通过教室的学习管理系统来引导学生参与活动。你的学生可能会遇到挑战——没关系！学习编程就像学习一门新语言；你不会马上就流利了。如果你不知道答案，你可以一起弄清楚。
-  hoc_how_to_step_07_educators_desc_01: '一定要庆祝成功！在社交媒体上分享你的 “编程一小时” 活动的照片和视频。使用 #HourOfCode
-    和 @codeorg 这样我们也可以重点介绍你的成功！'
-  hoc_how_to_step_07_educators_desc_02: 您还可以为学生打印证书，以展示他们的成绩！
+  hoc_how_to_step_plan_hour_desc_01: 以下是帮助您入门的示例议程：
+  hoc_how_to_step_choose_activities_desc_01: 今年，编程一小时的主题是利用人工智能（AI）进行创意。无论是编写新的应用程序和算法、创作独特的艺术作品，还是精心编舞来让我们跳舞，人工智能都在为数字表达开辟新的机会，从而扩大我们对创造力的理解。完成编程活动并学习人工智能，让今年变得特别。
+  hoc_how_to_step_choose_activities_desc_02: 首先，[探索数百种编程活动]（%{activities_url}），然后根据小组的年龄、经验、兴趣等选择一项。[这些精选活动]
+    (%{ai_activities_url}) 将人工智能作为关键主题或课程。
+  hoc_how_to_step_choose_activities_desc_03: 然后，[全面了解人工智能] (%{ai_url})。学生可以观看该领域专家的简短视频，并附带教学计划，以延长活动范围并指导进一步的讨论。或者，我们为教育工作者提供免费的专业学习，以开启人工智能教学的未来。
+  hoc_how_to_step_educators_register_desc: 首先，注册您的活动，承诺与学生一起做 “编程一小时”。注册后，您将收到有用的电子邮件，其中包含成功举办
+    “编程一小时” 的新闻和技巧。你也将 [放在地图上] (%{map_url})。我们集体努力的显而易见的总体表现表明了全球对计算机科学运动的承诺，这将帮助我们建立系统性变革的势头。
+  hoc_how_to_step_educators_plan_desc_01: 在活动开始之前，请亲自尝试这些活动，这样可以确保它们可以在学生设备上运行，并准备好回答问题！带宽低？计划在课堂前面放视频，这样每个学生就不会自己下载视频。
+  hoc_how_to_step_educators_plan_desc_02: 世界各地的人们经常在计算机科学教育周期间参加 “编程一小时” 庆祝活动（%{campaign_date}），但你可以在一年中的任何一天参加
+    “编程一小时”！
+  hoc_how_to_step_educators_plan_desc_03: 选择适合学生数量和可用设备的空间。学生可以在个人设备上尝试活动，轮流共享设备，或者在白板上上课。甚至还有一些不插电的活动可以在根本没有设备的情况下完成，因此甚至可以在户外完成！
+  hoc_how_to_step_educators_spread_word_desc_01: 使用 [这些电子邮件模板] 帮助我们在您的社区中传播信息（%{email_url}）。
+  hoc_how_to_step_educators_spread_word_desc_02: 请两位同事 [register](%{register_url})
+    并举办 “编程一小时” 活动。反过来，他们可以保护两个同事，他们可以保护两个同事，等等。
+  hoc_how_to_step_educators_spread_word_desc_03: 请你的校长 [举办全校活动] ()%{host_url}。当 300
+    名或更多孩子参与时，您将获得一套特别的参与套装，内含 T 恤、海报、笔记本电脑贴纸等。[分享您的整个学校活动计划] (%{share_url}) 以获得资格.
+  hoc_how_to_step_educators_spread_word_desc_04: 联系学校的家长教师学生会或在家长通讯中分享，让他们知道孩子正在学习什么。
+  hoc_how_to_step_educators_plan_hour_desc_02: 上午 10:00-10:05：从一段 [励志视频] 开始 ()%{video_url}
+  hoc_how_to_step_educators_plan_hour_desc_03: 上午 10:05-10:45：学生进行编程活动
+  hoc_how_to_step_educators_plan_hour_desc_04: 上午 10:45-10:55：学生学习人工智能
+  hoc_how_to_step_educators_plan_hour_desc_05: 上午 10:55-11:00：老师致闭幕词
+  hoc_how_to_step_educators_get_coding_desc: 可以通过在黑板上共享链接或通过教室的学习管理系统来引导学生参与活动。你的学生可能会遇到挑战——没关系！学习编程就像学习一门新语言；你不会马上就流利了。如果你不知道答案，你可以一起弄清楚。
+  hoc_how_to_step_educators_celebrate_desc: '活动结束后，打印结业证书并祝贺您的学生。分享你的 “编程一小时” 活动的照片和视频，使用
+    #HourOfCode 和 @codeorg 炫耀学生的成就。'
+  hoc_how_to_step_educators_beyond_desc: 计算机科学不必以 “编程一小时” 结束！尽管90％的家长希望他们的孩子学习计算机科学，但大多数学校仍然不教计算机科学。为了提供帮助，我们的课程是基于网络的，可以永久免费使用。立即学习如何将
+    CS 带到您的学校。
   hoc_ai_top_desc: 无论你是课堂上的学生，还是开启人工智能教学未来的教育工作者，任何人都可以学习人工智能。
   hoc_ai_how_ai_works_video_series_desc: 这一系列短视频将向您介绍人工智能的工作原理及其重要性。然后深入研究算法偏见和人工智能决策伦理等问题。
   hoc_ai_learn_how_ai_works_desc: 通过 “人工智能的工作原理” 深入人工智能世界，课程与我们的视频系列相结合，向您介绍人工智能的工作原理及其重要性。

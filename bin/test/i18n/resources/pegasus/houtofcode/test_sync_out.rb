@@ -2,53 +2,30 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/pegasus/hourofcode/sync_out'
 
 describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18n::Resources::Pegasus::HourOfCode::SyncOut}
+  let(:described_instance) {described_class.new}
+
+  let(:crowdin_locale) {'Test'}
+  let(:i18n_locale) {'te-ST'}
+  let(:unique_language_code) {'expected_unique_language_code'}
+  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale, unique_language_s: unique_language_code}}
+  let(:is_source_language) {false}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
   before do
-    STDOUT.stubs(:print)
+    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
+    I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
   end
 
-  describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Pegasus::HourOfCode::SyncOut.any_instance.expects(:execute).once
-
-      I18n::Resources::Pegasus::HourOfCode::SyncOut.perform
-    end
+  it 'inherits from I18n::Utils::SyncOutBase' do
+    assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
-  describe '#execute' do
-    let(:sync_out) {I18n::Resources::Pegasus::HourOfCode::SyncOut.new}
-
-    let(:crowdin_locale) {'Not English'}
-    let(:i18n_locale) {'not-EN'}
-    let(:unique_language_code) {'expected_unique_language_code'}
-
-    let(:crowdin_locale_resource_dir) {CDO.dir('i18n/locales', crowdin_locale, 'hourofcode')}
-
-    before do
-      PegasusLanguages.stubs(:hoc_languages).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale, unique_language_s: unique_language_code}])
-      I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
-    end
-
-    context 'when the crowdin locale resource dir exists' do
-      before do
-        FileUtils.mkdir_p(crowdin_locale_resource_dir)
-      end
-
-      it 'removes empty crowdin locale dir' do
-        I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_locale_resource_dir)).once
-        sync_out.execute
-      end
-    end
-
-    context 'when the crowdin locale resource dir does not exist' do
-      it 'does not try to remove empty crowdin locale dir' do
-        I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_locale_resource_dir)).never
-        sync_out.execute
-      end
-    end
+  describe '#process' do
+    let(:process_language) {described_instance.process(language)}
 
     describe 'origin i18n file distributing' do
       let(:i18n_origin_locale_file_path) {CDO.dir('i18n/locales', i18n_locale, "hourofcode/#{unique_language_code}.yml")}
@@ -62,7 +39,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
       end
 
       it 'distributes the origin i18n file with locale fix' do
-        sync_out.execute
+        process_language
 
         refute File.exist?(crowdin_origin_en_file_path)
         assert File.exist?(hoc_origin_i18n_file_path)
@@ -70,7 +47,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
       end
 
       it 'moves the fixed origin i18n file from crowdin locale dir to i18n locale dir' do
-        sync_out.execute
+        process_language
 
         refute File.exist?(crowdin_origin_en_file_path)
         assert File.exist?(i18n_origin_locale_file_path)
@@ -78,17 +55,18 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
       end
 
       context 'when the locale is en-US' do
+        let(:is_source_language) {true}
         let(:crowdin_locale) {'English'}
         let(:i18n_locale) {'en-US'}
         let(:unique_language_code) {'en'}
 
         it 'does not distribute the origin file' do
-          sync_out.execute
+          process_language
           refute File.exist?(hoc_origin_i18n_file_path)
         end
 
         it 'moves the origin i18n file from crowdin locale dir to i18n locale dir without changes' do
-          sync_out.execute
+          process_language
 
           refute File.exist?(crowdin_origin_en_file_path)
           assert File.exist?(i18n_origin_locale_file_path)
@@ -129,30 +107,28 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
         expect_crowdin_file_to_hoc_markdown_i18n_dir_copying.in_sequence(execution_sequence)
         expect_hoc_markdown_i18n_file_header_restoring.in_sequence(execution_sequence)
 
-        sync_out.execute
+        process_language
       end
 
       it 'moves the markdown i18n file from crowdin locale dir to i18n locale dir without changes' do
-        sync_out.execute
+        process_language
 
         refute File.exist?(crowdin_markdown_file_path)
         assert File.exist?(i18n_markdown_file_path)
       end
 
-      context 'when the locale is en-US' do
-        let(:crowdin_locale) {'English'}
-        let(:i18n_locale) {'en-US'}
-        let(:unique_language_code) {'en'}
+      context 'when the language is the source language' do
+        let(:is_source_language) {true}
 
         it 'does not distribute the crowdin markdown file with restored sanitized headers' do
           expect_crowdin_file_to_hoc_markdown_i18n_dir_copying.never
           expect_hoc_markdown_i18n_file_header_restoring.never
 
-          sync_out.execute
+          process_language
         end
 
         it 'moves the markdown i18n file from crowdin locale dir to i18n locale dir without changes' do
-          sync_out.execute
+          process_language
 
           refute File.exist?(crowdin_markdown_file_path)
           assert File.exist?(i18n_markdown_file_path)

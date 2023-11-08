@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "उस डांसर को और छोटा बनाने के लिए `set backup_dancer2 size` ब्लॉक का इस्तेमाल करें।",
   "danceFeedbackUseSetTint": "डांसर का रंग बदलने के लिए `set tint` ब्लॉक का इस्तेमाल करें।",
   "danceFeedbackUseStartMapping": "अपने प्रोग्राम में <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ब्लॉक शामिल करने की कोशिश करें।",
+  "danceFeedbackKeepCoding": "कोडिंग करते रहें! अभी कुछ ठीक नहीं है।",
   "measure": "संगीत प्रविधि:"
 }

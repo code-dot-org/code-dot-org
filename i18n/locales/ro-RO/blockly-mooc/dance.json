@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Utilizează blocul \"setare dimensiune dansator_rezervă2\" pentru a face dansatorul mai mic.",
   "danceFeedbackUseSetTint": "Utilizează `setare nuanță` pentru a schimba nuanța unui dansator.",
   "danceFeedbackUseStartMapping": "Încercă să adaugi blocul <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicorn_în_dreapta</title><title name=\"PROPERTY\">''gamă''</title><title name=\"RANGE\">''sunet jos''</title></block></xml> la programul tău.",
+  "danceFeedbackKeepCoding": "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie.",
   "measure": "Măsură:"
 }

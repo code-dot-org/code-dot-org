@@ -23,7 +23,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -44,7 +44,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -65,7 +65,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open

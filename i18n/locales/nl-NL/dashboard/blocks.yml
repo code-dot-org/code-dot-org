@@ -1048,7 +1048,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
       gamelab_clickedSpritePointer:
@@ -1175,7 +1175,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
           KEY:
             '"up"': omhoog
             '"down"': omlaag
@@ -1470,7 +1470,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
       gamelab_spriteSay:
         text: "{SPRITE} zegt {SPEECH}"
       gamelab_spriteSayTime:

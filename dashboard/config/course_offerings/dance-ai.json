@@ -1,0 +1,21 @@
+{
+  "key": "dance-ai",
+  "display_name": "dance-ai",
+  "category": "hoc",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Hour of Code",
+  "marketing_initiative": "HOC",
+  "grade_levels": "3,4,5,6,7,8",
+  "header": "favorites",
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"\"}",
+  "description": "In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment. ",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
+}

@@ -1,7 +1,10 @@
 {
+  "aiDanceFeedbackAiBlockNoParametersOnEvent": "Scena nie uległa zmianie po 4 taktach. Wybierz 3 emotikony, które pasują do nastroju utworu i poproś AI o wygenerowanie nowego etapu.",
+  "aiDanceFeedbackAiEditBlocks": "Kliknij blok „AI generuj scenę”, a następnie kliknij „edytuj kod”, aby użyć bloków kodu tła i pierwszego planu.",
   "aiDanceFeedbackNoAiBlock": "Przeciągnij blok „użyj AI” z przybornika.",
   "aiDanceFeedbackTinkerAiBlock": "Upewnij się, by wybrać nowe tło lub efekt pierwszego planu.",
   "aiDanceNewMove": "Musisz dodać blok, aby tancerz wykonał nowy ruch.",
+  "aiDanceStageChangeAfterMeasures": "Upewnij się, że podłączyłeś blok „AI generuj etap” do zdarzenia „po 4 taktach”.",
   "danceFeedbackDidntPress": "Pamiętaj, aby naciskać klawisze strzałek podczas tańca.",
   "danceFeedbackKeyEvent": "Pamiętaj, aby dołączyć kod do bloku <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> i naciskaj klawisz podczas tańca.",
   "danceFeedbackNeedBackup": "Musisz utworzyć grupę tancerzy w tle za pomocą bloku <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">„circle”</title></block> </xml>.",
@@ -21,5 +24,6 @@
   "danceFeedbackUseSetSize": "Aby zmniejszyć tego tancerza, użyj bloku 'ustaw wielkość kopia_tancerza2'.",
   "danceFeedbackUseSetTint": "Do zmiany zabarwienia tancerza użyj bloku 'ustaw odcień'.",
   "danceFeedbackUseStartMapping": "Spróbuj dodać do swojego programu blok <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>.",
+  "danceFeedbackKeepCoding": "Koduj dalej! Coś jest jeszcze nie w porządku.",
   "measure": "Takt:"
 }

@@ -286,8 +286,10 @@ bs:
   call_to_action_register_event: Registrirajte svoj događaj
   call_to_action_register_your_hoc: Registrirajte svoj sat kodova
   call_to_action_select_activity: Odaberite aktivnost
+  call_to_action_select_coding_activity: Odaberite aktivnost kodiranja
   call_to_action_start_activity: Započnite aktivnost
   call_to_action_get_certificates: Nabavite certifikate
+  call_to_action_print_certificates: Ispis certifikata
   call_to_action_go_beyond_hoc: Idite dalje od Sata kodeksa
   call_to_action_explore_all_hoc_activities: Istražite sve aktivnosti Hour of Code
     sa Code.org
@@ -413,6 +415,8 @@ bs:
     Nastava informatike Otkrića
   aria_label_call_to_action_teaching_csp: Pokrenite program profesionalnog učenja
     u nastavi principa računarskih nauka
+  aria_label_call_to_action_teaching_problem_solving: Pokrenite program profesionalnog
+    učenja u rješavanju problema nastave i računarstvu
   aria_label_call_to_action_teaching_csc: Pokrenite program profesionalnog učenja
     Nastava Computer Science Connections
   aria_label_call_to_action_teaching_ai: Pokrenite program profesionalnog učenja za
@@ -431,6 +435,8 @@ bs:
     informatike
   aria_label_call_to_action_curriculum_csp: Istražite nastavni plan i program principa
     računarskih nauka
+  aria_label_call_to_action_curriculum_problem_solving: Istražite nastavni plan i
+    program za rješavanje problema i računarstvo
   aria_label_call_to_action_curriculum_csc: Istražite nastavni plan i program Computer
     Science Connections
   aria_label_call_to_action_curriculum_ai: Istražite nastavni plan i program za AI
@@ -512,6 +518,7 @@ bs:
   curriculum_name_csf_teacher_led: Nastavnik je vodio lekciju
   curriculum_name_csd: Otkrića računarskih nauka
   curriculum_name_csp: Načela računarskih nauka
+  curriculum_name_problem_solving: Rješavanje problema i računarstvo
   curriculum_name_csc: Computer Science Veze
   curriculum_name_csa: AP® Computer Science A
   curriculum_name_csa_ai: Softverski inženjering & Computer Vision
@@ -709,6 +716,7 @@ bs:
   module_label_teaching_csf: Podučavanje osnova računarskih nauka
   module_label_teaching_csd: Nastava otkrića informatike
   module_label_teaching_csp: Nastava principa računarskih nauka
+  module_label_teaching_problem_solving: Nastava rješavanja problema i računarstva
   module_label_teaching_csc: Podučavanje računarskih nauka veze
   module_label_teaching_ai: Podučavanje AI i mašinskog učenja
   module_label_teaching_maker_cp: Podučavanje kreiranja aplikacija s uređajima (Circuit
@@ -13237,6 +13245,9 @@ bs:
   step_06: Korak 6
   step_07: Korak 7
   step_08: Korak 8
+  what: 'Šta:'
+  when: 'Kada:'
+  where: 'Gdje:'
   hoc_how_to_top_heading: Vaš vodič za Sat koda
   hoc_how_to_top_desc: Prilagođeni vodiči za najbolje iskustvo Hour of Code.
   hoc_how_to_top_view_guide: Pogledajte vodič za
@@ -13280,67 +13291,85 @@ bs:
     dizajniranih za sve uzraste na preko 45 jezika.
   hoc_how_to_step_label_plan: Planirajte gdje i kada ćete raditi svoj Sat koda
   hoc_how_to_step_label_choose_activity: Odaberite svoju aktivnost
+  hoc_how_to_step_label_choose_activities: Odaberite svoje aktivnosti
   hoc_how_to_step_label_test_activity: Testirajte svoju aktivnost
   hoc_how_to_step_label_register_event: Registrirajte svoj događaj
   hoc_how_to_step_label_tell: Recite svojim učenicima, školi i zajednici
   hoc_how_to_step_label_get_coding: Nabavite kodiranje!
   hoc_how_to_step_label_celebrate: Proslavite
   hoc_how_to_step_label_beyond_hoc: Iza sata koda
+  hoc_how_to_step_label_plan_your_event: Planirajte svoj događaj
+  hoc_how_to_step_label_plan_your_hour: Planirajte svoj sat
+  hoc_how_to_step_label_help_spread_word: Pomozite u širenju riječi
   hoc_how_to_step_beyond_hoc_subhead: Ovdje se ne završava!
-  hoc_how_to_step_beyond_hoc_desc: Računarska nauka ne mora završiti Satom koda! Dok
-    90% roditelja želi da njihovo dijete uči računarstvo, većina škola to još uvijek
-    ne podučava. Naučite kako danas donijeti CS u školu vašeg djeteta.
-  hoc_how_to_step_01_educators_subhead: Odaberite vrijeme i prostor događaja koji
-    odgovara broju učenika i uređaja koje imate na raspolaganju.
-  hoc_how_to_step_01_educators_desc_01: Koji su vam prostori dostupni za obavljanje
-    Sata koda? Razmotrite tehnološke mogućnosti vašeg prostora i vrste uređaja na
-    kojima očekujete da će vaši učenici raditi. Učenici mogu raditi na tutorijalima
-    na jednom uređaju, naizmjenično koristiti zajednički uređaj ili zajedno isprobati
-    udžbenik na tabli u učionici. Postoje čak i isključeni vodiči koji se mogu dovršiti
-    bez uređaja. Opcije isključenja mogu se obaviti bilo gdje - čak i na otvorenom!
-  hoc_how_to_step_01_educators_desc_02: Ljudi širom svijeta pridružuju se proslavi
-    Sata koda tokom sedmice obrazovanja CS %{campaign_date} kada se objavljuju najnoviji
-    tutorijali i aktivnosti. Ali možete napraviti Sat koda bilo koji dan u godini!
-  hoc_how_to_step_02_educators_desc_01: Istražite aktivnosti na osnovu starosti, iskustva,
-    interesa i još mnogo toga vaše grupe. Popularno je za učenike da isprobaju samoupravne
-    tutorijale, iako mnoge aktivnosti uključuju planove lekcija za nastavnike koji
-    će voditi diskusiju ili proširiti aktivnost.
-  hoc_how_to_step_02_educators_desc_02: Odlučite unaprijed želite li odabrati jedan
-    vodič za sve svoje učenike ili dopustite svakom djetetu da odabere svoj.
-  hoc_how_to_step_02_educators_desc_03: Ove godine vi i vaši učenici možete [saznati
-    sve o AI] (%ai_url) putem tutorijala, planova lekcija i naše nove video serije
-    Kako AI radi.
-  hoc_how_to_step_03_educators_desc_01: Isprobajte tutorijal sami prije nego što uđete
-    u učionicu kako biste mogli odgovoriti na pitanja!
-  hoc_how_to_step_03_educators_desc_02: Također možete testirati tutorijale na studentskim
-    računarima ili uređajima kako biste bili sigurni da podržavaju zvuk i video. Imate
-    nisku propusnost? Planirajte prikazivanje videozapisa na prednjoj strani razreda,
-    tako da svaki učenik ne preuzima vlastite videozapise.
-  hoc_how_to_step_03_educators_desc_03: Razmislite o pružanju slušalica za svoj razred
-    ili zamolite učenike da donesu svoje, ako vodič koji odaberete najbolje funkcionira
-    sa zvukom.
-  hoc_how_to_step_04_educators_desc_01: Kada registrirate svoj događaj Hour of Code,
-    primit ćete korisne e-pošte s vijestima i savjetima za organizovanje uspješnog
-    Sata koda. To je također način na koji možete obavijestiti lokalne volontere da
-    vaša škola učestvuje. Volonteri su odličan resurs i mogu doći razgovarati s vašim
-    razredima o računarstvu ili pomoći svojim učenicima u aktivnostima Sata koda.
-  hoc_how_to_step_05_educators_desc_01: Uzbudite svoje učenike zbog događaja dijeljenjem
-    [inspirativnih videozapisa] (%{videos_url}) ističući različite ljude i kreativne
-    načine na koje se računarska nauka može koristiti u stvarnom svijetu.
-  hoc_how_to_step_05_educators_desc_02: Podijelite svoje planove Hour of Code sa drugim
-    nastavnicima koji bi se možda željeli pridružiti zabavi! Ovo je također sjajna
-    prilika da se obratite Udruženju učenika roditeljskih učitelja vaše škole ili
-    podijelite u biltenima roditelja, obavijestite ih šta njihova djeca uče.
-  hoc_how_to_step_06_educators_desc_01: Usmjerite svoje učenike na aktivnost, možda
-    dijeljenjem veze na ploči ili putem sistema upravljanja učenjem u učionici. Vaši
-    učenici mogu naići na izazove - to je u redu! Učenje programiranja je poput učenja
-    novog jezika; nećete odmah tečno govoriti. Ako ne znate odgovor, možete to shvatiti
-    zajedno.
-  hoc_how_to_step_07_educators_desc_01: 'Obavezno proslavite uspjeh! Podijelite fotografije
-    i video zapise svog događaja Hour of Code na društvenim mrežama. Koristite #HourOfCode
-    i @codeorg kako bismo mogli istaknuti i vaš uspjeh!'
-  hoc_how_to_step_07_educators_desc_02: Također možete ispisati certifikate za svoje
-    učenike kako bi pokazali svoja postignuća!
+  hoc_how_to_step_plan_hour_desc_01: 'Evo uzorka dnevnog reda za početak:'
+  hoc_how_to_step_choose_activities_desc_01: Ove godine tema Sat koda je Kreativnost
+    s umjetnom inteligencijom (AI). Bilo da se radi o kodiranju novih aplikacija i
+    algoritama, stvaranju jedinstvene umjetnosti ili izradi koreografije koja će nas
+    natjerati na ples, AI otvara nove mogućnosti za digitalno izražavanje koje proširuju
+    naše razumijevanje kreativnosti. Učinite ovu godinu posebnom završavanjem aktivnosti
+    kodiranja I učenjem o AI.
+  hoc_how_to_step_choose_activities_desc_02: Prvo, [istražite stotine aktivnosti kodiranja]
+    (%{activities_url}) i odaberite jednu na osnovu starosti, iskustva, interesa i
+    još mnogo toga vaše grupe. [Ove odabrane aktivnosti] (%{ai_activities_url}) prikazuju
+    umjetnu inteligenciju kao ključnu temu ili lekciju.
+  hoc_how_to_step_choose_activities_desc_03: Zatim, [saznajte sve o AI] (%{ai_url}).
+    Studenti mogu gledati kratke video zapise sa stručnjacima iz te oblasti, a postoje
+    i prateći planovi lekcija za proširenje aktivnosti i vođenje daljnje diskusije.
+    Ili, nudimo besplatno profesionalno učenje za nastavnike kako bi otključali budućnost
+    nastave sa i o AI.
+  hoc_how_to_step_educators_register_desc: Započnite s posvećenošću obavljanju sata
+    koda sa svojim učenicima tako što ćete registrirati svoj događaj. Kada se registrirate,
+    primit ćete korisne e-pošte s vijestima i savjetima za održavanje uspješnog sata
+    koda. Također ćete biti [staviti na kartu] (%{map_url}). Vidljiva ukupnost naših
+    kolektivnih napora pokazuje globalnu posvećenost pokretu računarskih nauka, koji
+    će nam pomoći da izgradimo zamah za sistemske promjene.
+  hoc_how_to_step_educators_plan_desc_01: Prije vašeg događaja, sami isprobajte aktivnosti
+    kako biste bili sigurni da rade na studentskim uređajima i da ste spremni odgovoriti
+    na pitanja! Imate mali propusni opseg? Planirajte prikazivanje videozapisa ispred
+    razreda, tako da svaki učenik ne preuzima svoje video zapise.
+  hoc_how_to_step_educators_plan_desc_02: Ljudi širom svijeta često se pridružuju
+    proslavi Sat koda tokom Nedelje obrazovanja u računarskim naukama (%{campaign_date}),
+    ali možete napraviti Sat koda bilo koji dan u godini!
+  hoc_how_to_step_educators_plan_desc_03: Odaberite prostor koji odgovara broju učenika
+    i uređaja koji imate na raspolaganju. Učenici mogu isprobati aktivnosti na pojedinačnim
+    uređajima, naizmjenično dijeliti uređaj ili kao razred na bijeloj tabli. Postoje
+    čak i isključene aktivnosti koje se mogu dovršiti bez ikakvih uređaja, pa se mogu
+    obavljati čak i vani!
+  hoc_how_to_step_educators_spread_word_desc_01: Pomozite nam da širimo riječ u vašoj
+    zajednici pomoću [ovih predložaka e-pošte] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Zamolite dvoje kol [register]ega
+    da (%{register_url}) i budu domaćini aktivnosti Sat koda. Oni zauzvrat mogu osigurati
+    dvoje kolega, koji mogu osigurati dva kolega itd.
+  hoc_how_to_step_educators_spread_word_desc_03: Zamolite svog ravnatelja da [bude
+    domaćin događanja u cijeloj školi] (%{host_url}). Kada učestvuje 300 ili više
+    djece, možete dobiti poseban komplet za angažman s majicama, plakatima, naljepnicama
+    za laptop i još mnogo toga. [Podijelite svoj plan cijelog školskog događaja] (%{share_url})
+    da biste se kvalificirali.
+  hoc_how_to_step_educators_spread_word_desc_04: Obratite se Udruženju učenika roditelja
+    učitelja vaše škole ili podijelite u roditeljskim biltenima, obavješćujući ih
+    šta njihova djeca uče.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Počnite s [inspirativnim
+    videom] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Studenti obavljaju svoju
+    aktivnost kodiranja'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Studenti uče o AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Učitelj daje završnu
+    riječ'
+  hoc_how_to_step_educators_get_coding_desc: Usmjerite svoje učenike na aktivnost,
+    možda dijeljenjem veze na ploči ili putem sistema upravljanja učenjem u učionici.
+    Vaši učenici mogu naići na izazove - to je u redu! Učenje programiranja je poput
+    učenja novog jezika; nećete odmah tečno govoriti. Ako ne znate odgovor, možete
+    to shvatiti zajedno.
+  hoc_how_to_step_educators_celebrate_desc: 'Nakon vašeg događaja, odštampajte potvrde
+    o završetku i čestitajte svojim učenicima. Podijelite fotografije i video zapise
+    svog događaja Hour of Code i pokažite postignuća svojih učenika koristeći #HourOfCode
+    i @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Računarska nauka ne mora završiti sa Satom
+    koda! Iako 90% roditelja želi da njihovo dijete uči informatiku, većina škola
+    to još uvijek ne podučava. Da bismo pomogli, naš nastavni plan i program je zasnovan
+    na webu i besplatan za upotrebu, zauvijek. Naučite kako danas donijeti CS u svoju
+    školu.
   hoc_ai_top_desc: Svatko može naučiti o AI, bilo da ste učenik u učionici ili nastavnik
     koji otključava budućnost nastave sa i o AI.
   hoc_ai_how_ai_works_video_series_desc: Ova serija kratkih video zapisa upoznat će

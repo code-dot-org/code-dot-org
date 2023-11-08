@@ -1,0 +1,155 @@
+@import "color.scss";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+.expandedSection {
+  margin-top: 5px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.add {
+  padding: 12px;
+  border: 1px solid $light_gray_200;
+  background: $neutral_light;
+
+  .input {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 0;
+    padding: 6px 12px;
+  }
+
+  .inputError {
+    border: 1px solid $product_negative_default;
+  }
+
+  .form {
+    display: flex;
+    width: 100%; 
+    margin: 0;
+  }
+
+  .label {
+    @include label-one;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .button {
+    margin: 0;
+    min-width: 170px;
+  }
+
+  .error {
+    color: $product_negative_default;
+  }
+
+  .infoCircle {
+    margin-right: 5px;
+  }
+
+  .inputDescription {
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+}
+
+.table {
+  border-left: 1px solid $light_gray_200;
+  border-right: 1px solid $light_gray_200;
+  margin-bottom: 20px;
+
+  &Row {
+    display: flex;
+    padding: 12px;
+    min-height: 48px;
+    max-height: 48px;
+    border-bottom: 1px solid $light_gray_200;
+    align-items: center;
+  }
+
+  &InfoCell {
+    flex: 1;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &StatusCell {
+    min-width: 150px;
+  }
+
+  &RemoveButton {
+    margin: 0;
+    border:  none;
+    background-color: $white;
+    color: $neutral_dark60;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+      color: $product_negative_default;
+      background: $product_negative_light;
+      box-shadow: none;
+    }
+  }
+
+  &Pill {
+    border-radius: 100px;
+    padding: 4px 8px;
+    margin-left: 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: $light_black;
+    width: fit-content;
+  }
+
+  &Active {
+    background-color: $light_affirmative_100;
+  }
+
+  &Pending{
+    background-color: $neutral_dark10;
+  }
+
+  &Declined{
+    background-color: $product_negative_light;}
+
+  &Error{
+    background-color: $neutral_dark10;
+  }
+
+  &PillIcon {
+    margin-right: 5px;
+  }
+}
+
+.removeDialog {
+  width: 450px !important;
+
+  &Title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &Description {
+    font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &Buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &Remove {
+    margin-left: 16px;
+  }
+}

@@ -6,7 +6,7 @@ uz:
   front_title: Tarixdagi eng katta tadbirga asoslanish:% {campaign_date}
   coming_soon: Tez kunda
   new: Yangi
-  hours_of_code_served: Xizmat qilingan kod soatlari
+  hours_of_code_served: O'talgan "Dasturlash Soatlari"
   hoc_stat_languages: O'quvchilar 45 dan ortiq tillarda o'rganishmoqda
   hoc_stat_hours_served: 100 milliondan ortiq o'quvchilar Dasturlash soatini qatnashib
     ko'rdilar
@@ -53,10 +53,10 @@ uz:
   hoc2023_social_creativity_with_ai_title: Kod soati - Siz nima yaratasiz?
   hoc2023_social_creativity_with_ai_desc: AIni o'rganish va o'rganish uchun kompyuter
     fanidan foydalaning!
-  hoc2023_what_is_hoc_desc: Kod soati - bu barcha mahorat darajasidagi o'quvchilar
-    uchun qiziqarli tadbirlar va videolar orqali kompyuter faniga bepul kirish. Bu
-    yilgi kodlash va AI nishonlash 400 dan ortiq hamkorlar, 20 ming nafar tarbiyachi
-    va 58 ming ko'ngillilar tomonidan qo'llab-quvvatlanadi.
+  hoc2023_what_is_hoc_desc: Dasturlash soati - bu mahorati turli xil darajada bo'lgan
+    o'quvchilar uchun qiziqarli mashg'ulotlar va video roliklar orqali kompyuter fanlariga
+    bepul kirish imkoniyati. Dasturlash va SI-ning bu yilgi nishonlanishini 400 dan
+    ortiq hamkorlar, 20 000 nafar o'qituvchilar va 58 000 volontyorlar qo'llab-quvvatlamoqda.
   hoc2022_header: Taqdiq qiling, O'ynang, Yarating!
   social_hoc2022_explore_play_create: Kompyuter fanlarini tadqiq qilish, o'ynash va
     yaratish uchun foydalaning!
@@ -297,18 +297,20 @@ uz:
     uchun Kod soati o'qituvchilari forumiga tashrif buyuring.
   required_materials: 'Kerakli Materiallar:'
   optional_materials: 'Ixtiyoriy Materiallar:'
-  for_students: Talabalar uchun
+  for_students: O'quvchilar uchun
   for_educators: O‘qituvchilar uchun "
-  call_to_action_host_hoc: Kod soatiga mezbonlik qiling
+  call_to_action_host_hoc: '"Dastrulash Soati"ni o''tkazing'
   call_to_action_hold_an_event: Tadbir o'tkazing
   call_to_action_register_event: Tadbiringizni ro'yxatdan o'tkazing
   call_to_action_register_your_hoc: Dasturlash soatingizni ro'yxatdan o'tkazing
   call_to_action_select_activity: Faoliyatni tanlang
+  call_to_action_select_coding_activity: Kodlash faoliyatini tanlang
   call_to_action_start_activity: Faoliyatni boshlang
   call_to_action_get_certificates: Sertifikatlar oling
+  call_to_action_print_certificates: Sertifikatlarni chop etish
   call_to_action_go_beyond_hoc: Kod soatidan tashqariga chiqing
-  call_to_action_explore_all_hoc_activities: Code.org saytidan barcha Hour of Code
-    tadbirlarini o'rganing
+  call_to_action_explore_all_hoc_activities: 'Barcha "Dasturlash Soati" mashg''ulotlarini
+    Code.org veb-saytidan o''rganib chiqing  '
   call_to_action_start_dance_party: Raqs partiyasini boshlang
   call_to_action_start_part_02: Ikkinchi qismni boshlang
   call_to_action_start_unplugged_activity: Uchib qo'yilgan faoliyatni boshlang
@@ -417,8 +419,8 @@ uz:
   call_to_action_applications_open: Ilovalar endi ochiladi
   call_to_action_apply_cs_ambassador: CS elchisi bo'lish uchun murojaat qiling
   call_to_action_coming_soon: Tez orada!
-  call_to_action_learn_how_ai_works: AI qanday ishlashini bilib oling
-  call_to_action_learn_about_ai: AI haqida bilib oling
+  call_to_action_learn_how_ai_works: SI qanday ishlashi haqida bilib oling
+  call_to_action_learn_about_ai: SI haqida bilib oling
   aria_label_call_to_action_hoc_how_to_educators: O'qituvchilar uchun qanday qo'llanmani
     ko'ring
   aria_label_call_to_action_hoc_how_to_companies: Kompaniyalar uchun qanday qo'llanmani
@@ -447,6 +449,8 @@ uz:
     professional ta'lim dasturini boshlang
   aria_label_call_to_action_teaching_csp: Kompyuter fanlari tamoyillarini o'qitish
     professional ta'lim dasturini boshlang
+  aria_label_call_to_action_teaching_problem_solving: Muammolarni yechish va hisoblashni
+    o'qitish professional ta'lim dasturini ishga tushirish
   aria_label_call_to_action_teaching_csc: Kompyuter fanlari aloqalarini o'qitish professional
     ta'lim dasturini boshlang
   aria_label_call_to_action_teaching_ai: SI va mashinaviy o'rganishni o'qitish professional
@@ -465,6 +469,8 @@ uz:
     dasturini o'rganib chiqing
   aria_label_call_to_action_curriculum_csp: Kompyuter Fanlari tamoyillari o'quv dasturini
     o'rganib chiqing
+  aria_label_call_to_action_curriculum_problem_solving: Muammolarni hal qilish va
+    hisoblash o'quv dasturini o'rganing
   aria_label_call_to_action_curriculum_csc: Kompyuter Fanlari aloqalari o'quv dasturini
     o'rganib chiqing
   aria_label_call_to_action_curriculum_ai: SI va mashinaviy o'rganish o'quv dasturini
@@ -549,6 +555,7 @@ uz:
   curriculum_name_csf_teacher_led: O'qituvchi tomonidan olib boriluvchi dars
   curriculum_name_csd: Kompyuter Fanlari Kashfiyotlari
   curriculum_name_csp: Kompyuter fani tamoyillari
+  curriculum_name_problem_solving: Muammolarni Yechish va Hisoblash
   curriculum_name_csc: Kompyuter fanlari aloqalari
   curriculum_name_csa: Kompyuter fanlari A
   curriculum_name_csa_ai: Dasturiy ta'minot muhandisligi va kompyuter ko'rinishi
@@ -762,6 +769,7 @@ uz:
   module_label_teaching_csf: Kompyuter fanlari asoslarini o'qitish
   module_label_teaching_csd: Kompyuter fanlari kashfiyotlarini o'qitish
   module_label_teaching_csp: Kompyuter fanlari tamoyillarini o'qitish
+  module_label_teaching_problem_solving: Muammolarni hal qilish va hisoblashni o'qitish
   module_label_teaching_csc: Kompyuter fanlari aloqalarini o'qitish
   module_label_teaching_ai: SI va mashinaviy o'rganishni o'qitish
   module_label_teaching_maker_cp: 'Vositalar (Circuit Playground) yordamida ilovalarni
@@ -2527,7 +2535,7 @@ uz:
   hoc_homepage_organized_by: DAsturlash Soati [Code.org](%{codeorg_url}) tomonidan
     tashkil etilgan.
   hoc_events_heading: Dasturlash soatini o'tkazish uchun ro'yxatdan o'ting
-  hoc_events_jump_to_map: Dasturlash soati xaritasiga o'ting
+  hoc_events_jump_to_map: Dasturlash Soati xaritasiga o'ting
   signup_closed: Kod soati uchun ro‘yxatdan o‘tish endi yopildi. Iltimos, keyingi
     kod soatiga yozilish uchun oktyabr oyida yana tekshiring. '
   signup_registration_not_required: Ishtirok etish uchun ro‘yxatdan o‘tishingiz shart
@@ -14231,6 +14239,9 @@ uz:
   step_06: 6-qadam
   step_07: 7-qadam
   step_08: 8-qadam
+  what: 'Nima:'
+  when: 'Qachon:'
+  where: 'Qaerda:'
   hoc_how_to_top_heading: Kod soati bo'yicha qo'llanma
   hoc_how_to_top_desc: Eng yaxshi kod soati tajribasi uchun moslashtirilgan qo'llanmalar.
   hoc_how_to_top_view_guide: Qo'llanmani ko'rish
@@ -14282,78 +14293,90 @@ uz:
     bir soatlik qo'llanmalarning keng tanlovini o'rganing.
   hoc_how_to_step_label_plan: Kod soatingizni qaerda va qachon bajarishingizni rejalashtiring
   hoc_how_to_step_label_choose_activity: Faoliyatingizni tanlang
+  hoc_how_to_step_label_choose_activities: Faoliyatingizni tanlang
   hoc_how_to_step_label_test_activity: Faoliyatingizni sinab ko'ring
   hoc_how_to_step_label_register_event: Tadbiringizni ro'yxatdan o'tkazing
   hoc_how_to_step_label_tell: O'quvchilaringizga, maktabingizga va jamoangizga ayting
   hoc_how_to_step_label_get_coding: Kodlashni oling!
   hoc_how_to_step_label_celebrate: Nishonlang
   hoc_how_to_step_label_beyond_hoc: Kod soatidan tashqarida
+  hoc_how_to_step_label_plan_your_event: Tadbiringizni rejalashtiring
+  hoc_how_to_step_label_plan_your_hour: Soatingizni rejalashtiring
+  hoc_how_to_step_label_help_spread_word: So'zni tarqatishga yordam bering
   hoc_how_to_step_beyond_hoc_subhead: Bu erda tugamaydi!
-  hoc_how_to_step_beyond_hoc_desc: Kompyuter fanlari Kod soati bilan tugashi shart
-    emas! Ota-onalarning 90 foizi farzandining kompyuter fanini o'rganishini xohlasa-da,
-    aksariyat maktablar hali ham uni o'rgatmaydilar. Bugun bolangizning maktabiga
-    CSni qanday olib kelishni bilib oling.
-  hoc_how_to_step_01_educators_subhead: Sizda mavjud bo'lgan talabalar va qurilmalar
-    soni uchun ishlaydigan voqea vaqti va bo'sh joyini tanlang.
-  hoc_how_to_step_01_educators_desc_01: Kod soatini bajarish uchun qanday bo'sh joylar
-    mavjud? O'zingizning makoningizning texnologik imkoniyatlarini va talabalaringiz
-    qanday ishlashini kutgan qurilmalar turlarini ko'rib chiqing. Talabalar bitta
-    qurilmada o'quv qo'llanmalari ustida ishlashlari, birgalikda qurilma yordamida
-    navbat bilan o'tishlari yoki sinf taxtasida birgalikda o'quv qo'llanmasini sinab
-    ko'rishlari mumkin. Hatto hech qanday qurilmalar bilan bajarilishi mumkin bo'lgan
-    unplugged qo'llanmalar ham mavjud. Uzib qo'yilgan variantlarni har qanday joyda,
-    hatto ochiq havoda ham amalga oshirish mumkin!
-  hoc_how_to_step_01_educators_desc_02: Dunyo bo'ylab odamlar CS ta'lim haftaligida
-    eng so'nggi o'quv qo'llanmalari va tadbirlari chiqar %{campaign_date} ilganda
-    Kod soati bayramiga qo'shilishadi. Ammo siz yilning istalgan kunida kod soatini
-    qilishingiz mumkin!
-  hoc_how_to_step_02_educators_desc_01: Guruhingizning yoshi, tajribasi, qiziqishlari
-    va boshqalarga qarab faoliyatni o'rganing. Talabalar o'z-o'zidan boshqariladigan
-    o'quv qo'llanmalarini sinab ko'rishlari mashhur, ammo ko'plab tadbirlar o'qituvchilar
-    uchun munozarani boshqarish yoki faoliyatni kengaytirish uchun dars rejalarini
-    o'z ichiga oladi.
-  hoc_how_to_step_02_educators_desc_02: Agar siz barcha talabalaringiz uchun bitta
-    o'quv qo'llanmasini tanlashni xohlasangiz yoki har bir bolaga o'zlarini tanlasangiz,
-    oldindan qaror qiling.
-  hoc_how_to_step_02_educators_desc_03: Bu yil siz va o'quvchilaringiz [AI haqida
-    hamma narsani bilib olishlari] (%ai_url) darsliklar, dars rejalari va bizning
-    yangi Qanday AI ishlaydi video seriyamiz orqali.
-  hoc_how_to_step_03_educators_desc_01: Savollarga javob berishingiz uchun sinfga
-    kirishdan oldin o'quv qo'llanmasini o'zingiz sinab ko'ring!
-  hoc_how_to_step_03_educators_desc_02: Shuningdek, ovoz va videoni qo'llab-quvvatlashini
-    ta'minlash uchun talabalar kompyuterlari yoki qurilmalarida darsliklarni sinab
-    ko'rishingiz mumkin. Kam tarmoqli kengligi bormi? Sinfning old qismida videolarni
-    ko'rsatishni rejalashtiring, shuning uchun har bir talaba o'z videolarini yuklab
-    olmaydi.
-  hoc_how_to_step_03_educators_desc_03: Sizning sinfingiz uchun minigarniturani taqdim
-    qilishni o'ylab ko'ring yoki o'quvchilardan o'zlarini olib kelishlarini so'rang,
-    agar siz tanlagan o'quv qo'llanma ovoz bilan eng yaxshi ishlasa.
-  hoc_how_to_step_04_educators_desc_01: Kod soati tadbirini ro'yxatdan o'tkazganingizda,
-    siz muvaffaqiyatli kod soatini o'tkazish bo'yicha yangiliklar va maslahatlar bilan
-    foydali elektron pochta xabarlarini olasiz. Shuningdek, mahalliy ko'ngillilarga
-    sizning maktabingiz ishtirok etayotganini qanday qilib bildirishingiz mumkin.
-    Ko'ngillilar ajoyib manba bo'lib, sizning sinfingizga kompyuter fanlari haqida
-    gaplashishlari yoki talabalaringizga kod soati faoliyatida yordam berishlari mumkin.
-  hoc_how_to_step_05_educators_desc_01: Talabalaringizni [ilhomlantiruvchi videolar]
-    bilan baham ko'rish orqali tadbir uchun hayajonlaning (%{videos_url}) turli xil
-    odamlarni va kompyuter fanidan haqiqiy dunyoda foydalanish mumkin bo'lgan ijodiy
-    usullarni ta'kidlaydi.
-  hoc_how_to_step_05_educators_desc_02: Kod soati rejalaringizni o'yin-kulgiga qo'shilishni
-    xohlaydigan boshqa o'qituvchilar bilan baham ko'ring! Bu, shuningdek, maktabingizning
-    Ota-onalar o'qituvchilari talabalar uyushmasi bilan bog'lanish yoki ota-onalar
-    axborot byulletenlarida bo'lishish uchun ajoyib imkoniyatdir, ularga farzandlari
-    nimani o'rganayotganini bildiradi.
-  hoc_how_to_step_06_educators_desc_01: Talabalaringizni faoliyatga yo'naltiring,
+  hoc_how_to_step_plan_hour_desc_01: 'Ishni boshlash uchun namunaviy kun tartibi:'
+  hoc_how_to_step_choose_activities_desc_01: Bu yil Kod soati mavzusi Sun'iy intellekt
+    (AI) bilan ijoddir. Yangi ilovalar va algoritmlarni kodlash, noyob san'at yaratish
+    yoki raqsga tushish uchun xoreografiya yaratish bo'ladimi, AI ijod haqidagi tushunchamizni
+    kengaytiradigan raqamli ifoda uchun yangi imkoniyatlarni ochmoqda. Kodlash faoliyatini
+    yakunlash VA AI haqida bilib olish orqali bu yilni maxsus qiling.
+  hoc_how_to_step_choose_activities_desc_02: Birinchidan, [yuzlab kodlash faoliyatini
+    kashf eting] (%{activities_url}) va guruhingizning yoshi, tajribasi, qiziqishlari
+    va boshqalarga asoslanib birini tanlang. [Ushbu tanlangan tadbirlar] (%{ai_activities_url})
+    sun'iy intellektni asosiy mavzu yoki dars sifatida ko'rsatadi.
+  hoc_how_to_step_choose_activities_desc_03: Keyin, [AI haqida hamma narsani bilib
+    oling] (%{ai_url}). Talabalar soha mutaxassislari aks etgan qisqa videolarni tomosha
+    qilishlari mumkin va faoliyatni kengaytirish va keyingi muhokamalarga rahbarlik
+    qilish uchun hamrohlik dars rejalari mavjud. Yoki, biz AI bilan va haqida o'qitishning
+    kelajagini ochish uchun ta'lim oluvchilar uchun bepul professional o'rganishni
+    taklif etamiz.
+  hoc_how_to_step_educators_register_desc: Tadbiringizni ro'yxatdan o'tkazish orqali
+    talabalaringiz bilan Kod soatini amalga oshirish majburiyati bilan boshlang. Ro'yxatdan
+    o'tganingizda, muvaffaqiyatli Kod soatiga mezbonlik qilish bo'yicha yangiliklar
+    va maslahatlar bilan foydali elektron pochta xabarlarini olasiz. Bundan tashqari,
+    siz [xaritaga qo'yilasiz] (%{map_url}). Bizning jamoaviy sa'y-harakatlarimizning
+    ko'rinadigan jamiyati informatika harakatiga global sodiqlikni namoyish etadi,
+    bu bizga tizimli o'zgarishlar uchun tezlikni oshirishga yordam beradi.
+  hoc_how_to_step_educators_plan_desc_01: Tadbiringizdan oldin tadbirlarni o'zingiz
+    sinab ko'ring, shunda ularning talabalar qurilmalarida ishlashiga ishonch hosil
+    qilishingiz va savollarga javob berishga tayyorsiz! Kam tarmoqli kengligi bormi?
+    Sinfning old qismida videolarni namoyish qilishni rejalashtiring, shuning uchun
+    har bir talaba o'z videolarini yuklab olmaydi.
+  hoc_how_to_step_educators_plan_desc_02: Butun dunyo bo'ylab odamlar ko'pincha Computer
+    Science Education Week (%{campaign_date}) paytida Kod soati bayramiga qo'shilishadi,
+    lekin siz yilning har qanday kunida Kodning soati qilishingiz mumkin!
+  hoc_how_to_step_educators_plan_desc_03: Sizda mavjud bo'lgan talabalar va qurilmalar
+    soni uchun ishlaydigan bo'sh joyni tanlang. Talabalar individual qurilmalarda
+    faoliyatni sinab ko'rishlari, navbat bilan qurilmani almashish yoki doskada sinf
+    sifatida olishlari mumkin. Hatto hech qanday qurilmalar bilan yakunlanishi mumkin
+    bo'lgan unplugged tadbirlar ham mavjud, shuning uchun ular hatto tashqarida ham
+    amalga oshirilishi mumkin!
+  hoc_how_to_step_educators_spread_word_desc_01: Bizga [ushbu elektron pochta shablonlari]
+    (%{email_url}) bilan hamjamiyatingizda so'zni tarqatishga yordam bering.
+  hoc_how_to_step_educators_spread_word_desc_02: Ikki hamkasbdan [register](%{register_url})
+    va Kod soati faoliyatiga mezbonlik qilishni so'rang. Ular, o'z navbatida, ikkita
+    hamkasbini xavfsizlashtirishi mumkin, ikkita hamkasbini xavfsizlashtirishi mumkin
+    va hokazo.
+  hoc_how_to_step_educators_spread_word_desc_03: Direktoringizdan [maktab miqyosidagi
+    tadbirga mezbonlik qilishni] so'rang (%{host_url}). 300 yoki undan ortiq bolalar
+    ishtirok etganda, siz futbolkalar, plakatlar, noutbuk stikerlari va boshqalar
+    bilan maxsus nishon to'plamini olishingiz mumkin. [Butun maktabdagi tadbir rejangizni
+    baham ko'ring] (%{share_url}) saralash uchun.
+  hoc_how_to_step_educators_spread_word_desc_04: Maktabingizning ota-onalar o'qituvchilari
+    talabalar assotsiatsiyasiga murojaat qiling yoki farzandlari nimani o'rganayotganini
+    xabar berib, ota-onalar axborot byulletenlarida ulashing.
+  hoc_how_to_step_educators_plan_hour_desc_02: 'Soat 10:00-10:05: [ilhomlantiruvchi
+    video] bilan boshlang ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Talabalar kodlash faoliyatini
+    amalga oshiradilar'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Talabalar AI haqida bilib
+    olishadi'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: O''qituvchi yakuniy fikrlarni
+    beradi'
+  hoc_how_to_step_educators_get_coding_desc: Talabalaringizni faoliyatga yo'naltiring,
     ehtimol taxtadagi havolani baham ko'rish yoki sinfingizning o'rganishni boshqarish
     tizimi orqali. Sizning talabalaringiz qiyinchiliklarga duch kelishlari mumkin
     - bu yaxshi! Dasturni o'rganish yangi tilni o'rganishga o'xshaydi; siz darhol
     ravon bilmaysiz. Agar siz javobni bilmasangiz, uni birgalikda tushunishingiz mumkin.
-  hoc_how_to_step_07_educators_desc_01: 'Muvaffaqiyatni nishonlashga ishonch hosil
-    qiling! Ijtimoiy tarmoqlarda “Kod soati” tadbirining fotosuratlari va videolarini
-    baham ko''ring. #HourOfCode va @codeorg dan foydalaning, shunda biz sizning muvaffaqiyatingizni
-    ham ta''kidlashimiz mumkin!'
-  hoc_how_to_step_07_educators_desc_02: Shuningdek, talabalaringiz o'z yutuqlarini
-    namoyish qilish uchun sertifikatlarni chop etishingiz mumkin!
+  hoc_how_to_step_educators_celebrate_desc: 'Tadbiringizdan so''ng yakunlanganligi
+    haqidagi guvohnomalarni chop eting va talabalaringizni tabriklang. Hour of Code
+    tadbiringizning fotosuratlari va videolarini baham ko''ring va #HourOfCode va
+    @codeorg yordamida talabalarning yutuqlaringizni namoyish eting.'
+  hoc_how_to_step_educators_beyond_desc: Kompyuter fanlari Kod soati bilan tugashi
+    shart emas! Ota-onalarning 90 foizi farzandining informatika fanini o'rganishini
+    istasa-da, aksariyat maktablar hali ham uni o'rgatmaydi. Yordam berish uchun bizning
+    o'quv dasturimiz veb-ga asoslangan va abadiy foydalanish uchun bepul. Bugun maktabingizga
+    CS olib kelishni bilib oling.
   hoc_ai_top_desc: Har kim AI haqida bilib olishi mumkin, sinfda talaba bo'lasizmi
     yoki AI bilan va bu haqda o'qitishning kelajagini ochadigan tarbiyachi bo'lasizmi.
   hoc_ai_how_ai_works_video_series_desc: Ushbu qisqa videolar sizni sun'iy intellekt
