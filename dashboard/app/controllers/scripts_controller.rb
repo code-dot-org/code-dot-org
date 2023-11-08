@@ -50,7 +50,7 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
+      sections = current_user.try {|u| u.sections_owned_or_instructed.reject(&:hidden).map(&:summarize)}
       @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
     end
 
