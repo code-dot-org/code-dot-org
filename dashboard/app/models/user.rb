@@ -1465,18 +1465,10 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
-  def has_ai_chat_access?
-    permission?(UserPermission::AI_CHAT_ACCESS)
-  end
-
-  def assigned_csa?
-    sections_as_student.any?(&:assigned_csa?)
-  end
-
   def has_ai_tutor_access?
-    has_ai_chat_access? && (verified_instructor? || assigned_csa?)
-    # TODO: add ai tutor must be enabled for the section
-    # TODO: add section must have ai tutor experiment enabled
+    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+      (get_active_experiment_names_by_teachers.include?('ai-tutor') &&
+      sections_as_student.any?(&:ai_tutor_enabled))
   end
 
   def student_of_verified_instructor?
@@ -1704,6 +1696,15 @@ class User < ApplicationRecord
   # Returns an array of experiment name strings
   def get_active_experiment_names
     Experiment.get_all_enabled(user: self).pluck(:name)
+  end
+
+  # Returns an array of experiment name strings that a student's teachers are enrolled in
+  def get_active_experiment_names_by_teachers
+    experiments = []
+    teachers.each do |teacher|
+      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
+    end
+    experiments.uniq
   end
 
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.

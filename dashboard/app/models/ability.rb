@@ -292,6 +292,10 @@ class Ability
         can :dashboard, :peer_reviews
         can :report_csv, :peer_review_submissions
       end
+
+      if user.has_ai_tutor_access?
+        can :chat_completion, :openai_chat
+      end
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.

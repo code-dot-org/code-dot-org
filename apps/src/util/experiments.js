@@ -48,7 +48,7 @@ experiments.AI_RUBRICS = 'ai-rubrics';
 experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 experiments.HOC_TUTORIAL_DIALOG = 'hocTutorialDialog';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-experiments.AI_TUTOR_TOGGLE = 'ai-tutor-toggle';
+experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

@@ -1,5 +1,6 @@
 class OpenaiChatController < ApplicationController
   include OpenaiChatHelper
+  authorize_resource class: false
 
   # POST /openai/chat_completion
   def chat_completion
