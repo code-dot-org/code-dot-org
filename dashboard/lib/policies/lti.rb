@@ -39,8 +39,7 @@ class Policies::Lti
   end
 
   def self.lti?(user)
-    return !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
-    false
+    !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
 
   def self.issuer(user)
