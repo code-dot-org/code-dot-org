@@ -17,7 +17,7 @@
     },
     {
       "emoji": "💎",
-      "id": "diamond",
+      "id": "gem-stone",
       "modelDescriptiveName": "diamond gem stone geometric"
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "emoji": "⚽",
-      "id": "soccor_ball",
+      "id": "soccor-ball",
       "modelDescriptiveName": "soccer ball black-and-white geometric"
     },
     {
@@ -82,17 +82,17 @@
     },
     {
       "emoji": "🎨",
-      "id": "art_palette",
+      "id": "artist-palette",
       "modelDescriptiveName": "art paint palette"
     },
     {
       "emoji": "🌹",
-      "id": "flower",
+      "id": "rose",
       "modelDescriptiveName": "flower springtime"
     },
     {
       "emoji": "🎵",
-      "id": "music_notes",
+      "id": "musical-note",
       "modelDescriptiveName": "music notes sound"
     },
     {
@@ -107,12 +107,12 @@
     },
     {
       "emoji": "🌱",
-      "id": "plant",
+      "id": "seedling",
       "modelDescriptiveName": "green plant springtime"
     },
     {
       "emoji": "😋",
-      "id": "savoring_food",
+      "id": "face-savoring-food",
       "modelDescriptiveName": "savory hungry food"
     },
     {
@@ -122,7 +122,7 @@
     },
     {
       "emoji": "🍦",
-      "id": "ice_cream",
+      "id": "soft-ice-cream",
       "modelDescriptiveName": "ice cream sweet summer fruit"
     }
   ]
