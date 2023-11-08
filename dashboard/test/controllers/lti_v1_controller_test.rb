@@ -1,5 +1,6 @@
 require 'json'
 require 'jwt'
+require 'policies/lti'
 require 'test_helper'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
@@ -38,6 +39,15 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
           else
             @integration.client_id
           end
+    roles_key = Policies::Lti::LTI_ROLES_KEY
+    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    teacher_roles = [
+      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
+      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
+      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
+      'http://purl.imsglobal.org/vocab/lis/v2/system/person#SysAdmin',
+      'http://purl.imsglobal.org/vocab/lis/v2/system/person#User',
+    ]
     {
       aud: aud,
       azp: @integration.client_id,
@@ -46,7 +56,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       iss: @integration.issuer,
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
-      'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest'
+      'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
+      custom_claims_key => {
+        display_name: 'hansolo',
+        full_name: 'Han Solo',
+        given_name: 'Han',
+        family_name: 'Solo',
+      },
+      roles_key => teacher_roles
     }
   end
 
