@@ -461,5 +461,5 @@ function simplifyBlockState(block, variableMap) {
 }
 
 export function getBlockColor(block) {
-  return block.style.colourPrimary;
+  return block?.style?.colourPrimary;
 }
