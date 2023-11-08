@@ -1664,6 +1664,7 @@
 
   hoc_homepage_join_the_movement_heading: 'Join the movement'
   hoc_homepage_join_the_movement_description: 'Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
+  hoc_homepage_join_the_celebration_description: 'Your class or group can join millions around the world doing the Hour of Code! This year, the annual Computer Science Education Week celebration is %{campaign_date} and registration begins in October. Though, Hour of Code is available year-round.'
   hoc_homepage_what_is_hoc_subhead: 'One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round.'
   hoc_homepage_what_is_hoc_description: 'The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.'
   hoc_homepage_registration_desc: "Your class or group can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in October. Though, Hour of Code is available year-round."
