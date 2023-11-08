@@ -6,10 +6,10 @@ ka:
   front_title: შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას %{campaign_date}-ში
   coming_soon: მალე
   new: ახალი
-  hours_of_code_served: Hours of Code Served
+  hours_of_code_served: კოდის მომსახურების საათები
   hoc_stat_languages: ხელმისაწვდომია 45-ზე მეტ ენაზე
   hoc_stat_hours_served: 100 მილიონ მოსწავლეზე მეტმა უკვე სცადა კოდის ერთი საათი
-  hoc_stat_females: Female students make up 50% of Hour of Code participants
+  hoc_stat_females: ქალი სტუდენტები შეადგენენ „Hour of Code“ მონაწილეთა 50% -ს
   campaign_date_start_short: 4 დეკ.
   campaign_date_start_long: 4 დეკემბერი
   campaign_date_short: დეკ. 4-10
@@ -50,10 +50,10 @@ ka:
   hoc2023_social_creativity_with_ai_title: კოდის ერთი საათი - რას შექმნით?
   hoc2023_social_creativity_with_ai_desc: გამოიყენეთ კომპიუტერული მეცნიერება, რომ
     შეისწავლოთ და გაეცნოთ AI- ს შესახებ!
-  hoc2023_what_is_hoc_desc: The Hour of Code is a free introduction to computer science
-    through fun activities and videos for learners of all skill levels. This year's
-    celebration of both coding and AI is supported by over 400 partners, 20,000 educators,
-    and 58,000 volunteers.
+  hoc2023_what_is_hoc_desc: კოდის საათი არის უფასო შესავალი კომპიუტერულ მეცნიერებაში
+    მხიარული აქტივობებისა და ვიდეოების საშუალებით ყველა უნარების დონის მოსწ როგორც
+    კოდირების, ასევე ხელოვნური ინტელექტის წლევანდელი დღესასწაულს მხარს უჭერს 400-ზე
+    მეტი პარტნიორი, 20,000 პედაგოგი და
   hoc2022_header: შეისწავლე, ითამაშე, შექმენი!
   social_hoc2022_explore_play_create: გამოიყენე კომპიუტერული მეცნიერება შესწავლის,
     თამაშის და შექმნისთვის!
@@ -66,9 +66,9 @@ ka:
     დისნეის „ენკანტოდან“ და სხვა!
   social_hoc2023_dance: ბიონსე, BTS, ჰარი სტაილსი, ლიცო, ლილ ნას X, სელენა გომესი,
     მუსიკა დისნეის „ენკანტოდან“ და სხვა!
-  social_hoc2023_dance_v2: It's time to strut your stuff! Create your own dance party
-    featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía,
-    and more!
+  social_hoc2023_dance_v2: დროა დაამყაროთ თქვენი ნივთები! შექმენით საკუთარი საცეკვაო
+    წვეულება მაილი საირუსის, BTS-ის, ლილ ნას X-ის, ჰარი სტაილსის, ნიკი მინაჟის, როზალიას
+    და სხვა ჰიტებით!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: ისწავლე დღეს, ააშენე ნათელი ხვალინდელი დღე.
@@ -289,21 +289,23 @@ ka:
     გამჭრიახობა და მხარდაჭერა სხვა პედაგოგებისგან.
   required_materials: 'საჭირო მასალები:'
   optional_materials: 'პირობითი მასალები:'
-  for_students: For students
+  for_students: სტუდენტებისთვის
   for_educators: პედაგოგებისთვის
-  call_to_action_host_hoc: Host an Hour of Code
+  call_to_action_host_hoc: მასპინძლე კოდის საათს
   call_to_action_hold_an_event: ღონისძიების გამართვა
   call_to_action_register_event: რეგისტრაცია თქვენი ღონისძი
   call_to_action_register_your_hoc: დარეგისტრირეთ კოდის საათი
   call_to_action_select_activity: აირჩიეთ აქტივობა
+  call_to_action_select_coding_activity: აირჩიეთ კოდირების აქტი
   call_to_action_start_activity: დაიწყეთ აქტივობა
   call_to_action_get_certificates: მიიღეთ სერტიფიკატები
+  call_to_action_print_certificates: დაბეჭდვით
   call_to_action_go_beyond_hoc: გადადით კოდის საათს
-  call_to_action_explore_all_hoc_activities: Explore all Hour of Code activities from
-    Code.org
-  call_to_action_start_dance_party: Start Dance Party
-  call_to_action_start_part_02: Start part two
-  call_to_action_start_unplugged_activity: Start unplugged activity
+  call_to_action_explore_all_hoc_activities: გამოიკვლიეთ კოდის საათის ყველა აქტივობა
+    Code.org— დან
+  call_to_action_start_dance_party: დაიწყეთ საცეკვო
+  call_to_action_start_part_02: დაიწყეთ მეორე ნაწილი
+  call_to_action_start_unplugged_activity: დაიწყეთ გამორთული აქტივობა
   call_to_action_view_promo_resources: პრომო რესურსების ნახვა
   call_to_action_learn_more: გაიგე მეტი
   call_to_action_watch_now: უყურე ახლა
@@ -399,9 +401,9 @@ ka:
   call_to_action_view_faqs: იხილეთ მეტი ხშირად დასმული კითხვები
   call_to_action_applications_open: პროგრამები ახლა ღიაა
   call_to_action_apply_cs_ambassador: განაცხადი CS ელჩად
-  call_to_action_coming_soon: Coming soon!
-  call_to_action_learn_how_ai_works: Learn how AI works
-  call_to_action_learn_about_ai: Learn about AI
+  call_to_action_coming_soon: მალე მოვა!
+  call_to_action_learn_how_ai_works: შეიტყვეთ როგორ მუშაობს AI
+  call_to_action_learn_about_ai: შეიტყვეთ AI- ის შესახებ
   aria_label_call_to_action_hoc_how_to_educators: იხილეთ როგორ სახელმძღვანელო პედაგოგებისთვის
   aria_label_call_to_action_hoc_how_to_companies: იხილეთ კომპანიების სახელმძღვანელო
   aria_label_call_to_action_hoc_how_to_districts: იხილეთ როგორ სახელმძღვანელო რაიონებისთვის
@@ -413,9 +415,9 @@ ka:
   aria_label_call_to_action_hoc_how_to_volunteers: იხილეთ როგორ სახელმძღვანელო მოხალისეებისთვის
   aria_label_call_to_action_hoc_how_to_virtual_events: იხილეთ ვირტუალური ღონისძიებების
     სახელმძღვანელო
-  aria_label_call_to_action_dance_01: Start the Dance Party activity
-  aria_label_call_to_action_dance_02: Start part two of the Dance Party activity
-  aria_label_call_to_action_dance_unplugged: Start the Dance Party unplugged activity
+  aria_label_call_to_action_dance_01: დაიწყეთ საცეკვაო პარტიის
+  aria_label_call_to_action_dance_02: დაიწყეთ ცეკვის პარტიის საქმიანობის მეორე
+  aria_label_call_to_action_dance_unplugged: დაიწყეთ საცეკვაო წვეულება გამორჩეული
   aria_label_call_to_action_afe: შეიტყვეთ მეტი ამაზონის მომავალი ინჟინრის შესახებ
   aria_label_call_to_action_teaching_csf: დაიწყეთ კომპიუტერული მეცნიერების საფუძვლების
     სწავლების პროფესიული სასწავლო პროგრამა
@@ -423,6 +425,8 @@ ka:
     სწავლების პროფესიული სასწავლო პროგრამა
   aria_label_call_to_action_teaching_csp: დაიწყეთ კომპიუტერული მეცნიერების პრინციპების
     სწავლების პროფესიული სასწავლო პროგრამა
+  aria_label_call_to_action_teaching_problem_solving: დაიწყეთ სწავლების პრობლემების
+    გადაჭრისა და კომპიუტერული პრო
   aria_label_call_to_action_teaching_csc: დაიწყეთ კომპიუტერული მეცნიერების კავშირების
     სწავლების პროფესიული სასწავლო პროგრამა
   aria_label_call_to_action_teaching_ai: დაიწყეთ სწავლების AI და მანქანათმცოდნეობის
@@ -441,6 +445,8 @@ ka:
     სასწავლო გეგმა
   aria_label_call_to_action_curriculum_csp: გამოიკვლიეთ კომპიუტერული მეცნიერების პრინციპების
     სასწავლო გეგმა
+  aria_label_call_to_action_curriculum_problem_solving: შეისწავლეთ პრობლემების გადაჭრისა
+    და გამო
   aria_label_call_to_action_curriculum_csc: გამოიკვლიეთ კომპიუტერული მეცნიერების კავშირების
     სასწავლო გეგმა
   aria_label_call_to_action_curriculum_ai: გამოიკვლიეთ AI და მანქანათმცოდნეობის სასწავლო
@@ -523,6 +529,7 @@ ka:
   curriculum_name_csf_teacher_led: მასწავლებლის ხელმძღვანელობით გაკვეთილი
   curriculum_name_csd: კომპიუტერული მეცნიერების აღმოჩენები
   curriculum_name_csp: კომპიუტერული მეცნიერების პრინციპები
+  curriculum_name_problem_solving: პრობლემის გადაჭრა და გამოთვლა
   curriculum_name_csc: კომპიუტერულ მეცნიერებათა კავშირები
   curriculum_name_csa: AP® კომპიუტერული მეცნიერება A
   curriculum_name_csa_ai: პროგრამული ინჟინერია და კომპიუტერული ხედვა
@@ -535,25 +542,25 @@ ka:
   curriculum_name_creating_apps_with_devices: პროგრამების შექმნა მოწყობილობებით
   curriculum_name_poetry: კოდირება პოეზიით
   curriculum_name_dance_party: ცეკვის წვეულება
-  curriculum_name_dance_party_02: Keep On Dancing
-  curriculum_name_dance_party_unplugged: Dance Party Unplugged
-  curriculum_name_dance_party_ai_edition: 'Dance Party: AI Edition'
+  curriculum_name_dance_party_02: გააგრძელე ცეკვა
+  curriculum_name_dance_party_unplugged: საცეკვაო წვეულება გაუშვ
+  curriculum_name_dance_party_ai_edition: 'ცეკვის წვეულება: AI გამოცემა'
   curriculum_name_problem_solving_computing: პრობლემის გადაჭრა და გამოთვლა
   curriculum_name_web_development: ვებ დეველოპმენტი
   curriculum_name_interactive_animations_games: ინტერაქტიული ანიმაციები და თამაშები
   curriculum_name_design_process: დიზაინის პროცესი
   curriculum_name_data_society: მონაცემები და საზოგადოება
-  curriculum_desc_dance_party_01: In this introductory activity, use code to make
-    a variety of colorful characters bust a move to animated backgrounds and upbeat
-    music.
-  curriculum_desc_dance_party_02: Go beyond the introductory tutorial with extended
-    project ideas. Browse a library of examples of more complex dance parties.
-  curriculum_desc_dance_party_unplugged: Get your groove on—no computer needed! Learn
-    how coding concepts, like events, can be used to synchronize dancer choreography.
-  curriculum_desc_dance_party_ai_edition: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    With dozens of songs to choose from, reach every student no matter their music
-    taste. It's time to strut your stuff!
+  curriculum_desc_dance_party_01: ამ შესავალი საქმიანობაში გამოიყენეთ კოდი, რათა სხვადასხვა
+    ფერადი პერსონაჟები გადავიდეს ანიმაციურ ფონზე და ოპტიმისტურ მუსიკაზე.
+  curriculum_desc_dance_party_02: გადადით შესავალი გაკვეთილს გაფართოებული პროექტის
+    იდეებით. დაათვალიერეთ უფრო რთული საცეკვაო წვეულებების მაგალითების
+  curriculum_desc_dance_party_unplugged: ჩართეთ ღარი - კომპიუტერი არ არის საჭირო!
+    გაიგეთ, თუ როგორ შეიძლება გამოყენებულ იქნას კოდირების კონცეფციები, ისევე როგორც
+    მოვლენები, მოცეკვავე
+  curriculum_desc_dance_party_ai_edition: შეიტყვეთ ხელოვნური ინტელექტის (AI) კონცეფციების
+    შესახებ, რათა შექმნათ თქვენი საკუთარი ვირტუალური საცეკვაო წვეულება, ათობით სიმღერით,
+    რომელთაგან შეგიძლიათ აირჩიოთ, მიაღწიეთ ყველა სტუდენტს, მათი მუსიკალური გემოვ დროა
+    დაამყაროთ თქვენი ნივთები!
   curriculum_desc_csf: ელემენტარული სასწავლო გეგმების უფასო ნაკრები, რომელიც სტუდენტებს
     აცნობს კომპიუტერული მეცნიერების ფუნდამენტურ კონცეფციებს.
   curriculum_desc_csf_express: ისწავლეთ კომპიუტერული პროგრამების შექმნა, პრობლემების
@@ -690,12 +697,12 @@ ka:
   module_grade_grade_03: მე -3 კლასი
   module_grade_grade_04: მე -4 კლასი
   module_grade_grade_05: მე -5 კლასი
-  module_age_05_07: Ages 5-7
-  module_age_07: Ages 7+
-  module_age_07_11: Ages 7-11
-  module_age_11: Ages 11+
-  module_age_13: Ages 13+
-  module_age_all_age: All Ages
+  module_age_05_07: 5-7 წლის ასაკი
+  module_age_07: ასაკი 7+
+  module_age_07_11: 7-11 წლის ასაკი
+  module_age_11: ასაკი 11 წლამდე
+  module_age_13: ასაკი 13+
+  module_age_all_age: ყველა ასაკის
   module_grade_k_5_teachers: K-5 მასწავლებლები
   module_grade_6_10_teachers: 6-10 პედაგოგი
   module_grade_9_12_teachers: 9-12 პედაგოგები
@@ -727,6 +734,7 @@ ka:
   module_label_teaching_csf: კომპიუტერული მეცნიერების საფუძვლების სწავლება
   module_label_teaching_csd: კომპიუტერული მეცნიერების აღმოჩენების სწავლება
   module_label_teaching_csp: კომპიუტერული მეცნიერების პრინციპების სწავლება
+  module_label_teaching_problem_solving: პრობლემების გადაჭრისა და გამოთვლების
   module_label_teaching_csc: კომპიუტერული მეცნიერების კავშირების სწავლება
   module_label_teaching_ai: AI და მანქანური სწავლების სწავლება
   module_label_teaching_maker_cp: სწავლების შექმნა პროგრამები მოწყობილობები (Circuit
@@ -795,8 +803,8 @@ ka:
   heading_csa_ai: ეძებთ საქმეებს AP® გამოცდის შემდეგ?
   heading_bring_cs_to_students: მოიყვანეთ კომპიუტერული მეცნიერება სტუდენტებს
   heading_cs_ambassador_program: CS ელჩის პროგრამა
-  heading_featured_student_projects: Featured student projects
-  heading_start_hoc_with_videos: Start your Hour of Code with inspirational videos
+  heading_featured_student_projects: მთავარი სტუდენტური პროექტები
+  heading_start_hoc_with_videos: დაიწყეთ თქვენი კოდის საათი ინსპირაციული ვიდეოებით
   cs_ambassador_subhead: თუ საშუალო სკოლის სტუდენტი ხართ, რომელიც გატაცებულია უფრო
     მეტი ახალგაზრდა ქალის წახალისებით თქვენს სკოლაში კომპიუტერული მეცნიერებების ჩასატარებლად
   cs_ambassador_desc: კომპიუტერულ მეცნიერებებს ეხება ყველა სფეროს, მათ შორის მედიცინას,
@@ -893,13 +901,14 @@ ka:
     Code.org— ის კომპიუტერული მეცნიერების პრინციპების შესახებ და მიიღოთ სასარგებლო
     შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
   subscribe_form_section_unsubscribe: ნებისმიერ დროს შეგიძლიათ გააუქმოთ გამოწერა.
-  dance_hero_heading: Code a Dance Party
-  dance_featuring_songs_by_short: 'Featuring songs by:'
-  dance_featuring_songs_by_long: 'Dance Party includes songs by:'
-  dance_and_more: and more
-  dance_choose_activity: Choose your Dance Party
-  dance_afe_disclaimer: The artists whose music are used in this tutorial are not
-    sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.
+  dance_hero_heading: დაკოდირეთ საცეკვაო
+  dance_featuring_songs_by_short: 'წარმოდგენილია სიმღერები:'
+  dance_featuring_songs_by_long: 'Dance Party მოიცავს სიმღერებს:'
+  dance_and_more: და მეტი
+  dance_choose_activity: აირჩიეთ თქვენი საცეკვო
+  dance_afe_disclaimer: მხატვრები, რომელთა მუსიკა გამოიყენება ამ სახელმძღვანელოში,
+    არ აფინანსებენ ან არ ამტკიცებენ Amazon-ს Code.org— ზე მათი მუსიკის გამოყენების
+    ლიცენზირების ნაწილში.
   blockchain_hero_heading: როგორ მუშაობს ბლოკჩეინი
   blockchain_hero_desc: ჩაყვინთეთ ბლოკჩეინის სამყაროში „როგორ მუშაობს ბლოკჩეინი“,
     ჩვენი ახალი ვიდეო სერიით და თანმხლები გაკვეთილებით!
@@ -13688,6 +13697,9 @@ ka:
   step_06: ნაბიჯი 6
   step_07: ნაბიჯი 7
   step_08: ნაბიჯი 8
+  what: 'რა:'
+  when: 'როდის:'
+  where: 'სად:'
   hoc_how_to_top_heading: თქვენი სახელმძღვანელო კოდექსის საათის შესახებ
   hoc_how_to_top_desc: მორგებული სახელმძღვანელოები კოდის საათის საუკეთესო გამოცდილებისთვის.
   hoc_how_to_top_view_guide: იხილეთ სახელმძღვანელო
@@ -13735,74 +13747,81 @@ ka:
     რომელიც განკუთვნილია ყველა ასაკისთვის 45-ზე მეტ ენაზე.
   hoc_how_to_step_label_plan: დაგეგმეთ სად და როდის გააკეთებთ კოდის საათს
   hoc_how_to_step_label_choose_activity: შეარჩიეთ თქვენი საქმიანობა
+  hoc_how_to_step_label_choose_activities: აირჩიეთ თქვენი აქტივ
   hoc_how_to_step_label_test_activity: შეამოწმეთ თქვენი საქმიანობა
   hoc_how_to_step_label_register_event: რეგისტრაცია თქვენი ღონისძი
   hoc_how_to_step_label_tell: უთხარით თქვენს მოსწავლეებს, სკოლას და საზოგადოებას
   hoc_how_to_step_label_get_coding: მიიღეთ კოდირება!
   hoc_how_to_step_label_celebrate: აღსანიშნავად
   hoc_how_to_step_label_beyond_hoc: კოდის საათის მიღმა
+  hoc_how_to_step_label_plan_your_event: დაგეგმეთ თქვენი მოვლენ
+  hoc_how_to_step_label_plan_your_hour: დაგეგმეთ თქვენი საათი
+  hoc_how_to_step_label_help_spread_word: დაეხმარეთ სიტყვის გავრცელ
   hoc_how_to_step_beyond_hoc_subhead: აქ არ მთავრდება!
-  hoc_how_to_step_beyond_hoc_desc: კომპიუტერული მეცნიერება არ უნდა დასრულდეს კოდის
-    საათით! მიუხედავად იმისა, რომ მშობლების 90% -ს სურს, რომ შვილმა ისწავლოს კომპიუტერული
-    მეცნიერება, სკოლების უმეტესობა მაინც არ ასწავლის ამას. შეიტყვეთ, თუ როგორ უნდა
-    მოიტანოთ CS თქვენი შვილის სკოლაში დღეს.
-  hoc_how_to_step_01_educators_subhead: შეარჩიეთ ღონისძიების დრო და სივრცე, რომელიც
-    მუშაობს თქვენთვის ხელმისაწვდომი სტუდენტებისა და მოწყობილობების რაოდენობაზე.
-  hoc_how_to_step_01_educators_desc_01: რა ადგილებია ხელმისაწვდომი თქვენი კოდის საათის
-    შესასრულებლად? გაითვალისწინეთ თქვენი სივრცის ტექნიკური შესაძლებლობები და მოწყობილობების
-    ტიპები, რომლებზეც მოელით თქვენს სტუდენტებს. სტუდენტებს შეუძლიათ იმუშაონ გაკვეთილებზე
-    ერთ მოწყობილობაზე, რიგრივად გამოიყენონ საერთო მოწყობილობა, ან სცადონ გაკვეთილი
-    ერთად საკლასო დაფაზე. არსებობს გათიშული გაკვეთილებიც კი, რომელთა დასრულებაც შესაძლებელია
-    საერთოდ მოწყობილობების გარეშე. გამორთული ვარიანტების გაკეთება შესაძლებელია ნებისმიერ
-    ადგილას - თუნდაც გარეთ!
-  hoc_how_to_step_01_educators_desc_02: მთელს მსოფლიოში ადამიანები უერთდებიან კოდის
-    საათის დღესასწაულს CS განათლების კვირეულის განმავლობაში, %{campaign_date} როდესაც
-    გამოდის უახლესი გაკვეთილები და აქტივობები. მაგრამ თქვენ შეგიძლიათ გააკეთოთ კოდის
-    საათი წლის ნებისმიერ დღეს!
-  hoc_how_to_step_02_educators_desc_01: გამოიკვლიეთ აქტივობები თქვენი ჯგუფის ასაკის,
-    გამოცდილების, ინტერესების და სხვა საფუძველზე. სტუდენტებისთვის პოპულარულია თვითმმართველობის
-    ხელმძღვანელობით გაკვეთილების სცადება, თუმცა ბევრი აქტივობა მოიცავს გაკვეთილის
-    გეგმებს მასწავლებლებისთვის დისკუსიის წარმართვისთვის ან აქტივობის გასაგრძელებლად.
-  hoc_how_to_step_02_educators_desc_02: დროულად გადაწყვიტეთ, გსურთ თუ არა აირჩიოთ
-    ერთი გაკვეთილი თქვენი ყველა სტუდენტისთვის, ან მიეცით საშუალება თითოეულ ბავშვს
-    აირჩიოს საკუთარი თავი.
-  hoc_how_to_step_02_educators_desc_03: წელს თქვენ და თქვენს სტუდენტებს შეგიძლიათ
-    [გაიგოთ ყველაფერი AI— ის შესახებ] (%ai_url) გაკვეთილების, გაკვეთილის გეგმების
-    და ჩვენი ახალი როგორ მუშაობს AI ვიდეო სერიის საშუალებით.
-  hoc_how_to_step_03_educators_desc_01: საკლასო ოთახში შესვლამდე სცადეთ გაკვეთილი,
-    ასე რომ თქვენ შეგიძლიათ უპასუხოთ კითხვებს!
-  hoc_how_to_step_03_educators_desc_02: თქვენ ასევე შეგიძლიათ შეამოწმოთ გაკვეთილები
-    სტუდენტურ კომპიუტერებზე ან მოწყობილობებზე, რათა უზრუნველყოთ ისინი ხმის და ვიდეოს
-    მხარდაჭერას. გაქვთ დაბალი გამტარუნარიანობა? დაგეგმეთ ვიდეოების ჩვენება კლასის
-    წინა ნაწილში, ასე რომ თითოეული სტუდენტი არ ჩამოტვირთავს საკუთარ ვიდეოებს.
-  hoc_how_to_step_03_educators_desc_03: გაითვალისწინეთ თქვენი კლასისთვის ყურსასმენების
-    მიწოდება, ან სთხოვეთ სტუდენტებს მოიტანონ საკუთარი თავი, თუ თქვენს მიერ არჩეული
-    გაკვეთილი საუკეთესოდ მუშაობს ხმით.
-  hoc_how_to_step_04_educators_desc_01: როდესაც დარეგისტრირებთ კოდის საათის ღონისძიებას,
-    თქვენ მიიღებთ სასარგებლო ელ. წერილებს სიახლეებითა და რჩევებით წარმატებული კოდის
-    საათის მასპინძლობისთვის. ეს ასევე არის ის, თუ როგორ შეგიძლიათ აცნობოთ ადგილობრივ
-    მოხალისეებს, რომ თქვენი სკოლა მონაწილეობს. მოხალისეები შესანიშნავი რესურსია და
-    შეუძლიათ თქვენს კლასში ისაუბრონ კომპიუტერულ მეცნიერებაზე ან დაეხმარონ თქვენს სტუდენტებს
-    კოდის საათის საქმიანობაში.
-  hoc_how_to_step_05_educators_desc_01: გაახარეთ თქვენი სტუდენტები ღონისძიებისთვის
-    [ინსპირაციული ვიდეოების] გაზიარებით (%{videos_url}) ხაზს უსვამს მრავალფეროვან
-    ადამიანებს და შემოქმედებით გზებს, რომლითაც კომპიუტერული მეცნიერება შეიძლება გამოყენებულ
-    იქნას რეალურ სამყაროში.
-  hoc_how_to_step_05_educators_desc_02: გაუზიარეთ თქვენი კოდის საათის გეგმები სხვა
-    მასწავლებლებს, რომლებსაც შეიძლება სურდეთ გაერთიანდნენ გართობაში! ეს ასევე შესანიშნავი
-    შესაძლებლობაა დაუკავშირდეთ თქვენი სკოლის მშობელთა მასწავლებლების სტუდენტთა ასოციაციას
-    ან გააზიაროთ მშობლების საინფორმაციო ბიულეტენები, აცნობოთ მათ რას სწავლობენ მათი
-    შვილები.
-  hoc_how_to_step_06_educators_desc_01: მიმართეთ თქვენს სტუდენტებს აქტივობაზე, შესაძლოა
-    დაფაზე ბმულის გაზიარებით ან თქვენი საკლასო ოთახის სწავლის მართვის სისტემის საშუალებით.
-    თქვენს სტუდენტებს შეიძლება შეექმნათ გამოწვევები - ეს კარგია! პროგრამის სწავლა
-    ჰგავს ახალი ენის სწავლას; დაუყოვნებლივ არ იქნებით თავისუფლად. თუ პასუხი არ იცით,
-    შეგიძლიათ ერთად გაერკვნენ.
-  hoc_how_to_step_07_educators_desc_01: 'დარწმუნდით, რომ აღნიშნეთ წარმატება! გაუზიარეთ
-    თქვენი კოდის საათის ღონისძიების ფოტოები და ვიდეოები სოციალურ მედიაში. გამოიყენეთ
-    #HourOfCode და @codeorg, ასე რომ ჩვენ შეგვიძლია გამოვყოთ თქვენი წარმატებაც!'
-  hoc_how_to_step_07_educators_desc_02: თქვენ ასევე შეგიძლიათ დაბეჭდოთ სერთიფიკატები
-    თქვენი სტუდენტებისთვის, რათა აჩვენონ თავიანთი მიღწევები!
+  hoc_how_to_step_plan_hour_desc_01: 'აქ მოცემულია დღის წესრიგის ნიმუში დასაწყებად:'
+  hoc_how_to_step_choose_activities_desc_01: წელს კოდის საათის თემა არის შემოქმედება
+    ხელოვნური ინტელექტით (AI). იქნება ეს ახალი აპებისა და ალგორითმების კოდირება, უნიკალური
+    ხელოვნების გენერირება ან ქორეოგრაფიის შექმნა, რათა გაცეკვოთ, AI ხსნის ახალ შესაძლებლობებს
+    ციფრული გამოხატულებისთვის, რაც აფართოვებს ჩვენს შემოქმედ გააქციეთ ეს წელი განსაკუთრებული
+    კოდირების აქტივობის დასრულებით და ხელოვნური ინტელექტის
+  hoc_how_to_step_choose_activities_desc_02: პირველი, [შეისწავლეთ ასობით კოდირების
+    აქტივობა] (%{activities_url}) და აირჩიეთ ერთი თქვენი ჯგუფის ასაკის, გამოცდილების,
+    ინტერესების და სხვა მიხედვით. [ეს შერჩეული აქტივობები] (%{ai_activities_url})
+    წარმოადგენს ხელოვნურ ინტელექტს, როგორც ძირითად თემას ან გა
+  hoc_how_to_step_choose_activities_desc_03: შემდეგ, [შეიტყვეთ ყველაფერი AI— ის შესახებ]
+    (%{ai_url}). სტუდენტებს შეუძლიათ უყურონ მოკლე ვიდეოები, სადაც წარმოდგენილია ამ
+    სფეროს ექსპერტები და არსებობს თანმხლები გაკვეთილის გეგმები საქმიან ან, ჩვენ გთავაზობთ
+    უფასო პროფესიონალურ სწავლებას პედაგოგებისთვის, რათა გახსნათ სწავლების მომავალი
+  hoc_how_to_step_educators_register_desc: დაიწყეთ ვალდებულებით გააკეთოთ კოდის საათი
+    თქვენს სტუდენტებთან თქვენი ღონისძიების რეგისტრაციით. დარეგისტრირებისას მიიღებთ
+    სასარგებლო ელ. ფოსტებს ახალი ამბებით და რჩევებით წარმატებული კოდის საათის მასპინძლობის
+    თქვენ ასევე იქნებით [რუკაზე განთავსებული] (%{map_url}). ჩვენი კოლექტიური ძალისხმევის
+    ხილული მთლიანობა აჩვენებს კომპიუტერული მეცნიერების მოძრაობისადმი გლობალურ ერთგულებას,
+    რაც დაგვეხმარება
+  hoc_how_to_step_educators_plan_desc_01: ღონისძიებამდე თავად სცადეთ აქტივობები, რათა
+    დარწმუნდეთ, რომ ისინი მუშაობენ სტუდენტურ მოწყობილობებზე და მზად ხართ კითხვ გაქვთ
+    დაბალი გამტარობა დაგეგმეთ ვიდეოების ჩვენება კლასის წინა ნაწილში, ასე რომ თითოეული
+    მოსწავლე არ ჩამოტვირთოს საკუთარი ვიდეოები.
+  hoc_how_to_step_educators_plan_desc_02: ადამიანები მთელს მსოფლიოში ხშირად უერთდებიან
+    კოდის საათის ზეიმს კომპიუტერული მეცნიერებათა განათლების კვირეულის დროს (%{campaign_date}),
+    მაგრამ კოდის საათის გაკეთება შეგიძლიათ წლის ნებისმიერ დღეს!
+  hoc_how_to_step_educators_plan_desc_03: შეარჩიეთ სივრცე, რომელიც მუშაობს თქვენთვის
+    ხელმისაწვდომი სტუდენტებისა და მოწყობილობების სტუდენტებს შეუძლიათ სცადონ აქტივობები
+    ინდივიდუალურ მოწყობილობებზე, მოწყობილობის მონაცემებით გაზიარონ ან კლასის არსებობს
+    გამორთული აქტივობებიც კი, რომელთა დასრულება შესაძლებელია საერთოდ მოწყობილობების
+    გარეშე, ამიტომ მათი გაკეთება გარეთიც კი შეიძლება!
+  hoc_how_to_step_educators_spread_word_desc_01: დაგვეხმარეთ გავრცელოთ სიტყვა თქვენს
+    საზოგადოებაში [ელ. ფოსტის შაბლონ%{email_url}ებით] ()
+  hoc_how_to_step_educators_spread_word_desc_02: სთხოვეთ ორ კოლეგა [register]ს (%{register_url})
+    და უმასპინძლოთ საათის კოდის აქტივობას. მათ თავის მხრივ შეუძლიათ ორი კოლეგის უზრუნველყოფა,
+    რომელთაც შეუძლიათ ორი კოლეგის უზრუნველყოფა და ა.
+  hoc_how_to_step_educators_spread_word_desc_03: სთხოვეთ თქვენს დირექტორს [მასპინძლოს
+    სკოლის ღონისძიებას] (%{host_url}). როდესაც 300 ან მეტი ბავშვი მონაწილეობს, შეგიძლიათ
+    მიიღოთ სპეციალური ჩართულობის ნაკრები მაისურებით, პოსტერებით, ლეპტოპის სტიკერებით
+    და სხვა [გაუზიარეთ თქვენი მთელი სკოლის ღონისძიების გე%{share_url}გმა] () კვალი
+  hoc_how_to_step_educators_spread_word_desc_04: დაუკავშირდით თქვენი სკოლის მშობელთა
+    მასწავლებელთა სტუდენტთა ასოციაციას ან გაუზიარეთ მშობლების ბიულეტენებში და აცნობეთ
+    მათ რას
+  hoc_how_to_step_educators_plan_hour_desc_02: 'დილის 10:00-10:05: დაიწყეთ [ინსპირაციული
+    ვიდეოთი] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 საათზე: სტუდენტები აკეთებენ
+    კოდირების საქმიანობას'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 საათზე: სტუდენტები სწავლობენ
+    ინტელექტის შესახებ'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 საათზე: მასწავლებელი დასასრულო
+    შენიშვნებს გა'
+  hoc_how_to_step_educators_get_coding_desc: მიმართეთ თქვენს სტუდენტებს აქტივობაზე,
+    შესაძლოა დაფაზე ბმულის გაზიარებით ან თქვენი საკლასო ოთახის სწავლის მართვის სისტემის
+    საშუალებით. თქვენს სტუდენტებს შეიძლება შეექმნათ გამოწვევები - ეს კარგია! პროგრამის
+    სწავლა ჰგავს ახალი ენის სწავლას; დაუყოვნებლივ არ იქნებით თავისუფლად. თუ პასუხი
+    არ იცით, შეგიძლიათ ერთად გაერკვნენ.
+  hoc_how_to_step_educators_celebrate_desc: 'თქვენი ღონისძიების შემდეგ დაბეჭდეთ დასრულების
+    სერთიფიკატები და მიულოცეთ გაუზიარეთ თქვენი კოდის საათის ღონისძიების ფოტოები და
+    ვიდეოები და აჩვენეთ თქვენი მოსწავლეების მიღწევები #HourOfCode და @codeorg'
+  hoc_how_to_step_educators_beyond_desc: კომპიუტერული მეცნიერება არ უნდა დასრულდეს
+    კოდის საათით! მიუხედავად იმისა, რომ მშობლების 90% -ს სურს, რომ მათი შვილი ისწავლოს
+    კომპიუტერული მეცნიერება, სკოლების დასახმარებლად, ჩვენი სასწავლო გეგმა არის ვებ-დაფუძნებული
+    და უფასო გამოსაყენებელია ისწავლეთ როგორ მოიტანოთ CS თქვენს სკოლაში დღეს.
   hoc_ai_top_desc: ყველას შეუძლია გაეცნოს ხელოვნური ინტელექტის შესახებ, იქნება ეს
     სტუდენტი საკლასო ოთახში, თუ პედაგოგი, რომელიც ხსნის სწავლების მომავალს ინტელექტთან
   hoc_ai_how_ai_works_video_series_desc: მოკლე ვიდეოების ეს სერია გაცნობთ, თუ როგორ
@@ -14549,66 +14568,67 @@ ka:
     რესურსი პოლიტიკის შემქმნელებისთვის, სკოლის ლიდერებისა და პერსონალისთვის, რათა
     შეიმუშავონ თავიანთ სკოლებში AI
   teach_ai_button_label: ინსტრუმენტების ნაკრების ნახვა
-  middle_high_page_main_title: Learning for Ages 11 and Up
-  middle_high_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  middle_high_page_hero_title: Get Started with Hour of Code
-  middle_high_page_hero_description: Learn the fundamentals of computer science with
-    free Hour of Code activities, featuring drag-and-drop coding blocks. There are
-    hundreds of hour-long options to choose from!
-  middle_high_page_hourofcode_link: Explore Hour of Code activities
-  middle_high_page_modules_title: Programming Modules for Older Students
-  middle_high_page_modules_description: Adapted from our CS Discoveries and CS Principles
-    courses, these short, self-paced modules for middle and high school students are
-    a great way to learn concepts that span all programming languages and tools.
-  middle_high_page_modules_card_title_1: Introduction to Game Lab
-  middle_high_page_modules_card_title_2: Turtle Programming in App Lab
-  middle_high_page_modules_card_title_3: Event-Driven Programming in App Lab
-  middle_high_page_modules_card_description_1: Move at your own pace in this introduction
-    to our Game Lab environment as you program animations, interactive art, and games.
-  middle_high_page_modules_card_description_2: Unlock the ability to make rich, interactive
-    apps with JavaScript in the App Lab!
-  middle_high_page_modules_card_description_3: Go at your own pace with this introduction
-    to the App Lab programming environment, in which students use JavaScript to create
-    interactive apps.
-  middle_high_page_modules_card_link: Try it out
-  middle_high_page_make_your_own_title: Make Your Own Apps, Games, and Webpages
-  middle_high_page_make_your_own_description: 'In addition to courses, we have programming
-    tools that let you explore your creativity and make something amazing. '
+  middle_high_page_main_title: სწავლა 11 წლამდე ასაკისთვის
+  middle_high_page_main_description: შეისწავლეთ კომპიუტერული მეცნიერების სამყარო მიმზიდველი
+    ვიდეოებით, თვითგანსაზღვრელი გაკვეთილებით, პროგრა
+  middle_high_page_hero_title: დაიწყეთ კოდის საათით
+  middle_high_page_hero_description: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები
+    კოდის საათის უფასო აქტივობებით, რომელშიც შედის გადატვირთვ არსებობს ასობით საათიანი
+    ვარიანტი, რომელთაგან შეგიძლიათ აირჩიოთ!
+  middle_high_page_hourofcode_link: შეისწავლეთ კოდის საათის სა
+  middle_high_page_modules_title: პროგრამირების მოდულები ძველი სტუდენტ
+  middle_high_page_modules_description: ჩვენი CS აღმოჩენებისა და CS პრინციპების კურსებიდან
+    ადაპტირებული, ეს მოკლე, თვითმოკლე მოდულები საშუალო და საშუალო სკოლის მოსწავლეებისთვის
+    შესანიშნავი გზაა კონცეფციების შესასწავლად, რომლებიც მოიცავს პროგრამირების
+  middle_high_page_modules_card_title_1: შესავალი თამაშის ლაბორატ
+  middle_high_page_modules_card_title_2: კუს პროგრამირება აპლიკაციების ლაბ
+  middle_high_page_modules_card_title_3: მოვლენებზე ორიენტირებული პროგრამირება აპლიკაციის
+  middle_high_page_modules_card_description_1: გადაადგილეთ საკუთარი ტემპით ჩვენი Game
+    Lab გარემოში ამ შესავალში, როდესაც პროგრამებთ ანიმაციებს, ინტერაქტიულ ხელოვნებას
+    და თამაშებს.
+  middle_high_page_modules_card_description_2: განბლოკეთ JavaScript— ით მდიდარი, ინტერაქტიული
+    აპების შექმნის შესაძლებლობა აპლიკაციის ლაბორატორიაში!
+  middle_high_page_modules_card_description_3: გადადით საკუთარი ტემპით App Lab პროგრამირების
+    გარემოში ამ შესავალით, რომელშიც სტუდენტები იყენებენ JavaScript-ს ინტერაქტიული
+    აპების შესაქმნელად.
+  middle_high_page_modules_card_link: სცადეთ
+  middle_high_page_make_your_own_title: შექმენით თქვენი საკუთარი აპები, თამაშები და
+    ვებგვერდები
+  middle_high_page_make_your_own_description: 'კურსების გარდა, ჩვენ გვაქვს პროგრამირების
+    ინსტრუმენტები, რომლებიც საშუალებას გაძლევთ შეისწავლოთ თქვენი შემოქმედება და გააკეთ '
   middle_high_page_make_your_own_card_title_1: აპლიკაციის ლაბორატორია
-  middle_high_page_make_your_own_card_title_2: Game Lab
-  middle_high_page_make_your_own_card_title_3: Web Lab
-  middle_high_page_make_your_own_card_descrpition_1: App Lab is a programming environment
-    where you can make simple apps. Design an app, code in JavaScript with either
-    blocks or text, then share your app in seconds.
-  middle_high_page_make_your_own_card_descrpition_2: Game Lab is a programming environment
-    where you can make simple animations and games with objects and characters that
-    interact with each other.
-  middle_high_page_make_your_own_card_descrpition_3: Web Lab is a programming environment
-    where you can make simple web pages using HTML and CSS. Design your web pages
-    and share your site in seconds.
+  middle_high_page_make_your_own_card_title_2: თამაშის ლაბორ
+  middle_high_page_make_your_own_card_title_3: ვებ ლაბორატორი
+  middle_high_page_make_your_own_card_descrpition_1: App Lab არის პროგრამირების გარემო,
+    სადაც შეგიძლიათ მარტივი აპების შექმნა. შექმენით აპლიკაცია, კოდი JavaScript-ში
+    ბლოკებით ან ტექსტით, შემდეგ გაუზიარეთ თქვენი აპი წამებში.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab არის პროგრამირების გარემო,
+    სადაც შეგიძლიათ გააკეთოთ მარტივი ანიმაციები და თამაშები ერთმანეთთან ურთიერთქმედი
+    ობიექტებითა და პერ
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab არის პროგრამირების გარემო,
+    სადაც შეგიძლიათ გააკეთოთ მარტივი ვებ გვერდები HTML და CSS გამოყენებით. შექმენით
+    თქვენი ვებ გვერდები და გააზიარეთ თქვენი საიტი წამებში.
   middle_high_page_make_your_own_card_link: გაიგე მეტი
-  middle_high_page_additional_resources_title: Additional Resources
-  middle_high_page_additional_resources_description: There are so many ways to further
-    explore computer science! Browse our video library, or learn more about exciting
-    careers in the computer science field.
-  middle_high_page_video_library_title: Discover our Video Library
-  middle_high_page_video_library_description: Learn the basics of computer science
-    through short 5-10 minute videos on topics like artificial intelligence, the Internet,
-    how computers work, how not to get hacked, blockchain, careers, and more!
-  middle_high_page_video_library_link: View video library
-  middle_high_page_cs_journeys_title: Go Further with CS Journeys
-  middle_high_page_cs_journeys_description: Take the next step on your computer science
-    journey. Explore careers, mentorship opportunities, online courses, scholarships,
-    internships and more!
-  middle_high_page_cs_journeys_link: Explore CS Journeys
-  middle_high_page_cs_title: Computer Science in the Classroom
-  middle_high_page_cs_description: These courses should be led by a teacher! If you'd
-    like to see them taught at your school, consider working with a teacher to bring
-    them to your class.
-  middle_high_page_cs_card_title_1: CS Discoveries
-  middle_high_page_cs_card_title_2: CS Principles
-  middle_high_page_cs_card_title_3: AP Computer Science A
+  middle_high_page_additional_resources_title: დამატებითი რესურ
+  middle_high_page_additional_resources_description: კომპიუტერული მეცნიერების შემდგომი
+    შესწავლის მრავალი გზა არსებ დაათვალიერეთ ჩვენი ვიდეო ბიბლიოთეკა ან გაიგეთ მეტი
+    კომპიუტერული მეცნიერების სფეროში
+  middle_high_page_video_library_title: აღმოაჩინეთ ჩვენი ვიდეო
+  middle_high_page_video_library_description: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები
+    5-10 წუთიანი მოკლე ვიდეოების საშუალებით ისეთ თემებზე, როგორიცაა ხელოვნური ინტელექტი,
+    ინტერნეტი, როგორ მუშაობენ კომპიუტერები, როგორ არ მოხდეს გატეხილი, ბლო
+  middle_high_page_video_library_link: ვიდეობილიოთეკის
+  middle_high_page_cs_journeys_title: წავიდეთ უფრო შორს CS Journeys— ით
+  middle_high_page_cs_journeys_description: გადადგით შემდეგი ნაბიჯი თქვენს კომპიუტერულ
+    მეცნიერებაში შეისწავლეთ კარიერა, მენტორინგის შესაძლებლობები, ონლაინ კურსები, სტიპენდიები,
+  middle_high_page_cs_journeys_link: გამოიკვლიეთ CS Journeys
+  middle_high_page_cs_title: კომპიუტერული მეცნიერება კლასში
+  middle_high_page_cs_description: ამ კურსებს უნდა უძღვებოდეს მასწავლებელი! თუ გსურთ,
+    რომ ისინი თქვენს სკოლაში სწავლობენ, გაითვალისწინეთ მასწავლებელთან მუშაობა, რათა
+    ისინი თქვენს კლასში მოიყვანოთ.
+  middle_high_page_cs_card_title_1: CS აღმოჩენები
+  middle_high_page_cs_card_title_2: CS პრინციპები
+  middle_high_page_cs_card_title_3: AP კომპიუტერული მეცნიერება
   middle_high_page_cs_card_description_1: უფასო ერთწლიანი სასწავლო გეგმა, რომელიც
     აცნობს სტუდენტებს კომპიუტერული მეცნიერების ფუნდამენტურ კონცეფციებს და იწვევს მათ
     გამოიკვლიონ, თუ როგორ შეიძლება გავლენა მოახდინოს გამოთვლამ და ტექნოლოგიამ სამყაროზე.
@@ -14619,34 +14639,34 @@ ka:
   middle_high_page_cs_card_description_3: გააცანით სტუდენტებს პროგრამული უზრუნველყოფის
     ინჟინერია და ობიექტზე ორიენტირებული დიზაინი, სანამ ისინი სწავლობენ Java პროგრამირების
     ენას ამ უფასო სასწავლო გეგმაში AP® კომპიუტერული მეცნიერებისთვის A (AP® CSA).
-  middle_high_page_cs_link_1: Explore CS Dicoveries
+  middle_high_page_cs_link_1: გამოიკვლიეთ CS დიკოვერიები
   middle_high_page_cs_link_2: გამოიკვლიეთ CS პრინციპები
-  middle_high_page_cs_link_3: Explore CSA
-  elemeentary_page_main_title: Learning for Ages 5 to 11
-  elementary_page_main_description: Explore the world of computer science with engaging
-    videos, self-paced tutorials, programming activities, and more!
-  elementary_page_own_pace_title: Continue Learning at Your Own Pace
-  elementary_page_own_pace_description: Create drawings, games, and more in these
-    two excellent options for students getting started on their own learning the basics
-    of computer science.
-  elementary_page_own_pace_card_title_1: Pre-Reader Express Course
-  elementary_page_own_pace_card_title_2: Express Course
-  elementary_page_own_pace_card_description_1: Learn computer science at your own
-    pace! Learn to create computer programs, develop problem-solving skills, and work
-    through fun challenges! Make games and creative projects to share with friends,
-    family, and teachers.
-  elementary_page_own_pace_link_1: Start Pre-Reader Course
-  elementary_page_own_pace_link_2: Start Express Course
-  elementary_page_make_your_own_games_title: Make Your Own Animations and Games
+  middle_high_page_cs_link_3: გამოიკვლიეთ CSA
+  elemeentary_page_main_title: სწავლა 5-დან 11 წლამდე ასაკისთვის
+  elementary_page_main_description: შეისწავლეთ კომპიუტერული მეცნიერების სამყარო მიმზიდველი
+    ვიდეოებით, თვითგანსაზღვრელი გაკვეთილებით, პროგრა
+  elementary_page_own_pace_title: განაგრძეთ სწავლა საკუთარი ტემპით
+  elementary_page_own_pace_description: შექმენით ნახატები, თამაშები და სხვა ამ ორ
+    შესანიშნავი ვარიანტში სტუდენტებისთვის, რომლებიც დაიწყებენ კომპიუტერული მეცნიერების
+    საფუძვლების სწავლას
+  elementary_page_own_pace_card_title_1: წინა მკითხველის ექსპრ
+  elementary_page_own_pace_card_title_2: ექსპრეს კურსი
+  elementary_page_own_pace_card_description_1: ისწავლეთ კომპიუტერული მეცნიერება საკუთარი
+    ტემ ისწავლეთ კომპიუტერული პროგრამების შექმნა, პრობლემების გადაჭრის უნარების განვითარება
+    და სახალისო გამოწვევ შექმენით თამაშები და შემოქმედებითი პროექტები მეგობრებთან,
+    ოჯახთან და მასწავ
+  elementary_page_own_pace_link_1: წინასწარი მკითხველის კურ
+  elementary_page_own_pace_link_2: ექსპრეს კურსის დაწყ
+  elementary_page_make_your_own_games_title: შექმენით საკუთარი ანიმაციები და თამაშ
   elementary_page_make_your_own_games_card_title_1: სპრაიტის ლაბორატორია
-  elementary_page_make_your_own_games_card_description_1: Time to get creative! Use
-    block-based coding to make something silly, sweet, or outer-spacey in Sprite Lab.
-    The only limit is your imagination!
-  elementary_page_make_your_own_games_link: Try Sprite Lab
-  elementary_page_computer_science_title: Computer Science in the Classroom
-  elementary_page_computer_science_description: These courses should be led by a teacher!
-    If you'd like to see them taught at your school, ask a parent or guardian to work
-    with a teacher to bring them to your class.
+  elementary_page_make_your_own_games_card_description_1: დრო, რომ იყოთ შემოქმედებითი!
+    გამოიყენეთ ბლოკზე დაფუძნებული კოდირება, რათა გააკეთოთ რაღაც სულელური, ტკბილი ან
+    გარე სივრცე Sprite Lab ერთადერთი ლიმიტი თქვენი ფანტაზიაა!
+  elementary_page_make_your_own_games_link: სცადეთ სპრაიტის ლაბ
+  elementary_page_computer_science_title: კომპიუტერული მეცნიერება კლასში
+  elementary_page_computer_science_description: ამ კურსებს უნდა უძღვებოდეს მასწავლებელი!
+    თუ გსურთ, რომ ისინი თქვენს სკოლაში ასწავლიან, სთხოვეთ მშობელს ან მეურვეს იმუშაოს
+    მასწავლებელთან, რათა ისინი თქვენს კლასში მოიყვანოს.
   elementary_page_computer_science_card_title_1: კომპიუტერული მეცნიერების საფუძვლები
   elementary_page_computer_science_card_title_2: კომპიუტერულ მეცნიერებათა კავშირები
   elementary_page_computer_science_description_1: უფასო ერთწლიანი სასწავლო გეგმა,

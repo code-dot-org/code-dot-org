@@ -8765,12 +8765,14 @@
           "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "6c56c6d8-505f-450b-af78-6589752885e9": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Exiba o processo de solução de problemas. Em sua opinião, onde o Feedback do Usuário se encaixa no processo de resolução de problemas? Qual você acha que é a próxima etapa depois de coletar o feedback do usuário?"
         },
         "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Os alunos devem começar a colocar o feedback do usuário nos estágios Reflita ou Tente do processo de resolução de problemas. Tente orientar a conversa para que discutam sobre quais seriam as próximas etapas, enfatizando que o diagrama tem setas nas duas direções. Ser flexível com esse processo é importante ao desenvolver um aplicativo para atender às necessidades do usuário.\n\nPor exemplo, se o feedback do usuário estiver no estágio Reflita, você poderá voltar para o estágio Tente para fazer alterações rápidas e testar novamente, ou o feedback poderá fazer com que você avance para o estágio Defina, onde descobriu uma necessidade totalmente nova do usuário que decidiu atender."
+          ],
+          "description": "**Discuta:** Peça aos alunos que escrevam uma resposta no diário e depois discutam com os colegas de grupo. Se tiver tempo, faça uma discussão em grande grupo relacionando o feedback do usuário ao processo de solução de problemas."
         },
         "6c9f71c2-38be-428f-88e2-c7b16c1f4b47": {
           "name": "Diário"
@@ -9346,17 +9348,20 @@
           "name": "Diário"
         },
         "a8a0cd51-12b0-4c58-8d16-b4b4778d2719": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Imagine que seu amigo perguntou se você poderia sair mais tarde. Essa é uma pergunta de sim ou não e, portanto, uma maneira de responder é dizendo “Sim” ou “Não”. Esse é um par possível de respostas que você poderia usar para que seu amigo entendesse, mas há muitos outros pares possíveis.\n\nListe todas as diferentes maneiras pelas quais você poderia escrever, dizer ou representar a resposta para uma pergunta “Sim-Não”."
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Os alunos devem ver que as mesmas informações podem ser representadas de várias maneiras diferentes. Eles podem dizer “Sim” ou “Não” em vários idiomas diferentes: polegar para cima versus polegar para baixo, mais ou menos, seta para cima versus seta para baixo, balançar a cabeça para cima e para baixo versus lado a lado, etc. Dê exemplos aos alunos se eles não entenderem que precisam de pares de respostas.\n\nSeu quadro pode ficar assim depois de escrever as respostas."
+          ],
+          "description": "**Discuta:** Os alunos devem debater suas ideias silenciosamente, depois devem compartilhar com os outros integrantes de suas mesas e, finalmente, compartilhar com a turma toda. Anote as ideias em uma tabela na frente da sala à medida que as ideias forem sendo compartilhadas."
         },
         "7e296c41-f0fb-4d31-8b13-31f6e7abe2f5": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Essa conversa é preparatória para que você apresente outra observação importante: que sistemas diferentes são criados para diferentes contextos. Hoje, você pedirá aos alunos que criem um sistema para o que parecerá um contexto muito arbitrário: um baralho de cartas de animais. Confie no fato de que eles terão pensado em muitos “sistemas arbitrários estranhos” nesse aquecimento. Isso ocorre porque há diferentes contextos nos quais eles são usados. Na lição seguinte, você poderá mostrar à turma que projetar sistemas para fios de eletricidade é igualmente estranho e arbitrário."
+          ],
+          "description": "**Prompt:** Cada linha em nossa tabela é um “sistema” diferente, mas todas representam as mesmas informações. Por que você acha que temos tantos sistemas diferentes para representar a mesma informação?"
         },
         "98a216a1-8aa6-4216-ad6e-b7ab5abca491": {
           "tips": [
@@ -19235,12 +19240,14 @@
           "description": "**Faça Isso:** Em grupo, os alunos recebem o feedback que categorizaram e propõem algumas melhorias em potencial no aplicativo. Cada melhoria proposta deve estar claramente conectada a uma das categorias de feedback criadas na última atividade."
         },
         "b6e821e1-623c-489c-a3a2-8c7b392c38d6": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Exiba o processo de solução de problemas. Em sua opinião, onde o Feedback do Usuário se encaixa no processo de resolução de problemas? Qual você acha que é a próxima etapa depois de coletar o feedback do usuário?"
         },
         "7fcbeecb-4ae1-4347-9347-a2b4d3b4e546": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Os alunos devem começar a colocar o feedback do usuário nos estágios Reflita ou Tente do processo de resolução de problemas. Tente orientar a conversa para que discutam sobre quais seriam as próximas etapas, enfatizando que o diagrama tem setas nas duas direções. Ser flexível com esse processo é importante ao desenvolver um aplicativo para atender às necessidades do usuário.\n\nPor exemplo, se o feedback do usuário estiver no estágio Reflita, você poderá voltar para o estágio Tente para fazer alterações rápidas e testar novamente, ou o feedback poderá fazer com que você avance para o estágio Defina, onde descobriu uma necessidade totalmente nova do usuário que decidiu atender."
+          ],
+          "description": "**Discuta:** Peça aos alunos que escrevam uma resposta no diário e depois discutam com os colegas de grupo. Se tiver tempo, faça uma discussão em grande grupo relacionando o feedback do usuário ao processo de solução de problemas."
         },
         "2bb2bbb7-7028-4c53-ac02-3ad9e4b6f9d3": {
           "name": "Diário"
@@ -19849,17 +19856,20 @@
           "name": "Diário"
         },
         "359e9024-3c43-45d1-b97a-c3cd961072ca": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Imagine que seu amigo perguntou se você poderia sair mais tarde. Essa é uma pergunta de sim ou não e, portanto, uma maneira de responder é dizendo “Sim” ou “Não”. Esse é um par possível de respostas que você poderia usar para que seu amigo entendesse, mas há muitos outros pares possíveis.\n\nListe todas as diferentes maneiras pelas quais você poderia escrever, dizer ou representar a resposta para uma pergunta “Sim-Não”."
         },
         "94e2383d-41c6-47c3-8e37-25f8292e3bcd": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Os alunos devem ver que as mesmas informações podem ser representadas de várias maneiras diferentes. Eles podem dizer “Sim” ou “Não” em vários idiomas diferentes: polegar para cima versus polegar para baixo, mais ou menos, seta para cima versus seta para baixo, balançar a cabeça para cima e para baixo versus lado a lado, etc. Dê exemplos aos alunos se eles não entenderem que precisam de pares de respostas.\n\nSeu quadro pode ficar assim depois de escrever as respostas."
+          ],
+          "description": "**Discuta:** Os alunos devem debater suas ideias silenciosamente, depois devem compartilhar com os outros integrantes de suas mesas e, finalmente, compartilhar com a turma toda. Anote as ideias em uma tabela na frente da sala à medida que as ideias forem sendo compartilhadas."
         },
         "2f3d392c-19a3-4b82-a1e6-977a854b26b0": {
           "tips": [
-            null
-          ]
+            "**Objetivo:** Essa conversa é preparatória para que você apresente outra observação importante: que sistemas diferentes são criados para diferentes contextos. Hoje, você pedirá aos alunos que criem um sistema para o que parecerá um contexto muito arbitrário: um baralho de cartas de animais. Confie no fato de que eles terão pensado em muitos “sistemas arbitrários estranhos” nesse aquecimento. Isso ocorre porque há diferentes contextos nos quais eles são usados. Na lição seguinte, você poderá mostrar à turma que projetar sistemas para fios de eletricidade é igualmente estranho e arbitrário."
+          ],
+          "description": "**Prompt:** Cada linha em nossa tabela é um “sistema” diferente, mas todas representam as mesmas informações. Por que você acha que temos tantos sistemas diferentes para representar a mesma informação?"
         },
         "c678e55a-ce95-477d-a922-c0af9bdee376": {
           "tips": [
@@ -30905,10 +30915,12 @@
         "eaf2312f-f3a1-4d8e-9e9f-dec26b2ef9a4": {
           "tips": [
             null
-          ]
+          ],
+          "description": "**Circule:** Monitore os alunos enquanto eles trabalham nos pequenos grupos, garantindo que todos sejam ouvidos pelos seus grupos e esclarecendo quaisquer dúvidas.\n\n#### Redesenho da tela\n\n**Faça isso:** Cada aluno desenhará uma versão aprimorada de uma das telas no aplicativo de protótipo de papel. O guia de atividades contém uma página para cada tela do aplicativo para o grupo dividir. Se possível, imprima o guia de atividades em um único lado para que seja mais fácil para os alunos dividirem as telas.\n\n**Compartilhe:** Peça a um aluno de cada grupo que apresente brevemente a tela que ele atualizou. Peça-lhes que descrevam especificamente:\n\n-   A categoria de necessidades que eles escolheram abordar\n-   Diferentes maneiras que eles consideraram de atender a essas necessidades\n-   As mudanças na interface de usuário que eles criaram para atender a essas necessidades"
         },
         "eb34af75-ea6f-40e7-96b9-d44cffe90593": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Exiba o processo de solução de problemas. Em sua opinião, onde o Feedback do Usuário se encaixa no processo de resolução de problemas? Qual você acha que é a próxima etapa depois de coletar o feedback do usuário?"
         },
         "1d938704-ddff-42c9-bac5-c8b5e8f932db": {
           "name": "Diário"
@@ -30994,7 +31006,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Exemplos de Apps for Good"
+          "progression_name": "Exemplos de Aplicativos do Bem"
         },
         "925f79d8-3f69-45a4-8e88-4bc828edd765": {
           "tips": [
@@ -31416,7 +31428,8 @@
           "progression_name": "Pesquisa de verificação"
         },
         "dbb7c7dd-fe3f-47f0-9141-8e985244c12d": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Prompt:** Imagine que seu amigo perguntou se você poderia sair mais tarde. Essa é uma pergunta de sim ou não e, portanto, uma maneira de responder é dizendo “Sim” ou “Não”. Esse é um par possível de respostas que você poderia usar para que seu amigo entendesse, mas há muitos outros pares possíveis.\n\nListe todas as diferentes maneiras pelas quais você poderia escrever, dizer ou representar a resposta para uma pergunta “Sim-Não”."
         },
         "5727db49-d918-48da-a385-7bea0a132f6e": {
           "tips": [
@@ -40809,22 +40822,40 @@
           "description": "**Faça Isso:** Os alunos devem trabalhar em grupos para criar pilhas de tiras de papel para que cada pilha seja uma categoria de feedback. As categorias devem corresponder às necessidades ou aos problemas semelhantes aos abordados pelo feedback. Por exemplo, vários comentários podem ser sobre o fato de a fonte ser muito pequena para ser lida. Ao categorizar o feedback, eles também devem discutir em quais categorias gostariam de se concentrar e por quê.\n\n**Circule:** Monitore o progresso dos alunos, pedindo aos grupos que expliquem como estão formando suas categorias. Não há um agrupamento correto de feedback aqui, mas os alunos devem estar preparados para justificar suas categorias. Peça aos alunos que expliquem quais categorias eles escolheram como mais importantes de serem abordadas e por quê.\n\n**Compartilhe:** Depois que todos os grupos categorizarem seus comentários, peça algumas sugestões dos tipos de categorias que eles criaram."
         },
         "10d99ae6-1017-4eee-bd4b-f29db65a8188": {
-          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela",
+          "name": "Respondendo ao Feedback"
         },
         "c4c179f9-0c8f-4b1e-9968-951378f3fa2d": {
           "description": "#### Possíveis Melhorias"
         },
         "2d61b6e8-fd6b-419b-83d4-0feba34d7e59": {
-          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela",
+          "name": "Respondendo ao Feedback"
         },
         "df6e2da4-8b9e-4ca2-b29f-cb6b7de0cf75": {
           "description": "#### Possíveis Melhorias"
         },
         "2063e374-9886-493e-8aac-18fbfdbb1089": {
-          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela"
+          "description": "**Distribua:** Uma cópia do Guia de Atividades para melhorar a tela para cada grupo. Cada grupo precisa apenas de uma cópia para compartilhar entre os alunos.\n\n#### Melhore uma tela",
+          "name": "Respondendo ao Feedback"
         },
         "28cc4fbb-0d1e-476a-9a6f-215664f77306": {
           "description": "#### Possíveis Melhorias"
+        },
+        "47850443-e8d5-4a7f-940f-7ef92470e1c5": {
+          "description": "**Circule:** Monitore os alunos enquanto eles trabalham nos pequenos grupos, garantindo que todos sejam ouvidos pelos seus grupos e esclarecendo quaisquer dúvidas.\n\n#### Redesenho da tela\n\n**Faça isso:** Cada aluno desenhará uma versão aprimorada de uma das telas no aplicativo de protótipo de papel. O guia de atividades contém uma página para cada tela do aplicativo para o grupo dividir. Se possível, imprima o guia de atividades em um único lado para que seja mais fácil para os alunos dividirem as telas.\n\n**Compartilhe:** Peça a um aluno de cada grupo que apresente brevemente a tela que ele atualizou. Peça-lhes que descrevam especificamente:\n\n-   A categoria de necessidades que eles escolheram abordar\n-   Diferentes maneiras que eles consideraram de atender a essas necessidades\n-   As mudanças na interface de usuário que eles criaram para atender a essas necessidades"
+        },
+        "20932b42-3492-4da3-9341-e3f5884ab26e": {
+          "description": "Peça aos alunos que conversem com um parceiro antes de pedir a alguns alunos que compartilhem com a turma toda. Não há uma resposta certa ou errada para esse prompt."
+        },
+        "eef6c596-5d35-4dad-ac53-bbb2fd26a4f0": {
+          "description": "**Circule:** Monitore os alunos enquanto eles trabalham nos pequenos grupos, garantindo que todos sejam ouvidos pelos seus grupos e esclarecendo quaisquer dúvidas.\n\n#### Redesenho da tela\n\n**Faça isso:** Cada aluno desenhará uma versão aprimorada de uma das telas no aplicativo de protótipo de papel. O guia de atividades contém uma página para cada tela do aplicativo para o grupo dividir. Se possível, imprima o guia de atividades em um único lado para que seja mais fácil para os alunos dividirem as telas.\n\n**Compartilhe:** Peça a um aluno de cada grupo que apresente brevemente a tela que ele atualizou. Peça-lhes que descrevam especificamente:\n\n-   A categoria de necessidades que eles escolheram abordar\n-   Diferentes maneiras que eles consideraram de atender a essas necessidades\n-   As mudanças na interface de usuário que eles criaram para atender a essas necessidades"
+        },
+        "1f797b70-4ebe-416c-a2f3-1060afb74e35": {
+          "description": "Peça aos alunos que conversem com um parceiro antes de pedir a alguns alunos que compartilhem com a turma toda. Não há uma resposta certa ou errada para esse prompt."
+        },
+        "83b0b995-979d-488b-94aa-3ce196e6f786": {
+          "description": "Peça aos alunos que conversem com um parceiro antes de pedir a alguns alunos que compartilhem com a turma toda. Não há uma resposta certa ou errada para esse prompt."
         }
       }
     }

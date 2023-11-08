@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-04 18:34:14 UTC",
+    "serialized_at": "2023-11-07 19:23:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1940,7 +1940,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Determine the result or side effect of iteration statements.*\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0) \n\n**Sample Response for Instructors**\n\n\n\n![](https://images.code.org/8618586759adcfae2539e60b9cbf819d-Screenshot 2023-11-04 at 11.16.43 AM.png)"
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0) \n\n**Sample Response for Instructors**\n\n\n\n![](https://images.code.org/8618586759adcfae2539e60b9cbf819d-Screenshot 2023-11-04 at 11.16.43 AM.png)"
           }
         ]
       },

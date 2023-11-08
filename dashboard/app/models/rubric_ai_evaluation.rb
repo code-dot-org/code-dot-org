@@ -46,4 +46,32 @@ class RubricAiEvaluation < ApplicationRecord
       num_learning_goal_ai_evaluations: learning_goal_ai_evaluations.count,
     }
   end
+
+  def queued?
+    status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
+  end
+
+  def running?
+    status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:RUNNING]
+  end
+
+  def succeeded?
+    status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS] && !failed?
+  end
+
+  def failed?
+    status >= SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:FAILURE]
+  end
+
+  def pii_failure?
+    status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
+  end
+
+  def profanity_failure?
+    status == SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION]
+  end
+
+  def share_filtering_failure?
+    pii_failure? || profanity_failure?
+  end
 end

@@ -74,7 +74,9 @@ describe('AddCoteacher', () => {
     const setAddErrorSpy = sinon.spy();
 
     const setCoteachersToAddSpy = makeSpyWithAssertions(func => {
-      expect(fetchSpy).to.be.calledOnce;
+      expect(fetchSpy).to.be.calledOnceWith(
+        `/api/v1/section_instructors/check?email=new-email%40code.org`
+      );
       expect(setCoteachersToAddSpy).to.be.calledOnce;
       expect(func([])).to.deep.equal(['new-email@code.org']);
       expect(setAddErrorSpy).to.have.been.calledOnceWith('');
@@ -83,6 +85,31 @@ describe('AddCoteacher', () => {
     const wrapper = shallow(
       <AddCoteacher
         {...DEFAULT_PROPS}
+        coteachersToAdd={['coelophysis@code.org']}
+        setCoteachersToAdd={setCoteachersToAddSpy}
+        setAddError={setAddErrorSpy}
+      />
+    );
+    addTeacher(wrapper, 'new-email@code.org');
+  });
+
+  it('adds coteacher when valid email is added', done => {
+    fetchSpy.returns(Promise.resolve({ok: true}));
+    const setAddErrorSpy = sinon.spy();
+
+    const setCoteachersToAddSpy = makeSpyWithAssertions(func => {
+      expect(fetchSpy).to.be.calledOnceWith(
+        `/api/v1/section_instructors/check?email=new-email%40code.org&section_id=1`
+      );
+      expect(setCoteachersToAddSpy).to.be.calledOnce;
+      expect(func([])).to.deep.equal(['new-email@code.org']);
+      expect(setAddErrorSpy).to.have.been.calledOnceWith('');
+    }, done);
+
+    const wrapper = shallow(
+      <AddCoteacher
+        {...DEFAULT_PROPS}
+        sectionId={1}
         coteachersToAdd={['coelophysis@code.org']}
         setCoteachersToAdd={setCoteachersToAddSpy}
         setAddError={setAddErrorSpy}
@@ -153,7 +180,9 @@ describe('AddCoteacher', () => {
   });
 
   it('calls check method and shows returned error', done => {
-    fetchSpy.returns(Promise.resolve({ok: false, errorThrown: 'Not Found'}));
+    fetchSpy.returns(
+      Promise.resolve({ok: false, statusText: 'Not Found', status: 404})
+    );
     const setCoteachersToAddSpy = sinon.spy();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {

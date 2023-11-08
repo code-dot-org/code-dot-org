@@ -4,14 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "dance-ai",
-    "serialized_at": "2023-11-03 22:45:33 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-11-07 23:04:06 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,7 +44,7 @@
       "properties": {
         "overview": "In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment. This lesson has been designed for learners of all ages but does require reading. This activity requires students to play sound, as the tutorial was built to respond to music.\n",
         "preparation": "###How to Plan Your Hour of Code\n\nFind the resources you need to plan, impliment, and celebrate the Hour of Code at your school [here](https://hourofcode.com/us/how-to)!",
-        "purpose": "Making an exciting and enjoyable experience is essential in cultivating interest in computer science. This lesson is filled with moments of joy, where students use code to choreograph a dance spectacle of color and movement using simple drag-and-drop coding blocks. Students will be introduced to A.I. that they will direct to help find the perfect effects to match the mood of their dance."
+        "purpose": "Making coding an exciting and enjoyable experience is essential in cultivating interest in computer science. This lesson is filled with moments of joy, where students use code to choreograph a dance spectacle of color and movement using simple drag-and-drop coding blocks. Students will be introduced to an A.I. Bot that they will direct to help find the perfect effects to match the mood of their dance.  "
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -190,7 +191,7 @@
       "key": "66891774-46dc-4488-a30b-5d231e4145ff",
       "position": 3,
       "properties": {
-        "description": "Just like choosing which colors of paint to use, or what words you write with are ways of expressing creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\nIn this creative coding activity, you will be introduced to a new, helpful tool: Artificial Intelligence, also known as A.I.! A.I. is a computer program that works like a human's brain. The A.I. Bot in this activity can help you by making choices for the special effects very quickly. ",
+        "description": "Just like choosing which paint colors to use or words you write with are ways of expressing creativity. Choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\nIn this creative coding activity, you will be introduced to a new, helpful tool: Artificial Intelligence, also known as A.I.! A.I. is a computer program that works like a human's brain. The A.I. Bot in this activity can help you by making choices for the special effects very quickly. ",
         "remarks": true
       },
       "seeding_key": {
@@ -239,7 +240,7 @@
       "key": "e150925b-003d-4acd-a87c-5aca4d8b1a89",
       "position": 3,
       "properties": {
-        "description": "In these three levels, students will use a new block to prompt A.I. to generate code for the effect for their dance party. Students choose three emojis that describe the mood they want to convey for their dance party.",
+        "description": "In these three levels, students are introduced to the new A.I. block. There are two videos that accompany these levels. Encourage students to re-watch these videos if they are feeling stuck. To pass these levels, students  prompt A.I. to generate code for colorful effects to go with their dance party. Encourage students to choose three emojis that describe the mood they want to convey for their dance party.\n",
         "name": "Use A.I. to generate special effects",
         "progression_name": "Use A.I. "
       },
@@ -249,10 +250,26 @@
       }
     },
     {
-      "key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542",
+      "key": "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e",
       "position": 4,
       "properties": {
-        "description": "Now, students are introduced to events. This is the trickiest coding concept in this tutorial. Events are special. They don’t connect to the setup block, but instead are mini programs on their own. Think of an event as a listening ear that will execute whatever code is under it when it is triggered. The first event students use are `when arrow pressed` events that will allow students to trigger new chunks of code by pressing a key on their keyboard. The second event is the `at measure` event that work more like a timer on a clock. When the song has run for a specified amount of measures, the new code will be triggered. \n\nEncourage students to rewatch the videos on events that accompany two of these levels. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Embedded videos will overlay on the level the first time a user opens the level. Students can close out of it once they're done watching. If they would like to watch the video again, it will be available under the \"run\" button."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e",
+        "lesson_activity.key": "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6"
+      }
+    },
+    {
+      "key": "3ae03e0b-0a31-42b7-bee8-98aa457a9542",
+      "position": 5,
+      "properties": {
+        "description": "Now, students are introduced to events. This is the trickiest coding concept in this tutorial. Events are special. They don’t connect to the setup block, but instead are mini programs on their own. Think of an event as a listening ear that will execute whatever code is under it when it is triggered. The first event students use are `when arrow pressed` events that will allow students to trigger new chunks of code by pressing a key on their keyboard. The second event is the `at measure` event that works more like a timer on a clock. When the song has run for a specified amount of measures, the new code will be triggered. \n\nEncourage students to rewatch the videos on events that accompany two of these levels. ",
         "name": "Code events to add interaction",
         "progression_name": "Key Press & At Measure Events"
       },
@@ -263,7 +280,7 @@
     },
     {
       "key": "7f2f14df-e85e-4dea-bf5a-5d9537baca14",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "This last level is meant to be a space for free play and exploration. Encourage students to get creative and to practice their new coding skills to make a dance party of their own!  ",
         "name": "Get creative! ",

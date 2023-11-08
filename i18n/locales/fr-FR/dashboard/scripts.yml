@@ -8413,6 +8413,9 @@ fr:
               display_name: Introduction
           title: Jour 1
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Présentation des activités asynchrones
           lesson_groups:
             lessonGroup-2:
               display_name: Synchrone, partie 1
@@ -8423,6 +8426,10 @@ fr:
             lessonGroup-5:
               display_name: Asynchrone, partie 2
           title: Jour 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: Modèle de programme de cours de l'heure de code
         self-paced-pl-csd-unit1-2-2023:
           title: 'Module 1 : Se préparer à l''enseignement sur la résolution de problèmes et l''informatique'
           description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"

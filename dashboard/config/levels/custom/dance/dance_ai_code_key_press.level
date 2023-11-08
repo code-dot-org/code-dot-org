@@ -65,7 +65,7 @@
       "upButton",
       "downButton"
     ],
-    "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceAiFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.shouldPass = true;\r\n    }\r\n  }\r\n  //store previous animation\r\n  World.validationState[index] = currentAnimation;\r\n});\r\n\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5){\r\n  var hasDoMoveEachLR = nativeAPI.getUserBlockTypes().indexOf('Dancelab_doMoveEachLR') > -1;\r\n  if(World.validationState.shouldPass){\r\n    nativeAPI.pass();\r\n  }\r\n  else if (World.keysPressed.size > 0){\r\n    if (hasDoMoveEachLR) {\r\n      nativeAPI.fail(\"danceAIFeedbackMatchDancer\");\r\n    } else {\r\n    \tnativeAPI.fail(\"danceAiFeedbackKeyPress\");\r\n    }\r\n  } else {\r\n    nativeAPI.fail(\"danceAiFeedbackConnectPressUpArrowEvent\");\r\n  }\r\n}",
+    "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceAiFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\n//go through all sprites\r\nsprites.forEach(function(sprite, index) {\r\n  var currentAnimation=sprite.getAnimationLabel();\r\n  var previousAnimation=World.validationState[index];\r\n  if (currentAnimation!=previousAnimation) {\r\n    if (previousAnimation == 'anim0') {\r\n      //pass, but not right away\r\n      World.validationState.shouldPass = true;\r\n    }\r\n  }\r\n  //store previous animation\r\n  World.validationState[index] = currentAnimation;\r\n});\r\n\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5){\r\n  var hasDoMoveEachLR = nativeAPI.getUserBlockTypes().indexOf('Dancelab_doMoveEachLR') > -1;\r\n  if(World.validationState.shouldPass){\r\n    nativeAPI.pass();\r\n  }\r\n  else if (World.keysPressed.size > 0){\r\n    if (hasDoMoveEachLR) {\r\n      nativeAPI.fail(\"danceAiFeedbackMatchDancer\");\r\n    } else {\r\n    \tnativeAPI.fail(\"danceAiFeedbackKeyPress\");\r\n    }\r\n  } else {\r\n    nativeAPI.fail(\"danceAiFeedbackConnectPressUpArrowEvent\");\r\n  }\r\n}",
     "short_instructions": "**Code your dancer to move when you press a key.**",
     "song_selection": [
       "asitwas_harrystyles",
@@ -75,14 +75,31 @@
       "macarena_losdelrio",
       "astronautintheocean_maskedwolf",
       "good4u_oliviarodrigo",
-      "iliketomoveit_william"
+      "iliketomoveit_william",
+      "introtoshamstep_47SOUL",
+      "jinglebells_hollywoodchristmas",
+      "notearslefttocry_arianagrande",
+      "breakmysoul_beyonce",
+      "butter_bts",
+      "summer_calvinharris",
+      "higherpower_coldplay",
+      "levitating_dualipa",
+      "wedonttalkaboutbruno_encanto",
+      "heatwaves_glassanimals",
+      "thunder_imaginedragons",
+      "dernieredanse_indila",
+      "migente_jbalvin",
+      "sorry_justinbieber",
+      "oldtownroadremix_lilnasx",
+      "highhopes_panicatthedisco",
+      "cheapthrills_sia"
     ],
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:31:37.654+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_1_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_1_draft3\"},{\"changed_at\":\"2023-11-02 21:50:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 21:52:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 17:45:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 17:50:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:29:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:32:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:34:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:35:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:42:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:31:37.654+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_1_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_1_draft3\"},{\"changed_at\":\"2023-11-02 21:50:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 21:52:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 17:45:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 17:50:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:29:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:32:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:34:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 18:35:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:42:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 21:50:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"song_selection\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-07 22:11:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

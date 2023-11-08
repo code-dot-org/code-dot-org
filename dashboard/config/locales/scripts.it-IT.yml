@@ -4452,6 +4452,10 @@ it:
               display_name: Lezione 1
             lessonGroup-3:
               display_name: Lezione 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: modello di piano delle lezioni basato sull'ora del codice
         drafting:
           name: drafting
         e-f-ramp:
@@ -6047,6 +6051,9 @@ it:
               name: Valutazione
           title: Giorno 5
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introduzione alle attività asincrone
           title: 1° giorno
         virtual-pl-csp-summer-day2:
           lessons:

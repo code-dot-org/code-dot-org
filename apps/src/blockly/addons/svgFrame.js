@@ -138,7 +138,7 @@ export default class SvgFrame {
     // We do this because otherwise, the value returned by
     // getBoundingClientRect would take our size into account, and we
     // would 'grow' every time render was called.
-    this.frameGroup_.remove();
+    this.frameGroup_?.remove();
     var groupRect = svgGroup.getBoundingClientRect();
     svgGroup.prepend(this.frameGroup_);
 
@@ -171,7 +171,7 @@ export default class SvgFrame {
     this.frameHeader_.setAttribute('width', width);
     this.frameHeader_.setAttribute('height', height);
     this.frameHeader_.setAttribute('fill', this.headerColor);
-    this.setToolbarColor();
+
     if (isRtl) {
       this.frameClipRect_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameHeader_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
@@ -179,17 +179,6 @@ export default class SvgFrame {
       const frameTextX = -this.frameText_?.getBoundingClientRect().width;
       this.frameText_?.setAttribute('x', frameTextX);
     }
-  }
-
-  /**
-   * Sets the color of the associated toolbar to match the frame's header color.
-   * The toolbar typically contains "delete" and "close" buttons.
-   */
-  setToolbarColor() {
-    const toolbarElement = document.getElementsByClassName(
-      'toolbar src-blockly-components-modal-function-editor-module__toolbar'
-    )[0];
-    toolbarElement.style.backgroundColor = this.headerColor;
   }
 }
 

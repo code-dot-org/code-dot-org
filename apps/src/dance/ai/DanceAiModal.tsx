@@ -12,20 +12,32 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 import AiExplanationView from './AiExplanationView';
 import {AiOutput, FieldKey, GeneratedEffect} from '../types';
-import {generateBlocks, generateBlocksFromResult, getLabelMap} from './utils';
+import {
+  generateBlocks,
+  generateBlocksFromResult,
+  generatePreviewCode,
+  getLabelMap,
+} from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
+const i18n = require('../locale');
 
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 import aiBotBorder from '@cdo/static/dance/ai/bot/ai-bot-border.png';
-import aiBotYes from '@cdo/static/dance/ai/bot/ai-bot-yes.png';
-import aiBotNo from '@cdo/static/dance/ai/bot/ai-bot-no.png';
-import aiBotBeam from '@cdo/static/dance/ai/bot/blue-scanner.png';
+import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
+import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
+import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
+import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
+import aiBotHeadNo from '@cdo/static/dance/ai/bot/ai-bot-head-no.png';
+import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 enum Mode {
+  INITIAL = 'initial',
   SELECT_INPUTS = 'selectInputs',
-  PROCESSING = 'processing',
   GENERATING = 'generating',
   RESULTS = 'results',
   EXPLANATION = 'explanation',
@@ -101,10 +113,10 @@ const DanceAiModal: React.FunctionComponent = () => {
     goodEffect: undefined,
   });
 
-  const [mode, setMode] = useState(Mode.SELECT_INPUTS);
+  const [mode, setMode] = useState(Mode.INITIAL);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [processingDone, setProcessingDone] = useState<boolean>(false);
+  const [inputAddCount, setInputAddCount] = useState<number>(0);
   const [generatingProgress, setGeneratingProgress] =
     useState<GeneratingProgress>({
       step: 0,
@@ -126,18 +138,24 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
-    const currentValue = currentAiModalField?.getValue();
-    if (currentValue) {
-      setMode(Mode.RESULTS);
-      setInputs(JSON.parse(currentValue).inputs);
-      setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
+    if (mode === Mode.INITIAL) {
+      const currentValue = currentAiModalField?.getValue();
+      if (currentValue) {
+        setMode(Mode.RESULTS);
+        setInputs(JSON.parse(currentValue).inputs);
+        setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
-      generatedEffects.current = {
-        badEffects: [],
-        goodEffect: {results: JSON.parse(currentValue)},
-      };
+        generatedEffects.current = {
+          badEffects: [],
+          goodEffect: {results: JSON.parse(currentValue)},
+        };
+      } else {
+        setTimeout(() => {
+          setMode(Mode.SELECT_INPUTS);
+        }, 500);
+      }
     }
-  }, [currentAiModalField]);
+  }, [currentAiModalField, mode]);
 
   const getLabels = () => {
     const tempWorkspace = new Workspace();
@@ -162,11 +180,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     };
   };
 
-  const getAllItems = (slotIndex: number) => {
-    if (slotIndex >= SLOT_COUNT) {
-      return [];
-    }
-
+  const getAllItems = () => {
     return inputLibraryJson.items.map(item => {
       return {
         ...item,
@@ -178,44 +192,62 @@ const DanceAiModal: React.FunctionComponent = () => {
   const getItem = (id: string) =>
     inputLibraryJson.items.find(item => item.id === id);
 
-  const handleItemClick = (id: string) => {
-    if (currentInputSlot < SLOT_COUNT) {
-      setInputs([...inputs, id]);
-      setCurrentInputSlot(currentInputSlot + 1);
+  const handleItemClick = (id: string, available: boolean) => {
+    if (available) {
+      // Add item inputs.
+      if (currentInputSlot < SLOT_COUNT) {
+        setInputs([...inputs, id]);
+        setCurrentInputSlot(currentInputSlot + 1);
+        setInputAddCount(inputAddCount + 1);
+      }
+    } else {
+      // Remove item from inputs.
+      setInputs(inputs.filter(input => input !== id));
+      setCurrentInputSlot(currentInputSlot - 1);
     }
   };
 
   const handleGenerateClick = () => {
     startAi();
+
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
+      emojis: inputs,
+    });
+
     setMode(Mode.GENERATING);
   };
 
   const handleStartOverClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
+      emojis: inputs,
+    });
     setInputs([]);
     setCurrentInputSlot(0);
-    setProcessingDone(false);
     setGeneratingProgress({step: 0, subStep: 0});
     setMode(Mode.SELECT_INPUTS);
   };
 
   const handleRegenerateClick = () => {
-    setProcessingDone(false);
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
+      emojis: inputs,
+    });
     setGeneratingProgress({step: 0, subStep: 0});
     handleGenerateClick();
   };
 
-  const handleProcessClick = () => {
-    setMode(Mode.PROCESSING);
-    setTimeout(() => {
-      handleGenerateClick();
-    }, 4000);
-  };
-
   const handleExplanationClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
+      emojis: inputs,
+    });
     setMode(Mode.EXPLANATION);
   };
 
   const handleUseClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
+      emojis: inputs,
+      ...generatedEffects.current.goodEffect?.results,
+    });
+
     currentAiModalField?.setValue(
       JSON.stringify({
         inputs,
@@ -282,6 +314,11 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleConvertBlocks = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
+      emojis: inputs,
+      ...generatedEffects.current.goodEffect?.results,
+    });
+
     if (!generatedEffects.current.goodEffect) {
       return;
     }
@@ -328,6 +365,16 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
+  const getPreviewCode = (): string => {
+    const tempWorkspace = new Workspace();
+    const previewCode = generatePreviewCode(
+      tempWorkspace,
+      JSON.stringify(currentGeneratedEffect?.results)
+    );
+    tempWorkspace.dispose();
+    return previewCode;
+  };
+
   const onClose = () => dispatch(closeAiModal());
 
   const showUseButton =
@@ -340,15 +387,63 @@ const DanceAiModal: React.FunctionComponent = () => {
     currentToggle === Toggle.CODE &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
-  let botImage = aiBotBorder;
+  let aiBotHead = aiBotHeadNormal;
+  let aiBotBody = aiBotBodyNormal;
   if (mode === Mode.GENERATING && generatingProgress.subStep >= 1) {
-    botImage =
-      generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
-        ? aiBotNo
-        : aiBotYes;
+    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+      aiBotHead = aiBotHeadNo;
+      aiBotBody = aiBotBodyNo;
+    } else {
+      aiBotHead = aiBotHeadYes;
+      aiBotBody = aiBotBodyYes;
+    }
   }
 
+  const headerValue = () => {
+    return (
+      <div
+        className={moduleStyles.inputsContainer}
+        onClick={handleStartOverClick}
+      >
+        {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+          const item = getItem(inputs[index]);
+          return (
+            <div key={index} className={moduleStyles.emojiSlot}>
+              {item && (
+                <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
+              )}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // The header comes from a localized string like this: "generate {input} effect".
+  // We split the localized string on the "{input}", and rebuild the HTML but with
+  // the emoji box in place of that "{input}".
+  const INPUT_KEY = '__CDO_INPUTS__';
+  const headerTextSplit = i18n
+    .danceAiModalHeading({input: INPUT_KEY})
+    .split(INPUT_KEY);
+  const headerContent = [0, 1, 2]
+    .map(index => {
+      if (index === 0) {
+        return headerTextSplit[0];
+      } else if (index === 1) {
+        return headerValue();
+      } else {
+        return headerTextSplit[1];
+      }
+    })
+    .map((part: string, index: number) => {
+      return <span key={index}>{part}</span>;
+    });
+
   const currentGeneratedEffect = getCurrentGeneratedEffect();
+
+  const lastInputItem =
+    currentInputSlot > 0 ? getItem(inputs[currentInputSlot - 1]) : undefined;
 
   return (
     <AccessibleDialog
@@ -358,27 +453,12 @@ const DanceAiModal: React.FunctionComponent = () => {
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img src={aiBotBorder} className={moduleStyles.botImage} alt="A.I." />
-        generate &nbsp;
-        <div
-          className={moduleStyles.inputsContainer}
-          onClick={handleStartOverClick}
-        >
-          {Array.from(Array(SLOT_COUNT).keys()).map(index => {
-            const item = getItem(inputs[index]);
-            return (
-              <div key={index} className={moduleStyles.emojiSlot}>
-                {item && (
-                  <EmojiIcon
-                    item={item}
-                    className={moduleStyles.emojiSlotIcon}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
-        &nbsp; effect
+        <img
+          src={aiBotBorder}
+          className={moduleStyles.botImage}
+          alt={i18n.danceAiModalBotAlt()}
+        />
+        {headerContent}
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
@@ -390,7 +470,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             onClick={onClose}
           >
             <i className="fa fa-close" aria-hidden={true} />
-            <span className="sr-only">Close</span>
+            <span className="sr-only">{i18n.danceAiModalClose()}</span>
           </button>
         </div>
       </div>
@@ -409,10 +489,10 @@ const DanceAiModal: React.FunctionComponent = () => {
               }}
             >
               <button key={0} type="button" value={Toggle.AI_BLOCK}>
-                Effect
+                {i18n.danceAiModalEffectButton()}
               </button>
               <button key={1} type="button" value={Toggle.CODE}>
-                Code
+                {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>
           </div>
@@ -421,21 +501,17 @@ const DanceAiModal: React.FunctionComponent = () => {
         <div id="text-area" className={moduleStyles.textArea}>
           {' '}
           {mode === Mode.SELECT_INPUTS
-            ? 'Choose three emojis.'
-            : mode === Mode.PROCESSING && !processingDone
-            ? ''
-            : mode === Mode.PROCESSING && processingDone
-            ? ''
-            : mode === Mode.GENERATING && botImage === aiBotYes
-            ? 'A.I. is generating this effect.'
+            ? i18n.danceAiModalChooseEmoji()
+            : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
+            ? i18n.danceAiModalGenerating()
             : mode === Mode.GENERATING
-            ? 'A.I. is finding the best effect to generate.'
+            ? i18n.danceAiModalFinding()
             : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
-            ? 'A.I. generated this effect.'
+            ? i18n.danceAiModalEffect()
             : mode === Mode.RESULTS && currentToggle === Toggle.CODE
-            ? 'Did you know? A.I. wrote this code to generate the effect.'
+            ? i18n.danceAiModalCode()
             : mode === Mode.EXPLANATION
-            ? "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I. made."
+            ? i18n.danceAiModalExplanation()
             : undefined}
         </div>
 
@@ -444,18 +520,15 @@ const DanceAiModal: React.FunctionComponent = () => {
           className={moduleStyles.inputsArea}
           style={{zIndex: mode === Mode.SELECT_INPUTS ? 1 : 0}}
         >
-          {mode === Mode.SELECT_INPUTS && currentInputSlot < SLOT_COUNT && (
-            <div className={moduleStyles.itemContainer}>
-              {getAllItems(currentInputSlot).map((item, index) => {
+          {mode === Mode.SELECT_INPUTS && (
+            <div id="inputs-container" className={moduleStyles.inputsContainer}>
+              {getAllItems().map((item, index) => {
                 return (
                   <EmojiIcon
                     key={index}
                     item={item}
-                    onClick={() => item.available && handleItemClick(item.id)}
-                    className={classNames(
-                      moduleStyles.item,
-                      item.available && moduleStyles.itemAvailable
-                    )}
+                    onClick={() => handleItemClick(item.id, item.available)}
+                    isHighlighted={!item.available}
                   />
                 );
               })}
@@ -463,79 +536,39 @@ const DanceAiModal: React.FunctionComponent = () => {
           )}
         </div>
 
-        <div
-          id="prompt-area"
-          className={moduleStyles.promptArea}
-          style={{
-            zIndex:
-              mode === Mode.SELECT_INPUTS || mode === Mode.PROCESSING ? 1 : 0,
-          }}
-        >
-          {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.PROCESSING && !processingDone)) && (
-            <div className={moduleStyles.prompt}>
-              {Array.from(Array(SLOT_COUNT).keys()).map(index => {
-                const item = getItem(inputs[index]);
-                return (
-                  <div key={index} className={moduleStyles.inputContainer}>
-                    {index === currentInputSlot && (
-                      <div
-                        className={classNames(
-                          moduleStyles.arrowDown,
-                          currentInputSlot === 0 &&
-                            moduleStyles.arrowDownFirstAppear
-                        )}
-                      >
-                        &nbsp;
-                      </div>
-                    )}
-                    <div className={moduleStyles.inputBackground}>&nbsp;</div>
-
-                    {item && (
-                      <EmojiIcon
-                        item={item}
-                        className={moduleStyles.inputItem}
-                      />
-                    )}
-                  </div>
-                );
-              })}
+        <div id="bot-area" className={moduleStyles.botArea}>
+          {mode === Mode.SELECT_INPUTS && lastInputItem && (
+            <div
+              key={inputAddCount}
+              id="flying-emoji"
+              className={moduleStyles.flyingEmoji}
+            >
+              <EmojiIcon
+                item={lastInputItem}
+                className={moduleStyles.emojiSlotIcon}
+              />
             </div>
           )}
-        </div>
-
-        <div id="bot-area" className={moduleStyles.botArea}>
-          {((mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT) ||
-            mode === Mode.PROCESSING ||
+          {(mode === Mode.INITIAL ||
+            mode === Mode.SELECT_INPUTS ||
             mode === Mode.GENERATING ||
             mode === Mode.RESULTS) && (
             <div className={moduleStyles.botContainer}>
-              <div
+              <img
+                src={aiBotHead}
                 className={classNames(
-                  moduleStyles.bot,
-                  mode === Mode.SELECT_INPUTS
-                    ? moduleStyles.botAppearCentered
-                    : mode === Mode.PROCESSING
-                    ? moduleStyles.botScanLeftToRight
-                    : mode === Mode.GENERATING
-                    ? moduleStyles.botCenterToLeft
-                    : mode === Mode.RESULTS
-                    ? moduleStyles.botLeft
-                    : undefined
+                  moduleStyles.botHead,
+                  mode === Mode.SELECT_INPUTS &&
+                    currentInputSlot < SLOT_COUNT &&
+                    moduleStyles.botHeadOpen
                 )}
-              >
-                <img
-                  src={aiBotBeam}
-                  className={classNames(
-                    moduleStyles.beamImage,
-                    mode === Mode.PROCESSING &&
-                      !processingDone &&
-                      moduleStyles.beamImageVisible
-                  )}
-                  alt="A.I. Beam"
-                />
-                <img src={botImage} className={moduleStyles.image} alt="A.I." />
-              </div>
+                alt={i18n.danceAiModalBotAlt()}
+              />
+              <img
+                src={aiBotBody}
+                className={moduleStyles.botBody}
+                alt={i18n.danceAiModalBotAlt()}
+              />
             </div>
           )}
         </div>
@@ -560,12 +593,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                   id="flip-card-front"
                   className={moduleStyles.flipCardFront}
                 >
-                  <AiVisualizationPreview
-                    blocks={generateBlocksFromResult(
-                      Blockly.getMainWorkspace(),
-                      JSON.stringify(currentGeneratedEffect?.results)
-                    )}
-                  />
+                  <AiVisualizationPreview code={getPreviewCode()} />
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
                   {mode === Mode.RESULTS && (
@@ -600,18 +628,10 @@ const DanceAiModal: React.FunctionComponent = () => {
           {mode === Mode.RESULTS && (
             <div>
               <Button
-                id="regenerate"
-                onClick={handleRegenerateClick}
-                color={Button.ButtonColor.white}
-                className={classNames(moduleStyles.button)}
-              >
-                <i className="fa fa-refresh" />
-              </Button>
-              <Button
                 id="explanation-button"
                 text={'?'}
                 onClick={handleExplanationClick}
-                color={Button.ButtonColor.white}
+                color={Button.ButtonColor.neutralDark}
                 className={moduleStyles.button}
               />
             </div>
@@ -620,7 +640,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {mode === Mode.EXPLANATION && (
             <Button
               id="results-final-button"
-              text={'Back'}
+              text={i18n.danceAiModalBack()}
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -629,26 +649,30 @@ const DanceAiModal: React.FunctionComponent = () => {
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          <div
-            id="buttons-area-left"
-            className={moduleStyles.buttonsAreaLeft}
-          />
+          <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
+            {mode === Mode.RESULTS && (
+              <Button
+                id="regenerate"
+                onClick={handleRegenerateClick}
+                color={Button.ButtonColor.neutralDark}
+                className={classNames(moduleStyles.button)}
+              >
+                <i
+                  className={classNames(
+                    'fa fa-refresh',
+                    moduleStyles.buttonIcon
+                  )}
+                />
+                {i18n.danceAiModalRegenerateButton()}
+              </Button>
+            )}
+          </div>
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
               id="select-all-sections-button"
-              text={'Generate'}
-              onClick={handleProcessClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
-
-          {mode === Mode.PROCESSING && processingDone && (
-            <Button
-              id="generate-button"
-              text={'Generate'}
-              onClick={handleGenerateClick()}
+              text={i18n.danceAiModalGenerateButton()}
+              onClick={handleGenerateClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
             />
@@ -657,7 +681,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {showConvertButton && (
             <Button
               id="convert-button"
-              text={'Use code'}
+              text={i18n.danceAiModalUseCodeButton()}
               onClick={handleConvertBlocks}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -667,7 +691,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           {showUseButton && (
             <Button
               id="use-button"
-              text={'Use effect'}
+              text={i18n.danceAiModalUseEffectButton()}
               onClick={handleUseClick}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
@@ -683,12 +707,14 @@ interface EmojiIconProps {
   item: AiModalItem;
   onClick?: () => void;
   className?: string;
+  isHighlighted?: boolean;
 }
 
 const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
   item,
   onClick,
   className,
+  isHighlighted,
 }) => {
   const isButton = onClick !== undefined;
   const Tag = isButton ? 'button' : 'div';
@@ -703,6 +729,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
       className={classNames(
         moduleStyles.emojiIcon,
         isButton && moduleStyles.emojiIconButton,
+        isHighlighted && moduleStyles.emojiIconButtonHighlighted,
         className
       )}
       title={item.emoji}

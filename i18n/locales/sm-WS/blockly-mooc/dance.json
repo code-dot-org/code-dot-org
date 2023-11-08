@@ -17,5 +17,6 @@
   "danceFeedbackTooManyDancers": "Ia faaeteete! Afai e te tuu le poloka 'make a new' i totonu fua uma 'every 2 measures', e tele ai se ausiva e te faia.",
   "danceFeedbackUseSetSize": "Faaaoga le 'poloka set backup_dance2 size' e faalaitiiti ai le tagata siva",
   "danceFeedbackUseSetTint": "Faaaoga le poloka 'set tint' e sui ai le pogisa o le tagata siva",
-  "danceFeedbackUseStartMapping": "Taumafai e faaopoopo le <block type=\"Dancelab_startMapping\"> i le itu taumatau_solofanua seututasi</title> \"scale\"<title name=\"RANGE\">\"bass\"poloka i le lau polokalame"
+  "danceFeedbackUseStartMapping": "Taumafai e faaopoopo le <block type=\"Dancelab_startMapping\"> i le itu taumatau_solofanua seututasi</title> \"scale\"<title name=\"RANGE\">\"bass\"poloka i le lau polokalame",
+  "danceFeedbackKeepCoding": "Faaauau pea ona faailo! O loo iai se faaletonu"
 }

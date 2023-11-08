@@ -103,6 +103,66 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_includes exception.message, "Couldn't find Rubric"
   end
 
+  test "job fails when the code contains profanity" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    violating_code = 'damn'
+
+    stub_project_source_data(channel_id, code: violating_code)
+
+    stub_lesson_s3_data
+
+    stub_get_openai_evaluations(code: violating_code)
+
+    ShareFiltering.stubs(:find_share_failure).with(violating_code, 'en', exceptions: true).raises(
+      ProfanityFilterException.new(
+        "Profanity Failure",
+        ShareFailure.new('profanity', 'damn')
+      )
+    )
+
+    # run the job
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION], RubricAiEvaluation.where(user_id: @student.id).first.status
+  end
+
+  test "job fails when the code contains PII violations" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    violating_code = 'My phone number is 123-456-7890!'
+
+    stub_project_source_data(channel_id, code: violating_code)
+
+    stub_lesson_s3_data
+
+    stub_get_openai_evaluations(code: violating_code)
+
+    ShareFiltering.stubs(:find_share_failure).with(violating_code, 'en', exceptions: true).raises(
+      PIIFilterException.new(
+        "PII Failure",
+        ShareFailure.new('email', '123-456-7890')
+      )
+    )
+
+    # run the job
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION], RubricAiEvaluation.where(user_id: @student.id).first.status
+  end
+
   # stub out the calls to fetch project data from S3. Because the call to S3
   # is deep inside SourceBucket, we stub out the entire SourceBucket class
   # rather than stubbing the S3 calls directly.
@@ -161,7 +221,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
   end
 
-  private def stub_get_openai_evaluations
+  private def stub_get_openai_evaluations(code: 'fake-code')
     expected_examples = [
       ['fake-code-1', 'fake-response-1'],
       ['fake-code-2', 'fake-response-2']
@@ -172,7 +232,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "num-responses" => "3",
       "num-passing-grades" => "2",
       "temperature" => "0.2",
-      "code" => 'fake-code',
+      "code" => code,
       "prompt" => 'fake-system-prompt',
       "rubric" => 'fake-standard-rubric',
       "examples" => expected_examples.to_json,
