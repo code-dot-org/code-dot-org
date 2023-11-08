@@ -66,6 +66,11 @@ type GeneratedEffects = {
   goodEffect?: GeneratedEffect;
 };
 
+type MinMax = {
+  min: number;
+  max: number;
+};
+
 enum Toggle {
   AI_BLOCK = 'aiBlock',
   CODE = 'code',
@@ -94,6 +99,8 @@ function useInterval(callback: () => void, delay: number | undefined) {
   }, [delay]);
 }
 
+const SCORE_VISUALIZATION_HEIGHT = 140;
+
 const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
@@ -117,7 +124,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     badEffects: [],
     goodEffect: undefined,
   });
-  const minMax = useRef<{min: number; max: number}>({
+  const minMaxAssociations = useRef<MinMax>({
     min: 0,
     max: 3,
   });
@@ -295,12 +302,12 @@ const DanceAiModal: React.FunctionComponent = () => {
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
-    minMax.current = calculateMinMax();
+    minMaxAssociations.current = calculateMinMax();
   };
 
   const calculateMinMax = () => {
     return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
-      (accumulator: {min: number; max: number}, currentValue: number) => {
+      (accumulator: MinMax, currentValue: number) => {
         const scores = getScores(currentValue);
         const min = Math.min(...scores);
         const max = Math.max(...scores);
@@ -647,7 +654,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           >
             <Score
               scores={getScores(generatingProgress.step)}
-              minMax={minMax}
+              minMax={minMaxAssociations.current}
             />
           </div>
         )}
@@ -658,7 +665,10 @@ const DanceAiModal: React.FunctionComponent = () => {
               index => {
                 return (
                   <div key={index}>
-                    <Score scores={getScores(index)} minMax={minMax} />
+                    <Score
+                      scores={getScores(index)}
+                      minMax={minMaxAssociations.current}
+                    />
 
                     <div
                       className={moduleStyles.visualizationContainer}
@@ -804,7 +814,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 
 interface ScoreProps {
   scores: GeneratedEffectScores;
-  minMax: {min: number; max: number};
+  minMax: MinMax;
 }
 
 const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
@@ -817,7 +827,9 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
   };
 
   const getHeight = (scores: GeneratedEffectScores) =>
-    Math.round((getScaledNumerator(scores) / (range * 3)) * 140);
+    Math.round(
+      (getScaledNumerator(scores) / (range * 3)) * SCORE_VISUALIZATION_HEIGHT
+    );
 
   const layers = [
     {
