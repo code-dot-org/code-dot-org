@@ -114,14 +114,20 @@ export default class WorkspaceSvgFrame extends SvgFrame {
         offset = contentWidth - viewWidth;
       }
       const frameX = frameSizes.MARGIN_SIDE / 2 - offset;
+      const frameTextX =
+        viewWidth - this.frameText_.getBoundingClientRect().width;
+      console.log({
+        frameHeaderX: frameX,
+        contentWidth,
+        viewWidth,
+        offset,
+        frameTextX,
+      });
 
       this.frameClipRect_.setAttribute('x', frameX);
       this.frameHeader_.setAttribute('x', frameX);
       this.frameBase_.setAttribute('x', frameX);
-      // this.frameText_.setAttribute(
-      //   'x',
-      //   300
-      // );
+      this.frameText_.setAttribute('x', frameTextX);
     }
   }
 }

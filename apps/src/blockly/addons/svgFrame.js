@@ -94,6 +94,7 @@ export default class SvgFrame {
         rx: 4,
         ry: 4,
         'clip-path': `url(#frameClip${safeCharBlockId})`,
+        class: 'svgFrameHeader',
       },
       this.frameGroup_
     );
@@ -103,7 +104,7 @@ export default class SvgFrame {
     this.frameText_ = Blockly.utils.dom.createSvgElement(
       'text',
       {
-        class: 'blocklyText',
+        class: 'blocklyText svgFrameText',
         style: `font-size: ${this.fontSize}pt;fill: ${this.textColor}`,
         x: frameX + frameSizes.MARGIN_SIDE,
         y: frameTextVerticalPosition,
@@ -161,7 +162,7 @@ export default class SvgFrame {
 
     this.headerColor = this.getColor() || color.light_gray;
     this.baseColor = getBaseColor(this.headerColor);
-
+    console.log({headerWidth: width});
     this.frameClipRect_.setAttribute('width', width);
     this.frameBase_.setAttribute('width', width);
     this.frameBase_.setAttribute('height', height);
