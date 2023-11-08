@@ -6,6 +6,7 @@ import moduleStyles from './ai-visualization-preview.module.scss';
 
 interface AiVisualizationPreviewProps {
   code: string;
+  durationMs?: number;
 }
 
 const PREVIEW_DIV_ID = 'ai-preview';
@@ -15,7 +16,7 @@ const PREVIEW_DIV_ID = 'ai-preview';
  */
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
-> = ({code}) => {
+> = ({code, durationMs}) => {
   const songMetadata = useSelector(
     (state: {dance: DanceState}) => state.dance.currentSongMetadata
   );
@@ -37,11 +38,11 @@ const AiVisualizationPreview: React.FunctionComponent<
     }
 
     if (!executorRef.current.isLivePreviewRunning()) {
-      executorRef.current.startLivePreview(code, songMetadata);
+      executorRef.current.startLivePreview(code, songMetadata, durationMs);
     } else {
-      executorRef.current.updateLivePreview(code, songMetadata);
+      executorRef.current.updateLivePreview(code, songMetadata, durationMs);
     }
-  }, [songMetadata, code]);
+  }, [songMetadata, code, durationMs]);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
