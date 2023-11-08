@@ -34,7 +34,6 @@ const SongSelector: React.FC<SongSelectorProps> = ({
   const onPreviewBtnClick = useCallback(() => {
     if (songInPreview) {
       audioCommands.stopSound({url: songData[selectedSong].url});
-      setSongInPreview(false);
     } else {
       audioCommands.playSound({
         url: `${songData[selectedSong].url}`,
@@ -43,7 +42,6 @@ const SongSelector: React.FC<SongSelectorProps> = ({
           const timeoutID = setTimeout(() => {
             if (!levelIsRunning) {
               audioCommands.stopSound({url: songData[selectedSong].url});
-              setSongInPreview(false);
             }
           }, songPreviewDurationInMs);
 
