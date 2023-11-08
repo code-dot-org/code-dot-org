@@ -1922,6 +1922,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.text "properties"
     t.string "participant_type", default: "student", null: false
     t.bigint "lti_integration_id"
+    t.boolean "ai_tutor_enabled", default: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
