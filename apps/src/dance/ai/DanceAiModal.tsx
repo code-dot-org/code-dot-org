@@ -113,6 +113,9 @@ const DanceAiModal: React.FunctionComponent = () => {
   // How long we spend in each substep in the generating process.
   const GENERATION_SUBSTEP_DURATION = 1000;
 
+  // How long we spend in each step of the explanation process.
+  const EXPLANATION_STEP_DURATION = 2000;
+
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
     goodEffect: undefined,
@@ -128,6 +131,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       subStep: 0,
     });
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
+  const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
@@ -234,6 +238,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleExplanationClick = () => {
+    setExplanationProgress(0);
     setMode(Mode.EXPLANATION);
   };
 
@@ -274,14 +279,22 @@ const DanceAiModal: React.FunctionComponent = () => {
     return currentProgress;
   };
 
-  // Animate through the generating process.
+  // Animate through the generating or explanation process.
   useInterval(
     () => {
       if (mode === Mode.GENERATING) {
         setGeneratingProgress(updateGeneratingProgress);
+      } else if (mode === Mode.EXPLANATION) {
+        if (explanationProgress < BAD_GENERATED_RESULTS_COUNT) {
+          setExplanationProgress(progress => progress + 1);
+        }
       }
     },
-    mode === Mode.GENERATING ? GENERATION_SUBSTEP_DURATION : undefined
+    mode === Mode.GENERATING
+      ? GENERATION_SUBSTEP_DURATION
+      : mode === Mode.EXPLANATION
+      ? EXPLANATION_STEP_DURATION
+      : undefined
   );
 
   const startAi = async () => {
@@ -656,41 +669,41 @@ const DanceAiModal: React.FunctionComponent = () => {
               })}
             </div>
             <div className={moduleStyles.visualizationContainer}>
-              {Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).map(
-                index => {
-                  return (
-                    <div
-                      key={index}
-                      className={moduleStyles.visualizationColumn}
-                    >
-                      <Score scores={getScores(index)} />
+              {Array.from(Array(explanationProgress + 1).keys()).map(index => {
+                return (
+                  <div key={index} className={moduleStyles.visualizationColumn}>
+                    <Score scores={getScores(index)} />
 
-                      <div
-                        className={moduleStyles.visualizationColumn}
-                        title={
-                          labels.backgroundEffect[
-                            getGeneratedEffect(index)?.backgroundEffect || 0
-                          ] +
-                          ' - ' +
-                          labels.foregroundEffect[
-                            getGeneratedEffect(index)?.foregroundEffect || 0
-                          ] +
-                          ' - ' +
-                          labels.backgroundColor[
-                            getGeneratedEffect(index)?.backgroundColor || 0
-                          ]
+                    <div
+                      className={moduleStyles.visualizationColumn}
+                      title={
+                        labels.backgroundEffect[
+                          getGeneratedEffect(index)?.backgroundEffect || 0
+                        ] +
+                        ' - ' +
+                        labels.foregroundEffect[
+                          getGeneratedEffect(index)?.foregroundEffect || 0
+                        ] +
+                        ' - ' +
+                        labels.backgroundColor[
+                          getGeneratedEffect(index)?.backgroundColor || 0
+                        ]
+                      }
+                    >
+                      <AiVisualizationPreview
+                        id={'ai-preview-' + index}
+                        code={getPreviewCode(getGeneratedEffect(index))}
+                        size={previewSizeSmall}
+                        durationMs={
+                          index < BAD_GENERATED_RESULTS_COUNT
+                            ? EXPLANATION_STEP_DURATION
+                            : undefined
                         }
-                      >
-                        <AiVisualizationPreview
-                          id={'ai-preview-' + index}
-                          code={getPreviewCode(getGeneratedEffect(index))}
-                          size={previewSizeSmall}
-                        />
-                      </div>
+                      />
                     </div>
-                  );
-                }
-              )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}

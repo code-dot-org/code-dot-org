@@ -330,12 +330,12 @@ $chart-third: #ffde9e;
 
       .key {
         position: absolute;
-        background-color: $neutral_dark10;
         padding-left: 15px;
         box-sizing: border-box;
         right: 6px;
         width: 110px;
         border-radius: 4px;
+        border: solid $neutral_dark10 1px;
 
         .emojiSlot {
           display: flex;
@@ -345,7 +345,6 @@ $chart-third: #ffde9e;
           .dot {
             height: 25px;
             width: 25px;
-            background-color: #bbb;
             border-radius: 4px;
             display: inline-block;
 
@@ -367,14 +366,15 @@ $chart-third: #ffde9e;
       .visualizationContainer {
         display: flex;
         gap: 30px;
-        justify-content: center;
-        width: calc(100% - 140px);
+        width: calc(100% - 180px);
+        margin-left: 40px;
 
         .visualizationColumn {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 20px;
+          animation: appear 1s;
         }
       }
     }
