@@ -607,6 +607,19 @@ class Blockly < Level
       )
       original_function_name = function_name.content
       function_name.content = localized_name if localized_name
+
+      # since we call the function by translated name (in `procedures_callnoreturn` blocks),
+      # we should also translate the `id` attribute that defines the function name
+      if function_name.attr('id')
+        localized_id = I18n.t(
+          'name',
+          scope: [:data, :function_definitions, name, function_name.attr('id')],
+          default: nil,
+          smart: true
+        )
+        function_name.set_attribute('id', localized_id) if localized_id
+      end
+
       # The description and parameter declarations are in a mutation.
       # If this function doesn't have a mutation, it won't have a
       # description or parameters, so we can move on.
