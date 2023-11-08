@@ -88,6 +88,7 @@ export function loadSong(songId, songData, onPreloadError) {
 export function unloadSong(songId, songData) {
   const url = songData[songId].url;
 
+  // Stop playing sound before unloading it. Otherwise, the sound will continue play.
   Sounds.getSingleton().stopPlayingURL(url);
   Sounds.getSingleton().unload(url);
 }

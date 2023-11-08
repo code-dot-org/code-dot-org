@@ -10,6 +10,7 @@ import moduleStyles from '@cdo/apps/dance/song-selector.module.scss';
 const commonI18n = require('@cdo/locale');
 
 const currentTimeoutsMap: {[key: string]: ReturnType<typeof setTimeout>} = {};
+const songPreviewDurationInMs = 10000;
 
 interface SongSelectorProps {
   selectedSong: string;
@@ -44,7 +45,7 @@ const SongSelector: React.FC<SongSelectorProps> = ({
               audioCommands.stopSound({url: songData[selectedSong].url});
               setSongInPreview(false);
             }
-          }, 10000);
+          }, songPreviewDurationInMs);
 
           currentTimeoutsMap[selectedSong] = timeoutID;
         },
@@ -61,6 +62,9 @@ const SongSelector: React.FC<SongSelectorProps> = ({
   }, [levelIsRunning, selectedSong, songData, songInPreview]);
 
   const songKeys = getFilteredSongKeys(songData, filterOn);
+
+  // When you change the song - unloadSong is triggered in apps/src/dance/songs.js. (which unloads and stops the current song)
+  // When song is stopped - audioCommands.playSound onEnded callback is triggered where we set setSongInPreview(false).
   const changeSong = useCallback(
     (event: ChangeEvent<HTMLSelectElement>) => {
       const songId = event.target.value;

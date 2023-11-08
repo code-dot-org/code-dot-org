@@ -422,8 +422,8 @@ Dance.prototype.afterInject_ = function () {
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
-  if (Sounds.getSingleton().soundsById[url].isPlaying()) {
-    // prevent playing the same song twice simultaneously
+  if (Sounds.getSingleton().isPlaying(url)) {
+    // Prevent playing the same song twice simultaneously.
     audioCommands.stopSound({url: url});
   }
 
