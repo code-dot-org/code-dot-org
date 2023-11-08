@@ -350,7 +350,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     const tempWorkspace = new Workspace();
     const previewCode = generatePreviewCode(
       tempWorkspace,
-      currentGeneratedEffect?.results
+      currentGeneratedEffect.results
     );
     tempWorkspace.dispose();
     return previewCode;
