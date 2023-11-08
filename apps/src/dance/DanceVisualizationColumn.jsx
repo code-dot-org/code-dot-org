@@ -1,5 +1,4 @@
 import React from 'react';
-import cookies from 'js-cookie';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -114,10 +113,9 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        {(this.props.over21 || this.props.userType === 'teacher') &&
-          !(cookies.get('HourOfCodeGuideEmailDialogSeen') === 'true') && (
-            <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
-          )}
+        {(this.props.over21 || this.props.userType === 'teacher') && (
+          <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
+        )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
             <SongSelector

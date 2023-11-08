@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -15,10 +14,6 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
   const [isMarketingChecked, setIsMarketingChecked] = useState(false);
 
   const onClose = () => {
-    cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
-      expires: 90,
-      path: '/',
-    });
     setIsOpen(false);
   };
 
