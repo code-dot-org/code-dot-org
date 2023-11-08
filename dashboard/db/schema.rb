@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_03_171538) do
+ActiveRecord::Schema.define(version: 2023_11_07_182805) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -828,6 +828,21 @@ ActiveRecord::Schema.define(version: 2023_11_03_171538) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "lti_courses", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "lti_integration_id", null: false
+    t.bigint "lti_deployment_id", null: false
+    t.string "context_id"
+    t.string "course_id"
+    t.string "nrps_url"
+    t.string "resource_link_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["context_id", "lti_integration_id"], name: "index_on_context_id_and_lti_integration_id"
+    t.index ["course_id", "lti_integration_id"], name: "index_on_course_id_and_lti_integration_id"
+    t.index ["lti_deployment_id"], name: "fk_rails_19886eb632"
+    t.index ["lti_integration_id"], name: "index_lti_courses_on_lti_integration_id"
+  end
+
   create_table "lti_deployments", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "deployment_id"
     t.bigint "lti_integration_id", null: false
@@ -1485,6 +1500,7 @@ ActiveRecord::Schema.define(version: 2023_11_03_171538) do
     t.integer "source_course_offering_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "receives_marketing", default: false, null: false
   end
 
   create_table "programming_classes", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2330,6 +2346,8 @@ ActiveRecord::Schema.define(version: 2023_11_03_171538) do
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "lti_courses", "lti_deployments"
+  add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
