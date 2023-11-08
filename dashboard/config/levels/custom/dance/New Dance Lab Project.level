@@ -74,7 +74,10 @@
           <variable id="]Tm$k.6A?M.aLF!]$ir:">dancer1</variable>
         </variables>
         <category name="World">
-          <block type="Dancelab_setBackgroundEffectWithPalette" id="toDTdAHWy^{5HW:Tjw|x">
+          <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K">
+            <field name="VALUE"></field>
+          </block>
+          <block type="Dancelab_setBackgroundEffectWithPaletteAI" id="5HW:Tjw|xtoDTdAHWy^{">
             <field name="PALETTE">"rave"</field>
             <field name="EFFECT">"color_cycle"</field>
           </block>
@@ -209,7 +212,7 @@
           <block type="Dancelab_whenPeak" id="R6+AidtBpj@wD)A/-:|+">
             <field name="RANGE">0</field>
           </block>
-          <block type="Dancelab_atTimestamp" id="zc.KF_q.fd,V@!ZX_*2J">
+          <block type="Dancelab_atTimestampNotAfter" id="h/X!5}k@^{/m^1gfgiYb">
             <field name="TIMESTAMP">4</field>
             <field name="UNIT">"measures"</field>
           </block>
