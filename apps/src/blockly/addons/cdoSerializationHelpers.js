@@ -27,7 +27,7 @@ function getX(block, workspace) {
   // so their edges don't touch the edge of the workspace
   let horizontalOffset = block.functionalSvg_ ? 2 * padding : padding;
   // If the workspace is RTL, horizontally mirror the starting position
-  return block.workspace.isRTL ? width - horizontalOffset : horizontalOffset;
+  return workspace.RTL ? width - horizontalOffset : horizontalOffset;
 }
 
 /**
@@ -116,6 +116,9 @@ function adjustBlockPositions(blocks, workspace) {
   let y = WORKSPACE_PADDING;
   blocksToPlace.forEach(block => {
     let x = getX(block, workspace);
+    // Set initial position; collision area must be updated to account for new position
+    // every time block is moved
+    block.moveTo({x, y});
     let collider = getCollider(block);
 
     existingColliders.forEach(existingCollider => {
@@ -125,8 +128,8 @@ function adjustBlockPositions(blocks, workspace) {
           existingCollider.height +
           VERTICAL_SPACE_BETWEEN_BLOCKS +
           SVG_FRAME_TOP_PADDING;
+
         block.moveTo({x, y});
-        // Collision area must be updated to account for new position
         collider = getCollider(block);
       }
     });
