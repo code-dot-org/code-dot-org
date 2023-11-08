@@ -106,10 +106,8 @@ def calculate_similarity_score(input_embeddings, output_embeddings, emojis):
     # Conversion to pandas DataFrame for ease of manipulation
     similarities = pd.DataFrame(similarities)
     
-    # We use the emoji_ids and not the emoji Unicode as index for use by client
-    # similarities.index = emojis.values()
-    # temp change to emoji modelDescriptiveName
-    similarities.index = emojis.keys()
+    # We use the emoji_ids and not the emoji modelDescriptiveNames as index for use by client
+    similarities.index = emojis.values()
     
     # Native cosine distance calculation outputs a value between 0 -> 1 where smaller values = greater similarity
     # We can redefine this into cosine similarity with a simple (x-1)*-1 due to their mathematical relationship
