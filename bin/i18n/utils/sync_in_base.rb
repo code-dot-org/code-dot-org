@@ -22,6 +22,10 @@ module I18n
         @progress_bar ||= I18nScriptUtils.create_progress_bar(title: self.class.name)
       end
 
+      def mutex
+        @mutex ||= Thread::Mutex.new
+      end
+
       private
 
       def perform

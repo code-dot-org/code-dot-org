@@ -1,5 +1,3 @@
-require 'fileutils'
-
 require_relative '../i18n_script_utils'
 
 Dir[File.expand_path('../pegasus/**/*.rb', __FILE__)].sort.each {|file| require file}
