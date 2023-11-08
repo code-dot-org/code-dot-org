@@ -37,6 +37,8 @@ export default function LearningGoal({
   aiConfidence,
   submittedEvaluation,
   isStudent,
+  feedbackAdded,
+  setFeedbackAdded,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -104,6 +106,9 @@ export default function LearningGoal({
       .then(() => {
         setIsAutosaving(false);
         setAutosaved(true);
+        if (!feedbackAdded) {
+          setFeedbackAdded(true);
+        }
       })
       .catch(error => {
         console.log(error);
@@ -165,6 +170,7 @@ export default function LearningGoal({
         <label className={style.evidenceLevelLabel}>
           <span>{i18n.feedback()}</span>
           <textarea
+            id="ui-teacherFeedback"
             className={style.inputTextbox}
             name="teacherFeedback"
             value={displayFeedback}
@@ -176,7 +182,7 @@ export default function LearningGoal({
           <span className={style.autosaveMessage}>{i18n.saving()}</span>
         ) : (
           autosaved && (
-            <span className={style.autosaveMessage}>
+            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
               <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
             </span>
           )
@@ -307,6 +313,8 @@ LearningGoal.propTypes = {
   aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
 };
 
 const AiToken = () => {

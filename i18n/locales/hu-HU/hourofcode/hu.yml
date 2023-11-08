@@ -52,10 +52,10 @@ hu:
   hoc2023_social_creativity_with_ai_title: Kódolás órája - Mit fogsz létrehozni?
   hoc2023_social_creativity_with_ai_desc: Használja a számítástechnikát az AI felfedezéséhez
     és megismeréséhez!
-  hoc2023_what_is_hoc_desc: A Kódolás órája ingyenes bevezetés a számítástechnikába
-    szórakoztató tevékenységek és videók révén minden készségszintű tanulók számára.
-    Az idei programozás és a mesterséges intelligencia ünneplését több mint 400 partner,
-    20 000 oktató és 58 000 önkéntes támogatja.
+  hoc2023_what_is_hoc_desc: A Kódolás órája ingyenes bevezetés a számítástechnikába,
+    szórakoztató tevékenységek és videók segítségével eltérő készségekkel rendelkező
+    diákok számára. Az idei ünnepet, amelyet a programozásnak és a mesterséges intelligenciának
+    szentelnek, több mint 400 partner, 20 000 oktató és 58 000 önkéntes támogatja.
   hoc2022_header: Fedezd fel, játssz és alkoss!
   social_hoc2022_explore_play_create: Használd az informatikát a felfedezéshez, a
     játékhoz és az alkotáshoz!
@@ -298,16 +298,18 @@ hu:
   optional_materials: 'Opcionális anyagok:'
   for_students: Diákoknak
   for_educators: Oktatóknak
-  call_to_action_host_hoc: A kódolás órájának rendezése
+  call_to_action_host_hoc: Tarts egy Kódolás óráját
   call_to_action_hold_an_event: Esemény megtartása
   call_to_action_register_event: Regisztrálja rendezvényét
   call_to_action_register_your_hoc: Regisztráld a saját Kódolás óráját
   call_to_action_select_activity: Tevékenység kiválasztása
+  call_to_action_select_coding_activity: Kódolási tevékenység kiválasztása
   call_to_action_start_activity: Tevékenység indítása
   call_to_action_get_certificates: Tanúsítványok megszerzése
+  call_to_action_print_certificates: Tanúsítványok nyomtatása
   call_to_action_go_beyond_hoc: Menj túl a kódolás óráján
-  call_to_action_explore_all_hoc_activities: Fedezze fel a Code.org összes Hour of
-    Code tevékenységét
+  call_to_action_explore_all_hoc_activities: Fedezd a Kódolás órájához tartozó tevékenységeket
+    a Code.org-on
   call_to_action_start_dance_party: Indítsa el a táncpartit
   call_to_action_start_part_02: Kezdje a második részt
   call_to_action_start_unplugged_activity: Indítsa el a kikapcsolt tevékenységet
@@ -407,8 +409,8 @@ hu:
   call_to_action_applications_open: Az alkalmazások már megnyílnak
   call_to_action_apply_cs_ambassador: Jelentkezzen CS nagykövetévé
   call_to_action_coming_soon: Hamarosan!
-  call_to_action_learn_how_ai_works: Ismerje meg, hogyan működik az AI
-  call_to_action_learn_about_ai: Tudjon meg többet az AI-ről
+  call_to_action_learn_how_ai_works: Ismerkedj meg az AI működésével
+  call_to_action_learn_about_ai: Tudj meg többet az AI-ról
   aria_label_call_to_action_hoc_how_to_educators: Tekintse meg az oktatók útmutatóját
   aria_label_call_to_action_hoc_how_to_companies: Útmutató megtekintése a vállalatok
     számára
@@ -432,6 +434,8 @@ hu:
     szakmai tanulási programot
   aria_label_call_to_action_teaching_csp: Indítsa el a Oktatási Számítástudományi
     Alapelvek szakmai tanulási programot
+  aria_label_call_to_action_teaching_problem_solving: Indítsa el a tanítási problémamegoldó
+    és számítástechnikai szakmai tanulási programot
   aria_label_call_to_action_teaching_csc: Indítsa el a Teaching Computer Science Connections
     szakmai tanulási programot
   aria_label_call_to_action_teaching_ai: Indítsa el a Teaching AI és a Machine Learning
@@ -450,6 +454,8 @@ hu:
     tantervet
   aria_label_call_to_action_curriculum_csp: Fedezze fel a Computer Science Principles
     tantervet
+  aria_label_call_to_action_curriculum_problem_solving: Fedezze fel a problémamegoldás
+    és a számítástechnika
   aria_label_call_to_action_curriculum_csc: Fedezze fel a Computer Science Connections
     tantervet
   aria_label_call_to_action_curriculum_ai: Fedezze fel az AI és a gépi tanulás tantervét
@@ -528,6 +534,7 @@ hu:
   curriculum_name_csf_teacher_led: Tanár által vezetett lecke
   curriculum_name_csd: Számítástechnikai felfedezések
   curriculum_name_csp: Számítástechnika alapelvei
+  curriculum_name_problem_solving: Problémamegoldás és számítástechnika
   curriculum_name_csc: Számítástechnikai kapcsolatok
   curriculum_name_csa: AP® Számítástechnika A
   curriculum_name_csa_ai: Szoftverfejlesztés és számítógépes látás
@@ -737,6 +744,7 @@ hu:
   module_label_teaching_csf: Számítástudomány alapjainak oktatása
   module_label_teaching_csd: Számítástechnikai felfedezések oktatása
   module_label_teaching_csp: Számítástechnikai alapelvek oktatása
+  module_label_teaching_problem_solving: Tanítás problémamegoldás és számítástechnika
   module_label_teaching_csc: Számítástechnikai kapcsolatok oktatása
   module_label_teaching_ai: AI és gépi tanulás tanítása
   module_label_teaching_maker_cp: Alkalmazások létrehozásának tanítása eszközökkel
@@ -13596,6 +13604,9 @@ hu:
   step_06: 6. lépés
   step_07: 7. lépés
   step_08: 8. lépés
+  what: 'Mi:'
+  when: 'Mikor:'
+  where: 'Ahol:'
   hoc_how_to_top_heading: Útmutató a Kódolás órájához
   hoc_how_to_top_desc: Testreszabott útmutatók a legjobb Hour of Code élményhez.
   hoc_how_to_top_view_guide: Útmutató megtekintése
@@ -13643,71 +13654,87 @@ hu:
   hoc_how_to_step_label_plan: Tervezze meg, hol és mikor fogja megtenni a kódolási
     óráját
   hoc_how_to_step_label_choose_activity: Válassza ki tevékenységét
+  hoc_how_to_step_label_choose_activities: Válassza ki tevékenységeit
   hoc_how_to_step_label_test_activity: Tesztelje ki tevékenységét
   hoc_how_to_step_label_register_event: Regisztrálja rendezvényét
   hoc_how_to_step_label_tell: Mondja el diákjainak, iskolájának és közösségének
   hoc_how_to_step_label_get_coding: Szerezd meg a kódolást!
   hoc_how_to_step_label_celebrate: Ünnepelni
   hoc_how_to_step_label_beyond_hoc: A kód óráján túl
+  hoc_how_to_step_label_plan_your_event: Tervezze meg eseményét
+  hoc_how_to_step_label_plan_your_hour: Tervezze meg az óráját
+  hoc_how_to_step_label_help_spread_word: Segítsen a hír terjesztésében
   hoc_how_to_step_beyond_hoc_subhead: Itt nem ér véget!
-  hoc_how_to_step_beyond_hoc_desc: A számítástechnikai tudománynak nem kell a Kódolás
-    Órájával végződnie! Míg a szülők 90% -a azt akarja, hogy gyermeke tanuljon számítástechnikát,
-    a legtöbb iskola még mindig nem tanítja. Ismerje meg, hogyan hozhatja a CS-t gyermeke
-    iskolájába ma.
-  hoc_how_to_step_01_educators_subhead: Válasszon ki egy eseményidőt és helyet, amely
-    megfelel a rendelkezésre álló hallgatók és eszközök számához.
-  hoc_how_to_step_01_educators_desc_01: Milyen helyek állnak rendelkezésre a Kódolás
-    órájának elvégzéséhez? Fontolja meg terének technológiai képességeit, és milyen
-    eszközöket várhat el a hallgatóitól, hogy dolgozzanak. A diákok egyetlen eszközön
-    dolgozhatnak oktatóanyagokon, felváltva használhatnak megosztott eszközt, vagy
-    kipróbálhatnak egy oktatóanyagot egy osztálytermi táblán. Vannak még kihúzott
-    oktatóanyagok is, amelyek készülékek nélkül is kiegészíthetők. A kihúzott opciók
-    bárhol megtehetők - akár szabadban is!
-  hoc_how_to_step_01_educators_desc_02: Az emberek szerte a világon csatlakoznak a
-    Kódolás Órájának ünnepségéhez a CS Oktatási Hét alkalmával, %{campaign_date} amikor
-    megjelennek a legújabb oktatóanyagok és tevékenységek. De az év bármely napján
-    megteheti a Kódolási Órát!
-  hoc_how_to_step_02_educators_desc_01: Fedezze fel a tevékenységeket a csoport életkora
-    alapján, tapasztalat, érdekek, és több. Népszerű, hogy a diákok kipróbálják az
-    önvezető oktatóanyagokat, bár sok tevékenység tartalmaz óraterveket a tanárok
-    számára a vita irányítására vagy a tevékenység kiterjesztésére is.
-  hoc_how_to_step_02_educators_desc_02: Döntse el idő előtt, ha egyetlen oktatóanyagot
-    szeretne választani minden hallgatója számára, vagy hagyja, hogy minden gyermek
-    válassza ki a sajátját.
-  hoc_how_to_step_02_educators_desc_03: Ebben az évben Ön és diákjai [mindent megtudhat
-    az AI-ről] (%ai_url) oktatóanyagokon, óraterveken és új How AI Works videósorozatunkon
-    keresztül.
-  hoc_how_to_step_03_educators_desc_01: Próbáld ki magad az oktatóanyagot, mielőtt
-    belépsz az osztályterembe, hogy válaszolhasson a kérdésekre!
-  hoc_how_to_step_03_educators_desc_02: Kipróbálhatja az oktatóanyagokat hallgatói
-    számítógépeken vagy eszközökön is, hogy megbizonyosodjon arról, hogy támogatják
-    a hangot és a videót. Alacsony sávszélessége van? Tervezze meg, hogy videókat
-    jelenít meg az osztály elején, így minden hallgató nem tölti le saját videóit.
-  hoc_how_to_step_03_educators_desc_03: Fontolja meg, hogy fejhallgatót biztosítson
-    osztályához, vagy kérje meg a hallgatókat, hogy hozzanak magukkal sajátjukat,
-    ha a választott oktatóanyag a legjobban működik a hanggal.
-  hoc_how_to_step_04_educators_desc_01: Amikor regisztrálja a Hour of Code eseményét,
-    hasznos e-maileket kap hírekkel és tippekkel a sikeres Kódolási Óra megrendezéséhez.
-    Ez azt is jelenti, hogy a helyi önkéntesek tudják, hogy iskolája részt vesz. Az
-    önkéntesek nagyszerű erőforrás, és eljöhetnek beszélni az osztályodhoz a számítástechnikáról,
-    vagy segíthetnek hallgatóinak a Kódolási Óra tevékenységekben.
-  hoc_how_to_step_05_educators_desc_01: Megosztva izgatja hallgatóit az esemény miatt
-    [inspiráló videók] (%{videos_url}) kiemelve a különféle embereket és a számítástechnika
-    valós világban való felhasználásának kreatív módjait.
-  hoc_how_to_step_05_educators_desc_02: Ossza meg kódolási óráját más tanárokkal,
-    akik esetleg csatlakozni szeretnének a szórakozáshoz! Ez egy nagyszerű lehetőség
-    arra is, hogy kapcsolatba lépjen iskolája Szülőtanári Hallgatói Szövetségéhez,
-    vagy ossza meg a szülői hírleveleket, tudatja velük, mit tanulnak gyermekeik.
-  hoc_how_to_step_06_educators_desc_01: Irányítsa diákjait a tevékenységre, talán
+  hoc_how_to_step_plan_hour_desc_01: 'Íme egy minta napirend az induláshoz:'
+  hoc_how_to_step_choose_activities_desc_01: Idén a Kódolás Órája témája a Kreativitás
+    mesterséges intelligenciával (AI). Legyen szó új alkalmazások és algoritmusok
+    kódolásáról, egyedi művészet létrehozásáról vagy koreográfia készítéséről, hogy
+    táncoljunk, az AI új lehetőségeket nyit meg a digitális kifejezésre, amelyek kibővítik
+    a kreativitás megértését. Tegye különlegessé ezt az évet egy kódolási tevékenység
+    befejezésével ÉS az AI megismerésével.
+  hoc_how_to_step_choose_activities_desc_02: Először is, [fedezze fel több száz kódolási
+    tevékenységet] (%{activities_url}), és válasszon egyet a csoport életkora, tapasztalata,
+    érdeklődési köre és egyebek alapján. [Ezek a kiválasztott tevékenységek] (%{ai_activities_url})
+    a mesterséges intelligenciát kulcsfontosságú témáként vagy leckeként mutatják
+    be.
+  hoc_how_to_step_choose_activities_desc_03: Ezután, [tudjon meg mindent az AI-ről]
+    (%{ai_url}). A hallgatók rövid videókat nézhetnek meg, amelyekben a terület szakértői
+    szerepelnek, és vannak kísérő óratervek a tevékenység kiterjesztésére és a további
+    viták irányítására. Vagy ingyenes szakmai tanulást kínálunk az oktatók számára,
+    hogy felszabadítsuk a tanítás jövőjét az AI-vel és azzal kapcsolatban.
+  hoc_how_to_step_educators_register_desc: Kezdje azzal a kötelezettségvállalással,
+    hogy programórát végezzen hallgatóival az esemény regisztrálásával. Amikor regisztrál,
+    hasznos e-maileket fog kapni hírekkel és tippekkel a sikeres kódolási óra megszervezéséhez.
+    Te is leszel [elhelyezve a térképre] (%{map_url}). Kollektív erőfeszítéseink látható
+    összessége bizonyítja a számítástechnikai mozgalom iránti globális elkötelezettséget,
+    amely segít nekünk lendületet építeni a szisztémás változásokhoz.
+  hoc_how_to_step_educators_plan_desc_01: Az esemény előtt, próbálja ki magad a tevékenységeket,
+    hogy megbizonyosodjon arról, hogy a hallgatói eszközökön működnek, és készen áll
+    válaszolni a kérdésekre! Alacsony sávszélességgel rendelkezik? Tervezze meg, hogy
+    videókat jelenít meg az osztály elején, így minden hallgató nem tölti le saját
+    videóit.
+  hoc_how_to_step_educators_plan_desc_02: Az emberek szerte a világon gyakran csatlakoznak
+    a Kódolás órája ünnepségéhez a Számítástechnikai Oktatási Hét alatt (%{campaign_date}),
+    de az év bármely napján megteheti a Kódolási órát!
+  hoc_how_to_step_educators_plan_desc_03: Válasszon egy olyan helyet, amely megfelel
+    a rendelkezésre álló hallgatók és eszközök számához. A hallgatók kipróbálhatják
+    az egyes eszközökön végzett tevékenységeket, felváltva megoszthatják az eszközt,
+    vagy osztályként egy táblán. Vannak még a kihúzható tevékenységek is, amelyek
+    egyáltalán eszközök nélkül végezhetők el, így akár kint is elvégezhetők!
+  hoc_how_to_step_educators_spread_word_desc_01: Segítsen nekünk terjeszteni a hírt
+    közösségében [ezekkel az e-mail sablonokkal] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Kérjen meg két kollégát,%{register_url}hogy
+    [register]() és szervezzen egy Óra Kódolási tevékenységet. Ők viszont biztosíthatnak
+    két kollégát, akik két kollégát biztosíthatnak stb.
+  hoc_how_to_step_educators_spread_word_desc_03: Kérje meg igazgatóját, hogy [szervezzen
+    egy iskolai rendezvényt] (%{host_url}). Ha 300 vagy több gyerek vesz részt, speciális
+    eljegyzési készletet kaphat pólókkal, plakátokkal, laptop matricákkal és egyebekkel.
+    [Ossza meg az egész iskolai eseménytervet] (%{share_url}) a minősítéshez.
+  hoc_how_to_step_educators_spread_word_desc_04: Vegye fel a kapcsolatot az iskola
+    Szülőtanár Diákszövetségével, vagy ossza meg a szülői hírlevelekben, tudatva velük,
+    mit tanulnak gyermekeik.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Kezdje egy [inspiráló
+    videóval] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: A diákok elvégzik a kódolási
+    tevékenységüket'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: A diákok megismerkednek
+    a mesterséges intelligenciával'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: A tanár záróbeszédet
+    mond'
+  hoc_how_to_step_educators_get_coding_desc: Irányítsa diákjait a tevékenységre, talán
     a táblán lévő link megosztásával vagy az osztályterem tanuláskezelő rendszerén
     keresztül. Tanítványai kihívásokkal szembesülhetnek - ez rendben van! A programozás
     megtanulása olyan, mint egy új nyelv megtanulása; nem fogsz azonnal folyékonyan
     beszélni. Ha nem tudod a választ, együtt kitalálhatod.
-  hoc_how_to_step_07_educators_desc_01: 'Ügyeljen arra, hogy ünnepelje a sikert! Ossza
-    meg fényképeit és videóit a Kódolás órájáról a közösségi médiában. Használja a
-    #HourOfCode és a @codeorg -t, hogy kiemelhessük a sikerét is!'
-  hoc_how_to_step_07_educators_desc_02: Tanúsítványokat is kinyomtathat hallgatói
-    számára, hogy megmutassák eredményeiket!
+  hoc_how_to_step_educators_celebrate_desc: 'Az esemény után nyomtassa ki a befejezési
+    bizonyítványokat, és gratuláljon hallgatóinak. Ossza meg fotóit és videóit a Hour
+    of Code eseményéről, és mutassa meg diákok eredményeit a #HourOfCode és a @codeorg
+    használatával.'
+  hoc_how_to_step_educators_beyond_desc: A számítástechnikának nem kell véget érnie
+    a Kódolás Órájával! Míg a szülők 90% -a azt akarja, hogy gyermeke számítógépes
+    tudományt tanuljon, a legtöbb iskola még mindig nem tanítja. Segítségül tantervünk
+    webalapú és szabadon használható, örökre. Tanulja meg, hogyan hozhat CS-t az iskolába
+    még ma.
   hoc_ai_top_desc: Bárki megismerheti az AI-t, függetlenül attól, hogy diák vagy az
     osztályteremben, akár oktató, aki felszabadítja a tanítás jövőjét az AI-vel és
     arról.

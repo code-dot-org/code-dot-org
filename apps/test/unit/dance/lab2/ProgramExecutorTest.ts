@@ -19,11 +19,15 @@ describe('ProgramExecutor', () => {
       typeof utils.computeCharactersReferenced
     >,
     getValidationCallback: StubFunction<typeof utils.getValidationCallback>,
+    getSongMetadataForPreview: StubFunction<
+      typeof utils.getSongMetadataForPreview
+    >,
     validationFunction: StubFunction<() => void>,
     runUserSetup: StubFunction<() => void>,
     getCueList: StubFunction<() => number[]>,
     runUserEvents: StubFunction<() => void>,
     currentSongMetadata: SongMetadata,
+    previewMetadata: SongMetadata,
     characters: string[],
     timestamps: number[],
     code: string,
@@ -51,6 +55,7 @@ describe('ProgramExecutor', () => {
     onEventsChanged = sinon.stub();
     evalWithEvents = sinon.stub(CustomMarshalingInterpreter, 'evalWithEvents');
     getValidationCallback = sinon.stub(utils, 'getValidationCallback');
+    getSongMetadataForPreview = sinon.stub(utils, 'getSongMetadataForPreview');
     computeCharactersReferenced = sinon.stub(
       utils,
       'computeCharactersReferenced'
@@ -69,6 +74,17 @@ describe('ProgramExecutor', () => {
       peaks: {},
     };
 
+    previewMetadata = {
+      analysis: [],
+      artist: 'preview',
+      bpm: '',
+      delay: '',
+      duration: 1,
+      file: '',
+      title: 'preview',
+      peaks: {},
+    };
+
     characters = ['character1', 'character2'];
     computeCharactersReferenced.returns(characters);
 
@@ -78,6 +94,8 @@ describe('ProgramExecutor', () => {
     validationFunction = sinon.stub();
     getValidationCallback.returns(validationFunction);
     code = 'code';
+
+    getSongMetadataForPreview.returns(previewMetadata);
 
     programExecutor = new ProgramExecutor(
       'container',
@@ -134,8 +152,13 @@ describe('ProgramExecutor', () => {
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
+    const durationMs = 1000;
 
-    await programExecutor.startLivePreview(code, currentSongMetadata);
+    await programExecutor.startLivePreview(
+      code,
+      currentSongMetadata,
+      durationMs
+    );
 
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
@@ -145,7 +168,8 @@ describe('ProgramExecutor', () => {
     expect(fullCode?.includes(code)).to.be.true;
     expect(runUserSetup).to.have.been.calledOnce;
     expect(nativeAPI.livePreview).to.have.been.calledWithExactly(
-      currentSongMetadata
+      previewMetadata,
+      durationMs
     );
   });
 

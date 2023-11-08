@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "ប្រើ 'set backup_dancer2 size' block ដើម្បីធ្វើអោយអ្នករាំតូចជាងមុន",
   "danceFeedbackUseSetTint": "ប្រើ 'set tint' block ដើម្បីផ្លាស់ប្តូរពណ៌អ្នករាំ",
   "danceFeedbackUseStartMapping": "សាកបញ្ចូលកូដទាំងនេះ <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ចូលទៅក្នុងកម្មវិធីរបស់អ្នក",
+  "danceFeedbackKeepCoding": "ព្យាយាមសរសេរកូដម្ដងទៀត! នៅមានអ្វីមួយដែលនៅមិនទាន់ត្រឹមត្រូវនៅឡើយ។",
   "measure": "វាស់កំរិត៖"
 }

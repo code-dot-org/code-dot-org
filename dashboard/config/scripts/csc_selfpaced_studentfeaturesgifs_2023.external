@@ -5,10 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing student features
 
+#### Features are embedded in each level to help your students succeed. Check out how some of these features work by clicking on the arrows below: 
 
-### Adjusting windows
+## Adjusting windows
 
-##### Students can click and drag the three dots of the workspace or playspace to adjust the size of each.
+#### Students can click and drag the three dots of the workspace or play space to adjust the size of each.
 
 <details>
 
@@ -22,9 +23,9 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-### Instruction hints
+## Instruction hints
 
-##### Students can click on the lightbulb to get hints throughout a level.
+#### Students can click on the light bulb to get hints throughout a level.
 
 <details>
 
@@ -38,9 +39,9 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-### Video hints
+## Video hints
 
-##### Students can watch videos provided in some levels to review the CS concept they are practicing.
+#### Students can watch videos provided in some levels to review the CS concept they are practicing.
 
 <details>
 

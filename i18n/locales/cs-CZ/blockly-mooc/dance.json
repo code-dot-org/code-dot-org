@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "Použij blok `nastavit velikost záložního_tanečníka2`, abys tohoto tanečníka zmenšil(a).",
   "danceFeedbackUseSetTint": "Použij blok `nastavit odstín`, abyste změnil(a) odstín tanečníka.",
   "danceFeedbackUseStartMapping": "Zkus do svého programu přidat blok<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">pravý_jednorožec</title><title name=\"PROPERTY\">velikost</title><title name=\"RANGE\">basy</title></block></xml>.",
+  "danceFeedbackKeepCoding": "Používáš všechny potřebné typy bloků, ale nesprávným způsobem.",
   "measure": "Takt:"
 }

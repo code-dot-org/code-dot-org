@@ -2,7 +2,6 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
 import {SongMetadata} from '../types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import * as danceMsg from '../locale';
-import Sounds from '@cdo/apps/Sounds';
 import {ASSET_BASE} from '../constants';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import utils from '../utils';
@@ -136,16 +135,24 @@ export default class ProgramExecutor {
   /**
    * Show a live preview of the program. Compiles student code and calls on the native API to run the live preview.
    */
-  async startLivePreview(code: string, songMetadata: SongMetadata) {
+  async startLivePreview(
+    code: string,
+    songMetadata: SongMetadata,
+    durationMs?: number
+  ) {
     this.reset();
     this.livePreviewActive = true;
-    await this.updateLivePreview(code, songMetadata);
+    await this.updateLivePreview(code, songMetadata, durationMs);
   }
 
   /**
    * Update the currently playing live preview.
    */
-  async updateLivePreview(code: string, songMetadata: SongMetadata) {
+  async updateLivePreview(
+    code: string,
+    songMetadata: SongMetadata,
+    durationMs?: number
+  ) {
     if (!this.livePreviewActive) {
       console.warn('Update live preview called before starting live preview');
       return;
@@ -158,7 +165,10 @@ export default class ProgramExecutor {
     }
 
     this.hooks.runUserSetup();
-    this.nativeAPI.livePreview(songMetadata);
+    this.nativeAPI.livePreview(
+      utils.getSongMetadataForPreview(songMetadata),
+      durationMs
+    );
   }
 
   isLivePreviewRunning() {

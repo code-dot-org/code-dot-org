@@ -8,6 +8,7 @@
 #  source_course_offering_id :integer
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
+#  receives_marketing        :boolean          default(FALSE), not null
 #
 class PotentialTeacher < ApplicationRecord
   belongs_to :source_course_offering, class_name: 'CourseOffering'
