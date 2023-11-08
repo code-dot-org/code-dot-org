@@ -325,6 +325,13 @@ roles = {
       '!Ref ContributorSecretsPolicy',
     ]
   },
+  TempS3LessContributorRole: {
+    RoleName: 'Temp_S3less_Contributor',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      '!Ref ContributorSecretsPolicy',
+    ]
+  },
   EngineeringMusicLabContributorRole: {
     RoleName: 'Engineering_MusicLabContributor',
     ManagedPolicyArns: [
