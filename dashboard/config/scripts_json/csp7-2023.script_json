@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-07 21:12:26 UTC",
+    "serialized_at": "2023-11-08 15:55:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2171,6 +2171,22 @@
       },
       "seeding_key": {
         "activity_section.key": "a2265c8b-e1a8-4cc8-a3ae-50f21f4a4135",
+        "lesson_activity.key": "7df9dd2c-655a-49ab-b480-99bfc165feea"
+      }
+    },
+    {
+      "key": "fd94a680-9fbe-4f8f-932b-4218479d4c79",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Analyze one of the functions (procedures) that you have written for your library. Describe two calls to the selected function. Each call must pass different arguments (inputs) that cause a different segment of code in the algorithm to execute. Then, describe what condition(s) is being tested by each call to the procedure. Finally, identify the result (output) of each call.\n</i>\n\n\n<a href=\"https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing\">Make a Library Project Step 8:  Free Response</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd94a680-9fbe-4f8f-932b-4218479d4c79",
         "lesson_activity.key": "7df9dd2c-655a-49ab-b480-99bfc165feea"
       }
     },

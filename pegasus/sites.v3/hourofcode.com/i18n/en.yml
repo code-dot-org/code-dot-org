@@ -237,6 +237,7 @@
   call_to_action_see_teacher_guide: "See teacher how-to guide"
   call_to_action_see_event_guide: "See event how-to guide"
   call_to_action_join_advocacy_coalition: "Join the advocacy coalition"
+  call_to_action_become_an_advocate: "Become an advocate"
   call_to_action_share_event_w_parents: "Share your event with parents"
   call_to_action_explore_all_hoc_activities: "Explore all Hour of Code activities from Code.org"
   call_to_action_start_dance_party: "Start Dance Party"
@@ -9330,6 +9331,10 @@
   hoc_how_to_events_intro_desc_01: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
   hoc_how_to_events_intro_desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
 
+  hoc_how_to_parents_intro_heading: "How to do an Hour of Code with your child"
+  hoc_how_to_parents_intro_desc_01: "Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but recent studies show: children who study computer science perform better in other subjects, excel at problem-solving, and are 17% more likely to enroll in college."
+  hoc_how_to_parents_intro_desc_02: "You and your child can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!"
+
   hoc_how_to_public_officials_intro_heading: "Hosting an elected official at your Hour of Code"
   hoc_how_to_public_officials_intro_desc_01: "Inviting an elected official to your Hour of Code event will show your representative the impact and need for computer science education, and your students will be inspired by a role model in government."
   hoc_how_to_public_officials_intro_desc_02: "In order to run a successful Hour of Code event while engaging elected officials, complete these tasks prior to the elected official attending your school. The task includes coordination with their point of contact, media invitations, waivers, and planning your agenda."
@@ -9339,6 +9344,7 @@
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
   hoc_how_to_faq_answer_devices_01: "Devices you can use:"
   hoc_how_to_faq_answer_devices_02: "If devices are limited or unavailable, try [pair programming](%{pair_url}) or explore our [unplugged activities](%{unplugged_url}) to learn without any devices at all!"
+  hoc_how_to_faq_answer_devices_02_v2: "If you don't have a device at home, explore our [unplugged activities](%{unplugged_url}) to learn without any devices at all!"
   hoc_how_to_faq_question_volunteer: "Who can volunteer?"
   hoc_how_to_faq_answer_volunteer: "Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We'd love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don't need to be a programming expert to volunteer!"
   hoc_how_to_faq_question_full_hour: "Will the Hour of Code take a full hour?"
@@ -9372,6 +9378,7 @@
   hoc_how_to_step_label_test_activity: "Test out your activity"
   hoc_how_to_step_label_get_familiar_activities: "Get familiar with the activities"
   hoc_how_to_step_label_register_event: "Register your event"
+  hoc_how_to_step_label_register_your_hoc: "Register your Hour of Code"
   hoc_how_to_step_label_tell: "Tell your students, school, and community"
   hoc_how_to_step_label_get_coding: "Get coding!"
   hoc_how_to_step_label_celebrate: "Celebrate"
@@ -9392,12 +9399,15 @@
   hoc_how_to_step_label_confirm_details: "Confirm all details"
 
   hoc_how_to_step_beyond_hoc_subhead: "It doesn't end here!"
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: "Extend learning beyond one tutorial."
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: "Keep the excitement going with these suggestions:"
   hoc_how_to_step_beyond_hoc_desc_generic: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
   hoc_how_to_step_plan_hour_desc_01: "Here's a sample agenda to get you started:"
 
   hoc_how_to_step_choose_activities_desc_01: "This year, the Hour of Code theme is Creativity with Artificial Intelligence (AI). Whether it’s coding new apps and algorithms, generating unique art, or crafting choreography to get us dancing, AI is opening up fresh opportunities for digital expression that expand our understanding of creativity. Make this year special by completing a coding activity AND learning about AI."
   hoc_how_to_step_choose_activities_desc_02: "First, [explore hundreds of coding activities](%{activities_url}) and choose one based on your group's age, experience, interests and more. [These select activities](%{ai_activities_url}) feature artificial intelligence as a key topic or lesson."
   hoc_how_to_step_choose_activities_desc_03: "Then, [learn all about AI](%{ai_url}). Students can watch short videos featuring experts in the field, and there are accompanying lesson plans to extend the activity and guide further discussion. Or, we offer free professional learning for educators to unlock the future of teaching with and about AI."
+  hoc_how_to_step_choose_activities_desc_03_short: "Then, [learn all about AI](%{ai_url}). Students can watch short videos featuring experts in the field, and there are accompanying lesson plans to extend the activity and guide further discussion."
 
   hoc_how_to_step_beyond_advocacy_desc_01: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it and hundreds of thousands of jobs go unfilled. Learn how to bring computer science to more schools in your area and advocate for computer science to be a graduation requirement."
 
@@ -9449,6 +9459,17 @@
   hoc_how_to_step_events_after_desc_04: "Post pictures, videos, or notable quotes from the day on social media. (Publicity or privacy policies may apply.)"
   hoc_how_to_step_events_after_desc_05: "Follow up with volunteers or guests for feedback on how to make next year's event even better."
   hoc_how_to_step_events_after_desc_06: "Reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
+
+  hoc_how_to_step_parents_register_desc_01: "Start with a commitment to doing an Hour of Code with your child by registering. When you register your event, you'll receive helpful emails with news and tips for hosting a successful Hour of Code. You'll also be [put on the map](%{map_url}) so you can show your child that they are part of a global movement."
+  hoc_how_to_step_parents_get_coding_desc_01: "Direct your child to the activity and get to work together. They may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. Computer science is all about learning how to \"debug\" situations that didn't turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!"
+  hoc_how_to_step_parents_celebrate_desc_01: "Be sure to celebrate success! Share photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!"
+  hoc_how_to_step_parents_celebrate_desc_02: "You can also print a certificate for your child to show off their achievement!"
+  hoc_how_to_step_parents_spread_word_desc_02: "Ask your child's principal to host a school-wide event. When 300 or more kids participate, you can receive a special engagement kit with t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url}) to qualify."
+  hoc_how_to_step_parents_spread_word_desc_03: "Ask your employer to participate by hosting a company-wide event or encouraging other employees to host their own Hour of Code event."
+  hoc_how_to_step_parents_beyond_list_01: "Show them an [inspirational video](%{video_url}) that features one of their favorite role models."
+  hoc_how_to_step_parents_beyond_list_02: "Learn all about [how AI works](%{ai_url}), and why it matters."
+  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it with your child right away to get them excited or save it for the end of your Hour of Code as a special prize."
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to your school today."
 
   hoc_how_to_step_public_officials_invite_desc_01: "Determine the point person for both your event and the elected official."
   hoc_how_to_step_public_officials_invite_desc_02: "Coordinate both the point person from your event (e.g., school administrator) and for the elected official attending (e.g., staffer or scheduler). Ensure both parties have each other's contact information for the day of the event."
