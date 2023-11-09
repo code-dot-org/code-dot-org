@@ -94,6 +94,16 @@
       "title": "AI 101 for Teachers",
       "body": "Discover the groundbreaking world of Artificial Intelligence (AI) and its transformative potential in education with our comprehensive online learning series for teachers.",
       "buttonText": "Learn more"
+    },
+    "state-of-cs-2023": {
+      "title": "2023 State of Computer Science Education",
+      "body": "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data.",
+      "buttonText": "Read report"
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more"
     }
   }
 }

@@ -5,6 +5,7 @@ import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
+
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
@@ -35,8 +36,6 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 import utils from './utils';
 
 const ButtonState = {
@@ -403,7 +402,6 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
-    doAi: this.doAi.bind(this),
     resourceLoader: new ResourceLoader(ASSET_BASE),
   });
 
@@ -424,6 +422,11 @@ Dance.prototype.afterInject_ = function () {
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
+  if (Sounds.getSingleton().isPlaying(url)) {
+    // Prevent playing the same song twice simultaneously.
+    audioCommands.stopSound({url: url});
+  }
+
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -767,37 +770,5 @@ Dance.prototype.captureThumbnailImage = function () {
     captureThumbnailFromCanvas(canvas);
   } else {
     setThumbnailBlobFromCanvas(canvas);
-  }
-};
-
-Dance.prototype.doAi = async function (input) {
-  const systemPrompt =
-    'You are a helper which can accept a request for a mood or atmosphere, and you then generate JSON like the following format: {backgroundColor: "black", backgroundEffect: "splatter", foregroundEffect: "rain"}.  The only valid values for backgroundEffect are circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars.  The only valid values for backgroundColor are rave, cool, electronic, iceCream, neon, tropical, vintage, warm.  The only valid values for foregroundEffect are bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos.  Make sure you always generate all three of those values.  Also, if you receive a request to place a dancer somewhere, then add {setDancer: "true"} to the result JSON.  Also, add a field called "explanation" to the result JSON, which contains a single-sentence explanation of why you chose the values that you did, at the reading level of a 5th-grade school student.';
-
-  const messages = [
-    {
-      role: 'system',
-      content: systemPrompt,
-    },
-    {
-      role: 'user',
-      content: input,
-    },
-  ];
-
-  const response = await HttpClient.post(
-    CHAT_COMPLETION_URL,
-    JSON.stringify({messages}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
-
-  if (response.status === 200) {
-    const res = await response.json();
-    return res.content;
-  } else {
-    return null;
   }
 };

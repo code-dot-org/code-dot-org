@@ -58,7 +58,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:49.519+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play_draft3\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:49.519+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_free_play_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_free_play_draft3\"},{\"changed_at\":\"2023-11-02 19:58:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -118,12 +118,12 @@
         <block type="Dancelab_whenKey" id=",0/o^SW~UKg*dlsh3clc" x="22" y="680">
           <field name="KEY">"up"</field>
         </block>
-        <block type="Dancelab_whenPeak" id="ZJ0w{msu_@A|nRbLXfv*" x="20" y="739">
-          <field name="RANGE">0</field>
-        </block>
-        <block type="Dancelab_atTimestamp" id="{Z56pxPf2`aHat;ZCR0A" x="19" y="817">
-          <field name="TIMESTAMP">4</field>
+        <block type="Dancelab_atTimestampNotAfter" id="k=#xr,WcpY=ckI^/~#}$" x="22" y="747">
+          <field name="TIMESTAMP">2</field>
           <field name="UNIT">"measures"</field>
+        </block>
+        <block type="Dancelab_whenPeak" id="ZJ0w{msu_@A|nRbLXfv*" x="18" y="819">
+          <field name="RANGE">0</field>
         </block>
         <block type="Dancelab_everySeconds" id="?::y1JuwB?b--FPx?+]c" x="72" y="871">
           <field name="N">4</field>

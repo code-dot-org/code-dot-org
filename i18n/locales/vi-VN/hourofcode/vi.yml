@@ -6,8 +6,8 @@ vi:
   front_title: Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}
   coming_soon: Sắp diễn ra
   new: Mới
-  hours_of_code_served: Thời gian phục vụ mã
-  hoc_stat_languages: Học sinh đang học bằng hơn 45 ngôn ngữ
+  hours_of_code_served: Giờ lập trình đã được tổ chức
+  hoc_stat_languages: Các em học sinh đang học bằng hơn 45 ngôn ngữ
   hoc_stat_hours_served: Hơn 100 triệu học sinh đã thử học Giờ lập trình
   hoc_stat_females: Học sinh nữ chiếm 50% số người tham gia Hour of Code
   campaign_date_start_short: Ngày 4 tháng 12
@@ -58,10 +58,10 @@ vi:
   hoc2023_social_creativity_with_ai_title: Hour of Code - Bạn sẽ tạo ra những gì?
   hoc2023_social_creativity_with_ai_desc: Sử dụng khoa học máy tính để khám phá và
     tìm hiểu về AI!
-  hoc2023_what_is_hoc_desc: The Hour of Code là phần giới thiệu miễn phí về khoa học
+  hoc2023_what_is_hoc_desc: Giờ lập trình là phần giới thiệu miễn phí về khoa học
     máy tính thông qua các hoạt động và video thú vị dành cho người học ở mọi cấp
     độ kỹ năng. Lễ kỷ niệm cả lập trình và AI năm nay được hỗ trợ bởi hơn 400 đối
-    tác, 20.000 nhà giáo dục và 58.000 tình nguyện viên.
+    tác, 20.000 nhà giáo và 58.000 tình nguyện viên.
   hoc2022_header: Khám phá, vui chơi, sáng tạo!
   social_hoc2022_explore_play_create: Sử dụng khoa học máy tính để khám phá, vui chơi
     và sáng tạo!
@@ -234,9 +234,8 @@ vi:
   device_desktop_computer: Máy tính để bàn
   device_mobile_device: Thiết bị di động
   for_everyone: Dành cho tất cả mọi người
-  for_students_teacher_led_learning: 'Dành cho học sinh: Học tập do giáo viên hướng
-    dẫn'
-  for_students_teacher_led_lessons: 'Dành cho học sinh: Các bài học do giáo viên hướng
+  for_students_teacher_led_learning: 'Dành cho học sinh: Học cùng giáo viên'
+  for_students_teacher_led_lessons: 'Dành cho học sinh: Bài học có giáo viên hướng
     dẫn'
   professional_development: Phát triển chuyên môn
   how_ai_works_video_series: Dòng video hoạt động như thế nào của AI
@@ -300,18 +299,20 @@ vi:
     thông tin chi tiết và hỗ trợ từ các nhà giáo dục khác.
   required_materials: 'Tài liệu bắt buộc:'
   optional_materials: 'Tài liệu không bắt buộc:'
-  for_students: Dành cho sinh viên
+  for_students: Dành cho học sinh
   for_educators: Đối với nhà giáo dục
-  call_to_action_host_hoc: Tổ chức Hour of Code
+  call_to_action_host_hoc: Tổ chức Giờ lập trình
   call_to_action_hold_an_event: Tổ chức một sự kiện
   call_to_action_register_event: Đăng ký sự kiện của bạn
-  call_to_action_register_your_hoc: Đăng ký Giờ Mã của bạn
+  call_to_action_register_your_hoc: Đăng ký Giờ lập trình của bạn
   call_to_action_select_activity: Chọn một hoạt động
+  call_to_action_select_coding_activity: Chọn một hoạt động mã hóa
   call_to_action_start_activity: Bắt đầu một hoạt động
   call_to_action_get_certificates: Nhận chứng chỉ
+  call_to_action_print_certificates: In giấy chứng nhận
   call_to_action_go_beyond_hoc: Vượt xa hơn Giờ Mã
-  call_to_action_explore_all_hoc_activities: Khám phá tất cả các hoạt động Hour of
-    Code từ Code.org
+  call_to_action_explore_all_hoc_activities: Khám phá tất cả các hoạt động Giờ lập
+    trình từ Code.org
   call_to_action_start_dance_party: Bắt đầu tiệc khiêu vũ
   call_to_action_start_part_02: Bắt đầu phần hai
   call_to_action_start_unplugged_activity: Bắt đầu hoạt động đã ngắt kết nối
@@ -441,6 +442,8 @@ vi:
     Teaching Computer Science Discoveries
   aria_label_call_to_action_teaching_csp: Bắt đầu chương trình Teaching Computer Science
     Principles Professional learning
+  aria_label_call_to_action_teaching_problem_solving: Bắt đầu chương trình giảng dạy
+    giải quyết vấn đề và máy tính chuyên nghiệp
   aria_label_call_to_action_teaching_csc: Bắt đầu chương trình đào tạo chuyên môn
     Giảng dạy kết nối khoa học máy tính
   aria_label_call_to_action_teaching_ai: Bắt đầu chương trình học tập chuyên nghiệp
@@ -459,6 +462,8 @@ vi:
     Khoa học Máy tính
   aria_label_call_to_action_curriculum_csp: Khám phá chương trình giảng dạy Nguyên
     tắc Khoa học Máy tính
+  aria_label_call_to_action_curriculum_problem_solving: Khám phá chương trình Giải
+    quyết vấn đề và Máy tính
   aria_label_call_to_action_curriculum_csc: Khám phá chương trình đào tạo Kết nối
     khoa học máy tính
   aria_label_call_to_action_curriculum_ai: Khám phá chương trình giảng dạy AI và Machine
@@ -540,6 +545,7 @@ vi:
   curriculum_name_csf_teacher_led: Bài học với giáo viên
   curriculum_name_csd: Khám phá Khoa học Máy tính
   curriculum_name_csp: Các nguyên tắc khoa học máy tính
+  curriculum_name_problem_solving: Giải quyết vấn đề và tính toán
   curriculum_name_csc: Kết nối khoa học máy tính
   curriculum_name_csa: Khoa học máy tính A
   curriculum_name_csa_ai: Kỹ thuật phần mềm & Computer Vision
@@ -746,6 +752,7 @@ vi:
   module_label_teaching_csf: Dạy các nguyên tắc cơ bản về khoa học máy tính
   module_label_teaching_csd: Dạy khám phá khoa học máy tính
   module_label_teaching_csp: Dạy các nguyên tắc khoa học máy tính
+  module_label_teaching_problem_solving: Giảng dạy giải quyết vấn đề và máy tính
   module_label_teaching_csc: Giảng dạy kết nối khoa học máy tính
   module_label_teaching_ai: Dạy AI và học máy
   module_label_teaching_maker_cp: Dạy tạo ứng dụng với thiết bị (Circuit Playground)
@@ -2225,7 +2232,7 @@ vi:
     sinh, sinh viên trên 180+ quốc gia. Bất cứ ai, bất cứ đâu đều có thể tổ chức sự
     kiện Giờ Mã. Một giờ hướng dẫn có sẵn trong hơn 30 ngôn ngữ. Không cần kinh nghiệm.
     <strong>Độ tuổi từ 4 đến 104.</strong>
-  front_intro_default_2: Một phong trào toàn cầu với hơn 180 nước tham gia.
+  front_intro_default_2: Phong trào toàn cầu có hơn 180 quốc gia tham gia.
   front_watch_video: Xem video mới
   front_watch_regular_video: Xem video
   front_volunteers: Tuyển tình nguyện viên kỹ thuật
@@ -2410,7 +2417,7 @@ vi:
     ai đam mê tìm hiểu. Hãy giúp chúng tôi quảng bá nó đến với tất cả mọi người.
   front_join_us_description_short: Khoa học máy tính là một nền tảng cho mọi học sinh.
   front_join_us_button: Hãy tham gia với chúng tớ
-  front_what_is_hoc: Hour of Code là gì?
+  front_what_is_hoc: Giờ lập trình là gì?
   front_join_us_header: Bất cứ ai có thể học những điều cơ bản, và có niềm vui khi
     làm nó!
   front_join_us_volunteer_header: Tình nguyện viên cho Giờ Mã
@@ -2475,15 +2482,15 @@ vi:
     kỳ ai cũng có thể học những kiến thức cơ bản. Chiến dịch cấp cơ sở này được hơn
     400 đối tác và 200.000 nhà giáo trên toàn thế giới ủng hộ.
   hoc_homepage_registration_desc: Lớp học hoặc nhóm của bạn có thể tham gia cùng hàng
-    triệu người trên khắp thế giới tham gia Giờ Mã hóa! Đăng ký cho lễ kỷ niệm Tuần
-    lễ Giáo dục Khoa học Máy tính hàng năm bắt đầu vào tháng Mười. Tuy nhiên, Hour
-    of Code có sẵn quanh năm.
+    triệu người trên khắp thế giới trong Giờ lập trình! Hãy đăng ký tham gia hưởng
+    ứng Tuần lễ Giáo dục Khoa học Máy tính hàng năm bắt đầu vào tháng Mười. Tuy nhiên,
+    Giờ lập trình diễn ra quanh năm.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Xem Hướng dẫn thực hiện](%{howto_guide_url})
     để lập kế hoạch sự kiện cho lớp của bạn."
   hoc_homepage_highlights_heading: Điểm nổi bật của Giờ lập trình
   hoc_homepage_organized_by: Giờ lập trình được tổ chức bởi [Code.org](%{codeorg_url}).
-  hoc_events_heading: Đăng ký để tổ chức Hour of Code
-  hoc_events_jump_to_map: Chuyển đến bản đồ Hour of Code
+  hoc_events_heading: Đăng ký tổ chức Giờ lập trình
+  hoc_events_jump_to_map: Chuyển đến bản đồ Giờ lập trình
   signup_closed: Đăng ký Giờ Lập Trình đã đóng ngay bây giờ. Vui lòng kiểm tra lại
     vào tháng 10 để đăng ký Giờ Lập Trình ở đợt tiếp theo.
   signup_registration_not_required: Bạn không cần đăng ký để tham gia! Các hoạt động
@@ -2516,7 +2523,9 @@ vi:
   signup_event_entire_school_label: Toàn bộ học sinh trường tôi đã tham gia vào
   signup_event_location_label: Địa điểm sự kiện (tuỳ chọn)
   signup_event_location_error: Bạn chưa nhập địa điểm của sự kiện.
-  signup_special_event_flag_label: Làm nổi bật sự kiện của tôi lên
+  signup_special_event_flag_label: Sự kiện của tôi sẽ bao gồm toàn bộ khu học chánh,
+    toàn bộ tổ chức, thành viên trong cộng đồng và/hoặc các kế hoạch đặc biệt khác
+    không chỉ giới hạn trong một giờ
   signup_special_event_details_label: Chi tiết về sự kiện đặc biệt
   signup_send_posters_flag_label: Gửi <a href= "/resources#posters"> áp phích</a>
     cho trường học hoặc tổ chức của tôi
@@ -2596,8 +2605,8 @@ vi:
   map_title: Bản đồ của Giờ lập trình
   map_header: Sự kiện Hour of Code trên toàn thế giới
   map_header_count_year: Đã có %{event_count} sự kiện được đăng ký cho năm %{year}
-  map_header_count_year_so_far: "%{event_count} các sự kiện được đăng ký cho đến nay
-    %{year}"
+  map_header_count_year_so_far: "%{event_count} sự kiện đã được đăng ký cho đến hiện
+    tại, trong năm %{year}"
   see_all_events: Xem tất cả sự kiện
   map_header_company: "# bởi những người tổ chức công ty"
   map_header_country: "# tại %{country}"
@@ -2612,7 +2621,7 @@ vi:
     trang sự kiện.</a>
   map_warning_markdown: Bạn có thể xem danh sách đầy đủ các sự kiện trên [trang sự
     kiện](%{events_url}).
-  map_view_all_events: Xem danh sách đầy đủ các sự kiện Hour of Code [here](%{events_url}).
+  map_view_all_events: Xem danh sách đầy đủ các sự kiện Giờ lập trình [here](%{events_url}).
   meta_tag_og_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_og_description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu
     học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi
@@ -2633,7 +2642,7 @@ vi:
   twitter_default_text_donor: 'Tôi đang tham gia #HourOfCode năm nay, phải không?
     (Cảm ơn %{random_donor} đã hỗ trợ @codeorg)'
   hoc_faq_title: Câu hỏi thường gặp
-  hoc_faq_what_is_hoc_q: Hour of Code là gì?
+  hoc_faq_what_is_hoc_q: Giờ lập trình là gì?
   hoc_faq_what_is_hoc_a_markdown: Giờ lập trình ban đầu là bài giới thiệu kéo dài
     một giờ về khoa học máy tính, được thiết kế để làm rõ khái niệm “mã lệnh”, để
     chỉ ra rằng tất cả mọi người đều có thể học những kiến thức cơ bản và mở rộng
@@ -2775,7 +2784,7 @@ vi:
     Nếu URL không bắt đầu bằng studio.code.org, bạn có thể đang làm việc trên hoạt động của bên thứ ba và sẽ cần liên hệ với nhóm hỗ trợ của công ty đó để được hỗ trợ thêm.
   stats_hoc_2013_image_alt: Số liệu thống kê từ năm 2013
   stats_growth: Nó đã nhanh chóng đạt tới 15 triệu người sử dụng.
-  stats_i18n: Học sinh đang học bằng hơn 45 ngôn ngữ
+  stats_i18n: Các em học sinh đang học bằng hơn 45 ngôn ngữ
   stats_tumblr: 'Tumblr: 3.5 năm'
   stats_facebook: 'Facebook: 3 năm.'
   stats_twitter: 'Twitter: 2.5 năm'
@@ -2876,7 +2885,7 @@ vi:
   event: sự kiện
   events: những sự kiện
   highlights_title: Nổi bật
-  highlights_header: Nổi bật của Hour of Code
+  highlights_header: Điểm nổi bật của Giờ lập trình
   highlights_description: Một số khoảnh khắc đáng nhớ của chúng tôi trong chiến dịch
     Giờ lập trình.
   highlights_previous: Điểm nổi bật so với các năm trước
@@ -13832,6 +13841,9 @@ vi:
   step_06: Bước 6
   step_07: Bước 7
   step_08: Bước 8
+  what: 'Cái gì:'
+  when: 'Khi nào:'
+  where: 'Ở đâu:'
   hoc_how_to_top_heading: Hướng dẫn của bạn về Hour of Code
   hoc_how_to_top_desc: Hướng dẫn hướng dẫn phù hợp để có trải nghiệm Hour of Code
     tốt nhất.
@@ -13881,74 +13893,88 @@ vi:
     giờ được thiết kế cho mọi lứa tuổi bằng hơn 45 ngôn ngữ.
   hoc_how_to_step_label_plan: Lập kế hoạch nơi và thời điểm bạn sẽ thực hiện Giờ Mã
   hoc_how_to_step_label_choose_activity: Chọn hoạt động của bạn
+  hoc_how_to_step_label_choose_activities: Chọn hoạt động của bạn
   hoc_how_to_step_label_test_activity: Kiểm tra hoạt động của bạn
   hoc_how_to_step_label_register_event: Đăng ký sự kiện của bạn
   hoc_how_to_step_label_tell: Nói với học sinh, trường học và cộng đồng của bạn
   hoc_how_to_step_label_get_coding: Nhận mã hóa!
   hoc_how_to_step_label_celebrate: Kỷ niệm
   hoc_how_to_step_label_beyond_hoc: Vượt qua giờ mã
+  hoc_how_to_step_label_plan_your_event: Lên kế hoạch cho sự kiện của bạn
+  hoc_how_to_step_label_plan_your_hour: Lên kế hoạch giờ của bạn
+  hoc_how_to_step_label_help_spread_word: Giúp truyền bá
   hoc_how_to_step_beyond_hoc_subhead: Nó không kết thúc ở đây!
-  hoc_how_to_step_beyond_hoc_desc: Khoa học máy tính không nhất thiết phải kết thúc
-    với Giờ Mã! Trong khi 90% phụ huynh muốn con mình học khoa học máy tính, hầu hết
-    các trường vẫn không dạy nó. Tìm hiểu cách mang CS đến trường của con bạn ngay
-    hôm nay.
-  hoc_how_to_step_01_educators_subhead: Chọn thời gian và không gian sự kiện phù hợp
-    với số lượng sinh viên và thiết bị bạn có sẵn.
-  hoc_how_to_step_01_educators_desc_01: Những không gian nào có sẵn để bạn thực hiện
-    Giờ Mã? Hãy xem xét khả năng công nghệ của không gian của bạn và các loại thiết
-    bị mà bạn mong đợi sinh viên của mình làm việc. Học sinh có thể làm việc trên
-    các hướng dẫn trên một thiết bị duy nhất, thay phiên nhau sử dụng thiết bị dùng
-    chung hoặc thử hướng dẫn cùng nhau trên bảng trắng lớp học. Thậm chí còn có các
-    hướng dẫn không cắm điện có thể được hoàn thành mà không cần thiết bị nào cả.
-    Các tùy chọn đã rút phích cắm có thể được thực hiện ở bất cứ đâu — ngay cả ngoài
-    trời!
-  hoc_how_to_step_01_educators_desc_02: Mọi người trên khắp thế giới tham gia lễ kỷ
-    niệm Giờ Mã trong Tuần lễ Giáo dục CS %{campaign_date} khi các hướng dẫn và hoạt
-    động mới nhất được phát hành. Nhưng bạn có thể thực hiện Hour of Code bất kỳ ngày
-    nào trong năm!
-  hoc_how_to_step_02_educators_desc_01: Khám phá các hoạt động dựa trên độ tuổi, kinh
-    nghiệm, sở thích của nhóm bạn và hơn thế nữa. Học sinh thường thử các bài hướng
-    dẫn tự hướng dẫn, mặc dù nhiều hoạt động bao gồm kế hoạch bài học cho giáo viên
-    để hướng dẫn thảo luận hoặc mở rộng hoạt động.
-  hoc_how_to_step_02_educators_desc_02: Quyết định trước nếu bạn muốn chọn một hướng
-    dẫn duy nhất cho tất cả học sinh của bạn, hoặc để mỗi đứa trẻ tự chọn.
-  hoc_how_to_step_02_educators_desc_03: Năm nay, bạn và học sinh của bạn có thể [tìm
-    hiểu tất cả về AI] (%ai_url) thông qua các hướng dẫn, kế hoạch bài học và loạt
-    video Cách thức hoạt động của AI mới của chúng tôi.
-  hoc_how_to_step_03_educators_desc_01: Hãy tự mình thử hướng dẫn trước khi bạn vào
-    lớp học để bạn có thể trả lời các câu hỏi!
-  hoc_how_to_step_03_educators_desc_02: Bạn cũng có thể kiểm tra hướng dẫn trên máy
-    tính hoặc thiết bị của sinh viên để đảm bảo chúng hỗ trợ âm thanh và video. Có
-    băng thông thấp? Lên kế hoạch hiển thị video ở phía trước lớp học, vì vậy mỗi
-    học sinh không tải xuống video của riêng mình.
-  hoc_how_to_step_03_educators_desc_03: Cân nhắc cung cấp tai nghe cho lớp học của
-    bạn hoặc yêu cầu học sinh mang theo, nếu hướng dẫn bạn chọn phù hợp nhất với âm
-    thanh.
-  hoc_how_to_step_04_educators_desc_01: Khi đăng ký sự kiện Giờ Mã, bạn sẽ nhận được
-    email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Đó cũng là
-    cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham
-    gia. Tình nguyện viên là một nguồn tài nguyên tuyệt vời và có thể đến nói chuyện
-    với lớp của bạn về khoa học máy tính hoặc giúp học sinh của bạn với các hoạt động
-    Giờ Mã.
-  hoc_how_to_step_05_educators_desc_01: Làm cho sinh viên của bạn hào hứng với sự
-    kiện này bằng cách chia sẻ [video truyền cảm hứng] (%{videos_url}) nêu bật những
-    con người đa dạng và những cách sáng tạo mà khoa học máy tính có thể được sử dụng
-    trong thế giới thực.
-  hoc_how_to_step_05_educators_desc_02: Chia sẻ kế hoạch Giờ Mã của bạn với các giáo
-    viên khác, những người có thể muốn tham gia vào cuộc vui! Đây cũng là một cơ hội
-    tuyệt vời để liên hệ với Hiệp hội Sinh viên Giáo viên Phụ huynh của trường bạn
-    hoặc chia sẻ trong các bản tin phụ huynh, cho họ biết những gì con họ đang học.
-  hoc_how_to_step_06_educators_desc_01: Hướng học sinh của bạn đến hoạt động, có thể
-    bằng cách chia sẻ liên kết trên bảng hoặc thông qua hệ thống quản lý học tập của
-    lớp học của bạn. Học sinh của bạn có thể gặp phải những thách thức - không sao
-    cả! Học lập trình giống như học một ngôn ngữ mới; bạn sẽ không thành thạo ngay
-    lập tức. Nếu bạn không biết câu trả lời, bạn có thể cùng nhau tìm ra nó.
-  hoc_how_to_step_07_educators_desc_01: 'Hãy chắc chắn ăn mừng thành công! Chia sẻ
-    hình ảnh và video về sự kiện Giờ Mã của bạn trên phương tiện truyền thông xã hội.
-    Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể làm nổi bật thành công
-    của bạn!'
-  hoc_how_to_step_07_educators_desc_02: Bạn cũng có thể in chứng chỉ cho học sinh
-    của mình để thể hiện thành tích của họ!
+  hoc_how_to_step_plan_hour_desc_01: 'Dưới đây là một chương trình làm việc mẫu để
+    giúp bạn bắt đầu:'
+  hoc_how_to_step_choose_activities_desc_01: Năm nay, chủ đề Hour of Code là Sáng
+    tạo với trí tuệ nhân tạo (AI). Cho dù đó là mã hóa các ứng dụng và thuật toán
+    mới, tạo ra nghệ thuật độc đáo hoặc tạo vũ đạo để khiến chúng ta nhảy múa, AI
+    đang mở ra những cơ hội mới cho biểu hiện kỹ thuật số giúp mở rộng hiểu biết của
+    chúng ta về sự sáng tạo. Làm cho năm nay trở nên đặc biệt bằng cách hoàn thành
+    một hoạt động mã hóa VÀ tìm hiểu về AI.
+  hoc_how_to_step_choose_activities_desc_02: Đầu tiên, [khám phá hàng trăm hoạt động
+    mã hóa] (%{activities_url}) và chọn một hoạt động dựa trên độ tuổi, kinh nghiệm,
+    sở thích của nhóm bạn và hơn thế nữa. [Những hoạt động chọn lọc này] (%{ai_activities_url})
+    giới thiệu trí tuệ nhân tạo như một chủ đề hoặc bài học chính.
+  hoc_how_to_step_choose_activities_desc_03: Sau đó, [tìm hiểu tất cả về AI] (%{ai_url}).
+    Học sinh có thể xem các video ngắn giới thiệu các chuyên gia trong lĩnh vực này
+    và có các kế hoạch bài học đi kèm để mở rộng hoạt động và hướng dẫn thảo luận
+    thêm. Hoặc, chúng tôi cung cấp dịch vụ học tập chuyên nghiệp miễn phí cho các
+    nhà giáo dục để mở khóa tương lai của việc giảng dạy với và về AI.
+  hoc_how_to_step_educators_register_desc: Bắt đầu với cam kết thực hiện Hour of Code
+    với học sinh của bạn bằng cách đăng ký sự kiện của bạn. Khi đăng ký, bạn sẽ nhận
+    được email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Bạn
+    cũng sẽ được [đưa lên bản đồ] (%{map_url}). Toàn bộ nỗ lực tập thể của chúng ta
+    thể hiện cam kết toàn cầu đối với phong trào khoa học máy tính, điều này sẽ giúp
+    chúng ta xây dựng động lực cho sự thay đổi hệ thống.
+  hoc_how_to_step_educators_plan_desc_01: Trước sự kiện của bạn, hãy tự mình thử các
+    hoạt động để bạn có thể đảm bảo chúng hoạt động trên các thiết bị của sinh viên
+    và bạn đã sẵn sàng trả lời các câu hỏi! Có băng thông thấp? Lên kế hoạch hiển
+    thị video ở phía trước lớp học, vì vậy mỗi học sinh không tải xuống video của
+    riêng mình.
+  hoc_how_to_step_educators_plan_desc_02: Mọi người trên khắp thế giới thường tham
+    gia lễ kỷ niệm Giờ Mã trong Tuần lễ Giáo dục Khoa học Máy tính (%{campaign_date}),
+    nhưng bạn có thể thực hiện Hour of Code bất kỳ ngày nào trong năm!
+  hoc_how_to_step_educators_plan_desc_03: Chọn một không gian phù hợp với số lượng
+    sinh viên và thiết bị bạn có sẵn. Học sinh có thể thử các hoạt động trên các thiết
+    bị riêng lẻ, thay phiên nhau chia sẻ thiết bị hoặc như một lớp học trên bảng trắng.
+    Thậm chí có những hoạt động không cắm điện có thể được hoàn thành mà không cần
+    thiết bị nào cả, vì vậy chúng thậm chí có thể được thực hiện bên ngoài!
+  hoc_how_to_step_educators_spread_word_desc_01: Giúp chúng tôi truyền bá thông tin
+    trong cộng đồng của bạn với [các mẫu email này] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Yêu cầu hai đồng nghiệp [register](%{register_url})
+    và tổ chức một hoạt động Hour of Code. Đến lượt họ, họ có thể đảm bảo hai đồng
+    nghiệp, những người có thể đảm bảo hai đồng nghiệp, v.v.
+  hoc_how_to_step_educators_spread_word_desc_03: Yêu cầu hiệu trưởng của bạn [tổ chức
+    một sự kiện toàn trường] ()%{host_url}. Khi 300 trẻ em trở lên tham gia, bạn có
+    thể nhận được một bộ đính hôn đặc biệt với áo phông, áp phích, nhãn dán máy tính
+    xách tay, v.v. [Chia sẻ kế hoạch sự kiện toàn trường của bạn] (%{share_url}) để
+    đủ điều kiện.
+  hoc_how_to_step_educators_spread_word_desc_04: Liên hệ với Hiệp hội Sinh viên Giáo
+    viên Phụ huynh của trường bạn hoặc chia sẻ trong các bản tin phụ huynh, cho họ
+    biết những gì con họ đang học.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 sáng: Bắt đầu với một
+    [video truyền cảm hứng] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 sáng: Học sinh thực hiện
+    hoạt động mã hóa của họ'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 sáng: Học sinh tìm hiểu
+    về AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 sáng: Giáo viên phát biểu
+    kết thúc'
+  hoc_how_to_step_educators_get_coding_desc: Hướng học sinh của bạn đến hoạt động,
+    có thể bằng cách chia sẻ liên kết trên bảng hoặc thông qua hệ thống quản lý học
+    tập của lớp học của bạn. Học sinh của bạn có thể gặp phải những thách thức - không
+    sao cả! Học lập trình giống như học một ngôn ngữ mới; bạn sẽ không thành thạo
+    ngay lập tức. Nếu bạn không biết câu trả lời, bạn có thể cùng nhau tìm ra nó.
+  hoc_how_to_step_educators_celebrate_desc: 'Sau sự kiện của bạn, in giấy chứng nhận
+    hoàn thành và chúc mừng sinh viên của bạn. Chia sẻ ảnh và video về sự kiện Giờ
+    Mã của bạn và thể hiện thành tích của học sinh bằng cách sử dụng #HourOfCode và
+    @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Khoa học máy tính không nhất thiết phải kết
+    thúc với Hour of Code! Trong khi 90% phụ huynh muốn con mình học khoa học máy
+    tính, hầu hết các trường vẫn không dạy nó. Để giúp đỡ, chương trình giảng dạy
+    của chúng tôi dựa trên web và miễn phí để sử dụng, mãi mãi. Tìm hiểu làm thế nào
+    để mang CS đến trường của bạn ngay hôm nay.
   hoc_ai_top_desc: Bất cứ ai cũng có thể tìm hiểu về AI, cho dù bạn là học sinh trong
     lớp hay một nhà giáo dục mở khóa tương lai của việc giảng dạy với và về AI.
   hoc_ai_how_ai_works_video_series_desc: Loạt video ngắn này sẽ giới thiệu cho bạn

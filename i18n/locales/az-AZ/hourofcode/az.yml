@@ -298,8 +298,10 @@ az:
   call_to_action_register_event: Tədbirinizi qeydiyyata alın
   call_to_action_register_your_hoc: Kod saatınızı qeydiyyatdan keçirin
   call_to_action_select_activity: Bir fəaliyyət seçin
+  call_to_action_select_coding_activity: Kodlaşdırma fəaliyyətini seçin
   call_to_action_start_activity: Bir fəaliyyətə başlayın
   call_to_action_get_certificates: Sertifikatlar alın
+  call_to_action_print_certificates: Sertifikatları çap edin
   call_to_action_go_beyond_hoc: Kod Saatından kənara çıxın
   call_to_action_explore_all_hoc_activities: Code.org saytından bütün Hour of Code
     fəaliyyətlərini araşdırın
@@ -430,6 +432,8 @@ az:
     təlim proqramına başlayın
   aria_label_call_to_action_teaching_csp: Tədris Kompüter Elmləri Prinsiplərinin peşəkar
     təlim proqramına başlayın
+  aria_label_call_to_action_teaching_problem_solving: Problemlərin həlli və hesablama
+    peşəkar tədris proqramına başlayın
   aria_label_call_to_action_teaching_csc: Tədris Kompüter Elmləri Əlaqələri peşəkar
     təlim proqramına başlayın
   aria_label_call_to_action_teaching_ai: Tədris AI və Maşın Öyrənmə peşəkar öyrənmə
@@ -448,6 +452,8 @@ az:
     araşdırın
   aria_label_call_to_action_curriculum_csp: Kompüter Elmləri Prinsipləri kurikulumunu
     araşdırın
+  aria_label_call_to_action_curriculum_problem_solving: Problemlərin həlli və hesablama
+    kurikulumunu araşdırın
   aria_label_call_to_action_curriculum_csc: Kompüter Elmləri Əlaqələri kurikulumunu
     araşdırın
   aria_label_call_to_action_curriculum_ai: AI və Maşın Öyrənmə kurikulumunu araşdırın
@@ -527,6 +533,7 @@ az:
   curriculum_name_csf_teacher_led: Müəllim rəhbərlik dərs
   curriculum_name_csd: Kompüter Elmləri Kəşfləri
   curriculum_name_csp: Kompüter Elmləri Prinsipləri
+  curriculum_name_problem_solving: Problemlərin həlli və hesablanması
   curriculum_name_csc: Kompüter Elmləri Əlaqələri
   curriculum_name_csa: AP® Kompüter Elmləri A
   curriculum_name_csa_ai: Proqram mühəndisliyi və kompüter baxışı
@@ -733,6 +740,7 @@ az:
   module_label_teaching_csf: Kompüter elminin əsaslarının tədrisi
   module_label_teaching_csd: Kompüter Elmləri Kəşflərinin Tədrisi
   module_label_teaching_csp: Kompüter Elmi Prinsiplərinin Tədrisi
+  module_label_teaching_problem_solving: Problemlərin həlli və hesablama tədrisi
   module_label_teaching_csc: Kompüter elmləri əlaqələrinin tədrisi
   module_label_teaching_ai: Süni intellekt və maşın öyrənməsinin tədrisi
   module_label_teaching_maker_cp: Cihazlarla Proqramlar yaratmağı öyrətmək (Circuit
@@ -2535,7 +2543,8 @@ az:
     baxmaq olar.
   map_warning_markdown: Tədbirlərin tam siyahısına [tərbirlər səhifəsi](%{events_url})ndə
     baxmaq olar.
-  map_view_all_events: Kod Saatı hadisələrinin tam siyahısına bax [here]ın (%{events_url}).
+  map_view_all_events: Kod Saatı tədbirlərinin tam siyahısına [burada](%{events_url})
+    baxın.
   meta_tag_og_title: Kod Saatı gəlir
   meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla
     şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
@@ -13532,6 +13541,9 @@ az:
   step_06: Addım 6
   step_07: Addım 7
   step_08: Addım 8
+  what: 'Nə:'
+  when: 'Nə vaxt:'
+  where: 'Harada:'
   hoc_how_to_top_heading: Kod Saatı üçün bələdçiniz
   hoc_how_to_top_desc: Ən yaxşı Kod Saatı təcrübəsi üçün necə hazırlanmış təlimatlar.
   hoc_how_to_top_view_guide: Üçün təlimatına baxın
@@ -13579,69 +13591,84 @@ az:
     bir saatlıq dərslərin geniş seçimini araşdırın.
   hoc_how_to_step_label_plan: Kod Saatınızı harada və nə vaxt edəcəyinizi planlaşdırın
   hoc_how_to_step_label_choose_activity: Fəaliyyətinizi seçin
+  hoc_how_to_step_label_choose_activities: Fəaliyyətlərinizi seçin
   hoc_how_to_step_label_test_activity: Fəaliyyətinizi sınayın
   hoc_how_to_step_label_register_event: Tədbirinizi qeydiyyata alın
   hoc_how_to_step_label_tell: Şagirdlərinizə, məktəbinizə və cəmiyyətə deyin
   hoc_how_to_step_label_get_coding: Kodlaşdırma əldə edin!
   hoc_how_to_step_label_celebrate: Qeyd edin
   hoc_how_to_step_label_beyond_hoc: Kod Saatından kənarda
+  hoc_how_to_step_label_plan_your_event: Tədbirinizi planlaşdırın
+  hoc_how_to_step_label_plan_your_hour: Saatınızı planlaşdırın
+  hoc_how_to_step_label_help_spread_word: Sözün yayılmasına kömək edin
   hoc_how_to_step_beyond_hoc_subhead: Burada bitmir!
-  hoc_how_to_step_beyond_hoc_desc: Kompüter elmləri Kod Saatı ilə bitmək məcburiyyətində
-    deyil! Valideynlərin 90% -i uşağının kompüter elmlərini öyrənməsini istəsə də,
-    əksər məktəblər hələ də bunu öyrətmir. Bu gün uşağınızın məktəbinə CS gətirməyi
-    öyrənin.
-  hoc_how_to_step_01_educators_subhead: Mövcud tələbələrin və cihazların sayı üçün
-    işləyən bir hadisə vaxtı və məkanı seçin.
-  hoc_how_to_step_01_educators_desc_01: Kod Saatınızı etmək üçün hansı boşluqlar mövcuddur?
-    Məkanınızın texnoloji imkanlarını və tələbələrinizin üzərində işləməsini gözlədiyiniz
-    cihazların növlərini nəzərdən keçirin. Tələbələr tək bir cihazda dərsliklər üzərində
-    işləyə, paylaşılan bir cihazdan istifadə edərək növbə ala və ya sinif lövhəsində
-    birlikdə bir dərslik sınaya bilərlər. Hətta heç bir cihaz olmadan tamamlana bilən
-    unplugged dərsliklər var. Aşırılmış seçimlər hər yerdə - hətta açıq havada da
-    edilə bilər!
-  hoc_how_to_step_01_educators_desc_02: Dünyadakı insanlar ən son dərsliklər və fəaliyyətlər
-    yayımlandıqda CS Təhsil Həftə %{campaign_date} si zamanı Kod Saatı qeyd etməsinə
-    qoşulurlar. Ancaq ilin istənilən günündə Kod Saatı edə bilərsiniz!
-  hoc_how_to_step_02_educators_desc_01: Qrupunuzun yaşı, təcrübəsi, maraqları və daha
-    çoxuna əsaslanan fəaliyyətləri araşdırın. Şagirdlərin özləri idarə etdiyi dərsləri
-    sınaması populyardır, baxmayaraq ki, bir çox fəaliyyətə müəllimlərin müzakirəyə
-    rəhbərlik etmək və ya fəaliyyəti genişləndirmək üçün dərs planları daxildir.
-  hoc_how_to_step_02_educators_desc_02: Bütün şagirdləriniz üçün tək bir dərslik seçmək
-    və ya hər bir uşağın özünü seçməsinə icazə verin, vaxtından əvvəl qərar verin.
-  hoc_how_to_step_02_educators_desc_03: Bu il siz və şagirdləriniz dərslər, dərs planları
-    və yeni AI necə işlədiyi video seriyamız vasitəsilə [AI haqqında hər şeyi öyrənə
-    bilərsiniz] (%ai_url).
-  hoc_how_to_step_03_educators_desc_01: Suallara cavab verə bilmək üçün sinifə girməzdən
-    əvvəl dərsliyi özünüz sınayın!
-  hoc_how_to_step_03_educators_desc_02: Səs və videonu dəstəkləmələrini təmin etmək
-    üçün tələbə kompüterlərində və ya cihazlarda dərsləri sınaqdan keçirə bilərsiniz.
-    Aşağı bant genişliyi varmı? Sinifin ön hissəsində videoları göstərməyi planlaşdırın,
-    buna görə hər bir tələbə öz videolarını yükləməz.
-  hoc_how_to_step_03_educators_desc_03: Seçdiyiniz dərslik səslə ən yaxşı işləyirsə,
-    sinifiniz üçün qulaqlıq təmin etməyi düşünün və ya tələbələrdən özlərini gətirmələrini
-    xahiş edin.
-  hoc_how_to_step_04_educators_desc_01: Kod Saatı tədbirinizi qeydiyyatdan keçirdiyiniz
-    zaman uğurlu Kod Saatına ev sahibliyi etmək üçün xəbərlər və tövsiyələr olan faydalı
-    e-poçtlar alacaqsınız. Yerli könüllülərə məktəbinizin iştirak etdiyini necə bildirə
-    biləcəyiniz də budur. Könüllülər əla mənbədir və sinifinizə kompüter elmləri haqqında
-    danışa və ya şagirdlərinizə Kod Saatı fəaliyyətlərində kömək edə bilərlər.
-  hoc_how_to_step_05_educators_desc_01: Müxtəlif insanları və kompüter elminin real
-    dünyada istifadə edilə biləcəyi yaradıcı yollarını vurğulayan [ruhlandırıcı videolar]
-    (%{videos_url}) paylaşaraq tələbələrinizi hadisə üçün həyəcanlandırın.
-  hoc_how_to_step_05_educators_desc_02: Kod Saatı planlarınızı əyləncəyə qoşulmaq
-    istəyə biləcək digər müəllimlərlə paylaşın! Bu, həm də məktəbinizin Valideyn Müəllim
-    Tələbə Dərnəyinə müraciət etmək və ya uşaqlarının nə öyrəndiklərini bildirərək
-    valideyn bülletenlərində paylaşmaq üçün əla bir fürsətdir.
-  hoc_how_to_step_06_educators_desc_01: Şagirdlərinizi fəaliyyətə yönəldin, bəlkə
+  hoc_how_to_step_plan_hour_desc_01: 'Başlamaq üçün nümunə gündəm budur:'
+  hoc_how_to_step_choose_activities_desc_01: Bu il Kod Saatı mövzusu Süni İntellekt
+    (AI) ilə Yaradıcılıqdır. İstər yeni tətbiqlər və alqoritmlər kodlaşdırmaq, unikal
+    sənət yaratmaq və ya rəqs etmək üçün xoreoqrafiya hazırlamaq olsun, AI yaradıcılıq
+    anlayışımızı genişləndirən rəqəmsal ifadə üçün yeni imkanlar açır. Kodlaşdırma
+    fəaliyyətini tamamlayaraq və AI haqqında öyrənməklə bu ili xüsusi edin.
+  hoc_how_to_step_choose_activities_desc_02: Birincisi, [yüzlərlə kodlaşdırma fəaliyyətini
+    araşdırın] (%{activities_url}) və qrupunuzun yaşına, təcrübəsinə, maraqlarına
+    və daha çoxuna əsasən birini seçin. [Bu seçilmiş fəaliyyətlər] (%{ai_activities_url})
+    əsas mövzu və ya dərs kimi süni intellekt təqdim edir.
+  hoc_how_to_step_choose_activities_desc_03: Sonra, [AI haqqında hər şeyi öyrənin]
+    (%{ai_url}). Tələbələr bu sahədəki mütəxəssislərin iştirak etdiyi qısa videoları
+    izləyə bilərlər və fəaliyyəti genişləndirmək və sonrakı müzakirələrə rəhbərlik
+    etmək üçün müşayiət olunan Və ya süni intellektlə və onun haqqında tədrisin gələcəyini
+    açmaq üçün müəllimlər üçün pulsuz peşəkar öyrənmə təklif edirik.
+  hoc_how_to_step_educators_register_desc: Tədbirinizi qeydiyyatdan keçərək tələbələrinizlə
+    Kod Saatı etmək öhdəliyindən başlayın. Qeydiyyatdan keçdiyiniz zaman uğurlu Kod
+    Saatına ev sahibliyi etmək üçün xəbərlər və tövsiyələr olan faydalı e-poçtlar
+    alacaqsınız. Siz həmçinin [xəritəyə qoyulacaq] (%{map_url}) olacaqsınız. Kollektiv
+    səylərimizin görünən cəhəti, sistemli dəyişikliklər üçün impuls yaratmağımıza
+    kömək edəcək kompüter elmləri hərəkatına qlobal bağlılığı nümayiş etdirir.
+  hoc_how_to_step_educators_plan_desc_01: Tədbirinizdən əvvəl fəaliyyətləri özünüz
+    sınayın ki, onların tələbə cihazlarında işlədiyinə və suallara cavab verməyə hazır
+    olduğunuzdan əmin olsanız! Bant genişliyi aşağı varmı? Sinifin ön hissəsində videoları
+    göstərməyi planlaşdırın, belə ki, hər bir tələbə öz videolarını yükləməsin.
+  hoc_how_to_step_educators_plan_desc_02: Dünyanın hər yerində insanlar tez-tez Kompüter
+    Elmləri Təhsil Həftəsi zamanı Kod Saatı bayramına qoşulurlar (%{campaign_date}),
+    ancaq ilin istənilən günü Kod Saatı edə bilərsiniz!
+  hoc_how_to_step_educators_plan_desc_03: Mövcud olan tələbə və cihazların sayına
+    uyğun bir yer seçin. Şagirdlər fərdi cihazlarda fəaliyyətləri sınaqdan keçirə,
+    növbə ilə cihazı paylaşa və ya lövhədə sinif olaraq edə bilərlər. Hətta heç bir
+    cihaz olmadan tamamlana bilən elektrik şəbəkəsindən çıxarılmış fəaliyyətlər də
+    var, buna görə də xaricdə də edilə bilər!
+  hoc_how_to_step_educators_spread_word_desc_01: "[bu e-poçt şablonları] (%{email_url})
+    ilə icmanızda sözü yaymağımıza kömək edin."
+  hoc_how_to_step_educators_spread_word_desc_02: İki həmkardan [register](%{register_url})
+    və Kod Saatı fəaliyyətinə ev sahibliyi etmələrini xahiş edin. Onlar, öz növbəsində,
+    iki həmkarını təmin edə bilən iki həmkarını təmin edə bilərlər və s.
+  hoc_how_to_step_educators_spread_word_desc_03: Direktorunuzdan [məktəb miqyasında
+    bir tədbir keçirməsini] xahiş edin (%{host_url}). 300 və ya daha çox uşaq iştirak
+    etdikdə, köynəklər, plakatlar, noutbuk stikerləri və s. ilə xüsusi nişan dəsti
+    ala bilərsiniz. Uyğunlaşmaq üçün [Bütün məktəb tədbir planınızı paylaşın] (%{share_url}).
+  hoc_how_to_step_educators_spread_word_desc_04: Məktəbinizin Valideyn Müəllim Tələbə
+    Assosiasiyası ilə əlaqə saxlayın və ya uşaqlarının nə öyrəndiklərini bildirərək
+    valideyn bülletenlərində paylaşın.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: [ilhamverici video] ilə
+    başlayın ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Tələbələr kodlaşdırma
+    fəaliyyətini həyata keçirirlər'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Tələbələr AI haqqında
+    məlumat əldə edirlər'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Müəllim yekun sözlərini
+    verir'
+  hoc_how_to_step_educators_get_coding_desc: Şagirdlərinizi fəaliyyətə yönəldin, bəlkə
     də lövhədəki linki paylaşaraq və ya sinifinizin öyrənmə idarəetmə sistemi vasitəsilə.
     Şagirdləriniz çətinliklərlə qarşılaşa bilər - bu yaxşıdır! Proqramlaşdırmağı öyrənmək
     yeni bir dil öyrənmək kimidir; dərhal səlis bilməyəcəksiniz. Cavabı bilmirsinizsə,
     bunu birlikdə anlaya bilərsiniz.
-  hoc_how_to_step_07_educators_desc_01: 'Uğurları qeyd etdiyinizə əmin olun! Kod Saatı
-    tədbirinizin fotolarını və videolarını sosial mediada paylaşın. Uğurunuzu da vurğulamaq
-    üçün #HourOfCode və @codeorg istifadə edin!'
-  hoc_how_to_step_07_educators_desc_02: Tələbələrinizin nailiyyətlərini nümayiş etdirmək
-    üçün sertifikatlar da çap edə bilərsiniz!
+  hoc_how_to_step_educators_celebrate_desc: 'Tədbirinizdən sonra bitirmə sertifikatlarını
+    çap edin və tələbələrinizi təbrik edin. Kod Saatı tədbirinizin şəkillərini və
+    videolarını paylaşın və #HourOfCode və @codeorg istifadə edərək şagirdlərinizin
+    nailiyyətlərini nümayiş etdirin.'
+  hoc_how_to_step_educators_beyond_desc: Kompüter elminin Kod Saatı ilə bitməli deyil!
+    Valideynlərin 90% -i uşağının kompüter elmlərini öyrənməsini istəsə də, əksər
+    məktəblər hələ də bunu öyrətmir. Kömək üçün kurikulumuz veb əsaslıdır və əbədi
+    olaraq istifadə etmək pulsuzdur. Bu gün məktəbinizə CS-ni necə gətirəcəyinizi
+    öyrənin.
   hoc_ai_top_desc: İstər sinifdə tələbə olsanız, istərsə də AI ilə tədrisin gələcəyini
     açan bir pedaqoq olmağınızdan asılı olmayaraq hər kəs AI haqqında öyrənə bilər.
   hoc_ai_how_ai_works_video_series_desc: Bu qısa videolar sizi süni intellektin necə

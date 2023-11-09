@@ -1,5 +1,6 @@
 {
   "danceFeedbackDidntPress": "ודאו שאתם לוחצים על מקשי החצים בזמן שהריקוד שלכם מתבצע.",
+  "danceFeedbackKeepCoding": "השתמשתם בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון.",
   "danceFeedbackKeyEvent": "ודאו שאתם מוסיפים את הקוד לבלוק\n <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"למעלה\"</title></block></xml>\nולוחצים על המקש בזמן שהריקוד שלכם מתבצע.",
   "danceFeedbackNeedBackup": "עליכם ליצור קבוצה של רקדני ליווי עם הבלוק\n<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"חדי קרן\"</title><title name=\"LAYOUT\">\"עיגול\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש בצעד ריקוד אחר.",

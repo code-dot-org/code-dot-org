@@ -28,8 +28,9 @@ body {
 #codeprojects_pagefooter div.codeprojects_pagefooter_dim {
   all: initial; /* blocking inheritance for all properties */
   font-size: 12px;
-  font-weight: normal;
-  font-family: "Gotham 4r", sans-serif;
+  font-family: "Metropolis", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 18px;
   display: inline-block;
   opacity: 0.5;
@@ -39,9 +40,9 @@ body {
 #codeprojects_pagefooter a.codeprojects_pagefooter_link {
   all: initial; /* blocking inheritance for all properties */
   font-size: 12px;
-  font-weight: normal;
-  font-family: "Gotham 4r", sans-serif;
-  line-height: 18px;
+  font-family: "Metropolis", sans-serif;
+  font-weight: 400;
+  font-style: normal;  line-height: 18px;
   color: #c6cacd;
 }
 

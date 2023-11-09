@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -11,8 +12,13 @@ import style from './hoc-guide-dialogue.module.scss';
 
 function HourOfCodeGuideEmailDialog({isSignedIn}) {
   const [isOpen, setIsOpen] = useState(true);
+  const [isMarketingChecked, setIsMarketingChecked] = useState(false);
 
   const onClose = () => {
+    cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
+      expires: 90,
+      path: '/',
+    });
     setIsOpen(false);
   };
 
@@ -49,6 +55,38 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
           <div className={style.middle}>
             <Heading3>{i18n.learnHowToHost()}</Heading3>
             {bodyText}
+            <label className={style.typographyLabel}>
+              {i18n.yourNameCaps()}
+              <input
+                required
+                type="text"
+                id="uitest-hoc-guide-name"
+                className={style.classNameTextField}
+                onChange={() => {}}
+              />
+            </label>
+            <label className={style.typographyLabel}>
+              {i18n.yourEmailCaps()}
+              <input
+                required
+                type="text"
+                id="uitest-hoc-guide-email"
+                className={style.classNameTextField}
+                onChange={() => {}}
+              />
+            </label>
+            <label className={style.label}>
+              <input
+                checked={isMarketingChecked}
+                className={style.box}
+                type="checkbox"
+                id="uitest-receive-updates-checkbox"
+                onChange={() => {
+                  setIsMarketingChecked(!isMarketingChecked);
+                }}
+              />
+              {i18n.receiveFutureUpdates()}
+            </label>
           </div>
           <div className={style.buttonsBottom}>
             <Button

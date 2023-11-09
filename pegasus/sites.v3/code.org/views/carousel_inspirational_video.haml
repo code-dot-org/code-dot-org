@@ -7,12 +7,12 @@
 - video_inspirational = ["uhcA6K8rWp0", "NYzN0a1U8mI", "ip051U7Rvds", "QvyTEx1wyOY", "mFPg96gdPkc", "_IiPLtP-jm8", "nKIu9yen5nc", "6XvmhE1J9PY", "FC5FbmsH4fw", "qYZF6oIZtfc", "rqU8eNJ-SS0", "EGgdCryC8Uo", "gDpNXnrFvFE", "ARLt0GcyRgQ", "lud4bU3YY9U"]
 
 .carousel-wrapper#inspirational_works_collection
-  .carousel.inspirational_works_collection
+  .carousel.inspirational_works_collection.videos
     .slides
       - video_inspirational_index.times do |index|
         .slide
           .video-wrapper.video-wrapper--one-col.flex-space-between
-            .dinspirational
+            .inspirational
               = view :display_video_thumbnail, id: video_inspirational_id[index], video_code: video_inspirational[index], play_button: 'center', letterbox: 'false', caption: inspirational_video_caption[index]
 
   .pagination
