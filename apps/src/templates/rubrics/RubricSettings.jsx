@@ -46,6 +46,7 @@ export default function RubricSettings({
   studentUserId,
   visible,
   refreshAiEvaluations,
+  studentName,
 }) {
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
@@ -79,6 +80,12 @@ export default function RubricSettings({
       case STATUS.PROFANITY_ERROR:
         return i18n.aiEvaluationStatus_profanity_error();
     }
+  };
+
+  const studentButtonText = () => {
+    return i18n.runAiAssessment({
+      studentName: studentName,
+    });
   };
 
   useEffect(() => {
@@ -171,6 +178,25 @@ export default function RubricSettings({
     });
   };
 
+  const handleRunAiAssessmentAll = () => {
+    //TODO: create function in rubrics_controller to run all unsubmitted
+    // setStatus(STATUS.EVALUATION_PENDING);
+    // const url = `/rubrics/${rubricId}/run_ai_evaluations_for_user`;
+    // const params = {user_id: studentUserId};
+    // fetch(url, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'X-CSRF-Token': csrfToken,
+    //   },
+    //   body: JSON.stringify(params),
+    // }).then(response => {
+    //   if (!response.ok) {
+    //     setStatus(STATUS.ERROR);
+    //   }
+    // });
+  };
+
   return (
     <div
       className={classnames('uitest-rubric-settings', style.settings, {
@@ -189,7 +215,7 @@ export default function RubricSettings({
           </div>
           <Button
             className="uitest-run-ai-assessment"
-            text={i18n.runAiAssessment()}
+            text={studentButtonText()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessment}
             style={{margin: 0}}
@@ -197,11 +223,26 @@ export default function RubricSettings({
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
-          {statusText() && (
-            <BodyTwoText className="uitest-eval-status-text">
-              {statusText()}
+          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
+
+          <div>
+            <BodyTwoText>
+              <StrongText>{i18n.aiAssessmentAll()}</StrongText>
             </BodyTwoText>
-          )}
+            <BodyTwoText>{i18n.runAiAssessmentDescriptionAll()}</BodyTwoText>
+          </div>
+          <Button
+            text={i18n.runAiAssessmentAll()}
+            color={Button.ButtonColor.brandSecondaryDefault}
+            onClick={handleRunAiAssessmentAll}
+            style={{margin: 0}}
+            disabled={status !== STATUS.READY}
+          >
+            {status === STATUS.EVALUATION_PENDING && (
+              <i className="fa fa-spinner fa-spin" />
+            )}
+          </Button>
+          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
         </div>
       )}
     </div>
@@ -216,4 +257,5 @@ RubricSettings.propTypes = {
   studentUserId: PropTypes.number,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
+  studentName: PropTypes.string,
 };

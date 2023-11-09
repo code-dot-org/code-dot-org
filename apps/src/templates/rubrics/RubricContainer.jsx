@@ -117,6 +117,7 @@ export default function RubricContainer({
           studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
           visible={selectedTab === TAB_NAMES.SETTINGS}
           refreshAiEvaluations={fetchAiEvaluations}
+          studentName={studentLevelInfo && studentLevelInfo.name}
         />
       )}
     </div>
