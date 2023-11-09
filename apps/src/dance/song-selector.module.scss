@@ -1,9 +1,13 @@
 @import "color";
 
+$preview-button-width: 32px;
+$preview-button-margin-left: 8px;
+$preview-button-border-width: 1px;
+
 .songSelectorWrapper {
 
   .selectStyle {
-    width: calc(100% - 42px);
+    width: calc(100% - ($preview-button-width + $preview-button-margin-left + ($preview-button-border-width * 2)));
     height: 32px;
     color: $neutral_dark;
     border-color: $neutral_dark;
@@ -11,9 +15,10 @@
 
   button.previewSongButton {
     height: 32px;
-    width: 32px;
+    width: $preview-button-width;
     padding: 0;
-    margin: 0 0 10px 8px;
+    margin: 0 0 10px $preview-button-margin-left;
+    border-width: $preview-button-border-width;
 
     &.previewActiveButton {
       color: $neutral_white;
