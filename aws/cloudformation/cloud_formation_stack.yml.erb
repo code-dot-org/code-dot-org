@@ -2,10 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  # ---------------------------------------------
+  # Domain Names - Each Stack operates 5 sites (examples are for production):
+  # 1) Learning Platform ("Dashboard") - https://studio.code.org
+  # 2) Corporate Website ("Pegasus") - https://code.org
+  # 3) Advocacy Website (runs on Pegasus) - https://advocacy.code.org
+  # 4) Hour of Code (runs on Pegasus) - https://hourofcode.com
+  # 5) Code Projects (host user created content) - https://codeprojects.org
+  # ---------------------------------------------
   BaseDomainName:
     Type: String
     Default: code.org
-    Description: Base domain name.
+    Description: Base domain name for primary learning platform and corporate web site.
   DashboardSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
@@ -14,6 +22,18 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
+  HourOfCodeBaseDomainName:
+    Type: String
+    Default: hourofcode.com
+    Description: Hour Of Code base domain name.
+  HourOfCodeHostedZoneId:
+    Type: String
+    Default: ""
+    Description: Route 53 Hosted Zone ID for Hour of Code base domain name.
+  HourOfCodeSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
+    Description: Subdomain name for Hour Of Code site.
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -44,6 +64,19 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
+
+  HourOfCodeCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
 
   # ---------------------------------------------
   # Stack-specific IAM permissions
@@ -215,6 +248,7 @@ Resources:
       Protocol: HTTPS
       Certificates:
       - CertificateArn: <%=certificate_arn%>
+      - CertificateArn: !Ref HourOfCodeCertificate
       SslPolicy: ELBSecurityPolicy-2016-08
       DefaultActions:
       - Type: forward
