@@ -22,6 +22,7 @@ class LtiSectionTest < ActiveSupport::TestCase
     section = create(:section)
     lti_section = create(:lti_section, section: section)
     lti_section.destroy
+    assert section.reload.deleted_at.present?, "section should be deleted"
     assert Section.find_by(id: section.id).nil?, "section should be deleted"
   end
 end

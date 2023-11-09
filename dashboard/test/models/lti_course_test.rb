@@ -29,7 +29,9 @@ class LtiCourseTest < ActiveSupport::TestCase
     lti_sections = sections.map {|section| create(:lti_section, lti_course: course, section: section)}
     LtiCourse.destroy(course.id)
     assert LtiCourse.find_by(id: course.id).nil?, "course should be deleted"
-    assert sections.empty?, "sections should be deleted"
+    sections.each do |section|
+      assert section.reload.deleted_at.present?, "section should be deleted"
+    end
     assert lti_sections.empty?, "lti_sections should be deleted"
   end
 end
