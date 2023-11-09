@@ -249,13 +249,21 @@ Resources:
       LoadBalancerArn: !Ref ALB
       Port: 443
       Protocol: HTTPS
+      # Default certificate. Even though the datatype of the Certificates Property is Array, there can only be one.
       Certificates:
       - CertificateArn: <%=certificate_arn%>
-      - CertificateArn: !Ref HourOfCodeCertificate
       SslPolicy: ELBSecurityPolicy-2016-08
       DefaultActions:
       - Type: forward
         TargetGroupArn: !Ref ALBTargetGroup
+  # Full list of certificates used by the Listener for Viewers that support SNI.xl
+  HTTPSListenerCertificates:
+      Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
+      Properties:
+        Certificates:
+          - CertificateArn: <%=certificate_arn%>
+          - CertificateArn: !Ref HourOfCodeCertificate
+        ListenerArn: !GetAtt HTTPSListener.ListenerArn
 
   ALBTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
