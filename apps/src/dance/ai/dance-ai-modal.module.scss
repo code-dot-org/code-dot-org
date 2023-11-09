@@ -218,10 +218,10 @@ $no-color: #FF5e5e;
         height: 260px;
 
         .botHead {
-          width: 115px;
-          left: 72.5px;
           position: absolute;
-          top: 23px;
+          width: 97px;
+          left: 81.5px;
+          top: 34px;
           transform-origin: bottom left;
           transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
@@ -232,7 +232,7 @@ $no-color: #FF5e5e;
         }
 
         .botBody {
-          width: 130px;
+          width: 110px;
           transform: translateX(-50%);
           left: 50%;
           position: absolute;
@@ -251,7 +251,7 @@ $no-color: #FF5e5e;
 
     .scoreArea {
       position: absolute;
-      left: 280px;
+      left: 270px;
       top: 120px;
     }
 
