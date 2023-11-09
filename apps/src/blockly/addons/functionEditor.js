@@ -48,6 +48,7 @@ export default class FunctionEditor {
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
+      media: options.media,
       move: {
         drag: false,
         scrollbars: {
@@ -59,6 +60,7 @@ export default class FunctionEditor {
       plugins: {
         metricsManager: CdoMetricsManager,
       },
+      readOnly: options.readOnly,
       renderer: options.renderer,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox: options.toolbox,
