@@ -33,7 +33,7 @@
   "compilationSuccess": "Compilation successful.",
   "compiled": "Compiled!",
   "compileFailed": "Compile Failed.",
-  "compilerError": "We couldn't compile your program. Look for bugs in your program and try again. You can also check if the AI Tutor has any helpful hints.",
+  "compilerError": "We couldn't compile your program. Look for bugs in your program and try again.",
   "compiling": "Compiling...",
   "compilingProgram": "'Compiling program...",
   "connecting": "Connecting...",

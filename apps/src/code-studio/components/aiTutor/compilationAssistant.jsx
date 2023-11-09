@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
+import style from './ai-tutor.module.scss';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -17,7 +18,7 @@ const CompilationAssistant = () => {
   };
 
   return (
-    <div>
+    <div className={style.compilationAssistant}>
       <h4>Why didn't my code compile?</h4>
       <Button
         text="Ask AI Tutor"
