@@ -21,14 +21,19 @@
       "modelDescriptiveName": "diamond gem stone geometric"
     },
     {
+      "emoji": "🌱",
+      "id": "seedling",
+      "modelDescriptiveName": "green plant springtime"
+    },
+    {
       "emoji": "✨",
       "id": "sparkle",
       "modelDescriptiveName": "sparkly star"
     },
     {
-      "emoji": "😀",
-      "id": "happy",
-      "modelDescriptiveName": "happy grin"
+      "emoji": "🌀",
+      "id": "cyclone",
+      "modelDescriptiveName": "cyclone swirl icy blue"
     },
     {
       "emoji": "👑",
@@ -41,9 +46,9 @@
       "modelDescriptiveName": "ghost autumn spooky"
     },
     {
-      "emoji": "🌀",
-      "id": "cyclone",
-      "modelDescriptiveName": "cyclone swirl icy blue"
+      "emoji": "😀",
+      "id": "happy",
+      "modelDescriptiveName": "happy grin"
     },
     {
       "emoji": "⚽",
@@ -56,14 +61,14 @@
       "modelDescriptiveName": "waves water ocean"
     },
     {
-      "emoji": "💡",
-      "id": "lights",
-      "modelDescriptiveName": "stars light"
-    },
-    {
       "emoji": "🌈",
       "id": "rainbow",
       "modelDescriptiveName": "prism"
+    },
+    {
+      "emoji": "💡",
+      "id": "lights",
+      "modelDescriptiveName": "stars light"
     },
     {
       "emoji": "🤖",
@@ -76,9 +81,9 @@
       "modelDescriptiveName": "wavy ripple hypnotic turbulent chaotic"
     },
     {
-      "emoji": "🪩",
-      "id": "disco",
-      "modelDescriptiveName": "disco ball party grid"
+      "emoji": "🌹",
+      "id": "rose",
+      "modelDescriptiveName": "flower springtime"
     },
     {
       "emoji": "🎨",
@@ -86,9 +91,9 @@
       "modelDescriptiveName": "art paint palette"
     },
     {
-      "emoji": "🌹",
-      "id": "rose",
-      "modelDescriptiveName": "flower springtime"
+      "emoji": "🪩",
+      "id": "disco",
+      "modelDescriptiveName": "disco ball party grid"
     },
     {
       "emoji": "🎵",
@@ -104,11 +109,6 @@
       "emoji": "🚀",
       "id": "cosmic",
       "modelDescriptiveName": "rocket space"
-    },
-    {
-      "emoji": "🌱",
-      "id": "seedling",
-      "modelDescriptiveName": "green plant springtime"
     },
     {
       "emoji": "😋",
