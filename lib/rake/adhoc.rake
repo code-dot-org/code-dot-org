@@ -1,6 +1,8 @@
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
-require lib_dir 'cdo/aws/resource_management/aws_instance_killer.rb'
-
+require_relative '../cdo/aws/resource_management/aws_resource_killer'
+require_relative '../cdo/aws/resource_management/ec2_instance_killer'
+# require lib_dir 'cdo/aws/resource_management/aws_instance_killer'
+# /Users/pablomanuelmejiaminaya/code-dot-org/lib/rake/adhoc.rake
 include TimedTaskWithLogging
 
 namespace :adhoc do
@@ -60,7 +62,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     MINIMUM_STOPPED_TIME_IN_SECS = 6 * 86400
     DRY_RUN = true
     opts = {aws_filters: FILTERS, deletion_tag: STOPPED_AT_TAG, minimum_time_stopped_in_seconds: MINIMUM_STOPPED_TIME_IN_SECS, dry_run: DRY_RUN}
-    ec2_instance_killer = EC2InstanceKiller(opts)
+    ec2_instance_killer = EC2InstanceKiller.new(opts)
     ec2_instance_killer.delete
   end
 
