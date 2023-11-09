@@ -6,58 +6,12 @@ import BelowVisualization from '../templates/BelowVisualization';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
-import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
+import {getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
-
-export const SongSelector = Radium(
-  class extends React.Component {
-    static propTypes = {
-      enableSongSelection: PropTypes.bool,
-      setSong: PropTypes.func.isRequired,
-      selectedSong: PropTypes.string,
-      songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOn: PropTypes.bool.isRequired,
-    };
-
-    changeSong = event => {
-      const songId = event.target.value;
-      this.props.setSong(songId);
-    };
-
-    render() {
-      const {selectedSong, songData, enableSongSelection, filterOn} =
-        this.props;
-
-      const songKeys = getFilteredSongKeys(songData, filterOn);
-
-      return (
-        <div id="song-selector-wrapper">
-          <label>
-            <b>{i18n.selectSong()}</b>
-          </label>
-          <select
-            id="song_selector"
-            style={styles.selectStyle}
-            onChange={this.changeSong}
-            value={selectedSong}
-            disabled={!enableSongSelection}
-          >
-            {songKeys.map((option, i) => (
-              <option key={i} value={option}>
-                {songData[option].title}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    }
-  }
-);
+import SongSelector from '@cdo/apps/dance/SongSelector';
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
@@ -97,6 +51,7 @@ class DanceVisualizationColumn extends React.Component {
   }
 
   render() {
+    const {levelIsRunning} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -122,6 +77,7 @@ class DanceVisualizationColumn extends React.Component {
           {!this.props.isShareView && (
             <SongSelector
               enableSongSelection={enableSongSelection}
+              levelIsRunning={levelIsRunning}
               setSong={this.props.setSong}
               selectedSong={this.props.selectedSong}
               songData={this.props.songData}
@@ -178,9 +134,6 @@ const styles = {
   loadingGif: {
     width: 100,
     height: 100,
-  },
-  selectStyle: {
-    width: '100%',
   },
 };
 
