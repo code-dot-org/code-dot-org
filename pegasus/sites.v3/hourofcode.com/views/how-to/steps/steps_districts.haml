@@ -6,7 +6,7 @@
     hoc_s(:hoc_how_to_step_label_register_event),
     hoc_s(:hoc_how_to_step_label_get_familiar_activities),
     hoc_s(:hoc_how_to_step_label_promote_district_involvement),
-    hoc_s(:hoc_how_to_step_label_check_out_how_ai_works),
+    hoc_s(:hoc_how_to_step_label_get_coding),
     hoc_s(:hoc_how_to_step_label_celebrate),
     hoc_s(:hoc_how_to_step_label_beyond_hoc)
   ]
@@ -16,9 +16,9 @@
     hoc_s(:hoc_how_to_step_districts_register_desc_01),
     hoc_s(:hoc_how_to_step_choose_activities_desc_01),
     hoc_s(:hoc_how_to_step_districts_promote_desc_01),
-    hoc_s(:hoc_how_to_step_districts_check_out_ai_desc_01, markdown: :inline, locals:{lessons_url: "https://code.org/ai/how-ai-works"}),
+    hoc_s(:hoc_how_to_step_events_get_coding_desc_01),
     hoc_s(:hoc_how_to_step_districts_celebrate_desc_01),
-    hoc_s(:hoc_how_to_step_districts_beyond_desc_01)
+    hoc_s(:hoc_how_to_step_districts_beyond_desc_01_v2)
   ]
 
 %section.steps
@@ -75,6 +75,8 @@
             - if index === 4
               %p.tag
                 =hoc_s(:day_of_hoc)
+              %p
+                =hoc_s(:hoc_how_to_step_events_get_coding_desc_02)
               %a.link-button{href: "https://code.org/ai/pl/101"}
                 =hoc_s(:call_to_action_learn_more_about_ai)
 

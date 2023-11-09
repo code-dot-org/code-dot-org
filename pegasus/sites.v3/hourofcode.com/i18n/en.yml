@@ -1664,6 +1664,7 @@
 
   hoc_homepage_join_the_movement_heading: 'Join the movement'
   hoc_homepage_join_the_movement_description: 'Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October.'
+  hoc_homepage_join_the_celebration_description: 'Your class or group can join millions around the world doing the Hour of Code! This year, the annual Computer Science Education Week celebration is %{campaign_date} and registration begins in October. Though, Hour of Code is available year-round.'
   hoc_homepage_what_is_hoc_subhead: 'One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round.'
   hoc_homepage_what_is_hoc_description: 'The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics. This grassroots campaign is supported by over 400 partners and 200,000 educators worldwide.'
   hoc_homepage_registration_desc: "Your class or group can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in October. Though, Hour of Code is available year-round."
@@ -9380,7 +9381,6 @@
   hoc_how_to_step_label_plan_internal_event: "Plan an internal event"
   hoc_how_to_step_label_recruit_school_participation: "Recruit school participation"
   hoc_how_to_step_label_promote_district_involvement: "Promote your district's involvement in Hour of Code"
-  hoc_how_to_step_label_check_out_how_ai_works: "Check out the How AI Works resources"
   hoc_how_to_step_label_after_event: "After the event"
 
   hoc_how_to_step_beyond_hoc_subhead: "It doesn't end here!"
@@ -9418,9 +9418,9 @@
   hoc_how_to_step_districts_recruit_desc_01: "Recruit school participation by sharing the resources provided in our how-to guides for educators and school assemblies. With your support, teachers and school administrators can decide which type of event best meets the interest of your schools."
   hoc_how_to_step_districts_register_desc_01: "Tell everyone hosting an event to register! When you register your Hour of Code event, you'll receive helpful emails with news and tips for hosting a successful Hour of Code. It's also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or help your students with Hour of Code activities."
   hoc_how_to_step_districts_promote_desc_01: "Let community members and stakeholders know about your participation in Hour of Code Events! Post to Facebook, Twitter, Instagram and your district's homepage! Explore our sample emails which help you share your Hour of Code event with your community."
-  hoc_how_to_step_districts_check_out_ai_desc_01: "Demystify artificial intelligence (AI) by learning how it's changing the ways we learn and engage our students. \"How AI Works\" provides opportunities for districts to deepen their understanding of AI through professional learning opportunities such as, \"AI 101 for Teachers\" and through [lessons on How AI Works](%{lessons_url}). These tools will help districts, teachers and students learn how to more effectively understand and utilize AI."
   hoc_how_to_step_districts_celebrate_desc_01: "Share photos and videos of your Hour of Code event and show off your students' achievements. Use #HourOfCode and @codeorg so we can see your district in action!"
   hoc_how_to_step_districts_beyond_desc_01: "Computer science education doesn't have to end with the Hour of Code! To help provide students in your district with skills and knowledge that will prepare them to be college and career ready, check out our free to use web-based curriculum!"
+  hoc_how_to_step_districts_beyond_desc_01_v2: "Computer science education doesn't have to end with the Hour of Code! To help provide students in your district with skills and knowledge that will prepare them to be college and career ready, check out the diverse curriculum offerings from Hour of Code partners!"
 
   hoc_how_to_step_events_register_desc_01: "Register your Hour of Code event to receive early access to information about new activities and special promotions! When 300 or more students participate, you can receive a special engagement kit with t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url}) to qualify."
   hoc_how_to_step_events_register_desc_02: "You can also [view the Hour of Code map](%{map_url}) to see your event, and know that your dedication is part of a worldwide movement."
