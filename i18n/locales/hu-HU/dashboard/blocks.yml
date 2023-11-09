@@ -69,6 +69,11 @@ hu:
           UNIT:
             '"measures"': ütem
             '"seconds"': másodperc
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ütem
+            '"seconds"': másodperc
       Dancelab_changeColorBy:
         text: 'változtatás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
         options:
@@ -561,6 +566,51 @@ hu:
             '"iceCream"': Fagyi
             '"default"': Világos
             '"neon"': Neon
+            '"tropical"': Trópusi
+            '"vintage"': Régi
+            '"warm"': Vörösek
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "Háttéreffektus beállítása
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Egyik sem
+            '"rand"': "(Véletlen)"
+            '"circles"': Alagút
+            '"quads"': Sokszögek
+            '"color_cycle"': Színek
+            '"diamonds"': Gyémántok
+            '"disco_ball"': Diszkógömb
+            '"fireworks"': Tűzijáték
+            '"flowers"': Virágok
+            '"growing_stars"': Növekvő csillagok
+            '"swirl"': Hipno
+            '"kaleidoscope"': Kaleidoszkóp
+            '"lasers"': Lézer táncparkett
+            '"splatter"': Festékfröccsenés
+            '"rainbow"': Szivárvány
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"ripples"': Lüktetés
+            '"snowflakes"': Hó
+            '"text"': Dalcím
+            '"squiggles"': Kígyóvonalak
+            '"galaxy"': Világűr
+            '"sparkles"': Ragyogás
+            '"spiral"': Spirál
+            '"disco"': Négyzetek
+            '"starburst"': Csillagrobbanás
+            '"stars"': Csillagok
+            '"music_wave"': Hullámok
+          PALETTE:
+            '"rave"': Fekete-fehér
+            '"cool"': Kékek
+            '"electronic"': Elektronikus
+            '"iceCream"': Fagyi
+            '"default"': Világos
+            '"neon"': Neon
+            '"ocean"': Óceán
+            '"rainbow"': Szivárvány
             '"tropical"': Trópusi
             '"vintage"': Régi
             '"warm"': Vörösek

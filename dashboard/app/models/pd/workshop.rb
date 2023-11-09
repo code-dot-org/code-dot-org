@@ -529,7 +529,7 @@ class Pd::Workshop < ApplicationRecord
   def self.send_teacher_pre_work_csa
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
-    scheduled_start_in_days(20).each do |workshop|
+    scheduled_start_in_days(20).select {|ws| ws.course == COURSE_CSA}.each do |workshop|
       workshop.enrollments.each do |enrollment|
         Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
       rescue => exception
@@ -546,7 +546,7 @@ class Pd::Workshop < ApplicationRecord
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
-    send_teacher_pre_work_csa if course == COURSE_CSA
+    send_teacher_pre_work_csa
   end
 
   # Updates enrollments with resolved users.
@@ -706,7 +706,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Get all teachers who have attended all sessions of this workshop.
-  def teachers_attending_all_sessions(filter_by_cdo_scholarship = false)
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship: false)
     teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers

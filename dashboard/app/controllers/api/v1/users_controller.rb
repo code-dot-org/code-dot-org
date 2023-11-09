@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -26,7 +26,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         short_name: current_user.short_name,
         is_verified_instructor: current_user.verified_instructor?,
         mute_music: current_user.mute_music?,
-        under_13: current_user.under_13?
+        under_13: current_user.under_13?,
+        over_21: current_user.over_21?,
+        sort_by_family_name: current_user.sort_by_family_name?
       }
     else
       render json: {
@@ -131,6 +133,16 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     @user.save
 
     render json: {mute_music: !!@user&.mute_music}
+  end
+
+  # POST /api/v1/users/sort_by_family_name
+  def post_sort_by_family_name
+    return head :unauthorized unless current_user
+
+    current_user.sort_by_family_name = !!params[:sort_by_family_name].try(:to_bool)
+    current_user.save
+
+    head :no_content
   end
 
   # POST /api/v1/users/<user_id>/display_theme

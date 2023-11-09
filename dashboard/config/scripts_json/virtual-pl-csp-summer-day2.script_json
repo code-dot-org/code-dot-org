@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-17 17:09:31 UTC",
+    "serialized_at": "2023-10-20 16:14:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -105,12 +105,29 @@
       }
     },
     {
-      "key": "Lossless Compression",
-      "name": "TLO #2: U1L9 - Lossless Compression",
+      "key": "lesson-8",
+      "name": "Previously on… Unit 1 Lesson 8",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nSince this lesson uses the Pixelation Widget differently, we want to provide participants a space to see how the tool works and connects to the learning objectives. \n\n**Objectives:**\n* Participants can explain how RGB color works\n* Participants have experience with the Pixelation Widget in a different form than originally introduced\n* Participants can see the storyline develop from Lesson 7 to Lesson 9 in TLOs\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Explain how RGB color works\n* Have experience with the Pixelation Widget in a different form than originally introduced\n* See the storyline develop from Lesson 7 to Lesson 9 in TLOs"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
+    },
+    {
+      "key": "Lossless Compression",
+      "name": "TLO #2: U1L9 - Lossless Compression",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand the role they play in managing student behavior and actions when using widgets to teach content.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
@@ -126,10 +143,10 @@
     {
       "key": "lesson-6",
       "name": "Welcome to the Course and Exam Description",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "**Purpose:**\nDuring this activity, participants are introduced to the Course and Exam Description from the College Board. During the asynchronous Session 2, participants will further explore the CED.\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED, and how students will be assessed on both content and skills.\n\n**Suggested Time:** 5 minutes",
         "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Know how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED, and how students will be assessed on both content and skills."
@@ -143,12 +160,12 @@
     {
       "key": "Asynchronous Part 2",
       "name": "Asynchronous Part 1",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested time:** 15 minutes",
+        "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested time:** 55 minutes",
         "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Learn how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n"
       },
       "seeding_key": {
@@ -160,10 +177,10 @@
     {
       "key": "lesson-7",
       "name": "CED Scavenger Hunt Debrief",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested Time:** 15 minutes",
         "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Know how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills."
@@ -177,10 +194,10 @@
     {
       "key": "Lossy Compression",
       "name": "TLO #3: U1L10 - Lossy Compression",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand how productive classroom discussions support students in being informed decision makers.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2024/lessons/3/lessons/10\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
@@ -196,10 +213,10 @@
     {
       "key": "lesson-4",
       "name": "The Teacher's Role in Formative Assessment",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "**Purpose:**\nParticipants bring in previous experiences with teaching to the workshop. We want to leverage those experiences and help participants consider how they apply their teaching expertise to CSP. One way they can do that is by using the strategies they already use to formatively assess students. Participants who are new to computer science can easily get focused on teaching the content without thinking about who is learning the content in the room. Formative assessment can support teaching and learning.\nThis session also helps set the tone for the next lesson planning session, and how they will be formatively assessing throughout the lesson.\n\n**Objectives:**\n* Participants have a list of formative assessment strategies they can use in their classrooms and in their TLO lesson.\n\n**Suggested Time:** 20 minutes",
         "student_overview": "**You will:**\n* Have a list of formative assessment strategies they can use in their classrooms and in their TLO lesson."
@@ -213,12 +230,12 @@
     {
       "key": "Asynchronous Part 1",
       "name": "Asynchronous Part 2",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
-        "overview": "**Purpose:**\nParticipants will explore data related to access to CS education. The activities in this asynchronous session will prepare participants to engage in the discussions in synchronous sessions.\n\n**Objectives:**\n\n* Participants define access, diversity, and inclusion.\n* Participants explore CS access data.\n* Participants complete any remaining challenges from the TLO.\n\n**Suggested time:** 60 minutes",
+        "overview": "**Purpose:**\nParticipants will explore data related to access to CS education. The activities in this asynchronous session will prepare participants to engage in the discussions in synchronous sessions.\n\n**Objectives:**\n\n* Participants define access, diversity, and inclusion.\n* Participants explore CS access data.\n* Participants complete any remaining challenges from the TLO.\n\n**Suggested time:** 65 minutes",
         "student_overview": "**You will:**\n\n* Define access, diversity, and inclusion.\n* Explore CS access data.\n* Complete any remaining challenges from the TLO."
       },
       "seeding_key": {
@@ -279,6 +296,18 @@
       "seeding_key": {
         "lesson_activity.key": "e97ec49b-73e4-4168-8e81-2ca82cc5c938",
         "lesson.key": "Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
+    },
+    {
+      "key": "e2d57b47-3d7f-4a0a-a960-af7820649bb5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e2d57b47-3d7f-4a0a-a960-af7820649bb5",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csp-summer-day2"
       }
@@ -664,6 +693,16 @@
       "seeding_key": {
         "activity_section.key": "22f6cbb5-eab2-4afa-bab7-ecb4c607a497",
         "lesson_activity.key": "e97ec49b-73e4-4168-8e81-2ca82cc5c938"
+      }
+    },
+    {
+      "key": "607e6924-2ca6-4072-b9f8-9a71935ce778",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "607e6924-2ca6-4072-b9f8-9a71935ce778",
+        "lesson_activity.key": "e2d57b47-3d7f-4a0a-a960-af7820649bb5"
       }
     },
     {
@@ -1593,6 +1632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-Context3"
+        ],
         "progression": "CED Scavenger Hunt"
       },
       "bonus": false,
@@ -1615,6 +1657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day2-UsingResources3_1"
+        ],
         "progression": "CED Scavenger Hunt"
       },
       "bonus": false,
@@ -1737,12 +1782,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
+        ],
         "progression": "Unit 1 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1750,7 +1798,7 @@
         "activity_section.key": "815c8b57-180b-4f88-a8af-6f3a9e200764"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_1"
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
       ]
     },
     {
@@ -1764,7 +1812,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1772,7 +1820,7 @@
         "activity_section.key": "99a2b61e-3060-4e42-a3a6-ff6ecadffe27"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context3_1"
+        "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
       ]
     },
     {
@@ -1781,6 +1829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1"
+        ],
         "progression": "Understanding Self: Identity Map"
       },
       "bonus": false,
@@ -2017,9 +2068,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -2029,9 +2080,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context3_1",
+        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context3_1"
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",

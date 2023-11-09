@@ -5,7 +5,7 @@ title: සමාගම් සඳහා - Hour of Code වැඩසටහනක�
 {{ signup_button }}
 
 # How to bring the Hour of Code to your company
-### Find out how you and your employees can inspire students to try computer science!
+### පරිගණක විද්යාව අත්හදා බැලීමට ඔබට සහ ඔබේ සේවකයින්ට සිසුන් පෙලඹවිය හැකි ආකාරය සොයා බලන්න!
 
 ***
 
@@ -57,9 +57,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- ලෝක ව්යා [ප්ත වීඩියෝව ඔෆ් කෝඩ්](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [පරිගණක විද්යාව ඉගෙන ගන්නා ලෙස ජනාධිපති ඔබාමා සියලු සිසුන්ගෙන් ඉල්ලා සිටියි](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- තවත් ආශ්වාදජනක වීඩියෝ මෙතැ [නින් සොයා ගන්න](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- ගැහැණු ළමයින් පරිගණක විද්යාව කෙරෙහි උනන්දුවක් දැක්වීම සඳහා උපදෙස් බලන්න [මෙතැ]({{ urls/girls }})නින්.
 
 ## 6. Code!
 **Direct participants to the activity**

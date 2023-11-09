@@ -63,6 +63,11 @@ he:
             '"measures"': תיבות
             '"seconds"': שניות
         text: אחרי {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': תיבות
+            '"seconds"': שניות
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -558,6 +563,49 @@ he:
             '"electronic"': אלקטרוני
             '"iceCream"': גלידה
             '"neon"': נאון
+            '"rave"': שחור לבן
+            '"tropical"': טרופי
+            '"vintage"': וינטאג'
+            '"warm"': חמים
+        text: קבע אפקט רקע {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': מעגלים
+            '"color_cycle"': צבעים
+            '"diamonds"': יהלומים
+            '"disco"': ריבועים
+            '"disco_ball"': כדור דיסקו
+            '"fireworks"': זיקוקים
+            '"flowers"': פרחים
+            '"galaxy"': חלל
+            '"growing_stars"': כוכבים גדלים
+            '"kaleidoscope"': קליידוסקופ
+            '"lasers"': רחבת ריקודים מלייזר
+            '"music_wave"': גלים
+            '"none"': כלום
+            '"quads"': מלאכים
+            '"rainbow"': קשת
+            '"rand"': "(אקראי)"
+            '"ripples"': אדוות
+            '"ripples_random"': אדוות אקראיות
+            '"snowflakes"': שלג
+            '"sparkles"': נצנוצים
+            '"spiral"': ספירלה
+            '"splatter"': שפריץ צבע
+            '"squiggles"': קווים מתפתלים
+            '"starburst"': כוכבים
+            '"stars"': כוכבים
+            '"swirl"': הִיפְּנוֹ
+            '"text"': כותרת שיר
+          PALETTE:
+            '"cool"': מגניב
+            '"default"': אוֹר
+            '"electronic"': אלקטרוני
+            '"iceCream"': גלידה
+            '"neon"': נאון
+            '"ocean"': אוקיינוס
+            '"rainbow"': קשת
             '"rave"': שחור לבן
             '"tropical"': טרופי
             '"vintage"': וינטאג'

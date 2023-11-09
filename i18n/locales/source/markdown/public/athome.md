@@ -25,7 +25,7 @@ title: Computer Science at Home
 
 <a id="hoc"></a>
 <h2>Try an Hour of Code with these fun introductory tutorial</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
+<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Many tutorials are structured like games, designed to teach basic computer science concepts in fun, engaging ways.</p>
 <br>
 
 <div class="col-33" style="padding-bottom:15px">

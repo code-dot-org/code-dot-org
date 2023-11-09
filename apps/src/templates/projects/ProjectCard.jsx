@@ -99,9 +99,9 @@ export default class ProjectCard extends React.Component {
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
 
-    const thumbnailStyle = styles.thumbnail;
+    let thumbnailStyle = styles.thumbnail;
     if (this.props.showFullThumbnail) {
-      Object.assign(thumbnailStyle, styles.fullThumbnail);
+      thumbnailStyle = {...thumbnailStyle, ...styles.fullThumbnail};
     }
 
     const shouldShowPublicDetails =

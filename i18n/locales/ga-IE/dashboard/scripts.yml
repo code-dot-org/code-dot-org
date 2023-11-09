@@ -3120,3 +3120,18 @@ ga:
             lessonGroup-5:
               display_name: Athróga
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Réamhrá
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Réamhrá
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Réamhrá
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Réamhrá

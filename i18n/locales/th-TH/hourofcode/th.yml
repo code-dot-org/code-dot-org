@@ -6,6 +6,11 @@ th:
   front_title: เข้าร่วมเป็นส่วนหนึ่งของกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์
     ณ วันที่ %{campaign_date}
   coming_soon: เร็วๆ นี้
+  new: ใหม่
+  hours_of_code_served: 'ให้บริการ Hours of Code '
+  hoc_stat_languages: นักเรียนกำลังเรียนได้มากกว่า 45 ภาษา
+  hoc_stat_hours_served: นักเรียนกว่า 100 ล้านคนเข้าร่วมกิจกรรม Hour of Code
+  hoc_stat_females: นักเรียนหญิงคิดเป็น 50% ของผู้เข้าร่วม Hour of Code
   campaign_date_start_short: 4 ธ.ค.
   campaign_date_start_long: 4 ธันวาคม
   campaign_date_short: 4 - 10 ธ.ค.
@@ -37,9 +42,16 @@ th:
   africa_campaign_date_year: '2566'
   africa_campaign_date_full_year: 1 ตุลาคม 2565 - 18 ธันวาคม 2565
   hoc2023_header: ความคิดสร้างสรรค์ด้วย AI
-  hoc2023_social_creativity_with_ai_title: ชั่วโมงของรหัส - สิ่งที่คุณจะสร้าง?
+  hoc2023_hero_desc_homepage: เข้าร่วมกับหลายล้านคนทั่วโลกในการจัดระเบียบการเขียนโค้ดหนึ่งชั่วโมงโดยมีหรือไม่มี
+    AI และเรียนรู้ว่าAI ทำงานอย่างไร ซึ่งทุกคนและทุกที่ทั่วโลกสามารถทำได้ไม่จำเป็นต้องมีประสบการณ์
+  hoc2023_hero_desc_learn_page: ในปีนี้ เรากำลังยกระดับ Hour of Code ไปสู่ความสูงสุดใหม่ด้วยการนำเสนอโอกาสในการเขียนโค้ดที่ครอบคลุมทั้งองค์ประกอบปัญญาประดิษฐ์
+    (AI) และองค์ประกอบที่ไม่ใช่ AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - สิ่งที่คุณจะสร้าง?
   hoc2023_social_creativity_with_ai_desc: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจและเรียนรู้เกี่ยวกับ
     AI!
+  hoc2023_what_is_hoc_desc: The Hour of Code เป็นการแนะนำวิทยาการคอมพิวเตอร์ฟรีผ่านกิจกรรมและวิดีโอที่สนุกสนานสำหรับผู้เรียนทุกระดับ
+    การเฉลิมฉลองทั้งการเขียนโค้ดและ AI ในปีนี้ได้รับการสนับสนุนจากพันธมิตรมากกว่า
+    400 ราย นักการศึกษา 20,000 ราย และอาสาสมัคร 58,000 ราย
   hoc2022_header: สำรวจ เล่น สร้าง!
   social_hoc2022_explore_play_create: ใช้วิทยาการคอมพิวเตอร์เพื่อสำรวจ เล่น และสร้าง!
   codeorg_homepage_hoc2022_body: สำรวจจักรวาล ยิงประตู ทำลายการเคลื่อนไหว — มีหลายวิธีที่จะลองใช้วิทยาการคอมพิวเตอร์
@@ -49,6 +61,8 @@ th:
     Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจาก "Encanto" ของดิสนีย์และอีกมากมาย!
   social_hoc2023_dance: มี Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     เพลงจากดิสนีย์ “Encanto” และอื่น ๆ อีกมากมาย!
+  social_hoc2023_dance_v2: ถึงเวลาที่จะวางสิ่งของของคุณแล้ว!สร้างปาร์ตี้เต้นของคุณเองที่มีเพลงฮิตของ
+    Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía และอีกมากมาย!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่เราสร้างขึ้นเอง  "
@@ -148,6 +162,7 @@ th:
   social_blockchain_desc: วิดีโอและบทเรียนที่สำรวจว่าบล็อกเชนคืออะไร และเหตุใดจึงสำคัญ
   social_ai_title: เรียนรู้เกี่ยวกับปัญญาประดิษฐ์ (AI) | Code.org
   social_ai_desc: เครื่องมือที่ช่วยให้นักเรียนและครูนำ AI เข้ามาในห้องเรียน
+  social_videos_desc: วิดีโอวิทยาศาสตร์คอมพิวเตอร์ที่น่าสนใจสำหรับผู้เรียนทุกวัย
   pl_superhero_title: ช่วยให้นักเรียนกลายเป็นฮีโร่!
   pl_superhero_desc: เข้าร่วมโปรแกรมการเรียนรู้แบบมืออาชีพที่ได้รับการสนับสนุนเป็นอย่างสูงสำหรับนักการศึกษาระดับมัธยมศึกษาตอนต้นและมัธยมศึกษาตอนปลาย
   teach_ai_homepage_banner_title: การศึกษาปัญญาประดิษฐ์เพื่อโลก
@@ -170,8 +185,17 @@ th:
   tik_tok: ติ๊กต๊อก
   device_tablet: แท็บเล็ต
   device_laptop: แล็ปท็อป
-  device_desktop_computer: คอมพิวเตอร์เดสก์ท็อป
-  device_mobile_device: อุปกรณ์มือถือ
+  device_desktop_computer: คอมพิวเตอร์ตั้งโต๊ะ
+  device_mobile_device: อุปกรณ์เคลื่อนที่
+  for_everyone: สำหรับทุกคน
+  for_students_teacher_led_learning: 'สำหรับนักเรียน: การเรียนรู้ที่นำโดยผู้สอน'
+  for_students_teacher_led_lessons: 'สำหรับนักเรียน: บทเรียนที่นำโดยผู้สอน'
+  professional_development: การพัฒนาวิชาชีพ
+  how_ai_works_video_series: AI ทำงานอย่างไร ซีรี่ส์วิดีโอ
+  learn_how_ai_works: เรียนรู้ว่าAI ทำงานอย่างไร
+  ai_101_for_educators: AI 101 สำหรับนักการศึกษา
+  learn_about_ai_impacts: เรียนรู้เกี่ยวกับผลกระทบของ AI
+  hoc_ai_activities: กิจกรรมฮาวร์ออฟโค้ด AI
   subscribe_to_emails_heading: สมัครรับข่าวสารทางอีเมล
   subscribe_to_emails_desc: อ่านข้อมูลเกี่ยวกับสิ่งที่เกิดขึ้นที่ Code.org และด้านวิทยาการคอมพิวเตอร์ผ่านการปรับปรุงรายไตรมาสผ่านทางรายชื่อผู้รับจดหมายของเรา
   subscribe_to_emails_intl: สมัครรับข่าวสารจากต่างประเทศ
@@ -203,7 +227,7 @@ th:
   educators_label: นักการศึกษา
   companies_label: บริษัท
   districts_label: อำเภอ
-  school_assemblies_label: ชุดโรงเรียน
+  school_assemblies_label: การประชุมในโรงเรียน
   parents_label: ผู้ปกครอง
   public_officials_label: เจ้าหน้าที่ของรัฐ
   volunteers_label: อาสาสมัคร
@@ -213,25 +237,38 @@ th:
   teacher_label_csp: ผู้สอนหลักด้านวิทยาการคอมพิวเตอร์
   teacher_label_csc: ผู้สอนด้านความเชื่อมโยงวิทยาการคอมพิวเตอร์
   teacher_label_csa: AP® Computer Science A Teacher
-  teacher_forum_heading: ฟอรั่มครู
-  teacher_forum_desc: เยี่ยมชมฟอรัมครูชั่วโมงแห่งรหัสเพื่อรับคำแนะนำ ข้อมูลเชิงลึกและการสนับสนุนจากนักการศึกษาคนอื่น
+  teacher_forum_heading: ฟอรัมผู้สอน
+  teacher_forum_desc: เยี่ยมชมฟอรัมผู้สอนชั่วโมงแห่งรหัสเพื่อรับคำแนะนำ ข้อมูลเชิงลึกและการสนับสนุนจากนักการศึกษาคนอื่น
   required_materials: 'อุปกรณ์ที่จำเป็น:'
   optional_materials: 'อุปกรณ์เสริม:'
+  for_students: สำหรับผู้เรียน
+  for_educators: สำหรับครู
+  call_to_action_host_hoc: จัดงาน Hour of Code
   call_to_action_hold_an_event: จัดกิจกรรม
   call_to_action_register_event: ลงทะเบียนกิจกรรมของคุณ
+  call_to_action_register_your_hoc: ลงทะเบียน Hour of Code ของคุณ
   call_to_action_select_activity: เลือกกิจกรรม
+  call_to_action_select_coding_activity: เลือกกิจกรรมการเข้ารหัส
   call_to_action_start_activity: เริ่มกิจกรรม
   call_to_action_get_certificates: รับใบรับรอง
-  call_to_action_go_beyond_hoc: ไปไกลกว่าชั่วโมงแห่งรหัส
+  call_to_action_print_certificates: พิมพ์ใบรับรอง
+  call_to_action_go_beyond_hoc: ไปให้ไกลกว่า Hour of Code
+  call_to_action_explore_all_hoc_activities: สำรวจกิจกรรม Hour of Code ทั้งหมดจาก
+    Code.org
+  call_to_action_start_dance_party: เริ่มปาร์ตี้เต้นรำ
+  call_to_action_start_part_02: เริ่มตอนที่สอง
+  call_to_action_start_unplugged_activity: เริ่มกิจกรรมที่ถอดปลั๊ก
   call_to_action_view_promo_resources: ดูแหล่งข้อมูลโปรโมชั่น
   call_to_action_learn_more: เรียน​รู้​เพิ่ม​เติม
   call_to_action_watch_now: รับชมเลย
   call_to_action_try_activity: ลองทำกิจกรรม
   call_to_action_try_activities: ลองทำกิจกรรม
+  call_to_action_try_hoc_ai_activities: ลองใช้กิจกรรม Hour of Code AI
   call_to_action_explore_activities: สำรวจกิจกรรม
   call_to_action_explore_ai: สำรวจ AI
   call_to_action_explore_unit: สำรวจหน่วย
   call_to_action_explore_curriculum: สำรวจหลักสูตร
+  call_to_action_explore_curricula: สำรวจหลักสูตร
   call_to_action_explore_curriculum_options: สำรวจตัวเลือกหลักสูตร
   call_to_action_explore_lessons: สำรวจบทเรียน
   call_to_action_explore_modules: สำรวจโมดูล
@@ -282,7 +319,7 @@ th:
   call_to_action_find_self_paced_modules: ค้นหาโมดูลแบบกำหนดจังหวะเอง
   call_to_action_join_teacher_forums: เข้าร่วมฟอรัมผู้สอน
   call_to_action_explore_teacher_forums: สำรวจฟอรั่มผู้สอน
-  call_to_action_explore_teacher_forum: สำรวจฟอรั่มครู
+  call_to_action_explore_teacher_forum: สำรวจฟอรัมครู
   call_to_action_explore_career_resources: สำรวจแหล่งอาชีพ
   call_to_action_watch_videos: ดูวีดีโอ
   call_to_action_download_posters: ดาวน์โหลดโปสเตอร์
@@ -306,7 +343,7 @@ th:
   call_to_action_view_donation_policy: ดูนโยบายการบริจาค
   call_to_action_view_donate_bitpay: ร่วมบริจาคด้วย BitPay
   call_to_action_make_a_donation: ทำการบริจาค
-  call_to_action_other_ways_to_give: วิธีอื่น ๆ ในการให้
+  call_to_action_other_ways_to_give: การให้ด้วยวิธีอื่น
   call_to_action_become_partner_usa: ร่วมเป็นพันธมิตรในสหรัฐอเมริกา
   call_to_action_become_partner_intl: ร่วมเป็นพันธมิตรระหว่างประเทศ
   call_to_action_become_a_volunteer: เป็นอาสาสมัคร
@@ -314,18 +351,27 @@ th:
   call_to_action_learn_about_advocacy: เรียนรู้เกี่ยวกับการสนับสนุนของเรา
   call_to_action_visit_store: เยี่ยมชมร้านค้า
   call_to_action_view_faqs: ดูคำถามที่พบบ่อยเพิ่มเติม
+  call_to_action_applications_open: แอพพลิเคชั่นเปิดอยู่แล้ว
+  call_to_action_apply_cs_ambassador: สมัครเป็นเอกอัครราชทูต CS
+  call_to_action_coming_soon: เร็ว ๆ นี้!
+  call_to_action_learn_how_ai_works: เรียนรู้ว่า AI ทำงานอย่างไร
+  call_to_action_learn_about_ai: เรียนรู้เกี่ยวกับ AI
   aria_label_call_to_action_hoc_how_to_educators: ดูคำแนะนำวิธีการสำหรับนักการศึกษา
-  aria_label_call_to_action_hoc_how_to_companies: ดูคำแนะนำวิธีการสำหรับ บริษัท
-  aria_label_call_to_action_hoc_how_to_districts: ดูคำแนะนำวิธีการสำหรับเขต
-  aria_label_call_to_action_hoc_how_to_school_assemblies: ดูคำแนะนำวิธีการสำหรับการประกอบโรงเรียน
+  aria_label_call_to_action_hoc_how_to_companies: ดูคำแนะนำวิธีการสำหรับบริษัท
+  aria_label_call_to_action_hoc_how_to_districts: ดูคำแนะนำวิธีการสำหรับอำเภอ
+  aria_label_call_to_action_hoc_how_to_school_assemblies: ดูคำแนะนำวิธีการสำหรับการประชุมในโรงเรียน
   aria_label_call_to_action_hoc_how_to_parents: ดูคำแนะนำวิธีการสำหรับผู้ปกครอง
   aria_label_call_to_action_hoc_how_to_public_officials: ดูคำแนะนำวิธีการสำหรับเจ้าหน้าที่ของรัฐ
   aria_label_call_to_action_hoc_how_to_volunteers: ดูคำแนะนำวิธีการสำหรับอาสาสมัคร
   aria_label_call_to_action_hoc_how_to_virtual_events: ดูคำแนะนำวิธีการสำหรับกิจกรรมเสมือน
+  aria_label_call_to_action_dance_01: เริ่มกิจกรรมปาร์ตี้เต้นรำ
+  aria_label_call_to_action_dance_02: เริ่มส่วนที่สองของกิจกรรมปาร์ตี้เต้นรำ
+  aria_label_call_to_action_dance_unplugged: เริ่มกิจกรรมปาร์ตี้แดนซ์แบบถอดปลั๊ก
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csp: เริ่มการสอนหลักสูตรวิชาชีพ หลักการวิทยาการคอมพิวเตอร์
+  aria_label_call_to_action_teaching_problem_solving: เริ่มโปรแกรมการเรียนรู้ระดับมืออาชีพการแก้ปัญหาการสอนและการคำนวณ
   aria_label_call_to_action_teaching_csc: เริ่มโปรแกรมการเรียนรู้ระดับมืออาชีพของการสอนการเชื่อมต่อวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_ai: เริ่มการสอน AI และโปรแกรมการเรียนรู้แบบมืออาชีพของเครื่องจักร
   aria_label_call_to_action_teaching_maker_cp: เริ่มโปรแกรมการเรียนรู้ระดับมืออาชีพในการสอนการสร้างแอปด้วยอุปกรณ์
@@ -337,6 +383,7 @@ th:
   aria_label_call_to_action_curriculum_csf_express_pre_reader: สำรวจความรู้เร่งด่วนล่วงหน้าความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_curriculum_csd: สำรวจหลักสูตรการค้นพบวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_curriculum_csp: ศึกษาหลักสูตรหลักการวิทยาการคอมพิวเตอร์
+  aria_label_call_to_action_curriculum_problem_solving: สำรวจหลักสูตรการแก้ปัญหาและการคำนวณ
   aria_label_call_to_action_curriculum_csc: สำรวจหลักสูตรการเชื่อมต่อวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_curriculum_ai: สำรวจหลักสูตร AI และแมชชีนเลิร์นนิง
   aria_label_call_to_action_curriculum_maker_cp: สำรวจหลักสูตรการสร้างแอปด้วยอุปกรณ์
@@ -394,6 +441,7 @@ th:
   curriculum_name_csf_teacher_led: บทเรียนผู้นำการสอน
   curriculum_name_csd: การค้นพบวิทยาการคอมพิวเตอร์
   curriculum_name_csp: หลักการวิทยาการคอมพิวเตอร์
+  curriculum_name_problem_solving: การแก้ปัญหาและการคำนวณ
   curriculum_name_csc: การเชื่อมต่อวิทยาการคอมพิวเตอร์
   curriculum_name_csa: วิทยาการคอมพิวเตอร์ A
   curriculum_name_csa_ai: วิศวกรรมซอฟต์แวร์ & วิสัยทัศน์คอมพิวเตอร์
@@ -406,11 +454,21 @@ th:
   curriculum_name_creating_apps_with_devices: การสร้างแอปด้วยอุปกรณ์
   curriculum_name_poetry: การเข้ารหัสด้วยบทกวี
   curriculum_name_dance_party: งานเลี้ยงเต้นรำ
+  curriculum_name_dance_party_02: เต้นต่อไป
+  curriculum_name_dance_party_unplugged: ปาร์ตี้เต้นรำไม่มีปลั๊ก
+  curriculum_name_dance_party_ai_edition: 'ปาร์ตี้เต้นรำ: รุ่น AI'
   curriculum_name_problem_solving_computing: การแก้ปัญหาและการคำนวณ
   curriculum_name_web_development: การพัฒนาเว็บ
   curriculum_name_interactive_animations_games: แอนิเมชั่นและเกมแบบโต้ตอบ
   curriculum_name_design_process: ขั้นตอนการออกแบบ
   curriculum_name_data_society: ข้อมูลและสังคม
+  curriculum_desc_dance_party_01: ในกิจกรรมเบื้องต้นนี้ ให้ใช้โค้ดเพื่อทำให้ตัวละครที่มีสีสันที่หลากหลายย้ายไปสู่พื้นหลังภาพเคลื่อนไหวและเพลงที่สวยงาม
+  curriculum_desc_dance_party_02: ก้าวไปไกลกว่าบทช่วยสอนเบื้องต้นด้วยแนวคิดโครงการเพิ่มเติมเรียกดูห้องสมุดตัวอย่างของปาร์ตี้เต้นที่ซับซ้อนมากขึ้น
+  curriculum_desc_dance_party_unplugged: เปิดร่องของคุณ—ไม่จำเป็นต้องใช้คอมพิวเตอร์!เรียนรู้ว่าแนวคิดการเข้ารหัส
+    เช่น เหตุการณ์ สามารถใช้เพื่อซิงโครไนซ์ท่าเต้นของนักเต้นได้อย่างไร
+  curriculum_desc_dance_party_ai_edition: เรียนรู้เกี่ยวกับแนวคิดปัญญาประดิษฐ์ (AI)
+    เพื่อสร้างปาร์ตี้เต้นเสมือนของคุณเองเพื่อแสดงศิลปินชั้นนำในปัจจุบันมีเพลงให้เลือกหลายสิบเพลง
+    เข้าถึงนักเรียนทุกคนไม่ว่าจะชอบดนตรีของพวกเขาถึงเวลาที่จะวางสิ่งของของคุณแล้ว!
   curriculum_desc_csf: ชุดหลักสูตรประถมศึกษาฟรีที่แนะนำนักเรียนให้รู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
   curriculum_desc_csf_express: เรียนรู้การสร้างโปรแกรมคอมพิวเตอร์ พัฒนาทักษะการแก้ปัญหา
     และทำงานผ่านความท้าทายที่สนุกสนาน! สร้างเกมและโปรเจ็กต์ที่สร้างสรรค์เพื่อแชร์กับเพื่อนๆ
@@ -500,12 +558,16 @@ th:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: เค-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: อนุบาล
   module_grade_grade_01: เกรด 1
@@ -513,6 +575,12 @@ th:
   module_grade_grade_03: เกรด 3
   module_grade_grade_04: เกรด 4
   module_grade_grade_05: เกรด 5
+  module_age_05_07: อายุ 5-7 ปี
+  module_age_07: อายุ 7 ปีขึ้นไป
+  module_age_07_11: อายุ 7-11 ปี
+  module_age_11: อายุ 11 ปีขึ้นไป
+  module_age_13: อายุ 13 ปีขึ้นไป
+  module_age_all_age: ทุกวัย
   module_grade_k_5_teachers: ผู้สอน K-5
   module_grade_6_10_teachers: ผู้สอน 6-10
   module_grade_9_12_teachers: ผู้สอน 9-12
@@ -544,6 +612,7 @@ th:
   module_label_teaching_csf: การสอนความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
   module_label_teaching_csd: การสอนการค้นพบวิทยาการคอมพิวเตอร์
   module_label_teaching_csp: การสอนวิทยาการคอมพิวเตอร์ หลักการ
+  module_label_teaching_problem_solving: การสอนการแก้ปัญหาและการคำนวณ
   module_label_teaching_csc: การสอนการเชื่อมต่อวิทยาการคอมพิวเตอร์
   module_label_teaching_ai: การสอน AI และแมชชีนเลิร์นนิง
   module_label_teaching_maker_cp: การสอนการสร้างแอปด้วยอุปกรณ์ (สนามเด็กเล่น)
@@ -600,6 +669,46 @@ th:
   heading_explore_curriculum_catalog: สำรวจหลักสูตรทั้งหมดของเราในแคตตาล็อกหลักสูตร
   heading_csa_ai: กำลังมองหาสิ่งที่ต้องทำหลังจากการสอบ AP®?
   heading_bring_cs_to_students: นำวิทยาการคอมพิวเตอร์มาให้นักเรียน
+  heading_cs_ambassador_program: โปรแกรมเอกอัครราชทูต CS
+  heading_featured_student_projects: โครงการนักเรียนที่โดดเด่น
+  heading_start_hoc_with_videos: เริ่มต้นชั่วโมงแห่งรหัสของคุณด้วยวิดีโอที่สร้างแรงบันดาลใจ
+  cs_ambassador_subhead: หากคุณเป็นนักเรียนมัธยมปลายที่หลงใหลในการสนับสนุนให้หญิงสาวมากขึ้นมาเรียนวิทยาการคอมพิวเตอร์ที่โรงเรียนของคุณ
+    เราต้องการคุณ!
+  cs_ambassador_desc: ทุกสาขา รวมถึงการแพทย์ ความบันเทิง กีฬา การศึกษา ธุรกิจ แฟชั่น
+    และการเป็นผู้ประกอบการได้รับสัมผัสจากวิทยาการคอมพิวเตอร์แต่มีเพียง 5% ของหญิงสาววัยมัธยมศึกษาที่เรียนวิทยาการคอมพิวเตอร์เอกอัครราชทูตสามารถช่วยลดช่องว่างทางเพศนี้โดยส่งเสริมให้เพื่อนร่วมงานเข้าเรียนวิทยาการคอมพิวเตอร์
+  cs_ambassador_application_date: เปิดรับสมัครจนถึงวันที่ 8 พฤศจิกายน 2023
+  cs_ambassador_application_subhead: ทำงานร่วมกับครูเพื่อส่งใบสมัครของคุณวันนี้
+  cs_ambassador_application_questions: คำถาม?กรุณาติดต่อ [youngwomen@code.org] (%{email_url})
+  cs_ambassador_do_heading: เอกอัครราชทูต CS ทำอะไร
+  cs_ambassador_do_desc: เอกอัครราชทูต CS สนับสนุนให้หญิงสาวสำรวจเรื่องนี้ และยกระดับซึ่งกันและกันและกันเพื่อยกระดับตำแหน่งในวิทยาการคอมพิวเตอร์แอมบาสเดอร์
+    CS เชื่อมต่อกับเพื่อนเพื่อนเพื่อแบ่งปันความตื่นเต้นและความรักในวิทยาการคอมพิวเตอร์พวกเขาเยี่ยมชมห้องเรียน
+    จัดโต๊ะอาหารกลางวัน และพูดในการประชุมและการประชุมสโมสรเอกอัครราชทูต CS ทำงานร่วมกับครูและผู้บริหารโรงเรียนเพื่อทำลายแบบแผนที่ทำให้หญิงสาวกลับคืนมา
+  cs_ambassador_steps_heading: ฉันต้องมีอะไรบ้างในการเป็นเอกอัครราชทูต CS
+  cs_ambassador_steps_list_title_01: ความหลงใหล
+  cs_ambassador_steps_list_title_02: ประสบการณ์ในหลักสูตร CS
+  cs_ambassador_steps_list_title_03: โรงเรียนที่เสนอ CS
+  cs_ambassador_steps_list_desc_01: ความหลงใหลในการสนับสนุนให้หญิงสาวที่โรงเรียนของคุณเข้าเรียนวิทยาการคอมพิวเตอร์
+  cs_ambassador_steps_list_desc_02: 'เคยเรียนวิทยาการคอมพิวเตอร์ตลอดปีในปีการศึกษา
+    2022-23 หรือก่อนหน้านี้ (แนะนำ: CS Principles หรือ AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'เข้าเรียนในโรงเรียนมัธยมที่มีหลักสูตรวิทยาศาสตร์คอมพิวเตอร์ตลอดปีเป็นประจำ
+    (แนะนำ: CS Principles หรือ AP® CSA)'
+  cs_ambassador_benefits_heading: สิทธิประโยชน์ของโปรแกรม
+  cs_ambassador_benefits_list_title_01: ชุมชนแห่งชาติ
+  cs_ambassador_benefits_list_title_02: บริการชุมชน
+  cs_ambassador_benefits_list_title_03: การรับรู้
+  cs_ambassador_benefits_list_title_04: สวา๊ก
+  cs_ambassador_benefits_list_title_05: ใบรับรอง
+  cs_ambassador_benefits_list_title_06: ประสบการณ์
+  cs_ambassador_benefits_list_desc_01: การเข้าถึงชุมชนผู้นำหนุ่มแห่งชาติที่มุ่งมั่นที่จะปิดช่องว่างทางเพศในวิทยาการคอมพิวเตอร์
+  cs_ambassador_benefits_list_desc_02: เวลาบริการชุมชนและโอกาสได้รับรางวัล [รางวัลบริการอาสาสมัครประธานาธิบดีสหรัฐฯ]
+    (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: ได้รับการยอมรับในฐานะเอกอัครราชทูต 2023-2024
+    และมีสิทธิ์ได้รับเกียรติในหอเกียรติยศแอมบาสเดอร์ Code.org
+  cs_ambassador_benefits_list_desc_04: รับรู้ว่าเป็นเอกอัครราชทูตของ CS ผ่านเครื่องแต่งกาย
+    สติกเกอร์ และอื่นๆ ที่มีตราสินค้า Code.org พิเศษ!
+  cs_ambassador_benefits_list_desc_05: ใบรับรองการมีส่วนร่วมอย่างเป็นทางการจาก Code.org
+  cs_ambassador_benefits_list_desc_06: รับประสบการณ์และเรื่องราวเพื่อแบ่งปันในใบสมัครวิทยาลัย
+    ประวัติย่อและอื่น ๆ ของคุณ!
   professional_learning_section_desc: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
     ผู้สอนชอบมัน โดยกว่า 90% ให้คะแนนว่าเป็นการพัฒนาทางวิชาชีพที่ดีที่สุด!
   professional_learning_section_desc_short: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
@@ -633,6 +742,13 @@ th:
   subscribe_form_section_desc_csp: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Computer
     Science Principles ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
   subscribe_form_section_unsubscribe: คุณสามารถยกเลิกการสมัครได้ตลอดเวลา
+  dance_hero_heading: เข้ารหัสปาร์ตี้เต้นรำ
+  dance_featuring_songs_by_short: 'มีเพลงโดย:'
+  dance_featuring_songs_by_long: 'ปาร์ตี้เต้นรำประกอบด้วยเพลงโดย:'
+  dance_and_more: และอื่น ๆ
+  dance_choose_activity: เลือกปาร์ตี้เต้นรำของคุณ
+  dance_afe_disclaimer: ศิลปินที่ใช้เพลงในบทช่วยสอนนี้ไม่ได้สนับสนุนหรือรับรองจาก
+    Amazon เป็นส่วนหนึ่งของการอนุญาตให้ใช้เพลงของพวกเขาไปยัง Code.org
   blockchain_hero_heading: วิธีการทำงานของบล็อกเชน
   blockchain_hero_desc: ดำดิ่งสู่โลกของบล็อกเชนด้วย “วิธีการทำงานของ Blockchain” วิดีโอชุดใหม่ของเราและบทเรียนประกอบ!
   blockchain_intro_heading: ดูว่าบล็อกเชนทำงานอย่างไร
@@ -719,6 +835,10 @@ th:
   ai_curriculum_btn_aria_label_04: เรียนรู้วิธีการทำงานของ AI
   ai_curriculum_grades_05: 'ระดับเกรด: 9-12'
   ai_curriculum_btn_aria_label_05: สำรวจโมดูลวิศวกรรมซอฟต์แวร์และวิสัยทัศน์คอมพิวเตอร์
+  ai_curriculum_title_06: ผลกระทบต่อสังคมของ AI แบบสร้างสรรค์
+  ai_curriculum_desc_06: ตรวจสอบผลกระทบของ AI แบบสร้างสรรค์จากมุมมองที่แตกต่างกัน
+    จากนั้นทำงานร่วมกันเป็นทีมเพื่อสร้างแนวทางที่ตอบสนองความต้องการมากที่สุดจากผู้เข้าร่วมทุกคน
+  ai_curriculum_btn_aria_label_06: ดูผลกระทบต่อสังคมของแผนบทเรียน AI แบบสร้างสรรค์
   ai_carousel_heading: 'สิ่งที่ครูพูดเกี่ยวกับ AI ด้วย Code.org:'
   ai_carousel_quote_01: บทเรียนนี้ยังทำให้นักเรียนของฉันมีโอกาสที่จะเห็นว่ามีองค์ประกอบของความเห็นในระบบการจัดหมวดหมู่ต่อมาเมื่อเราเริ่มเห็นว่าอคติสามารถจบลงใน
     AI ผมก็สามารถดึงพวกเขากลับมาและเตือนพวกเขาว่าข้อมูลที่ใช้ในการฝึกอบรมแบบจำลองของพวกเขาขึ้นอยู่กับทางเลือก
@@ -1493,29 +1613,29 @@ th:
   donate_page_top_heading: ช่วยสนับสนุนพันธกิจของเรา
   donate_page_top_desc: ทุกการบริจาคเป็นเชื้อเพลิงพันธกิจของ Code.org ในการขยายการเข้าถึงการศึกษาด้านวิทยาการคอมพิวเตอร์เรามีหลายวิธีให้คุณบริจาคและสร้างความแตกต่าง
   donate_page_fundraise_title: การระดมทุนสำหรับ Code.org
-  donate_page_fundraise_desc: ช่วยระดมเงินสำหรับ Code.org!นักเรียนทุกคนในโรงเรียนทุกคนควรมีโอกาสที่จะเรียนรู้วิทยาการคอมพิวเตอร์
-  donate_page_other_ways_title: วิธีอื่น ๆ ในการให้
-  donate_page_other_ways_desc: สำรวจวิธีการที่หลากหลายในการมีส่วนร่วม และค้นหาตัวเลือกที่เหมาะสมกับคุณที่สุดทุกท่าทาง
-    ไม่ว่าใหญ่หรือเล็ก ขับเคลื่อนภารกิจของเราไปข้างหน้า
+  donate_page_fundraise_desc: ช่วยระดมทุนสำหรับ Code.org! นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสการเรียนรู้วิทยาการคอมพิวเตอร์
+  donate_page_other_ways_title: การให้ด้วยวิธีอื่น
+  donate_page_other_ways_desc: สำรวจวิธีการมีส่วนร่วมที่หลากหลาย และค้นหาตัวเลือกที่เหมาะสมกับคุณที่สุด
+    ทุกๆ การกระทำ ไม่ว่าใหญ่หรือเล็ก ก็ได้ช่วยขับเคลื่อนภารกิจของเราไปข้างหน้า
   donate_page_501c3: Code.org ได้รับการจดทะเบียนเป็นสาธารณะ 501 (ค) (3) องค์กรไม่แสวงหาผลกำไรเงินสมทบ
     Code.org สามารถนำไปลดหย่อนภาษีได้เท่าที่กฎหมายอนุญาตหมายเลขประจำตัวผู้เสียภาษีของ
     Code.org คือ 46-0858543
   donate_page_donation_policy_title: ทำความเข้าใจนโยบายการบริจาคของเรา
   donate_page_donation_policy_desc: เรียนรู้เกี่ยวกับวิธีที่เราจัดการและจัดสรรการมีส่วนร่วมของคุณ
-  donate_tabs_tab_label_daf_direct: DAF โดยตรง
-  donate_tabs_tab_label_amazon: อเมซอน
-  donate_tabs_tab_label_bitpay: บิตเพย์
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
   donate_tabs_tab_label_employee_match: ตรงกับพนักงาน
   donate_tabs_daf_direct_title: บริจาคผ่านทาง DAF Direct
-  donate_tabs_daf_direct_desc: บริจาคผ่านกองทุนที่ผู้บริจาคแนะนำของคุณกับ Fidelity
-    Charitable, Schwab Charitable หรือ BNY Mellon และทำการแนะนำเงินทุนของคุณไปยัง
-    Code.org ผ่านแบบฟอร์มออนไลน์ DAF Direct
-  donate_tabs_amazon_title: บริจาคผ่านอเมซอน
+  donate_tabs_daf_direct_desc: บริจาคผ่านกองทุนที่แนะนำให้ผู้บริจาคโดย Fidelity Charitable,
+    Schwab Charitable หรือ BNY Mellon และทำการแจ้งให้นำเงินทุนของคุณไปยัง Code.org
+    ผ่านแบบฟอร์มออนไลน์ DAF Direct
+  donate_tabs_amazon_title: บริจาคผ่าน Amazon
   donate_tabs_amazon_desc: บริจาคโดยตรงโดยใช้บัญชี Amazon ของคุณด้วยการคลิกเพียงไม่กี่ครั้ง
-    คุณก็สามารถมีส่วนร่วมในพันธกิจของ Code.org ได้อย่างราบรื่นและช่วยเพิ่มอนาคตของการศึกษาด้านวิทยาการคอมพิวเตอร์
+    คุณก็สามารถมีส่วนร่วมในพันธกิจของ Code.org ได้อย่างง่ายดายและยังช่วยเพิ่มอนาคตของการศึกษาด้านวิทยาการคอมพิวเตอร์อีกด้วย
   donate_tabs_bitpay_title: บริจาคเงินด้วยสกุลเงินดิจิทัลผ่าน BitPay
-  donate_tabs_bitpay_desc: ก้าวสู่อนาคตของการให้ด้วยสกุลเงินดิจิทัลผ่าน BitPay สกุลเงินดิจิทัลของคุณโดยตรงสามารถสนับสนุนความพยายามของ
-    Code.org ในการขยายการศึกษาวิทยาการคอมพิวเตอร์
+  donate_tabs_bitpay_desc: ก้าวสู่อนาคตของการให้ด้วยสกุลเงินดิจิทัลผ่าน BitPay สกุลเงินดิจิทัลของคุณสามารถสนับสนุนความพยายามของ
+    Code.org ในการขยายการศึกษาวิทยาการคอมพิวเตอร์ได้
   help_page_top_heading: วิธีที่คุณสามารถช่วย
   help_page_top_desc: สนับสนุนภารกิจของเราที่จะทำให้วิทยาการคอมพิวเตอร์สามารถเข้าถึงได้สำหรับเด็กทุกคนในทุกที่ความพยายามของคุณช่วยให้เราสร้างแรงบันดาลใจให้กับนักสร้างสรรค์นวัตกรรมในอนาคต
     และเชื่อมช่องว่างด้านการศึกษาด้านเทคโนโลยี
@@ -1533,6 +1653,8 @@ th:
   help_page_speak_for_cs_desc: เรียนรู้เพิ่มเติมเกี่ยวกับงานสนับสนุนของ Code.org ทั่วประเทศสหรัฐอเมริกาและนโยบาย
     10 ข้อที่เราแนะนำให้รัฐนำมาใช้เพื่อสร้างพื้นฐานด้านวิทยาการคอมพิวเตอร์สำหรับนักเรียนทุกคนพลัส,
     หาวิธีที่คุณสามารถขับรถการเปลี่ยนแปลงในรัฐของคุณ.
+  yw_page_top_heading: หญิงสาวในวิทยาการคอมพิวเตอร์
+  yw_page_top_desc: เป็นเอกอัครราชทูต CS และเป็นส่วนหนึ่งในการปิดช่องว่างระหว่างเพศในด้านวิทยาการคอมพิวเตอร์
   hoc_live: ชั่วโมงของรหัสสด
   hoc_live_sign_up_title: ลงทะเบียนสำหรับ Hour of Code สด
   hoc_live_learn_title: เรียนรู้กับชั่วโมงของรหัสสด
@@ -1644,7 +1766,7 @@ th:
     180 ประเทศ ทุก ๆ คนสามารถเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดได้ทุกที่ ขณะที่บทช่วยสอนความยาว
     1 ชั่วโมงมีให้เลือกศึกษาในกว่า 45 ภาษา และที่สำคัญไม่จำเป็นต้องมีประสบการณ์มาก่อน
     <strong>อายุ 4 - 104 ปี</strong>
-  front_intro_default_2: ความเคลื่อนไหวในทั่วโลกในกว่า 180 ประเทศ
+  front_intro_default_2: ความเคลื่อนไหวทั่วโลกในกว่า 180 ประเทศ
   front_watch_video: ดูวิดีโอใหม่
   front_watch_regular_video: ดูวิดีโอ
   front_volunteers: ต้องการอาสาสมัครด้านเทคนิค
@@ -1823,7 +1945,7 @@ th:
     100 ล้าน
   front_join_us_description_short: วิทยาการคอมพิวเตอร์เป็นรากฐานสำหรับนักเรียนทุกคน
   front_join_us_button: ร่วมกับเรา
-  front_what_is_hoc: ชั่วโมงแห่งรหัสคืออะไร?
+  front_what_is_hoc: Hour of Code คืออะไร?
   front_join_us_header: ทุกคนสามารถเรียนรู้พื้นฐานและสนุกกับการทำมัน!
   front_join_us_volunteer_header: อาสาสมัครสำหรับ Hour of Code
   front_join_us_tutorials: เลือกชั่วโมงสอนรหัสของคุณ!
@@ -1875,10 +1997,15 @@ th:
   hoc_homepage_what_is_hoc_description: Hour of Code คือบทนำหนึ่งชั่วโมงเกี่ยวกับวิทยาการคอมพิวเตอร์
     โดยใช้บทช่วยสอนแสนสนุกเพื่อแสดงให้เห็นว่าทุกคนสามารถเรียนรู้พื้นฐานได้ แคมเปญระดับรากหญ้านี้ได้รับการสนับสนุนจากพันธมิตรกว่า
     400 รายและนักการศึกษา 200,000 คนทั่วโลก
+  hoc_homepage_registration_desc: ชั้นเรียนหรือกลุ่มของคุณสามารถเข้าร่วมกับหลายล้านคนทั่วโลกในการทำงาน
+    Hour of Code! การลงทะเบียนสำหรับการเฉลิมฉลองสัปดาห์การศึกษาด้านวิทยาศาสตร์คอมพิวเตอร์ประจำปีเริ่มต้นในเดือนตุลาคม
+    อย่างไรก็ตาม Hour of Code นั้นให้บริการตลอดทั้งปี
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[อ่านคำแนะนำวิธีใช้ของเรา](%{howto_guide_url})
     เพื่อวางแผนกิจกรรมสำหรับชั้นเรียนของคุณ"
   hoc_homepage_highlights_heading: ไฮไลท์ Hour of Code
   hoc_homepage_organized_by: Hour of Code จัดโดย [Code.org](%{codeorg_url}).
+  hoc_events_heading: ลงทะเบียนเพื่อโฮสต์ Hour of Code
+  hoc_events_jump_to_map: ข้ามไปที่แผนที่ Hour of Code
   signup_closed: ตอนนี้ปิดการลงทะเบียนสำหรับ Hour of Code แล้ว กรุณาตรวจสอบอีกครั้งในเดือนตุลาคมสำหรับการลงทะเบียน
     Hour of Code ถัดไป
   signup_registration_not_required: คุณไม่จำเป็นต้องลงทะเบียนเพื่อเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดเพราะกิจกรรมนี้เปิดตลอดปี
@@ -1905,8 +2032,8 @@ th:
   signup_event_entire_school_label: โรงเรียนของเราเข้าร่วมทั้งโรงเรียน
   signup_event_location_label: สถานที่ร่วมกิจกรรม (ถ้ามี)
   signup_event_location_error: จำเป็นต้องมีสถานที่ของงาน
-  signup_special_event_flag_label: กิจกรรมของฉันจะเกี่ยวข้องกับทั้งเขต, สมาชิกของชุมชน,
-    และ/หรือแผนพิเศษอื่น ๆ ที่จะไปเกินหนึ่งชั่วโมง
+  signup_special_event_flag_label: กิจกรรมของฉันจะเกี่ยวข้องกับทั้งเขต ทั้งองค์กร
+    สมาชิกของชุมชน และ/หรือแผนพิเศษอื่นๆ ที่จะใช้เวลาเกินหนึ่งชั่วโมง
   signup_special_event_details_label: รายละเอียดกิจกรรมพิเศษ
   signup_send_posters_flag_label: ส่ง <a href= "/resources/promote#posters">โปสเตอร์</a>
     ไปยังโรงเรียนหรือองค์กรของฉัน (สหรัฐอเมริกาเท่านั้น, ในขณะที่เครื่องล่าสุด)
@@ -1967,6 +2094,8 @@ th:
   map_title: แผนที่ชั่วโมงของรหัส
   map_header: "# กิจกรรมที่ลงทะเบียนสำหรับ Hour of Code 2017"
   map_header_count_year: "%{event_count} กิจกรรมที่ลงทะเบียนใน %{year}"
+  map_header_count_year_so_far: "%{event_count} เหตุการณ์ถูกลงทะเบียนจนถึงตอนนี้ในปี
+    %{year}"
   see_all_events: ดูกิจกรรมทั้งหมด
   map_header_company: "# โดยผู้จัดงาน บริษัท"
   map_header_country: "# ใน %{country}"
@@ -1978,6 +2107,7 @@ th:
   map_legend_cs_tech_jam: กิจกรรมพิเศษ
   map_warning: ดูรายชื่อกิจกรรมทั้งหมดได้จาก<a href='%{events_url}'>หน้ากิจกรรม</a>
   map_warning_markdown: ดูรายชื่อกิิจกรรมทั้งหมดได้จาก[หน้ากิจกรรม](%{events_url})
+  map_view_all_events: ดูรายการฉบับเต็มของกิจกรรม Hour of Code [here](%{events_url})
   meta_tag_og_title: 'ชั่วโมงแห่งรหัส: เข้าร่วมขบวนการนี้'
   meta_tag_og_description: ชั่วโมงเขียนโค้ดคือการเคลื่อนไหวในทั่วโลกที่เข้าถึงกลุ่มนักเรียนทุกช่วงอายุกว่าสิบล้านคนในกว่า
     180 ประเทศทั่วโลก และแสดงเป็นภาษาต่าง ๆ กว่า 45 ภาษา
@@ -1995,13 +2125,7 @@ th:
   twitter_default_text_donor: 'ฉันเข้าร่วมใน #HourOfCode ในปีนี้ใช่ไหมคะ(ขอบคุณ %{random_donor}
     สำหรับการสนับสนุน @codeorg)'
   hoc_faq_title: คำถามที่พบบ่อย
-  hoc_faq_what_is_hoc_q: ชั่วโมงแห่งรหัสคืออะไร?
-  hoc_faq_what_is_hoc_a: กิจกรรมชั่วโมงเขียนโค้ดซึ่งเริ่มต้นด้วยการแนะนำวิทยาการคอมพิวเตอร์โดยใช้เวลาหนึ่งชั่วโมง
-    ออกแบบมาเพื่อไขข้อข้องใจเกี่ยวกับ "โค้ด” เพื่อแสดงให้เห็นว่าทุกคนเรียนรู้หลักการพื้นฐานได้
-    และเพื่อขยายการมีส่วนร่วมในแขนงวิชาวิทยาการคอมพิวเตอร์ ซึ่งนับแต่นั้นมา ทั่วโลกได้ดำเนินความพยายามเพื่อเฉลิมฉลองวิทยาการคอมพิวเตอร์
-    โดยเริ่มต้นด้วยกิจกรรมการเขียนโค้ด 1 ชั่วโมง และขยายครอบคลุมกิจกรรมทุกอย่างภายในชุมชน
-    ดูรายละเอียดได้จาก<a href='%{tutorials}'>บทช่วยสอนและกิจกรรม</a> แคมเปญระดับรากหญ้านี้ได้รับการสนับสนุนจาก<a
-    href='%{partners}'>หุ้นส่วนกว่า 400 ราย</a> และนักการศึกษากว่า 200,000 คนทั่วโลก
+  hoc_faq_what_is_hoc_q: Hour of Code คืออะไร?
   hoc_faq_what_is_hoc_a_markdown: กิจกรรมชั่วโมงเขียนโค้ดซึ่งเริ่มต้นด้วยการแนะนำวิทยาการคอมพิวเตอร์โดยใช้เวลาหนึ่งชั่วโมง
     ออกแบบมาเพื่อไขข้อข้องใจเกี่ยวกับ "โค้ด” เพื่อแสดงให้เห็นว่าทุกคนเรียนรู้หลักการพื้นฐานได้
     และเพื่ขยายการมีส่วนร่วมในแขนงวิชาวิทยาการคอมพิวเตอร์ ซึ่งนับแต่นั้นมา ทั่วโลกได้ดำเนินความพยายามเพื่อเฉลิมฉลองวิทยาการคอมพิวเตอร์
@@ -2010,70 +2134,37 @@ th:
     400 ราย](%{partners}) และนักการศึกษากว่า 200,000 คนทั่วโลก
   hoc_faq_last_year: ลองบทช่วยสอนนี้
   hoc_faq_when_is_hoc_q: กิจกรรมชั่วโมงเขียนโค้ดจะเริ่มต้นเมื่อใด
-  hoc_faq_when_is_hoc_a: 'กิจกรรมชั่วโมงเขียนโค้ดจัดขึ้นทุกปีในระหว่าง<a href=''%{csedweek_url}''>สัปดาห์วิชาการวิทยาการคอมพิวเตอร์</a>
-    ทั้งนี้ %{campaign_date_year}สัปดาห์วิชาการวิทยาการคอมพิวเตอร์จะมีขึ้น %{campaign_date_full}
-    แต่คุณสามารถจัดกิจกรรมชั่วโมงเขียนโค้ดนี้ขึ้นเองได้ตลอดทั้งปี สัปดาห์วิชาการวิทยาการคอมพิวเตอร์จัดขึ้นเป็นประจำทุกปีเพื่อฉลองวันเกิดของผู้บุกเบิกการเขียนโปรแกรมคอมพิวเตอร์
-    <a href=''%{grace_hopper}''>พลเรือเอก Grace Murray Hopper</a> (วันที่ 9 ธันวาคม
-    ปี 1906)  '
   hoc_faq_when_is_hoc_a_markdown: 'กิจกรรมชั่วโมงเขียนโค้ดจัดขึ้นทุกปีในระหว่าง[สัปดาห์วิชาการวิทยาการคอมพิวเตอร์](%{csedweek_url})
     ทั้งนี้ %{campaign_date_year} สัปดาห์วิชาการวิทยาการคอมพิวเตอร์จะมีขึ้น %{campaign_date_full}
     แต่คุณสามารถจัดกิจกรรมชั่วโมงเขียนโค้ดนี้ขึ้นเองได้ตลอดทั้งปี สัปดาห์วิชาการวิทยาการคอมพิวเตอร์จัดขึ้นเป็นประจำทุกปีเพื่อฉลองวันเกิดของผู้บุกเบิกการเขียนโปรแกรมคอมพิวเตอร์
     [พลเรือเอก Grace Murray Hopper](%{grace_hopper})(วันที่ 9 ธันวาคม ปี 1906)  '
   hoc_faq_why_cs_q: เหตุใดจึงต้องเป็นวิทยาการคอมพิวเตอร์
-  hoc_faq_why_cs_a: 'ผู้เรียน<i>ทุกคน</i>ควรมีโอกาสได้ศึกษาวิทยาการคอมพิวเตอร์ ที่จะช่วยเพิ่มพูนทักษะการแก้ไขปัญหา
-    การใช้ตรรกะและการมีความคิดสร้างสรรค์ หากเริ่มต้นตั้งแต่วันนี้ ผู้เรียนจะมีพื้นฐานสู่ความสำเร็จบนเส้นทางอาชีพในทศวรรษที่
-    21 ดูสถิติเพิ่มเติม<a href=''%{stats_url}''>ที่นี่</a>  '
   hoc_faq_why_cs_a_markdown: "  ผู้เรียน_ทุกคน_ ควรมีโอกาสได้ศึกษาวิทยาการคอมพิวเตอร์
     ที่จะช่วยเพิ่มพูนทักษะการแก้ไขปัญหา การใช้ตรรกะและการมีความคิดสร้างสรรค์ หากเริ่มต้นตั้งแต่วันนี้
     ผู้เรียนจะมีพื้นฐานสู่ความสำเร็จสำหรับเส้นทางอาชีพในทศวรรษที่ 21 ดูสถิติเพิ่มเติม
     [ที่นี่](%{stats_url})  "
   hoc_faq_how_participate_q: ฉันจะเข้าร่วมในกิจกรรมชั่วโมงเขียนโค้ดได้อย่างไร
-  hoc_faq_how_participate_a: "<a href='/how-to'>เริ่มวางแผนที่นี่</a>ด้วยการทบทวนวิธีดำเนินการของเรา
-    คุณสามารถจัดกิจกรรมชั่วโมงเขียนโค้ดที่โรงเรียนหรือในชุมชนของคุณเองได้ &mdash;
-    ไม่ว่าจะเป็นภายในชมรมหลักสูตรพิเศษ องค์กรไม่แสวงหาผลกำไรหรือที่ทำงาน หรือจะลองด้วยตัวเองเมื่อถึง
-    %{campaign_date}"
   hoc_faq_how_participate_a_markdown: "[เริ่มวางแผนที่นี่](%{howto})ด้วยการทบทวนวิธีดำเนินการของเรา
-    คุณสามารถจัดกิจกรรมชั่วโมงเขียนโค้ดที่โรงเรียนหรือในชุมชนของคุณเองได้ — ไม่ว่าจะเป็นภายในชมรมหลักสูตรพิเศษ
-    องค์กรไม่แสวงหาผลกำไรหรือที่ทำงาน หรือจะลองด้วยตัวเองเมื่อถึง %{campaign_date}"
+    คุณสามารถจัดกิจกรรม Hour of Code ที่โรงเรียนหรือในชุมชนของคุณเองได้ — ไม่ว่าจะเป็นภายในชมรมหลักสูตรพิเศษ
+    องค์กรไม่แสวงหาผลกำไรหรือที่ทำงาน"
   hoc_faq_behind_hoc_q: ใครที่อยู่เบื้องหลังกิจกรรมชั่วโมงเขียนโค้ด
-  hoc_faq_behind_hoc_a: 'กิจกรรมชั่วโมงเขียนโค้ดเป็นผลผลิตจากงานสัปดาห์วิชาการชั่วโมงเขียนโค้ดและวิทยาการคอมพิวเตอร์  <a
-    href=''%{partner_url}''>Advisory and Review Committees</a> และเป็นความร่วมมือแบบที่ไม่เคยมีมาก่อนระหว่างหุ้นส่วนที่ร่วมกันสนับสนุนกิจกรรมชั่วโมงเขียนโค้ด
-    &mdash; หุ้นส่วนเหล่านั้นได้แก่ Microsoft, Apple, Amazon, Boys and Girls Clubs
-    of America และ College Board  '
-  hoc_faq_behind_hoc_a_markdown: 'กิจกรรมชั่วโมงเขียนโค้ดเป็นผลผลิตจากงานสัปดาห์วิชาการชั่วโมงเขียนโค้ดและวิทยาการคอมพิวเตอร์
-    [Advisory and Review Committees](%{partner_url}) และเป็นความร่วมมือแบบที่ไม่เคยมีมาก่อนระหว่างหุ้นส่วนที่ร่วมกันสนับสนุนกิจกรรมชั่วโมงเขียนโค้ด
-    — หุ้นส่วนเหล่านั้นได้แก่ Microsoft, Apple, Amazon, Boys and Girls Clubs of America
-    และ College Board  '
+  hoc_faq_behind_hoc_a_markdown: Hour of Code จัดขึ้นโดย Code.org และขับเคลื่อนโดยคณะกรรมการ
+    Hour of Code Review ตลอดจนความร่วมมือที่ไม่เคยมีมาก่อนของ [พาร์ ทเนอร์](%{partner_url})
+    ที่ร่วมกันสนับสนุน Hour of Code — รวมถึง Microsoft, Apple , Amazon, Boys and Girls
+    Clubs of America และคณะกรรมการวิทยาลัย
   hoc_faq_host_q: ฉันไม่ม่ีความรู้เรื่องการเขียนโค้ดเลย ฉันยังจะจัดกิจกรรมนี้ได้อยู่หรือไม่
-  hoc_faq_host_a: แน่นอนว่า กิจกรรมชั่วโมงเขียนโค้ดเป็นกิจกรรมที่ผู้เรียนศึกษาได้ด้วยตัวเอง
-    สิ่งที่คุณต้องทำคือ<a href='%{codeorg_url}/learn'>ลองศึกษาบทช่วยสอนปัจจุบันของเรา</a>
-    เลือกบทช่วยสอนที่คุณต้องการ และเลือกชั่วโมง&mdash; ส่วนที่เหลือเราจะดูแลให้ เรายังมีตัวเลือกให้กับผู้เรียนทุกช่วงอายุและประสบการณ์
-    ตั้งแต่อนุบาลขึ้นไปเลยทีเดียว เริ่มต้นวางแผนกิจกรรมสำหรับตัวคุณเองด้วยการอ่าน<a
-    href='/how-to'>วิธีดำเนินการ</a>ของเรา
-  hoc_faq_host_a_markdown: แน่นอนว่า กิจกรรมชั่วโมงเขียนโค้ดเป็นกิจกรรมที่ผู้เรียนศึกษาได้ด้วยตัวเอง
-    สิ่งที่คุณต้องทำคือ[ลองศึกษาบทช่วยสอนปัจจุบันของเรา](%{codeorg_url}/learn) เลือกบทช่วยสอนที่คุณต้องการ
-    และเลือกชั่วโมง — ส่วนที่เหลือเราจะดูแลให้ เรายังมีตัวเลือกให้กับผู้เรียนทุกช่วงอายุและประสบการณ์
-    ตั้งแต่อนุบาลขึ้นไปเลยทีเดียว เริ่มต้นวางแผนกิจกรรมสำหรับตัวคุณเองด้วยการอ่าน[วิธีดำเนินการ](%{howto})ของเรา
+  hoc_faq_host_a_markdown: แน่นอนว่า กิจกรรม Hour of Code เป็นแบบดำเนินการด้วยตนเอง
+    สิ่งที่คุณต้องทำคือ [ลองใช้บทช่วยสอนปัจจุบันของเรา](%{learn_url}) เลือกบทช่วยสอนที่คุณต้องการ
+    และเลือกชั่วโมง ที่เหลือเราจะจัดการเอง นอกจากนี้เรายังมีตัวเลือกสำหรับทุกวัยและทุกระดับประสบการณ์
+    ตั้งแต่ระดับอนุบาลขึ้นไป เริ่มวางแผนกิจกรรมของคุณด้วยการอ่าน [วิธีการใช้งาน](%{howto_url})
+    ของ
   hoc_faq_devices_q: ฉันควรใช้อุปกรณ์ใดกับนักเรียน
-  hoc_faq_devices_a: เปิดบทช่วยสอนของ Code.org ได้บนอุปกรณ์และเบราว์เซอร์ทั้งหมด คุณจะเห็นรายละเอียดเพิ่มเติมเกี่ยวกับข้อกำหนดทางด้านเทคนิคสำหรับบทช่วยสอนของ
-    Code.org ได้จาก<a href='%{codeorg_url}/educate/it'>ที่นี่</a> ส่วนข้อกำหนดทางด้านเทคนิคสำหรับบทช่วยสอนที่ไม่ใช่ของ
-    Code.org นั้นดูได้จาก<a href='%{codeorg_url}/learn'>%{partner_url}/เรียนรู้</a>ในส่วนคำอธิบายเฉพาะของบทช่วยสอน
-    อย่าลืมว่าเรายังมี<a href='%{unplugged_url}'>กิจกรรมแบบออฟไลน์</a>หากโรงเรียนของคุณไม่ได้เตรียมบทช่วยสอนเอาไว้ให้!
-  hoc_faq_devices_a_markdown: 'เปิดบทช่วยสอน Code.org ได้บนอุปกรณ์และเบราว์เซอร์ทั้งหมด
-    คุณจะเห็นรายละเอียดเพิ่มเติมเกี่ยวกับข้อกำหนดทางด้านเทคนิสำหรับบทช่วยสอนของ Code.org
-    ได้จาก[ที่นี่](%{codeorg_url}/educate/it) ดูข้อกำหนดทางด้านเทคนิคสำหรับบทช่วยสอนที่ไม่ใช่ของ
-    Code.org ได้จาก[%{partner_url}/learn](%{codeorg_url}/learn) โดยดูในส่วนคำอธิบายเฉพาะของบทช่วยสอน
-    อย่าลืมว่าเรายังมี[กิจกรรมแบบออฟไลน์](%{unplugged_url})หากโรงเรียนของคุณไม่ได้เตรียมบทช่วยสอนเอาไว้ให้!  '
+  hoc_faq_devices_a_markdown: บทช่วยสอน Code.org ทำงานบนอุปกรณ์และเบราว์เซอร์ทั้งหมด
+    คุณสามารถดูข้อมูลเพิ่มเติมเกี่ยวกับความต้องการเทคโนโลยีการสอนของ Code.org ได้
+    [here](%{it_url}) ความต้องการด้านเทคนิคสำหรับบทช่วยสอนที่ไม่ใช่ Code.org สามารถพบได้ที่
+    [hourofcode.com/learn](%{learn_url}) ในคำอธิบายเฉพาะของบทช่วยสอน อย่าลืมว่าเรายังมี
+    [กิจกรรมแบบออฟไลน์](%{unplugged_url}) หากโรงเรียนของคุณไม่ได้เตรียมบทช่วยสอนไว้!
   hoc_faq_need_computers_q: ฉันต้องเตรียมคอมพิวเตอร์ไว้ให้กับผู้เรียนทุกคนรึเปล่า
-  hoc_faq_need_computers_a: ไม่ เรามีบทช่วยสอนสำหรับกิจกรรมชั่วโมงเขียนโค้ดที่สามารถเปิดบนพีซี
-    สมาร์ทโฟน แท็บเล็ต และบทช่วยสอนบางบทไม่ต้องการคอมพิวเตอร์ด้วยซ้ำ! คุณเข้าร่วมกิจกรรมนี้ได้จากทุกที่ไม่ว่าจะกับอุปกรณ์อะไรก็ตามที่คุณมี
-    <p><i>ต่อไปนี้คือตัวเลือกสองสามรายการ:</i> <br> <ul> <li><b>จับคู่กันทำงาน</b>
-    <a href='%{pair_programming_research}'>ผลงานวิจัยแสดงให้เห็นว่า</a> ผู้เรียนจะเรียนรู้ได้ดีที่สุดด้วย<a
-    href='%{pair_programming_video}'>การเขียนโปรแกรมเป็นคู่</a> การแชร์คอมพิวเตอร์และการทำงานด้วยกัน
-    ส่งเสริมให้ผู้เรียนช่วยกันคิดช่วยกันทำ <li><b>ใช้หน้าจอที่เช็ตไว้</b> หากคุณมีเครื่องฉายและหน้าจอไว้สำหรับคอมพิวเตอร์ที่เชื่อมต่อกับเว็บเรียบร้อยแล้ว
-    แสดงว่าทั้งกลุ่มของคุณสามารถทำกิจกรรมชั่วโมงเขียนโค้ดด้วยกัน ดูวิดีโอแต่ละส่วนด้วยกันและผลัดกันไขปริศนาหรือตอบคำถาม
-    <li><b>เรียนแบบออฟไลน์</b> เรามี<a href='%{unplugged_url}'>บทช่วยสอนที่ไม่ต้องใช้คอมพิวเตอร์</a>เลย
-    </ul>
   hoc_faq_need_computers_a_markdown: |-
     ไม่ เรามีบทช่วยสอนสำหรับกิจกรรมชั่วโมงเขียนโค้ดที่สามารถเปิดบนพีซี สมาร์ทโฟน แท็บเล็ต และบทช่วยสอนบางบทไม่ต้องการคอมพิวเตอร์ด้วยซ้ำ! คุณเข้าร่วมกิจกรรมนี้ได้จากทุกที่ไม่ว่าจะกับอุปกรณ์อะไรก็ตามที่คุณมี
 
@@ -2083,127 +2174,84 @@ th:
     - **ใช้หน้าจอที่เซ็ตไว้** หากคุณมีเครื่องฉายและหน้าจอไว้สำหรับคอมพิวเตอร์ที่เชื่อมต่อกับเว็บเรียบร้อยแล้ว แสดงว่าทั้งกลุ่มของคุณสามารถทำกิจกรรมชั่วโมงเขียนโค้ดด้วยกัน ดูวิดีโอแต่ละส่วนด้วยกันและผลัดกันไขปริศนาหรือตอบคำถาม
     - **เรียนแบบออฟไลน์** เรามี[บทช่วยสอนที่ไม่ต้องใช้คอมพิวเตอร์](%{unplugged_url})เลย
   hoc_faq_international_q: ฉันอยู่ใน<country> ฉันจะมีส่วนร่วมในกิจกรรมของประเทศอื่นได้อย่างไร
-  hoc_faq_international_a: ทุกคนสามารถจัดกิจกรรมชั่วโมงเขียนโค้ดได้จากทุกที่ที่ต้องการ
-    โดยเมื่อปีที่แล้ว นักเรียนทั่วโลกได้รวมตัวกันเพื่อทำกิจกรรมชั่วโมงเขียนโค้ด ดูรายละเอียดเพิ่มเติมได้จาก<a
-    href='/promote'>ที่นี่</a>
   hoc_faq_international_a_markdown: ไม่ว่าใครก็จัดกิจกรรมชั่วโมงเขียนโค้ดได้ในทุกที่ที่ต้องการ
     โดยปีที่แล้ว มีนักเรียนทั่วโลกร่วมกันทำกิจกรรมชั่วโมงเขียนโค้ด ดูรายละเอียดเพิ่มเติมได้จาก[ที่นี่](%{promote})
   hoc_faq_tutorial_q: ฉันจะทำบทช่วยสอนกิจกรรมชั่วโมงเขียนโค้ดได้อย่างไร
-  hoc_faq_tutorial_a: 'หากคุณสนใจอยากเป็นหุ้นส่วนของบทช่วยสอน<a href=''/tutorial-guidelines''>ดูแนวทางและคำแนะนำของเรา</a>
-    เราอยากจะจัดกิจกรรมที่เน้นการมีส่วนร่วมในหลากหลายรูปแบบ แต่เป้าหมายหลักก็ยังคงเป็นการมอบประสบการณ์ที่ดีที่สุดให้กับผู้เรียนและผู้สอนที่ยังไม่เคยรู้จักกับวิทยาการคอมพิวเตอร์มาก่อน  '
   hoc_faq_tutorial_a_markdown: หากคุณสนใจอยากร่วมเป็นหุ้นส่วนของบทช่วยสอน [ดูแนวทางและคำแนะนำของเรา](%{tutorial_guidelines})
     เราอยากจะจัดกิจกรรมที่เน้นการมีส่วนร่วมในหลากหลายรูปแบบ แต่เป้าหมายหลักก็ยังคงเป็นการมอบประสบการณ์ที่ดีที่สุดให้กับผู้เรียนและผู้สอนที่ยังไม่เคยรู้จักกับวิทยาการคอมพิวเตอร์มาก่อน
   hoc_faq_account_q: นักเรียนต้องใช้บัญชีเพื่อล็อกเข้าสู่ระบบหรือไม่
-  hoc_faq_account_a: ไม่ จริงๆ ไม่ต้องลงทะเบียนหรือลงชื่อเข้าระบบเลยสำหรับนักเรียนที่ต้องการลองกิจกรรมชั่วโมงเขียนโค้ด
-    โดย<a href='%{codeorg_url}/learn/beyond'>หลักสูตรติดตามผล</a>เกือบทั้งหมดระบุว่าต้องสร้างบัญชีไว้เก็บผลงานความคืบหน้าของนักเรียน
-    นอกจากนั้น การลงทะเบียนกิจกรรมชั่วโมงเขียนโค้ดจะไม่สร้างบัญชี Code Studio ให้โดยอัตโนมัติ
-    หากคุณต้องการสร้างบัญชีให้นักเรียน โปรดทำตาม<a href='https://youtu.be/_smelV_KISE'>คำแนะนำ</a>เหล่านี้
-  hoc_faq_account_a_markdown: ไม่ จริง ๆ ไม่ต้องลงทะเบียนหรือลงชื่อเข้าระบบเลยสำหรับนักเรียนที่ต้องการลองกิจกรรมชั่วโมงเขียนโค้ด
-    โดย[หลักสูตรติดตามผล](%{codeorg_url}/learn/beyond)เกือบทั้งหมดระบุว่าต้องสร้างบัญชีไว้เก็บผลงานความคืบหน้าของนักเรียน
-    นอกจากนั้น การลงทะเบียนกิจกรรมชั่วโมงเขียนโค้ดจะไม่สร้างบัญชี Code Studio ให้โดยอัตโนมัติ
-    หากคุณต้องการสร้างบัญชีให้นักเรียน โปรดทำตาม[คำแนะนำ]เหล่านี้(https://youtu.be/_smelV_KISE)
+  hoc_faq_account_a_markdown: ไม่ นักเรียนไม่จำเป็นต้องลงทะเบียนหรือเข้าสู่ระบบเพื่อทดลองกิจกรม
+    Hour of Code [หลักสูตรต่อเนื่อง](%{beyond_url}) ส่วนใหญ่กำหนดให้ต้องสร้างบัญชีเพื่อบันทึกความก้าวหน้าของนักเรียน
+    นอกจากนี้ การลงทะเบียน Hour of Code ไม่ได้สร้างบัญชี Code Studio ให้โดยอัตโนมัติ
+    หากคุณต้องการสร้างบัญชีให้นักเรียน โปรดปฏิบัติตาม [instructions](%{section_instructions_url})
+    เหล่านี้
   hoc_faq_high_school_q: ฉันควรทำกิจกรรมใดร่วมกับนักเรียนระดับมัธยมปลาย
-  hoc_faq_high_school_a: 'บทช่วยสอนสตาร์วอร์สและไมน์คราฟท์เหมาะสำหรับผู้เรียนระดับมัธยมศึกษาตอนปลาย
-    โดยเฉพาะสตาร์วอรส์ในเวอร์ชั่นจาวาสคริปต์ และระดับที่เปิดให้เล่นฟรีของบทช่วยสอนทั้งสองบท
-    แต่เราก็แนะนำให้ลองบทช่วยสอนสำหรับผู้เริ่มเรียนหนึ่งบทต่อไปนี้จาก<a href=''%{codeorg_url}/learn''>%{partner_url}/เรียนรู้</a>เพื่อเริ่มต้น
-    เช่น บทช่วยสอนสำหรับเจ้านกขี้โมโหหรือแอนนาและเอลซ่า ผู้เรียนระดับมัธยมศึกษาตอนปลายควรศึกษาบทช่วยสอนเหล่านี้ให้เสร็จภายใน
-    30 นาที แล้วจึงลองบทช่วยสอนขั้นสูงขึ้นในจาวาสคริปต์ เช่น บทช่วยสอน Khan Academy
-    หรือ CodeHS  '
-  hoc_faq_high_school_a_markdown: 'บทช่วยสอนสตาร์วอร์สและไมน์คราฟท์เหมาะสำหรับผู้เรียนระดับมัธยมศึกษาตอนปลาย
-    โดยเฉพาะสตาร์วอรส์ในเวอร์ชั่นจาวาสคริปต์ และระดับที่เปิดให้เล่นฟรีของบทช่วยสอนทั้งสองบท
-    แต่เราก็แนะนำให้ลองบทช่วยสอนสำหรับผู้เริ่มเรียนหนึ่งบทต่อไปนี้จาก[%{partner_url}/เรียนรู้](%{codeorg_url}/learn)เพื่อเริ่มต้น
-    เช่น บทช่วยสอนสำหรับเจ้านกขี้โมโหหรือแอนนาและเอลซ่า ผู้เรียนระดับมัธยมศึกษาตอนปลายควรศึกษาบทช่วยสอนเหล่านี้ให้เสร็จภายใน
-    30 นาที แล้วจึงลองบทช่วยสอนขั้นสูงขึ้นในจาวาสคริปต์ เช่น บทช่วยสอน Khan Academy
-    หรือ CodeHS  '
+  hoc_faq_high_school_a_markdown: บทช่วยสอน Star Wars และ Minecraft ของเรานั้นยอดเยี่ยมสำหรับนักเรียนมัธยมปลาย
+    โดยเฉพาะเวอร์ชัน JavaScript ของ Star Wars และระดับที่เปิดให้เล่นฟรีสำหรับบทช่วยสอนทั้งสองบท
+    แต่เราแนะนำให้ทดลองเริ่มต้นด้วยบทช่วยสอนสำหรับผู้เริ่มต้นใน [hourofcode.com/learn](%{learn_url})
+    เช่น บทช่วยสอน Angry Birds หรือ Anna และ Elsa จาก Frozen นักเรียนระดับมัธยมปลายควรศึกษาหนึ่งในบทช่วยสอนให้เสร็จภายใน
+    30 นาที จากนั้นจึงลองใช้บทช่วยสอนขั้นสูงเพิ่มเติมใน JavaScript เช่น Khan Academy
+    หรือ CodeHS
   hoc_faq_scratch_q: ฉันกำลังใช้ภาษา Scratch ทำกิิจกรรมชั่วโมงเขียนโค้ด แต่ถ้าอุปกรณ์ที่นักเรียนมีคือ
     iPads ไม่ใช่แล็บท็อปล่ะ
-  hoc_faq_scratch_a: Scratch ไม่ทำงานบนแท็บเล็ต หากนักเรียนของคุณยังเด็กอยู่ พวกเขาใช้แอป
-    ScratchJR iPad ได้ (สำหรับเด็กก่อนวัยเรียน) หากคุณค้นหาบทช่วยสอนที่<a href='%{codeorg_url}/learn'>%{partner_url}/เรียนรู้</a>
-    คุณอาจจะพบบทช่วยสอนอื่นที่ทำงานบน iPads - เช่นจาก Code.org, Tynker, Lightbot หรือ
-    CodeSpark
   hoc_faq_scratch_a_markdown: Scratch ไม่ทำงานบนแท็บเล็ต หากนักเรียนของคุณยังเด็กอยู่
     พวกเขาใช้แอป ScratchJR iPad ได้ (สำหรับเด็กก่อนวัยเรียน) หากคุณค้นหาบทช่วยสอนที่[%{partner_url}/เรียนรู้](%{codeorg_url}/เรียนรู้)
     คุณอาจจะพบบทช่วยสอนอื่นที่ทำงานบน iPads - เช่นจาก Code.org, Tynker, Lightbot หรือ
     CodeSpark
   hoc_faq_count_hoc_q: คุณนับกิจกรรมชั่วโมงเขียนโค้ดอย่างไร
   hoc_faq_map_q: ทำไมฉันไม่เห็นตำแหน่งของตัวเองบนแผนที่
-  hoc_faq_map_a: 'ขออภัยที่คุณไม่เห็นกิจกรรมของคุณบนแผนที่กิจกรรมชั่วโมงเขียนโค้ด
-    เนื่องจากมีผู้จัดกิจกรรมหลายหมื่นรายลงทะเบียน แผนที่จึงรวบรวมข้อมูลและแสดงผลจุดข้อมูลของหลายๆ
-    กิจกรรม หากคุณคลิกที่ลิงก์<a href=''%{events_url}''>หน้ากิจกรรม</a>ด้านล่างแผนที่
-    ระบบจะนำคุณไปที่รายการกิจกรรมทั้งหมดที่เรียงตามสถานะ และจะพบกิจกรรมของคุณจากรายการนี้
-    นอกจากนั้น ผู้ที่ลงทะเบียนกิจกรรมชั่วโมงเขียนโค้ดมีนับพันคน จึงต้องใช้เวลา 48
-    ชั่วโมงเพื่ออัพเดทแผนที่และรายชื่อกิจกรรม ขอแนะนำให้กลับมาตรวจสอบในอีก 2-3 วันถัดจากนี้  '
-  hoc_faq_map_a_markdown: 'ขออภัยที่คุณไม่เห็นกิจกรรมของคุณบนแผนที่กิจกรรมชั่วโมงเขียนโค้ด
-    เนื่องจากมีผู้จัดกิจกรรมหลายหมื่นรายลงทะเบียน แผนที่จึงรวบรวมข้อมูลและแสดงผลจุดข้อมูลของหลายๆ
-    กิจกรรม หากคุณคลิกที่ลิงก์[หน้ากิจกรรม](%{events_url})ด้านล่างแผนที่ ระบบจะนำคุณไปที่รายการกิจกรรมทั้งหมดที่เรียงตามสถานะ
-    และจะพบกิจกรรมของคุณจากรายการนี้ นอกจากนั้น ผู้ที่ลงทะเบียนกิจกรรมชั่วโมงเขียนโค้ดมีนับพันคน
-    จึงต้องใช้เวลา 48 ชั่วโมงเพื่ออัพเดทแผนที่และรายชื่อกิจกรรม ขอแนะนำให้กลับมาตรวจสอบในอีก
-    2-3 วันถัดจากนี้  '
-  hoc_faq_count_hoc_a: โปรแกรมติดตามกิจกรรมชั่วโมงเขียนโค้ดไม่ใช่ตัววัดการเข้าร่วมกิจกรรมได้เสียทีเดียว
-    เราไม่สามารถนับเลขประจำตัวผู้เรียนได้ทั้งหมดเมื่อติดตามการมีส่วนร่วมในกิจกรรมชั่วโมงเขียนโค้ด
-    โดยเฉพาะเนื่องจากเราไม่ได้กำหนดให้ผู้เรียนต้องเข้าสู่ระบบหรือลงทะเบียน จึงทำให้เรานับจำนวนผู้เข้าร่วมกิจกรรมได้มากเกินไปบ้างหรือน้อยเกินไปบ้าง
-    อ่านรายละเอียดทั้งหมด<a href='%{codeorg_url}/loc'>ที่นี่</a>
-  hoc_faq_count_hoc_a_markdown: โปรแกรมติดตามกิจกรรมชั่วโมงเขียนโค้ดไม่ใช่ตัววัดการเข้าร่วมกิจกรรมได้เสียทีเดียว
-    เราไม่สามารถนับเลขประจำตัวผู้เรียนได้ทั้งหมดเมื่อติดตามการมีส่วนร่วมในกิจกรรมชั่วโมงเขียนโค้ด
-    โดยเฉพาะเนื่องจากเราไม่ได้กำหนดให้ผู้เรียนต้องเข้าสู่ระบบหรือลงทะเบียน จึงทำให้เรานับจำนวนผู้เข้าร่วมกิจกรรมได้มากเกินไปบ้างหรือน้อยเกินไปบ้าง
-    อ่านรายละเอียดทั้งหมด[ที่นี่](%{codeorg_url}/loc)
+  hoc_faq_map_a_markdown: ขออภัยอย่างยิ่งที่คุณไม่เห็นกิจกรรมของคุณบนแผนที่ Hour of
+    Code เนื่องจากมีผู้จัดกิจกรรมหลายหมื่นคนที่ลงทะเบียน แผนที่จึงรวบรวมข้อมูลและแสดงจุดเดียวสำหรับหลายกิจกรรม
+    หากคุณคลิกลิงก์ [หน้ากิจกรรม](%{events_url}) ด้านล่างแผนที่ ระบบจะนำคุณไปยังรายการกิจกรรมทั้งหมดเรียงตามสถานะ
+    และสามารถค้นหากิจกรรมของคุณในรายการนั้นได้ นอกจากนี้ เนื่องจากมีผู้ลงทะเบียน Hour
+    of Code หลายพันคน โดยปกติแล้วรายการแผนที่และกิจกรรมจะใช้เวลาอัปเดต 48 ชั่วโมง
+    โปรดกลับมาตรวจสอบอีกครั้งในอีกสองสามวัน!
+  hoc_faq_count_hoc_a_markdown: 'เราไม่นับรหัสนักศึกษาที่ไม่ซ้ำกันอย่างสมบูรณ์เมื่อติดตามการเข้าร่วมใน
+    Hour of Code เหตุผลเพราะเราไม่ต้องการให้เกิดอุปสรรคในการ "เข้าสู่ระบบ / ลงทะเบียน"
+    ก่อนที่นักเรียนหรือชั้นเรียนจะพยายามเรียนรู้เป็นครั้งแรก และส่วนหนึ่งเป็นเพราะมีกิจกรรมมากมายที่เราไม่สามารถติดตามทางออนไลน์ได้
+    เราดำเนินการบางอย่างเพื่อลดการนับที่ซ้ำซ้อน แต่ถ้าไม่มีการแจ้งให้เข้าสู่ระบบ การดำเนินการนี้จะทำงานได้ไม่สมบูรณ์
+    ในเวลาเดียวกัน มีกิจกรรมของนักเรียนมากมายใน Hour of Code ที่ไม่ได้รับการติดตาม
+    ตัวอย่างเช่น: (1) นักเรียนที่ใช้แอปมือถือ/แท็บเล็ตเพื่อลองใช้ Hour of Code โดยทั่วไปจะไม่นับ
+    (2) นักเรียนที่ใช้หน้าจอร่วมกันสำหรับการเขียนโปรแกรมคู่หรือการเขียนโปรแกรมกลุ่มอาจนับเป็นนักเรียนหนึ่งคน
+    (3) นักเรียนที่พยายามทำกิจกรรมในชั้นเรียนแบบออฟไลน์จะไม่สามารถนับทางออนไลน์ได้
+    (4) ผู้สอนที่สร้างกิจกรรม Hour of Code ของตนเอง เป็นผลให้มีการนับน้อยเกินไปและการนับที่ซ้ำซ้อนบ้าง
+    ดังนั้นเราจึงไม่ถือว่าตัวติดตาม Hour of Code เป็นการวัดการใช้งานที่แน่นอน หรือเป็นแนวทางที่ถูกต้องอย่างแน่นอน
+    และแสดงให้เห็นว่ามีนักเรียนหลายสิบล้านคนเข้าร่วม'
   hoc_faq_one_hour_q: ในหนึ่งชั่วโมงเราจะเรียนรู้ได้มากน้อยแค่ไหน
-  hoc_faq_one_hour_a: 'เป้าหมายของกิจกรรมชั่วโมงเขียนโค้ดไม่ใช่เพื่อสอนให้ใครก็ตามกลายเป็นนักวิทยาศาสตร์ผู้เชี่ยวชาญด้านคอมพิวเตอร์ภายในหนึ่งชั่วโมง
-    หนึ่งชั่วโมงเพียงพอแค่การถ่ายทอดให้รู้ว่าวิทยาการคอมพิวเตอร์นั้นสนุกและสร้างสรรค์
-    วิทยาการคอมพิวเตอร์เข้าถึงได้ในผู้เรียนทุกวัย สำหรับผู้เรียนทุกคนไม่ว่าจะมีพื้นเพมาอย่างไร
-    ความสำเร็จของแคมเปญนี้ไม่ได้วัดจากจำนวนนักเรียน CS ที่เข้ามาเรียน แต่ความสำเร็จดูได้จากการมีส่วนร่วมอย่างแข็งขันในหมู่ผู้เรียนทุกเพศ
-    กลุ่มเชื้อชาติและเศรษฐกิจสังคม และการเพิ่มจำนวนของผู้ที่สมัครและเข้าร่วมในหลักสูตร
-    CS ที่เราจะเห็นในทุกระดับชั้น ผู้เรียนและผู้สอนนับล้านคนที่เข้าร่วมแคมเปญนี้ต่างตัดสินใจเรียนเพิ่มเติมหลังจากหนึ่งชั่วโมงแรกมาเป็นตลอดหนึ่งวันหรือตลอดทั้งสัปดาห์หรือนานกว่านั้น
-    ขณะที่ผู้เรียนอีกหลายคนตัดสินใจสมัครเรียนทั้งหลักสูตร (หรือแม้แต่เรียนเป็นวิชาเอกในวิทยาลัย)<br/><br/>นอกจากนักเรียน
-    อีกหนึ่ง “ผู้เรียน” คือนักการศึกษาที่มีความมั่นใจหลังจากหนึ่งชั่วโมง โดยพวกเขาสามารถสอนเรื่องวิทยาการคอมพิวเตอร์ได้แม้ไม่ได้ศึกษาจบหลักสูตรของวิทยาลัยในฐานะนักวิทยาการคอมพิวเตอร์
-    ผู้สอนหลายพันคนตัดสินใจเรียนเรื่องวิทยาการคอมพิวเตอร์ให้มากขึ้น ไม่ว่าจะเป็น PD
-    หรือการเสนอหลักสูตรติดตามผลออนไลน์ หรือทั้งสองแบบ แม้แต่ผู้บริหารของโรงเรียนก็พิจารณาเรื่องนี้เพราะตระหนักว่าวิทยาการคอมพิวเตอร์เป็นเรื่องที่นักเรียนต้องการและผู้สอนสามารถจัดการได้<br/><br/>และเหนือสิ่งอื่นใดคือ
-    สิ่งที่ผู้มีส่วนร่วมทุกคนสามารถเรียนรู้ได้ในหนึ่งชั่วโมงคือสิ่งที่เราสามารถทำได้  '
-  hoc_faq_one_hour_a_markdown: "เป้าหมายของกิจกรรมชั่วโมงเขียนโค้ดไม่ใช่เพื่อสอนให้ใครก็ตามกลายเป็นนักวิทยาศาสตร์ผู้เชี่ยวชาญด้านคอมพิวเตอร์ภายในหนึ่งชั่วโมง
-    หนึ่งชั่วโมงเพียงพอแค่การถ่ายทอดให้รู้ว่าวิทยาการคอมพิวเตอร์นั้นสนุกและสร้างสรรค์
-    วิทยาการคอมพิวเตอร์เข้าถึงได้ในผู้เรียนทุกวัย สำหรับผู้เรียนทุกคนไม่ว่าจะมีพื้นเพมาอย่างไร
-    ความสำเร็จของแคมเปญนี้ไม่ได้วัดจากจำนวนนักเรียน CS ที่เข้ามาเรียน แต่ความสำเร็จดูได้จากการมีส่วนร่วมอย่างแข็งขันในหมู่ผู้เรียนทุกเพศ
-    กลุ่มเชื้อชาติและเศรษฐกิจสังคม และการเพิ่มจำนวนของผู้ที่สมัครและเข้าร่วมในหลักสูตร
-    CS ที่เราจะเห็นในทุกระดับชั้น ผู้เรียนและผู้สอนนับล้านคนที่เข้าร่วมแคมเปญนี้ต่างตัดสินใจเรียนเพิ่มเติมหลังจากหนึ่งชั่วโมงแรกมาเป็นตลอดหนึ่งวันหรือตลอดทั้งสัปดาห์หรือนานกว่านั้น
-    ขณะที่ผู้เรียนอีกหลายคนตัดสินใจสมัครเรียนทั้งหลักสูตร (หรือแม้แต่เรียนเป็นวิชาเอกในวิทยาลัย)\n\nนอกจากนักเรียน
-    อีกหนึ่ง “ผู้เรียน” คือนักการศึกษาที่มีความมั่นใจหลังจากหนึ่งชั่วโมง โดยพวกเขาสามารถสอนเรื่องวิทยาการคอมพิวเตอร์ได้แม้ไม่ได้ศึกษาจบหลักสูตรของวิทยาลัยในฐานะนักวิทยาการคอมพิวเตอร์
-    ผู้สอนหลายพันคนตัดสินใจเรียนเรื่องวิทยาการคอมพิวเตอร์ให้มากขึ้น ไม่ว่าจะเป็น PD
-    หรือการเสนอหลักสูตรติดตามผลออนไลน์ หรือทั้งสองแบบ แม้แต่ผู้บริหารของโรงเรียนก็พิจารณาเรื่องนี้เพราะตระหนักว่าวิทยาการคอมพิวเตอร์เป็นเรื่องที่นักเรียนต้องการและผู้สอนสามารถจัดการได้\n\nและเหนือสิ่งอื่นใดคือ
-    สิ่งที่ผู้มีส่วนร่วมทุกคนสามารถเรียนรู้ได้ในหนึ่งชั่วโมงคือสิ่งที่เราสามารถทำได้
-    \ "
+  hoc_faq_one_hour_a_markdown: |-
+    เป้าหมายของ Hour of Code ไม่ใช่การสอนใครให้เป็นนักวิทยาการคอมพิวเตอร์ที่เชี่ยวชาญภายในหนึ่งชั่วโมง หนึ่งชั่วโมงก็เพียงพอแล้วที่จะเรียนรู้ว่าวิทยาการคอมพิวเตอร์นั้นสนุกและสร้างสรรค์ และสามารถเข้าถึงได้ทุกวัยและสำหรับนักเรียนทุกคน โดยไม่คำนึงถึงภูมิหลัง การวัดความสำเร็จของแคมเปญนี้ไม่ได้อยู่ที่ว่านักเรียน CS เรียนรู้มากน้อยเพียงใด ความสำเร็จนั้นสะท้อนให้เห็นในการมีส่วนร่วมในวงกว้างทุกเพศ เชื้อชาติ/ชาติพันธุ์ และกลุ่มเศรษฐกิจและสังคม และส่งผลให้การลงทะเบียนและการมีส่วนร่วมเพิ่มขึ้นที่เราเห็นในหลักสูตร CS ในทุกระดับชั้น ผู้สอนและนักเรียนที่เข้าร่วมหลายล้านคนตัดสินใจที่จะใช้เวลามากกว่าหนึ่งชั่วโมง - เพื่อเรียนรู้ทั้งวันหรือทั้งสัปดาห์หรือนานกว่านั้น และด้วยเหตุนี้ นักเรียนจำนวนมากจึงตัดสินใจลงทะเบียนเรียนทั้งหลักสูตร (หรือแม้แต่เรียนสาขาวิชาเอกในวิทยาลัย)
+
+    นอกจากนักเรียนแล้ว อีกหนึ่ง "ผู้เรียน" คือนักการศึกษาที่ได้รับความมั่นใจหลังจากผ่านไปหนึ่งชั่วโมง ว่าสามารถสอนวิทยาการคอมพิวเตอร์ได้ แม้ว่าพวกเขาจะไม่มีวุฒิการศึกษาระดับวิทยาลัยในฐานะนักวิทยาศาสตร์คอมพิวเตอร์ก็ตาม ผู้สอนหลายหมื่นคนตัดสินใจเรียนต่อด้านวิทยาการคอมพิวเตอร์ ไม่ว่าจะเข้าร่วมการพัฒนาทางวิชาชีพหรือหลักสูตรออนไลน์ต่อเนื่อง หรือทั้งสองอย่าง และสิ่งนี้ใช้ได้กับผู้บริหารโรงเรียนเช่นกัน ซึ่งตระหนักดีว่าวิทยาการคอมพิวเตอร์เป็นสิ่งที่นักเรียนต้องการและผู้สอนก็สามารถทำได้
+
+    เหนือสิ่งอื่นใด สิ่งที่ผู้เข้าร่วมทุกคนสามารถเรียนรู้ได้ภายในหนึ่งชั่วโมงก็คือใครๆ ก็สามารถเรียนรู้วิทยาการคอมพิวเตอร์ได้!
   hoc_faq_more_questions_q: ยังมีคำถามอยู่อีกหรือไม่
-  hoc_faq_more_questions_a: ลองค้นหาคำตอบจากใน<a href='http://support.code.org'>ฟอรั่มความช่วยเหลือ</a>ของเรา
   hoc_faq_more_questions_a_markdown: ลองค้นหาคำตอบจากใน[ฟอรั่มความช่วยเหลือ]ของเรา(http://support.code.org).
   hoc_faq_keep_learning_q: ฉันจะเรียนเรื่องนี้ต่อหลังจบกิจกรรมชั่วโมงเขียนโค้ดได้อย่างไร
-  hoc_faq_keep_learning_a: 'ทุกคนสามารถเลือกจัดกิจกรรมชั่วโมงเขียนโค้ดได้ทุกเมื่อที่ต้องการ
-    บทช่วยสอนมีให้เรียนรู้ตลอดทั้งปี และคุณสามารถเข้ามามีส่วนร่วมในบทช่วยสอนและหลักสูตรทั้งหมดของเราที่อยู่บนไซต์ได้ทุกเมื่อที่ต้องการ
-    โปรดคลิกที่<a href=''/promote''>แหล่งข้อมูลของเรา</a>หากต้องการรายละเอียดวิธีดำเนินการสำหรับกิจกรรมและแหล่งข้อมูลอื่นๆ
-    เพื่อช่วยคุณจัดกิจกรรมชั่วโมงเขียนโค้ดของตัวเองได้สำเร็จ  '
   hoc_faq_keep_learning_a_markdown: 'ทุกคนสามารถเลือกจัดกิจกรรมชั่วโมงเขียนโค้ดได้ทุกเมื่อที่ต้องการ
     บทช่วยสอนมีให้เรียนรู้ตลอดทั้งปี และคุณสามารถเข้ามามีส่วนร่วมในบทช่วยสอนและหลักสูตรทั้งหมดของเราที่อยู่บนไซต์ได้ทุกเมื่อที่ต้องการ
     โปรดคลิกที่[แหล่งข้อมูลของเรา](%{promote})หากต้องการรายละเอียดวิธีดำเนินการสำหรับกิจกรรมและแหล่งข้อมูลอื่นๆ
     เพื่อช่วยคุณจัดกิจกรรมชั่วโมงเขียนโค้ดของตัวเองได้สำเร็จ  '
   hoc_faq_certificates_q: ฉันจะสั่งพิมพ์ใบรับรองให้กับนักเรียนได้จากที่ไหน
-  hoc_faq_certificates_a: ไปที่<a href='%{codeorg_url}/certificates'>หน้าใบรับรอง</a>ของเรา
-    เพื่อพิมพ์ใบรับรองไว้ให้กับนักเรียนทุกคนในห้องก่อนล่วงหน้า คุณยังสามารถพิมพ์<a
-    href='%{codeorg_url}/certificates?course=mc'>ใบรับรองพิเศษ</a>ให้กับนักเรียนที่เรียนบทช่วยสอนไมน์คราฟท์
-  hoc_faq_certificates_a_markdown: ไปที่[หน้าใบรับรอง]ของเรา (%{codeorg_url}/certificates)เพื่อพิมพ์ใบรับรองสำหรับชั้นเรียนทั้งชั้นของคุณไว้แต่เนิ่นๆ
-    คุณยังสามารถพิมพ์[ใบรับรองพิเศษ](%{codeorg_url}/certificates?course=mc) สำหรับผู้เรียนที่เรียนบทช่วยสอนไมน์คราฟท์
+  hoc_faq_certificates_answer_markdown: ไปที่ [หน้าใบรับรอง](%{certificates_url})
+    ของเรา ซึ่งคุณสามารถพิมพ์ใบรับรองสำหรับชั้นเรียนทั้งหมดของคุณล่วงหน้าได้
   hoc_faq_logo_q: มีข้อจำกัดเรื่องวิธีที่ฉันจะใช้โลโก้หรือชื่อกิจกรรมชั่วโมงเขียนโค้ดหรือไม่
-  hoc_faq_logo_a: กิจกรรมชั่วโมงเขียนโค้ดเป็นเครื่องหมายการค้า เราไม่ได้กีดกันการใช้งาน
-    แต่ควรต้องใช้ภายใต้เงื่อนไขข้อจำกัดสองสามประการ โปรดดูที่<a href='%{logo_url}'>แนวทางการใช้งานเหล่านี้</a>
   hoc_faq_logo_a_markdown: 'ชั่วโมงเขียนโค้ดเป็นเครื่องหมายการค้า เราไม่ต้องการปิดกั้นการใช้งาน
     แต่ต้องการความมั่นใจว่าการใช้งานจะเหมาะสมภายใต้ข้อจำกัดบางประการ โปรดดู[แนวทางการใช้งานเหล่านี้](%{logo_url})  '
+  hoc_faq_bug_q: ฉันพบข้อบกพร่องในกิจกรรม Hour of Code!ฉันควรทำอย่างไร
+  hoc_faq_bug_a_markdown: |-
+    โอ้ไม่!หากคุณพบข้อบกพร่องในกิจกรรม Hour of Code ให้ตรวจสอบ URL สำหรับกิจกรรมที่คุณใช้งานก่อนหาก URL เริ่มต้นด้วย studio.code.org ทีมสนับสนุน Code.org ของเราสามารถช่วยได้!คลิกไอคอนเครื่องหมายคำถามที่มุมขวาบนของหน้าจอจากนั้นเลือก “รายงานปัญหา” จากเมนูแบบเลื่อนลง
+
+    หาก URL ไม่ได้เริ่มต้นด้วย studio.code.org คุณมีแนวโน้มที่จะทำงานในกิจกรรมของบุคคลที่สาม และจะต้องติดต่อทีมสนับสนุนของ บริษัท นั้นเพื่อขอความช่วยเหลือเพิ่มเติม
   stats_hoc_2013_image_alt: สถิติจาก 2013 ชั่วโมงรหัส
   stats_growth: มันเป็นวิธีที่เร็วที่สุดที่จะเข้าถึงผู้ใช้ 15 ล้านคน
-  stats_i18n: นักเรียนกำลังเรียนในกว่า 45 ภาษา
+  stats_i18n: นักเรียนกำลังเรียนได้มากกว่า 45 ภาษา
   stats_tumblr: 'Tumblr: 3.5 ปี'
   stats_facebook: 'Facebook: 3 ปี'
   stats_twitter: 'ทวิตเตอร์: 2.5 ปี'
   stats_pinterest: 'Pinterest: 2 ปี'
   stats_instagram: 'Instagram: 14 เดือน'
   stats_hoc: 'ชั่วโมงแห่งรหัส: 5 วัน'
-  stats_global: นักเรียนกว่า 100 ล้านคนเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ด
+  stats_global: นักเรียนกว่า 100 ล้านคนเข้าร่วมกิจกรรม Hour of Code
   stats_girls_more: เด็กผู้หญิงหลายคนพยายามวิทยาการคอมพิวเตอร์มากกว่าในช่วง 70 ปีที่ผ่านมา
   stats_females: จำนวนนักเรียนหญิงที่มีส่วนร่วมในวิทยาการคอมพิวเตอร์คิดเป็นเพียงร้อยละ
     20-25% ของหลักสูตรสำหรับระดับมัธยมศึกษาตอนปลาย หลักสูตรในมหาวิทยาลัย และคนทำงาน
@@ -2292,7 +2340,7 @@ th:
   event: เหตุการณ์
   events: เหตุการณ์ที่เกิดขึ้น
   highlights_title: ไฮไลท์
-  highlights_header: รายการที่น่าสนใจของกิจกรรมชั่วโมงเขียนโค้ด
+  highlights_header: ไฮไลท์ Hour of Code
   highlights_description: บางช่วงเวลาที่เราประทับใจจากแคมเปญชั่วโมงเขียนโค้ด
   highlights_previous: รายการที่น่าสนใจจากช่วงที่ผ่านมา
   highlights_see_more: ดูรายการที่น่าสนใจเพิ่มเติม
@@ -10749,9 +10797,9 @@ th:
   all: ทั้งหมด
   dont_know: ฉันไม่รู้
   language_label: ภาษา
-  before_hoc: ก่อนชั่วโมงของรหัส
-  day_of_hoc: วันของชั่วโมงของรหัส
-  after_hoc: หลังจากชั่วโมงของรหัส
+  before_hoc: ก่อน Hour of Code
+  day_of_hoc: วันของ Hour of Code
+  after_hoc: หลังจาก Hour of Code
   step_01: ขั้นตอนที่ 1
   step_02: ขั้นตอนที่ 2
   step_03: ขั้นตอนที่ 3
@@ -10760,76 +10808,114 @@ th:
   step_06: ขั้นตอนที่ 6
   step_07: ขั้นตอนที่ 7
   step_08: ขั้นตอนที่ 8
+  what: 'อะไร:'
+  when: 'เมื่อ:'
+  where: 'ที่ไหน:'
   hoc_how_to_top_heading: คำแนะนำของคุณเกี่ยวกับ Hour of Code
-  hoc_how_to_top_desc: คู่มือวิธีการปรับให้เหมาะกับประสบการณ์ที่ดีที่สุด Hour of Code
+  hoc_how_to_top_desc: 'คู่มือวิธีการปรับให้เหมาะกับประสบการณ์ Hour of Code ที่ดีที่สุด '
   hoc_how_to_top_view_guide: ดูคู่มือสำหรับ
   hoc_how_to_nav_main_aria_label: เลือกคู่มือ
   hoc_how_to_nav_sidebar_aria_label: การนำทางแถบด้านข้าง
-  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_heading: วิธีวางแผน Hour of Code ของคุณ
   hoc_how_to_educators_intro_desc: Hour of Code เป็นบทนำหนึ่งชั่วโมงเกี่ยวกับวิทยาการคอมพิวเตอร์
     โดยใช้บทเรียนที่สนุกสนานเพื่อแสดงให้เห็นว่าทุกคนสามารถเรียนรู้พื้นฐานได้ปีนี้
     เรากำลังนำ Hour of Code ไปสู่ระดับสูงใหม่ด้วยการเสนอโอกาสในการเข้ารหัสที่ครอบคลุมทั้งปัญญาประดิษฐ์
     (AI) และส่วนประกอบที่ไม่ใช่ AIไม่ว่าคุณหรือนักเรียนของคุณจะเป็นผู้เขียนโค้ดที่มีประสบการณ์หรือคุณทุกคนกำลังออกเดินทางด้านวิทยาศาสตร์คอมพิวเตอร์ครั้งแรกของคุณ
     Hour of Code นี้สัญญาการเดินทางที่ไม่ธรรมดา
-  hoc_how_to_faq_question_prerequisites: ข้อกำหนดเบื้องต้นสำหรับการทำชั่วโมงรหัสคืออะไร?
-  hoc_how_to_faq_answer_prerequisites: Hour of Code นั้นง่ายต่อการเรียกใช้ - แม้สำหรับผู้เริ่มต้นคุณไม่จำเป็นต้องมีประสบการณ์ด้านวิทยาศาสตร์คอมพิวเตอร์หรือการสอนเพื่อสร้างแรงบันดาลใจให้นักเรียนสำรวจ
-    สร้าง และเรียนรู้สิ่งใหม่ ๆ
-  hoc_how_to_faq_question_devices: ฉันต้องใช้อุปกรณ์ใดบ้างในการเรียกใช้ Hour of Code
+  hoc_how_to_faq_question_prerequisites: ข้อกำหนดเบื้องต้นสำหรับ Hour of Code คืออะไร?
+  hoc_how_to_faq_answer_prerequisites: Hour of Code นั้นง่ายต่อการใช้งาน - แม้สำหรับผู้เริ่มต้นคุณไม่จำเป็นต้องมีประสบการณ์ด้านวิทยาศาสตร์คอมพิวเตอร์หรือการสอนเพื่อสร้างแรงบันดาลใจให้นักเรียนสำรวจ
+    สร้าง และเรียนรู้สิ่งใหม่ๆ
+  hoc_how_to_faq_question_devices: ฉันต้องใช้อุปกรณ์ใดบ้างในการใช้งาน Hour of Code
   hoc_how_to_faq_answer_devices_01: 'อุปกรณ์ที่คุณสามารถใช้:'
-  hoc_how_to_faq_answer_devices_02: หากอุปกรณ์มีข้อ จำกัด หรือไม่พร้อมใช้งาน ให้ลอง
-    [จับคู่การเขียนโปรแกรม] (%{pair_url}) หรือสำรวจ [กิจกรรมที่ไม่เสียบ] (%{unplugged_url})
-    ของเราเพื่อเรียนรู้โดยไม่ต้องใช้อุปกรณ์ใด ๆ เลย!
+  hoc_how_to_faq_answer_devices_02: หากอุปกรณ์มีข้อจำกัด หรือไม่พร้อมใช้งาน ให้ลอง
+    [จับคู่การเขียนโปรแกรม](%{pair_url}) หรือสำรวจ [กิจกรรมที่ไม่เสียบ](%{unplugged_url})
+    ของเราเพื่อเรียนรู้โดยไม่ต้องใช้อุปกรณ์ใดๆ เลย!
   hoc_how_to_faq_question_volunteer: ใครบ้างที่สามารถเป็นอาสาสมัครได้?
   hoc_how_to_faq_answer_volunteer: ทุกคนที่หลงใหลเกี่ยวกับการศึกษาวิทยาศาสตร์คอมพิวเตอร์และการเพิ่มความหลากหลายในด้านเทคโนโลยีสามารถเป็นอาสาสมัครได้!เราชอบที่จะเห็นอาสาสมัครทุกภูมิหลังเข้าร่วมHour
     of Code มีกิจกรรมมากมายสำหรับทุกวัยและระดับทักษะดังนั้นคุณไม่จำเป็นต้องเป็นผู้เชี่ยวชาญด้านการเขียนโปรแกรมเพื่ออาสาสมัคร!
-  hoc_how_to_faq_question_full_hour: ชั่วโมงแห่งรหัสจะใช้เวลาเต็มชั่วโมงหรือไม่?
-  hoc_how_to_faq_answer_full_hour: นักเรียนหลายคนจะสามารถทำกิจกรรมให้เสร็จภายในเวลาไม่ถึงหนึ่งชั่วโมงและไม่เป็นไร!นักเรียนสามารถเรียนรู้ต่อไปในขณะที่นักเรียนคนอื่นทำกิจกรรมให้เสร็จ
+  hoc_how_to_faq_question_full_hour: Hour of Code จะใช้เวลาเต็มชั่วโมงหรือไม่?
+  hoc_how_to_faq_answer_full_hour: นักเรียนหลายคนจะสามารถทำกิจกรรมให้เสร็จภายในเวลาไม่ถึงหนึ่งชั่วโมงและไม่เป็นไร!
+    นักเรียนสามารถเรียนรู้ต่อไปในขณะที่นักเรียนคนอื่นทำกิจกรรมให้เสร็จ
   hoc_how_to_faq_question_account: นักเรียนต้องใช้บัญชีเพื่อล็อกเข้าสู่ระบบหรือไม่
-  hoc_how_to_faq_answer_account: ไม่จำเป็นต้องลงทะเบียนหรือลงชื่อเข้าใช้เพื่อให้นักเรียนลองใช้ชั่วโมงของรหัสการลงทะเบียนสำหรับ
-    Hour of Code ไม่ได้สร้างบัญชี Code.org โดยอัตโนมัติ
+  hoc_how_to_faq_answer_account: ไม่จำเป็นต้องลงทะเบียนหรือลงชื่อเข้าใช้เพื่อให้นักเรียนลองใช้
+    Hour of Code การลงทะเบียนสำหรับ Hour of Code ไม่ได้สร้างบัญชี Code.org โดยอัตโนมัติ
   hoc_how_to_resources_heading_educators: แหล่ง Hour of Code อื่นๆสำหรับนักการศึกษา
   hoc_how_to_resources_promo_heading: แหล่งข้อมูลส่งเสริมการขาย
-  hoc_how_to_resources_promo_desc: ค้นหาแหล่งข้อมูลทั้งหมดที่คุณต้องการ—พิมพ์และดิจิทัล—เพื่อนำความสนใจมาสู่ชั่วโมงแห่งรหัสของคุณ
-  hoc_how_to_resources_discover_heading: ค้นพบ กิจกรรม
+  hoc_how_to_resources_promo_desc: ค้นหาแหล่งข้อมูลทั้งหมดที่คุณต้องการ—พิมพ์และดิจิทัล—เพื่อนำความสนใจมาสู่
+    Hour of Code
+  hoc_how_to_resources_discover_heading: ค้นพบกิจกรรม
   hoc_how_to_resources_discover_desc: สำรวจบทช่วยสอนแบบหนึ่งชั่วโมงที่ออกแบบมาสำหรับทุกเพศทุกวัยในภาษากว่า
     45 ภาษา
   hoc_how_to_step_label_plan: วางแผนที่ไหนและเมื่อไหร่ที่คุณจะทำ Hour of Code ของคุณ
   hoc_how_to_step_label_choose_activity: เลือกกิจกรรมของคุณ
+  hoc_how_to_step_label_choose_activities: เลือกกิจกรรมของคุณ
   hoc_how_to_step_label_test_activity: ทดสอบกิจกรรมของคุณ
   hoc_how_to_step_label_register_event: ลงทะเบียนกิจกรรมของคุณ
-  hoc_how_to_step_label_tell: บอกนักเรียนโรงเรียนและชุมชนของคุณ
-  hoc_how_to_step_label_get_coding: รับการเข้ารหัส!
+  hoc_how_to_step_label_tell: บอกนักเรียน โรงเรียน และชุมชนของคุณ
+  hoc_how_to_step_label_get_coding: เรียนรู้รหัส!
   hoc_how_to_step_label_celebrate: ฉลอง
-  hoc_how_to_step_label_beyond_hoc: เกินชั่วโมงของรหัส
+  hoc_how_to_step_label_beyond_hoc: นอกเหนือจาก Hour of Code
+  hoc_how_to_step_label_plan_your_event: วางแผนกิจกรรมของคุณ
+  hoc_how_to_step_label_plan_your_hour: วางแผนชั่วโมงของคุณ
+  hoc_how_to_step_label_help_spread_word: ช่วยเผยแพร่ข่าว
   hoc_how_to_step_beyond_hoc_subhead: มันไม่ได้จบที่นี่!
-  hoc_how_to_step_beyond_hoc_desc: วิทยาศาสตร์คอมพิวเตอร์ไม่จำเป็นต้องจบลงด้วยชั่วโมงแห่งรหัส!ในขณะที่
-    90% ของผู้ปกครองต้องการให้ลูกเรียนรู้วิทยาการคอมพิวเตอร์ แต่โรงเรียนส่วนใหญ่ยังไม่ได้สอนเรียนรู้วิธีนำ
-    CS มาที่โรงเรียนของบุตรหลานของคุณวันนี้
-  hoc_how_to_step_01_educators_subhead: เลือกเวลาและพื้นที่กิจกรรมที่เหมาะกับจำนวนนักเรียนและอุปกรณ์ที่คุณมี
-  hoc_how_to_step_01_educators_desc_01: มีช่องว่างใดบ้างสำหรับคุณในการทำ Hour of Code
-    ของคุณ?พิจารณาความสามารถด้านเทคโนโลยีของพื้นที่ของคุณและประเภทของอุปกรณ์ที่คุณคาดหวังให้นักเรียนของคุณทำงานด้วยนักเรียนสามารถทำงานเกี่ยวกับการสอนบนอุปกรณ์เดียว
-    ผลัดกันใช้อุปกรณ์ที่ใช้ร่วมกัน หรือลองใช้บทช่วยสอนร่วมกันบนกระดานไวท์บอร์ดในห้องเรียนมีแม้กระทั่งบทเรียนที่ถอดปลั๊กที่สามารถเสร็จสมบูรณ์ได้โดยไม่ต้องใช้อุปกรณ์เลยตัวเลือกที่ถอดปลั๊กสามารถทำได้ทุกที่แม้กระทั่งกลางแจ้ง!
-  hoc_how_to_step_01_educators_desc_02: ผู้คนทั่วโลกเข้าร่วมการเฉลิมฉลอง Hour of Code
-    ในช่วง CS Education Week %{campaign_date} เมื่อมีการเปิดตัวบทเรียนและกิจกรรมล่าสุดแต่คุณสามารถทำชั่วโมงรหัสได้ทุกวันของปี!
-  hoc_how_to_step_02_educators_desc_01: สำรวจกิจกรรมตามอายุ ประสบการณ์ ความสนใจ และอื่นๆ
-    ของกลุ่มของคุณเป็นที่นิยมสำหรับนักเรียนที่จะลองใช้บทเรียนด้วยตนเอง แม้ว่ากิจกรรมหลายอย่างจะมีแผนการสอนสำหรับครูเพื่อเป็นแนวทางในการอภิปรายหรือขยายกิจกรรมเช่นกัน
-  hoc_how_to_step_02_educators_desc_02: ตัดสินใจล่วงหน้าหากคุณต้องการเลือกบทช่วยสอนเดียวสำหรับนักเรียนทุกคนของคุณหรือปล่อยให้เด็กแต่ละคนเลือกของตัวเอง
-  hoc_how_to_step_02_educators_desc_03: ในปีนี้ คุณและนักเรียนของคุณสามารถ [เรียนรู้ทั้งหมดเกี่ยวกับ
-    AI] (%ai_url) ผ่านบทเรียน แผนการสอน และซีรีส์วิดีโอ How AI Works ใหม่ของเรา
-  hoc_how_to_step_03_educators_desc_01: ลองใช้บทช่วยสอนด้วยตัวคุณเองก่อนเข้าห้องเรียนเพื่อให้คุณสามารถตอบคำถาม!
-  hoc_how_to_step_03_educators_desc_02: คุณยังสามารถทดสอบบทเรียนบนคอมพิวเตอร์หรืออุปกรณ์ของนักเรียนเพื่อให้แน่ใจว่าพวกเขาสนับสนุนเสียงและวิดีโอมีแบนด์วิดท์ต่ำ?วางแผนที่จะแสดงวิดีโอที่ด้านหน้าของชั้นเรียนดังนั้นนักเรียนแต่ละคนจะไม่ดาวน์โหลดวิดีโอของตัวเอง
-  hoc_how_to_step_03_educators_desc_03: พิจารณาจัดหาหูฟังสำหรับชั้นเรียนของคุณหรือขอให้นักเรียนนำของตัวเองหากบทช่วยสอนที่คุณเลือกใช้ได้ดีที่สุดกับเสียง
-  hoc_how_to_step_04_educators_desc_01: เมื่อคุณลงทะเบียนกิจกรรม Hour of Code คุณจะได้รับอีเมลที่เป็นประโยชน์พร้อมข่าวสารและเคล็ดลับสำหรับการโฮสต์ชั่วโมงรหัสที่ประสบความสำเร็จนอกจากนี้ยังเป็นวิธีที่คุณสามารถแจ้งให้อาสาสมัครในท้องถิ่นทราบว่าโรงเรียนของคุณกำลังเข้าร่วมอาสาสมัครเป็นแหล่งข้อมูลที่ยอดเยี่ยมและสามารถพูดคุยกับชั้นเรียนของคุณเกี่ยวกับวิทยาการคอมพิวเตอร์หรือช่วยนักเรียนของคุณด้วยกิจกรรมชั่วโมงรหัสได้
-  hoc_how_to_step_05_educators_desc_01: ทำให้นักเรียนของคุณตื่นเต้นกับกิจกรรมด้วยการแบ่งปัน
-    [วิดีโอที่สร้างแรงบันดาลใจ] (%{videos_url}) เน้นผู้คนหลากหลายและวิธีการสร้างสรรค์ที่วิทยาศาสตร์คอมพิวเตอร์สามารถใช้ได้ในโลกแห่งความเป็นจริง
-  hoc_how_to_step_05_educators_desc_02: แบ่งปันแผน Hour of Code ของคุณกับครูคนอื่น
-    ๆ ที่อาจต้องการเข้าร่วมในความสนุก!นี่เป็นโอกาสที่ดีในการติดต่อสมาคมนักเรียนครูผู้ปกครองของโรงเรียนของคุณหรือแบ่งปันจดหมายข่าวผู้ปกครองแจ้งให้พวกเขารู้ว่าลูก
-    ๆ กำลังเรียนรู้อะไร
-  hoc_how_to_step_06_educators_desc_01: นำนักเรียนของคุณไปยังกิจกรรมบางทีโดยการแชร์ลิงก์บนกระดานหรือผ่านระบบการจัดการการเรียนรู้ในห้องเรียนของคุณนักเรียนของคุณอาจเผชิญกับความท้าทาย
-    - ไม่เป็นไร!การเรียนรู้ที่จะเขียนโปรแกรมก็เหมือนกับการเรียนรู้ภาษาใหม่ คุณจะไม่คล่องแคล่วทันทีหากคุณไม่ทราบคำตอบคุณสามารถคิดออกด้วยกัน
-  hoc_how_to_step_07_educators_desc_01: 'อย่าลืมเฉลิมฉลองความสำเร็จ!แชร์รูปภาพและวิดีโอของกิจกรรม
-    Hour of Code ของคุณบนโซเชียลมีเดียใช้ #HourOfCode และ @codeorg เพื่อให้เราสามารถเน้นความสำเร็จของคุณได้เช่นกัน!'
-  hoc_how_to_step_07_educators_desc_02: คุณยังสามารถพิมพ์ใบรับรองให้นักเรียนของคุณอวดความสำเร็จของพวกเขา!
+  hoc_how_to_step_plan_hour_desc_01: 'นี่คือวาระตัวอย่างเพื่อช่วยให้คุณเริ่มต้น:'
+  hoc_how_to_step_choose_activities_desc_01: ในปีนี้ธีม Hour of Code คือ ความคิดสร้างสรรค์ด้วยปัญญาประดิษฐ์
+    (AI)ไม่ว่าจะเป็นการเขียนโค้ดแอพและอัลกอริทึมใหม่ สร้างศิลปะที่ไม่เหมือนใคร หรือสร้างท่าเต้นเพื่อทำให้เราเต้นรำ
+    AI กำลังเปิดโอกาสใหม่สำหรับการแสดงออกทางดิจิทัลที่ขยายความเข้าใจของเราเกี่ยวกับความคิดสร้างสรรค์ทำให้ปีนี้เป็นพิเศษด้วยการทำกิจกรรมการเขียนโค้ดและเรียนรู้เกี่ยวกับ
+    AI
+  hoc_how_to_step_choose_activities_desc_02: ขั้นแรก [สำรวจกิจกรรมการเข้ารหัสหลายร้อยรายการ]
+    (%{activities_url}) และเลือกกิจกรรมตามอายุ ประสบการณ์ ความสนใจ และอื่นๆ ของกลุ่มของคุณ[กิจกรรมที่เลือกเหล่านี้]
+    (%{ai_activities_url}) นำปัญญาประดิษฐ์เป็นหัวข้อสำคัญหรือบทเรียน
+  hoc_how_to_step_choose_activities_desc_03: จากนั้น [เรียนรู้ทั้งหมดเกี่ยวกับ AI]
+    (%{ai_url})นักเรียนสามารถรับชมวิดีโอสั้น ๆ ที่มีผู้เชี่ยวชาญในสาขา และมีแผนการสอนที่มาพร้อมเพื่อขยายกิจกรรมและแนะนำการอภิปรายต่อไปหรือเราเสนอการเรียนรู้ระดับมืออาชีพฟรีสำหรับนักการศึกษาเพื่อปลดล็อกอนาคตของการสอนด้วยและเกี่ยวกับ
+    AI
+  hoc_how_to_step_educators_register_desc: เริ่มต้นด้วยความมุ่งมั่นที่จะทำ Hour of
+    Code กับนักเรียนของคุณโดยการลงทะเบียนกิจกรรมของคุณเมื่อคุณลงทะเบียน คุณจะได้รับอีเมลที่เป็นประโยชน์พร้อมข่าวสารและเคล็ดลับในการจัดงาน
+    Hour of Code ที่ประสบความสำเร็จนอกจากนี้คุณยังจะ [ใส่บนแผนที่] (%{map_url})ความพยายามร่วมของเราที่มองเห็นได้ทั้งหมดแสดงให้เห็นถึงความมุ่งมั่นระดับโลกต่อขบวนการวิทยาศาสตร์คอมพิวเตอร์
+    ซึ่งจะช่วยให้เราสร้างโมเมนตัมสำหรับการเปลี่ยนแปลงของระบบ
+  hoc_how_to_step_educators_plan_desc_01: ก่อนกิจกรรมของคุณ ลองทำกิจกรรมด้วยตัวคุณเองเพื่อให้แน่ใจว่าพวกเขาทำงานบนอุปกรณ์ของนักเรียนและคุณพร้อมที่จะตอบคำถาม!มีแบนด์วิดท์ต่ำ?วางแผนที่จะแสดงวิดีโอที่ด้านหน้าชั้นเรียน
+    ดังนั้นนักเรียนแต่ละคนจะไม่ดาวน์โหลดวิดีโอของตัวเอง
+  hoc_how_to_step_educators_plan_desc_02: ผู้คนทั่วโลกมักจะเข้าร่วมงานเฉลิมฉลอง Hour
+    of Code ในช่วงสัปดาห์การศึกษาวิทยาการคอมพิวเตอร์ (%{campaign_date}) แต่คุณสามารถทำชั่วโมงแห่งรหัสได้ทุกวันของปี!
+  hoc_how_to_step_educators_plan_desc_03: เลือกพื้นที่ที่เหมาะสมกับจำนวนนักเรียนและอุปกรณ์ที่คุณมีนักเรียนสามารถลองทำกิจกรรมบนอุปกรณ์แต่ละเครื่อง
+    แบ่งปันอุปกรณ์ หรือเป็นชั้นเรียนบนไวท์บอร์ดนอกจากนี้ยังมีกิจกรรมที่ถอดปลั๊กที่สามารถทำได้โดยไม่มีอุปกรณ์เลย
+    ดังนั้นจึงสามารถทำได้ภายนอกด้วย!
+  hoc_how_to_step_educators_spread_word_desc_01: ช่วยเราเผยแพร่ข่าวในชุมชนของคุณด้วย
+    [เทมเพลตอีเมลเหล่านี้] (%{email_url})
+  hoc_how_to_step_educators_spread_word_desc_02: ขอให้เพื่อนร่วมงานสอง [register]คน%{register_url}ไปที่
+    () และเป็นเจ้าภาพกิจกรรม Hour of Codeในทางกลับกันพวกเขาสามารถรักษาความปลอดภัยเพื่อนร่วมงานสองคนซึ่งสามารถรักษาความปลอดภัยเพื่อนร่วมงานสองคนได้
+    ฯลฯ
+  hoc_how_to_step_educators_spread_word_desc_03: ขอให้ครูใหญ่ของคุณให้ [เป็นเจ้าภาพกิจกรรมทั่วทั้งโรงเรียน]
+    (%{host_url})เมื่อเด็กเข้าร่วม 300 คนขึ้นไป คุณสามารถรับชุดหมั้นพิเศษพร้อมเสื้อยืด
+    โปสเตอร์ สติกเกอร์แล็ปท็อป และอื่นๆ[แบ่งปันแผนกิจกรรมทั้งโรงเรียนของคุณ] (%{share_url})
+    เพื่อให้คุณสมบัติ
+  hoc_how_to_step_educators_spread_word_desc_04: ติดต่อสมาคมนักเรียนครูผู้ปกครองของโรงเรียนของคุณหรือแบ่งปันจดหมายข่าวของผู้ปกครอง
+    เพื่อให้พวกเขาทราบว่าลูก ๆ กำลังเรียนรู้อะไร
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05 น.: เริ่มต้นด้วย [วิดีโอสร้างแรงบันดาลใจ]
+    ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45 น.: นักเรียนทำกิจกรรมการเข้ารหัส'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55 น.: นักเรียนเรียนรู้เกี่ยวกับ
+    AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00 น.: ครูแสดงคำพูดปิดท้าย'
+  hoc_how_to_step_educators_get_coding_desc: แนะนำให้นักเรียนเข้าร่วมกิจกรรม โดยอาจแชร์ลิงก์บนกระดานหรือผ่านระบบบริหารจัดการการเรียนรู้ในห้องเรียน
+    นักเรียนของคุณอาจเผชิญกับความท้าทาย—ไม่เป็นไร! การเรียนรู้การเขียนโปรแกรมก็เหมือนกับการเรียนรู้ภาษาใหม่
+    คุณจะไม่คล่องทันที หากคุณไม่ทราบคำตอบคุณสามารถคิดออกร่วมกันได้
+  hoc_how_to_step_educators_celebrate_desc: 'หลังจากงานของคุณให้พิมพ์ใบรับรองการจบและแสดงความยินดีกับนักเรียนของคุณแบ่งปันรูปภาพและวิดีโอของกิจกรรม
+    Hour of Code และแสดงความสำเร็จของนักเรียนของคุณโดยใช้ #HourOfCode และ @codeorg'
+  hoc_how_to_step_educators_beyond_desc: วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบลงด้วยชั่วโมงแห่งรหัส!ในขณะที่ผู้ปกครอง
+    90% ต้องการให้ลูกเรียนรู้วิทยาการคอมพิวเตอร์ แต่โรงเรียนส่วนใหญ่ยังไม่สอนมันเพื่อความช่วยเหลือ
+    หลักสูตรของเราเป็นเว็บและใช้งานได้ฟรีตลอดไปเรียนรู้วิธีนำทาง CS มาที่โรงเรียนของคุณวันนี้
+  hoc_ai_top_desc: ทุกคนสามารถเรียนรู้เกี่ยวกับ AI ไม่ว่าคุณจะเป็นนักเรียนในห้องเรียนหรือนักการศึกษาที่ปลดล็อกอนาคตของการสอนด้วยและเกี่ยวกับ
+    AI
+  hoc_ai_how_ai_works_video_series_desc: วิดีโอสั้นชุดนี้จะแนะนำให้คุณรู้จักกับปัญญาประดิษฐ์ทำงานอย่างไรและเหตุใดจึงสำคัญจากนั้นเจาะลึกประเด็นต่างๆ
+    เช่น อคติตามอัลกอริทึมและจริยธรรมของการตัดสินใจ AI
+  hoc_ai_learn_how_ai_works_desc: ดำดิ่งสู่โลกของ AI ด้วย บทเรียน “วิธีการทำงานของ
+    AI” ที่จับคู่กับวิดีโอซีรีส์ของเราที่แนะนำให้คุณรู้ว่าAI ทำงานอย่างไร และเหตุใดจึงสำคัญ
+  hoc_ai_101_for_educators_desc: ค้นพบศักยภาพการเปลี่ยนแปลงของปัญญาประดิษฐ์ (AI) ในการศึกษาด้วยชุดการเรียนรู้ออนไลน์ฟรีสำหรับผู้ที่ต้องการศึกษา
+  hoc_ai_impacts_desc: มีส่วนร่วมในห้องเรียนของคุณด้วยบทเรียนที่นำโดยครูซึ่งสำรวจผลกระทบของปัญญาประดิษฐ์และเชิญผู้เรียนคิดหาวิธีแก้ปัญหาบางประเด็นของ
+    AI
+  hoc_ai_activities_desc: กิจกรรม Hour of Code ใหม่เหล่านี้แนะนำผู้ใช้ให้รู้จักกับโลกของปัญญาประดิษฐ์ด้วยวิธีที่สนุกสนานและมีส่วนร่วม
   team_page_full_team_alt_text: เกือบ 100 พนักงาน Code.org ในการจับคู่สีฟ้าและสีเหลืองเสื้อยืดก่อให้เกิดในห้องประชุมโรงแรมสำหรับฤดูร้อนของ
     บริษัท ฯ 2022 เหตุการณ์ Codechella.
   careers_page_code_pride_alt_text: พนักงานสองคนนำเสนอผู้หญิงยิ้มในขณะที่ถือปลายของแบนเนอร์รุ้ง
@@ -11131,44 +11217,45 @@ th:
   csa_ai_page_faq_answer_11_02: สำหรับข้อมูลเพิ่มเติมเกี่ยวกับค่านิยมที่เป็นแนวทางในการทำงานของเรา
     โปรดดูที่ [ค่าหลักสูตร] ()%{curriculum_values_url}ของเรา
   video_library_page_main_title: วิดีโอสั้นเพื่อการศึกษา
-  video_library_page_hero_description: ห้องสมุดวิดีโอการศึกษาที่กำลังเติบโตของ Code.org
-    มีให้สำหรับนักการศึกษาทั่วโลก ออนไลน์ หรือในห้องเรียนเป้าหมายของเราคือการขยายความพยายามของเรา
-    นอกเหนือจากการเข้าถึงหลักสูตรของเราเอง
+  video_library_page_hero_description: ห้องสมุดวิดีโอเพื่อการศึกษาที่กำลังเติบโตของ
+    Code.org มีให้สำหรับนักการศึกษาทั่วโลก ไม่ว่าจะเป็นการศึกษาแบบออนไลน์หรือในห้องเรียน
+    เป้าหมายของเราคือการขยายขอบเขตความพยายามของเราให้มากกว่าการเข้าถึงหลักสูตรของเราเองเท่านั้น
   video_library_page_title_ai_works: AI ทำงานอย่างไร
-  video_library_page_description_ai_works: ชุดวิดีโอสั้น ๆ นี้จะแนะนำคุณถึงวิธีการทำงานของปัญญาประดิษฐ์และทำไมมันสำคัญเรียนรู้เกี่ยวกับเครือข่ายประสาทหรือวิธีที่
-    AI เรียนรู้และเจาะลึกประเด็นต่างๆ เช่น อัลกอริทึมความลำเอียงและจริยธรรมของการตัดสินใจ
-    AI
+  video_library_page_description_ai_works: ชุดวิดีโอสั้นนี้จะแนะนำคุณถึงวิธีการทำงานของปัญญาประดิษฐ์และทำไมมันถึงมีความสำคัญ
+    เรียนรู้เกี่ยวกับโครงข่ายประสาทเทียมหรือวิธีที่ AI เรียนรู้และเจาะลึกประเด็นต่างๆ
+    เช่น อัลกอริทึมความลำเอียงและจริยธรรมของการตัดสินใจ AI
   video_library_page_title_computers_work: วิธีการทำงานของคอมพิวเตอร์
   video_library_page_description_computers_work: อธิบายสิ่งที่ทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์
-    วิธีการแสดงข้อมูลดิจิทัลในหน่วยที่ 1 และ 0 วิธีการทำงานของวงจรคอมพิวเตอร์เพื่อจัดการกับข้อมูลดิจิทัล
+    วิธีการแสดงข้อมูลดิจิทัลในเป็นเลข 1 และ 0 วิธีการทำงานของวงจรคอมพิวเตอร์เพื่อจัดการกับข้อมูลดิจิทัล
     และวิธีการที่หน่วยประมวลผลกลาง (CPU) และระบบปฏิบัติการควบคุมอินพุต เอาต์พุต หน่วยความจำ
     และฮาร์ดแวร์ของคอมพิวเตอร์
   video_library_page_title_internet_works: อินเทอร์เน็ตทำงานอย่างไร
-  video_library_page_description_internet_works: มี Vint Cerf ผู้ประดิษฐ์ TCP/IP เดวิด
-    คาร์พ ผู้ก่อตั้ง Tumblr เพื่ออธิบาย HTTP และ HTML, เจ้าหญิงรักษาความปลอดภัยของ
-    Google เพื่ออธิบาย SSL และความปลอดภัยทางไซเบอร์และวิศวกรจาก Microsoft, Spotify
-    และ Symantecชุดของวิดีโอสั้น ๆ ที่อธิบายวิธีการทำงานของอินเทอร์เน็ต.
-  video_library_page_title_not_hacked: วิธีไม่รับการถูกแฮ็ก
-  video_library_page_description_not_hacked: อินเทอร์เน็ตเปิดอยู่ดังนั้นทุกอย่างที่เกิดขึ้นจะสามารถมองเห็นได้เว้นแต่จะได้รับการป้องกันในประเทศสมัยใหม่คนมีความกังวลมากขึ้นเกี่ยวกับการถูกแฮ็กมากกว่าเกี่ยวกับอาชญากรรมอื่น
-    ๆทำไม?เพราะคอมพิวเตอร์หรือโทรศัพท์ทุกเครื่องบนอินเทอร์เน็ตถูกทดสอบหาช่องโหว่โดยอาชญากร
-    ผู้ก่อการร้าย หรือแม้แต่นักแสดงของรัฐถ้าคุณไม่ระวัง ใครบางคนอาจแฮ็คอุปกรณ์หรือบัญชีของคุณ
-    และแม้แต่ขโมยข้อมูลประจำตัวหรือเงินของคุณ
-  video_library_page_title_blockchain: วิธีการทำงานของบล็อกเชน
-  video_library_page_description_blockchain: ชุดนี้จัดทำขึ้นโดยความร่วมมือกับ Coinbase
-    โดยมีผู้เชี่ยวชาญในอุตสาหกรรมและมีจุดมุ่งหมายที่จะทำลายความลึกลับของเทคโนโลยีนี้ด้วยการสำรวจว่าบล็อกเชนคืออะไร
+  video_library_page_description_internet_works: ได้รับความรู้จาก วินท์ เคิร์ฟ ผู้ประดิษฐ์
+    TCP/IP เดวิด คาร์พ ผู้ก่อตั้ง Tumblr ในการอธิบาย HTTP และ HTML เจ้าหญิงแห่งรักษาความปลอดภัยของ
+    Google ในการอธิบาย SSL และความปลอดภัยทางไซเบอร์และวิศวกรจาก Microsoft, Spotify
+    และ Symantec ชุดของวิดีโอสั้นนี้จะอธิบายวิธีการทำงานของอินเทอร์เน็ต
+  video_library_page_title_not_hacked: วิธีที่จะไม่ถูกแฮ็ก
+  video_library_page_description_not_hacked: อินเทอร์เน็ตเปิดให้กับทุกคน ดังนั้นทุกอย่างที่เกิดขึ้นจะสามารถมองเห็นได้เว้นแต่จะได้รับการป้องกัน
+    ในสมัยใหม่ ผู้คนมีความกังวลมากขึ้นเกี่ยวกับการถูกแฮ็กมากกว่าอาชญากรรมอื่นๆ ทำไมน่ะหรือ?
+    เพราะคอมพิวเตอร์หรือโทรศัพท์ทุกเครื่องบนอินเทอร์เน็ตมักถูกอาชญากร ผู้ก่อการร้าย
+    หรือแม้แต่เจ้าหน้าที่รัฐ หาช่องโหว่ได้หากคุณไม่ระวัง ใครบางคนอาจแฮ็กอุปกรณ์หรือบัญชีของคุณหรือแม้แต่ขโมยข้อมูลประจำตัวหรือเงินของคุณด้วย
+  video_library_page_title_blockchain: บล็อกเชนทำงานอย่างไร
+  video_library_page_description_blockchain: จัดทำขึ้นโดยความร่วมมือกับ Coinbase โดยมีผู้เชี่ยวชาญในอุตสาหกรรมและมีจุดมุ่งหมายที่จะทำลายความลึกลับของเทคโนโลยีนี้ด้วยการสำรวจว่าบล็อกเชนคืออะไร
     วิธีการทำงาน และผลกระทบทางสังคมที่อาจเกิดขึ้นได้ ทั้งดีและไม่ดี
-  video_library_page_title_careers: ร่วมงานในบริการลูกค้า
-  video_library_page_description_careers: อาชีพในวิทยาการคอมพิวเตอร์และเทคโนโลยีสามารถสนุกและให้รางวัลได้แต่คนที่ทำงานในสาขาเหล่านี้จริงๆทำอะไรได้บ้างด้วยความหลากหลายของงานและบริษัท,
-    ไม่มีเพียงหนึ่งคำตอบสำหรับคำถามนี้.ดูวิดีโอด้านล่างเพื่อพบกับผู้คนบางคนที่กำลังแก้ไขปัญหาใหญ่ด้วยวิธีที่สร้างสรรค์
+  video_library_page_title_careers: อาชีพด้านวิทยาการคอมพิวเตอร์
+  video_library_page_description_careers: อาชีพด้านวิทยาการคอมพิวเตอร์และเทคโนโลยีสามารถสนุกและผลตอบแทนสูง
+    แต่คนที่ทำงานในสาขาเหล่านี้จริงๆ แล้วต้องทำอะไรได้บ้าง ด้วยความหลากหลายของงานและบริษัทจึงทำให้ไม่ใช่เพียงหนึ่งคำตอบสำหรับคำถามนี้
+    ดูวิดีโอด้านล่างเพื่อพบกับผู้คนที่กำลังแก้ไขปัญหาใหญ่ด้วยวิธีที่สร้างสรรค์
   video_library_page_title_inspirational: สร้างแรงบันดาลใจ
-  video_library_page_description_inspirational: วิทยาศาสตร์คอมพิวเตอร์จะเปลี่ยนแปลงอะไรในโลกของเรา?ทุกอย่างเลยเหรอมันสำหรับใคร?ทุกคน!ดูวิดีโอเหล่านี้เพื่อสร้างแรงบันดาลใจและสร้างแรงจูงใจให้คุณ
-  video_library_page_footer_description: กำลังหาอย่างอื่นอยู่ใช่ไหมเรามีวิดีโอที่ยอดเยี่ยมมากมายที่มีอยู่ในช่อง
+  video_library_page_description_inspirational: วิทยาศาสตร์คอมพิวเตอร์จะเปลี่ยนแปลงอะไรในโลกของเรา?
+    ทุกอย่างเลยเหรอ?​ หรือสำหรับใคร? ทุกคน! ดูวิดีโอเหล่านี้เพื่อสร้างแรงบันดาลใจและสร้างแรงจูงใจให้คุณ
+  video_library_page_footer_description: กำลังหาอย่างอื่นอยู่ใช่ไหม เรามีวิดีโอที่ยอดเยี่ยมมากมายที่มีอยู่ในช่อง
     Youtube ของเรา
   video_library_page_footer_cta: สำรวจวิดีโอ Code.org ทั้งหมดบน YouTube
   video_library_page_computer_work_video_title_1: แนะนำวิธีการทำงานของคอมพิวเตอร์
   video_library_page_computer_work_video_title_2: ไบนารีและข้อมูล
   video_library_page_computer_work_video_title_3: CPU, หน่วยความจำ, อินพุต และเอาต์พุต
-  video_library_page_computer_work_video_title_4: สิ่งที่ทำให้คอมพิวเตอร์, คอมพิวเตอร์?
+  video_library_page_computer_work_video_title_4: อะไรคือสิ่งที่ทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์?
   video_library_page_computer_work_video_title_5: วงจรลอจิก
   video_library_page_computer_work_video_title_6: ฮาร์ดแวร์และซอฟต์แวร์
   video_library_page_internet_work_video_title_1: อินเทอร์เน็ตคืออะไร
@@ -11183,166 +11270,270 @@ th:
   video_library_page_internet_work_video_title_8: 'อินเทอร์เน็ต: วิธีการทำงานของการค้นหา'
   video_library_page_cs_video_title_1: ฉันชื่อเจอโรม และฉันเป็นนักเทคโนโลยีการออกแบบที่
     Meow Wolf
-  video_library_page_cs_video_title_2: ฉันชื่อ Nikesha และฉันเป็นวิศวกรการบินและอวกาศที่นาซ่า
+  video_library_page_cs_video_title_2: ฉันชื่อ Nikesha และฉันเป็นวิศวกรการบินและอวกาศที่
+    NASA
   video_library_page_cs_video_title_3: ฉันชื่อ Brina และฉันเป็นวิศวกรซอฟต์แวร์ที่
     Instagram
   video_library_page_cs_video_title_4: ฉันชื่อ Kinsley และฉันเป็นวิศวกรซอฟต์แวร์ที่
     Facebook
-  video_library_page_cs_video_title_5: ชื่อของฉันคือ Polina และฉันเป็นนักวิทยาศาสตร์ข้อมูลที่
+  video_library_page_cs_video_title_5: ฉันชื่อ Polina และฉันเป็นนักวิทยาศาสตร์ข้อมูลที่
     Electronic Arts
   video_library_page_cs_video_title_6: ฉันชื่อ Danelle และฉันเป็นวิศวกรซอฟต์แวร์ที่
     MBARI
-  video_library_page_cs_video_title_7: ฉันชื่อคริสโตเฟอร์ และฉันเป็นนักวิเคราะห์ความปลอดภัยที่เทเนี่ยม
+  video_library_page_cs_video_title_7: ฉันชื่อคริสโตเฟอร์ และฉันเป็นนักวิเคราะห์ความปลอดภัยที่
+    Tanium
   video_library_page_cs_video_title_8: ฉันชื่อ Federico และฉันเป็นผู้จัดการโปรแกรมด้านเทคนิคที่
     Microsoft
   video_library_page_cs_video_title_9: ฉันชื่อ Tess และฉันเป็นวิศวกรซอฟต์แวร์ที่ Google
   video_library_page_inspirational_video_title_1: เปลี่ยนโฉมหน้าของวิทยาการคอมพิวเตอร์
     (3 นาที)
-  video_library_page_inspirational_video_title_2: ผลักดันตัวเองทุกคนสามารถเรียนรู้
+  video_library_page_inspirational_video_title_2: ผลักดันตัวเอง ทุกคนสามารถเรียนรู้ได้
     (1 นาที)
-  video_library_page_inspirational_video_title_3: สร้างแรงบันดาลใจให้สาว (2 นาที)
+  video_library_page_inspirational_video_title_3: สร้างแรงบันดาลใจให้ผู้หญิง (2 นาที)
   video_library_page_inspirational_video_title_4: สิ่งที่โรงเรียนส่วนใหญ่ไม่สอน (5
     นาที)
-  video_library_page_inspirational_video_title_5: ชั่วโมงแห่งรหัสอยู่ที่นี่ - ทุกคนสามารถเรียนรู้
+  video_library_page_inspirational_video_title_5: Hour of Code อยู่ที่นี่ - ทุกคนสามารถเรียนรู้ได้
     (2 นาที)
   video_library_page_inspirational_video_title_6: ฉันชื่อ อาราคลีย์ (3 นาที)
-  video_library_page_inspirational_video_title_7: ชั่วโมงโค๊ดกับแกงกะหรี่สเตฟ (2 นาที)
+  video_library_page_inspirational_video_title_7: Hour of Code กับแกงกะหรี่สเตฟ (2
+    นาที)
   video_library_page_inspirational_video_title_8: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกอย่าง
     (5 นาที)
   video_library_page_inspirational_video_title_9: บทนำด้านวิทยาการคอมพิวเตอร์ (1 นาที)
   video_library_page_inspirational_video_title_10: ประธานาธิบดีโอบามาด้านวิทยาการคอมพิวเตอร์
     (1 นาที)
-  video_library_page_inspirational_video_title_11: ทุกคนสามารถเรียนรู้ (1 นาที)
+  video_library_page_inspirational_video_title_11: ทุกคนสามารถเรียนรู้ได้ (1 นาที)
   video_library_page_inspirational_video_title_12: โลเกฟัลตา เอน นูเอสตราส เอสคูเอลาส
     (2 นาที)
-  video_library_page_inspirational_video_title_13: นาซ่าฉลองชั่วโมงแห่งประมวลกฎหมาย
-    (2 นาที)
+  video_library_page_inspirational_video_title_13: NASA เฉลิมฉลอง Hour of Code (2
+    นาที)
   video_library_page_inspirational_video_title_14: มันเป็นมากกว่าเกม (1 นาที)
   video_library_page_inspirational_video_title_15: สร้างสรรค์ด้วยวิทยาการคอมพิวเตอร์
     (1 นาที)
-  video_library_page_not_hacked_video_title_1: 'วิธีที่จะไม่ได้รับการแฮ็ก: บทนำ'
-  video_library_page_not_hacked_video_title_2: 'วิธีที่จะไม่ได้รับการแฮ็ก: รหัสผ่าน'
-  video_library_page_not_hacked_video_title_3: 'วิธีการไม่ได้รับการแฮ็ก: การรับรองความถูกต้องและล็อคอุปกรณ์'
-  video_library_page_not_hacked_video_title_4: 'วิธีไม่ถูกแฮ็ก: ฟิชชิ่ง'
-  video_library_page_not_hacked_video_title_5: 'วิธีการไม่รับ hacked: เว็บไซต์และ
-    Wifi'
-  video_library_page_not_hacked_video_title_6: 'วิธีไม่ถูกแฮ็ก: การส่งข้อความและการดาวน์โหลด'
-  video_library_page_not_hacked_video_title_7: 'วิธีการไม่ได้รับการแฮ็ก: ติดตั้งโปรแกรมปรับปรุง'
+  video_library_page_not_hacked_video_title_1: 'วิธีที่จะไม่ถูกแฮ็ก: บทนำ'
+  video_library_page_not_hacked_video_title_2: 'วิธีที่จะไม่ถูกแฮ็ก: รหัสผ่าน'
+  video_library_page_not_hacked_video_title_3: 'วิธีที่จะไม่ถูกแฮ็ก: การรับรองความถูกต้องและการล็อคอุปกรณ์'
+  video_library_page_not_hacked_video_title_4: 'วิธีที่จะไม่ถูกแฮ็ก: ฟิชชิ่ง'
+  video_library_page_not_hacked_video_title_5: 'วิธีที่จะไม่ถูกแฮ็ก: เว็บไซต์และ Wifi'
+  video_library_page_not_hacked_video_title_6: 'วิธีที่จะไม่ถูกแฮ็ก: การส่งข้อความและการดาวน์โหลด'
+  video_library_page_not_hacked_video_title_7: 'วิธีที่จะไม่ถูกแฮ็ก: ติดตั้งการอัปเดต'
+  thank_you_page_main_title: ขอบคุณที่ช่วยในการสร้างขบวนการ
+  thank_you_page_description: Code.org Advocacy Coalition Coalition ขอขอบคุณผู้สนับสนุนและผู้สนับสนุนในท้องถิ่นหลายแสนคน
+    รวมถึงครู สมาชิกชุมชน นักวิจัย องค์กรไม่แสวงหาผลกำไร มหาวิทยาลัย บริษัท และสถาบันของรัฐที่สนับสนุนวิสัยทัศน์ที่นักเรียนทุกคนในทุกโรงเรียนสมควรได้รับโอกาสในการเรียนรู้วิทยาการคอมพิวเตอร์ขอขอบคุณสำหรับการสนับสนุนขบวนการนี้
+  thank_you_page_members_section_title: 'และถึงสมาชิกทุกคนของแนวร่วมสนับสนุนของ Code.org:'
+  thank_you_page_individual_organization_title: 'ขอขอบคุณบุคคลและองค์กรต่อไปนี้สำหรับการมีส่วนร่วมในรายงานนี้:'
+  thank_you_page_individual_organization_description: หัวหน้างานด้านการศึกษาด้านวิทยาการคอมพิวเตอร์ในหน่วยงานการศึกษาของรัฐ
+    คณะกรรมการวิทยาลัย เดลลา โครนิน สจวาร์ต เดกซ์เลอร์ แคทารีน แมซิส แอนโธนี่ โอเวน,
+    ฌอน โรเบิร์ตส์, ไคล์ โทรจัน, แพท ยงประดิษฐ์
+  thank_you_page_teachers_students_title: 'ขอขอบคุณนักเรียนและครูที่อ้างถึงในรายงานนี้:'
+  thank_you_page_teachers_students_description: เทส แคมเปียน, วิลลา แคมเปียน, เจมี่เดเลอร์เม่,
+    ซินดี้ โนรีกา, ธารา โวโดพิช
   about_us_page_title: เกี่ยวกับเรา
-  about_us_page_hero_description: Code.org® เป็นองค์กรไม่แสวงหาผลกำไรด้านนวัตกรรมการศึกษาที่ทุ่มเทให้กับวิสัยทัศน์ที่นักเรียนทุกคนในทุกโรงเรียนมีโอกาสเรียนรู้วิทยาศาสตร์คอมพิวเตอร์เป็นส่วนหนึ่งของการศึกษา
-    K-12 หลักของพวกเขาเราขยายการเข้าถึงวิทยาการคอมพิวเตอร์ในโรงเรียน โดยมุ่งเน้นไปที่การเพิ่มการมีส่วนร่วมของหญิงสาวและนักเรียนจากกลุ่มอื่น
-    ๆ ที่น้อยกว่าผู้ให้บริการชั้นนำของหลักสูตรวิทยาการคอมพิวเตอร์ K-12 ในเขตโรงเรียนที่ใหญ่ที่สุดในสหรัฐอเมริกา
-    Code.org ยังจัดแคมเปญ [Hour of Code] (%{hour_url}) ประจำปี ซึ่งได้มีส่วนร่วมมากกว่า
-    15% ของนักเรียนทุกคนในโลกCode.org ได้รับการสนับสนุนจากผู้บริจาคใจกว้างรวมทั้งไมโครซอฟท์,
-    อเมซอน, Google และ [คนอื่น ๆ อีกมากมาย] ()%{others_url}
+  about_us_page_hero_description: Code.org® เป็นองค์กรไม่แสวงผลกำไรด้านนวัตกรรมการศึกษาที่อุทิศตนเพื่อวิสัยทัศน์ที่ว่านักเรียนทุกคนในทุกโรงเรียนมีโอกาสเรียนรู้วิทยาการคอมพิวเตอร์ซึ่งเป็นส่วนหนึ่งของการศึกษาหลักในระดับอนุบาลถึงมัธยมศึกษาตอนปลาย
+    (K-12) เราขยายการเข้าถึงวิทยาการคอมพิวเตอร์ในโรงเรียน โดยมุ่งเน้นที่การเพิ่มการมีส่วนร่วมของหญิงสาวและนักเรียนจากกลุ่มอื่นๆ
+    ที่ด้อยโอกาส Code.org ผู้ให้บริการหลักสูตรวิทยาการคอมพิวเตอร์ระดับอนุบาลถึงมัธยมศึกษาตอนปลาย
+    (K-12) ชั้นนำในเขตการศึกษาที่ใหญ่ที่สุดในสหรัฐอเมริกา ยังจัดแคมเปญ [Hour of Code](%{hour_url})
+    ประจำปี ซึ่งมีส่วนร่วมมากกว่า 15% ของนักเรียนทั้งหมดทั่วโลก Code.org ได้รับการสนับสนุนจากผู้บริจาคที่มีน้ำใจรวมถึง
+    Microsoft, Amazon, Google และ [อื่นๆ อีกมากมาย](%{others_url})
   about_us_page_section_title_1: นักเรียนกว่า 80 ล้านคนและครู 2 ล้านคนใน Code.org
-  about_us_page_statistic_figcaption: การเข้าร่วม Code.org จากปีการศึกษา 2021-2022[ดูข้อมูลที่แยกส่วน]
-    ()%{data_url}
-  about_us_page_statistic_description: Code.org เพิ่มความหลากหลายในวิทยาศาสตร์คอมพิวเตอร์โดยการเข้าถึงนักเรียนทุกภูมิหลังที่พวกเขาอยู่
-    - ในระดับทักษะของพวกเขาในโรงเรียนของพวกเขา และในรูปแบบที่สร้างแรงบันดาลใจให้พวกเขาเรียนรู้ต่อไปนักเรียนส่วนใหญ่ใน
-    Code.org มาจากกลุ่มนักศึกษาในอดีตที่ไม่ได้แสดงในทางวิทยาศาสตร์คอมพิวเตอร์การเพิ่มความหลากหลายในวิทยาศาสตร์คอมพิวเตอร์เป็นพื้นฐานสำหรับงานของเรา
-    และ [เราขอแนะนำให้คุณอ่านเพิ่มเติมเกี่ยวกับความพยายามของเรา] (%{diversity_url})
+  about_us_page_statistic_figcaption: การเข้าร่วม Code.org จากปีการศึกษา 2021-2022
+    [ดูข้อมูลที่แยกส่วน](%{data_url})
+  about_us_page_statistic_description: Code.org เพิ่มความหลากหลายในด้านวิทยาการคอมพิวเตอร์โดยเข้าถึงนักเรียนจากทุกภูมิหลังไม่ว่าจะอยู่ที่ไหน
+    ทั้งในระดับทักษะ ในโรงเรียน และในรูปแบบที่สร้างแรงบันดาลใจให้พวกเขาเรียนรู้ต่อไป
+    นักเรียนส่วนใหญ่ใน Code.org มาจากกลุ่มนักเรียนที่ด้อยโอกาสในด้านวิทยาการคอมพิวเตอร์ในอดีต
+    การเพิ่มความหลากหลายในด้านวิทยาการคอมพิวเตอร์เป็นรากฐานสำหรับงานของเรา และ [เราขอแนะนำให้คุณอ่านเพิ่มเติมเกี่ยวกับความพยายามของเรา](%{diversity_url})
   about_us_page_section_title_2: Code.org ในข่าว
-  about_us_page_section_news_description: ดูอดีตทั้งหมด [ข่าวและประกาศ] (%{news_url})
+  about_us_page_section_news_description: ดูอดีตทั้งหมด [ข่าวและประกาศ](%{news_url})
   about_us_page_section_table: เป้าหมายและตัวชี้วัดของเรา
-  about_us_page_section_table_header_1: โค้ด.ORG เป้าหมาย
+  about_us_page_section_table_header_1: เป้าหมาย Code.org
   about_us_page_section_table_header_2: ความสำเร็จ
-  abous_page_section_table_cell_1_1: ปรับปรุงความหลากหลายใน CS * (นักเรียนสหรัฐอเมริกา)
-    *
-  abous_page_section_table_cell_1_2: 45% ของนักเรียน Code.org เป็นหญิงสาว 50% เป็นนักเรียนจากกลุ่มเชื้อชาติและกลุ่มชาติพันธุ์ชายขอบและ
-    46% ของนักเรียนในสหรัฐอเมริกาอยู่ในโรงเรียนที่มีความต้องการสูงอ่านเพิ่มเติมเกี่ยวกับ
-    [แนวทางของเราเพื่อความหลากหลาย] (%{diversity_url})
-  about_page_section_table_cell_2_1: สร้างแรงบันดาลใจให้กับ
-  about_page_section_table_cell_2_2: นับล้านได้ลอง [ชั่วโมงแห่งรหัส] (%{hour_url})
-    (426,370,561 เสิร์ฟ 49% หญิง)
+  abous_page_section_table_cell_1_1: ปรับปรุงความหลากหลายใน CS *(นักเรียนสหรัฐอเมริกา)*
+  abous_page_section_table_cell_1_2: 45% ของนักเรียน Code.org เป็นหญิงสาว 50% เป็นนักเรียนจากกลุ่มเชื้อชาติและกลุ่มชาติพันธุ์ชายขอบ
+    และ 46% ของนักเรียนในสหรัฐอเมริกาอยู่ในโรงเรียนที่มีความต้องการสูงอ่านเพิ่มเติมเกี่ยวกับ
+    [แนวทางของเราต่อความหลากหลาย](%{diversity_url})
+  about_page_section_table_cell_2_1: สร้างแรงบันดาลใจให้นักเรียน
+  about_page_section_table_cell_2_2: กว่าสิบล้านได้ทดลอง [Hour of Code](%{hour_url}).
+    (426,370,561 เสิร์ฟ 49% เป็นผู้หญิง)
   about_page_section_table_cell_3_1: เข้าถึงห้องเรียน
-  about_page_section_table_cell_3_2: ครู 591,636 คนได้ลงทะเบียนเรียนสอนหลักสูตรแนะนำของเราใน
-    [Code Studio] (%{code_studio_url}) และมีนักเรียน 19,177,297 คน
-  about_page_section_table_cell_4_1: เตรียมครู CS ใหม่
-  about_page_section_table_cell_4_2: เราได้เตรียมครูใหม่กว่า 106,000 คนเพื่อสอน CS
-    ในเกรด K-12เรียนรู้เกี่ยวกับ [โปรแกรมการเรียนรู้ระดับมืออาชีพ] ของเรา (%{learning_programs_url})
-  about_page_section_table_cell_5_1: เปลี่ยนหลักสูตรอำเภอโรงเรียน
-  about_page_section_table_cell_5_2: เราได้ร่วมมือกับ [180+ ของเขตโรงเรียนที่ใหญ่ที่สุด]
-    (%{schoold_disctrict_url}) และพันธมิตรระดับภูมิภาค 60 คนเพื่อ [เพิ่ม CS ในหลักสูตรของโรงเรียน]
-    (%{cs_curriculum_url})[เรียนรู้เกี่ยวกับการเป็นพันธมิตรระดับภูมิภาค] (%{regional_partner_url})
+  about_page_section_table_cell_3_2: ผู้สอน 591,636 คนได้ลงทะเบียนเรียนสอนหลักสูตรแนะนำของเราใน
+    [Code Studio](%{code_studio_url}) และมีนักเรียนลงทะเบียนแล้ว 19,177,297 คน
+  about_page_section_table_cell_4_1: เตรียมผู้สอน CS ใหม่
+  about_page_section_table_cell_4_2: 'เราได้เตรียมผู้สอนใหม่กว่า 106,000 คนเพื่อสอน
+    CS ในเกรด K-12เรียนรู้เกี่ยวกับ [โปรแกรมการเรียนรู้ระดับมืออาชีพ](%{learning_programs_url})
+    ของเรา. '
+  about_page_section_table_cell_5_1: เปลี่ยนหลักสูตรของเขตการศึกษา
+  about_page_section_table_cell_5_2: เราได้ร่วมมือกับ [180+ เขตการศึกษาที่ใหญ่ที่สุด](%{schoold_disctrict_url})
+    และพันธมิตรระดับภูมิภาค 60 รายเพื่อ [เพิ่ม CS ในหลักสูตรของโรงเรียน](%{cs_curriculum_url})[เรียนรู้เกี่ยวกับการเป็นพันธมิตรระดับภูมิภาค](%{regional_partner_url})
   about_page_section_table_cell_6_1: ตั้งค่านโยบายเพื่อสนับสนุน CS
-  about_page_section_table_cell_6_2: "[นโยบายเปลี่ยนแปลงใน 50 รัฐในสหรัฐอเมริกา] (%{states_url})
-    เพื่อกำหนดมาตรฐานการศึกษา CS ทำให้หลักสูตร CS นับต่อการสำเร็จการศึกษาระดับมัธยมปลาย
-    ฯลฯ [(รายละเอียด)] (%{details_url})"
+  about_page_section_table_cell_6_2: "[นโยบายเปลี่ยนแปลงใน 50 รัฐในสหรัฐอเมริกา](%{states_url})
+    เพื่อกำหนดมาตรฐานการศึกษา CS ทำให้หลักสูตร CS นับรวมในการสำเร็จการศึกษาระดับมัธยมปลาย
+    ฯลฯ [(รายละเอียด)](%{details_url})"
   about_page_section_table_cell_7_1: ไปทั่วโลก
   about_page_section_table_cell_7_2: หลักสูตรของเรามีให้บริการในกว่า 67 ภาษา ใช้ใน
     180+ ประเทศ
-  about_page_section_table_under_label: 'ที่มา: กิจกรรม Code Studio และ [แบบสำรวจของนักการศึกษาที่เข้าร่วม]
-    (%{educators_url})'
+  about_page_section_table_under_label: 'ที่มา: กิจกรรม Code Studio และ [แบบสำรวจของนักการศึกษาที่เข้าร่วม](%{educators_url})'
   about_page_section_title_3: ข้อมูลเพิ่มเติม ประวัติศาสตร์ และปรัชญา
   about_page_section_more_description_1: '2013 Code.org เปิดตัวโดยพี่น้องฝาแฝด [Hadi](%{hadi_url})
-    และ [อาลี พาร์โตวี] (%{partovi_url}) โดยมี [video](%{video_url}) ส่งเสริมวิทยาการคอมพิวเตอร์วิดีโอนี้กลายเป็น
-    #1 บน YouTube เป็นเวลาหนึ่งวัน และโรงเรียน 15,000 แห่งติดต่อเราเพื่อขอความช่วยเหลือตั้งแต่นั้นมา
-    เราได้ขยายจากเจ้าหน้าที่อาสาสมัครที่เพิ่งเริ่มทำงานเพื่อสร้างองค์กรเต็มรูปแบบที่สนับสนุนการเคลื่อนไหวทั่วโลกเราเชื่อว่าการศึกษาด้านวิทยาศาสตร์คอมพิวเตอร์ที่มีคุณภาพควรมีให้สำหรับเด็กทุกคน
-    ไม่ใช่แค่โชคดีเพียงไม่กี่คน'
-  about_page_section_more_description_2: 'เพื่อสนับสนุนเป้าหมายของเรา เราทำงานข้ามสเปกตรัมการศึกษา:
-    ออกแบบหลักสูตรของเราเองหรือร่วมมือกับผู้อื่น ฝึกอบรมครู ร่วมมือกับเขตโรงเรียนขนาดใหญ่
-    ช่วยเปลี่ยนนโยบายของรัฐบาล ขยายระดับสากลผ่านความร่วมมือ และการตลาดเพื่อทำลายแบบแผน'
-  about_page_section_more_description_3: งานของเราสร้างขึ้นจาก [ทศวรรษแห่งความพยายามโดยองค์กรและบุคคลนับไม่ถ้วน]
-    (%{efforts_url}) ที่ช่วยสร้าง กองทุน และเผยแพร่การศึกษาด้านวิทยาศาสตร์คอมพิวเตอร์เรารู้สึกขอบคุณที่ได้ประโยชน์จากความช่วยเหลืออย่างไม่รู้จักเหน็ดเหน็ดเหนื่อยจากชุมชนการศึกษาวิทยาศาสตร์คอมพิวเตอร์ที่กว้างขึ้น
-    และ [เราขอขอบคุณพันธมิตรและบุคคลทั้งหมดที่สนับสนุนผลกระทบของเราในช่วงหลายปีที่ผ่านมา]
-    (%{partners_url}))
-  about_page_section_more_list_1: "[รายงานประจำปี Code.org 2021] (%{report_url}) (รายงานที่ผ่านมา:
+    และ [Ali Partovi](%{partovi_url}) โดยมี [video](%{video_url}) ส่งเสริมวิทยาการคอมพิวเตอร์
+    วิดีโอนี้กลายเป็น #1 บน YouTube เป็นเวลาหนึ่งวัน และโรงเรียน 15,000 แห่งติดต่อเราเพื่อขอความช่วยเหลือตั้งแต่นั้นมา
+    เราได้ขยายจากเจ้าหน้าที่อาสาสมัครที่เพิ่งเริ่มทำงานเพื่อสร้างองค์กรเต็มรูปแบบที่สนับสนุนการเคลื่อนไหวทั่วโลกเราเชื่อว่าการศึกษาด้านวิทยาการคอมพิวเตอร์ที่มีคุณภาพควรมีให้สำหรับเด็กทุกคน
+    ไม่ใช่แค่คนที่โชคดีเพียงไม่กี่คน'
+  about_page_section_more_description_2: 'เพื่อสนับสนุนเป้าหมายของเรา เราทำงานในทุกด้านของการศึกษา:
+    ออกแบบหลักสูตรของเราเองหรือร่วมมือกับผู้อื่น ฝึกอบรมผู้สอน ร่วมมือกับเขตการศึกษาขนาดใหญ่
+    ช่วยเปลี่ยนแปลงนโยบายของรัฐบาล ขยายไปสู่ระดับสากลผ่านความร่วมมือ และการตลาดเพื่อทำลายทัศนคติแบบเหมารวม'
+  about_page_section_more_description_3: งานของเราต่อยอดมาจาก [ความพยายามหลายทศวรรษโดยองค์กรและบุคคลจำนวนนับไม่ถ้วน](%{efforts_url})
+    ซึ่งได้ช่วยสร้าง ให้ทุน และเผยแพร่การศึกษาด้านวิทยาการคอมพิวเตอร์ เรารู้สึกขอบคุณที่ได้รับประโยชน์จากความช่วยเหลืออย่างไม่เหน็ดเหนื่อยของชุมชนการศึกษาวิทยาการคอมพิวเตอร์ในวงกว้าง
+    และ [เราขอขอบคุณพันธมิตรและบุคคลที่สนับสนุนผลกระทบของเราตลอดหลายปีที่ผ่านมา](%{partners_url}))
+  about_page_section_more_list_1: "[รายงานประจำปี Code.org 2021](%{report_url}) (รายงานที่ผ่านมา:
     [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
     [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
-  about_page_section_more_list_2: "[ค่านิยมหลักของเราและแนวทางในการส่งข้อความ] (%{core_url})"
-  about_page_section_more_list_3: "[หลักสูตรและปรัชญาการสอนของเรา] (%{curriculum_url})"
-  about_page_section_more_list_4: "[TEDx พูดคุยโดย Hadi Partovi ผู้ก่อตั้งของเราเกี่ยวกับสาเหตุที่วิทยาศาสตร์คอมพิวเตอร์มีไว้สำหรับทุกคน
-    (วิดีโอ)] ()%{tedx_url}"
+  about_page_section_more_list_2: "[ค่านิยมหลักของเราและแนวทางในการส่งข้อความ](%{core_url})"
+  about_page_section_more_list_3: "[หลักสูตรและปรัชญาการสอนของเรา](%{curriculum_url})"
+  about_page_section_more_list_4: "[TEDx พูดคุยโดย Hadi Partovi ผู้ก่อตั้งของเราเกี่ยวกับสาเหตุที่วิทยาการคอมพิวเตอร์มีไว้สำหรับทุกคน
+    (วิดีโอ)](%{tedx_url})"
   about_page_section_title_4: แนวทางที่รวมกันในโลกที่แบ่งแยก
   about_page_section_specific_title_1: แนวทางที่รวมกันในโลกที่แบ่งแยก
   about_page_section_specific_title_2: ความมุ่งมั่นของเราในการเข้าถึง
-  about_page_section_specific_title_3: เรากับความมุ่งมั่นที่มีต่อการเสนอหลักสูตรฟรีและเทคโนโลยีโอเพ่นซอร์ส
-  about_page_section_specific_title_4: Code.org พันธมิตรสนับสนุน
+  about_page_section_specific_title_3: เรากับความมุ่งมั่นที่มีต่อการนำเสนอหลักสูตรฟรีและเทคโนโลยีโอเพ่นซอร์ส
+  about_page_section_specific_title_4: พันธมิตรสนับสนุน Code.org
   about_page_section_specific_title_5: K-12 กรอบวิทยาศาสตร์คอมพิวเตอร์
   about_page_section_specific_title_6: ผู้บริจาค Code.org
   about_page_section_specific_title_7: ติดตามเรา
   about_page_section_specific_title_8: บทบาทในระดับสากลของ Code.org
   about_page_section_specific_description_1: บทบาทระดับโลกของ Code.org ในการเคลื่อนไหววิทยาการคอมพิวเตอร์
-    K-12 เป็นไปได้เพียงเพราะเราใช้แนวทางที่รวมกันข้ามผู้มีส่วนได้ส่วนเสียที่หลากหลายและมักแบ่งออกในช่วงเวลาที่โพลาไรซ์เพิ่มขึ้น
-    ความคิดในการเพิ่มโอกาสสำหรับนักเรียนรวมผู้คนจากทั่วสเปกตรัมทางการเมืองสมาชิกในทีม
-    นักเรียน ครู และผู้สนับสนุนของ Code.org มีมุมมองที่หลากหลายและแตกต่าง และพวกเขาทุกคนยินดีต้อนรับในภารกิจของเรา[อ่านเพิ่มเติม.]
-    (%{read_more_url})
+    K-12 เกิดขึ้นได้เพียงเพราะเราใช้แนวทางที่เป็นเอกภาพจากผู้มีส่วนได้ส่วนเสียที่หลากหลายและมักจะแตกแยกกัน
+    ในช่วงเวลาแห่งการแบ่งขั้วที่เพิ่มมากขึ้น แนวคิดในการเพิ่มโอกาสให้กับนักเรียนทำให้ผู้คนจากทุกแวดวงการเมืองเป็นน้ำหนึ่งใจเดียวกัน
+    สมาชิกในทีม นักเรียน ผู้สอน และผู้สนับสนุนของ Code.org มีมุมมองที่หลากหลายและหลากหลาย
+    และยินดีต้อนรับพวกเขาทุกคนในภารกิจของเรา [อ่านเพิ่มเติม](%{read_more_url})
   about_page_section_specific_description_2: Code.org เชื่อว่าวิทยาศาสตร์คอมพิวเตอร์เป็นพื้นฐานสำหรับนักเรียนทุกคน
     และเรามุ่งมั่นที่จะมีความเท่าเทียมกัน การเข้าถึง และโอกาสในองค์กรของเรา [values.](%{values_url})
     เพื่อให้บรรลุเป้าหมายนี้ เราทำงานเพื่อระบุและกำจัดอุปสรรคที่ป้องกันการรวมและการมีส่วนร่วมอย่างเต็มที่ของนักเรียนและนักการศึกษาที่มีความพิการหากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับความพยายามของเรา
-    โปรดดู [คำชี้แจงการเข้าถึง] ของเรา (%{accessibility_url})
+    โปรดดู [คำชี้แจงการเข้าถึง] (%{accessibility_url})
   about_page_section_specific_description_3: แหล่งข้อมูลหลักสูตรทั้งหมดและบทเรียนที่เราเขียนจะมีอิสระในการใช้งานตลอดกาลและได้รับอนุญาตอย่างเปิดเผยภายใต้ใบอนุญาต
-    [ครีเอทีฟคอมมอนส์] (%{commons_url}) ทำให้ผู้อื่นสามารถสร้างแหล่งข้อมูลการศึกษาอนุพันธ์เพื่อวัตถุประสงค์ที่ไม่ใช่เชิงพาณิชย์หากคุณสนใจที่จะออกใบอนุญาตวัสดุของเราเพื่อวัตถุประสงค์ทางการค้า
-    [ติดต่อเรา] (%{contact_us_url})หลักสูตรของเราได้รับการแปลเพื่อการใช้งานทั่วโลกหรือโดยผู้พูดภาษาต่างๆเทคโนโลยีของเราได้รับการพัฒนาเป็น
-    [โครงการโอเพ่นซอร์ส] (%{open_source_url})
-  about_page_section_specific_description_4: "[Code.org Advocacy Coalition] (%{advocacy_url})
-    เป็นพันธมิตรสองฝ่ายขององค์กรและองค์กรไม่แสวงหาผลกำไร ที่ทำงานร่วมกันเพื่อช่วยสร้างนโยบายของรัฐบาลกลางและรัฐของสหรัฐฯ
-    เพื่อขยายและรักษาการเข้าถึงวิทยาการคอมพิวเตอร์ K-12 และเพื่อขยายการมีส่วนร่วมและความหลากหลายในสาขาเรารวมกัน
-    [ผู้นำทางการเมืองพรรครีพับลิกันและประชาธิปไตย] (%{leaders_url}) ในสาเหตุร่วมกันสนับสนุนการขยายการเข้าถึงและการมีส่วนร่วมในวิทยาการคอมพิวเตอร์
-    K-12"
-  about_page_section_specific_description_5: Code.org เป็นสมาชิกของคณะกรรมการพวงมาลัยที่ช่วยสร้าง
-    [K-12 Computer Science Framework] (%{framework_url}) - คู่มือระดับสูงสำหรับรัฐ
-    อำเภอ และองค์กรที่ดำเนินการศึกษาวิทยาศาสตร์คอมพิวเตอร์กรอบได้รับการสนับสนุนจากนักวิชาการหลายร้อยคน
-    นักการศึกษา K-12 บริษัท ซอฟต์แวร์ องค์กรไม่แสวงหาผลกำไร และรัฐ
-  about_page_section_specific_description_6: Code.org กรมสรรพากร [2014]แบบ%{irs_url_1}ฟอร์ม
-    990 สำหรับ [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
-    [2019]()%{irs_url_6}), [2020](%{irs_url_7}) และ [2021](%{irs_url_8})[นโยบายการบริจาค]
-    (%{donation_policy_url})
-  about_page_section_specific_description_7: "[ลงทะเบียนเพื่อรับการอัปเดตสถานะ] (%{sign_up_url})
+    [Creative Commons](%{commons_url}) ทำให้ผู้อื่นสามารถสร้างแหล่งข้อมูลการศึกษาอนุพันธ์เพื่อวัตถุประสงค์ที่ไม่ใช่เชิงพาณิชย์หากคุณสนใจที่จะออกใบอนุญาตวัสดุของเราเพื่อวัตถุประสงค์ทางการค้า
+    [ติดต่อเรา](%{contact_us_url})หลักสูตรของเราได้รับการแปลเพื่อการใช้งานทั่วโลกหรือโดยผู้พูดภาษาต่างๆ
+    เทคโนโลยีของเราได้รับการพัฒนาเป็น [โครงการโอเพ่นซอร์ส](%{open_source_url})
+  about_page_section_specific_description_4: "[Code.org Advocacy Coalition](%{advocacy_url})
+    เป็นแนวร่วมสองฝ่ายขององค์กรและองค์กรไม่แสวงผลกำไรที่ทำงานร่วมกันเพื่อช่วยกำหนดนโยบายของรัฐบาลกลางและรัฐของสหรัฐอเมริกาเพื่อขยายและรักษาการเข้าถึงวิทยาการคอมพิวเตอร์ระดับอนุบาลถึงมัธยมศึกษา
+    (K-12) ตลอดจนขยายการมีส่วนร่วมและความหลากหลาย ในสนาม เรารวบรวม [ผู้นำทางการเมืองของพรรครีพับลิกันและเดโมแครต](%{leaders_url})
+    ซึ่งมีจุดประสงค์ร่วมกันเพื่อสนับสนุนการขยายการเข้าถึงและการมีส่วนร่วมในวิทยาการคอมพิวเตอร์ระดับอนุบาลถึงมัธยมศึกษา
+    (K-12)"
+  about_page_section_specific_description_5: Code.org เป็นสมาชิกของคณะกรรมการกำกับดูแลที่ช่วยสร้าง
+    [K-12 Computer Science Framework](%{framework_url}) ซึ่งเป็นคู่มือระดับสูงสำหรับรัฐ
+    เขต และองค์กรที่นำการศึกษาด้านวิทยาการคอมพิวเตอร์ไปใช้ Framework ได้รับการสนับสนุนจากนักวิชาการ
+    นักการศึกษาระดับอนุบาลถึงมัธยมศึกษาตอนปลาย (K-12) บริษัทซอฟต์แวร์ องค์กรไม่แสวงผลกำไร
+    และรัฐต่างๆ หลายร้อยคน
+  about_page_section_specific_description_6: Code.org แบบฟอร์ม IRS 990 for [2014](%{irs_url_1}),
+    [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}),
+    [2019](%{irs_url_6}), [2020](%{irs_url_7}), และ [2021](%{irs_url_8}). [นโยบายการบริจาค](%{donation_policy_url})
+  about_page_section_specific_description_7: "[ลงทะเบียนเพื่อรับการอัปเดตสถานะ](%{sign_up_url})
     เกี่ยวกับความคืบหน้าในการเคลื่อนไหววิทยาการคอมพิวเตอร์ K-12 และเกี่ยวกับการทำงานของ
     Code.orgหรือติดตาม Code.org บนโซเชียลมีเดีย:"
-  about_page_section_specific_description_8: กว่า 40% ของการเข้าชมเว็บไซต์ของเรามาจากนอกสหรัฐอเมริกาและจำนวนนั้นยังคงเพิ่มขึ้นเพื่อขยายการเข้าถึงวิทยาศาสตร์คอมพิวเตอร์ทั่วโลก
-    ทีมงานของเราทำงานอย่างใกล้ชิดกับ [พันธมิตรระหว่างประเทศมากกว่า 100 คน] (%{partners_url})
-    ช่วยให้พวกเขาส่งเสริมชั่วโมงแห่งประมวลผล สนับสนุนการเปลี่ยนแปลงนโยบาย และฝึกอบรมครูเรากำลังทำให้วิทยาศาสตร์คอมพิวเตอร์เป็นส่วนหนึ่งของวาทกรรมการศึกษาระหว่างประเทศโดยการร่วมมือกับกระทรวงศึกษาธิการจากทั่วโลกและทำงานร่วมกับองค์กรระหว่างประเทศเช่นองค์การเพื่อความร่วมมือทางเศรษฐกิจและการพัฒนาและองค์การการศึกษาวิทยาศาสตร์และวัฒนธรรมองค์การสหประชาชาติ
-  about_page_section_donors_description_1: Code.org® เป็นองค์กรไม่แสวงหาผลกำไรสาธารณะ
-    501c3 ที่ลงทะเบียนพร้อมการสนับสนุนจากประชาชนทั่วไปเรารู้สึกขอบคุณสำหรับการสนับสนุนอย่างใจกว้างที่เราได้รับจาก
-    [บุคคลและองค์กร] (%{individuals_url}) ที่สนับสนุนวิสัยทัศน์ของเรา
+  about_page_section_specific_description_8: การเข้าชมเว็บไซต์ของเรามากกว่า 40% มาจากนอกสหรัฐอเมริกา
+    และจำนวนดังกล่าวยังคงเพิ่มขึ้นอย่างต่อเนื่อง เพื่อขยายการเข้าถึงวิทยาการคอมพิวเตอร์ทั่วโลก
+    ทีมของเราทำงานอย่างใกล้ชิดกับ [พันธมิตรระหว่างประเทศมากกว่า 100 ราย](%{partners_url})
+    ช่วยให้พวกเขาโปรโมต Hour of Code สนับสนุนการเปลี่ยนแปลงนโยบาย และฝึกอบรมผู้สอน
+    เรากำลังทำให้วิทยาการคอมพิวเตอร์เป็นส่วนหนึ่งของวาทกรรมการศึกษานานาชาติโดยร่วมมือกับกระทรวงศึกษาธิการจากทั่วโลก
+    และทำงานร่วมกับองค์กรระหว่างประเทศ เช่น องค์การเพื่อความร่วมมือทางเศรษฐกิจและการพัฒนา
+    และองค์การการศึกษา วิทยาศาสตร์ และวัฒนธรรมแห่งสหประชาชาติ
+  about_page_section_donors_description_1: Code.org® เป็นองค์กรไม่แสวงหากำไรสาธารณะ
+    501c3 ที่จดทะเบียน โดยได้รับการสนับสนุนจากประชาชนทั่วไป เราขอขอบคุณสำหรับการสนับสนุนอย่างล้นหลามที่เราได้รับจาก
+    [บุคคลและองค์กร](%{individuals_url}) ที่สนับสนุนวิสัยทัศน์ของเรา
   about_page_section_donors_description_2: ความสำเร็จของรหัส (ด้านบน) แสดงให้เห็นถึงความสามารถของเราในการใช้ประโยชน์จากดอลลาร์เหล่านั้นให้เป็นผลลัพธ์ที่แข็งแกร่งแต่ด้วยความทะเยอทะยานที่ไม่แสวงหาผลกำไรของเราว่าเด็กทุกคนในโรงเรียนทุกแห่งควรเข้าถึงวิทยาศาสตร์คอมพิวเตอร์
     - เพื่อเป็นพลเมืองที่มีความรู้ในโลกดิจิทัลในปัจจุบันและเพื่อทดสอบความสนใจของพวกเขาในการสำรวจ
     CS ต่อไปในฐานะอาชีพ - เรามีทางยาวที่จะไปบรรลุเป้าหมายการระดมทุนที่จะสนับสนุนวิสัยทัศน์นั้น
   about_page_donors_link_1: บริจาค
-  about_page_donors_link_2: "[ดูรายชื่อผู้บริจาคของเรา] (%{donors_url})"
+  about_page_donors_link_2: "[ดูรายชื่อผู้บริจาคของเรา](%{donors_url})"
+  teach_ai_title: ตัวอย่างในโลกแห่งความเป็นจริงทรัพยากรเชิงปฏิบัติ
+  teach_ai_description: AI Guidance for Schools Toolkit เป็นแหล่งข้อมูลสำหรับผู้กำหนดนโยบาย
+    ผู้นำโรงเรียน และพนักงานเพื่อพัฒนาคำแนะนำเบื้องต้นเกี่ยวกับ AI ในโรงเรียนของตน
+  teach_ai_button_label: ดูชุดเครื่องมือ
+  middle_high_page_main_title: การเรียนรู้สำหรับอายุ 11 ปีขึ้นไป
+  middle_high_page_main_description: สำรวจโลกแห่งวิทยาการคอมพิวเตอร์ด้วยวิดีโอที่น่าสนใจ
+    บทช่วยสอนแบบมีจังหวะด้วยตนเอง กิจกรรมการเขียนโปรแกรม และอื่น ๆ อีกมากมาย!
+  middle_high_page_hero_title: เริ่มต้นใช้งาน Hour of Code
+  middle_high_page_hero_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์ด้วยกิจกรรม
+    Hour of Code ฟรี ซึ่งมีบล็อกการเข้ารหัสแบบลากและวางมีตัวเลือกนานหลายร้อยชั่วโมงให้เลือก!
+  middle_high_page_hourofcode_link: สำรวจกิจกรรมชั่วโมงแห่งรหัส
+  middle_high_page_modules_title: โมดูลการเขียนโปรแกรมสำหรับนักเรียนที่มีอายุมากกว่า
+  middle_high_page_modules_description: ดัดแปลงจากหลักสูตร CS Discovery และ CS Principles
+    ของเรา โมดูลสั้น ๆ เหล่านี้สำหรับนักเรียนมัธยมต้นและมัธยมปลายเป็นวิธีที่ยอดเยี่ยมในการเรียนรู้แนวคิดที่ครอบคลุมภาษาและเครื่องมือการเขียนโปรแกรมทั้งหมด
+  middle_high_page_modules_card_title_1: เกมแลปพื้นฐาน
+  middle_high_page_modules_card_title_2: การเขียนโปรแกรมให้กับเต่าในแอปแลป
+  middle_high_page_modules_card_title_3: การเขียนโปรแกรมตามเหตุการณ์ในแอปแลป
+  middle_high_page_modules_card_description_1: เคลื่อนไหวตามจังหวะของคุณเองในการแนะนำสภาพแวดล้อม
+    Game Lab ของเราในขณะที่คุณตั้งโปรแกรมภาพเคลื่อนไหว ศิลปะแบบโต้ตอบ และเกม
+  middle_high_page_modules_card_description_2: ปลดล็อกความสามารถในการสร้างแอพที่หลากหลายและโต้ตอบด้วย
+    JavaScript ใน App Lab!
+  middle_high_page_modules_card_description_3: ก้าวไปตามจังหวะของคุณเองด้วยการแนะนำสภาพแวดล้อมการเขียนโปรแกรม
+    App Lab ซึ่งนักเรียนใช้ JavaScript เพื่อสร้างแอพแบบโต้ตอบ
+  middle_high_page_modules_card_link: ลองเลย
+  middle_high_page_make_your_own_title: สร้างแอป เกม และหน้าเว็บของคุณเอง
+  middle_high_page_make_your_own_description: 'นอกจากหลักสูตรแล้ว เรายังมีเครื่องมือการเขียนโปรแกรมที่ช่วยให้คุณสำรวจความคิดสร้างสรรค์ของคุณและสร้างสิ่งที่น่าทึ่ง '
+  middle_high_page_make_your_own_card_title_1: App Lab
+  middle_high_page_make_your_own_card_title_2: ห้องปฏิบัติการเกม
+  middle_high_page_make_your_own_card_title_3: ห้องปฏิบัติการเว็บ
+  middle_high_page_make_your_own_card_descrpition_1: App Lab เป็นสภาพแวดล้อมการเขียนโปรแกรมที่คุณสามารถสร้างแอพที่เรียบง่ายออกแบบแอป
+    โค้ดใน JavaScript ด้วยบล็อกหรือข้อความ จากนั้นแชร์แอปของคุณในไม่กี่วินาที
+  middle_high_page_make_your_own_card_descrpition_2: เกมแลปคือสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถทำภาพเคลื่อนไหวง่าย
+    ๆ หรือจะสร้างเกมด้วยวัตถุและตัวละครที่จะโต้ตอบกัน
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab เป็นสภาพแวดล้อมการเขียนโปรแกรมที่คุณสามารถสร้างหน้าเว็บที่เรียบง่ายโดยใช้
+    HTML และ CSSออกแบบหน้าเว็บของคุณและแชร์ไซต์ของคุณในไม่กี่วินาที
+  middle_high_page_make_your_own_card_link: เรียน​รู้​เพิ่ม​เติม
+  middle_high_page_additional_resources_title: ทรัพยากรเพิ่มเติม
+  middle_high_page_additional_resources_description: มีหลายวิธีในการสำรวจวิทยาการคอมพิวเตอร์เพิ่มเติม!เรียกดูไลบรารีวิดีโอของเราหรือเรียนรู้เพิ่มเติมเกี่ยวกับอาชีพที่น่าตื่นเต้นในสาขาวิทยาการคอมพิวเตอร์
+  middle_high_page_video_library_title: ค้นพบไลบรารีวิดีโอของเรา
+  middle_high_page_video_library_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์ผ่านวิดีโอสั้น
+    5-10 นาทีในหัวข้อต่างๆ เช่น ปัญญาประดิษฐ์ อินเทอร์เน็ต วิธีการทำงานของคอมพิวเตอร์
+    วิธีที่จะไม่ถูกแฮ็ก บล็อกเชน อาชีพ และอื่นๆ อีกมากมาย!
+  middle_high_page_video_library_link: ดูไลบรารีวิดีโอ
+  middle_high_page_cs_journeys_title: ก้าวไปไกลขึ้นด้วย CS Journeys
+  middle_high_page_cs_journeys_description: ก้าวต่อไปในการเดินทางวิทยาศาสตร์คอมพิวเตอร์ของคุณสำรวจอาชีพ
+    โอกาสในการให้คำปรึกษา หลักสูตรออนไลน์ ทุนการศึกษา การฝึกงาน และอื่นๆ อีกมากมาย!
+  middle_high_page_cs_journeys_link: สำรวจ CS Journeys
+  middle_high_page_cs_title: วิทยาการคอมพิวเตอร์ในห้องเรียน
+  middle_high_page_cs_description: หลักสูตรเหล่านี้ควรนำโดยครู!หากคุณต้องการเห็นพวกเขาสอนที่โรงเรียนของคุณ
+    ลองทำงานร่วมกับครูเพื่อนำพวกเขาไปที่ชั้นเรียนของคุณ
+  middle_high_page_cs_card_title_1: การค้นพบ CS
+  middle_high_page_cs_card_title_2: หลักการ CS
+  middle_high_page_cs_card_title_3: AP วิทยาการคอมพิวเตอร์ A
+  middle_high_page_cs_card_description_1: หลักสูตรฟรีตลอดทั้งปีที่แนะนำให้นักเรียนรู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
+    และท้าทายให้พวกเขาสำรวจว่าคอมพิวเตอร์และเทคโนโลยีสามารถส่งผลกระทบต่อโลกได้อย่างไร
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: แนะนำนักเรียนให้รู้จักกับวิศวกรรมซอฟต์แวร์และการออกแบบเชิงวัตถุในขณะที่พวกเขาเรียนรู้ภาษาการเขียนโปรแกรมภาษาจาวาในหลักสูตรฟรีสำหรับ
+    AP® Computer Science A (AP® CSA) นี้
+  middle_high_page_cs_link_1: สำรวจ CS ไดโคเวอรี่
+  middle_high_page_cs_link_2: สำรวจหลักการบริการลูกค้า
+  middle_high_page_cs_link_3: สำรวจ CSA
+  elemeentary_page_main_title: การเรียนรู้สำหรับอายุ 5 ถึง 11
+  elementary_page_main_description: สำรวจโลกแห่งวิทยาการคอมพิวเตอร์ด้วยวิดีโอที่น่าสนใจ
+    บทช่วยสอนแบบมีจังหวะด้วยตนเอง กิจกรรมการเขียนโปรแกรม และอื่น ๆ อีกมากมาย!
+  elementary_page_own_pace_title: เรียนรู้ต่อไปตามจังหวะของคุณเอง
+  elementary_page_own_pace_description: สร้างภาพวาด เกม และอีกมากมายในตัวเลือกที่ยอดเยี่ยมทั้งสองนี้สำหรับนักเรียนที่เริ่มเรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์ของตนเอง
+  elementary_page_own_pace_card_title_1: หลักสูตรด่วนพรีรีเดอร์
+  elementary_page_own_pace_card_title_2: หลักสูตร Express
+  elementary_page_own_pace_card_description_1: เรียนรู้วิทยาการคอมพิวเตอร์ตามจังหวะของคุณเอง!เรียนรู้ที่จะสร้างโปรแกรมคอมพิวเตอร์
+    พัฒนาทักษะการแก้ปัญหา และทำงานผ่านความท้าทายที่สนุกสนาน!สร้างเกมและโครงการสร้างสรรค์เพื่อแบ่งปันกับเพื่อน
+    ครอบครัว และครู
+  elementary_page_own_pace_link_1: เริ่มหลักสูตรก่อนผู้อ่าน
+  elementary_page_own_pace_link_2: เริ่มหลักสูตรด่วน
+  elementary_page_make_your_own_games_title: สร้างภาพเคลื่อนไหวและเกมของคุณเอง
+  elementary_page_make_your_own_games_card_title_1: สไปรท์แล็บ
+  elementary_page_make_your_own_games_card_description_1: ถึงเวลาที่จะสร้างสรรค์!ใช้การเข้ารหัสตามบล็อกเพื่อสร้างสิ่งที่โง่เขลาหวานหรือนอกเหนือชั้นนอกใน
+    Sprite Labขีด จำกัด เพียงอย่างเดียวคือจินตนาการของคุณ!
+  elementary_page_make_your_own_games_link: ลองใช้สไพรท์ แล็บ
+  elementary_page_computer_science_title: วิทยาการคอมพิวเตอร์ในห้องเรียน
+  elementary_page_computer_science_description: หลักสูตรเหล่านี้ควรนำโดยครู!หากคุณต้องการเห็นพวกเขาสอนที่โรงเรียนของคุณ
+    ขอให้พ่อแม่หรือผู้ปกครองทำงานกับครูเพื่อนำพวกเขาไปที่ชั้นเรียนของคุณ
+  elementary_page_computer_science_card_title_1: ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์
+  elementary_page_computer_science_card_title_2: การเชื่อมต่อวิทยาการคอมพิวเตอร์
+  elementary_page_computer_science_description_1: หลักสูตรฟรีตลอดทั้งปีที่แนะนำให้นักเรียนรู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
+    และท้าทายให้พวกเขาสำรวจว่าคอมพิวเตอร์และเทคโนโลยีสามารถส่งผลกระทบต่อโลกได้อย่างไร
+  elementary_page_computer_science_description_2: สร้างความเชื่อมโยงระหว่างวิทยาการคอมพิวเตอร์
+    (CS) กับวิชาอื่นๆ เช่น คณิตศาสตร์ ภาษาศาสตร์ วิทยาศาสตร์ และสังคมศึกษา
   language_code:
     ar: ตัวอารบิก
     az: เกี่ยวกับอาเซอร์ไบจัน

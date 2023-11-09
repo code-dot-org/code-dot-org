@@ -142,6 +142,7 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    sort_by_family_name
   )
 
   attr_accessor(
@@ -482,6 +483,16 @@ class User < ApplicationRecord
   has_many :sections, dependent: :destroy
   has_many :followers, through: :sections
   has_many :students, through: :followers, source: :student_user
+
+  has_many :section_instructors, foreign_key: 'instructor_id'
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
+  has_many :sections_instructed, through: :active_section_instructors, source: :section
+
+  # TODO once the backfill creates SectionInstructors for every section owner,
+  # this method can be deleted and its references replaced by sections_instructed
+  def sections_owned_or_instructed
+    (sections + sections_instructed).uniq
+  end
 
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
@@ -1518,8 +1529,16 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def over_21?
+    !age.nil? && age.to_i >= 21
+  end
+
   def mute_music?
     !!mute_music
+  end
+
+  def sort_by_family_name?
+    !!sort_by_family_name
   end
 
   def generate_username

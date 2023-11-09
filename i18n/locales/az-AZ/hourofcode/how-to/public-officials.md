@@ -4,7 +4,7 @@ title: Dövlət məmurları üçün təlimat
 
 {{ signup_button }}
 
-# How to involve your entire community
+# Bütün icmanızı necə cəlb etməli
 
 ### Show your state, district, or city your commitment to computer science
 

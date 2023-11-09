@@ -41,8 +41,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
 
     enrollment_email = params[:email]
-    app_id = params[:application_id]
-    user = (User.find_by_email_or_hashed_email enrollment_email) || (app_id && User.find(Pd::Application::TeacherApplication.find(app_id)&.user_id))
+    user = User.find(params[:user_id])
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
@@ -68,7 +67,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
         render json: {
           workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS],
-          account_exists: enrollment.resolve_user.present?,
+          account_exists: user.present?,
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
@@ -122,6 +121,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   private def enrollment_params
     {
+      user_id: params[:user_id],
       first_name: params[:first_name]&.strip_utf8mb4,
       last_name: params[:last_name]&.strip_utf8mb4,
       email: params[:email]&.strip_utf8mb4,

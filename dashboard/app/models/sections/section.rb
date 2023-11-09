@@ -23,10 +23,13 @@
 #  restrict_section     :boolean          default(FALSE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
+#  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
+#  fk_rails_f0d4df9901        (lti_integration_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -61,8 +64,9 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
-  has_many :section_instructors, -> {where(status: :active)}, dependent: :destroy
-  has_many :instructors, through: :section_instructors, class_name: 'User'
+  has_many :section_instructors, dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
+  has_many :instructors, through: :active_section_instructors, class_name: 'User'
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -177,6 +181,9 @@ class Section < ApplicationRecord
   CSA = 'csa'.freeze
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
+  # A section can have five co-teachers, plus the owner, for a total of 6
+  INSTRUCTOR_LIMIT = 6
+
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
   end
@@ -230,7 +237,17 @@ class Section < ApplicationRecord
 
     si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
     if si.blank?
-      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
+      # Using insert instead of create saves on queries to re-read the section
+      # and user from the DB to validate these are still actual objects.
+      SectionInstructor.insert(
+        {
+          instructor_id: user_id,
+          section_id: id,
+          status: :active,
+          created_at: Time.now,
+          updated_at: Time.now
+        }
+      )
     elsif si.deleted?
       si.restore
       si.status = :active
@@ -395,11 +412,14 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
       {
         id: id,
         name: name,
         createdAt: created_at,
         teacherName: teacher.name,
+        sectionInstructors: serialized_section_instructors,
         linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
@@ -576,4 +596,35 @@ class Section < ApplicationRecord
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
+
+  public def add_instructor(email, current_user)
+    instructor = User.find_by!(email: email, user_type: :teacher)
+
+    deleted_section_instructor = validate_instructor(instructor)
+    deleted_section_instructor&.really_destroy!
+
+    SectionInstructor.create!(
+      section: self,
+      instructor: instructor,
+      status: :invited,
+      invited_by: current_user
+    )
+  end
+
+  # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
+  public def validate_instructor(instructor)
+    if section_instructors.count >= INSTRUCTOR_LIMIT
+      raise ArgumentError.new('section full')
+    end
+
+    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
+
+    # Return the instructor for actual deletion if they were soft-deleted
+    if si&.deleted_at.present?
+      return si
+    # Can't re-add someone who is already an instructor (or invited/declined)
+    elsif si.present?
+      raise ArgumentError.new('already invited')
+    end
+  end
 end

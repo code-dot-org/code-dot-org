@@ -5,6 +5,11 @@ sl:
   language: Slovenščina
   front_title: Pridružite se največjemu izobraževalnemu dogodku v zgodovini, %{campaign_date}
   coming_soon: Coming Soon
+  new: Nov
+  hours_of_code_served: Servisne ure kodeksa
+  hoc_stat_languages: Učenci se učijo v več kot 45 jezikih
+  hoc_stat_hours_served: Več kot 100M učencev se je preizkusilo v Uri za Kodo
+  hoc_stat_females: Študentke predstavljajo 50% udeležencev Hour of Code
   campaign_date_start_short: 6. december
   campaign_date_start_long: 4. december
   campaign_date_short: 4. do 10. december
@@ -36,9 +41,19 @@ sl:
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1. oktober 2022 - 18. december 2022
   hoc2023_header: Ustvarjalnost z AI
+  hoc2023_hero_desc_homepage: Pridružite se milijonom ljudi po vsem svetu, da organizirate
+    uro kodiranja, z umetno inteligenco ali brez nje, in se naučite, kako deluje umetna
+    inteligenca. Vsakdo in kjerkoli to lahko stori. Izkušnje niso potrebne.
+  hoc2023_hero_desc_learn_page: Letos bomo Hour of Code dvignili na nove višine z
+    ponudbo možnosti kodiranja, ki zajemajo tako umetno inteligenco (AI) kot komponente,
+    ki niso umetne inteligence.
   hoc2023_social_creativity_with_ai_title: Ura kode - Kaj boste ustvarili?
   hoc2023_social_creativity_with_ai_desc: Uporabite računalništvo za raziskovanje
     in spoznavanje umetne inteligence!
+  hoc2023_what_is_hoc_desc: Hour of Code je brezplačen uvod v računalništvo s pomočjo
+    zabavnih dejavnosti in videoposnetkov za učence vseh stopenj spretnosti. Letošnje
+    praznovanje kodiranja in umetne inteligence podpira več kot 400 partnerjev, 20.000
+    vzgojiteljev in 58.000 prostovoljcev.
   hoc2022_header: Raziščite, igrajte, ustvarite!
   social_hoc2022_explore_play_create: Uporabite računalništvo za raziskovanje, igranje
     in ustvarjanje!
@@ -51,6 +66,9 @@ sl:
     Gomez, glasba iz Disneyjevega »Encanto« in še več!
   social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, glasba iz Disneyjevega »Encanto« in še več!
+  social_hoc2023_dance_v2: Čas je, da podprete svoje stvari! Ustvarite svojo plesno
+    zabavo z uspešnicami Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía
+    in še več!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Naučite se danes, jutri zgradite svetlejši.
@@ -169,6 +187,7 @@ sl:
   social_ai_title: Spoznajte umetno inteligenco (AI) | Code.org
   social_ai_desc: Orodja za pomoč študentom in učiteljem, da bi umetno inteligenco
     v učilnico.
+  social_videos_desc: Zanimivi videoposnetki iz računalništva za učence vseh starosti.
   pl_superhero_title: Pomagajte študentom, da postanejo superjunaki!
   pl_superhero_desc: Pridružite se našemu zelo podpornemu programu strokovnega učenja
     za vzgojitelje srednjih in srednjih šol.
@@ -199,6 +218,15 @@ sl:
   device_laptop: Prenosni računalnik
   device_desktop_computer: Namizni računalnik
   device_mobile_device: Mobilna naprava
+  for_everyone: Za vsakogar
+  for_students_teacher_led_learning: 'Za študente: Učenje pod vodstvom učitelja'
+  for_students_teacher_led_lessons: 'Za študente: učne ure, ki jih vodijo učitelji'
+  professional_development: Strokovni razvoj
+  how_ai_works_video_series: Kako deluje AI Video serije
+  learn_how_ai_works: Naučite se, kako deluje AI
+  ai_101_for_educators: AI 101 za vzgojitelje
+  learn_about_ai_impacts: Preberite več o vplivih umetne inteligence
+  hoc_ai_activities: Ura kode Aktivnosti AI
   subscribe_to_emails_heading: Naročite se na e-pošto
   subscribe_to_emails_desc: Preberite o tem, kaj se dogaja na Code.org in v izobraževanju
     računalništva skozi četrtletne posodobitve preko našega poštnega seznama.
@@ -253,21 +281,35 @@ sl:
     vpogled in podporo drugih vzgojiteljev.
   required_materials: 'Potrebni materiali:'
   optional_materials: 'Izbirni materiali:'
+  for_students: Za študente
+  for_educators: Za učitelje
+  call_to_action_host_hoc: Privoščite uro kode
   call_to_action_hold_an_event: Organizirajte dogodek
   call_to_action_register_event: Registrirajte svoj dogodek
+  call_to_action_register_your_hoc: Registrirajte svojo uro kodiranja
   call_to_action_select_activity: Izberite dejavnost
+  call_to_action_select_coding_activity: Izberite dejavnost kodiranja
   call_to_action_start_activity: Začnite dejavnost
   call_to_action_get_certificates: Pridobite potrdila
+  call_to_action_print_certificates: Natisni potrdila
   call_to_action_go_beyond_hoc: Preseči uro kodeksa
+  call_to_action_explore_all_hoc_activities: Raziščite vse dejavnosti Hour of Code
+    s spletnega mesta Code.org
+  call_to_action_start_dance_party: Začnite plesno zabavo
+  call_to_action_start_part_02: Začnite drugi del
+  call_to_action_start_unplugged_activity: Začnite odklopljeno dejavnost
   call_to_action_view_promo_resources: Oglejte si promocijske vire
   call_to_action_learn_more: Več o tem
   call_to_action_watch_now: Pazi zdaj
   call_to_action_try_activity: Preizkusite dejavnost
   call_to_action_try_activities: Preizkusite dejavnosti
+  call_to_action_try_hoc_ai_activities: Preizkusite dejavnosti umetne inteligence
+    Hour of Code
   call_to_action_explore_activities: Raziščite dejavnosti
   call_to_action_explore_ai: Raziščite AI
   call_to_action_explore_unit: Raziščite enoto
   call_to_action_explore_curriculum: Raziščite učni načrt
+  call_to_action_explore_curricula: Raziščite učne načrte
   call_to_action_explore_curriculum_options: Raziščite možnosti učnega načrta
   call_to_action_explore_lessons: Raziščite lekcije
   call_to_action_explore_modules: Raziščite module
@@ -350,6 +392,11 @@ sl:
   call_to_action_learn_about_advocacy: Spoznajte naše zagovorništvo
   call_to_action_visit_store: Obiščite trgovino
   call_to_action_view_faqs: Oglejte si več pogostih vprašanj
+  call_to_action_applications_open: Prijave so zdaj odprte
+  call_to_action_apply_cs_ambassador: Prijavite se za ambasadorja CS
+  call_to_action_coming_soon: Prihaja kmalu!
+  call_to_action_learn_how_ai_works: Naučite se, kako deluje AI
+  call_to_action_learn_about_ai: Preberite več o AI
   aria_label_call_to_action_hoc_how_to_educators: Oglejte si navodila za vzgojitelje
   aria_label_call_to_action_hoc_how_to_companies: Oglejte si navodila za podjetja
   aria_label_call_to_action_hoc_how_to_districts: Oglejte si navodila za okrožja
@@ -361,6 +408,9 @@ sl:
   aria_label_call_to_action_hoc_how_to_volunteers: Oglejte si navodila za prostovoljce
   aria_label_call_to_action_hoc_how_to_virtual_events: Oglejte si navodila za navidezne
     dogodke
+  aria_label_call_to_action_dance_01: Začnite dejavnost Plesne zabave
+  aria_label_call_to_action_dance_02: Začetek drugega dela aktivnosti Dance Party
+  aria_label_call_to_action_dance_unplugged: Začnite dejavnost Dance Party brez priključka
   aria_label_call_to_action_afe: Preberite več o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začnite program poučevanja računalniških
     znanj Osnove strokovnega učenja
@@ -368,6 +418,8 @@ sl:
     znanosti Odkritja strokovnega učenja
   aria_label_call_to_action_teaching_csp: Začnite program poučevanja računalniških
     znanosti Načela strokovnega učenja
+  aria_label_call_to_action_teaching_problem_solving: Začnite strokovni program za
+    reševanje problemov poučevanja in računalništva
   aria_label_call_to_action_teaching_csc: Zaženite program strokovnega učenja poučevanja
     računalniških znanj
   aria_label_call_to_action_teaching_ai: Začnite program strokovnega učenja za poučevanje
@@ -383,6 +435,8 @@ sl:
     Science Fundamentals Pre-Reader Express
   aria_label_call_to_action_curriculum_csd: Raziščite učni načrt odkritij računalništva
   aria_label_call_to_action_curriculum_csp: Raziščite učni načrt načel računalništva
+  aria_label_call_to_action_curriculum_problem_solving: Raziščite učni načrt reševanja
+    problemov in računalništva
   aria_label_call_to_action_curriculum_csc: Raziščite učni načrt Computer Science
     Connections
   aria_label_call_to_action_curriculum_ai: Raziščite učni načrt umetne inteligence
@@ -465,6 +519,7 @@ sl:
   curriculum_name_csf_teacher_led: Učitelj vodil lekcijo
   curriculum_name_csd: Odkritja računalništva
   curriculum_name_csp: Načela računalništva
+  curriculum_name_problem_solving: Reševanje problemov in računalništvo
   curriculum_name_csc: Computer Science Povezave
   curriculum_name_csa: AP® Računalništvo A
   curriculum_name_csa_ai: Programsko inženirstvo in računalniški vid
@@ -477,11 +532,25 @@ sl:
   curriculum_name_creating_apps_with_devices: Ustvarjanje aplikacij z napravami
   curriculum_name_poetry: Kodiranje s poezijo
   curriculum_name_dance_party: Plesna zabava
+  curriculum_name_dance_party_02: Nadaljujte s plesom
+  curriculum_name_dance_party_unplugged: Plesna zabava brez priključka
+  curriculum_name_dance_party_ai_edition: 'Plesna zabava: AI izdaja'
   curriculum_name_problem_solving_computing: Reševanje problemov in računalništvo
   curriculum_name_web_development: Spletni razvoj
   curriculum_name_interactive_animations_games: Interaktivne animacije in igre
   curriculum_name_design_process: Proces oblikovanja
   curriculum_name_data_society: Podatki in družba
+  curriculum_desc_dance_party_01: V tej uvodni dejavnosti uporabite kodo, da različni
+    pisani liki preidejo na animirana ozadja in optimistično glasbo.
+  curriculum_desc_dance_party_02: Presežite uvodno vadnico z razširjenimi projektnimi
+    idejami. Prebrskajte knjižnico primerov bolj zapletenih plesnih zabav.
+  curriculum_desc_dance_party_unplugged: Vklopite svoj žleb - računalnik ni potreben!
+    Naučite se, kako lahko koncepte kodiranja, kot so dogodki, uporabite za sinhronizacijo
+    plesalske koreografije.
+  curriculum_desc_dance_party_ai_edition: Spoznajte koncepte umetne inteligence (AI),
+    da ustvarite svojo virtualno plesno zabavo, ki bo predstavila današnje najboljše
+    umetnike. Z več desetinami pesmi, med katerimi lahko izbirate, dosežete vsakega
+    študenta, ne glede na njihov glasbeni okus. Čas je, da podprete svoje stvari!
   curriculum_desc_csf: Prosti nabor osnovnih učnih načrtov, ki študente uvaja v temeljne
     koncepte računalništva.
   curriculum_desc_csf_express: Naučite se ustvarjati računalniške programe, razvijati
@@ -572,7 +641,7 @@ sl:
   module_label_prerequisites: 'Predpogoji:'
   module_label_level: 'Raven:'
   module_label_topics: 'Teme:'
-  module_label_devices: 'Devices:'
+  module_label_devices: 'Naprave:'
   module_label_tools: 'Orodja za programiranje:'
   module_label_professional_learning: 'Strokovno učenje:'
   module_label_languages: 'Podprti jeziki:'
@@ -594,12 +663,16 @@ sl:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: ۵-۱۲
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: ۷-۱۲
   module_grade_9_12: 9-12
   module_grade_kindergarten: Vrtec
   module_grade_grade_01: 1. razred
@@ -607,6 +680,12 @@ sl:
   module_grade_grade_03: 3. razred
   module_grade_grade_04: Razred 4
   module_grade_grade_05: 5. razred
+  module_age_05_07: Starost 5-7 let
+  module_age_07: Starost 7+
+  module_age_07_11: Starost 7-11 let
+  module_age_11: Starost 11+
+  module_age_13: Starost 13+
+  module_age_all_age: Vse starosti
   module_grade_k_5_teachers: K-5 Učitelji
   module_grade_6_10_teachers: 6-10 Učitelji
   module_grade_9_12_teachers: 9-12 Učitelji
@@ -638,6 +717,7 @@ sl:
   module_label_teaching_csf: Poučevanje računalniških znanj Osnove
   module_label_teaching_csd: Poučevanje odkritij računalništva
   module_label_teaching_csp: Poučevanje računalniških načel
+  module_label_teaching_problem_solving: Poučevanje reševanja problemov in računalništva
   module_label_teaching_csc: Poučevanje računalniških povezav
   module_label_teaching_ai: Poučevanje AI in strojnega učenja
   module_label_teaching_maker_cp: Poučevanje Ustvarjanje aplikacij z napravami (Circuit
@@ -701,6 +781,56 @@ sl:
   heading_explore_curriculum_catalog: Raziščite vse naše tečaje v katalogu kurikuluma
   heading_csa_ai: Iščete stvari, ki jih morate storiti po izpitu AP®?
   heading_bring_cs_to_students: Prinesite računalništvo študentom
+  heading_cs_ambassador_program: Program veleposlanikov CS
+  heading_featured_student_projects: Predstavljeni študentski projekti
+  heading_start_hoc_with_videos: Začnite svojo uro kode z navdihujočimi videoposnetki
+  cs_ambassador_subhead: Če ste srednješolec, ki je navdušen nad spodbujanjem več
+    mladih žensk, da se ukvarjajo z računalništvom v vaši šoli, potem vas potrebujemo!
+  cs_ambassador_desc: Računalništvo se dotakne vsakega področja, vključno z medicino,
+    zabavo, športom, izobraževanjem, poslovanjem, modo in podjetništvom. Vendar le
+    5% srednješolskih mladih žensk obiskuje pouk računalništva. Ambasadorji lahko
+    pomagajo odpraviti to vrzel med spoloma, tako da svoje vrstnike spodbujajo k tečaju
+    računalništva.
+  cs_ambassador_application_date: Prijave so odprte do 8. novembra 2023
+  cs_ambassador_application_subhead: Sodelujte z učiteljem, da oddate svojo prijavo
+    še danes
+  cs_ambassador_application_questions: Vprašanja? Obrnite se na [youngwomen@code.org]
+    (%{email_url})
+  cs_ambassador_do_heading: Kaj počnejo ambasadorji CS?
+  cs_ambassador_do_desc: Ambasadorji CS spodbujajo mlade ženske, da raziščejo to temo
+    in se med seboj dvignejo, ko si povrnejo svoje mesto v računalništvu. Ambasadorji
+    CS se povežejo s svojimi vrstniki, da delijo svoje navdušenje in ljubezen do računalništva.
+    Obiskujejo učilnice, gostijo mize ob kosilu in govorijo na skupščinah in klubskih
+    sestankih. Ambasadorji CS sodelujejo z učitelji in šolskimi skrbniki, da bi razbili
+    stereotipe, ki zadržujejo mlade ženske.
+  cs_ambassador_steps_heading: Kaj potrebujem, da postanem veleposlanik CS?
+  cs_ambassador_steps_list_title_01: Strast
+  cs_ambassador_steps_list_title_02: Izkušnje na tečaju CS
+  cs_ambassador_steps_list_title_03: Šola, ki ponuja CS
+  cs_ambassador_steps_list_desc_01: Strast do spodbujanja mladih žensk v vaši šoli
+    k pouku računalništva
+  cs_ambassador_steps_list_desc_02: 'Ste v šolskem letu 2022-23 ali prej opravili
+    enoletni tečaj računalništva (priporočeno: CS Principles ali AP® CSA)'
+  cs_ambassador_steps_list_desc_03: 'Udeležite se srednje šole, ki redno ponuja celoletni
+    tečaj računalništva (priporočeno: CS Principles ali AP® CSA)'
+  cs_ambassador_benefits_heading: Prednosti programa
+  cs_ambassador_benefits_list_title_01: Nacionalna skupnost
+  cs_ambassador_benefits_list_title_02: Služba v skupnosti
+  cs_ambassador_benefits_list_title_03: Priznanje
+  cs_ambassador_benefits_list_title_04: Swag
+  cs_ambassador_benefits_list_title_05: Potrdilo
+  cs_ambassador_benefits_list_title_06: Doživetja
+  cs_ambassador_benefits_list_desc_01: Dostop do nacionalne skupnosti mladih voditeljev,
+    ki se zavzemajo za odpravo razlike med spoloma v računalništvu.
+  cs_ambassador_benefits_list_desc_02: Ure službe v skupnosti in priložnost za pridobitev
+    [nagrade predsedniške prostovoljske službe ZDA] (%{award_url}).
+  cs_ambassador_benefits_list_desc_03: Priznanje za veleposlanika 2023-2024 in upravičeno
+    do nagrade v dvorani slavnih veleposlanikov Code.org.
+  cs_ambassador_benefits_list_desc_04: Bodite identificirani kot veleposlanik CS s
+    posebnimi oblačili z blagovno znamko Code.org, nalepkami in še več!
+  cs_ambassador_benefits_list_desc_05: Uradno potrdilo o sodelovanju s strani Code.org.
+  cs_ambassador_benefits_list_desc_06: Pridobite izkušnje in zgodbe, ki jih lahko
+    delite pri prijavi na fakulteto, življenjepisu in še več!
   professional_learning_section_desc: Pridobite podporo, ki jo potrebujete, ko se
     pripravljate na poučevanje. Učitelji ga imajo radi, saj ga je več kot 90% uvrstilo
     v najboljši profesionalni razvoj doslej!
@@ -749,6 +879,14 @@ sl:
     o načelih računalništva Code.org in pridobite koristne opomnike, nasvete in posodobitve,
     poslane neposredno v mapo« Prejeto«.
   subscribe_form_section_unsubscribe: Odjavite se lahko kadarkoli.
+  dance_hero_heading: Kodirajte plesno zabavo
+  dance_featuring_songs_by_short: 'Predstavljamo pesmi:'
+  dance_featuring_songs_by_long: 'Dance Party vključuje pesmi:'
+  dance_and_more: in več
+  dance_choose_activity: Izberite svojo plesno zabavo
+  dance_afe_disclaimer: Izvajalci, katerih glasba je uporabljena v tej vadnici, ne
+    sponzorirajo ali podpirajo Amazona kot del licenciranja uporabe njihove glasbe
+    na Code.org.
   blockchain_hero_heading: Kako deluje Blockchain
   blockchain_hero_desc: Potopite se v svet blockchaina z »Kako deluje Blockchain«,
     našo novo video serijo in spremljajoče lekcije!
@@ -858,6 +996,12 @@ sl:
   ai_curriculum_grades_05: 'Stopnje stopnje: 9-12'
   ai_curriculum_btn_aria_label_05: Raziščite modul za programsko inženirstvo in računalniški
     vid
+  ai_curriculum_title_06: Družbeni vpliv generativne AI
+  ai_curriculum_desc_06: Raziščite vpliv generativne umetne inteligence z različnih
+    vidikov, nato pa kot ekipa sodelujte pri pripravi smernic, ki obravnavajo največ
+    potreb vseh udeležencev.
+  ai_curriculum_btn_aria_label_06: Oglejte si načrt pouka generativne umetne inteligence
+    na družbo
   ai_carousel_heading: 'Kaj učitelji pravijo o AI s Code.org:'
   ai_carousel_quote_01: Ta lekcija je tudi mojim učencem omogočila, da vidijo, da
     v klasifikacijskih sistemih obstaja element mnenja. Kasneje, ko smo začeli videti,
@@ -1848,6 +1992,9 @@ sl:
     pravilnikih, ki jih priporočamo, da države sprejmejo, da računalništvo postane
     temelj za vse študente. Poleg tega ugotovite, kako lahko vozite spremembe v svojem
     stanju.
+  yw_page_top_heading: Mlade ženske v računalništvu
+  yw_page_top_desc: Postanite veleposlanik CS in bodite del odpravljanja vrzeli med
+    spoloma v računalništvu.
   hoc_live: Ura kode v živo
   hoc_live_sign_up_title: Prijavite se za Hour of Code Live
   hoc_live_learn_title: Učite se z Uro kode v živo
@@ -2211,10 +2358,16 @@ sl:
   hoc_homepage_what_is_hoc_description: Ura kode je enourni uvod v računalništvo,
     z uporabo zabavnih vaj, ki kažejo, da se lahko vsakdo nauči osnov. To množično
     kampanjo podpira več kot 400 partnerjev in vzgojiteljev 200,000 po vsem svetu.
+  hoc_homepage_registration_desc: Vaš razred ali skupina se lahko pridruži milijonom
+    ljudi po vsem svetu, ki izvajajo Uro kode! Prijava na letno praznovanje tedna
+    računalniškega izobraževanja se začne oktobra. Čeprav je Hour of Code na voljo
+    vse leto.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Preberite naš vodnik za navodila] (%{howto_guide_url})
     za načrtovanje dogodka za vaš razred."
   hoc_homepage_highlights_heading: Ura kode poudarja
   hoc_homepage_organized_by: Uro kode organizira [Code.org](%{codeorg_url}).
+  hoc_events_heading: Registrirajte se za gostovanje ure kode
+  hoc_events_jump_to_map: Skoči na zemljevid Hour of Code
   signup_closed: Prijave na Uro Za Kodo so sedaj zaključene. Prosim preverite ponovno
     v oktobru in se prijavite na naslednje Ure Za Kode.
   signup_registration_not_required: Za sodelovanje se vam ni treba registrirati! Dejavnosti
@@ -2320,6 +2473,7 @@ sl:
   map_title: Ura kode zemljevid
   map_header: "# dogodkov Ura za kodo po svetu"
   map_header_count_year: "%{event_count} dogodkov, registriranih v %{year}"
+  map_header_count_year_so_far: "%{event_count} doslej zabeleženi dogodki v %{year}"
   see_all_events: Prikaži vse dogodke
   map_header_company: "# od organizatorjev podjetja"
   map_header_country: "# v %{country}"
@@ -2332,6 +2486,7 @@ sl:
   map_warning: Celoten seznam dogodkov si lahko ogledate na strani <a href='%{events_url}'>dogodkov.</a>
   map_warning_markdown: Celoten seznam dogodkov si lahko ogledate na [strani dogodkov.]
     (%{events_url})
+  map_view_all_events: Oglejte si celoten seznam dogodkov Hour of Code [here](%{events_url}).
   meta_tag_og_title: Prihaja Ura za kodo
   meta_tag_og_description: Ura za koda je globalno gibanje, ki je doseglo desetine
     milijonov učencev, dijakov in študentov, od 4 do 104 let, v več kot 180 državah
@@ -2353,9 +2508,6 @@ sl:
     za podporo @codeorg)'
   hoc_faq_title: Pogosto zastavljena vprašanja
   hoc_faq_what_is_hoc_q: Kaj je Ura za kodo?
-  hoc_faq_what_is_hoc_a: Uro za kodo je enourni uvod v računalništvo z namenom demistificirati
-    kodo in pokazati, da se lahko vsakdo nauči osnov. <a href='http://code.org/learn'>
-    Oglejte si vadnice</a>.
   hoc_faq_what_is_hoc_a_markdown: Ura kodiranja se je začela kot enourni uvod v računalništvo,
     zasnovan tako, da demistificira »kodo«, da pokaže, da se lahko vsakdo nauči osnov
     in razširi sodelovanje na področju računalništva. Od takrat je postalo svetovno
@@ -2365,12 +2517,6 @@ sl:
     in izobraževalcev 200,000 po vsem svetu.
   hoc_faq_last_year: Poskusite vadnice
   hoc_faq_when_is_hoc_q: Kdaj je Ura za kodo?
-  hoc_faq_when_is_hoc_a: Ura kodiranja poteka vsako leto med <a href='%{csedweek_url}'>Computer
-    Science Education Teden</a>. %{campaign_date_year} Teden izobraževanja o računalništvu
-    bo %{campaign_date_full}, vendar lahko celo leto gostite uro kode. Computer Science
-    Education Week poteka vsako leto v znak priznanja za rojstni dan računalništva
-    pionir <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (9. december
-    1906).
   hoc_faq_when_is_hoc_a_markdown: Ura kodiranja poteka vsako leto med [Teden izobraževanja
     računalništva] (%{csedweek_url}). Teden izobraževanja o %{campaign_date_year}
     računalništvu bo %{campaign_date_full}, vendar lahko celo leto gostite uro kode.
@@ -2378,66 +2524,33 @@ sl:
     dan računalništva pionirja [Admiral Grace Murray Hopper] (%{grace_hopper}) (9.
     decembra 1906).
   hoc_faq_why_cs_q: Zakaj računalništvo?
-  hoc_faq_why_cs_a: "<i>Vsak</i> učenec mora imeti priložnost za učenje računalništva.
-    Izboljšuje reševanje težav, logiko in ustvarjalnost. Z zgodnjim začetkom bodo
-    imeli temelje za uspeh v vseh poklicih 21. stoletja. Več statistik na <a href='http://code.org'>
-    Code.org</a>."
   hoc_faq_why_cs_a_markdown: _Every_ študent bi moral imeti priložnost, da se naučijo
     računalništva. Pomaga pri negovanju veščin reševanja problemov, logike in ustvarjalnosti.
     Z začetkom zgodaj bodo študenti imeli temelje za uspeh na kateri koli karierni
     poti 21. stoletja. Oglejte si več statistik [here](%{stats_url}).
   hoc_faq_how_participate_q: Kako lahko sodelujem v Uri za kodo?
-  hoc_faq_how_participate_a: "<a href='/how-to'>Začnite načrtovati tukaj</a> tako,
-    da pregledate naš vodnik z navodili. Dogodek Hour of Code lahko organizirate v
-    svoji šoli ali v vaši skupnosti &mdash; , kot v izvenšolskem klubu, neprofitnem
-    podjetju ali na delovnem mestu. Ali pa poskusite sami, ko prispe %{campaign_date}
-    ."
   hoc_faq_how_participate_a_markdown: "[Začnite načrtovati tukaj] (%{howto}) s pregledom
     našega vodnika z navodili. Dogodek Hour of Code lahko organizirate v svoji šoli
     ali v vaši skupnosti - na primer v izvenšolskem klubu, neprofitnem podjetju ali
     na delovnem mestu. Ali pa poskusite sami, ko prispe %{campaign_date} ."
   hoc_faq_behind_hoc_q: Kdo stoji za Uro za kodo?
-  hoc_faq_behind_hoc_a: Uro za kodo organizira <a href='http://code.org'> Code.org</a>,
-    javna neprofitna organizacija, posvečena širitvi računalništva v šolah in povečevanje
-    udeležbe žensk ter manjšin. <a href='http://code.org/about/partners'>Velika koalicija
-    partnerjev </a>, vključno z Microsoft-om in Apple-om, se je združila v podporo
-    Uri za kodo.
   hoc_faq_behind_hoc_a_markdown: Uro kode organizira Code.org in jo poganja odbor
     za pregled ure kode, pa tudi koalicija brez primere [partners](%{partner_url}),
     ki so se združili, da bi podprli Uro kode - vključno z Microsoftom, Apple, Amazon,
     Klubi za dečke in deklice Amerike in College Board.
   hoc_faq_host_q: Ne vem ničesar o pisanju kode. Še vedno lahko gostujem dogodek?
-  hoc_faq_host_a: Seveda. Ura Kodeksa dejavnosti so samo-vodene. Vse kar morate storiti
-    je, da <a href='%{codeorg_url}/learn'>preizkusite naše trenutne vaje</a>, izberite
-    vadnico, ki jo želite, in izberite uro &mdash; , ki jo poskrbimo za ostalo. Imamo
-    tudi možnosti za vsako starost in raven izkušenj, od vrtca in navzgor. Začnite
-    načrtovati svoj dogodek tako, da preberete naše <a href='/how-to'>kako voditi</a>.
   hoc_faq_host_a_markdown: Seveda. Ura Kodeksa dejavnosti so samo-vodene. Vse kar
     morate storiti je, da [preizkusite naše trenutne vaje] (%{codeorg_url}/naučite
     se), izberite vadnico, ki jo želite, in izberite uro - poskrbimo za ostalo. Imamo
     tudi možnosti za vsako starost in raven izkušenj, od vrtca in navzgor. Začnite
     načrtovati svoj dogodek tako, da preberete naš [kako voditi] (%{howto}).
   hoc_faq_devices_q: Katere naprave naj uporabljam za svoje učence?
-  hoc_faq_devices_a: Code.org vaje delujejo na vseh napravah in brskalnikih. Več informacij
-    o Code.org je tutorial tech potrebe si lahko ogledate tukaj. <a href='%{codeorg_url}/educate/it'></a>Tehnične
-    potrebe po vajah, ki niso Code.org, najdete na <a href='%{codeorg_url}/learn'>%{partner_url}/izvedeti</a>
-    v opisu tutorial. Ne pozabite, da ponujamo tudi <a href='%{unplugged_url}'>izklopljene
-    dejavnosti,</a> če vaša šola ne more sprejeti vadnic!
   hoc_faq_devices_a_markdown: Code.org vaje delujejo na vseh napravah in brskalnikih.
     Ogledate si lahko več informacij o Code.org tutorial tech potrebuje [here](%{codeorg_url}/educate/it).
     Tehnične potrebe po vajah, ki niso Code.org, najdete na [%{partner_url}/learn]
     (%{codeorg_url}/learn) v opisu tutorial. Ne pozabite, da ponujamo tudi [unplugged
     dejavnosti] (%{unplugged_url}), če vaša šola ne more sprejeti vaje!
   hoc_faq_need_computers_q: Potrebujem računalnike za vsakega sodelujočega?
-  hoc_faq_need_computers_a: Ne. Imamo tečaje, ki delujejo na računalnikih, pametnih
-    telefonih, tablet, in nekatere, ki ne sploh zahtevajo računalnika! Pridružite
-    se lahko, kjerkoli že ste, s čimerkoli. <p><i>Tukaj je nekaj možnosti:</i> <br><ul><li><b>Delo
-    v parih.</b> Raziskave kažejo, da se učenci učijo najbolje z <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>
-    programiranjem v parih</a>, pri čemer delijo računalnik. Spodbudite učence, da
-    sodelujejo. <li><b>Uporabite načrtovani zaslon.</b> Če imate projektor, lahko
-    celotna skupina sodeluje in rešuje skupaj. Oglejte si video in se izmenjujte pri
-    reševanju ugank ali odgovore na vprašanja. <li><b>Brez povezave.</b> Nudimo tudi
-    vaje, ki ne zahtevajo računalnika. </ul>
   hoc_faq_need_computers_a_markdown: |-
     Ne. Imamo vaje Hour of Code, ki delujejo na osebnih računalnikih, pametnih telefonih, tabličnih računalnikih in nekaterih, ki sploh ne potrebujejo računalnika! Lahko se pridružite kjerkoli že ste, s karkoli imate.
 
@@ -2447,35 +2560,21 @@ sl:
     - ** Uporabite predvideni zaslon.** Če imate projektor in zaslon za računalnik, povezan s spletom, lahko celotna skupina skupaj naredi uro kode. Oglejte si video dele skupaj in izmenično reševanje ugank ali odgovarjanje na vprašanja.
     - ** Go unplugged.** Ponujamo [vaje, ki ne zahtevajo računalnika] () sploh.%{unplugged_url}
   hoc_faq_international_q: Sem v <country>. Kako lahko mednarodno sodelujem?
-  hoc_faq_international_a: Vsak lahko organizira Hour of Code dogodek, kjerkoli na
-    svetu. Lani, so se študenti po vsem svetu zbrali skupaj za Hour of Code. Izvedite
-    več <a href='/promote'>tukaj</a>.
   hoc_faq_international_a_markdown: Vsakdo lahko organizira dogodek Ura kode, kjer
     koli na svetu. Lani so se študenti po vsem svetu združili za Uro kodiranja. Izvedite
     več [here](%{promote}).
   hoc_faq_tutorial_q: Kako lahko uro naredim vodič?
-  hoc_faq_tutorial_a: Če ste zainteresirani, lahko postati partner za vodiče, <a href='target-tutorial-guidelines'>
-    oglejte si naše smernice in navodila</a>. Radi bi gostili čim večje število, vendar
-    glavni cilj je cim boljša izkušnja za vse, ki so novi v računalništvu.
   hoc_faq_tutorial_a_markdown: Če vas zanima, da postanete partner za vadnice, [glejte
     naše smernice in navodila] (%{tutorial_guidelines}). Radi bi gostili različne
     privlačne možnosti, vendar je glavni cilj optimizirati izkušnjo za učence in učitelje,
     ki so novi v računalništvu.
   hoc_faq_account_q: Se morajo učenci prijaviti z računom?
-  hoc_faq_account_a: Ne. Nobena prijava ni potrebna, da bi učenci poskusili Uro za
-    kodo. Večina <a href='http://code.org/learn/beyond'> nadaljevalnih tečajev</a>
-    zahteva ustvarjanje računa, da se shrani napredek učenca.
   hoc_faq_account_a_markdown: Ne. Absolutno nobena prijava ali prijava ni potrebna
     za študente, da bi preizkusili uro kode. Večina [nadaljnjih tečajev] (%{codeorg_url}/učenje/izven)
     zahteva ustvarjanje računa, da se shrani napredek študentov. Tudi prijava na Uro
     kode NE ustvari samodejno računa Code Studio. Če želite ustvariti račune za svoje
     učence, sledite tem [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Katero dejavnost naj naredim z dijaki?
-  hoc_faq_high_school_a: Za vse starosti priporočamo, da se za začetek poskuša ena
-    od vaj za začetnike na <a href='http://code.org/learn'> Code.org/learn</a>  kot
-    so vaje z Jeznimi ptiči ali z Anno in Elso. Dijaki bi morali končati eno od teh
-    v 30 minutah in lahko nato poskusijo bolj napreden uvod v JavaScript, kot na primer
-    Khan Academy ali CodeHS.
   hoc_faq_high_school_a_markdown: Naše Vadnice Star Wars in Minecraft so odlične za
     srednješolce, zlasti različico JavaScript Vojne zvezd in raven brezplačne igre
     na obeh vajah. Namesto tega priporočamo, da poskusite eno od začetnih vaj na [%{partner_url}/learn]
@@ -2485,23 +2584,12 @@ sl:
     CodeHS.
   hoc_faq_scratch_q: Za Uro za kodo delam Scratch, ampak kaj, ko imajo moji učenci
     iPade namesto prenosnikov?
-  hoc_faq_scratch_a: Scratch ne deluje na tablicah. Če so vaši učenci mladi, lahko
-    uporabljajo ScratchJR iPad app (za prvo triado). Če pogledate  na <a href='http://code.org/learn'>
-    Code.org/learn</a>, lahko najdete druge vaje, ki delujejo na iPadih - Code.org,
-    Tynker, Lightbot ali CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch se ne izvaja na tabličnih računalnikih. Če so
     vaši učenci mladi, lahko uporabljajo aplikacijo ScratchJr iPad (za zgodnje bralce).
     Če pogledate vadnice na [%{partner_url}/learn] (%{codeorg_url}/learn), lahko najdete
     druge vadnice, ki delujejo na iPadih - od Code.org, Tynker, Lightbot ali CodeSpark.
   hoc_faq_count_hoc_q: Kako štejete ure kode?
   hoc_faq_map_q: Zakaj ne vidim moje pike na zemljevidu?
-  hoc_faq_map_a: Tako nam je žal, da svojega dogodka ne vidite na zemljevidu Ure kode.
-    Zaradi več deset tisoč organizatorjev, ki se prijavijo, zemljevid združuje podatke
-    in prikaže eno točko za več dogodkov. Če kliknete na <a href='%{events_url}'>dogodkov
-    stran</a> povezavo pod zemljevidom boste preusmerjeni na seznam vseh dogodkov
-    po državah in lahko najdete svoj dogodek, ki je naveden tam. Poleg tega, glede
-    na tisoče ljudi, ki se prijavijo na uro kode, zemljevid in seznam dogodkov običajno
-    traja 48 ur za posodobitev. Preverite nazaj v nekaj dneh!
   hoc_faq_map_a_markdown: Tako nam je žal, da svojega dogodka ne vidite na zemljevidu
     Ure kode. Zaradi več deset tisoč organizatorjev, ki se prijavijo, zemljevid združuje
     podatke in prikaže eno točko za več dogodkov. Če kliknete na [stran dogodkov]
@@ -2509,10 +2597,6 @@ sl:
     po državah in lahko tam najdete svoj dogodek. Poleg tega, glede na tisoče ljudi,
     ki se prijavijo na uro kode, zemljevid in seznam dogodkov običajno traja 48 ur
     za posodobitev. Preverite nazaj v nekaj dneh!
-  hoc_faq_count_hoc_a: Sledilnik ur kode ni natančna meritev uporabe. Pri sledenju
-    udeležbe v Ura kode ne štejemo edinstvenih ID-jev študentov, še posebej zato,
-    ker od študentov ne zahtevamo, da se prijavijo ali registrirajo. Posledično hkrati
-    preštejemo in premalo štejemo udeležence. Preberite vse podrobnosti <a href='%{codeorg_url}/loc'>tukaj</a>.
   hoc_faq_count_hoc_a_markdown: 'Pri sledenju udeležbe v Ura kode ne štejemo edinstvenih
     ID-jev študentov odlično. Zakaj? Delno zato, ker ne želimo trenja spodbuditi k
     »prijavi/registraciji«, preden učenec ali učilnica poskuša učiti prvič, deloma
@@ -2528,23 +2612,6 @@ sl:
     zato sledilca Ure kode ne gledamo kot natančno merilo uporabe. Vsekakor je usmerjeno
     pravilna in kaže, da je sodelovalo več deset milijonov študentov.'
   hoc_faq_one_hour_q: Koliko se lahko naučimo v eni uri?
-  hoc_faq_one_hour_a: Cilj Ure kodeksa ni naučiti nikogar, da bi v eni uri postal
-    strokovni računalniški znanstvenik. Ena ura je dovolj le, da se naučimo, da je
-    računalništvo zabavno in ustvarjalno, da je dostopna v vseh starostnih obdobjih,
-    za vse študente, ne glede na ozadje. Merilo uspešnosti te kampanje ni v tem, koliko
-    študentov CS se naučijo - uspeh se odraža v široki udeležbi med spoloma in etničnimi
-    in socialno-ekonomskimi skupinami ter posledično povečanje vpisa in udeležbe na
-    tečajih CS na vseh ravneh razreda. Milijoni sodelujočih učiteljev in študentov
-    so se odločili, da bodo presegli eno uro - učiti se cel dan ali cel teden ali
-    več, mnogi študenti pa so se zato odločili, da se vpišejo na celoten tečaj (ali
-    celo višji kolegij). <br/><br/> Poleg študentov je še en »učenec« vzgojitelj,
-    ki po eni uri pridobi zaupanje, da lahko poučujejo računalništvo, čeprav morda
-    nimajo fakultetske diplome kot računalniški znanstvenik. Več deset tisoč učiteljev
-    se odloči, da bodo nadaljevali z računalništvom, bodisi obiskali PD ali ponudili
-    nadaljnje spletne tečaje ali oboje. In to velja tudi za šolske administratorje,
-    ki se zavedajo, da je računalništvo nekaj, kar želijo njihovi učenci in njihovi
-    učitelji so sposobni. <br/><br/> Predvsem pa se lahko vsi udeleženci naučijo v
-    eni uri, da lahko to storimo.
   hoc_faq_one_hour_a_markdown: |-
     Cilj Ure kodeksa ni naučiti nikogar, da bi v eni uri postal strokovni računalniški znanstvenik. Ena ura je dovolj le, da se naučimo, da je računalništvo zabavno in ustvarjalno, da je dostopna v vseh starostnih obdobjih, za vse študente, ne glede na ozadje. Merilo uspešnosti te kampanje ni v tem, koliko študentov CS se naučijo - uspeh se odraža v široki udeležbi med spoloma, rasno/etničnimi in socialno-ekonomskimi skupinami ter posledično povečanje vpisa in udeležbe, ki ga vidimo na tečajih CS na vseh ravneh razredov. Milijoni sodelujočih učiteljev in študentov so se odločili, da bodo presegli eno uro - učiti se cel dan ali cel teden ali več, mnogi študenti pa so se zato odločili, da se vpišejo na celoten tečaj (ali celo višji kolegij).
 
@@ -2552,38 +2619,27 @@ sl:
 
     Predvsem pa se lahko vsi udeleženci naučijo v eni uri, da lahko to storimo.
   hoc_faq_more_questions_q: Imate dodatna vprašanja?
-  hoc_faq_more_questions_a: Poskusite najti odgovor na <a href='http://support.code.org'>
-    forumu za podporo</a>.
   hoc_faq_more_questions_a_markdown: Poskusite najti odgovor na našem [forumu za podporo]
     (http://support.code.org).
   hoc_faq_keep_learning_q: Kako se še naprej učim po Ura kodiranja?
-  hoc_faq_keep_learning_a: Vsakdo lahko kadar koli gosti uro kode. Vadnice ostanejo
-    vse leto. Pričakujete lahko, da bodo vse naše vaje in učni načrt na voljo na naši
-    spletni strani v neskončnost. Prosimo, pojdite na <a href='/promote'>naše vire</a>
-    za vodnike z navodili za dogodke in druge vire, ki bodo pripomogli k uspehu vašega
-    dogodka Hour of Code.
   hoc_faq_keep_learning_a_markdown: Vsakdo lahko kadar koli gosti uro kode. Vadnice
     ostanejo vse leto. Pričakujete lahko, da bodo vse naše vaje in učni načrt na voljo
     na naši spletni strani v neskončnost. Prosimo, pojdite na [naši viri] (%{promote})
     za vodnike z navodili za dogodke in druge vire, da bo vaš dogodek Hour of Code
     uspešen.
   hoc_faq_certificates_q: Kje lahko natisnem certifikate za učence?
-  hoc_faq_certificates_a: "¸Odprite <a href='%{codeorg_url}/certificates'>stran z
-    diplomami</a>, kjer lahko natisnete diplome za caš celotni razred tudi pred zaključkom
-    tečaja. Natisnete lahko tudi <a href='%{codeorg_url}/certificates?course=mc'>posebne
-    diplome</a> za učence, ki sodelujejo pri Minecraft tečaju."
-  hoc_faq_certificates_a_markdown: Pojdite na našo [stran s potrdili] (%{codeorg_url}/certifikati),
-    kjer lahko pred časom natisnete potrdila za celoten razred. Natisnete lahko tudi
-    [posebna potrdila] (%{codeorg_url}/potrdila? course=mc) za študente, ki delajo
-    Minecraft tutorial.
+  hoc_faq_certificates_answer_markdown: Pojdite na našo [stran s certifikati] (%{certificates_url}),
+    kjer lahko pred časom natisnete potrdila za celoten razred.
   hoc_faq_logo_q: Ali obstajajo omejitve za uporabo logotipa in imena Hour of Code
     / Ure Za Kodo?
-  hoc_faq_logo_a: Ura kode je blagovna znamka. Ne želimo preprečiti njegove uporabe,
-    vendar želimo zagotoviti, da njegova uporaba ustreza v nekaj mejah. Oglejte si
-    <a href='%{logo_url}'>te smernice za uporabo</a>.
   hoc_faq_logo_a_markdown: Ura kode je blagovna znamka. Ne želimo preprečiti njegove
     uporabe, vendar želimo zagotoviti, da njegova uporaba ustreza v nekaj mejah. Glejte
     [te smernice za uporabo] (%{logo_url}).
+  hoc_faq_bug_q: Našel sem napako v dejavnosti Hour of Code! Kaj naj storim?
+  hoc_faq_bug_a_markdown: |-
+    Oh ne! Če ste naleteli na napako v dejavnosti Hour of Code, najprej preverite URL za dejavnost, v kateri se ukvarjate. Če se URL začne s studio.code.org, vam lahko pomaga naša ekipa za podporo Code.org! Kliknite ikono vprašalnika v zgornjem desnem kotu zaslona in v spustnem meniju izberite« Prijavi težavo«.
+
+    Če se URL ne začne z studio.code.org, verjetno delate na dejavnosti tretje osebe in se boste morali za nadaljnjo pomoč obrniti na podporno ekipo tega podjetja.
   stats_hoc_2013_image_alt: 'Statistika Ure za kodo 2013 '
   stats_growth: To je najhitrejša storitev, ki je prišla do 15 milijonov uporabnikov.
   stats_i18n: Učenci se učijo v več kot 45 jezikih
@@ -13245,6 +13301,9 @@ sl:
   step_06: Korak 6
   step_07: 7. korak
   step_08: Korak 8
+  what: 'Kaj:'
+  when: 'Kdaj:'
+  where: 'Kje:'
   hoc_how_to_top_heading: Vaš vodnik po uri kode
   hoc_how_to_top_desc: Prilagojeni navodila za najboljšo izkušnjo ure kode.
   hoc_how_to_top_view_guide: Oglejte si vodnik za
@@ -13266,7 +13325,7 @@ sl:
   hoc_how_to_faq_answer_devices_02: Če so naprave omejene ali niso na voljo, poskusite
     [programiranje parov] (%{pair_url}) ali raziščite naše [izklopljene dejavnosti]
     (%{unplugged_url}), da se učite brez kakršnih koli naprav!
-  hoc_how_to_faq_question_volunteer: Who can volunteer?
+  hoc_how_to_faq_question_volunteer: Kdo lahko prostovoljno deluje?
   hoc_how_to_faq_answer_volunteer: Vsakdo, ki je navdušen nad računalniškim izobraževanjem
     in povečanjem raznolikosti v tehnologiji, je lahko prostovoljec! Radi bi videli,
     da sodelujejo prostovoljci vseh okolij. Ura kode vsebuje veliko različnih dejavnosti
@@ -13280,7 +13339,7 @@ sl:
   hoc_how_to_faq_answer_account: Za študente, da preizkusijo Uro kode, ni potrebna
     nobena prijava ali prijava. Če se prijavite na uro kode, NE ustvarite samodejno
     računa Code.org.
-  hoc_how_to_resources_heading_educators: Other Hour of Code resources for educators
+  hoc_how_to_resources_heading_educators: Drugi viri Hour of Code za vzgojitelje
   hoc_how_to_resources_promo_heading: Promocijski viri
   hoc_how_to_resources_promo_desc: Poiščite vse vire, ki jih potrebujete - tiskane
     in digitalne -, da opozorite na svojo uro kodeksa.
@@ -13289,68 +13348,100 @@ sl:
     za vse starosti v več kot 45 jezikih.
   hoc_how_to_step_label_plan: Načrtujte, kje in kdaj boste naredili svojo uro kode
   hoc_how_to_step_label_choose_activity: Izberite svojo dejavnost
+  hoc_how_to_step_label_choose_activities: Izberite svoje dejavnosti
   hoc_how_to_step_label_test_activity: Preizkusite svojo dejavnost
   hoc_how_to_step_label_register_event: Registrirajte svoj dogodek
   hoc_how_to_step_label_tell: Povejte svojim učencem, šoli in skupnosti
   hoc_how_to_step_label_get_coding: Pridobite kodiranje!
   hoc_how_to_step_label_celebrate: Praznujte
   hoc_how_to_step_label_beyond_hoc: Preko ure kode
+  hoc_how_to_step_label_plan_your_event: Načrtujte svoj dogodek
+  hoc_how_to_step_label_plan_your_hour: Načrtujte svojo uro
+  hoc_how_to_step_label_help_spread_word: Pomagajte širiti besedo
   hoc_how_to_step_beyond_hoc_subhead: Tu se ne konča!
-  hoc_how_to_step_beyond_hoc_desc: Računalništvo se ni treba končati z Uro kode! Medtem
-    ko 90% staršev želi, da se njihov otrok nauči računalništva, večina šol še vedno
-    ne uči. Naučite se, kako danes prinesti CS v otrokovo šolo.
-  hoc_how_to_step_01_educators_subhead: Izberite čas in prostor dogodka, ki ustreza
-    številu študentov in naprav, ki jih imate na voljo.
-  hoc_how_to_step_01_educators_desc_01: Kateri prostori so na voljo za vašo uro kode?
-    Razmislite o tehnoloških zmogljivostih vašega prostora in vrstah naprav, na katerih
-    pričakujete, da bodo vaši učenci delali. Učenci lahko delajo na vadnicah na eni
-    napravi, se izmenjujejo z napravo v skupni rabi ali skupaj preizkusijo vadnico
-    na tabli v učilnici. Obstajajo celo izklopljene vaje, ki jih je mogoče dokončati
-    brez naprav. Odklopljene možnosti je mogoče izvesti kjerkoli - tudi na prostem!
-  hoc_how_to_step_01_educators_desc_02: Ljudje po vsem svetu se pridružijo praznovanju
-    ure kode med tednom izobraževanja CS, %{campaign_date} ko so objavljene najnovejše
-    vaje in dejavnosti. Toda uro kode lahko naredite kateri koli dan v letu!
-  hoc_how_to_step_02_educators_desc_01: Raziščite dejavnosti, ki temeljijo na starosti,
-    izkušnjah, zanimanjih in še več vaše skupine. Učenci so priljubljeni, da preizkusijo
-    vadnice, ki jih vodijo sami, čeprav številne dejavnosti vključujejo učne načrte
-    za učitelje, ki vodijo razpravo ali razširjajo dejavnost.
-  hoc_how_to_step_02_educators_desc_02: Vnaprej se odločite, če želite izbrati eno
-    vadnico za vse svoje učence, ali pa pustite vsakemu otroku, da izbere svojo.
-  hoc_how_to_step_02_educators_desc_03: Letos lahko vi in vaši učenci [izveste vse
-    o AI] (%ai_url) prek vadnic, učnih načrtov in naše nove video serije Kako deluje
-    AI.
-  hoc_how_to_step_03_educators_desc_01: Preizkusite vadnico sami, preden vstopite
-    v učilnico, da boste lahko odgovorili na vprašanja!
-  hoc_how_to_step_03_educators_desc_02: Vadnice lahko preizkusite tudi na študentskih
-    računalnikih ali napravah, da zagotovite, da podpirajo zvok in video. Imajo nizko
-    pasovno širino? Načrtujte prikazovanje videoposnetkov na sprednji strani razreda,
-    tako da vsak študent ne prenaša svojih videoposnetkov.
-  hoc_how_to_step_03_educators_desc_03: Razmislite o zagotavljanju slušalk za svoj
-    razred ali prosite učence, naj prinesejo svoje, če vadnica, ki jo izberete, najbolje
-    deluje z zvokom.
-  hoc_how_to_step_04_educators_desc_01: Ko registrirate dogodek Ura kode, boste prejeli
-    koristna e-poštna sporočila z novicami in nasveti za gostovanje uspešne ure kode.
-    Prav tako lahko lokalnim prostovoljcem sporočite, da sodeluje vaša šola. Prostovoljci
-    so odličen vir in se lahko v vaš razred pogovarjajo o računalništvu ali pomagajo
-    svojim učencem pri dejavnostih Hour of Code.
-  hoc_how_to_step_05_educators_desc_01: Navdušite svoje učence nad dogodkom tako,
-    da delite [navdihujoče videoposnetke] (%{videos_url}), ki poudarjajo različne
-    ljudi in ustvarjalne načine, kako se računalništvo lahko uporablja v resničnem
-    svetu.
-  hoc_how_to_step_05_educators_desc_02: Delite svoje načrte ure kode z drugimi učitelji,
-    ki se bodo morda želeli pridružiti zabavi! To je tudi odlična priložnost, da se
-    obrnete na združenje učencev staršev v vaši šoli ali delite v novicah staršev
-    in jim sporočite, kaj se njihovi otroci učijo.
-  hoc_how_to_step_06_educators_desc_01: Usmerite svoje učence na dejavnost, morda
+  hoc_how_to_step_plan_hour_desc_01: 'Tukaj je vzorec dnevnega reda za začetek:'
+  hoc_how_to_step_choose_activities_desc_01: Letošnja tema Ura kode je Ustvarjalnost
+    z umetno inteligenco (AI). Ne glede na to, ali gre za kodiranje novih aplikacij
+    in algoritmov, ustvarjanje edinstvene umetnosti ali izdelavo koreografije, s katero
+    bomo plesali, AI odpira nove priložnosti za digitalno izražanje, ki širijo naše
+    razumevanje ustvarjalnosti. Naredite to leto posebno tako, da zaključite dejavnost
+    kodiranja IN spoznajte AI.
+  hoc_how_to_step_choose_activities_desc_02: Najprej [raziščite na stotine dejavnosti
+    kodiranja] (%{activities_url}) in izberite eno glede na starost, izkušnje, interese
+    in še več vaše skupine. [Te izbrane dejavnosti] (%{ai_activities_url}) predstavljajo
+    umetno inteligenco kot ključno temo ali lekcijo.
+  hoc_how_to_step_choose_activities_desc_03: Nato [izvedite vse o AI] (%{ai_url}).
+    Študenti si lahko ogledujejo kratke videoposnetke s strokovnjaki s tega področja,
+    spremljajo pa načrti pouka za razširitev dejavnosti in vodenje nadaljnje razprave.
+    Ali pa ponujamo brezplačno strokovno učenje za vzgojitelje, da odklenemo prihodnost
+    poučevanja z umetno inteligenco in o njem.
+  hoc_how_to_step_educators_register_desc: Začnite z zavezanostjo, da boste s svojimi
+    učenci naredili uro kode, tako da prijavite svoj dogodek. Ko se registrirate,
+    boste prejeli koristna e-poštna sporočila z novicami in nasveti za uspešno gostovanje
+    ure kode. Prav tako boste [postavljeni na zemljevid] (%{map_url}). Vidna celota
+    naših skupnih prizadevanj dokazuje globalno zavezanost računalniškemu gibanju,
+    ki nam bo pomagalo ustvariti zagon sistemskih sprememb.
+  hoc_how_to_step_educators_plan_desc_01: Pred dogodkom preizkusite dejavnosti sami,
+    da boste zagotovili, da delujejo na študentskih napravah in ste pripravljeni odgovoriti
+    na vprašanja! Imate nizko pasovno širino? Načrtujte prikazovanje videoposnetkov
+    pred razredom, tako da vsak učenec ne bo nalagal svojih videoposnetkov.
+  hoc_how_to_step_educators_plan_desc_02: Ljudje po vsem svetu se pogosto pridružijo
+    praznovanju Hour of Code med tednom izobraževanja v računalništvu (%{campaign_date}),
+    vendar lahko Uro kode naredite kateri koli dan v letu!
+  hoc_how_to_step_educators_plan_desc_03: Izberite prostor, ki ustreza številu študentov
+    in naprav, ki jih imate na voljo. Učenci lahko preizkusijo dejavnosti na posameznih
+    napravah, izmenično delijo napravo ali kot razred na tabli. Obstajajo celo odklopljene
+    dejavnosti, ki jih je mogoče dokončati brez naprav, zato jih je mogoče izvajati
+    celo zunaj!
+  hoc_how_to_step_educators_spread_word_desc_01: Pomagajte nam razširiti besedo v
+    vaši skupnosti s [temi e-poštnimi predlogami] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Prosite dva sodelavca, da [register](%{register_url})
+    in gostita dejavnost Hour of Code. Ti pa lahko zaščitijo dva kolega, ki lahko
+    zavarujejo dva kolega itd.
+  hoc_how_to_step_educators_spread_word_desc_03: Prosite svojega ravnatelja, naj [gosti
+    celoten šolski dogodek] (%{host_url}). Ko sodeluje 300 ali več otrok, lahko prejmete
+    poseben zaročni komplet z majicami, plakati, nalepkami za prenosne računalnike
+    in še več. [Delite svoj celoten načrt šolskih dogodkov] (%{share_url}), da se
+    kvalificirate.
+  hoc_how_to_step_educators_spread_word_desc_04: Obrnite se na združenje učiteljev
+    staršev v vaši šoli ali delite v glasilih staršev in jim sporočite, kaj se njihovi
+    otroci učijo.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Začnite z [navdihujočim
+    videoposnetkom] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Študenti opravljajo svojo
+    dejavnost kodiranja'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Študenti spoznavajo AI'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Učitelj daje zaključne
+    pripombe'
+  hoc_how_to_step_educators_get_coding_desc: Usmerite svoje učence na dejavnost, morda
     tako, da delite povezavo na plošči ali prek sistema upravljanja učenja v učilnici.
     Vaši učenci se lahko srečujejo z izzivi - to je v redu! Učenje programiranja je
     kot učenje novega jezika; takoj ne boste tekoče govorili. Če odgovora ne poznate,
     ga lahko skupaj ugotovite.
-  hoc_how_to_step_07_educators_desc_01: 'Bodite prepričani, da praznujete uspeh! Delite
-    fotografije in videoposnetke dogodka Ura kode na družbenih omrežjih. Uporabite
-    #HourOfCode in @codeorg, da lahko poudarimo tudi vaš uspeh!'
-  hoc_how_to_step_07_educators_desc_02: Prav tako lahko natisnete potrdila za svoje
-    učence, da pokažejo svoje dosežke!
+  hoc_how_to_step_educators_celebrate_desc: 'Po dogodku natisnite potrdila o zaključku
+    in čestitajte svojim študentom. Delite fotografije in videoposnetke dogodka Hour
+    of Code ter pokažite dosežke svojih učencev z uporabo #HourOfCode in @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Računalništvo se ni nujno končati z uro kodiranja!
+    Medtem ko 90% staršev želi, da se njihov otrok uči računalništva, večina šol tega
+    še vedno ne uči. V pomoč je naš učni načrt zasnovan na spletu in za vedno brezplačen
+    za uporabo. Naučite se, kako danes prinesti CS v svojo šolo.
+  hoc_ai_top_desc: Vsakdo se lahko nauči o umetni inteligenci, ne glede na to, ali
+    ste učenec v razredu ali vzgojitelj, ki odpira prihodnost poučevanja z umetno
+    inteligenco in o njem.
+  hoc_ai_how_ai_works_video_series_desc: Ta serija kratkih videoposnetkov vas bo predstavila,
+    kako deluje umetna inteligenca in zakaj je pomembna. Nato se poglobite v vprašanja,
+    kot so algoritemska pristranskost in etika odločanja AI.
+  hoc_ai_learn_how_ai_works_desc: Potopite se v svet umetne inteligence z lekcijami«
+    Kako deluje umetna inteligenca », ki so združene z našo video serijo, ki vam predstavljajo,
+    kako deluje umetna inteligenca in zakaj je pomembna.
+  hoc_ai_101_for_educators_desc: Odkrijte prelomni svet umetne inteligence (AI) in
+    njen transformativni potencial v izobraževanju z našo temeljno serijo spletnega
+    učenja za učitelje.
+  hoc_ai_impacts_desc: Svojo učilnico vključite z lekcijami, ki jih vodijo učitelji,
+    ki raziskujejo vplive umetne inteligence in povabijo učence, da razmislijo o rešitvah
+    nekaterih vprašanj umetne inteligence.
+  hoc_ai_activities_desc: Te povsem nove aktivnosti Hour of Code uporabnike na zabaven
+    in privlačen način seznanijo v svet umetne inteligence.
   team_page_full_team_alt_text: Skoraj 100 zaposlenih v Code.org v ustreznih modrih
     in rumenih majicah predstavlja v hotelski konferenčni dvorani za poletni dogodek
     Codechella podjetja.
@@ -13873,6 +13964,22 @@ sl:
   video_library_page_not_hacked_video_title_6: 'Kako ne priti do vdora: Sporočila
     in prenosi'
   video_library_page_not_hacked_video_title_7: 'Kako se ne vdreti: namestite posodobitve'
+  thank_you_page_main_title: Hvala za pomoč pri izgradnji gibanja
+  thank_you_page_description: Code.org Advocacy Coalition se želi zahvaliti stotine
+    tisoč lokalnih prvakov in zagovornikov, vključno z učitelji, člani skupnosti,
+    raziskovalci, neprofitnimi organizacijami, univerzami, korporacijami in vladnimi
+    institucijami, ki so podprli vizijo, da si vsak učenec v vsaki šoli zasluži priložnost
+    za učenje računalništva. Hvala za vašo podporo temu gibanju.
+  thank_you_page_members_section_title: 'In vsem članom Code.org Advocacy Coalition:'
+  thank_you_page_individual_organization_title: 'Hvala naslednjim posameznikom in
+    organizacijam za njihov prispevek k temu poročilu:'
+  thank_you_page_individual_organization_description: Nadzorniki računalniškega izobraževanja
+    pri vsaki državni izobraževalni agenciji, College Board, Della Cronin, Stuart
+    Dexler, Katharine Macys, Anthony Owen, Sean Roberts, Kyle Trojan, Pat Yongpradit
+  thank_you_page_teachers_students_title: 'Hvala učencem in učiteljem, navedenim v
+    tem poročilu:'
+  thank_you_page_teachers_students_description: Tess Campion, Willa Campion, Jamie
+    Delerme, Cindy Noriega, Tara Vodopich
   about_us_page_title: O nas
   about_us_page_hero_description: Code.org® je neprofitna organizacija za inovacije
     v izobraževanju, namenjena viziji, da ima vsak študent v vsaki šoli priložnost,
@@ -14024,6 +14131,118 @@ sl:
     to vizijo.
   about_page_donors_link_1: Naredite donacije
   about_page_donors_link_2: "[glej naš seznam donatorjev] (%{donors_url})"
+  teach_ai_title: Primeri v resničnem svetu. Praktični viri.
+  teach_ai_description: Komplet orodij AI Guidance for Schools je vir za oblikovalce
+    politik, vodje šol in osebje za razvoj začetnih smernic o umetni inteligenci v
+    svojih šolah.
+  teach_ai_button_label: Oglejte si komplet orodij
+  middle_high_page_main_title: Učenje za stare 11 let in več
+  middle_high_page_main_description: Raziščite svet računalništva z privlačnimi videoposnetki,
+    vadnicami z lastnim tempom, programirskimi dejavnostmi in še več!
+  middle_high_page_hero_title: Začnite s Hour of Code
+  middle_high_page_hero_description: Naučite se osnov računalništva z brezplačnimi
+    aktivnostmi Hour of Code, ki vključujejo bloke za kodiranje povleci in spusti.
+    Na izbiro je na stotine ur dolgih možnosti!
+  middle_high_page_hourofcode_link: Raziščite dejavnosti Hour of Code
+  middle_high_page_modules_title: Programski moduli za starejše študente
+  middle_high_page_modules_description: Ti kratki, samostojni moduli za srednješolce
+    in srednješolce, prilagojeni našim tečajem CS Discotories in CS Principles, so
+    odličen način za učenje konceptov, ki zajemajo vse programske jezike in orodja.
+  middle_high_page_modules_card_title_1: Uvod v Game Lab
+  middle_high_page_modules_card_title_2: Programiranje želv v laboratoriju App
+  middle_high_page_modules_card_title_3: Programiranje, ki temelji na dogodkih v laboratoriju
+    App
+  middle_high_page_modules_card_description_1: V tem uvodu v naše okolje Game Lab
+    se premikajte s svojim tempom, ko programirate animacije, interaktivno umetnost
+    in igre.
+  middle_high_page_modules_card_description_2: Odklenite možnost ustvarjanja bogatih,
+    interaktivnih aplikacij z JavaScriptom v App Lab!
+  middle_high_page_modules_card_description_3: Pojdite po svojem tempu s tem uvodom
+    v programsko okolje App Lab, v katerem študenti uporabljajo JavaScript za ustvarjanje
+    interaktivnih aplikacij.
+  middle_high_page_modules_card_link: Preizkusite
+  middle_high_page_make_your_own_title: Ustvarite svoje aplikacije, igre in spletne
+    strani
+  middle_high_page_make_your_own_description: 'Poleg tečajev imamo programska orodja,
+    ki vam omogočajo, da raziskujete svojo ustvarjalnost in naredite nekaj neverjetnega. '
+  middle_high_page_make_your_own_card_title_1: Laboratorij za aplikacije
+  middle_high_page_make_your_own_card_title_2: Igralni laboratorij
+  middle_high_page_make_your_own_card_title_3: Spletni laboratorij
+  middle_high_page_make_your_own_card_descrpition_1: App Lab je programsko okolje,
+    kjer lahko ustvarite preproste aplikacije. Oblikujte aplikacijo, kodo v JavaScriptu
+    z bloki ali besedilom, nato pa aplikacijo delite v nekaj sekundah.
+  middle_high_page_make_your_own_card_descrpition_2: Game Lab je programsko okolje,
+    kjer lahko ustvarite preproste animacije in igre s predmeti in liki, ki medsebojno
+    delujejo.
+  middle_high_page_make_your_own_card_descrpition_3: Web Lab je programsko okolje,
+    kjer lahko ustvarite preproste spletne strani z uporabo HTML in CSS. Oblikujte
+    svoje spletne strani in delite spletno mesto v nekaj sekundah.
+  middle_high_page_make_your_own_card_link: Več o tem
+  middle_high_page_additional_resources_title: Dodatni viri
+  middle_high_page_additional_resources_description: Obstaja toliko načinov za nadaljnje
+    raziskovanje računalništva! Prebrskajte našo video knjižnico ali izvedite več
+    o vznemirljivih karierah na področju računalništva.
+  middle_high_page_video_library_title: Odkrijte našo video knjižnico
+  middle_high_page_video_library_description: Naučite se osnov računalništva s kratkimi
+    5-10 minutnimi videoposnetki o temah, kot so umetna inteligenca, internet, kako
+    delujejo računalniki, kako ne bi vas vdrli, blockchain, kariere in še več!
+  middle_high_page_video_library_link: Oglejte si video knjižnico
+  middle_high_page_cs_journeys_title: Pojdite še dlje s CS Journeys
+  middle_high_page_cs_journeys_description: Naredite naslednji korak na svojem računalniškem
+    potovanju. Raziščite kariere, možnosti mentorstva, spletne tečaje, štipendije,
+    pripravništva in še več!
+  middle_high_page_cs_journeys_link: Raziščite CS Journeys
+  middle_high_page_cs_title: Računalništvo v učilnici
+  middle_high_page_cs_description: Te tečaje mora voditi učitelj! Če bi jih radi videli,
+    da se poučujejo v vaši šoli, razmislite o sodelovanju z učiteljem, da jih pripeljete
+    v svoj razred.
+  middle_high_page_cs_card_title_1: CS odkritja
+  middle_high_page_cs_card_title_2: Načela CS
+  middle_high_page_cs_card_title_3: AP Računalništvo A
+  middle_high_page_cs_card_description_1: Brezplačen nabor osnovnih učnih načrtov,
+    ki študente uvaja v temeljne koncepte računalništva in jih izziva, da raziščejo,
+    kako lahko računalništvo in tehnologija vplivata na svet.
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: Uvedite študente s programskim inženiringom
+    in objektno usmerjenim dizajnom, medtem ko se učijo programskega jezika Java v
+    tem brezplačnem učnem načrtu za AP® Computer Science A (AP® CSA).
+  middle_high_page_cs_link_1: Raziščite CS Dicoveries
+  middle_high_page_cs_link_2: Raziščite načela CS
+  middle_high_page_cs_link_3: Raziščite CSA
+  elemeentary_page_main_title: Učenje za starost od 5 do 11 let
+  elementary_page_main_description: Raziščite svet računalništva z privlačnimi videoposnetki,
+    vadnicami z lastnim tempom, programirskimi dejavnostmi in še več!
+  elementary_page_own_pace_title: Nadaljujte z učenjem v svojem tempu
+  elementary_page_own_pace_description: Ustvarite risbe, igre in še več v teh dveh
+    odličnih možnostih za študente, ki se začnejo sami učiti osnov računalništva.
+  elementary_page_own_pace_card_title_1: Pre-Reader Express tečaj
+  elementary_page_own_pace_card_title_2: Ekspresni tečaj
+  elementary_page_own_pace_card_description_1: Naučite se računalništva v svojem tempu!
+    Naučite se ustvarjati računalniške programe, razvijati veščine reševanja problemov
+    in premagati zabavne izzive! Ustvarite igre in ustvarjalne projekte, ki jih lahko
+    delite s prijatelji, družino in učitelji.
+  elementary_page_own_pace_link_1: Začnite tečaj pred bralcem
+  elementary_page_own_pace_link_2: Začnite ekspresni tečaj
+  elementary_page_make_your_own_games_title: Ustvarite lastne animacije in igre
+  elementary_page_make_your_own_games_card_title_1: Sprite Lab au Canada
+  elementary_page_make_your_own_games_card_description_1: Čas je, da postanete ustvarjalni!
+    Uporabite kodiranje na osnovi blokov, da v laboratoriju Sprite ustvarite nekaj
+    neumnega, sladkega ali zunanjega prostora. Edina meja je vaša domišljija!
+  elementary_page_make_your_own_games_link: Preizkusite Sprite Lab
+  elementary_page_computer_science_title: Računalništvo v učilnici
+  elementary_page_computer_science_description: Te tečaje mora voditi učitelj! Če
+    bi radi videli, da jih poučujejo v vaši šoli, prosite starša ali skrbnika, naj
+    sodeluje z učiteljem, da jih pripelje v vaš razred.
+  elementary_page_computer_science_card_title_1: Osnove računalništva
+  elementary_page_computer_science_card_title_2: Computer Science Povezave
+  elementary_page_computer_science_description_1: Brezplačen nabor osnovnih učnih
+    načrtov, ki študente uvaja v temeljne koncepte računalništva in jih izziva, da
+    raziščejo, kako lahko računalništvo in tehnologija vplivata na svet.
+  elementary_page_computer_science_description_2: Vzpostavite povezave med računalništvom
+    (CS) in drugimi predmeti, kot so matematika, jezikovne umetnosti, znanost in družboslovje.
   language_code:
     ar: arabsko
     az: Azerbajdžanci

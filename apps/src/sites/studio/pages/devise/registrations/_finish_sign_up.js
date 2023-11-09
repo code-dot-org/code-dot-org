@@ -96,7 +96,9 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
-    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': user_type,
+    });
   });
 
   function cleanSchoolInfo() {

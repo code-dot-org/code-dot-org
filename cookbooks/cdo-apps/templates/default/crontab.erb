@@ -41,11 +41,8 @@
 
     notify = params[:notify].to_s
     action = "BUNDLE_GEMFILE=#{deploy_dir('Gemfile')} bundle exec #{bin_dir('cronjob')} #{action.shellescape} #{notify}".strip
-    job = "#{time} #{action}"
 
-    job = "##{job}" if params[:disabled]
-
-    $crontab << job
+    $crontab << "#{time} #{action}"
   end
 
   def crontab()
@@ -101,37 +98,35 @@
     # the production daemon but still write them to the crontab. We can then
     # easily reenable them on just the old server, so that we still have jobs
     # running while the new server is under construction.
-    #
-    # TODO (infra): reenable all of these (and probably remove the 'disabled'
-    # param from the cronjob method) once the new server is up and running.
     if node.chef_environment == 'production' # production daemon
-      cronjob disabled: true, at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
-      cronjob disabled: true, at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
-      cronjob disabled: true, at:'*/4 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
-      cronjob disabled: true, at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
-      cronjob disabled: true, at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
-      cronjob disabled: true, at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
-      cronjob disabled: true, at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
-      cronjob disabled: true, at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
-      cronjob disabled: true, at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
-      cronjob disabled: true, at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
-      cronjob disabled: true, at:'30 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
-      cronjob disabled: true, at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'csf_workshop_attendance_to_gdrive')
-      cronjob disabled: true, at:'0 13 * * *', do:deploy_dir('bin', 'cron', 'eir_teachers_to_gdrive')
-      cronjob disabled: true, at:'0 7 * * 6', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
-      cronjob disabled: true, at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
-      cronjob disabled: true, at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
-      cronjob disabled: true, at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
-      cronjob disabled: true, at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
-      cronjob disabled: true, at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
-      cronjob disabled: true, at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
-      cronjob disabled: true, at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
-      cronjob disabled: true, at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
-      cronjob disabled: true, at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
-      cronjob disabled: true, at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
+      cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
+      cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
+      cronjob at:'*/4 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
+      cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
+      cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
+      cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
+      cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
+      cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
+      cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
+      cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
+      cronjob at:'30 */2 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'csf_workshop_attendance_to_gdrive')
+      cronjob at:'0 13 * * *', do:deploy_dir('bin', 'cron', 'eir_teachers_to_gdrive')
+      cronjob at:'0 7 * * 6', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
+      cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
+      cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
+      cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
+      cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
+      cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
+      cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
+      cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
+      cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
 
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
-      cronjob disabled:true, at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
+      cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
     end
 
     # 'daemons' in all environments.
@@ -155,11 +150,6 @@
   # cronjobs that run on all instances in all environments go here:
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
-
-  # report memory and disk space utilization to CloudWatch every minute
-  # we do not use the cronjob helper method because this should not execute with
-  # bundle.
-  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron#{node['cdo-apps']['daemon'] ? '' : ' --auto-scaling'}"
 %>
 #
 # node: <%= node.name %>

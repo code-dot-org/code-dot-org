@@ -1,0 +1,62 @@
+{
+  "uk-UA": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Дізнайтеся більше",
+            "title": "Дослідимо штучний інтелект та машинне навчання"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "codebytes-2020": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "coldplay": {
+            "buttonText": "Спробувати"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Початок"
+          },
+          "csjourneys": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "csjourneys-22": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "csleadersprize": {
+            "buttonText": "Дізнайтеся більше"
+          },
+          "hoc-more": {
+            "body": "Сайт Години коду має більше 500 інформатичних діяльностей для будь-якого віку та рівня досвіду, розроблених Code.org та партнерами."
+          },
+          "home-learning-2020": {
+            "buttonText": "Переглянути ідеї проєктів"
+          },
+          "superhero": {
+            "buttonText": "Дізнатися більше"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Приєднуйтесь"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Визначити вчителя"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Приєднуйтесь"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Приєднуйтесь"
+          }
+        }
+      }
+    }
+  }
+}

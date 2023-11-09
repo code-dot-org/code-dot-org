@@ -7,10 +7,6 @@ import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -65,7 +61,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_onchange_mixin',
       'procedure_def_validator_helper',
       'procedure_defnoreturn_get_caller_block_mixin',
-      'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
       'procedure_def_mini_toolbox',
@@ -126,16 +121,21 @@ GoogleBlockly.Extensions.registerMutator(
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
-  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+    // Used to create and render an SVG frame instance.
+    const getColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this);
+    };
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.behaviorEditorHeader(),
-      'blocklyFunctionalFrame'
+      'blocklyFunctionalFrame',
+      getColor
     );
 
     this.setOnChange(function () {
       if (!this.isInFlyout) {
-        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+        this.functionalSvg_.render();
       }
     });
   }
@@ -169,7 +169,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
-  } else if (useModalFunctionEditor) {
+  } else if (Blockly.useModalFunctionEditor) {
     const newBehaviorButton = getNewBehaviorButtonWithCallback(
       workspace,
       behaviorDefinitionBlock
@@ -177,7 +177,18 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     blockList.push(newBehaviorButton);
   }
 
-  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the behavior_get blocks are JSON.
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
+  if (!levelToolboxBlocks) {
+    return;
+  }
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
+  );
+  const blocksJson =
+    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
+  blockList.push(...blocksJson);
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [
@@ -213,54 +224,6 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   });
 
   return blockList;
-}
-
-function getCustomCategoryBlocksForFlyout(category) {
-  const parser = new DOMParser();
-  // TODO: Update this to use JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
-  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
-
-  const categoryNodes = xmlDoc.getElementsByTagName('category');
-  for (const categoryNode of categoryNodes) {
-    const categoryCustom = categoryNode.getAttribute('custom');
-
-    if (categoryCustom === category) {
-      const xmlRootElement = xmlDoc.createElement('xml'); // Create a new <xml> root element
-
-      const blockNodes = categoryNode.getElementsByTagName('block');
-      for (const blockNode of blockNodes) {
-        if (blockNode.parentElement === categoryNode) {
-          xmlRootElement.appendChild(blockNode.cloneNode(true)); // Append cloned block nodes
-        }
-      }
-
-      const jsonBlocks = convertXmlToJson(xmlRootElement);
-      const flyoutBlocks = jsonBlocks.blocks.blocks.map(
-        simplifyBlockStateForFlyout
-      );
-
-      // Returns an array of simplified JSON blocks for flyout, or an empty array
-      // if the desired category is not found
-      return flyoutBlocks;
-    }
-  }
-  return [];
-}
-
-// Used to simplify block state for inclusion in the Behaviors category flyout
-function simplifyBlockStateForFlyout(block) {
-  // Clone the original block object to avoid modifying it directly
-  const modifiedBlock = {...block};
-
-  // Remove id, x, and y properties
-  delete modifiedBlock.id;
-  delete modifiedBlock.x;
-  delete modifiedBlock.y;
-
-  // Add kind property with value 'block'
-  modifiedBlock.kind = 'block';
-
-  return modifiedBlock;
 }
 
 const getNewBehaviorButtonWithCallback = (

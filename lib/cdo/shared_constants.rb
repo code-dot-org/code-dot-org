@@ -603,9 +603,25 @@ module SharedConstants
       EXTENSIVE: 3,
       CONVINCING: 2,
       LIMITED: 1,
-      NONE: 0
+      NONE: 0,
     }
   ).freeze
+
+  # These reflect the 'status' of an AI rubric evaluation
+  RUBRIC_AI_EVALUATION_STATUS = {
+    # Queued as a job
+    QUEUED: 0,
+    # Job is running
+    RUNNING: 1,
+    # Succeeded
+    SUCCESS: 2,
+    # General failure (along with anything larger)
+    FAILURE: 1000,
+    # PII Failure
+    PII_VIOLATION: 1001,
+    # Profanity Failure
+    PROFANITY_VIOLATION: 1002,
+  }.freeze
 
   EMAIL_LINKS = OpenStruct.new(
     {
@@ -624,4 +640,8 @@ module SharedConstants
       PERMISSION_GRANTED: 'g'
     }
   ).freeze
+
+  CENSUS_CONSTANTS = OpenStruct.new(
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+  )
 end

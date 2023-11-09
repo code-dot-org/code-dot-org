@@ -15,7 +15,7 @@ import {fetchSignedCookies} from '../utils';
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2023_v1.json'
+      ? 'songManifest2023_v3.json'
       : 'testManifest.json';
   }
 
@@ -87,6 +87,9 @@ export function loadSong(songId, songData, onPreloadError) {
 
 export function unloadSong(songId, songData) {
   const url = songData[songId].url;
+
+  // Stop playing sound before unloading it. Otherwise, the sound will continue play.
+  Sounds.getSingleton().stopPlayingURL(url);
   Sounds.getSingleton().unload(url);
 }
 

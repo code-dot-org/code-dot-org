@@ -1,0 +1,303 @@
+@import 'phase1-design-system';
+@import 'color', 'font', 'typography', 'breakpoints',
+  'barlow-semi-condensed-font';
+
+$border-radius: 4px;
+
+.wrapper {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 22px;
+  color: dimgray;
+}
+
+.certificate {
+  float: left;
+}
+
+.instructions {
+  display: inline-block;
+  width: 360px;
+}
+
+.textarea {
+  width: -webkit-fill-available;
+  resize: none;
+  border: 1px solid $neutral_dark;
+  padding: 10px;
+}
+
+.submit {
+  background: $light_secondary_500;
+  color: $neutral_white;
+  font-size: 16px;
+}
+
+.header {
+  color: $neutral_dark;
+}
+
+.headerContainer {
+  margin: 50px 0;
+}
+
+.certificateContainer {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.entryContainer {
+  width: 50%;
+  background-color: $neutral_light;
+  padding: 15px 15px 0 15px;
+  border-radius: 5px;
+}
+
+.imageWrapper {
+  width: 50%;
+}
+
+.continueBeyond {
+  padding: 50px 0 20px 0;
+}
+
+.continueBeyond .actionBlock {
+  background-color: $neutral_light;
+}
+
+// Action blocks wrappers
+.actionBlockWrapper {
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 1.25rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.actionBlockWrapperThreeCol {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &.actionBlockWrapperFourCol {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// Action blocks shared styles
+.actionBlock {
+  background: $neutral_white;
+  border: 1px solid $neutral_dark20;
+  border-radius: $border-radius;
+  display: flex;
+  align-content: baseline;
+
+  h3 {
+    width: 100%;
+
+    @include heading-md;
+  }
+
+  p {
+    @include body-three;
+
+    &.overline {
+      @include overline-two;
+      color: $brand_primary_default;
+      width: 100%;
+    }
+  }
+
+  figure {
+    &.video-responsive {
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul {
+    margin: 0 1rem 1rem;
+
+    @include body-three;
+  }
+
+  &.secondary {
+    h3 {
+      @include heading-sm;
+    }
+  }
+
+  // Hides the unused caption div from the
+  // display_video_thumbnail partial
+  .video_caption_link {
+    display: none;
+  }
+}
+
+// Single column action blocks
+// Note: set the height of the <p> tag inline to maintain
+// height consistency between cards in a wrapper
+.actionBlockOneCol {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1.25rem;
+
+  // Align copy or button(s) to the bottom of a block when
+  // blocks are vastly different heights due to content length
+  // — use .content-wrapper and .content-footer as seen on
+  // views/maker_curriculum_microbit.haml
+  &.flexSpaceBetween {
+    justify-content: space-between;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  a.linkButton {
+    width: 100%;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 1rem 0 0;
+  }
+}
+
+// Two column action block
+.actionBlockTwoCol {
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  .text-wrapper {
+    padding: 1rem 1.5rem;
+  }
+
+  h3 {
+    @include heading-sm;
+  }
+
+  figure.video-responsive {
+    margin: 0 !important;
+    max-width: unset;
+
+    & > div {
+      border: 0;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    a.linkButton,
+    button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+a.linkButton {
+  height: unset;
+  display: inline-block;
+  color: white !important;
+  background-color: $light_secondary_500 !important;
+  border: 2px solid $light_secondary_500;
+  border-radius: $border-radius;
+  padding: 0.625rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500 !important;
+  line-height: 1.2;
+  text-decoration: none !important;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+}
+
+.contentFooter {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+
+.imageContainer img {
+  width: 180px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.professionalLearning .actionBlockOneCol {
+  flex-wrap: nowrap;
+}
+
+.professionalLearning {
+  margin-bottom: 40px;
+}
+
+.professionalLearning .actionBlock {
+  border: none;
+}
+
+.professionalLearning .contentFooter {
+  justify-content: flex-start;
+}
+
+.professionalLearning .linkButton {
+  width: auto !important;
+}
+
+.professionalLearningImage {
+  background-color: $neutral_dark;
+  height: 270px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.catalogButton {
+  margin: 20px 0 40px 0 !important;
+}
+
+.studentButtonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.courseContainer {
+  margin-bottom: 35px;
+}
+
+.container {
+  width: 100%;
+  max-width: $width-md;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider {
+  border-color: $lightest_gray;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  margin: 20px 0;
+}
+
+.extraLinkContainer {
+  clear: both;
+  padding-top: 20px;
+}
+
+.extraLink {
+  color: $teal;
+  font-size: 14px;
+}

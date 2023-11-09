@@ -6,6 +6,10 @@ bn:
         options:
           UNIT:
             '"seconds"': সেকেন্ড
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       Dancelab_changePropBy:
         options:
           PROPERTY:

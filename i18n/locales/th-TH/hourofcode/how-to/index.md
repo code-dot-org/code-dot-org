@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-เมื่อคุณ [ ลงทะเบียนกิจกรรม Hour of Code](/#join) คุณจะได้รับการสื่อสารที่เป็นประโยชน์ทางอีเมลพร้อมข่าวสารและเคล็ดลับสำหรับการจัดงาน Hour of Code ที่ประสบความสำเร็จ It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+เมื่อคุณ [ลงทะเบียนอีเวนต์ Hour of Code ](/events), คุณจะได้รับการสื่อสารทางอีเมลที่มีประโยชน์พร้อมข่าวสารและเคล็ดลับในการจัดงาน Hour of Code ที่ประสบความสำเร็จ It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [พิมพ์ใบรับ]({{ urls/certificates }}) รองสำหรับนักเรียนของคุณ
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - แชร์รูปถ่ายและวิดีโอของกิจกรรม Hour of Code ของคุณลงในโซเชียลมีเดีย ใช้ #HourOfCode และ @codeorg เพื่อที่เราจะสามารถเห็นความสำเร็จของคุณด้วยเช่นกัน!
 

@@ -356,3 +356,110 @@ export function partitionBlocksByType(
 
   return [...prioritizedBlocks, ...remainingBlocks];
 }
+
+/**
+ * Retrieves the toolbox blocks for a custom category from the level config.
+ * @param {string} customCategory The name of the custom category to retrieve blocks from. (Ex. 'VARIABLE', 'Behavior')
+ * @returns {Document} A new XML document containing the filtered blocks.
+ */
+export function getLevelToolboxBlocks(customCategory) {
+  const parser = new DOMParser();
+  // TODO: Update this to support JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
+  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+
+  // Find the category based on the custom attribute
+  const categories = xmlDoc.getElementsByTagName('category');
+  let foundCategory = null;
+
+  for (const category of categories) {
+    if (category.getAttribute('custom') === customCategory) {
+      foundCategory = category;
+      break;
+    }
+  }
+
+  if (foundCategory) {
+    // Create a new XML document and append the child nodes of the category to it
+    const newXmlDocument = parser.parseFromString(
+      '<xml></xml>',
+      'application/xml'
+    );
+    for (const childNode of foundCategory.childNodes) {
+      // Clone the child node and append it to the new XML document
+      newXmlDocument.documentElement.appendChild(childNode.cloneNode(true));
+    }
+
+    return newXmlDocument;
+  } else {
+    return undefined;
+  }
+}
+
+/**
+ * Simplifies the state of blocks for a flyout by removing properties like x/y and id.
+ * Also replaces variable IDs with variable names derived from the serialied variable map.
+ * @param {object} serialization The serialized block state.
+ * @returns {Array<object>} An array of simplified block objects.
+ */
+export function getSimplifiedStateForFlyout(serialization) {
+  const variableMap = {};
+  serialization.variables?.forEach(variable => {
+    variableMap[variable.id] = variable.name;
+  });
+
+  const blocksList =
+    serialization.blocks && serialization.blocks.blocks
+      ? serialization.blocks.blocks.map(block =>
+          simplifyBlockState(block, variableMap)
+        )
+      : [];
+
+  return blocksList;
+}
+
+/**
+ * Simplifies the state of a block by removing properties like x/y and id.
+ * Also replaces variable IDs with variable names derived from the specified variable map.
+ * @param {object} block The block to process.
+ * @param {object} variableMap A map of variable IDs to variable names.
+ * @returns {object} The processed block with variable names.
+ */
+function simplifyBlockState(block, variableMap) {
+  // Create a copy of the block so we can modify certain fields.
+  const result = {...block};
+
+  // For VAR fields, look up the name of the variable to use instead of the id.
+  if (block.fields && block.fields.VAR) {
+    result.fields.VAR = {
+      name: variableMap[block.fields.VAR.id] || '',
+      type: '',
+    };
+  }
+
+  // Recursively check nested blocks.
+  if (block.inputs) {
+    for (const inputKey in block.inputs) {
+      result.inputs[inputKey].block = simplifyBlockState(
+        block.inputs[inputKey].block,
+        variableMap
+      );
+    }
+  }
+  // Recursively check next block, if present.
+  if (block.next) {
+    result.next.block = simplifyBlockState(block.next.block, variableMap);
+  }
+  // Remove unnecessary properties
+  delete result.id;
+  delete result.x;
+  delete result.y;
+
+  // Add 'kind' property
+  result.kind = 'block';
+
+  return result;
+}
+
+export function getBlockColor(block) {
+  return block?.style?.colourPrimary;
+}
