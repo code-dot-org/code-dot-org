@@ -1900,7 +1900,7 @@ var projects = (module.exports = {
         .then(({data, jqXHR}) => {
           currentSourceVersionId =
             jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-          unpackSources(data, true);
+          unpackSources(data);
         });
     } else {
       // It's possible that we created a channel, but failed to save anything to

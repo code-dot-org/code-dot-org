@@ -18,6 +18,13 @@ export function hasBlocks(workspaceSerialization) {
   );
 }
 
+/**
+ * Returns the desired x-coordinate for a block given the workspace properties
+ * and whether the block needs extra offset to accomodate an SVG frame.
+ * @param {Blockly.Block} block - The block for which to determine an x-coordinate
+ * @param {Blockly.Workspace} workspace - The current Blockly workspace
+ * @returns {number} Desired coordinate (as far left/right as possible depending on whether we are in LTR or RTL)
+ */
 function getXCoordinate(block, workspace) {
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
@@ -30,6 +37,12 @@ function getXCoordinate(block, workspace) {
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
 }
 
+/**
+ * Returns the vertical space we need to add relative to the previous block's bottom edge
+ * when auto-positioning a block.
+ * @param {Blockly.Block} block - The block for which to determine vertical spacing
+ * @returns {number} Vertical space in pixels; either the default or the default plus extra to accomodate an SVG frame.
+ */
 function getSpaceBetweenBlocks(block) {
   let verticalSpace = VERTICAL_SPACE_BETWEEN_BLOCKS;
   if (block.functionalSvg_) {
@@ -111,35 +124,38 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
  * @param {Blockly.Workspace} workspace - The current Blockly workspace
  */
 function adjustBlockPositions(blocks, workspace) {
-  let existingColliders = [];
+  // Ordered colliders tracks the areas occupied by existing blocks; new blocks
+  // are added to maintain top-to-bottom ordering
+  let orderedColliders = [];
   let blocksToPlace = [];
   blocks.forEach(block => {
     if (isBlockLocationUnset(block)) {
       blocksToPlace.push(block);
     } else {
-      insertCollider(existingColliders, getCollider(block));
+      insertCollider(orderedColliders, getCollider(block));
     }
   });
 
-  let y = WORKSPACE_PADDING;
   blocksToPlace.forEach(block => {
     let x = getXCoordinate(block, workspace);
+    let y = WORKSPACE_PADDING;
+
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
     block.moveTo({x, y});
     let collider = getCollider(block);
 
-    existingColliders.forEach(existingCollider => {
-      if (isOverlapping(collider, existingCollider)) {
+    orderedColliders.forEach(orderedColliders => {
+      if (isOverlapping(collider, orderedColliders)) {
         y =
-          existingCollider.y +
-          existingCollider.height +
+          orderedColliders.y +
+          orderedColliders.height +
           getSpaceBetweenBlocks(block);
         block.moveTo({x, y});
         collider = getCollider(block);
       }
     });
-    insertCollider(existingColliders, collider);
+    insertCollider(orderedColliders, collider);
   });
 }
 
@@ -162,7 +178,6 @@ function getCollider(block) {
   };
 
   // SVG frames require us to account for additional height and width
-  // TODO: How do we handle RTL here?
   if (block.functionalSvg_) {
     collider.x -= SVG_FRAME_SIDE_PADDING;
     collider.y -= SVG_FRAME_TOP_PADDING;
@@ -179,15 +194,15 @@ function getCollider(block) {
  * @param {Collider} item - A new collider to add to the array in its sorted position
  * NOTE: This method mutates the input array.
  */
-export function insertCollider(colliders, item) {
-  const sumItem = item.y + item.height;
+export function insertCollider(colliders, newCollider) {
+  const newColliderBottom = newCollider.y + newCollider.height;
   // Returns the index of the first element whose bottom edge is below this one
-  const index = colliders.findIndex(current => {
-    const sumCurrent = current.y + current.height;
-    return sumCurrent > sumItem;
+  const index = colliders.findIndex(currentCollider => {
+    const currentColliderBottom = currentCollider.y + currentCollider.height;
+    return currentColliderBottom > newColliderBottom;
   });
   const insertionIndex = index !== -1 ? index : colliders.length;
-  colliders.splice(insertionIndex, 0, item);
+  colliders.splice(insertionIndex, 0, newCollider);
 }
 
 /**
@@ -263,6 +278,16 @@ function reorderBlocks(blocks, blockOrderMap) {
   return orderedBlocks;
 }
 
+/**
+ * Combines the serialization of the main and hidden workspaces (when hidden workspace is present)
+ * so that both are saved to the project source when calling getCode.
+ * @param {json} mainWorkspaceSerialization - Contains block and procedure information for the main workspace.
+ * @param {json} hiddenWorkspaceSerialization - Contains block and procedure information for the hidden
+ * (i.e. modal function editor) workspace.
+ * @returns {json} A combined serialization, using the mainWorkspaceSerialization as the base, that includes all
+ * blocks and procedures from each workspace with unique ids. (Note: The elements on each workspace are not
+ * necessarily mutually exclusive.)
+ */
 export function getCombinedSerialization(
   mainWorkspaceSerialization,
   hiddenWorkspaceSerialization
@@ -271,6 +296,8 @@ export function getCombinedSerialization(
     !hasBlocks(hiddenWorkspaceSerialization) ||
     !hasBlocks(mainWorkspaceSerialization)
   ) {
+    // Default case is to return mainWorkspaceSerialization because it's not possible
+    // to have a hiddenWorkspaceSerialization but no mainWorkspaceSerialization
     return mainWorkspaceSerialization;
   }
 
