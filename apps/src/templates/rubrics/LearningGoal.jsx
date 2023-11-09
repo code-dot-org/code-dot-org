@@ -116,7 +116,13 @@ export default function LearningGoal({
         setErrorAutosaving(true);
       });
     clearTimeout(autosaveTimer.current);
-  }, [studentLevelInfo, learningGoal, learningGoalEval]);
+  }, [
+    studentLevelInfo,
+    learningGoal,
+    learningGoalEval,
+    feedbackAdded,
+    setFeedbackAdded,
+  ]);
 
   useEffect(() => {
     if (studentLevelInfo && learningGoal.id) {
