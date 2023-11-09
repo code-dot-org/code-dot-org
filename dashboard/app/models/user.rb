@@ -142,6 +142,7 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    sort_by_family_name
   )
 
   attr_accessor(
@@ -1522,6 +1523,10 @@ class User < ApplicationRecord
 
   def mute_music?
     !!mute_music
+  end
+
+  def sort_by_family_name?
+    !!sort_by_family_name
   end
 
   def generate_username
