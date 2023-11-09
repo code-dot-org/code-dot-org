@@ -217,7 +217,7 @@ class ApiController < ApplicationController
       return
     end
 
-    data = current_user.sections_owned_or_instructed.each_with_object({}) do |section, section_hash|
+    data = current_user.sections.each_with_object({}) do |section, section_hash|
       next if section.hidden
       script = load_script(section)
 
