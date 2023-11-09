@@ -9339,6 +9339,9 @@
   hoc_how_to_public_officials_intro_desc_01: "Inviting an elected official to your Hour of Code event will show your representative the impact and need for computer science education, and your students will be inspired by a role model in government."
   hoc_how_to_public_officials_intro_desc_02: "In order to run a successful Hour of Code event while engaging elected officials, complete these tasks prior to the elected official attending your school. The task includes coordination with their point of contact, media invitations, waivers, and planning your agenda."
 
+  hoc_how_to_virtual_event_intro_heading: "How to host a virtual Hour of Code"
+  hoc_how_to_virtual_event_intro_desc_02: "While Hour of Code can be held in a classroom, you don't need to be in-person to enjoy the fun! You can host an interactive and inspirational remote event utilizing some of these recommendations."
+
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
   hoc_how_to_faq_question_devices: "What devices do I need to run an Hour of Code?"
