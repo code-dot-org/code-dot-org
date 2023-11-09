@@ -30,6 +30,9 @@
 class TeacherBasedExperiment < Experiment
   validates :percentage, inclusion: 0..100
 
+  # mitigates performance problems when calling Experiment.get_all_enabled on hot codepaths
+  validates_presence_of :script_id
+
   # NOTE: The min_user_id value is inclusive, the max_user_id value is exclusive.
   def enabled?(user: nil)
     return if user.nil?
