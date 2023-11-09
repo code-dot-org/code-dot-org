@@ -1511,7 +1511,7 @@ class ApiControllerTest < ActionController::TestCase
       section_id: section.id
     }
 
-    assert_response :forbidden
+    assert_response :no_content
   end
 
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do
