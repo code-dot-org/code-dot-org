@@ -391,7 +391,6 @@ $no-color: #FF5e5e;
       height: 140px;
       position: relative;
       border-radius: 4px;
-      overflow: hidden;
       animation: appear 0.3s;
 
       .barContainer {
@@ -435,13 +434,43 @@ $no-color: #FF5e5e;
         }
       }
 
-      .text {
-        text-align: center;
-        font-size: 18px;
-        bottom: 8px;
+      .notchContainer {
         position: absolute;
-        color: white;
-        width: 40px;
+
+        .resultContainer {
+          position: absolute;
+          font-size: 30px;
+          top: 0;
+          left: 50px;
+          border: solid 2px $neutral_dark50;
+          border-radius: 50%;
+          width: 34px;
+          height: 34px;
+          box-sizing: border-box;
+
+          .Yes{
+            color: $yes-color;
+            animation: appear 0.3s;
+          }
+
+          .No {
+            color: $no-color;
+            animation: appear 0.3s;
+          }
+        }
+
+        .notch {
+          top: 16px;
+          background-color: $neutral_dark50;
+          position: absolute;
+          height: 2px;
+          width: 50px;
+          left: 0;
+
+          &NormalNo {
+            width: 40px;
+          }
+        }
       }
     }
 
