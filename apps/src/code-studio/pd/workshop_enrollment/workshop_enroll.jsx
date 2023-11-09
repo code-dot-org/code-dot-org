@@ -23,6 +23,7 @@ const SUBMISSION_STATUSES = {
 
 export default class WorkshopEnroll extends React.Component {
   static propTypes = {
+    user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
     enrollment: PropTypes.shape({
@@ -211,6 +212,7 @@ export default class WorkshopEnroll extends React.Component {
                     <div className="span6">
                       <h2>Your Information</h2>
                       <EnrollForm
+                        user_id={this.props.user_id}
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}
                         first_name={this.props.enrollment.first_name}
