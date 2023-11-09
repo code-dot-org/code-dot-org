@@ -478,6 +478,9 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const labels = getLabels();
 
+  // Calculates the minimum and maximum scores observed for the results we wish to visualize.
+  // Used to normalize and scale the data for easier differentiation between results
+  // by the user.
   const calculateMinMax = () => {
     return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
       (accumulator: MinMax, currentValue: number) => {
@@ -897,6 +900,11 @@ const Score: React.FunctionComponent<ScoreProps> = ({
   minMax,
   colors,
 }) => {
+  // For each score we wish to visualize, we subtract the minimum score
+  // in the observed data in order to generate a "net value"
+  // and better differentiate between observed scores.
+  // The upper end of the scale of the y axis is three times (ie, because there are 3 emojis)
+  // the maximum net value in the dataset (ie, the range of scores).
   const range = minMax.max - minMax.min;
   const getScaledNumerator = (scores: GeneratedEffectScores) => {
     return scores.reduce(
@@ -904,7 +912,6 @@ const Score: React.FunctionComponent<ScoreProps> = ({
       0
     );
   };
-
   const getHeight = (scores: GeneratedEffectScores) =>
     Math.round(
       (getScaledNumerator(scores) / (range * SLOT_COUNT)) *
