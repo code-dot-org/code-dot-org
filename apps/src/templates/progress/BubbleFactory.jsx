@@ -213,6 +213,13 @@ export function getBubbleUrl(
   const params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
+
+  // We want to preserve all of the queryParams EXCEPT version because navigating
+  // between levels backed by different projects or between a project level and
+  // a non-project level puts the user in an error state since the version id doesn't
+  // exist.
+  delete params.version;
+
   if (sectionId) {
     params.section_id = sectionId;
   }
