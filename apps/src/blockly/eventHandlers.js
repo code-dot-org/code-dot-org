@@ -1,3 +1,7 @@
+// Event Handlers for Google Blockly.
+
+import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
+
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
 
@@ -59,5 +63,13 @@ export function disableOrphans(blockEvent) {
         Blockly.Events.setRecordUndo(initialUndoFlag);
       }
     }
+  }
+}
+
+// When the viewport of the workspace is changed (due to scrolling for example),
+// we need to reposition any callouts.
+export function adjustCalloutsOnViewportChange(event) {
+  if (event.type === Blockly.Events.VIEWPORT_CHANGE) {
+    handleWorkspaceResizeOrScroll();
   }
 }

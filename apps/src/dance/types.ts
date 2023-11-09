@@ -9,9 +9,9 @@ export type SongData = {
 };
 
 type Analysis = {
-  beats: [boolean, boolean, boolean];
+  beats: boolean[];
   centroid: number;
-  energy: [number, number, number];
+  energy: number[];
   time: number;
   volume: number;
 };
@@ -50,4 +50,15 @@ export enum FieldKey {
   BACKGROUND_EFFECT = 'backgroundEffect',
   FOREGROUND_EFFECT = 'foregroundEffect',
   BACKGROUND_PALETTE = 'backgroundColor',
+}
+
+export type Results = {[key in FieldKey]: string};
+
+export type Scores = {
+  [key in FieldKey]: number;
+};
+
+export interface GeneratedEffect {
+  results: Results;
+  scores?: Scores;
 }

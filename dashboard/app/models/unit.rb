@@ -396,7 +396,7 @@ class Unit < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, unnumbered_lesson = false)
+  def lesson_by_relative_position(position, unnumbered_lesson: false)
     if unnumbered_lesson
       lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
     else
@@ -1352,7 +1352,7 @@ class Unit < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
-    tts_update(true) if need_to_update_tts
+    tts_update(update_all: true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Unit.find_by_name(unit_name)

@@ -65,8 +65,8 @@ export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
   };
 
   return coteachers.length === 0 ? (
-    <div className={classNames(styles.table, styles.tableRow)}>
-      {i18n.coteacherNoCoteachers()}
+    <div className={styles.table}>
+      <div className={styles.tableRow}>{i18n.coteacherNoCoteachers()}</div>
     </div>
   ) : (
     <table className={styles.table}>

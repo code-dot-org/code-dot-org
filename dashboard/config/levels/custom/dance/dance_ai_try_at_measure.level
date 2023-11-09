@@ -1,10 +1,12 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-11-02T02:32:06.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
+    "uses_preview": "true",
     "skin": "dance",
     "block_pools": [
       "Dancelab"
@@ -15,9 +17,6 @@
     "hide_animation_mode": true,
     "show_type_hints": true,
     "encrypted": "false",
-    "song_selection": [
-      "levelup_ciara"
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -32,15 +31,48 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "default_song": "levelup_ciara",
+    "default_song": "starships_nickiminaj",
     "long_instructions": "**Try it out: The effects change at specific times in the song!**\r\n- Press <code style=\"color:white; background-color:#FFBD46\">Run</code> to start the song.\r\n- Watch the effects change at measure 3 and again at measure 5.",
     "video_key": "hoc_dance_measures_2019",
     "validation_code": "if (nativeAPI.getTime(\"measures\") > 9) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}\r\n",
     "short_instructions": "**Try it out:** The effects change at specific times in the song!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "song_selection": [
+      "introtoshamstep_47SOUL",
+      "jinglebells_hollywoodchristmas",
+      "notearslefttocry_arianagrande",
+      "breakmysoul_beyonce",
+      "butter_bts",
+      "summer_calvinharris",
+      "higherpower_coldplay",
+      "levitating_dualipa",
+      "wedonttalkaboutbruno_encanto",
+      "heatwaves_glassanimals",
+      "asitwas_harrystyles",
+      "thunder_imaginedragons",
+      "dernieredanse_indila",
+      "aire_jessejoy",
+      "sorry_justinbieber",
+      "kidzbop_ificanthaveyou_shawnmendes",
+      "bornthisway_ladygaga",
+      "oldtownroadremix_lilnasx",
+      "2beloved_lizzo",
+      "macarena_losdelrio",
+      "astronautintheocean_maskedwolf",
+      "good4u_oliviarodrigo",
+      "heyya_outkast",
+      "highhopes_panicatthedisco",
+      "cheapthrills_sia",
+      "despedidaycierre_vanesamartin",
+      "iliketomoveit_william"
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:06.561+00:00\",\"changed\":[\"cloned from \\\"events_try_at_measure\\\"\"],\"cloned_from\":\"events_try_at_measure\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:32:06.561+00:00\",\"changed\":[\"cloned from \\\"events_try_at_measure\\\"\"],\"cloned_from\":\"events_try_at_measure\"},{\"changed_at\":\"2023-11-02 21:53:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 21:50:59 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 19:57:15 +0000\",\"changed\":[\"start_blocks\",\"song_selection\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 19:57:55 +0000\",\"changed\":[\"start_blocks\",\"song_selection\",\"default_song\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 21:59:54 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
