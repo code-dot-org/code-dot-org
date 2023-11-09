@@ -10,11 +10,7 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-aitutorpanel]');
   const aiTutorPanelData = JSON.parse(script.dataset.aitutorpanel);
-  const shouldRenderAITutorPanel =
-    aiTutorPanelData.has_ai_tutor_access && aiTutorPanelData.is_csa;
-  if (shouldRenderAITutorPanel) {
-    renderAITutorPanel(aiTutorPanelData.level_type);
-  }
+  renderAITutorPanel(aiTutorPanelData.level_type);
 }
 
 function renderAITutorPanel(levelType) {
