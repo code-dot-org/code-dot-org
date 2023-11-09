@@ -71,12 +71,12 @@ Resources:
   HourOfCodeCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
-      DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
       SubjectAlternativeNames:
         - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
       ValidationMethod: DNS
       DomainValidationOptions:
-        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+        - DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
           HostedZoneId: !Ref HourOfCodeHostedZoneId
         - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
           HostedZoneId: !Ref HourOfCodeHostedZoneId
