@@ -479,8 +479,10 @@ class User < ApplicationRecord
   # TODO once the backfill creates SectionInstructors for every section owner,
   # this method can be deleted and its references replaced by sections_instructed
   def sections_owned_or_instructed
-    sections_instructed.
-      or(sections).
+    Section.
+      left_outer_joins(:active_section_instructors).
+      where('section_instructors.instructor_id' => id).
+      or(Section.where(user_id: id)).
       distinct
   end
 
