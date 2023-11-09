@@ -6,7 +6,7 @@ import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {getFilterStatus} from '../../songs';
 import moduleStyles from './dance-view.module.scss';
-import {SongSelector} from '../../DanceVisualizationColumn';
+import SongSelector from '@cdo/apps/dance/SongSelector';
 import {DanceState, initSongs, reducers, setSong} from '../../danceRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
@@ -112,6 +112,7 @@ const DanceView: React.FunctionComponent = () => {
             selectedSong={selectedSong}
             songData={songData}
             filterOn={filterOn}
+            levelIsRunning={isRunning}
           />
           <div
             id={DANCE_VISUALIZATION_ID}
