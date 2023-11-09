@@ -1774,6 +1774,12 @@ FactoryBot.define do
     resource_link_id {"resource_link_id"}
   end
 
+  factory :lti_section do
+    lti_course {create :lti_course}
+    section {create :section}
+    lms_section_id {SecureRandom.uuid}
+  end
+
   factory :parental_permission_request do
     user {create :young_student, :without_parent_permission}
     parent_email {"contact@example.domain"}

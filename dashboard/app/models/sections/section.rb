@@ -67,6 +67,7 @@ class Section < ApplicationRecord
   has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
+  has_one :lti_section, dependent: :destroy
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
