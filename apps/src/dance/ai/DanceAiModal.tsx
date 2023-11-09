@@ -40,6 +40,9 @@ import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
 import aiBotHeadNo from '@cdo/static/dance/ai/bot/ai-bot-head-no.png';
 import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
 
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 enum Mode {
   INITIAL = 'initial',
   SELECT_INPUTS = 'selectInputs',
@@ -233,10 +236,18 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const handleGenerateClick = () => {
     startAi();
+
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
+      emojis: inputs,
+    });
+
     setMode(Mode.GENERATING);
   };
 
   const handleStartOverClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
+      emojis: inputs,
+    });
     setInputs([]);
     setCurrentInputSlot(0);
     setGeneratingProgress({step: 0, subStep: 0});
@@ -244,16 +255,27 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleRegenerateClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
+      emojis: inputs,
+    });
     setGeneratingProgress({step: 0, subStep: 0});
     handleGenerateClick();
   };
 
   const handleExplanationClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
+      emojis: inputs,
+    });
     setExplanationProgress(0);
     setMode(Mode.EXPLANATION);
   };
 
   const handleUseClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
+      emojis: inputs,
+      ...generatedEffects.current.goodEffect,
+    });
+
     currentAiModalField?.setValue(
       JSON.stringify({
         inputs,
@@ -337,6 +359,11 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleConvertBlocks = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
+      emojis: inputs,
+      ...generatedEffects.current.goodEffect,
+    });
+
     if (!generatedEffects.current.goodEffect) {
       return;
     }
