@@ -1502,6 +1502,18 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal section_owner.name, response["teacherName"]
   end
 
+  test "teacher_panel_section does not return summarized section when passed section id with teacher as invited section_instructor" do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :invited
+
+    get :teacher_panel_section, params: {
+      section_id: section.id
+    }
+
+    assert_response :forbidden
+  end
+
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do
     teacher = create :teacher
     sign_in teacher
