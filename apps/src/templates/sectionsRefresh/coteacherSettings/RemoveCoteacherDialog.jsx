@@ -28,13 +28,23 @@ export default function RemoveCoteacherDialog({
         return;
       }
       fetch(`/api/v1/section_instructors/${coteacher.id}`, {
-        type: 'DELETE',
+        headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
+        method: 'DELETE',
       }).then(response => {
         if (response.ok) {
           removeSavedCoteacher(coteacher.id);
         }
         closeRemoveDialog();
       });
+      // $.ajax({
+      //   url: `/api/v1/section_instructors/${coteacher.id}`,
+      //   method: 'DELETE',
+      // })
+      //   .done(() => {
+      //     removeSavedCoteacher(coteacher.id);
+      //     closeRemoveDialog();
+      //   })
+      //   .fail(closeRemoveDialog);
     },
     [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
   );
