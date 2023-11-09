@@ -36,15 +36,6 @@ export default function RemoveCoteacherDialog({
         }
         closeRemoveDialog();
       });
-      // $.ajax({
-      //   url: `/api/v1/section_instructors/${coteacher.id}`,
-      //   method: 'DELETE',
-      // })
-      //   .done(() => {
-      //     removeSavedCoteacher(coteacher.id);
-      //     closeRemoveDialog();
-      //   })
-      //   .fail(closeRemoveDialog);
     },
     [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
   );
