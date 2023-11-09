@@ -439,7 +439,7 @@ $no-color: #FF5e5e;
 
         .resultContainer {
           position: absolute;
-          font-size: 30px;
+          font-size: 32px;
           top: 0;
           left: 50px;
           border: solid 2px $neutral_dark50;
@@ -447,15 +447,20 @@ $no-color: #FF5e5e;
           width: 34px;
           height: 34px;
           box-sizing: border-box;
+          overflow: hidden;
 
-          .Yes{
-            color: $yes-color;
+          .resultContent {
             animation: appear 0.3s;
-          }
+            margin-top: -1px;
+            margin-left: -1px;
 
-          .No {
-            color: $no-color;
-            animation: appear 0.3s;
+            &Yes{
+              color: $yes-color;
+            }
+
+            &No {
+              color: $no-color;
+            }
           }
         }
 

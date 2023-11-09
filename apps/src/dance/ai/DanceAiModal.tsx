@@ -1020,12 +1020,22 @@ const Score: React.FunctionComponent<ScoreProps> = ({
           <div className={moduleStyles.resultContainer}>
             {(colors === ScoreColors.NORMAL_YES ||
               colors === ScoreColors.YES) && (
-              <div className={moduleStyles.Yes}>
+              <div
+                className={classNames(
+                  moduleStyles.resultContent,
+                  moduleStyles.resultContentYes
+                )}
+              >
                 <i className="fa fa-check-circle" />
               </div>
             )}
             {colors === ScoreColors.NO && (
-              <div className={moduleStyles.No}>
+              <div
+                className={classNames(
+                  moduleStyles.resultContent,
+                  moduleStyles.resultContentNo
+                )}
+              >
                 <i className="fa fa-times-circle" />
               </div>
             )}
