@@ -29,8 +29,9 @@ class Tutorials
       end
     end
 
-    # Create a new instance of the dynamically generated Sequel Table classes to lazy load the class definition
-    @contents = DB[@table].new
+    # Lazy loading class definition of the dynamically generated Sequel Table classes
+    # This is needed in cases where the cache is hydrated, but class definition not loaded yet
+    DB[@table]
 
     @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
       DB[@table].select(*@column_aliases).all
