@@ -15,4 +15,21 @@ class LtiCourseTest < ActiveSupport::TestCase
     refute build(:lti_course, nrps_url: "not a url").valid? "nrps_url must be a valid URL"
     assert build(:lti_course, nrps_url: "https://www.example.com/names_and_roles").valid? "nrps_url must be a valid URL"
   end
+
+  test "can have multiple sections via LTI sections" do
+    course = create(:lti_course)
+    create(:lti_section, lti_course: course)
+    create(:lti_section, lti_course: course)
+    assert course.sections.count == 2, "course should have a section per LTI section"
+  end
+
+  test "when a course is deleted, the associated sections and LTI sections are also deleted" do
+    course = create(:lti_course)
+    sections = create_list(:section, 2)
+    lti_sections = sections.map {|section| create(:lti_section, lti_course: course, section: section)}
+    LtiCourse.destroy(course.id)
+    assert LtiCourse.find_by(id: course.id).nil?, "course should be deleted"
+    assert sections.empty?, "sections should be deleted"
+    assert lti_sections.empty?, "lti_sections should be deleted"
+  end
 end

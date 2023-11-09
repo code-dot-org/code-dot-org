@@ -20,4 +20,9 @@ class LtiSection < ApplicationRecord
   belongs_to :section
   validates :section_id, uniqueness: true
   validates :lms_section_id, presence: true
+  after_destroy :destroy_associated_section
+
+  def destroy_associated_section
+    section.destroy
+  end
 end

@@ -17,4 +17,11 @@ class LtiSectionTest < ActiveSupport::TestCase
     create(:lti_section, section: section)
     assert build(:lti_section, section: section).invalid? "section should only have one lti_section"
   end
+
+  test "when an lti_section is deleted, the associated regular section is also deleted" do
+    section = create(:section)
+    lti_section = create(:lti_section, section: section)
+    lti_section.destroy
+    assert Section.find_by(id: section.id).nil?, "section should be deleted"
+  end
 end
