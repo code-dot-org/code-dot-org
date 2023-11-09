@@ -16,7 +16,7 @@ export default class AITutorPanel extends React.Component {
     const isCodingLevel = levelType === 'Javalab';
 
     return (
-      <AITutorPanelContainer className={style.aiTutorContainer}>
+      <AITutorPanelContainer>
         <h3 id="ai_tutor_panel">AI Tutor</h3>
         <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
         {isCodingLevel && <CompilationAssistant />}
