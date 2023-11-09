@@ -121,7 +121,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const GENERATION_SUBSTEP_DURATION = 1000;
 
   // How long we spend in each step of the explanation process.
-  const EXPLANATION_STEP_DURATION = 2000;
+  const EXPLANATION_STEP_DURATION = 1700;
 
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
@@ -407,13 +407,16 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
+  let previewAreaClass = undefined;
   if (mode === Mode.GENERATING && generatingProgress.subStep >= 2) {
     if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
       aiBotHead = aiBotHeadNo;
       aiBotBody = aiBotBodyNo;
+      previewAreaClass = moduleStyles.previewAreaNo;
     } else {
       aiBotHead = aiBotHeadYes;
       aiBotBody = aiBotBodyYes;
+      previewAreaClass = moduleStyles.previewAreaYes;
     }
   }
 
@@ -632,7 +635,13 @@ const DanceAiModal: React.FunctionComponent = () => {
           <div
             key={'preview-' + generatingProgress.step}
             id="preview-area"
-            className={moduleStyles.previewArea}
+            className={classNames(
+              moduleStyles.previewArea,
+              mode === Mode.GENERATING
+                ? moduleStyles.previewAreaGenerating
+                : moduleStyles.previewAreaResults,
+              previewAreaClass
+            )}
           >
             <div id="flip-card" className={moduleStyles.flipCard}>
               <div
@@ -680,6 +689,11 @@ const DanceAiModal: React.FunctionComponent = () => {
             <Score
               scores={getScores(generatingProgress.step)}
               minMax={minMaxAssociations.current}
+              colors={
+                generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
+                  ? ScoreColors.NO
+                  : ScoreColors.YES
+              }
             />
           </div>
         )}
@@ -714,6 +728,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                     <Score
                       scores={getScores(index)}
                       minMax={minMaxAssociations.current}
+                      colors={ScoreColors.NORMAL}
                     />
 
                     <div
@@ -755,22 +770,24 @@ const DanceAiModal: React.FunctionComponent = () => {
             <div>
               <Button
                 id="explanation-button"
-                text={'?'}
                 onClick={handleExplanationClick}
                 color={Button.ButtonColor.neutralDark}
                 className={moduleStyles.button}
-              />
+              >
+                <i className="fa fa-bar-chart" />
+              </Button>
             </div>
           )}
 
           {mode === Mode.EXPLANATION && (
             <Button
-              id="results-final-button"
-              text={i18n.danceAiModalBack()}
+              id="leave-explanation-button"
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
-            />
+            >
+              <i className="fa fa-bar-chart" />
+            </Button>
           )}
         </div>
 
@@ -778,7 +795,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
             {mode === Mode.RESULTS && (
               <Button
-                id="regenerate"
+                id="regenerate-button"
                 onClick={handleRegenerateClick}
                 color={Button.ButtonColor.neutralDark}
                 className={classNames(moduleStyles.button)}
@@ -796,7 +813,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
             <Button
-              id="select-all-sections-button"
+              id="generate-button"
               text={i18n.danceAiModalGenerateButton()}
               onClick={handleGenerateClick}
               color={Button.ButtonColor.brandSecondaryDefault}
@@ -863,12 +880,23 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
   );
 };
 
+enum ScoreColors {
+  NORMAL = 'normal',
+  YES = 'code',
+  NO = 'no',
+}
+
 interface ScoreProps {
   scores: GeneratedEffectScores;
   minMax: MinMax;
+  colors: ScoreColors;
 }
 
-const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
+const Score: React.FunctionComponent<ScoreProps> = ({
+  scores,
+  minMax,
+  colors,
+}) => {
   const range = minMax.max - minMax.min;
   const getScaledNumerator = (scores: GeneratedEffectScores) => {
     return scores.reduce(
@@ -886,15 +914,30 @@ const Score: React.FunctionComponent<ScoreProps> = ({scores, minMax}) => {
   const layers = [
     {
       height: getHeight(scores),
-      className: moduleStyles.barFillFirst,
+      className:
+        colors === ScoreColors.NORMAL
+          ? moduleStyles.barFillFirst
+          : colors === ScoreColors.YES
+          ? moduleStyles.barFillYes
+          : moduleStyles.barFillNo,
     },
     {
       height: getHeight([scores[0], scores[1]]),
-      className: moduleStyles.barFillSecond,
+      className:
+        colors === ScoreColors.NORMAL
+          ? moduleStyles.barFillSecond
+          : colors === ScoreColors.YES
+          ? moduleStyles.barFillYes
+          : moduleStyles.barFillNo,
     },
     {
       height: getHeight([scores[0]]),
-      className: moduleStyles.barFillThird,
+      className:
+        colors === ScoreColors.NORMAL
+          ? moduleStyles.barFillThird
+          : colors === ScoreColors.YES
+          ? moduleStyles.barFillYes
+          : moduleStyles.barFillNo,
     },
   ];
 

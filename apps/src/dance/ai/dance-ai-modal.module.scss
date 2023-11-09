@@ -12,13 +12,15 @@ $result-red: rgb(235 87 87);
 $chart-first: #79dde8;
 $chart-second: #ee8caf;
 $chart-third: #ffde9e;
+$yes-color: #54ec84;
+$no-color: #FF5e5e;
 
 @keyframes preview-right-to-normal {
   0% {
-    left: 52%;
+    left: 72%;
   }
   100% {
-    left: 50%;
+    left: 70%;
   }
 }
 
@@ -28,26 +30,6 @@ $chart-third: #ffde9e;
   }
   100% {
     opacity: 1;
-  }
-}
-
-// Bot head opens for 1 second after a 1 second delay.
-@keyframes bot-head-open {
-  0%, 50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-60deg);
-  }
-}
-
-// Bot head closes for 1 second after a 1 second delay.
-@keyframes bot-head-close {
-  0%, 50% {
-    transform: rotate(-60deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 
@@ -265,21 +247,39 @@ $chart-third: #ffde9e;
 
     .scoreArea {
       position: absolute;
-      left: 600px;
+      left: 280px;
       top: 120px;
     }
 
     .previewArea {
       position: absolute;
-      width: 500px;
+      width: 280px;
       height: 280px;
       top: 40px;
-      left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
       margin-top: 10px;
-      animation: appear 0.7s, preview-right-to-normal 0.7s;
+      transition: left 0.7s, box-shadow 0.3s;
+
+      &Generating {
+        animation: appear 0.7s, preview-right-to-normal 0.7s;
+        left: 70%;
+      }
+
+      &Results {
+        left: 50%;
+      }
+
+      &Yes {
+        box-shadow: 0 0 0 2px $yes-color;
+        border-radius: 4px;
+      }
+
+      &No {
+        box-shadow: 0 0 0 2px $no-color;
+        border-radius: 4px;
+      }
 
       .flipCard {
         position: absolute;
@@ -332,10 +332,11 @@ $chart-third: #ffde9e;
         position: absolute;
         padding-left: 15px;
         box-sizing: border-box;
-        right: 6px;
+        right: 20px;
         width: 110px;
         border-radius: 4px;
         border: solid $neutral_dark10 1px;
+        animation: appear 1s;
 
         .emojiSlot {
           display: flex;
@@ -386,6 +387,7 @@ $chart-third: #ffde9e;
       position: relative;
       border-radius: 4px;
       overflow: hidden;
+      animation: appear 0.3s;
 
       .barContainer {
         position: absolute;
@@ -400,6 +402,14 @@ $chart-third: #ffde9e;
           width: 100%;
           animation: height-zero-to-full 1s;
           height: 100%;
+
+          &Yes {
+            background-color: $yes-color;
+          }
+
+          &No {
+            background-color: $no-color;
+          }
 
           &First {
             background-color: $chart-first;
