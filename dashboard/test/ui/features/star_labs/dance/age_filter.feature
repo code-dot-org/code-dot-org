@@ -24,7 +24,7 @@ Feature: Dance Lab Age Filter
     Then element "#runButton" is visible
     And element "#song_selector" is visible
     #synthesize is available on local and badhabit_stevelacy is available on test
-    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+    And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
     Then I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
     And I reload the page
@@ -63,7 +63,7 @@ Feature: Dance Lab Age Filter
     Then element "#runButton" is visible
     And element "#song_selector" is visible
     #synthesize is available on local and badhabit_stevelacy is available on test
-    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+    And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
     # session cookie should persist and no dialog should show up
     Then I am on "http://studio.code.org/s/dance/lessons/1/levels/9"
@@ -75,7 +75,7 @@ Feature: Dance Lab Age Filter
     Then element "#runButton" is visible
     And element "#song_selector" is visible
     #synthesize is available on local and badhabit_stevelacy is available on test
-    And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
+    And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
   Scenario: Song selector is hidden when initializing with teacher flag on and teacher flag stays on after level complete
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
