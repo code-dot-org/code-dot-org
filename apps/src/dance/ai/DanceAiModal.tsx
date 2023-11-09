@@ -935,7 +935,7 @@ enum ScoreColors {
   NO = 'no',
   // A tri-colored bar with a green check symbol.
   NORMAL_YES = 'normal_yes',
-  // A tri-colored bar with no symbol container.
+  // A tri-colored bar with no symbol container or symbol.
   NORMAL_NO = 'normal_no',
 }
 
