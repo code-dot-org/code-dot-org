@@ -22,6 +22,7 @@ LimitedUnderstandingLowConfidence.args = {
   aiEvaluation: {
     understanding: RubricUnderstandingLevels.LIMITED,
     ai_confidence: 1,
+    learning_goal_id: 1,
   },
 };
 
@@ -30,6 +31,7 @@ ExtensiveUnderstandingMediumConfidence.args = {
   aiEvaluation: {
     understanding: RubricUnderstandingLevels.EXTENSIVE,
     ai_confidence: 2,
+    learning_goal_id: 1,
   },
 };
 
@@ -38,6 +40,7 @@ LimitedUnderstandingHighConfidence.args = {
   aiEvaluation: {
     understanding: RubricUnderstandingLevels.CONVINCING,
     ai_confidence: 3,
+    learning_goal_id: 1,
   },
 };
 
@@ -46,6 +49,7 @@ NoUnderstandingLowConfidence.args = {
   aiEvaluation: {
     understanding: RubricUnderstandingLevels.NONE,
     ai_confidence: 1,
+    learning_goal_id: 1,
   },
 };
 
