@@ -480,7 +480,7 @@ class User < ApplicationRecord
   # this method can be deleted and its references replaced by sections_instructed
   def sections_owned_or_instructed
     Section.
-      left_outer_joins(:section_instructors).
+      left_outer_joins(:active_section_instructors).
       where('section_instructors.instructor_id' => id).
       or(Section.where(user_id: id)).
       distinct
