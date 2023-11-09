@@ -236,6 +236,12 @@ Dance.prototype.initSongs = async function (config) {
           config.level.selectedSong = songId;
         }
       },
+      onSongUnavailable: () => {
+        this.songUnavailableAlert = this.studioApp_.displayPlayspaceAlert(
+          'warning',
+          React.createElement('div', {}, danceMsg.danceSongNoLongerSupported())
+        );
+      },
     })
   );
 };
@@ -259,6 +265,10 @@ Dance.prototype.setSongCallback = function (songId) {
       },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
+        if (this.songUnavailableAlert) {
+          this.studioApp_.closeAlert(this.songUnavailableAlert);
+          this.songUnavailableAlert = undefined;
+        }
 
         const hasChannel = !!getStore().getState().pageConstants.channelId;
         if (hasChannel) {
@@ -575,6 +585,11 @@ Dance.prototype.runButtonClick = async function () {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';
+  }
+
+  if (this.songUnavailableAlert) {
+    this.studioApp_.closeAlert(this.songUnavailableAlert);
+    this.songUnavailableAlert = undefined;
   }
 
   // Block re-entrancy since starting a run is async
