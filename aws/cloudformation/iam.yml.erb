@@ -325,11 +325,13 @@ roles = {
       '!Ref ContributorSecretsPolicy',
     ]
   },
-  TempS3LessContributorRole: {
-    RoleName: 'Temp_S3less_Contributor',
+  TempS3LessEngineerRole: {
+    RoleName: 'Temp_S3less_Engineer',
     GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
-      '!Ref ContributorSecretsPolicy',
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref NoS3ForYouPolicy',
     ]
   },
   EngineeringMusicLabContributorRole: {
@@ -396,6 +398,18 @@ roles.each do |name, config| %>
         - Key: sqlworkbench-team
           Value: codedotorg
 <%- end -%>
+
+  NoS3ForYouPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: NoS3ForYouPolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action:
+              - s3:*
+            Resource: '*'
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
