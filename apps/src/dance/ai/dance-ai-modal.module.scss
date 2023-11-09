@@ -75,7 +75,7 @@ $no-color: #FF5e5e;
 .dialog {
   max-width: initial !important;
   width: 824px !important;
-  height: 494px;
+  height: 514px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
@@ -160,16 +160,20 @@ $no-color: #FF5e5e;
 
     .textArea {
       position: absolute;
-      width: 70%;
-      height: 50px;
-      bottom: 14px;
+      width: calc(100% - 30px);
+      top: 353px;
       text-align: center;
       font-size: 18px;
       transform: translateX(-50%);
       left: 50%;
       line-height: 25px;
-      border-top: solid 1px $neutral_light;
-      padding-top: 4px;
+      padding: 4px 0;
+      border-top: solid 1px $neutral_dark30;
+      border-bottom: solid 1px $neutral_dark30;
+
+      .text {
+        animation: appear 0.2s;
+      }
     }
 
     .inputsArea {
@@ -260,7 +264,7 @@ $no-color: #FF5e5e;
       display: flex;
       align-items: center;
       margin-top: 10px;
-      transition: left 0.7s, box-shadow 0.3s;
+      transition: left 1.5s, box-shadow 0.3s;
 
       &Generating {
         animation: appear 0.7s, preview-right-to-normal 0.7s;
@@ -269,6 +273,7 @@ $no-color: #FF5e5e;
 
       &Results {
         left: 50%;
+        animation: appear 0.7s;
       }
 
       &Yes {
@@ -402,6 +407,11 @@ $no-color: #FF5e5e;
           width: 100%;
           animation: height-zero-to-full 1s;
           height: 100%;
+          transition: background-color 0.2s;
+
+          &Grey {
+            background-color: $neutral_dark70;
+          }
 
           &Yes {
             background-color: $yes-color;
@@ -443,8 +453,9 @@ $no-color: #FF5e5e;
       flex-direction: row;
       position: absolute;
       bottom: 0;
-      left: 0;
-      width: 100%;
+      width: calc(100% - 20px);
+      transform: translateX(-50%);
+      left: 50%;
 
       &Left {
         margin-right: auto;
@@ -454,7 +465,7 @@ $no-color: #FF5e5e;
     .buttonsAreaTop {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 10px;
       width: 30%;
       display: flex;
       justify-content: flex-end;

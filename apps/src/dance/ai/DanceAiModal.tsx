@@ -506,6 +506,21 @@ const DanceAiModal: React.FunctionComponent = () => {
     minMaxAssociations.current = calculateMinMax();
   }
 
+  const text =
+    mode === Mode.SELECT_INPUTS
+      ? i18n.danceAiModalChooseEmoji()
+      : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
+      ? i18n.danceAiModalGenerating()
+      : mode === Mode.GENERATING
+      ? i18n.danceAiModalFinding()
+      : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
+      ? i18n.danceAiModalEffect()
+      : mode === Mode.RESULTS && currentToggle === Toggle.CODE
+      ? i18n.danceAiModalCode()
+      : mode === Mode.EXPLANATION
+      ? i18n.danceAiModalExplanation()
+      : undefined;
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -559,22 +574,13 @@ const DanceAiModal: React.FunctionComponent = () => {
           </div>
         )}
 
-        <div id="text-area" className={moduleStyles.textArea}>
-          {' '}
-          {mode === Mode.SELECT_INPUTS
-            ? i18n.danceAiModalChooseEmoji()
-            : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
-            ? i18n.danceAiModalGenerating()
-            : mode === Mode.GENERATING
-            ? i18n.danceAiModalFinding()
-            : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
-            ? i18n.danceAiModalEffect()
-            : mode === Mode.RESULTS && currentToggle === Toggle.CODE
-            ? i18n.danceAiModalCode()
-            : mode === Mode.EXPLANATION
-            ? i18n.danceAiModalExplanation()
-            : undefined}
-        </div>
+        {text && (
+          <div id="text-area" className={moduleStyles.textArea}>
+            <div key={text} className={moduleStyles.text}>
+              {text}
+            </div>
+          </div>
+        )}
 
         <div
           id="inputs-area"
@@ -693,7 +699,9 @@ const DanceAiModal: React.FunctionComponent = () => {
               scores={getScores(generatingProgress.step)}
               minMax={minMaxAssociations.current}
               colors={
-                generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
+                generatingProgress.subStep === 1
+                  ? ScoreColors.GREY
+                  : generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
                   ? ScoreColors.NO
                   : ScoreColors.YES
               }
@@ -885,6 +893,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 
 enum ScoreColors {
   NORMAL = 'normal',
+  GREY = 'grey',
   YES = 'code',
   NO = 'no',
 }
@@ -924,6 +933,8 @@ const Score: React.FunctionComponent<ScoreProps> = ({
       className:
         colors === ScoreColors.NORMAL
           ? moduleStyles.barFillFirst
+          : colors === ScoreColors.GREY
+          ? moduleStyles.barFillGrey
           : colors === ScoreColors.YES
           ? moduleStyles.barFillYes
           : moduleStyles.barFillNo,
@@ -933,6 +944,8 @@ const Score: React.FunctionComponent<ScoreProps> = ({
       className:
         colors === ScoreColors.NORMAL
           ? moduleStyles.barFillSecond
+          : colors === ScoreColors.GREY
+          ? moduleStyles.barFillGrey
           : colors === ScoreColors.YES
           ? moduleStyles.barFillYes
           : moduleStyles.barFillNo,
@@ -942,6 +955,8 @@ const Score: React.FunctionComponent<ScoreProps> = ({
       className:
         colors === ScoreColors.NORMAL
           ? moduleStyles.barFillThird
+          : colors === ScoreColors.GREY
+          ? moduleStyles.barFillGrey
           : colors === ScoreColors.YES
           ? moduleStyles.barFillYes
           : moduleStyles.barFillNo,
