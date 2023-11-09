@@ -10,6 +10,7 @@ export default function AdvancedSettingToggles({
   section,
   hasLessonExtras,
   hasTextToSpeech,
+  aiTutorAvailable,
 }) {
   const handlePairProgrammingToggle = e => {
     const updatedValue = !section.pairingAllowed;
@@ -29,6 +30,14 @@ export default function AdvancedSettingToggles({
   const handleTtsAutoplayEnabledToggle = e => {
     const updatedValue = !section.ttsAutoplayEnabled;
     updateSection('ttsAutoplayEnabled', updatedValue);
+  };
+
+  const handleAITutorEnabledToggle = e => {
+    // TODO: once aiTutorEnabled is a property of a section, and sections API can handle updating it,
+    // make this toggle actually set the aiTutorEnabled :)
+    // const updatedValue = !section.aiTutorEnabled;
+    // updateSection('aiTutorEnabled', updatedValue);
+    console.log('toggled AI Tutor on/off');
   };
 
   return (
@@ -87,6 +96,20 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
+      {aiTutorAvailable && (
+        <div className={style.toolTipContainer}>
+          <ToggleSwitch
+            id={'uitest-ai-tutor-toggle'}
+            isToggledOn={true}
+            onToggle={e => handleAITutorEnabledToggle(e)}
+            label={i18n.enableAITutor()}
+          />
+          <InfoHelpTip
+            id={'ai-tutor-toggle-info'}
+            content={i18n.enableAITutorTooltip()}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -96,4 +119,5 @@ AdvancedSettingToggles.propTypes = {
   updateSection: PropTypes.func.isRequired,
   hasLessonExtras: PropTypes.bool,
   hasTextToSpeech: PropTypes.bool,
+  aiTutorAvailable: PropTypes.bool,
 };
