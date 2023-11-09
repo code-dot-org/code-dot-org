@@ -196,7 +196,7 @@ const MultipleSectionsAssigner = ({
     <AccessibleDialog className={moduleStyle.popUpContainer} onClose={onClose}>
       <div
         role="region"
-        aria-label={i18n.sectionSelectionLabel()}
+        aria-label={i18n.directionsForAssigningSections()}
         className={moduleStyle.information}
         tabIndex="0"
       >
