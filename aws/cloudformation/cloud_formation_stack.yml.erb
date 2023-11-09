@@ -35,6 +35,8 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for Hour Of Code site.
+    AllowedPattern: "^(?!www$).*"
+    ConstraintDescription: GitHubBranch cannot be `www` as this may conflict with the production environment.
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
