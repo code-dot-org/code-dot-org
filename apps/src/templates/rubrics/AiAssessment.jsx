@@ -15,6 +15,7 @@ export default function AiAssessment({
   studentSubmitted,
   learningGoalKey,
 }) {
+  const hasAiInfo = !!aiEvaluation;
   return (
     <div>
       <Heading6>{i18n.aiAssessment()}</Heading6>
@@ -27,9 +28,11 @@ export default function AiAssessment({
           aiEvaluation={aiEvaluation}
         />
       </div>
-      <div>
-        <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
-      </div>
+      {hasAiInfo && (
+        <div>
+          <AiAssessmentFeedback learningGoalKey={learningGoalKey} />
+        </div>
+      )}
     </div>
   );
 }
