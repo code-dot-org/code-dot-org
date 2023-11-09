@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {aiEvaluationShape} from './rubricShapes';
-// import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   BodyThreeText,
   EmText,
@@ -15,12 +15,11 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import Button from '@cdo/apps/templates/Button';
 
 export default function AiAssessmentFeedback({learningGoalKey, aiInfo}) {
-  const radioGroupName = `ai-assessment-feedback-${learningGoalKey}`;
-  // const radioGroupName = `ai-assessment-feedback-${aiInfo.learning_goal_id}`;
-  const thumbsupval = 'thumbsup';
-  const thumbsdownval = 'thumbsdown';
+  const radioGroupName = `ai-assessment-feedback-${aiInfo.id}`;
+  const thumbsupval = true;
+  const thumbsdownval = false;
 
-  const [aiFeedback, setAIFeedback] = useState('');
+  const [aiFeedback, setAIFeedback] = useState(null);
   const [aiSubmitted, setAISubmitted] = useState(false);
   const [aiFalsePos, setAIFalsePos] = useState(false);
   const [aiFalseNeg, setAIFalseNeg] = useState(false);
@@ -33,22 +32,38 @@ export default function AiAssessmentFeedback({learningGoalKey, aiInfo}) {
   const receivedTimer = useRef();
   const disappearAfter = 20000;
 
+  const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
+
   const radioAiFeedbackCallback = radioButtonData => {
     setAIFeedback(radioButtonData);
-    // TODO: http put ai feedback json data iff thumbsup
+    if (radioButtonData === thumbsupval) {
+      const bodyData = JSON.stringify({
+        learningGoalAiEvaluationId: aiInfo.id,
+        aiFeedbackApproval: thumbsupval,
+      });
+      HttpClient.post(`${baseUrl}`, bodyData, true, {
+        'Content-Type': 'application/json',
+      }).catch(error => {
+        console.log(error);
+      });
+    }
   };
 
   const submitAiFeedbackCallback = () => {
     const bodyData = JSON.stringify({
-      learningGoalKey: learningGoalKey,
-      aiFalseNeg: aiFalseNeg,
-      aiFalsePos: aiFalsePos,
-      aiVague: aiVague,
-      aiOther: aiFeedbackOther,
-      aiOtherContent: aiOtherContent,
+      learningGoalAiEvaluationId: aiInfo.id,
+      aiFeedbackApproval: aiFeedback,
+      falsePositive: aiFalsePos,
+      falseNegative: aiFalseNeg,
+      Vague: aiVague,
+      feedbackOther: aiFeedbackOther,
+      otherContent: aiOtherContent,
     });
-    // TODO: http put ai feedback json data
-    console.log(bodyData);
+    HttpClient.post(`${baseUrl}`, bodyData, true, {
+      'Content-Type': 'application/json',
+    }).catch(error => {
+      console.log(error);
+    });
 
     setAISubmitted(true);
     setAIFeedbackReceived(true);

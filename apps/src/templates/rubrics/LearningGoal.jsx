@@ -268,6 +268,7 @@ export default function LearningGoal({
       <div>
         {teacherHasEnabledAi &&
           !!studentLevelInfo &&
+          !!aiInfo &&
           aiUnderstanding !== undefined && (
             <div className={style.openedAiAssessment}>
               <AiAssessment
