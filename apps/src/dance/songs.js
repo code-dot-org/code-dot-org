@@ -15,7 +15,7 @@ import {fetchSignedCookies} from '../utils';
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2023_v3.json'
+      ? 'songManifest2023_v4.json'
       : 'testManifest.json';
   }
 
