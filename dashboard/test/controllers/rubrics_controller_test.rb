@@ -306,10 +306,10 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "run ai evaluations for user calls EvaluateRubricJob" do
-    create :user_level, user: @student, script: @rubric.lesson.script, level: @level
+    create :user_level, user: @student, script: @script_level.script, level: @level
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
@@ -332,7 +332,7 @@ class RubricsControllerTest < ActionController::TestCase
   test "run ai evaluations returns bad request if level not attempted" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
 
@@ -361,7 +361,7 @@ class RubricsControllerTest < ActionController::TestCase
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: 1
+        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -371,14 +371,14 @@ class RubricsControllerTest < ActionController::TestCase
         requester: @teacher
       )
       Timecop.travel 1.minute
-      create :user_level, user: @student, script: @rubric.lesson.script, level: @level
+      create :user_level, user: @student, script: @script_level.script, level: @level
       Timecop.travel 1.minute
       rubric_ai_evaluation2 = create(
         :rubric_ai_evaluation,
         rubric: @rubric,
         user: @student,
         requester: @teacher,
-        status: 1
+        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
       )
       create(
         :learning_goal_ai_evaluation,
@@ -390,7 +390,7 @@ class RubricsControllerTest < ActionController::TestCase
       Timecop.travel 1.minute
       sign_in @teacher
 
-      Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
+      Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
       EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
       EvaluateRubricJob.expects(:perform_later).never
 
@@ -429,10 +429,11 @@ class RubricsControllerTest < ActionController::TestCase
         requester: @teacher
       )
       Timecop.travel 1.minute
-      create :user_level, user: @student, script: @rubric.lesson.script, level: @level
+      create :user_level, user: @student, script: @script_level.script, level: @level
       sign_in @teacher
 
-      Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(true)
+      Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
+
       EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
       EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
@@ -456,7 +457,7 @@ class RubricsControllerTest < ActionController::TestCase
   test "run ai evaluations for user does not call EvaluateRubricJob if ai experiment is disabled" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai-rubrics').returns(false)
+    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
     EvaluateRubricJob.expects(:perform_later).never
 
     post :run_ai_evaluations_for_user, params: {

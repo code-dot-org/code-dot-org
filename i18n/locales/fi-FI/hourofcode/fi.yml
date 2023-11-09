@@ -289,8 +289,10 @@ fi:
   call_to_action_register_event: Rekisteröi tapahtumasi
   call_to_action_register_your_hoc: Rekisteröi Hour of Code
   call_to_action_select_activity: Valitse aktiviteetti
+  call_to_action_select_coding_activity: Valitse koodausaktiviteetti
   call_to_action_start_activity: Aloita toiminta
   call_to_action_get_certificates: Hanki sertifikaatit
+  call_to_action_print_certificates: Tulosta sertifikaatit
   call_to_action_go_beyond_hoc: Mene Koodin tunti pidemmälle
   call_to_action_explore_all_hoc_activities: Tutustu kaikkiin Hour of Code -aktiviteetteihin
     Code.org-sivustolta
@@ -414,6 +416,8 @@ fi:
     ammatillinen oppimisohjelma
   aria_label_call_to_action_teaching_csp: Aloita Teaching Computer Science Principles
     ammatillinen oppimisohjelma
+  aria_label_call_to_action_teaching_problem_solving: Aloita opettamisen ongelmanratkaisun
+    ja laskennan ammatillinen oppimisohjelma
   aria_label_call_to_action_teaching_csc: Aloita Teaching Computer Science Connections
     ammatillinen oppimisohjelma
   aria_label_call_to_action_teaching_ai: Aloita Teaching AI ja Machine Learning ammatillinen
@@ -432,6 +436,8 @@ fi:
     opetussuunnitelmaan
   aria_label_call_to_action_curriculum_csp: Tutustu tietojenkäsittelytieteen periaatteiden
     opetussuunnitelmaan
+  aria_label_call_to_action_curriculum_problem_solving: Tutustu ongelmanratkaisun
+    ja tietojenkäsittelyn opetussuunnitelmaan
   aria_label_call_to_action_curriculum_csc: Tutustu Computer Science Connections -opetussuunnitelmaan
   aria_label_call_to_action_curriculum_ai: Tutustu tekoälyn ja koneoppimisen opetussuunnitelmaan
   aria_label_call_to_action_curriculum_maker_cp: Tutustu sovellusten luominen laitteilla
@@ -508,6 +514,7 @@ fi:
   curriculum_name_csf_teacher_led: Opettajan johtama oppitunti
   curriculum_name_csd: Tietojenkäsittelytieteen löydöt
   curriculum_name_csp: Tietojenkäsittelytieteen periaatteet
+  curriculum_name_problem_solving: Ongelmanratkaisu ja tietojenkäsittely
   curriculum_name_csc: Tietojenkäsittelytieteen yhteydet
   curriculum_name_csa: AP® Tietojenkäsittelytiede A
   curriculum_name_csa_ai: Ohjelmistotekniikka ja tietokonenäkö
@@ -706,6 +713,7 @@ fi:
   module_label_teaching_csf: Tietojenkäsittelytieteen perusteiden opettaminen
   module_label_teaching_csd: Tietojenkäsittelytieteen löytöjen opettaminen
   module_label_teaching_csp: Tietojenkäsittelytieteen periaatteiden opettaminen
+  module_label_teaching_problem_solving: Ongelmanratkaisun ja tietojenkäsittelyn opettaminen
   module_label_teaching_csc: Tietojenkäsittelytieteen yhteyksien opettaminen
   module_label_teaching_ai: Tekoälyn ja koneoppimisen opettaminen
   module_label_teaching_maker_cp: Sovellusten luomisen opettaminen laitteilla (Circuit
@@ -13331,6 +13339,9 @@ fi:
   step_06: Vaihe 6
   step_07: Vaihe 7
   step_08: Vaihe 8
+  what: 'Mitä:'
+  when: 'Kun:'
+  where: 'Missä:'
   hoc_how_to_top_heading: Opas Hour of Code -ohjelmaan
   hoc_how_to_top_desc: Räätälöidyt ohjeet parhaan Hour of Code -kokemuksen takaamiseksi.
   hoc_how_to_top_view_guide: Katso opas
@@ -13378,70 +13389,82 @@ fi:
     jotka on suunniteltu kaiken ikäisille yli 45 kielellä.
   hoc_how_to_step_label_plan: Suunnittele, missä ja milloin teet Hour of Code -ohjelman
   hoc_how_to_step_label_choose_activity: Valitse aktiviteettisi
+  hoc_how_to_step_label_choose_activities: Valitse aktiviteettisi
   hoc_how_to_step_label_test_activity: Testaa aktiivisuuttasi
   hoc_how_to_step_label_register_event: Rekisteröi tapahtumasi
   hoc_how_to_step_label_tell: Kerro oppilaille, koululle ja yhteisölle
   hoc_how_to_step_label_get_coding: Hanki koodaus!
   hoc_how_to_step_label_celebrate: Juhli
   hoc_how_to_step_label_beyond_hoc: Koodin tunnin jälkeen
+  hoc_how_to_step_label_plan_your_event: Suunnittele tapahtumasi
+  hoc_how_to_step_label_plan_your_hour: Suunnittele tunti
+  hoc_how_to_step_label_help_spread_word: Auta levittämään sanaa
   hoc_how_to_step_beyond_hoc_subhead: Se ei lopu tähän!
-  hoc_how_to_step_beyond_hoc_desc: Tietojenkäsittelytieteen ei tarvitse päättyä koodin
-    tuntiin! Vaikka 90% vanhemmista haluaa lapsensa oppivan tietojenkäsittelytiedettä,
-    useimmat koulut eivät edelleenkään opeta sitä. Opi tuomaan CS lapsesi kouluun
-    tänään.
-  hoc_how_to_step_01_educators_subhead: Valitse tapahtuman aika ja tila, joka sopii
-    käytettävissäsi olevien opiskelijoiden ja laitteiden määrään.
-  hoc_how_to_step_01_educators_desc_01: Mitä tiloja sinulla on käytettävissä Hour
-    of Code -tapahtumasi tekemiseen? Harkitse tilasi teknisiä ominaisuuksia ja laitteita,
-    joiden kanssa odotat oppilaidesi työskentelevän. Oppilaat voivat työskennellä
-    opetusohjelmien parissa yhdellä laitteella, käyttää vuorotellen jaettua laitetta
-    tai kokeilla opetusohjelmaa yhdessä luokkahuoneen taululla. On jopa irrotettuja
-    opetusohjelmia, jotka voidaan suorittaa ilman laitteita. Irrotettavat vaihtoehdot
-    voidaan tehdä missä tahansa - jopa ulkona!
-  hoc_how_to_step_01_educators_desc_02: Ihmiset ympäri maailmaa liittyvät Hour of
-    Code -juhlaan CS Education Weekin aikana, %{campaign_date} kun uusimmat opetusohjelmat
-    ja aktiviteetit julkaistaan. Mutta voit tehdä Hour of Code -ohjelman minä tahansa
-    vuoden päivänä!
-  hoc_how_to_step_02_educators_desc_01: Tutustu aktiviteetteihin ryhmäsi iän, kokemuksen,
-    kiinnostuksen kohteiden ja muun perusteella. Opiskelijoiden on suosittua kokeilla
-    itseohjattuja opetusohjelmia, vaikka monet aktiviteetit sisältävät opettajien
-    oppituntisuunnitelmia keskustelun ohjaamiseksi tai toiminnan laajentamiseksi.
-  hoc_how_to_step_02_educators_desc_02: Päätä etukäteen, haluatko valita yhden opetusohjelman
-    kaikille opiskelijoillesi, vai anna jokaisen lapsen valita omansa.
-  hoc_how_to_step_02_educators_desc_03: Tänä vuonna sinä ja oppilaasi voit [oppia
-    kaiken tekoälystä] (%ai_url) opetusohjelmien, tuntisuunnitelmien ja uuden How
-    AI Works -videosarjan avulla.
-  hoc_how_to_step_03_educators_desc_01: Kokeile opetusohjelmaa itse ennen kuin pääset
-    luokkahuoneeseen, jotta voit vastata kysymyksiin!
-  hoc_how_to_step_03_educators_desc_02: Voit myös testata opetusohjelmia opiskelijoiden
-    tietokoneilla tai laitteilla varmistaaksesi, että ne tukevat ääntä ja videota.
-    Onko sinulla alhainen kaistanleveys? Suunnittele videoiden näyttäminen luokan
-    edessä, jotta jokainen oppilas ei lataa omia videoitaan.
-  hoc_how_to_step_03_educators_desc_03: Harkitse kuulokkeiden tarjoamista luokallesi
-    tai pyydä oppilaita tuomaan omat, jos valitsemasi opetusohjelma toimii parhaiten
-    äänen kanssa.
-  hoc_how_to_step_04_educators_desc_01: Kun rekisteröit Hour of Code -tapahtuman,
-    saat hyödyllisiä sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen
-    Hour of Code -tapahtuman järjestämiseen. Näin voit myös kertoa paikallisille vapaaehtoisille,
-    että koulusi osallistuu. Vapaaehtoiset ovat loistava resurssi ja voivat tulla
-    puhumaan luokallesi tietojenkäsittelytieteestä tai auttaa oppilaitasi Hour of
-    Code -toiminnoissa.
-  hoc_how_to_step_05_educators_desc_01: Saa oppilaat innostumaan tapahtumasta jakamalla
-    [inspiroivia videoita] (%{videos_url}) korostamalla erilaisia ihmisiä ja luovia
-    tapoja, joilla tietojenkäsittelytiedettä voidaan käyttää todellisessa maailmassa.
-  hoc_how_to_step_05_educators_desc_02: Jaa Hour of Code -suunnitelmasi muiden opettajien
-    kanssa, jotka saattavat haluta osallistua hauskanpitoon! Tämä on myös loistava
-    tilaisuus ottaa yhteyttä koulusi vanhempien opettajien opiskelijayhdistykseen
-    tai jakaa vanhempien uutiskirjeitä kertoen heille, mitä heidän lapsensa oppivat.
-  hoc_how_to_step_06_educators_desc_01: Ohjaa oppilaat aktiviteettiin, ehkä jakamalla
+  hoc_how_to_step_plan_hour_desc_01: 'Tässä on esimerkkiesityslista, jonka avulla
+    pääset alkuun:'
+  hoc_how_to_step_choose_activities_desc_01: Tänä vuonna Hour of Code -teemana on
+    Luovuus tekoälyllä (AI). Olipa kyse uusien sovellusten ja algoritmien koodaamisesta,
+    ainutlaatuisen taiteen luomisesta tai koreografian luomisesta, joka saa meidät
+    tanssimaan, tekoäly avaa uusia mahdollisuuksia digitaaliseen ilmaisuun, jotka
+    laajentavat ymmärrystämme luovuudesta. Tee tästä vuodesta erityinen suorittamalla
+    koodaustoiminta JA oppimalla tekoälystä.
+  hoc_how_to_step_choose_activities_desc_02: Ensimmäinen, [tutki satoja koodaustoimintoja]
+    (%{activities_url}) ja valitse yksi ryhmäsi iän, kokemuksen, kiinnostuksen kohteiden
+    ja muun perusteella. [Nämä valitut toiminnot] (%{ai_activities_url}) sisältävät
+    tekoälyn keskeisenä aiheena tai oppituntina.
+  hoc_how_to_step_choose_activities_desc_03: Sitten, [opi kaikki tekoälystä] (%{ai_url}).
+    Opiskelijat voivat katsella lyhyitä videoita alan asiantuntijoista, ja mukana
+    on tuntisuunnitelmia toiminnan laajentamiseksi ja jatkokeskustelun ohjaamiseksi.
+    Tai tarjoamme opettajille ilmaista ammatillista oppimista, jotta voimme avata
+    opetuksen tulevaisuuden tekoälyn avulla ja siitä.
+  hoc_how_to_step_educators_register_desc: Aloita sitoutumalla tekemään Hour of Code
+    oppilaidesi kanssa rekisteröimällä tapahtumasi. Kun rekisteröidyt, saat hyödyllisiä
+    sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen Hour of Code -tapahtuman
+    järjestämiseen. Sinut tulee myös [laitetaan kartalle] (%{map_url}). Kollektiivisten
+    ponnistelujemme näkyvä kokonaisuus osoittaa maailmanlaajuisen sitoutumisen tietojenkäsittelyliikkeeseen,
+    mikä auttaa meitä rakentamaan vauhtia systeemiseen muutokseen.
+  hoc_how_to_step_educators_plan_desc_01: Ennen tapahtumaasi, kokeile aktiviteetteja
+    itse, jotta voit varmistaa, että ne toimivat opiskelijoiden laitteilla ja olet
+    valmis vastaamaan kysymyksiin! Onko sinulla alhainen kaistanleveys? Suunnittele
+    videoiden näyttäminen luokan edessä, jotta jokainen oppilas ei lataa omia videoitaan.
+  hoc_how_to_step_educators_plan_desc_02: Ihmiset ympäri maailmaa liittyvät usein
+    Hour of Code -juhlaan tietojenkäsittelytieteen koulutusviikon aikana (%{campaign_date}),
+    mutta voit tehdä Hour of Code -tunnin minä tahansa vuoden päivänä!
+  hoc_how_to_step_educators_plan_desc_03: Valitse tila, joka sopii käytettävissäsi
+    olevien opiskelijoiden ja laitteiden lukumäärälle. Oppilaat voivat kokeilla toimintoja
+    yksittäisillä laitteilla, jakaa laitteen vuorotellen tai luokkana taululla. On
+    jopa irrotettuja toimintoja, jotka voidaan suorittaa ilman laitteita, joten ne
+    voidaan tehdä jopa ulkona!
+  hoc_how_to_step_educators_spread_word_desc_01: Auta meitä levittämään sanaa yhteisössäsi
+    [nämä sähköpostimallit] (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Pyydä kahta kollegaa [register](%{register_url})
+    ja isännöimään Hour of Code -aktiviteettia. He puolestaan voivat turvata kaksi
+    kollegaa, jotka voivat turvata kaksi kollegaa jne.
+  hoc_how_to_step_educators_spread_word_desc_03: Pyydä rehtoria [isännöi koko koulun
+    laajuista tapahtumaa] ()%{host_url}. Kun vähintään 300 lasta osallistuu, voit
+    saada erityisen kihlajaispaketin, jossa on t-paitoja, julisteita, kannettavan
+    tietokoneen tarroja ja paljon muuta. [Jaa koko koulun tapahtumasuunnitelma] (%{share_url})
+    kelpuuttaaksesi.
+  hoc_how_to_step_educators_spread_word_desc_04: Ota yhteyttä koulusi vanhempien opettajien
+    opiskelijayhdistykseen tai jaa vanhempien uutiskirjeitä, kerro heille, mitä heidän
+    lapsensa oppivat.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Aloita [inspiroivalla
+    videolla] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Opiskelijat tekevät koodaustoimintansa'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Opiskelijat oppivat tekoälystä'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10.55-11.00: Opettaja antaa päätöspuheenvuorot'
+  hoc_how_to_step_educators_get_coding_desc: Ohjaa oppilaat aktiviteettiin, ehkä jakamalla
     linkki taululla tai luokkahuoneesi oppimisen hallintajärjestelmän kautta. Oppilaasi
     voivat kohdata haasteita - se on okei! Ohjelmoinnin oppiminen on kuin uuden kielen
     oppiminen; et ole sujuvaa heti. Jos et tiedä vastausta, voit selvittää sen yhdessä.
-  hoc_how_to_step_07_educators_desc_01: 'Muista juhlia menestystä! Jaa valokuvia ja
-    videoita Hour of Code -tapahtumastasi sosiaalisessa mediassa. Käytä #HourOfCode
-    ja @codeorg, jotta voimme korostaa myös menestystäsi!'
-  hoc_how_to_step_07_educators_desc_02: Voit myös tulostaa todistuksia opiskelijoillesi
-    osoittaaksesi saavutuksiaan!
+  hoc_how_to_step_educators_celebrate_desc: 'Tulosta tapahtuman jälkeen todistukset
+    suorittamisesta ja onnittele opiskelijoita. Jaa valokuvia ja videoita Hour of
+    Code -tapahtumasta ja esittele oppilaidesi saavutuksia #HourOfCode- ja @codeorg
+    -sovellusten avulla.'
+  hoc_how_to_step_educators_beyond_desc: Tietojenkäsittelytieteen ei tarvitse päättyä
+    koodin tuntiin! Vaikka 90% vanhemmista haluaa lapsensa oppivan tietojenkäsittelytiedettä,
+    useimmat koulut eivät edelleenkään opeta sitä. Auttaaksemme opetussuunnitelmamme
+    on verkkopohjainen ja ilmainen, ikuisesti. Opi tuomaan CS kouluusi tänään.
   hoc_ai_top_desc: Kuka tahansa voi oppia tekoälystä, olitpa sitten luokkahuoneen
     opiskelija tai opettaja, joka avaa opetuksen tulevaisuuden tekoälyn avulla ja
     siitä.

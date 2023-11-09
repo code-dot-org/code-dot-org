@@ -1765,6 +1765,15 @@ FactoryBot.define do
     lti_integration {create :lti_integration}
   end
 
+  factory :lti_course do
+    lti_integration {create :lti_integration}
+    lti_deployment {create :lti_deployment, lti_integration: lti_integration}
+    context_id {SecureRandom.uuid}
+    course_id {SecureRandom.uuid}
+    nrps_url {"http://test.org/api/names_and_roles"}
+    resource_link_id {"resource_link_id"}
+  end
+
   factory :parental_permission_request do
     user {create :young_student, :without_parent_permission}
     parent_email {"contact@example.domain"}
@@ -1866,5 +1875,11 @@ FactoryBot.define do
     association :rubric_ai_evaluation
     understanding {0}
     ai_confidence {1}
+  end
+
+  factory :potential_teacher do
+    association :source_course_offering
+    name {"foosbars"}
+    email {"foobar@example.com"}
   end
 end

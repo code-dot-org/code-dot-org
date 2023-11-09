@@ -270,7 +270,7 @@ class Homepage
         {
           text: "get_started",
           type: "cta_button_solid_white",
-          url: "/hourofcode/overview"
+          url: "/hourofcode"
         }
       ]
     elsif hoc_mode == "soon-hoc"
@@ -283,7 +283,7 @@ class Homepage
         {
           text: "homepage_action_text_try_it",
           type: "cta_button_solid_grey",
-          url: "/hourofcode/overview"
+          url: "/hourofcode"
         }
       ]
     elsif ["post-hoc", "pre-hoc"].include? hoc_mode
@@ -337,13 +337,13 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc_2022",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "https://hourofcode.com/us",
+          url: "https://hourofcode.com",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
               {
                 text: "homepage_slot_text_link_hoc",
-                url: "/hourofcode/overview"
+                url: "/hourofcode"
               },
               {
                 text: "homepage_slot_text_link_about_hoc",
@@ -578,12 +578,12 @@ class Homepage
 
   def self.get_dance_stars
     [
-      "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney's \"Encanto\"", "Nicky Youre",
-      "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
+      "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney's \"Encanto\"", "Rosalía", "Nicky Youre",
+      "Katy Perry", "Lil Nas X", "Jonas Brothers", "FIFTY FIFTY", "Steve Lacy", "Panic! At The Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
       "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Coldplay", "Ed Sheeran", "Imagine Dragons",
-      "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
+      "J Balvin and Willy William", "Justin Bieber", "Lady Gaga",
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]

@@ -2279,7 +2279,17 @@ StudioApp.prototype.handleIframeEmbedAppAndCode_ = function () {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function (config) {
-  if (!config.level.libraries && config.level.startLibraries) {
+  // We use start libaries if we should ignore last attempt, the level has contained levels,
+  // or if the level does not have libraries saved to it yet.
+  // Always use the source code from the level definition for contained and embed levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (
+    (!config.level.libraries ||
+      config.ignoreLastAttempt ||
+      config.hasContainedLevels) &&
+    config.level.startLibraries
+  ) {
     config.level.libraries = JSON.parse(config.level.startLibraries);
   }
   if (!config.level.libraries) {

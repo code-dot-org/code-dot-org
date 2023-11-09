@@ -286,8 +286,10 @@ et:
   call_to_action_register_event: Registreeri oma üritus
   call_to_action_register_your_hoc: Registreeri oma koodiaeg
   call_to_action_select_activity: Valige tegevus
+  call_to_action_select_coding_activity: Valige kodeerimistegevus
   call_to_action_start_activity: Alustage tegevust
   call_to_action_get_certificates: Hankige sertifikaadid
+  call_to_action_print_certificates: Prindi sertifikaadid
   call_to_action_go_beyond_hoc: Minge kaugemale koodi tunnist
   call_to_action_explore_all_hoc_activities: Tutvuge kõigi kooditunni tegevustega
     saidilt Code.org
@@ -413,6 +415,8 @@ et:
     professionaalne õppe programm
   aria_label_call_to_action_teaching_csp: Alusta õpetamine arvutiteaduse põhimõtted
     professionaalne õppe programm
+  aria_label_call_to_action_teaching_problem_solving: Alustage õpetamise probleemide
+    lahendamise ja arvutamise professionaalse õppe programmi
   aria_label_call_to_action_teaching_csc: Alusta õpetamine arvutiteaduse ühendused
     professionaalne õppeprogramm
   aria_label_call_to_action_teaching_ai: Alusta Õpetamine AI ja masinõppe professionaalne
@@ -428,6 +432,8 @@ et:
     Fundamentals Pre-Reader Express kursus
   aria_label_call_to_action_curriculum_csd: Tutvuge arvutiteaduse avastuste õppekavaga
   aria_label_call_to_action_curriculum_csp: Tutvuge arvutiteaduse põhimõtete õppekavaga
+  aria_label_call_to_action_curriculum_problem_solving: Tutvuge probleemide lahendamise
+    ja arvutamise õppekava
   aria_label_call_to_action_curriculum_csc: Tutvuge arvutiteaduse ühenduste õppekavaga
   aria_label_call_to_action_curriculum_ai: Avastage tehisintellekti ja masinõppe õppekavaga
   aria_label_call_to_action_curriculum_maker_cp: Avastage seadmetega rakenduste loomise
@@ -503,6 +509,7 @@ et:
   curriculum_name_csf_teacher_led: Õpetaja juhitud õppetund
   curriculum_name_csd: Arvutiteaduse avastused
   curriculum_name_csp: Arvutiteaduse põhimõtted
+  curriculum_name_problem_solving: Probleemide lahendamine ja arvutustehnika
   curriculum_name_csc: Arvutiteaduse ühendused
   curriculum_name_csa: AP® Arvutiteadus A
   curriculum_name_csa_ai: Tarkvaratehnika ja arvuti nägemine
@@ -700,6 +707,7 @@ et:
   module_label_teaching_csf: Arvutiteaduse aluste õpetamine
   module_label_teaching_csd: Arvutiteaduse avastuste õpetamine
   module_label_teaching_csp: Arvutiteaduse põhimõtete õpetamine
+  module_label_teaching_problem_solving: Probleemide lahendamise ja arvutamise õpetamine
   module_label_teaching_csc: Arvutiteaduse ühenduste õpetamine
   module_label_teaching_ai: AI ja masinõppe õpetamine
   module_label_teaching_maker_cp: Seadmetega rakenduste loomise õpetamine (ringkonnakohtu
@@ -13016,6 +13024,9 @@ et:
   step_06: 6. samm
   step_07: 7. samm
   step_08: 8. samm
+  what: 'Mis:'
+  when: 'Millal:'
+  where: 'Kus:'
   hoc_how_to_top_heading: Teie juhend koodi tunni kohta
   hoc_how_to_top_desc: Kohandatud juhendid parima koodi tunni kogemuse saamiseks.
   hoc_how_to_top_view_guide: Vaata juhendit
@@ -13060,66 +13071,80 @@ et:
     on mõeldud igas vanuses üle 45 keeltes.
   hoc_how_to_step_label_plan: Planeerige, kus ja millal oma kooditund teete
   hoc_how_to_step_label_choose_activity: Valige oma tegevus
+  hoc_how_to_step_label_choose_activities: Valige oma tegevused
   hoc_how_to_step_label_test_activity: Testige oma tegevust
   hoc_how_to_step_label_register_event: Registreeri oma üritus
   hoc_how_to_step_label_tell: Öelge oma õpilastele, koolile ja kogukonnale
   hoc_how_to_step_label_get_coding: Hankige kodeerimine!
   hoc_how_to_step_label_celebrate: Tähistage
   hoc_how_to_step_label_beyond_hoc: Koodi tunnist kaugemale
+  hoc_how_to_step_label_plan_your_event: Planeerige oma üritust
+  hoc_how_to_step_label_plan_your_hour: Planeerige oma tund
+  hoc_how_to_step_label_help_spread_word: Aidake sõna levitada
   hoc_how_to_step_beyond_hoc_subhead: See ei lõpe siin!
-  hoc_how_to_step_beyond_hoc_desc: Arvutiteadus ei pea lõppema kooditundiga! Kuigi
-    90% vanematest soovib, et nende laps õpiks arvutiteadust, enamik koole seda ikkagi
-    ei õpeta. Siit saate teada, kuidas tuua CS-i juba täna oma lapse kooli.
-  hoc_how_to_step_01_educators_subhead: Valige sündmuse aeg ja -ruum, mis sobib teie
-    saadaolevate õpilaste ja seadmete arvu järgi.
-  hoc_how_to_step_01_educators_desc_01: Millised ruumid on teil oma kooditunni tegemiseks
-    saadaval? Mõelge oma ruumi tehnilistele võimalustele, ja milliseid seadmeid ootate,
-    et teie õpilased töötaksid. Õpilased saavad õpetuste kallal töötada ühes seadmes,
-    kasutada kordamööda jagatud seadet, või proovige koos õpetust klassiruumi tahvlil.
-    On isegi lahti ühendatud õpetusi, mida saab täita ilma seadmeteta. Vooluvõrgust
-    lahti ühendatud valikuid saab teha kõikjal - isegi õues!
-  hoc_how_to_step_01_educators_desc_02: Inimesed üle kogu maailma liituvad CS haridusnädala
-    ajal Kooditunni tähistamisega, %{campaign_date} kui ilmuvad uusimad õpetused ja
-    tegevused. Kuid saate teha kooditundi igal päeval aastas!
-  hoc_how_to_step_02_educators_desc_01: Uurige tegevusi vastavalt oma rühma vanusele,
-    kogemus, huvid, ja veel. Õpilastel on populaarne proovida isejuhitavaid õpetusi,
-    kuigi paljud tegevused hõlmavad õppetundiplaane õpetajatele arutelu juhtimiseks
-    või tegevuse laiendamiseks.
-  hoc_how_to_step_02_educators_desc_02: Otsustage enne tähtaega, kas soovite valida
-    kõigile oma õpilastele ühe õpetuse, või laske igal lapsel ise valida.
-  hoc_how_to_step_02_educators_desc_03: Sel aastal saate teie ja teie õpilased [õppida
-    kõike tehisintellekti kohta] (%ai_url) õpetuste, tundiplaanide ja meie uue videosarja
-    How AI Works kaudu.
-  hoc_how_to_step_03_educators_desc_01: Enne klassiruumi sisenemist proovige õpetust
-    ise, et saaksite küsimustele vastata!
-  hoc_how_to_step_03_educators_desc_02: Õpetusi saate testida ka õpilaste arvutites
-    või seadmetes, et tagada nende heli ja video toetamine. Kas teil on madal ribalaius?
-    Plaanige näidata videoid klassi ees, nii et iga õpilane ei laadi alla oma videoid.
-  hoc_how_to_step_03_educators_desc_03: Kaaluge oma klassi kõrvaklappide pakkumist
-    või paluge õpilastel oma kaasa võtta, kui valitud õpetus sobib kõige paremini
-    heliga.
-  hoc_how_to_step_04_educators_desc_01: Kui registreerite oma Kooditund sündmuse,
-    saate kasulikke e-kirju koos uudiste ja näpunäidetega eduka kooditunni korraldamiseks.
-    See on ka see, kuidas saate kohalikele vabatahtlikele teada anda, et teie kool
-    osaleb. Vabatahtlikud on suurepärane ressurss ja võivad tulla teie klassiga arvutiteadusest
-    rääkima või aidata oma õpilasi koodi tunni tegevustes.
-  hoc_how_to_step_05_educators_desc_01: Jagage oma õpilasi üritusest põnevil [inspireerivad
-    videod] (%{videos_url}) tuues esile mitmekesised inimesed ja loomingulised viisid,
-    kuidas arvutiteadust reaalses maailmas kasutada.
-  hoc_how_to_step_05_educators_desc_02: Jagage oma koodi tunni plaane teiste õpetajatega,
-    kes võiksid lõbusalt liituda! See on ka suurepärane võimalus pöörduda oma kooli
-    vanemate õpetajate üliõpilaste ühenduse poole või jagada vanemate uudiskirju,
-    andes neile teada, mida nende lapsed õpivad.
-  hoc_how_to_step_06_educators_desc_01: Suunake oma õpilased tegevusele, võib-olla
+  hoc_how_to_step_plan_hour_desc_01: 'Siin on näidispäevakava alustamiseks:'
+  hoc_how_to_step_choose_activities_desc_01: Sel aastal on kooditunni teema Loovus
+    tehisintellektiga (AI). Ükskõik, kas tegemist on uute rakenduste ja algoritmide
+    kodeerimisega, ainulaadse kunsti loomisega või koreograafia meisterdamisega, et
+    meid tantsima panna, avab tehisintellekt värskeid võimalusi digitaalseks väljenduseks,
+    mis laiendavad meie arusaama loovusest. Muutke see aasta eriliseks, lõpetades
+    kodeerimistegevuse JA õppides tehisintellekti tundma.
+  hoc_how_to_step_choose_activities_desc_02: Esiteks, [uurige sadu kodeerimistegevusi]
+    (%{activities_url}) ja valige üks oma grupi vanuse, kogemuste, huvide ja muu põhjal.
+    [Need valitud tegevused] (%{ai_activities_url}) sisaldavad võtmeteemana või õppetunnina
+    tehisintellekti.
+  hoc_how_to_step_choose_activities_desc_03: Siis, [õppige kõike tehisintellekti kohta]
+    (%{ai_url}). Õpilased saavad vaadata lühikesi videoid, kus osalevad selle valdkonna
+    eksperdid, ja kaasnevad tunniplaanid tegevuse laiendamiseks ja edasise arutelu
+    suunamiseks. Või pakume õpetajatele tasuta professionaalset õpet, et avada AI-ga
+    ja selle kohta õpetamise tulevik.
+  hoc_how_to_step_educators_register_desc: Alustage pühendumisest teha oma õpilastega
+    kooditund, registreerides oma ürituse. Kui registreerute, saate kasulikke e-kirju
+    koos uudiste ja näpunäidetega eduka kooditunni korraldamiseks. Samuti saate [pannakse
+    kaardile] (%{map_url}). Meie kollektiivsete jõupingutuste nähtav kogum näitab
+    globaalset pühendumist arvutiteaduse liikumisele, mis aitab meil süstemaatilistele
+    muutustele hoogu luua.
+  hoc_how_to_step_educators_plan_desc_01: Enne üritust, proovige ise tegevusi, et
+    saaksite veenduda, et need töötavad õpilasseadmetes ja olete valmis küsimustele
+    vastama! Kas teil on madal ribalaius? Plaanige näidata videoid klassi ees, nii
+    et iga õpilane ei laadi alla oma videoid.
+  hoc_how_to_step_educators_plan_desc_02: Inimesed üle kogu maailma liituvad arvutiteaduse
+    haridusnädala ajal sageli kooditunni tähistamisega (%{campaign_date}), kuid kooditunni
+    saate teha igal päeval aastas!
+  hoc_how_to_step_educators_plan_desc_03: Valige ruum, mis sobib teie saadaolevate
+    õpilaste ja seadmete arvule. Õpilased saavad proovida tegevusi üksikseadmetes,
+    jagada seadet kordamööda või klassina tahvlil. On isegi vooluvõrku ühendatud tegevusi,
+    mida saab lõpule viia ilma seadmeteta, nii et neid saab teha isegi väljas!
+  hoc_how_to_step_educators_spread_word_desc_01: Aidake meil oma kogukonnas sõna levitada
+    [nende e-posti mallide] abil (%{email_url}).
+  hoc_how_to_step_educators_spread_word_desc_02: Paluge kahel kolleegi%{register_url}l
+    [register]() Kooditunni tegevust korraldada. Nad omakorda saavad kindlustada kaks
+    kolleegi, kes suudavad kindlustada kaks kolleegi jne.
+  hoc_how_to_step_educators_spread_word_desc_03: Paluge oma direktoril [korraldada
+    kogu kooli hõlmavat üritust] (%{host_url}). Kui osaleb 300 või enam last, saate
+    spetsiaalse kihlasomplekti koos t-särkide, plakatite, sülearvutikleebiste ja muuga.
+    [Jagage kogu oma kooli ürituste plaani] (%{share_url}) kvalifitseerumiseks.
+  hoc_how_to_step_educators_spread_word_desc_04: Pöörduge oma kooli vanemate õpetajate
+    üliidu poole või jagage vanemate uudiskirju, andes neile teada, mida nende lapsed
+    õpivad.
+  hoc_how_to_step_educators_plan_hour_desc_02: '10:00-10:05: Alustage [inspireeriva
+    videoga] ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45: Õpilased teevad oma kodeerimistegevust'
+  hoc_how_to_step_educators_plan_hour_desc_04: '10:45-10:55: Õpilased õpivad tehisintellekti
+    tundma'
+  hoc_how_to_step_educators_plan_hour_desc_05: '10.55-11:00: Õpetaja annab lõppmärkused'
+  hoc_how_to_step_educators_get_coding_desc: Suunake oma õpilased tegevusele, võib-olla
     jagades linki tahvlil või klassiruumi õppejuhtimissüsteemi kaudu. Teie õpilased
     võivad kokku puutuda väljakutsetega - see on okei! Programmi õppimine on nagu
     uue keele õppimine; te ei saa kohe vabalt. Kui te ei tea vastust, saate selle
     koos välja mõelda.
-  hoc_how_to_step_07_educators_desc_01: 'Tähistage kindlasti edu! Jagage sotsiaalmeedias
-    fotosid ja videoid oma Hour of Code üritusest. Kasutage #HourOfCode ja @codeorg,
-    et saaksime ka teie edu esile tõsta!'
-  hoc_how_to_step_07_educators_desc_02: Samuti saate oma õpilastele printida sertifikaate,
-    et näidata oma saavutusi!
+  hoc_how_to_step_educators_celebrate_desc: 'Pärast sündmust, printige lõpetamistunnistused
+    ja õnnitlege oma õpilasi. Jagage fotosid ja videoid oma kooditunni üritusest ning
+    näidake oma õpilaste saavutusi kasutades #HourOfCode ja @codeorg.'
+  hoc_how_to_step_educators_beyond_desc: Arvutiteadus ei pea lõppema kooditunniga!
+    Kuigi 90% vanematest soovib, et nende laps õpiks arvutiteadust, ei õpeta enamik
+    koole seda ikkagi. Aitamiseks on meie õppekava veebipõhine ja tasuta kasutamiseks,
+    igavesti. Siit saate teada, kuidas CS-i oma kooli täna tuua.
   hoc_ai_top_desc: Tehisintellekti kohta saab õppida igaüks, olenemata sellest, kas
     olete klassiruumis õpilane või õpetaja, mis avab tehisintellektiga ja selle kohta
     õpetamise tuleviku.
