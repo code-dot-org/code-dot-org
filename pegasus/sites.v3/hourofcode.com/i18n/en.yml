@@ -9355,6 +9355,12 @@
   hoc_how_to_faq_answer_prepare_04: "If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand."
   hoc_how_to_faq_question_when_company_host: "When can my company host an Hour of Code event?"
   hoc_how_to_faq_answer_when_company_host: "People around the world join the Hour of Code celebration during CS Education Week (%{campaign_date}) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!"
+  hoc_how_to_faq_question_volunteer_teacher_contact: "I haven't been contacted by a teacher yet. How can I still volunteer?"
+  hoc_how_to_faq_answer_volunteer_teacher_contact: "Try searching for local schools and call the principal/teacher/front office and ask how you can help."
+  hoc_how_to_faq_question_classroom_visit: "How long do classroom visits last for?"
+  hoc_how_to_faq_answer_classroom_visit: "An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes."
+  hoc_how_to_faq_question_age_groups: "What age group is the Hour of Code activity appropriate for?"
+  hoc_how_to_faq_answer_age_groups: "Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone—even adults—can have fun learning!"
 
   hoc_how_to_resources_heading_educators: "Other Hour of Code resources for educators"
   hoc_how_to_resources_heading_default: "Other Hour of Code resources"
