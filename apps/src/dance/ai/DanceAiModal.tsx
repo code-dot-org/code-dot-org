@@ -102,7 +102,8 @@ function useInterval(callback: () => void, delay: number | undefined) {
   }, [delay]);
 }
 
-const SCORE_VISUALIZATION_HEIGHT = 140;
+// Scale max bar size to be 90% of the total height of visualization.
+const SCORE_VISUALIZATION_HEIGHT = 140 * 0.9;
 
 // How many emojis are to be selected.
 const SLOT_COUNT = 3;
@@ -506,13 +507,12 @@ const DanceAiModal: React.FunctionComponent = () => {
   const labels = getLabels();
 
   // Calculates the minimum individual score
-  // (ie, a SINGLE emoji association with a foreground/background palette combination)
+  // (ie, a SINGLE emoji association with a foreground/background palette combination),
   // and a maximum total score
   // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
-  // Used to normalize and scale the data for easier differentiation between results
-  // by the user.
+  // Used to normalize and scale the data for easier differentiation between results by the user.
   const calculateMinMax = () => {
-    // The minimum individual score is selected across all generated effects (bad and good)
+    // The minimum individual score is selected across all generated effects (bad and good).
     const minIndividualScore = Array.from(
       Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
     ).reduce((accumulator: number, currentValue: number) => {
@@ -941,7 +941,7 @@ const Score: React.FunctionComponent<ScoreProps> = ({
   colors,
 }) => {
   // For each score we wish to visualize, we subtract the minimum score
-  // in the observed data in order to generate a "net value"
+  // in the observed data in order to generate a "net score"
   // and better differentiate between observed scores.
   const getSummedNetScore = (scores: GeneratedEffectScores) => {
     return scores.reduce(
@@ -952,12 +952,13 @@ const Score: React.FunctionComponent<ScoreProps> = ({
   };
 
   const getHeight = (scores: GeneratedEffectScores) => {
-    const numerator = getSummedNetScore(scores);
-    const denominator =
+    const summedNetScore = getSummedNetScore(scores);
+    const maxSummedNetScore =
       minMax.maxTotalScore - minMax.minIndividualScore * SLOT_COUNT;
-    const maxHeight = 0.9 * SCORE_VISUALIZATION_HEIGHT;
 
-    return Math.round((numerator / denominator) * maxHeight);
+    return Math.round(
+      (summedNetScore / maxSummedNetScore) * SCORE_VISUALIZATION_HEIGHT
+    );
   };
 
   const layers = [
