@@ -872,7 +872,6 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
   create_table "lti_sections", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.bigint "lti_course_id", null: false
     t.integer "section_id", null: false
-    t.string "name"
     t.string "lms_section_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
