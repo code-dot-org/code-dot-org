@@ -36,7 +36,7 @@ module Forms
         where(kind: kind).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
         where(review_approved ? {review: 'approved'} : {}).
-        exclude(country_column => except_country).
+        exclude(country_column => except_country.upcase).
         group_and_count(country_column.as(:country_code)).
         tap {|x| puts x.sql, x.explain if explain}.
         all
@@ -54,7 +54,7 @@ module Forms
       FORMS.
         where(
           kind: kind,
-          country_column => country
+          country_column => country.upcase
         ).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
         where(review_approved ? {review: 'approved'} : {}).
@@ -88,7 +88,7 @@ module Forms
         ).
         where(
           kind: kind,
-          country_column => country
+          country_column => country.upcase
         ).
         where(state ? {state_column => state.upcase} : {}).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
