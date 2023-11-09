@@ -27,7 +27,7 @@ fall leaves | autumn | Autumn
 black and white | rave | Black and White  
 cool | cool | Cool  
 electronic | electronic | Electronic  
-grayscale | grayscale | Grayscale  
+black and white grayscale | grayscale | Grayscale  
 ice cream pastel | iceCream | Ice Cream  
 rainbow pastel | default | Light  
 neon | neon | Neon  
@@ -37,7 +37,7 @@ roses romantic warm | roses | Roses
 sky sunrise | sky | Sky  
 spring green plants | spring | Spring  
 summer flower | summer | Summer  
-sunrise | sunrise | Sunrise  
+sunrise cozy | sunrise | Sunrise  
 sunset cozy | sunset | Sunset  
 sweet candy | tropical | Tropical  
 fire warm | twinkling | Twinkling  
