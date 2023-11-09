@@ -2763,6 +2763,14 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startHiddenDefinitions = config.level.hiddenDefinitions;
   }
 
+  // Only used in Sprite Lab.
+  if (config.level.sharedFunctions) {
+    // TODO: Re-implement for JSON before migrating Sprite Lab
+    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+      startBlocks,
+      config.level.sharedFunctions
+    );
+  }
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
@@ -2772,14 +2780,6 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
       startBlocks = blockUtils.forceInsertTopBlock(
         startBlocks,
         config.forceInsertTopBlock
-      );
-    }
-    // Only used in Sprite Lab.
-    if (config.level.sharedFunctions) {
-      // TODO: Re-implement for JSON before migrating Sprite Lab
-      startBlocks = blockUtils.appendNewFunctions(
-        startBlocks,
-        config.level.sharedFunctions
       );
     }
     // Not needed if source is JSON, as these blocks will already have positions.

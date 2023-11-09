@@ -13,10 +13,13 @@ import {
   ToolboxType,
 } from '../constants';
 import {
+  appendProceduresToState,
+  convertFunctionsXmlToJson,
   convertXmlToJson,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
+import * as blockUtils from '../../block_utils';
 
 /**
  * Loads blocks to a workspace.
@@ -462,4 +465,22 @@ function simplifyBlockState(block, variableMap) {
 
 export function getBlockColor(block) {
   return block?.style?.colourPrimary;
+}
+
+export function appendSharedFunctions(startBlocksSource, functionsXml) {
+  let startBlocks;
+  console.log(stringIsXml(startBlocksSource) ? 'xml' : 'json');
+  if (stringIsXml(startBlocksSource)) {
+    startBlocks = blockUtils.appendNewFunctions(
+      startBlocksSource,
+      functionsXml
+    );
+  } else {
+    const functionsJson = convertFunctionsXmlToJson(functionsXml);
+    console.log({functionsJson: functionsJson});
+    appendProceduresToState(startBlocksSource);
+    startBlocks = startBlocksSource;
+  }
+  console.log({startBlocks: startBlocks});
+  return startBlocks;
 }

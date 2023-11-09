@@ -176,3 +176,12 @@ function reorderBlocks(blocks, blockOrderMap) {
 
   return orderedBlocks;
 }
+
+export function convertFunctionsXmlToJson(functionsXml) {
+  console.log({functionsXml: functionsXml});
+  return {};
+}
+
+export function appendProceduresToState(state, proceduresState) {
+  console.log({state: state, procedures: proceduresState});
+}
