@@ -2890,6 +2890,77 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
+  test 'student and teacher relationships using section instructors' do
+    teacher = create :teacher
+    student = create :student
+
+    section_owner = create :teacher
+    section = create :section, user_id: section_owner.id
+    create :section_instructor, section: section, instructor: teacher, status: :active
+
+    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+
+    teacher.reload
+    student.reload
+
+    assert_equal [follow], teacher.followers
+    assert_equal [follow], student.followeds
+
+    other_user = create :student
+
+    # student_of? method
+    refute student.student_of?(student)
+    refute student.student_of?(other_user)
+    assert student.student_of?(teacher)
+
+    refute teacher.student_of?(student)
+    refute teacher.student_of?(other_user)
+    refute teacher.student_of?(teacher)
+
+    refute other_user.student_of?(student)
+    refute other_user.student_of?(other_user)
+    refute other_user.student_of?(teacher)
+
+    # user associations
+    assert_equal [], other_user.teachers
+    assert_equal [], other_user.students
+
+    assert_equal [], teacher.teachers
+    assert_equal [student], teacher.students
+
+    assert_equal [teacher], student.teachers
+    assert_equal [], student.students
+
+    # section associations
+    assert_equal [section], student.sections_as_student
+    assert_equal [], teacher.sections_as_student
+    assert_equal [], other_user.sections_as_student
+
+    assert_equal [], student.sections
+    assert_equal [section], teacher.sections
+    assert_equal [], other_user.sections
+
+    # can_pair? method
+    assert_equal true, student.can_pair?
+    assert_equal false, teacher.can_pair?
+    assert_equal false, other_user.can_pair?
+
+    # can_pair_with? method
+    classmate = create :student
+    section.add_student classmate
+    assert classmate.can_pair_with?(student)
+    assert student.can_pair_with?(classmate)
+    refute student.can_pair_with?(other_user)
+    refute student.can_pair_with?(teacher)
+    refute teacher.can_pair_with?(student)
+    refute student.can_pair_with?(student)
+
+    # disable pair programming
+    section.update!(pairing_allowed: false)
+    student.reload
+    refute student.can_pair?
+  end
+
   test "verified teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
