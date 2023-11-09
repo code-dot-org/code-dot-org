@@ -124,7 +124,7 @@ const DanceAiModal: React.FunctionComponent = () => {
   const GENERATION_SUBSTEP_DURATION = 1000;
 
   // How long we spend in each step of the explanation process.
-  const EXPLANATION_STEP_DURATION = 1700;
+  const EXPLANATION_STEP_DURATION = 900;
 
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
@@ -724,6 +724,7 @@ const DanceAiModal: React.FunctionComponent = () => {
           >
             <Score
               scores={getScores(generatingProgress.step)}
+              goodScores={getScores(BAD_GENERATED_RESULTS_COUNT)}
               minMax={minMaxAssociations.current}
               colors={
                 generatingProgress.subStep === 1
@@ -765,12 +766,16 @@ const DanceAiModal: React.FunctionComponent = () => {
                   <div key={index} className={moduleStyles.visualizationColumn}>
                     <Score
                       scores={getScores(index)}
+                      goodScores={getScores(BAD_GENERATED_RESULTS_COUNT)}
                       minMax={minMaxAssociations.current}
-                      colors={ScoreColors.NORMAL}
+                      colors={
+                        index < BAD_GENERATED_RESULTS_COUNT
+                          ? ScoreColors.NORMAL_NO
+                          : ScoreColors.NORMAL_YES
+                      }
                     />
 
                     <div
-                      className={moduleStyles.visualizationColumn}
                       title={
                         labels.backgroundEffect[
                           getGeneratedEffect(index)?.backgroundEffect || 0
@@ -919,20 +924,28 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 };
 
 enum ScoreColors {
-  NORMAL = 'normal',
+  // A grey bar with no symbol in the symbol container yet.
   GREY = 'grey',
-  YES = 'code',
+  // A green bar with a green check symbol.
+  YES = 'yes',
+  // A red bar with a red cross symbol.
   NO = 'no',
+  // A tri-colored bar with a green check symbol.
+  NORMAL_YES = 'normal_yes',
+  // A tri-colored bar with no symbol container.
+  NORMAL_NO = 'normal_no',
 }
 
 interface ScoreProps {
   scores: GeneratedEffectScores;
+  goodScores: GeneratedEffectScores;
   minMax: MinMax;
   colors: ScoreColors;
 }
 
 const Score: React.FunctionComponent<ScoreProps> = ({
   scores,
+  goodScores,
   minMax,
   colors,
 }) => {
@@ -953,40 +966,32 @@ const Score: React.FunctionComponent<ScoreProps> = ({
       (getScaledNumerator(scores) / (range * SLOT_COUNT)) *
         SCORE_VISUALIZATION_HEIGHT
     );
+  const getNotchOffset = () => {
+    return SCORE_VISUALIZATION_HEIGHT - getHeight(goodScores);
+  };
+
+  const getLayerClassName = (layerColor: string) => {
+    return colors === ScoreColors.NORMAL_YES || colors === ScoreColors.NORMAL_NO
+      ? layerColor
+      : colors === ScoreColors.GREY
+      ? moduleStyles.barFillGrey
+      : colors === ScoreColors.YES
+      ? moduleStyles.barFillYes
+      : moduleStyles.barFillNo;
+  };
 
   const layers = [
     {
       height: getHeight(scores),
-      className:
-        colors === ScoreColors.NORMAL
-          ? moduleStyles.barFillFirst
-          : colors === ScoreColors.GREY
-          ? moduleStyles.barFillGrey
-          : colors === ScoreColors.YES
-          ? moduleStyles.barFillYes
-          : moduleStyles.barFillNo,
+      className: getLayerClassName(moduleStyles.barFillFirst),
     },
     {
       height: getHeight([scores[0], scores[1]]),
-      className:
-        colors === ScoreColors.NORMAL
-          ? moduleStyles.barFillSecond
-          : colors === ScoreColors.GREY
-          ? moduleStyles.barFillGrey
-          : colors === ScoreColors.YES
-          ? moduleStyles.barFillYes
-          : moduleStyles.barFillNo,
+      className: getLayerClassName(moduleStyles.barFillSecond),
     },
     {
       height: getHeight([scores[0]]),
-      className:
-        colors === ScoreColors.NORMAL
-          ? moduleStyles.barFillThird
-          : colors === ScoreColors.GREY
-          ? moduleStyles.barFillGrey
-          : colors === ScoreColors.YES
-          ? moduleStyles.barFillYes
-          : moduleStyles.barFillNo,
+      className: getLayerClassName(moduleStyles.barFillThird),
     },
   ];
 
@@ -1001,12 +1006,38 @@ const Score: React.FunctionComponent<ScoreProps> = ({
               height: layer.height,
             }}
           >
-            <div className={classNames(moduleStyles.barFill, layer.className)}>
-              &nbsp;
-            </div>
+            <div
+              className={classNames(moduleStyles.barFill, layer.className)}
+            />
           </div>
         );
       })}
+      <div
+        className={moduleStyles.notchContainer}
+        style={{top: getNotchOffset()}}
+      >
+        {colors !== ScoreColors.NORMAL_NO && (
+          <div className={moduleStyles.resultContainer}>
+            {(colors === ScoreColors.NORMAL_YES ||
+              colors === ScoreColors.YES) && (
+              <div className={moduleStyles.Yes}>
+                <i className="fa fa-check-circle" />
+              </div>
+            )}
+            {colors === ScoreColors.NO && (
+              <div className={moduleStyles.No}>
+                <i className="fa fa-times-circle" />
+              </div>
+            )}
+          </div>
+        )}
+        <div
+          className={classNames(
+            moduleStyles.notch,
+            colors === ScoreColors.NORMAL_NO && moduleStyles.notchNormalNo
+          )}
+        />
+      </div>
     </div>
   );
 };
