@@ -10,9 +10,13 @@ import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
 import style from './hoc-guide-dialogue.module.scss';
 
-function HourOfCodeGuideEmailDialog({isSignedIn}) {
+function HourOfCodeGuideEmailDialog({isSignedIn, courseOfferingId}) {
   const [isOpen, setIsOpen] = useState(true);
   const [isMarketingChecked, setIsMarketingChecked] = useState(false);
+  const [isSendInProgress, setIsSendInProgress] = useState(false);
+  const [isShowSuccess, setIsShowSuccess] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const onClose = () => {
     cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
@@ -27,10 +31,30 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
       isSignedIn: isSignedIn,
     });
     // TODO: send email to stored address here
+    setIsShowSuccess(true);
   };
 
   const saveInputs = () => {
-    // TODO: store name and email here
+    const potential_teacher_data = {
+      name: name,
+      email: email,
+      receives_marketing: isMarketingChecked,
+      source_course_offering_id: courseOfferingId,
+    };
+    fetch('/potential_teacher', {
+      method: 'POST',
+      body: JSON.stringify(potential_teacher_data),
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(() => {
+        onClose();
+      })
+      .catch(err => {
+        setIsSendInProgress(false);
+        console.error(err);
+      });
   };
 
   const bodyText = isSignedIn
@@ -62,7 +86,8 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
                 type="text"
                 id="uitest-hoc-guide-name"
                 className={style.classNameTextField}
-                onChange={() => {}}
+                value={name}
+                onChange={e => setName(e.target.value)}
               />
             </label>
             <label className={style.typographyLabel}>
@@ -72,7 +97,8 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
                 type="text"
                 id="uitest-hoc-guide-email"
                 className={style.classNameTextField}
-                onChange={() => {}}
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
             </label>
             <label className={style.label}>
@@ -99,14 +125,14 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
             />
             <Button
               id="uitest-email-guide"
-              text={emailGuideButtonText}
+              text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
               onClick={() => {
                 saveInputs();
                 sendEmail();
-                onClose();
               }}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
+            {isShowSuccess && i18n.success()}
           </div>
         </AccessibleDialog>
       )}
@@ -116,6 +142,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
 
 HourOfCodeGuideEmailDialog.propTypes = {
   isSignedIn: PropTypes.bool.isRequired,
+  courseOfferingId: PropTypes.number.isRequired,
 };
 
 export const UnconnectedHourOfCodeGuideEmailDialog = HourOfCodeGuideEmailDialog;

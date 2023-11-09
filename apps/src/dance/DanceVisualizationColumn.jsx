@@ -71,7 +71,10 @@ class DanceVisualizationColumn extends React.Component {
         )}
         {(this.props.over21 || this.props.userType === 'teacher') &&
           cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
-            <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
+            <HourOfCodeGuideEmailDialog
+              isSignedIn={isSignedIn}
+              courseOfferingId={0}
+            />
           )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
