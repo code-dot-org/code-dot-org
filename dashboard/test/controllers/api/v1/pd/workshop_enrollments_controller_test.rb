@@ -302,11 +302,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
 
     params = enrollment_test_params.merge(
       {
+        user_id: teacher.id,
         email: app_alt_email,
         email_confirmation: app_alt_email,
         workshop_id: @workshop.id,
-        school_info: school_info_params,
-        application_id: application.id
+        school_info: school_info_params
       }
     )
     post :create, params: params

@@ -25,7 +25,6 @@ export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
-    application_id: PropTypes.number,
     session_dates: PropTypes.arrayOf(PropTypes.string),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
@@ -216,7 +215,6 @@ export default class WorkshopEnroll extends React.Component {
                         user_id={this.props.user_id}
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}
-                        application_id={this.props.application_id}
                         first_name={this.props.enrollment.first_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}

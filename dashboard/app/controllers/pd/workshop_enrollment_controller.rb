@@ -82,7 +82,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               virtual: @workshop.virtual
             }
           ),
-          application_id: latest_accepted_application_id,
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
@@ -217,13 +216,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   end
 
   private def has_application?
-    !latest_accepted_application_id.nil?
-  end
-
-  private def latest_accepted_application_id
     Pd::Application::TeacherApplication.where(
       user: current_user,
       status: 'accepted'
-      )&.order(application_year: :desc)&.first&.id
+      ).any?
   end
 end
