@@ -136,7 +136,6 @@ function packSources() {
  * @param {boolean} data.makerAPIsEnabled
  */
 function unpackSources(data) {
-  // Combined sources should contain all visible blocks and all hidden blocks
   currentSources = {
     source: data.source,
     html: data.html,
@@ -1050,7 +1049,7 @@ var projects = (module.exports = {
           try {
             this.saveSourceAndHtml_(
               sourceAndHtml,
-              err => (err ? reject(err) : resolve()),
+              (err, result) => (err ? reject(err) : resolve()),
               forceNewVersion,
               preparingRemix
             );
@@ -1902,13 +1901,6 @@ var projects = (module.exports = {
           currentSourceVersionId =
             jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
           unpackSources(data, true);
-        })
-        .catch(err => {
-          this.logError_(
-            'unpack-sources-error',
-            null,
-            `unable to unpack source file: ${err}`
-          );
         });
     } else {
       // It's possible that we created a channel, but failed to save anything to
