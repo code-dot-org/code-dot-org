@@ -70,8 +70,8 @@ type GeneratedEffects = {
 };
 
 type MinMax = {
-  min: number;
-  max: number;
+  minIndividualScore: number;
+  maxTotalScore: number;
 };
 
 enum Toggle {
@@ -131,8 +131,8 @@ const DanceAiModal: React.FunctionComponent = () => {
     goodEffect: undefined,
   });
   const minMaxAssociations = useRef<MinMax>({
-    min: 0,
-    max: 3,
+    minIndividualScore: 0,
+    maxTotalScore: 3 * SLOT_COUNT,
   });
 
   const [mode, setMode] = useState(Mode.INITIAL);
@@ -505,25 +505,29 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const labels = getLabels();
 
-  // Calculates the minimum and maximum scores observed for the results we wish to visualize.
+  // Calculates the minimum individual score
+  // (ie, a SINGLE emoji association with a foreground/background palette combination)
+  // and a maximum total score
+  // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
   // Used to normalize and scale the data for easier differentiation between results
   // by the user.
   const calculateMinMax = () => {
-    return Array.from(Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()).reduce(
-      (accumulator: MinMax, currentValue: number) => {
-        const scores = getScores(currentValue);
-        const min = Math.min(...scores);
-        const max = Math.max(...scores);
-        if (min < accumulator.min) {
-          accumulator.min = min;
-        }
-        if (max > accumulator.max) {
-          accumulator.max = max;
-        }
-        return accumulator;
-      },
-      {min: Infinity, max: 0}
+    // The minimum individual score is selected across all generated effects (bad and good)
+    const minIndividualScore = Array.from(
+      Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
+    ).reduce((accumulator: number, currentValue: number) => {
+      const scores = getScores(currentValue);
+      const min = Math.min(...scores);
+      return min < accumulator ? min : accumulator;
+    }, Infinity);
+
+    // By definition, the maximum total score must come from the "good" effect.
+    const goodEffectScores = getScores(BAD_GENERATED_RESULTS_COUNT + 1);
+    const maxTotalScore = Math.max(
+      goodEffectScores.reduce((sum, score) => (sum += score))
     );
+
+    return {minIndividualScore, maxTotalScore};
   };
 
   if (
@@ -939,20 +943,22 @@ const Score: React.FunctionComponent<ScoreProps> = ({
   // For each score we wish to visualize, we subtract the minimum score
   // in the observed data in order to generate a "net value"
   // and better differentiate between observed scores.
-  // The upper end of the scale of the y axis is three times (ie, because there are 3 emojis)
-  // the maximum net value in the dataset (ie, the range of scores).
-  const range = minMax.max - minMax.min;
-  const getScaledNumerator = (scores: GeneratedEffectScores) => {
+  const getSummedNetScore = (scores: GeneratedEffectScores) => {
     return scores.reduce(
-      (scaledSum: number, score: number) => (scaledSum += score - minMax.min),
+      (scaledSum: number, score: number) =>
+        (scaledSum += score - minMax.minIndividualScore),
       0
     );
   };
-  const getHeight = (scores: GeneratedEffectScores) =>
-    Math.round(
-      (getScaledNumerator(scores) / (range * SLOT_COUNT)) *
-        SCORE_VISUALIZATION_HEIGHT
-    );
+
+  const getHeight = (scores: GeneratedEffectScores) => {
+    const numerator = getSummedNetScore(scores);
+    const denominator =
+      minMax.maxTotalScore - minMax.minIndividualScore * SLOT_COUNT;
+    const maxHeight = 0.9 * SCORE_VISUALIZATION_HEIGHT;
+
+    return Math.round((numerator / denominator) * maxHeight);
+  };
 
   const layers = [
     {
