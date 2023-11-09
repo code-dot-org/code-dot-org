@@ -1,4 +1,5 @@
-require 'aws_resource_killer'
+require_relative 'aws_resource_killer'
+require_relative 'ec2_instance_for_deletion'
 class EC2InstanceKiller < AwsResourceKiller
   def initialize(opts = {})
     @filters = opts[:aws_filters]
@@ -12,7 +13,7 @@ class EC2InstanceKiller < AwsResourceKiller
     instances = Aws::EC2::Resource.new.instances(filters: @filters)
     instances_that_can_be_deleted = []
     instances.each do |instance|
-      ec2_instance = EC2InstanceForDeletion(instance, {deletion_tag: @deletion_tag, minimum_time_stopped_in_seconds: @minimum_time_stopped_in_seconds, dry_run: @dry_run})
+      ec2_instance = EC2InstanceForDeletion.new(instance, {deletion_tag: @deletion_tag, minimum_time_stopped_in_seconds: @minimum_time_stopped_in_seconds, dry_run: @dry_run})
       next unless ec2_instance.can_be_deleted?
       instances_that_can_be_deleted << ec2_instance
     end

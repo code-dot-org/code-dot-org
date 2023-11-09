@@ -63,10 +63,18 @@ class EC2InstanceForDeletion
     unless @instance.can_be_deleted? && @instance.has_deletion_tag?(@deletion_tag)
       raise Error("Cannot delete instance")
     end
+    deleted_instances = []
+    exceptions = []
     unless @dry_run
-      cloudformation = Aws::CloudFormation::Client.new
-      cloudformation.delete_stack(stack_name: @instance.get_stack_name)
+      begin
+        cloudformation = Aws::CloudFormation::Client.new
+        cloudformation.delete_stack(stack_name: @instance.get_stack_name)
+        deleted_instances << @instance
+      rescue => exception
+        exceptions << "Failed to delete instance #{instance}. Error: #{exception.message}"
+      end
     end
+    return deleted_instances, exceptions
   end
 
   # Return true if the stack attach should not be removed by the script since it is critical to code.org infrastructure
@@ -82,5 +90,9 @@ class EC2InstanceForDeletion
 
   def has_deletion_tag?
     return instance.tags.any? {|tag| tag.key == @deletion_tag}
+  end
+
+  def to_s
+    return @instance.id.to_s
   end
 end

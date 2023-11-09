@@ -2,16 +2,46 @@
 require 'aws-sdk-ec2'
 require 'aws-sdk-cloudformation'
 require 'cdo/chat_client'
+
 class AwsResourceKiller
   # Only exposed method. It can be executed multiple times.
   # This library is meant to be used to delete resources and release resources.
   def delete
+    log("Trying to FIND instances...")
     instances_to_delete = find_instances_for_deletion
+    if instances_to_delete.empty?
+      log("nothing found for deletion... aborting")
+      return
+    end
+    log("This instances were found")
+    print_instances_ids(instances_to_delete)
+
+    log("Trying to TAG instances...")
     tagged_instance_for_deletion = tag_instances_for_deletion(instances_to_delete)
-    _deleted_instances = delete_tagged_instances(tagged_instance_for_deletion)
+    if tagged_instance_for_deletion.empty?
+      log("nothing found for deletion... aborting")
+      return
+    end
+    log("This instances have tag for deletion")
+    print_instances_ids(tagged_instance_for_deletion)
+
+    log("Trying to DELETE instances...")
+    deleted_instances, exceptions = delete_tagged_instances(tagged_instance_for_deletion)
+    log("This instances were successfully deleted")
+    print_instances_ids(deleted_instances)
+    log("The following exceptions were found")
+    exceptions.each do |exception|
+      log(exception)
+    end
   end
 
   protected
+
+  def print_instances_ids(instances)
+    instances.each do |instance|
+      log(instance.to_s)
+    end
+  end
 
   # Implement a method capable of finding the AWS we are targeting for deletion
   def find_instances_for_deletion
