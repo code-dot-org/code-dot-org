@@ -3160,6 +3160,34 @@ columns:
     comment:
   - *32
   - *33
+  lti_sections:
+  - *27
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lti_course_id
+    sql_type_metadata: *30
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &120 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: section_id
+    sql_type_metadata: *2
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lms_section_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - *32
+  - *33
   lti_user_identities:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5843,14 +5871,7 @@ columns:
   - *19
   section_hidden_scripts:
   - *5
-  - &120 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: section_id
-    sql_type_metadata: *2
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
+  - *120
   - *31
   section_hidden_stages:
   - *5
@@ -5998,6 +6019,14 @@ columns:
     sql_type_metadata: *30
     'null': true
     default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_tutor_enabled
+    sql_type_metadata: *20
+    'null': true
+    default: '0'
     default_function:
     collation:
     comment:
@@ -7595,6 +7624,7 @@ primary_keys:
   lti_courses: id
   lti_deployments: id
   lti_integrations: id
+  lti_sections: id
   lti_user_identities: id
   metrics: id
   objectives: id
@@ -7788,6 +7818,7 @@ data_sources:
   lti_courses: true
   lti_deployments: true
   lti_integrations: true
+  lti_sections: true
   lti_user_identities: true
   metrics: true
   objectives: true
@@ -9633,6 +9664,33 @@ indexes:
     unique: false
     columns:
     - client_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  lti_sections:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_sections
+    name: index_lti_sections_on_lti_course_id
+    unique: false
+    columns:
+    - lti_course_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_sections
+    name: index_lti_sections_on_section_id
+    unique: false
+    columns:
+    - section_id
     lengths: {}
     orders: {}
     opclasses: {}

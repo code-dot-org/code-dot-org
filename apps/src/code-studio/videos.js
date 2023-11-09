@@ -9,6 +9,9 @@ var clientState = require('./clientState');
 import i18n from '@cdo/locale';
 import _ from 'lodash';
 
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 const TAB_NAV_CLASS = '.ui-tabs-nav';
 const MODAL_CLASS_NAME = 'video-modal';
 const MODAL_CLASS = '.' + MODAL_CLASS_NAME;
@@ -47,11 +50,37 @@ function onVideoEnded() {
 }
 
 var currentVideoOptions;
-function onYouTubeIframeAPIReady() {
+// YouTube's API requires this function to be in a global window context,
+// and (I think) due to call order inside of the `createVideoWithFallback` function, it
+// doesn't actually exist until after the first video load if it's defined here as `function onYouTubeIframeReady`.
+// But if we define it directly onto the window object, it will properly exist the first time the video is opened.
+
+// This is a good candidate to circle back to and refactor.
+window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
-  new YT.Player('video', {
+  const player = new YT.Player('video', {
     events: {
+      onReady: function (event) {
+        analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
+          url: location.href,
+          video: player.getVideoUrl(),
+        });
+      },
       onStateChange: function (state) {
+        const amplitudeEventMap = {
+          [YT.PlayerState.PLAYING]: EVENTS.VIDEO_STARTED,
+          [YT.PlayerState.PAUSED]: EVENTS.VIDEO_PAUSED,
+          [YT.PlayerState.ENDED]: EVENTS.VIDEO_ENDED,
+        };
+
+        const amplitudeEvent = amplitudeEventMap[state.data];
+        if (amplitudeEvent) {
+          analyticsReporter.sendEvent(amplitudeEvent, {
+            url: location.href,
+            video: player.getVideoUrl(),
+          });
+        }
+
         if (state.data === YT.PlayerState.ENDED) {
           onVideoEnded();
         }
@@ -64,7 +93,7 @@ function onYouTubeIframeAPIReady() {
       },
     },
   });
-}
+};
 
 function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
@@ -229,7 +258,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
 
   currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
-    onYouTubeIframeAPIReady();
+    window.onYouTubeIframeAPIReady();
   } else {
     // Use the official YouTube IFrame Player API to load the YouTube video.
     // Ref: https://developers.google.com/youtube/iframe_api_reference#Getting_Started

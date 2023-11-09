@@ -869,6 +869,16 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.index ["platform_id"], name: "index_lti_integrations_on_platform_id"
   end
 
+  create_table "lti_sections", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "lti_course_id", null: false
+    t.integer "section_id", null: false
+    t.string "lms_section_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lti_course_id"], name: "index_lti_sections_on_lti_course_id"
+    t.index ["section_id"], name: "index_lti_sections_on_section_id"
+  end
+
   create_table "lti_user_identities", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "subject", null: false
     t.bigint "lti_integration_id", null: false
@@ -2349,6 +2359,8 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
+  add_foreign_key "lti_sections", "lti_courses"
+  add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
   add_foreign_key "parental_permission_requests", "users"
