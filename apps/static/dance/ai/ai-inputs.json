@@ -1,24 +1,24 @@
 {
   "items": [
     {
-      "emoji": "💩", 
-      "id": "poopy",
-      "modelDescriptiveName": "poopy funny stinky"
+      "emoji": "🌀",
+      "id": "cyclone",
+      "modelDescriptiveName": "cyclone swirl icy blue"
     },
     {
       "emoji": "🥰",
-      "id": "romantic",
+      "id": "smiling-face-with-hearts",
       "modelDescriptiveName": "romantic hearts cozy warm"
     },
     {
       "emoji": "🎉",
-      "id": "party",
+      "id": "party-popper",
       "modelDescriptiveName": "party celebrate"
     },
     {
       "emoji": "💎",
       "id": "gem-stone",
-      "modelDescriptiveName": "diamond gem stone geometric"
+      "modelDescriptiveName": "diamond gem stone geometric shapes"
     },
     {
       "emoji": "🌱",
@@ -27,13 +27,13 @@
     },
     {
       "emoji": "✨",
-      "id": "sparkle",
+      "id": "sparkles",
       "modelDescriptiveName": "sparkly star"
     },
     {
-      "emoji": "🌀",
-      "id": "cyclone",
-      "modelDescriptiveName": "cyclone swirl icy blue"
+      "emoji": "🌹",
+      "id": "rose",
+      "modelDescriptiveName": "flower springtime"
     },
     {
       "emoji": "👑",
@@ -42,22 +42,22 @@
     },
     {
       "emoji": "👻",
-      "id": "spooky",
+      "id": "ghost",
       "modelDescriptiveName": "ghost autumn spooky"
     },
     {
-      "emoji": "😀",
-      "id": "happy",
+      "emoji": "😃",
+      "id": "grinning-face-with-big-eyes",
       "modelDescriptiveName": "happy grin"
     },
     {
-      "emoji": "⚽",
-      "id": "soccer-ball",
-      "modelDescriptiveName": "soccer ball black-and-white geometric"
+      "emoji": "🏁",
+      "id": "chequered-flag",
+      "modelDescriptiveName": "checkered flag black-and-white geometric fast"
     },
     {
       "emoji": "🌊",
-      "id": "wavy",
+      "id": "water-wave",
       "modelDescriptiveName": "waves water ocean"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "emoji": "💡",
-      "id": "lights",
+      "id": "light-bulb",
       "modelDescriptiveName": "stars light"
     },
     {
@@ -77,13 +77,13 @@
     },
     {
       "emoji": "😵‍💫",
-      "id": "chaotic",
-      "modelDescriptiveName": "wavy ripple hypnotic turbulent chaotic"
+      "id": "face-with-spiral-eyes",
+      "modelDescriptiveName": "wavy ripple hypnotic turbulent spiral"
     },
     {
-      "emoji": "🌹",
-      "id": "rose",
-      "modelDescriptiveName": "flower springtime"
+      "emoji": "💩", 
+      "id": "pile-of-poo",
+      "modelDescriptiveName": "poopy funny stinky"
     },
     {
       "emoji": "🎨",
@@ -92,7 +92,7 @@
     },
     {
       "emoji": "🪩",
-      "id": "disco",
+      "id": "mirror-ball",
       "modelDescriptiveName": "disco ball party grid"
     },
     {
@@ -102,13 +102,13 @@
     },
     {
       "emoji": "🥶",
-      "id": "cold",
+      "id": "cold-face",
       "modelDescriptiveName": "icy winter cold"
     },
     {
       "emoji": "🚀",
-      "id": "cosmic",
-      "modelDescriptiveName": "rocket space"
+      "id": "rocket",
+      "modelDescriptiveName": "rocket space cosmic galaxy"
     },
     {
       "emoji": "😋",
@@ -117,7 +117,7 @@
     },
     {
       "emoji": "🔥",
-      "id": "warm",
+      "id": "fire",
       "modelDescriptiveName": "hot fire sun"
     },
     {
