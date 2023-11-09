@@ -104,7 +104,7 @@
 
   .chip {
     @include button-one-text;
-    padding: 0.62rem 1.5rem;
+    padding: 0.62rem 1.25rem;
   }
 }
 
@@ -115,7 +115,7 @@
 
   .chip {
     @include button-two-text;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -126,7 +126,7 @@
 
   .chip {
     @include button-three-text;
-    padding: 0.31rem 1rem;
+    padding: 0.31rem 0.75rem;
   }
 }
 
@@ -137,6 +137,6 @@
 
   .chip {
     @include button-four-text;
-    padding: 0.12rem 0.88rem;
+    padding: 0.12rem 0.5rem;
   }
 }
