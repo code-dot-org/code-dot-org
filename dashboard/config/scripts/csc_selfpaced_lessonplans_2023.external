@@ -5,6 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson Plans
 
+<img src="https://images.code.org/e36b688482a45fb4d98c6b30e1e1aaac-image-1699546457499.png" alt="geometric star quilt example made in sprite lab" width="200px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
+
 #### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.
 
 ## Example lesson plan
@@ -21,4 +23,5 @@ markdown <<MARKDOWN
 
 ## Let's keep learning! 
 
+![]()
 MARKDOWN
