@@ -12,14 +12,10 @@ import {
   ChooseEffectsQuality,
   getGeneratedEffectScores,
 } from './DanceAiClient';
+import DanceAiScore, {ScoreColors} from './DanceAiScore';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {
-  AiOutput,
-  FieldKey,
-  GeneratedEffect,
-  GeneratedEffectScores,
-} from '../types';
+import {AiOutput, FieldKey, GeneratedEffect, MinMax} from '../types';
 import {
   generateBlocks,
   generateBlocksFromResult,
@@ -69,11 +65,6 @@ type GeneratedEffects = {
   goodEffect?: GeneratedEffect;
 };
 
-type MinMax = {
-  minIndividualScore: number;
-  maxTotalScore: number;
-};
-
 enum Toggle {
   AI_BLOCK = 'aiBlock',
   CODE = 'code',
@@ -101,10 +92,6 @@ function useInterval(callback: () => void, delay: number | undefined) {
     }
   }, [delay]);
 }
-
-// Scale max bar size to be 90% of the total height of visualization.
-const SCORE_VISUALIZATION_HEIGHT = 140 * 0.9;
-const NOTCH_OFFSET = 140 * 0.1;
 
 // How many emojis are to be selected.
 const SLOT_COUNT = 3;
@@ -524,8 +511,8 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     // By definition, the maximum total score must come from the "good" effect.
     const goodEffectScores = getScores(BAD_GENERATED_RESULTS_COUNT);
-    const maxTotalScore = Math.max(
-      goodEffectScores.reduce((sum, score) => (sum += score))
+    const maxTotalScore = goodEffectScores.reduce(
+      (sum, score) => (sum += score)
     );
 
     return {minIndividualScore, maxTotalScore};
@@ -727,7 +714,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             key={generatingProgress.step}
             className={moduleStyles.scoreArea}
           >
-            <Score
+            <DanceAiScore
               scores={getScores(generatingProgress.step)}
               minMax={minMaxAssociations.current}
               colors={
@@ -737,6 +724,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                   ? ScoreColors.NO
                   : ScoreColors.YES
               }
+              slotCount={SLOT_COUNT}
             />
           </div>
         )}
@@ -768,7 +756,7 @@ const DanceAiModal: React.FunctionComponent = () => {
               {Array.from(Array(explanationProgress + 1).keys()).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
-                    <Score
+                    <DanceAiScore
                       scores={getScores(index)}
                       minMax={minMaxAssociations.current}
                       colors={
@@ -776,6 +764,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                           ? ScoreColors.NORMAL_NO
                           : ScoreColors.NORMAL_YES
                       }
+                      slotCount={SLOT_COUNT}
                     />
 
                     <div
@@ -923,130 +912,6 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
       )}
       title={item.emoji}
     />
-  );
-};
-
-enum ScoreColors {
-  // A grey bar with no symbol in the symbol container yet.
-  GREY = 'grey',
-  // A green bar with a green check symbol.
-  YES = 'yes',
-  // A red bar with a red cross symbol.
-  NO = 'no',
-  // A tri-colored bar with a green check symbol.
-  NORMAL_YES = 'normal_yes',
-  // A tri-colored bar with no symbol container or symbol.
-  NORMAL_NO = 'normal_no',
-}
-
-interface ScoreProps {
-  scores: GeneratedEffectScores;
-  minMax: MinMax;
-  colors: ScoreColors;
-}
-
-const Score: React.FunctionComponent<ScoreProps> = ({
-  scores,
-  minMax,
-  colors,
-}) => {
-  // For each score we wish to visualize, we subtract the minimum score
-  // in the observed data in order to generate a "net score"
-  // and better differentiate between observed scores.
-  const getSummedNetScore = (scores: GeneratedEffectScores) => {
-    return scores.reduce(
-      (scaledSum: number, score: number) =>
-        (scaledSum += score - minMax.minIndividualScore),
-      0
-    );
-  };
-
-  const getHeight = (scores: GeneratedEffectScores): number => {
-    const summedNetScore = getSummedNetScore(scores);
-    const maxSummedNetScore =
-      minMax.maxTotalScore - minMax.minIndividualScore * SLOT_COUNT;
-
-    return Math.round(
-      (summedNetScore / maxSummedNetScore) * SCORE_VISUALIZATION_HEIGHT
-    );
-  };
-
-  const getLayerClassName = (layerColor: string) => {
-    return colors === ScoreColors.NORMAL_YES || colors === ScoreColors.NORMAL_NO
-      ? layerColor
-      : colors === ScoreColors.GREY
-      ? moduleStyles.barFillGrey
-      : colors === ScoreColors.YES
-      ? moduleStyles.barFillYes
-      : moduleStyles.barFillNo;
-  };
-
-  const layers = [
-    {
-      height: getHeight(scores),
-      className: getLayerClassName(moduleStyles.barFillFirst),
-    },
-    {
-      height: getHeight([scores[0], scores[1]]),
-      className: getLayerClassName(moduleStyles.barFillSecond),
-    },
-    {
-      height: getHeight([scores[0]]),
-      className: getLayerClassName(moduleStyles.barFillThird),
-    },
-  ];
-
-  return (
-    <div className={moduleStyles.scoreContainer}>
-      {layers.map((layer, index) => {
-        return (
-          <div
-            key={index}
-            className={moduleStyles.barContainer}
-            style={{
-              height: layer.height,
-            }}
-          >
-            <div
-              className={classNames(moduleStyles.barFill, layer.className)}
-            />
-          </div>
-        );
-      })}
-      <div className={moduleStyles.notchContainer} style={{top: NOTCH_OFFSET}}>
-        {colors !== ScoreColors.NORMAL_NO && (
-          <div className={moduleStyles.resultContainer}>
-            {(colors === ScoreColors.NORMAL_YES ||
-              colors === ScoreColors.YES) && (
-              <div
-                className={classNames(
-                  moduleStyles.resultContent,
-                  moduleStyles.resultContentYes
-                )}
-              >
-                <i className="fa fa-check-circle" />
-              </div>
-            )}
-            {colors === ScoreColors.NO && (
-              <div
-                className={classNames(
-                  moduleStyles.resultContent,
-                  moduleStyles.resultContentNo
-                )}
-              >
-                <i className="fa fa-times-circle" />
-              </div>
-            )}
-          </div>
-        )}
-        <div
-          className={classNames(
-            moduleStyles.notch,
-            colors === ScoreColors.NORMAL_NO && moduleStyles.notchNormalNo
-          )}
-        />
-      </div>
-    </div>
   );
 };
 
