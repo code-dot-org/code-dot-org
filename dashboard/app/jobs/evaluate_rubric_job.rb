@@ -1,12 +1,6 @@
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
-  # To make this job get run in development, you have two options:
-  # 1. switch the queue_adapter value here to :async, or
-  # 2. leave the value as :delayed_job, and run the delayed job worker locally
-  #    via `dashboard/bin/delayed_job restart` or rake build
-  self.queue_adapter = :delayed_job
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
