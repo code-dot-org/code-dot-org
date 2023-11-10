@@ -3259,6 +3259,8 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+
+  return renderElement;
 };
 
 /**
