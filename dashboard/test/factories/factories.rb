@@ -64,10 +64,11 @@ FactoryBot.define do
       min_user_id {0}
       max_user_id {0}
       overflow_max_user_id {0}
-      script {nil}
+      script
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
       section
+      script
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
     end
