@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import '../../mixins.scss';
+@import './common.scss';
 
 $ai-block-color: rgb(86 96 101);
 $ai-block-border-color: rgb(121 124 128);
@@ -7,13 +8,6 @@ $ai-block-inputs-color: rgb(63 68 75);
 $ai-block-inputs-border-color: rgba(255 255 255 / 0.6);
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
-$result-green: rgb(86 197 104);
-$result-red: rgb(235 87 87);
-$chart-first: #79dde8;
-$chart-second: #ee8caf;
-$chart-third: #ffde9e;
-$yes-color: #54ec84;
-$no-color: #FF5e5e;
 
 @keyframes preview-right-to-normal {
   0% {
@@ -21,15 +15,6 @@ $no-color: #FF5e5e;
   }
   100% {
     left: 70%;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -49,15 +34,6 @@ $no-color: #FF5e5e;
   }
   100% {
     top: 100px;
-  }
-}
-
-@keyframes height-zero-to-full {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
   }
 }
 
@@ -381,100 +357,6 @@ $no-color: #FF5e5e;
           align-items: center;
           gap: 20px;
           animation: appear 1s;
-        }
-      }
-    }
-
-    .scoreContainer {
-      background-color: $neutral_dark10;
-      width: 40px;
-      height: 140px;
-      position: relative;
-      border-radius: 4px;
-      animation: appear 0.3s;
-
-      .barContainer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-
-        .barFill {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          animation: height-zero-to-full 1s;
-          height: 100%;
-          transition: background-color 0.3s;
-
-          &Grey {
-            background-color: $neutral_dark70;
-          }
-
-          &Yes {
-            background-color: $yes-color;
-          }
-
-          &No {
-            background-color: $no-color;
-          }
-
-          &First {
-            background-color: $chart-first;
-          }
-
-          &Second {
-            background-color: $chart-second;
-          }
-
-          &Third {
-            background-color: $chart-third;
-          }
-        }
-      }
-
-      .notchContainer {
-        position: absolute;
-
-        .resultContainer {
-          position: absolute;
-          font-size: 32px;
-          top: 0;
-          left: 50px;
-          border: solid 2px $neutral_dark50;
-          border-radius: 50%;
-          width: 34px;
-          height: 34px;
-          box-sizing: border-box;
-          overflow: hidden;
-
-          .resultContent {
-            animation: appear 0.3s;
-            margin-top: -1px;
-            margin-left: -1px;
-
-            &Yes{
-              color: $yes-color;
-            }
-
-            &No {
-              color: $no-color;
-            }
-          }
-        }
-
-        .notch {
-          top: 16px;
-          background-color: $neutral_dark50;
-          position: absolute;
-          height: 2px;
-          width: 50px;
-          left: 0;
-
-          &NormalNo {
-            width: 40px;
-          }
         }
       }
     }

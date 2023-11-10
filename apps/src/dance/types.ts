@@ -55,3 +55,8 @@ export enum FieldKey {
 export type GeneratedEffect = {[key in FieldKey]: string};
 
 export type GeneratedEffectScores = number[];
+
+export type MinMax = {
+  minIndividualScore: number;
+  maxTotalScore: number;
+};
