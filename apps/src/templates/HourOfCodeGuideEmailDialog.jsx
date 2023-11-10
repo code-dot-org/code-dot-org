@@ -10,7 +10,7 @@ import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
 import style from './hoc-guide-dialogue.module.scss';
 
-function HourOfCodeGuideEmailDialog({isSignedIn, courseOfferingId}) {
+function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isOpen, setIsOpen] = useState(true);
   const [isMarketingChecked, setIsMarketingChecked] = useState(false);
   const [isSendInProgress, setIsSendInProgress] = useState(false);
@@ -39,7 +39,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, courseOfferingId}) {
       name: name,
       email: email,
       receives_marketing: isMarketingChecked,
-      source_course_offering_id: courseOfferingId,
+      source_course_offering_id: unitId,
     };
     fetch('/potential_teacher', {
       method: 'POST',
@@ -142,7 +142,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, courseOfferingId}) {
 
 HourOfCodeGuideEmailDialog.propTypes = {
   isSignedIn: PropTypes.bool.isRequired,
-  courseOfferingId: PropTypes.number.isRequired,
+  unitId: PropTypes.number.isRequired,
 };
 
 export const UnconnectedHourOfCodeGuideEmailDialog = HourOfCodeGuideEmailDialog;
