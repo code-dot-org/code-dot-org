@@ -145,11 +145,11 @@ function adjustBlockPositions(blocks, workspace) {
     block.moveTo({x, y});
     let collider = getCollider(block);
 
-    orderedColliders.forEach(orderedColliders => {
-      if (isOverlapping(collider, orderedColliders)) {
+    orderedColliders.forEach(orderedCollider => {
+      if (isOverlapping(collider, orderedCollider)) {
         y =
-          orderedColliders.y +
-          orderedColliders.height +
+          orderedCollider.y +
+          orderedCollider.height +
           getSpaceBetweenBlocks(block);
         block.moveTo({x, y});
         collider = getCollider(block);
