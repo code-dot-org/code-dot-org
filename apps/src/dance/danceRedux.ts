@@ -15,6 +15,7 @@ import {
   loadSong,
   unloadSong,
   loadSongMetadata,
+  isSongDeprecated,
 } from './songs';
 import {Field} from 'blockly';
 
@@ -58,11 +59,17 @@ export const initSongs = createAsyncThunk(
       };
       onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
+      onSongUnavailable?: () => void;
     },
     {dispatch}
   ) => {
-    const {useRestrictedSongs, onAuthError, selectSongOptions, onSongSelected} =
-      payload;
+    const {
+      useRestrictedSongs,
+      onAuthError,
+      selectSongOptions,
+      onSongSelected,
+      onSongUnavailable,
+    } = payload;
 
     // Check for a user-specified manifest file.
     const userManifest = queryParams('manifest') as string;
@@ -82,6 +89,14 @@ export const initSongs = createAsyncThunk(
         !filteredSongSet.size || filteredSongSet.has(song.id)
     );
     const songData = parseSongOptions(songManifest) as SongData;
+
+    if (
+      selectSongOptions.selectedSong &&
+      isSongDeprecated(selectSongOptions.selectedSong) &&
+      onSongUnavailable
+    ) {
+      onSongUnavailable();
+    }
     const selectedSong = getSelectedSong(songManifest, selectSongOptions);
 
     // Set selectedSong first, so we don't initially show the wrong song.

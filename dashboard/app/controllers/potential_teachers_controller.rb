@@ -17,13 +17,14 @@ class PotentialTeachersController < ApplicationController
     @potential_teacher_data = {
       name: @potential_teacher.name,
       email: @potential_teacher.email,
-      source_course_offering: @potential_teacher.source_course_offering_id
+      source_course_offering: @potential_teacher.source_course_offering_id,
+      receives_marketing: @potential_teacher.receives_marketing
     }
     render json: @potential_teacher_data
   end
 
   private def potential_teacher_params
-    params.permit(:name, :email, :source_course_offering_id).to_h
+    params.permit(:name, :email, :source_course_offering_id, :receives_marketing).to_h
   end
 
   def set_potential_teacher
