@@ -41,13 +41,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
           end
     roles_key = Policies::Lti::LTI_ROLES_KEY
     custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
-    teacher_roles = [
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
-      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
-      'http://purl.imsglobal.org/vocab/lis/v2/system/person#SysAdmin',
-      'http://purl.imsglobal.org/vocab/lis/v2/system/person#User',
-    ]
+    teacher_roles = Policies::Lti::TEACHER_ROLES
     {
       aud: aud,
       azp: @integration.client_id,

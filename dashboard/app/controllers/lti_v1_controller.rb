@@ -96,9 +96,8 @@ class LtiV1Controller < ApplicationController
         session[:user_return_to] = target_link_uri
         redirect_to new_user_registration_url
       end
-
     else
-      return unauthorized_status
+      unauthorized_status
     end
   end
 
