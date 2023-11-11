@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-04 18:01:40 UTC",
+    "serialized_at": "2023-11-08 14:59:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1607,7 +1607,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>What is the purpose of using a variable in the code that you have provided here?</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g224b963ddf2_0_0\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
+            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>What is the purpose of using a variable in the code that you have provided here?</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g29603c0ed01_67_0\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
           }
         ]
       },
@@ -2307,7 +2307,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Identify the error.\n* Correct the error.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g296c4e08593_23_0) You may choose to reuse this debugging journal template if you think it will help support your students becoming stronger debuggers.\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c097084c3ab965c6395296f733095c91-Screenshot 2023-11-03 at 11.23.26 AM.png)"
+            "markdown": "**Create Performance Task Written Response Practice** <i>(Optional)</i>\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Identify the error.\n* Correct the error.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g296c4e08593_23_0) You may choose to reuse this debugging journal template if you think it will help support your students becoming stronger debuggers.\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c097084c3ab965c6395296f733095c91-Screenshot 2023-11-03 at 11.23.26 AM.png)"
           }
         ]
       },
@@ -2335,7 +2335,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "<b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam. This activity within the Unit Journal also practices the skill of snipping code segments in order to prepare a Personalized Project Reference for the Create Task.\n</br>\n\nSample Prompt: <i> Find a code segment where you have used logical operators and detail how the outcome of the segment would differ if the logical operations were reversed (i.e., AND changed to OR and vice versa).\n\n</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g1ea2483b021_14_84\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n\n\n![](https://images.code.org/4cc7abfeacb3695a834fc3f443bcf12e-U4L7.png)"
+            "markdown": "<b>Create Perfomance Task Written Response Practice</b> <i>(Optional)</i>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam. This activity within the Unit Journal also practices the skill of snipping code segments in order to prepare a Personalized Project Reference for the Create Task.\n</br>\n\nSample Prompt: <i> Find a code segment where you have used logical operators and detail how the outcome of the segment would differ if the logical operations were reversed (i.e., AND changed to OR and vice versa).\n\n</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/14Z9rmnb5jQVtq1i5-ut7mQDHIPTT7aoRjQnLId1ee68/edit#slide=id.g1ea2483b021_14_84\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n\n\n![](https://images.code.org/4cc7abfeacb3695a834fc3f443bcf12e-U4L7.png)"
           }
         ]
       },
