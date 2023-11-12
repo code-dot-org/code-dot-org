@@ -46,9 +46,9 @@
       "modelDescriptiveName": "ghost autumn spooky"
     },
     {
-      "emoji": "😃",
-      "id": "grinning-face-with-big-eyes",
-      "modelDescriptiveName": "happy grin"
+      "emoji": "🍦",
+      "id": "soft-ice-cream",
+      "modelDescriptiveName": "ice cream sweet summer fruit"
     },
     {
       "emoji": "🏁",
@@ -81,9 +81,9 @@
       "modelDescriptiveName": "wavy ripple hypnotic turbulent spiral"
     },
     {
-      "emoji": "💩", 
-      "id": "pile-of-poo",
-      "modelDescriptiveName": "poopy funny stinky"
+      "emoji": "🥶",
+      "id": "cold-face",
+      "modelDescriptiveName": "icy winter cold"
     },
     {
       "emoji": "🎨",
@@ -101,9 +101,9 @@
       "modelDescriptiveName": "music notes sound"
     },
     {
-      "emoji": "🥶",
-      "id": "cold-face",
-      "modelDescriptiveName": "icy winter cold"
+      "emoji": "💩", 
+      "id": "pile-of-poo",
+      "modelDescriptiveName": "poopy funny stinky"
     },
     {
       "emoji": "🚀",
@@ -121,9 +121,9 @@
       "modelDescriptiveName": "hot fire sun"
     },
     {
-      "emoji": "🍦",
-      "id": "soft-ice-cream",
-      "modelDescriptiveName": "ice cream sweet summer fruit"
+      "emoji": "😃",
+      "id": "grinning-face-with-big-eyes",
+      "modelDescriptiveName": "happy grin"
     }
   ]
 }
