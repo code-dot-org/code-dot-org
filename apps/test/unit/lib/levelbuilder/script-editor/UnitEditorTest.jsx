@@ -5,16 +5,16 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import reducers, {
-  init
+  init,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import createResourcesReducer, {
-  initResources
+  initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
@@ -23,7 +23,7 @@ import {
   PublishedState,
   InstructionType,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 describe('UnitEditor', () => {
@@ -36,7 +36,7 @@ describe('UnitEditor', () => {
       ...reducers,
       isRtl,
       resources: createResourcesReducer('teacherResource'),
-      studentResources: createResourcesReducer('studentResource')
+      studentResources: createResourcesReducer('studentResource'),
     });
     store = getStore();
     store.dispatch(
@@ -49,8 +49,8 @@ describe('UnitEditor', () => {
             key: 'lesson group',
             lessons: [],
             position: 1,
-            userFacing: true
-          }
+            userFacing: true,
+          },
         ],
         {}
       )
@@ -65,7 +65,7 @@ describe('UnitEditor', () => {
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:
-          '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
+          '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
       },
       isLevelbuilder: true,
       locales: [],
@@ -85,7 +85,7 @@ describe('UnitEditor', () => {
       hasCourse: false,
       scriptPath: '/s/test-unit',
       initialProfessionalLearningCourse: '',
-      isCSDCourseOffering: false
+      isCSDCourseOffering: false,
     };
   });
 
@@ -117,7 +117,7 @@ describe('UnitEditor', () => {
     it('shows hide this unit in course if hasCourse and course is not in development', () => {
       const wrapper = createWrapper({
         hasCourse: true,
-        initialPublishedState: 'pilot'
+        initialPublishedState: 'pilot',
       });
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
     });
@@ -125,7 +125,7 @@ describe('UnitEditor', () => {
     it('does not show hide this unit in course if does not have course', () => {
       const wrapper = createWrapper({
         hasCourse: false,
-        initialPublishedState: 'pilot'
+        initialPublishedState: 'pilot',
       });
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
     });
@@ -133,7 +133,7 @@ describe('UnitEditor', () => {
     it('does not show hide this unit in course if course is in development', () => {
       const wrapper = createWrapper({
         hasCourse: true,
-        initialPublishedState: 'in_development'
+        initialPublishedState: 'in_development',
       });
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
     });
@@ -142,7 +142,7 @@ describe('UnitEditor', () => {
       const wrapper = createWrapper({
         hasCourse: true,
         initialPublishedState: 'pilot',
-        initialUnitPublishedState: 'in_development'
+        initialUnitPublishedState: 'in_development',
       });
       assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
       assert.equal(
@@ -159,7 +159,7 @@ describe('UnitEditor', () => {
     it('uses new unit editor for migrated unit', () => {
       const wrapper = createWrapper({
         isMigrated: true,
-        initialCourseVersionId: 1
+        initialCourseVersionId: 1,
       });
 
       expect(wrapper.find('input').length).to.equal(24);
@@ -177,7 +177,7 @@ describe('UnitEditor', () => {
       const wrapper = createWrapper({
         initialPublishedState: 'stable',
         isMigrated: true,
-        initialUseLegacyLessonPlans: false
+        initialUseLegacyLessonPlans: false,
       });
 
       expect(
@@ -193,7 +193,7 @@ describe('UnitEditor', () => {
         initialPublishedState: 'stable',
         initialUnitPublishedState: 'in_development',
         isMigrated: true,
-        initialUseLegacyLessonPlans: false
+        initialUseLegacyLessonPlans: false,
       });
 
       expect(
@@ -207,7 +207,7 @@ describe('UnitEditor', () => {
     describe('Teacher Resources', () => {
       it('uses new resource editor for migrated units', () => {
         const wrapper = createWrapper({
-          isMigrated: true
+          isMigrated: true,
         });
         expect(wrapper.find('ResourcesEditor').first()).to.exist;
       });
@@ -217,18 +217,12 @@ describe('UnitEditor', () => {
       const wrapper = createWrapper({});
       expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
-        wrapper
-          .find('TextareaWithMarkdownPreview')
-          .at(0)
-          .prop('markdown')
+        wrapper.find('TextareaWithMarkdownPreview').at(0).prop('markdown')
       ).to.equal(
         '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
       expect(
-        wrapper
-          .find('TextareaWithMarkdownPreview')
-          .at(1)
-          .prop('markdown')
+        wrapper.find('TextareaWithMarkdownPreview').at(1).prop('markdown')
       ).to.equal(
         '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
@@ -237,7 +231,7 @@ describe('UnitEditor', () => {
   it('disables peer review count when instructor review only selected', () => {
     const wrapper = createWrapper({
       initialOnlyInstructorReviewRequired: false,
-      initialPeerReviewsRequired: 2
+      initialPeerReviewsRequired: 2,
     });
 
     let peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
@@ -249,7 +243,7 @@ describe('UnitEditor', () => {
       '#only_instructor_review_checkbox'
     );
     instructorReviewOnlyCheckbox.simulate('change', {
-      target: {checked: true}
+      target: {checked: true},
     });
 
     peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
@@ -273,13 +267,13 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
 
       let returnData = {
-        scriptPath: '/s/test-unit'
+        scriptPath: '/s/test-unit',
       };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -317,7 +311,7 @@ describe('UnitEditor', () => {
       server.respondWith('PUT', `/s/1`, [
         404,
         {'Content-Type': 'application/json'},
-        returnData
+        returnData,
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -377,7 +371,7 @@ describe('UnitEditor', () => {
       sinon.stub($, 'ajax');
       const wrapper = createWrapper({
         initialShowCalendar: true,
-        initialWeeklyInstructionalMinutes: -100
+        initialWeeklyInstructionalMinutes: -100,
       });
       const unitEditor = wrapper.find('UnitEditor');
 
@@ -412,7 +406,7 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         publishedState: PublishedState.pilot,
-        pilotExperiment: ''
+        pilotExperiment: '',
       });
 
       const saveBar = wrapper.find('SaveBar');
@@ -446,17 +440,17 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         versionYear: '1991',
-        familyName: ''
+        familyName: '',
       });
 
       let returnData = {
-        scriptPath: '/s/test-unit'
+        scriptPath: '/s/test-unit',
       };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -492,7 +486,7 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         versionYear: '1991',
-        familyName: ''
+        familyName: '',
       });
 
       const saveBar = wrapper.find('SaveBar');
@@ -559,7 +553,7 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         publishedState: 'beta',
-        deeperLearningCourse: 'new-pl-course'
+        deeperLearningCourse: 'new-pl-course',
       });
 
       let returnData = {scriptPath: '/s/test-unit'};
@@ -567,7 +561,7 @@ describe('UnitEditor', () => {
       server.respondWith('PUT', `/s/1`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -604,7 +598,7 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
         versionYear: '',
-        familyName: 'new-family-name'
+        familyName: 'new-family-name',
       });
 
       const saveBar = wrapper.find('SaveBar');
@@ -637,13 +631,13 @@ describe('UnitEditor', () => {
       const unitEditor = wrapper.find('UnitEditor');
 
       let returnData = {
-        scriptPath: '/s/test-unit'
+        scriptPath: '/s/test-unit',
       };
       let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -674,7 +668,7 @@ describe('UnitEditor', () => {
       server.respondWith('PUT', `/s/1`, [
         404,
         {'Content-Type': 'application/json'},
-        returnData
+        returnData,
       ]);
 
       const saveBar = wrapper.find('SaveBar');

@@ -174,5 +174,8 @@ tg:
         other: "Дигар"
       robotics:
         other: "Дигар"
+      workshop_course:
+        other: 'Дигар'
   cookie_banner:
     accept: 'Ман розӣ ҳастам'
+

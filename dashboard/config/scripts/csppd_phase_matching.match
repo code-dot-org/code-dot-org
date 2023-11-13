@@ -12,3 +12,5 @@ question 'Phase 3'
 answer 'Blended in-person and online PD, focused on supporting academic year instruction, and provide space for learning content'
 question 'Phase 4'
 answer 'In-person wrap up to the first year of teaching the course' 
+
+allow_multiple_attempts true

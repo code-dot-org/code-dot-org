@@ -3,43 +3,49 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Ingoa",
-          "Color": "Tae",
           "City": "tāone nui",
+          "Color": "Tae",
+          "Name": "Ingoa",
           "text": "kuputuhi"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Ingoa",
-          "Color": "Tae",
           "City": "tāone nui",
+          "Color": "Tae",
+          "Name": "Ingoa",
+          "text": "kuputuhi"
+        },
+        "CSD U1 IO Story_2023": {
+          "City": "tāone nui",
+          "Color": "Tae",
+          "Name": "Ingoa",
           "text": "kuputuhi"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -50,18 +56,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -72,28 +78,55 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -104,19 +137,19 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "kuputuhi"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -127,7 +160,38 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "kuputuhi"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "kuputuhi"
         },
         "CSD U1 processing live_2021": {
@@ -136,22 +200,22 @@
         "CSD U1 processing live_2022": {
           "bear": "pea"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "ngeru",
+          "chicken": "heihei",
+          "dog": "kurī"
+        },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Mō tōku hē!"
         },
         "CSD U1 processing npark_2022": {
           "Sorry!": "Mō tōku hē!"
         },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Mō tōku hē!"
+        },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -162,18 +226,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -184,7 +248,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Ki Muri"
@@ -192,25 +286,38 @@
         "CSD U1 storage friends_2022": {
           "Back": "Ki Muri"
         },
+        "CSD U1 storage friends_2023": {
+          "Back": "Ki Muri"
+        },
         "CSD U1 storage movies_2021": {
+          "No": "Kāore",
           "Star Wars": "Star Wars",
           "Yes": "Āe",
-          "No": "Kāore",
           "text": "kuputuhi"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Kāore",
           "Star Wars": "Star Wars",
           "Yes": "Āe",
+          "text": "kuputuhi"
+        },
+        "CSD U1 storage movies_2023": {
           "No": "Kāore",
+          "Star Wars": "Star Wars",
+          "Yes": "Āe",
           "text": "kuputuhi"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "kākāriki",
-          "black": "pango"
+          "black": "pango",
+          "green": "kākāriki"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "kākāriki",
-          "black": "pango"
+          "black": "pango",
+          "green": "kākāriki"
+        },
+        "CSD U1 storage outfit_2023": {
+          "black": "pango",
+          "green": "kākāriki"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -247,121 +354,323 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_2023": {
           "0": "0"
         },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Pakeke",
+          "Name": "Ingoa"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Kāore",
+          "Yes": "Āe"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Ika"
+        },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Ika"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Waenga"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Waenga"
         },
-        "CSD U6 - Combine Inputs - A_2222": {
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "kākāriki",
           "left": "mauī",
-          "right": "matau",
           "red": "whero",
-          "green": "kākāriki"
+          "right": "matau"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "kākāriki",
+          "left": "mauī",
+          "red": "whero",
+          "right": "matau"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "mauī",
+          "right": "matau"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "tere",
-          "slow": "pōturi",
+          "long": "roa",
           "short": "poto",
-          "long": "roa"
+          "slow": "pōturi"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "tere",
+          "long": "roa",
+          "short": "poto",
+          "slow": "pōturi"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "mauī",
+          "right": "matau"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "mauī",
           "right": "matau"
         },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "kahurangi",
+          "green": "kākāriki"
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "kākāriki",
-          "blue": "kahurangi"
+          "blue": "kahurangi",
+          "green": "kākāriki"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "rārangi raro",
+          "top row": "rārangi runga"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
         },
         "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
           "0": "0"
         },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
         },
-        "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Ingoa"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ingoa"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Ingoa"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "E": "E"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "E": "E"
         },
         "CSD U6 - Music - Piano_2222": {
           "E": "E"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "E": "E"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "E": "E"
         },
         "CSD U6 - Music - SB2.5_2222": {
           "E": "E"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "E": "E"
+        },
         "CSD U6 - Music - SB3_2222": {
           "E": "E"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Tapeke piro"
+        },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Tapeke piro",
+          "0": "0",
+          "Score": "Tapeke piro"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Tapeke piro"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
           "0": "0"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "pango"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "pango"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "pango"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "pango"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "pango"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "pango"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "taitara"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "taitara"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "taitara"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "White": "White"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "White": "White"
         },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "runga",
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "White": "White"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
           "down": "raro",
           "left": "mauī",
-          "right": "matau"
+          "right": "matau",
+          "up": "runga"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "raro",
+          "left": "mauī",
+          "right": "matau",
+          "up": "runga"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "raro",
+          "left": "mauī",
+          "right": "matau",
+          "up": "runga"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "ingoa"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ingoa"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "ingoa"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "kuputuhi"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "kuputuhi"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "kuputuhi"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Whakahou"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Whakahou"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Whakahou"
         },
         "CSD U6 Pedometer": {
@@ -401,20 +710,20 @@
           "E": "E"
         },
         "CSD U6 change": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 change_2018": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 change_2019": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 change_2021": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Waenga"
@@ -429,36 +738,36 @@
           "Medium": "Waenga"
         },
         "CSD U6 frequency": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 frequency_2018": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 frequency_2019": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 frequency_2021": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 get toggle": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 get toggle_2018": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 get toggle_2019": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 get toggle_2021": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 getProperty input": {
           "Submit": "Tāpaetia"
@@ -473,44 +782,44 @@
           "Submit": "Tāpaetia"
         },
         "CSD U6 getters debug": {
-          "slow": "pōturi",
           "fast": "tere",
+          "long": "roa",
           "short": "poto",
-          "long": "roa"
+          "slow": "pōturi"
         },
         "CSD U6 getters debug_2018": {
           "fast": "tere",
-          "slow": "pōturi",
+          "long": "roa",
           "short": "poto",
-          "long": "roa"
+          "slow": "pōturi"
         },
         "CSD U6 getters debug_2019": {
           "fast": "tere",
-          "slow": "pōturi",
+          "long": "roa",
           "short": "poto",
-          "long": "roa"
+          "slow": "pōturi"
         },
         "CSD U6 getters debug_2021": {
           "fast": "tere",
-          "slow": "pōturi",
+          "long": "roa",
           "short": "poto",
-          "long": "roa"
+          "slow": "pōturi"
         },
         "CSD U6 interval": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 interval_2018": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 interval_2019": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 interval_2021": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -549,38 +858,38 @@
           "title": "taitara"
         },
         "CSD U6 slider intro": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 slider intro_2018": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 slider intro_2019": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSD U6 slider intro_2021": {
-          "short": "poto",
-          "long": "roa"
+          "long": "roa",
+          "short": "poto"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Whakamārama",
           "Cancel": "Whakakore",
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Whakamārama",
           "Cancel": "Whakakore",
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Whakamārama",
           "Cancel": "Whakakore",
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "CSDU4 Decision App Demo": {
           "About": "Whakamārama",
@@ -655,6 +964,12 @@
         "CSDU6 piano with notes_2021": {
           "E": "E"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Ki Muri"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Tautuhi Anō"
+        },
         "allthethings design mode elements": {
           "text": "kuputuhi"
         },
@@ -673,6 +988,9 @@
         "csd u5 recommender sample_2022": {
           "Start": "Tīmata"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Tīmata"
+        },
         "csd-apps for good-3": {
           "1": "1",
           "2": "2",
@@ -685,16 +1003,14 @@
           "3": "3",
           "4": "4"
         },
-        "csd-explore ui-3": {
+        "csd-apps for good-3_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
+          "4": "4"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -705,18 +1021,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -727,7 +1043,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Sorry!": "Mō tōku hē!"
@@ -735,16 +1081,11 @@
         "csd-explore ui-4_2022": {
           "Sorry!": "Mō tōku hē!"
         },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "Mō tōku hē!"
+        },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -755,18 +1096,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -777,7 +1118,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Kua Whakaaetia",
@@ -787,13 +1158,21 @@
           "Accepted": "Kua Whakaaetia",
           "Rejected": "Kua Ākiria"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Kua Whakaaetia",
+          "Rejected": "Kua Ākiria"
+        },
         "ml-customize-raspado-2021": {
-          "yes": "āe",
-          "no": "kāore"
+          "no": "kāore",
+          "yes": "āe"
         },
         "ml-customize-raspado_2022": {
-          "yes": "āe",
-          "no": "kāore"
+          "no": "kāore",
+          "yes": "āe"
+        },
+        "ml-customize-raspado_2023": {
+          "no": "kāore",
+          "yes": "āe"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Haere tonu"
@@ -801,73 +1180,110 @@
         "ml-intro ai lab- fruit veggie widget_2022": {
           "Continue": "Haere tonu"
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Haere tonu"
+        },
         "ml-model card-medical app v2 2021-2": {
           "W": "W",
-          "yes": "āe",
-          "no": "kāore"
+          "no": "kāore",
+          "yes": "āe"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "W",
-          "yes": "āe",
-          "no": "kāore"
+          "no": "kāore",
+          "yes": "āe"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "W": "W",
+          "no": "kāore",
+          "yes": "āe"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Ki Muri"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Ki Muri"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Ki Muri"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Āe",
-          "No": "Kāore"
+          "No": "Kāore",
+          "Yes": "Āe"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "Kāore",
+          "Yes": "Āe"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Ngā Hākinakina"
@@ -875,17 +1291,26 @@
         "ml-models-shoes decision tree_2022": {
           "Sports": "Ngā Hākinakina"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Sports": "Ngā Hākinakina"
+        },
         "ml-use model card-example3A-2021": {
-          "rain": "ua",
-          "snow": "hukapapa",
           "cloudy": "kāpuapua",
-          "night": "pō"
+          "night": "pō",
+          "rain": "ua",
+          "snow": "hukapapa"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "ua",
-          "snow": "hukapapa",
           "cloudy": "kāpuapua",
-          "night": "pō"
+          "night": "pō",
+          "rain": "ua",
+          "snow": "hukapapa"
+        },
+        "ml-use model card-example3A_2023": {
+          "cloudy": "kāpuapua",
+          "night": "pō",
+          "rain": "ua",
+          "snow": "hukapapa"
         }
       }
     }

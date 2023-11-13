@@ -1,53 +1,999 @@
 {
   "groups": [
     {
-      "id": "all",
+      "id": "all-by-type",
       "name": "All",
       "imageSrc": "all.png",
-      "path": "all",
+      "path": "all-by-type",
+      "defaultSound": "beats/groovy_alternate_beat",
       "folders": [
+        {
+          "name": "Piano",
+          "path": "piano",
+          "type": "instrument",
+          "sounds": [
+            {
+              "name": "Piano C3",
+              "src": "piano-48",
+              "note": 48
+            },
+            {
+              "name": "Piano C#3",
+              "src": "piano-49",
+              "note": 49
+            },
+            {
+              "name": "Piano D3",
+              "src": "piano-50",
+              "note": 50
+            },
+            {
+              "name": "Piano D#3",
+              "src": "piano-51",
+              "note": 51
+            },
+            {
+              "name": "Piano E3",
+              "src": "piano-52",
+              "note": 52
+            },
+            {
+              "name": "Piano F3",
+              "src": "piano-53",
+              "note": 53
+            },
+            {
+              "name": "Piano F#3",
+              "src": "piano-54",
+              "note": 54
+            },
+            {
+              "name": "Piano G3",
+              "src": "piano-55",
+              "note": 55
+            },
+            {
+              "name": "Piano G#3",
+              "src": "piano-56",
+              "note": 56
+            },
+            {
+              "name": "Piano A3",
+              "src": "piano-57",
+              "note": 57
+            },
+            {
+              "name": "Piano A#3",
+              "src": "piano-58",
+              "note": 58
+            },
+            {
+              "name": "Piano B3",
+              "src": "piano-59",
+              "note": 59
+            },
+            {
+              "name": "Piano C4",
+              "src": "piano-60",
+              "note": 60
+            },
+            {
+              "name": "Piano C#4",
+              "src": "piano-61",
+              "note": 61
+            },
+            {
+              "name": "Piano D4",
+              "src": "piano-62",
+              "note": 62
+            },
+            {
+              "name": "Piano D#4",
+              "src": "piano-63",
+              "note": 63
+            },
+            {
+              "name": "Piano E4",
+              "src": "piano-64",
+              "note": 64
+            },
+            {
+              "name": "Piano F4",
+              "src": "piano-65",
+              "note": 65
+            },
+            {
+              "name": "Piano F#4",
+              "src": "piano-66",
+              "note": 66
+            },
+            {
+              "name": "Piano G4",
+              "src": "piano-67",
+              "note": 67
+            },
+            {
+              "name": "Piano G#4",
+              "src": "piano-68",
+              "note": 68
+            },
+            {
+              "name": "Piano A4",
+              "src": "piano-69",
+              "note": 69
+            },
+            {
+              "name": "Piano A#4",
+              "src": "piano-70",
+              "note": 70
+            },
+            {
+              "name": "Piano B4",
+              "src": "piano-71",
+              "note": 71
+            },
+            {
+              "name": "Piano C5",
+              "src": "piano-72",
+              "note": 72
+            },
+            {
+              "name": "Piano C#5",
+              "src": "piano-73",
+              "note": 73
+            },
+            {
+              "name": "Piano D5",
+              "src": "piano-74",
+              "note": 74
+            },
+            {
+              "name": "Piano D#5",
+              "src": "piano-75",
+              "note": 75
+            },
+            {
+              "name": "Piano E5",
+              "src": "piano-76",
+              "note": 76
+            },
+            {
+              "name": "Piano F5",
+              "src": "piano-77",
+              "note": 77
+            },
+            {
+              "name": "Piano F#5",
+              "src": "piano-78",
+              "note": 78
+            },
+            {
+              "name": "Piano G5",
+              "src": "piano-79",
+              "note": 79
+            },
+            {
+              "name": "Piano G#5",
+              "src": "piano-80",
+              "note": 80
+            },
+            {
+              "name": "Piano A5",
+              "src": "piano-81",
+              "note": 81
+            },
+            {
+              "name": "Piano A#5",
+              "src": "piano-82",
+              "note": 82
+            },
+            {
+              "name": "Piano B5",
+              "src": "piano-83",
+              "note": 83
+            },
+            {
+              "name": "Piano C6",
+              "src": "piano-84",
+              "note": 84
+            }
+          ]
+        },
+        {
+          "name": "Bass",
+          "path": "bass-instrument",
+          "type": "instrument",
+          "sounds": [
+            {
+              "name": "Bass C3",
+              "src": "bass-48",
+              "note": 48
+            },
+            {
+              "name": "Bass C#3",
+              "src": "bass-49",
+              "note": 49
+            },
+            {
+              "name": "Bass D3",
+              "src": "bass-50",
+              "note": 50
+            },
+            {
+              "name": "Bass D#3",
+              "src": "bass-51",
+              "note": 51
+            },
+            {
+              "name": "Bass E3",
+              "src": "bass-52",
+              "note": 52
+            },
+            {
+              "name": "Bass F3",
+              "src": "bass-53",
+              "note": 53
+            },
+            {
+              "name": "Bass F#3",
+              "src": "bass-54",
+              "note": 54
+            },
+            {
+              "name": "Bass G3",
+              "src": "bass-55",
+              "note": 55
+            },
+            {
+              "name": "Bass G#3",
+              "src": "bass-56",
+              "note": 56
+            },
+            {
+              "name": "Bass A3",
+              "src": "bass-57",
+              "note": 57
+            },
+            {
+              "name": "Bass A#3",
+              "src": "bass-58",
+              "note": 58
+            },
+            {
+              "name": "Bass B3",
+              "src": "bass-59",
+              "note": 59
+            },
+            {
+              "name": "Bass C4",
+              "src": "bass-60",
+              "note": 60
+            },
+            {
+              "name": "Bass C#4",
+              "src": "bass-61",
+              "note": 61
+            },
+            {
+              "name": "Bass D4",
+              "src": "bass-62",
+              "note": 62
+            },
+            {
+              "name": "Bass D#4",
+              "src": "bass-63",
+              "note": 63
+            },
+            {
+              "name": "Bass E4",
+              "src": "bass-64",
+              "note": 64
+            },
+            {
+              "name": "Bass F4",
+              "src": "bass-65",
+              "note": 65
+            },
+            {
+              "name": "Bass F#4",
+              "src": "bass-66",
+              "note": 66
+            },
+            {
+              "name": "Bass G4",
+              "src": "bass-67",
+              "note": 67
+            },
+            {
+              "name": "Bass G#4",
+              "src": "bass-68",
+              "note": 68
+            },
+            {
+              "name": "Bass A4",
+              "src": "bass-69",
+              "note": 69
+            },
+            {
+              "name": "Bass A#4",
+              "src": "bass-70",
+              "note": 70
+            },
+            {
+              "name": "Bass B4",
+              "src": "bass-71",
+              "note": 71
+            },
+            {
+              "name": "Bass C5",
+              "src": "bass-72",
+              "note": 72
+            },
+            {
+              "name": "Bass C#5",
+              "src": "bass-73",
+              "note": 73
+            },
+            {
+              "name": "Bass D5",
+              "src": "bass-74",
+              "note": 74
+            },
+            {
+              "name": "Bass D#5",
+              "src": "bass-75",
+              "note": 75
+            },
+            {
+              "name": "Bass E5",
+              "src": "bass-76",
+              "note": 76
+            },
+            {
+              "name": "Bass F5",
+              "src": "bass-77",
+              "note": 77
+            },
+            {
+              "name": "Bass F#5",
+              "src": "bass-78",
+              "note": 78
+            },
+            {
+              "name": "Bass G5",
+              "src": "bass-79",
+              "note": 79
+            },
+            {
+              "name": "Bass G#5",
+              "src": "bass-80",
+              "note": 80
+            },
+            {
+              "name": "Bass A5",
+              "src": "bass-81",
+              "note": 81
+            },
+            {
+              "name": "Bass A#5",
+              "src": "bass-82",
+              "note": 82
+            },
+            {
+              "name": "Bass B5",
+              "src": "bass-83",
+              "note": 83
+            },
+            {
+              "name": "Bass C6",
+              "src": "bass-84",
+              "note": 84
+            }
+          ]
+        },
+        {
+          "name": "Pluck",
+          "path": "pluck",
+          "type": "instrument",
+          "sounds": [
+            {
+              "name": "Pluck C3",
+              "src": "pluck-48",
+              "note": 48
+            },
+            {
+              "name": "Pluck C#3",
+              "src": "pluck-49",
+              "note": 49
+            },
+            {
+              "name": "Pluck D3",
+              "src": "pluck-50",
+              "note": 50
+            },
+            {
+              "name": "Pluck D#3",
+              "src": "pluck-51",
+              "note": 51
+            },
+            {
+              "name": "Pluck E3",
+              "src": "pluck-52",
+              "note": 52
+            },
+            {
+              "name": "Pluck F3",
+              "src": "pluck-53",
+              "note": 53
+            },
+            {
+              "name": "Pluck F#3",
+              "src": "pluck-54",
+              "note": 54
+            },
+            {
+              "name": "Pluck G3",
+              "src": "pluck-55",
+              "note": 55
+            },
+            {
+              "name": "Pluck G#3",
+              "src": "pluck-56",
+              "note": 56
+            },
+            {
+              "name": "Pluck A3",
+              "src": "pluck-57",
+              "note": 57
+            },
+            {
+              "name": "Pluck A#3",
+              "src": "pluck-58",
+              "note": 58
+            },
+            {
+              "name": "Pluck B3",
+              "src": "pluck-59",
+              "note": 59
+            },
+            {
+              "name": "Pluck C4",
+              "src": "pluck-60",
+              "note": 60
+            },
+            {
+              "name": "Pluck C#4",
+              "src": "pluck-61",
+              "note": 61
+            },
+            {
+              "name": "Pluck D4",
+              "src": "pluck-62",
+              "note": 62
+            },
+            {
+              "name": "Pluck D#4",
+              "src": "pluck-63",
+              "note": 63
+            },
+            {
+              "name": "Pluck E4",
+              "src": "pluck-64",
+              "note": 64
+            },
+            {
+              "name": "Pluck F4",
+              "src": "pluck-65",
+              "note": 65
+            },
+            {
+              "name": "Pluck F#4",
+              "src": "pluck-66",
+              "note": 66
+            },
+            {
+              "name": "Pluck G4",
+              "src": "pluck-67",
+              "note": 67
+            },
+            {
+              "name": "Pluck G#4",
+              "src": "pluck-68",
+              "note": 68
+            },
+            {
+              "name": "Pluck A4",
+              "src": "pluck-69",
+              "note": 69
+            },
+            {
+              "name": "Pluck A#4",
+              "src": "pluck-70",
+              "note": 70
+            },
+            {
+              "name": "Pluck B4",
+              "src": "pluck-71",
+              "note": 71
+            },
+            {
+              "name": "Pluck C5",
+              "src": "pluck-72",
+              "note": 72
+            },
+            {
+              "name": "Pluck C#5",
+              "src": "pluck-73",
+              "note": 73
+            },
+            {
+              "name": "Pluck D5",
+              "src": "pluck-74",
+              "note": 74
+            },
+            {
+              "name": "Pluck D#5",
+              "src": "pluck-75",
+              "note": 75
+            },
+            {
+              "name": "Pluck E5",
+              "src": "pluck-76",
+              "note": 76
+            },
+            {
+              "name": "Pluck F5",
+              "src": "pluck-77",
+              "note": 77
+            },
+            {
+              "name": "Pluck F#5",
+              "src": "pluck-78",
+              "note": 78
+            },
+            {
+              "name": "Pluck G5",
+              "src": "pluck-79",
+              "note": 79
+            },
+            {
+              "name": "Pluck G#5",
+              "src": "pluck-80",
+              "note": 80
+            },
+            {
+              "name": "Pluck A5",
+              "src": "pluck-81",
+              "note": 81
+            },
+            {
+              "name": "Pluck A#5",
+              "src": "pluck-82",
+              "note": 82
+            },
+            {
+              "name": "Pluck B5",
+              "src": "pluck-83",
+              "note": 83
+            }
+          ]
+        },
+        {
+          "name": "Rhodes",
+          "path": "rhodes",
+          "type": "instrument",
+          "sounds": [
+            {
+              "name": "Rhodes C3",
+              "src": "rhodes-48",
+              "note": 48
+            },
+            {
+              "name": "Rhodes C#3",
+              "src": "rhodes-49",
+              "note": 49
+            },
+            {
+              "name": "Rhodes D3",
+              "src": "rhodes-50",
+              "note": 50
+            },
+            {
+              "name": "Rhodes D#3",
+              "src": "rhodes-51",
+              "note": 51
+            },
+            {
+              "name": "Rhodes E3",
+              "src": "rhodes-52",
+              "note": 52
+            },
+            {
+              "name": "Rhodes F3",
+              "src": "rhodes-53",
+              "note": 53
+            },
+            {
+              "name": "Rhodes F#3",
+              "src": "rhodes-54",
+              "note": 54
+            },
+            {
+              "name": "Rhodes G3",
+              "src": "rhodes-55",
+              "note": 55
+            },
+            {
+              "name": "Rhodes G#3",
+              "src": "rhodes-56",
+              "note": 56
+            },
+            {
+              "name": "Rhodes A3",
+              "src": "rhodes-57",
+              "note": 57
+            },
+            {
+              "name": "Rhodes A#3",
+              "src": "rhodes-58",
+              "note": 58
+            },
+            {
+              "name": "Rhodes B3",
+              "src": "rhodes-59",
+              "note": 59
+            },
+            {
+              "name": "Rhodes C4",
+              "src": "rhodes-60",
+              "note": 60
+            },
+            {
+              "name": "Rhodes C#4",
+              "src": "rhodes-61",
+              "note": 61
+            },
+            {
+              "name": "Rhodes D4",
+              "src": "rhodes-62",
+              "note": 62
+            },
+            {
+              "name": "Rhodes D#4",
+              "src": "rhodes-63",
+              "note": 63
+            },
+            {
+              "name": "Rhodes E4",
+              "src": "rhodes-64",
+              "note": 64
+            },
+            {
+              "name": "Rhodes F4",
+              "src": "rhodes-65",
+              "note": 65
+            },
+            {
+              "name": "Rhodes F#4",
+              "src": "rhodes-66",
+              "note": 66
+            },
+            {
+              "name": "Rhodes G4",
+              "src": "rhodes-67",
+              "note": 67
+            },
+            {
+              "name": "Rhodes G#4",
+              "src": "rhodes-68",
+              "note": 68
+            },
+            {
+              "name": "Rhodes A4",
+              "src": "rhodes-69",
+              "note": 69
+            },
+            {
+              "name": "Rhodes A#4",
+              "src": "rhodes-70",
+              "note": 70
+            },
+            {
+              "name": "Rhodes B4",
+              "src": "rhodes-71",
+              "note": 71
+            },
+            {
+              "name": "Rhodes C5",
+              "src": "rhodes-72",
+              "note": 72
+            },
+            {
+              "name": "Rhodes C#5",
+              "src": "rhodes-73",
+              "note": 73
+            },
+            {
+              "name": "Rhodes D5",
+              "src": "rhodes-74",
+              "note": 74
+            },
+            {
+              "name": "Rhodes D#5",
+              "src": "rhodes-75",
+              "note": 75
+            },
+            {
+              "name": "Rhodes E5",
+              "src": "rhodes-76",
+              "note": 76
+            },
+            {
+              "name": "Rhodes F5",
+              "src": "rhodes-77",
+              "note": 77
+            },
+            {
+              "name": "Rhodes F#5",
+              "src": "rhodes-78",
+              "note": 78
+            },
+            {
+              "name": "Rhodes G5",
+              "src": "rhodes-79",
+              "note": 79
+            },
+            {
+              "name": "Rhodes G#5",
+              "src": "rhodes-80",
+              "note": 80
+            },
+            {
+              "name": "Rhodes A5",
+              "src": "rhodes-81",
+              "note": 81
+            },
+            {
+              "name": "Rhodes A#5",
+              "src": "rhodes-82",
+              "note": 82
+            },
+            {
+              "name": "Rhodes B5",
+              "src": "rhodes-83",
+              "note": 83
+            }
+          ]
+        },
+        {
+          "name": "Synth",
+          "path": "synth",
+          "type": "instrument",
+          "sounds": [
+            {
+              "name": "Synth C3",
+              "src": "synth-48",
+              "note": 48
+            },
+            {
+              "name": "Synth C#3",
+              "src": "synth-49",
+              "note": 49
+            },
+            {
+              "name": "Synth D3",
+              "src": "synth-50",
+              "note": 50
+            },
+            {
+              "name": "Synth D#3",
+              "src": "synth-51",
+              "note": 51
+            },
+            {
+              "name": "Synth E3",
+              "src": "synth-52",
+              "note": 52
+            },
+            {
+              "name": "Synth F3",
+              "src": "synth-53",
+              "note": 53
+            },
+            {
+              "name": "Synth F#3",
+              "src": "synth-54",
+              "note": 54
+            },
+            {
+              "name": "Synth G3",
+              "src": "synth-55",
+              "note": 55
+            },
+            {
+              "name": "Synth G#3",
+              "src": "synth-56",
+              "note": 56
+            },
+            {
+              "name": "Synth A3",
+              "src": "synth-57",
+              "note": 57
+            },
+            {
+              "name": "Synth A#3",
+              "src": "synth-58",
+              "note": 58
+            },
+            {
+              "name": "Synth B3",
+              "src": "synth-59",
+              "note": 59
+            },
+            {
+              "name": "Synth C4",
+              "src": "synth-60",
+              "note": 60
+            },
+            {
+              "name": "Synth C#4",
+              "src": "synth-61",
+              "note": 61
+            },
+            {
+              "name": "Synth D4",
+              "src": "synth-62",
+              "note": 62
+            },
+            {
+              "name": "Synth D#4",
+              "src": "synth-63",
+              "note": 63
+            },
+            {
+              "name": "Synth E4",
+              "src": "synth-64",
+              "note": 64
+            },
+            {
+              "name": "Synth F4",
+              "src": "synth-65",
+              "note": 65
+            },
+            {
+              "name": "Synth F#4",
+              "src": "synth-66",
+              "note": 66
+            },
+            {
+              "name": "Synth G4",
+              "src": "synth-67",
+              "note": 67
+            },
+            {
+              "name": "Synth G#4",
+              "src": "synth-68",
+              "note": 68
+            },
+            {
+              "name": "Synth A4",
+              "src": "synth-69",
+              "note": 69
+            },
+            {
+              "name": "Synth A#4",
+              "src": "synth-70",
+              "note": 70
+            },
+            {
+              "name": "Synth B4",
+              "src": "synth-71",
+              "note": 71
+            },
+            {
+              "name": "Synth C5",
+              "src": "synth-72",
+              "note": 72
+            },
+            {
+              "name": "Synth C#5",
+              "src": "synth-73",
+              "note": 73
+            },
+            {
+              "name": "Synth D5",
+              "src": "synth-74",
+              "note": 74
+            },
+            {
+              "name": "Synth D#5",
+              "src": "synth-75",
+              "note": 75
+            },
+            {
+              "name": "Synth E5",
+              "src": "synth-76",
+              "note": 76
+            },
+            {
+              "name": "Synth F5",
+              "src": "synth-77",
+              "note": 77
+            },
+            {
+              "name": "Synth F#5",
+              "src": "synth-78",
+              "note": 78
+            },
+            {
+              "name": "Synth G5",
+              "src": "synth-79",
+              "note": 79
+            },
+            {
+              "name": "Synth G#5",
+              "src": "synth-80",
+              "note": 80
+            },
+            {
+              "name": "Synth A5",
+              "src": "synth-81",
+              "note": 81
+            },
+            {
+              "name": "Synth A#5",
+              "src": "synth-82",
+              "note": 82
+            },
+            {
+              "name": "Synth B5",
+              "src": "synth-83",
+              "note": 83
+            }
+          ]
+        },
         {
           "name": "Glitch",
           "path": "glitch",
           "type": "kit",
           "sounds": [
             {
-              "name": "Glitch 1",
+              "name": "Bass Drum",
               "src": "sound_1",
               "length": 0.0625
             },
             {
-              "name": "Glitch 2",
+              "name": "5nare",
               "src": "sound_2",
               "length": 0.0625
             },
             {
-              "name": "Glitch 3",
+              "name": "Closed Hi-hat",
               "src": "sound_3",
               "length": 0.0625
             },
             {
-              "name": "Glitch 4",
+              "name": "Open Hi-hat",
               "src": "sound_4",
               "length": 0.0625
             },
             {
-              "name": "Glitch 5",
+              "name": "Mid Tom",
               "src": "sound_5",
               "length": 0.0625
             },
             {
-              "name": "Glitch 6",
+              "name": "High Tom",
               "src": "sound_6",
               "length": 0.0625
             },
             {
-              "name": "Glitch 7",
+              "name": "Ride",
               "src": "sound_7",
               "length": 0.0625
             },
             {
-              "name": "Glitch 8",
+              "name": "Cymbal",
               "src": "sound_8",
               "length": 0.0625
             }
@@ -59,64 +1005,56 @@
           "type": "kit",
           "sounds": [
             {
-              "name": "Machine 1",
+              "name": "Bass Drum",
               "src": "sound_1",
               "length": 0.0625
             },
             {
-              "name": "Machine 2",
+              "name": "Snare",
               "src": "sound_2",
               "length": 0.0625
             },
             {
-              "name": "Machine 3",
+              "name": "Closed Hi-hat",
               "src": "sound_3",
               "length": 0.0625
             },
             {
-              "name": "Machine 4",
+              "name": "Open Hi-hat",
               "src": "sound_4",
               "length": 0.0625
             },
             {
-              "name": "Machine 5",
+              "name": "Mid Tom",
               "src": "sound_5",
               "length": 0.0625
             },
             {
-              "name": "Machine 6",
+              "name": "High Tom",
               "src": "sound_6",
               "length": 0.0625
             },
             {
-              "name": "Machine 7",
+              "name": "Ride",
               "src": "sound_7",
               "length": 0.0625
             },
             {
-              "name": "Machine 8",
+              "name": "Cymbal",
               "src": "sound_8",
               "length": 0.0625
             }
           ]
         },
-
         {
-          "name": "Dance",
-          "path": "dance",
+          "name": "Beats",
+          "subTitle": "Code.org",
+          "path": "beats",
           "imageSrc": "thumbnail.png",
           "sounds": [
             {
-              "name": "Disco Beat",
-              "src": "disco_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Funky Bass",
-              "src": "funky_bass",
-              "length": 2,
-              "type": "bass"
+              "src": "preview",
+              "preview": true
             },
             {
               "name": "Groovy Beat",
@@ -125,12 +1063,11 @@
               "type": "beat"
             },
             {
-              "name": "Lucky Guitar",
-              "src": "lucky_guitar",
+              "name": "Disco Beat",
+              "src": "disco_beat",
               "length": 2,
-              "type": "lead"
+              "type": "beat"
             },
-            {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
             {
               "name": "Groovy Beat 2",
               "src": "groovy_alternate_beat",
@@ -150,41 +1087,10 @@
               "type": "beat"
             },
             {
-              "name": "Reggaeton Bass",
-              "src": "reggaeton_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
-              "name": "Reggaeton Bass 2",
-              "src": "reggaeton_alternate_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
               "name": "Reggaeton Beat 2",
               "src": "reggaeton_alternate_beat",
               "length": 2,
               "type": "beat"
-            }
-          ]
-        },
-        {
-          "name": "Pop",
-          "path": "pop",
-          "imageSrc": "thumbnail.png",
-          "sounds": [
-            {
-              "name": "Cafe Beat",
-              "src": "cafe_beat",
-              "length": 2,
-              "type": "beat"
-            },
-            {
-              "name": "Acoustic Bass",
-              "src": "acoustic_bass",
-              "length": 2,
-              "type": "bass"
             },
             {
               "name": "Bold Beat",
@@ -192,20 +1098,11 @@
               "length": 2,
               "type": "beat"
             },
-            {"name": "Strings", "src": "strings", "length": 1, "type": "lead"},
-            {"name": "Clap", "src": "clap", "length": 0.25, "type": "fx"},
-            {"name": "Hey!", "src": "hey", "length": 0.5, "type": "fx"},
             {
-              "name": "Rhythm Guitar",
-              "src": "rhythm_guitar",
+              "name": "Cafe Beat",
+              "src": "cafe_beat",
               "length": 2,
-              "type": "lead"
-            },
-            {
-              "name": "Picked Guitar",
-              "src": "picked_guitar",
-              "length": 2,
-              "type": "lead"
+              "type": "beat"
             },
             {
               "name": "Shake Beat",
@@ -220,18 +1117,6 @@
               "type": "beat"
             },
             {
-              "name": "Boom Bass",
-              "src": "boom_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
-              "name": "Acoustic Bass 2",
-              "src": "acoustic_alternate_bass",
-              "length": 2,
-              "type": "bass"
-            },
-            {
               "name": "Bold Beat 2",
               "src": "bold_alternate_beat",
               "length": 2,
@@ -242,19 +1127,6 @@
               "src": "sugar_alternate_beat",
               "length": 2,
               "type": "beat"
-            }
-          ]
-        },
-        {
-          "name": "Rock",
-          "path": "rock",
-          "imageSrc": "thumbnail.png",
-          "sounds": [
-            {
-              "name": "Amped Bass",
-              "src": "amped_bass",
-              "length": 2,
-              "type": "bass"
             },
             {
               "name": "Arena Beat",
@@ -263,42 +1135,16 @@
               "type": "beat"
             },
             {
-              "name": "Riff Guitar",
-              "src": "riff_guitar",
-              "length": 2,
-              "type": "lead"
-            },
-            {
               "name": "Gutter Beat",
               "src": "gutter_beat",
               "length": 2,
               "type": "beat"
             },
             {
-              "name": "Power Guitar",
-              "src": "power_guitar",
-              "length": 2,
-              "type": "lead"
-            },
-            {
               "name": "Punk Beat",
               "src": "punk_beat",
               "length": 2,
               "type": "beat"
-            },
-            {
-              "name": "Shredded Guitar",
-              "src": "shredded_guitar",
-              "length": 2,
-              "type": "beat"
-            },
-            {"name": "Crash", "src": "crash", "length": 2, "type": "fx"},
-            {"name": "Feedback", "src": "feedback", "length": 1, "type": "fx"},
-            {
-              "name": "Amped Bass 2",
-              "src": "amped_alternate_bass",
-              "length": 1,
-              "type": "fx"
             },
             {
               "name": "Punk Beat 2",
@@ -311,27 +1157,12 @@
               "src": "arena_alternate_beat",
               "length": 2,
               "type": "beat"
-            }
-          ]
-        },
-        {
-          "name": "Hip Hop",
-          "path": "hiphop",
-          "imageSrc": "thumbnail.png",
-          "sounds": [
+            },
             {
               "name": "Vinyl Beat",
               "src": "vinyl_beat",
               "length": 2,
               "type": "beat"
-            },
-            {"name": "Brass", "src": "brass", "length": 0.25, "type": "lead"},
-            {"name": "Horns", "src": "horns", "length": 2, "type": "lead"},
-            {
-              "name": "Piano Chords",
-              "src": "piano_chords",
-              "length": 4,
-              "type": "lead"
             },
             {
               "name": "Relaxed Beat",
@@ -351,13 +1182,134 @@
               "length": 4,
               "type": "beat"
             },
-            {"name": "Swoosh", "src": "swoosh", "length": 2, "type": "fx"},
             {
               "name": "Relaxed Beat 2",
               "src": "relaxed_alternate_beat",
               "length": 2,
               "type": "beat"
             }
+          ]
+        },
+        {
+          "name": "Bass",
+          "subTitle": "Code.org",
+          "path": "bass",
+          "imageSrc": "thumbnail.png",
+          "sounds": [
+            {
+              "name": "Funky Bass",
+              "src": "funky_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Acoustic Bass",
+              "src": "acoustic_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Boom Bass",
+              "src": "boom_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Reggaeton Bass",
+              "src": "reggaeton_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Reggaeton Bass 2",
+              "src": "reggaeton_alternate_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Acoustic Bass 2",
+              "src": "acoustic_alternate_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Amped Bass 2",
+              "src": "amped_alternate_bass",
+              "length": 1,
+              "type": "bass"
+            },
+            {
+              "name": "Amped Bass",
+              "src": "amped_bass",
+              "length": 2,
+              "type": "bass"
+            }
+          ]
+        },
+        {
+          "name": "Leads",
+          "subTitle": "Code.org",
+          "path": "leads",
+          "imageSrc": "thumbnail.png",
+          "sounds": [
+            {
+              "name": "Lucky Guitar",
+              "src": "lucky_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {"name": "Strings", "src": "strings", "length": 1, "type": "lead"},
+            {
+              "name": "Rhythm Guitar",
+              "src": "rhythm_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Picked Guitar",
+              "src": "picked_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Riff Guitar",
+              "src": "riff_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Power Guitar",
+              "src": "power_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Shredded Guitar",
+              "src": "shredded_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {"name": "Horns", "src": "horns", "length": 2, "type": "lead"},
+            {
+              "name": "Piano Chords",
+              "src": "piano_chords",
+              "length": 4,
+              "type": "lead"
+            }
+          ]
+        },
+        {
+          "name": "Effects",
+          "path": "effects",
+          "imageSrc": "thumbnail.png",
+          "sounds": [
+            {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
+            {"name": "Brass", "src": "brass", "length": 0.25, "type": "fx"},
+            {"name": "Clap", "src": "clap", "length": 0.25, "type": "fx"},
+            {"name": "Hey!", "src": "hey", "length": 0.5, "type": "fx"},
+            {"name": "Crash", "src": "crash", "length": 2, "type": "fx"},
+            {"name": "Feedback", "src": "feedback", "length": 1, "type": "fx"},
+            {"name": "Swoosh", "src": "swoosh", "length": 2, "type": "fx"}
           ]
         }
       ]

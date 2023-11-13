@@ -2,8 +2,19 @@
 az:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: ox düymələri ilə hərəkət edən NESW
+      AmysBlocks_addTarget:
+        options:
+          OPT:
+            '"follows"': izləyir
+            '"avoids"': uzaqlaşdırır
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"too much"': çox
+            '"just right"': yalnız doğru
+            '"too little"': çox az
+      AmysBlocks_playerBehaviors:
+        text: davranış
       AmysBlocks_setPromptWithChoices:
         text: istifadəçidən {QUESTION} seçimlər {A}{B}{C} ilə dəyişən {VAR} soruş
       BadGuys_makeNewBadGuysSprite:
@@ -69,6 +80,11 @@ az:
             MOVES.Rest: Heç biri
       Dancelab_atTimestamp:
         text: sonra
+        options:
+          UNIT:
+            '"measures"': Ölçülər
+            '"seconds"': saniyələr
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"measures"': Ölçülər
@@ -592,6 +608,50 @@ az:
             '"tropical"': Tropik
             '"vintage"': çaxırın istehsal olunduğu il
             '"warm"': ilıq
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: arxa fon effekti təyin et
+        options:
+          EFFECT:
+            '"none"': Heç biri
+            '"rand"': "(İxtiyari)"
+            '"circles"': Çevrələr
+            '"quads"': bucaqlar
+            '"clouds"': Buludlar
+            '"color_cycle"': Rənglər
+            '"diamonds"': Almazlar
+            '"disco_ball"': disko topu
+            '"fireworks"': Fişənglər
+            '"flowers"': Güllər
+            '"growing_stars"': böyüyən ulduzlar
+            '"swirl"': Hipno
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Rəqs Mərtəbəsi
+            '"splatter"': Boya Sıçraması
+            '"rainbow"': Göy qurşağı
+            '"ripples_random"': nadir dalğalar
+            '"ripples"': dalğalar
+            '"snowflakes"': Qar
+            '"text"': Mahnl Adları
+            '"squiggles"': Qıvrımlar
+            '"galaxy"': Boşluq
+            '"sparkles"': Parıltılar
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"starburst"': Ulduz partlaması
+            '"stars"': Ulduzlar
+            '"music_wave"': dalğalar
+          PALETTE:
+            '"rave"': Ağ və Qara
+            '"cool"': Sərin
+            '"electronic"': Elektronik
+            '"iceCream"': Dondurma
+            '"default"': Işıq
+            '"neon"': Neon
+            '"ocean"': okean
+            '"rainbow"': Göy qurşağı
+            '"tropical"': Tropik
+            '"vintage"': çaxırın istehsal olunduğu il
+            '"warm"': ilıq
       Dancelab_setDanceSpeed:
         text: "{SPRITE} rəqs sürətini {SPEED} olaraq təyin edin"
         options:
@@ -997,6 +1057,12 @@ az:
             '"macklemore90"': Macklemore - Bizi tuta bilməz
             '"hammer"': MC Hammer - Buna toxuna bilməzsiniz.
             '"peas"': hiss etdim
+      DansBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': çörək soda
+            '5': hər ikisi
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} effekti elə"
         options:
@@ -1009,6 +1075,14 @@ az:
             '"starburst"': Ulduz partlaması
             '"glass"': Şüşə sındırmaq
             '"twinkling"': parıldayan
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': çörək soda
+            '5': hər ikisi
+      FunctionBlocks_addEightBlock:
+        text: əlavə səkkiz
       gamelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       gamelab_addTarget:
@@ -1029,6 +1103,8 @@ az:
         text: hədəflərdən qaçınmaq
       gamelab_beginCollectingData:
         text: "{BREAK} dəyəri {VALUE} {LABEL} etiketi ilə data toplamağa başlayın"
+      gamelab_behaviorPicker:
+        text: davranış
       gamelab_bounceOff:
         text: SPRITE][0] {TARGET} üzərindən sıçrayır
       gamelab_changePropBy:
@@ -1136,7 +1212,6 @@ az:
         text: dəyər 0
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1231,6 +1306,19 @@ az:
             '"z"': z
       gamelab_layoutGrid:
         text: şəbəkə şəklində spraytı tətrib et
+      gamelab_layoutSprites:
+        text: forma {GROUP} {FORMAT} kimi
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"circle"': dairə
+            '"grid"': tor
+            '"top"': üst sıra
+            '"row"': sinif
+            '"bottom"': alt sıra
+            '"left"': sol sütun
+            '"column"': sütun
+            '"right"': sağ sütun
       gamelab_locationAt:
         text: 'yer x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1257,6 +1345,18 @@ az:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} də yeni {ANIMATION_NAME} spraytı yarat"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"circle"': dairə
+            '"grid"': tor
+            '"top"': üst sıra
+            '"row"': sinif
+            '"bottom"': alt sıra
+            '"left"': sol sütun
+            '"column"': sütun
+            '"right"': sağ sütun
       gamelab_makeNumSprites:
         text: yeni {ANIMATION_NAME} spraytı {NUM} yarat
       gamelab_makeProjectile:
@@ -1349,9 +1449,27 @@ az:
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": Hava buynuzu
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": alqış
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": nəğmə
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": şənləndirmək, alqış
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": zərbə
             "'sound://category_sports/One_Whistle_SFX.mp3'": Fit
       gamelab_playSoundOptionsSpace:
         text: oynat
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": qara dəlik
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": güllə klasteri
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kassiopiya
+            "'sound://category_space/Crab_nebula_SFX.mp3'": cır dumanlığı
+            "'sound://category_space/Galactic_center_SFX.mp3'": qalaktik mərkəz
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
+            "'sound://category_space/Lift_Off.mp3'": qaldırmaq
+            "'sound://category_space/Pillars_SFX.mp3'": sütunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": cənub halqası
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": burulğan qalaktikası
       gamelab_playSpeech:
         text: nitqi oynat
       gamelab_playerBehaviors:
@@ -1542,7 +1660,7 @@ az:
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: akrobatika
+        text: yıxılma
       gamelab_turn:
         text: döndər {SPRITE} {DIRECTION} {N} dərəcə
         options:
@@ -1622,6 +1740,10 @@ az:
         text: x koordinatı
       gamelab_yLocationOf:
         text: y koordinatı
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_tumbling:
+        text: yıxılma
       Mikelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1955,8 +2077,35 @@ az:
         text: bədheybətin sürətini təyin et
       Outbreak_stopMoving:
         text: canavarlar hərəkət etməyi dayandırırlar
+      ParticlesBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': çörək soda
+            '5': hər ikisi
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': limon suyu
+            '3': çörək soda
+            '5': hər ikisi
       ParticlesBlocks_statesOfMatter:
         text: davranış
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): bərk
+            new Behavior(liquid, []): maye
+            new Behavior(wandering, []): qaz
+      ParticlesBlocks_statesOfMatter2:
+        options:
+          BEHAVIOR:
+            '"solid"': 'bərk hissəcik '
+            '"liquid"': maye hissəcik
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'bərk hissəcik '
+            '"liquid"': maye hissəcik
       Poetry_addFrame:
         text: "{BRUSH} çərçivə təyin edin"
         options:
@@ -2047,6 +2196,20 @@ az:
             '"sound://category_achievements/peaceful_win_6.mp3"': külək cingiltisi
       Poetry_playSoundOptionsSpace:
         text: oynat
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": qara dəlik
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": güllə klasteri
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kassiopiya
+            "'sound://category_space/Crab_nebula_SFX.mp3'": cır dumanlığı
+            "'sound://category_space/Galactic_center_SFX.mp3'": qalaktik mərkəz
+            "'sound://category_space/Launch_SFX.mp3'": işə salmaq
+            "'sound://category_space/Lift_Off.mp3'": qaldırmaq
+            "'sound://category_space/Pillars_SFX.mp3'": sütunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": cənub halqası
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": burulğan qalaktikası
       Poetry_setAuthor:
         text: müəllifi təyin et {AUTHOR}
       Poetry_setBackground:
@@ -2175,7 +2338,6 @@ az:
         options:
           'N':
             '0': "???"
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2198,8 +2360,6 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      SpriteLab2Beta_spriteSay:
-        text: sprayt {SPRITE} deyir {TEXT} {SECONDS} saniyə ərzində
       Vector_createSpriteWith:
         text: |-
           sprayt yarat
@@ -2292,6 +2452,26 @@ az:
             '"quarantining"': xəstələnəndə karantin
             '"avoiding"': sosial məsafə
             '"none"': hərəkətsiz qalmaq
+      adaptations_adaptationBehaviors:
+        text: davranış
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa fırlanır
+            new Behavior(spinning_left, []): sola fırlanır
+            new Behavior(fluttering, []): çırpınan
+            new Behavior(jittering, []): |-
+              titrəmək
+              (hər hansı cihazın titrəməsi)
+            new Behavior(wobbling, []): titrəmə(titrəmək)
+            new Behavior(wandering, []): gəzən
+            new Behavior(patrolling, []): patrul
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} nöqtəsini izləməyə başlayır"
+      adaptations_toggleBehaviorSimple:
+        options:
+          TOGGLE:
+            '"begins"': başlayır
+            '"stops"': dayanır
       binary_drawBinScreen:
         text: |-
           ekranı çəkin
@@ -2357,6 +2537,7 @@ az:
         options:
           TYPE:
             "'sand'": qum
+            "'darkPrismarine'": tünd prizmarin
             "'seaLantern'": dəniz fənəri
       craft_log:
         text: qeyd mesajı {MESSAGE}
@@ -2374,13 +2555,21 @@ az:
             '"chiseledStoneBricks"': dekorativ daş kərpicləri
             '"blueCoralBlock"': mavi mərcan bloku
             '"pinkCoralBlock"': çəhrayı mərcan bloku
+            '"magentaCoralBlock"': magenta mərcan bloku
             '"redCoralBlock"': qırmızı mərcan bloku
             '"yellowCoralBlock"': sarı mərcan bloku
+            '"blueDeadCoralBlock"': mavi ölü mərcan bloku
+            '"prismarine"': prismarine
+            '"darkPrismarine"': tünd prizmarin
             '"seaLantern"': dəniz fənəri
             '"packedIce"': dolu buz
             '"blueIce"': mavi buz
             '"blackConcrete"': qara beton
             '"seaGrass"': dəniz otu
+            '"kelp"': yosun
+            '"polishedGranite"': cilalanmış qranit
+      craft_placePrismarine:
+        text: prizmarin qoyun
       craft_placeTorch:
         text: məşəl yerləşdir
       craft_repeatUntilGoal:
@@ -2401,8 +2590,44 @@ az:
           DIR:
             right: sağa
             left: sola
+      ecosystems_catchMe:
+        text: tutmaq
+      ecosystems_eat:
+        text: yemək
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"too much"': çox
+            '"just right"': yalnız doğru
+            '"too little"': çox az
+      ecosystems_int10:
+        text: dəyər 0
+        options:
+          VALUE:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
+            "{x1:0, x2:400, y1:150, y2:250}": Orta
+            "{x1:0, x2:400, y1:0, y2:200}": Aşağı
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
+            "{x1:0, x2:400, y1:0, y2:200}": Aşağı
       storylab_clearHeadings:
         text: başlıqları təmizlə
+      storylab_printText:
+        text: çap et
       storylab_setForegroundEffect2:
         text: "{EFFECT} effekti elə"
         options:
@@ -2413,7 +2638,3 @@ az:
             '"rain"': yağış
             '"starburst"': Ulduz partlaması
             '"twinkling"': parıldayan
-      validation_validatedBackground:
-        text: fonu {IMG} təyin edin
-      validation_validatedSound:
-        text: səsiOYNAT {SOUND}

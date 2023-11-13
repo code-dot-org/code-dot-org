@@ -1,4 +1,3 @@
-/* globals dashboard, appOptions */
 import {getStore} from '../../redux';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {executors} from './audioApi';
@@ -16,10 +15,10 @@ const dropletConfig = {
     params: ['"sound://default.mp3"', 'false'],
     dropdown: {
       0: () => getAssetDropdown('audio'),
-      1: ['true', 'false']
+      1: ['true', 'false'],
     },
     nativeCallsBackInterpreter: true,
-    assetTooltip: {0: chooseAsset.bind(null, 'audio')}
+    assetTooltip: {0: chooseAsset.bind(null, 'audio')},
   },
   stopSound: {
     func: 'stopSound',
@@ -28,9 +27,9 @@ const dropletConfig = {
     paletteParams: ['url'],
     params: ['"sound://default.mp3"'],
     dropdown: {
-      0: () => getAssetDropdown('audio')
+      0: () => getAssetDropdown('audio'),
     },
-    assetTooltip: {0: chooseAsset.bind(null, 'audio')}
+    assetTooltip: {0: chooseAsset.bind(null, 'audio')},
   },
   playSpeech: {
     func: 'playSpeech',
@@ -40,17 +39,17 @@ const dropletConfig = {
     params: ['"Hello World!"', '"female"', '"English"'],
     dropdown: {
       1: ['"female"', '"male"'],
-      2: getLanguages.bind(null)
+      2: getLanguages.bind(null),
     },
     nativeCallsBackInterpreter: true,
-    assetTooltip: {0: chooseAsset.bind(null, 'audio')}
-  }
+    assetTooltip: {0: chooseAsset.bind(null, 'audio')},
+  },
 };
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
   });
 }
 

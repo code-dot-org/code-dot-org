@@ -25,7 +25,7 @@ Provare un'Ora di Codice è un modo semplice e divertente per presentare l'infor
 
 <a id="how-to-video"></a>
 
-## 1. Guarda il video illustrativo dell'Ora del Codice <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Guarda il video illustrativo dell'Ora del Codice <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Parla dell'Ora del Codice anche con gli altri docenti, che forse vorranno unirsi
 
 ### Registra il tuo evento così che i volontari ne vengano a conoscenza
 
-Registrando [la tua "Ora del Codice"](/#join), riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. Tramite la registrazione, permetterai ai volontari della tua zona di venire a sapere che la tua scuola partecipa all'iniziativa. I volontari sono una grande risorsa: possono venire a parlare di computer alla tua classe o possono aiutare i tuoi studenti durante le attività dell'Ora del Codice.
+Quando ti [iscrivi al tuo evento L'Ora del Codice](/events), riceverai utili comunicazioni via e-mail con notizie e suggerimenti per organizzare un'Ora del Codice di successo. Tramite la registrazione, permetterai ai volontari della tua zona di venire a sapere che la tua scuola partecipa all'iniziativa. I volontari sono una grande risorsa: possono venire a parlare di computer alla tua classe o possono aiutare i tuoi studenti durante le attività dell'Ora del Codice.
 
 ### Emoziona e coinvolgi i tuoi studenti
 

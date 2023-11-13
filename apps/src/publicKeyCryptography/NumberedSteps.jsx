@@ -10,20 +10,20 @@ const style = {
     // lineHeight does not get the automatic 'px' suffix
     // see https://facebook.github.io/react/tips/style-props-value-px.html
     lineHeight: `${LINE_HEIGHT}px`,
-    paddingBottom: 8
+    paddingBottom: 8,
   },
   subStep: {
-    fontWeight: 'normal'
+    fontWeight: 'normal',
   },
   heading: {
     fontSize: 'larger',
     fontWeight: 'bold',
-    marginTop: 10
+    marginTop: 10,
   },
   subheading: {
     fontStyle: 'italic',
-    marignBottom: 10
-  }
+    marignBottom: 10,
+  },
 };
 
 /**
@@ -45,7 +45,7 @@ export default function NumberedSteps({start = 1, children}) {
 }
 NumberedSteps.propTypes = {
   start: PropTypes.number,
-  children: AnyChildren
+  children: AnyChildren,
 };
 
 /**
@@ -54,12 +54,12 @@ NumberedSteps.propTypes = {
  * be faded out.
  */
 export function Step(props) {
-  const isStepEnabled = props.hasOwnProperty('requires')
+  const isStepEnabled = Object.prototype.hasOwnProperty.call(props, 'requires')
     ? props.requires
     : true;
   const trStyle = {
     transition: 'opacity 0.5s',
-    opacity: isStepEnabled ? 1 : 0.2
+    opacity: isStepEnabled ? 1 : 0.2,
   };
   return (
     <tr style={trStyle}>
@@ -71,10 +71,10 @@ export function Step(props) {
 Step.propTypes = {
   index: PropTypes.number,
   children: AnyChildren,
-  requires: PropTypes.bool
+  requires: PropTypes.bool,
 };
 Step.defaultProps = {
-  index: 0
+  index: 0,
 };
 
 /**
@@ -84,14 +84,14 @@ export function SubStep({text}) {
   return <li style={style.subStep}>{text}</li>;
 }
 SubStep.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export function Heading({text}) {
   return <div style={style.heading}>{text}</div>;
 }
 Heading.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export function Subheading({text}) {

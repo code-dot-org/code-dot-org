@@ -8,23 +8,23 @@ title: Obrigado por se inscrever para sediar a Hora do Código!
 
 ## 1. Divulgue o evento em sua escola e comunidade
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Você acaba de se juntar ao movimento Hour of Code. Conte para os seus amigos sobre o **#HourOfCode**!
 
-{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Você não precisa estar na escola para aprender novas habilidades. Invite a local politician or policy maker to visit your school for the Hour of Code. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
+{{ social_media_hoc }} <br /> Estimular a participação de outras pessoas [com a nossa amostra de e-mails.<]({{ promote/sample_emails }}) Entre em contato com o diretor e desafie todas as turmas da escola a se increverem. Recrute um grupo local – clubes de escoteiros, igrejas, universidades, grupos de veteranos, sindicatos e até mesmo alguns amigos. Você não precisa estar na escola para aprender novas habilidades. Convide um político ou estrategista político local para visitar sua escola no Hour of Code. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
 
-Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
+Use esses [pôsteres, banners, adesivos, vídeos e muito mais]({{ promote/resources }}) para o seu evento.
 
 ## 2. Encontre um voluntário da região para ajudar com o seu evento.
 
-[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Pesquise nosso mapa de voluntários]({{ urls/volunteer_local }}) para conhecer voluntários que podem visitar sua sala de aula ou seu bate-papo remotamente, para inspirar seus alunos sobre a amplitude das possibilidades que a ciência da computação oferece.
 
 ## 3. Planeje sua Hora do Código
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+Escolha uma [atividade no Hour of Code](https://hourofcode.com/learn) para sua sala de aula e [leia estas instruções]({{ urls/how_to_guide }}).
 
 ### 4. Dê um balanço
 
-Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
+Solicite materiais para ajudá-lo a entusiasmar os alunos em relação ao evento, abrindo caminho para o Code.org [na loja da Amazon](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Encomende pôsteres, kits do Hour of Code, adesivos e muito mais! Mas corra porque os materiais são limitados.
 
 # Vá além da Hora do Código
 

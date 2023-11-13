@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import $ from 'jquery';
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
@@ -14,7 +12,7 @@ var lastServerResponse = {};
 
 var reporting = module.exports;
 
-reporting.getLastServerResponse = function() {
+reporting.getLastServerResponse = function () {
   return lastServerResponse;
 };
 
@@ -50,7 +48,7 @@ function validateType(key, value, type) {
  */
 function validateReport(report) {
   for (var key in report) {
-    if (!report.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(report, key)) {
       continue;
     }
 
@@ -230,7 +228,7 @@ function validateReport(report) {
  *
  * @param {MilestoneReport} report
  */
-reporting.sendReport = function(report) {
+reporting.sendReport = function (report) {
   // The list of report fields we want to send to the server
   const serverFields = [
     'program',
@@ -244,7 +242,7 @@ reporting.sendReport = function(report) {
     'timeSinceLastMilestone',
     'lines',
     'attempt',
-    'image'
+    'image',
   ];
 
   validateReport(report);
@@ -311,13 +309,13 @@ reporting.sendReport = function(report) {
       data: queryString,
       dataType: 'json',
       jsonp: false,
-      beforeSend: function(xhr) {
+      beforeSend: function (xhr) {
         xhr.setRequestHeader(
           'X-CSRF-Token',
           $('meta[name="csrf-token"]').attr('content')
         );
       },
-      success: function(response) {
+      success: function (response) {
         if (report.skipSuccessCallback === true) {
           onNoSuccess(response);
           return;
@@ -338,7 +336,7 @@ reporting.sendReport = function(report) {
         }
         reportComplete(report, response);
       },
-      error: xhr => onNoSuccess(xhr)
+      error: xhr => onNoSuccess(xhr),
     });
 
     lastAjaxRequest = thisAjax;
@@ -346,7 +344,7 @@ reporting.sendReport = function(report) {
     //There's a potential race condition here - we show the dialog after animation completion, but also after the report
     //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
     //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
-    setTimeout(function() {
+    setTimeout(function () {
       reportComplete(report, getFallbackResponse(report));
     }, 1000);
   }
@@ -382,7 +380,7 @@ function saveReportLocally(report) {
   }
 }
 
-reporting.cancelReport = function() {
+reporting.cancelReport = function () {
   if (lastAjaxRequest) {
     lastAjaxRequest.abort();
   }

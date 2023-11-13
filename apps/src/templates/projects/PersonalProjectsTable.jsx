@@ -13,7 +13,7 @@ import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
   ConditionallyPublishableProjectTypes,
-  RestrictedPublishProjectTypes
+  RestrictedPublishProjectTypes,
 } from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
@@ -35,7 +35,7 @@ export const COLUMNS = {
   APP_TYPE: 2,
   LAST_EDITED: 3,
   LAST_PUBLISHED: 4,
-  ACTIONS: 5
+  ACTIONS: 5,
 };
 
 class PersonalProjectsTable extends React.Component {
@@ -45,16 +45,16 @@ class PersonalProjectsTable extends React.Component {
     // Provided by Redux
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType),
     isLoadingPersonalProjectsList: PropTypes.bool.isRequired,
-    isUserSignedIn: PropTypes.bool.isRequired
+    isUserSignedIn: PropTypes.bool.isRequired,
   };
 
   state = {
     sortingColumns: {
       [COLUMNS.LAST_EDITED]: {
         direction: 'desc',
-        position: 0
-      }
-    }
+        position: 0,
+      },
+    },
   };
 
   publishedAtFormatter = (publishedAt, {rowData}) => {
@@ -100,10 +100,10 @@ class PersonalProjectsTable extends React.Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -117,9 +117,9 @@ class PersonalProjectsTable extends React.Component {
               ...tableLayoutStyles.headerCell,
               ...styles.headerCellFirst,
               ...styles.headerCellThumbnail,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
         },
         cell: {
           formatters: [thumbnailFormatter],
@@ -127,10 +127,10 @@ class PersonalProjectsTable extends React.Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.cellFirst,
-              ...styles.cellThumbnail
-            }
-          }
-        }
+              ...styles.cellThumbnail,
+            },
+          },
+        },
       },
       {
         property: 'name',
@@ -139,66 +139,66 @@ class PersonalProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.headerCellName
-            }
+              ...styles.headerCellName,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cellName
-            }
-          }
-        }
+              ...styles.cellName,
+            },
+          },
+        },
       },
       {
         property: 'type',
         header: {
           label: i18n.projectType(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [typeFormatter],
           props: {
             style: {
               ...styles.cellType,
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'updatedAt',
         header: {
           label: i18n.lastEdited(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'publishedAt',
         header: {
           label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.publishedAtFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.centeredCell
-            }
-          }
-        }
+              ...styles.centeredCell,
+            },
+          },
+        },
       },
       {
         property: 'actions',
@@ -207,20 +207,20 @@ class PersonalProjectsTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.actionsFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.centeredCell
-            }
-          }
-        }
-      }
+              ...styles.centeredCell,
+            },
+          },
+        },
+      },
     ];
     return dataColumns;
   };
@@ -240,7 +240,7 @@ class PersonalProjectsTable extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(personalProjectsList);
 
     const noProjects = personalProjectsList.length === 0;
@@ -271,7 +271,7 @@ class PersonalProjectsTable extends React.Component {
             {noProjects && !this.props.isUserSignedIn && (
               <SafeMarkdown
                 markdown={i18n.noSavedProjects({
-                  signInUrl: '/users/sign_in?user_return_to=/projects'
+                  signInUrl: '/users/sign_in?user_return_to=/projects',
                 })}
               />
             )}
@@ -289,60 +289,60 @@ export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
 export default connect(state => ({
   personalProjectsList: state.projects.personalProjectsList.projects,
   isLoadingPersonalProjectsList: state.projects.personalProjectsList.isLoading,
-  isUserSignedIn: isSignedIn(state.currentUser)
+  isUserSignedIn: isSignedIn(state.currentUser),
 }))(PersonalProjectsTable);
 
 export const styles = {
   cellFirst: {
     borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray
+    borderColor: color.border_light_gray,
   },
   headerCellFirst: {
     borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray
+    borderColor: color.border_light_gray,
   },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
     padding: 2,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   headerCellThumbnail: {
-    padding: 0
+    padding: 0,
   },
   cellName: {
     borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-    width: 250
+    width: 250,
   },
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
-    padding: 15
+    padding: 15,
   },
   cellType: {
-    width: 120
+    width: 120,
   },
   centeredCell: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomMargin: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   noPersonalProjects: {
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };
 
 // Cell formatters.
-const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
@@ -379,7 +379,7 @@ const typeFormatter = type => {
   return PROJECT_TYPE_MAP[type];
 };
 
-const dateFormatter = function(time) {
+const dateFormatter = function (time) {
   const date = new Date(time);
   return date.toLocaleDateString();
 };

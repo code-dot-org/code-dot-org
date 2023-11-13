@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
+class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   setup do
     @user = create :teacher
     sign_in(@user)

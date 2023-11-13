@@ -6,18 +6,18 @@
   border-width: 0 1px;
   border-color: transparent;
   height: 100%;
-  background-color: $purple;
-  color: $lighter_purple;
+  background-color: transparent;
+  color: $neutral_white;
   display: flex;
   align-items: center;
 
   &Running {
-    background-color: $lighter_purple;
-    color: $dark_charcoal;
+    background-color: transparent;
+    color: $neutral_white;
   }
 
   &:hover {
     box-shadow: none;
-    color: $white;
+    color: $neutral_dark20;
   }
 }

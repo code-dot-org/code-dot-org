@@ -48,3 +48,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The line `super(treeColor)` calls the superclass constructor and passes the value assigned to the `treeColor` parameter. Since the superclass is `Plant`, its constructor is called, which sets the instance variable `leafColor` to the value assigned to the `treeColor` parameter.
 MARKDOWN
+
+allow_multiple_attempts true

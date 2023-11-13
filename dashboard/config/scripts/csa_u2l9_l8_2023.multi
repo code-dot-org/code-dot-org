@@ -29,3 +29,5 @@ The syntax for a mutator method is:
 public void setNameOfInstanceVariable(dataType parameterName)
 ```
 MARKDOWN
+
+allow_multiple_attempts true

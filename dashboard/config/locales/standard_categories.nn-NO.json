@@ -2,17 +2,17 @@
   "nn-NO": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Programmeringstenking"
-        },
-        "L": {
-          "description": "Språk"
-        },
         "C": {
           "description": "Tunnel"
         },
+        "CT": {
+          "description": "Programmeringstenking"
+        },
         "F": {
           "description": "Funksjonar"
+        },
+        "L": {
+          "description": "Språk"
         }
       }
     }

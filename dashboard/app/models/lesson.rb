@@ -57,6 +57,8 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
+  has_one :rubric, dependent: :destroy
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
@@ -342,7 +344,7 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+    has_lesson_plan && ScriptConfig.hoc_scripts.exclude?(script.name) ?
       script_lesson_edit_path(script, self) :
       edit_lesson_path(id: id)
   end
@@ -429,7 +431,8 @@ class Lesson < ApplicationRecord
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
-      lessonPath: get_uncached_show_path
+      lessonPath: get_uncached_show_path,
+      rubric: rubric,
     }
   end
 
@@ -502,6 +505,16 @@ class Lesson < ApplicationRecord
       displayName: localized_name,
       link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
+    }
+  end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      unitName: script.title_for_display,
+      lessonNumber: relative_position,
+      lessonName: name,
+      levels: levels
     }
   end
 
@@ -597,7 +610,7 @@ class Lesson < ApplicationRecord
 
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
-    next_level ? next_level.lesson.relative_position : nil
+    next_level&.lesson&.relative_position
   end
 
   # Updates this lesson's lesson_activities to match the activities represented
@@ -631,13 +644,13 @@ class Lesson < ApplicationRecord
   def update_objectives(objectives)
     return unless objectives
 
-    self.objectives = objectives.map do |objective|
+    self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end.compact
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
@@ -891,12 +904,10 @@ class Lesson < ApplicationRecord
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
-  private
-
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]
-  def fetch_activity(activity)
+  private def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
       return lesson_activity if lesson_activity

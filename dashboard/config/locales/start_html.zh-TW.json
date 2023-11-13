@@ -3,49 +3,58 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "是",
           "No": "否",
+          "Yes": "是",
           "cute": "可愛"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "是",
           "No": "否",
+          "Yes": "是",
+          "cute": "可愛"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "否",
+          "Yes": "是",
           "cute": "可愛"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "是",
           "No": "否",
+          "Yes": "是",
           "cute": "可愛"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "是",
           "No": "否",
+          "Yes": "是",
+          "cute": "可愛"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "否",
+          "Yes": "是",
           "cute": "可愛"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "名稱",
+          "City": "城市",
           "Color": "顏色",
           "Food": "食物",
-          "City": "城市",
+          "Name": "名稱",
           "text": "內文"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "名稱",
+          "City": "城市",
           "Color": "顏色",
           "Food": "食物",
+          "Name": "名稱",
+          "text": "內文"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "城市",
+          "Color": "顏色",
+          "Food": "食物",
+          "Name": "名稱",
           "text": "內文"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +65,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,29 +87,55 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "？",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -111,20 +146,20 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "？",
           "text": "內文"
         },
         "CSD U1 processing guess_2022": {
-          "?": "？",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -135,16 +170,58 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "？",
+          "text": "內文"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "？",
           "text": "內文"
         },
         "CSD U1 processing live_2021": {
-          "walking": "走路",
-          "bear": "熊仔"
+          "bear": "熊仔",
+          "rat": "老鼠",
+          "walking": "走路"
         },
         "CSD U1 processing live_2022": {
-          "walking": "走路",
-          "bear": "熊仔"
+          "bear": "熊仔",
+          "rat": "老鼠",
+          "walking": "走路"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "貓",
+          "chicken": "雞",
+          "dog": "狗",
+          "horse": "馬",
+          "walking": "走路"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "正確！",
@@ -154,16 +231,12 @@
           "Correct!": "正確！",
           "Sorry!": "抱歉！"
         },
+        "CSD U1 processing npark_2023": {
+          "Correct!": "正確！",
+          "Sorry!": "抱歉！"
+        },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -174,18 +247,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -196,7 +269,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "返回"
@@ -204,31 +307,50 @@
         "CSD U1 storage friends_2022": {
           "Back": "返回"
         },
+        "CSD U1 storage friends_2023": {
+          "Back": "返回"
+        },
         "CSD U1 storage movies_2021": {
+          "No": "否",
           "Star Wars": "星際大戰",
           "Yes": "是",
-          "No": "否",
           "text": "內文"
         },
         "CSD U1 storage movies_2022": {
+          "No": "否",
           "Star Wars": "星際大戰",
           "Yes": "是",
+          "text": "內文"
+        },
+        "CSD U1 storage movies_2023": {
           "No": "否",
+          "Star Wars": "星際大戰",
+          "Yes": "是",
           "text": "內文"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "清除",
-          "pink": "粉紅色",
-          "green": "綠",
           "black": "黑",
-          "purple": "紫色"
+          "green": "綠",
+          "pink": "粉紅色",
+          "purple": "紫色",
+          "white": "白色"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "清除",
-          "pink": "粉紅色",
-          "green": "綠",
           "black": "黑",
-          "purple": "紫色"
+          "green": "綠",
+          "pink": "粉紅色",
+          "purple": "紫色",
+          "white": "白色"
+        },
+        "CSD U1 storage outfit_2023": {
+          "Clear": "清除",
+          "black": "黑",
+          "green": "綠",
+          "pink": "粉紅色",
+          "purple": "紫色",
+          "white": "白色"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -265,132 +387,343 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "你做到了！"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "你做到了！"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "成功！"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "快樂的"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "快樂的"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "年齡",
+          "Happy": "快樂的",
+          "Name": "名稱"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "否",
+          "Yes": "是"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "成功！"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "魚"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "魚"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "成功！"
         },
-        "CSD U6 - Color LEDs - ChalD_2222": {
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "東",
           "North": "北",
           "South": "南",
-          "East": "東",
           "West": "西"
         },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "東",
+          "North": "北",
+          "South": "南",
+          "West": "西"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "成功！"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "中"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "中"
         },
-        "CSD U6 - Combine Inputs - A_2222": {
-          "left": " 向左",
-          "right": "向右",
-          "red": "紅",
-          "yellow": "黃色",
+        "CSD U6 - Combine Inputs - A_2023": {
           "green": "綠",
-          "purple": "紫色"
+          "left": " 向左",
+          "purple": "紫色",
+          "red": "紅",
+          "right": "向右",
+          "yellow": "黃色"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "綠",
+          "left": " 向左",
+          "purple": "紫色",
+          "red": "紅",
+          "right": "向右",
+          "yellow": "黃色"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": " 向左",
+          "right": "向右"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "on",
           "fast": "快",
-          "slow": "慢",
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "on": "on",
+          "short": "短",
+          "slow": "慢"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "快",
+          "high": "高",
+          "long": "長",
+          "low": "低",
+          "on": "on",
+          "short": "短",
+          "slow": "慢"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "紅",
+          "Blue": "藍",
           "Green": "綠",
-          "Blue": "藍"
+          "Red": "紅"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": " 向左",
+          "right": "向右"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": " 向左",
           "right": "向右"
         },
-        "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "黃色",
-          "green": "綠",
+        "CSD U6 - Combine Inputs - PracC_2023": {
           "blue": "藍",
-          "orange": "橙色"
+          "green": "綠",
+          "orange": "橙色",
+          "yellow": "黃色"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "藍",
+          "green": "綠",
+          "orange": "橙色",
+          "yellow": "黃色"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "測試",
+          "quiet": "安靜"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "測試"
+          "Test": "測試",
+          "quiet": "安靜"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "下列",
+          "top row": "上列"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
-        "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "短",
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "high": "高",
+          "long": "長",
+          "low": "低",
+          "short": "短"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "行"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "行"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "藍",
+          "Red": "紅"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "紅",
-          "Blue": "藍"
+          "Blue": "藍",
+          "Red": "紅"
+        },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "藍",
+          "Red": "紅"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
         },
         "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
           "0": "0"
         },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
         },
-        "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "名稱"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "名稱"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "名稱"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "快樂的"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "快樂的"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -401,162 +734,468 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - Piano_2222": {
-          "C": "C",
-          "D": "D",
-          "E": "E",
-          "F": "F",
-          "G": "G",
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G",
           "Note:": "注意："
         },
-        "CSD U6 - Music - SB1_2222": {
+        "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
           "G": "G",
+          "Note:": "注意："
+        },
+        "CSD U6 - Music - SB1_2023": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
+        },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "成功！"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "得分"
+        },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "得分",
-          "0": "0"
+          "0": "0",
+          "Score": "得分"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "得分"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "成功！"
         },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "成功！"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "成功！"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "成功！"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "成功！"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "名字："
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "名字："
         },
-        "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍"
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "名字："
         },
-        "CSD U6 - Screen Inputs - P_2222": {
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "藍",
+          "Green": "綠",
           "Name:": "名字：",
           "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍",
           "Save": "儲存"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Name:": "名字：",
+          "Red": "紅",
+          "Save": "儲存"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Name:": "名字：",
+          "Red": "紅",
+          "Save": "儲存"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2023": {
+          "Welcome": "歡迎"
+        },
         "CSD U6 - Screen Inputs - SB1_2222": {
           "Welcome": "歡迎"
         },
+        "CSD U6 - Screen Inputs - SB1_mb2022": {
+          "Welcome": "歡迎"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "黑"
+          "black": "黑",
+          "white": "白色"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "黑",
+          "white": "白色"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "黑",
+          "white": "白色"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "黑"
+          "black": "黑",
+          "white": "白色"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "黑",
+          "white": "白色"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "黑",
+          "white": "白色"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "？",
+          "Happy": "快樂的"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "快樂的",
-          "?": "？"
+          "?": "？",
+          "Happy": "快樂的"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "？",
+          "Happy": "快樂的"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "標題"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "標題"
         },
-        "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "白人",
-          "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍"
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "標題"
         },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "向上",
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅",
+          "White": "白人"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅",
+          "White": "白人"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "藍",
+          "Green": "綠",
+          "Red": "紅",
+          "White": "白人"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
           "down": "向下",
           "left": " 向左",
-          "right": "向右"
+          "right": "向右",
+          "up": "向上"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "向下",
+          "left": " 向左",
+          "right": "向右",
+          "up": "向上"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "向下",
+          "left": " 向左",
+          "right": "向右",
+          "up": "向上"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "名稱"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "名稱"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "名稱"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "off",
+          "on": "on"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "off",
           "on": "on"
         },
-        "CSD U6 - Sensors - P_2222": {
-          "text": "內文",
+        "CSD U6 - Sensors - P_2023": {
           "high": "高",
-          "low": "低"
+          "low": "低",
+          "text": "內文"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "high": "高",
+          "low": "低",
+          "text": "內文"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "高",
+          "low": "低",
+          "text": "內文"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "更新",
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "值"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
+          "value": "值"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "你做到了！"
@@ -630,53 +1269,93 @@
         "CSD U6 add LED button_2021": {
           "Success!": "成功！"
         },
+        "CSD U6 analog change": {
+          "value": "值"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "值"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "值"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "值"
+        },
+        "CSD U6 analog data": {
+          "value": "值"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "值"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "值"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "值"
+        },
         "CSD U6 analog light": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 analog light_2018": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 analog light_2019": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
         },
         "CSD U6 analog light_2021": {
-          "Update": "更新"
+          "Update": "更新",
+          "value": "值"
+        },
+        "CSD U6 analog sound": {
+          "value": "值"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "值"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "值"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "值"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "第一筆"
@@ -691,20 +1370,20 @@
           "first": "第一筆"
         },
         "CSD U6 change": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 change_2018": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 change_2019": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 change_2021": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "中"
@@ -719,95 +1398,95 @@
           "Medium": "中"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "快樂的",
-          "?": "？"
+          "?": "？",
+          "Happy": "快樂的"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "快樂的",
-          "?": "？"
+          "?": "？",
+          "Happy": "快樂的"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "快樂的",
-          "?": "？"
+          "?": "？",
+          "Happy": "快樂的"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "快樂的",
-          "?": "？"
+          "?": "？",
+          "Happy": "快樂的"
         },
         "CSD U6 frequency": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 frequency_2018": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 frequency_2019": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 frequency_2021": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 get toggle": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 get toggle_2018": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 get toggle_2019": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 get toggle_2021": {
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "藍",
+          "Green": "綠",
           "Name:": "名字：",
           "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍",
           "Save": "儲存"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "藍",
+          "Green": "綠",
           "Name:": "名字：",
           "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍",
           "Save": "儲存"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "藍",
+          "Green": "綠",
           "Name:": "名字：",
           "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍",
           "Save": "儲存"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "藍",
+          "Green": "綠",
           "Name:": "名字：",
           "Red": "紅",
-          "Green": "綠",
-          "Blue": "藍",
           "Save": "儲存"
         },
         "CSD U6 getProperty input": {
@@ -823,84 +1502,84 @@
           "Submit": "提交"
         },
         "CSD U6 getters debug": {
-          "slow": "慢",
           "fast": "快",
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短",
+          "slow": "慢"
         },
         "CSD U6 getters debug_2018": {
           "fast": "快",
-          "slow": "慢",
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短",
+          "slow": "慢"
         },
         "CSD U6 getters debug_2019": {
           "fast": "快",
-          "slow": "慢",
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短",
+          "slow": "慢"
         },
         "CSD U6 getters debug_2021": {
           "fast": "快",
-          "slow": "慢",
-          "short": "短",
+          "high": "高",
           "long": "長",
           "low": "低",
-          "high": "高"
+          "short": "短",
+          "slow": "慢"
         },
         "CSD U6 interval": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 interval_2018": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 interval_2019": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 interval_2021": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 light show": {
-          "on": "on",
-          "off": "off"
+          "off": "off",
+          "on": "on"
         },
         "CSD U6 light show_2018": {
-          "on": "on",
-          "off": "off"
+          "off": "off",
+          "on": "on"
         },
         "CSD U6 light show_2019": {
-          "on": "on",
-          "off": "off"
+          "off": "off",
+          "on": "on"
         },
         "CSD U6 light show_2021": {
-          "on": "on",
-          "off": "off"
+          "off": "off",
+          "on": "on"
         },
         "CSD U6 params create colors": {
-          "Red": "紅",
-          "Blue": "藍"
+          "Blue": "藍",
+          "Red": "紅"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "紅",
-          "Blue": "藍"
+          "Blue": "藍",
+          "Red": "紅"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "紅",
-          "Blue": "藍"
+          "Blue": "藍",
+          "Red": "紅"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "紅",
-          "Blue": "藍"
+          "Blue": "藍",
+          "Red": "紅"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -927,24 +1606,24 @@
           "Success!": "成功！"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "內文",
           "high": "高",
-          "low": "低"
+          "low": "低",
+          "text": "內文"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "內文",
           "high": "高",
-          "low": "低"
+          "low": "低",
+          "text": "內文"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "內文",
           "high": "高",
-          "low": "低"
+          "low": "低",
+          "text": "內文"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "內文",
           "high": "高",
-          "low": "低"
+          "low": "低",
+          "text": "內文"
         },
         "CSD U6 setProperty predict app": {
           "title": "標題"
@@ -959,20 +1638,20 @@
           "title": "標題"
         },
         "CSD U6 slider intro": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 slider intro_2018": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 slider intro_2019": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 slider intro_2021": {
-          "short": "短",
-          "long": "長"
+          "long": "長",
+          "short": "短"
         },
         "CSD U6 test LED": {
           "Success!": "成功！"
@@ -987,71 +1666,74 @@
           "Success!": "成功！"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "紅",
+          "Blue": "藍",
           "Green": "綠",
-          "Blue": "藍"
+          "Red": "紅"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "紅",
+          "Blue": "藍",
           "Green": "綠",
-          "Blue": "藍"
+          "Red": "紅"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "關於",
           "About Us": "關於我們",
-          "Cancel": "取消",
-          "Name:": "名字：",
-          "Red": "紅",
-          "Green": "綠",
           "Blue": "藍",
-          "Yes": "是",
+          "Cancel": "取消",
+          "Green": "綠",
+          "Name:": "名字：",
           "No": "否",
-          "Save": "儲存"
+          "Red": "紅",
+          "Save": "儲存",
+          "User": "使用者",
+          "Yes": "是"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "關於",
           "About Us": "關於我們",
-          "Cancel": "取消",
-          "Name:": "名字：",
-          "Red": "紅",
-          "Green": "綠",
           "Blue": "藍",
-          "Yes": "是",
+          "Cancel": "取消",
+          "Green": "綠",
+          "Name:": "名字：",
           "No": "否",
-          "Save": "儲存"
+          "Red": "紅",
+          "Save": "儲存",
+          "User": "使用者",
+          "Yes": "是"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "關於",
           "About Us": "關於我們",
-          "Cancel": "取消",
-          "Name:": "名字：",
-          "Red": "紅",
-          "Green": "綠",
           "Blue": "藍",
-          "Yes": "是",
+          "Cancel": "取消",
+          "Green": "綠",
+          "Name:": "名字：",
           "No": "否",
-          "Save": "儲存"
+          "Red": "紅",
+          "Save": "儲存",
+          "User": "使用者",
+          "Yes": "是"
         },
         "CSDU4 Decision App Demo": {
           "About": "關於",
-          "Why?": "為什麼？",
+          "About Us": "關於我們",
           "I don't know": "我不知道",
           "When?": "什麼時候？",
-          "About Us": "關於我們"
+          "Why?": "為什麼？"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "關於",
-          "Why?": "為什麼？",
+          "About Us": "關於我們",
           "I don't know": "我不知道",
           "When?": "什麼時候？",
-          "About Us": "關於我們"
+          "Why?": "為什麼？"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "關於",
-          "Why?": "為什麼？",
+          "About Us": "關於我們",
           "I don't know": "我不知道",
           "When?": "什麼時候？",
-          "About Us": "關於我們"
+          "Why?": "為什麼？"
         },
         "CSDU4 Functionality visible": {
           "Hide": "隱藏",
@@ -1060,44 +1742,44 @@
         "CSDU4 List App Demo": {
           "About": "關於",
           "About Us": "關於我們",
-          "Done": "完成",
-          "Cancel": "取消"
+          "Cancel": "取消",
+          "Done": "完成"
         },
         "CSDU4 List App Demo_2018": {
           "About": "關於",
           "About Us": "關於我們",
-          "Done": "完成",
-          "Cancel": "取消"
+          "Cancel": "取消",
+          "Done": "完成"
         },
         "CSDU4 List App Demo_2019": {
           "About": "關於",
           "About Us": "關於我們",
-          "Done": "完成",
-          "Cancel": "取消"
+          "Cancel": "取消",
+          "Done": "完成"
         },
         "CSDU4 Quiz App Demo": {
           "About": "關於",
-          "Submit": "提交",
-          "Why?": "為什麼？",
-          "When?": "什麼時候？",
           "About Us": "關於我們",
-          "Correct!": "正確！"
+          "Correct!": "正確！",
+          "Submit": "提交",
+          "When?": "什麼時候？",
+          "Why?": "為什麼？"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "關於",
-          "Submit": "提交",
-          "Why?": "為什麼？",
-          "When?": "什麼時候？",
           "About Us": "關於我們",
-          "Correct!": "正確！"
+          "Correct!": "正確！",
+          "Submit": "提交",
+          "When?": "什麼時候？",
+          "Why?": "為什麼？"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "關於",
-          "Submit": "提交",
-          "Why?": "為什麼？",
-          "When?": "什麼時候？",
           "About Us": "關於我們",
-          "Correct!": "正確！"
+          "Correct!": "正確！",
+          "Submit": "提交",
+          "When?": "什麼時候？",
+          "Why?": "為什麼？"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1118,80 +1800,177 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "成功！"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "成功！"
+        },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "成功！"
         },
+        "CSDU6 Circuit Playground Test_mb2022": {
+          "Success!": "成功！"
+        },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
+        },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "按一下下面的按鈕，建立規則遵循的內容的猜測",
+          "Computer's Guess FOLLOWS Rule": "計算機的猜測遵循規則",
+          "Computer's Guess does NOT follow the Rule": "計算機的猜測不遵循規則",
+          "Computer's Guess:": "計算機的猜測：",
+          "Current Guess": "目前的猜測",
+          "Previous Guesses": "以前的猜測",
+          "Submit Guess": "提交猜測"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "在提示框中輸入文字與 Eliza 對話。完成後，在提示中鍵入 quit。"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "防彈少年團：「炸藥」",
+          "Back": "返回",
+          "Change Voice": "更改聲音",
+          "Choose a voice to model": "選擇要建模的聲音",
+          "Choose the Save file you want to load from the dropdown below": "從下面的下拉菜單中選擇要加載的保存文件",
+          "Copy / Paste or type the words you want to create a model based on below": "複製/粘貼或鍵入要基於以下内容建模的單詞",
+          "Create my own!": "創建我自己的！",
+          "Delete Text": "刪除文本",
+          "Dr Seuss: Green Eggs and Ham": "蘇斯博士：綠蛋和火腿",
+          "Generate!": "生成！",
+          "Give the voice a name": "給聲音命名",
+          "Give your save file a name": "給您的儲存檔案命名",
+          "Load Save": "載入儲存",
+          "Load this story": "載入此故事",
+          "Maya Angelou: \"Caged Bird\"": "瑪雅·安吉洛：「籠中的鳥」",
+          "Model This Voice!": "建模這個聲音！",
+          "Modeling Voice": "建模聲音",
+          "Pharell: \"Happy\"": "法瑞爾：「快樂」",
+          "Sandra Cisneros: \"Abuelito Who\"": "桑德拉·西斯內羅斯:「Abuelito Who」",
+          "Save Text": "儲存文本",
+          "Save!": "儲存！"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "選擇下列其中一個內容創作者，為您產生推薦內容。點擊他們的名字將顯示關於他們的更多資訊。選擇某人後，點擊「顯示推薦」按鈕以查看您的視訊饋送！查看推薦！➡️ 您的推薦。這些是根據您在上一個螢幕中選擇的人推薦的視訊。一次只顯示3個視訊 - 使用滾動按鈕查看更多內容。使用左側的按鈕按特定類別進行過濾。例如！例子！例子！⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新人員",
+          "Example!": "例子！",
+          "Let's Get Started! ➡️": "讓我們開始吧！➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "選擇某人後，點擊「顯示推薦」按鈕以查看您的視訊饋送！",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "一次只會顯示個視訊 - 使用滾動按鈕查看更多內容。 ",
+          "See Recommendations! ➡️": "查看推薦！➡️",
+          "Select at least one person to use for recommendations to continue!": "選擇至少一個人用於推薦以繼續！",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "只需選擇您要追蹤的內容創作者，然後查看您的視訊推薦！",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "這些是根據您在上一個螢幕中選擇的人推薦的視訊。一次只顯示3個視訊 - 使用滾動按鈕查看更多内容。使用左側的按鈕按某些類別進行過濾。例如！例子！例子！⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新人員",
+          "Use the buttons on the left to filter by certain categories.": "使用左側的按鈕按特定類別進行過濾。",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "我們收集了所有您最喜歡的個性，以製作符合您興趣的視訊，並幫助策劃您的視訊饋送。",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube是一個針對您喜歡的所有內容創作者的新媒體網站。我們收集了所有您最喜歡的個性，以製作符合您興趣的視訊並幫助策劃您的視訊饋送。只需選擇您想追蹤的內容創作者，然後查看您的視訊推薦！讓我們開始吧！➡️ 選擇至少一個人用於推薦以繼續！選擇下列其中一個內容創作者，為您產生推薦內容。點擊他們的名字將顯示關於他們的更多資訊。選擇某人後，點擊「顯示推薦」按鈕以查看您的視訊饋送！查看推薦！➡️ 您的推薦。這些是根據您在上一個螢幕中選擇的人推薦的視訊。一次只顯示3個視訊 - 使用滾動按鈕查看更多內容。使用左側的按鈕按特定類別進行過濾。例如！例子！例子！⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新人員",
+          "Your Recommendations": "您的推薦",
+          "⬅️ Select New Person": "⬅️ 選擇新人員",
+          "⬆️ Scroll Up ⬆️": "⬆️ 向上滾動 ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ 向下滾動 ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0表示他們的意見完全不包含在您的推薦中",
+          "10 means they have a huge influence on the recommendations you receive": "10 意味著他們對您收到的建議產生巨大影響",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "選擇下列其中一個內容建立者，然後使用滑桿調整您希望他們對您的推薦產生多大影響力！0 表示他們的意見全部不包含在您的建議中 10 意味著他們對您收到的建議具有巨大的影響。➡️ 功能值您的推薦這些是根據您在最後一個屏幕上調整權重的方式推薦的視頻。一次只會顯示 3 部影片-使用捲動按鈕查看更多內容。使用左側的按鈕通過某些視頻進行過濾示例！例子！例子！⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新權重",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "選擇下面的內容創作者之一，然後使用滑桿來調整您希望他們影響您的建議的程度！0表示他們的意見完全不包含在您的推薦中。10意味著他們對您收到的推薦產生巨大影響。功能。標簽。查看推薦！➡️ 功能。評估您的推薦。這些是根據您在上一個螢幕中調整的權重推薦的視訊。一次只顯示3個視訊 - 使用滾動按鈕查看更多。使用左側的按鈕按某些視訊過濾。⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新權重",
+          "Example!": "例子！",
+          "Let's Get Started! ➡️": "讓我們開始吧！➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "一次只會顯示個視訊 - 使用滾動按鈕查看更多內容。 ",
+          "See Recommendations! ➡️": "查看推薦！➡️",
+          "Select at least one person to use for recommendations to continue!": "選擇至少一個人用於推薦以繼續！",
+          "Simply pick which content creators you want to follow to see your recommendations!": "只需選擇您想要追蹤的內容創作者即可查看您的推薦！",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "這些是根據您在最後一個屏幕上調整權重的方式推薦您的視頻。一次只會顯示 3 部影片-使用捲動按鈕查看更多內容。使用左側的按鈕通過某些視頻進行過濾示例！例子！例子！⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新權重",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "這些是根據您在上一個螢幕中調整的權重推薦的視訊。一次只顯示3個視訊 - 使用滾動按鈕查看更多。使用左側的按鈕按某些視訊過濾。⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新權重",
+          "Use the buttons on the left to filter by certain videos": "使用左側的按鈕按特定視訊進行過濾",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "我們收集了所有您最喜歡的個性，以製作符合您興趣的視訊。",
+          "WeTube Video Recommendations": "WeTube視訊推薦",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube 是一個適合所有您喜歡的內容創作者的新媒體網站。我們收集了所有您最喜歡的個性，以製作符合您興趣的視頻。只需選擇您想關注的內容創建者即可查看您的推薦！讓我們開始吧！➡️ 選擇至少一個人用於推薦以繼續！選擇下列其中一個內容建立者，然後使用滑桿調整您希望他們影響您的推薦的程度！0 表示他們的意見全部不包含在您的建議中 10 意味著他們對您收到的建議具有巨大的影響。➡️ 功能值您的推薦這些是根據您在最後一個屏幕上調整權重的方式推薦的視頻。一次只會顯示 3 部影片-使用捲動按鈕查看更多內容。使用左側的按鈕通過某些視頻進行過濾示例！例子！例子！⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新權重",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube是一個適合所有您喜歡的內容創作者的新媒體網站。我們收集了所有您最喜歡的個性，以製作符合您興趣的視訊。只需選擇您想關注的內容創作者即可查看您的推薦！讓我們開始吧！➡️ 選擇至少一個人用於推薦以繼續！選擇下列其中一個內容創作者，然後使用滑桿調整您希望他們對您的推薦產生多大影響力！0表示他們的意見完全不包含在您的推薦中，10意味著他們對您收到的推薦具有巨大的影響。➡️ 功能。評估您的推薦。這些是根據您在上一個螢幕中調整的權重推薦的視訊。一次只顯示3個視訊 - 使用滾動按鈕查看更多內容。使用左側的按鈕按特定視訊進行過濾。⬆️ 向上滾動 ⬆️⬇️ 向下滾動 ⬇️⬅️ 選擇新權重",
+          "Your Recommendations": "您的推薦",
+          "featureLabel": "特徵標籤",
+          "featureValue": "特徵值",
+          "⬅️ Select New Weights": "⬅️ 選擇新權重",
+          "⬆️ Scroll Up ⬆️": "⬆️ 向上滾動 ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ 向下滾動 ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "要有耐心！嘈雜的圖像加載！",
+          "Move the slider to add more or less generations of noise to the image": "移動滑桿可在影像中加入或多或更少的雜訊世代",
+          "New Image": "新影像",
+          "Noise Generations:": "噪音產生:",
+          "Noise Generations: ": "噪音產生: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "作物",
+          "Image Select": "影像選擇",
+          "Reset": "重設"
         },
         "allthethings design mode elements": {
           "text": "內文"
@@ -1211,13 +1990,20 @@
         "csd u5 recommender sample_2022": {
           "Start": "開始"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "開始"
+        },
         "csd-apps for good-2": {
-          "Next": "下一個",
-          "Home": "主頁"
+          "Home": "主頁",
+          "Next": "下一個"
         },
         "csd-apps for good-2_2022": {
-          "Next": "下一個",
-          "Home": "主頁"
+          "Home": "主頁",
+          "Next": "下一個"
+        },
+        "csd-apps for good-2_2023": {
+          "Home": "主頁",
+          "Next": "下一個"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1233,24 +2019,27 @@
           "4": "4",
           "???": "???"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???"
+        },
         "csd-explore ui-2": {
-          "Next": "下一個",
-          "Home": "主頁"
+          "Home": "主頁",
+          "Next": "下一個"
         },
         "csd-explore ui-2_2022": {
-          "Next": "下一個",
-          "Home": "主頁"
+          "Home": "主頁",
+          "Next": "下一個"
+        },
+        "csd-explore ui-2_2023": {
+          "Home": "主頁",
+          "Next": "下一個"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1261,18 +2050,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1283,7 +2072,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "正確！",
@@ -1293,16 +2112,12 @@
           "Correct!": "正確！",
           "Sorry!": "抱歉！"
         },
+        "csd-explore ui-4_2023": {
+          "Correct!": "正確！",
+          "Sorry!": "抱歉！"
+        },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1313,18 +2128,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1335,7 +2150,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "下一個"
@@ -1343,14 +2188,22 @@
         "csd-explore ui-6_2022": {
           "Next": "下一個"
         },
+        "csd-explore ui-6_2023": {
+          "Next": "下一個"
+        },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "綠色玻璃門",
           "Accepted": "已接受",
+          "Green Glass Door": "綠色玻璃門",
           "Rejected": "已拒絕"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "綠色玻璃門",
           "Accepted": "已接受",
+          "Green Glass Door": "綠色玻璃門",
+          "Rejected": "已拒絕"
+        },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "已接受",
+          "Green Glass Door": "綠色玻璃門",
           "Rejected": "已拒絕"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1359,17 +2212,26 @@
         "ml-L2 unsupervised - 1_2022": {
           "Next": "下一個"
         },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "下一個"
+        },
         "ml-customize-raspado-2021": {
-          "yes": "確定",
-          "no": "no",
+          "Predict": "預測",
           "Raspado Recommender": "Raspado推薦器",
-          "Predict": "預測"
+          "no": "no",
+          "yes": "確定"
         },
         "ml-customize-raspado_2022": {
-          "yes": "確定",
-          "no": "no",
+          "Predict": "預測",
           "Raspado Recommender": "Raspado推薦器",
-          "Predict": "預測"
+          "no": "no",
+          "yes": "確定"
+        },
+        "ml-customize-raspado_2023": {
+          "Predict": "預測",
+          "Raspado Recommender": "Raspado推薦器",
+          "no": "no",
+          "yes": "確定"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "繼續",
@@ -1379,107 +2241,162 @@
           "Continue": "繼續",
           "Loading...": "正在載入…"
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "繼續",
+          "Loading...": "正在載入…"
+        },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "呆傻的",
-          "Predict": "預測"
+          "Predict": "預測",
+          "Silly": "呆傻的"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "呆傻的",
-          "Predict": "預測"
+          "Predict": "預測",
+          "Silly": "呆傻的"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
+          "Predict": "預測",
+          "Silly": "呆傻的"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "西",
           "A": "A",
-          "yes": "確定",
+          "W": "西",
+          "head": "頭",
           "no": "no",
-          "head": "頭"
+          "yes": "確定"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "西",
           "A": "A",
-          "yes": "確定",
+          "W": "西",
+          "head": "頭",
           "no": "no",
-          "head": "頭"
+          "yes": "確定"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "西",
+          "head": "頭",
+          "no": "no",
+          "yes": "確定"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "呆傻的",
-          "Predict": "預測"
+          "Predict": "預測",
+          "Silly": "呆傻的"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "呆傻的",
-          "Predict": "預測"
+          "Predict": "預測",
+          "Silly": "呆傻的"
+        },
+        "ml-model cards-book recommender model card_2023": {
+          "Predict": "預測",
+          "Silly": "呆傻的"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "預測"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "預測"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "預測"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "預測"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "預測"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "預測"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "預測",
-          "Back": "返回"
+          "2": "2",
+          "3": "3",
+          "Back": "返回",
+          "Predict": "預測"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "預測",
-          "Back": "返回"
+          "2": "2",
+          "3": "3",
+          "Back": "返回",
+          "Predict": "預測"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "返回",
+          "Predict": "預測"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "預測"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "預測"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "預測"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "是",
-          "No": "否",
           "B": "B",
-          "Predict": "預測"
+          "No": "否",
+          "Predict": "預測",
+          "Yes": "是"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "是",
-          "No": "否",
           "B": "B",
-          "Predict": "預測"
+          "No": "否",
+          "Predict": "預測",
+          "Yes": "是"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "否",
+          "Predict": "預測",
+          "Yes": "是"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "是",
           "No": "否",
-          "Predict": "預測"
+          "Predict": "預測",
+          "Yes": "是"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "是",
           "No": "否",
-          "Predict": "預測"
+          "Predict": "預測",
+          "Yes": "是"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "否",
+          "Predict": "預測",
+          "Yes": "是"
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "改進鞋推薦器",
@@ -1489,10 +2406,17 @@
           "Improved Shoe Recommender": "改進鞋推薦器",
           "Sports": "運動"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "改進鞋推薦器",
+          "Sports": "運動"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "終極鞋推薦器"
         },
         "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "終極鞋推薦器"
+        },
+        "ml-models-shoes points_2023": {
           "Ultimate Shoe Recommender": "終極鞋推薦器"
         },
         "ml-models-shoes random-2021": {
@@ -1501,23 +2425,35 @@
         "ml-models-shoes random_2022": {
           "Shoe Recommender": "鞋推薦器"
         },
+        "ml-models-shoes random_2023": {
+          "Shoe Recommender": "鞋推薦器"
+        },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "司機報警系統",
-          "rain": "下雨",
-          "snow": "雪",
+          "Predict": "預測",
           "cloudy": "多雲",
-          "night": "夜晚",
           "dusk": "黃昏",
-          "Predict": "預測"
+          "night": "夜晚",
+          "rain": "下雨",
+          "snow": "雪"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "司機報警系統",
-          "rain": "下雨",
-          "snow": "雪",
+          "Predict": "預測",
           "cloudy": "多雲",
-          "night": "夜晚",
           "dusk": "黃昏",
-          "Predict": "預測"
+          "night": "夜晚",
+          "rain": "下雨",
+          "snow": "雪"
+        },
+        "ml-use model card-example3A_2023": {
+          "Driver Alert System": "司機報警系統",
+          "Predict": "預測",
+          "cloudy": "多雲",
+          "dusk": "黃昏",
+          "night": "夜晚",
+          "rain": "下雨",
+          "snow": "雪"
         }
       }
     }

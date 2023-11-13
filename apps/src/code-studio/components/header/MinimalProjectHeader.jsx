@@ -8,12 +8,16 @@ import ProjectRemix from './ProjectRemix';
 // Minimal project header for viewing channel shares and legacy /c/ share pages.
 class MinimalProjectHeader extends React.Component {
   static propTypes = {
-    projectName: PropTypes.string.isRequired,
-    inRestrictedShareMode: PropTypes.bool
+    legacyProjectName: PropTypes.string,
+    lab2ProjectName: PropTypes.string,
+    inRestrictedShareMode: PropTypes.bool,
   };
 
   render() {
-    const {inRestrictedShareMode, projectName} = this.props;
+    const {inRestrictedShareMode, legacyProjectName, lab2ProjectName} =
+      this.props;
+    // Only one of legacyProjectName and lab2ProjectName will be defined.
+    const projectName = legacyProjectName || lab2ProjectName;
 
     return (
       <div style={{display: 'flex'}}>
@@ -32,6 +36,7 @@ class MinimalProjectHeader extends React.Component {
 }
 
 export default connect(state => ({
-  projectName: state.project.projectName,
-  inRestrictedShareMode: state.project && state.project.inRestrictedShareMode
+  legacyProjectName: state.project.projectName,
+  lab2ProjectName: state.lab.channel && state.lab.channel.name,
+  inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
 }))(MinimalProjectHeader);

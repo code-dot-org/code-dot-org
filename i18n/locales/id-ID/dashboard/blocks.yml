@@ -2,6 +2,8 @@
 id:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -15,7 +17,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +24,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -69,6 +69,11 @@ id:
             MOVES.Rest: Tidak Ada
       Dancelab_atTimestamp:
         text: setelah {TIMESTAMP}{UNIT}
+        options:
+          UNIT:
+            '"measures"': langkah
+            '"seconds"': detik
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"measures"': langkah
@@ -372,6 +377,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"spiral"': spiral
             '"infinity"': infinite line
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
@@ -502,6 +508,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"spiral"': spiral
             '"infinity"': infinite line
             '"random"': acak
       Dancelab_mixColors:
@@ -592,6 +599,52 @@ id:
             '"iceCream"': Es Krim
             '"default"': Lampu
             '"neon"': Neon
+            '"tropical"': Tropis
+            '"vintage"': Vintage
+            '"warm"': Hangat
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          tetapkan efek latar belakang
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Tidak Ada
+            '"rand"': Acak
+            '"circles"': Lingkaran
+            '"quads"': Sudut
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"flowers"': Bunga
+            '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"ripples_random"': Riak Acak
+            '"ripples"': Riak
+            '"snowflakes"': Salju
+            '"text"': Nama Lagu
+            '"squiggles"': Garis berlekuk
+            '"galaxy"': Spasi
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"disco"': Bujur sangkar
+            '"starburst"': Semburan bintang
+            '"stars"': Bintang
+            '"music_wave"': Gelombang
+          PALETTE:
+            '"rave"': Hitam dan Putih
+            '"cool"': Keren
+            '"electronic"': Elektronik
+            '"iceCream"': Es Krim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"ocean"': Lautan
+            '"rainbow"': Pelangi
             '"tropical"': Tropis
             '"vintage"': Vintage
             '"warm"': Hangat
@@ -1007,8 +1060,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:
@@ -1025,8 +1076,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1055,6 +1104,8 @@ id:
         text: menghindari target
       gamelab_beginCollectingData:
         text: mulai mengumpulkan data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} memantulkan {TARGET}"
       gamelab_changePropBy:
@@ -1246,6 +1297,19 @@ id:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: tata letak {GROUP} sebagai {FORMAT}
+        options:
+          FORMAT:
+            '"border"': batas
+            '"circle"': loop
+            '"grid"': Kisi
+            '"top"': baris atas
+            '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
+            '"column"': kolom
+            '"right"': kolom kanan
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1269,8 +1333,21 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+            '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': batas
+            '"circle"': loop
+            '"grid"': Kisi
+            '"top"': baris atas
+            '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
+            '"column"': kolom
+            '"right"': kolom kanan
       gamelab_makeNumSprites:
         text: buat {NUM} sprite {ANIMATION_NAME} baru
       gamelab_makeProjectile:
@@ -1665,6 +1742,10 @@ id:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: jatuh
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2006,14 +2087,10 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2063,6 +2140,7 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+            '"spiral"': spiral
       Poetry_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       Poetry_makeNumSprites:
@@ -2234,7 +2312,6 @@ id:
         text: saat baris {N} memperlihatkan
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2258,8 +2335,6 @@ id:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} Mengatakan {TEXT} Untuk {SECONDS} Detik
       Vector_createSpriteWith:
         text: |-
           buat sprite
@@ -2296,9 +2371,6 @@ id:
         options:
           PORTION:
             '1': semua
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"slowly"': pelan-pelan
           BEHAVIOR:
@@ -2307,9 +2379,6 @@ id:
         options:
           PORTION:
             '1': semua
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           BEHAVIOR:
             '"avoiding"': jaga jarak
       aalab_spriteSayChoices:
@@ -2322,6 +2391,19 @@ id:
         options:
           BEHAVIOR:
             '"avoiding"': jaga jarak
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(fluttering, []): sempoyongan
+            new Behavior(jittering, []): gugup
+            new Behavior(wobbling, []): terhuyung-huyung
+            new Behavior(wandering, []): pengembaraan
+            new Behavior(patrolling, []): perondaan
+      adaptations_startFollowing:
+        text: "{SPRITE} mulai mengikuti {TARGET}"
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:
@@ -2431,6 +2513,22 @@ id:
           DIR:
             right: kanan
             left: kiri -
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: cetak {TEXT}
       storylab_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:
@@ -2445,7 +2543,3 @@ id:
         text: tetapkan heading {HEADING}
       storylab_setSubheading:
         text: tetapkan subheading {SUBHEADING}
-      validation_validatedBackground:
-        text: atur latar belakang ke {IMG}
-      validation_validatedSound:
-        text: MAINKAN Suara {SOUND}

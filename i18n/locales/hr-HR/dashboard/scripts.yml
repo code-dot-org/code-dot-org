@@ -106,6 +106,10 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Glazba
         algebraPD2b:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
@@ -157,7 +161,6 @@ hr:
           description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
           student_description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
         mc:
-          title: Minecraft Sat Kodiranja
           description: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu kroz ovaj svijet Minecrafta
           description_short: Istraži Minecraft svijet pomoću koda
           student_description: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu kroz ovaj svijet Minecrafta
@@ -1058,3 +1061,154 @@ hr:
               display_name: Liste
             lessonGroup-3:
               display_name: Petlje
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Likovi
+            lessonGroup-9:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Petlja brojača
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_sprites:
+              display_name: Likovi
+            ramp_up:
+              display_name: Ugniježđene petlje
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Uvod
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Uvod
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-3:
+              display_name: Likovi
+            lessonGroup-4:
+              display_name: Varijable
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-6:
+              display_name: Petlje
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježđene petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+            lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
+              display_name: Varijable
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Uvod
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 const style = {
   aboveFooter: {
-    height: '90px'
+    height: '90px',
   },
   footer: {
     position: 'absolute',
@@ -13,16 +13,16 @@ const style = {
     right: '0',
     bottom: '0',
     background: 'white',
-    zIndex: '500'
+    zIndex: '500',
   },
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   rightAlign: {
-    justifyContent: 'flex-end'
-  }
+    justifyContent: 'flex-end',
+  },
 };
 
 /**
@@ -33,7 +33,7 @@ const style = {
 export default class DialogFooter extends Component {
   static propTypes = {
     rightAlign: PropTypes.bool,
-    children: PropTypes.any
+    children: PropTypes.any,
   };
 
   render() {

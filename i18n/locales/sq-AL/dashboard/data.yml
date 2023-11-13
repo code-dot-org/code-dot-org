@@ -38,6 +38,8 @@ sq:
         NetSim: Imitues Interneti
         Custom: Artisti
         CustomStudio: Play Lab
+        Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronx
@@ -159,18 +161,18 @@ sq:
         maze_3_3: Si të shkoj te derrkuci? Sigurohu që unë nuk vrapoj brenda kutisë së TNT!
         maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt derrkucit.
         Custom_builder: Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
-        jigsaw_1: Kliko bllokun
-        jigsaw_2: Lëviz bllokun tek objektivi
-        jigsaw_3: Vendos blloqet që të formojnë një imazh
-        jigsaw_4: Vendos blloqet që të formojnë një imazh
-        jigsaw_5: Vendos blloqet që të formojnë një imazh
-        jigsaw_6: Vendos blloqet që të formojnë një imazh
-        jigsaw_7: Vendos blloqet që të formojnë një imazh
-        jigsaw_8: Vendos blloqet që të formojnë një imazh
-        jigsaw_9: Vendos blloqet që të formojnë një imazh
-        jigsaw_10: Vendos blloqet që të formojnë një imazh
-        jigsaw_11: Vendos blloqet që të formojnë një imazh
-        jigsaw_12: Vendos blloqet që të formojnë një imazh
+        jigsaw_1: Klikoni bllokun
+        jigsaw_2: Tërhiqeni bllokun te objektivi
+        jigsaw_3: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_4: Bashkoni blloqet për të formuar imazhin
+        jigsaw_5: Bashkoni blloqet për të formuar imazhin
+        jigsaw_6: Bashkoni blloqet për të formuar imazhin
+        jigsaw_7: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_8: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_9: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_10: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_11: Vendosni këto blloqe në rend sipas numrit
+        jigsaw_12: Vendosni këto blloqe në rend sipas numrit
         jigsaw_13: Rregullo puzzle-in!
         mazestep_1: Përshkrimi i hapave të labirintit është këtu
         mazestep_2: Përshkrimi i hapave të Maze është këtu
@@ -285,7 +287,7 @@ sq:
         C1_moveitmoveit_unplugged: Lëvize atë, lëvize atë
         C1_bigevent_unplugged: Ngjarja e Madhe
         C1_getting_loopy: Duke u Çmëndur
-        C1_pair_programming: Programim në çift
+        C1_pair_programming: Programimi në ekip
         C1_maze_intro_sequencing: Hyrja e Sekuencuar e Maze
         C1_maze_debugging: Riparimi i Maze
         C1_bee_level_intro: Niveli i Bletëve - Hyrje
@@ -299,7 +301,7 @@ sq:
         C1_building_foundation: Ndërtimi i një Baze
         C1_going_places_safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         C2_maze_intro: Hyrja e Maze
-        C2_artist_intro: Hyrja e Artistit
+        C2_artist_intro: Artisti 
         C2_zuck_repeat_loop: Përsëritja e Maze
         C2_artist_loops: Përsëritjet e Artistit
         C2_artist_debugging: Riparimi i Artistit
@@ -332,7 +334,7 @@ sq:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Suncatchers Funksionalë
         C3_songwriting_with_parameters: Të shkruarit këngë me Parametra
-        C4_intro: Hyrja
+        C4_intro: Hyrje
         C4_loops_zombie: përsëritje
         C4_bee_conditional: Kushtet e Bletëve
         C4_variables_artist: Variablat - Artist
@@ -351,9 +353,15 @@ sq:
         C4_unplugged_forloops: Për Ciklet
         C4_unplugged_parameters: Të shkruarit këngë me Parametra
         C4_unplugged_binary: Binare
-        CSF_debugging_k1_blocks: Rregullimi
-        CSF_debugging_text_blocks: Rregullimi
-        CSF_my_robotic_friends: Miqtë e mi Robotikë
+        CSF_a_b_artist_loops: Loops te Artisti
+        CSF_collector_k1_blocks: 'Bazat e Shkencave Kompjuterike: Mbledhësja'
+        CSF_collector_repeat_loops: 'Mbledhësja: Repeat Loops'
+        CSF_collector_text_blocks: 'Mbledhësja'
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
+        CSF_maze_intro_k1_blocks: Hyrje në Code Studio
+        CSF_maze_intro_text_blocks: Hyrje Code Studio
+        CSF_my_robotic_friends: Shokët e mi robotik
         frozen_intro: Hyrja e Orës së Kodimit
         frozen_loops: Hyrja tek Ciklet
         frozen_functions: Hyrja në Funksione
@@ -366,7 +374,7 @@ sq:
         infinity_playlab_repeat_forever: Përsërit përgjithmonë- Laboratorti i Lojrave
         csp_applab_functions: Hyrja në Funksione
         csp_applab_functions_parameters: Funksionet me parametra
-        csp_applab_loops: cikle 
+        csp_applab_loops: Cikle
         csp_concept_rgb: Disa të dhëna rreth Piksel-ave
         starwars_intro: 'Lufta e yjeve: Ndërto një Galaksi me  kode prezantimi'
         starwars_typing: 'Lufta e yjeve: Ndërto  një Galaksi me kode JavaScripti'
@@ -392,13 +400,25 @@ sq:
         mc_2016_spawn: Lindja e Orës së Kodimit Minecraft
         mc_2016_congrats: Urimet e Orës së Kodimit Minecraft
         mc_2017_congratulations: Urimet e Orës së Kodimit Minecraft
-        CSF_loops_AB: cikle 
-        csd_pair_programming: Programim në çift
+        CSF_if_allskins: Blloku If
+        CSF_loops_AB: Cikle
+        CDEF_Video_SpritesInAction: Sprites në veprim
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
+        csd_pair_programming: Programimi në ekip
         csd_applab_parameters: Funksionet me parametra
-        csd_debugging: Rregullimi
+        CSF_Going_Places_Safely: Lagja ime në Internet
+        CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Si të krijoni një Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
+        csd_debugging: Debugging
+        oceans_machine_learning: Mësimi i Makinave
+        csf_my_online_neighborhood_2020: Lagja ime në Internet
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab
+        csd_u6_input_output: Inputet dhe Outputet
+        PL_CS_Journeys_Overview: Rrugëtimi në CS
         csp_applab_parameters: Funksionet me parametra
+        csc_timecapsule_intro: Kodimi i kapsulës së kohës
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër

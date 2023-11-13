@@ -26,7 +26,7 @@ class VocabularyAutocompleteTest < ActiveSupport::TestCase
   test "finds multiple matches" do
     matches = VocabularyAutocomplete.get_search_matches('pro', 5, @course_version_2018)
     assert_equal 2, matches.length
-    assert_equal ['Debugging', 'Programming'], matches.map {|m| m[:word]}
+    assert_equal(['Debugging', 'Programming'], matches.map {|m| m[:word]})
   end
 
   test "restricts matches by limit" do

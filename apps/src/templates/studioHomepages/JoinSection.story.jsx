@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'JoinSection',
-  component: JoinSection
+  component: JoinSection,
 };
 
 const Template = args => (
@@ -21,10 +21,10 @@ Has a dashed border to draw attention if the student is not yet a member of a se
 */
 export const NoSectionsYet = Template.bind({});
 NoSectionsYet.args = {
-  enrolledInASection: false
+  enrolledInASection: false,
 };
 
 export const StudentInSectionAlready = Template.bind({});
 StudentInSectionAlready.args = {
-  enrolledInASection: true
+  enrolledInASection: true,
 };

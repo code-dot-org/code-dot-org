@@ -2,14 +2,560 @@
   "ja-JP": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "ウェッブ ラボ"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "高度"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "円の半径 (ピクセル単位)。"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "描画する画像の左上隅の x 位置 (ピクセル単位)。"
+                    },
+                    "x": {
+                      "description": "描画する画像の左上隅の x 位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "描画する画像の左上隅の y 位置 (ピクセル単位)。"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  },
+                  "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色のアルファ (不透明度) の量 (0 から 255 の範囲) を返します。"
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "画像データをキャプチャする境界矩形の高さ。"
+                    },
+                    "width": {
+                      "description": "画像データをキャプチャする境界矩形の幅。"
+                    },
+                    "x": {
+                      "description": "キャプチャを開始する x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "キャプチャを開始する y 位置 (ピクセル単位)。"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "キャンバス上にデータを配置する画像の左上隅から始まるピクセル単位の x 位置。"
+                    },
+                    "y": {
+                      "description": "キャンバス上にデータを配置する画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "長方形の垂直方向の高さ (ピクセル単位)。"
+                    },
+                    "width": {
+                      "description": "長方形の水平幅 (ピクセル単位)。"
+                    },
+                    "x": {
+                      "description": "長方形の左上隅の x 位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "長方形の左上隅の y 位置 (ピクセル単位)。"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "ピクセルに設定するアルファ (不透明度) の量 (0 ～ 255)。"
+                    },
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  },
+                  "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色のアルファ (不透明度) の量 (0 から 255 の範囲) を設定します。"
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "ピクセルに設定する青の量 (0 から 255)。"
+                    },
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  },
+                  "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色の青の量 (0 から 255 の範囲) を BlueValue 入力量に設定します。"
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "ピクセルに設定する緑の量 (0 から 255)。"
+                    },
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  },
+                  "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色の緑の量 (0 から 255 の範囲) を GreenValue 入力量に設定します。"
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "[オプション]。ピクセルに設定する不透明度の量 (0 ～ 255)。デフォルトは 255 (完全不透明) です。"
+                    },
+                    "blue": {
+                      "description": "ピクセルに設定する青の量 (0 から 255)。"
+                    },
+                    "green": {
+                      "description": "ピクセルに設定する緑の量 (0 から 255)。"
+                    },
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "red": {
+                      "description": "ピクセルに設定する赤の量 (0 から 255)。"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "redValue": {
+                      "description": "ピクセルに設定する赤の量 (0 から 255)。"
+                    },
+                    "x": {
+                      "description": "画像の左上隅から始まる x の位置 (ピクセル単位)。"
+                    },
+                    "y": {
+                      "description": "画像の左上隅から始まるピクセル単位の y 位置。"
+                    }
+                  },
+                  "short_description": "指定された画像データ内の指定した x 位置と y 位置にあるピクセルの色の赤の量 (0 から 255 の範囲) を RedValue 入力量に設定します。"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "setTimeout 関数によって返される値をキャンセルします。"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数の各実行間のミリ秒数。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数を実行する前に待機するミリ秒数。"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "オブジェクトを返します"
+                    },
+                    "tableName": {
+                      "description": "レコードを取得するテーブルの名前。"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "取得するキーの名前。"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "このアプリの現在のユーザーのユニークな識別子を取得します。"
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "このイベントハンドラーが適用されるテーブルの名前。"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "保存するキーの名前。"
+                    },
+                    "value": {
+                      "description": "保存するデータ。"
+                    }
+                  },
+                  "short_description": "キーと値のペアを App Lab のキー/値データストレージに保存し、アクションが終了したらコールバック関数を呼び出します。"
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "データを返すサービスの Web アドレス。"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "オブジェクトを返します"
+                    }
+                  }
+                }
+              },
+              "name": "データ"
+            },
+            "functions": {
+              "name": "関数(かんすう) "
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
+                    }
+                  }
+                }
+              },
+              "name": "計算(けいさん)"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "タートルを滑らかな円弧を描いて前方と左に動かします。"
+                },
+                "getX": {
+                  "short_description": "タートルの現在の X 座標をピクセル単位で取得します。"
+                },
+                "getY": {
+                  "short_description": "タートルの現在の Y 座標をピクセル単位で取得します。"
+                },
+                "hide": {
+                  "short_description": "タートルを現在の位置から見えなくします。"
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "タートルを右に動かすピクセル数です。"
+                    },
+                    "y": {
+                      "description": "タートルを下に移動させるピクセル数です。"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "タートルを現在の方向から指定したピクセル数だけ後方に移動します。"
+                },
+                "moveForward": {
+                  "short_description": "タートルを現在の方向に指定のピクセル数だけ前方に移動します。"
+                },
+                "moveTo": {
+                  "short_description": "タートルを画面上の特定の (x, y) 位置に移動します。"
+                },
+                "penColor": {
+                  "short_description": "カメが線や点を描くのに使用するペンの色を設定します。"
+                },
+                "penDown": {
+                  "short_description": "ペンを下に置いて、カメが動くと後ろに線を引きます。"
+                },
+                "penRGB": {
+                  "short_description": "RGBA 値を使用して、タートルが線や点を描くのに使用するペンの色を設定します。"
+                },
+                "penUp": {
+                  "short_description": "ペンを持ち上げて、カメが動いても線を引かないようにします。"
+                },
+                "penWidth": {
+                  "short_description": "タートルが移動するときに後ろに描く線の幅をピクセル単位で設定します。"
+                },
+                "show": {
+                  "short_description": "現在の位置でタートルが見えるようにします。"
+                },
+                "speed": {
+                  "short_description": "アプリの実行速度を設定します。これにはタートルの速度も含まれます。"
+                },
+                "turnLeft": {
+                  "short_description": "タートルを指定した角度だけ左に回転させます。カメの位置は変わりません。"
+                },
+                "turnRight": {
+                  "short_description": "タートルを指定した角度だけ右に回転させます。カメの位置は変わりません。"
+                },
+                "turnTo": {
+                  "short_description": "タートルの方向を特定の角度に変更します。0 は上、90 は右、180 は下、270 は左です。"
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "指定した ID によって提供および参照されるテキストをデフォルトの場所 (0,0) に表示するボタンを画面上に作成します。"
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "小さくしたり大きくしたり"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "関数（かんすう）"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "変更するプロパティ。"
+                    }
+                  },
+                  "short_description": "指定された要素の新しい値にプロパティを設定します。"
+                },
+                "setScreen": {
+                  "short_description": "スクリーンを指定された ScreenID に設定します。"
+                },
+                "showElement": {
+                  "short_description": "指定された ID の要素を表示します。"
+                },
+                "textLabel": {
+                  "short_description": "指定されたIDによって提供および参照されたテキストをデフォルトの場所 (0,0) に表示するテキストラベルを画面上に作成します。"
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "設定なし"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "配列を宣言して変数に代入する"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "独自のアドベンチャーを選択"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "検索する文字列。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "検索する文字列。"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "文字列の長さ"
+                }
+              },
+              "name": "変数（へんすう）"
+            }
+          },
+          "description": "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。",
+          "name": "アプリ ラボ"
         },
         "gamelab": {
-          "name": "ゲーム ラボ",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数の各実行間のミリ秒数。"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "関数を実行する前に待機するミリ秒数。"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "星"
+                    }
+                  }
+                }
+              },
+              "name": "グラフィック"
+            },
+            "functions": {
+              "name": "関数(かんすう) "
+            },
             "game_lab": {
-              "name": "ゲーム ラボ",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -34,23 +580,15 @@
                 },
                 "playSound": {
                   "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
+                },
+                "showMobileControls": {
+                  "content": "プレイスペースの下に表示されるモバイルコントロールを変更します。",
+                  "short_description": "プレイスペースの下に表示されるモバイルコントロールを変更します。"
                 }
-              }
-            },
-            "sprites": {
-              "name": "スプライト",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "スパイラル"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "ゲーム ラボ"
             },
             "groups": {
-              "name": "グループ",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -87,317 +625,129 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "グラフィック",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "星"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "グループ"
             },
             "math": {
-              "name": "計算(けいさん)",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
                     "max": {
                       "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
+                    },
+                    "min": {
+                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
                     "max": {
                       "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "変数（へんすう）",
-              "expressions": {
-                "declareAssign_x": {
-                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
-                }
-              }
-            },
-            "functions": {
-              "name": "関数(かんすう) "
-            }
-          }
-        },
-        "applab": {
-          "name": "アプリ ラボ",
-          "description": "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "小さくしたり大きくしたり"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "関数（かんすう）"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "このURLからMP3のおんがくファイルをさいせいする。"
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "データ",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "関数（かんすう）"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "オブジェクトを返します"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "関数（かんすう）"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "計算(けいさん)",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
+                    },
                     "min": {
                       "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
-                    "max": {
-                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）"
-                    },
-                    "max": {
-                      "description": "返（かえ）される範囲（はんい）で最大（さいだい）の数（かず）"
                     }
                   }
                 }
-              }
+              },
+              "name": "計算(けいさん)"
             },
-            "variables": {
-              "name": "変数（へんすう）",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "独自のアドベンチャーを選択"
-                    }
-                  }
-                },
-                "declareAssign_x": {
-                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
-                },
-                "addPair": {
-                  "return_value": "設定なし"
-                }
-              }
-            },
-            "functions": {
-              "name": "関数(かんすう) "
-            },
-            "advanced": {
-              "name": "高度"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "スプライト ラボ",
-          "categories": {
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "スパイラル"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "スプライトの高さ。"
+                },
+                "sprite.width": {
+                  "return_value": "スプライトの幅。"
+                }
+              },
               "name": "スプライト"
             },
-            "world": {
-              "name": "世界"
-            },
-            "location": {
-              "name": "場所"
-            },
+            "variables": {
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "'var' の後に指定された名前で変数を宣言し、式の右側の値を割り当てます"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "検索する文字列。"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "検索する文字列。"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "文字列の長さ"
+                }
+              },
+              "name": "変数（へんすう）"
+            }
+          },
+          "name": "ゲーム ラボ"
+        },
+        "javalab": {
+          "name": "Javaラボ"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "うごき"
-            },
-            "events": {
-              "name": "イベント"
             },
             "behaviors": {
               "name": "行動"
             },
-            "loops": {
-              "name": "くりかえし"
+            "comments": {
+              "name": "コメント"
             },
-            "variables": {
-              "name": "変数（へんすう）"
-            },
-            "math": {
-              "name": "計算(けいさん)"
-            },
-            "logic": {
-              "name": "ロジック"
+            "events": {
+              "name": "イベント"
             },
             "functions": {
               "name": "関数(かんすう) "
             },
+            "location": {
+              "name": "場所"
+            },
+            "logic": {
+              "name": "ロジック"
+            },
+            "loops": {
+              "name": "くりかえし"
+            },
+            "math": {
+              "name": "計算(けいさん)"
+            },
+            "sprites": {
+              "name": "スプライト"
+            },
             "text": {
               "name": "テキスト"
             },
-            "comments": {
-              "name": "コメント"
+            "variables": {
+              "name": "変数（へんすう）"
+            },
+            "world": {
+              "name": "世界"
             }
-          }
+          },
+          "name": "スプライト ラボ"
         },
-        "javalab": {
-          "name": "Javaラボ"
+        "weblab": {
+          "name": "ウェッブ ラボ"
         }
       }
     }

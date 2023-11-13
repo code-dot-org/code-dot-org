@@ -133,7 +133,7 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for your group.
 
 ### 3. Plan your technology needs
 
@@ -186,7 +186,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 
 ### 1. Register Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 

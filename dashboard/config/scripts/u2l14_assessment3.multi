@@ -1,8 +1,11 @@
 name 'U2L14 Assessment3'
-encrypted 'LtEduTZ8AZ9PZ0Ajayl+HesaRriVdygSaDWhDrPwxU2Zq5tGVGqByR4S8znH
-56rbp2eWJPyw1y+DEP2E+39N69i16FRH+pgFF5uwoe2qsjmJ4lhS8VTJGDwQ
-hu3PcxTU8PaciOk+Ph5pd0n2TXaiDnYTHJcWsdCrFXCRZE68xBRWRTZxCLkX
-FCzr08qfk+qNFu7OdDRxn0y5g4x+WEOPM7ApHvsawEYhatx1aYehULxxAfi/
-EyOixXMF9DNtkiNZkZO+VRyHaWnRXWI+hMcTDkVgsf3wZ2hLOSztBCbRRwOk
-zeXA4OSQJ/93uZ0BL7HG
-'
+title 'Assessment: Question 4'
+
+question 'True or false? The Vigenere Cipher is like using multiple Caesar ciphers.'
+right 'true'
+wrong 'false'
+teacher_markdown <<MARKDOWN
+Answer: True
+MARKDOWN
+
+allow_multiple_attempts true

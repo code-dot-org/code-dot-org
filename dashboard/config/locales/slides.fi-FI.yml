@@ -1,433 +1,9 @@
 ---
 fi:
   slides:
-    maze_intro:
-      1:
-        text: Tervetuloa ensimmäiselle kooditunnille! Sukelletaanpa heti ohjelmoinnin
-          maailmaan.
-      2:
-        text: Käytämme Blocklyä. Se on on visuaalinen ohjelmointikieli, jossa koodia
-          kirjoitetaan vetämällä ja pudottamalla lohkoja.
-      3:
-        text: Yleensä koodi kirjoitetaan, mutta Blockly on visuaalinen. Jokainen lohko
-          vastaa riviä "oikeaa" koodia.
-      4:
-        text: Opit kohta tietotekniikan perusteet. Näitä käsitteitä käytetään kaikkialla
-          aina pienistä sovelluksista Mars-mönkijän ohjaamiseen saakka.
-      5:
-        text: Ohjelma on joukko ohjeita, joita tietokoneesi noudattaa.
-      6:
-        text: Ensimmäisen ohjelmasi tehtävä on ohjata Angry Bird -lintu sokkelon läpi
-          ja osua vihreään possuun.
-      7:
-        text: Vasemmalla on sokkelo, jossa ohjelmasi suoritetaan. Jokaisen tehtävän
-          ohjeet löytyvät sokkelon alapuolelta.
-      8:
-        text: Keskimmäinen työkalupakki sisältää komentoja Angry Bird -linnulle. Näitä
-          käytetään koodisi rakentamiseen.
-      9:
-        text: Oikealla on työtilasi, johon rakennat ohjelmasi raahamalla lohkoja työkalupakista.
-          Jos haluat poistaa lohkon, vedä se nurkasta löytyvään roskakoriin.
-      10:
-        text: Jokainen lohko on käsky. Jos vedät "liiku eteenpäin" -lohkon työtilaasi
-          ja painat "suorita ohjelma" -nappia, lintu liikkuu yhden ruudun sokkelossa.
-      11:
-        text: Tehdäksesi enemmän kuin yhden toiminnon, voit vetää monta lohkoa työtilaasi
-          ja liittää ne yhteen. Lintu tekee käskyt ylhäältä alaspäin.
-      12:
-        text: Jos suoritat ohjelman ja haluat korjata ja yrittää uudelleen, paina
-          "alusta" -nappulaa.
-      13:
-        text: Ja eikun vain possujen kimppuun!
-    artist_intro:
-      1:
-        text: Hei, olen JR! Kaikki ralliautotiimit tarvitsevat tietojenkäsittelyasiantuntijan
-          voittaakseen. He analysoivat auton tietoja saadakseen sen kulkemaan nopeammin.
-      2:
-        text: Näissä tehtävissä olet taiteilija, joka piirtää viivaa kulkiessaan.
-      3:
-        text: Tässä lohkossa lukee "liiku eteenpäin 100 kuvapistettä". Kuvapisteet
-          ovat pieniä pisteitä näytölläsi.
-      4:
-        text: Tässä lohkossa lukee "käänny oikealle 90 astetta". Se kääntää taiteilijaasi
-          saman verran kuin "käännä"-lohkot sokkelotehtävissä.
-      5:
-        text: Napsauttamalla lohkon päissä olevia nuolia, voit muuttaa sitä määrää,
-          jonka taiteilija liikkuu eteenpäin tai kääntyy. Leiki nyt hetki näillä lohkoilla
-          tutustuaksesi niihin paremmin.
-    farmer_intro:
-      1:
-        text: Hei, olen Paola! Näissä tehtävissä olet maanviljelijä, jonka täytyy
-          saada peltonsa täysin tasaiseksi aloittaakseen istutukset.
-      2:
-        text: Sinun täytyy auttaa häntä poistamaan kaikki multakasat ja täyttämään
-          kaikki kuopat.
-      3:
-        text: Uudet lohkot poistavat yhden lapiollisen multaa kasasta ja täyttävät
-          yhden lapiollisen multaa kuoppaan.
-      4:
-        text: Kasat ja kuopat ovat erikokoisia, joten sinun täytyy kertoa maanviljelijälle
-          kuinka monta lapiollista hänen tulisi käyttää.
-    flappy_intro:
-      1:
-        text: Hei olen Katie! Yksi mielenkiintoisimmista asioista tietotekniikassa
-          on, että tietokoneohjelma voi olla vuorovaikutteinen.
-      2:
-        text: Joka kerta kun joku napsauttaa tai kirjoittaa tietokoneella tai puhelimella,
-          se luo "tapahtuman", ja jokin kirjoitettu koodi päättää mitä tehdään kun
-          tuo tapahtuma tapahtuu.
-      3:
-        text: 'Esimerkiksi, sinulla voi olla tapahtumakäsittelijä, joka sanoo "kun
-          hiirtä napsautetaan, soita ääni" '
-      4:
-        text: Oletko koskaan kuullut pelistä nimeltä FlappyBird? Käyttäen tapahtumakäsittelijöitä,
-          opimme kuinka ohjelmoida oma räätälöity versio FlappyBirdistä!
-      5:
-        text: Nyt tehtävä koodaus tulee tapahtumaan vetämällä ja pudottamalla koodia
-          esittäviä lohkoja. Jokainen lohko vastaa yhtä tietokoneelle annettavaa komentoa.
-          Pinnan alla kukin näistä lohkoista vastaa oikea koodia.
-      6:
-        text: Kun tarkastelet työtilaa, huomaat joitain vihreitä lohkoja valmiiksi
-          täytettynä - nämä ovat "tapahtumakäsittelijöitä"
-      7:
-        text: Jos haluat linnun tekevän RÄPYTTELE-toiminnon kun NAPSAUTAT hiirtä,
-          voit tehdä niin liittämällä "RÄPYTTELE"-lohkon soveltuvaan tapahtumakäsittelijaan.
-          Näin lintu räpyttelee siipiään aina hiiren napsautuksella.
-      8:
-        text: Jokaisessa tämän jakson tehtävässä esittelemme työtilassa yhden tai
-          useamman uuden vihreän tapahtumalohkon. Liittämällä toimintolohkoja tapahtumalohkoihin,
-          voit päättää mitä tapahtumista seuraa.
-      9:
-        text: Kun näet tälläisen nuolen alaspäin, se tarkoittaa että voit muuttaa
-          asetuksia - kuten esimerkiksi, mikä ääni kuuluu, kun flappy osuu maahan.
-      10:
-        text: Viimeisessä tehtävässä voit luoda oman pelin ja jakaa sen ystäviesi
-          kanssa. Pidä hauskaa!
-    loop_times:
-      1:
-        text: Hei, olen Mark! Opetellaanpa silmukoita. Silmukalla voit ohjata tietokonetta
-          toistamaan mitä vain toimintoa uudelleen ja uudelleen, tuhansia tai jopa
-          miljardeja kertoja.
-      2:
-        text: Tässä tehtävässä haluamme liikuttaa lintua 5 ruutua eteenpäin osuaksemme
-          possuun.
-      3:
-        text: Voimme käyttää uutta "toista"-lohkoa apunamme.
-      4:
-        text: Sen sijaan että vetäisimme 5 "liiku eteenpäin" -lohkoa...
-      5:
-        text: Voimme laittaa "liiku eteenpäin" -lohkon "toista"-lohkon sisään ja kirjoittaa
-          luvun lohkoon kertoaksemme sille, kuinka monta kertaa pitää toistaa.
-      6:
-        text: 'Ja tämä on tärkeää: voit laittaa enemmän kuin yhden komennon "toista"-lohkoon.'
-      7:
-        text: Pidä hauskaa uuden "toista"-lohkon kanssa!
-    loop_until:
-      1:
-        text: Hei, olen Chris. Ennen kuin liityin Miami Heatiin, opiskelin tietotekniikkaa
-          Georgian teknillisessä oppilaitoksessa. Kokeillaanpa uutta "toista kunnes"
-          -lohkoa.
-      2:
-        text: Mitä jos emme tietäisi, kuinka pitkälle linnun pitäisi liikkua saavuttaakseen
-          possun?
-      3:
-        text: Jos laitamme "liiku eteenpäin" -lohkon "toista kunnes" -lohkon sisälle,
-          lintu liikkuu eteenpäin KUNNES se saavuttaa possun (tai törmää seinään).
-      4:
-        text: 'Ja tämä on tärkeää: aivan kuin ennenkin, voimme laittaa monta lohkoa
-          yhteen "toista kunnes" -lohkoon, niin että ne kaikki toistuvat.'
-    if:
-      1:
-        text: 'Hei, olen Bill! Opetellaanpa uusi keskeinen käsite: "jos"-lause. Tämän
-          avulla tietokoneet tekevät päätöksiä.'
-      2:
-        text: 'Käytät "Jos"-lausetta itse joka päivä. Esimerkiksi, ennen kuin lähdet
-          ulos, sanot itsellesi: "jos ulkona sataa, tarvitsen sadetakkini."'
-      3:
-        text: Voimme laittaa zombit tarkistamaan, JOS vasemmalle on reitti ja kun
-          zombie tulee sellaiseen kohtaan, voimme laittaa sen kääntymään sinne.
-      4:
-        text: Raahataan siis yksi "Jos"-lohko ja sen sisään "käänny vasemmalle" -lohko.
-      5:
-        text: Jos nyt laitamme "liiku eteenpäin" -lohkon sen yläpuolelle ja "toista"-lohkon
-          sen ympärille, niin zombie tarkistaa joka kerta kun se liikkuu, onko vasemmalle
-          reittiä – ja jos on, se kääntyy. "Toista"-lohko on hyvin tärkeä, jotta tarkistus
-          tehdään joka askeleella.
-      6:
-        text: Jos-lauseet ovat hyvin tärkeitä tietotekniikassa. Yksi ensimmäisistä
-          ohjelmista, jonka kirjoitin, oli peli nimeltä ristinolla. Siinä oli jos-lause,
-          joka sanoi että JOS toinen henkilö on voittamassa, estä siirto, jolla hän
-          voittaisi.
-      7:
-        text: Pidä hauskaa "Jos"-lohkolla!
-    if_else:
-      1:
-        text: Hei, nimeni on Saloni. Käytän tietotekniikkaa ratkomaan ongelmia terveyden
-          ja lääketieteen aloilla. Opiskellaanpa "jos muuten" -lohkosta. Se näyttää
-          "jos"-lohkolta, mutta siinä on ylimääräinen pala lopussa, joka sanoo "muuten".
-      2:
-        text: Jos laitan "liiku eteenpäin" -lohkon paikkaan jossa on "tee" ja "käänny
-          vasemmalle" -lohkot kohtaan jossa lukee "muuten" se tarkoittaa että zombie
-          valitsee kahden vaihtoehdon väliltä. JOS edessä on reitti, zombie menee
-          eteenpäin; MUUTEN (jos edessä ei ole reittiä) zombie kääntyy vasemmalle.
-      3:
-        text: Kuten "jos"-lohkon, voimme laittaa myös "jos muuten" -lohkon "toista"-lohkon
-          sisään niin, että zombie jatkaa liikkumista ja "jos muuten" -lohko tarkistaaa
-          jos jonnekin voi kääntyä.
-      4:
-        text: No niin, laitetaanpa nuo zombiet sinne minne kuuluvat!
-    if_else_scrat:
-      1:
-        text: Jos-muuten -lauseke on päätös kahden asian välillä. Katsotaanpa kuinka
-          käytämme jos-muuten -lauseketta kaverimme Scrat-oravan kanssa.
-      2:
-        text: Tämä lohko näyttää "jos" lohkolta, mutta siinä on "muuten" lisäosa lopussa.
-          Jos laitan "liiku eteenpäin" -lohkon kohtaan jossa on "tee" ja "käänny vasemmalle
-          -lohkon kohtaan, jossa sanotaan "muuten", se tarkoittaa, että Scrat-orava
-          liikkuu eteenpäin jos edessä on reitti. Jos edessä ei ole reittiä, Scrat
-          kääntyy vasemmalle.
-      3:
-        text: Se tekee päätöksen ja suorittaa yhden kahdesta toimenpiteesta päätökseen
-          perustuen. Ja aivan kuten "jos"-lohkoissa, voit laittaa "jos-muuten"-lohkoja
-          "toista"-lohkojen sisään.
-      4:
-        text: Autetaanpa Scrat-oravaa saamaan tammenterho!
-    function:
-      1:
-        text: Hei, olen Brina, insinööri Instagramilla. Funktio on joukko koodirivejä,
-          joita haluat käyttää uudelleen ja uudelleen. Niinpä sen sijaan, että kirjoittaisit
-          kaiken tuon koodin joka kerta, voit käyttää yhtä lohkoa.
-      2:
-        text: Nyt opettelemme, miten määritellään funktioita. Funktion määritelmän
-          nurkassa on tähti. Funktion nimi kirjoitetaan ylimmälle riville.
-      3:
-        text: Määrittelyn sisällä olevat lohkot kertovat, mitä se tekee. Tämän funktion
-          nimi on "täytä 5", ja se koostuu "toista"-lohkosta ja "täytä"-lohkosta.
-      4:
-        text: Määritelmät ovat työtilassa, mutta maanviljelijä ei suorita funktiota
-          ennen kuin vedämme "täytä 5" -funktiolohkon funktiot-valikosta.
-      5:
-        text: 'Laitetaanpa funktiot käytöön! '
-    loop_while:
-      1:
-        text: 'Hei, olen Makinde! Opetellaanpa "niin kauan kuin" -lohkon toimintaa. '
-      2:
-        text: '"Niin kauan kuin" -lohko toistaa mitä tahansa asetat sen sisälle, niin
-          kauan kuin ylhäällä oleva ehto pitää paikkansa eli on TOSI.'
-      3:
-        text: Esimerkiksi, jos maanviljelijä seisoo kasan päällä, hän jatkaa yhden
-          lapiollisen poistamista "niin kauan kuin" hänen allaan on kasaa jäljellä.
-    loop_for:
-      1:
-        text: Hei, minä olen Trina ja työskentelen Pixarilla. Olen tehnyt töitä liutaan
-          eri elokuvia, kuten esimerkiksi Shrekiin.
-      2:
-        text: Tämä on uusi "laskuri"-silmukkamme. Se suorittaa komentoja yhä uudelleen
-          ja voit muuttaa silmukan toimintaa hieman jokaisella kerralla.
-      3:
-        text: Tässä esimerkissä "laskuri" -silmukkamme sanoo "laske laskurilla 50:stä
-          90:een 10 välein" ja sen sisällä meillä on "piirrä neliö" -lohko. Vedä "laskuri"
-          -lohko "Muuttujat" -valikosta "pituus" -kohtaan.
-      4:
-        text: Tämä tarkoittaa, että taiteilijamme aikoo piirtää neliön, jonka sivujen
-          pituus on 50 kuvapistettä, lisätä tähän 10 ja piirtää neliön, jonka sivujen
-          pituus on 60 kuvapistettä. Sitten hän uudelleen ja uudelleen lisää 10 kuvapistettä
-          ja piirtää neliön, kunnes neliön sivun pituus on 90. Lopulta meillä on neliöt,
-          joiden koot ovat 50, 60, 70, 80 ja 90.
-    parameters:
-      1:
-        text: Hei, olen Janete, ja olen insinööri Zyngalla.
-      2:
-        text: Mitä jos haluamme piirtää joukon kolmioita, jotka ovat kaikki eri pituisia?
-      3:
-        text: Voisimme kirjoittaa kaiken tuon koodin käsin, tai sitten voimme käyttää
-          funktioita, joille annetaan parametreja.
-      4:
-        text: Tehdäksesi tämän, napsauta sinistä tähteä "piirrä kolmio" -funktion
-          määrittelyssä. Sitten raahaa "syötä nimi" "syöte"-lohkoon.
-      5:
-        text: Jos sitten kirjoitat "pituus" kohtaan, jossa lukee "x" ja painat rivinvaihtonäppäintä
-          ("Enter"), olet määrittänyt pituussyötteen funktiollesi.
-      6:
-        text: Napsauta sitten tähteä. Seuraavaksi avaa muuttujat-valikko ja raahaa
-          "pituus"-lohko "siirry eteenpäin" -lohkoon funktiomäärityksessäsi. Raahaa
-          myös pois vanha numero-lohko.
-      7:
-        text: Kun haluat käyttää parametrillista funktiota, avaa Funktiot-valikko
-          ja raahaa sieltä "piirrä kolmio arvolla pituus" -funktio.
-      8:
-        text: Nyt voit käyttää "matematiikka"-lohkoa ja syöttää eri numeroita piirtääksesi
-          eri kokoisia kolmioita.
-    hoc_wrapup:
-      1:
-        text: Onneksi olkoon! Viime pulman ratkaisussa kirjoitit koodin, joka voi
-          ohjata minkä tahansa robotin läpi haarautumattomasta labyrintistä tai kuinka
-          tahansa pitkästä tunnelista, oli kulkijasi sitten zombi, lintu, Mars-mönkijä
-          tai jopa itsestään ajava auto.
-      2:
-        text: Käyttämäsi peruskäsitteet esiintyvät kaikissa ohjelmissa ja mobiilisovelluksissa
-          joita koskaan tulet käyttämään. Opimme toistosilmukat, toista kunnes -lauseet,
-          jos-lauseet ja jos-muuten-lauseet.
-      3:
-        text: Jos pidit ensimmäisestä kooditunnistasi, vieraile code.org-sivustolla
-          jatkaaksesi tietotekniikan opintojasi! Kun suoritat 20 tunnin kurssimme,
-          opit ohjelmoinnin perusteet ja voit ryhtyä opettelemaan miten tehdään sovelluksia
-          puhelimille, robottien ohjeita, pelejä tai mitä tahansa.
-      4:
-        text: Teknologia muuttaa kaikkea mitä teemme. Sillä ole väliä, oletko nuori
-          tai vanha; ohjelmointi on hauskaa, se on luovaa, ja kuka tahansa voi oppia!
     20_wrapup:
       1:
         text: Esityksen muistiinpanot tulossa pian!
-    frozen_intro:
-      1:
-        text: Hei, nimeni on Lyndsey. Olen malli, näyttelijä ja kirjoitan omia sovelluksiani.
-          Käytetään koodia liittyäksemme Annan ja Elsan seuraan, kun he tutustuvat
-          jään taikaan ja kauneuteen.
-      2:
-        text: Luot lumihiutaleita ja kuvioita luistellessasi. Tee talven ihmemaa jaettavaksi
-          ystävillesi.
-      3:
-        text: Seuraavan tunnin aikana opit koodaamisen perusasiat. Perinteinen ohjelmointi
-          tapahtuu yleensä tekstillä, mutta me käytämme Blocklyä, jossa ohjelmia luodaan
-          kokoamalla niitä visuaalisista lohkoista. Jopa osa yliopistoista käyttää
-          samaa tapaa. Konepellin alla luot kuitenkin ihan oikeaa koodia.
-      4:
-        text: Ohjelma on joukko ohjeita, jotka kertovat tietokoneelle mitä tehdä.
-          Rakennetaanpa koodia, eli ohjelma, joka auttaa Elsaa luomaan yksinkertaisen
-          viivan. Käytämme tätä myöhemmin luodessamme monimutkaisempia kuvioita.
-      5:
-        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on jään pinta, jossa
-          ajat ohjelmasi. Ohjeet kullekin tasolle on kirjoitettu juuri jäänpinnan
-          alle.
-      6:
-        text: Keskimmäinen alue on työkaluvalikko, ja jokainen näistä lohkoista on
-          toiminto jonka Elsa ja Anna voivat tehdä.
-      7:
-        text: Valkoista aluetta oikealla kutsutaan työtilaksi ja siinä rakennamme
-          ohjelmamme. Liikkuaksesi jääpinnalla, käytä "Liiku eteenpäin"-lohkoa.
-      8:
-        text: Tässä "Liiku eteenpäin"-lohko sanoo "liiku eteenpäin 100 kuvapistettä".
-          Kun painat "Suorita", mitä tapahtuu? Elsa siirtyy eteenpäin tietyn määrän
-          ruudulla, itse asiassa 100 kuvapistettä! Kuvapisteet ovat hyvin pieniä neliöitä
-          tietokoneesi ruudulla.
-      9:
-        text: Toinen lohko joka meillä on tässä tehtävässä sanoo "käänny oikealle
-          90 astetta". Ja kun käytämme tätä "Käänny oikealle"-lohkoa, saamme Elsan
-          kääntymään tietyn määrän. Voit kokeille erilaisia arvoja nähdäksesi kuinka
-          kauas haluat Elsan kääntyvän. Kulma mitataan reitiltä Elsan edessä. Joten,
-          tämä on 90 asteen käännös. Ja tämä on 120 asteen käännös.
-      10:
-        text: Muista, voit muuttaa kuvapisteiden tai asteiden määrää napsauttamalla
-          nuolta niiden vieressä.
-    frozen_loops:
-      1:
-        text: Hei, olen Paola! Tietokoneet ovat tosi hyviä toistamaan toimenpiteitä.
-          Sinä voit laskea 10, 20 tai 100:aan, mutta tietokone voi laskea miljardeihin
-          tai vielä suurempiin lukuihin. Se ei kyllästy ja sillä kuluu siihen aikaa
-          vain muutamia sekunteja. Mitä tahansa se tekee – laskee, piirtää tai jotain
-          muuta – tietokone pystyy toistamaan asioita satoja tai vaikka miljardeja
-          kertoja.
-      2:
-        text: Ohjelmoinnissa tätä kutsutaan silmukaksi. Silmukalla toistat koodiasi
-          kerta toisensa jälkeen. Seuraavassa tehtävässä sinun tulee auttaa Annaa
-          luomaan neliö käyttäen "Toista"-lohkoa.
-      3:
-        text: Mitkä tahansa koodilohkot jotka laitat "Toista"-lohkon sisälle, toistetaan
-          sarjassa niin monta kertaa kuin haluat.
-      4:
-        text: Piirtääksesi neliön, voit käyttää "Liiku eteenpäin" ja "Käänny oikealle"
-          -lohkoja neljä kertaa. Mutta helpompaa on kertoa tietokoneelle "Liiku eteenpäin"
-          ja "Käänny oikealle 90 astetta" kerran ja käskeä sitä toistamaan tämä toimintopari
-          4 kertaa. Tehdäksesi tämän, sinun täytyy laittaa "Liiku eteenpäin" ja "Käänny
-          oikealle" -lohkot "Toista"-lohkon sisään.
-      5:
-        text: Muista, voit muuttaa "Toista"-lohkoissa olevaa numeroa miksi tahansa.
-          Sen sisältö toistetaan numeron määräämä määrä kertoja.
-    frozen_functions:
-      1:
-        text: Hei, olen Chris Bosh. Olen koripalloammattilainen ja koodasin yliopistossa.
-      2:
-        text: Yksi tietotekniikan tärkeimmistä käsitteistä on uusien komentojen luominen.
-          Suurimmassa osassa ohjelmointikieliä on vain 100 käskysanaa tai komentoa.
-          Ohjelmoinnin taika onkin omien uusien sanojen määrittely ja rakentaminen
-          näistä rakennuspalikoista.
-      3:
-        text: Kun olet kerran opettanut tietokoneen tekemään toiminnon käyttäen tätä
-          toimintosarjaa, voit keksiä oman nimesi toiminnolle niin että sen toistamisen
-          myöhemmin on helppoa. Voit myös määritellä oman käskysi ja antaa sille nimen,
-          tätä kutsutaan funktioksi.
-      4:
-        text: Hei, olen Jess. Ohjelmoidessasi lohkoilla, voit käyttää funktioita kun
-          on joukko toimintoja, jotka haluaisit tehdä monta kertaa. Esimerkiksi, olet
-          kirjoittanut koodia luodaksesi neliön.
-      5:
-        text: 'Voit määritellä tämän funktiona, jonka nimi on "Luo neliö" '
-      6:
-        text: Nyt sinulla on uusi lohko, jota voit käyttää kerta toisensa jälkeen
-          luodaksesi määrättömästi uusia neliöitä.
-      7:
-        text: Monia yksinkertaisia kuvioita voidaan käyttää monimutkaisten kuvioiden
-          piirtämiseen. Seuraavassa tehtävässä juuri piirtämäsi ympyrän koodi on saatavilla
-          uutena funktiona, joka tekee eri kokoisia ympyröitä. Osaatko käyttää sitä
-          auttaaksesi Elsaa luomaan taidokkaita ja kauniita kuvioita jäähän?
-    playlab_intro:
-      1:
-        text: Aiomme luoda pelejä käyttäen Play Lab:ia. Hyvissä peleissä on tarina
-          ja jokaisessa tarinassa on hahmoja. Me opimme, kuinka voimme saada hahmojemme,
-          kuten noidat tai avaruusoliot puhumaan, liikkumaan ja vaikuttamaan toisiinsa.
-          Tämän opetusohjelman loppuun mennessä osaat rakentaa pelin tyhjästä ja voit
-          jakaa sen ystäviesi kanssa.
-      2:
-        text: Näyttösi on jaettu 3 osaan. Vasemmalla on pelin tila, jossa ohjelmasi
-          suoritetaan. Ohjeet jokaiselle tasolle kirjoitetaan alla.
-      3:
-        text: Keskialue on työkaluvalikko, ja jokainen näistä lohkoista on koodinpätkä.
-          Valkoista aluetta oikealla kutsutaan työtilaksi ja siinä me rakennamme ohjelmaamme.
-      4:
-        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
-          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
-          keltaisen viivan ja sitten ne kohdistuvat yhteen.
-      5:
-        text: Ensimmäisessä palapelissä meidän hahmomme on pingviini ja me saamme
-          sen sanomaan  "Hei!" vetämällä sanonta -lohko ulos ja liittämällä se suoritettaessa
-          -lohkoon ja kirjoittamalla "Hei." Voimme myös saada pingviinin liikkumaan
-          käyttämällä siirrä oikealle ja siirrä vasemmalle -lohkoja. Kun olet saanut
-          lohkot on paikalleen, niin klikkaa suorita nappia ja näet mitä olet ohjelmoinut.
-      6:
-        text: 'Aloita, niin loppuun päästyäsi osaat luoda oman pelin kaikenlaisille
-          pelaajille, jotka voivat: olla vuorovaikutuksessa, vaihtua onnellisiksi
-          tai surullisiksi,  kerätä pisteitä tai heittää tulipalloja tai jopa kadota
-          yksi kerrallaan. Se on kaikki sinusta kiinni, mitä haluat pelisi tekevän.'
-    playlab_events:
-      1:
-        text: Nyt aiomme oppia jotain, mitä kaikki pelisuunnittelijat käyttävät päivittäin.
-          Niitä kutsutaan tapahtumiksi. Tapahtuma kertoo ohjelmallesi, että se kuuntelee
-          kun jotakin tapahtuu. Kun se asia tapahtuu, tapahtuma suorittaa toiminnon.
-      2:
-        text: Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen
-          käyttö tai näytön napautus.
-      3:
-        text: Tässä me aiomme tehdä avaruusbotin tervehtimään maanasukkeja, kun pelaaja
-          klikkaa häntä. Me käytämme "kun napsautetaan" -lohkoa ja liitämme "sano"
-          -lohko siihen. Kun pelaaja klikkaa avaruusbottia, niin kaikki "kun napsautetaan"
-          -lohkoon  liitetty tapahtumalohko suoritetaan. Mitä sinun avaruusolio sanoo?
-      4:
-        text: On myös "kun nuoli" -lohkoja. Jos linkität "siirrä"-lohkot näihin, voit
-          aloittaa siirtämään sinun näyttelijöitä ylös, alas, vasemmalle tai oikealle.
-          Askel askeleelta pelistäsi tulee enemmän vuorovaikutteinen.
-    playlab_repeat_forever:
-      1:
-        text: Tämä on "toista ikuisesti" -lohko. Kaikki tämän lohkon sisäiset tapahtumat
-          jatkuvat pelissä ikuisesti.
-      2:
-        text: Jos haluat näyttelijäsi tekevän jotain toistuvasti ilman että pelaaja  joutuu
-          tekemään mitään, niin me laitamme ne lohkot "toista ikuisesti" -lohkon sisään.
-      3:
-        text: Tässä seuraavassa tehtävässä tavoitteenamme on auttaa velhoa  partiomaan
-          valtakunnan rajoja, vasemmalle ja oikealle jatkuvasti. Oppiessasi miten
-          toista -komennot toimivat, tulet säästämään huomattavasti aikaasi  kun myöhemmin
-          rakennat omaa peliäsi.
     C1_artist_intro:
       1:
         text: Nämä ovat piirtämispalikkasi. Käytä oikeaa palikkaa liikuttaaksesi taiteilijaa
@@ -508,18 +84,6 @@ fi:
         text: Hei, nimeni on Miral Kotb ja olen Iluminaten luoja. Työssäni on jotain
           mitä käytämme sekä tansseissa ja valopukujen ohjelmoinnissa. Ne ovat silmukoita!
           Silmukat ovat tapa toistaa toiminto uudelleen ja uudelleen.
-    C1_happy_maps_unplugged:
-      5:
-        text: Se on kuin ohjelmointia paperilla. Ja se on siinä!
-    C1_moveitmoveit_unplugged:
-      2:
-        text: Mutta hymynaama on surullinen ja vain yksi henkilö tietää miten sinne
-          pääsee. Aloitetaan tämä ohjelma.
-      3:
-        text: Ohjelma on algoritmi, joka on koodattu joksikin, joka voidaan suorittaa
-          laitteella. Useimmat meistä ajattelee että ohjelmat kirjoitetaan tietokoneille.
-          Ohjelmat ovat todella hyviä siihenkin, mutta ne ovat myös hyödyllisiä muissakin
-          paikoissa. Voit tehdä oman pelin tai jopa robootin tekemään asioita sinulle.
     C1_going_places_safely:
       1:
         text: Nimeni on Jeremia. Moikka! Olen seitsemän vuotta vanha. Rakastan pelata
@@ -544,6 +108,22 @@ fi:
       7:
         text: Vau, se oli hauskaa! Päivällisaika. Kirjaudun nyt ulos. En malta odottaa
           uudelleenkirjautumista, jotta pääseen näkemään minne pääsen seuraavaksi.
+    C1_happy_maps_unplugged:
+      5:
+        text: Se on kuin ohjelmointia paperilla. Ja se on siinä!
+    C1_moveitmoveit_unplugged:
+      2:
+        text: Mutta hymynaama on surullinen ja vain yksi henkilö tietää miten sinne
+          pääsee. Aloitetaan tämä ohjelma.
+      3:
+        text: Ohjelma on algoritmi, joka on koodattu joksikin, joka voidaan suorittaa
+          laitteella. Useimmat meistä ajattelee että ohjelmat kirjoitetaan tietokoneille.
+          Ohjelmat ovat todella hyviä siihenkin, mutta ne ovat myös hyödyllisiä muissakin
+          paikoissa. Voit tehdä oman pelin tai jopa robootin tekemään asioita sinulle.
+    C2_artist_debugging:
+      3:
+        text: Ah, siinä se ongelma on! Kissan viikset ovat 75 kuvapistettä pitkät,
+          ei 25.
     C2_artist_intro:
       2:
         text: Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia
@@ -565,10 +145,6 @@ fi:
           vaihtaa näitä lukuja, painamalla pikseleitä tai asteita osoittavaa lukua
           tai sen vieressä olevaa pikku kolmiota. Nauti piirtämisestä taiteilijasi
           kanssa!
-    C2_artist_debugging:
-      3:
-        text: Ah, siinä se ongelma on! Kissan viikset ovat 75 kuvapistettä pitkät,
-          ei 25.
     C2_bee_loops:
       1:
         text: Silmukka on toiminnan toistamista. Mennessäni mehiläispesälle tarkistamaan,
@@ -659,6 +235,276 @@ fi:
         text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä
           sen roskakoriin. Kun painat Suorita, voit aina painaa Alusta-painiketta
           saadaksesi linnun takaisin alkuun. Nyt, annetaanpa sioille kyytiä!
+    artist_intro:
+      1:
+        text: Hei, olen JR! Kaikki ralliautotiimit tarvitsevat tietojenkäsittelyasiantuntijan
+          voittaakseen. He analysoivat auton tietoja saadakseen sen kulkemaan nopeammin.
+      2:
+        text: Näissä tehtävissä olet taiteilija, joka piirtää viivaa kulkiessaan.
+      3:
+        text: Tässä lohkossa lukee "liiku eteenpäin 100 kuvapistettä". Kuvapisteet
+          ovat pieniä pisteitä näytölläsi.
+      4:
+        text: Tässä lohkossa lukee "käänny oikealle 90 astetta". Se kääntää taiteilijaasi
+          saman verran kuin "käännä"-lohkot sokkelotehtävissä.
+      5:
+        text: Napsauttamalla lohkon päissä olevia nuolia, voit muuttaa sitä määrää,
+          jonka taiteilija liikkuu eteenpäin tai kääntyy. Leiki nyt hetki näillä lohkoilla
+          tutustuaksesi niihin paremmin.
+    farmer_intro:
+      1:
+        text: Hei, olen Paola! Näissä tehtävissä olet maanviljelijä, jonka täytyy
+          saada peltonsa täysin tasaiseksi aloittaakseen istutukset.
+      2:
+        text: Sinun täytyy auttaa häntä poistamaan kaikki multakasat ja täyttämään
+          kaikki kuopat.
+      3:
+        text: Uudet lohkot poistavat yhden lapiollisen multaa kasasta ja täyttävät
+          yhden lapiollisen multaa kuoppaan.
+      4:
+        text: Kasat ja kuopat ovat erikokoisia, joten sinun täytyy kertoa maanviljelijälle
+          kuinka monta lapiollista hänen tulisi käyttää.
+    flappy_intro:
+      1:
+        text: Hei olen Katie! Yksi mielenkiintoisimmista asioista tietotekniikassa
+          on, että tietokoneohjelma voi olla vuorovaikutteinen.
+      2:
+        text: Joka kerta kun joku napsauttaa tai kirjoittaa tietokoneella tai puhelimella,
+          se luo "tapahtuman", ja jokin kirjoitettu koodi päättää mitä tehdään kun
+          tuo tapahtuma tapahtuu.
+      3:
+        text: 'Esimerkiksi, sinulla voi olla tapahtumakäsittelijä, joka sanoo "kun
+          hiirtä napsautetaan, soita ääni" '
+      4:
+        text: Oletko koskaan kuullut pelistä nimeltä FlappyBird? Käyttäen tapahtumakäsittelijöitä,
+          opimme kuinka ohjelmoida oma räätälöity versio FlappyBirdistä!
+      5:
+        text: Nyt tehtävä koodaus tulee tapahtumaan vetämällä ja pudottamalla koodia
+          esittäviä lohkoja. Jokainen lohko vastaa yhtä tietokoneelle annettavaa komentoa.
+          Pinnan alla kukin näistä lohkoista vastaa oikea koodia.
+      6:
+        text: Kun tarkastelet työtilaa, huomaat joitain vihreitä lohkoja valmiiksi
+          täytettynä - nämä ovat "tapahtumakäsittelijöitä"
+      7:
+        text: Jos haluat linnun tekevän RÄPYTTELE-toiminnon kun NAPSAUTAT hiirtä,
+          voit tehdä niin liittämällä "RÄPYTTELE"-lohkon soveltuvaan tapahtumakäsittelijaan.
+          Näin lintu räpyttelee siipiään aina hiiren napsautuksella.
+      8:
+        text: Jokaisessa tämän jakson tehtävässä esittelemme työtilassa yhden tai
+          useamman uuden vihreän tapahtumalohkon. Liittämällä toimintolohkoja tapahtumalohkoihin,
+          voit päättää mitä tapahtumista seuraa.
+      9:
+        text: Kun näet tälläisen nuolen alaspäin, se tarkoittaa että voit muuttaa
+          asetuksia - kuten esimerkiksi, mikä ääni kuuluu, kun flappy osuu maahan.
+      10:
+        text: Viimeisessä tehtävässä voit luoda oman pelin ja jakaa sen ystäviesi
+          kanssa. Pidä hauskaa!
+    frozen_functions:
+      1:
+        text: Hei, olen Chris Bosh. Olen koripalloammattilainen ja koodasin yliopistossa.
+      2:
+        text: Yksi tietotekniikan tärkeimmistä käsitteistä on uusien komentojen luominen.
+          Suurimmassa osassa ohjelmointikieliä on vain 100 käskysanaa tai komentoa.
+          Ohjelmoinnin taika onkin omien uusien sanojen määrittely ja rakentaminen
+          näistä rakennuspalikoista.
+      3:
+        text: Kun olet kerran opettanut tietokoneen tekemään toiminnon käyttäen tätä
+          toimintosarjaa, voit keksiä oman nimesi toiminnolle niin että sen toistamisen
+          myöhemmin on helppoa. Voit myös määritellä oman käskysi ja antaa sille nimen,
+          tätä kutsutaan funktioksi.
+      4:
+        text: Hei, olen Jess. Ohjelmoidessasi lohkoilla, voit käyttää funktioita kun
+          on joukko toimintoja, jotka haluaisit tehdä monta kertaa. Esimerkiksi, olet
+          kirjoittanut koodia luodaksesi neliön.
+      5:
+        text: 'Voit määritellä tämän funktiona, jonka nimi on "Luo neliö" '
+      6:
+        text: Nyt sinulla on uusi lohko, jota voit käyttää kerta toisensa jälkeen
+          luodaksesi määrättömästi uusia neliöitä.
+      7:
+        text: Monia yksinkertaisia kuvioita voidaan käyttää monimutkaisten kuvioiden
+          piirtämiseen. Seuraavassa tehtävässä juuri piirtämäsi ympyrän koodi on saatavilla
+          uutena funktiona, joka tekee eri kokoisia ympyröitä. Osaatko käyttää sitä
+          auttaaksesi Elsaa luomaan taidokkaita ja kauniita kuvioita jäähän?
+    frozen_intro:
+      1:
+        text: Hei, nimeni on Lyndsey. Olen malli, näyttelijä ja kirjoitan omia sovelluksiani.
+          Käytetään koodia liittyäksemme Annan ja Elsan seuraan, kun he tutustuvat
+          jään taikaan ja kauneuteen.
+      2:
+        text: Luot lumihiutaleita ja kuvioita luistellessasi. Tee talven ihmemaa jaettavaksi
+          ystävillesi.
+      3:
+        text: Seuraavan tunnin aikana opit koodaamisen perusasiat. Perinteinen ohjelmointi
+          tapahtuu yleensä tekstillä, mutta me käytämme Blocklyä, jossa ohjelmia luodaan
+          kokoamalla niitä visuaalisista lohkoista. Jopa osa yliopistoista käyttää
+          samaa tapaa. Konepellin alla luot kuitenkin ihan oikeaa koodia.
+      4:
+        text: Ohjelma on joukko ohjeita, jotka kertovat tietokoneelle mitä tehdä.
+          Rakennetaanpa koodia, eli ohjelma, joka auttaa Elsaa luomaan yksinkertaisen
+          viivan. Käytämme tätä myöhemmin luodessamme monimutkaisempia kuvioita.
+      5:
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on jään pinta, jossa
+          ajat ohjelmasi. Ohjeet kullekin tasolle on kirjoitettu juuri jäänpinnan
+          alle.
+      6:
+        text: Keskimmäinen alue on työkaluvalikko, ja jokainen näistä lohkoista on
+          toiminto jonka Elsa ja Anna voivat tehdä.
+      7:
+        text: Valkoista aluetta oikealla kutsutaan työtilaksi ja siinä rakennamme
+          ohjelmamme. Liikkuaksesi jääpinnalla, käytä "Liiku eteenpäin"-lohkoa.
+      8:
+        text: Tässä "Liiku eteenpäin"-lohko sanoo "liiku eteenpäin 100 kuvapistettä".
+          Kun painat "Suorita", mitä tapahtuu? Elsa siirtyy eteenpäin tietyn määrän
+          ruudulla, itse asiassa 100 kuvapistettä! Kuvapisteet ovat hyvin pieniä neliöitä
+          tietokoneesi ruudulla.
+      9:
+        text: Toinen lohko joka meillä on tässä tehtävässä sanoo "käänny oikealle
+          90 astetta". Ja kun käytämme tätä "Käänny oikealle"-lohkoa, saamme Elsan
+          kääntymään tietyn määrän. Voit kokeille erilaisia arvoja nähdäksesi kuinka
+          kauas haluat Elsan kääntyvän. Kulma mitataan reitiltä Elsan edessä. Joten,
+          tämä on 90 asteen käännös. Ja tämä on 120 asteen käännös.
+      10:
+        text: Muista, voit muuttaa kuvapisteiden tai asteiden määrää napsauttamalla
+          nuolta niiden vieressä.
+    frozen_loops:
+      1:
+        text: Hei, olen Paola! Tietokoneet ovat tosi hyviä toistamaan toimenpiteitä.
+          Sinä voit laskea 10, 20 tai 100:aan, mutta tietokone voi laskea miljardeihin
+          tai vielä suurempiin lukuihin. Se ei kyllästy ja sillä kuluu siihen aikaa
+          vain muutamia sekunteja. Mitä tahansa se tekee – laskee, piirtää tai jotain
+          muuta – tietokone pystyy toistamaan asioita satoja tai vaikka miljardeja
+          kertoja.
+      2:
+        text: Ohjelmoinnissa tätä kutsutaan silmukaksi. Silmukalla toistat koodiasi
+          kerta toisensa jälkeen. Seuraavassa tehtävässä sinun tulee auttaa Annaa
+          luomaan neliö käyttäen "Toista"-lohkoa.
+      3:
+        text: Mitkä tahansa koodilohkot jotka laitat "Toista"-lohkon sisälle, toistetaan
+          sarjassa niin monta kertaa kuin haluat.
+      4:
+        text: Piirtääksesi neliön, voit käyttää "Liiku eteenpäin" ja "Käänny oikealle"
+          -lohkoja neljä kertaa. Mutta helpompaa on kertoa tietokoneelle "Liiku eteenpäin"
+          ja "Käänny oikealle 90 astetta" kerran ja käskeä sitä toistamaan tämä toimintopari
+          4 kertaa. Tehdäksesi tämän, sinun täytyy laittaa "Liiku eteenpäin" ja "Käänny
+          oikealle" -lohkot "Toista"-lohkon sisään.
+      5:
+        text: Muista, voit muuttaa "Toista"-lohkoissa olevaa numeroa miksi tahansa.
+          Sen sisältö toistetaan numeron määräämä määrä kertoja.
+    function:
+      1:
+        text: Hei, olen Brina, insinööri Instagramilla. Funktio on joukko koodirivejä,
+          joita haluat käyttää uudelleen ja uudelleen. Niinpä sen sijaan, että kirjoittaisit
+          kaiken tuon koodin joka kerta, voit käyttää yhtä lohkoa.
+      2:
+        text: Nyt opettelemme, miten määritellään funktioita. Funktion määritelmän
+          nurkassa on tähti. Funktion nimi kirjoitetaan ylimmälle riville.
+      3:
+        text: Määrittelyn sisällä olevat lohkot kertovat, mitä se tekee. Tämän funktion
+          nimi on "täytä 5", ja se koostuu "toista"-lohkosta ja "täytä"-lohkosta.
+      4:
+        text: Määritelmät ovat työtilassa, mutta maanviljelijä ei suorita funktiota
+          ennen kuin vedämme "täytä 5" -funktiolohkon funktiot-valikosta.
+      5:
+        text: 'Laitetaanpa funktiot käytöön! '
+    gumball_intro:
+      4:
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi
+          suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
+      6:
+        text: Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      7:
+        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
+          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
+          keltaisen viivan ja sitten ne kohdistuvat yhteen.
+    hoc_dance_events_2019:
+      4:
+        text: Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen
+          käyttö tai näytön napautus.
+    hoc_wrapup:
+      1:
+        text: Onneksi olkoon! Viime pulman ratkaisussa kirjoitit koodin, joka voi
+          ohjata minkä tahansa robotin läpi haarautumattomasta labyrintistä tai kuinka
+          tahansa pitkästä tunnelista, oli kulkijasi sitten zombi, lintu, Mars-mönkijä
+          tai jopa itsestään ajava auto.
+      2:
+        text: Käyttämäsi peruskäsitteet esiintyvät kaikissa ohjelmissa ja mobiilisovelluksissa
+          joita koskaan tulet käyttämään. Opimme toistosilmukat, toista kunnes -lauseet,
+          jos-lauseet ja jos-muuten-lauseet.
+      3:
+        text: Jos pidit ensimmäisestä kooditunnistasi, vieraile code.org-sivustolla
+          jatkaaksesi tietotekniikan opintojasi! Kun suoritat 20 tunnin kurssimme,
+          opit ohjelmoinnin perusteet ja voit ryhtyä opettelemaan miten tehdään sovelluksia
+          puhelimille, robottien ohjeita, pelejä tai mitä tahansa.
+      4:
+        text: Teknologia muuttaa kaikkea mitä teemme. Sillä ole väliä, oletko nuori
+          tai vanha; ohjelmointi on hauskaa, se on luovaa, ja kuka tahansa voi oppia!
+    iceage_intro:
+      4:
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi
+          suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
+      6:
+        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      7:
+        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
+          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
+          keltaisen viivan ja sitten ne kohdistuvat yhteen.
+    if:
+      1:
+        text: 'Hei, olen Bill! Opetellaanpa uusi keskeinen käsite: "jos"-lause. Tämän
+          avulla tietokoneet tekevät päätöksiä.'
+      2:
+        text: 'Käytät "Jos"-lausetta itse joka päivä. Esimerkiksi, ennen kuin lähdet
+          ulos, sanot itsellesi: "jos ulkona sataa, tarvitsen sadetakkini."'
+      3:
+        text: Voimme laittaa zombit tarkistamaan, JOS vasemmalle on reitti ja kun
+          zombie tulee sellaiseen kohtaan, voimme laittaa sen kääntymään sinne.
+      4:
+        text: Raahataan siis yksi "Jos"-lohko ja sen sisään "käänny vasemmalle" -lohko.
+      5:
+        text: Jos nyt laitamme "liiku eteenpäin" -lohkon sen yläpuolelle ja "toista"-lohkon
+          sen ympärille, niin zombie tarkistaa joka kerta kun se liikkuu, onko vasemmalle
+          reittiä – ja jos on, se kääntyy. "Toista"-lohko on hyvin tärkeä, jotta tarkistus
+          tehdään joka askeleella.
+      6:
+        text: Jos-lauseet ovat hyvin tärkeitä tietotekniikassa. Yksi ensimmäisistä
+          ohjelmista, jonka kirjoitin, oli peli nimeltä ristinolla. Siinä oli jos-lause,
+          joka sanoi että JOS toinen henkilö on voittamassa, estä siirto, jolla hän
+          voittaisi.
+      7:
+        text: Pidä hauskaa "Jos"-lohkolla!
+    if_else:
+      1:
+        text: Hei, nimeni on Saloni. Käytän tietotekniikkaa ratkomaan ongelmia terveyden
+          ja lääketieteen aloilla. Opiskellaanpa "jos muuten" -lohkosta. Se näyttää
+          "jos"-lohkolta, mutta siinä on ylimääräinen pala lopussa, joka sanoo "muuten".
+      2:
+        text: Jos laitan "liiku eteenpäin" -lohkon paikkaan jossa on "tee" ja "käänny
+          vasemmalle" -lohkot kohtaan jossa lukee "muuten" se tarkoittaa että zombie
+          valitsee kahden vaihtoehdon väliltä. JOS edessä on reitti, zombie menee
+          eteenpäin; MUUTEN (jos edessä ei ole reittiä) zombie kääntyy vasemmalle.
+      3:
+        text: Kuten "jos"-lohkon, voimme laittaa myös "jos muuten" -lohkon "toista"-lohkon
+          sisään niin, että zombie jatkaa liikkumista ja "jos muuten" -lohko tarkistaaa
+          jos jonnekin voi kääntyä.
+      4:
+        text: No niin, laitetaanpa nuo zombiet sinne minne kuuluvat!
+    if_else_scrat:
+      1:
+        text: Jos-muuten -lauseke on päätös kahden asian välillä. Katsotaanpa kuinka
+          käytämme jos-muuten -lauseketta kaverimme Scrat-oravan kanssa.
+      2:
+        text: Tämä lohko näyttää "jos" lohkolta, mutta siinä on "muuten" lisäosa lopussa.
+          Jos laitan "liiku eteenpäin" -lohkon kohtaan jossa on "tee" ja "käänny vasemmalle
+          -lohkon kohtaan, jossa sanotaan "muuten", se tarkoittaa, että Scrat-orava
+          liikkuu eteenpäin jos edessä on reitti. Jos edessä ei ole reittiä, Scrat
+          kääntyy vasemmalle.
+      3:
+        text: Se tekee päätöksen ja suorittaa yhden kahdesta toimenpiteesta päätökseen
+          perustuen. Ja aivan kuten "jos"-lohkoissa, voit laittaa "jos-muuten"-lohkoja
+          "toista"-lohkojen sisään.
+      4:
+        text: Autetaanpa Scrat-oravaa saamaan tammenterho!
     infinity_playlab_intro:
       5:
         text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi
@@ -666,24 +512,470 @@ fi:
           alue on työkalupakki, ja jokainen sen sisältämistä palikoista on palanen
           ohjelmakoodia. Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme
           rakentamaan ohjelmamme.
-    tutorial_puzzle_challenge:
-      2:
-        text: Voin muuttaa pikselien määrää, viivan pituutta, käyttäen tätä alasvetovalikkoa.
-          Kuinka pitkä sen pitikään olla? Voit katsoa ohjeita uudelleen Suorita-nappulan
-          alapuolelta. Tässä käytimme Siirry eteenpäin -palikkaa ja aion valita matkaksi
-          100 pikseliä. Voin halutessani poistaa palikan vetämällä sen työkalupakkiin
-          tai roskakoriin. Laitetaanpa se takaisin.
-    unplug2:
+    loop_for:
       1:
-        text: Tämän automatisointiajattelun oppitunnin on tarkoitus opettaa sinulle,
-          kuinka vaikea ongelma voidaan pilkkoa joukoksi useita yksinkertaisempia
-          ongelmia. Oppitunnin tavoitteena on kirjoittaa joukko ohjeita, joita joku
-          voi seurata ja piirtää jonkin oppitunnin kuvauksessa olevan hirviön.
+        text: Hei, minä olen Trina ja työskentelen Pixarilla. Olen tehnyt töitä liutaan
+          eri elokuvia, kuten esimerkiksi Shrekiin.
       2:
-        text: 'Oppilaat jakautuvat ryhmiin kirjoittaakseen ohjeet ja vaihtavat ne
-          sitten toisen ryhmän kanssa, jonka tehtävänä on piirtää hirviö. Ryhmät kirjoittavat
-          ohjeet käyttäen automatisointiajattelun neljää vaihetta: osiin jakaminen,
-          mallien havainnointi, abstraktio ja algoritmien luominen.'
+        text: Tämä on uusi "laskuri"-silmukkamme. Se suorittaa komentoja yhä uudelleen
+          ja voit muuttaa silmukan toimintaa hieman jokaisella kerralla.
+      3:
+        text: Tässä esimerkissä "laskuri" -silmukkamme sanoo "laske laskurilla 50:stä
+          90:een 10 välein" ja sen sisällä meillä on "piirrä neliö" -lohko. Vedä "laskuri"
+          -lohko "Muuttujat" -valikosta "pituus" -kohtaan.
+      4:
+        text: Tämä tarkoittaa, että taiteilijamme aikoo piirtää neliön, jonka sivujen
+          pituus on 50 kuvapistettä, lisätä tähän 10 ja piirtää neliön, jonka sivujen
+          pituus on 60 kuvapistettä. Sitten hän uudelleen ja uudelleen lisää 10 kuvapistettä
+          ja piirtää neliön, kunnes neliön sivun pituus on 90. Lopulta meillä on neliöt,
+          joiden koot ovat 50, 60, 70, 80 ja 90.
+    loop_times:
+      1:
+        text: Hei, olen Mark! Opetellaanpa silmukoita. Silmukalla voit ohjata tietokonetta
+          toistamaan mitä vain toimintoa uudelleen ja uudelleen, tuhansia tai jopa
+          miljardeja kertoja.
+      2:
+        text: Tässä tehtävässä haluamme liikuttaa lintua 5 ruutua eteenpäin osuaksemme
+          possuun.
+      3:
+        text: Voimme käyttää uutta "toista"-lohkoa apunamme.
+      4:
+        text: Sen sijaan että vetäisimme 5 "liiku eteenpäin" -lohkoa...
+      5:
+        text: Voimme laittaa "liiku eteenpäin" -lohkon "toista"-lohkon sisään ja kirjoittaa
+          luvun lohkoon kertoaksemme sille, kuinka monta kertaa pitää toistaa.
+      6:
+        text: 'Ja tämä on tärkeää: voit laittaa enemmän kuin yhden komennon "toista"-lohkoon.'
+      7:
+        text: Pidä hauskaa uuden "toista"-lohkon kanssa!
+    loop_until:
+      1:
+        text: Hei, olen Chris. Ennen kuin liityin Miami Heatiin, opiskelin tietotekniikkaa
+          Georgian teknillisessä oppilaitoksessa. Kokeillaanpa uutta "toista kunnes"
+          -lohkoa.
+      2:
+        text: Mitä jos emme tietäisi, kuinka pitkälle linnun pitäisi liikkua saavuttaakseen
+          possun?
+      3:
+        text: Jos laitamme "liiku eteenpäin" -lohkon "toista kunnes" -lohkon sisälle,
+          lintu liikkuu eteenpäin KUNNES se saavuttaa possun (tai törmää seinään).
+      4:
+        text: 'Ja tämä on tärkeää: aivan kuin ennenkin, voimme laittaa monta lohkoa
+          yhteen "toista kunnes" -lohkoon, niin että ne kaikki toistuvat.'
+    loop_while:
+      1:
+        text: 'Hei, olen Makinde! Opetellaanpa "niin kauan kuin" -lohkon toimintaa. '
+      2:
+        text: '"Niin kauan kuin" -lohko toistaa mitä tahansa asetat sen sisälle, niin
+          kauan kuin ylhäällä oleva ehto pitää paikkansa eli on TOSI.'
+      3:
+        text: Esimerkiksi, jos maanviljelijä seisoo kasan päällä, hän jatkaa yhden
+          lapiollisen poistamista "niin kauan kuin" hänen allaan on kasaa jäljellä.
+    maze_intro:
+      1:
+        text: Tervetuloa ensimmäiselle kooditunnille! Sukelletaanpa heti ohjelmoinnin
+          maailmaan.
+      2:
+        text: Käytämme Blocklyä. Se on on visuaalinen ohjelmointikieli, jossa koodia
+          kirjoitetaan vetämällä ja pudottamalla lohkoja.
+      3:
+        text: Yleensä koodi kirjoitetaan, mutta Blockly on visuaalinen. Jokainen lohko
+          vastaa riviä "oikeaa" koodia.
+      4:
+        text: Opit kohta tietotekniikan perusteet. Näitä käsitteitä käytetään kaikkialla
+          aina pienistä sovelluksista Mars-mönkijän ohjaamiseen saakka.
+      5:
+        text: Ohjelma on joukko ohjeita, joita tietokoneesi noudattaa.
+      6:
+        text: Ensimmäisen ohjelmasi tehtävä on ohjata Angry Bird -lintu sokkelon läpi
+          ja osua vihreään possuun.
+      7:
+        text: Vasemmalla on sokkelo, jossa ohjelmasi suoritetaan. Jokaisen tehtävän
+          ohjeet löytyvät sokkelon alapuolelta.
+      8:
+        text: Keskimmäinen työkalupakki sisältää komentoja Angry Bird -linnulle. Näitä
+          käytetään koodisi rakentamiseen.
+      9:
+        text: Oikealla on työtilasi, johon rakennat ohjelmasi raahamalla lohkoja työkalupakista.
+          Jos haluat poistaa lohkon, vedä se nurkasta löytyvään roskakoriin.
+      10:
+        text: Jokainen lohko on käsky. Jos vedät "liiku eteenpäin" -lohkon työtilaasi
+          ja painat "suorita ohjelma" -nappia, lintu liikkuu yhden ruudun sokkelossa.
+      11:
+        text: Tehdäksesi enemmän kuin yhden toiminnon, voit vetää monta lohkoa työtilaasi
+          ja liittää ne yhteen. Lintu tekee käskyt ylhäältä alaspäin.
+      12:
+        text: Jos suoritat ohjelman ja haluat korjata ja yrittää uudelleen, paina
+          "alusta" -nappulaa.
+      13:
+        text: Ja eikun vain possujen kimppuun!
+    mc_2016_intro:
+      8:
+        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä
+          sen työkalupakkiin.
+    mc_congrats_no_share:
+      1:
+        text: Onneksi olkoon! Olet juuri oppinut tietotekniikan tärkeimmät rakennuspalikat.
+      2:
+        text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai
+          selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
+      3:
+        text: "[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
+          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!"
+      4:
+        text: Voit rakentaa ihan mitä haluat. - Pidä hauskaa!
+    mc_congrats_share:
+      1:
+        text: Onneksi olkoon! Olet juuri oppinut tietotekniikan tärkeimmät rakennuspalikat.
+      2:
+        text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai
+          selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
+      3:
+        text: "[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
+          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!"
+      4:
+        text: Voit jakaa valmiin luomuksesi ystävillesi jakolinkin avulla. - Pidä
+          hauskaa!
+    mc_if_statements:
+      1:
+        text: Nyt opimme jos-lauseista. Ne ovat yksi ohjelmoinnin perustekijöistä.
+          Ne auttavat tietokoneita tekemään päätöksiä.
+      2:
+        text: Kaikki tietokoneet käyttävät jos-lauseita. Puhelimenikin käyttää. Kun
+          avaan sen, koodi määrää, että jos salasana on oikea, puhelimeni aukeaa,
+          muutoin tulee virheilmoitus.
+      3:
+        text: Jos-lauseilla voit koodata Steven ja Alicen reagoimaan pelimaailmaan.
+          Esimerkiksi jos edessä on kivi, he voivat kääntyä vasemmalle tai puun kohdalla
+          oikealle.
+      4:
+        text: Emme halua pudota laavaan. Laavaa on helppo väistellä, koska näemme
+          sen. Mutta entä kiven alla oleva laava?
+      5:
+        text: Kun olemme louhineet kiven pois, meidän on tarkistettava, onko alla
+          laavaa, ennen kuin jatkamme. Jos kiven alla on laavaa, hahmon eteen on syytä
+          asettaa mukulakivi, jotta voimme edetä turvassa. Aloitetaan louhiminen!
+          Muista varoa askeleitasi jos-lauseiden avulla.
+    mc_intro:
+      1:
+        text: Olen Jens Bergensten, eli Jeb. Toimin pääkehittäjänä Mojangilla Tukholmassa.
+          Olin 11 tai 12 kun aloitin ohjelmoinnin, koska halusin tehdä pelejä. Sain
+          kuulla, että pelejä tehtäessä pitää osata ohjelmoida. Siitä urani sai alkunsa.
+          Tykkään suunnittelusta ja arkkitehtuurista. Sen vuoksi pidän paljon Minecraftista.
+      2:
+        text: Seuraavan tunnin aikana opit tietotekniikan perusteita ohjelmoimalla
+          Alexin ja Steven liikkumaan Minecraft-maailmassa.
+      3:
+        text: Tavallisesti ohjelmointi tehdään koodilla, mutta tänään käytämme Blocklya,
+          jonka avulla voimme ohjelmoida palikoilla. Pinnan alla koodaatte JavaScriptillä.
+      4:
+        text: Opit käsitteitä, joita ohjelmoijat käyttävät päivittäin ja jotka ovat
+          tietotekniikan perusta. Mojangilla me käytämme samoja käsitteitä saadaksemme
+          Minecraftin toimimaan.
+      5:
+        text: Valitaan ensin hahmo. Minä valitsen Alexin. Ohjelmoidaan koodi, joka
+          auttaa häntä liikkumaan ruudulla.
+      6:
+        text: Ruutu on jaettu kolmeen osaan. Vasemmalla on Minecraft-pelimaailma,
+          jossa ohjelma pyörii. Kunkin tason ohjeet ovat alla.
+      7:
+        text: Työkalut ovat keskellä. Nämä palikat ohjaavat Alexin toimintaa.
+      8:
+        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      9:
+        text: Jos vedämme "liiku eteenpäin" -palikan työtilaan ja suoritamme, mitä
+          tapahtuu? Alex liikkuu yhden ruudun eteenpäin.
+      10:
+        text: Entä jos haluamme Alexin tekevän jotain muuta liikkumisen jälkeen? Voimme
+          lisätä toisen palikan ohjelmaan. Valitsen "käänny oikeaan" -palikan ja vedän
+          sen "liiku eteenpäin" -palikan alle siten, että oranssi kehys ilmestyy.
+          Palikat napsahtavat kiinni toisiinsa. Kun suoritan, Alex seuraa jonossa
+          olevia käskyjä ylhäältä alas.
+      11:
+        text: Jos haluat poistaa komennon, vedä se jonosta takaisin työkaluihin.
+      12:
+        text: Peru tekemäsi muutokset ja palauta taso alkuasetelmaan Start Over [Aloita
+          alusta] -painikkeella, joka on oikeassa yläkulmassa. Entäpä tuo pieni kolmio
+          kääntymiskomennossa? "Kolmio tarkoittaa, että voit valita eri vaihtoehtoja."
+          Aletaan koodata!
+    mc_repeat:
+      1:
+        text: Olen Lydia Winters, Mojangin brändijohtaja. Me teimme pelin nimeltä
+          Minecraft.
+      2:
+        text: Tutkiminen on suosikkipuuhaani Minecraftissa. Rakastan luolissa seikkailemista.
+          En itse ole ohjelmoija, joten minusta on jännittävää ottaa osaa harjoitukseen
+          ja oppia koodaamista itsekin.
+      3:
+        text: Viimeksi käytimme paljon "liiku eteenpäin" -palikkaa. Olisi hyvä, jos
+          tietokone automatisoisi liikkeet. Onneksi tietokoneet ovat tosi hyviä toistamaan
+          komentoja toistorakenteilla, eli luupeilla.
+      4:
+        text: Kun rakennamme Minecraftia, käytämme luuppeja maailman luomisessa. Se
+          tarkoittaa tuhansia ja taas tuhansia kuutioita. Käytämme luuppeja muuhunkin,
+          kuten Alexin jalkojen liikuttamiseen. Luupit ovat tehokas osa ohjelmointia.
+      5:
+        text: Yö lähestyy, joten rakennamme talon suojaksemme. Se on helppoa toistopalikan
+          avulla.
+      6:
+        text: Jos haluamme seinän taloon, voimme käskeä Alexin liikkua eteenpäin ja
+          asettaa lankun neljä kertaa. Voimme myös tehdä komennon vain kerran ja käyttää
+          sitä useita kertoja toistopalikan avulla. Napsautamme toistopalikkaa ja
+          määrittelemme toistojen määrän. Rakennetaan talo, ennen kuin on yö. Pidä
+          hauskaa!
+    parameters:
+      1:
+        text: Hei, olen Janete, ja olen insinööri Zyngalla.
+      2:
+        text: Mitä jos haluamme piirtää joukon kolmioita, jotka ovat kaikki eri pituisia?
+      3:
+        text: Voisimme kirjoittaa kaiken tuon koodin käsin, tai sitten voimme käyttää
+          funktioita, joille annetaan parametreja.
+      4:
+        text: Tehdäksesi tämän, napsauta sinistä tähteä "piirrä kolmio" -funktion
+          määrittelyssä. Sitten raahaa "syötä nimi" "syöte"-lohkoon.
+      5:
+        text: Jos sitten kirjoitat "pituus" kohtaan, jossa lukee "x" ja painat rivinvaihtonäppäintä
+          ("Enter"), olet määrittänyt pituussyötteen funktiollesi.
+      6:
+        text: Napsauta sitten tähteä. Seuraavaksi avaa muuttujat-valikko ja raahaa
+          "pituus"-lohko "siirry eteenpäin" -lohkoon funktiomäärityksessäsi. Raahaa
+          myös pois vanha numero-lohko.
+      7:
+        text: Kun haluat käyttää parametrillista funktiota, avaa Funktiot-valikko
+          ja raahaa sieltä "piirrä kolmio arvolla pituus" -funktio.
+      8:
+        text: Nyt voit käyttää "matematiikka"-lohkoa ja syöttää eri numeroita piirtääksesi
+          eri kokoisia kolmioita.
+    playlab_events:
+      1:
+        text: Nyt aiomme oppia jotain, mitä kaikki pelisuunnittelijat käyttävät päivittäin.
+          Niitä kutsutaan tapahtumiksi. Tapahtuma kertoo ohjelmallesi, että se kuuntelee
+          kun jotakin tapahtuu. Kun se asia tapahtuu, tapahtuma suorittaa toiminnon.
+      2:
+        text: Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen
+          käyttö tai näytön napautus.
+      3:
+        text: Tässä me aiomme tehdä avaruusbotin tervehtimään maanasukkeja, kun pelaaja
+          klikkaa häntä. Me käytämme "kun napsautetaan" -lohkoa ja liitämme "sano"
+          -lohko siihen. Kun pelaaja klikkaa avaruusbottia, niin kaikki "kun napsautetaan"
+          -lohkoon  liitetty tapahtumalohko suoritetaan. Mitä sinun avaruusolio sanoo?
+      4:
+        text: On myös "kun nuoli" -lohkoja. Jos linkität "siirrä"-lohkot näihin, voit
+          aloittaa siirtämään sinun näyttelijöitä ylös, alas, vasemmalle tai oikealle.
+          Askel askeleelta pelistäsi tulee enemmän vuorovaikutteinen.
+    playlab_intro:
+      1:
+        text: Aiomme luoda pelejä käyttäen Play Lab:ia. Hyvissä peleissä on tarina
+          ja jokaisessa tarinassa on hahmoja. Me opimme, kuinka voimme saada hahmojemme,
+          kuten noidat tai avaruusoliot puhumaan, liikkumaan ja vaikuttamaan toisiinsa.
+          Tämän opetusohjelman loppuun mennessä osaat rakentaa pelin tyhjästä ja voit
+          jakaa sen ystäviesi kanssa.
+      2:
+        text: Näyttösi on jaettu 3 osaan. Vasemmalla on pelin tila, jossa ohjelmasi
+          suoritetaan. Ohjeet jokaiselle tasolle kirjoitetaan alla.
+      3:
+        text: Keskialue on työkaluvalikko, ja jokainen näistä lohkoista on koodinpätkä.
+          Valkoista aluetta oikealla kutsutaan työtilaksi ja siinä me rakennamme ohjelmaamme.
+      4:
+        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
+          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
+          keltaisen viivan ja sitten ne kohdistuvat yhteen.
+      5:
+        text: Ensimmäisessä palapelissä meidän hahmomme on pingviini ja me saamme
+          sen sanomaan  "Hei!" vetämällä sanonta -lohko ulos ja liittämällä se suoritettaessa
+          -lohkoon ja kirjoittamalla "Hei." Voimme myös saada pingviinin liikkumaan
+          käyttämällä siirrä oikealle ja siirrä vasemmalle -lohkoja. Kun olet saanut
+          lohkot on paikalleen, niin klikkaa suorita nappia ja näet mitä olet ohjelmoinut.
+      6:
+        text: 'Aloita, niin loppuun päästyäsi osaat luoda oman pelin kaikenlaisille
+          pelaajille, jotka voivat: olla vuorovaikutuksessa, vaihtua onnellisiksi
+          tai surullisiksi,  kerätä pisteitä tai heittää tulipalloja tai jopa kadota
+          yksi kerrallaan. Se on kaikki sinusta kiinni, mitä haluat pelisi tekevän.'
+    playlab_repeat_forever:
+      1:
+        text: Tämä on "toista ikuisesti" -lohko. Kaikki tämän lohkon sisäiset tapahtumat
+          jatkuvat pelissä ikuisesti.
+      2:
+        text: Jos haluat näyttelijäsi tekevän jotain toistuvasti ilman että pelaaja  joutuu
+          tekemään mitään, niin me laitamme ne lohkot "toista ikuisesti" -lohkon sisään.
+      3:
+        text: Tässä seuraavassa tehtävässä tavoitteenamme on auttaa velhoa  partiomaan
+          valtakunnan rajoja, vasemmalle ja oikealle jatkuvasti. Oppiessasi miten
+          toista -komennot toimivat, tulet säästämään huomattavasti aikaasi  kun myöhemmin
+          rakennat omaa peliäsi.
+    starwars_blocks_congrats:
+      1:
+        text: Hei nimeni on Alice ja johdan tuote- ja suunnittelutiimejä täällä Code.org:issa.
+          Olin mukana kehittämässä oppituntia, jota pelaat ja opiskelet juuri nyt.
+      2:
+        text: Olet juuri saavuttanut viimeisen tason. Onnittelut! Olet juuri oppinut
+          kaiken mitä sinun tarvitsee tietää tehdäksesi oman Star Wars pelin. Tästä
+          eteenpäin ei ole enempää lisäohjeita, eikä pulmia ratkottaviksi. Voit tehdä
+          oman pelin ja valita itse, miten kaikki toimii. Vielä yksi asia - olet juuri
+          saanut käyttöösi uusia ääniä ja uusia komentoja joilla voit tehdä vielä
+          enemmän.
+      3:
+        text: "[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
+          Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper
+          ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat
+          kymmentätuhatta sikaa voitat pelin."
+      4:
+        text: |-
+          [opiskelijat kertovat]
+          "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
+          "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
+          "Pelin kehittäjänä saat joskus melkoisen edun kun tunnet pelisi. Sainko minä? Takuulla!"!
+      5:
+        text: Kun olet saanut pelisi valmiiksi, voit jakaa saamasi linkin kaveriesi
+          kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
+    starwars_blocks_events:
+      1:
+        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt
+          Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat
+          vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja,
+          joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia.
+          Teknologia onkin keskeistä tämän tavoitteen kannalta.
+      2:
+        text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita
+          kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut
+          ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin,
+          jonka pääosassa seikkailevat R2-D2 ja C3PO.
+      3:
+        text: Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille
+          arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi
+          kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu
+          suoritetaan sinun määräämäsi komennot.
+      4:
+        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset,
+          nuoli-näppäinten painamiset ja näytön napauttamiset.
+      5:
+        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan
+          viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin
+          luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää
+          ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
+      6:
+        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan.
+          Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp()
+          -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
+          Nyt R2-D2 reagoi näppäinten painalluksiin ja liikkuu niiden mukaan ruudulla,
+          sen sijaan, että se vain seuraisi ennalta koodattuja ohjeita.
+      7:
+        text: Pelisi tulee askel askeleelta yhä vuorovaikutteisemmaksi.
+    starwars_blocks_intro:
+      1:
+        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan Star Wars: Force Awakens
+          tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n, kanssa. BB-8
+          on pallomainen droidi. Kaikkea sen toimintaa ja liikkumista ohjaa tietokoneohjelmisto.
+          Tietotekniikka vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista terveydenhuoltoon
+          ja elokuva-alalle. Itse asiassa tämäkin elokuva, The Force Awakens, vaati
+          satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
+      2:
+        text: Hei olen Rachel Rose, ja olen vanhempi tuotekehitysinsinööri ILM:llä
+          (Industrial Light and Magic), jossa johdan animaatio- ja olentojenkehitystiimiä.
+          Elokuvassa The Force Awakens vastualueeni on auttaa taiteilijoita kehittämään
+          hahmoillemme liikkuvat rungot, joiden avulla luomamme hahmot saadaan liikkumaan
+          ja näyttämään hyvin uskottavilta tuossa kaukaisessa galaksissa.
+      3:
+        text: Seuraavan tunnin aikana tulemme rakentamaan oman Star Wars pelin ja
+          oppimaan ohjelmoinnin perusasioita. Yleensä ohjelmointi tapahtuu pitkälti
+          tekstillä, mutta me käytämme ohjelmointiin valmiita koodipalikoita, joista
+          ohjelmia voidaan koota raahaamalla ne osaksi ohjelmaa. Aluksi autamme Rey:tä
+          ohjelmoimaan BB-8:n, keräämään kaikki tarvittavat romuosaset.
+      4:
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on Tähtien Sota -pelialue,
+          jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän
+          alle.
+      5:
+        text: Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista
+          on palanen ohjelmakoodia - käsky jonka BB-8 ymmärtää.
+      6:
+        text: Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan
+          ohjelmamme.
+      7:
+        text: Jos raahaan työtilaan "siirry vasemmalle" -palikan, mitä tapahtuu? BB-8
+          siirtyy yhden ruudun verran vasemmalle ruudukossa.
+      8:
+        text: Entä jos haluan BB-8:n tekevän jotain sen siirryttyä vasemmalle? Voin
+          lisätä ohjelmaamme uuden palikan. Valitsen "siirry ylös"-palikan ja raahaan
+          sen juuri "siirry vasemmalle"-palikan alle. Oikean paikan löytyessä ilmestyy
+          pudotuskohtaan korostusväri. Päästäessäni nyt irti raahaamastani palikasta,
+          palikat liittyvät yhteen. Kun painan "Suorita"-nappia, BB-8 suorittaa työtilaan
+          kasaamamme komennot järjestyksessä ylhäältä alas.
+      9:
+        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä
+          sen työkalupakkiin.
+      10:
+        text: Painettuasi "Suorita", voit aina painaa "Alusta"-nappia palauttaaksesi
+          BB-8:n alkuun. Lähdetäänpä rullailemaan!
+    starwars_congrats:
+      1:
+        text: Hei nimeni on Alice ja johdan tuote- ja suunnittelutiimejä täällä Code.org:issa.
+          Olin mukana kehittämässä oppituntia, jota pelaat ja opiskelet juuri nyt.
+      2:
+        text: Olet juuri saavuttanut viimeisen tason. Onnittelut! Olet juuri oppinut
+          kaiken mitä sinun tarvitsee tietää tehdäksesi oman Star Wars pelin. Tästä
+          eteenpäin ei ole enempää lisäohjeita, eikä pulmia ratkottaviksi. Voit tehdä
+          oman pelin ja valita itse, miten kaikki toimii. Vielä yksi asia - olet juuri
+          saanut käyttöösi uusia ääniä ja uusia komentoja joilla voit tehdä vielä
+          enemmän.
+      3:
+        text: "[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
+          Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper
+          ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat
+          kymmentätuhatta sikaa voitat pelin."
+      4:
+        text: |-
+          [opiskelijat kertovat]
+          "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
+          "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
+          "Pelin kehittäjänä saat joskus melkoisen edun kun tunnet pelisi. Sainko minä? Takuulla!"!
+      5:
+        text: Kun olet saanut pelisi valmiiksi, voit jakaa saamasi linkin kaveriesi
+          kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
+    starwars_events:
+      1:
+        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt
+          Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat
+          vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja,
+          joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia.
+          Teknologia onkin keskeistä tämän tavoitteen kannalta.
+      2:
+        text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita
+          kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut
+          ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin,
+          jonka pääosassa seikkailevat R2-D2 ja C3PO.
+      3:
+        text: Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille
+          arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi
+          kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu
+          suoritetaan sinun määräämäsi komennot.
+      4:
+        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset,
+          nuoli-näppäinten painamiset ja näytön napauttamiset.
+      5:
+        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan
+          viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin
+          luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää
+          ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
+      6:
+        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan.
+          Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp()
+          -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
+      7:
+        text: Tätä varten käytämme komentoa nimeltä whenUp(). Kun vedät ulos komennon
+          työkalupakista, huomaat että puolipisteen sijaan se alkaa ja loppuu kaarisulkeisiin.
+          Tämä antaa meille tilaa laittaa muita komentoja kaarisulkeiden väliin. Jokainen
+          käsky jonka asetamme näiden sulkeiden sisään suoritetaan kun pelaaja painaa
+          ylänuolta.
+      8:
+        text: Haluamme R2-D2:n liikkuvan ylöspäin, joten laitamme komennon sisään
+          goUp(); -palikan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
+      9:
+        text: Nyt, sen sijaan että kirjoittaisimme kaikki ohjeet droidillemme ennalta,
+          voimme saada R2-D2:n reagoimaan näppäinten painalluksiin. Tällöin voimme
+          liikuttaa droidia ympäri ruutua. Peli muuttuu näin askel askeleelta enemmän
+          ja enemmän vuorovaikutteiseksi.
     starwars_intro:
       1:
         text: 'Hei, olen Kathleen Kennedy ja olen elokuvan Star Wars: Force Awakens
@@ -771,313 +1063,21 @@ fi:
           oikeassa yläkulmassa. No niin, kokeillaanpa vaihteeksi kirjoittaa koodia.
           Älä hermostu jos teet virheitä. Jokainen tarvitsee muutaman harjoituskerran
           saadakseen kaiken kohdalleen.
-    starwars_events:
-      1:
-        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt
-          Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat
-          vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja,
-          joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia.
-          Teknologia onkin keskeistä tämän tavoitteen kannalta.
+    tutorial_puzzle_challenge:
       2:
-        text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita
-          kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut
-          ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin,
-          jonka pääosassa seikkailevat R2-D2 ja C3PO.
-      3:
-        text: Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille
-          arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi
-          kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu
-          suoritetaan sinun määräämäsi komennot.
-      4:
-        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset,
-          nuoli-näppäinten painamiset ja näytön napauttamiset.
-      5:
-        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan
-          viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin
-          luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää
-          ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
-      6:
-        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan.
-          Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp()
-          -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
-      7:
-        text: Tätä varten käytämme komentoa nimeltä whenUp(). Kun vedät ulos komennon
-          työkalupakista, huomaat että puolipisteen sijaan se alkaa ja loppuu kaarisulkeisiin.
-          Tämä antaa meille tilaa laittaa muita komentoja kaarisulkeiden väliin. Jokainen
-          käsky jonka asetamme näiden sulkeiden sisään suoritetaan kun pelaaja painaa
-          ylänuolta.
-      8:
-        text: Haluamme R2-D2:n liikkuvan ylöspäin, joten laitamme komennon sisään
-          goUp(); -palikan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
-      9:
-        text: Nyt, sen sijaan että kirjoittaisimme kaikki ohjeet droidillemme ennalta,
-          voimme saada R2-D2:n reagoimaan näppäinten painalluksiin. Tällöin voimme
-          liikuttaa droidia ympäri ruutua. Peli muuttuu näin askel askeleelta enemmän
-          ja enemmän vuorovaikutteiseksi.
-    starwars_congrats:
+        text: Voin muuttaa pikselien määrää, viivan pituutta, käyttäen tätä alasvetovalikkoa.
+          Kuinka pitkä sen pitikään olla? Voit katsoa ohjeita uudelleen Suorita-nappulan
+          alapuolelta. Tässä käytimme Siirry eteenpäin -palikkaa ja aion valita matkaksi
+          100 pikseliä. Voin halutessani poistaa palikan vetämällä sen työkalupakkiin
+          tai roskakoriin. Laitetaanpa se takaisin.
+    unplug2:
       1:
-        text: Hei nimeni on Alice ja johdan tuote- ja suunnittelutiimejä täällä Code.org:issa.
-          Olin mukana kehittämässä oppituntia, jota pelaat ja opiskelet juuri nyt.
+        text: Tämän automatisointiajattelun oppitunnin on tarkoitus opettaa sinulle,
+          kuinka vaikea ongelma voidaan pilkkoa joukoksi useita yksinkertaisempia
+          ongelmia. Oppitunnin tavoitteena on kirjoittaa joukko ohjeita, joita joku
+          voi seurata ja piirtää jonkin oppitunnin kuvauksessa olevan hirviön.
       2:
-        text: Olet juuri saavuttanut viimeisen tason. Onnittelut! Olet juuri oppinut
-          kaiken mitä sinun tarvitsee tietää tehdäksesi oman Star Wars pelin. Tästä
-          eteenpäin ei ole enempää lisäohjeita, eikä pulmia ratkottaviksi. Voit tehdä
-          oman pelin ja valita itse, miten kaikki toimii. Vielä yksi asia - olet juuri
-          saanut käyttöösi uusia ääniä ja uusia komentoja joilla voit tehdä vielä
-          enemmän.
-      3:
-        text: "[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
-          Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper
-          ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat
-          kymmentätuhatta sikaa voitat pelin."
-      4:
-        text: |-
-          [opiskelijat kertovat]
-          "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
-          "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
-          "Pelin kehittäjänä saat joskus melkoisen edun kun tunnet pelisi. Sainko minä? Takuulla!"!
-      5:
-        text: Kun olet saanut pelisi valmiiksi, voit jakaa saamasi linkin kaveriesi
-          kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
-    starwars_blocks_intro:
-      1:
-        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan Star Wars: Force Awakens
-          tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n, kanssa. BB-8
-          on pallomainen droidi. Kaikkea sen toimintaa ja liikkumista ohjaa tietokoneohjelmisto.
-          Tietotekniikka vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista terveydenhuoltoon
-          ja elokuva-alalle. Itse asiassa tämäkin elokuva, The Force Awakens, vaati
-          satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
-      2:
-        text: Hei olen Rachel Rose, ja olen vanhempi tuotekehitysinsinööri ILM:llä
-          (Industrial Light and Magic), jossa johdan animaatio- ja olentojenkehitystiimiä.
-          Elokuvassa The Force Awakens vastualueeni on auttaa taiteilijoita kehittämään
-          hahmoillemme liikkuvat rungot, joiden avulla luomamme hahmot saadaan liikkumaan
-          ja näyttämään hyvin uskottavilta tuossa kaukaisessa galaksissa.
-      3:
-        text: Seuraavan tunnin aikana tulemme rakentamaan oman Star Wars pelin ja
-          oppimaan ohjelmoinnin perusasioita. Yleensä ohjelmointi tapahtuu pitkälti
-          tekstillä, mutta me käytämme ohjelmointiin valmiita koodipalikoita, joista
-          ohjelmia voidaan koota raahaamalla ne osaksi ohjelmaa. Aluksi autamme Rey:tä
-          ohjelmoimaan BB-8:n, keräämään kaikki tarvittavat romuosaset.
-      4:
-        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on Tähtien Sota -pelialue,
-          jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän
-          alle.
-      5:
-        text: Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista
-          on palanen ohjelmakoodia - käsky jonka BB-8 ymmärtää.
-      6:
-        text: Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan
-          ohjelmamme.
-      7:
-        text: Jos raahaan työtilaan "siirry vasemmalle" -palikan, mitä tapahtuu? BB-8
-          siirtyy yhden ruudun verran vasemmalle ruudukossa.
-      8:
-        text: Entä jos haluan BB-8:n tekevän jotain sen siirryttyä vasemmalle? Voin
-          lisätä ohjelmaamme uuden palikan. Valitsen "siirry ylös"-palikan ja raahaan
-          sen juuri "siirry vasemmalle"-palikan alle. Oikean paikan löytyessä ilmestyy
-          pudotuskohtaan korostusväri. Päästäessäni nyt irti raahaamastani palikasta,
-          palikat liittyvät yhteen. Kun painan "Suorita"-nappia, BB-8 suorittaa työtilaan
-          kasaamamme komennot järjestyksessä ylhäältä alas.
-      9:
-        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä
-          sen työkalupakkiin.
-      10:
-        text: Painettuasi "Suorita", voit aina painaa "Alusta"-nappia palauttaaksesi
-          BB-8:n alkuun. Lähdetäänpä rullailemaan!
-    starwars_blocks_events:
-      1:
-        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt
-          Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat
-          vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja,
-          joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia.
-          Teknologia onkin keskeistä tämän tavoitteen kannalta.
-      2:
-        text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita
-          kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut
-          ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin,
-          jonka pääosassa seikkailevat R2-D2 ja C3PO.
-      3:
-        text: Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille
-          arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi
-          kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu
-          suoritetaan sinun määräämäsi komennot.
-      4:
-        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset,
-          nuoli-näppäinten painamiset ja näytön napauttamiset.
-      5:
-        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan
-          viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin
-          luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää
-          ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
-      6:
-        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan.
-          Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp()
-          -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
-          Nyt R2-D2 reagoi näppäinten painalluksiin ja liikkuu niiden mukaan ruudulla,
-          sen sijaan, että se vain seuraisi ennalta koodattuja ohjeita.
-      7:
-        text: Pelisi tulee askel askeleelta yhä vuorovaikutteisemmaksi.
-    starwars_blocks_congrats:
-      1:
-        text: Hei nimeni on Alice ja johdan tuote- ja suunnittelutiimejä täällä Code.org:issa.
-          Olin mukana kehittämässä oppituntia, jota pelaat ja opiskelet juuri nyt.
-      2:
-        text: Olet juuri saavuttanut viimeisen tason. Onnittelut! Olet juuri oppinut
-          kaiken mitä sinun tarvitsee tietää tehdäksesi oman Star Wars pelin. Tästä
-          eteenpäin ei ole enempää lisäohjeita, eikä pulmia ratkottaviksi. Voit tehdä
-          oman pelin ja valita itse, miten kaikki toimii. Vielä yksi asia - olet juuri
-          saanut käyttöösi uusia ääniä ja uusia komentoja joilla voit tehdä vielä
-          enemmän.
-      3:
-        text: "[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
-          Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper
-          ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat
-          kymmentätuhatta sikaa voitat pelin."
-      4:
-        text: |-
-          [opiskelijat kertovat]
-          "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
-          "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
-          "Pelin kehittäjänä saat joskus melkoisen edun kun tunnet pelisi. Sainko minä? Takuulla!"!
-      5:
-        text: Kun olet saanut pelisi valmiiksi, voit jakaa saamasi linkin kaveriesi
-          kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
-    mc_intro:
-      1:
-        text: Olen Jens Bergensten, eli Jeb. Toimin pääkehittäjänä Mojangilla Tukholmassa.
-          Olin 11 tai 12 kun aloitin ohjelmoinnin, koska halusin tehdä pelejä. Sain
-          kuulla, että pelejä tehtäessä pitää osata ohjelmoida. Siitä urani sai alkunsa.
-          Tykkään suunnittelusta ja arkkitehtuurista. Sen vuoksi pidän paljon Minecraftista.
-      2:
-        text: Seuraavan tunnin aikana opit tietotekniikan perusteita ohjelmoimalla
-          Alexin ja Steven liikkumaan Minecraft-maailmassa.
-      3:
-        text: Tavallisesti ohjelmointi tehdään koodilla, mutta tänään käytämme Blocklya,
-          jonka avulla voimme ohjelmoida palikoilla. Pinnan alla koodaatte JavaScriptillä.
-      4:
-        text: Opit käsitteitä, joita ohjelmoijat käyttävät päivittäin ja jotka ovat
-          tietotekniikan perusta. Mojangilla me käytämme samoja käsitteitä saadaksemme
-          Minecraftin toimimaan.
-      5:
-        text: Valitaan ensin hahmo. Minä valitsen Alexin. Ohjelmoidaan koodi, joka
-          auttaa häntä liikkumaan ruudulla.
-      6:
-        text: Ruutu on jaettu kolmeen osaan. Vasemmalla on Minecraft-pelimaailma,
-          jossa ohjelma pyörii. Kunkin tason ohjeet ovat alla.
-      7:
-        text: Työkalut ovat keskellä. Nämä palikat ohjaavat Alexin toimintaa.
-      8:
-        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
-      9:
-        text: Jos vedämme "liiku eteenpäin" -palikan työtilaan ja suoritamme, mitä
-          tapahtuu? Alex liikkuu yhden ruudun eteenpäin.
-      10:
-        text: Entä jos haluamme Alexin tekevän jotain muuta liikkumisen jälkeen? Voimme
-          lisätä toisen palikan ohjelmaan. Valitsen "käänny oikeaan" -palikan ja vedän
-          sen "liiku eteenpäin" -palikan alle siten, että oranssi kehys ilmestyy.
-          Palikat napsahtavat kiinni toisiinsa. Kun suoritan, Alex seuraa jonossa
-          olevia käskyjä ylhäältä alas.
-      11:
-        text: Jos haluat poistaa komennon, vedä se jonosta takaisin työkaluihin.
-      12:
-        text: Peru tekemäsi muutokset ja palauta taso alkuasetelmaan Start Over [Aloita
-          alusta] -painikkeella, joka on oikeassa yläkulmassa. Entäpä tuo pieni kolmio
-          kääntymiskomennossa? "Kolmio tarkoittaa, että voit valita eri vaihtoehtoja."
-          Aletaan koodata!
-    mc_repeat:
-      1:
-        text: Olen Lydia Winters, Mojangin brändijohtaja. Me teimme pelin nimeltä
-          Minecraft.
-      2:
-        text: Tutkiminen on suosikkipuuhaani Minecraftissa. Rakastan luolissa seikkailemista.
-          En itse ole ohjelmoija, joten minusta on jännittävää ottaa osaa harjoitukseen
-          ja oppia koodaamista itsekin.
-      3:
-        text: Viimeksi käytimme paljon "liiku eteenpäin" -palikkaa. Olisi hyvä, jos
-          tietokone automatisoisi liikkeet. Onneksi tietokoneet ovat tosi hyviä toistamaan
-          komentoja toistorakenteilla, eli luupeilla.
-      4:
-        text: Kun rakennamme Minecraftia, käytämme luuppeja maailman luomisessa. Se
-          tarkoittaa tuhansia ja taas tuhansia kuutioita. Käytämme luuppeja muuhunkin,
-          kuten Alexin jalkojen liikuttamiseen. Luupit ovat tehokas osa ohjelmointia.
-      5:
-        text: Yö lähestyy, joten rakennamme talon suojaksemme. Se on helppoa toistopalikan
-          avulla.
-      6:
-        text: Jos haluamme seinän taloon, voimme käskeä Alexin liikkua eteenpäin ja
-          asettaa lankun neljä kertaa. Voimme myös tehdä komennon vain kerran ja käyttää
-          sitä useita kertoja toistopalikan avulla. Napsautamme toistopalikkaa ja
-          määrittelemme toistojen määrän. Rakennetaan talo, ennen kuin on yö. Pidä
-          hauskaa!
-    mc_if_statements:
-      1:
-        text: Nyt opimme jos-lauseista. Ne ovat yksi ohjelmoinnin perustekijöistä.
-          Ne auttavat tietokoneita tekemään päätöksiä.
-      2:
-        text: Kaikki tietokoneet käyttävät jos-lauseita. Puhelimenikin käyttää. Kun
-          avaan sen, koodi määrää, että jos salasana on oikea, puhelimeni aukeaa,
-          muutoin tulee virheilmoitus.
-      3:
-        text: Jos-lauseilla voit koodata Steven ja Alicen reagoimaan pelimaailmaan.
-          Esimerkiksi jos edessä on kivi, he voivat kääntyä vasemmalle tai puun kohdalla
-          oikealle.
-      4:
-        text: Emme halua pudota laavaan. Laavaa on helppo väistellä, koska näemme
-          sen. Mutta entä kiven alla oleva laava?
-      5:
-        text: Kun olemme louhineet kiven pois, meidän on tarkistettava, onko alla
-          laavaa, ennen kuin jatkamme. Jos kiven alla on laavaa, hahmon eteen on syytä
-          asettaa mukulakivi, jotta voimme edetä turvassa. Aloitetaan louhiminen!
-          Muista varoa askeleitasi jos-lauseiden avulla.
-    mc_congrats_share:
-      1:
-        text: Onneksi olkoon! Olet juuri oppinut tietotekniikan tärkeimmät rakennuspalikat.
-      2:
-        text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai
-          selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
-      3:
-        text: "[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
-          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!"
-      4:
-        text: Voit jakaa valmiin luomuksesi ystävillesi jakolinkin avulla. - Pidä
-          hauskaa!
-    mc_congrats_no_share:
-      1:
-        text: Onneksi olkoon! Olet juuri oppinut tietotekniikan tärkeimmät rakennuspalikat.
-      2:
-        text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai
-          selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
-      3:
-        text: "[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
-          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!"
-      4:
-        text: Voit rakentaa ihan mitä haluat. - Pidä hauskaa!
-    gumball_intro:
-      4:
-        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi
-          suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
-      6:
-        text: Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
-      7:
-        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
-          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
-          keltaisen viivan ja sitten ne kohdistuvat yhteen.
-    iceage_intro:
-      4:
-        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi
-          suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
-      6:
-        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
-      7:
-        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
-          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
-          keltaisen viivan ja sitten ne kohdistuvat yhteen.
-    mc_2016_intro:
-      8:
-        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä
-          sen työkalupakkiin.
-    hoc_dance_events_2019:
-      4:
-        text: Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen
-          käyttö tai näytön napautus.
+        text: 'Oppilaat jakautuvat ryhmiin kirjoittaakseen ohjeet ja vaihtavat ne
+          sitten toisen ryhmän kanssa, jonka tehtävänä on piirtää hirviö. Ryhmät kirjoittavat
+          ohjeet käyttäen automatisointiajattelun neljää vaihetta: osiin jakaminen,
+          mallien havainnointi, abstraktio ja algoritmien luominen.'

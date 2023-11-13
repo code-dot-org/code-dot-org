@@ -13,7 +13,7 @@ const MOCK_SECTION = {
   studentCount: 4,
   code: 'TQGSJR',
   providerManaged: false,
-  ttsAutoplayEnabled: false
+  ttsAutoplayEnabled: false,
 };
 
 describe('ProgressLessonTeacherInfo', () => {
@@ -21,12 +21,12 @@ describe('ProgressLessonTeacherInfo', () => {
     const lessonWithoutPlan = fakeLesson('Maze', 1);
     const lessonWithPlan = {
       ...fakeLesson('Maze', 1),
-      lesson_plan_html_url: 'foo/bar'
+      lesson_plan_html_url: 'foo/bar',
     };
 
     const [wrapperWithoutPlan, wrapperWithPlan] = [
       lessonWithoutPlan,
-      lessonWithPlan
+      lessonWithPlan,
     ].map(lesson =>
       shallow(
         <ProgressLessonTeacherInfo
@@ -34,7 +34,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
-            lessonsBySection: {11: {}}
+            lessonsBySection: {11: {}},
           })}
           unitId={17}
           unitName="My Unit"
@@ -52,7 +52,7 @@ describe('ProgressLessonTeacherInfo', () => {
 
   it('updates the lesson url to require login', () => {
     const lessonWithoutPlan = {
-      ...fakeLesson('Maze', 1)
+      ...fakeLesson('Maze', 1),
     };
     const wrapper = shallow(
       <ProgressLessonTeacherInfo
@@ -60,7 +60,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
-          lessonsBySection: {11: {}}
+          lessonsBySection: {11: {}},
         })}
         unitId={17}
         unitName="My Unit"
@@ -77,16 +77,16 @@ describe('ProgressLessonTeacherInfo', () => {
 
   it('renders a purple Button if and only if we have a student lesson plan', () => {
     const lessonWithoutPlan = {
-      ...fakeLesson('Maze', 1)
+      ...fakeLesson('Maze', 1),
     };
     const lessonWithPlan = {
       ...fakeLesson('Maze', 1),
-      student_lesson_plan_html_url: 'foo/bar/student'
+      student_lesson_plan_html_url: 'foo/bar/student',
     };
 
     const [wrapperWithoutPlan, wrapperWithPlan] = [
       lessonWithoutPlan,
-      lessonWithPlan
+      lessonWithPlan,
     ].map(lesson =>
       shallow(
         <ProgressLessonTeacherInfo
@@ -94,7 +94,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
-            lessonsBySection: {11: {}}
+            lessonsBySection: {11: {}},
           })}
           unitId={17}
           unitName="My Unit"
@@ -119,7 +119,7 @@ describe('ProgressLessonTeacherInfo', () => {
 
     const [wrapperLockable, wrapperUnlockable] = [
       lockableLesson,
-      unlockableLesson
+      unlockableLesson,
     ].map(lesson =>
       shallow(
         <ProgressLessonTeacherInfo
@@ -127,7 +127,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
-            lessonsBySection: {11: {}}
+            lessonsBySection: {11: {}},
           })}
           unitId={17}
           unitName="My Unit"
@@ -148,7 +148,7 @@ describe('ProgressLessonTeacherInfo', () => {
 
     const [wrapperLockable, wrapperUnlockable] = [
       lockableLesson,
-      unlockableLesson
+      unlockableLesson,
     ].map(lesson =>
       shallow(
         <ProgressLessonTeacherInfo
@@ -156,7 +156,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
-            lessonsBySection: {11: {}}
+            lessonsBySection: {11: {}},
           })}
           unitId={17}
           unitName="My Unit"
@@ -180,7 +180,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
-          lessonsBySection: {11: {}}
+          lessonsBySection: {11: {}},
         })}
         unitId={17}
         unitName="My Unit"
@@ -195,7 +195,7 @@ describe('ProgressLessonTeacherInfo', () => {
 
   it('renders SendLessonDialog with only start url', () => {
     const lesson = {
-      ...fakeLesson('Maze', 1)
+      ...fakeLesson('Maze', 1),
     };
 
     const wrapper = shallow(
@@ -204,7 +204,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
-          lessonsBySection: {11: {}}
+          lessonsBySection: {11: {}},
         })}
         unitId={17}
         unitName="My Unit"
@@ -226,7 +226,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
-          lessonsBySection: {11: {}}
+          lessonsBySection: {11: {}},
         })}
         unitId={17}
         unitName="My Unit"
@@ -242,7 +242,7 @@ describe('ProgressLessonTeacherInfo', () => {
   it('renders Rate This Lesson only if lesson feedback url', () => {
     const lesson = {
       ...fakeLesson('Maze', 1),
-      lesson_feedback_url: 'foo/bar/feedback'
+      lesson_feedback_url: 'foo/bar/feedback',
     };
 
     const wrapper = shallow(
@@ -251,7 +251,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
-          lessonsBySection: {11: {}}
+          lessonsBySection: {11: {}},
         })}
         unitId={17}
         unitName="My Unit"
@@ -273,7 +273,7 @@ describe('ProgressLessonTeacherInfo', () => {
             section={section}
             unitAllowsHiddenLessons={true}
             hiddenLessonState={Immutable.fromJS({
-              lessonsBySection: {11: {}}
+              lessonsBySection: {11: {}},
             })}
             unitId={17}
             unitName="My Unit"

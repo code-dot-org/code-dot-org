@@ -28,22 +28,32 @@
 }
 
 .mc-img {
-  width: 314px;
-  height: 314px;
+  width: 310px;
+  height: 310px;
 }
 
 .mc-img-half {
-  width: 478px;
+  width: 473px;
   max-width: 100%;
   height: 314px
 }
 
 .mc-h1-second-box {
-  margin-top: 30px;
+  margin-top: 0;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
 }
 
 .mc-h1-half-box {
-  margin-top: 8px;
+  margin-top: 0;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
 }
 
 .img-container-wide .mc-h1-second-box {
@@ -55,7 +65,8 @@
 }
 
 .color-block a:link, .color-block a:visited, .color-block a:hover, .color-block a:active {
-  font-family: "Gotham 5r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   color: white;
   text-decoration: underline;
 }
@@ -66,10 +77,6 @@
 
 .padded-button {
   margin-top: 22px;
-}
-
-.responsive-padding {
-  margin-top: 10px;
 }
 
 .microsoft-partnership {

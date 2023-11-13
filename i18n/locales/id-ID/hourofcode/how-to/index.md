@@ -25,7 +25,7 @@ Mencoba Hour of Code merupakan cara yang simpel dan menyenangkan untuk mengenalk
 
 <a id="how-to-video"></a>
 
-## 1. Tonton video panduan Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Tonton video panduan Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Saat [mendaftarkan acara Hour of Code Anda](/#join), Anda akan menerima email yang berisi berita dan kiat untuk menyelenggarakan Hour of Code yang sukses. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Saat Anda [mendaftar untuk mengikuti acara Hour of Code](/events), Anda akan menerima email yang berisi informasi dan kiat untuk menyelenggarakan Hour of Code yang sukses. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -111,7 +111,7 @@ Tidak masalah jika Anda dan murid Anda baru mengenal ilmu komputer. Berikut bebe
 
 Arahkan pelajar untuk melakukan aktivitas
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Tulis tautan tutorial di papan tulis. Temukan tautan yang tercantum pada [informasi untuk tutorial yang Anda pilih]({{ urls/learn }}).
 
 Ketika siswa Anda menemukan kesulitan, tidak apa-apa untuk menanggapi:
 
@@ -136,7 +136,7 @@ Bagaimana jika seorang siswa selesai lebih awal?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Cetak sertifikat]({{ urls/certificates }}) untuk siswa Anda.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
 
@@ -151,6 +151,6 @@ Bagaimana jika seorang siswa selesai lebih awal?
 
 ### Apa yang diharapkan selanjutnya setelah Jam Pemrograman?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Ilmu komputer tidak harus berakhir dengan Hour of Code! [Pelajari](/beyond) cara membawa CS ke sekolah dan siswa Anda.
 
 {{ signup_button }}

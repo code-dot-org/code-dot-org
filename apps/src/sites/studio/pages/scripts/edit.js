@@ -8,10 +8,10 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {
   init,
-  mapLessonGroupDataForEditor
+  mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import createResourcesReducer, {
-  initResources
+  initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 
@@ -25,7 +25,7 @@ export default function initPage(unitEditorData) {
     ...reducers,
     resources: createResourcesReducer('teacherResource'),
     studentResources: createResourcesReducer('studentResource'),
-    isRtl
+    isRtl,
   });
   const store = getStore();
   store.dispatch(init(lessonGroups));

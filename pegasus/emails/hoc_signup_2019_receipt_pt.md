@@ -31,7 +31,7 @@ Fundador da Code.org
 
 <hr/>
 <small>
-Você está recebendo este e-mail porque você se cadastrou na Hora do Código, apoiada por mais de 200 parceiros e organizada pela Code.org. A Code.org é uma organização sem fins lucrativos. Nosso endereço é: 1501 4th Avenue, Suite 900, Seattle, WA 98101. Não quer receber esses e-mails? [Cancele sua assinatura](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
+Você está recebendo este e-mail porque você se cadastrou na Hora do Código, apoiada por mais de 200 parceiros e organizada pela Code.org. A Code.org é uma organização sem fins lucrativos. Nosso endereço é: 801 5th Avenue, Suite 2100, Seattle, WA 98104. Não quer receber esses e-mails? [Cancele sua assinatura](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
 ![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

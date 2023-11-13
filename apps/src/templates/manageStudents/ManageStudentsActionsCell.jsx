@@ -12,7 +12,7 @@ import {
   removeStudent,
   saveStudent,
   addStudents,
-  RowType
+  RowType,
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -43,12 +43,12 @@ class ManageStudentsActionsCell extends Component {
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
-    loadSectionData: PropTypes.func
+    loadSectionData: PropTypes.func,
   };
 
   state = {
     deleting: false,
-    requestInProgress: false
+    requestInProgress: false,
   };
 
   onConfirmDelete = () => {
@@ -56,7 +56,7 @@ class ManageStudentsActionsCell extends Component {
     this.setState({requestInProgress: true});
     $.ajax({
       url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
-      method: 'POST'
+      method: 'POST',
     })
       .done(() => {
         removeStudent(id);
@@ -67,8 +67,8 @@ class ManageStudentsActionsCell extends Component {
             event: 'single-student-delete',
             data_json: JSON.stringify({
               sectionId: sectionId,
-              studentId: id
-            })
+              studentId: id,
+            }),
           },
           {includeUserId: true}
         );
@@ -100,8 +100,8 @@ class ManageStudentsActionsCell extends Component {
         event: 'single-student-start-edit',
         data_json: JSON.stringify({
           sectionId: sectionId,
-          studentId: id
-        })
+          studentId: id,
+        }),
       },
       {includeUserId: true}
     );
@@ -119,8 +119,8 @@ class ManageStudentsActionsCell extends Component {
           event: 'single-student-cancel-edit',
           data_json: JSON.stringify({
             sectionId: sectionId,
-            studentId: id
-          })
+            studentId: id,
+          }),
         },
         {includeUserId: true}
       );
@@ -141,8 +141,8 @@ class ManageStudentsActionsCell extends Component {
           event: 'single-student-save',
           data_json: JSON.stringify({
             sectionId: sectionId,
-            studentId: id
-          })
+            studentId: id,
+          }),
         },
         {includeUserId: true}
       );
@@ -159,8 +159,8 @@ class ManageStudentsActionsCell extends Component {
         event: 'single-student-add',
         data_json: JSON.stringify({
           sectionId: sectionId,
-          studentId: id
-        })
+          studentId: id,
+        }),
       },
       {includeUserId: true}
     );
@@ -176,8 +176,8 @@ class ManageStudentsActionsCell extends Component {
         event: 'single-student-print-login-card',
         data_json: JSON.stringify({
           sectionId: sectionId,
-          studentId: id
-        })
+          studentId: id,
+        }),
       },
       {includeUserId: true}
     );
@@ -199,8 +199,8 @@ class ManageStudentsActionsCell extends Component {
         event: 'single-student-download-parent-letter',
         data_json: JSON.stringify({
           sectionId: sectionId,
-          studentId: id
-        })
+          studentId: id,
+        }),
       },
       {includeUserId: true}
     );
@@ -211,7 +211,7 @@ class ManageStudentsActionsCell extends Component {
 
     const showWordPictureOptions = [
       SectionLoginType.word,
-      SectionLoginType.picture
+      SectionLoginType.picture,
     ].includes(loginType);
 
     return (
@@ -243,29 +243,28 @@ class ManageStudentsActionsCell extends Component {
         {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onSave}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
               style={styles.saveButton}
             />
             <Button
-              __useDeprecatedTag
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+              style={styles.buttonWithoutMargin}
             />
           </div>
         )}
         {rowType === RowType.ADD && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onAdd}
               color={Button.ButtonColor.gray}
               text={i18n.add()}
               disabled={this.props.isSaving || this.props.disableSaving}
+              style={styles.buttonWithoutMargin}
             />
           </div>
         )}
@@ -285,11 +284,15 @@ class ManageStudentsActionsCell extends Component {
 
 const styles = {
   xIcon: {
-    paddingRight: 5
+    paddingRight: 5,
+  },
+  buttonWithoutMargin: {
+    margin: 0,
   },
   saveButton: {
-    marginRight: 5
-  }
+    margin: 0,
+    marginRight: 5,
+  },
 };
 
 export const UnconnectedManageStudentsActionsCell = ManageStudentsActionsCell;
@@ -314,6 +317,6 @@ export default connect(
     },
     loadSectionData(sectionId) {
       dispatch(asyncLoadSectionData(sectionId));
-    }
+    },
   })
 )(ManageStudentsActionsCell);

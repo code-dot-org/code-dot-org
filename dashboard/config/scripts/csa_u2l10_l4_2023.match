@@ -14,3 +14,4 @@ answer 'the attributes of an object that are represented by its instance variabl
 
 question 'reference type'
 answer 'a data type that contains a pointer to the memory location of an object'
+allow_multiple_attempts true

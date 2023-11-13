@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "הוסף CSS",
+  "addHTMLButton": "הוסף HTML",
+  "addImageButton": "הוסף תמונה",
+  "closeFullscreenPreview": "סגור תצוגה מקדימה של מסך מלא",
+  "currentProjectCapacity": "{currentMegabytes}מגה-בייט של {totalMegabytes}מגה-בייט בשימוש",
+  "disallowedHtml": "הקובץ \"{filename}\" מכיל רכיבי HTML שאינם מורשים: `{disallowedTags}`. הם יוסרו כאשר תיבת דו-שיח זו תיסגר.",
+  "errorSavingProject": "משהו לא עבד תוך שמירה אוטומטית של הפרויקט שלך. בדוק את חיבור האינטרנט ונסה לשמור באופן ידני. אם בעיה זו נמשכת, נסה לטעון מחדש את הדף כדי להתחיל מחדש.",
+  "fatalError": "שגיאה חמורה: {message}. אם אתה נמצא במצב 'גלישה פרטית', לא ניתן לכתוב נתונים.",
+  "loadFailure": "אנו מצטערים, מעבדת האינטרנט לא הצליחה לטעון מסיבה כלשהי. שגיאה: {message}",
+  "openFullscreenPreview": "פתח תצוגה מקדימה של מסך מלא",
+  "refreshPreview": "רענן ושמור",
+  "reloading": "טוען מחדש...",
+  "reset": "אפס את מעבדת האינטרנט",
+  "resetComplete": "איפוס מעבדת האינטרנט הושלם",
+  "resetFailure": "איפוס מעבדת האינטרנט נכשלה: {message}.",
+  "toggleInspectorOff": "מפקח: ב",
+  "toggleInspectorOn": "מפקח: כבוי",
+  "troubleshootingSupport": "אנא עיין במאמר התמיכה שלנו [\"פתרון בעיות במעבדת האינטרנט\"]({url}) לקבלת מידע נוסף.",
+  "uploadError": "שגיאת העלאה"
 }

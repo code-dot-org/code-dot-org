@@ -5,3 +5,6 @@ exceptions:
   notify_at_exit: false
 breadcrumbs:
   enabled: true
+request:
+  filter_keys:
+    - "warden.user.user.key"

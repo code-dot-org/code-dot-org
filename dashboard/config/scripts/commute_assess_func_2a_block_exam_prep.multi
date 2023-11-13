@@ -28,3 +28,5 @@ TEXT: <img src="https://images.code.org/9004a3fcaf647a126632fe3482c027b9-image-1
 
 ![]()
 MARKDOWN
+
+allow_multiple_attempts true

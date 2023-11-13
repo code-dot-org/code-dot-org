@@ -66,12 +66,10 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         privacy_permission: to_bool(afe_params['consentCSTA'])
       )
     end
-  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => e
-    Honeybadger.notify e
-    render json: e.to_s, status: :bad_request
+  rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => exception
+    Honeybadger.notify exception
+    render json: exception.to_s, status: :bad_request
   end
-
-  private
 
   REQUIRED_PARAMETERS = %w(
     firstName
@@ -96,13 +94,13 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     'consentCSTA'
   ]
 
-  def submit_params
+  private def submit_params
     params.require(:amazon_future_engineer).
-           permit(*PERMITTED_PARAMETERS).
-           tap {|p| p.require(REQUIRED_PARAMETERS)}
+      permit(*PERMITTED_PARAMETERS).
+      tap {|p| p.require(REQUIRED_PARAMETERS)}
   end
 
-  def to_bool(val)
+  private def to_bool(val)
     ActiveModel::Type::Boolean.new.cast val
   end
 end

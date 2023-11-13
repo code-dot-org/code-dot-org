@@ -7,3 +7,5 @@ question 'Fiber Optic Cable'
 answer 'Electric Voltage'
 answer 'Alternating Frequencies'
 answer 'Beam of Light'
+
+allow_multiple_attempts true

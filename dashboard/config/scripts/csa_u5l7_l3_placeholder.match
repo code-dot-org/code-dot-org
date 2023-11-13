@@ -10,3 +10,4 @@ question 'iterative design'
 answer 'an approach used to continually evaluate and improve a product'
 question 'immutable'
 answer 'the content cannot be changed once it is created'
+allow_multiple_attempts true

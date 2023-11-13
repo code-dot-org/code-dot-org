@@ -10,7 +10,8 @@ import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
   setPersonalProjects,
-  setPublicProjects
+  setPublicProjects,
+  setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
@@ -20,7 +21,7 @@ $(document).ready(() => {
   registerReducers({
     projects,
     publishDialog: publishDialogReducer,
-    deleteDialog: deleteDialogReducer
+    deleteDialog: deleteDialogReducer,
   });
   const store = getStore();
 
@@ -38,6 +39,7 @@ $(document).ready(() => {
   store.dispatch(selectGallery(currentTab));
   store.dispatch(setPersonalProjects());
   store.dispatch(setPublicProjects());
+  store.dispatch(setCaptchaKey(projectsData.recaptchaSiteKey));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -45,6 +47,9 @@ $(document).ready(() => {
         <ProjectHeader
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
+          showDeprecatedCalcAndEvalWarning={
+            projectsData.showDeprecatedCalcAndEvalWarning
+          }
         />
         <div className={'main container'}>
           <ProjectsGallery

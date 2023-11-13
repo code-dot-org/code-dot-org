@@ -1,0 +1,32 @@
+{
+  "ta-IN": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "பின் செல்லவும்"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "உணவு",
+            "PEOPLE": "மக்கள்",
+            "allButtonText": "எல்லாம்"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "உணவு",
+            "PEOPLE": "மக்கள்",
+            "allButtonText": "எல்லாம்"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "resetBtn_8": "மீட்டமை"
+          }
+        }
+      }
+    }
+  }
+}

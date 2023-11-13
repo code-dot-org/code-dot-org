@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 %p
@@ -24,7 +24,7 @@
     state of computer science education at your school. To
     complete the survey prior to the Introduction Workshop, visit
     = link_to 'https://studio.code.org/form/2022_baseline_school_leadership.', 'https://studio.code.org/form/2022_baseline_school_leadership', target: "_blank", rel: "noopener noreferrer"
-- elsif @workshop.ayw? || Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
+- elsif @workshop.ayw? || Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course || Pd::Workshop::SUBJECT_CSA_CAPSTONE == @workshop.subject
   %p
     Thanks for enrolling in
     = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
@@ -46,7 +46,7 @@
 - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_201
   = render partial: 'csf_deepdive_reminder'
 
--if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
+-if Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
 - elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
   = render partial: 'teacher_enrollment_details_facilitator'

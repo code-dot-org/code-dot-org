@@ -25,7 +25,7 @@ Mencuba Satu Jam Kod ialah cara yang mudah dan menyeronokkan untuk memperkenal p
 
 <a id="how-to-video"></a>
 
-## 1. Sila tonton video panduan cara melakukan Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Sila tonton video panduan cara melakukan Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promosikan Hour of Code kepada guru lain yang mungkin mahu menyertai keseronokan
 
 ### Biarkan Sukarelawan Tahu dengan Mendaftar Acara Anda
 
-Apabila anda [mendaftar acara Hour of Code anda](/#join), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Hour of Code.
+Apabila anda [mendaftar acara Hour of Code anda](/events), anda akan menerima komunikasi e-mel yang berguna dengan berita dan petua untuk menganjurkan Hour of Code yang berjaya. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Hour of Code.
 
 ### Buatkan Pelajar Anda Teruja
 
@@ -111,7 +111,7 @@ Tidak menjadi masalah jika anda dan pelajar anda masih baharu kepada sains kompu
 
 Memberikan panduan kepada pelajar mengenai aktiviti
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Tulis pautan tutorial di papan putih. Cari pautan yang disenaraikan pada [maklumat untuk tutorial pilihan anda]({{ urls/learn }}).
 
 Apabila pelajar anda mengalami kesukaran, tidak menjadi masalah untuk menjawab:
 
@@ -151,6 +151,6 @@ Bagaimanakah jika pelajar selesai lebih awal?
 
 ### Apakah yang seterusnya selepas Jam Kod?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Sains komputer tidak perlu berakhir dengan Hour of Code! [Ketahui](/beyond) cara membawa CS ke sekolah dan pelajar anda.
 
 {{ signup_button }}

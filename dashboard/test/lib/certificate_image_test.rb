@@ -13,10 +13,10 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.prefilled_title_course?('mee_empathy')
     assert CertificateImage.prefilled_title_course?('mee_timecraft')
     assert CertificateImage.prefilled_title_course?('mee_estate')
-    assert !CertificateImage.prefilled_title_course?('course1')
-    assert !CertificateImage.prefilled_title_course?('course2')
-    assert !CertificateImage.prefilled_title_course?('course3')
-    assert !CertificateImage.prefilled_title_course?('course4')
+    refute CertificateImage.prefilled_title_course?('course1')
+    refute CertificateImage.prefilled_title_course?('course2')
+    refute CertificateImage.prefilled_title_course?('course3')
+    refute CertificateImage.prefilled_title_course?('course4')
   end
 
   def test_course_templates

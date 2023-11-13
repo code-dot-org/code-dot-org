@@ -1,65 +1,9 @@
 {
-  "navigateForward": "Turpināt",
-  "navigateBack": "Atpakaļ",
-  "tryAgain": "Mēģini vēlreiz",
-  "navigateDone": "Pabeigt",
-  "saveProgress": "Saglabāt",
-  "correctAnswer": "Pareizi",
-  "modelCardPossibleValuesMinimum": "minimālais",
-  "modelCardPossibleValuesMaximum": "maksimālais",
-  "columnInspectorDescription": "Apraksts",
-  "columnDetailsMinimumValue": "minimālais",
   "columnDetailsMaximumValue": "maksimālais",
+  "columnDetailsMinimumValue": "minimālais",
+  "columnInspectorDescription": "Apraksts",
+  "correctAnswer": "Pareizi",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "vecums"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "diena"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "kukurūza"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "krāsa"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "vecums"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Apraksts"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "izmērs"
-        }
-      }
-    },
     "billionaires": {
       "fields": {
         "Age": {
@@ -70,14 +14,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banāns"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "vecums"
         }
       }
     },
-    "census_part": {
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "krāsa"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Vecums"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "vecums"
@@ -91,6 +56,20 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Valsts"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "vecums"
+        }
+      }
+    },
     "movies": {
       "fields": {
         "Country": {
@@ -101,45 +80,17 @@
         }
       }
     },
-    "songs": {
+    "nutrition": {
       "fields": {
-        "Artist": {
-          "id": "Mākslinieks"
+        "Description": {
+          "id": "Apraksts"
         }
       }
     },
-    "student_survey": {
+    "salsa_toy": {
       "fields": {
-        "Country": {
-          "id": "Valsts"
-        },
-        "Internet": {
-          "id": "Internets"
-        },
-        "Achievements": {
-          "id": "Sasniegumi"
-        },
-        "Age": {
-          "id": "Vecums",
-          "description": "Vecums"
-        },
-        "Gender": {
-          "id": "Dzimums",
-          "description": "Dzimums"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banāns"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Vecums"
+        "corn": {
+          "id": "kukurūza"
         }
       }
     },
@@ -150,12 +101,61 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "izmērs"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "diena"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Mākslinieks"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "vecums"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Sasniegumi"
+        },
+        "Age": {
+          "description": "Vecums",
+          "id": "Vecums"
+        },
         "Country": {
           "id": "Valsts"
+        },
+        "Gender": {
+          "description": "Dzimums",
+          "id": "Dzimums"
+        },
+        "Internet": {
+          "id": "Internets"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "maksimālais",
+  "modelCardPossibleValuesMinimum": "minimālais",
+  "navigateBack": "Atpakaļ",
+  "navigateDone": "Pabeigt",
+  "navigateForward": "Turpināt",
+  "saveProgress": "Saglabāt",
+  "tryAgain": "Mēģini vēlreiz"
 }

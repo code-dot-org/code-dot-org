@@ -1,0 +1,214 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2023-06-07T23:46:35.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "storylab"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zStorybookModule-CSC"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Remember, <code style=\\\"color:black; background-color:#6AF36C\\\">when clicked</code> blocks can go anywhere in the workspace. \\n\\nThey do not connect to the <code style=\\\"color:black; background-color:#FFBD46\\\">When run</code> program.\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5f67088b0d2a46286a7217d395a9fa29/csc_bookcover_clicksay_2023.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Connect a `say` block under a `when clicked` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_spriteSay\\\">\\n        <title name=\\\"SPEECH\\\">Hello, world!</title>\\n        <value name=\\\"SPRITE\\\">\\n          <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n            <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2af7f87efd6904b9f252ee3d7187a0af/csc_bookcover_clicksay_2023.mp3\"}]",
+    "long_instructions": "**Add another event to make the second character speak too!** \r\n- Add a <code style=\"color:black; background-color:#6AF36C\">when clicked</code> event with the second character's costume. \r\n\r\n- Add a <code style=\"color:black; background-color:#5ED5DD\">say</code> block to that event. \r\n- You can change the text to change what Charlotte says.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then **click on both sprites** to test your code.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "instructions_icon": "bear",
+    "name_suffix": "_2023",
+    "start_animations": "{\"orderedKeys\":[\"656333d3-2e06-4fd1-9430-591fe9546309\",\"208e2799-a0e8-4b4b-b50a-2da428411078\",\"38c18c4c-4cf2-4de7-98d7-349778b0992e\",\"418e8764-1326-426b-b564-3c110ad4db38\",\"fd37b686-234d-4fe5-ad97-1ae4338d1409\",\"f4904c39-084d-4b4e-8940-148e806f4856\"],\"propsByKey\":{\"f4904c39-084d-4b4e-8940-148e806f4856\":{\"name\":\"brownspider\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":263,\"y\":397},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:48:16 UTC\",\"pngLastModified\":\"2021-01-19 23:48:16 UTC\",\"version\":\"2Ig.EXAjZRuTt7g_i_HWzVT3P8jHaBM.\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/2Ig.EXAjZRuTt7g_i_HWzVT3P8jHaBM./category_animals/brownspider.png\",\"sourceSize\":{\"x\":263,\"y\":397}},\"fd37b686-234d-4fe5-ad97-1ae4338d1409\":{\"name\":\"cuteanimals_pig\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:32 UTC\",\"pngLastModified\":\"2021-09-02 21:58:50 UTC\",\"version\":\"4hvO4J47069.IUakDqgGENt0iNUR6FGa\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/4hvO4J47069.IUakDqgGENt0iNUR6FGa/category_animals/cuteanimals_pig.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"418e8764-1326-426b-b564-3c110ad4db38\":{\"name\":\"gradient_02\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_/category_backgrounds/gradient_02.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"38c18c4c-4cf2-4de7-98d7-349778b0992e\":{\"name\":\"gradient_15\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:13 UTC\",\"pngLastModified\":\"2021-01-19 23:53:13 UTC\",\"version\":\"M4I_MGfEVbxvCV3fxgRrNCwoUlbM4D0_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/M4I_MGfEVbxvCV3fxgRrNCwoUlbM4D0_/category_backgrounds/gradient_15.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"208e2799-a0e8-4b4b-b50a-2da428411078\":{\"name\":\"field_dawn\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-10T20:52:36.000Z\",\"pngLastModified\":\"2023-03-10T20:52:35.000Z\",\"version\":\"nzfMSby1GQ4_kQ0eW6RtN.I5wGf16lcj\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/nzfMSby1GQ4_kQ0eW6RtN.I5wGf16lcj/field_dawn.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"656333d3-2e06-4fd1-9430-591fe9546309\":{\"name\":\"night_moon\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-01T16:05:40.000Z\",\"pngLastModified\":\"2023-03-01T16:05:39.000Z\",\"version\":\"Fou4wijwxmmpK_x8JPn03YnUnH3bAG5f\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Fou4wijwxmmpK_x8JPn03YnUnH3bAG5f/night_moon.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "validation_code": "if (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  \r\n  addCriteria(function() {\r\n    return spriteIds.length >= 2;\r\n  }, \"cscBookcoverRemovedSprite\");  // include i18n feedback string\r\n\r\n  //check sprite clicked, but no event log\r\n  addCriteria(function() {\r\n    return anySpriteClicked();\r\n  }, \"cscBookcoverNoClick\"); // you need to click a sprite\r\n  \r\n  //check that a sprite was clicked and has an event!\r\n  addCriteria(function() {\r\n    if (spriteIds.length < 2)\r\n      return false;\r\n    return checkThisSpriteClickedThisFrame(spriteIds[0]);\r\n  }, \"cscBookcoverAddOnclickBlock\");  // TODO: add validation string: \"You need to add a onClick block to your code\"\r\n  \r\n  \r\n    addCriteria(function() {\r\n    if (spriteIds.length < 2)\r\n      return false;\r\n    return checkThisSpriteClickedThisFrame(spriteIds[1]);\r\n  }, \"cscBookcoverAddOnclickBlock\");  // TODO: add validation string: \"You need to add a onClick block to your code\"\r\n\r\n  \r\n  addCriteria(function() {\r\n    if (spriteIds.length < 2)\r\n      return false;\r\n    return checkThisSpriteClickedThisFrame(spriteIds[1]) && strictSpriteSpeechRenderedThisFrame(spriteIds[1]);\r\n  }, \"cscFunctionsClickNoSay\");  // include i18n feedback string\r\n  \r\n    addCriteria(function() {\r\n    if (spriteIds.length < 2)\r\n      return false;\r\n    return checkThisSpriteClickedThisFrame(spriteIds[0]) && strictSpriteSpeechRenderedThisFrame(spriteIds[0]);\r\n  }, \"cscFunctionsClickNoSay\");  // include i18n feedback string\r\n\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\ndrawHandsOnUnclickedSprites();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();\r\n",
+    "standalone_app_name": "story",
+    "video_key": "csc-event-short-intro",
+    "short_instructions": "Add a <code style=\"color:black; background-color:#6AF36C\">when clicked</code> event and then connect a <code style=\"color:black; background-color:#5ED5DD\">say</code> block to make the new character say something when you click on it!",
+    "encrypted_examples": "Qki/9SfjK7K6OkbdW7VwDF1OtzDeqt4rxWsPbGsGyNy0eVmXkvkK/+Fc2ApW\ncGp99zYOeiS6/ie+BJoMLOJPJQ==\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-06-07T23:46:35.537+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_clicksay_2023\\\"\"],\"cloned_from\":\"csc_bookcover_clicksay_2023\"},{\"changed_at\":\"2023-06-07 23:48:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-07 23:50:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-07 23:52:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-07 23:52:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-07 23:53:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-09 17:39:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-09 17:45:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-09 17:47:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-09 17:49:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-09 21:31:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":18974,\"changed_by_email\":\"joshedel94+levelbuilder@gmail.com\"},{\"changed_at\":\"2023-06-12 22:07:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-26 23:14:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 17:19:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 17:31:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:02:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:15:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:17:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:19:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:19:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:34:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 21:38:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-06-27 21:41:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-06-27 21:43:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-06-27 21:51:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-06-27 21:55:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="storylab_setHeading" movable="false" editable="false">
+              <value name="HEADING">
+                <block type="text" can_disconnect_from_parent="false">
+                  <field name="TEXT">Charlotte's Web</field>
+                </block>
+              </value>
+              <next>
+                <block type="storylab_setSubheading" movable="false" editable="false">
+                  <value name="SUBHEADING">
+                    <block type="text" can_disconnect_from_parent="false">
+                      <field name="TEXT">E. B. White</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setBackgroundImageAs" movable="false">
+                      <field name="IMG">"field_dawn"</field>
+                      <next>
+                        <block type="gamelab_makeNewSpriteAnon" movable="false">
+                          <field name="ANIMATION_NAME">"cuteanimals_pig"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                              <field name="LOCATION">{"x":300,"y":328}</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_setProp" deletable="false" movable="false">
+                              <field name="PROPERTY">"scale"</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                  <field name="ANIMATION">"cuteanimals_pig"</field>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number" can_disconnect_from_parent="false">
+                                  <field name="NUM">120</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_makeNewSpriteAnon" movable="false">
+                                  <field name="ANIMATION_NAME">"brownspider"</field>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+                                      <field name="LOCATION">{"x":181,"y":219}</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_setProp" movable="false" editable="false">
+                                      <field name="PROPERTY">"scale"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                                          <field name="ANIMATION">"brownspider"</field>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
+                                        <block type="math_number" can_disconnect_from_parent="false">
+                                          <field name="NUM">80</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked" deletable="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"cuteanimals_pig"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
+              <field name="SPEECH">I'm Wilbur. I am a small, and simple pig looking for a true friend.</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                  <field name="ANIMATION">"cuteanimals_pig"</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT">Charlotte's Web</field>
+            </block>
+          </value>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT">E.B. White</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"field_dawn"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"cuteanimals_pig"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+              <field name="LOCATION">{"x":300,"y":269}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"cuteanimals_pig"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" can_disconnect_from_parent="false">
+              <field name="NUM">250</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"brownspider"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">My name is Charlotte. I am clever and determined to help!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <field name="ANIMATION">"brownspider"</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

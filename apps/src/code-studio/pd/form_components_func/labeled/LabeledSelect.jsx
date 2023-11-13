@@ -8,11 +8,11 @@ export const LabeledSelect = (props = {}) => {
   const passProps = {
     ...defaults,
     type: 'select',
-    ...props
+    ...props,
   };
   return <SelectFieldGroupFromOptions {...passProps} />;
 };
 LabeledSelect.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };

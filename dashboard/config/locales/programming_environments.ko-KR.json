@@ -2,24 +2,309 @@
   "ko-KR": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "웹 랩",
-          "description": "웹 기반 HTML/CSS 편집기입니다.",
+        "applab": {
           "categories": {
-            "html_tags": {
-              "name": "HTML 태그"
+            "advanced": {
+              "name": "고급"
             },
-            "css_properties": {
-              "name": "CSS 속성"
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "대상"
+                    }
+                  }
+                }
+              },
+              "name": "Canvas"
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "함수"
+                    }
+                  }
+                }
+              },
+              "name": "제어"
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "함수"
+                    }
+                  }
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "이벤트 핸들러가 적용될 표의 이름."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "대상"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "대상"
+                    }
+                  }
+                }
+              },
+              "name": "데이터"
+            },
+            "functions": {
+              "name": "함수"
+            },
+            "maker": {
+              "name": "Maker"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "가장 큰 수를 찾아 줍니다."
+                    },
+                    "min": {
+                      "description": "가장 작은 수를 찾아 줍니다."
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "가장 큰 수를 찾아 줍니다."
+                    },
+                    "min": {
+                      "description": "가장 작은 수를 찾아 줍니다."
+                    }
+                  }
+                }
+              },
+              "name": "계산"
+            },
+            "turtle": {
+              "expressions": {
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "거북이를 오른쪽으로 움직일 픽셀 수."
+                    },
+                    "y": {
+                      "description": "거북이를 아래쪽으로 움직일 픽셀 수."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "거북이를 현재 방향에서 지정된 픽셀만큼 뒤로 이동시킵니다."
+                },
+                "moveForward": {
+                  "short_description": "거북이를 현재 방향에서 지정된 픽셀만큼 앞으로 이동시킵니다."
+                },
+                "moveTo": {
+                  "short_description": "거북이를 화면의 특정 (x, y) 좌표로 이동합니다."
+                },
+                "penColor": {
+                  "short_description": "거북이가 선과 점을 그릴 때 사용하는 펜의 색상을 설정합니다."
+                },
+                "penDown": {
+                  "short_description": "펜을 내려 거북이가 움직일 때마다 선이 그려지게 만듭니다."
+                },
+                "penRGB": {
+                  "short_description": "RGBA 값을 사용해 거북이가 선과 점을 그릴 때 사용하는 펜의 색상을 설정합니다."
+                },
+                "penUp": {
+                  "short_description": "펜을 올려 거북이가 움직일 때 선이 그어지지 않게 합니다."
+                },
+                "penWidth": {
+                  "short_description": "거북이가 움직일 때 그려지는 선의 너비를 픽셀 단위로 설정합니다."
+                }
+              },
+              "name": "Turtle"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "축소 및 증가"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "함수"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "지정한 URL에서 MP3 파일을 재생합니다."
+                }
+              },
+              "name": "UI 컨트롤"
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "없음"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "자신만의 모험 선택"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "‘var’ 다음에 변수 이름을 선언하고, 수식 오른쪽에 값을 할당하세요."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "문자열의 길이"
+                }
+              },
+              "name": "변수"
             }
-          }
+          },
+          "description": "App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로 만들고, 공유할 수 있습니다.",
+          "name": "앱 연구실"
         },
         "gamelab": {
-          "name": "게임 랩",
-          "description": "Game Lab 은 흥미로운 게임과 애니메이션을 제작할 수 있는 프로그래밍 환경입니다. 캐릭터를 그리고 블록이나 JavaScript로 코딩하여 게임을 완성하기만 하면 몇 초안에 게임을 공유할 수 있습니다.",
           "categories": {
+            "control": {
+              "name": "제어"
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "별"
+                    }
+                  }
+                }
+              },
+              "name": "그리기"
+            },
+            "functions": {
+              "name": "함수"
+            },
             "game_lab": {
-              "name": "게임 랩",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -45,22 +330,10 @@
                 "playSound": {
                   "short_description": "지정한 URL에서 MP3 파일을 재생합니다."
                 }
-              }
-            },
-            "sprites": {
-              "name": "스프라이트",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "나선"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "게임 랩"
             },
             "groups": {
-              "name": "그룹",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -97,342 +370,100 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "그리기",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "별"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "name": "제어"
+              },
+              "name": "그룹"
             },
             "math": {
-              "name": "계산",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "가장 작은 수를 찾아 줍니다."
-                    },
                     "max": {
                       "description": "가장 큰 수를 찾아 줍니다."
+                    },
+                    "min": {
+                      "description": "가장 작은 수를 찾아 줍니다."
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "가장 작은 수를 찾아 줍니다."
-                    },
                     "max": {
                       "description": "가장 큰 수를 찾아 줍니다."
+                    },
+                    "min": {
+                      "description": "가장 작은 수를 찾아 줍니다."
                     }
                   }
                 }
-              }
+              },
+              "name": "계산"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "나선"
+                    }
+                  }
+                }
+              },
+              "name": "스프라이트"
             },
             "variables": {
-              "name": "변수",
               "expressions": {
                 "assign_x": {
                   "short_description": "기존 변수에 값을 할당. 예를 들어, x=0;"
                 },
                 "declareAssign_x": {
                   "short_description": "‘var’ 다음에 변수 이름을 선언하고, 수식 오른쪽에 값을 할당하세요."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "검색할 문자열"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "문자열의 길이"
                 }
-              }
-            },
-            "functions": {
-              "name": "함수"
-            }
-          }
-        },
-        "applab": {
-          "name": "앱 연구실",
-          "description": "App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로 만들고, 공유할 수 있습니다.",
-          "categories": {
-            "ui_controls": {
-              "name": "UI 컨트롤",
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "축소 및 증가"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "함수"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "지정한 URL에서 MP3 파일을 재생합니다."
-                }
-              }
-            },
-            "canvas": {
-              "name": "Canvas",
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "데이터",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "함수"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "객체로 이동합니다"
-                    }
-                  }
-                }
-              }
-            },
-            "turtle": {
-              "name": "Turtle"
-            },
-            "control": {
-              "name": "제어",
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "함수"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "계산",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "가장 작은 수를 찾아 줍니다."
-                    },
-                    "max": {
-                      "description": "가장 큰 수를 찾아 줍니다."
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "가장 작은 수를 찾아 줍니다."
-                    },
-                    "max": {
-                      "description": "가장 큰 수를 찾아 줍니다."
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "변수",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "자신만의 모험 선택"
-                    }
-                  }
-                },
-                "declareAssign_x": {
-                  "short_description": "‘var’ 다음에 변수 이름을 선언하고, 수식 오른쪽에 값을 할당하세요."
-                },
-                "addPair": {
-                  "return_value": "없음"
-                }
-              }
-            },
-            "functions": {
-              "name": "함수"
-            },
-            "advanced": {
-              "name": "고급"
-            },
-            "maker": {
-              "name": "Maker"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "스프라이트 연구소",
-          "description": "Sprite Lab은 대화형 프로젝트를 생성할 수 있는 블록 구조 프로그래밍 환경입니다.",
-          "categories": {
-            "sprites": {
-              "name": "스프라이트"
-            },
-            "world": {
-              "name": "세계"
-            },
-            "location": {
-              "name": "위치"
-            },
-            "actions": {
-              "name": "동작"
-            },
-            "events": {
-              "name": "이벤트"
-            },
-            "behaviors": {
-              "name": "행동"
-            },
-            "loops": {
-              "name": "반복"
-            },
-            "variables": {
+              },
               "name": "변수"
-            },
-            "math": {
-              "name": "계산"
-            },
-            "logic": {
-              "name": "논리"
-            },
-            "functions": {
-              "name": "함수"
-            },
-            "text": {
-              "name": "문장"
-            },
-            "comments": {
-              "name": "의견"
             }
-          }
+          },
+          "description": "Game Lab 은 흥미로운 게임과 애니메이션을 제작할 수 있는 프로그래밍 환경입니다. 캐릭터를 그리고 블록이나 JavaScript로 코딩하여 게임을 완성하기만 하면 몇 초안에 게임을 공유할 수 있습니다.",
+          "name": "게임 랩"
         },
         "javalab": {
-          "name": "Java 연구소",
           "categories": {
-            "java_lab_shortcuts": {
-              "name": "Java Lab 바로가기"
+            "control_structures": {
+              "name": "제어 구조"
+            },
+            "data_structures": {
+              "name": "데이터 구조"
             },
             "general": {
               "name": "Java 기초"
             },
-            "org_code_theater": {
-              "name": "org.code.theater"
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_lab_shortcuts": {
+              "name": "Java Lab 바로가기"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "java_util": {
+              "name": "java.util"
             },
             "org_code_media": {
               "name": "org.code.media"
@@ -440,22 +471,68 @@
             "org_code_neighborhood": {
               "name": "org.code.neighborhood"
             },
-            "java_io": {
-              "name": "java.io"
-            },
-            "java_util": {
-              "name": "java.util"
-            },
-            "java_lang": {
-              "name": "java.lang"
-            },
-            "control_structures": {
-              "name": "제어 구조"
-            },
-            "data_structures": {
-              "name": "데이터 구조"
+            "org_code_theater": {
+              "name": "org.code.theater"
             }
-          }
+          },
+          "name": "Java 연구소"
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "동작"
+            },
+            "behaviors": {
+              "name": "행동"
+            },
+            "comments": {
+              "name": "의견"
+            },
+            "events": {
+              "name": "이벤트"
+            },
+            "functions": {
+              "name": "함수"
+            },
+            "location": {
+              "name": "위치"
+            },
+            "logic": {
+              "name": "논리"
+            },
+            "loops": {
+              "name": "반복"
+            },
+            "math": {
+              "name": "계산"
+            },
+            "sprites": {
+              "name": "스프라이트"
+            },
+            "text": {
+              "name": "문장"
+            },
+            "variables": {
+              "name": "변수"
+            },
+            "world": {
+              "name": "세계"
+            }
+          },
+          "description": "Sprite Lab은 대화형 프로젝트를 생성할 수 있는 블록 구조 프로그래밍 환경입니다.",
+          "name": "스프라이트 연구소"
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "name": "CSS 속성"
+            },
+            "html_tags": {
+              "name": "HTML 태그"
+            }
+          },
+          "description": "웹 기반 HTML/CSS 편집기입니다.",
+          "name": "웹 랩"
         }
       }
     }

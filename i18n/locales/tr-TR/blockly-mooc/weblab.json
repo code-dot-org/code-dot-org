@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "CSS ekle",
+  "addImageButton": "Görsel ekle",
+  "addHTMLButton": "HTML Ekle",
+  "closeFullscreenPreview": "Tam ekran önizlemesini kapat",
+  "currentProjectCapacity": "{totalMegabytes}MB 'dan {currentMegabytes}MB  kullanıldı",
+  "disallowedHtml": "“{filename}\" dosyası izin verilmeyen HTML öğelerini içerir: `{disallowedTags}`. Bu iletişim kutusu kapatıldığında bunlar kaldırılacaktır.",
+  "errorSavingProject": "Projeniz otomatik kaydedilirken bir sorun oluştu. İnternet bağlantınızı kontrol edin ve manuel olarak kaydetmeyi deneyin. Bu sorun devam ederse, baştan başlamak için sayfayı yeniden yüklemeyi deneyin.",
+  "fatalError": "Ölümcül Hata: {message}. Özel Tarama modundaysanız veriler yazılamaz.",
+  "loadFailure": "Üzgünüz, Web Laboratuvarı herhangi bir nedenle yüklenemedi. Hata: {message}",
+  "openFullscreenPreview": "Tam ekran önizlemesini aç",
+  "refreshPreview": "Yenile ve Kaydet",
+  "reloading": "Yeniden yükleniyor...",
+  "reset": "Web Laboratuarını Sıfırla",
+  "resetComplete": "Web Laboratuvarı SıfırlamaTamamlandı",
+  "resetFailure": "Web Laboratuvarı sıfırlanamadı: {message}.",
+  "toggleInspectorOn": "Müfettiş: Kapalı",
+  "toggleInspectorOff": "Müfettiş: Açık",
+  "troubleshootingSupport": "Daha fazla bilgi için lütfen [\"Web Lab sorunlarını giderme\"]({url}) destek makalemize bakın.",
+  "uploadError": "Yükleme Hatası"
+}

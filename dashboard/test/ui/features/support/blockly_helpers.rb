@@ -12,16 +12,29 @@ module BlocklyHelpers
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
-    "var drag_dx = $(\"#{to}\").offset().left - $(\"#{from}\").offset().left;" \
-        "var drag_dy = $(\"#{to}\").offset().top  - $(\"#{from}\").offset().top;" \
+    to_offset = generate_offset_code(to)
+    from_offset = generate_offset_code(from)
+    "var drag_dx = #{to_offset}.left - #{from_offset}.left;" \
+        "var drag_dy = #{to_offset}.top  - #{from_offset}.top;" \
         "$(\"#{from}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def generate_begin_to_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
-    "var drag_dx = $(\"[#{id_selector}='#{to}']\").offset().left - $(\"[#{id_selector}='#{from}']\").offset().left;" \
-        "var drag_dy = $(\"[#{id_selector}='#{to}']\").offset().top  - $(\"[#{id_selector}='#{from}']\").offset().top;" \
+    to_offset = generate_offset_code("[#{id_selector}='#{to}']")
+    from_offset = generate_offset_code("[#{id_selector}='#{from}']")
+    "var drag_dx = #{to_offset}.left - #{from_offset}.left;" \
+        "var drag_dy = #{to_offset}.top  - #{from_offset}.top;" \
         "$(\"[#{id_selector}='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+  end
+
+  def generate_offset_code(selector)
+    # Only get offset for non-hidden elements. We have to check the parent tree
+    # for any hidden parents, because blocks will not be "hidden" per jquery's logic
+    # if they are inside a hidden div.
+    "$(\"#{selector}\").filter(function (index) {" \
+        "return $(this).parents(':hidden').length === 0;" \
+        "}).offset()"
   end
 
   def get_block_coordinates(block_id)

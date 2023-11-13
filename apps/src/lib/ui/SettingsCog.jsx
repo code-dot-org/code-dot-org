@@ -23,14 +23,14 @@ export class SettingsCog extends Component {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
   };
 
   state = {
     open: false,
     confirmingEnableMaker: false,
     managingLibraries: false,
-    managingModels: false
+    managingModels: false,
   };
 
   open = () => this.setState({open: true});
@@ -59,7 +59,7 @@ export class SettingsCog extends Component {
       firehoseClient.putRecord({
         study: 'maker-toolkit',
         study_group: 'maker-toolkit',
-        event: 'enable-maker-toolkit'
+        event: 'enable-maker-toolkit',
       });
 
       // Pop a confirmation dialog when trying to enable maker,

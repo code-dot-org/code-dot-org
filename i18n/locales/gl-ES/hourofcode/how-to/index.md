@@ -25,7 +25,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -97,7 +97,7 @@ Mostre un vídeo que entusiasme:
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Está ben, se vostede e os seus estudantes son novos no eido da informática. Aquí hai unhas ideas para presentar a súa actividade da Hora do Código:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Como clase, faga unha lista de cousas da vida cotián que usan código.

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Añadir CSS",
-  "addImageButton": "Añadir Imagen",
   "addHTMLButton": "Añadir HTML",
+  "addImageButton": "Añadir Imagen",
   "closeFullscreenPreview": "Cerrar previsualización de pantalla completa",
   "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB utilizados",
   "disallowedHtml": "El archivo \"{filename}\" contiene elementos HTML no permitidos: `{disallowedTags}`. Se eliminarán cuando se cierre este cuadro de diálogo.",
@@ -14,8 +14,8 @@
   "reset": "Reiniciar Laboratorio Web",
   "resetComplete": "Completado el reinicio del Laboratorio Web",
   "resetFailure": "Fallo al reiniciar Laboratorio Web: {message}.",
-  "toggleInspectorOn": "Inspector: Apagado",
   "toggleInspectorOff": "Inspector: Encendido",
+  "toggleInspectorOn": "Inspector: Apagado",
   "troubleshootingSupport": "Por favor, consulta nuestro artículo de soporte [\"Solución de problemas de Laboratorio Web\"]({url}) para más información.",
   "uploadError": "Error al Cargar"
 }

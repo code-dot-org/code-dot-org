@@ -1,0 +1,30 @@
+{
+  "da-DK": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "Tilbage"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "Mad",
+            "allButtonText": "Alle"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "Mad",
+            "allButtonText": "Alle"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "resetBtn_8": "Nulstil"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,19 @@
 {
-  "navigateForward": "Continue",
-  "tryAgain": "Try again",
-  "navigateDone": "Finish",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Description",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Description",
   "datasets": {
-    "medical_priority": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Age"
+        },
+        "Gender": {
+          "id": "Gender"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "age"
@@ -22,10 +27,38 @@
         }
       }
     },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Age"
+        }
+      }
+    },
     "insurance_cost": {
       "fields": {
         "age": {
           "id": "age"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "age"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Name": {
+          "id": "Name"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "chicken"
         }
       }
     },
@@ -43,41 +76,10 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Age"
-        },
-        "Gender": {
-          "id": "Gender"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "age": {
           "id": "age"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "chicken"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "age"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Name": {
-          "id": "Name"
         }
       }
     },
@@ -87,21 +89,19 @@
           "id": "Achievements"
         },
         "Age": {
-          "id": "Age",
-          "description": "Age"
+          "description": "Age",
+          "id": "Age"
         },
         "Gender": {
-          "id": "Gender",
-          "description": "Gender"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Age"
+          "description": "Gender",
+          "id": "Gender"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateDone": "Finish",
+  "navigateForward": "Continue",
+  "tryAgain": "Try again"
 }

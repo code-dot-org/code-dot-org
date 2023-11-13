@@ -10,7 +10,7 @@ export default class NameFailureDialog extends React.Component {
   static propTypes = {
     flaggedText: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
   };
 
   render() {
@@ -29,7 +29,7 @@ export default class NameFailureDialog extends React.Component {
             __useDeprecatedTag
             text={i18n.ok()}
             onClick={this.props.handleClose}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc ui-confirm-project-delete-button"
           />
         </DialogFooter>
@@ -41,10 +41,10 @@ export default class NameFailureDialog extends React.Component {
 const styles = {
   title: {
     textAlign: 'left',
-    fontSize: '32px'
+    fontSize: '32px',
   },
   body: {
     textAlign: 'left',
-    color: color.black
-  }
+    color: color.black,
+  },
 };

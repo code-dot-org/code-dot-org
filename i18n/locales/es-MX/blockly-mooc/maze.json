@@ -85,7 +85,7 @@
   "pathAhead": "camino adelante",
   "pathLeft": "si hay camino a la izquierda",
   "pathRight": "si hay camino a la derecha",
-  "pick": "elige",
+  "pick": "recoger",
   "pilePresent": "hay una pila",
   "plant": "planta",
   "plantInNonSoilError": "Sólo puedo plantar en tierra fresca.",

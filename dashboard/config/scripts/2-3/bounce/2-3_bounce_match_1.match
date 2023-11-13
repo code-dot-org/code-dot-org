@@ -33,3 +33,5 @@ question '/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png'
 
 
 # http://staging.learn.code.org/s/course2/lessons/10/levels/11
+
+allow_multiple_attempts true

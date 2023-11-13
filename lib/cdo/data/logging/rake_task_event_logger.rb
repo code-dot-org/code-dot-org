@@ -1,13 +1,29 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
+require lib_dir 'cdo/data/logging/infrastructure_logger'
+require 'cdo/github'
+require 'cdo/git_utils'
 class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
-  CURRENT_LOGGING_VERSION = 'v0'.freeze
+  CURRENT_LOGGING_VERSION = 'v1'.freeze
+  @@depth = 0
 
   def initialize(rake_task)
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled = !([:development, :test].include?(rack_env))
+    @enabled_firehose = !([:development, :test].include?(rack_env))
+  end
+
+  def self.depth
+    @@depth
+  end
+
+  def self.increase_depth
+    @@depth += 1
+  end
+
+  def self.decrease_depth
+    @@depth -= 1
   end
 
   def start_task_logging
@@ -18,30 +34,27 @@ class RakeTaskEventLogger
 
   def exception_task_logging(exception)
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'exception'.freeze
-    log_event(event, duration, exception)
+    log_event(event, duration_ms, exception)
   end
 
   def end_task_logging
     @end_time = Time.new
-    duration = @end_time.to_i - @start_time.to_i
+    duration_ms = ((@end_time - @start_time).to_f * 1000).to_i
     event = 'end'.freeze
-    log_event(event, duration)
+    log_event(event, duration_ms)
   end
 
   def task_chain
-    pre_requisites_split = @rake_task.inspect.split('=>')
-    unless pre_requisites_split.empty?
-      return pre_requisites_split[1]
-    end
-    return nil
+    @rake_task.prerequisites.join(', ')
   end
 
-  def log_event(event, duration = nil, exception = nil)
-    if @enabled == false
+  def log_firehose(event, duration_ms, exception)
+    if @enabled_firehose == false
       return
     end
+
     begin
       FirehoseClient.instance.put_record(
         :analysis,
@@ -52,21 +65,47 @@ class RakeTaskEventLogger
             task_name: @rake_task.name,
             pid: Process.pid,
             invocation_chain: task_chain,
-            duration: duration,
+            duration_ms: duration_ms,
             exception: exception&.to_s,
             exception_backtrace: exception&.backtrace,
             version: CURRENT_LOGGING_VERSION,
           }.to_json
         }
       )
-    rescue => e
+    rescue => exception
       Honeybadger.notify(
-        e,
-        error_message: "Failed to log rake task information",
+        exception,
+        error_message: "Failed to log rake task information in firehose",
         context: {
           event: event
         }
       )
     end
+  end
+
+  # Logging 3 metrics to track rake tasks performance
+  # 1) Any task that has no dependencies (root task)
+  # 2) Any task that is a leaf task (children, the processes to optimize)
+  # 3) Any task
+  def log_cloud_watch(event, duration_ms)
+    metric_value = duration_ms.nil? ? 1 : duration_ms.to_i
+    extra_dimensions = {task_name: @rake_task.name}
+    total_dependencies = task_chain.split(',').count
+    if @@depth == 0
+      metric_name = "rake_tasks_root_task_#{event}"
+      Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
+    end
+    if total_dependencies == 0
+      metric_name = "rake_tasks_no_dependencies_task_#{event}"
+      Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
+    end
+    metric_name = "rake_tasks_#{event}"
+    Infrastructure::Logger.put(metric_name, metric_value, extra_dimensions)
+    Infrastructure::Logger.flush
+  end
+
+  def log_event(event, duration = nil, exception = nil)
+    log_firehose(event, duration, exception)
+    log_cloud_watch(event, duration)
   end
 end

@@ -944,48 +944,6 @@
       "run_button": "Press the Run button first!",
       "visualizationResizeBar": "Drag the 3 dots to resize the play area."
     },
-    "placeholder_texts": {
-      "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
-      "077449fb290b51b9d70c9f2f3d3213bc": " seconds",
-      "490082498449bd20ff0199737dfa4916": "Select game type:",
-      "41f2b2212de0105c2a942ebb4a44e449": "The Great Collector Game!"
-    },
-    "function_definitions": {
-      "end game": {
-        "name": "end game"
-      }
-    },
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving west2": "moving west2",
-      "flying west and looping": "flying west and looping",
-      "fluttering": "fluttering",
-      "moving east2": "moving east2",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "wandering2": "wandering2",
-      "spinning left2": "spinning left2",
-      "spinning right2": "spinning right2",
-      "shrinking2": "shrinking2",
-      "growing2": "growing2",
-      "moving south2": "moving south2",
-      "swimming left and right2": "swimming left and right2",
-      "moving north2": "moving north2",
-      "jittering2": "jittering2",
-      "patrolling2": "patrolling2",
-      "moving with arrow keys2": "moving with arrow keys2",
-      "driving with arrow keys2": "driving with arrow keys2"
-    },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
       "move a sprite to the left across the screen": "move a sprite to the left across the screen",
@@ -1761,23 +1719,6 @@
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Make the sprite move one way, then another way.",
     "long_instructions": "# Switching Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nIf you want to switch from one behavior to another, you need to _stop_ the old behavior and _begin_ the new behavior  at the same time. You can use a new block to make sprites stop their current behaviors.\n\n[blockly block][1]\n\nYou'll need to connect a behavior to this block, such as `moving east`.\n\n## Do This\n\n-   Run the code and see what happens.\n-   Add behaviors to each `stops` and `begins` block to make the sprite change from moving east to moving west at 2 seconds.",
-    "behavior_names": {
-      "moving east": "moving east",
-      "patrolling": "patrolling",
-      "moving forward": "moving forward",
-      "growing": "growing",
-      "moving west": "moving west",
-      "spinning right": "spinning right",
-      "moving north": "moving north",
-      "moving south": "moving south",
-      "jittering": "jittering",
-      "wandering": "wandering",
-      "shrinking": "shrinking",
-      "spinning left": "spinning left",
-      "fluttering": "fluttering",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping"
-    },
     "behavior_descriptions": {
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
       "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",

@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: ռեսուրսներ
 ---
 
 {{ signup_button }}

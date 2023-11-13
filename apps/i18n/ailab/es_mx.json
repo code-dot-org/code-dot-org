@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Selecciona el conjunto de datos que quieres utilizar.",
-  "uploadedDataset": "¡Acabas de subir un conjunto de datos!",
-  "selectedDataset": "Acabas de seleccionar un conjunto de datos.",
-  "dataDisplayLabel": "Elige una columna para hacer tu predicción.",
   "dataDisplayFeatures": "Elige una o más columnas para hacer la predicción.",
-  "selectedFeatureNumerical": "Acabas de seleccionar una característica numérica.",
-  "selectedFeatureCategorical": "Acabas de seleccionar una característica categórica.",
-  "trainModel": "Estamos entrenando tu modelo.",
+  "dataDisplayLabel": "Elige una columna para hacer tu predicción.",
   "generateResults": "Estamos validando tu modelo.",
+  "modelSummary": "¡Felicidades! Ya entrenaste y guardaste tu modelo. Revisa los detalles de tu modeloy y hazle click a 'Finalizar' para usar tu modelo en el Laboratorio de Aplicaciones.",
   "results": "Revisa los resultados.",
   "resultsDetails": "Mostrando detalles de los resultados.",
   "saveModel": "Guarda el modelo entrenado para utilizarlo en el Laboratorio de Aplicaciones.",
-  "modelSummary": "¡Felicidades! Ya entrenaste y guardaste tu modelo. Revisa los detalles de tu modeloy y hazle click a 'Finalizar' para usar tu modelo en el Laboratorio de Aplicaciones."
+  "selectDataset": "Selecciona el conjunto de datos que quieres utilizar.",
+  "selectedDataset": "Acabas de seleccionar un conjunto de datos.",
+  "selectedFeatureCategorical": "Acabas de seleccionar una característica categórica.",
+  "selectedFeatureNumerical": "Acabas de seleccionar una característica numérica.",
+  "trainModel": "Estamos entrenando tu modelo.",
+  "uploadedDataset": "¡Acabas de subir un conjunto de datos!"
 }

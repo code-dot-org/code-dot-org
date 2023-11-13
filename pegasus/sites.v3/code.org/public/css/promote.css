@@ -1,7 +1,3 @@
-h1 {
-  margin-bottom: 15px;
-}
-
 #resources-section {
   margin-top: -50px;
 }
@@ -21,11 +17,6 @@ a.whitefooterlink {
 #block a {
   color: #7665a0;
   text-decoration: none;
-}
-
-#text p {
-  font-size: 13px;
-  line-height: 18px;
 }
 
 #thank-you-box {

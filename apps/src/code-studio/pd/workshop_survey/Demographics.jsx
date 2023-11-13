@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 
 const LABELS = {
@@ -17,7 +17,7 @@ const LABELS = {
   yearsTaughtStem: 'For how many years have you taught a STEM subject?',
   yearsTaughtCs: 'For how many years have you taught Computer Science?',
   haveRequiredLicenses:
-    'Do you have the required licenses/certifications to teach CS in your school district?'
+    'Do you have the required licenses/certifications to teach CS in your school district?',
 };
 
 export default class Demographics extends FormComponent {
@@ -29,14 +29,14 @@ export default class Demographics extends FormComponent {
             label: LABELS.gender,
             name: 'gender',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.race,
           name: 'race',
           required: true,
-          type: 'check'
+          type: 'check',
         })}
 
         {!this.props.isLocalSummer &&
@@ -44,7 +44,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.age,
             name: 'age',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
 
         {this.buildFieldGroup({
@@ -52,7 +52,7 @@ export default class Demographics extends FormComponent {
           name: 'yearsTaught',
           required: false,
           type: 'number',
-          min: 0
+          min: 0,
         })}
 
         {!this.props.isLocalSummer &&
@@ -60,7 +60,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.gradesTaught,
             name: 'gradesTaught',
             required: true,
-            type: 'check'
+            type: 'check',
           })}
 
         {!this.props.isLocalSummer &&
@@ -68,7 +68,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.gradesPlanningToTeach,
             name: 'gradesPlanningToTeach',
             required: true,
-            type: 'check'
+            type: 'check',
           })}
 
         {!this.props.isLocalSummer &&
@@ -76,7 +76,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.subjectsTaught,
             name: 'subjectsTaught',
             required: true,
-            type: 'check'
+            type: 'check',
           })}
 
         {this.props.isLocalSummer &&
@@ -84,7 +84,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.highestEducation,
             name: 'highestEducation',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
 
         {this.props.isLocalSummer &&
@@ -92,7 +92,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.degreeField,
             name: 'degreeField',
             placeholder: '-',
-            required: true
+            required: true,
           })}
 
         {this.props.isLocalSummer &&
@@ -100,7 +100,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.yearsTaughtStem,
             name: 'yearsTaughtStem',
             placeholder: '-',
-            required: true
+            required: true,
           })}
 
         {/*
@@ -115,7 +115,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.yearsTaughtCs,
             name: 'yearsTaughtCs',
             placeholder: '-',
-            required: true
+            required: true,
           })}
 
         {this.props.isLocalSummer &&
@@ -123,7 +123,7 @@ export default class Demographics extends FormComponent {
             label: LABELS.haveRequiredLicenses,
             name: 'haveRequiredLicenses',
             required: true,
-            type: 'radio'
+            type: 'radio',
           })}
       </FormGroup>
     );

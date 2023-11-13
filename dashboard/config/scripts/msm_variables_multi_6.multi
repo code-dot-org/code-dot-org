@@ -5,3 +5,5 @@ wrong '1'
 wrong 'hello'
 right '5'
 
+
+allow_multiple_attempts true

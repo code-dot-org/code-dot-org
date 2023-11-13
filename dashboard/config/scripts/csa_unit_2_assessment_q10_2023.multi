@@ -33,3 +33,5 @@ public dataType getNameOfInstanceVariable() {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

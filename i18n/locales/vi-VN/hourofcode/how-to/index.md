@@ -25,7 +25,7 @@ Thử Giờ lập trình là một cách đơn giản và thú vị để giới
 
 <a id="how-to-video"></a>
 
-## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Hãy giới thiệu Giờ lập trình cho các giáo viên khác, những ngư�
 
 ### Hãy cho tình nguyện viên biết bằng cách đăng ký sự kiện của bạn
 
-Khi bạn [đăng ký sự kiện Giờ lập trình](/#join), bạn sẽ nhận được thông báo hữu ích qua email về tin tức và lời khuyên để tổ chức Giờ lập trình thành công. Đó cũng là cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham gia. Tình nguyện viên là một nguồn lực tuyệt vời và có thể đến nói chuyện với lớp của bạn về khoa học máy tính hoặc chỉ đơn giản là giúp học sinh của bạn trong các hoạt động Giờ lập trình.
+Khi đăng [ký sự kiện Giờ Mã](/events), bạn sẽ nhận được thông tin liên lạc qua email hữu ích với tin tức và mẹo để tổ chức Hour of Code thành công. Đó cũng là cách bạn có thể cho các tình nguyện viên địa phương biết trường của bạn đang tham gia. Tình nguyện viên là một nguồn lực tuyệt vời và có thể đến nói chuyện với lớp của bạn về khoa học máy tính hoặc chỉ đơn giản là giúp học sinh của bạn trong các hoạt động Giờ lập trình.
 
 ### Tạo hứng thú cho học sinh
 
@@ -111,7 +111,7 @@ Cho dù cả bạn và học sinh đều là những người mới làm quen v�
 
 Định hướng học sinh vào hoạt động
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Viết liên kết hướng dẫn trên bảng trắng. Tìm liên kết được liệt kê trên thông [tin cho hướng dẫn đã chọn của bạn]({{ urls/learn }}).
 
 Khi trẻ gặp khó khăn, bạn có thể trả lời rằng:
 
@@ -151,6 +151,6 @@ Nếu một học sinh hoàn thành sớm thì sao?
 
 ### Tiếp theo Hour of Code sẽ là gì?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Khoa học máy tính không cần phải kết thúc với Giờ Lập trình! [Tìm hiểu làm thế nào](/beyond) để mang CS đến trường học và học sinh của bạn.
 
 {{ signup_button }}

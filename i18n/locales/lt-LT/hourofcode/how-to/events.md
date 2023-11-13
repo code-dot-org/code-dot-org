@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Kodo renginio valanda “How-To”
 ---
 
 {{ signup_button }}

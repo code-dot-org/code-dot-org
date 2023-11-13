@@ -5,9 +5,6 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Gyorsulást mérő események"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analóg szenzorok"
-        },
         "csd-2022/app-lab": {
           "display_name": "App Lab"
         },
@@ -16,9 +13,6 @@
         },
         "csd-2022/board-events": {
           "display_name": "Táblás események"
-        },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "Áramkörök és LED-ek"
         },
         "csd-2022/creative-commons-search": {
           "display_name": "Creative Commons keresés"
@@ -42,7 +36,7 @@
           "display_name": "HTML formázás"
         },
         "csd-2022/functions": {
-          "display_name": "funkciók"
+          "display_name": "Függvények"
         },
         "csd-2022/game-lab": {
           "display_name": "Játék Labor"
@@ -100,6 +94,12 @@
         },
         "csd-2022/playing-notes": {
           "display_name": "Hangjegyek lejátszása"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "A probléma-megoldási folyamat"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "A probléma-megoldási folyamat"
         },
         "csd-2022/random-numbers": {
           "display_name": "Véletlen számok"

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import React from 'react';
 import $ from 'jquery';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class SessionAttendanceRow extends React.Component {
   static propTypes = {
@@ -21,7 +21,7 @@ export default class SessionAttendanceRow extends React.Component {
       verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
       cdo_scholarship: PropTypes.bool,
-      other_scholarship: PropTypes.bool
+      other_scholarship: PropTypes.bool,
     }).isRequired,
     adminOverride: PropTypes.bool,
     isReadOnly: PropTypes.bool,
@@ -29,11 +29,11 @@ export default class SessionAttendanceRow extends React.Component {
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     scholarshipWorkshop: PropTypes.bool.isRequired,
-    displayYesNoAttendance: PropTypes.bool.isRequired
+    displayYesNoAttendance: PropTypes.bool.isRequired,
   };
 
   state = {
-    pendingRequest: null
+    pendingRequest: null,
   };
 
   componentWillUnmount() {
@@ -77,13 +77,13 @@ export default class SessionAttendanceRow extends React.Component {
     }
 
     this.save('PUT', url, {
-      attended: true
+      attended: true,
     });
   }
 
   deleteAttendance() {
     this.save('DELETE', this.getApiUrl(), {
-      attended: false
+      attended: false,
     });
   }
 
@@ -92,19 +92,19 @@ export default class SessionAttendanceRow extends React.Component {
     const pendingRequest = $.ajax({
       method,
       url,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(() => {
         // Clone attendance, merge the new values, and send upstream.
         this.props.onSaved({
           ...this.props.attendance,
-          ...newAttendanceValues
+          ...newAttendanceValues,
         });
       })
       .fail(() => {
         // Tell the parent we failed to save.
         this.props.onSaved({
-          error: true
+          error: true,
         });
       })
       .always(() => {
@@ -182,6 +182,6 @@ const styles = {
   contents: {
     height: '100%',
     width: '100%',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };

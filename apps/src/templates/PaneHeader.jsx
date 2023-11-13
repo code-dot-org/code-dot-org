@@ -18,14 +18,19 @@ class PaneHeader extends React.Component {
   static propTypes = {
     hasFocus: PropTypes.bool.isRequired,
     style: PropTypes.object,
+    // TODO: [Phase 2] Need to maintain legacy styling for Javalab now.
+    //  Once Javalab receives rebranded styles - remove this prop and all of it's usage in the project
+    //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
+    isOldPurpleColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   render() {
     let {
       hasFocus,
+      isOldPurpleColor,
       teacherOnly,
       style,
       isMinecraft,
@@ -33,14 +38,21 @@ class PaneHeader extends React.Component {
       ...props
     } = this.props;
 
+    const mainStyle = isOldPurpleColor
+      ? commonStyles.purpleHeader
+      : commonStyles.darkHeader;
+    const unFocusedStyle = isOldPurpleColor
+      ? commonStyles.purpleHeaderUnfocused
+      : commonStyles.darkHeaderUnfocused;
+
     return (
       <div
         {...props}
         className={classNames(
           // TODO: AnimationTab should likely use components from PaneHeader, at
           // which point purpleHeader style should move in here.
-          commonStyles.purpleHeader,
-          !hasFocus && commonStyles.purpleHeaderUnfocused,
+          mainStyle,
+          !hasFocus && unFocusedStyle,
           teacherOnly && commonStyles.teacherBlueHeader,
           teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused,
           isMinecraft && commonStyles.minecraftHeader,
@@ -68,7 +80,7 @@ export const PaneSection = Radium(
   class extends React.Component {
     static propTypes = {
       style: PropTypes.object,
-      className: PropTypes.string
+      className: PropTypes.string,
     };
 
     render() {
@@ -89,7 +101,7 @@ export const PaneSection = Radium(
  * has focus. Continuing to wrap with radium because some usage
  * of this component may depend on it.
  */
-export const PaneButton = Radium(function(props) {
+export const PaneButton = Radium(function (props) {
   const {
     isRtl,
     isPressed,
@@ -98,6 +110,7 @@ export const PaneButton = Radium(function(props) {
     hiddenImage,
     label,
     leftJustified,
+    isLegacyStyles,
     isMinecraft,
     headerHasFocus,
     isDisabled,
@@ -105,7 +118,7 @@ export const PaneButton = Radium(function(props) {
     onClick,
     id,
     style,
-    className
+    className,
   } = props;
 
   const buttonLabel = isPressed ? pressedLabel : label;
@@ -117,13 +130,21 @@ export const PaneButton = Radium(function(props) {
     iconOrLabelHidden && moduleStyles.headerButtonIconOrLabelHidden
   );
 
+  // TODO: [Phase 2] Need to maintain legacy styling for Javalab now.
+  //  Once Javalab receives rebranded styles - remove this switch
+  //  and use simpler moduleStyles call as it was before this commit
+  //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
+  const buttonStylesRoot = isLegacyStyles
+    ? 'legacyHeaderButton'
+    : 'headerButton';
+
   const buttonClassNames = classNames(
-    moduleStyles.headerButton,
-    isRtl !== !!leftJustified && moduleStyles.headerButtonRtl,
-    isMinecraft && moduleStyles.headerButtonMinecraft,
-    isPressed && moduleStyles.headerButtonPressed,
-    !headerHasFocus && moduleStyles.headerButtonUnfocused,
-    isDisabled && moduleStyles.headerButtonDisabled,
+    moduleStyles[buttonStylesRoot],
+    isRtl !== !!leftJustified && moduleStyles[`${buttonStylesRoot}Rtl`],
+    isMinecraft && moduleStyles[`${buttonStylesRoot}Minecraft`],
+    isPressed && moduleStyles[`${buttonStylesRoot}Pressed`],
+    !headerHasFocus && moduleStyles[`${buttonStylesRoot}Unfocused`],
+    isDisabled && moduleStyles[`${buttonStylesRoot}Disabled`],
     className
   );
 
@@ -179,7 +200,7 @@ export const PaneButton = Radium(function(props) {
       <span className={moduleStyles.headerButtonSpan}>
         {hiddenImage}
         {renderIcon()}
-        <span style={styles.noPadding}>{label}</span>
+        <span style={styles.noPadding}>{buttonLabel}</span>
       </span>
     </Tag>
   );
@@ -196,10 +217,11 @@ PaneButton.propTypes = {
   pressedLabel: PropTypes.string,
   onClick: PropTypes.func,
   hiddenImage: PropTypes.element,
+  isLegacyStyles: PropTypes.bool,
   isMinecraft: PropTypes.bool,
   id: PropTypes.string,
   style: PropTypes.object,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
 };
 
 // Continuing to wrap with radium because some usage of this component may depend on it.

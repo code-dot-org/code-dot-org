@@ -9,7 +9,7 @@ export function SmallChevronLink({
   text,
   iconBefore = false,
   isRtl = false,
-  style = {margin: '10px 0'}
+  style = {margin: '10px 0'},
 }) {
   return (
     <div style={style}>
@@ -36,9 +36,9 @@ SmallChevronLink.propTypes = {
   style: PropTypes.object,
 
   // Provided by redux
-  isRtl: PropTypes.bool
+  isRtl: PropTypes.bool,
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(SmallChevronLink);

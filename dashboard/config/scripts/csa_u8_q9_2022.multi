@@ -41,3 +41,5 @@ public static void sortArray(int[] arr1){
  
 Assume that `swap(arr1, j, pos)` exchanges the values of `arr1[j]` and `arr1[pos]`. Which of the following could be used to replace `/* missing code */` so that executing the code segment sorts the values in array `arr1`?
 MARKDOWN
+
+allow_multiple_attempts true

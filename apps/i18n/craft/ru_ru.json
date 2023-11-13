@@ -1,9 +1,9 @@
 {
   "absolute": "модуль",
+  "agentDiamondPathCongrats": "Поздравляем, вы нашли алмазную дорожку!  Вы собрали {count, plural, one {1 алмаз} other {# алмазов}} !",
   "agentGenericFailureMessage": "Продолжайте программировать! Не забывайте обращаться за помощью к исполнителю.",
   "agentTooFewBlocksFailureMessage": "Попробуйте добавить по одному блоку каждый раз, чтобы исполнитель добрался до нужного места.",
   "at": "в",
-  "agentDiamondPathCongrats": "Поздравляем, вы нашли алмазную дорожку!  Вы собрали {count, plural, one {1 алмаз} other {# алмазов}} !",
   "blockActionAdd": "добавить",
   "blockActionAttack": "атакует",
   "blockActionClone": "клонировать блоки",

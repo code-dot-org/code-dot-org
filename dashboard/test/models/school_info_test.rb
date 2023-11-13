@@ -493,22 +493,6 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'Custom School', school_info_custom_school.effective_school_name
   end
 
-  test 'school_info factory build does not persist dependencies' do
-    assert_does_not_create School do
-      assert_does_not_create SchoolDistrict do
-        build :school_info
-      end
-    end
-  end
-
-  test 'school_info factory create does persist dependencies' do
-    assert_creates School do
-      assert_creates SchoolDistrict do
-        create :school_info
-      end
-    end
-  end
-
   test 'complete if all school info is provided' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'

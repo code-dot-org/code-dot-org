@@ -61,7 +61,6 @@ bn:
           description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
           student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
         mc:
-          title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
         CSDU3-Draft:
@@ -891,3 +890,124 @@ bn:
               display_name: তালিকা
             lessonGroup-3:
               display_name: চক্র
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: মূল্যায়ন
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_variables:
+              display_name: চলকগুলো
+            csf_for_loops:
+              display_name: ফর লুপ
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: চক্র
+            csf_events:
+              display_name: ঘটনাবলী
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+        coursee-2023:
+          lesson_groups:
+            ramp_up:
+              display_name: নেষ্টেড লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: শর্তযুক্ত
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ভূমিকা
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চলকগুলো
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-6:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-5:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: চক্র
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: নেষ্টেড লুপ
+            lessonGroup-4:
+              display_name: ফাংশনগুলি
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: শর্তযুক্ত
+            lessonGroup-5:
+              display_name: চলকগুলো
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: ভূমিকা
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ভূমিকা

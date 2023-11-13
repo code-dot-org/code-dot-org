@@ -28,9 +28,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
     end
   end
 
-  private
-
-  def load_and_authorize_for_this_unit
+  private def load_and_authorize_for_this_unit
     script = Unit.get_from_cache(params[:script_id])
     if script.plc_course_unit
       @enrollment_unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: current_user, plc_course_unit: script.plc_course_unit)

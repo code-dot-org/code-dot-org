@@ -17,26 +17,26 @@ export default storybook => {
               {
                 label: 'what do you think of this component?',
                 name: 'thinkOfComponent',
-                required: true
+                required: true,
               },
               {
                 label: 'what do you think of this story?',
-                name: 'thinkOfStory'
+                name: 'thinkOfStory',
               },
               {
                 label: 'what do you think of this question?',
-                name: 'thinkOfQuestion'
-              }
+                name: 'thinkOfQuestion',
+              },
             ]}
           />
-        )
+        ),
       },
       {
         name: 'controlled questions table',
         story: () => (
           <QuestionsTable
             data={{
-              theOneThatIsSelected: 'first'
+              theOneThatIsSelected: 'first',
             }}
             errors={['theOneWithTheError']}
             onChange={action('onChange')}
@@ -44,19 +44,19 @@ export default storybook => {
             questions={[
               {
                 label: 'this one should have something selected',
-                name: 'theOneThatIsSelected'
+                name: 'theOneThatIsSelected',
               },
               {
                 label: 'this one should have an error',
-                name: 'theOneWithTheError'
+                name: 'theOneWithTheError',
               },
               {
                 label: 'this one should be plain',
-                name: 'theOtherOne'
-              }
+                name: 'theOtherOne',
+              },
             ]}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

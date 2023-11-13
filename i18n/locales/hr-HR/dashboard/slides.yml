@@ -361,23 +361,14 @@ hr:
         text: "Zovem se Jeremiah. Bok! Imam sedam godina. Obožavam se igrati na maminom računalu, ali uvijek prvo dobijem dozvolu za to. \"Mama, mogu li ići na tvoje računalo? Naravno, dušo!\""
       2:
         text: "Volim mamino računalo jer mogu ići na internet. Internet je sličan našem susjedstvu. Možeš posjetiti zabavna mjesta, pričati s obitelji i prijateljima i naučiti puno novih stvari."
-      3:
-      4:
-      5:
-      6:
-      7:
     C1_zuck_repeat_loop:
       1:
         text: "Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti istu stvar milijunima, čak i milijardama puta i nije im dosadno."
       2:
         text: "Na primjer, ako želim svima na Facebooku poslati e-poruku za rođendan, trebalo mi gotovo cijelo stoljeće da stvarno napišem sve te poruke i pošaljem. No, sa samo nekoliko linija koda, sustav može poslati moju poruku svima na Facebooku i poželjeti im sve najbolje za rođendan."
-      3:
-      4:
-      5:
     C2_bee_loops:
       1:
         text: "Petlja je ponavljanje aktivnosti. Da biste provjerili košnicu, pogledate u okvir i vratite ga nazad te ponavljate radnju nekoliko puta. To je petlja, ponavljanje iste aktivnosti više puta."
-      2:
     C2_playlab_createstory:
       1:
         text: "Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki put kad ih pokreneš. Sada možeš napraviti interaktivnu igru koju stvarno možeš igrati."
@@ -386,10 +377,6 @@ hr:
     C2_zuck_repeat_loop:
       1:
         text: "Računala su posebno dobra u ponavljanju naredbi. Nama, ponavljanje iste naredbe iznova i iznova može biti stvarno dosadno. Ali računala mogu ponoviti istu stvar milijunima, čak i milijardama puta i nije im dosadno."
-      2:
-      3:
-      4:
-      5:
     C3_playlab_create_game:
       1:
         text: "Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki put kad ih pokreneš. Sada možeš napraviti interaktivnu igru koju stvarno možeš igrati."
@@ -429,8 +416,6 @@ hr:
         text: "Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili dolje, ili gumbe za gore ili dolje."
       6:
         text: "Koristit ćemo događaj 'kada je pritisnuta strelica prema gore' i ispod nje postaviti naredbu 'idi gore'. Kada igrač pritisne tipku sa strelicom prema gore, pokreće se dio koda ispod postavljenog događaja. Istu stvar učinit ćemo kako bismo pokrenuli R2-D2-a prema dolje."
-      7:
-      8:
       9:
         text: "Tako umjesto pisanja cijelog koda za kontrolu droida unaprijed, puštamo R2-D2-a da reagira na događaj pritiska tipke kako bismo ga pomaknuli po sceni. Korak po korak vaša igra postaje sve interaktivnija."
     starwars_blocks_intro:
@@ -438,15 +423,10 @@ hr:
         text: "Zdravo, ja sam Kathleen Kennedy i ja producentica sam filam \"Ratova zvijezda - Sila se budi\". Danas ćemo raditi s našom zvijezdom, BB-8. BB-8 je sferni droid. Sve što on radi i svaki njegov pokret je kontroliran softverom. \nRačunalna znanost utječe na sve djelatnosti, od marketinga i zdravstva, do filma. Stotine programera radilo je zajedno da stvore film \"Sila se budi\"."
       2:
         text: "Ja sam Rachel Rose. Ja sam starija Inženjerka istraživanja i razvoja u tvrtci ILM i vodim razvojne timove za animaciju i likove. U filmu sam zadužena da pomažem umjetnicima da oblikuju pokretne dijelove likova, a koji omogućavaju da oni izgledaju stvarno u galaksiji tako dalekoj."
-      3:
-      4:
       5:
         text: "U sredini je alatna traka i svaki od ovih blokova je naredba koju BB-8 razumije."
       6:
         text: "Bijelo područje na desnoj strani je radna površina i to je mjesto na kojem ćemo razvijati naš program."
-      7:
-      8:
-      9:
       10:
         text: "Kad kliknete \"Pokreni\" uvijek možete kliknuti \"Poništi\" i vratiti BB-8 na početak. Krenimo!"
     starwars_blocks_events:
@@ -460,8 +440,6 @@ hr:
         text: "Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom gore ili dodir na ekranu."
       5:
         text: "Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili dolje, ili gumbe za gore ili dolje."
-      6:
-      7:
     mc_intro:
       1:
         text: "Ja sam Jens Bergensten, ali poznatiji sam kao Jeb. Glavni sam programer Minecrafta, u Mojangu u Stockholmu. Mislim da sam imao 11 ili 12 godina, kad sam počeo programirati jer sam htio raditi igrice. Jedan prijatelj mi je rekao ako želiš raditi igrice moraš najprije naučiti programirati. I tako sam počeo. Volim dizajnirati i shvaćati strukturu arhitekture igrica. To je ono što mi se sviđa kod Minecrafta."
@@ -516,7 +494,6 @@ hr:
         text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
       2:
         text: "Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a) odaberi."
-      3:
       4:
         text: "Kad završiš svoj rad, odaberi \"dijeli\" (share) da dohvatiš poveznicu (link) koju možeš podijeliti sa svojim prijateljima. Zabavi se!"
     mc_congrats_no_share:
@@ -524,42 +501,22 @@ hr:
         text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
       2:
         text: "Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više nema uputa i zagonetki za rješavanje. Možeš napraviti sve god želiš. Sam(a) odaberi."
-      3:
       4:
         text: "Sad možeš napraviti što god želiš. Zabavi se!"
     gumball_intro:
-      1:
-      2:
-      3:
       4:
         text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
-      5:
       6:
         text: "Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program."
       7:
         text: "Za početak trebaš prikačiti svoje blokove za narančasti blok \"pri pokretanju\". Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
-      8:
-      9:
     iceage_intro:
-      1:
-      2:
-      3:
       4:
         text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
-      5:
       6:
         text: "Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati naš program."
       7:
         text: "Za početak trebaš prikačiti svoje blokove za narančasti blok \"pri pokretanju\". Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
-      8:
-      9:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
-      5:
-      6:
-      7:
-      8:

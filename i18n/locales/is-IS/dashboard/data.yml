@@ -556,6 +556,9 @@ is:
         csd_u6_input_output: Inntak og Úttak
         csp_applab_parameters: Föll með stikum
         CS_Changing_Everything: Tölvunarfræði er að breyta öllu
+        csd_sprite_properties: Eiginleikar kvika
+        what-is-creativity: Hvað er sköpunargáfa?
+        code-break: Taktu kóðapásu
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

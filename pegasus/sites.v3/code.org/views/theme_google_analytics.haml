@@ -1,0 +1,11 @@
+- cookie_key = environment_specific_cookie_name '_user_type'
+- user_type = request.cookies[cookie_key]
+- user_type = "student" if user_type == "student_y"
+
+:javascript
+  window.userAnalyticsDimensions = {
+    'dimension1': '#{@request.language}',
+    'dimension4': '#{user_type}',
+  };
+
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}

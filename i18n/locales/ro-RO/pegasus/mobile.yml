@@ -535,13 +535,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 profesori vor gazdui o Ora de Cod in acest an, in perioada 7-13 decembrie 2015. Ei vor ajutorul tau! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} profesorii cauta voluntari pasionati de educatia stiintei calculatorului sa ajute cu Ora lor de programare in decembrie.<br>%{num_volunteers} voluntarii s-au inscris. Alatura-te lor."
   volunteer_engineer_submission_intro_background: "Ora de Cod este o mişcare globala pentru a testa o introducere de o ora in informatica, ajungând la zeci de milioane de elevi din peste 180 de ţări. Va rugam sa va implicati în timpul Săptămânii de Educației în Informatică, în perioada 7-13 decembrie."
-  volunteer_engineer_submission_intro_recruit: 'Acesti profesori ar fi incantati sa aiba pe cineva <span style="font-family: ''Gotham 7r'', sans-serif;"> pasionati de informatica </span> care pot ajuta in sala de clasa sau cineva care poate <span style="font-family: ''Gotham 7r'', sans-serif;">inspira</span> studentii vorbindu-le despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul unui video chat).'
   volunteer_engineer_submission_intro_recruit_markdown: "Profesorilor le-ar plăcea să aibă pe cineva **pasionat de educația informatică** care să poată ajuta la clasă sau pe cineva care poate **inspira** elevii vorbind despre amploarea posibilităților informatice (care ar putea fi realizată printr-un chat video)."
-  volunteer_engineer_submission_intro_guide: "Aflați mai multe despre <a href=\"%{volunteer_guide}\">programul nostru de voluntariat aici</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Aflați mai multe despre [programul nostru de voluntariat aici](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Te rugăm sa introduci următoarele informaţii, dacă ești un student la automatică și calculatoare sau matematică-informatică sau un profesionist în software. Câmpurile marcate cu un <span class=\"form-required-field\"> *</span> sunt obligatorii."
   volunteer_engineer_submission_intro_signup_markdown: "Vă rugăm să introduceți următoarele informații dacă sunteți studenți în informatică sau profesioniști în IT. Trebuie să ai cel puțin 18 ani pentru a te înscrie ca voluntar. Rețineți că toate câmpurile pe care le completați în această secțiune vor fi disponibile public pentru oricine se uită la [harta voluntarilor](/voluntar/local). Câmpurile marcate cu _*_ sunt obligatorii."
-  volunteer_engineer_submission_intro_links: "Esti un profesor in cautare de voluntari? Gaseste un voluntar local in <a href=\"%{volunteer_local}\">harte de voluntari</a>."
   volunteer_engineer_submission_intro_links_markdown: "Ești profesor în căutare de voluntari? Găsește un voluntar local pe [harta voluntarilor](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Vă rugăm să actualizați informațiile dumneavoastră"
   volunteer_engineer_submission_header_shared: "Informatii distribuite profesorilor pe harta voluntarilor"
@@ -1509,6 +1505,7 @@
   header_stats: "Statistici"
   header_help_us: "Ajutați-ne"
   header_about: "Despre"
+  header_incubator: "Incubator"
   header_teacher_community: "Comunitate profesori"
   header_help_support: 'Ajutor și asistență '
   header_report_bug: "Raportare problemă"
@@ -1697,14 +1694,14 @@
   hoc2018_mc_with_microsoft: "În parteneriat cu â"
   hoc2018_mc_thank_microsoft: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."
   hoc2021_mc_mee_title: "TimeCraft în Minecraft"
-  hoc2021_mc_mee_description: 'Călătoriți înapoi în timp și învățați să programați! Noul tutorial Hour of Code - Minecraft este acum disponibil în Minecraft: Education Edition pentru Windows, Mac, Chromebook și iPad. Începeți cu resursele gratuite pentru instructori, cursurile de formare și videoclipuri.'
+  hoc2021_mc_mee_description: "Călătoriți înapoi în timp și învățați să programați! Noul tutorial Hour of Code - Minecraft este acum disponibil în Minecraft: Education Edition pentru Windows, Mac, Chromebook și iPad. Începeți cu resursele gratuite pentru instructori, cursurile de formare și videoclipuri."
   hoc2021_mc_mee_villages_title: "Povestea celor două sate"
-  hoc2021_mc_mee_villages_description: 'Învățați elementele de bază ale programării și explorați conceptele de diversitate și incluziune cu elevii în Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Învățați elementele de bază ale programării și explorați conceptele de diversitate și incluziune cu elevii în Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "Inteligența Artificială pentru a face bine"
-  hoc2021_mc_mee_ai_description: 'Explorați inteligența artificială împreună cu elevii și învățați să programați în Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Explorați inteligența artificială împreună cu elevii și învățați să programați în Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Evadează din palatul misterios până în zori și câștigă un milion de smaralde! Noul tutorial Minecraft de la Hour of Code este disponibil acum în Minecraft: Ediția Educație pentru Windows, Mac, Chromebook, Ipad și telefoane mobile. Începe cu resurse, cursuri de formare și videoclipuri gratuite pentru educatori.'
-  hoc2022_mc_mee_timecraft_description: 'Călătorește înapoi în timp ca să salvezi viitorul în această lecție gratuită de codare în Minecraft: Ediția Educație.'
+  hoc2022_mc_mee_timecraft_description: "Călătorește înapoi în timp ca să salvezi viitorul în această lecție gratuită de codare în Minecraft: Ediția Educație."
   footer_powered_by_aws: "Susținut de Amazon Web Services"
   codebytes_skinny_banner_english_only: "Doar în engleză"
   footer_privacy_policy: "Politică de confidențialitate"
@@ -1713,6 +1710,7 @@
   footer_donate: "Donează"
   footer_support: "Ajutor şi comunitate"
   footer_terms: "Termeni"
+  ai_for_oceans: "IA pentru Oceane"
   ai_for_oceans_lesson_plan: "plan de lecție"
   ai_in_partnership_with: "În parteneriat cu â"
   ai_microsoft_thanks: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."

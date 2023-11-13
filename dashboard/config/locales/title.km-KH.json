@@ -2,23 +2,23 @@
   "km-KH": {
     "data": {
       "title": {
+        "BigEvent": "ព្រឹត្តិការណ៍ធំ",
+        "BigEvent_2018": "ព្រឹត្តិការណ៍ធំ",
         "ComputationalThinking": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ",
         "Conditionals": "លក្ខខណ្ឌ",
         "Conditionals_2018": "លក្ខខណ្ឌ",
-        "courseB_unplugged_MRF_2018": "មិត្តរ៉ូបូតរបស់ខ្ញុំ",
+        "DigitalFootprint": "Your Digital Footprint",
+        "DigitalFootprint_2018": "Your Digital Footprint",
+        "PlantASeed": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ",
+        "PlantASeed_2018": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ",
         "courseB_unplugged_MRF": "Unplugged Activity",
+        "courseB_unplugged_MRF_2018": "មិត្តរ៉ូបូតរបស់ខ្ញុំ",
         "courseB_unplugged_loopyMRF": "Unplugged Activity",
         "courseC_Unplugged_ScreenOutTheMean": "Unplugged Activity",
         "courseC_Unplugged_ScreenOutTheMean_2018": "Unplugged Activity",
         "courseD_unplugged_digitalCitizenship": "Unplugged Activity",
         "courseD_unplugged_digitalCitizenship_2018": "Unplugged Activity",
-        "courseF_unplugged_powerOfWords": "Unplugged Activity",
-        "BigEvent": "ព្រឹត្តិការណ៍ធំ",
-        "BigEvent_2018": "ព្រឹត្តិការណ៍ធំ",
-        "DigitalFootprint": "Your Digital Footprint",
-        "DigitalFootprint_2018": "Your Digital Footprint",
-        "PlantASeed": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ",
-        "PlantASeed_2018": "ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ"
+        "courseF_unplugged_powerOfWords": "Unplugged Activity"
       }
     }
   }

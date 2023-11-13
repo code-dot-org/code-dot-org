@@ -5,3 +5,5 @@ wrong 'Two functions with similar behavior should be given identical names to in
 right 'A function name should be as descriptive as possible to indicate what the function does.'
 wrong 'Function names should be organized alphabetically.'
 wrong 'The function name should begin with a number that indicates the order in which it should be executed.'
+
+allow_multiple_attempts true

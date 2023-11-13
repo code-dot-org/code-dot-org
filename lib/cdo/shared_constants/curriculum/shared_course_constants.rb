@@ -49,10 +49,12 @@ module Curriculum
         CSA: 'CSA',
         CSC: 'CSC',
         HOC: 'HOC',
+        AI: 'AI',
         CSA_self_paced_pl: 'CSA Self Paced PL',
         CSP_self_paced_pl: 'CSP Self Paced PL',
         CSD_self_paced_pl: 'CSD Self Paced PL',
         CSF_self_paced_pl: 'CSF Self Paced PL',
+        CSC_self_paced_pl: 'CSC Self Paced PL',
         CSP_virtual_pl: 'CSP Virtual PL',
         CSD_virtual_pl: 'CSD Virtual PL',
         CSA_virtual_pl: 'CSA Virtual PL',
@@ -107,7 +109,8 @@ module Curriculum
         collections: 'Collections',
         workshops_k5: 'K-5 Workshops',
         summer_workshops_612: '6-12 Summer Workshops',
-        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops',
+        unsupported: 'Unsupported'
       }
     ).freeze
 
@@ -116,9 +119,51 @@ module Curriculum
       {
         hoc: 'HOC',
         csc: 'CSC',
-        csf: 'CSF'
+        csf: 'CSF',
+        csa: 'CSA',
+        csp: 'CSP',
+        csd: 'CSD'
       }
     )
+
+    # CS topic field values for course offerings
+    COURSE_OFFERING_CS_TOPICS = %w(
+      art_and_design
+      app_design
+      artificial_intelligence
+      cybersecurity
+      data
+      digital_literacy
+      games_and_animations
+      internet
+      physical_computing
+      web_design
+      programming
+    ).freeze
+
+    # School subject field values for course offerings
+    COURSE_OFFERING_SCHOOL_SUBJECTS = %w(
+      math
+      science
+      english_language_arts
+      history
+    ).freeze
+
+    # Device types for course offerings
+    DEVICE_TYPES = %w(
+      computer
+      chromebook
+      tablet
+      mobile
+      no_device
+    ).freeze
+
+    # Device compatibility levels for course offerings
+    DEVICE_COMPATIBILITY_LEVELS = %w(
+      ideal
+      not_recommended
+      incompatible
+    ).freeze
 
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be

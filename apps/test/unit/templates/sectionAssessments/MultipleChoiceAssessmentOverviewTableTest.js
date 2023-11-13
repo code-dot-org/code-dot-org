@@ -12,26 +12,26 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: commonMsg.answerOptionA(),
         numAnswered: 40,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionB(),
         numAnswered: 20,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionC(),
         numAnswered: 20,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionD(),
         numAnswered: 20,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     totalAnswered: 100,
-    notAnswered: 10
+    notAnswered: 10,
   },
   {
     id: 2,
@@ -40,36 +40,36 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: commonMsg.answerOptionA(),
         numAnswered: 30,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionB(),
         numAnswered: 10,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionC(),
         numAnswered: 10,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionD(),
         numAnswered: 10,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionE(),
         numAnswered: 20,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionF(),
         numAnswered: 10,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     totalAnswered: 100,
-    notAnswered: 10
+    notAnswered: 10,
   },
   {
     id: 3,
@@ -79,31 +79,31 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: commonMsg.answerOptionA(),
         numAnswered: 50,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionB(),
         numAnswered: 15,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionC(),
         numAnswered: 20,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionD(),
         numAnswered: 5,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionE(),
         numAnswered: 5,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     totalAnswered: 100,
-    notAnswered: 10
+    notAnswered: 10,
   },
   {
     id: 4,
@@ -112,42 +112,42 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: commonMsg.answerOptionA(),
         numAnswered: 15,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionB(),
         numAnswered: 18,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionC(),
         numAnswered: 10,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionD(),
         numAnswered: 9,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionE(),
         numAnswered: 5,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionF(),
         numAnswered: 32,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: commonMsg.answerOptionG(),
         numAnswered: 5,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     totalAnswered: 100,
-    notAnswered: 10
-  }
+    notAnswered: 10,
+  },
 ];
 
 describe('MultipleChoiceAssessmentsOverviewTable', () => {

@@ -5,7 +5,7 @@ import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
   title: 'ImageResourceCard',
-  component: ImageResourceCard
+  component: ImageResourceCard,
 };
 
 const Template = args => (
@@ -21,5 +21,5 @@ Default.args = {
     'Ask questions about curriculum, share ideas from your lessons, and get help from other teachers',
   image: 'teachercommunity.png',
   buttonText: 'Connect Today',
-  link: 'link to teacher community'
+  link: 'link to teacher community',
 };

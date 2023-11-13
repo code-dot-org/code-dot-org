@@ -44,7 +44,7 @@ export default function EventSandboxer() {
  * can accurately transform mouse coordinates into app space.
  * @param {HTMLElement} element
  */
-EventSandboxer.prototype.setTransformFromElement = function(element) {
+EventSandboxer.prototype.setTransformFromElement = function (element) {
   // Capture div scale
   this.xScale_ = element.getBoundingClientRect().width / element.offsetWidth;
   this.yScale_ = element.getBoundingClientRect().height / element.offsetHeight;
@@ -68,7 +68,7 @@ EventSandboxer.prototype.setTransformFromElement = function(element) {
  * @returns {Object} new event-like object
  * @throws {TypeError} if event is null or not an object
  */
-EventSandboxer.prototype.sandboxEvent = function(event) {
+EventSandboxer.prototype.sandboxEvent = function (event) {
   if (event === null || typeof event !== 'object') {
     throw new TypeError(
       'Failed to sandbox event: Expected an event object, but got ' + event
@@ -94,8 +94,8 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     'repeat',
     'shiftKey',
     'type',
-    'which'
-  ].forEach(function(prop) {
+    'which',
+  ].forEach(function (prop) {
     if (typeof event[prop] !== 'undefined') {
       newEvent[prop] = event[prop];
     }
@@ -108,7 +108,7 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
   const touchEvents = {
     touchstart: 'mousedown',
     touchmove: 'mousemove',
-    touchend: 'mouseup'
+    touchend: 'mouseup',
   };
 
   if (touchEvents[event.type]) {
@@ -129,13 +129,13 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
   }
 
   // Convert x coordinates and then pass through to applabEvent:
-  ['clientX', 'pageX', 'x'].forEach(function(prop) {
+  ['clientX', 'pageX', 'x'].forEach(function (prop) {
     if (typeof mouseEvent[prop] !== 'undefined') {
       newEvent[prop] = (mouseEvent[prop] - this.xOffset_) / this.xScale_;
     }
   }, this);
   // Convert y coordinates and then pass through to applabEvent:
-  ['clientY', 'pageY', 'y'].forEach(function(prop) {
+  ['clientY', 'pageY', 'y'].forEach(function (prop) {
     if (typeof mouseEvent[prop] !== 'undefined') {
       newEvent[prop] = (mouseEvent[prop] - this.yOffset_) / this.yScale_;
     }
@@ -174,8 +174,8 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     'currentTarget',
     'relatedTarget',
     'target',
-    'toElement'
-  ].forEach(function(prop) {
+    'toElement',
+  ].forEach(function (prop) {
     if (event[prop]) {
       newEvent[prop + 'Id'] = event[prop].id;
     }
@@ -204,7 +204,7 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
 
   // Attempt to polyfill DOM element ID properties
   // Of our six DOM properties, only three are standard.
-  var fillProperty = function(to, from) {
+  var fillProperty = function (to, from) {
     if (newEvent[from] !== undefined && newEvent[to] === undefined) {
       newEvent[to] = newEvent[from];
     }
@@ -253,7 +253,7 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
  * element (typically mouseout)
  * @param {Event} event
  */
-EventSandboxer.prototype.clearLastMouseMoveEvent = function(event) {
+EventSandboxer.prototype.clearLastMouseMoveEvent = function (event) {
   var elementId = event.currentTarget && event.currentTarget.id;
   if (
     elementId &&

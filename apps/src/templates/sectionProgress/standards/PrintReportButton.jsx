@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export default class PrintReportButton extends Component {
   static propTypes = {
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {
@@ -14,7 +14,7 @@ export default class PrintReportButton extends Component {
         <Button
           __useDeprecatedTag
           onClick={this.props.onClick}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           text={i18n.printReport()}
           icon="print"
           iconClassName="fa"
@@ -29,6 +29,6 @@ export default class PrintReportButton extends Component {
 
 const styles = {
   button: {
-    margin: '20px 0px'
-  }
+    margin: '20px 0px',
+  },
 };

@@ -1,0 +1,15 @@
+{
+  "blockly_blockRepeatTooltip": "পুনরাই",
+  "blockly_blockWhenRun": "চালানোর সময়",
+  "blockly_blockWhenRunTooltip": "চালানোর সময়",
+  "blockly_toolboxCategoryEvents": "ঘটনাবলী",
+  "blockly_toolboxCategoryFunctions": "ফাংশনগুলি",
+  "blockly_toolboxCategoryLogic": "যুক্তি",
+  "blockly_toolboxCategoryMath": "গণিত",
+  "blockly_toolboxCategoryVariables": "চলকগুলো",
+  "share": "শেয়ার",
+  "startOver": "প্রথম থেকে শুরু কর",
+  "panelHeaderInstructions": "নির্দেশনা",
+  "panelHeaderWorkspace": "কর্মপরিসর:",
+  "continue": "চালিয়ে যান"
+}

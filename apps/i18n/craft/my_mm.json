@@ -1,8 +1,8 @@
 {
   "absolute": "ပကတိကိန်း",
+  "agentDiamondPathCongrats": "ဂုဏ်ယူပါတယ်။သင်ဟာ စိန်တွေရှိတဲ့ လမ်းကိုတွေ့ပါပြီ. သင်ဟာ အခုချိန်မှာ {count, plural, one {1diamond} other{# diamonds}} စုဆောင်းပြီးပါပြီ!",
   "agentGenericFailureMessage": "Coding ဆက်လုပ်ပါ၊အကူအညီအတွက်ကိုယ်စားလှယ်ကို အသုံးပြုပါ",
   "agentTooFewBlocksFailureMessage": "ကိုယ်စားလှယ်ကို နေရာအမှန်ရောက်ရန်တစ်ချိန်ထဲမှာ blockတစ်ခုသာထည့်ပြီးကြိုးစားပါ",
-  "agentDiamondPathCongrats": "ဂုဏ်ယူပါတယ်။သင်ဟာ စိန်တွေရှိတဲ့ လမ်းကိုတွေ့ပါပြီ. သင်ဟာ အခုချိန်မှာ {count, plural, one {1diamond} other{# diamonds}} စုဆောင်းပြီးပါပြီ!",
   "blockActionAdd": "ထည့်ပါ",
   "blockActionAttack": "တိုက်ခိုက်သည်",
   "blockActionClone": "blockအတုများ",

@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "22cb1b98-bac5-403c-af4a-a7d0fb11fec9",
+          "notice": "Fables (beta) is being deprecated",
+          "details": "We are in the process of fully removing the Fables (beta) content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Fables (beta) content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "curriculum_umbrella": "CSC",
       "hideable_lessons": true,
       "is_course": true,
@@ -14,8 +26,8 @@
     },
     "new_name": null,
     "family_name": "csc-fables",
-    "serialized_at": "2022-09-13 15:11:05 UTC",
-    "published_state": "stable",
+    "serialized_at": "2023-06-27 22:22:41 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

@@ -19,3 +19,5 @@ public class GroceryItem {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

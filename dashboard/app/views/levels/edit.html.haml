@@ -39,9 +39,11 @@
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.instance_of?(Gamelab)
     = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.instance_of?(GamelabJr)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
+    = render partial: 'levels/editors/aichat', locals: {f: f} if @level.is_a? Aichat
     = render partial: 'levels/editors/ailab', locals: {f: f} if @level.is_a? Ailab
     = render partial: 'levels/editors/javalab', locals: {f: f} if @level.is_a? Javalab
     = render partial: 'levels/editors/poetry', locals: {f: f} if @level.is_a? Poetry
+    = render partial: 'levels/editors/music', locals: {f: f} if @level.is_a? Music
     -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim

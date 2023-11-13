@@ -25,7 +25,7 @@ title: Οδηγός Κατευθύνσεων Ώρας του Κώδικα
 
 <a id="how-to-video"></a>
 
-## 1. Παρακολουθήστε το βίντεο καθοδήγησης Ώρας του Κώδικα <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Παρακολουθήστε το βίντεο καθοδήγησης Ώρας του Κώδικα <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Όταν [καταχωρήσετε την εκδήλωσή σας της Ώρας του Κώδικα](/#join), θα λάβετε χρήσιμες πληροφορίες μέσω email με νέα και συμβουλές για τη διοργάνωση μιας επιτυχημένης Ώρας του Κώδικα. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Όταν [εγγραφείτε στην εκδήλωση Hour of Code](/events), θα λαμβάνετε χρήσιμες επικοινωνίες μέσω email με ειδήσεις και συμβουλές για τη φιλοξενία μιας επιτυχημένης Ώρας Κώδικα. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 Κατευθύνετε τους μαθητές σε αυτήν την δραστηριότητα
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Γράψτε τον σύνδεσμο εκμάθησης σε έναν πίνακα. Βρείτε τον σύνδεσμο που αναφέρεται στις [πληροφορίες για το επιλεγμένο σεμινάριο]({{ urls/learn }}).
 
 Όταν οι μαθητές συναντήσουν δυσκολίες, δεν πειράζει να απαντήσετε:
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Εκτυπώστε πιστοποιητικά]({{ urls/certificates }}) για τους μαθητές σας.
 - [Εκτυπώστε αυτοκόλλητα «Τελείωσα μία Ώρα του Κώδικα»]({{ urls/promote_stickers }}) για τους μαθητές σας.
 - Μοιραστείτε φωτογραφίες και βίντεο της δικής σας Ώρας του Κώδικα στα μέσα κοινωνικής δικτύωσης. Χρησιμοποιήστε #HourOfCode και @codeorg, ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### Τι γίνεται μετά την Ώρα του Κώδικα;
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Η επιστήμη των υπολογιστών δεν χρειάζεται να τελειώσει με την Ώρα του Κώδικα! [Μάθετε πώς](/beyond) να φέρετε CS στο σχολείο και τους μαθητές σας.
 
 {{ signup_button }}

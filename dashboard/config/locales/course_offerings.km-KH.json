@@ -2,18 +2,14 @@
   "km-KH": {
     "data": {
       "course_offerings": {
-        "coursea": "វគ្គសិក្សា A",
-        "courseb": "វគ្គសិក្សា B",
-        "coursec": "វគ្គសិក្សា C",
-        "coursed": "វគ្គសិក្សា D",
-        "coursee": "វគ្គសិក្សា E",
-        "coursef": "វគ្គសិក្សា F",
-        "pre-express": "វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន",
+        "artist": "វិចិត្រករ",
+        "dance-unplugged": "Dance Party Unplugged",
         "flappy": "Flappy កូដ",
-        "basketball": "បង្កើតហ្គេមបោះបាល់",
-        "mc": "Minecraft Hour of Code",
-        "step": "ជំហាន",
-        "soccer": "បាល់ទាត់"
+        "hero": "Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស",
+        "mc": "Minecraft Adventurer",
+        "minecraft": "Minecraft Designer",
+        "soccer": "បាល់ទាត់",
+        "step": "ជំហាន"
       }
     }
   }

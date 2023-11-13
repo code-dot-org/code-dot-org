@@ -1,6 +1,4 @@
 {
-  "navigateForward": "ކުރިއަށް ދިޔުމަށް",
-  "navigateDone": "ނިންމާލަން",
   "datasets": {
     "movies": {
       "fields": {
@@ -12,5 +10,7 @@
     "safari_toy": {
       "name": "ސަފާރީ"
     }
-  }
+  },
+  "navigateDone": "ނިންމާލަން",
+  "navigateForward": "ކުރިއަށް ދިޔުމަށް"
 }

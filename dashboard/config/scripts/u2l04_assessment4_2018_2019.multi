@@ -17,3 +17,5 @@ Answers:
 - B: The mail carrier would sometimes take different paths to deliver each letter to your home.
 - C: Letters would be written on the outside of envelopes for all to read instead of being put inside envelopes.
 MARKDOWN
+
+allow_multiple_attempts true

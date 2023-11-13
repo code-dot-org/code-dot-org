@@ -20,3 +20,5 @@ myPainter.turnLeft();
 
 The effect of this code is that the `myPainter` object is now:
 MARKDOWN
+
+allow_multiple_attempts true

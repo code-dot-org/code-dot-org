@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonTip, {
-  tipTypes
+  tipTypes,
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
@@ -12,7 +12,7 @@ import color from '@cdo/apps/util/color';
 export default class LessonTipIconWithTooltip extends Component {
   static propTypes = {
     tip: tipShape.isRequired,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
   };
 
   handleClick = () => {
@@ -50,6 +50,6 @@ export default class LessonTipIconWithTooltip extends Component {
 const styles = {
   tip: {
     maxWidth: 400,
-    color: color.default_text
-  }
+    color: color.default_text,
+  },
 };

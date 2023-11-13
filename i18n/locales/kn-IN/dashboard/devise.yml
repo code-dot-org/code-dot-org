@@ -50,9 +50,6 @@ kn:
       expired: "ಅವಧಿ ಮುಗಿದಿದೆ, ದಯವಿಟ್ಟು ಹೊಸದನ್ನು ವಿನಂತಿಸಿ"
       not_found: "ಕಂಡುಬಂದಿಲ್ಲ"
       not_locked: "ಲಾಕ್ ಆಗಿರಲಿಲ್"
-      not_saved:
-        one: "1 ದೋಷವು ಈ %{resource} ಅನ್ನು ಉಳಿಸದಂತೆ ನಿಷೇಧಿಸಿದೆ:"
-        other: "%{count} ದೋಷಗಳು ಈ %{resource} ಅನ್ನು ಉಳಿಸದಂತೆ ನಿಷೇಧಿಸಿವೆ:"
     invitations:
       send_instructions: '%{email} ಗೆ ಆಹ್ವಾನ ಇಮೇಲ್ ಕಳುಹಿಸಲಾಗಿದೆ.'
       invitation_token_invalid: 'ಒದಗಿಸಿದ ಆಹ್ವಾನ ಟೋಕನ್ ಮಾನ್ಯವಾಗಿಲ್ಲ!'

@@ -1,12 +1,12 @@
 ---
 ku:
   slides:
+    if:
+      7:
+        text: خۆشی ببینە لەگەڵ بەکارهێنانی بلۆکی "if" دا!
     maze_intro:
       1:
         text: Tu bi Xêr hatî ewilîn Saet ya te ya Kodê! Were, da em destpê ewilîn
           Programkarî ya te bikin
       13:
         text: بابڕۆین ئەو بەرازانە بگرین!
-    if:
-      7:
-        text: خۆشی ببینە لەگەڵ بەکارهێنانی بلۆکی "if" دا!

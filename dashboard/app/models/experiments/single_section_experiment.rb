@@ -30,8 +30,9 @@
 class SingleSectionExperiment < Experiment
   belongs_to :section, optional: true
 
-  def enabled?(user: nil, section: nil)
-    return (!section.nil? && section_id == section.id) ||
-      (user.try(:teacher?) && user.section_ids.include?(section_id))
+  def enabled?(user: nil)
+    return false unless user
+
+    user.sections.include?(section) || user.sections_as_student.include?(section)
   end
 end

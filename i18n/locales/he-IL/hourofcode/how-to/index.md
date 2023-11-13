@@ -25,7 +25,7 @@ Students today should learn how to create technology, not just use it.
 
 <a id="how-to-video"></a>
 
-## 1. צפו בסרטון ההדרכה של Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. צפו בסרטון ההדרכה של Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-כאשר אתם [ נרשמים אל אירוע Hour of Code שלכם ](/#join), תקבלו תברוקת מיילים מסייעים עם חדשות וטיפים לארח Hour of Code מוצלח. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+כשאתה נר [שם לאירוע Hour of Code שלך](/events), תקבל הודעות דוא"ל מועילות עם חדשות וטיפים לאירוח שעת קוד מוצלחת. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### גרמו לתלמידים שלכם להתרגש
 
@@ -111,7 +111,7 @@ Show an inspirational video:
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- כתוב את קישור ההדרכה על לוח לבן. מצא את הקישור המופיע [במידע עבור ההדרכה שבחרת]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
@@ -151,6 +151,6 @@ What if a student finishes early?
 
 ### איך ממשיכים אחרי "שעה של קוד"?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+מדעי המחשב לא חייבים להסתיים בשעה של קוד! [למד כיצד](/beyond) להביא CS לבית הספר ולתלמידים שלך.
 
 {{ signup_button }}

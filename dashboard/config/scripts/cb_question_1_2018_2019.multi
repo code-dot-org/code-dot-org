@@ -12,3 +12,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Every time you add a single bit to a binary number, you multiply by 2 the number of numbers you can represent. So for example, a 2-bit number can represent 4 numbers (0 - 3), and a 3-bit number can represent 8 numbers (0 - 7). So if you're going from a 32-bit to a 64-bit number, you are multiplying the number of numbers you can represent by 2, 32 times, so 2^32 is the correct answer.
 MARKDOWN
+
+allow_multiple_attempts true

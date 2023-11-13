@@ -16,7 +16,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
     lastTimestamp: PropTypes.number,
     studentUrl: PropTypes.string.isRequired,
     onToggleExpand: PropTypes.func.isRequired,
-    isExpanded: PropTypes.bool.isRequired
+    isExpanded: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -38,8 +38,8 @@ export default class ProgressTableStudentName extends React.PureComponent {
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           script_id: this.props.scriptId,
-          student_id: this.props.studentId
-        })
+          student_id: this.props.studentId,
+        }),
       },
       {includeUserId: true}
     );
@@ -105,11 +105,11 @@ export default class ProgressTableStudentName extends React.PureComponent {
 const styles = {
   link: {
     color: color.teal,
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
   },
   tooltip: {
     display: 'flex',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   collapser: {
     paddingRight: 8,
@@ -117,6 +117,6 @@ const styles = {
     verticalAlign: 'middle',
     width: 11,
     boxSizing: 'content-box',
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 };

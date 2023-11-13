@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-09-07T21:39:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2023-09-07T21:39:46.941+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-CV-SC2L2-06\\\"\"],\"cloned_from\":\"CSA-SE-CV-SC2L2-06\"},{\"changed_at\":\"2023-09-07 21:39:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -18,6 +18,7 @@
         "name": "COLOR",
         "type": "Colour"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

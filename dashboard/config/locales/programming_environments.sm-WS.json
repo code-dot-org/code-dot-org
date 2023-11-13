@@ -1,0 +1,145 @@
+{
+  "sm-WS": {
+    "data": {
+      "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Faiva"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Faiva"
+                    }
+                  }
+                }
+              },
+              "name": "Faamaumauga"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
+                    }
+                  }
+                }
+              },
+              "name": "numera"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Faiva"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "E taina le leo o le MP3 mai le faila o le URL ua faatonuina"
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "E leai se mea"
+                }
+              },
+              "name": "Fuainumera lasi "
+            }
+          }
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "name": "Tusiga ata"
+            },
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "E taina le leo o le MP3 mai le faila o le URL ua faatonuina"
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "lanu"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "lanu"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
+                    }
+                  }
+                }
+              },
+              "name": "numera"
+            },
+            "variables": {
+              "name": "Fuainumera lasi "
+            }
+          }
+        },
+        "weblab": {
+          "name": "Web Lab"
+        }
+      }
+    }
+  }
+}

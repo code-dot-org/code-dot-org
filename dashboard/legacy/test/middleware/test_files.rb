@@ -470,6 +470,59 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_file_versions_non_owner
+    filename = @api.randomize_filename('test.png')
+    delete_all_file_versions(filename)
+    delete_all_manifest_versions
+
+    # Create an animation file
+    post_file_data(@api, filename, 'stub-v1-body', 'image/png')
+    assert successful?
+
+    # Overwrite it.
+    post_file_data(@api, filename, 'stub-v2-body', 'image/png')
+    assert successful?
+
+    with_session(:non_owner) do
+      # List project versions for a non-owner. They should only get the current version
+      non_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+      non_owner_project_versions = non_owner_api.list_object_versions(filename)
+      assert successful?
+      assert_equal 1, non_owner_project_versions.count
+      assert non_owner_project_versions[0]['isLatest']
+    end
+
+    delete_all_manifest_versions
+  end
+
+  def test_file_versions_teacher_of_owner
+    FilesApi.any_instance.stubs(:teaches_student?).returns(true)
+
+    filename = @api.randomize_filename('test.png')
+    delete_all_file_versions(filename)
+    delete_all_manifest_versions
+
+    # Create an animation file
+    post_file_data(@api, filename, 'stub-v1-body', 'image/png')
+    assert successful?
+
+    # Overwrite it.
+    post_file_data(@api, filename, 'stub-v2-body', 'image/png')
+    assert successful?
+
+    with_session(:teacher_of_owner) do
+      # List project versions for the teacher of a project owner. They should get all versions
+      teacher_of_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+      teacher_of_owner_project_versions = teacher_of_owner_api.list_object_versions(filename)
+      assert successful?
+      assert_equal 2, teacher_of_owner_project_versions.count
+      assert teacher_of_owner_project_versions[0]['isLatest']
+      refute teacher_of_owner_project_versions[1]['isLatest']
+    end
+
+    delete_all_manifest_versions
+  end
+
   def test_invalid_file_extension
     @api.get_object('bad_extension.css%22')
     assert unsupported_media_type?

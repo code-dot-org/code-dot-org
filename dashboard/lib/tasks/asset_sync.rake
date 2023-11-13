@@ -78,7 +78,7 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   Sprockets::Manifest.prepend UnDigestManifest
 
   # The webpack hash can be either a 20- or 32-character hexadecimal string.
-  # Search Gruntfile.js and webpack.js for [hash] and [contenthash] to
+  # Search `apps/webpack*.js` for [hash] and [contenthash] to
   # see when webpack might generate content hashes of each length.
   WP_REGEX = /wp\h{20,32}/
 end

@@ -14,3 +14,4 @@ answer 'the time when the program executes'
 
 question 'immutable'
 answer 'an object whose state cannot be modified after it is created'
+allow_multiple_attempts true

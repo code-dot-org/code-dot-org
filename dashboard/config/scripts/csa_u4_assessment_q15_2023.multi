@@ -33,3 +33,5 @@ For this expression, this would be applied as follows:
 (y < 500) && !(x > 500) && !(x < 2000)   // || becomes &&
 ```
 MARKDOWN
+
+allow_multiple_attempts true

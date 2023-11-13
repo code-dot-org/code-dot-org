@@ -1,2 +1,15 @@
 {
+  "dataDisplayFeatures": "Zgjedhni një ose më shumë kolona si hyrje për të ndihmuar në krijimin e parashikimit.",
+  "dataDisplayLabel": "Zgjedhni një kolonë për të parashikuar.",
+  "generateResults": "Modeli juaj është duke u testuar.",
+  "modelSummary": "Ju keni trajnuar dhe ruajtur me sukses modelin tuaj. Rishikoni detajet e modelit tuaj dhe klikoni Përfundo për të përdorur modelin tuaj të trajnuar në App Lab.",
+  "results": "Rishikoni rezultatet.",
+  "resultsDetails": "Detajet e rezultateve janë duke u shfaqur.",
+  "saveModel": "Ruani modelin e trajnuar për përdorim në App Lab.",
+  "selectDataset": "Zgjedhni grupin e të dhënave që dëshironi të përdorni.",
+  "selectedDataset": "Sapo keni zgjedhur një set të dhënash.",
+  "selectedFeatureCategorical": "Ju sapo keni zgjedhur një veçori kategorike.",
+  "selectedFeatureNumerical": "Ju sapo keni zgjedhur një veçori numerike.",
+  "trainModel": "Modeli juaj është duke u trajnuar.",
+  "uploadedDataset": "Sapo keni ngarkuar një set të dhënash."
 }

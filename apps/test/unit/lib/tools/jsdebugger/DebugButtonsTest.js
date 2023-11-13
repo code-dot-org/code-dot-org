@@ -9,7 +9,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
@@ -29,8 +29,8 @@ describe('The DebugConsole component', () => {
       studioApp: {
         // set hideSource to true so interpreter doesn't try to look up
         // non-existent ace editor
-        hideSource: true
-      }
+        hideSource: true,
+      },
     });
     sinon.spy(interpreter, 'handleStepOver');
     sinon.spy(interpreter, 'handlePauseContinue');
@@ -61,7 +61,7 @@ describe('The DebugConsole component', () => {
     continueButton: () => root.find('#continueButton'),
     stepOverButton: () => root.find('#stepOverButton'),
     stepOutButton: () => root.find('#stepOutButton'),
-    stepInButton: () => root.find('#stepInButton')
+    stepInButton: () => root.find('#stepInButton'),
   };
 
   function isVisible(selector) {
@@ -90,7 +90,7 @@ describe('The DebugConsole component', () => {
         'pauseButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton'
+        'stepInButton',
       ]);
     });
 
@@ -123,13 +123,13 @@ describe('The DebugConsole component', () => {
         'continueButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton'
+        'stepInButton',
       ]);
       expect(getEnabledButtons()).to.deep.equal([
         'continueButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton'
+        'stepInButton',
       ]);
     });
 
@@ -166,7 +166,7 @@ describe('The DebugConsole component', () => {
         'pauseButton',
         'stepOverButton',
         'stepOutButton',
-        'stepInButton'
+        'stepInButton',
       ]);
     });
 
@@ -186,13 +186,13 @@ describe('The DebugConsole component', () => {
           'continueButton',
           'stepOverButton',
           'stepOutButton',
-          'stepInButton'
+          'stepInButton',
         ]);
         expect(getEnabledButtons()).to.deep.equal([
           'continueButton',
           'stepOverButton',
           'stepOutButton',
-          'stepInButton'
+          'stepInButton',
         ]);
       });
     });

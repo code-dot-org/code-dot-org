@@ -8,12 +8,19 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 import projectReducer, {
-  refreshProjectName
+  refreshProjectName,
 } from '@cdo/apps/code-studio/projectRedux';
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
+import lab2Redux from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 
 describe('EditableProjectName', () => {
   let currentName;
+  const store = createStore(
+    combineReducers({project: projectReducer, lab: lab2Redux})
+  );
+
   beforeEach(() => {
     currentName = 'Brand New Project';
     replaceOnWindow('dashboard', {
@@ -22,11 +29,11 @@ describe('EditableProjectName', () => {
           currentName = name;
           return Promise.resolve();
         },
-        getCurrentName: () => currentName
+        getCurrentName: () => currentName,
       },
       header: {
-        updateTimestamp: () => {}
-      }
+        updateTimestamp: () => {},
+      },
     });
   });
 
@@ -35,7 +42,6 @@ describe('EditableProjectName', () => {
   });
 
   it('provides a "rename project" interface', async () => {
-    const store = createStore(combineReducers({project: projectReducer}));
     store.dispatch(refreshProjectName());
     const wrapper = mount(
       <Provider store={store}>
@@ -72,5 +78,33 @@ describe('EditableProjectName', () => {
     expect(wrapper.find('.project_edit')).to.have.lengthOf(1);
     expect(wrapper.find('.project_save')).to.have.lengthOf(0);
     renameSpy.restore();
+  });
+
+  it('calls lab2 rename if lab2 projects are enabled', () => {
+    const renameStub = sinon.stub().returns(Promise.resolve());
+    const projectManagerStub = sinon.createStubInstance(ProjectManager, {
+      rename: renameStub,
+    });
+    sinon
+      .stub(Lab2Registry, 'getInstance')
+      .returns({getProjectManager: () => projectManagerStub});
+    sinon.stub(Lab2Registry, 'hasEnabledProjects').returns(true);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <EditableProjectName />
+      </Provider>
+    );
+
+    // Clicking the edit button displays an input and a save button
+    wrapper.find('.project_edit').simulate('click');
+
+    wrapper.find('.project_name').getDOMNode().value = 'New Name';
+    wrapper.find('.project_save').simulate('click');
+    expect(renameStub.calledOnce).to.be.true;
+    expect(renameStub.calledWith('New Name')).to.be.true;
+
+    Lab2Registry.getInstance.restore();
+    Lab2Registry.hasEnabledProjects.restore();
   });
 });

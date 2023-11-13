@@ -1,8 +1,8 @@
 ---
-title: Hour of Code How-to Guide for parents
+title: Hour of Code Vägledning för föräldrar
 ---
 
-# How to do an Hour of Code with your child
+# Hur man gör Hour of Code med sitt barn
 
 Att prova Hour of Code är ett lätt och roligt sätt att introducera ditt barn till datavetenskap, kanske för första gången. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
@@ -14,9 +14,9 @@ Du kan bli en av tiotals miljoner elever över hela världen som deltar i det h�
 
 Det är lätt att hantera Hour of Code, även för nybörjare. Du behöver ingen erfarenhet i datavetenskap eller undervisning för att hjälpa dina barn delta i en rolig aktivitet där de både lär sig och skrattar samtidigt. 
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+Du kan prova på Hour of Code via dator, pekplatta, smarttelefon, eller via våra aktiviteter där du inte alls behöver vara uppkopplad! Så här kommer du igång.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>Se PDF guiden</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -87,7 +87,7 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 - Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity
 - [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise.
-- Dela foton och videor från din Hour of Code hemma på sociala medier. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Dela foton och videor från din Hour of Code hemma på sociala medier. Använd [#HourOfCode](https://twitter.com/hashtag/hourofcode) och [@codeorg](https://twitter.com/codeorg) så att vi också kan lyfta fram din framgång!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
@@ -95,4 +95,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 Datavetenskap behöver inte ta slut med Hour of Code! Även om 90 % av alla föräldrar vill att deras barn ska lära sig datavetenskap så saknas det fortfarande på de flesta skolor. Därför är vår läroplan webbaserad och gratis att använda, för all framtid. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>Se PDF guiden</button>]({{ localized_files/hourofcode_parent_how_to }})

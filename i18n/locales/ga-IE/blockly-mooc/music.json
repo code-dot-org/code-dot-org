@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundTooltip": "seinn fuaim",
+  "blockly_blockPlaySoundAtMeasureTooltip": "seinn fuaim",
+  "blockly_blockRepeatTooltip": "athdhéan",
+  "blockly_blockWhenRun": "nuair a ritear é",
+  "blockly_blockWhenRunTooltip": "nuair a ritear é",
+  "blockly_functionNamePlaceholder": "m'fheidhm",
+  "blockly_toolboxCategoryEvents": "Teagmhais",
+  "blockly_toolboxCategoryFunctions": "Feidhmeanna",
+  "blockly_toolboxCategoryLogic": "Loighic",
+  "blockly_toolboxCategoryMath": "Matamaitic",
+  "blockly_toolboxCategoryVariables": "Athróga",
+  "feedback": "Aiseolas",
+  "share": "Comhroinn",
+  "startOver": "Tosaigh Arís",
+  "panelHeaderInstructions": "Treoracha",
+  "panelHeaderWorkspace": "Spás oibre: ",
+  "continue": "Ar aghaidh"
+}

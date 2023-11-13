@@ -15,19 +15,19 @@ export const scriptDataPropType = PropTypes.shape({
   path: PropTypes.string,
   lessons: PropTypes.arrayOf(
     PropTypes.shape({
-      levels: PropTypes.arrayOf(PropTypes.object).isRequired
+      levels: PropTypes.arrayOf(PropTypes.object).isRequired,
     })
   ),
   family_name: PropTypes.string,
   version_year: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
 });
 
 // Types of views of the progress tab
 export const ViewType = {
   SUMMARY: 'summary', // lessons
   DETAIL: 'detail', // levels
-  STANDARDS: 'standards'
+  STANDARDS: 'standards',
 };
 
 /**
@@ -47,7 +47,7 @@ export const studentTableRowType = PropTypes.shape({
   student: studentType.isRequired,
   expansionIndex: PropTypes.number.isRequired,
   isExpanded: PropTypes.bool,
-  useDarkBackground: PropTypes.bool
+  useDarkBackground: PropTypes.bool,
 });
 
 export const tooltipIdForStudent = studentId =>

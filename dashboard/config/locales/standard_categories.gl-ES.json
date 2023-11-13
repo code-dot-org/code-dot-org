@@ -5,11 +5,11 @@
         "CT": {
           "description": "Pensamento computacional"
         },
-        "L": {
-          "description": "Idioma"
-        },
         "F": {
           "description": "Funcións"
+        },
+        "L": {
+          "description": "Idioma"
         }
       }
     }

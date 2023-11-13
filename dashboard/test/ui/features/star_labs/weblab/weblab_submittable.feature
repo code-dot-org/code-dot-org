@@ -7,8 +7,7 @@ Feature: Submittable WebLab
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/32/levels/1?noautoplay=true"
-  Then I rotate to landscape
-  And I wait until element "#submitButton" is visible
+  Then I wait until element "#submitButton" is visible
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.

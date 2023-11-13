@@ -1,10 +1,10 @@
 {
-  "startButton": "Սկսել",
   "filterOrgNamesAll": "All",
-  "filterStudentExperienceBeginner": "Beginner",
-  "filterTopicsMath": "Մաթեմատիկա",
   "filterProgrammingLanguage": "Լեզու",
   "filterProgrammingLanguageBlocks": "Blocks",
   "filterProgrammingLanguageOther": "Այլ",
+  "filterStudentExperienceBeginner": "Beginner",
+  "filterTopicsMath": "Մաթեմատիկա",
+  "startButton": "Սկսել",
   "tutorialDetailStandards": "Standards"
 }

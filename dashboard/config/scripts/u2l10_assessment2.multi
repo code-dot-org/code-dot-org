@@ -1,11 +1,20 @@
 name 'U2L10 Assessment2'
-encrypted 'bcDzRVY52awM996OzcTTA0nsDMUdCOpCCAkJLest723QBCJGdDzh/MEc1nV6
-UNG8TSKxy3HT7G2xGLkelBJenbyEgcC3ZUyXywVo/5Jm5ridFCc15NJuV2A0
-o+6VpF6mRbwJoQD/3Oj1zqDcLDnN0B2RxiyT+YUT75yucgI+4yY283RfX8Kr
-OD1ew415slv6MIjKt2vPoR+l2cDRhz+hEjuZIXIWRPbpzQM1QM6IA2is6loO
-owIyRf5OqV+JvpYukQfiPRL24YcCG7lDPm9PejtBfj5nhyU8UQHR2cOOop7h
-Yw8Kz06PUk/Yq5Vn3wJ+oNDo8SIqgn8RxwMRA0iVctK0ePdRNmqlbx0bdNHR
-Hwq3YSdxAFZjf532fXFMPcCgDyBgY7DjR7eW8jNMDME93h3sYfEBOy51Ui1m
-9kwHALyLfojlLdy4+tSM/08fhpnySM2ZmyOWznwzy1W5cdq9Yiy9jVtKtvud
-toeh/ucSKAqTabWoZdI6A3ucQ13s1CS2
-'
+title 'Assessment Question 2'
+type 'multi2'
+question 'What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)'
+right 'Censorship'
+right 'Spoofing'
+wrong 'Redundancy' 
+wrong 'Hierarchy'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- Censorship
+- Spoofing
+MARKDOWN
+
+allow_multiple_attempts true

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap';
+import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   Facilitator,
   Organizer,
   PermissionPropType,
   ProgramManager,
-  WorkshopAdmin
+  WorkshopAdmin,
 } from '../permission';
 import {
   Courses,
   ActiveCourses,
-  ArchivedCourses
+  ArchivedCourses,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
@@ -27,7 +27,7 @@ export default function CourseSelect({
   readOnly,
   inputStyle,
   validation,
-  onChange
+  onChange,
 }) {
   const allowedCourses = getAllowedCourses(
     permission,
@@ -65,7 +65,7 @@ CourseSelect.propTypes = {
   readOnly: PropTypes.bool,
   inputStyle: PropTypes.object,
   validation: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export function getAllowedCourses(permission, facilitatorCourses, course) {

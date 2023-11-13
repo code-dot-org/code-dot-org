@@ -3,7 +3,7 @@ import FallbackPlayerCaptionDialogLink from './FallbackPlayerCaptionDialogLink';
 
 export default {
   title: 'FallbackPlayerCaptionDialogLink',
-  component: FallbackPlayerCaptionDialogLink
+  component: FallbackPlayerCaptionDialogLink,
 };
 
 const Template = args => <FallbackPlayerCaptionDialogLink {...args} />;
@@ -13,5 +13,5 @@ BelowStandaloneVideoPlayer.args = {};
 
 export const InHeaderOfDialogVideoPlayer = Template.bind({});
 InHeaderOfDialogVideoPlayer.args = {
-  inDialog: true
+  inDialog: true,
 };

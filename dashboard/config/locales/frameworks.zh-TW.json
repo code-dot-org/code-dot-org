@@ -2,14 +2,11 @@
   "zh-TW": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "CSTA K-12電腦科學標準（2017）"
+        "ai4k12-2021": {
+          "name": "AI4K12 國家指引"
         },
-        "csp2021": {
-          "name": "CSP概念框架"
-        },
-        "csta2011": {
-          "name": "CSTA K-12 電腦科學標準 (2011)"
+        "c3ss": {
+          "name": "C3 社會研究標準"
         },
         "ccela": {
           "name": "英語語言藝術共同核心標準"
@@ -17,8 +14,23 @@
         "ccmath": {
           "name": "數學共同核心標準"
         },
+        "csa": {
+          "name": "CSA 概念框架"
+        },
+        "csp2021": {
+          "name": "CSP概念框架"
+        },
+        "csta": {
+          "name": "CSTA K-12電腦科學標準（2017）"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 電腦科學標準 (2011)"
+        },
         "iste": {
           "name": "ISTE 學生標準"
+        },
+        "ngss": {
+          "name": "下一代科學標準"
         }
       }
     }

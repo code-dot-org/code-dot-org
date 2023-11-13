@@ -146,7 +146,6 @@ sr:
           description_short: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
           student_description: Научите да програмирате дроиде и креирате сопствену игру Ратова звезда у галаксији далеко, далеко.
         mc:
-          title: Мајнкрафт час програмирања
           description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет.
           description_short: Истражите Мајнкрафт свет кроз кôд
           student_description: Користите блокове кода да поведете Стива или Алекс у авантуру кроз овај Мајнкрафт свет.
@@ -834,6 +833,8 @@ sr:
           lesson_groups:
             lessonGroup-2:
               description: тест
+        dance-unplugged:
+          title: Плесна журка без интернета
         spelling-bee:
           title: Пчелица словарица
         ai-ethics-2021:
@@ -966,3 +967,115 @@ sr:
               display_name: Листе
             lessonGroup-3:
               display_name: Петље
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+            csf_functions:
+              display_name: Функције
+            csf_variables:
+              display_name: Променљиве
+            csf_for_loops:
+              display_name: Бројачке петље
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_loops:
+              display_name: Петље
+            csf_events:
+              display_name: Догађаји
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Дигитално држављанство
+            csf_events:
+              display_name: Догађаји
+            csf_loops:
+              display_name: Петље
+            csf_conditionals:
+              display_name: Кондиционали
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дигитално држављанство
+            csf_functions:
+              display_name: Функције
+            csf_nested_loops:
+              display_name: Кондиционали
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Променљиве
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+            lessonGroup-6:
+              display_name: Догађаји
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+            lessonGroup-5:
+              display_name: Догађаји
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-6:
+              display_name: Петље
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Функције
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Кондиционали
+            lessonGroup-5:
+              display_name: Променљиве

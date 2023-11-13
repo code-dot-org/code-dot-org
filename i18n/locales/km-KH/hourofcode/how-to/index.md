@@ -25,7 +25,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ### ប្រាប់អ្នកស្ម័គ្រចិត្តអោយដឹងអោយចុះឈ្មោះជាមួយនឹងកម្មវិធីរបស់អ្នក
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. វាក៏ជាវិធីដែលអ្នកអាចអោយអ្នកស្ម័គ្រចិត្តក្នុងស្រុកដឹងថាសាលារបស់អ្នកកំពុងចូលរួម។ អ្នកស្ម័គ្រចិត្តគឺជាធនធានដ៏សំខាន់មួយហើយអាចមកនិយាយទៅកាន់សិស្សថ្នាក់របស់អ្នកអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រឬជួយសិស្សរបស់អ្នកជាមួយនឹងសកម្មភាពម៉ោងនៃកូដ។
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. វាក៏ជាវិធីដែលអ្នកអាចអោយអ្នកស្ម័គ្រចិត្តក្នុងស្រុកដឹងថាសាលារបស់អ្នកកំពុងចូលរួម។ អ្នកស្ម័គ្រចិត្តគឺជាធនធានដ៏សំខាន់មួយហើយអាចមកនិយាយទៅកាន់សិស្សថ្នាក់របស់អ្នកអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រឬជួយសិស្សរបស់អ្នកជាមួយនឹងសកម្មភាពម៉ោងនៃកូដ។
 
 ### ធ្វើឱ្យសិស្សរបស់អ្នកសប្បាយរីករាយ
 

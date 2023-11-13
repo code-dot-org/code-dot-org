@@ -152,7 +152,7 @@ kk:
           description_short: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
           student_description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
         mc:
-          title: Minecraft Кодтау Сағаты
+          title: Minecraft Adventurer
           description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына көмектесу үшін код блоктарын қолданыңыз.
           description_short: Код арқылы Minecraft әлемінде саяхаттаңыз.
           student_description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына көмектесу үшін код блоктарын қолданыңыз.
@@ -1362,6 +1362,22 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1380,3 +1396,146 @@ kk:
               display_name: Тізімдер
             lessonGroup-3:
               display_name: Ілмек
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Бағалаулар
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Айнымалылар
+            csf_for_loops:
+              display_name: For ілмектері
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            ramp_up:
+              display_name: Кіріккен Циклдер
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шарттар
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Кіріспе
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Кіріспе
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Айнымалылар
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+            lessonGroup-6:
+              display_name: Шаралар
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+            lessonGroup-5:
+              display_name: Шаралар
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-6:
+              display_name: Ілмек
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Кіріккен Циклдер
+            lessonGroup-4:
+              display_name: Функциялар
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Шарттар
+            lessonGroup-5:
+              display_name: Айнымалылар
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Кіріспе
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Кіріспе
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Кіріспе
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Кіріспе

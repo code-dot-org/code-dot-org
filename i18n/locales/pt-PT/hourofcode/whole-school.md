@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: Participação de toda a escola
 ---
 
 {{ signup_button }}

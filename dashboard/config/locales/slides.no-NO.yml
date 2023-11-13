@@ -1,502 +1,10 @@
 ---
 'no':
   slides:
-    maze_intro:
-      1:
-        image: notes/hoc1_1.jpg
-        text: Velkommen til din første kodetime! La oss dykke rett inn i ditt første
-          møte med programmering.
-      2:
-        image: notes/hoc1_2.jpg
-        text: Vi skal bruke Blockly, et visuelt programmeringsspråk hvor du drar og
-          slipper blokkene for å skrive kode.
-      3:
-        image: notes/hoc1_3.jpg
-        text: De fleste programmeringsspråk bruker tekst, men Blockly er visuelt.
-          Hver blokk tilsvarer en "ekte" kodelinje.
-      4:
-        image: notes/hoc1_4.jpg
-        text: Du vil lære grunnleggende informatikk, med begreper som brukes overalt,
-          helt fra å skrive apper til å lage programmer for å styre Mars-roveren.
-      5:
-        image: notes/hoc1_5.jpg
-        text: Et program er et sett med instruksjoner som datamaskinen skal følge.
-      6:
-        image: notes/hoc1_6.jpg
-        text: Målet med det første programmet er å få en "Angry Bird" gjennom en labyrint
-          slik at den treffer en grønn gris.
-      7:
-        image: notes/hoc1_7.jpg
-        text: Til venstre er labyrinten der programmet kjøres. Instruksjonene for
-          hver oppgave er under labyrinten.
-      8:
-        image: notes/hoc1_8.jpg
-        text: Den midtre verktøykassen har kommandoene for "Angry Bird". Du vil bruke
-          disse for å bygge koden.
-      9:
-        image: notes/hoc1_9.jpg
-        text: Til høyre er arbeidsområdet hvor du skal trekke blokker fra verktøykassen
-          til å bygge programmet med. Hvis du vil slette en blokk, drar du den til
-          papirkurven i hjørnet.
-      10:
-        image: notes/hoc1_10.jpg
-        text: Hver blokk er en instruksjon. Hvis du drar en "fremover" blokk til arbeidsområdet
-          og trykker "Kjør programmet", flyttes fuglen en plass på labyrinten.
-      11:
-        image: notes/hoc1_11.jpg
-        text: For må gjøre mer enn én handling, kan du dra mange blokker til arbeidsområdet
-          og sette dem sammen. Fuglen vil utføre kommandoene ovenfra og ned.
-      12:
-        image: notes/hoc1_12.jpg
-        text: Hvis du kjører et program og ønsker å fikse det for å prøve på nytt,
-          kan du trykke på "Reset"-knappen.
-      13:
-        image: notes/hoc1_13.jpg
-        text: La oss gå og ta de grisene!
-    artist_intro:
-      1:
-        image: notes/stage5_1.jpg
-        text: Hei, jeg er JR! Alle racerbil-lag må ha programmerere for å vinne. De
-          analyserer data fra bilen for å gjøre den raskere.
-      2:
-        image: notes/stage5_2.jpg
-        text: I disse oppgavene vil du være en kunstner som tegner linjer bak deg
-          når du flytter deg.
-      3:
-        image: notes/stage5_3.jpg
-        text: Denne blokken sier "flytt frem 100 piksler." Piksler er bare veldig
-          små prikker på skjermen.
-      4:
-        image: notes/stage5_4.jpg
-        text: Denne blokken sier "sving 90 grader til høyre". Den vil dreie kunstneren
-          like mye som "sving" blokken i labyrintoppgaven gjorde.
-      5:
-        image: notes/stage5_5.jpg
-        text: Klikk på pilen i en av disse blokkene for å endre hvor mye kunstneren
-          går fremover. Lek litt med dette for å bli kjent med de nye blokkene.
-    farmer_intro:
-      1:
-        image: notes/stage9_1.jpg
-        text: Hei, jeg Paola! I disse oppgavene er du en bonde som trenger å gjøre
-          jordet flatt for å kunne dyrke grønnsaker der.
-      2:
-        image: notes/stage9_2.jpg
-        text: Du må hjelpe henne med å fjerne alle jordhaugene, og fyle alle hullene.
-      3:
-        image: notes/stage9_3.jpg
-        text: De nye blokkene fjerner 1 spadetak med jord fra en haug, og fyller 1
-          spadetak med jord i et hull.
-      4:
-        image: notes/stage9_4.jpg
-        text: Hauger og hull har forskjellige størrelse eller dybde, så du må fortelle
-          bonden hvor mange spadetak som det er behov for.
-    flappy_intro:
-      1:
-        text: Hei, mitt navn er Katie! Noe av det mest spennende innen informatikk
-          er at et dataprogram kan være interaktivt.
-      2:
-        text: Hver gang noen klikker, trykker eller skriver på en datamaskin eller
-          telefon, som genererer en hendelse, og det er noe kode som bestemmer hva
-          som skal utføres når hendelsen inntreffer.
-      3:
-        text: 'Du kan for eksempel ha en HENDELSESHÅNDTERER som sier "når musen klikkes,
-          spilles en lyd" '
-      4:
-        text: Har du hørt om spillet FlappyBird? Ved å bruke hendelsesbehandling,
-          skal vi lære å programmere vår egen tilpasset versjon av FlappyBird!
-      5:
-        text: Koden du vil skrive innebærer å dra og slippe blokker som representerer
-          kommandoer på datamaskinen. Under panseret, er hver av disse blokkene representert
-          av ekte kode.
-      6:
-        text: 'Hvis du tar en titt på arbeidsområdet, er det noen grønne blokker som
-          er fylt ut for deg - dette er "hendelsesbehandlinger" '
-      7:
-        text: Hvis du vil at fuglen skal FLAKSE når du KLIKKER med musen, så fester
-          du "FLAKS"-blokken til den riktige hendelsesbehandleren og fuglen vil flakse
-          hver gang du klikker med musen.
-      8:
-        text: I hver oppgave i denne aktiviteten vil vi introdusere nye typer hendelser
-          som grønne blokker i arbeidsområdet, og du kan bestemme de relevante blokkene
-          å legge til i respons til de hendelsene.
-      9:
-        text: Når du ser en nedtrekksboks som denne, så betyr det at du kan endre
-          instillingene - for eksempel lyden som spilles av når flappy treffer bakken.
-      10:
-        text: I siste puslespillet vil du kunne lage et spill og dele den med dine
-          venner. ha det gøy!
-    loop_times:
-      1:
-        image: notes/hoc2_1.jpg
-        text: Hei, jeg heter Mark! La oss lære om løkker. Med løkker kan du skal be
-          datamaskinen om å gjenta et sett av handlinger igjen og igjen, tusenvis
-          eller milliarder ganger.
-      2:
-        image: notes/hoc2_2.jpg
-        text: I denne oppgaven ønsker vi å flytte fuglen frem 5 plasser for å ta grisen.
-      3:
-        image: notes/hoc2_3.jpg
-        text: Vi kan bruke den nye "gjenta" blokken for å hjelpe oss.
-      4:
-        image: notes/hoc2_4.jpg
-        text: I stedet for å dra ut 5 "fremover" blokker...
-      5:
-        image: notes/hoc2_5.jpg
-        text: Vi kan sette "fremover" blokken inne i "gjenta"-blokken og skrive et
-          nummer i blokken å fortelle den hvor mange ganger det skal gjentas.
-      6:
-        image: notes/hoc2_6.jpg
-        text: 'Og dette er viktig: Du kan sette mer enn én kommando i en "gjenta"-blokk.'
-      7:
-        image: notes/hoc2_7.jpg
-        text: Kos deg med å bruke den nye "gjenta" blokken!
-    loop_until:
-      1:
-        image: notes/hoc3_1.jpg
-        text: Hei, er jeg Chris. Før jeg startet i Miami Heat, studerte jeg informatikk.
-          La oss prøve våre ny blokk, "Gjenta til" blokken.
-      2:
-        image: notes/hoc3_2.jpg
-        text: Hva hvis vi ikke visste hvor langt fuglen måtte bevege seg for å komme
-          til grisen?
-      3:
-        image: notes/hoc3_3.jpg
-        text: Hvis vi setter en "fremover" blokk inne i en "Gjenta til" blokk, vil
-          fuglen bevege seg fremover til den når grisen (eller krasjer inn i en vegg).
-      4:
-        image: notes/hoc3_4.jpg
-        text: 'Og dette er viktig: Akkurat som før kan vi sette flere blokker inni
-          "Gjenta til" blokken, og de vil alle bli gjentatt.'
-    if:
-      1:
-        image: notes/hoc4_1.jpg
-        text: 'Hei, er jeg Bill! La oss lære et nytt grunnleggende konsept: hvis-uttrykk.
-          Dette er hvordan datamaskiner tar beslutninger.'
-      2:
-        image: notes/hoc4_2.jpg
-        text: 'Du bruker "hvis"-uttrykk selv hver dag. Før du går ut hver morgen sier
-          du: "HVIS det regner ute må jeg ta på meg jakke".'
-      3:
-        image: notes/hoc4_3.jpg
-        text: Vi kan be zombien om å sjekke om det er en sti til venstre. Hvis han
-          finner en sti der, kan vi be han snu i den retningen.
-      4:
-        image: notes/hoc4_4.jpg
-        text: For å skrive koden for dette, må vi dra ut "Hvis"-blokken og sette en
-          "venstre"-blokk inni den.
-      5:
-        image: notes/hoc4_5.jpg
-        text: Hvis vi hver gang zombien flytter på seg setter en "fremover" blokk
-          over den, og en "gjenta" blokk rundt alt, vil han nå sjekke om det er en
-          sti til venstre og i så fall snu dit. Kommandoen "gjenta" er viktig for
-          å se etter sti etter hvert skritt.
-      6:
-        image: notes/hoc4_6.jpg
-        text: Hvis-setninger er veldig viktige i programmering. En av de første programmene
-          jeg skrev, var et tripp-trapp-tresko-spill. Der var det det en hvis-setning
-          som sa hvis den andre personen holdt på å vinne, måtte programmet blokkere
-          posisjonen som ville la han seire.
-      7:
-        image: notes/hoc4_7.jpg
-        text: Ha det gøy med hvis-blokker!
-    if_else:
-      1:
-        image: notes/hoc5_1.jpg
-        text: Hei, jeg heter Saloni. Jeg bruker programmering for å løse problemer
-          innenfor helse og medisin. La oss lære om "hvis-ellers"-blokken. Den ser
-          ut som en "hvis"-blokk, men har en ekstra del på slutten som sier "ellers".
-      2:
-        image: notes/hoc5_2.jpg
-        text: Hvis jeg setter en "fremover"-blokk på plassen der det står "gjøre"
-          og en "snu til venstre" blokk der det står "ellers", betyr det at zombien
-          vil velge mellom to alternativer. Hvis det er en vei fremover, vil den gå
-          dit og ellers (ikke vei fremover) vil den svinge til venstre.
-      3:
-        image: notes/hoc5_3.jpg
-        text: Akkurat som med "hvis"-blokken, kan vi sette "hvis-ellers"-blokker inni
-          en "gjenta"-blokk slik at zombien vil fortsette med å flytte, og "hvis-ellers"blokken
-          vil fortsette å sjekke om det er på tide å snu.
-      4:
-        image: notes/hoc5_4.jpg
-        text: Nå får du vise zombiene hvor de hører hjemme!
-    if_else_scrat:
-      1:
-        text: En "hvis-ellers"-setning er en beslutning mellom to ting. La oss se
-          på hvordan vi kan bruke en "hvis-ellers"-setning med vår venn ekornet Scrat.
-      2:
-        text: Denne blokken ligner på "hvis"-blokken, men det er en ekstra del nederst
-          som sier "ellesrs". Hvis jeg setter en "fremover"-blokk der det står "gjøre"
-          og en "snu venstre"-blokk der det står "ellers", så betyr ekornet Scrat
-          vil gå fremover hvis det er sti foran. Hvis det ikke er sti foran, vil Scrat
-          snu til venstre.
-      3:
-        text: Det er ta en beslutning og gjøre én av to handlinger basert på denne
-          avgjørelsen. Og akkurat som "hvis"-blokker, kan du sette "hvis-ellers"-blokker
-          inni "gjenta"-blokker.
-      4:
-        text: Nå la oss hjelpe ekornet Scrat til å få seg en nøtt!
-    function:
-      1:
-        image: notes/stage13_1.jpg
-        text: Hei, jeg Brina, ingeniør ved Instagram. En funksjon er noen kodelinjer
-          som du vil bruke igjen og igjen, så i stedet for å skrive den samme koden
-          hver gang, kan du bare bruke en blokk.
-      2:
-        image: notes/stage13_2.jpg
-        text: Vi skal lære å definere funksjoner. Blokker der vi definerer funksjoner
-          har en stjerne i hjørnet. Navnet på funksjonen skrives på øverste linje.
-      3:
-        image: notes/stage13_3.jpg
-        text: Blokkene inne i funksjonen forteller oss hva den gjør. Så denne funksjonen
-          er kalt "fyll 5", og består av en "gjenta" blokk og en "fylle" blokk.
-      4:
-        image: notes/stage13_4.jpg
-        text: Funksjonen finnes på arbeidsområdet, men bonden vil ikke kjøre den før
-          vi drar ut "Fyll 5 funksjon" blokka fra funksjoner-kategorien.
-      5:
-        image: notes/stage13_5.jpg
-        text: La oss ha det gøy med funksjoner!
-    loop_while:
-      1:
-        image: notes/stage9_5.jpg
-        text: 'Hei, jeg Makinde! La oss lære om "gjenta så lenge"-blokken '
-      2:
-        image: notes/stage9_6.jpg
-        text: '"Gjenta så lenge" blokken vil fortsette å gjøre det som er inne i den
-          så lenge utsagnet på toppen er sant.'
-      3:
-        image: notes/stage9_7.jpg
-        text: For eksempel, hvis bonden står på en haug, vil hun fortsette å fjerne
-          spadetak med jord så lenge det er fortsatt en haug under henne.
-    loop_for:
-      1:
-        image: notes/stage11_1.jpg
-        text: Hei, jeg er Trina, og jeg jobber for Pixar. Jeg har vært med å lage
-          en rekke filmer, inkludert Shrek.
-      2:
-        image: notes/stage11_2.jpg
-        text: Dette er nye "teller" løkka. Det vil utføre handlingene igjen og igjen,
-          og du kan endre handlingene litt hver gang.
-      3:
-        image: notes/stage11_3.jpg
-        text: Dette eksemplet på en "teller"-løkke sier "Tell med teller fra 50 til
-          90 med 10" og inni den har vi en "tegn en firkant"-blokk. Dra "teller" blokken
-          fra "Variabler"-seksjonen til "lengde"-stedet.
-      4:
-        image: notes/stage11_4.jpg
-        text: Dette betyr at kunstneren vår skal tegne et kvadrat med sidelengde 50
-          piksler. Så legger vi til 10, og tegner et kvadrat med sidelengde 60 piksler.
-          Slik holder vi på til sidelengden blir 90 piksler. Dermed har vi sidelengdene
-          50, 60, 70, 80 og 90.
-    parameters:
-      1:
-        image: notes/stage15_1.jpg
-        text: Hei, jeg er Janete, og jeg er en ingeniør ved Zynga.
-      2:
-        image: notes/stage15_2.jpg
-        text: Hva hvis vi ønsker å tegne en haug med trekanter av forskjellig størrelse?
-      3:
-        image: notes/stage15_3.jpg
-        text: Vi kan skrive all koden for hånd, eller vi kan bruke en funksjon med
-          parametere.
-      4:
-        image: notes/stage15_4.jpg
-        text: For å gjøre dette, må du klikke på den blå stjernen i "tegn en trekant"
-          funksjonen. Dra så "Navn på parameter:" inn i "parametre"-blokka til høyre.
-          NB! Ikke skriv navnet først.
-      5:
-        image: notes/stage15_5.jpg
-        text: Så hvis du skriver "lengde" der det står "x" og så trykker "Enter",
-          vil du opprette et lengde-parameter til funksjonen.
-      6:
-        image: notes/stage15_6.jpg
-        text: Klikk på stjernen. Så klikker du på "variabler"-kategorien og drar "lengde"
-          inn i "fremover" blokka til funksjonen. Så drar du bort den gamle nummer-blokken.
-      7:
-        image: notes/stage15_7.jpg
-        text: For å bruke funksjonen med parametere. kan du klikke på kategorien funksjoner
-          og dra ut "tegn en trekant med lengde"-funksjonen.
-      8:
-        image: notes/stage15_8.jpg
-        text: Nå kan du bruke matematikk-blokken for å hente nye tall, og på den måten
-          kan du tegne trekanter av forskjellige størrelse.
-    hoc_wrapup:
-      1:
-        image: notes/hoc6_1.jpg
-        text: Gratulerer! Med den siste oppgaven du løste, skrev du kode som kan fortelle
-          roboter hvordan de finner vei gjennom enkle labyrinter eller tunneler uansett
-          lengde. Dette gjelder uansett om det er en zombie, en fugl, en mars-rover
-          eller om det er deg som kjører bil.
-      2:
-        image: notes/hoc6_2.jpg
-        text: De grunnleggende konseptene som du brukte, danner utgangspunktet for
-          alle programmene eller appene du ser. Vi har lært om gjentagende løkker,
-          hvis-setninger, og hvis-ellers setninger.
-      3:
-        image: notes/hoc6_3.jpg
-        text: Hvis du likte den første kodetimen, kan du gå til code.org for å fortsette
-          å lære programmering! Når du har fullført 20-timers kurset vårt, behersker
-          du grunnleggende programmering. Da kan du begynne å lære å skrive telefon-apper,
-          robotinstruksjoner, spill - ja alt mulig!
-      4:
-        image: notes/hoc6_4.jpg
-        text: 'Teknologien forandrer alt vi gjør, og det spiller ingen rolle om du
-          er ung eller gammel: Programmering er morsomt og kreativt, og alle kan lære
-          det!'
     20_wrapup:
       1:
         image: notes/bird.png
         text: Video-notater kommer snart!
-    frozen_intro:
-      1:
-        text: Hei, jeg heter Lyndsey. Jeg er modell, skuespiller og skriver mine egene
-          apper. La oss bruke kode til å utforske isens magi og skjønnhet sammen med
-          Anna og Elsa.
-      2:
-        text: Du vil skape snøfnugg og mønstre med kunstløpskøyter og lage et magisk
-          vinterlandskap som du kan dele med vennene dine.
-      3:
-        text: I den neste timen vil du lære grunnleggende programmering. Tradisjonell
-          programmering er vanligvis i tekst, men vi skal bruke Blockly, som bruker
-          visuelle blokker som du kan dra og slippe for å skrive programmer. Også
-          elever på universitetet lærer grunnleggende programmering på denne måten.
-          Under overflaten  lager du fortsatt kode.
-      4:
-        text: Et program er et sett med instruksjoner som forteller en datamaskin
-          hva den skal  gjøre. La oss lage en kode eller et program, som få Elsa til
-          å lage en rett linje. Vi vil senere bruke dette til å lage mer kompliserte
-          mønstre.
-      5:
-        text: Skjermen din er delt i tre hoveddeler. Til venstre er isflaten der du
-          vil kjøre programmet. Instruksjoner for hvert nivå er skrevet rett under
-          isflaten.
-      6:
-        text: Det midterste området er verktøykassen, og hver av disse blokkene er
-          en handling som Elsa og Anna kan gjøre.
-      7:
-        text: Det hvite området til høyre kalles arbeidsområdet, og dette er hvor
-          vi skal lage programmet vårt. For å flytte rundt på isflaten, kan du bruke
-          "Flytt fremover"-blokken.
-      8:
-        text: Her sier "flytt fremover"-blokken "flytte frem 100 piksler." Hva skjer
-          når vi trykker "Kjør"? Da flytter Elsa fram en bestemt lengde på skjermen,
-          100 piksler faktisk! Piksler er små firkantede punkter på dataskjermen.
-      9:
-        text: Den andre blokken vi har her sier "snu 90 grader til høyre". Når vi
-          bruker denne "snu til høyre"-blokken, får det Elsa til å snu seg. Du kan
-          prøve hvor mye du vil at Elsa skal snu. Vinkelen måles fra rett foran Elsa.
-          Så dette er en 90 graders sving. Og dette er en 120 graders sving.
-      10:
-        text: Husk på at du kan endre antall piksler og grader ved å klikke på pilene
-          ved siden av dem.
-    frozen_loops:
-      1:
-        text: Hei, jeg heter Paola! Datamaskiner er flinke til å gjenta handlinger.
-          Du kan telle til 10, 20 eller 100. Men en datamaskin kan telle til en milliard
-          eller billion. Den vil ikke gå lei og det tar bare noen sekunder. Om det
-          er telling, eller tegning, eller noe annet – datamaskiner kan gjenta ting
-          hundrevis eller milliarder av ganger.
-      2:
-        text: I programmering kaller vi dette en løkke. En løkke er den måten du bruker
-          for å gjenta koden igjen og igjen. I den neste oppgave er målet ditt å hjelpe
-          Anna til å lage et kvadrat med "Gjenta"-blokken.
-      3:
-        text: Alle kodeblokkene du setter inne i "Gjenta"-blokken  vil bli gjentatt
-          i rekkefølge, så mange ganger du ønsker.
-      4:
-        text: Hvis du vil tegne et kvadrat, kan du bruke "Flytt frem" og "snu til
-          høyre" blokkene 4 ganger. Men det er enklere å fortelle datamaskinen "Flytt
-          frem" og "snu til høyre 90 grader" en gang og deretter fortelle det å gjenta
-          disse to handlingene 4 ganger. For å gjøre det, må du sette "Flytt frem"
-          og "snu til høyre" blokkene inne i en "Gjenta"-blokk.
-      5:
-        text: Husk, du kan endre tallet i blokken "Gjenta" til hva som helst og det
-          vil gjenta det som er inne i blokken så mange ganger.
-    frozen_functions:
-      1:
-        text: Hei, jeg heter Chris Bosh. Jeg er profesjonell basketballspiller og
-          jeg programmerte på skolen.
-      2:
-        text: En av de viktigste konseptene i datavitenskap er hvordan definere nye
-          kommandoer. De fleste språk har bare 100 ord eller kommandoer. Og det som
-          er kunsten og magien er å definere dine egne, nye ord med disse byggeklossene.
-      3:
-        text: Når du har lært en datamaskin hvordan den skal gjøre en handling en
-          gang ved bruk av denne rekkefølgen av kommandoer så kan du navngi den handlingen
-          selv, slik at det er lett å gjenta den senere. Når du definerer dine egne
-          kommandoer og gir dem navn kalles det en funksjon.
-      4:
-        text: Hei, jeg er Jess. Når du programmerer med blokker bruker du funksjoner
-          hvis det er et sett med handlinger du vil gjøre mange ganger. For eksempel
-          har du skrevet kode for å lage en firkant.
-      5:
-        text: 'Du kan definere dette som en funksjon kalt "opprett en firkant" '
-      6:
-        text: Nå har du en ny blokk som du kan bruke flere ganger for å opprette flere
-          ruter.
-      7:
-        text: Mange enkle figurer kan brukes til å lage mer komplekse mønstre. I den
-          neste gåten vil koden du nylig skrev for å lage en sirkel være tilgjengelig
-          som en ny funksjon som kan lage sirkler i forskjellige størrelser. Kan du
-          bruke den for å hjelpe Elsa opprette komplekse og vakre mønstre i snøen?
-    playlab_intro:
-      1:
-        text: Vi skal lage spill ved bruk av Spill Lab. Gode spill har en historie
-          og hver historie har figurer. Vi skal lære hvordan vi får våre figurer,
-          som hekser, romvesner og dyr, til å snakke, bevege seg og samhandle med
-          hverandre. Ved slutten av denne oppgaven kan du bygge et spill fra bunnen
-          av og dele det med dine venner.
-      2:
-        text: Skjermen din er delt inn i 3 hoveddeler. Den til venstre er spillrommet
-          der spille ditt skal kjøres. Instruksjonene for hvert nivå er skrevet nedenfor.
-      3:
-        text: Det midterste området er verktøykassen, og hver av disse blokkene er
-          et stykke kode. Det hvite mellomrommet til høyre kalles arbeidsområdet og
-          dette er hvor vi skal bygge vårt program.
-      4:
-        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
-          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
-          og deretter vil de snappe sammen.
-      5:
-        text: I denne første oppgaven er vår figur en pingvin og vi skal få den til
-          å si "Hallo" ved å dra "si"-blokken ut, knytte den til å "når kjører"-blokken
-          og skrive inn "Hallo." Vi kan også få pingvinen til å flytte på seg ved
-          hjelp av bruke blokkene for å bevege til høyre og venstre. Når du har dine
-          blokker på plass, trykk på Kjør-knappen for å se hva du har programmert.
-      6:
-        text: Kom i gang og til slutt vil du kunne lage et spill med alle slags spillere
-          som kan samhandle, bli glad eller trist, få poeng, kaste ildkuler eller
-          til og med trylle hverandre bort. Det er opp til deg og spillet du ønsker
-          å lage.
-    playlab_events:
-      1:
-        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
-          De kalles hendelser. En hendelse forteller programmet å lytte til når noe
-          skjer. Når det skjer, utføres en handling.
-      2:
-        text: Eksempler på hendelser er å lytte etter et museklikk, en piltast eller
-          trykk på skjermen.
-      3:
-        text: Her skal vi gjøre romboten hilse på jordboerene når en spiller klikker
-          på ham. Vi bruker "ved klikk"-blokken og fester "si"-blokken til den. Når
-          spilleren klikker på romboten vil alt knyttet til denne "ved klikk"-hendelsesblokken
-          utføres. Hva gjør ditt romvesen si?
-      4:
-        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
-          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
-          Trinnvis blir spillet ditt mer interaktiv.
-    playlab_repeat_forever:
-      1:
-        text: Dette er "Gjenta for alltid"-blokken. Alt i denne blokken skjer for
-          alltid i spillet.
-      2:
-        text: Hvis vi ønsker å få en figur til å gjøre noe flere ganger uten at spilleren
-          trenger å gjøre noe, vil vi sette disse blokkene inn i blokken "Gjenta for
-          alltid".
-      3:
-        text: I den neste oppgaven er vårt mål å hjelpe trollmannen patruljere grensene
-          av riket, venstre og høyre kontinuerlig. Å lære hvordan du kan gjenta kommandoer
-          vil spare deg massevis av tid senere når du bygger ditt eget spill.
     C1_artist_intro:
       1:
         text: Dette er tegnebrikken din. Bruk den riktige for å flytte kunstneren
@@ -609,6 +117,43 @@
           for hver gang. Og alt dette gjør jeg med løkker. Så innen informatikk er
           løkker er viktige fordi vi får færre kodelinjer, og det blir lettere å holde
           orden på.
+    C1_going_places_safely:
+      1:
+        text: Hei! Jeg heter Jeremiah og er syv år gammel. Jeg elsker å spille på
+          mammas datamaskin, men spør alltid om lov først. "Mamma, kan jeg være på
+          Pc'en? Klart det, gutten min!"
+      2:
+        text: Jeg digger mammas PC fordi jeg kan være på internett. Internett er som
+          nabolaget. Du kan besøke kule steder, snakke med famile og venner, og lære
+          mange nye ting.
+      3:
+        text: 'I går besøkte jeg en dyrehage i nabolaget. Der så jeg et zebra-føll.
+          Jeg tok bilde av det, og endret fargen på stripene før jeg satte på en hatt
+          og la det til samlingen min av snåle dyr. Kjempegøy! Senere en gang dro
+          jeg langt av gårde og besøkte Kenya. Det er et land i Afrika. Der bor det
+          mange Zebraer. '
+      4:
+        text: Noen ganger snakker jeg med folk jeg kjenner på internett, slik som
+          bestemor. Hun bor i en annen landsdel. Hei bestemor! Hun lager kaker som
+          hun sender til meg. "Nam. Skulle ønske jeg kunne lukte gjennom internett!"
+          Jeg kan snakke med andre også, slik som fetteren min. Men jeg snakker bare
+          med folk jeg kjenner.
+      5:
+        text: Det beste med internett er å kunne spille morsomme spill! Måål! Jeg
+          liker også å tegne og skape nye ting som jeg kan dele med venner. Kult!
+          Noen ganger bruker jeg nettet for å lære nye ting, men jeg holder meg til
+          nettsider som er passe for meg. Wow. Dinosaurer!
+      6:
+        text: 'Internett er både en morsom og viktig del av samfunnet. Men akkurat
+          som du må være bevisst og passe deg litt når du krysser veien, må du være
+          forsiktig på nettet. Her er tre regler du må huske: Regel 1: Snakk og avtal
+          med foreldrene dine om hva du får lov til og hva som passer for deg. Regel
+          2: Bare gi informasjon om deg selv til folk du kjenner fra før. Regel 3:
+          Hold deg til nettsider som passer for deg, er du i tvil kan du snakke med
+          en voksen du stoler på.'
+      7:
+        text: Wow! Det var gøy!. Nå er det middagstid, og jeg logger av. Jeg gleder
+          meg til å logge på igjen og se nye nettsider.
     C1_happy_maps_unplugged:
       1:
         text: Denne oppgaven heter Lykkelige Kart. I dag skal vi hjelpe vår pelskledde
@@ -681,43 +226,6 @@
           en datamaskin. Programmer er bra til det, men de kan også være nyttige til
           andre ting. Du kan lage ditt eget spill, eller programmere en robot til
           å gjøre ting for deg.
-    C1_going_places_safely:
-      1:
-        text: Hei! Jeg heter Jeremiah og er syv år gammel. Jeg elsker å spille på
-          mammas datamaskin, men spør alltid om lov først. "Mamma, kan jeg være på
-          Pc'en? Klart det, gutten min!"
-      2:
-        text: Jeg digger mammas PC fordi jeg kan være på internett. Internett er som
-          nabolaget. Du kan besøke kule steder, snakke med famile og venner, og lære
-          mange nye ting.
-      3:
-        text: 'I går besøkte jeg en dyrehage i nabolaget. Der så jeg et zebra-føll.
-          Jeg tok bilde av det, og endret fargen på stripene før jeg satte på en hatt
-          og la det til samlingen min av snåle dyr. Kjempegøy! Senere en gang dro
-          jeg langt av gårde og besøkte Kenya. Det er et land i Afrika. Der bor det
-          mange Zebraer. '
-      4:
-        text: Noen ganger snakker jeg med folk jeg kjenner på internett, slik som
-          bestemor. Hun bor i en annen landsdel. Hei bestemor! Hun lager kaker som
-          hun sender til meg. "Nam. Skulle ønske jeg kunne lukte gjennom internett!"
-          Jeg kan snakke med andre også, slik som fetteren min. Men jeg snakker bare
-          med folk jeg kjenner.
-      5:
-        text: Det beste med internett er å kunne spille morsomme spill! Måål! Jeg
-          liker også å tegne og skape nye ting som jeg kan dele med venner. Kult!
-          Noen ganger bruker jeg nettet for å lære nye ting, men jeg holder meg til
-          nettsider som er passe for meg. Wow. Dinosaurer!
-      6:
-        text: 'Internett er både en morsom og viktig del av samfunnet. Men akkurat
-          som du må være bevisst og passe deg litt når du krysser veien, må du være
-          forsiktig på nettet. Her er tre regler du må huske: Regel 1: Snakk og avtal
-          med foreldrene dine om hva du får lov til og hva som passer for deg. Regel
-          2: Bare gi informasjon om deg selv til folk du kjenner fra før. Regel 3:
-          Hold deg til nettsider som passer for deg, er du i tvil kan du snakke med
-          en voksen du stoler på.'
-      7:
-        text: Wow! Det var gøy!. Nå er det middagstid, og jeg logger av. Jeg gleder
-          meg til å logge på igjen og se nye nettsider.
     C1_pair_programming:
       1:
         text: I dag skal vi lære om parprogrammering. Parprogrammering betyr at dere
@@ -818,6 +326,14 @@
         text: En annen fin ting er at du kan flytte så mange kommandoer du vil inn
           i gjenta-blokken. Så i dette eksempelet vil du først gi den beskjed om først
           å flytte forover, og så svinge til venstre. Fem ganger. Sett i gang!
+    C2_artist_debugging:
+      1:
+        text: Her har vi allerede noen blokker på arbeidsplassen vår. Men noe er galt.
+      2:
+        text: La oss feilsøke denne koden ved å bremse ned farten og ser hvordan koden
+          går trinnvis gjennom hver blokk.
+      3:
+        text: Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25.
     C2_artist_intro:
       1:
         text: Du ville ikke en gang få blitt med på kappløpet hvis du ikke hadde med
@@ -841,6 +357,16 @@
         text: Og dette er en 120-graders sving. Husk at du kan endre disse verdiene
           ved å klikke på pilene ved siden av tallet for piksler og grader. Kos deg
           med å tegne med kunstneren!
+    C2_artist_loops:
+      1:
+        text: Nå skal vi bruke gjentablokken for å hjelpe oss med å redusere antall
+          trinn vi trenger å programmere. Vi har allerede noen blokker klare, men
+          de er bare der for å hjelpe oss i gang.
+      2:
+        text: For å kunne gjenta handlingen fire ganger og dermed tegne hele kvadratet,
+          kan vi dra ut en gjentablokk og putte en "gå fremover" og en "snu mot høyre"
+          inne i den. Når vi trykker "kjør", vil kunstneren gjenta de skrittene fire
+          ganger og fullføre kvadratet.
     C2_bee_conditionals:
       1:
         text: Dette er betingelsesblokken. Den sier at HVIS det finnes nektar eller
@@ -853,6 +379,29 @@
         text: I dette eksempelet skal vi si; HVIS den lilla blomsten har mer enn 0
           nektar, da tar vi nektar. Det vil få bien vår til å fortsette å ta nektar
           så lenge det er noe igjen å ta. Ta-daaa!
+    C2_bee_debugging:
+      1:
+        text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner
+          ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne
+          feil.
+      2:
+        text: Her har vi allerede fått noen blokker. Vi skal bruke steg-knappen for
+          å gå gjennom blokkene steg for steg for å se om dette er riktig løsning,
+          eller hvor vi trenger å gjøre endringer.
+      3:
+        text: Ser ut som det er et problem! Vi trenger én ekstra gå fremover-blokk.
+          Steg-knappen hjelper oss å feilsøke problemet ved å vise hvor feilen er
+          slik at vi kan fikse den.
+    C2_bee_loops:
+      1:
+        text: En løkke er en repeterende handling. Jeg åpner en bikube for å inspisere
+          den, jeg ser på rammen og så setter jeg den tilbake. Dette gjør jeg flere
+          ganger. Det går i løkke, gjentar den samme handlingen flere ganger.
+      2:
+        text: Dette er en gjenta blokk. Det du putter inne i den vil repeteres det
+          antall ganger som du ber den om. For eksempel, på dette nivået, i stedet
+          for å dra ut gå fremover og få nektar tre ganger, kan vi hente dem en gang
+          hver og repetere handlingene tre ganger. Da ble det lett!
     C2_binary_bracelets:
       1:
         text: Dette er den binære armbånd-leksjonen. Vi skal kode våre initialer på
@@ -900,27 +449,6 @@
           Betingelser er måten datamaskinen tar avgjørelser. Hva med at hvis du treffer
           målet får du ti poeng. Hvis ikke mister du tre. Når du vet hvordan betingelser
           fungerer kan du lage all slags spennende spill.
-    C2_artist_debugging:
-      1:
-        text: Her har vi allerede noen blokker på arbeidsplassen vår. Men noe er galt.
-      2:
-        text: La oss feilsøke denne koden ved å bremse ned farten og ser hvordan koden
-          går trinnvis gjennom hver blokk.
-      3:
-        text: Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25.
-    C2_bee_debugging:
-      1:
-        text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner
-          ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne
-          feil.
-      2:
-        text: Her har vi allerede fått noen blokker. Vi skal bruke steg-knappen for
-          å gå gjennom blokkene steg for steg for å se om dette er riktig løsning,
-          eller hvor vi trenger å gjøre endringer.
-      3:
-        text: Ser ut som det er et problem! Vi trenger én ekstra gå fremover-blokk.
-          Steg-knappen hjelper oss å feilsøke problemet ved å vise hvor feilen er
-          slik at vi kan fikse den.
     C2_digital_footprint:
       1:
         text: Du har hatten på hodet, og dingsene dine forteller deg hva du skal gjøre,
@@ -981,26 +509,6 @@
           kan jeg gjenskape den samme tingen på nytt, eller jeg kan lære noen andre
           å gjøre det. Legg glasset i ovnen, smelt det sammen, følg resten av instruksjonene
           for å lage bollen. Algoritmer gir deg et kart for å gjøre noe.
-    C2_artist_loops:
-      1:
-        text: Nå skal vi bruke gjentablokken for å hjelpe oss med å redusere antall
-          trinn vi trenger å programmere. Vi har allerede noen blokker klare, men
-          de er bare der for å hjelpe oss i gang.
-      2:
-        text: For å kunne gjenta handlingen fire ganger og dermed tegne hele kvadratet,
-          kan vi dra ut en gjentablokk og putte en "gå fremover" og en "snu mot høyre"
-          inne i den. Når vi trykker "kjør", vil kunstneren gjenta de skrittene fire
-          ganger og fullføre kvadratet.
-    C2_bee_loops:
-      1:
-        text: En løkke er en repeterende handling. Jeg åpner en bikube for å inspisere
-          den, jeg ser på rammen og så setter jeg den tilbake. Dette gjør jeg flere
-          ganger. Det går i løkke, gjentar den samme handlingen flere ganger.
-      2:
-        text: Dette er en gjenta blokk. Det du putter inne i den vil repeteres det
-          antall ganger som du ber den om. For eksempel, på dette nivået, i stedet
-          for å dra ut gå fremover og få nektar tre ganger, kan vi hente dem en gang
-          hver og repetere handlingene tre ganger. Da ble det lett!
     C2_maze_intro:
       1:
         text: Vanligvis bruker vi tekst når vi programmerer, men nå skal vi bruke
@@ -1823,818 +1331,27 @@
           i en bok. En bruker kan øke og redusere størrelsen på skriften på en side.
           Basert på skriftstørrelse kan antall sider i boken endres. Det kan vi justere
           ved å lagre antall sider i variabelen.
-    infinity_playlab_events:
+    artist_intro:
       1:
-        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
-          Det kalles hendelser. En hendelse ber programmet om å lytte til når noe
-          skjer. Og når det skjer, utfører programmet en handling. Eksempler på hendelser
-          er museklikk, trykking av en piltast, eller et trykk på skjermen.
+        image: notes/stage5_1.jpg
+        text: Hei, jeg er JR! Alle racerbil-lag må ha programmerere for å vinne. De
+          analyserer data fra bilen for å gjøre den raskere.
       2:
-        text: Her skal vi få Baymax til å flytte opp for å berøre Hiro og gå ned for
-          å berøre Rapunzel når spilleren bruker opp/ned piltastene eller opp/ned
-          knappene. Vi kommer til å bruke "når pil opp" - blokk og knytte "flytt aktøren
-          opp"- blokk til den, så når spilleren trykker pil opp, vil alt knyttet til
-          "når pil opp"- blokken kjøre. Vi vil gjøre det samme for å få Baymax til
-          å flytte ned. Trinnvis blir spillet mer interaktivt.
-    infinity_playlab_intro:
-      1:
-        text: Så hvilket trinn er du på? Andre? Tiende trinn? Første trinn? Jeg var
-          på åttende trinn da jeg lærte å programmere. Jeg fikk min første datamaskin
-          da jeg gikk på sjette trinn. Det som engasjerer meg er å løse folks problemer.
-          Du kan uttrykke deg selv og bygge ting fra en idé.
-      2:
-        text: Informatikk er grunnlaget for det mange studenter og fagfolk vil drive
-          med de neste tjue eller tretti år. Jeg liker programmering fordi jeg liker
-          å hjelpe folk. Jeg får muligheten til å bygge noe som gjør folks liv enklere.
-          Jeg tror det er det nærmeste vi kommer til å ha en superkraft. Å komme i
-          gang er den viktigste delen. Jeg er en nybegynner selv, og jeg ønsker at
-          du skal lære sammen med meg.
+        image: notes/stage5_2.jpg
+        text: I disse oppgavene vil du være en kunstner som tegner linjer bak deg
+          når du flytter deg.
       3:
-        text: Jeg heter John Vechey, og er en av grunnleggerne av PopCap Games. Vi
-          lager spill som Plants vs Zombies og Bejeweled Peggle. Med spill handler
-          det er ikke bare om hvor perfekt koden er, eller hvor perfekt grafikken
-          er. Det handler om hvordan det føles og hvor moro det er. Du kan bare få
-          følelsen ved å prøve det, gjøre det, ved å lære og tilpasse ferdighetene
-          dine igjen og igjen.
+        image: notes/stage5_3.jpg
+        text: Denne blokken sier "flytt frem 100 piksler." Piksler er bare veldig
+          små prikker på skjermen.
       4:
-        text: Har du et favorittspill? Vi kommer til å ta ett skritt i retning av
-          å lage spill akkurat som de som bruker Play Lab. Gode spill har en historie
-          og hver historie har skuespillere. Skuespillerne gjør ting som å snakke,
-          flytte og samhandle med hverandre. Kanskje også skåre poeng basert på reglene
-          i spillet. I dag skal vi lære hvordan du gjør alle disse tingene, en etter
-          en, med Disney-karakterer som Anna, Elsa, Hiro, Baymax og Rapunzel. Vi vil
-          bygge et spill fra grunnen, som kan deles og bli spilt på en telefon.
+        image: notes/stage5_4.jpg
+        text: Denne blokken sier "sving 90 grader til høyre". Den vil dreie kunstneren
+          like mye som "sving" blokken i labyrintoppgaven gjorde.
       5:
-        text: Skjermen er delt i tre hoveddeler. Til venstre er spillområdet der programmet
-          kjøres. Instruksjoner for hvert nivå er skrevet nedenfor. Det midterste
-          området er verktøykassen, og hver av disse blokkene er et stykke kode. Det
-          hvite området til høyre kalles arbeidsområdet, og det er her vi programmerer.
-      6:
-        text: For å starte, må du koble dine blokker til den oransje "når kjøre"-
-          blokken. Du kan knytte flere blokker sammen ved å dra dem til du ser det
-          gule omrisset, og da vil de hekte seg sammen. I dette første puslespillet
-          er Hiro skuespiller 1 og Baymax er skuespiller 2. Vi trenger å flytte Hiro
-          for at han skal komme til Baymax ved å dra "flytt til høyre"-blokken og
-          knytte det til "når kjøre"-blokken. Når du har din blokker på plass, trykker
-          du på "Kjør"-knappen for å se hva du har programmert.
-      7:
-        text: Kom i gang, og til slutt vil du kunne lage ditt eget spill med alle
-          slags spillere som kan samhandle, få poeng, kaste mikroboter, kirsebær,
-          gryter, glitter og is, og trylle hverandre bort. Det er helt opp til deg!
-    infinity_playlab_repeat_forever:
-      1:
-        text: Kan du forestille deg hvis du måtte gjenta noe for evig? Forhåpentligvis
-          vil du aldri behøve å gjøre det fordi datamaskiner er virkelig gode til
-          å gjenta ting. Dette er gjenta for alltid blokka. Alt som er inne denne
-          blokka vil gjentas for alltid i spillet.
-      2:
-        text: Så hvis vi ønsket å få en figur til å gjøre noe gjentagende uten at
-          spilleren måtte gjøre noe, måtte vi sette disse blokkene inni en "gjenta
-          for alltid"-blokk. I det neste puslespillet er målet vårt å hjelpe Anna
-          med å gå opp og ned kontinuerlig. Å lære hvordan gjenta-kommandoene virker
-          vil spare deg for massevis av tid senere når du skal lage ditt eget spill.
-    tutorial_puzzle_challenge:
-      1:
-        text: Hva vil du bli når du blir stor, Olivia? En astronaut. Vet du tilfeldigvis
-          hva en dataprogrammerer er? Ja.. mmm... nei. Hm, vent - hva? Jeg er ikke
-          helt sikker på hvordan jeg skal forklare det, men dataprogrammering er ganske
-          enkelt. Det er et sett av instruksjoner, akkurat som en oppskrift, som du
-          må følge steg-for-steg for å få det resultatet du ønsker til slutt.
-      2:
-        text: Jeg kan endre antallet pixler, lengden på en linje, ved å bruke denne
-          nedtrekkslisten. Hvor lang var den igjen? Du kan se instruksjonene igjen
-          ved å kikke under Kjør-knappen. Her har jeg brukt "gå fremover"-blokken
-          og jeg skal velge 100 pixler. Jeg kan slette en blokk ved å dra den inn
-          i verktøykassa eller søppelbøtta. La oss sette den tilbake.
-      3:
-        text: Kjør koden ved å trykke på Kjør. Vel, det fungerte ikke! Jeg trykker
-          Nullstill og tenker ut hva som var feil. Du kan prøve et puslespill så mange
-          ganger du vil. Du kan hoppe over puslespill og komme tilbake til dem. Bare
-          sørg for å gjør ditt beste, og ikke gi opp. La oss legge til enda en "gå
-          fremover". Det virker fortsatt ikke. Jeg kan plassere en blokk mellom andre
-          blokker.
-      4:
-        text: La oss ta en snu-blokk og plasser den mellom "gå fremover"-blokkene.
-          Snu til venstre 45 grader. La oss kjøre den igjen. Nullstill, kjør, flott!
-          Her er et puslespill til. Noen ganger får du en startkode som du skal fullføre.
-          Her trenger jeg å legge til passende lengder og grader.
-      5:
-        text: Noen ganger kaster du kanskje starterkoden i søpla ved et uhell. Hva
-          gjør du da? Du kan trykke på knappen for å starte oppgaven på nytt. Jeg
-          skal dra denne nummerblokka inn i de ulike pikseområdene. Velg 100 for piksler,
-          45 for grader og 100 for piksler igjen. Kult! Her er Code Studio-bien. Jeg
-          må flytte bien til hver blomst og få nektar.
-      6:
-        text: Den første blomsten er tre blokker unna, så jeg trenger å flytte tre
-          steg forover. 1, 2, 3. Så en få nektar, så en få nektar til. Vel, det fungerte
-          ikke! Jeg legger på et til steg fremoover, mellom få nektar-blokkene og
-          kjører det på nytt. Jippi, det fungerer! Du lærte akkurat hvordan du skulle
-          bruke Code Studio sine kunst- og bie-oppgaver. Lykke til med Code Studios
-          oppgaveutfordringer.
-    unplug1:
-      1:
-        text: Hva vil du bli når du blir stor, Olivia? Hmmm, astronaut! Vet du tilfeldigvis
-          hva en dataprogrammerer er? Ja.. mmm... nei. Hm, vent - hva? Jeg vet ikke
-          helt hvordan jeg skal forklare det. Dataprogrammering er ganske enkelt.
-          Det er et sett av instruksjoner, som en oppskrift. Du må følge dem steg-for-steg
-          for å få det resultatet du ønsker til slutt.
-      2:
-        text: Datavitenskap er en måte å påvirke verden på. Det kan være musikkvideoer,
-          spill, og oppdage hvorvidt noen er relatert til noen andre eller ikke. Du
-          vet, finne vennene til folk. Du kan gjøre alle mulige sprø ting som faktisk
-          redder liv. Du må ha en drivkraft, tror jeg. For meg er det som en malepensel.
-          Jeg synes at stor programmering ikke er så ulikt stor kunst.
-      3:
-        text: Når jeg endelig lærte litt programmering, var det som å oppdage en haug
-          dører, og når du åpner dem og finner du selvfølgelig en annen gang fylt
-          med med dører. Programmering er enkelt og morsomt. Du kan gjøre alt ditt
-          sinn ønsker å gjøre. Når du endelig åpner nok dører kommer lyset inn. For
-          meg er et ferdig program som en struktur fylt med lys. Alle hjørner er opplyst.
-          Mengden personer som du kan komme i kontakt med og samhandle med er noe
-          verden aldri har sett før.
-      4:
-        text: Vår første leksjon i denne serien handler om hva informatikk er, hva
-          en IT-ingeniør gjør og hvordan du bruke teknologi på en mer forsvarlige
-          måte. Dette er svært viktig lærdom, men leksjonen har mye tekst. På slutten
-          får du gjøre din egen tilpassede koding, med dine initialer. Det er en morsom
-          aktivitet, og det er veldig nyttig fordi binærsystemet er en av de tingene
-          som føles veldig teknisk, men når du først forstår det, er det som om du
-          snakker et hemmelig kodespråk.
-    unplug2:
-      1:
-        text: Leksjonen i programmeringstankegang lærer deg hvordan du kan ta et stort
-          of vanskelig problem, og bryte det ned i flere og enklere problemer. Målet
-          med denne leksjonen er å skrive et sett med instruksjoner som noen kan følge
-          for å tegne et av monstrene i leksjonsplanen.
-      2:
-        text: 'Studentene deler seg i grupper for å skrive instrukser. Deretter bytter
-          de instruksene med en annen gruppe, som bruker instruksene for å tegne monsteret.
-          Gruppene skriver instrukser med de fire trinnene i programmeringstankegang:
-          nedbryting, mønstergjenkjenning, abstraksjon og algoritmer.'
-      3:
-        text: Først skal gruppene dele opp oppgaven, som innebærer å lage en plan.
-          Deretter vil de se etter gjentakende mønstre mellom monstrene i katalogen.
-          Når de ser forskjeller mellom monstre, skal de abstrahere vekk eller fjerne
-          disse detaljene. Dersom for eksempel et monster i katalogen har vegitas-øyne,
-          og en annen har spritem-øyne, men begge altså har øyne, så vi kan skrive
-          en linje som sier at monster har "blank" øyne.
-      4:
-        text: Elevene vil kunne skrive et sett av instrukser, også kalt en algoritme,
-          som lister opp monstrenes kroppsdeler, med tomme typebeskrivelser. Elevene
-          sender settet av instrukser til andre studenter som gjenskaper sitt eget
-          monster.
-    unplug3:
-      1:
-        text: Når vi programmerer på millimeterpapir forklarer vi hvordan koding fungerer
-          ved å la folk gjenskape tegninger med kun piler og skriblerier. En person
-          er gitt en liten tegning på millimeterpapir og han eller hun skal prøve
-          å forklare hvordan man kan gjenskape tegningen med kun spesiefike piler.
-      2:
-        text: 'I denne aktiviteten kan du kun bruke disse symbolene: flytt en rute
-          fram, flytt en rute tilbake, flytt en rute opp, flytt en rute ned, bytt
-          til neste farge, og fargelegg en rute med farge. Når vi har kodet oss ferdig
-          kan vi gi det til en annen person som skal lese koden og gjenskape bildet.'
-    unplug4:
-      1:
-        text: Når vi programmerer på millimeterpapir forklarer vi hvordan koding fungerer
-          ved å la folk gjenskape tegninger med kun piler og skriblerier. En person
-          er gitt en liten tegning på millimeterpapir og han eller hun skal prøve
-          å forklare hvordan man kan gjenskape tegningen med kun spesiefike piler.
-      2:
-        text: I den andre halvparten av aktiviteten, spør vi elevene om på hvor mange
-          måter de kan brette et papir for å lage seksten identiske rektangler. Så
-          forklarer du hvordan flere løsninger kan lede til det samme sluttresultatet,
-          og hvorfor noen løsninger er bedre i visse situasjoner.
-    unplug5:
-      1:
-        text: Når vi programmerer på millimeterpapir forklarer vi hvordan koding fungerer
-          ved å la folk gjenskape tegninger med kun piler og skriblerier. En person
-          er gitt en liten tegning på millimeterpapir og han eller hun skal prøve
-          å forklare hvordan man kan gjenskape tegningen med kun spesiefike piler.
-      2:
-        text: I den andre halvparten av aktiviteten, spør vi elevene om på hvor mange
-          måter de kan brette et papir for å lage seksten identiske rektangler. Så
-          forklarer du hvordan flere løsninger kan lede til det samme sluttresultatet,
-          og hvorfor noen løsninger er bedre i visse situasjoner.
-    unplug6:
-      1:
-        text: Denne aktiviteten heter koding med kort og passer fint for alle aldre.
-          Som du lærte med hvis-uttrykkene i tidligere leksjoner i Blockly, har hvis-utrykkene
-          en del som du må evaluere for å finne ut om er sann eller usann. Dette kaller
-          vi en betingelse og kan brukes på mange forskjellige måter.
-      2:
-        text: Vi tar nytte det ved å lage programmer på papir som du kjører ved å
-          trekke et tilfeldig kort. Du kan ha et hvis-uttrykk som sier noe sånn som
-          at hvis kortet du trakk var større enn 8 får du et poeng. Hvis ikke får
-          motstanderen din ett poeng. Du kan lage betingelsene så enkle eller kompliserte
-          som du føler deg komfortabel med.
-    unplug7:
-      1:
-        text: Du vet når du søker opp teksten til en sang, hvor de kun definerer refrenget
-          på starten av sangen, mens i resten av teksten referer de deg bare tilbake
-          til refrenget? Det er slik man kaller en funksjon.
-      2:
-        text: I denne økten definerer vi refrenget på starten av sangen og når vi
-          synger gjennom sangen, kan vi legge merke til at klassen ikke synger ordet
-          refreng, men automatisk går til toppen hvor vi definerte refrenget og synger
-          det. Vi bruker det som en fin introduksjon til hvordan vi kan forstå hva
-          et program gjør når det definerer og kaller en funksjon.
-      3:
-        text: Vi bruker kjente sanger, inkludert Old Macdonald, for å snakke om hvordan
-          et refreng kalles om og om igjen. Og hvordan noen ganger et refreng kan
-          endre seg. Når du har en sang som Old Macdonald, der ordene endres, er et
-          flott sted å introdusere ideen om parametere. Send forskjellige ord gjennom
-          funksjonen slik at du kan se hvordan refrenget endres. Når alle skjønner
-          det, kan du ta andre kjente sanger og bryte dem opp selv. Se om dere kan
-          finne det ut sammen.
-    unplug9:
-      3:
-        text: Dette er en flott introduksjon til feilsøking, korrekturlesning av ditt
-          eget og andres arbeid er en god øvelse. Du vil raskt forstå hvor viktig
-          det er at du er forsiktig med hvordan du koder når mange andre er avhengig
-          av deg.
-    unplug10:
-      1:
-        text: Denne aktiviteten forklarer lettvint hvordan Internett fungerer. Vi
-          vil forklare all terminologien du trenger å vite på en enkel måte slik at
-          elevene kan simulere sending av meldinger, som for eksempel en e-post.
-      2:
-        text: Elevene vil sende meldinger mens de later som de er en av tre overføringsmetoder.
-          Trådløst Internett, ADSL eller fiber. Elevene som representerer trådløst
-          må ha meldingen de overfører på en lapp på toppen av hodet fordi trådløst
-          har høyest sannsynlighet for å miste informasjon underveis.
-      3:
-        text: Elevene som later som de er ADSL vil bære meldingen på toppen av en
-          utstrakt hånd, der er det litt mindre sannsynlig å miste informasjon. Og
-          elevene som representerer fiberoptikk får å bære dem med begge hendene samlet.
-          Denne aktiviteten er en flott måte å forstå teknologi som mange av oss bruker
-          hver dag.
-    unplug11:
-      1:
-        text: Nå er tiden inne for å ta et steg tilbake og få en god oversikt over
-          de siste nitten leksjonene vi har vært gjennom. Dette er et ypperlig tidspunkt
-          å gi elevene et friminutt om det er mulig, det de nettopp har vært gjennom
-          er en stor prestasjon. De har lært mer om informatikk gjennom disse leksjonene
-          enn de fleste voksne har fått med seg gjennom hele sitt liv.
-      3:
-        text: Fra alle oss her ved Code.org, vi håper du har hatt MASSEVIS av moro
-          i løpet av dette kurset. Om du drømmer om å lage den beste nye appen, bruke
-          programmering til å kurere sykdommer eller du bare ønsker å være en fremragende
-          problemløser - dette kurset var det første trinnet for å oppnå de drømmene.
-    starwars_intro:
-      1:
-        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars:
-          The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8
-          er en rund drone. Alt den gjør og alle dens bevegelser kontrolleres av programvare.
-          Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester
-          til filmindustrien. Faktisk jobbet hundrevis av IT-ingeniører sammen for
-          å lage en film som The Force Awakens.'
-      2:
-        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor
-          jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens
-          er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik
-          at de ser troverdige ut i en galakse langt, langt borte.
-      3:
-        text: Den neste timen skal vi prøve å lage våre egne Star Wars-spill, mens
-          vi lærer deg de grunnleggende konseptene i programmering. Programmering
-          er vanligvis tekstbasert, men her kommer vi istedenfor til å bruke blokker
-          som vi kan dra og slippe for å lage programmene. I bakgrunnen skrives det
-          fremdeles kode. Etter at du har testet det enkleste ved hjelp av blokker,
-          så vil vi bytte over til JavaScript, et av de mest populære programmeringsspråkene
-          på Internett.
-      4:
-        text: For å komme igang, skal vi jobbe med Rey for å programmere BB-8 til
-          å gå og samle alle skrapdeler. Skjermen din er delt i tre deler. På venstre
-          side finner du Star Wars spillområde, der koden vil kjøre. Instruksjonen
-          for hvert nivå er skrevet nedenfor spillområdet.
-      5:
-        text: Dette midtre området er verktøykassen og hver av disse blokkene er en
-          kommando som BB-8 kan forstå.
-      6:
-        text: Det hvite området på høyre side kalles arbeidsområdet og det er der
-          vi skal bygge opp programmet vårt.
-      7:
-        text: Hva skjer hvis du drar blokken flyttVenstre(); til ditt arbeidsområde
-          og trykker kjør? BB-8 flytter en blokk til venstre på rutenettet.
-      8:
-        text: Og hva om jeg vil få BB-8 til å gjøre noe etter blokken moveLeft();?
-          Jeg kan legge en annen blokk til programmet. Jeg velger blokken moveUp();
-          og jeg drar den under min blokk moveLeft(); til uthevingen vises. Så slipper
-          den og de to blokkene festes sammen.
-      9:
-        text: Når jeg klikker kjør igjen, utfører BB-8 kommandoene som er stablet
-          fra topp til bunn i arbeidsområdet. Hvis du vil slette en blokk, bare fjerne
-          den fra stabelen og dra den tilbake til verktøykassa.
-      10:
-        text: Etter at du har valgt kjør, kan du alltid velge tilbakestill-knappen
-          for å få BB-8 tilbake til start. La oss rulle i gang!
-    starwars_typing:
-      1:
-        text: Inne i blokkene vi har brukt er JavaScript-kommandoer. JavaScript er
-          det mest populære programmeringsspråket for profesjonelle utviklere i dag.
-          Blokker er en flott måte å komme i gang med å lære koding og selv ved anerkjente
-          universiteter som Harvard og Berkeley begynner man å lære på denne måten.
-          Men så fort man lærer det grunnleggende, skriver ingeniører kode fordi det
-          gir oss muligheten til å jobbe raskere.
-      2:
-        text: Vi kan skrive hundrevis av kommandoer uten å måtte finne dem i verktøykassen
-          eller trekke dem ut. Fordi du lærer å skrive kan være tregere i begynnelsen,
-          men vi ville at du skulle få prøve det.
-      3:
-        text: Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på
-          hvilken som helst oppgave for å bytte fra blokker til å skrive koden som
-          tekst.
-      4:
-        text: I neste leksjon vil du starte opp i skrive modus. Her kan du fremdeles
-          dra blokken fra verktøykassen, eller du kan skrive kommandonavnet. Når du
-          begynner å skrive, vil du se at navnene på mulig kommandoer vil vises nedenfor
-          der du skriver. I stedet for å skrive hele kommandonavnet kan du velge en
-          av disse å arbeide raskere. I jobben min bruker jeg denne funksjonen for
-          autofullføring hele tiden når jeg skriver kode.
-      6:
-        text: Når det blir en feil på en linje vil feilen bli fremhevet slik at du
-          kan endre teksten for å fikse feilen.
-      7:
-        text: Hvis du står fast kan du alltid starte på nytt med knappen start på
-          nytt og du kan bytte tilbake til blokk-modus når som helst ved å trykke
-          på knappen øverst til høyre. Ok, la oss prøve å skrive! Ikke bli frustrert
-          hvis du gjør noe feil. Det tar noen forsøk for å få det riktig.
-    starwars_events:
-      1:
-        text: Hei, mitt navn er Charita Carter. Jeg er senior creative producer her
-          på Walt Disney Imagineering. Jeg er ansvarlig for å lede et team som faktisk
-          produserer attraksjonene som gjestene våre kan oppleve. Vi er alltid på
-          utkikk etter måter som kan bli bedre og forbedre gjestenes opplevelse og
-          teknologi er kjernen i det.
-      2:
-        text: Gratulerer, du klarte det! Du programmerte BB-8. Jeg tror du er klar
-          for noe vanskeligere. La oss gjøre det! Nå som du har lært grunnleggende
-          programmering, reiser vi tilbake i tid, så du kan bygge ditt eget spill
-          med R2-D2 og C-3PO.
-      3:
-        text: 'For å lage et spill, må vi lære noe som alle programmerere bruker hver
-          eneste dag: det kalles hendelser. Hendelser forteller programmer til å lytte
-          og vente på at noe skal skje, og når det skjer, så skal programmet utføre
-          en handling.'
-      4:
-        text: Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller
-          et trykk på skjermen.
-      5:
-        text: 'Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
-          til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
-          bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
-          piltastene opp/ned eller opp/ned-knappene.'
-      6:
-        text: Vi bruker whenUp() hendelsesblokken og kobler goUp() blokken til den.
-          Når spilleren trykker pil opp tasten, kjøres koden knyttet til whenUp()
-          blokken. Og vi gjør tilsvarende for å få R2-D2 til å flytte ned.
-      7:
-        text: For å gjøre dette, bruker vi en kommando som heter whenUp(). Når du
-          drar kommandoen ut av verktøykassa, ser du at den starter og slutter med
-          en klammeparentes, i stedet for et semikolon. Dette gir oss plass til å
-          putte andre kommandoer i midten. Hver kommando vi putter inne i disse klammene,
-          vil kjøre når spilleren trykker på pil opp.
-      8:
-        text: Vi vil at R2-D2 skal gå opp, så la oss putte en blokk med goUp(); inne
-          i kommandoen. Så gjør vi det samme for å få R2-D2 til å gå ned.
-      9:
-        text: I stedet for å skrive all koden for å kontrollere doiden på forhånd,
-          kan vi la R2-D2 reagere på kapper som flytter ham rundt på skjermen. Skritt
-          for skritt vil spillet ditt bli mer interaktivt.
-    starwars_congrats:
-      1:
-        text: Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her
-          i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat
-          nå.
-      2:
-        text: Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte
-          alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen
-          flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill
-          og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp
-          nye lyder og nye kommandoer for å gjøre enda mer.
-      5:
-        text: Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link
-          som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
-          gøy!
-    starwars_blocks_intro:
-      1:
-        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars:
-          The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8
-          er en rund drone. Hver eneste av hans bevegelser kontrolleres av programvare.
-          Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester
-          til filmindustrien. Faktisk, hundrevis av maskiningeniører jobbet sammen
-          for å lage en filmen The Force Awakens.'
-      2:
-        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor
-          jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens
-          er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik
-          at de ser troverdige ut i en galakse langt, langt borte.
-      4:
-        text: Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet
-          hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor
-          spillområdet.
-      5:
-        text: Dette midtre området er verktøykassen og hver av disse blokkene er en
-          kommando som BB-8 kan forstå.
-      6:
-        text: Det hvite området på høyre side kalles arbeidsområdet og det er der
-          vi skal bygge opp programmet vårt.
-      7:
-        text: Hvis jeg drar moveLeft(); blokken til vårt arbeidsområde, hva skjer?
-          BB-8 flytter seg ett steg på rutenettet.
-      8:
-        text: Og hva om jeg ønsker at BB-8 skal gjøre noe etter moveLeft(); puslebit?
-          Jeg kan legge til en annen puslebit til vårt program. Jeg vil velge moveUp();
-          puslebiten og dra den under min moveLeft(); puslebit for å feste den der.
-          Et lite lys markerer også at den kan bli festet. Slipp puslebiten og den
-          sitter på plass. Når jeg trykker kjør igjen, vil BB-8 utføre kommandoer
-          som er stablet topp til bunn i vårt arbeidsområdet.
-      9:
-        text: Om du ønsker å slette en puslebit, så drar du den ønskede puslebiten
-          fra arbeidsområdet tilbake til verktøykassen.
-      10:
-        text: Etter at du har klikket kjør, så kan du alltid klikke på nullstill-knappen
-          for å få BB-8 tilbake til start. La oss prøve!
-    starwars_blocks_events:
-      1:
-        text: Hei, mitt navn er Charita Carter. Jeg er senior creative producer her
-          på Walt Disney Imagineering. Jeg er ansvarlig for å lede et team som faktisk
-          produserer attraksjonene som gjestene våre kan oppleve. Vi er alltid på
-          utkikk etter måter som kan bli bedre og forbedre gjestenes opplevelse og
-          teknologi er kjernen i det.
-      2:
-        text: Gratulerer, du klarte det! Du programmerte BB-8. Jeg tror du er klar
-          for noe vanskeligere. La oss gjøre det! Nå som du har lært grunnleggende
-          programmering, reiser vi tilbake i tid, så du kan bygge ditt eget spill
-          med R2-D2 og C-3PO.
-      3:
-        text: 'For å lage et spill, må vi lære noe som alle programmerere bruker hver
-          eneste dag: det kalles hendelser. Hendelser forteller programmer til å lytte
-          og vente på at noe skal skje, og når det skjer, så skal programmet utføre
-          en handling.'
-      4:
-        text: Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller
-          et trykk på skjermen.
-      5:
-        text: 'Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
-          til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
-          bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
-          piltastene opp/ned eller opp/ned-knappene.'
-      7:
-        text: Steg for steg vil gjøre ditt spill mer interaktivt.
-    starwars_blocks_congrats:
-      1:
-        text: Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her
-          i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat
-          nå.
-      2:
-        text: Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte
-          alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen
-          flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill
-          og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp
-          nye lyder og nye kommandoer for å gjøre enda mer.
-      5:
-        text: Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link
-          som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
-          gøy!
-    mc_intro:
-      1:
-        text: Mitt navn er Jens Bergensten, men jeg er mer kjent som Jeb. Jeg er sjefutvikler
-          for Minecraft her hos Mojang i Stockholm. Jeg begynte å programmere da jeg
-          var elleve eller tolv fordi jeg ville lage spill. En venn av faren min sa
-          at for å kunne lage spill måtte du lære å programmere. Slik var det jeg
-          kom i gang. Jeg liker å utforme og finne ut av arkitekturen til spill. Det
-          er det jeg virkelig liker med Minecraft.
-      2:
-        text: I løpet av den neste timen vil du lære grunnleggende datavitenskap ved
-          å programmere Alex eller Steve til å bevege seg gjennom en simulert del
-          av en Minecraft-verden.
-      3:
-        text: Tradisjonell programmering skjer vanligvis med tekst, men i dag bruker
-          vi Blockly, et system som lar deg dra og slippe blokker for å skrive programmer.
-          Under det hele lager du kode i Javascript.
-      4:
-        text: Konseptene som du skal lære, brukes av programmerere hver dag og utgjør
-          selve grunnlaget for datavitenskap. Her på Mojang bruker vi de samme konseptene
-          for å få Minecraft til å fungere.
-      5:
-        text: Før du begynner, må du velge en figur. Jeg velger Alex. La oss bygge
-          kode til et program som hjelper henne rundt på skjermen.
-      6:
-        text: Skjermen er delt i tre hoveddeler. Til venstre er spillevinduet for
-          Minecraft, hvor programmet skal kjøre. Instruksjonene for hvert nivå står
-          skrevet under.
-      7:
-        text: I midten har du verktøykassen, og hver av blokkene er en kommando som
-          bestemmer hva Alex gjør.
-      8:
-        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
-          opp programmet.
-      9:
-        text: Hva skjer hvis vi drar "flytt fremover"-blokken til arbeidsvinduet og
-          klikker på Kjør? Alex beveger seg én plass frem på rutenettet.
-      10:
-        text: Og hva om vi vil at hun skal gjøre noe etter at hun har flyttet seg
-          fremover? Da kan vi legge enda en blokk til programmet. Jeg velger "snu
-          mot høyre" og drar den under "flytt fremover" til denne oransje linjen dukker
-          opp. Deretter slipper jeg den, og så festes de to blokkene til hverandre.
-          Når vi klikker på Kjør igjen, utfører Alex kommandoene som er stablet oppå
-          hverandre i arbeidsvinduet.
-      11:
-        text: Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til
-          verktøykassen.
-      12:
-        text: For å gjøre om endringer og tilbakestille nivået kan du bruke Begynn
-          på nytt-knappen øverst i hjørne av arbeidsvinduet. Ser du forresten den
-          lille trekanten på snu-blokkene? Hvis du ser en slik trekant, betyr det
-          at du kan velge et annet alternativ. La oss begynne å programmere!
-    mc_repeat:
-      1:
-        text: Jeg er Lydia Winters, merkevaresjef hos Mojang, og vi har laget et lite
-          spill som heter Minecraft.
-      2:
-        text: Det jeg liker best å gjøre i Minecraft er å utforske. Jeg elsker å dra
-          på eventyr i huler for å se hva jeg finner. Jeg jobber ikke som programmerer,
-          så det er spennende å ta del i Minecraft-timene og faktisk lære litt programmering
-          selv.
-      3:
-        text: I det siste nivået trengte vi mange "flytt fremover"-blokker. Det ville
-          ha vært lettere om vi bare kunne be datamaskinen om å utføre denne kommandoen
-          fire eller fem ganger. Heldigvis for oss er datamaskiner veldig flinke til
-          å gjenta kommandoer med gjenta-løkker.
-      4:
-        text: Når vi bygger Minecraft, bruker vi gjenta-løkker for å plassere alle
-          utgangsmaterialene som trenges til en ny verden. Det innebærer tusenvis
-          av blokker. Vi bruker også løkker på små måter, som for å få føttene til
-          Alex til å bevege seg mens hun går. Gjenta-løkker er en viktig del av all
-          programmering.
-      5:
-        text: Det er snart natt, så i de neste par nivåene skal vi bygge et hus som
-          holder oss trygge. Vi bruker gjenta for å gjøre dette på enkleste måte.
-      6:
-        text: For å bygge en vegg til huset kan vi enten be Alex flytte seg fremover
-          og plassere planker fire ganger, eller så kan vi be henne flytte seg fremover
-          og plassere én planke, så tar vi denne kommandoen og bruker gjenta-blokken
-          til å få henne til å utføre handlingen flere ganger. Deretter klikker vi
-          på gjenta-blokken og forteller henne hvor mange ganger hun skal utføre denne
-          handlingen. La oss bygge huset før det blir natt! Ha det gøy!
-    mc_if_statements:
-      1:
-        text: Nå skal vi lære om hvis-kommandoer. Hvis-kommandoer er en viktig del
-          av det å lære å programmere. De hjelper datamaskinen med å ta beslutninger.
-      2:
-        text: Alle datamaskiner bruker hvis-kommandoer, også telefonen min. Når jeg
-          skal låse opp telefonen, kjører den en kode som sier at den låses opp hvis
-          jeg skriver inn riktig passord. Hvis ikke viser den en feilmelding.
-      3:
-        text: Med hvis-kommandoer kan du få Steve og Alex til å reagere på det de
-          ser i verdenen. Hvis det er en stein foran dem, kan de snu seg mot venstre.
-          Eller mot høyre hvis de går inn i et tre.
-      4:
-        text: Her har vi ikke lyst til å falle ned i lavaen. Det er lett å unngå lavaen.
-          Vi kan se den på skjermen. Men hva med lavaen som vi ikke kan se, den under
-          steinen?
-      5:
-        text: Når vi har utvunnet steinen, må vi sjekke om det er noe lava der før
-          vi beveger oss fremover. Hvis det er lava der, må vi plassere en stein foran
-          figurene før vi fortsetter. Slik kan vi fortsette trygt på ferden. Tid for
-          mer utvinning! Og husk å bruke hvis-kommandoen for å passe på hvor du går.
-    mc_congrats_share:
-      1:
-        text: Gratulerer! Nå har du lært de grunnleggende byggeklossene i datavitenskap.
-      2:
-        text: Nå kan du bruke disse blokkene til å skape ting selv. Det er ingen flere
-          instruksjoner, og ingen flere oppgaver å løse. Du kan bygge alt du vil.
-          Det er du som velger.
-      3:
-        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
-          Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
-          hus av ull!"
-      4:
-        text: Når du er ferdig å bygge, kan du velge "Del" for å få en lenke å dele
-          med vennene dine. Ha det gøy!
-    mc_congrats_no_share:
-      1:
-        text: Gratulerer! Nå har du lært de grunnleggende begrepene i informatikk.
-      2:
-        text: Nå kan du bruke disse blokkene til å skape dine egne programmer. Det
-          er ingen flere instruksjoner, og ingen flere oppgaver å løse. Du kan bygge
-          alt du vil. Det er du som velger.
-      3:
-        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
-          Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
-          hus av ull!"
-      4:
-        text: Nå kan du bygge alt du vil. Ha det gøy!
-    gumball_intro:
-      1:
-        text: Det er veldig lett å lage ditt eget spill, hvis du har lyst. Alt du
-          trenger er noen få grunnleggende kunnskaper i programmering, så kan du begynne
-          å spille et spill du har laget selv.
-      2:
-        text: Har du et favorittspill? Vi skal komme et skritt nærmere å kunne lage
-          sånne spill som det i PlayLab. Gode spill har en historie, og alle historier
-          har figurer. Spillfigurer gjør ting som å snakke, flytte rundt og samhandle
-          med hverandre. Kanskje de til og med får poeng, basert på reglene i spillet.
-          I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
-          figurer, og så lage et spill helt fra grunnen av som kan deles og spilles
-          på en telefon.
-      3:
-        text: I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
-          figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles
-          på en telefon.
-      4:
-        text: Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen,
-          hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet
-          nedenfor.
-      5:
-        text: I midten er verktøykassa, og hver av disse blokkene er en kommando,
-          et stykke kode.
-      6:
-        text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
-          opp programmet.
-      7:
-        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
-          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
-          og deretter vil de snappe sammen.
-      8:
-        text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
-          å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
-          har din blokker på plass, trykk på Kjør-knappen for å se hva du programmert.
-      9:
-        text: Kom i gang og til slutt vil du kunne lage ditt eget spill med alle slags
-          spillere som kan samhandle, få poeng, kaste ting, og trylle hverandre bort.
-          Det er opp til deg!
-    gumball_events:
-      1:
-        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
-          De kalles hendelser. En hendelse forteller programmet å lytte til når noe
-          skjer. Når det skjer, vil spillet utføre en handling.
-      2:
-        text: Eksempler på hendelser er å lytte etter et museklikk eller en opp eller
-          ned piltast eller til og med ett trykk på skjermen.
-      3:
-        text: Her skal vi få skuespilleren til å si noe når spilleren klikker på den.
-          Vi vil bruke den når du klikker på blokken og fest "sier" blokk til det.
-          Når spilleren klikker, vil alle blokkene knyttet til denne blokken skal
-          utføres.
-      4:
-        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
-          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
-          Litt etter litt blir spillet ditt mer interaktiv.
-    gumball_repeat:
-      1:
-        text: Kan du forestille deg hvis du måtte gjenta noe igjen og igjen for alltid?
-          Forhåpentligvis trenger du aldri gjøre det fordi datamaskiner er virkelig
-          god til å gjenta ting.
-      2:
-        text: Dette er gjenta for alltid blokk. Alt inni denne blokken vil skje hele
-          tiden i spillet. Hvis vi ønsker en skuespiller å gjøre noe flere ganger
-          uten at spilleren trenger å gjøre noe, vil vi sette disse blokkene i gjenta
-          for alltid blokk.
-      3:
-        text: I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre
-          en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg
-          massevis av tid senere når du bygger ditt eget spill.
-    iceage_intro:
-      1:
-        text: Det er veldig lett å lage ditt eget spill, hvis du har lyst. Alt du
-          trenger er noen få grunnleggende kunnskaper i programmering, så kan du begynne
-          å spille et spill du har laget selv.
-      2:
-        text: Har du et favorittspill? Vi skal komme et skritt nærmere å kunne lage
-          sånne spill som det i PlayLab. Gode spill har en historie, og alle historier
-          har figurer. Spillfigurer gjør ting som å snakke, flytte rundt og samhandle
-          med hverandre. Kanskje de til og med får poeng, basert på reglene i spillet.
-          I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
-          figurer, og så lage et spill helt fra grunnen av som kan deles og spilles
-          på en telefon.
-      3:
-        text: I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
-          figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles
-          på en telefon.
-      4:
-        text: Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen,
-          hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet
-          nedenfor.
-      5:
-        text: I midten er verktøykassa, og hver av disse blokkene er en kommando,
-          et stykke kode.
-      6:
-        text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
-          opp programmet.
-      7:
-        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
-          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
-          og deretter vil de snappe sammen.
-      8:
-        text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
-          å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
-          har din blokker på plass, trykk på Kjør-knappen for å se hva du programmert.
-      9:
-        text: Kom i gang og til slutt vil du kunne lage ditt eget spill med alle slags
-          spillere som kan samhandle, få poeng, kaste ting, og trylle hverandre bort.
-          Det er opp til deg!
-    iceage_events:
-      1:
-        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
-          De kalles hendelser. En hendelse forteller programmet å lytte til når noe
-          skjer. Når det skjer, vil spillet utføre en handling.
-      2:
-        text: Eksempler på hendelser er å lytte etter et museklikk eller en opp eller
-          ned piltast eller til og med ett trykk på skjermen.
-      3:
-        text: Her skal vi få skuespilleren til å si noe når spilleren klikker på den.
-          Vi vil bruke den når du klikker på blokken og fest "sier" blokk til det.
-          Når spilleren klikker, vil alle blokkene knyttet til denne blokken skal
-          utføres.
-      4:
-        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
-          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
-          Litt etter litt blir spillet ditt mer interaktiv.
-    iceage_repeat:
-      1:
-        text: Kan du forestille deg hvis du måtte gjenta noe igjen og igjen for alltid?
-          Forhåpentligvis trenger du aldri gjøre det fordi datamaskiner er virkelig
-          god til å gjenta ting.
-      2:
-        text: Dette er gjenta for alltid blokk. Alt inni denne blokken vil skje hele
-          tiden i spillet. Hvis vi ønsker en skuespiller å gjøre noe flere ganger
-          uten at spilleren trenger å gjøre noe, vil vi sette disse blokkene i gjenta
-          for alltid blokk.
-      3:
-        text: I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre
-          en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg
-          massevis av tid senere når du bygger ditt eget spill.
-    mc_2016_intro:
-      1:
-        text: Hei, mitt navn er Jens og jeg er kreativ designer av Minecraft. Den
-          neste timen vil du lage ditt eget Minecraft-spill. Dette ser ut som Minecraft,
-          men verden har stanset. Sauene beveger seg ikke, kyllingene legger ikke
-          egg og zombiene står bare stille. Det er opp til deg å legge til kode som
-          gjør at Minecraft-verdenen fungerer.
-      2:
-        text: Mitt navn er Melissa og jeg er interaksjonsdesigner i Minecraft. Det
-          jeg egentlig er interessert i er hvordan mennesker tenker og bruker teknologi.
-          Derfor er denne jobben perfekt for meg, jeg bruker både informatikk og psykologi
-          for å finne ut hvordan folk tenker og oppfører seg.
-      3:
-        text: Du ser at skjermen er delt i tre hoveddeler. 1) På den venstre er Minecraft-spillet.
-          Akkurat nå er verdenen frosset, men vi skal fikse det ved å bruke kode.
-      4:
-        text: 2) Dette området i midten er verktøykassa. Hver av disse blokkene er
-          en kommando som kyllinger, sauer og andre Minecraft-skapninger kan forstå.
-      6:
-        text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
-      7:
-        text: Først skal vi lage program for en kylling. Dra inn "flytt fram"-blokk.
-          Når jeg klikker "kjør" går kyllingen ett skritt fram. For å komme videre
-          drar jeg inn enda en "flytt fram"-blokk og fester den under den første.
-          Blokkene fester seg sammen når de kommer nær nok. Når jeg klikker "kjør"
-          igjen vil kyllingen gå to skritt.
-      8:
-        text: Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til
-          verktøykassen.
-      9:
-        text: Etter du har trykket på "Kjør" kan du alltid trykke på "Nullstill"-knappen
-          for å nullstille spillet og starte på nytt. Nå er det din tur til å lage
-          din egen versjon av Minecraft. Kos deg!
-    mc_2016_events:
-      3:
-        text: Men hva skjer når du bruker den? I Minecraft slipper sauer ull når du
-          klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis
-          du kommer borti dem. Disse reaksjonene skjer takket være noe som heter hendelser.
-          Hendelser forteller programmet ditt at det skal lytte etter eller vente
-          på at noe skjer og når det skjer, gjøre en handling.
-      4:
-        text: Fram til nå har du brukt en hendelse. Koden du plasserte under "når
-          satt ut" kjører når figuren din er opprettet eller når spillet starter.
-          I de neste oppgavene vil du ha flere nye steder å plassere kommandoer for
-          hendelser, slik som "når tatt på" som kjører når du tar på figuren. Et annet
-          eksempel er "når brukt" som kjører når du bruker figuren. Hvis du vil at
-          zombien din skal forsvinne når sola går opp, putt den kommandoen under "når
-          dag"
-    mc_2016_spawn:
-      1:
-        text: I spill betyr sett ut det samme som opprett. I denne oppgaven skal du
-          sette ut zombier når sola går ned. For å gjøre dette må du bruke "når natt"-blokka.
-      2:
-        text: Siden vi ønsker at zombiene settes ut om natta skal vi legge til blokka
-          "sett ut zombie" under blokka "når natt". Når de er satt ut vil hver zombie
-          kjøre koden du legger under zombienes "når satt ut"-hendelse. Ha det gøy
-          med å sette ut zombier!
-    mc_2016_congrats:
-      1:
-        text: Gratulerer! Du har lært å bruke datamaskinkommandoer for å få noe til
-          å skje i Minecraft verdenen. Det er du som er utvikleren nå. Du har låst
-          opp alle kommandoene og alle skapningene. Du bestemmer hva som skal skje.
-      2:
-        text: Når du er ferdig å lage spillet ditt, velg deling for å få en lenke
-          som du kan dele med vennene dine eller for å spille spillet ditt på telefonen.
-          Ha det gøy! Jeg gleder meg til å spille din versjon av Minecraft.
-    mc_2017_agent_intro:
-      11:
-        text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
+        image: notes/stage5_5.jpg
+        text: Klikk på pilen i en av disse blokkene for å endre hvor mye kunstneren
+          går fremover. Lek litt med dette for å bli kjent med de nye blokkene.
     csd_concept_binary_data:
       1:
         text: Hei! Jeg heter Limor Fried og jobber som ingeniør her hos Adafruit Industries.
@@ -2793,7 +1510,1290 @@
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
+    farmer_intro:
+      1:
+        image: notes/stage9_1.jpg
+        text: Hei, jeg Paola! I disse oppgavene er du en bonde som trenger å gjøre
+          jordet flatt for å kunne dyrke grønnsaker der.
+      2:
+        image: notes/stage9_2.jpg
+        text: Du må hjelpe henne med å fjerne alle jordhaugene, og fyle alle hullene.
+      3:
+        image: notes/stage9_3.jpg
+        text: De nye blokkene fjerner 1 spadetak med jord fra en haug, og fyller 1
+          spadetak med jord i et hull.
+      4:
+        image: notes/stage9_4.jpg
+        text: Hauger og hull har forskjellige størrelse eller dybde, så du må fortelle
+          bonden hvor mange spadetak som det er behov for.
+    flappy_intro:
+      1:
+        text: Hei, mitt navn er Katie! Noe av det mest spennende innen informatikk
+          er at et dataprogram kan være interaktivt.
+      2:
+        text: Hver gang noen klikker, trykker eller skriver på en datamaskin eller
+          telefon, som genererer en hendelse, og det er noe kode som bestemmer hva
+          som skal utføres når hendelsen inntreffer.
+      3:
+        text: 'Du kan for eksempel ha en HENDELSESHÅNDTERER som sier "når musen klikkes,
+          spilles en lyd" '
+      4:
+        text: Har du hørt om spillet FlappyBird? Ved å bruke hendelsesbehandling,
+          skal vi lære å programmere vår egen tilpasset versjon av FlappyBird!
+      5:
+        text: Koden du vil skrive innebærer å dra og slippe blokker som representerer
+          kommandoer på datamaskinen. Under panseret, er hver av disse blokkene representert
+          av ekte kode.
+      6:
+        text: 'Hvis du tar en titt på arbeidsområdet, er det noen grønne blokker som
+          er fylt ut for deg - dette er "hendelsesbehandlinger" '
+      7:
+        text: Hvis du vil at fuglen skal FLAKSE når du KLIKKER med musen, så fester
+          du "FLAKS"-blokken til den riktige hendelsesbehandleren og fuglen vil flakse
+          hver gang du klikker med musen.
+      8:
+        text: I hver oppgave i denne aktiviteten vil vi introdusere nye typer hendelser
+          som grønne blokker i arbeidsområdet, og du kan bestemme de relevante blokkene
+          å legge til i respons til de hendelsene.
+      9:
+        text: Når du ser en nedtrekksboks som denne, så betyr det at du kan endre
+          instillingene - for eksempel lyden som spilles av når flappy treffer bakken.
+      10:
+        text: I siste puslespillet vil du kunne lage et spill og dele den med dine
+          venner. ha det gøy!
+    frozen_functions:
+      1:
+        text: Hei, jeg heter Chris Bosh. Jeg er profesjonell basketballspiller og
+          jeg programmerte på skolen.
+      2:
+        text: En av de viktigste konseptene i datavitenskap er hvordan definere nye
+          kommandoer. De fleste språk har bare 100 ord eller kommandoer. Og det som
+          er kunsten og magien er å definere dine egne, nye ord med disse byggeklossene.
+      3:
+        text: Når du har lært en datamaskin hvordan den skal gjøre en handling en
+          gang ved bruk av denne rekkefølgen av kommandoer så kan du navngi den handlingen
+          selv, slik at det er lett å gjenta den senere. Når du definerer dine egne
+          kommandoer og gir dem navn kalles det en funksjon.
+      4:
+        text: Hei, jeg er Jess. Når du programmerer med blokker bruker du funksjoner
+          hvis det er et sett med handlinger du vil gjøre mange ganger. For eksempel
+          har du skrevet kode for å lage en firkant.
+      5:
+        text: 'Du kan definere dette som en funksjon kalt "opprett en firkant" '
+      6:
+        text: Nå har du en ny blokk som du kan bruke flere ganger for å opprette flere
+          ruter.
+      7:
+        text: Mange enkle figurer kan brukes til å lage mer komplekse mønstre. I den
+          neste gåten vil koden du nylig skrev for å lage en sirkel være tilgjengelig
+          som en ny funksjon som kan lage sirkler i forskjellige størrelser. Kan du
+          bruke den for å hjelpe Elsa opprette komplekse og vakre mønstre i snøen?
+    frozen_intro:
+      1:
+        text: Hei, jeg heter Lyndsey. Jeg er modell, skuespiller og skriver mine egene
+          apper. La oss bruke kode til å utforske isens magi og skjønnhet sammen med
+          Anna og Elsa.
+      2:
+        text: Du vil skape snøfnugg og mønstre med kunstløpskøyter og lage et magisk
+          vinterlandskap som du kan dele med vennene dine.
+      3:
+        text: I den neste timen vil du lære grunnleggende programmering. Tradisjonell
+          programmering er vanligvis i tekst, men vi skal bruke Blockly, som bruker
+          visuelle blokker som du kan dra og slippe for å skrive programmer. Også
+          elever på universitetet lærer grunnleggende programmering på denne måten.
+          Under overflaten  lager du fortsatt kode.
+      4:
+        text: Et program er et sett med instruksjoner som forteller en datamaskin
+          hva den skal  gjøre. La oss lage en kode eller et program, som få Elsa til
+          å lage en rett linje. Vi vil senere bruke dette til å lage mer kompliserte
+          mønstre.
+      5:
+        text: Skjermen din er delt i tre hoveddeler. Til venstre er isflaten der du
+          vil kjøre programmet. Instruksjoner for hvert nivå er skrevet rett under
+          isflaten.
+      6:
+        text: Det midterste området er verktøykassen, og hver av disse blokkene er
+          en handling som Elsa og Anna kan gjøre.
+      7:
+        text: Det hvite området til høyre kalles arbeidsområdet, og dette er hvor
+          vi skal lage programmet vårt. For å flytte rundt på isflaten, kan du bruke
+          "Flytt fremover"-blokken.
+      8:
+        text: Her sier "flytt fremover"-blokken "flytte frem 100 piksler." Hva skjer
+          når vi trykker "Kjør"? Da flytter Elsa fram en bestemt lengde på skjermen,
+          100 piksler faktisk! Piksler er små firkantede punkter på dataskjermen.
+      9:
+        text: Den andre blokken vi har her sier "snu 90 grader til høyre". Når vi
+          bruker denne "snu til høyre"-blokken, får det Elsa til å snu seg. Du kan
+          prøve hvor mye du vil at Elsa skal snu. Vinkelen måles fra rett foran Elsa.
+          Så dette er en 90 graders sving. Og dette er en 120 graders sving.
+      10:
+        text: Husk på at du kan endre antall piksler og grader ved å klikke på pilene
+          ved siden av dem.
+    frozen_loops:
+      1:
+        text: Hei, jeg heter Paola! Datamaskiner er flinke til å gjenta handlinger.
+          Du kan telle til 10, 20 eller 100. Men en datamaskin kan telle til en milliard
+          eller billion. Den vil ikke gå lei og det tar bare noen sekunder. Om det
+          er telling, eller tegning, eller noe annet – datamaskiner kan gjenta ting
+          hundrevis eller milliarder av ganger.
+      2:
+        text: I programmering kaller vi dette en løkke. En løkke er den måten du bruker
+          for å gjenta koden igjen og igjen. I den neste oppgave er målet ditt å hjelpe
+          Anna til å lage et kvadrat med "Gjenta"-blokken.
+      3:
+        text: Alle kodeblokkene du setter inne i "Gjenta"-blokken  vil bli gjentatt
+          i rekkefølge, så mange ganger du ønsker.
+      4:
+        text: Hvis du vil tegne et kvadrat, kan du bruke "Flytt frem" og "snu til
+          høyre" blokkene 4 ganger. Men det er enklere å fortelle datamaskinen "Flytt
+          frem" og "snu til høyre 90 grader" en gang og deretter fortelle det å gjenta
+          disse to handlingene 4 ganger. For å gjøre det, må du sette "Flytt frem"
+          og "snu til høyre" blokkene inne i en "Gjenta"-blokk.
+      5:
+        text: Husk, du kan endre tallet i blokken "Gjenta" til hva som helst og det
+          vil gjenta det som er inne i blokken så mange ganger.
+    function:
+      1:
+        image: notes/stage13_1.jpg
+        text: Hei, jeg Brina, ingeniør ved Instagram. En funksjon er noen kodelinjer
+          som du vil bruke igjen og igjen, så i stedet for å skrive den samme koden
+          hver gang, kan du bare bruke en blokk.
+      2:
+        image: notes/stage13_2.jpg
+        text: Vi skal lære å definere funksjoner. Blokker der vi definerer funksjoner
+          har en stjerne i hjørnet. Navnet på funksjonen skrives på øverste linje.
+      3:
+        image: notes/stage13_3.jpg
+        text: Blokkene inne i funksjonen forteller oss hva den gjør. Så denne funksjonen
+          er kalt "fyll 5", og består av en "gjenta" blokk og en "fylle" blokk.
+      4:
+        image: notes/stage13_4.jpg
+        text: Funksjonen finnes på arbeidsområdet, men bonden vil ikke kjøre den før
+          vi drar ut "Fyll 5 funksjon" blokka fra funksjoner-kategorien.
+      5:
+        image: notes/stage13_5.jpg
+        text: La oss ha det gøy med funksjoner!
+    gumball_events:
+      1:
+        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
+          De kalles hendelser. En hendelse forteller programmet å lytte til når noe
+          skjer. Når det skjer, vil spillet utføre en handling.
+      2:
+        text: Eksempler på hendelser er å lytte etter et museklikk eller en opp eller
+          ned piltast eller til og med ett trykk på skjermen.
+      3:
+        text: Her skal vi få skuespilleren til å si noe når spilleren klikker på den.
+          Vi vil bruke den når du klikker på blokken og fest "sier" blokk til det.
+          Når spilleren klikker, vil alle blokkene knyttet til denne blokken skal
+          utføres.
+      4:
+        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
+          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
+          Litt etter litt blir spillet ditt mer interaktiv.
+    gumball_intro:
+      1:
+        text: Det er veldig lett å lage ditt eget spill, hvis du har lyst. Alt du
+          trenger er noen få grunnleggende kunnskaper i programmering, så kan du begynne
+          å spille et spill du har laget selv.
+      2:
+        text: Har du et favorittspill? Vi skal komme et skritt nærmere å kunne lage
+          sånne spill som det i PlayLab. Gode spill har en historie, og alle historier
+          har figurer. Spillfigurer gjør ting som å snakke, flytte rundt og samhandle
+          med hverandre. Kanskje de til og med får poeng, basert på reglene i spillet.
+          I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
+          figurer, og så lage et spill helt fra grunnen av som kan deles og spilles
+          på en telefon.
+      3:
+        text: I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
+          figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles
+          på en telefon.
+      4:
+        text: Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen,
+          hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet
+          nedenfor.
+      5:
+        text: I midten er verktøykassa, og hver av disse blokkene er en kommando,
+          et stykke kode.
+      6:
+        text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
+          opp programmet.
+      7:
+        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
+          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
+          og deretter vil de snappe sammen.
+      8:
+        text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
+          å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
+          har din blokker på plass, trykk på Kjør-knappen for å se hva du programmert.
+      9:
+        text: Kom i gang og til slutt vil du kunne lage ditt eget spill med alle slags
+          spillere som kan samhandle, få poeng, kaste ting, og trylle hverandre bort.
+          Det er opp til deg!
+    gumball_repeat:
+      1:
+        text: Kan du forestille deg hvis du måtte gjenta noe igjen og igjen for alltid?
+          Forhåpentligvis trenger du aldri gjøre det fordi datamaskiner er virkelig
+          god til å gjenta ting.
+      2:
+        text: Dette er gjenta for alltid blokk. Alt inni denne blokken vil skje hele
+          tiden i spillet. Hvis vi ønsker en skuespiller å gjøre noe flere ganger
+          uten at spilleren trenger å gjøre noe, vil vi sette disse blokkene i gjenta
+          for alltid blokk.
+      3:
+        text: I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre
+          en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg
+          massevis av tid senere når du bygger ditt eget spill.
     hoc_dance_events_2019:
       4:
         text: Eksempler på hendelser er å lytte etter et museklikk, en piltast eller
           trykk på skjermen.
+    hoc_wrapup:
+      1:
+        image: notes/hoc6_1.jpg
+        text: Gratulerer! Med den siste oppgaven du løste, skrev du kode som kan fortelle
+          roboter hvordan de finner vei gjennom enkle labyrinter eller tunneler uansett
+          lengde. Dette gjelder uansett om det er en zombie, en fugl, en mars-rover
+          eller om det er deg som kjører bil.
+      2:
+        image: notes/hoc6_2.jpg
+        text: De grunnleggende konseptene som du brukte, danner utgangspunktet for
+          alle programmene eller appene du ser. Vi har lært om gjentagende løkker,
+          hvis-setninger, og hvis-ellers setninger.
+      3:
+        image: notes/hoc6_3.jpg
+        text: Hvis du likte den første kodetimen, kan du gå til code.org for å fortsette
+          å lære programmering! Når du har fullført 20-timers kurset vårt, behersker
+          du grunnleggende programmering. Da kan du begynne å lære å skrive telefon-apper,
+          robotinstruksjoner, spill - ja alt mulig!
+      4:
+        image: notes/hoc6_4.jpg
+        text: 'Teknologien forandrer alt vi gjør, og det spiller ingen rolle om du
+          er ung eller gammel: Programmering er morsomt og kreativt, og alle kan lære
+          det!'
+    iceage_events:
+      1:
+        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
+          De kalles hendelser. En hendelse forteller programmet å lytte til når noe
+          skjer. Når det skjer, vil spillet utføre en handling.
+      2:
+        text: Eksempler på hendelser er å lytte etter et museklikk eller en opp eller
+          ned piltast eller til og med ett trykk på skjermen.
+      3:
+        text: Her skal vi få skuespilleren til å si noe når spilleren klikker på den.
+          Vi vil bruke den når du klikker på blokken og fest "sier" blokk til det.
+          Når spilleren klikker, vil alle blokkene knyttet til denne blokken skal
+          utføres.
+      4:
+        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
+          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
+          Litt etter litt blir spillet ditt mer interaktiv.
+    iceage_intro:
+      1:
+        text: Det er veldig lett å lage ditt eget spill, hvis du har lyst. Alt du
+          trenger er noen få grunnleggende kunnskaper i programmering, så kan du begynne
+          å spille et spill du har laget selv.
+      2:
+        text: Har du et favorittspill? Vi skal komme et skritt nærmere å kunne lage
+          sånne spill som det i PlayLab. Gode spill har en historie, og alle historier
+          har figurer. Spillfigurer gjør ting som å snakke, flytte rundt og samhandle
+          med hverandre. Kanskje de til og med får poeng, basert på reglene i spillet.
+          I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
+          figurer, og så lage et spill helt fra grunnen av som kan deles og spilles
+          på en telefon.
+      3:
+        text: I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme
+          figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles
+          på en telefon.
+      4:
+        text: Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen,
+          hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet
+          nedenfor.
+      5:
+        text: I midten er verktøykassa, og hver av disse blokkene er en kommando,
+          et stykke kode.
+      6:
+        text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
+          opp programmet.
+      7:
+        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
+          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
+          og deretter vil de snappe sammen.
+      8:
+        text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
+          å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
+          har din blokker på plass, trykk på Kjør-knappen for å se hva du programmert.
+      9:
+        text: Kom i gang og til slutt vil du kunne lage ditt eget spill med alle slags
+          spillere som kan samhandle, få poeng, kaste ting, og trylle hverandre bort.
+          Det er opp til deg!
+    iceage_repeat:
+      1:
+        text: Kan du forestille deg hvis du måtte gjenta noe igjen og igjen for alltid?
+          Forhåpentligvis trenger du aldri gjøre det fordi datamaskiner er virkelig
+          god til å gjenta ting.
+      2:
+        text: Dette er gjenta for alltid blokk. Alt inni denne blokken vil skje hele
+          tiden i spillet. Hvis vi ønsker en skuespiller å gjøre noe flere ganger
+          uten at spilleren trenger å gjøre noe, vil vi sette disse blokkene i gjenta
+          for alltid blokk.
+      3:
+        text: I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre
+          en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg
+          massevis av tid senere når du bygger ditt eget spill.
+    if:
+      1:
+        image: notes/hoc4_1.jpg
+        text: 'Hei, er jeg Bill! La oss lære et nytt grunnleggende konsept: hvis-uttrykk.
+          Dette er hvordan datamaskiner tar beslutninger.'
+      2:
+        image: notes/hoc4_2.jpg
+        text: 'Du bruker "hvis"-uttrykk selv hver dag. Før du går ut hver morgen sier
+          du: "HVIS det regner ute må jeg ta på meg jakke".'
+      3:
+        image: notes/hoc4_3.jpg
+        text: Vi kan be zombien om å sjekke om det er en sti til venstre. Hvis han
+          finner en sti der, kan vi be han snu i den retningen.
+      4:
+        image: notes/hoc4_4.jpg
+        text: For å skrive koden for dette, må vi dra ut "Hvis"-blokken og sette en
+          "venstre"-blokk inni den.
+      5:
+        image: notes/hoc4_5.jpg
+        text: Hvis vi hver gang zombien flytter på seg setter en "fremover" blokk
+          over den, og en "gjenta" blokk rundt alt, vil han nå sjekke om det er en
+          sti til venstre og i så fall snu dit. Kommandoen "gjenta" er viktig for
+          å se etter sti etter hvert skritt.
+      6:
+        image: notes/hoc4_6.jpg
+        text: Hvis-setninger er veldig viktige i programmering. En av de første programmene
+          jeg skrev, var et tripp-trapp-tresko-spill. Der var det det en hvis-setning
+          som sa hvis den andre personen holdt på å vinne, måtte programmet blokkere
+          posisjonen som ville la han seire.
+      7:
+        image: notes/hoc4_7.jpg
+        text: Ha det gøy med hvis-blokker!
+    if_else:
+      1:
+        image: notes/hoc5_1.jpg
+        text: Hei, jeg heter Saloni. Jeg bruker programmering for å løse problemer
+          innenfor helse og medisin. La oss lære om "hvis-ellers"-blokken. Den ser
+          ut som en "hvis"-blokk, men har en ekstra del på slutten som sier "ellers".
+      2:
+        image: notes/hoc5_2.jpg
+        text: Hvis jeg setter en "fremover"-blokk på plassen der det står "gjøre"
+          og en "snu til venstre" blokk der det står "ellers", betyr det at zombien
+          vil velge mellom to alternativer. Hvis det er en vei fremover, vil den gå
+          dit og ellers (ikke vei fremover) vil den svinge til venstre.
+      3:
+        image: notes/hoc5_3.jpg
+        text: Akkurat som med "hvis"-blokken, kan vi sette "hvis-ellers"-blokker inni
+          en "gjenta"-blokk slik at zombien vil fortsette med å flytte, og "hvis-ellers"blokken
+          vil fortsette å sjekke om det er på tide å snu.
+      4:
+        image: notes/hoc5_4.jpg
+        text: Nå får du vise zombiene hvor de hører hjemme!
+    if_else_scrat:
+      1:
+        text: En "hvis-ellers"-setning er en beslutning mellom to ting. La oss se
+          på hvordan vi kan bruke en "hvis-ellers"-setning med vår venn ekornet Scrat.
+      2:
+        text: Denne blokken ligner på "hvis"-blokken, men det er en ekstra del nederst
+          som sier "ellesrs". Hvis jeg setter en "fremover"-blokk der det står "gjøre"
+          og en "snu venstre"-blokk der det står "ellers", så betyr ekornet Scrat
+          vil gå fremover hvis det er sti foran. Hvis det ikke er sti foran, vil Scrat
+          snu til venstre.
+      3:
+        text: Det er ta en beslutning og gjøre én av to handlinger basert på denne
+          avgjørelsen. Og akkurat som "hvis"-blokker, kan du sette "hvis-ellers"-blokker
+          inni "gjenta"-blokker.
+      4:
+        text: Nå la oss hjelpe ekornet Scrat til å få seg en nøtt!
+    infinity_playlab_events:
+      1:
+        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
+          Det kalles hendelser. En hendelse ber programmet om å lytte til når noe
+          skjer. Og når det skjer, utfører programmet en handling. Eksempler på hendelser
+          er museklikk, trykking av en piltast, eller et trykk på skjermen.
+      2:
+        text: Her skal vi få Baymax til å flytte opp for å berøre Hiro og gå ned for
+          å berøre Rapunzel når spilleren bruker opp/ned piltastene eller opp/ned
+          knappene. Vi kommer til å bruke "når pil opp" - blokk og knytte "flytt aktøren
+          opp"- blokk til den, så når spilleren trykker pil opp, vil alt knyttet til
+          "når pil opp"- blokken kjøre. Vi vil gjøre det samme for å få Baymax til
+          å flytte ned. Trinnvis blir spillet mer interaktivt.
+    infinity_playlab_intro:
+      1:
+        text: Så hvilket trinn er du på? Andre? Tiende trinn? Første trinn? Jeg var
+          på åttende trinn da jeg lærte å programmere. Jeg fikk min første datamaskin
+          da jeg gikk på sjette trinn. Det som engasjerer meg er å løse folks problemer.
+          Du kan uttrykke deg selv og bygge ting fra en idé.
+      2:
+        text: Informatikk er grunnlaget for det mange studenter og fagfolk vil drive
+          med de neste tjue eller tretti år. Jeg liker programmering fordi jeg liker
+          å hjelpe folk. Jeg får muligheten til å bygge noe som gjør folks liv enklere.
+          Jeg tror det er det nærmeste vi kommer til å ha en superkraft. Å komme i
+          gang er den viktigste delen. Jeg er en nybegynner selv, og jeg ønsker at
+          du skal lære sammen med meg.
+      3:
+        text: Jeg heter John Vechey, og er en av grunnleggerne av PopCap Games. Vi
+          lager spill som Plants vs Zombies og Bejeweled Peggle. Med spill handler
+          det er ikke bare om hvor perfekt koden er, eller hvor perfekt grafikken
+          er. Det handler om hvordan det føles og hvor moro det er. Du kan bare få
+          følelsen ved å prøve det, gjøre det, ved å lære og tilpasse ferdighetene
+          dine igjen og igjen.
+      4:
+        text: Har du et favorittspill? Vi kommer til å ta ett skritt i retning av
+          å lage spill akkurat som de som bruker Play Lab. Gode spill har en historie
+          og hver historie har skuespillere. Skuespillerne gjør ting som å snakke,
+          flytte og samhandle med hverandre. Kanskje også skåre poeng basert på reglene
+          i spillet. I dag skal vi lære hvordan du gjør alle disse tingene, en etter
+          en, med Disney-karakterer som Anna, Elsa, Hiro, Baymax og Rapunzel. Vi vil
+          bygge et spill fra grunnen, som kan deles og bli spilt på en telefon.
+      5:
+        text: Skjermen er delt i tre hoveddeler. Til venstre er spillområdet der programmet
+          kjøres. Instruksjoner for hvert nivå er skrevet nedenfor. Det midterste
+          området er verktøykassen, og hver av disse blokkene er et stykke kode. Det
+          hvite området til høyre kalles arbeidsområdet, og det er her vi programmerer.
+      6:
+        text: For å starte, må du koble dine blokker til den oransje "når kjøre"-
+          blokken. Du kan knytte flere blokker sammen ved å dra dem til du ser det
+          gule omrisset, og da vil de hekte seg sammen. I dette første puslespillet
+          er Hiro skuespiller 1 og Baymax er skuespiller 2. Vi trenger å flytte Hiro
+          for at han skal komme til Baymax ved å dra "flytt til høyre"-blokken og
+          knytte det til "når kjøre"-blokken. Når du har din blokker på plass, trykker
+          du på "Kjør"-knappen for å se hva du har programmert.
+      7:
+        text: Kom i gang, og til slutt vil du kunne lage ditt eget spill med alle
+          slags spillere som kan samhandle, få poeng, kaste mikroboter, kirsebær,
+          gryter, glitter og is, og trylle hverandre bort. Det er helt opp til deg!
+    infinity_playlab_repeat_forever:
+      1:
+        text: Kan du forestille deg hvis du måtte gjenta noe for evig? Forhåpentligvis
+          vil du aldri behøve å gjøre det fordi datamaskiner er virkelig gode til
+          å gjenta ting. Dette er gjenta for alltid blokka. Alt som er inne denne
+          blokka vil gjentas for alltid i spillet.
+      2:
+        text: Så hvis vi ønsket å få en figur til å gjøre noe gjentagende uten at
+          spilleren måtte gjøre noe, måtte vi sette disse blokkene inni en "gjenta
+          for alltid"-blokk. I det neste puslespillet er målet vårt å hjelpe Anna
+          med å gå opp og ned kontinuerlig. Å lære hvordan gjenta-kommandoene virker
+          vil spare deg for massevis av tid senere når du skal lage ditt eget spill.
+    loop_for:
+      1:
+        image: notes/stage11_1.jpg
+        text: Hei, jeg er Trina, og jeg jobber for Pixar. Jeg har vært med å lage
+          en rekke filmer, inkludert Shrek.
+      2:
+        image: notes/stage11_2.jpg
+        text: Dette er nye "teller" løkka. Det vil utføre handlingene igjen og igjen,
+          og du kan endre handlingene litt hver gang.
+      3:
+        image: notes/stage11_3.jpg
+        text: Dette eksemplet på en "teller"-løkke sier "Tell med teller fra 50 til
+          90 med 10" og inni den har vi en "tegn en firkant"-blokk. Dra "teller" blokken
+          fra "Variabler"-seksjonen til "lengde"-stedet.
+      4:
+        image: notes/stage11_4.jpg
+        text: Dette betyr at kunstneren vår skal tegne et kvadrat med sidelengde 50
+          piksler. Så legger vi til 10, og tegner et kvadrat med sidelengde 60 piksler.
+          Slik holder vi på til sidelengden blir 90 piksler. Dermed har vi sidelengdene
+          50, 60, 70, 80 og 90.
+    loop_times:
+      1:
+        image: notes/hoc2_1.jpg
+        text: Hei, jeg heter Mark! La oss lære om løkker. Med løkker kan du skal be
+          datamaskinen om å gjenta et sett av handlinger igjen og igjen, tusenvis
+          eller milliarder ganger.
+      2:
+        image: notes/hoc2_2.jpg
+        text: I denne oppgaven ønsker vi å flytte fuglen frem 5 plasser for å ta grisen.
+      3:
+        image: notes/hoc2_3.jpg
+        text: Vi kan bruke den nye "gjenta" blokken for å hjelpe oss.
+      4:
+        image: notes/hoc2_4.jpg
+        text: I stedet for å dra ut 5 "fremover" blokker...
+      5:
+        image: notes/hoc2_5.jpg
+        text: Vi kan sette "fremover" blokken inne i "gjenta"-blokken og skrive et
+          nummer i blokken å fortelle den hvor mange ganger det skal gjentas.
+      6:
+        image: notes/hoc2_6.jpg
+        text: 'Og dette er viktig: Du kan sette mer enn én kommando i en "gjenta"-blokk.'
+      7:
+        image: notes/hoc2_7.jpg
+        text: Kos deg med å bruke den nye "gjenta" blokken!
+    loop_until:
+      1:
+        image: notes/hoc3_1.jpg
+        text: Hei, er jeg Chris. Før jeg startet i Miami Heat, studerte jeg informatikk.
+          La oss prøve våre ny blokk, "Gjenta til" blokken.
+      2:
+        image: notes/hoc3_2.jpg
+        text: Hva hvis vi ikke visste hvor langt fuglen måtte bevege seg for å komme
+          til grisen?
+      3:
+        image: notes/hoc3_3.jpg
+        text: Hvis vi setter en "fremover" blokk inne i en "Gjenta til" blokk, vil
+          fuglen bevege seg fremover til den når grisen (eller krasjer inn i en vegg).
+      4:
+        image: notes/hoc3_4.jpg
+        text: 'Og dette er viktig: Akkurat som før kan vi sette flere blokker inni
+          "Gjenta til" blokken, og de vil alle bli gjentatt.'
+    loop_while:
+      1:
+        image: notes/stage9_5.jpg
+        text: 'Hei, jeg Makinde! La oss lære om "gjenta så lenge"-blokken '
+      2:
+        image: notes/stage9_6.jpg
+        text: '"Gjenta så lenge" blokken vil fortsette å gjøre det som er inne i den
+          så lenge utsagnet på toppen er sant.'
+      3:
+        image: notes/stage9_7.jpg
+        text: For eksempel, hvis bonden står på en haug, vil hun fortsette å fjerne
+          spadetak med jord så lenge det er fortsatt en haug under henne.
+    maze_intro:
+      1:
+        image: notes/hoc1_1.jpg
+        text: Velkommen til din første kodetime! La oss dykke rett inn i ditt første
+          møte med programmering.
+      2:
+        image: notes/hoc1_2.jpg
+        text: Vi skal bruke Blockly, et visuelt programmeringsspråk hvor du drar og
+          slipper blokkene for å skrive kode.
+      3:
+        image: notes/hoc1_3.jpg
+        text: De fleste programmeringsspråk bruker tekst, men Blockly er visuelt.
+          Hver blokk tilsvarer en "ekte" kodelinje.
+      4:
+        image: notes/hoc1_4.jpg
+        text: Du vil lære grunnleggende informatikk, med begreper som brukes overalt,
+          helt fra å skrive apper til å lage programmer for å styre Mars-roveren.
+      5:
+        image: notes/hoc1_5.jpg
+        text: Et program er et sett med instruksjoner som datamaskinen skal følge.
+      6:
+        image: notes/hoc1_6.jpg
+        text: Målet med det første programmet er å få en "Angry Bird" gjennom en labyrint
+          slik at den treffer en grønn gris.
+      7:
+        image: notes/hoc1_7.jpg
+        text: Til venstre er labyrinten der programmet kjøres. Instruksjonene for
+          hver oppgave er under labyrinten.
+      8:
+        image: notes/hoc1_8.jpg
+        text: Den midtre verktøykassen har kommandoene for "Angry Bird". Du vil bruke
+          disse for å bygge koden.
+      9:
+        image: notes/hoc1_9.jpg
+        text: Til høyre er arbeidsområdet hvor du skal trekke blokker fra verktøykassen
+          til å bygge programmet med. Hvis du vil slette en blokk, drar du den til
+          papirkurven i hjørnet.
+      10:
+        image: notes/hoc1_10.jpg
+        text: Hver blokk er en instruksjon. Hvis du drar en "fremover" blokk til arbeidsområdet
+          og trykker "Kjør programmet", flyttes fuglen en plass på labyrinten.
+      11:
+        image: notes/hoc1_11.jpg
+        text: For må gjøre mer enn én handling, kan du dra mange blokker til arbeidsområdet
+          og sette dem sammen. Fuglen vil utføre kommandoene ovenfra og ned.
+      12:
+        image: notes/hoc1_12.jpg
+        text: Hvis du kjører et program og ønsker å fikse det for å prøve på nytt,
+          kan du trykke på "Reset"-knappen.
+      13:
+        image: notes/hoc1_13.jpg
+        text: La oss gå og ta de grisene!
+    mc_2016_congrats:
+      1:
+        text: Gratulerer! Du har lært å bruke datamaskinkommandoer for å få noe til
+          å skje i Minecraft verdenen. Det er du som er utvikleren nå. Du har låst
+          opp alle kommandoene og alle skapningene. Du bestemmer hva som skal skje.
+      2:
+        text: Når du er ferdig å lage spillet ditt, velg deling for å få en lenke
+          som du kan dele med vennene dine eller for å spille spillet ditt på telefonen.
+          Ha det gøy! Jeg gleder meg til å spille din versjon av Minecraft.
+    mc_2016_events:
+      3:
+        text: Men hva skjer når du bruker den? I Minecraft slipper sauer ull når du
+          klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis
+          du kommer borti dem. Disse reaksjonene skjer takket være noe som heter hendelser.
+          Hendelser forteller programmet ditt at det skal lytte etter eller vente
+          på at noe skjer og når det skjer, gjøre en handling.
+      4:
+        text: Fram til nå har du brukt en hendelse. Koden du plasserte under "når
+          satt ut" kjører når figuren din er opprettet eller når spillet starter.
+          I de neste oppgavene vil du ha flere nye steder å plassere kommandoer for
+          hendelser, slik som "når tatt på" som kjører når du tar på figuren. Et annet
+          eksempel er "når brukt" som kjører når du bruker figuren. Hvis du vil at
+          zombien din skal forsvinne når sola går opp, putt den kommandoen under "når
+          dag"
+    mc_2016_intro:
+      1:
+        text: Hei, mitt navn er Jens og jeg er kreativ designer av Minecraft. Den
+          neste timen vil du lage ditt eget Minecraft-spill. Dette ser ut som Minecraft,
+          men verden har stanset. Sauene beveger seg ikke, kyllingene legger ikke
+          egg og zombiene står bare stille. Det er opp til deg å legge til kode som
+          gjør at Minecraft-verdenen fungerer.
+      2:
+        text: Mitt navn er Melissa og jeg er interaksjonsdesigner i Minecraft. Det
+          jeg egentlig er interessert i er hvordan mennesker tenker og bruker teknologi.
+          Derfor er denne jobben perfekt for meg, jeg bruker både informatikk og psykologi
+          for å finne ut hvordan folk tenker og oppfører seg.
+      3:
+        text: Du ser at skjermen er delt i tre hoveddeler. 1) På den venstre er Minecraft-spillet.
+          Akkurat nå er verdenen frosset, men vi skal fikse det ved å bruke kode.
+      4:
+        text: 2) Dette området i midten er verktøykassa. Hver av disse blokkene er
+          en kommando som kyllinger, sauer og andre Minecraft-skapninger kan forstå.
+      6:
+        text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
+      7:
+        text: Først skal vi lage program for en kylling. Dra inn "flytt fram"-blokk.
+          Når jeg klikker "kjør" går kyllingen ett skritt fram. For å komme videre
+          drar jeg inn enda en "flytt fram"-blokk og fester den under den første.
+          Blokkene fester seg sammen når de kommer nær nok. Når jeg klikker "kjør"
+          igjen vil kyllingen gå to skritt.
+      8:
+        text: Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til
+          verktøykassen.
+      9:
+        text: Etter du har trykket på "Kjør" kan du alltid trykke på "Nullstill"-knappen
+          for å nullstille spillet og starte på nytt. Nå er det din tur til å lage
+          din egen versjon av Minecraft. Kos deg!
+    mc_2016_spawn:
+      1:
+        text: I spill betyr sett ut det samme som opprett. I denne oppgaven skal du
+          sette ut zombier når sola går ned. For å gjøre dette må du bruke "når natt"-blokka.
+      2:
+        text: Siden vi ønsker at zombiene settes ut om natta skal vi legge til blokka
+          "sett ut zombie" under blokka "når natt". Når de er satt ut vil hver zombie
+          kjøre koden du legger under zombienes "når satt ut"-hendelse. Ha det gøy
+          med å sette ut zombier!
+    mc_2017_agent_intro:
+      11:
+        text: Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst.
+    mc_congrats_no_share:
+      1:
+        text: Gratulerer! Nå har du lært de grunnleggende begrepene i informatikk.
+      2:
+        text: Nå kan du bruke disse blokkene til å skape dine egne programmer. Det
+          er ingen flere instruksjoner, og ingen flere oppgaver å løse. Du kan bygge
+          alt du vil. Det er du som velger.
+      3:
+        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
+          Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
+          hus av ull!"
+      4:
+        text: Nå kan du bygge alt du vil. Ha det gøy!
+    mc_congrats_share:
+      1:
+        text: Gratulerer! Nå har du lært de grunnleggende byggeklossene i datavitenskap.
+      2:
+        text: Nå kan du bruke disse blokkene til å skape ting selv. Det er ingen flere
+          instruksjoner, og ingen flere oppgaver å løse. Du kan bygge alt du vil.
+          Det er du som velger.
+      3:
+        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
+          Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
+          hus av ull!"
+      4:
+        text: Når du er ferdig å bygge, kan du velge "Del" for å få en lenke å dele
+          med vennene dine. Ha det gøy!
+    mc_if_statements:
+      1:
+        text: Nå skal vi lære om hvis-kommandoer. Hvis-kommandoer er en viktig del
+          av det å lære å programmere. De hjelper datamaskinen med å ta beslutninger.
+      2:
+        text: Alle datamaskiner bruker hvis-kommandoer, også telefonen min. Når jeg
+          skal låse opp telefonen, kjører den en kode som sier at den låses opp hvis
+          jeg skriver inn riktig passord. Hvis ikke viser den en feilmelding.
+      3:
+        text: Med hvis-kommandoer kan du få Steve og Alex til å reagere på det de
+          ser i verdenen. Hvis det er en stein foran dem, kan de snu seg mot venstre.
+          Eller mot høyre hvis de går inn i et tre.
+      4:
+        text: Her har vi ikke lyst til å falle ned i lavaen. Det er lett å unngå lavaen.
+          Vi kan se den på skjermen. Men hva med lavaen som vi ikke kan se, den under
+          steinen?
+      5:
+        text: Når vi har utvunnet steinen, må vi sjekke om det er noe lava der før
+          vi beveger oss fremover. Hvis det er lava der, må vi plassere en stein foran
+          figurene før vi fortsetter. Slik kan vi fortsette trygt på ferden. Tid for
+          mer utvinning! Og husk å bruke hvis-kommandoen for å passe på hvor du går.
+    mc_intro:
+      1:
+        text: Mitt navn er Jens Bergensten, men jeg er mer kjent som Jeb. Jeg er sjefutvikler
+          for Minecraft her hos Mojang i Stockholm. Jeg begynte å programmere da jeg
+          var elleve eller tolv fordi jeg ville lage spill. En venn av faren min sa
+          at for å kunne lage spill måtte du lære å programmere. Slik var det jeg
+          kom i gang. Jeg liker å utforme og finne ut av arkitekturen til spill. Det
+          er det jeg virkelig liker med Minecraft.
+      2:
+        text: I løpet av den neste timen vil du lære grunnleggende datavitenskap ved
+          å programmere Alex eller Steve til å bevege seg gjennom en simulert del
+          av en Minecraft-verden.
+      3:
+        text: Tradisjonell programmering skjer vanligvis med tekst, men i dag bruker
+          vi Blockly, et system som lar deg dra og slippe blokker for å skrive programmer.
+          Under det hele lager du kode i Javascript.
+      4:
+        text: Konseptene som du skal lære, brukes av programmerere hver dag og utgjør
+          selve grunnlaget for datavitenskap. Her på Mojang bruker vi de samme konseptene
+          for å få Minecraft til å fungere.
+      5:
+        text: Før du begynner, må du velge en figur. Jeg velger Alex. La oss bygge
+          kode til et program som hjelper henne rundt på skjermen.
+      6:
+        text: Skjermen er delt i tre hoveddeler. Til venstre er spillevinduet for
+          Minecraft, hvor programmet skal kjøre. Instruksjonene for hvert nivå står
+          skrevet under.
+      7:
+        text: I midten har du verktøykassen, og hver av blokkene er en kommando som
+          bestemmer hva Alex gjør.
+      8:
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
+          opp programmet.
+      9:
+        text: Hva skjer hvis vi drar "flytt fremover"-blokken til arbeidsvinduet og
+          klikker på Kjør? Alex beveger seg én plass frem på rutenettet.
+      10:
+        text: Og hva om vi vil at hun skal gjøre noe etter at hun har flyttet seg
+          fremover? Da kan vi legge enda en blokk til programmet. Jeg velger "snu
+          mot høyre" og drar den under "flytt fremover" til denne oransje linjen dukker
+          opp. Deretter slipper jeg den, og så festes de to blokkene til hverandre.
+          Når vi klikker på Kjør igjen, utfører Alex kommandoene som er stablet oppå
+          hverandre i arbeidsvinduet.
+      11:
+        text: Hvis du ønsker å slette en blokk, er det bare å dra den tilbake til
+          verktøykassen.
+      12:
+        text: For å gjøre om endringer og tilbakestille nivået kan du bruke Begynn
+          på nytt-knappen øverst i hjørne av arbeidsvinduet. Ser du forresten den
+          lille trekanten på snu-blokkene? Hvis du ser en slik trekant, betyr det
+          at du kan velge et annet alternativ. La oss begynne å programmere!
+    mc_repeat:
+      1:
+        text: Jeg er Lydia Winters, merkevaresjef hos Mojang, og vi har laget et lite
+          spill som heter Minecraft.
+      2:
+        text: Det jeg liker best å gjøre i Minecraft er å utforske. Jeg elsker å dra
+          på eventyr i huler for å se hva jeg finner. Jeg jobber ikke som programmerer,
+          så det er spennende å ta del i Minecraft-timene og faktisk lære litt programmering
+          selv.
+      3:
+        text: I det siste nivået trengte vi mange "flytt fremover"-blokker. Det ville
+          ha vært lettere om vi bare kunne be datamaskinen om å utføre denne kommandoen
+          fire eller fem ganger. Heldigvis for oss er datamaskiner veldig flinke til
+          å gjenta kommandoer med gjenta-løkker.
+      4:
+        text: Når vi bygger Minecraft, bruker vi gjenta-løkker for å plassere alle
+          utgangsmaterialene som trenges til en ny verden. Det innebærer tusenvis
+          av blokker. Vi bruker også løkker på små måter, som for å få føttene til
+          Alex til å bevege seg mens hun går. Gjenta-løkker er en viktig del av all
+          programmering.
+      5:
+        text: Det er snart natt, så i de neste par nivåene skal vi bygge et hus som
+          holder oss trygge. Vi bruker gjenta for å gjøre dette på enkleste måte.
+      6:
+        text: For å bygge en vegg til huset kan vi enten be Alex flytte seg fremover
+          og plassere planker fire ganger, eller så kan vi be henne flytte seg fremover
+          og plassere én planke, så tar vi denne kommandoen og bruker gjenta-blokken
+          til å få henne til å utføre handlingen flere ganger. Deretter klikker vi
+          på gjenta-blokken og forteller henne hvor mange ganger hun skal utføre denne
+          handlingen. La oss bygge huset før det blir natt! Ha det gøy!
+    parameters:
+      1:
+        image: notes/stage15_1.jpg
+        text: Hei, jeg er Janete, og jeg er en ingeniør ved Zynga.
+      2:
+        image: notes/stage15_2.jpg
+        text: Hva hvis vi ønsker å tegne en haug med trekanter av forskjellig størrelse?
+      3:
+        image: notes/stage15_3.jpg
+        text: Vi kan skrive all koden for hånd, eller vi kan bruke en funksjon med
+          parametere.
+      4:
+        image: notes/stage15_4.jpg
+        text: For å gjøre dette, må du klikke på den blå stjernen i "tegn en trekant"
+          funksjonen. Dra så "Navn på parameter:" inn i "parametre"-blokka til høyre.
+          NB! Ikke skriv navnet først.
+      5:
+        image: notes/stage15_5.jpg
+        text: Så hvis du skriver "lengde" der det står "x" og så trykker "Enter",
+          vil du opprette et lengde-parameter til funksjonen.
+      6:
+        image: notes/stage15_6.jpg
+        text: Klikk på stjernen. Så klikker du på "variabler"-kategorien og drar "lengde"
+          inn i "fremover" blokka til funksjonen. Så drar du bort den gamle nummer-blokken.
+      7:
+        image: notes/stage15_7.jpg
+        text: For å bruke funksjonen med parametere. kan du klikke på kategorien funksjoner
+          og dra ut "tegn en trekant med lengde"-funksjonen.
+      8:
+        image: notes/stage15_8.jpg
+        text: Nå kan du bruke matematikk-blokken for å hente nye tall, og på den måten
+          kan du tegne trekanter av forskjellige størrelse.
+    playlab_events:
+      1:
+        text: Nå skal vi lære om noe som alle spillprogrammerere bruker hver dag.
+          De kalles hendelser. En hendelse forteller programmet å lytte til når noe
+          skjer. Når det skjer, utføres en handling.
+      2:
+        text: Eksempler på hendelser er å lytte etter et museklikk, en piltast eller
+          trykk på skjermen.
+      3:
+        text: Her skal vi gjøre romboten hilse på jordboerene når en spiller klikker
+          på ham. Vi bruker "ved klikk"-blokken og fester "si"-blokken til den. Når
+          spilleren klikker på romboten vil alt knyttet til denne "ved klikk"-hendelsesblokken
+          utføres. Hva gjør ditt romvesen si?
+      4:
+        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
+          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
+          Trinnvis blir spillet ditt mer interaktiv.
+    playlab_intro:
+      1:
+        text: Vi skal lage spill ved bruk av Spill Lab. Gode spill har en historie
+          og hver historie har figurer. Vi skal lære hvordan vi får våre figurer,
+          som hekser, romvesner og dyr, til å snakke, bevege seg og samhandle med
+          hverandre. Ved slutten av denne oppgaven kan du bygge et spill fra bunnen
+          av og dele det med dine venner.
+      2:
+        text: Skjermen din er delt inn i 3 hoveddeler. Den til venstre er spillrommet
+          der spille ditt skal kjøres. Instruksjonene for hvert nivå er skrevet nedenfor.
+      3:
+        text: Det midterste området er verktøykassen, og hver av disse blokkene er
+          et stykke kode. Det hvite mellomrommet til høyre kalles arbeidsområdet og
+          dette er hvor vi skal bygge vårt program.
+      4:
+        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
+          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
+          og deretter vil de snappe sammen.
+      5:
+        text: I denne første oppgaven er vår figur en pingvin og vi skal få den til
+          å si "Hallo" ved å dra "si"-blokken ut, knytte den til å "når kjører"-blokken
+          og skrive inn "Hallo." Vi kan også få pingvinen til å flytte på seg ved
+          hjelp av bruke blokkene for å bevege til høyre og venstre. Når du har dine
+          blokker på plass, trykk på Kjør-knappen for å se hva du har programmert.
+      6:
+        text: Kom i gang og til slutt vil du kunne lage et spill med alle slags spillere
+          som kan samhandle, bli glad eller trist, få poeng, kaste ildkuler eller
+          til og med trylle hverandre bort. Det er opp til deg og spillet du ønsker
+          å lage.
+    playlab_repeat_forever:
+      1:
+        text: Dette er "Gjenta for alltid"-blokken. Alt i denne blokken skjer for
+          alltid i spillet.
+      2:
+        text: Hvis vi ønsker å få en figur til å gjøre noe flere ganger uten at spilleren
+          trenger å gjøre noe, vil vi sette disse blokkene inn i blokken "Gjenta for
+          alltid".
+      3:
+        text: I den neste oppgaven er vårt mål å hjelpe trollmannen patruljere grensene
+          av riket, venstre og høyre kontinuerlig. Å lære hvordan du kan gjenta kommandoer
+          vil spare deg massevis av tid senere når du bygger ditt eget spill.
+    starwars_blocks_congrats:
+      1:
+        text: Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her
+          i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat
+          nå.
+      2:
+        text: Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte
+          alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen
+          flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill
+          og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp
+          nye lyder og nye kommandoer for å gjøre enda mer.
+      5:
+        text: Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link
+          som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
+          gøy!
+    starwars_blocks_events:
+      1:
+        text: Hei, mitt navn er Charita Carter. Jeg er senior creative producer her
+          på Walt Disney Imagineering. Jeg er ansvarlig for å lede et team som faktisk
+          produserer attraksjonene som gjestene våre kan oppleve. Vi er alltid på
+          utkikk etter måter som kan bli bedre og forbedre gjestenes opplevelse og
+          teknologi er kjernen i det.
+      2:
+        text: Gratulerer, du klarte det! Du programmerte BB-8. Jeg tror du er klar
+          for noe vanskeligere. La oss gjøre det! Nå som du har lært grunnleggende
+          programmering, reiser vi tilbake i tid, så du kan bygge ditt eget spill
+          med R2-D2 og C-3PO.
+      3:
+        text: 'For å lage et spill, må vi lære noe som alle programmerere bruker hver
+          eneste dag: det kalles hendelser. Hendelser forteller programmer til å lytte
+          og vente på at noe skal skje, og når det skjer, så skal programmet utføre
+          en handling.'
+      4:
+        text: Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller
+          et trykk på skjermen.
+      5:
+        text: 'Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
+          til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
+          bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
+          piltastene opp/ned eller opp/ned-knappene.'
+      7:
+        text: Steg for steg vil gjøre ditt spill mer interaktivt.
+    starwars_blocks_intro:
+      1:
+        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars:
+          The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8
+          er en rund drone. Hver eneste av hans bevegelser kontrolleres av programvare.
+          Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester
+          til filmindustrien. Faktisk, hundrevis av maskiningeniører jobbet sammen
+          for å lage en filmen The Force Awakens.'
+      2:
+        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor
+          jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens
+          er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik
+          at de ser troverdige ut i en galakse langt, langt borte.
+      4:
+        text: Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet
+          hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor
+          spillområdet.
+      5:
+        text: Dette midtre området er verktøykassen og hver av disse blokkene er en
+          kommando som BB-8 kan forstå.
+      6:
+        text: Det hvite området på høyre side kalles arbeidsområdet og det er der
+          vi skal bygge opp programmet vårt.
+      7:
+        text: Hvis jeg drar moveLeft(); blokken til vårt arbeidsområde, hva skjer?
+          BB-8 flytter seg ett steg på rutenettet.
+      8:
+        text: Og hva om jeg ønsker at BB-8 skal gjøre noe etter moveLeft(); puslebit?
+          Jeg kan legge til en annen puslebit til vårt program. Jeg vil velge moveUp();
+          puslebiten og dra den under min moveLeft(); puslebit for å feste den der.
+          Et lite lys markerer også at den kan bli festet. Slipp puslebiten og den
+          sitter på plass. Når jeg trykker kjør igjen, vil BB-8 utføre kommandoer
+          som er stablet topp til bunn i vårt arbeidsområdet.
+      9:
+        text: Om du ønsker å slette en puslebit, så drar du den ønskede puslebiten
+          fra arbeidsområdet tilbake til verktøykassen.
+      10:
+        text: Etter at du har klikket kjør, så kan du alltid klikke på nullstill-knappen
+          for å få BB-8 tilbake til start. La oss prøve!
+    starwars_congrats:
+      1:
+        text: Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her
+          i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat
+          nå.
+      2:
+        text: Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte
+          alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen
+          flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill
+          og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp
+          nye lyder og nye kommandoer for å gjøre enda mer.
+      5:
+        text: Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link
+          som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
+          gøy!
+    starwars_events:
+      1:
+        text: Hei, mitt navn er Charita Carter. Jeg er senior creative producer her
+          på Walt Disney Imagineering. Jeg er ansvarlig for å lede et team som faktisk
+          produserer attraksjonene som gjestene våre kan oppleve. Vi er alltid på
+          utkikk etter måter som kan bli bedre og forbedre gjestenes opplevelse og
+          teknologi er kjernen i det.
+      2:
+        text: Gratulerer, du klarte det! Du programmerte BB-8. Jeg tror du er klar
+          for noe vanskeligere. La oss gjøre det! Nå som du har lært grunnleggende
+          programmering, reiser vi tilbake i tid, så du kan bygge ditt eget spill
+          med R2-D2 og C-3PO.
+      3:
+        text: 'For å lage et spill, må vi lære noe som alle programmerere bruker hver
+          eneste dag: det kalles hendelser. Hendelser forteller programmer til å lytte
+          og vente på at noe skal skje, og når det skjer, så skal programmet utføre
+          en handling.'
+      4:
+        text: Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller
+          et trykk på skjermen.
+      5:
+        text: 'Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed
+          til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi
+          bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker
+          piltastene opp/ned eller opp/ned-knappene.'
+      6:
+        text: Vi bruker whenUp() hendelsesblokken og kobler goUp() blokken til den.
+          Når spilleren trykker pil opp tasten, kjøres koden knyttet til whenUp()
+          blokken. Og vi gjør tilsvarende for å få R2-D2 til å flytte ned.
+      7:
+        text: For å gjøre dette, bruker vi en kommando som heter whenUp(). Når du
+          drar kommandoen ut av verktøykassa, ser du at den starter og slutter med
+          en klammeparentes, i stedet for et semikolon. Dette gir oss plass til å
+          putte andre kommandoer i midten. Hver kommando vi putter inne i disse klammene,
+          vil kjøre når spilleren trykker på pil opp.
+      8:
+        text: Vi vil at R2-D2 skal gå opp, så la oss putte en blokk med goUp(); inne
+          i kommandoen. Så gjør vi det samme for å få R2-D2 til å gå ned.
+      9:
+        text: I stedet for å skrive all koden for å kontrollere doiden på forhånd,
+          kan vi la R2-D2 reagere på kapper som flytter ham rundt på skjermen. Skritt
+          for skritt vil spillet ditt bli mer interaktivt.
+    starwars_intro:
+      1:
+        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars:
+          The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8
+          er en rund drone. Alt den gjør og alle dens bevegelser kontrolleres av programvare.
+          Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester
+          til filmindustrien. Faktisk jobbet hundrevis av IT-ingeniører sammen for
+          å lage en film som The Force Awakens.'
+      2:
+        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor
+          jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens
+          er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik
+          at de ser troverdige ut i en galakse langt, langt borte.
+      3:
+        text: Den neste timen skal vi prøve å lage våre egne Star Wars-spill, mens
+          vi lærer deg de grunnleggende konseptene i programmering. Programmering
+          er vanligvis tekstbasert, men her kommer vi istedenfor til å bruke blokker
+          som vi kan dra og slippe for å lage programmene. I bakgrunnen skrives det
+          fremdeles kode. Etter at du har testet det enkleste ved hjelp av blokker,
+          så vil vi bytte over til JavaScript, et av de mest populære programmeringsspråkene
+          på Internett.
+      4:
+        text: For å komme igang, skal vi jobbe med Rey for å programmere BB-8 til
+          å gå og samle alle skrapdeler. Skjermen din er delt i tre deler. På venstre
+          side finner du Star Wars spillområde, der koden vil kjøre. Instruksjonen
+          for hvert nivå er skrevet nedenfor spillområdet.
+      5:
+        text: Dette midtre området er verktøykassen og hver av disse blokkene er en
+          kommando som BB-8 kan forstå.
+      6:
+        text: Det hvite området på høyre side kalles arbeidsområdet og det er der
+          vi skal bygge opp programmet vårt.
+      7:
+        text: Hva skjer hvis du drar blokken flyttVenstre(); til ditt arbeidsområde
+          og trykker kjør? BB-8 flytter en blokk til venstre på rutenettet.
+      8:
+        text: Og hva om jeg vil få BB-8 til å gjøre noe etter blokken moveLeft();?
+          Jeg kan legge en annen blokk til programmet. Jeg velger blokken moveUp();
+          og jeg drar den under min blokk moveLeft(); til uthevingen vises. Så slipper
+          den og de to blokkene festes sammen.
+      9:
+        text: Når jeg klikker kjør igjen, utfører BB-8 kommandoene som er stablet
+          fra topp til bunn i arbeidsområdet. Hvis du vil slette en blokk, bare fjerne
+          den fra stabelen og dra den tilbake til verktøykassa.
+      10:
+        text: Etter at du har valgt kjør, kan du alltid velge tilbakestill-knappen
+          for å få BB-8 tilbake til start. La oss rulle i gang!
+    starwars_typing:
+      1:
+        text: Inne i blokkene vi har brukt er JavaScript-kommandoer. JavaScript er
+          det mest populære programmeringsspråket for profesjonelle utviklere i dag.
+          Blokker er en flott måte å komme i gang med å lære koding og selv ved anerkjente
+          universiteter som Harvard og Berkeley begynner man å lære på denne måten.
+          Men så fort man lærer det grunnleggende, skriver ingeniører kode fordi det
+          gir oss muligheten til å jobbe raskere.
+      2:
+        text: Vi kan skrive hundrevis av kommandoer uten å måtte finne dem i verktøykassen
+          eller trekke dem ut. Fordi du lærer å skrive kan være tregere i begynnelsen,
+          men vi ville at du skulle få prøve det.
+      3:
+        text: Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på
+          hvilken som helst oppgave for å bytte fra blokker til å skrive koden som
+          tekst.
+      4:
+        text: I neste leksjon vil du starte opp i skrive modus. Her kan du fremdeles
+          dra blokken fra verktøykassen, eller du kan skrive kommandonavnet. Når du
+          begynner å skrive, vil du se at navnene på mulig kommandoer vil vises nedenfor
+          der du skriver. I stedet for å skrive hele kommandonavnet kan du velge en
+          av disse å arbeide raskere. I jobben min bruker jeg denne funksjonen for
+          autofullføring hele tiden når jeg skriver kode.
+      6:
+        text: Når det blir en feil på en linje vil feilen bli fremhevet slik at du
+          kan endre teksten for å fikse feilen.
+      7:
+        text: Hvis du står fast kan du alltid starte på nytt med knappen start på
+          nytt og du kan bytte tilbake til blokk-modus når som helst ved å trykke
+          på knappen øverst til høyre. Ok, la oss prøve å skrive! Ikke bli frustrert
+          hvis du gjør noe feil. Det tar noen forsøk for å få det riktig.
+    tutorial_puzzle_challenge:
+      1:
+        text: Hva vil du bli når du blir stor, Olivia? En astronaut. Vet du tilfeldigvis
+          hva en dataprogrammerer er? Ja.. mmm... nei. Hm, vent - hva? Jeg er ikke
+          helt sikker på hvordan jeg skal forklare det, men dataprogrammering er ganske
+          enkelt. Det er et sett av instruksjoner, akkurat som en oppskrift, som du
+          må følge steg-for-steg for å få det resultatet du ønsker til slutt.
+      2:
+        text: Jeg kan endre antallet pixler, lengden på en linje, ved å bruke denne
+          nedtrekkslisten. Hvor lang var den igjen? Du kan se instruksjonene igjen
+          ved å kikke under Kjør-knappen. Her har jeg brukt "gå fremover"-blokken
+          og jeg skal velge 100 pixler. Jeg kan slette en blokk ved å dra den inn
+          i verktøykassa eller søppelbøtta. La oss sette den tilbake.
+      3:
+        text: Kjør koden ved å trykke på Kjør. Vel, det fungerte ikke! Jeg trykker
+          Nullstill og tenker ut hva som var feil. Du kan prøve et puslespill så mange
+          ganger du vil. Du kan hoppe over puslespill og komme tilbake til dem. Bare
+          sørg for å gjør ditt beste, og ikke gi opp. La oss legge til enda en "gå
+          fremover". Det virker fortsatt ikke. Jeg kan plassere en blokk mellom andre
+          blokker.
+      4:
+        text: La oss ta en snu-blokk og plasser den mellom "gå fremover"-blokkene.
+          Snu til venstre 45 grader. La oss kjøre den igjen. Nullstill, kjør, flott!
+          Her er et puslespill til. Noen ganger får du en startkode som du skal fullføre.
+          Her trenger jeg å legge til passende lengder og grader.
+      5:
+        text: Noen ganger kaster du kanskje starterkoden i søpla ved et uhell. Hva
+          gjør du da? Du kan trykke på knappen for å starte oppgaven på nytt. Jeg
+          skal dra denne nummerblokka inn i de ulike pikseområdene. Velg 100 for piksler,
+          45 for grader og 100 for piksler igjen. Kult! Her er Code Studio-bien. Jeg
+          må flytte bien til hver blomst og få nektar.
+      6:
+        text: Den første blomsten er tre blokker unna, så jeg trenger å flytte tre
+          steg forover. 1, 2, 3. Så en få nektar, så en få nektar til. Vel, det fungerte
+          ikke! Jeg legger på et til steg fremoover, mellom få nektar-blokkene og
+          kjører det på nytt. Jippi, det fungerer! Du lærte akkurat hvordan du skulle
+          bruke Code Studio sine kunst- og bie-oppgaver. Lykke til med Code Studios
+          oppgaveutfordringer.
+    unplug1:
+      1:
+        text: Hva vil du bli når du blir stor, Olivia? Hmmm, astronaut! Vet du tilfeldigvis
+          hva en dataprogrammerer er? Ja.. mmm... nei. Hm, vent - hva? Jeg vet ikke
+          helt hvordan jeg skal forklare det. Dataprogrammering er ganske enkelt.
+          Det er et sett av instruksjoner, som en oppskrift. Du må følge dem steg-for-steg
+          for å få det resultatet du ønsker til slutt.
+      2:
+        text: Datavitenskap er en måte å påvirke verden på. Det kan være musikkvideoer,
+          spill, og oppdage hvorvidt noen er relatert til noen andre eller ikke. Du
+          vet, finne vennene til folk. Du kan gjøre alle mulige sprø ting som faktisk
+          redder liv. Du må ha en drivkraft, tror jeg. For meg er det som en malepensel.
+          Jeg synes at stor programmering ikke er så ulikt stor kunst.
+      3:
+        text: Når jeg endelig lærte litt programmering, var det som å oppdage en haug
+          dører, og når du åpner dem og finner du selvfølgelig en annen gang fylt
+          med med dører. Programmering er enkelt og morsomt. Du kan gjøre alt ditt
+          sinn ønsker å gjøre. Når du endelig åpner nok dører kommer lyset inn. For
+          meg er et ferdig program som en struktur fylt med lys. Alle hjørner er opplyst.
+          Mengden personer som du kan komme i kontakt med og samhandle med er noe
+          verden aldri har sett før.
+      4:
+        text: Vår første leksjon i denne serien handler om hva informatikk er, hva
+          en IT-ingeniør gjør og hvordan du bruke teknologi på en mer forsvarlige
+          måte. Dette er svært viktig lærdom, men leksjonen har mye tekst. På slutten
+          får du gjøre din egen tilpassede koding, med dine initialer. Det er en morsom
+          aktivitet, og det er veldig nyttig fordi binærsystemet er en av de tingene
+          som føles veldig teknisk, men når du først forstår det, er det som om du
+          snakker et hemmelig kodespråk.
+    unplug10:
+      1:
+        text: Denne aktiviteten forklarer lettvint hvordan Internett fungerer. Vi
+          vil forklare all terminologien du trenger å vite på en enkel måte slik at
+          elevene kan simulere sending av meldinger, som for eksempel en e-post.
+      2:
+        text: Elevene vil sende meldinger mens de later som de er en av tre overføringsmetoder.
+          Trådløst Internett, ADSL eller fiber. Elevene som representerer trådløst
+          må ha meldingen de overfører på en lapp på toppen av hodet fordi trådløst
+          har høyest sannsynlighet for å miste informasjon underveis.
+      3:
+        text: Elevene som later som de er ADSL vil bære meldingen på toppen av en
+          utstrakt hånd, der er det litt mindre sannsynlig å miste informasjon. Og
+          elevene som representerer fiberoptikk får å bære dem med begge hendene samlet.
+          Denne aktiviteten er en flott måte å forstå teknologi som mange av oss bruker
+          hver dag.
+    unplug11:
+      1:
+        text: Nå er tiden inne for å ta et steg tilbake og få en god oversikt over
+          de siste nitten leksjonene vi har vært gjennom. Dette er et ypperlig tidspunkt
+          å gi elevene et friminutt om det er mulig, det de nettopp har vært gjennom
+          er en stor prestasjon. De har lært mer om informatikk gjennom disse leksjonene
+          enn de fleste voksne har fått med seg gjennom hele sitt liv.
+      3:
+        text: Fra alle oss her ved Code.org, vi håper du har hatt MASSEVIS av moro
+          i løpet av dette kurset. Om du drømmer om å lage den beste nye appen, bruke
+          programmering til å kurere sykdommer eller du bare ønsker å være en fremragende
+          problemløser - dette kurset var det første trinnet for å oppnå de drømmene.
+    unplug2:
+      1:
+        text: Leksjonen i programmeringstankegang lærer deg hvordan du kan ta et stort
+          of vanskelig problem, og bryte det ned i flere og enklere problemer. Målet
+          med denne leksjonen er å skrive et sett med instruksjoner som noen kan følge
+          for å tegne et av monstrene i leksjonsplanen.
+      2:
+        text: 'Studentene deler seg i grupper for å skrive instrukser. Deretter bytter
+          de instruksene med en annen gruppe, som bruker instruksene for å tegne monsteret.
+          Gruppene skriver instrukser med de fire trinnene i programmeringstankegang:
+          nedbryting, mønstergjenkjenning, abstraksjon og algoritmer.'
+      3:
+        text: Først skal gruppene dele opp oppgaven, som innebærer å lage en plan.
+          Deretter vil de se etter gjentakende mønstre mellom monstrene i katalogen.
+          Når de ser forskjeller mellom monstre, skal de abstrahere vekk eller fjerne
+          disse detaljene. Dersom for eksempel et monster i katalogen har vegitas-øyne,
+          og en annen har spritem-øyne, men begge altså har øyne, så vi kan skrive
+          en linje som sier at monster har "blank" øyne.
+      4:
+        text: Elevene vil kunne skrive et sett av instrukser, også kalt en algoritme,
+          som lister opp monstrenes kroppsdeler, med tomme typebeskrivelser. Elevene
+          sender settet av instrukser til andre studenter som gjenskaper sitt eget
+          monster.
+    unplug3:
+      1:
+        text: Når vi programmerer på millimeterpapir forklarer vi hvordan koding fungerer
+          ved å la folk gjenskape tegninger med kun piler og skriblerier. En person
+          er gitt en liten tegning på millimeterpapir og han eller hun skal prøve
+          å forklare hvordan man kan gjenskape tegningen med kun spesiefike piler.
+      2:
+        text: 'I denne aktiviteten kan du kun bruke disse symbolene: flytt en rute
+          fram, flytt en rute tilbake, flytt en rute opp, flytt en rute ned, bytt
+          til neste farge, og fargelegg en rute med farge. Når vi har kodet oss ferdig
+          kan vi gi det til en annen person som skal lese koden og gjenskape bildet.'
+    unplug4:
+      1:
+        text: Når vi programmerer på millimeterpapir forklarer vi hvordan koding fungerer
+          ved å la folk gjenskape tegninger med kun piler og skriblerier. En person
+          er gitt en liten tegning på millimeterpapir og han eller hun skal prøve
+          å forklare hvordan man kan gjenskape tegningen med kun spesiefike piler.
+      2:
+        text: I den andre halvparten av aktiviteten, spør vi elevene om på hvor mange
+          måter de kan brette et papir for å lage seksten identiske rektangler. Så
+          forklarer du hvordan flere løsninger kan lede til det samme sluttresultatet,
+          og hvorfor noen løsninger er bedre i visse situasjoner.
+    unplug5:
+      1:
+        text: Når vi programmerer på millimeterpapir forklarer vi hvordan koding fungerer
+          ved å la folk gjenskape tegninger med kun piler og skriblerier. En person
+          er gitt en liten tegning på millimeterpapir og han eller hun skal prøve
+          å forklare hvordan man kan gjenskape tegningen med kun spesiefike piler.
+      2:
+        text: I den andre halvparten av aktiviteten, spør vi elevene om på hvor mange
+          måter de kan brette et papir for å lage seksten identiske rektangler. Så
+          forklarer du hvordan flere løsninger kan lede til det samme sluttresultatet,
+          og hvorfor noen løsninger er bedre i visse situasjoner.
+    unplug6:
+      1:
+        text: Denne aktiviteten heter koding med kort og passer fint for alle aldre.
+          Som du lærte med hvis-uttrykkene i tidligere leksjoner i Blockly, har hvis-utrykkene
+          en del som du må evaluere for å finne ut om er sann eller usann. Dette kaller
+          vi en betingelse og kan brukes på mange forskjellige måter.
+      2:
+        text: Vi tar nytte det ved å lage programmer på papir som du kjører ved å
+          trekke et tilfeldig kort. Du kan ha et hvis-uttrykk som sier noe sånn som
+          at hvis kortet du trakk var større enn 8 får du et poeng. Hvis ikke får
+          motstanderen din ett poeng. Du kan lage betingelsene så enkle eller kompliserte
+          som du føler deg komfortabel med.
+    unplug7:
+      1:
+        text: Du vet når du søker opp teksten til en sang, hvor de kun definerer refrenget
+          på starten av sangen, mens i resten av teksten referer de deg bare tilbake
+          til refrenget? Det er slik man kaller en funksjon.
+      2:
+        text: I denne økten definerer vi refrenget på starten av sangen og når vi
+          synger gjennom sangen, kan vi legge merke til at klassen ikke synger ordet
+          refreng, men automatisk går til toppen hvor vi definerte refrenget og synger
+          det. Vi bruker det som en fin introduksjon til hvordan vi kan forstå hva
+          et program gjør når det definerer og kaller en funksjon.
+      3:
+        text: Vi bruker kjente sanger, inkludert Old Macdonald, for å snakke om hvordan
+          et refreng kalles om og om igjen. Og hvordan noen ganger et refreng kan
+          endre seg. Når du har en sang som Old Macdonald, der ordene endres, er et
+          flott sted å introdusere ideen om parametere. Send forskjellige ord gjennom
+          funksjonen slik at du kan se hvordan refrenget endres. Når alle skjønner
+          det, kan du ta andre kjente sanger og bryte dem opp selv. Se om dere kan
+          finne det ut sammen.
+    unplug9:
+      3:
+        text: Dette er en flott introduksjon til feilsøking, korrekturlesning av ditt
+          eget og andres arbeid er en god øvelse. Du vil raskt forstå hvor viktig
+          det er at du er forsiktig med hvordan du koder når mange andre er avhengig
+          av deg.

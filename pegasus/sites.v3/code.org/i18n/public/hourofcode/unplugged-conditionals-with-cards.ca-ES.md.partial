@@ -1,46 +1,43 @@
 ---
-title: Teacher Resources - Conditionals with Cards
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Recursos per al professor - Condicionals amb cartes
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Condicionals amb cartes: Tutorial d'una Hora del Codi
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## Recursos del professor
 
-### Lesson Plans:
+### Plans de les lliçons:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Condicionals amb cartes](/files/ConditionalsHoC.pdf)
+- Vídeo: [Com fer l'activitat Condicionals amb cartes a l'aula](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Activitats d'ampliació:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Més enllà d'una Hora del Codi](http://code.org/learn/beyond)
+- [Fonaments de la informàtica: Curs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Altres recursos del professor:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Guia d'ús de l'Hora del Codi per a educadors](https://hourofcode.com/how-to)
+- [Bones pràctiques d'educadors brillants](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Esdeveniment en directe: [Guia de l'Hora del Codi per a educadors](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Resum
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Aprèn sobre algorismes i sentències condicionals amb una baralla de cartes en aquesta activitat sense connexió. Els alumnes fan aquesta activitat en equips i necessitaran una baralla de cartes per equip.
 
-**Recommended Age Range:** 8-12
+**Edats recomanades:** Entre 8 i 12 anys
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Requisits tecnològics:** Cap ni un! Aquesta activitat és sense connexió, de manera que es pot fer sense res més que una baralla de cartes.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Descarregar activitat</button></a>
 
 [/col-50]

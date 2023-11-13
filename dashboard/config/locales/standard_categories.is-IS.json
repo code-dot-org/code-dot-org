@@ -2,17 +2,17 @@
   "is-IS": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Tölvunarmiðuð hugsun"
-        },
-        "L": {
-          "description": "Forritunarmál"
-        },
         "C": {
           "description": "Hringir"
         },
+        "CT": {
+          "description": "Tölvunarmiðuð hugsun"
+        },
         "F": {
           "description": "Föll"
+        },
+        "L": {
+          "description": "Forritunarmál"
         }
       }
     }

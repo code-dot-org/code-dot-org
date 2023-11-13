@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
   cancelEditingStudent: () => {},
   removeStudent: () => {},
   canEdit: true,
-  loadSectionData: () => {}
+  loadSectionData: () => {},
 };
 
 describe('ManageStudentsActionsCell', () => {
@@ -72,7 +72,7 @@ describe('ManageStudentsActionsCell', () => {
         done: sinon
           .stub()
           .callsArg(0)
-          .returns({fail: () => {}})
+          .returns({fail: () => {}}),
       });
     });
 
@@ -84,7 +84,7 @@ describe('ManageStudentsActionsCell', () => {
       const loadSectionSpy = sinon.spy();
       const props = {
         ...DEFAULT_PROPS,
-        ...{loadSectionData: loadSectionSpy}
+        ...{loadSectionData: loadSectionSpy},
       };
       const wrapper = shallow(<ManageStudentsActionsCell {...props} />);
       wrapper.instance().onConfirmDelete();

@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: සංග්රහයේ පැය සහ CSEdWeek උපදේශක කමිටුව
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# සංග්රහයේ පැය සහ CSEdWeek උපදේශක කමිටුව
 
 {{උපදේශක කමිටුව / හෙඩ්ෂොට් ගැන}} 
 

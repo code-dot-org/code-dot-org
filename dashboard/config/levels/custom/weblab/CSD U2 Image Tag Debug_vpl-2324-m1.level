@@ -1,0 +1,35 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-08-17T21:28:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html> \\r\\n \\t<head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"nature.css\\\">\\r\\n\\t<\\/head>\\r\\n\\t<body>\\r\\n\\t\\t<h1>Colors in Nature<\\/h1>\\r\\n\\t\\t<h2>Red<\\/h2>\\r\\n\\t\\t<img src=\\\"red.jpg\\\" alt=\\\"red sky\\\"> \\r\\n    <p>Grant W. Goodge\\/ NOAA - Library of Congress - Public Domain<\\/p>\\r\\n\\t\\t<h2>Green<\\/h2>\\r\\n\\t\\t<img src=\\\"grass.jpg\\\" alt=\\\"green grass\\\"> \\r\\n    <p>Jin Zan - Wikimedia Commons - CC-BY-SA<\\/p>\\r\\n\\t\\t<h2>Blue<\\/h2>\\r\\n\\t\\t<img src=\\\"blu.jpg\\\" alt=\\\"blue islands\\\">\\r\\n    <p>MALIZ ONG - PublicDomainPicture.net - CC0 Public Domain<\\/p>\\r\\n\\t<\\/body>\\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"red_sky.jpg\",\r\n      \"url\": \"https://images.code.org/2bf24034ecb0eee956ecf699e247cd9c-image-1493406103669.jpg\"\r\n    },\r\n{\r\n      \"name\": \"grass.JPG\",\r\n      \"url\": \"https://images.code.org/04f105e4bb9d3f38b711046e42756fbd-image-1493406146007.JPG\"\r\n    },\r\n{\r\n      \"name\": \"blue.jpg\",\r\n      \"url\": \"https://images.code.org/72536e59fe2b0d6b6496ed50b18fe07e-image-1565121442029.jpg\"\r\n    },\r\n{\r\n      \"name\": \"nature.css\",\r\n      \"data\": \"p {\\r\\n  color: black;\\r\\n  font-size: 6px;\\r\\n}\\r\\nh1 {\\r\\n  font-weight: bold;\\r\\n  color: deepskyblue;\\r\\n}\\r\\nh2 {\\r\\n  font-weight: bold;\\r\\n  color: coral;\\r\\n}\"\r\n}\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "long_instructions": "\r\n# The Details Matter\r\n\r\nThe `src` attribute needs to point to the _exact_ filename of the image you want to use. That means you need to pay attention to spelling, capitalization, and the file extension. Each of the three images on this page is broken because of an improper `src` attribute. \r\n\r\n# Do This\r\n\r\n1) Using the file menu for reference, fix each of the image tags.\r\n- When you are finished, each image should display correctly in the webpage preview.\r\n\r\n_Note: Even though the images are not loading properly, our website is still showing descriptive text of what should be there because we used `alt` attributes. Cool!_\r\n",
+    "hide_share_and_remix": "true",
+    "submittable": "false",
+    "encrypted_examples": "NEp9W+EfoqGLBKwuOGtvw6SgxIpZ8wgP4rEFyvsiXq7ru9t6FTenu9CH0d4w\nCg8pBDqFzumRFEdT0SOETKKsGw==\n",
+    "parent_level_id": 20033,
+    "name_suffix": "_vpl-2324-m1",
+    "reference_links": [
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
+    ],
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
+    "encrypted": "false",
+    "validation_enabled": "true",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-17T21:28:58.419+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Debug_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Debug_2023\"}]"
+}]]></config>
+</Weblab>

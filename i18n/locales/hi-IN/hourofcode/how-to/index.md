@@ -19,13 +19,13 @@ title: ऑवर ऑफ़ कोड कैसे करें मार्गद�
 - [अपने ऑवर ऑफ़ कोड को मजबूती से कैसे शुरू करें](#how-to-start)
 - [कोडिंग प्राप्त करें](#code)
 - [अपने छात्र की सफलता की ख़ुशी मनाएं](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. ऑवर ऑफ़ कोड हाउ-टू विडियो देखें <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. ऑवर ऑफ़ कोड हाउ-टू विडियो देखें <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-जब आप [अपने ऑवर ऑफ़ कोड ईवेंट पर साइन अप करते हैं](/#join), तो आपको एक सफल ऑवर ऑफ़ कोड की मेजबानी के लिए समाचार और सुझावों के साथ उपयोगी ईमेल संचार प्राप्त होंगे। It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+जब आप [अपने ऑवर ऑफ कोड इवेंट में साइन अप करते हैं](/events), तो आपको एक सफल ऑवर ऑफ कोड की मेज़बानी करने के लिए समाचारों और सुझावों वाला उपयोगी ईमेल संचार प्राप्त होगा। It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -111,46 +111,52 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
-
-When your students come across difficulties it's okay to respond:
-
-- "मुझे मालूम नहीं। चलो ये साथ मिल कर सुलझाने की कोशिश करते है|"
-- "तकनीक हमेशा जिस तरह से हम चाहते है वैसा काम नहीं करता है."
-- "संगणक प्रोग्रामिंग सिखाना ये इक नयी भाषा सिखाने जैसा है; आप तुरंत सरलातासे प्रयोग नहीं कर पाएंगे|"
-
-What if a student finishes early?
-
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
-- Or, ask students who finish early to help classmates who are having trouble with the activity.
-
-* * *
+- व्हाइटबोर्ड पर ट्यूटोरियल लिंक लिखें। अपने चुने हुए ट्यूटोरियल</a>की जानकारी पर सूचीबद्ध लिंक ढूंढें।</li> </ul> 
+    
+    When your students come across difficulties it's okay to respond:
+    
+    - "मुझे मालूम नहीं। चलो ये साथ मिल कर सुलझाने की कोशिश करते है|"
+    - "तकनीक हमेशा जिस तरह से हम चाहते है वैसा काम नहीं करता है."
+    - "संगणक प्रोग्रामिंग सिखाना ये इक नयी भाषा सिखाने जैसा है; आप तुरंत सरलातासे प्रयोग नहीं कर पाएंगे|"
+    
+    What if a student finishes early?
+    
+    - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+    - Or, ask students who finish early to help classmates who are having trouble with the activity.
+    
+    * * *
+    
+    
 
 <a id="celebrate"></a>
 
-## 7. अपने छात्रों की सफलता का जश्न मनाएं
-
-[col-33]
-
-![](/images/fit-600/boy-certificate.jpg)
-
-[/col-33]
-
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
-
-* * *
+    
+    ## 7. अपने छात्रों की सफलता का जश्न मनाएं
+    
+    [col-33]
+    
+    ![](/images/fit-600/boy-certificate.jpg)
+    
+    [/col-33]
+    
+    - [अपने छात्रों]({{ urls/certificates }}) के लिए प्रमाणपत्र प्रिंट करें।
+    - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+    - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
+    
+    * * *
+    
+    
 
 <a id="other-resources"></a>
 
-## शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन:
-
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- [ऑवर ऑफ़ कोड के अक्सर पूछे जाने वाले प्रश्न ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) पर एक बार फिर से नज़र डालें।
-
-### अवर ओफ कोड के बाद क्या?
-
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
-
-{{ signup_button }}
+    
+    ## शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन:
+    
+    - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
+    - [ऑवर ऑफ़ कोड के अक्सर पूछे जाने वाले प्रश्न ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) पर एक बार फिर से नज़र डालें।
+    
+    ### अवर ओफ कोड के बाद क्या?
+    
+    कंप्यूटर विज्ञान को ऑवर ऑफ कोड के साथ समाप्त नहीं होना चाहिए! [अपने स्कूल और छात्रों](/beyond) के लिए CS लाने का तरीका जानें।
+    
+    {{ signup_button }}

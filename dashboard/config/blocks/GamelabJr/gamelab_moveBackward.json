@@ -12,6 +12,7 @@
         "name": "DISTANCE",
         "type": "Number"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "افزودن CSS",
+  "addImageButton": "افزودن تصویر",
+  "addHTMLButton": "افزودن HTML",
+  "closeFullscreenPreview": "بستن پیش‌نمایش تمام‌صفحه",
+  "currentProjectCapacity": "{currentMegabytes}مگابایت از {totalMegabytes}مگابایت مصرف‌شده",
+  "disallowedHtml": "فایل «{filename}» حاوی عناصر HTML غیرمجاز است: «{disallowedTags}». وقتی این گفتگو بسته شود، حذف خواهند شد.",
+  "errorSavingProject": "هنگام ذخیره خودکار پروژه، چیزی کار نکرد. اتصال اینترنت خود را بررسی کنید و به صورت دستی ذخیره کنید. اگر این مشکل ادامه داشت، برای شروع مجدد، صفحه را دوباره بارگذاری کنید.",
+  "fatalError": "خطای مهلک: {message}. اگر در حالت مرور خصوصی هستید، امکان نوشتن داده‌ها وجود ندارد.",
+  "loadFailure": "متأسفیم، آزمایشگاه وب به دلایلی بارگذاری نشد. خطا: {message}",
+  "openFullscreenPreview": "باز کردن پیش‌نمایش تمام‌صفحه",
+  "refreshPreview": "تازه‌سازی و ذخیره",
+  "reloading": "بارگذاری مجدد...",
+  "reset": "بازنشانی آزمایشگاه وب",
+  "resetComplete": "بازنشانی آزمایشگاه وب انجام شد",
+  "resetFailure": "بازنشانی آزمایشگاه وب انجام نشد: {message}.",
+  "toggleInspectorOn": "بازرس: خاموش",
+  "toggleInspectorOff": "بازرس: روشن",
+  "troubleshootingSupport": "برای اطلاعات بیشتر، لطفاً به مقاله پشتیبانی ما [\"Troubleshooting Web Lab problems\"]({url}) مراجعه کنید.",
+  "uploadError": "خطای آپلود"
+}

@@ -17,7 +17,7 @@
     #teacher_reminders
       - unless current_user.accepted_latest_terms?
         = render partial: 'layouts/implicit_new_user_terms_interstitial'
-      - if show_diversity_survey? SurveyResult::DIVERSITY_2022
+      - if show_diversity_survey? SurveyResult::DIVERSITY_2023
         = render partial: 'home/survey_diversity'
 
 #homepage-container

@@ -50,9 +50,6 @@ mr:
       expired: "कालबाह्य झाले आहे, कृपया नवीन विनंती करा"
       not_found: "सापडले नाही"
       not_locked: "लॉक केलेले नव्हते"
-      not_saved:
-        one: "1 त्रुटीमुळे हे %{resource} सेव्ह करण्यापासून प्रतिबंधित आहे:"
-        other: "%{count} त्रुटींमुळे हे %{resource} सेव्ह होण्यापासून प्रतिबंधित आहे:"
     invitations:
       send_instructions: 'आमंत्रण ईमेल %{email} वर पाठवले आहे.'
       invitation_token_invalid: 'दिलेले आमंत्रण टोकन वैध नाही.'

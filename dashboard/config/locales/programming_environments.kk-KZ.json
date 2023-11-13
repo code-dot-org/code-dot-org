@@ -2,66 +2,11 @@
   "kk-KZ": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "groups": {
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Түс"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Түс"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Математика",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Минимум санды қайтарады"
-                    },
-                    "max": {
-                      "description": "Максимум санды қайтарады"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Минимум санды қайтарады"
-                    },
-                    "max": {
-                      "description": "Максимум санды қайтарады"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Айнымалылар"
-            },
-            "functions": {
-              "name": "Функциялар"
-            }
-          }
-        },
         "applab": {
-          "name": "Қосымшалар Лабораториясы",
-          "description": "App Lab онай қосымшалар жасау үшін бағдарламалау ортасы. Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес.",
           "categories": {
-            "ui_controls": {
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Функция"
@@ -81,9 +26,37 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "Функциялар"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Максимум санды қайтарады"
+                    },
+                    "min": {
+                      "description": "Минимум санды қайтарады"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Максимум санды қайтарады"
+                    },
+                    "min": {
+                      "description": "Минимум санды қайтарады"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Функция"
@@ -92,36 +65,63 @@
                 }
               }
             },
-            "math": {
-              "name": "Математика",
+            "variables": {
+              "name": "Айнымалылар"
+            }
+          },
+          "description": "App Lab онай қосымшалар жасау үшін бағдарламалау ортасы. Код блоктары немесе JavaScript арқылы бір қосымша жаса да бөлес.",
+          "name": "Қосымшалар Лабораториясы"
+        },
+        "gamelab": {
+          "categories": {
+            "functions": {
+              "name": "Функциялар"
+            },
+            "groups": {
               "expressions": {
-                "randomNumber_min_max": {
+                "setColorEach": {
                   "palette_params": {
-                    "min": {
-                      "description": "Минимум санды қайтарады"
-                    },
-                    "max": {
-                      "description": "Максимум санды қайтарады"
+                    "color": {
+                      "type": "Түс"
                     }
                   }
                 },
-                "randomNumber": {
+                "setTintEach": {
                   "palette_params": {
-                    "min": {
-                      "description": "Минимум санды қайтарады"
-                    },
-                    "max": {
-                      "description": "Максимум санды қайтарады"
+                    "color": {
+                      "type": "Түс"
                     }
                   }
                 }
               }
             },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Максимум санды қайтарады"
+                    },
+                    "min": {
+                      "description": "Минимум санды қайтарады"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Максимум санды қайтарады"
+                    },
+                    "min": {
+                      "description": "Минимум санды қайтарады"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
             "variables": {
               "name": "Айнымалылар"
-            },
-            "functions": {
-              "name": "Функциялар"
             }
           }
         },
@@ -133,23 +133,23 @@
             "events": {
               "name": "Шаралар"
             },
-            "loops": {
-              "name": "Ілмек"
-            },
-            "variables": {
-              "name": "Айнымалылар"
-            },
-            "math": {
-              "name": "Математика"
+            "functions": {
+              "name": "Функциялар"
             },
             "logic": {
               "name": "Логика"
             },
-            "functions": {
-              "name": "Функциялар"
+            "loops": {
+              "name": "Ілмек"
+            },
+            "math": {
+              "name": "Математика"
             },
             "text": {
               "name": "Мәтін"
+            },
+            "variables": {
+              "name": "Айнымалылар"
             }
           }
         }

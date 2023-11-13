@@ -1,40 +1,30 @@
-import {Triggers} from '../constants';
 import {BlockTypes} from './blockTypes';
 import {
   EXTRA_SOUND_INPUT_PREFIX,
   MINUS_IMAGE,
   PLUS_IMAGE,
   SOUND_VALUE_TYPE,
-  TRACK_NAME_FIELD
+  TRACK_NAME_FIELD,
 } from './constants';
 
-export const dynamicTriggerExtension = function() {
-  this.getInput('trigger').appendField(
-    new Blockly.FieldDropdown(function() {
-      return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
-    }),
-    'trigger'
-  );
-};
-
 export const getDefaultTrackNameExtension = player =>
-  function() {
+  function () {
     this.getField(TRACK_NAME_FIELD).setValue(
-      `track ${Object.keys(player.getTracksMetadata()).length + 1}`
+      `track 1` // TODO: Replace with Sequencer output when re-enabling Tracks mode
     );
   };
 
 export const playMultiMutator = {
   extraSoundInputCount_: 0,
-  saveExtraState: function() {
+  saveExtraState: function () {
     return {
-      extraSoundInputCount: this.extraSoundInputCount_
+      extraSoundInputCount: this.extraSoundInputCount_,
     };
   },
-  loadExtraState: function(state) {
+  loadExtraState: function (state) {
     this.updateShape_(state.extraSoundInputCount);
   },
-  addSound_: function() {
+  addSound_: function () {
     const shadowBlockXml = `<shadow type="${BlockTypes.VALUE_SAMPLE}"/>`;
     this.appendValueInput(EXTRA_SOUND_INPUT_PREFIX + this.extraSoundInputCount_)
       .setShadowDom(Blockly.Xml.textToDom(shadowBlockXml))
@@ -44,11 +34,11 @@ export const playMultiMutator = {
 
     this.extraSoundInputCount_++;
   },
-  removeSound_: function() {
+  removeSound_: function () {
     this.extraSoundInputCount_--;
     this.removeInput(EXTRA_SOUND_INPUT_PREFIX + this.extraSoundInputCount_);
   },
-  updateShape_: function(targetCount) {
+  updateShape_: function (targetCount) {
     this.setInputsInline(targetCount < 1);
     const prevCount = this.extraSoundInputCount_;
 
@@ -72,7 +62,7 @@ export const playMultiMutator = {
       )
     );
   },
-  showHidePlus_: function(shouldShow) {
+  showHidePlus_: function (shouldShow) {
     if (this.getInput('PLUS')) {
       this.removeInput('PLUS');
     }
@@ -88,11 +78,9 @@ export const playMultiMutator = {
       );
     }
   },
-  showHideMinus_: function(shouldShow) {
+  showHideMinus_: function (shouldShow) {
     if (this.getField('MINUS')) {
-      this.getField('MINUS')
-        .getParentInput()
-        .removeField('MINUS');
+      this.getField('MINUS').getParentInput().removeField('MINUS');
     }
 
     if (shouldShow) {
@@ -112,14 +100,14 @@ export const playMultiMutator = {
       );
     }
   },
-  plus: function() {
+  plus: function () {
     this.updateShape_(this.extraSoundInputCount_ + 1);
   },
-  minus: function() {
+  minus: function () {
     if (this.extraSoundInputCount_ === 0) {
       return;
     }
 
     this.updateShape_(this.extraSoundInputCount_ - 1);
-  }
+  },
 };

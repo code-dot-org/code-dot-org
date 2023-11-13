@@ -4,7 +4,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {ApplabInterfaceMode} from '@cdo/apps/applab/constants';
 import {reducers, actions} from '@cdo/apps/applab/redux/applab';

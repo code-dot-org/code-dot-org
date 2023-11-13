@@ -4,6 +4,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {MARKETING_AUDIENCE} from './CurriculumQuickAssign';
 import {renderRows} from './QuickAssignTableHelpers';
+import {Heading4} from '@cdo/apps/componentLibrary/typography';
 
 const TABLE_COUNT = 3;
 /*
@@ -14,8 +15,9 @@ as independent tables makes styling them simpler.
 export default function QuickAssignTableHocPl({
   marketingAudience,
   courseOfferings,
+  setSelectedCourseOffering,
   updateCourse,
-  sectionCourse
+  sectionCourse,
 }) {
   // Begins the table construction given the first table title
   const allTables = title => {
@@ -38,12 +40,17 @@ export default function QuickAssignTableHocPl({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <div>{title}</div>
+              <Heading4>{title}</Heading4>
             </td>
           </tr>
         </thead>
         <tbody className={moduleStyles.tableBody}>
-          {renderRows(rows, sectionCourse, updateCourse)}
+          {renderRows(
+            rows,
+            sectionCourse,
+            updateCourse,
+            setSelectedCourseOffering
+          )}
         </tbody>
       </table>
     );
@@ -57,9 +64,9 @@ export default function QuickAssignTableHocPl({
 
   /*
   Takes in an tableIndex (0, 1, 2) and returns the corresponding reconstructed object
-  of that slice of course offerings.
+  of that collection of course offerings.
   For example: if HOC has 6 headers, calling this with tableIndex 1 (the middle table)
-  will return an object containing courseOfferings for header indexes 2-3.
+  will return an object containing courseOfferings for header indexes 1 and 4.
   If called with 8 headers, the first two tables will be given one additional header.
   */
   const retrieveTableSplit = tableIndex => {
@@ -87,8 +94,9 @@ export default function QuickAssignTableHocPl({
 }
 
 QuickAssignTableHocPl.propTypes = {
-  courseOfferings: PropTypes.object.isRequired,
   marketingAudience: PropTypes.string.isRequired,
+  courseOfferings: PropTypes.object.isRequired,
+  setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
-  sectionCourse: PropTypes.object
+  sectionCourse: PropTypes.object,
 };

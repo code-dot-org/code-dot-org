@@ -6,7 +6,7 @@ import {stubFakeProjectLibraryData} from '@cdo/apps/templates/projects/generateF
 
 const DEFAULT_PROPS = {
   personalProjectsList: [],
-  unpublishProjectLibrary: () => {}
+  unpublishProjectLibrary: () => {},
 };
 
 describe('LibraryTable', () => {

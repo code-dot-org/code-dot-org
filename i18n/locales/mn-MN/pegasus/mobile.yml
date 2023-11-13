@@ -357,6 +357,7 @@
   homepage_slot_text_link_buy: "Оролцох"
   homepage_slot_text_link_donate: "Хандивлах"
   homepage_slot_text_link_shop: "Футболка, малгай ба бусад"
+  homepage_slot_text_link_thebadguys: "Муу залуустай код"
   homepage_slot_text_link_administrators: "Сургуульд КШУ-ыг авчрах"
   homepage_gallery_header: "%{project_count} сая гаруй Code.org төсөл үүсгэгдсэн"
   homepage_header_donors: "Code.org дэмжигчдэдээ талархаж байна"
@@ -507,10 +508,6 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 багш нар 2015 оны 12-р сарын 7-13-ны өдрүүдэд ангидаа Кодын цагийг зохион байгуулах гэж байна. Тэд таны тусламжийг хүсч байна! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} багш нарт сайн дурынхан хэрэгэй байна.<br>%{num_volunteers} сайн дурынхан бүртгүүлсэн. Тэдэнтэй нэгдээрэй."
   volunteer_engineer_submission_intro_background: "Кодын Цаг нь 180+ орны хэдэн арван сая сурагчдад хүрч компьютерийн шинжлэх ухаантай нэг цагийн турш танилцах хөдөлгөөн юм. Компьютерийн шинжлэх ухааны боловсролын долоо хоногт 12-р сарын 7-13-ны өдрүүдэд хамрагдаарай."
-  volunteer_engineer_submission_intro_recruit: 'Багш нар <span style = "font-family: ''Gotham 7r'', sans-serif;"> компьютерийн боловсролын талаар хүсэл эрмэлзэлтэй </span> бөгөөд ангид туслах боломжтой хэн нэгнийг ангид байхыг хүсдэг. Тэрээр <span style="font-family: ''Gotham 7r'', sans-serif;">урам зориг өгөх</span> боломжтой бөгөд компьютерийн шинжлэх ухааны (энэ нь видео чатаар хийх боломжтой) өргөн боломжуудын талаар ярилцдаг.'
-  volunteer_engineer_submission_intro_guide: "Манай <a href=\"%{volunteer_guide}\">сайн дурын хөтөлбөрийн талаар эндээс</a> дэлгэрэнгүй үзээрэй."
-  volunteer_engineer_submission_intro_signup: "Та компьютерийн шинжлэх ухааны сурагч эсвэл програм хангамжийн мэргэжилтэй бол дараах мэдээллийг оруулна уу. Та сайн дурын гишүүнээр бүртгүүлэхийн тулд дор хаяж 18 настай байх ёстой. Энэ хэсэгт бөглөсөн бүх талбарууд <a href=\"/volunteer/local\">сайн дурын газрын зураг</a> -ыг харж буй бүх хүмүүст нээлттэй болно гэдгийг анхаарна уу. <Span class = \"form-required-field\"> * </span> гэсэн тэмдэг бүхий талбаруудыг оруулах шаардлагатай."
-  volunteer_engineer_submission_intro_links: "Та сайн дурын ажилтан хайж байгаа багш уу? Манай <a href=\"%{volunteer_local}\">сайн дурынхны газрын зураг</a>-с орон нутгийн сайн дурын ажилтан олоорой."
   volunteer_engineer_submission_update_information: "Мэдээллээ шинэчлээрэй"
   volunteer_engineer_submission_header_shared: "Сайн дурын газрын зураг дээр багш нартай хуваалцсан мэдээлэл"
   volunteer_engineer_submission_field_name: "Нэр"
@@ -1460,6 +1457,7 @@
   header_stats: "Статистикууд"
   header_help_us: "Бидэнд туслах"
   header_about: "Тухай"
+  header_incubator: "Инкубаторын"
   header_teacher_community: "Багш нар"
   header_help_support: 'Тусламж, дэмжлэг '
   header_report_bug: "Асуудал мэдээлэх"
@@ -1565,7 +1563,7 @@
   hoc2018_mc_download_adventurer: "Minecraft Adventurer-ийн офлайн хувилбарыг татаж аваарай."
   hoc2018_mc_educators: "Багш нарт зориулсан"
   hoc2018_mc_educators_box1_title: "Minecraft-тай хамт кодлох"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Боловсролын хувилбар нь Minecraft дахь стандартад нийцсэн сургалтын хөтөлбөр, сургалт, кодчилолоор хангадаг.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Боловсролын хувилбар нь Minecraft дахь стандартад нийцсэн сургалтын хөтөлбөр, сургалт, кодчилолоор хангадаг."
   hoc2018_mc_educators_box1_button: "Эхлүүлэх"
   hoc2018_mc_educators_box2_title: "Сургагчийн зааврыг татаж авах"
   hoc2018_mc_educators_box2_desc: "Энэхүү хэрэгсэл нь Кодын Цагийг зохион байгуулах, сурагчдыг компьютерийн шинжлэх ухаанд хамруулахад туслах болно."
@@ -1665,7 +1663,7 @@
   hoc2018_mc_with_microsoft: "-тай түншлэн"
   hoc2018_mc_thank_microsoft: "Хүүхэд бүр компьютерийн шинжлэх ухаан, 21-р зуунд амжилтанд хүрэх ур чадварыг олж авах боломжийг хангах зорилгоор бидний алсын хараа, эрхэм зорилгыг дэмжсэн Microsoft-д талархаж байна."
   hoc2019_mc_mee_title: "Сайн сайхны төлөө Minecraft AI"
-  hoc2019_mc_mee_description1: 'Minecraft-ийн шинэ Кодын Цагийн хичээл одоо Minecraft дээр бэлэн байна: Windows, Mac, iPad-д зориулсан боловсролын хувилбар дээр ашиглах боломжтой боллоо. Кодлох үндсийг сурч, AI-ийг сурагчидтайгаа судлаарай!'
+  hoc2019_mc_mee_description1: "Minecraft-ийн шинэ Кодын Цагийн хичээл одоо Minecraft дээр бэлэн байна: Windows, Mac, iPad-д зориулсан боловсролын хувилбар дээр ашиглах боломжтой боллоо. Кодлох үндсийг сурч, AI-ийг сурагчидтайгаа судлаарай!"
   hoc2019_mc_mee_description2: "Хичээлийн төлөвлөгөө, видео бичлэг, компьютерийн шинжлэх ухааны сургалтын хөтөлбөр, багшийн сургалт зэргийг багтаасан үнэгүй нөөцөд хандаарай."
   hoc2019_mc_more_coding_resources: "Илүү кодлох эх үүсвэрүүд"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nӨмнөх жилийн [1-р хэсэг](%{dance_2018_link})-г эхлүүлэхийн тулд дарж [2-р хэсэг](%{dance_extras_2018_link})-г дараарай."

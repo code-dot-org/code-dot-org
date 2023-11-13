@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-07-28T16:36:48.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Introducing EIPM\r\n*(Estimated time: 25 minutes)*\r\n\r\n##### **Goal:** The purpose of Level 7 is to understand the pedagogy behind teaching programming in this curriculum.  You will use this pedagogy when you teach Unit 4 in your own classroom.  \r\n\r\n## Do this\r\n* ##### Watch the <a href=\"https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3\" target=\"blank\">5 videos on EIPM in this playlist</a> on YouTube.\r\n* ##### Can’t open videos in YouTube? Click <a href=\"https://docs.google.com/presentation/d/1hVCRvFX28vMoVEg9V4Gs8oULEeCgE1Pd9agBrhA5X9Q/edit?usp=sharing\" target=\"blank\"> this link </a> instead to access the videos in Google Slides.\r\n\r\n## Reflect\r\n##### At Code.org, we believe all students can succeed in computer science when given the right supports and opportunities, regardless of prior knowledge or privilege.  \r\n* ##### From what you have seen so far, what supports does EIPM provide to help all students learn CS?  \r\n* ##### What concerns do you have about helping all students experience success in these programming lessons?\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24303,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-28T16:36:48.764+00:00\",\"changed\":[\"cloned from \\\"CSP Module 1 EIPM Reflection_2022\\\"\"],\"cloned_from\":\"CSP Module 1 EIPM Reflection_2022\"},{\"changed_at\":\"2023-08-01 23:23:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

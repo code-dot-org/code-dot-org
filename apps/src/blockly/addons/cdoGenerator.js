@@ -1,5 +1,5 @@
 export default function initializeGenerator(blocklyWrapper) {
-  blocklyWrapper.JavaScript.translateVarName = function(name) {
+  blocklyWrapper.JavaScript.translateVarName = function (name) {
     return Blockly.JavaScript.nameDB_.getName(
       name,
       Blockly.VARIABLE_CATEGORY_NAME
@@ -8,7 +8,7 @@ export default function initializeGenerator(blocklyWrapper) {
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
-  blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
+  blocklyWrapper.Generator.blockSpaceToCode = function (name, opt_typeFilter) {
     const generator = blocklyWrapper.getGenerator();
     generator.init(blocklyWrapper.mainBlockSpace);
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
@@ -32,11 +32,13 @@ export default function initializeGenerator(blocklyWrapper) {
   };
 
   const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
-  blocklyWrapper.Generator.prototype.blockToCode = function(
+  blocklyWrapper.Generator.prototype.blockToCode = function (
     block,
     opt_thisOnly
   ) {
-    if (block?.isUnused()) {
+    // Skip disabled block check for non-rendered workspaces. Non-rendered workspaces
+    // do not have an unused concept.
+    if (block?.workspace?.rendered && block?.isDisabled()) {
       return '';
     }
     return originalBlockToCode.call(
@@ -46,7 +48,7 @@ export default function initializeGenerator(blocklyWrapper) {
     );
   };
 
-  blocklyWrapper.Generator.prefixLines = function(text, prefix) {
+  blocklyWrapper.Generator.prefixLines = function (text, prefix) {
     return blocklyWrapper.JavaScript.prefixLines(text, prefix);
   };
 }

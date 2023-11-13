@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Programmēšanas stundas pasākuma “How-to”
 ---
 
 {{ signup_button }}

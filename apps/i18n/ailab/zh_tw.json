@@ -1,15 +1,15 @@
 {
-  "selectDataset": "選取你想使用的數據集。",
-  "uploadedDataset": "您剛剛上傳了數據集。",
-  "selectedDataset": "你剛剛選取了數據集。",
-  "dataDisplayLabel": "選取一列來預測。",
   "dataDisplayFeatures": "選取一個或多個列作為輸入，以幫助進行預測。",
-  "selectedFeatureNumerical": "你剛剛選取了一個數字功能。",
-  "selectedFeatureCategorical": "你剛剛選取了一個分類功能。",
-  "trainModel": "正在訓練你的模型中。",
+  "dataDisplayLabel": "選取一列來預測。",
   "generateResults": "正在測試你的模型中。",
+  "modelSummary": "你已成功訓練並儲存模型。查看模型細節，並點擊完成以在 App Lab 中使用你訓練過的模型。",
   "results": "檢閱結果。",
   "resultsDetails": "正在展示結果細節。",
   "saveModel": "儲存訓練好的模型以便在 App Lab 使用。",
-  "modelSummary": "你已成功訓練並儲存模型。查看模型細節，並點擊完成以在 App Lab 中使用你訓練過的模型。"
+  "selectDataset": "選取你想使用的數據集。",
+  "selectedDataset": "你剛剛選取了數據集。",
+  "selectedFeatureCategorical": "你剛剛選取了一個分類功能。",
+  "selectedFeatureNumerical": "你剛剛選取了一個數字功能。",
+  "trainModel": "正在訓練你的模型中。",
+  "uploadedDataset": "您剛剛上傳了數據集。"
 }

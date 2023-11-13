@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Code ժամ, ինչպես պետք է շրջանների համար
 ---
 
 {{ signup_button }}

@@ -51,9 +51,6 @@ ro:
       expired: "a expirat, te rugăm să soliciți unul nou"
       not_found: "nu a fost găsit"
       not_locked: "nu a fost blocat"
-      not_saved:
-        one: "1 eroare interzice acestui %{resource} să fie salvat:"
-        other: "%{count} erori interzic acestui %{resource} să fie salvat:"
     invitations:
       send_instructions: 'O invitație prin e-mail a fost trimisă la %{email}.'
       invitation_token_invalid: 'Codul Token de invitație furnizat nu este valid!'

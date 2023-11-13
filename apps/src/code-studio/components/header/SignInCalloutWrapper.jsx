@@ -20,7 +20,7 @@ export default class SignInCalloutWrapper extends React.Component {
         // The use of both session storage and cookies is to check for 1 day
         // and 1 session, and display the callout again once BOTH have passed.
         cookies.get(HideSignInCallout) === 'true' ||
-        sessionStorage.getItem(HideSignInCallout) === 'true'
+        sessionStorage.getItem(HideSignInCallout) === 'true',
     };
   }
 

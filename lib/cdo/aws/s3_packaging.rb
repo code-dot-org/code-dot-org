@@ -44,8 +44,8 @@ class S3Packaging
     rescue Aws::S3::Errors::NoSuchKey
       @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name.underscore} and use_my_#{@package_name.underscore} to true in locals.yml"
       return false
-    rescue Exception => e
-      @logger.info "update_from_s3 failed: #{e.message}"
+    rescue Exception => exception
+      @logger.info "update_from_s3 failed: #{exception.message}"
       return false
     end
     return true
@@ -93,7 +93,7 @@ class S3Packaging
     regenerate_commit_hash
 
     if expected_commit_hash && expected_commit_hash != commit_hash
-      raise "#{@package_name} contents changed unexpectedly. "\
+      raise "#{@package_name} contents changed unexpectedly. " \
         "Expected commit hash #{expected_commit_hash}, got #{commit_hash}"
     end
 
@@ -111,19 +111,19 @@ class S3Packaging
   def log_bundle_size
     stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
     Metrics.write_batch_metric(
-      stats['assets'].map do |asset|
+      stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'
         {
           name: 'bundle_size',
           metadata: asset['name'],
           value: asset['size'],
         }
-      end.compact
+      end
     )
-  rescue => e
+  rescue => exception
     # Just log and continue
     warn 'Failed to log bundle size with error:'
-    warn e
+    warn exception
     warn 'Proceeding with build...'
   end
 

@@ -15,24 +15,20 @@ function showCourses() {
   const script = document.querySelector('script[data-courses]');
   const coursesData = JSON.parse(script.dataset.courses);
   const isEnglish = coursesData.english;
-  const isTeacher = coursesData.teacher;
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
   const modernElementaryCoursesAvailable =
     coursesData.modernelementarycoursesavailable;
-  const specialAnnouncement = coursesData.specialAnnouncement;
 
   ReactDOM.render(
     <Provider store={getStore()}>
       <Courses
         isEnglish={isEnglish}
-        isTeacher={isTeacher}
         studentsCount={studentsCount}
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
-        specialAnnouncement={specialAnnouncement}
         showAiCard={coursesData.showAiCard}
       />
     </Provider>,

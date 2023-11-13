@@ -4,14 +4,6 @@
       "start_html": {
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -22,18 +14,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -44,28 +36,55 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -76,18 +95,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -98,7 +117,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing live_2021": {
           "bear": "guovža"
@@ -108,14 +157,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -126,18 +167,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -148,12 +189,45 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Ruovttoluotta"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Ruovttoluotta"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Ruovttoluotta"
         },
         "CSD U1 storage movies_2021": {
@@ -162,10 +236,16 @@
         "CSD U1 storage movies_2022": {
           "Star Wars": "Star Wars"
         },
+        "CSD U1 storage movies_2023": {
+          "Star Wars": "Star Wars"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "čáhppat"
         },
         "CSD U1 storage outfit_2022": {
+          "black": "čáhppat"
+        },
+        "CSD U1 storage outfit_2023": {
           "black": "čáhppat"
         },
         "CSD U2 RGB intro": {
@@ -203,62 +283,175 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_2023": {
           "0": "0"
         },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
-        "CSD U6 - Color LEDs - ChalD_2222": {
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Ahki"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Nuorta",
           "North": "Davvi",
           "South": "Lulli",
+          "West": "Oarji"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Nuorta",
+          "North": "Davvi",
+          "South": "Lulli",
           "West": "Oarji"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "nalde",
           "fast": "jođánit",
+          "on": "nalde",
           "slow": "njozet"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "jođánit",
+          "on": "nalde",
+          "slow": "njozet"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "vuolimus ráidu",
+          "top row": "bajimus ráidu"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
           "0": "0"
         },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "0": "0"
+        },
         "CSD U6 - If Variables - ChalD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
           "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
+        },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0"
+        },
         "CSD U6 - Physical Input - PA_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
           "0": "0"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "čáhppat"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "čáhppat"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "čáhppat"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "čáhppat"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "čáhppat"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "čáhppat"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "White": "Vilges"
+        },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "White": "Vilges"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "White": "Vilges"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "eret",
+          "on": "nalde"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "eret",
           "on": "nalde"
         },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Ođasmahte"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Ođasmahte"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Ođasmahte"
         },
         "CSD U6 LED all": {
@@ -298,8 +491,8 @@
           "Update": "Ođasmahte"
         },
         "CSD U6 getters debug": {
-          "slow": "njozet",
-          "fast": "jođánit"
+          "fast": "jođánit",
+          "slow": "njozet"
         },
         "CSD U6 getters debug_2018": {
           "fast": "jođánit",
@@ -314,20 +507,20 @@
           "slow": "njozet"
         },
         "CSD U6 light show": {
-          "on": "nalde",
-          "off": "eret"
+          "off": "eret",
+          "on": "nalde"
         },
         "CSD U6 light show_2018": {
-          "on": "nalde",
-          "off": "eret"
+          "off": "eret",
+          "on": "nalde"
         },
         "CSD U6 light show_2019": {
-          "on": "nalde",
-          "off": "eret"
+          "off": "eret",
+          "on": "nalde"
         },
         "CSD U6 light show_2021": {
-          "on": "nalde",
-          "off": "eret"
+          "off": "eret",
+          "on": "nalde"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -398,6 +591,9 @@
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Ruovttoluotta"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Ruovttoluotta"
+        },
         "csa widget test2": {
           "8": "8"
         },
@@ -413,16 +609,14 @@
           "3": "3",
           "4": "4"
         },
-        "csd-explore ui-3": {
+        "csd-apps for good-3_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
+          "4": "4"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -433,18 +627,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -455,18 +649,40 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -477,18 +693,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -499,7 +715,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Dohkkehuvvon",
@@ -509,63 +755,96 @@
           "Accepted": "Dohkkehuvvon",
           "Rejected": "Ii dohkkehuvvon"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Dohkkehuvvon",
+          "Rejected": "Ii dohkkehuvvon"
+        },
         "ml-customize-raspado-2021": {
-          "yes": "juo",
-          "no": "a-a"
+          "no": "a-a",
+          "yes": "juo"
         },
         "ml-customize-raspado_2022": {
-          "yes": "juo",
-          "no": "a-a"
+          "no": "a-a",
+          "yes": "juo"
+        },
+        "ml-customize-raspado_2023": {
+          "no": "a-a",
+          "yes": "juo"
         },
         "ml-model card-medical app v2 2021-2": {
-          "yes": "juo",
-          "no": "a-a"
+          "no": "a-a",
+          "yes": "juo"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "yes": "juo",
-          "no": "a-a"
+          "no": "a-a",
+          "yes": "juo"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "no": "a-a",
+          "yes": "juo"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Ruovttoluotta"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Ruovttoluotta"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Ruovttoluotta"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
         }
       }
     }

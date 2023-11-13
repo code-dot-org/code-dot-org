@@ -31,7 +31,7 @@ Viac informácií o tom, ako prepojiť zamestnancov s triedami, nájdete v na
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Povzbuďte programátorov vo Vašej spoločnosti, aby navštívili miestnu triedu a pomohli viesť Hodinu Kódu a tým inšpirovali študentov k štúdiu informatiky. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2. Pozrite si video "Ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
@@ -90,6 +90,6 @@ Začnite Hodinu kódu tým, že účastníkov inšpirujete a porozprávate sa s
 - Vytlačte pre účastníkov a žiakov [certifikáty]({{ urls/certificates }}) .
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - Objednajte pre svojich zamestnancov [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
-- Share photos and videos of your Hour of Code event on social media. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
+- Zdieľajte fotografie a videá z vašej udalosti Hodiny kódu na sociálnych sieťach. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 {{ signup_button }}

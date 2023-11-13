@@ -25,7 +25,7 @@ title: 아워오브코드 하우 투 가이드
 
 <a id="how-to-video"></a>
 
-## 1. 아워오브코드의 하우 투 비디오 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. 아워오브코드의 하우 투 비디오 시청 <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ title: 아워오브코드 하우 투 가이드
 
 ### 이벤트에 등록하여 자원봉사자에게 알립니다.
 
-[아워오브코드 이벤트에 가입](/#join)하면, 뉴스 및 아워오브코드를 성공적으로 주최하기 위한 팁이 담긴 이메일을 받게 됩니다. 또한 그렇게 하면 학교의 참여 소식을 지역 자원봉사자에게 알릴 수 있습니다. 자원봉사자는 훌륭한 자원이며 학급에 와서 컴퓨터 과학에 대해 강연을 하거나 또는 간단히 학생의 아워오브코드 활동을 도울 수 있습니다.
+[아워오브코드 이벤트](/events)에 가입하시면, 성공적인 아워오브코드 개최를 위한 뉴스와 팁이 담긴 유용한 이메일을 보내 드립니다. 또한 그렇게 하면 학교의 참여 소식을 지역 자원봉사자에게 알릴 수 있습니다. 자원봉사자는 훌륭한 자원이며 학급에 와서 컴퓨터 과학에 대해 강연을 하거나 또는 간단히 학생의 아워오브코드 활동을 도울 수 있습니다.
 
 ### 학생들이 재미있어 하게 만드세요.
 
@@ -111,46 +111,52 @@ title: 아워오브코드 하우 투 가이드
 
 학생들에게 활동을 안내하세요.
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
-
-학생이 어려움을 느낄 때, 다음과 같이 대답해도 괜찮습니다: 
-
-- "나도 잘 몰라요. 우리 함께 생각해봐요."
-- "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
-- "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
-
-한 학생이 먼저 끝내면 어떻게 할까요?
-
-- 학생은 모든 튜토리얼과 [를(을) 보고 또 다른 아워오브코드 활동을 해볼 수 있습니다]({{ urls/learn }}).
-- 또는, 일찍 완료한 학생들에게 어려워서 잘 해결하지 못하고 있는 다른 학생들을 도와달라고 이야기 해보세요.
-
-* * *
+- 화이트보드에 튜토리얼 링크를 작성합니다.선택한</a>튜토리얼의 정보에 나열된 링크를 찾으십시오.</li> </ul> 
+    
+    학생이 어려움을 느낄 때, 다음과 같이 대답해도 괜찮습니다: 
+    
+    - "나도 잘 몰라요. 우리 함께 생각해봐요."
+    - "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
+    - "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
+    
+    한 학생이 먼저 끝내면 어떻게 할까요?
+    
+    - 학생은 모든 튜토리얼과 [를(을) 보고 또 다른 아워오브코드 활동을 해볼 수 있습니다]({{ urls/learn }}).
+    - 또는, 일찍 완료한 학생들에게 어려워서 잘 해결하지 못하고 있는 다른 학생들을 도와달라고 이야기 해보세요.
+    
+    * * *
+    
+    
 
 <a id="celebrate"></a>
 
-## 7. 학생들의 성공을 축하하기
-
-[col-33]
-
-![](/images/fit-600/boy-certificate.jpg)
-
-[/col-33]
-
-- [학생들을 위한 인증서를]({{ urls/certificates }}) 프린트합니다.
-- [학생들을 위해 "아워오브코드를 해냈다!"]({{ urls/promote_stickers }}) 스티커를 인쇄합니다.
-- 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
-
-* * *
+    
+    ## 7. 학생들의 성공을 축하하기
+    
+    [col-33]
+    
+    ![](/images/fit-600/boy-certificate.jpg)
+    
+    [/col-33]
+    
+    - [학생들을 위한 인증서를]({{ urls/certificates }}) 프린트합니다.
+    - [학생들을 위해 "아워오브코드를 해냈다!"]({{ urls/promote_stickers }}) 스티커를 인쇄합니다.
+    - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
+    
+    * * *
+    
+    
 
 <a id="other-resources"></a>
 
-## 교육자를 위한 기타 아워오브코드 리소스
-
-- 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요.
-- [아워오브코드 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해 보세요.
-
-### What comes after the Hour of Code?
-
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
-
-{{ signup_button }}
+    
+    ## 교육자를 위한 기타 아워오브코드 리소스
+    
+    - 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요.
+    - [아워오브코드 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해 보세요.
+    
+    ### What comes after the Hour of Code?
+    
+    컴퓨터 과학은 아워오브코드로 끝나지 않아도 됩니다! [학교와 학생들에게 CS를](/beyond) 도입하는 방법을 알아보십시오.
+    
+    {{ signup_button }}

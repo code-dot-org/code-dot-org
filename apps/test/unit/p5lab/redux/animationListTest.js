@@ -13,7 +13,7 @@ import reducer, {
   appendBlankFrame,
   appendLibraryFrames,
   appendCustomFrames,
-  saveAnimation
+  saveAnimation,
 } from '@cdo/apps/p5lab/redux/animationList';
 import animationTab from '@cdo/apps/p5lab/redux/animationTab';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
@@ -21,66 +21,86 @@ import {createStore} from '../../../util/redux';
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
 const project = require('@cdo/apps/code-studio/initApp/project');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
-describe('animationList', function() {
+describe('animationList', function () {
   setExternalGlobals(beforeEach, afterEach);
-  describe('animationSourceUrl', function() {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({pageConstants: pageConstantsReducer});
+    getStore().dispatch(
+      setPageConstants({
+        isCurriculumLevel: true,
+      })
+    );
+  });
+  afterEach(() => {
+    restoreRedux();
+  });
+  describe('animationSourceUrl', function () {
     const key = 'foo';
 
     before(() => assetPrefix.init({}));
 
-    it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function() {
+    it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const props = {sourceUrl: 'bar'};
       expect(animationSourceUrl(key, props, '123')).to.equal('bar');
     });
 
-    it(`returns the sourceUrl from props if it exists and contains the version`, function() {
+    it(`returns the sourceUrl from props if it exists and contains the version`, function () {
       const props = {sourceUrl: '/v3/animations/test?version=bar'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/test?version=bar'
       );
     });
 
-    it(`returns the sourceUrl from props if it exists in a different channel`, function() {
+    it(`returns the sourceUrl from props if it exists in a different channel`, function () {
       const props = {sourceUrl: '/v3/animations/456/789'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/456/789'
       );
     });
 
-    it(`returns the sourceUrl from a non-deleted, uploaded animation with the version`, function() {
+    it(`returns the sourceUrl from a non-deleted, uploaded animation with the version`, function () {
       const props = {sourceUrl: '/v3/animations/123/foo', version: 'alpha'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/123/foo?version=alpha'
       );
     });
 
-    it(`returns the sourceUrl from a deleted, uploaded animation with the version`, function() {
+    it(`returns the sourceUrl from a deleted, uploaded animation with the version`, function () {
       const props = {sourceUrl: '/v3/animations/123/bar', version: 'beta'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/123/bar?version=beta'
       );
     });
 
-    it(`returns the sourceUrl from a non-deleted, uploaded animation with no version specified`, function() {
+    it(`returns the sourceUrl from a non-deleted, uploaded animation with no version specified`, function () {
       const props = {sourceUrl: '/v3/animations/123/foo'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/123/foo?version=latestVersion'
       );
     });
 
-    it(`returns the sourceUrl from a deleted, uploaded animation with no version specified`, function() {
+    it(`returns the sourceUrl from a deleted, uploaded animation with no version specified`, function () {
       const props = {sourceUrl: '/v3/animations/123/bar'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/123/bar?version=latestVersion'
       );
     });
 
-    it(`returns the sourceUrl passed through the media proxy if it's an absolute url`, function() {
+    it(`returns the sourceUrl passed through the media proxy if it's an absolute url`, function () {
       const insecureProps = {sourceUrl: 'http://bar'};
       expect(animationSourceUrl(key, insecureProps, '123')).to.equal(
         `//${document.location.host}/media?u=http%3A%2F%2Fbar`
@@ -92,14 +112,14 @@ describe('animationList', function() {
       );
     });
 
-    it(`constructs a sourceUrl from key, version, and project if one isn't provided`, function() {
+    it(`constructs a sourceUrl from key, version, and project if one isn't provided`, function () {
       const props = {sourceUrl: null, version: 'test-version'};
       expect(animationSourceUrl(key, props, '123')).to.equal(
         '/v3/animations/fake_id/foo.png?version=test-version'
       );
     });
 
-    it(`has empty version queryParam when version is falsy`, function() {
+    it(`has empty version queryParam when version is falsy`, function () {
       let nullProps = {sourceUrl: null, version: null};
       expect(animationSourceUrl(key, nullProps, '123')).to.equal(
         '/v3/animations/fake_id/foo.png?version='
@@ -122,7 +142,7 @@ describe('animationList', function() {
     });
   });
 
-  describe('loadAnimationFromSource', function() {
+  describe('loadAnimationFromSource', function () {
     // Note: I'm basically unable to test loadAnimationFromSource right now,
     // because it makes an external request for a Blob and sinon can't fake
     // a request for a blob under PhantomJS (grr) so I need to do some refactoring
@@ -132,20 +152,20 @@ describe('animationList', function() {
     const key = 'foo';
     let store;
 
-    beforeEach(function() {
+    beforeEach(function () {
       store = createStore(combineReducers({animationList: reducer}), {
         animationList: {
           orderedKeys: [key],
           propsByKey: {
             [key]: {
-              sourceUrl: 'anything (we stub this)'
-            }
-          }
-        }
+              sourceUrl: 'anything (we stub this)',
+            },
+          },
+        },
       });
     });
 
-    it('sets the loadedFromSource flag', function() {
+    it('sets the loadedFromSource flag', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
         .be.undefined;
@@ -154,13 +174,13 @@ describe('animationList', function() {
         .be.false;
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
-        key
+        key,
       });
       expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
         .be.true;
     });
 
-    it('populates animation blob', function() {
+    it('populates animation blob', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].blob).to.be
         .undefined;
@@ -170,13 +190,13 @@ describe('animationList', function() {
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
-        blob: new Blob([])
+        blob: new Blob([]),
       });
       expect(store.getState().animationList.propsByKey[key].blob).not.to.be
         .undefined;
     });
 
-    it('populates animation dataURI', function() {
+    it('populates animation dataURI', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].dataURI).to.be
         .undefined;
@@ -186,13 +206,13 @@ describe('animationList', function() {
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
-        dataURI: EMPTY_IMAGE
+        dataURI: EMPTY_IMAGE,
       });
       expect(store.getState().animationList.propsByKey[key].dataURI).not.to.be
         .undefined;
     });
 
-    it('populates animation sourceSize', function() {
+    it('populates animation sourceSize', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].sourceSize).to.be
         .undefined;
@@ -202,14 +222,14 @@ describe('animationList', function() {
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
-        sourceSize: {x: 1, y: 1}
+        sourceSize: {x: 1, y: 1},
       });
       expect(store.getState().animationList.propsByKey[key].sourceSize).not.to
         .be.undefined;
     });
   });
 
-  let createAnimationList = function(count, v3Sources = false) {
+  let createAnimationList = function (count, v3Sources = false) {
     let orderedKeys = [];
     let propsByKey = {};
     let baseKey = 'animation';
@@ -224,15 +244,15 @@ describe('animationList', function() {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
     }
     return {orderedKeys: orderedKeys, propsByKey: propsByKey};
   };
 
-  describe('action: set initial animationList', function() {
+  describe('action: set initial animationList', function () {
     let server, store;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('123');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
@@ -242,11 +262,11 @@ describe('animationList', function() {
       );
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
     });
 
-    it('when animationList has 1 item, currentAnimations.ANIMATION should be the animation', function() {
+    it('when animationList has 1 item, currentAnimations.ANIMATION should be the animation', function () {
       const key0 = 'animation_1';
       let animationList = createAnimationList(1);
 
@@ -256,7 +276,7 @@ describe('animationList', function() {
       ).to.equal(key0);
     });
 
-    it('when animationList has multiple items, currentAnimations.ANIMATION should be the first animation', function() {
+    it('when animationList has multiple items, currentAnimations.ANIMATION should be the first animation', function () {
       const key0 = 'animation_1';
       let animationList = createAnimationList(2);
 
@@ -266,10 +286,10 @@ describe('animationList', function() {
       ).to.equal(key0);
     });
 
-    it('when animationList has 0 items, currentAnimations.ANIMATION should be the empty string', function() {
+    it('when animationList has 0 items, currentAnimations.ANIMATION should be the empty string', function () {
       let animationList = {
         orderedKeys: [],
-        propsByKey: {}
+        propsByKey: {},
       };
       store.dispatch(setInitialAnimationList(animationList));
       expect(
@@ -277,7 +297,7 @@ describe('animationList', function() {
       ).to.equal('');
     });
 
-    it('should not initialize with multiple animations of the same name', function() {
+    it('should not initialize with multiple animations of the same name', function () {
       let animationList = createAnimationList(3);
       animationList.propsByKey['animation_1'].name = 'cat';
       animationList.propsByKey['animation_3'].name = 'cat';
@@ -294,7 +314,7 @@ describe('animationList', function() {
       ).to.equal('cat_1');
     });
 
-    it('should not initialize with multiple animations of the same name with non alpha characters', function() {
+    it('should not initialize with multiple animations of the same name with non alpha characters', function () {
       let animationList = createAnimationList(3);
       animationList.propsByKey['animation_1'].name = 'images (1).jpg_1';
       animationList.propsByKey['animation_2'].name = 'images (1).jpg_1';
@@ -312,7 +332,7 @@ describe('animationList', function() {
       ).to.equal('images (1).jpg_1_2');
     });
 
-    it('when animationList has migratable animations, check that animation is substituted', function() {
+    it('when animationList has migratable animations, check that animation is substituted', function () {
       let animationList = createAnimationList(2, true);
       let defaultSprites = createAnimationList(2);
       defaultSprites.propsByKey['animation_1'].sourceUrl = 'cat';
@@ -326,9 +346,9 @@ describe('animationList', function() {
     });
   });
 
-  describe('action: delete animation', function() {
+  describe('action: delete animation', function () {
     let server;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('');
       sinon.stub(project, 'projectChanged').returns('');
 
@@ -336,12 +356,12 @@ describe('animationList', function() {
       server.respondWith('imageBody');
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       project.projectChanged.restore();
     });
 
-    it('deleting the first animation reselects the next animation in the animationList', function() {
+    it('deleting the first animation reselects the next animation in the animationList', function () {
       const key0 = 'animation_1';
       const key1 = 'animation_2';
       let animationList = createAnimationList(2);
@@ -357,7 +377,7 @@ describe('animationList', function() {
       ).to.equal(key1);
     });
 
-    it('deleting an animation reselects the previous animation in the animationList', function() {
+    it('deleting an animation reselects the previous animation in the animationList', function () {
       const key0 = 'animation_1';
       const key1 = 'animation_2';
       let animationList = createAnimationList(2);
@@ -373,7 +393,7 @@ describe('animationList', function() {
       ).to.equal(key0);
     });
 
-    it('deleting an animation deselects when there are no other animations in the animationList', function() {
+    it('deleting an animation deselects when there are no other animations in the animationList', function () {
       const key0 = 'animation_1';
       let animationList = createAnimationList(1);
       let store = createStore(
@@ -387,7 +407,7 @@ describe('animationList', function() {
       ).to.equal('');
     });
 
-    it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function() {
+    it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function () {
       const key0 = 'animation_1';
       const key1 = 'animation_2';
       let animationList = createAnimationList(2);
@@ -404,9 +424,9 @@ describe('animationList', function() {
     });
   });
 
-  describe('action: clone animation', function() {
+  describe('action: clone animation', function () {
     let server;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('');
       sinon.stub(project, 'projectChanged').returns('');
 
@@ -414,12 +434,12 @@ describe('animationList', function() {
       server.respondWith('imageBody');
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       project.projectChanged.restore();
     });
 
-    it('cloning animation creates an animation with the same props, and unique name', function() {
+    it('cloning animation creates an animation with the same props, and unique name', function () {
       const key0 = 'animation_1';
       const animationList = createAnimationList(1);
 
@@ -433,9 +453,8 @@ describe('animationList', function() {
       expect(store.getState().animationList.orderedKeys.length).to.equal(2);
 
       const clonedAnimationKey = store.getState().animationList.orderedKeys[1];
-      const clonedAnimation = store.getState().animationList.propsByKey[
-        clonedAnimationKey
-      ];
+      const clonedAnimation =
+        store.getState().animationList.propsByKey[clonedAnimationKey];
       const originalAnimation = store.getState().animationList.propsByKey[key0];
 
       expect(clonedAnimation.name).to.not.equal(originalAnimation.name);
@@ -447,7 +466,7 @@ describe('animationList', function() {
       expect(clonedAnimation.version).to.equal(originalAnimation.version);
     });
 
-    it('cloning an animation twice creates two animations with unique names', function() {
+    it('cloning an animation twice creates two animations with unique names', function () {
       const key0 = 'animation_1';
       const animationList = createAnimationList(1);
 
@@ -461,13 +480,11 @@ describe('animationList', function() {
 
       const orignalAnimation = store.getState().animationList.propsByKey[key0];
       const clonedAnimationKey2 = store.getState().animationList.orderedKeys[1];
-      const clonedAnimation2 = store.getState().animationList.propsByKey[
-        clonedAnimationKey2
-      ];
+      const clonedAnimation2 =
+        store.getState().animationList.propsByKey[clonedAnimationKey2];
       const clonedAnimationKey1 = store.getState().animationList.orderedKeys[2];
-      const clonedAnimation1 = store.getState().animationList.propsByKey[
-        clonedAnimationKey1
-      ];
+      const clonedAnimation1 =
+        store.getState().animationList.propsByKey[clonedAnimationKey1];
 
       expect(store.getState().animationList.orderedKeys.length).to.equal(3);
       expect(orignalAnimation.name).to.not.equal(clonedAnimation1.name);
@@ -476,9 +493,9 @@ describe('animationList', function() {
     });
   });
 
-  describe('action: add blank animation', function() {
+  describe('action: add blank animation', function () {
     let server, store;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('');
       sinon.stub(project, 'projectChanged').returns('');
 
@@ -490,12 +507,12 @@ describe('animationList', function() {
       );
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       project.projectChanged.restore();
     });
 
-    it('new blank animations get name animation_1 when it is the first blank animation', function() {
+    it('new blank animations get name animation_1 when it is the first blank animation', function () {
       store.dispatch(addBlankAnimation('ANIMATION'));
       let blankAnimationKey = store.getState().animationList.orderedKeys[0];
       expect(
@@ -503,7 +520,7 @@ describe('animationList', function() {
       ).to.equal('animation_1');
     });
 
-    it('first new blank background animations get name blank_background_1', function() {
+    it('first new blank background animations get name blank_background_1', function () {
       store.dispatch(addBlankAnimation('BACKGROUND'));
       let blankAnimationKey = store.getState().animationList.orderedKeys[0];
       expect(
@@ -511,7 +528,7 @@ describe('animationList', function() {
       ).to.equal('blank_background_1');
     });
 
-    it('new blank animations get name next available number appended', function() {
+    it('new blank animations get name next available number appended', function () {
       let animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(addBlankAnimation('ANIMATION'));
@@ -522,7 +539,7 @@ describe('animationList', function() {
       ).to.equal('animation_3');
     });
 
-    it('new blank animations get name next available number appended when available number is in the middle of the list', function() {
+    it('new blank animations get name next available number appended when available number is in the middle of the list', function () {
       const key1 = 'animation_2';
       let animationList = createAnimationList(3);
       store.dispatch(setInitialAnimationList(animationList));
@@ -537,9 +554,9 @@ describe('animationList', function() {
     });
   });
 
-  describe('action: add library animation', function() {
+  describe('action: add library animation', function () {
     let server, store;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('');
       sinon.stub(project, 'projectChanged').returns('');
       server = sinon.fakeServer.create();
@@ -552,12 +569,12 @@ describe('animationList', function() {
       );
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       project.projectChanged.restore();
     });
 
-    it('new animations get name _# appended to the name in order of numbers available', function() {
+    it('new animations get name _# appended to the name in order of numbers available', function () {
       const libraryAnimProps = {
         name: 'library_animation',
         sourceUrl: 'url',
@@ -565,7 +582,7 @@ describe('animationList', function() {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
       store.dispatch(addLibraryAnimation(libraryAnimProps));
       let blankAnimationKey1 = store.getState().animationList.orderedKeys[0];
@@ -594,7 +611,7 @@ describe('animationList', function() {
       ).to.equal('library_animation_2');
     });
 
-    it('adds animation at front of list in Game Lab', function() {
+    it('adds animation at front of list in Game Lab', function () {
       store.dispatch(addLibraryAnimation({name: 'first'}));
       store.dispatch(addLibraryAnimation({name: 'second'}));
       store.dispatch(addLibraryAnimation({name: 'third'}));
@@ -604,10 +621,10 @@ describe('animationList', function() {
       ).to.equal('first_1');
     });
 
-    it('adds animation at front of list in Sprite Lab', function() {
+    it('adds animation at front of list in Sprite Lab', function () {
       store.dispatch(
         setPageConstants({
-          isBlockly: true
+          isBlockly: true,
         })
       );
 
@@ -621,7 +638,7 @@ describe('animationList', function() {
     });
   });
 
-  describe('withAbsoluteSourceUrls', function() {
+  describe('withAbsoluteSourceUrls', function () {
     function expectDeepEqual(a, b) {
       expect(a).to.deep.equal(
         b,
@@ -636,92 +653,88 @@ describe('animationList', function() {
       );
     }
 
-    it('generates absolute source URLs for animations with no source URL', function() {
+    it('generates absolute source URLs for animations with no source URL', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            version: 'test-version'
-          }
-        }
+            version: 'test-version',
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
             version: 'test-version',
-            sourceUrl: `${
-              document.location.origin
-            }/v3/animations/fake_id/foo.png?version=test-version`
-          }
-        }
+            sourceUrl: `${document.location.origin}/v3/animations/fake_id/foo.png?version=test-version`,
+          },
+        },
       });
     });
 
-    it('converts relative source URLs to absolute URLs', function() {
+    it('converts relative source URLs to absolute URLs', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: '/some-origin-relative-url'
-          }
-        }
+            sourceUrl: '/some-origin-relative-url',
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: `${document.location.origin}/some-origin-relative-url`
-          }
-        }
+            sourceUrl: `${document.location.origin}/some-origin-relative-url`,
+          },
+        },
       });
     });
 
-    it('Does not use media proxy for curriculum.code.org absolute URLs', function() {
+    it('Does not use media proxy for curriculum.code.org absolute URLs', function () {
       const sourceUrl = 'https://curriculum.code.org/some-absolute-url';
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl
-          }
-        }
+            sourceUrl,
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl
-          }
-        }
+            sourceUrl,
+          },
+        },
       });
     });
 
-    it('Uses media proxy for non-curriculum.code.org absolute URLs', function() {
+    it('Uses media proxy for non-curriculum.code.org absolute URLs', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: 'http://host.com/some-absolute-url'
-          }
-        }
+            sourceUrl: 'http://host.com/some-absolute-url',
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: `${
-              document.location.origin
-            }/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`
-          }
-        }
+            sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`,
+          },
+        },
       });
     });
   });
 
-  describe('action: add blank frame', function() {
+  describe('action: add blank frame', function () {
     let server, store;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('');
       sinon.stub(project, 'projectChanged').returns('');
       server = sinon.fakeServer.create();
@@ -732,12 +745,12 @@ describe('animationList', function() {
       );
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       project.projectChanged.restore();
     });
 
-    it('new blank frame gets added to pendingFrames and original animation is unchanged', function() {
+    it('new blank frame gets added to pendingFrames and original animation is unchanged', function () {
       const animationList = createAnimationList(1);
       store.dispatch(setInitialAnimationList(animationList));
       const animationKey = store.getState().animationList.orderedKeys[0];
@@ -753,11 +766,11 @@ describe('animationList', function() {
       ).to.equal(true);
     });
 
-    it('new blank pending frame uses the currentAnimations.ANIMATION key', function() {
+    it('new blank pending frame uses the currentAnimations.ANIMATION key', function () {
       const animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
-      const selectedAnimation = store.getState().animationTab.currentAnimations
-        .ANIMATION;
+      const selectedAnimation =
+        store.getState().animationTab.currentAnimations.ANIMATION;
       store.dispatch(appendBlankFrame());
       expect(store.getState().animationList.pendingFrames.key).to.equal(
         selectedAnimation
@@ -765,9 +778,9 @@ describe('animationList', function() {
     });
   });
 
-  describe('action: append non blank frames', function() {
+  describe('action: append non blank frames', function () {
     let server, store, selectedAnimation, libraryAnimProps;
-    beforeEach(function() {
+    beforeEach(function () {
       project.getCurrentId.returns('');
       sinon.stub(project, 'projectChanged').returns('');
       server = sinon.fakeServer.create();
@@ -778,8 +791,8 @@ describe('animationList', function() {
       );
       const animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
-      selectedAnimation = store.getState().animationTab.currentAnimations
-        .ANIMATION;
+      selectedAnimation =
+        store.getState().animationTab.currentAnimations.ANIMATION;
       libraryAnimProps = {
         name: 'library_animation',
         sourceUrl: 'url',
@@ -787,16 +800,16 @@ describe('animationList', function() {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       project.projectChanged.restore();
     });
 
-    it('append library frames adds props to pendingFrames for selectedAnimation', function() {
+    it('append library frames adds props to pendingFrames for selectedAnimation', function () {
       store.dispatch(appendLibraryFrames(libraryAnimProps));
       expect(store.getState().animationList.pendingFrames.key).to.equal(
         selectedAnimation
@@ -806,7 +819,7 @@ describe('animationList', function() {
       );
     });
 
-    it('append custom frames adds props to pendingFrames for selected animation', function() {
+    it('append custom frames adds props to pendingFrames for selected animation', function () {
       store.dispatch(appendCustomFrames(libraryAnimProps));
       expect(store.getState().animationList.pendingFrames.key).to.equal(
         selectedAnimation
@@ -817,19 +830,19 @@ describe('animationList', function() {
     });
   });
 
-  describe('action: save animation', function() {
+  describe('action: save animation', function () {
     let xhr, requests;
-    beforeEach(function() {
+    beforeEach(function () {
       xhr = sinon.useFakeXMLHttpRequest();
       requests = [];
       xhr.onCreate = xhr => requests.push(xhr);
     });
 
-    afterEach(function() {
+    afterEach(function () {
       xhr.restore();
     });
 
-    it('sends a save request', function() {
+    it('sends a save request', function () {
       const libraryAnimProps = {
         name: 'animation_1',
         sourceUrl: 'url',
@@ -837,7 +850,7 @@ describe('animationList', function() {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
 
       saveAnimation('animation_1', libraryAnimProps);

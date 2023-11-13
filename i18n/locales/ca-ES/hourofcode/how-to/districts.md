@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Hora del codi How-To per districtes
 ---
 
 {{ signup_button }}
@@ -32,7 +32,7 @@ Let visitors know about your participation and Hour of Code events. Link it to [
 
 See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show, media outreach kit, and other supports.
 
-## Què ve després de l'Hora del Codi?
+## I desprès de l'Hora del Codi, què?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

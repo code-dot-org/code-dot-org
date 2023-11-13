@@ -52,7 +52,7 @@ class Bounce < Grid
     # the bounce and basketball skins can only have retro or basketball themes
     sport_theme_non_sport_skin = (
       %(bounce basketball).include?(skin) &&
-      !%(retro basketball).include?(theme)
+      %(retro basketball).exclude?(theme)
     )
 
     errors.add(:theme, "#{skin} skin and #{theme} theme are incompatible") if
@@ -96,6 +96,14 @@ class Bounce < Grid
 
   def uses_google_blockly?
     true
+  end
+
+  def project_type
+    if skin == 'sports' || skin == 'basketball'
+      skin
+    else
+      'bounce'
+    end
   end
 
   def toolbox(type)

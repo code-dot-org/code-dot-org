@@ -22,11 +22,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Код саатынын бардык жетектемелери** уюштуруучулрадан минималдык даярдыкты талап кылат жана өзү алдынча ишке - балдардын жөндөмүнө жараша үйрөнүшүнө ылайыкташкан.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Сабактан тышкары Код саатын өтүүнүн иш-планы керекпи?** Бул [үлгүнү](/files/AfterschoolEducatorLessonPlanOutline.docx) көрүңүз!
 
 ## 3. Код саатыңызды жарнамалаңыз
 
@@ -34,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Керектүү техниканы пландаштыруу - компүтерлер, бар болсо
 
-Код саатты интернетке туташкан компүтер менен мыкты натыйжа берет. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Код саатты интернетке туташкан компүтер менен мыкты натыйжа берет. Бирок ар бир балага компүтер болушу **керек эмес**, Код саатын компүтерсиз өткөзсө деле болот.
 
-Жетектемелерди окуучулардын компүтеринен же мобилдик түзмөгүнөн текшергиле. Браузерден видео жана үнү туура берилип жатканы анык болсун. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Жетектемелерди окуучулардын компүтеринен же мобилдик түзмөгүнөн текшергиле. Браузерден видео жана үнү туура берилип жатканы анык болсун. **Интернет жайбы?** Ар бир окуучу өзү жүктөбөсү үчүн, видеолорду катышуучуларга жалпы көрсөтүүнү пландаштыргыла. Же офлайн жетектемелерди колдонгула.
 
 Үнү бар жетектеме тандасаңыз, классты кулакчындар менен камсыздагыла же окуучуларга өздөрүнүкүн ала келүүсүн айткыла.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Катышуучулар өнөктөшкөндө, бири-бирине жардамдашып, мугалимге азыраак кайрылышат. Ошондой эле компүтерде биргелешип кызматташса болоорун көрүшөт.
+**Түзмөктөр жетишпейби?**[Жупташып](https://www.youtube.com/watch?v=vgkahOzFH2Q) иштегиле. Катышуучулар өнөктөшкөндө, бири-бирине жардамдашып, мугалимге азыраак кайрылышат. Ошондой эле компүтерде биргелешип кызматташса болоорун көрүшөт.
 
 ## 5. Код саатын шыктандыруучу видео менен баштаңыз
 
@@ -53,13 +53,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [Президент Обама окуучуларды компүтердик илимди өздөштүрүүгө чакырат](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Дагы шыктандыруучу виделор [бул жерде](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Компүтер менен тааныш болбосоңуз - эч нерсе эмес. Код сааты иш-чараңызды тааныштыруунун айрым идеялары:**
 
 - Технологиянын жашообузга болгон таасирин көргөзгөн мисал келтиргиле - балдарга жана кыздарга тең кызык болсун (өмүр сактаган, жардам берген, кишилерди байланыштырган колдонмолор ж. б.).
 - Турмуштагы код колдонгон нерселердин тизмеси.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Дагы жетектемелер керекпи?** Бул [сабактын үлгү планы](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Код жазгыла!
 
@@ -73,18 +73,18 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
 - Код саатыңыздын фото жана видеолорун социалдык желелерде бөлүшкүлө. #HourOfCode ж-а @codeorg хештег колдонуп, ийгилигиңизди бизге дагы билдиргиле!
 
 ## Код саатынын үйрөтүүчүлөр үчүн кошумча ресурсттар
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Мурунку Код саатын уюштуруучулардан [мыкты тажрыйба](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) алыңыз.
+- [Код сааты вебинары үчүн үйрөтүүчүлөрдүн жетектемеси](https://youtu.be/EJeMeSW2-Mw) видеобузду көрүңүз.
+- [Код сааты форумуна](http://forum.code.org/c/plc/hour-of-code) кирип, башка уюштуруучулардан кеңеш жана колдоо алыңыз.
 - [Код саатынын КБСин](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) карагыла.
 
 ## Код саатынан кийин эмне болот?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Код сааты технологиялардын иштешин терең изилдөөдө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

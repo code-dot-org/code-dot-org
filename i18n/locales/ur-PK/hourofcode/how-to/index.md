@@ -25,7 +25,7 @@ title: آور آف کوڈ کے طریقہ کار کا رہنما
 
 <a id="how-to-video"></a>
 
-## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. آور آف کوڈ کے طریقہ کار کا ویڈیو دیکھیں <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -33,7 +33,7 @@ title: آور آف کوڈ کے طریقہ کار کا رہنما
 
 ## 2. سرگرمیاں اور ٹیوٹوریل تلاش کریں
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. طلبہ ازخود بھی دیے گئے اسباق سے استفادہ حاصل کر سکتے ہیں جبکہ اساتذہ کیلئے ان سرگرمیوں میں lesson Plan دیے گئے ہیں جن کی مدد سے وہ طلبہ کی بہتر رہنمائی کر سکتے ہیں.
+ہم تمام عمر کے افراد اور تجربہ کی سطح رکھنے والوں کے لیے مختلف قسم کے تفریحی، [طلباء کی رہنمائی کے لیے ٹیوٹوریل]({{ urls/learn }}) فراہم کرتے ہیں۔ طلبہ ازخود بھی دیے گئے اسباق سے استفادہ حاصل کر سکتے ہیں جبکہ اساتذہ کیلئے ان سرگرمیوں میں lesson Plan دیے گئے ہیں جن کی مدد سے وہ طلبہ کی بہتر رہنمائی کر سکتے ہیں.
 
 سرگرمیوں پر نظرِ ثانی کر کے آپ یہ فیصلہ کر سکتے ہیں کہ آیا ایک سبق ہی تمام طلباء کیلئے بہتر رہے گا یا ہر طالب علم کو انفرادی طور پر اپنے پسندیدہ سبق اور سرگرمی سے استفادہ حاصل کرنے دیا جائے۔.
 
@@ -72,7 +72,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### اپنی تقریب کی آواز رضاکارانہ کام کرنے والوں کے کانوں تک پہنچائیں
 
-جیسے ہی آپ اپنے Hour of Code کی تقریب کو [رجسٹر کروائیں ](/#join) گے، آپکو کامیاب کوڈ نگ تقریب منعقد کرنے سے متعلق مفید معلومات ای میل کے ذریعے ملنا شروع ہو جائیں گی. اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.
+جب آپ اپنے اوور [آف کوڈ ایونٹ کو سائن اپ کرتے ہیں تو](/events)، آپ کو کامیاب اوور آف کوڈ کی میزبانی کرنے کے لئے خبروں اور نکات کے ساتھ مددگار ای میل مواصلات موصول اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.
 
 ### طلباء میں جوش و خروش پیدا کریں
 
@@ -95,7 +95,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:
 
 - اصل Code.org لانچ ویڈیو، جس میں بل گیٹس، مارک زکربربر، اور این بی اے اسٹار کرس بوش شامل ہیں. ([ 1 منٹ ](https://www.youtube.com/watch؟v=qYZF6oIZtfc)، <a href = "https://www.youtube.com/watch؟v ہیں = nKIu9yen5nc "> 5 منٹ </a>، اور [ 9 منٹ ](https://www.youtube.com/watch؟v=dU1xS07N-FA) دستیاب ورژن دستیاب ہیں)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- مزید متاثر کن [وسائل]({{ urls/inspire }}) اور [ویڈیوز](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) حاصل کریں۔
 
 یہ ٹھیک ہے اگر آپ اور آپ کے طالب علموں کو کمپیوٹر سائنس میں بالکل نئے برانڈ ہے. آپ کے قیامت کا کوڈ سرگرمی متعارف کرانے کیلئے کچھ خیالات یہاں ہیں:
 
@@ -111,7 +111,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ایکٹیویٹی کے لیے اسٹوڈینٹس کو ہدایات دیں
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- ایک وائٹ بورڈ پر سبق لنک لکھیں. اپنے منتخب ٹیوٹوریل کے لئے [معلومات پر درج لنک تلاش کریں]({{ urls/learn }}).
 
 :اگر آپ کے اسٹوڈینٹس مشکلات پیش آئیں تو کہیں
 
@@ -121,7 +121,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 کیا ہو گا اگر ایک طالب علم جلد ہی ختم ہو جائے?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- طلباء تمام ٹیوٹوریل دیکھ سکتے ہیں اور [آور آف کوڈ کی کوئی اور سرگرمی آزما سکتے ہیں]({{ urls/learn }})۔
 - یا، جو اسٹوڈینٹس اپنا کام جلد مکمل کرلیں، اُن سے کہیں کہ وہ اپنے کلاس-میٹس (ہم جماعت ساتھیوں) کی مدد کریں جن کو ایکٹیویٹی میں مشکلات پیش آر ہی ہیں۔.
 
 * * *
@@ -136,8 +136,8 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 [/ Col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [اپنے طلباء کے]({{ urls/certificates }}) لئے سرٹیفکیٹ پرنٹ کریں۔
+- [اپنے طلباء کے لیے "میں نے ایک آور آف کوڈ مکمل کیا!"]({{ urls/promote_stickers }}) اسٹیکرز پرنٹ کریں۔
 - ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
 * * *
@@ -151,6 +151,6 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 ### آور-آف-کوڈ کے بعد کیا ہو گا?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+کمپیوٹر سائنس کو کوڈ کے گھنٹہ کے ساتھ ختم کرنے کی ضرورت نہیں ہے! [اپنے اسکول اور طالب علموں](/beyond) کو CS لانے کا طریقہ سیکھیں.
 
 {{ signup_button }}

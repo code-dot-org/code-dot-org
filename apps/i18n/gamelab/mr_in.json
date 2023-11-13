@@ -1,10 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "रुंदी",
   "dropletBlock_createSprite_param3": "उंची",
-  "dropletBlock_setCollider_param0": "प्रकार",
-  "dropletBlock_setCollider_param4": "उंची",
   "dropletBlock_setColliderEach_param0": "प्रकार",
   "dropletBlock_setColliderEach_param4": "उंची",
+  "dropletBlock_setCollider_param0": "प्रकार",
+  "dropletBlock_setCollider_param4": "उंची",
   "reinfFeedbackMsg": "तुमचे काम पूर्ण झाले! आता \"Continue\" वर क्लिक करून पुढच्या लेव्हलवर जा.",
   "shareGame": "तुमचा गेम शेअर करा:"
 }

@@ -297,25 +297,13 @@ fi:
         text: "Hiekanveistossa sinun täytyy tietää että epäonnistuminen on osa ohjelmaa. Mutta jos jatkat, siitä ei tule mitään muuta kuin parempaa ja jännnittävämpää sinulle. Kärsivällisyys on pelin nimi. Pysy sen kanssa, tulet rakastamaan sitä."
       2:
         text: "Tätä oppituntia kutsutaan perustan rakentamiseksi. Tällä oppitunnilla työskentelemme tehtävän parissa, jonka tarkoitus on olla todella vaikea. Sinulle selviää, miten tehdä vähintään yhtä pitkä rakennelma kuin yksi näistä kupeista ja se tulee olemaan tarpeeksi vahva kannattelemaan kirjan painoa."
-      3:
-      4:
-      5:
     C1_getting_loopy:
       1:
         text: "Hei, nimeni on Miral Kotb ja olen Iluminaten luoja. Työssäni on jotain mitä käytämme sekä tansseissa ja valopukujen ohjelmoinnissa. Ne ovat silmukoita! Silmukat ovat tapa toistaa toiminto uudelleen ja uudelleen."
-      2:
-      3:
-      4:
-      5:
     C1_happy_maps_unplugged:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "Se on kuin ohjelmointia paperilla. Ja se on siinä!"
     C1_moveitmoveit_unplugged:
-      1:
       2:
         text: "Mutta hymynaama on surullinen ja vain yksi henkilö tietää miten sinne pääsee. Aloitetaan tämä ohjelma."
       3:
@@ -329,12 +317,9 @@ fi:
         text: "Eilen kävin eläintarhassa, joka on lähellä kotiini. Näin vauva seepran. Otin siitä kuvan ja vaihdoin sen raitojen värin, sitten lisäsin sille hatun ja tallensin sen minun kokoelmaan hauskoista eläimistä. Mahtavaa! Myöhemmin menin paikkaan kauas pois. Kävin Keniassa. Se on maa Afrikassa. Paljon seeproja asuu siellä."
       4:
         text: "Joskus netissä juttelen ihmisten kanssa jotka tunnen, esimerkiksi mummini joka asuu toisessa kaupungissa. Hei mummi! Hän tekee minulle keksejä jotka hän lähettää minulle syntymäpäivänäni. \"Nam, haluaisin että netin välityksellä pystyisi lähettää tuoksuja!\" Puhun eri ihmisille netissä, niin kuin serkulleni, mutta puhun vain ihmisille joita tunnen."
-      5:
-      6:
       7:
         text: "Vau, se oli hauskaa! Päivällisaika. Kirjaudun nyt ulos. En malta odottaa uudelleenkirjautumista, jotta pääseen näkemään minne pääsen seuraavaksi."
     C2_artist_intro:
-      1:
       2:
         text: "Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia muotoja. Minne tahansa taiteilijasi liikkuukin, hän jättää kulkiessaan peräänsä viivan."
       3:
@@ -344,20 +329,14 @@ fi:
       5:
         text: "Ja tämä vuorostaan on 120 asteen käännös. Muista että voit milloin vain vaihtaa näitä lukuja, painamalla pikseleitä tai asteita osoittavaa lukua tai sen vieressä olevaa pikku kolmiota. Nauti piirtämisestä taiteilijasi kanssa!"
     C2_artist_debugging:
-      1:
-      2:
       3:
         text: "Ah, siinä se ongelma on! Kissan viikset ovat 75 kuvapistettä pitkät, ei 25."
     C2_bee_loops:
       1:
         text: "Silmukka on toiminnan toistamista. Mennessäni mehiläispesälle tarkistamaan, katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä useita kertoja."
-      2:
     C2_maze_intro:
-      1:
       2:
         text: "Blockly on jaettu kolmeen pääosaan. Vasemmalla on lintulabyrintti, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle. Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on komento jonka lintu ymmärtää. Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme."
-      3:
-      4:
       5:
         text: "Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen roskakoriin. Kun painat Suorita, voit aina painaa Alusta-painiketta saadaksesi linnun takaisin alkuun. Nyt, annetaanpa sioille kyytiä!"
     C2_playlab_createstory:
@@ -366,7 +345,6 @@ fi:
       2:
         text: "Tarjolla on \"kun nuoli\" ja \"liikuta hahmoa\" -lohkot. Voit laittaa nämä lohkot yhteen ja liikuttaa hahmoja ympäriinsä nuolinäppäimillä."
     C3_artist_intro:
-      1:
       2:
         text: "Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia muotoja. Minne tahansa taiteilijasi liikkuukin, hän jättää kulkiessaan peräänsä viivan."
       3:
@@ -392,37 +370,21 @@ fi:
       2:
         text: "Tarjolla on \"kun nuoli\" ja \"liikuta hahmoa\" -lohkot. Voit laittaa nämä lohkot yhteen ja liikuttaa hahmoja ympäriinsä nuolinäppäimillä."
     C4_intro:
-      1:
       2:
         text: "Blockly on jaettu kolmeen pääosaan. Vasemmalla on lintulabyrintti, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle. Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on komento jonka lintu ymmärtää. Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme."
-      3:
-      4:
       5:
         text: "Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen roskakoriin. Kun painat Suorita, voit aina painaa Alusta-painiketta saadaksesi linnun takaisin alkuun. Nyt, annetaanpa sioille kyytiä!"
     infinity_playlab_intro:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle. Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on palanen ohjelmakoodia. Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme."
-      6:
-      7:
     tutorial_puzzle_challenge:
-      1:
       2:
         text: "Voin muuttaa pikselien määrää, viivan pituutta, käyttäen tätä alasvetovalikkoa. Kuinka pitkä sen pitikään olla? Voit katsoa ohjeita uudelleen Suorita-nappulan alapuolelta. Tässä käytimme Siirry eteenpäin -palikkaa ja aion valita matkaksi 100 pikseliä. Voin halutessani poistaa palikan vetämällä sen työkalupakkiin tai roskakoriin. Laitetaanpa se takaisin."
-      3:
-      4:
-      5:
-      6:
     unplug2:
       1:
         text: "Tämän automatisointiajattelun oppitunnin on tarkoitus opettaa sinulle, kuinka vaikea ongelma voidaan pilkkoa joukoksi useita yksinkertaisempia ongelmia. Oppitunnin tavoitteena on kirjoittaa joukko ohjeita, joita joku voi seurata ja piirtää jonkin oppitunnin kuvauksessa olevan hirviön."
       2:
         text: "Oppilaat jakautuvat ryhmiin kirjoittaakseen ohjeet ja vaihtavat ne sitten toisen ryhmän kanssa, jonka tehtävänä on piirtää hirviö. Ryhmät kirjoittavat ohjeet käyttäen automatisointiajattelun neljää vaihetta: osiin jakaminen, mallien havainnointi, abstraktio ja algoritmien luominen."
-      3:
-      4:
     starwars_intro:
       1:
         text: "Hei, olen Kathleen Kennedy ja olen elokuvan Star Wars: Force Awakens tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n, kanssa. BB-8 on pallomainen droidi. Kaikkea sen toimintaa ja liikkumista ohjaa tietokoneohjelmisto. Tietotekniikka vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista terveydenhuoltoon ja elokuva-alalle. Itse asiassa tämäkin elokuva, The Force Awakens, vaati satojen tietokoneinsinöörien työpanoksen toteutuakseen."
@@ -604,49 +566,22 @@ fi:
       4:
         text: "Voit rakentaa ihan mitä haluat. - Pidä hauskaa!"
     gumball_intro:
-      1:
-      2:
-      3:
       4:
         text: "Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle."
-      5:
       6:
         text: "Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme."
       7:
         text: "Aloittaaksesi sinun täytyy liittää lohkosi oranssiin \"suoritettaessa\" lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet keltaisen viivan ja sitten ne kohdistuvat yhteen."
-      8:
-      9:
     iceage_intro:
-      1:
-      2:
-      3:
       4:
         text: "Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle."
-      5:
       6:
         text: "Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme."
       7:
         text: "Aloittaaksesi sinun täytyy liittää lohkosi oranssiin \"suoritettaessa\" lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet keltaisen viivan ja sitten ne kohdistuvat yhteen."
-      8:
-      9:
     mc_2016_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
       8:
         text: "Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen työkalupakkiin."
-      9:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen käyttö tai näytön napautus."
-      5:
-      6:
-      7:
-      8:

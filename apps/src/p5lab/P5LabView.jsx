@@ -1,5 +1,5 @@
 /** @file Top-level view for GameLab */
-/* global dashboard */
+
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
-  APP_HEIGHT
+  APP_HEIGHT,
 } from './constants';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
@@ -24,7 +24,7 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
-import experiments from '@cdo/apps/util/experiments';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
 /**
  * Top-level React wrapper for GameLab
@@ -43,7 +43,7 @@ class P5LabView extends React.Component {
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
       P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
     hideSource: PropTypes.bool.isRequired,
@@ -53,7 +53,7 @@ class P5LabView extends React.Component {
     isRunning: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isBackground: PropTypes.bool,
-    currentUserType: PropTypes.string
+    currentUserType: PropTypes.string,
   };
 
   constructor(props) {
@@ -66,7 +66,7 @@ class P5LabView extends React.Component {
 
     this.state = {
       libraryManifest: {},
-      projectType
+      projectType,
     };
   }
 
@@ -89,28 +89,10 @@ class P5LabView extends React.Component {
     });
   }
 
-  // TODO: When we remove the backgrounds_and_upload experiment
-  // we can get rid of hideUploadOption
-  shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations,
-    // and we are currently enabling it for students under an experiment flag.
-    if (
-      this.props.currentUserType === 'teacher' ||
-      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
-    ) {
-      return false;
-    }
-
-    return this.props.isBlockly;
-  }
-
-  // Teachers and users of non-blockly labs should always be allowed to upload animations
-  // with no restrictions. Otherwise, if users upload animations we will disable publish and remix.
-  shouldRestrictAnimationUpload() {
-    if (this.props.currentUserType === 'teacher') {
-      return false;
-    }
-
+  // Users of non-Blockly labs should always be allowed to upload animations
+  // with no restrictions. Teachers in blockly labs (ie. Sprite Lab) can upload with a warning.
+  // When students upload animations in Blockly labs, we disable publish and remix for the project.
+  shouldWarnOnAnimationUpload() {
     return this.props.isBlockly;
   }
 
@@ -120,26 +102,26 @@ class P5LabView extends React.Component {
       isResponsive,
       hideSource,
       pinWorkspaceToBottom,
-      showFinishButton
+      showFinishButton,
     } = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
     const codeModeStyle = {
-      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined
+      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined,
     };
 
     const visualizationColumnStyle = {
-      width: APP_WIDTH
+      width: APP_WIDTH,
     };
 
     const visualizationColumnClassNames = classNames({
       responsive: isResponsive,
-      pin_bottom: !hideSource && pinWorkspaceToBottom
+      pin_bottom: !hideSource && pinWorkspaceToBottom,
     });
     let defaultQuery = {
       categoryQuery: '',
-      searchQuery: ''
+      searchQuery: '',
     };
     if (this.props.isBackground) {
       defaultQuery.categoryQuery = 'backgrounds';
@@ -169,8 +151,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={channelId}
               libraryManifest={this.state.libraryManifest}
-              hideUploadOption={this.shouldHideAnimationUpload()}
-              shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
+              shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -195,6 +176,7 @@ class P5LabView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </div>
     );
@@ -204,7 +186,7 @@ class P5LabView extends React.Component {
     const {allowAnimationMode, interfaceMode} = this.props;
     let defaultQuery = {
       categoryQuery: '',
-      searchQuery: ''
+      searchQuery: '',
     };
     if (this.props.isBackground) {
       // Navigate to the backgrounds animation category.
@@ -218,8 +200,7 @@ class P5LabView extends React.Component {
         channelId={this.getChannelId()}
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
-        hideUploadOption={this.shouldHideAnimationUpload()}
-        shouldRestrictAnimationUpload={this.shouldRestrictAnimationUpload()}
+        shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
         hideCostumes={isBackgroundMode}
@@ -231,9 +212,7 @@ class P5LabView extends React.Component {
         }
         interfaceMode={interfaceMode}
       />
-    ) : (
-      undefined
-    );
+    ) : undefined;
   }
 
   render() {
@@ -257,5 +236,5 @@ export default connect(state => ({
   isIframeEmbed: state.pageConstants.isIframeEmbed,
   isBlockly: state.pageConstants.isBlockly,
   isBackground: state.animationPicker.isBackground,
-  currentUserType: state.currentUser?.userType
+  currentUserType: state.currentUser?.userType,
 }))(P5LabView);

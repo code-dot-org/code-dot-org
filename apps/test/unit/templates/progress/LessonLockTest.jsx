@@ -10,7 +10,7 @@ const FAKE_LESSON_ID = 33;
 const FAKE_UNIT_ID = 1;
 const DEFAULT_PROPS = {
   lessonId: FAKE_LESSON_ID,
-  unitId: FAKE_UNIT_ID
+  unitId: FAKE_UNIT_ID,
 };
 
 const setUp = (overrideProps = {}) => {

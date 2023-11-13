@@ -2,7 +2,7 @@ import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {
   stubFakeFeaturedProjectData,
-  stubFakeUnfeaturedProjectData
+  stubFakeUnfeaturedProjectData,
 } from './generateFakeProjects';
 import {featuredProjectTableTypes} from './projectConstants';
 
@@ -11,16 +11,16 @@ const Template = args => <FeaturedProjectsTable {...args} />;
 export const FeaturedProjectTableCurrent = Template.bind({});
 FeaturedProjectTableCurrent.args = {
   projectList: stubFakeFeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.current
+  tableVersion: featuredProjectTableTypes.current,
 };
 
 export const FeaturedProjectTableArchive = Template.bind({});
 FeaturedProjectTableArchive.args = {
   projectList: stubFakeUnfeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.archived
+  tableVersion: featuredProjectTableTypes.archived,
 };
 
 export default {
   title: 'FeaturedProjectsTable',
-  component: FeaturedProjectsTable
+  component: FeaturedProjectsTable,
 };

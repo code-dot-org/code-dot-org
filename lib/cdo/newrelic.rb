@@ -1,7 +1,6 @@
 # A client for invoking the NewRelic V2 REST API.
 require 'json'
 require "net/http"
-require "pp"
 
 class NewRelicClient
   attr_reader :api_key

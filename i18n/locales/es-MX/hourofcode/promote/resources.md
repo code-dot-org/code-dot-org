@@ -42,25 +42,25 @@ title: Recursos
 
 [Descarga versiones en alta resolución](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" y "Hora del Código" son marcas registradas. No queremos evitar su uso, pero queremos asegurarnos de que el uso se ajuste a algunos límites:**
+**"Hour of Code" y "Hora del Código" son marcas registradas. No queremos impedir su uso, pero sí asegurarnos de que se haga dentro de unos límites:**
 
 1. Cualquier referencia a "Hour of Code" u "Hora del Código" debe usarse de una manera que no sugiera que sea tu propia marca, sino que haga referencia a la Hora del Código como un movimiento de base.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Buen ejemplo</strong>: "Participa en la Hora del Código™ en TU-COMPAÑÍA.com".
+    <strong>Buen ejemplo</strong>: "Participa en la Hora del Código™ en TU-EMPRESA.com".
   </li>
   <li>
-    <strong>Mal ejemplo</strong>: "Prueba la Hora del Código por TU-COMPAÑÍA".
+    <strong>Mal ejemplo</strong>: "Prueba la Hora del Código de TU-EMPRESA".
   </li>
 </ul>
 
 1. Utiliza un superíndice "TM" en los lugares más destacados en los que menciones "Hora del Código" y un superíndice "Ⓡ" en los lugares más destacados en los que menciones "Hora del Código", tanto en tu sitio web como en las descripciones de las aplicaciones.
-2. Incluye mensajes en tu página (o en el pie de página), así como enlaces a los sitios web de la Semana por la Educación en Ciencias de la Computación y de [Code.org]({{ codeorg_link }}), que digan lo siguiente:
+2. Incluye texto en tu página (o en el pie de página), y enlaces a los sitios web de la Semana por la Educación en Ciencias de la Computación y de [Code.org]({{ codeorg_link }}), que digan lo siguiente:
     
-    *“La 'Hora del Código™'/'Hora del Código®' es una iniciativa global de la Semana por la Educación en Ciencias de la Computación [csedweek.org] y Code.org [code.org] introducir a millones de estudiantes a una hora de ciencias de la computación y programación".*
+    *“La 'Hora del Código™'/'Hora del Código®' es una iniciativa global de la Semana por la Educación en Ciencias de la Computación [csedweek.org] y Code.org [code.org] para introducir a millones de estudiantes a una hora de ciencias de la computación y programación".*
 
-3. No se utiliza "Hour of Code" ni "Hora del Código" en los nombres de las aplicaciones.
+3. No se puede utilizar "Hour of Code" ni "Hora del Código" en los nombres de las aplicaciones.
 
 <a id="stickers"></a>
 

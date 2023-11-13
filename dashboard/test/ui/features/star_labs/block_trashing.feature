@@ -3,8 +3,8 @@ Feature: Blocks can be trashed in certain circumstances
 
 Background:
   Given I am on "http://studio.code.org/s/course2/lessons/19/levels/2"
-  And I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   # In this level's initial setup:

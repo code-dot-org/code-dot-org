@@ -8,6 +8,7 @@ it:
       Green: Verdi
       Red: Rossi
       actor: personaggio
+      adjective: adjective
       age: età
       animal1score: animal1score
       animal1speed: animal1speed
@@ -20,6 +21,7 @@ it:
       bit: bit
       blue1: blue1
       blue2: blue2
+      body-part: body-part
       bodylength: lunghezza corpo
       buttonHeight: buttonHeight
       buttonMargin: buttonMargin
@@ -65,8 +67,10 @@ it:
       name: nome
       nectar: nettare
       nectars: nettare
+      number: number
       object: oggetto
       padYOffset: padYOffset
+      parts: parts
       planet: pianeta
       player_score: player_score
       points: punti
@@ -83,12 +87,20 @@ it:
       screenHeight: screenHeight
       screenWidth: screenWidth
       set sides: set sides
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: urlo
       sides: lati
       size: dimensione
       speed: velocità
+      startX: startX
+      startY: startY
+      stopped-left: stopped-left
+      time: time
       type: tipo
       variable: variabile
       width: larghezza
       wizard: mago
       x: x
+      your var 1: your var 1
+      your var 2: your var 2

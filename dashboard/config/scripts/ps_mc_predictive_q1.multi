@@ -5,3 +5,4 @@ wrong 'wrong answer', feedback: 'Not quite.  This answer does not work because o
 right 'right answer', feedback: 'you are so smart!'
 wrong 'wrong answer', feedback: 'Not quite.  This answer does not work because of some reason specific to this answer choice'
 wrong 'wrong answer', feedback: 'Not quite.  This answer does not work because of some reason specific to this answer choice'
+allow_multiple_attempts true

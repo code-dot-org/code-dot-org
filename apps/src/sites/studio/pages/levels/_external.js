@@ -24,7 +24,7 @@ $(document).ready(() => {
   // By using a static ancestor jQuery will automatically bind the event handler later
   // when .submitButton is added to the DOM.
   // @see https://stackoverflow.com/q/203198
-  $('.full_container').on('click', '.submitButton', function() {
+  $('.full_container').on('click', '.submitButton', function () {
     onContinue();
   });
 });

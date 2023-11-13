@@ -1,17 +1,15 @@
-/* global CanvasPixelArray */
-
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
 const DEFAULT_MAX_STEPS = 5e4;
 export const DEFAULT_EXECUTION_INFO = {
   ticks: DEFAULT_MAX_STEPS,
-  checkTimeout: function() {
+  checkTimeout: function () {
     if (this.ticks-- < 0) {
       throw new Error('Infinity');
     }
   },
-  isTerminated: () => false
+  isTerminated: () => false,
 };
 
 /**
@@ -243,7 +241,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
         if (
-          !obj.data.hasOwnProperty(name) &&
+          !Object.prototype.hasOwnProperty.call(obj.data, name) &&
           value instanceof Interpreter.Object
         ) {
           // When assigning an interpreter object as a property on a
@@ -411,7 +409,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     const hooks = [];
     const apis = {
       executionInfo: {...DEFAULT_EXECUTION_INFO},
-      ...scope
+      ...scope,
     };
 
     Object.keys(events).forEach(event => {
@@ -431,7 +429,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
             );
             interpreter.run();
             return lastReturnValue;
-          }
+          },
         });
         evalCode += `this['${eventId}']=function(${
           args ? args.join() : ''
@@ -461,9 +459,8 @@ export default class CustomMarshalingInterpreter extends Interpreter {
           scope,
           'setReturnValue',
           interpreter.createNativeFunction(returnValue => {
-            lastReturnValue = interpreter.marshalInterpreterToNative(
-              returnValue
-            );
+            lastReturnValue =
+              interpreter.marshalInterpreterToNative(returnValue);
           })
         );
       }
@@ -555,7 +552,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     } else if (nativeVar instanceof Function) {
       var makeNativeOpts = {
         nativeFunc: nativeVar,
-        nativeParentObj: nativeParentObj
+        nativeParentObj: nativeParentObj,
       };
       if (this.asyncFunctionList.indexOf(nativeVar) !== -1) {
         // Mark if this should be nativeIsAsync:
@@ -613,7 +610,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
   static evalWith(code, scope, {asyncFunctionList, legacy} = {}) {
     const globals = {
       executionInfo: DEFAULT_EXECUTION_INFO,
-      ...scope
+      ...scope,
     };
 
     if (legacy) {
@@ -625,7 +622,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
         args.push(globals[k]);
       }
       params.push(code);
-      var ctor = function() {
+      var ctor = function () {
         return Function.apply(this, params);
       };
       ctor.prototype = Function.prototype;
@@ -733,10 +730,11 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       var state = opts.callbackState || {};
       state.node = {
         type: 'CallExpression',
-        arguments: intArgs /* this just needs to be an array of the same size */,
+        arguments:
+          intArgs /* this just needs to be an array of the same size */,
         // give this node an end so that the interpreter doesn't treat it
         // like polyfill code and do weird weird scray terrible things.
-        end: 1
+        end: 1,
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
@@ -790,7 +788,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
       nativeParentObj,
       maxDepth,
       nativeIsAsync,
-      nativeCallsBackInterpreter
+      nativeCallsBackInterpreter,
     } = opts;
     return (...args) => {
       let nativeArgs = [];

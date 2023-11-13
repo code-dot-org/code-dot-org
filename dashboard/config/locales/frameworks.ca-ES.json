@@ -1,2 +1,38 @@
 {
+  "ca-ES": {
+    "data": {
+      "frameworks": {
+        "ai4k12-2021": {
+          "name": "Directrius nacionals AI4K12 2021"
+        },
+        "c3ss": {
+          "name": "C3 Estàndards d'Estudis Socials"
+        },
+        "ccela": {
+          "name": "Normes de les arts lingüístiques en anglès"
+        },
+        "ccmath": {
+          "name": "Normes de matemàtiques bàsiques comunes"
+        },
+        "csa": {
+          "name": "Marc conceptual CSA"
+        },
+        "csp2021": {
+          "name": "Marc conceptual CSP"
+        },
+        "csta": {
+          "name": "CSTA K-12 Normes de Ciències de la Computació (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Estàndards de Ciències de la Computació (2011)"
+        },
+        "iste": {
+          "name": "Estàndards ISTE per a estudiants"
+        },
+        "ngss": {
+          "name": "Normes de Ciència de la propera generació"
+        }
+      }
+    }
+  }
 }

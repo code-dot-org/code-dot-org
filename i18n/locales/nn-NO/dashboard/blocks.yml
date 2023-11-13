@@ -5,19 +5,11 @@ nn:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': middels
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': middels
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -59,6 +51,11 @@ nn:
             MOVES.Rest: Ingen
       Dancelab_atTimestamp:
         text: etter {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': taktar
+            '"seconds"': sekund
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"measures"': taktar
@@ -438,26 +435,6 @@ nn:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': romvesen
             '"BEAR"': bjørnar
@@ -563,6 +540,43 @@ nn:
             '"iceCream"': Iskrem
             '"default"': Lys
             '"neon"': Neon
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          vel bakgrunnseffekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"circles"': Tunnel
+            '"color_cycle"': Fargar
+            '"diamonds"': Diamantar
+            '"disco_ball"': Discokule
+            '"fireworks"': Fyrverkeri
+            '"growing_stars"': Voksande stjerner
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Rosa splætt
+            '"rainbow"': Regnboge
+            '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"galaxy"': Verdensrom
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrat
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"electronic"': Elektronisk
+            '"iceCream"': Iskrem
+            '"default"': Lys
+            '"neon"': Neon
+            '"rainbow"': Regnboge
             '"tropical"': Tropisk
             '"vintage"': Retro
             '"warm"': Rødfarger
@@ -1104,6 +1118,18 @@ nn:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: oppsett {GROUP} som {FORMAT}
+        options:
+          FORMAT:
+            '"border"': kantlinje
+            '"circle"': sirkel
+            '"grid"': rutenett
+            '"row"': rad
+            '"bottom"': nederste rad
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': høgre kolonne
       gamelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1124,6 +1150,17 @@ nn:
         options:
           EFFECT:
             '"rain"': regn
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': kantlinje
+            '"circle"': sirkel
+            '"grid"': rutenett
+            '"row"': rad
+            '"bottom"': nederste rad
+            '"left"': venstre kolonne
+            '"column"': kolonne
+            '"right"': høgre kolonne
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -1134,9 +1171,7 @@ nn:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': middels
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
@@ -1224,10 +1259,7 @@ nn:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': middels
-            '100': large
       gamelab_setProp:
         text: sett {SPRITE} {PROPERTY} til {VAL}
         options:
@@ -1244,10 +1276,7 @@ nn:
           PROPERTY:
             '"scale"': størrelse
           SIZE:
-            '25': extra small
-            '50': small
             '75': middels
-            '100': large
       gamelab_setSizes:
         text: sett {SPRITE} {PROPERTY} til {N} %
         options:
@@ -1258,11 +1287,9 @@ nn:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': sakte
             '5': normal
             '7': rask
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1624,7 +1651,6 @@ nn:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1669,16 +1695,10 @@ nn:
         options:
           PORTION:
             '1': alle
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alle
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_goToHome:
         text: hopp til øverst til venstre
       binary_move:
@@ -1792,6 +1812,19 @@ nn:
           DIR:
             right: høgre ↻
             left: venstre ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

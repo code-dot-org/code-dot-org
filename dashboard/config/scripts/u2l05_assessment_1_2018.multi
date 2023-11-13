@@ -11,3 +11,5 @@ right 'TCP must account for the fact that packets may not arrive at a destinatio
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -2,8 +2,8 @@
   "mk-MK": {
     "data": {
       "course_offerings": {
-        "valentine": "валентин",
-        "halloween": "ноќ на вештерките"
+        "halloween": "ноќ на вештерките",
+        "valentine": "валентин"
       }
     }
   }

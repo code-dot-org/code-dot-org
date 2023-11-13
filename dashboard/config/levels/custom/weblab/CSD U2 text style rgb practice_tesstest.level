@@ -1,0 +1,36 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-07-12T18:01:16.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "# Using RGB\r\n\r\nExperiment with the RGB values in the CSS style sheet. \r\n\r\n# Do This\r\n1) Find the CSS rule-set in the style sheet that gives the h1 tag its style. Change *only* the first 0 to 255.\r\n* Find the CSS rule-set in the style sheet that gives the p tag its style. Change *only* the second 0 to 255.\r\n* Find the CSS rule-set in the style sheet that gives the h3 tag its style. Change *only* the third 0 to 255.\r\n\r\n::: details [**Show Me How**]\r\n\r\n```\r\nh1 {\r\n  color: rgb( 255 , 0, 0);\r\n}\r\nh3 {\r\n  color: rgb( 0 , 0 , 255);\r\n}\r\np {\r\n  color: rgb( 0 , 255, 0);\r\n}\r\n```\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**Discuss the results with your neighbor:**\r\n1) What did each of those changes do to the color of your HTML components? \r\n* What do you think that means for each of those values in the RGB code?\r\n",
+    "instructions_important": "false",
+    "encrypted_examples": "FQhy8gavcPhFoF2CNVAwYajbTr43kJy0CeyWqYwU8eiESVDakidN0tUXtswt\nphHJn7BFRBJtVG4xwgWFZes/6Q==\n",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 23265,
+    "name_suffix": "_tesstest",
+    "submittable": "false",
+    "reference_links": [
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
+    ],
+    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n      \"data\": \"body {\\r\\n  background: white;\\r\\n}\\r\\nh1{\\r\\n  color: rgb( 0 , 0, 0);\\r\\n}\\r\\n  h3 {\\r\\n  color: rgb( 0 , 0 , 0);\\r\\n}\\r\\n  p {\\r\\n  color: rgb( 0 , 0, 0);\\r\\n  }\"\r\n    },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\r\\n  <\\/head>\\r\\n  <body>\\r\\n        <h1>What is RGB Color?<\\/h1>\\r\\n  <p>The RGB color system is one of the most well-known color systems in the world. It combines red, green, and blue light to create the colors we see on our TV screens, computer monitors, and smartphones!<\\/p>\\r\\n  <h3>How Do You Use RGB Color?<\\/h3>\\r\\n  <p>Each color channel (red, green, and blue) is expressed from 0 (dull) to 255 (bright).<\\/p>\\r\\n  <p>This means that you can make 16,777,216 different colors when using RGB color!<\\/p> \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "display_name": "Using RGB Colors",
+    "bubble_choice_description": "Add RGB colors to a website.",
+    "thumbnail_url": "https://images.code.org/3bac6caac33a537914df55d840e8b345-image-1588269048057.44.47 AM.png",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-12T18:01:16.510+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style rgb practice_2023\\\"\"],\"cloned_from\":\"CSD U2 text style rgb practice_2023\"}]"
+}]]></config>
+</Weblab>

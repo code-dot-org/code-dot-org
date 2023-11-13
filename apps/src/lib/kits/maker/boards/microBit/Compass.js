@@ -24,7 +24,7 @@ export default class Compass extends EventEmitter {
 
     Object.defineProperties(this, {
       heading: {
-        get: function() {
+        get: function () {
           let rawX = this.board.mb.analogChannel[SENSOR_CHANNELS.magX];
           let rawY = this.board.mb.analogChannel[SENSOR_CHANNELS.magY];
           let heading = Math.round(Math.atan2(rawY, rawX) * (180 / Math.PI));
@@ -35,8 +35,8 @@ export default class Compass extends EventEmitter {
           }
 
           return heading;
-        }
-      }
+        },
+      },
     });
   }
 

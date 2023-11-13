@@ -45,7 +45,7 @@ export default class CdoBramble {
       resetFilesystem: this.resetFilesystem.bind(this),
       syncFiles: this.syncFiles.bind(this),
       undo: this.undo.bind(this),
-      validateProjectChanged: this.validateProjectChanged.bind(this)
+      validateProjectChanged: this.validateProjectChanged.bind(this),
     };
   }
 
@@ -147,10 +147,9 @@ export default class CdoBramble {
   }
 
   config() {
-    const {
-      maxProjectCapacity,
-      pageConstants
-    } = this.store.getStore().getState();
+    const {maxProjectCapacity, pageConstants} = this.store
+      .getStore()
+      .getState();
 
     return {
       url: this.url,
@@ -159,11 +158,11 @@ export default class CdoBramble {
       capacity: maxProjectCapacity,
       initialUIState: {
         theme: 'light-theme',
-        readOnly: pageConstants.isReadOnlyWorkspace
+        readOnly: pageConstants.isReadOnlyWorkspace,
       },
       extensions: {
-        disable: ['bramble-move-file']
-      }
+        disable: ['bramble-move-file'],
+      },
     };
   }
 
@@ -220,7 +219,7 @@ export default class CdoBramble {
       this.recentChanges.push({
         operation: 'change',
         file: cleanedPath,
-        fileDataPath: path
+        fileDataPath: path,
       });
     }
 
@@ -304,7 +303,7 @@ export default class CdoBramble {
   onFileDeleted(path) {
     this.recentChanges.push({
       operation: 'delete',
-      file: this.cleanPath(path)
+      file: this.cleanPath(path),
     });
 
     this.invokeAll(this.onProjectChangedCallbacks);
@@ -325,7 +324,7 @@ export default class CdoBramble {
     this.recentChanges.push({
       operation: 'rename',
       file: cleanedOldPath,
-      newFile: cleanedNewPath
+      newFile: cleanedNewPath,
     });
 
     this.invokeAll(this.onProjectChangedCallbacks);
@@ -486,7 +485,7 @@ export default class CdoBramble {
   downloadFile(url, callback) {
     $.ajax(url, {
       dataType: 'binary',
-      responseType: 'arraybuffer'
+      responseType: 'arraybuffer',
     })
       .done(data => {
         callback(data, null);
@@ -646,7 +645,7 @@ export default class CdoBramble {
       // Regex: Compare without whitespace.
       const projectChanged = Object.keys(startObj).reduce(
         (hasChanged, currentFilename) => {
-          if (!userObj.hasOwnProperty(currentFilename)) {
+          if (!Object.prototype.hasOwnProperty.call(userObj, currentFilename)) {
             hasChanged = true;
           } else {
             const dataChanged =
@@ -696,7 +695,7 @@ export default class CdoBramble {
       if (err) {
         // Unable to create filesystem, fatal (and highly unlikely) error.
         this.logAction(PageAction.BrambleFilesystemResetFailed, {
-          error: err.message
+          error: err.message,
         });
 
         // Temporarily log the error.
@@ -765,8 +764,9 @@ export default class CdoBramble {
   }
 
   createHtmlDocument(head, body) {
-    return `<!DOCTYPE html>\n<html>\n  <head>\n    ${head ||
-      ''}\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
+    return `<!DOCTYPE html>\n<html>\n  <head>\n    ${
+      head || ''
+    }\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
   }
 
   addFileHTML() {
@@ -774,7 +774,7 @@ export default class CdoBramble {
       {
         basenamePrefix: 'new',
         ext: 'html',
-        contents: this.createHtmlDocument()
+        contents: this.createHtmlDocument(),
       },
       err => {
         if (err) {
@@ -790,7 +790,7 @@ export default class CdoBramble {
         basenamePrefix: 'new',
         ext: 'css',
         contents:
-          'body {\n  background: white;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n}'
+          'body {\n  background: white;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n}',
       },
       err => {
         if (err) {

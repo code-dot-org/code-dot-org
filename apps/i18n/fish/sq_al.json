@@ -1,9 +1,9 @@
 {
-  "continue": "Vazhdo ",
   "areYouSure": "Je i sigurtë?",
   "cancel": "Anulo",
-  "yes": "Po",
+  "continue": "Vazhdo ",
+  "finish": "Përfundo",
   "no": "Jo",
   "run": "Ekzekuto",
-  "finish": "Përfundo"
+  "yes": "Po"
 }

@@ -40,7 +40,7 @@ class LessonOverview extends Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired
+    hasVerifiedResources: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -52,7 +52,7 @@ class LessonOverview extends Component {
       lessonLink: document.location.pathname,
       referrer: document.referrer,
       unitName: props.lesson.unit.displayName,
-      unitLink: props.lesson.unit.link
+      unitLink: props.lesson.unit.link,
     });
   }
 
@@ -66,14 +66,14 @@ class LessonOverview extends Component {
         event: 'open-pdf',
         data_json: JSON.stringify({
           name: this.props.lesson.key,
-          pdfType: firehoseKey
-        })
+          pdfType: firehoseKey,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
           window.location.href = url;
-        }
+        },
       }
     );
     return false;
@@ -91,14 +91,14 @@ class LessonOverview extends Component {
       options.push({
         key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),
-        url: lessonPlanPdfUrl
+        url: lessonPlanPdfUrl,
       });
     }
     if (scriptResourcesPdfUrl) {
       options.push({
         key: 'scriptResources',
         name: i18n.printHandouts(),
-        url: scriptResourcesPdfUrl
+        url: scriptResourcesPdfUrl,
       });
     }
     return options;
@@ -111,7 +111,7 @@ class LessonOverview extends Component {
       isSignedIn,
       viewAs,
       isVerifiedInstructor,
-      hasVerifiedResources
+      hasVerifiedResources,
     } = this.props;
 
     const displayVerifiedResourcesNotification =
@@ -169,7 +169,7 @@ class LessonOverview extends Component {
             width={styleConstants['content-width']}
             viewAs={viewAs}
             firehoseAnalyticsData={{
-              lesson_id: lesson.id
+              lesson_id: lesson.id,
             }}
           />
         )}
@@ -182,7 +182,7 @@ class LessonOverview extends Component {
         <h1>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
-            lessonName: lesson.displayName
+            lessonName: lesson.displayName,
           })}
         </h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
@@ -343,10 +343,10 @@ const styles = {
   frontPage: {
     display: 'flex',
     flexDirection: 'row',
-    marginTop: 40
+    marginTop: 40,
   },
   customText: {
-    margin: '0px 2px'
+    margin: '0px 2px',
   },
   icon: {
     margin: '0px 2px',
@@ -354,47 +354,47 @@ const styles = {
     // we want our icon text to be a different size than our button text, which
     // requires we manually offset to get it centered properly
     position: 'relative',
-    top: 1
+    top: 1,
   },
   left: {
     width: '60%',
-    paddingRight: 20
+    paddingRight: 20,
   },
   right: {
     width: '40%',
     padding: '0px 10px 10px 20px',
-    borderLeft: 'solid 1px #333'
+    borderLeft: 'solid 1px #333',
   },
   header: {
     margin: '10px 0px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
     color: color.purple,
-    margin: '10px 0px'
+    margin: '10px 0px',
   },
   copyResourceWarningArea: {
     color: '#8a6d3b',
     backgroundColor: '#fcf8e3',
     border: '2px solid #f5e79e',
     borderRadius: 4,
-    padding: '10px 10px 0px 10px'
+    padding: '10px 10px 0px 10px',
   },
   titleNoTopMargin: {
-    marginTop: 0
+    marginTop: 0,
   },
   dropdowns: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   standardsHeaderAndButton: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedLessonOverview = LessonOverview;
@@ -404,5 +404,5 @@ export default connect(state => ({
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
-  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
 }))(LessonOverview);

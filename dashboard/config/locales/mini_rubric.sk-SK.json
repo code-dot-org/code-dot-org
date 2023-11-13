@@ -2,9 +2,6 @@
   "sk-SK": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Kľúčové koncepty"
-        },
         "CSD U2 HTML Adding Paragraphs pt 2_2019": {
           "rubric_key_concept": "Vytvoriť pomocou HTML webovú stránku, ktorá obsahuje rôzne úrovne nadpisov, odseky, zoznamy a obrázky; pochopiť, že pri používaní počítačových jazykov je potrebná presnosť a používanie vhodnej syntaxe.\n",
           "rubric_performance_level_1": "Všetok text je obsiahnutý v značkách odsekov. Sú vytvorené aspoň dva odseky, a to pomocou správne použitých značiek odsekov.",
@@ -53,6 +50,11 @@
           "rubric_performance_level_3": "Väčšina obsahu je obsiahnutá v značkách. Je využitá aspoň jedna značka nadpisu.",
           "rubric_performance_level_4": "Medzi značkami sa nenachádza žiadny alebo takmer žiadny obsah."
         },
+        "CSD U2 Heading Test_2023": {
+          "rubric_key_concept": "Vytvoriť pomocou HTML webovú stránku, ktorá obsahuje rôzne úrovne nadpisov, odseky, zoznamy a obrázky.\n\nPochopiť, že pri používaní počítačových jazykov je potrebná presnosť a používanie vhodnej syntaxe.\n",
+          "rubric_performance_level_3": "Väčšina obsahu je obsiahnutá v značkách. Je využitá aspoň jedna značka nadpisu.",
+          "rubric_performance_level_4": "Medzi značkami sa nenachádza žiadny alebo takmer žiadny obsah."
+        },
         "CSD U2 Image Tag 2_2019": {
           "rubric_performance_level_4": "Značka `img` nie je použitá alebo chýba zdrojová adresa daného obrázka."
         },
@@ -64,6 +66,12 @@
           "rubric_performance_level_4": "Značka `img` nie je použitá alebo chýba zdrojová adresa daného obrázka."
         },
         "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Štruktúrovať obsah webovej stránky pomocou HTML (pridanie obrázka na webovú stránku). Pri používaní cudzej tvorby je správne uvedený zdroj.",
+          "rubric_performance_level_1": "Obrázok sa zobrazuje správne a v atribúte `alt` je zadaný primeraný popis obrázka. V značke `img` sa nenachádza žiadny nepotrebný kód. Zdroj obrázka je uvedený správne a obrázok je vhodne pomenovaný.",
+          "rubric_performance_level_2": "Obrázok sa zobrazuje správne a je použitý v súlade s pravidlami, ktoré stanovuje jeho licencia.",
+          "rubric_performance_level_3": "Na stránke je využitá značka `img` so zdrojovou adresou obrázka, ale možno sa vyskytli drobné syntaktické chyby alebo preklepy, kvôli ktorým sa obrázok nezobrazuje správne. Prípadne daný obrázok nie je možné použiť na webovej stránke legálne."
+        },
+        "CSD U2 Image assessment_2023": {
           "rubric_key_concept": "Štruktúrovať obsah webovej stránky pomocou HTML (pridanie obrázka na webovú stránku). Pri používaní cudzej tvorby je správne uvedený zdroj.",
           "rubric_performance_level_1": "Obrázok sa zobrazuje správne a v atribúte `alt` je zadaný primeraný popis obrázka. V značke `img` sa nenachádza žiadny nepotrebný kód. Zdroj obrázka je uvedený správne a obrázok je vhodne pomenovaný.",
           "rubric_performance_level_2": "Obrázok sa zobrazuje správne a je použitý v súlade s pravidlami, ktoré stanovuje jeho licencia.",
@@ -90,6 +98,13 @@
           "rubric_performance_level_3": "V súbore štýlov sú vytvorené súbory pravidiel, ktoré upravujú štýl pozadia, obrázkov a textu, no obsahujú veľké chyby, kvôli ktorým kód nefunguje správne.",
           "rubric_performance_level_4": "V súbore štýlov nie sú vytvorené žiadne súbory pravidiel, prípadne súbory pravidiel nemajú potrebné selektory na to, aby upravovali štýl pozadia alebo obrázkov na stránkach."
         },
+        "CSD U2 add style_2023": {
+          "rubric_key_concept": "Vytvoriť pravidlá, ktoré ovplyvňujú celé skupiny prvkov; použiť na webovej stránke formátovanie pomocou CSS.",
+          "rubric_performance_level_1": "Pozadie, obrázky a text majú nastavený štýl v súlade s pokynmi. V súbore štýlov nie sú žiadne syntaktické chyby ani nadbytočný kód (ktorý nefunguje).",
+          "rubric_performance_level_2": "Pozadie, obrázky a text majú nastavený štýl v súlade s pokynmi. V súbore štýlov sa môžu vyskytovať drobné chyby alebo nefunkčný kód.",
+          "rubric_performance_level_3": "V súbore štýlov sú vytvorené súbory pravidiel, ktoré upravujú štýl pozadia, obrázkov a textu, no obsahujú veľké chyby, kvôli ktorým kód nefunguje správne.",
+          "rubric_performance_level_4": "V súbore štýlov nie sú vytvorené žiadne súbory pravidiel, prípadne súbory pravidiel nemajú potrebné selektory na to, aby upravovali štýl pozadia alebo obrázkov na stránkach."
+        },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "Vytvoriť digitálny produkt, ktorý využíva odkazy v rámci viacstránkového webu",
           "rubric_performance_level_1": "Je vytvorená nová stránka s jedinečným a popisným názvom končiacim na „.html“. Na stránke index.html je vytvorený odkaz na novú stránku, zatiaľ čo na novej stránke je spätný odkaz na index.html",
@@ -98,6 +113,13 @@
           "rubric_performance_level_4": "Nie je vytvorená žiadna nová stránka ani žiadne odkazy\n"
         },
         "CSD U2 adding pages_2022": {
+          "rubric_key_concept": "Vytvoriť digitálny produkt, ktorý využíva odkazy v rámci viacstránkového webu",
+          "rubric_performance_level_1": "Je vytvorená nová stránka s jedinečným a popisným názvom končiacim na „.html“. Na stránke index.html je vytvorený odkaz na novú stránku, zatiaľ čo na novej stránke je spätný odkaz na index.html",
+          "rubric_performance_level_2": "Je vytvorený aspoň jeden fungujúci odkaz, ktorý odkazuje z jednej HTML stránky na inú",
+          "rubric_performance_level_3": "Je použitá značka `<a>`, ale kvôli syntaktickým chybám alebo nesprávne použitému názvu stránky nefunguje správne\n",
+          "rubric_performance_level_4": "Nie je vytvorená žiadna nová stránka ani žiadne odkazy\n"
+        },
+        "CSD U2 adding pages_2023": {
           "rubric_key_concept": "Vytvoriť digitálny produkt, ktorý využíva odkazy v rámci viacstránkového webu",
           "rubric_performance_level_1": "Je vytvorená nová stránka s jedinečným a popisným názvom končiacim na „.html“. Na stránke index.html je vytvorený odkaz na novú stránku, zatiaľ čo na novej stránke je spätný odkaz na index.html",
           "rubric_performance_level_2": "Je vytvorený aspoň jeden fungujúci odkaz, ktorý odkazuje z jednej HTML stránky na inú",
@@ -114,6 +136,12 @@
         "CSD U2 classes haikus_2022": {
           "rubric_key_concept": "Vytvoriť triedy, ktoré sa dajú využívať ako skupina.",
           "rubric_performance_level_1": "Trieda a súbor pravidiel sú vytvorené správne, sú priradené ku všetkým častiam zvolenej básne haiku a v súbore pravidiel sú vytvorené minimálne tri pravidlá.",
+          "rubric_performance_level_2": "Je vytvorená trieda aj súbor pravidiel, pričom táto trieda upravuje väčšinu častí zvolenej básne haiku na webovej stránke, no v niektorých častiach textu je niekoľko drobných chýb, prípadne súbor pravidiel obsahuje menej než tri pravidlá.",
+          "rubric_performance_level_3": "Je vytvorená trieda aj súbor pravidiel, pričom táto trieda je priradená aspoň k niektorým prvkom webu, no vyskytujú sa veľké chyby, kvôli ktorým text nemá správne nastavený štýl.",
+          "rubric_performance_level_4": "Nie je vytvorená žiadna trieda ani súbor pravidiel, prípadne trieda nie je priradená k žiadnym prvkom daného webu."
+        },
+        "CSD U2 classes haikus_2023": {
+          "rubric_key_concept": "Vytvoriť triedy, ktoré sa dajú využívať ako skupina.",
           "rubric_performance_level_2": "Je vytvorená trieda aj súbor pravidiel, pričom táto trieda upravuje väčšinu častí zvolenej básne haiku na webovej stránke, no v niektorých častiach textu je niekoľko drobných chýb, prípadne súbor pravidiel obsahuje menej než tri pravidlá.",
           "rubric_performance_level_3": "Je vytvorená trieda aj súbor pravidiel, pričom táto trieda je priradená aspoň k niektorým prvkom webu, no vyskytujú sa veľké chyby, kvôli ktorým text nemá správne nastavený štýl.",
           "rubric_performance_level_4": "Nie je vytvorená žiadna trieda ani súbor pravidiel, prípadne trieda nie je priradená k žiadnym prvkom daného webu."
@@ -142,6 +170,17 @@
           "rubric_performance_level_3": "Nadpisy `h3` majú v súbore štýlov vytvorený vlastný súbor pravidiel, je využitá vlastnosť „color“, no v kóde sú chyby, takže text nemení farbu.",
           "rubric_performance_level_4": "Nadpisy `h3` nemajú zadaný vlastný súbor pravidiel, prípadne v súbore pravidiel nie je použitá vlastnosť „color“."
         },
+        "CSD U2 text style h3_2023": {
+          "rubric_key_concept": "Použiť na webovej stránke formátovanie pomocou CSS",
+          "rubric_performance_level_1": "Nadpisy `h3` majú nastavenú inú farbu (nie čiernu). V súbore štýlov nie je žiadny nadbytočný kód a v kóde nie sú žiadne syntaktické chyby.",
+          "rubric_performance_level_2": "Nadpisy `h3` majú novú farbu (nie čiernu).",
+          "rubric_performance_level_3": "Nadpisy `h3` majú v súbore štýlov vytvorený vlastný súbor pravidiel, je využitá vlastnosť „color“, no v kóde sú chyby, takže text nemení farbu.",
+          "rubric_performance_level_4": "Nadpisy `h3` nemajú zadaný vlastný súbor pravidiel, prípadne v súbore pravidiel nie je použitá vlastnosť „color“."
+        },
+        "CSD U2L2 - PracC_2023": {
+          "rubric_performance_level_3": "V texte je aspoň jedna značka odseku, no možno nie je použitá správne (napr. chýba ukončovacia značka, odseky sú vytvorené mimo prvku „body“).",
+          "rubric_performance_level_4": "V texte nie sú žiadne značky odsekov."
+        },
         "CSD Web CSS Assessment_2021": {
           "rubric_key_concept": "Vytvoriť súbor štýlov a odkázať naň v HTML kóde. Súbor štýlov obsahuje pravidlo, ktoré na webovej stránke upravuje prvok odseku.",
           "rubric_performance_level_1": "Odseky majú nastavenú inú farbu a veľkosť, pričom v HTML ani CSS kóde nie sú žiadne chyby ani nezrovnalosti.",
@@ -155,6 +194,16 @@
           "rubric_performance_level_2": "Odseky majú novú farbu alebo veľkosť.",
           "rubric_performance_level_3": "Odseky majú v súbore štýlov vytvorený vlastny´súbor pravidiel, ktorý využíva vlastnosť „color“ alebo „size“. V kóde sú však chyby, takže text nemení farbu ani veľkosť. Je vytvorený HTML kód, ktorý sa pokúša prepojiť súbor štýlov s webovou stránkou.",
           "rubric_performance_level_4": "Odseky nemajú vytvorený vlastný súbor pravidiel, prípadne v súbore pravidiel nie sú využité vlastnosti „color“ alebo „size“. Nie je vytvorený žiadny kód, ktorý by súbor štýlov prepájal s webovou stránkou."
+        },
+        "CSD Web CSS Assessment_2023": {
+          "rubric_key_concept": "Vytvoriť súbor štýlov a odkázať naň v HTML kóde. Súbor štýlov obsahuje pravidlo, ktoré na webovej stránke upravuje prvok odseku.",
+          "rubric_performance_level_1": "Odseky majú nastavenú inú farbu a veľkosť, pričom v HTML ani CSS kóde nie sú žiadne chyby ani nezrovnalosti.",
+          "rubric_performance_level_2": "Odseky majú novú farbu alebo veľkosť.",
+          "rubric_performance_level_3": "Odseky majú v súbore štýlov vytvorený vlastny´súbor pravidiel, ktorý využíva vlastnosť „color“ alebo „size“. V kóde sú však chyby, takže text nemení farbu ani veľkosť. Je vytvorený HTML kód, ktorý sa pokúša prepojiť súbor štýlov s webovou stránkou.",
+          "rubric_performance_level_4": "Odseky nemajú vytvorený vlastný súbor pravidiel, prípadne v súbore pravidiel nie sú využité vlastnosti „color“ alebo „size“. Nie je vytvorený žiadny kód, ktorý by súbor štýlov prepájal s webovou stránkou."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Kľúčové koncepty"
         }
       }
     }

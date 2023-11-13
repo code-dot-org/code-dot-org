@@ -25,7 +25,7 @@ title: วิธีแนะนำการใช้งาน Hour of Code
 
 <a id="how-to-video"></a>
 
-## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-เมื่อคุณ [ ลงทะเบียนกิจกรรม Hour of Code](/#join) คุณจะได้รับการสื่อสารที่เป็นประโยชน์ทางอีเมลพร้อมข่าวสารและเคล็ดลับสำหรับการจัดงาน Hour of Code ที่ประสบความสำเร็จ It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+เมื่อคุณ [ลงทะเบียนอีเวนต์ Hour of Code ](/events), คุณจะได้รับการสื่อสารทางอีเมลที่มีประโยชน์พร้อมข่าวสารและเคล็ดลับในการจัดงาน Hour of Code ที่ประสบความสำเร็จ It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ให้นักเรียนไปสู่กิจกรรม
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- เขียนลิงก์การกวดวิชาบนไวท์บอร์ดค้นหาลิงก์ที่แสดงไว้ใน [ข้อมูลสำหรับการสอน]({{ urls/learn }})ที่คุณเลือก
 
 เมื่อนักเรียนของคุณพบปัญหา มันโอเคที่จะตอบว่า:
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [พิมพ์ใบรับ]({{ urls/certificates }}) รองสำหรับนักเรียนของคุณ
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - แชร์รูปถ่ายและวิดีโอของกิจกรรม Hour of Code ของคุณลงในโซเชียลมีเดีย ใช้ #HourOfCode และ @codeorg เพื่อที่เราจะสามารถเห็นความสำเร็จของคุณด้วยเช่นกัน!
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### จะทำอะไรต่อหลังจาก Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบลงด้วย Hour of Code! [เรียนรู้](/beyond) วิธีนำ CS มาสู่โรงเรียนและนักเรียนของคุณ
 
 {{ signup_button }}

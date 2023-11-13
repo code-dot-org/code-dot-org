@@ -4,9 +4,9 @@
       "programming_environments": {
         "applab": {
           "categories": {
-            "ui_controls": {
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Funzjoni"
@@ -26,9 +26,9 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "timedLoop": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Funzjoni"

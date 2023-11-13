@@ -1,73 +1,13 @@
 {
-  "navigateForward": "Nastavi",
-  "navigateBack": "Nazad",
-  "tryAgain": "Pokušaj ponovo",
-  "navigateDone": "Završi",
-  "saveProgress": "Snimi",
-  "correctAnswer": "Ispravno",
-  "incorrectAnswer": "Netačno",
-  "modelCardPossibleValuesMinimum": "min.",
-  "modelCardPossibleValuesMaximum": "max.",
-  "columnInspectorDescription": "Opis",
-  "columnDetailsMinimumValue": "min.",
   "columnDetailsMaximumValue": "max.",
+  "columnDetailsMinimumValue": "min.",
+  "columnInspectorDescription": "Opis",
+  "correctAnswer": "Ispravno",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "vrijeme"
-        },
-        "day": {
-          "id": "dan"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "kukuruz"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "boja"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Opis"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "veličina"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pile"
+        "Length": {
+          "id": "Dužina"
         }
       }
     },
@@ -81,17 +21,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pile"
+        "banana": {
+          "id": "banana"
         }
       }
     },
@@ -102,10 +35,45 @@
         }
       }
     },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "boja"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Starost"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "starost"
+        }
+      }
+    },
     "loneliness_interests": {
       "fields": {
         "Internet": {
           "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Država"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "starost"
         }
       }
     },
@@ -122,49 +90,31 @@
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Umjetnik"
+        "chicken": {
+          "id": "pile"
         }
       }
     },
-    "abalone": {
+    "nutrition": {
       "fields": {
-        "Length": {
-          "id": "Dužina"
+        "Description": {
+          "id": "Opis"
         }
       }
     },
-    "student_survey": {
+    "salad_toy": {
       "fields": {
-        "Country": {
-          "id": "Država"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Age": {
-          "id": "Starost",
-          "description": "Starost"
-        },
-        "Gender": {
-          "id": "Spol",
-          "description": "Spol"
+        "chicken": {
+          "id": "pile"
         }
       }
     },
-    "boba_toy": {
+    "salsa_toy": {
       "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Starost"
+        "corn": {
+          "id": "kukuruz"
         }
       }
     },
@@ -175,12 +125,62 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "veličina"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dan"
+        },
+        "weather": {
+          "id": "vrijeme"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Umjetnik"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "starost"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "Starost",
+          "id": "Starost"
+        },
         "Country": {
           "id": "Država"
+        },
+        "Gender": {
+          "description": "Spol",
+          "id": "Spol"
+        },
+        "Internet": {
+          "id": "Internet"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Netačno",
+  "modelCardPossibleValuesMaximum": "max.",
+  "modelCardPossibleValuesMinimum": "min.",
+  "navigateBack": "Nazad",
+  "navigateDone": "Završi",
+  "navigateForward": "Nastavi",
+  "saveProgress": "Snimi",
+  "tryAgain": "Pokušaj ponovo"
 }

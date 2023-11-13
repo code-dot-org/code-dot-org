@@ -1,9 +1,9 @@
 {
   "absolute": "केवल",
+  "agentDiamondPathCongrats": "अभिनंदन, तुम्हाला हिऱ्याचा रस्ता सापडला! तुम्ही आत्तापर्यंत  {count, plural, one {1 हिरा} other {# हिरे}} गोळा केले आहेत.",
   "agentGenericFailureMessage": "कोडींग करणे सुरू ठेवा! मदतीसाठी एजंटचा वापर करायचे लक्षात ठेवा.",
   "agentTooFewBlocksFailureMessage": "एजंटला योग्य ठिकाणी नेण्यासाठी एकावेळी एकच ब्लॉक जोडण्याचा प्रयत्न करा.",
   "at": "येथे",
-  "agentDiamondPathCongrats": "अभिनंदन, तुम्हाला हिऱ्याचा रस्ता सापडला! तुम्ही आत्तापर्यंत  {count, plural, one {1 हिरा} other {# हिरे}} गोळा केले आहेत.",
   "blockActionAdd": "जोडा",
   "blockActionAttack": "हल्ला",
   "blockActionClone": "ब्लॉक्स क्लोन करा",

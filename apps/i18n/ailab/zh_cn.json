@@ -1,15 +1,15 @@
 {
-  "selectDataset": "选择要使用的数据集。",
-  "uploadedDataset": "你刚刚上传了一个数据集。",
-  "selectedDataset": "您刚刚选择了一个数据集。",
-  "dataDisplayLabel": "选择一列进行预测。",
   "dataDisplayFeatures": "选择一列或多列作为输入以帮助进行预测。",
-  "selectedFeatureNumerical": "您刚刚选择了一个数字要素。",
-  "selectedFeatureCategorical": "您刚刚选择了一个分类要素。",
-  "trainModel": "您的模型正在训练中。",
+  "dataDisplayLabel": "选择一列进行预测。",
   "generateResults": "您的模型正在测试中。",
+  "modelSummary": "您已成功训练并保存了模型。查看您的模型详细信息并单击 “完成”， 便于在 App Lab 中使用它。",
   "results": "查看结果。",
   "resultsDetails": "详细的结果已经显示",
   "saveModel": "保存已经训练的模型，便于在App Lab中使用",
-  "modelSummary": "您已成功训练并保存了模型。查看您的模型详细信息并单击 “完成”， 便于在 App Lab 中使用它。"
+  "selectDataset": "选择要使用的数据集。",
+  "selectedDataset": "您刚刚选择了一个数据集。",
+  "selectedFeatureCategorical": "您刚刚选择了一个分类要素。",
+  "selectedFeatureNumerical": "您刚刚选择了一个数字要素。",
+  "trainModel": "您的模型正在训练中。",
+  "uploadedDataset": "你刚刚上传了一个数据集。"
 }

@@ -6,11 +6,13 @@ import {
   MICROBIT_IDS_V1,
   MICROBIT_IDS_V2,
   MICROBIT_V1,
-  MICROBIT_V2
+  MICROBIT_V2,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
 import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microBitRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default class MBFirmataUpdater {
   constructor() {
@@ -28,6 +30,10 @@ export default class MBFirmataUpdater {
     } else if (MICROBIT_IDS_V2.includes(microBitId)) {
       microBitVersion = MICROBIT_V2;
     }
+    analyticsReporter.sendEvent(EVENTS.MAKER_SETUP_PAGE_MB_VERSION_EVENT, {
+      'Microbit Version': microBitVersion,
+    });
+
     return microBitVersion;
   }
 
@@ -43,7 +49,7 @@ export default class MBFirmataUpdater {
 
   async updateMBFirmataVersioned() {
     const device = await navigator.usb.requestDevice({
-      filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}]
+      filters: [{vendorId: MICROBIT_VENDOR_ID, productId: MICROBIT_PRODUCT_ID}],
     });
     const microBitVersion = this.detectMicroBitVersion(device);
     if (microBitVersion === null) {
@@ -75,6 +81,12 @@ export default class MBFirmataUpdater {
     } catch (error) {
       console.log(error);
       getStore().dispatch(setMicroBitFirmataUpdatePercent(null));
+      analyticsReporter.sendEvent(
+        EVENTS.MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT,
+        {
+          'Microbit Update Error': true,
+        }
+      );
       return Promise.reject('Failed to flash Firmata.');
     }
   }

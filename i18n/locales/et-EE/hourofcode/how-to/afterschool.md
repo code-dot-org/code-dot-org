@@ -1,18 +1,18 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Kooditunni kasutusjuhend koolijärgseks kasutamiseks
 ---
 
 {{ signup_button }}
 
 # Kuidas KoodiTund läbi viia huviringides ning koolivälises töös
 
-### Join the movement and introduce your students to computer science with these steps.
+### Liitu liikumise ja tutvustada oma õpilastele infotehnoloogia neid samme.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Arvutuslik mõtlemine aitab arendada probleemide lahendamise oskusi, loogikat ja loovust. Ja tehnoloogia muudab kõiki tööstusharusid planeedil. Tänapäeva õpilased peaksid õppima tehnoloogiat looma, mitte ainult seda kasutama. Varakult alustades on neil alus edu saavutamiseks igal 21. sajandi karjääriteel.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Kooditunni proovimine on lihtne ja lõbus viis õpilastele arvutiteadust tutvustada, võib-olla esimest korda. Kui soovite abiks täiendavat käekomplekti, võite leida [kohaliku vab]({{ urls/volunteer_local }}) atahtliku, kes aitab teie koolijärgses klassis või klubis kooditunni korraldada.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Tunni koodi saab hostida ka eemalt! Alustamiseks, vaadake meie [näpunäiteid virtuaalse kooditunni ürituse korraldamiseks](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -20,27 +20,27 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Valige juhendmaterjal
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Pakume mitmesuguseid [lõbusaid, tunnipikkusi õpetusi igas vanuses osalej]({{ urls/learn }}) atele, mille on loonud erinevad partnerid. [Proovige neid!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+** Kogu Hour of Code'i õpetused </ strong> nõuavad korraldajatele minimaalset ettevalmistusaja ja on isejuhitud, võimaldades lastel töötada oma tempos ja oskuste tasemel.</p> 
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Vajad KoodiTund läbiviimiseks tunniplaani?** Vaata seda[ näidist](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Reklaami KoodiTundi
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Reklaamige nende tööriistad [ega oma koodi]({{ urls/promote }}) tundi ja julgustage teisi oma üritusi korraldama.
 
 ## 4. Planeeringe vajalik tehnoloogia - arvutite kasutamine on valikuline
 
-KoodiTund parimaks läbiviimiseks on vajalikud internetiühendusega arvutid. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+KoodiTund parimaks läbiviimiseks on vajalikud internetiühendusega arvutid. Kuid te ei vaja arvutit iga lapse jaoks ja saate isegi koodi tunde ilma arvutita üldse teha.
 
-Testige õpetusi eelnevalt õpilasarvutites või seadmetes, et veenduda, et heli ja video töötab veebilehitsejatega korralikult. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Testige õpetusi eelnevalt õpilasarvutites või seadmetes, et veenduda, et heli ja video töötab veebilehitsejatega korralikult. **Aeglane internetiühendus? **Näidake videosid klassi ees ekraanil, nii et iga õpilane ei pea seda alla laadima. Või proovige arvutivabade tegevustega õpetusi.
 
 Kui juhendi järgi on õppetunnis oluline heli, siis jagage õpilastele kõrvaklapid või paluge need neil endil kaasa võtta.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kui õpilased töötavad paaris, siis saavad nad teineteist abistada ning ei vajavad vähem õpetaja abi. Lisaks õpetab see, et arvutiteadus on sotsiaalne ning koostööd soodustav eriala.
+**Ei ole piisavalt seadmeid?** Kasutage [paaris programmeerimist](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kui õpilased töötavad paaris, siis saavad nad teineteist abistada ning ei vajavad vähem õpetaja abi. Lisaks õpetab see, et arvutiteadus on sotsiaalne ning koostööd soodustav eriala.
 
 ## 5. Alusta KoodiTund läbiviimist inspireeriva videoga
 
@@ -53,27 +53,27 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 - [President Obama kutsub kõiki õpilasi arvutiteadust õppima](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Veel rohkem inspireerivaid videosid leiad[ siit](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Ära muretse, kui sa ei tunne arvutiteaduse valdkonda. Siin on mõned ideed, kuidas KoodiTund sisse juhatada:**
 
 - Selgita, kuidas tehnoloogia mõjutab meie elusid ning too näiteid, mis on nii poistele kui tüdrukutele arusaadavad (Räägi äppidest ja tehnoloogiatest, mida kasutades saab päästa inimelusid, aidata inimesi, suhelda ka kaugel asuvate inimestega jne).
 - Nimeta asju, mis igapäevaelus kasutavad programmeerimist.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Siit leiate näpunäiteid tüdrukute arvutiteaduse vastu huvi [tekitamiseks]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Vajad rohkem abi?**Laadi alla [KoodiTund läbiviimise tunniplaan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Programmeeri!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Näita osalejatele, kust alustada** - Kirjuta õpetuse viide tahvlile. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Proovime üheskoos vastuse leida." - "Tehnoloogia ei tööta alati nii nagu meie tahame." - "Programmeerimise õppimine on nagu uue keele õppimine. Sa ei valda seda kohe, see võtab aega."
+**Kui kellelgi on raskusi, siis võib ka ausalt vastata:** - "Ma ei tea. Proovime üheskoos vastuse leida." - "Tehnoloogia ei tööta alati nii nagu meie tahame." - "Programmeerimise õppimine on nagu uue keele õppimine. Sa ei valda seda kohe, see võtab aega."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Mida teha, kui keegi lõpetab varakult?** - Julgustage osalejaid proovima teist kooditunni tegevust saidil [hourofcode.com/learn]({{ urls/learn }}) - Või paluge neil, kes varakult lõpetavad, aidata teisi, kellel on probleeme.
 
 ## 7. Tähista
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Telli spetsiaalsed t-särgid](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) osalejatele.
+- [Printige oma õpil]({{ urls/certificates }}) astele sertifikaadid.
+- [Prindi „Ma tegin tunni koodi!”]({{ promote/resources_stickers }}) kleebised teie õpilastele.
+- [Telli osalej](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) atele kohandatud t-särgid.
 - Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 
 ## Teised KoodiTund materjalid õpetajatele
@@ -85,6 +85,6 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 
 ## Mis saab pärast KoodiTund läbiviimist?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+KoodiTund on alles esimene samm, kus õpime, kuidas tehnoloogia töötab ning kuidas programmeerida. Aidake õpilastel oma teekonda jätkata ja julgustage neid veebis rohkem [õppima](/beyond)!
 
 {{ signup_button }}

@@ -24,7 +24,7 @@ function openModal(type, callback, table) {
 }
 
 export function getTables() {
-  return function() {
+  return function () {
     return [
       {
         text: msg.choosePrefix(),
@@ -32,8 +32,8 @@ export function getTables() {
           '<span class="chooseAssetDropdownOption">' +
           msg.choosePrefix() +
           '</a>',
-        click: callback => openModal(ParamType.TABLE, callback)
-      }
+        click: callback => openModal(ParamType.TABLE, callback),
+      },
     ];
   };
 }
@@ -47,7 +47,7 @@ function getTableNameFromColumnSocket(socket, editor) {
 }
 
 export function getColumns() {
-  return function(editor) {
+  return function (editor) {
     const tableName = getTableNameFromColumnSocket(this, editor);
     return [
       {
@@ -56,12 +56,12 @@ export function getColumns() {
           '<span class="chooseAssetDropdownOption">' +
           msg.choosePrefix() +
           '</a>',
-        click: callback => openModal(ParamType.COLUMN, callback, tableName)
-      }
+        click: callback => openModal(ParamType.COLUMN, callback, tableName),
+      },
     ];
   };
 }
 
 export var __TestInterface = {
-  getTableNameFromColumnSocket: getTableNameFromColumnSocket
+  getTableNameFromColumnSocket: getTableNameFromColumnSocket,
 };

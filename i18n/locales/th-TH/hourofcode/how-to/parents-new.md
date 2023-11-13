@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: คำแนะนำสำหรับผู้ปกครอง
 ---
 
 # วิธีการทำกิจกรรม Hour of Code กับบุตรหลานของคุณ

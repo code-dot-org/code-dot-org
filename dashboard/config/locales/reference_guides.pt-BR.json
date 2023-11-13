@@ -5,8 +5,8 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Eventos do Acelerômetro"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Sensores analógicos"
+        "csd-2022/animation-tab": {
+          "display_name": "Aba de Animação"
         },
         "csd-2022/app-lab": {
           "display_name": "Laboratório de Aplicativo"
@@ -29,8 +29,8 @@
         "csd-2022/changing-sensor-scale": {
           "display_name": "Alterando a escala do Sensor"
         },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "Circuitos e LEDs"
+        "csd-2022/circuit-playground": {
+          "display_name": "Visão geral do Circuit Play"
         },
         "csd-2022/classes": {
           "display_name": "Classes"
@@ -80,6 +80,9 @@
         "csd-2022/headings-and-paragraphs": {
           "display_name": "Títulos e Parágrafos"
         },
+        "csd-2022/html": {
+          "display_name": "HTML"
+        },
         "csd-2022/html-overview": {
           "display_name": "Visão geral"
         },
@@ -104,6 +107,9 @@
         "csd-2022/importing-screens": {
           "display_name": "Importando Telas"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Introdução ao AI Lab"
+        },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
         },
@@ -121,6 +127,9 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Visão geral"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Cartões modelo no AI Lab"
         },
         "csd-2022/modifying-arrays": {
           "display_name": "Modificando e Criando Matrizes"
@@ -140,11 +149,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Visão geral"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Entrada física"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Jogando Notas"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "O Processo de Resolução de Problemas"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "O Processo de Resolução de Problemas"
         },
         "csd-2022/random-numbers": {
           "display_name": "Números Aleatórios"
@@ -174,10 +186,10 @@
           "display_name": "O padrão Contador"
         },
         "csd-2022/the-draw-loop": {
-          "display_name": "O laço de desenho"
+          "display_name": "O Desenho do Laço"
         },
         "csd-2022/variables": {
-          "display_name": "variáveis"
+          "display_name": "Variáveis"
         },
         "csd-2022/velocity": {
           "display_name": "Velocidade"

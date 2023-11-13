@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#level_data"}}
+  Level Data
+
+#level_data.in.collapse
+  = f.label :music_level_data, 'Level data JSON'
+  = f.text_area :level_data, placeholder: 'Insert JSON Data', rows: 10, style: 'width: 90%', value: JSON.pretty_generate(@level.level_data)

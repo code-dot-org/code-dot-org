@@ -2,19 +2,562 @@
   "pt-PT": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Laboratório Web",
+        "applab": {
           "categories": {
-            "html_tags": {
-              "name": "Tags HTML"
+            "advanced": {
+              "name": "Avançado"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "O raio do círculo, em pixels."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "A posição x em pixels do canto superior esquerdo da imagem a ser desenhada."
+                    },
+                    "x": {
+                      "description": "A posição x em pixels do canto superior esquerdo da imagem a ser desenhada."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels do canto superior esquerdo da imagem a ser desenhada."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  },
+                  "short_description": "Retorna a quantidade de alfa (opacidade) (variando de 0 a 255) na cor do pixel localizado nas posições x e y fornecidas nos dados de imagem fornecidos."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "A altura do retângulo delimitador para capturar os dados da imagem."
+                    },
+                    "width": {
+                      "description": "A largura do retângulo delimitador para capturar os dados da imagem."
+                    },
+                    "x": {
+                      "description": "A posição x em pixels para iniciar a captura."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels para iniciar a captura."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem para colocar os dados na tela."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem para colocar os dados na tela."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "A altura vertical em pixels do retângulo."
+                    },
+                    "width": {
+                      "description": "A largura horizontal em pixels do retângulo."
+                    },
+                    "x": {
+                      "description": "A posição x em pixels do canto superior esquerdo do retângulo."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels do canto superior esquerdo do retângulo."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "A quantidade de alfa (opacidade) (de 0 a 255) a ser definida no pixel."
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  },
+                  "short_description": "Define a quantidade de alfa (opacidade) (variando de 0 a 255) na cor do pixel localizado nas posições x e y fornecidas nos dados de imagem fornecidos."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "A quantidade de azul (de 0 a 255) a ser definida no pixel."
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  },
+                  "short_description": "Define a quantidade de azul (variando de 0 a 255) na cor do pixel localizado na posição x e y fornecida nos dados de imagem fornecidos para a quantidade de entrada BlueValue."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "A quantidade de verde (de 0 a 255) a ser definida no pixel."
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  },
+                  "short_description": "Define a quantidade de verde (variando de 0 a 255) na cor do pixel localizado na posição x e y fornecida nos dados de imagem fornecidos para a quantidade de entrada GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Opcional. A quantidade de opacidade (de 0 a 255) a ser definida no pixel. O padrão é 255 (opacidade total)."
+                    },
+                    "blue": {
+                      "description": "A quantidade de azul (de 0 a 255) a ser definida no pixel."
+                    },
+                    "green": {
+                      "description": "A quantidade de verde (de 0 a 255) a ser definida no pixel."
+                    },
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "red": {
+                      "description": "A quantidade de vermelho (de 0 a 255) a ser definida no pixel."
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeto"
+                    },
+                    "redValue": {
+                      "description": "A quantidade de vermelho (de 0 a 255) a ser definida no pixel."
+                    },
+                    "x": {
+                      "description": "A posição x em pixels a partir do canto superior esquerdo da imagem."
+                    },
+                    "y": {
+                      "description": "A posição y em pixels a partir do canto superior esquerdo da imagem."
+                    }
+                  },
+                  "short_description": "Define a quantidade de vermelho (variando de 0 a 255) na cor do pixel localizado na posição x e y fornecida nos dados de imagem fornecidos para a quantidade de entrada RedValue."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "O valor retornado pela função setTimeout para cancelar."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "O número de milissegundos entre cada execução da função."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "O número de milissegundos de espera antes de executar a função."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Função"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeto"
+                    },
+                    "tableName": {
+                      "description": "O nome da tabela da qual recuperar registros."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "O nome da chave a ser recuperada."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Função"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Obtém um identificador exclusivo para o usuário atual deste aplicativo."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "O nome da tabela à qual esse manipulador de eventos se aplica."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objeto"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "O nome da chave a ser armazenada."
+                    },
+                    "value": {
+                      "description": "Os dados a serem armazenados."
+                    }
+                  },
+                  "short_description": "Armazena um par de chave/valor no armazenamento de dados de chave/valor do App Lab e chama a função de retorno de chamada quando a ação é concluída."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "O endereço da web de um serviço que retorna dados."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeto"
+                    }
+                  }
+                }
+              },
+              "name": "Dados"
+            },
+            "functions": {
+              "name": "Funções"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "O número máximo devolvido"
+                    },
+                    "min": {
+                      "description": "O número mínimo devolvido"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "O número máximo devolvido"
+                    },
+                    "min": {
+                      "description": "O número mínimo devolvido"
+                    }
+                  }
+                }
+              },
+              "name": "Matemática"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Move a tartaruga para frente e para a esquerda em um arco circular suave."
+                },
+                "getX": {
+                  "short_description": "Obtém a coordenada x atual em pixels da tartaruga."
+                },
+                "getY": {
+                  "short_description": "Obtém a coordenada y atual em pixels da tartaruga."
+                },
+                "hide": {
+                  "short_description": "Torna a tartaruga invisível em sua localização atual."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "O número de pixels para mover a tartaruga para a direita."
+                    },
+                    "y": {
+                      "description": "O número de pixels para mover a tartaruga para baixo."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Move a tartaruga para trás em um determinado número de pixels em relação à direção atual."
+                },
+                "moveForward": {
+                  "short_description": "Move a tartaruga para frente em um determinado número de pixels na direção atual."
+                },
+                "moveTo": {
+                  "short_description": "Move a tartaruga para uma posição específica (x, y) na tela."
+                },
+                "penColor": {
+                  "short_description": "Define a cor da caneta usada pela tartaruga para desenhar linhas e pontos."
+                },
+                "penDown": {
+                  "short_description": "Coloca a caneta no chão para que a tartaruga desenhe uma linha atrás dela enquanto se move."
+                },
+                "penRGB": {
+                  "short_description": "Usando valores RGBA, define a cor da caneta usada pela tartaruga para desenhar linhas e pontos."
+                },
+                "penUp": {
+                  "short_description": "Pega a caneta para que a tartaruga não desenhe uma linha enquanto se move."
+                },
+                "penWidth": {
+                  "short_description": "Define a largura da linha em pixels que a tartaruga desenha atrás dela à medida que se move."
+                },
+                "show": {
+                  "short_description": "Torna a tartaruga visível em sua localização atual."
+                },
+                "speed": {
+                  "short_description": "Define a velocidade de execução do aplicativo, que inclui a velocidade da tartaruga."
+                },
+                "turnLeft": {
+                  "short_description": "Gira a tartaruga para a esquerda pelo ângulo especificado. A posição da tartaruga continua a mesma."
+                },
+                "turnRight": {
+                  "short_description": "Gira a tartaruga para a direita pelo ângulo especificado. A posição da tartaruga continua a mesma."
+                },
+                "turnTo": {
+                  "short_description": "Muda a direção da tartaruga para um ângulo específico. 0 é para cima, 90 para a direita, 180 para baixo e 270 para a esquerda."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Cria um botão na tela exibindo o texto fornecido e referenciado pelo id fornecido no local padrão (0,0)."
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Encolher e crescer"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Função"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Fazendo Música"
+                    }
+                  },
+                  "short_description": "Reproduz o arquivo de som MP3 da URL especificada."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "A propriedade a ser alterada."
+                    }
+                  },
+                  "short_description": "Define uma propriedade com um novo valor para o elemento especificado."
+                },
+                "setScreen": {
+                  "short_description": "Define a tela para o screenID fornecido."
+                },
+                "showElement": {
+                  "short_description": "Mostra o elemento com o id fornecido."
+                },
+                "textLabel": {
+                  "short_description": "Cria um rótulo de texto na tela exibindo o texto fornecido e referenciado pelo id fornecido no local padrão (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Nenhum"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Declarar e atribuir uma matriz a uma variável"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Escolha sua Aventura"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "A string a ser pesquisada."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "A string a ser pesquisada."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "O comprimento da corda"
+                }
+              },
+              "name": "Variáveis"
             }
-          }
+          },
+          "description": "O App Lab é um ambiente de programação onde você pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.",
+          "name": "Laboratório de aplicações"
         },
         "gamelab": {
-          "name": "Laboratório de Jogos",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "O número de milissegundos entre cada execução da função."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "O número de milissegundos de espera antes de executar a função."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Estrela"
+                    }
+                  }
+                }
+              },
+              "name": "Desenho"
+            },
+            "functions": {
+              "name": "Funções"
+            },
             "game_lab": {
-              "name": "Laboratório de Jogos",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -44,23 +587,15 @@
                     }
                   },
                   "short_description": "Reproduz o arquivo de som MP3 da URL especificada."
+                },
+                "showMobileControls": {
+                  "content": "Muda os controles móveis visíveis abaixo do espaço de jogo.",
+                  "short_description": "Muda os controles móveis visíveis abaixo do espaço de jogo."
                 }
-              }
-            },
-            "sprites": {
-              "name": "Sprite",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Espiral"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Laboratório de Jogos"
             },
             "groups": {
-              "name": "Grupos",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -97,306 +632,128 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Desenho",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Estrela"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Grupos"
             },
             "math": {
-              "name": "Matemática",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "O número mínimo devolvido"
-                    },
                     "max": {
                       "description": "O número máximo devolvido"
+                    },
+                    "min": {
+                      "description": "O número mínimo devolvido"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "O número mínimo devolvido"
-                    },
                     "max": {
                       "description": "O número máximo devolvido"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variáveis"
-            },
-            "functions": {
-              "name": "Funções"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratório de aplicações",
-          "description": "O App Lab é um ambiente de programação onde você pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Função"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Fazendo Música"
-                    }
-                  },
-                  "short_description": "Reproduz o arquivo de som MP3 da URL especificada."
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objeto"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "Dados",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Função"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "objeto"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objeto"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Função"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matemática",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
+                    },
                     "min": {
                       "description": "O número mínimo devolvido"
-                    },
-                    "max": {
-                      "description": "O número máximo devolvido"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "O número mínimo devolvido"
-                    },
-                    "max": {
-                      "description": "O número máximo devolvido"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matemática"
             },
-            "variables": {
-              "name": "Variáveis",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Escolha sua Aventura"
-                    }
-                  }
-                },
-                "addPair": {
-                  "return_value": "Nenhum"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funções"
-            },
-            "advanced": {
-              "name": "Avançado"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Laboratório de Sprite",
-          "categories": {
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Espiral"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "A altura do sprite."
+                },
+                "sprite.width": {
+                  "return_value": "A largura do sprite."
+                }
+              },
               "name": "Sprite"
             },
-            "world": {
-              "name": "Mundo"
-            },
-            "location": {
-              "name": "Localizações"
-            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "A string a ser pesquisada."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "A string a ser pesquisada."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "O comprimento da corda"
+                }
+              },
+              "name": "Variáveis"
+            }
+          },
+          "name": "Laboratório de Jogos"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Ações"
-            },
-            "events": {
-              "name": "Eventos"
             },
             "behaviors": {
               "name": "Comportamentos"
             },
-            "loops": {
-              "name": "Ciclos"
+            "comments": {
+              "name": "Comentários"
             },
-            "variables": {
-              "name": "Variáveis"
-            },
-            "math": {
-              "name": "Matemática"
-            },
-            "logic": {
-              "name": "Lógica"
+            "events": {
+              "name": "Eventos"
             },
             "functions": {
               "name": "Funções"
             },
+            "location": {
+              "name": "Localizações"
+            },
+            "logic": {
+              "name": "Lógica"
+            },
+            "loops": {
+              "name": "Ciclos"
+            },
+            "math": {
+              "name": "Matemática"
+            },
+            "sprites": {
+              "name": "Sprite"
+            },
             "text": {
               "name": "Texto"
             },
-            "comments": {
-              "name": "Comentários"
+            "variables": {
+              "name": "Variáveis"
+            },
+            "world": {
+              "name": "Mundo"
             }
-          }
+          },
+          "name": "Laboratório de Sprite"
+        },
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "Tags HTML"
+            }
+          },
+          "name": "Laboratório Web"
         }
       }
     }

@@ -20,44 +20,42 @@ And /^Applab HTML has no button$/ do
 end
 
 Given /^I start a new Applab project/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     And I am on "http://studio.code.org/projects/applab/new"
-    And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
     And element "#dataModeButton" is visible
-  STEPS
+  GHERKIN
 end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? App ?Lab test level$/ do |level_index|
-  steps <<-STEPS
+  steps <<-GHERKIN
     And I am on "http://studio.code.org/s/allthethings/lessons/#{APPLAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
-    And I rotate to landscape
     And I wait for the page to fully load
-  STEPS
+  GHERKIN
 end
 
 When /^I switch to design mode$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I press "designModeButton"
     And I wait to see Applab design mode
-  STEPS
+  GHERKIN
 end
 
 When /^I switch to data mode$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I press "dataModeButton"
     And I wait to see Applab data mode
-  STEPS
+  GHERKIN
 end
 
 When /^I switch to code mode$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I press "codeModeButton"
     And I wait to see Applab code mode
-  STEPS
+  GHERKIN
 end
 
 And /^I wait to see Applab design mode$/ do
@@ -78,7 +76,7 @@ end
 # Step for dragging an Applab design mode element into the applab visualization.
 # Use with element type strings from ElementType (library.js)
 When /^I drag a (\w+) into the app$/ do |element_type|
-  drag_script = %Q{
+  drag_script = <<~JAVASCRIPT
     var element = $("[data-element-type='#{element_type}']");
     var screenOffset = element.offset();
     var mousedown = $.Event("mousedown", {
@@ -97,27 +95,27 @@ When /^I drag a (\w+) into the app$/ do |element_type|
     element.trigger(mousedown);
     $(document).trigger(drag);
     $(document).trigger(mouseup);
-  }
+  JAVASCRIPT
   @browser.execute_script(drag_script)
 end
 
 When /^I navigate to the embedded version of my project$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I open the share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I copy the embed code into a new document
-  STEPS
+  GHERKIN
 end
 
 When /^I navigate to the embedded version of my project with source hidden$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     When I open the share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"
     And I copy the embed code into a new document
-  STEPS
+  GHERKIN
 end
 
 Then(/^the palette has (\d+) blocks$/) do |num_blocks|
@@ -130,12 +128,12 @@ Then(/^the droplet code is "([^"]*)"$/) do |code|
 end
 
 And /^I append text to droplet "([^"]*)"$/ do |text|
-  script = %Q{
+  script = <<~JAVASCRIPT
     var aceEditor = window.__TestInterface.getDroplet().aceEditor;
     aceEditor.navigateFileEnd();
     aceEditor.textInput.focus();
     aceEditor.onTextInput("#{text}");
-  }
+  JAVASCRIPT
   @browser.execute_script(script)
 end
 
@@ -188,7 +186,7 @@ end
 def drag_grippy(element_js, delta_x, delta_y)
   script = get_mouse_event_creator_script
 
-  script += %Q{
+  script += <<~JAVASCRIPT
     var element = #{element_js};
     var start = {
       x: element.offset().left,
@@ -205,7 +203,7 @@ def drag_grippy(element_js, delta_x, delta_y)
     element[0].dispatchEvent(mousedown);
     element[0].dispatchEvent(drag);
     element[0].dispatchEvent(mouseup);
-  }
+  JAVASCRIPT
   # Run the script and then wait a little bit of time to give the UI a chance to reflow.
   @browser.execute_script(script, 0.5)
 end
@@ -222,7 +220,7 @@ And /^I hover over element with id "([^"]*)"$/ do |element_id|
   script = get_mouse_event_creator_script
   script += get_scale_script
 
-  script += %Q{
+  script += <<~JAVASCRIPT
     var element = $("#" + "#{element_id}");
     var scale = getScale(element[0]);
     var x = element.offset().left + (5 * scale);
@@ -231,7 +229,7 @@ And /^I hover over element with id "([^"]*)"$/ do |element_id|
     var mousemove = createMouseEvent('mousemove', x, y);
 
     element[0].dispatchEvent(mousemove);
-  }
+  JAVASCRIPT
 
   @browser.execute_script(script)
 end
@@ -240,7 +238,7 @@ And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
   script = get_mouse_event_creator_script
   script += get_scale_script
 
-  script += %Q{
+  script += <<~JAVASCRIPT
     var visualization = $("#visualizationOverlay");
     var transform = window.getComputedStyle(visualization[0]).transform;
     var scale = parseFloat(/matrix\\(([^,]*),/.exec(transform)[1]);
@@ -249,7 +247,7 @@ And /^I hover over the screen at xpos ([\d]+) and ypos ([\d]+)$/ do |xpos, ypos|
     var mousemove = createMouseEvent('mousemove', x, y);
 
     visualization[0].dispatchEvent(mousemove);
-  }
+  JAVASCRIPT
 
   @browser.execute_script(script)
 end
@@ -313,7 +311,7 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
   script = get_mouse_event_creator_script
   script += get_scale_script
 
-  script += %Q{
+  script += <<~JAVASCRIPT
     var element = $("#{element_id}");
     var scale = getScale(element[0]);
 
@@ -333,7 +331,7 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
     element[0].dispatchEvent(mousedown);
     element[0].dispatchEvent(drag);
     element[0].dispatchEvent(mouseup);
-  }
+  JAVASCRIPT
 
   @browser.execute_script(script)
 end

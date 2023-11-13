@@ -263,7 +263,6 @@ lv:
       3:
         text: "Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā ietaupīsi daudz laika, kad veidosi savu spēli."
     C1_artist_intro:
-      1:
       2:
         text: "Tie ir lēkšanas bloki. Kad tos lieto, mākslinieks kustās, bet nezīmē, tāpēc izmanto tos, lai lēktu uz nākamo pelēko līniju."
     C2_playlab_createstory:
@@ -277,56 +276,21 @@ lv:
       2:
         text: "Ir pieejams \"kad bultiņa\" bloks un \"pārvietot tēlu\" bloks. Savienojot šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām."
     starwars_events:
-      1:
-      2:
-      3:
       4:
         text: "Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu vai pieskārienu ekrānam."
-      5:
-      6:
-      7:
-      8:
-      9:
     starwars_blocks_events:
-      1:
-      2:
-      3:
       4:
         text: "Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu vai pieskārienu ekrānam."
-      5:
-      6:
-      7:
     gumball_intro:
-      1:
-      2:
-      3:
       4:
         text: "Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta zem laukuma."
-      5:
-      6:
       7:
         text: "Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo \"kad palaists\" bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi dzeltenu līniju un tad bloki saķersies kopā."
-      8:
-      9:
     iceage_intro:
-      1:
-      2:
-      3:
       4:
         text: "Tavs ekrāns ir sadalīts trīs galvenajās daļās. Kreisajā pusē ir spēles laukums, kur programma izpildīsies. Pamācība katram līmenim ir rakstīta zem laukuma."
-      5:
-      6:
       7:
         text: "Lai sāktu, tev nepieciešam savienot tavus blokus ar oranžo \"kad palaists\" bloku. Tu vari savienot vairākus blokus kopā, tuvinot tos, kamēr ieraugi dzeltenu līniju un tad bloki saķersies kopā."
-      8:
-      9:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu vai pieskārienu ekrānam."
-      5:
-      6:
-      7:
-      8:

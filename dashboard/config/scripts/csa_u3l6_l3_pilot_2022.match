@@ -14,3 +14,4 @@ answer 'a comma-separated list of values or objects for an array given inside cu
 
 question 'data structure'
 answer 'a structure for organizing, processing, retrieving, and storing data'
+allow_multiple_attempts true

@@ -13,7 +13,7 @@ import {
   BEHAVIOR_STOP,
   BEHAVIOR_WANDER,
   BEHAVIOR_WATCH_ACTOR,
-  BEHAVIOR_GRID_ALIGNED
+  BEHAVIOR_GRID_ALIGNED,
 } from '@cdo/apps/studio/constants';
 
 describe('item', () => {

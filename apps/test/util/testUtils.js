@@ -7,7 +7,7 @@ export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
   allowConsoleErrors,
-  allowConsoleWarnings
+  allowConsoleWarnings,
 } from './throwOnConsole';
 export {clearTimeoutsBetweenTests} from './clearTimeoutsBetweenTests';
 
@@ -61,12 +61,7 @@ export function generateArtistAnswer(generatedCode) {
  * @returns {boolean} True if mochify was launched with debug flag
  */
 export function debugMode() {
-  return (
-    location.search
-      .substring(1)
-      .split('&')
-      .indexOf('debug') !== -1
-  );
+  return location.search.substring(1).split('&').indexOf('debug') !== -1;
 }
 
 /**
@@ -84,13 +79,13 @@ export function dragToVisualization(type, left, top) {
   var mousedown = $.Event('mousedown', {
     which: 1,
     pageX: screenOffset.left,
-    pageY: screenOffset.top
+    pageY: screenOffset.top,
   });
   element.trigger(mousedown);
 
   var drag = $.Event('mousemove', {
     pageX: $('#visualization').offset().left + left,
-    pageY: $('#visualization').offset().top + top
+    pageY: $('#visualization').offset().top + top,
   });
   $(document).trigger(drag);
 
@@ -122,13 +117,13 @@ export function dragToVisualization(type, left, top) {
   var halfWidth = $('.draggingParent').width() / 2;
   var drag2 = $.Event('mousemove', {
     pageX: $('#visualization').offset().left + left + halfWidth,
-    pageY: $('#visualization').offset().top + top
+    pageY: $('#visualization').offset().top + top,
   });
   $(document).trigger(drag2);
 
   var mouseup = $.Event('mouseup', {
     pageX: $('#visualization').offset().left + left + halfWidth,
-    pageY: $('#visualization').offset().top + top
+    pageY: $('#visualization').offset().top + top,
   });
   $(document).trigger(mouseup);
 }
@@ -156,7 +151,7 @@ export function createMouseEvent(type, clientX, clientY) {
     shiftKey: false,
     metaKey: false,
     button: 0,
-    relatedTarget: undefined
+    relatedTarget: undefined,
   };
   if (typeof document.createEvent === 'function') {
     evt = document.createEvent('MouseEvents');
@@ -259,7 +254,7 @@ function zeroPadLeft(string, desiredWidth) {
 
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {
-  if (originalWindowValues.hasOwnProperty(key)) {
+  if (Object.prototype.hasOwnProperty.call(originalWindowValues, key)) {
     throw new Error(
       `Can't replace 'window.${key}' - it's already been replaced.`
     );
@@ -269,7 +264,7 @@ export function replaceOnWindow(key, newValue) {
 }
 
 export function restoreOnWindow(key) {
-  if (!originalWindowValues.hasOwnProperty(key)) {
+  if (!Object.prototype.hasOwnProperty.call(originalWindowValues, key)) {
     throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
   }
   window[key] = originalWindowValues[key];

@@ -16,8 +16,8 @@ Gândirea computationala contribuie la dezvoltarea abilităților de rezolvare a
 
 Verificați pașii de mai jos pentru a începe și citiți ghidul nostru [pentru partenerii corporativi](/files/hoc-corporate-toolkit.pdf) pentru mai multe informații despre cum să vă entuziasmați societatea pentru Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Conectați-vă cu o școală locală](#connect-with-a-school)
+- [Încurajați angajații să facă voluntariat la o clasă](#encourage-employees)
 - [Găzduiește propriul eveniment Hour of Code](#host-hour-of-code)
 - [Promoveaza evenimentul Hour of Code](#promote-hour-of-code)
 - [Mai multe modalități de a susține Hour of Code](#support-hour-of-code)
@@ -66,7 +66,7 @@ Pentru mai multe detalii privind voluntariatul și exemple de mesaje pentru a v�
 
 Dacă doriți să faceți mai mult, societatea dv. poate găzdui, de asemenea, un eveniment Hour of Code. Nu există o formulă specifică pentru găzduirea unui eveniment, așadar vă încurajăm să fiți creativ! Întrucât numărul personalului nostru este mic (dar puternic!), Code.org nu are o echipă dedicată pentru coordonarea evenimentelor Hour of Code. Cu toate acestea, există câteva sfaturi pentru a începe.
 
-### 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Urmărește acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Stabilește data, formatul și locul în care se va organiza evenimentul tău
 
@@ -90,7 +90,7 @@ Există evenimente [virtuale](https://hourofcode.com/us/how-to/virtual) sau cu p
 
 #### Dispozitive:
 
-Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Dar nu ai nevoie de un calculator pentru fiecare copil și poți chiar să organizezi Hour of Code fără calculatoare! Pentru activități offline, utilizează, în secțiunea Tehnologie necesară pentru ore, filtrul care să afișeze opțiunile „Fără computere sau dispozitive”.
+Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Însă nu este nevoie de un calculator pentru fiecare copil și poți chiar să organizezi Hour of Code fără calculatoare! Pentru activități offline, utilizează, în secțiunea Tehnologie necesară pentru ore, filtrul care să afișeze opțiunile „Fără computere sau dispozitive”.
 
 - **Activități de test** pe calculatoare sau dispozitive. Asigură-te că acestea pot deschide browserele și că au sunet și video.
 - **Nu ai suficiente dispozitive?** Folosește metoda programării în perechi. Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
@@ -135,7 +135,7 @@ Una dintre cele mai bune modalități prin care poți fi de ajutor este să le s
 
 ### 1. Înregistrează-ți evenimentul
 
-Atunci când vă înscrieți la [evenimentul Hour of Code](/#join), veți primi comunicări folositoare prin email cu știri și sfaturi pentru găzduirea unei Hour of Code reușite. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
+Când vă [înscrieți la evenimentul Ora de programare](/events), veți primi comunicări utile prin e-mail cu știri și sfaturi pentru găzduirea cu succes a unei Ore de programare. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
 
 ### 2. Postează pe rețelele de socializare
 
@@ -162,7 +162,7 @@ Popularizează mișcarea care promovează știința calculatoarelor cu ajutorul 
 - Dacă prima ta linie de cod ți-a schimbat viața, ajută-i pe participanți să programeze în cadrul primului lor eveniment #HourOfCode https://code.org/volunteer
 - Dacă ai învățat să programezi - care este povestea ta? Fii o sursă de inspirație pentru un alt cursant cu ajutorul primului său eveniment #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Găsiți mai multe</a> postere, videoclipuri, autocolante și alte modalități de a vă promova evenimentul în comunitatea dvs.
 
 * * *
 

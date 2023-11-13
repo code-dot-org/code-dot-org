@@ -18,12 +18,12 @@ const DEFAULT_FEEDBACK = {
   comment: 'Great Work',
   performance: 'performanceLevel1',
   review_state: null,
-  is_awaiting_teacher_review: false
+  is_awaiting_teacher_review: false,
 };
 
 const setUp = overrideFeedback => {
   const props = {
-    feedback: {...DEFAULT_FEEDBACK, ...overrideFeedback}
+    feedback: {...DEFAULT_FEEDBACK, ...overrideFeedback},
   };
   return mount(<LevelFeedbackEntry {...props} />);
 };
@@ -47,7 +47,7 @@ describe('LevelFeedbackEntry', () => {
   it('displays opacity as 60% if student has seen feedback', () => {
     const wrapper = setUp({
       student_first_visited_at: new Date().toString(),
-      seen_on_feedback_page_at: new Date().toString()
+      seen_on_feedback_page_at: new Date().toString(),
     });
     const containerStyle = wrapper.childAt(0).props().style;
     expect(containerStyle.opacity).to.equal('60%');
@@ -62,14 +62,14 @@ describe('LevelFeedbackEntry', () => {
   it('displays awaiting review if review state is present and is_awaiting_teacher_review', () => {
     const wrapper = setUp({
       review_state: ReviewStates.keepWorking,
-      is_awaiting_teacher_review: true
+      is_awaiting_teacher_review: true,
     });
     expect(wrapper.contains(i18n.waitingForTeacherReview())).to.be.true;
   });
 
   it('displays completed if review_state is keepWorking and feedback is awaiting review', () => {
     const wrapper = setUp({
-      review_state: ReviewStates.completed
+      review_state: ReviewStates.completed,
     });
     expect(wrapper.contains(i18n.reviewedComplete())).to.be.true;
   });

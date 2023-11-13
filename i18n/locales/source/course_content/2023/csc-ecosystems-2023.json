@@ -1,0 +1,547 @@
+{
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/2": {
+    "short_instructions": "Observe this simulation of an aquatic marine ecosystem. ",
+    "long_instructions": "## This simulation of a marine ecosystem is not quite right yet...\n\n-   Press <code style=\"color:black; background-color:#FFBD46\">Run</code>\n-   **What do you notice?**\n-   **Is the food chain in action?**\n-   Click <code style=\"color:black; background-color:#FFBD46\">Finish</code> to move to the next level and learn how to code the ecosystem!\n\n<br>\n<div style=\"background-color: #E0D1EC;  border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\n<span style=\"color: #000000; font-size: 150%\">💬</span> <strong>Discuss with a partner: </strong>\n\n<br>\n<br>\n\n-   Is this a balanced ecosystem? Why or why not? \n\n-   What would make this simulation better?\n    <br>\n\n</div>",
+    "authored_hints": {
+      "No Code": "There isn't anything to code yet. Just observe this system in action. "
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/3": {
+    "short_instructions": "Add a block to simulate how the fish eat the algae in the ocean.",
+    "long_instructions": "## Food Chain - Fish Eat Algae\n\n**When the fish touches an algae, the fish eats the algae**\n\n-   Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\n-   Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\n-   Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**",
+    "authored_hints": {
+      "Connect": "Make sure the eat block is connected to the event block. \n\nThey should snap together like puzzle pieces!"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/4": {
+    "short_instructions": "Add a block to make the boat catch fish.",
+    "long_instructions": "## Human Impact - The Boat Catches Fish\n\n**When the boat touches a fish sprite, the boat catches the fish**\n\n-   Find the event <code style=\"color:black; background-color:#6AF36C\">when boat touches fish</code> in the workspace\n-   Connect a <code style=\"color:black; background-color:#5ED5DD\">catch object</code> block under this event\n-   Press <code style=\"color:black; background-color:#FFBD46\">Run</code> **Is the boat catching the fish?**",
+    "authored_hints": {
+      "Catch": "Use the catch object block so that the boat catches the fish",
+      "CatchUnder": "The catch object block should be\nconnected under the boats touches \nfish event."
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33 PM.png)"
+        },
+        {
+          "text": "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04 PM.png)"
+        }
+      ],
+      "markdown": "Look at what happens when the sprites touch in both animations. Then drag each picture of code to its matching image.\n\n\n",
+      "questions": [
+        {
+          "text": "The boat catches the fish. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)"
+        },
+        {
+          "text": "The fish eat the algae. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/6": {
+    "dsls": {
+      "markdown": "#Cause & Effect Conditionals \n\n</div>\n\n## Next you will add code to check to see how much algae is in the water <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"  width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n- First, the computer checks to see if a condition is true or false.\n\n- If it is true, then it will run the blocks inside.\n- If it is false, then it will not do anything.\n\n<br>\n<br>\n<br>\n\n## If there is too much algae, then the coral becomes sick\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"  width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"  width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n## If there is too little algae, then fish will leave\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"  width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"  width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n## If there is just enough algae, then the ecosystem is healthy\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"  width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"  width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/7": {
+    "short_instructions": "Simulate your ecosystem falling out of balance with an overgrowth of algae.",
+    "long_instructions": "## Too Much - An Algae Overgrowth!\n\n**If there is too much algae, it damages the coral reef**\n<img src=\"https://images.code.org/db2a268379f0bd5b031a95840a7c5d59-image-1682005193091.png\" style=\"width: 40%; float: right; padding-top: 20px\">\n\n-   Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code> and the <code style=\"color:black; background-color:#5ED5DD\">eat</code><code style=\"color:black; background-color:#F79EA5\">object</code> blocks\n\n-   Add the <code style=\"color:black; background-color:#99CEDB\">if too much algae</code> conditional block \n\n-   Place the <code style=\"color:black; background-color:#5ED5DD\">change costume</code> block **_inside_** the conditional\n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch the simulation for an algae overgrowth when the boat catches most of the fish.\n\n[][0]",
+    "authored_hints": {
+      "TooMuch": "Connect the if too much algae block to the when fish touches algae event.",
+      "Costume": "If there's too much algae, the coral will be damaged. \n\nUse the change costume block next.",
+      "BlockInside": "Place the change costume block inside the if too much algae block."
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/8": {
+    "short_instructions": "Add a second conditional to check if there is too little algae left for the fish to eat. ",
+    "long_instructions": "## Too Little - They Ate it All!\n\n**If there is too little algae to feed the fish, they will leave**\n<img src=\"https://images.code.org/20b2b044dbf057683e16746cd9047154-image-1682006065375.54.14 AM.png\" style=\"width: 30%; float: right; padding-top: 20px\">\n\n-   Scroll to the **_end_** of the <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code> program in the workspace\n\n-   Add a conditional block that will check <code style=\"color:black; background-color:#99CEDB\">if too little algae</code>\n\n-   Place the connected blocks <code style=\"color:black; background-color:#5ED5DD\">fish stops everything and begins leaving the area</code> **_inside_** the conditional\n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch for the fish to swim away when they eat most of the algae!",
+    "authored_hints": {
+      "Below": "Keep connecting blocks at the bottom of the workspace where you ended last level!",
+      "TooLittle": "Connect the if too little algae block to the when fish touches algae event.",
+      "BlocksInside": "If there's too little algae, the fish will leave. \n\nPlace the other blocks inside the if too little algae block."
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/9": {
+    "short_instructions": "Add a third conditional to check if there is the right amount of algae to allow the coral to heal. ",
+    "long_instructions": "## Just Right - A Delicate Balance!\n\n**If the fish eat enough algae, the coral heals**\n<img src=\"https://images.code.org/bad4097501ea05364af3b1e8934bb096-image-1682006260577.57.31 AM.png\n\" style=\"width: 40%; float: right; padding-top: 20px\">\n\n-   Scroll to the **_end_** of the <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code> program in the workspace\n\n-   Add a  conditional block to check <code style=\"color:black; background-color:#99CEDB\">if just right algae</code> \n\n-   Place a <code style=\"color:black; background-color:#5ED5DD\">change costume</code> behavior **_inside_** the conditional \n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch the simulation. Does the coral turn healthy when the fish eat some algae? \n\n* * *\n\n**This marine ecosystem is in a delicate balance. Eventually, the boat will overfish and the sick coral will no longer heal. In Lesson 2, you will code three sustainable fishing practices to help keep the ecosystem healthy.**",
+    "authored_hints": {
+      "Bellow": "Keep connecting blocks at the bottom of the workspace where you ended last level!",
+      "JustRight": "Connect the if just right algae block to the when fish touches algae event.",
+      "costume": "If the algae is just right, the coral\nwill be healthy. \n\nUse the change costume block inside the if just right algae block."
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/10": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41 PM.png)"
+        },
+        {
+          "text": "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00 PM.png)"
+        },
+        {
+          "text": "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50 PM.png)"
+        }
+      ],
+      "markdown": "## Look at the three ecosystems\n\nOne ecosystem is balanced and the other two are imbalanced in different ways. Drag the code to the matching image.\n",
+      "questions": [
+        {
+          "text": "Too little algae makes the fish leave. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)"
+        },
+        {
+          "text": "Too much algae makes the coral sick. <br>\n![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)"
+        },
+        {
+          "text": "Just the right amount of algae allows the sick coral to heal and keeps the fish healthy too. ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)"
+        }
+      ],
+      "title": "Match the code to the image"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/1/levels/11": {
+    "short_instructions": "Test out the finished simulation. There is a problem! The boat catches so many fish the algae always overgrows. What can we do to fix it? ",
+    "long_instructions": "## Now You're in Control!\n\n**To modify the simulation try to:**\n\n-   Change the number of fish\n-   Change the number of algae\n-   Change how many seconds until the fish & algae regrow\n-   Make other modifications\n\n**_Click <code style=\"color:black; background-color:#FFBD46\">Finish</code> when you are done._**",
+    "authored_hints": {
+      "change": "Make a couple changes to the simulation!",
+      "YouCan": "You can: \n\n-   Change the number of fish\n-   Change the number of algae\n-   Change how many seconds \n    until the fish & algae regrow\n-   Make other modifications"
+    },
+    "behavior_descriptions": {
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/1": {
+    "dsls": {
+      "markdown": "#Save our Seas! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\" width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n### The ocean has a lot of fish in it, but sometimes people catch too many fish and it can be bad for the ecosystem. In the following levels you will code **three different sustainable fishing practices** to help protect our ocean ecosystems.\n\n<br>\n\n###To read more about sustainable solutions for our oceans: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Click here</a>\n<br>\n<br>\n\n>#Sustainable Fishing Practice #1:\n>> ##Fishing Zones <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"  width=300 style=\"margin-right: 30px; float: left\">\n**Fishing boats can only fish in designated areas. Some areas are off limits for fishing boats so the ecosystem can recover.** \n<br>\n<br>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/2": {
+    "short_instructions": "The boat is only allowed to fish in one area of the ocean.",
+    "long_instructions": "## Sustainable Practice 1: Fishing Zones\n\n**Change the boat’s behavior so it stays in the fishing zone.** \n\n-   First, run the code to see the boat catch fish everywhere.\n\n-   Next, under <code style=\"color:black; background-color:#FFBD46\">when run</code>, change the <code style=\"color:black; background-color:#B3B2FB\">background</code> to underwater with zone buoy. \n\n-   Then, under the new background, add a block so the boat <code style=\"color:black; background-color:#5ED5DD\">begins fishing only in fishing zone</code>  \n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the boat fish only in one area!",
+    "authored_hints": {
+      "Hint1": "**Note**: You may have to drag some of the  <code style=\"color:black; background-color:#6AF36C\">when touches</code> code lower on your screen to fit the new blocks.",
+      "hint2": "At the top of the worskpace, connect the background block to when run.",
+      "hint3": "Under the background\nconnect the begins\nfishing only in fishing\nzone"
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/3": {
+    "dsls": {
+      "markdown": ">#Sustainable Fishing Practice #2:\n>>##Create a Fishing Season <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"  width=400 style=\"margin-right: 30px; float: left\">\n**Set limits on when people can catch fish. When it is not fishing season the ecosystem has time to recover.** \n<br>\n\n#Save our Seas! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\" width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\" width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n### Overfishing is a problem that can harm marine life ecosystems and the people who rely on them. It's important to practice sustainable fishing to help protect these ecosystems and ensure that fish populations remain healthy.\n\n\n\n<br>\n<br>\n<br>\n"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/4": {
+    "short_instructions": "Create a limited time for the boat to catch fish. Stop the boat when it is not fishing season. ",
+    "long_instructions": "## Sustainable Practice 2: Fishing Season (Part 1 of 2)\n\n**The program begins during 'Fishing Season.' To give the ecosystem time to recover, let's code a \"No Fishing\" season.**\n<img src=\"https://images.code.org/2aafc83d039690925a96b0b1d06d45c3-image-1683922141788.jpg\" style=\"width: 20%; float: right; padding-left: 20px\">\n\n-   Under the event <code style=\"color:black; background-color:#6AF36C\">Every 4 seconds</code> add a block to <code style=\"color:black; background-color:#B3B2FB\">set the background</code> to **No Fishing**. \n\n-   Then, add code to set the boat's behavior to begin <code style=\"color:black; background-color:#6AF36C\">no fishing season</code>.\n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the boat stop fishing when the fishing season ends!\n\n_In the next level, you will create a \"Fishing\" season and the boat will resume fishing._",
+    "authored_hints": {
+      "hint1": "Add the new blocks underneath\nthe `repeat every 4 seconds` block.",
+      "hint2": "Connect the `No Fishing background`\nnear the top of the workspace under \nthe `every 4 seconds` block.",
+      "hint3": "Connect `begin no fishing`\nunder the `no fishing \nbackground`."
+    },
+    "behavior_descriptions": {
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/5": {
+    "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
+    "long_instructions": "## Sustainable Practice 2: Fishing Season (Part 2 of 2)\n\n**Code the boat to continue fishing during 'Fishing Season'.** \n<img src=\"https://images.code.org/fee863b583acff0fd6cb3143d7e939d1-image-1683922449744.jpg\" style=\"width: 20%; float: right; padding-left: 20px\">\n\n-   Under the event <code style=\"color:black; background-color:#6AF36C\">every 9 seconds</code>, add a block to <code style=\"color:black; background-color:#B3B2FB\">set the background</code> to **Fishing Season**.\n\n-   Then set the boat's behavior to begin <code style=\"color:black; background-color:#6AF36C\">fishing season</code>.\n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch the simulation\n    . Does the ecosystem have time to recover before the boat begins fishing again?",
+    "authored_hints": {
+      "hint1": "Add the new blocks underneath\nthe repeat `every 9 seconds` block",
+      "hint2": "Use the `no fishing background`\nand the `begin no fishing season` behavior"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/6": {
+    "dsls": {
+      "markdown": ">#Sustainable Fishing Practice #3:\n>>##Set Fishing Limits <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"  width=300 style=\"margin-right: 30px; float: left\">\n**Scientists can help figure out how many fish can be caught without causing harm the ocean. Then the fishermen will know to only catch that many fish.** \n<br>\n<br>\n<br>\n\n#Save our Seas! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\" width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n### By working together, we can help keep our oceans full of life for generations to come!\n\n\n\n<br>\n<br>\n<br>\n\n"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/7": {
+    "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
+    "long_instructions": "## Sustainable Practice 3: Fishing Limits (Part 1 of 2)\n\n**Code the program to count the number of fish the boat takes.**\n\n-   Under <code style=\"color:black; background-color:#FFBD46\">when run</code>, add a <code style=\"color:black; background-color:#E4CBE6\">set fishCaught to 0</code> block to reset the count\n\n-   At the end of the <code style=\"color:black; background-color:#6AF36C\">when boat touches fish</code> event, add a <code style=\"color:black; background-color:#D1BDE8\">change fishCaught by 1</code> block\n\n-   Also connect a <code style=\"color:black; background-color:#5ED5DD\">boat says</code><code style=\"color:black; background-color:#D1BDE8\">fishCaught</code> \n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch to see the boat keep track of the fish it catches.\n\n_Note: You may have to drag some of the  <code style=\"color:black; background-color:#6AF36C\">when touches</code> code lower on your screen to fit the new blocks_",
+    "authored_hints": {
+      "hint1": "Before the program has started 0 fish have \nbeen caught. Use the `set fishCaught to 0` at \nthe very top of the workspace.",
+      "hint2": "Use the change `fishCaught by 1`\nunder the catch fish block to count\neach fish that the boat catches.",
+      "hint3": "Connect the `boat says`\nblock **underneath** the \n`change fishCaught by 1` \nblock"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/8": {
+    "short_instructions": "In this level, you will remove the boat when it reaches its fishing limit. ",
+    "long_instructions": "## Sustainable Practice 3: Fishing Limits (Part 2 of 2)\n\n**Remove the boat when it reaches its fishing limit.**\n\n-   At the end of the event <code style=\"color:black; background-color:#6AF36C\">when boat touches fish</code>, add an <code style=\"color:black; background-color:#99CEDB\">if fishCaught = 5</code> conditional.\n\n-   Inside the conditional add the <code style=\"color:black; background-color:#5ED5DD\">remove</code><code style=\"color:black; background-color:#F79EA5\">boat</code> block.\n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to make sure the boat goes away after it reaches its limit of 5 fish. ",
+    "authored_hints": {
+      "hint1": "Keep connecting blocks \nunder the `when boat touches fish` event where you \nended last level!",
+      "hint2": "To make the boat stop fishing at 5 fish, connect the `if fishCaught = 5` block at the end of the `when boat touches fish` event.",
+      "hint3": "Then add the `remove boat` block to\n**inside** the `if fishCaught = 5`block"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/2/levels/9": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        },
+        {
+          "text": "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        }
+      ],
+      "markdown": "## Look at the three sustainable fishing practices\n\nDrag the code to the matching image.\n\n",
+      "questions": [
+        {
+          "text": "Create a Fishing Zone for boats ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)"
+        },
+        {
+          "text": "Start a Fishing Season and a No Fishing Season\n![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)"
+        },
+        {
+          "text": "Set Fishing Limits ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)"
+        }
+      ],
+      "title": "Match the code to the image"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/3/levels/1": {
+    "dsls": {
+      "markdown": "\n##**All ecosystems have a _delicately balanced_ food chain**\n###The marine ecosystem food chain:\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\" style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. The sun provides energy for photosynthesis to occur in algae.\n>###2. The algae is eaten by fish.\n>###3. Fish are caught and eaten by humans, who use fishing boats with nets. \n\n</div>\n\n\n##**If there is too much or too little of one organism in the food chain, there are effects on the whole ecosystem.**\n"
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/3/levels/2": {
+    "dsls": {
+      "description": "Each of these ecosystem simulations needs to be adjusted. Choose an ecosystem, run the simulation to observe the problem, and adjust the code to fix it.",
+      "display_name": "Choose an Ecosystem!"
+    },
+    "sublevels": {
+      "csc_ecosystems_rainforest_freeplay_2023": {
+        "display_name": "Rainforest Ecologist",
+        "bubble_choice_description": "**Deforestation** has forced more parrots into this area. <br><br> Now there are too many! They are eating all of the bugs and causing an overgrowth of ferns. <br><br>**Rainforest ecologists, can you help?**",
+        "long_instructions": "##Welcome to the Rainforest\r\n\r\n**Deforestation has forced more parrots into this area and now there are way too many!** They are eating all of the bugs and causing an overgrowth of ferns.\r\n\r\n- **Observe:** Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation!\r\n\r\n- **Modify:** Change the **number** of <code style=\"color:black; background-color:#F79EA5\">new parrot sprites</code> under <code style=\"color:black; background-color:#FFBD46\">when run</code>.\r\n\r\n- **Record:** Press <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch how the simulation has changed. Are there enough bugs to eat the ferns?\r\n\r\n",
+        "authored_hints": {
+          "hint1": "There are too many parrots! Change the number\nof parrots to be less than 8."
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+        }
+      },
+      "csc_ecosystems_desert_2023": {
+        "display_name": "Desert Ecologist",
+        "bubble_choice_description": "**Off-road vehicle use and mining** are causing many injured rabbits and now they aren't moving!<br><br>\r\nThey should be able to eat the cactus and run from the falcon.<br><br>\r\n**Desert ecologists, can you help?**",
+        "long_instructions": "##Welcome to the Desert \r\n\r\n**Off-road vehicle use and mining are causing many injured rabbits and now they aren't moving!** They should be able to eat the cactus and run from the falcon.\r\n\r\n- **Observe:**  Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation.\r\n\r\n- **Modify:** Change the speed in the <code style=\"color:black; background-color:#5ED5DD\">set rabbit speed</code> block under <code style=\"color:black; background-color:#FFBD46\">when run</code> in the workspace.\r\n\r\n- **Record:** Press <code style=\"color:black; background-color:#FFBD46\">Run</code> again and watch how the simulation has changed. Are the rabbits searching for food and running from the falcon?",
+        "authored_hints": {
+          "hint1": "The rabbits need to move faster! Change the \nspeed of the rabbits to be more than 0."
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+        }
+      },
+      "csc_ecosystems_marsh_2023": {
+        "display_name": "Wetlands Ecologist",
+        "bubble_choice_description": "**People are building cities on top of wetlands.** <br><br> Too much standing water means mosquitoes are swarming. Bringing in frogs helps control the mosquito population.<br><br>**Wetlands ecologists, can you help?**",
+        "long_instructions": "##Welcome to the Wetlands\r\n\r\n**People are building cities on top of wetlands.** Now there is more standing water and the mosquitos are swarming. Ecologists recommend bringing in more frogs to control the mosquito population.<br>\r\n- **Observe:** Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation.\r\n- **Modify:** Change the **number** of <code style=\"color:black; background-color:#F79EA5\">new frog sprites</code> under <code style=\"color:black; background-color:#FFBD46\">when run</code>.\r\n\r\n- **Record:** Press <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch how the simulation has changed. Is there a more balanced amount of mosquitos?\r\n",
+        "authored_hints": {
+          "Hint1": "We need more frogs! Change the number of frogs to be more than 0."
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+        }
+      },
+      "csc_ecosystems_arctic_2023": {
+        "display_name": "Arctic Ecologist",
+        "bubble_choice_description": "**Climate change** is melting sea ice and making it harder for polar bears to find food.<br><br>\r\nThe bears aren't growing to their full size.<br><br>**Polar ecologists, can you help?**",
+        "long_instructions": "##Welcome to the Arctic\r\n\r\n**Climate change is melting sea ice and making it harder for polar bears to find food.** The bears aren't growing to their full size.\r\n\r\n- **Observe:** Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation!\r\n\r\n- **Modify:** Change the <code style=\"color:black; background-color:#B3B2FB\">background</code> to include more ice. Then increase the number on the <code style=\"color:black; background-color:#5ED5DD\">set polar bear size</code>  block under <code style=\"color:black; background-color:#FFBD46\">when run</code>.\r\n\r\n- **Record:** Press <code style=\"color:black; background-color:#FFBD46\">Run</code> and watch how the simulation has changed. Is the polar bear's size more realistic?",
+        "authored_hints": {
+          "hint2": "Change the background so there is more ice for the polar bear to hunt on. ",
+          "hint1": "The polar bear needs to be bigger! Change its size to be more than 30."
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/csc-ecosystems-2023/lessons/3/levels/3": {
+    "dsls": {
+      "markdown": "##Share Your Ecosystem Simulation!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologists! It's time to share out your research!**\n\n###Explain the following observations you made:\n\n>1. Explain the food chain in your ecosystem and how you coded it.\n>2. Was there too much or too little of an organism?\n>3. Explain the modifications you made to the simulation. \n>4. What did you notice after you changed the values?\n</div>\n\n<div style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Ready for more coding?** \nTry out code.org's [Express Course](https://studio.code.org/s/express-2022) to learn more computer science at your own pace.   \n<br>\n</p></div>\n"
+    }
+  }
+}

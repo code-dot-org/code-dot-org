@@ -1,264 +1,268 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+title: Час на кода Ръководство за доброволци
 ---
 
-# How to volunteer with a school or classroom
+# Как да си доброволец в училище или класна стая
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### Хиляди учители търсят доброволци, които да вдъхновят своите ученици. Направете разлика днес!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Регистрирай се за да доброволец</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+Изчислителното мислене помага за насърчаване на умения за решаване на проблеми, логика и креативност. И технологиите трансформират всяка индустрия на планетата. Учениците днес трябва да се научат как да създават технологии, а не просто да я използват.
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+Часът на кода е едночасово въведение в компютърните науки, предназначено да демистифицира „кода“, да покаже, че всеки може да научи основите и да разшири участието в областта на компютърните науки. Можете да помогнете за повишаване на осведомеността за движението за компютърни науки и доброволно да вдъхновите повече студенти да опитат компютърни науки, особено млади жени и студенти от исторически маргинализирани расови и етнически групи.
 
-- [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [Кой може да бъде доброволец?](#who-can-volunteer)
+- [Защо доброволец?](#why-volunteer)
+- [Как се избират доброволците?](#selection)
+- [Ами ако искам да бъда доброволец в конкретно училище?](#choose-a-school)
+- [Как да се подготвим](#how-to-prepare)
+- [Когато сте домакин на събитие](#hosting-an-event)
+- [Разпространете думата за Часа на кода](#promote-hour-of-code)
+- [Още начини за подкрепа на Часът на кода](#support-hour-of-code)
+- [ЧЗВ за доброволци](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+Независимо дали сте доброволци виртуално, лично или с вашата компания, вашите усилия могат да окажат огромно влияние върху начина, по който учениците гледат на компютърните науки и собствения си потенциал. Разгледайте нашия набор от инструменти [за доброволци, ако все още имате въпроси]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## Кой може да бъде доброволец?
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+Всеки, който е страстен към компютърното образование и увеличаването на разнообразието в технологиите, може да бъде доброволец! Ще се радваме да видим доброволци от всякакъв произход да участват. Часът на кода включва голямо разнообразие от дейности за всички възрасти и нива на умения, така че не е нужно да сте експерт по програмиране, за да сте доброволци!
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+Можете да бъдете гост-лектор в класната стая или да помогнете на учител да управлява дейността. [Регистрирайте се днес,](https://code.org/volunteer) за да вдъхновите учениците да продължат да учат компютърни науки.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Защо доброволец?
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+Компютърните науки са определящата област на 21-ви век, но повечето училища все още не я преподават. Един час код може да е най-големият достъп до компютърни науки, който тези студенти получават през дадена година. Чрез доброволчество можете да улесните учителите да внесат CS в класната си стая още по-лесно.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+Вижте някои препоръки от минали доброволци:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- "ХАРЕСА ми да виждам колко развълнувани са децата. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
+- "Най-добрата част от моя опит беше, че целия клас беше от момичета и цветнокожи. Това вещае добри неща за бъдещето на нашата индустрия ако има шанс да развълнуваме тези деца."
+- "Особено се радвах да насърча младите момичета в технологиите. Чувствах се, като че ли помагам на следващото поколение в местната област."
+- "ХАРЕСА ми да виждам колко развълнувани са децата. Едно невероятно нещо беше, че учителите забелязаха, че някои от учениците, които не се справят толкова добре в академичното отношение, се отличават в мисленето като разработчик и помагат на другите - давайки им място да се чувстват уверени.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Регистрирай се за да доброволец</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## Как се избират доброволците?
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+Учителите могат да търсят доброволци на нашата [доброволческа карта](http://code.org/volunteer/local). Ако се намирате близо до тяхната класна стая, учителите ще прегледат профила ви на картата, така че се опитайте да завършите колкото е възможно повече, за да увеличите шанса учител да се свърже с вас.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+Когато бъде избран, учител ще се свърже с вас чрез платформата за доброволци (никога няма да споделяме имейл адреса ви с учителя). Работете с тях, за да определите как можете най-добре да допринесете за тяхното събитие и дали ще посещавате лично или доброволчески виртуално.
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+Ако получавате твърде много искания от учители, винаги можете да актуализирате предпочитанията си или да се отпишете, като щракнете върху връзката, предоставена в долната част на всяка заявка по имейл от учител.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## Ами ако искам да бъда доброволец в конкретно училище?
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+Не е нужно да използвате нашата доброволческа карта, за да бъдете доброволци! Всъщност препоръчваме да се свържете директно с учители и администратори, ако има класна стая, в която искате да участвате доброволец.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+За да започнете: - Ако сте родител или настойник, изпратете [този имейл](https://hourofcode.com/us/promote/resources#help-schools) до учителя на детето си, предлагайки му да помогне да изпълнява час на кода. - Ако имате предвид друго училище, посетете уебсайта им, за да намерите подходящи контакти, за да се свържете с директор или заместник-директор, инструктори по технологии или компютърни науки или дори PTSA на училището. Можете също така да си партнирате с организации като Клубовете за момчета за & момичета в Америка, Junior Achievement, клон на YMCA и други, за да бъдете съдомакин на събитие. - Ако не можете да намерите училище, което е домакин на Hour of Code, можете доброволно да помогнете за провеждането на собствено събитие с вашата компания. Вижте нашето Ръ [ководство за компании, за](https://hourofcode.com/us/how-to/companies) да научите повече и да се вдъхновите.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## Как да се подготвим
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+Независимо дали присъствате на събитие „Час на кода“ дистанционно или лично, ще имате много по-плавно изживяване, ако направите тези подготовки предварително.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### Запознайте се с организатора
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+Ако сте доброволци в класната стая, обсъдете тези логистики с учителя предварително:
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology?
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early.
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity.
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together.
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time.
+- Вашата роля на събитието. Ако работите в областта на технологиите, може да бъдете помолени да споделите личния си опит или история: Как се включихте в кариера в технологиите? Защо компютърните науки са важни за вас? Какви са някои неща, които правите като част от работата си и как това е свързано с технологиите?
+- Ако сте доброволци лично, уверете се, че разбирате местните и училищните указания за здраве и безопасност. В зависимост от техните процедури може да се наложи да пристигнете малко по-рано.
+- Ако сте доброволци виртуално или лично, това може да определи в кои часове трябва да присъствате и в какво качество.
+- Ако сте доброволци виртуално, работете с учителя, за да определите най-добрата платформа за видеоконферентна връзка, която да използвате, и опитайте да проведете тестова серия на събитието заедно.
+- Ако учителят е определил предварително дейности по време на кода за събитието, бъдете наясно, за да можете да ги [](https://hourofcode.com/us/learn) проучите предварително.
 
-### Think about your participants
+### Помислете за вашите участници
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate.
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code.
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- Помислете за учениците, с които ще говорите, и какво може да резонира с тях. Като доброволец можете да им помогнете да осъзнаят, че компютърните технологии са навсякъде и те също могат да станат компютърни учени. Помислете за тяхната възраст, произход и полова идентичност и се подгответе с теми, които могат да се харесат на техните интереси. Ето допълнителни насоки как да вдъхновявате [младите жени](http://code.org/girls) да участват.
+- Развълнувайте учениците! Работете с учителя, за да изберете [вдъхновяващо видео,](https://hourofcode.com/us/promote/resources#videos) което може да помогне да фокусирате класа и да ги развълнувате да направят Час на код.
+- Ако сте виртуален доброволец, помислете за направата на няколко слайда като част от презентацията си, за да поддържате учениците ангажирани.
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+Нуждаете се от повече ресурси? [Вижте тези други съвети](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## Когато сте домакин на събитие
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+Ако сте домакин на събитие с класна стая, използвайте примерния дневен ред, който да ви насочи. Потвърдете договорения график за деня и предварително обсъдете всички точки за разговор с учителя. Ако физически посещавате класа, не забравяйте да влезете в училището и да поздравите учителя в деня на вашето събитие.
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+Ако обмисляте да организирате Часа на кода у дома или в общността, препоръчваме ви да разгледате някои от нашите задълбочени ръководства за [родители](https://hourofcode.com/us/how-to/parents) и [организации или компании](https://hourofcode.com/us/how-to/companies).
 
 ### 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Определете дата, формат и местоположение за вашето събитие
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Работете с училището или учителя, за да обсъдите какво има най-голям смисъл. Виждали сме събития, които са [виртуални](https://hourofcode.com/us/how-to/virtual) или лично, в офиса на компанията или провеждани в общността и за ученици от всички възрасти! Можете също така да разгледате какво</a> са правили други [корпоративни партньори](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) и донори в миналото за някои вдъхновяващи идеи.</p> 
 
 <br />
 
-#### Sample Agenda:
+#### Примерен дневен ред:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Време | Точка от дневния ред | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 минути | Покажи [вдъхновяващо видео](https://hourofcode.com/us/promote/resources#videos)| |5-10 минути | Представете се и научете повече за учениците: Къде работите, какво правите и какво обичате най-много в работата си? Какво или кой ви вдъхнови? Как се интересувате от компютърните науки? Имахте ли наставник? Задайте въпроси на учениците и оставете време за Q&A. | |30-60 минути | Код! Ако вашето събитие е лично, това е моментът да отговорите на въпроси и да насочите учениците през трудни пъзели. Опитайте се да не им давате решението направо, вместо това опитайте да им задавате въпроси, за да могат сами да отговорят какво се е объркало, и насърчете учениците да си задават въпроси, ако имат въпроси. Ако сте доброволци виртуално, работете с учителя за това какъв може да бъде най-добрият подход. Може да има по-смисъл да се върнете в края на сесията, за да видите какъв напредък са постигнали учениците. | | |1-3 минути | Благодаря на всички и споделете вдъхновяващи раздялни думи. Раздайте някоя от фирмените си камъни ([стикерите](#celebrate) са страхотни)! | | <br />
 
-#### Other ideas to add to your event
+#### Други идеи, които да добавите към вашето събитие
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Обяснете начините, по които технологиите влияят на живота ни, с примери, за които ще се интересуват учениците от всички среди - говорете за технология, която спасява животи, помага на хората, свързва хората.
+- Ако сте технологична компания, демонстрирайте забавни, иновативни продукти, върху които вашата компания работи. Ако не сте технологична компания, обсъдете начините, по които вашата компания използва технологиите за решаване на проблеми и постигане на цели.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- Ако имате група персонал, който ще улесни вашето събитие или доброволчество в местно училище, помислете за поръчка на [персонализирани тениски](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) за вашата група.
 
-### 3. Plan your technology needs
+### 3. Планирайте вашите технологични нужди
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Устройства:
 
-Най-добрият Hour of Code се провежда с Интернет свързани компютри. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+Най-добрият Hour of Code се провежда с Интернет свързани компютри. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! За изключени дейности просто филтрирайте секцията Технология в класната стая, за да покажете опциите за „Без компютри или устройства“.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. Когато учениците си партнират, те си помагат един на друг и разчитат по-малко на учителя. Те ще се убедят, че компютърните науки се нуждаят от социално сътрудничество.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Тестване** на дейности на компютри или устройства. Уверете се, че те работят правилно в браузърите със звук и видео.
+- **Нямате достатъчно устройства?** Използвайте програмиране по двойки. Когато учениците си партнират, те си помагат един на друг и разчитат по-малко на учителя. Те ще се убедят, че компютърните науки се нуждаят от социално сътрудничество.
+- **Осигурете слушалки** за вашите участници или ги помолете да донесат свои собствени, ако ще опитат уроци, които работят най-добре със звуци.
+- **Имате ниска честотна лента**? Планирайте да показвате видеоклипове в предната част на събитието, така че всеки участник да не изтегля свои собствени видеоклипове. Или опитайте дейностите без включване/офлайн.
 
-#### Virtual Events:
+#### Виртуални събития:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Ако събитието ви ще бъде виртуално, ще искате да вземете решение за вашата конферентна платформа (и да я тествате) преди вашето събитие. Това може да повлияе на броя на учениците, с които се чувствате комфортно, така че е най-добре да определите това, преди да поканите класна стая или да популяризирате събитието си. За идеи как да стартирате отдалечен Hour of Code, прочетете нашите [съвети за виртуално събитие „Час на кода“](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Изберете дейност
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Ние предлагаме разнообразни забавни уроци с ръководство от ученици за всички възрастови групи и нива на опит. Популярно е учениците да изпробват самостоятелно ръководени уроци, въпреки че може да искате да започнете събитието с [вдъхновяващо видео](https://hourofcode.com/us/promote/resources#videos) , което всички да гледат заедно.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Разгледайте дейностите</a> и решете предварително дали искате да изберете един урок за всичките си гости или оставете всяко дете да избере своето. **Всички дейности „Час на кода“** изискват минимално време за подготовка и са самостоятелно ръководени - позволявайки на участниците да работят със собствено темпо и ниво на умения.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+След като имате солидна пътна карта за вашето събитие, можете да започнете да каните ученици, училище или по-голямата общност. Препоръчваме ви да започнете с местно училище, с което имате връзка, или да разгледате нашата [карта](https://hourofcode.com/us/map) на събитията „Час на кода“.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Празнувайте
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+След като учениците или гостите завършат своя Час на кода, е време да отпразнуваме успеха си. Ето няколко идеи, за да направите вашето събитие още по-забавно:
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
+- [Споделете сертификати]({{ urls/certificates }}) за участници и студенти.
+- [Отпечатайте „Направих час на кода! стикери“]({{ promote/resources_stickers }}) или намерете други награди и измами в магазина на Amazon [Code.org.](https://code.org/shop)
 - Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## Разпространете думата за Часа на кода
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Един от най-добрите начини да помогнете е да разпространявате думата и да популяризирате Часът на кода.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Регистрирайте Вашето събитие
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Когато се регистри [рате за вашето събитие „Час на кода“](/events), ще получавате полезни имейл съобщения с новини и съвети за провеждане на успешен Hour of Code. Това е и начинът, по който можете да уведомите местните училища или родители, че сте домакин на събитие близо до тях.
 
-### 2. Post on Social Media
+### 2. Публикувайте в социалните медии
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Помогнете за повишаване на осведомеността за движението за компютърни науки с това примерно съдържание, което да публикувате в социалните медии и да споделяте със служителите си.
 
-#### Hour of Code general announcement
+#### Общо съобщение за час на кода
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Компютърните науки променят нашия свят. Помогнете на учениците да бъдат част от тази промяна, започвайки с един #HourOfCode. https://hourofcode.com/
+- Не използвайте само технологии - научете се как да ги изградите. Помогнете на някого да започне с #HourOfCode. https://hourofcode.com/
 
-#### Stats
+#### Статистика
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Знаете ли, че само 53% от американските училища преподават компютърни науки? Дайте възможност на всеки ученик да научи по един #HourOfCode https://hourofcode.com/
+- В САЩ едва 26% от софтуерните специалисти са жени. Запознайте повече млади жени с компютърните науки с #HourOfCode https://hourofcode.com/
+- 67% от работните места в САЩ не са в технологичния сектор. Помогнете да поставите компютърните науки в стандартната учебна програма с #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Създайте свой собствен
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Един #HourOfCode може да доведе до [попълнете историята си]. https://hourofcode.com/
+- Подкрепям #HourOfCode, защото [попълнете мислите си]. Присъединете се към нас https://hourofcode.com
 
-#### Engineer-specific
+#### Специфични за инженера
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Ако първият ви ред код промени живота ви, помогнете на учениците близо до вас да напишат първия си #HourOfCode https://code.org/volunteer
+- Ако сте се научили да кодирате - каква е вашата история? Вдъхновете студент близо до вас чрез първия им #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Научете повече</a> за плакати, видеоклипове, стикери и други начини за популяризиране на вашето събитие пред вашата общност.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Още начини за подкрепа на Часът на кода
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
-
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
-
-* * *
+- Разпространете осведомеността чрез носене на [Code.org swag](https://store.code.org/) (всички приходи отиват за подпомагане на повече ученици да получат достъп до образование по компютърни науки).
+- Изберете да се възползвате от Code.org, когато пазарувате в [Amazon](https://code.org/donate/amazonsmile)Smile.
+- Попитайте изпълнителния директор за възможност да изпратите имейл до цялата компания, подчертаващ значението на компютърните науки и насърчаващ служителите да пробват.
+- Забавлявайте се с колегите в кампания</a>за подаръци.</li> 
+    
+    - [Подпишете тази пети](https://code.org/promote) ция, за да сте сигурни, че всеки ученик има възможност да научи компютърни науки.
+    - [Дарете](https://code.org/donate) на Code.org, за да можем да поддържаме нашите образователни ресурси безплатни и достъпни за всички.</ul> 
+    
+    За повече предложения как да поддържате Code.org и Часът на кода, посет [ете Code.org/Help](https://code.org/help)
+    
+    * * *
+    
+    
 
 <a id="faq"></a>
 
-## Volunteering FAQ
-
-### I haven't been contacted by a teacher yet. How can I still volunteer?
-
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
-
-
-### How long do classroom visits last for?
-
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
-
-
-### What age group is the Hour of Code activity appropriate for?
-
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
-
-
-### How do I get selected as a technical volunteer or guest speaker?
-
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
-
-
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
-
-
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+    
+    ## ЧЗВ за доброволчество
+    
+    ### Не съм бил търсен от учител все още. Как още мога да бъда доброволец?
+    
+    Опитайте да потърсите в местните училища и се обадете как можете да помогнете.  
+    
+    
+    ### Колко дълго продължават посещенията в класната стая?
+    
+    Личното посещение в класната стая обикновено трае 60-90 минути, докато посещението на виртуална класна стая обикновено трае 20-30 минути.   
+    
+    
+    ### За каква възрастова група е подходяща дейността „Часът на кода“?
+    
+    Code.org и нашите партньори проектират всички дейности по Час на кода, за да ангажират ученици от всички нива на клас (K-12) от всички среди. Всеки - дори възрастни - може да се забавлява играейки!   
+    
+    
+    ### Как да бъда избран за технически доброволец или гост-лектор?
+    
+    Учителите ще търсят доброволци на нашата [доброволческа карта](https://code.org/volunteer/local). Опитайте се да направите профила си възможно най-пълен, за да увеличите шанса учител да ви избере. Ако предпочитате как искате да станете доброволец, като например гост-лектор или като техническа поддръжка, моля, посочете това в описанието на профила си.   
+    
+    
+    Когато бъде избран, учител ще се свърже с вас чрез платформата за доброволци (вашият имейл адрес никога няма да бъде споделен с учителя). Ако получавате много заявки от учители, винаги можете да актуализирате вашите предпочитания като щракнете върху връзката, за да редактирате информацията си или откажете, възможността епредоставена в дъното на всеки имейл от учител.   
+    
+    
+    [<button>Регистрирай се за да доброволец</button>]({{ urls/volunteer }})

@@ -1,6 +1,6 @@
 # This can be viewed on non-production environments at /rails/mailers/pd_workshop_mailer
 class PdWorkshopMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   DEFAULT_COURSE = Pd::Workshop::COURSE_ECS
   DEFAULT_SUBJECT = Pd::Workshop::SUBJECT_ECS_PHASE_2
@@ -18,7 +18,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
 
@@ -31,7 +32,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
 
@@ -44,7 +46,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
              workshop_params: {
                virtual: true,
                location_name: 'zoom_link',
-               location_address: nil
+               location_address: nil,
+               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
     end
@@ -81,6 +84,10 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
   def teacher_enrollment_reminder__facilitator
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
       options: {days_before: 10}
+  end
+
+  def teacher_pre_workshop_csa
+    mail :teacher_pre_workshop_csa, Pd::Workshop::COURSE_CSA
   end
 
   def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
@@ -158,6 +165,20 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       target: :facilitator
   end
 
+  def facilitator_pre_workshop_csf_intro
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_101,
+      target: :facilitator
+  end
+
+  def facilitator_pre_workshop_csf_deepdive
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_201,
+      target: :facilitator
+  end
+
   def facilitator_post_workshop_csp_summer
     regional_partner = build :regional_partner, name: 'We Teach Code'
 
@@ -179,6 +200,36 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :facilitator_post_workshop,
       Pd::Workshop::COURSE_CSD,
       Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+      target: :facilitator,
+      workshop_params: {
+        num_sessions: 1,
+        id: highest_workshop_id + 5
+      }
+  end
+
+  def facilitator_post_workshop_csf_intro
+    # the way we set up workshops for mailers means they won't have an id.
+    # We want to test that this mailer can extract the workshop id correctly--find
+    # an unused id and assign it to this workshop.
+    highest_workshop_id = Pd::Workshop.last&.id || 0
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_101,
+      target: :facilitator,
+      workshop_params: {
+        num_sessions: 1,
+        id: highest_workshop_id + 5
+      }
+  end
+
+  def facilitator_post_workshop_csf_deepdive
+    # the way we set up workshops for mailers means they won't have an id.
+    # We want to test that this mailer can extract the workshop id correctly--find
+    # an unused id and assign it to this workshop.
+    highest_workshop_id = Pd::Workshop.last&.id || 0
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_201,
       target: :facilitator,
       workshop_params: {
         num_sessions: 1,

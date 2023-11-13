@@ -6,7 +6,7 @@ import $ from 'jquery';
  * @returns jQuery event handler for when we click on a share button. Pops up
  *   a new window with contents of href.
  */
-module.exports = function popupWindow(event) {
+function popupWindow(event) {
   var url = $(event.currentTarget).attr('href');
   var width = 640;
   var height = 480;
@@ -36,4 +36,8 @@ module.exports = function popupWindow(event) {
     share.focus();
   }
   return false;
-};
+}
+
+module.exports = popupWindow;
+// Needed to import into a typescript file.
+export default popupWindow;

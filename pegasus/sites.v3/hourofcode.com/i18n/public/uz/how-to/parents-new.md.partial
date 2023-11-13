@@ -85,6 +85,6 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<h2>What comes after the Hour of Code?</h2>
+<h2>Dasturlash soatidan keyin nima bo'ladi?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.

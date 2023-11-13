@@ -1,0 +1,19 @@
+name 'virtual-pl-csd-summer-day1-async11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pair Programming
+
+## Track student progress while pair programming
+
+##### You can enable pair programming for your class sections within the Code.org learning platform. Students will then be able to choose teammates from a list of other students in their section. You will be able to track both team progress and individual student progress from your teacher dashboard. Levels completed using the pair programming feature will have a people icon in the center of the completed level bubble. 
+
+![Screenshot of two students' progress while pair programming. An orange arrow points to two levels completed using the pair programming feature.](https://images.code.org/1b1e4605bfdcb09d06dc3fdb346b29c1-image-1626486295429.png)
+
+#### <a href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about pair programming within the Code.org platform. 
+
+
+
+
+MARKDOWN

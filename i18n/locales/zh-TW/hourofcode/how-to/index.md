@@ -25,7 +25,7 @@ title: 一小時玩程式指南
 
 <a id="how-to-video"></a>
 
-## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-當你[註冊一小時玩程式活動](/#join)時，你將收到有用的電子郵件通訊，其中包括新聞和舉辦成功的一小時玩程式活動的提示。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+當您[註冊一小時玩程式活動時，您將收](/events)到有用的電子郵件通訊，其中包含有關舉辦成功的一小時玩程式的新聞和提示。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 引導學生參與活動
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- 將教程鏈接寫在白板上。尋找所選教學課程 [資訊上列出的連結]({{ urls/learn }})。
 
 當您的學生遭遇困難時，這樣回答也沒關係：
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [為您的學]({{ urls/certificates }}) 生打印證書。
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### Hour of Code之後有什麼？
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+計算機科學不一定要以一小時玩程式碼結束！ [了解如](/beyond) 何將 CS 帶到您的學校和學生。
 
 {{ signup_button }}

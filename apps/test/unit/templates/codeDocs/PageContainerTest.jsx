@@ -11,15 +11,15 @@ describe('PageContainer', () => {
           {
             key: 'world',
             name: 'World',
-            docs: [{key: 'width', name: 'Width', link: '/docs/ide/width'}]
+            docs: [{key: 'width', name: 'Width', link: '/docs/ide/width'}],
           },
           {
             key: 'sprites',
             name: 'Sprites',
             docs: [
-              {key: 'height', name: 'Sprite.Height', link: '/docs/ide/height'}
-            ]
-          }
+              {key: 'height', name: 'Sprite.Height', link: '/docs/ide/height'},
+            ],
+          },
         ]}
         programmingEnvironmentTitle="IDE Lab"
       >
@@ -27,12 +27,7 @@ describe('PageContainer', () => {
       </PageContainer>
     );
     expect(wrapper.find('h1').length).to.equal(1);
-    expect(
-      wrapper
-        .find('h1')
-        .text()
-        .includes('IDE Lab')
-    ).to.be.true;
+    expect(wrapper.find('h1').text().includes('IDE Lab')).to.be.true;
     expect(wrapper.find('NavigationBar').length).to.equal(1);
     expect(
       wrapper.find('NavigationBar').find('NavigationCategory').length

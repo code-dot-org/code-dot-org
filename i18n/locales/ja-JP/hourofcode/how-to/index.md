@@ -25,7 +25,7 @@ Hour of Codeを試してみることは、生徒にコンピュータサイエ�
 
 <a id="how-to-video"></a>
 
-## 1. Hour of Codeハウツーガイドのビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Hour of Codeハウツーガイドのビデオを見る <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -33,9 +33,9 @@ Hour of Codeを試してみることは、生徒にコンピュータサイエ�
 
 ## 2. アクティビティやチュートリアルを見てみる
 
-生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 学生が自主学習型のチュートリアルを試すのが一般的ですが、多くのアクティビティには、教師がディスカッションを導いたり、アクティビティを拡張できる授業計画も含まれています。 
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+アクティビティを見て、すべての生徒向けに1つのチュートリアルを選択するか、それぞれの子供に自分で選択させるかを事前に決めてください。
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
@@ -45,18 +45,18 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ## 3. その日の予定を作成する
 
-### Think about your technology needs - computers are optional!
+### 必要なテクノロジーについて考えましょう（コンピュータは必須ではありません！）
 
-- 最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- 児童・生徒のコンピュータやデバイス上でチュートリアルをテストします。ブラウザ上で音声やビデオが正しく動くか確認します。 Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- 最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 けれども、必ずしも一人一台のコンピュータを用意する必要はありません。もっと言えばコンピュータがない環境でもHour of Codeを行うことができます。 [パソコンを使わないアクティビティ](/learn)を探すには、クラスルームテクノロジーのセクションをフィルターにかけ「コンピュータやデバイスなし」のオプションを表示します。
+- 児童・生徒のコンピュータやデバイス上でチュートリアルをテストします。ブラウザ上で音声やビデオが正しく動くか確認します。 ネットワーク通信速度が遅いですか？ クラスの冒頭でビデオを全体に見せれば、各自がビデオをダウンロードする必要はありません。 もしくは、オフラインチュートリアルを試してみてください。
 - いくつかのチュートリアルでは音声が流れます。その場合は、ヘッドフォンを準備するか、生徒に自分のものを持ってくるように頼みます。
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
+- 十分な数のデバイスがありませんか？ [ペアプログラミング](https://www.youtube.com/watch?v=vgkahOzFH2Q)の出番です。 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
 
 <img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
-世界中の人が、最新のチュートリアルやアクティビティがリリースされるコンピューターサイエンス教育週間 (12月5～11日) にHour of Code記念イベントに参加します。 But you can do an Hour of Code any day of the year!
+世界中の人が、最新のチュートリアルやアクティビティがリリースされるコンピューターサイエンス教育週間 (12月5～11日) にHour of Code記念イベントに参加します。 けれども、Hour of Codeは一年中いつでも行うことができます！
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-[Hour of Codeイベントに登録](/#join)すると、イベントを成功させるためのニュースやヒントをメールでお知らせします。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Hour of [Codeイベントに登録すると](/events)、Hour of Codeを成功に導くためのニュースやヒントが記載された役立つメールが届きます。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- []({{ urls/certificates }}) 学生用の証明書を印刷してください。
 - 生徒へ配る[「Hour of Codeをやったよ！」]({{ urls/promote_stickers }})ステッカーを印刷します。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 

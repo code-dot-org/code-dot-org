@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "default",
     "func": "bounceOff",
     "docFunc": "bounce-off",
     "blockText": "{SPRITE} bounces off {TARGET}",

@@ -6,7 +6,7 @@ describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';
   const sampleFileJson = {
     'test.java': {text: 'hello'},
-    'test2.java': {text: 'hello'}
+    'test2.java': {text: 'hello'},
   };
 
   let server,
@@ -19,7 +19,7 @@ describe('BackpackClientApi', () => {
     server.respondWith('put', `/v3/libraries/${channelId}/${filename}`, [
       status,
       {'Content-Type': 'application/json'},
-      '{}'
+      '{}',
     ]);
   };
 
@@ -27,7 +27,7 @@ describe('BackpackClientApi', () => {
     server.respondWith('delete', `/v3/libraries/${channelId}/${filename}`, [
       status,
       {'Content-Type': 'application/json'},
-      '{}'
+      '{}',
     ]);
   };
 

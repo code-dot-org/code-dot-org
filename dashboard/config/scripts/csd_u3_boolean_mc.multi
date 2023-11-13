@@ -24,3 +24,5 @@ Decision-making on computers are based on statements called **boolean expression
 
 Read the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question
 MARKDOWN
+
+allow_multiple_attempts false

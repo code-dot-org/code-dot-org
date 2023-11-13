@@ -10,7 +10,7 @@ title: Gebruiksaanwijzing voor 'Hour of Code'
 
 Vandaag de dag dienen studenten te leren hoe ze technologie moeten creëren, niet alleen gebruiken.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Trying an Hour of Code is een eenvoudige en leuke manier om leerlingen kennis te laten maken met informatica, misschien wel voor de allereerste keer! Vind een activiteit die bij je omgeving past, of het nu in de klas is of na school, persoonlijk of virtueel. Bekijk onze [deelnamegids als je]({{ localized_files/participation_guide }}) na het volgen van de onderstaande stappen nog vragen hebt:
 
 - [Bekijk de tutorial van 'Hour of Code'](#how-to-video)
 - [Verken de activiteiten en tutorials](#explore-activities)
@@ -19,13 +19,13 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Hoe sterk te beginnen met je 'Hour of Code'](#how-to-start)
 - [Coding verkrijgen](#code)
 - [Vier het succes van uw studenten](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Andere Hour of Code-bronnen voor docenten](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Bekijk de 'Hour of Code' video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Bekijk de 'Hour of Code' video <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -56,7 +56,7 @@ Verken de activiteiten en beslis vooraf of je een enkele tutorial voor al je lee
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Mensen over de hele wereld nemen deel aan de viering van het Hour of Code tijdens de CS Education Week (5-11 december), wanneer de nieuwste tutorials en activiteiten worden vrijgegeven. But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -72,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Wanneer je je [aanmeldt voor je Hour of Code-evenement](/events), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Of print inspirerende posters voor je klas! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -111,7 +111,7 @@ Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier z
 
 Betrek de deelnemers bij de activiteit
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Schrijf de link naar de handleiding op een whiteboard. Zoek de link in de [informatie voor de door jou geselecteerde tutorial]({{ urls/learn }}).
 
 Wanneer uw studenten moeilijkheden tegenkomen kunt u gerust reageren met:
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Certificaten afdrukken]({{ urls/certificates }}) voor je leerlingen.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 
@@ -151,6 +151,6 @@ What if a student finishes early?
 
 ### Wat komt er na het CodeUur?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Informatica hoeft niet te eindigen met het Hour of Code! [Leer hoe je](/beyond) CS naar je school en studenten kunt brengen.
 
 {{ signup_button }}

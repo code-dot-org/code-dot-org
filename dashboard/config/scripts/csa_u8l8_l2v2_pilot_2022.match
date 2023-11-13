@@ -14,3 +14,4 @@ answer 'an object whose state cannot be modified after it is created'
 
 question 'polymorphism'
 answer 'the ability of an object to perform an action in different ways'
+allow_multiple_attempts true

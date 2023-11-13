@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Kod Tədbirinin Saatı Necə Edilir
 ---
 
 {{ signup_button }}
@@ -45,7 +45,7 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 **Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-## Run of Show
+## Tədbirin gedişatı
 
 | Vaxt          | Hərəkət                                                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |

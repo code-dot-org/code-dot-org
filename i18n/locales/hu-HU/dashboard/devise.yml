@@ -50,9 +50,6 @@ hu:
       expired: "már lejárt, kérjük kérjen egy újat"
       not_found: "nem található"
       not_locked: "nem volt zárolva"
-      not_saved:
-        one: "1 hiba tilos a  %{resource}  mentése:"
-        other: "%{count} hiba tiltja a %{resource} mentését :"
     invitations:
       send_instructions: 'A meghívót elküldtük az alábbi email címre: %{email}.'
       invitation_token_invalid: 'A megadott token nem érvényes!'

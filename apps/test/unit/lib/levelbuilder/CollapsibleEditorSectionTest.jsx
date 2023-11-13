@@ -7,7 +7,7 @@ describe('CollapsibleEditorSection', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      title: 'Section Title'
+      title: 'Section Title',
     };
   });
 

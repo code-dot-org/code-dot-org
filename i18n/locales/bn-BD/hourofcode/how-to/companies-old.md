@@ -1,11 +1,11 @@
 ---
-title: How to host an Hour of Code - Companies
+title: কিভাবে একটি ঘন্টা কোড হোস্ট - কোম্পানি
 ---
 
 {{ signup_button }}
 
 # আপনার কোম্পানীর কোড অফ আওয়ার কীভাবে আনতে হবে
-### Find out how you and your employees can inspire students to try computer science!
+### আপনি এবং আপনার কর্মীরা কীভাবে শিক্ষার্থীদের কম্পিউটার বিজ্ঞানের চেষ্টা করতে অনুপ্রাণিত করতে পারেন তা সন্ধান
 
 ***
 
@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- কম্পিউটার বিজ্ঞানে মেয়েদের আগ্রহী করার টিপস দেখ [ুন এখানে]({{ urls/girls }})।
 
 ## 6. Code!
 **কার্যকলাপে সরাসরি অংশগ্রহণকারীরা**

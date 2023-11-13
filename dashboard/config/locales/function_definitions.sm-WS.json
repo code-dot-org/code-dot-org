@@ -1,0 +1,1948 @@
+{
+  "sm-WS": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "parameters": {
+              "height": "maualuga"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw square": {
+            "parameters": {
+              "height": "maualuga"
+            }
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "tusi le ata o le fugalaau"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "tusi le ata o le kiona toulu"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "tusi le ata o le fugalaau"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "tusi le ata o le laau"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "melivao"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "oso"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "ai"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "oso"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "oso",
+            "parameters": {
+              "actor": "tagata faatino ",
+              "height": "maualuga"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "parameters": {
+              "actor": "tagata faatino "
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "parameters": {
+              "actor": "tagata faatino "
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "parameters": {
+              "actor": "tagata faatino ",
+              "speed": "vave"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "parameters": {
+              "actor": "tagata faatino ",
+              "speed": "vave"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "ai"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "faatulaga le sikoa"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "faatulaga le sikoa"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "aumai le sua ",
+            "parameters": {
+              "counter": "toe fetaliai"
+            }
+          }
+        },
+        "Course 4 SCF 3": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "Find the Wizard": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "ai"
+            }
+          }
+        },
+        "Geometric Sun": {
+          "diamond": {
+            "name": "taimane"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale"
+          },
+          "square": {
+            "name": "faatafafa"
+          },
+          "sun": {
+            "name": "la"
+          }
+        },
+        "Geometric Sun_2018": {
+          "diamond": {
+            "name": "taimane"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale"
+          },
+          "square": {
+            "name": "faatafafa"
+          },
+          "sun": {
+            "name": "la"
+          }
+        },
+        "InspirationalArtwork": {
+          "draw a loop": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          },
+          "n-sided shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw spiral circle": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "do something": {
+            "name": "fai se galuega",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a triangle": {
+            "description": "tusi le ata o le tafatolu",
+            "name": "tusi le ata o le tafatolu"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a sqaure": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "oso",
+            "parameters": {
+              "actor": "tagata faatino ",
+              "height": "maualuga"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "tagata faatino ",
+              "speed": "vave"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "oso",
+            "parameters": {
+              "actor": "tagata faatino ",
+              "height": "maualuga"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "tagata faatino ",
+              "speed": "vave"
+            }
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "tusi le ata o le fugalaau"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "tusi le ata o le foliga o le hexagon"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions3_2023": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "tusi le ata o le fetu "
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "taaloga mulimuli"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "taaloga mulimuli"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "taaloga mulimuli"
+          }
+        },
+        "courseF_apps_collector_2023": {
+          "end game": {
+            "name": "taaloga mulimuli"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "Make gingham": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          },
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa"
+          }
+        },
+        "courseF_artist_fwp2": {
+          "Make gingham": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          },
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "black outline": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a square2": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          },
+          "filled square": {
+            "parameters": {
+              "size": "lapoa"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "umi",
+              "min": "min"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "umi",
+              "min": "min"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a circle": {
+            "name": "tusi le ata o le lio"
+          },
+          "draw a house": {
+            "name": "tusi le ata o le fale",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "umi",
+              "repeat": "toe fai"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "umi",
+              "min": "min"
+            }
+          },
+          "draw a square": {
+            "name": "tusi le ata o le foliga o le faatafafa",
+            "parameters": {
+              "length": "umi"
+            }
+          },
+          "draw a star": {
+            "name": "tusi le ata o le fetu ",
+            "parameters": {
+              "length": "umi",
+              "points": "ai"
+            }
+          },
+          "draw a triangle": {
+            "name": "tusi le ata o le tafatolu",
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "do something": {
+            "name": "fai se galuega"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "fai se galuega"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "umi"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "ao"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "ao"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "ao"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "ao"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "ao"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "ao"
+          }
+        }
+      }
+    }
+  }
+}

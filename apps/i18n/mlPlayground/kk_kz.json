@@ -1,63 +1,13 @@
 {
-  "navigateForward": "Жалғастыру",
-  "navigateBack": "Оралу",
-  "tryAgain": "Қайта көру",
-  "navigateDone": "Аяқтау",
-  "saveProgress": "Сақтау",
-  "correctAnswer": "Дұрыс",
-  "incorrectAnswer": "Қате",
-  "modelCardPossibleValuesMinimum": "мин",
-  "modelCardPossibleValuesMaximum": "макс",
-  "columnInspectorDescription": "Сипаттама",
-  "columnDetailsMinimumValue": "мин",
   "columnDetailsMaximumValue": "макс",
+  "columnDetailsMinimumValue": "мин",
+  "columnInspectorDescription": "Сипаттама",
+  "correctAnswer": "Дұрыс",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "жасы"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "күн"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "түс"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "жасы"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Сипаттама"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "шама"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тауық"
+        "Length": {
+          "id": "Ұзындық"
         }
       }
     },
@@ -71,21 +21,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "банан"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "жасы"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "тауық"
+        "color": {
+          "id": "түс"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Жасы"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "жасы"
@@ -99,62 +63,51 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Мемлекет"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "жасы"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Ұпай"
-        },
         "Country": {
           "id": "Мемлекет"
         },
         "Name": {
           "id": "Атыңыз"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Кейіпкер"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Ұзындық"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Country": {
-          "id": "Мемлекет"
         },
-        "Internet": {
-          "id": "Ғаламтор"
-        },
-        "Age": {
-          "id": "Жасы",
-          "description": "Жасы"
-        },
-        "Gender": {
-          "id": "Жынысы",
-          "description": "Жынысы"
+        "Score": {
+          "id": "Ұпай"
         }
       }
     },
-    "boba_toy": {
+    "naan_toy": {
       "fields": {
-        "banana": {
-          "id": "банан"
+        "chicken": {
+          "id": "тауық"
         }
       }
     },
-    "heart": {
+    "nutrition": {
       "fields": {
-        "Age": {
-          "id": "Жасы"
+        "Description": {
+          "id": "Сипаттама"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "тауық"
         }
       }
     },
@@ -165,12 +118,59 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "шама"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "күн"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Кейіпкер"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "жасы"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "Жасы",
+          "id": "Жасы"
+        },
         "Country": {
           "id": "Мемлекет"
+        },
+        "Gender": {
+          "description": "Жынысы",
+          "id": "Жынысы"
+        },
+        "Internet": {
+          "id": "Ғаламтор"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Қате",
+  "modelCardPossibleValuesMaximum": "макс",
+  "modelCardPossibleValuesMinimum": "мин",
+  "navigateBack": "Оралу",
+  "navigateDone": "Аяқтау",
+  "navigateForward": "Жалғастыру",
+  "saveProgress": "Сақтау",
+  "tryAgain": "Қайта көру"
 }

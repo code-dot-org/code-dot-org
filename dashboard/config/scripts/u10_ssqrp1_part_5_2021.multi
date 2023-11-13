@@ -13,3 +13,5 @@ right 'A user\'s location is always being tracked. '
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

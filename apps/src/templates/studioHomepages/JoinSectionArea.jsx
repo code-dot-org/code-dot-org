@@ -10,14 +10,14 @@ import i18n from '@cdo/locale';
 export default function JoinSectionArea({
   initialJoinedPlSections,
   initialJoinedStudentSections,
-  isTeacher = false
+  isTeacher = false,
 }) {
   const [sectionResults, setSectionResults] = useState({
     action: null,
     result: null,
     resultName: null,
     resultId: null,
-    sectionCapacity: null
+    sectionCapacity: null,
   });
   const [joinedPlSections, setJoinedPlSections] = useState(
     initialJoinedPlSections
@@ -37,7 +37,7 @@ export default function JoinSectionArea({
       result: result,
       resultName: name,
       resultId: id,
-      sectionCapacity: sectionCapacity
+      sectionCapacity: sectionCapacity,
     });
   };
 
@@ -87,5 +87,5 @@ export default function JoinSectionArea({
 JoinSectionArea.propTypes = {
   initialJoinedStudentSections: shapes.sections,
   initialJoinedPlSections: shapes.sections,
-  isTeacher: PropTypes.bool
+  isTeacher: PropTypes.bool,
 };

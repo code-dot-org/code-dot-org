@@ -25,7 +25,7 @@ Le programme " Une heure de code " est un moyen simple et amusant d'initier les 
 
 <a id="how-to-video"></a>
 
-## 1. Regardez la vidéo pratique de l'Heure de Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Regardez la vidéo pratique de l'Heure de Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Faites la promotion de l’Heure de Code auprès d’autres enseignants qui voud
 
 ### Informez les bénévoles en enregistrant votre événement 
 
-Après avoir finalisé [votre inscription à l'événement Heure du code](/#join), vous recevrez des messages électroniques utiles contenant des nouvelles et des conseils pour organiser l'Heure du code avec succès. C’est aussi de cette manière que vous informerez vos volontaires locaux que votre école y participe. Les volontaires sont une excellente ressource, et peuvent venir parler à votre classe d'informatique ou simplement aider vos élèves avec les activités de l'Heure de Code. 
+Lorsque vous vous [inscrivez à une Heure de code](/events), vous recevrez des communications électroniques précieuses contenant des informations et des conseils pour organiser efficacement un évènement Heure de code. C’est aussi de cette manière que vous informerez vos volontaires locaux que votre école y participe. Les volontaires sont une excellente ressource, et peuvent venir parler à votre classe d'informatique ou simplement aider vos élèves avec les activités de l'Heure de Code. 
 
 ### Stimulez vos élèves 
 
@@ -111,7 +111,7 @@ Ce n'est pas grave si vous et vos élèves êtes nouveaux en informatique. Voici
 
 Dirigez vos élèves vers l’activité 
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Écrivez le lien du didacticiel sur un tableau blanc. Trouvez le lien indiqué dans les [informations relatives au didacticiel que vous avez sélectionné]({{ urls/learn }}).
 
 Lorsque vos élèves rencontrent des difficultés, n’hésitez pas à répondre : 
 
@@ -151,6 +151,6 @@ Que faire si un élève termine tôt ?
 
 ### Et après l'Heure de Code ?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+L'informatique ne doit pas s'arrêter avec l'heure de code ! [Découvrez comment intégrer](/beyond) le CS à votre école et à vos élèves.
 
 {{ signup_button }}

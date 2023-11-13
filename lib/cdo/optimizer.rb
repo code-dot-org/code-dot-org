@@ -93,9 +93,9 @@ module Cdo
         cache.write(cache_key, false)
         IMAGE_OPTIM.optimize_image_data(data) || data
       end
-    rescue => e
+    rescue => exception
       # Log error and return original content.
-      Honeybadger.notify(e,
+      Honeybadger.notify(exception,
         context: {
           key: cache_key
         }

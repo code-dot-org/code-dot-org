@@ -26,7 +26,7 @@ Todas nuestras actividades integran la resolución de problemas y el pensamiento
 
 - Para el niño al que le encanta jugar: <a href="https://code.org/minecraft">Minecraft</a> o <a href="https://code.org/dance">Fiesta de baile</a>
 - Para el niño que ama a Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a> o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- Para el niño al que le encanta aprender: <a href="https://code.org/oceans">IA para océanos</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Hacer música con Scratch</a>
+- Para el niño al que le encanta aprender: [IA para Océanos](https://code.org/oceans) o [Hacer Música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>¿Poca tecnología o sin tecnología?</h3>
 Si usarás tecnología limitada o ninguna, puedes filtrar <a href="https://hourofcode.com/us/learn">actividades de la Hora del Código</a> seleccionando "Sin computadoras ni dispositivos" en la sección <em>Tecnología para el aula</em>.
@@ -64,7 +64,7 @@ Está bien si tanto tú como tu hijo son nuevos en las ciencias de la computaci�
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
 
 <h3>¿Tienes niñas en casa?</h3>
-<a href="https://code.org/girls">Estas son nuestras recomendaciones</a> para ayudar a despertar tu interés en las ciencias de la computación. **Consejo profesional**: ¡Puedes comenzar simplemente diciéndoles que serían excelentes en eso!
+<a href="https://code.org/girls">Estas son nuestras recomendaciones</a> para ayudar a despertar su interés en las ciencias de la computación. **Consejo profesional**: ¡Puedes comenzar simplemente diciéndoles que serían excelentes en eso!
 
 <h3>Resuelvan problemas juntos</h3>
 Por último, cuando tu hijo encuentre dificultades, está bien responder:
@@ -72,7 +72,7 @@ Por último, cuando tu hijo encuentre dificultades, está bien responder:
 - "La tecnología no siempre funciona como queremos".
 - "Aprender a programar es como aprender un nuevo idioma; no lo dominarás de inmediato".
 
-Las ciencias de la computación tienen que ver con aprender a "depurar" situaciones que no resultaron como pensábamos. ¡Juntos, tú y tus hijos pueden pensar en formas creativas de resolver el problema!
+Las ciencias de la computación tienen que ver con aprender a "depurar" situaciones que no resultaron como pensábamos. ¡Juntos, tú y tu hijo pueden pensar en formas creativas de resolver el problema!
 
 
 ## 4) ¡No olvides celebrar!

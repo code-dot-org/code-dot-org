@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script will scan for child accounts which should be hard-deleted because
+# Code.org hasn't received permission from their parents to create the account.
+# @see Technical Spec: CPA v1.0 Tech Design
+# https://docs.google.com/document/d/15hkknuRlvGFbPuwlZssliMQTmykxM8_ajXB4yDOSPCA/edit
+#
+
+require 'active_support/core_ext/numeric/time'
+require 'date'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script will scan for child accounts which should be hard-deleted
+    because Code.org hasn't received permission from their parents to create the
+    account.
+
+    Options:
+  BANNER
+
+  opts.on('--dry-run', 'Report expected results without deleting anything') do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+require_relative '../../dashboard/config/environment'
+require_relative '../../dashboard/lib/expired_child_account_purger'
+ExpiredChildAccountPurger.new(options).purge_expired_child_accounts!

@@ -93,7 +93,7 @@ export default class Poetry extends SpriteLab {
       swirls: 'swirlyline',
       waves: 'water',
       wood: 'wood',
-      zigzag: 'lightning'
+      zigzag: 'lightning',
     };
     if (!this.preloadFrames_) {
       this.preloadFrames_ = Promise.all(
@@ -125,7 +125,7 @@ export default class Poetry extends SpriteLab {
     return Promise.all([
       super.preloadLabAssets(),
       this.preloadInstructorImage(),
-      this.preloadFrames()
+      this.preloadFrames(),
     ]);
   }
 

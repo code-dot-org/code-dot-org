@@ -50,9 +50,6 @@ nn:
       expired: "har gått ut på dato. Ver snill og søk om ein ny"
       not_found: "ikkje funne"
       not_locked: "var ikkje låst"
-      not_saved:
-        one: "1 feil hindra denne %{resource} frå å bli lagra:"
-        other: "%{count} feil hindra denne %{resource} frå å bli lagra:"
     invitations:
       send_instructions: 'Ein invitasjon er blitt send på e-post til %{email}.'
       invitation_token_invalid: 'Invitasjonstokenet gitt er ikkje gyldig!'

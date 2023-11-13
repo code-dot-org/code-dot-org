@@ -1,112 +1,14 @@
 {
-  "navigateForward": "გაგრძელება",
-  "navigateBack": "უკან",
-  "tryAgain": "კიდევ სცადეთ",
-  "navigateDone": "დასრულება",
-  "saveProgress": "შენახვა",
-  "correctAnswer": "სწორია",
-  "incorrectAnswer": "არასწორია",
-  "modelCardPossibleValuesMinimum": "მინ",
-  "modelCardPossibleValuesMaximum": "მაქს",
-  "columnInspectorDescription": "აღწერა",
-  "columnDetailsMinimumValue": "მინ",
   "columnDetailsMaximumValue": "მაქს",
+  "columnDetailsMinimumValue": "მინ",
+  "columnInspectorDescription": "აღწერა",
+  "correctAnswer": "სწორია",
   "dataCardLastUpdated": "ბოლო განახლება",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "ასაკი"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "ამინდი"
-        },
-        "day": {
-          "id": "დღე"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ავოკადო"
-        },
-        "corn": {
-          "id": "სიმინდი"
-        },
-        "lime": {
-          "id": "ლაიმი"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "lobster": {
-          "id": "ომარი"
-        },
-        "bacon": {
-          "id": "ბეკონი"
-        },
-        "meat": {
-          "id": "ხორცი"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ფერი"
-        },
-        "food": {
-          "id": "საჭმელი"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ასაკი"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "კატეგორია"
-        },
-        "Description": {
-          "id": "აღწერა"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "მარწყვი"
-        },
-        "lime": {
-          "id": "ლაიმი"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "ზომა"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ავოკადო"
-        },
-        "chicken": {
-          "id": "ქათამი"
+        "Length": {
+          "id": "სიგრძე"
         }
       }
     },
@@ -120,23 +22,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "სკოლა"
-        },
-        "age": {
-          "id": "ასაკი"
-        },
-        "health": {
-          "id": "ჯანმრთელობა"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ქათამი"
+        "banana": {
+          "id": "ბანანი"
         }
       }
     },
@@ -147,94 +36,16 @@
         }
       }
     },
-    "loneliness_interests": {
+    "club_random_toy": {
       "fields": {
-        "Internet": {
-          "id": "ინტერნეტი"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "ქულა"
+        "color": {
+          "id": "ფერი"
         },
-        "Country": {
-          "id": "ქვეყანა"
+        "food": {
+          "id": "საჭმელი"
         },
-        "Name": {
-          "id": "სახელი"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "მხატვარი"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "ადამიანები"
-        },
-        "rhino": {
-          "id": "მარტორქა"
-        },
-        "alligator": {
-          "id": "ალიგატორი"
-        },
-        "trees": {
-          "id": "ხეები"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "სიგრძე"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ავოკადო"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Music": {
+        "music": {
           "id": "მუსიკა"
-        },
-        "Dance": {
-          "id": "ცეკვა"
-        },
-        "Country": {
-          "id": "ქვეყანა"
-        },
-        "Internet": {
-          "id": "ინტერნეტი"
-        },
-        "Achievements": {
-          "id": "მიღწევები"
-        },
-        "Age": {
-          "id": "ასაკი",
-          "description": "ასაკი"
-        },
-        "Gender": {
-          "id": "სქესი",
-          "description": "სქესი"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "ბანანი"
         }
       }
     },
@@ -245,6 +56,184 @@
         }
       }
     },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "ასაკი"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "ინტერნეტი"
+        },
+        "Writing": {
+          "id": "წერა"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "ქვეყანა"
+        },
+        "Dance": {
+          "id": "ცეკვა"
+        },
+        "Music": {
+          "id": "მუსიკა"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ასაკი"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "ქვეყანა"
+        },
+        "Name": {
+          "id": "სახელი"
+        },
+        "Score": {
+          "id": "ქულა"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "ყველი"
+        },
+        "chicken": {
+          "id": "ქათამი"
+        },
+        "lamb": {
+          "id": "ცხვრის"
+        },
+        "onion": {
+          "id": "ხახვი"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "კატეგორია"
+        },
+        "Description": {
+          "id": "აღწერა"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "ავოკადო"
+        },
+        "ginger": {
+          "id": "კოჭა"
+        },
+        "onion": {
+          "id": "ხახვი"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "ბეკონი"
+        },
+        "cheese": {
+          "id": "ყველი"
+        },
+        "lobster": {
+          "id": "ომარი"
+        },
+        "meat": {
+          "id": "ხორცი"
+        },
+        "mushrooms": {
+          "id": "სოკო"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "ლაიმი"
+        },
+        "strawberry": {
+          "id": "მარწყვი"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "ალიგატორი"
+        },
+        "elephant": {
+          "id": "სპილო"
+        },
+        "people": {
+          "id": "ადამიანები"
+        },
+        "rhino": {
+          "id": "მარტორქა"
+        },
+        "trees": {
+          "id": "ხეები"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "ავოკადო"
+        },
+        "beans": {
+          "id": "ლობიო"
+        },
+        "cheese": {
+          "id": "ყველი"
+        },
+        "chicken": {
+          "id": "ქათამი"
+        },
+        "fruit": {
+          "id": "ხილი"
+        },
+        "tomato": {
+          "id": "პომიდორი"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "ავოკადო"
+        },
+        "beans": {
+          "id": "ლობიო"
+        },
+        "corn": {
+          "id": "სიმინდი"
+        },
+        "lime": {
+          "id": "ლაიმი"
+        },
+        "onion": {
+          "id": "ხახვი"
+        }
+      }
+    },
     "shapes_v1_toy": {
       "fields": {
         "size": {
@@ -252,18 +241,84 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "მუსიკა"
+        "size": {
+          "id": "ზომა"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "დღე"
+        },
+        "shoe": {
+          "id": "ფეხსაცმლის"
+        },
+        "weather": {
+          "id": "ამინდი"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "მხატვარი"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ასაკი"
+        },
+        "health": {
+          "id": "ჯანმრთელობა"
+        },
+        "school": {
+          "id": "სკოლა"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "მიღწევები"
+        },
+        "Age": {
+          "description": "ასაკი",
+          "id": "ასაკი"
+        },
+        "Country": {
+          "id": "ქვეყანა"
         },
         "Dance": {
           "id": "ცეკვა"
         },
-        "Country": {
-          "id": "ქვეყანა"
+        "Gender": {
+          "description": "სქესი",
+          "id": "სქესი"
+        },
+        "Internet": {
+          "id": "ინტერნეტი"
+        },
+        "Music": {
+          "id": "მუსიკა"
+        },
+        "Writing": {
+          "id": "წერა"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "არასწორია",
+  "modelCardPossibleValuesMaximum": "მაქს",
+  "modelCardPossibleValuesMinimum": "მინ",
+  "navigateBack": "უკან",
+  "navigateDone": "დასრულება",
+  "navigateForward": "გაგრძელება",
+  "saveProgress": "შენახვა",
+  "tryAgain": "კიდევ სცადეთ",
+  "uniqueOptionsWarningNotice": "შენიშვნა"
 }

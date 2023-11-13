@@ -31,3 +31,5 @@ I. `{11, 28, 5, 25, 86}`
 II. `{86, 25, 11, 5, 28}`
 III. `{11, 25, 5, 99, 28}`
 MARKDOWN
+
+allow_multiple_attempts true

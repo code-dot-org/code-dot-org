@@ -128,20 +128,20 @@ class Pd::WorkshopSurvey < ApplicationRecord
     hash = sanitized_form_data_hash
 
     # validate conditional required fields
-    if hash.try(:[], :will_teach) == NO
-      add_key_error(:will_not_teach_explanation) unless hash.key?(:will_not_teach_explanation)
+    if hash.try(:[], :will_teach) == NO && !hash.key?(:will_not_teach_explanation)
+      add_key_error(:will_not_teach_explanation)
     end
 
-    if hash.try(:[], :reason_for_attending) == OTHER
-      add_key_error(:reason_for_attending_other) unless hash.key?(:reason_for_attending_other)
+    if hash.try(:[], :reason_for_attending) == OTHER && !hash.key?(:reason_for_attending_other)
+      add_key_error(:reason_for_attending_other)
     end
 
-    if hash.try(:[], :how_heard) == OTHER
-      add_key_error(:how_heard_other) unless hash.key?(:how_heard_other)
+    if hash.try(:[], :how_heard) == OTHER && !hash.key?(:how_heard_other)
+      add_key_error(:how_heard_other)
     end
 
-    if hash.try(:[], :willing_to_talk) == YES
-      add_key_error(:how_to_contact) unless hash.key?(:how_to_contact)
+    if hash.try(:[], :willing_to_talk) == YES && !hash.key?(:how_to_contact)
+      add_key_error(:how_to_contact)
     end
 
     # if this is the first survey completed by this user, also require

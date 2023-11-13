@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Rayonlar üçün Kod Saatı Necə Edilir
 ---
 
 {{ signup_button }}

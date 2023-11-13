@@ -12,12 +12,6 @@ mt:
             u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet
             għall-gradi mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem
             f'kull età.
-        flappy:
-          title: Code ta' Flappy
-          description: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova
-            il-lezzjoni ta' Flappy Code!
-          student_description: Tixtieq tibni loghba originali f'inqas minn 10 minuti?
-            Prova il-lezzjoni ta' Flappy Code!
         coursef-2021:
           lesson_groups:
             lessonGroup-9:
@@ -26,3 +20,9 @@ mt:
           lesson_groups:
             lessonGroup-2:
               description: prova
+        flappy:
+          description: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova
+            il-lezzjoni ta' Flappy Code!
+          student_description: Tixtieq tibni loghba originali f'inqas minn 10 minuti?
+            Prova il-lezzjoni ta' Flappy Code!
+          title: Code ta' Flappy

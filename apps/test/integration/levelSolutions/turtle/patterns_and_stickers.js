@@ -15,7 +15,7 @@ const levelDef = {
   solutionBlocks: both,
   ideal: Infinity,
   toolbox: null,
-  freePlay: false
+  freePlay: false,
 };
 
 module.exports = {
@@ -28,33 +28,33 @@ module.exports = {
       description:
         'Level With Pattern And Sticker: Allows for solution with different patterns and stickers',
       expected: {
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: bothButDifferent
+      xml: bothButDifferent,
     },
     {
       description:
         'Level With Pattern And Sticker: Requires that some sticker be used',
       expected: {
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
-      xml: patternsOnly
+      xml: patternsOnly,
     },
     {
       description:
         'Level With Pattern And Sticker: Requires that some line be drawn',
       expected: {
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
       },
-      xml: stickersOnly
+      xml: stickersOnly,
     },
     {
       description:
         'Level With Pattern And Sticker: Allows for regular lines in place of patterns',
       expected: {
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      xml: linesAndStickers
-    }
-  ]
+      xml: linesAndStickers,
+    },
+  ],
 };

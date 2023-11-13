@@ -1,20 +1,17 @@
 name 'U2L11 Assessment 2'
-encrypted 'f808SwMP2G4dw7vN+2q+6Kgm11EFzXIDzXkr4qY3Dr5zKHvuOCabLFfr5sDW
-J663dTSHGafnwiFwtPNQMg2/JHVYXAiW9KwIIaXHcoSm2FXQSEX9py26+Ru7
-9tXMFE0mHZ7w8q+d3YK3tS2psqpnCB2Lr4WiKk91B721F3btWzQx6cpolISP
-/rygbavEZOv7rgM0f/zujx2sDOETSyvyuVNa6W8Y2eQNZ7nvR/qHw17sP9IQ
-zbmXUMmQ1DLiw3qKJqkAA7KeqCIM8UFtlahVgSTkVgEWAOXFQDX/r32P/HW1
-+ecrwqKJxGX8UcwPTT89MKhL5mwzao2jr/N/Hach6TXmz9LjdaZUJHx3ZjhQ
-x5NKbUfM2Y5gzz9Twz+LgAum5GjXep0l+WnKIhgSq4tgYpARWCTBF8m2GhwP
-KYv8HvGXYU20a8PS/0kzEWxUBQpdo5R4NX4R4LG76eoD2IUSgEaSwUC3pUfM
-ndDzA/PPGkCPIivadfcsn0+TMV55Ww0YuX2klWpkAs7kX6C6254FNK95c9+d
-uCEk8040/uEskPXOwJIvUHjU9aWsod1pxlMIti5re8g43jZjDErJznrpjKvA
-eM+GkzR+1raC3BKy7dadJEc9rgJFOfoVLbKNb1FTN3OP5vGqy8iQ/AjRk+Rg
-t6nIB8EVVU6cSZKWQkPxeE2OuqEv7L4n5NPBtagmfovOrlzCKWk/6qWPNnIP
-ID1IJDPFxvv4vDl/lz/Zk+w3yqQaPKR8OZtJL3h0oRfB0wq0SiAfaOMEUQGD
-2wlpTai2neKb3gyjsj/mkmg9OseN273KSb4NDXeXxsAsNOWCqAYV4NrSqdBr
-km88aUyxndp926tZZmFC9MKi5O5N8HhvKfmPs0orZayEKVNlhVH1VD6doKpw
-ZzXpbhum8kXHzWMHCZJ498OztHt3lZqA75mpHYxyFbJAVMKBaP1eD6l1iviD
-DgGmpFGJdEk21N/WvLJyoQwgU0RPzI/y3ygEaLntxxjNj2av7s8BncKKE1dk
-XLJX5H6jwhwJyblVoYsX2uPn0LqnWY6VtZpuyOhF3GOniL0=
-'
+title 'HTTP and Abstraction on the Internet: Question 2'
+type 'multi2'
+question 'Choose Two: Identify the two true statements about HTTP.'
+right 'An HTTP request is sent from a client to request access to data stored on a server.'
+wrong 'HTTP requests and responses have identical formats.'
+right 'Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.'
+wrong 'An HTTP response code is only used when a server could not fulfill a request.'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- An HTTP request is sent from a client to request access to data stored on a server.
+- Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
+MARKDOWN
+
+allow_multiple_attempts true

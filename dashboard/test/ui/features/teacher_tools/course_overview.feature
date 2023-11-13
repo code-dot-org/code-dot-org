@@ -18,8 +18,10 @@ Feature: CourseOverview
     Then I sign in as "Teacher_Ron" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
-    And I wait until element "#uitest-assignment-family" is visible
-    And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
+    And I press the first "input[name='grades[]']" element
+    And I wait until element "button:contains(High School)" is visible
+    And I click selector "button:contains(High School)"
+    And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it

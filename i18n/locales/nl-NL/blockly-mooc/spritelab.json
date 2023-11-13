@@ -65,6 +65,7 @@
   "createDraggableSprite": "De sprite van het eten van uw huisdier dient te beginnen met het gedrag 'sleepbaar te zijn'.  \n <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
   "createNotDraggableSPrite": "Alleen de sprite voor het eten dient sleepbaar te zijn. Verwijder het gedrag uit uw huisdier.",
   "createTwoDraggableSprites": "De sprite voor het eten van uw huisdier en uw vriend dienen 'sleepbaar' gedrag te vertonen.",
+  "cscAdaptationsRightArrowKey": "Vergeet niet op de pijltoets te drukken nadat u op *\"Uitvoeren\"* hebt gedrukt. U kunt op de oranje knoppen onder het speelveld klikken of op de toetsen op uw toetsenbord drukken.  ",
   "debugBehaviors": "U hebt een fout gerelateerd aan gedragingen.",
   "debugEvents": "U hebt een fout gerelateerd aan evenementen.",
   "debugGroups": "U hebt een fout gerelateerd aan spritegroepen.",

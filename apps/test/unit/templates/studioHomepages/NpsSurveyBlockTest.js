@@ -10,8 +10,8 @@ const result = {
     formQuestions: {},
     formName: 'name',
     formVersion: 0,
-    submitApi: 'url'
-  })
+    submitApi: 'url',
+  }),
 };
 
 describe('npsSurveyBlock', () => {

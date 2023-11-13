@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 
@@ -7,7 +8,7 @@ export default class EventRow extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
-    handleInsert: PropTypes.func.isRequired
+    handleInsert: PropTypes.func.isRequired,
   };
 
   render() {
@@ -16,12 +17,12 @@ export default class EventRow extends React.Component {
       name: {
         color: color.dark_charcoal,
         fontWeight: 'bold',
-        fontSize: 15
+        fontSize: 15,
       },
       desc: {
         color: color.light_gray,
-        fontStyle: 'italic'
-      }
+        fontStyle: 'italic',
+      },
     };
 
     return (
@@ -30,7 +31,7 @@ export default class EventRow extends React.Component {
         <div style={style.desc}>{this.props.desc}</div>
         <div>
           <a onClick={this.props.handleInsert} className="hover-pointer">
-            Insert and show code
+            {applabMsg.designWorkspace_eventInsertButton()}
           </a>
         </div>
       </div>

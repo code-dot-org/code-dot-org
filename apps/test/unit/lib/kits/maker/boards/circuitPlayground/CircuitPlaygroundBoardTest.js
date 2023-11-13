@@ -7,17 +7,14 @@ import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayg
 import {
   SONG_CHARGE,
   EXTERNAL_PINS,
-  N_COLOR_LEDS
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
-import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
+import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
+import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';
 import {
   stubComponentInitialization,
-  restoreComponentInitialization
+  restoreComponentInitialization,
 } from './CircuitPlaygroundTestHelperFunctions';
-import experiments from '@cdo/apps/util/experiments';
-import ChromeSerialPort from 'chrome-serialport';
-import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
@@ -26,263 +23,6 @@ process.hrtime = require('browser-process-hrtime');
 
 const xPins = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'];
 const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
-
-export function itMakesCircuitPlaygroundComponentsAvailable(
-  BoardClient,
-  boardSpecificSetup = null,
-  boardSpecificTeardown = null
-) {
-  const CP_CONSTRUCTOR_COUNT = 13;
-  const CP_COMPONENT_COUNT = 16;
-  const CP_COMPONENTS = [
-    'Led',
-    'Board',
-    'NeoPixel',
-    'PlaygroundButton',
-    'Switch',
-    'Piezo',
-    'Sensor',
-    'Thermometer',
-    'Pin',
-    'Accelerometer',
-    'Animation',
-    'Servo',
-    'TouchSensor'
-  ];
-
-  /**
-   * After installing on the interpreter, test that the components and
-   * component constructors are available from the interpreter
-   */
-  describe('Circuit Playground components accessible from interpreter', () => {
-    let jsInterpreter;
-    let board = new BoardClient();
-
-    beforeEach(() => {
-      jsInterpreter = {
-        globalProperties: {},
-        createGlobalProperty: function(key, value) {
-          jsInterpreter.globalProperties[key] = value;
-        },
-        addCustomMarshalObject: sinon.spy()
-      };
-      // Opportunity to stub anything needed to test a board
-      if (boardSpecificSetup) {
-        boardSpecificSetup(board);
-      }
-
-      return board.connect();
-    });
-
-    afterEach(() => {
-      if (boardSpecificTeardown) {
-        boardSpecificTeardown(board);
-      }
-    });
-
-    describe('adds component constructors', () => {
-      beforeEach(() => {
-        board.installOnInterpreter(jsInterpreter);
-      });
-
-      it(`correct number of them`, () => {
-        expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
-          CP_CONSTRUCTOR_COUNT
-        );
-      });
-
-      CP_COMPONENTS.forEach(constructor => {
-        it(constructor, () => {
-          expect(jsInterpreter.globalProperties).to.have.ownProperty(
-            constructor
-          );
-          expect(jsInterpreter.globalProperties[constructor]).to.be.a(
-            'function'
-          );
-          const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
-            call => call[0].instance
-          );
-          expect(passedObjects).to.include(
-            jsInterpreter.globalProperties[constructor]
-          );
-        });
-      });
-    });
-
-    describe('adds components', () => {
-      beforeEach(() => {
-        board.installOnInterpreter(jsInterpreter);
-      });
-
-      it(`correct number of them`, () => {
-        let globalPropsCount = CP_CONSTRUCTOR_COUNT + CP_COMPONENT_COUNT;
-        expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
-          globalPropsCount
-        );
-      });
-
-      // Board-specific tests
-      describe('led', () => {
-        function expectLedToHaveFunction(fnName) {
-          expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
-            'function'
-          );
-        }
-
-        // Set of required functions derived from our dropletConfig
-        ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
-          it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-        });
-      });
-
-      describe('colorLeds[]', () => {
-        function expectEachColorLedToHaveFunction(fnName) {
-          jsInterpreter.globalProperties.colorLeds.forEach(led => {
-            expect(led[fnName]).to.be.a('function');
-          });
-        }
-
-        it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
-          expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to.be
-            .true;
-          expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
-            N_COLOR_LEDS
-          );
-        });
-
-        // Set of required functions derived from our dropletConfig
-        ['on', 'off', 'toggle', 'blink', 'stop', 'intensity', 'color'].forEach(
-          fnName => {
-            it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
-          }
-        );
-      });
-
-      describe('buzzer', () => {
-        function expectBuzzerToHaveFunction(fnName) {
-          expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
-            'function'
-          );
-        }
-
-        // Set of required functions derived from our dropletConfig
-        ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
-          it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
-        });
-      });
-
-      describe('toggleSwitch', () => {
-        it('isOpen', () => {
-          expect(jsInterpreter.globalProperties.toggleSwitch.isOpen).to.be.a(
-            'boolean'
-          );
-        });
-      });
-
-      ['soundSensor', 'lightSensor'].forEach(sensorName => {
-        describe(sensorName, () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties[sensorName];
-          });
-
-          it('start()', () => {
-            expect(component.start).to.be.a('function');
-          });
-
-          it('value', () => {
-            expect(component).to.have.property('value');
-          });
-
-          it('getAveragedValue()', () => {
-            expect(component.getAveragedValue).to.be.a('function');
-            expect(component.getAveragedValue()).to.be.a('number');
-          });
-
-          it('setScale()', () => {
-            expect(component.setScale).to.be.a('function');
-          });
-
-          it('threshold', () => {
-            expect(component.threshold).to.be.a('number');
-          });
-        });
-      });
-
-      ['buttonL', 'buttonR'].forEach(button => {
-        describe(button, () => {
-          let component;
-
-          beforeEach(() => {
-            component = jsInterpreter.globalProperties[button];
-          });
-
-          it('isPressed', () => expect(component.isPressed).to.be.a('boolean'));
-          it('holdtime', () => expect(component.holdtime).to.be.a('number'));
-        });
-      });
-
-      describe('Constants', () => {
-        it('INPUT', () => {
-          expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
-        });
-
-        it('OUTPUT', () => {
-          expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
-        });
-
-        it('ANALOG', () => {
-          expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
-        });
-
-        it('PWM', () => {
-          expect(jsInterpreter.globalProperties.PWM).to.equal(3);
-        });
-
-        it('SERVO', () => {
-          expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
-        });
-      });
-
-      describe('tempSensor', () => {
-        let component;
-
-        beforeEach(() => {
-          component = jsInterpreter.globalProperties.tempSensor;
-        });
-
-        it('F', () => {
-          expect(component).to.have.property('F');
-        });
-
-        it('C', () => {
-          expect(component).to.have.property('C');
-        });
-      });
-
-      describe('accelerometer', () => {
-        let component;
-
-        beforeEach(() => {
-          component = jsInterpreter.globalProperties.accelerometer;
-        });
-
-        it('start()', () => expect(component.start).to.be.a('function'));
-        it('getOrientation()', () =>
-          expect(component.getOrientation).to.be.a('function'));
-        it('getAcceleration()', () =>
-          expect(component.getAcceleration).to.be.a('function'));
-      });
-
-      describe('board', () => {
-        it('exists', () => {
-          expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
-        });
-      });
-    });
-  });
-}
 
 describe('CircuitPlaygroundBoard', () => {
   let board, playground, userAgentSpy;
@@ -318,16 +58,18 @@ describe('CircuitPlaygroundBoard', () => {
 
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
-    ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
     circuitPlaygroundBoardSetup();
+    sinon.stub(CircuitPlaygroundBoard, 'openWebSerial').callsFake(() => {
+      return Promise.resolve();
+    });
   });
 
   afterEach(() => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
-    ChromeSerialPort.stub.reset();
     circuitPlaygroundBoardTeardown();
+    sinon.restore();
   });
 
   function circuitPlaygroundBoardSetup() {
@@ -357,13 +99,12 @@ describe('CircuitPlaygroundBoard', () => {
   );
 
   describe(`connect()`, () => {
-    // Remove these lines when maker-captouch is on by default.
-    before(() => experiments.setEnabled('maker-captouch', true));
-    after(() => experiments.setEnabled('maker-captouch', false));
-
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(23);
+        // The CP board contains 16 'prewiredComponents_' which are assigned by
+        // function createCircuitPlaygroundComponents which include components, board,
+        // and JS_CONSTANTS.
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
@@ -375,13 +116,6 @@ describe('CircuitPlaygroundBoard', () => {
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
         expect(board.prewiredComponents_.buttonL).to.be.a('object');
         expect(board.prewiredComponents_.buttonR).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad0).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad2).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad3).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad6).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad9).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad10).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad12).to.be.a('object');
         expect(board.prewiredComponents_.INPUT).to.be.a('number');
         expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
         expect(board.prewiredComponents_.ANALOG).to.be.a('number');
@@ -422,7 +156,7 @@ describe('CircuitPlaygroundBoard', () => {
     it('sets the boardType for express boards', () => {
       board.port_ = {
         vendorId: '0x239A',
-        productId: '0x8018'
+        productId: '0x8018',
       };
       return board.connectToFirmware().then(() => {
         expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
@@ -597,10 +331,7 @@ describe('CircuitPlaygroundBoard', () => {
           // its song.  This method uses a promise chain for animations, so we
           // have to yield the test 'thread' to let the promise chain run until
           // it needs to wait for something.
-          buzzer
-            .expects('play')
-            .once()
-            .calledWith(SONG_CHARGE, 104);
+          buzzer.expects('play').once().calledWith(SONG_CHARGE, 104);
           // Set up no expectations for leds - they don't do anything immediately.
 
           // Now invoke the method under test and yield to the promise chain once.
@@ -612,10 +343,7 @@ describe('CircuitPlaygroundBoard', () => {
 
             // The initial invocation set up timers to enable each LED in sequence
             for (let i = 0; i < leds.length; i++) {
-              leds[i]
-                .expects('color')
-                .once()
-                .calledWith('blue');
+              leds[i].expects('color').once().calledWith('blue');
               clock.tick(80);
               leds[i].verify();
             }

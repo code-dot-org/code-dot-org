@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Хэрхэн арга хэмжээний кодын цаг
 ---
 
 {{ signup_button }}

@@ -11,7 +11,8 @@
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "79a249d7-fb90-4e9c-bd8b-e7884ad2034b"
+          "key": "79a249d7-fb90-4e9c-bd8b-e7884ad2034b",
+          "buttonText": "Learn More"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -33,13 +34,18 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "es-MX",
+        "it-IT",
+        "sk-SK"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-12-28 01:19:47 UTC",
+    "serialized_at": "2023-10-27 17:45:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7189,6 +7195,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

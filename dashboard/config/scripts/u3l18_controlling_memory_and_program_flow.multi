@@ -17,3 +17,4 @@ markdown <<MARKDOWN
 
 You want multiple images displayed that add different amounts to the the total points when clicked.
 MARKDOWN
+allow_multiple_attempts true

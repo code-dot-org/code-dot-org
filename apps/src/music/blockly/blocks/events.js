@@ -1,39 +1,36 @@
 import {BlockTypes} from '../blockTypes';
-import {TRIGGER_FIELD} from '../constants';
+import musicI18n from '../../locale';
+import {fieldTriggerDefinition} from '../fields';
 
 export const whenRun = {
   definition: {
     type: BlockTypes.WHEN_RUN,
     style: 'setup_blocks',
-    message0: 'when run',
+    message0: musicI18n.blockly_blockWhenRun(),
     inputsInline: true,
     nextStatement: null,
-    tooltip: 'when run',
-    helpUrl: ''
+    tooltip: musicI18n.blockly_blockWhenRunTooltip(),
+    helpUrl: '',
   },
-  generator: () => 'var currentMeasureLocation = 1;\n'
+  generator: () => 'var currentMeasureLocation = 1;\n',
 };
 
 export const triggeredAt = {
   definition: {
     type: BlockTypes.TRIGGERED_AT,
     style: 'event_blocks',
-    message0: '%1 triggered at %2',
+    message0: musicI18n.blockly_blockTriggeredAt({trigger: '%1', time: '%2'}),
     args0: [
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD
-      },
+      fieldTriggerDefinition,
       {
         type: 'field_variable',
         name: 'var',
-        variable: 'currentTime'
-      }
+        variable: 'currentTime',
+      },
     ],
     inputsInline: true,
     nextStatement: null,
-    tooltip: 'at trigger',
-    extensions: ['dynamic_trigger_extension']
+    tooltip: musicI18n.blockly_blockTriggeredAtTooltip(),
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getName(
@@ -41,26 +38,20 @@ export const triggeredAt = {
       Blockly.Names.NameType.VARIABLE
     );
     return `
-      ${varName} = MusicPlayer.getCurrentPlayheadPosition();
+      ${varName} = startPosition;
       \n`;
-  }
+  },
 };
 
 export const triggeredAtSimple = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE,
-    message0: '%1 triggered',
-    args0: [
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD
-      }
-    ],
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
+    args0: [fieldTriggerDefinition],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
-    tooltip: 'at trigger',
-    extensions: ['dynamic_trigger_extension']
+    tooltip: musicI18n.blockly_blockTriggeredTooltip(),
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getDistinctName(
@@ -68,8 +59,8 @@ export const triggeredAtSimple = {
       Blockly.Names.NameType.VARIABLE
     );
     return (
-      `${varName} = MusicPlayer.getCurrentPlayheadPosition();\n` +
+      `${varName} = startPosition;\n` +
       `currentMeasureLocation = Math.ceil(${varName});\n`
     );
-  }
+  },
 };

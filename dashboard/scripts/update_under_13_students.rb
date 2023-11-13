@@ -7,7 +7,7 @@ puts "Starting to batch update all students under 13."
 num_students_updated = 0
 
 batch_size = 10000
-min_birthday = Date.today - 13.years
+min_birthday = Time.zone.today - 13.years
 User.where('birthday IS NULL OR birthday > ?', min_birthday).in_batches(of: batch_size) do |where|
   values = where.pluck(:id, :properties)
   values = values.map do |id, properties|

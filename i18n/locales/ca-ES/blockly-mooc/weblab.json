@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "Afegir CSS",
+  "addImageButton": "Afegir imatge",
+  "addHTMLButton": "Afegir HTML",
+  "closeFullscreenPreview": "Tancar la vista prèvia de pantalla completa",
+  "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB utilitzats",
+  "disallowedHtml": "L'arxiu \"{filename}\" conté elements HTML no compatibles: \"{disallowedTags}\". S'eliminaran quan es tanqui aquest diàleg.",
+  "errorSavingProject": "S'ha produït un error mentre es desava el projecte automàticament. Comprova la connexió a internet i prova de desar-lo manualment. Si el problema persisteix, prova d'actualitzar la pàgina per tornar a començar.",
+  "fatalError": "Error fatal: {message}. Si el mode de navegació privada està habilitat, no es poden escriure dades.",
+  "loadFailure": "Ho sentim, el Laboratori Web no s'ha pogut carregar per alguna raó. Error: {message}",
+  "openFullscreenPreview": "Obrir la vista prèvia de pantalla completa",
+  "refreshPreview": "Actualitzar i desar",
+  "reloading": "Tornant a carregar...",
+  "reset": "Reiniciar Laboratori Web",
+  "resetComplete": "Reinici de Laboratori Web finalitzat",
+  "resetFailure": "No s'ha pogut reiniciar el Laboratori Web: {message}.",
+  "toggleInspectorOn": "Inspector: Desactivat",
+  "toggleInspectorOff": "Inspector: Activat",
+  "troubleshootingSupport": "Consulteu el nostre article de suport [\"Solució de problemes del Laboratori Web\"]({url}) per a més informació.",
+  "uploadError": "Error de càrrega"
+}

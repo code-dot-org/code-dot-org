@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: A Kódolás órája - útmutató az iskolán kívüli oktatáshoz
 ---
 
 {{ signup_button }}
@@ -73,7 +73,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 - [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
 - [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ promote/resources_stickers }}) matricákat.
-- [Rendelj egyedi pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) a résztvevőknek.
+- [Rendeljen egyedi pólókat](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) a résztvevők számára.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
 ## Egyéb "Hour of Code" forrás anyagok oktatóknak

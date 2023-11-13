@@ -8,7 +8,7 @@ class MatchDSL < ContentDSL
 
   def question(text) @hash[:questions] << {text: text} end
 
-  def answer(text, correct=nil, feedback=nil)
+  def answer(text, correct = nil, feedback = nil)
     answer = {text: text}
     answer[:correct] = correct unless correct.nil?
     answer[:feedback] = feedback unless feedback.nil?
@@ -16,6 +16,10 @@ class MatchDSL < ContentDSL
   end
 
   def layout(text) @hash[:layout] = text end
+
+  def allow_multiple_attempts(bool)
+    @hash[:allow_multiple_attempts] = ActiveModel::Type::Boolean.new.cast(bool)
+  end
 
   # @override
   def self.i18n_fields

@@ -60,7 +60,7 @@ module Pd::Application
 
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
-    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # These statuses are considered "decisions", and will send an email
     # In these decision emails, status and email_type are the same.
     AUTO_EMAIL_STATUSES = %w(
       accepted
@@ -82,7 +82,7 @@ module Pd::Application
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :save_partner, if: -> {!deleted? && form_data_changed?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed? || form_data_changed?}
 
@@ -136,8 +136,8 @@ module Pd::Application
     end
 
     def set_status_from_admin_approval
-      # Do not modify status is application is not incomplete.
       return if status == 'incomplete'
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
 
       # Do not modify status if admin approval status has not changed.
       # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
@@ -145,12 +145,9 @@ module Pd::Application
       return if properties_change.include?(nil)
       return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
 
-      # Do not modify status if the principal approval has already been completed.
-      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
-
       if !principal_approval_not_required && status != 'awaiting_admin_approval'
         self.status = 'awaiting_admin_approval'
-        queue_email(:needs_admin_approval, deliver_now: true)
+        send_pd_application_email(:needs_admin_approval)
       elsif principal_approval_not_required && status == 'awaiting_admin_approval'
         self.status = 'unreviewed'
       end
@@ -356,15 +353,27 @@ module Pd::Application
       )
     end
 
+    # This is called by the scheduled_pd_application_emails cronjob which is run
+    # on the production-daemon machine every day
+    def self.send_admin_approval_reminders_to_teachers
+      where(
+        application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
+      ).find_each do |teacher_application|
+        if teacher_application.allow_sending_admin_approval_teacher_reminder_email?
+          teacher_application.send_pd_application_email :admin_approval_teacher_reminder
+        end
+      end
+    end
+
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
-        WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
+          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
         errors.add :status, "#{status} requires workshop to be assigned"
       end
     end
 
     def should_send_decision_email?
-      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+      if regional_partner.nil? || regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
         false
       else
         AUTO_EMAIL_STATUSES.include?(status)
@@ -374,10 +383,10 @@ module Pd::Application
     def log_status
       self.status_log ||= []
       status_log.push({status: status, at: Time.zone.now})
+    end
 
-      # delete any unsent emails, and queue a new status email if appropriate
-      emails.unsent.destroy_all
-      queue_email(status) if should_send_decision_email?
+    def send_decision_email
+      send_pd_application_email(status)
     end
 
     # @override
@@ -918,6 +927,7 @@ module Pd::Application
       principal_application = Pd::Application::PrincipalApprovalApplication.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
       school_stats = get_latest_school_stats(school_id)
+      simple_columns = [:title_i_status, :students_total, :urm_percent]
       CSV.generate do |csv|
         row = []
         CSV_COLUMNS[:teacher].each do |k|
@@ -938,7 +948,7 @@ module Pd::Application
         end
         CSV_COLUMNS[:nces].each do |k|
           if school_stats
-            if [:title_i_status, :students_total, :urm_percent].include? k
+            if simple_columns.include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
             elsif k == :rural_status
               row.push(school_stats.rural_school?)
@@ -1112,11 +1122,11 @@ module Pd::Application
     def on_successful_create
       return if status == 'incomplete'
 
-      queue_email :confirmation, deliver_now: true
+      send_pd_application_email :confirmation
       auto_score!
       self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        queue_email :admin_approval, deliver_now: true
+        send_pd_application_email :admin_approval
       end
       save
     end
@@ -1167,9 +1177,9 @@ module Pd::Application
       )
       save!
       auto_score!
-      queue_email(:admin_approval_completed, deliver_now: true)
-      queue_email(:admin_approval_completed_partner, deliver_now: true)
-      queue_email(:admin_approval_completed_teacher_receipt, deliver_now: true)
+      send_pd_application_email(:admin_approval_completed)
+      send_pd_application_email(:admin_approval_completed_partner)
+      send_pd_application_email(:admin_approval_completed_teacher_receipt)
     end
 
     # @override

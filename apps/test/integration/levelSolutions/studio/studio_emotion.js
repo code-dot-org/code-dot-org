@@ -11,10 +11,10 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 16, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   freePlay: true,
-  isK1: false
+  isK1: false,
 };
 
 module.exports = {
@@ -37,8 +37,8 @@ module.exports = {
         '<title name="VALUE">1</title>' +
         '</block></next></block></next></block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        var assertSpriteFrame = function(frame) {
+      runBeforeClick: function (assert) {
+        var assertSpriteFrame = function (frame) {
           var x = Studio.sprite[0].getLegacyElement().getAttribute('x');
           var actualFrame = 0.5 - x / 100;
           assert(
@@ -47,32 +47,32 @@ module.exports = {
           );
         };
 
-        tickWrapper.runOnAppTick(Studio, 1, function() {
+        tickWrapper.runOnAppTick(Studio, 1, function () {
           // disable skewAnimations so we can check for proper blink frames
           Studio.sprite[0].legacyAnimation_.skewAnimations_ = false;
         });
 
-        tickWrapper.runOnAppTick(Studio, 25, function() {
+        tickWrapper.runOnAppTick(Studio, 25, function () {
           assert(Studio.sprite[0].emotion === Emotions.HAPPY);
           // happy frame
           assertSpriteFrame(9);
         });
 
-        tickWrapper.runOnAppTick(Studio, 48, function() {
+        tickWrapper.runOnAppTick(Studio, 48, function () {
           assert(Studio.sprite[0].emotion === Emotions.HAPPY);
           // eye blink
           assertSpriteFrame(1);
         });
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Validate emotions: angry',
@@ -89,8 +89,8 @@ module.exports = {
         '<title name="VALUE">2</title>' +
         '</block></next></block></next></block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        var assertSpriteFrame = function(frame) {
+      runBeforeClick: function (assert) {
+        var assertSpriteFrame = function (frame) {
           var x = Studio.sprite[0].getLegacyElement().getAttribute('x');
           var actualFrame = 0.5 - x / 100;
           assert(
@@ -99,32 +99,32 @@ module.exports = {
           );
         };
 
-        tickWrapper.runOnAppTick(Studio, 1, function() {
+        tickWrapper.runOnAppTick(Studio, 1, function () {
           // disable skewAnimations so we can check for proper blink frames
           Studio.sprite[0].legacyAnimation_.skewAnimations_ = false;
         });
 
-        tickWrapper.runOnAppTick(Studio, 25, function() {
+        tickWrapper.runOnAppTick(Studio, 25, function () {
           assert(Studio.sprite[0].emotion === Emotions.ANGRY);
           // happy frame
           assertSpriteFrame(10);
         });
 
-        tickWrapper.runOnAppTick(Studio, 48, function() {
+        tickWrapper.runOnAppTick(Studio, 48, function () {
           assert(Studio.sprite[0].emotion === Emotions.ANGRY);
           // eye blink
           assertSpriteFrame(1);
         });
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Validate emotions: sad',
@@ -141,8 +141,8 @@ module.exports = {
         '<title name="VALUE">3</title>' +
         '</block></next></block></next></block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
-        var assertSpriteFrame = function(frame) {
+      runBeforeClick: function (assert) {
+        var assertSpriteFrame = function (frame) {
           var x = Studio.sprite[0].getLegacyElement().getAttribute('x');
           var actualFrame = 0.5 - x / 100;
           assert(
@@ -151,32 +151,32 @@ module.exports = {
           );
         };
 
-        tickWrapper.runOnAppTick(Studio, 1, function() {
+        tickWrapper.runOnAppTick(Studio, 1, function () {
           // disable skewAnimations so we can check for proper blink frames
           Studio.sprite[0].legacyAnimation_.skewAnimations_ = false;
         });
 
-        tickWrapper.runOnAppTick(Studio, 25, function() {
+        tickWrapper.runOnAppTick(Studio, 25, function () {
           assert(Studio.sprite[0].emotion === Emotions.SAD);
           // happy frame
           assertSpriteFrame(11);
         });
 
-        tickWrapper.runOnAppTick(Studio, 48, function() {
+        tickWrapper.runOnAppTick(Studio, 48, function () {
           assert(Studio.sprite[0].emotion === Emotions.SAD);
           // eye blink
           assertSpriteFrame(1);
         });
 
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Studio, 50, function() {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
         });
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

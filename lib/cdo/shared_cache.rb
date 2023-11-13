@@ -19,8 +19,8 @@ module Cdo
         if CDO.memcached_endpoint
           begin
             memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
-          rescue => e # Notify if Auto Discovery fails.
-            Honeybadger.notify(e)
+          rescue => exception # Notify if Auto Discovery fails.
+            Honeybadger.notify(exception)
           end
         end
         return nil unless memcached_hosts.present?
@@ -34,9 +34,7 @@ module Cdo
     # Generic shared cache.
     # Use memcached if available, with FileStore as fallback.
     def self.cache
-      @@cache ||= begin
-        memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared'))
-      end
+      @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared')))
     end
   end
 end

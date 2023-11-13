@@ -15,7 +15,7 @@ class ApplicationTest < ActiveSupport::TestCase
 
     # Second, verify that we get the English string back even from another
     # locale
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     assert_equal I18n.t("data.test.example"), "english"
 

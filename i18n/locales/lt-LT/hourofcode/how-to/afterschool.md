@@ -1,90 +1,91 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: '“Hour of Code” vadovas po pamokų'
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Kaip mokyti vieną kodo valandą pamokinėse klasėse ir klubuose
 
-### Join the movement and introduce your students to computer science with these steps.
+### Prisijunkite prie judėjimo ir supažindinkite savo studentus su kompiuterių mokslu atlikdami šiuos veiksmus.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Skaičiuojamasis mąstymas padeda puoselėti problemų sprendimo įgūdžius, logiką ir kūrybiškumą. Technologijos keičia visas pasaulio pramonės šakas. Studentai šiandien turėtų išmokti kurti technologijas, o ne tik ja naudotis. Pradėdami anksti, jie turės pagrindą sėkmei bet kuriame XXI amžiaus karjeros kelyje.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+“Testing an Hour of Code” yra paprastas ir įdomus būdas supažindinti studentus su informatika, galbūt pirmą kartą. Jei norite papildomų rankų, kad galėtumėte padėti, galite rasti [vietinį savanorį, kuris]({{ urls/volunteer_local }}) padėtų paleisti kodo valandą jūsų klasėje ar klube po pamokų.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Kodo valanda taip pat gali būti surengta nuotoliniu būdu! Norėdami pradėti, peržiūrėkite mūsų [patarimus, kaip surengti virtualų “Hour of Code” renginį](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Žiūrėkite šį instrukcijų vaizdo įrašą <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-## 2. Choose a tutorial
+## 2. Pasirinkite pamoką
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Teikiame įvairius [linksmus, valandos trukmės pamok]({{ urls/learn }}) ymus įvairaus amžiaus dalyviams, kuriuos sukūrė įvairūs partneriai. [Išbandykite juos!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Visi “Hour of Code” vadovėliai** reikalauja minimalaus pasirengimo laiko organizatoriams ir yra savarankiškai vadovaujamasi - leidžia vaikams dirbti savo tempu ir įgūdžių lygiu.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Reikia pamokų plano savo popamokinei kodo valandai?** Peržiūrėkite šį [šabloną](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Reklamuokite savo kodo valandą
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Reklamuokite savo kodo valandą [naudodami šias priemones]({{ urls/promote }}) ir skatinkite kitus rengti savo renginius.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Suplanuokite savo technologijų poreikius - kompiuteriai yra neprivalomi
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Bet **** nereikia kompiuterio kiekvienam vaikui, o kodo valandą galite atlikti net visai be kompiuterio.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Turite mažą pralaidumą?** Planuokite rodyti vaizdo įrašus klasės priekyje, kad kiekvienas mokinys neatsisiųstų savo vaizdo įrašų. Arba išbandykite atjungtas/neprisijungus mokomąsias programas.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Neturite pakankamai įrenginių?** Naudokite [porų programavimą](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Pradėkite savo kodo valandą su įkvepiančiu vaizdo įrašu
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
-
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
-
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
-
-## 6. Code!
-
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
-
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
-
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
-
-## 7. Celebrate
-
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-## Other Hour of Code resources for educators
-
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
-
-## What comes after the Hour of Code?
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
-
-{{ signup_button }}
+- Originalus “Code.org” paleidimo vaizdo įrašas, kuriame vaidina Billas Gatesas, Markas Zuckerbergas ir NBA žvaigždė Chrisas Boshas - yra [1 minutės](https://www.youtube.com/watch?v=qYZF6oIZtfc)</a>, 5 minučių ir [9 minučių](https://www.youtube.com/watch?v=dU1xS07N-FA) versijos.</li> 
+    
+    - “K [odo valandos” vaizdo įrašas visame pasaulyje](https://www.youtube.com/watch?v=KsOIlDT145A)
+    - [Prezidentas Obama ragina visus studentus mokytis informatikos](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+    - Daugiau įkvepiančių vaizdo įrašų rasite [čia](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).</ul> 
+    
+    **Gerai, jei visi esate visiškai naujokai kompiuterių moksle. Štai keletas idėjų, kaip pristatyti savo “Hour of Code” veiklą:**
+    
+    - Paaiškinkite, kaip technologijos daro įtaką mūsų gyvenimui, pateikdami pavyzdžius, kuriais rūpės tiek berniukams, tiek mergaitėms (kalbėkite apie programas ir technologijas, kurios naudojamos gelbėti gyvybes, padėti žmonėms, sujungti žmones ir kt.).
+    - Išvardinkite dalykus, kurie naudoja kodą kasdieniame gyvenime.
+    - Patarimus, kaip priversti merginas domėtis informatika, žiūr [ėkite čia]({{ urls/girls }}).
+    
+    **Reikia daugiau patarimų?** Atsisiųskite šį [šabloninį pamokos planą](/files/AfterschoolEducatorLessonPlanOutline.docx).
+    
+    ## 6. Kodas!
+    
+    **Nukreipkite dalyvius į veiklą** - parašykite mokymo nuorodą ant lentos. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+    
+    **Kai kas nors susiduria su sunkumais, gerai atsakyti:** - “Aš nežinau. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+    
+    **Ką daryti, jei kas nors baigia anksti?** - Skatinkite dalyvius išbandyti kitą “Hour of Code” veiklą adresu [hourofcode.com/learn]({{ urls/learn }}) - Arba paprašykite tų, kurie baigia anksti, padėti kitiems, kurie turi problemų.
+    
+    ## 7. Švęskite
+    
+    - [Spausdin]({{ urls/certificates }}) kite pažymėjimus savo studentams.
+    - [Spausdinti “Aš padariau kodo valandą!”]({{ promote/resources_stickers }}) Lipdukai jūsų mokiniams.
+    - [Užsisakykite pasirinkt](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) inius marškinėlius dalyviams.
+    - Bendrinkite savo “Hour of Code” renginio nuotraukas ir vaizdo įrašus socialinėje žiniasklaidoje. Naudokite #HourOfCode ir @codeorg, kad galėtume pabrėžti ir jūsų sėkmę!
+    
+    ## Kiti kodo valandos ištekliai pedagogams
+    
+    - Peržiūrėkite ankstesnių [“Hour](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) of Code” organizatorių gerąją patirtį.
+    - Žiūrėkite mūsų [edukatoriaus vadovo “Code Hour” internetinio seminaro įrašą](https://youtu.be/EJeMeSW2-Mw).
+    - Apsilankykite [“Hour of Code” forume, kad gau](http://forum.code.org/c/plc/hour-of-code) tumėte patarimų, įžvalgų ir palaikymo iš kitų organizatorių.
+    - Peržiūrėkite “K [odo valandos” DUK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+    
+    ## What comes after the Hour of Code?
+    
+    “Kodo valanda” yra tik pirmas žingsnis kelionėje, norint sužinoti daugiau apie tai, kaip veikia technologijos ir kaip kurti programines programas. Padėkite mokiniams tęsti kelionę ir paskatinkite juos [sužinoti daugiau internete](/beyond)!
+    
+    {{ signup_button }}

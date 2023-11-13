@@ -79,8 +79,8 @@ def main
   ChatClient.log(content_committer.commit_happening_string)
   content_committer.commit_content
   ChatClient.log(content_committer.commit_happened_string)
-rescue Exception => e
-  ChatClient.message(rack_env.to_s, "<@#{DevelopersTopic.dotd}> EXCEPTION: #{e.message}", color: 'red')
+rescue Exception => exception
+  ChatClient.message(rack_env.to_s, "<@#{DevelopersTopic.dotd}> EXCEPTION: #{exception.message}", color: 'red')
   content_committer.set_slack_failed
 end
 

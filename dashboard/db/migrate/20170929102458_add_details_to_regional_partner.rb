@@ -34,6 +34,6 @@ class AddDetailsToRegionalPartner < ActiveRecord::Migration[5.0]
   end
 
   def now
-    @_now ||= Time.zone.now
+    @now ||= Time.zone.now
   end
 end

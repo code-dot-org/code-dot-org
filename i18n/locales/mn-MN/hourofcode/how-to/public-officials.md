@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: Төрийн албан хаагчдад зориулсан гарын авлага
 ---
 
 {{ signup_button }}

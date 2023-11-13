@@ -5,7 +5,7 @@ import {tableType} from '@cdo/apps/storage/redux/data';
 import {
   getProjectDatabase,
   getSharedDatabase,
-  getConfigRef
+  getConfigRef,
 } from '@cdo/apps/storage/firebaseUtils';
 
 describe('FirebaseStorage', () => {
@@ -17,20 +17,20 @@ describe('FirebaseStorage', () => {
       firebaseName: 'test-firebase-name',
       firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
       firebaseAuthToken: 'test-firebase-auth-token',
-      showRateLimitAlert: () => {}
+      showRateLimitAlert: () => {},
     });
     getProjectDatabase().autoFlush();
     getSharedDatabase().autoFlush();
     return getConfigRef()
       .set({
         limits: {
-          '15': 5,
-          '60': 10
+          15: 5,
+          60: 10,
         },
         maxRecordSize: 100,
         maxPropertySize: 100,
         maxTableRows: 20,
-        maxTableCount: 3
+        maxTableCount: 3,
       })
       .then(() => {
         getProjectDatabase().set(null);
@@ -210,7 +210,7 @@ describe('FirebaseStorage', () => {
             .once('value')
             .then(snapshot => {
               expect(snapshot.val()).to.deep.equal({
-                1: '{"name":"bob","age":8,"id":1}'
+                1: '{"name":"bob","age":8,"id":1}',
               });
               done();
             });
@@ -427,7 +427,7 @@ describe('FirebaseStorage', () => {
 
     it('Cannot overwrite existing project table', done => {
       const expectedTableData = {
-        1: '{"id":1,"col1":"value1"}'
+        1: '{"id":1,"col1":"value1"}',
       };
       getSharedDatabase()
         .child('counters/tables/mytable')
@@ -458,7 +458,7 @@ describe('FirebaseStorage', () => {
 
     it('Cannot overwrite existing current table', done => {
       const expectedTableData = {
-        1: '{"id":1,"col1":"value1"}'
+        1: '{"id":1,"col1":"value1"}',
       };
       getSharedDatabase()
         .child('counters/tables/mytable')
@@ -491,7 +491,7 @@ describe('FirebaseStorage', () => {
   describe('addCurrentTableToProject', () => {
     it('Sets the flag in the current_tables', done => {
       const expectedTableData = {
-        1: '{"id":1,"col1":"value1"}'
+        1: '{"id":1,"col1":"value1"}',
       };
       getSharedDatabase()
         .child('counters/tables/mytable')
@@ -544,7 +544,7 @@ describe('FirebaseStorage', () => {
       const expectedTableData = {
         1: '{"id":1,"name":"alice","age":7,"male":false}',
         2: '{"id":2,"name":"bob","age":8,"male":true}',
-        3: '{"id":3,"name":"charlie","age":9,"male":true}'
+        3: '{"id":3,"name":"charlie","age":9,"male":true}',
       };
       getSharedDatabase()
         .child('counters/tables/mytable')
@@ -754,7 +754,7 @@ describe('FirebaseStorage', () => {
             // undefined fields are not included in the record during creation and should
             // not get converted to "undefined".
             5: '{"id":5}',
-            6: '{"foo":"false","id":6}'
+            6: '{"foo":"false","id":6}',
           });
           done();
         });
@@ -821,7 +821,7 @@ describe('FirebaseStorage', () => {
             1: '{"foo":true,"id":1}',
             2: '{"foo":true,"id":2}',
             3: '{"foo":false,"id":3}',
-            4: '{"foo":false,"id":4}'
+            4: '{"foo":false,"id":4}',
           });
           done();
         });
@@ -888,7 +888,7 @@ describe('FirebaseStorage', () => {
             1: '{"foo":1,"id":1}',
             2: '{"foo":2,"id":2}',
             3: '{"foo":1000,"id":3}',
-            4: '{"foo":0.4,"id":4}'
+            4: '{"foo":0.4,"id":4}',
           });
           done();
         });
@@ -939,7 +939,7 @@ describe('FirebaseStorage', () => {
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1: '{"foo":true,"id":1}',
-            2: '{"foo":"bar","id":2}'
+            2: '{"foo":"bar","id":2}',
           });
           expect(onErrorCalled).to.be.true;
           done();
@@ -991,7 +991,7 @@ describe('FirebaseStorage', () => {
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1: '{"foo":1,"id":1}',
-            2: '{"foo":"2xyz","id":2}'
+            2: '{"foo":"2xyz","id":2}',
           });
           expect(onErrorCalled).to.be.true;
           done();
@@ -1004,15 +1004,15 @@ describe('FirebaseStorage', () => {
     const EXISTING_TABLE_DATA = {
       cities: {
         records: {
-          1: '{"city":"New York","state":"NY","id":1}'
-        }
-      }
+          1: '{"city":"New York","state":"NY","id":1}',
+        },
+      },
     };
     const EXISTING_COUNTER_DATA = {
       cities: {
         lastId: 2,
-        rowCount: 2
-      }
+        rowCount: 2,
+      },
     };
     const NEW_TABLE_DATA_JSON = `{
       "cities": [
@@ -1024,9 +1024,9 @@ describe('FirebaseStorage', () => {
       cities: {
         records: {
           1: '{"city":"Seattle","state":"WA","id":1}',
-          2: '{"city":"Chicago","state":"IL","id":2}'
-        }
-      }
+          2: '{"city":"Chicago","state":"IL","id":2}',
+        },
+      },
     };
     const BAD_JSON = '{';
 
@@ -1104,13 +1104,13 @@ describe('FirebaseStorage', () => {
 
   describe('populateKeyValue', () => {
     const EXISTING_KEY_VALUE_DATA = {
-      click_count: '1'
+      click_count: '1',
     };
     const NEW_KEY_VALUE_DATA_JSON = `{
         "click_count": 5
       }`;
     const NEW_KEY_VALUE_DATA = {
-      click_count: '5'
+      click_count: '5',
     };
     const BAD_JSON = '{';
 
@@ -1180,7 +1180,7 @@ describe('FirebaseStorage', () => {
       const expectedRecords = [
         {id: 1, name: 'alice', age: 7, male: false},
         {id: 2, name: 'bob', age: 8, male: true},
-        {id: 3, name: 'charlie', age: 9, male: true}
+        {id: 3, name: 'charlie', age: 9, male: true},
       ];
 
       FirebaseStorage.importCsv(
@@ -1205,7 +1205,7 @@ describe('FirebaseStorage', () => {
       const tableData = {
         1: '{"id":1,"name":"alice","age":7,"male":false}',
         2: '{"id":2,"name":"bob","age":8,"male":true}',
-        3: '{"id":3,"name":"charlie","age":9,"male":true}'
+        3: '{"id":3,"name":"charlie","age":9,"male":true}',
       };
       getSharedDatabase()
         .child('counters/tables/mytable')
@@ -1214,14 +1214,12 @@ describe('FirebaseStorage', () => {
         .child('storage/tables/mytable/records')
         .set(tableData);
 
-      getProjectDatabase()
-        .child('current_tables/mytable')
-        .set(true);
+      getProjectDatabase().child('current_tables/mytable').set(true);
 
       const expectedRecords = [
         {id: 1, name: 'alice', age: 7, male: false},
         {id: 2, name: 'bob', age: 8, male: true},
-        {id: 3, name: 'charlie', age: 9, male: true}
+        {id: 3, name: 'charlie', age: 9, male: true},
       ];
 
       FirebaseStorage.readRecords(
@@ -1276,7 +1274,7 @@ describe('FirebaseStorage', () => {
     const expectedTableData = {
       1: '{"id":1,"name":"alice","age":7,"male":false}',
       2: '{"id":2,"name":"bob","age":8,"male":true}',
-      3: '{"id":3,"name":"charlie","age":9,"male":true}'
+      3: '{"id":3,"name":"charlie","age":9,"male":true}',
     };
 
     it('imports a valid csv', done => {

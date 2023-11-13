@@ -1,77 +1,6 @@
 ---
 sl:
   slides:
-    maze_intro:
-      1:
-        text: Dobrodošel/a na tvoji prvi uri programiranja! Dajmo kar malo okusiti,
-          kakšno je.
-      2:
-        text: Uporabljali bomo Blockly, vizualni programerski jezik, kjer potegneš
-          in izpustiš bloke, da zapišeš kodo.
-      3:
-        text: Večina kode je natipkana, ampak Blockly je vizualen. Vsak od blokov
-          ustreza 'pravi' kodi.
-      4:
-        text: Naučil/a se boš temeljev računalništva, konceptov, ki so uporabljeni
-          od ustvarjanja aplikacij do nadzorovanja robota na Marsu.
-      5:
-        text: Program je zbirka navodil, ki jim sledi tvoj računalnik.
-      6:
-        text: Cilj tvojega prvega programa je peljati 'jeznega ptiča' skozi labirint,
-          da zadene 'zeleno svinjo'.
-      7:
-        text: Na levi strani labirinta bo tekel tvoj program. Navodila za vsako uganko
-          so pod labirintom.
-      8:
-        text: Srednje orodje ima ukaze za 'jezno ptico'. Te boš uporabljal/a za oblikovanje
-          programa.
-      9:
-        text: Na desni je tvoja delovna površina, kamor boš vlekel/a bloke z orodij,
-          da zgradiš tvoj program. Da zbrišeš blok, ga povleci do smetnjaka v kotu.
-      10:
-        text: Vsak blok je eno navodilo. Če povlečeš blok "korak naprej" na delovni
-          površini in pritisneš "Zaženi", se ptič premakne za en prostor v labirintu.
-      11:
-        text: Če želite narediti več kot eno dejanje, lahko povlečete več blokov v
-          vaš delovni prostor in jih pritrdite skupaj. Ptica bo izvršila ukaze od
-          zgoraj navzdol.
-      12:
-        text: Če zaženete program in želite popraviti in poskusiti znova, pritisnite
-          gumb "Reset"
-      13:
-        text: Gremo nad te pujse!
-    artist_intro:
-      1:
-        text: Zdravo, sem JR! vsaka avtomobilska ekipa potrebuje računalniškega strokovnjaka
-          da zmaga. Podatke iz avta analizira, da lahko avto vozi še hitreje.
-      2:
-        text: V teh sestavljankah boš umetnik, ki riše sled za sabo, kamorkoli gre.
-      3:
-        text: Ta blok pravi "premakni se za 100 slikovnih pik naprej". Slikovne pike
-          so res drobne pike na vašem zaslonu.
-      4:
-        text: Ta blok pravi "obrni se za 90 stopinj desno". To bo tvojega risarja
-          obrnilo za enako vrednost kot "obrni" blok v labirintih.
-    hoc_wrapup:
-      3:
-        text: |-
-          Če ti je prva Ura kode bili všeč, obišči code.org in nadaljuj učenje o računalništvu!
-          Ko boš končal 20 urni tečaj, boš znal osnove programiranja in se boš lahko začel učiti pisati mobilne aplikacije, navodila za robote, igre ali karkoli si želiš.
-    frozen_intro:
-      10:
-        text: Spomni se, da lahko spreminjaš število pikslov in stopinj s klikom na
-          puščice zraven njih.
-    frozen_loops:
-      5:
-        text: Spomni se, da lahko spreminjaš številko znotraj bloka "ponovi" na karkoli
-          in to, kar je znotraj bloka, se bo tolikokrat ponovilo.
-    playlab_repeat_forever:
-      1:
-        text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
-          igro ponavljalo ves čas.
-      2:
-        text: Če želimo, da lik dela nekaj ponavljajoče, brez da mora igralec storiti
-          karkoli, bomo te bloke postavili znotraj "ponavljaj neskončno" bloka.
     C1_bee_level_intro:
       1:
         text: Niso čebelice super? V naslednji zbirki ugank je tvoja naloga pomagati
@@ -87,6 +16,13 @@ sl:
         text: Na tej ravni želimo, da čebelica dobi tri nektarje iz rože. Namesto
           uporabe treh "dobi nektar" blokov boš uporabil blok "ponavljaj", da dobiš
           tri nektarje. Pritisni "zaženi" in poglej, če si naredil pravilno. Lepo!
+    C1_going_places_safely:
+      6:
+        text: 'Internet je zelo zabavno mesto. A prav tako kot pri prečkanju ceste,
+          moraš biti tudi na internetu previden, ko si na spletu. Zapomniti si moraš
+          tri pravila. Pravilo številka 1: Vedno najprej vprašaj starše za dovoljenje.
+          Pravilo številka 2: Govori le z ljudmi, ki jih poznaš. Pravilo številka
+          3: Drži se mest, ki so primerna zate.'
     C1_maze_debugging:
       1:
         text: Razhroščevanje je iskanje in reševanje težav. Obstaja veliko različnih
@@ -132,13 +68,6 @@ sl:
           na delovno površino in vnesi številko 3. Potem povleci blok "premakni N"
           v blok "ponovi" in pritisni "zaženi", da vidiš, če je pravilno. Čestitam,
           obvladaš!
-    C1_going_places_safely:
-      6:
-        text: 'Internet je zelo zabavno mesto. A prav tako kot pri prečkanju ceste,
-          moraš biti tudi na internetu previden, ko si na spletu. Zapomniti si moraš
-          tri pravila. Pravilo številka 1: Vedno najprej vprašaj starše za dovoljenje.
-          Pravilo številka 2: Govori le z ljudmi, ki jih poznaš. Pravilo številka
-          3: Drži se mest, ki so primerna zate.'
     C1_pair_programming:
       1:
         text: Danes se bomo učili o programiranju v paru. V programiranju v paru programerja
@@ -506,20 +435,91 @@ sl:
           in vsakič, ko bo izbrisal svoj tvit, bomo številko zmanjšali za ena. Vsakič,
           ko bomo želeli vedeti, kolikokrat je uporabnik tvitnil, bomo pogledali vrednost
           spremenljivke.
+    artist_intro:
+      1:
+        text: Zdravo, sem JR! vsaka avtomobilska ekipa potrebuje računalniškega strokovnjaka
+          da zmaga. Podatke iz avta analizira, da lahko avto vozi še hitreje.
+      2:
+        text: V teh sestavljankah boš umetnik, ki riše sled za sabo, kamorkoli gre.
+      3:
+        text: Ta blok pravi "premakni se za 100 slikovnih pik naprej". Slikovne pike
+          so res drobne pike na vašem zaslonu.
+      4:
+        text: Ta blok pravi "obrni se za 90 stopinj desno". To bo tvojega risarja
+          obrnilo za enako vrednost kot "obrni" blok v labirintih.
+    frozen_intro:
+      10:
+        text: Spomni se, da lahko spreminjaš število pikslov in stopinj s klikom na
+          puščice zraven njih.
+    frozen_loops:
+      5:
+        text: Spomni se, da lahko spreminjaš številko znotraj bloka "ponovi" na karkoli
+          in to, kar je znotraj bloka, se bo tolikokrat ponovilo.
     gumball_repeat:
       2:
         text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
           igro ponavljalo ves čas. Če želimo, da lik dela nekaj ponavljajoče, brez
           da mora igralec storiti karkoli, bomo te bloke postavili znotraj "ponavljaj
           neskončno" bloka.
+    hoc_wrapup:
+      3:
+        text: |-
+          Če ti je prva Ura kode bili všeč, obišči code.org in nadaljuj učenje o računalništvu!
+          Ko boš končal 20 urni tečaj, boš znal osnove programiranja in se boš lahko začel učiti pisati mobilne aplikacije, navodila za robote, igre ali karkoli si želiš.
     iceage_repeat:
       2:
         text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
           igro ponavljalo ves čas. Če želimo, da lik dela nekaj ponavljajoče, brez
           da mora igralec storiti karkoli, bomo te bloke postavili znotraj "ponavljaj
           neskončno" bloka.
+    maze_intro:
+      1:
+        text: Dobrodošel/a na tvoji prvi uri programiranja! Dajmo kar malo okusiti,
+          kakšno je.
+      2:
+        text: Uporabljali bomo Blockly, vizualni programerski jezik, kjer potegneš
+          in izpustiš bloke, da zapišeš kodo.
+      3:
+        text: Večina kode je natipkana, ampak Blockly je vizualen. Vsak od blokov
+          ustreza 'pravi' kodi.
+      4:
+        text: Naučil/a se boš temeljev računalništva, konceptov, ki so uporabljeni
+          od ustvarjanja aplikacij do nadzorovanja robota na Marsu.
+      5:
+        text: Program je zbirka navodil, ki jim sledi tvoj računalnik.
+      6:
+        text: Cilj tvojega prvega programa je peljati 'jeznega ptiča' skozi labirint,
+          da zadene 'zeleno svinjo'.
+      7:
+        text: Na levi strani labirinta bo tekel tvoj program. Navodila za vsako uganko
+          so pod labirintom.
+      8:
+        text: Srednje orodje ima ukaze za 'jezno ptico'. Te boš uporabljal/a za oblikovanje
+          programa.
+      9:
+        text: Na desni je tvoja delovna površina, kamor boš vlekel/a bloke z orodij,
+          da zgradiš tvoj program. Da zbrišeš blok, ga povleci do smetnjaka v kotu.
+      10:
+        text: Vsak blok je eno navodilo. Če povlečeš blok "korak naprej" na delovni
+          površini in pritisneš "Zaženi", se ptič premakne za en prostor v labirintu.
+      11:
+        text: Če želite narediti več kot eno dejanje, lahko povlečete več blokov v
+          vaš delovni prostor in jih pritrdite skupaj. Ptica bo izvršila ukaze od
+          zgoraj navzdol.
+      12:
+        text: Če zaženete program in želite popraviti in poskusiti znova, pritisnite
+          gumb "Reset"
+      13:
+        text: Gremo nad te pujse!
     mc_2016_spawn:
       1:
         text: V igrah "kreirati"(angleško spawn) pomeni enako kot ustvariti ali dodati.
           V tem nivoju bomo zombije kreirali, ko sonce zaide. To bomo naredili tako,
           da bomo uporabili `ko je noč` blok.
+    playlab_repeat_forever:
+      1:
+        text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
+          igro ponavljalo ves čas.
+      2:
+        text: Če želimo, da lik dela nekaj ponavljajoče, brez da mora igralec storiti
+          karkoli, bomo te bloke postavili znotraj "ponavljaj neskončno" bloka.

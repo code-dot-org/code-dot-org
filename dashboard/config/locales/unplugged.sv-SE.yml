@@ -2,16 +2,292 @@
 sv:
   data:
     unplugged:
+      BigEvent:
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
+          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
+          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
+        title: Den stora händelsen
+      BigEvent_2018:
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
+          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
+          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
+        title: Den stora händelsen
+      BigEvent_2019:
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
+          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
+          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
+        title: Den stora händelsen
+      BinaryBracelets:
+        desc: Eleverna konstruerar armband som är en binär representation av första
+          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
+          på mer än ett sätt.
+        title: Binära armband
+      BinaryBracelets_2018:
+        desc: Eleverna konstruerar armband som är en binär representation av första
+          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
+          på mer än ett sätt.
+        title: Binära armband
+      BinaryBracelets_2019:
+        desc: Eleverna konstruerar armband som är en binär representation av första
+          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
+          på mer än ett sätt.
+        title: Binära armband
+      BinaryImages:
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
+          de föregående kurserna visat eleverna att information kan bli presenterad
+          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
+          visa hur en dator kan lagra även mer komplex information(som bilder och
+          färger) på binärt sätt.
+        title: Binära bilder
+      BinaryImages_2018:
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
+          de föregående kurserna visat eleverna att information kan bli presenterad
+          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
+          visa hur en dator kan lagra även mer komplex information(som bilder och
+          färger) på binärt sätt.
+        title: Binära bilder
+      BinaryImages_2019:
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
+          de föregående kurserna visat eleverna att information kan bli presenterad
+          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
+          visa hur en dator kan lagra även mer komplex information(som bilder och
+          färger) på binärt sätt.
+        title: Binära bilder
+      Booleans:
+        desc: Booleans är den fjärde och sista datatyp som du lär dig om i denna kurs.
+          I denna aktivitet lär du dig vad booleans är, och hur de kan hjälpa oss
+          skriva funktioner som tänker logiskt
+        title: Booleska värden och logik
+      BuildingAFoundation:
+        desc: Eleverna bygger en struktur av tillhandahållna delar. Strukturen måste
+          kunna uppfylla vissa parametrar som är givna(nå en viss höjd eller ha en
+          viss vikt). Eleverna diskuterar vikten av uthållighet när uppgifter blir
+          komplicerade.
+        title: Bygga en grund
+      CollisionDetection:
+        desc: Att avgöra när objekt på skärmen rör vid något är en viktig aspekt av
+          de flesta spel. I den här lektionen ska vi titta på hur Pythagoras sats
+          och distans- formeln kan användas för att mäta avståndet mellan två punkter
+          på planet och sedan besluta om dessa två punkter (eller spelkaraktärer)
+          rör vid något.
+        title: Kollisionsdetektion och Pythagoras sats
+      ComputationalThinking:
+        desc: Eleverna använder logiskt tänkande (abstraktion, mönster matchning,
+          uppdelning) för att lista ut hur man spelar ett spel som inte har några
+          instruktioner.
+        title: Uträkningstänkande
+      Conditionals:
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
+          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
+          drar ett svart kort får du en poäng'.
+        title: Villkor
+      ConditionalsPiecewiseFunctions:
+        desc: De parametrar som vi ger till funktioner orsakar att utfallet varierar
+          beroende på ett mycket stelbent mönster. Antag att vi vill ha parametrar
+          med värden som skapar utfall med ett mönster men andra värden för att använda
+          olika mönster. Det är här villkorssatser behövs...
+        title: Villkorssatser och styckevis funktioner
+      Conditionals_2018:
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
+          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
+          drar ett svart kort får du en poäng'.
+        title: Villkor
+      Conditionals_2019:
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
+          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
+          drar ett svart kort får du en poäng'.
+        title: Villkor
+      Contracts:
+        desc: Kontrakt ger oss ett sätt att förstå och diskutera funktioner. I den
+          här lektionen ska vi titta på hur kontrakt kan hjälpa oss att få en känsla
+          för ett nytt programmeringsspråk eller funktion.
+        title: Kontrakt, domän och utbud
+      Crowdsourcing:
+        desc: Eleverna använder 'crowdsourcing', en problemlösningsteknik som är vanlig
+          i datorvetenskapen, för att lösa ett problem mer effektivt som klass än
+          som individuell elev.
+        title: Crowdsourcing
+      DesignRecipe:
+        desc: I den sista scenen  skrev eleverna några mycket enkla funktioner - men
+          mer sofistikerade funktioner kräver en mer genomtänkt strategi. Designreceptet
+          är ett strukturerat sätt att skriva funktioner som inkluderar att skriva
+          testfall för att se till att funktionen fungerar som förväntat.
+        title: Design recept
+      DiceRace:
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i det dagliga livet. Eleverna får identifiera och skriva ner instruktionerna
+          för hur man spelar ett tärnings-spel.
+        title: 'Instruktioner i verkliga livet: Tärnings- spelet'
+      DigitalCitizenship:
+        desc: Eleverna utforskar skillnaden mellan privat och personlig information
+          för att skilja ut vad som är säkert att dela online.
+        title: Digitalt medborgarskap
+      DigitalFootprint:
+        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
+          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+        title: Ditt digitala fotavtryck
+      DigitalFootprint_2018:
+        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
+          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+        title: Ditt digitala fotavtryck
+      DigitalFootprint_2019:
+        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
+          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+        title: Ditt digitala fotavtryck
+      EnvelopeVariables:
+        desc: Variabler ger oss en stor grad av frihet inom datorvetenskapen. den
+          här lektionen förklarar vad en variabel är och hur vi kan använda variabler
+          på många olika sätt. Använd den här lektionen tillsammans med lektionen
+          om abstraktion för att verkligen hjälpa eleverna att förstå.
+        title: Envelope variabler
+      ForLoopFun:
+        desc: Vi vet att loopar/slingor tillåter oss göra saker om och om igen, men
+          nu ska vi lära oss att använda loopar som har extra strukturer inbyggda.
+        title: "'För' loop skoj"
+      FunctionalSuncatchers:
+        desc: Eleverna skapar en uppsättning instruktioner med variabler och funktioner(delar
+          av en kod som man kan använda om och om igen) för att skapa solfångare av
+          snören och pärlor.
+        title: Funktionella Solfångare
+      GettingLoopy:
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
+          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
+          koreografi och sedan bli uppmanade att repetera.
+        title: Att bli snurrig
+      GettingLoopy_2018:
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
+          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
+          koreografi och sedan bli uppmanade att repetera.
+        title: Att bli snurrig
+      GettingLoopy_2019:
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
+          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
+          koreografi och sedan bli uppmanade att repetera.
+        title: Att bli snurrig
+      GoingPlacesSafely:
+        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
+          säkerhet på nätet.
+        title: Trygg resa
+      GoingPlacesSafely_2018:
+        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
+          säkerhet på nätet.
+        title: Trygg resa
+      GoingPlacesSafely_2019:
+        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
+          säkerhet på nätet.
+        title: Trygg resa
+      GraphPaperProgramming:
+        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
+          kommandon så att andra elever kan reproducera en teckning.
+        title: Kalkyleringsprogrammering
+      GraphPaperProgramming_2018:
+        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
+          kommandon så att andra elever kan reproducera en teckning.
+        title: Kalkyleringsprogrammering
+      GraphPaperProgramming_2019:
+        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
+          kommandon så att andra elever kan reproducera en teckning.
+        title: Kalkyleringsprogrammering
+      Internet:
+        desc: Eleverna skickar meddelanden som representerar olika överföringsmetoder
+          på nätet genom att använda bitar av papper.
+        title: Internet
+      MadGlibs:
+        desc: Abstraktion är ett av de viktigaste begreppen att förstå inom datorvetenskapen.
+          Den här lektionen låter eleverna analysera berättelser för att hitta skillnader
+          som gör att de kan abstraheras. Dessa abstraherade berättelser blir förlagor
+          till nya och tokroliga berättelser.
+        title: Galna Glibs
+      MoveIt:
+        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
+          att flytta en figur genom en labyrint med ett enda kommando.
+        title: Flytta den, flytta den
+      MoveItMoveIt_2018:
+        title: Flytta det, flytta den
+      MoveItMoveIt_2019:
+        title: Flytta det, flytta den
+      PaperPlanes:
+        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
+          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
+          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
+          datorkunskapen.
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
+      PaperPlanes_2018:
+        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
+          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
+          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
+          datorkunskapen.
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
+      PaperPlanes_2019:
+        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
+          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
+          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
+          datorkunskapen.
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
+      PlantASeed:
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
+          också på den övergripande bilden av datorvetenskap och hur uppsättningar
+          av instruktioner är en absolut nödvändig del av den vetenskapen.
+        title: 'Verklighetsalgoritmer: Så ett frö'
+      PlantASeed_2018:
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
+          också på den övergripande bilden av datorvetenskap och hur uppsättningar
+          av instruktioner är en absolut nödvändig del av den vetenskapen.
+        title: 'Verklighetsalgoritmer: Så ett frö'
+      PlantASeed_2019:
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
+          också på den övergripande bilden av datorvetenskap och hur uppsättningar
+          av instruktioner är en absolut nödvändig del av den vetenskapen.
+        title: 'Verklighetsalgoritmer: Så ett frö'
+      RelayProgramming:
+        desc: Eleverna får köra en stafett där de springer en sträcka för att skriva
+          en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'.
+          Varje elev får bara skriva en instruktion och har det blivit fel i någon
+          instruktion tidigare måste de sudda ut allt och börja om från början.
+        title: Stafettprogrammering
+      RelayProgramming_2018:
+        title: Stafettprogrammering
+      RelayProgramming_2018_2019:
+        title: Stafettprogrammering
+      SongwritingParameters:
+        desc: Eleverna använder refrängen i en sång för att lära hur man använder
+          parametrar(vilka gör att en funktion kan användas generellt utan att behöva
+          skrivas om).
+        title: Låtskrivande
+      SongwritingWithParameters:
+        desc: 'En av de mest magnifika strukturerna i datorvetenskapen är funktionen.
+          Funktioner (ibland kallad procedur) är miniprogram som du kan använda om
+          och om igen inuti ditt större program. lektionen lär eleverna att förstå
+          hur bitar av kod inuti funktioner är så användbart. '
+        title: Låtskrivande med parametrar
+      TangramAlgorithms:
+        desc: Den här lektionen visar något viktigt om uppsättningar av instruktioner.
+          Om du låter instruktionerna vara allmänna finns det många sätt att använda
+          dem. Om du vill att alla som använder instruktionerna ska få exakt samma
+          slutresultat måste du vara mer detaljerad i dina instruktioner.
+        title: Tangram algoritmer(uppsättning av instruktioner)
       Unplug1:
-        title: Introduktion till Datavetenskap
         desc: Den här lektionen är en introduktion till datavetenskap och förklarar
           vad en datavetenskapare gör. Den ger också eleverna möjlighet att prova
           den rollen. Efter lektionen får eleverna hem en sammanfattning av vad han
           eller hon lärt. Du kanske blir frestad att inte lära ut de korrekta termerna
           till de yngre eleverna men att presentera dem nu på ett roligt och lekfullt
           sätt är mer produktivt än att vänta tills de mer avancerade lektionerna.
+        title: Introduktion till Datavetenskap
+      Unplug10:
+        desc: I den här lektionen kommer studenter låtsas flöda genom Internet, samtidigt
+          som de lär sig om webbadresser, IP och DNS.
+        title: Internet
+      Unplug11:
+        desc: Den slutliga sammanfattningen av den första 20 timmars serien hjälper
+          klassen att återuppleva sina favorit stunder, medan den också ger dem de
+          nästa steg som de kan ta på egen hand om de är intresserade av att fortsätta
+          lära om datorvetenskap.
+        title: Sammanfattning
       Unplug2:
-        title: Uträkningstänkande
         desc: Med bara papper och penna kommer eleverna att lära sig de fyra stegen
           i logiskt tänkande(computational thinking). Efter en kort introduktion delas
           eleverna in i fyra grupper. De kommer att få konstruera instruktioner för
@@ -21,22 +297,22 @@ sv:
           använda den informationen till att skriva instruktioner till en annan grupp
           som ska rita det speciella monstret. Grupperna byter sedan instruktioner
           och kontrollerar om det korrekta monstret ritades.
+        title: Uträkningstänkande
       Unplug3:
-        title: Kalkyleringsprogrammering
         desc: Genom att programmera andra elever så att de kan rita bilder börjar
           eleverna förstå vad programmering är. Lektionen börjar med att eleverna
           får instruera varandra att färglägga rutor på ett rutat papper för att efterbilda
           en förlaga. Om det finns tid över kan eleverna få fortsätta övningen med
           sina egna bilder.
+        title: Kalkyleringsprogrammering
       Unplug4:
-        title: Algoritmer
         desc: Den här lektionen handlar om instruktioner. Genom att använda tangram
           och rutat papper visar den första övningen hur viktigt det är att göra varje
           instruktion så detaljerad och tydlig som möjligt. Sedan får klassen undersöka
           på hur många sätt det går att vika ett papper till att få en form av en
           rektangel, och då notera hur en del metoder ger färre vikningar än andra.
+        title: Algoritmer
       Unplug5:
-        title: funktioner
         desc: Under den här lektionen ska eleverna konstruera solfångare av snören,
           pärlor och paljetter. Eleverna följer en serie av upprepade steg och får
           sedan identifiera speciella grupper av tekniker som upprepas flera gånger.
@@ -46,460 +322,184 @@ sv:
           de använt. Detta betyder att eleverna måste abstrahera ut de specifika detaljerna
           ur specifika material och skapa generella termer för individuella material.
           Användandet av generella termer är ett underbart sätt att introducera variabler.
+        title: funktioner
       Unplug6:
-        title: Villkor
         desc: Det här är ett spel för hela klassen. Efter att ha introducerat villkor,
           om-satser och loops/slingor, kan klassen öva tillsammans med hjälp av ett
           förskrivet program, en kortlek och ren tur.
+        title: Villkor
       Unplug7:
-        title: Sångskrivande
         desc: Diktläsning är intuitivt för de flesta elever.  Vi tar alltså en förmåga
           som är allmän och använder den för att undervisa om att definiera och anropa
           funktioner. När eleverna är bekväma med definiera/anropa processen, lägger
           vi till de extra möjligheter som följer av att använda parametrar för funktionsanrop.
+        title: Sångskrivande
       Unplug8:
-        title: Abstraktion
         desc: Denna verksamhet kombinerar elevernas dagliga rutiner och ett Mad-Lib
           stil tänkande spel för att hjälpa din klass att lära sig mer om effektiviteten
           av abstraktion.
+        title: Abstraktion
       Unplug9:
-        title: Relä programmering
         desc: Lektionen kommer att använda en idé från en tidigare verksamhet (4.
           Rutat papper programmering) och använda dessa kunskaper för att betona vikten
           av att slutföra program som körs i sekvens och kontrollerar andra program
           för "buggar".
-      Unplug10:
-        title: Internet
-        desc: I den här lektionen kommer studenter låtsas flöda genom Internet, samtidigt
-          som de lär sig om webbadresser, IP och DNS.
-      Unplug11:
-        title: Sammanfattning
-        desc: Den slutliga sammanfattningen av den första 20 timmars serien hjälper
-          klassen att återuppleva sina favorit stunder, medan den också ger dem de
-          nästa steg som de kan ta på egen hand om de är intresserade av att fortsätta
-          lära om datorvetenskap.
+        title: Relä programmering
       UnplugHappyMaps:
+        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
+          att flytta en figur genom en labyrint med ett enda kommando.
         title: Glada kartor
+      UnplugHappyMaps_2018:
         desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
           att flytta en figur genom en labyrint med ett enda kommando.
-      MoveIt:
-        title: Flytta den, flytta den
+        title: Glada kartor
+      UnplugHappyMaps_2019:
         desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
           att flytta en figur genom en labyrint med ett enda kommando.
-      PlantASeed:
-        title: 'Verklighetsalgoritmer: Så ett frö'
+        title: Glada kartor
+      VideoGamesCoordinatePlanes:
+        desc: Upptäck hur de datorspel du älskar att spela är algebra! Utforska hur
+          algebraiska uttryck och koordinatplanet kan hjälpa oss förstå hur spel fungerar,
+          och börja sedan planera för TV-spelet som du ska skapa.
+        title: Videospel och koordinat-plan
+      courseABC_unplugged_bigEvent:
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
+          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
+          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
+        title: Den stora händelsen
+      courseAB_unplugged_plantASeed:
         desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
           i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
           också på den övergripande bilden av datorvetenskap och hur uppsättningar
           av instruktioner är en absolut nödvändig del av den vetenskapen.
-      BuildingAFoundation:
-        title: Bygga en grund
-        desc: Eleverna bygger en struktur av tillhandahållna delar. Strukturen måste
-          kunna uppfylla vissa parametrar som är givna(nå en viss höjd eller ha en
-          viss vikt). Eleverna diskuterar vikten av uthållighet när uppgifter blir
-          komplicerade.
-      GettingLoopy:
-        title: Att bli snurrig
-        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
-          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
-          koreografi och sedan bli uppmanade att repetera.
-      RelayProgramming:
-        title: Stafettprogrammering
-        desc: Eleverna får köra en stafett där de springer en sträcka för att skriva
-          en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'.
-          Varje elev får bara skriva en instruktion och har det blivit fel i någon
-          instruktion tidigare måste de sudda ut allt och börja om från början.
-      Conditionals:
-        title: Villkor
-        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
-          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
-          drar ett svart kort får du en poäng'.
-      BigEvent:
-        title: Den stora händelsen
-        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
-          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
-          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
-      GoingPlacesSafely:
-        title: Trygg resa
+        title: 'Verklighetsalgoritmer: Så ett frö'
+      courseA_unplugged_goingPlacesSafely:
         desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
           säkerhet på nätet.
-      GraphPaperProgramming:
-        title: Kalkyleringsprogrammering
-        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
-          kommandon så att andra elever kan reproducera en teckning.
-      PaperPlanes:
-        title: 'Algoritmer i verkliga livet: Pappersflygplan'
-        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
-          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
-          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
-          datorkunskapen.
-      BinaryBracelets:
-        title: Binära armband
-        desc: Eleverna konstruerar armband som är en binär representation av första
-          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
-          på mer än ett sätt.
-      DigitalFootprint:
-        title: Ditt digitala fotavtryck
-        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
-          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
-      ComputationalThinking:
-        title: Uträkningstänkande
-        desc: Eleverna använder logiskt tänkande (abstraktion, mönster matchning,
-          uppdelning) för att lista ut hur man spelar ett spel som inte har några
-          instruktioner.
-      FunctionalSuncatchers:
-        title: Funktionella Solfångare
-        desc: Eleverna skapar en uppsättning instruktioner med variabler och funktioner(delar
-          av en kod som man kan använda om och om igen) för att skapa solfångare av
-          snören och pärlor.
-      SongwritingParameters:
-        title: Låtskrivande
-        desc: Eleverna använder refrängen i en sång för att lära hur man använder
-          parametrar(vilka gör att en funktion kan användas generellt utan att behöva
-          skrivas om).
-      DiceRace:
-        title: 'Instruktioner i verkliga livet: Tärnings- spelet'
-        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
-          i det dagliga livet. Eleverna får identifiera och skriva ner instruktionerna
-          för hur man spelar ett tärnings-spel.
-      Internet:
-        title: Internet
-        desc: Eleverna skickar meddelanden som representerar olika överföringsmetoder
-          på nätet genom att använda bitar av papper.
-      Crowdsourcing:
-        title: Crowdsourcing
-        desc: Eleverna använder 'crowdsourcing', en problemlösningsteknik som är vanlig
-          i datorvetenskapen, för att lösa ett problem mer effektivt som klass än
-          som individuell elev.
-      DigitalCitizenship:
-        title: Digitalt medborgarskap
-        desc: Eleverna utforskar skillnaden mellan privat och personlig information
-          för att skilja ut vad som är säkert att dela online.
-      TangramAlgorithms:
-        title: Tangram algoritmer(uppsättning av instruktioner)
-        desc: Den här lektionen visar något viktigt om uppsättningar av instruktioner.
-          Om du låter instruktionerna vara allmänna finns det många sätt att använda
-          dem. Om du vill att alla som använder instruktionerna ska få exakt samma
-          slutresultat måste du vara mer detaljerad i dina instruktioner.
-      EnvelopeVariables:
-        title: Envelope variabler
-        desc: Variabler ger oss en stor grad av frihet inom datorvetenskapen. den
-          här lektionen förklarar vad en variabel är och hur vi kan använda variabler
-          på många olika sätt. Använd den här lektionen tillsammans med lektionen
-          om abstraktion för att verkligen hjälpa eleverna att förstå.
-      MadGlibs:
-        title: Galna Glibs
-        desc: Abstraktion är ett av de viktigaste begreppen att förstå inom datorvetenskapen.
-          Den här lektionen låter eleverna analysera berättelser för att hitta skillnader
-          som gör att de kan abstraheras. Dessa abstraherade berättelser blir förlagor
-          till nya och tokroliga berättelser.
-      ForLoopFun:
-        title: "'För' loop skoj"
-        desc: Vi vet att loopar/slingor tillåter oss göra saker om och om igen, men
-          nu ska vi lära oss att använda loopar som har extra strukturer inbyggda.
-      SongwritingWithParameters:
-        title: Låtskrivande med parametrar
-        desc: 'En av de mest magnifika strukturerna i datorvetenskapen är funktionen.
-          Funktioner (ibland kallad procedur) är miniprogram som du kan använda om
-          och om igen inuti ditt större program. lektionen lär eleverna att förstå
-          hur bitar av kod inuti funktioner är så användbart. '
-      BinaryImages:
-        title: Binära bilder
-        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
-          de föregående kurserna visat eleverna att information kan bli presenterad
-          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
-          visa hur en dator kan lagra även mer komplex information(som bilder och
-          färger) på binärt sätt.
-      VideoGamesCoordinatePlanes:
-        title: Videospel och koordinat-plan
-        desc: Upptäck hur de datorspel du älskar att spela är algebra! Utforska hur
-          algebraiska uttryck och koordinatplanet kan hjälpa oss förstå hur spel fungerar,
-          och börja sedan planera för TV-spelet som du ska skapa.
-      Contracts:
-        title: Kontrakt, domän och utbud
-        desc: Kontrakt ger oss ett sätt att förstå och diskutera funktioner. I den
-          här lektionen ska vi titta på hur kontrakt kan hjälpa oss att få en känsla
-          för ett nytt programmeringsspråk eller funktion.
-      DesignRecipe:
-        title: Design recept
-        desc: I den sista scenen  skrev eleverna några mycket enkla funktioner - men
-          mer sofistikerade funktioner kräver en mer genomtänkt strategi. Designreceptet
-          är ett strukturerat sätt att skriva funktioner som inkluderar att skriva
-          testfall för att se till att funktionen fungerar som förväntat.
-      Booleans:
-        title: Booleska värden och logik
-        desc: Booleans är den fjärde och sista datatyp som du lär dig om i denna kurs.
-          I denna aktivitet lär du dig vad booleans är, och hur de kan hjälpa oss
-          skriva funktioner som tänker logiskt
-      ConditionalsPiecewiseFunctions:
-        title: Villkorssatser och styckevis funktioner
-        desc: De parametrar som vi ger till funktioner orsakar att utfallet varierar
-          beroende på ett mycket stelbent mönster. Antag att vi vill ha parametrar
-          med värden som skapar utfall med ett mönster men andra värden för att använda
-          olika mönster. Det är här villkorssatser behövs...
-      CollisionDetection:
-        title: Kollisionsdetektion och Pythagoras sats
-        desc: Att avgöra när objekt på skärmen rör vid något är en viktig aspekt av
-          de flesta spel. I den här lektionen ska vi titta på hur Pythagoras sats
-          och distans- formeln kan användas för att mäta avståndet mellan två punkter
-          på planet och sedan besluta om dessa två punkter (eller spelkaraktärer)
-          rör vid något.
+        title: Trygg resa
+      courseA_unplugged_happyMaps:
+        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
+          att flytta en figur genom en labyrint med ett enda kommando.
+        title: Glada kartor
       courseB_unplugged_MRF:
         title: Ouppkopplad aktivitet
+      courseB_unplugged_MRF_2018:
+        title: Mina Robotic- vänner
+      courseB_unplugged_MRF_2019:
+        title: Mina Robotic- vänner
+      courseB_unplugged_digitalFootprint:
+        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
+          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+        title: Ditt digitala fotavtryck
       courseB_unplugged_loopyMRF:
         title: Ouppkopplad aktivitet
       courseC_Unplugged_ScreenOutTheMean:
         title: Ouppkopplad aktivitet
-      courseD_unplugged_digitalCitizenship:
+      courseC_Unplugged_ScreenOutTheMean_2018:
         title: Ouppkopplad aktivitet
-      courseF_unplugged_powerOfWords:
+      courseC_Unplugged_ScreenOutTheMean_2019:
         title: Ouppkopplad aktivitet
-      courseAB_unplugged_plantASeed:
-        title: 'Verklighetsalgoritmer: Så ett frö'
-        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
-          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
-          också på den övergripande bilden av datorvetenskap och hur uppsättningar
-          av instruktioner är en absolut nödvändig del av den vetenskapen.
-      courseA_unplugged_happyMaps:
-        title: Glada kartor
-        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
-          att flytta en figur genom en labyrint med ett enda kommando.
-      courseA_unplugged_goingPlacesSafely:
-        title: Trygg resa
-        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
-          säkerhet på nätet.
-      courseABC_unplugged_bigEvent:
-        title: Den stora händelsen
-        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
-          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
-          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
-      courseB_unplugged_digitalFootprint:
-        title: Ditt digitala fotavtryck
-        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
-          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+      courseC_unplugged_binaryBracelets:
+        desc: Eleverna konstruerar armband som är en binär representation av första
+          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
+          på mer än ett sätt.
+        title: Binära armband
       courseC_unplugged_buildingAFoundation:
-        title: Bygga en grund
         desc: Eleverna bygger en struktur av tillhandahållna delar. Strukturen måste
           kunna uppfylla vissa parametrar som är givna(nå en viss höjd eller ha en
           viss vikt). Eleverna diskuterar vikten av uthållighet när uppgifter blir
           komplicerade.
+        title: Bygga en grund
+      courseC_unplugged_gettingLoopy:
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
+          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
+          koreografi och sedan bli uppmanade att repetera.
+        title: Att bli snurrig
       courseC_unplugged_paperPlanes:
-        title: 'Algoritmer i verkliga livet: Pappersflygplan'
         desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
           liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
           fokuserar också på hur uppsättningar av instruktioner är en viktig del av
           datorkunskapen.
-      courseC_unplugged_gettingLoopy:
-        title: Att bli snurrig
-        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
-          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
-          koreografi och sedan bli uppmanade att repetera.
-      courseC_unplugged_binaryBracelets:
-        title: Binära armband
-        desc: Eleverna konstruerar armband som är en binär representation av första
-          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
-          på mer än ett sätt.
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
+      courseD_unplugged_binaryImages:
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
+          de föregående kurserna visat eleverna att information kan bli presenterad
+          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
+          visa hur en dator kan lagra även mer komplex information(som bilder och
+          färger) på binärt sätt.
+        title: Binära bilder
+      courseD_unplugged_conditionalsCards:
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
+          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
+          drar ett svart kort får du en poäng'.
+        title: Villkorssatser med kort
+      courseD_unplugged_digitalCitizenship:
+        title: Ouppkopplad aktivitet
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Ouppkopplad aktivitet
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Ouppkopplad aktivitet
       courseD_unplugged_graphPaperProgramming:
-        title: Kalkyleringsprogrammering
         desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
           kommandon så att andra elever kan reproducera en teckning.
+        title: Kalkyleringsprogrammering
       courseD_unplugged_relayProgramming:
-        title: Stafettprogrammering
         desc: Eleverna får köra en stafett där de springer en sträcka för att skriva
           en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'.
           Varje elev får bara skriva en instruktion och har det blivit fel i någon
           instruktion tidigare måste de sudda ut allt och börja om från början.
-      courseD_unplugged_conditionalsCards:
-        title: Villkorssatser med kort
-        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
-          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
-          drar ett svart kort får du en poäng'.
-      courseD_unplugged_binaryImages:
-        title: Binära bilder
-        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
-          de föregående kurserna visat eleverna att information kan bli presenterad
-          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
-          visa hur en dator kan lagra även mer komplex information(som bilder och
-          färger) på binärt sätt.
+        title: Stafettprogrammering
+      courseE_unplugged_crowdsourcing:
+        desc: Eleverna använder 'crowdsourcing', en problemlösningsteknik som är vanlig
+          i datorvetenskapen, för att lösa ett problem mer effektivt som klass än
+          som individuell elev.
+        title: Crowdsourcing
       courseE_unplugged_diceRace:
         desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
           i det dagliga livet. Eleverna får identifiera och skriva ner instruktionerna
           för hur man spelar ett tärnings-spel.
-      courseE_unplugged_songwritingParameters:
-        title: Låtskrivande Med parametrar
-        desc: Eleverna använder refrängen i en sång för att lära hur man använder
-          parametrar(vilka gör att en funktion kan användas generellt utan att behöva
-          skrivas om).
       courseE_unplugged_internet:
-        title: Internet
         desc: Eleverna skickar meddelanden som representerar olika överföringsmetoder
           på nätet genom att använda bitar av papper.
-      courseE_unplugged_crowdsourcing:
-        title: Crowdsourcing
-        desc: Eleverna använder 'crowdsourcing', en problemlösningsteknik som är vanlig
-          i datorvetenskapen, för att lösa ett problem mer effektivt som klass än
-          som individuell elev.
+        title: Internet
       courseE_unplugged_songwriting:
-        title: Låtskrivande
         desc: Eleverna använder refrängen i en sång för att lära hur man använder
           parametrar(vilka gör att en funktion kan användas generellt utan att behöva
           skrivas om).
-      courseF_unplugged_tangrams:
-        title: Tangram algoritmer(uppsättning av instruktioner)
-        desc: Den här lektionen visar något viktigt om uppsättningar av instruktioner.
-          Om du låter instruktionerna vara allmänna finns det många sätt att använda
-          dem. Om du vill att alla som använder instruktionerna ska få exakt samma
-          slutresultat måste du vara mer detaljerad i dina instruktioner.
+        title: Låtskrivande
+      courseE_unplugged_songwritingParameters:
+        desc: Eleverna använder refrängen i en sång för att lära hur man använder
+          parametrar(vilka gör att en funktion kan användas generellt utan att behöva
+          skrivas om).
+        title: Låtskrivande Med parametrar
       courseF_unplugged_envelopeVariables:
-        title: Envelope variabler
         desc: Variabler ger oss en stor grad av frihet inom datorvetenskapen. den
           här lektionen förklarar vad en variabel är och hur vi kan använda variabler
           på många olika sätt. Använd den här lektionen tillsammans med lektionen
           om abstraktion för att verkligen hjälpa eleverna att förstå.
+        title: Envelope variabler
       courseF_unplugged_forLoopFun:
-        title: "'För' loop skoj"
         desc: Vi vet att loopar/slingor tillåter oss göra saker om och om igen, men
           nu ska vi lära oss att använda loopar som har extra strukturer inbyggda.
+        title: "'För' loop skoj"
+      courseF_unplugged_powerOfWords:
+        title: Ouppkopplad aktivitet
       courseF_unplugged_songwritingParameters:
-        title: Låtskrivande med parametrar
         desc: 'En av de mest magnifika strukturerna i datorvetenskapen är funktionen.
           Funktioner (ibland kallad procedur) är miniprogram som du kan använda om
           och om igen inuti ditt större program. lektionen lär eleverna att förstå
           hur bitar av kod inuti funktioner är så användbart. '
-      courseB_unplugged_MRF_2018:
-        title: Mina Robotic- vänner
-      PlantASeed_2018:
-        title: 'Verklighetsalgoritmer: Så ett frö'
-        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
-          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
-          också på den övergripande bilden av datorvetenskap och hur uppsättningar
-          av instruktioner är en absolut nödvändig del av den vetenskapen.
-      UnplugHappyMaps_2018:
-        title: Glada kartor
-        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
-          att flytta en figur genom en labyrint med ett enda kommando.
-      GoingPlacesSafely_2018:
-        title: Trygg resa
-        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
-          säkerhet på nätet.
-      BigEvent_2018:
-        title: Den stora händelsen
-        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
-          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
-          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
-      GraphPaperProgramming_2018:
-        title: Kalkyleringsprogrammering
-        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
-          kommandon så att andra elever kan reproducera en teckning.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Ouppkopplad aktivitet
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Ouppkopplad aktivitet
-      Conditionals_2018:
-        title: Villkor
+        title: Låtskrivande med parametrar
+      courseF_unplugged_tangrams:
+        desc: Den här lektionen visar något viktigt om uppsättningar av instruktioner.
+          Om du låter instruktionerna vara allmänna finns det många sätt att använda
+          dem. Om du vill att alla som använder instruktionerna ska få exakt samma
+          slutresultat måste du vara mer detaljerad i dina instruktioner.
+        title: Tangram algoritmer(uppsättning av instruktioner)
+      timeforcs_demo_conditionals:
         desc: För att lära om villkors-satser får eleverna spela ett kortspel och
           skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
           drar ett svart kort får du en poäng'.
-      DigitalFootprint_2018:
-        title: Ditt digitala fotavtryck
-        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
-          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
-      BinaryImages_2018:
-        title: Binära bilder
-        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
-          de föregående kurserna visat eleverna att information kan bli presenterad
-          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
-          visa hur en dator kan lagra även mer komplex information(som bilder och
-          färger) på binärt sätt.
-      PaperPlanes_2018:
-        title: 'Algoritmer i verkliga livet: Pappersflygplan'
-        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
-          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
-          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
-          datorkunskapen.
-      GettingLoopy_2018:
-        title: Att bli snurrig
-        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
-          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
-          koreografi och sedan bli uppmanade att repetera.
-      BinaryBracelets_2018:
-        title: Binära armband
-        desc: Eleverna konstruerar armband som är en binär representation av första
-          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
-          på mer än ett sätt.
-      MoveItMoveIt_2018:
-        title: Flytta det, flytta den
-      RelayProgramming_2018:
-        title: Stafettprogrammering
-      courseB_unplugged_MRF_2019:
-        title: Mina Robotic- vänner
-      Conditionals_2019:
         title: Villkor
-        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
-          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
-          drar ett svart kort får du en poäng'.
-      GraphPaperProgramming_2019:
-        title: Kalkyleringsprogrammering
-        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
-          kommandon så att andra elever kan reproducera en teckning.
-      RelayProgramming_2018_2019:
-        title: Stafettprogrammering
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Ouppkopplad aktivitet
-      BinaryImages_2019:
-        title: Binära bilder
-        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
-          de föregående kurserna visat eleverna att information kan bli presenterad
-          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
-          visa hur en dator kan lagra även mer komplex information(som bilder och
-          färger) på binärt sätt.
-      GettingLoopy_2019:
-        title: Att bli snurrig
-        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
-          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
-          koreografi och sedan bli uppmanade att repetera.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Ouppkopplad aktivitet
-      BigEvent_2019:
-        title: Den stora händelsen
-        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
-          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
-          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
-      BinaryBracelets_2019:
-        title: Binära armband
-        desc: Eleverna konstruerar armband som är en binär representation av första
-          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
-          på mer än ett sätt.
-      PaperPlanes_2019:
-        title: 'Algoritmer i verkliga livet: Pappersflygplan'
-        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
-          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
-          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
-          datorkunskapen.
-      PlantASeed_2019:
-        title: 'Verklighetsalgoritmer: Så ett frö'
-        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
-          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
-          också på den övergripande bilden av datorvetenskap och hur uppsättningar
-          av instruktioner är en absolut nödvändig del av den vetenskapen.
-      UnplugHappyMaps_2019:
-        title: Glada kartor
-        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
-          att flytta en figur genom en labyrint med ett enda kommando.
-      GoingPlacesSafely_2019:
-        title: Trygg resa
-        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
-          säkerhet på nätet.
-      MoveItMoveIt_2019:
-        title: Flytta det, flytta den
-      DigitalFootprint_2019:
-        title: Ditt digitala fotavtryck
-        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
-          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
-      timeforcs_demo_conditionals:
-        title: Villkor
-        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
-          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
-          drar ett svart kort får du en poäng'.

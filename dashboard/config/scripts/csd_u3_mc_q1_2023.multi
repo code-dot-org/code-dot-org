@@ -1,8 +1,15 @@
 name 'CSD U3 MC Q1_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'You want to create a variable to store how loud the music is playing on your cell phone. Which of the following would be the best variable name?'
+wrong '`a`'
+right '`volume`'
+wrong '`loudest`'
+wrong '`100`'
+wrong '`silent`'
+teacher_markdown <<MARKDOWN
+**Content: Unit 3 Lesson 5**
+
+`volume` is the most meaningful name. `loudest` and `silent` are possible values for how loud the music is playing, but they are not good variable names.
+MARKDOWN
+
+allow_multiple_attempts true

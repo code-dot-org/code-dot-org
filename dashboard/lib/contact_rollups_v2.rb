@@ -71,8 +71,8 @@ class ContactRollupsV2
     @is_dry_run = is_dry_run
     @limit = limit_extraction
     @log_collector = LogCollector.new('ContactRollupsV2')
-    @log_collector.info("Initialization params: "\
-      "is_dry_run: #{is_dry_run}, "\
+    @log_collector.info("Initialization params: " \
+      "is_dry_run: #{is_dry_run}, " \
       "limit_extraction = #{limit_extraction || 'nil'}"
     )
     self.class.set_db_variables
@@ -169,8 +169,8 @@ class ContactRollupsV2
         ContactRollupsPardotMemory.download_pardot_ids
       end
     end
-  rescue StandardError => e
-    @log_collector.record_exception e
+  rescue StandardError => exception
+    @log_collector.record_exception exception
   ensure
     @log_collector.record_metrics(
       {SyncNewContactsDuration: Time.now - start_time}
@@ -273,7 +273,7 @@ class ContactRollupsV2
     log_link = "<a href='#{log_url}'>:cloud: Log on S3</a>"
 
     cloud_watch_link =
-      "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>"\
+      "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>" \
       ":chart_with_upwards_trend: CloudWatch dashboard</a>"
 
     summary = [

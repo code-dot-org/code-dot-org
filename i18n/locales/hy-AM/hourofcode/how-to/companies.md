@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Կոդի ժամի ուղեցույց ընկերությունների համար
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Ինչպես կարող է ձեր ընկերությունը ներգրավվել “Կոդի ժամի” հետ
 
-### Find out how you and your employees can inspire students to try computer science!
+### Պարզեք, թե ինչպես դուք և ձեր աշխատակիցները կարող եք ոգեշնչել ուսանողներին փորձել համակարգչային գիտություն:
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Հաշվողական մտածողությունը օգնում է զարգացնել խնդիրների լուծման հմտությունները, տրամաբանությունը և ստեղծագործականությունը: Եվ տեխնոլոգիան վերափոխում է մոլորակի յուրաքանչյուր արդյունաբերություն: Ուսանողներն այսօր պետք է սովորեն, թե ինչպես ստեղծել տեխնոլոգիա, այլ ոչ թե պարզապես օգտագործել այն։ Վաղ սկսելով ՝ նրանք հաջողության հիմք կունենան 21-րդ դարի ցանկացած կարիերայի ուղում:
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+“Hour of Code” արշավի ընթացքում ձեր ընկերությունը կարող է օգնել բարձրացնել համակարգչային գիտության շարժման իրազեկվածությունը: Անկախ նրանից, թե դուք կամավոր եք որպես անհատ կամ ծրագրում եք միջոցառում ձեր ընկերության համար, ձեր բոլոր ջանքերը կարող են հսկայական ազդեցություն ունենալ մարգինալացված ռասայական և էթնիկ խմբերի երիտասարդ կանանց և ուսանողների տեսակետի վրա համակարգչային գիտությանը և իրենց սեփական ներուժին:
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Ստուգեք ստորև բերված քայլերը ՝ սկսելու համար և տեսեք մեր [ուղեցույցը կորպորատիվ գործընկերների](/files/hoc-corporate-toolkit.pdf) համար ՝ ավելին իմանալու համար, թե ինչպես ձեր ընկերությանը ոգևորել Կոդի ժամից:
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Կապվեք տեղական դպրոցի հետ](#connect-with-a-school)
+- [Խրախուսեք աշխատակիցներին կամավոր լինել դասարանում](#encourage-employees)
+- [Հյուրընկալեք կոդի ժամի ձեր սեփական միջոցառումը](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Կոդի ժամին աջակցելու ավելի շատ եղանակներ](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Կապվեք տեղական դպրոցի հետ
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Միշտ լավագույնն է սկսել տեղական, դպրոցներից, որոնց հետ դուք կամ ձեր աշխատակիցները ամուր կապ ունեք, ինչպես ալմա մատերը, երեխայի դպրոցը կամ տեղական կազմակերպությունը կամ դպրոցը, որը կենտրոնացած է համակարգչային գիտության մեջ պատմականորեն թերներկայացված բնակչությանը ծառայելու վրա:
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Այնտեղից դուք կարող եք այցելել դպրոցի կայք ՝ համապատասխան կոնտակտներ գտնելու համար, ինչպիսիք են տնօրենը, փոխտնօրենը, տեխնոլոգիական կամ համակարգչային գիտության հրահանգիչները կամ նույնիսկ դպրոցի PTSA- ն: Դուք կարող եք նաև համագործակցել այնպիսի կազմակերպությունների հետ, ինչպիսիք են Ամերիկայի տղաների & աղջիկների ակումբները, YMCA մասնաճյուղը և այլն ՝ միջոցառում համավարակի համար:
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Եթե դուք չեք կարողանում կապվել դպրոցի հետ, խնդրում ենք [կապվել մեզ հետ,](https://support.code.org/hc/en-us/requests/new) և մենք հնարավորության դեպքում կկապենք ձեզ մեր տեղական գործընկերներից մեկի հետ:
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Խրախուսեք աշխատակիցներին կամավոր լինել դասարանում
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Ծրագրի ժամին մասնակցելու ամենաարդյունավետ միջոցներից մեկը տեղական դասարանի հետ կամավոր լինելն է ՝ անձամբ կամ վիրտուալ կերպով: Լավագույնն այն է, որ կամավոր լինելու համար պարտադիր չէ ինժեներ լինել։ Դուք դեռ կարող եք բովանդակալից փորձ տրամադրել ուսանողներին ՝ կիսելով ձեր սեփական կարիերայի փորձը և ինչպես CS- ն կամ տեխնոլոգիան ազդել ձեր դերի վրա:
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Գրանցվեք կամավորի համար</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Կամավորը գրանցվելուց հետո ուսուցիչը կարող է վերանայել իր պրոֆիլը մեր [կամավորական քար](https://code.org/volunteer/local) տեզում, ուստի պրոֆիլները պետք է ներկայացվեն հնարավորինս ամբողջական: Եթե դուք լավ տեղավորվում եք նրանց դասարանի համար, ուսուցիչը կկապվի ձեզ հետ հարթակի միջոցով (մենք երբեք չենք կիսելու ձեր էլփոստի հասցեն ուսուցչի հետ): Դուք կարող եք, ապա համակարգել մանրամասները ուղղակիորեն ուսուցչի շուրջ, [թե ինչպես պետք է լավագույնս կամավոր իրենց դասարանում](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Կամավորության և նմուշի հաղորդագրությունների վերաբերյալ լրացուցիչ ուղեցույցների համար, որպեսզի ձեր ընկերությունը ոգևորվի Կոդի ժամից, ստուգեք մեր [ուղեցույցը կորպորատիվ գործընկերների]({{ localized_files/hoc_corporate_toolkit }})համար:
 
 * * *
 
-<h4><font color="00adbc"><i>“I LOVED seeing how excited the kids were. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>“Ես սիրում էի տեսնել, թե որքան հուզված էին երեխաները։ Զարմանալի մի բան այն էր, որ ուսուցիչները նկատեցին, որ որոշ ուսանողներ, ովքեր ակադեմիական առումով այնքան էլ լավ չէին աշխատում, գերազանցում էին մշակողի պես մտածելու և ուրիշներին օգնում ՝ նրանց վստահ զգալու տեղ տալով”:</i></font></h4>
 
--Hour of Code volunteer
+-Կոդի կամավոր ժամ
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Հյուրընկալեք կոդի ժամի ձեր սեփական միջոցառումը
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Եթե ցանկանում եք գնալ լրացուցիչ մղոն, ձեր ընկերությունը կարող է նաեւ հյուրընկալել Hour of Code միջոցառում: Միջոցառում հյուրընկալելու հատուկ բանաձև չկա, ուստի մենք խրախուսում ենք ձեզ լինել ստեղծագործ: Հաշվի առնելով, որ մեր անձնակազմի չափը փոքր է (բայց հզոր!) -ը, Code.org-ը չունի Hour of Code միջոցառումների համակարգմանը նվիրված թիմ: Այնուամենայնիվ, ահա մի քանի խորհուրդ ՝ սկսելու համար:
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Դիտեք այս հրահանգների տեսանյութը <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Որոշեք ձեր միջոցառման ամսաթիվը, ձևաչափը և գտնվելու վայրը
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Մենք տեսել ենք իրադարձություններ, որոնք [վիրտուալ](https://hourofcode.com/us/how-to/virtual) կամ անձամբ են, ընկերության գրասենյակում կամ անցկացվում են համայնքում և բոլոր տարիքի ուսանողների համար: Դուք կարող եք նաեւ նայել, թե ինչ են արել այլ կ [որպորատիվ գործընկերները](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) եւ [դոնոր](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) ները անցյալում որոշ ոգեշնչող գաղափարների համար:
 
 <br />
 
-#### Sample Agenda:
+#### Օրակարգի նմուշ.
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Ժամանակ | Օրակարգի կետ | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 րոպե | Ցույց տալ ոգե [շնչող տեսանյութ](https://hourofcode.com/us/promote/resources#videos)| |5-10 րոպե | Ներկայացրեք ինքներդ ձեզ և իմացեք ավելին ուսանողների մասին. որտե՞ղ եք աշխատում, ինչով եք զբաղվում, և ի՞նչն եք ամենաշատը սիրում ձեր գործում։ Ի՞նչ կամ ո՞վ է ոգեշնչել ձեզ: Ինչպե՞ս հետաքրքրվեցիք համակարգչային գիտությամբ: Դուք ունեի՞ք դաստիարակ: Հարցեր տվեք ուսանողներին և ժամանակ թողեք Q A-ի համար&: | |30-60 րոպե | Կոդը! Եթե ձեր միջոցառումը անձամբ է, սա ժամանակն է պատասխանել հարցերին և առաջնորդել ուսանողներին կոշտ հանելուկների միջոցով: Փորձեք նրանց լուծումը բացահայտ չտալ, փոխարենը փորձեք հարցեր տալ նրանց, որպեսզի նրանք կարողանան իրենց պատասխանել, թե ինչն է սխալ տեղի ունեցել, և խրախուսեք ուսանողներին հարցնել միմյանց, եթե նրանք հարցեր ունեն: Եթե դուք գործնականում կամավոր եք, աշխատեք ուսուցչի հետ, թե որն է լավագույն մոտեցումը: Կարող է ավելի իմաստ ունենալ նիստի ավարտին վերադառնալ, որպեսզի տեսնենք, թե ինչ առաջընթաց են գրանցել ուսանողները: | | |1-3 րոպե | Շնորհակալություն բոլորին և կիսվեք ոգեշնչող բաժանման խոսքերով: Հանձնեք ձեր ընկերության ցանկացած կտոր (կպչուն[պիտակները](#celebrate) հիանալի են): | | <br />
 
-#### Other ideas to add to your event
+#### Այլ գաղափարներ, որոնք պետք է ավելացնեն ձեր միջոցառմանը
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Բացատրեք, թե ինչպես է տեխնոլոգիան ազդում մեր կյանքի վրա ՝ օրինակներով, որոնք կհոգ կտան բոլոր ծագման ուսանողներին. խոսեք տեխնոլոգիայի մասին, որը փրկում է կյանքեր, օգնում մարդկանց, կապում մարդկանց:
+- Եթե դուք տեխնոլոգիական ընկերություն եք, դեմո զվարճալի, նորարարական արտադրանք ձեր ընկերությունը աշխատում է. Եթե դուք տեխնոլոգիական ընկերություն չեք, քննարկեք այն ուղիները, որոնք ձեր ընկերությունը օգտագործում է տեխնոլոգիան՝ խնդիրները լուծելու և նպատակները իրականացնելու համար:
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 
-### 3. Plan your technology needs
+### 3. Պլանավորեք ձեր տեխնոլոգիական կարիքները
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Սարքեր:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Համար unplugged գործունեության, պարզապես զտել Classroom Technology բաժինը ցույց տալ ընտրանքներ “Ոչ համակարգիչներ կամ սարքեր”.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Փորձարկման գործող** ություններ համակարգիչների կամ սարքերի վրա: Համոզվեք, որ դրանք պատշաճ կերպով աշխատում են ձայնային և տեսանյութով բրաուզերների վրա:
+- **Բավարար սարքեր չունե՞ք:** Օգտագործեք զույգ ծրագրավորում: When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+- **Ապահովեք** ականջակալներ ձեր մասնակիցների համար կամ խնդրեք նրանց բերել իրենց սեփականը, եթե նրանք պիտի փորձեն ճանապարհները, որոնք լավագույնս աշխատում են հնչյունների հետ:
+- **Ունե՞ք ցածր թողունակ**ություն: Պլանավորեք ցուցադրել տեսանյութեր միջոցառման առջևի մասում, այնպես որ յուրաքանչյուր մասնակից չի ներբեռնում իր սեփական տեսանյութերը: Կամ փորձեք անջատված/անցանց գործողությունները:
 
-#### Virtual Events:
+#### Վիրտուալ իրադարձություններ.
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Եթե ձեր միջոցառումը լինելու է վիրտուալ, դուք կցանկանաք որոշել ձեր կոնֆերանսի հարթակը (և փորձարկել այն) նախքան ձեր միջոցառումը: Սա կարող է ազդել այն ուսանողների թվի վրա, որոնց դուք հարմարավետ եք զգում, ուստի լավագույնն է դա որոշել նախքան դասարան հրավիրելը կամ ձեր միջոցառումը խթանելը: Գաղափարների համար, թե ինչպես վարել հեռավոր Կոդի ժամ, կարդացեք մեր [խորհուրդները վիրտուալ Hour of Code միջոցառման](https://hourofcode.com/us/how-to/virtual)համար:
 
-### 4. Choose an activity
+### 4. Ընտրեք գործունեություն
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Մենք տրամադրում ենք մի շարք զվարճալի, ուսանողական-առաջնորդվող ճանապարհները բոլոր տարիքային խմբերի և փորձի մակարդակների համար: Ուսանողների համար սիրված է փորձել ինքնուրույն ղեկավարվող ձեռնարկները, չնայած գուցե ցանկանաք միջոցառումը սկսել ոգե [շնչող տեսանյութով, որը բոլորը](https://hourofcode.com/us/promote/resources#videos) միասին դիտելու համար:
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Ուսումնասիրեք գործունեությունը</a> և ժամանակից շուտ որոշեք, արդյոք ցանկանում եք ընտրել մեկ ձեռնարկ՝ ձեր բոլոր հյուրերի համար, կամ թույլ տվեք, որ յուրաքանչյուր երեխա ընտրի իրենց սեփականը: **Բոլոր Hour of Code գործունեությունը** պահանջում է նվազագույն նախապատրաստական ժամանակ, եւ ինքնուրույն առաջնորդվում - թույլ տալով մասնակիցներին աշխատել իրենց սեփական տեմպերով եւ հմտությունների մակարդակով:
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Երբ դուք ունեք ամուր ճանապարհային քարտեզ ձեր միջոցառման համար, ապա կարող եք սկսել հրավիրել ուսանողներին, դպրոց կամ ավելի մեծ համայնք: Խորհուրդ ենք տալիս սկսել տեղական դպրոցից, որի հետ հարաբերություններ ունեք, կամ [թերթել մեր քար](https://hourofcode.com/us/map) տեզը Hour of Code միջոցառումների.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Տոնել
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Այն բանից հետո, երբ ուսանողները կամ հյուրերը ավարտել են իրենց Hour of Code, ժամանակն է նշել նրանց հաջողությունը: Ահա մի քանի գաղափարներ ձեր միջոցառումը ավելի զվարճալի դարձնելու համար.
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Տպել “Ես կոդի ժամ արեցի: Կպչուն պիտակներ”]({{ promote/resources_stickers }}) կամ գտնել այլ մրցանակներ եւ swag է [Code.org Amazon Store.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. Օգտ [ագործ](https://twitter.com/hashtag/hourofcode) եք #HourOfCode եւ [@codeorg,](https://twitter.com/codeorg) որպեսզի մենք կարողանանք ընդգծել ձեր հաջողությունը, նույնպես!
 
 * * *
 
@@ -129,56 +129,56 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promote the Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Օգնելու լավագույն միջոցներից մեկը խոսքի տարածումն ու օրենսգրքի ժամին խթանելն է։
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Գրանցեք Ձեր Միջոցառումը
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Երբ դուք գրանց [վեք ձեր Hour of Code միջոցառմանը](/events), դուք կստանաք օգտակար էլփոստի հաղորդակցություններ ՝ նորություններով և խորհուրդներով ՝ հաջող “Code Hour” հյուրընկալելու համար: Դա նաեւ, թե ինչպես դուք կարող եք թույլ տալ տեղական դպրոցներին կամ ծնողներին իմանալ, որ դուք հյուրընկալում միջոցառում նրանց մոտ.
 
-### 2. Post on Social Media
+### 2. Հաղորդագրություն սոցիալական մեդիայում
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Օգնեք բարձրացնել համակարգչային գիտության շարժման մասին իրազեկությունը այս նմուշի բովանդակությամբ `սոցիալական լրատվամիջոցներում տեղադրելու և ձեր աշխատակիցների հետ կիսվելու համար:
 
-#### Hour of Code general announcement
+#### Կոդի ժամի ընդհանուր հայտարարություն
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Համակարգչային գիտությունը փոխում է մեր աշխարհը: Օգնեք ուսանողներին լինել այս փոփոխության մի մասը `սկսած մեկից #HourOfCode: https://hourofcode.com/
+- Մի՛ օգտագործեք միայն տեխնոլոգիաներ. Իմացեք, թե ինչպես կառուցել այն: Օգնեք ինչ-որ մեկին սկսել #HourOfCode -ով: https://hourofcode.com/
 
-#### Stats
+#### Վիճակագրություն
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Գիտե՞ք, որ ԱՄՆ դպրոցների միայն 53% -ը համակարգչային գիտություն է դասավանդում: Յուրաքանչյուր ուսանողի հնարավորություն տվեք սովորել մեկը #HourOfCode https://hourofcode.com/
+- ԱՄՆ-ում ծրագրային ապահովման մասնագետների միայն 26% -ն են կանայք: Ներկայացրեք ավելի շատ երիտասարդ կանանց համակարգչային գիտությանը #HourOfCode https://hourofcode.com/ միջոցով
+- ԱՄՆ-ում հաշվողական աշխատատեղերի 67% -ը տեխնոլոգիական ոլորտում չէ: Օգնեք համակարգչային գիտությունը դնել ստանդարտ ուսումնական ծրագրում #HourOfCode -ով https://hourofcode.com/
 
-#### Create your own
+#### Ստեղծեք ձեր սեփականը
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Մեկ #HourOfCode կարող է հանգեցնել [լրացրեք ձեր պատմությունը]: https://hourofcode.com/
+- Ես աջակցում եմ #HourOfCode -ին, քանի որ [լրացրեք ձեր մտքերը]: Միացեք մեզ https://hourofcode.com
 
-#### Engineer-specific
+#### Ինժեներական հատուկ
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Եթե ձեր հենց առաջին տողը կոդը փոխեց ձեր կյանքը, օգնեք ձեր մոտ գտնվող ուսանողներին գրել իրենց առաջին #HourOfCode https://code.org/volunteer
+- Եթե սովորել եք կոդավորել, ո՞րն է ձեր պատմությունը: Ոգեշնչեք ձեր մոտ գտնվող ուսանողին իրենց առաջին #HourOfCode -ի միջոցով https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Գտեք ավելի</a> շատ պաստառներ, տեսանյութեր, կպչուն պիտակներ և ձեր միջոցառումը ձեր համայնքին խթանելու այլ եղանակներ:
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Կոդի ժամին աջակցելու ավելի շատ եղանակներ
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- Տարածեք իրազեկումը [՝ կրելով Code.org swag](https://store.code.org/) (ամբողջ հասույթը գնում է աջակցելու ավելի շատ ուսանողների ձեռք բերել մուտք դեպի համակարգչային գիտության կրթություն):
+- Ընտրեք օգտվել Code.org- ից, երբ գնում եք [AmazonSmile- ում:](https://code.org/donate/amazonsmile)
+- Խնդրեք ձեր գործադիր տնօրենին ուղարկել ընկերության ամբողջ էլեկտրոնային նամակ `ընդգծելով համակարգչային գիտության կարեւորությունը եւ խրախուսելով աշխատակիցներին տարածել խոսքը:
+- Զվարճացեք գործընկերների հետ [նվիրական արշավում:](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)
+- [Ստորագրեք այս](https://code.org/promote) խնդրագիրը, որպեսզի համոզվեք, որ յուրաքանչյուր ուսանող ունի համակարգչային գիտություն սովորելու հնարավորություն:
+- [Նվիրաբեր](https://code.org/donate) եք Code.org- ին, որպեսզի կարողանանք մեր կրթական ռեսուրսները պահել անվճար և հասանելի բոլորի համար:
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Լրացուցիչ առաջարկների համար, թե ինչպես աջակցել Code.org- ին և Կոդի ժամին, այցել [եք Code.org/օգնություն](https://code.org/help)
 
 {{ signup_button }}

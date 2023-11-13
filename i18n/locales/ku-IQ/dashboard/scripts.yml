@@ -414,3 +414,75 @@ ku:
               display_name: لیستەکان
             lessonGroup-3:
               display_name: گرێکان
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+            csf_functions:
+              display_name: فرمانەکان
+            csf_variables:
+              display_name: گۆڕاوەکان
+        coursea-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+        coursed-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: گرێکان
+            csf_conditionals:
+              display_name: مەرجیەکان
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: فرمانەکان
+            csf_nested_loops:
+              display_name: مەرجیەکان
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گۆڕاوەکان
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: گرێکان
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: فرمانەکان
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: مەرجیەکان
+            lessonGroup-5:
+              display_name: گۆڕاوەکان

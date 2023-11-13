@@ -67,7 +67,7 @@ var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 2500;
  * @throws {Error} if wrong number of arguments are provided.
  * @throws {TypeError} if invalid types are passed in the options object.
  */
-var NetSimTable = (module.exports = function(
+var NetSimTable = (module.exports = function (
   channel,
   shardID,
   tableName,
@@ -192,7 +192,7 @@ var NetSimTable = (module.exports = function(
 /**
  * @returns {string} the configured table name.
  */
-NetSimTable.prototype.getTableName = function() {
+NetSimTable.prototype.getTableName = function () {
   return this.tableName_;
 };
 
@@ -200,7 +200,7 @@ NetSimTable.prototype.getTableName = function() {
  * Subscribes this table's onPubSubEvent method to events for this table
  * on our local channel.
  */
-NetSimTable.prototype.subscribe = function() {
+NetSimTable.prototype.subscribe = function () {
   this.channel_.subscribe(
     this.tableName_,
     NetSimTable.prototype.onPubSubEvent_.bind(this)
@@ -211,7 +211,7 @@ NetSimTable.prototype.subscribe = function() {
  * Unubscribes the saved callback from events for this table on our
  * local channel.
  */
-NetSimTable.prototype.unsubscribe = function() {
+NetSimTable.prototype.unsubscribe = function () {
   this.channel_.unsubscribe(this.tableName_);
 };
 
@@ -224,8 +224,8 @@ NetSimTable.prototype.unsubscribe = function() {
  * @returns {jQuery.Promise} Guaranteed to resolve after the cache update,
  *          so .done() operations can interact with the cache.
  */
-NetSimTable.prototype.refresh = function(callback) {
-  callback = callback || function() {};
+NetSimTable.prototype.refresh = function (callback) {
+  callback = callback || function () {};
   var deferred = $.Deferred();
 
   // Which API call to make
@@ -239,7 +239,7 @@ NetSimTable.prototype.refresh = function(callback) {
     : this.fullCacheUpdate_.bind(this);
 
   // What should happen when the API call completes.
-  var apiCallCallback = function(err, data) {
+  var apiCallCallback = function (err, data) {
     if (err) {
       callback(err, data);
       deferred.reject(err);
@@ -293,20 +293,20 @@ NetSimTable.prototype.refresh = function(callback) {
  * @returns {function()}
  * @private
  */
-NetSimTable.prototype.makeThrottledRefresh_ = function() {
+NetSimTable.prototype.makeThrottledRefresh_ = function () {
   var throttledRefresh = _.throttle(
     this.refresh.bind(this),
     this.minimumDelayBetweenRefreshes_
   );
   return _.debounce(throttledRefresh, this.minimumDelayBeforeRefresh_, {
-    maxWait: this.minimumDelayBeforeRefresh_
+    maxWait: this.minimumDelayBeforeRefresh_,
   });
 };
 
 /**
  * @returns {Array} all locally cached table rows
  */
-NetSimTable.prototype.readAll = function() {
+NetSimTable.prototype.readAll = function () {
   return this.arrayFromCache_();
 };
 
@@ -314,8 +314,8 @@ NetSimTable.prototype.readAll = function() {
  * @param {!number} firstRowID
  * @returns {Array} all locally cached table rows having row ID >= firstRowID
  */
-NetSimTable.prototype.readAllFromID = function(firstRowID) {
-  return this.arrayFromCache_(function(key) {
+NetSimTable.prototype.readAllFromID = function (firstRowID) {
+  return this.arrayFromCache_(function (key) {
     return key >= firstRowID;
   });
 };
@@ -324,10 +324,10 @@ NetSimTable.prototype.readAllFromID = function(firstRowID) {
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.read = function(id, callback) {
+NetSimTable.prototype.read = function (id, callback) {
   this.api_.fetchRow(
     id,
-    function(err, data) {
+    function (err, data) {
       if (err === null) {
         this.updateCacheRow_(id, data);
       }
@@ -340,10 +340,10 @@ NetSimTable.prototype.read = function(id, callback) {
  * @param {Object} value
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.create = function(value, callback) {
+NetSimTable.prototype.create = function (value, callback) {
   this.api_.createRow(
     value,
-    function(err, data) {
+    function (err, data) {
       if (err === null) {
         this.addRowToCache_(data);
       }
@@ -356,12 +356,12 @@ NetSimTable.prototype.create = function(value, callback) {
  * @param {Object[]} values
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.multiCreate = function(values, callback) {
+NetSimTable.prototype.multiCreate = function (values, callback) {
   this.api_.createRow(
     values,
-    function(err, datas) {
+    function (err, datas) {
       if (err === null) {
-        datas.forEach(function(data) {
+        datas.forEach(function (data) {
           this.addRowToCache_(data);
         }, this);
       }
@@ -375,11 +375,11 @@ NetSimTable.prototype.multiCreate = function(values, callback) {
  * @param {Object} value
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.update = function(id, value, callback) {
+NetSimTable.prototype.update = function (id, value, callback) {
   this.api_.updateRow(
     id,
     value,
-    function(err, success) {
+    function (err, success) {
       if (err === null) {
         this.updateCacheRow_(id, value);
       }
@@ -392,7 +392,7 @@ NetSimTable.prototype.update = function(id, value, callback) {
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.delete = function(id, callback) {
+NetSimTable.prototype.delete = function (id, callback) {
   this.deleteMany([id], callback);
 };
 
@@ -401,10 +401,10 @@ NetSimTable.prototype.delete = function(id, callback) {
  * @param {!number[]} ids
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.deleteMany = function(ids, callback) {
+NetSimTable.prototype.deleteMany = function (ids, callback) {
   this.api_.deleteRows(
     ids,
-    function(err, success) {
+    function (err, success) {
       if (err === null) {
         this.removeRowsFromCache_(ids);
       }
@@ -417,10 +417,10 @@ NetSimTable.prototype.deleteMany = function(ids, callback) {
  * Delete a row while user is navigating away from the page.
  * @param {!number} id
  */
-NetSimTable.prototype.deleteOnUnload = function(id) {
+NetSimTable.prototype.deleteOnUnload = function (id) {
   this.api_.deleteRowsOnUnload(
     [id],
-    function(err) {
+    function (err) {
       if (err) {
         // Nothing we can really do with the error, as we're in the process of
         // navigating away. Throw so that high incidence rates will show up in
@@ -436,10 +436,10 @@ NetSimTable.prototype.deleteOnUnload = function(id) {
  * @param {Array} allRows
  * @private
  */
-NetSimTable.prototype.fullCacheUpdate_ = function(allRows) {
+NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
   var maxRowID = 0;
-  var newCache = allRows.reduce(function(prev, currentRow) {
+  var newCache = allRows.reduce(function (prev, currentRow) {
     prev[currentRow.id] = currentRow;
     if (currentRow.id > maxRowID) {
       maxRowID = currentRow.id;
@@ -463,10 +463,10 @@ NetSimTable.prototype.fullCacheUpdate_ = function(allRows) {
  * @param {Array} newRows
  * @private
  */
-NetSimTable.prototype.incrementalCacheUpdate_ = function(newRows) {
+NetSimTable.prototype.incrementalCacheUpdate_ = function (newRows) {
   if (newRows.length > 0) {
     var maxRowID = 0;
-    newRows.forEach(function(row) {
+    newRows.forEach(function (row) {
       this.cache_[row.id] = row;
       maxRowID = Math.max(maxRowID, row.id);
     }, this);
@@ -482,7 +482,7 @@ NetSimTable.prototype.incrementalCacheUpdate_ = function(newRows) {
  * @param {!number} row.id
  * @private
  */
-NetSimTable.prototype.addRowToCache_ = function(row) {
+NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
   this.tableChange.notifyObservers();
 };
@@ -491,9 +491,9 @@ NetSimTable.prototype.addRowToCache_ = function(row) {
  * @param {!number[]} ids
  * @private
  */
-NetSimTable.prototype.removeRowsFromCache_ = function(ids) {
+NetSimTable.prototype.removeRowsFromCache_ = function (ids) {
   var cacheChanged = false;
-  ids.forEach(function(id) {
+  ids.forEach(function (id) {
     if (this.cache_[id] !== undefined) {
       delete this.cache_[id];
       cacheChanged = true;
@@ -510,7 +510,7 @@ NetSimTable.prototype.removeRowsFromCache_ = function(ids) {
  * @param {!Object} row
  * @private
  */
-NetSimTable.prototype.updateCacheRow_ = function(id, row) {
+NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
 
@@ -529,15 +529,18 @@ NetSimTable.prototype.updateCacheRow_ = function(id, row) {
  * @returns {Array}
  * @private
  */
-NetSimTable.prototype.arrayFromCache_ = function(predicate) {
+NetSimTable.prototype.arrayFromCache_ = function (predicate) {
   predicate =
     predicate ||
-    function() {
+    function () {
       return true;
     };
   var result = [];
   for (var k in this.cache_) {
-    if (this.cache_.hasOwnProperty(k) && predicate(k, this.cache_[k])) {
+    if (
+      Object.prototype.hasOwnProperty.call(this.cache_, k) &&
+      predicate(k, this.cache_[k])
+    ) {
       result.push(this.cache_[k]);
     }
   }
@@ -549,7 +552,7 @@ NetSimTable.prototype.arrayFromCache_ = function(predicate) {
  * server.
  * @param {number} intervalMs - milliseconds of delay between updates.
  */
-NetSimTable.prototype.setPollingInterval = function(intervalMs) {
+NetSimTable.prototype.setPollingInterval = function (intervalMs) {
   this.pollingInterval_ = intervalMs;
 };
 
@@ -559,7 +562,7 @@ NetSimTable.prototype.setPollingInterval = function(intervalMs) {
  * @param {number} delayMs - Minimum number of milliseconds
  *        between invalidation-triggered requests to the server.
  */
-NetSimTable.prototype.setMinimumDelayBetweenRefreshes = function(delayMs) {
+NetSimTable.prototype.setMinimumDelayBetweenRefreshes = function (delayMs) {
   // To do this, we just replace the throttled refresh function with a new one.
   this.minimumDelayBetweenRefreshes_ = delayMs;
   this.refreshTable_ = this.makeThrottledRefresh_();
@@ -572,7 +575,7 @@ NetSimTable.prototype.setMinimumDelayBetweenRefreshes = function(delayMs) {
  * @param {number} delayMs - Minimum number of milliseconds between first
  *        invalidation and request to server.
  */
-NetSimTable.prototype.setMinimumDelayBeforeRefresh = function(delayMs) {
+NetSimTable.prototype.setMinimumDelayBeforeRefresh = function (delayMs) {
   // To do this, we just replace the throttled refresh function with a new one.
   this.minimumDelayBeforeRefresh_ = delayMs;
   this.refreshTable_ = this.makeThrottledRefresh_();
@@ -585,13 +588,13 @@ NetSimTable.prototype.setMinimumDelayBeforeRefresh = function(delayMs) {
  * @param {number} delayMs - Maximum number of milliseconds to add before
  *        refresh request fires.
  */
-NetSimTable.prototype.setMaximumJitterDelay = function(delayMs) {
+NetSimTable.prototype.setMaximumJitterDelay = function (delayMs) {
   // To do this, we just replace the throttled refresh function with a new one.
   this.maximumJitterDelay_ = delayMs;
 };
 
 /** Polls server for updates, if it's been long enough. */
-NetSimTable.prototype.tick = function() {
+NetSimTable.prototype.tick = function () {
   var now = Date.now();
   if (now - this.lastRefreshTime_ >= this.pollingInterval_) {
     this.lastRefreshTime_ = now;
@@ -603,6 +606,6 @@ NetSimTable.prototype.tick = function() {
  * Called when the PubSub service fires an event that this table is subscribed to.
  * @private
  */
-NetSimTable.prototype.onPubSubEvent_ = function() {
+NetSimTable.prototype.onPubSubEvent_ = function () {
   this.refreshTable_();
 };

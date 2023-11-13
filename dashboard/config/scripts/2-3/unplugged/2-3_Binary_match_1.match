@@ -17,3 +17,4 @@ answer '/script_assets/2-3_images/unplugged/binary_1_a2.png'
 
 question '**Q**'
 answer '/script_assets/2-3_images/unplugged/binary_1_a4.png'
+allow_multiple_attempts true

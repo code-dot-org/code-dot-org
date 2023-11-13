@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+# run rails console but skip the script preload step, which can take a long time
+# in production and other environments where script caching is enabled.
+def main
+  Dir.chdir(dashboard_dir) do
+    exec "SKIP_SCRIPT_PRELOAD=1 ./bin/rails console"
+  end
+end
+
+main

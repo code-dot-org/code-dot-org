@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: ಚುನಾಯಿತ ಅಧಿಕಾರಿಗಳಿಗೆ ಕೋಡ್ ಪತ್ರಿಕಾ ಪ್ರಕಟಣೆ
 ---
 
 {{ signup_button }}

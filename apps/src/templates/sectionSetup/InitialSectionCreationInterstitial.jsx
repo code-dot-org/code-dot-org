@@ -9,18 +9,19 @@ import {connect} from 'react-redux';
 import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class InitialSectionCreationInterstitial extends Component {
   static propTypes = {
     // Connected to Redux
-    beginEditingSection: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isOpen: true
+      isOpen: true,
     };
   }
 
@@ -49,19 +50,20 @@ class InitialSectionCreationInterstitial extends Component {
             <h1 style={styles.title}>
               {i18n.sectionSetupOnInitialAccountCreation()}
             </h1>
-            <hr style={styles.pageBreak} />
             <p style={styles.descriptionText}>{i18n.sectionSetupFirstStep()}</p>
-            <hr style={styles.pageBreak} />
             <div style={styles.footerButtons}>
               <Button
                 id="uitest-abandon-section-creation"
                 text={i18n.goToMyDashboard()}
-                color={Button.ButtonColor.gray}
+                style={styles.leftButton}
+                color={Button.ButtonColor.neutralDark}
                 onClick={this.abandonEditingSection}
               />
               <Button
                 id="uitest-accept-section-creation"
                 text={i18n.createClassSections()}
+                style={styles.rightButton}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={this.beginEditingSection}
               />
             </div>
@@ -73,30 +75,34 @@ class InitialSectionCreationInterstitial extends Component {
 }
 
 const styles = {
-  pageBreak: {
-    borderTop: '3px solid grey'
-  },
   dialogCentering: {
     marginLeft: '20px',
-    marginRight: '20px'
+    marginRight: '20px',
   },
   title: {
-    color: color.teal,
-    fontSize: '24px'
+    color: color.neutral_dark,
+    fontSize: '1.25em',
+    marginBottom: '0.5em',
+    ...fontConstants['main-font-semi-bold'],
   },
   descriptionText: {
-    fontSize: '14px'
+    fontSize: '1em',
+    marginBottom: '1em',
+    color: color.neutral_dark,
   },
   footerButtons: {
     display: 'flex',
     flexFlow: 'row',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
+  leftButton: {
+    marginLeft: 0,
+  },
+  rightButton: {
+    marginRight: 0,
+  },
 };
 
-export default connect(
-  undefined,
-  {
-    beginEditingSection
-  }
-)(InitialSectionCreationInterstitial);
+export default connect(undefined, {
+  beginEditingSection,
+})(InitialSectionCreationInterstitial);

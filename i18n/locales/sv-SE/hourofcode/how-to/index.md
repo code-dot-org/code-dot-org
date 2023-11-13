@@ -4,13 +4,13 @@ title: Hour of Code Vägledningsguide
 
 {{ signup_button }}
 
-# Hur du planerar din Hour of Code
+# Hur du planerar Hour of Code
 
 ### Häng på och introducera en grupp elever till deras datavetenskap med dessa steg.
 
 Studenter idag , borde lära sig att skapa teknologi, inte bara använda det.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Att prova en Hour of Code är ett enkelt och roligt sätt att introducera studenter till datavetenskap, kanske för första gången! Hitta en aktivitet som passar din miljö, oavsett om det är i klassen eller efter skolan, personligen eller virtuellt. Ta en titt på vår [deltagarguide om du fortfarande har frågor]({{ localized_files/participation_guide }}) efter att ha tittat på stegen nedan:
 
 - [Titta på Hour of Code vägledningsvideo](#how-to-video)
 - [Utforska aktiviteter och handledningar](#explore-activities)
@@ -25,7 +25,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## Titta på Hour of Code vägledningsvideo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## Titta på Hour of Code vägledningsvideo <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -56,7 +56,7 @@ Utforska aktiviteterna och bestäm i förväg om du vill välja en handledning f
 
 ### Välj datum och tid
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Men det går också bra att göra en Hour of Code närsomhelst under året! 
+Människor runt om i världen deltar i Hour of Code-firandet under CS Education Week (5-11 december) när de senaste handledningarna och aktiviteterna släpps. Men det går också bra att göra en Hour of Code närsomhelst under året! 
 
 * * *
 
@@ -72,11 +72,11 @@ Berätta om din plan för Hour of Code för andra lärare som kan vara intresser
 
 ### Nå ut till volontärer genom att registrera ditt event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Det är också ett sätt att informera lokala volontärer om att din skola deltar. Volontärer är en jättebra resurs och kan komma och berätta för din klass om datavetenskap, eller hjälpa eleverna med Hour of Code-aktiviteter. 
+När du [registrerar dig för ditt Hour of Code-evenemang](/events)får du användbar e-postkommunikation med nyheter och tips för att vara värd för en framgångsrik Hour of Code. Det är också ett sätt att informera lokala volontärer om att din skola deltar. Volontärer är en jättebra resurs och kan komma och berätta för din klass om datavetenskap, eller hjälpa eleverna med Hour of Code-aktiviteter. 
 
 ### Engagera dina elever
 
-Inför Hour of Code kan du ladda upp genom att dela [inspirerande videos](/promote/resources) som visar olika typer av människor som programmerar och kreativa sätt som datavetenskap kan användas på. Or print inspirational posters for your classroom! Eleverna är mer nyfikna på att delta i ett ämne när de ser personer som ser ut som dem som håller på med det. 
+Inför Hour of Code kan du ladda upp genom att dela [inspirerande videos](/promote/resources) som visar olika typer av människor som programmerar och kreativa sätt som datavetenskap kan användas på. Eller skriv ut inspirerande affischer för ditt klassrum! Eleverna är mer nyfikna på att delta i ett ämne när de ser personer som ser ut som dem som håller på med det. 
 
 {{ promote_new_posters }}
 
@@ -111,7 +111,7 @@ Det är okej om både du och alla dina studenter är helt nya på datavetenskap.
 
 Visa eleverna hur de kommer in till övningen
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Skriv handledningslänken på en whiteboard. Hitta länken som anges i [informationen för din valda handledning]({{ urls/learn }}).
 
 När dina elever stöter på problem så är det okej att svara:
 
@@ -136,7 +136,7 @@ Vad gör jag om en elev blir färdig tidigt?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Skriv ut certifikat]({{ urls/certificates }}) för dina studenter.
 - [Skiv ut "Jag gjorde en Hour of Code!"]({{ urls/promote_stickers }})-stickers för dina elever.
 - Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 
@@ -151,6 +151,6 @@ Vad gör jag om en elev blir färdig tidigt?
 
 ### Vad kan jag göra efter Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Datavetenskap behöver inte sluta med Hour of Code! [Lär dig](/beyond) hur du tar med CS till din skola och elever.
 
 {{ signup_button }}

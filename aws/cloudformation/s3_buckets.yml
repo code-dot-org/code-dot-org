@@ -101,24 +101,6 @@ Resources:
               {
                 AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
               }
-  SpritelabAnimationBucket:
-    Type: "AWS::S3::Bucket"
-    Properties:
-      BucketName: "cdo-spritelab-animation-library"
-      BucketEncryption:
-        ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: "aws:kms"
-      VersioningConfiguration:
-        Status: "Enabled"
-      LoggingConfiguration:
-        DestinationBucketName: "cdo-logs"
-        LogFilePrefix: "s3/cdo-spritelab-animation-library"
-      PublicAccessBlockConfiguration:
-        BlockPublicAcls: true
-        BlockPublicPolicy: true
-        IgnorePublicAcls: true
-        RestrictPublicBuckets: true
   # for curriculumbuilder
   CurriculumBucket:
     Type: "AWS::S3::Bucket"

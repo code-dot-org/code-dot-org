@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -24,11 +25,11 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         text: PropTypes.string.isRequired,
         target: PropTypes.string,
         id: PropTypes.string,
-        color: PropTypes.oneOf(Object.values(Button.ButtonColor))
+        color: PropTypes.oneOf(Object.values(Button.ButtonColor)),
       })
     ),
     backgroundColor: PropTypes.string,
-    marginBottom: PropTypes.string
+    marginBottom: PropTypes.string,
   };
 
   render() {
@@ -44,14 +45,14 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       description,
       buttons,
       backgroundColor,
-      marginBottom = '60px'
+      marginBottom = '60px',
     } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     const textItemCustomBackgroundColor = {
       ...styles.textItem,
-      backgroundColor: backgroundColor || styles.textItem.backgroundColor
+      backgroundColor: backgroundColor || styles.textItem.backgroundColor,
     };
 
     return (
@@ -107,36 +108,8 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
 export const TwoColumnActionBlock = connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(UnconnectedTwoColumnActionBlock);
-
-export class LocalClassActionBlock extends Component {
-  static propTypes = {
-    showHeading: PropTypes.bool.isRequired
-  };
-
-  render() {
-    const {showHeading} = this.props;
-    const heading = showHeading ? i18n.findLocalClassHeading() : '';
-
-    return (
-      <TwoColumnActionBlock
-        imageUrl={pegasus(
-          '/shared/images/fill-540x300/misc/beyond-local-map.png'
-        )}
-        heading={heading}
-        subHeading={i18n.findLocalClassSubheading()}
-        description={i18n.findLocalClassDescription()}
-        buttons={[
-          {
-            url: pegasus('/learn/local'),
-            text: i18n.findLocalClassButton()
-          }
-        ]}
-      />
-    );
-  }
-}
 
 export class AdministratorResourcesActionBlock extends Component {
   render() {
@@ -151,14 +124,14 @@ export class AdministratorResourcesActionBlock extends Component {
           {
             id: 'your_school_professional_learning',
             url: pegasus('/educate/professional-learning'),
-            text: i18n.yourSchoolProfessionalLearningProgramsButton()
+            text: i18n.yourSchoolProfessionalLearningProgramsButton(),
           },
           {
             id: 'your_school_administrators',
             url: pegasus('/administrators'),
             text: i18n.yourSchoolAdminButton(),
-            color: Button.ButtonColor.neutralDark
-          }
+            color: Button.ButtonColor.neutralDark,
+          },
         ]}
       />
     );
@@ -176,8 +149,8 @@ export class CscInfoActionBlock extends Component {
           {
             id: 'course_info_csc',
             url: pegasus('/educate/csc'),
-            text: i18n.learnMore()
-          }
+            text: i18n.learnMore(),
+          },
         ]}
       />
     );
@@ -187,11 +160,11 @@ export class CscInfoActionBlock extends Component {
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
     announcement: shapes.specialAnnouncement,
-    marginBottom: PropTypes.string
+    marginBottom: PropTypes.string,
   };
 
   state = {
-    buttonList: this.createButtonList()
+    buttonList: this.createButtonList(),
   };
 
   createButtonList() {
@@ -202,7 +175,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         ? announcement.buttonId
         : 'special-announcement-btn-1',
       url: announcement.buttonUrl,
-      text: announcement.buttonText
+      text: announcement.buttonText,
     });
     if (announcement.buttonUrl2 && announcement.buttonText2) {
       buttonList.push({
@@ -210,7 +183,7 @@ export class SpecialAnnouncementActionBlock extends Component {
           ? announcement.buttonId2
           : 'special-announcement-btn-2',
         url: announcement.buttonUrl2,
-        text: announcement.buttonText2
+        text: announcement.buttonText2,
       });
     }
     return buttonList;
@@ -239,51 +212,51 @@ const styles = {
     marginBottom: 0,
     fontSize: 24,
     lineHeight: '26px',
-    fontFamily: 'Gotham 4r',
-    color: color.neutral_dark
+    ...fontConstants['main-font-regular'],
+    color: color.neutral_dark,
   },
   textItem: {
     border: `1px solid ${color.neutral_dark20}`,
     backgroundColor: color.neutral_light,
     padding: 25,
     minHeight: 281,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   subHeading: {
     paddingRight: 0,
     paddingBottom: 20,
     fontSize: 27,
     lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.neutral_dark
+    ...fontConstants['main-font-bold'],
+    color: color.neutral_dark,
   },
   subHeadingSmallFont: {
     paddingRight: 0,
     paddingBottom: 20,
     fontSize: 25,
     lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.neutral_dark
+    ...fontConstants['main-font-bold'],
+    color: color.neutral_dark,
   },
   image: {
     width: 485,
     minHeight: 260,
     height: 279,
-    border: `1px solid ${color.neutral_dark20}`
+    border: `1px solid ${color.neutral_dark20}`,
   },
   description: {
     paddingRight: 10,
     paddingBottom: 20,
     fontSize: 14,
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     lineHeight: '22px',
-    color: color.neutral_dark
+    color: color.neutral_dark,
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   container: {
     width: '100%',
-    position: 'relative'
-  }
+    position: 'relative',
+  },
 };

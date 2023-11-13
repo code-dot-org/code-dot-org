@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Hour Code իրադարձություն Ինչպես պետք է
 ---
 
 {{ signup_button }}

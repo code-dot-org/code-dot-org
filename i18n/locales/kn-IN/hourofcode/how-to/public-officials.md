@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: ಸಾರ್ವಜನಿಕ ಅಧಿಕಾರಿಗಳಿಗೆ ಹೇಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುವುದು
 ---
 
 {{ signup_button }}

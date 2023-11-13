@@ -6,7 +6,7 @@ title: Últimos Posters da Hora do Código
 
 # Últimos Posters da Hora do Código
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Encontre nossos pôsteres de anos anteriores para imprimir e pendurar na sua sala de aula! Está procurando os pôsteres mais novos? [Clique aqui]({{ promote/promote_posters_url }}).
 
 * * *
 

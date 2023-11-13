@@ -14,3 +14,4 @@ answer 'an error that occurs when a reference does not point to an object'
 
 question 'return by value'
 answer 'a copy of the value is given to where the method is called'
+allow_multiple_attempts true

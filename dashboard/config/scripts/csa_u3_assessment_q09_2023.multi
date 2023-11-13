@@ -57,3 +57,5 @@ The expression `reversedNames[index] = names[names.length - index - 1]` does wor
 
 ![](https://images.code.org/a824b739be17b4e607e82e5db5f8ec31-image-1674535960795.jpg)
 MARKDOWN
+
+allow_multiple_attempts true
