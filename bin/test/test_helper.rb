@@ -1,12 +1,18 @@
 require 'simplecov'
 SimpleCov.start do
-  coverage_dir 'test/coverage'
+  coverage_dir File.expand_path('../coverage', __FILE__)
 
-  add_filter 'test/'
+  add_filter do |source|
+    is_not_bin_file = !source.filename.start_with?(File.expand_path('../../', __FILE__))
+    is_bin_test_file = source.filename.start_with?(File.expand_path('../', __FILE__))
+    is_not_bin_file || is_bin_test_file
+  end
 
   add_group 'I18n', 'i18n/'
   add_group 'Animations', 'animation_assets/'
 end
+
+require_relative '../../shared/test/test_helper'
 
 require 'database_cleaner/active_record'
 DatabaseCleaner.strategy = :transaction
@@ -15,19 +21,23 @@ require 'fileutils'
 require 'json'
 require 'yaml'
 
-require_relative '../../shared/test/test_helper'
-
 # Set up JUnit output for Circle
-reporters = [Minitest::Reporters::SpecReporter.new]
+reporters = []
 if ENV['CIRCLECI']
+  reporters << Minitest::Reporters::ProgressReporter.new
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/bin")
+else
+  reporters << Minitest::Reporters::SpecReporter.new
 end
-
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
 class Minitest::Spec
   before do
-    STDOUT.stubs(:print) # to skip the progress bar output
+    if ENV['CIRCLECI']
+      STDOUT.stubs(:print)
+      STDOUT.stubs(:puts)
+      STDOUT.stubs(:warn)
+    end
   end
 end
