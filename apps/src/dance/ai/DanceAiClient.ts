@@ -117,7 +117,7 @@ function calculateOutputSummedWeights(
  * Simple selection function that returns all "classifications"
  * @param {*} outputWeights desired output weight vector to precalculate based on
  * @param {*} associatedOutputJson, precalculated vector weights for each possible type of output (e.g. BackgroundsEffects, ForegroundEffects, etc.)
- * @returns 1d array of tuples in the format ([score], [output key]) e.g. ("0.51", "circles")
+ * @returns 1d array of subarrays in the format [score, output_option) e.g. [0.51, "circles"]
  */
 function getSortedOptions(
   outputWeights: number[],
