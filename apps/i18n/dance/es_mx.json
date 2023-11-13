@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Volver",
+  "danceAiModalClose": "Cerrar",
+  "danceAiModalCodeButton": "Código",
+  "danceAiModalExplanationButton": "Aprende más",
+  "danceAiModalStartOverButton": "Volver a empezar",
   "danceFeedbackDidntPress": "Asegúrate de presionar las teclas de dirección mientras se ejecuta el baile.",
   "danceFeedbackKeepCoding": "¡Sigue programando! Algo aún no está correcto.",
   "danceFeedbackKeyEvent": "Asegúrate de adjuntar algún código al bloque `cuando la clave` y pulsa la tecla mientras se ejecuta tu baile.",

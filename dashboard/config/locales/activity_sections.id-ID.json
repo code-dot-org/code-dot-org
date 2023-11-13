@@ -36124,6 +36124,38 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Penutupan"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Pemfilteran Musik"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Dukungan Umum"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Video Pembuka"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Pengarahan singkat"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Rayakan"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Langkah berikutnya",
+          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn] untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Viralkan"
         }
       }
     }

@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalStartOverButton": "Magsimula sa umpisa",
+  "danceAiModalExplanationButton": "Matuto nang higit pa",
+  "danceAiModalBack": "Bumalik",
+  "danceAiModalClose": "Isara",
   "danceFeedbackDidntPress": "Tiyakin na pinindot mo ang mga arrow key habang tumatakbo ang iyong sayaw.",
+  "danceFeedbackKeepCoding": "Ginagamit mo ang lahat ng kinakailangang mga uri ng mga bloke ngunit hindi sa tamang paraan.",
   "danceFeedbackKeyEvent": "Tiyakin na nag-attach ka ng ilang code sa <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> block at pindutin ang key habang tumatakbo ang iyong sayaw.",
   "danceFeedbackNeedBackup": "Kailangan mong lumikhs ng isang pangkat ng mga backup dancer gamit ang <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
   "danceFeedbackNeedDifferentDance": "Kailangan mong gumamit ng naiibang sayaw.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Gamitin ang `set backup_dancer2 size` block para gawing mas maliit ang dancer.",
   "danceFeedbackUseSetTint": "Gamitin ang `i-set ang tint` block para baguhin ang kulay ng dancer.",
   "danceFeedbackUseStartMapping": "Subukang idagdag ang <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block sa iyong program.",
-  "danceFeedbackKeepCoding": "Ginagamit mo ang lahat ng kinakailangang mga uri ng mga bloke ngunit hindi sa tamang paraan.",
   "measure": "Measure:"
 }
