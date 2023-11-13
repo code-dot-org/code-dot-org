@@ -25,7 +25,7 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
     `/api/v1/section_instructors/check?email=${encodeURIComponent(email)}` +
       (sectionId ? `&section_id=${sectionId}` : ''),
     {
-      type: 'GET',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
       },
