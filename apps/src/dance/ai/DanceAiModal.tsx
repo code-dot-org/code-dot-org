@@ -403,7 +403,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      generatedEffects.current.goodEffect.results
+      generatedEffects.current.goodEffect
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -443,7 +443,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
-  const getPreviewCode = (): string => {
+  const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
     if (!currentGeneratedEffect) {
       return '';
     }
