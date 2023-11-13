@@ -40,7 +40,7 @@ describe('LearningGoal', () => {
         aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
-        aiInfo={{
+        aiEvalInfo={{
           id: 2,
           learning_goal_id: 2,
           understanding: 2,

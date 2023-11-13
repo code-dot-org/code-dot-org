@@ -40,7 +40,7 @@ export default function LearningGoal({
   isStudent,
   feedbackAdded,
   setFeedbackAdded,
-  aiInfo,
+  aiEvalInfo,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -268,7 +268,7 @@ export default function LearningGoal({
       <div>
         {teacherHasEnabledAi &&
           !!studentLevelInfo &&
-          !!aiInfo &&
+          !!aiEvalInfo &&
           aiUnderstanding !== undefined && (
             <div className={style.openedAiAssessment}>
               <AiAssessment
@@ -276,7 +276,7 @@ export default function LearningGoal({
                 studentName={studentLevelInfo.name}
                 aiConfidence={aiConfidence}
                 aiUnderstandingLevel={aiUnderstanding}
-                aiInfo={aiInfo}
+                aiEvalInfo={aiEvalInfo}
               />
             </div>
           )}
@@ -318,7 +318,7 @@ LearningGoal.propTypes = {
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
-  aiInfo: aiEvaluationShape,
+  aiEvalInfo: aiEvaluationShape,
 };
 
 const AiToken = () => {

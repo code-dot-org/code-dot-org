@@ -201,7 +201,7 @@ export default function RubricContent({
             isStudent={false}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
-            aiInfo={getAiInfo(lg.id)}
+            aiEvalInfo={getAiInfo(lg.id)}
           />
         ))}
       </div>

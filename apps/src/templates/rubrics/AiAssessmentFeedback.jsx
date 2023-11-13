@@ -13,8 +13,8 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import Button from '@cdo/apps/templates/Button';
 
-export default function AiAssessmentFeedback({aiInfo}) {
-  const radioGroupName = `ai-assessment-feedback-${aiInfo.id}`;
+export default function AiAssessmentFeedback({aiEvalInfo}) {
+  const radioGroupName = `ai-assessment-feedback-${aiEvalInfo.id}`;
   const thumbsupval = true;
   const thumbsdownval = false;
 
@@ -37,20 +37,18 @@ export default function AiAssessmentFeedback({aiInfo}) {
     setAIFeedback(radioButtonData);
     if (radioButtonData === thumbsupval) {
       const bodyData = JSON.stringify({
-        learningGoalAiEvaluationId: aiInfo.id,
+        learningGoalAiEvaluationId: aiEvalInfo.id,
         aiFeedbackApproval: thumbsupval,
       });
       HttpClient.post(`${baseUrl}`, bodyData, true, {
         'Content-Type': 'application/json',
-      }).catch(error => {
-        console.log(error);
       });
     }
   };
 
   const submitAiFeedbackCallback = () => {
     const bodyData = JSON.stringify({
-      learningGoalAiEvaluationId: aiInfo.id,
+      learningGoalAiEvaluationId: aiEvalInfo.id,
       aiFeedbackApproval: aiFeedback,
       falsePositive: aiFalsePos,
       falseNegative: aiFalseNeg,
@@ -60,8 +58,6 @@ export default function AiAssessmentFeedback({aiInfo}) {
     });
     HttpClient.post(`${baseUrl}`, bodyData, true, {
       'Content-Type': 'application/json',
-    }).catch(error => {
-      console.log(error);
     });
 
     setAISubmitted(true);
@@ -221,5 +217,5 @@ export default function AiAssessmentFeedback({aiInfo}) {
 }
 
 AiAssessmentFeedback.propTypes = {
-  aiInfo: aiEvaluationShape,
+  aiEvalInfo: aiEvaluationShape,
 };
