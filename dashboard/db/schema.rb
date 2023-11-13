@@ -637,7 +637,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.bigint "learning_goal_ai_evaluation_id", null: false
     t.bigint "teacher_id", null: false
     t.boolean "ai_feedback_approval", null: false
@@ -828,7 +828,7 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "lti_courses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "lti_courses", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.bigint "lti_integration_id", null: false
     t.bigint "lti_deployment_id", null: false
     t.string "context_id"
