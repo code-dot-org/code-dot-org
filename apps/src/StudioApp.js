@@ -2765,7 +2765,6 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
-    // TODO: Re-implement for JSON before migrating Sprite Lab
     startBlocks = Blockly.cdoUtils.appendSharedFunctions(
       startBlocks,
       config.level.sharedFunctions

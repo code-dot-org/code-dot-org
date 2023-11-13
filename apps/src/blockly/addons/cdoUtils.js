@@ -468,8 +468,8 @@ export function getBlockColor(block) {
 }
 
 export function appendSharedFunctions(startBlocksSource, functionsXml) {
+  // TODO: Re-implement for JSON before migrating Sprite Lab
   let startBlocks;
-  console.log(stringIsXml(startBlocksSource) ? 'xml' : 'json');
   if (stringIsXml(startBlocksSource)) {
     startBlocks = blockUtils.appendNewFunctions(
       startBlocksSource,
@@ -481,6 +481,5 @@ export function appendSharedFunctions(startBlocksSource, functionsXml) {
     appendProceduresToState(startBlocksSource);
     startBlocks = startBlocksSource;
   }
-  console.log({startBlocks: startBlocks});
   return startBlocks;
 }
