@@ -14873,6 +14873,14 @@ bg:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Блокове
   tutorial_intelinoaisign_string_detail_programming_languages: Блокове
+
+  tutorial_generationai_name: Поколението на ИИ
+  tutorial_generationai_longdescription: Присъединете се към новия Час на кодирането в Minecraft: Поколението на ИИ. Развийте изобретения с ИИ, като съчетавате решаване на проблеми, творчество и изчислително мислене. Научете основите на кодирането и създаването на отговорен ИИ, използвайки блокове или Python, за да направите по-добър ИИ за всички.
+  tutorial_generationai_string_detail_grades: 2 – 5 клас (възраст 7 – 10 години) 6 – 8 клас (11 – 13 години) 9+ клас (14+ години)
+  tutorial_generationai_string_platforms: Компютри (Windows PC, Mac), Android (Chromebook), iPad
+  tutorial_generationai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_programming_languages: Block, Python
+   
   school_not_found_heading: Не можахме да намерим училището ти. Моля, въведете повече
     информация.
   school_name: Име на училището
