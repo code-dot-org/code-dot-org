@@ -32,27 +32,36 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
     });
     // TODO: send email to stored address here
     setIsShowSuccess(true);
+    if (isShowSuccess) {
+      // Show a temporary alert; use i18n.emailRequestSubmitted()
+    }
   };
 
   const saveInputs = () => {
+    setIsSendInProgress(true);
     const potential_teacher_data = {
       name: name,
       email: email,
       receives_marketing: isMarketingChecked,
-      source_course_offering_id: unitId,
+      script_id: unitId,
     };
-    fetch('/potential_teacher', {
+    fetch('/potential_teachers', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(potential_teacher_data),
     })
       .then(response => {
         return response.json();
       })
       .then(() => {
+        sendEmail();
         onClose();
       })
       .catch(err => {
         setIsSendInProgress(false);
+        alert(i18n.unexpectedError());
         console.error(err);
       });
   };
@@ -80,7 +89,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
             <Heading3>{i18n.learnHowToHost()}</Heading3>
             {bodyText}
             <label className={style.typographyLabel}>
-              {i18n.yourNameCaps()}
+              {i18n.yourNameCaps() + '*'}
               <input
                 required
                 type="text"
@@ -91,7 +100,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
               />
             </label>
             <label className={style.typographyLabel}>
-              {i18n.yourEmailCaps()}
+              {i18n.yourEmailCaps() + '*'}
               <input
                 required
                 type="text"
@@ -128,11 +137,9 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
               text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
               onClick={() => {
                 saveInputs();
-                sendEmail();
               }}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
-            {isShowSuccess && i18n.success()}
           </div>
         </AccessibleDialog>
       )}
