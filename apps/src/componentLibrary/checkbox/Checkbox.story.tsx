@@ -8,6 +8,8 @@ export default {
   component: Checkbox,
 } as Meta;
 
+// just some text to create PR (DO NOT MERGE)
+
 //
 // TEMPLATE
 //
