@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-07 19:23:31 UTC",
+    "serialized_at": "2023-11-09 20:03:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1336,15 +1336,27 @@
           {
             "type": "teachingTip",
             "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the five levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Develop data abstraction using lists to store multiple elements. \n* Explain how the use of data abstraction manages complexity in the program.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g245e49e7a48_0_0)\n\n**Sample Response for Instructors**"
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830",
+        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
+      }
+    },
+    {
+      "key": "0dc1f1be-422f-4495-90f6-42c09d3df6f0",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n<a href=\"https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0dc1f1be-422f-4495-90f6-42c09d3df6f0",
         "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
       }
     },
