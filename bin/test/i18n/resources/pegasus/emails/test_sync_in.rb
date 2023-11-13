@@ -28,7 +28,7 @@ describe I18n::Resources::Pegasus::Emails::SyncIn do
     end
 
     context 'when the origin email file is .md' do
-      let(:origin_emails_file_subpath) {'public/test.md'}
+      let(:origin_emails_file_subpath) {'test.md'}
       let(:origin_emails_file_path) {CDO.dir('pegasus/emails', origin_emails_file_subpath)}
 
       it 'prepares i18n source file' do
