@@ -100,7 +100,13 @@ const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
-const DanceAiModal: React.FunctionComponent = () => {
+interface DanceAiModalProps {
+  playSound: (name: string) => void;
+}
+
+const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
+  playSound,
+}) => {
   const dispatch = useAppDispatch();
 
   // How many low-scoring results we show before the chosen one.
@@ -215,6 +221,8 @@ const DanceAiModal: React.FunctionComponent = () => {
         setInputs([...inputs, id]);
         setCurrentInputSlot(currentInputSlot + 1);
         setInputAddCount(inputAddCount + 1);
+
+        playSound('ai-select-emoji');
       }
     } else {
       // Remove item from inputs.
@@ -300,6 +308,19 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     return currentProgress;
   };
+
+  // Handle moments during generation when we should play a sound.
+  useEffect(() => {
+    if (mode === Mode.GENERATING) {
+      if (generatingProgress.subStep === 2) {
+        if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+          playSound('ai-generate-no');
+        } else {
+          playSound('ai-generate-yes');
+        }
+      }
+    }
+  }, [generatingProgress, mode, playSound]);
 
   // Animate through the generating or explanation process.
   useInterval(
