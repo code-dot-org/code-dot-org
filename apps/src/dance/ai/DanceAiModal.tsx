@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -148,6 +148,58 @@ const DanceAiModal: React.FunctionComponent = () => {
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
+  const getGeneratedEffect = useCallback((step: number) => {
+    if (step < BAD_GENERATED_RESULTS_COUNT) {
+      return generatedEffects.current.badEffects[step];
+    } else if (generatedEffects.current.goodEffect) {
+      return generatedEffects.current.goodEffect;
+    } else {
+      return undefined;
+    }
+  }, []);
+
+  const getScores = useCallback(
+    (useInputs: string[], step: number) => {
+      const effect = getGeneratedEffect(step);
+      if (effect) {
+        return getGeneratedEffectScores(useInputs, effect);
+      }
+
+      return [0, 0, 0];
+    },
+    [getGeneratedEffect]
+  );
+
+  // Calculates the minimum individual score
+  // (ie, a SINGLE emoji association with a foreground/background palette combination),
+  // and a maximum total score
+  // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
+  // Used to normalize and scale the data for easier differentiation between results by the user.
+  const calculateMinMax = useCallback(
+    (useInputs: string[]) => {
+      // The minimum individual score is selected across all generated effects (bad and good).
+      const minIndividualScore = Array.from(
+        Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
+      ).reduce((accumulator: number, currentValue: number) => {
+        const scores = getScores(useInputs, currentValue);
+        const min = Math.min(...scores);
+        return min < accumulator ? min : accumulator;
+      }, Infinity);
+
+      // By definition, the maximum total score must come from the "good" effect.
+      const goodEffectScores = getScores(
+        useInputs,
+        BAD_GENERATED_RESULTS_COUNT
+      );
+      const maxTotalScore = goodEffectScores.reduce(
+        (sum, score) => (sum += score)
+      );
+
+      return {minIndividualScore, maxTotalScore};
+    },
+    [getScores]
+  );
+
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === Mode.INITIAL) {
@@ -165,13 +217,15 @@ const DanceAiModal: React.FunctionComponent = () => {
           ),
           goodEffect: JSON.parse(currentValue),
         };
+
+        minMaxAssociations.current = calculateMinMax(currentInputs);
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
         }, 500);
       }
     }
-  }, [currentAiModalField, mode]);
+  }, [currentAiModalField, mode, calculateMinMax]);
 
   const getLabels = () => {
     const tempWorkspace = new Workspace();
@@ -326,25 +380,8 @@ const DanceAiModal: React.FunctionComponent = () => {
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
-  };
 
-  const getGeneratedEffect = (step: number) => {
-    if (step < BAD_GENERATED_RESULTS_COUNT) {
-      return generatedEffects.current.badEffects[step];
-    } else if (generatedEffects.current.goodEffect) {
-      return generatedEffects.current.goodEffect;
-    } else {
-      return undefined;
-    }
-  };
-
-  const getScores = (step: number) => {
-    const effect = getGeneratedEffect(step);
-    if (effect) {
-      return getGeneratedEffectScores(inputs, effect);
-    }
-
-    return [0, 0, 0];
+    minMaxAssociations.current = calculateMinMax(inputs);
   };
 
   const handleConvertBlocks = () => {
@@ -493,37 +530,6 @@ const DanceAiModal: React.FunctionComponent = () => {
   const previewSizeSmall = 90;
 
   const labels = getLabels();
-
-  // Calculates the minimum individual score
-  // (ie, a SINGLE emoji association with a foreground/background palette combination),
-  // and a maximum total score
-  // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
-  // Used to normalize and scale the data for easier differentiation between results by the user.
-  const calculateMinMax = () => {
-    // The minimum individual score is selected across all generated effects (bad and good).
-    const minIndividualScore = Array.from(
-      Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
-    ).reduce((accumulator: number, currentValue: number) => {
-      const scores = getScores(currentValue);
-      const min = Math.min(...scores);
-      return min < accumulator ? min : accumulator;
-    }, Infinity);
-
-    // By definition, the maximum total score must come from the "good" effect.
-    const goodEffectScores = getScores(BAD_GENERATED_RESULTS_COUNT);
-    const maxTotalScore = goodEffectScores.reduce(
-      (sum, score) => (sum += score)
-    );
-
-    return {minIndividualScore, maxTotalScore};
-  };
-
-  if (
-    generatedEffects.current.goodEffect &&
-    generatedEffects.current.badEffects.length === BAD_GENERATED_RESULTS_COUNT
-  ) {
-    minMaxAssociations.current = calculateMinMax();
-  }
 
   const text =
     mode === Mode.SELECT_INPUTS
@@ -715,7 +721,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             className={moduleStyles.scoreArea}
           >
             <DanceAiScore
-              scores={getScores(generatingProgress.step)}
+              scores={getScores(inputs, generatingProgress.step)}
               minMax={minMaxAssociations.current}
               colors={
                 generatingProgress.subStep === 1
@@ -757,7 +763,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
                     <DanceAiScore
-                      scores={getScores(index)}
+                      scores={getScores(inputs, index)}
                       minMax={minMaxAssociations.current}
                       colors={
                         index < BAD_GENERATED_RESULTS_COUNT
