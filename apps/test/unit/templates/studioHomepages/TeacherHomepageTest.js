@@ -139,9 +139,14 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
+  it('does not render CensusTeacherBanner if showCensusBanner is false', () => {
+    const wrapper = setUp({showCensusBanner: false});
+    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
+  });
+
   it('renders CensusTeacherBanner if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
+    assert(wrapper.find('CensusTeacherBanner').exists());
   });
 
   /*
