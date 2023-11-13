@@ -715,7 +715,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                       className={moduleStyles.blockPreview}
                     >
                       {currentGeneratedEffect && (
-                        <AiBlockPreview effect={currentGeneratedEffect} />
+                        <AiBlockPreview results={currentGeneratedEffect} />
                       )}
                     </div>
                   )}
