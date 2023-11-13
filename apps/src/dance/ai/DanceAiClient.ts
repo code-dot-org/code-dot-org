@@ -26,18 +26,11 @@ const cachedWeightsMappings: {[key in FieldKey]: CachedWeightsMapping} = {
  * the score for each returned value.
  * @param {array} selectedEmojis: the list of three emojis the user selected
  * @param {ChooseEffectsQuality} quality: whether we want good or bad scoring effects
- * @returns: an object containing the effects that were chosen, and their scores, for example:
+ * @returns {GeneratedEffect} an object containing the effects that were chosen, for example:
  * {
- *   "results: {
- *     "backgroundEffect": "sparkles",
- *     "backgroundColor": "cool",
- *     "foregroundEffect": "bubbles"
- *   },
- *   "scores": {
- *     "backgroundEffect": 0.1,
- *     "backgroundColor":  0.2,
- *     "foregroundEffect": 0.3
- *   }
+ *   "backgroundEffect": "sparkles",
+ *   "backgroundColor": "cool",
+ *   "foregroundEffect": "bubbles"
  * }
  */
 export function chooseEffects(
