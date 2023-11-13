@@ -9,3 +9,5 @@ question 'Shows the name of the page in a new tab'
 answer '&lt;title&gt;'
 question 'Tells the computer that this document is an HTML file'
 answer '&lt;!DOCTYPE html&gt;'
+
+allow_multiple_attempts true

@@ -15,14 +15,15 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
   onDismissRedirectWarning,
-  dismissedRedirectWarning
+  dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   assignmentCourseVersionShape,
-  sectionForDropdownShape
+  sectionForDropdownShape,
 } from '@cdo/apps/templates/teacherDashboard/shapes';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -47,7 +48,7 @@ class CourseOverview extends Component {
     sectionsInfo: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
+        name: PropTypes.string.isRequired,
       })
     ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -67,7 +68,7 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -80,7 +81,7 @@ class CourseOverview extends Component {
       analyticsReporter.sendEvent(
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
-          'unit group name': props.name
+          'unit group name': props.name,
         }
       );
     }
@@ -111,14 +112,14 @@ class CourseOverview extends Component {
       url: `/api/v1/user_scripts/${firstScriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true})
+      data: JSON.stringify({version_warning_dismissed: true}),
     });
   };
 
   onCloseRedirectDialog = () => {
     onDismissRedirectDialog(this.props.name);
     this.setState({
-      showRedirectDialog: false
+      showRedirectDialog: false,
     });
   };
 
@@ -147,7 +148,7 @@ class CourseOverview extends Component {
       showAssignButton,
       userId,
       isSignedIn,
-      participantAudience
+      participantAudience,
     } = this.props;
 
     const showNotification =
@@ -192,7 +193,7 @@ class CourseOverview extends Component {
             viewAs={viewAs}
             firehoseAnalyticsId={{
               user_id: userId,
-              unit_group_id: id
+              unit_group_id: id,
             }}
           />
         )}
@@ -253,31 +254,31 @@ class CourseOverview extends Component {
 
 const styles = {
   main: {
-    width: '100%'
+    width: '100%',
   },
   description: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   titleWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   title: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   versionWrapper: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 15,
-    color: color.charcoal
+    color: color.charcoal,
   },
   versionDropdown: {
-    marginBottom: 13
-  }
+    marginBottom: 13,
+  },
 };
 
 export const UnconnectedCourseOverview = CourseOverview;
@@ -292,5 +293,5 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-  announcements: state.announcements || []
+  announcements: state.announcements || [],
 }))(CourseOverview);

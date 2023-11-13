@@ -99,13 +99,13 @@ Run one feature in one saucelabs browser against your local machine with html ou
 
 `./runner.rb -l -f features/big_game_remix.feature -c Chrome --html`
 
-Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect and api_key for eyes testing described in See Also below)
 
 `./runner.rb -l -f features/angle_helper.feature -c Chrome --html --eyes`
 
 ## Tips
 
-- If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).
+- If you're new to [Cucumber](https://cucumber.io), read about [Cucumber scenarios](https://cucumber.io/docs/guides/overview/), especially the keywords [Given When Then](https://cucumber.io/docs/gherkin/reference/).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
 - If you're missing data locally, try running `bundle exec rake seed:ui_test` from the dashboard directory
 

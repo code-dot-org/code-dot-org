@@ -195,8 +195,8 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
-  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: nil, response: :forbidden
-  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: nil, response: :redirect
+  test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :teacher, response: :success
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :student, response: :forbidden
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
@@ -215,5 +215,12 @@ class SectionsControllerTest < ActionController::TestCase
 
     get :new, params: {loginType: 'word', participantType: 'student'}
     assert_response :success
+  end
+
+  test 'returns forbidden if requested edit section does not belong to teacher' do
+    sign_in @teacher
+    other_teacher_section = create :section
+    get :edit, params: {id: other_teacher_section.id}
+    assert_response :forbidden
   end
 end

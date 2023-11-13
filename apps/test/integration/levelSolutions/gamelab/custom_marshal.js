@@ -26,6 +26,6 @@ module.exports = {
         const debugOutput = document.getElementById('debug-output').textContent;
         assert.notInclude(debugOutput, 'function');
       }
-    )
-  ]
+    ),
+  ],
 };

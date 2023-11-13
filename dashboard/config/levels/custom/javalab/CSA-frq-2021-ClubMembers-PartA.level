@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:48:45.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2021-ClubMembers",
+    "long_instructions": "##ClubMembers FRQ (Part A)\r\n\r\nA high school club maintains information about its members in a `MemberInfo` object. A `MemberInfo` object stores a club member’s name, year of graduation, and whether or not the club member is in _good standing_. A member who is in good standing has fulfilled all the responsibilities of club membership. \r\n\r\nA partial declaration of the `MemberInfo` class is shown below. \r\n\r\n```\r\npublic class MemberInfo \r\n{ \r\n\t/** Constructs a MemberInfo object for the club member with name name, \r\n     * graduation year gradYear, and standing hasGoodStanding. \r\n     */ \r\n    public MemberInfo(String name, int gradYear, boolean hasGoodStanding) \r\n    { /* implementation not shown */ } \r\n    \r\n    /** Returns the graduation year of the club member. */ \r\n    public int getGradYear() \r\n    { /* implementation not shown */ } \r\n    \r\n    /** Returns true if the member is in good standing and false otherwise. */ \r\n    public boolean inGoodStanding() \r\n    { /* implementation not shown */ } \r\n    \r\n    // There may be instance variables, constructors, and methods that are not shown. \r\n} \r\n```\r\n\r\n<br>\r\n\r\nThe `ClubMembers` class maintains a list of current club members. \r\n\r\nWrite the `ClubMembers` method `addMembers`, which takes two parameters. The first parameter is a `String` array containing the names of new club members to be added. The second parameter is the graduation year of all the new club members. The method adds the new members to the `memberList` instance variable. The names can be added in any order. All members added are initially in good standing and share the same graduation year, `gradYear`. \r\n\r\nComplete the `addMembers` method. ",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:48:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

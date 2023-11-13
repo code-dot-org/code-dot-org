@@ -66,11 +66,11 @@ module Pd
     end
 
     def self.get_form_id_for_subjects_and_day(subjects, day)
-      subjects.map do |subject|
+      subjects.filter_map do |subject|
         get_form_id_for_subject_and_day subject, day
       rescue
         nil
-      end.compact
+      end
     end
 
     def self.get_form_id_for_subject_and_day(subject, day)
@@ -95,9 +95,7 @@ module Pd
       [:user_id, :pd_workshop_id, :day]
     end
 
-    private
-
-    def day_for_subject
+    private def day_for_subject
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
         errors.add(:day, "Day #{day} is not valid for workshop subject #{pd_workshop.subject}")
       end

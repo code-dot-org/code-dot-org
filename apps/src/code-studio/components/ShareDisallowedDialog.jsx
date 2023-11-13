@@ -6,12 +6,14 @@ import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {hideShareDialog} from './shareDialogRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    hideShareDialog: PropTypes.func.isRequired
+    hideShareDialog: PropTypes.func.isRequired,
   };
+
   render() {
     return (
       <BaseDialog
@@ -35,7 +37,7 @@ class ShareDisallowedDialog extends Component {
               __useDeprecatedTag
               href={`/users/sign_up?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
         </div>
@@ -47,11 +49,11 @@ class ShareDisallowedDialog extends Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,
@@ -64,19 +66,19 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex'
+    display: 'flex',
   },
   bottom: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 
 export default connect(
   state => ({
-    isOpen: state.shareDialog.isOpen
+    isOpen: state.shareDialog.isOpen,
   }),
   {hideShareDialog}
 )(ShareDisallowedDialog);

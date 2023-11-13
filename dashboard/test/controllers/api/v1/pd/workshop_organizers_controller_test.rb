@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopOrganizersControllerTest < ActionController::TestCase
   test_user_gets_response_for :index, response: :success, user: :workshop_admin
 
   [:teacher, :workshop_organizer, :program_manager].each do |user_type|
@@ -25,12 +25,12 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCa
         name: organizer.name,
         email: organizer.email
       }.stringify_keys
-      assert_equal expected, response.find {|o| o['id'] == organizer.id}
+      assert_equal(expected, response.find {|o| o['id'] == organizer.id})
     end
 
     # No non-organizers returned
     non_organizers.each do |non_organizer|
-      refute response.any? {|o| o['id'] == non_organizer.id}
+      refute(response.any? {|o| o['id'] == non_organizer.id})
     end
   end
 end

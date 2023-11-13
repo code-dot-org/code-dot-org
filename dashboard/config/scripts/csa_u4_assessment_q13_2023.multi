@@ -27,3 +27,5 @@ This is applied as follows:
 !a && !b && !c   // || becomes &&
 ```
 MARKDOWN
+
+allow_multiple_attempts true

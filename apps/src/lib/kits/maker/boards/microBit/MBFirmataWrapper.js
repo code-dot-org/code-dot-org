@@ -4,7 +4,7 @@ import {isWebSerialPort} from '../../util/boardUtils';
 
 export const ACCEL_EVENT_ID = 13;
 
-export default class MicrobitFirmataWrapper extends MBFirmataClient {
+export default class MicroBitFirmataWrapper extends MBFirmataClient {
   constructor(portType) {
     super(portType);
     this.digitalCallbacks = [];
@@ -38,7 +38,7 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
       return super.setSerialPort(port);
     } else {
       // Use the given port. Assume the port has been opened by the caller.
-      // This branch is for WebSerial pathway - only opening/closing port for now.
+      // This branch is for WebSerial pathway
       this.myPort = port; // port is a WebSerialPortWrapper
       this.serialPortWebSerial = port.port;
       this.myPort.on('data', this.dataReceived.bind(this));

@@ -15,7 +15,7 @@ export default class IntegerDropdown extends React.Component {
     options: PropTypes.arrayOf(PropTypes.number).isRequired,
     style: PropTypes.object,
     disabled: PropTypes.bool,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   onChange = selected => this.props.onChange(selected ? selected.value : null);

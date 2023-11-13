@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 
 export default class Activity extends Component {
   static propTypes = {
-    activity: activityShape
+    activity: activityShape,
   };
 
   render() {
@@ -19,7 +19,7 @@ export default class Activity extends Component {
           {activity.duration > 0 && (
             <span>
               {i18n.activityHeaderTime({
-                activityDuration: activity.duration
+                activityDuration: activity.duration,
               })}
             </span>
           )}
@@ -34,6 +34,6 @@ export default class Activity extends Component {
 
 const styles = {
   activityHeader: {
-    color: color.purple
-  }
+    color: color.purple,
+  },
 };

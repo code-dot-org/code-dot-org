@@ -1,0 +1,36 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-06-21T20:03:43.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA-frq-2023-BoxOfCandy",
+    "long_instructions": "##BoxOfCandy FRQ (Part B)\r\n\r\nWrite the `removeNextByFlavor` method, which attempts to remove and return one piece of candy from the box. The piece of candy to be removed is the first piece of candy with a flavor equal to the parameter `flavor` that is encountered while traversing the candy box in the following order: the last row of the box is traversed from left to right, then the next-to-last row of the box is traversed from left to right, etc., until either a piece of candy with the desired flavor is found or until the entire candy box has been searched. \r\n\r\nIf the `removeNextByFlavor` method finds a `Candy` object with the desired flavor, the corresponding `box` element is assigned `null`, all other `box` elements are unchanged, and the removed `Candy` object is returned. Otherwise, `box` is unchanged and the method returns `null`. \r\n\r\nThe following examples show three consecutive calls to the `removeNextByFlavor` method. The traversal of the candy box always begins in the last row and first column of the box. \r\n\r\nThe following grid shows the contents of `box` before any of the `removeNextByFlavor` method calls. \r\n\r\n![](https://images.code.org/b1cb0f8842854e6d19ac23b49f96a082-image-1687365171951.32.48 PM.png)\r\n\r\nThe method call `removeNextByFlavor(\"cherry\")` removes and returns the `Candy` object located in row `2` and column `0`. The following grid shows the updated contents of `box`.\r\n\r\n![](https://images.code.org/29b7c7e8730c10734f5f7b9308e6210b-image-1687365185411.33.02 PM.png)\r\n\r\nThe method call `removeNextByFlavor(\"lime\")` removes and returns the `Candy` object located in row `1` and column `3`. The following grid shows the updated contents of `box`. \r\n\r\n![](https://images.code.org/72577f51250cfacfe26fdd40f55cd9fd-image-1687365197721.33.14 PM.png)\r\n\r\nThe method call `removeNextByFlavor(\"grape\")` returns `null` because no grape-flavored candy is found. The contents of `box` are unchanged. \r\n\r\nComplete the `removeNextByFlavor` method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "BoxOfCandy.java": {
+        "text": "public class BoxOfCandy \n{ \n  /** box contains at least one row and is initialized in the constructor. */ \n  private Candy[][] box; \n  \n  /** \n    * Moves one piece of candy in column col, if necessary and possible, so that the box \n    * element in row 0 of column col contains a piece of candy, as described in part (a). \n    * Returns false if there is no piece of candy in column col and returns true otherwise. \n    * Precondition: col is a valid column index in box. \n    */ \n  public boolean moveCandyToFirstRow(int col) \n  { /* to be implemented in part (a) */ } \n  \n  /** \n    * Removes from box and returns a piece of candy with flavor specified by the parameter, or \n    * returns null if no such piece is found, as described in part (b) \n    */ \n  public Candy removeNextByFlavor(String flavor) \n  { /* to be implemented in part (b) */ } \n  \n  // There may be instance variables, constructors, and methods that are not shown. \n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Candy.java": {
+        "text": "public class Candy\n{\n    private String flavor;\n\n    /** Constructor initializes Candy object */\n    public Candy(String flavor)\n    {\n        this.flavor = flavor;\n    }\n\n    /** Returns a String representing the flavor of this piece of candy */ \n    public String getFlavor()\n    {\n        return flavor;\n    }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "BoxOfCandyTest.java": {
+        "text": "import static org.junit.jupiter.api.Assertions.*;\n\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.TestMethodOrder;\nimport org.junit.jupiter.api.MethodOrderer.OrderAnnotation;\nimport org.junit.jupiter.api.Order;\n\n\n@TestMethodOrder(OrderAnnotation.class)\n@DisplayName(\"BoxOfCandy Test\")\npublic class BoxOfCandyTest\n{\n  \n    private static Candy[][] getShallowCopy(Candy[][] box)\n    {\n        Candy[][] shallowCopy = new Candy[box.length][box[0].length];\n        \n        for(int r = 0; r < shallowCopy.length; r++)\n            for(int c = 0; c < shallowCopy[0].length; c++)\n                shallowCopy[r][c] = box[r][c];\n        \n        return shallowCopy;\n    }\n    \n    // references must be to exact same objects\n    public static boolean equals(Candy[][] one, Candy[][] two)\n    {\n        if(one.length != two.length || one[0].length != two[0].length)\n            return false;\n        \n        for(int r = 0; r < one.length; r++)\n            for(int c = 0; c < one[0].length; c++)\n                if(one[r][c] != two[r][c])\n                    return false;\n        \n        return true;\n    }\n   \n    \n    @Test\n    @Order(1)\n    @DisplayName(\"Test 2: testRemoveNextFlavor\")\n    public void testRemoveNextFlavor()\n    {\n        BoxOfCandy boc = new BoxOfCandy();\n        boc.box = new Candy[3][5];\n        boc.box[0][0] = new Candy(\"lime\");\n        boc.box[0][1] = new Candy(\"lime\");\n        boc.box[0][3] = new Candy(\"lemon\");\n        boc.box[1][0] = new Candy(\"orange\");\n        boc.box[1][3] = new Candy(\"lime\");\n        boc.box[1][4] = new Candy(\"lime\");\n        boc.box[2][0] = new Candy(\"cherry\");\n        boc.box[2][2] = new Candy(\"lemon\");\n        boc.box[2][4] = new Candy(\"orange\");\n        \n        Candy[][] expectedBox = getShallowCopy(boc.box);\n        Candy expectedResult = expectedBox[2][0];\n        expectedBox[2][0] = null;\n        \n        assertTrue(boc.removeNextByFlavor(\"cherry\") == expectedResult); // == intentional\n        assertTrue(equals(expectedBox, boc.box));\n        \n        expectedResult = expectedBox[1][3];\n        expectedBox[1][3] = null;\n        \n        assertTrue(boc.removeNextByFlavor(\"lime\") == expectedResult);\n        assertTrue(equals(expectedBox, boc.box));\n        \n        expectedResult = null;\n        \n        assertTrue(boc.removeNextByFlavor(\"grape\") == expectedResult);\n        assertTrue(equals(expectedBox, boc.box));\n    }\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-06-21 20:03:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 16:39:52 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

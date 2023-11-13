@@ -87,8 +87,8 @@ class RedshiftImport
     constraint_column_ids_list = result[0]['constraint_column_ids']
 
     # Strip the curly braces off.
-    constraint_column_ids_list.slice!("\{")
-    constraint_column_ids_list.slice!("\}")
+    constraint_column_ids_list.slice!("{")
+    constraint_column_ids_list.slice!("}")
 
     # Get the names of the columns that a primary key is composed of.
     column_query = <<~SQL
@@ -142,8 +142,8 @@ class RedshiftImport
       ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
     SQL
     redshift_client.exec(query)
-  rescue PG::UndefinedTable => undefined_table_error
-    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{undefined_table_error}"
+  rescue PG::UndefinedTable => exception
+    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{exception}"
   end
 
   # Get name and columns of primary key constraint for a specific table, if constraint exists.

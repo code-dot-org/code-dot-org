@@ -39,7 +39,7 @@ SCRIPT_NAMES = %w(
   express-2022
 ).freeze
 
-$level_names_to_be_updated = Unit.where(name: SCRIPT_NAMES).map(&:levels).flatten.map(&:name).to_set
+$level_names_to_be_updated = Unit.where(name: SCRIPT_NAMES).map(&:levels).flatten.to_set(&:name)
 
 def level_to_be_updated?(level_name)
   $level_names_to_be_updated.include? level_name
@@ -89,10 +89,10 @@ def update_behavior_blocks_ids
     raw_level_data = xml.root.to_s
     File.write(path, raw_level_data)
     updated_levels += 1
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in level: #{path}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in level: #{path}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 

@@ -7,7 +7,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import reducers from '@cdo/apps/p5lab/reducers';
@@ -39,9 +39,9 @@ describe('GameLab', () => {
         level: {
           editCode: 'foo',
           startInAnimationTab: true,
-          codeFunctions: {}
+          codeFunctions: {},
         },
-        containerId: container.id
+        containerId: container.id,
       };
     });
     afterEach(() => document.body.removeChild(container));
@@ -57,7 +57,7 @@ describe('GameLab', () => {
         init: sinon.spy(),
         isUsingBlockly: () => false,
         loadLibraries: () => Promise.resolve(),
-        loadLibraryBlocks: sinon.spy()
+        loadLibraryBlocks: sinon.spy(),
       };
     });
 
@@ -105,8 +105,8 @@ describe('GameLab', () => {
               ...config,
               level: {
                 ...config.level,
-                editCode: false
-              }
+                editCode: false,
+              },
             })
           ).not.to.throw;
           expect(() => instance.init(config)).not.to.throw;
@@ -124,8 +124,8 @@ describe('GameLab', () => {
               ...config,
               level: {
                 ...config.level,
-                expandDebugger: true
-              }
+                expandDebugger: true,
+              },
             });
             expect(isDebuggerOpen(getStore().getState())).to.be.true;
           });

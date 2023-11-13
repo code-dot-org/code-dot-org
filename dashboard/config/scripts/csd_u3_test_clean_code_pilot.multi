@@ -8,3 +8,5 @@ wrong 'Use watchers to keep track of variable and sprite property values'
 right 'Give variables and functions names that make sense'
 wrong 'Declare variables outside of the draw loop, but update them inside the draw loop'
 
+
+allow_multiple_attempts true

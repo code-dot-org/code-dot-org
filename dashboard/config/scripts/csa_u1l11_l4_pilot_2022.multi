@@ -27,3 +27,5 @@ The following code segment has a logic error, but the programmer is having troub
 
 Which of the following would be MOST helpful to print?
 MARKDOWN
+
+allow_multiple_attempts true

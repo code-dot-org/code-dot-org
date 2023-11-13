@@ -13,7 +13,7 @@ color = colors[env.to_sym] || :white
 
 IRB.conf[:PROMPT] ||= {}
 IRB.conf[:PROMPT][:RAILS_APP] = {
-  PROMPT_I: "[#{env.colorize(color)}] #{app} > ",
+  PROMPT_I: "[#{env.to_s.colorize(color)}] #{app} > ",
   PROMPT_N: nil,
   PROMPT_S: nil,
   PROMPT_C: nil,

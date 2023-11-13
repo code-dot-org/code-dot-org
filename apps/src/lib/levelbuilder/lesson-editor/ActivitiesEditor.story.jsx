@@ -3,25 +3,25 @@ import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/Activitie
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   initActivities,
-  initLevelSearching
+  initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
-  initResources
+  initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
-  initVocabularies
+  initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {Provider} from 'react-redux';
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
-  searchOptions
+  searchOptions,
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 export default {
   title: 'ActivitiesEditor',
-  component: ActivitiesEditor
+  component: ActivitiesEditor,
 };
 
 const resourcesEditor = createResourcesReducer('lessonResource');
@@ -30,14 +30,14 @@ const createStoreWithLessonPlan = () => {
   registerReducers({
     ...reducers,
     resources: resourcesEditor,
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
   });
   const store = createStoreWithReducers();
   store.dispatch(initActivities(sampleActivities));
   store.dispatch(
     initLevelSearching({
       searchOptions: searchOptions,
-      programmingEnvironments: []
+      programmingEnvironments: [],
     })
   );
   store.dispatch(initResources('lessonResource', []));
@@ -49,14 +49,14 @@ const createStoreWithoutLessonPlan = () => {
   registerReducers({
     ...reducers,
     resources: resourcesEditor,
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
   });
   const store = createStoreWithReducers();
   store.dispatch(initActivities([sampleActivityForLessonWithoutLessonPlan]));
   store.dispatch(
     initLevelSearching({
       searchOptions: searchOptions,
-      programmingEnvironments: []
+      programmingEnvironments: [],
     })
   );
   store.dispatch(initResources('lessonResource', []));
@@ -93,7 +93,7 @@ const TemplateStoreWithoutLessonPlan = args => (
 export const ForLessonWithLessonPlan = TemplateStoreWithLessonPlan.bind({});
 ForLessonWithLessonPlan.args = {
   hasLessonPlan: true,
-  allowMajorCurriculumChanges: true
+  allowMajorCurriculumChanges: true,
 };
 
 export const ForLessonWithoutLessonPlan = TemplateStoreWithoutLessonPlan.bind(
@@ -101,7 +101,7 @@ export const ForLessonWithoutLessonPlan = TemplateStoreWithoutLessonPlan.bind(
 );
 ForLessonWithoutLessonPlan.args = {
   hasLessonPlan: false,
-  allowMajorCurriculumChanges: true
+  allowMajorCurriculumChanges: true,
 };
 
 export const WhenMajorChangesNotAllowed = TemplateStoreWithoutLessonPlan.bind(
@@ -109,5 +109,5 @@ export const WhenMajorChangesNotAllowed = TemplateStoreWithoutLessonPlan.bind(
 );
 WhenMajorChangesNotAllowed.args = {
   hasLessonPlan: true,
-  allowMajorCurriculumChanges: false
+  allowMajorCurriculumChanges: false,
 };

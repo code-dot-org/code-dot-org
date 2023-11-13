@@ -4,10 +4,11 @@ import i18n from '@cdo/locale';
 import * as assets from '../code-studio/assets';
 import PaneHeader, {
   PaneSection,
-  PaneButton
+  PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import {RecordingFileType} from '../code-studio/components/recorders';
+import color from '@cdo/apps/util/color';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -15,14 +16,19 @@ export default function PreviewPaneHeader({
   toggleVisualizationCollapsed,
   disableAssetManagerButton = false,
   showAssetManagerButton = false,
-  showPreviewTitle = true
+  showPreviewTitle = true,
 }) {
   return (
-    <PaneHeader hasFocus style={{display: 'flex'}}>
+    <PaneHeader hasFocus style={{display: 'flex'}} isOldPurpleColor>
       <PaneSection className={'pane-header-section pane-header-section-left'}>
         <PaneButton
           headerHasFocus
-          icon={<CollapserIcon isCollapsed={isCollapsed} />}
+          icon={
+            <CollapserIcon
+              isCollapsed={isCollapsed}
+              style={styles.collapserIcon}
+            />
+          }
           onClick={toggleVisualizationCollapsed}
           label=""
           isRtl={false}
@@ -59,7 +65,7 @@ export default function PreviewPaneHeader({
             onClick={() =>
               assets.showAssetManager(null, null, null, {
                 customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .png',
-                recordingFileType: RecordingFileType.WAV
+                recordingFileType: RecordingFileType.WAV,
               })
             }
             iconClass="fa fa-upload"
@@ -79,7 +85,7 @@ PreviewPaneHeader.propTypes = {
   showAssetManagerButton: PropTypes.bool,
   disableAssetManagerButton: PropTypes.bool,
   showPreviewTitle: PropTypes.bool,
-  toggleVisualizationCollapsed: PropTypes.func
+  toggleVisualizationCollapsed: PropTypes.func,
 };
 
 const styles = {
@@ -87,7 +93,10 @@ const styles = {
     marginLeft: -4, // Adjust icon position to align with instructions collapser icon.
     backgroundColor: 'transparent',
     ':hover': {
-      backgroundColor: 'transparent'
-    }
-  }
+      backgroundColor: 'transparent',
+    },
+  },
+  collapserIcon: {
+    color: color.white,
+  },
 };

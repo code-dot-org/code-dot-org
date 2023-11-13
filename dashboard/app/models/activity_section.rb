@@ -128,9 +128,7 @@ class ActivitySection < ApplicationRecord
     }.stringify_keys
   end
 
-  private
-
-  def fetch_script_level(sl_data)
+  private def fetch_script_level(sl_data)
     # Do not try to find the script level id if it was moved here from another
     # activity section. Create a new one here, and let the old script level be
     # destroyed when we update the other activity section.

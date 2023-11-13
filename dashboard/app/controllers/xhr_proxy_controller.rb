@@ -28,6 +28,7 @@ class XhrProxyController < ApplicationController
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     api.amadeus.com
+    api.arasaac.org
     api.blizzard.com
     api.census.gov
     api.coinlayer.com
@@ -81,7 +82,6 @@ class XhrProxyController < ApplicationController
     dataservice.accuweather.com
     deckofcardsapi.com
     distanza.org
-    dweet.io
     githubusercontent.com
     googleapis.com
     grobchess.com
@@ -136,8 +136,8 @@ class XhrProxyController < ApplicationController
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError => e
-      render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
+    rescue ArgumentError, OpenSSL::Cipher::CipherError => exception
+      render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{exception.message}"
       return
     end
 

@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import AssignmentSelector, {
-  getCourseOfferingsByCategory
+  getCourseOfferingsByCategory,
 } from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
@@ -22,8 +22,8 @@ const defaultProps = {
     code: 'asdf',
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null
-  }
+    unitId: null,
+  },
 };
 
 const hiddenSectionProps = {
@@ -41,8 +41,8 @@ const hiddenSectionProps = {
     code: 'asdf',
     courseOfferingId: 2,
     courseVersionId: 4,
-    unitId: 6
-  }
+    unitId: 6,
+  },
 };
 
 const newSectionProps = {
@@ -61,8 +61,8 @@ const newSectionProps = {
     unitId: null,
     courseOfferingId: null,
     courseVersionId: null,
-    courseId: null
-  }
+    courseId: null,
+  },
 };
 
 describe('AssignmentSelector', () => {
@@ -75,7 +75,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(Object.keys(courseOfferingsByCategory), [
       'hoc',
       'full_course',
-      'csf'
+      'csf',
     ]);
     assert.deepEqual(
       courseOfferingsByCategory['full_course'].map(s => s.display_name),
@@ -103,7 +103,7 @@ describe('AssignmentSelector', () => {
       'full_course',
       'csf',
       'self_paced_pl',
-      'virtual_pl'
+      'virtual_pl',
     ]);
     assert.deepEqual(
       courseOfferingsByCategory['full_course'].map(s => s.display_name),
@@ -131,11 +131,10 @@ describe('AssignmentSelector', () => {
   it('filters out unused course offering categories', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     assert.equal(wrapper.find('optgroup').length, 3);
-    assert.deepEqual(wrapper.find('optgroup').map(s => s.props().label), [
-      'Full Courses',
-      'CS Fundamentals',
-      'Hour of Code'
-    ]);
+    assert.deepEqual(
+      wrapper.find('optgroup').map(s => s.props().label),
+      ['Full Courses', 'CS Fundamentals', 'Hour of Code']
+    );
   });
 
   it('defaults to just course offering dropdown with no selection when no section is provided', () => {
@@ -145,7 +144,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
       courseVersionId: null,
-      unitId: null
+      unitId: null,
     });
   });
 
@@ -159,7 +158,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 5
+      unitId: 5,
     });
   });
 
@@ -171,7 +170,7 @@ describe('AssignmentSelector', () => {
           ...defaultProps.section,
           courseOfferingId: 2,
           courseVersionId: 4,
-          unitId: 6
+          unitId: 6,
         }}
       />
     );
@@ -179,7 +178,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 6
+      unitId: 6,
     });
   });
 
@@ -188,17 +187,20 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('option').length, 9);
 
-    assert.deepEqual(wrapper.find('option').map(option => option.text()), [
-      '',
-      'Decide later',
-      'Computer Science A',
-      'Computer Science Discoveries',
-      'Course A',
-      'Hello World',
-      'Poem Art',
-      'Artist',
-      'Flappy'
-    ]);
+    assert.deepEqual(
+      wrapper.find('option').map(option => option.text()),
+      [
+        '',
+        'Decide later',
+        'Computer Science A',
+        'Computer Science Discoveries',
+        'Course A',
+        'Hello World',
+        'Poem Art',
+        'Artist',
+        'Flappy',
+      ]
+    );
   });
 
   it('shows unit dropdown after selecting course offering', () => {
@@ -210,15 +212,14 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 2);
     const secondary = wrapper.find('select').at(1);
     assert.equal(secondary.find('option').length, 3);
-    assert.deepEqual(secondary.find('option').map(option => option.text()), [
-      'Unit 1',
-      'Unit 2',
-      ''
-    ]);
+    assert.deepEqual(
+      secondary.find('option').map(option => option.text()),
+      ['Unit 1', 'Unit 2', '']
+    );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 5
+      unitId: 5,
     });
   });
 
@@ -235,7 +236,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 3
+      unitId: 3,
     });
   });
 
@@ -249,16 +250,11 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: 5
+      unitId: 5,
     });
 
     assert.equal(
-      wrapper
-        .find('select')
-        .at(0)
-        .find('option')
-        .at(0)
-        .props().value,
+      wrapper.find('select').at(0).find('option').at(0).props().value,
       '__noAssignment__'
     );
     wrapper
@@ -269,7 +265,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
       courseVersionId: null,
-      unitId: null
+      unitId: null,
     });
   });
 
@@ -281,7 +277,7 @@ describe('AssignmentSelector', () => {
           ...defaultProps.section,
           courseOfferingId: 2,
           courseVersionId: 3,
-          unitId: 3
+          unitId: 3,
         }}
       />
     );
@@ -296,7 +292,7 @@ describe('AssignmentSelector', () => {
           ...hiddenSectionProps.section,
           courseOfferingId: null,
           courseVersionId: null,
-          unitId: null
+          unitId: null,
         }}
       />
     );
@@ -309,17 +305,20 @@ describe('AssignmentSelector', () => {
       let wrapper = shallow(<AssignmentSelector {...defaultProps} />);
       assert.equal(wrapper.find('select').length, 1);
       assert.equal(wrapper.find('option').length, 9);
-      assert.deepEqual(wrapper.find('option').map(option => option.text()), [
-        '',
-        'Decide later',
-        'Computer Science A',
-        'Computer Science Discoveries',
-        'Course A',
-        'Hello World',
-        'Poem Art',
-        'Artist',
-        'Flappy'
-      ]);
+      assert.deepEqual(
+        wrapper.find('option').map(option => option.text()),
+        [
+          '',
+          'Decide later',
+          'Computer Science A',
+          'Computer Science Discoveries',
+          'Course A',
+          'Hello World',
+          'Poem Art',
+          'Artist',
+          'Flappy',
+        ]
+      );
     });
 
     it('means selecting nothing', () => {
@@ -331,7 +330,7 @@ describe('AssignmentSelector', () => {
       assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
         courseOfferingId: null,
         courseVersionId: null,
-        unitId: null
+        unitId: null,
       });
     });
   });
@@ -358,7 +357,7 @@ describe('AssignmentSelector', () => {
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
         courseVersionId: 4,
-        unitId: 5
+        unitId: 5,
       });
     });
 
@@ -375,7 +374,7 @@ describe('AssignmentSelector', () => {
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
         courseVersionId: 4,
-        unitId: 3
+        unitId: 3,
       });
     });
   });

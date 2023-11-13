@@ -10,3 +10,4 @@ wrong 'automation of experiments is easy'
 wrong 'changing physical properties like the gravitational constant'
 wrong 'sweeping a set of variables'
 right 'the need for controlled experiments'
+allow_multiple_attempts true

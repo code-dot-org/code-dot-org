@@ -1,0 +1,38 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-08-17T21:29:02.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>Corgi Lovers United<\\/h1>\\r\\n    <p>Welcome to Corgi Lovers United! We enjoy sharing our love of corgis with the world, and this social media page is dedicated to pictures of them. Enjoy!<\\/p>\\r\\n    <img src=\\\"CorgiTongue.jpg\\\" \\r\\n         alt=\\\"corgi\\\" \\r\\n         height=\\\"220\\\"\\r\\n         width=\\\"300\\\">\\r\\n    <img src=\\\"CorgiInTent.jpg\\\"\\r\\n         alt=\\\"corg in a tent\\\">\\r\\n    <img src=\\\"FluffyCorgi.jpg\\\"\\r\\n         alt=\\\"super fluffy corgi\\\">\\r\\n    <p>Photos by Florenica Potter, ipet photo, and Cole Keister from Unplash<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"CorgiTongue.jpg\",\r\n      \"url\": \"https://images.code.org/ced4f6389bd2efcf29c35830ec3d663c-image-1564701914524.jpg\"\r\n    },\r\n{\r\n      \"name\": \"CorgiInTent.jpg\",\r\n      \"url\": \"https://images.code.org/350d4588f048e30ecca19404a0f3f0ab-image-1564701938710.jpg\"\r\n    },\r\n{\r\n      \"name\": \"FluffyCorgi.jpg\",\r\n      \"url\": \"https://images.code.org/8ef9587c83346a416f5ee2773e029ace-image-1564701879947.jpg\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "long_instructions": "\r\n# Height and Width Attributes\r\n\r\nImages are not always the right size for a webpage. Luckily, there are width and height attributes to set how many pixels tall and wide an image is. Add the attributes inside the image tag using `height=\"\"` and `width=\"\"`.\r\n\r\n# Do This\r\n1) Read the HTML and look at how the height and width attribute are used.\r\n* Add height and width attributes to make the other images smaller.\r\n",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "encrypted_examples": "C9tSMNqXxdDO0FBrk8LDtI4U7cRepQIawPraRBUZl4VoMj/JO4r24jfHesJx\nQqFzOe1yOtPOc22n9zOeAni1rQ==\n",
+    "parent_level_id": 18938,
+    "name_suffix": "_vpl-2324-m1",
+    "reference_links": [
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
+    ],
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "display_name": "Extra Code: Height and Width Attributes",
+    "bubble_choice_description": "Learn how to customize the height and width of images.",
+    "thumbnail_url": "https://images.code.org/ced4f6389bd2efcf29c35830ec3d663c-image-1564701914524.jpg",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-17T21:29:02.099+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Height Width Attributes_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Height Width Attributes_2023\"}]"
+}]]></config>
+</Weblab>

@@ -1,17 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+/* eslint-disable no-restricted-imports */
 import {
   FormGroup,
   ControlLabel,
   Modal,
   Button,
   Row,
-  Col
+  Col,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
-  SectionHeaders
+  SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
 import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
@@ -19,7 +21,7 @@ import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {
   FormContext,
-  getValidationState
+  getValidationState,
 } from '../../form_components_func/FormComponent';
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
@@ -46,7 +48,7 @@ const FindYourRegion = props => {
       regionalPartnerGroup: regionalPartner?.group,
       regionalPartnerWorkshopIds: (regionalPartner?.workshops || []).map(
         workshop => workshop.id
-      )
+      ),
     });
 
     // If Regional Partner changes, log their name:
@@ -66,7 +68,7 @@ const FindYourRegion = props => {
   const logRegionalPartnerFound = name => {
     setLastRPLogged(name);
     analyticsReporter.sendEvent(EVENTS.RP_FOUND_EVENT, {
-      'regional partner': name
+      'regional partner': name,
     });
   };
 
@@ -104,11 +106,11 @@ const FindYourRegion = props => {
   const handleSchoolChange = selectedSchool => {
     onChange({
       school: selectedSchool?.value,
-      schoolZipCode: selectedSchool?.school?.zip
+      schoolZipCode: selectedSchool?.school?.zip,
     });
     if (selectedSchool) {
       analyticsReporter.sendEvent(EVENTS.SCHOOL_ID_CHANGED_EVENT, {
-        'school id': selectedSchool.value
+        'school id': selectedSchool.value,
       });
     }
   };
@@ -236,7 +238,7 @@ const FindYourRegion = props => {
 FindYourRegion.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 FindYourRegion.associatedFields = [...Object.keys(PageLabels.findYourRegion)];

@@ -1,4 +1,4 @@
-class FollowerMailer < ActionMailer::Base
+class FollowerMailer < ApplicationMailer
   default from: 'noreply@code.org'
 
   def student_disassociated_notify_teacher(teacher, student)

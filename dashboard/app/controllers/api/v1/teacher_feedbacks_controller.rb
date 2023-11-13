@@ -80,20 +80,18 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     end
   end
 
-  private
-
-  def reset_progress_for_keep_working(teacher_feedback)
+  private def reset_progress_for_keep_working(teacher_feedback)
     UserLevel.update_best_result(
       teacher_feedback.student_id,
       teacher_feedback.level_id,
       teacher_feedback.script_id,
       ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING,
-      false
+      touch_updated_at: false
     )
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def teacher_feedback_params
+  private def teacher_feedback_params
     params.require(:teacher_feedback).permit(:student_id, :script_id, :level_id, :comment, :teacher_id, :performance, :analytics_section_id, :review_state)
   end
 end

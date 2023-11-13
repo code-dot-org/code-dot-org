@@ -10,7 +10,7 @@ export const Status = {
   FAILED: 'FAILED',
   CELEBRATING: 'CELEBRATING',
   UNKNOWN: 'UNKNOWN',
-  ALERT: 'ALERT'
+  ALERT: 'ALERT',
 };
 
 const style = {
@@ -18,25 +18,25 @@ const style = {
     marginBottom: 15,
     marginTop: 15,
     marginLeft: 0,
-    marginRight: 0
+    marginRight: 0,
   },
   header: {
     fontSize: 26,
-    lineHeight: 'normal'
+    lineHeight: 'normal',
   },
   body: {
     marginBottom: 15,
     marginTop: 15,
     marginLeft: 40,
     marginRight: 0,
-    fontSize: 14
+    fontSize: 14,
   },
   icon: {
-    float: 'left'
+    float: 'left',
   },
   headerText: {
-    marginLeft: 40
-  }
+    marginLeft: 40,
+  },
 };
 
 export default class ValidationStep extends Component {
@@ -46,7 +46,7 @@ export default class ValidationStep extends Component {
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
     alwaysShowChildren: PropTypes.bool,
     hideWaitingSteps: PropTypes.bool,
-    percentComplete: PropTypes.number
+    percentComplete: PropTypes.number,
   };
 
   render() {
@@ -56,7 +56,7 @@ export default class ValidationStep extends Component {
       alwaysShowChildren,
       children,
       hideWaitingSteps,
-      percentComplete
+      percentComplete,
     } = this.props;
 
     const displayPercentComplete = () => {
@@ -111,7 +111,7 @@ function styleFor(stepStatus) {
     default:
       return {
         color: color.red,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       };
   }
 }
@@ -122,7 +122,7 @@ function styleFor(stepStatus) {
  */
 function iconFor(stepStatus) {
   const iconStyle = {
-    marginRight: 6
+    marginRight: 6,
   };
   switch (stepStatus) {
     case Status.WAITING:

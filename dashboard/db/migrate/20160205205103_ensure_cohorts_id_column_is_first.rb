@@ -6,7 +6,7 @@
 # dump consistency logic to throw an exception.
 class EnsureCohortsIdColumnIsFirst < ActiveRecord::Migration[4.2]
   def change
-    execute <<-SQL
+    execute <<-SQL.squish
       ALTER TABLE cohorts_districts CHANGE column id id INT(11) NOT NULL AUTO_INCREMENT FIRST;
     SQL
   end

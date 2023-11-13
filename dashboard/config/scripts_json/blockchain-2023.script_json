@@ -9,13 +9,14 @@
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-03-11 03:44:09 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-08-23 19:06:43 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -45,7 +46,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Students engage in two immersive class-wide simulations representing different types of economic markets. The first simulation focuses on decentralized markets (similar to a bartering system) and the second simulation focuses on centralized markets (similar to regulated banking). Teachers are invited to participate in the simulation in specific ways to highlight key issues with each system, and students reflect on the successes and failures of each system. At the end of the lesson, students watch the Why Blockchain? video which summarizes the different types of economic markets and presents Blockchain technology as a new way to exchange goods and services.\n\n**Big Question:** What are the tradeoffs when exchanging goods and services with other people?"
+        "overview": "Students engage in two immersive class-wide simulations representing different types of economic markets. The first simulation focuses on decentralized markets (similar to a bartering system) and the second simulation focuses on centralized markets (similar to regulated banking). Teachers are invited to participate in the simulation in specific ways to highlight key issues with each system, and students reflect on the successes and failures of each system. At the end of the lesson, students watch the Why Blockchain? video which summarizes the different types of economic markets and presents Blockchain technology as a new way to exchange goods and services.",
+        "preparation": "- Cut out copies of the Decentralized Market resources and group them together (for example, with paper clips or putting into separate envelopes)\n- Cut out copies of the Centralized Market resources \n- Follow the steps in the Before the Lesson section of the lesson plan. Several of these steps are optional.",
+        "student_overview": "Participate in simulations of different economic marketplaces, then learn how Blockchain is a new way to facilitate economic markets in a digital world."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -61,8 +64,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Big Question:** How is public key cryptography used in the Blockchain?\n\nStudents are introduced to public-key cryptography, which uses a public and private key to encrypt messages. This system can also be used to verify messages by creating a unique signature that can be verified by anybody. Students then learn that this process is the basis for transactions on blockchain networks, where individuals exchange currency without needing to trust one another. Students use a widget to simulate several blockchain transactions, including mining blocks and adding them to the shared blockchain ledger.\n",
-        "student_overview": "Big Question: How is public key cryptography used in the Blockchain?"
+        "overview": "Students are introduced to public-key cryptography, which uses a public and private key to encrypt messages. This system can also be used to verify messages by creating a unique signature that can be verified by anybody. Students then learn that this process is the basis for transactions on blockchain networks, where individuals exchange currency without needing to trust one another. Students use a widget to simulate several blockchain transactions, including mining blocks and adding them to the shared blockchain ledger.\n",
+        "preparation": "- Review the slides, activity guides, and widgets\n- Prepare copies of the activity guide for each student\n- Prepare copies of the vocabulary notetaker for each student\n- Follow the steps in the Before the Lesson section of the lesson plan. Several of these steps are optional",
+        "student_overview": "Learn how cryptography and encryption are used for transactions on the blockchain"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -78,8 +82,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Students learn about ways that Blockchain technologies can be used for more than cryptocurrencies with digital “smart contracts”. Using an Input - Processing -Storage - Output model, students create their own “smart contracts” to represent different situations. Then students analyze each other’s contracts for vulnerabilities from the perspective of someone looking to hack or exploit the contract.\n\n**Big Question:** How are input, output, storage, and processing represented on the blockchain",
-        "preparation": "- Have post-its available for students to leave feedback during a gallery walk\n- (Optional) Have Poster Paper / Whiteboard space for students to work on\n"
+        "overview": "Students learn about ways that Blockchain technologies can be used for more than cryptocurrencies with digital “smart contracts”. Using an Input - Processing -Storage - Output model, students create their own “smart contracts” to represent different situations. Then students analyze each other’s contracts for vulnerabilities from the perspective of someone looking to hack or exploit the contract.",
+        "preparation": "- Review the slides and activity guides from the lesson.\n- Have post-its available for students to leave feedback during a gallery walk\n- (Optional) Have Poster Paper / Whiteboard space for students to work on\n",
+        "student_overview": "Learn how smart contracts use the blockchain as a form of input, output, storage, and processing."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -95,9 +100,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students participate in a simulation of a crypto investment firm, similar in style and structure to the [Stock Market Game](https://www.stockmarketgame.org/). Students are in charge of a fictional investment firm where they can invest $1500 in several fictional assets - NFTs, cryptocurrencies, and stablecoins. Students watch a video that gives an overview of these assets and how value is determined on the blockchain, then they must decide which assets to invest in. Once decided, the teacher generates several fake news stories that impact the value of each asset. By the end of the simulation, students can see how their investments increased or decreased based on the news that was generated. Lastly, students reflect on the simulation and consider other reasons to invest in blockchain assets beyond their purely financial value\n\n**Big Question**: What does it mean for a digital asset to have value in a digital marketplace?",
+        "overview": "Students participate in a simulation of a crypto investment firm, similar in style and structure to the [Stock Market Game](https://www.stockmarketgame.org/). Students are in charge of a fictional investment firm where they can invest $1500 in several fictional assets - NFTs, cryptocurrencies, and stablecoins. Students watch a video that gives an overview of these assets and how value is determined on the blockchain, then they must decide which assets to invest in. Once decided, the teacher generates several fake news stories that impact the value of each asset. By the end of the simulation, students can see how their investments increased or decreased based on the news that was generated. Lastly, students reflect on the simulation and consider other reasons to invest in blockchain assets beyond their purely financial value",
         "preparation": "- Experiment with the Crypto Market Simulator to understand how it works and how it's used with the Activity Guide\n- Print enough copies of the Blockchain Asset Cards for each group\n- Have calculators available for students to help with calculations\n- (Optional) Print one copy of each Asset Sheet and cut them out\n- (Optional) Print multiple copies of the Buy / Sell sheets for groups to use during the activity",
-        "student_overview": "**Big Question**: What does it mean for a digital asset to have value in a digital marketplace?"
+        "student_overview": "Learn how different cryptocurrency assets go up and down by participating in a financial simulation."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -113,7 +118,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students research applications of blockchain and its impact. They share what they learned and decide which applications of blockchain have the potential for the most benefit and the most harm.\n\n**Big Question:** : What are the societal impacts of blockchain?",
+        "overview": "Students research applications of blockchain and its impact. They share what they learned and decide which applications of blockchain have the potential for the most benefit and the most harm.",
         "preparation": "- Print copies of the Blockchain Research Reflection handout (one for each group of three or four)\n- Label one side of the classroom \"helpful\" and one side \"harmful\" for the Societal Impacts activity. Make sure there is space to stand between the two sides, as if on a sliding scale.\n",
         "student_overview": "Research applications of blockchain and its impact,  then share what you learned and decide which applications of blockchain have the potential for the most benefit and the most harm."
       },
@@ -125,7 +130,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "How Blockchain Works (Video Series)",
+      "name": "Blockchain In a Day",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -142,8 +147,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "e25f88e4-b3d9-4858-84ed-244890d47831",
+      "key": "d410079a-8006-431e-8cf2-7694209f2c4d",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d410079a-8006-431e-8cf2-7694209f2c4d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "e25f88e4-b3d9-4858-84ed-244890d47831",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -157,7 +175,7 @@
     },
     {
       "key": "6e908be2-b8d7-4003-8c6c-3a0f7bbc05ec",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -171,7 +189,7 @@
     },
     {
       "key": "298644da-a2f6-4f6a-a421-3103fb777ba0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -184,8 +202,34 @@
       }
     },
     {
-      "key": "ea1d0acf-b767-4e54-a1c8-2bbc038253e7",
+      "key": "f522695a-826a-4d7e-9f23-3bc96d8d8482",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f522695a-826a-4d7e-9f23-3bc96d8d8482",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "252b8c39-5e4b-4900-b1e6-08a632e07d66",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "252b8c39-5e4b-4900-b1e6-08a632e07d66",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "ea1d0acf-b767-4e54-a1c8-2bbc038253e7",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up (Option 1)"
@@ -199,7 +243,7 @@
     },
     {
       "key": "a961ccfb-60e8-46c5-844b-443c06e13495",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Warm Up (Option 2)"
       },
@@ -212,7 +256,7 @@
     },
     {
       "key": "72969b51-c3f3-407e-aa02-48555f06ca2b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 80,
         "name": "Activity"
@@ -226,7 +270,7 @@
     },
     {
       "key": "d0dfedcd-96ff-499a-b027-ceed71856b2f",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -239,8 +283,34 @@
       }
     },
     {
-      "key": "7213cace-3672-4d30-b72a-cabf17613238",
+      "key": "defc9ab2-e113-4360-8c43-92c7a938b082",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "defc9ab2-e113-4360-8c43-92c7a938b082",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "c1c2de80-21fa-468a-ba4b-924b39c450b7",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1c2de80-21fa-468a-ba4b-924b39c450b7",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "7213cace-3672-4d30-b72a-cabf17613238",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -254,7 +324,7 @@
     },
     {
       "key": "f68743ab-aed3-4361-8ebe-8e73eff9332a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -268,7 +338,7 @@
     },
     {
       "key": "d1a8b870-0f36-4c36-92b6-4bcb7d3b005b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -281,8 +351,34 @@
       }
     },
     {
-      "key": "e250fceb-f88a-49b2-97c3-d4daa63860d8",
+      "key": "a0b54e7c-bf10-4ae4-86ad-9a034cc273f6",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0b54e7c-bf10-4ae4-86ad-9a034cc273f6",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "cefcb525-b7ff-4662-bf16-1386c9908992",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cefcb525-b7ff-4662-bf16-1386c9908992",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "e250fceb-f88a-49b2-97c3-d4daa63860d8",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -296,7 +392,7 @@
     },
     {
       "key": "4fcdc731-de8f-4386-83be-6bb61ec7ce8d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 80,
         "name": "Activity"
@@ -310,7 +406,7 @@
     },
     {
       "key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -323,8 +419,34 @@
       }
     },
     {
-      "key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30",
+      "key": "6deb3ec7-49a7-4293-b24b-6501cb61d66d",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6deb3ec7-49a7-4293-b24b-6501cb61d66d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "ea14d04b-dc80-4b8d-ada8-f6e94fc69fc3",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea14d04b-dc80-4b8d-ada8-f6e94fc69fc3",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "c03d5cf3-f4a8-486d-a981-2a29d1cc9f30",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up (Option 1)"
@@ -338,7 +460,7 @@
     },
     {
       "key": "d0ff7df1-ee39-4bf3-aa7a-8b46fe5a7fa2",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Warm Up (Option 2)"
       },
@@ -351,7 +473,7 @@
     },
     {
       "key": "41535ff9-6325-44f6-85c5-14581c388df8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -365,13 +487,26 @@
     },
     {
       "key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8284c497-c7f8-466d-8fc5-beb8fdd8894c",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "key": "addadf43-6202-4a8f-8be9-7c7bc8f20339",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "addadf43-6202-4a8f-8be9-7c7bc8f20339",
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "blockchain-2023"
@@ -474,9 +609,58 @@
         "lesson_group.key": "",
         "script.name": "blockchain-2023"
       }
+    },
+    {
+      "key": "a69ed89d-9efa-4df0-ad45-69d570b91a23",
+      "position": 8,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a69ed89d-9efa-4df0-ad45-69d570b91a23",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "blockchain-2023"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "f6b6bbf2-cdb1-4875-b6e0-47413e79f080",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is designed to create an **immersive experience** for students, where they participate in an activity or simulation which motivates the learning goals of the lesson. This creates a social, memorable, and engaging experience for students that helps transfer learning from this lesson to other aspects of their life, especially if this is the only lesson students engage in on this topic.\n\nThe pedagogy and teaching moves used in this lesson are based on **Experiential Learning**, which follows an Experience <> Reflect <> Think <> Act cycle. The teacher curates and guides an experience that students participate in, then students reflect on the experience leading to abstraction and meaning-making of the concepts embedded in the experience. \n\nBecause of the experiential nature, this lesson may feel _messy_ and the classroom may feel _chaotic_. However, there may also be moments to elevate students' lived experiences and to capitalize on \"teachable moments\".\n\n::: details [**(Optional) Learn more about the pedagogy behind Experiential Learning**]\n- <a href=\"https://www.edutopia.org/article/getting-started-experiential-learning/\" target=\"_blank\">Getting Started with Experiential Thinking</a>\n- <a href=\"https://www.insidehighered.com/advice/2022/08/03/foundational-best-practices-experiential-learning-opinion\" target=\"_blank\">The 10 Commandments of Experiental Learning</a> (even though this is geared towards higher education, the themes still apply)\n- <a href=\"https://experientiallearninginstitute.org/resources/what-is-experiential-learning/\" target=\"_blank\">What is experiential learning?</a>\n- <a href=\"https://www.researchgate.net/publication/235701029_Experiential_Learning_Experience_As_The_Source_Of_Learning_And_Development\" target=\"_blank\">Deep Dive: Experiential Learning Research Paper</a>\n:::",
+        "name": "Preparing for Experiential Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6b6bbf2-cdb1-4875-b6e0-47413e79f080",
+        "lesson_activity.key": "d410079a-8006-431e-8cf2-7694209f2c4d"
+      }
+    },
+    {
+      "key": "b36fd8a3-004c-469d-aed2-99c124e19285",
+      "position": 2,
+      "properties": {
+        "description": "This lesson centers around the [r how_blockchain_works_why_blockchain_/blockchain/2023] video - watch this video first before exploring the lesson plan. In this particular lesson, students watch the video **last** which helps summarize and codify their experiences during the lesson. \n\n**(Optional)** If you want to dive deeper into blockchain and cryptocurrency concepts to be prepared for student questions, consider reading the [Teaching How Blockchain Works - Tips & Resources](https://docs.google.com/document/d/16Hi0J3gdrJKWBozOtkY5UEFuivSXSobst3GjQj6uDo0/preview) doc.",
+        "name": "Preparing to Teach Blockchain"
+      },
+      "seeding_key": {
+        "activity_section.key": "b36fd8a3-004c-469d-aed2-99c124e19285",
+        "lesson_activity.key": "d410079a-8006-431e-8cf2-7694209f2c4d"
+      }
+    },
+    {
+      "key": "4aca5e22-6156-431b-bce3-0a570cb748b4",
+      "position": 3,
+      "properties": {
+        "description": "If you intend to teach all of the lessons and this is your first time using Code.org, consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).",
+        "name": "(Optional) Teaching with Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "4aca5e22-6156-431b-bce3-0a570cb748b4",
+        "lesson_activity.key": "d410079a-8006-431e-8cf2-7694209f2c4d"
+      }
+    },
     {
       "key": "410f1f92-724a-4608-84d6-d481af2766d7",
       "position": 1,
@@ -657,7 +841,7 @@
       "key": "0f2f39f4-a8bc-487a-aa95-3e7643e7423a",
       "position": 11,
       "properties": {
-        "description": "| Student Actions | Teacher Actions |\n|---|---|\n| The instructions are purposefully vague on how to get started, so a variety of interactions may occur as the simulation begins. It can be useful to look out for these potential behaviors:<br /><ul><li>**Cliques:** Students may fall into familiar social relationships to barter and trade, making it so a small pocket of students are able to meet the goals of the activity while others are potentially excluded.</li><li>*Scarcity:,** Some students may “hoard” resources, meaning there may not be enough for others as the activity continues</li><li>**Deceit:** A student may perform a deceptive trade and another student may become upset. If this happens, it’s okay to assure students that this is just a simulation and this is something we’ll address when debriefing, but they should continue for now.</li></ul> | As you participate in the activity, there are several specific actions that you should try and perform, which can then be discussed and debriefed afterwards. If you’re not able to perform these actions, that’s okay - they can also be brought up in the discussion after the simulation.<br /><ul><li>**Wrong Amount:** Agree on a trade with someone but, when making the trade, include a few blank cards mixed in with your resources so that your trading partner receives less than what was agreed upon</li><li>**Wrong Resource:** Agree on a trade with someone but, when making the trade, trade the wrong resource that you all agreed upon.</li><li>**Ghosting:** Agree to trade with someone but, when making the trade, ensure that you are handed the resource cards first. Once you have them in your hand, rescind your deal and walk away from the trade, keeping the other person’s cards.</li><li>**Lose your cards:** Pretend to have misplaced your cards and make a big deal out of not being able to find them, which means you’ve essentially lost all of your resources.</li></ul> |"
+        "description": "| Student Actions | Teacher Actions |\n|---|---|\n| The instructions are purposefully vague on how to get started, so a variety of interactions may occur as the simulation begins. It can be useful to look out for these potential behaviors:<br /><ul><li>**Cliques:** Students may fall into familiar social relationships to barter and trade, making it so a small pocket of students are able to meet the goals of the activity while others are potentially excluded.</li><li>**Scarcity:** Some students may “hoard” resources, meaning there may not be enough for others as the activity continues</li><li>**Deceit:** A student may perform a deceptive trade and another student may become upset. If this happens, it’s okay to assure students that this is just a simulation and this is something we’ll address when debriefing, but they should continue for now.</li></ul> | As you participate in the activity, there are several specific actions that you should try and perform, which can then be discussed and debriefed afterwards. If you’re not able to perform these actions, that’s okay - they can also be brought up in the discussion after the simulation.<br /><ul><li>**Wrong Amount:** Agree on a trade with someone but, when making the trade, include a few blank cards mixed in with your resources so that your trading partner receives less than what was agreed upon</li><li>**Wrong Resource:** Agree on a trade with someone but, when making the trade, trade the wrong resource that you all agreed upon.</li><li>**Ghosting:** Agree to trade with someone but, when making the trade, ensure that you are handed the resource cards first. Once you have them in your hand, rescind your deal and walk away from the trade, keeping the other person’s cards.</li><li>**Lose your cards:** Pretend to have misplaced your cards and make a big deal out of not being able to find them, which means you’ve essentially lost all of your resources.</li></ul> |"
       },
       "seeding_key": {
         "activity_section.key": "0f2f39f4-a8bc-487a-aa95-3e7643e7423a",
@@ -668,7 +852,13 @@
       "key": "9a272a1a-c720-4835-b265-33d3b529e2c6",
       "position": 12,
       "properties": {
-        "description": "**Regroup:** After 10 minutes have elapsed, have students regroup and continue through the slides."
+        "description": "**Regroup:** After 10 minutes have elapsed, have students regroup and continue through the slides.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**But We Didn't Finish!** It's okay for the simulation to end early, and it's fine if no groups \"won\" - there are still takeaways and moments of reflection that can be discussed just from the time students spent so far."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9a272a1a-c720-4835-b265-33d3b529e2c6",
@@ -914,6 +1104,66 @@
       "seeding_key": {
         "activity_section.key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
         "lesson_activity.key": "298644da-a2f6-4f6a-a421-3103fb777ba0"
+      }
+    },
+    {
+      "key": "e3e08bc4-74a0-47c6-a209-9c4934f1b51d",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3e08bc4-74a0-47c6-a209-9c4934f1b51d",
+        "lesson_activity.key": "f522695a-826a-4d7e-9f23-3bc96d8d8482"
+      }
+    },
+    {
+      "key": "f18b0748-eb02-40b9-a52a-4d86353bedab",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f18b0748-eb02-40b9-a52a-4d86353bedab",
+        "lesson_activity.key": "f522695a-826a-4d7e-9f23-3bc96d8d8482"
+      }
+    },
+    {
+      "key": "fd9d7e35-0cf7-4377-a3ff-7df86eaee454",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is designed to create an **immersive experience** for students, where they participate in an activity or simulation which motivates the learning goals of the lesson. This creates a social, memorable, and engaging experience for students that helps transfer learning from this lesson to other aspects of their life, especially if this is the only lesson students engage in on this topic.\n\nThe pedagogy and teaching moves used in this lesson are based on **Experiential Learning**, which follows an Experience <> Reflect <> Think <> Act cycle. The teacher curates and guides an experience that students participate in, then students reflect on the experience leading to abstraction and meaning-making of the concepts embedded in the experience. \n\nBecause of the experiential nature, this lesson may feel _messy_ and the classroom may feel _chaotic_. However, there may also be moments to elevate students' lived experiences and to capitalize on \"teachable moments\".\n\n::: details [**(Optional) Learn more about the pedagogy behind Experiential Learning**]\n- <a href=\"https://www.edutopia.org/article/getting-started-experiential-learning/\" target=\"_blank\">Getting Started with Experiential Thinking</a>\n- <a href=\"https://www.insidehighered.com/advice/2022/08/03/foundational-best-practices-experiential-learning-opinion\" target=\"_blank\">The 10 Commandments of Experiental Learning</a> (even though this is geared towards higher education, the themes still apply)\n- <a href=\"https://experientiallearninginstitute.org/resources/what-is-experiential-learning/\" target=\"_blank\">What is experiential learning?</a>\n- <a href=\"https://www.researchgate.net/publication/235701029_Experiential_Learning_Experience_As_The_Source_Of_Learning_And_Development\" target=\"_blank\">Deep Dive: Experiential Learning Research Paper</a>\n:::",
+        "name": "Preparing for Experiential Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd9d7e35-0cf7-4377-a3ff-7df86eaee454",
+        "lesson_activity.key": "252b8c39-5e4b-4900-b1e6-08a632e07d66"
+      }
+    },
+    {
+      "key": "dccb5b54-370c-4353-bda7-496cf079d6b7",
+      "position": 2,
+      "properties": {
+        "description": "This lesson centers around the [r how_blockchain_works_under_the_hood/blockchain/2023] video - watch this video first before exploring the lesson plan. In this particular lesson, students watch the video **first** which introduces key concepts and vocabulary that students will use in their activity.\n\n**(Optional)** If you want to dive deeper into blockchain and cryptocurrency concepts to be prepared for student questions, consider reading the [Teaching How Blockchain Works - Tips & Resources](https://docs.google.com/document/d/16Hi0J3gdrJKWBozOtkY5UEFuivSXSobst3GjQj6uDo0/preview) doc.",
+        "name": "Preparing to Teach Blockchain"
+      },
+      "seeding_key": {
+        "activity_section.key": "dccb5b54-370c-4353-bda7-496cf079d6b7",
+        "lesson_activity.key": "252b8c39-5e4b-4900-b1e6-08a632e07d66"
+      }
+    },
+    {
+      "key": "0ea5d6af-b5be-4c70-b55c-efce4f28697d",
+      "position": 3,
+      "properties": {
+        "description": "If you intend to teach all of the lessons and this is your first time using Code.org, consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).",
+        "name": "(Optional) Teaching with Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ea5d6af-b5be-4c70-b55c-efce4f28697d",
+        "lesson_activity.key": "252b8c39-5e4b-4900-b1e6-08a632e07d66"
       }
     },
     {
@@ -1603,6 +1853,66 @@
       }
     },
     {
+      "key": "de1a8a88-74d4-4424-9d69-227b25476f7c",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "de1a8a88-74d4-4424-9d69-227b25476f7c",
+        "lesson_activity.key": "defc9ab2-e113-4360-8c43-92c7a938b082"
+      }
+    },
+    {
+      "key": "d0e6e16d-5951-4fbd-9778-1048ac7f5828",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0e6e16d-5951-4fbd-9778-1048ac7f5828",
+        "lesson_activity.key": "defc9ab2-e113-4360-8c43-92c7a938b082"
+      }
+    },
+    {
+      "key": "ed1ade5c-74b2-47e7-b16b-e43c2acdf46c",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is designed to create an **immersive experience** for students, where they participate in an activity or simulation which motivates the learning goals of the lesson. This creates a social, memorable, and engaging experience for students that helps transfer learning from this lesson to other aspects of their life, especially if this is the only lesson students engage in on this topic.\n\nThe pedagogy and teaching moves used in this lesson are based on **Experiential Learning**, which follows an Experience <> Reflect <> Think <> Act cycle. The teacher curates and guides an experience that students participate in, then students reflect on the experience leading to abstraction and meaning-making of the concepts embedded in the experience. \n\nBecause of the experiential nature, this lesson may feel _messy_ and the classroom may feel _chaotic_. However, there may also be moments to elevate students' lived experiences and to capitalize on \"teachable moments\".\n\n::: details [**(Optional) Learn more about the pedagogy behind Experiential Learning**]\n- <a href=\"https://www.edutopia.org/article/getting-started-experiential-learning/\" target=\"_blank\">Getting Started with Experiential Thinking</a>\n- <a href=\"https://www.insidehighered.com/advice/2022/08/03/foundational-best-practices-experiential-learning-opinion\" target=\"_blank\">The 10 Commandments of Experiental Learning</a> (even though this is geared towards higher education, the themes still apply)\n- <a href=\"https://experientiallearninginstitute.org/resources/what-is-experiential-learning/\" target=\"_blank\">What is experiential learning?</a>\n- <a href=\"https://www.researchgate.net/publication/235701029_Experiential_Learning_Experience_As_The_Source_Of_Learning_And_Development\" target=\"_blank\">Deep Dive: Experiential Learning Research Paper</a>\n:::",
+        "name": "Preparing for Experiential Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed1ade5c-74b2-47e7-b16b-e43c2acdf46c",
+        "lesson_activity.key": "c1c2de80-21fa-468a-ba4b-924b39c450b7"
+      }
+    },
+    {
+      "key": "2ce3897d-25ed-4932-a648-31f4ecabf7d1",
+      "position": 2,
+      "properties": {
+        "description": "This lesson centers around the [r how_blockchain_works_beyond_currencies/blockchain/2023] video - watch this video first before exploring the lesson plan. In this particular lesson, students watch the video **first** which introduces key concepts and vocabulary that students will use in their activity.\n\n**(Optional)** If you want to dive deeper into blockchain and cryptocurrency concepts to be prepared for student questions, consider reading the [Teaching How Blockchain Works - Tips & Resources](https://docs.google.com/document/d/16Hi0J3gdrJKWBozOtkY5UEFuivSXSobst3GjQj6uDo0/preview) doc.",
+        "name": "Preparing to Teach Blockchain"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ce3897d-25ed-4932-a648-31f4ecabf7d1",
+        "lesson_activity.key": "c1c2de80-21fa-468a-ba4b-924b39c450b7"
+      }
+    },
+    {
+      "key": "0ef51dd2-1d6b-4d91-9bd0-1be91f49effd",
+      "position": 3,
+      "properties": {
+        "description": "If you intend to teach all of the lessons and this is your first time using Code.org, consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).",
+        "name": "(Optional) Teaching with Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ef51dd2-1d6b-4d91-9bd0-1be91f49effd",
+        "lesson_activity.key": "c1c2de80-21fa-468a-ba4b-924b39c450b7"
+      }
+    },
+    {
       "key": "7ea837ab-7d9c-4eff-9fd7-2283d1d3c7b1",
       "position": 1,
       "properties": {
@@ -1801,7 +2111,7 @@
       "key": "a33c7650-1408-4ec9-805b-2379fd6de9cc",
       "position": 15,
       "properties": {
-        "description": "**(Optional)** <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** You may decide to distribute the [r example_user_stories/blockchain/2023] resource to groups to give them an idea of a smart contract to create."
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **(Optional) Distribute:** You may decide to distribute the [r example_user_stories/blockchain/2023] resource to groups to give them an idea of a smart contract to create."
       },
       "seeding_key": {
         "activity_section.key": "a33c7650-1408-4ec9-805b-2379fd6de9cc",
@@ -1949,6 +2259,66 @@
       }
     },
     {
+      "key": "ad589eb9-b6cc-41bd-abb5-9950ac60484a",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad589eb9-b6cc-41bd-abb5-9950ac60484a",
+        "lesson_activity.key": "a0b54e7c-bf10-4ae4-86ad-9a034cc273f6"
+      }
+    },
+    {
+      "key": "71abe273-ec4d-41a9-9838-cb7d07c9f3df",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "71abe273-ec4d-41a9-9838-cb7d07c9f3df",
+        "lesson_activity.key": "a0b54e7c-bf10-4ae4-86ad-9a034cc273f6"
+      }
+    },
+    {
+      "key": "4126cdff-9428-43cc-ae16-4806fcc5a42f",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is designed to create an **immersive experience** for students, where they participate in an activity or simulation which motivates the learning goals of the lesson. This creates a social, memorable, and engaging experience for students that helps transfer learning from this lesson to other aspects of their life, especially if this is the only lesson students engage in on this topic.\n\nThe pedagogy and teaching moves used in this lesson are based on **Experiential Learning**, which follows an Experience <> Reflect <> Think <> Act cycle. The teacher curates and guides an experience that students participate in, then students reflect on the experience leading to abstraction and meaning-making of the concepts embedded in the experience. \n\nBecause of the experiential nature, this lesson may feel _messy_ and the classroom may feel _chaotic_. However, there may also be moments to elevate students' lived experiences and to capitalize on \"teachable moments\".\n\n::: details [**(Optional) Learn more about the pedagogy behind Experiential Learning**]\n- <a href=\"https://www.edutopia.org/article/getting-started-experiential-learning/\" target=\"_blank\">Getting Started with Experiential Thinking</a>\n- <a href=\"https://www.insidehighered.com/advice/2022/08/03/foundational-best-practices-experiential-learning-opinion\" target=\"_blank\">The 10 Commandments of Experiental Learning</a> (even though this is geared towards higher education, the themes still apply)\n- <a href=\"https://experientiallearninginstitute.org/resources/what-is-experiential-learning/\" target=\"_blank\">What is experiential learning?</a>\n- <a href=\"https://www.researchgate.net/publication/235701029_Experiential_Learning_Experience_As_The_Source_Of_Learning_And_Development\" target=\"_blank\">Deep Dive: Experiential Learning Research Paper</a>\n:::",
+        "name": "Preparing for Experiential Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "4126cdff-9428-43cc-ae16-4806fcc5a42f",
+        "lesson_activity.key": "cefcb525-b7ff-4662-bf16-1386c9908992"
+      }
+    },
+    {
+      "key": "eae25979-aefc-4d58-bb3b-d6f37169145e",
+      "position": 2,
+      "properties": {
+        "description": "This lesson centers around the [r how_blockchain_works_marketplace_price/blockchain/2023] video - watch this video first before exploring the lesson plan. In this particular lesson, students watch the video **first** which introduces key concepts and vocabulary that students will use in their activity.\n\n**(Optional)** If you want to dive deeper into blockchain and cryptocurrency concepts to be prepared for student questions, consider reading the [Teaching How Blockchain Works - Tips & Resources](https://docs.google.com/document/d/16Hi0J3gdrJKWBozOtkY5UEFuivSXSobst3GjQj6uDo0/preview) doc.",
+        "name": "Preparing to Teach Blockchain"
+      },
+      "seeding_key": {
+        "activity_section.key": "eae25979-aefc-4d58-bb3b-d6f37169145e",
+        "lesson_activity.key": "cefcb525-b7ff-4662-bf16-1386c9908992"
+      }
+    },
+    {
+      "key": "d9fcdc73-57bd-41f8-86d1-ce42f4cd9334",
+      "position": 3,
+      "properties": {
+        "description": "If you intend to teach all of the lessons and this is your first time using Code.org, consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).",
+        "name": "(Optional) Teaching with Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9fcdc73-57bd-41f8-86d1-ce42f4cd9334",
+        "lesson_activity.key": "cefcb525-b7ff-4662-bf16-1386c9908992"
+      }
+    },
+    {
       "key": "f6f094db-4304-471b-904d-4fa3574bd1cd",
       "position": 1,
       "properties": {
@@ -2066,7 +2436,13 @@
       "key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023]."
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023].",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real or Fake?** Hopefully these resources feel realistic to students and provide meaningful context, but each of these assets are **fake** and were invented just for this lesson. However, they were inspired by real NFTs, Cryptocurrencies, and Stablecoins which influence their design and description - students may make comments about how these feel similar to real assets they see in headlines."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
@@ -2735,6 +3111,65 @@
       }
     },
     {
+      "key": "9041c2fa-44b4-49a0-a5d6-32bacd93d36f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **(Optional) Video:**  Consider showing the [Blockchain: Trustworthy or a Scam?](https://youtu.be/WzxbwEQRJPo?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf&t=133) video starting around 2:15, which addresses many of the topics simulated in this lesson, especially the impact of fraud and volatility on people's finances."
+      },
+      "seeding_key": {
+        "activity_section.key": "9041c2fa-44b4-49a0-a5d6-32bacd93d36f",
+        "lesson_activity.key": "7d4600e9-51dd-45c7-a8fa-d03ff197a7bb"
+      }
+    },
+    {
+      "key": "e5969c23-9926-4cfa-b8ae-09dfc5386db6",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5969c23-9926-4cfa-b8ae-09dfc5386db6",
+        "lesson_activity.key": "6deb3ec7-49a7-4293-b24b-6501cb61d66d"
+      }
+    },
+    {
+      "key": "89e63bf8-bbbb-4dda-a69a-e0124485a14a",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "89e63bf8-bbbb-4dda-a69a-e0124485a14a",
+        "lesson_activity.key": "6deb3ec7-49a7-4293-b24b-6501cb61d66d"
+      }
+    },
+    {
+      "key": "34e4f1ee-e8d7-42d1-b0a8-b005ed9349bb",
+      "position": 1,
+      "properties": {
+        "description": "This lesson centers around the [r how_blockchain_works_why_blockchain_/blockchain/2023] video - watch this video first before exploring the lesson plan. In this particular lesson, students watch the video **last** which helps summarize and codify their experiences during the lesson. \n\n**(Optional)** If you want to dive deeper into blockchain and cryptocurrency concepts to be prepared for student questions, consider reading the [Teaching How Blockchain Works - Tips & Resources](https://docs.google.com/document/d/16Hi0J3gdrJKWBozOtkY5UEFuivSXSobst3GjQj6uDo0/preview) doc.",
+        "name": "Preparing to Teach Blockchain"
+      },
+      "seeding_key": {
+        "activity_section.key": "34e4f1ee-e8d7-42d1-b0a8-b005ed9349bb",
+        "lesson_activity.key": "ea14d04b-dc80-4b8d-ada8-f6e94fc69fc3"
+      }
+    },
+    {
+      "key": "e05b13bf-ab44-4b1c-8514-15773402308e",
+      "position": 2,
+      "properties": {
+        "description": "If you intend to teach all of the lessons and this is your first time using Code.org, consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).",
+        "name": "(Optional) Teaching with Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "e05b13bf-ab44-4b1c-8514-15773402308e",
+        "lesson_activity.key": "ea14d04b-dc80-4b8d-ada8-f6e94fc69fc3"
+      }
+    },
+    {
       "key": "21e7ca9c-280e-4fff-9eca-e3443217d904",
       "position": 1,
       "properties": {
@@ -3095,6 +3530,30 @@
       }
     },
     {
+      "key": "6239016b-491a-46de-a6fa-72a740dea96b",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6239016b-491a-46de-a6fa-72a740dea96b",
+        "lesson_activity.key": "addadf43-6202-4a8f-8be9-7c7bc8f20339"
+      }
+    },
+    {
+      "key": "f677cdd3-321c-48aa-8b4c-168f2ebf58cc",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f677cdd3-321c-48aa-8b4c-168f2ebf58cc",
+        "lesson_activity.key": "addadf43-6202-4a8f-8be9-7c7bc8f20339"
+      }
+    },
+    {
       "key": "8182f204-5f99-4564-bf15-5af00babe87c",
       "position": 1,
       "properties": {
@@ -3270,6 +3729,30 @@
       "seeding_key": {
         "activity_section.key": "427b2b83-444a-41f0-914c-88171f19bbbc",
         "lesson_activity.key": "2b927ab9-42fe-4cde-b1ea-47ca87448504"
+      }
+    },
+    {
+      "key": "7f233f16-dbd5-4d3b-9c15-fdfb2dd92b9d",
+      "position": 1,
+      "properties": {
+        "description": "We'd love to learn more about the folks teaching these lessons and the classroom experience. Please let us know in this [How Blockchain Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLScoKvmhSCoQqK1HxKK_s3ZaCZZkjXnVoHkGKTocqA788wj5ZQ/viewform?usp=sf_link).",
+        "name": "Teacher Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f233f16-dbd5-4d3b-9c15-fdfb2dd92b9d",
+        "lesson_activity.key": "a69ed89d-9efa-4df0-ad45-69d570b91a23"
+      }
+    },
+    {
+      "key": "1d7794eb-abbf-4d5b-9096-4e5557ec50d6",
+      "position": 2,
+      "properties": {
+        "description": "Depending on your goals and student interests, you may decide to offer optional extensions related to blockchain and cryptocurrencies. Additional resources and the rest of the How Blockchain Works video series are available on [https://code.org/blockchain](https://code.org/blockchain), including a [Blockchain & Cryptocurreny Hour of Code Activity](https://coinbase.github.io/memorygame/story.html).",
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d7794eb-abbf-4d5b-9096-4e5557ec50d6",
+        "lesson_activity.key": "a69ed89d-9efa-4df0-ad45-69d570b91a23"
       }
     }
   ],
@@ -3550,6 +4033,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/blockchain-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/blockchain-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Under the Hood",
       "url": "https://docs.google.com/presentation/d/1PT6NNzHnbEdoqI_VIWgU-lnmMgvYJr6Knwhwm90m4JE/template/preview",
       "key": "applied_blockchain_bitcoin",
@@ -3600,7 +4105,7 @@
     },
     {
       "name": "Blockchain: Societal Impact",
-      "url": "https://www.youtube.com/watch?v=d9rKkk3oVdY",
+      "url": "https://www.youtube.com/watch?v=C3C_JfG8cNg",
       "key": "blockchain_societal_impact",
       "properties": {
         "audience": "Student",
@@ -4247,7 +4752,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "blockchain-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "blockchain-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -4753,6 +5269,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

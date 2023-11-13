@@ -1,13 +1,20 @@
-const storybookWebpackConfig = require('../webpack').storybookConfig;
+const envConstants = require('../envConstants');
+const storybookWebpackConfig = require('../webpackStorybook.config');
 
-module.exports = {
-  stories: ['../src/**/*.story.@(js|jsx)'],
-  staticDirs: [
+const staticDirs = envConstants.STORYBOOK_STATIC_ASSETS ? [
     '../build/package/',
     '../../dashboard/public',
-    '../../pegasus/sites.v3/code.org/public'
+  ] : [];
+
+module.exports = {
+  stories: ['../src/**/*.story.@(js|jsx|ts|tsx)'],
+  staticDirs,
+  addons: [
+    '@storybook/addon-a11y',
+    '@storybook/addon-essentials',
+    'storybook-addon-rtl',
+    '@storybook/addon-options'
   ],
-  addons: ['@storybook/addon-actions', '@storybook/addon-options'],
   framework: '@storybook/react',
   core: {
     builder: {

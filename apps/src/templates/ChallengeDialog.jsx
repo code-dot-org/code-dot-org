@@ -16,7 +16,7 @@ class ChallengeDialog extends React.Component {
     cancelButtonLabel: PropTypes.string,
     children: PropTypes.oneOfType([
       PropTypes.node,
-      PropTypes.arrayOf(PropTypes.node)
+      PropTypes.arrayOf(PropTypes.node),
     ]),
     complete: PropTypes.bool,
     isIntro: PropTypes.bool,
@@ -27,14 +27,14 @@ class ChallengeDialog extends React.Component {
     primaryButtonLabel: PropTypes.string,
     showPuzzleRatingButtons: PropTypes.bool,
     text: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
   };
 
   constructor(props) {
     super(props);
     this.state = {
       isOpen: this.props.isOpen === undefined || this.props.isOpen,
-      confettiActive: false
+      confettiActive: false,
     };
   }
 
@@ -75,7 +75,7 @@ class ChallengeDialog extends React.Component {
         <div
           style={{
             ...styles.banner,
-            ...(this.props.complete ? styles.bannerComplete : {})
+            ...(this.props.complete ? styles.bannerComplete : {}),
           }}
         >
           <h1 style={styles.title} id="uitest-challenge-title">
@@ -119,7 +119,7 @@ const styles = {
   dialog: {
     top: '20%',
     border: `5px solid ${color.purple}`,
-    borderRadius: 10
+    borderRadius: 10,
   },
   banner: {
     backgroundPosition: 'top center',
@@ -127,25 +127,25 @@ const styles = {
     backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
     position: 'relative',
     marginTop: -85,
-    height: 135
+    height: 135,
   },
   bannerComplete: {
     backgroundImage: `url(${assetUrl(
       'media/dialog/challenge_target_complete.svg'
     )})`,
     marginTop: -99,
-    height: 149
+    height: 149,
   },
   content: {
     color: color.purple,
     position: 'relative',
     textAlign: 'center',
-    marginBottom: 30
+    marginBottom: 30,
   },
   text: {
     margin: '0px 40px 20px',
     textAlign: 'center',
-    fontSize: 18
+    fontSize: 18,
   },
   title: {
     textAlign: 'center',
@@ -158,22 +158,22 @@ const styles = {
     left: '25%',
     fontSize: '150%',
     height: 30,
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   confetti: {
-    top: 150
+    top: 150,
   },
   primaryButton: {
-    float: 'right'
+    float: 'right',
   },
   primaryButtonRtl: {
-    float: 'left'
+    float: 'left',
   },
   footer: {
     marginTop: 20,
     paddingTop: 20,
-    borderTop: '2px solid #ccc'
-  }
+    borderTop: '2px solid #ccc',
+  },
 };
 
 export default Radium(ChallengeDialog);

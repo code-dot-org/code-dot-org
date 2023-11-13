@@ -18,3 +18,5 @@ public double figureItOut(double myDouble) {
 
 Which of the following can replace `/* missing code */` so the method will work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

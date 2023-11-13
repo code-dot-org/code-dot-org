@@ -7,11 +7,11 @@ export default class Tooltip extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    place: PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
+    place: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   };
 
   state = {
-    id: _.uniqueId()
+    id: _.uniqueId(),
   };
 
   render() {

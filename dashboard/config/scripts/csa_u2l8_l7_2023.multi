@@ -47,3 +47,5 @@ c = 5 + 2.5;
 
 Finally, we evaluate the remaining expression to get `7.5` as the result.
 MARKDOWN
+
+allow_multiple_attempts true

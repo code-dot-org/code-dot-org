@@ -11,7 +11,8 @@
           "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "633d1416-a7fb-44b6-a724-8479fd66f4fa"
+          "key": "633d1416-a7fb-44b6-a724-8479fd66f4fa",
+          "buttonText": null
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -23,12 +24,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:38 UTC",
+    "serialized_at": "2023-08-31 17:34:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7655,6 +7659,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

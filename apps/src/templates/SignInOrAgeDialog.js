@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -17,17 +18,17 @@ const sessionStorageKey = 'anon_over13';
 class SignInOrAgeDialog extends Component {
   state = {
     open: true,
-    tooYoung: false
+    tooYoung: false,
   };
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
-    storage: PropTypes.object.isRequired
+    storage: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
-    storage: window.sessionStorage
+    storage: window.sessionStorage,
   };
 
   onClickAgeOk = () => {
@@ -97,7 +98,7 @@ class SignInOrAgeDialog extends Component {
                 __useDeprecatedTag
                 href={pegasus('/hourofcode/overview')}
                 text="See all tutorials"
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
               />
             </div>
           </div>
@@ -140,11 +141,11 @@ class SignInOrAgeDialog extends Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,
@@ -157,51 +158,51 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex'
+    display: 'flex',
   },
   middleCell: {
     display: 'inline-block',
     verticalAlign: 'top',
-    maxWidth: '50%'
+    maxWidth: '50%',
   },
   center: {
     paddingLeft: 20,
     paddingRight: 20,
     flexDirection: 'column',
-    display: 'flex'
+    display: 'flex',
   },
   centerLine: {
     borderLeft: `1px solid ${color.lighter_gray}`,
     marginLeft: '50%',
-    height: '100%'
+    height: '100%',
   },
   centerText: {
-    padding: 3
+    padding: 3,
   },
   button: {
-    paddingTop: 15
+    paddingTop: 15,
   },
   age: {
-    paddingTop: 15
+    paddingTop: 15,
   },
   dropdown: {
     verticalAlign: 'top',
     marginRight: 10,
     marginTop: 2,
-    width: 160
+    width: 160,
   },
   tooYoungButton: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   okButton: {
     margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)'
-  }
+    boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
+  },
 };
 
 export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
 
 export default connect(state => ({
   age13Required: state.progress.isAge13Required,
-  signedIn: state.currentUser.signInState === SignInState.SignedIn
+  signedIn: state.currentUser.signInState === SignInState.SignedIn,
 }))(SignInOrAgeDialog);

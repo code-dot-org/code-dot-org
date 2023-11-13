@@ -11,3 +11,4 @@ wrong '6 bits'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

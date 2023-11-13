@@ -3,7 +3,7 @@ import React from 'react';
 import {
   ButtonsFromOptions,
   ButtonsWithAdditionalTextFields,
-  ButtonsWithAdditionalTextFieldsFromOptions
+  ButtonsWithAdditionalTextFieldsFromOptions,
 } from '../form/Buttons';
 import {useDefaultOptions} from '../LabeledFormComponent';
 
@@ -12,13 +12,13 @@ export const LabeledRadioButtons = props => {
   const passProps = {
     ...defaults,
     type: 'radio',
-    ...props
+    ...props,
   };
   return <ButtonsFromOptions {...passProps} />;
 };
 LabeledRadioButtons.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 export const LabeledRadioButtonsWithAdditionalTextFields = props => {
@@ -27,14 +27,14 @@ export const LabeledRadioButtonsWithAdditionalTextFields = props => {
     ...defaults,
     type: 'radio',
     textFieldMap: props.textFieldMap,
-    ...props
+    ...props,
   };
   return <ButtonsWithAdditionalTextFieldsFromOptions {...passProps} />;
 };
 LabeledRadioButtonsWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  textFieldMap: PropTypes.object
+  textFieldMap: PropTypes.object,
 };
 
 export const LabeledDynamicRadioButtonsWithAdditionalTextFields = props => {
@@ -44,7 +44,7 @@ export const LabeledDynamicRadioButtonsWithAdditionalTextFields = props => {
     type: 'radio',
     options: props.options,
     textFieldMap: props.textFieldMap,
-    ...props
+    ...props,
   };
   return <ButtonsWithAdditionalTextFields {...passProps} />;
 };
@@ -52,5 +52,5 @@ LabeledDynamicRadioButtonsWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   options: PropTypes.array,
-  textFieldMap: PropTypes.object
+  textFieldMap: PropTypes.object,
 };

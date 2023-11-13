@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "ed6a61e5-23b1-4249-a182-874156f2d135"
+          "key": "ed6a61e5-23b1-4249-a182-874156f2d135",
+          "buttonText": "Learn More"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -32,13 +33,16 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-30 18:10:31 UTC",
+    "serialized_at": "2023-08-31 17:39:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -13533,6 +13537,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

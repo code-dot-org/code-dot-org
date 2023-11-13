@@ -16,3 +16,5 @@ II. `(double) 4 / 2`
 
 III. `(int) (1.6 + 0.5)`
 MARKDOWN
+
+allow_multiple_attempts true

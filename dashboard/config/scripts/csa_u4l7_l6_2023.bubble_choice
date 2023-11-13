@@ -1,6 +1,6 @@
 name 'CSA U4L7-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Nested if Statements'
+description 'Use nested `if` statements in The Neighborhood or The Theater.'
 
 sublevels
 level 'CSA U4L7-L6a_2023'

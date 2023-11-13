@@ -6,14 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Supports to Teach CS Discoveries",
-          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
-          "type": "information",
-          "visibility": "Teacher-only",
-          "key": "1aca9aa7-be38-47cb-b58d-9d0df5c15f3b"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6",
@@ -22,6 +14,16 @@
           "dismissible": true,
           "buttonText": "Teacher Survey",
           "key": "89b889db-2e3a-4afa-8df5-b424eb0d62d1"
+        },
+        {
+          "key": "cd936bbe-e57c-4568-aad1-832ee483d149",
+          "notice": "Now Available with micro:bit!",
+          "details": "We've recently launched a version of this unit that uses the BBC micro:bit instead of the Adafruit Circuit Playground! Click the button to see the unit and learn more!",
+          "link": "https://studio.code.org/s/microbit-2023?viewAs=Instructor",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -33,12 +35,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-14 22:30:33 UTC",
+    "serialized_at": "2023-08-31 17:38:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11174,7 +11179,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
       "key": "the_counter_pattern_1",
       "properties": {
         "audience": "Student",
@@ -13357,6 +13362,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

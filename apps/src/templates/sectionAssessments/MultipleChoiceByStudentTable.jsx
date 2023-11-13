@@ -9,13 +9,13 @@ import orderBy from 'lodash/orderBy';
 import PercentAnsweredCell from './PercentAnsweredCell';
 import {
   studentWithMCResponsesPropType,
-  multipleChoiceQuestionPropType
+  multipleChoiceQuestionPropType,
 } from './assessmentDataShapes';
 
 export const COLUMNS = {
   QUESTION: 0,
   STUDENT_ANSWER: 1,
-  CORRECT_ANSWER: 2
+  CORRECT_ANSWER: 2,
 };
 
 const ANSWER_COLUMN_WIDTH = 80;
@@ -27,14 +27,14 @@ const ANSWER_COLUMN_WIDTH = 80;
 class MultipleChoiceByStudentTable extends Component {
   static propTypes = {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: studentWithMCResponsesPropType
+    studentAnswerData: studentWithMCResponsesPropType,
   };
 
   state = {
     [COLUMNS.NAME]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -49,10 +49,10 @@ class MultipleChoiceByStudentTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -85,17 +85,17 @@ class MultipleChoiceByStudentTable extends Component {
         property: 'question',
         header: {
           label: i18n.question(),
-          props: {style: tableLayoutStyles.headerCell}
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           formatters: [this.questionCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.questionCell
-            }
-          }
-        }
+              ...styles.questionCell,
+            },
+          },
+        },
       },
       {
         property: 'studentAnswer',
@@ -104,19 +104,19 @@ class MultipleChoiceByStudentTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.answerColumnHeader
-            }
-          }
+              ...styles.answerColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.studentAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.answerColumnCell
-            }
-          }
-        }
+              ...styles.answerColumnCell,
+            },
+          },
+        },
       },
       {
         property: 'correctAnswer',
@@ -125,20 +125,20 @@ class MultipleChoiceByStudentTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.answerColumnHeader
-            }
-          }
+              ...styles.answerColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.correctAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.answerColumnCell
-            }
-          }
-        }
-      }
+              ...styles.answerColumnCell,
+            },
+          },
+        },
+      },
     ];
     return dataColumns;
   };
@@ -156,14 +156,14 @@ class MultipleChoiceByStudentTable extends Component {
     const rowData = this.props.questionAnswerData.map((question, index) => {
       return {
         ...question,
-        studentAnswer: this.props.studentAnswerData.studentResponses[index]
+        studentAnswer: this.props.studentAnswerData.studentResponses[index],
       };
     });
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rowData);
 
     return (
@@ -178,17 +178,17 @@ class MultipleChoiceByStudentTable extends Component {
 const styles = {
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH
+    width: ANSWER_COLUMN_WIDTH,
   },
   questionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    maxWidth: 470
-  }
+    maxWidth: 470,
+  },
 };
 
 export default MultipleChoiceByStudentTable;

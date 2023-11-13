@@ -185,7 +185,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
 
     enrollment.send_exit_survey
-    assert_not_nil enrollment.reload.survey_sent_at
+    refute_nil enrollment.reload.survey_sent_at
   end
 
   test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do
@@ -214,7 +214,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_enrollment, school_info: nil
     end
-    assert e.message.include? 'Validation failed: School info is required'
+    assert_includes(e.message, 'Validation failed: School info is required')
 
     enrollment = create :pd_enrollment
     refute enrollment.update(school_info: nil)
@@ -230,7 +230,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_enrollment, last_name: ''
     end
-    assert e.message.include? 'Validation failed: Last name is required'
+    assert_includes(e.message, 'Validation failed: Last name is required')
 
     enrollment = create :pd_enrollment
     refute enrollment.update(last_name: '')
@@ -535,19 +535,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'old enrollments with school are grandfathered in' do
-    old_enrollment = build :pd_enrollment, school: 'a school'
+    old_enrollment = create :pd_enrollment
+    assert old_enrollment.valid?
+
+    # Enrollments that already have a school are allowed to do so,
+    old_enrollment.school = 'a school'
     old_enrollment.save(validate: false)
     assert old_enrollment.valid?
 
     # but they can't be changed
     old_enrollment.school = 'another school'
     refute old_enrollment.valid?
+
+    # and new enrollments cannot be so created.
+    assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, school: 'a school'
+    end
   end
 
   test 'school info country required on create' do
     enrollment = build :pd_enrollment, school_info: create(:school_info_without_country)
     refute enrollment.valid?
-    assert enrollment.errors.full_messages.include? 'School info must have a country'
+    assert_includes(enrollment.errors.full_messages, 'School info must have a country')
   end
 
   test 'old enrollments with no school info country are grandfathered in' do
@@ -646,7 +655,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for csf workshop' do
-    workshop = create :workshop, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
@@ -661,7 +670,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'scholarship info automatically created when enrolling in csf workshop' do
-    workshop = create :workshop, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
 
     # initially creates scholarship info with YES_CDO status

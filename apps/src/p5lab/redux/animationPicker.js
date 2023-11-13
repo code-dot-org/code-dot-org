@@ -6,7 +6,7 @@ import {
   addLibraryAnimation,
   appendBlankFrame,
   appendCustomFrames,
-  appendLibraryFrames
+  appendLibraryFrames,
 } from './animationList';
 import {makeEnum} from '@cdo/apps/utils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
@@ -42,7 +42,7 @@ const initialState = {
   isBackground: false,
   // List of animations selected to be added through multiselect
   selectedAnimations: {},
-  uploadWarningShowing: false
+  uploadWarningShowing: false,
 };
 
 export default function reducer(state, action) {
@@ -53,7 +53,7 @@ export default function reducer(state, action) {
         visible: true,
         goal: action.goal,
         isBackground: false,
-        isSpriteLab: action.isSpriteLab
+        isSpriteLab: action.isSpriteLab,
       });
     }
     return state;
@@ -64,7 +64,7 @@ export default function reducer(state, action) {
         visible: true,
         goal: action.goal,
         isBackground: true,
-        isSpriteLab: true
+        isSpriteLab: true,
       });
     }
     return state;
@@ -75,25 +75,25 @@ export default function reducer(state, action) {
   if (action.type === SHOWING_UPLOAD_WARNING) {
     return {
       ...state,
-      uploadWarningShowing: true
+      uploadWarningShowing: true,
     };
   }
   if (action.type === EXITED_UPLOAD_WARNING) {
     return {
       ...state,
-      uploadWarningShowing: false
+      uploadWarningShowing: false,
     };
   }
   if (action.type === BEGIN_UPLOAD) {
     return _.assign({}, state, {
       uploadInProgress: true,
-      uploadFilename: action.filename
+      uploadFilename: action.filename,
     });
   }
   if (action.type === HANDLE_UPLOAD_ERROR) {
     return _.assign({}, state, {
       uploadInProgress: false,
-      uploadError: action.status
+      uploadError: action.status,
     });
   }
   if (action.type === SELECT_ANIMATION) {
@@ -101,8 +101,8 @@ export default function reducer(state, action) {
       ...state,
       selectedAnimations: {
         ...state.selectedAnimations,
-        [action.animation.sourceUrl]: action.animation
-      }
+        [action.animation.sourceUrl]: action.animation,
+      },
     };
   }
   if (action.type === REMOVE_ANIMATION) {
@@ -110,7 +110,7 @@ export default function reducer(state, action) {
     delete updatedAnimations[action.animation.sourceUrl];
     return {
       ...state,
-      selectedAnimations: updatedAnimations
+      selectedAnimations: updatedAnimations,
     };
   }
   return state;
@@ -153,7 +153,7 @@ export function hide() {
 export function beginUpload(filename) {
   return {
     type: BEGIN_UPLOAD,
-    filename: filename
+    filename: filename,
   };
 }
 
@@ -163,7 +163,7 @@ export function beginUpload(filename) {
  */
 export function showingUploadWarning() {
   return {
-    type: SHOWING_UPLOAD_WARNING
+    type: SHOWING_UPLOAD_WARNING,
   };
 }
 
@@ -173,7 +173,7 @@ export function showingUploadWarning() {
  */
 export function exitedUploadWarning() {
   return {
-    type: EXITED_UPLOAD_WARNING
+    type: EXITED_UPLOAD_WARNING,
   };
 }
 
@@ -190,11 +190,11 @@ export function handleUploadComplete(result) {
     study_group: 'control-2020',
     event: 'upload',
     data_json: JSON.stringify({
-      size: result.size
-    })
+      size: result.size,
+    }),
   });
 
-  return function(dispatch, getState) {
+  return function (dispatch, getState) {
     const isBackgroundMode =
       getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const {goal, uploadFilename} = getState().animationPicker;
@@ -209,7 +209,7 @@ export function handleUploadComplete(result) {
           sourceUrl: sourceUrl,
           size: result.size,
           version: result.versionId,
-          categories: [isBackgroundMode ? 'backgrounds' : '']
+          categories: [isBackgroundMode ? 'backgrounds' : ''],
         });
 
         if (goal === Goal.NEW_ANIMATION) {
@@ -235,12 +235,12 @@ export function handleUploadComplete(result) {
  */
 function loadImageMetadata(sourceUrl, onComplete, onError) {
   let image = new Image();
-  image.addEventListener('load', function() {
+  image.addEventListener('load', function () {
     onComplete({
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},
       frameCount: 1,
-      frameDelay: 4
+      frameDelay: 4,
     });
   });
   image.addEventListener('error', onError);
@@ -255,7 +255,7 @@ function loadImageMetadata(sourceUrl, onComplete, onError) {
 export function handleUploadError(status) {
   return {
     type: HANDLE_UPLOAD_ERROR,
-    status: status
+    status: status,
   };
 }
 
@@ -267,7 +267,7 @@ export function handleUploadError(status) {
 export function addSelectedAnimation(animation) {
   return {
     type: SELECT_ANIMATION,
-    animation: animation
+    animation: animation,
   };
 }
 
@@ -279,7 +279,7 @@ export function addSelectedAnimation(animation) {
 export function removeSelectedAnimation(animation) {
   return {
     type: REMOVE_ANIMATION,
-    animation: animation
+    animation: animation,
   };
 }
 
@@ -322,8 +322,8 @@ export function pickLibraryAnimation(animation) {
     event: 'select-sprite',
     data_json: JSON.stringify({
       name: animation.name,
-      sourceUrl: animation.sourceUrl
-    })
+      sourceUrl: animation.sourceUrl,
+    }),
   });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;

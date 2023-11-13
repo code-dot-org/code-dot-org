@@ -29,3 +29,5 @@ public Pixel maxRed(Pixel[][] pixels) {
 
 Which code segment could replace `/*MISSING CODE*/` for the method to work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

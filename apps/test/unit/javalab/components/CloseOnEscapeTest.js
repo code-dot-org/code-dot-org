@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import CloseOnEscape from '@cdo/apps/javalab/components/CloseOnEscape';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 describe('CloseOnEscape', () => {
   let wrapper, handleClose, className;
@@ -16,21 +16,12 @@ describe('CloseOnEscape', () => {
   });
 
   it('calls handleClose() function when Escape pressed', () => {
-    wrapper
-      .find('div')
-      .first()
-      .props()
-      .onKeyDown({key: 'Escape'});
+    wrapper.find('div').first().props().onKeyDown({key: 'Escape'});
 
     sinon.assert.calledOnce(handleClose);
   });
 
   it('passes through provided class name', () => {
-    expect(
-      wrapper
-        .find('div')
-        .first()
-        .props().className
-    ).to.equal(className);
+    expect(wrapper.find('div').first().props().className).to.equal(className);
   });
 });

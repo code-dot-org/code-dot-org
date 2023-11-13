@@ -14,3 +14,4 @@ answer 'allows a class, or type, to be used as the parameter to an ArrayList and
 
 question 'immutable'
 answer 'the content cannot be changed once it is created'
+allow_multiple_attempts true

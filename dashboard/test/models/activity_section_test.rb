@@ -83,7 +83,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
       description: "English description",
       tips: [{"type" => "typeTip", "markdown" => "English tip"}]
     )
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
         "activity_sections" => {

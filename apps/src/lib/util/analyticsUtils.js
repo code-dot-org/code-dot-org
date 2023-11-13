@@ -1,4 +1,3 @@
-/* global appOptions */
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -19,7 +18,7 @@ export const reportTeacherReviewingStudentNonLabLevel = (
       ...additionalPayload,
       unitId: appOptions.serverScriptId,
       levelId: appOptions.serverLevelId,
-      sectionId: queryParams('section_id')
+      sectionId: queryParams('section_id'),
     });
   }
 };

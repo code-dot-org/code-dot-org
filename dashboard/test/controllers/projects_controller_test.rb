@@ -25,7 +25,7 @@ class ProjectsControllerTest < ActionController::TestCase
     # them specific content.
     ProjectsController::STANDALONE_PROJECTS.each do |type, config|
       next if Level.exists?(name: config[:name])
-      factory = FactoryGirl.factories.registered?(type) ? type : :level
+      factory = FactoryBot.factories.registered?(type) ? type : :level
       create(factory, name: config[:name])
     end
 
@@ -181,7 +181,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'send to phone' do
     get :edit, params: {key: 'playlab', channel_id: 'my_channel_id'}
-    assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
+    assert_includes(@response.body, '"send_to_phone_url":"http://test.host/sms/send"')
   end
 
   test 'applab and gamelab edit gets redirected if under 13' do
@@ -376,5 +376,106 @@ class ProjectsControllerTest < ActionController::TestCase
     get :create_new, params: {key: 'applab', enableMaker: 'true'}
     assert_response :redirect
     assert @response.headers['Location'].ends_with? '/edit?enableMaker=true'
+  end
+
+  test 'get_or_create_for_level without script creates new channel if none exists' do
+    level = create(:level, :blockly)
+    get :get_or_create_for_level, params: {level_id: level.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+  end
+
+  test 'get_or_create_for_level without script returns existing channel' do
+    level = create(:level, :blockly)
+    get :get_or_create_for_level, params: {level_id: level.id}
+    assert_response :success
+    channel_id = @response.body['channel']
+    refute_nil channel_id
+
+    get :get_or_create_for_level, params: {level_id: level.id}
+    assert_response :success
+    assert_equal channel_id, @response.body['channel']
+  end
+
+  test 'get_or_create_for_level with script creates new channel if none exists' do
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+  end
+
+  test 'get_or_create_for_level with script restricts usage for young students in app lab' do
+    sign_in_with_request create(:young_student)
+    script = create(:script)
+    level = create(:applab)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
+    assert_response :forbidden
+  end
+
+  test 'get_or_create_for_level with script allows usage for young students with tos teacher in app lab' do
+    sign_in_with_request create(:young_student_with_tos_teacher)
+    script = create(:script)
+    level = create(:applab)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+  end
+
+  test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}/view", key: 'music', channel_id: channel_id, readonly: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to /edit redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
+  end
+
+  test 'on lab2 levels navigating to a share URL redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, share: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to a share URL redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, share: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
+  end
+
+  test 'on lab2 levels navigating to an embed URL redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to an embed URL redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
   end
 end

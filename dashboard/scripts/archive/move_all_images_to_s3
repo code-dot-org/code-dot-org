@@ -32,9 +32,9 @@ LevelSourceImage.where('image != "S3"').find_in_batches do |batch|
       end
     rescue Magick::ImageMagickError
       invalid_image += 1
-    rescue Exception => e
-      p e.message
-      p e.backtrace
+    rescue Exception => exception
+      p exception.message
+      p exception.backtrace
       errors += 1
     end
   end

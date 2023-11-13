@@ -8,7 +8,7 @@ describe('MiniView', () => {
     isSummaryView: false,
     hasGroups: false,
     scriptName: 'Classic Maze',
-    hasFullProgress: false
+    hasFullProgress: false,
   };
 
   it('displays a loading div if we havent loaded progress yet', () => {

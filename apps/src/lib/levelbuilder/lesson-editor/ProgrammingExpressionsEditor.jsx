@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   programmingExpressionShape,
-  programmingEnvironmentShape
+  programmingEnvironmentShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
   addProgrammingExpression,
-  removeProgrammingExpression
+  removeProgrammingExpression,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
@@ -24,7 +24,7 @@ class ProgrammingExpressionsEditor extends Component {
     programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
       .isRequired,
     addProgrammingExpression: PropTypes.func.isRequired,
-    removeProgrammingExpression: PropTypes.func.isRequired
+    removeProgrammingExpression: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -32,7 +32,7 @@ class ProgrammingExpressionsEditor extends Component {
     this.state = {
       confirmRemovalDialogOpen: false,
       programmingExpressionForRemoval: null,
-      addProgrammingExpressionOpen: false
+      addProgrammingExpressionOpen: false,
     };
   }
 
@@ -45,7 +45,7 @@ class ProgrammingExpressionsEditor extends Component {
           onMouseDown={() =>
             this.setState({
               confirmRemovalDialogOpen: true,
-              programmingExpressionForRemoval: rowData
+              programmingExpressionForRemoval: rowData,
             })
           }
         >
@@ -62,73 +62,73 @@ class ProgrammingExpressionsEditor extends Component {
         header: {
           label: 'Name',
           props: {
-            style: {width: '30%'}
-          }
+            style: {width: '30%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'programmingEnvironmentName',
         header: {
           label: 'Programming Environment',
           props: {
-            style: {width: '30%'}
-          }
+            style: {width: '30%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'category',
         header: {
           label: 'Category',
           props: {
-            style: {width: '30%'}
-          }
+            style: {width: '30%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'actions',
         header: {
           label: 'Actions',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
           formatters: [this.actionsCellFormatter],
           props: {
             style: {
-              ...lessonEditorTableStyles.actionsCell
-            }
-          }
-        }
-      }
+              ...lessonEditorTableStyles.actionsCell,
+            },
+          },
+        },
+      },
     ];
   }
 
   handleRemoveProgrammingExpressionDialogClose = () => {
     this.setState({
       confirmRemovalDialogOpen: false,
-      programmingExpressionForRemoval: null
+      programmingExpressionForRemoval: null,
     });
   };
 
@@ -157,9 +157,7 @@ class ProgrammingExpressionsEditor extends Component {
       <div>
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
-            body={`Are you sure you want to remove the programming expression "${
-              this.state.programmingExpressionForRemoval.name
-            }" from this lesson?`}
+            body={`Are you sure you want to remove the programming expression "${this.state.programmingExpressionForRemoval.name}" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
             confirmType="danger"
@@ -176,7 +174,7 @@ class ProgrammingExpressionsEditor extends Component {
         <Button
           text={'Add Introduced Code'}
           onClick={this.handleOpenAddProgrammingExpression}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
         <FindProgrammingExpressionDialog
           isOpen={this.state.addProgrammingExpressionOpen}
@@ -192,12 +190,12 @@ class ProgrammingExpressionsEditor extends Component {
 
 const styles = {
   search: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   remove: {
     fontSize: 14,
@@ -206,22 +204,23 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     width: '100%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   dropdown: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
-export const UnconnectedProgrammingExpressionsEditor = ProgrammingExpressionsEditor;
+export const UnconnectedProgrammingExpressionsEditor =
+  ProgrammingExpressionsEditor;
 
 export default connect(
   state => ({
     programmingExpressions: state.programmingExpressions,
-    programmingEnvironments: state.levelSearchingInfo.programmingEnvironments
+    programmingEnvironments: state.levelSearchingInfo.programmingEnvironments,
   }),
   {
     addProgrammingExpression,
-    removeProgrammingExpression
+    removeProgrammingExpression,
   }
 )(ProgrammingExpressionsEditor);

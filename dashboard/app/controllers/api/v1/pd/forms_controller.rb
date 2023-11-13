@@ -1,4 +1,4 @@
-class Api::V1::Pd::FormsController < ::ApplicationController
+class Api::V1::Pd::FormsController < ApplicationController
   def new_form
     raise "Abstract method must be overridden by inheriting class"
   end

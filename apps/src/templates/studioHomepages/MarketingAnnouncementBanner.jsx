@@ -42,7 +42,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         if (variant === '') {
           setActiveExperimentId(experimentId);
         }
-      }
+      },
     });
   }, []);
 
@@ -52,7 +52,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       bannerId = activeExperimentId;
     }
     return `display-announcement-${bannerId}`;
-  }, [activeExperimentId]);
+  }, [activeExperimentId, announcement.id]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
@@ -70,8 +70,8 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         data_json: JSON.stringify({
           banner_title: bannerRef.current.querySelector(
             '#two-column-action-block--sub-heading'
-          ).innerText
-        })
+          ).innerText,
+        }),
       },
       {includeUserId: true}
     );
@@ -95,7 +95,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       : 'marketing-announcement-banner-btn',
     url: announcement.buttonUrl,
     text: announcement.buttonText,
-    onClick: () => logEvent('cta_button_clicked')
+    onClick: () => logEvent('cta_button_clicked'),
   };
 
   return (
@@ -103,7 +103,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       id="marketing-announcement-banner"
       style={{
         ...styles.container,
-        display: bannerDisplayStyle
+        display: bannerDisplayStyle,
       }}
     >
       {/* ID is used for easier targeting in Google Optimize */}
@@ -131,7 +131,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 const styles = {
   container: {
     position: 'relative',
-    marginTop: '16px'
+    marginTop: '16px',
   },
   dismissButtonStyle: {
     position: 'absolute',
@@ -139,13 +139,13 @@ const styles = {
     right: '10px',
     color: color.neutral_dark60,
     fontSize: '22px',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };
 
 MarketingAnnouncementBanner.propTypes = {
   announcement: shapes.specialAnnouncement,
-  marginBottom: PropTypes.string
+  marginBottom: PropTypes.string,
 };
 
 export default MarketingAnnouncementBanner;

@@ -32,10 +32,10 @@ class AppLabView extends React.Component {
     interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
-      ApplabInterfaceMode.DATA
+      ApplabInterfaceMode.DATA,
     ]).isRequired,
     isRtl: PropTypes.bool,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -53,7 +53,7 @@ class AppLabView extends React.Component {
       autogenerateML,
       hasDesignMode,
       hasDataMode,
-      handleVersionHistory
+      handleVersionHistory,
     } = this.props;
 
     const codeWorkspaceVisible = ApplabInterfaceMode.CODE === interfaceMode;
@@ -103,14 +103,14 @@ export default connect(state => ({
   hasDesignMode: state.pageConstants.hasDesignMode || false,
   interfaceMode: state.interfaceMode,
   isRtl: state.isRtl,
-  widgetMode: state.pageConstants.widgetMode
+  widgetMode: state.pageConstants.widgetMode,
 }))(AppLabView);
 
 const styles = {
   widgetInstructions: {
-    left: WIDGET_WIDTH
+    left: WIDGET_WIDTH,
   },
   widgetInstructionsRtl: {
-    right: WIDGET_WIDTH
-  }
+    right: WIDGET_WIDTH,
+  },
 };

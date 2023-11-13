@@ -2,81 +2,81 @@ import {assert, expect} from '../../util/reconfiguredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 
-describe('NetSimUtils', function() {
-  beforeEach(function() {
+describe('NetSimUtils', function () {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
-  describe('serializeNumber', function() {
+  describe('serializeNumber', function () {
     var serializeNumber = NetSimUtils.serializeNumber;
 
-    it('turns Infinity into a string', function() {
+    it('turns Infinity into a string', function () {
       assert.equal('Infinity', serializeNumber(Infinity));
     });
 
-    it('turns -Infinity into a string', function() {
+    it('turns -Infinity into a string', function () {
       assert.equal('-Infinity', serializeNumber(-Infinity));
     });
 
-    it('turns NaN into a string', function() {
+    it('turns NaN into a string', function () {
       assert.equal('NaN', serializeNumber(NaN));
     });
 
-    it('turns undefined into a string', function() {
+    it('turns undefined into a string', function () {
       assert.equal('undefined', serializeNumber(undefined));
     });
 
-    it('leaves other values alone', function() {
+    it('leaves other values alone', function () {
       assert.equal(42, serializeNumber(42));
       assert.equal(Math.PI, serializeNumber(Math.PI));
       assert.equal(null, serializeNumber(null));
     });
   });
 
-  describe('deserializeNumber', function() {
+  describe('deserializeNumber', function () {
     var deserializeNumber = NetSimUtils.deserializeNumber;
 
-    it("turns 'Infinity' into Infinity", function() {
+    it("turns 'Infinity' into Infinity", function () {
       assert.equal(Infinity, deserializeNumber('Infinity'));
     });
 
-    it("turns '-Infinity' into -Infinity", function() {
+    it("turns '-Infinity' into -Infinity", function () {
       assert.equal(-Infinity, deserializeNumber('-Infinity'));
     });
 
-    it("turns 'NaN' into NaN", function() {
+    it("turns 'NaN' into NaN", function () {
       var result = deserializeNumber('NaN');
       assert(isNaN(result));
       assert(result !== result); // Unique to NaN
     });
 
-    it("turns 'undefined' into undefined", function() {
+    it("turns 'undefined' into undefined", function () {
       assert.equal(undefined, deserializeNumber('undefined'));
     });
 
-    it('leaves other values alone', function() {
+    it('leaves other values alone', function () {
       assert.equal(42, deserializeNumber(42));
       assert.equal(Math.PI, deserializeNumber(Math.PI));
       assert.equal(null, deserializeNumber(null));
     });
   });
 
-  describe('number serialize-deserialize round trip', function() {
+  describe('number serialize-deserialize round trip', function () {
     var serializeNumber = NetSimUtils.serializeNumber;
     var deserializeNumber = NetSimUtils.deserializeNumber;
-    var roundTripTest = function(val) {
+    var roundTripTest = function (val) {
       var resultValue = deserializeNumber(
         JSON.parse(JSON.stringify(serializeNumber(val)))
       );
       assert.equal(val, resultValue);
     };
 
-    it('preserves Infinities', function() {
+    it('preserves Infinities', function () {
       roundTripTest(Infinity);
       roundTripTest(-Infinity);
     });
 
-    it('preserves NaN', function() {
+    it('preserves NaN', function () {
       var originalValue = NaN;
       var resultValue = deserializeNumber(
         JSON.parse(JSON.stringify(serializeNumber(originalValue)))
@@ -85,26 +85,26 @@ describe('NetSimUtils', function() {
       assert(originalValue !== resultValue); // Unique to NaN
     });
 
-    it('preserves numbers', function() {
+    it('preserves numbers', function () {
       roundTripTest(42);
       roundTripTest(Math.PI);
     });
 
-    it('preserves empty values', function() {
+    it('preserves empty values', function () {
       roundTripTest(null);
       roundTripTest(undefined);
     });
   });
 
-  describe('scrubHeaderSpecForBackwardsCompatibility', function() {
+  describe('scrubHeaderSpecForBackwardsCompatibility', function () {
     var scrubHeaderSpecForBackwardsCompatibility =
       NetSimUtils.scrubHeaderSpecForBackwardsCompatibility;
 
-    it('is a no-op for empty array', function() {
+    it('is a no-op for empty array', function () {
       assert.deepEqual([], scrubHeaderSpecForBackwardsCompatibility([]));
     });
 
-    it('is a no-op for new format', function() {
+    it('is a no-op for new format', function () {
       assert.deepEqual(
         ['toAddress'],
         scrubHeaderSpecForBackwardsCompatibility(['toAddress'])
@@ -121,12 +121,12 @@ describe('NetSimUtils', function() {
           'toAddress',
           'fromAddress',
           'packetCount',
-          'packetIndex'
+          'packetIndex',
         ])
       );
     });
 
-    it('converts old format to new format', function() {
+    it('converts old format to new format', function () {
       assert.deepEqual(
         ['toAddress'],
         scrubHeaderSpecForBackwardsCompatibility([{key: 'toAddress', bits: 4}])
@@ -136,7 +136,7 @@ describe('NetSimUtils', function() {
         ['toAddress', 'fromAddress'],
         scrubHeaderSpecForBackwardsCompatibility([
           {key: 'toAddress', bits: 4},
-          {key: 'fromAddress', bits: 4}
+          {key: 'fromAddress', bits: 4},
         ])
       );
 
@@ -146,13 +146,13 @@ describe('NetSimUtils', function() {
           {key: 'toAddress', bits: 4},
           {key: 'fromAddress', bits: 4},
           {key: 'packetCount', bits: 4},
-          {key: 'packetIndex', bits: 4}
+          {key: 'packetIndex', bits: 4},
         ])
       );
     });
   });
 
-  describe('getUniqueLevelKeyFromLocation', function() {
+  describe('getUniqueLevelKeyFromLocation', function () {
     const getUniqueLevelKeyFromLocation =
       NetSimUtils.getUniqueLevelKeyFromLocation;
 
@@ -178,19 +178,19 @@ describe('NetSimUtils', function() {
       return getUniqueLevelKeyFromLocation(urlToLocation(url));
     }
 
-    it('Omits protocol, origin and port from key', function() {
+    it('Omits protocol, origin and port from key', function () {
       expect(urlToKey('http://code.org:3000/key')).to.equal('key');
       expect(urlToKey('https://studio.code.org/key')).to.equal('key');
     });
 
-    it('Omits search and hash from key', function() {
+    it('Omits search and hash from key', function () {
       expect(urlToKey('https://code.org/key?foo=bar&baz=false')).to.equal(
         'key'
       );
       expect(urlToKey('https://code.org/key#anchor')).to.equal('key');
     });
 
-    it('Replaces non-word characters with dashes', function() {
+    it('Replaces non-word characters with dashes', function () {
       expect(urlToKey('https://studio.code.org/one/thing/at/a/time')).to.equal(
         'one-thing-at-a-time'
       );
@@ -199,7 +199,7 @@ describe('NetSimUtils', function() {
       );
     });
 
-    it('ignores trailing slash in the URL', function() {
+    it('ignores trailing slash in the URL', function () {
       expect('s-csp1-2019-lessons-3-levels-2')
         .to.equal(
           urlToKey('https://studio.code.org/s/csp1-2019/lessons/3/levels/2')

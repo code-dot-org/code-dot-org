@@ -128,13 +128,10 @@ module Pd::Application
       "\"#{applicant_full_name}\" <#{applicant_email}>"
     end
 
-    # Queues an email for this application
+    # Sends an email for this application
     # @param email_type [String] specifies the mailer action
-    # @param deliver_now [Boolean] (default false)
-    #   When true, send the email immediately.
-    #   Otherwise, it will remain unsent in the queue until the next morning's cronjob.
     # @see Pd::Application::Email
-    def queue_email(email_type, deliver_now: false)
+    def send_pd_application_email(email_type)
       email = Email.new(
         application: self,
         application_status: status,
@@ -142,8 +139,7 @@ module Pd::Application
         to: user.email
       )
 
-      email.send! if deliver_now
-      email.save!
+      email.send!
     end
 
     # Override in any application class that will deliver email.
@@ -259,18 +255,16 @@ module Pd::Application
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers
-      @full_answers ||= begin
-        sanitized_form_data_hash.tap do |hash|
-          additional_text_fields.each do |field_name, option, additional_text_field_name|
-            next unless hash.key? field_name
+      @full_answers ||= sanitized_form_data_hash.tap do |hash|
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
 
-            option ||= OTHER_WITH_TEXT
-            additional_text_field_name ||= "#{field_name}_other".to_sym
-            hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
-            hash.delete additional_text_field_name
-          end
-        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
-      end
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
+        end
+      end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data

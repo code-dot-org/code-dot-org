@@ -23,3 +23,5 @@ ELSE
 DISPLAY (val)
 </pre>
 MARKDOWN
+
+allow_multiple_attempts true

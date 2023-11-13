@@ -5,6 +5,6 @@ import msg from '@cdo/javalab/locale';
 export function getUnsupportedMiniAppMessage(miniAppType) {
   return msg.unsupportedMiniAppMessage({
     // Capitalize first letter of mini-app name (e.g. neighborhood -> Neighborhood)
-    miniAppType: miniAppType.charAt(0).toUpperCase() + miniAppType.slice(1)
+    miniAppType: miniAppType.charAt(0).toUpperCase() + miniAppType.slice(1),
   });
 }

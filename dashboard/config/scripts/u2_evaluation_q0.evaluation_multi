@@ -6,3 +6,5 @@ answer 'The pros and cons of different file types, as well at the types of compr
 answer 'Interpreting visual data to better understand a topic’, weight: 1, lesson_name: ‘Lessons 7 - 10: Interpreting Visual Data'
 answer 'Creating visualizations in order to communicate about a topic', weight: 1, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'
 answer 'Using or creating pivot tables to better understand a topic', weight: 1, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'
+
+allow_multiple_attempts true

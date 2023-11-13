@@ -25,6 +25,8 @@ export default function CodeDocLink({programmingExpression, showBlocks}) {
 CodeDocLink.propTypes = {
   programmingExpression: PropTypes.shape({
     name: PropTypes.string,
-    link: PropTypes.string
-  }).isRequired
+    link: PropTypes.string,
+    blockName: PropTypes.string,
+  }).isRequired,
+  showBlocks: PropTypes.bool,
 };

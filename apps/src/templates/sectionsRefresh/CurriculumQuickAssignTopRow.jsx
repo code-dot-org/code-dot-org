@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {memo, useCallback} from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
@@ -9,92 +10,99 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
-  PL: 'pl'
+  PL: 'pl',
 };
+
+const MarketingAudienceButton = memo(
+  ({selectedMarketingAudience, audience, determineMarketingAudience, text}) => {
+    const isActive = selectedMarketingAudience === audience;
+    const icon = isActive ? 'caret-down' : 'caret-right';
+
+    const onClick = useCallback(
+      e => {
+        e.preventDefault();
+        determineMarketingAudience(audience);
+      },
+      [determineMarketingAudience, audience]
+    );
+
+    return (
+      <Button
+        id={`uitest-${audience}-button`}
+        className={classnames(
+          moduleStyles.buttonStyle,
+          isActive && moduleStyles.activeMarketingAudienceButton
+        )}
+        text={text}
+        size={Button.ButtonSize.large}
+        icon={icon}
+        onClick={onClick}
+      />
+    );
+  }
+);
+
+MarketingAudienceButton.propTypes = {
+  selectedMarketingAudience: PropTypes.string.isRequired,
+  audience: PropTypes.string.isRequired,
+  determineMarketingAudience: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
+};
+
+MarketingAudienceButton.displayName = 'MarketingAudienceButton';
 
 export default function CurriculumQuickAssignTopRow({
   showPlOfferings,
   marketingAudience,
-  updateMarketingAudience
+  updateMarketingAudience,
 }) {
+  // If the given audience is already selected, deselect it.
+  // Otherwise, set to this audience
+  const determineMarketingAudience = useCallback(
+    newAudience => {
+      if (newAudience === marketingAudience) {
+        updateMarketingAudience('');
+      } else {
+        updateMarketingAudience(newAudience);
+      }
+    },
+    [marketingAudience, updateMarketingAudience]
+  );
+
   return (
     <div className={moduleStyles.buttonRow}>
       <div className={moduleStyles.buttonsInRow}>
-        <Button
-          id={'uitest-elementary-button'}
-          className={moduleStyles.buttonStyle}
+        <MarketingAudienceButton
+          selectedMarketingAudience={marketingAudience}
+          audience={MARKETING_AUDIENCE.ELEMENTARY}
+          determineMarketingAudience={determineMarketingAudience}
           text={i18n.courseBlocksGradeBandsElementary()}
-          size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.ELEMENTARY
-              ? 'caret-up'
-              : 'caret-down'
-          }
-          onClick={e => {
-            e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.ELEMENTARY);
-          }}
         />
-        <Button
-          id={'uitest-middle-button'}
-          className={moduleStyles.buttonStyle}
+        <MarketingAudienceButton
+          selectedMarketingAudience={marketingAudience}
+          audience={MARKETING_AUDIENCE.MIDDLE}
+          determineMarketingAudience={determineMarketingAudience}
           text={i18n.courseBlocksGradeBandsMiddle()}
-          size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.MIDDLE
-              ? 'caret-up'
-              : 'caret-down'
-          }
-          onClick={e => {
-            e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.MIDDLE);
-          }}
         />
-        <Button
-          id={'uitest-high-button'}
-          className={moduleStyles.buttonStyle}
+        <MarketingAudienceButton
+          selectedMarketingAudience={marketingAudience}
+          audience={MARKETING_AUDIENCE.HIGH}
+          determineMarketingAudience={determineMarketingAudience}
           text={i18n.courseBlocksGradeBandsHigh()}
-          size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.HIGH
-              ? 'caret-up'
-              : 'caret-down'
-          }
-          onClick={e => {
-            e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.HIGH);
-          }}
         />
-        <Button
-          id={'uitest-hoc-button'}
-          className={moduleStyles.buttonStyle}
+        <MarketingAudienceButton
+          selectedMarketingAudience={marketingAudience}
+          audience={MARKETING_AUDIENCE.HOC}
+          determineMarketingAudience={determineMarketingAudience}
           text={i18n.teacherCourseHoc()}
-          size={Button.ButtonSize.large}
-          icon={
-            marketingAudience === MARKETING_AUDIENCE.HOC
-              ? 'caret-up'
-              : 'caret-down'
-          }
-          onClick={e => {
-            e.preventDefault();
-            updateMarketingAudience(MARKETING_AUDIENCE.HOC);
-          }}
         />
+
         {showPlOfferings && (
-          <Button
-            id={'uitest-pl-button'}
-            className={moduleStyles.buttonStyle}
+          <MarketingAudienceButton
+            selectedMarketingAudience={marketingAudience}
+            audience={MARKETING_AUDIENCE.PL}
+            determineMarketingAudience={determineMarketingAudience}
             text={i18n.professionalLearning()}
-            size={Button.ButtonSize.large}
-            icon={
-              marketingAudience === MARKETING_AUDIENCE.PL
-                ? 'caret-up'
-                : 'caret-down'
-            }
-            onClick={e => {
-              e.preventDefault();
-              updateMarketingAudience(MARKETING_AUDIENCE.PL);
-            }}
           />
         )}
       </div>
@@ -105,5 +113,5 @@ export default function CurriculumQuickAssignTopRow({
 CurriculumQuickAssignTopRow.propTypes = {
   showPlOfferings: PropTypes.bool.isRequired,
   marketingAudience: PropTypes.string,
-  updateMarketingAudience: PropTypes.func.isRequired
+  updateMarketingAudience: PropTypes.func.isRequired,
 };

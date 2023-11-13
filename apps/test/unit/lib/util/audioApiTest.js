@@ -4,20 +4,20 @@ import {
   commands,
   executors,
   injectExecuteCmd,
-  MAX_SPEECH_TEXT_LENGTH
+  MAX_SPEECH_TEXT_LENGTH,
 } from '@cdo/apps/lib/util/audioApi';
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
-describe('Audio API', function() {
+describe('Audio API', function () {
   // Check that every command, has an executor, has a droplet config entry.
   // May eventually need to allow droplet config entries to not have a matching
   // executor because they get aliased.
-  it('is internally complete', function() {
+  it('is internally complete', function () {
     for (let commandName in commands) {
-      if (!commands.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(commands, commandName)) {
         continue;
       }
       expect(executors).to.have.ownProperty(commandName);
@@ -25,7 +25,7 @@ describe('Audio API', function() {
     }
 
     for (let commandName in executors) {
-      if (!executors.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(executors, commandName)) {
         continue;
       }
       expect(commands).to.have.ownProperty(commandName);
@@ -33,7 +33,7 @@ describe('Audio API', function() {
     }
 
     for (let commandName in dropletConfig) {
-      if (!dropletConfig.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(dropletConfig, commandName)) {
         continue;
       }
       expect(dropletConfig[commandName].func).to.equal(commandName);
@@ -43,13 +43,13 @@ describe('Audio API', function() {
     }
   });
 
-  describe('playSound', function() {
-    it('has two arguments, "url" and "loop"', function() {
+  describe('playSound', function () {
+    it('has two arguments, "url" and "loop"', function () {
       const funcName = 'playSound';
       // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'url',
-        'loop'
+        'loop',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
@@ -61,13 +61,13 @@ describe('Audio API', function() {
       expect(spy.firstCall.args[2]).to.deep.equal({
         url: 'one',
         loop: 'two',
-        callback: 'three'
+        callback: 'three',
       });
     });
   });
 
-  describe('stopSound', function() {
-    it('has one argument, "url"', function() {
+  describe('stopSound', function () {
+    it('has one argument, "url"', function () {
       const funcName = 'stopSound';
       // Check droplet config
       expect(dropletConfig[funcName].paletteParams).to.deep.equal(['url']);
@@ -82,14 +82,14 @@ describe('Audio API', function() {
     });
   });
 
-  describe('playSpeech', function() {
-    it('has four arguments, "text", "gender", "language", and "onComplete"', function() {
+  describe('playSpeech', function () {
+    it('has four arguments, "text", "gender", "language", and "onComplete"', function () {
       const funcName = 'playSpeech';
       // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'text',
         'gender',
-        'language'
+        'language',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(3);
 
@@ -109,38 +109,38 @@ describe('Audio API', function() {
         text: 'this is text',
         gender: 'female',
         language: 'English',
-        onComplete: onCompleteCallback
+        onComplete: onCompleteCallback,
       });
     });
 
-    describe('block functionality', function() {
+    describe('block functionality', function () {
       let outputWarningSpy, azureTTSStub, options;
 
-      beforeEach(function() {
+      beforeEach(function () {
         outputWarningSpy = sinon.spy();
         injectErrorHandler({outputWarning: outputWarningSpy});
         azureTTSStub = {
           createSoundPromise: sinon.spy(),
-          enqueueAndPlay: sinon.spy()
+          enqueueAndPlay: sinon.spy(),
         };
         sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
         setAppOptions({
           azureSpeechServiceVoices: {
-            English: {female: 'en-female', locale: 'en-US'}
-          }
+            English: {female: 'en-female', locale: 'en-US'},
+          },
         });
         options = {
           text: 'hello world',
           gender: 'female',
-          language: 'English'
+          language: 'English',
         };
       });
 
-      afterEach(function() {
+      afterEach(function () {
         AzureTextToSpeech.getSingleton.restore();
       });
 
-      it('truncates text longer than MAX_SPEECH_TEXT_LENGTH', async function() {
+      it('truncates text longer than MAX_SPEECH_TEXT_LENGTH', async function () {
         options.text = 'a'.repeat(MAX_SPEECH_TEXT_LENGTH + 1);
         const expectedText = 'a'.repeat(MAX_SPEECH_TEXT_LENGTH);
         await commands.playSpeech(options);
@@ -152,7 +152,7 @@ describe('Audio API', function() {
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
 
-      it('falls back to English/female if requested voice is unavailable', async function() {
+      it('falls back to English/female if requested voice is unavailable', async function () {
         options.gender = 'male';
         options.language = 'Spanish';
         await commands.playSpeech(options);
@@ -165,7 +165,7 @@ describe('Audio API', function() {
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
 
-      it('creates and enqueues a sound promise', async function() {
+      it('creates and enqueues a sound promise', async function () {
         await commands.playSpeech(options);
 
         expect(outputWarningSpy).not.to.have.been.called;

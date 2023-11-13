@@ -1,0 +1,21 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "name": "behaviorPicker",
+    "blockText": "{BEHAVIOR}",
+    "returnType": "Behavior",
+    "expression": "VALUE",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "style": "behavior_blocks",
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "customInput": "behaviorPicker"
+      }
+    ]
+  }
+}

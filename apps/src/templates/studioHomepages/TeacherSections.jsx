@@ -5,29 +5,42 @@ import i18n from '@cdo/locale';
 import ContentContainer from '../ContentContainer';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import {
+  asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   hiddenPlSectionIds,
-  hiddenStudentSectionIds
+  hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
 import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import EditSectionDialog from '../teacherDashboard/EditSectionDialog';
 import RosterDialog from '../teacherDashboard/RosterDialog';
 import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
+import CoteacherInviteNotification, {
+  showCoteacherInviteNotification,
+} from './CoteacherInviteNotification';
 
 class TeacherSections extends Component {
   static propTypes = {
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired,
+    asyncLoadCoteacherInvite: PropTypes.func.isRequired,
+    coteacherInvite: PropTypes.object,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    asyncLoadComplete: PropTypes.bool
+    sectionsAreLoaded: PropTypes.bool,
   };
 
   componentDidMount() {
     this.props.asyncLoadSectionData();
+    this.props.asyncLoadCoteacherInvite();
+  }
+
+  shouldRenderSections() {
+    return (
+      this.props.studentSectionIds?.length > 0 ||
+      showCoteacherInviteNotification(this.props.coteacherInvite)
+    );
   }
 
   render() {
@@ -35,25 +48,20 @@ class TeacherSections extends Component {
       plSectionIds,
       studentSectionIds,
       hiddenPlSectionIds,
-      hiddenStudentSectionIds
+      hiddenStudentSectionIds,
     } = this.props;
-
-    const hasSections =
-      this.props.studentSectionIds?.length > 0 ||
-      this.props.plSectionIds?.length > 0;
 
     return (
       <div id="classroom-sections">
         <ContentContainer heading={i18n.createSection()}>
-          {this.props.asyncLoadComplete && (
-            <SetUpSections hasSections={hasSections} />
-          )}
-          {!this.props.asyncLoadComplete && (
+          <SetUpSections />
+          {!this.props.sectionsAreLoaded && (
             <Spinner size="large" style={styles.spinner} />
           )}
         </ContentContainer>
-        {this.props.studentSectionIds?.length > 0 && (
+        {this.shouldRenderSections() && (
           <ContentContainer heading={i18n.sectionsTitle()}>
+            <CoteacherInviteNotification />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
@@ -71,7 +79,6 @@ class TeacherSections extends Component {
         )}
         <RosterDialog />
         <AddSectionDialog />
-        <EditSectionDialog />
       </div>
     );
   }
@@ -79,19 +86,21 @@ class TeacherSections extends Component {
 export const UnconnectedTeacherSections = TeacherSections;
 export default connect(
   state => ({
+    coteacherInvite: state.teacherSections.coteacherInvite,
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),
     hiddenStudentSectionIds: hiddenStudentSectionIds(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+    sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
   }),
   {
-    asyncLoadSectionData
+    asyncLoadCoteacherInvite,
+    asyncLoadSectionData,
   }
 )(TeacherSections);
 
 const styles = {
   spinner: {
-    marginTop: '10px'
-  }
+    marginTop: '10px',
+  },
 };

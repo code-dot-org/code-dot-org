@@ -1,32 +1,14 @@
 class VideosController < ApplicationController
-  before_action :authenticate_user!, except: [:test, :embed]
-  before_action :require_levelbuilder_mode, except: [:test, :embed, :index]
-  check_authorization except: [:test, :embed]
-  load_and_authorize_resource except: [:test, :embed]
-  after_action :allow_iframe, only: :embed
+  before_action :authenticate_user!, except: [:test]
+  before_action :require_levelbuilder_mode, except: [:test, :index]
+  check_authorization except: [:test]
+  load_and_authorize_resource except: [:test]
 
   before_action :set_video, only: [:edit, :update]
 
   # This page is currently deprecated, so let's redirect to related content.
   def test
     redirect_to CDO.code_org_url('/educate/it')
-  end
-
-  def embed
-    set_video_by_key
-    if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
-      params[:fallback_only] = true
-      begin
-        require 'cdo/video/youtube'
-        Youtube.process @video.key
-      rescue Exception => e
-        render(layout: false, plain: "Error processing video: #{e}. Contact an engineer for support.", status: :internal_server_error) && return
-      end
-    end
-    video_info = @video.summarize(params.key?(:autoplay))
-    video_info[:enable_fallback] = !params.key?(:youtube_only)
-    video_info[:force_fallback] = params.key?(:fallback_only)
-    render layout: false, locals: {video_info: video_info}
   end
 
   def index
@@ -49,10 +31,8 @@ class VideosController < ApplicationController
     filename = upload_to_s3
     @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
-    if @video.locale != I18n.default_locale.to_s
-      unless Video.exists?(key: @video.key, locale: I18n.default_locale.to_s)
-        raise 'Non-English videos must be associated with an English video of the same key'
-      end
+    if @video.locale != I18n.default_locale.to_s && !Video.exists?(key: @video.key, locale: I18n.default_locale.to_s)
+      raise 'Non-English videos must be associated with an English video of the same key'
     end
 
     if @video.save
@@ -82,9 +62,7 @@ class VideosController < ApplicationController
     end
   end
 
-  private
-
-  def upload_to_s3
+  private def upload_to_s3
     raise 'Expected a video/mp4 (.mp4) file' unless video_params[:download].content_type == 'video/mp4'
 
     filename = File.basename(video_params[:download].original_filename).parameterize + '.mp4'
@@ -97,16 +75,12 @@ class VideosController < ApplicationController
     )
   end
 
-  def allow_iframe
-    response.headers['X-Frame-Options'] = 'ALLOWALL'
-  end
-
   # Use callbacks to share common setup or constraints between actions.
-  def set_video
+  private def set_video
     @video = Video.find(params[:id])
   end
 
-  def set_video_by_key
+  private def set_video_by_key
     key = params[:key]
     # Create a temporary video object from default attributes if an entry isn't found in the DB.
     @video = Video.current_locale.find_by_key(key) ||
@@ -118,11 +92,11 @@ class VideosController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def video_params
+  private def video_params
     params.require(:video).permit(:key, :youtube_code, :download, :locale)
   end
 
-  def i18n_params
+  private def i18n_params
     params.permit(:title)
   end
 
@@ -131,7 +105,7 @@ class VideosController < ApplicationController
     params[:video] &&= video_params
   end
 
-  def merge_and_write
+  private def merge_and_write
     if @video.locale == I18n.default_locale.to_s
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
     end

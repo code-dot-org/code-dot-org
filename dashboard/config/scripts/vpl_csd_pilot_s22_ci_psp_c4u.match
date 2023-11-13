@@ -13,3 +13,5 @@ question 'Reflect'
 answer 'Putting our ideas together helped us make a game that everyone can play.'
 
 
+
+allow_multiple_attempts true

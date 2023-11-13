@@ -11,3 +11,5 @@ wrong '`double`'
 markdown <<MARKDOWN
 Which of these variable types should use `equals()` to compare for equality?
 MARKDOWN
+
+allow_multiple_attempts true

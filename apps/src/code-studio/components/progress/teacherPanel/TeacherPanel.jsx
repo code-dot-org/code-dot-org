@@ -7,7 +7,7 @@ import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   fullyLockedLessonMapping,
-  setSectionLockStatus
+  setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
@@ -15,7 +15,7 @@ import {
   pageTypes,
   setStudentsForCurrentSection,
   setSections,
-  selectSection
+  selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -23,17 +23,19 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  hasLockableLessons,
-  queryUserProgress
-} from '@cdo/apps/code-studio/progressRedux';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
 import {
   getStudentsForSection,
-  queryLockStatus
+  queryLockStatus,
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import fontConstants from '@cdo/apps/fontConstants';
+
+const TEACHER_PANEL = 'TeacherPanel';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -42,7 +44,7 @@ class TeacherPanel extends React.Component {
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
-      pageTypes.lessonExtras
+      pageTypes.lessonExtras,
     ]),
 
     // Provided by redux.
@@ -51,7 +53,7 @@ class TeacherPanel extends React.Component {
     sectionsAreLoaded: PropTypes.bool.isRequired,
     selectedSection: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired
+      name: PropTypes.string.isRequired,
     }),
     unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -65,7 +67,7 @@ class TeacherPanel extends React.Component {
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
-    setViewType: PropTypes.func.isRequired
+    setViewType: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -115,13 +117,13 @@ class TeacherPanel extends React.Component {
     const data = {
       section_id: sectionId,
       page_type: this.props.pageType,
-      ...overrideData
+      ...overrideData,
     };
 
     firehoseClient.putRecord({
       study: 'teacher_panel',
       event: eventName,
-      data_json: JSON.stringify(data)
+      data_json: JSON.stringify(data),
     });
   };
 
@@ -149,7 +151,7 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       pageType,
       teacherId,
-      exampleSolutions
+      exampleSolutions,
     } = this.props;
 
     const selectedUserId = this.getSelectedUserId();
@@ -244,6 +246,13 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
+          <SortByNameDropdown
+            sortByStyles={styles.sortBy}
+            selectStyles={styles.select}
+            sectionId={sectionId}
+            unitName={unitName}
+            source={TEACHER_PANEL}
+          />
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
@@ -264,52 +273,54 @@ const styles = {
   scrollable: {
     overflowY: 'auto',
     overflowX: 'hidden',
-    maxHeight: '90%'
+    maxHeight: '90%',
   },
   text: {
-    margin: 10
+    margin: 10,
   },
   exclamation: {
-    color: 'red'
+    color: 'red',
   },
   dontForget: {
     display: 'inline',
     marginLeft: 10,
     fontSize: 16,
-    fontFamily: '"Gotham 7r", sans-serif'
+    ...fontConstants['main-font-bold'],
   },
   sectionHeader: {
     margin: 10,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
   },
   exampleSolutions: {
     textAlign: 'center',
-    margin: 5
+    margin: 5,
   },
   sectionInfo: {
     textAlign: 'center',
-    padding: '5px 0px'
+    padding: '5px 0px',
   },
   teacherDashboardLink: {
-    fontSize: 11
-  }
+    fontSize: 11,
+  },
+  sortBy: {
+    display: 'block',
+    textAlign: 'center',
+  },
+  select: {
+    width: 180,
+    margin: '0px 10px 5px',
+  },
 };
 
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(
   state => {
-    const {
-      lessonsBySectionId,
-      lockableAuthorized,
-      lockableAuthorizedLoaded
-    } = state.lessonLock;
-    const {
-      selectedSectionId,
-      sectionsAreLoaded,
-      sectionIds
-    } = state.teacherSections;
+    const {lessonsBySectionId, lockableAuthorized, lockableAuthorizedLoaded} =
+      state.lessonLock;
+    const {selectedSectionId, sectionsAreLoaded, sectionIds} =
+      state.teacherSections;
     const currentSection = lessonsBySectionId[selectedSectionId];
 
     const fullyLocked = fullyLockedLessonMapping(
@@ -342,7 +353,7 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
-      exampleSolutions: state.pageConstants?.exampleSolutions
+      exampleSolutions: state.pageConstants?.exampleSolutions,
     };
   },
   dispatch => ({
@@ -362,6 +373,6 @@ export default connect(
       dispatch(setSectionLockStatus(data));
     },
     selectSection: sectionId => dispatch(selectSection(sectionId)),
-    setViewType: initialViewAs => dispatch(setViewType(initialViewAs))
+    setViewType: initialViewAs => dispatch(setViewType(initialViewAs)),
   })
 )(TeacherPanel);

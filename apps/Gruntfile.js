@@ -2,62 +2,21 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var os = require('os');
 var _ = require('lodash');
-var webpackConfig = require('./webpack');
-var offlineWebpackConfig = require('./webpackOffline.config');
+var sass = require('sass');
+
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
-var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
-var CopyPlugin = require('copy-webpack-plugin');
-var {StatsWriterPlugin} = require('webpack-stats-plugin');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
-var sass = require('sass');
-var TerserPlugin = require('terser-webpack-plugin');
-var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
-module.exports = function(grunt) {
-  process.env.mocha_entry = grunt.option('entry') || '';
-  if (process.env.mocha_entry) {
-    if (
-      path.resolve(process.env.mocha_entry).indexOf('/apps/test/integration') >
-      -1
-    ) {
-      throw new Error('Cannot use karma:entry to run integration tests');
-    }
-    const isDirectory = fs
-      .lstatSync(path.resolve(process.env.mocha_entry))
-      .isDirectory();
-    const loadContext = isDirectory
-      ? `let testsContext = require.context(${JSON.stringify(
-          path.resolve(process.env.mocha_entry)
-        )}, true, /\\.jsx?$/);`
-      : '';
-    const runTests = isDirectory
-      ? 'testsContext.keys().forEach(testsContext);'
-      : `require('${path.resolve(process.env.mocha_entry)}');`;
-    const file = `/* eslint-disable */
-// Auto-generated from Gruntfile.js
-import '@babel/polyfill/noConflict';
-import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-16';
-import enzyme from 'enzyme';
-enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
-${loadContext}
-describe('entry tests', () => {
-  throwOnConsoleErrorsEverywhere();
+const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
+const {createWebpackConfig} = require('./webpack.config');
+const offlineWebpackConfig = require('./webpackOffline.config');
+const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
-  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
-  // https://codedotorg.atlassian.net/browse/XTEAM-377
-  // throwOnConsoleWarningsEverywhere();
+// Review every couple of years to see if an increase improves test performance
+const MEM_PER_KARMA_PROCESS_MB = 4300;
 
-  ${runTests}
-});
-`;
-    fs.writeFileSync('test/entry-tests.js', file);
-  }
-
+module.exports = function (grunt) {
   var config = {};
 
   /**
@@ -71,40 +30,11 @@ describe('entry tests', () => {
 
   /** @const {string} */
   var SINGLE_APP = grunt.option('app') || envConstants.APP;
-
-  /** @const {string[]} */
-  var ALL_APPS = [
-    'ailab',
-    'applab',
-    'bounce',
-    'calc',
-    'craft',
-    'dance',
-    'eval',
-    'fish',
-    'flappy',
-    'javalab',
-    'gamelab',
-    'spritelab',
-    'jigsaw',
-    'maze',
-    'netsim',
-    'poetry',
-    'studio',
-    'turtle',
-    'weblab'
-  ];
-
-  if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
-    throw new Error('Unknown app: ' + SINGLE_APP);
-  }
-
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var piskelRoot = String(
-    child_process.execSync('`npm bin`/piskel-root')
-  ).replace(/\s+$/g, '');
+  var piskelRootStdout = child_process.execSync('npx piskel-root');
+  var piskelRoot = String(piskelRootStdout).replace(/\s+$/g, '');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
     var localNodeModulesRoot = String(
@@ -146,10 +76,6 @@ describe('entry tests', () => {
     }
   }
 
-  config.clean = {
-    all: ['build']
-  };
-
   config.copy = {
     src: {
       files: [
@@ -157,9 +83,9 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'src/',
           src: ['**/*.js', '**/*.jsx'],
-          dest: 'build/js'
-        }
-      ]
+          dest: 'build/js',
+        },
+      ],
     },
     static: {
       files: [
@@ -167,32 +93,38 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'static/',
           src: ['**'],
-          dest: 'build/package/media'
+          dest: 'build/package/media',
         },
         {
           expand: true,
           cwd: 'lib/blockly/media',
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
-          dest: 'build/package/media'
+          dest: 'build/package/media',
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/blockly/media',
+          src: ['**'],
+          dest: 'build/package/media/google_blockly',
         },
         {
           expand: true,
           cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
-          dest: 'build/package/media/skins/craft'
+          dest: 'build/package/media/skins/craft',
         },
         {
           expand: true,
           cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
           src: ['**'],
-          dest: 'build/package/media/skins/fish'
+          dest: 'build/package/media/skins/fish',
         },
         {
           expand: true,
           cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
           src: ['**'],
-          dest: 'build/package/media/skins/ailab'
+          dest: 'build/package/media/skins/ailab',
         },
 
         // We have to do some weird stuff to get our fallback video player working.
@@ -208,9 +140,9 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/video.js/dist',
           src: ['**'],
-          dest: 'build/package/video-js'
-        }
-      ]
+          dest: 'build/package/video-js',
+        },
+      ],
     },
     lib: {
       files: [
@@ -220,13 +152,13 @@ describe('entry tests', () => {
           src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputPath = src.replace(
               /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
-          }
+          },
         },
         // minifying ace code requires some advanced configuration:
         // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
@@ -237,7 +169,7 @@ describe('entry tests', () => {
           expand: true,
           cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
           src: ['**/*.js'],
-          dest: 'build/package/js/ace/'
+          dest: 'build/package/js/ace/',
         },
         // Pull p5.js and p5.play.js into the package from our forks. These are
         // needed by the gamelab exporter code in production and development.
@@ -245,13 +177,13 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/package/js/p5play/',
         },
         {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
+          dest: 'build/package/js/p5play/',
         },
         // Piskel must not be minified or digested in order to work properly.
         {
@@ -261,45 +193,45 @@ describe('entry tests', () => {
           // If we provide it as a relative path, that does not happen
           cwd: './' + path.relative(process.cwd(), piskelRoot),
           src: ['**'],
-          dest: 'build/package/js/piskel/'
+          dest: 'build/package/js/piskel/',
         },
         {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet-full*.js'],
-          dest: 'build/minifiable-lib/droplet/'
+          dest: 'build/minifiable-lib/droplet/',
         },
         {
           expand: true,
           cwd: 'lib/droplet',
           src: ['droplet.min.css'],
-          dest: 'build/package/css/droplet/'
+          dest: 'build/package/css/droplet/',
         },
         {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['*.js'],
-          dest: 'build/minifiable-lib/tooltipster/'
+          dest: 'build/minifiable-lib/tooltipster/',
         },
         {
           expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
-          dest: 'build/minifiable-lib/phaser/'
+          dest: 'build/minifiable-lib/phaser/',
         },
         {
           expand: true,
           cwd: 'lib/tooltipster',
           src: ['tooltipster.min.css'],
-          dest: 'build/package/css/tooltipster/'
+          dest: 'build/package/css/tooltipster/',
         },
         {
           expand: true,
           cwd: 'lib/fileupload',
           src: ['*.js'],
-          dest: 'build/minifiable-lib/fileupload/'
-        }
-      ]
+          dest: 'build/minifiable-lib/fileupload/',
+        },
+      ],
     },
     unhash: {
       files: [
@@ -313,24 +245,17 @@ describe('entry tests', () => {
             'applab-apiwp*.js',
             'applab-apiwp*.min.js',
             'gamelab-apiwp*.js',
-            'gamelab-apiwp*.min.js'
+            'gamelab-apiwp*.min.js',
           ],
           dest: 'build/package/js',
           // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
             return path.join(dest, outputFile);
-          }
-        }
-      ]
-    }
-  };
-
-  config.ts = {
-    default: {
-      tsconfig: './tsconfig.json',
-      src: ['./src/**/*.ts', './src/**/*.tsx']
-    }
+          },
+        },
+      ],
+    },
   };
 
   config.sass = {
@@ -341,18 +266,18 @@ describe('entry tests', () => {
         outputStyle: 'expanded',
         includePaths: ['node_modules', '../shared/css/'],
         implementation: sass,
-        quietDeps: true
+        quietDeps: true,
       },
       files: _.fromPairs(
         [
           ['build/package/css/common.css', 'style/common.scss'],
           [
             'build/package/css/code-studio.css',
-            'style/code-studio/code-studio.scss'
+            'style/code-studio/code-studio.scss',
           ],
           [
             'build/package/css/certificates.css',
-            'style/curriculum/certificates.scss'
+            'style/curriculum/certificates.scss',
           ],
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
@@ -362,53 +287,53 @@ describe('entry tests', () => {
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
             'build/package/css/curriculum_table_styling.css',
-            'style/curriculum/curriculum_table_styling.scss'
+            'style/curriculum/curriculum_table_styling.scss',
           ],
           [
             'build/package/css/curriculum_navigation.css',
-            'style/curriculum/navigation.scss'
+            'style/curriculum/navigation.scss',
           ],
           [
             'build/package/css/levelbuilder.css',
-            'style/code-studio/levelbuilder.scss'
+            'style/code-studio/levelbuilder.scss',
           ],
           [
             'build/package/css/leveltype_widget.css',
-            'style/code-studio/leveltype_widget.scss'
+            'style/code-studio/leveltype_widget.scss',
           ],
           ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
           ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
           ['build/package/css/petition.css', 'style/code-studio/petition.scss'],
           [
             'build/package/css/publicKeyCryptography.css',
-            'style/publicKeyCryptography/publicKeyCryptography.scss'
+            'style/publicKeyCryptography/publicKeyCryptography.scss',
           ],
           [
             'build/package/css/foorm_editor.css',
-            'style/code-studio/foorm_editor.scss'
-          ]
+            'style/code-studio/foorm_editor.scss',
+          ],
         ].concat(
-          appsToBuild.map(function(app) {
+          appsToBuild.map(function (app) {
             return [
               'build/package/css/' + app + '.css', // dst
-              'style/' + app + '/style.scss' // src
+              'style/' + app + '/style.scss', // src
             ];
           })
         )
-      )
-    }
+      ),
+    },
   };
 
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
       options: {
-        dest: 'build/locales'
+        dest: 'build/locales',
       },
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
-          rename: function(dest, src) {
+          rename: function (dest, src) {
             var outputPath = src.replace(
               /(build\/)?i18n\/(\w*)\/(\w+_\w+).json/g,
               '$3/$2_locale.js'
@@ -417,774 +342,100 @@ describe('entry tests', () => {
           },
           expand: true,
           src: ['i18n/**/*.json'],
-          dest: 'build/locales'
-        }
-      ]
-    }
+          dest: 'build/locales',
+        },
+      ],
+    },
   };
 
   config.ejs = {
     all: {
       srcBase: 'src',
-      destBase: 'build/js'
-    }
+      destBase: 'build/js',
+    },
   };
 
-  var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
-    generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb'
+    generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  var junitReporterBaseConfig = {
-    outputDir: envConstants.CIRCLECI
-      ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
-      : ''
-  };
+  grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
+  grunt.registerTask('karma start', () => {
+    // Forward select grunt command-line flags to `karma start`
+    const KARMA_CLI_FLAGS = VALID_KARMA_CLI_FLAGS.flatMap(arg =>
+      grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
+    );
 
-  // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
-  // This is the default karma-webpack output directory, but we define it here
-  // so we can configure webpack's output.publicPath and karma's options.files
-  // so that bundled files will be properly served.
-  // this is the source of the following warning, which can be ignored:
-  // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
-  const webpackOutputPath =
-    path.join(os.tmpdir(), '_karma_webpack_') +
-    Math.floor(Math.random() * 1000000);
-  const webpackOutputPublicPath = '/webpack_output/';
-
-  config.karma = {
-    options: {
-      configFile: 'karma.conf.js',
-      singleRun: !envConstants.WATCH,
-      files: [
-        {
-          pattern: 'test/audio/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
-          pattern: 'test/integration/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
-          pattern: 'test/storybook/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
-          pattern: 'test/unit/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
-          pattern: 'test/util/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
-        {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-        {
-          pattern: 'static/**/*',
-          watched: false,
-          included: false,
-          nocache: true
-        },
-        {
-          pattern: `${webpackOutputPath}/**/*`,
-          watched: false,
-          included: false,
-          nocache: true
-        }
-      ],
-      proxies: {
-        // configure karma server to serve files from the source tree for
-        // various paths (the '/base' prefix points to the apps directory where
-        // karma.conf.js is located)
-        '/blockly/media/': '/base/static/',
-        '/lib/blockly/media/': '/base/static/',
-        '/v3/assets/': '/base/test/integration/assets/',
-        '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
-
-        // requests to the webpack output public path should be served from the
-        // webpack output path where bundled assets are written
-        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/'
+    console.log(chalk.green(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`));
+    child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_FLAGS], {
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
       },
-
-      webpack: {
-        output: {
-          path: webpackOutputPath,
-          publicPath: webpackOutputPublicPath
-        }
-      },
-      client: {
-        mocha: {
-          timeout: 14000,
-          grep: grunt.option('grep')
-        }
-      }
-    },
-    unit: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/unit'
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'unit.xml'
-      }),
-      files: [{src: ['test/unit-tests.js'], watched: false}]
-    },
-    integration: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/integration'
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'integration.xml'
-      }),
-      files: [{src: ['test/integration-tests.js'], watched: false}]
-    },
-    storybook: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/storybook'
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'storybook.xml'
-      }),
-      files: [{src: ['test/storybook-tests.js'], watched: false}]
-    },
-    entry: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/entry'
-      },
-      files: [{src: ['test/entry-tests.js'], watched: false}],
-      preprocessors: {
-        'test/entry-tests.js': ['webpack', 'sourcemap']
-      }
-    }
-  };
-
-  var appsEntries = _.fromPairs(
-    appsToBuild.map(function(app) {
-      return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
-    })
-  );
-
-  var codeStudioEntries = {
-    'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
-    'certificates/show': './src/sites/studio/pages/certificates/show.js',
-    'code-studio': './src/sites/studio/pages/code-studio.js',
-    'congrats/index': './src/sites/studio/pages/congrats/index.js',
-    'courses/index': './src/sites/studio/pages/courses/index.js',
-    'courses/show': './src/sites/studio/pages/courses/show.js',
-    'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
-    'courses/resources': './src/sites/studio/pages/courses/resources.js',
-    'courses/code': './src/sites/studio/pages/courses/code.js',
-    'courses/standards': './src/sites/studio/pages/courses/standards.js',
-    'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
-    'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
-    'incubator/index': './src/sites/studio/pages/incubator/index.js',
-    'lessons/show': './src/sites/studio/pages/lessons/show.js',
-    'lessons/student_lesson_plan':
-      './src/sites/studio/pages/lessons/student_lesson_plan.js',
-    'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
-    'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
-    'print_certificates/batch':
-      './src/sites/studio/pages/print_certificates/batch.js',
-    'programming_classes/show':
-      './src/sites/studio/pages/programming_classes/show.js',
-    'programming_environments/index':
-      './src/sites/studio/pages/programming_environments/index.js',
-    'programming_environments/show':
-      './src/sites/studio/pages/programming_environments/show.js',
-    'programming_expressions/show':
-      './src/sites/studio/pages/programming_expressions/show.js',
-    'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
-    'devise/registrations/_sign_up':
-      './src/sites/studio/pages/devise/registrations/_sign_up.js',
-    'devise/shared/_oauth_links':
-      './src/sites/studio/pages/devise/shared/_oauth_links.js',
-    'devise/registrations/_finish_sign_up':
-      './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
-    'devise/registrations/edit':
-      './src/sites/studio/pages/devise/registrations/edit.js',
-    essential: './src/sites/studio/pages/essential.js',
-    'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
-    'layouts/_parent_email_banner':
-      './src/sites/studio/pages/layouts/_parent_email_banner.js',
-    'layouts/_race_interstitial':
-      './src/sites/studio/pages/layouts/_race_interstitial.js',
-    'layouts/_school_info_confirmation_dialog':
-      './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
-    'layouts/_school_info_interstitial':
-      './src/sites/studio/pages/layouts/_school_info_interstitial.js',
-    'layouts/_small_footer':
-      './src/sites/studio/pages/layouts/_small_footer.js',
-    'layouts/_terms_interstitial':
-      './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'layouts/_initial_section_creation_interstitial':
-      './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
-    'levels/_bubble_choice':
-      './src/sites/studio/pages/levels/_bubble_choice.js',
-    'levels/_content': './src/sites/studio/pages/levels/_content.js',
-    'levels/_contract_match':
-      './src/sites/studio/pages/levels/_contract_match.js',
-    'levels/_curriculum_reference':
-      './src/sites/studio/pages/levels/_curriculum_reference.js',
-    'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
-    'levels/_evaluation_multi':
-      './src/sites/studio/pages/levels/_evaluation_multi.js',
-    'levels/_external': './src/sites/studio/pages/levels/_external.js',
-    'levels/_external_link':
-      './src/sites/studio/pages/levels/_external_link.js',
-    'levels/_free_response':
-      './src/sites/studio/pages/levels/_free_response.js',
-    'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
-    'levels/_match': './src/sites/studio/pages/levels/_match.js',
-    'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
-    'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
-    'levels/_standalone_video':
-      './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/_teacher_markdown':
-      './src/sites/studio/pages/levels/_teacher_markdown.js',
-    'levels/_teacher_panel':
-      './src/sites/studio/pages/levels/_teacher_panel.js',
-    'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
-    'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
-    'levels/show': './src/sites/studio/pages/levels/show.js',
-    'maker/home': './src/sites/studio/pages/maker/home.js',
-    'maker/setup': './src/sites/studio/pages/maker/setup.js',
-    'projects/featured': './src/sites/studio/pages/projects/featured.js',
-    'projects/index': './src/sites/studio/pages/projects/index.js',
-    'report_abuse/report_abuse_form':
-      './src/sites/studio/pages/report_abuse/report_abuse_form.js',
-    'reference_guides/show':
-      './src/sites/studio/pages/reference_guides/show.js',
-    'scripts/show': './src/sites/studio/pages/scripts/show.js',
-    'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
-    'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
-    'scripts/code': './src/sites/studio/pages/scripts/code.js',
-    'scripts/standards': './src/sites/studio/pages/scripts/standards.js',
-    'scripts/lesson_extras':
-      './src/sites/studio/pages/scripts/lesson_extras.js',
-    'sections/show': './src/sites/studio/pages/sections/show.js',
-    'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
-    'teacher_dashboard/show':
-      './src/sites/studio/pages/teacher_dashboard/show.js',
-    'teacher_dashboard/parent_letter':
-      './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
-    'teacher_feedbacks/index':
-      './src/sites/studio/pages/teacher_feedbacks/index.js',
-    'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
-    'weblab_host/network_check':
-      './src/sites/studio/pages/weblab_host/network_check.js'
-  };
-
-  var internalEntries = {
-    'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
-    'blocks/index': './src/sites/studio/pages/blocks/index.js',
-    'course_offerings/edit':
-      './src/sites/studio/pages/course_offerings/edit.js',
-    'courses/edit': './src/sites/studio/pages/courses/edit.js',
-    'courses/new': './src/sites/studio/pages/courses/new.js',
-    'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
-    'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
-    'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
-    'datasets/show': './src/sites/studio/pages/datasets/show.js',
-    'datasets/index': './src/sites/studio/pages/datasets/index.js',
-    'datasets/edit_manifest':
-      './src/sites/studio/pages/datasets/edit_manifest.js',
-    'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
-    levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    'levels/editors/_applab':
-      './src/sites/studio/pages/levels/editors/_applab.js',
-    'levels/editors/_craft':
-      './src/sites/studio/pages/levels/editors/_craft.js',
-    'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
-    'levels/editors/fields/_animation':
-      './src/sites/studio/pages/levels/editors/fields/_animation.js',
-    'levels/editors/fields/_bubble_choice_sublevel':
-      './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
-    'levels/editors/fields/_blockly':
-      './src/sites/studio/pages/levels/editors/fields/_blockly.js',
-    'levels/editors/fields/_callouts':
-      './src/sites/studio/pages/levels/editors/fields/_callouts.js',
-    'levels/editors/fields/_droplet':
-      './src/sites/studio/pages/levels/editors/fields/_droplet.js',
-    'levels/editors/fields/_grid':
-      './src/sites/studio/pages/levels/editors/fields/_grid.js',
-    'levels/editors/fields/_poetry_fields':
-      './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
-    'levels/editors/fields/_preload_assets':
-      './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
-    'levels/editors/fields/_special_level_types':
-      './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
-    'levels/editors/fields/_validation_code':
-      './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
-    'levels/editors/fields/_video':
-      './src/sites/studio/pages/levels/editors/fields/_video.js',
-    'levels/editors/_gamelab':
-      './src/sites/studio/pages/levels/editors/_gamelab.js',
-    'levels/editors/_pixelation':
-      './src/sites/studio/pages/levels/editors/_pixelation.js',
-    'levels/editors/_studio':
-      './src/sites/studio/pages/levels/editors/_studio.js',
-    'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'programming_classes/new':
-      './src/sites/studio/pages/programming_classes/new.js',
-    'programming_classes/edit':
-      './src/sites/studio/pages/programming_classes/edit.js',
-    'programming_environments/new':
-      './src/sites/studio/pages/programming_environments/new.js',
-    'programming_environments/edit':
-      './src/sites/studio/pages/programming_environments/edit.js',
-    'programming_expressions/new':
-      './src/sites/studio/pages/programming_expressions/new.js',
-    'programming_expressions/edit':
-      './src/sites/studio/pages/programming_expressions/edit.js',
-    'programming_methods/edit':
-      './src/sites/studio/pages/programming_methods/edit.js',
-    'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
-    'reference_guides/edit':
-      './src/sites/studio/pages/reference_guides/edit.js',
-    'reference_guides/edit_all':
-      './src/sites/studio/pages/reference_guides/edit_all.js',
-    'programming_expressions/index':
-      './src/sites/studio/pages/programming_expressions/index.js',
-    'sections/new': './src/sites/studio/pages/sections/new.js',
-    'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
-    'scripts/new': './src/sites/studio/pages/scripts/new.js',
-    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
-    'shared_blockly_functions/edit':
-      './src/sites/studio/pages/shared_blockly_functions/edit.js',
-    'sprite_management/sprite_upload':
-      './src/sites/studio/pages/sprite_management/sprite_upload.js',
-    'sprite_management/sprite_management_directory':
-      './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
-    'sprite_management/default_sprites_editor':
-      './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
-    'sprite_management/release_default_sprites_to_production':
-      './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
-    'sprite_management/select_start_animations':
-      './src/sites/studio/pages/sprite_management/select_start_animations.js'
-  };
-
-  var pegasusEntries = {
-    // code.org
-    'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-    'code.org/public/educate/curriculum/courses':
-      './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/student/middle-high':
-      './src/sites/code.org/pages/public/student/middle-high.js',
-    'code.org/public/teacher-dashboard/index':
-      './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-    'code.org/public/yourschool':
-      './src/sites/code.org/pages/public/yourschool.js',
-    'code.org/public/yourschool/thankyou':
-      './src/sites/code.org/pages/public/yourschool/thankyou.js',
-    'code.org/public/administrators':
-      './src/sites/code.org/pages/public/administrators.js',
-    'code.org/views/regional_partner_search':
-      './src/sites/code.org/pages/views/regional_partner_search.js',
-    'code.org/views/share_privacy':
-      './src/sites/code.org/pages/views/share_privacy.js',
-    'code.org/views/theme_common_head_after':
-      './src/sites/code.org/pages/views/theme_common_head_after.js',
-    'code.org/views/workshop_search':
-      './src/sites/code.org/pages/views/workshop_search.js',
-    'code.org/views/amazon_future_engineer':
-      './src/sites/code.org/pages/views/amazon_future_engineer.js',
-    'code.org/views/amazon_future_engineer_eligibility':
-      './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
-    'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
-    'code.org/views/analytics_event_log_helper':
-      './src/sites/code.org/pages/views/analytics_event_log_helper.js',
-
-    // hourofcode.com
-    'hourofcode.com/public/index':
-      './src/sites/hourofcode.com/pages/public/index.js',
-    'hourofcode.com/views/theme_common_head_after':
-      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-    'hourofcode.com/views/hoc_events_map':
-      './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
-
-    // shared between code.org and hourofcode.com
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
-  };
-
-  var professionalDevelopmentEntries = {
-    'code.org/public/learn/local':
-      './src/sites/code.org/pages/public/learn/local.js',
-
-    'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
-    'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
-
-    'pd/workshop_dashboard/index':
-      './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/pre_workshop_survey/new':
-      './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
-    'pd/teachercon_survey/new':
-      './src/sites/studio/pages/pd/teachercon_survey/new.js',
-    'pd/application_dashboard/index':
-      './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/teacher_application/new':
-      './src/sites/studio/pages/pd/application/teacher_application/new.js',
-    'pd/application/principal_approval_application/new':
-      './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/workshop_daily_survey/new_general_foorm':
-      './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
-    'pd/workshop_enrollment/new':
-      './src/sites/studio/pages/pd/workshop_enrollment/new.js',
-    'pd/workshop_enrollment/cancel':
-      './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
-
-    'pd/professional_learning_landing/index':
-      './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_mini_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
-
-    'pd/international_opt_in/new':
-      './src/sites/studio/pages/pd/international_opt_in/new.js',
-
-    'peer_reviews/dashboard':
-      './src/sites/studio/pages/peer_reviews/dashboard.js',
-    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
-
-    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
-    'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
-    'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
-    'foorm/libraries/editor':
-      './src/sites/studio/pages/foorm/libraries/editor.js',
-    'foorm/simple_survey_forms/show':
-      './src/sites/studio/pages/foorm/simple_survey_forms/show.js'
-  };
-
-  // Entries which are shared between dashboard and pegasus, which are included
-  // by haml partials in the shared/haml/ directory.
-  const sharedEntries = {
-    cookieBanner: './src/cookieBanner/cookieBanner.js'
-  };
-
-  var otherEntries = {
-    // The blockly dependency is huge, so we currently control when it is
-    // loaded explicitly via script tags rather than via normal imports.
-    blockly: './src/sites/studio/pages/blockly.js',
-    googleblockly: './src/sites/studio/pages/googleblockly.js',
-
-    // Build embedVideo.js in its own step (skipping factor-bundle) so that
-    // we don't have to include the large code-studio-common file in the
-    // embedded video page, keeping it fairly lightweight.
-    // (I wonder how much more we could slim it down by removing jQuery!)
-    // @see embed.html.haml
-    embedVideo: './src/sites/studio/pages/embedVideo.js',
-
-    // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amount of stuff we need when loading blocks
-    // in an iframe.
-    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
-
-    publicKeyCryptography: './src/publicKeyCryptography/main.js',
-
-    brambleHost: './src/weblab/brambleHost.js',
-
-    'applab-api': './src/applab/api-entry.js',
-    'gamelab-api': './src/p5lab/gamelab/api-entry.js',
-
-    regionalPartnerMiniContact:
-      './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
-  };
-
-  // Create a config for each of our bundles
-  function createConfig(options) {
-    var minify = options.minify;
-    var watch = options.watch;
-
-    return webpackConfig.create({
-      outputDir: path.resolve(__dirname, OUTPUT_DIR),
-      entries: _.mapValues(
-        _.extend(
-          {},
-          appsEntries,
-          codeStudioEntries,
-          internalEntries,
-          pegasusEntries,
-          professionalDevelopmentEntries,
-          sharedEntries,
-          otherEntries
-        ),
-        function(val) {
-          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
-        }
-      ),
-      externals: [
-        {
-          jquery: 'var $',
-          // qtip2 doesn't actually export anything - it's a jquery extension
-          // and modifies the jquery object when present.
-          // We also want to be free to import 'qtip2' in our code (for tests)
-          // without including a copy of it in our release bundles since it's
-          // already provided by application.js.
-          // Therefore we include it as an external here (which keeps us from
-          // including the library in release bundles) but we map it to the
-          // jquery object, which will always be available when we are depending
-          // on qtip.  Tests skip this 'external' configuration and load the
-          // npm-provided copy of qtip2.
-          qtip2: 'var $'
-        }
-      ],
-      mode: minify ? 'production' : 'development',
-      optimization: {
-        minimize: minify,
-        minimizer: [
-          new TerserPlugin({
-            parallel: 4,
-            // Excludes these from minification to avoid breaking functionality,
-            // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
-            terserOptions: {
-              sourceMap: envConstants.DEBUG_MINIFIED,
-              // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
-              // Can remove when we can safely drop support for older iPad/iOS.
-              mangle: {
-                safari10: true
-              }
-            }
-          })
-        ],
-
-        // We use a single, named runtimeChunk in order to be able to load
-        // multiple webpack entry points on a single page. **The resulting
-        // 'webpack-runtime' chunk must be included exactly once on each page
-        // which includes webpack entry points.** If you do not include the
-        // runtime, webpack entry points you include will not be loaded. If you
-        // include the runtime twice, webpack entry points will be loaded twice.
-        //
-        // Without a single, named runtimeChunk there would be no runtimeChunk
-        // to include, and entry points would load and run separately.
-        // However, those entry points would create separate instances of any
-        // shared modules. This would mean that state within webpack modules
-        // cannot be shared between entry points, breaking many assumptions made
-        // by our application. For more information, see:
-        // https://webpack.js.org/concepts/manifest/#runtime
-        // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
-        //
-        // In the future, if we can limit ourselves to one webpack entry point
-        // per page, we could consider removing the runtimeChunk config.
-        runtimeChunk: {
-          name: 'webpack-runtime'
-        },
-        splitChunks: {
-          // Override the default limit of 3 concurrent downloads on page load,
-          // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
-          // been observed to degrade only with > 200 simultaneous downloads.
-          maxInitialRequests: 100,
-          cacheGroups: {
-            // Pull any module shared by 2+ appsEntries into the "common" chunk.
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: chunk => {
-                return _.keys(appsEntries).includes(chunk.name);
-              }
-            },
-            // Pull any module shared by 2+ codeStudioEntries into the
-            // "code-studio-common" chunk.
-            'code-studio-common': {
-              name: 'code-studio-common',
-              minChunks: 2,
-              chunks: chunk => {
-                const chunkNames = Object.keys(codeStudioEntries);
-                return chunkNames.includes(chunk.name);
-              },
-              priority: 10
-            },
-            // With just the cacheGroups listed above, we end up with many
-            // duplicate modules between the "common" and "code-studio-common"
-            // chunks. The next cache group eliminates some of this duplication
-            // by pulling more modules from "common" into "code-studio-common".
-            //
-            // The use of minChunks provides a guarantee that we don't
-            // unnecessarily move things into "code-studio-common" which are
-            // needed only by appsEntries. This avoids increasing the download
-            // size for code studio pages which include code-studio-common.js
-            // but not common.js.
-            //
-            // There is no converse guarantee that this strategy will eliminate
-            // all duplication between "common" and "code-studio-common".
-            // However, at the time of this writing, bundle analysis indicates
-            // that is currently effective in eliminating any duplication.
-            //
-            // In the future, we want to move toward asynchronous imports, which
-            // allow webpack to manage bundle splitting and sharing behind the
-            // scenes. Once we adopt this approach, the need for predefined
-            // cacheGroups will go away.
-            //
-            // For more information see: https://webpack.js.org/guides/code-splitting/
-            'code-studio-multi': {
-              name: 'code-studio-common',
-              minChunks: Object.keys(appsEntries).length + 1,
-              chunks: chunk => {
-                const chunkNames = Object.keys(codeStudioEntries).concat(
-                  Object.keys(appsEntries)
-                );
-                return chunkNames.includes(chunk.name);
-              },
-              priority: 20
-            },
-            vendors: {
-              name: 'vendors',
-              priority: 30,
-              chunks: chunk => {
-                // all 'initial' chunks except otherEntries
-                const chunkNames = _.concat(
-                  Object.keys(codeStudioEntries),
-                  Object.keys(appsEntries),
-                  Object.keys(pegasusEntries),
-                  Object.keys(professionalDevelopmentEntries),
-                  Object.keys(internalEntries),
-                  Object.keys(sharedEntries)
-                );
-                return chunkNames.includes(chunk.name);
-              },
-              test(module) {
-                return [
-                  '@babel/polyfill/noConflict',
-                  'immutable',
-                  'lodash',
-                  'moment',
-                  'pepjs',
-                  'radium',
-                  'react',
-                  'react-dom',
-                  'wgxpath'
-                ].some(libName =>
-                  new RegExp(`/apps/node_modules/${libName}/`).test(
-                    module.resource
-                  )
-                );
-              }
-            },
-            p5lab: {
-              name: 'p5-dependencies',
-              priority: 10,
-              minChunks: 2,
-              chunks: chunk =>
-                ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-              test: module => /p5/.test(module.resource)
-            }
-          }
-        }
-      },
-      plugins: [
-        ...(process.env.ANALYZE_BUNDLE
-          ? [
-              new BundleAnalyzerPlugin({
-                analyzerMode: 'static',
-                excludeAssets: [...Object.keys(internalEntries)]
-              })
-            ]
-          : []),
-        new StatsWriterPlugin({
-          fields: ['assetsByChunkName', 'assets']
-        }),
-        // The [contenthash] placeholder generates a 32-character hash when
-        // used within the copy plugin.
-        new CopyPlugin({
-          patterns: [
-            // Always include unhashed locale files in the package, since unit
-            // tests rely on these in both minified and unminified environments.
-            // The order of these rules is important to ensure that the hashed
-            // locale files appear in the manifest when minifying.
-            {
-              from: 'build/locales',
-              to: '[path][name][ext]',
-              toType: 'template'
-            },
-            minify && {
-              from: 'build/locales',
-              to: '[path][name]wp[contenthash][ext]',
-              toType: 'template'
-            },
-            // Libraries in this directory are assumed to have .js and .min.js
-            // copies of each source file. In development mode, copy only foo.js.
-            // In production mode, copy only foo.min.js and rename it to foo.js.
-            // This allows the manifest to contain a single mapping from foo.js
-            // to a target file with the correct contents given the mode.
-            //
-            // Ideally, the target file would have the .min.js suffix in
-            // production mode. This could be accomplished by nesting these files
-            // within a minifiable-lib directory in the output package so that the
-            // manifest plugin could do special processing on these files.
-            {
-              context: 'build/minifiable-lib/',
-              from: minify ? `**/*.min.js` : '**/*.js',
-              to: minify ? '[path][name]wp[contenthash].js' : '[path][name].js',
-              toType: 'template',
-              globOptions: {
-                ignore: minify ? [] : ['*.min.js']
-              }
-            }
-          ].filter(entry => !!entry)
-        }),
-        // Unit tests require certain unminified files to have been built.
-        new UnminifiedWebpackPlugin({
-          include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
-        }),
-        new WebpackManifestPlugin({
-          basePath: 'js/',
-          map: file => {
-            if (minify) {
-              // Remove contenthash in manifest key from files generated via
-              // copy-webpack-plugin. See:
-              // https://github.com/webpack-contrib/copy-webpack-plugin/issues/104#issuecomment-370174211
-              // Also remove .min extension from manifest key, which started appearing after moving from webpack-manifest-plugin 2 -> 4
-              file.name = file.name
-                .replace(/wp[a-f0-9]{32}\./, '.')
-                .replace(/\.min/, '');
-            }
-            return file;
-          }
-        })
-      ],
-      minify: minify,
-      watch: watch,
-      watchNotify: grunt.option('watch-notify'),
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
-  }
+  });
+
+  grunt.registerTask('preconcatForKarma', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'exec:generateSharedConstants',
+    'newer:copy:static',
+  ]);
+
+  config.clean = {
+    build: ['build'],
+    karma: {
+      options: {force: true},
+      src: ['build/karma'],
+    },
+  };
+
+  const piskelDevMode = PISKEL_DEVELOPMENT_MODE;
+
+  // Create a webpack entry point for each of the apps in `appsToBuild`.
+  // See `ALL_APPS` in webpackEntryPoints.js for a list of valid apps, e.g.
+  // gamelab, maze, etc.
+  var appsEntries = appsEntriesFor(appsToBuild);
 
   config.webpack = {
-    build: createConfig({
+    build: createWebpackConfig({
+      appsEntries,
       minify: false,
-      watch: false
+      watch: false,
+      piskelDevMode,
     }),
 
     buildOffline: offlineWebpackConfig,
 
-    uglify: createConfig({
+    uglify: createWebpackConfig({
+      appsEntries,
       minify: true,
-      watch: false
+      watch: false,
+      piskelDevMode,
     }),
 
-    watch: createConfig({
+    watch: createWebpackConfig({
+      appsEntries,
       minify: false,
-      watch: true
-    })
+      watch: true,
+      watchNotify: grunt.option('watch-notify'),
+      piskelDevMode,
+    }),
   };
 
   config['webpack-dev-server'] = {
     watch: {
-      webpack: createConfig({
+      webpack: createWebpackConfig({
+        appsEntries,
         minify: false,
-        watch: false
+        watch: false,
+        piskelDevMode,
       }),
       keepAlive: true,
       proxy: {
-        '**': 'http://localhost:3000'
+        '**': 'http://localhost:3000',
       },
       publicPath: '/assets/js/',
       hot: true,
@@ -1194,22 +445,22 @@ describe('entry tests', () => {
       watchOptions: {
         aggregateTimeout: 1000,
         poll: 1000,
-        ignored: /^node_modules\/[^@].*/
-      }
-    }
+        ignored: /^node_modules\/[^@].*/,
+      },
+    },
   };
 
   config.uglify = {
     lib: {
       files: _.fromPairs(
-        ['p5play/p5.play.js', 'p5play/p5.js'].map(function(src) {
+        ['p5play/p5.play.js', 'p5play/p5.js'].map(function (src) {
           return [
             'build/package/js/' + src.replace(/\.js$/, '.min.js'), // dst
-            'build/package/js/' + src // src
+            'build/package/js/' + src, // src
           ];
         })
-      )
-    }
+      ),
+    },
   };
 
   config.watch = {
@@ -1220,33 +471,33 @@ describe('entry tests', () => {
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: envConstants.AUTO_RELOAD,
-        interrupt: true
-      }
+        interrupt: true,
+      },
     },
     content: {
       files: ['static/**/*'],
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD
-      }
+        livereload: envConstants.AUTO_RELOAD,
+      },
     },
     vendor_js: {
       files: ['lib/**/*.js'],
       tasks: ['newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD
-      }
+        livereload: envConstants.AUTO_RELOAD,
+      },
     },
     messages: {
       files: ['i18n/**/*.json'],
       tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD
-      }
-    }
+        livereload: envConstants.AUTO_RELOAD,
+      },
+    },
   };
 
   (config.concurrent = {
@@ -1254,13 +505,12 @@ describe('entry tests', () => {
     watch: {
       tasks: [
         'watch',
-        'ts',
-        envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'
+        envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch',
       ],
       options: {
-        logConcurrentOutput: true
-      }
-    }
+        logConcurrentOutput: true,
+      },
+    },
   }),
     (config.notify = {
       'js-build': {options: {message: 'JS build completed.'}},
@@ -1268,21 +518,21 @@ describe('entry tests', () => {
       content: {options: {message: 'Content build completed.'}},
       ejs: {options: {message: 'EJS build completed.'}},
       messages: {options: {message: 'i18n messages build completed.'}},
-      vendor_js: {options: {message: 'vendor JS copy done.'}}
+      vendor_js: {options: {message: 'vendor JS copy done.'}},
     });
 
   grunt.initConfig(config);
 
   // Autoload grunt tasks
   require('load-grunt-tasks')(grunt, {
-    pattern: ['grunt-*', '!grunt-lib-contrib']
+    pattern: ['grunt-*', '!grunt-lib-contrib'],
   });
 
   grunt.loadTasks('tasks');
-  grunt.registerTask('noop', function() {});
+  grunt.registerTask('noop', function () {});
 
   // Generate locale stub files in the build/locale/current folder
-  grunt.registerTask('locales', function() {
+  grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
@@ -1292,7 +542,7 @@ describe('entry tests', () => {
         'regionalPartnerSearch',
         'regionalPartnerMiniContact'
       )
-      .map(function(item) {
+      .map(function (item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =
           '/*' +
@@ -1306,7 +556,7 @@ describe('entry tests', () => {
   });
 
   // Checks the size of Droplet to ensure it's built with LANGUAGE=javascript
-  grunt.registerTask('checkDropletSize', function() {
+  grunt.registerTask('checkDropletSize', function () {
     var bytes = fs.statSync('lib/droplet/droplet-full.min.js').size;
     if (bytes > 500 * 1000) {
       grunt.warn(
@@ -1324,33 +574,31 @@ describe('entry tests', () => {
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
-    'ejs'
+    'ejs',
   ]);
 
-  grunt.registerTask('check-entry-points', function() {
+  grunt.registerTask('check-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build, {verbose: true}).then(stats =>
       done()
     );
   });
 
-  grunt.registerTask('lint-entry-points', function() {
+  grunt.registerTask('lint-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build).then(stats => {
       console.log(
         [
           chalk.green(`[${stats.passed} passed]`),
           stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
-          stats.failed && chalk.red(`[${stats.failed} failed]`)
+          stats.failed && chalk.red(`[${stats.failed} failed]`),
         ]
           .filter(f => f)
           .join(' ')
       );
       if (stats.failed > 0) {
         grunt.warn(
-          `${
-            stats.failed
-          } entry points do not conform to naming conventions.\n` +
+          `${stats.failed} entry points do not conform to naming conventions.\n` +
             `Run grunt check-entry-points for details.\n`
         );
       }
@@ -1358,7 +606,7 @@ describe('entry tests', () => {
     });
   });
 
-  grunt.registerTask('compile-firebase-rules', function() {
+  grunt.registerTask('compile-firebase-rules', function () {
     if (process.env.RACK_ENV === 'production') {
       throw new Error(
         'Cannot compile firebase security rules on production.\n' +
@@ -1367,14 +615,14 @@ describe('entry tests', () => {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      '`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'yarn run firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
     'newer:sass',
-    'compile-firebase-rules'
+    'compile-firebase-rules',
   ]);
 
   grunt.registerTask('build', [
@@ -1386,7 +634,7 @@ describe('entry tests', () => {
     'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
-    envConstants.DEV ? 'noop' : 'newer:copy:unhash'
+    envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);
 
   // Builds the Service Worker used for the Code.org offline experience.
@@ -1394,30 +642,15 @@ describe('entry tests', () => {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  grunt.registerTask('preconcat', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'newer:copy:static'
-  ]);
-
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
     'concurrent:watch',
-    'postbuild'
+    'postbuild',
   ]);
-
-  grunt.registerTask('unitTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'karma:unit'
-  ]);
-
-  grunt.registerTask('storybookTest', ['karma:storybook']);
-
-  grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };
+
+// Exported for matching use in `run-tests-in-parallel.sh`
+module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;

@@ -13,11 +13,11 @@ class ProjectWidget extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool // Default: true
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   state = {
-    showFullList: false
+    showFullList: false,
   };
 
   toggleShowFullList = () => {
@@ -57,7 +57,7 @@ class ProjectWidget extends React.Component {
 // The project widget uses the channels API to populate the personal projects
 // and the data needs to be converted to match the format of the project cards
 // before passing it to PersonalRecentProjects.
-const convertChannelsToProjectData = function(projects) {
+const convertChannelsToProjectData = function (projects) {
   // Sort by most recently updated.
   let projectLists = _.sortBy(projects, 'updatedAt').reverse();
 
@@ -71,7 +71,7 @@ const convertChannelsToProjectData = function(projects) {
     channel: projectLists[i].id,
     thumbnailUrl: projectLists[i].thumbnailUrl,
     type: projectLists[i].projectType,
-    updatedAt: projectLists[i].updatedAt
+    updatedAt: projectLists[i].updatedAt,
   }));
 };
 

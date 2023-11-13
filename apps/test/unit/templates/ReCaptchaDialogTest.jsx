@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   handleCancel: () => {},
   isOpen: true,
   submitText: 'Submit',
-  siteKey: GOOGLE_RECAPTCHA_TEST_KEY
+  siteKey: GOOGLE_RECAPTCHA_TEST_KEY,
 };
 
 describe('ReCaptchaDialog', () => {

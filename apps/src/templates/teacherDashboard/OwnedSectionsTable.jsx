@@ -25,16 +25,16 @@ export const COLUMNS = {
   COURSE: 3,
   STUDENTS: 4,
   LOGIN_INFO: 5,
-  EDIT_DELETE: 6
+  EDIT_DELETE: 6,
 };
 
 const participantNames = {
   facilitator: i18n.participantTypeFacilitatorTitle(),
-  teacher: i18n.participantTypeTeacherTitle()
+  teacher: i18n.participantTypeTeacherTitle(),
 };
 
 // Cell formatters for sortable OwnedSectionsTable.
-export const sectionLinkFormatter = function(name, {rowData}) {
+export const sectionLinkFormatter = function (name, {rowData}) {
   return (
     <a style={tableLayoutStyles.link} href={teacherDashboardUrl(rowData.id)}>
       {rowData.name}
@@ -42,13 +42,13 @@ export const sectionLinkFormatter = function(name, {rowData}) {
   );
 };
 
-export const courseLinkFormatter = function(course, {rowData}) {
+export const courseLinkFormatter = function (course, {rowData}) {
   const {assignmentNames, assignmentPaths} = rowData;
   return (
     <div>
       <a
         href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({
-          section_id: rowData.id
+          section_id: rowData.id,
         })}`}
         style={tableLayoutStyles.link}
       >
@@ -59,7 +59,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
           <div>{i18n.currentUnit()}</div>
           <a
             href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({
-              section_id: rowData.id
+              section_id: rowData.id,
             })}`}
             style={tableLayoutStyles.link}
           >
@@ -79,7 +79,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
   );
 };
 
-export const loginInfoFormatter = function(loginType, {rowData}) {
+export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
 
   // For managed logins, just show the provider name rather than the login code.
@@ -100,7 +100,7 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
   );
 };
 
-export const studentsFormatter = function(studentCount, {rowData}) {
+export const studentsFormatter = function (studentCount, {rowData}) {
   const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
@@ -115,7 +115,7 @@ export const studentsFormatter = function(studentCount, {rowData}) {
         style={tableLayoutStyles.link}
         href={manageStudentsUrl}
         aria-label={i18n.manageStudentsAriaLabel({
-          numStudents: studentCount
+          numStudents: studentCount,
         })}
       >
         {rowData.studentCount}
@@ -125,7 +125,7 @@ export const studentsFormatter = function(studentCount, {rowData}) {
 };
 
 //Displays nothing for hidden column
-const hiddenFormatter = function(id) {
+const hiddenFormatter = function (id) {
   return null;
 };
 
@@ -149,16 +149,16 @@ class OwnedSectionsTable extends Component {
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {
     sortingColumns: {
       [COLUMNS.ID]: {
         direction: 'desc',
-        position: 0
-      }
-    }
+        position: 0,
+      },
+    },
   };
 
   determineSorter = (data, activeColumn, directionArray) => {
@@ -166,7 +166,7 @@ class OwnedSectionsTable extends Component {
     const gradeCol = COLUMNS.GRADE.toString();
     if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
-      return sortBy(data, function(obj) {
+      return sortBy(data, function (obj) {
         return (
           mult *
           StudentGradeLevels.concat(null).indexOf(
@@ -208,10 +208,10 @@ class OwnedSectionsTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -229,24 +229,24 @@ class OwnedSectionsTable extends Component {
         //displays nothing, but used as initial sort
         property: 'id',
         header: {
-          props: {style: styles.hiddenCol}
+          props: {style: styles.hiddenCol},
         },
         cell: {
           formatters: [hiddenFormatter],
-          props: {style: styles.hiddenCol}
-        }
+          props: {style: styles.hiddenCol},
+        },
       },
       {
         property: 'name',
         header: {
           label: i18n.section(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [sectionLinkFormatter],
-          props: {style: {...colStyle, ...styles.leftHiddenCol}}
-        }
+          props: {style: {...colStyle, ...styles.leftHiddenCol}},
+        },
       },
       {
         property: this.props.isPlSections ? 'participantType' : 'grades',
@@ -256,63 +256,63 @@ class OwnedSectionsTable extends Component {
             className: this.props.isPlSections
               ? 'uitest-participant-type-header'
               : 'uitest-grade-header',
-            style: tableLayoutStyles.headerCell
+            style: tableLayoutStyles.headerCell,
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.gradeFormatter],
-          props: {style: colStyle}
-        }
+          props: {style: colStyle},
+        },
       },
       {
         property: 'course',
         header: {
           label: i18n.course(),
           props: {
-            style: {...tableLayoutStyles.headerCell, ...unsortableHeaderStyle}
-          }
+            style: {...tableLayoutStyles.headerCell, ...unsortableHeaderStyle},
+          },
         },
         cell: {
           formatters: [courseLinkFormatter],
-          props: {style: colStyle}
-        }
+          props: {style: colStyle},
+        },
       },
       {
         property: 'studentCount',
         header: {
           label: i18n.students(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [studentsFormatter],
-          props: {style: colStyle}
-        }
+          props: {style: colStyle},
+        },
       },
       {
         property: 'loginType',
         header: {
           label: i18n.loginInfo(),
           props: {
-            style: {...tableLayoutStyles.headerCell, ...unsortableHeaderStyle}
-          }
+            style: {...tableLayoutStyles.headerCell, ...unsortableHeaderStyle},
+          },
         },
         cell: {
           formatters: [loginInfoFormatter],
-          props: {style: colStyle}
-        }
+          props: {style: colStyle},
+        },
       },
       {
         property: 'actions',
         header: {
-          props: {style: tableLayoutStyles.headerCell}
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           formatters: [this.actionCellFormatter],
-          props: {style: {...tableLayoutStyles.cell, ...styles.colButton}}
-        }
-      }
+          props: {style: {...tableLayoutStyles.cell, ...styles.colButton}},
+        },
+      },
     ];
   };
 
@@ -330,7 +330,7 @@ class OwnedSectionsTable extends Component {
       sortingColumns,
       sort: (x, y, z) => {
         return this.determineSorter(x, y, z);
-      }
+      },
     })(this.props.sectionRows);
 
     return (
@@ -348,17 +348,17 @@ class OwnedSectionsTable extends Component {
 
 const styles = {
   currentUnit: {
-    marginTop: 10
+    marginTop: 10,
   },
   //Hides a column so that we can sort by a value not displayed
   hiddenCol: {
     width: 0,
     padding: 0,
-    border: 0
+    border: 0,
   },
   //Assigned to a column with the hidden column to the left
   leftHiddenCol: {
-    borderLeft: 0
+    borderLeft: 0,
   },
   unsortableHeader: tableLayoutStyles.unsortableHeader,
   unsortableHeaderRTL: tableLayoutStyles.unsortableHeaderRTL,
@@ -366,20 +366,20 @@ const styles = {
     paddingTop: 20,
     paddingLeft: 20,
     paddingBottom: 20,
-    width: 40
+    width: 40,
   },
   sectionCol: {
-    paddingLeft: 20
+    paddingLeft: 20,
   },
   sectionCodeNone: {
     color: color.light_gray,
-    fontSize: 16
-  }
+    fontSize: 16,
+  },
 };
 
 export const UnconnectedOwnedSectionsTable = OwnedSectionsTable;
 
 export default connect((state, ownProps) => ({
   sectionRows: getSectionRows(state, ownProps.sectionIds),
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(OwnedSectionsTable);

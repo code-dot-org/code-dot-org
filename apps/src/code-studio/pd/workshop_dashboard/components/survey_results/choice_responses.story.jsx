@@ -17,7 +17,7 @@ export default storybook => {
               Onions: 13,
               Mushrooms: 2,
               Olives: 2,
-              Sausage: 3
+              Sausage: 3,
             }}
             possibleAnswers={[
               'Peppers',
@@ -25,11 +25,11 @@ export default storybook => {
               'Mushrooms',
               'Sausage',
               'Olives',
-              'Pineapples'
+              'Pineapples',
             ]}
             answerType="selectText"
           />
-        )
+        ),
       },
       {
         name: 'Choice responses with others',
@@ -46,7 +46,7 @@ export default storybook => {
               Sausage: 3,
               Corn: 1,
               'Anything but pineapples lol': 1,
-              'Kalamata Olives specifically': 1
+              'Kalamata Olives specifically': 1,
             }}
             possibleAnswers={[
               'Peppers',
@@ -54,12 +54,12 @@ export default storybook => {
               'Mushrooms',
               'Sausage',
               'Olives',
-              'Pineapples'
+              'Pineapples',
             ]}
             otherText={'Other toppings'}
             answerType="selectText"
           />
-        )
+        ),
       },
       {
         name: 'Choice selectValue response',
@@ -71,7 +71,7 @@ export default storybook => {
               2: 5,
               3: 1,
               4: 0,
-              5: 0
+              5: 0,
             }}
             answerType="selectValue"
             possibleAnswers={[
@@ -79,10 +79,10 @@ export default storybook => {
               'Not good',
               'Ambivalent',
               'Good',
-              'Delicious'
+              'Delicious',
             ]}
           />
-        )
+        ),
       },
       {
         name: 'Scale ratings',
@@ -92,13 +92,13 @@ export default storybook => {
             answers={{
               1: 1,
               4: 5,
-              5: 10
+              5: 10,
             }}
             answerType="scale"
             possibleAnswers={['1 - I hate it', '2', '3', '4', '5 - I love it']}
           />
-        )
-      }
+        ),
+      },
     ]);
 
   storybook
@@ -116,8 +116,8 @@ export default storybook => {
                 Peppers: 4,
                 Mushrooms: 2,
                 Olives: 2,
-                Sausage: 3
-              }
+                Sausage: 3,
+              },
             }}
             possibleAnswers={[
               'Peppers',
@@ -125,11 +125,11 @@ export default storybook => {
               'Mushrooms',
               'Sausage',
               'Olives',
-              'Pineapples'
+              'Pineapples',
             ]}
             answerType="selectText"
           />
-        )
+        ),
       },
       {
         name: 'Choice responses without other',
@@ -142,17 +142,17 @@ export default storybook => {
                 Peppers: 4,
                 Mushrooms: 2,
                 Olives: 2,
-                Sausage: 3
+                Sausage: 3,
               },
               Dick: {
                 Peppers: 4,
                 Onions: 13,
-                Sausage: 3
+                Sausage: 3,
               },
               Harry: {
                 Pineapples: 5,
-                Onions: 5
-              }
+                Onions: 5,
+              },
             }}
             possibleAnswers={[
               'Peppers',
@@ -160,11 +160,11 @@ export default storybook => {
               'Mushrooms',
               'Sausage',
               'Olives',
-              'Pineapples'
+              'Pineapples',
             ]}
             answerType="selectText"
           />
-        )
+        ),
       },
       {
         name: 'Choice responses with others',
@@ -183,10 +183,10 @@ export default storybook => {
                 Sausage: 3,
                 Corn: 1,
                 'Anything but pineapples lol': 1,
-                'Kalamata Olives specifically': 1
+                'Kalamata Olives specifically': 1,
               },
               Dick: {
-                'Pepperoni and literally nothing else': 1
+                'Pepperoni and literally nothing else': 1,
               },
               Harry: {
                 Peppers: 16,
@@ -194,8 +194,8 @@ export default storybook => {
                 Mushrooms: 8,
                 Sausage: 16,
                 Olives: 12,
-                Pineapples: 14
-              }
+                Pineapples: 14,
+              },
             }}
             possibleAnswers={[
               'Peppers',
@@ -203,12 +203,12 @@ export default storybook => {
               'Mushrooms',
               'Sausage',
               'Olives',
-              'Pineapples'
+              'Pineapples',
             ]}
             otherText={'Other toppings'}
             answerType="selectText"
           />
-        )
+        ),
       },
       {
         name: 'Choice selectValue response',
@@ -220,20 +220,20 @@ export default storybook => {
               Tom: {
                 1: 10,
                 2: 5,
-                3: 1
+                3: 1,
               },
               Dick: {
                 3: 1,
                 4: 5,
-                5: 10
+                5: 10,
               },
               Harry: {
                 1: 1,
                 2: 1,
                 3: 1,
                 4: 1,
-                5: 1
-              }
+                5: 1,
+              },
             }}
             answerType="selectValue"
             possibleAnswers={[
@@ -241,10 +241,10 @@ export default storybook => {
               'Not good',
               'Ambivalent',
               'Good',
-              'Delicious'
+              'Delicious',
             ]}
           />
-        )
+        ),
       },
       {
         name: 'Scale ratings',
@@ -256,23 +256,23 @@ export default storybook => {
               Tom: {
                 1: 10,
                 2: 5,
-                3: 1
+                3: 1,
               },
               Dick: {
                 3: 1,
                 4: 5,
-                5: 10
+                5: 10,
               },
               Harry: {
                 1: 1,
                 3: 1,
-                5: 1
-              }
+                5: 1,
+              },
             }}
             answerType="scale"
             possibleAnswers={['1 - I hate it', '2', '3', '4', '5 - I love it']}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

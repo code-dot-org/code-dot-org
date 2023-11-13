@@ -6,7 +6,7 @@ export default Object.freeze({
     [MEDIA_URL + 'decorations/cobblestone_wall.png', 'cobblestone_wall'],
     [
       MEDIA_URL + 'decorations/mossy_cobblestone_wall.png',
-      'cobblestone_wall,1'
+      'cobblestone_wall,1',
     ],
     [MEDIA_URL + 'decorations/waterlily.png', 'waterlily'],
     [MEDIA_URL + 'decorations/sealantern.png', 'sealantern'],
@@ -117,16 +117,16 @@ export default Object.freeze({
     [MEDIA_URL + 'decorations/mushroom_red.png', 'red_mushroom'],
     [
       MEDIA_URL + 'decorations/brown_mushroom_block.png',
-      'brown_mushroom_block,14'
+      'brown_mushroom_block,14',
     ],
     [MEDIA_URL + 'decorations/red_mushroom_block.png', 'red_mushroom_block,14'],
     [
       MEDIA_URL + 'decorations/brown_mushroom_block2.png',
-      'brown_mushroom_block'
+      'brown_mushroom_block',
     ],
     [
       MEDIA_URL + 'decorations/brown_mushroom_block3.png',
-      'brown_mushroom_block,15'
+      'brown_mushroom_block,15',
     ],
     [MEDIA_URL + 'decorations/cactus.png', 'cactus'],
     [MEDIA_URL + 'decorations/melon_block.png', 'melon_block'],
@@ -151,67 +151,67 @@ export default Object.freeze({
     [MEDIA_URL + 'decorations/leaves_dark_oak.png', 'leaves2,1'],
     [
       MEDIA_URL + 'decorations/white_glazed_terracotta.png',
-      'white_glazed_terracotta'
+      'white_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/silver_glazed_terracotta.png',
-      'silver_glazed_terracotta'
+      'silver_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/gray_glazed_terracotta.png',
-      'gray_glazed_terracotta'
+      'gray_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/black_glazed_terracotta.png',
-      'black_glazed_terracotta'
+      'black_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/brown_glazed_terracotta.png',
-      'brown_glazed_terracotta'
+      'brown_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/red_glazed_terracotta.png',
-      'red_glazed_terracotta'
+      'red_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/orange_glazed_terracotta.png',
-      'orange_glazed_terracotta'
+      'orange_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/yellow_glazed_terracotta.png',
-      'yellow_glazed_terracotta'
+      'yellow_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/lime_glazed_terracotta.png',
-      'lime_glazed_terracotta'
+      'lime_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/green_glazed_terracotta.png',
-      'green_glazed_terracotta'
+      'green_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/cyan_glazed_terracotta.png',
-      'cyan_glazed_terracotta'
+      'cyan_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/light_blue_glazed_terracotta.png',
-      'light_blue_glazed_terracotta'
+      'light_blue_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/blue_glazed_terracotta.png',
-      'blue_glazed_terracotta'
+      'blue_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/purple_glazed_terracotta.png',
-      'purple_glazed_terracotta'
+      'purple_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/magenta_glazed_terracotta.png',
-      'magenta_glazed_terracotta'
+      'magenta_glazed_terracotta',
     ],
     [
       MEDIA_URL + 'decorations/pink_glazed_terracotta.png',
-      'pink_glazed_terracotta'
+      'pink_glazed_terracotta',
     ],
     [MEDIA_URL + 'decorations/cake.png', 'cake'],
     [MEDIA_URL + 'decorations/skull_skeleton.png', 'skull'],
@@ -281,7 +281,7 @@ export default Object.freeze({
     [MEDIA_URL + 'decorations/concretepowder_cyan.png', 'concretepowder,9'],
     [
       MEDIA_URL + 'decorations/concretepowder_light_blue.png',
-      'concretepowder,3'
+      'concretepowder,3',
     ],
     [MEDIA_URL + 'decorations/concretepowder_blue.png', 'concretepowder,11'],
     [MEDIA_URL + 'decorations/concretepowder_purple.png', 'concretepowder,10'],
@@ -302,7 +302,7 @@ export default Object.freeze({
     [MEDIA_URL + 'decorations/concrete_blue.png', 'concrete,11'],
     [MEDIA_URL + 'decorations/concrete_purple.png', 'concrete,10'],
     [MEDIA_URL + 'decorations/concrete_magenta.png', 'concrete,2'],
-    [MEDIA_URL + 'decorations/concrete_pink.png', 'concrete,6']
+    [MEDIA_URL + 'decorations/concrete_pink.png', 'concrete,6'],
   ],
   miscellaneous: [
     [MEDIA_URL + 'miscellaneous/coal.png', 'coal'],
@@ -371,7 +371,7 @@ export default Object.freeze({
     [MEDIA_URL + 'miscellaneous/chorus_fruit.png', 'chorus_fruit'],
     [
       MEDIA_URL + 'miscellaneous/chorus_fruit_popped.png',
-      'chorus_fruit_popped'
+      'chorus_fruit_popped',
     ],
     [MEDIA_URL + 'miscellaneous/nether_star.png', 'netherstar'],
     [MEDIA_URL + 'miscellaneous/magma_cream.png', 'magma_cream'],
@@ -390,7 +390,7 @@ export default Object.freeze({
     [MEDIA_URL + 'miscellaneous/spider_eye.png', 'spider_eye'],
     [
       MEDIA_URL + 'miscellaneous/spider_eye_fermented.png',
-      'fermented_spider_eye'
+      'fermented_spider_eye',
     ],
     [MEDIA_URL + 'miscellaneous/dragons_breath.png', 'dragon_breath'],
     [MEDIA_URL + 'miscellaneous/carrot_on_a_stick.png', 'carrotonastick'],
@@ -399,7 +399,7 @@ export default Object.freeze({
     [MEDIA_URL + 'miscellaneous/prismarine_shard.png', 'prismarine_shard'],
     [
       MEDIA_URL + 'miscellaneous/prismarine_crystals.png',
-      'prismarine_crystals'
+      'prismarine_crystals',
     ],
     [MEDIA_URL + 'miscellaneous/dye_powder_black.png', 'dye'],
     [MEDIA_URL + 'miscellaneous/dye_powder_gray.png', 'dye,8'],
@@ -416,7 +416,7 @@ export default Object.freeze({
     [MEDIA_URL + 'miscellaneous/dye_powder_yellow.png', 'dye,11'],
     [MEDIA_URL + 'miscellaneous/dye_powder_lime.png', 'dye,10'],
     [MEDIA_URL + 'miscellaneous/dye_powder_green.png', 'dye,2'],
-    [MEDIA_URL + 'miscellaneous/dye_powder_cyan.png', 'dye,6']
+    [MEDIA_URL + 'miscellaneous/dye_powder_cyan.png', 'dye,6'],
   ],
   tools: [
     [MEDIA_URL + 'tools/rail_normal.png', 'rail'],
@@ -551,11 +551,11 @@ export default Object.freeze({
     [MEDIA_URL + 'tools/stone_pressure_plate.png', 'stone_pressure_plate'],
     [
       MEDIA_URL + 'tools/light_weighted_pressure_plate.png',
-      'light_weighted_pressure_plate'
+      'light_weighted_pressure_plate',
     ],
     [
       MEDIA_URL + 'tools/heavy_weighted_pressure_plate.png',
-      'heavy_weighted_pressure_plate'
+      'heavy_weighted_pressure_plate',
     ],
     [MEDIA_URL + 'tools/wooden_button.png', 'wooden_button'],
     [MEDIA_URL + 'tools/stone_button.png', 'stone_button'],
@@ -573,7 +573,7 @@ export default Object.freeze({
     [MEDIA_URL + 'tools/ender_pearl.png', 'ender_pearl'],
     [MEDIA_URL + 'tools/ender_eye.png', 'ender_eye'],
     [MEDIA_URL + 'tools/camera.png', 'camera'],
-    [MEDIA_URL + 'tools/book_portfolio.png', 'portfolio']
+    [MEDIA_URL + 'tools/book_portfolio.png', 'portfolio'],
   ],
   blocks: [
     [MEDIA_URL + 'blocks/air.png', 'air'],
@@ -605,67 +605,67 @@ export default Object.freeze({
     [MEDIA_URL + 'blocks/hardened_clay.png', 'hardened_clay'],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_white.png',
-      'stained_hardened_clay'
+      'stained_hardened_clay',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_silver.png',
-      'stained_hardened_clay,8'
+      'stained_hardened_clay,8',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_gray.png',
-      'stained_hardened_clay,7'
+      'stained_hardened_clay,7',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_black.png',
-      'stained_hardened_clay,15'
+      'stained_hardened_clay,15',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_brown.png',
-      'stained_hardened_clay,12'
+      'stained_hardened_clay,12',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_red.png',
-      'stained_hardened_clay,14'
+      'stained_hardened_clay,14',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_orange.png',
-      'stained_hardened_clay,1'
+      'stained_hardened_clay,1',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_yellow.png',
-      'stained_hardened_clay,4'
+      'stained_hardened_clay,4',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_lime.png',
-      'stained_hardened_clay,5'
+      'stained_hardened_clay,5',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_green.png',
-      'stained_hardened_clay,13'
+      'stained_hardened_clay,13',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_cyan.png',
-      'stained_hardened_clay,9'
+      'stained_hardened_clay,9',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_light_blue.png',
-      'stained_hardened_clay,3'
+      'stained_hardened_clay,3',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_blue.png',
-      'stained_hardened_clay,11'
+      'stained_hardened_clay,11',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_purple.png',
-      'stained_hardened_clay,10'
+      'stained_hardened_clay,10',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_magenta.png',
-      'stained_hardened_clay,2'
+      'stained_hardened_clay,2',
     ],
     [
       MEDIA_URL + 'blocks/stained_hardened_clay_pink.png',
-      'stained_hardened_clay,6'
+      'stained_hardened_clay,6',
     ],
     [MEDIA_URL + 'blocks/sandstone.png', 'sandstone'],
     [MEDIA_URL + 'blocks/chiseled_sandstone.png', 'sandstone,1'],
@@ -739,6 +739,6 @@ export default Object.freeze({
     [MEDIA_URL + 'blocks/end_stone.png', 'end_stone'],
     [MEDIA_URL + 'blocks/allow.png', 'allow'],
     [MEDIA_URL + 'blocks/deny.png', 'deny'],
-    [MEDIA_URL + 'blocks/border_block.png', 'border_block']
-  ]
+    [MEDIA_URL + 'blocks/border_block.png', 'border_block'],
+  ],
 });

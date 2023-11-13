@@ -27,11 +27,11 @@ class PublishDialog extends Component {
 
     // specify additional behavior after successful call to onConfirmPublish,
     // if not overridden by onConfirmPublishOverride.
-    afterPublish: PropTypes.func
+    afterPublish: PropTypes.func,
   };
 
   state = {
-    publishFailedStatus: null
+    publishFailedStatus: null,
   };
 
   confirm = () => {
@@ -102,7 +102,7 @@ class PublishDialog extends Component {
           <Button
             text={i18n.publish()}
             onClick={this.confirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc"
             isPending={isPublishPending}
             pendingText={i18n.publishPending()}
@@ -119,11 +119,11 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };
 
 export const UnconnectedPublishDialog = Radium(PublishDialog);
@@ -133,7 +133,7 @@ export default connect(
     isOpen: state.publishDialog.isOpen,
     isPublishPending: state.publishDialog.isPublishPending,
     projectId: state.publishDialog.projectId,
-    projectType: state.publishDialog.projectType
+    projectType: state.publishDialog.projectType,
   }),
   dispatch => ({
     onClose() {
@@ -141,6 +141,6 @@ export default connect(
     },
     onConfirmPublish(projectId, projectType) {
       return dispatch(publishProject(projectId, projectType));
-    }
+    },
   })
 )(Radium(PublishDialog));

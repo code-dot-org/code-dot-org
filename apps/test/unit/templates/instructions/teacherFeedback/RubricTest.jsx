@@ -10,11 +10,11 @@ const DEFAULT_PROPS = {
     performanceLevel1: 'exceeded expectations',
     performanceLevel2: 'met expectations',
     performanceLevel3: 'approaches expectations',
-    performanceLevel4: 'no evidence of trying'
+    performanceLevel4: 'no evidence of trying',
   },
   performance: null,
   isEditable: true,
-  onRubricChange: () => {}
+  onRubricChange: () => {},
 };
 
 const setUp = overrideProps => {
@@ -78,7 +78,7 @@ describe('Rubric', () => {
 
   it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
     const wrapper = setUp({
-      isEditable: true
+      isEditable: true,
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
@@ -87,7 +87,7 @@ describe('Rubric', () => {
 
   it('RubricField prop showFeedbackInputAreas is false if isEditable = false and there is no performance', () => {
     const wrapper = setUp({
-      isEditable: false
+      isEditable: false,
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
@@ -96,7 +96,7 @@ describe('Rubric', () => {
 
   it('RubricField prop expandByDefault is false if isEditable = true and no performance', () => {
     const wrapper = setUp({
-      isEditable: true
+      isEditable: true,
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
@@ -105,7 +105,7 @@ describe('Rubric', () => {
 
   it('RubricField prop expandByDefault is true if isEditable = false', () => {
     const wrapper = setUp({
-      isEditable: false
+      isEditable: false,
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
@@ -115,7 +115,7 @@ describe('Rubric', () => {
   it('expands rubric value with feedback', () => {
     const wrapper = setUp({
       isEditable: false,
-      performance: 'performanceLevel2'
+      performance: 'performanceLevel2',
     });
 
     const firstRubricField = wrapper.find('RubricField').first();

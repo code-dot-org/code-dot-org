@@ -36,8 +36,8 @@ class LevelSourceImage < ApplicationRecord
 
     return false unless upload_original_image(image)
 
-    if level_source.level.game.app == Game::ARTIST
-      return false unless upload_framed_image(image)
+    if level_source.level.game.app == Game::ARTIST && !upload_framed_image(image)
+      return false
     end
 
     save

@@ -28,7 +28,7 @@ Dashboard::Application.configure do
   config.assets.version = '1.0'
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = Logger::Formatter.new
 
   # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = false

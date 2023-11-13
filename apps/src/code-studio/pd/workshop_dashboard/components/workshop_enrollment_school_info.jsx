@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button, Table} from 'react-bootstrap';
+import {Button, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
-import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
+import ScholarshipDropdown from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import {
   SubjectNames,
-  CourseKeyMap
+  CourseKeyMap,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {CSD, CSP, CSA} from '../../application/ApplicationConstants';
 import {DASHBOARD_COURSES} from '../../application_dashboard/application_dashboard.jsx';
@@ -28,15 +28,14 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.state = {
       pendingDelete: null,
       pendingScholarshipUpdates: [],
-      enrollments: this.props.enrollments
+      enrollments: this.props.enrollments,
     };
 
     this.handleClickDelete = this.handleClickDelete.bind(this);
     this.handleDeleteCanceled = this.handleDeleteCanceled.bind(this);
     this.handleDeleteConfirmed = this.handleDeleteConfirmed.bind(this);
-    this.handleScholarshipStatusChange = this.handleScholarshipStatusChange.bind(
-      this
-    );
+    this.handleScholarshipStatusChange =
+      this.handleScholarshipStatusChange.bind(this);
   }
 
   handleClickDelete(event) {
@@ -45,21 +44,21 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         id: event.currentTarget.dataset.id,
         email: event.currentTarget.dataset.email,
         first_name: event.currentTarget.dataset.first_name,
-        last_name: event.currentTarget.dataset.last_name
-      }
+        last_name: event.currentTarget.dataset.last_name,
+      },
     });
   }
 
   handleDeleteCanceled() {
     this.setState({
-      pendingDelete: null
+      pendingDelete: null,
     });
   }
 
   handleDeleteConfirmed() {
     const pendingDeleteId = this.state.pendingDelete.id;
     this.setState({
-      pendingDelete: null
+      pendingDelete: null,
     });
     this.props.onDelete(pendingDeleteId);
   }
@@ -76,7 +75,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       method: 'POST',
       url: `/api/v1/pd/enrollment/${enrollment.id}/scholarship_info`,
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({scholarship_status: selection.value})
+      data: JSON.stringify({scholarship_status: selection.value}),
     }).done(data => {
       this.setState(state => {
         // replace the old version of the enrollment in state with the newly updated version we just got back
@@ -88,11 +87,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           }
         });
         // remove the updated enrollment from the list of enrollments pending an update
-        const pendingScholarshipUpdates = state.pendingScholarshipUpdates.filter(
-          e => {
+        const pendingScholarshipUpdates =
+          state.pendingScholarshipUpdates.filter(e => {
             return e !== data.id;
-          }
-        );
+          });
         return {enrollments, pendingScholarshipUpdates};
       });
     });
@@ -250,10 +248,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             this.props.workshopSubject === DEEP_DIVE && (
               <td>{enrollment.attended_csf_intro_workshop}</td>
             )}
-          {this.props.workshopCourse === CSF &&
-            this.props.workshopSubject === DEEP_DIVE && (
-              <td>{enrollment.csf_has_physical_curriculum_guide}</td>
-            )}
           {this.props.workshopCourse === CSP &&
             this.props.workshopSubject ===
               SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
@@ -298,9 +292,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     if (!!pendingDelete) {
       const bodyText =
         'Are you sure you want to delete the enrollment for ' +
-        `${pendingDelete.first_name} ${pendingDelete.last_name} (${
-          pendingDelete.email
-        })?`;
+        `${pendingDelete.first_name} ${pendingDelete.last_name} (${pendingDelete.email})?`;
 
       confirmationDialog = (
         <ConfirmationDialog
@@ -395,9 +387,9 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,
   numSessions: PropTypes.number.isRequired,
-  selectedEnrollments: PropTypes.array
+  selectedEnrollments: PropTypes.array,
 };
 
 export default connect(state => ({
-  permissionList: state.workshopDashboard.permission.permissions
+  permissionList: state.workshopDashboard.permission.permissions,
 }))(WorkshopEnrollmentSchoolInfo);

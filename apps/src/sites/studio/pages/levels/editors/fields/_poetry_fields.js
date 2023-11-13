@@ -10,9 +10,7 @@ function initPage() {
 
   function updatePoemSelection() {
     const defaultPoem = $('#defaultPoem');
-    var selectionValue = $('#level_standalone_app_name')
-      .val()
-      .toLowerCase();
+    var selectionValue = $('#level_standalone_app_name').val().toLowerCase();
     const defaultPoemSelect = $('#level_default_poem');
     const availablePoemsSelect = $('#level_available_poems');
     if (selectionValue === 'poetry') {

@@ -9,7 +9,7 @@ export default class UniqueSounds {
 
     var reader = new FileReader();
 
-    reader.onload = function(e) {
+    reader.onload = function (e) {
       console.log(
         'Loading',
         file.name,

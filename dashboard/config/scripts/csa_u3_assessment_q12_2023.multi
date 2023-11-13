@@ -37,3 +37,5 @@ This code segment performs the expected behavior as is.
 
 4. Changing how the loop control variable is incremented to `index += 3` will result in skipping multiple elements in the 1D array `numbers` when counting all even numbers. The `if` statement would then only check every third element, so multiple values would not be included in the count.
 MARKDOWN
+
+allow_multiple_attempts true

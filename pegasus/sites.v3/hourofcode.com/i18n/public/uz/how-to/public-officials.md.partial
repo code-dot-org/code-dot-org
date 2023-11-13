@@ -6,61 +6,61 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to involve your entire community
+# Qanday qilib butun jamoangizni jalb qilish mumkin
 
-### Show your state, district, or city your commitment to computer science
+### Davlatingiz, tuman yoki shaharingizni, kompyuter fanlariga bo'lgan sodiqligingizni ko'rsating
 
 * * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## "Dasturlash soati"ngizda saylangan amaldorni qabul qilyapsizmi?
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+[Ularning tashrifi va tadbiringizni ajoyib qilish siz uchun kerakli barcha ma’lumotlar bo'lgan vositalar to‘plamimizni](/files/elected-official.pdf) ko‘rib chiqing!
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+Chapdan o'ngga: *Arkanzas, Shimoliy Karolina va Arizona hokimlari Dasturlash soatida ishtirok etmoqda.*
 
-## Get every school participating, every student learning!
+## Har bir maktabni ishtirok etishga, har bir o'quvchini bilim olishga jalb qiling!
 
-### 1. Read our one-pager
+### 1. Bizning varaqamizni o'qib chiqing
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+[Kompyuter fanlari nima uchun muhim]({{ localized_files/hoc_one_pager }}) va Dasturlash soatini qo‘llab-quvvatlash orqali harakatlarga qanday yordam berishingiz mumkinligini ko‘rib chiqing.
 
-### 2. Recruit local schools and districts
+### 2. Mahalliy maktablar va hududlarni jalb qiling
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+Boshlanish nuqtasi sifatida [bu yerdagi elektron pochta manzilidan]({{ promote/sample_emails }}) yoki [ushbu izohdan]({{ promote/stats_url }}) foydalaning va maktablar va hududlar uchun ushbu [yo'riqnoma]({{ urls/how_to_guide }}) bilan tanishib chiqing.
 
-### 3. Host an Hour of Code event
+### 3. Dasturlash soati tadbirini o‘tkazing
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+Namunaviy shou uchun [tadbir o'tkazish qo‘llanmasi]({{ urls/how_to_events }})media targ‘ibot to‘plami< /a> va boshqa tadbirlarni rejalashtirish resurslari ko‘rib chiqing. Tadbir o‘tkazish DAsturlash soatini targ‘ib qilish va ishtirok etishni oshirishning ajoyib usuli hisoblanadi.</p> 
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. Kompyuter Fanlari Taʼlim Haftasi davomidagi tadbirda qatnashing ({{ kampanya_date/short }})
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+Tuman, shahar yoki shtatingizda ishtirok etuvchi [sinflar va maktablarni izlab toping]({{ urls/events }}).
 
-### 5. Issue a proclamation or resolution
+### 5. E'lon yoki qaror chiqarish
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+Davlat va mahalliy qonun chiqaruvchilar tomonidan foydalanishi mumkin boʻlgan Kompyuter Fanlari Taʼlim Haftasi va uning maqsadlarini qoʻllab-quvvatlovchi ushbu [namunaviy qarorni]({{ urls/proclamation }}) koʻrib chiqing.
 
-### 6. Draft an op-ed
+### 6. Avtorlik fikr-mulohazasini yaratish
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+Mahalliy gazetangizda fikr-mulohazalarni nashr etishni o'ylab ko'ring. Kompyuter Fanlari Taʼlim Haftaligi va uning maqsadlarini qoʻllab-quvvatlovchi ushbu [namunaviy avtorlik fikr-mulohazasi]({{ promote/op_ed }}) bilan tanishib chiqing.
 
-### 7. Spread the word
+### 7. Targ‘ib qiling
 
-[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+[Facebookda Dasturlash soati videosini baham ko'ring](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) va [qo llab-quvvatlovingiz haqida Twitterda gapirib o'ting](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Tadbirlar suratlari yoki siz va boshqalarning Dasturlash soatida shug‘ullanayotgan videosini baham ko‘ring. Code.org (@code.org) uni ko'rishi va qo'llab-quvvatlovni targ'ib qilishi uchun **#HourOfCode** xeshtegidan foydalaning. Yoki ushbu namunaviy tvitlardan foydalaning:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Har bir o'quvchi, o'g'il yoki qiz bo'lishidan qattiy nazar kompyuter fanlarini o'rganish imkoniyatiga ega bo'lishi kerak. Birinchi #HourOfCode [https://hourofcode.com]({{ urls/home }})dan boshlash uchun bizga qo‘shiling.*
+- *Bugun biz “Dasturlash soati” harakatiga qo‘shilganimizdan faxrlanamiz. Siz ham qo'shildingizmi? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
 
-### 8. Issue a press release
+### 8. Matbuot uchun ma'lumot chiqaring
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[Ushbu namunadan]({{ promote/official_press_release }}) qo‘llanma sifatida foydalaning.
 
-### 9. Connect locally
+### 9. Davlatingiz miqyosida aloqa quring
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[Shatingizdagi informatika fanlari ta’limi haqida batafsil bilib oling]({{ urls/advocacy }}). U yerdagi petitsiyaga imzo cheking va siz Code.org’ning mahalliy, shtat va federal qo'llab-quvvatlovi harakatlariga oid yangiliklarni olasiz.
 
 {{ signup_button }}

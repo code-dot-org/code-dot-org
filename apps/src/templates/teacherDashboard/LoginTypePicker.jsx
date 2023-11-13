@@ -8,13 +8,17 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Heading1, Heading2} from '../../lib/ui/Headings';
+import {Heading3} from '../../lib/ui/Headings';
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
@@ -33,18 +37,25 @@ class LoginTypePicker extends Component {
     handleCancel: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     // Provided by Redux
-    providers: PropTypes.arrayOf(PropTypes.string)
+    providers: PropTypes.arrayOf(PropTypes.string),
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLearnMoreOpen: false,
+    };
+  }
 
   reportLoginTypeSelection = provider => {
     analyticsReporter.sendEvent(LOGIN_TYPE_SELECTED_EVENT, {
-      loginType: provider
+      loginType: provider,
     });
   };
 
   recordSectionSetupExitEvent = eventName => {
     analyticsReporter.sendEvent(eventName, {
-      source: SELECT_LOGIN_TYPE
+      source: SELECT_LOGIN_TYPE,
     });
   };
 
@@ -74,46 +85,89 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
-    // Adjust max height of the LoginTypePicker container based on the number of
-    // LoginType cards (which affects number of rows in the CardContainer flexbox).
-    const containerHeight = hasThirdParty ? '500px' : '360px';
 
     const style = {
       container: {
         width: styleConstants['content-width'],
-        height: containerHeight,
         left: '20px',
-        right: '20px'
+        right: '20px',
       },
       scroll: {
         overflowX: 'hidden',
         overflowY: 'auto',
-        height: 'calc(80vh - 200px)'
       },
       thirdPartyProviderUpsell: {
-        marginBottom: '10px'
+        marginBottom: '10px',
+      },
+      warningIcon: {
+        color: 'red',
+        marginLeft: '5px',
+        marginRight: '5px',
+      },
+      warningHeader: {
+        color: 'red',
       },
       footer: {
-        position: 'absolute',
         width: styleConstants['content-width'],
         height: '100px',
         left: 0,
-        bottom: '-65px',
-        padding: '0px 20px 20px 20px',
+        bottom: '-51px',
         backgroundColor: '#fff',
-        borderRadius: '5px'
+        borderRadius: '5px',
+      },
+      mediumText: {
+        fontSize: '.75em',
+        color: color.neutral_dark,
+        ...fontConstants['main-font-semi-bold'],
+      },
+      learnHow: {
+        marginTop: '12px',
       },
       emailPolicyNote: {
-        marginBottom: '20px',
-        paddingTop: '20px',
-        borderTop: '1px solid #000'
-      }
+        marginBottom: '31px',
+        paddingTop: '8px',
+        borderTop: `1px solid ${color.neutral_dark}`,
+      },
     };
 
     return (
       <div style={style.container}>
-        <Heading1>{title}</Heading1>
-        <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
+        <Heading3 isRebranded>{title}</Heading3>
+        <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
+        {experiments.isEnabledAllowingQueryString(
+          experiments.CPA_EXPERIENCE
+        ) && (
+          <p>
+            <span
+              className="fa fa-exclamation-triangle"
+              aria-hidden="true"
+              style={style.warningIcon}
+            />
+            <span style={style.warningHeader}>
+              <strong>
+                {i18n.addStudentsToSectionPermissionHeader() + ' '}
+              </strong>
+            </span>
+            {i18n.addStudentsToSectionPermissionWarning() + ' '}
+            <Button
+              styleAsText={true}
+              onClick={() => this.setState({isLearnMoreOpen: true})}
+            >
+              {i18n.learnMore()}
+            </Button>
+          </p>
+        )}
+        {this.state.isLearnMoreOpen && (
+          <StylizedBaseDialog
+            isOpen={true}
+            hideFooter={true}
+            renderFooter={() => {}}
+            confirmationButtonText="OK"
+            cancellationButtonText="Cancel"
+            body={<p>{i18n.addStudentsToSectionPermissionExplanation()}</p>}
+            handleClose={() => this.setState({isLearnMoreOpen: false})}
+          />
+        )}
         <div style={style.scroll}>
           <CardContainer>
             {withGoogle && (
@@ -128,28 +182,25 @@ class LoginTypePicker extends Component {
             <EmailLoginCard onClick={this.onLoginTypeSelect} />
           </CardContainer>
           {!hasThirdParty && (
-            <div>
+            <p style={{...style.mediumText, ...style.learnHow}}>
               {i18n.thirdPartyProviderUpsell() + ' '}
               <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
                 {i18n.learnHow()}
               </a>
               {' ' + i18n.connectAccountThirdPartyProviders()}
-            </div>
+            </p>
           )}
         </div>
         <div style={style.footer}>
-          <div style={style.emailPolicyNote}>
-            <b>{i18n.note()}</b>
+          <p style={{...style.mediumText, ...style.emailPolicyNote}}>
+            {i18n.note()}
             {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-              {i18n.moreInfo()}
-            </a>
-          </div>
+            <a href="https://code.org/privacy">]{i18n.moreInfo()}</a>
+          </p>
           <Button
             onClick={this.cancel}
             text={i18n.dialogCancel()}
-            size={Button.ButtonSize.large}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             disabled={disabled}
           />
         </div>
@@ -157,9 +208,10 @@ class LoginTypePicker extends Component {
     );
   }
 }
+
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
-  providers: state.teacherSections.providers
+  providers: state.teacherSections.providers,
 }))(LoginTypePicker);
 
 const PictureLoginCard = props => (
@@ -173,7 +225,7 @@ const PictureLoginCard = props => (
 );
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 const WordLoginCard = props => (

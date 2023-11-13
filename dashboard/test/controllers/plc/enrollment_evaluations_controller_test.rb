@@ -32,7 +32,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_1, @module_practice_1])
 
     get :preview_assignments, params: {script_id: @course_unit.script.name}
-    assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
+    assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.to_set(&:plc_learning_module)
   end
 
   test "submit evaluation enrolls user in appropriate modules" do
@@ -42,7 +42,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
       practice_module: @module_practice_1
     }
     assert_redirected_to script_path(@course_unit.script)
-    assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
+    assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.to_set(&:plc_learning_module)
   end
 
   test "Posting anything other than one content and one practice module to confirm_assignments gets redirected" do
@@ -67,6 +67,6 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     get :preview_assignments, params: {script_id: @course_unit.script.name}
 
     #In spite of the fact that the user answered stuff for content1 and practice1, their enrollment should still be 1, 1
-    assert_equal (Set.new([@module_required, @module_content_1, @module_practice_1])), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
+    assert_equal (Set.new([@module_required, @module_content_1, @module_practice_1])), @unit_assignment.plc_module_assignments.to_set(&:plc_learning_module)
   end
 end

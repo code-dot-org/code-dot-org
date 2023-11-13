@@ -1,32 +1,29 @@
 ---
-title: Teacher Resources - Write your first computer program
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Ресурси для вчителя - Напишіть свою першу комп'ютерну програму
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Напишіть свою першу комп'ютерну програму: Підручник "Години коду"
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## Ресурси для вчителів
 
-### Lesson Plans:
+### Плани уроків:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Напишіть свою першу комп'ютерну програму]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Завдання для поглиблення знань:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Поза Годиною коду](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Курс 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Інші ресурси для вчителів:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Година коду: Посібник для викладачів](https://hourofcode.com/how-to)
+- [Найкращі практики від успішних викладачів](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [Посібник для викладача до Години коду](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +31,12 @@ video_player: true
 
 ## Огляд
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Вивчіть основні поняття інформатики за допомогою програмування перетягування. Це навчальний посібник у формі гри з відеолекціями Білла Гейтса, Марка Цукерберга, Angry Birds та "Рослини проти зомбі", які ви можете дивитися самостійно. Вивчіть повторювані цикли, умовні оператори та основні алгоритми. Доступно 37 мовами.
 
-**Recommended Age Range:** 4-104
+**Рекомендована вікова категорія:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Технологічні вимоги:** Сучасні браузери, смартфони + планшети
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Спробуйте цей підручник</button></a>
 
 [/col-50]

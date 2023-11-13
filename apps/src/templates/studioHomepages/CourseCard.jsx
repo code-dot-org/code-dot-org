@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -14,7 +15,7 @@ class CourseCard extends Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -49,39 +50,39 @@ const styles = {
     width: 473,
     float: 'left',
     marginBottom: 20,
-    backgroundColor: color.neutral_light
+    backgroundColor: color.neutral_light,
   },
   header: {
     position: 'absolute',
     width: 473,
     height: 130,
-    backgroundColor: color.brand_primary_default
+    backgroundColor: color.brand_primary_default,
   },
   title: {
     paddingTop: 10,
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 20,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.white,
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
     paddingLeft: 25,
-    paddingRight: 10
+    paddingRight: 10,
   },
   titleRtl: {
     paddingTop: 10,
     paddingBottom: 5,
     marginTop: 15,
     fontSize: 20,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.white,
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
     paddingRight: 25,
-    paddingLeft: 10
+    paddingLeft: 10,
   },
   description: {
     paddingLeft: 25,
@@ -91,44 +92,42 @@ const styles = {
     marginTop: 115,
     fontSize: 14,
     lineHeight: 1.5,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
     background: color.neutral_light,
     height: 130,
     width: '100%',
     boxSizing: 'border-box',
     position: 'absolute',
-    zIndex: 2
+    zIndex: 2,
   },
   continueLink: {
     color: color.teal,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
+    ...fontConstants['main-font-regular'],
     marginTop: -5,
-    display: 'inline'
+    display: 'inline',
   },
   chevron: {
     display: 'inline',
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginLeft: 8
+    marginLeft: 8,
   },
   chevronRtl: {
     display: 'inline',
     color: color.teal,
     fontSize: 12,
     fontWeight: 'bold',
-    marginRight: 8
+    marginRight: 8,
   },
   linkBox: {
     display: 'block',
-    paddingBottom: 20,
-    textDecoration: 'none'
-  }
+    textDecoration: 'none',
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(CourseCard);

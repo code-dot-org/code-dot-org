@@ -12,7 +12,7 @@ export function CategorySection({category}) {
         style={{
           paddingLeft: 15,
           color: 'black',
-          backgroundColor: category.color
+          backgroundColor: category.color,
         }}
       >
         {category.name}
@@ -29,7 +29,7 @@ export function CategorySection({category}) {
 }
 
 export default function ProgrammingEnvironmentOverview({
-  programmingEnvironment
+  programmingEnvironment,
 }) {
   return (
     <div style={{width: '100%'}}>
@@ -56,17 +56,18 @@ const categoryShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  docs: PropTypes.arrayOf(PropTypes.object)
+  docs: PropTypes.arrayOf(PropTypes.object),
 });
 
 CategorySection.propTypes = {
-  category: categoryShape.isRequired
+  category: categoryShape.isRequired,
 };
 
 ProgrammingEnvironmentOverview.propTypes = {
   programmingEnvironment: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-    categories: PropTypes.arrayOf(categoryShape)
-  }).isRequired
+    categories: PropTypes.arrayOf(categoryShape),
+    projectUrl: PropTypes.string,
+  }).isRequired,
 };

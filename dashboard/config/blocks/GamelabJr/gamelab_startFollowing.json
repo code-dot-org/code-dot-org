@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "default",
     "func": "startFollowing",
     "blockText": "{SPRITE} begins following {TARGET}",
     "args": [

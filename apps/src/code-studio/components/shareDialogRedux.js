@@ -17,7 +17,7 @@ const initialState = {
   isOpen: false,
   isUnpublishPending: false,
   didUnpublish: false,
-  libraryDialogIsOpen: false
+  libraryDialogIsOpen: false,
 };
 
 export default function reducer(state = initialState, action) {
@@ -26,46 +26,46 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         ...initialState,
-        isOpen: true
+        isOpen: true,
       };
     case HIDE_SHARE_DIALOG:
       return {
         ...state,
         isUnpublishPending: false,
         didUnpublish: false,
-        isOpen: false
+        isOpen: false,
       };
     case UNPUBLISH_REQUEST:
       return {
         ...state,
-        isUnpublishPending: true
+        isUnpublishPending: true,
       };
     case UNPUBLISH_SUCCESS:
       return {
         ...state,
         isOpen: false,
         isUnpublishPending: false,
-        didUnpublish: true
+        didUnpublish: true,
       };
     case UNPUBLISH_FAILURE:
       return {
         ...state,
-        isUnpublishPending: false
+        isUnpublishPending: false,
       };
     case SAVE_REPLAY_LOG:
       return {
         ...state,
-        replayLog: action.replayLog
+        replayLog: action.replayLog,
       };
     case SHOW_LIBRARY_CREATION_DIALOG:
       return {
         ...state,
-        libraryDialogIsOpen: true
+        libraryDialogIsOpen: true,
       };
     case HIDE_LIBRARY_CREATION_DIALOG:
       return {
         ...state,
-        libraryDialogIsOpen: false
+        libraryDialogIsOpen: false,
       };
     default:
       return state;

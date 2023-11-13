@@ -24,3 +24,5 @@ Consider the following code segment:
 What is the value of `num` when the code segment is executed?
 
 MARKDOWN
+
+allow_multiple_attempts true

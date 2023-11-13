@@ -1,9 +1,10 @@
 import GoogleBlockly from 'blockly/core';
+import fontConstants from '@cdo/apps/fontConstants';
 import {Themes} from '../constants';
 import {
   deuteranopiaBlockStyles,
   protanopiaBlockStyles,
-  tritanopiaBlockStyles
+  tritanopiaBlockStyles,
 } from './cdoAccessibleStyles';
 
 export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
@@ -13,12 +14,13 @@ export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
     blockStyles: protanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
+      toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: '"Gotham 4r", sans-serif'
+      family: fontConstants['main-font'],
+      weight: fontConstants['regular-font-weight'],
     },
-    startHats: null
+    startHats: null,
   }
 );
 
@@ -29,12 +31,13 @@ export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
     blockStyles: deuteranopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
+      toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: '"Gotham 4r", sans-serif'
+      family: fontConstants['main-font'],
+      weight: fontConstants['regular-font-weight'],
     },
-    startHats: null
+    startHats: null,
   }
 );
 
@@ -45,11 +48,12 @@ export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
     blockStyles: tritanopiaBlockStyles,
     categoryStyles: {},
     componentStyles: {
-      toolboxBackgroundColour: '#DDDDDD'
+      toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: '"Gotham 4r", sans-serif'
+      family: fontConstants['main-font'],
+      weight: fontConstants['regular-font-weight'],
     },
-    startHats: null
+    startHats: null,
   }
 );

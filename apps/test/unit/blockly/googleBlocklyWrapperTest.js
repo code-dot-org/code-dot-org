@@ -1,4 +1,3 @@
-/* global Blockly */
 import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
@@ -12,6 +11,8 @@ describe('Google Blockly Wrapper', () => {
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
+    // Dispose navigation controller before initializing the wrapper again.
+    Blockly.navigationController.dispose();
     // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
     // Reset context menu for other tests.
@@ -43,7 +44,6 @@ describe('Google Blockly Wrapper', () => {
       'FieldColour',
       'FieldColourDropdown',
       'FieldIcon',
-      'FieldImage',
       'FieldLabel',
       'FieldParameter',
       'FieldRectangularDropdown',
@@ -52,7 +52,6 @@ describe('Google Blockly Wrapper', () => {
       'FunctionalBlockUtils',
       'FunctionalTypeColors',
       'FunctionEditor',
-      'functionEditor',
       'gamelab_locale',
       'Generator',
       'geras',
@@ -73,14 +72,13 @@ describe('Google Blockly Wrapper', () => {
       'selected',
       'tutorialExplorer_locale',
       'useContractEditor',
-      'useModalFunctionEditor',
       'utils',
       'Trashcan',
       'Variables',
       'weblab_locale',
       'Workspace',
       'WorkspaceSvg',
-      'Xml'
+      'Xml',
     ];
     readOnlyProperties.forEach(property => {
       expect(() => {

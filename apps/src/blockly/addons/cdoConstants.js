@@ -2,7 +2,7 @@ export default function initializeCdoConstants(blocklyWrapper) {
   blocklyWrapper.Procedures.DEFINITION_BLOCK_TYPES = [
     'procedures_defnoreturn',
     'procedures_defreturn',
-    'functional_definition'
+    'functional_definition',
   ];
 
   blocklyWrapper.BlockValueType = {
@@ -30,7 +30,7 @@ export default function initializeCdoConstants(blocklyWrapper) {
      * {number} Location.x
      * {number} Location.y
      */
-    LOCATION: 'Location'
+    LOCATION: 'Location',
   };
 
   // Google Blockly defaults to 28, but Cdo Blockly defaults to 15. Some labs set the snap radius
@@ -43,5 +43,12 @@ export const frameSizes = {
   MARGIN_SIDE: 15,
   MARGIN_TOP: 10,
   MARGIN_BOTTOM: 5,
-  HEADER_HEIGHT: 25
+  BLOCK_HEADER_HEIGHT: 25,
+  WORKSPACE_HEADER_HEIGHT: 50,
+};
+
+export const customConnectionBlockTypes = {
+  SPRITE: 'Sprite',
+  BEHAVIOR: 'Behavior',
+  LOCATION: 'Location',
 };

@@ -16,7 +16,7 @@ module CaptureQueries
 
     def logger
       @output ||= StringIO.new
-      @log ||= Logger.new(@output).tap do |l|
+      @logger ||= Logger.new(@output).tap do |l|
         l.level = Logger::DEBUG
         l.formatter = ->(*, msg) {msg}
       end

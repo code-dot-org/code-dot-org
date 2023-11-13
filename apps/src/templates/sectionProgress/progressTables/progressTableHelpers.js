@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import {
   lessonIsAllAssessment,
-  lessonHasLevels
+  lessonHasLevels,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
@@ -129,7 +129,7 @@ export function getLevelIconHeaderFormatter(scriptData) {
 function detailCellItems(lesson, studentProgress, textFormatter) {
   return lesson.levels.map(level => ({
     node: textFormatter(studentProgress[level.id]),
-    sublevelCount: level.sublevels && level.sublevels.length
+    sublevelCount: level.sublevels && level.sublevels.length,
   }));
 }
 
@@ -179,5 +179,5 @@ function emptyLessonFormatter() {
 
 export const unitTestExports = {
   formatTimeSpent,
-  formatLastUpdated
+  formatLastUpdated,
 };

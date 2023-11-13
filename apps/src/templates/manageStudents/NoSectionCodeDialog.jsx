@@ -9,7 +9,7 @@ export default class NoSectionCodeDialog extends React.Component {
   static propTypes = {
     typeClassroom: PropTypes.string,
     handleClose: PropTypes.func,
-    isOpen: PropTypes.bool
+    isOpen: PropTypes.bool,
   };
 
   constructor(props) {
@@ -41,7 +41,7 @@ export default class NoSectionCodeDialog extends React.Component {
           <hr />
           <Button
             onClick={this.props.handleClose}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.ok()}
             style={styles.buttonStyle}
           />
@@ -53,9 +53,9 @@ export default class NoSectionCodeDialog extends React.Component {
 
 const styles = {
   buttonStyle: {
-    float: 'right'
+    float: 'right',
   },
   dialog: {
-    padding: '20px'
-  }
+    padding: '20px',
+  },
 };

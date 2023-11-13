@@ -1,14 +1,14 @@
 var createToolbox = require('../block_utils').createToolbox;
 
-var jigsawBlock = function(type, x, y, child, childType) {
+var jigsawBlock = function (type, x, y, child, childType) {
   return jigsawBlockWithDeletableAttr(type, x, y, child, childType, true);
 };
 
-var undeletableJigsawBlock = function(type, x, y, child, childType) {
+var undeletableJigsawBlock = function (type, x, y, child, childType) {
   return jigsawBlockWithDeletableAttr(type, x, y, child, childType, false);
 };
 
-var jigsawBlockWithDeletableAttr = function(
+var jigsawBlockWithDeletableAttr = function (
   type,
   x,
   y,
@@ -49,7 +49,7 @@ var jigsawBlockWithDeletableAttr = function(
  * @param {number} options.level Level number
  * @Param {number} options.numBlocks How many blocks there are in the level
  */
-var validateSimplePuzzle = function(types, options) {
+var validateSimplePuzzle = function (types, options) {
   var numBlocks;
   if (types) {
     numBlocks = types.length;
@@ -96,13 +96,13 @@ var validateSimplePuzzle = function(types, options) {
  */
 
 module.exports = {
-  '1': {
+  1: {
     instructionsIcon: 'apple',
     isK1: true,
     image: {
       name: 'apple',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [41, 1.0, 0.969],
     numBlocks: 1,
@@ -110,32 +110,32 @@ module.exports = {
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return Jigsaw.block1Clicked;
-      }
+      },
     },
-    startBlocks: undeletableJigsawBlock('jigsaw_1A', 20, 20)
+    startBlocks: undeletableJigsawBlock('jigsaw_1A', 20, 20),
   },
-  '2': {
+  2: {
     instructionsIcon: 'smiley',
     isK1: true,
     instructionsImportant: true,
     image: {
       name: 'smiley',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [184, 1.0, 0.733],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 1,
     requiredBlocks: [],
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         // need to be finished drag
         if (Blockly.mainBlockSpace.dragMode) {
           return false;
@@ -147,76 +147,76 @@ module.exports = {
         var dx = Math.abs(400 - pos.x);
         var dy = Math.abs(100 - pos.y);
         return dx + dy < 80;
-      }
+      },
     },
-    startBlocks: undeletableJigsawBlock('jigsaw_2A', 20, 20)
+    startBlocks: undeletableJigsawBlock('jigsaw_2A', 20, 20),
   },
-  '3': {
+  3: {
     instructionsIcon: 'snail',
     isK1: true,
     image: {
       name: 'snail',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [36, 1.0, 0.999],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 2,
     requiredBlocks: [],
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 3, numBlocks: 2});
-      }
+      },
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_3A', 400, 100) +
-      undeletableJigsawBlock('jigsaw_3B', 100, 220)
+      undeletableJigsawBlock('jigsaw_3B', 100, 220),
   },
 
-  '4': {
+  4: {
     instructionsIcon: 'elephant',
     isK1: true,
     image: {
       name: 'elephant',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [320, 0.6, 0.999],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 2,
     requiredBlocks: [],
     freePlay: false,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 4, numBlocks: 2});
-      }
+      },
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_4A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_4B', 400, 200)
+      undeletableJigsawBlock('jigsaw_4B', 400, 200),
   },
 
-  '5': {
+  5: {
     instructionsIcon: 'fish',
     isK1: true,
     image: {
       name: 'fish',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [209, 0.57, 0.6],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -224,28 +224,28 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 5, numBlocks: 3});
-      }
+      },
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_5A', 100, 20) +
       undeletableJigsawBlock('jigsaw_5B', 100, 140) +
-      undeletableJigsawBlock('jigsaw_5C', 100, 280)
+      undeletableJigsawBlock('jigsaw_5C', 100, 280),
   },
 
-  '6': {
+  6: {
     instructionsIcon: 'doggie',
     isK1: true,
     image: {
       name: 'doggie',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [25, 0.57, 0.96],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -253,28 +253,28 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 6, numBlocks: 3});
-      }
+      },
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_6B', 100, 20) +
       undeletableJigsawBlock('jigsaw_6A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_6C', 100, 280)
+      undeletableJigsawBlock('jigsaw_6C', 100, 280),
   },
 
-  '7': {
+  7: {
     instructionsIcon: 'tree',
     isK1: true,
     image: {
       name: 'tree',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [238, 0.51, 0.999],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -282,28 +282,28 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 7, numBlocks: 3});
-      }
+      },
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_7B', 100, 20) +
       undeletableJigsawBlock('jigsaw_7A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_7C', 100, 280)
+      undeletableJigsawBlock('jigsaw_7C', 100, 280),
   },
 
-  '8': {
+  8: {
     instructionsIcon: 'flower',
     isK1: true,
     image: {
       name: 'flower',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [75, 0.8, 0.999],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -311,28 +311,28 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 8, numBlocks: 3});
-      }
+      },
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_8C', 100, 20) +
       undeletableJigsawBlock('jigsaw_8B', 100, 140) +
-      undeletableJigsawBlock('jigsaw_8A', 100, 280)
+      undeletableJigsawBlock('jigsaw_8A', 100, 280),
   },
 
-  '9': {
+  9: {
     instructionsIcon: 'house',
     isK1: true,
     image: {
       name: 'house',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [110, 0.56, 0.6],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -340,9 +340,9 @@ module.exports = {
     notchedEnds: true,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 9, numBlocks: 3});
-      }
+      },
     },
     startBlocks: undeletableJigsawBlock(
       'jigsaw_9B',
@@ -354,21 +354,21 @@ module.exports = {
         0,
         undeletableJigsawBlock('jigsaw_9A', 0, 0)
       )
-    )
+    ),
   },
 
-  '10': {
+  10: {
     instructionsIcon: 'computer',
     isK1: true,
     image: {
       name: 'computer',
       width: 200,
-      height: 200
+      height: 200,
     },
     backgroundHSV: [300, 0.25, 0.8],
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     numBlocks: 3,
     requiredBlocks: [],
@@ -376,9 +376,9 @@ module.exports = {
     notchedEnds: true,
     largeNotches: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 10, numBlocks: 3});
-      }
+      },
     },
     startBlocks: undeletableJigsawBlock(
       'jigsaw_10A',
@@ -390,20 +390,20 @@ module.exports = {
         0,
         undeletableJigsawBlock('jigsaw_10B', 0, 0)
       )
-    )
+    ),
   },
 
-  '11': {
+  11: {
     instructionsIcon: 'blocks',
     isK1: true,
     image: {
       name: 'blocks',
       width: 131,
-      height: 286
+      height: 286,
     },
     ghost: {
       x: 200,
-      y: 12
+      y: 12,
     },
     numBlocks: 0,
     requiredBlocks: [],
@@ -412,12 +412,12 @@ module.exports = {
     largeNotches: false,
     snapRadius: 30,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(
           ['jigsaw_purple', 'jigsaw_blue', 'jigsaw_green'],
           {}
         );
-      }
+      },
     },
     startBlocks: undeletableJigsawBlock(
       'jigsaw_purple',
@@ -425,20 +425,20 @@ module.exports = {
       0,
       undeletableJigsawBlock('jigsaw_blue')
     ),
-    toolbox: createToolbox(jigsawBlock('jigsaw_green'))
+    toolbox: createToolbox(jigsawBlock('jigsaw_green')),
   },
 
-  '12': {
+  12: {
     instructionsIcon: 'blocks',
     isK1: true,
     image: {
       name: 'blocks',
       width: 131,
-      height: 286
+      height: 286,
     },
     ghost: {
       x: 200,
-      y: 12
+      y: 12,
     },
     numBlocks: 0,
     requiredBlocks: [],
@@ -447,33 +447,33 @@ module.exports = {
     largeNotches: false,
     snapRadius: 30,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(
           ['jigsaw_purple', 'jigsaw_blue', 'jigsaw_green'],
           {}
         );
-      }
+      },
     },
     startBlocks: '',
     toolbox: createToolbox(
       jigsawBlock('jigsaw_green') +
         jigsawBlock('jigsaw_purple') +
         jigsawBlock('jigsaw_blue')
-    )
+    ),
   },
 
   // assessment
-  '13': {
+  13: {
     instructionsIcon: 'doggie',
     isK1: true,
     image: {
       name: 'doggie',
       width: 200,
-      height: 200
+      height: 200,
     },
     ghost: {
       x: 400,
-      y: 100
+      y: 100,
     },
     backgroundHSV: [25, 0.57, 0.96],
     numBlocks: 3,
@@ -482,15 +482,15 @@ module.exports = {
     largeNotches: true,
     notchedEnds: true,
     goal: {
-      successCondition: function() {
+      successCondition: function () {
         return validateSimplePuzzle(null, {level: 13, numBlocks: 3});
-      }
+      },
     },
     startBlocks: jigsawBlock(
       'jigsaw_13C',
       100,
       20,
       jigsawBlock('jigsaw_13B', 0, 0, jigsawBlock('jigsaw_13A', 0, 0))
-    )
-  }
+    ),
+  },
 };

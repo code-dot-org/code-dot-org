@@ -9,7 +9,7 @@ export default class Lightbulb extends React.Component {
     lit: PropTypes.bool,
     size: PropTypes.number,
     style: PropTypes.object,
-    isMinecraft: PropTypes.bool
+    isMinecraft: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -17,7 +17,7 @@ export default class Lightbulb extends React.Component {
     count: 0,
     lit: true,
     size: 40,
-    style: {}
+    style: {},
   };
 
   render() {
@@ -189,7 +189,7 @@ export default class Lightbulb extends React.Component {
             c2.677,0.383,5.208,0.745,7.544,1.08c2.336,0.329,4.477,0.69,6.375,0.979c1.898,0.291,3.552,0.558,4.915,0.795
             c2.725,0.453,4.282,0.742,4.282,0.742L112.675,307.264z"
               />
-            </g>
+            </g>,
           ]
         : [];
 
@@ -266,6 +266,6 @@ const styles = {
     fill: color.white,
     stroke: color.black,
     strokeWidth: '30px',
-    fontFamily: 'Verdana, Geneva, sans-serif'
-  }
+    fontFamily: 'Verdana, Geneva, sans-serif',
+  },
 };

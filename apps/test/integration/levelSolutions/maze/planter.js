@@ -12,7 +12,7 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -22,7 +22,7 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -32,7 +32,7 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -42,7 +42,7 @@ var levelDef = {
       {tileType: 1, featureType: 1},
       {tileType: 1, featureType: 2},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -52,7 +52,7 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -62,7 +62,7 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -72,7 +72,7 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
+      {tileType: 0, featureType: 0},
     ],
     [
       {tileType: 0, featureType: 0},
@@ -82,9 +82,9 @@ var levelDef = {
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
       {tileType: 0, featureType: 0},
-      {tileType: 0, featureType: 0}
-    ]
-  ]
+      {tileType: 0, featureType: 0},
+    ],
+  ],
 };
 
 module.exports = {
@@ -96,9 +96,9 @@ module.exports = {
       description: 'Try to plant in empty space',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL
@@ -115,15 +115,15 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Try to plant in sprout',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL
@@ -149,16 +149,16 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'Plant nothing',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
-      customValidator: function() {
+      customValidator: function () {
         return (
           Maze.executionInfo.terminationValue() ===
           PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE
@@ -170,14 +170,14 @@ module.exports = {
         '   <next>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'Plant all successfully',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -199,7 +199,7 @@ module.exports = {
         '     </block>' +
         '   </next>' +
         ' </block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

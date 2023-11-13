@@ -102,9 +102,7 @@ module Pd
       [:user_id, :pd_session_id, :facilitator_id]
     end
 
-    private
-
-    def day_for_subject
+    private def day_for_subject
       unless VALID_DAYS[Pd::WorkshopDailySurvey::CATEGORY_MAP[pd_workshop.subject]].include? day
         errors.add(:day, "Day #{day} is not valid for workshop subject #{pd_workshop.subject}")
       end

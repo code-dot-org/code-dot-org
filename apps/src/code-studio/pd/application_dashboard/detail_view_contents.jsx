@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+/* eslint-disable no-restricted-imports */
 import {
   Row,
   Col,
@@ -9,17 +10,19 @@ import {
   MenuItem,
   FormControl,
   InputGroup,
-  Table
+  Table,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   RegionalPartnerDropdown,
   UNMATCHED_PARTNER_VALUE,
-  UNMATCHED_PARTNER_LABEL
+  UNMATCHED_PARTNER_LABEL,
 } from '../components/regional_partner_dropdown';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ScholarshipDropdown} from '../components/scholarshipDropdown';
+import ScholarshipDropdown from '../components/scholarshipDropdown';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,
@@ -27,7 +30,7 @@ import {
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores,
-  PrincipalApprovalState
+  PrincipalApprovalState,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -35,7 +38,7 @@ import _ from 'lodash';
 import {
   getApplicationStatuses,
   ApplicationFinalStatuses,
-  ScholarshipStatusRequiredStatuses
+  ScholarshipStatusRequiredStatuses,
 } from './constants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
@@ -45,7 +48,7 @@ import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
-  getProgramInfo
+  getProgramInfo,
 } from '../application/teacher/TeacherApplicationConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -59,7 +62,7 @@ const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant bef
 const PROGRAM_MAP = {
   csd: PROGRAM_CSD,
   csp: PROGRAM_CSP,
-  csa: PROGRAM_CSA
+  csa: PROGRAM_CSA,
 };
 
 export class DetailViewContents extends React.Component {
@@ -106,7 +109,7 @@ export class DetailViewContents extends React.Component {
       scholarship_status: PropTypes.string,
       principal_approval_state: PropTypes.string,
       principal_approval_not_required: PropTypes.bool,
-      allow_sending_principal_email: PropTypes.bool
+      allow_sending_principal_email: PropTypes.bool,
     }).isRequired,
     onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool,
@@ -114,13 +117,13 @@ export class DetailViewContents extends React.Component {
     regionalPartners: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number,
-        name: PropTypes.string
+        name: PropTypes.string,
       })
-    )
+    ),
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -165,8 +168,8 @@ export class DetailViewContents extends React.Component {
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: '',
-      principalApprovalIsRequired: !this.props.applicationData
-        .principal_approval_not_required
+      principalApprovalIsRequired:
+        !this.props.applicationData.principal_approval_not_required,
     };
   }
 
@@ -176,7 +179,7 @@ export class DetailViewContents extends React.Component {
 
   handleEditClick = () => {
     this.setState({
-      editing: true
+      editing: true,
     });
   };
 
@@ -186,7 +189,7 @@ export class DetailViewContents extends React.Component {
 
   handleLockClick = () => {
     this.setState({
-      locked: !this.state.locked
+      locked: !this.state.locked,
     });
   };
 
@@ -204,7 +207,7 @@ export class DetailViewContents extends React.Component {
                                     .update_emails_sent_by_system
                                 )[event.target.value]
                               }.`,
-        showCantSaveStatusDialog: true
+        showCantSaveStatusDialog: true,
       });
     } else if (
       this.props.applicationData.regional_partner_id &&
@@ -214,11 +217,11 @@ export class DetailViewContents extends React.Component {
     ) {
       this.setState({
         cantSaveStatusReason: WORKSHOP_REQUIRED,
-        showCantSaveStatusDialog: true
+        showCantSaveStatusDialog: true,
       });
     } else {
       this.setState({
-        status: event.target.value
+        status: event.target.value,
       });
     }
   };
@@ -226,25 +229,25 @@ export class DetailViewContents extends React.Component {
   handleCantSaveStatusOk = event => {
     this.setState({
       cantSaveStatusReason: '',
-      showCantSaveStatusDialog: false
+      showCantSaveStatusDialog: false,
     });
   };
 
   handleInterviewNotesChange = event => {
     this.setState({
-      [event.target.id]: event.target.value
+      [event.target.id]: event.target.value,
     });
   };
 
   handleNotesChange = event => {
     this.setState({
-      [event.target.id]: event.target.value
+      [event.target.id]: event.target.value,
     });
   };
 
   handleSummerWorkshopChange = selection => {
     this.setState({
-      pd_workshop_id: selection ? selection.value : null
+      pd_workshop_id: selection ? selection.value : null,
     });
   };
 
@@ -259,7 +262,7 @@ export class DetailViewContents extends React.Component {
     const responseScores = this.state.response_scores;
     responseScores[category][key] = event.target.value;
     this.setState({
-      response_scores: responseScores
+      response_scores: responseScores,
     });
   };
 
@@ -275,7 +278,7 @@ export class DetailViewContents extends React.Component {
 
   handleScholarshipStatusChange = selection => {
     this.setState({
-      scholarship_status: selection ? selection.value : null
+      scholarship_status: selection ? selection.value : null,
     });
   };
 
@@ -289,24 +292,24 @@ export class DetailViewContents extends React.Component {
       'notes_4',
       'notes_5',
       'regional_partner_value',
-      'pd_workshop_id'
+      'pd_workshop_id',
     ];
 
     stateValues.push('scholarship_status');
 
     const data = {
       ..._.pick(this.state, stateValues),
-      response_scores: JSON.stringify(this.state.response_scores)
+      response_scores: JSON.stringify(this.state.response_scores),
     };
     $.ajax({
       method: 'PATCH',
       url: `/api/v1/pd/applications/${this.props.applicationId}`,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(data)
+      data: JSON.stringify(data),
     }).done(applicationData => {
       this.setState({
-        editing: false
+        editing: false,
       });
 
       // Notify the parent of the updated data.
@@ -319,10 +322,10 @@ export class DetailViewContents extends React.Component {
       if (this.state.status !== this.state.last_logged_status) {
         analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
           'application id': this.props.applicationId,
-          'application status': this.state.status
+          'application status': this.state.status,
         });
         this.setState({
-          last_logged_status: this.state.status
+          last_logged_status: this.state.status,
         });
       }
     });
@@ -339,18 +342,18 @@ export class DetailViewContents extends React.Component {
   handleDeleteApplicationConfirmed = () => {
     $.ajax({
       method: 'DELETE',
-      url: `/api/v1/pd/applications/${this.props.applicationId}`
+      url: `/api/v1/pd/applications/${this.props.applicationId}`,
     })
       .done(() => {
         this.setState({
           deleted: true,
-          showDeleteApplicationConfirmation: false
+          showDeleteApplicationConfirmation: false,
         });
       })
       .fail(() => {
         this.setState({
           deleted: false,
-          showDeleteApplicationConfirmation: false
+          showDeleteApplicationConfirmation: false,
         });
       });
   };
@@ -392,7 +395,7 @@ export class DetailViewContents extends React.Component {
         assignedWorkshop={{
           id: this.state.pd_workshop_id,
           name: this.props.applicationData.pd_workshop_name,
-          url: this.props.applicationData.pd_workshop_url
+          url: this.props.applicationData.pd_workshop_url,
         }}
         editing={!!this.state.editing}
         onChange={this.handleSummerWorkshopChange}
@@ -407,11 +410,11 @@ export class DetailViewContents extends React.Component {
           onChange={this.handleRegionalPartnerChange}
           regionalPartnerFilter={{
             value: this.state.regional_partner_value,
-            label: this.state.regional_partner_name
+            label: this.state.regional_partner_name,
           }}
           regionalPartners={this.props.regionalPartners}
           additionalOptions={[
-            {label: UNMATCHED_PARTNER_LABEL, value: UNMATCHED_PARTNER_VALUE}
+            {label: UNMATCHED_PARTNER_LABEL, value: UNMATCHED_PARTNER_VALUE},
           ]}
         />
       );
@@ -448,7 +451,7 @@ export class DetailViewContents extends React.Component {
         </Button>,
         <Button onClick={this.handleCancelEditClick} key="cancel">
           Cancel
-        </Button>
+        </Button>,
       ];
     } else if (this.props.isWorkshopAdmin) {
       return (
@@ -482,7 +485,7 @@ export class DetailViewContents extends React.Component {
           onClick={this.handleDeleteApplicationClick}
         >
           Delete
-        </Button>
+        </Button>,
       ];
     }
   };
@@ -584,9 +587,7 @@ export class DetailViewContents extends React.Component {
       <div style={styles.headerWrapper}>
         <div>
           <h1>
-            {`${this.props.applicationData.form_data.firstName} ${
-              this.props.applicationData.form_data.lastName
-            }`}
+            {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
           </h1>
           <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
           <h4>
@@ -615,7 +616,7 @@ export class DetailViewContents extends React.Component {
       {label: 'Notes 2', id: 'notes_2', value: this.state.notes_2},
       {label: 'Notes 3', id: 'notes_3', value: this.state.notes_3},
       {label: 'Notes 4', id: 'notes_4', value: this.state.notes_4},
-      {label: 'Notes 5', id: 'notes_5', value: this.state.notes_5}
+      {label: 'Notes 5', id: 'notes_5', value: this.state.notes_5},
     ].forEach(field => {
       notesFields.push(
         <div key={field.id}>
@@ -709,13 +710,13 @@ export class DetailViewContents extends React.Component {
   handlePrincipalApprovalChange = (_id, principalApproval) => {
     this.setState({principalApproval});
     this.setState({
-      principalApprovalIsRequired: !this.state.principalApprovalIsRequired
+      principalApprovalIsRequired: !this.state.principalApprovalIsRequired,
     });
     analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
       'application id': this.props.applicationId,
       'application status': this.state.principalApprovalIsRequired
         ? 'awaiting_admin_approval'
-        : 'unreviewed'
+        : 'unreviewed',
     });
   };
 
@@ -845,11 +846,7 @@ export class DetailViewContents extends React.Component {
       principalApprovalStartsWith(PrincipalApprovalState.inProgress) ||
       principalApprovalStartsWith(PrincipalApprovalState.complete)
     ) {
-      const principalApprovalUrl = `${
-        window.location.origin
-      }/pd/application/principal_approval/${
-        this.props.applicationData.application_guid
-      }`;
+      const principalApprovalUrl = `${window.location.origin}/pd/application/principal_approval/${this.props.applicationData.application_guid}`;
 
       return (
         <div>
@@ -978,7 +975,7 @@ export class DetailViewContents extends React.Component {
   };
 
   render() {
-    if (this.state.hasOwnProperty('deleted')) {
+    if (Object.prototype.hasOwnProperty.call(this.state, 'deleted')) {
       const message = this.state.deleted
         ? 'This application has been deleted.'
         : 'This application could not be deleted.';
@@ -1002,70 +999,70 @@ export class DetailViewContents extends React.Component {
 
 const styles = {
   notes: {
-    height: '95px'
+    height: '95px',
   },
   statusSelect: {
-    width: 250 // wide enough for the widest status
+    width: 250, // wide enough for the widest status
   },
   editMenuContainer: {
-    display: 'inline-block' // fit contents
+    display: 'inline-block', // fit contents
   },
   editMenu: {
-    display: 'flex'
+    display: 'flex',
   },
   // React-Bootstrap components don't play well inside a flex box,
   // so this is required to get the contained split button to stay together.
   flexSplitButtonContainer: {
-    flex: '0 0 auto'
+    flex: '0 0 auto',
   },
   detailViewHeader: {
-    marginLeft: 'auto'
+    marginLeft: 'auto',
   },
   headerWrapper: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   saveButton: {
-    marginRight: '5px'
+    marginRight: '5px',
   },
   statusSelectGroup: {
     marginRight: 5,
-    marginLeft: 5
+    marginLeft: 5,
   },
   editButton: {
-    width: 'auto'
+    width: 'auto',
   },
   lockedStatus: {
-    fontFamily: '"Gotham 7r"',
-    marginTop: 10
+    ...fontConstants['main-font-bold'],
+    marginTop: 10,
   },
   caption: {
-    color: 'black'
+    color: 'black',
   },
   detailViewTable: {
-    width: '80%'
+    width: '80%',
   },
   questionColumn: {
-    width: '50%'
+    width: '50%',
   },
   answerColumn: {
-    width: '30%'
+    width: '30%',
   },
   scoringColumn: {
-    width: '20%'
+    width: '20%',
   },
   scoringDropdown: {
     marginTop: '10px',
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   scoreBreakdown: {
-    marginLeft: '30px'
-  }
+    marginLeft: '30px',
+  },
 };
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
   regionalPartners: state.regionalPartners.regionalPartners,
   canLock: state.applicationDashboard.permissions.lockApplication,
-  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
 }))(DetailViewContents);

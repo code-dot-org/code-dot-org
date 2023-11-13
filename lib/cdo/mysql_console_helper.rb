@@ -13,13 +13,22 @@ module MysqlConsoleHelper
 
   def self.run(db, args, warn: true)
     db = URI.parse(db) unless db.is_a?(URI)
-    warning =
-      "*****************************************************************\n"\
-      "*** You are connecting to the production writer database.     ***\n"\
-      "*** Please connect to the reporting database instead via      ***\n"\
-      "*** bin/dashboard-reporting-sql or bin/pegasus-reporting-sql. ***\n"\
-      "*****************************************************************"
-    puts warning if warn && (db.host == CDO.db_writer_endpoint) && rack_env?(:production)
+
+    writer_warning = <<~STANDARD_OUTPUT
+      **************************************************************************************
+      *** Avoid connecting to the production database with WRITE PRIVILEGES. Safest are: ***
+      *** bin/mysql-client-dashboard-reporting or bin/mysq-client-pegasus-reporting.     ***
+      **************************************************************************************
+    STANDARD_OUTPUT
+    puts writer_warning if warn && (db.host == CDO.db_endpoint_writer) && rack_env?(:production)
+
+    reporting_warning = <<~STANDARD_OUTPUT
+      **************************************************************************************
+      *** The safest way to execute read-only queries on the production database is with ***
+      *** bin/mysql-client-dashboard-reporting or bin/mysq-client-pegasus-reporting.     ***
+      **************************************************************************************
+    STANDARD_OUTPUT
+    puts reporting_warning if warn && (db.host != CDO.db_endpoint_proxy_reporting) && rack_env?(:production)
 
     mysql_command = "mysql #{options(db)}"
     mysql_command += " --execute=\"#{args}\"" unless args.empty?

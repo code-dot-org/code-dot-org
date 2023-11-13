@@ -13,13 +13,13 @@ $(document).ready(() => {
     link: $('#link_your_email'),
     onSuccessCallback: () => {
       banner.style.display = 'none';
-    }
+    },
   });
 
   dismissButton.onclick = () => {
     $.ajax({
       type: 'POST',
-      url: '/api/v1/users/me/dismiss_parent_email_banner'
+      url: '/api/v1/users/me/dismiss_parent_email_banner',
     }).done(() => {
       banner.style.display = 'none';
     });

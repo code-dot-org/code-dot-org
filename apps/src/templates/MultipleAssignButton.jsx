@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {
   assignToSection,
   unassignSection,
-  sectionsForDropdown
+  sectionsForDropdown,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -21,28 +21,28 @@ class MultipleAssignButton extends React.Component {
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string,
     reassignConfirm: PropTypes.func,
-    isOnCoursePage: PropTypes.bool,
+    isAssigningCourse: PropTypes.bool,
     isStandAloneUnit: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux
     assignToSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   };
 
   state = {
-    assignmentChoiceDialogOpen: false
+    assignmentChoiceDialogOpen: false,
   };
 
   onCloseDialog = () => {
     this.setState({
-      assignmentChoiceDialogOpen: false
+      assignmentChoiceDialogOpen: false,
     });
   };
 
   handleClick = () => {
     this.setState({
-      assignmentChoiceDialogOpen: true
+      assignmentChoiceDialogOpen: true,
     });
   };
 
@@ -58,8 +58,8 @@ class MultipleAssignButton extends React.Component {
       isRtl,
       sectionsForDropdown,
       participantAudience,
-      isOnCoursePage,
-      reassignConfirm
+      isAssigningCourse,
+      reassignConfirm,
     } = this.props;
 
     // Adjust styles if locale is RTL
@@ -71,7 +71,7 @@ class MultipleAssignButton extends React.Component {
       <div>
         <div style={buttonMarginStyle}>
           <Button
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.assignToMultipleSections()}
             icon="plus"
             onClick={this.handleClick}
@@ -88,7 +88,7 @@ class MultipleAssignButton extends React.Component {
             scriptId={scriptId}
             courseVersionId={courseVersionId}
             reassignConfirm={reassignConfirm}
-            isOnCoursePage={isOnCoursePage}
+            isAssigningCourse={isAssigningCourse}
             isStandAloneUnit={isStandAloneUnit}
             participantAudience={participantAudience}
           />
@@ -102,13 +102,13 @@ const styles = {
   buttonMargin: {
     marginLeft: 10,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonMarginRTL: {
     marginRight: 10,
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedMultipleAssignButton = MultipleAssignButton;
@@ -121,10 +121,10 @@ export default connect(
       ownProps.courseOfferingId,
       ownProps.courseVersionId,
       state.progress.scriptId
-    )
+    ),
   }),
   {
     assignToSection,
-    unassignSection
+    unassignSection,
   }
 )(MultipleAssignButton);

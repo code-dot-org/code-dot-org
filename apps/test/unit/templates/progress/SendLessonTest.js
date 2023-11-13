@@ -13,13 +13,7 @@ describe('SendLesson', () => {
     );
 
     assert.equal(wrapper.find('Button').length, 1);
-    assert.equal(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().icon,
-      'share-square-o'
-    );
+    assert.equal(wrapper.find('Button').at(0).props().icon, 'share-square-o');
   });
 
   it('opens the SendLessonDialog when the button is clicked', () => {
@@ -32,10 +26,7 @@ describe('SendLesson', () => {
 
     // click the button
     assert.equal(wrapper.find('Button').length, 1);
-    wrapper
-      .find('Button')
-      .props()
-      .onClick();
+    wrapper.find('Button').props().onClick();
 
     // dialog should now be open
     assert.equal(wrapper.find('Connect(SendLessonDialog)').length, 1);

@@ -38,3 +38,5 @@ wrong 'A Dog object cannot be assigned to the Pet reference petOne.'
 right 'A Pet object cannot be assigned to the Dog reference petTwo.'
 wrong 'The object referenced by petOne cannot be added to myPets since petOne was instantiated by a call to the Dog constructor.'
 wrong 'The object referenced by petTwo cannot be added to myPets since petTwo was declared to be of type Dog.'
+
+allow_multiple_attempts true

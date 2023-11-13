@@ -10,7 +10,7 @@ export const commands = {
   clearHeadings() {
     this.storyLabText = {
       heading: '',
-      subheading: ''
+      subheading: '',
     };
   },
 
@@ -32,5 +32,5 @@ export const commands = {
 
   getStoryLabText() {
     return this.storyLabText;
-  }
+  },
 };

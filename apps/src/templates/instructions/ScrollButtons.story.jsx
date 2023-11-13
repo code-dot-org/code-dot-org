@@ -3,7 +3,7 @@ import ScrollButtons from './ScrollButtons';
 
 export default {
   title: 'ScrollButtons',
-  component: ScrollButtons
+  component: ScrollButtons,
 };
 
 const Template = args => {
@@ -15,7 +15,7 @@ const Template = args => {
           float: 'left',
           overflowY: 'hidden',
           height: 200,
-          width: '80%'
+          width: '80%',
         }}
         ref={c => {
           container = c;
@@ -24,14 +24,14 @@ const Template = args => {
         <div
           style={{
             height: 500,
-            background: 'linear-gradient(red, yellow)'
+            background: 'linear-gradient(red, yellow)',
           }}
         />
       </div>
       <div style={{float: 'left', width: '10%'}}>
         <ScrollButtons
           style={{
-            position: 'relative'
+            position: 'relative',
           }}
           getScrollTarget={() => container}
           height
@@ -47,11 +47,11 @@ const Template = args => {
 export const BasicExample = Template.bind({});
 BasicExample.args = {
   height: 200,
-  isMinecraft: false
+  isMinecraft: false,
 };
 
 export const MinecraftExample = Template.bind({});
 MinecraftExample.args = {
   height: 200,
-  isMinecraft: true
+  isMinecraft: true,
 };

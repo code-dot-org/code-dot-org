@@ -37,15 +37,13 @@ MONITORING_GROUPS = {
   'csc' => ['CSC Curriculum'],
   'csf' => ['CSF Curriculum'],
   'cspalooza' => ['CSP Curriculum'],
-  'edpop' => ['EdPop Alicia', 'EdPop Dana', 'EdPop Danielle', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny'],
-  'facilitator-things' => ['Facilitators', 'PNP Andrea'],
+  'edpop' => ['Ed POP Tickets'],
   'hour-of-code' => ['Hour of Code'],
   'infrastructure' => ['Infrastructure'],
   'international' => ['International Partnerships', 'International'],
-  'marketing' => ['Media'],
-  'platform-team' => ['Platform Team'],
-  'programsnpartners_theluau' => ['Programs (PNP) Team'],
-  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'PLC Teachers'],
+  'marketing' => ['Marketing'],
+  'programsnpartners_theluau' => ['Programs Team'],
+  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'Professional Learning'],
   'student-learning' => ['Student Learning'],
   'teacher-tools' => ['Teacher Tools']
 }
@@ -59,23 +57,15 @@ GROUP_FILTERS = {
   'CSD Curriculum' => '83142177',
   'CSF Curriculum' => '278602768',
   'CSP Curriculum' => '45749787',
-  'Ed Programs' => '9638169070477',
-  'EdPop Alicia' => '9638169070477',
-  'EdPop Dana' => '9638169070477',
-  'EdPop Danielle' => '9638169070477',
-  'EdPop Desiree' => '9638169070477',
-  'EdPop Kristyn' => '9638169070477',
-  'EdPop Tawny' => '9638169070477',
-  'Facilitators' => '9638169070477',
+  'Ed Programs' => '14650984488333',
+  'Ed POP Tickets' => '9638169070477',
   'Hour of Code' => '9690110143757',
   'Infrastructure' => '9811556471309',
-  'International' => '360086130812',
+  'International' => '14740813928845',
   'International Partnerships' => '360086130812',
-  'Media' => '47756566',
-  'Platform Team' => '360086130792',
-  'PLC Teachers' => '9638169070477',
-  'PNP Andrea' => '1900013935647',
-  'Programs (PNP) Team' => '8163316698253',
+  'Marketing' => '47756566',
+  'Professional Learning' => '13462346662541',
+  'Programs Team' => '8163316698253',
   'Student Learning' => '9612070142733',
   'Teacher Tools' => '360082967212'
 }
@@ -203,14 +193,14 @@ def get_tickets_by_group
 
   # Report out for each Slack room
   MONITORING_GROUPS.each do |slack_room, groups|
-    group_messages = groups.map do |group_name|
+    group_messages = groups.filter_map do |group_name|
       count = group_counts[group_name] || 0
       next nil if count == 0
 
       url = Zendesk.group_url(group: group_name, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{group_name} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if group_messages.empty?
@@ -240,7 +230,7 @@ def get_tickets_by_user
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|
-    user_messages = users.map do |user|
+    user_messages = users.filter_map do |user|
       user_email = "#{user}@code.org"
       count = user_counts[user_email] || 0
       next nil if count == 0
@@ -248,7 +238,7 @@ def get_tickets_by_user
       url = Zendesk.user_url(user: user_email, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{user_email} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if user_messages.empty?
@@ -267,4 +257,3 @@ end
 #
 #
 get_tickets_by_group
-get_tickets_by_user

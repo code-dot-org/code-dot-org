@@ -19,7 +19,7 @@ describe('Java Lab Control Buttons Test', () => {
       disableTestButton: false,
       showTestButton: true,
       isSubmittable: false,
-      isSubmitted: false
+      isSubmitted: false,
     };
   });
 

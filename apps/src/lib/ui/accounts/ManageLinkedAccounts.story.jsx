@@ -9,7 +9,8 @@ const DEFAULT_PROPS = {
   disconnect: action('disconnect'),
   userHasPassword: true,
   isGoogleClassroomStudent: false,
-  isCleverStudent: false
+  isCleverStudent: false,
+  personalAccountLinkingEnabled: true,
 };
 
 const mockAuthenticationOptions = {
@@ -19,13 +20,13 @@ const mockAuthenticationOptions = {
   4: {
     id: 4,
     credentialType: 'microsoft_v2_auth',
-    email: 'microsoft@email.com'
-  }
+    email: 'microsoft@email.com',
+  },
 };
 
 export default {
   title: 'ManageLinkedAccounts',
-  component: ManageLinkedAccounts
+  component: ManageLinkedAccounts,
 };
 
 const Template = args => <ManageLinkedAccounts {...DEFAULT_PROPS} {...args} />;
@@ -35,13 +36,13 @@ export const DefaultTable = Template.bind({});
 export const TableForTeachersWithAllAuthOptions = Template.bind({});
 TableForTeachersWithAllAuthOptions.args = {
   userType: 'teacher',
-  authenticationOptions: mockAuthenticationOptions
+  authenticationOptions: mockAuthenticationOptions,
 };
 
 export const TableForStudentsWithAllAuthOptions = Template.bind({});
 TableForStudentsWithAllAuthOptions.args = {
   userType: 'student',
-  authenticationOptions: mockAuthenticationOptions
+  authenticationOptions: mockAuthenticationOptions,
 };
 
 export const TableWithErrorWhenDisconnecting = Template.bind({});
@@ -52,16 +53,16 @@ TableWithErrorWhenDisconnecting.args = {
       id: 2,
       credentialType: 'facebook',
       email: 'facebook@email.com',
-      error: 'Oh no!'
-    }
-  }
+      error: 'Oh no!',
+    },
+  },
 };
 
 export const TableWithADisabledDisconnectStatus = Template.bind({});
 TableWithADisabledDisconnectStatus.args = {
   authenticationOptions: {
     ...mockAuthenticationOptions,
-    1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'}
+    1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'},
   },
-  isGoogleClassroomStudent: true
+  isGoogleClassroomStudent: true,
 };

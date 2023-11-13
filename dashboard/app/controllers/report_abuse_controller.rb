@@ -1,6 +1,8 @@
 require 'json'
 require 'httparty'
 
+UNKNOWN_ACCOUNT_ZENDESK_REPORT_EMAIL = 'automated_abuse_report@code.org'
+
 class ZendeskError < StandardError
   attr_reader :error_details
 
@@ -31,56 +33,42 @@ class ReportAbuseController < ApplicationController
     project_owner.permission?(UserPermission::PROJECT_VALIDATOR)
   end
 
+  def report_abuse_pop_up
+    unless protected_project?
+      unless verify_recaptcha || !require_captcha?
+        flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
+        return head :forbidden
+      end
+
+      name = current_user&.name
+      email = current_user&.email
+      age = current_user&.age
+      abuse_url = CDO.studio_url(params[:abuse_url], CDO.default_scheme)
+
+      # submit abuse reports from
+      # signed out users (nil) and student accounts (blank string)
+      # under generic email
+      if email.nil? || email == ''
+        email = UNKNOWN_ACCOUNT_ZENDESK_REPORT_EMAIL
+      end
+      send_abuse_report(name, email, age, abuse_url)
+      update_abuse_score
+
+      return head :ok
+    end
+  end
+
   def report_abuse
     unless protected_project?
-
       unless verify_recaptcha || !require_captcha?
         flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
         redirect_to report_abuse_path
         return
       end
 
-      unless Rails.env.development? || Rails.env.test?
-        subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
-          'Featured Project: Abuse Reported' :
-          'Abuse Reported'
-        response = HTTParty.post(
-          'https://codeorg.zendesk.com/api/v2/tickets.json',
-          headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
-          body: {
-            ticket: {
-              requester: {
-                name: (params[:name] == '' ? params[:email] : params[:name]),
-                email: params[:email]
-              },
-              subject: subject,
-              comment: {
-                body: [
-                  "URL: #{params[:abuse_url]}",
-                  "abuse type: #{params[:abuse_type]}",
-                  "user detail:",
-                  params[:abuse_detail]
-                ].join("\n")
-              },
-              custom_fields: [{id: AGE_CUSTOM_FIELD_ID, value: params[:age]}],
-              tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
-            }
-          }.to_json,
-          basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
-        )
-        raise ZendeskError.new(response.code, response.body) unless response.success?
-      end
-
-      if params[:channel_id].present?
-        channel_id = params[:channel_id]
-
-        abuse_score = update_channel_abuse_score(channel_id)
-
-        update_file_abuse_score('assets', channel_id, abuse_score)
-        update_file_abuse_score('files', channel_id, abuse_score)
-      end
+      send_abuse_report(params[:name], params[:email], params[:age], params[:abuse_url])
+      update_abuse_score
     end
-
     redirect_to "https://support.code.org"
   end
 
@@ -182,9 +170,51 @@ class ReportAbuseController < ApplicationController
     abuse_score
   end
 
-  private
+  private def send_abuse_report(name, email, age, abuse_url)
+    unless Rails.env.development? || Rails.env.test?
+      subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
+        'Featured Project: Abuse Reported' :
+        'Abuse Reported'
+      response = HTTParty.post(
+        'https://codeorg.zendesk.com/api/v2/tickets.json',
+        headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
+        body: {
+          ticket: {
+            requester: {
+              name: (name == '' ? email : name),
+              email: email
+            },
+            subject: subject,
+            comment: {
+              body: [
+                "URL: #{abuse_url}",
+                "abuse type: #{params[:abuse_type]}",
+                "user detail:",
+                params[:abuse_detail]
+              ].join("\n")
+            },
+            custom_fields: [{id: AGE_CUSTOM_FIELD_ID, value: age}],
+            tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
+          }
+        }.to_json,
+        basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
+      )
+      raise ZendeskError.new(response.code, response.body) unless response.success?
+    end
+  end
 
-  def get_bucket_impl(endpoint)
+  private def update_abuse_score
+    if params[:channel_id].present?
+      channel_id = params[:channel_id]
+
+      abuse_score = update_channel_abuse_score(channel_id)
+
+      update_file_abuse_score('assets', channel_id, abuse_score)
+      update_file_abuse_score('files', channel_id, abuse_score)
+    end
+  end
+
+  private def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
       AnimationBucket
@@ -201,13 +231,13 @@ class ReportAbuseController < ApplicationController
     end
   end
 
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
+  private def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
     return true if current_user&.project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
-  def require_captcha?
+  private def require_captcha?
     return false if current_user&.admin? || current_user&.project_validator?
     true
   end

@@ -10,7 +10,8 @@ theme: responsive
 
 - Zalecamy w Twojej szkole połączenie z Internetem o szybkości co najmniej 15 Mb/s.
 - Najmniejszy rozmiar ekranu jaki obsługujemy to 1024 x 728 px.
-- Będziesz potrzebować komputera stacjonarnego lub laptopa z myszą (lub touchpadem) i klawiaturą do naszych kursów na poziomie liceum: Odkrycia Informatyki (CS Discoveries), Zasady Informatyki (CS Principles) oraz Wprowadzenie do App Lab (Intro to App Lab). Większość tabletów i urządzeń mobilnych nie jest obsługiwana podczas tych kursów. Zobacz „Szczegóły obsługi telefonów komórkowych i tabletów” poniżej, aby zapoznać się z wyjątkami dla poszczególnych urządzeń.
+- Będziesz potrzebował komputera stacjonarnego lub laptopa (mogą być Chromebooki) z myszą (lub touchpadem) i klawiaturą dla naszych kursów na poziomie gimnazjalnym i średnim: Odkrycia informatyki (CS Discoveries), Zasady informatyki (CS Principles) i Wprowadzenie do App Lab (Intro to App Lab). „Zobacz obsługiwane przeglądarki i platformy” poniżej.
+- Większość tabletów (takich jak iPad) i urządzeń mobilnych nie jest obsługiwana dla tych kursów. Zobacz „Szczegóły obsługi telefonów komórkowych i tabletów” poniżej, aby zapoznać się z wyjątkami dla poszczególnych urządzeń.
 - Wszystkie inne treści, takie jak kursy K-5 (podstawy informatyki) i zajęcia w ramach Godziny kodowania, są zgodne na iPadach i Chromebookach, a także na wszystkich innych nowoczesnych tabletach i laptopach lub komputerach stacjonarnych.
 - Szukasz szczegółów pomocy technicznej dla urządzeń mobilnych? Czytaj poniżej.
 
@@ -82,12 +83,12 @@ Aby uzyskać jak najlepsze doświadczenia z całą zawartością Code.org, zalec
 
 ## Szczegóły wsparcia telefonów komórkowych i tabletów
 
-Wszystkie kursy Odkrycia Informatyki (CS Discoveries), Zasady Informatyki (CS Principles) i WRowadzenie do App Lab (Intro to App Lab) nie są kompatybilne z tabletami lub urządzeniami mobilnymi — wymagana jest pełna klawiatura i mysz (lub touchpad, jak w MacBookach). Większość tabletów nie jest obsługiwana, z następującymi wyjątkami:
+Wszystkie kursy Odkrycia informatyki (CS Discoveries), Zasady informatyki (CS Principles), Informatyka A i Wprowadzenie do App Lab (Intro to App Lab) nie są kompatybilne z tabletami lub urządzeniami mobilnymi - wymagana jest pełna klawiatura i mysz (lub touchpad). Większość tabletów nie jest obsługiwana, z następującymi wyjątkami:
 
 - Microsoft Surface Pro z zewnętrzną klawiaturą
 - iPad z systemem iPadOS 13.4 lub nowszym z zewnętrzną klawiaturą i zewnętrzną myszą lub touchpadem
 
-Wszystkie inne treści, takie jak kursy K-5 (podstawy informatyki) i zajęcia w ramach Godziny kodowania, są zgodne na iPadach i Chromebookach, a także na wszystkich innych nowoczesnych tabletach i laptopach lub komputerach stacjonarnych.
+Wszystkie inne treści, takie jak kursy K-5 (Podstawy informatyki) i zajęcia Godziny Kodowania są kompatybilne z iPadami i innymi nowoczesnymi tabletami i laptopami lub komputerami stacjonarnymi.
 
 ### Telefony komórkowe
 
@@ -101,9 +102,19 @@ Korzystamy z [YouTube](https://www.youtube.com), aby umieszczać filmy w Code.or
 
 Zanim rozpoczniesz kursy online Code.org, przetestuj odtwarzanie poniższego filmu, aby upewnić się, że jesteś gotowy do pracy.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Jest to odtwarzacz używany w całym programie nauczania. Spróbuje wyświetlić wideo przez YouTube, a jeśli YouTube jest zablokowany, pokaże wideo hostowane na Code.org, korzystając z naszego odtwarzacza „zastępczego”.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+To jest gracz występujący w całym programie nauczania. Spróbuje pokazać wideo przez YouTube, a jeśli YouTube jest zablokowany, wyświetli wideo hostowane przez Code.org za pomocą naszego odtwarzacza „rezerwowego”.
 
 ### Film się nie odtwarza?
 
@@ -119,8 +130,8 @@ Jednak nadal możesz korzystać z naszych samouczków bez wideo.
 
 ## Specjalne ustawienia dla użytkowników Google Apps/G-Suite
 
-Jeśli jesteś administratorem G-suite, sprawdź, jakie są Twoje ustawienia ograniczeń dla YouTube. Jeśli określiłeś ustawienie „Ścisły ograniczony dostęp do YouTube” lub jeśli widzisz komunikat „ten film wideo został ograniczony”, możesz dodać nasz kanał do zatwierdzonej listy kanałów. Zapoznaj się z [tym przewodnikiem](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do zatwierdzonej listy. Możesz też zapoznać się z [tym przewodnikiem](https://support.google.com/a/answer/6212415?hl=pl), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
+Jeśli jesteś administratorem G-suite sprawdź, jakie są ustawienia ograniczeń dla YouTube. Jeśli określiłeś ustawienie „Ścisły ograniczony dostęp do YouTube” lub widzisz komunikaty z informacją „ten film został ograniczony”, możesz dodać nasz kanał do zatwierdzonej listy kanałów. Zobacz [ten przewodnik](https://support.google.com/a/answer/6245597) od Google, aby dowiedzieć się, jak dodać nasz kanał do listy zatwierdzonych. Możesz także zobaczyć [ten przewodnik](https://support.google.com/a/answer/6212415?hl=en), aby dowiedzieć się więcej o różnych ustawieniach i które są najlepsze dla Twojej klasy.
 
 ## Czy nadal masz problemy?
 
-Pomożemy Ci — po prostu napisz do nas na adres support@code.org!
+Pomożemy Ci - po prostu napisz do nas na support@code.org!

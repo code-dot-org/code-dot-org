@@ -1,13 +1,16 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button, Checkbox} from 'react-bootstrap';
+import {Button, Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {STATES} from '@cdo/apps/geographyConstants';
 import DCDO from '@cdo/apps/dcdo';
@@ -55,7 +58,7 @@ const CSTA_PROFESSIONAL_ROLES = [
   'Higher Education Faculty',
   'Non-Profit',
   'Corporate',
-  'Other'
+  'Other',
 ];
 
 const CSTA_GRADE_BANDS = ['K-5', '6-8', '9-12'];
@@ -64,7 +67,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   static propTypes = {
     email: PropTypes.string,
     schoolId: PropTypes.string,
-    updateFormData: PropTypes.func
+    updateFormData: PropTypes.func,
   };
 
   constructor(props) {
@@ -78,7 +81,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       consentCSTA: false,
       gradeBands: [false, false, false],
       professionalRole: '',
-      errors: {}
+      errors: {},
     };
   }
 
@@ -106,7 +109,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       'lastName',
       'inspirationKit',
       'csta',
-      'consentAFE'
+      'consentAFE',
     ]);
 
     let shippingAddress = {};
@@ -116,7 +119,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
         'street2',
         'city',
         'state',
-        'zip'
+        'zip',
       ]);
     }
 
@@ -135,7 +138,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       }
       roleCSTA = {
         gradesTeaching: gradeBands,
-        primaryProfessionalRole: this.state.professionalRole
+        primaryProfessionalRole: this.state.professionalRole,
       };
     }
 
@@ -143,13 +146,16 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       ...requiredFormData,
       ...shippingAddress,
       ...consentCSTA,
-      ...roleCSTA
+      ...roleCSTA,
     };
 
     firehoseClient.putRecord({
       study: 'amazon-future-engineer-eligibility',
       event: 'continue',
-      data_json: JSON.stringify(submitData)
+      data_json: JSON.stringify(submitData),
+    });
+    analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
+      submitData: JSON.stringify(submitData),
     });
 
     this.props.updateFormData(submitData);
@@ -163,7 +169,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   };
 
   checkValidationState = elementId => {
-    return this.state.errors.hasOwnProperty(elementId);
+    return Object.prototype.hasOwnProperty.call(this.state.errors, elementId);
   };
 
   validateRequiredFields = () => {
@@ -232,7 +238,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             defaultValue={this.props.email}
             validationState={
-              this.state.errors.hasOwnProperty('email')
+              Object.prototype.hasOwnProperty.call(this.state.errors, 'email')
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -254,7 +260,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('firstName')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'firstName'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -266,7 +275,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('lastName')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'lastName'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -311,7 +323,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 onChange={this.handleChange}
                 value={this.state.consentCSTA}
                 validationState={
-                  this.state.errors.hasOwnProperty('consentCSTA')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'consentCSTA'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -366,7 +381,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             value={this.state.consentAFE}
             validationState={
-              this.state.errors.hasOwnProperty('consentAFE')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'consentAFE'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -390,37 +408,37 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
 const styles = {
   wrong_school: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   sectionBreak: {
-    borderColor: color.teal
+    borderColor: color.teal,
   },
   consentIndent: {
-    marginLeft: '25px'
+    marginLeft: '25px',
   },
   button: {
     backgroundColor: color.orange,
-    color: color.white
+    color: color.white,
   },
   dropdownPadding: {
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
   },
   descriptiveText: {
     display: 'block',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontWeight: 'bold',
     fontSize: 14,
     border: 'none',
     color: color.dimgray,
-    margin: 0
+    margin: 0,
   },
   checkboxItem: {
-    margin: 5
+    margin: 5,
   },
   checkboxLabel: {
-    paddingLeft: 5
-  }
+    paddingLeft: 5,
+  },
 };
 
 const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
@@ -493,5 +511,5 @@ const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
 };
 ShippingAddressFormGroup.propTypes = {
   handleChange: PropTypes.func.isRequired,
-  checkValidationState: PropTypes.func.isRequired
+  checkValidationState: PropTypes.func.isRequired,
 };

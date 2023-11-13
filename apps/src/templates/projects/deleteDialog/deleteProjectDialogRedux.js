@@ -14,7 +14,7 @@ export const DELETE_FAILURE = 'deleteDialog/DELETE_FAILURE';
 const initialState = {
   isOpen: false,
   projectId: null,
-  isDeletePending: false
+  isDeletePending: false,
 };
 
 export default function reducer(state = initialState, action) {
@@ -23,28 +23,28 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         isOpen: true,
-        projectId: action.projectId
+        projectId: action.projectId,
       };
     case HIDE_DELETE_DIALOG:
       return {
         ...state,
-        isOpen: false
+        isOpen: false,
       };
     case DELETE_REQUEST:
       return {
         ...state,
-        isDeletePending: true
+        isDeletePending: true,
       };
     case DELETE_SUCCESS:
       return {
         ...state,
         isOpen: false,
-        isDeletePending: false
+        isDeletePending: false,
       };
     case DELETE_FAILURE:
       return {
         ...state,
-        isDeletePending: false
+        isDeletePending: false,
       };
     default:
       return state;
@@ -78,7 +78,7 @@ export function deleteProject(projectId) {
         xhr => {
           dispatch({
             type: DELETE_SUCCESS,
-            projectId: projectId
+            projectId: projectId,
           });
           resolve();
         },

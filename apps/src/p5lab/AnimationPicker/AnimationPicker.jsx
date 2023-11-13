@@ -12,7 +12,7 @@ import {
   beginUpload,
   handleUploadComplete,
   handleUploadError,
-  saveSelectedAnimations
+  saveSelectedAnimations,
 } from '../redux/animationPicker';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
@@ -44,14 +44,13 @@ class AnimationPicker extends React.Component {
     channelId: PropTypes.string.isRequired,
     allowedExtensions: PropTypes.string,
     libraryManifest: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
-    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -66,11 +65,11 @@ class AnimationPicker extends React.Component {
     onUploadError: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
     onAnimationSelectionComplete: PropTypes.func.isRequired,
-    uploadWarningShowing: PropTypes.bool.isRequired
+    uploadWarningShowing: PropTypes.bool.isRequired,
   };
 
   state = {
-    exitingDialog: false
+    exitingDialog: false,
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -116,7 +115,6 @@ class AnimationPicker extends React.Component {
           onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
           playAnimations={this.props.playAnimations}
           libraryManifest={this.props.libraryManifest}
-          hideUploadOption={this.props.hideUploadOption}
           hideAnimationNames={this.props.hideAnimationNames}
           navigable={this.props.navigable}
           defaultQuery={this.props.defaultQuery}
@@ -124,9 +122,7 @@ class AnimationPicker extends React.Component {
           hideCostumes={this.props.hideCostumes}
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
-          shouldRestrictAnimationUpload={
-            this.props.shouldRestrictAnimationUpload
-          }
+          shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -135,7 +131,7 @@ class AnimationPicker extends React.Component {
             top: -15,
             right: -15,
             bottom: -15,
-            left: -15
+            left: -15,
           }}
           hideCloseButton={true}
           handleClose={() => {
@@ -193,7 +189,7 @@ class AnimationPicker extends React.Component {
 }
 
 AnimationPicker.defaultProps = {
-  allowedExtensions: ['.png', '.jpg', '.jpeg'].join(',')
+  allowedExtensions: ['.png', '.jpg', '.jpeg'].join(','),
 };
 
 export default connect(
@@ -203,7 +199,7 @@ export default connect(
     uploadError: state.animationPicker.uploadError,
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
     selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
-    uploadWarningShowing: state.animationPicker.uploadWarningShowing
+    uploadWarningShowing: state.animationPicker.uploadWarningShowing,
   }),
   dispatch => ({
     onClose() {
@@ -236,6 +232,6 @@ export default connect(
     },
     onAnimationSelectionComplete() {
       dispatch(saveSelectedAnimations());
-    }
+    },
   })
 )(AnimationPicker);

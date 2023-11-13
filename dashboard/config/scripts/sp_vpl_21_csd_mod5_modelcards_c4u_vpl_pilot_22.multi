@@ -33,3 +33,5 @@ teacher_markdown <<MARKDOWN
 In this example, the date prioritizes medical data based on ER patients in a rural hospital in a cold climate. Common ailments for ER patients at an urban hospital in a warmer climate are de-prioritized resulting in a model with low accuracy for the New Orleans hospital. 
 
 MARKDOWN
+
+allow_multiple_attempts true

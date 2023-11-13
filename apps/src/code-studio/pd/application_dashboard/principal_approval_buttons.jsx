@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Spinner from '../components/spinner.jsx';
 import ConfirmationDialog from '../components/confirmation_dialog';
 import {SendAdminApprovalEmailStatuses} from '@cdo/apps/generated/pd/teacherApplicationConstants';
@@ -12,13 +12,13 @@ export default class PrincipalApprovalButtons extends React.Component {
       // Depending on context, the applicationId can come from json as a number,
       // or from the url route as a string.
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
     ]).isRequired,
     showResendEmailButton: PropTypes.bool,
     showChangeRequirementButton: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     applicationStatus: PropTypes.string,
-    approvalRequired: PropTypes.bool
+    approvalRequired: PropTypes.bool,
   };
 
   constructor(props) {
@@ -32,7 +32,7 @@ export default class PrincipalApprovalButtons extends React.Component {
         this.props.showResendEmailButton,
       showChangeRequirementButton: this.props.showChangeRequirementButton,
       showResendEmailConfirmation: false,
-      approvalRequired: this.props.approvalRequired
+      approvalRequired: this.props.approvalRequired,
     };
   }
 
@@ -48,14 +48,12 @@ export default class PrincipalApprovalButtons extends React.Component {
   handleSendEmailClick = () => {
     const sendEmailRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/application/teacher/${
-        this.props.applicationId
-      }/send_principal_approval`
+      url: `/api/v1/pd/application/teacher/${this.props.applicationId}/send_principal_approval`,
     }).done(data => {
       this.props.onChange(this.props.applicationId, data.principal_approval);
       this.setState({
         sendEmailRequest: null,
-        showResendEmailButton: false
+        showResendEmailButton: false,
       });
     });
 
@@ -64,7 +62,7 @@ export default class PrincipalApprovalButtons extends React.Component {
 
   handleResendEmailClick = () => {
     this.setState({
-      showResendEmailConfirmation: true
+      showResendEmailConfirmation: true,
     });
   };
 
@@ -74,7 +72,7 @@ export default class PrincipalApprovalButtons extends React.Component {
 
   handleResendEmailCancel = () => {
     this.setState({
-      showResendEmailConfirmation: false
+      showResendEmailConfirmation: false,
     });
   };
 
@@ -84,15 +82,13 @@ export default class PrincipalApprovalButtons extends React.Component {
     const changeRequirementRequest = $.ajax({
       method: 'POST',
       data: {principal_approval_not_required: !newApprovalRequiredStatus},
-      url: `/api/v1/pd/application/teacher/${
-        this.props.applicationId
-      }/change_principal_approval_requirement`
+      url: `/api/v1/pd/application/teacher/${this.props.applicationId}/change_principal_approval_requirement`,
     }).done(data => {
       this.props.onChange(this.props.applicationId, data.principal_approval);
 
       this.setState({
         changeRequirementRequest: null,
-        approvalRequired: newApprovalRequiredStatus
+        approvalRequired: newApprovalRequiredStatus,
       });
     });
 
@@ -167,6 +163,6 @@ export default class PrincipalApprovalButtons extends React.Component {
 
 const styles = {
   element: {
-    margin: 5
-  }
+    margin: 5,
+  },
 };

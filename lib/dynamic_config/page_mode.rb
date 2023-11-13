@@ -20,8 +20,8 @@ class PageModeBase
     page_mode = rand(2) == 0 ? "feature-starwars" : "feature-minecraft2016"
 
     (request && request.cookies[PAGE_MODE_KEY]) ||
-        DCDO.get('page_mode', DEFAULT_PAGE_MODE) ||
-        page_mode
+      DCDO.get('page_mode', DEFAULT_PAGE_MODE) ||
+      page_mode
   end
 
   # Sets the default page mode for all requests.

@@ -59,6 +59,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
@@ -142,10 +143,10 @@ class UnitGroup < ApplicationRecord
 
     unit_group.save!
     unit_group
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in course: #{hash['name']}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in course: #{hash['name']}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 
@@ -478,14 +479,45 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
+  # @param locale [String] User or request locale. Optional.
   # @return [UnitGroup] Returns the latest stable version in a course family.
-  def self.latest_stable_version(family_name)
+  def self.latest_stable_version(family_name, locale: 'en-us')
     return nil if family_name.blank?
 
-    all_courses.select do |course|
+    stable_course_versions = all_courses.select do |course|
       course.family_name == family_name &&
         course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    end.max_by(&:version_year)
+    end.sort_by(&:version_year).reverse
+
+    # Only select stable, supported UnitGroups (ignore supported locales if locale is an English-speaking locale).
+    locale_str = locale&.to_s
+    if locale_str&.start_with?('en')
+      stable_course_versions.first
+    else
+      stable_course_versions.find do |cv|
+        cv.default_unit_group_units.all? {|unit_group_unit| unit_group_unit.script.supported_locales&.include?(locale_str)}
+      end
+    end
+  end
+
+  def supported_locale_codes
+    locales = default_unit_group_units.first&.script&.supported_locales || []
+    locales = locales.filter do |locale|
+      default_unit_group_units.all? do |unit_group_unit|
+        unit_group_unit.script.supported_locales&.include?(locale)
+      end
+    end
+    locales += ['en-US']
+    locales.sort.uniq
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Unit.locale_native_name_map[l] || l}.uniq
+  end
+
+  def self.locale_native_name_map
+    locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
+    locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:native]})}
   end
 
   # @param family_name [String] The family name for a course family.
@@ -530,8 +562,7 @@ class UnitGroup < ApplicationRecord
     user.
       user_scripts.
       where(script_id: unit_ids).
-      select(&:version_warning_dismissed).
-      any?
+      any?(&:version_warning_dismissed)
   end
 
   @@course_cache = nil
@@ -599,6 +630,12 @@ class UnitGroup < ApplicationRecord
 
   def pilot?
     !!pilot_experiment
+  end
+
+  # Wrapper function to help with assignable course logic
+  # @return [CourseVersion]
+  def get_course_version
+    course_version
   end
 
   def has_pilot_experiment?(user)

@@ -2,19 +2,19 @@ class Services::RegistrationReminder
   # Don't send reminders for applications created prior to this date
   REMINDER_START_DATE = Date.new(2019, 10, 1)
 
-  # This method queues enrollment reminder emails for any applications that are eligible for a
+  # This method sends enrollment reminder emails for any applications that are eligible for a
   # reminder.  It is designed to be called repeatedly (e.g. from a cronjob).
   #
   # This is an enrollment reminder email for any teacher that has been accepted, but has not
   # registered in a workshop. This form will automatically be sent 2 weeks after the first
   # registration email was sent. If the teacher is still not registered after another 1 week,
   # a second (and last) email will be sent.
-  def self.queue_registration_reminders!
+  def self.send_registration_reminders!
     (
       applications_needing_first_reminder |
       applications_needing_second_reminder
     ).each do |application|
-      application.queue_email 'registration_reminder'
+      application.send_pd_application_email 'registration_reminder'
     end
   end
 
@@ -52,17 +52,17 @@ class Services::RegistrationReminder
     # - Exclude applications created prior to the fall 2019 application season, when this feature launched.
     # - SELECT DISTINCT since we never want to list an application more than once.
     Pd::Application::ApplicationBase.
-      joins(<<~SQL).
+      joins(<<~SQL.squish).
         inner join pd_application_emails accepted
         on pd_applications.id = accepted.pd_application_id
         and accepted.email_type = 'accepted'
       SQL
-      joins(<<~SQL).
+      joins(<<~SQL.squish).
         left outer join pd_application_emails registration_reminder
         on pd_applications.id = registration_reminder.pd_application_id
         and registration_reminder.email_type = 'registration_reminder'
       SQL
-      joins(<<~SQL).
+      joins(<<~SQL.squish).
         left outer join pd_enrollments
         on pd_applications.user_id = pd_enrollments.user_id
         and pd_enrollments.created_at >= accepted.sent_at

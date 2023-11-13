@@ -9,3 +9,5 @@ right '32-bit addresses could not ensure that every internet-connected device ca
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

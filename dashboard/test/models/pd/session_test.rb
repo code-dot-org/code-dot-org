@@ -58,7 +58,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     end
 
     codes = sessions.pluck(:code)
-    assert codes.all? {|code| code.present? && code.length == 4}
+    assert(codes.all? {|code| code.present? && code.length == 4})
     assert_equal 10, codes.uniq.size
   end
 

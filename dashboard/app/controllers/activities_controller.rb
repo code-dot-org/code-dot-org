@@ -1,6 +1,7 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 require 'cdo/firehose'
+require 'cdo/web_purify'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -21,7 +22,7 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
     script_name = ''
 
     if params[:script_level_id]
@@ -54,10 +55,11 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
+        rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
           # ID below.
+          share_filtering_error = exception
         end
       end
 
@@ -117,6 +119,13 @@ class ActivitiesController < ApplicationController
       else
         track_progress_in_session
       end
+
+      # If a student in the pilot is submitting work on an AI-enabled level, trigger the AI evaluation job.
+      is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: @script_level&.script, experiment_name: 'ai-rubrics')
+      is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(@script_level)
+      if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+        EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
+      end
     end
 
     render json: milestone_response(
@@ -135,18 +144,16 @@ class ActivitiesController < ApplicationController
     log_milestone(@level_source, params)
   end
 
-  private
-
-  def milestone_logger
+  private def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  def track_progress_for_user
+  private def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
 
     lines = params[:lines].to_i
 
@@ -158,7 +165,7 @@ class ActivitiesController < ApplicationController
       test_result: test_result,
       attempt: params[:attempt].to_i,
       lines: lines,
-      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      time: params[:time].to_i.clamp(0, MAX_INT_MILESTONE),
       level_source_id: @level_source.try(:id)
     }
 
@@ -180,7 +187,7 @@ class ActivitiesController < ApplicationController
         time_spent: time_since_last_milestone
       )
 
-      is_sublevel = !@script_level.levels.include?(@level)
+      is_sublevel = @script_level.levels.exclude?(@level)
 
       # The level might belong to more than one bubble choice parent level.
       # Find the one that's in this script.
@@ -215,7 +222,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def track_progress_in_session
+  private def track_progress_in_session
     # track scripts
     if @script_level.try(:script).try(:id)
       test_result = params[:testResult].to_i
@@ -229,7 +236,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def log_milestone(level_source, params)
+  private def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id

@@ -65,13 +65,14 @@ module Pd::Application
     end
 
     def underrepresented_minority_percent
+      underrepresented_minority_groups = [
+        :black,
+        :hispanic,
+        :pacific_islander,
+        :american_indian
+      ]
       sanitized_form_data_hash.select do |k, _|
-        [
-          :black,
-          :hispanic,
-          :pacific_islander,
-          :american_indian
-        ].include? k
+        underrepresented_minority_groups.include? k
       end.values.sum(&:to_f)
     end
 
@@ -80,7 +81,7 @@ module Pd::Application
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
-      teacher_application.queue_email :admin_approval, deliver_now: true
+      teacher_application.send_pd_application_email :admin_approval
 
       Pd::Application::PrincipalApprovalApplication.create(
         form_data: {}.to_json,
@@ -124,16 +125,16 @@ module Pd::Application
     def dynamic_required_fields(hash)
       [].tap do |required|
         if hash[:do_you_approve]
-          required.concat [
+          required.push(
             :first_name,
             :last_name,
             :email,
             :can_email_you,
             :confirm_principal
-          ]
+          )
 
           unless hash[:do_you_approve] == NO
-            required.concat [
+            required.push(
               :total_student_enrollment,
               :free_lunch_percent,
               :white,
@@ -147,7 +148,7 @@ module Pd::Application
               :replace_course,
               :understand_fee,
               :pay_fee
-            ]
+            )
           end
         end
       end

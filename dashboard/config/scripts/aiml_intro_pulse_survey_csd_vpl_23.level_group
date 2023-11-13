@@ -1,0 +1,12 @@
+name 'aiml-intro-pulse-survey_csd-vpl-23'
+title 'AI and Machine Learning Rapid Survey!'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csd-pulse-check-survey-preamble_2019_pilot_copy2_csd-vpl-23'
+level 'aiml-intro-pulse-survey-q1_csd-vpl-23'
+level 'aiml-intro-pulse-survey-q2_csd-vpl-23'
+level 'aiml-intro-pulse-survey-q3_csd-vpl-23'
+level 'aiml-intro-pulse-survey-q4_csd-vpl-23'
+level 'aiml-intro-pulse-survey-q5_csd-vpl-23'

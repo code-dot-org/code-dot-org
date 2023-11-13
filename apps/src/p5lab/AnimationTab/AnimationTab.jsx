@@ -12,7 +12,6 @@ import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
 import i18n from '@cdo/locale';
 import {P5LabInterfaceMode, P5LabType} from '../constants.js';
-import experiments from '@cdo/apps/util/experiments';
 /**
  * Root of the animation editor interface mode for GameLab
  */
@@ -21,9 +20,7 @@ class AnimationTab extends React.Component {
     channelId: PropTypes.string,
     onColumnWidthsChange: PropTypes.func.isRequired,
     libraryManifest: PropTypes.object.isRequired,
-    // TODO: When we remove the backgrounds_and_upload experiment we can get rid of hideUploadOption
-    hideUploadOption: PropTypes.bool.isRequired,
-    shouldRestrictAnimationUpload: PropTypes.bool.isRequired,
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
@@ -32,13 +29,13 @@ class AnimationTab extends React.Component {
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
       P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     currentAnimation: shapes.AnimationKey,
-    defaultQuery: PropTypes.object
+    defaultQuery: PropTypes.object,
   };
 
   render() {
@@ -49,13 +46,12 @@ class AnimationTab extends React.Component {
       defaultQuery,
       hideAnimationNames,
       hideBackgrounds,
-      hideUploadOption,
       interfaceMode,
       labType,
       libraryManifest,
       onColumnWidthsChange,
       pickerType,
-      shouldRestrictAnimationUpload
+      shouldWarnOnAnimationUpload,
     } = this.props;
     let hidePiskelStyle = {visibility: 'visible'};
     if (currentAnimation) {
@@ -63,8 +59,7 @@ class AnimationTab extends React.Component {
     }
     const hideCostumes = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     const animationsColumnStyle =
-      labType !== P5LabType.GAMELAB &&
-      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD)
+      labType !== P5LabType.GAMELAB
         ? styles.animationsColumnSpritelab
         : styles.animationsColumnGamelab;
 
@@ -94,14 +89,13 @@ class AnimationTab extends React.Component {
           <AnimationPicker
             channelId={channelId}
             libraryManifest={libraryManifest}
-            hideUploadOption={hideUploadOption}
             hideAnimationNames={hideAnimationNames}
             navigable={!hideCostumes}
             hideBackgrounds={hideBackgrounds}
             hideCostumes={hideCostumes}
             pickerType={pickerType}
             defaultQuery={defaultQuery}
-            shouldRestrictAnimationUpload={shouldRestrictAnimationUpload}
+            shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
           />
         )}
       </div>
@@ -115,30 +109,30 @@ const styles = {
     top: 0,
     bottom: 20,
     left: 0,
-    right: 0
+    right: 0,
   },
   animationsColumnGamelab: {
     display: 'flex',
     flexDirection: 'column',
     minWidth: 190,
-    maxWidth: 300
+    maxWidth: 300,
   },
   animationsColumnSpritelab: {
     display: 'flex',
     flexDirection: 'column',
     minWidth: 240,
-    maxWidth: 300
+    maxWidth: 300,
   },
   editorColumn: {
     display: 'flex',
     flexDirection: 'column',
-    position: 'relative'
+    position: 'relative',
   },
   piskelEl: {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    border: 'solid thin ' + color.light_gray
+    border: 'solid thin ' + color.light_gray,
   },
   emptyPiskelEl: {
     backgroundColor: color.light_gray,
@@ -149,22 +143,22 @@ const styles = {
     paddingRight: 1,
     paddingBottom: 1,
     textAlign: 'center',
-    fontSize: 14
+    fontSize: 14,
   },
   helpText: {
     position: 'relative',
     top: '50%',
-    transform: 'translateY(-50%)'
-  }
+    transform: 'translateY(-50%)',
+  },
 };
 export default connect(
   state => ({
     currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
-    columnSizes: state.animationTab.columnSizes
+    columnSizes: state.animationTab.columnSizes,
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {
       dispatch(setColumnSizes(widths));
-    }
+    },
   })
 )(AnimationTab);

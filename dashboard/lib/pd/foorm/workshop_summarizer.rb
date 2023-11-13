@@ -66,14 +66,6 @@ module Pd::Foorm
       sort_summary(workshop_summary)
     end
 
-    def self.get_response_count_per_survey(workshop_id, form_name, form_version)
-      Pd::WorkshopSurveyFoormSubmission.
-        where(pd_workshop_id: workshop_id).
-        joins(:foorm_submission).
-        where(foorm_submissions: {form_name: form_name, form_version: form_version}).
-        select(:user_id).distinct.count
-    end
-
     def self.add_facilitator_submission_to_summary(
       submission,
       current_workshop_summary,

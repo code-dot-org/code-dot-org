@@ -10,7 +10,8 @@ theme: responsive
 
 - 学校では15 MBit/秒以上ののインターネット接続をおすすめします。
 - サポートしている最小画面サイズは1024 x 728 pxです。
-- 中学・高校レベルのコース (CS Discoveries、CS Principles、Intro to App Lab) では、マウス (またはタッチパッド) およびキーボードを備えたデスクトップまたはノートパソコンが必要です。 これらのコースではほとんどのタブレットおよびモバイルデバイスをサポートしていません。 デバイス固有の例外については、後述の「モバイルおよびタブレットのサポート詳細」をご覧ください。
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. デバイス固有の例外については、後述の「モバイルおよびタブレットのサポート詳細」をご覧ください。
 - K-5 (幼稚園年長から小学校5年生まで) コース (コンピューターサイエンス入門) やHour of Codeアクティビティなど、その他すべてのコンテンツは、最新のタブレットやノートパソコン、デスクトップパソコンだけでなく、iPadやChromebookでも利用できます。
 - モバイルデバイスの詳細をお探しですか？ 以下をお読みください。
 
@@ -82,12 +83,12 @@ Code.orgのすべてのコンテンツを最大限に活用するため、学校
 
 ## モバイルデバイスおよびタブレットのサポート詳細
 
-CS Discoveries、CS Principles、Intro to App Labのすべてのコースはタブレットやモバイルデバイスに対応していません。MacBookなどフルキーボードとマウス (またはタッチパッド) が必要です。 ほとんどのタブレットはサポートされていませんが、次の例外があります:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. ほとんどのタブレットはサポートされていませんが、次の例外があります:
 
 - 外部キーボード付きのMicrosoft Surface Pro
 - iPadOS 13.4以降を搭載しているiPad (外部キーボードと外部マウス、またはタッチパッド付き)
 
-K-5 (幼稚園年長から小学校5年生まで) コース (コンピューターサイエンス入門) やHour of Codeアクティビティなど、その他すべてのコンテンツは、最新のタブレットやノートパソコン、デスクトップパソコンだけでなく、iPadやChromebookでも利用できます。
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### 携帯電話
 
@@ -101,15 +102,25 @@ Hour of CodeとCS Fundamentalsは携帯電話でも受講可能です。 これ�
 
 Code.orgのオンラインコースの開始前に、以下のビデオを再生して、準備が整っていることをご確認ください。
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-これはカリキュラム全体で使われるプレーヤーです。 YouTubeでビデオを表示しようとしたときにYouTubeがブロックされている場合は、代わりに「代替の」プレーヤーを使ってCode.orgで掲載されているビデオを表示します。
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### 動画が再生されませんか？
 
-ビデオを再生できない場合は、support@code.orgにメールを送信してください。
+If video does not work, you can email us at support@code.org.
 
-ただしビデオなしでチュートリアルを使うことも可能です。
+However, you can still use our tutorials without video.
 
 1. 私たちはすべてのビデオを[一緒にダウンロード](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)できるようにしています。 学校のインターネットが低速の場合は、ビデオをダウンロードして共有画面で生徒に見せるのがおすすめです。
 2. チュートリアルに統合するため、各ビデオに緑色のダウンロードリンクアイコン<img src="/images/green-download.png" width=25 height=25 />を追加しました。これにより、生徒はチュートリアルビデオをダウンロードできます。
@@ -119,8 +130,8 @@ Code.orgのオンラインコースの開始前に、以下のビデオを再生
 
 ## Google Apps/G-Suiteユーザー向けの特別な設定
 
-あなたがG-suiteの管理者の場合、YouTubeの制限設定をご確認ください。 「YouTubeへのアクセスを厳しく制限」設定を指定している場合、または「この動画は制限されています」というメッセージが表示された場合は、承認済みチャンネルのリストにチャンネルを追加できます。 承認済みリストへのチャンネル追加方法は、Googleの[このガイド](https://support.google.com/a/answer/6245597)をご覧ください。 また[このガイド](https://support.google.com/a/answer/6212415?hl=en)を見れば、さまざまな設定詳細と、教室に最適な設定を確認することもできます。
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## まだ問題が生じていますか？
 
-私たちがお助けします - support@code.orgまでお問い合わせください！
+We'll help you out - just email us at support@code.org!

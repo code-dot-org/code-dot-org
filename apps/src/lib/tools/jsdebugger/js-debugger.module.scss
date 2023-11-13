@@ -30,7 +30,6 @@
   font-size: 18px;
   :hover {
     cursor: pointer;
-    color: color.$white;
   }
 }
 
@@ -44,7 +43,6 @@
   font-size: 18px;
   &:hover {
     cursor: pointer;
-    color: color.$white;
   }
 }
 
@@ -88,10 +86,15 @@ $debug-header-border-width: 1px;
   color: color.$white;
 
   &:hover {
+    color: color.$neutral_dark20;
     box-shadow: none;
   }
 
   &Unfocused {
-    color: color.$dark-charcoal;
+    color: color.$neutral_white;
+
+    &:hover {
+      color: color.$neutral_dark20;
+    }
   }
 }

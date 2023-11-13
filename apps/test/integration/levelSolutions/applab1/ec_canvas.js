@@ -41,13 +41,13 @@ module.exports = {
         'setAlpha(imgData, 0, 0, 255);\n' +
         'setRGB(imgData, 0, 0, 255, 255, 255);\n',
 
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
+        tickWrapper.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
         });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -55,8 +55,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -74,10 +74,10 @@ module.exports = {
         'drawImageURL("nonexistent.jpg", function (success) {\n' +
         '  setText("result2", success);\n' +
         '});\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         tickWrapper
           .tickAppUntil(Applab, canvasAndResultsPopulated)
-          .then(function() {
+          .then(function () {
             assert.equal(
               document.getElementById('result1').textContent,
               'true'
@@ -89,7 +89,7 @@ module.exports = {
             Applab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -97,8 +97,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -116,10 +116,10 @@ module.exports = {
         'drawImageURL("nonexistent.jpg", 5, 10, 15, 20, function (success) {\n' +
         '  setText("result2", success);\n' +
         '});\n',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         tickWrapper
           .tickAppUntil(Applab, canvasAndResultsPopulated)
-          .then(function() {
+          .then(function () {
             assert.equal(
               document.getElementById('result1').textContent,
               'true'
@@ -131,7 +131,7 @@ module.exports = {
             Applab.onPuzzleComplete();
           });
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
         assert.equal(debugOutput.textContent, '');
@@ -139,10 +139,10 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };
 
 function canvasAndResultsPopulated() {

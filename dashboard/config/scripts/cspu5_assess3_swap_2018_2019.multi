@@ -33,3 +33,5 @@ It is important to note that swapping a to b, and then b to a will **not** work.
     
 In this case, you would need to temporarily store the data of one of the variables to successfully swap the numbers. To do this, create a temp variable that holds the data at index _b_. Swap the data at _b_ with _a_, and then set the data at _a_ to temp which holds the original value of index _b_.
 MARKDOWN
+
+allow_multiple_attempts true

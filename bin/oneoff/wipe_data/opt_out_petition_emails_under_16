@@ -43,8 +43,8 @@ def main
         ip_address: EmailPreferenceHelper::CODE_DOT_ORG,
         form_kind: '0'
       )
-    rescue StandardError => error
-      CDO.log.info "Skipping email address - #{petition[:email]} - #{error}."
+    rescue StandardError => exception
+      CDO.log.info "Skipping email address - #{petition[:email]} - #{exception}."
     end
   CDO.log.info "Finished Opt Out of Petition Emails Under 16"
 end

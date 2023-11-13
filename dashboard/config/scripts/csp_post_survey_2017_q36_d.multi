@@ -3,3 +3,4 @@ question 'I worry because of my race/ethnicity.'
 right 'A lot'
 right 'A little'
 right 'Not at all'
+allow_multiple_attempts true

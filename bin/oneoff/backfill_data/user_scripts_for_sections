@@ -74,7 +74,7 @@ begin
       end
     end
   end
-rescue Exception => e
+rescue Exception => exception
   puts "EXCEPTION: #{user_id_script_id}..."
-  raise e
+  raise exception
 end

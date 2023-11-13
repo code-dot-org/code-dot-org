@@ -17,7 +17,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
         style={{
           ...styles.tableCell,
           ...styles.radioCell,
-          ...(lockStatus === LockStatus.Locked && styles.selectedCell)
+          ...(lockStatus === LockStatus.Locked && styles.selectedCell),
         }}
       >
         <input
@@ -32,7 +32,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
         style={{
           ...styles.tableCell,
           ...styles.radioCell,
-          ...(lockStatus === LockStatus.Editable && styles.selectedCell)
+          ...(lockStatus === LockStatus.Editable && styles.selectedCell),
         }}
       >
         <input
@@ -47,7 +47,7 @@ const StudentRow = ({index, name, lockStatus, handleRadioChange}) => {
         style={{
           ...styles.tableCell,
           ...styles.radioCell,
-          ...(lockStatus === LockStatus.ReadonlyAnswers && styles.selectedCell)
+          ...(lockStatus === LockStatus.ReadonlyAnswers && styles.selectedCell),
         }}
       >
         <input
@@ -66,7 +66,7 @@ StudentRow.propTypes = {
   index: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired,
-  handleRadioChange: PropTypes.func.isRequired
+  handleRadioChange: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -74,14 +74,14 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.light_gray,
-    padding: 10
+    padding: 10,
   },
   radioCell: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   selectedCell: {
-    backgroundColor: color.lightest_teal
-  }
+    backgroundColor: color.lightest_teal,
+  },
 };
 
 export default StudentRow;

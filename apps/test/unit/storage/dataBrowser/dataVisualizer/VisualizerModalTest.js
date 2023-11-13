@@ -6,7 +6,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import {
   UnconnectedVisualizerModal as VisualizerModal,
-  OperatorType
+  OperatorType,
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 
@@ -17,8 +17,8 @@ const DEFAULT_PROPS = {
   tableRecords: [
     '{"column1":"a","column2":123}',
     '{"column1":"b","column2":456}',
-    '{"column1":"3","column2":0}'
-  ]
+    '{"column1":"3","column2":0}',
+  ],
 };
 
 describe('VisualizerModal', () => {
@@ -41,7 +41,7 @@ describe('VisualizerModal', () => {
       wrapper.instance().setState({
         chartType: ChartType.SCATTER_PLOT,
         selectedColumn1: 'column1',
-        selectedColumn2: 'column2'
+        selectedColumn2: 'column2',
       });
       expect(wrapper.instance().state.selectedColumn1).to.equal('column1');
       wrapper
@@ -55,7 +55,7 @@ describe('VisualizerModal', () => {
       let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
       wrapper.instance().setState({
         filterColumn: 'column',
-        filterValue: 'value'
+        filterValue: 'value',
       });
       expect(wrapper.instance().state.filterValue).to.equal('value');
       wrapper
@@ -68,7 +68,7 @@ describe('VisualizerModal', () => {
       let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
       wrapper.instance().setState({
         filterColumn: '',
-        filterValue: ''
+        filterValue: '',
       });
       //non-numeric column should display only 4 dropdowns
       wrapper
@@ -97,7 +97,7 @@ describe('VisualizerModal', () => {
       tableRecords[2] = '{"id":2,"name":"bob","age":8,"male":true}';
       let expectedParsedRecords = [
         {id: 1, name: 'alice', age: 7, male: false},
-        {id: 2, name: 'bob', age: 8, male: true}
+        {id: 2, name: 'bob', age: 8, male: true},
       ];
 
       let parsedRecords = wrapper.instance().parseRecords(tableRecords);
@@ -117,7 +117,7 @@ describe('VisualizerModal', () => {
       let records = [
         {id: 1, name: 'alice', age: 7, male: false},
         {id: 2, name: 'bob', age: 8, male: true},
-        {id: 3, name: 'charlie', age: 9, male: true}
+        {id: 3, name: 'charlie', age: 9, male: true},
       ];
       let expectedNumericColumns = ['id', 'age'];
       expect(
@@ -130,28 +130,28 @@ describe('VisualizerModal', () => {
         'id',
         'numericWithBlank',
         'numericWithNull',
-        'numericWithEmptyString'
+        'numericWithEmptyString',
       ];
       let records = [
         {
           id: 1,
           numericWithBlank: 1,
           numericWithNull: 2,
-          numericWithEmptyString: 3
+          numericWithEmptyString: 3,
         },
         {id: 2, numericWithNull: null, numericWithEmptyString: ''},
         {
           id: 1,
           numericWithBlank: 4,
           numericWithNull: 5,
-          numericWithEmptyString: 6
-        }
+          numericWithEmptyString: 6,
+        },
       ];
       let expectedNumericColumns = [
         'id',
         'numericWithBlank',
         'numericWithNull',
-        'numericWithEmptyString'
+        'numericWithEmptyString',
       ];
       expect(
         wrapper.instance().findNumericColumns(records, columns)
@@ -163,7 +163,7 @@ describe('VisualizerModal', () => {
       let records = [
         {id: 1, name: 'alice', age: 7, 'partially numeric': 4},
         {id: 2, name: 'bob', 'partially numeric': 'not a number'},
-        {id: 3, name: 'charlie', age: 9, 'partially numeric': 5}
+        {id: 3, name: 'charlie', age: 9, 'partially numeric': 5},
       ];
       let expectedNumericColumns = ['id', 'age'];
       expect(
@@ -179,7 +179,10 @@ describe('VisualizerModal', () => {
     });
 
     it('shows quotes around strings', () => {
-      let records = [{id: 3, col: '123'}, {id: 4, col: 'abc'}];
+      let records = [
+        {id: 3, col: '123'},
+        {id: 4, col: 'abc'},
+      ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
       ).to.deep.equal(['"123"', '"abc"']);
@@ -190,7 +193,7 @@ describe('VisualizerModal', () => {
         {id: 1, col: true},
         {id: 2, col: 'false'},
         {id: 3, col: 123},
-        {id: 4, col: '456'}
+        {id: 4, col: '456'},
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
@@ -201,7 +204,7 @@ describe('VisualizerModal', () => {
       let records = [
         {id: 1, col: null},
         {id: 2, col: undefined},
-        {id: 3, col: ''}
+        {id: 3, col: ''},
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
@@ -218,7 +221,7 @@ describe('VisualizerModal', () => {
         {id: 6}, // duplicate undefined
         {id: 7, col: 123}, // not a duplicate because this is a number and above is a string
         {id: 8, col: true},
-        {id: 9, col: true} // duplicate true
+        {id: 9, col: true}, // duplicate true
       ];
 
       expect(
@@ -232,7 +235,7 @@ describe('VisualizerModal', () => {
         {id: 2, col: 32},
         {id: 3, col: 57},
         {id: 4, col: 0},
-        {id: 5, col: -10}
+        {id: 5, col: -10},
       ];
 
       expect(
@@ -254,7 +257,7 @@ describe('VisualizerModal', () => {
         {id: 2, filterCol: 456, chartCol: 3},
         {id: 3, filterCol: 123, chartCol: 5},
         {id: 4, filterCol: '456', chartCol: 7},
-        {id: 5, filterCol: 0, chartCol: 5}
+        {id: 5, filterCol: 0, chartCol: 5},
       ];
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '123')
@@ -273,7 +276,7 @@ describe('VisualizerModal', () => {
         {id: 1, filterCol: 123, chartCol: 2},
         {id: 2, filterCol: 456, chartCol: 3},
         {id: 3, filterCol: 123, chartCol: 5},
-        {id: 4, filterCol: 0, chartCol: 5}
+        {id: 4, filterCol: 0, chartCol: 5},
       ];
       expect(
         wrapper
@@ -314,7 +317,7 @@ describe('VisualizerModal', () => {
         {id: 1, filterCol: true, chartCol: 2},
         {id: 2, filterCol: false, chartCol: 3},
         {id: 3, filterCol: true, chartCol: 5},
-        {id: 4, filterCol: 'false', chartCol: 7}
+        {id: 4, filterCol: 'false', chartCol: 7},
       ];
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'true')
@@ -330,7 +333,7 @@ describe('VisualizerModal', () => {
         {id: 1, filterCol: null, chartCol: 2},
         {id: 2, filterCol: false, chartCol: 3},
         {id: 3, filterCol: 0, chartCol: 5},
-        {id: 4, filterCol: null, chartCol: 7}
+        {id: 4, filterCol: null, chartCol: 7},
       ];
 
       expect(
@@ -343,7 +346,7 @@ describe('VisualizerModal', () => {
         {id: 1, chartCol: 2},
         {id: 2, filterCol: undefined, chartCol: 3},
         {id: 3, filterCol: 0, chartCol: 5},
-        {id: 4, filterCol: null, chartCol: 7}
+        {id: 4, filterCol: null, chartCol: 7},
       ];
 
       expect(
@@ -357,7 +360,7 @@ describe('VisualizerModal', () => {
           {id: 1, filterCol: 'part', chartCol: 3},
           {id: 2, filterCol: 'par', chartCol: 3},
           {id: 3, filterCol: 'part', chartCol: 5},
-          {id: 4, filterCol: 'partial', chartCol: 7}
+          {id: 4, filterCol: 'partial', chartCol: 7},
         ];
 
         expect(
@@ -370,7 +373,7 @@ describe('VisualizerModal', () => {
           {id: 1, filterCol: '', chartCol: 3},
           {id: 2, filterCol: 'a', chartCol: 3},
           {id: 3, filterCol: 'b', chartCol: 5},
-          {id: 4, filterCol: '', chartCol: 7}
+          {id: 4, filterCol: '', chartCol: 7},
         ];
 
         expect(
@@ -385,7 +388,7 @@ describe('VisualizerModal', () => {
           {id: 3, filterCol: "it's a contraction", chartCol: 5},
           {id: 4, filterCol: '"hello", he said', chartCol: 'a'},
           {id: 5, filterCol: "'single quoted string'", chartCol: 'b'},
-          {id: 6, filterCol: "it's a contraction", chartCol: 'c'}
+          {id: 6, filterCol: "it's a contraction", chartCol: 'c'},
         ];
 
         expect(
@@ -414,7 +417,7 @@ describe('VisualizerModal', () => {
       wrapper.instance().setState({
         selectedColumn1: 'column1',
         selectedColumn2: 'column2',
-        bucketSize: '2'
+        bucketSize: '2',
       });
     });
     it('works for bar charts', () => {
@@ -440,7 +443,7 @@ describe('VisualizerModal', () => {
     it('works for filtering', () => {
       wrapper.instance().setState({
         filterColumn: 'column3',
-        filterValue: 'value'
+        filterValue: 'value',
       });
       expect(
         wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)

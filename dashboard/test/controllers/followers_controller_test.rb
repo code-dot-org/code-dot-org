@@ -225,7 +225,7 @@ class FollowersControllerTest < ActionController::TestCase
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'f', assigns(:user).gender
-      assert_equal Date.today - 13.years, assigns(:user).birthday
+      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
@@ -250,7 +250,7 @@ class FollowersControllerTest < ActionController::TestCase
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'f', assigns(:user).gender
-      assert_equal Date.today - 11.years, assigns(:user).birthday
+      assert_equal Time.zone.today - 11.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('studentx@school.edu'), assigns(:user).hashed_email
@@ -259,7 +259,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test "student_register adds existing student to section if already signed in" do
-    refute @chris_section.students.include? @student
+    refute_includes(@chris_section.students, @student)
 
     sign_in @student
     assert_does_not_create(User) do
@@ -268,7 +268,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     assert_redirected_to '/'
     @student.reload
-    assert @chris_section.students.include? @student
+    assert_includes(@chris_section.students, @student)
   end
 
   test "student_register prompts user to create an account if not signed in" do
@@ -363,7 +363,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test "student_user_new increments join section attempts when signed in" do
-    refute @chris_section.students.include? @student
+    refute_includes(@chris_section.students, @student)
     sign_in @student
     section_join_attempts = @student.num_section_attempts
     assert_does_not_create(User) do
@@ -382,7 +382,7 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: 'INVALID'}
       @new_student.reload
     end
-    assert_equal true, @new_student.display_captcha?
+    assert_equal true, @new_student.display_join_section_captcha?
   end
 
   # Enable reCAPTCHA gem in test env for just this unit test.

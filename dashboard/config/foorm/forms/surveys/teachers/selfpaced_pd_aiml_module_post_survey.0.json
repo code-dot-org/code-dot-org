@@ -145,19 +145,19 @@
           "rows": [
             {
               "value": "reading",
-              "text": "Reading a page that contained text and images about a topic "
+              "text": "Reading a page that contained text and images about a topic."
             },
             {
               "value": "trying_a_task",
-              "text": "Trying a task with step by step instructions"
+              "text": "Trying a task with step by step instructions."
             },
             {
               "value": "making_a_plan",
-              "text": "Making a plan related to preparing to teach CS Discoveries "
+              "text": "Making a plan related to preparing to teach CS Discoveries."
             },
             {
               "value": "check_for_understanding",
-              "text": "Completing a check for understanding question  "
+              "text": "Completing a check for understanding question."
             }
           ]
         },

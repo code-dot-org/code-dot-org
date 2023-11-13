@@ -28,7 +28,7 @@ Painter annieTheArtist = new Painter();   // this line of code created your Pain
 annieTheArtist.move();   // after creating your Painter object you could tell the object to move
 ```
 
-Imagine other classes that could be written in Java to serve as a blueprint for an object.  Perhaps you have a `Bicycle` class that served as a blueprint for a bicycle.  You could create different Bicycle objects using the blueprint.  Those `Bicycle` objects could have different attributes (such as different colors or be made out of different materials) but they all could have the same behaviors (such as "break" or "shift").
+Imagine other classes that could be written in Java to serve as a blueprint for an object.  Perhaps you have a `Bicycle` class that served as a blueprint for a bicycle.  You could create different Bicycle objects using the blueprint.  Those `Bicycle` objects could have different attributes (such as different colors or be made out of different materials) but they all could have the same behaviors (such as "brake" or "shift").
 
 <br>
 

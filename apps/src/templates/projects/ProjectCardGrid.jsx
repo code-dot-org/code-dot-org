@@ -16,7 +16,7 @@ class ProjectCardGrid extends Component {
     super();
     this.state = {
       showAll: true,
-      showApp: ''
+      showApp: '',
     };
   }
 
@@ -33,12 +33,12 @@ class ProjectCardGrid extends Component {
       k1: PropTypes.arrayOf(projectPropType),
       dance: PropTypes.arrayOf(projectPropType),
       poetry: PropTypes.arrayOf(projectPropType),
-      special_topic: PropTypes.arrayOf(projectPropType)
+      special_topic: PropTypes.arrayOf(projectPropType),
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
     // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool
+    limitedGallery: PropTypes.bool,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -350,13 +350,13 @@ class ProjectCardGrid extends Component {
 
 const styles = {
   grid: {
-    width: styleConstants['content-width']
+    width: styleConstants['content-width'],
   },
   link: {
-    color: color.light_teal
-  }
+    color: color.light_teal,
+  },
 };
 
 export default connect(state => ({
-  selectedGallery: state.projects.selectedGallery
+  selectedGallery: state.projects.selectedGallery,
 }))(ProjectCardGrid);

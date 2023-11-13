@@ -5,7 +5,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 import {getStore} from '@cdo/apps/redux';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const store = getStore();
   const certificateData = getScriptData('certificate');
   const {imageUrl, printUrl, announcement} = certificateData;

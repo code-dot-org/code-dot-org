@@ -17,12 +17,12 @@ export default class AnimationPickerListItem extends React.Component {
     playAnimations: PropTypes.bool,
     category: PropTypes.string,
     selected: PropTypes.bool,
-    isBackgroundsTab: PropTypes.bool
+    isBackgroundsTab: PropTypes.bool,
   };
 
   state = {
     loaded: false,
-    hover: false
+    hover: false,
   };
 
   render() {
@@ -34,7 +34,7 @@ export default class AnimationPickerListItem extends React.Component {
       playAnimations,
       label,
       selected,
-      isBackgroundsTab
+      isBackgroundsTab,
     } = this.props;
     const {loaded, hover} = this.state;
 

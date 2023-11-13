@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
@@ -14,7 +15,7 @@ export default class LessonGroupInfoDialog extends Component {
     displayName: PropTypes.string.isRequired,
     description: PropTypes.string,
     closeDialog: PropTypes.func,
-    bigQuestions: PropTypes.string
+    bigQuestions: PropTypes.string,
   };
 
   render() {
@@ -34,7 +35,7 @@ export default class LessonGroupInfoDialog extends Component {
           <Button
             text={i18n.closeDialog()}
             onClick={this.props.closeDialog}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>
@@ -45,21 +46,20 @@ export default class LessonGroupInfoDialog extends Component {
 const styles = {
   description: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r", sans-serif'
+    ...fontConstants['main-font-regular'],
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   bigQuestion: {
-    fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif'
+    ...fontConstants['main-font-bold'],
   },
   lessonGroupName: {
-    color: color.purple
+    color: color.purple,
   },
   subTitle: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };

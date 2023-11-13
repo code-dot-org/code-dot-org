@@ -44,7 +44,12 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
-  # Stack-specific IAM permissions applied to both daemon and frontends.
+
+  # ---------------------------------------------
+  # Stack-specific IAM permissions
+  # applied to both daemon and frontends.
+  # ---------------------------------------------
+
   CDOPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -59,7 +64,7 @@ Resources:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
 <% if database && !rack_env?(:production) -%>
-              - !Ref DatabaseSecret
+              - !Ref DatabaseSecretAdmin
 <% end -%>
             Condition:
               StringEquals:
@@ -135,6 +140,11 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+
+  # ---------------------------------------------
+  # Frontend Servers
+  # ---------------------------------------------
+
 <% if frontends -%>
 <%=  component 'ami', ami: (ami = commit[0..4]),
   image_id: IMAGE_ID,
@@ -158,8 +168,15 @@ Resources:
   )
 %>
 <% end -%>
+
+
 <% if load_balancer -%>
-  # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
+  # ---------------------------------------------
+  # Load Balancers
+  #
+  # TODO
+  # - hourofcode.com and csedweek.org load balancers should be added to this template.
+  # ---------------------------------------------
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
   ALB:
@@ -219,14 +236,19 @@ Resources:
       HealthCheckIntervalSeconds: 10
       HealthCheckTimeoutSeconds: 5
       TargetGroupAttributes:
+        # Least Outstanding Requests algorithm precludes usage of Slow Start feature below.
         - Key: load_balancing.algorithm.type
-          Value: least_outstanding_requests
+          Value: round_robin
         - Key: stickiness.enabled
           Value: true
         - Key: stickiness.type
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
+        # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
+        - Key: slow_start.duration_seconds
+          Value: 300
+
 <%   unless frontends -%>
       Targets:
         - {Id: !Ref <%=daemon%>, Port: 80}
@@ -241,8 +263,12 @@ Resources:
 <%  end -%>
 <% end -%>
 
-# Route53 (DNS) and CloudFront (CDN) resources:
-# TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # ---------------------------------------------
+  # Route53 (DNS) and CloudFront (CDN) resources
+  #
+  # TODO
+  # - hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # ---------------------------------------------
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
@@ -298,9 +324,17 @@ Resources:
 <%   end -%>
 <% end -%>
 
+
 <% if frontends-%>
+  # ---------------------------------------------
+  # Elasticache
+  # ---------------------------------------------
 <%=  component 'cache'%>
 <% end -%>
+
+  # ---------------------------------------------
+  # Daemon Server
+  # ---------------------------------------------
 
   DaemonRole:
     Type: AWS::IAM::Role
@@ -476,6 +510,7 @@ Resources:
       ResourceSignal:
         Timeout: PT4H
     Properties:
+      # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
@@ -486,16 +521,29 @@ Resources:
         # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
         # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
+        <%
+          # Historically, our instances have used 64-gigabyte volumes. That's
+          # smaller than we'd like, but updating the volume size requires
+          # recreating the whole stack. We have been gradually rolling out
+          # updates on a per-environment basis, with the goal of eventually
+          # upgrading everything to 256.
+          default_volume_size = 64
+          volume_size_overrides = {
+            production: 256,
+            staging: 256,
+            test: 256
+          }
+        %>
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
+            VolumeSize: <%= volume_size_overrides.fetch(rack_env, default_volume_size) %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: '$STACK',
+            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
@@ -523,9 +571,13 @@ Resources:
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <% if database && !rack_env?(:production) %>
-    DependsOn: Aurora1
+    DependsOn: DBProxy
 <% end -%>
 <%end-%>
+
+  # ---------------------------------------------
+  # Console Server
+  # ---------------------------------------------
 
 <% if options.console -%>
   Console:
@@ -533,6 +585,7 @@ Resources:
     DeletionPolicy: Retain
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
+      # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
@@ -542,7 +595,7 @@ Resources:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
-          Ebs: {VolumeSize: 64, VolumeType: gp2}
+          Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x
@@ -567,27 +620,43 @@ Resources:
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <%   if database && !rack_env?(:production)%>
-    DependsOn: Aurora1
+    DependsOn: DBProxy
 <%   end -%>
 <% end-%>
 
+
 <% if alarms-%>
+  # ---------------------------------------------
+  # CloudWatch Alarms
+  # ---------------------------------------------
 <%=  component 'alarms'%>
 <% end -%>
 
-<% if database-%>
-<%=  component 'database'%>
-<% end -%>
+<%=  component 'logging'%>
 
+  # ---------------------------------------------
+  # Database
+  # ---------------------------------------------
+<%=  component 'database'%>
+
+  # ---------------------------------------------
+  # Codeprojects Resources
+  # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
+
+  # ---------------------------------------------
+  # Custom Chef Configuration Secret
+  #
+  # Update this secret string manually after the stack is created to
+  # customize Chef configuration. The value should never be changed in
+  # the stack itself, since it would clobber all other changes.
+  # ---------------------------------------------
 
   ChefConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: !Sub "Custom Chef attributes for ${AWS::StackName} CloudFormation stack"
       Name: !Sub "CfnStack/${AWS::StackName}/chef"
-      # Update this secret manually after the stack is created to customize Chef configuration.
-      # The value should never be changed in the stack itself, since it would clobber all other changes.
       SecretString: '{}'
 
 Outputs:

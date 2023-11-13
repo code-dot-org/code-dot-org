@@ -3,16 +3,18 @@ import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import manageStudents, {
   RowType,
-  blankStudentTransfer
+  blankStudentTransfer,
 } from './manageStudentsRedux';
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+import {Provider} from 'react-redux';
 
 const initialState = {
   manageStudents: {
     loginType: '',
     studentData: {},
-    addStatus: {}
+    addStatus: {},
   },
   teacherSections: {
     selectedSectionId: 53,
@@ -21,9 +23,9 @@ const initialState = {
         id: 53,
         name: 'Test section',
         loginType: SectionLoginType.email,
-        hidden: false
-      }
-    ]
+        hidden: false,
+      },
+    ],
   },
   unitSelection: {
     scriptId: 22,
@@ -31,10 +33,10 @@ const initialState = {
       {
         id: 11,
         name: 'All the Things *',
-        units: [{id: 22, key: 'allthethings'}]
-      }
-    ]
-  }
+        units: [{id: 22, key: 'allthethings'}],
+      },
+    ],
+  },
 };
 
 // Student names out of alphabetical order to demonstrate
@@ -53,7 +55,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -68,7 +70,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -83,8 +85,24 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
+  {
+    id: 4,
+    name: 'GuestTeacher',
+    username: 'teacher1',
+    userType: 'teacher',
+    age: '21+',
+    gender: 'f',
+    loginType: SectionLoginType.email,
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+    isEditing: false,
+    rowType: RowType.TEACHER,
+  },
 ];
 
 const wordAccountData = [
@@ -101,7 +119,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -116,7 +134,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -130,8 +148,24 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
+  {
+    id: 4,
+    name: 'GuestTeacher',
+    username: 'teacher1',
+    userType: 'teacher',
+    age: '21+',
+    gender: 'f',
+    loginType: SectionLoginType.word,
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+    isEditing: false,
+    rowType: RowType.TEACHER,
+  },
 ];
 
 const pictureAccountData = [
@@ -149,7 +183,7 @@ const pictureAccountData = [
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -165,7 +199,7 @@ const pictureAccountData = [
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -181,8 +215,24 @@ const pictureAccountData = [
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
+  {
+    id: 4,
+    name: 'GuestTeacher',
+    username: 'teacher1',
+    userType: 'teacher',
+    age: '21+',
+    gender: 'f',
+    loginType: SectionLoginType.picture,
+    secretWords: 'wizard',
+    secretPictureName: 'wizard',
+    secretPicturePath:
+      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    sectionId: 53,
+    isEditing: false,
+    rowType: RowType.TEACHER,
+  },
 ];
 
 const googleData = [
@@ -199,7 +249,7 @@ const googleData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -214,8 +264,8 @@ const googleData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
 const cleverData = [
@@ -232,7 +282,7 @@ const cleverData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -247,104 +297,61 @@ const cleverData = [
     secretPicturePath:
       'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
-    rowType: RowType.STUDENT
-  }
+    rowType: RowType.STUDENT,
+  },
 ];
 
-export default storybook => {
-  storybook
-    .storiesOf('ManageStudentsTable', module)
-    .withReduxStore(
+export default {
+  title: 'ManageStudents/ManageStudentsTable',
+  component: UnconnectedManageStudentsTable,
+};
+
+const Template = args => (
+  <Provider
+    store={reduxStore(
       {manageStudents, teacherSections, unitSelection},
       initialState
-    )
-    .addStoryTable([
-      {
-        name: 'Table for email accounts',
-        description: 'Ability to edit/delete all data including the password',
-        story: () => (
-          <UnconnectedManageStudentsTable
-            studentData={passwordAccountData}
-            editingData={{}}
-            loginType={SectionLoginType.email}
-            addStatus={{}}
-            transferData={blankStudentTransfer}
-            transferStatus={{}}
-            sectionId={53}
-            sectionCode="ABCDEF"
-            sectionName="My Section"
-          />
-        )
-      },
-      {
-        name: 'Table for word accounts',
-        description:
-          'Ability to edit/delete all data and reset the secret word',
-        story: () => (
-          <UnconnectedManageStudentsTable
-            studentData={wordAccountData}
-            editingData={{}}
-            loginType={SectionLoginType.word}
-            addStatus={{}}
-            transferData={blankStudentTransfer}
-            transferStatus={{}}
-            sectionId={53}
-            sectionCode="ABCDEF"
-            sectionName="My Section"
-          />
-        )
-      },
-      {
-        name: 'Table for picture accounts',
-        description:
-          'Ability to edit/delete all data and reset the secret picture',
-        story: () => (
-          <UnconnectedManageStudentsTable
-            studentData={pictureAccountData}
-            editingData={{}}
-            loginType={SectionLoginType.picture}
-            addStatus={{}}
-            transferData={blankStudentTransfer}
-            transferStatus={{}}
-            sectionId={53}
-            sectionCode="ABCDEF"
-            sectionName="My Section"
-          />
-        )
-      },
-      {
-        name: 'Table for Google accounts',
-        description: 'Read only table',
-        story: () => (
-          <UnconnectedManageStudentsTable
-            studentData={googleData}
-            editingData={{}}
-            loginType={SectionLoginType.google_classroom}
-            addStatus={{}}
-            transferData={blankStudentTransfer}
-            transferStatus={{}}
-            sectionId={53}
-            sectionCode="ABCDEF"
-            sectionName="My Section"
-          />
-        )
-      },
-      {
-        name: 'Table for Clever accounts',
-        description: 'Ready only table',
-        story: () => (
-          <UnconnectedManageStudentsTable
-            studentData={cleverData}
-            editingData={{}}
-            loginType={SectionLoginType.clever}
-            addStatus={{}}
-            transferData={blankStudentTransfer}
-            transferStatus={{}}
-            sectionId={53}
-            sectionCode="ABCDEF"
-            sectionName="My Section"
-          />
-        )
-      }
-    ]);
+    )}
+  >
+    <UnconnectedManageStudentsTable
+      editingData={{}}
+      addStatus={{}}
+      transferData={blankStudentTransfer}
+      transferStatus={{}}
+      sectionId={53}
+      sectionCode="ABCDEF"
+      sectionName="My Section"
+      {...args}
+    />
+  </Provider>
+);
+
+export const TableForEmailAccounts = Template.bind({});
+TableForEmailAccounts.args = {
+  studentData: passwordAccountData,
+  loginType: SectionLoginType.email,
+};
+
+export const TableForWordAccounts = Template.bind({});
+TableForWordAccounts.args = {
+  studentData: wordAccountData,
+  loginType: SectionLoginType.word,
+};
+
+export const TableForPictureAccounts = Template.bind({});
+TableForPictureAccounts.args = {
+  studentData: pictureAccountData,
+  loginType: SectionLoginType.picture,
+};
+
+export const TableForGoogleAccounts = Template.bind({});
+TableForGoogleAccounts.args = {
+  studentData: googleData,
+  loginType: SectionLoginType.google_classroom,
+};
+
+export const TableForCleverAccounts = Template.bind({});
+TableForCleverAccounts.args = {
+  studentData: cleverData,
+  loginType: SectionLoginType.clever,
 };

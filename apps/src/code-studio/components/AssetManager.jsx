@@ -4,7 +4,7 @@ import React from 'react';
 import {
   assets as assetsApi,
   starterAssets as starterAssetsApi,
-  files as filesApi
+  files as filesApi,
 } from '@cdo/apps/clientApi';
 
 import AssetRow from './AssetRow';
@@ -19,13 +19,13 @@ import {RecordingFileType} from './recorders';
 export const AudioErrorType = {
   NONE: 'none',
   INITIALIZE: 'initialize',
-  SAVE: 'save'
+  SAVE: 'save',
 };
 export const ImageMode = {
   FILE: 'file',
   ICON: 'icon',
   URL: 'url',
-  DEFAULT: 'default'
+  DEFAULT: 'default',
 };
 
 const errorMessages = {
@@ -33,7 +33,7 @@ const errorMessages = {
   413: 'The file is too large.',
   415: 'This type of file is not supported.',
   500: 'The server responded with an error.',
-  unknown: 'An unknown error occurred.'
+  unknown: 'An unknown error occurred.',
 };
 
 const errorUploadDisabled =
@@ -66,7 +66,7 @@ export default class AssetManager extends React.Component {
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
-    elementId: PropTypes.string
+    elementId: PropTypes.string,
   };
 
   constructor(props) {
@@ -76,7 +76,7 @@ export default class AssetManager extends React.Component {
       starterAssets: null,
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
       recordingAudio: false,
-      audioErrorType: AudioErrorType.NONE
+      audioErrorType: AudioErrorType.NONE,
     };
   }
 
@@ -113,7 +113,7 @@ export default class AssetManager extends React.Component {
   onStarterAssetsFailure = xhr => {
     this.setState({
       statusMessage:
-        'Error loading starter assets: ' + getErrorMessage(xhr.status)
+        'Error loading starter assets: ' + getErrorMessage(xhr.status),
     });
   };
 
@@ -125,7 +125,7 @@ export default class AssetManager extends React.Component {
   onAssetListReceived = result => {
     assetListStore.reset(result.files);
     this.setState({
-      assets: assetListStore.list(this.props.allowedExtensions)
+      assets: assetListStore.list(this.props.allowedExtensions),
     });
   };
 
@@ -143,7 +143,7 @@ export default class AssetManager extends React.Component {
     }
 
     this.setState({
-      statusMessage: 'Error loading asset list: ' + getErrorMessage(status)
+      statusMessage: 'Error loading asset list: ' + getErrorMessage(status),
     });
   };
 
@@ -154,7 +154,7 @@ export default class AssetManager extends React.Component {
 
   onUploadDone = result => {
     let newState = {
-      statusMessage: 'File "' + result.filename + '" successfully uploaded!'
+      statusMessage: 'File "' + result.filename + '" successfully uploaded!',
     };
 
     if (this.props.isStartMode) {
@@ -172,14 +172,14 @@ export default class AssetManager extends React.Component {
 
   onUploadError = status => {
     this.setState({
-      statusMessage: 'Error uploading file: ' + getErrorMessage(status)
+      statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
     firehoseClient.putRecord({
       study: 'project-data-integrity',
       study_group: 'v4',
       event: 'asset-upload-error',
       project_id: this.props.projectId,
-      data_int: status
+      data_int: status,
     });
   };
 
@@ -202,13 +202,13 @@ export default class AssetManager extends React.Component {
       project_id: this.props.projectId,
       data_json: JSON.stringify({
         assetName: name,
-        elementId: this.props.elementId
-      })
+        elementId: this.props.elementId,
+      }),
     });
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
-      statusMessage: `File "${name}" successfully deleted!`
+      statusMessage: `File "${name}" successfully deleted!`,
     });
   };
 
@@ -218,7 +218,7 @@ export default class AssetManager extends React.Component {
     );
     this.setState({
       starterAssets,
-      statusMessage: `File "${name}" successfully deleted!`
+      statusMessage: `File "${name}" successfully deleted!`,
     });
   };
 
@@ -236,7 +236,7 @@ export default class AssetManager extends React.Component {
       soundPlayer: this.props.soundPlayer,
       imagePicker: this.props.imagePicker,
       projectId: this.props.projectId,
-      elementId: this.props.elementId
+      elementId: this.props.elementId,
     };
   };
 
@@ -354,19 +354,19 @@ export default class AssetManager extends React.Component {
           <div>
             <div>
               {i18n.manageAssetsSoundLibraryMessage({
-                soundLibraryButtonText: i18n.soundLibrary()
+                soundLibraryButtonText: i18n.soundLibrary(),
               })}
             </div>
             <div>
               {i18n.manageAssetsSoundUploadMessage({
-                assetUploaderButtonText: i18n.uploadFile()
+                assetUploaderButtonText: i18n.uploadFile(),
               })}
             </div>
           </div>
         ) : (
           <div>
             {i18n.manageAssetsDefaultMessage({
-              assetUploaderButtonText: i18n.uploadFile()
+              assetUploaderButtonText: i18n.uploadFile(),
             })}
           </div>
         );
@@ -400,6 +400,6 @@ const styles = {
   emptyText: {
     margin: '1em 0',
     fontSize: '16px',
-    lineHeight: '20px'
-  }
+    lineHeight: '20px',
+  },
 };

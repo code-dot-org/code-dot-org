@@ -10,7 +10,8 @@ theme: responsive
 
 - نوصي باتصال إنترنت بسرعة 15 ميجابايت / ثانية على الأقل في مدرستك.
 - أصغر حجم شاشة ندعمه هو 1024 × 728 بكسل.
-- ستحتاج إلى كمبيوتر مكتبي أو كمبيوتر محمول مزود بفأرة (أو لوحة اللمس) ولوحة مفاتيح لدوراتنا التدريبية على مستوى المدرسة الإعدادية والثانوية: اكتشافات علوم الكمبيوتر ومبادئ علوم الكمبيوتر ومقدمة إلى App Lab. معظم الأجهزة اللوحية والأجهزة المحمولة غير مدعومة لهذه الدورات التدريبية. انظر "تفاصيل دعم الأجهزة المحمولة والأجهزة اللوحية" أدناه للتعرف على الاستثناءات الخاصة بالأجهزة.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. انظر "تفاصيل دعم الأجهزة المحمولة والأجهزة اللوحية" أدناه للتعرف على الاستثناءات الخاصة بالأجهزة.
 - جميع المحتويات الأخرى، مثل دورات رياض الأطفال-الصف الخامس (أساسيات علوم الكمبيوتر) وأنشطة ساعة البرمجة متوافقة مع أجهزة iPad وأجهزة Chromebook بالإضافة إلى جميع الأجهزة اللوحية والكمبيوتر المحمول أو أجهزة الكمبيوتر المكتبية الحديثة الأخرى.
 - هل تبحث عن تفاصيل دعم الجهاز المحمول؟ اقرأ ما يلي.
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## تفاصيل دعم الهاتف المحمول والكمبيوتر اللوحي
 
-لا تتوافق جميع دورات استكشافات علوم الكمبيوتر ومباديء علوم الكمبيوتر ومقدمة إلى App Lab مع الأجهزة اللوحية أو الأجهزة المحمولة - يلزم وجود لوحة مفاتيح وفأرة كاملة (أو لوحة اللمس، مثل أجهزة MacBooks). معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
 
 - جهاز Microsoft Surface Pro مع لوحة مفاتيح خارجية
 - جهاز iPad يعمل بنظام iPadOS 13.4 أو أحدث مع لوحة مفاتيح خارجية وفأرة خارجية أو لوحة لمس
 
-جميع المحتويات الأخرى، مثل دورات رياض الأطفال-الصف الخامس (أساسيات علوم الكمبيوتر) وأنشطة ساعة البرمجة متوافقة مع أجهزة iPad وأجهزة Chromebook بالإضافة إلى جميع الأجهزة اللوحية والكمبيوتر المحمول أو أجهزة الكمبيوتر المكتبية الحديثة الأخرى.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### الهواتف المحمولة
 
@@ -101,15 +102,25 @@ theme: responsive
 
 قبل أن تبدأ دورات منصة Code.org عبر الإنترنت، اختبر تشغيل الفيديو أدناه للتأكد من أنك جاهز للبدء.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-هذا هو مشغل الفيديو المستخدم في المنهج. سيحاول عرض الفيديو عبر يوتيوب، وإذا تم حظر موقع يوتيوب، يمكنك إظهار الفيديو المستضاف على منصة Code.org باستخدام المشغل "الاحتياطي" بدلاً من ذلك.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### الفيديو لا يعمل؟
 
-إذا لم يعمل الفيديو، يمكنك مراسلتنا عبر البريد الإلكتروني على support@code.org.
+If video does not work, you can email us at support@code.org.
 
-ومع ذلك، لا يزال بإمكانك استخدام دروسنا بدون فيديو.
+However, you can still use our tutorials without video.
 
 1. لقد جعلنا جميع مقاطع الفيديو الخاصة بنا [متوفرة للتنزيل](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). إذا كانت مدرستك ذات نطاق ترددي منخفض، نوصيك بتنزيل مقاطع الفيديو وعرضها على الطلاب على شاشة مشتركة.
 2. تم دمج رمز رابط التنزيل الأخضر في برامجنا التعليمية <img src="/images/green-download.png" width=25 height=25 /> لكل مقطع فيديو، مما يسمح للطلاب بتنزيل مقاطع فيديو تعليمية فردية.
@@ -119,8 +130,8 @@ theme: responsive
 
 ## إعدادات خاصة لمستخدمي Google Apps / G-Suite
 
-إذا كنت مسؤولًا في G-suite، فتأكد من التحقق من إعدادات التقييد الخاصة بك على موقع يوتيوب. إذا حددت إعداد "وصول مقيد صارم إلى يوتيوب" أو إذا رأيت رسائل تنص على "تم حظر هذا الفيديو"، يمكنك إضافة قناتنا إلى قائمة القنوات المعتمدة. انظر [هذا الدليل](https://support.google.com/a/answer/6245597) من جوجل للتعرف على كيفية إضافة قناتنا إلى القائمة المعتمدة. يمكنك أيضًا الاطلاع على [هذا الدليل](https://support.google.com/a/answer/6212415?hl=en) لمعرفة المزيد حول الإعدادات المختلفة وأفضلها لفصلك الدراسي.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## هل ما زلت تواجه مشكلة؟
 
-يمكننا مساعدتك - فقط راسلنا على support@code.org!
+We'll help you out - just email us at support@code.org!

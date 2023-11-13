@@ -1,12 +1,8 @@
 /*
-  Code from: https://github.com/microbit-foundation/microbit-firmata
-
-  This file includes changes to the original code to facilitate using this
-  in our repo. The changes are tracked here:
-  https://github.com/microbit-foundation/microbit-firmata/pull/3
+  This file is a copy of MBFirmataClient.js from: https://github.com/microbit-foundation/microbit-firmata
+  It is a client class written in Javascript that runs in Node.js and communicates with the micro:bit - it includes
+  merged updates for Code.org integration.
  */
-
-// TODO Reference this code from package.json after demo
 
 /*
 MIT License

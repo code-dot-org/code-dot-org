@@ -1,0 +1,26 @@
+name 'csc_ecosystems_matching_cfu'
+title 'Match the code to the image'
+height '300'
+question 'Create a Fishing Zone for boats ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)'
+answer '![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)'
+question 'Start a Fishing Season and a No Fishing Season
+![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)'
+answer '![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)'
+question 'Set Fishing Limits ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)'
+answer '![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)'
+
+
+
+
+markdown <<MARKDOWN
+## Look at the three sustainable fishing practices
+
+Drag the code to the matching image.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

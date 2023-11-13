@@ -9,19 +9,20 @@ const WorkshopPropType = PropTypes.shape({
   subject: PropTypes.string,
   notes: PropTypes.string,
   regional_partner: PropTypes.shape({
-    name: PropTypes.string
+    name: PropTypes.string,
   }),
   organizer: PropTypes.shape({
     name: PropTypes.string,
-    email: PropTypes.string
+    email: PropTypes.string,
   }),
-  virtual: PropTypes.bool
+  virtual: PropTypes.bool,
+  module: PropTypes.string,
 });
 
 const FacilitatorPropType = PropTypes.shape({
   email: PropTypes.string,
   image_path: PropTypes.string,
-  bio: PropTypes.string
+  bio: PropTypes.string,
 });
 
 export {WorkshopPropType, FacilitatorPropType};

@@ -7,7 +7,7 @@ import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSecti
 import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
 import {
   isScriptHiddenForSection,
-  updateHiddenScript
+  updateHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 
 class AssignButton extends React.Component {
@@ -23,16 +23,16 @@ class AssignButton extends React.Component {
     assignToSection: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object,
     updateHiddenScript: PropTypes.func.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {
-    confirmationDialogOpen: false
+    confirmationDialogOpen: false,
   };
 
   onCloseDialog = () => {
     this.setState({
-      confirmationDialogOpen: false
+      confirmationDialogOpen: false,
     });
   };
 
@@ -44,7 +44,7 @@ class AssignButton extends React.Component {
       courseVersionId,
       scriptId,
       assignToSection,
-      updateHiddenScript
+      updateHiddenScript,
     } = this.props;
     updateHiddenScript(sectionId, scriptId, false);
     assignToSection(
@@ -64,7 +64,7 @@ class AssignButton extends React.Component {
       courseVersionId,
       sectionId,
       hiddenLessonState,
-      assignToSection
+      assignToSection,
     } = this.props;
     const isHiddenFromSection =
       sectionId &&
@@ -73,7 +73,7 @@ class AssignButton extends React.Component {
       isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
     if (isHiddenFromSection) {
       this.setState({
-        confirmationDialogOpen: true
+        confirmationDialogOpen: true,
       });
     } else {
       assignToSection(
@@ -100,7 +100,7 @@ class AssignButton extends React.Component {
         <div style={buttonMarginStyle}>
           <Button
             style={styles.boxShadow}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.assignToSection()}
             icon="plus"
             onClick={this.handleClick}
@@ -124,16 +124,16 @@ const styles = {
   buttonMargin: {
     marginLeft: 10,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonMarginRTL: {
     marginRight: 10,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   boxShadow: {
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 63%)'
-  }
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 63%)',
+  },
 };
 
 export const UnconnectedAssignButton = AssignButton;
@@ -141,10 +141,10 @@ export const UnconnectedAssignButton = AssignButton;
 export default connect(
   state => ({
     hiddenLessonState: state.hiddenLesson,
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
   }),
   {
     assignToSection,
-    updateHiddenScript
+    updateHiddenScript,
   }
 )(AssignButton);

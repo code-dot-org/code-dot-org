@@ -8,15 +8,15 @@ nav: how_to_nav
 
 # Ako si naplánovať Hodinu kódu
 
-### Pridajte sa k hnutiu a absolvujte so skupinou študentov ich prvú hodinu informatiky podľa týchto krokov. Hodina Kódu je jednoduchá - aj pre začiatočníkov! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Pridajte sa k hnutiu a absolvujte so skupinou študentov ich prvú hodinu informatiky podľa týchto krokov. Hodina Kódu je jednoduchá - aj pre začiatočníkov! Ak by ste chceli mať ďalšie ruky na pomoc, môžete nájsť [miestneho dobrovoľníka]({{ urls/volunteer_local }}), ktorý vám pomôže viesť Hodinu kódu vo vašej triede.
 
 ### Ak máte ďalšie otázky, pozrite si náš [návod, ako sa zúčastniť Hodiny kódu]({{ localized_files/participation_guide }}).
 
 ***
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1. Pozrite si video "Ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
-## 2. Explore Activities and Tutorials
+## 2. Prezrite si aktivity a lekcie
 
 Ponúkame množstvo [zábavných kurzov a aktivít]({{ urls/learn }}) pre začiatočníkov aj pokročilých zo všetkých vekových kategórií, ktoré môžu žiaci robiť samostatne. Žiaci radi pracujú na kurzoch a aktivitách samostatne, no k mnohým z nich poskytujeme aj plány hodín, pomocou ktorých môžu učitelia viesť diskusiu o danej téme alebo rozšíriť aktivitu.
 
@@ -24,7 +24,7 @@ Prezrite si ponúkané aktivity a vopred sa rozhodnite, či vyberiete jednu akt
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+## 3. Vytvorte si plán na daný deň
 
 ### Zamyslite sa nad tým, aké technické vybavenie potrebujete. Ak nemáte k dispozícii počítače, nič sa nedeje!
 
@@ -70,14 +70,14 @@ Prehrajte inšpiratívne video:
 - Pôvodné video vytvorené pri príležitosti spustenia Code.org, v ktorom vystupujú Bill Gates, Mark Zuckerberg a hviezda NBA Chris Bosh. Na výber je [1-minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutová](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9-minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia.
 - Pozrite si ďalšie inšpiratívne [zdroje]({{ urls/inspire }}) a [videá](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Je úplne v poriadku, ak ste vy a vaši študenti vo svete informatiky ešte vôbec nevyznáte. Tu je niekoľko nápadov na úvod aktivity Hodina kódu:
 
 - Vysvetlite, ako technológie ovplyvňujú naše životy. Uveďte príklady, ktoré pochopia chlapci aj dievčatá (záchrana životov, pomáhanie ľuďom, spájanie ľudí atď.).
 - Spolu s triedou spravte zoznam vecí z bežného života, ktoré využívajú počítačový kód.
 - [Na tomto odkaze]({{ urls/girls }}) nájdete tipy, ako zatraktívniť informatiku pre dievčatá.
 
 
-## 6. Get Coding!
+## 6. Pustite sa do programovania!
 
 Nasmerujte žiakov na aktivitu
 
@@ -96,7 +96,7 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate your Students' Success
+## 7. Oslávte úspechy svojich žiakov
 
 [col-33]
 
@@ -107,7 +107,7 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 - Vytlačte pre svojich žiakov [certifikáty]({{ urls/certificates }}).
 - Vytlačte pre žiakov [nálepky s textom „I did the Hour of Code!“]({{ urls/promote_stickers }}) (Mám za sebou Hodinu kódu!).
 - Objednajte pre svoju školu [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
-- Share photos and videos of your Hour of Code event on social media. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
+- Zdieľajte fotografie a videá z vašej udalosti Hodiny kódu na sociálnych sieťach. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 ----
 

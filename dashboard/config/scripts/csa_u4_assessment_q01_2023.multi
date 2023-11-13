@@ -26,3 +26,5 @@ The third line uses the `(int)` casting operator to cast the value assigned to `
 
 The final line prints the value assigned to `val` again, which is still `1.0`. Casting a value does not change the original value.
 MARKDOWN
+
+allow_multiple_attempts true

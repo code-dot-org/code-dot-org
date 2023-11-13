@@ -18,15 +18,15 @@ import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboa
 export default class DetailView extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      applicationId: PropTypes.string.isRequired
+      applicationId: PropTypes.string.isRequired,
     }).isRequired,
     route: PropTypes.shape({
-      course: PropTypes.oneOf([...Object.values(CourseKeyMap), 'course_tbd'])
-    })
+      course: PropTypes.oneOf([...Object.values(CourseKeyMap), 'course_tbd']),
+    }),
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleApplicationLoaded = applicationData => {

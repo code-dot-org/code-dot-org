@@ -11,26 +11,26 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         numAnswered: 2,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         numAnswered: 4,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         numAnswered: 2,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     notAnswered: 1,
-    totalAnswered: 10
+    totalAnswered: 10,
   },
   {
     id: 2,
@@ -40,36 +40,36 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         numAnswered: 3,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         numAnswered: 1,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         numAnswered: 2,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionF(),
         numAnswered: 1,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     notAnswered: 2,
-    totalAnswered: 10
+    totalAnswered: 10,
   },
   {
     id: 3,
@@ -80,31 +80,31 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         numAnswered: 2,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         numAnswered: 3,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     notAnswered: 5,
-    totalAnswered: 10
+    totalAnswered: 10,
   },
   {
     id: 4,
@@ -114,47 +114,47 @@ const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         numAnswered: 4,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         numAnswered: 5,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionF(),
         numAnswered: 3,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionG(),
         numAnswered: 1,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     notAnswered: 0,
-    totalAnswered: 10
-  }
+    totalAnswered: 10,
+  },
 ];
 
 export default {
   name: 'MultipleChoiceAssessmentsOverviewTable',
-  component: MultipleChoiceAssessmentsOverviewTable
+  component: MultipleChoiceAssessmentsOverviewTable,
 };
 
 const Template = args => (
@@ -171,7 +171,7 @@ OverviewWith7Answers.args = {questionAnswerData: multipleChoiceData};
 const reducedMultipleChoiceData = multipleChoiceData.map(question => {
   return {
     ...question,
-    answers: question.answers.slice(0, 2)
+    answers: question.answers.slice(0, 2),
   };
 });
 

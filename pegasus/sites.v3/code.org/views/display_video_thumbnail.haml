@@ -9,7 +9,7 @@
 - image_url ||= nil
 - if image_url
   - image = image_url
-- else 
+- else
   - image = letterbox == 'true' ? "//i.ytimg.com/vi/#{video_code}/0.jpg" : "//i.ytimg.com/vi/#{video_code}/mqdefault.jpg"
 - thumbnail_only ||= false
 
@@ -19,25 +19,54 @@
     width: #{width};
     .thumbnail-wrapper {
       position: relative;
-      overflow: hidden;
       .thumbnail-image {
         width: 100%;
       }
     }
   }
 
-  .play-button-center {
-    img.play {
+  .video-thumbnail-wrapper {
+    position: relative;
+
+    .play-button-wrapper {
+      all: unset;
       position: absolute;
-      top: 40%;
-      left: 40%;
-      width: 20%;
+      border-radius: 100%;
+      transition: background ease-in-out .2s;
+
+      &:hover {
+        background: #6F488E;
+      }
+
+      &:focus {
+        outline: #009EB0 solid 2px;
+        outline-offset: 2px;
+        background: #6F488E;
+      }
+
+      img.play {
+        position: absolute;
+        top: 0 !important;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+      }
+    }
+  }
+
+  .play-button-center {
+    .play-button-wrapper {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6em;
+      height: 5.95em;
+      background: rgba(0,0,0,.2);
     }
   }
 
   .play-button-caption {
-    img.play {
-      position: absolute;
+    .play-button-wrapper {
       bottom: 5px;
       left: 5px;
       width: 40px;
@@ -79,8 +108,10 @@
 
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
-    %img.thumbnail-image{:src => image, :alt => "video thumbnail"}
-    %img.play{:src => "/shared/images/play-button.png", :alt => "play button"}
+    %div.video-thumbnail-wrapper
+      %img.thumbnail-image{:src => image, :alt => "Video thumbnail"}
+      %button.play-button-wrapper
+        %img.play{:src => "/shared/images/play-button.png", :alt => "Play video #{caption}"}
     .video_caption_link= caption
 
 - unless thumbnail_only

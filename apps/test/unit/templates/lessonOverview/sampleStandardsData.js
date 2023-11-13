@@ -8,7 +8,7 @@ export const cspStandards = [
     categoryDescription: 'Explain how data can be represented using bits.',
     shortcode: 'DAT-1.A.2',
     description:
-      'Computing devices represent data digitally, meaning that the lowest-level components of any value are bits.'
+      'Computing devices represent data digitally, meaning that the lowest-level components of any value are bits.',
   },
   {
     frameworkName: 'CSP Conceptual Framework',
@@ -18,7 +18,7 @@ export const cspStandards = [
     categoryShortcode: 'DAT-1.A',
     categoryDescription: 'Explain how data can be represented using bits.',
     shortcode: 'DAT-1.A.4',
-    description: 'A byte is 8 bits. '
+    description: 'A byte is 8 bits. ',
   },
   {
     frameworkName: 'CSP Conceptual Framework',
@@ -30,7 +30,7 @@ export const cspStandards = [
       'For binary numbers:\na. Calculate the binary (base 2) equivalent of a positive integer (base 10) and vice versa. \nb. Compare and order binary numbers.',
     shortcode: 'DAT-1.C.1',
     description:
-      'Number bases, including binary and decimal, are used to represent data.'
+      'Number bases, including binary and decimal, are used to represent data.',
   },
   {
     frameworkName: 'CSP Conceptual Framework',
@@ -42,8 +42,8 @@ export const cspStandards = [
       'For binary numbers:\na. Calculate the binary (base 2) equivalent of a positive integer (base 10) and vice versa. \nb. Compare and order binary numbers.',
     shortcode: 'DAT-1.C.2',
     description:
-      'Binary (base 2) uses only combinations of the digits zero and one.'
-  }
+      'Binary (base 2) uses only combinations of the digits zero and one.',
+  },
 ];
 
 export const cstaStandards = [
@@ -54,7 +54,7 @@ export const cstaStandards = [
     categoryShortcode: 'AP',
     categoryDescription: 'Algorithms & Programming',
     shortcode: '1B-AP-09',
-    description: 'Create programs that use variables to store and modify data.'
+    description: 'Create programs that use variables to store and modify data.',
   },
   {
     frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
@@ -64,6 +64,6 @@ export const cstaStandards = [
     categoryDescription: 'Data & Analysis',
     shortcode: '3A-DA-09',
     description:
-      'Translate between different bit representations of real-world phenomena, such as characters, numbers, and images.'
-  }
+      'Translate between different bit representations of real-world phenomena, such as characters, numbers, and images.',
+  },
 ];

@@ -9,14 +9,14 @@ import locale from '@cdo/locale';
 
 const failedLoadError = {
   status: 404,
-  message: 'import failed'
+  message: 'import failed',
 };
 
 const fakeClassroom = {
   id: '2',
   name: 'myClassroom',
   section: '1st Pd',
-  enrollment_code: '12345'
+  enrollment_code: '12345',
 };
 
 describe('RosterDialog', () => {
@@ -51,7 +51,7 @@ describe('RosterDialog', () => {
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
     assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
-      oauthSource: OAuthSectionTypes.google_classroom
+      oauthSource: OAuthSectionTypes.google_classroom,
     });
 
     analyticsSpy.restore();
@@ -90,9 +90,24 @@ describe('RosterDialog', () => {
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
-      oauthSource: OAuthSectionTypes.google_classroom
+      oauthSource: OAuthSectionTypes.google_classroom,
     });
 
     analyticsSpy.restore();
+  });
+
+  it('displays import and redirect button to new section setup', () => {
+    const wrapper = mount(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[fakeClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+        userId={90}
+      />
+    );
+    expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
   });
 });

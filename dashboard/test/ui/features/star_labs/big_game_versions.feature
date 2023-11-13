@@ -3,7 +3,6 @@ Feature: Big Game Versions
 
   Background:
     Given I am on "http://studio.code.org/s/allthethings/lessons/13/levels/6?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
     And element ".tooltip-x-close" is visible

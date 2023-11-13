@@ -8,7 +8,7 @@ describe('ActivitySection', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      section: sampleActivities[0].activitySections[0]
+      section: sampleActivities[0].activitySections[0],
     };
   });
 

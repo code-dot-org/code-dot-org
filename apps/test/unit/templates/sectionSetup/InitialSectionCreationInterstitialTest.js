@@ -20,7 +20,7 @@ describe('InitialSectionCreationInterstitial', () => {
 
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
-      EVENTS.ABANDON_SECTION_SETUP_SIGN_IN_EVENT
+      EVENTS.ABANDON_SECTION_SETUP_SIGN_IN_EVENT,
     ]);
 
     analyticsSpy.restore();
@@ -37,7 +37,7 @@ describe('InitialSectionCreationInterstitial', () => {
 
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
-      EVENTS.SECTION_SETUP_SIGN_IN_EVENT
+      EVENTS.SECTION_SETUP_SIGN_IN_EVENT,
     ]);
 
     analyticsSpy.restore();

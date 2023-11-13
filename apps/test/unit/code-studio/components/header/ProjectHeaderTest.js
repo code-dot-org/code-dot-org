@@ -10,7 +10,7 @@ import ProjectHeader from '@cdo/apps/code-studio/components/header/ProjectHeader
 describe('ProjectHeader', () => {
   beforeEach(() => {
     replaceOnWindow('appOptions', {
-      level: {}
+      level: {},
     });
   });
 

@@ -65,3 +65,5 @@ The outer-most MIN here needs values to compute with, so the inner-most calls mu
 
 
 MARKDOWN
+
+allow_multiple_attempts true

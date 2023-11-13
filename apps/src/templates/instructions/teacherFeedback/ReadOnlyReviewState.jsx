@@ -4,10 +4,11 @@ import i18n from '@cdo/locale';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class ReadOnlyReviewState extends React.Component {
   static propTypes = {
-    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates))
+    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
   };
 
   renderCompleted() {
@@ -56,16 +57,15 @@ const styles = {
     alignItems: 'center',
     color: color.dimgray,
     fontSize: 12,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
+    ...fontConstants['main-font-semi-bold'],
   },
   keepWorkingBadge: {
     fontSize: 8,
-    marginRight: 5
+    marginRight: 5,
   },
   keepWorking: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };
 
 export default ReadOnlyReviewState;

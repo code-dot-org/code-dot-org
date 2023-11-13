@@ -69,19 +69,19 @@ export default class BubbleChoice extends React.Component {
 const styles = {
   h2: {
     color: color.charcoal,
-    padding: '10px 0'
+    padding: '10px 0',
   },
   btn: {
     color: color.white,
     backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   btnOrange: {
     backgroundColor: color.orange,
-    borderColor: color.orange
+    borderColor: color.orange,
   },
   cards: {
     display: 'flex',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

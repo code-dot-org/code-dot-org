@@ -5,20 +5,20 @@ import {action} from '@storybook/addon-actions';
 const DEFAULT_PROPS = {
   values: {
     email: '',
-    emailOptIn: ''
+    emailOptIn: '',
   },
   validationErrors: {
     email: undefined,
-    emailOptIn: undefined
+    emailOptIn: undefined,
   },
   disabled: false,
   onChange: action('onChange'),
-  onSubmit: action('onSubmit')
+  onSubmit: action('onSubmit'),
 };
 
 export default {
   title: 'ChangeUserTypeForm',
-  component: ChangeUserTypeForm
+  component: ChangeUserTypeForm,
 };
 
 const Template = args => <ChangeUserTypeForm {...DEFAULT_PROPS} {...args} />;
@@ -27,27 +27,27 @@ export const ConvertStudentToTeacher = Template.bind({});
 ConvertStudentToTeacher.args = {
   values: {
     email: 'batman@bat.cave',
-    emailOptIn: 'yes'
-  }
+    emailOptIn: 'yes',
+  },
 };
 
 export const WithValidationErrors = Template.bind({});
 WithValidationErrors.args = {
   values: {
     email: 'robin@bat.cave',
-    emailOptIn: 'no'
+    emailOptIn: 'no',
   },
   validationErrors: {
     email: 'Robin, get out of here!',
-    emailOptIn: 'No email for you.'
-  }
+    emailOptIn: 'No email for you.',
+  },
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   values: {
     email: 'currently-saving@bat.cave',
-    emailOptIn: 'yes'
+    emailOptIn: 'yes',
   },
-  disabled: true
+  disabled: true,
 };

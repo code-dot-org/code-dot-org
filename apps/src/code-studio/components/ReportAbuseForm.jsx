@@ -29,7 +29,7 @@ export default class ReportAbuseForm extends React.Component {
     email: PropTypes.string,
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     requireCaptcha: PropTypes.bool,
-    captchaSiteKey: PropTypes.string
+    captchaSiteKey: PropTypes.string,
   };
 
   componentDidMount() {
@@ -141,7 +141,7 @@ export default class ReportAbuseForm extends React.Component {
           <div>
             <SafeMarkdown
               markdown={msg.abuseTypeQuestion({
-                url: 'https://code.org/tos'
+                url: 'https://code.org/tos',
               })}
             />
           </div>
@@ -178,7 +178,7 @@ export default class ReportAbuseForm extends React.Component {
             <SafeMarkdown
               markdown={msg.abuseFormAcknowledge({
                 privacy_url: 'https://code.org/privacy',
-                tos_url: 'https://code.org/tos'
+                tos_url: 'https://code.org/tos',
               })}
             />
           </div>

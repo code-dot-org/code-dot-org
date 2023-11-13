@@ -10,7 +10,6 @@ Feature: Minecraft dialog levels
 #    And I open my eyes to test "Minecraft Level 1 dialogs"
     And "when run" refers to block "4"
     And "move forward" refers to block "1"
-    And I rotate to landscape
     And I wait for the page to fully load
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "Character select dialog"
@@ -47,7 +46,6 @@ Feature: Minecraft dialog levels
     And "toolbox repeat" refers to block "6"
     And "dragged repeat" refers to block "17"
     And "inner repeat" refers to block "13"
-    And I rotate to landscape
     And I wait for the page to fully load
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "House select dialog"

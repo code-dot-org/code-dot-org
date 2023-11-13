@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 
 export default {
   title: 'ProjectWidget',
-  component: ProjectWidget
+  component: ProjectWidget,
 };
 
 const Template = args => (
@@ -19,11 +19,11 @@ export const Default = Template.bind({});
 
 export const FullList = Template.bind({});
 FullList.args = {
-  canViewFullList: true
+  canViewFullList: true,
 };
 
 export const FullListWithoutAdvancedTools = Template.bind({});
 FullListWithoutAdvancedTools.args = {
   canViewFullList: true,
-  canViewAdvancedTools: true
+  canViewAdvancedTools: true,
 };

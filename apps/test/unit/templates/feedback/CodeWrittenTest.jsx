@@ -4,7 +4,7 @@ import {expect} from '../../../util/deprecatedChai';
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
 
 const DEFAULT_PROPS = {
-  numLinesWritten: 0
+  numLinesWritten: 0,
 };
 
 describe('CodeWritten', () => {
@@ -70,7 +70,7 @@ describe('CodeWritten', () => {
               padding: 5,
               fontColor: 'black',
               marginLeft: 40,
-              display: 'list-item'
+              display: 'list-item',
             }}
           >
             <b>Show code</b>

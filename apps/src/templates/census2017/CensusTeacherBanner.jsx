@@ -5,6 +5,7 @@ import SchoolInfoInputs from '../SchoolInfoInputs';
 import styleConstants from '../../styleConstants';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class CensusTeacherBanner extends Component {
   static propTypes = {
@@ -24,7 +25,7 @@ export default class CensusTeacherBanner extends Component {
     teacherEmail: PropTypes.string.isRequired,
     showInvalidError: PropTypes.bool,
     showUnknownError: PropTypes.bool,
-    submittedSuccessfully: PropTypes.bool
+    submittedSuccessfully: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -42,7 +43,7 @@ export default class CensusTeacherBanner extends Component {
     schoolZip: '',
     schoolLocation: '',
     showSchoolInfoErrors: false,
-    showSchoolInfoUnknownError: false
+    showSchoolInfoUnknownError: false,
   };
 
   state = this.initialState;
@@ -66,7 +67,7 @@ export default class CensusTeacherBanner extends Component {
   handleSchoolNotFoundChange = (field, event) => {
     const newValue = event ? event.target.value : '';
     this.setState({
-      [field]: newValue
+      [field]: newValue,
     });
   };
 
@@ -77,7 +78,7 @@ export default class CensusTeacherBanner extends Component {
   hideSchoolInfoForm = () => {
     this.setState({
       showSchoolInfoForm: false,
-      showSchoolInfoErrors: false
+      showSchoolInfoErrors: false,
     });
   };
 
@@ -102,26 +103,26 @@ export default class CensusTeacherBanner extends Component {
           'user[school_info_attributes][school_name]': this.state.schoolName,
           'user[school_info_attributes][school_state]': this.state.schoolState,
           'user[school_info_attributes][school_zip]': this.state.schoolZip,
-          'user[school_info_attributes][full_address]': this.state
-            .schoolLocation
+          'user[school_info_attributes][full_address]':
+            this.state.schoolLocation,
         };
       } else {
         schoolData = {
           _method: 'patch',
-          'user[school_info_attributes][school_id]': this.state.ncesSchoolId
+          'user[school_info_attributes][school_id]': this.state.ncesSchoolId,
         };
       }
       $.ajax({
         url: '/users.json',
         type: 'post',
         dataType: 'json',
-        data: schoolData
+        data: schoolData,
       })
         .done(this.hideSchoolInfoForm)
         .fail(this.updateSchoolInfoError);
     } else {
       this.setState({
-        showSchoolInfoErrors: true
+        showSchoolInfoErrors: true,
       });
     }
   };
@@ -129,7 +130,7 @@ export default class CensusTeacherBanner extends Component {
   updateSchoolInfoError = () => {
     // It isn't clear what could cause an error here since none of the fields are required.
     this.setState({
-      showSchoolInfoUnknownError: true
+      showSchoolInfoUnknownError: true,
     });
   };
 
@@ -137,13 +138,13 @@ export default class CensusTeacherBanner extends Component {
     if (schoolId && schoolId !== '-1') {
       $.ajax({
         url: `/api/v1/schools/${schoolId}`,
-        type: 'get'
+        type: 'get',
       })
         .done(this.loadSchoolNameSuccess)
         .fail(this.loadSchoolNameError);
     } else {
       this.setState({
-        schoolDisplayName: ''
+        schoolDisplayName: '',
       });
     }
   };
@@ -151,13 +152,13 @@ export default class CensusTeacherBanner extends Component {
   loadSchoolNameSuccess = response => {
     this.setState({
       schoolDisplayName: response.name,
-      schoolType: response.school_type
+      schoolType: response.school_type,
     });
   };
 
   loadSchoolNameError = error => {
     this.setState({
-      schoolDisplayName: 'your school'
+      schoolDisplayName: 'your school',
     });
   };
 
@@ -168,7 +169,8 @@ export default class CensusTeacherBanner extends Component {
   isValid = () => {
     return (
       !this.props.teaches ||
-      (this.props.inClass === true || this.props.inClass === false)
+      this.props.inClass === true ||
+      this.props.inClass === false
     );
   };
 
@@ -180,7 +182,7 @@ export default class CensusTeacherBanner extends Component {
       submitter_role: 'TEACHER',
       submitter_name: this.props.teacherName,
       submitter_email_address: this.props.teacherEmail,
-      school_year: this.props.schoolYear
+      school_year: this.props.schoolYear,
     };
     const question = this.props.inClass
       ? this.props.question
@@ -330,9 +332,7 @@ export default class CensusTeacherBanner extends Component {
         ? this.state.ncesSchoolId
         : this.props.ncesSchoolId;
       const link = encodeURI(
-        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${
-          this.props.teacherName
-        }&email=${this.props.teacherEmail}#form`
+        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`
       );
       buttons = (
         <div style={styles.buttonDiv}>
@@ -495,30 +495,30 @@ const styles = {
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15,
-    marginBottom: 15
+    marginBottom: 15,
   },
   buttonDiv: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   error: {
-    color: color.red
+    color: color.red,
   },
   header: {
     marginTop: 10,
     marginBottom: 5,
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
   },
   image: {
     float: 'right',
-    margin: 5
+    margin: 5,
   },
   introQuestion: {
     marginTop: 10,
-    marginBottom: 5
+    marginBottom: 5,
   },
   main: {
     borderWidth: 1,
@@ -527,37 +527,37 @@ const styles = {
     minHeight: 72,
     width: styleConstants['content-width'],
     backgroundColor: color.white,
-    overflowWrap: 'break-word'
+    overflowWrap: 'break-word',
   },
   message: {
     marginTop: 0,
     marginBottom: 20,
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
   },
   radio: {
     verticalAlign: 'top',
-    marginRight: 10
+    marginRight: 10,
   },
   share: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   shareButton: {
     color: color.white,
     backgroundColor: color.brand_primary_default,
     boxShadow: 'none',
-    minWidth: 40
+    minWidth: 40,
   },
   title: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   updateSchool: {
     fontSize: '85%',
     marginTop: 0,
-    marginBottom: 0
+    marginBottom: 0,
   },
   updateSchoolLink: {
     cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    ...fontConstants['main-font-semi-bold'],
+  },
 };

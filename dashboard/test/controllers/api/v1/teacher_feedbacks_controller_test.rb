@@ -35,7 +35,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'create - when review state is keepWorking, calls update_best_result with expected params' do
     UserLevel.expects(:update_best_result).once.
-      with(@student.id, @level.id, @script.id, ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING, false)
+      with(@student.id, @level.id, @script.id, ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING, touch_updated_at: false)
 
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
   end
@@ -354,7 +354,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   # Note that the section that a piece of teacher feedback is explicitly associated with via section ID
   # is not (as of Feb. 2021) used in our application (we're only logging section ID for analytics purposes for now),
   # so the section created during setup_all is provided as a default.
-  def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, review_state = nil, section=@section)
+  def teacher_sign_in_and_give_feedback(teacher, student, script, level, script_level, comment, performance, review_state = nil, section = @section)
     sign_in teacher
     params = {
       student_id: student.id,

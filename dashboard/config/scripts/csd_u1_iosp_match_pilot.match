@@ -10,3 +10,5 @@ question 'Storage'
 answer 'Keeps a list of available outfits and what type of weather they are worn in'
 question 'Processing'
 answer 'Matches the weather condition with the outfits that are good for that condition'
+
+allow_multiple_attempts true

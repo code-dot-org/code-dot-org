@@ -3,35 +3,35 @@ import {assert} from '../util/reconfiguredChai';
 
 var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
 
-describe('Puzzle Rating Utils', function() {
+describe('Puzzle Rating Utils', function () {
   var sampleRatings = [];
 
-  beforeEach(function() {
+  beforeEach(function () {
     localStorage.removeItem('puzzleRatings');
     sampleRatings.push({
       script_id: 1,
       level_id: 1,
-      rating: 1
+      rating: 1,
     });
     sampleRatings.push({
       script_id: 1,
       level_id: 1,
-      rating: 0
+      rating: 0,
     });
     sampleRatings.push({
       script_id: 1,
       level_id: 2,
-      rating: 1
+      rating: 1,
     });
     sampleRatings.push({
       script_id: 1,
       level_id: 2,
-      rating: 0
+      rating: 0,
     });
   });
 
-  describe('removePuzzleRating', function() {
-    it('only removes the specified rating', function() {
+  describe('removePuzzleRating', function () {
+    it('only removes the specified rating', function () {
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       for (var i = 0; i < sampleRatings.length; i++) {
         puzzleRatingUtils.removePuzzleRating_(sampleRatings[i]);
@@ -43,18 +43,18 @@ describe('Puzzle Rating Utils', function() {
     });
   });
 
-  describe('cachePuzzleRating', function() {
+  describe('cachePuzzleRating', function () {
     var container;
-    beforeEach(function() {
+    beforeEach(function () {
       container = puzzleRatingUtils.buildPuzzleRatingButtons();
     });
 
-    it('does nothing if no button is enabled', function() {
+    it('does nothing if no button is enabled', function () {
       puzzleRatingUtils.cachePuzzleRating(container, {});
       assert.equal(localStorage.getItem('puzzleRatings'), null);
     });
 
-    it('saves the rating if a button is enabled', function() {
+    it('saves the rating if a button is enabled', function () {
       container
         .querySelectorAll('.puzzle-rating-btn')[0]
         .classList.add('enabled');
@@ -65,7 +65,7 @@ describe('Puzzle Rating Utils', function() {
       );
     });
 
-    it("doesn' squash existing ratings", function() {
+    it("doesn' squash existing ratings", function () {
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       container
         .querySelectorAll('.puzzle-rating-btn')[0]
@@ -78,19 +78,19 @@ describe('Puzzle Rating Utils', function() {
     });
   });
 
-  describe('submitCachedPuzzleRatings', function() {
+  describe('submitCachedPuzzleRatings', function () {
     var postCount, originalAjax;
-    beforeEach(function() {
+    beforeEach(function () {
       postCount = 0;
       originalAjax = $.ajax;
     });
 
-    afterEach(function() {
+    afterEach(function () {
       $.ajax = originalAjax;
     });
 
-    it('can submit multiple ratings', function() {
-      $.ajax = function(opts) {
+    it('can submit multiple ratings', function () {
+      $.ajax = function (opts) {
         postCount++;
         opts.complete();
       };
@@ -105,9 +105,9 @@ describe('Puzzle Rating Utils', function() {
       assert.equal(postCount, sampleRatings.length);
     });
 
-    it('only removes the ratings that have been submitted', function() {
+    it('only removes the ratings that have been submitted', function () {
       var complete;
-      $.ajax = function(opts) {
+      $.ajax = function (opts) {
         postCount++;
         complete = opts.complete;
       };

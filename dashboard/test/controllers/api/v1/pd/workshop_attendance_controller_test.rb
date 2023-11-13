@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::IntegrationTest
+class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::IntegrationTest
   freeze_time
 
   self.use_transactional_test_case = true
@@ -275,8 +275,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   end
 
   test 'create attendance by enrollment succeeds when an account is not required' do
-    # Admin courses do not require attendance
-    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN, subject: nil)
+    # Admin/Counselor courses do not require attendance
+    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME)
 
     sign_in @organizer
     enrollment = create :pd_enrollment, workshop: @workshop
@@ -334,24 +334,5 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert attendance
     assert_equal 1, attendance.length
     attendance.first
-  end
-
-  def params(attended = true)
-    attendances = attended ? [{id: @teacher.id}] : []
-    {
-      session_attendances: [
-        session_id: @session.id,
-        attendances: attendances
-      ]
-    }
-  end
-
-  def create_user_params(enrolled_teacher_email)
-    {
-      session_attendances: [
-        session_id: @session.id,
-        attendances: [{email: enrolled_teacher_email}]
-      ]
-    }
   end
 end

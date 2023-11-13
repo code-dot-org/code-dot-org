@@ -17,7 +17,7 @@ class AddLevelFilters extends Component {
     levelName: PropTypes.string.isRequired,
 
     // from redux
-    searchOptions: PropTypes.object.isRequired
+    searchOptions: PropTypes.object.isRequired,
   };
 
   handleSearch = _.debounce(
@@ -27,7 +27,7 @@ class AddLevelFilters extends Component {
     1000,
     {
       leading: true,
-      trailing: false
+      trailing: false,
     }
   );
 
@@ -98,23 +98,23 @@ const styles = {
   filters: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   input: {
     width: 195,
-    margin: 5
+    margin: 5,
   },
   dropdown: {
     width: 150,
-    margin: 5
+    margin: 5,
   },
   label: {
-    marginRight: 15
-  }
+    marginRight: 15,
+  },
 };
 
 export const UnconnectedAddLevelFilters = AddLevelFilters;
 
 export default connect(state => ({
-  searchOptions: state.levelSearchingInfo.searchOptions
+  searchOptions: state.levelSearchingInfo.searchOptions,
 }))(AddLevelFilters);

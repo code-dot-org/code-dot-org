@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
@@ -16,7 +17,7 @@ import {getStore} from '../../redux';
 class ScreenProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: PropTypes.func.isRequired
+    handleChange: PropTypes.func.isRequired,
   };
 
   handleIconColorChange = value => {
@@ -35,7 +36,7 @@ class ScreenProperties extends React.Component {
     if (applabConstants.ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
-          desc={'icon color'}
+          desc={applabMsg.designElementProperty_iconColor()}
           initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
@@ -45,18 +46,18 @@ class ScreenProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={applabMsg.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ImagePickerPropertyRow
-          desc={'image'}
+          desc={applabMsg.designElementProperty_image()}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')}
@@ -76,7 +77,7 @@ class ScreenEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   // The screen click event handler code currently receives clicks to any
@@ -104,27 +105,26 @@ class ScreenEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const clickName = 'Click';
-    const clickDesc =
-      'Triggered when the screen is clicked with a mouse or tapped on a screen.';
-    const keyName = 'Key';
-    const keyDesc = 'Triggered when a key is pressed.';
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <EventHeaderRow />
         <EventRow
-          name={clickName}
-          desc={clickDesc}
+          name={applabMsg.designElementEvent_click()}
+          desc={applabMsg.designElement_screen_clickEventDesc()}
           handleInsert={this.insertClick}
         />
-        <EventRow name={keyName} desc={keyDesc} handleInsert={this.insertKey} />
+        <EventRow
+          name={applabMsg.designElementEvent_key()}
+          desc={applabMsg.designElement_screen_keyEventDesc()}
+          handleInsert={this.insertKey}
+        />
       </div>
     );
   }
@@ -135,7 +135,7 @@ export default {
   EventTab: ScreenEvents,
   themeValues: themeValues.screen,
 
-  create: function() {
+  create: function () {
     const width = applabConstants.getAppWidth(
       getStore().getState().pageConstants
     );
@@ -164,7 +164,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'screen-image', url);
@@ -182,22 +182,23 @@ export default {
     }
 
     if (element.style.backgroundColor === '') {
-      element.style.backgroundColor = this.themeValues.backgroundColor[
-        applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
-      ];
+      element.style.backgroundColor =
+        this.themeValues.backgroundColor[
+          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+        ];
     }
   },
-  readProperty: function(element, name) {
+  readProperty: function (element, name) {
     if (name === 'theme') {
       return element.getAttribute('data-theme');
     }
     throw `unknown property name ${name}`;
   },
-  onPropertyChange: function(element, name, value) {
+  onPropertyChange: function (element, name, value) {
     if (name === 'theme') {
       designMode.changeThemeForScreen(element, value);
       return true;
     }
     return false;
-  }
+  },
 };

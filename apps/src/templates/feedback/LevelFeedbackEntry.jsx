@@ -9,6 +9,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const getElementHeight = element => {
   return ReactDOM.findDOMNode(element).offsetHeight;
@@ -25,7 +26,7 @@ function LevelFeedbackEntry({feedback}) {
     review_state,
     seen_on_feedback_page_at,
     student_first_visited_at,
-    is_awaiting_teacher_review
+    is_awaiting_teacher_review,
   } = feedback;
 
   const feedbackSeenByStudent = !!(
@@ -77,9 +78,10 @@ function ReviewState({reviewState, isAwaitingTeacherReview}) {
     );
   }
 }
+
 ReviewState.propTypes = {
   reviewState: PropTypes.string,
-  isAwaitingTeacherReview: PropTypes.bool
+  isAwaitingTeacherReview: PropTypes.bool,
 };
 
 function Performance({performance}) {
@@ -87,7 +89,7 @@ function Performance({performance}) {
     performanceLevel1: i18n.rubricLevelOneHeader(),
     performanceLevel2: i18n.rubricLevelTwoHeader(),
     performanceLevel3: i18n.rubricLevelThreeHeader(),
-    performanceLevel4: i18n.rubricLevelFourHeader()
+    performanceLevel4: i18n.rubricLevelFourHeader(),
   };
 
   return (
@@ -99,8 +101,9 @@ function Performance({performance}) {
     </div>
   );
 }
+
 Performance.propTypes = {
-  performance: PropTypes.string
+  performance: PropTypes.string,
 };
 
 function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
@@ -119,7 +122,7 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
       {
         study: 'all-feedback',
         event: 'expand-feedback',
-        data_json: {feedback_id: feedbackId}
+        data_json: {feedback_id: feedbackId},
       },
       {includeUserId: true}
     );
@@ -154,7 +157,7 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
             id="comment-fade"
             style={{
               ...styles.fadeout,
-              ...(feedbackSeenByStudent && styles.fadeoutSeen)
+              ...(feedbackSeenByStudent && styles.fadeoutSeen),
             }}
           />
         )}
@@ -162,10 +165,11 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
     </div>
   );
 }
+
 Comment.propTypes = {
   commentText: PropTypes.string,
   feedbackSeenByStudent: PropTypes.bool,
-  feedbackId: PropTypes.number
+  feedbackId: PropTypes.number,
 };
 
 const styles = {
@@ -175,54 +179,54 @@ const styles = {
     width: '100%',
     marginBottom: 8,
     boxSizing: 'border-box',
-    padding: '8px 16px'
+    padding: '8px 16px',
   },
   commentBlockSeen: {
-    opacity: '60%'
+    opacity: '60%',
   },
   time: {
     fontSize: 14,
     lineHeight: '17px',
     color: color.light_gray,
-    float: 'right'
+    float: 'right',
   },
   feedbackText: {
     color: color.dark_charcoal,
     marginTop: 8,
     fontSize: 14,
-    lineHeight: '21px'
+    lineHeight: '21px',
   },
   rubricPerformance: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   reviewState: {
     display: 'flex',
     alignItems: 'center',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
-    color: color.charcoal
+    color: color.charcoal,
   },
   keepWorkingText: {
-    color: color.red
+    color: color.red,
   },
   commentContainer: {
-    display: 'flex'
+    display: 'flex',
   },
   commentContainerCollapsed: {
     display: 'flex',
     overflow: 'hidden',
-    maxHeight: visibleCommentHeight
+    maxHeight: visibleCommentHeight,
   },
   expanderIcon: {
     fontSize: 18,
     paddingRight: 15,
     paddingLeft: 5,
     marginTop: 8,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   commentText: {
     position: 'relative', // for positioning fade over comment text
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   fadeout: {
     bottom: 0,
@@ -230,8 +234,8 @@ const styles = {
     background:
       'linear-gradient(rgba(231, 232, 234, .1) 0%,rgba(231, 232, 234, 1) 100%)',
     position: 'absolute',
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 LevelFeedbackEntry.propTypes = {feedback: feedbackShape};

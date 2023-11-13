@@ -23,7 +23,7 @@ var uniqueId = 0;
  *        Note: The filter is not created right away, but we hold the SVG
  *        reference so we can late-create the filter when it's needed.
  */
-var ImageFilter = function(svg) {
+var ImageFilter = function (svg) {
   /** @private {SVGSVGElement} */
   this.svg_ = svg;
 
@@ -43,7 +43,7 @@ module.exports = ImageFilter;
  * be using.)
  * @param {SVGElement} svgElement
  */
-ImageFilter.prototype.applyTo = function(svgElement) {
+ImageFilter.prototype.applyTo = function (svgElement) {
   if (!this.checkBrowserSupport_()) {
     return;
   }
@@ -59,7 +59,7 @@ ImageFilter.prototype.applyTo = function(svgElement) {
  * If the passed element is using this filter, removes the filter.
  * @param {SVGElement} svgElement
  */
-ImageFilter.prototype.removeFrom = function(svgElement) {
+ImageFilter.prototype.removeFrom = function (svgElement) {
   // Different browsers clean the filter attribute differently
   // This matches
   //   url(#filter-id)
@@ -80,7 +80,7 @@ ImageFilter.prototype.removeFrom = function(svgElement) {
  * effects even when the studio simulation is not running.
  * @param {number} timeMs
  */
-ImageFilter.prototype.update = function(timeMs) {
+ImageFilter.prototype.update = function (timeMs) {
   // No default operation here.  Subclasses may override this to implement
   // animation.
 };
@@ -90,7 +90,7 @@ ImageFilter.prototype.update = function(timeMs) {
  * under the <defs> tag.
  * @private
  */
-ImageFilter.prototype.createInDom_ = function() {
+ImageFilter.prototype.createInDom_ = function () {
   var filter = document.getElementById(this.id_);
   if (filter) {
     return;
@@ -102,7 +102,7 @@ ImageFilter.prototype.createInDom_ = function() {
 
   // Add the filter steps (expected to be different for each filter type)
   var steps = this.createFilterSteps_();
-  steps.forEach(function(step) {
+  steps.forEach(function (step) {
     filter.appendChild(step);
   });
 
@@ -113,7 +113,7 @@ ImageFilter.prototype.createInDom_ = function() {
   // Establish 30FPS update interval
   if (!this.intervalId_) {
     this.intervalId_ = window.setInterval(
-      function() {
+      function () {
         this.update(new Date().getTime());
       }.bind(this),
       1000 / 30
@@ -125,7 +125,7 @@ ImageFilter.prototype.createInDom_ = function() {
  * Removes this SVG filter from the <defs> tag.
  * @private
  */
-ImageFilter.prototype.removeFromDom_ = function() {
+ImageFilter.prototype.removeFromDom_ = function () {
   if (this.intervalId_) {
     window.clearInterval(this.intervalId_);
     this.intervalId_ = null;
@@ -143,7 +143,7 @@ ImageFilter.prototype.removeFromDom_ = function() {
  * @returns {SVGElement[]}
  * @private
  */
-ImageFilter.prototype.createFilterSteps_ = function() {
+ImageFilter.prototype.createFilterSteps_ = function () {
   return [];
 };
 
@@ -152,7 +152,7 @@ ImageFilter.prototype.createFilterSteps_ = function() {
  * @returns {SVGDefsElement}
  * @private
  */
-ImageFilter.prototype.getDefsNode_ = function() {
+ImageFilter.prototype.getDefsNode_ = function () {
   var defs = this.svg_.querySelector('defs');
   if (!defs) {
     defs = document.createElementNS(SVG_NS, 'defs');
@@ -167,7 +167,7 @@ ImageFilter.prototype.getDefsNode_ = function() {
  * @returns {boolean}
  * @private
  */
-ImageFilter.prototype.checkBrowserSupport_ = function() {
+ImageFilter.prototype.checkBrowserSupport_ = function () {
   // Disable filter effects in Safari right now, since they seem to take a
   // long time to render and often cause issues.
   // Chrome also contains 'Safari' in its user agent string, so check for
@@ -204,14 +204,14 @@ ImageFilter.prototype.checkBrowserSupport_ = function() {
  * @param {number} [min] - Smallest value of oscillation, default 0
  * @param {number} [max] - Largest value of oscillation, default 1
  */
-ImageFilter.makeBellCurveOscillation = function(period, exponent, min, max) {
+ImageFilter.makeBellCurveOscillation = function (period, exponent, min, max) {
   exponent = utils.valueOr(exponent, 2);
   min = utils.valueOr(min, 0);
   max = utils.valueOr(max, 1);
   var delta = max - min;
   var coefficient = delta * Math.pow(2 / period, exponent);
   var halfPeriod = period / 2;
-  return function(t) {
+  return function (t) {
     return (
       min +
       coefficient * Math.abs(Math.pow((t % period) - halfPeriod, exponent))

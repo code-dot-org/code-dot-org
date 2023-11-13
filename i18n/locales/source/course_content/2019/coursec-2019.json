@@ -1298,6 +1298,7 @@
   "https://studio.code.org/s/coursec-2019/lessons/18/levels/4": {
     "short_instructions": "Add two or more additional actors to your game and make them move.",
     "long_instructions": "Let's add some more characters to your game!\n\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
+    "failure_message_override": "You must add two or more new actors to your game and program them to move.",
     "callouts": {
       "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
     },

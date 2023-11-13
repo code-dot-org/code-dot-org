@@ -15,50 +15,50 @@ const newStyles = {
     borderStyle: 'solid',
     padding: '5px 5px 0px',
     ':active': {
-      backgroundColor: color.lighter_gray
-    }
+      backgroundColor: color.lighter_gray,
+    },
   },
   like: {
-    borderRadius: '2px 0px 0px 2px'
+    borderRadius: '2px 0px 0px 2px',
   },
   likeDisabled: {
     ':hover': {
-      fill: '#333'
-    }
+      fill: '#333',
+    },
   },
   likeEnabled: {
     fill: color.red,
     backgroundColor: color.lighter_gray,
     ':hover': {
-      fill: color.dark_red
-    }
+      fill: color.dark_red,
+    },
   },
   dislike: {
-    borderRadius: '0px 2px 2px 0px'
+    borderRadius: '0px 2px 2px 0px',
   },
   dislikeDisabled: {
     ':hover': {
-      fill: color.dark_gray
-    }
+      fill: color.dark_gray,
+    },
   },
   dislikeEnabled: {
     fill: color.cyan,
     backgroundColor: color.lighter_gray,
     ':hover': {
-      fill: color.dark_blue
-    }
-  }
+      fill: color.dark_blue,
+    },
+  },
 };
 
 const legacyStyles = {
   puzzleRatingButton: {
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
   },
   question: {
     fontSize: 16,
     color: color.light_gray,
-    marginRight: 10
-  }
+    marginRight: 10,
+  },
 };
 
 class PuzzleRatingButtons extends Component {
@@ -66,13 +66,13 @@ class PuzzleRatingButtons extends Component {
     super();
     this.state = {
       liked: false,
-      disliked: false
+      disliked: false,
     };
   }
 
   static propTypes = {
     useLegacyStyles: PropTypes.bool,
-    label: PropTypes.string
+    label: PropTypes.string,
   };
 
   like() {
@@ -104,7 +104,7 @@ class PuzzleRatingButtons extends Component {
           style={[
             styles.puzzleRatingButton,
             styles.like,
-            this.state.liked ? styles.likeEnabled : styles.likeDisabled
+            this.state.liked ? styles.likeEnabled : styles.likeDisabled,
           ]}
         >
           <svg
@@ -137,7 +137,9 @@ class PuzzleRatingButtons extends Component {
           style={[
             styles.puzzleRatingButton,
             styles.dislike,
-            this.state.disliked ? styles.dislikeEnabled : styles.dislikeDisabled
+            this.state.disliked
+              ? styles.dislikeEnabled
+              : styles.dislikeDisabled,
           ]}
         >
           <svg

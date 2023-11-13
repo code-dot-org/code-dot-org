@@ -5,3 +5,5 @@ wrong 'The bee won\'t collect enough honey from the flowers.', feedback: 'Incorr
 wrong 'The bee will try to collect too much honey from the flowers.', feedback: 'Incorrect. The function is programmed to handle any amount of honey over 0.'
 wrong 'I don\'t know.', feedback: 'The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.'''
 
+
+allow_multiple_attempts false

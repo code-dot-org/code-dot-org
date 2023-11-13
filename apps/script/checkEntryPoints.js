@@ -55,10 +55,12 @@ const SILENCED = [
   'gamelab',
   'javalab',
   'jigsaw',
+  'lab2',
   'maze',
   'netsim',
   'poetry',
   'spritelab',
+  'standaloneVideo',
   'studio',
   'turtle',
   'weblab',
@@ -69,7 +71,6 @@ const SILENCED = [
 
   // referenced by embedded multi/match levels
   'embedBlocks',
-  'embedVideo',
 
   // referenced from dashboard/public
   'publicKeyCryptography',
@@ -88,30 +89,31 @@ const SILENCED = [
   'blockly',
   'googleblockly',
   'brambleHost',
-  'levelbuilder'
+  'levelbuilder',
 ];
 const SITES_CONFIG = {
   studio: {
     entryPrefix: '',
     templateRoot: '../dashboard/app/views',
     templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml']
+    templateExtensions: ['erb', 'haml'],
   },
   'code.org': {
     entryPrefix: 'code.org/',
     templateRoot: '../pegasus/sites.v3/code.org',
     templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml']
+    templateExtensions: ['erb', 'haml'],
   },
   'hourofcode.com': {
     entryPrefix: 'hourofcode.com/',
     templateRoot: '../pegasus/sites.v3/hourofcode.com',
     templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml']
-  }
+    templateExtensions: ['erb', 'haml'],
+  },
 };
 
-const ENTRY_POINT_FILE_PATH_PATTERN = /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
+const ENTRY_POINT_FILE_PATH_PATTERN =
+  /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
 
 function findTemplatesForSite(siteConfig) {
   const findArgs = siteConfig.templateExtensions
@@ -311,11 +313,11 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
  *   a promise that resolves to a statsu object containing the number of
  *   entry points that passed/failed or were silenced.
  */
-module.exports = function(webpackConfig, options = {verbose: false}) {
+module.exports = function (webpackConfig, options = {verbose: false}) {
   const stats = {
     failed: 0,
     silenced: 0,
-    passed: 0
+    passed: 0,
   };
 
   const entryPromises = Object.keys(webpackConfig.entry).map(entryKey =>

@@ -1,5 +1,6 @@
 @use "color.scss";
 @use "style-constants.scss";
+@import 'font';
 
 .paneSection {
   text-align: center;
@@ -10,6 +11,107 @@
 }
 
 .headerButton {
+  @include main-font-semi-bold;
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+  color: color.$neutral_dark;
+  background-color: color.$neutral_white;
+  margin: 3px 3px 3px 0;
+  height: 24px;
+  border-radius: 4px;
+  line-height: 18px;
+  padding: 0;
+  border: 0;
+
+  &:hover {
+    box-shadow: none;
+    background-color: color.$neutral_dark10;
+  }
+
+  &:disabled {
+    background-color: color.$light_gray;
+    cursor: default;
+    border: 0;
+    &:hover {
+      background-color: color.$light_gray;
+    }
+  }
+
+  span {
+    color: color.$neutral_dark;
+    font-size: 13px;
+  }
+
+  &Rtl {
+    float: left;
+    margin-left: 3px;
+    margin-right: 0;
+  }
+
+  &Minecraft {
+    background-color: #606060;
+    color: #bfbfbf;
+    border: none;
+
+    span {
+      color: #bfbfbf;
+    }
+
+    &:hover {
+      background-color: #606060;
+      color: color.$white;
+
+      span {
+        color: color.$white;
+      }
+    }
+  }
+
+  &Unfocused {
+    background-color: color.$neutral_white;
+  }
+
+  &Pressed {
+    background-color: color.$white;
+    color: color.$purple;
+    &:hover {
+      color: color.$white;
+    }
+  }
+
+  &Disabled {
+    background-color: color.$light_gray;
+    cursor: default;
+  }
+
+  &Span {
+    padding: 0 12px 0 12px;
+  }
+
+  &Icon {
+    line-height: 24px;
+    padding-right: 8px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &IconRtl {
+    padding-right: 0;
+    padding-left: 8px;
+  }
+
+  &IconOrLabelHidden {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// TODO: [Phase 2] This now is legacy style that we use for Javalab. Remove .legacyHeaderButton styles and it's usages
+//  once we move all the headers to updated styles.
+//  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
+.legacyHeaderButton {
+  @include main-font-semi-bold;
   cursor: pointer;
   float: right;
   overflow: hidden;
@@ -17,7 +119,6 @@
   margin: 3px 3px 3px 0;
   height: 24px;
   border-radius: 4px;
-  font-family: "Gotham 5r", sans-serif;
   line-height: 18px;
   padding: 0;
   border: 0;
@@ -31,8 +132,10 @@
     background-color: color.$light_gray;
     cursor: default;
     border: 0;
-    &:hover {
-      background-color: color.$cyan;
+    // Rewrite previous legacy styles
+    &:active {
+      // !important is needed to override the default :active styles which already using !important
+      border: 0 !important;
     }
   }
 

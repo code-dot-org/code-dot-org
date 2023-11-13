@@ -26,12 +26,12 @@
       Dimensions:
         - {Name: InstanceId, Value: !Ref <%=daemon%>}
       EvaluationPeriods: 7
-      MetricName: MemoryUtilization
-      Namespace: 'System/Linux'
+      MetricName: mem_used_percent
+      Namespace: CWAgent
       Period: 60
       Statistic: Maximum
       Threshold: 87
-      TreatMissingData: missing
+      TreatMissingData: breaching
 <% if environment == :production -%>
   # Detect problems with the bin/cron/deliver_poste_messages scheduled job by monitoring outbound emails sent by AWS SES.
   OutboundEmailAlarm:
@@ -52,3 +52,31 @@
       TreatMissingData: breaching
 <%  end -%>
 
+  # ---------------------------------------------
+  # Team Alerting SNS Topics
+  # 
+  # These topics are created in each environment
+  # and will be subscribed to by alerting tools
+  # like PagerDuty, Slack (Chatbot) or others.
+  #
+  # Unmanaged topics that could be migrated here:
+  #   - CDO-LowPriority
+  #   - CDO-WorkdayUrgent
+  #   - CDO-Urgent
+  #
+  # ---------------------------------------------
+
+  InfraLowPriority:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-LowPriority
+
+  InfraWorkdayUrgent:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-WorkdayUrgent
+
+  InfraUrgent:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-Urgent

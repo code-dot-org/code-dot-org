@@ -12,14 +12,14 @@ const tooltipText = {
     'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
   challenge: 'Show students the Challenge dialog when viewing this level.',
   instructor_in_training:
-    'Allow participant in a professional learning course to view certain instructor features.'
+    'Allow participant in a professional learning course to view certain instructor features.',
 };
 
 const optionText = {
   bonus: 'Bonus',
   assessment: 'Assessment',
   challenge: 'Challenge',
-  instructor_in_training: 'Instructor In Training'
+  instructor_in_training: 'Instructor In Training',
 };
 
 const disabledBonusTooltipText =
@@ -43,7 +43,7 @@ class LevelTokenDetails extends Component {
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
     lessonExtrasAvailableForUnit: PropTypes.bool,
-    isProfessionalLearningCourse: PropTypes.bool
+    isProfessionalLearningCourse: PropTypes.bool,
   };
 
   handleCheckboxChange = field => {
@@ -52,7 +52,7 @@ class LevelTokenDetails extends Component {
       this.props.activitySectionPosition,
       this.props.scriptLevel.position,
       {
-        [field]: !this.props.scriptLevel[field]
+        [field]: !this.props.scriptLevel[field],
       }
     );
   };
@@ -130,23 +130,23 @@ const styles = {
     padding: 7,
     background: '#f4f4f4',
     border: '1px solid #ddd',
-    borderTop: 0
+    borderTop: 0,
   },
   checkboxLabel: {
     display: 'inline-block',
     marginRight: 10,
-    marginBottom: 0
+    marginBottom: 0,
   },
   checkboxInput: {
     marginTop: 0,
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
   },
   checkboxText: {
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
   },
   tooltip: {
-    maxWidth: 450
-  }
+    maxWidth: 450,
+  },
 };
 
 export const UnconnectedLevelTokenDetails = LevelTokenDetails;
@@ -154,9 +154,9 @@ export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 export default connect(
   state => ({
     lessonExtrasAvailableForUnit: state.unitInfo.lessonExtrasAvailableForUnit,
-    isProfessionalLearningCourse: state.unitInfo.isProfessionalLearningCourse
+    isProfessionalLearningCourse: state.unitInfo.isProfessionalLearningCourse,
   }),
   {
-    setScriptLevelField
+    setScriptLevelField,
   }
 )(LevelTokenDetails);

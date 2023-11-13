@@ -30,3 +30,5 @@ public static int what(int num) {
 
 Assume that `val` has been declared and initialized with a value that satisfies the precondition of the method. Which of the following best describes the value returned by the call `what(val)`?
 MARKDOWN
+
+allow_multiple_attempts true

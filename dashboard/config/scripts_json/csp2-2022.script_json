@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-27 20:25:57 UTC",
+    "serialized_at": "2023-03-17 22:23:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1982,6 +1982,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Log into this version of the Internet Simulator\r\n\r\n* No talking at all, not even to get your partner’s IP address\r\n* Ask the DNS for the IP address of a user by sending GET username\r\n* Use the IP address you get back to communicate with at least 2 friends. You can talk about: In your ideal world what time would school start? or What would you eat for your perfect meal?",
+        "progression_name": "Internet Simulator",
         "tips": [
           {
             "type": "teachingTip",
@@ -2699,7 +2700,8 @@
       "properties": {
         "level_keys": [
           "U1L5 CSP Internet Simulator DNS2022"
-        ]
+        ],
+        "progression": "Internet Simulator"
       },
       "bonus": false,
       "seeding_key": {

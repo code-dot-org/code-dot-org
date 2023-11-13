@@ -14,3 +14,4 @@ answer 'a logical statement that gives either a `true` or `false` value'
 
 question 'compound expression'
 answer 'a combination of expressions'
+allow_multiple_attempts true

@@ -19,3 +19,5 @@ wrong 'Start with a square
 Put a triangle below the square  
 Put a parallelogram right of the triangle'
 
+
+allow_multiple_attempts true

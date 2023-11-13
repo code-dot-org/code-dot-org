@@ -23,6 +23,10 @@ class LessonsController < ApplicationController
     script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
+    if script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
+
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:position].to_i
     end
@@ -140,8 +144,8 @@ class LessonsController < ApplicationController
     end
 
     render json: @lesson.summarize_for_lesson_edit
-  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
   def clone
@@ -154,8 +158,8 @@ class LessonsController < ApplicationController
       copied_lesson = @lesson.copy_to_unit(destination_script, new_level_suffix)
       render(status: :ok, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
     end
-  rescue => err
-    render(json: {error: err.message}.to_json, status: :not_acceptable)
+  rescue => exception
+    render(json: {error: exception.message}.to_json, status: :not_acceptable)
   end
 
   # Return true if request is one that can be publicly cached.
@@ -165,11 +169,9 @@ class LessonsController < ApplicationController
       !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
-  private
-
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
   # work for both of them to prepare the data for editing
-  def setup_edit
+  private def setup_edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here
     # sometimes hits a bug and causes the lesson edit page to fail to load.
@@ -178,7 +180,7 @@ class LessonsController < ApplicationController
     view_options(full_width: true)
   end
 
-  def lesson_params
+  private def lesson_params
     # Convert camelCase params to snake_case. Right now this only works on
     # top-level key names. This lets us do the transformation before calling
     # .permit, so that we can use snake_case key names in our parameter list,
@@ -217,14 +219,14 @@ class LessonsController < ApplicationController
     lp
   end
 
-  def fetch_standards(standards_data)
+  private def fetch_standards(standards_data)
     standards_data.map do |s|
       framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
       Standard.find_by!(framework: framework, shortcode: s['shortcode'])
     end
   end
 
-  def fetch_programming_expressions(expressions_data)
+  private def fetch_programming_expressions(expressions_data)
     expressions_data.map do |e|
       environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
       ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])

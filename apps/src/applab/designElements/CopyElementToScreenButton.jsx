@@ -1,4 +1,5 @@
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
@@ -16,14 +17,14 @@ class CopyElementToScreenButton extends React.Component {
 
     // Passed explicitly
     handleCopyElementToScreen: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   state = {
     opened: false,
     menuTop: 0, // location of dropdown menu
     menuLeft: 0,
-    currWindowWidth: window.innerWidth // used to calculate location of menu on resize
+    currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
   };
 
   // Overrides base class implementation
@@ -45,7 +46,7 @@ class CopyElementToScreenButton extends React.Component {
     const rect = this.element.firstChild.getBoundingClientRect();
     return {
       menuTop: rect.bottom + window.pageYOffset,
-      menuLeft: rect.left + window.pageXOffset
+      menuLeft: rect.left + window.pageXOffset,
     };
   }
 
@@ -91,7 +92,8 @@ class CopyElementToScreenButton extends React.Component {
           className={style.copyElementToScreenButton}
           onClick={this.handleDropdownClick}
         >
-          Copy to screen <i className="fa fa-chevron-down" />
+          {applabMsg.designWorkspace_copyToScreenButton()}
+          <i className="fa fa-chevron-down" />
         </button>
         {this.state.opened && (
           <PopUpMenu
@@ -111,6 +113,6 @@ class CopyElementToScreenButton extends React.Component {
 
 export default connect(function propsFromStore(state) {
   return {
-    currentScreenId: state.screens.currentScreenId
+    currentScreenId: state.screens.currentScreenId,
   };
 })(CopyElementToScreenButton);

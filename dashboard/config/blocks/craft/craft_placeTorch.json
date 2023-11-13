@@ -2,6 +2,7 @@
   "category": "",
   "config": {
     "func": "placeTorch",
-    "blockText": "place torch"
+    "blockText": "place torch",
+    "style": "default"
   }
 }

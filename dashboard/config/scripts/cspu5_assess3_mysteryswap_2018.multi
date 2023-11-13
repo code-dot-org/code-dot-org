@@ -44,3 +44,5 @@ Going through the code line by line while keeping track of the numbers in the ar
 
 At the very end, you can see that the function _mystery_ sorts three elements into ascending order.
 MARKDOWN
+
+allow_multiple_attempts true

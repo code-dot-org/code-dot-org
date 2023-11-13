@@ -1,0 +1,35 @@
+{
+  "test_docs": {
+    "name": "Test docs",
+    "description": "Test docs desc",
+    "categories": {
+      "test_category": {
+        "name": "Test Category",
+        "expressions": {
+          "test_expression": {
+            "content": "Test context",
+            "examples": {
+              "Example with description": {
+                "name": "Example name",
+                "description": "Example desc"
+              },
+              "Example without description": {
+                "name": "Example without description",
+                "description": ""
+              }
+            },
+            "palette_params": {
+              "id": {
+                "type": "string",
+                "description": "Test palette param desc"
+              }
+            },
+            "return_value": "Test return value",
+            "short_description": "Test short desc",
+            "tips": "Test tips"
+          }
+        }
+      }
+    }
+  }
+}

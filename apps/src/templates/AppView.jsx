@@ -8,6 +8,7 @@ import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace'
 import CodeWorkspace from './CodeWorkspace';
 import Overlay from './Overlay';
 import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -20,7 +21,7 @@ class AppView extends React.Component {
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -30,7 +31,7 @@ class AppView extends React.Component {
   render() {
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
-      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
     });
 
     return (
@@ -42,6 +43,7 @@ class AppView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );
@@ -52,5 +54,5 @@ export const UnconnectedAppView = AppView;
 export default connect(state => ({
   hideSource: state.pageConstants.hideSource,
   isResponsive: isResponsiveFromState(state),
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
 }))(UnconnectedAppView);

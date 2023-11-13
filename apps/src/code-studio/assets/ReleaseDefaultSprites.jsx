@@ -3,13 +3,13 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {
   getDefaultListMetadata,
-  moveDefaultSpriteMetadataToProduction
+  moveDefaultSpriteMetadataToProduction,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 export default class ReleaseDefaultSprites extends React.Component {
   state = {
     levelbuilderDefaultList: [], // Array of name/category sprite objects
-    productionDefaultList: []
+    productionDefaultList: [],
   };
 
   componentDidMount() {
@@ -114,21 +114,21 @@ const styles = {
   pageBreak: {
     borderTop: `1px solid ${color.dark_slate_gray}`,
     display: 'flex',
-    alignItems: 'start'
+    alignItems: 'start',
   },
   button: {
     margin: 20,
-    fontSize: 20
+    fontSize: 20,
   },
   column: {
     float: 'left',
     width: '50%',
-    border: `1px solid ${color.dark_slate_gray}`
+    border: `1px solid ${color.dark_slate_gray}`,
   },
   listItem: {
     borderTop: `1px solid ${color.dark_slate_gray}`,
     marginTop: '5px',
     marginBottom: '5px',
-    fontSize: 20
-  }
+    fontSize: 20,
+  },
 };

@@ -6,6 +6,7 @@
       0.45,
       0.65
     ],
+    "style": "world_blocks",
     "func": "clearHeadings",
     "blockText": "clear headings",
     "args": [

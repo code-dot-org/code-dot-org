@@ -16,7 +16,7 @@ function getValue(e) {
   return dropdown.readProperty(e, 'value');
 }
 
-describe('Applab designElements/dropdown component', function() {
+describe('Applab designElements/dropdown component', function () {
   let e;
 
   beforeEach(() => {
