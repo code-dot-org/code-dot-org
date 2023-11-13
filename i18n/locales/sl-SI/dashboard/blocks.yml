@@ -96,6 +96,16 @@ sl:
             MOVES.ClapHigh: Visoko ploskajte
             MOVES.Dab: Dab
             MOVES.Clown: Gangnam
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': muce
+          MOVE:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Dab: Dab
+            MOVES.Clown: Gangnam
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
       Dancelab_changeMoveLR:
         options:
           MOVE:
