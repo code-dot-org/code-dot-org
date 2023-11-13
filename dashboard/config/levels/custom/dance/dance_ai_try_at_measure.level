@@ -82,7 +82,7 @@
         <block type="Dancelab_whenSetup" id="vy}KF-Jf1JQ$KH{2/wKu" movable="false" x="79" y="17">
           <statement name="DO">
             <block type="Dancelab_ai" id="s/SX8.dZtfLopl)k.6t@">
-              <field name="VALUE">{"inputs":["sparkle","magic","romantic"],"backgroundEffect":"sparkles","backgroundColor":"tropical","foregroundEffect":"floating_rainbows"}</field>
+              <field name="VALUE">{"inputs":["sparkles","rainbow","smiling-face-with-hearts"],"backgroundEffect":"sparkles","backgroundColor":"tropical","foregroundEffect":"floating_rainbows"}</field>
               <next>
                 <block type="Dancelab_makeNewDanceSpriteGroup" id="ghjdtdkG}PBY1bSNaM;D">
                   <field name="N">9</field>
