@@ -9,6 +9,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
 import style from './hoc-guide-dialogue.module.scss';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isOpen, setIsOpen] = useState(true);
@@ -33,11 +34,19 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
     // TODO: send email to stored address here
     setIsShowSuccess(true);
     if (isShowSuccess) {
-      // Show a temporary alert; use i18n.emailRequestSubmitted()
+      alert(i18n.emailRequestSubmitted());
     }
   };
 
-  const saveInputs = () => {
+  const validateAndSave = () => {
+    if (!isEmail(email)) {
+      alert(i18n.censusInvalidEmail());
+      return;
+    }
+    if (!name) {
+      alert(i18n.censusRequired());
+      return;
+    }
     setIsSendInProgress(true);
     const potential_teacher_data = {
       name: name,
@@ -136,7 +145,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
               id="uitest-email-guide"
               text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
               onClick={() => {
-                saveInputs();
+                validateAndSave();
               }}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
