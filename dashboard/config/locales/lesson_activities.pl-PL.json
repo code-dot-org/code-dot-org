@@ -12024,7 +12024,7 @@
           "name": "Co to jest uczenie maszynowe?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
-          "name": "Dane szkoleniowe i stronniczość"
+          "name": "Dane treningowe i stronniczość"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
           "name": "Jak działają sieci neuronowe"
@@ -13003,6 +13003,15 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Poziomy"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Pierwsze kroki"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Rozgrzewka"
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
+          "name": "Zakończenie"
         }
       }
     }

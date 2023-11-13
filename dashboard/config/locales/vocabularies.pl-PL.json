@@ -2035,7 +2035,7 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algorytm",
-          "definition": "szereg kroków w celu rozwiązania problemu lub podjęcia decyzji"
+          "definition": "ciąg kroków w celu rozwiązania problemu lub podjęcia decyzji"
         },
         "network/how-ai-works/2023": {
           "word": "Sieć",
@@ -2391,6 +2391,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Kompresja bezstratna",
           "definition": "algorytm kompresji danych, który pozwala na perfekcyjne odtworzenie oryginalnych danych ze skompresowanych danych. Najczęściej używany na potrzeby kompresji tekstu (np. kompresja zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-ai/2023": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }
