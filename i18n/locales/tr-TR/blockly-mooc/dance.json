@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalStartOverButton": "Yeniden başla",
+  "danceAiModalExplanationButton": "Daha fazlasını öğren",
+  "danceAiModalBack": "Geri",
+  "danceAiModalClose": "Kapat",
   "danceFeedbackDidntPress": "Dansınız devam ederken ok tuşlarına bastığınızdan emin olun.",
+  "danceFeedbackKeepCoding": "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> bloğuna bazı kodlar eklediğinizden emin olun ve dansınız devam ederken tuşa basın.",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> bloğuyla ile bir grup yedek dansçı oluşturmanız gerekir.",
   "danceFeedbackNeedDifferentDance": "Başka bir dans kullanmanız gerekir.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Dansçıyı daha küçük yapmak için `arkaplan_dançısı2 boyut ayarla` bloğunu kullanın.",
   "danceFeedbackUseSetTint": "Dansçının rengini değiştirmek için `renk tonu ayarla` bloğunu kullanın.",
   "danceFeedbackUseStartMapping": "Programınıza <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloğunu eklemeyi deneyin.",
-  "danceFeedbackKeepCoding": "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
   "measure": "Ölçü:"
 }

@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Til baka",
+  "danceAiModalClose": "Loka",
+  "danceAiModalCodeButton": "Kóði",
+  "danceAiModalExplanationButton": "Nánar",
+  "danceAiModalStartOverButton": "Byrja aftur",
   "danceFeedbackDidntPress": "Gættu þess að ýta á örvarlyklana á meðan dansinn er í gangi.",
   "danceFeedbackKeepCoding": "Haltu áfram að kóða! Það er eitthvað sem þarf að laga.",
   "danceFeedbackKeyEvent": "Gættu þess að tengja einhvern kóða við `þegar keyrt` kubbinn og ýta á lykilinn á meðan dansinn er í gangi.",
