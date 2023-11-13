@@ -64,21 +64,19 @@ export function chooseEffects(
   const allOutputOptions: {[key: string]: [number, string][]} = {};
   for (const output in outputWeightsForSelectedEmojis) {
     const weightVector = outputWeightsForSelectedEmojis[output];
-    const optionsAll = obtainOptions(
-      weightVector,
-      cachedWeightsMappings[output]
-    );
-    const options =
+    const options = obtainOptions(weightVector, cachedWeightsMappings[output]);
+    const topOrBottomOptions =
       quality === ChooseEffectsQuality.GOOD
-        ? optionsAll.slice(0, numRandomOptions)
-        : optionsAll.slice(-numRandomOptions);
-    allOutputOptions[output] = options;
+        ? options.slice(0, numRandomOptions)
+        : options.slice(-numRandomOptions);
+    allOutputOptions[output] = topOrBottomOptions;
   }
   const chosenEffects: GeneratedEffect = {
     [FieldKey.BACKGROUND_EFFECT]: '',
     [FieldKey.FOREGROUND_EFFECT]: '',
     [FieldKey.BACKGROUND_PALETTE]: '',
   };
+  // Select a random option for each output type from the top or bottom scoring options.
   for (const output in allOutputOptions) {
     const outputOptions = allOutputOptions[output];
     const selectedOutputOption =
