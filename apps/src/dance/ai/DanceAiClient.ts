@@ -14,18 +14,17 @@ export type CachedWeightsMapping = {
   output: string[];
 };
 
-const CachedBackgroundEffects: CachedWeightsMapping =
-  UntypedCachedBackgroundEffects;
-const CachedForegroundEffects: CachedWeightsMapping =
-  UntypedCachedForegroundEffects;
-const CachedPalettes: CachedWeightsMapping = UntypedCachedPalettes;
-
+const cachedWeightsMappings: {[key in FieldKey]: CachedWeightsMapping} = {
+  backgroundEffect: UntypedCachedBackgroundEffects,
+  foregroundEffect: UntypedCachedForegroundEffects,
+  backgroundColor: UntypedCachedPalettes,
+};
 /**
  * Chooses a random background effect, background color, and foreground effect associated
  * with the emojis the user selected.  If quality is GOOD, then choose one of the best
  * associated; if quality is BAD, then choose one of the worst associated.  Also return
  * the score for each returned value.
- * @param {array} emojis: the list of emojis the user selected
+ * @param {array} selectedEmojis: the list of three emojis the user selected
  * @param {ChooseEffectsQuality} quality: whether we want good or bad scoring effects
  * @returns: an object containing the effects that were chosen, and their scores, for example:
  * {
@@ -45,65 +44,55 @@ export function chooseEffects(
   selectedEmojis: string[],
   quality: ChooseEffectsQuality
 ): GeneratedEffect {
-  // Obtain final output summed weights based on set of three selected emoji inputs
-  const cachedWeightsMappings: {[key: string]: CachedWeightsMapping} = {
-    backgroundEffect: CachedBackgroundEffects,
-    foregroundEffect: CachedForegroundEffects,
-    backgroundColor: CachedPalettes,
-  };
-  const outputSummedWeightsForSelectedEmojis: {[key: string]: number[]} = {};
-  for (const output in cachedWeightsMappings) {
-    outputSummedWeightsForSelectedEmojis[output] = calculateOutputSummedWeights(
-      selectedEmojis,
-      cachedWeightsMappings[output]
-    );
-  }
-
-  // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
-  const numRandomOptions = 3;
-  const allOutputOptions: {[key: string]: [number, string][]} = {};
-  for (const output in outputSummedWeightsForSelectedEmojis) {
-    const weightVector = outputSummedWeightsForSelectedEmojis[output];
-    const options = obtainOptions(weightVector, cachedWeightsMappings[output]);
-    const topOrBottomOptions =
-      quality === ChooseEffectsQuality.GOOD
-        ? options.slice(0, numRandomOptions)
-        : options.slice(-numRandomOptions);
-    allOutputOptions[output] = topOrBottomOptions;
-  }
   const chosenEffects: GeneratedEffect = {
     [FieldKey.BACKGROUND_EFFECT]: '',
     [FieldKey.FOREGROUND_EFFECT]: '',
     [FieldKey.BACKGROUND_PALETTE]: '',
   };
-  // Select a random option for each output type from the top or bottom scoring options.
-  for (const output in allOutputOptions) {
-    const outputOptions = allOutputOptions[output];
+  for (const field of [
+    FieldKey.BACKGROUND_EFFECT,
+    FieldKey.FOREGROUND_EFFECT,
+    FieldKey.BACKGROUND_PALETTE,
+  ]) {
+    const mapping = cachedWeightsMappings[field];
+    // Get final output summed weights based on set of three selected emoji inputs
+    const weightVector = calculateOutputSummedWeights(selectedEmojis, mapping);
+    // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
+    const allSortedOptions = getSortedOptions(weightVector, mapping);
+    const numRandomOptions = 3;
+    const topOrBottomOptions =
+      quality === ChooseEffectsQuality.GOOD
+        ? allSortedOptions.slice(0, numRandomOptions)
+        : allSortedOptions.slice(-numRandomOptions);
+
     const selectedOutputOption =
-      outputOptions[Math.floor(Math.random() * outputOptions.length)];
-    chosenEffects[output as keyof GeneratedEffect] = selectedOutputOption[1];
+      topOrBottomOptions[Math.floor(Math.random() * topOrBottomOptions.length)];
+    chosenEffects[field] = selectedOutputOption[1];
   }
   return chosenEffects;
 }
 
+// Returns the weights for each of the three emoji inputs for a given effect.
 export function getGeneratedEffectScores(
   emojis: string[],
   effect: GeneratedEffect
-): number[] {
+): [number, number, number] {
   // Determine the contribution of each input emoji.
-  const scores = emojis.map(
-    emoji =>
-      CachedBackgroundEffects['emojiAssociations'][emoji][
-        CachedBackgroundEffects['output'].indexOf(effect.backgroundEffect)
-      ] +
-      CachedForegroundEffects['emojiAssociations'][emoji][
-        CachedForegroundEffects['output'].indexOf(effect.foregroundEffect)
-      ] +
-      CachedPalettes['emojiAssociations'][emoji][
-        CachedPalettes['output'].indexOf(effect.backgroundColor)
-      ]
-  );
-
+  const scores = emojis.map(emoji => {
+    let sum = 0;
+    for (const field of [
+      FieldKey.BACKGROUND_EFFECT,
+      FieldKey.FOREGROUND_EFFECT,
+      FieldKey.BACKGROUND_PALETTE,
+    ]) {
+      const mapping = cachedWeightsMappings[field];
+      sum +=
+        mapping['emojiAssociations'][emoji][
+          mapping['output'].indexOf(effect[field])
+        ];
+    }
+    return sum;
+  });
   return scores;
 }
 
@@ -117,7 +106,7 @@ export function getGeneratedEffectScores(
 function calculateOutputSummedWeights(
   emojis: string[],
   outputWeightsMapping: CachedWeightsMapping
-) {
+): number[] {
   // selectedEmojiAssociations is an array of 3 subarrays. Each subarray contains
   // the weights ranging from [0, 1] for the selected emojis for a particular output type)
   const selectedEmojiAssociations: number[][] = emojis.map(emojiName => {
@@ -137,7 +126,7 @@ function calculateOutputSummedWeights(
  * @param {*} associatedOutputJson, precalculated vector weights for each possible type of output (e.g. BackgroundsEffects, ForegroundEffects, etc.)
  * @returns 1d array of tuples in the format ([score], [output key]) e.g. ("0.51", "circles")
  */
-function obtainOptions(
+function getSortedOptions(
   outputWeights: number[],
   associatedOutputJson: CachedWeightsMapping
 ) {
