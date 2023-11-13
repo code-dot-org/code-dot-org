@@ -19,7 +19,7 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
     position: 'relative',
-    borderWidth: 3,
+    borderWidth: 2,
   },
 
   minecraft: {

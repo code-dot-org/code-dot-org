@@ -198,7 +198,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.feedback && !this.props.collapsed && (
           <InlineFeedback
             key={this.props.feedback.message}
-            borderColor={this.props.isMinecraft ? color.white : color.red}
+            borderColor={this.props.isMinecraft ? color.white : color.orange}
             isDashed={false}
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
@@ -208,7 +208,8 @@ class InstructionsCsfMiddleCol extends React.Component {
         )}
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
-            borderColor={color.yellow}
+            borderColor={color.gray}
+            isDashed={true}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}

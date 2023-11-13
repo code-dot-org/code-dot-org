@@ -17,7 +17,7 @@ const ChatBubbleTip = ({isRtl, color, background, isDashed}) => {
     },
     polyline: {
       stroke: color,
-      strokeWidth: 3,
+      strokeWidth: 2,
       fill: background,
     },
   };
