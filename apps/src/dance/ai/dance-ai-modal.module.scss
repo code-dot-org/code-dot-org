@@ -124,7 +124,7 @@ $ai-modal-border-width: 8px;
     border-radius: 4px;
     background-color: white;
 
-    .toggleArea  {
+    .toggleArea {
       position: absolute;
       width: 40%;
       height: 100px;
@@ -132,6 +132,14 @@ $ai-modal-border-width: 8px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
+
+      span {
+        button {
+          &:focus-visible {
+            outline: 2px solid $light_primary_500 !important;
+          }
+        }
+      }
     }
 
     .textArea {
