@@ -76,7 +76,7 @@ export function chooseEffects(
 export function getGeneratedEffectScores(
   emojis: string[],
   effect: GeneratedEffect
-): [number, number, number] {
+): number[] {
   // Determine the contribution of each input emoji.
   const scores = emojis.map(emoji => {
     let sum = 0;
