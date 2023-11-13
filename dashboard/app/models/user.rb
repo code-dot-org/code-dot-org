@@ -482,7 +482,7 @@ class User < ApplicationRecord
       distinct
   end
 
-  has_many :followers, through: :sections_owned_or_instructed
+  has_many :followers, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
