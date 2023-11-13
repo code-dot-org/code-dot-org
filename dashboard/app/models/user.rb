@@ -78,6 +78,7 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
+require 'policies/lti'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -211,6 +212,7 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
+  accepts_nested_attributes_for :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
   # This custom validator makes email collision checks on the AuthenticationOption
@@ -880,7 +882,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      user.attributes = params
+      user.attributes = user.attributes.merge(params) {|_key, old_val, new_val| new_val.presence || old_val}.compact
     end
   end
 
@@ -940,6 +942,7 @@ class User < ApplicationRecord
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
+    return false if Policies::Lti.lti? self
     true
   end
 
