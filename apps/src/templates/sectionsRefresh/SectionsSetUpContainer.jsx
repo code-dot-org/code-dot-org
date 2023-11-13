@@ -303,8 +303,8 @@ export default function SectionsSetUpContainer({
         <span data-tip data-for="tooltip" style={styles.tooltipSpan}>
           <FontAwesome icon="info-circle" style={styles.tooltipIcon} />
         </span>
-        <ReactTooltip id="tooltip" effect="solid">
-          <p>{i18n.coteacherAddTooltip()}</p>
+        <ReactTooltip id="tooltip" role="tooltip" effect="solid">
+          <div style={styles.toolTipBox}>{i18n.coteacherAddTooltip()}</div>
         </ReactTooltip>
       </span>
     );
@@ -425,6 +425,12 @@ const styles = {
     verticalAlign: 'text-bottom',
   },
   tooltipIcon: {color: color.neutral_dark60, fontSize: '16px'},
+  toolTipBox: {
+    maxWidth: '400px',
+    whiteSpace: 'normal',
+    fontFamily: '"Metropolis", sans-serif',
+    textAlign: 'left',
+  },
 };
 
 SectionsSetUpContainer.propTypes = {
