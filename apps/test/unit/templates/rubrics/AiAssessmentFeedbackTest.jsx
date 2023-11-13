@@ -4,8 +4,14 @@ import {shallow} from 'enzyme';
 import AiAssessmentFeedback from '@cdo/apps/templates/rubrics/AiAssessmentFeedback';
 
 describe('AiAssessmentFeedback', () => {
+  const mock_aiInfo = {
+    id: 2,
+    learning_goal_id: 2,
+    understanding: 2,
+    ai_confidence: 2,
+  };
   const props = {
-    learningGoalKey: 'learning_key',
+    aiInfo: mock_aiInfo,
   };
 
   it('displays checkboxes when thumbs down is clicked', () => {
