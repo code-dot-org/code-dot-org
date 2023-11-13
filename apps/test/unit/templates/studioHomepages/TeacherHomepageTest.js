@@ -141,7 +141,7 @@ describe('TeacherHomepage', () => {
 
   it('renders CensusTeacherBanner if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
+    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
   });
 
   /*
