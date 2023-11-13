@@ -139,15 +139,20 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('does not render CensusTeacherBanner if showCensusBanner is false', () => {
-    const wrapper = setUp({showCensusBanner: false});
-    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
+  /*
+    We have disabled the Census Teacher Banner on the Teacher Homepage (November 2023) to conserve
+    space. If we decide to show the banner again this test will need to be updated. See
+    TeacherHomepage.jsx to make the banner show.
+   */
+  it('does not render CensusTeacherBanner even if showCensusBanner is true', () => {
+    const wrapper = setUp({showCensusBanner: true});
+    assert(!wrapper.find('CensusTeacherBanner').exists());
   });
 
-  it('renders CensusTeacherBanner if showCensusBanner is true', () => {
-    const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
-  });
+  // it('renders CensusTeacherBanner if showCensusBanner is true', () => {
+  //   const wrapper = setUp({showCensusBanner: true});
+  //   assert(wrapper.find('CensusTeacherBanner').exists());
+  // });
 
   /*
     We have disabled the AFE Banner on the Teacher Homepage (September 2023) to conserve
