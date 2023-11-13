@@ -33,6 +33,13 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
   end
 
+  test "destroying section destroys associated LTI section" do
+    section = create :section
+    lti_section = create :lti_section, section: section
+    section.destroy
+    assert LtiSection.where(id: lti_section.id).empty?, "LTI section should be deleted"
+  end
+
   test "restoring section restores appropriate followers" do
     old_deleted_follower = create :follower, section: @section
     Timecop.freeze(Time.now - 1.day) do
