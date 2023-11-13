@@ -326,6 +326,21 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal @student_flappy_1.name, flappy_section_response['lessons'][lesson.id.to_s][0]['name']
   end
 
+  test "should get lock state when coteacher of section" do
+    script, _level, _lesson = create_script_with_lockable_lesson
+
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    get :lockable_state, params: {
+      section_id: section.id,
+      script_id: script.id
+    }
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+  end
+
   # Helper for setting up student lock tests
   def get_student_response(script, level, lesson, student_number)
     get :lockable_state, params: {section_id: @section.id, script_id: script.id}
@@ -1468,6 +1483,35 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal @section.id, response["id"]
     assert_equal @teacher.name, response["teacherName"]
     assert_equal 7, response["students"].length
+  end
+
+  test "teacher_panel_section returns summarized section when passed section id with teacher as section_instructor" do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    get :teacher_panel_section, params: {
+      section_id: section.id
+    }
+
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+
+    response = JSON.parse(@response.body)
+    assert_equal section.id, response["id"]
+    assert_equal section_owner.name, response["teacherName"]
+  end
+
+  test "teacher_panel_section does not return summarized section when passed section id with teacher as invited section_instructor" do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :invited
+
+    get :teacher_panel_section, params: {
+      section_id: section.id
+    }
+
+    assert_response :no_content
   end
 
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do

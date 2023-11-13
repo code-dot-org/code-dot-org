@@ -30,6 +30,8 @@
   "danceAiModalRegenerateButton": "Regenerate",
   "danceAiModalExplanationFive": "Each emoji contributed to A.I.'s decision. Here are five possible effects and the calculations that A.I. made.",
   "danceAiModalExplanation": "Each emoji contributed to A.I.'s decision. Here are possible effects and the calculations that A.I. made.",
+  "danceAiModalBack": "Back",
+  "danceAiModalClose": "Close",
   "danceAiModalBotAlt": "A.I.",
   "danceAiModalBotBeamAlt": "A.I. Beam",
   "danceFeedbackDidntPress": "Make sure to press the arrows while your dance is running.",
@@ -52,5 +54,6 @@
   "danceFeedbackUseSetSize": "Use the `set backup_dancer2 size` block to make that dancer smaller.",
   "danceFeedbackUseSetTint": "Use the `set tint` block to change a dancer's tint.",
   "danceFeedbackUseStartMapping": "Try adding the <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block to your program.",
+  "danceSongNoLongerSupported": "Code.org has added new hit songs to Dance Party, but the original song chosen on this project is no longer supported by Code.org.",
   "measure": "Measure:"
 }

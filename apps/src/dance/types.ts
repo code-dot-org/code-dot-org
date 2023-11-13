@@ -52,17 +52,15 @@ export enum FieldKey {
   BACKGROUND_PALETTE = 'backgroundColor',
 }
 
-export type Results = {[key in FieldKey]: string};
+export type GeneratedEffect = {[key in FieldKey]: string};
 
-export type Scores = {
-  [key in FieldKey]: number;
+export type GeneratedEffectScores = number[];
+
+export type MinMax = {
+  minIndividualScore: number;
+  maxTotalScore: number;
 };
 
-export interface GeneratedEffect {
-  results: Results;
-  scores?: Scores;
-}
-
-export interface AiFieldValue extends Results {
+export interface AiFieldValue extends GeneratedEffect {
   inputs: string[];
 }
