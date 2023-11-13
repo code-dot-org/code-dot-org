@@ -88,6 +88,8 @@
   "aiEvaluationStatus_success": "AI analysis complete.",
   "aiEvaluationStatus_pending": "Generating AI analysis",
   "aiEvaluationStatus_error": "AI analysis cannot be completed due to an error.  Please try again later or contact support.",
+  "aiEvaluationStatus_pii_error": "AI analysis cannot be completed due to the presence of potential personal information in the student's code.",
+  "aiEvaluationStatus_profanity_error": "AI analysis cannot be completed due to profanity in the student's code.",
   "aiStudentAssessment": "{studentName} has achieved {understandingLevel} for this learning goal.",
   "aiTrainedModels": "AI Trained Models",
   "aiTrainedModelsNoModels": "You have not trained any AI models yet.",

@@ -22,6 +22,8 @@ const STATUS = {
   EVALUATION_PENDING: 'evaluation_pending',
   SUCCESS: 'success',
   ERROR: 'error',
+  PII_ERROR: 'pii_error',
+  PROFANITY_ERROR: 'profanity_error',
 };
 
 const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
@@ -57,6 +59,10 @@ export default function RubricSettings({
         return i18n.aiEvaluationStatus_pending();
       case STATUS.ERROR:
         return i18n.aiEvaluationStatus_error();
+      case STATUS.PII_ERROR:
+        return i18n.aiEvaluationStatus_pii_error();
+      case STATUS.PROFANITY_ERROR:
+        return i18n.aiEvaluationStatus_profanity_error();
     }
   };
 
@@ -67,10 +73,18 @@ export default function RubricSettings({
           setStatus(STATUS.ERROR);
         } else {
           response.json().then(data => {
+            console.log('1st');
+            console.log(data);
             if (!data.attempted) {
               setStatus(STATUS.NOT_ATTEMPTED);
             } else if (data.lastAttemptEvaluated) {
               setStatus(STATUS.ALREADY_EVALUATED);
+            } else if (data.status === 1000) {
+              setStatus(STATUS.ERROR);
+            } else if (data.status === 1001) {
+              setStatus(STATUS.PII_ERROR);
+            } else if (data.status === 1002) {
+              setStatus(STATUS.PROFANITY_ERROR);
             } else {
               // we can't fetch the csrf token from the DOM because CSRF protection
               // is disabled on script level pages.
@@ -91,9 +105,17 @@ export default function RubricSettings({
             setStatus(STATUS.ERROR);
           } else {
             response.json().then(data => {
-              if (data.lastAttemptEvaluated) {
+              console.log('2nd');
+              console.log(data);
+              if (data.lastAttemptEvaluated && data.status === 2) {
                 setStatus(STATUS.SUCCESS);
                 refreshAiEvaluations();
+              } else if (data.status === 1000) {
+                setStatus(STATUS.ERROR);
+              } else if (data.status === 1001) {
+                setStatus(STATUS.PII_ERROR);
+              } else if (data.status === 1002) {
+                setStatus(STATUS.PROFANITY_ERROR);
               }
             });
           }

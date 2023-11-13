@@ -118,7 +118,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
+    is_ai_experiment_enabled = true
+    # current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
@@ -144,15 +145,27 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
+    is_ai_experiment_enabled = true
+    # current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
+    rubric_ai_evaluation = RubricAiEvaluation.where(
+      rubric_id: @rubric.id,
+      user_id: user_id
+    ).order(updated_at: :desc).first
+
+    status = nil
+    if rubric_ai_evaluation&.status
+      status = rubric_ai_evaluation.status
+    end
+
     attempted = attempted_at
     evaluated = ai_evaluated_at
     render json: {
+      status: status,
       attempted: !!attempted,
       lastAttemptEvaluated: !!attempted && !!evaluated && evaluated >= attempted,
       csrfToken: form_authenticity_token
