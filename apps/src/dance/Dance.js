@@ -182,6 +182,7 @@ Dance.prototype.init = function (config) {
             showFinishButton={showFinishButton}
             setSong={this.setSongCallback.bind(this)}
             resetProgram={this.reset.bind(this)}
+            playSound={this.playSound.bind(this)}
           />
         }
         onMount={onMount}
@@ -283,6 +284,13 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
+
+  ['ai-select-emoji', 'ai-generate-no', 'ai-generate-yes'].forEach(soundId => {
+    const soundPath = this.studioApp_.assetUrl(
+      `media/skins/dance/${soundId}.mp3`
+    );
+    this.studioApp_.loadAudio([soundPath], soundId);
+  });
 };
 
 const KeyCodes = {
@@ -445,6 +453,10 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
       this.studioApp_.toggleRunReset('run');
     },
   });
+};
+
+Dance.prototype.playSound = function (soundName, options) {
+  this.studioApp_.playAudio(soundName, options);
 };
 
 /**

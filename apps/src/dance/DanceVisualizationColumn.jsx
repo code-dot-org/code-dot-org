@@ -27,6 +27,7 @@ class DanceVisualizationColumn extends React.Component {
     over21: PropTypes.bool.isRequired,
     currentAiModalField: PropTypes.object,
     resetProgram: PropTypes.func.isRequired,
+    playSound: PropTypes.func.isRequired,
   };
 
   state = {
@@ -51,7 +52,7 @@ class DanceVisualizationColumn extends React.Component {
   }
 
   render() {
-    const {levelIsRunning} = this.props;
+    const {levelIsRunning, playSound} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -107,7 +108,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && <DanceAiModal />}
+          {this.props.currentAiModalField && (
+            <DanceAiModal playSound={playSound} />
+          )}
         </div>
       </div>
     );
