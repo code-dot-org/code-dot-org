@@ -17,12 +17,14 @@ METRIC_GRANULARITY = 1.hour
 Bucket = Struct.new(
   :name,
   :creation_date,
+  :cloudformation, # Is the bucket provisioned via code (CloudFormation)?
   :region,
   :versioning,
   :encryption,
-  :size,
+  :storage_size,
   :object_count,
   :bytes_uploaded,
+  :get_requests,
   :put_requests,
   :delete_requests
 )
@@ -34,7 +36,15 @@ s3_buckets.each do |s3_bucket|
   bucket = Bucket.new
   bucket[:name] = s3_bucket.name
   bucket[:creation_date] = s3_bucket.creation_date
-
+  begin
+    bucket[:cloudformation] = s3_client.
+      get_bucket_tagging(bucket: bucket[:name]).
+      tag_set.
+      any? {|tag| tag[:key].starts_with?('aws:cloudformation:')}
+  rescue Aws::S3::Errors::NoSuchTagSet => exception
+    puts exception.message
+    bucket[:cloudformation] = false
+  end
   bucket[:region] = s3_client.get_bucket_location(bucket: bucket[:name]).location_constraint
   bucket[:region] = PRIMARY_REGION if bucket[:region] == ''
   bucket[:versioning] = s3_client.get_bucket_versioning(bucket: bucket[:name]).status
@@ -44,11 +54,11 @@ s3_buckets.each do |s3_bucket|
       rules.
       map {|rule| rule.apply_server_side_encryption_by_default.sse_algorithm}.
       join(':')
-  rescue Aws::S3::Errors::ServerSideEncryptionConfigurationNotFoundError => no_encryption_error
-    puts "IGNORING - #{no_encryption_error.message}"
+  rescue Aws::S3::Errors::ServerSideEncryptionConfigurationNotFoundError => exception
+    puts "IGNORING - #{exception.message}"
   end
 
-  bucket[:size] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'BucketSizeBytes', client: cloudwatch_client).
+  bucket[:storage_size] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'BucketSizeBytes', client: cloudwatch_client).
     get_statistics(
       {
         dimensions: [
@@ -111,6 +121,27 @@ s3_buckets.each do |s3_bucket|
       }
     )&.datapoints&.sum(&:sum)
 
+  bucket[:get_requests] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'GetRequests', client: cloudwatch_client).
+    get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'BucketName',
+            value: bucket[:name],
+          },
+          {
+            name: 'FilterId',
+            value: 'EntireBucket'
+          }
+        ],
+        start_time: Time.now - ACTIVITY_WINDOW,
+        end_time: Time.now,
+        period: METRIC_GRANULARITY,
+        statistics: ['Sum'],
+        unit: 'Count'
+      }
+    )&.datapoints&.sum(&:sum)
+
   bucket[:put_requests] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'PutRequests', client: cloudwatch_client).
     get_statistics(
       {
@@ -153,8 +184,8 @@ s3_buckets.each do |s3_bucket|
       }
     )&.datapoints&.sum(&:sum)
 
-rescue StandardError => error
-  puts error.message
+rescue StandardError => exception
+  puts exception.message
 ensure
   buckets.push(bucket)
 end
