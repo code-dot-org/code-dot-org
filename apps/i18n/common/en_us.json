@@ -515,6 +515,7 @@
   "coteacherRemoveDialogHeader": "Remove {email} as a co-teacher?",
   "coteacherRemoveDialogDescription": "This teacher will lose their ability to manage or view student work for this section.",
   "coteacherNoCoteachers": "You haven't added any co-teachers yet",
+  "coteacherAlreadyInCourse": "{email} is a participant for this course. A user cannot be both a participant and teacher.",
   "coteacherAccepted": "ACCEPTED",
   "coteacherPending": "PENDING",
   "coteacherDeclined": "DECLINED",
