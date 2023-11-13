@@ -136,17 +136,13 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
             <Button
               id="uitest-no-email-guide"
               text={continueWithoutEmailButtonText}
-              onClick={() => {
-                onClose();
-              }}
+              onClick={onClose}
               color={Button.ButtonColor.white}
             />
             <Button
               id="uitest-email-guide"
               text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
-              onClick={() => {
-                validateAndSave();
-              }}
+              onClick={validateAndSave}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
