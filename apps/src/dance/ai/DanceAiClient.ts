@@ -45,15 +45,12 @@ export function chooseEffects(
   selectedEmojis: string[],
   quality: ChooseEffectsQuality
 ): GeneratedEffect {
-  console.log('chooseEffects called with', selectedEmojis, quality);
   // Obtain final summed output weight based off input received
   const cachedWeightsMappings: {[key: string]: CachedWeightsMapping} = {
     backgroundEffect: CachedBackgroundEffects,
     foregroundEffect: CachedForegroundEffects,
     backgroundColor: CachedPalettes,
   };
-  console.log('selectedEmojis', selectedEmojis);
-  console.log('cachedWeightsMappings', cachedWeightsMappings);
   const outputWeightsForSelectedEmojis: {[key: string]: number[]} = {};
   for (const output in cachedWeightsMappings) {
     outputWeightsForSelectedEmojis[output] = calculateOutputWeightsVector(
@@ -62,7 +59,6 @@ export function chooseEffects(
     );
   }
 
-  console.log('outputWeightsForSelectedEmojis', outputWeightsForSelectedEmojis);
   // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
   const numRandomOptions = 3;
   const allOutputOptions: {[key: string]: [number, string][]} = {};
@@ -72,14 +68,12 @@ export function chooseEffects(
       weightVector,
       cachedWeightsMappings[output]
     );
-    // console.log('optionsAll', optionsAll);
     const options =
       quality === ChooseEffectsQuality.GOOD
         ? optionsAll.slice(0, numRandomOptions)
         : optionsAll.slice(-numRandomOptions);
     allOutputOptions[output] = options;
   }
-  console.log('allOutputOptions', allOutputOptions);
   const chosenEffects: GeneratedEffect = {
     [FieldKey.BACKGROUND_EFFECT]: '',
     [FieldKey.FOREGROUND_EFFECT]: '',
@@ -131,13 +125,11 @@ function calculateOutputWeightsVector(
   const selectedEmojiAssociations: number[][] = emojis.map(emojiName => {
     return outputWeightsMapping['emojiAssociations'][emojiName];
   });
-  console.log('selectedEmojiAssociations', selectedEmojiAssociations);
   // sumWeights is the sum of the weights for set of three emojis for each output type
   const sumWeights: number[] = selectedEmojiAssociations.reduce(
     (firstList, secondList) =>
       firstList.map((value, index) => value + secondList[index])
   );
-  console.log('sumWeights', sumWeights);
   return sumWeights;
 }
 
