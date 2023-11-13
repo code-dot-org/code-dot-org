@@ -115,7 +115,7 @@
         <block type="Dancelab_whenSetup" id=";fui020!Iaz!kp-n0K[8" movable="false" x="114" y="38">
           <statement name="DO">
             <block type="Dancelab_ai" id="$t|1h(lDU)g@x0QEjCKi">
-              <field name="VALUE">{"inputs":["rainbow","party","sparkle"],"backgroundEffect":"sparkles","backgroundColor":"warm","foregroundEffect":"color_lights"}</field>
+              <field name="VALUE">{"inputs":["rainbow","party-popper","sparkles"],"backgroundEffect":"sparkles","backgroundColor":"warm","foregroundEffect":"color_lights"}</field>
               <next>
                 <block type="Dancelab_makeAnonymousDanceSprite" id="-a9aM{7I9v?xs^67zj9N">
                   <field name="COSTUME">"SLOTH"</field>
