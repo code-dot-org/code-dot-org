@@ -73,7 +73,7 @@ export const behaviorDefMutator = {
         this.description = node.textContent;
       }
     }
-    this.behaviorId = xmlElement.nextElementSibling.getAttribute('id');
+    this.behaviorId = xmlElement.getAttribute('behaviorId');
   },
 
   /**

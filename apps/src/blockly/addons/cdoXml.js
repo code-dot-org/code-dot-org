@@ -56,6 +56,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
+      addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
@@ -106,6 +107,29 @@ export function addMutationToMiniToolboxBlocks(blockElement) {
 
   // Remove the miniflyout attribute from the parent block element.
   blockElement.removeAttribute('miniflyout');
+}
+
+/**
+ * Adds a mutation element to a block if it is a shared behavior.
+ * CDO Blockly uses an unsupported method for serializing miniflyout state
+ * where arbitrary block attribute could be used to manage extra state.
+ * Mainline Blockly expects a mutator. The presence of the mutation element
+ * will trigger the block's domToMutation function to run, if it exists.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToBehaviorDefBlocks(blockElement) {
+  if (blockElement.getAttribute('type') !== 'behavior_definition') {
+    return;
+  }
+  const existingMutationElement = blockElement.querySelector('mutation');
+
+  const nameField = blockElement.querySelector('field[name="NAME"]');
+  const idAttribute = nameField && nameField.getAttribute('id');
+  if (idAttribute) {
+    // Create new mutation attribute based on original block attribute.
+    existingMutationElement.setAttribute('behaviorId', idAttribute);
+  }
 }
 
 /**
