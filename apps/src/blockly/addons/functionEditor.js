@@ -2,6 +2,10 @@ import {
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
+import {
+  ScrollBlockDragger,
+  ScrollOptions,
+} from '@blockly/plugin-scroll-options';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
 import msg from '@cdo/locale';
@@ -11,6 +15,7 @@ import {
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
+import CdoConnectionChecker from './cdoConnectionChecker';
 import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
@@ -58,12 +63,17 @@ export default class FunctionEditor {
       },
       plugins: {
         metricsManager: CdoMetricsManager,
+        blockDragger: ScrollBlockDragger,
+        connectionChecker: CdoConnectionChecker,
       },
       renderer: options.renderer,
+      rtl: options.rtl,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox: options.toolbox,
       trashcan: false, // Don't use default trashcan.
     });
+    const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
+    scrollOptionsPlugin.init();
 
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
