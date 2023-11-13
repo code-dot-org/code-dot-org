@@ -319,13 +319,18 @@ $ai-modal-border-width: 8px;
 
       .key {
         position: absolute;
-        padding-left: 15px;
+        padding-inline-start: 15px;
         box-sizing: border-box;
         right: 20px;
         width: 110px;
         border-radius: 4px;
         border: solid $neutral_dark10 1px;
         animation: appear 1s;
+
+        html[dir="rtl"] & {
+          left: 20px;
+          right: initial;
+        }
 
         .emojiSlot {
           display: flex;
@@ -357,7 +362,7 @@ $ai-modal-border-width: 8px;
         display: flex;
         gap: 30px;
         width: calc(100% - 180px);
-        margin-left: 40px;
+        margin-inline-start: 40px;
 
         .visualizationColumn {
           display: flex;
