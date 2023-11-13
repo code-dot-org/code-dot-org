@@ -117,6 +117,28 @@ uk:
             MOVES.ThisOrThat: Це або те
             MOVES.Thriller: Зомбі
         text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': коти
+            '"SLOTH"': лінивці
+          MOVE:
+            '"next"': "(Наступний)"
+            '"prev"': "(Попередній)"
+            '"rand"': "(Випадковий)"
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Відпустити
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Kick: Зірка
+            MOVES.Rest: Немає
+            MOVES.Roll: Хвиля
+            MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
+        text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1427,6 +1449,7 @@ uk:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_nature/steady_campfire_loop.mp3"': багаття
             '"sound://category_nature/summer_night_loop.mp3"': ніч
       Poetry_playSound:
         options:
@@ -2048,6 +2071,7 @@ uk:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
             "'sound://category_animals/bear.mp3'": Ведмідь
             "'sound://category_animals/cat.mp3'": кіт
+            "'sound://category_animals/chick.mp3'": пташеня
             "'sound://category_animals/chicken.mp3'": курка
             "'sound://category_animals/cow.mp3'": корова
             "'sound://category_animals/dog.mp3'": пес
