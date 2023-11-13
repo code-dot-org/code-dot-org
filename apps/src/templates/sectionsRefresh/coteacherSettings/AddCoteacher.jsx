@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import {Figcaption} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
+import $ from 'jquery';
 
 import styles from './coteacher-settings.module.scss';
 
@@ -20,7 +21,6 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   if (coteachersToAdd.some(coteacher => coteacher === email)) {
     return Promise.resolve(i18n.coteacherAddAlreadyExists({email}));
   }
-
   return fetch(
     `/api/v1/section_instructors/check?email=${encodeURIComponent(email)}` +
       (sectionId ? `&section_id=${sectionId}` : ''),
@@ -68,6 +68,28 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   });
 };
 
+const saveCoteacher = (email, sectionId) => {
+  const test = fetch(`/api/v1/section_instructors`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+    },
+    body: JSON.stringify({
+      section_id: sectionId,
+      email: email,
+    }),
+  }).then(response => {
+    if (response.ok) {
+      return Promise.resolve('');
+    }
+
+    return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
+  });
+
+  return test;
+};
+
 export default function AddCoteacher({
   sectionId,
   numCoteachers,
@@ -82,16 +104,23 @@ export default function AddCoteacher({
     e => {
       e.preventDefault();
       const newEmail = inputValue.trim();
-      getInputErrorMessage(newEmail, coteachersToAdd, sectionId).then(
-        errorMessage => {
-          setAddError(errorMessage);
+      getInputErrorMessage(newEmail, coteachersToAdd, sectionId)
+        .then(errorMessage => {
+          // Save coteacher only if we are editing an existing section.
+          if (errorMessage === '' && !!sectionId) {
+            const test = saveCoteacher(newEmail, sectionId);
+            return test;
+          }
 
+          return Promise.resolve(errorMessage);
+        })
+        .then(errorMessage => {
+          setAddError(errorMessage);
           if (errorMessage === '') {
             setCoteachersToAdd(existing => [newEmail, ...existing]);
             setInputValue('');
           }
-        }
-      );
+        });
     },
     [
       setCoteachersToAdd,
