@@ -94,6 +94,16 @@
       "title": "",
       "body": "",
       "buttonText": "Saiba mais"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Criatividade com I.A.",
+      "body": "Junte-se a milhões de pessoas pelo mundo na organização de uma hora de codificação, com ou sem I.A. e aprenda como funciona a I.A. Qualquer pessoa, em qualquer lugar pode participar. Não é preciso ter experiência.",
+      "buttonText": "Saiba mais"
     }
   }
 }
