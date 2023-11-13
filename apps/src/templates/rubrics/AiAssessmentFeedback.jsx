@@ -1,5 +1,4 @@
 import React, {useState, useRef} from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {aiEvaluationShape} from './rubricShapes';
@@ -14,7 +13,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import Button from '@cdo/apps/templates/Button';
 
-export default function AiAssessmentFeedback({learningGoalKey, aiInfo}) {
+export default function AiAssessmentFeedback({aiInfo}) {
   const radioGroupName = `ai-assessment-feedback-${aiInfo.id}`;
   const thumbsupval = true;
   const thumbsdownval = false;
@@ -222,6 +221,5 @@ export default function AiAssessmentFeedback({learningGoalKey, aiInfo}) {
 }
 
 AiAssessmentFeedback.propTypes = {
-  learningGoalKey: PropTypes.string,
   aiInfo: aiEvaluationShape,
 };

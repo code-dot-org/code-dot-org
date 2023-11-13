@@ -13,7 +13,6 @@ export default function AiAssessment({
   studentName,
   aiUnderstandingLevel,
   aiConfidence,
-  learningGoalKey,
   aiInfo,
 }) {
   return (
@@ -29,10 +28,7 @@ export default function AiAssessment({
         />
       </div>
       <div>
-        <AiAssessmentFeedback
-          learningGoalKey={learningGoalKey}
-          aiInfo={aiInfo}
-        />
+        <AiAssessmentFeedback aiInfo={aiInfo} />
       </div>
     </div>
   );
@@ -43,6 +39,5 @@ AiAssessment.propTypes = {
   studentName: PropTypes.string,
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
-  learningGoalKey: PropTypes.string,
   aiInfo: aiEvaluationShape,
 };
