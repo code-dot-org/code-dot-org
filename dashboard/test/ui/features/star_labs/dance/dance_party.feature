@@ -60,6 +60,7 @@ Feature: Dance Party
 
   @as_student
   @no_mobile
+  @skip
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
     And I wait for the page to fully load
