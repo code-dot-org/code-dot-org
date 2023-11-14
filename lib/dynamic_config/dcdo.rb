@@ -9,6 +9,8 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
+  attr_reader :datastore_cache
+
   # Updates the cached configuration, for testing only.
   def update_cache_for_test
     @datastore_cache.update_cache
