@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import '../../mixins.scss';
+@import './common.scss';
 
 $ai-block-color: rgb(86 96 101);
 $ai-block-border-color: rgb(121 124 128);
@@ -7,44 +8,13 @@ $ai-block-inputs-color: rgb(63 68 75);
 $ai-block-inputs-border-color: rgba(255 255 255 / 0.6);
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
-$result-green: rgb(86 197 104);
-$result-red: rgb(235 87 87);
 
 @keyframes preview-right-to-normal {
   0% {
-    left: 52%;
+    left: 72%;
   }
   100% {
-    left: 50%;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Bot head opens for 1 second after a 1 second delay.
-@keyframes bot-head-open {
-  0%, 50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-60deg);
-  }
-}
-
-// Bot head closes for 1 second after a 1 second delay.
-@keyframes bot-head-close {
-  0%, 50% {
-    transform: rotate(-60deg);
-  }
-  100% {
-    transform: rotate(0deg);
+    left: 70%;
   }
 }
 
@@ -81,7 +51,7 @@ $result-red: rgb(235 87 87);
 .dialog {
   max-width: initial !important;
   width: 824px !important;
-  height: 494px;
+  height: 514px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
@@ -166,16 +136,20 @@ $result-red: rgb(235 87 87);
 
     .textArea {
       position: absolute;
-      width: 70%;
-      height: 50px;
-      bottom: 14px;
+      width: calc(100% - 30px);
+      top: 353px;
       text-align: center;
       font-size: 18px;
       transform: translateX(-50%);
       left: 50%;
       line-height: 25px;
-      border-top: solid 1px $neutral_light;
-      padding-top: 4px;
+      padding: 4px 0;
+      border-top: solid 1px $neutral_dark30;
+      border-bottom: solid 1px $neutral_dark30;
+
+      .text {
+        animation: appear 0.2s;
+      }
     }
 
     .inputsArea {
@@ -220,10 +194,10 @@ $result-red: rgb(235 87 87);
         height: 260px;
 
         .botHead {
-          width: 115px;
-          left: 72.5px;
           position: absolute;
-          top: 23px;
+          width: 97px;
+          left: 81.5px;
+          top: 34px;
           transform-origin: bottom left;
           transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
@@ -234,7 +208,7 @@ $result-red: rgb(235 87 87);
         }
 
         .botBody {
-          width: 130px;
+          width: 110px;
           transform: translateX(-50%);
           left: 50%;
           position: absolute;
@@ -249,46 +223,44 @@ $result-red: rgb(235 87 87);
           transition: 0.1s ease-in-out;
         }
       }
+    }
 
-      .score {
-        position: absolute;
-        left: 40px;
-        top: 200px;
-
-        .barContainer {
-          background-color: rgb(56 55 55);
-          width: 80px;
-          height: 20px;
-          position: relative;
-
-          .barFill {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            background-color: rgb(16 189 233);
-            transition: width 0.4s;
-          }
-        }
-
-        .text {
-          font-size: 24px;
-          margin-top: 10px;
-        }
-      }
+    .scoreArea {
+      position: absolute;
+      left: 270px;
+      top: 120px;
     }
 
     .previewArea {
       position: absolute;
-      width: 500px;
+      width: 280px;
       height: 280px;
       top: 40px;
-      left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
       margin-top: 10px;
-      animation: appear 0.7s, preview-right-to-normal 0.7s;
+      transition: left 1.5s, box-shadow 0.3s;
+
+      &Generating {
+        animation: appear 0.7s, preview-right-to-normal 0.7s;
+        left: 70%;
+      }
+
+      &Results {
+        left: 50%;
+        animation: appear 0.7s;
+      }
+
+      &Yes {
+        box-shadow: 0 0 0 2px $yes-color;
+        border-radius: 4px;
+      }
+
+      &No {
+        box-shadow: 0 0 0 2px $no-color;
+        border-radius: 4px;
+      }
 
       .flipCard {
         position: absolute;
@@ -331,12 +303,62 @@ $result-red: rgb(235 87 87);
 
     .explanationArea {
       position: absolute;
-      display: flex;
       justify-content: center;
       width: 100%;
       height: 280px;
-      top: 5px;
+      top: 70px;
       left: 0;
+
+      .key {
+        position: absolute;
+        padding-left: 15px;
+        box-sizing: border-box;
+        right: 20px;
+        width: 110px;
+        border-radius: 4px;
+        border: solid $neutral_dark10 1px;
+        animation: appear 1s;
+
+        .emojiSlot {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          .dot {
+            height: 25px;
+            width: 25px;
+            border-radius: 4px;
+            display: inline-block;
+
+            &First {
+              background-color: $chart-first;
+            }
+
+            &Second {
+              background-color: $chart-second;
+            }
+
+            &Third {
+              background-color: $chart-third;
+            }
+          }
+        }
+      }
+
+      .visualizationContainer {
+        display: flex;
+        gap: 30px;
+        width: calc(100% - 180px);
+        margin-left: 40px;
+
+        .visualizationColumn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          animation: appear 1s;
+        }
+      }
     }
 
     .buttonsArea {
@@ -347,8 +369,9 @@ $result-red: rgb(235 87 87);
       flex-direction: row;
       position: absolute;
       bottom: 0;
-      left: 0;
-      width: 100%;
+      width: calc(100% - 20px);
+      transform: translateX(-50%);
+      left: 50%;
 
       &Left {
         margin-right: auto;
@@ -358,7 +381,7 @@ $result-red: rgb(235 87 87);
     .buttonsAreaTop {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 10px;
       width: 30%;
       display: flex;
       justify-content: flex-end;

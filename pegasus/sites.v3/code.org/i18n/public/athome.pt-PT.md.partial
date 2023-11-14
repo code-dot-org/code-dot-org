@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Experimente uma Hora do Código com este divertido tutorial introdutório</h2>
-<p>Experimente um tutorial <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">de uma hora</a> com jogos e filmes populares como Minecraft, Frozen e Star Wars. Muitos tutoriais são estruturados como jogos, projetados para ensinar conceitos básicos de ciência da computação de maneiras divertidas e envolventes.</p>
+<p>Experimente um tutorial <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">de uma hora</a> com jogos e filmes populares como Minecraft, Frozen e Star Wars. Muitos tutoriais são estruturados como jogos, projetados para ensinar conceitos básicos de ciência da computação de maneiras divertidas e envolventes.</p>
 
 <br>
 
