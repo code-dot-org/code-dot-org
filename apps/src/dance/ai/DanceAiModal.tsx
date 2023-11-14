@@ -822,13 +822,13 @@ const DanceAiModal: React.FunctionComponent = () => {
           <div id="buttons-area-top-left">
             <ModalButton
               currentMode={mode}
-              showFor={[Mode.RESULTS, Mode.EXPLANATION]}
-              disableFor={[Mode.EXPLANATION]}
+              showFor={[Mode.RESULTS]}
               id="start-over-button"
               onClick={handleStartOverClick}
               color={Button.ButtonColor.neutralDark}
               className={moduleStyles.button}
               aria-label={i18n.danceAiModalStartOverButton()}
+              title={i18n.danceAiModalStartOverButton()}
               icon="fast-backward"
             />
           </div>
@@ -841,6 +841,7 @@ const DanceAiModal: React.FunctionComponent = () => {
               color={Button.ButtonColor.neutralDark}
               className={moduleStyles.button}
               aria-label={i18n.danceAiModalExplanationButton()}
+              title={i18n.danceAiModalExplanationButton()}
               iconClassName={moduleStyles.buttonIcon}
               icon="bar-chart"
             />
@@ -853,6 +854,7 @@ const DanceAiModal: React.FunctionComponent = () => {
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
               aria-label={i18n.danceAiModalBack()}
+              title={i18n.danceAiModalBack()}
               iconClassName={moduleStyles.buttonIcon}
               icon="bar-chart"
             />
