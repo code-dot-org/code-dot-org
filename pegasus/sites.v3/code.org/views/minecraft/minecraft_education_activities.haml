@@ -27,23 +27,22 @@
 -#   aria_label: hoc_s(:aria_label_call_to_action_minecraft_2020)
 -# }
 
--# Hiding this until the activity is ready
--# .action-block.action-block--two-col
--#   %img.col-50{src: "/images/mc/minecraft-activity-gen-ai-2023.png", alt: ""}
--#   .text-wrapper.col-50
--#     .flex-container.justify-space-between.align-items-start
--#       %p.overline
--#         =hoc_s(:module_label_grades)
--#         =hoc_s(:module_grade_2_12)
--#       %p.new
--#         =hoc_s(:new)
--#     %h3.heading-md
--#       = hoc_s(:minecraft_education_activity_title_2023)
--#     %p
--#       = hoc_s(:minecraft_education_activity_desc_2023)
--#     %a.link-button.has-external-link{href: "https://aka.ms/hourofcode", target: "_blank", rel: "noopener noreferrer", "aria-label": hoc_s(:aria_label_call_to_action_minecraft_2023)}
--#       = hoc_s(:call_to_action_get_started)
--#   .clear
+.action-block.action-block--two-col
+  %img.col-50{src: "/images/mc/minecraft-activity-gen-ai-2023.png", alt: ""}
+  .text-wrapper.col-50
+    .flex-container.justify-space-between.align-items-start
+      %p.overline
+        =hoc_s(:module_label_grades)
+        =hoc_s(:module_grade_2_12)
+      %p.new
+        =hoc_s(:new)
+    %h3.heading-md
+      = hoc_s(:minecraft_education_activity_title_2023)
+    %p
+      = hoc_s(:minecraft_education_activity_desc_2023)
+    %a.link-button.has-external-link{href: "https://aka.ms/hourofcode", target: "_blank", rel: "noopener noreferrer", "aria-label": hoc_s(:aria_label_call_to_action_minecraft_2023)}
+      = hoc_s(:call_to_action_get_started)
+  .clear
 
 .action-block__wrapper.action-block__wrapper--two-col
   - activity_item.each do |activity_item|
