@@ -20,7 +20,6 @@ import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
-import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 
@@ -79,6 +78,7 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
+  canEnableAiTutor,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -278,7 +278,7 @@ export default function SectionsSetUpContainer({
     // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
     // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      experiments.isEnabled(experiments.AI_TUTOR_ACCESS) &&
+      canEnableAiTutor &&
       sections[0].course.displayName === 'Computer Science A';
 
     return renderExpandableSection(
@@ -432,4 +432,5 @@ const styles = {
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
+  canEnableAiTutor: PropTypes.bool,
 };

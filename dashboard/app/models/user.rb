@@ -1469,9 +1469,18 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
+  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+
+  # Teachers
+  def can_enable_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
+  # Students
   def has_ai_tutor_access?
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      (get_active_experiment_names_by_teachers.include?('ai-tutor') &&
+      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
       sections_as_student.any?(&:ai_tutor_enabled))
   end
 
