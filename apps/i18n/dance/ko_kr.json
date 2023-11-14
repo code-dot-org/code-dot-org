@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "뒤로",
+  "danceAiModalClose": "닫기",
+  "danceAiModalCodeButton": "코드",
+  "danceAiModalExplanationButton": "더 알아보기",
+  "danceAiModalStartOverButton": "다시 시작",
   "danceFeedbackDidntPress": "댄스가 진행되는 동안 잊지 말고 화살표 키를 누르세요.",
   "danceFeedbackKeepCoding": "계속 코딩하세요! 아직 정확히 완성되지 않았습니다.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> 블록에 코드를 덧붙이고 댄스가 진행되는 동안 잊지 말고 키를 누르세요.",

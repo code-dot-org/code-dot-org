@@ -34,6 +34,11 @@
           "csleadersprize": {
             "buttonText": "Matuto nang higit pa"
           },
+          "hoc-2023": {
+            "body": "Sumali sa milyun-milyong tao sa buong mundo sa pag-organisa ng isang oras ng pag-coding, na may AI o walang AI at matuto kung paano gumagana ang AI. Maaaring gawin ito ng sinuman, saanman. Hindi kailangan ng karanasan.",
+            "buttonText": "Matuto nang higit pa",
+            "title": "Hour of Code: Pagigigng Malikhain gamit ang AI"
+          },
           "hoc-more": {
             "body": "Ang website ng Hour of Code ay mayroong mahigit 500 na aktibidad sa computer science para sa lahat ng edad at antas ng karanasan, na binuo ng Code.org at mga partner."
           },

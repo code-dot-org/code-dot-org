@@ -85,6 +85,25 @@ ne:
             MOVES.Roll: बडी रोल
             MOVES.ThisOrThat: यो वा त्यो
         text: सधैंभरिलाई
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"SLOTH"': स्लथ्स
+          MOVE:
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
+            MOVES.ThisOrThat: यो वा त्यो
+        text: सधैंभरिलाई
       Dancelab_changeMoveLR:
         options:
           MOVE:

@@ -112,6 +112,13 @@ export default class SvgFrame {
       this.frameGroup_
     );
     this.frameText_.appendChild(document.createTextNode(this.text));
+    if (this.element_.RTL) {
+      // Place frame text on right side of header.
+      this.frameText_?.setAttribute(
+        'x',
+        -this.frameText_?.getBoundingClientRect().width
+      );
+    }
   }
 
   getPadding() {
@@ -172,10 +179,18 @@ export default class SvgFrame {
     this.frameHeader_.setAttribute('fill', this.headerColor);
 
     if (isRtl) {
+      // In RTL the 0 x coordinate is on the right side of the block.
       this.frameClipRect_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameHeader_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameBase_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
-      this.frameText_.setAttribute('x', -width + 2 * frameSizes.MARGIN_SIDE);
+      // The text should be on the right side of the header, placed so that the
+      // entire text is visible (hence the x-coordinate is -width). There is no need
+      // for a margin because there is padding around the block already, past the
+      // 0 coordinate.
+      this.frameText_?.setAttribute(
+        'x',
+        -this.frameText_?.getBoundingClientRect().width
+      );
     }
   }
 }

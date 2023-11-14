@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "kode",
+  "danceAiModalStartOverButton": "Mulai dari awal",
+  "danceAiModalExplanationButton": "Pelajari lebih lanjut",
+  "danceAiModalBack": "Kembali",
+  "danceAiModalClose": "Tutup",
   "danceFeedbackDidntPress": "Pastikan untuk menekan tombol panah saat tarian Anda sedang berjalan.",
+  "danceFeedbackKeepCoding": "Terus lakukan coding! Masih ada yang belum beres.",
   "danceFeedbackKeyEvent": "Pastikan Anda melampirkan beberapa kode ke blok `tombol kapan` dan tekan tombol tersebut saat tarian Anda sedang berlangsung.",
   "danceFeedbackNeedBackup": "Anda mesti membuat kelompok penari cadangan dengan <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blok.",
   "danceFeedbackNeedDifferentDance": "Anda mesti menggunakan tarian berbeda.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Gunakan blok `atur ukuran penari_cadangan2 size` untuk membuat penari lebih kecil.",
   "danceFeedbackUseSetTint": "Gunakan blok `atur warna` untuk mengubah warna penari.",
   "danceFeedbackUseStartMapping": "Cobalah menambahkan <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"bas\"</title></block></xml> blok ke program Anda.",
-  "danceFeedbackKeepCoding": "Terus lakukan coding! Masih ada yang belum beres.",
   "measure": "Birama:"
 }

@@ -4,6 +4,7 @@ pl:
     attributes:
       user:
         age: Wiek
+        ai_rubrics_disabled: Wyłącz funkcję rubryki AI
         ai_settings_header: Ustawienia AI
         current_password: Aktualne hasło
         edit_header: Edytuj dane konta
@@ -412,6 +413,11 @@ pl:
     starwars_javascript_name: 'Star Wars: Budowanie Galaktyki za pomocą kodu (JavaScript)'
     title: Pobieranie godziny kodowania
     windows: Windows (64-bitowy)
+  hoc_tutorial_email_content:
+    dear_teacher: Szanowna/y %{teacher_name},
+    founder: Założyciel, Code.org
+    learn_about_ai: Poznaj sztuczną inteligencję (AI)
+    your_friends: Twoi znajomi na Code.org
   home:
     20hour_overview: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z
       zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach
