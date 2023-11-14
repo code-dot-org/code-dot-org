@@ -35,6 +35,16 @@ class LearningGoalAiEvaluation < ApplicationRecord
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
+  validate :validate_matching_rubrics
+  def validate_matching_rubrics
+    return unless rubric
+
+    # rubric_ai_evaluation.rubric should match learning_goal.rubric
+    unless rubric_ai_evaluation.rubric == rubric
+      errors.add(:rubric_ai_evaluation, "rubric_ai_evaluation.rubric does not match learning_goal.rubric")
+    end
+  end
+
   def summarize_for_instructor
     {
       id: id,
