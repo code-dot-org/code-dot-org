@@ -768,6 +768,8 @@ form {
   flex-wrap: wrap;
   overflow: hidden;
 
+  // Use this wrapper on the image or video
+  // to add a margin around it
   .media-wrapper {
     & > * {
       margin: 1.25rem;
