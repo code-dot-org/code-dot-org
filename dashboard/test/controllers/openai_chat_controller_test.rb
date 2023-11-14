@@ -7,17 +7,23 @@ class OpenaiChatControllerTest < ActionController::TestCase
     OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({status: 200, json: {}})
   end
 
-  # User without ai tutor access is unable to access the chat completion endpoint
+  # Student without ai tutor access is unable to access the chat completion endpoint
   test_user_gets_response_for :chat_completion,
   user: :student,
   method: :post,
   params: {messages: [{role: "user", content: "Say this is a test!"}]},
   response: :forbidden
 
-  # User with ai tutor access disabled is unable to access the chat completion endpoint
+  # Teacher without ai tutor access is unable to access the chat completion endpoint
+  test_user_gets_response_for :chat_completion,
+  user: :teacher,
+  method: :post,
+  params: {messages: [{role: "user", content: "Say this is a test!"}]},
+  response: :forbidden
+
+  # Student with ai tutor access disabled is unable to access the chat completion endpoint
   test_user_gets_response_for :chat_completion,
   user: :student_without_ai_tutor_access,
-  name: "Student with AI Tutor disabled",
   method: :post,
   params: {messages: [{role: "user", content: "Say this is a test!"}]},
   response: :forbidden
@@ -29,7 +35,7 @@ class OpenaiChatControllerTest < ActionController::TestCase
   params: {messages: [{role: "user", content: "Say this is a test!"}]},
   response: :success
 
-  # User with ai tutor access from experiment and section enablement, post request with a messages param returns a success
+  # Student with ai tutor access from experiment and section enablement, post request with a messages param returns a success
   test_user_gets_response_for :chat_completion,
   user: :student_with_ai_tutor_access,
   method: :post,
