@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "返回",
+  "danceAiModalClose": "關閉",
+  "danceAiModalCodeButton": "代碼",
+  "danceAiModalExplanationButton": "進一步了解",
+  "danceAiModalStartOverButton": "重新開始",
   "danceFeedbackDidntPress": "當你的舞蹈正在進行時，請務必按方向鍵操作。",
   "danceFeedbackKeepCoding": "繼續編程！有些地方還不完全正確。",
   "danceFeedbackKeyEvent": "請把你的程式碼加到 <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"的\"</title></block></xml> 。當你的舞蹈開始動的時候，請按一下鑰匙。",

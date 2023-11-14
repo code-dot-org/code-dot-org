@@ -81,7 +81,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'shotgun'
   gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']

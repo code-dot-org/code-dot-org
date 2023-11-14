@@ -65,7 +65,7 @@ pt:
           student_description: Aprenda programação funcional com álgebra
           name: álgebra
         infinity:
-          title: Laboratório Infinito Disney
+          title: Disney Infinity Play Lab
           description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
@@ -345,17 +345,17 @@ pt:
           description_short: Programação
           student_description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
         gumball:
-          title: Laboratório do Gumball
+          title: Gumball Play Lab
           description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
         starwars:
-          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
+          title: 'Star Wars: Construindo uma Galáxia com Código (JavaScript)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         starwarsblocks:
-          title: 'Star Wars: Construa uma galáxia com programação (Blocos)'
+          title: 'Star Wars: Construindo uma Galáxia com Código (Blockly)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
@@ -742,7 +742,7 @@ pt:
         flappy-impact-study:
           title: Flappy Code com pesquisa
         coursea-draft:
-          title: 'Fundamentos de Ciência da Computação: Curso A'
+          title: 'Fundamentos da CC: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
         courseb-draft:
           title: 'Fundamentos da CC: Curso B'
@@ -3810,7 +3810,7 @@ pt:
           title: Desenvolvimento da Unidade 8 do CSA
         poem-art:
           name: Arte poética
-          title: Arte poética
+          title: Arte Poética
         poetry:
           name: poesia
           title: Ciência da Computação e Poesia
@@ -3858,7 +3858,7 @@ pt:
           title: Nosso Código de Ética em I.A.
           description_audience: Entre sexto ano do fundamental e terceiro do ensino médio
         poem-art-2021:
-          title: Arte poética
+          title: Arte Poética
         poetry-2021:
           title: Codificação com Poesia
         hello-world-emoji-2021:

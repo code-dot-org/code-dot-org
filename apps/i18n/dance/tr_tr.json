@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Geri",
+  "danceAiModalClose": "Kapat",
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalExplanationButton": "Daha fazlasını öğren",
+  "danceAiModalStartOverButton": "Yeniden başla",
   "danceFeedbackDidntPress": "Dansınız devam ederken ok tuşlarına bastığınızdan emin olun.",
   "danceFeedbackKeepCoding": "Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> bloğuna bazı kodlar eklediğinizden emin olun ve dansınız devam ederken tuşa basın.",

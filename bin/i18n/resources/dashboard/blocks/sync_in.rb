@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
-require 'json'
-
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../../../redact_restore_utils'
 require_relative '../blocks'
 
@@ -11,31 +9,20 @@ module I18n
   module Resources
     module Dashboard
       module Blocks
-        class SyncIn
-          def self.perform
-            new.execute
-          end
-
-          def execute
-            progress_bar.start
-
+        class SyncIn < I18n::Utils::SyncInBase
+          def process
             prepare
             progress_bar.progress = 50
 
             redact
-
-            progress_bar.finish
+            progress_bar.progress = 100
           end
 
           private
 
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(title: 'Dashboard/blocks sync-in')
-          end
-
           def blocks_data
             Dir.glob(CDO.dir('dashboard/config/blocks/**/*.json')).each_with_object({}) do |file_path, blocks|
-              config = JSON.load_file(file_path)['config']
+              config = I18nScriptUtils.parse_file(file_path)['config']
               block_name = File.basename(file_path, '.*')
               blocks[block_name] = {}
 

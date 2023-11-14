@@ -128,6 +128,28 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
         text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': les chats
+            '"SLOTH"': les paresseux
+          MOVE:
+            '"next"': "(Suivant)"
+            '"prev"': "(Précédent)"
+            '"rand"': "(Aléatoire)"
+            MOVES.ClapHigh: Tape des mains en l'air
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Étoile
+            MOVES.Rest: Aucun
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
+        text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
       Dancelab_changeMoveLR:
         options:
           MOVE:

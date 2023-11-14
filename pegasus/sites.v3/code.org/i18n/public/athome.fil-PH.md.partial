@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Subukan ang isang Hour of Code gamit ang nakakatuwang panimulang pagtuturong ito</h2>
-<p>Subukan ang <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">isang oras na pagtuturo</a> na nagtatampok ng mga sikat na laro at pelikula tulad ng Minecraft, Frozen, at Star Wars. Maraming mga pagtuturo ang nakabalangkas na tulad ng mga laro, na idinisenyo para magturo ng mga pangunahing konsepto ng computer science sa masaya, nakakaengganyong mga paraan.</p>
+<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Maraming mga pagtuturo ang nakabalangkas na tulad ng mga laro, na idinisenyo para magturo ng mga pangunahing konsepto ng computer science sa masaya, nakakaengganyong mga paraan.</p>
 
 <br>
 

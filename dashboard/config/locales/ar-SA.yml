@@ -692,6 +692,9 @@ ar:
       دائم بتقدم طفلك ومشاريعه!"
   parent_mailer:
     parent_email_added_subject: مرحبا بكم في Code.org!
+    parent_permission_reminder_subject: تذكير، موافقة الوالدين مطلوبة لوصول طفلك إلى
+      Code.org
+    parent_permission_request_subject: موافقة الوالدين مطلوبة لوصول طفلك إلى Code.org
     student_associated_subject: معلومات الدخول على Code.org
   password:
     change_form:
@@ -1175,6 +1178,8 @@ ar:
     teacher_educator_guide: راجع دليل المعلم
     title: سجل في Code.org
     us_state: الولاية
+    us_state_dropdown_options:
+      other: أنا أعيش في مكان غير مدرج هنا
     user_type: هل أنت طالب أو معلّم؟
     user_type_button: تحديث نوع الحساب
     user_type_label: نوع الحساب

@@ -34,6 +34,7 @@ pl:
           description: Rysuj fajne obrazki i wzory z Artystą!
           description_short: Rysuj fajne obrazki i wzory z Artystą!
           student_description: Rysuj fajne obrazki i wzory z Artystą!
+          name: artysta
         hourofcode:
           title: Klasyczny labirynt
           description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z Epoki lodowcotej!
@@ -67,6 +68,7 @@ pl:
           description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
+          name: nieskończoność
         netsim:
           title: Symulator internetowy
           description: Dowiedz się, jak działa Internet.
@@ -7731,3 +7733,9 @@ pl:
           name: self-paced-pl-csd-unit1-1-2023
         self-paced-pl-csd-unit1-2-2023:
           name: self-paced-pl-csd-unit1-2-2023
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: edycja AI'
+          name: dance-ai-2023
+          title: 'Potańcówka: edycja AI'

@@ -3867,7 +3867,7 @@ ko:
             csf_conditionals:
               display_name: 조건
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           title: 과정 D (2022)
           description: '3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에 대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다. '
           description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.

@@ -653,6 +653,7 @@
         },
         "CSD U3 debug_2023": {
           "rubric_key_concept": "Utiliza un sistema de coordenadas para colocar elementos en una pantalla, teniendo en cuenta el tamaño del objeto y la superposición.",
+          "rubric_performance_level_1": "El dibujo del programa es idéntico al del ejemplo y está contenido en las siete líneas de código.",
           "rubric_performance_level_2": "El dibujo del programa es, en su mayor parte, el mismo que el dibujo, pero puede haber algunos pequeños errores de posicionamiento, y puede haber líneas de código adicionales.",
           "rubric_performance_level_3": "El cuadrado se ha movido, es de color púrpura y aparece delante de los círculos.",
           "rubric_performance_level_4": "La imagen es la misma, o los cambios parecen no estar relacionados con la tarea."
