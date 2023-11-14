@@ -37,6 +37,9 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {ErrorFallbackPage} from '@cdo/apps/lab2/views/Lab2Wrapper';
 
 const ButtonState = {
   UP: 0,
@@ -176,16 +179,26 @@ Dance.prototype.init = function (config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            setSong={this.setSongCallback.bind(this)}
-            resetProgram={this.reset.bind(this)}
-          />
+      <ErrorBoundary
+        fallback={<ErrorFallbackPage />}
+        onError={(error, componentStack) =>
+          Lab2MetricsReporter.logError('Dance Party Error', error, {
+            componentStack,
+          })
         }
-        onMount={onMount}
-      />
+      >
+        >
+        <AppView
+          visualizationColumn={
+            <DanceVisualizationColumn
+              showFinishButton={showFinishButton}
+              setSong={this.setSongCallback.bind(this)}
+              resetProgram={this.reset.bind(this)}
+            />
+          }
+          onMount={onMount}
+        />
+      </ErrorBoundary>
     </Provider>,
     document.getElementById(config.containerId)
   );
