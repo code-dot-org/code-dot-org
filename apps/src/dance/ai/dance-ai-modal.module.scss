@@ -66,6 +66,7 @@ $ai-modal-border-width: 8px;
     align-items: center;
     padding: 0 $ai-modal-border-width;
     margin-top: $ai-modal-border-width;
+    direction: ltr;
 
     .botImage {
       width: 24px;
@@ -127,11 +128,12 @@ $ai-modal-border-width: 8px;
     .toggleArea {
       position: absolute;
       width: 40%;
-      height: 100px;
       top: 10px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
+      display: flex;
+      justify-content: space-around;
 
       span {
         button {
