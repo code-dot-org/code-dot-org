@@ -20,7 +20,7 @@ theme: responsive_full_width
     %p=hoc_s(:middle_high_page_hero_description)
     .action-block.action-block--two-col
       .media-wrapper.col-50
-        %img{src: "/images/houreofcode-students-banner.png"}
+        %img{src: "/images/houreofcode-students-banner.png", alt: ""}
       .text-wrapper.col-50
         %h3
           =hoc_s(:middle_high_page_hero_title)
@@ -126,7 +126,7 @@ theme: responsive_full_width
     %p=hoc_s(:middle_high_page_additional_resources_description)
     .action-block.action-block--two-col{style: "margin-bottom: 2rem"}
       .media-wrapper.col-50
-        %img{src: "/images/video-library-banner.png"}
+        %img{src: "/images/video-library-banner.png", alt: ""}
       .text-wrapper.col-50
         %h3
           =hoc_s(:middle_high_page_video_library_title)
@@ -136,7 +136,7 @@ theme: responsive_full_width
           =hoc_s(:middle_high_page_video_library_link)
     .action-block.action-block--two-col
       .media-wrapper.col-50
-        %img{src: "/images/cs-journeys-banner.png"}
+        %img{src: "/images/cs-journeys-banner.png", alt: ""}
       .text-wrapper.col-50
         %h3
           =hoc_s(:middle_high_page_cs_journeys_title)
@@ -158,7 +158,7 @@ theme: responsive_full_width
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
-            grades
+            =hoc_s(:module_label_grades)
             =hoc_s(:module_grade_6_12)
           %h3
             =hoc_s(:middle_high_page_cs_card_title_1)
@@ -171,7 +171,7 @@ theme: responsive_full_width
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
-            grades
+            =hoc_s(:module_label_grades)
             =hoc_s(:module_grade_9_12)
           %h3
             =hoc_s(:middle_high_page_cs_card_title_2)
@@ -184,7 +184,7 @@ theme: responsive_full_width
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline
-            grades
+            =hoc_s(:module_label_grades)
             =hoc_s(:module_grade_9_12)
           %h3
             =hoc_s(:middle_high_page_cs_card_title_3)
