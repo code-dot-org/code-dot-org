@@ -841,7 +841,7 @@ const DanceAiModal: React.FunctionComponent = () => {
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
+          <span>
             {mode === Mode.RESULTS && (
               <Button
                 id="regenerate-button"
@@ -858,37 +858,38 @@ const DanceAiModal: React.FunctionComponent = () => {
                 {i18n.danceAiModalRegenerateButton()}
               </Button>
             )}
-          </div>
+          </span>
+          <span>
+            {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
+              <Button
+                id="generate-button"
+                text={i18n.danceAiModalGenerateButton()}
+                onClick={handleGenerateClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+            )}
 
-          {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
-            <Button
-              id="generate-button"
-              text={i18n.danceAiModalGenerateButton()}
-              onClick={handleGenerateClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
-
-          {showConvertButton && (
-            <Button
-              id="convert-button"
-              text={i18n.danceAiModalUseCodeButton()}
-              onClick={handleConvertBlocks}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-              disabled={aiModalOpenedFromFlyout}
-            />
-          )}
-          {showUseButton && (
-            <Button
-              id="use-button"
-              text={i18n.danceAiModalUseEffectButton()}
-              onClick={handleUseClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
+            {showConvertButton && (
+              <Button
+                id="convert-button"
+                text={i18n.danceAiModalUseCodeButton()}
+                onClick={handleConvertBlocks}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+                disabled={aiModalOpenedFromFlyout}
+              />
+            )}
+            {showUseButton && (
+              <Button
+                id="use-button"
+                text={i18n.danceAiModalUseEffectButton()}
+                onClick={handleUseClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+            )}
+          </span>
         </div>
       </div>
     </AccessibleDialog>

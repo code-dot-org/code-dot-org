@@ -386,17 +386,12 @@ $ai-modal-border-width: 8px;
       height: 44px;
       margin-top: auto;
       display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
+      justify-content: space-between;
       position: absolute;
       bottom: 0;
       width: calc(100% - 20px);
       transform: translateX(-50%);
       left: 50%;
-
-      &Left {
-        margin-right: auto;
-      }
     }
 
     .buttonsAreaTop {
