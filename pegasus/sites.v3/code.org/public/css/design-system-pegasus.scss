@@ -768,6 +768,18 @@ form {
   flex-wrap: wrap;
   overflow: hidden;
 
+  .media-wrapper {
+    & > * {
+      margin: 1rem;
+      width: calc(100% - 1rem);
+
+      @media (max-width: $width-md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+
   .text-wrapper {
     padding: 1rem 1.5rem;
   }
