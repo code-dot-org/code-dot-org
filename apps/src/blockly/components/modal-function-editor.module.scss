@@ -14,10 +14,17 @@
   top: 10px;
   right: 10px;
   z-index: 1;
-  border-radius: 4px;
-  background-color: $light_gray;
+}
+
+.toolbarRtl {
+  left: 10px;
+  right: 0;
 }
 
 .buttons {
   float: right;
+}
+
+.buttonsRtl {
+  float: left;
 }

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-30 21:39:02 UTC",
+    "serialized_at": "2023-11-07 19:54:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -675,7 +675,13 @@
       "key": "1afba981-a31d-4bb1-8dc3-3d955fefc4c4",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side."
+        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?</i>\n\n[Unit Journal Template](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit#slide=id.g24cbae510b7_0_100)\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c9f55c9f1b052fce6f62d8569709f071-Screenshot 2023-11-03 at 1.46.31 PM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1afba981-a31d-4bb1-8dc3-3d955fefc4c4",

@@ -5,6 +5,7 @@ import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
+
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
@@ -235,6 +236,12 @@ Dance.prototype.initSongs = async function (config) {
           config.level.selectedSong = songId;
         }
       },
+      onSongUnavailable: () => {
+        this.songUnavailableAlert = this.studioApp_.displayPlayspaceAlert(
+          'warning',
+          React.createElement('div', {}, danceMsg.danceSongNoLongerSupported())
+        );
+      },
     })
   );
 };
@@ -258,6 +265,10 @@ Dance.prototype.setSongCallback = function (songId) {
       },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
+        if (this.songUnavailableAlert) {
+          this.studioApp_.closeAlert(this.songUnavailableAlert);
+          this.songUnavailableAlert = undefined;
+        }
 
         const hasChannel = !!getStore().getState().pageConstants.channelId;
         if (hasChannel) {
@@ -421,6 +432,11 @@ Dance.prototype.afterInject_ = function () {
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
+  if (Sounds.getSingleton().isPlaying(url)) {
+    // Prevent playing the same song twice simultaneously.
+    audioCommands.stopSound({url: url});
+  }
+
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -569,6 +585,11 @@ Dance.prototype.runButtonClick = async function () {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';
+  }
+
+  if (this.songUnavailableAlert) {
+    this.studioApp_.closeAlert(this.songUnavailableAlert);
+    this.songUnavailableAlert = undefined;
   }
 
   // Block re-entrancy since starting a run is async
