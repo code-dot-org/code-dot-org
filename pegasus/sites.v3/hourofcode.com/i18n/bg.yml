@@ -13838,6 +13838,7 @@ bg:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Поколението на ИИ
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14308,6 +14309,7 @@ bg:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: Присъединете се към новия Час на кодирането в Minecraft: Поколението на ИИ. Развийте изобретения с ИИ, като съчетавате решаване на проблеми, творчество и изчислително мислене. Научете основите на кодирането и създаването на отговорен ИИ, използвайки блокове или Python, за да направите по-добър ИИ за всички.
   tutorial_bsimage_string_detail_grades: Класове 6+
   tutorial_bscomputing_string_detail_grades: Класове 6+
   tutorial_stackpython_string_detail_grades: Класове 6+
@@ -14439,6 +14441,7 @@ bg:
   tutorial_madmobile_string_detail_grades: Класове 6+
   tutorial_intelinosmile_string_detail_grades: Предварително четец - 8 клас
   tutorial_intelinoaisign_string_detail_grades: Класове 2-8
+  tutorial_generationai_string_detail_grades: 2 – 5 клас (възраст 7 – 10 години) 6 – 8 клас (11 – 13 години) 9+ клас (14+ години)
   tutorial_bsimage_string_platforms: Хром, Файърфокс, Сафари
   tutorial_bscomputing_string_platforms: Ънплъгд
   tutorial_stackpython_string_platforms: Всички съвременни браузъри, Android таблет,
@@ -14609,6 +14612,7 @@ bg:
   tutorial_madmobile_string_platforms: Всички съвременни браузъри
   tutorial_intelinosmile_string_platforms: Всички съвременни браузъри, iPad
   tutorial_intelinoaisign_string_platforms: Всички съвременни браузъри
+  tutorial_generationai_string_platforms: Компютри (Windows PC, Mac), Android (Chromebook), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14740,6 +14744,7 @@ bg:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Без зависимост от език
   tutorial_stackpython_string_detail_programming_languages: Питон
@@ -14873,14 +14878,9 @@ bg:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Блокове
   tutorial_intelinoaisign_string_detail_programming_languages: Блокове
-
-  tutorial_generationai_name: Поколението на ИИ
-  tutorial_generationai_longdescription: Присъединете се към новия Час на кодирането в Minecraft: Поколението на ИИ. Развийте изобретения с ИИ, като съчетавате решаване на проблеми, творчество и изчислително мислене. Научете основите на кодирането и създаването на отговорен ИИ, използвайки блокове или Python, за да направите по-добър ИИ за всички.
-  tutorial_generationai_string_detail_grades: 2 – 5 клас (възраст 7 – 10 години) 6 – 8 клас (11 – 13 години) 9+ клас (14+ години)
-  tutorial_generationai_string_platforms: Компютри (Windows PC, Mac), Android (Chromebook), iPad
-  tutorial_generationai_string_detail_platforms: ''
   tutorial_generationai_string_detail_programming_languages: Block, Python
    
+ 
   school_not_found_heading: Не можахме да намерим училището ти. Моля, въведете повече
     информация.
   school_name: Име на училището
