@@ -15284,7 +15284,8 @@
           "name": "共有"
         },
         "574e77dd-d6f7-4d59-80db-f24e54851aa1": {
-          "name": "リフレクト"
+          "name": "リフレクト",
+          "progression_name": "調査終了"
         },
         "324ed892-67b4-45b3-96d1-5e0ea6563e2e": {
           "name": "プロジェクト後のテスト"
@@ -17650,7 +17651,8 @@
           "name": "まとめ"
         },
         "5d04c580-a932-46bd-86c4-649793eac948": {
-          "name": "復習"
+          "name": "復習",
+          "progression_name": "調査終了"
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
           "tips": [
@@ -26013,7 +26015,8 @@
           "name": "共有"
         },
         "1400867f-9dca-49ce-be9b-edbc452271b7": {
-          "name": "リフレクト"
+          "name": "リフレクト",
+          "progression_name": "調査終了"
         },
         "d0e4ab72-97ea-42f5-a35a-821e53038da5": {
           "name": "プロジェクト後のテスト"
@@ -28893,7 +28896,8 @@
           "name": "まとめ"
         },
         "3dbd941c-5a39-4567-95a6-94813b2a6cab": {
-          "name": "復習"
+          "name": "復習",
+          "progression_name": "調査終了"
         },
         "a2ad8ae1-c5e2-4fca-a60f-08e20863a9b8": {
           "progression_name": "私のオンラインネイバーフッド"
@@ -35950,6 +35954,65 @@
         },
         "8aa3a6e2-5df5-4f7c-bafa-b5363f7cb1dc": {
           "progression_name": "もし... なら... 条件文"
+        },
+        "02053aac-92d9-4d70-a1fa-9e82cbb76686": {
+          "progression_name": "調査終了"
+        },
+        "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b": {
+          "progression_name": "調査終了"
+        },
+        "1892c7ae-6927-42df-a1ee-d590267476da": {
+          "progression_name": "調査終了"
+        },
+        "266e20ca-98da-4140-80a3-b88831c809bc": {
+          "progression_name": "調査終了"
+        },
+        "4a5f44d5-73c2-4048-9bab-4e451074dde4": {
+          "progression_name": "調査終了"
+        },
+        "2c22613b-3667-4aeb-af87-4ac84ec0addf": {
+          "progression_name": "調査終了"
+        },
+        "d6dff7d6-7cff-440e-ba9d-cfd3a48316a2": {
+          "progression_name": "調査終了"
+        },
+        "eae62d4a-86cf-4879-9759-2245f3595ebf": {
+          "progression_name": "調査終了"
+        },
+        "c7842f8c-041e-415e-8efb-7e492f0f34c9": {
+          "progression_name": "調査終了"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "音楽フィルタリング"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "総合サポート"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "イントロビデオ"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "報告"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "ほめる"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "次の手順",
+          "description": "今日のアクティビティを楽しんだ生徒に、コーディングを続けるたくさんの選択肢があること、またそのリストはcode.org/learnで見られることを生徒に伝えます。また後に続くさらなるアクティビティを計画している場合は、次回のクラス内容を生徒に説明します。"
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "ウイルス対策"
         }
       }
     }

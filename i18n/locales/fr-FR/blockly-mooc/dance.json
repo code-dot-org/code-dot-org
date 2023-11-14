@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalStartOverButton": "Recommencer",
+  "danceAiModalExplanationButton": "En savoir plus",
+  "danceAiModalBack": "Retour",
+  "danceAiModalClose": "Fermer",
   "danceFeedbackDidntPress": "Assure-toi d’appuyer sur les touches fléchées pendant que ta danse est en cours.",
+  "danceFeedbackKeepCoding": "Continue à coder ! Il y a encore quelque chose qui cloche. ",
   "danceFeedbackKeyEvent": "Assure toi d'avoir attribué du code au bloc <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"en haut\"</title></block></xml> et presse une touche pendant que ta danse s'exécute.",
   "danceFeedbackNeedBackup": "Tu dois créer un groupe de danseurs de secours avec le bloc <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Tu dois utiliser une autre danse.",

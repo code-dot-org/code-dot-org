@@ -124,6 +124,27 @@ ko:
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP}이(가) {MOVE} {DIR}을(를) 영원히 실행"
+        options:
+          GROUP:
+            '"CAT"': 모든 고양이
+            '"SLOTH"': 나무늘보
+          MOVE:
+            MOVES.Roll: 구르기
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Clown: 강남
+            MOVES.Kick: 별
+            MOVES.ThisOrThat: 이것저것
+            MOVES.Rest: 없음
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
       Dancelab_changeMoveLR:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
@@ -592,8 +613,8 @@ ko:
           EFFECT:
             '"none"': 없음
             '"rand"': "(임의)"
-            '"circles"': 터널
             '"quads"': 앵글
+            '"circles"': 터널
             '"color_cycle"': 색상
             '"diamonds"': 다이아몬드
             '"disco_ball"': 디스코 볼
@@ -609,11 +630,11 @@ ko:
             '"ripples"': 물결
             '"snowflakes"': 눈
             '"text"': 음악 제목
-            '"squiggles"': 구불구불
             '"galaxy"': 우주
             '"sparkles"': 반짝이
             '"spiral"': 나선
             '"disco"': 사각형
+            '"squiggles"': 구불구불
             '"starburst"': 스타버스트
             '"stars"': 별
             '"music_wave"': 파도
@@ -2091,6 +2112,7 @@ ko:
             '"sound://category_loops/red_flag_loop1.mp3"': 임무
             '"sound://category_nature/summer_night_loop.mp3"': 밤
             '"sound://category_background/ocean_waves.mp3"': 바다
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 열대우림
             '"sound://category_background/repitition.mp3"': 라이딩
             '"sound://category_background/wavering_wind.mp3"': 잠 자는
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 천천히

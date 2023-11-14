@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kóði",
+  "danceAiModalStartOverButton": "Byrja aftur",
+  "danceAiModalExplanationButton": "Nánar",
+  "danceAiModalBack": "Til baka",
+  "danceAiModalClose": "Loka",
   "danceFeedbackDidntPress": "Gættu þess að ýta á örvarlyklana á meðan dansinn er í gangi.",
+  "danceFeedbackKeepCoding": "Haltu áfram að kóða! Það er eitthvað sem þarf að laga.",
   "danceFeedbackKeyEvent": "Gættu þess að tengja einhvern kóða við `þegar keyrt` kubbinn og ýta á lykilinn á meðan dansinn er í gangi.",
   "danceFeedbackNeedBackup": "Þú þarft að búa til hóp aukadansara með <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> kubbnum.",
   "danceFeedbackNeedDifferentDance": "Þú þarft að nota annan dans.",

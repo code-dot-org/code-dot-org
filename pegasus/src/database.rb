@@ -28,6 +28,11 @@ class Tutorials
         "#{db_column_name}___#{column_alias}".to_sym
       end
     end
+
+    # Lazy loading class definition of the dynamically generated Sequel Table classes
+    # This is needed in cases where the cache is hydrated, but class definition not loaded yet
+    DB[@table]
+
     @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
       DB[@table].select(*@column_aliases).all
     end.deep_dup

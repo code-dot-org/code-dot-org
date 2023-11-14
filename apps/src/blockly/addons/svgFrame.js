@@ -112,6 +112,13 @@ export default class SvgFrame {
       this.frameGroup_
     );
     this.frameText_.appendChild(document.createTextNode(this.text));
+    if (this.element_.RTL) {
+      // Place frame text on right side of header.
+      this.frameText_?.setAttribute(
+        'x',
+        -this.frameText_?.getBoundingClientRect().width
+      );
+    }
   }
 
   getPadding() {
@@ -137,7 +144,7 @@ export default class SvgFrame {
     // We do this because otherwise, the value returned by
     // getBoundingClientRect would take our size into account, and we
     // would 'grow' every time render was called.
-    this.frameGroup_.remove();
+    this.frameGroup_?.remove();
     var groupRect = svgGroup.getBoundingClientRect();
     svgGroup.prepend(this.frameGroup_);
 
@@ -170,24 +177,21 @@ export default class SvgFrame {
     this.frameHeader_.setAttribute('width', width);
     this.frameHeader_.setAttribute('height', height);
     this.frameHeader_.setAttribute('fill', this.headerColor);
-    this.setToolbarColor();
+
     if (isRtl) {
+      // In RTL the 0 x coordinate is on the right side of the block.
       this.frameClipRect_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameHeader_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameBase_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
-      this.frameText_.setAttribute('x', -width + 2 * frameSizes.MARGIN_SIDE);
+      // The text should be on the right side of the header, placed so that the
+      // entire text is visible (hence the x-coordinate is -width). There is no need
+      // for a margin because there is padding around the block already, past the
+      // 0 coordinate.
+      this.frameText_?.setAttribute(
+        'x',
+        -this.frameText_?.getBoundingClientRect().width
+      );
     }
-  }
-
-  /**
-   * Sets the color of the associated toolbar to match the frame's header color.
-   * The toolbar typically contains "delete" and "close" buttons.
-   */
-  setToolbarColor() {
-    const toolbarElement = document.getElementsByClassName(
-      'toolbar src-blockly-components-modal-function-editor-module__toolbar'
-    )[0];
-    toolbarElement.style.backgroundColor = this.headerColor;
   }
 }
 

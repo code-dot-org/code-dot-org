@@ -2452,11 +2452,11 @@ ko-KR:
         - {}
       CSD U4 MC Q4_2023:
         answers:
-        - {}
+        - text: 버튼
         - correct: true
+        - text: 드롭다운
         - {}
-        - {}
-        - {}
+        - text: 체크박스
         questions:
         - {}
       CSD U4 MC Q5_2023:
@@ -2980,7 +2980,7 @@ ko-KR:
       CSD U6 MC Q2_2023:
         answers:
         - {}
-        - {}
+        - text: 버튼
         - {}
         - correct: true
           text: 가속도 센서
@@ -2990,7 +2990,7 @@ ko-KR:
       CSD U6 MC Q2_6b2023:
         answers:
         - {}
-        - {}
+        - text: 버튼
         - {}
         - correct: true
           text: 가속도 센서
@@ -7005,7 +7005,7 @@ ko-KR:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_EOC2022:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합 프로젝트
       courseD_EOC2022_2023:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -8627,7 +8627,7 @@ ko-KR:
         display_name: 과정말 프로젝트
       courseF_EOC_samples2022:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
-        display_name: 과정말 프로젝트
+        display_name: 종합  프로젝트
       courseF_EOC_samples2022_2023:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 과정말 프로젝트

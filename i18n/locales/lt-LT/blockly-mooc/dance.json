@@ -1,4 +1,9 @@
 {
+  "danceAiModalCodeButton": "Kodavimas",
+  "danceAiModalExplanationButton": "Sužinok daugiau",
+  "danceAiModalBack": "Atgal",
+  "danceAiModalClose": "Užverti",
+  "danceFeedbackKeepCoding": "Mėgink toliau! Kažkas vis dar ne taip.",
   "danceFeedbackNeedNewDancer": "Tau reikia sukurti šokėją.",
   "danceFeedbackNoBackground": "Tau reikia pridėti fono efektą.",
   "danceFeedbackNoDancers": "Tu neturi šokėjų.",

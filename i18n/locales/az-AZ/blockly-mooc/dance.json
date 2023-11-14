@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalStartOverButton": "Yenidən başla",
+  "danceAiModalExplanationButton": "Daha ətraflı",
+  "danceAiModalBack": "Geri  ",
+  "danceAiModalClose": "Bağla",
   "danceFeedbackDidntPress": "Rəqs zamanı ox klavişlərini basdığınızdan əmin olun.",
+  "danceFeedbackKeepCoding": "Siz bütün lazım olan bloklardan istifadə edirsiniz amma səhv formada.",
   "danceFeedbackKeyEvent": " <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>  blokuna kodunuzu əlavə etdiyinizdən və rəqs zamanı düyməni kliklədiyinizdən əmin olun.",
   "danceFeedbackNeedBackup": "Siz <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"dairə\"</title></block></xml> blokundan istifadə edərək əlavə rəqqaslarda düzəldməlisiniz.",
   "danceFeedbackNeedDifferentDance": "Başqa bir rəqs istifadə etməlisiniz.",

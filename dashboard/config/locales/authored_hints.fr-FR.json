@@ -14376,8 +14376,8 @@
           "hint1": "Assurez-vous de connecter au moins un bloc `print` sous `when run`."
         },
         "csc_ecosystems_algae_freeplay_2023": {
-          "YouCan": "Vous pouvez : \n\n-   Modifier le nombre de poissons\n-   Modifier le nombre d'algues\n-   Modifier le nombre de secondes \n    avant que les poissons et les algues ne repoussent\n-   Apporter d'autres modifications",
-          "change": "Apportez quelques modifications à la simulation !"
+          "YouCan": "On peut : \n\n-   Modifier le nombre de poissons\n-   Modifier le nombre d'algues\n-   Modifier le nombre de secondes \n    avant que les poissons et les algues ne repoussent\n-   Apporter d'autres changements",
+          "change": "Apportez quelques changements à la simulation !"
         },
         "csc_ecosystems_arctic_2023": {
           "hint1": "L'ours polaire doit être plus gros ! Modifiez sa taille pour qu'elle soit supérieure à 30.",
@@ -14400,22 +14400,22 @@
           "CatchUnder": "Le bloc « attraper l'objet » doit être\nconnecté au bas de l'événement « quand le bateau touche le \npoisson ». "
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Placez le bloc de costume à changer à l'intérieur du bloc s'il y a trop d'algues.",
-          "Costume": "S'il y a trop d'algues, le corail sera endommagé. \n\nUtilisez ensuite le bloc de changement de costume.",
-          "TooMuch": "Connectez le bloc « si trop d'algues » à l'événement « Quand le poisson touche des algues »."
+          "BlockInside": "Placer le bloc « changer de costume » à l'intérieur du bloc « si trop d'algues ».",
+          "Costume": "S'il y a trop d'algues, le corail sera endommagé. \n\nUtiliser ensuite le bloc de changement de costume.",
+          "TooMuch": "Connecter le bloc « si trop d'algues » à l'événement « quand un poisson touche l'algue »."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
-          "Below": "Continuez à connecter les blocs au bas de l'espace de travail où vous avez terminé le dernier niveau !",
-          "BlocksInside": "S'il y a trop peu d'algues, le poisson partira. \n\nPlacez les autres blocs à l'intérieur du bloc d'algues s'il est trop petit.",
-          "TooLittle": "Connectez le bloc d'algues « si trop peu » à l'événement « Quand le poisson touche des algues »."
+          "Below": "Continuez à connecter les blocs au bas de l'espace de travail là où vous avez fini dans le dernier niveau !",
+          "BlocksInside": "S'il y a trop peu d'algues, les poissons s'en iront.\n\nPlacer les autres blocs à l'intérieur du bloc « s'il y a trop peu d'algues ».",
+          "TooLittle": "Connecter le bloc « si trop peu d'algues » à l'événement « quand un poisson touche l'algue »."
         },
         "csc_ecosystems_ocean_fish_2023": {
           "No Code": "Il n'y a encore rien à coder pour l'instant. Il suffit d'observer ce système en action. "
         },
         "csc_ecosystems_ocean_justright_algae": {
-          "Bellow": "Continuez à connecter les blocs au bas de l'espace de travail où vous avez terminé le dernier niveau !",
-          "JustRight": "Connectez le bloc d'algues if just right à l'événement « Quand le poisson touche des algues ».",
-          "costume": "Si les algues sont bonnes, le corail\nsera en bonne santé. \n\nUtilisez le bloc de costume à changer situé à l'intérieur du bloc à algues, s'il vous convient."
+          "Bellow": "Continuez à connecter les blocs au bas de l'espace de travail là où vous avez fini dans le dernier niveau !",
+          "JustRight": "Connecter le bloc d'algues « si juste assez » à l'événement « quand un poisson touche l'algue ».",
+          "costume": "Si la quantité d'algues est tout juste suffisante, le corail sera en bonne santé. \n\nUtiliser le bloc « changer de costume » à l'intérieur du bloc « si juste assez d'algues ». "
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
           "hint1": "Il y a trop de perroquets ! Modifiez le nombre\nde perroquets pour qu'il soit inférieur à 8."
@@ -14431,18 +14431,18 @@
           "hint3": "Ajoutez ensuite le bloc `remove boat` à\n**à l'intérieur** le bloc \\`if FishCaught = 5``"
         },
         "csc_ecosystems_solution2_2023": {
-          "Hint1": "**Remarque** : vous devrez peut-être faire glisser une partie du</code> code  <code style=\"color:black; background-color:#6AF36C\">lorsque vous touchez le bouton vers le bas de votre écran pour l'adapter aux nouveaux blocs.",
-          "hint2": "En haut de l'espace de travail, connectez le bloc d'arrière-plan à l'exécution.",
-          "hint3": "En arrière-plan,\nconnectez le point de départ à la\npêche uniquement dans la\nzone de pêche."
+          "Hint1": "**Remarque** : Il faudra peut-être faire glisser une partie du code </code>quand touche<code style=\"color:black; background-color:#6AF36C\"> plus loin vers le bas de l'écran afin de faire de la place pour les nouveaux blocs.",
+          "hint2": "En haut de l'espace de travail, connecter le bloc d'arrière-plan à « quand l'exécution commence ».",
+          "hint3": "En dessous de l'arrière-plan,\nconnecter bloc se met\nà pêcher uniquement dans la\nzone de pêche."
         },
         "csc_ecosystems_solution3A_2023": {
-          "hint1": "Ajoutez les nouveaux blocs sous\nle bloc « répéter toutes les 4 secondes ».",
-          "hint2": "Connectez le champ « No Fishing background »\nsitué en haut de l'espace de travail, sous le bloc « toutes les \n4 secondes ».",
-          "hint3": "Connectez « begin no fishing »\nsous le champ « no fishing background ». "
+          "hint1": "Ajouter les nouveaux blocs en dessous\ndu bloc « répéter toutes les 4 secondes ».",
+          "hint2": "Connecter le bloc « Arrière-plan pêche interdite »,\nsitué en haut de l'espace de travail, au bas du bloc « toutes les \n4 secondes ».",
+          "hint3": "Connecter « commencer la non-pêche »\nau bas du bloc « arrière-plan pêche interdite ». "
         },
         "csc_ecosystems_solution3B_2023": {
-          "hint1": "Ajoutez les nouveaux blocs sous\nle bloc de répétition « toutes les 9 secondes »",
-          "hint2": "Utilisez le comportement « aucun arrière-plan de pêche »\net le comportement « début sans saison de pêche »"
+          "hint1": "Ajouter les nouveaux blocs en dessous\ndu bloc répéter « toutes les 9 secondes »",
+          "hint2": "Utiliser le bloc « arrière-plan de pêche interdite »\net le comportement « début de la saison de non-pêche »"
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "Assurez-vous d'ajouter un bloc « définir un arrière-plan » et un bloc « changer de costume » sous votre événement. \n\nN'oubliez pas d'appuyer sur la flèche vers le bas pour déclencher votre événement ! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"

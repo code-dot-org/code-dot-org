@@ -2290,6 +2290,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Verlustlose Kompression",
           "definition": "Ein Algorithmus für die Datenkompression, der eine perfekte Rekonstruktion der originellen Daten aus komprimierten Daten möglich macht. Meistens für die Komprimierung von Text benutzt  (z.B. ZIP-Komprimierung)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Code",
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
+        },
+        "event/dance-ai/2023": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programm"
         }
       }
     }

@@ -1682,6 +1682,16 @@
         },
         "map/csc-mappinglandmarks/2023": {
           "word": "ផែនទី"
+        },
+        "code/dance-ai/2023": {
+          "word": "កូដ"
+        },
+        "event/dance-ai/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "program/dance-ai/2023": {
+          "word": "កម្មវិធី (Program)"
         }
       }
     }

@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalStartOverButton": "Börja om",
+  "danceAiModalExplanationButton": "Lär dig mer",
+  "danceAiModalBack": "Tillbaka",
+  "danceAiModalClose": "Avsluta",
   "danceFeedbackDidntPress": "Kom ihåg att hålla piltangenterna nedtryckta när din dans pågår.",
+  "danceFeedbackKeepCoding": "Du använder alla nödvändiga typer av block, men inte på rätt sätt.",
   "danceFeedbackKeyEvent": "Se till att du lägger till kod i <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">höger_enhörning</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"djup\"</title></block></xml>-blocket och håller tangenten nedtryckt när din dans pågår.",
   "danceFeedbackNeedBackup": "Du måste skapa en grupp bakgrundsdansare med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"ENHÖRNING\"</title><title name=\"LAYOUT\">\"cirkel\"</title></block></xml>-blocket.",
   "danceFeedbackNeedDifferentDance": "Du måste använda en annan dans.",

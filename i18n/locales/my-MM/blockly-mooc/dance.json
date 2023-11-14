@@ -1,5 +1,9 @@
 {
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "ဆက်သင်ယူရန်",
+  "danceAiModalClose": "ပိတ်ပါ",
   "danceFeedbackDidntPress": "သင်သည် အကပြေးနေစဉ်အတွင်းတွင် မြှားခလုတ်များကိုသေချာနှိပ်ပါ။ ",
+  "danceFeedbackKeepCoding": "ဆက်လုပ်ပါ တစ်ခုခုလွဲနေပါသေးတယ်.",
   "danceFeedbackKeyEvent": "သင်သည် ကုဒ်အချို့ကို  <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>  block ကို တွဲထားပြီး   key  ကိုအကပြေးနေစဉ်အတွင်း  ဖိထားပါ။              ",
   "danceFeedbackNeedBackup": "သင်အနေနှင့် နောက်လိုက်အကဖွဲ့ ကို  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block နှင့်ပြုလုပ်ရမည်။ ",
   "danceFeedbackNeedDifferentDance": "သင်သည် မတူညီသောအက ကိုအသုံးပြုရန်လိုအပ်သည်။ ",

@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "العودة",
+  "danceAiModalClose": "إغلاق",
+  "danceAiModalCodeButton": "البرمجة",
+  "danceAiModalExplanationButton": "اعرف المزيد",
+  "danceAiModalStartOverButton": "البدء من جديد",
   "danceFeedbackDidntPress": "تأكد من الضغط على مفاتيح الأسهم أثناء تشغيل عملية الرقص الخاصة بك.",
+  "danceFeedbackKeepCoding": "استمر في البرمجة! هناك شيء ليس صحيحاً تماماً بعد.",
   "danceFeedbackKeyEvent": "تأكد من إرفاق بعض التعليمات البرمجية بالقطعة البرمجية <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> ثم اضغط على المفتاح أثناء تشغيل رقصِك.",
   "danceFeedbackNeedBackup": "أنت تحتاج إلى إنشاء مجموعة من الراقصين الاحتياطيين باستخدام القطعة البرمجية<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> .",
   "danceFeedbackNeedDifferentDance": "تحتاج إلى استخدام رقصة مختلفة.",

@@ -30,20 +30,20 @@ pt:
       'App Project: Linking Screens': 'Projeto do Aplicativo: Vinculando Telas'
       'App Project: Screen Design': 'Projeto do Aplicativo: Design da Tela'
       'App Project: Screen Import': 'Projeto do Aplicativo: Importação de Tela'
-      'App: Choose a Kid''s Movie': 'Aplicativo: Choose a Kid''s Movie'
-      'App: Friend Finder': 'Aplicativo: Friend Finder'
-      'App: Guess the Number': 'Aplicativo: Guess the Number'
-      'App: How Many Countries': 'Aplicativos: How Many Countries'
+      'App: Choose a Kid''s Movie': 'Aplicativo: Escolha um Filme Infantil'
+      'App: Friend Finder': 'App: Localizador de Amigos'
+      'App: Guess the Number': 'Aplicativo: Adivinhe o Número'
+      'App: How Many Countries': 'Aplicativos: Quantos Países'
       'App: Improved Pet App': 'Aplicativo: Pets Aprimorado'
-      'App: Is It Your Birthday?': 'Aplicativo: Is It Your Birthday?'
-      'App: My Famous Birthday': 'Aplicativo: My Famous Birthday'
-      'App: National Parks': 'Aplicativo: National Parks'
-      'App: Outfit Picker': 'Aplicativo: Outfit Picker'
-      'App: Pet Chooser': 'Aplicativo: Pet Chooser'
-      'App: Stamp Notebook': 'Aplicativo: Stamp Notebook'
-      'App: Story Creator': 'Aplicativo: Story Creator'
-      'App: The Fastest Finger': 'Aplicativo: The Fastest Finger'
-      'App: Where Should I Live?': 'Aplicativo: Where Should I Live?'
+      'App: Is It Your Birthday?': 'Aplicativo: É seu aniversário?'
+      'App: My Famous Birthday': 'Aplicativo: Meu Aniversário Famoso'
+      'App: National Parks': 'Aplicativo: Parques Nacionais'
+      'App: Outfit Picker': 'Aplicativo: Selecionador de Look'
+      'App: Pet Chooser': 'App: Selecionador de Animal de Estimação'
+      'App: Stamp Notebook': 'Aplicativo: Caderno de Selos'
+      'App: Story Creator': 'App: Criador de Histórias'
+      'App: The Fastest Finger': 'Aplicativo: O Dedo Mais Rápido'
+      'App: Where Should I Live?': 'Aplicativo: Onde eu Devo Morar?'
       Arrays: Vetores
       Artist Intro with JR Hildebrand: Introdução do Artista com JR Hildebrand
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
@@ -266,6 +266,7 @@ pt:
       Inspiration!: Inspiração!
       InspirationalArtwork: ArteInspiradora
       Interactive Card: Cartão Interativo
+      Intro Video: Vídeo de introdução
       Intro to Design Mode: Introdução ao Modo Design
       Intro to Flyer Game: Introdução ao Jogo de Folhetos
       Intro to For Loops: Introdução para Laços "For"
@@ -412,7 +413,7 @@ pt:
       Run a simulation: Executar uma Simulação
       Same Game: O Jogo Igual
       Sample App: Aplicativo exemplo
-      Sample Apps for Good: Exemplos de Apps for Good
+      Sample Apps for Good: Exemplos de Aplicativos do Bem
       Sample Game: Jogo de Exemplo
       Sample Games: Jogos de Exemplo
       Sample Personal Web Pages: Exemplos de Páginas Web Pessoais
@@ -532,6 +533,7 @@ pt:
       'Video: Velocity': 'Video: Velocidade'
       'Video: What Makes a Computer, a Computer?': 'Vídeo: O que faz de um computador um computador?'
       Warm Up: Aquecimento
+      WeTube Video Recommendations (Beta): Recomendações de Vídeo WeTube (Beta)
       Website Project: Projeto do SIte
       Welcome to Monster Town: Seja bem-vindo à Monster Town
       Where'd They Go?: Onde eles foram?

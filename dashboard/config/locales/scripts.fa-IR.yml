@@ -28,7 +28,7 @@ fa:
         2022drafting:
           lesson_groups:
             lessonGroup-8:
-              display_name: ساعت کد نویسی
+              display_name: ساعت کدنویسی
         AlgebraA:
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -90,7 +90,7 @@ fa:
         ai-ethics:
           title: منشور اخلاقی هوش مصنوعی ما
         ai-ethics-2021:
-          description_audience: رده سنی ۶-۱۲
+          description_audience: مقاطع ۶ تا ۱۲
           title: منشور اخلاقی هوش مصنوعی ما
         ai-ethics-2023:
           lessons:
@@ -1329,7 +1329,7 @@ fa:
         csp5-2020:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1337,7 +1337,7 @@ fa:
         csp5-2021:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1345,7 +1345,7 @@ fa:
         csp5-2022:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1369,7 +1369,7 @@ fa:
         csp5-pilot:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1379,7 +1379,7 @@ fa:
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1397,7 +1397,7 @@ fa:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             lessonGroup-3:
               display_name: حلقه‌ها
             lessonGroup-5:
@@ -2165,7 +2165,7 @@ fa:
         spelling-bee:
           title: زنبور عسل هجی کن
         sports:
-          name: ورزشها
+          name: ورزش‌ها
         starwars:
           title: 'جنگ ستارگان: ساخت کهکشان با کد (جاوا اسکریپت) '
         starwarsblocks:

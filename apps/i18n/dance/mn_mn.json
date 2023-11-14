@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "Буцах",
+  "danceAiModalClose": "Хаах",
+  "danceAiModalCodeButton": "Код",
+  "danceAiModalExplanationButton": "Илүү мэдээлэл авах",
+  "danceAiModalStartOverButton": "Эхлэх",
   "danceFeedbackDidntPress": "Таны бүжиг явагдааж байхад сум товчлуур дээр дарахаа мартуузай.",
+  "danceFeedbackKeepCoding": "Кодчилохоо үргэлжлүүлээрэй! Ямар нэг зүйл хараахан болоогүй байна.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"дээш\"</title></block></xml> блок руу код хавсаргасан эсэхээ шалгаж, таны бүжиг явагдаж байхад товчлуур дээр дараарай.",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"НЭГ ЭВЭРТ\"</title><title name=\"LAYOUT\">\"тойрог\"</title></block></xml> блок бүхий нөөц бүжигчдийн бүлгийг үүсгэх шаардлагатай.",
   "danceFeedbackNeedDifferentDance": "Та өөр бүжиг ашиглах хэрэгтэй.",

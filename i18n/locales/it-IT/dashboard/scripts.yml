@@ -4483,6 +4483,30 @@ it:
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
         how-ai-works-2023:
           title: Come funziona l'IA
+          description: |-
+            Queste lezioni completano la serie di[0] video [Come funziona l'IA]. Ogni lezione è abbinata a un singolo video della serie, che approfondisce i concetti introdotti nei video. Le lezioni si concentrano sulla creazione di una prima esperienza entusiasmante per gli studenti, in cui gli studenti si impegnano in un'attività o in una simulazione e poi riflettono sull'esperienza come un modo per approfondire la comprensione dell'intelligenza artificiale e creare empatia con le persone colpite da essa. Alcune lezioni si concentrano maggiormente sulla tecnologia alla base dell'IA, mentre altre si concentrano sugli impatti sociali e sulle considerazioni etiche dell'IA.
+
+            \*\*Supporti per gli insegnanti: \*\* puoi saperne di più su come portare le lezioni di intelligenza artificiale in classe attraverso la nostra [serie AI 101 per insegnanti].[1]AI 101 per insegnanti è una serie di apprendimento professionale online gratuita e fondamentale per qualsiasi insegnante ed educatore interessato al rivoluzionario mondo dell'intelligenza artificiale (IA) e al suo potenziale di trasformazione nell'istruzione.
+
+            \*\*Opzioni di implementazione: \*\* fai clic su una delle opzioni seguenti per espandere e visualizzare maggiori dettagli.
+
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Voglio insegnarle tutte!»</span>]
+            Le lezioni da 1 a 7 possono essere insegnate come una sequenza di 7 giorni, in cui ogni giorno si concentra su un singolo video tratto dalla serie di video e approfondisce i concetti introdotti. Le classi che vanno in questa direzione dovrebbero nascondere la Lezione 8, che non rientra in questa sequenza. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Voglio insegnare una lezione specifica o integrarmi in un'altra classe»</span>]
+            Ogni lezione può essere indipendente ed essere insegnata indipendentemente dalle altre. Ciò è particolarmente utile se desideri integrare una lezione in un'altra materia o in un corso esistente di informatica, intelligenza artificiale o istruzione generale. Le classi che vanno in questa direzione dovrebbero nascondere tutte le lezioni tranne quella che si desidera insegnare. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«I Only Have a Day»</span>] La
+            lezione 8 è progettata per le classi che vogliono presentare l'IA agli studenti, ma hanno solo un giorno per farlo. In questa lezione gli studenti possono prendere appunti mentre la classe guarda l'intera sequenza video. Le classi che vanno in questa direzione dovrebbero nascondere tutte le lezioni tranne la lezione 8. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            <br />
+            <br />
+          student_description: |-
+            Scopri come funziona l'IA partecipando a diverse esperienze e guardando la serie di[0] video Come funziona l'IA]!
+
+            \*\*Vuoi insegnare queste lezioni? \*\* [Fai clic qui per visualizzare il piano di queste lezioni](/s/how-ai-works-2023?viewAs=Instructor)
         ai-ethics-2023:
           lessons:
             lesson-1:
@@ -4518,7 +4542,14 @@ it:
               display_name: Introduzione
           title: 1° giorno
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introduzione alle attività asincrone
           title: 1° giorno
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: modello di piano delle lezioni basato sull'ora del codice
         self-paced-pl-csd-unit1-2-2023:
           title: 'Modulo 1: preparazione all''insegnamento della risoluzione dei problemi e dell''informatica'
           description: "Questo modulo di apprendimento professionale è progettato per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo suggerito:** 30 minuti"

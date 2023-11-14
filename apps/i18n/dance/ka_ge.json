@@ -1,3 +1,9 @@
 {
+  "danceAiModalBack": "უკან",
+  "danceAiModalClose": "დახურვა",
+  "danceAiModalCodeButton": "კოდი",
+  "danceAiModalExplanationButton": "გაიგეთ მეტი",
+  "danceAiModalStartOverButton": "ხელახლა დაწყება",
+  "danceFeedbackKeepCoding": "გააგრძელეთ კოდის წერა! ჯერ ყველაფერი არ არის სწორად.",
   "measure": "ღონისძიება:"
 }

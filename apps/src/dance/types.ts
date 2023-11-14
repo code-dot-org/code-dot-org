@@ -9,9 +9,9 @@ export type SongData = {
 };
 
 type Analysis = {
-  beats: [boolean, boolean, boolean];
+  beats: boolean[];
   centroid: number;
-  energy: [number, number, number];
+  energy: number[];
   time: number;
   volume: number;
 };
@@ -52,13 +52,15 @@ export enum FieldKey {
   BACKGROUND_PALETTE = 'backgroundColor',
 }
 
-export type Results = {[key in FieldKey]: string};
+export type GeneratedEffect = {[key in FieldKey]: string};
 
-export type Scores = {
-  [key in FieldKey]: number;
+export type GeneratedEffectScores = number[];
+
+export type MinMax = {
+  minIndividualScore: number;
+  maxTotalScore: number;
 };
 
-export interface GeneratedEffect {
-  results: Results;
-  scores?: Scores;
+export interface AiFieldValue extends GeneratedEffect {
+  inputs: string[];
 }

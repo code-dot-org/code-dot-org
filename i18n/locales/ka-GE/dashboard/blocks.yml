@@ -46,6 +46,10 @@ ka:
             '"ROBOT"': რობოტები
           MOVE:
             MOVES.Rest: არცერთი
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: არცერთი
       Dancelab_changeMoveLR:
         options:
           MOVE:

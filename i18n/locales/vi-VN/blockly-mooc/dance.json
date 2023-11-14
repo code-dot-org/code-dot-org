@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Mã",
+  "danceAiModalStartOverButton": "Bắt đầu lại",
+  "danceAiModalExplanationButton": "Tìm hiểu thêm",
+  "danceAiModalBack": "Trở lại",
+  "danceAiModalClose": "Đóng",
   "danceFeedbackDidntPress": "Đừng quên nhấn các phím mũi tên trong khi điệu nhảy của bạn đang chạy.",
+  "danceFeedbackKeepCoding": "Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách.",
   "danceFeedbackKeyEvent": "Hãy đảm bảo rằng bạn có đính kèm mã vào khối <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> và nhấn phím trong khi điệu nhảy của bạn đang chạy.",
   "danceFeedbackNeedBackup": "Bạn cần tạo một nhóm các vũ công phụ họa với khối <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Bạn cần sử dụng một điệu nhảy khác.",

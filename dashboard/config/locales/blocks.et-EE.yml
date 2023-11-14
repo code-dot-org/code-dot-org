@@ -98,6 +98,26 @@ et:
             MOVES.Roll: Rulli
             MOVES.ThisOrThat: Seda või teist
         text: "{GROUP} {MOVE} {DIR} tee igavesti"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': kõik kassid
+          MOVE:
+            '"next"': "(Järgmine)"
+            '"prev"': "(Eelmine)"
+            '"rand"': "(Juhuslik)"
+            MOVES.ClapHigh: Kõrge plaks
+            MOVES.Clown: Kloun
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Topelt jam
+            MOVES.Drop: Kükita
+            MOVES.Floss: Floss
+            MOVES.Fresh: Uus
+            MOVES.Kick: Täht
+            MOVES.Rest: Mitte ükski
+            MOVES.Roll: Rulli
+            MOVES.ThisOrThat: Seda või teist
+        text: "{GROUP} {MOVE} {DIR} tee igavesti"
       Dancelab_changeMoveLR:
         options:
           MOVE:

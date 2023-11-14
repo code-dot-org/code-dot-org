@@ -281,7 +281,7 @@ fa:
         hoc-impact-study:
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
         sports:
-          name: ورزشها
+          name: ورزش‌ها
         csp3-support:
           lesson_groups:
             required:
@@ -703,7 +703,7 @@ fa:
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -753,7 +753,7 @@ fa:
         csp5-pilot:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -910,7 +910,7 @@ fa:
         csp5-2020:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1076,7 +1076,7 @@ fa:
         csp5-2021:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1332,7 +1332,7 @@ fa:
           title: پرسشنامه پسادوره یافته های cs
         ai-ethics-2021:
           title: منشور اخلاقی هوش مصنوعی ما
-          description_audience: رده سنی ۶-۱۲
+          description_audience: مقاطع ۶ تا ۱۲
         poem-art-2021:
           title: هنر سرودن شعر
         poetry-2021:
@@ -1350,7 +1350,7 @@ fa:
         2022drafting:
           lesson_groups:
             lessonGroup-8:
-              display_name: ساعت کد نویسی
+              display_name: ساعت کدنویسی
         csf-2022-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -1410,7 +1410,7 @@ fa:
         csp5-2022:
           lesson_groups:
             csp_lists:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             csp_loops:
               display_name: حلقه‌ها
             csp_project:
@@ -1609,7 +1609,7 @@ fa:
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
-              display_name: فهرست‌ها
+              display_name: لیست ها
             lessonGroup-3:
               display_name: حلقه‌ها
             lessonGroup-5:

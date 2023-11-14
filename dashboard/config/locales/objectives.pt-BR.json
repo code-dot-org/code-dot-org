@@ -3627,7 +3627,7 @@
           "description": "Compartilhar um artefato criativo com outros alunos."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Descreva como a visão computacional é construída com camadas que combinam componentes menores em uma previsão final"
+          "description": "Descreva como a visão computacional é construída a partir de camadas que combinam componentes menores em uma previsão final"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
           "description": "Explique a necessidade de perspectivas diversas ao criar sistemas de recomendação"
@@ -4030,6 +4030,18 @@
         },
         "044a47f9-7afe-4c66-9cb0-eaf6dbc3c740": {
           "description": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final."
+        },
+        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
+          "description": "Descrever os recursos necessários de um sistema para representar informações"
+        },
+        "0d580f25-ee71-432a-8b69-7349fa960674": {
+          "description": "Descrever os recursos necessários de um sistema para representar informações"
+        },
+        "ffc8e923-dff2-40b1-8b1d-f0a09ab29a62": {
+          "description": "Criar e usar um sistema para representar informações"
+        },
+        "bacc4aa3-ff69-4379-ae28-3a2636c64c27": {
+          "description": "Descrever os recursos necessários de um sistema para representar informações"
         }
       }
     }

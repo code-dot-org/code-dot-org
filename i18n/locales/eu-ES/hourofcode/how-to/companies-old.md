@@ -12,7 +12,7 @@ title: How to host an Hour of Code - Companies
 ## Connect with local classrooms and volunteer for the Hour of Code
 Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Bolondresa egin!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
@@ -27,11 +27,11 @@ For more instructions on encouraging employees and connecting your employees wit
 
 # How to host an Hour of Code event with students
 
-## 1. Promote your Hour of Code
+## 1. Sustatu zure Hour of Code
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2. Ikusi nola egin bideo hau <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
@@ -54,7 +54,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 ## 5.  Start your Hour of Code off with an inspiring video
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
 
-**Show an inspirational video:**
+**Aurkeztu bideo inspirazio bat:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
@@ -90,6 +90,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Partekatu argazkiak eta bideoak zure Hour of Code-en gertaera sare sozialetan. Erabili #HourOfCode eta @codeorg guk nabarmentzeko zure arrakasta, ere!
 
 {{ signup_button }}

@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "Kembali",
+  "danceAiModalClose": "Tutup",
+  "danceAiModalCodeButton": "kode",
+  "danceAiModalExplanationButton": "Pelajari lebih lanjut",
+  "danceAiModalStartOverButton": "Mulai dari awal",
   "danceFeedbackDidntPress": "Pastikan untuk menekan tombol panah saat tarian Anda sedang berjalan.",
+  "danceFeedbackKeepCoding": "Terus lakukan coding! Masih ada yang belum beres.",
   "danceFeedbackKeyEvent": "Pastikan Anda melampirkan beberapa kode ke blok `tombol kapan` dan tekan tombol tersebut saat tarian Anda sedang berlangsung.",
   "danceFeedbackNeedBackup": "Anda mesti membuat kelompok penari cadangan dengan <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blok.",
   "danceFeedbackNeedDifferentDance": "Anda mesti menggunakan tarian berbeda.",

@@ -681,7 +681,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합  프로젝트
           student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을
             조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
           title: 과정 C (2022)
@@ -814,7 +814,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
             lessonGroup-6:
               display_name: 디지털 시민의식
           title: 과정 D (2022)
@@ -4385,6 +4385,10 @@ ko:
               display_name: 1 단계
             lessonGroup-3:
               display_name: 2 단계
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 아워오브코드 수업 계획 템플릿
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -5740,6 +5744,9 @@ ko:
               name: 평가
           title: 5일차
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 비동기 액티비티 소개
           title: 1 일차
         virtual-pl-csp-summer-day2:
           lessons:

@@ -23,9 +23,9 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
 
   return fetch(
     `/api/v1/section_instructors/check?email=${encodeURIComponent(email)}` +
-      (sectionId && `&section_id=${sectionId}`),
+      (sectionId ? `&section_id=${sectionId}` : ''),
     {
-      type: 'GET',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
       },
@@ -34,27 +34,39 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
     if (response.ok) {
       return '';
     }
-    if (response.errorThrown === 'Not Found') {
+    if (response.status === 404) {
       return i18n.coteacherAddNoAccount({email});
     }
-    if (response.errorThrown === 'Forbidden') {
+    if (response.status === 403) {
       return i18n.coteacherUnableToEditCoteachers();
     }
 
-    return response.json().then(json => {
-      if (json.error.includes('already invited')) {
-        return i18n.coteacherAddAlreadyExists({email});
-      }
-      if (json.error.includes('section full')) {
-        return i18n.coteacherAddSectionFull();
-      }
-      if (json.error.includes('inviting self')) {
-        return i18n.coteacherCannotInviteSelf();
-      }
-      return i18n.coteacherUnknownValidationError({
-        email,
+    return response
+      .json()
+      .then(json => {
+        if (json.error.includes('already invited')) {
+          return i18n.coteacherAddAlreadyExists({email});
+        }
+        if (json.error.includes('section full')) {
+          return i18n.coteacherAddSectionFull();
+        }
+        if (json.error.includes('inviting self')) {
+          return i18n.coteacherCannotInviteSelf();
+        }
+        if (json.error.includes('already in section')) {
+          return i18n.coteacherAlreadyInCourse({email});
+        }
+        console.error('Coteacher validation error', response);
+        return i18n.coteacherUnknownValidationError({
+          email,
+        });
+      })
+      .catch(e => {
+        console.error('Coteacher validation error', e, response);
+        return i18n.coteacherUnknownValidationError({
+          email,
+        });
       });
-    });
   });
 };
 

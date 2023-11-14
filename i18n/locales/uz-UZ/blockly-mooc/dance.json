@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalStartOverButton": "Boshlamoq",
+  "danceAiModalExplanationButton": "Ko‘proq bilish",
+  "danceAiModalBack": "Orqaga",
+  "danceAiModalClose": "Yopish",
   "danceFeedbackDidntPress": "Raqsingiz paytida o'q tugmachalarini bosganingizga ishonch hosil qiling.",
+  "danceFeedbackKeepCoding": "Kodlashni davom eting! Hozircha biron narsa to‘g‘ri kelmagan.",
   "danceFeedbackKeyEvent": "Bu <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> blokiga biron bir kod qo'shganingizga ishonch hosil qiling va raqsingiz ko'rish uchun 'RUN' tugmachasini bosing. ",
   "danceFeedbackNeedBackup": "Siz <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blocki bilan orqadagi raqqoslarni yaratishingiz kerak.",
   "danceFeedbackNeedDifferentDance": "Siz boshqacha raqsdan foydalanishingiz kerak.",
