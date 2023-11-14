@@ -202,6 +202,19 @@ class ExperimentTest < ActiveSupport::TestCase
     assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user, script: @script)
   end
 
+  test 'can only create up to max_count single section experiments' do
+    SingleSectionExperiment.any_instance.stubs(:max_count).returns(3)
+
+    3.times do
+      create :single_section_experiment
+    end
+
+    # creating a 4th experiment should fail
+    assert_raises ActiveRecord::RecordInvalid do
+      create :single_section_experiment
+    end
+  end
+
   test 'single user experiment is enabled' do
     facilitator_yes = User.first || create(:facilitator)
     facilitator_no = User.second || create(:facilitator)
