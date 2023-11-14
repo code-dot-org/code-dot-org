@@ -15,7 +15,6 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isOpen, setIsOpen] = useState(true);
   const [isMarketingChecked, setIsMarketingChecked] = useState(false);
   const [isSendInProgress, setIsSendInProgress] = useState(false);
-  const [isShowSuccess, setIsShowSuccess] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
@@ -27,15 +26,11 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
     setIsOpen(false);
   };
 
-  const sendEmail = () => {
+  const reportAndNotifyOfEmailSend = () => {
     analyticsReporter.sendEvent(EVENTS.GUIDE_SENT_EVENT, {
       isSignedIn: isSignedIn,
     });
-    // TODO: send email to stored address here
-    setIsShowSuccess(true);
-    if (isShowSuccess) {
-      alert(i18n.emailRequestSubmitted());
-    }
+    alert(i18n.emailRequestSubmitted());
   };
 
   const validateAndSave = () => {
@@ -65,7 +60,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
         return response.json();
       })
       .then(() => {
-        sendEmail();
+        reportAndNotifyOfEmailSend();
         onClose();
       })
       .catch(err => {

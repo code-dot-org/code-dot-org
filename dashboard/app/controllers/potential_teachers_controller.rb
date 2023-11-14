@@ -8,6 +8,7 @@ class PotentialTeachersController < ApplicationController
     begin
       @potential_teacher.save!
       render json: {message: 'Potential teacher created successfully'}, status: :created
+      send_hoc_email
     rescue ActiveRecord::RecordInvalid => exception
       raise "ERROR: #{exception.message}"
     end
@@ -26,6 +27,13 @@ class PotentialTeachersController < ApplicationController
 
   private def potential_teacher_params
     params.permit([:name, :email, :script_id, :receives_marketing]).to_h
+  end
+
+  def send_hoc_email
+    unit_id = params[:script_id]
+    lessons = Unit.find_by(id: unit_id)&.first&.lessons
+    lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
+    TeacherMailer.hoc_tutorial_email(params[:name], params[:email], lesson_plan_html_url)
   end
 
   def set_potential_teacher
