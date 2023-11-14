@@ -1,6 +1,7 @@
 @import "color.scss";
 @import "font.scss";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
 // Chips common styles
 .chips {
@@ -103,7 +104,7 @@
   }
 
   .chip {
-    @include button-one-text;
+    @include body-one;
     padding: 0.62rem 1.25rem;
   }
 }
@@ -114,7 +115,7 @@
   }
 
   .chip {
-    @include button-two-text;
+    @include body-two;
     padding: 0.5rem 1rem;
   }
 }
@@ -125,7 +126,7 @@
   }
 
   .chip {
-    @include button-three-text;
+    @include body-three;
     padding: 0.31rem 0.75rem;
   }
 }
@@ -136,7 +137,7 @@
   }
 
   .chip {
-    @include button-four-text;
+    @include body-four;
     padding: 0.12rem 0.5rem;
   }
 }
