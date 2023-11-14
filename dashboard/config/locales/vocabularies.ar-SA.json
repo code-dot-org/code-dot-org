@@ -2292,6 +2292,17 @@
         "ethics/how-ai-works/2023": {
           "word": "الأخلاق",
           "definition": "إرشادات للسلوك الجيد."
+        },
+        "code/dance-ai/2023": {
+          "word": "البرمجة",
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "event/dance-ai/2023": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/dance-ai/2023": {
+          "word": "البرنامج"
         }
       }
     }

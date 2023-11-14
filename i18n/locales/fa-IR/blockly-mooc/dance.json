@@ -1,14 +1,11 @@
 {
-  "aiDanceFeedbackAiBlockNoParameters": "3 ایموجی را انتخاب کنید که با خلق و خوی آهنگ مطابقت داشته باشد و از هوش مصنوعی بخواهید صحنه شما را ایجاد کند.",
-  "aiDanceFeedbackAiBlockNoParametersOnEvent": "مرحله بعد از 4 اقدام تغییر نکرد. 3 ایموجی را که با خلق و خوی آهنگ مطابقت دارد انتخاب کنید و از هوش مصنوعی بخواهید مرحله جدید خود را ایجاد کند.",
-  "aiDanceFeedbackAiBlockNotConnectedSetup": "اطمینان حاصل کنید که بلوک `AI generate stage` را به بلوک `setup` متصل کنید.",
-  "aiDanceFeedbackAiEditBlocks": "بر روی بلوک «AI generate stage» کلیک کنید و سپس روی «Edit Code» کلیک کنید تا از بلوک های کد پس‌زمینه و پیش‌زمینه استفاده کنید.",
-  "aiDanceFeedbackConnectPressUpArrowEvent": "حتماً پس از فشار دادن *\"Run\"*، کلید «فلش بالا» یا دکمه نارنجی فلش بالا ▲ را فشار دهید.",
-  "aiDanceFeedbackNoAiBlock": "بلوک «AI generate stage» را از جعبه ابزار بیرون بکشید.",
-  "aiDanceFeedbackTinkerAiBlock": "به بلوک های کدگذاری جدیدی که AI تولید کرده اند نگاه کنید. سعی کنید یک پس زمینه یا جلوه (افکت) پیش زمینه جدید انتخاب کنید.",
-  "aiDanceNewMove": "برای اینکه رقصنده حرکت جدیدی انجام دهد نیاز دارید تا یک بلوک اضافه کنید.",
-  "aiDanceStageChangeAfterMeasures": "از اتصال بلوک «AI generate stage» به رویداد  «After 4 Measures» اطمینان حاصل کنید.",
+  "danceAiModalCodeButton": "کد",
+  "danceAiModalStartOverButton": "شروع مجدد",
+  "danceAiModalExplanationButton": "بیشتر بیاموزید",
+  "danceAiModalBack": "بازگشت",
+  "danceAiModalClose": "ببند",
   "danceFeedbackDidntPress": "هنگام اجرای رقص، حتماً کلیدهای پیکان را فشار دهید.",
+  "danceFeedbackKeepCoding": "به برنامه نویسی ادامه بدید٬شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست.",
   "danceFeedbackKeyEvent": "در حال اجرای رقص، از اتصال کد به بلوک <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"بالا\"</title></block></xml> و فشردن کلید اطمینان حاصل نمایید.",
   "danceFeedbackNeedBackup": "باید با بلوک <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">»تک‌شاخ»</title><title name=\"LAYOUT\">»دایره»</title></block></xml> گروهی از رقصندگان پشتیبان ایجاد کنید.",
   "danceFeedbackNeedDifferentDance": "باید از رقص متفاوتی استفاده کنید.",
@@ -26,6 +23,5 @@
   "danceFeedbackTooManyDancers": "مراقب باشید! اگر  بلوک «ایجاد جدید» را در «هر 2 گام» قرار دهید، رقصندگان زیادی ایجاد خواهید کرد.",
   "danceFeedbackUseSetSize": "از بلوک «set backup_dancer2 size» برای کوچک‌تر کردن آن رقصنده استفاده کنید.",
   "danceFeedbackUseSetTint": "از بلوک «تنظیم رنگ» برای تغییر رنگ رقصنده استفاده کنید.",
-  "danceFeedbackUseStartMapping": "سعی کنید بلوک <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">اسب_شاخدار_راست</title><title name=\"PROPERTY\">\"مقیاس\"</title><title name=\"RANGE\">\"باس\"</title></block></xml> را به برنامه اضافه کنید.",
-  "danceFeedbackKeepCoding": "به برنامه نویسی ادامه بدید٬شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست."
+  "danceFeedbackUseStartMapping": "سعی کنید بلوک <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">اسب_شاخدار_راست</title><title name=\"PROPERTY\">\"مقیاس\"</title><title name=\"RANGE\">\"باس\"</title></block></xml> را به برنامه اضافه کنید."
 }

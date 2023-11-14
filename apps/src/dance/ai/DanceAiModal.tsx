@@ -15,7 +15,13 @@ import {
 import DanceAiScore, {ScoreColors} from './DanceAiScore';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {AiOutput, FieldKey, GeneratedEffect, MinMax} from '../types';
+import {
+  AiFieldValue,
+  AiOutput,
+  FieldKey,
+  GeneratedEffect,
+  MinMax,
+} from '../types';
 import {
   generateBlocks,
   generateBlocksFromResult,
@@ -203,22 +209,21 @@ const DanceAiModal: React.FunctionComponent = () => {
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === Mode.INITIAL) {
-      const currentValue = currentAiModalField?.getValue();
-      if (currentValue) {
-        const currentInputs = JSON.parse(currentValue).inputs;
-
+      const currentValueString = currentAiModalField?.getValue();
+      if (currentValueString) {
+        const currentValue: AiFieldValue = JSON.parse(currentValueString);
         setMode(Mode.RESULTS);
-        setInputs(currentInputs);
+        setInputs(currentValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
           badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
-            () => chooseEffects(currentInputs, ChooseEffectsQuality.BAD)
+            () => chooseEffects(currentValue.inputs, ChooseEffectsQuality.BAD)
           ),
-          goodEffect: JSON.parse(currentValue),
+          goodEffect: currentValue,
         };
 
-        minMaxAssociations.current = calculateMinMax(currentInputs);
+        minMaxAssociations.current = calculateMinMax(currentValue.inputs);
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
@@ -314,17 +319,19 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleUseClick = () => {
+    if (!generatedEffects.current.goodEffect) {
+      // Effect should exist when Use is clicked
+      return;
+    }
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
       emojis: inputs,
       ...generatedEffects.current.goodEffect,
     });
-
-    currentAiModalField?.setValue(
-      JSON.stringify({
-        inputs,
-        ...generatedEffects.current.goodEffect,
-      })
-    );
+    const currentValue: AiFieldValue = {
+      inputs,
+      ...generatedEffects.current.goodEffect,
+    };
+    currentAiModalField?.setValue(JSON.stringify(currentValue));
     onClose();
   };
 
@@ -396,7 +403,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(generatedEffects.current.goodEffect)
+      generatedEffects.current.goodEffect
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -436,11 +443,15 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
-  const getPreviewCode = (generatedEffect?: GeneratedEffect): string => {
+  const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
+    if (!currentGeneratedEffect) {
+      return '';
+    }
+
     const tempWorkspace = new Workspace();
     const previewCode = generatePreviewCode(
       tempWorkspace,
-      JSON.stringify(generatedEffect)
+      currentGeneratedEffect
     );
     tempWorkspace.dispose();
     return previewCode;
@@ -703,9 +714,9 @@ const DanceAiModal: React.FunctionComponent = () => {
                       id="block-preview"
                       className={moduleStyles.blockPreview}
                     >
-                      <AiBlockPreview
-                        resultJson={JSON.stringify(currentGeneratedEffect)}
-                      />
+                      {currentGeneratedEffect && (
+                        <AiBlockPreview results={currentGeneratedEffect} />
+                      )}
                     </div>
                   )}
                 </div>

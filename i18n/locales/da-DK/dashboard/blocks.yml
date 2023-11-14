@@ -103,6 +103,27 @@ da:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} udfør {MOVE} {DIR} forevigt"
+        options:
+          GROUP:
+            '"CAT"': katte
+            '"SLOTH"': plads
+          MOVE:
+            MOVES.Roll: Kropsrulning
+            MOVES.ClapHigh: Højt klap
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Drop: Slip
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller denne
+            MOVES.Rest: Ingen
+            '"next"': "(Næste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfældig)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} udfør {MOVE} {DIR} forevigt"
         options:
@@ -569,8 +590,8 @@ da:
           EFFECT:
             '"none"': Ingen
             '"rand"': "(Tilfældig)"
-            '"circles"': Tunnel
             '"quads"': Vinkler
+            '"circles"': Tunnel
             '"color_cycle"': Farver
             '"diamonds"': Diamanter
             '"disco_ball"': Diskokugle
@@ -586,11 +607,11 @@ da:
             '"ripples"': Krusninger
             '"snowflakes"': Sne
             '"text"': Sangtitel
-            '"squiggles"': Kruseduller
             '"galaxy"': Ydre rum
             '"sparkles"': Glitter
             '"spiral"': Spiral
             '"disco"': Kvadrater
+            '"squiggles"': Kruseduller
             '"starburst"': Starburst
             '"stars"': Stjerner
             '"music_wave"': Bølger

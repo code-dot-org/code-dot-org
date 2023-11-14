@@ -122,6 +122,28 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} eseguono ininterrottamente la mossa {MOVE} {DIR}"
+        options:
+          GROUP:
+            '"CAT"': tutti i gatti
+            '"SLOTH"': bradipi
+          MOVE:
+            MOVES.Roll: Piroetta
+            MOVES.ClapHigh: Applauso alto
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doppio giù
+            MOVES.Drop: Rilascia
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stella
+            MOVES.ThisOrThat: Questo o quello
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Nessuno
+            '"next"': "(Successiva)"
+            '"prev"': "(Precedente)"
+            '"rand"': "(Casuale)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} esegue ininterrottamente la mossa {MOVE} {DIR}"
         options:
@@ -600,8 +622,8 @@ it:
           EFFECT:
             '"none"': Nessuno
             '"rand"': "(Casuale)"
-            '"circles"': Tunnel
             '"quads"': Angoli
+            '"circles"': Tunnel
             '"clouds"': Nuvole
             '"color_cycle"': Colori
             '"diamonds"': Diamanti
@@ -619,11 +641,11 @@ it:
             '"ripples"': Increspature
             '"snowflakes"': Neve
             '"text"': Titolo della canzone
-            '"squiggles"': Ghirigori
             '"galaxy"': Spazio
             '"sparkles"': Scintille
             '"spiral"': Spirale
             '"disco"': Quadrati
+            '"squiggles"': Ghirigori
             '"starburst"': Esplosione di stelle
             '"stars"': Stelle
             '"music_wave"': Onde

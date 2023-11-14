@@ -123,6 +123,31 @@ zh-TW:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
+        options:
+          GROUP:
+            '"CAT"': 全部小貓
+            '"SLOTH"': 樹懶
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: DAB
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: 無
+            '"next"': 下一個
+            '"prev"': 上一個
+            '"rand"': 隨機
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changeMoveLR:
         text: 角色 {SPRITE} 重複執行 {MOVE} {DIR} 無限次
         options:
@@ -601,8 +626,8 @@ zh-TW:
           EFFECT:
             '"none"': 無
             '"rand"': 隨機
-            '"circles"': 隧道
             '"quads"': 角
+            '"circles"': 隧道
             '"color_cycle"': 色塊
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
@@ -619,11 +644,11 @@ zh-TW:
             '"ripples"': 漣漪
             '"snowflakes"': 雪球
             '"text"': 歌曲標題
-            '"squiggles"': 蜿曲線段
             '"galaxy"': 太空
             '"sparkles"': 火花
             '"spiral"': 螺旋
             '"disco"': 正方形
+            '"squiggles"': 蜿曲線段
             '"starburst"': 星爆
             '"stars"': 星星
             '"music_wave"': 音浪

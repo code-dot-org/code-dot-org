@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "البرمجة",
+  "danceAiModalStartOverButton": "البدء من جديد",
+  "danceAiModalExplanationButton": "اعرف المزيد",
+  "danceAiModalBack": "العودة",
+  "danceAiModalClose": "إغلاق",
   "danceFeedbackDidntPress": "تأكد من الضغط على مفاتيح الأسهم أثناء تشغيل عملية الرقص الخاصة بك.",
+  "danceFeedbackKeepCoding": "استمر في البرمجة! هناك شيء ليس صحيحاً تماماً بعد.",
   "danceFeedbackKeyEvent": "تأكد من إرفاق بعض التعليمات البرمجية بالقطعة البرمجية <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> ثم اضغط على المفتاح أثناء تشغيل رقصِك.",
   "danceFeedbackNeedBackup": "أنت تحتاج إلى إنشاء مجموعة من الراقصين الاحتياطيين باستخدام القطعة البرمجية<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> .",
   "danceFeedbackNeedDifferentDance": "تحتاج إلى استخدام رقصة مختلفة.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "استخدم المربع البرمجي 'set backup_dancer2 size' لجعل حجم الراقص أصغر.",
   "danceFeedbackUseSetTint": "استخدم كتلة 'تعيين لون' لتغيير لون الراقص.",
   "danceFeedbackUseStartMapping": "حاول إضافة القطعة البرمجية <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>  للبرنامج.",
-  "danceFeedbackKeepCoding": "استمر في البرمجة! هناك شيء ليس صحيحاً تماماً بعد.",
   "measure": "قياس:"
 }

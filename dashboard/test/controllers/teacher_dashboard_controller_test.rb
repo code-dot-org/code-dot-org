@@ -33,13 +33,4 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: section.id}
     assert_response :success
   end
-
-  test 'index: returns success if teacher is section_instructor of section' do
-    sign_in @teacher
-    section_owner = create :teacher
-    section = create :section, user: section_owner
-    create :section_instructor, section: section, instructor: @teacher, status: :active
-    get :show, params: {section_id: section.id}
-    assert_response :success
-  end
 end
