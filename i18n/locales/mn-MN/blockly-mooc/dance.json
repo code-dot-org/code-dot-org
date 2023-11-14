@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Код",
+  "danceAiModalStartOverButton": "Эхлэх",
+  "danceAiModalExplanationButton": "Илүү мэдээлэл авах",
+  "danceAiModalBack": "Буцах",
+  "danceAiModalClose": "Хаах",
   "danceFeedbackDidntPress": "Таны бүжиг явагдааж байхад сум товчлуур дээр дарахаа мартуузай.",
+  "danceFeedbackKeepCoding": "Кодчилохоо үргэлжлүүлээрэй! Ямар нэг зүйл хараахан болоогүй байна.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"дээш\"</title></block></xml> блок руу код хавсаргасан эсэхээ шалгаж, таны бүжиг явагдаж байхад товчлуур дээр дараарай.",
   "danceFeedbackNeedBackup": "<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"НЭГ ЭВЭРТ\"</title><title name=\"LAYOUT\">\"тойрог\"</title></block></xml> блок бүхий нөөц бүжигчдийн бүлгийг үүсгэх шаардлагатай.",
   "danceFeedbackNeedDifferentDance": "Та өөр бүжиг ашиглах хэрэгтэй.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Тус бүжигчнийг жижиг болгохын тулд `нөөц тохируулах_бүжигчин2 хэмжээ` блок ашиглаарай.",
   "danceFeedbackUseSetTint": "Бүжигчний өнгийг өөрчлөхийн тулд `өнгө тохируулах` блок ашиглаарай.",
   "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">баруун_нэг эвэрт<title name=\"PROPERTY\">\"масштаб\"</title><title name=\"RANGE\">\"басс\"</title></block></xml> блокийг программдаа нэмэх гэж оролдоорой.",
-  "danceFeedbackKeepCoding": "Кодчилохоо үргэлжлүүлээрэй! Ямар нэг зүйл хараахан болоогүй байна.",
   "measure": "Арга хэмжээ:"
 }

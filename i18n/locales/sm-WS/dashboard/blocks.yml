@@ -38,6 +38,10 @@ sm:
             '"ROBOT"': masina faatagata
           MOVE:
             MOVES.Rest: E leai se mea
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: E leai se mea
       Dancelab_changeMoveLR:
         options:
           MOVE:

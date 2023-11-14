@@ -113,6 +113,27 @@ nl:
             MOVES.Roll: Body Roll
             MOVES.ThisOrThat: Dit of dat.
         text: "{GROUP} doe {MOVE} {DIR} voor altijd"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': katten
+            '"SLOTH"': traagheid
+          MOVE:
+            '"next"': "(Volgende)"
+            '"prev"': "(Vorige)"
+            '"rand"': "(Willekeurig)"
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Floss: Floss
+            MOVES.Fresh: Vers
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+        text: "{GROUP} doe {MOVE} {DIR} voor altijd"
       Dancelab_changeMoveLR:
         options:
           MOVE:

@@ -113,6 +113,27 @@ sv:
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} gör {MOVE} {DIR} för alltid"
+        options:
+          GROUP:
+            '"CAT"': alla katter
+            '"SLOTH"': sengångare
+          MOVE:
+            MOVES.Roll: Kroppsrullning
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Färsk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjärna
+            MOVES.ThisOrThat: Det här eller det där
+            MOVES.Rest: Ingen
+            '"next"': "(Nästa)"
+            '"prev"': "(Föregående)"
+            '"rand"': "(Slumpad)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} för alltid"
         options:
@@ -601,8 +622,8 @@ sv:
           EFFECT:
             '"none"': Ingen
             '"rand"': "(Slumpad)"
-            '"circles"': Tunnel
             '"quads"': Vinklar
+            '"circles"': Tunnel
             '"color_cycle"': Färger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokula
@@ -618,11 +639,11 @@ sv:
             '"ripples"': Krusningar
             '"snowflakes"': Snö
             '"text"': Låttitel
-            '"squiggles"': Krumelurer
             '"galaxy"': Rymd
             '"sparkles"': Gnistror
             '"spiral"': Spiral
             '"disco"': Fyrkanter
+            '"squiggles"': Krumelurer
             '"starburst"': Stjärnfall
             '"stars"': Stjärnor
             '"music_wave"': Vågor

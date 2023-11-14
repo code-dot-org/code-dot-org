@@ -9627,7 +9627,7 @@
           "hint1": "A legördülő menü segítségével választhat a különböző színek és effektusok közül.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
         "ecosystems_helloworld_say_2023": {
-          "add_sprite": "Kattints és húzz egy `make new sprite` blokkot, és csatlakoztasd a `when run` alatt. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
+          "add_sprite": "Kattints és húzz be egy `új szereplő` blokkot, és csatlakoztasd a `futtatáskor` blokk alá. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "Egy sprite helyének megváltoztatásához kattints a helyblokkon lévő tűre, majd kattints oda, ahová szeretné, hogy kerüljön.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_backgrounds": {
