@@ -1908,8 +1908,18 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
     // We want the longer edge, the width in landscape, to get MIN_WIDTH.
     let screenWidth = Math.max(screen.width, screen.height);
 
-    width = MIN_WIDTH;
-    scale = screenWidth / width;
+    if (screenWidth > MIN_WIDTH) {
+      // The screen is wider than our MIN_WIDTH.  Adjusting scale would actually
+      // make things bigger.  Instead, just leave things as they are, using the
+      // native screen resolution.
+      width = screenWidth;
+      scale = 1;
+    } else {
+      // Adjust the scale to make everything smaller, so that we effectively
+      // get MIN_WIDTH pixels in width.
+      width = MIN_WIDTH;
+      scale = screenWidth / width;
+    }
   }
 
   // Setting `minimum-scale=scale` means that we are unable to shrink the
