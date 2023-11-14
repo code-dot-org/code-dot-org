@@ -60,3 +60,7 @@ export type MinMax = {
   minIndividualScore: number;
   maxTotalScore: number;
 };
+
+export interface AiFieldValue extends GeneratedEffect {
+  inputs: string[];
+}
