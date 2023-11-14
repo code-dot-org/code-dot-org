@@ -124,6 +124,27 @@ ko:
             MOVES.Roll: 구르기
             MOVES.ThisOrThat: 이것저것
         text: "{GROUP}이(가) {MOVE} {DIR}을(를) 영원히 실행"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': 모든 고양이
+            '"SLOTH"': 나무늘보
+          MOVE:
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Clown: 강남
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Kick: 별
+            MOVES.Rest: 없음
+            MOVES.Roll: 구르기
+            MOVES.ThisOrThat: 이것저것
+        text: "{GROUP}이(가) {MOVE} {DIR}을(를) 영원히 실행"
       Dancelab_changeMoveLR:
         options:
           MOVE:

@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kód",
+  "danceAiModalStartOverButton": "Začít znovu",
+  "danceAiModalExplanationButton": "Zjisti více",
+  "danceAiModalBack": "Zpět",
+  "danceAiModalClose": "Zavřít",
   "danceFeedbackDidntPress": "Nezapomeň mačkat klávesy se šipkami, když je tanec spuštěný.",
+  "danceFeedbackKeepCoding": "Používáš všechny potřebné typy bloků, ale nesprávným způsobem.",
   "danceFeedbackKeyEvent": "Ujisti se, že máš připojený nějaký kód k bloku <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"nahoru\"</title></block></xml> a stiskni klávesu, když je tanec spuštěný.",
   "danceFeedbackNeedBackup": "Musíš vytvořit skupinu doprovodných tanečníků s blokem <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"JEDNOROŽEC\"</title><title name=\"LAYOUT\">\"kruh\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Musíš použít jiný tanec.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Použij blok `nastavit velikost záložního_tanečníka2`, abys tohoto tanečníka zmenšil(a).",
   "danceFeedbackUseSetTint": "Použij blok `nastavit odstín`, abyste změnil(a) odstín tanečníka.",
   "danceFeedbackUseStartMapping": "Zkus do svého programu přidat blok<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">pravý_jednorožec</title><title name=\"PROPERTY\">velikost</title><title name=\"RANGE\">basy</title></block></xml>.",
-  "danceFeedbackKeepCoding": "Používáš všechny potřebné typy bloků, ale nesprávným způsobem.",
   "measure": "Takt:"
 }

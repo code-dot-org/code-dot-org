@@ -13273,7 +13273,7 @@ fr-FR:
             Mettre en place une saison de pêche et une saison de non-pêche
              ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
         - text: Fixer des limites à la pêche ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: Faites correspondre le code à l'image
+        title: Associer le code à l'image correspondante
       csc_ecosystems_matching_conditionals:
         answers:
         - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
@@ -13283,15 +13283,15 @@ fr-FR:
         - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## Regardez les trois écosystèmes
+          ## Regarder les trois écosystèmes
 
-          L'un est équilibré et les deux autres sont déséquilibrés de différentes manières. Faites glisser le code vers l'image correspondante.
+          L'un est équilibré et les deux autres sont déséquilibrés de différentes manières. Faire glisser le code vers l'image correspondante.
         questions:
         - text: Trop peu d'algues fait partir les poissons. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: Trop d'algues rend le corail malade. <br> ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: Tout juste assez d'algues permet au corail malade de guérir et aux
             poissons de rester en bonne santé, aussi.  ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: Faites correspondre le code à l'image
+        title: Associer le code à l'image correspondante
       csc_ecosystems_matching_events:
         answers:
         - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
@@ -13306,38 +13306,40 @@ fr-FR:
         - text: Les poissons mangent l'algue. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
         title: Associer le code à l'animation
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Fishing Practice #2 :\n>># #Create une saison de
-          pêche <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n**Fixez des limites
-          quant aux moments où les gens peuvent attraper du poisson. Lorsque ce n'est
-          pas la saison de pêche, l'écosystème a le temps de se rétablir.** \n<br>\n\n#Save
-          our Seas ! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: "> #Pratique de pêche durable #2 :\n>># #Créer une saison de pêche
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Fixer des limites
+          quant aux périodes durant lesquelles les gens peuvent attraper des poissons.
+          Hors saison de pêche, l'écosystème aura le temps de se rétablir.** \n<br>\n\n#Sauvons
+          nos mers ! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
           La surpêche est un problème qui peut nuire aux écosystèmes marins et aux
-          personnes qui en dépendent. Il est important de pratiquer une pêche durable
-          pour protéger ces écosystèmes et garantir la santé des populations de poissons.\n\n\n\n<br>\n<br>\n<br>\n"
+          personnes qui en dépendent. Il est important de pratiquer un mode de pêche
+          durable pour protéger ces écosystèmes et garantir la santé des populations
+          de poissons.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Fishing Practice #3 :\n>># #Set Limites de pêche
-          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+        markdown: "> #Pratique de pêche durable #3 :\n>>## Définir des limites à la
+          pêche <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Les scientifiques
-          peuvent vous aider à déterminer combien de poissons peuvent être capturés
+          peuvent nous aider à déterminer combien de poissons peuvent être capturés
           sans nuire à l'océan. Les pêcheurs sauront alors qu'il ne faut pêcher que
-          ce nombre de poissons.** \n<br>\n<br>\n<br>\n\n#Save our Seas ! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          ce nombre de poissons.** \n<br>\n<br>\n<br>\n\n#Sauvons nos mers ! \n<img
+          src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          En travaillant ensemble, nous pouvons contribuer à ce que nos océans soient
-          pleins de vie pour les générations à venir !\n\n\n\n<br>\n<br>\n<br>\n\n"
+          En travaillant ensemble, on peut contribuer à garder nos océans pleins de
+          vie pour les générations à venir !\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save Nos mers ! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#Sauvons nos mers ! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          L'océan contient beaucoup de poissons, mais parfois les gens attrapent trop
-          de poissons et cela peut nuire à l'écosystème. Dans les niveaux suivants,
-          vous allez coder **trois pratiques de pêche durables différentes** pour
-          aider à protéger nos écosystèmes océaniques.\n\n<br>\n\n## #To En savoir
-          plus sur les solutions durables pour nos océans : <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">Cliquez ici</a>\n<br>\n<br>\n\n> #Sustainable Fishing
-          Pratique #1 :\n>> # #Fishing Zones <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          Il y a beaucoup de poissons dans l'océan, mais parfois les humains en attrapent
+          trop, et cela peut nuire à l'écosystème. Dans les niveaux suivants, on va
+          coder **trois pratiques de pêche durables différentes** pour aider à protéger
+          nos écosystèmes marins.\n\n<br>\n\n## #Pour en savoir plus sur les solutions
+          durables pour nos océans : <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Cliquer ici</a>\n<br>\n<br>\n\n> #Pratique de pêche durable
+          #1 :\n>> # #Zones de pêche <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Les bateaux de
           pêche ne peuvent pêcher que dans les zones désignées. Certaines zones sont
           interdites aux bateaux de pêche afin que l'écosystème puisse se rétablir.**

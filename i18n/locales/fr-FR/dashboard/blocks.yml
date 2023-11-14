@@ -127,6 +127,28 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
+        options:
+          GROUP:
+            '"CAT"': les chats
+            '"SLOTH"': les paresseux
+          MOVE:
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.ClapHigh: Tape des mains en l'air
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Aucun
+            '"next"': "(Suivant)"
+            '"prev"': "(Précédent)"
+            '"rand"': "(Aléatoire)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} indéfiniment"
         options:
@@ -611,8 +633,8 @@ fr:
           EFFECT:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
-            '"circles"': Tunnel
             '"quads"': Angles
+            '"circles"': Tunnel
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
@@ -628,11 +650,11 @@ fr:
             '"ripples"': Ondulations
             '"snowflakes"': Neige
             '"text"': Titres de chanson
-            '"squiggles"': Gribouillis
             '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés
+            '"squiggles"': Gribouillis
             '"starburst"': Starburst
             '"stars"': Étoiles
             '"music_wave"': Vagues

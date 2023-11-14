@@ -6554,15 +6554,15 @@
         },
         "all_resources/coursee/2022": {
           "name": "Të gjitha burimet",
-          "url": "/s/kursef-2022/burimet"
+          "url": "/s/kursie-2022/burimet"
         },
         "all_standards/coursee/2022": {
           "name": "Të gjitha standardet",
-          "url": "/s/kursef-2022/standardet"
+          "url": "/s/kursie-2022/standardet"
         },
         "all_vocabulary/coursee/2022": {
           "name": "Fjalori",
-          "url": "/s/kursef-2022/fjalor"
+          "url": "/s/kursie-2022/fjalor"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Common Core dhe Udhëzuesi NGSS",

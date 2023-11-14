@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Nazaj",
+  "danceAiModalClose": "Zapri",
+  "danceAiModalCodeButton": "Koda",
+  "danceAiModalExplanationButton": "Več o tem",
   "danceFeedbackKeepCoding": "Uporabljaš vse potrebne tipe blokov, a ne na pravi način.",
   "danceFeedbackNeedNewDancer": "Naredi plesalca."
 }
