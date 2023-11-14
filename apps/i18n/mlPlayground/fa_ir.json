@@ -2,7 +2,7 @@
   "columnDetailsMaximumValue": "حداکثر",
   "columnDetailsMinimumValue": "حداقل",
   "columnInspectorDescription": "توضیحات",
-  "correctAnswer": "صحیح است",
+  "correctAnswer": "صحیح ",
   "dataCardLastUpdated": "آخرین بروزرسانی",
   "datasets": {
     "abalone": {
@@ -78,6 +78,9 @@
     },
     "loneliness_interests": {
       "fields": {
+        "History": {
+          "id": "تاریخچه"
+        },
         "Internet": {
           "id": "اینترنت"
         },
@@ -320,6 +323,9 @@
         "Height": {
           "description": "ارتفاع",
           "id": "ارتفاع"
+        },
+        "History": {
+          "id": "تاریخچه"
         },
         "Internet": {
           "id": "اینترنت"

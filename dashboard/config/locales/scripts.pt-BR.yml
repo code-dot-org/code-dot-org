@@ -734,7 +734,7 @@ pt:
             que poderá ser compartilhada.
         coursea-draft:
           description_short: Uma introdução à ciência da computação para novos leitores.
-          title: 'Fundamentos de Ciência da Computação: Curso A'
+          title: 'Fundamentos da CC: Curso A'
         courseb-2017:
           assignment_family_title: Curso B
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -8041,7 +8041,7 @@ pt:
             Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório
             do Gumball!
-          title: Laboratório do Gumball
+          title: Gumball Play Lab
         haikubot-pilot:
           lesson_groups:
             Lesson 1:
@@ -8126,7 +8126,7 @@ pt:
           name: infinitude
           student_description: Use o Laboratório para criar uma história ou um jogo
             usando personagens da Disney Infinity.
-          title: Laboratório Infinito Disney
+          title: Disney Infinity Play Lab
         interactive-games-animations-2023:
           description: |-
             Na unidade de Animações e Jogos Interativos, os alunos criam imagens programáticas, animações, arte interativa e jogos. Começando com formas simples e até jogos mais sofisticados baseados em sprites, os alunos se familiarizam com os conceitos de programação e o processo de design que os cientistas da computação usam diariamente. Em seguida, eles aprendem como esses construtos mais simples podem ser combinados para criar programas mais complexos. No projeto final, os alunos desenvolvem um programa personalizado e interativo.
@@ -8517,9 +8517,9 @@ pt:
           title: Tenha acesso ao Pluralsight One
         poem-art:
           name: Arte poética
-          title: Arte poética
+          title: Arte Poética
         poem-art-2021:
-          title: Arte poética
+          title: Arte Poética
         poetry:
           name: poesia
           title: Ciência da Computação e Poesia
@@ -9147,7 +9147,7 @@ pt:
             Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo
             do Star Wars em uma galáxia muito, muito distante.
-          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
+          title: 'Star Wars: Construindo uma Galáxia com Código (JavaScript)'
         starwarsblocks:
           description: Aprenda a programar droids, e crie seu próprio jogo do Star
             Wars em uma galáxia muito, muito distante.
@@ -9155,7 +9155,7 @@ pt:
             Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo
             do Star Wars em uma galáxia muito, muito distante.
-          title: 'Star Wars: Construa uma galáxia com programação (Blocos)'
+          title: 'Star Wars: Construindo uma Galáxia com Código (Blockly)'
         step:
           description: Etapa do tutorial
           description_short: Etapa do tutorial

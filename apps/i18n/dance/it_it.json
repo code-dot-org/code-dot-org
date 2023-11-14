@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Indietro",
+  "danceAiModalClose": "Chiudi",
+  "danceAiModalCodeButton": "Codice",
+  "danceAiModalExplanationButton": "Ulteriori informazioni",
+  "danceAiModalStartOverButton": "Ripristina",
   "danceFeedbackDidntPress": "Assicurati di premere i tasti freccia mentre è in corso il tuo ballo.",
   "danceFeedbackKeepCoding": "Continua a programmare! C'è ancora qualcosa che non va.",
   "danceFeedbackKeyEvent": "Assicurati di allegare un codice al blocco <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> e premi la chiave mentre il tuo ballo è in esecuzione.",

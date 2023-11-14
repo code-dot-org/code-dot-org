@@ -6,7 +6,26 @@
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
         },
         "CourseE_Project_SpriteLab_cupcake_examples_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+          "growing": "Groeien",
+          "growing2": "groeien2",
+          "moving east": "naar het oosten",
+          "moving east2": "naar het oosten bewegen2",
+          "moving north": "naar het noorden bewegen",
+          "moving north2": "naar het noorden bewegen2",
+          "moving south": "naar het zuiden bewegen",
+          "moving south2": "naar het zuiden bewegen2",
+          "moving west": "naar het westen trekken",
+          "moving west2": "naar het westen2 bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "patrolling": "patrouilleren",
+          "patrolling2": "patrouilleren 2",
+          "shrinking": "krimpen",
+          "spinning left": "naar links draaiend",
+          "spinning right": "naar rechts draaiend",
+          "spinning right2": "naar rechts draaiend",
+          "swimming left and right": "links en rechts bewegen",
+          "swimming left and right2": "links en rechts bewegen2",
+          "wandering": "afdwalen"
         },
         "CourseE_Project_SpriteLab_cupcake_examples_2023": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"

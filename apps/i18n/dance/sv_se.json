@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Tillbaka",
+  "danceAiModalClose": "Avsluta",
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalExplanationButton": "Lär dig mer",
+  "danceAiModalStartOverButton": "Börja om",
   "danceFeedbackDidntPress": "Kom ihåg att hålla piltangenterna nedtryckta när din dans pågår.",
   "danceFeedbackKeepCoding": "Du använder alla nödvändiga typer av block, men inte på rätt sätt.",
   "danceFeedbackKeyEvent": "Se till att du lägger till kod i <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">höger_enhörning</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"djup\"</title></block></xml>-blocket och håller tangenten nedtryckt när din dans pågår.",

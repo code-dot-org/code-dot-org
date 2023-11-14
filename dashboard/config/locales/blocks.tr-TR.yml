@@ -146,6 +146,27 @@ tr:
             MOVES.Roll: Body roll
             MOVES.ThisOrThat: Şu ya da Bu
         text: "{GROUP} sürekli {MOVE} {DIR} yap"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': kediler
+            '"SLOTH"': tembel hayvanlar
+          MOVE:
+            '"next"': "(Sonraki)"
+            '"prev"': "(Önceki)"
+            '"rand"': "(Rastgele)"
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Drop: Bırak
+            MOVES.Floss: Floss
+            MOVES.Fresh: Taze
+            MOVES.Kick: Yıldız
+            MOVES.Rest: Hiçbiri
+            MOVES.Roll: Body roll
+            MOVES.ThisOrThat: Şu ya da Bu
+        text: "{GROUP} sürekli {MOVE} {DIR} yap"
       Dancelab_changeMoveLR:
         options:
           MOVE:

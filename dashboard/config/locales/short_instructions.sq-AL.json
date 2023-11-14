@@ -2045,7 +2045,7 @@
         "ecosystems_helloworld_say_2023": "Shtoni një sprite të re dhe ndryshoni vendndodhjen e saj.",
         "express_maze_debugging92022": "Përdorni blloqet nga kutia e blloqeve për të ndërtuar programin tuaj. Dërgo Scrat-in te lajthia.",
         "express_maze_debugging9_2021": "Përdorni blloqet nga kutia e blloqeve për të ndërtuar programin tuaj. Dërgoni Scrat-in te lajthia.",
-        "flappy_1": "Bashkangjit një bllok tek blloku \"when click\" dhemë pas shtyp \"Run\". Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.",
+        "flappy_1": "Bashkangjitni një bllok në bllokun “kur klikoni”, pastaj shtypni “Ekzekuto”. Klikoni ose shtypni ekranin për të lëvizur Flappy në objektiv.",
         "flappy_11": "Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa pamjet dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo, që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.",
         "flappy_2": "Tani kemi shtuar pjesë toke. Bashko një bllok me bllokun \"when hit the gorund\". Kodi jot duhet të 'PËRFUNDOJË LOJA\" kur Flappy përplaset.",
         "flappy_3": "Blloku \"when run\" të lejon ty ta ekzekutosh kodin kur fillon loja jote. Provo të vendosësh nivelin eshpejtësisë dhe të fluturosh tek objektivi.",
