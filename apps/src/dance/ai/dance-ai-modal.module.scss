@@ -63,10 +63,10 @@ $ai-modal-border-width: 8px;
     color: white;
     font-size: 16px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 $ai-modal-border-width;
     margin-top: $ai-modal-border-width;
-    direction: ltr;
 
     .botImage {
       width: 24px;
@@ -96,9 +96,12 @@ $ai-modal-border-width: 8px;
       }
     }
 
-    &Right {
-      margin-left: auto;
+    &Left {
+      display: flex;
+      align-items: center;
+    }
 
+    &Right {
       .closeButton {
         background-color: initial;
         color: white;

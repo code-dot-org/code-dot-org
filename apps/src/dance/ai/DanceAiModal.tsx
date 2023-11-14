@@ -444,21 +444,21 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const headerValue = () => {
     return (
-      <div
+      <span
         className={moduleStyles.inputsContainer}
         onClick={handleStartOverClick}
       >
         {Array.from(Array(SLOT_COUNT).keys()).map(index => {
           const item = getItem(inputs[index]);
           return (
-            <div key={index} className={moduleStyles.emojiSlot}>
+            <span key={index} className={moduleStyles.emojiSlot}>
               {item && (
                 <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
               )}
-            </div>
+            </span>
           );
         })}
-      </div>
+      </span>
     );
   };
 
@@ -469,19 +469,14 @@ const DanceAiModal: React.FunctionComponent = () => {
   const headerTextSplit = i18n
     .danceAiModalHeading({input: INPUT_KEY})
     .split(INPUT_KEY);
-  const headerContent = [0, 1, 2]
-    .map(index => {
-      if (index === 0) {
-        return headerTextSplit[0];
-      } else if (index === 1) {
-        return headerValue();
-      } else {
-        return headerTextSplit[1];
-      }
-    })
-    .map((part: string, index: number) => {
-      return <span key={index}>{part}</span>;
-    });
+
+  const headerContent = [
+    headerTextSplit[0],
+    headerValue(),
+    headerTextSplit[1],
+  ].map((part: string, index: number) => {
+    return <span key={index}>{part}</span>;
+  });
 
   const currentGeneratedEffect = getGeneratedEffect(generatingProgress.step);
 
@@ -548,13 +543,15 @@ const DanceAiModal: React.FunctionComponent = () => {
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img
-          src={aiBotBorder}
-          className={moduleStyles.botImage}
-          alt={i18n.danceAiModalBotAlt()}
-        />
-        {headerContent}
-        <div
+        <span className={moduleStyles.headerAreaLeft}>
+          <img
+            src={aiBotBorder}
+            className={moduleStyles.botImage}
+            alt={i18n.danceAiModalBotAlt()}
+          />
+          {headerContent}
+        </span>
+        <span
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
         >
@@ -567,7 +564,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             <i className="fa fa-close" aria-hidden={true} />
             <span className="sr-only">{i18n.danceAiModalClose()}</span>
           </button>
-        </div>
+        </span>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         {mode === Mode.RESULTS && (
