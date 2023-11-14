@@ -49,7 +49,6 @@ class JavalabConsole extends React.Component {
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     clearConsoleLogs: PropTypes.func,
-    setHasCompilationError: PropTypes.func,
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isPhotoPrompterOpen: PropTypes.bool,
     closePhotoPrompter: PropTypes.func,
@@ -63,12 +62,10 @@ class JavalabConsole extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    const prevConsoleLogs = prevProps.consoleLogs;
-    const consoleLogs = this.props.consoleLogs;
-    const prevLogsLength = prevConsoleLogs.length;
+    const prevLogsLength = prevProps.consoleLogs.length;
     if (
       typeof prevLogsLength === 'number' &&
-      prevLogsLength !== consoleLogs.length
+      prevLogsLength !== this.props.consoleLogs.length
     ) {
       this.jumpToBottom();
     }
