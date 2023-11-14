@@ -48,18 +48,3 @@
     }
   }
 }
-
-.action-block.action-block--two-col {
-  .media-wrapper {
-    & > * {
-      margin: 1rem;
-      width: calc(100% - 1rem);
-
-      @media (max-width: $width-md) {
-        margin: 0;
-        width: 100%;
-      }
-    }
-  }
-}
-

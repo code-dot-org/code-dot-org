@@ -132,6 +132,17 @@ $ai-modal-border-width: 8px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
+
+      span {
+        button {
+          &:focus-visible {
+            // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
+            // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
+            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability - we'll simply use SegmentedButton here
+            outline: 2px solid $light_primary_500 !important;
+          }
+        }
+      }
     }
 
     .textArea {
@@ -312,13 +323,18 @@ $ai-modal-border-width: 8px;
 
       .key {
         position: absolute;
-        padding-left: 15px;
+        padding-inline-start: 15px;
         box-sizing: border-box;
         right: 20px;
         width: 110px;
         border-radius: 4px;
         border: solid $neutral_dark10 1px;
         animation: appear 1s;
+
+        html[dir='rtl'] & {
+          left: 20px;
+          right: initial;
+        }
 
         .emojiSlot {
           display: flex;
@@ -350,7 +366,7 @@ $ai-modal-border-width: 8px;
         display: flex;
         gap: 30px;
         width: calc(100% - 180px);
-        margin-left: 40px;
+        margin-inline-start: 40px;
 
         .visualizationColumn {
           display: flex;
