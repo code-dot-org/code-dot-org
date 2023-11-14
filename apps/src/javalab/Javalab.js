@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import javalabMsg from '@cdo/javalab/locale';
 import JavalabView from './JavalabView';
 import javalab, {
   setIsStartMode,
@@ -28,6 +29,7 @@ import javalabEditor, {
   getValidation,
   setAllSourcesAndFileMetadata,
   setAllValidation,
+  setHasCompilationError,
 } from './redux/editorRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -498,6 +500,11 @@ Javalab.prototype.onCommitCode = function (commitNotes, onSuccessCallback) {
 };
 
 Javalab.prototype.onOutputMessage = function (message) {
+  if (message.includes(javalabMsg.compilerError())) {
+    getStore().dispatch(setHasCompilationError(true));
+  } else if (message.includes(javalabMsg.compilationSuccess())) {
+    getStore().dispatch(setHasCompilationError(false));
+  }
   getStore().dispatch(appendOutputLog(message));
 };
 
