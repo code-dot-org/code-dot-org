@@ -10,6 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import $ from 'jquery';
 
 import styles from './coteacher-settings.module.scss';
+import {convertAddCoteacherResponse} from './CoteacherUtils';
 
 export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   if (email === '') {
@@ -68,37 +69,43 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   });
 };
 
-const saveCoteacher = (email, sectionId) => {
-  const test = fetch(`/api/v1/section_instructors`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
-    },
-    body: JSON.stringify({
-      section_id: sectionId,
-      email: email,
-    }),
-  }).then(response => {
-    if (response.ok) {
-      return Promise.resolve('');
-    }
-
-    return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
-  });
-
-  return test;
-};
-
 export default function AddCoteacher({
   sectionId,
   numCoteachers,
   coteachersToAdd,
   setCoteachersToAdd,
+  addSavedCoteacher,
   addError,
   setAddError,
 }) {
   const [inputValue, setInputValue] = useState('');
+
+  const saveCoteacher = useCallback(
+    (email, sectionId) => {
+      return fetch(`/api/v1/section_instructors`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+        },
+        body: JSON.stringify({
+          section_id: sectionId,
+          email: email,
+        }),
+      }).then(response => {
+        if (response.ok) {
+          return response.json().then(json => {
+            const newCoteacher = convertAddCoteacherResponse(json);
+            addSavedCoteacher(newCoteacher);
+            return '';
+          });
+        }
+
+        return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
+      });
+    },
+    [addSavedCoteacher]
+  );
 
   const handleAddEmail = useCallback(
     e => {
@@ -106,10 +113,14 @@ export default function AddCoteacher({
       const newEmail = inputValue.trim();
       getInputErrorMessage(newEmail, coteachersToAdd, sectionId)
         .then(errorMessage => {
-          // Save coteacher only if we are editing an existing section.
-          if (errorMessage === '' && !!sectionId) {
-            const test = saveCoteacher(newEmail, sectionId);
-            return test;
+          if (errorMessage === '') {
+            if (!sectionId) {
+              setCoteachersToAdd(existing => [newEmail, ...existing]);
+              return Promise.resolve('');
+            } else {
+              // Save coteacher only if we are editing an existing section.
+              return saveCoteacher(newEmail, sectionId);
+            }
           }
 
           return Promise.resolve(errorMessage);
@@ -117,7 +128,6 @@ export default function AddCoteacher({
         .then(errorMessage => {
           setAddError(errorMessage);
           if (errorMessage === '') {
-            setCoteachersToAdd(existing => [newEmail, ...existing]);
             setInputValue('');
           }
         });
@@ -129,6 +139,7 @@ export default function AddCoteacher({
       setInputValue,
       sectionId,
       coteachersToAdd,
+      saveCoteacher,
     ]
   );
 
@@ -203,5 +214,6 @@ AddCoteacher.propTypes = {
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string).isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
   addError: PropTypes.string,
+  addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
 };

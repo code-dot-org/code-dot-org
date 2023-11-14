@@ -21,7 +21,7 @@
 #
 
 class Api::V1::SectionInstructorSerializer < ActiveModel::Serializer
-  attributes :id, :status, :invited_by_name, :invited_by_email, :section_name, :instructor_name
+  attributes :id, :status, :invited_by_name, :invited_by_email, :section_name, :instructor_name, :instructor_email
 
   def invited_by_name
     object.invited_by&.name
@@ -36,6 +36,10 @@ class Api::V1::SectionInstructorSerializer < ActiveModel::Serializer
   end
 
   def instructor_name
-    object.instructor.name
+    object.instructor&.name if object.active?
+  end
+
+  def instructor_email
+    object.instructor.email
   end
 end

@@ -11,6 +11,7 @@ const DEFAULT_PROPS = {
   setCoteachersToAdd: () => {},
   addError: '',
   setAddError: () => {},
+  addSavedCoteacher: () => {},
 };
 
 const makeSpyWithAssertions = (assertions, done) =>
@@ -72,15 +73,19 @@ describe('AddCoteacher', () => {
 
   it('adds coteacher when valid email is added', done => {
     fetchSpy.returns(Promise.resolve({ok: true}));
-    const setAddErrorSpy = sinon.spy();
+    const setCoteachersToAddSpy = sinon.spy();
+    const addSavedCoteacherSpy = sinon.spy();
 
-    const setCoteachersToAddSpy = makeSpyWithAssertions(func => {
+    const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(fetchSpy).to.be.calledOnceWith(
         `/api/v1/section_instructors/check?email=new-email%40code.org`
       );
+
       expect(setCoteachersToAddSpy).to.be.calledOnce;
-      expect(func([])).to.deep.equal(['new-email@code.org']);
-      expect(setAddErrorSpy).to.have.been.calledOnceWith('');
+      const spyCall = setCoteachersToAddSpy.getCall(0);
+      expect(spyCall.args[0]([])).to.deep.equal(['new-email@code.org']);
+      expect(error).to.equal('');
+      expect(addSavedCoteacherSpy).to.not.have.been.called;
     }, done);
 
     const wrapper = shallow(
@@ -89,40 +94,28 @@ describe('AddCoteacher', () => {
         coteachersToAdd={['coelophysis@code.org']}
         setCoteachersToAdd={setCoteachersToAddSpy}
         setAddError={setAddErrorSpy}
-      />
-    );
-    addTeacher(wrapper, 'new-email@code.org');
-  });
-
-  it('adds coteacher when valid email is added', done => {
-    fetchSpy.returns(Promise.resolve({ok: true}));
-    const setAddErrorSpy = sinon.spy();
-
-    const setCoteachersToAddSpy = makeSpyWithAssertions(func => {
-      expect(fetchSpy).to.be.calledOnceWith(
-        `/api/v1/section_instructors/check?email=new-email%40code.org`
-      );
-      expect(setCoteachersToAddSpy).to.be.calledOnce;
-      expect(func([])).to.deep.equal(['new-email@code.org']);
-      expect(setAddErrorSpy).to.have.been.calledOnceWith('');
-    }, done);
-
-    const wrapper = shallow(
-      <AddCoteacher
-        {...DEFAULT_PROPS}
-        coteachersToAdd={['coelophysis@code.org']}
-        setCoteachersToAdd={setCoteachersToAddSpy}
-        setAddError={setAddErrorSpy}
+        addSavedCoteacher={addSavedCoteacherSpy}
       />
     );
     addTeacher(wrapper, 'new-email@code.org');
   });
 
   it('calls add api when email is added and editing section', done => {
-    fetchSpy.returns(Promise.resolve({ok: true}));
-    const setAddErrorSpy = sinon.spy();
+    fetchSpy.returns(
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve({
+            id: 1,
+            status: 'invited',
+            instructor_email: 'new-email@code.org',
+          }),
+      })
+    );
+    const setCoteachersToAddSpy = sinon.spy();
+    const addSavedCoteacherSpy = sinon.spy();
 
-    const setCoteachersToAddSpy = makeSpyWithAssertions(func => {
+    const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(fetchSpy).to.be.calledTwice;
       let fetchCall = fetchSpy.getCall(0);
       expect(fetchCall.args[0]).to.equal(
@@ -135,9 +128,15 @@ describe('AddCoteacher', () => {
       expect(fetchCallBody.section_id).to.equal(1);
       expect(fetchCallBody.email).to.equal('new-email@code.org');
 
-      expect(setCoteachersToAddSpy).to.be.calledOnce;
-      expect(func([])).to.deep.equal(['new-email@code.org']);
+      expect(setCoteachersToAddSpy).to.not.be.called;
+      expect(error).to.equal('');
       expect(setAddErrorSpy).to.have.been.calledOnceWith('');
+      expect(addSavedCoteacherSpy).to.have.been.calledOnceWith({
+        id: 1,
+        status: 'invited',
+        instructorEmail: 'new-email@code.org',
+        instructorName: undefined,
+      });
     }, done);
 
     const wrapper = shallow(
@@ -147,6 +146,7 @@ describe('AddCoteacher', () => {
         coteachersToAdd={['coelophysis@code.org']}
         setCoteachersToAdd={setCoteachersToAddSpy}
         setAddError={setAddErrorSpy}
+        addSavedCoteacher={addSavedCoteacherSpy}
       />
     );
     addTeacher(wrapper, 'new-email@code.org');
@@ -158,6 +158,8 @@ describe('AddCoteacher', () => {
       .returns(Promise.resolve({ok: true}))
       .onSecondCall()
       .returns(Promise.resolve({ok: false}));
+
+    const addSavedCoteacherSpy = sinon.spy();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).to.equal(
@@ -176,6 +178,8 @@ describe('AddCoteacher', () => {
       const fetchCallBody = JSON.parse(fetchCall.args[1].body);
       expect(fetchCallBody.section_id).to.equal(1);
       expect(fetchCallBody.email).to.equal('pterodactyl@code.org');
+
+      expect(addSavedCoteacherSpy).to.not.have.been.called;
     }, done);
 
     const setCoteachersToAddSpy = sinon.spy();
@@ -187,6 +191,7 @@ describe('AddCoteacher', () => {
         coteachersToAdd={['coelophysis@code.org']}
         setCoteachersToAdd={setCoteachersToAddSpy}
         setAddError={setAddErrorSpy}
+        addSavedCoteacher={addSavedCoteacherSpy}
       />
     );
     addTeacher(wrapper, 'pterodactyl@code.org');
@@ -194,11 +199,12 @@ describe('AddCoteacher', () => {
 
   it('trims email for validation', done => {
     fetchSpy.returns(Promise.resolve({ok: true}));
-    const setAddErrorSpy = sinon.spy();
-
-    const setCoteachersToAddSpy = makeSpyWithAssertions(func => {
-      expect(func([])).to.deep.equal(['new-email@code.org']);
-      expect(setAddErrorSpy).to.have.been.calledOnceWith('');
+    const setCoteachersToAddSpy = sinon.spy();
+    const setAddErrorSpy = makeSpyWithAssertions(error => {
+      expect(setCoteachersToAddSpy).to.be.calledOnce;
+      const spyCall = setCoteachersToAddSpy.getCall(0);
+      expect(spyCall.args[0]([])).to.deep.equal(['new-email@code.org']);
+      expect(error).to.equal('');
     }, done);
 
     const wrapper = shallow(
