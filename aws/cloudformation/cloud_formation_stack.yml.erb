@@ -35,8 +35,6 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for Hour Of Code site.
-    AllowedPattern: "^(?!www$).*"
-    ConstraintDescription: Stack Name (typically the git branch name) cannot be `www` as this may conflict with production.
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -71,6 +69,17 @@ Resources:
   HourOfCodeCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
+<% if rack_env?(:production) -%>
+      DomainName: !Sub "${HourOfCodeBaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "www.${HourOfCodeBaseDomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+        - DomainName: !Sub "www.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+<% else -%>
       DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
       SubjectAlternativeNames:
         - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
@@ -80,6 +89,7 @@ Resources:
           HostedZoneId: !Ref HourOfCodeHostedZoneId
         - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
           HostedZoneId: !Ref HourOfCodeHostedZoneId
+<% end -%>
 
   # ---------------------------------------------
   # Stack-specific IAM permissions
