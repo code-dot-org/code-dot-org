@@ -315,6 +315,17 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'add_student returns failure for section instructor' do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    assert_does_not_create(Follower) do
+      add_student_return = section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
   test 'add_student returns failure if user does not meet participant_type for section' do
     section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
