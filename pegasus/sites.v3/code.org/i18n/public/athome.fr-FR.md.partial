@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Essayez une Heure de code avec ce didacticiel d'introduction amusant</h2>
-<p>Essayez un <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">tutoriel d'une heure</a> présentant des jeux et des films connus comme Minecraft, Frozen et Star Wars. De nombreux didacticiels sont structurés comme des jeux, conçus pour enseigner les concepts de base de l'informatique de manière amusante et motivante.</p>
+<p>Essayez un didacticiel <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">d'une heure</a> présentant des jeux et des films populaires tels que Minecraft, La Reine des neiges et Star Wars. De nombreux didacticiels sont structurés comme des jeux, conçus pour enseigner les concepts de base de l'informatique de manière amusante et motivante.</p>
 
 <br>
 

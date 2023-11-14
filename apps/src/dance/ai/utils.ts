@@ -1,4 +1,5 @@
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
+import {GeneratedEffect} from '../types';
 
 /**
  * Generates blocks from the AI result in a given workspace,
@@ -6,17 +7,16 @@ import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
  */
 export const generateBlocksFromResult = (
   workspace: Workspace,
-  resultJsonString: string
+  effect: GeneratedEffect
 ): [BlockSvg, BlockSvg] => {
-  const params = JSON.parse(resultJsonString);
   const blocksSvg = generateBlocks(workspace);
 
   // Foreground block.
-  blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+  blocksSvg[0].setFieldValue(effect.foregroundEffect, 'EFFECT');
 
   // Background block.
-  blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
-  blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+  blocksSvg[1].setFieldValue(effect.backgroundEffect, 'EFFECT');
+  blocksSvg[1].setFieldValue(effect.backgroundColor, 'PALETTE');
 
   // Connect the blocks.
   blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
@@ -59,9 +59,9 @@ export const getLabelMap = (
  */
 export const generatePreviewCode = (
   workspace: Workspace,
-  resultJsonString: string
+  effect: GeneratedEffect
 ): string => {
-  const blocks = generateBlocksFromResult(workspace, resultJsonString);
+  const blocks = generateBlocksFromResult(workspace, effect);
   // Create a temporary setup block
   const setup: BlockSvg = workspace.newBlock('Dancelab_whenSetup') as BlockSvg;
 
