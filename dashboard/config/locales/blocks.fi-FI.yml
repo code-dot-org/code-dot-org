@@ -103,6 +103,27 @@ fi:
             MOVES.Roll: Korin kallistus
             MOVES.ThisOrThat: Sitä tai tätä
         text: "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': kaikki kissat
+            '"SLOTH"': laiskiaiset
+          MOVE:
+            '"next"': "(Seuraava)"
+            '"prev"': "(Edellinen)"
+            '"rand"': "(Satunnainen)"
+            MOVES.ClapHigh: Taputa korkealle
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Panoksen tuplaus
+            MOVES.Drop: Pudota
+            MOVES.Floss: Flossaa
+            MOVES.Fresh: Fressaa
+            MOVES.Kick: Tähti
+            MOVES.Rest: Ei mitään
+            MOVES.Roll: Korin kallistus
+            MOVES.ThisOrThat: Sitä tai tätä
+        text: "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti"
       Dancelab_changeMoveLR:
         options:
           MOVE:

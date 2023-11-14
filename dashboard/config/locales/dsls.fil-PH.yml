@@ -4843,15 +4843,19 @@ fil-PH:
         - {}
       courseAB_EOC2022:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseAB_EOC2022_2023:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseAB_EOC_2021:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
       courseB_EOC2022:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseB_EOC2022_2023:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseB_EOC_2021:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
@@ -5259,6 +5263,12 @@ fil-PH:
         questions:
         - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari kapag na-click
             mo ang "Run"?
+      courseD_EOC2022:
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseD_EOC2022_2023:
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseD_EOC_2020:
+        display_name: Proyekto sa Katapusan ng Kurso
       courseD_EOC_2021:
         description: Naabot mo na ang huling aralin ng Kurso D! Pumili ng proyektong
           gagawin.
@@ -6057,8 +6067,18 @@ fil-PH:
         - {}
         questions:
         - {}
+      courseE_EOC2022:
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseE_EOC2022_2023:
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseE_EOC_2020:
+        display_name: Proyekto sa Katapusan ng Kurso
       courseE_EOC_2021:
         description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseE_EOC_examples2022:
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseE_EOC_examples2022_2023:
         display_name: Proyekto sa Katapusan ng Kurso
       courseE_EOC_examples_2021:
         description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
@@ -6272,22 +6292,30 @@ fil-PH:
         questions:
         - text: Tingnang mabuti ang code sa ibaba. Ano ang mangyayari pagkatapos mong
             i-click ang "Run"?
+      courseExpress_EOC_2020:
+        display_name: Proyekto sa Katapusan ng Kurso
+      courseF_EOC_2020:
+        display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_2021:
         description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong tutuklasin.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
         description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong tutuklasin.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_examples_2021:
         description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_samples2022:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_samples2022_2023:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_samples_2021:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
@@ -12595,6 +12623,10 @@ fil-PH:
         - correct: true
         questions:
         - {}
+      express_EOC2022:
+        display_name: Proyekto sa Katapusan ng Kurso
+      express_EOC2022_2023:
+        display_name: Proyekto sa Katapusan ng Kurso
       express_EOC_2021:
         description: Naabot mo na ang dulo ng Course E! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso

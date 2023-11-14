@@ -103,6 +103,27 @@ mi:
             MOVES.Roll: Ngaru Tinana
             MOVES.ThisOrThat: Tēnei Tēnā
         text: "{GROUP} māhia {MOVE} {DIR} mo ake tonu atu"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': ngā ngeru
+            '"SLOTH"': kararehe māngere
+          MOVE:
+            '"next"': "(Kōkiri)"
+            '"prev"': "(tōmua)"
+            '"rand"': "(Poka noa)"
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Kick: Te Whetū
+            MOVES.Rest: Kore
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ThisOrThat: Tēnei Tēnā
+        text: "{GROUP} māhia {MOVE} {DIR} mo ake tonu atu"
       Dancelab_changeMoveLR:
         options:
           MOVE:

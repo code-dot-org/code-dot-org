@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "戻る",
+  "danceAiModalClose": "閉じる",
+  "danceAiModalCodeButton": "コード",
+  "danceAiModalExplanationButton": "もっと詳しく知る",
+  "danceAiModalStartOverButton": "最初からやりなおす\n",
   "danceFeedbackDidntPress": "ダンスの実行中に矢印キーを押してください。",
   "danceFeedbackKeepCoding": "おしい！まだ、ちがうところがあります。",
   "danceFeedbackKeyEvent": "いくつかのコードを<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\"> \"アップ\" </title></block></xml>ブロックにアタッチして、ダンスの実行中にキーを押してください。",

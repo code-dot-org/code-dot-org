@@ -7,32 +7,32 @@ social:
   twitter:site: "@codeorg"
 ---
 
-# شكرًا للتسجيل لاستضافة حدث "ساعة من البرمجة"!
+# Thanks for signing up for Hour of Code!
 
-<br /> **تبدأ حملة "ساعة من البرمجة" في {{ campaign_date/full }} وسنكون على اتصال في حالة توفر دروس وبرامج تعليمية وتحديثات مثيرة أخرى جديدة. في أثناء ذلك، ما الذي يمكنك فعله الآن؟**
+<br /> **Your event is now registered. By volunteering to host an Hour of Code event, you're making it possible for more students to learn computer science. While Hour of Code events are held all over the world during the celebration of Computer Science Education Week, you can choose to organize an Hour of Code event or events at any time! Here are some steps to get started.**
 
-## 1. انشر حملة "ساعة من البرمجة" في مدرستك ومجتمعك
+## 1. ضع خطة خاصة بالحدث
 
-لقد انضممت للتو إلى حركة "ساعة البرمجة". أخبر أصدقاءك باستخدام **#HourOfCode**!
+Begin by exploring our library of [Hour of Code activities](/learn) and review this [how-to guide](/how-to) for helpful tips on how to find an activity, inspire students, and determine your technology needs. Try [diving into the world of artificial intelligence](/ai) - an exciting area of technology that’s shaping our future. There are various approaches to AI: empower your students to learn how AI works and your teachers to learn with AI 101 for teachers.
 
-{{ social_media_hoc }} <br /> شجِّع الآخرين على المشاركة [من خلال نماذج رسائل البريد الإلكتروني لدينا.]({{ promote/sample_emails }}) اتصل بمديرك وتحدى كل فصل دراسي في مدرستك للتسجيل. قم بتجنيد مجموعة محلية - نادي الكشافة، أو الكنيسة، أو الجامعة، أو مجموعة المحاربين القدامى، أو نقابة العمال، أو حتى بعض الأصدقاء. لست بحاجة لأن تكون في المدرسة لتعلم مهارات جديدة. قم بدعوة أحد السياسيين المحليين أو صانعي السياسات لزيارة مدرستك لحضور أنشطة "ساعة البرمجة". يمكن أن يساعد ذلك في بناء دعم لعلوم الحاسوب في منطقتك بعد ساعة واحدة فقط.
+## 2. Spread the word
 
-استخدم هذه [الإعلانات واللافتات والملصقات ومقاطع الفيديو والمزيد]({{ promote/resources }}) للحدث الخاص بك.
+We need your help to inspire volunteers and organizers from across the globe. Tell your friends about your #HourOfCode and [use these helpful resources](/resources) to promote your event. <br />
 
-## 2. اعثر على متطوع محلي لمساعدتك في هذا الحدث.
+You can also help engage more people from your school and community by [sending our sample emails](/promote/resources#sample-emails) to your principal, a local group, or even some friends.
 
-[ابحث في خريطة المتطوعين لدينا]({{ urls/volunteer_local }}) عن المتطوعين الذين يمكنهم زيارة الفصل الدراسي الخاص بك أو إجراء محادثة فيديو عن بُعد لإلهام طلابك بشأن اتساع إمكانيات علوم الكمبيوتر.
+{{ social_media_hoc }}
 
-## 3. ضع خطة لحدث "ساعة من البرمجة"
+## 3. Find a local volunteer to help you with your event.
 
-اختر [نشاط "ساعة البرمجة"](https://hourofcode.com/learn) لفصلك الدراسي و[راجع دليل التعليمات]({{ urls/how_to_guide }}).
+[Search our volunteer map](https://code.org/volunteer/local) to find volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-### 4. وفِّر أدوات الدعم
+## 4. Check out Hour of Code swag
 
-اطلب مواد للمساعدة في إثارة حماس الطلاب بشأن الحدث الخاص بك من خلال التوجه إلى Code.org [متجر أمازون](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). اطلب الملصقات الإعلانية ومجموعات "ساعة البرمجة" والملصقات والمزيد! لكن أسرع، فالأدوات محدودة.
+Swag is a great way to get students excited about the Hour of Code and reward them for completing their activity. If you are hosting an event for your entire school, consider [sharing your Hour of Code plan](https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform) to receive a special engagement kit with t-shirts, posters, laptop stickers, and more. [At the Code.org store](https://store.code.org/), you can order Hour of Code swag kits, fun stickers, buttons, temporary tattoos, and more. But hurry, supplies are limited.
 
-# الاطلاع على المزيد من البرامج التعليمية
+## 5. Encourage kids to continue learning
 
-{{ go_beyond_hoc }}
+An Hour of Code is just the beginning! We hear over and over again how much students love the Hour of Code and discover a newfound interest in computer science. Encourage them to continue learning. Whether you're an administrator, teacher, or advocate, we have professional learning, free classroom curriculum and lesson plans, and resources to help you [bring computer science classes to your school](https://code.org/teach) or expand your offerings.
 
-{{ popup_window.js }}
+Many of the organizations offering activities on HourofCode.com also have curriculum and professional learning available as well. We've highlighted curriculum providers that can help you or your students [go beyond an hour](/beyond).

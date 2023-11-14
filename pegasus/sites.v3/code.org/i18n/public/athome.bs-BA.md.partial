@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Isprobajte sat koda s ovim zabavnim uvodnim vodičem</h2>
-<p>Isprobajte <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">jednosatni vodič</a> koji sadrži popularne igre i filmove poput Minecrafta, Frozen i Star Wars. Mnogi tutoriali su strukturirani poput igara, osmišljenih za podučavanje osnovnih koncepata informatike na zabavan, zanimljiv način.</p>
+<p>Isprobajte <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">jednosatni vodič</a> s popularnim igrama i filmovima poput Minecraft, Frozen i Ratova zvijezda. Mnogi tutoriali su strukturirani poput igara, osmišljenih za podučavanje osnovnih koncepata informatike na zabavan, zanimljiv način.</p>
 
 <br>
 

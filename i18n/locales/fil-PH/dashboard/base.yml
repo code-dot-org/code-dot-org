@@ -344,7 +344,7 @@ fil:
       finished_hoc: "Tapos na ako!"
       sign_in_to_save: 'Mag-sign in para i-save ang progreso'
       my_dashboard: "Aking Dashboard"
-      course_catalog: "Catalog ng Kurso"
+      course_catalog: "Katalogo ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
       help_support: "Tulong at Suporta"
@@ -1295,4 +1295,3 @@ fil:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Format Ng Pixel"
-

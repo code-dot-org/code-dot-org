@@ -2442,6 +2442,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "무손실 압축",
           "definition": "압축한 데이터에서 원래 데이터가 완벽하게 복원되게 하는 데이터 압축 알고리즘. 텍스트 압축용으로 가장 흔히 사용됨 (예. zip 압축)"
+        },
+        "code/dance-ai/2023": {
+          "word": "코드",
+          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+        },
+        "event/dance-ai/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "program/dance-ai/2023": {
+          "word": "프로그램 "
         }
       }
     }
