@@ -66,13 +66,19 @@ export const UnconnectedTeacherHomepage = ({
    */
   const shouldShowAFEBanner = false;
 
+  /* We are hiding the Census banner to free up space on the Teacher Homepage (November 2023)
+   * when we want to show the Census banner again remove the next line
+   */
+  const forceHideCensusBanner = true;
+
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the Census banner again set this to true
    */
   const showPLBanner = false;
 
-  const [displayCensusBanner, setDisplayCensusBanner] =
-    useState(showCensusBanner);
+  const [displayCensusBanner, setDisplayCensusBanner] = useState(
+    showCensusBanner && !forceHideCensusBanner
+  );
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
     useState(null);
   const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
