@@ -71,6 +71,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
       @script_data = {
         props: {
+          user_id: current_user.id,
           workshop: @workshop.attributes.merge(
             {
               organizer: @workshop.organizer,
