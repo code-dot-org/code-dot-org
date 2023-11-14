@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Zurück",
+  "danceAiModalClose": "Schließen",
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "Mehr erfahren",
+  "danceAiModalStartOverButton": "Neu starten",
   "danceFeedbackDidntPress": "Achte darauf, dass du die Pfeiltasten drückst, während dein Tanz abläuft.",
   "danceFeedbackKeepCoding": "Du verwendest alle nötigen Bausteine, aber noch nicht auf die richtige Weise.",
   "danceFeedbackKeyEvent": "Stelle sicher, dass du dem Baustein <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> Code hinzufügst. Drücke dann die Taste, während Dein Tanz abläuft.",

@@ -124,6 +124,27 @@ hi:
             MOVES.Roll: बॉडी रोल
             MOVES.ThisOrThat: यह या वह
         text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': सभी बिल्लियां
+            '"SLOTH"': निष्क्रियता
+          MOVE:
+            '"next"': "(अगला)"
+            '"prev"': "(पिछला)"
+            '"rand"': "(बेतरतीब)"
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Clown: गंगनम
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Kick: स्टार
+            MOVES.Rest: कोई नहीं
+            MOVES.Roll: बॉडी रोल
+            MOVES.ThisOrThat: यह या वह
+        text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
       Dancelab_changeMoveLR:
         options:
           MOVE:

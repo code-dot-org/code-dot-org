@@ -14418,12 +14418,12 @@
           "hint1": "Assicurati di collegare almeno un blocco `print` sotto `when run`."
         },
         "csc_ecosystems_algae_freeplay_2023": {
-          "YouCan": "Puoi: \n\n-   Modificare il numero di pesci\n-   Modificare il numero di alghe\n-   Modificare il numero di secondi \n    prima che i pesci e le alghe ricrescano\n-   Apportare altre modifiche",
+          "YouCan": "Puoi: \n\n-   Modificare il numero di pesci\n-   Modificare il numero di alghe\n-   Modificare il numero di secondi necessari\n    alla ricrescita dei pesci e delle alghe\n-   Apportare altre modifiche",
           "change": "Apporta un paio di modifiche alla simulazione!"
         },
         "csc_ecosystems_arctic_2023": {
-          "hint1": "L'orso polare deve essere più grande! Cambia le sue dimensioni in modo che superi i 30.",
-          "hint2": "Cambia lo sfondo in modo che ci sia più ghiaccio su cui l'orso polare può cacciare. "
+          "hint1": "L'orso polare deve essere più grande! Modifica le sue dimensioni in modo che siano superiore a 30.",
+          "hint2": "Cambia lo sfondo in modo che il ghiaccio su cui l'orso polare può cacciare diventi più grande. "
         },
         "csc_ecosystems_desert_2023": {
           "hint1": "I conigli devono muoversi più velocemente! Cambia la \nvelocità dei conigli in modo che sia superiore a 0."
@@ -14432,59 +14432,59 @@
           "first_event_hint": "Il tuo `event` (#6AF36C) usa la giraffa a collo corto? \n\nIl costume cambia da **corto a collo lungo**?\n\nIl blocco di modifica del costume dovrebbe avere il seguente aspetto:\n<xml>\n<block type=\"gamelab_setAnimation\">\n  <field name=\"ANIMATION\">\"giraffe_longer_neck\"</field>\n  <value name=\"THIS\">\n    <block type=\"gamelab_allSpritesWithAnimation\" movable=\"false\">\n      <field name=\"ANIMATION\">\"giraffe_shorter_neck\"</field>\n    </block>\n  </value>\n</block></xml>"
         },
         "csc_ecosystems_marsh_2023": {
-          "Hint1": "Abbiamo bisogno di più rane! Cambia il numero di rane in modo che sia superiore a 0."
+          "Hint1": "Abbiamo bisogno di più rane! Modifica il numero di rane in modo che sia superiore a 0."
         },
         "csc_ecosystems_ocean_algae_2023": {
-          "Connect": "Assicurati che il blocco eat sia collegato al blocco eventi. \n\nDovrebbero incastrarsi insieme come pezzi di un puzzle!"
+          "Connect": "Verifica che il blocco `mangia` sia collegato al blocco evento. \n\nDovrebbero incastrarsi insieme come pezzi di un puzzle!"
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "Usa il blocco cattura oggetti in modo che la barca catturi il pesce",
-          "CatchUnder": "Il blocco degli oggetti catturati deve essere\ncollegato sotto l'evento Boats Touches \nFish."
+          "Catch": "Utilizza il blocco di cattura oggetti per fare in modo che la barca catturi il pesce",
+          "CatchUnder": "Il blocco degli oggetti catturati deve essere\ncollegato sotto l'evento La barca tocca \nil pesce."
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Posiziona il blocco per cambiare costume all'interno del blocco se ci sono troppe alghe.",
-          "Costume": "Se ci sono troppe alghe, il corallo verrà danneggiato. \n\nUsa quindi il blocco Cambia costume.",
-          "TooMuch": "Collega il blocco «se troppe alghe» all'evento «Quando il pesce tocca le alghe»."
+          "BlockInside": "Posiziona il blocco per cambiare costume all'interno del blocco \"se ci sono troppe alghe\".",
+          "Costume": "Se ci sono troppe alghe, il corallo verrà danneggiato. \n\nUtilizza quindi il blocco Cambia \"costume\".",
+          "TooMuch": "Collega il blocco «se ci sono troppe alghe» all'evento «quando il pesce tocca le alghe»."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
-          "Below": "Continua a collegare i blocchi nella parte inferiore dell'area di lavoro in cui sei finito l'ultimo livello!",
-          "BlocksInside": "Se ci sono troppo poche alghe, il pesce se ne andrà. \n\nPosiziona gli altri blocchi all'interno del blocco di alghe, se troppo piccolo.",
-          "TooLittle": "Collega il blocco di alghe se troppo piccolo all'evento «Quando il pesce tocca le alghe»."
+          "Below": "Continua a collegare i blocchi nella parte inferiore dell'area di lavoro nella quale hai concluso l'ultimo esercizio!",
+          "BlocksInside": "Se ci sono troppo poche alghe, il pesce se ne andrà. \n\nPosiziona gli altri blocchi all'interno del blocco di alghe se troppo piccolo.",
+          "TooLittle": "Collega il blocco di alghe \"se troppo piccolo\" all'evento «Quando il pesce tocca le alghe»."
         },
         "csc_ecosystems_ocean_fish_2023": {
-          "No Code": "Non c'è ancora nulla da codificare. Basta osservare questo sistema in azione. "
+          "No Code": "Non è ancora il momento di programmare. Basta osservare questo sistema in azione. "
         },
         "csc_ecosystems_ocean_justright_algae": {
-          "Bellow": "Continua a collegare i blocchi nella parte inferiore dell'area di lavoro in cui sei finito l'ultimo livello!",
-          "JustRight": "Collega il blocco di alghe, se giusto, all'evento «Quando il pesce tocca le alghe».",
-          "costume": "Se le alghe sono giuste, il corallo\nsarà sano. \n\nUsa il blocco «cambia costume» all'interno del blocco contro le alghe, se giusto."
+          "Bellow": "Continua a collegare i blocchi nella parte inferiore dell'area di lavoro nella quale hai concluso l'ultimo esercizio!",
+          "JustRight": "Collega il blocco di alghe, se corretto, all'evento «Quando il pesce tocca le alghe».",
+          "costume": "Se la quantità di alghe è corretta, il corallo\ntornerà sano. \n\nUsa il blocco cambio costume all'interno del blocco alghe, se è corretto."
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
           "hint1": "Ci sono troppi pappagalli! Cambia il numero\ndi pappagalli in modo che sia inferiore a 8."
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "Prima dell'inizio del programma sono \nstati catturati 0 pesci. Usa il comando `set FishCaught to 0` nella parte superiore \ndello spazio di lavoro.",
-          "hint2": "Usa la modifica `FishCaught by 1`\nsotto il blocco catch fish per contare\nogni pesce catturato dalla barca.",
-          "hint3": "Collega il blocco `boat says` **sotto** al\nblocco `change FishCaught by 1` "
+          "hint1": "Prima dell'inizio del programma sono \nstati catturati 0 pesci. Usa il comando `set FishCaught to 0` nella \nparte superiore dell'area di lavoro.",
+          "hint2": "Usa la modifica `fishCaught by 1`\nsotto il blocco cattura i pesci per contare\nogni pesce catturato dalla barca.",
+          "hint3": "Collega il blocco\n`boat says` **sotto** al \nblocco \n`change FishCaught by 1` "
         },
         "csc_ecosystems_solution1b_2023": {
-          "hint1": "Continua a collegare i blocchi \ndurante l'evento `when boat touches fish` in cui sei \narrivato all'ultimo livello!",
-          "hint2": "Per far sì che la barca smetta di pescare 5 pesci, collega il blocco `if FishCaught = 5` alla fine dell'evento `when boat touches fish`.",
-          "hint3": "Quindi aggiungi il blocco `remove boat`\na**inside** il blocco `if FishCaught = 5`"
+          "hint1": "Continua a collegare i blocchi \ndurante l'evento `when boat touches fish` in cui sei \narrivato all'ultimo esercizio!",
+          "hint2": "Per fare in modo che la barca smetta di pescare una volta raggiunto il numero di 5 pesci, collega il blocco `if fishCaught = 5` alla fine dell'evento `when boat touches fish`.",
+          "hint3": "Quindi aggiungi il blocco `remove boat` al-\nl'**interno** del blocco `if FishCaught = 5`"
         },
         "csc_ecosystems_solution2_2023": {
-          "Hint1": "**Nota**: potrebbe essere necessario trascinare parte del</code> codice  <code style=\"color:black; background-color:#6AF36C\">when touches più in basso sullo schermo per adattarlo ai nuovi blocchi.",
-          "hint2": "Nella parte superiore dell'area di lavoro, collega il blocco di sfondo a quando viene eseguito.",
-          "hint3": "Sotto lo sfondo,\nconnetti, inizia a\npescare solo nella\nzona di pesca"
+          "Hint1": "**Nota**: potrebbe essere necessario trascinare parte del codice </code>quando tocca<code style=\"color:black; background-color:#6AF36C\"> più in basso sulla schermata per adattarlo ai nuovi blocchi.",
+          "hint2": "Nella parte superiore dell'area di lavoro, collega il blocco di sfondo a \"quando si clicca su Esegui\".",
+          "hint3": "Sullo sfondo\ncollega l'avvio\ndella pesca solo nella\nzona di pesca"
         },
         "csc_ecosystems_solution3A_2023": {
           "hint1": "Aggiungi i nuovi blocchi sotto il blocco\n`ripeti ogni 4 secondi`.",
-          "hint2": "Collega lo «sfondo No Fishing» nella parte\nsuperiore dell'area di lavoro sotto \nil blocco «ogni 4 secondi».",
-          "hint3": "Collega `begin no fishing`\nsotto lo sfondo `no fishground`. "
+          "hint2": "Collega lo `sfondo Pesca vietata` nella parte\nsuperiore dell'area di lavoro sotto \nil blocco `ogni 4 secondi`.",
+          "hint3": "Collega `iniziare senza pescare`\nsotto lo sfondo `nessun fondale`. "
         },
         "csc_ecosystems_solution3B_2023": {
-          "hint1": "Aggiungi i nuovi blocchi sotto il blocco di ripetizione\n`ogni 9 secondi`",
-          "hint2": "Usa il comportamento `no fishing background`\ne `start no fishing season`"
+          "hint1": "Aggiungi i nuovi blocchi sotto il blocco\ndi ripetizione `ogni 9 secondi`",
+          "hint2": "Usa i comportamenti `no fishing background`\ne `start no fishing season`"
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "Assicurati di aggiungere un blocco `set background` e un blocco `change costume` sotto il tuo evento. \n\nNon dimenticare di premere la freccia rivolta verso il basso per attivare l'evento! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"

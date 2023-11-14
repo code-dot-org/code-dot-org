@@ -123,6 +123,31 @@ zh-TW:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
         text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            "-1": "←"
+            '1': "→"
+          GROUP:
+            '"CAT"': 全部小貓
+            '"SLOTH"': 樹懶
+          MOVE:
+            '"next"': 下一個
+            '"prev"': 上一個
+            '"rand"': 隨機
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: DAB
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: 無
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
       Dancelab_changeMoveLR:
         options:
           DIR:

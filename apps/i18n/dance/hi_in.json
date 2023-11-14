@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "वापस",
+  "danceAiModalClose": "बंद करें",
+  "danceAiModalCodeButton": "कोड",
+  "danceAiModalExplanationButton": "अधिक जानें",
+  "danceAiModalStartOverButton": "शुरू करें",
   "danceFeedbackDidntPress": "जब आपका डांस चल रहा हो उस समय एरो कीज़ ज़रूर दबाएँ।",
   "danceFeedbackKeepCoding": "कोडिंग करते रहें! अभी कुछ ठीक नहीं है।",
   "danceFeedbackKeyEvent": "पक्का करें कि आपने <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> ब्लॉक में कुछ कोड जोड़ा है और फिर जब डांस चल रहा हो तब कीबोर्ड से वह बटन ज़रूर दबाएँ।",

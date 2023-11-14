@@ -122,6 +122,28 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
         text: "{GROUP} eseguono ininterrottamente la mossa {MOVE} {DIR}"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': tutti i gatti
+            '"SLOTH"': bradipi
+          MOVE:
+            '"next"': "(Successiva)"
+            '"prev"': "(Precedente)"
+            '"rand"': "(Casuale)"
+            MOVES.ClapHigh: Applauso alto
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doppio giù
+            MOVES.Drop: Rilascia
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Stella
+            MOVES.Rest: Nessuno
+            MOVES.Roll: Piroetta
+            MOVES.ThisOrThat: Questo o quello
+            MOVES.Thriller: Zombie
+        text: "{GROUP} eseguono ininterrottamente la mossa {MOVE} {DIR}"
       Dancelab_changeMoveLR:
         options:
           MOVE:

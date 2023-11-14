@@ -68,7 +68,7 @@
         <block type="Dancelab_whenSetup" id="{vM#jv*-}QGNwT5jw~Y+" deletable="false" movable="false" x="16" y="16">
           <statement name="DO">
             <block type="Dancelab_ai" id="A?kiObB1UjY0E#nXCgvr">
-              <field name="VALUE">{"inputs":["rainbow","party","sparkle"],"backgroundEffect":"sparkles","backgroundColor":"rainbow","foregroundEffect":"confetti"}</field>
+              <field name="VALUE">{"inputs":["rainbow","party-popper","sparkles"],"backgroundEffect":"sparkles","backgroundColor":"rainbow","foregroundEffect":"confetti"}</field>
               <next>
                 <block type="Dancelab_makeNewDanceSpriteGroup" id="SZMJgn/]Vm39Di=pg/#g">
                   <field name="N">12</field>
