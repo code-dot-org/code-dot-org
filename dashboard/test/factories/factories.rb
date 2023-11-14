@@ -1884,7 +1884,7 @@ FactoryBot.define do
   end
 
   factory :potential_teacher do
-    association :source_course_offering
+    association :script
     name {"foosbars"}
     email {"foobar@example.com"}
     receives_marketing {true}

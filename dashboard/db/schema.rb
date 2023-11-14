@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_07_182805) do
+ActiveRecord::Schema.define(version: 2023_11_13_191120) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -885,6 +885,8 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_lti_user_identities_on_deleted_at"
     t.index ["lti_integration_id"], name: "index_lti_user_identities_on_lti_integration_id"
     t.index ["subject"], name: "index_lti_user_identities_on_subject"
     t.index ["user_id"], name: "index_lti_user_identities_on_user_id"
@@ -1505,12 +1507,13 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
   end
 
   create_table "potential_teachers", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.integer "source_course_offering_id"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.integer "script_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "receives_marketing", default: false, null: false
+    t.index ["script_id"], name: "index_potential_teachers_on_script_id"
   end
 
   create_table "programming_classes", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

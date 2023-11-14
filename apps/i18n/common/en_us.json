@@ -1008,6 +1008,7 @@
   "emailAddressPolicy": "Code.org will not store student email addresses in a retrievable format, for privacy reasons.",
   "emailLabel": "Email: ",
   "emailMeAGuide": "Email me a guide",
+  "emailRequestSubmitted": "Email request submitted",
   "embed": "Embed",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",

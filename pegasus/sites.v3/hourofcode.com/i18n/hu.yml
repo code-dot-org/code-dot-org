@@ -13826,6 +13826,7 @@ hu:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Az MI-generáció
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14296,6 +14297,7 @@ hu:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: 'Utazz az időben, és hozd létre saját MI működtette találmányaidat a Minecraft új Kódolás órája: Az MI-generáció csomagjával. Fejleszd problémamegoldó képességeidet és kreativitásodat a felelős MI-alkalmazás jegyében. A Kódolás órája segítségével tanuld meg a kódolás alapjait blokkokkal vagy Pythonnal, hogy jobb MI-t építhess mindenkinek.'
   tutorial_bsimage_string_detail_grades: 6. osztálytól
   tutorial_bscomputing_string_detail_grades: 6. osztálytól
   tutorial_stackpython_string_detail_grades: 6. osztálytól
@@ -14427,6 +14429,7 @@ hu:
   tutorial_madmobile_string_detail_grades: 6. osztálytól
   tutorial_intelinosmile_string_detail_grades: Nem olvasótól 8. osztályig
   tutorial_intelinoaisign_string_detail_grades: 2-tól 8. osztályig
+  tutorial_generationai_string_detail_grades: 2-5. osztály (7-10 éves kor) 6-8. osztály (11-13 éves kor) 9+ osztály (14+ éves kor)
   tutorial_bsimage_string_platforms: Króm, Firefox, Safari
   tutorial_bscomputing_string_platforms: Kihúzva
   tutorial_stackpython_string_platforms: Minden modern böngésző, Android táblagép,
@@ -14596,6 +14599,7 @@ hu:
   tutorial_madmobile_string_platforms: Minden modern böngésző
   tutorial_intelinosmile_string_platforms: Minden modern böngésző, iPad
   tutorial_intelinoaisign_string_platforms: Minden modern böngésző
+  tutorial_generationai_string_platforms: Számítógépek (Windows PC, Mac), Android (Chromebookok), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14727,6 +14731,7 @@ hu:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Nyelv független
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14859,6 +14864,7 @@ hu:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Blokk programozás
   tutorial_intelinoaisign_string_detail_programming_languages: Blokk programozás
+  tutorial_generationai_string_detail_programming_languages: Blokk, Python
   school_not_found_heading: Nem találtuk meg iskoládat. Kérjük írj róla több információt!
   school_name: Iskola neve
   school_name_error: Iskolanév megadása kötelező.
