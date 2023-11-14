@@ -43,4 +43,25 @@ class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
     assert_equal 'CONVINCING', summary[:understanding]
     assert_equal 'MEDIUM', summary[:ai_confidence]
   end
+
+  test 'rubric associations must match' do
+    # rubric_ai_evaluation.rubric matches learning_goal.rubric
+    rubric_ai_evaluation = create(:rubric_ai_evaluation, rubric: @rubric)
+    create(
+      :learning_goal_ai_evaluation,
+      rubric_ai_evaluation: rubric_ai_evaluation,
+      learning_goal: @learning_goal,
+    )
+
+    # rubric_ai_evaluation.rubric does not match learning_goal.rubric
+    rubric_ai_evaluation = create(:rubric_ai_evaluation, rubric: create(:rubric))
+    exception = assert_raises ActiveRecord::RecordInvalid do
+      create(
+        :learning_goal_ai_evaluation,
+        rubric_ai_evaluation: rubric_ai_evaluation,
+        learning_goal: @learning_goal
+        )
+    end
+    assert_includes exception.message, "rubric_ai_evaluation.rubric does not match learning_goal.rubric"
+  end
 end
