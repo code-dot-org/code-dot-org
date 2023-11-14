@@ -1,62 +1,47 @@
 # LTI 1.3 Integration
 
-We are working to fully support LTI 1.3 as an LTI Tool. Currently, we are beta
-testing with a small group of Canvas users, and plan to release phases of LTI 1.3
-features in 2024.
+Code.org is working on an LTI 1.3 compliant integration for Canvas. Currently,
+we are beta testing with a small group of Canvas users, and plan to release our
+integration in 2024.
 
-Below are instructions on how to register Code.org as an LTI Tool in Canvas.
-NOTE: this pilot is currently supported for a closed group, and is not get
-generally available.
+The following documentation details the steps required to install Code.org as an
+LTI tool in Canvas. As an outcome of following these steps, you will supply the
+generated `Client ID` and the `Deployment ID` to Code.org as the final
+configuration step.
 
-### References
+## References
 
-- [Create a new LTI Developer Key][install-canvas]
-- [Configure the LTI app][configure-canvas]
+Canvas provides installation and configuration instructions for LTI Tools. Use
+these instructions, and refer to the steps below for Code.org specific details.
+
+- [Create a new LTI Key][install-canvas] which configures Code.org as an LTI Tool
+- [Configure the LTI app][configure-canvas] to generate the Deployment ID
 
 [install-canvas]: https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-LTI-key-for-an-account/ta-p/140
 [configure-canvas]: https://community.canvaslms.com/t5/Admin-Guide/How-do-I-configure-an-external-app-for-an-account-using-a-client/ta-p/202
 
 ## Installing Code.org in Canvas
 
-See [link here][install-canvas] for detailed step by step instructions for
-configuring a developer key for an LTI Tool, i.e. installing an LTI Tool in
-Canavs.
+You will follow [these instructions][install-canvas] for configuring an LTI Key,
+i.e. installing an LTI Tool in Canavs. The outcome of this installation will be
+a Client ID to provide Code.org (in [Step 4](#step-4))
 
-In the `Select Configuration Method` step, there are two options, detailed below.
-For both options, you must first configure your `Key Settings`:
+### Step 1
 
-1. Key Name: `<your-key-name>`
-1. Owner Email: `<admin-owner-email>`
-1. Redirect URIs: `https://studio.code.org` (NOTE: This will prefill automatically if you chose the JSON method)
-1. Notes: `Optional: Any notes about the LTI key, such as the reason it was created.`
+1. From the Admin menu, select `Developer Keys`
+1. Click `Add Developer Key` button, and select the `LTI Key` option
+1. Enter LTI Key Settings:
+    - Key Name: `<your-key-name>`
+    - Owner Email: `<admin-owner-email>`
+    - Redirect URIs: `https://studio.code.org`
+    - Notes: `Optional: Any notes about the LTI key, such as the reason it was created.`
 
-### Enter Manual Entry Details
+### Step 2
 
-This is the first option in the configuration steps. The easier method is the
-JSON method detailed below, however here are instructions for manually entering
-these details.
+There are two options for entering configuration settings. The easiest is using
+JSON. Optionally, you can chose to manually enter these settings.
 
-Here are the values to enter in the associated text input fields:
-
-1. Select `Manual Entry` from Configuration dropdown menu
-1. Title: `Code.org`
-1. Description: `Code.org LTI Tool`
-1. Target Link URI: `https://studio.code.org/home`
-1. OpenID Connect Initiation URL: `https://studio.code.org/lti/v1/login`
-1. JWK Method - Public JWK URL: `https://studio.code.org/oauth/jwks`
-1. LTI Advantage Services: Enable all
-1. Placements: Select the placements where you want Code.org LTI Tool to be available
-1. Additional Settings - Custom Fields:
-   ```
-   email=$Person.email.primary
-   full_name=$Person.name.full
-   given_name=$Person.name.given
-   family_name=$Person.name.family
-   display_name=$Person.name.display
-   ```
-1. Click `Save`
-
-### Enter JSON Details
+#### Enter JSON Details
 
 The easiest way to configure the LTI Tool in Canvas is via the `Paste JSON`
 configuration. Below is the JSON you can paste directly into the
@@ -129,13 +114,43 @@ configuration. Below is the JSON you can paste directly into the
 }
 ```
 
-## Client ID and Deployment ID
+#### Manual Entry Details
 
-In order to complete the LTI Integration, you'll need to provide Code.org with
-a Client ID and a Deployment ID. After the steps above have been completed,
-please reference the instructions [here][configure-canvas] for generating a
-Deployment ID
+Optionally, you can manually enter the configuration details.
 
-Once you have both the Client ID and the Deployment ID
+Here are the values to enter in the associated text input fields:
 
-TODO: Finish, how will they share them with us?
+1. Select `Manual Entry` from Configuration dropdown menu
+1. Title: `Code.org`
+1. Description: `Code.org LTI Tool`
+1. Target Link URI: `https://studio.code.org/home`
+1. OpenID Connect Initiation URL: `https://studio.code.org/lti/v1/login`
+1. JWK Method - Public JWK URL: `https://studio.code.org/oauth/jwks`
+1. LTI Advantage Services: Enable all
+1. Placements: Select the placements where you want Code.org LTI Tool to be available
+1. Additional Settings - Custom Fields:
+   ```
+   email=$Person.email.primary
+   full_name=$Person.name.full
+   given_name=$Person.name.given
+   family_name=$Person.name.family
+   display_name=$Person.name.display
+   ```
+1. Click `Save`
+
+### Step 3
+
+#### Deployment ID
+
+Now that you have the LTI Key, you need to configure the Code.org LTI App to
+generate a Deployment ID. Please reference [these instructions][configure-canvas]
+for generating a Deployment ID.
+
+### Step 4
+
+Once you have both the Client ID and the Deployment ID, provide them to Code.org
+through TODO: How will they supply these values?
+
+## Using Code.org as an LTI Tool
+
+Code.org must be configured to open in a new tab, and will not work in an iframe.
