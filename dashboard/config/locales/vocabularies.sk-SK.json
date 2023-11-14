@@ -2689,6 +2689,17 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "definition": "algoritmus kompresie údajov, ktorý umožňuje dokonalú rekonštrukciu pôvodných údajov z komprimovaných údajov.  Najčastejšie sa používa na kompresiu textu (napr. kompresia ZIP)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kód",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "event/dance-ai/2023": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

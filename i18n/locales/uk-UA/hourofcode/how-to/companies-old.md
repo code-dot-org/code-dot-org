@@ -5,7 +5,7 @@ title: Як провести Годину коду - компанії
 {{ signup_button }}
 
 # Як принести Годину коду до своєї компанії
-### Дізнайтеся, як ви та ваші співробітники можете надихнути студентів спробувати себе в інформатиці!
+### Дізнайтеся, як ви та ваші співробітники можете надихнути учнів спробувати себе в інформатиці!
 
 ***
 
@@ -58,7 +58,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
 - Відео « [Година коду» по всьому світу](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Президент Обама закликав усіх студентів вивчати інформати](https://www.youtube.com/watch?v=6XvmhE1J9PY)ку
+- [Президент Обама закликав усіх учнів вивчати інформати](https://www.youtube.com/watch?v=6XvmhE1J9PY)ку
 - Знайди більше мотиваційних відео [тут](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**

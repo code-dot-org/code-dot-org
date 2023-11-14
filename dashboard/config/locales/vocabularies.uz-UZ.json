@@ -2282,6 +2282,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compression",
           "definition": "dastlabki ma'lumotlarni siqilgan ma'lumotlardan mukammal qayta tiklashga imkon beradigan ma'lumotlarni siqish algoritmi. Matnni siqish uchun eng ko'p ishlatiladi (masalan .zip siqish)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "event/dance-ai/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/dance-ai/2023": {
+          "word": "Dastur"
         }
       }
     }

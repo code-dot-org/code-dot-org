@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Κώδικας",
+  "danceAiModalStartOverButton": "Έναρξη από την αρχή",
+  "danceAiModalExplanationButton": "Μάθετε περισσότερα",
+  "danceAiModalBack": "Πίσω",
+  "danceAiModalClose": "Κλείσιμο",
   "danceFeedbackDidntPress": "Βεβαιωθείτε ότι πιέζετε τα πλήκτρα με το βέλος ενόσω συνεχίζει ο χορός.",
+  "danceFeedbackKeepCoding": "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά όχι με τον σωστό τρόπο.",
   "danceFeedbackKeyEvent": "Βεβαιωθείτε ότι προσθέσατε κώδικα στο <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>μπλοκ και πατήστε το πλήκτρο ενόσω συνεχίζει ο χορός.",
   "danceFeedbackNeedBackup": "Χρειάζεται να δημιουργήσετε μια ομάδα χορευτών υποστήριξης με το μπλοκ <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Θα πρέπει να χρησιμοποιήσετε έναν διαφορετικό χορό.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Χρησιμοποιήστε το μπλοκ*`set backup_dancer2 size`για να μικρύνετε τον χορευτή.",
   "danceFeedbackUseSetTint": "Χρησιμοποιήστε το μπλοκ `set tint` για να αλλάξετε την απόχρωση ενός χορευτή.",
   "danceFeedbackUseStartMapping": "Προσπαθήστε να προσθέσετε το μπλοκ <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> στο πρόγραμμά σας.",
-  "danceFeedbackKeepCoding": "Χρησιμοποιείς όλα τα αναγκαία είδη μπλοκ, αλλά όχι με τον σωστό τρόπο.",
   "measure": "Μέτρα:"
 }

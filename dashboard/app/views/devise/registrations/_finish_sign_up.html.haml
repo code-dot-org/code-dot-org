@@ -73,7 +73,6 @@
         -# Sign-up user type original
         .span5{:id => 'select-user-type-original'}
           = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
-      .span2
     .row#parent-email-container
       .span8#parent-email-section
         .padded-container
