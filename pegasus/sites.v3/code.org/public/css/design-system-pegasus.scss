@@ -770,8 +770,8 @@ form {
 
   .media-wrapper {
     & > * {
-      margin: 1rem;
-      width: calc(100% - 1rem);
+      margin: 1.25rem;
+      width: calc(100% - 1.25rem);
 
       @media (max-width: $width-md) {
         margin: 0;
