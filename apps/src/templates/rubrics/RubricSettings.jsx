@@ -9,6 +9,7 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
+import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 
 const STATUS = {
   // we are waiting for initial status from the server
@@ -19,7 +20,10 @@ const STATUS = {
   ALREADY_EVALUATED: 'already_evaluated',
   // the student has work which is ready to evaluate
   READY: 'ready',
+  // evaluation queued and ready to run
   EVALUATION_PENDING: 'evaluation_pending',
+  // evaluation currently in progress
+  EVALUATION_RUNNING: 'evaluation_running',
   SUCCESS: 'success',
   ERROR: 'error',
   PII_ERROR: 'pii_error',
@@ -57,6 +61,8 @@ export default function RubricSettings({
         return i18n.aiEvaluationStatus_success();
       case STATUS.EVALUATION_PENDING:
         return i18n.aiEvaluationStatus_pending();
+      case STATUS.EVALUATION_RUNNING:
+        return i18n.aiEvaluationStatus_in_progress();
       case STATUS.ERROR:
         return i18n.aiEvaluationStatus_error();
       case STATUS.PII_ERROR:
@@ -73,17 +79,19 @@ export default function RubricSettings({
           setStatus(STATUS.ERROR);
         } else {
           response.json().then(data => {
-            console.log('1st');
-            console.log(data);
             if (!data.attempted) {
               setStatus(STATUS.NOT_ATTEMPTED);
             } else if (data.lastAttemptEvaluated) {
               setStatus(STATUS.ALREADY_EVALUATED);
-            } else if (data.status === 1000) {
+            } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
+              setStatus(STATUS.EVALUATION_PENDING);
+            } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
               setStatus(STATUS.ERROR);
-            } else if (data.status === 1001) {
+            } else if (data.status === RubricAiEvaluationStatus.PII_VIOLATION) {
               setStatus(STATUS.PII_ERROR);
-            } else if (data.status === 1002) {
+            } else if (
+              data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
+            ) {
               setStatus(STATUS.PROFANITY_ERROR);
             } else {
               // we can't fetch the csrf token from the DOM because CSRF protection
@@ -105,16 +113,23 @@ export default function RubricSettings({
             setStatus(STATUS.ERROR);
           } else {
             response.json().then(data => {
-              console.log('2nd');
-              console.log(data);
-              if (data.lastAttemptEvaluated && data.status === 2) {
+              if (
+                data.lastAttemptEvaluated &&
+                data.status === RubricAiEvaluationStatus.SUCCESS
+              ) {
                 setStatus(STATUS.SUCCESS);
                 refreshAiEvaluations();
-              } else if (data.status === 1000) {
+              } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
+                setStatus(STATUS.EVALUATION_PENDING);
+              } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
                 setStatus(STATUS.ERROR);
-              } else if (data.status === 1001) {
+              } else if (
+                data.status === RubricAiEvaluationStatus.PII_VIOLATION
+              ) {
                 setStatus(STATUS.PII_ERROR);
-              } else if (data.status === 1002) {
+              } else if (
+                data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
+              ) {
                 setStatus(STATUS.PROFANITY_ERROR);
               }
             });

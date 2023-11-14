@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import {act} from 'react-dom/test-utils';
 import i18n from '@cdo/locale';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
+import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('RubricSettings', () => {
   it('shows a a button for running analysis if canProvideFeedback is true', () => {
@@ -107,7 +108,7 @@ describe('RubricSettings', () => {
         2. User clicks button to run analysis
         3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
         4. Move clock forward 5 seconds
-        5. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
+        5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
         6. Move clock forward 5 seconds
         7. Fetch returns a json object with puts AI Status into SUCCESS state
         8. Calls refreshAiEvaluations
@@ -128,18 +129,27 @@ describe('RubricSettings', () => {
         lastAttemptEvaluated: false,
         csrfToken: 'abcdef',
         evaluationPending: true,
+        status: RubricAiEvaluationStatus.QUEUED,
       };
       fetchStub
         .onCall(1)
         .returns(Promise.resolve(new Response(JSON.stringify(pendingJson))));
+
+      const runningJson = {
+        attempted: true,
+        lastAttemptEvaluated: false,
+        csrfToken: 'abcdef',
+        evaluationPending: true,
+        status: RubricAiEvaluationStatus.RUNNING,
+      };
       fetchStub
         .onCall(2)
-        .returns(Promise.resolve(new Response(JSON.stringify(pendingJson))));
+        .returns(Promise.resolve(new Response(JSON.stringify(runningJson))));
 
       const successJson = {
         attempted: true,
         lastAttemptEvaluated: true,
-        status: 2,
+        status: RubricAiEvaluationStatus.SUCCESS,
       };
       fetchStub
         .onCall(3)
@@ -172,7 +182,7 @@ describe('RubricSettings', () => {
         await Promise.resolve();
       });
       expect(wrapper.find('Button').props().disabled).to.be.true;
-      expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
+      expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
 
       clock.tick(5000);
       await act(async () => {
