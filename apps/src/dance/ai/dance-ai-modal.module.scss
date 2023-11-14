@@ -124,7 +124,7 @@ $ai-modal-border-width: 8px;
     border-radius: 4px;
     background-color: white;
 
-    .toggleArea  {
+    .toggleArea {
       position: absolute;
       width: 40%;
       height: 100px;
@@ -281,7 +281,8 @@ $ai-modal-border-width: 8px;
           }
         }
 
-        &Front, &Back {
+        &Front,
+        &Back {
           position: absolute;
           backface-visibility: hidden;
           left: 50%;
@@ -295,7 +296,7 @@ $ai-modal-border-width: 8px;
           transform: rotateY(180deg) translateX(50%);
 
           .blockPreview {
-            margin-top: 50px
+            margin-top: 50px;
           }
         }
       }
@@ -381,10 +382,9 @@ $ai-modal-border-width: 8px;
     .buttonsAreaTop {
       position: absolute;
       top: 0;
-      right: 10px;
-      width: 30%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      width: inherit;
     }
   }
 
@@ -404,7 +404,11 @@ $ai-modal-border-width: 8px;
     }
 
     &Icon {
-      margin-right: 10px;
+      margin: 0;
+
+      &WithText {
+        margin-right: 10px;
+      }
     }
   }
 }

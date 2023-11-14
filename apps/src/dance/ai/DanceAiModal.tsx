@@ -44,8 +44,9 @@ import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ModalButton from './ModalButton';
 
-enum Mode {
+export enum Mode {
   INITIAL = 'initial',
   SELECT_INPUTS = 'selectInputs',
   GENERATING = 'generating',
@@ -818,53 +819,68 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
-          {mode === Mode.RESULTS && (
-            <div>
-              <Button
-                id="explanation-button"
-                onClick={handleExplanationClick}
-                color={Button.ButtonColor.neutralDark}
-                className={moduleStyles.button}
-              >
-                <i className="fa fa-bar-chart" />
-              </Button>
-            </div>
-          )}
+          <div id="buttons-area-top-left">
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.RESULTS, Mode.EXPLANATION]}
+              disableFor={[Mode.EXPLANATION]}
+              id="start-over-button"
+              onClick={handleStartOverClick}
+              color={Button.ButtonColor.neutralDark}
+              className={moduleStyles.button}
+              aria-label={i18n.danceAiModalStartOverButton()}
+              icon="fast-backward"
+            />
+          </div>
+          <div id="buttons-area-top-right">
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.RESULTS]}
+              id="explanation-button"
+              onClick={handleExplanationClick}
+              color={Button.ButtonColor.neutralDark}
+              className={moduleStyles.button}
+              aria-label={i18n.danceAiModalExplanationButton()}
+              iconClassName={moduleStyles.buttonIcon}
+              icon="bar-chart"
+            />
 
-          {mode === Mode.EXPLANATION && (
-            <Button
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.EXPLANATION]}
               id="leave-explanation-button"
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
-            >
-              <i className="fa fa-bar-chart" />
-            </Button>
-          )}
+              aria-label={i18n.danceAiModalBack()}
+              iconClassName={moduleStyles.buttonIcon}
+              icon="bar-chart"
+            />
+          </div>
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
           <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
-            {mode === Mode.RESULTS && (
-              <Button
-                id="regenerate-button"
-                onClick={handleRegenerateClick}
-                color={Button.ButtonColor.neutralDark}
-                className={classNames(moduleStyles.button)}
-              >
-                <i
-                  className={classNames(
-                    'fa fa-refresh',
-                    moduleStyles.buttonIcon
-                  )}
-                />
-                {i18n.danceAiModalRegenerateButton()}
-              </Button>
-            )}
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.RESULTS]}
+              id="regenerate-button"
+              onClick={handleRegenerateClick}
+              color={Button.ButtonColor.neutralDark}
+              className={moduleStyles.button}
+              icon="refresh"
+              iconClassName={classNames(
+                moduleStyles.buttonIcon,
+                moduleStyles.buttonIconWithText
+              )}
+              text={i18n.danceAiModalRegenerateButton()}
+            />
           </div>
 
-          {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
-            <Button
+          {currentInputSlot >= SLOT_COUNT && (
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.SELECT_INPUTS]}
               id="generate-button"
               text={i18n.danceAiModalGenerateButton()}
               onClick={handleGenerateClick}
