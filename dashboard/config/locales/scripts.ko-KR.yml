@@ -814,7 +814,7 @@ ko:
             csf_sequencing:
               display_name: 시퀸싱
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
             lessonGroup-6:
               display_name: 디지털 시민의식
           title: 과정 D (2022)

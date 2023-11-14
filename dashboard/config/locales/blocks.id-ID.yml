@@ -118,6 +118,27 @@ id:
             MOVES.Roll: Body Roll
             MOVES.ThisOrThat: Ini atau Itu
         text: lakukan {GROUP} {MOVE} {DIR} selamanya
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': semua kucing
+            '"SLOTH"': sloths
+          MOVE:
+            '"next"': "(Berikutnya)"
+            '"prev"': "(Sebelumnya)"
+            '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Gandakan
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Segar
+            MOVES.Kick: Bintang
+            MOVES.Rest: Tidak Ada
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Ini atau Itu
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
       Dancelab_changeMoveLR:
         options:
           MOVE:

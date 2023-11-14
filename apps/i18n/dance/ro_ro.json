@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Înapoi",
+  "danceAiModalClose": "Închide",
+  "danceAiModalCodeButton": "Cod",
+  "danceAiModalExplanationButton": "Află mai mult",
+  "danceAiModalStartOverButton": "Începeţi din nou",
   "danceFeedbackDidntPress": "Asigură-te că apeși tastele cu săgeată în timp ce dansul tău este pornit.",
   "danceFeedbackKeepCoding": "Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie.",
   "danceFeedbackKeyEvent": "Asigură-te că adaugi cod la blocul <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"sus\"</title></block></xml> și apasă tasta în timp ce dansul tău este pornit. a face, a realiza, a crea.",

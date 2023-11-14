@@ -1,5 +1,10 @@
 {
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalExplanationButton": "Сазнајте више",
+  "danceAiModalBack": "Назад",
+  "danceAiModalClose": "Затвори",
   "danceFeedbackDidntPress": "Притисни стрелицу десно док плес траје.",
+  "danceFeedbackKeepCoding": "Наставите да програмирате! Нешто није баш у реду.",
   "danceFeedbackKeyEvent": "Додај код у блок <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"горе\"</title></block></xml> и притисни стрелицу горе док траје плес.",
   "danceFeedbackNeedBackup": "Креирај групу плесача помоћу блока <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> ",
   "danceFeedbackNeedDifferentDance": "Употреби другог плесача.",
@@ -18,6 +23,5 @@
   "danceFeedbackUseSetSize": "Употреби ''set backup_dancer2 size`  блок да би плесачи изгледали мањи.",
   "danceFeedbackUseSetTint": "Употреби блок `set tint` за промену боје играча.",
   "danceFeedbackUseStartMapping": "Покушај да додаш блок<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> у свој програм.",
-  "danceFeedbackKeepCoding": "Наставите да програмирате! Нешто није баш у реду.",
   "measure": "Такт:"
 }

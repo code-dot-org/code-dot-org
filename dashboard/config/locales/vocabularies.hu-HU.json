@@ -1311,6 +1311,17 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "code/dance-ai/2023": {
+          "word": "Kód",
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
+        },
+        "event/dance-ai/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

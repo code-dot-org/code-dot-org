@@ -1,5 +1,10 @@
 {
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "Leer meer",
+  "danceAiModalBack": "Terug",
+  "danceAiModalClose": "Afsluiten",
   "danceFeedbackDidntPress": "Zorg ervoor dat je op de pijltjestoetsen drukt terwijl je dans wordt uitgevoerd.",
+  "danceFeedbackKeepCoding": "Je gebruikt alle soorten blokken die nodig zijn, maar niet op de juiste manier.",
   "danceFeedbackKeyEvent": "Zorg dat je wat code toevoegt aan het blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"omhoog\"</title></block></xml> en druk op de toets terwijl je dans afspeelt.",
   "danceFeedbackNeedBackup": "Je moet een groep back-up dansers met het blok <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Je moet een andere dans gebruiken.",
@@ -18,6 +23,5 @@
   "danceFeedbackUseSetSize": "Gebruik het blok 'set backup_dancer2 size' om die danser kleiner te maken.",
   "danceFeedbackUseSetTint": "Gebruik het blok 'tint instellen' om de kleur van een danser te veranderen.",
   "danceFeedbackUseStartMapping": "Probeer het <xml> <block type=\"Dancelab_startMapping\"> <title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title> </block> </xml> blok aan je programma toe te voegen.",
-  "danceFeedbackKeepCoding": "Je gebruikt alle soorten blokken die nodig zijn, maar niet op de juiste manier.",
   "measure": "Maten:"
 }

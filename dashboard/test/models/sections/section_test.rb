@@ -33,6 +33,13 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
   end
 
+  test "destroying section destroys associated LTI section" do
+    section = create :section
+    lti_section = create :lti_section, section: section
+    section.destroy
+    assert LtiSection.where(id: lti_section.id).empty?, "LTI section should be deleted"
+  end
+
   test "restoring section restores appropriate followers" do
     old_deleted_follower = create :follower, section: @section
     Timecop.freeze(Time.now - 1.day) do
@@ -311,6 +318,17 @@ class SectionTest < ActiveSupport::TestCase
   test 'add_student returns failure for section teacher' do
     assert_does_not_create(Follower) do
       add_student_return = @section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
+  test 'add_student returns failure for section instructor' do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    assert_does_not_create(Follower) do
+      add_student_return = section.add_student @teacher
       assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
     end
   end
