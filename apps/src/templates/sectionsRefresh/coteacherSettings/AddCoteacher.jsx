@@ -25,7 +25,7 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
     `/api/v1/section_instructors/check?email=${encodeURIComponent(email)}` +
       (sectionId ? `&section_id=${sectionId}` : ''),
     {
-      type: 'GET',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
       },
@@ -53,7 +53,9 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
         if (json.error.includes('inviting self')) {
           return i18n.coteacherCannotInviteSelf();
         }
-
+        if (json.error.includes('already in section')) {
+          return i18n.coteacherAlreadyInCourse({email});
+        }
         console.error('Coteacher validation error', response);
         return i18n.coteacherUnknownValidationError({
           email,

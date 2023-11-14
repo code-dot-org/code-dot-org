@@ -85,6 +85,25 @@ ne:
             MOVES.Clown: गमनम
             MOVES.Kick: तारा
             MOVES.ThisOrThat: यो वा त्यो
+      Dancelab_changeMoveEachLR_slothcat:
+        text: सधैंभरिलाई
+        options:
+          GROUP:
+            '"SLOTH"': स्लथ्स
+          MOVE:
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
       Dancelab_changeMoveLR:
         text: सधैंलाई
         options:

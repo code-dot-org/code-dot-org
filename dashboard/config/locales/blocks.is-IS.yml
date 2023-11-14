@@ -106,6 +106,27 @@ is:
             MOVES.Roll: Hlykkja
             MOVES.ThisOrThat: Þetta eða hitt
         text: "{GROUP} gera {MOVE} {DIR} alltaf"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': allir kettir
+            '"SLOTH"': letidýr
+          MOVE:
+            '"next"': "(Næsti)"
+            '"prev"': "(Fyrri)"
+            '"rand"': "(Handahóf)"
+            MOVES.ClapHigh: Háklappa
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dobla niður
+            MOVES.Drop: Droppa
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Freska
+            MOVES.Kick: Stjarna
+            MOVES.Rest: Ekkert
+            MOVES.Roll: Hlykkja
+            MOVES.ThisOrThat: Þetta eða hitt
+        text: "{GROUP} gera {MOVE} {DIR} alltaf"
       Dancelab_changeMoveLR:
         options:
           MOVE:

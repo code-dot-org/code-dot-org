@@ -94,6 +94,16 @@
       "title": "AI 101 dla nauczycieli",
       "body": "Odkryj przełomowy świat sztucznej inteligencji (AI) i jej potencjał transformacyjny w edukacji dzięki naszej kompleksowej serii nauczania online dla nauczycieli.",
       "buttonText": "Dowiedz się więcej"
+    },
+    "state-of-cs-2023": {
+      "title": "2023 Stan edukacji informatycznej",
+      "body": "",
+      "buttonText": "Przeczytaj raport"
+    },
+    "hoc-2023": {
+      "title": "Godzina Kodowania: Kreatywność dzięki sztucznej inteligencji",
+      "body": "Dołącz do milionów ludzi na całym świecie organizując Godzinę Kodowania ze sztuczną inteligencją lub bez niej i ucząc się, jak działa sztuczna inteligencja. Każdy, gdziekolwiek może to zrobić. Nie potrzeba doświadczenia.",
+      "buttonText": "Dowiedz się więcej"
     }
   }
 }

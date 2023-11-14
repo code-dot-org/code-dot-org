@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -15,7 +15,13 @@ import {
 import DanceAiScore, {ScoreColors} from './DanceAiScore';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {AiOutput, FieldKey, GeneratedEffect, MinMax} from '../types';
+import {
+  AiFieldValue,
+  AiOutput,
+  FieldKey,
+  GeneratedEffect,
+  MinMax,
+} from '../types';
 import {
   generateBlocks,
   generateBlocksFromResult,
@@ -148,30 +154,83 @@ const DanceAiModal: React.FunctionComponent = () => {
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
+  const getGeneratedEffect = useCallback((step: number) => {
+    if (step < BAD_GENERATED_RESULTS_COUNT) {
+      return generatedEffects.current.badEffects[step];
+    } else if (generatedEffects.current.goodEffect) {
+      return generatedEffects.current.goodEffect;
+    } else {
+      return undefined;
+    }
+  }, []);
+
+  const getScores = useCallback(
+    (useInputs: string[], step: number) => {
+      const effect = getGeneratedEffect(step);
+      if (effect) {
+        return getGeneratedEffectScores(useInputs, effect);
+      }
+
+      return [0, 0, 0];
+    },
+    [getGeneratedEffect]
+  );
+
+  // Calculates the minimum individual score
+  // (ie, a SINGLE emoji association with a foreground/background palette combination),
+  // and a maximum total score
+  // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
+  // Used to normalize and scale the data for easier differentiation between results by the user.
+  const calculateMinMax = useCallback(
+    (useInputs: string[]) => {
+      // The minimum individual score is selected across all generated effects (bad and good).
+      const minIndividualScore = Array.from(
+        Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
+      ).reduce((accumulator: number, currentValue: number) => {
+        const scores = getScores(useInputs, currentValue);
+        const min = Math.min(...scores);
+        return min < accumulator ? min : accumulator;
+      }, Infinity);
+
+      // By definition, the maximum total score must come from the "good" effect.
+      const goodEffectScores = getScores(
+        useInputs,
+        BAD_GENERATED_RESULTS_COUNT
+      );
+      const maxTotalScore = goodEffectScores.reduce(
+        (sum, score) => (sum += score)
+      );
+
+      return {minIndividualScore, maxTotalScore};
+    },
+    [getScores]
+  );
+
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === Mode.INITIAL) {
-      const currentValue = currentAiModalField?.getValue();
-      if (currentValue) {
-        const currentInputs = JSON.parse(currentValue).inputs;
-
+      const currentValueString = currentAiModalField?.getValue();
+      if (currentValueString) {
+        const currentValue: AiFieldValue = JSON.parse(currentValueString);
         setMode(Mode.RESULTS);
-        setInputs(currentInputs);
+        setInputs(currentValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
           badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
-            () => chooseEffects(currentInputs, ChooseEffectsQuality.BAD)
+            () => chooseEffects(currentValue.inputs, ChooseEffectsQuality.BAD)
           ),
-          goodEffect: JSON.parse(currentValue),
+          goodEffect: currentValue,
         };
+
+        minMaxAssociations.current = calculateMinMax(currentValue.inputs);
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
         }, 500);
       }
     }
-  }, [currentAiModalField, mode]);
+  }, [currentAiModalField, mode, calculateMinMax]);
 
   const getLabels = () => {
     const tempWorkspace = new Workspace();
@@ -260,17 +319,19 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleUseClick = () => {
+    if (!generatedEffects.current.goodEffect) {
+      // Effect should exist when Use is clicked
+      return;
+    }
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
       emojis: inputs,
       ...generatedEffects.current.goodEffect,
     });
-
-    currentAiModalField?.setValue(
-      JSON.stringify({
-        inputs,
-        ...generatedEffects.current.goodEffect,
-      })
-    );
+    const currentValue: AiFieldValue = {
+      inputs,
+      ...generatedEffects.current.goodEffect,
+    };
+    currentAiModalField?.setValue(JSON.stringify(currentValue));
     onClose();
   };
 
@@ -326,25 +387,8 @@ const DanceAiModal: React.FunctionComponent = () => {
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
-  };
 
-  const getGeneratedEffect = (step: number) => {
-    if (step < BAD_GENERATED_RESULTS_COUNT) {
-      return generatedEffects.current.badEffects[step];
-    } else if (generatedEffects.current.goodEffect) {
-      return generatedEffects.current.goodEffect;
-    } else {
-      return undefined;
-    }
-  };
-
-  const getScores = (step: number) => {
-    const effect = getGeneratedEffect(step);
-    if (effect) {
-      return getGeneratedEffectScores(inputs, effect);
-    }
-
-    return [0, 0, 0];
+    minMaxAssociations.current = calculateMinMax(inputs);
   };
 
   const handleConvertBlocks = () => {
@@ -359,7 +403,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(generatedEffects.current.goodEffect)
+      generatedEffects.current.goodEffect
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -399,11 +443,15 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
-  const getPreviewCode = (generatedEffect?: GeneratedEffect): string => {
+  const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
+    if (!currentGeneratedEffect) {
+      return '';
+    }
+
     const tempWorkspace = new Workspace();
     const previewCode = generatePreviewCode(
       tempWorkspace,
-      JSON.stringify(generatedEffect)
+      currentGeneratedEffect
     );
     tempWorkspace.dispose();
     return previewCode;
@@ -488,37 +536,6 @@ const DanceAiModal: React.FunctionComponent = () => {
   const previewSizeSmall = 90;
 
   const labels = getLabels();
-
-  // Calculates the minimum individual score
-  // (ie, a SINGLE emoji association with a foreground/background palette combination),
-  // and a maximum total score
-  // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
-  // Used to normalize and scale the data for easier differentiation between results by the user.
-  const calculateMinMax = () => {
-    // The minimum individual score is selected across all generated effects (bad and good).
-    const minIndividualScore = Array.from(
-      Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
-    ).reduce((accumulator: number, currentValue: number) => {
-      const scores = getScores(currentValue);
-      const min = Math.min(...scores);
-      return min < accumulator ? min : accumulator;
-    }, Infinity);
-
-    // By definition, the maximum total score must come from the "good" effect.
-    const goodEffectScores = getScores(BAD_GENERATED_RESULTS_COUNT);
-    const maxTotalScore = goodEffectScores.reduce(
-      (sum, score) => (sum += score)
-    );
-
-    return {minIndividualScore, maxTotalScore};
-  };
-
-  if (
-    generatedEffects.current.goodEffect &&
-    generatedEffects.current.badEffects.length === BAD_GENERATED_RESULTS_COUNT
-  ) {
-    minMaxAssociations.current = calculateMinMax();
-  }
 
   const text =
     mode === Mode.SELECT_INPUTS
@@ -694,9 +711,9 @@ const DanceAiModal: React.FunctionComponent = () => {
                       id="block-preview"
                       className={moduleStyles.blockPreview}
                     >
-                      <AiBlockPreview
-                        resultJson={JSON.stringify(currentGeneratedEffect)}
-                      />
+                      {currentGeneratedEffect && (
+                        <AiBlockPreview results={currentGeneratedEffect} />
+                      )}
                     </div>
                   )}
                 </div>
@@ -712,7 +729,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             className={moduleStyles.scoreArea}
           >
             <DanceAiScore
-              scores={getScores(generatingProgress.step)}
+              scores={getScores(inputs, generatingProgress.step)}
               minMax={minMaxAssociations.current}
               colors={
                 generatingProgress.subStep === 1
@@ -754,7 +771,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
                     <DanceAiScore
-                      scores={getScores(index)}
+                      scores={getScores(inputs, index)}
                       minMax={minMaxAssociations.current}
                       colors={
                         index < BAD_GENERATED_RESULTS_COUNT

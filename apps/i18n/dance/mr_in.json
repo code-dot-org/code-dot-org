@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "मागे",
+  "danceAiModalClose": "Band",
+  "danceAiModalCodeButton": "कोड",
+  "danceAiModalExplanationButton": "अधिक जाणून घ्या",
+  "danceAiModalStartOverButton": "पुन्हा सुरू करा",
   "danceFeedbackDidntPress": "तुमचा डान्स सुरू असताना अॅरो की दाबल्याचे सुनिश्चित करा.",
   "danceFeedbackKeepCoding": "कोडींग करणे सुरू ठेवा! काहीतरी अजूनही चुकलेले आहे. ",
   "danceFeedbackKeyEvent": "तुम्ही <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>ब्लॉकला काहीतरी कोड जोडल्याचे सुनिश्चित करा आणि तुमचा डान्स सुरू असताना ती की दाबा.",

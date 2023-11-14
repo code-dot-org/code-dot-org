@@ -34,6 +34,11 @@
           "csleadersprize": {
             "buttonText": "Aprende más"
           },
+          "hoc-2023": {
+            "body": "Súmate a millones de personas en todo el mundo y organiza una hora de programación para aprender cómo funciona la Inteligencia Artificial. Cualquiera, en cualquier lugar puede hacerlo sin necesidad de experiencia previa.",
+            "buttonText": "Aprende más",
+            "title": "Hora del Código: Creatividad con IA"
+          },
           "hoc-more": {
             "body": "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
           },
