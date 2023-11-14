@@ -294,5 +294,6 @@ const getNewFunctionButtonWithCallback = (
     kind: 'button',
     text: msg.createBlocklyFunction(),
     callbackKey,
+    'web-class': 'uitest-create-function-button',
   };
 };

@@ -278,6 +278,14 @@ Then(/^the project matches my memorized code$/) do
   expect(current_block_xml).to eq(memorized_code)
 end
 
+Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
+  script = "
+    $('#{selector}').simulate('pointerdown')
+    $('#{selector}').simulate('pointerup')
+  "
+  @browser.execute_script(script)
+end
+
 def current_block_xml
   @browser.execute_script <<-JS
     return __TestInterface.getBlockXML();
