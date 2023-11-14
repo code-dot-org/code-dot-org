@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Voltar",
+  "danceAiModalClose": "Fechar",
+  "danceAiModalCodeButton": "Código",
+  "danceAiModalExplanationButton": "Saiba mais",
+  "danceAiModalStartOverButton": "Recomeçar",
   "danceFeedbackDidntPress": "Certifique-se de pressionar as teclas de seta enquanto sua dança está em execução.",
   "danceFeedbackKeepCoding": "Continue programando! Algo ainda não está correto.",
   "danceFeedbackKeyEvent": "Certifique-se de anexar algum código ao bloco <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"cima\"</title></block></xml> e pressione a tecla enquanto sua dança estiver rodando.",

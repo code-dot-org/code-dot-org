@@ -1,0 +1,14 @@
+$chart-first: #79dde8;
+$chart-second: #ee8caf;
+$chart-third: #ffde9e;
+$yes-color: #54ec84;
+$no-color: #FF5e5e;
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

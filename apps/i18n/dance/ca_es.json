@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Tornar",
+  "danceAiModalClose": "Tanca",
+  "danceAiModalCodeButton": "Codi",
+  "danceAiModalExplanationButton": "Més informació",
+  "danceAiModalStartOverButton": "Tornar a començar",
   "danceFeedbackDidntPress": "Assegura't de prémer les tecles de fletxa mentre s'executa el ball.",
   "danceFeedbackKeepCoding": "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta.",
   "danceFeedbackKeyEvent": "Assegura't d'enganxar codi al bloc <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"amunt\"</title></block></xml> i de prémer la tecla mentre s'executa el ball.",

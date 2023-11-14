@@ -103,6 +103,27 @@ da:
             MOVES.Roll: Kropsrulning
             MOVES.ThisOrThat: Dette eller denne
         text: "{GROUP} udfør {MOVE} {DIR} forevigt"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': katte
+            '"SLOTH"': plads
+          MOVE:
+            '"next"': "(Næste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfældig)"
+            MOVES.ClapHigh: Højt klap
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Drop: Slip
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Kick: Stjerne
+            MOVES.Rest: Ingen
+            MOVES.Roll: Kropsrulning
+            MOVES.ThisOrThat: Dette eller denne
+        text: "{GROUP} udfør {MOVE} {DIR} forevigt"
       Dancelab_changeMoveLR:
         options:
           MOVE:

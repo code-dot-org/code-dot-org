@@ -2713,7 +2713,8 @@
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Gupitin ang mga block ng direksiyon sa **\\*Mga Manipulative** na gagamitin sa aktibidad ng pagbubuklod ng Mga Maligayang Mapa.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral..",
           "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
-          "student_overview": "I-program si Scrat upang maabot ang acorn."
+          "student_overview": "I-program si Scrat upang maabot ang acorn.",
+          "name": "Pagsunod-sunod kasama ang Scrat"
         },
         "coursea-2021/Programming in Ice Age": {
           "name": "Programming kasama si Scrat",
@@ -2774,7 +2775,8 @@
           "overview": "Sa **proyekto** araling ito, ilalapat ng mga mag-aaral ang kanilang natutunan tungkol sa pagkakasunud-sunod at pag-loop sa Artist.",
           "preparation": "-   Isulat at i-code ang iyong sariling kuwento sa Artist nang maaga upang magbigay ng inspirasyon sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
-          "student_overview": "Magkwento kasama ang Artista!"
+          "student_overview": "Magkwento kasama ang Artista!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "courseb-2021/Digital Trails": {
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLagi bang nananatiling online ang ginagawa mo online? Nalaman ng mga mag-aaral na ang impormasyong ibinabahagi nila online ay nag-iiwan ng digital footprint o \"trail.\" Depende sa kung paano nila ito pinamamahalaan, ang trail na ito ay maaaring malaki o maliit, at nakakapinsala o nakakatulong. Ang mga mag-aaral ay naghahambing ng iba't ibang mga landas at nag-iisip nang kritikal tungkol sa kung anong uri ng impormasyon ang gusto nilang iwan.",
@@ -2861,7 +2863,8 @@
           "overview": "Sa **project** lesson na ito, ilalapat ng mga mag-aaral ang natutunan nila tungkol sa sequencing at mga kaganapan sa open-ended na proyekto sa Play Lab.",
           "preparation": "-   I-code nang maaga ang sarili mong mga proyekto sa Play Lab para magbigay ng inspirasyon sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
-          "student_overview": "Lumikha ng sarili mong kwento o laro."
+          "student_overview": "Lumikha ng sarili mong kwento o laro.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "name": "Paglalagay ng TIGIL sa Online na Kasamaan",
@@ -2970,7 +2973,8 @@
           "overview": "Ang **proyekto** na araling ito ay dadalhin sa mga mag-aaral sa pamamagitan ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto sa Play Lab",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   Suriin ang **\\*Gabay sa Pagpaplano ng Proyekto (Exemplar)** na dokumento.\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursed-2021/lesson-5": {
           "name": "Pagpapalakas ng Password",
@@ -3088,7 +3092,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursee-2021/Simon Says": {
           "name": "Sundin ang Algorithm",
@@ -3212,7 +3217,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang **\\*worksheet ng disenyo ng proyekto** upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
           "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
-          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursef-2021/lesson-6": {
           "name": "Ipinapakilala ang Sprite Lab",
@@ -3309,7 +3315,8 @@
           "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
           "purpose": "Ang konsepto ngayon, sa mga loop, ay napakahalagang paksa sa computer science. Hindi lamang malawak na ginagamit ang mga ito, ang proseso ng pag-aaral sa mga loop ay nagpapahusay sa pagkatuto ng iba pang mahahalagang konsepto (tulad ng mga variable at parameter.) Ang mga mag-aaral ay magkakaroon ng maraming pagsasanay sa kritikal na pag-iisip sa mga problema sa pamamagitan ng pagtukoy sa mga halaga ng panimula, pagtatapos, at hakbang sa bawat isa para sa loop. Gumagamit din ang konseptong ito ng maraming matematika, kaya huwag mag-atubiling ipares ito sa aralin sa matematika sa mas malalim na karanasan sa pag-aaral.",
-          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
+          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!",
+          "name": "Para na mga Loop Kasama ang Bubuyog"
         },
         "coursef-2021/For Loops in Artist": {
           "name": "Mga Loops sa Artist",
@@ -3348,7 +3355,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang rubric upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang worksheet ng disenyo ng proyekto upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
           "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
-          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "express-2021/Programming with Angry Birds": {
           "name": "Pag-Program sa Maze",
@@ -3382,7 +3390,8 @@
           "overview": "Magpo-program ang mga mag-aaral ng simpleng animated na eksena sa ilalim ng dagat sa **aralin sa pagbuo ng kasanayan**.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Ang araling ito ay idinisenyo upang ipakilala sa mga mag-aaral ang pangunahing bokabularyo ng Sprite Lab, at payagan silang ilapat ang mga konseptong natutunan nila sa ibang mga kapaligiran sa tool na ito. Sa pamamagitan ng paglikha ng tangke ng isda, magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
-          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite."
+          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite.",
+          "name": "Paglangoy ng Isda gamit ang Sprite Lab"
         },
         "express-2021/lesson-2": {
           "name": "Paggawa ng mga Sprite",
@@ -3528,7 +3537,8 @@
           "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Ang konsepto ngayon, sa mga loop ay napakahalagang paksa sa computer science. Hindi lamang malawak na ginagamit ang mga ito, ang proseso ng pag-aaral sa mga loop ay nagpapahusay sa pagkatuto ng iba pang mahahalagang konsepto (tulad ng mga variable at parameter.) Ang mga mag-aaral ay magkakaroon ng maraming pagsasanay sa kritikal na pag-iisip sa mga problema sa pamamagitan ng pagtukoy sa mga halaga ng panimula, pagtatapos, at hakbang sa bawat isa para sa loop. Gumagamit din ang konseptong ito ng maraming matematika, kaya huwag mag-atubiling ipares ito sa aralin sa matematika sa mas malalim na karanasan sa pag-aaral.",
-          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
+          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!",
+          "name": "Para na mga Loop Kasama ang Bubuyog"
         },
         "express-2021/For Loops with Artist": {
           "name": "Mga Loops sa Artist",
@@ -3541,7 +3551,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto gamit ang parehong mga tool sa proyekto na magagamit sa mga mag-aaral. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral o grupo.\n-   Baguhin ang **\\*gabay sa pagpaplano ng proyekto** upang magkasya sa klase mo at mag-print ng isa sa bawat mag-aaral o grupo.",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Matutong Mag-Drag at Mag-Drop",
@@ -3554,7 +3565,8 @@
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
-          "student_overview": "I-program si Scrat upang maabot ang acorn."
+          "student_overview": "I-program si Scrat upang maabot ang acorn.",
+          "name": "Pagsunod-sunod kasama ang Scrat"
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "name": "Pag-Program sa Maze",
@@ -3896,7 +3908,8 @@
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Gupitin ang mga block ng direksiyon sa **\\*Mga Manipulative** na gagamitin sa aktibidad ng pagbubuklod ng Mga Maligayang Mapa.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral..",
           "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
-          "student_overview": "I-program si Scrat upang maabot ang acorn."
+          "student_overview": "I-program si Scrat upang maabot ang acorn.",
+          "name": "Pagsunod-sunod kasama ang Scrat"
         },
         "coursea-2022/Programming with Scrat": {
           "name": "Programming kasama si Scrat",
@@ -3957,7 +3970,8 @@
           "overview": "Sa **proyekto** araling ito, ilalapat ng mga mag-aaral ang kanilang natutunan tungkol sa pagkakasunud-sunod at pag-loop sa Artist.",
           "preparation": "-   Isulat at i-code ang iyong sariling kuwento sa Artist nang maaga upang magbigay ng inspirasyon sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
-          "student_overview": "Magkwento kasama ang Artista!"
+          "student_overview": "Magkwento kasama ang Artista!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "courseb-2022/Digital Trails": {
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLagi bang nananatiling online ang ginagawa mo online? Nalaman ng mga mag-aaral na ang impormasyong ibinabahagi nila online ay nag-iiwan ng digital footprint o \"trail.\" Depende sa kung paano nila ito pinamamahalaan, ang trail na ito ay maaaring malaki o maliit, at nakakapinsala o nakakatulong. Ang mga mag-aaral ay naghahambing ng iba't ibang mga landas at nag-iisip nang kritikal tungkol sa kung anong uri ng impormasyon ang gusto nilang iwan.",
@@ -4044,7 +4058,8 @@
           "overview": "Sa **project** lesson na ito, ilalapat ng mga mag-aaral ang natutunan nila tungkol sa sequencing at mga kaganapan sa open-ended na proyekto sa Play Lab.",
           "preparation": "-   I-code nang maaga ang sarili mong mga proyekto sa Play Lab para magbigay ng inspirasyon sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
-          "student_overview": "Lumikha ng sarili mong kwento o laro."
+          "student_overview": "Lumikha ng sarili mong kwento o laro.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
           "name": "Paglalagay ng TIGIL sa Online na Kasamaan",
@@ -4153,7 +4168,8 @@
           "overview": "Ang **proyekto** na araling ito ay dadalhin sa mga mag-aaral sa pamamagitan ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto sa Play Lab",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   Suriin ang **\\*Gabay sa Pagpaplano ng Proyekto (Exemplar)** na dokumento.\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursed-2022/Password Power-Up": {
           "name": "Pagpapalakas ng Password",
@@ -4271,7 +4287,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursee-2022/Be A Super Digital Citizen": {
           "name": "Maging Super Digital na Mamamayan",
@@ -4388,7 +4405,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang **\\*worksheet ng disenyo ng proyekto** upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
           "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
-          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursef-2022/The Power of Words": {
           "name": "Ang Kapangyarihan ng mga Salita",
@@ -4496,7 +4514,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang rubric upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang worksheet ng disenyo ng proyekto upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
           "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
-          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "express-2022/Programming with Angry Birds": {
           "name": "Pag-Program sa Maze",
@@ -4530,7 +4549,8 @@
           "overview": "Magpo-program ang mga mag-aaral ng simpleng animated na eksena sa ilalim ng dagat sa **aralin sa pagbuo ng kasanayan**.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Ang araling ito ay idinisenyo upang ipakilala sa mga mag-aaral ang pangunahing bokabularyo ng Sprite Lab, at payagan silang ilapat ang mga konseptong natutunan nila sa ibang mga kapaligiran sa tool na ito. Sa pamamagitan ng paglikha ng tangke ng isda, magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
-          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite."
+          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite.",
+          "name": "Paglangoy ng Isda gamit ang Sprite Lab"
         },
         "express-2022/Making Sprites": {
           "name": "Paggawa ng mga Sprite",
@@ -4683,7 +4703,8 @@
           "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Ang konsepto ngayon, sa mga loop ay napakahalagang paksa sa computer science. Hindi lamang malawak na ginagamit ang mga ito, ang proseso ng pag-aaral sa mga loop ay nagpapahusay sa pagkatuto ng iba pang mahahalagang konsepto (tulad ng mga variable at parameter.) Ang mga mag-aaral ay magkakaroon ng maraming pagsasanay sa kritikal na pag-iisip sa mga problema sa pamamagitan ng pagtukoy sa mga halaga ng panimula, pagtatapos, at hakbang sa bawat isa para sa loop. Gumagamit din ang konseptong ito ng maraming matematika, kaya huwag mag-atubiling ipares ito sa aralin sa matematika sa mas malalim na karanasan sa pag-aaral.",
-          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
+          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!",
+          "name": "Para na mga Loop Kasama ang Bubuyog"
         },
         "express-2022/For Loops with Artist": {
           "name": "Mga Loops sa Artist",
@@ -4696,7 +4717,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto gamit ang parehong mga tool sa proyekto na magagamit sa mga mag-aaral. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral o grupo.\n-   Baguhin ang **\\*gabay sa pagpaplano ng proyekto** upang magkasya sa klase mo at mag-print ng isa sa bawat mag-aaral o grupo.",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "pre-express-2022/Learn to Drag and Drop": {
           "name": "Matutong Mag-Drag at Mag-Drop",
@@ -4709,7 +4731,8 @@
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
-          "student_overview": "I-program si Scrat upang maabot ang acorn."
+          "student_overview": "I-program si Scrat upang maabot ang acorn.",
+          "name": "Pagsunod-sunod kasama ang Scrat"
         },
         "pre-express-2022/Programming with Angry Birds": {
           "name": "Pag-Program sa Maze",
@@ -5012,7 +5035,8 @@
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Gupitin ang mga block ng direksiyon sa **\\*Mga Manipulative** na gagamitin sa aktibidad ng pagbubuklod ng Mga Maligayang Mapa.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral..",
           "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
-          "student_overview": "I-program si Scrat upang maabot ang acorn."
+          "student_overview": "I-program si Scrat upang maabot ang acorn.",
+          "name": "Pagsunod-sunod kasama ang Scrat"
         },
         "coursea-2023/Programming with Scrat": {
           "name": "Programming kasama si Scrat",
@@ -5073,7 +5097,8 @@
           "overview": "Sa **proyekto** araling ito, ilalapat ng mga mag-aaral ang kanilang natutunan tungkol sa pagkakasunud-sunod at pag-loop sa Artist.",
           "preparation": "-   Isulat at i-code ang iyong sariling kuwento sa Artist nang maaga upang magbigay ng inspirasyon sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
-          "student_overview": "Magkwento kasama ang Artista!"
+          "student_overview": "Magkwento kasama ang Artista!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "courseb-2023/Digital Trails": {
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLagi bang nananatiling online ang ginagawa mo online? Nalaman ng mga mag-aaral na ang impormasyong ibinabahagi nila online ay nag-iiwan ng digital footprint o \"trail.\" Depende sa kung paano nila ito pinamamahalaan, ang trail na ito ay maaaring malaki o maliit, at nakakapinsala o nakakatulong. Ang mga mag-aaral ay naghahambing ng iba't ibang mga landas at nag-iisip nang kritikal tungkol sa kung anong uri ng impormasyon ang gusto nilang iwan.",
@@ -5160,7 +5185,8 @@
           "overview": "Sa **project** lesson na ito, ilalapat ng mga mag-aaral ang natutunan nila tungkol sa sequencing at mga kaganapan sa open-ended na proyekto sa Play Lab.",
           "preparation": "-   I-code nang maaga ang sarili mong mga proyekto sa Play Lab para magbigay ng inspirasyon sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
-          "student_overview": "Lumikha ng sarili mong kwento o laro."
+          "student_overview": "Lumikha ng sarili mong kwento o laro.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursec-2023/Putting a STOP to Online Meanness": {
           "name": "Paglalagay ng TIGIL sa Online na Kasamaan",
@@ -5269,7 +5295,8 @@
           "overview": "Ang **proyekto** na araling ito ay dadalhin sa mga mag-aaral sa pamamagitan ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto sa Play Lab",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   Suriin ang **\\*Gabay sa Pagpaplano ng Proyekto (Exemplar)** na dokumento.\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursed-2023/Password Power-Up": {
           "name": "Pagpapalakas ng Password",
@@ -5387,7 +5414,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursee-2023/Be A Super Digital Citizen": {
           "name": "Maging Super Digital na Mamamayan",
@@ -5504,7 +5532,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang **\\*worksheet ng disenyo ng proyekto** upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
           "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
-          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "coursef-2023/The Power of Words": {
           "name": "Ang Kapangyarihan ng mga Salita",
@@ -5612,7 +5641,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang rubric upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang worksheet ng disenyo ng proyekto upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
           "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
-          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "express-2023/Programming with Angry Birds": {
           "name": "Pag-Program sa Maze",
@@ -5646,7 +5676,8 @@
           "overview": "Magpo-program ang mga mag-aaral ng simpleng animated na eksena sa ilalim ng dagat sa **aralin sa pagbuo ng kasanayan**.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Ang araling ito ay idinisenyo upang ipakilala sa mga mag-aaral ang pangunahing bokabularyo ng Sprite Lab, at payagan silang ilapat ang mga konseptong natutunan nila sa ibang mga kapaligiran sa tool na ito. Sa pamamagitan ng paglikha ng tangke ng isda, magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
-          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite."
+          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite.",
+          "name": "Paglangoy ng Isda gamit ang Sprite Lab"
         },
         "express-2023/Making Sprites": {
           "name": "Paggawa ng mga Sprite",
@@ -5799,7 +5830,8 @@
           "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
           "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Ang konsepto ngayon, sa mga loop ay napakahalagang paksa sa computer science. Hindi lamang malawak na ginagamit ang mga ito, ang proseso ng pag-aaral sa mga loop ay nagpapahusay sa pagkatuto ng iba pang mahahalagang konsepto (tulad ng mga variable at parameter.) Ang mga mag-aaral ay magkakaroon ng maraming pagsasanay sa kritikal na pag-iisip sa mga problema sa pamamagitan ng pagtukoy sa mga halaga ng panimula, pagtatapos, at hakbang sa bawat isa para sa loop. Gumagamit din ang konseptong ito ng maraming matematika, kaya huwag mag-atubiling ipares ito sa aralin sa matematika sa mas malalim na karanasan sa pag-aaral.",
-          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
+          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!",
+          "name": "Para na mga Loop Kasama ang Bubuyog"
         },
         "express-2023/For Loops with Artist": {
           "name": "Mga Loops sa Artist",
@@ -5812,7 +5844,8 @@
           "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
           "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto gamit ang parehong mga tool sa proyekto na magagamit sa mga mag-aaral. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral o grupo.\n-   Baguhin ang **\\*gabay sa pagpaplano ng proyekto** upang magkasya sa klase mo at mag-print ng isa sa bawat mag-aaral o grupo.",
           "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
-          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.",
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "pre-express-2023/Learn to Drag and Drop": {
           "name": "Matutong Mag-Drag at Mag-Drop",
@@ -5825,7 +5858,8 @@
           "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
           "preparation": "-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
           "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
-          "student_overview": "I-program si Scrat upang maabot ang acorn."
+          "student_overview": "I-program si Scrat upang maabot ang acorn.",
+          "name": "Pagsunod-sunod kasama ang Scrat"
         },
         "pre-express-2023/Programming with Angry Birds": {
           "name": "Pag-Program sa Maze",
@@ -6612,6 +6646,78 @@
         },
         "vigenere/Vigenere": {
           "name": "Vigenere"
+        },
+        "courseb-2018/Sequencing with Scrat": {
+          "name": "Pagsunod-sunod kasama ang Scrat"
+        },
+        "coursef-2018/For Loops in Bee": {
+          "name": "Para na mga Loop Kasama ang Bubuyog"
+        },
+        "express-2018/For Loops in Bee": {
+          "name": "Para na mga Loop Kasama ang Bubuyog"
+        },
+        "pre-express-2018/Sequencing with Scrat": {
+          "name": "Pagsunod-sunod kasama ang Scrat"
+        },
+        "coursea-2019/Sequencing with Scrat": {
+          "name": "Pagsunod-sunod kasama ang Scrat"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "coursef-2019/For Loops in Bee": {
+          "name": "Para na mga Loop Kasama ang Bubuyog"
+        },
+        "coursef-2019/End of Course Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "express-2019/For Loops in Bee": {
+          "name": "Para na mga Loop Kasama ang Bubuyog"
+        },
+        "express-2019/Learning Sprites with Sprite Lab": {
+          "name": "Paglangoy ng Isda gamit ang Sprite Lab"
+        },
+        "express-2019/Build A Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "pre-express-2019/Sequencing with Scrat": {
+          "name": "Pagsunod-sunod kasama ang Scrat"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Pagsunud-sunod"
+        },
+        "coursea-2020/Sequencing with Scrat": {
+          "name": "Pagsunod-sunod kasama ang Scrat"
+        },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "coursed-2020/End of Course Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "coursef-2020/For Loops in Bee": {
+          "name": "Para na mga Loop Kasama ang Bubuyog"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "express-2020/For Loops with Bee": {
+          "name": "Para na mga Loop Kasama ang Bubuyog"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "Paglangoy ng Isda gamit ang Sprite Lab"
+        },
+        "express-2020/End of Course Project": {
+          "name": "Proyekto sa Katapusan ng Kurso"
+        },
+        "pre-express-2020/Sequencing with Scrat": {
+          "name": "Pagsunod-sunod kasama ang Scrat"
         }
       }
     }

@@ -32,9 +32,9 @@ module RegistrationsControllerTests
       end
 
       assert_response :unprocessable_entity
-      assert_equal ['Authentication options is invalid', 'Email is invalid'], assigns(:user).errors.full_messages
+      assert_equal ['Authentication options email is invalid', 'Email is invalid'], assigns(:user).errors.full_messages
       assert_equal response.body, {
-        authentication_options: ['Authentication options is invalid'],
+        'authentication_options.email' => ['Authentication options email is invalid'],
         email: ['Email is invalid']
       }.to_json
     end
