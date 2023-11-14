@@ -2829,6 +2829,20 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Стискання без втрат"
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Штучний інтелект (ШІ) "
+        },
+        "code/dance-ai/2023": {
+          "word": "Код",
+          "definition": "писати код або писати інструкції для комп'ютера."
+        },
+        "event/dance-ai/2023": {
+          "word": "Подія",
+          "definition": "Дія, через яку щось відбувається."
+        },
+        "program/dance-ai/2023": {
+          "word": "Програма"
         }
       }
     }

@@ -34,6 +34,11 @@
           "csleadersprize": {
             "buttonText": "Saiba mais"
           },
+          "hoc-2023": {
+            "body": "Junte-se a milhões de pessoas pelo mundo na organização de uma hora de codificação, com ou sem I.A. e aprenda como funciona a I.A. Qualquer pessoa, em qualquer lugar pode participar. Não é preciso ter experiência.",
+            "buttonText": "Saiba mais",
+            "title": "Hour of Code: Criatividade com I.A."
+          },
           "hoc-more": {
             "body": "O site da Hora do Código tem mais de 500 atividades de ciência da computação para todas as idades e níveis de experiência, desenvolvidos pela Code.org e parceiros."
           },

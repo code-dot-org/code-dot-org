@@ -138,6 +138,27 @@ sk:
             MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
         text: "{GROUP} robte {MOVE} \n{DIR} donekonečna"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mačiek
+            '"SLOTH"': leňochodi
+          MOVE:
+            '"next"': "(Ďalší)"
+            '"prev"': "(Predchádzajúci)"
+            '"rand"': "(Náhodný)"
+            MOVES.ClapHigh: Vysoký Tlesk
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Špagát
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: Žiadne
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+        text: "{GROUP} robte {MOVE} \n{DIR} donekonečna"
       Dancelab_changeMoveLR:
         options:
           MOVE:

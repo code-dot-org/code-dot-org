@@ -466,6 +466,7 @@ pl:
         artist:
           description: Rysuj fajne obrazki i wzory z Artystą!
           description_short: Rysuj fajne obrazki i wzory z Artystą!
+          name: artysta
           student_description: Rysuj fajne obrazki i wzory z Artystą!
           title: Artysta
         artistExemplar:
@@ -6632,6 +6633,12 @@ pl:
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij
             ją swoim znajomym.
           title: Potańcówka (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: edycja AI'
+          name: dance-ai-2023
+          title: 'Potańcówka: edycja AI'
         dance-draft:
           title: NIE UŻYWAJ
         dance-extras:
@@ -7886,6 +7893,7 @@ pl:
             z Disney Infinity w rolach głównych.
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
             z Disney Infinity w rolach głównych.
+          name: nieskończoność
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
             z Disney Infinity w rolach głównych.
           title: Disney Infinity Play Lab

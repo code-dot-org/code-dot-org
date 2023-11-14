@@ -126,6 +126,27 @@ ja:
             MOVES.Roll: ボディロール
             MOVES.ThisOrThat: ディス・オア・ザット
         text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': すべてのネコ
+            '"SLOTH"': sloths
+          MOVE:
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
+            '"rand"': "(ランダム)"
+            MOVES.ClapHigh: 手を高く上げてたたく
+            MOVES.Clown: カンナム
+            MOVES.Dab: ダブ
+            MOVES.DoubleJam: ダブルダウン
+            MOVES.Drop: ドロップ
+            MOVES.Floss: フロス
+            MOVES.Fresh: フレッシュ
+            MOVES.Kick: 星
+            MOVES.Rest: 設定なし
+            MOVES.Roll: ボディロール
+            MOVES.ThisOrThat: ディス・オア・ザット
+        text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
       Dancelab_changeMoveLR:
         options:
           MOVE:

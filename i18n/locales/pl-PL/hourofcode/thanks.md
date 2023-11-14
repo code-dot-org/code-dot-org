@@ -1,33 +1,33 @@
 ---
-title: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
+title: Dziękujemy za zapisanie się jako organizator Godziny Kodowania!
 ---
 
-# Dziękujemy za rejestrację jako organizator Godziny Kodowania!
+# Dziękujemy za zapisanie się na Godzinę Kodowania!
 
-<br /> **Godzina Kodowania trwa w trakcie, {{ campaign_date/full }} a my będziemy w kontakcie z nowymi samouczkami i innymi ekscytującymi aktualizacjami, gdy się pojawią. W międzyczasie, co możesz teraz zrobić?**
+<br /> **Twoje wydarzenie jest teraz zarejestrowane. Zgłaszając się na ochotnika do zorganizowania Godziny Kodowania, umożliwiasz większej liczbie uczniów naukę informatyki. Chociaż wydarzenia Godziny Kodowania odbywają się na całym świecie w ramach obchodów Tygodnia Edukacji Informatycznej, możesz zdecydować się na zorganizowanie wydarzenia lub wydarzeń w dowolnym momencie! Oto kilka kroków, aby rozpocząć.**
 
-## 1. Rozpowszechniaj informacje w swojej szkole i społeczności
+## 1. Zaplanuj swoje wydarzenie
 
-Właśnie dołączyłeś do ruchu Godzina Kodowania. Powiedz znajomym z **#HourOfCode**!
+Zacznij od zapoznania się z naszą biblioteką zajęć [Godziny Kodowania](/learn) i przejrzyj ten [przewodnik](/how-to), aby uzyskać pomocne wskazówki, jak znaleźć aktywność, zainspirować uczniów i określić swoje potrzeby technologiczne. Spróbuj [ zanurzyć się w świat sztucznej inteligencji](/ai) - ekscytującej dziedziny technologii, która kształtuje naszą przyszłość. Istnieją różne podejścia do sztucznej inteligencji: postaraj się umożliwić swoim uczniom dowiedzieć się, jak działa sztuczna inteligencja, a nauczycielom naukę dzięki AI 101 dla nauczycieli.
 
-{{ social_media_hoc }} <br /> Zachęcaj innych do udziału [z naszymi przykładowymi mailami.]({{ promote/sample_emails }}) Skontaktuj się z dyrektorem i rzuć wyzwanie każdej klasie w Twojej szkole, aby się zarejestrowała. Rekrutuj lokalną grupę - klub harcerzy chłopców/dziewcząt, kościół, uniwersytet, grupę weteranów, związek zawodowy, a nawet przyjaciół. Nie musisz być w szkole, by poznać nowe umiejętności. Zaproś lokalnego polityka do odwiedzenia Twojej szkoły na Godzinę Kodowania. Może to pomóc w tworzeniu wsparcia dla informatyki w Twojej okolicy poza tą jedną godziną.
+## 1. Rozpowszechniaj tę inicjatywę
 
-Użyj tych [plakatów, banerów, naklejek, filmów i nie tylko]({{ promote/resources }}) dla własnego wydarzenia.
+Potrzebujemy Twojej pomocy, aby zainspirować wolontariuszy i organizatorów z całego świata. Powiedz znajomym o swoim #HourOfCode i [skorzystaj z tych pomocnych zasobów](/resources), aby promować swoje wydarzenie. <br />
 
-## 2. Znajdź lokalnego wolontariusza, by pomógł Ci z tym wydarzeniem
+Możesz także pomóc zaangażować więcej osób ze swojej szkoły i społeczności, [wysyłając nasze przykładowe e-maile](/promote/resources#sample-emails) do dyrektora, lokalnej grupy, a nawet kilku znajomych.
 
-[Przeszukaj naszą mapę wolontariuszy]({{ urls/volunteer_local }}) w poszukiwaniu wolontariuszy, którzy mogą odwiedzić Twoją klasę lub udostępnić zdalnie czat wideo, aby zainspirować uczniów zakresem możliwości informatyki.
+{{ social_media_hoc }}
 
-## 3. Zaplanuj swoją Godzinę Kodowania
+## 3. Znajdź lokalnego wolontariusza, który pomoże Ci w Twoim wydarzeniu
 
-Wybierz ćwiczenie [Godziny Kodowania](https://hourofcode.com/learn) dla swojej klasy i [ zapoznaj się z tym poradnikiem]({{ urls/how_to_guide }}).
+[Przeszukaj naszą mapę wolontariuszy](https://code.org/volunteer/local), aby znaleźć wolontariuszy, którzy mogą zdalnie odwiedzić Twoją klasę lub przeprowadzić czat wideo, aby zainspirować Twoich ucznió o szerokich możliwościach informatyki.
 
-### 4. Zaopatrz się w trofea
+## 4. Sprawdź gadżety Godziny Kodowania
 
-Zamów materiały, które pomogą uczniom podekscytować się Twoim wydarzeniem, udając się do [sklepu Amazon](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220) Code.org. Zamów plakaty, zestawy Godziny Kodowania, naklejki i nie tylko! Ale pospiesz się, zapasy są ograniczone.
+Swag to świetny sposób, aby podekscytować uczniów Godziną Kodowania i nagrodzić ich za ukończenie jej aktywności. Jeśli organizujesz wydarzenie dla całej swojej szkoły, rozważ [udostępnienie planu swojej Godziny Kodowania](https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform), aby otrzymać specjalny zestaw angażujący z koszulkami, plakatami, naklejkami na laptopa i nie tylko. [W sklepie Code.org](https://store.code.org/) możesz zamówić zestawy Godziny Kodowania, zabawne naklejki, przyciski, tymczasowe tatuaże i nie tylko. Ale pospiesz się, zapasy są ograniczone.
 
-# Wyjdź poza Godzinę Kodowania
+## 5. Zachęcaj dzieci do dalszej nauki
 
-{{ go_beyond_hoc }}
+Godzina Kodowania to dopiero początek! W kółko słyszymy, jak bardzo uczniowie kochają Godzinę Kodowania i odkrywają odkrywaj nowe zainteresowania informatyką. Zachęcaj ich do dalszej nauki. Niezależnie od tego, czy jesteś administratorem, nauczycielem czy tylko zachęcasz, oferujemy profesjonalną naukę, bezpłatny program nauczania w klasie i plany lekcji oraz zasoby, które pomogą Ci [wprowadzić zajęcia z informatyki do Twojej szkoły](https://code.org/teach) lub poszerzyć swoją ofertę.
 
-{{ popup_window.js }}
+Wiele organizacji oferujących działania na Hourofcode.com ma również dostępny program nauczania i rozwój zawodowy. Wyróżniliśmy dostawców programów nauczania, którzy mogą pomóc Tobie lub Twoim uczniom [wyjść poza godzinę](/beyond).
