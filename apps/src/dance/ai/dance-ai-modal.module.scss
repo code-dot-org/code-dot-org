@@ -136,6 +136,9 @@ $ai-modal-border-width: 8px;
       span {
         button {
           &:focus-visible {
+            // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
+            // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
+            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability - we'll simply use SegmentedButton here
             outline: 2px solid $light_primary_500 !important;
           }
         }
@@ -398,6 +401,11 @@ $ai-modal-border-width: 8px;
       width: 30%;
       display: flex;
       justify-content: flex-end;
+
+      html[dir="rtl"] & {
+        right: initial;
+        left: 10px;
+      }
     }
   }
 
