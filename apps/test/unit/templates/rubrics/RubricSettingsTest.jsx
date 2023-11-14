@@ -128,7 +128,6 @@ describe('RubricSettings', () => {
         attempted: true,
         lastAttemptEvaluated: false,
         csrfToken: 'abcdef',
-        evaluationPending: true,
         status: RubricAiEvaluationStatus.QUEUED,
       };
       fetchStub
@@ -139,7 +138,6 @@ describe('RubricSettings', () => {
         attempted: true,
         lastAttemptEvaluated: false,
         csrfToken: 'abcdef',
-        evaluationPending: true,
         status: RubricAiEvaluationStatus.RUNNING,
       };
       fetchStub
@@ -181,6 +179,7 @@ describe('RubricSettings', () => {
       await act(async () => {
         await Promise.resolve();
       });
+      wrapper.update();
       expect(wrapper.find('Button').props().disabled).to.be.true;
       expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
 

@@ -24,9 +24,13 @@ const STATUS = {
   EVALUATION_PENDING: 'evaluation_pending',
   // evaluation currently in progress
   EVALUATION_RUNNING: 'evaluation_running',
+  // evaluation successfully completed
   SUCCESS: 'success',
+  // general evaluation error
   ERROR: 'error',
+  // personal identifying info present in code
   PII_ERROR: 'pii_error',
+  // profanity present in code
   PROFANITY_ERROR: 'profanity_error',
 };
 
@@ -45,7 +49,12 @@ export default function RubricSettings({
 }) {
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
-  const polling = useMemo(() => status === STATUS.EVALUATION_PENDING, [status]);
+  const polling = useMemo(
+    () =>
+      status === STATUS.EVALUATION_PENDING ||
+      status === STATUS.EVALUATION_RUNNING,
+    [status]
+  );
 
   const statusText = () => {
     switch (status) {
@@ -85,6 +94,8 @@ export default function RubricSettings({
               setStatus(STATUS.ALREADY_EVALUATED);
             } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
               setStatus(STATUS.EVALUATION_PENDING);
+            } else if (data.status === RubricAiEvaluationStatus.RUNNING) {
+              setStatus(STATUS.EVALUATION_RUNNING);
             } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
               setStatus(STATUS.ERROR);
             } else if (data.status === RubricAiEvaluationStatus.PII_VIOLATION) {
@@ -121,6 +132,8 @@ export default function RubricSettings({
                 refreshAiEvaluations();
               } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
                 setStatus(STATUS.EVALUATION_PENDING);
+              } else if (data.status === RubricAiEvaluationStatus.RUNNING) {
+                setStatus(STATUS.EVALUATION_RUNNING);
               } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
                 setStatus(STATUS.ERROR);
               } else if (
@@ -181,9 +194,7 @@ export default function RubricSettings({
             style={{margin: 0}}
             disabled={status !== STATUS.READY}
           >
-            {status === STATUS.EVALUATION_PENDING && (
-              <i className="fa fa-spinner fa-spin" />
-            )}
+            {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
           {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
         </div>
