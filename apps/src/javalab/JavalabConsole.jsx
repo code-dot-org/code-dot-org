@@ -9,7 +9,6 @@ import {
   clearConsoleLogs,
   closePhotoPrompter,
 } from './redux/consoleRedux';
-import {setHasCompilationError} from './redux/editorRedux';
 import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
@@ -63,40 +62,9 @@ class JavalabConsole extends React.Component {
     commandHistory: new CommandHistory(),
   };
 
-  hasCompilationError = log => {
-    return log.text && log.text.includes(javalabMsg.compilerError());
-  };
-
-  hasCompilationSucces = log => {
-    return log.text && log.text.includes(javalabMsg.compilationSuccess());
-  };
-
-  checkForCompilationError = consoleLogs => {
-    const {setHasCompilationError} = this.props;
-    const logsSortedByRecency = consoleLogs.slice().reverse();
-    const indexOfMostRecentError = logsSortedByRecency.findIndex(
-      this.hasCompilationError
-    );
-    if (indexOfMostRecentError !== -1) {
-      const logsAfterError = logsSortedByRecency.slice(
-        0,
-        indexOfMostRecentError
-      );
-      const hasUnresolvedError = !logsAfterError.find(
-        this.hasCompilationSucces
-      );
-      setHasCompilationError(hasUnresolvedError);
-    } else {
-      setHasCompilationError(false);
-    }
-  };
-
   componentDidUpdate(prevProps) {
     const prevConsoleLogs = prevProps.consoleLogs;
     const consoleLogs = this.props.consoleLogs;
-    if (prevConsoleLogs !== consoleLogs) {
-      this.checkForCompilationError(consoleLogs);
-    }
     const prevLogsLength = prevConsoleLogs.length;
     if (
       typeof prevLogsLength === 'number' &&
@@ -318,8 +286,6 @@ export default connect(
     appendInputLog: log => dispatch(appendInputLog(log)),
     clearConsoleLogs: () => dispatch(clearConsoleLogs()),
     closePhotoPrompter: () => dispatch(closePhotoPrompter()),
-    setHasCompilationError: hasCompilationError =>
-      dispatch(setHasCompilationError(hasCompilationError)),
   })
 )(JavalabConsole);
 
