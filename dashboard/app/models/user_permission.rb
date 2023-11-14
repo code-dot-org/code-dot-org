@@ -54,8 +54,6 @@ class UserPermission < ApplicationRecord
     AUTHORIZED_TEACHER,
   ].freeze
 
-  ASSIGNABLE_PERMISSIONS = (VALID_PERMISSIONS).freeze
-
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
 
   after_save :log_permission_save
