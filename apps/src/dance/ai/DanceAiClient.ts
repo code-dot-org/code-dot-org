@@ -42,11 +42,7 @@ export function chooseEffects(
     [FieldKey.FOREGROUND_EFFECT]: '',
     [FieldKey.BACKGROUND_PALETTE]: '',
   };
-  for (const field of [
-    FieldKey.BACKGROUND_EFFECT,
-    FieldKey.FOREGROUND_EFFECT,
-    FieldKey.BACKGROUND_PALETTE,
-  ]) {
+  for (const field of Object.keys(chosenEffects) as FieldKey[]) {
     const mapping = cachedWeightsMappings[field];
     // Get final output summed weights based on set of three selected emoji inputs
     const weightVector = calculateOutputSummedWeights(selectedEmojis, mapping);
