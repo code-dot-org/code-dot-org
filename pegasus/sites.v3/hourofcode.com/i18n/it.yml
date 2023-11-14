@@ -14505,7 +14505,7 @@ it:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: 'Avventurati nel tempo per creare le tue invenzioni basate sull'IA nella nuova Ora del Codice: Generazione IA di Minecraft. Sviluppa problem solving, creatività e pensiero computazionale nell'ambito dell'IA responsabile. L'Ora del Codice, con blocchi o Python, insegna le basi della programmazione per costruire un'IA migliore per tutti.'
+  tutorial_generationai_longdescription: "Avventurati nel tempo per creare le tue invenzioni basate sull'IA nella nuova Ora del Codice: Generazione IA di Minecraft. Sviluppa problem solving, creatività e pensiero computazionale nell'ambito dell'IA responsabile. L'Ora del Codice, con blocchi o Python, insegna le basi della programmazione per costruire un'IA migliore per tutti."
   tutorial_bsimage_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bscomputing_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_stackpython_string_detail_grades: Gradi 6+ (11 e superiori)
