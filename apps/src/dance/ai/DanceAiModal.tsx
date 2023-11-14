@@ -848,13 +848,9 @@ const DanceAiModal: React.FunctionComponent = () => {
                 onClick={handleRegenerateClick}
                 color={Button.ButtonColor.neutralDark}
                 className={classNames(moduleStyles.button)}
+                icon={'refresh'}
               >
-                <i
-                  className={classNames(
-                    'fa fa-refresh',
-                    moduleStyles.buttonIcon
-                  )}
-                />
+                {' '}
                 {i18n.danceAiModalRegenerateButton()}
               </Button>
             )}
