@@ -42,7 +42,7 @@ export function chooseEffects(
     [FieldKey.FOREGROUND_EFFECT]: '',
     [FieldKey.BACKGROUND_PALETTE]: '',
   };
-  for (const field of Object.keys(chosenEffects) as FieldKey[]) {
+  for (const field of Object.values(FieldKey)) {
     const mapping = cachedWeightsMappings[field];
     // Get final output summed weights based on set of three selected emoji inputs
     const weightVector = calculateOutputSummedWeights(selectedEmojis, mapping);
@@ -69,11 +69,7 @@ export function getGeneratedEffectScores(
   // Determine the contribution of each input emoji.
   const scores = emojis.map(emoji => {
     let sum = 0;
-    for (const field of [
-      FieldKey.BACKGROUND_EFFECT,
-      FieldKey.FOREGROUND_EFFECT,
-      FieldKey.BACKGROUND_PALETTE,
-    ]) {
+    for (const field of Object.values(FieldKey)) {
       const mapping = cachedWeightsMappings[field];
       sum +=
         mapping['emojiAssociations'][emoji][
