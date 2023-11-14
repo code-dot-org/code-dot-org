@@ -1,6 +1,46 @@
-@no_mobile
 @single_session
 Feature: Hamburger dropdown
+
+  @eyes_mobile
+  Scenario: Signed-out user sees the hamburger on mobile
+    Given I am on "http://code.org/"
+    And I open my eyes to test "Hamburger Menu in English Signed-out"
+    Then I wait until element "#hamburger" is visible
+    And I click selector "#hamburger"
+    And I see no difference for "Hamburger Menu: English Signed-out"
+    And I close my eyes
+
+  @eyes
+  @eyes_mobile
+  Scenario: Student user sees the hamburger dropdown
+    Given I create a student named "Sally Student" and go home
+    And I open my eyes to test "Hamburger Menu in English Student"
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
+    And I see no difference for "Hamburger Menu: English Student"
+    And I close my eyes
+
+  @eyes
+  @eyes_mobile
+  Scenario: Student user sees the Teach dropdown in hamburger
+    Given I create a student named "Sally Student" and go home
+    And I open my eyes to test "Teach dropdown in English Student"
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
+    Then I wait until element "#educate_entries" is visible
+    And I click selector "#educate_entries"
+    And I see no difference for "Teach Entries Hamburger Menu: English Student"
+    Then I wait until element "#educate_entries" is visible
+    And I click selector "#educate_entries"
+    Then I wait until element "#about_entries" is visible
+    And I click selector "#about_entries"
+    And I see no difference for "About Entries Hamburger Menu: English Student"
+    And I click selector "#about_entries"
+    Then I wait until element "#legal_entries" is visible
+    And I click selector "#legal_entries"
+    And I see no difference for "Legal Entries Hamburger Menu: English Student"
+    And I close my eyes
+
 
   Scenario: Signed out user in English should not see hamburger on desktop
     Given I am on "http://code.org/"
