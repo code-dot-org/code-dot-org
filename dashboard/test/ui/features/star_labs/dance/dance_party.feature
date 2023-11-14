@@ -71,6 +71,9 @@ Feature: Dance Party
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
 
+    # TODO: Fix flakiness. This test should assert that number of sprites is === to 10, not >= 10.
+    # Bug: In some automated tests, this nondeterministicaly displays doubles of the sprites. This
+    # Does not repro outside of automated testing.
     Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length >= 10"
 
     Then I click selector "#resetButton" once I see it
