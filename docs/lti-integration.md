@@ -127,7 +127,9 @@ Here are the values to enter in the associated text input fields:
 1. OpenID Connect Initiation URL: `https://studio.code.org/lti/v1/login`
 1. JWK Method - Public JWK URL: `https://studio.code.org/oauth/jwks`
 1. LTI Advantage Services: Enable all
-1. Placements: Select the placements where you want Code.org LTI Tool to be available
+1. Placements: Select the placements where you want Code.org LTI Tool to be 
+available. NOTE: Code.org currently only supports `LtiResourceLinkRequest`. Do not
+select any placements that utilize an `LtiDeepLinkRequest`.
 1. Additional Settings - Custom Fields:
    ```
    email=$Person.email.primary
@@ -143,13 +145,18 @@ Here are the values to enter in the associated text input fields:
 #### Deployment ID
 
 Now that you have the LTI Key, you need to configure the Code.org LTI App to
-generate a Deployment ID. Please reference [these instructions][configure-canvas]
-for generating a Deployment ID.
+generate a Deployment ID. Before you navigate away from the Developer Keys page,
+make sure to copy your Client ID to your clipboard. You'll need that in the next
+step.
+
+Once you have the Client ID copied, please reference
+[these instructions][configure-canvas] for generating a Deployment ID.
 
 ### Step 4
 
-Once you have both the Client ID and the Deployment ID, provide them to Code.org
-through TODO: How will they supply these values?
+Once you have both the Client ID and the Deployment ID, provide them to Code.org.
+
+TODO: How will they supply them to us?
 
 ## Using Code.org as an LTI Tool
 
