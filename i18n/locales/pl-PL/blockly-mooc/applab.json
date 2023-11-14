@@ -456,6 +456,8 @@
   "foundDevices": "Nie znaleziono urządzenia użytkowego na porcie szeregowym.\n\nZnalezione urządzenia: {deviceList}",
   "legacy": "(Dziedzictwo)",
   "makeMyOwnApp": "Utwórz własną aplikację",
+  "makerCheckPluggedIn": "Upewnij się, że płyta jest podłączona.",
+  "makerSupportedBrowsers": "Przeglądarka Chrome lub Edge.",
   "makerLevelRequires": "Ten poziom wymaga użycia",
   "makerSetupAppInstalled": "Zainstalowana aplikacja Chrome",
   "makerSetupBrowserTitle": "Przeglądarka Code.org",

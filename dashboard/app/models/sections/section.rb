@@ -67,6 +67,7 @@ class Section < ApplicationRecord
   has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
+  has_one :lti_section, dependent: :destroy
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -316,6 +317,7 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
+    return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
     return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
@@ -625,6 +627,8 @@ class Section < ApplicationRecord
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
       raise ArgumentError.new('already invited')
+    elsif pl_section? && students.exists?(email: instructor.email)
+      raise ArgumentError.new('already a student')
     end
   end
 end

@@ -1769,6 +1769,26 @@
           "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
           "sign_in_to_save_project": "Хочете отримати доступ до вашого проєкту пізніше? Увійдіть, щоб зберегти проєкт у своєму обліковому записі!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Використай цей блок.",
+          "dance_callout_02": "Додай сюди блок генерування ефекту ШІ."
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Використай цей блок.",
+          "dance_callout_02": "Додай виконати танцювальний рух."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Клацни тут."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Починай тут."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Використай цей блок. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Використай цей блок."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
           "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."

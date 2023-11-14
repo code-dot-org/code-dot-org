@@ -23,6 +23,7 @@ describe('Enroll Form', () => {
   });
 
   const props = {
+    user_id: 1,
     workshop_id: 1,
     first_name: 'Rubeus',
     email: 'rhagrid@hogwarts.edu',
@@ -40,6 +41,7 @@ describe('Enroll Form', () => {
   };
 
   const baseParams = {
+    user_id: 1,
     first_name: 'Rubeus',
     last_name: 'Hagrid',
     email: props.email,
@@ -80,6 +82,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
@@ -129,6 +132,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_101}
@@ -172,6 +176,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_DISTRICT}
@@ -219,6 +224,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_201}
@@ -260,6 +266,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           first_name={props.first_name}
@@ -300,6 +307,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           first_name={props.first_name}
@@ -338,6 +346,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           workshop_subject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
@@ -393,6 +402,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="Admin/Counselor Workshop"
           first_name={props.first_name}
@@ -437,6 +447,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
@@ -506,6 +517,7 @@ describe('Enroll Form', () => {
       // prop but never an email prop, which caused a bug in the past.
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           first_name={'Student'}
           email={''}

@@ -103,6 +103,27 @@ ga:
             MOVES.Kick: Réalta
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
+      Dancelab_changeMoveEachLR_slothcat:
+        text: déanadh gach {GROUP} {MOVE} {DIR} go brách
+        options:
+          GROUP:
+            '"CAT"': cat
+            '"SLOTH"': spadán
+          MOVE:
+            MOVES.Roll: Tonn Choirp
+            MOVES.ClapHigh: Bualadh Bos Ard
+            MOVES.Dab: Daba
+            MOVES.DoubleJam: Dúbailt Síos
+            MOVES.Drop: Titim
+            MOVES.Floss: Flas
+            MOVES.Fresh: Úr
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Réalta
+            MOVES.ThisOrThat: Seo nó Siúd
+            MOVES.Rest: Dada
+            '"next"': "(Ar Aghaidh)"
+            '"prev"': "(Siar)"
+            '"rand"': "(Randamach)"
       Dancelab_changeMoveLR:
         text: déanadh {SPRITE} {MOVE} {DIR} go brách
         options:
@@ -563,8 +584,8 @@ ga:
           EFFECT:
             '"none"': Dada
             '"rand"': "(Randamach)"
-            '"circles"': Ciorcail
             '"quads"': Uillinneacha
+            '"circles"': Ciorcail
             '"color_cycle"': Dathanna
             '"diamonds"': Diamaint
             '"disco_ball"': Liathróid Dioscó
@@ -580,11 +601,11 @@ ga:
             '"ripples"': Tonnáin
             '"snowflakes"': Sneachta
             '"text"': Ainmneacha Amhráin
-            '"squiggles"': Caisirníní
             '"galaxy"': An Spás
             '"sparkles"': Drithlí
             '"spiral"': Bís
             '"disco"': Cearnóga
+            '"squiggles"': Caisirníní
             '"starburst"': Pléascadh Réaltaí
             '"stars"': Réaltaí
             '"music_wave"': Tonnta

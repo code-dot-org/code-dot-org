@@ -81,7 +81,7 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 - Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your at-home Hour of Code on social media. Erabili #HourOfCode eta @codeorg guk nabarmentzeko zure arrakasta, ere!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

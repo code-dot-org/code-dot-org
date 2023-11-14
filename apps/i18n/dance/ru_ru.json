@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Назад",
+  "danceAiModalClose": "Закрыть",
+  "danceAiModalCodeButton": "Код",
+  "danceAiModalExplanationButton": "Узнать больше",
+  "danceAiModalStartOverButton": "Начать с начала",
   "danceFeedbackDidntPress": "Не забудьте нажимать на клавиши со стрелками, пока танец продолжается.",
   "danceFeedbackKeepCoding": "Ты используешь все необходимые виды блоков, но неправильным способом.",
   "danceFeedbackKeyEvent": "Не забудьте присвоить блоку какой-либо код <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> и нажимать на клавишу, пока танец продолжается.",

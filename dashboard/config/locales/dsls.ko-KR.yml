@@ -7005,7 +7005,7 @@ ko-KR:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_EOC2022:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합 프로젝트
       courseD_EOC2022_2023:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트

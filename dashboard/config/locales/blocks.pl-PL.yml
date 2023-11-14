@@ -154,6 +154,30 @@ pl:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
         text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            '1': "→"
+          GROUP:
+            '"CAT"': koty
+            '"SLOTH"': leniuchy
+          MOVE:
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
+            MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+        text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
       Dancelab_changeMoveLR:
         options:
           DIR:

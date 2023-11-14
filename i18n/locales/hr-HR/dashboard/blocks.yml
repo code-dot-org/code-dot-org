@@ -34,6 +34,10 @@ hr:
             '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mačke
       Dancelab_changePropBy:
         options:
           PROPERTY:

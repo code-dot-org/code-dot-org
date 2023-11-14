@@ -2231,6 +2231,17 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressão sem perdas"
+        },
+        "code/dance-ai/2023": {
+          "word": "Código",
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "event/dance-ai/2023": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programa"
         }
       }
     }

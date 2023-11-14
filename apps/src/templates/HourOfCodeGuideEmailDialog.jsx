@@ -9,10 +9,15 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
 import experiments from '@cdo/apps/util/experiments';
 import style from './hoc-guide-dialogue.module.scss';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
-function HourOfCodeGuideEmailDialog({isSignedIn}) {
+function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isOpen, setIsOpen] = useState(true);
   const [isMarketingChecked, setIsMarketingChecked] = useState(false);
+  const [isSendInProgress, setIsSendInProgress] = useState(false);
+  const [isShowSuccess, setIsShowSuccess] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const onClose = () => {
     cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
@@ -27,10 +32,47 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
       isSignedIn: isSignedIn,
     });
     // TODO: send email to stored address here
+    setIsShowSuccess(true);
+    if (isShowSuccess) {
+      alert(i18n.emailRequestSubmitted());
+    }
   };
 
-  const saveInputs = () => {
-    // TODO: store name and email here
+  const validateAndSave = () => {
+    if (!isEmail(email)) {
+      alert(i18n.censusInvalidEmail());
+      return;
+    }
+    if (!name) {
+      alert(i18n.censusRequired());
+      return;
+    }
+    setIsSendInProgress(true);
+    const potential_teacher_data = {
+      name: name,
+      email: email,
+      receives_marketing: isMarketingChecked,
+      script_id: unitId,
+    };
+    fetch('/potential_teachers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(potential_teacher_data),
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(() => {
+        sendEmail();
+        onClose();
+      })
+      .catch(err => {
+        setIsSendInProgress(false);
+        alert(i18n.unexpectedError());
+        console.error(err);
+      });
   };
 
   const bodyText = isSignedIn
@@ -56,23 +98,25 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
             <Heading3>{i18n.learnHowToHost()}</Heading3>
             {bodyText}
             <label className={style.typographyLabel}>
-              {i18n.yourNameCaps()}
+              {i18n.yourNameCaps() + '*'}
               <input
                 required
                 type="text"
                 id="uitest-hoc-guide-name"
                 className={style.classNameTextField}
-                onChange={() => {}}
+                value={name}
+                onChange={e => setName(e.target.value)}
               />
             </label>
             <label className={style.typographyLabel}>
-              {i18n.yourEmailCaps()}
+              {i18n.yourEmailCaps() + '*'}
               <input
                 required
                 type="text"
                 id="uitest-hoc-guide-email"
                 className={style.classNameTextField}
-                onChange={() => {}}
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
             </label>
             <label className={style.label}>
@@ -92,19 +136,13 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
             <Button
               id="uitest-no-email-guide"
               text={continueWithoutEmailButtonText}
-              onClick={() => {
-                onClose();
-              }}
+              onClick={onClose}
               color={Button.ButtonColor.white}
             />
             <Button
               id="uitest-email-guide"
-              text={emailGuideButtonText}
-              onClick={() => {
-                saveInputs();
-                sendEmail();
-                onClose();
-              }}
+              text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
+              onClick={validateAndSave}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
@@ -116,6 +154,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn}) {
 
 HourOfCodeGuideEmailDialog.propTypes = {
   isSignedIn: PropTypes.bool.isRequired,
+  unitId: PropTypes.number.isRequired,
 };
 
 export const UnconnectedHourOfCodeGuideEmailDialog = HourOfCodeGuideEmailDialog;
