@@ -34,6 +34,11 @@
           "csleadersprize": {
             "buttonText": "Daha fazlasını öğren"
           },
+          "hoc-2023": {
+            "body": "Yapay zeka ile veya yapay zeka olmadan bir saatlik kodlama düzenlemek ve yapay zekanın nasıl çalıştığını öğrenmek için dünya çapındaki milyonlara katılın. Herkes, her yerde bunu yapabilir. Deneyime gerek yok.",
+            "buttonText": "Daha fazlasını öğren",
+            "title": "Hour of Code: Yapay Zeka ile Yaratıcılık"
+          },
           "hoc-more": {
             "body": "Kodlama Saati internet sitesi Code.org ve iş ortakları tarafından geliştirilen her yaşa ve deneyim seviyesine uygun 100’den fazla bilgisayar bilimi faaliyeti içerir."
           },

@@ -103,6 +103,27 @@ ga:
             MOVES.Roll: Tonn Choirp
             MOVES.ThisOrThat: Seo nó Siúd
         text: déanadh gach {GROUP} {MOVE} {DIR} go brách
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': cat
+            '"SLOTH"': spadán
+          MOVE:
+            '"next"': "(Ar Aghaidh)"
+            '"prev"': "(Siar)"
+            '"rand"': "(Randamach)"
+            MOVES.ClapHigh: Bualadh Bos Ard
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Daba
+            MOVES.DoubleJam: Dúbailt Síos
+            MOVES.Drop: Titim
+            MOVES.Floss: Flas
+            MOVES.Fresh: Úr
+            MOVES.Kick: Réalta
+            MOVES.Rest: Dada
+            MOVES.Roll: Tonn Choirp
+            MOVES.ThisOrThat: Seo nó Siúd
+        text: déanadh gach {GROUP} {MOVE} {DIR} go brách
       Dancelab_changeMoveLR:
         options:
           MOVE:

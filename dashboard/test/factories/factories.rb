@@ -64,10 +64,11 @@ FactoryBot.define do
       min_user_id {0}
       max_user_id {0}
       overflow_max_user_id {0}
-      script {nil}
+      script
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
       section
+      script
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
     end
@@ -1774,6 +1775,12 @@ FactoryBot.define do
     resource_link_id {"resource_link_id"}
   end
 
+  factory :lti_section do
+    lti_course {create :lti_course}
+    section {create :section}
+    lms_section_id {SecureRandom.uuid}
+  end
+
   factory :parental_permission_request do
     user {create :young_student, :without_parent_permission}
     parent_email {"contact@example.domain"}
@@ -1878,7 +1885,7 @@ FactoryBot.define do
   end
 
   factory :potential_teacher do
-    association :source_course_offering
+    association :script
     name {"foosbars"}
     email {"foobar@example.com"}
     receives_marketing {true}

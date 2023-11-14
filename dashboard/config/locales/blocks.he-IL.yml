@@ -108,6 +108,28 @@ he:
             MOVES.ThisOrThat: כך וכך
             MOVES.Thriller: זומבי
         text: "{GROUP} עושים {MOVE} {DIR} לנצח"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': חתולים
+            '"SLOTH"': עצלנים
+          MOVE:
+            '"next"': "(הבא)"
+            '"prev"': "(קודם)"
+            '"rand"': "(אקראי)"
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Clown: גאנגם
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Kick: כוכב
+            MOVES.Rest: כלום
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ThisOrThat: כך וכך
+            MOVES.Thriller: זומבי
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
       Dancelab_changeMoveLR:
         options:
           MOVE:

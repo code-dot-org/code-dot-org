@@ -74,6 +74,11 @@
       box-sizing: border-box;
       overflow: hidden;
 
+      html[dir="rtl"] & {
+        left: initial;
+        right: 50px;
+      }
+
       .resultContent {
         animation: appear 0.3s;
         margin-top: -1px;
@@ -96,6 +101,11 @@
       height: 2px;
       width: 50px;
       left: 0;
+
+      html[dir="rtl"] & {
+        left: initial;
+        right: 0;
+      }
 
       &NormalNo {
         width: 40px;

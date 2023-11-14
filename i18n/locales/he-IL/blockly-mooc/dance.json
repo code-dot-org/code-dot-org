@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "קוד",
+  "danceAiModalStartOverButton": "להתחיל מחדש",
+  "danceAiModalExplanationButton": "למד עוד",
+  "danceAiModalBack": "חזור",
+  "danceAiModalClose": "סגור",
   "danceFeedbackDidntPress": "ודאו שאתם לוחצים על מקשי החצים בזמן שהריקוד שלכם מתבצע.",
+  "danceFeedbackKeepCoding": "השתמשתם בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון.",
   "danceFeedbackKeyEvent": "ודאו שאתם מוסיפים את הקוד לבלוק\n <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"למעלה\"</title></block></xml>\nולוחצים על המקש בזמן שהריקוד שלכם מתבצע.",
   "danceFeedbackNeedBackup": "עליכם ליצור קבוצה של רקדני ליווי עם הבלוק\n<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"חדי קרן\"</title><title name=\"LAYOUT\">\"עיגול\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש בצעד ריקוד אחר.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "השתמשו בבלוק 'שנה גודל backup_dancer2' כדי להקטין את הרקדן.",
   "danceFeedbackUseSetTint": "השתמשו בבלוק \"הגדר גוון\" כדי לשנות את הגוון של הרקדן.",
   "danceFeedbackUseStartMapping": "נסו להוסיף בלוק \n<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">גודל</title><title name=\"RANGE\">באס</title></block></xml> \nלתוכנית שלכם.",
-  "danceFeedbackKeepCoding": "השתמשתם בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון.",
   "measure": "תיבה:"
 }

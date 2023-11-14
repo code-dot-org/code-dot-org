@@ -34,6 +34,10 @@ hr:
             '"CAT"': mačke
             '"DOG"': psi
             sprites: sve
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mačke
       Dancelab_changePropBy:
         options:
           PROPERTY:
