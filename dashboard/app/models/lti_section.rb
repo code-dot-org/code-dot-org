@@ -5,7 +5,6 @@
 #  id             :bigint           not null, primary key
 #  lti_course_id  :bigint           not null
 #  section_id     :integer          not null
-#  name           :string(255)
 #  lms_section_id :string(255)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
