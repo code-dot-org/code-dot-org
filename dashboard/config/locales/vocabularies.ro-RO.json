@@ -2283,6 +2283,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compresie fără pierderi",
           "definition": "un algoritm de comprimare a datelor care permite ca datele originale să fie reconstruite perfect din datele comprimate. Cel mai frecvent utilizat pentru compresia textului (de exemplu, compresia .zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Cod",
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
+        },
+        "event/dance-ai/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

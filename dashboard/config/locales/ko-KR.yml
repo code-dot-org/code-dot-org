@@ -621,6 +621,7 @@ ko:
       받으십시오!"
   parent_mailer:
     parent_email_added_subject: Code.org에 오신 것을 환영합니다!
+    parent_permission_request_subject: 아이가 Code.org에 접속하기 위해선 보호자의 동의가 필요합니다.
     student_associated_subject: Code.org 로그인 정보
   password:
     change_form:
@@ -1017,6 +1018,8 @@ ko:
     teacher_educator_guide: 교육자 가이드
     title: Code.org 가입
     us_state: 주
+    us_state_dropdown_options:
+      other: 이 목록에 없는 곳에 살고 있습니다
     user_type: 학생 또는 선생님이신가요?
     user_type_button: 계정 유형 업데이트
     user_type_label: 계정 유형

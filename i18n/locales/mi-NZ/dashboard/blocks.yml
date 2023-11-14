@@ -103,6 +103,27 @@ mi:
             MOVES.Kick: Te Whetū
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} māhia {MOVE} {DIR} mo ake tonu atu"
+        options:
+          GROUP:
+            '"CAT"': ngā ngeru
+            '"SLOTH"': kararehe māngere
+          MOVE:
+            MOVES.Roll: Ngaru Tinana
+            MOVES.ClapHigh: Paki ki runga
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Rua Rua
+            MOVES.Drop: Taka Iho
+            MOVES.Floss: Floss
+            MOVES.Fresh: Hou
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Te Whetū
+            MOVES.ThisOrThat: Tēnei Tēnā
+            MOVES.Rest: Kore
+            '"next"': "(Kōkiri)"
+            '"prev"': "(tōmua)"
+            '"rand"': "(Poka noa)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} māhia {MOVE} {DIR} mo ake tonu atu"
         options:
@@ -560,8 +581,8 @@ mi:
           EFFECT:
             '"none"': Kore
             '"rand"': "(Poka noa)"
-            '"circles"': Porowhita
             '"quads"': Ngā Anahera
+            '"circles"': Porowhita
             '"color_cycle"': Tae
             '"diamonds"': Taimona
             '"disco_ball"': Pōro Whakaata
@@ -577,11 +598,11 @@ mi:
             '"ripples"': Ngā Pungarungaru
             '"snowflakes"': Hukapapa
             '"text"': Ingoa Waiata
-            '"squiggles"': Ngā Koropikopiko
             '"galaxy"': Tuarangi
             '"sparkles"': Wherokiroki
             '"spiral"': Koropikopiko
             '"disco"': Tapawha
+            '"squiggles"': Ngā Koropikopiko
             '"starburst"': Pāpahu Whetū
             '"stars"': Ngā Whetū
             '"music_wave"': Ngaru

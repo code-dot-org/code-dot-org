@@ -2353,6 +2353,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Kayıpsız Sıkıştırma",
           "definition": "orijinal verilerin sıkıştırılmış verilerden mükemmel bir şekilde yeniden yapılandırılmasına izin veren bir veri sıkıştırma algoritması. Genelde metin sıkıştırma için kullanılır (örneğin zip sıkıştırma)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
+        },
+        "event/dance-ai/2023": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }
