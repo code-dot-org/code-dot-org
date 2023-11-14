@@ -292,7 +292,8 @@ $ai-modal-border-width: 8px;
           }
         }
 
-        &Front, &Back {
+        &Front,
+        &Back {
           position: absolute;
           backface-visibility: hidden;
           left: 50%;
@@ -306,7 +307,7 @@ $ai-modal-border-width: 8px;
           transform: rotateY(180deg) translateX(50%);
 
           .blockPreview {
-            margin-top: 50px
+            margin-top: 50px;
           }
         }
       }
@@ -330,7 +331,7 @@ $ai-modal-border-width: 8px;
         border: solid $neutral_dark10 1px;
         animation: appear 1s;
 
-        html[dir="rtl"] & {
+        html[dir='rtl'] & {
           left: 20px;
           right: initial;
         }
@@ -397,15 +398,9 @@ $ai-modal-border-width: 8px;
     .buttonsAreaTop {
       position: absolute;
       top: 0;
-      right: 10px;
-      width: 30%;
       display: flex;
-      justify-content: flex-end;
-
-      html[dir="rtl"] & {
-        right: initial;
-        left: 10px;
-      }
+      justify-content: space-between;
+      width: inherit;
     }
   }
 
@@ -425,7 +420,11 @@ $ai-modal-border-width: 8px;
     }
 
     &Icon {
-      margin-right: 10px;
+      margin: 0;
+
+      &WithText {
+        margin-right: 10px;
+      }
     }
   }
 }
