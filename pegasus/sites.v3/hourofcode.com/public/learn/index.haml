@@ -21,8 +21,9 @@ social:
 %script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
-- tutorial_sheet_id = request.params["preview"] ? :tutorials_preview : :tutorials
-- no_cache = !!request.params["preview"]
+- use_preview = !!request.params["preview"]
+- tutorial_sheet_id = use_preview ? :tutorials_preview : :tutorials
+- no_cache = use_preview
 - tutorials_contents = Tutorials.new(tutorial_sheet_id, no_cache).contents(request.host_with_port)
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
@@ -33,7 +34,7 @@ social:
   - tutorial[:contact] = nil
   - prefix = "tutorial_#{tutorial[:short_code]}_"
   -# Unless showing a preview, look up localized versions of strings.
-  - unless request.params["preview"]
+  - unless use_preview
     - tutorial[:name]                                 = hoc_s(prefix + "name")
     - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
     - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
