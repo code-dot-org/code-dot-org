@@ -9088,6 +9088,7 @@ ja:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -9558,6 +9559,7 @@ ja:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: 'Minecraft Hour of Code: Generation AI で AI が発明するアイテムを作成しましょう。Responsible AI の原理を利用して、計算的な知性、問題解決、創造性などを使用しましょう。Hour of Code ではブロックや Python のコーディングを通して、誰でもコーディングの基礎や、より良いAIの作成方法を学べます。'
   tutorial_bsimage_string_detail_grades: 6年生以上（11歳以上）
   tutorial_bscomputing_string_detail_grades: 6年生以上（11歳以上）
   tutorial_stackpython_string_detail_grades: 6年生以上（11歳以上）
@@ -9689,6 +9691,7 @@ ja:
   tutorial_madmobile_string_detail_grades: 6年生以上（11歳以上）
   tutorial_intelinosmile_string_detail_grades: 幼児〜中学2年
   tutorial_intelinoaisign_string_detail_grades: 学年 1-4 (年齢 7-10)
+  tutorial_generationai_string_detail_grades: 小学校 2-5 年 (7-10歳) 小学校 6 年 - 中学校 2 年 (11-13歳) 中学校 3 年以上 (14 歳以上)
   tutorial_bsimage_string_platforms: クローム、ファイヤーフォックス、サファリ
   tutorial_bscomputing_string_platforms: 電力のいらない形
   tutorial_stackpython_string_platforms: すべての最新ブラウザ、アンドロイドタブレット、iPad、ウィンドウズフォン、アンドロイドフォン、iPhone
@@ -9821,6 +9824,7 @@ ja:
   tutorial_madmobile_string_platforms: 最新のすべてのブラウザ
   tutorial_intelinosmile_string_platforms: すべてのモダンブラウザ、iPad、アンプラグ
   tutorial_intelinoaisign_string_platforms: 最新のすべてのブラウザ
+  tutorial_generationai_string_platforms: コンピューター (Windows PC、Mac)、Android (Chromebook)、iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -9952,6 +9956,7 @@ ja:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: 言語非依存
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -10083,6 +10088,7 @@ ja:
   tutorial_madmobile_string_detail_programming_languages: JavaScript、HTML、CSS
   tutorial_intelinosmile_string_detail_programming_languages: ブロック
   tutorial_intelinoaisign_string_detail_programming_languages: ブロック
+  tutorial_generationai_string_detail_programming_languages: ブロック、Python
   school_not_found_heading: あなたの学校が見つかりませんでした。詳細情報を入力してください。
   school_name: 学校名
   school_name_error: 学校名が必要です。
