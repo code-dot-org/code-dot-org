@@ -116,6 +116,27 @@ ur:
             MOVES.Roll: جسم گول کرنا
             MOVES.ThisOrThat: یہ یا وہ
         text: "{GROUP} {MOVE} {DIR} ہمیشہ کیلئے کریں"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': بلیاں
+            '"SLOTH"': سلاتھ
+          MOVE:
+            '"next"': "(اگلا)"
+            '"prev"': "(پچھلا)"
+            '"rand"': "(بے ترتیبانہ)"
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Clown: گنگنم
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Kick: ستارہ
+            MOVES.Rest: کوئی نہيں
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ThisOrThat: یہ یا وہ
+        text: "{GROUP} {MOVE} {DIR} ہمیشہ کیلئے کریں"
       Dancelab_changeMoveLR:
         options:
           MOVE:

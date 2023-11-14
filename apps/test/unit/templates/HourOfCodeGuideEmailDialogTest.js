@@ -8,6 +8,7 @@ import experiments from '@cdo/apps/util/experiments';
 describe('HourOfCodeGuideEmailDialog', () => {
   const defaultProps = {
     isSignedIn: true,
+    unitId: 100,
   };
 
   it('renders signed out text in Dialog', () => {

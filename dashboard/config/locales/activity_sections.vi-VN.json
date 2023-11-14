@@ -35738,6 +35738,38 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Tổng kết"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Lọc nhạc"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Hỗ trợ chung"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Video giới thiệu"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Hỏi đáp"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Ăn mừng"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Bước tiếp theo",
+          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Lan tỏa"
         }
       }
     }

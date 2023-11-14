@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "חזור",
+  "danceAiModalClose": "סגור",
+  "danceAiModalCodeButton": "קוד",
+  "danceAiModalExplanationButton": "למד עוד",
+  "danceAiModalStartOverButton": "להתחיל מחדש",
   "danceFeedbackDidntPress": "ודאו שאתם לוחצים על מקשי החצים בזמן שהריקוד שלכם מתבצע.",
   "danceFeedbackKeepCoding": "השתמשתם בכל סוגי הבלוקים הנדרשים אך לא באופן הנכון.",
   "danceFeedbackKeyEvent": "ודאו שאתם מוסיפים את הקוד לבלוק\n <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"למעלה\"</title></block></xml>\nולוחצים על המקש בזמן שהריקוד שלכם מתבצע.",

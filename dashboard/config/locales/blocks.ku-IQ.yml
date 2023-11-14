@@ -85,6 +85,25 @@ ku:
             MOVES.Roll: خل بوونەوە
             MOVES.ThisOrThat: ئەمە یان ئەوە
         text: "{GROUP} بەردەوام {MOVE}{DIR} تاهەتایە"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': هەموو پشیلەکان
+          MOVE:
+            '"next"': "(دواتر)"
+            '"prev"': "(پێشتر)"
+            '"rand"': "(هەڕەمەکی)"
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Clown: گانگنام
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Kick: ئەستێرە
+            MOVES.Roll: خل بوونەوە
+            MOVES.ThisOrThat: ئەمە یان ئەوە
+        text: "{GROUP} بەردەوام {MOVE}{DIR} تاهەتایە"
       Dancelab_changeMoveLR:
         options:
           MOVE:

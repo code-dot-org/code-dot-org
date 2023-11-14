@@ -139,6 +139,29 @@ bg:
             MOVES.Rest: Без
             MOVES.ThisOrThat: Това или онова
         text: "{GROUP} направи {MOVE} {DIR} завинаги"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            "-1": "←"
+            '1': "→"
+          GROUP:
+            '"CAT"': котки
+            '"SLOTH"': ленивци
+          MOVE:
+            '"next"': "(Следващ)"
+            '"prev"': "(Предишен)"
+            '"rand"': "(Случаен)"
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Clown: Клоун
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Kick: Ритник
+            MOVES.Rest: Без
+            MOVES.ThisOrThat: Това или онова
+        text: "{GROUP} направи {MOVE} {DIR} завинаги"
       Dancelab_changeMoveLR:
         options:
           DIR:

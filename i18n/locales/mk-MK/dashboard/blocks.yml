@@ -28,6 +28,10 @@ mk:
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': мачки
       Dancelab_changePropEachBy:
         options:
           GROUP:

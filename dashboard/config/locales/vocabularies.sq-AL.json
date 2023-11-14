@@ -2599,6 +2599,17 @@
         "program/starwarsblocks/unversioned": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "event/dance-ai/2023": {
+          "word": "Event",
+          "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programi"
         }
       }
     }
