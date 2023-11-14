@@ -554,7 +554,7 @@ const DanceAiModal: React.FunctionComponent = () => {
       : mode === Mode.RESULTS && currentToggle === Toggle.CODE
       ? i18n.danceAiModalCode2()
       : mode === Mode.EXPLANATION
-      ? i18n.danceAiModalExplanation()
+      ? i18n.danceAiModalExplanation2()
       : undefined;
 
   return (
