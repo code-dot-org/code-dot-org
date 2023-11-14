@@ -21,6 +21,7 @@ class DanceVisualizationColumn extends React.Component {
     levelIsRunning: PropTypes.bool,
     levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
+    unitId: PropTypes.number,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
@@ -71,7 +72,10 @@ class DanceVisualizationColumn extends React.Component {
         )}
         {(this.props.over21 || this.props.userType === 'teacher') &&
           cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
-            <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
+            <HourOfCodeGuideEmailDialog
+              isSignedIn={isSignedIn}
+              unitId={this.props.unitId}
+            />
           )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
@@ -139,6 +143,7 @@ const styles = {
 
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
+  unitId: state.pageConstants.serverScriptId,
   songData: state.dance.songData,
   selectedSong: state.dance.selectedSong,
   userType: state.currentUser.userType,

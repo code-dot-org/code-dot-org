@@ -108,6 +108,28 @@ he:
             MOVES.ThisOrThat: כך וכך
             MOVES.Thriller: זומבי
             MOVES.Rest: כלום
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
+        options:
+          GROUP:
+            '"CAT"': חתולים
+            '"SLOTH"': עצלנים
+          MOVE:
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Clown: גאנגם
+            MOVES.Kick: כוכב
+            MOVES.ThisOrThat: כך וכך
+            MOVES.Thriller: זומבי
+            MOVES.Rest: כלום
+            '"next"': "(הבא)"
+            '"prev"': "(קודם)"
+            '"rand"': "(אקראי)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} עושה {MOVE} {DIR} לנצח"
         options:
@@ -574,8 +596,8 @@ he:
           EFFECT:
             '"none"': כלום
             '"rand"': "(אקראי)"
-            '"circles"': מעגלים
             '"quads"': מלאכים
+            '"circles"': מעגלים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
             '"disco_ball"': כדור דיסקו
@@ -591,11 +613,11 @@ he:
             '"ripples"': אדוות
             '"snowflakes"': שלג
             '"text"': כותרת שיר
-            '"squiggles"': קווים מתפתלים
             '"galaxy"': חלל
             '"sparkles"': נצנוצים
             '"spiral"': ספירלה
             '"disco"': ריבועים
+            '"squiggles"': קווים מתפתלים
             '"starburst"': כוכבים
             '"stars"': כוכבים
             '"music_wave"': גלים

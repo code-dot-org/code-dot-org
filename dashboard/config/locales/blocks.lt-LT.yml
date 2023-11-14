@@ -32,6 +32,10 @@ lt:
             '"ALIEN"': ateiviai
           MOVE:
             MOVES.Rest: Nė vienas
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: Nė vienas
       Dancelab_changeMoveLR:
         options:
           MOVE:

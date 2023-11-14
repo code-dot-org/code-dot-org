@@ -129,6 +129,28 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
         text: "{GROUP} تجري {MOVE} {DIR} للأبد"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': كل القطط
+            '"SLOTH"': الكسلان
+          MOVE:
+            '"next"': "(التالي)"
+            '"prev"': "(السابق)"
+            '"rand"': "(عشوائي)"
+            MOVES.ClapHigh: التصفيق بصوت عالٍ
+            MOVES.Clown: غانغنام
+            MOVES.Dab: التربيت
+            MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
+            MOVES.Drop: السقوط
+            MOVES.Floss: أرجحة اليدين
+            MOVES.Fresh: جديد
+            MOVES.Kick: الركل
+            MOVES.Rest: لا شيء
+            MOVES.Roll: الدحرجة
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
+        text: "{GROUP} تجري {MOVE} {DIR} للأبد"
       Dancelab_changeMoveLR:
         options:
           MOVE:
