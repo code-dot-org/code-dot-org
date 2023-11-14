@@ -21,6 +21,8 @@ require 'honeybadger/ruby'
 class DatastoreCache
   SHARED_CACHE_NAMESPACE = "DynamicConfigData".freeze
 
+  attr_reader :datastore
+
   # @param datastore [Object] a datastore adapter
   # @param identifier [String] a unique identifier for this instance of
   #        datastore cache; used to prevent DCDO and Gatekeeper from trying to
