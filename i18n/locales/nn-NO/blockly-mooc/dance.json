@@ -1,5 +1,10 @@
 {
+  "danceAiModalCodeButton": "Kode",
+  "danceAiModalExplanationButton": "Lær meir",
+  "danceAiModalBack": "Tilbake",
+  "danceAiModalClose": "Lukk",
   "danceFeedbackDidntPress": "Sørg for å trykke på piltastane dine under dansen.",
+  "danceFeedbackKeepCoding": "Du bruker alle dei nødvendige blokkene, men ikkje på rett måte.",
   "danceFeedbackKeyEvent": "Sørg for at du legg til noko kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"opp\"</title></block></xml>-blokka og trykker under dansen.",
   "danceFeedbackNeedBackup": "Du må lage ei gruppe med bakgrunnsdansarar med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"sirkel\"</title></block></xml>-blokka.",
   "danceFeedbackNeedDifferentDance": "Du må bruke ein annan dans.",
@@ -18,6 +23,5 @@
   "danceFeedbackUseSetSize": "Bruk ‘velg storleik for bakgrunnsdansar_2’-blokka for å gjere dansaren mindre.",
   "danceFeedbackUseSetTint": "Bruk ei fargevalblokk til å skifte farge på dansaren.",
   "danceFeedbackUseStartMapping": "Prøv å leggje til <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">høgre_ananas</title><title name=\"PROPERTY\">\"storleik\"</title><title name=\"RANGE\">\"bass\"</title></block></xml>-blokka til programmet ditt.",
-  "danceFeedbackKeepCoding": "Du bruker alle dei nødvendige blokkene, men ikkje på rett måte.",
   "measure": "Takt:"
 }

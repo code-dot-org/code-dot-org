@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Tilbage",
+  "danceAiModalClose": "Luk",
+  "danceAiModalCodeButton": "Kode",
+  "danceAiModalExplanationButton": "Lær mere",
+  "danceAiModalStartOverButton": "Start forfra",
   "danceFeedbackDidntPress": "Husk at trykke på piletasterne mens din dans er i gang.",
   "danceFeedbackKeepCoding": "Du bruger alle de nødvendige typer af blokke, men ikke på den rigtige måde.",
   "danceFeedbackKeyEvent": "Husk at tilføje en kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"op\"</title></block></xml> block og tryk på knappen mens din dans kører.",

@@ -116,6 +116,28 @@ uk:
             MOVES.ThisOrThat: Це або те
             MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
+        options:
+          GROUP:
+            '"CAT"': коти
+            '"SLOTH"': лінивці
+          MOVE:
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Відпустити
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
+            MOVES.Rest: Немає
+            '"next"': "(Наступний)"
+            '"prev"': "(Попередній)"
+            '"rand"': "(Випадковий)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} виконувати рух {MOVE} {DIR} постійно"
         options:
@@ -591,8 +613,8 @@ uk:
           EFFECT:
             '"none"': Немає
             '"rand"': "(Випадковий)"
-            '"circles"': Коло
             '"quads"': Кути
+            '"circles"': Коло
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
             '"disco_ball"': Дискокуля
@@ -609,11 +631,11 @@ uk:
             '"ripples"': Брижі
             '"snowflakes"': Сніг
             '"text"': Назва пісні
-            '"squiggles"': Звивання
             '"galaxy"': Відступ
             '"sparkles"': Блискітки
             '"spiral"': спіраль
             '"disco"': Квадрати
+            '"squiggles"': Звивання
             '"starburst"': Вибухаюча зірка
             '"stars"': Зірки
             '"music_wave"': Хвилі
@@ -1369,6 +1391,7 @@ uk:
             "'sound://category_animals/rooster.mp3'": півень
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/dolphin.mp3'": дельфін
+            "'sound://category_animals/chick.mp3'": пташеня
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибнути
@@ -1982,6 +2005,7 @@ uk:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': багаття
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/summer_night_loop.mp3"': ніч

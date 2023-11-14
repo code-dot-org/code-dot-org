@@ -129,6 +129,28 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} تجري {MOVE} {DIR} للأبد"
+        options:
+          GROUP:
+            '"CAT"': كل القطط
+            '"SLOTH"': الكسلان
+          MOVE:
+            MOVES.Roll: الدحرجة
+            MOVES.ClapHigh: التصفيق بصوت عالٍ
+            MOVES.Dab: التربيت
+            MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
+            MOVES.Drop: السقوط
+            MOVES.Floss: أرجحة اليدين
+            MOVES.Fresh: جديد
+            MOVES.Clown: غانغنام
+            MOVES.Kick: الركل
+            MOVES.ThisOrThat: هذا أو ذاك
+            MOVES.Thriller: تايلر
+            MOVES.Rest: لا شيء
+            '"next"': "(التالي)"
+            '"prev"': "(السابق)"
+            '"rand"': "(عشوائي)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} للأبد"
         options:
@@ -604,8 +626,8 @@ ar:
           EFFECT:
             '"none"': لا شيء
             '"rand"': "(عشوائي)"
-            '"circles"': نفق
             '"quads"': زوايا
+            '"circles"': نفق
             '"color_cycle"': ألوان
             '"diamonds"': الماس
             '"disco_ball"': كرة ديسكو
@@ -622,11 +644,11 @@ ar:
             '"ripples"': تموجات
             '"snowflakes"': ثلج
             '"text"': عنوان الأغنية
-            '"squiggles"': سكويغلز
             '"galaxy"': الفضاء
             '"sparkles"': بريق
             '"spiral"': حلزوني
             '"disco"': مربعات
+            '"squiggles"': سكويغلز
             '"starburst"': النجمي
             '"stars"': نجوم
             '"music_wave"': أمواج
