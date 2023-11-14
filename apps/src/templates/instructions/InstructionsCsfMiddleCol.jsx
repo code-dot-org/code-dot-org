@@ -179,7 +179,7 @@ class InstructionsCsfMiddleCol extends React.Component {
           this.props.hints.map(hint => (
             <InlineHint
               key={hint.hintId}
-              borderColor={color.droplet_bright_blue}
+              borderColor={color.light_info_500}
               isDashed={false}
               markdown={hint.markdown}
               ttsUrl={hint.ttsUrl}
@@ -198,7 +198,11 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.feedback && !this.props.collapsed && (
           <InlineFeedback
             key={this.props.feedback.message}
-            borderColor={this.props.isMinecraft ? color.white : color.yellow}
+            borderColor={
+              this.props.isMinecraft
+                ? color.white
+                : color.product_caution_default
+            }
             isDashed={false}
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
@@ -208,7 +212,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         )}
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
-            borderColor={color.droplet_bright_blue}
+            borderColor={color.light_info_500}
             isDashed={false}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
