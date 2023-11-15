@@ -24,6 +24,8 @@ class LtiSection < ApplicationRecord
   validates :lms_section_id, presence: true
   before_destroy :soft_delete_associated_section
 
+  private
+
   def soft_delete_associated_section
     section.destroy unless section.deleted?
   end
