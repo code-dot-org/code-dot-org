@@ -9,7 +9,6 @@ import SafeMarkdown from '../SafeMarkdown';
 class InlineFeedback extends Component {
   static propTypes = {
     borderColor: PropTypes.string,
-    isDashed: PropTypes.bool,
     extra: PropTypes.string,
     message: PropTypes.string.isRequired,
     styles: PropTypes.object,
@@ -31,7 +30,7 @@ class InlineFeedback extends Component {
   }
 
   render() {
-    const {borderColor, isDashed, extra, message, styles} = this.props;
+    const {borderColor, extra, message, styles} = this.props;
 
     // We add a classname to this element exclusively so that UI tests can
     // easily detect its presence. This class should NOT be used for
@@ -39,7 +38,6 @@ class InlineFeedback extends Component {
     return (
       <ChatBubble
         borderColor={borderColor}
-        isDashed={isDashed}
         ttsMessage={message}
         isMinecraft={this.props.isMinecraft}
         skinId={this.props.skinId}
