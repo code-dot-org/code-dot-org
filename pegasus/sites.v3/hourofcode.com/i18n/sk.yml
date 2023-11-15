@@ -14106,7 +14106,7 @@ sk:
   tutorial_madmobile_string_detail_grades: 6. ročník a vyššie
   tutorial_intelinosmile_string_detail_grades: Predškoláci až 8. ročník
   tutorial_intelinoaisign_string_detail_grades: 2. – 8. ročník
-  tutorial_generationai_string_detail_grades: Stupne 2 až 5 (vek: 7 až 10 rokov) Stupne 6 až 8 (vek: 11 až 13 rokov) Stupne 9 a viac (vek: od 14 rokov)
+  tutorial_generationai_string_detail_grades: 'Stupne 2 až 5 (vek: 7 až 10 rokov) Stupne 6 až 8 (vek: 11 až 13 rokov) Stupne 9 a viac (vek: od 14 rokov)'
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Unplugged
   tutorial_stackpython_string_platforms: Všetky moderné prehliadače, Android tablet,
