@@ -13503,7 +13503,6 @@ sk:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
-  tutorial_generationai_name: Generácia Umelej Inteligencie
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13974,7 +13973,6 @@ sk:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: 'Vydajte sa na cestu časom a vytvorte vynálezy poháňané umelou inteligenciou v novom režime hry Minecraft – Hodina kódovania: generácia umelej inteligencie. Rozvíjajte problémové myslenie, kreativitu a výpočtové schopnosti s princípmi zodpovednej AI. Programovanie v blokoch či Pythonu v Hodine kódovania učí základom a tvorbe lepšej AI pre všetkých.'
   tutorial_bsimage_string_detail_grades: 6. ročník a vyššie
   tutorial_bscomputing_string_detail_grades: 6. ročník a vyššie
   tutorial_stackpython_string_detail_grades: 6. ročník a vyššie
@@ -14106,7 +14104,6 @@ sk:
   tutorial_madmobile_string_detail_grades: 6. ročník a vyššie
   tutorial_intelinosmile_string_detail_grades: Predškoláci až 8. ročník
   tutorial_intelinoaisign_string_detail_grades: 2. – 8. ročník
-  tutorial_generationai_string_detail_grades: Stupne 2 až 5 (vek: 7 až 10 rokov) Stupne 6 až 8 (vek: 11 až 13 rokov) Stupne 9 a viac (vek: od 14 rokov)
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Unplugged
   tutorial_stackpython_string_platforms: Všetky moderné prehliadače, Android tablet,
@@ -14277,7 +14274,6 @@ sk:
   tutorial_madmobile_string_platforms: Všetky moderné prehliadače
   tutorial_intelinosmile_string_platforms: Všetky moderné prehliadače, iPad
   tutorial_intelinoaisign_string_platforms: Všetky moderné prehliadače
-  tutorial_generationai_string_platforms: Počítače (Windows, Mac), Android (Chromebooky), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14409,7 +14405,6 @@ sk:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
-  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Nezávislé na jazyku
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14541,7 +14536,6 @@ sk:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Bloky
   tutorial_intelinoaisign_string_detail_programming_languages: Bloky
-  tutorial_generationai_string_detail_programming_languages: Bloky, Python
   school_not_found_heading: Nemôžeme nájsť Vašu školu. Zadajte prosím Viac informácií.
   school_name: Názov školy
   school_name_error: Názov školy je povinný.
