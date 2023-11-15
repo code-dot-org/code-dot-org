@@ -88,10 +88,12 @@ class Courses extends Component {
             {/* English */}
             {isEnglish && (
               <div className={'announcements'}>
-                <MarketingAnnouncementBanner
-                  announcement={specialAnnouncement}
-                  marginBottom="60px"
-                />
+                {specialAnnouncement && (
+                  <MarketingAnnouncementBanner
+                    announcement={specialAnnouncement}
+                    marginBottom="60px"
+                  />
+                )}
                 <CoursesStudentEnglish />
               </div>
             )}
@@ -100,6 +102,7 @@ class Courses extends Component {
             {!isEnglish && (
               <CourseBlocksIntl
                 showModernElementaryCourses={modernElementaryCoursesAvailable}
+                specialAnnouncement={specialAnnouncement}
               />
             )}
           </div>

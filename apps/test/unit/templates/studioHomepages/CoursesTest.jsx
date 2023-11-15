@@ -60,6 +60,7 @@ describe('Courses', () => {
         assertComponentsInOrder(wrapper, [
           'ModernCsfCourses',
           'CourseBlocksHoc',
+          'MarketingAnnouncementBanner',
           'CoursesAToF',
           'LegacyCSFNotification',
           'CourseBlocksWrapper',
@@ -75,6 +76,7 @@ describe('Courses', () => {
         assertComponentsInOrder(wrapper, [
           'AcceleratedAndUnplugged',
           'CourseBlocksHoc',
+          'MarketingAnnouncementBanner',
           'Courses1To4',
           'CourseBlocksWrapper',
           'CourseBlocksWrapper',
