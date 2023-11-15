@@ -37341,6 +37341,38 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zusammenfassung"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Musikfilter"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Allgemeine Unterstützung"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Einführungsvideo"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Besprechung"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Feiern"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Nächste Schritte",
+          "description": "Sagen Sie den SchülerInnen, dass sie, über die heutige Aktivität hinaus viele Möglichkeiten haben zu programmieren. Weisen Sie die SchülerInnen darauf hin, dass sie unter code.org/learn eine Liste dieser Möglichkeiten finden. Wenn Sie eine der folgenden Erweiterungsaktivitäten planen, sagen Sie den SchülerInnen, was sie im Unterricht als nächstes erwartet."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Machen Sie es viral"
         }
       }
     }

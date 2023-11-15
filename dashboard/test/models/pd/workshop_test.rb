@@ -23,7 +23,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @organizer_workshop.reload
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'query by workshop organizer' do
     # create a workshop with a different organizer, which should not be returned below
     create(:workshop)
@@ -963,7 +962,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 0, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
     facilitator = create :facilitator
     @organizer_workshop.facilitators << facilitator

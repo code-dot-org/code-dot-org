@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Ar ais",
+  "danceAiModalClose": "Dún",
+  "danceAiModalCodeButton": "Cód",
+  "danceAiModalExplanationButton": "Tuilleadh eolais",
   "danceFeedbackDidntPress": "Brúigh na saigheadeochracha nuair a bheidh an damhsa ar siúl.",
   "danceFeedbackKeepCoding": "Lean ort ag códú! Níl gach rud i gceart fós.",
   "danceFeedbackKeyEvent": "Ná déan dearmad cód a cheangal leis an mbloc <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"suas\"</title></block></xml> agus brúigh an eochair nuair a bheidh an damhsa ar siúl.",

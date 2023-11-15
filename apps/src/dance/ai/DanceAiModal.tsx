@@ -15,7 +15,13 @@ import {
 import DanceAiScore, {ScoreColors} from './DanceAiScore';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-import {AiOutput, FieldKey, GeneratedEffect, MinMax} from '../types';
+import {
+  AiFieldValue,
+  AiOutput,
+  FieldKey,
+  GeneratedEffect,
+  MinMax,
+} from '../types';
 import {
   generateBlocks,
   generateBlocksFromResult,
@@ -38,8 +44,9 @@ import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ModalButton from './ModalButton';
 
-enum Mode {
+export enum Mode {
   INITIAL = 'initial',
   SELECT_INPUTS = 'selectInputs',
   GENERATING = 'generating',
@@ -203,22 +210,21 @@ const DanceAiModal: React.FunctionComponent = () => {
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === Mode.INITIAL) {
-      const currentValue = currentAiModalField?.getValue();
-      if (currentValue) {
-        const currentInputs = JSON.parse(currentValue).inputs;
-
+      const currentValueString = currentAiModalField?.getValue();
+      if (currentValueString) {
+        const currentValue: AiFieldValue = JSON.parse(currentValueString);
         setMode(Mode.RESULTS);
-        setInputs(currentInputs);
+        setInputs(currentValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
           badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
-            () => chooseEffects(currentInputs, ChooseEffectsQuality.BAD)
+            () => chooseEffects(currentValue.inputs, ChooseEffectsQuality.BAD)
           ),
-          goodEffect: JSON.parse(currentValue),
+          goodEffect: currentValue,
         };
 
-        minMaxAssociations.current = calculateMinMax(currentInputs);
+        minMaxAssociations.current = calculateMinMax(currentValue.inputs);
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
@@ -314,17 +320,19 @@ const DanceAiModal: React.FunctionComponent = () => {
   };
 
   const handleUseClick = () => {
+    if (!generatedEffects.current.goodEffect) {
+      // Effect should exist when Use is clicked
+      return;
+    }
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
       emojis: inputs,
       ...generatedEffects.current.goodEffect,
     });
-
-    currentAiModalField?.setValue(
-      JSON.stringify({
-        inputs,
-        ...generatedEffects.current.goodEffect,
-      })
-    );
+    const currentValue: AiFieldValue = {
+      inputs,
+      ...generatedEffects.current.goodEffect,
+    };
+    currentAiModalField?.setValue(JSON.stringify(currentValue));
     onClose();
   };
 
@@ -396,7 +404,7 @@ const DanceAiModal: React.FunctionComponent = () => {
 
     const blocksSvg = generateBlocksFromResult(
       Blockly.getMainWorkspace(),
-      JSON.stringify(generatedEffects.current.goodEffect)
+      generatedEffects.current.goodEffect
     );
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -436,11 +444,15 @@ const DanceAiModal: React.FunctionComponent = () => {
     }
   };
 
-  const getPreviewCode = (generatedEffect?: GeneratedEffect): string => {
+  const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
+    if (!currentGeneratedEffect) {
+      return '';
+    }
+
     const tempWorkspace = new Workspace();
     const previewCode = generatePreviewCode(
       tempWorkspace,
-      JSON.stringify(generatedEffect)
+      currentGeneratedEffect
     );
     tempWorkspace.dispose();
     return previewCode;
@@ -506,19 +518,14 @@ const DanceAiModal: React.FunctionComponent = () => {
   const headerTextSplit = i18n
     .danceAiModalHeading({input: INPUT_KEY})
     .split(INPUT_KEY);
-  const headerContent = [0, 1, 2]
-    .map(index => {
-      if (index === 0) {
-        return headerTextSplit[0];
-      } else if (index === 1) {
-        return headerValue();
-      } else {
-        return headerTextSplit[1];
-      }
-    })
-    .map((part: string, index: number) => {
-      return <span key={index}>{part}</span>;
-    });
+
+  const headerContent = [
+    headerTextSplit[0],
+    headerValue(),
+    headerTextSplit[1],
+  ].map((part: string, index: number) => {
+    return <span key={index}>{part}</span>;
+  });
 
   const currentGeneratedEffect = getGeneratedEffect(generatingProgress.step);
 
@@ -535,15 +542,15 @@ const DanceAiModal: React.FunctionComponent = () => {
     mode === Mode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
       : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
-      ? i18n.danceAiModalGenerating()
+      ? i18n.danceAiModalGenerating2()
       : mode === Mode.GENERATING
-      ? i18n.danceAiModalFinding()
+      ? i18n.danceAiModalFinding2()
       : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
-      ? i18n.danceAiModalEffect()
+      ? i18n.danceAiModalEffect2()
       : mode === Mode.RESULTS && currentToggle === Toggle.CODE
-      ? i18n.danceAiModalCode()
+      ? i18n.danceAiModalCode2()
       : mode === Mode.EXPLANATION
-      ? i18n.danceAiModalExplanation()
+      ? i18n.danceAiModalExplanation2()
       : undefined;
 
   return (
@@ -554,12 +561,14 @@ const DanceAiModal: React.FunctionComponent = () => {
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <img
-          src={aiBotBorder}
-          className={moduleStyles.botImage}
-          alt={i18n.danceAiModalBotAlt()}
-        />
-        {headerContent}
+        <div className={moduleStyles.headerAreaLeft}>
+          <img
+            src={aiBotBorder}
+            className={moduleStyles.botImage}
+            alt={i18n.danceAiModalBotAlt()}
+          />
+          {headerContent}
+        </div>
         <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
@@ -703,9 +712,9 @@ const DanceAiModal: React.FunctionComponent = () => {
                       id="block-preview"
                       className={moduleStyles.blockPreview}
                     >
-                      <AiBlockPreview
-                        resultJson={JSON.stringify(currentGeneratedEffect)}
-                      />
+                      {currentGeneratedEffect && (
+                        <AiBlockPreview results={currentGeneratedEffect} />
+                      )}
                     </div>
                   )}
                 </div>
@@ -807,80 +816,98 @@ const DanceAiModal: React.FunctionComponent = () => {
         )}
 
         <div id="buttons-area-top" className={moduleStyles.buttonsAreaTop}>
-          {mode === Mode.RESULTS && (
-            <div>
-              <Button
-                id="explanation-button"
-                onClick={handleExplanationClick}
-                color={Button.ButtonColor.neutralDark}
-                className={moduleStyles.button}
-              >
-                <i className="fa fa-bar-chart" />
-              </Button>
-            </div>
-          )}
+          <div id="buttons-area-top-left">
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.RESULTS]}
+              id="start-over-button"
+              onClick={handleStartOverClick}
+              color={Button.ButtonColor.neutralDark}
+              className={moduleStyles.button}
+              aria-label={i18n.danceAiModalStartOverButton()}
+              title={i18n.danceAiModalStartOverButton()}
+              icon="fast-backward"
+            />
+          </div>
+          <div id="buttons-area-top-right">
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.RESULTS]}
+              id="explanation-button"
+              onClick={handleExplanationClick}
+              color={Button.ButtonColor.neutralDark}
+              className={moduleStyles.button}
+              aria-label={i18n.danceAiModalExplanationButton()}
+              title={i18n.danceAiModalExplanationButton()}
+              iconClassName={moduleStyles.buttonIcon}
+              icon="bar-chart"
+            />
 
-          {mode === Mode.EXPLANATION && (
-            <Button
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.EXPLANATION]}
               id="leave-explanation-button"
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
               className={moduleStyles.button}
-            >
-              <i className="fa fa-bar-chart" />
-            </Button>
-          )}
+              aria-label={i18n.danceAiModalBack()}
+              title={i18n.danceAiModalBack()}
+              iconClassName={moduleStyles.buttonIcon}
+              icon="bar-chart"
+            />
+          </div>
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          <div id="buttons-area-left" className={moduleStyles.buttonsAreaLeft}>
-            {mode === Mode.RESULTS && (
+          <div>
+            <ModalButton
+              currentMode={mode}
+              showFor={[Mode.RESULTS]}
+              id="regenerate-button"
+              onClick={handleRegenerateClick}
+              color={Button.ButtonColor.neutralDark}
+              className={moduleStyles.button}
+              icon="refresh"
+              iconClassName={classNames(
+                moduleStyles.buttonIcon,
+                moduleStyles.buttonIconWithText
+              )}
+              text={i18n.danceAiModalRegenerateButton()}
+            />
+          </div>
+          <div>
+            {currentInputSlot >= SLOT_COUNT && (
+              <ModalButton
+                currentMode={mode}
+                showFor={[Mode.SELECT_INPUTS]}
+                id="generate-button"
+                text={i18n.danceAiModalGenerateButton()}
+                onClick={handleGenerateClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+            )}
+
+            {showConvertButton && (
               <Button
-                id="regenerate-button"
-                onClick={handleRegenerateClick}
-                color={Button.ButtonColor.neutralDark}
-                className={classNames(moduleStyles.button)}
-              >
-                <i
-                  className={classNames(
-                    'fa fa-refresh',
-                    moduleStyles.buttonIcon
-                  )}
-                />
-                {i18n.danceAiModalRegenerateButton()}
-              </Button>
+                id="convert-button"
+                text={i18n.danceAiModalUseCodeButton()}
+                onClick={handleConvertBlocks}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+                disabled={aiModalOpenedFromFlyout}
+              />
+            )}
+            {showUseButton && (
+              <Button
+                id="use-button"
+                text={i18n.danceAiModalUseEffectButton()}
+                onClick={handleUseClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
             )}
           </div>
-
-          {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
-            <Button
-              id="generate-button"
-              text={i18n.danceAiModalGenerateButton()}
-              onClick={handleGenerateClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
-
-          {showConvertButton && (
-            <Button
-              id="convert-button"
-              text={i18n.danceAiModalUseCodeButton()}
-              onClick={handleConvertBlocks}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-              disabled={aiModalOpenedFromFlyout}
-            />
-          )}
-          {showUseButton && (
-            <Button
-              id="use-button"
-              text={i18n.danceAiModalUseEffectButton()}
-              onClick={handleUseClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
-          )}
         </div>
       </div>
     </AccessibleDialog>

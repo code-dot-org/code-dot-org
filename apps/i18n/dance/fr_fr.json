@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Retour",
+  "danceAiModalClose": "Fermer",
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "En savoir plus",
+  "danceAiModalStartOverButton": "Recommencer",
   "danceFeedbackDidntPress": "Assure-toi d’appuyer sur les touches fléchées pendant que ta danse est en cours.",
   "danceFeedbackKeepCoding": "Continue à coder ! Il y a encore quelque chose qui cloche. ",
   "danceFeedbackKeyEvent": "Assure toi d'avoir attribué du code au bloc <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"en haut\"</title></block></xml> et presse une touche pendant que ta danse s'exécute.",

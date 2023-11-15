@@ -78,6 +78,22 @@ eu:
             MOVES.Clown: Pailazoa
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} egin {MOVE} {DIR} betirako"
+        options:
+          GROUP:
+            '"CAT"': katu guztiak
+          MOVE:
+            MOVES.Roll: Biratu
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Clown: Pailazoa
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
       Dancelab_changeMoveLR:
         text: "{SPRITE} egin {MOVE} {DIR} betirako"
         options:
