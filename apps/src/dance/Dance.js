@@ -456,7 +456,9 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
 };
 
 Dance.prototype.playSound = function (soundName, options) {
-  this.studioApp_.playAudio(soundName, options);
+  var defaultOptions = {volume: 0.5};
+  var newOptions = {...options, ...defaultOptions};
+  Sounds.getSingleton().play(soundName, newOptions);
 };
 
 /**
