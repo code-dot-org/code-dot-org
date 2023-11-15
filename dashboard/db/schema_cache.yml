@@ -3071,6 +3071,7 @@ columns:
     comment:
   - *32
   - *33
+  - *16
   lti_deployments:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3188,6 +3189,7 @@ columns:
     comment:
   - *32
   - *33
+  - *16
   lti_user_identities:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -9598,6 +9600,19 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
+    name: index_lti_courses_on_deleted_at
+    unique: false
+    columns:
+    - deleted_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   lti_deployments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments
@@ -9685,6 +9700,19 @@ indexes:
     unique: false
     columns:
     - section_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_sections
+    name: index_lti_sections_on_deleted_at
+    unique: false
+    columns:
+    - deleted_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13152,7 +13180,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20231113191120
+version: 20231114211036
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

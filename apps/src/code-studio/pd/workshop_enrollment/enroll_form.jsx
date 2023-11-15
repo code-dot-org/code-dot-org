@@ -99,6 +99,7 @@ const REPLACE_EXISTING_OPTIONS = [
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
+    user_id: PropTypes.number.isRequired,
     workshop_id: PropTypes.number.isRequired,
     workshop_course: PropTypes.string,
     first_name: PropTypes.string,
@@ -254,6 +255,7 @@ export default class EnrollForm extends React.Component {
       };
     }
     const params = {
+      user_id: this.props.user_id,
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
