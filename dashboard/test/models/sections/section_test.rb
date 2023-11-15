@@ -37,7 +37,8 @@ class SectionTest < ActiveSupport::TestCase
     section = create :section
     lti_section = create :lti_section, section: section
     section.destroy
-    assert LtiSection.where(id: lti_section.id).empty?, "LTI section should be deleted"
+    assert lti_section.reload.deleted_at.present?, "LTI section should be soft deleted"
+    assert LtiSection.without_deleted.where(id: lti_section.id).empty?, "LTI section should be soft deleted"
   end
 
   test "restoring section restores appropriate followers" do
