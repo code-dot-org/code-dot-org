@@ -2,10 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  # ---------------------------------------------
+  # Domain Names - Each Stack operates 5 sites (examples are for production):
+  # 1) Learning Platform ("Dashboard") - https://studio.code.org
+  # 2) Corporate Website ("Pegasus") - https://code.org
+  # 3) Advocacy Website (runs on Pegasus) - https://advocacy.code.org
+  # 4) Hour of Code (runs on Pegasus) - https://hourofcode.com
+  # 5) Code Projects (host user created content) - https://codeprojects.org
+  # ---------------------------------------------
   BaseDomainName:
     Type: String
     Default: code.org
-    Description: Base domain name.
+    Description: Base domain name for primary learning platform and corporate web site.
   DashboardSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
@@ -14,6 +22,19 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
+  HourOfCodeBaseDomainName:
+    Type: String
+    Default: hourofcode.com
+    Description: Hour Of Code base domain name.
+  HourOfCodeHostedZoneId:
+    Type: String
+    # Default to ID for `hourofcode.com`
+    Default: Z3TQLAV9VNIB0G
+    Description: Route 53 Hosted Zone ID for Hour of Code base domain name.
+  HourOfCodeSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
+    Description: Subdomain name for Hour Of Code site.
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -44,6 +65,31 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
+
+  HourOfCodeCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+<% if rack_env?(:production) -%>
+      DomainName: !Sub "${HourOfCodeBaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "www.${HourOfCodeBaseDomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+        - DomainName: !Sub "www.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+<% else -%>
+      DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+<% end -%>
 
   # ---------------------------------------------
   # Stack-specific IAM permissions
@@ -213,12 +259,21 @@ Resources:
       LoadBalancerArn: !Ref ALB
       Port: 443
       Protocol: HTTPS
+      # Default certificate. Even though the datatype of the Certificates Property is Array, there can only be one.
       Certificates:
       - CertificateArn: <%=certificate_arn%>
       SslPolicy: ELBSecurityPolicy-2016-08
       DefaultActions:
       - Type: forward
         TargetGroupArn: !Ref ALBTargetGroup
+  # Full list of certificates used by the Listener for Viewers that support SNI.xl
+  HTTPSListenerCertificates:
+      Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
+      Properties:
+        Certificates:
+          - CertificateArn: <%=certificate_arn%>
+          - CertificateArn: !Ref HourOfCodeCertificate
+        ListenerArn: !GetAtt HTTPSListener.ListenerArn
 
   ALBTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup

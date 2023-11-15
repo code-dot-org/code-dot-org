@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Probieren Sie eine Hour of Code mit diesem unterhaltsamen Einführungslehrgang</h2>
-<p>Probieren Sie ein <a class=&quot;linktag&quot; id=&quot;hoc-overview&quot; href=&quot;/hourofcode/overview&quot; target=&quot;_blank&quot;>einstündiges Tutorial</a> mit beliebten Spielen und Filmen wie Minecraft, Frozen und Star Wars. Viele Tutorien sind wie Spiele aufgebaut, um grundlegende Konzepte der Informatik auf unterhaltsame und spannende Weise zu vermitteln.</p>
+<p>Probiere ein <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">einstündiges Tutorial</a> mit beliebten Spielen und Filmen wie Minecraft, Die Eiskönigin und Star Wars aus. Viele Tutorien sind wie Spiele aufgebaut, um grundlegende Konzepte der Informatik auf unterhaltsame und spannende Weise zu vermitteln.</p>
 
 <br>
 
