@@ -105,7 +105,7 @@
           <field name="UNIT">"measures"</field>
           <next>
             <block type="Dancelab_ai" id="AZFax0W2U%3B*@TX0l4o">
-              <field name="VALUE">{"inputs":["spooky","black-and-white","robot"],"backgroundEffect":"squiggles","backgroundColor":"rave","foregroundEffect":"bubbles"}</field>
+              <field name="VALUE">{"inputs":["ghost","chequered-flag","robot"],"backgroundEffect":"squiggles","backgroundColor":"rave","foregroundEffect":"bubbles"}</field>
             </block>
           </next>
         </block>
@@ -114,7 +114,7 @@
           <field name="UNIT">"measures"</field>
           <next>
             <block type="Dancelab_ai" id="+/R%~7O]jGllz)sqjTlr">
-              <field name="VALUE">{"inputs":["rainbow","party","silly"],"backgroundEffect":"rainbow","backgroundColor":"tropical","foregroundEffect":"confetti"}</field>
+              <field name="VALUE">{"inputs":["rainbow","party-popper","grinning-face-with-big-eyes"],"backgroundEffect":"rainbow","backgroundColor":"tropical","foregroundEffect":"confetti"}</field>
             </block>
           </next>
         </block>
