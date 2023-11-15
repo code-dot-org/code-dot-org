@@ -185,7 +185,7 @@ Dance.prototype.init = function (config) {
         onError={(error, componentStack) => {
           const state = getStore().getState();
           Lab2MetricsReporter.updateProperties({
-            appName: 'dance',
+            appName: 'Dance',
             channelId: state.pageConstants.channelId,
             currentLevelId: state.progress.currentLevelId,
             scriptId: state.progress.scriptId,
