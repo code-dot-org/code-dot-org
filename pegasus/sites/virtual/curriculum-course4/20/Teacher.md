@@ -54,7 +54,7 @@ Students use a mix of different environments to test their knowledge of for loop
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Super Challenge - For Loops](http://learn.code.org/s/course4/lessons/20/levels/1)
+### <a name="Activity"></a> [Super Challenge - For Loops](https://studio.code.org/s/course4/lessons/20/levels/1)
 
 
 

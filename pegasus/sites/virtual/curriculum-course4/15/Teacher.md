@@ -53,7 +53,7 @@ While the students will have had some experience creating functions with paramet
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Play Lab: Functions with Parameters](http://learn.code.org/s/course4/lessons/15/levels/1)
+### <a name="Activity"></a> [Play Lab: Functions with Parameters](https://studio.code.org/s/course4/lessons/15/levels/1)
 
 [/together]
 
