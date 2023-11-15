@@ -25,9 +25,9 @@ const ChatBubbleTip = ({isRtl, color, background, isDashed}) => {
   return (
     <svg height="30" width="30" style={styles.svg}>
       <polyline
-        points={isRtl ? '5,25 25,25 5,5' : '25,25 5,25 25,5'}
+        points={isRtl ? '6,25 25,25 5,5' : '24,24 5,24 25,5'}
         style={styles.polyline}
-        strokeDasharray={isDashed ? '3,3' : '0,0'}
+        strokeDasharray={isDashed ? '5,5' : '0,0'}
       />
     </svg>
   );
