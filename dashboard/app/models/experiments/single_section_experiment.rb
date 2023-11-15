@@ -30,6 +30,9 @@
 class SingleSectionExperiment < Experiment
   belongs_to :section, optional: true
 
+  # requiring this mitigates performance problems when calling Experiment.get_all_enabled on hot codepaths
+  belongs_to :script, class_name: 'Unit'
+
   def enabled?(user: nil)
     return false unless user
 
