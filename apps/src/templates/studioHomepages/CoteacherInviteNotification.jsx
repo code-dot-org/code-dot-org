@@ -3,7 +3,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import {asyncLoadCoteacherInvite} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  asyncLoadCoteacherInvite,
+  asyncLoadSectionData,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../Button';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -15,6 +18,7 @@ export const showCoteacherInviteNotification = coteacherInvite => {
 
 const CoteacherInviteNotification = ({
   asyncLoadCoteacherInvite,
+  asyncLoadSectionData,
   coteacherInvite,
 }) => {
   if (!showCoteacherInviteNotification(coteacherInvite)) {
@@ -25,6 +29,7 @@ const CoteacherInviteNotification = ({
     HttpClient.put(api, '', true)
       .then(() => {
         asyncLoadCoteacherInvite();
+        asyncLoadSectionData();
       })
       .catch(err => console.error(err));
   };
@@ -81,11 +86,13 @@ export default connect(
   }),
   {
     asyncLoadCoteacherInvite,
+    asyncLoadSectionData,
   }
 )(CoteacherInviteNotification);
 
 CoteacherInviteNotification.propTypes = {
   asyncLoadCoteacherInvite: PropTypes.func.isRequired,
+  asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
 };
 
