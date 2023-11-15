@@ -887,6 +887,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 className={moduleStyles.button}
               />
             )}
+
             {showConvertButton && (
               <Button
                 id="convert-button"
