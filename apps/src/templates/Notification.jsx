@@ -185,19 +185,31 @@ const Notification = ({
               />
             )}
             {buttons &&
-              buttons.map((button, index) => (
-                <Button
-                  __useDeprecatedTag
-                  key={index}
-                  href={button.link}
-                  color={button.color || Button.ButtonColor.gray}
-                  text={button.text}
-                  style={{...styles.button, ...button.style}}
-                  target={button.newWindow ? '_blank' : null}
-                  onClick={button.onClick}
-                  className={button.className}
-                />
-              ))}
+              buttons.map((button, index) =>
+                button.link ? (
+                  <Button
+                    __useDeprecatedTag
+                    key={index}
+                    href={button.link}
+                    color={button.color || Button.ButtonColor.gray}
+                    text={button.text}
+                    style={{...styles.button, ...button.style}}
+                    target={button.newWindow ? '_blank' : null}
+                    onClick={button.onClick}
+                    className={button.className}
+                  />
+                ) : (
+                  <Button
+                    key={index}
+                    color={button.color || Button.ButtonColor.gray}
+                    text={button.text}
+                    style={{...styles.button, ...button.style}}
+                    target={button.newWindow ? '_blank' : null}
+                    onClick={button.onClick}
+                    className={button.className}
+                  />
+                )
+              )}
             {children}
           </div>
         </div>
