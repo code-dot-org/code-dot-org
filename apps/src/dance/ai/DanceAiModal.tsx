@@ -547,15 +547,15 @@ const DanceAiModal: React.FunctionComponent = () => {
     mode === Mode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
       : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
-      ? i18n.danceAiModalGenerating()
+      ? i18n.danceAiModalGenerating2()
       : mode === Mode.GENERATING
-      ? i18n.danceAiModalFinding()
+      ? i18n.danceAiModalFinding2()
       : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
-      ? i18n.danceAiModalEffect()
+      ? i18n.danceAiModalEffect2()
       : mode === Mode.RESULTS && currentToggle === Toggle.CODE
-      ? i18n.danceAiModalCode()
+      ? i18n.danceAiModalCode2()
       : mode === Mode.EXPLANATION
-      ? i18n.danceAiModalExplanation()
+      ? i18n.danceAiModalExplanation2()
       : undefined;
 
   return (
