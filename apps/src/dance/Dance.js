@@ -177,20 +177,21 @@ Dance.prototype.init = function (config) {
 
   this.awaitTimingMetrics();
 
+  const state = getStore().getState();
+  Lab2MetricsReporter.updateProperties({
+    appName: 'Dance',
+    channelId: state.pageConstants.channelId,
+    currentLevelId: state.progress.currentLevelId,
+    scriptId: state.progress.scriptId,
+    userId: state.currentUser.userId,
+  });
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <ErrorBoundary
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
         fallback={<ErrorFallbackPage />}
         onError={(error, componentStack) => {
-          const state = getStore().getState();
-          Lab2MetricsReporter.updateProperties({
-            appName: 'Dance',
-            channelId: state.pageConstants.channelId,
-            currentLevelId: state.progress.currentLevelId,
-            scriptId: state.progress.scriptId,
-            userId: state.currentUser.userId,
-          });
           Lab2MetricsReporter.logError('Uncaught React Error', error, {
             componentStack,
           });
