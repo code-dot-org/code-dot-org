@@ -13779,6 +13779,7 @@ nl:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Generatie AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14249,6 +14250,7 @@ nl:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: "Reis door de tijd om je AI-aangedreven uitvindingen te maken in het nieuwe 'Een Uur Code: Generatie AI' van Minecraft. Combineer probleemoplossend vermogen, creativiteit en rekenwerk met de principes van Responsible AI. Met programmeren in blokken of Python in Een Uur Code leer je de basis van programmeren en ontdek je hoe je voor iedereen een betere AI kunt ontwikkelen."
   tutorial_bsimage_string_detail_grades: Graad 6 en hoger
   tutorial_bscomputing_string_detail_grades: Graad 6 en hoger
   tutorial_stackpython_string_detail_grades: Graad 6 en hoger
@@ -14380,6 +14382,7 @@ nl:
   tutorial_madmobile_string_detail_grades: Graad 6 en hoger
   tutorial_intelinosmile_string_detail_grades: Voorlezer - Graad 8
   tutorial_intelinoaisign_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_generationai_string_detail_grades: Groep 4 t/m 7 (leeftijd 7-10) Groep 8 t/m 2e klas (11-13 jaar) Vanaf 3e klas (14+)
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Niet aangesloten
   tutorial_stackpython_string_platforms: Webgebaseerd Android tablet iPad
@@ -14513,6 +14516,7 @@ nl:
   tutorial_madmobile_string_platforms: Alle moderne browsers
   tutorial_intelinosmile_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_intelinoaisign_string_platforms: Alle moderne browsers
+  tutorial_generationai_string_platforms: Computers (Windows-pc, Mac), Android (Chromebooks), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14644,6 +14648,7 @@ nl:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Taalonafhankelijk
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14775,6 +14780,7 @@ nl:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: 'Blokken '
   tutorial_intelinoaisign_string_detail_programming_languages: 'Blokken '
+  tutorial_generationai_string_detail_programming_languages: Blokken, Python
   school_not_found_heading: We konden je school niet vinden. Voer meer informatie
     in.
   school_name: Naam van de school
