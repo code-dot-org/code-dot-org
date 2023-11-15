@@ -9347,6 +9347,7 @@ zh:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: 人工智慧時代
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -9817,6 +9818,7 @@ zh:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: '在全新的 Minecraft「一個小時程式設計：人工智慧時代」中穿越時空，創造你的 AI 發明。根據負責任 AI 原則，運用解決問題、創造力和運算思維。使用程式方塊或 Python，「一小時程式設計」可以讓任何人學習程式設計的基本知識，以及如何為大眾建造更好的 AI。'
   tutorial_bsimage_string_detail_grades: 年級 6+
   tutorial_bscomputing_string_detail_grades: 年級 6+
   tutorial_stackpython_string_detail_grades: 年級 6+
@@ -9948,6 +9950,7 @@ zh:
   tutorial_madmobile_string_detail_grades: 年級 6+
   tutorial_intelinosmile_string_detail_grades: 學前 - 年級 8
   tutorial_intelinoaisign_string_detail_grades: 年級 2-8
+  tutorial_generationai_string_detail_grades: 適合 2-5 年級 (7-10 歲) 6-8 年級 (11-13 歲) 9+ 年級 (14+ 歲)
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: 不插電活動
   tutorial_stackpython_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
@@ -10113,6 +10116,7 @@ zh:
   tutorial_madmobile_string_platforms: 所有的主流瀏覽器
   tutorial_intelinosmile_string_platforms: 所有的主流瀏覽器, iPad
   tutorial_intelinoaisign_string_platforms: 所有的主流瀏覽器
+  tutorial_generationai_string_platforms: 電腦 (Windows PC 、Mac)、Android (Chromebook)、iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -10244,6 +10248,7 @@ zh:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: 不受語言影響
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -10375,6 +10380,7 @@ zh:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: 積木式
   tutorial_intelinoaisign_string_detail_programming_languages: 積木式
+  tutorial_generationai_string_detail_programming_languages: Block, Python
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱
   school_name_error: 需填寫學校名稱。
