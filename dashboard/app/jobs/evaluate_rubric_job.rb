@@ -1,3 +1,6 @@
+# Sending token usage to CloudWatch
+require 'cdo/aws/metrics'
+
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
@@ -16,6 +19,56 @@ class EvaluateRubricJob < ApplicationJob
       'CSD games sidescroll review_2023' => 'New-U3-2022-L20'
     }
   }
+
+  # This is raised if there is a PII violation and you query with exceptions
+  # enabled.
+  class TooManyRequestsError < StandardError
+    attr_reader :response
+
+    # Creates a TooManyRequestsError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Too many requests for #{response.request.uri}")
+    end
+  end
+
+  AI_RUBRIC_METRICS_NAMESPACE = 'AIRubric'.freeze
+
+  # Write out metrics reflected in the response to CloudWatch
+  #
+  # Currently, this keeps track of a curated set of metrics returned
+  # within the 'metadata.usage' field of the returned response from
+  # the AI proxy service.
+  #
+  # @param [Hash] response The parsed JSON response from the AI proxy.
+  def self.log_metrics(response)
+    # Record the metadata
+    # The aiproxy service will report the usage in the metadata via:
+    # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
+    [:TotalTokens, :PromptTokens, :CompletionTokens].each do |name|
+      # Send a metric to the AIRubric namespace under categories for both the
+      # service used (openai, etc) and the current environment.
+      tokens = response.dig('metadata', 'usage', name.to_s.underscore)
+      next if tokens.nil?
+      Cdo::Metrics.push(
+        AI_RUBRIC_METRICS_NAMESPACE,
+        [
+          {
+            metric_name: name,
+            value: tokens,
+            dimensions: [
+              {name: 'Environment', value: CDO.rack_env},
+              {name: 'Agent', value: response.dig('metadata', 'agent') || 'unknown'},
+            ],
+            unit: 'Count'
+          }
+        ]
+      )
+    end
+  end
 
   # Ensure that the RubricAiEvaluation exists as an argument to the job
   private def pass_in_or_create_rubric_ai_evaluation(job)
@@ -114,6 +167,38 @@ class EvaluateRubricJob < ApplicationJob
     # We gracefully just fail, here, and we do not file this exception
   end
 
+  RETRIES_ON_RATE_LIMIT = 3
+
+  # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
+  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
+    # Job arguments are always serializable, so we just pull out the hash
+    # and send it as context.
+    options = job.arguments.first
+
+    # Send it to honeybadger even though we are handling the error via retry
+    Honeybadger.notify(
+      error,
+      error_message: "Retrying rubric evaluation job due to rate limiting (429).",
+      context: options
+    )
+  end
+
+  RETRIES_ON_TIMEOUT = 2
+
+  # Retry just once on a timeout. It is likely to timeout again.
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
+    # Job arguments are always serializable, so we just pull out the hash
+    # and send it as context.
+    options = job.arguments.first
+
+    # Send it to honeybadger even though we are handling the error via retry
+    Honeybadger.notify(
+      error,
+      error_message: "Retrying rubric evaluation job due to timeout.",
+      context: options
+    )
+  end
+
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
@@ -138,8 +223,13 @@ class EvaluateRubricJob < ApplicationJob
     ShareFiltering.find_share_failure(code, locale, exceptions: true)
 
     openai_params = get_openai_params(lesson_s3_name, code)
-    ai_evaluations = get_openai_evaluations(openai_params)
+    response = get_openai_evaluations(openai_params)
 
+    # Log tokens and usage information
+    EvaluateRubricJob.log_metrics(response)
+
+    # Get and validate the response data
+    ai_evaluations = response['data']
     validate_evaluations(ai_evaluations, rubric)
 
     ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
@@ -229,9 +319,15 @@ class EvaluateRubricJob < ApplicationJob
       timeout: 120
     )
 
+    # Raise too many requests error if we see a 429
+    # The proxy service will bubble up the 429 error from the service itself
+    raise TooManyRequestsError.new(response) if response.code == 429
+
+    # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
 
-    JSON.parse(response.body)['data']
+    # Parse out the response
+    JSON.parse(response.body)
   end
 
   private def validate_evaluations(evaluations, rubric)
