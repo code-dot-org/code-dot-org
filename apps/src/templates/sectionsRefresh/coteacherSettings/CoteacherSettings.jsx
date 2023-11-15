@@ -38,6 +38,7 @@ export default function CoteacherSettings({
   primaryTeacher,
   setCoteachersToAdd,
   coteachersToAdd,
+  sectionMetricInformation,
 }) {
   const [addError, setAddError] = useState('');
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
@@ -82,6 +83,7 @@ export default function CoteacherSettings({
           addSavedCoteacher={addSavedCoteacher}
           addError={addError}
           setAddError={setAddError}
+          sectionMetricInformation={sectionMetricInformation}
         />
         <CoteacherTable
           coteachers={coteachers}
@@ -104,4 +106,5 @@ CoteacherSettings.propTypes = {
   primaryTeacher: PropTypes.object,
   setCoteachersToAdd: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
+  sectionMetricInformation: PropTypes.object,
 };

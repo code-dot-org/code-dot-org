@@ -5,6 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '../../AccessibleDialog';
 import styles from './coteacher-settings.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function RemoveCoteacherDialog({
   coteacherToRemove,
@@ -32,6 +34,7 @@ export default function RemoveCoteacherDialog({
         method: 'DELETE',
       }).then(response => {
         if (response.ok) {
+          analyticsReporter.sendEvent(EVENTS.COTEACHER_REMOVED, {});
           removeSavedCoteacher(coteacher.id);
         }
         closeRemoveDialog();

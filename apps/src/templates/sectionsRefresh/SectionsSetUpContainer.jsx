@@ -23,6 +23,7 @@ import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -219,6 +220,12 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
+        coteachersToAdd.forEach(() => {
+          analyticsReporter.sendEvent(
+            EVENTS.COTEACHER_INVITE_SENT,
+            getCoteacherMetricInfoFromSection(section)
+          );
+        });
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (createAnotherSection) {
@@ -324,6 +331,9 @@ export default function SectionsSetUpContainer({
           primaryTeacher={sections[0].primaryInstructor}
           setCoteachersToAdd={setCoteachersToAdd}
           coteachersToAdd={coteachersToAdd}
+          sectionMetricInformation={getCoteacherMetricInfoFromSection(
+            sections[0]
+          )}
         />
       ),
       isCoteacherOpen,

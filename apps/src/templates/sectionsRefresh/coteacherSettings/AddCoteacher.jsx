@@ -11,6 +11,8 @@ import $ from 'jquery';
 
 import styles from './coteacher-settings.module.scss';
 import {convertAddCoteacherResponse} from './CoteacherUtils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   if (email === '') {
@@ -79,6 +81,7 @@ export default function AddCoteacher({
   addSavedCoteacher,
   addError,
   setAddError,
+  sectionMetricInformation,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -98,6 +101,10 @@ export default function AddCoteacher({
         if (response.ok) {
           return response.json().then(json => {
             const newCoteacher = convertAddCoteacherResponse(json);
+            analyticsReporter.sendEvent(
+              EVENTS.COTEACHER_INVITE_SENT,
+              sectionMetricInformation
+            );
             addSavedCoteacher(newCoteacher);
             return '';
           });
@@ -106,7 +113,7 @@ export default function AddCoteacher({
         return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
       });
     },
-    [addSavedCoteacher]
+    [addSavedCoteacher, sectionMetricInformation]
   );
 
   const handleAddEmail = useCallback(
@@ -131,6 +138,10 @@ export default function AddCoteacher({
           setAddError(errorMessage);
           if (errorMessage === '') {
             setInputValue('');
+          } else {
+            analyticsReporter.sendEvent(EVENTS.COTEACHER_EMAIL_INVALID, {
+              sectionId: sectionId,
+            });
           }
         });
     },
@@ -218,4 +229,5 @@ AddCoteacher.propTypes = {
   addError: PropTypes.string,
   addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
+  sectionMetricInformation: PropTypes.object,
 };
