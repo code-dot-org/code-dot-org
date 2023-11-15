@@ -175,6 +175,7 @@ section.activities {
     .action-block {
       min-width: 300px;
       max-width: 420px;
+      text-align: initial;
       margin: 0 auto;
       justify-content: space-between;
 
@@ -192,6 +193,18 @@ section.activities {
 
       #ai_101_videos & {
         height: 530px;
+
+        @media screen and (max-width: $width-sm) {
+          height: auto;
+        }
+
+        .content-footer p {
+          margin-bottom: 0;
+        }
+      }
+
+      #educator_resources & {
+        height: 600px;
 
         @media screen and (max-width: $width-sm) {
           height: auto;
