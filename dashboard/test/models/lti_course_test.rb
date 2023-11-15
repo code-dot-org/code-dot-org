@@ -30,7 +30,6 @@ class LtiCourseTest < ActiveSupport::TestCase
     LtiCourse.destroy(course.id)
     assert LtiCourse.find_by(id: course.id).nil?, "course should be deleted"
     sections.each do |section|
-      puts section.reload.inspect
       assert section.reload.deleted_at.present?, "section should be deleted"
     end
     lti_sections.each do |lti_section|
