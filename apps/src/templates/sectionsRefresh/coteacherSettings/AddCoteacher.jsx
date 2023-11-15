@@ -54,7 +54,9 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
         if (json.error.includes('inviting self')) {
           return i18n.coteacherCannotInviteSelf();
         }
-
+        if (json.error.includes('already in section')) {
+          return i18n.coteacherAlreadyInCourse({email});
+        }
         console.error('Coteacher validation error', response);
         return i18n.coteacherUnknownValidationError({
           email,

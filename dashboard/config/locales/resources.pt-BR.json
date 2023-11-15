@@ -6389,46 +6389,72 @@
           "type": "Vídeo"
         },
         "_template_ai_code_of_ethics/ai-ethics/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "[Template] Código de Ética da IA.",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit"
         },
         "ai_code_of_ethics/ai-ethics/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "url": "[https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-\\\\\\_UNWybRq48pfH2PVo/template/preview](https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-_UNWybRq48pfH2PVo/template/preview)"
         },
         "ai_research_areas/ai-ethics/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Áreas de pesquisa da IA.",
+          "url": "https://docs.google.com/document/d/1F7jlc3lw9UQ2ZLO6NDLO5wj543IntOT0fC1fpQwDo3s/edit"
         },
         "create_a_manifesto/ai-ethics/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Crie um manifesto.",
+          "url": "https://docs.google.com/document/d/1HCY1VWUCT3mgXAdQ3KD7C29r8yfNxbz3b3lvu8jibI4/edit"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e IA: privacidade e o futuro do trabalho",
+          "url": "https://www.youtube.com/watch?v=zNxw5gJtHLc"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Imagine o seu mundo",
+          "url": "https://docs.google.com/document/d/1KfPa5xnZN0pOJtQGm0KU69TAsX37xJgdnnfyU1RPtRI/edit"
         },
         "research_reflection_guide/ai-ethics/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Guia de reflexão sobre pesquisa",
+          "url": "https://docs.google.com/document/d/1YYw8n8HPq3WDx7l7ZfyDeAoMkUCSEIFZb1670RzwKZE/edit"
         },
         "character_card_individual_docs_/ai-ethics/2023": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Cartão de personagem (distribuído em documentos individuais)",
+          "url": "[https://drive.google.com/drive/folders/1IFYT6VWTQQ2-rMZ\\\\\\_AqExzOQNsmONdhih? usp=drive\\\\ \\_link](https://drive.google.com/drive/folders/1IFYT6VWTQQ2-rMZ_AqExzOQNsmONdhih?usp=drive_link)"
         },
         "character_cards/ai-ethics/2023": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Cartões de personagens (tudo em um único documento)",
+          "url": "[https://docs.google.com/document/d/1dliLfkCYxPTfdo7kirgSBODCn94C092z\\\\\\_tTwE\\\\\\_C2SbA/edit](https://docs.google.com/document/d/1dliLfkCYxPTfdo7kirgSBODCn94C092z_tTwE_C2SbA/edit)"
         },
         "generative_ai_activity_instructions/ai-ethics/2023": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Instruções de atividade sobre IA generativa",
+          "url": "https://docs.google.com/document/d/1rqtfMZyn-UekUoVFgYCHyVqOa7StNY9-wl-FlLOaZqk/edit"
         },
         "generative_ai_news_articles/ai-ethics/2023": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Notícias sobre IA generativa",
+          "url": "https://docs.google.com/document/d/1fFsIddVKKTvl067o0GpW0PsjampUbdNAGeptVbtDl6I/edit"
         },
         "group_scenarios/ai-ethics/2023": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Cenários em grupo",
+          "url": "[https://docs.google.com/document/d/1-bJpL4tXOgg6jpGhiXTCxowVh\\\\\\_ogsNmd-K-S64Nb4lo/edit](https://docs.google.com/document/d/1-bJpL4tXOgg6jpGhiXTCxowVh_ogsNmd-K-S64Nb4lo/edit)"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Como a IA funciona: modelos de linguagem grandes",
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "url": "[https://docs.google.com/presentation/d/1oCFLWSBDQgcVI-SiX9RHEQ4CW6MJT7iWk\\\\\\_wXeY4m1mE/template/preview](https://docs.google.com/presentation/d/1oCFLWSBDQgcVI-SiX9RHEQ4CW6MJT7iWk_wXeY4m1mE/template/preview)"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Página inicial do CS Connections",
@@ -10196,12 +10222,12 @@
           "type": "Guia de Atividades"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "Como a IA funciona — Dados de Treinamento e Vieses",
+          "name": "Como a IA Funciona — Dados de Treinamento e Vieses",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Como a IA funciona - O que é Machine Learning?",
+          "name": "Como a IA Funciona - O que é Machine Learning?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Vídeo"
         },
@@ -10211,7 +10237,7 @@
           "type": "Slides"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] Rede de visão computacional",
+          "name": "[Example] Rede de Visão Computacional",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
@@ -10220,12 +10246,12 @@
           "type": "Slides"
         },
         "computer_vision_network/how-ai-works/2023": {
-          "name": "Rede de visão computacional",
+          "name": "Rede de Visão Computacional",
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
           "type": "Guia de Atividades"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "Como a IA funciona: Como a Visão Computacional Funciona",
+          "name": "Como a IA Funciona: Como a Visão Computacional Funciona",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "Vídeo"
         },

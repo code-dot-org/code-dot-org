@@ -115,6 +115,26 @@ fa:
             MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} برای همیشه {MOVE}{DIR} را انجام می‌دهد"
+        options:
+          GROUP:
+            '"SLOTH"': خرس تنبلها
+          MOVE:
+            MOVES.Roll: بادی رول - خم شدن (رقص)
+            MOVES.ClapHigh: کلپ های (رقص)
+            MOVES.Dab: داب (رقص)
+            MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
+            MOVES.Drop: انداختن
+            MOVES.Floss: فلاس - قر دادن (رقص)
+            MOVES.Fresh: فِرِش (رقص)
+            MOVES.Clown: گنگام (رقص)
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: دیس اور دت (رقص)
+            MOVES.Rest: هیچکدام
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} برای همیشه {MOVE}{DIR} را انجام بدهد"
         options:
@@ -303,7 +323,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_jumpToEach:
         text: "{GROUP} به {LOCATION} پرش می‌کند"
@@ -329,7 +349,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
       Dancelab_layoutSprites:
         text: "{GROUP} را به شکل {FORMAT} طراحی کن"
@@ -388,7 +408,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSprite:
         text: یک {COSTUME} جدید بساز به نام {NAME} در محل {LOCATION}
@@ -415,7 +435,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSpriteGroup:
         text: "{N} {COSTUME} جدید بساز با {LAYOUT}"
@@ -521,7 +541,7 @@ fa:
             '"rainbow"': رنگین‌کمان (افکت)
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
@@ -560,7 +580,7 @@ fa:
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
             '"squiggles"': موج موج (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
@@ -582,8 +602,8 @@ fa:
           EFFECT:
             '"none"': هیچکدام
             '"rand"': "(تصادفی)"
-            '"circles"': دایره‌ها
             '"quads"': زاویه‌ (افکت)
+            '"circles"': دایره‌ها
             '"color_cycle"': رنگ‌ها
             '"diamonds"': لوزی‌ها
             '"disco_ball"': دسکو بال
@@ -599,11 +619,11 @@ fa:
             '"ripples"': شن (افکت)
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
-            '"squiggles"': موج موج (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
+            '"squiggles"': موج موج (افکت)
             '"starburst"': استارباست (افکت)
             '"stars"': ستاره  (افکت)
             '"music_wave"': امواج (افکت)
@@ -1751,7 +1771,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_getNext:
         text: دریافت شیء بعدی
@@ -1793,7 +1813,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_groupDestroy:
         text: "{SELECT}{COSTUME} را حذف کن"
@@ -2006,7 +2026,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_whenClickedOn:
         text: وقتی {SPRITE} کلیک شد

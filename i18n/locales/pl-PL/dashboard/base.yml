@@ -64,6 +64,7 @@ pl:
           future: nie może być w przyszłości
         user_type: 'Typ konta'
         us_state: 'Stan'
+        ai_rubrics_disabled: 'Wyłącz funkcję rubryki AI'
   beta: "beta"
   hello: "Witaj świecie"
   welcome_back: "Witaj z powrotem, %{name}"
@@ -1320,4 +1321,8 @@ pl:
   course_deprecated:
     title: "Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org ma dla Ciebie nowsze opcje."
     button: "Zobacz nowy program nauczania"
-
+  hoc_tutorial_email_content:
+    dear_teacher: "Szanowna/y %{teacher_name},"
+    learn_about_ai: "Poznaj sztuczną inteligencję (AI)"
+    founder: "Założyciel, Code.org"
+    your_friends: "Twoi znajomi na Code.org"

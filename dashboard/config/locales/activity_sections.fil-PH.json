@@ -10160,7 +10160,8 @@
           "description": "Gamit ang kanilang mga kumpletong gabay sa pagpaplano, handa na ang mga mag-aaral na isabuhay ang kanilang mga proyekto. Ang mga antas na ito ay tumutugma sa istraktura ng gabay sa pagpaplano, at tumutulong sa pag-navigate sa mga mag-aaral sa proseso ng pagbabago ng kanilang mga ideya sa code.",
           "tips": [
             "Ang mga mag-aaral ay makakaranas ng maraming pagsubok at error habang nagko-coding. Ang kanilang mga proyekto ay malamang na maging mga pinutol na bersiyon ng kanilang orihinal na saklaw. Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software. Okay lang kung hindi sila makapag-build sa bawat feature na pinlano nila!"
-          ]
+          ],
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
           "progression_name": "Mga halimbawa ng proyekto"
@@ -20204,7 +20205,8 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tuklasin” na slide\n\nGamit ang kanilang mga kumpletong gabay sa pagpaplano, handa na ang mga mag-aaral na isabuhay ang kanilang mga proyekto. Ang mga antas na ito ay tumutugma sa istraktura ng gabay sa pagpaplano, at tumutulong sa pag-navigate sa mga mag-aaral sa proseso ng pagbabago ng kanilang mga ideya sa code.",
           "tips": [
             "Ang mga mag-aaral ay makakaranas ng maraming pagsubok at error habang nagko-coding. Ang kanilang mga proyekto ay malamang na maging mga pinutol na bersiyon ng kanilang orihinal na saklaw. Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software. Okay lang kung hindi sila makapag-build sa bawat feature na pinlano nila!"
-          ]
+          ],
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "a0ef70ba-32d7-450e-85a2-d2415d14209c": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Mga Halimbawang Proyekto” na slide",
@@ -31634,7 +31636,8 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tuklasin” na slide\n\nGamit ang kanilang mga kumpletong gabay sa pagpaplano, handa na ang mga mag-aaral na isabuhay ang kanilang mga proyekto. Ang mga antas na ito ay tumutugma sa istraktura ng gabay sa pagpaplano, at tumutulong sa pag-navigate sa mga mag-aaral sa proseso ng pagbabago ng kanilang mga ideya sa code.",
           "tips": [
             "Ang mga mag-aaral ay makakaranas ng maraming pagsubok at error habang nagko-coding. Ang kanilang mga proyekto ay malamang na maging mga pinutol na bersiyon ng kanilang orihinal na saklaw. Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software. Okay lang kung hindi sila makapag-build sa bawat feature na pinlano nila!"
-          ]
+          ],
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "ee8e3fb5-e938-4c42-b636-bbfb442572f8": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Mga Halimbawang Proyekto” na slide",
@@ -36522,6 +36525,38 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Tapusin Na"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Pag-filter ng Musika"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Pangkalahatang Suporta"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Intro Video"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Panayam"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Magdiwang"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Mag-viral"
         }
       }
     }
