@@ -7,17 +7,24 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
-  def self.redact_file(source_path, plugins = [], format = 'md')
+  def self.backup_file(source_path)
+    backup_path = source_path.gsub(/\/source\//, '/original/')
+    I18nScriptUtils.copy_file(source_path, backup_path)
+  end
+
+  # For a given file, redact returns the redacted content of the file. The default file format is Markdown.
+  def self.redact(source_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
     args.push(Shellwords.escape(source_path))
+
     stdout, _status = Open3.capture2(args.join(" "))
 
-    return JSON.parse(stdout)
+    return stdout
   end
 
-  def self.restore_file(source_path, redacted_path, plugins = [], format = 'md')
+  def self.restore(source_path, redacted_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/restore')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
@@ -26,9 +33,10 @@ class RedactRestoreUtils
 
     stdout, _status = Open3.capture2(args.join(" "))
 
-    return JSON.parse(stdout)
+    return stdout
   end
 
+  # Given a Hash object, redact_data returns the redacted version of that Hash object.
   def self.redact_data(source_data, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
@@ -52,74 +60,85 @@ class RedactRestoreUtils
     source_json.flush
     redacted_json.flush
 
-    restored = RedactRestoreUtils.restore_file(source_json.path, redacted_json.path, plugins, format)
+    restored = RedactRestoreUtils.restore(source_json.path, redacted_json.path, plugins, format)
 
     source_json.close
     redacted_json.close
 
-    return restored
+    return JSON.parse(restored)
   end
 
-  def self.restore(source, redacted, dest, plugins = [], format = 'md')
+  def self.restore_file(source, redacted, dest, plugins = [], format = 'md')
     return unless File.exist?(source)
     return unless File.exist?(redacted)
-    is_json = File.extname(source) == '.json'
-    source_data =
-      if is_json
-        JSON.parse(File.read(source))
-      else
-        YAML.load_file(source)
-      end
-    redacted_data =
-      if is_json
-        JSON.parse(File.read(redacted))
-      else
-        YAML.load_file(redacted)
-      end
+    file_format = File.extname(source)
 
-    return unless source_data
-    return unless redacted_data
-    return unless source_data&.values&.first&.length
-    return unless redacted_data&.values&.first&.length
+    if file_format == '.json'
+      source_data = JSON.load_file(source)
+      redacted_data = JSON.load_file(redacted)
 
-    restored =
-      if is_json
-        RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
-      else
-        RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
-      end
+      return unless source_data
+      return unless redacted_data
+      return unless source_data&.values&.first&.length
+      return unless redacted_data&.values&.first&.length
+
+      restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
+
+    elsif file_format == '.yml'
+      source_data = YAML.load_file(source)
+      redacted_data = YAML.load_file(redacted)
+
+      return unless source_data
+      return unless redacted_data
+      return unless source_data&.values&.first&.length
+      return unless redacted_data&.values&.first&.length
+
+      restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
+
+    else
+      restored = RedactRestoreUtils.restore(source, redacted, plugins, format)
+    end
 
     File.open(dest, "w+") do |file|
       if File.extname(dest) == '.json'
         file.write(JSON.pretty_generate(restored))
-      else
+      elsif File.extname(dest) == '.yml'
         redacted_key = redacted_data.keys.first
         restored = {redacted_key => restored}
         file.write(I18nScriptUtils.to_crowdin_yaml(restored))
+      else
+        file.write(restored)
       end
     end
 
     restored
   end
 
-  def self.redact(source, dest, plugins = [], format = 'md')
+  # redact_file redacts the content of the source file, whether is a json, yml or other formats and write the output
+  # into the dest file.
+  def self.redact_file(source, dest, plugins = [], format = 'md')
     return unless File.exist? source
     FileUtils.mkdir_p File.dirname(dest)
 
-    source_data =
-      if File.extname(source) == '.json'
-        JSON.load_file(source)
-      else
-        YAML.load_file(source)
-      end
+    file_format = File.extname(source)
 
-    redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
+    if file_format == '.json'
+      source_data = JSON.load_file(source)
+      redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
+    elsif file_format == '.yml'
+      source_data = YAML.load_file(source)
+      redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
+    else
+      redacted = RedactRestoreUtils.redact(source_data, plugins, format)
+    end
 
     File.open(dest, "w+") do |file|
       if File.extname(dest) == '.json'
         file.write(JSON.pretty_generate(redacted))
-      else
+      elsif File.extname(dest) == '.yml'
         file.write(I18nScriptUtils.to_crowdin_yaml(redacted))
+      else
+        file.write(redacted)
       end
     end
   end

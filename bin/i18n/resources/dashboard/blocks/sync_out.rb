@@ -30,7 +30,7 @@ module I18n
 
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
 
-            RedactRestoreUtils.restore(
+            RedactRestoreUtils.restore_file(
               I18N_BACKUP_FILE_PATH,
               crowdin_file_path,
               crowdin_file_path,
