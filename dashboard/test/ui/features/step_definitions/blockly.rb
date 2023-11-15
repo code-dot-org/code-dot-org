@@ -286,6 +286,11 @@ Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
   @browser.execute_script(script)
 end
 
+Then(/^the open flyout has (.*?) blocks$/) do |n|
+  script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n.to_i)
+end
+
 def current_block_xml
   @browser.execute_script <<-JS
     return __TestInterface.getBlockXML();

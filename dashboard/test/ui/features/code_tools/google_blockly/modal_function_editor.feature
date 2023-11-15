@@ -13,5 +13,12 @@ Scenario: Can create a Function
   Then element "#blockly-9" is visible
   And element "#modalFunctionEditor" is not visible
   And I press "blockly-9"
+  And the open flyout has 1 blocks
   And I click toolbox block with selector ".blocklyFlyoutButton"
+  # Open modal function editor
   And I wait until element "#modalFunctionEditor" is visible
+  # Close editor
+  And I press "closeModalFunctionEditor"
+  # Now the function should be in the toolbox, along with the original function from start code
+  Then I press "blockly-9"
+  And the open flyout has 2 blocks
