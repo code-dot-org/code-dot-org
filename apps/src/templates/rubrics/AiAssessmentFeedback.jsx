@@ -52,6 +52,8 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
       aiFeedbackApproval: aiFeedback,
       falsePositive: aiFalsePos,
       falseNegative: aiFalseNeg,
+      // 'Vague' is capitalized to avoid a ForbiddenAttributes error
+      // error cause is unknown
       Vague: aiVague,
       feedbackOther: aiFeedbackOther,
       otherContent: aiOtherContent,
