@@ -2230,6 +2230,8 @@ class User < ApplicationRecord
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
+    # LTI created accounts should not be teacher managed
+    return false if Policies::Lti.lti? self
     # Lastly, we check for oauth.
     !oauth?
   end
