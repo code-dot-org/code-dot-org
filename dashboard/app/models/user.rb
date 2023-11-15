@@ -484,7 +484,7 @@ class User < ApplicationRecord
   # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
-  has_many :teachers, through: :sections_as_student, source: :user
+  has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
