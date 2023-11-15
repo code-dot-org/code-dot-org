@@ -852,10 +852,13 @@ class LevelsHelperTest < ActionView::TestCase
   test 'section first_activity_at should not be nil when finding experiments' do
     Experiment.stubs(:should_cache?).returns true
     teacher = create(:teacher)
-    experiment = create(:teacher_based_experiment,
+    @script = create :script
+    experiment = create(
+      :teacher_based_experiment,
       earliest_section_at: DateTime.now - 1.day,
       latest_section_at: DateTime.now + 1.day,
       percentage: 100,
+      script: @script
     )
     Experiment.update_cache
     section = create(:section, user: teacher)
