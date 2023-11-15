@@ -41,7 +41,7 @@ class SingleSectionExperiment < Experiment
     MAX_COUNT
   end
 
-  validate :validate_max_count
+  validate :validate_max_count, on: :create
 
   def validate_max_count
     errors.add(:base, "cannot have more than #{max_count} records") unless SingleSectionExperiment.count < max_count

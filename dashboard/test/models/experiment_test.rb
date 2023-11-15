@@ -213,6 +213,9 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_raises ActiveRecord::RecordInvalid do
       create :single_section_experiment
     end
+
+    # once record limit is reached, can still update a record
+    SingleSectionExperiment.last.update!(name: 'new-name')
   end
 
   test 'single user experiment is enabled' do
