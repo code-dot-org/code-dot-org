@@ -68,7 +68,7 @@
   cded_try_it: "Prova"
   try_now: "Prova adesso"
   california_heading: "Chiedi alla tua scuola di insegnare informatica"
-  california_text: "Ogni insegnante può offrire i nostri <a href='http://learn.code.org/'>corsi gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>insegnare informatica</a>. Chiedi alle scuole superiori di <a href = 'http://code.org/educate/districts' >collaborare con noi</a>."
+  california_text: "Ogni insegnante può offrire i nostri <a href='https://studio.code.org/'>corsi gratuiti</a>.  Qualsiasi scuola elementare può <a href='http://code.org/educate/k5'>insegnare informatica</a>. Chiedi alle scuole superiori di <a href = 'http://code.org/educate/districts' >collaborare con noi</a>."
   california_button: "Ulteriori informazioni"
   flappy_heading: "Buon Compleanno da Flappy a Code.org"
   flappy_text: "Code.org ha appena compiuto 1 anno di età. <br/> <br/> Festeggia con noi, costruendo la tua versione personalizzata del gioco <b>Flappy</b>. Programma le tue regole e condividile con gli amici!"
