@@ -150,9 +150,20 @@ class RubricsController < ApplicationController
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
+    rubric_ai_evaluation = RubricAiEvaluation.where(
+      rubric_id: @rubric.id,
+      user_id: user_id
+    ).order(updated_at: :desc).first
+
+    status = nil
+    if rubric_ai_evaluation&.status
+      status = rubric_ai_evaluation.status
+    end
+
     attempted = attempted_at
     evaluated = ai_evaluated_at
     render json: {
+      status: status,
       attempted: !!attempted,
       lastAttemptEvaluated: !!attempted && !!evaluated && evaluated >= attempted,
       csrfToken: form_authenticity_token
