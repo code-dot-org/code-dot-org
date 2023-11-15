@@ -11,7 +11,8 @@
     "show_debug_watch": "true",
     "block_pools": [
       "GamelabJr",
-      "ParticlesBlocks"
+      "ParticlesBlocks",
+      "KatiesBlocks"
     ],
     "helper_libraries": [
       "NativeSpriteLab",
@@ -56,7 +57,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2023-10-26T21:43:24.668+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_experimentEvent_test\\\"\"],\"cloned_from\":\"csc_particles_phys_experimentEvent_test\"},{\"changed_at\":\"2023-10-26 21:43:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 21:47:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-26T21:43:24.668+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_experimentEvent_test\\\"\"],\"cloned_from\":\"csc_particles_phys_experimentEvent_test\"},{\"changed_at\":\"2023-10-26 21:43:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-26 21:47:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 18:58:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

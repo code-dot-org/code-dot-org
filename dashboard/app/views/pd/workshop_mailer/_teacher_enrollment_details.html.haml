@@ -55,12 +55,7 @@
 %p
   Thank you,
   %br
-  - if @workshop.course == Pd::Workshop::COURSE_CSF
-    Dave Frye
-    %br
-    Director of Program Development and Operations, Code.org
-  - else
-    = @workshop.organizer.name
+  = @workshop.organizer.name
 
 %p
   P.S. Connect with other computer science teachers on Twitter
