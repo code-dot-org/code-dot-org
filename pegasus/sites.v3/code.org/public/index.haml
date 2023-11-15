@@ -12,6 +12,7 @@ style_min: true
 ---
 :ruby
   @header["title"] = hoc_s(:hoc2020_header)
+  @hoc_data = fetch_hoc_metrics['hoc_country_totals']
 
 =inline_css 'homepage.css'
 =inline_css '/generated/hoc-banner.css'
@@ -26,6 +27,8 @@ style_min: true
 
 #homepage.supreme-container
   = view :homepage_hero
+
+  %p= @hoc_data
 
   - if request.language == "en"
     = view :curriculum_banner

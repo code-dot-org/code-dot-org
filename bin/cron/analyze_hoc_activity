@@ -94,10 +94,8 @@ def main
     data['hoc_company_s'] = 'Other' if data['hoc_company_s'].nil_or_empty?
     hoc_company_totals[data['hoc_company_s']] += 1
 
-    next if row[:processed_data].nil?
-    processed_data = JSON.parse(row[:processed_data])
-    processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
-    hoc_country_totals[processed_data['location_country_code_s']] += 1
+    data['hoc_event_country_s'] = 'Other' if data['hoc_event_country_s'].nil_or_empty?
+    hoc_country_totals[data['hoc_event_country_s']] += 1
   end
 
   Properties.set :hoc_metrics, {
