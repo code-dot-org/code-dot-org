@@ -24,7 +24,7 @@ import javalabConsole, {
   closePhotoPrompter,
   openPhotoPrompter,
 } from './redux/consoleRedux';
-import javalabEditor, {
+import {
   getSources,
   getValidation,
   setAllSourcesAndFileMetadata,
@@ -198,7 +198,7 @@ Javalab.prototype.init = function (config) {
     recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
-  registerReducers({javalab, javalabConsole, javalabEditor, javalabView});
+  registerReducers({javalab, javalabConsole, javalabView});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (this.isStartMode) {
