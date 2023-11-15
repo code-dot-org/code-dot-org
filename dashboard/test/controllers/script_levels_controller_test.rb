@@ -1696,7 +1696,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    experiment = create :single_section_experiment, section: @section
+    experiment = create :single_section_experiment, section: @section, script: script
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(

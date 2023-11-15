@@ -221,6 +221,7 @@ class Ability
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
+        can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
       end
 
       if user.facilitator?

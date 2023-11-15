@@ -10867,6 +10867,7 @@ ko:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -11337,6 +11338,7 @@ ko:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: '새로운 Minecraft Hour of Code: Generation AI에서 AI 기반 발명품을 제작하기 위해 시작을 투자하세요. 책임 있는 AI의 원칙과 함께 문제 해결, 창의력 및 컴퓨팅 사고를 활용하세요. 블록 또는 Python에서의 코딩을 통해, Hour of Code는 누구나 코딩의 기초 및 모두를 위한 더 나은 AI를 구축하는 방법을 배울 수 있습니다.'
   tutorial_bsimage_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_bscomputing_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_stackpython_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -11468,6 +11470,7 @@ ko:
   tutorial_madmobile_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_intelinosmile_string_detail_grades: 프리 리더 -8학년
   tutorial_intelinoaisign_string_detail_grades: 2-8 학년
+  tutorial_generationai_string_detail_grades: 2-5학년(7-10세) 6-8학년(11~13세) 9학년 이상(14세 이상)
   tutorial_bsimage_string_platforms: 크롬, 파이어폭스, 사파리
   tutorial_bscomputing_string_platforms: 언플러그드
   tutorial_stackpython_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드
@@ -11634,6 +11637,7 @@ ko:
   tutorial_madmobile_string_platforms: 모든 최신 브라우저
   tutorial_intelinosmile_string_platforms: 모든 브라우저, iPad, 무선 장치
   tutorial_intelinoaisign_string_platforms: 모든 최신 브라우저
+  tutorial_generationai_string_platforms: 컴퓨터(Windows PC, Mac), Android(Chromebook), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -11765,6 +11769,7 @@ ko:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: 언어와 무관
   tutorial_stackpython_string_detail_programming_languages: 파이썬
@@ -11896,6 +11901,7 @@ ko:
   tutorial_madmobile_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: 블록
   tutorial_intelinoaisign_string_detail_programming_languages: 블록
+  tutorial_generationai_string_detail_programming_languages: 블록, Python
   school_not_found_heading: 귀하의 학교를 찾을 수 없습니다. 더 자세한 정보를 입력하시기 바랍니다.
   school_name: 학교 이름
   school_name_error: 학교 이름은 필수입력항목입니다.

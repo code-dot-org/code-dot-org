@@ -1,12 +1,17 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-10-28T23:46:54.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
       "GamelabJr",
-      "ParticlesBlocks"
+      "ParticlesBlocks",
+      "KatiesBlocks"
     ],
     "helper_libraries": [
       "NativeSpriteLab",
@@ -42,18 +47,12 @@
       "upButton",
       "downButton"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "//validation"
+    "validation_code": "//validation",
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-10-28T23:46:54.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T23:46:54.648+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_observer\\\"\"],\"cloned_from\":\"csc_particles_phys_observer\"},{\"changed_at\":\"2022-10-31 17:23:22 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-28T23:46:54.648+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_observer\\\"\"],\"cloned_from\":\"csc_particles_phys_observer\"},{\"changed_at\":\"2022-10-31 17:23:22 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-11-14 19:01:50 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-14 19:08:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-14 19:08:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-14 19:12:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -64,24 +63,194 @@
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="labSetup"/>
+              <next>
+                <block type="KatiesBlocks_goldilocks">
+                  <field name="CONDITION">"solid"</field>
+                  <field name="SPRITE">"h2o-01"</field>
+                  <statement name="STATEMENT">
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"h2o-01"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get">
+                          <mutation/>
+                          <field name="VAR" id="jittering">jittering</field>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="KatiesBlocks_goldilocks">
+                      <field name="CONDITION">"liquid"</field>
+                      <field name="SPRITE">"h2o-01"</field>
+                      <statement name="STATEMENT">
+                        <block type="gamelab_addBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"h2o-01"</field>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get">
+                              <mutation/>
+                              <field name="VAR" id="wandering">wandering</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="KatiesBlocks_goldilocks">
+                          <field name="CONDITION">"gas"</field>
+                          <field name="SPRITE">"h2o-01"</field>
+                          <statement name="STATEMENT">
+                            <block type="gamelab_addBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"h2o-01"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation/>
+                                  <field name="VAR" id="patrolling">wandering fast</field>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_atTime" deletable="false" editable="false">
-          <field name="UNIT">"seconds"</field>
-          <value name="N">
-            <block type="math_number">
-              <field name="NUM">4</field>
-            </block>
-          </value>
+        <block type="procedures_callnoreturn">
+          <mutation name="labSetup"/>
           <next>
-            <block type="gamelab_spriteSay" deletable="false" editable="false">
-              <field name="SPEECH">Then bring the heat to the water.</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"scientist_2"</field>
+            <block type="variables_set">
+              <field name="VAR">MeltingPoint</field>
+              <value name="VALUE">
+                <block type="math_number">
+                  <field name="NUM">32</field>
                 </block>
               </value>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR">BoilingPoint</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">212</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">LT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">temperature</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">MeltingPoint</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_addBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"h2o-01"</field>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get">
+                              <mutation/>
+                              <field name="VAR" id="jittering">jittering</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if">
+                          <value name="IF0">
+                            <block type="logic_compare">
+                              <field name="OP">LT</field>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <field name="VAR">temperature</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <field name="VAR">BoilingPoint</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_addBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"h2o-01"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation/>
+                                  <field name="VAR" id="wandering">wandering</field>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_if">
+                              <value name="IF0">
+                                <block type="logic_compare">
+                                  <field name="OP">GT</field>
+                                  <value name="A">
+                                    <block type="variables_get">
+                                      <field name="VAR">temperature</field>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="variables_get">
+                                      <field name="VAR">BoilingPoint</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"h2o-01"</field>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_behavior_get">
+                                      <mutation/>
+                                      <field name="VAR" id="patrolling">wandering fast</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -137,6 +306,24 @@
                   </next>
                 </block>
               </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_atTime" deletable="false" editable="false">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">4</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSay" deletable="false" editable="false">
+              <field name="SPEECH">Then bring the heat to the water.</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"scientist_2"</field>
+                </block>
+              </value>
             </block>
           </next>
         </block>

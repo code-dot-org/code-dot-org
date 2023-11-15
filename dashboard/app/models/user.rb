@@ -215,6 +215,8 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
+  has_many :lti_user_identities, dependent: :destroy
+
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -2252,6 +2254,8 @@ class User < ApplicationRecord
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
+    # LTI created accounts should not be teacher managed
+    return false if Policies::Lti.lti? self
     # Lastly, we check for oauth.
     !oauth?
   end
