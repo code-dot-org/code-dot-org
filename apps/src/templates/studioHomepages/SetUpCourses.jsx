@@ -11,7 +11,7 @@ const SetUpCourses = ({isTeacher, hasCourse}) => (
       isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()
     }
     buttonText={i18n.findCourse()}
-    buttonUrl="/courses"
+    buttonUrl={isTeacher ? '/catalog' : '/courses'}
     solidBorder={true}
   />
 );
