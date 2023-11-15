@@ -32,7 +32,7 @@ class Api::V1::SectionInstructorSerializer < ActiveModel::Serializer
   end
 
   def section_name
-    object.section.name
+    object.section&.name
   end
 
   def instructor_name
@@ -40,6 +40,6 @@ class Api::V1::SectionInstructorSerializer < ActiveModel::Serializer
   end
 
   def instructor_email
-    object.instructor.email
+    object.instructor&.email
   end
 end

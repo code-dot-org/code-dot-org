@@ -116,13 +116,8 @@ describe('AddCoteacher', () => {
     const addSavedCoteacherSpy = sinon.spy();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
-      expect(fetchSpy).to.be.calledTwice;
-      let fetchCall = fetchSpy.getCall(0);
-      expect(fetchCall.args[0]).to.equal(
-        `/api/v1/section_instructors/check?email=new-email%40code.org&section_id=1`
-      );
-
-      fetchCall = fetchSpy.getCall(1);
+      expect(fetchSpy).to.be.calledOnce;
+      const fetchCall = fetchSpy.getCall(0);
       expect(fetchCall.args[0]).to.equal(`/api/v1/section_instructors`);
       const fetchCallBody = JSON.parse(fetchCall.args[1].body);
       expect(fetchCallBody.section_id).to.equal(1);
@@ -153,11 +148,7 @@ describe('AddCoteacher', () => {
   });
 
   it('shows error if add call fails', done => {
-    fetchSpy
-      .onFirstCall()
-      .returns(Promise.resolve({ok: true}))
-      .onSecondCall()
-      .returns(Promise.resolve({ok: false}));
+    fetchSpy.returns(Promise.resolve({ok: false}));
 
     const addSavedCoteacherSpy = sinon.spy();
 
@@ -167,17 +158,7 @@ describe('AddCoteacher', () => {
       );
       expect(setCoteachersToAddSpy).not.to.have.been.called;
 
-      expect(fetchSpy).to.be.calledTwice;
-      let fetchCall = fetchSpy.getCall(0);
-      expect(fetchCall.args[0]).to.equal(
-        `/api/v1/section_instructors/check?email=pterodactyl%40code.org&section_id=1`
-      );
-
-      fetchCall = fetchSpy.getCall(1);
-      expect(fetchCall.args[0]).to.equal(`/api/v1/section_instructors`);
-      const fetchCallBody = JSON.parse(fetchCall.args[1].body);
-      expect(fetchCallBody.section_id).to.equal(1);
-      expect(fetchCallBody.email).to.equal('pterodactyl@code.org');
+      expect(fetchSpy).to.be.calledOnce;
 
       expect(addSavedCoteacherSpy).to.not.have.been.called;
     }, done);
