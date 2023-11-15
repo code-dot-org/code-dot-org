@@ -493,21 +493,21 @@ const DanceAiModal: React.FunctionComponent = () => {
 
   const headerValue = () => {
     return (
-      <span
+      <div
         className={moduleStyles.inputsContainer}
         onClick={handleStartOverClick}
       >
         {Array.from(Array(SLOT_COUNT).keys()).map(index => {
           const item = getItem(inputs[index]);
           return (
-            <span key={index} className={moduleStyles.emojiSlot}>
+            <div key={index} className={moduleStyles.emojiSlot}>
               {item && (
                 <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
               )}
-            </span>
+            </div>
           );
         })}
-      </span>
+      </div>
     );
   };
 
@@ -561,15 +561,15 @@ const DanceAiModal: React.FunctionComponent = () => {
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
-        <span className={moduleStyles.headerAreaLeft}>
+        <div className={moduleStyles.headerAreaLeft}>
           <img
             src={aiBotBorder}
             className={moduleStyles.botImage}
             alt={i18n.danceAiModalBotAlt()}
           />
           {headerContent}
-        </span>
-        <span
+        </div>
+        <div
           id="ai-modal-header-area-right"
           className={moduleStyles.headerAreaRight}
         >
@@ -582,7 +582,7 @@ const DanceAiModal: React.FunctionComponent = () => {
             <i className="fa fa-close" aria-hidden={true} />
             <span className="sr-only">{i18n.danceAiModalClose()}</span>
           </button>
-        </span>
+        </div>
       </div>
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
         {mode === Mode.RESULTS && (
@@ -859,7 +859,7 @@ const DanceAiModal: React.FunctionComponent = () => {
         </div>
 
         <div id="buttons-area" className={moduleStyles.buttonsArea}>
-          <span>
+          <div>
             <ModalButton
               currentMode={mode}
               showFor={[Mode.RESULTS]}
@@ -874,8 +874,8 @@ const DanceAiModal: React.FunctionComponent = () => {
               )}
               text={i18n.danceAiModalRegenerateButton()}
             />
-          </span>
-          <span>
+          </div>
+          <div>
             {currentInputSlot >= SLOT_COUNT && (
               <ModalButton
                 currentMode={mode}
@@ -907,7 +907,7 @@ const DanceAiModal: React.FunctionComponent = () => {
                 className={moduleStyles.button}
               />
             )}
-          </span>
+          </div>
         </div>
       </div>
     </AccessibleDialog>
