@@ -155,6 +155,7 @@
   for_students_teacher_led_learning: "For students: Teacher-led learning"
   for_students_teacher_led_lessons: "For students: Teacher-led lessons"
   professional_development: "Professional development"
+  additional_educator_resources: "Additional Educator Resources"
 
   teach_computer_science: "Teach Computer Science"
   explore_our_curriculum: "Explore Our Curriculum"
@@ -8740,7 +8741,7 @@
   tutorial_codeofethicsai_longdescription: "Conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators everywhere."
   tutorial_socimpactofgenaiai_longdescription: "Investigate the impact of generative AI from different perspectives, then collaborate as a team to come up with guidelines that address the most needs from all participants."
   tutorial_generationai_longdescription: "Venture through time to create your AI-powered inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving, creativity, and computational thinking with the principles of Responsible AI. With coding in blocks or Python, Hour of Code allows anyone to learn the basics of coding and how to build a better AI for all."
-  
+
   tutorial_bsimage_string_detail_grades: "Grades 6+"
   tutorial_bscomputing_string_detail_grades: "Grades 6+"
   tutorial_stackpython_string_detail_grades: "Grades 6+"
@@ -9613,6 +9614,7 @@
   hoc_ai_101_for_educators_desc: "Discover the groundbreaking world of artificial intelligence (AI) and its transformative potential in education with our foundational online learning series for teachers."
   hoc_ai_impacts_desc: "Engage your classroom with  teacher-led lessons that explore the impacts of artificial intelligence and invite learners to think of solutions to some of AI's issues."
   hoc_ai_activities_desc: "These all-new Hour of Code activities introduce users to the world of artificial intelligence in a fun, engaging way."
+  hoc_ai_additional_educator_resources_desc: "There is so much to learn about how AI can support you and your students. Check out these courses and tools from partners."
 
   team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."
   careers_page_code_pride_alt_text: "Two feminine-presenting employees smile while holding the ends of a Code.org-branded rainbow banner. Behind them, several people are wearing Code.org shirts and waving rainbow flags while walking alongside a multi-colored Volkswagen bug."
