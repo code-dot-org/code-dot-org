@@ -1,8 +1,7 @@
 <FreeResponse>
   <config><![CDATA[{
-  "published": true,
   "game_id": 52,
-  "created_at": "2023-08-01T18:04:46.000Z",
+  "created_at": "2023-11-14T18:47:16.000Z",
   "level_num": "custom",
   "user_id": 884,
   "properties": {
@@ -21,9 +20,8 @@
     "name_suffix": "_2023",
     "allow_multiple_attempts": "true"
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-08-01T18:04:46.248+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 7 PSP Reflection_2022\\\"\"],\"cloned_from\":\"VPL - CSD Module 7 PSP Reflection_2022\"},{\"changed_at\":\"2023-10-12 18:32:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-10-12 18:32:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-11-14 18:41:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 18:46:46 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "audit_log": "[{\"changed_at\":\"2023-11-14T18:47:16.546+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 7 PSP Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 7 PSP Reflection_2023\"}]"
 }]]></config>
 </FreeResponse>
