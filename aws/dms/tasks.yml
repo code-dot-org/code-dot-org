@@ -24,6 +24,9 @@ cron-pii:
 - dashboard.circuit_playground_discount_codes
 - dashboard.projects
 - dashboard.foorm_%
+- dashboard.learning_goal_ai_evaluations
+- dashboard.learning_goal_teacher_evaluations
+- dashboard.learning_goal_ai_evaluation_feedbacks
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
