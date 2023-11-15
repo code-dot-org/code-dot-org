@@ -53,7 +53,7 @@ configuration. Below is the JSON you can paste directly into the
 
 ```json
 {
-  "title": "Code.org",
+  "title": "TEST-Code.org",
   "description": "Code.org LTI Tool",
   "oidc_initiation_url": "https://studio.code.org/lti/v1/login",
   "target_link_uri": "https://studio.code.org/home",
@@ -69,7 +69,7 @@ configuration. Below is the JSON you can paste directly into the
   ],
   "extensions": [
     {
-      "domain": "https://studio.code.org",
+      "domain": "https://studio.code.org/lti/authenticate",
       "tool_id": "code-dot-org",
       "platform": "canvas.instructure.com",
       "privacy_level": "public",
@@ -78,26 +78,32 @@ configuration. Below is the JSON you can paste directly into the
         "icon_url": "https://studio.code.org/assets/logo-2acd4ebc69c447786b866b98034bb3c0777b5f67cd8bd7955e97bba0b16f2bd1.svg",
         "placements": [
           {
-            "text": "User Navigation Placement",
-            "icon_url": "https://studio.code.org/assets/logo-2acd4ebc69c447786b866b98034bb3c0777b5f67cd8bd7955e97bba0b16f2bd1.svg",
-            "placement": "user_navigation",
+            "text": "Account Navigation Placement",
+            "placement": "account_navigation",
             "message_type": "LtiResourceLinkRequest",
             "target_link_uri": "https://studio.code.org/home",
-            "canvas_icon_class": "icon-lti",
-            "custom_fields": {
-              "user_id": "$Canvas.user.id"
-            }
+            "canvas_icon_class": "icon-lti"
           },
           {
-            "text": "Course Navigation Placement",
-            "icon_url": "https://static.thenounproject.com/png/131630-200.png",
-            "placement": "course_navigation",
+            "text": "Link Selection Placement",
+            "placement": "link_selection",
             "message_type": "LtiResourceLinkRequest",
             "target_link_uri": "https://studio.code.org/home",
-            "canvas_icon_class": "icon-lti",
-            "custom_fields": {
-              "user_id": "$Canvas.user.id"
-            }
+            "canvas_icon_class": "icon-lti"
+          },
+          {
+            "text": "Assignment Menu Placement",
+            "placement": "assignment_menu",
+            "message_type": "LtiResourceLinkRequest",
+            "target_link_uri": "https://studio.code.org/home",
+            "canvas_icon_class": "icon-lti"
+          },
+          {
+            "text": "Assignment Selection Placement",
+            "placement": "assignment_selection",
+            "message_type": "LtiResourceLinkRequest",
+            "target_link_uri": "https://studio.code.org/home",
+            "canvas_icon_class": "icon-lti"
           }
         ]
       }
