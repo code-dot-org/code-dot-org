@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import color from '@cdo/apps/util/color';
 
 export default function InfoHelpTip({id, content}) {
   return (
@@ -36,12 +37,11 @@ const styles = {
   infoToolTipBox: {
     maxWidth: '400px',
     whiteSpace: 'normal',
-    fontFamily: '"Metropolis", sans-serif',
     textAlign: 'left',
   },
   infoToolTipText: {
     fontSize: '13px',
-    color: 'white',
-    marginBottom: '0em',
+    color: color.neutral_white,
+    marginBottom: '0',
   },
 };
