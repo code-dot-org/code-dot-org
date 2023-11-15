@@ -94,6 +94,7 @@ export default function CoteacherSettings({
           setCoteacherToRemove={setCoteacherToRemove}
           removeSavedCoteacher={removeSavedCoteacher}
           setCoteachersToAdd={setCoteachersToAdd}
+          sectionId={sectionId}
         />
       </div>
     </div>

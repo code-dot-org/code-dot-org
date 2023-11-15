@@ -13,6 +13,7 @@ export default function RemoveCoteacherDialog({
   setCoteacherToRemove,
   removeSavedCoteacher,
   setCoteachersToAdd,
+  sectionId,
 }) {
   const closeRemoveDialog = useCallback(() => {
     setCoteacherToRemove(null);
@@ -34,13 +35,15 @@ export default function RemoveCoteacherDialog({
         method: 'DELETE',
       }).then(response => {
         if (response.ok) {
-          analyticsReporter.sendEvent(EVENTS.COTEACHER_REMOVED, {});
+          analyticsReporter.sendEvent(EVENTS.COTEACHER_REMOVED, {
+            sectionId: sectionId,
+          });
           removeSavedCoteacher(coteacher.id);
         }
         closeRemoveDialog();
       });
     },
-    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
+    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher, sectionId]
   );
 
   return (
@@ -81,4 +84,5 @@ RemoveCoteacherDialog.propTypes = {
   setCoteacherToRemove: PropTypes.func.isRequired,
   removeSavedCoteacher: PropTypes.func.isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
+  sectionId: PropTypes.number,
 };
