@@ -132,7 +132,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :new
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollment form' do
     # Note - organizers can see the form, but cannot enroll in their own workshops.
     # This is tested in 'creating an enrollment with email match from organizer renders own view'
