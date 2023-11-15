@@ -20,7 +20,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   # Get the set of sections taught by the current user
   def index
     prevent_caching
-    render json: current_user.sections_owned_or_instructed.map(&:summarize_without_students)
+    render json: current_user.sections_instructed.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
