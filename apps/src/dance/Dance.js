@@ -39,7 +39,7 @@ import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {ErrorFallbackPage} from '@cdo/apps/lab2/views/Lab2Wrapper';
+import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 
 const ButtonState = {
   UP: 0,
@@ -180,14 +180,22 @@ Dance.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <ErrorBoundary
+        // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
         fallback={<ErrorFallbackPage />}
-        onError={(error, componentStack) =>
-          Lab2MetricsReporter.logError('Dance Party Error', error, {
+        onError={(error, componentStack) => {
+          const state = getStore().getState();
+          Lab2MetricsReporter.updateProperties({
+            appName: 'dance',
+            channelId: state.pageConstants.channelId,
+            currentLevelId: state.progress.currentLevelId,
+            scriptId: state.progress.scriptId,
+            userId: state.currentUser.userId,
+          });
+          Lab2MetricsReporter.logError('Uncaught React Error', error, {
             componentStack,
-          })
-        }
+          });
+        }}
       >
-        >
         <AppView
           visualizationColumn={
             <DanceVisualizationColumn
