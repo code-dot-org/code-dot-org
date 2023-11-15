@@ -5,6 +5,8 @@ Feature: Hamburger dropdown
   Scenario: Signed-out user sees the hamburger on mobile
     Given I am on "http://code.org/"
     And I open my eyes to test "Hamburger Menu in English Signed-out"
+    And I rotate to portrait
+    And I wait for 0.5 seconds
     Then I wait until element "#hamburger" is visible
     And I click selector "#hamburger"
     And I see no difference for "Hamburger Menu: English Signed-out"
@@ -25,6 +27,7 @@ Feature: Hamburger dropdown
   Scenario: Student user sees the Teach dropdown in hamburger
     Given I create a student named "Sally Student" and go home
     And I open my eyes to test "Teach dropdown in English Student"
+    And I rotate to portrait
     Then I wait until element "#hamburger-icon" is visible
     And I click selector "#hamburger-icon"
     Then I wait until element "#educate_entries" is visible
@@ -41,13 +44,14 @@ Feature: Hamburger dropdown
     And I see no difference for "Legal Entries Hamburger Menu: English Student"
     And I close my eyes
 
-
+  @no_mobile
   Scenario: Signed out user in English should not see hamburger on desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
 
+  @no_mobile
   Scenario: Student viewing hamburger dropdown and help button dropdown in English on desktop
     Given I create a student named "Sally Student" and go home
     Then I wait to see "#hamburger-icon"
@@ -64,6 +68,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
 
+  @no_mobile
   Scenario: Teacher viewing hamburger dropdown (with expanded options) and help button dropdown in English on desktop
     Given I create a teacher named "Tessa Teacher" and go home
     Then I wait to see "#hamburger-icon"
@@ -85,6 +90,7 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see "#teacher-community"
 
+  @no_mobile
   Scenario: Applab-specific help links
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/projects/applab/new"
@@ -94,6 +100,7 @@ Feature: Hamburger dropdown
     And I see "#applab-docs"
     And I see "#applab-tutorials"
 
+  @no_mobile
   Scenario: Gamelab-specific help links
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/projects/gamelab/new"
@@ -102,6 +109,7 @@ Feature: Hamburger dropdown
     Then I wait to see "#help-contents"
     And I see "#gamelab-docs"
 
+  @no_mobile
   Scenario: Student viewing hamburger dropdown and help button in English on desktop on level
     Given I create a student named "Sally Student"
     And I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
@@ -121,7 +129,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
   
-
+  @no_mobile
   Scenario: Teacher viewing hamburger dropdown and help button in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
@@ -142,6 +150,7 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see "#teacher-community"
  
+@no_mobile
 Scenario: Signed out user viewing help dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
@@ -155,6 +164,7 @@ Scenario: Signed out user viewing help dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
+@no_mobile
 Scenario: Student viewing help dropdown in Spanish on desktop
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/home/lang/es"
@@ -169,6 +179,7 @@ Scenario: Student viewing help dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
+@no_mobile
 Scenario: Teacher viewing help dropdown in Spanish on desktop
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/home/lang/es"
@@ -182,6 +193,7 @@ Scenario: Teacher viewing help dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
+@no_mobile
 Scenario: Student viewing help dropdown in Spanish on desktop on level
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1/lang/es"
@@ -194,6 +206,7 @@ Scenario: Student viewing help dropdown in Spanish on desktop on level
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
+@no_mobile
 Scenario: Teacher viewing help dropdown in Spanish on desktop on level
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1/lang/es"
