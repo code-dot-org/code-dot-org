@@ -4,12 +4,12 @@ import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-export interface AiTutorState {
+export interface AITutorState {
   aiResponse: string | undefined;
   isWaitingForAIResponse: boolean;
 }
 
-const initialState: AiTutorState = {
+const initialState: AITutorState = {
   aiResponse: '',
   isWaitingForAIResponse: false,
 };
