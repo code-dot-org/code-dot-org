@@ -1858,6 +1858,12 @@ class UserTest < ActiveSupport::TestCase
     assert user.can_delete_own_account?
   end
 
+  test 'can delete own account if LTI student' do
+    user = create :student, :with_lti_authentication_option
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
   test 'cannot delete own account if teacher-managed student' do
     user = create :student_in_picture_section
     assert user.teacher_managed_account?

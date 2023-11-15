@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_14_173245) do
+ActiveRecord::Schema.define(version: 2023_11_14_211036) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -877,6 +877,8 @@ ActiveRecord::Schema.define(version: 2023_11_14_173245) do
     t.string "lms_section_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_lti_sections_on_deleted_at"
     t.index ["lti_course_id"], name: "index_lti_sections_on_lti_course_id"
     t.index ["section_id"], name: "index_lti_sections_on_section_id"
   end

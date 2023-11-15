@@ -87,7 +87,7 @@ export default function AddCoteacher({
 
   const saveCoteacher = useCallback(
     (email, sectionId) => {
-      return fetch(`/api/v1/section_instructors`, {
+      fetch(`/api/v1/section_instructors`, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
@@ -97,42 +97,21 @@ export default function AddCoteacher({
           section_id: sectionId,
           email: email,
         }),
-      }).then(response => {
-        if (response.ok) {
-          return response.json().then(json => {
-            const newCoteacher = convertAddCoteacherResponse(json);
-            analyticsReporter.sendEvent(
-              EVENTS.COTEACHER_INVITE_SENT,
-              sectionMetricInformation
-            );
-            addSavedCoteacher(newCoteacher);
-            return '';
-          });
-        }
-
-        return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
-      });
-    },
-    [addSavedCoteacher, sectionMetricInformation]
-  );
-
-  const handleAddEmail = useCallback(
-    e => {
-      e.preventDefault();
-      const newEmail = inputValue.trim();
-      getInputErrorMessage(newEmail, coteachersToAdd, sectionId)
-        .then(errorMessage => {
-          if (errorMessage === '') {
-            if (!sectionId) {
-              setCoteachersToAdd(existing => [newEmail, ...existing]);
-              return Promise.resolve('');
-            } else {
-              // Save coteacher only if we are editing an existing section.
-              return saveCoteacher(newEmail, sectionId);
-            }
+      })
+        .then(response => {
+          if (response.ok) {
+            return response.json().then(json => {
+              const newCoteacher = convertAddCoteacherResponse(json);
+              analyticsReporter.sendEvent(
+                EVENTS.COTEACHER_INVITE_SENT,
+                sectionMetricInformation
+              );
+              addSavedCoteacher(newCoteacher);
+              return '';
+            });
           }
 
-          return Promise.resolve(errorMessage);
+          return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
         })
         .then(errorMessage => {
           setAddError(errorMessage);
@@ -145,15 +124,40 @@ export default function AddCoteacher({
           }
         });
     },
-    [
-      setCoteachersToAdd,
-      setAddError,
-      inputValue,
-      setInputValue,
-      sectionId,
-      coteachersToAdd,
-      saveCoteacher,
-    ]
+    [addSavedCoteacher, setAddError, setInputValue, sectionMetricInformation]
+  );
+
+  const validateAndAddUnsavedCoteacher = useCallback(
+    email => {
+      getInputErrorMessage(email, coteachersToAdd, sectionId).then(
+        errorMessage => {
+          if (errorMessage === '') {
+            setCoteachersToAdd(existing => [email, ...existing]);
+            setInputValue('');
+          } else {
+            analyticsReporter.sendEvent(EVENTS.COTEACHER_EMAIL_INVALID, {
+              sectionId: sectionId,
+            });
+          }
+          setAddError(errorMessage);
+        }
+      );
+    },
+    [setAddError, setInputValue, setCoteachersToAdd, coteachersToAdd, sectionId]
+  );
+
+  const handleAddEmail = useCallback(
+    e => {
+      e.preventDefault();
+      const newEmail = inputValue.trim();
+      if (!sectionId) {
+        validateAndAddUnsavedCoteacher(newEmail);
+      } else {
+        // Save coteacher only if we are editing an existing section.
+        return saveCoteacher(newEmail, sectionId);
+      }
+    },
+    [validateAndAddUnsavedCoteacher, inputValue, sectionId, saveCoteacher]
   );
 
   const handleInputChange = useCallback(
