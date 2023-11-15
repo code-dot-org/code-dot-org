@@ -107,7 +107,7 @@ const getImageUrl = (id: string) => {
 };
 
 interface DanceAiModalProps {
-  playSound: (name: string) => void;
+  playSound: (name: string, options?: object) => void;
 }
 
 const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
@@ -287,6 +287,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       // Remove item from inputs.
       setInputs(inputs.filter(input => input !== id));
       setCurrentInputSlot(currentInputSlot - 1);
+
+      playSound('ai-deselect-emoji');
     }
   };
 
@@ -375,9 +377,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     if (mode === Mode.GENERATING) {
       if (generatingProgress.subStep === 2) {
         if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
-          playSound('ai-generate-no');
+          playSound('ai-generate-no', {volume: 0.25});
         } else {
-          playSound('ai-generate-yes');
+          playSound('ai-generate-yes', {volume: 0.25});
         }
       }
     }
