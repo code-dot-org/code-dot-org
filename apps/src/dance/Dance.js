@@ -23,6 +23,8 @@ import {
   setAiOutput,
 } from './danceRedux';
 import trackEvent from '../util/trackEvent';
+import analyticsReporter from '../lib/util/AnalyticsReporter';
+import {EVENTS} from '../lib/util/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
@@ -236,11 +238,19 @@ Dance.prototype.initSongs = async function (config) {
           config.level.selectedSong = songId;
         }
       },
-      onSongUnavailable: () => {
+      onSongUnavailable: songId => {
         this.songUnavailableAlert = this.studioApp_.displayPlayspaceAlert(
           'warning',
           React.createElement('div', {}, danceMsg.danceSongNoLongerSupported())
         );
+
+        const {isReadOnlyWorkspace, channelId} =
+          getStore().getState().pageConstants;
+        analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_SONG_UNAVAILABLE, {
+          songId,
+          viewerOwnsProject: !isReadOnlyWorkspace,
+          channelId,
+        });
       },
     })
   );
