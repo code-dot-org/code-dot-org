@@ -8597,6 +8597,7 @@
   tutorial_algorithmicbiasai_name: "Algorithmic Bias"
   tutorial_codeofethicsai_name: "Our AI Code of Ethics"
   tutorial_socimpactofgenaiai_name: "Societal Impact of Generative AI"
+  tutorial_generationai_name: "Generation AI"
 
   tutorial_bsimage_longdescription: "In this lesson students engage with a series of scaffolded self-paced activities in our Parley editor that introduce them to the Pyret programming language, image-producing functions, defining values and image placement using coordinates. By the end they'll be able to modify code to solve a puzzle that generates a snowman scene!  Students looking for a challenge can even add their own elements."
   tutorial_bscomputing_longdescription: "Free downloadable Poster Series and accompanying lesson in which students learn about a diverse group of pioneers in computing and consider the problem solving advantages that diverse teams foster."
@@ -8738,7 +8739,8 @@
   tutorial_algorithmicbiasai_longdescription: "Practice cropping images to uncover the bias underlying the Twitter cropping algorithm, then read and watch a video about the discovery of this biased algorithm.  Finally, discuss ways to recognize and reduce bias in algorithms."
   tutorial_codeofethicsai_longdescription: "Conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators everywhere."
   tutorial_socimpactofgenaiai_longdescription: "Investigate the impact of generative AI from different perspectives, then collaborate as a team to come up with guidelines that address the most needs from all participants."
-
+  tutorial_generationai_longdescription: "Venture through time to create your AI-powered inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving, creativity, and computational thinking with the principles of Responsible AI. With coding in blocks or Python, Hour of Code allows anyone to learn the basics of coding and how to build a better AI for all."
+  
   tutorial_bsimage_string_detail_grades: "Grades 6+"
   tutorial_bscomputing_string_detail_grades: "Grades 6+"
   tutorial_stackpython_string_detail_grades: "Grades 6+"
@@ -8879,6 +8881,7 @@
   tutorial_algorithmicbiasai_string_detail_grades: "Grades 6+"
   tutorial_codeofethicsai_string_detail_grades: "Grades 6+"
   tutorial_socimpactofgenaiai_string_detail_grades: "Grades 6+"
+  tutorial_generationai_string_detail_grades: "Grades 2+"
 
   tutorial_bsimage_string_platforms: "Chrome, Firefox, Safari"
   tutorial_bscomputing_string_platforms: "Unplugged"
@@ -9020,6 +9023,7 @@
   tutorial_algorithmicbiasai_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_codeofethicsai_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_socimpactofgenaiai_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
+  tutorial_generationai_string_platforms: "Android tablet, iPad, Windows phone, Android phone, iPhone"
 
   tutorial_bsimage_string_detail_platforms: ""
   tutorial_bscomputing_string_detail_platforms: ""
@@ -9161,6 +9165,7 @@
   tutorial_algorithmicbiasai_string_detail_platforms: ""
   tutorial_codeofethicsai_string_detail_platforms: ""
   tutorial_socimpactofgenaiai_string_detail_platforms: ""
+  tutorial_generationai_string_detail_platforms: ""
 
   tutorial_bsimage_string_detail_programming_languages: "Pyret"
   tutorial_bscomputing_string_detail_programming_languages: "Language independent"
@@ -9302,6 +9307,7 @@
   tutorial_algorithmicbiasai_string_detail_programming_languages: "Language independent"
   tutorial_codeofethicsai_string_detail_programming_languages: "Language independent"
   tutorial_socimpactofgenaiai_string_detail_programming_languages: "Language independent"
+  tutorial_generationai_string_detail_programming_languages: "Blocks, Python"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

@@ -13461,6 +13461,7 @@ da:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13931,6 +13932,7 @@ da:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: 'Rejs gennem tiden for at skabe dine AI-drevne opfindelser i det nye Minecraft Hour of Code: Generation AI. Brug problemløsning, kreativitet og computationel tankegang med principperne for ansvarligt AI. Med kodning i blokke eller Python giver Hour of Code alle mulighed for at lære det grundlæggende i kodning, og hvordan man bygger en bedre AI for alle.'
   tutorial_bsimage_string_detail_grades: Grad 6 og derover
   tutorial_bscomputing_string_detail_grades: Grad 6 og derover
   tutorial_stackpython_string_detail_grades: Grad 6 og derover
@@ -14062,6 +14064,7 @@ da:
   tutorial_madmobile_string_detail_grades: Grad 6 og derover
   tutorial_intelinosmile_string_detail_grades: Pre-reader - 8. klasse
   tutorial_intelinoaisign_string_detail_grades: Fra 2 til 8 klasse
+  tutorial_generationai_string_detail_grades: 2.-5. klasse (7-10 år) 6.-8. klasse (11-13 år) 9. klasse og derover (14+ år)
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Unplugged
   tutorial_stackpython_string_platforms: Alle moderne browsere, Android tablet, iPad,
@@ -14232,6 +14235,7 @@ da:
   tutorial_madmobile_string_platforms: Alle moderne browsere
   tutorial_intelinosmile_string_platforms: Alle moderne browsere, iPad
   tutorial_intelinoaisign_string_platforms: Alle moderne browsere
+  tutorial_generationai_string_platforms: Computere (Windows pc, Mac), Android (Chromebooks), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14363,6 +14367,7 @@ da:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Uafhængig af sprog
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14494,6 +14499,7 @@ da:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Blokke
   tutorial_intelinoaisign_string_detail_programming_languages: Blokke
+  tutorial_generationai_string_detail_programming_languages: Blokke, Python
   school_not_found_heading: Vi kunne ikke finde din skole. Indtast venligst flere
     oplysninger.
   school_name: Skolens navn
