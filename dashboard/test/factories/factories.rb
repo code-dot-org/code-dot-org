@@ -524,6 +524,18 @@ FactoryBot.define do
       end
     end
 
+    trait :with_lti_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::LTI_V1,
+          authentication_id: 'https://lms.fake|12345|abcdef',
+        )
+      end
+    end
+
     trait :with_puzzles do
       transient do
         num_puzzles {1}
