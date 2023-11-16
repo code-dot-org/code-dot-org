@@ -11,12 +11,22 @@ $ai-modal-border-width: 8px;
 
 @keyframes preview-right-to-normal {
   0% {
-    left: 72%;
+    left: 52%;
   }
   100% {
-    left: 70%;
+    left: 50%;
   }
 }
+
+@keyframes appear-disappear {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 
 // Emoji moves across linearly but downwards with acceleration.
 @keyframes flying-emoji-x {
@@ -51,7 +61,7 @@ $ai-modal-border-width: 8px;
 .dialog {
   max-width: initial !important;
   width: 824px !important;
-  height: 514px;
+  height: 508px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
@@ -132,6 +142,7 @@ $ai-modal-border-width: 8px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
+      animation: appear 0.3s;
 
       span {
         button {
@@ -148,7 +159,7 @@ $ai-modal-border-width: 8px;
     .textArea {
       position: absolute;
       width: calc(100% - 30px);
-      top: 353px;
+      top: 345px;
       text-align: center;
       font-size: 16px;
       transform: translateX(-50%);
@@ -158,6 +169,7 @@ $ai-modal-border-width: 8px;
       border-top: solid 1px $neutral_dark30;
       border-bottom: solid 1px $neutral_dark30;
       white-space: pre-wrap;
+      animation: appear 0.3s;
 
       .text {
         animation: appear 0.2s;
@@ -213,6 +225,7 @@ $ai-modal-border-width: 8px;
           transform-origin: bottom left;
           transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
+          pointer-events: none;
 
           &Open {
             transform: rotate(-60deg);
@@ -225,6 +238,7 @@ $ai-modal-border-width: 8px;
           left: 50%;
           position: absolute;
           top: 100px;
+          pointer-events: none;
         }
 
         animation: appear 0.5s;
@@ -253,10 +267,17 @@ $ai-modal-border-width: 8px;
       align-items: center;
       margin-top: 10px;
       transition: left 1.5s, box-shadow 0.3s;
+      left: 50%;
 
       &Generating {
-        animation: appear 0.7s, preview-right-to-normal 0.7s;
-        left: 70%;
+
+        /*animation: appear 2s*/ /*, preview-right-to-normal 0.5s*/;
+        /*left: 70%;*/
+        /*opacity: 0.4;*/
+      }
+
+      &Generated {
+        animation: appear 2s ease-in;
       }
 
       &Results {
@@ -272,6 +293,10 @@ $ai-modal-border-width: 8px;
       &No {
         box-shadow: 0 0 0 2px $no-color;
         border-radius: 4px;
+      }
+
+      .previewContainer {
+        animation: appear 0.3s;
       }
 
       .flipCard {
@@ -297,15 +322,15 @@ $ai-modal-border-width: 8px;
         &Back {
           position: absolute;
           backface-visibility: hidden;
-          left: 50%;
+          /*left: 50%;*/
         }
 
         &Front {
-          transform: translateX(-50%);
+          /*transform: translateX(-50%);*/
         }
 
         &Back {
-          transform: rotateY(180deg) translateX(50%);
+          transform: rotateY(180deg) /* translateX(50%)*/;
 
           .blockPreview {
             margin-top: 50px;
@@ -407,6 +432,7 @@ $ai-modal-border-width: 8px;
 
   .button {
     font-size: 16px;
+    animation: appear 0.3s;
 
     &:disabled {
       pointer-events: none;
