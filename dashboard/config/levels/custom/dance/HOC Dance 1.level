@@ -54,11 +54,7 @@
       "https://curriculum.code.org/images/sprites/spritesheet_sm/MOOSE_Drop.png",
       "https://curriculum.code.org/images/sprites/spritesheet_sm/MOOSE_Floss.png"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
+    "callout_json": "[{\"localization_key\":\"\",\"callout_text\":\"Add this block to your program!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"2\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom left\",\"at\":\"top center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"2\\\"]\",\"localization_key\":\"\",\"callout_text\":\"Add this block to your program!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom left\",\"at\":\"top center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "default_song": "hammer",
     "long_instructions": "Let's get this moose dancing!\r\n\r\nAdd the <xml>\r\n  <block type=\"Dancelab_changeMoveLR\">\r\n    <title name=\"SPRITE\">dancer1</title>\r\n    <title name=\"MOVE\" config=\"MOVES.Dab,MOVES.Drop,MOVES.Floss\">MOVES.Floss</title>\r\n    <title name=\"DIR\">-1</title>\r\n  </block>\r\n  </xml> block onto the <xml>\r\n  <block type=\"Dancelab_atTimestamp\">\r\n    <title name=\"TIMESTAMP\">4</title>\r\n    <title name=\"UNIT\">\"measures\"</title>\r\n  </block>\r\n  </xml> block to make it start flossing after the fourth measure.\r\n  \r\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long."
   },
@@ -94,7 +90,7 @@
           <title name="NAME">dancer1</title>
           <title name="LOCATION">{x: 200, y: 100}</title>
         </block>
-        <block type="Dancelab_changeMoveLR">
+        <block type="Dancelab_changeMoveLR" id="2">
           <title name="SPRITE">dancer1</title>
           <title name="MOVE" config="MOVES.Dab,MOVES.Drop,MOVES.Floss">MOVES.Floss</title>
           <title name="DIR">-1</title>
