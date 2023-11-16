@@ -39,6 +39,11 @@ layout: wide_index
     = view :"ai/ai_section_intro", overline_label: hoc_s(:for_students_teacher_led_lessons), section_heading: hoc_s(:learn_about_ai_impacts), section_desc: hoc_s(:hoc_ai_impacts_desc)
     = view :"ai/impacts_of_ai_blocks"
 
+    %hr
+
+    = view :"ai/ai_section_intro", overline_label: hoc_s(:for_educators_heading), section_heading: hoc_s(:additional_educator_resources), section_desc: hoc_s(:hoc_ai_additional_educator_resources_desc)
+    = view :"ai/ai_educator_resources"
+
 %section.activities.bg-neutral-light
   .wrapper.centered
     = view :"ai/ai_section_intro", overline_label: hoc_s(:for_everyone), section_heading: hoc_s(:hoc_ai_activities), section_desc: hoc_s(:hoc_ai_activities_desc)
