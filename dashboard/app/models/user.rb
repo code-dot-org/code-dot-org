@@ -78,6 +78,7 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
+require 'policies/lti'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -142,6 +143,7 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    sort_by_family_name
   )
 
   attr_accessor(
@@ -210,7 +212,10 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
+  accepts_nested_attributes_for :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
+
+  has_many :lti_user_identities, dependent: :destroy
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -473,13 +478,7 @@ class User < ApplicationRecord
 
   has_many :section_instructors, foreign_key: 'instructor_id'
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, through: :active_section_instructors, source: :section
-
-  # TODO once the backfill creates SectionInstructors for every section owner,
-  # this method can be deleted and its references replaced by sections_instructed
-  def sections_owned_or_instructed
-    (sections + sections_instructed).uniq
-  end
+  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
 
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
@@ -879,7 +878,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      user.attributes = params
+      user.attributes = user.attributes.merge(params) {|_key, old_val, new_val| new_val.presence || old_val}.compact
     end
   end
 
@@ -939,6 +938,7 @@ class User < ApplicationRecord
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
+    return false if Policies::Lti.lti? self
     true
   end
 
@@ -1522,6 +1522,10 @@ class User < ApplicationRecord
 
   def mute_music?
     !!mute_music
+  end
+
+  def sort_by_family_name?
+    !!sort_by_family_name
   end
 
   def generate_username
@@ -2220,6 +2224,8 @@ class User < ApplicationRecord
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
+    # LTI created accounts should not be teacher managed
+    return false if Policies::Lti.lti? self
     # Lastly, we check for oauth.
     !oauth?
   end

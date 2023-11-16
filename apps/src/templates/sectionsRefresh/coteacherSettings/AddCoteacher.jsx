@@ -7,8 +7,12 @@ import classNames from 'classnames';
 import {Figcaption} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
+import $ from 'jquery';
 
 import styles from './coteacher-settings.module.scss';
+import {convertAddCoteacherResponse} from './CoteacherUtils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   if (email === '') {
@@ -20,12 +24,11 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
   if (coteachersToAdd.some(coteacher => coteacher === email)) {
     return Promise.resolve(i18n.coteacherAddAlreadyExists({email}));
   }
-
   return fetch(
     `/api/v1/section_instructors/check?email=${encodeURIComponent(email)}` +
-      (sectionId && `&section_id=${sectionId}`),
+      (sectionId ? `&section_id=${sectionId}` : ''),
     {
-      type: 'GET',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
       },
@@ -34,27 +37,39 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
     if (response.ok) {
       return '';
     }
-    if (response.errorThrown === 'Not Found') {
+    if (response.status === 404) {
       return i18n.coteacherAddNoAccount({email});
     }
-    if (response.errorThrown === 'Forbidden') {
+    if (response.status === 403) {
       return i18n.coteacherUnableToEditCoteachers();
     }
 
-    return response.json().then(json => {
-      if (json.error.includes('already invited')) {
-        return i18n.coteacherAddAlreadyExists({email});
-      }
-      if (json.error.includes('section full')) {
-        return i18n.coteacherAddSectionFull();
-      }
-      if (json.error.includes('inviting self')) {
-        return i18n.coteacherCannotInviteSelf();
-      }
-      return i18n.coteacherUnknownValidationError({
-        email,
+    return response
+      .json()
+      .then(json => {
+        if (json.error.includes('already invited')) {
+          return i18n.coteacherAddAlreadyExists({email});
+        }
+        if (json.error.includes('section full')) {
+          return i18n.coteacherAddSectionFull();
+        }
+        if (json.error.includes('inviting self')) {
+          return i18n.coteacherCannotInviteSelf();
+        }
+        if (json.error.includes('already in section')) {
+          return i18n.coteacherAlreadyInCourse({email});
+        }
+        console.error('Coteacher validation error', response);
+        return i18n.coteacherUnknownValidationError({
+          email,
+        });
+      })
+      .catch(e => {
+        console.error('Coteacher validation error', e, response);
+        return i18n.coteacherUnknownValidationError({
+          email,
+        });
       });
-    });
   });
 };
 
@@ -63,34 +78,86 @@ export default function AddCoteacher({
   numCoteachers,
   coteachersToAdd,
   setCoteachersToAdd,
+  addSavedCoteacher,
   addError,
   setAddError,
+  sectionMetricInformation,
 }) {
   const [inputValue, setInputValue] = useState('');
+
+  const saveCoteacher = useCallback(
+    (email, sectionId) => {
+      fetch(`/api/v1/section_instructors`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+        },
+        body: JSON.stringify({
+          section_id: sectionId,
+          email: email,
+        }),
+      })
+        .then(response => {
+          if (response.ok) {
+            return response.json().then(json => {
+              const newCoteacher = convertAddCoteacherResponse(json);
+              analyticsReporter.sendEvent(
+                EVENTS.COTEACHER_INVITE_SENT,
+                sectionMetricInformation
+              );
+              addSavedCoteacher(newCoteacher);
+              return '';
+            });
+          }
+
+          return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
+        })
+        .then(errorMessage => {
+          setAddError(errorMessage);
+          if (errorMessage === '') {
+            setInputValue('');
+          } else {
+            analyticsReporter.sendEvent(EVENTS.COTEACHER_EMAIL_INVALID, {
+              sectionId: sectionId,
+            });
+          }
+        });
+    },
+    [addSavedCoteacher, setAddError, setInputValue, sectionMetricInformation]
+  );
+
+  const validateAndAddUnsavedCoteacher = useCallback(
+    email => {
+      getInputErrorMessage(email, coteachersToAdd, sectionId).then(
+        errorMessage => {
+          if (errorMessage === '') {
+            setCoteachersToAdd(existing => [email, ...existing]);
+            setInputValue('');
+          } else {
+            analyticsReporter.sendEvent(EVENTS.COTEACHER_EMAIL_INVALID, {
+              sectionId: sectionId,
+            });
+          }
+          setAddError(errorMessage);
+        }
+      );
+    },
+    [setAddError, setInputValue, setCoteachersToAdd, coteachersToAdd, sectionId]
+  );
 
   const handleAddEmail = useCallback(
     e => {
       e.preventDefault();
       const newEmail = inputValue.trim();
-      getInputErrorMessage(newEmail, coteachersToAdd, sectionId).then(
-        errorMessage => {
-          setAddError(errorMessage);
-
-          if (errorMessage === '') {
-            setCoteachersToAdd(existing => [newEmail, ...existing]);
-            setInputValue('');
-          }
-        }
-      );
+      if (!sectionId) {
+        validateAndAddUnsavedCoteacher(newEmail);
+      } else {
+        // Save coteacher only if we are editing an existing section.
+        return saveCoteacher(newEmail, sectionId);
+      }
     },
-    [
-      setCoteachersToAdd,
-      setAddError,
-      inputValue,
-      setInputValue,
-      sectionId,
-      coteachersToAdd,
-    ]
+    [validateAndAddUnsavedCoteacher, inputValue, sectionId, saveCoteacher]
   );
 
   const handleInputChange = useCallback(
@@ -164,5 +231,7 @@ AddCoteacher.propTypes = {
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string).isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
   addError: PropTypes.string,
+  addSavedCoteacher: PropTypes.func.isRequired,
   setAddError: PropTypes.func.isRequired,
+  sectionMetricInformation: PropTypes.object,
 };

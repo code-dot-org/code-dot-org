@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Tilbake",
+  "danceAiModalClose": "Lukk",
+  "danceAiModalCodeButton": "Kode",
+  "danceAiModalExplanationButton": "Lær meir",
   "danceFeedbackDidntPress": "Sørg for å trykke på piltastane dine under dansen.",
   "danceFeedbackKeepCoding": "Du bruker alle dei nødvendige blokkene, men ikkje på rett måte.",
   "danceFeedbackKeyEvent": "Sørg for at du legg til noko kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"opp\"</title></block></xml>-blokka og trykker under dansen.",

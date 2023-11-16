@@ -49,17 +49,20 @@
   }
 }
 
-.action-block.action-block--two-col {
-  .media-wrapper {
-    & > * {
-      margin: 1rem;
-      width: calc(100% - 1rem);
+.see-all-activities {
+  margin: 3rem auto;
+  justify-content: space-between;
 
-      @media (max-width: $width-md) {
-        margin: 0;
-        width: 100%;
-      }
+  @media screen and (max-width: $width-md) {
+    justify-content: center;
+  }
+
+  img {
+    max-width: 175px;
+    border-radius: 4px;
+
+    @media screen and (max-width: $width-sm) {
+      width: 135px;
     }
   }
 }
-

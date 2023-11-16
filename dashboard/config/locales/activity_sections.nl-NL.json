@@ -4905,7 +4905,8 @@
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
           "tips": [
             null
-          ]
+          ],
+          "name": "Project aan het einde van de cursus"
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Introductie"
@@ -10517,7 +10518,8 @@
         "db17d2d5-30dc-4b19-a5e6-543602d3d52e": {
           "tips": [
             null
-          ]
+          ],
+          "name": "Project aan het einde van de cursus"
         },
         "558c0510-2a0d-4302-82d1-98f221ecec6f": {
           "name": "Reflectie"
@@ -16943,7 +16945,8 @@
         "decdc97f-3b16-4d83-985a-bdf9a1371ae5": {
           "tips": [
             null
-          ]
+          ],
+          "name": "Project aan het einde van de cursus"
         },
         "c566eb7b-3737-43e3-a619-571046014834": {
           "name": "Reflectie"
@@ -18994,6 +18997,46 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Afronden"
+        },
+        "3c242de5-2944-4439-a772-10f0e2bfd48a": {
+          "description": "\\*\\*Doe dit: \\*\\* Laat de leerlingen de verstrekte code lezen en een voorspelling doen over wat er gaat gebeuren. Nadat je op „Start” hebt gedrukt, geef je de leerlingen de tijd om na te denken over alles wat ze interessant vonden of dat hen verbaasde."
+        },
+        "3d069458-2202-468d-8728-9bfafa300eb7": {
+          "description": "\\*\\*Bespreek: \\*\\* Wat waren de meest interessante keuzes die je met deze apps hebt kunnen maken? Was er een moment waarop je iets in de app had willen veranderen, maar dat je de keuze niet kreeg?\n\n\\*\\*Vraag: \\*\\* Denk aan een app die je hebt gebruikt en bedenk een manier om deze te verbeteren door de gebruiker meer keuzes te geven.\n\nAls er voldoende tijd beschikbaar is kan je onderstaande methodes gebruiken om de studenten te laten nadenken over bovenstaande vragen:\n\n-   Laat vrijwilligers ideeën aandragen in een gesprek met de hele groep.\n-   Neem deel aan een kleine discussie met paren of kleine groepen."
+        },
+        "25d0dd9f-5a89-4a91-a3de-aba0e507aac8": {
+          "description": "#### Vaardigheidsopbouw en -oefeningen(20 minuten)\n\nDeze activiteiten zijn geschikt voor zelfstandig leren of voor paarprogrammering.\n\nStudenten moeten de vaardigheidsopbouw voltooien en kunnen vervolgens de resterende tijd besteden aan het kiezen uit de verschillende oefeningen."
+        },
+        "727a30c1-2256-4e3c-aeff-c9a9cf427974": {
+          "description": "#### Vrij spelen (10 minuten)\n\nIn het laatste niveau van de les kunnen leerlingen hun eigen project maken."
+        },
+        "9666650e-94e1-4e9e-a987-d20b2de74fc8": {
+          "description": "\\*\\*Doe dit: \\*\\* Laat de leerlingen de verstrekte code lezen en een voorspelling doen over wat er gaat gebeuren. Nadat je op „Start” hebt gedrukt, geef je de leerlingen de tijd om na te denken over alles wat ze interessant vonden of dat hen verbaasde."
+        },
+        "65d8fcaf-9311-4639-9760-3d8a8d38a2ff": {
+          "description": "\\*\\*Bespreek: \\*\\* Wat waren de meest interessante keuzes die je met deze apps hebt kunnen maken? Was er een moment waarop je iets in de app had willen veranderen, maar dat je de keuze niet kreeg?\n\n\\*\\*Vraag: \\*\\* Denk aan een app die je hebt gebruikt en bedenk een manier om deze te verbeteren door de gebruiker meer keuzes te geven.\n\nAls er voldoende tijd beschikbaar is kan je onderstaande methodes gebruiken om de studenten te laten nadenken over bovenstaande vragen:\n\n-   Laat vrijwilligers ideeën aandragen in een gesprek met de hele groep.\n-   Neem deel aan een kleine discussie met paren of kleine groepen."
+        },
+        "66426319-1004-48f6-8ade-32f396303503": {
+          "description": "#### Vaardigheidsopbouw en -oefeningen(20 minuten)\n\nDeze activiteiten zijn geschikt voor zelfstandig leren of voor paarprogrammering.\n\nStudenten moeten de vaardigheidsopbouw voltooien en kunnen vervolgens de resterende tijd besteden aan het kiezen uit de verschillende oefeningen."
+        },
+        "7d371d02-eb94-4d1a-88e8-b23847b8ffce": {
+          "description": "#### Vrij spelen (10 minuten)\n\nIn het laatste niveau van de les kunnen leerlingen hun eigen project maken."
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Vier jouw deelname"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Volgende stappen"
         }
       }
     }

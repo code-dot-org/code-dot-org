@@ -22,7 +22,7 @@ theme: responsive_full_width
       %p.body-three
         =hoc_s(:hoc_page_desc_2023)
     %div.col-45
-      = view :display_video_thumbnail, id: "hoc_2023", video_code: "KsOIlDT145A", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/hour_of_code_worldwide_2023.mp4"
+      = view :display_video_thumbnail, id: "hoc_celebrities_2023", video_code: "ybBUd9-0ZJQ", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/hour_of_code_celebrities_2023.mp4"
       %a.body-three{href: "/educate/resources/videos"}
         =hoc_s(:call_to_action_see_more_insp_videos)
   .clear
@@ -32,20 +32,27 @@ theme: responsive_full_width
     %p.heading-sm.centered{style: "margin-bottom: 4rem"}
       =hoc_s(:hoc_page_place_to_start)
     %hr
-    %h3=hoc_s(:hoc_page_lead_activity_heading)
+    %h2=hoc_s(:hoc_page_lead_activity_heading)
     %p.has-external-link
       =hoc_s(:hoc_page_lead_activity_desc, markdown: :inline, locals:{register_activity_url: "https://hourofocode.com/events"})
     = view :hoc_activites_featured
     .centered{style: "margin-top: 3rem"}
       %hr
+      %h3=hoc_s(:call_to_action_explore_all_hoc_activities)
+      .see-all-activities.flex-container.align-items-center.wrap.gap-1
+        %img{src: "/images/tutorials/hoc2019/oceans.jpg", alt: ""}
+        %img{src: "/images/tutorials/resubmission/flappy.jpg", alt: ""}
+        %img{src: "/images/tutorials/resubmission/frozen.jpg", alt: ""}
+        %img{src: "/images/tutorials/hoc2021/poem_art.jpg", alt: ""}
+        %img{src: "/images/tutorials/resubmission/starwars.jpg", alt: ""}
       %a.link-button.secondary{href: CDO.studio_url("/catalog?marketingInitiative=hoc")}
-        =hoc_s(:call_to_action_explore_all_hoc_activities)
+        =hoc_s(:call_to_action_explore_activities)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h3=hoc_s(:learn_how_ai_works)
+    %h2=hoc_s(:learn_how_ai_works)
     %p=hoc_s(:hoc_page_how_ai_works_desc)
     .action-block.action-block--two-col
       .media-wrapper.col-50
@@ -67,7 +74,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h3=hoc_s(:hoc_page_ai_101_heading)
+    %h2=hoc_s(:hoc_page_ai_101_heading)
     %p=hoc_s(:hoc_page_ai_101_desc)
     .action-block.action-block--two-col
       .media-wrapper.col-50

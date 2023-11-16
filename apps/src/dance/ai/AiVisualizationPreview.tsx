@@ -5,18 +5,18 @@ import ProgramExecutor from '../lab2/ProgramExecutor';
 import moduleStyles from './ai-visualization-preview.module.scss';
 
 interface AiVisualizationPreviewProps {
+  id: string;
   code: string;
+  size: number;
   durationMs?: number;
 }
-
-const PREVIEW_DIV_ID = 'ai-preview';
 
 /**
  * Previews the output of the AI block in Dance Party.
  */
 const AiVisualizationPreview: React.FunctionComponent<
   AiVisualizationPreviewProps
-> = ({code, durationMs}) => {
+> = ({id, code, size, durationMs}) => {
   const songMetadata = useSelector(
     (state: {dance: DanceState}) => state.dance.currentSongMetadata
   );
@@ -25,12 +25,12 @@ const AiVisualizationPreview: React.FunctionComponent<
   // Create the executor on mount to make sure the preview div exists.
   useEffect(() => {
     executorRef.current = new ProgramExecutor(
-      PREVIEW_DIV_ID,
+      id,
       () => undefined, // no-op on puzzle complete
       true, // treat this as a readonly workspace
       false // no replay log
     );
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (songMetadata === undefined || executorRef.current === null) {
@@ -52,11 +52,11 @@ const AiVisualizationPreview: React.FunctionComponent<
     if (containerRef.current) {
       const canvas = containerRef.current.children[0] as HTMLElement;
       if (canvas) {
-        canvas.style.width = moduleStyles.previewSize;
-        canvas.style.height = moduleStyles.previewSize;
+        canvas.style.width = size + 'px';
+        canvas.style.height = size + 'px';
       }
     }
-  }, [containerRef]);
+  }, [containerRef, size]);
 
   // Destroy on unmount
   useEffect(() => () => executorRef.current?.destroy(), []);
@@ -64,7 +64,8 @@ const AiVisualizationPreview: React.FunctionComponent<
   return (
     <div>
       <div
-        id={PREVIEW_DIV_ID}
+        id={id}
+        style={{width: size, height: size}}
         className={moduleStyles.previewVisualization}
         ref={containerRef}
       />

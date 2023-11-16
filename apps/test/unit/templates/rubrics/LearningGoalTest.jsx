@@ -40,6 +40,12 @@ describe('LearningGoal', () => {
         aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
+        aiEvalInfo={{
+          id: 2,
+          learning_goal_id: 2,
+          understanding: 2,
+          ai_confidence: 2,
+        }}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
