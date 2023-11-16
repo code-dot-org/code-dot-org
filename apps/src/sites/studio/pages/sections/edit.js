@@ -7,12 +7,12 @@ $(document).ready(initPage);
 
 function initPage() {
   const section = getScriptData('section');
-  const canEnableAiTutor = getScriptData('canEnableAiTutor');
+  const canEnableAITutor = getScriptData('canEnableAITutor');
 
   ReactDOM.render(
     <SectionsSetUpContainer
       sectionToBeEdited={section}
-      canEnableAiTutor={canEnableAiTutor}
+      canEnableAITutor={canEnableAITutor}
     />,
     document.getElementById('form')
   );

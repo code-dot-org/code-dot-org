@@ -76,7 +76,7 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
-  canEnableAiTutor,
+  canEnableAITutor,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -276,7 +276,7 @@ export default function SectionsSetUpContainer({
     // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
     // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      canEnableAiTutor &&
+      canEnableAITutor &&
       sections[0].course.displayName === 'Computer Science A';
 
     return renderExpandableSection(
@@ -413,5 +413,5 @@ export default function SectionsSetUpContainer({
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
-  canEnableAiTutor: PropTypes.bool,
+  canEnableAITutor: PropTypes.bool,
 };
