@@ -8,6 +8,7 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
   submittedEvaluationShape,
+  aiEvaluationShape,
 } from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -39,6 +40,7 @@ export default function LearningGoal({
   isStudent,
   feedbackAdded,
   setFeedbackAdded,
+  aiEvalInfo,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -266,6 +268,7 @@ export default function LearningGoal({
       <div>
         {teacherHasEnabledAi &&
           !!studentLevelInfo &&
+          !!aiEvalInfo &&
           aiUnderstanding !== undefined && (
             <div className={style.openedAiAssessment}>
               <AiAssessment
@@ -273,7 +276,7 @@ export default function LearningGoal({
                 studentName={studentLevelInfo.name}
                 aiConfidence={aiConfidence}
                 aiUnderstandingLevel={aiUnderstanding}
-                learningGoalKey={learningGoal.key}
+                aiEvalInfo={aiEvalInfo}
               />
             </div>
           )}
@@ -315,6 +318,7 @@ LearningGoal.propTypes = {
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
+  aiEvalInfo: aiEvaluationShape,
 };
 
 const AiToken = () => {
