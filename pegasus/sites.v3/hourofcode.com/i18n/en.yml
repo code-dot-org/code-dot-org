@@ -922,7 +922,7 @@
   how_ai_works_lesson_title_02: "Computer Vision"
   how_ai_works_lesson_desc_02: "Learn how computer vision works. Watch a video explaining computer vision and how a computer \"sees\". Then design an algorithm that uses a network to decide what number the seven segment display is displaying and test it."
   how_ai_works_lesson_title_03: "Neural Networks"
-  how_ai_works_lesson_desc_03: "Learn how neural networks work. Use a widgets to explore neural networks in a hands on way. Watch a video explaining neural networks. Finally discuss the need for diverse perspectives when creating recommendation systems."
+  how_ai_works_lesson_desc_03: "Learn how neural networks work. Use widgets to explore neural networks in a hands on way. Watch a video explaining neural networks. Finally discuss the need for diverse perspectives when creating recommendation systems."
   how_ai_works_lesson_title_04: "Chatbots and Large Language Models"
   how_ai_works_lesson_desc_04: "Learn what an Large Language Model (LLM) is and how it works, then use an LLM to co-create a text with AI. Finally, discuss about whether or not LLMs are intelligent or creative."
   how_ai_works_lesson_title_05: "Generative Images"
@@ -8740,7 +8740,7 @@
   tutorial_codeofethicsai_longdescription: "Conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators everywhere."
   tutorial_socimpactofgenaiai_longdescription: "Investigate the impact of generative AI from different perspectives, then collaborate as a team to come up with guidelines that address the most needs from all participants."
   tutorial_generationai_longdescription: "Venture through time to create your AI-powered inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving, creativity, and computational thinking with the principles of Responsible AI. With coding in blocks or Python, Hour of Code allows anyone to learn the basics of coding and how to build a better AI for all."
-  
+
   tutorial_bsimage_string_detail_grades: "Grades 6+"
   tutorial_bscomputing_string_detail_grades: "Grades 6+"
   tutorial_stackpython_string_detail_grades: "Grades 6+"

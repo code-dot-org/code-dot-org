@@ -63,6 +63,13 @@ export default function CoteacherSettings({
     [setSavedCoteachers]
   );
 
+  const addSavedCoteacher = useCallback(
+    coteacher => {
+      setSavedCoteachers(prevSaved => [coteacher, ...prevSaved]);
+    },
+    [setSavedCoteachers]
+  );
+
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
@@ -72,6 +79,7 @@ export default function CoteacherSettings({
           numCoteachers={coteachers.length}
           coteachersToAdd={coteachersToAdd}
           setCoteachersToAdd={setCoteachersToAdd}
+          addSavedCoteacher={addSavedCoteacher}
           addError={addError}
           setAddError={setAddError}
         />
