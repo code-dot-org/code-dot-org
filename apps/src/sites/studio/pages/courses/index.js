@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import Courses from '@cdo/apps/templates/studioHomepages/Courses';
 import {initCourseExplorer} from '@cdo/apps/courseExplorer/courseExplorer';
 import {getStore} from '@cdo/apps/code-studio/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(showCourses);
 
@@ -12,8 +13,8 @@ function showCourses() {
   // Initialize the non-React Course/Tool Explorer component code.
   initCourseExplorer();
 
-  const script = document.querySelector('script[data-courses]');
-  const coursesData = JSON.parse(script.dataset.courses);
+  const coursesData = getScriptData('courses');
+  const specialAnnouncement = getScriptData('specialAnnouncement');
   const isEnglish = coursesData.english;
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
@@ -30,6 +31,7 @@ function showCourses() {
         isSignedOut={signedOut}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
         showAiCard={coursesData.showAiCard}
+        specialAnnouncement={specialAnnouncement}
       />
     </Provider>,
     document.getElementById('courses-container')

@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import {act} from 'react-dom/test-utils';
 import i18n from '@cdo/locale';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
+import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('RubricSettings', () => {
   it('shows a a button for running analysis if canProvideFeedback is true', () => {
@@ -107,7 +108,7 @@ describe('RubricSettings', () => {
         2. User clicks button to run analysis
         3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
         4. Move clock forward 5 seconds
-        5. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
+        5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
         6. Move clock forward 5 seconds
         7. Fetch returns a json object with puts AI Status into SUCCESS state
         8. Calls refreshAiEvaluations
@@ -127,18 +128,26 @@ describe('RubricSettings', () => {
         attempted: true,
         lastAttemptEvaluated: false,
         csrfToken: 'abcdef',
-        evaluationPending: true,
+        status: RubricAiEvaluationStatus.QUEUED,
       };
       fetchStub
         .onCall(1)
         .returns(Promise.resolve(new Response(JSON.stringify(pendingJson))));
+
+      const runningJson = {
+        attempted: true,
+        lastAttemptEvaluated: false,
+        csrfToken: 'abcdef',
+        status: RubricAiEvaluationStatus.RUNNING,
+      };
       fetchStub
         .onCall(2)
-        .returns(Promise.resolve(new Response(JSON.stringify(pendingJson))));
+        .returns(Promise.resolve(new Response(JSON.stringify(runningJson))));
 
       const successJson = {
         attempted: true,
         lastAttemptEvaluated: true,
+        status: RubricAiEvaluationStatus.SUCCESS,
       };
       fetchStub
         .onCall(3)
@@ -170,8 +179,9 @@ describe('RubricSettings', () => {
       await act(async () => {
         await Promise.resolve();
       });
+      wrapper.update();
       expect(wrapper.find('Button').props().disabled).to.be.true;
-      expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
+      expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
 
       clock.tick(5000);
       await act(async () => {
@@ -181,6 +191,89 @@ describe('RubricSettings', () => {
       expect(wrapper.find('Button').props().disabled).to.be.true;
       expect(wrapper.text()).include(i18n.aiEvaluationStatus_success());
       expect(refreshAiEvaluationsSpy).to.have.been.calledOnce;
+    });
+
+    it('shows general error message for status 1000', async () => {
+      const returnedJson = {
+        attempted: true,
+        lastAttemptEvaluated: false,
+        status: 1000,
+      };
+      fetchStub.returns(
+        Promise.resolve(new Response(JSON.stringify(returnedJson)))
+      );
+      const wrapper = mount(
+        <RubricSettings
+          canProvideFeedback={true}
+          teacherHasEnabledAi={true}
+          rubricId={1}
+          studentUserId={10}
+          visible
+        />
+      );
+      await act(async () => {
+        await Promise.resolve();
+      });
+      wrapper.update();
+      expect(fetchStub).to.have.been.calledOnce;
+      expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
+      expect(wrapper.find('Button').props().disabled).to.be.true;
+    });
+
+    it('shows PII error message for status 1001', async () => {
+      const returnedJson = {
+        attempted: true,
+        lastAttemptEvaluated: false,
+        status: 1001,
+      };
+      fetchStub.returns(
+        Promise.resolve(new Response(JSON.stringify(returnedJson)))
+      );
+      const wrapper = mount(
+        <RubricSettings
+          canProvideFeedback={true}
+          teacherHasEnabledAi={true}
+          rubricId={1}
+          studentUserId={10}
+          visible
+        />
+      );
+      await act(async () => {
+        await Promise.resolve();
+      });
+      wrapper.update();
+      expect(fetchStub).to.have.been.calledOnce;
+      expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pii_error());
+      expect(wrapper.find('Button').props().disabled).to.be.true;
+    });
+
+    it('shows profanity error message for status 1002', async () => {
+      const returnedJson = {
+        attempted: true,
+        lastAttemptEvaluated: false,
+        status: 1002,
+      };
+      fetchStub.returns(
+        Promise.resolve(new Response(JSON.stringify(returnedJson)))
+      );
+      const wrapper = mount(
+        <RubricSettings
+          canProvideFeedback={true}
+          teacherHasEnabledAi={true}
+          rubricId={1}
+          studentUserId={10}
+          visible
+        />
+      );
+      await act(async () => {
+        await Promise.resolve();
+      });
+      wrapper.update();
+      expect(fetchStub).to.have.been.calledOnce;
+      expect(wrapper.text()).to.include(
+        i18n.aiEvaluationStatus_profanity_error()
+      );
+      expect(wrapper.find('Button').props().disabled).to.be.true;
     });
   });
 });
