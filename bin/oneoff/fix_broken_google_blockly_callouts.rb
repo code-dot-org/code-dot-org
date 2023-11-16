@@ -16,10 +16,8 @@ def fix_callouts
   else
     puts "THIS IS A FULL RUN"
   end
-  puts "***POETRY***"
-  process_levels(Poetry.all)
-  puts "***DANCE***"
-  process_levels(Dancelab.all)
+  puts "***SPRITE LAB***"
+  process_levels(GamelabJr.all)
 end
 
 def process_levels(levels)
