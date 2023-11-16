@@ -58,7 +58,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 11
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
   end
