@@ -382,14 +382,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     if (currentProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
       // Bump substep.
       currentProgress.subStep++;
-    } else if (currentProgress.step < BAD_GENERATED_RESULTS_COUNT - 1) {
+    } else if (currentProgress.step < BAD_GENERATED_RESULTS_COUNT) {
       // Bump step and reset substep.
       currentProgress.step++;
       currentProgress.subStep = 0;
     } else {
       // Leave these values intact, and go to the generated result.
-      currentProgress.step++;
-      currentProgress.subStep = 0;
+      //currentProgress.step++;
+      //currentProgress.subStep = 0;
       setMode(Mode.GENERATED);
     }
 
@@ -442,7 +442,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           GENERATION_SUBSTEP_DURATION_MIN
         )
       : mode === Mode.GENERATED
-      ? 2000
+      ? 1000
       : mode === Mode.EXPLANATION
       ? EXPLANATION_STEP_DURATION
       : undefined
@@ -542,7 +542,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   let previewAreaClass = undefined;
   if (mode === Mode.GENERATING) {
     aiBotBody = [aiBotBodyThink0, aiBotBodyThink1, aiBotBodyThink2][
-      generatingProgress.subStep
+      generatingProgress.step % 3
     ];
   } else if (mode === Mode.GENERATED && generatedProgress >= 1) {
     aiBotHead = aiBotHeadYes;
@@ -751,7 +751,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         </div>
 
         {(mode === Mode.GENERATING ||
-          (mode === Mode.GENERATED && generatedProgress >= 1) ||
+          mode === Mode.GENERATED ||
           mode === Mode.RESULTS) && (
           <div
             id="preview-area"
@@ -785,11 +785,23 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                         id={'preview-container-' + index}
                         key={'preview-container-' + index}
                         className={moduleStyles.previewContainer}
+                        style={{
+                          animationDuration:
+                            lerp(
+                              generatingProgress.step,
+                              BAD_GENERATED_RESULTS_COUNT,
+                              GENERATION_SUBSTEP_DURATION_MAX,
+                              GENERATION_SUBSTEP_DURATION_MIN
+                            ) + 'ms',
+                        }}
                       >
                         <AiVisualizationPreview
                           id={'ai-preview-' + index}
                           code={getPreviewCode(getGeneratedEffect(index))}
                           size={previewSize}
+                          durationMs={
+                            /*mode === Mode.GENERATING ? 30 : */ undefined
+                          }
                         />
                       </div>
                     );
