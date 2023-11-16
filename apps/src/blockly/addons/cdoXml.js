@@ -110,9 +110,9 @@ export function addMutationToMiniToolboxBlocks(blockElement) {
 }
 
 /**
- * Adds a mutation element to a block if it is a shared behavior.
- * CDO Blockly uses an unsupported method for serializing miniflyout state
- * where arbitrary block attribute could be used to manage extra state.
+ * Adds a mutation element to a block if it is a behavior definition.
+ * CDO Blockly uses an unsupported method for serializing state
+ * where arbitrary XML attributes could hold important information.
  * Mainline Blockly expects a mutator. The presence of the mutation element
  * will trigger the block's domToMutation function to run, if it exists.
  *
@@ -122,13 +122,28 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
   if (blockElement.getAttribute('type') !== 'behavior_definition') {
     return;
   }
-  const existingMutationElement = blockElement.querySelector('mutation');
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
 
+  // We need to keep track of whether the user created the behavior or not.
+  // If not, it needs a static behavior id in order to be translatable
+  // (e.g. shared behaviors).
+  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // expects this kind of extra state in a mutator.
+  const usercreatedAttribute = blockElement.getAttribute('usercreated');
+  const userCreated = usercreatedAttribute === 'true';
+  mutationElement.setAttribute('userCreated', userCreated);
+
+  // In CDO Blockly, behavior ids were stored on the field. Google Blockly
+  // expects this kind of extra state in a mutator.
   const nameField = blockElement.querySelector('field[name="NAME"]');
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
-    existingMutationElement.setAttribute('behaviorId', idAttribute);
+    mutationElement.setAttribute('behaviorId', idAttribute);
   }
 }
 
@@ -169,9 +184,7 @@ export function createBlockOrderMap(xml) {
  */
 export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
   // Convert XML to an array of block elements
-  const blockElements = Array.from(xml.childNodes).filter(
-    node => node.nodeName.toLowerCase() === 'block'
-  );
+  const blockElements = Array.from(xml.querySelectorAll('xml > block'));
 
   // Check if any block elements were found
   if (blockElements.length === 0) {

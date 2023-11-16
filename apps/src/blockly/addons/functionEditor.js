@@ -164,6 +164,7 @@ export default class FunctionEditor {
         type: procedureType,
         extraState: {
           procedureId: procedure.getId(),
+          userCreated: true,
         },
         fields: {
           NAME: procedure.getName(),

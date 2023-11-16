@@ -316,10 +316,43 @@ export function getCombinedSerialization(
 }
 
 export function convertFunctionsXmlToJson(functionsXml) {
-  console.log({functionsXml: functionsXml});
-  return {};
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(`<xml>${functionsXml}</xml>`, 'text/xml');
+  const tempWorkspace = new Blockly.Workspace();
+  Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
+  const proceduresState = Blockly.serialization.workspaces.save(tempWorkspace);
+  tempWorkspace.dispose();
+  return proceduresState;
 }
 
-export function appendProceduresToState(state, proceduresState) {
-  console.log({state: state, procedures: proceduresState});
+export function appendProceduresToState(projectState, proceduresState) {
+  const projectBlocks = projectState.blocks?.blocks || [];
+  const projectProcedures = projectState.procedures || [];
+
+  const sharedBlocks = proceduresState.blocks?.blocks || [];
+  const sharedProcedures = proceduresState.procedures || [];
+
+  sharedBlocks.forEach(block => {
+    const {behaviorId, procedureId} = block.extraState;
+
+    if (!blockExists(behaviorId, projectBlocks)) {
+      // If the block doesn't exist, add it to the student project
+      projectBlocks.push(block);
+      projectProcedures.push(
+        sharedProcedures.find(procedure => procedure.id === procedureId)
+      );
+    }
+  });
+  projectState.blocks = {blocks: projectBlocks};
+  projectState.procedures = projectProcedures;
+  return projectState;
+}
+
+// Function to check if a block with the given behaviorId exists in the project
+function blockExists(behaviorId, projectBlocks) {
+  return projectBlocks.some(
+    block =>
+      block.type === 'behavior_definition' &&
+      block.extraState?.behaviorId === behaviorId
+  );
 }
