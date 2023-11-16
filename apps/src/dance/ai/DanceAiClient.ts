@@ -61,7 +61,7 @@ export function chooseEffects(
       const options =
         quality === ChooseEffectsQuality.GOOD
           ? optionsAll.slice(0, numRandomOptions)
-          : optionsAll.slice(-numRandomOptions);
+          : optionsAll.slice(-100);
       return options;
     }
   );
