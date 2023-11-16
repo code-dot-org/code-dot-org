@@ -40,6 +40,7 @@ import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 const ButtonState = {
   UP: 0,
@@ -307,12 +308,7 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 
-  [
-    'ai-select-emoji',
-    'ai-deselect-emoji',
-    'ai-generate-no',
-    'ai-generate-yes',
-  ].forEach(soundId => {
+  DANCE_AI_SOUNDS.forEach(soundId => {
     const soundPath = this.studioApp_.assetUrl(
       `media/skins/dance/${soundId}.mp3`
     );

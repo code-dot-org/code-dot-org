@@ -18,6 +18,7 @@ import AiBlockPreview from './AiBlockPreview';
 import {
   AiFieldValue,
   AiOutput,
+  DanceAiSound,
   FieldKey,
   GeneratedEffect,
   MinMax,
@@ -108,7 +109,7 @@ const getImageUrl = (id: string) => {
 };
 
 interface DanceAiModalProps {
-  playSound: (name: string, options?: object) => void;
+  playSound: (name: DanceAiSound, options?: object) => void;
 }
 
 const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
