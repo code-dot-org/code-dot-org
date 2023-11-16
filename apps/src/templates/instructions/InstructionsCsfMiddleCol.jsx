@@ -213,7 +213,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
             borderColor={color.light_info_500}
-            backgroundColor={'#e6ffff'}
+            backgroundColor={'#f0ffff'}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}
