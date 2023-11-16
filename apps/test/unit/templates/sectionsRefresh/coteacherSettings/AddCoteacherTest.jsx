@@ -203,9 +203,7 @@ describe('AddCoteacher', () => {
     const setCoteachersToAddSpy = sinon.spy();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
-      expect(error).to.equal(
-        'same@code.org is already a co-teacher for this section.'
-      );
+      expect(error).to.equal('Oops! You already invited same@code.org.');
       expect(setCoteachersToAddSpy).not.to.have.been.called;
       expect(fetchSpy).not.to.have.been.called;
     }, done);
