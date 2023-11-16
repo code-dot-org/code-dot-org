@@ -58,8 +58,7 @@
       "downButton",
       "upButton"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add some code here\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"20\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null
+    "callout_json": "[{\"localization_key\":\"\",\"callout_text\":\"Add some code here\",\"element_id\":\".svgGroup [block-id=\\\"20\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklySvg [data-id=\\\"20\\\"]\",\"localization_key\":\"\",\"callout_text\":\"Add some code here\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]"
   },
   "published": true,
   "notes": "",
@@ -103,7 +102,7 @@
             </block>
           </statement>
         </block>
-        <block type="Dancelab_whenKey">
+        <block type="Dancelab_whenKey" id="20">
           <title name="KEY">"up"</title>
         </block>
       </xml>
