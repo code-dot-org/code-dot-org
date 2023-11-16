@@ -75,7 +75,7 @@ type GeneratedEffects = {
 };
 
 enum Toggle {
-  AI_BLOCK = 'aiBlock',
+  EFFECT = 'effect',
   CODE = 'code',
 }
 
@@ -109,9 +109,18 @@ const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
-const getArrayKeys = (maxValue: number) => {
-  return Array.from(Array(maxValue).keys());
+const getArrayKeys = (count: number) => {
+  return Array.from(Array(count).keys());
 };
+
+function getArrayKeysForRange(min: number, max: number) {
+  var len = max - min + 1;
+  var arr = new Array(len);
+  for (var i = 0; i < len; i++) {
+    arr[i] = min + i;
+  }
+  return arr;
+}
 
 interface DanceAiModalProps {
   playSound: (name: string, options?: object) => void;
@@ -154,7 +163,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       subStep: 0,
     });
   const [generatedProgress, setGeneratedProgress] = useState<number>(0);
-  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
+  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
   const currentAiModalField = useSelector(
@@ -328,6 +337,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     });
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
+    setCurrentToggle(Toggle.EFFECT);
     handleGenerateClick();
   };
 
@@ -520,7 +530,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const showUseButton =
     mode === Mode.RESULTS &&
-    currentToggle === Toggle.AI_BLOCK &&
+    currentToggle === Toggle.EFFECT &&
     (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
   const showConvertButton =
@@ -611,7 +621,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       ? i18n.danceAiModalFinding2()
       : mode === Mode.GENERATED && generatedProgress >= 1
       ? i18n.danceAiModalGenerating2()
-      : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
+      : mode === Mode.RESULTS && currentToggle === Toggle.EFFECT
       ? i18n.danceAiModalEffect2()
       : mode === Mode.RESULTS && currentToggle === Toggle.CODE
       ? i18n.danceAiModalCode2()
@@ -664,7 +674,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 setCurrentToggle(value);
               }}
             >
-              <button key={0} type="button" value={Toggle.AI_BLOCK}>
+              <button key={0} type="button" value={Toggle.EFFECT}>
                 {i18n.danceAiModalEffectButton()}
               </button>
               <button key={1} type="button" value={Toggle.CODE}>
@@ -852,7 +862,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               })}
             </div>
             <div className={moduleStyles.visualizationContainer}>
-              {getArrayKeys(explanationProgress).map(index => {
+              {getArrayKeysForRange(
+                BAD_GENERATED_RESULTS_COUNT - 4,
+                BAD_GENERATED_RESULTS_COUNT - 4 + explanationProgress - 1
+              ).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
                     <DanceAiScore
