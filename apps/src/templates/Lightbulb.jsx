@@ -197,7 +197,7 @@ export default class Lightbulb extends React.Component {
         <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
           <g
             transform="translate(150,600) scale(0.75,-0.75)"
-            fill={color.light_info_500}
+            fill={this.props.lit ? color.light_info_500 : '#a0a0a0'}
             stroke="none"
           >
             <path
