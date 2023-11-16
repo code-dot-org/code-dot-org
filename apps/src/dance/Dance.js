@@ -249,7 +249,7 @@ Dance.prototype.initSongs = async function (config) {
         analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_SONG_UNAVAILABLE, {
           songId,
           viewerOwnsProject: !isReadOnlyWorkspace,
-          ...(channelId && {channelId}),
+          channelId,
         });
       },
     })
