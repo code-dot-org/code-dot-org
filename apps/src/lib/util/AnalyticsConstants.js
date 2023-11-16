@@ -100,6 +100,11 @@ const EVENTS = {
   TA_RUBRIC_RUN_BUTTON_CLICKED:
     'TA Rubric Teacher clicked RUN button on student work',
 
+  // AI Tutor
+  AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
+  AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
+  AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
+
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   GUIDE_SENT_EVENT: 'Guide Sent',
