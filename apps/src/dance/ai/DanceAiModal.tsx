@@ -855,7 +855,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           </div>
         )}
 
-        {mode === Mode.GENERATED && generatedProgress >= 1 && (
+        {mode === Mode.GENERATED && /* generatedProgress >= 1 && */ (
           <div id="check-area" className={moduleStyles.checkArea}>
             <i className="fa fa-check-circle" />
           </div>
@@ -960,7 +960,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               aria-label={i18n.danceAiModalExplanationButton()}
               title={i18n.danceAiModalExplanationButton()}
               iconClassName={moduleStyles.buttonIcon}
-              icon="bar-chart"
+              icon="chart-simple"
             />
 
             <ModalButton
@@ -973,7 +973,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               aria-label={i18n.danceAiModalBack()}
               title={i18n.danceAiModalBack()}
               iconClassName={moduleStyles.buttonIcon}
-              icon="bar-chart"
+              icon="chart-simple"
             />
           </div>
         </div>

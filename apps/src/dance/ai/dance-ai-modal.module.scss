@@ -133,7 +133,6 @@ $ai-modal-border-width: 8px;
     height: calc(100% - $ai-modal-header-height - 3 * $ai-modal-border-width);
     position: relative;
     user-select: none;
-    padding: 10px;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;
@@ -163,7 +162,7 @@ $ai-modal-border-width: 8px;
 
     .textArea {
       position: absolute;
-      width: calc(100% - 30px);
+      width: calc(100% - 16px);
       top: 345px;
       text-align: center;
       font-size: 16px;
@@ -349,8 +348,8 @@ $ai-modal-border-width: 8px;
 
     .checkArea {
       position: absolute;
-      top: 150px;
-      left: 645px;
+      top: 120px;
+      left: 630px;
       font-size: 100px;
       color: $yes-color;
       animation: appear 0.5s;
@@ -422,23 +421,25 @@ $ai-modal-border-width: 8px;
     }
 
     .buttonsArea {
-      height: 44px;
       margin-top: auto;
       display: flex;
       justify-content: space-between;
       position: absolute;
       bottom: 0;
-      width: calc(100% - 20px);
-      transform: translateX(-50%);
-      left: 50%;
+      width: 100%;
+      padding: 3px;
+      box-sizing: border-box;
     }
 
     .buttonsAreaTop {
       position: absolute;
-      top: 0;
       display: flex;
       justify-content: space-between;
-      width: inherit;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 3px;
+      box-sizing: border-box;
     }
   }
 
