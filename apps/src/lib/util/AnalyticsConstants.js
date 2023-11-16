@@ -125,6 +125,13 @@ const EVENTS = {
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
   TEACHER_HOC_CONGRATS_PAGE_VISITED:
     'Teacher Hour of Code Congrats Page Visited ',
+
+  // Coteacher
+  COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
+  COTEACHER_EMAIL_INVALID: 'Coteacher Email Invalid',
+  COTEACHER_INVITE_ACCEPTED: 'Coteacher Invite Accepted',
+  COTEACHER_INVITE_DECLINED: 'Coteacher Invite Declined',
+  COTEACHER_REMOVED: 'Coteacher Removed',
 };
 
 const EVENT_GROUP_NAMES = {
