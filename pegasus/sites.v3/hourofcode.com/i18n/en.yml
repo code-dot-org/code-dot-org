@@ -546,8 +546,6 @@
   module_label_available_now: "Available Now"
   module_label_video_series: "Video series"
   module_label_self_paced: "Self-paced module"
-  module_label_course: "Course"
-  module_label_tool: "Tool"
   module_label_event_or_lessons: "Event or lessons"
 
   module_ages_5_10: "5-10"
