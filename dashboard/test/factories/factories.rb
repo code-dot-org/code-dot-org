@@ -524,6 +524,18 @@ FactoryBot.define do
       end
     end
 
+    trait :with_lti_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::LTI_V1,
+          authentication_id: 'https://lms.fake|12345|abcdef',
+        )
+      end
+    end
+
     trait :with_puzzles do
       transient do
         num_puzzles {1}
@@ -1882,6 +1894,17 @@ FactoryBot.define do
     association :rubric_ai_evaluation
     understanding {0}
     ai_confidence {1}
+  end
+
+  factory :learning_goal_ai_evaluation_feedback do
+    association :learning_goal_ai_evaluation
+    teacher_id {0}
+    ai_feedback_approval {false}
+    false_positive {false}
+    false_negative {false}
+    vague {false}
+    feedback_other {true}
+    other_content {'other'}
   end
 
   factory :potential_teacher do

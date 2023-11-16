@@ -67,7 +67,8 @@ class Section < ApplicationRecord
   has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
-  has_one :lti_section, dependent: :destroy
+  has_one :lti_section
+  after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -100,6 +101,10 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
