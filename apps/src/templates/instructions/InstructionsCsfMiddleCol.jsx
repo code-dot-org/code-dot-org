@@ -180,6 +180,7 @@ class InstructionsCsfMiddleCol extends React.Component {
             <InlineHint
               key={hint.hintId}
               borderColor={color.light_info_500}
+              backgroundColor={'#f0ffff'}
               markdown={hint.markdown}
               ttsUrl={hint.ttsUrl}
               ttsMessage={hint.ttsMessage}
@@ -202,6 +203,7 @@ class InstructionsCsfMiddleCol extends React.Component {
                 ? color.white
                 : color.product_caution_default
             }
+            backgroundColor={'#fffff0'}
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
             skinId={this.props.skinId}
@@ -211,6 +213,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
             borderColor={color.light_info_500}
+            backgroundColor={'#e6ffff'}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}
