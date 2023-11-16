@@ -83,8 +83,7 @@ class HttpCache
   # A map from script name to script level URL pattern.
   CACHED_UNITS_MAP = %w(
     aquatic
-    starwars
-    starwarsblocks
+    starwars*
     mc
     frozen
     gumball
@@ -92,17 +91,10 @@ class HttpCache
     hero
     sports
     basketball
-    dance
-    dance-2019
-    dance-ai-2023
+    dance*
     oceans
     poem-art-2021
-    hello-world-food-2021
-    hello-world-animals-2021
-    hello-world-retro-2021
-    hello-world-emoji-2021
-    hello-world-space-2022
-    hello-world-soccer-2022
+    hello-world-*
     outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
