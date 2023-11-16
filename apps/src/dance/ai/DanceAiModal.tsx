@@ -376,13 +376,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   // Handle moments during generation when we should play a sound.
   useEffect(() => {
-    if (mode === Mode.GENERATING) {
-      if (generatingProgress.subStep === 2) {
-        if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
-          playSound('ai-generate-no', {volume: 0.25});
-        } else {
-          playSound('ai-generate-yes', {volume: 0.25});
-        }
+    if (mode === Mode.GENERATING && generatingProgress.subStep === 2) {
+      if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+        playSound('ai-generate-no', {volume: 0.25});
+      } else {
+        playSound('ai-generate-yes', {volume: 0.25});
       }
     }
   }, [generatingProgress, mode, playSound]);
