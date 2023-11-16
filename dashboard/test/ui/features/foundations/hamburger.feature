@@ -27,7 +27,6 @@ Feature: Hamburger dropdown
   Scenario: Student user sees the Teach dropdown in hamburger
     Given I create a student named "Sally Student" and go home
     And I open my eyes to test "Teach dropdown in English Student"
-    And I rotate to portrait
     Then I wait until element "#hamburger-icon" is visible
     And I click selector "#hamburger-icon"
     Then I wait until element "#educate_entries" is visible
