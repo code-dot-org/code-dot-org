@@ -781,7 +781,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                           id={'ai-preview-' + index}
                           code={getPreviewCode(getGeneratedEffect(index))}
                           size={previewSize}
-                          durationMs={mode === Mode.GENERATING ? 1 : undefined}
                         />
                       </div>
                     );
@@ -853,7 +852,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               })}
             </div>
             <div className={moduleStyles.visualizationContainer}>
-              {getArrayKeys(explanationProgress + 1).map(index => {
+              {getArrayKeys(explanationProgress).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
                     <DanceAiScore
