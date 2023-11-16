@@ -943,7 +943,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
         isHighlighted && moduleStyles.emojiIconButtonHighlighted,
         className
       )}
-      title={item.emoji}
+      aria-label={item.emoji}
     />
   );
 };
