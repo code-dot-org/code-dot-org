@@ -291,7 +291,7 @@ $ai-modal-border-width: 8px;
       }
 
       &Yes {
-        box-shadow: 0 0 0 2px $yes-color;
+        box-shadow: 0 0 0 4px $yes-color;
         border-radius: 4px;
       }
 
@@ -345,6 +345,15 @@ $ai-modal-border-width: 8px;
           }
         }
       }
+    }
+
+    .checkArea {
+      position: absolute;
+      top: 150px;
+      left: 645px;
+      font-size: 100px;
+      color: $yes-color;
+      animation: appear 0.5s;
     }
 
     .explanationArea {
