@@ -19,8 +19,7 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
     position: 'relative',
-    borderStyle: 'dashed',
-    borderWidth: 1,
+    borderWidth: 2,
   },
 
   minecraft: {
@@ -58,11 +57,13 @@ const ChatBubble = ({
   isMinecraft,
   skinId,
   borderColor,
+  isDashed,
   ttsUrl,
   ttsMessage,
   textToSpeechEnabled,
 }) => {
   borderColor = borderColor || 'white';
+  isDashed = isDashed || false;
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 
   return (
@@ -73,10 +74,13 @@ const ChatBubble = ({
           isMinecraft && styles.minecraft,
           showAudioControls && styles.withAudioControls,
           {borderColor},
+          {borderStyle: isDashed ? 'dashed' : 'solid'},
         ]}
       >
         {children}
-        {shouldDisplayChatTips(skinId) && <ChatBubbleTip color={borderColor} />}
+        {shouldDisplayChatTips(skinId) && (
+          <ChatBubbleTip color={borderColor} isDashed={isDashed} />
+        )}
       </div>
       {showAudioControls && (
         <div style={styles.audioControls}>
@@ -89,6 +93,7 @@ const ChatBubble = ({
 
 ChatBubble.propTypes = {
   borderColor: PropTypes.string,
+  isDashed: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
   isMinecraft: PropTypes.bool,
   skinId: PropTypes.string,

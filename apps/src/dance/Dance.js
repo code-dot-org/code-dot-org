@@ -37,6 +37,9 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 
 const ButtonState = {
   UP: 0,
@@ -174,19 +177,38 @@ Dance.prototype.init = function (config) {
 
   this.awaitTimingMetrics();
 
+  const state = getStore().getState();
+  Lab2MetricsReporter.updateProperties({
+    appName: 'Dance',
+    channelId: state.pageConstants.channelId,
+    currentLevelId: state.progress.currentLevelId,
+    scriptId: state.progress.scriptId,
+    userId: state.currentUser.userId,
+  });
+
   ReactDOM.render(
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            setSong={this.setSongCallback.bind(this)}
-            resetProgram={this.reset.bind(this)}
-            playSound={this.playSound.bind(this)}
-          />
-        }
-        onMount={onMount}
-      />
+      <ErrorBoundary
+        // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
+        fallback={<ErrorFallbackPage />}
+        onError={(error, componentStack) => {
+          Lab2MetricsReporter.logError('Uncaught React Error', error, {
+            componentStack,
+          });
+        }}
+      >
+        <AppView
+          visualizationColumn={
+            <DanceVisualizationColumn
+              showFinishButton={showFinishButton}
+              setSong={this.setSongCallback.bind(this)}
+              resetProgram={this.reset.bind(this)}
+              playSound={this.playSound.bind(this)}
+            />
+          }
+          onMount={onMount}
+        />
+      </ErrorBoundary>
     </Provider>,
     document.getElementById(config.containerId)
   );
