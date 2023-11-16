@@ -1,15 +1,16 @@
+import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+const registerReducers = require('@cdo/apps/redux').registerReducers;
+
+import {initialChatMessages} from '../constants';
+import {getChatCompletionMessage} from '../chatApi';
 import {
   ChatCompletionMessage,
   AichatLevelProperties,
   Status,
   Role,
 } from '../types';
-import {initialChatMessages} from '../constants';
-
-const registerReducers = require('@cdo/apps/redux').registerReducers;
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {getChatCompletionMessage} from '../chatApi';
 
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
@@ -54,12 +55,14 @@ export const submitChatMessage = createAsyncThunk(
       msg => msg.status === Status.OK
     );
 
+    const currentTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm');
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: message,
+      timestamp: currentTimestamp,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
