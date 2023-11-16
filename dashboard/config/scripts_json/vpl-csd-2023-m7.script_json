@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-14 18:55:35 UTC",
+    "serialized_at": "2023-11-15 18:46:09 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -238,7 +238,7 @@
       "key": "b5a58f32-5b9b-4c65-af6e-496950d72794",
       "position": 3,
       "properties": {
-        "progression_name": "Previously On... (~20 mins)"
+        "progression_name": "Previously On... (~40 mins)"
       },
       "seeding_key": {
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794",
@@ -315,15 +315,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD Module 7 Overview_2023"
-        ],
         "progression": "Module 7 Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD Module 7 Overview_2023"
+          "VPL - CSD Module 7 Overview_2023_1"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -331,7 +328,7 @@
         "activity_section.key": "22949357-00eb-4bd4-bd16-5f796c1aca02"
       },
       "level_keys": [
-        "VPL - CSD Module 7 Overview_2023"
+        "VPL - CSD Module 7 Overview_2023_1"
       ]
     },
     {
@@ -340,15 +337,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD M7 Theme Introduction_2023"
-        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD M7 Theme Introduction_2023"
+          "VPL - CSD M7 Theme Introduction_2023_1"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -356,7 +350,7 @@
         "activity_section.key": "4e7abbd7-ad72-48f6-8a8f-4a1ab81331b1"
       },
       "level_keys": [
-        "VPL - CSD M7 Theme Introduction_2023"
+        "VPL - CSD M7 Theme Introduction_2023_1"
       ]
     },
     {
@@ -365,15 +359,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - Module 7 - CI-U6_2023"
-        ],
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI-U6_2023"
+          "VPL - CSD - Module 7 - CI-U7_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -381,7 +372,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - CI-U6_2023"
+        "VPL - CSD - Module 7 - CI-U7_2023"
       ]
     },
     {
@@ -390,12 +381,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L1_2023"
+          "VPL - CSD - Module 7 - CI - U7L1_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -403,7 +394,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - CI - U6L1_2023"
+        "VPL - CSD - Module 7 - CI - U7L1_2023"
       ]
     },
     {
@@ -412,12 +403,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L3_2023"
+          "VPL - CSD - Module 7 - CI - U7L2_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -425,7 +416,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - CI - U6L3_2023"
+        "VPL - CSD - Module 7 - CI - U7L2_2023"
       ]
     },
     {
@@ -434,12 +425,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L4_2023"
+          "VPL - CSD - Module 7 - CI - U7L2_2_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -447,7 +438,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - CI - U6L4_2023"
+        "VPL - CSD - Module 7 - CI - U7L2_2_2023"
       ]
     },
     {
@@ -456,12 +447,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD Module 7 PSP Reflection_2023"
+          "VPL - CSD - Module 7 - CI - U7L3_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -469,7 +460,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD Module 7 PSP Reflection_2023"
+        "VPL - CSD - Module 7 - CI - U7L3_2023"
       ]
     },
     {
@@ -478,12 +469,12 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - PO - U7L4_2023"
+          "VPL - CSD - Module 7 - CI - U7L4_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -491,7 +482,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - PO - U7L4_2023"
+        "VPL - CSD - Module 7 - CI - U7L4_2023"
       ]
     },
     {
@@ -500,12 +491,12 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - PO - U7L5_2023"
+          "VPL - CSD - Module 7 - CI - U7L5_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -513,7 +504,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - PO - U7L5_2023"
+        "VPL - CSD - Module 7 - CI - U7L5_2023"
       ]
     },
     {
@@ -522,12 +513,12 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Previously On... (~20 mins)"
+        "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - PO - U7L6_2023"
+          "VPL - CSD - Module 7 - CI - U7L6_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -535,7 +526,7 @@
         "activity_section.key": "b5a58f32-5b9b-4c65-af6e-496950d72794"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 - PO - U7L6_2023"
+        "VPL - CSD - Module 7 - CI - U7L6_2023"
       ]
     },
     {
@@ -544,15 +535,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - Module 7 Wrap Up_2023"
-        ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 Wrap Up_2023"
+          "VPL - CSD - Module 7 Wrap Up_2023_1"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -560,16 +548,16 @@
         "activity_section.key": "acf57f0b-0d6d-461f-889e-69fe3cb212a2"
       },
       "level_keys": [
-        "VPL - CSD - Module 7 Wrap Up_2023"
+        "VPL - CSD - Module 7 Wrap Up_2023_1"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "VPL - CSD Module 7 Overview_2023",
+        "level.key": "VPL - CSD Module 7 Overview_2023_1",
         "script_level.level_keys": [
-          "VPL - CSD Module 7 Overview_2023"
+          "VPL - CSD Module 7 Overview_2023_1"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -579,9 +567,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD M7 Theme Introduction_2023",
+        "level.key": "VPL - CSD M7 Theme Introduction_2023_1",
         "script_level.level_keys": [
-          "VPL - CSD M7 Theme Introduction_2023"
+          "VPL - CSD M7 Theme Introduction_2023_1"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -591,9 +579,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - CI-U6_2023",
+        "level.key": "VPL - CSD - Module 7 - CI-U7_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI-U6_2023"
+          "VPL - CSD - Module 7 - CI-U7_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -603,9 +591,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - CI - U6L1_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L1_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L1_2023"
+          "VPL - CSD - Module 7 - CI - U7L1_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -615,9 +603,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - CI - U6L3_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L2_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L3_2023"
+          "VPL - CSD - Module 7 - CI - U7L2_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -627,9 +615,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - CI - U6L4_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L2_2_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - CI - U6L4_2023"
+          "VPL - CSD - Module 7 - CI - U7L2_2_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -639,9 +627,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD Module 7 PSP Reflection_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L3_2023",
         "script_level.level_keys": [
-          "VPL - CSD Module 7 PSP Reflection_2023"
+          "VPL - CSD - Module 7 - CI - U7L3_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -651,9 +639,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - PO - U7L4_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L4_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - PO - U7L4_2023"
+          "VPL - CSD - Module 7 - CI - U7L4_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -663,9 +651,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - PO - U7L5_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L5_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - PO - U7L5_2023"
+          "VPL - CSD - Module 7 - CI - U7L5_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -675,9 +663,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 - PO - U7L6_2023",
+        "level.key": "VPL - CSD - Module 7 - CI - U7L6_2023",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 - PO - U7L6_2023"
+          "VPL - CSD - Module 7 - CI - U7L6_2023"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -687,9 +675,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 7 Wrap Up_2023",
+        "level.key": "VPL - CSD - Module 7 Wrap Up_2023_1",
         "script_level.level_keys": [
-          "VPL - CSD - Module 7 Wrap Up_2023"
+          "VPL - CSD - Module 7 Wrap Up_2023_1"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
