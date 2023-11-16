@@ -445,6 +445,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
+    logger: Lab2MetricsReporter,
   });
 
   // Expose an interface for testing
