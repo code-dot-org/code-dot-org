@@ -31,7 +31,7 @@ class PotentialTeachersController < ApplicationController
 
   private def send_hoc_email(params)
     unit_id = params[:script_id]
-    lessons = Unit.find(unit_id).lessons
+    lessons = Unit.find_by_id(unit_id).lessons
     lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
     TeacherMailer.hoc_tutorial_email(params[:name], params[:email], lesson_plan_html_url)
   end
