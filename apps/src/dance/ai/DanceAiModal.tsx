@@ -416,7 +416,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [generatingProgress, generatedProgress, mode, playSound]);
 
   const lerp = (step: number, steps: number, min: number, max: number) => {
-    console.log((step / steps) * (max - min) + min);
     return (step / steps) * (max - min) + min;
   };
 
