@@ -173,7 +173,7 @@ section.activities {
   &.blocks {
 
     .action-block {
-      min-width: 300px;
+      min-width: 290px;
       max-width: 420px;
       text-align: initial;
       margin: 0 auto;
@@ -204,11 +204,7 @@ section.activities {
       }
 
       #educator_resources & {
-        height: 600px;
-
-        @media screen and (max-width: $width-sm) {
-          height: auto;
-        }
+        min-height: 600px;
       }
     }
 
