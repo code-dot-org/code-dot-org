@@ -10,17 +10,17 @@ $(document).ready(initPage);
 function initPage() {
   const script = document.querySelector('script[data-aitutorpanel]');
   const aiTutorPanelData = JSON.parse(script.dataset.aitutorpanel);
-  renderAITutorPanel(aiTutorPanelData.level_type);
+  renderAITutorPanel(aiTutorPanelData.level);
 }
 
-function renderAITutorPanel(levelType) {
+function renderAITutorPanel(level) {
   const div = document.createElement('div');
   div.setAttribute('id', 'ai-tutor-panel-container');
   const store = getStore();
 
   ReactDOM.render(
     <Provider store={store}>
-      <AITutorPanel levelType={levelType} />
+      <AITutorPanel level={level} />
     </Provider>,
     div
   );
