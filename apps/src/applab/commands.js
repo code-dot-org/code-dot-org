@@ -2047,25 +2047,6 @@ applabCommands.handleDeleteRecord = function (opts, success) {
   }
 };
 
-applabCommands.onRecordEvent = function (opts) {
-  apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
-  apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
-  apiValidateType(
-    opts,
-    'onRecordEvent',
-    'includeAll',
-    opts.includeAll,
-    'boolean',
-    OPTIONAL
-  );
-  Applab.storage.onRecordEvent(
-    opts.table,
-    opts.onRecord,
-    getAsyncOutputWarning(),
-    opts.includeAll
-  );
-};
-
 applabCommands.getUserId = function (opts) {
   if (!Applab.user.labUserId) {
     throw new Error('User ID failed to load.');
