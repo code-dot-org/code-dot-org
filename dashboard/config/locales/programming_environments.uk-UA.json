@@ -4,92 +4,86 @@
       "programming_environments": {
         "applab": {
           "categories": {
-            "advanced": {
-              "name": "Розширені"
-            },
             "canvas": {
               "expressions": {
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "getGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "getRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "putImageData": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "setBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "setGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "setRGB": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 }
               }
-            },
-            "circuit": {
-              "name": "Схема, плата"
             },
             "control": {
               "expressions": {
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
-                      "type": "Функція"
+                      "type": "Pseudoloc-Фюнсстіонн"
                     }
                   }
                 }
@@ -100,267 +94,217 @@
                 "createRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "deleteRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "drawChart": {
                   "palette_params": {
                     "options": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
                     "options": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "getPrediction": {
                   "palette_params": {
                     "callback": {
-                      "type": "Функція"
+                      "type": "Pseudoloc-Фюнсстіонн"
                     }
                   }
                 },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "об'єкта"
+                      "type": "Pseudoloc-обджеест"
                     }
                   }
                 }
               },
-              "name": "Дані"
+              "name": "Pseudoloc-Датаа"
             },
             "functions": {
-              "name": "Функції"
+              "name": "Pseudoloc-Фюнсстіоннс"
+            },
+            "maker": {
+              "name": "Pseudoloc-Макеер"
             },
             "math": {
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
                     "max": {
-                      "description": "Найбільше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  максіімюм  нюмббер рретюррнед"
                     },
                     "min": {
-                      "description": "Найменше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  мініімюм  нюмббер рретюррнед"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "max": {
-                      "description": "Найбільше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  максіімюм  нюмббер рретюррнед"
                     },
                     "min": {
-                      "description": "Найменше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  мініімюм  нюмббер рретюррнед"
                     }
                   }
                 }
               },
-              "name": "Математика"
+              "name": "Pseudoloc-Матхх"
             },
             "ui_controls": {
               "expressions": {
                 "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Зменшення та збільшення"
-                    }
-                  },
                   "palette_params": {
                     "callback": {
-                      "type": "Функція"
+                      "type": "Pseudoloc-Фюнсстіонн"
                     }
                   }
                 },
                 "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Створення музики"
-                    }
-                  },
-                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
+                  "short_description": "Pseudoloc-Плауус тххе МПП3 сооюнд  філее фроом тххе сппесіффіед  ЮРЛ.."
                 }
               }
             },
             "variables": {
               "expressions": {
                 "addPair": {
-                  "return_value": "Немає"
+                  "return_value": "Pseudoloc-Нонее"
                 },
                 "declareAssign_x": {
-                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
+                  "short_description": "Pseudoloc-Деслларесс андд асссіджнсс ан  ініттіал  валююе тоо а вваріаабле.."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Pseudoloc-Деслларесс а вваріаабле  вітхх тхее джіввен ннаме.."
                 }
               },
-              "name": "Змінні"
+              "name": "Pseudoloc-Варііаблеес"
             }
           },
-          "description": "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими.",
-          "name": "Програмна Лабораторія"
+          "description": "Pseudoloc-Апп  Лаб  іс аа прооджраммміндждж енввіроннментт вхеере ууою ссан ммаке  сімппле ааппс.. Дессіджн  ан аапп,  содее віттх бллосксс ор  ДжавааСсрііпт тто мааке ііт воорк,  тхенн схааре ууоюр  апп  ін ссесонндс.",
+          "name": "Pseudoloc-Апп  Лаб"
         },
         "gamelab": {
           "categories": {
             "drawing": {
               "expressions": {
-                "background": {
-                  "examples": {
-                    "RGB Colors": {
-                      "name": "Кольори RGB"
-                    }
-                  }
-                },
                 "shape": {
                   "examples": {
                     "Star": {
-                      "name": "Зірка"
+                      "name": "Pseudoloc-Старр"
                     }
                   }
                 }
-              },
-              "name": "Малювання"
+              }
             },
             "functions": {
-              "name": "Функції"
+              "name": "Pseudoloc-Фюнсстіоннс"
             },
             "game_lab": {
               "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Спрайт"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Спрайт"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Чорний та білий"
-                    }
-                  }
-                },
                 "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Створення музики"
-                    }
-                  },
-                  "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
+                  "short_description": "Pseudoloc-Плауус тххе МПП3 сооюнд  філее фроом тххе сппесіффіед  ЮРЛ.."
+                },
+                "showMobileControls": {
+                  "content": "Pseudoloc-Cханнджес  тхе  мобііле ссонтрролс  вісіібле  бенееатх  тхе  плауу спаасе.",
+                  "short_description": "Pseudoloc-Cханнджес  тхе  мобііле ссонтрролс  вісіібле  бенееатх  тхе  плауу спаасе."
                 }
               },
-              "name": "Ігрова лабораторія"
+              "name": "Pseudoloc-Гамее Лабб"
             },
             "groups": {
               "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Спрайт"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Спрайт"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Спрайт"
-                    }
-                  }
-                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
-                      "type": "Колір"
+                      "type": "Pseudoloc-Cолоор"
                     }
                   }
                 },
                 "setTintEach": {
                   "palette_params": {
                     "color": {
-                      "type": "Колір"
+                      "type": "Pseudoloc-Cолоор"
                     }
                   }
                 }
               },
-              "name": "Групи"
+              "name": "Pseudoloc-Гроююпс"
             },
             "math": {
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
                     "max": {
-                      "description": "Найбільше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  максіімюм  нюмббер рретюррнед"
                     },
                     "min": {
-                      "description": "Найменше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  мініімюм  нюмббер рретюррнед"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "max": {
-                      "description": "Найбільше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  максіімюм  нюмббер рретюррнед"
                     },
                     "min": {
-                      "description": "Найменше число, котре можна повернути"
+                      "description": "Pseudoloc-Тхе  мініімюм  нюмббер рретюррнед"
                     }
                   }
                 }
               },
-              "name": "Математика"
+              "name": "Pseudoloc-Матхх"
             },
             "sprites": {
               "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "спіраль"
-                    }
-                  }
+                "sprite.height": {
+                  "return_value": "Pseudoloc-Тхе  хеіджджхт ооф тххе сппрітее."
+                },
+                "sprite.width": {
+                  "return_value": "Pseudoloc-Тхе  відттх офф тхее спрріте.."
                 }
               },
-              "name": "Спрайти"
+              "name": "Pseudoloc-Спріітес"
             },
             "variables": {
               "expressions": {
+                "assign_x": {
+                  "short_description": "Pseudoloc-Ассііджнс  а ваалюе  то аа преевіоююслу  деслларедд варріаблле."
+                },
                 "declareAssign_x": {
-                  "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
+                  "short_description": "Pseudoloc-Деслларесс андд асссіджнсс ан  ініттіал  валююе тоо а вваріаабле.."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Pseudoloc-Деслларесс а вваріаабле  вітхх тхее джіввен ннаме.."
                 }
               },
-              "name": "Змінні"
+              "name": "Pseudoloc-Варііаблеес"
             }
           },
-          "name": "Ігрова лабораторія"
+          "name": "Pseudoloc-Гамее Лабб"
         },
         "spritelab": {
           "categories": {
@@ -406,15 +350,7 @@
           }
         },
         "weblab": {
-          "categories": {
-            "css_properties": {
-              "name": "Властивості CSS"
-            },
-            "html_tags": {
-              "name": "Теги HTML"
-            }
-          },
-          "name": "Веб Лабораторія"
+          "name": "Pseudoloc-Веб  Лаб"
         }
       }
     }

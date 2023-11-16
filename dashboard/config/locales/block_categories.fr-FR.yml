@@ -2,35 +2,19 @@
 fr:
   data:
     block_categories:
-      Actions: Actions
-      Advanced: Avancé
-      Behaviors: Comportements
-      Brushes: Pinceaux
-      Category: Catégorie
-      Color: Couleur
-      Comment: Commentaire
-      Comments: Commentaires
-      Conditionals: Instructions conditionnelles
-      Dancers: Danseurs
-      Default: Par défaut
-      Effects: Effets
-      Events: Événements
-      Functions: Fonctions
-      'Functions ': 'Fonctions '
-      Game/Score: Jeu/Score
-      Games/Score: Jeux/Score
-      Groups: Groupes
-      Input: Entrée
-      Location: Localisation
-      Locations: Emplacements
-      Logic: Logique
-      Loops: Boucles
-      Math: Math
-      Numbers: Nombres
-      Properties: Propriétés
-      Sprites: Sprites
-      Text: Texte
-      Variables: Variables
-      'Variables ': 'Variables '
-      'Variables  ': 'Variables  '
-      World: Monde
+      Actions: Pseudoloc-Àçţîôñš
+      Category: Pseudoloc-Çàţéĝôŕý
+      Color: Pseudoloc-Çôļôŕ
+      Conditionals: Pseudoloc-Çôñðîţîôñàļš
+      Default: Pseudoloc-Ðéƒàûļţ
+      Effects: Pseudoloc-Éƒƒéçţš
+      Events: Pseudoloc-Éṽéñţš
+      Functions: Pseudoloc-Ƒûñçţîôñš
+      Groups: Pseudoloc-Ĝŕôûþš
+      Location: Pseudoloc-Ļôçàţîôñ
+      Logic: Pseudoloc-Ļôĝîç
+      Loops: Pseudoloc-Ļôôþš
+      Math: Pseudoloc-Ṁàţĥ
+      Sprites: Pseudoloc-Šþŕîţéš
+      Text: Pseudoloc-Ţéẋţ
+      Variables: Pseudoloc-Ṽàŕîàƀļéš

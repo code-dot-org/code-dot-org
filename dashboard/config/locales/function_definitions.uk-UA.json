@@ -4,1968 +4,1324 @@
       "function_definitions": {
         "2-3 Artist 11": {
           "x": {
-            "name": "x"
-          }
-        },
-        "2-3 Artist 12": {
-          "details": {
-            "name": "подробиці"
-          },
-          "draw eyebrow": {
-            "name": "Намалюй око"
-          },
-          "draw pupil": {
-            "name": "намалюйте учня"
+            "name": "Pseudoloc-кс"
           }
         },
         "2-3 Artist 3.4": {
-          "draw a car": {
-            "name": "намалюйте автомобіль"
-          },
           "draw a circle": {
-            "name": "намалювати коло"
+            "name": "Pseudoloc-дравв а ссірслле"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
-            "name": "draw_rect",
             "parameters": {
-              "height": "висота",
-              "width": "ширина"
+              "height": "Pseudoloc-хеіджджхт",
+              "width": "Pseudoloc-відттх"
             }
           }
         },
         "2-3 Artist Debugging 10": {
           "draw a circle": {
-            "name": "намалювати коло"
+            "name": "Pseudoloc-дравв а ссірслле"
           },
           "draw square": {
-            "name": "намалювати квадрат",
             "parameters": {
-              "height": "висота",
-              "width": "ширина"
+              "height": "Pseudoloc-хеіджджхт",
+              "width": "Pseudoloc-відттх"
             }
           }
         },
-        "2-3 Artist Functions 10": {
-          "big gear": {
-            "name": "велика шестерня"
-          },
-          "small gear": {
-            "name": "маленька шестерня"
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "2-3 Artist Functions 11": {
           "draw a hexagon": {
-            "name": "намалювати шестикутник"
+            "name": "Pseudoloc-дравв а ххексаджджон"
           }
         },
         "2-3 Artist Functions 11.5": {
           "draw a hexagon": {
-            "name": "намалювати шестикутник"
+            "name": "Pseudoloc-дравв а ххексаджджон"
           }
         },
         "2-3 Artist Functions 12": {
           "draw a flower": {
-            "name": "намалювати квітку"
+            "name": "Pseudoloc-дравв а ффловеер"
           }
         },
         "2-3 Artist Functions 2": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "2-3 Artist Functions 4": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
-            "name": "намалювати сніжинку"
-          }
-        },
-        "2-3 Bee Functions 1": {
-          "get 2 nectar": {
-            "name": "зібрати 2 нектари"
-          }
-        },
-        "2-3 Bee Functions 10": {
-          "collect purple nectar": {
-            "name": "Збери пурпуровий нектар"
-          }
-        },
-        "2-3 Bee Functions 2": {
-          "get 5": {
-            "name": "зібрати 5"
-          }
-        },
-        "2-3 Bee Functions 4": {
-          "move and get nectar": {
-            "name": "рухатись та взяти нектар"
-          }
-        },
-        "2-3 Bee Functions 5": {
-          "move and get 4": {
-            "name": "рухатись та зібрати 4"
-          }
-        },
-        "2-3 Bee Functions 6": {
-          "move and get 4": {
-            "name": "рухатись та зібрати 4"
-          }
-        },
-        "2-3 Bee Functions 8": {
-          "get 7 nectar make 7 honey": {
-            "name": "взяти 7 нектару зробити 7 меду"
-          }
-        },
-        "2-3 Bee Functions 9": {
-          "get 7 make 7": {
-            "name": "зібрати 7 зробити 7"
-          }
-        },
-        "2-3 Bee Functions Assessment 1": {
-          "get 7": {
-            "name": "зібрати 7"
-          }
-        },
-        "2-3 Bee Functions Assessment 2": {
-          "move and get 3": {
-            "name": "рухатись та взяти 3"
+            "name": "Pseudoloc-дравв а ссновффлакее"
           }
         },
         "4-5 Artist 3": {
           "draw a flower": {
-            "name": "намалювати квітку"
+            "name": "Pseudoloc-дравв а ффловеер"
           }
         },
         "4-5 Artist 6": {
           "draw a tree": {
-            "name": "намалювати дерево"
+            "name": "Pseudoloc-дравв а ттрее"
           }
         },
         "4-5 Artist 7": {
-          "draw a car": {
-            "name": "намалюйте автомобіль"
-          },
           "draw a circle": {
-            "name": "намалювати коло"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
-          }
-        },
-        "4-5 Artist 8": {
-          "draw circle": {
-            "name": "намалювати коло"
-          },
-          "draw goal": {
-            "name": "намалювати ціль"
-          }
-        },
-        "4-5 Bee Conditionals 7": {
-          "check purple flower": {
-            "name": "перевірити фіолетову квітку"
-          }
-        },
-        "4-5 Bee Conditionals 8": {
-          "check flower make honey": {
-            "name": "перевірити квітку зробити мед"
-          }
-        },
-        "4-5 Bee Conditionals Assessment 1": {
-          "get nectar or make honey": {
-            "name": "зібрати нектар чи зробити мед"
-          }
-        },
-        "4-5 Bee Debugging 7": {
-          "make 3 honey": {
-            "name": "зробити мед 3"
-          }
-        },
-        "4-5 Bee Debugging 8": {
-          "get 5 nectar": {
-            "name": "отримати нектар. Кількість - 5"
-          }
-        },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
-            "name": "зробити увесь мед"
+            "name": "Pseudoloc-дравв а ссірслле"
           }
         },
         "Artist Autorun Test": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "Auto Open Function Editor": {
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "Choose Your Own Adventure": {
           "story": {
-            "name": "історія"
-          }
-        },
-        "Course 4 Artist Binary 1": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary 2": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary 3": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary 4": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary 5": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary 6": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary 7": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary Free Play 2": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary Free Play 2a": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary Free Play 2b": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Binary pre1": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "Course 4 Artist Functions Inspiration": {
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
-          }
-        },
-        "Course 4 Artist Functions challenge": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
-          }
-        },
-        "Course 4 Bee Params 1": {
-          "get 3 nectar": {
-            "name": "отримати нектар. Кількість - 3"
-          }
-        },
-        "Course 4 Bee Params 2": {
-          "get 3 nectar": {
-            "name": "отримати нектар. Кількість - 3"
-          }
-        },
-        "Course 4 Bee Params 3": {
-          "get 3 nectar": {
-            "name": "отримати нектар. Кількість - 3"
-          }
-        },
-        "Course 4 Bee Params 4": {
-          "get 3 nectar": {
-            "name": "отримати нектар. Кількість - 3"
-          }
-        },
-        "Course 4 Bee Params 5": {
-          "get 5 nectar": {
-            "name": "отримати нектар. Кількість - 5"
-          }
-        },
-        "Course 4 Bee Params 6": {
-          "get 5 nectar": {
-            "name": "отримати нектар. Кількість - 5"
+            "name": "Pseudoloc-сторру"
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "parameters": {
-              "honey": "мед"
+              "honey": "Pseudoloc-хонееу"
             }
           }
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "стрибнути"
+            "name": "Pseudoloc-джюмпп"
           }
         },
         "Course 4 Play Lab Params 10": {
           "score_points": {
             "parameters": {
-              "points": "балів"
+              "points": "Pseudoloc-поіннтс"
             }
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "стрибнути"
+            "name": "Pseudoloc-джюмпп"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "стрибнути",
+            "name": "Pseudoloc-джюмпп",
             "parameters": {
-              "actor": "виконавець",
-              "height": "висота"
+              "actor": "Pseudoloc-астоор",
+              "height": "Pseudoloc-хеіджджхт"
             }
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "patrol": {
-            "name": "патрулювання"
+            "name": "Pseudoloc-патррол"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
-            "name": "патрулювання",
+            "name": "Pseudoloc-патррол",
             "parameters": {
-              "actor": "виконавець"
+              "actor": "Pseudoloc-астоор"
             }
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
-            "name": "патрулювання",
+            "name": "Pseudoloc-патррол",
             "parameters": {
-              "actor": "виконавець"
+              "actor": "Pseudoloc-астоор"
             }
           }
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
-            "name": "патрулювання",
+            "name": "Pseudoloc-патррол",
             "parameters": {
-              "actor": "виконавець",
-              "speed": "швидкість"
+              "actor": "Pseudoloc-астоор",
+              "speed": "Pseudoloc-спееед"
             }
           }
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
-            "name": "патрулювання",
+            "name": "Pseudoloc-патррол",
             "parameters": {
-              "actor": "виконавець",
-              "speed": "швидкість"
+              "actor": "Pseudoloc-астоор",
+              "speed": "Pseudoloc-спееед"
             }
           }
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
             "parameters": {
-              "points": "балів"
+              "points": "Pseudoloc-поіннтс"
             }
           }
         },
         "Course 4 Play Lab Vars 1": {
           "set score": {
-            "name": "встановити рахунок"
+            "name": "Pseudoloc-сет  ссорре"
           }
         },
         "Course 4 Play Lab Vars 2": {
           "set score": {
-            "name": "встановити рахунок"
+            "name": "Pseudoloc-сет  ссорре"
           }
         },
         "Course 4 SCF 1": {
           "draw a hexagon": {
-            "name": "намалювати шестикутник"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
+            "name": "Pseudoloc-дравв а ххексаджджон"
           }
         },
         "Course 4 SCF 1a": {
           "get nectar": {
-            "name": "зібрати нектар",
+            "name": "Pseudoloc-джет  несттар",
             "parameters": {
-              "counter": "лічильник"
+              "counter": "Pseudoloc-союннтер"
             }
-          }
-        },
-        "Course 4 SCF 2": {
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
           }
         },
         "Course 4 SCF 3": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw an octagon": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "Course E: Artist Project_examples2022": {
           "my function": {
-            "name": "моя функція"
+            "name": "Pseudoloc-му ффюнсттіон"
           }
         },
         "Course E: Artist Project_examples_2021": {
           "my function": {
-            "name": "моя функція"
+            "name": "Pseudoloc-му ффюнсттіон"
           }
         },
         "Course E: Artist Project_examples_2023": {
           "my function": {
-            "name": "моя функція"
+            "name": "Pseudoloc-му ффюнсттіон"
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-            "name": "ЛОГІЧНА КВІТКА"
-          },
-          "LOGIC FLOWERS": {
-            "name": "ЛОГІЧНІ КВІТИ"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "ЛОГІЧНІ КВІТИ"
-          },
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
-          },
-          "small flower": {
-            "name": "невелика квітка"
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-            "name": "ЛОГІЧНА КВІТКА"
-          },
-          "LOGIC FLOWERS": {
-            "name": "ЛОГІЧНІ КВІТИ"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "ЛОГІЧНІ КВІТИ"
-          },
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
-          },
-          "small flower": {
-            "name": "невелика квітка"
           }
         },
         "Course E: Frozen Project_examples_2023": {
-          "LOGIC FLOWER": {
-            "name": "ЛОГІЧНА КВІТКА"
-          },
-          "LOGIC FLOWERS": {
-            "name": "ЛОГІЧНІ КВІТИ"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "ЛОГІЧНІ КВІТИ"
-          },
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
-          },
-          "small flower": {
-            "name": "невелика квітка"
           }
         },
         "Course E: Play Lab Project": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist2022": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist_2023": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
-          }
-        },
-        "CourseF_app_computer": {
-          "reset game": {
-            "name": "скидання гри"
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-            "name": "скидання гри"
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-            "name": "скидання гри"
-          }
-        },
-        "CourseF_app_computer_2023": {
-          "reset game": {
-            "name": "скидання гри"
           }
         },
         "Find the Wizard": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "FoodFight": {
           "score_points": {
             "parameters": {
-              "points": "балів"
+              "points": "Pseudoloc-поіннтс"
             }
-          }
-        },
-        "Function intro Ryan": {
-          "build bridge": {
-            "name": "побудувати міст"
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "побудувати міст"
-          }
-        },
-        "Function intro Ryan_2019": {
-          "build bridge": {
-            "name": "побудувати міст"
-          }
-        },
-        "Function intro Ryan_2020": {
-          "build bridge": {
-            "name": "побудувати міст"
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "побудувати міст"
-          }
-        },
-        "Function intro Ryan_2023": {
-          "build bridge": {
-            "name": "побудувати міст"
           }
         },
         "Geometric Sun": {
           "diamond": {
-            "name": "діамант"
+            "name": "Pseudoloc-діаммонд"
           },
           "draw a house": {
-            "name": "намалювати будинок"
-          },
-          "rectangle": {
-            "name": "прямокутник"
+            "name": "Pseudoloc-дравв а ххоюсее"
           },
           "square": {
-            "name": "квадрат"
+            "name": "Pseudoloc-сквюааре"
           },
           "sun": {
-            "name": "сонце"
-          },
-          "triangle": {
-            "name": "трикутник"
-          },
-          "window": {
-            "name": "вікно"
+            "name": "Pseudoloc-сюн"
           }
         },
         "Geometric Sun_2018": {
           "diamond": {
-            "name": "діамант"
+            "name": "Pseudoloc-діаммонд"
           },
           "draw a house": {
-            "name": "намалювати будинок"
-          },
-          "rectangle": {
-            "name": "прямокутник"
+            "name": "Pseudoloc-дравв а ххоюсее"
           },
           "square": {
-            "name": "квадрат"
+            "name": "Pseudoloc-сквюааре"
           },
           "sun": {
-            "name": "сонце"
-          },
-          "triangle": {
-            "name": "трикутник"
-          },
-          "window": {
-            "name": "вікно"
+            "name": "Pseudoloc-сюн"
           }
         },
         "InspirationalArtwork": {
           "draw a loop": {
-            "name": "намалювати цикл",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw spiral circle": {
             "parameters": {
-              "size": "розмір"
+              "size": "Pseudoloc-сізее"
             }
           },
           "n-sided shape": {
-            "name": "n-стороння фігура",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "InspirationalArtwork_2018": {
           "draw a loop": {
-            "name": "намалювати цикл",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw spiral circle": {
             "parameters": {
-              "size": "розмір"
+              "size": "Pseudoloc-сізее"
             }
-          },
-          "n-sided shape": {
-            "name": "n-стороння фігура"
-          }
-        },
-        "K-1 Artist2 3": {
-          "draw roof": {
-            "name": "намалюйте дах"
-          }
-        },
-        "K-1 Artist2 4": {
-          "draw rectangle": {
-            "name": "намалюйте прямокутник"
-          }
-        },
-        "K-1 Artist2 5": {
-          "draw rectangle": {
-            "name": "намалюйте прямокутник"
           }
         },
         "MC Agent Freeplay": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
-          }
-        },
-        "MC_HOC_2017_07_Cole": {
-          "clear path": {
-            "name": "очистити шлях"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "очистити шлях"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "clear path": {
-            "name": "очистити шлях"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "clear path": {
-            "name": "очистити шлях"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "очистити шлях"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2023": {
-          "clear path": {
-            "name": "очистити шлях"
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-            "name": "виправити довгий шлях"
-          },
-          "fix short path": {
-            "name": "виправити короткий шлях"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "виправити довгий шлях"
-          },
-          "fix short path": {
-            "name": "виправити короткий шлях"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-            "name": "виправити довгий шлях"
-          },
-          "fix short path": {
-            "name": "виправити короткий шлях"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-            "name": "виправити довгий шлях"
-          },
-          "fix short path": {
-            "name": "виправити короткий шлях"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "виправити довгий шлях"
-          },
-          "fix short path": {
-            "name": "виправити короткий шлях"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2023": {
-          "fix long path": {
-            "name": "виправити довгий шлях"
-          },
-          "fix short path": {
-            "name": "виправити короткий шлях"
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build long bridge": {
-            "name": "побудувати довгий міст"
-          },
-          "build short bridge": {
-            "name": "побудувати короткий міст"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build long bridge": {
-            "name": "побудувати довгий міст"
-          },
-          "build short bridge": {
-            "name": "побудувати короткий міст"
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build long bridge": {
-            "name": "побудувати довгий міст"
-          },
-          "build short bridge": {
-            "name": "побудувати короткий міст"
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build long bridge": {
-            "name": "побудувати довгий міст"
-          },
-          "build short bridge": {
-            "name": "побудувати короткий міст"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build long bridge": {
-            "name": "побудувати довгий міст"
-          },
-          "build short bridge": {
-            "name": "побудувати короткий міст"
-          }
-        },
-        "MC_HOC_2017_Ali_2023": {
-          "build long bridge": {
-            "name": "побудувати довгий міст"
-          },
-          "build short bridge": {
-            "name": "побудувати короткий міст"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "MC_HOC_2017_FP20x202022": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "MC_HOC_2017_FP20x20_2019": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "MC_HOC_2017_FP20x20_2020": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
-          }
-        },
-        "NEW Course 4 Artist Functions 11": {
-          "draw a line of  squares": {
-            "name": "малювати лінію квадрату"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
-          }
-        },
-        "NEW Course 4 Artist Functions 12": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
-          }
-        },
-        "NEW Course 4 Artist Functions 13": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
-          }
-        },
-        "NEW Course 4 Artist Functions 14": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
-          },
-          "draw a square 40": {
-            "name": "намалювати квадрат 40"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "NEW Course 4 Artist Functions 7": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-дравв а ттріаннджле"
           }
         },
         "NEW Course 4 Artist Functions 9": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           },
           "draw a triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-дравв а ттріаннджле"
           }
         },
         "NEW Course 4 Artist Params 1": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a hexagon": {
-            "name": "намалювати шестикутник",
+            "name": "Pseudoloc-дравв а ххексаджджон",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 11": {
           "do something": {
-            "name": "щось зробити",
+            "name": "Pseudoloc-до ссометтхіндждж",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "NEW Course 4 Artist Params 12": {
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "NEW Course 4 Artist Params 12a": {
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "NEW Course 4 Artist Params 13": {
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "NEW Course 4 Artist Params 15": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a triangle": {
-            "description": "намалювати трикутник",
-            "name": "намалювати трикутник"
+            "description": "Pseudoloc-дравв а ттріаннджле",
+            "name": "Pseudoloc-дравв а ттріаннджле"
           }
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-дравв а ттріаннджле"
           }
         },
         "NEW Course 4 Artist Params 4": {
           "draw a triangle with length": {
-            "name": "намалюйте трикутник з довжиною",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 5": {
           "draw a pentagon": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 6": {
           "draw a hexagon": {
-            "name": "намалювати шестикутник",
+            "name": "Pseudoloc-дравв а ххексаджджон",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a sqaure": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 7": {
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
-            "name": "намалюйте трикутник з довжиною",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params 9": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "NEW Course 4 Artist Params inspire": {
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "description": "блок функції \"стрибнути\" з параметрами висоти та персонажа",
-            "name": "стрибнути",
+            "description": "Pseudoloc-джюмпп фюннстіоон бллоск  вітхх хеііджхт  анд  астоор паарамеетер",
+            "name": "Pseudoloc-джюмпп",
             "parameters": {
-              "actor": "виконавець",
-              "height": "висота"
+              "actor": "Pseudoloc-астоор",
+              "height": "Pseudoloc-хеіджджхт"
             }
           },
           "patrol": {
-            "name": "патрулювання",
+            "name": "Pseudoloc-патррол",
             "parameters": {
-              "actor": "виконавець",
-              "speed": "швидкість"
+              "actor": "Pseudoloc-астоор",
+              "speed": "Pseudoloc-спееед"
             }
           }
         },
         "New Artist Project": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "New Minecraft Hero Project": {
           "function 1": {
-            "name": "функція 1"
+            "name": "Pseudoloc-фюнсстіонн 1"
           },
           "function 2": {
-            "name": "функція 2"
+            "name": "Pseudoloc-фюнсстіонн 2"
           }
         },
         "New Play Lab Project": {
           "jump": {
-            "description": "блок функції \"стрибнути\" з параметрами висоти та персонажа",
-            "name": "стрибнути",
+            "description": "Pseudoloc-джюмпп фюннстіоон бллоск  вітхх хеііджхт  анд  астоор паарамеетер",
+            "name": "Pseudoloc-джюмпп",
             "parameters": {
-              "actor": "виконавець",
-              "height": "висота"
+              "actor": "Pseudoloc-астоор",
+              "height": "Pseudoloc-хеіджджхт"
             }
           },
           "patrol": {
-            "description": "функція патрулювання, яка має параметри персонаж та швидкость",
-            "name": "патрулювання",
+            "description": "Pseudoloc-а паатролл фюннстіоон тххат ххас аа асттор аанд сспеедд парраметтер",
+            "name": "Pseudoloc-патррол",
             "parameters": {
-              "actor": "виконавець",
-              "speed": "швидкість"
+              "actor": "Pseudoloc-астоор",
+              "speed": "Pseudoloc-спееед"
             }
           }
         },
         "Standalone_Artist_7": {
           "draw a flower": {
-            "name": "намалювати квітку"
+            "name": "Pseudoloc-дравв а ффловеер"
           }
         },
         "Standalone_Artist_8": {
           "draw a shape": {
-            "name": "намалювати фігуру"
+            "name": "Pseudoloc-дравв а ссхапее"
           }
         },
         "Standalone_Artist_9": {
           "my function": {
-            "name": "моя функція"
-          }
-        },
-        "course1_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "\"просте\" рішення"
-          }
-        },
-        "course1_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "можливе рішення"
+            "name": "Pseudoloc-му ффюнсттіон"
           }
         },
         "course3_artist_functions_challenge1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "get 3 nectar or honey": {
-            "name": "зібрати 3 нектари чи мед"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "move and collect": {
-            "name": "рухатись та збирати"
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "row of nectar": {
-            "name": "ряд з нектару"
-          },
-          "rowOfNectar": {
-            "name": "рядНектару"
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "move and check": {
-            "name": "рухатись та перевіряти"
-          },
-          "row of nectar": {
-            "name": "ряд з нектару"
-          },
-          "rowOfNectar": {
-            "name": "рядНектару"
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-            "name": "продовжити"
-          },
-          "lose game": {
-            "name": "програти"
-          },
-          "win game": {
-            "name": "перемога"
-          }
-        },
-        "course4_artist_binary_challenge1": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "course4_artist_binary_challenge2": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "course4_artist_fwp_challenge1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "sides": "сторони"
+              "sides": "Pseudoloc-сідеес"
             }
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
           },
           "draw background": {
             "parameters": {
-              "color": "колір"
+              "color": "Pseudoloc-солоор"
             }
           }
         },
         "course4_bee_fwp_challenge1": {
           "pick row": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
-          }
-        },
-        "courseA_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "\"просте\" рішення"
-          }
-        },
-        "courseB_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "можливе рішення"
-          }
-        },
-        "courseB_artist_loops_challenge22022": {
-          "potential solution": {
-            "name": "можливе рішення"
-          }
-        },
-        "courseB_artist_loops_challenge2_2018": {
-          "potential solution": {
-            "name": "можливе рішення"
-          }
-        },
-        "courseB_artist_loops_challenge2_2019": {
-          "potential solution": {
-            "name": "можливе рішення"
-          }
-        },
-        "courseB_artist_loops_challenge2_2020": {
-          "potential solution": {
-            "name": "можливе рішення"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "можливе рішення"
-          }
-        },
-        "courseB_artist_loops_challenge2_2023": {
-          "potential solution": {
-            "name": "можливе рішення"
           }
         },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-кс"
             }
           }
         },
@@ -1979,596 +1335,299 @@
         "courseC_artist_prog3_2018": {
           "draw flame": {
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-кс"
             }
           }
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-кс"
             }
           }
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-кс"
             }
           }
         },
         "courseC_artist_prog3_2021": {
-          "draw fire": {
-            "name": "намалювати пожежу"
-          },
           "draw flame": {
-            "name": "намалювати полум'я",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-кс"
             }
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "бустер"
           }
         },
         "courseC_data wizard": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseC_data wizard2022": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseC_data wizard_2020": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseC_data wizard_2021": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseC_data wizard_2023": {
           "do something": {
-            "name": "щось зробити"
-          }
-        },
-        "courseD_artist_binary1": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary1_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary1_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary1_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary2": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary2_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary2_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary2_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary3": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary3_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary3_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary3_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary4": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary4_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary4_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary4_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary5": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary5_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary5_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary5_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary6": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary6_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary6_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary6_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary7": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary7_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary7_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary7_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binaryFP_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binaryFP_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binaryFP_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge1_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge1_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge1_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge2_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge2_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge2_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "двійкова система"
-            }
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_concept1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a hexagon": {
-            "name": "намалювати шестикутник"
+            "name": "Pseudoloc-дравв а ххексаджджон"
           }
         },
         "courseE_artist_concept1_2018": {
           "draw a hexagon": {
-            "name": "намалювати шестикутник"
+            "name": "Pseudoloc-дравв а ххексаджджон"
           }
         },
         "courseE_artist_concept4": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_concept4_2018": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions10": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions102022": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions10_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw hexagon": {
-            "name": "намалювати шестикутник"
-          },
-          "draw line of hexagons": {
-            "name": "намалювати лінію шестикутників"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions10_2023": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           },
           "draw ear stems": {
-            "name": "намалювати стебла колосків"
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_2023": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions32022": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions3_2018": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions3_2019": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions3_2020": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions3_2021": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions3_2023": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions4": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions4_copy": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions4_dani": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions52022": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_2018": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_2019": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_2020": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_2021": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_2023": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_copy": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions5_dani": {
           "draw a star": {
-            "name": "намалювати зірку"
+            "name": "Pseudoloc-дравв а сстар"
           }
         },
         "courseE_artist_functions7": {
@@ -2586,408 +1645,202 @@
             "name": "намалювати будинок"
           }
         },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
-            "name": "намалювати вікно"
-          }
-        },
         "courseE_artist_functions8": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          },
-          "staggered squares": {
-            "name": "квадрати, розташовані в шаховому порядку"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8_2023": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8a2022": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_functions8a_2018": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_functions8a_2019": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_functions8a_2020": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_functions8a_2021": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_functions8a_2023": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseE_artist_functions8b2022": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8b_2023": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          },
-          "staggered squares": {
-            "name": "квадрати, розташовані в шаховому порядку"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions8c_2023": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions9": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions92022": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw line of triangles": {
-            "name": "намалювати лінію трикутників"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions9_2023": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw triangle": {
-            "name": "намалювати трикутник"
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          }
-        },
-        "courseE_artist_functionsProj_2018": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          }
-        },
-        "courseE_artist_functionsProj_2019": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          }
-        },
-        "courseE_artist_functionsProj_2020": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw hexagon": {
-            "name": "намалювати шестикутник"
-          },
-          "draw line of hexagons": {
-            "name": "намалювати лінію шестикутників"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
-          },
-          "staggered squares": {
-            "name": "квадрати, розташовані в шаховому порядку"
-          }
-        },
-        "courseE_artist_functionsProj_2023": {
-          "draw a line of squares": {
-            "name": "намалювати лінію квадратів"
-          },
-          "draw square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
@@ -2997,35 +1850,32 @@
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "my design": {
-            "name": "мій малюнок"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge1_2023": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
@@ -3035,706 +1885,174 @@
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "my design": {
-            "name": "мій малюнок"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_challenge2_2023": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           },
           "draw ear stems": {
-            "name": "намалювати стебла колосків"
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_2023": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-дравв еарр стеемс"
           }
         },
         "courseE_artist_functions_predict2": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict22022": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict2_2021": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw line of polygons": {
-            "name": "намалювати лінію багатокутників"
-          },
-          "draw polygon": {
-            "name": "намалювати багатокутник"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_artist_functions_predict2_2023": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_bee_functions1": {
           "do something": {
-            "name": "щось зробити"
-          }
-        },
-        "courseE_bee_functions2": {
-          "get 2 nectar": {
-            "name": "зібрати 2 нектари"
-          }
-        },
-        "courseE_bee_functions3": {
-          "get 5": {
-            "name": "зібрати 5"
-          }
-        },
-        "courseE_bee_functions4": {
-          "move and get nectar": {
-            "name": "рухатись та взяти нектар"
-          }
-        },
-        "courseE_bee_functions5": {
-          "move and get 4": {
-            "name": "рухатись та зібрати 4"
-          }
-        },
-        "courseE_bee_functions6": {
-          "get 7 nectar make 7 honey": {
-            "name": "взяти 7 нектару зробити 7 меду"
-          }
-        },
-        "courseE_bee_functions7": {
-          "get 7 make 7": {
-            "name": "зібрати 7 зробити 7"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_bee_functions_challenge1": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "get 3 nectar or honey": {
-            "name": "зібрати 3 нектари чи мед"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "move and collect": {
-            "name": "рухатись та збирати"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_farmer_concept1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_farmer_concept2": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "get pumpkin": {
-            "name": "отримати гарбуз"
-          }
-        },
-        "courseE_farmer_concept2_2018": {
-          "get pumpkin": {
-            "name": "отримати гарбуз"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
-            "name": "щось зробити"
-          }
-        },
-        "courseE_farmer_functions10a12022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions10a1_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions10a1_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions10a1_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "check square for corn": {
-            "name": "перевірити, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          },
-          "pumpkin square": {
-            "name": "ділянка гарбуза"
-          }
-        },
-        "courseE_farmer_functions10a1_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions11_predict2022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions11_predict_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions11_predict_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions11_predict_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "check square for corn": {
-            "name": "перевірити, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "get produce": {
-            "name": "зібрати врожай"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          },
-          "pumpkin square": {
-            "name": "квадрат гарбуза"
-          }
-        },
-        "courseE_farmer_functions11_predict_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions13_2018": {
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions13_2019": {
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions13_2020": {
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "check for corn": {
-            "name": "перевірити, чи є кукурудза"
-          },
-          "corn rectangle": {
-            "name": "ділянка кукурудзи"
-          },
-          "lettuce stairs": {
-            "name": "сходи з салату"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions13_2023": {
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions1a_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions1a_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions1a_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "перевірити, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions1a_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions2b_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions2b_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions2b_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
-          }
-        },
-        "courseE_farmer_functions2b_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          }
-        },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions2ba_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions2ba_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions2ba_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "перевірити, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions2ba_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions3c1_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions3c1_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions3c1_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "check square for corn": {
-            "name": "перевірити, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions3c1_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          },
-          "pick along path": {
-            "name": "підібрати по шляху"
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions3c_2018": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions3c_2019": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions3c_2020": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "перевірити, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions3c_2023": {
-          "check square for corn": {
-            "name": "перевір, чи є кукурудза"
-          },
-          "get all pumpkins": {
-            "name": "зібрати всі гарбузи"
-          }
-        },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions7a1_2018": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions7a1_2019": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions7a1_2020": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions7a1_2023": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions8a1_2018": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions8a1_2019": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions8a1_2020": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions8a1_2023": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions9a1_2018": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions9a1_2019": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions9a1_2020": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_farmer_functions9a1_2023": {
-          "garden square": {
-            "name": "садова площа"
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-            "name": "продовжити"
-          },
-          "lose game": {
-            "name": "програти"
-          },
-          "win game": {
-            "name": "перемога"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_playLab_scaffold2": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_playLab_scaffold3": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseE_playLab_scaffold4": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseF_apps_collector": {
           "end game": {
-            "name": "завершити гру"
+            "name": "Pseudoloc-енд  джамее"
           }
         },
         "courseF_apps_collector2022": {
@@ -3744,388 +2062,310 @@
         },
         "courseF_apps_collector_-2022-2": {
           "end game": {
-            "name": "завершити гру"
+            "name": "Pseudoloc-енд  джамее"
           }
         },
         "courseF_apps_collector_2023": {
           "end game": {
-            "name": "завершити гру"
+            "name": "Pseudoloc-енд  джамее"
           }
         },
         "courseF_artist_fwp1": {
           "Make gingham": {
             "parameters": {
-              "size": "розмір"
+              "size": "Pseudoloc-сізее"
             }
           },
           "black outline": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "checker": {
             "parameters": {
-              "color": "колір",
-              "size": "розмір"
+              "color": "Pseudoloc-солоор",
+              "size": "Pseudoloc-сізее"
             }
           },
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат"
+            "name": "Pseudoloc-дравв а ссквюарре"
           }
         },
         "courseF_artist_fwp2": {
           "Make gingham": {
             "parameters": {
-              "size": "розмір"
+              "size": "Pseudoloc-сізее"
             }
           },
           "black outline": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "checker": {
             "parameters": {
-              "color": "колір",
-              "size": "розмір"
+              "color": "Pseudoloc-солоор",
+              "size": "Pseudoloc-сізее"
             }
           },
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "courseF_artist_fwp2_predict1": {
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "courseF_artist_fwp3": {
           "black outline": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a square2": {
             "parameters": {
-              "size": "розмір"
+              "size": "Pseudoloc-сізее"
             }
           },
           "filled square": {
             "parameters": {
-              "color": "колір",
-              "size": "розмір"
+              "color": "Pseudoloc-солоор",
+              "size": "Pseudoloc-сізее"
             }
           }
         },
         "courseF_artist_fwp4": {
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина",
-              "min": "мінімум",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "min": "Pseudoloc-мін",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина",
-              "min": "мінімум",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "min": "Pseudoloc-мін",
+              "sides": "Pseudoloc-сідеес"
             }
           }
         },
         "courseF_artist_fwp9": {
           "draw a circle": {
-            "description": "намалювати коло заданого радіуса",
-            "name": "намалювати коло",
+            "description": "Pseudoloc-дравв а ссірслле офф джіввен ррадіююс",
+            "name": "Pseudoloc-дравв а ссірслле",
             "parameters": {
-              "radius": "радіус"
+              "radius": "Pseudoloc-радііюс"
             }
           },
           "draw a house": {
-            "name": "намалювати будинок",
+            "name": "Pseudoloc-дравв а ххоюсее",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a pinwheel": {
-            "name": "draw a pinwheel",
+            "name": "Pseudoloc-дравв а ппінвххеел",
             "parameters": {
-              "length": "довжина",
-              "repeat": "повторити",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "repeat": "Pseudoloc-репееат",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a shape": {
-            "name": "намалювати фігуру",
+            "name": "Pseudoloc-дравв а ссхапее",
             "parameters": {
-              "length": "довжина",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина",
-              "min": "мінімум",
-              "sides": "сторони"
+              "length": "Pseudoloc-ленджджтх",
+              "min": "Pseudoloc-мін",
+              "sides": "Pseudoloc-сідеес"
             }
           },
           "draw a square": {
-            "name": "намалювати квадрат",
+            "name": "Pseudoloc-дравв а ссквюарре",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           },
           "draw a star": {
-            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
-            "name": "намалювати зірку",
+            "description": "Pseudoloc-дравв а сстар  вітхх джіввен ппоінттс аннд сіідес  оф джджівенн леннджтх",
+            "name": "Pseudoloc-дравв а сстар",
             "parameters": {
-              "length": "довжина",
-              "points": "балів"
+              "length": "Pseudoloc-ленджджтх",
+              "points": "Pseudoloc-поіннтс"
             }
           },
           "draw a triangle": {
-            "name": "намалювати трикутник",
+            "name": "Pseudoloc-дравв а ттріаннджле",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "courseF_artist_fwp_challenge1": {
           "do something": {
-            "name": "щось зробити"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw a polygon": {
-            "name": "намалюйте багатокутник",
             "parameters": {
-              "sides": "сторони"
+              "sides": "Pseudoloc-сідеес"
             }
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
           },
           "draw background": {
             "parameters": {
-              "color": "колір"
+              "color": "Pseudoloc-солоор"
             }
           }
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
-            "name": "щось зробити"
-          },
-          "draw a square 20": {
-            "name": "намалювати квадрат 20"
+            "name": "Pseudoloc-до ссометтхіндждж"
           },
           "draw an octagon": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
-          }
-        },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "move and check": {
-            "name": "рухатись та перевіряти"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "рухайся та збирай нектар за допомогою лічильника"
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "move and check": {
-            "name": "рухатись та перевіряти"
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "move and check": {
-            "name": "рухатись та перевіряти"
           }
         },
         "courseF_bee_functions8a": {
           "do something": {
-            "name": "щось зробити"
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "row of nectar": {
-            "name": "ряд з нектару"
-          },
-          "rowOfNectar": {
-            "name": "рядНектару"
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-            "name": "перевірити нектар чи мед"
-          },
-          "move and check": {
-            "name": "рухатись та перевіряти"
-          },
-          "rowOfNectar": {
-            "name": "рядНектару"
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-            "name": "рядНектару"
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
-            "name": "рядНектару"
+            "name": "Pseudoloc-до ссометтхіндждж"
           }
         },
         "courseF_bee_fwp4": {
           "rowOfNectar": {
-            "name": "рядНектару",
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "courseF_bee_fwp5": {
           "rowOfNectar": {
-            "name": "рядНектару",
             "parameters": {
-              "width": "ширина"
+              "width": "Pseudoloc-відттх"
             }
           }
         },
         "courseF_bee_fwp6": {
           "rowOfNectar": {
-            "name": "рядНектару",
             "parameters": {
-              "width": "ширина"
+              "width": "Pseudoloc-відттх"
             }
           }
         },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
             "parameters": {
-              "width": "ширина"
+              "width": "Pseudoloc-відттх"
             }
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
             "parameters": {
-              "width": "ширина"
+              "width": "Pseudoloc-відттх"
             }
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
             "parameters": {
-              "width": "ширина"
+              "width": "Pseudoloc-відттх"
             }
           }
         },
         "courseF_bee_fwp_challenge1": {
           "pick row": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
-              "length": "довжина"
+              "length": "Pseudoloc-ленджджтх"
             }
           }
         },
         "courseF_bee_variables_7_2018": {
           "collect": {
-            "name": "збирати"
+            "name": "Pseudoloc-солллест"
           }
         },
         "courseF_bee_variables_7_2019": {
           "collect": {
-            "name": "збирати"
+            "name": "Pseudoloc-солллест"
           }
         },
         "courseF_bee_variables_7_2020": {
           "collect": {
-            "name": "збирати"
+            "name": "Pseudoloc-солллест"
           }
         },
         "courseF_bee_variables_8_2018": {
           "collect": {
-            "name": "збирати"
+            "name": "Pseudoloc-солллест"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
-            "name": "збирати"
+            "name": "Pseudoloc-солллест"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
-            "name": "збирати"
+            "name": "Pseudoloc-солллест"
           }
         }
       }

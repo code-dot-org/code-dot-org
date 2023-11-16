@@ -6,13 +6,13 @@
           "display_name": "Événements d'accéléromètre"
         },
         "csd-2022/ai-lab": {
-          "display_name": "Laboratoire d'IA"
+          "display_name": "Pseudoloc-ÀÎ Ļàƀ"
         },
         "csd-2022/app-lab": {
-          "display_name": "Labo des applis"
+          "display_name": "Pseudoloc-Àþþ Ļàƀ"
         },
         "csd-2022/applab-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/arrays": {
           "display_name": "Tableaux"
@@ -30,10 +30,10 @@
           "display_name": "Modifier l’échelle des capteurs"
         },
         "csd-2022/circuit-playground": {
-          "display_name": "Présentation de Circuit Playground"
+          "display_name": "Pseudoloc-Çîŕçûîţ Þļàýĝŕôûñð Ôṽéŕṽîéŵ"
         },
         "csd-2022/classes": {
-          "display_name": "Classes"
+          "display_name": "Pseudoloc-Çļàššéš"
         },
         "csd-2022/collision-detection": {
           "display_name": "Détection de collision"
@@ -45,7 +45,7 @@
           "display_name": "CSS"
         },
         "csd-2022/css-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/debugging-with-watchers": {
           "display_name": "Débogage avec les observateurs"
@@ -66,19 +66,19 @@
           "display_name": "Modifier les images"
         },
         "csd-2022/for-loops": {
-          "display_name": "Les Boucles « Pour »"
+          "display_name": "Pseudoloc-Ƒôŕ Ļôôþš"
         },
         "csd-2022/formatting-html": {
           "display_name": "Mise en forme HTML"
         },
         "csd-2022/functions": {
-          "display_name": "Fonctions"
+          "display_name": "Pseudoloc-Ƒûñçţîôñš"
         },
         "csd-2022/game-lab": {
-          "display_name": "Labo Jeux"
+          "display_name": "Pseudoloc-Ĝàɱé Ļàƀ"
         },
         "csd-2022/game-lab-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/headings-and-paragraphs": {
           "display_name": "Titres et paragraphes"
@@ -87,7 +87,7 @@
           "display_name": "HTML"
         },
         "csd-2022/html-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/html-tags": {
           "display_name": "Balises HTML"
@@ -111,28 +111,28 @@
           "display_name": "Importation d’écrans"
         },
         "csd-2022/introduction-to-ai-lab": {
-          "display_name": "Présentation d'AI Lab"
+          "display_name": "Pseudoloc-Îñţŕôðûçţîôñ ţô ÀÎ Ļàƀ"
         },
         "csd-2022/javascript": {
-          "display_name": "JavaScript"
+          "display_name": "Pseudoloc-ĴàṽàŠçŕîþţ"
         },
         "csd-2022/javascript-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/layout-properties": {
           "display_name": "Propriétés de la mise en page"
         },
         "csd-2022/lists": {
-          "display_name": "Listes"
+          "display_name": "Pseudoloc-Ļîšţš"
         },
         "csd-2022/maker-toolkit": {
-          "display_name": "Maker Toolkit"
+          "display_name": "Pseudoloc-Ṁàķéŕ Ţôôļķîţ"
         },
         "csd-2022/maker-toolkit-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/model-cards-in-ai-lab": {
-          "display_name": "Modèles de cartes dans un laboratoire d'IA"
+          "display_name": "Pseudoloc-Ṁôðéļ Çàŕðš îñ ÀÎ Ļàƀ"
         },
         "csd-2022/modifying-arrays": {
           "display_name": "Modifier et créer des tableaux"
@@ -144,22 +144,22 @@
           "display_name": "Nommer les variables"
         },
         "csd-2022/other": {
-          "display_name": "Autre"
+          "display_name": "Pseudoloc-Ôţĥéŕ"
         },
         "csd-2022/other-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/patterns-overview": {
-          "display_name": "Aperçu"
+          "display_name": "Pseudoloc-Ôṽéŕṽîéŵ"
         },
         "csd-2022/playing-notes": {
           "display_name": "Jouer des notes"
         },
         "csd-2022/problem-solving-process": {
-          "display_name": "Le Processus de Résolution de Problèmes"
+          "display_name": "Pseudoloc-Ţĥé Þŕôƀļéɱ Šôļṽîñĝ Þŕôçéšš"
         },
         "csd-2022/problem-solving-process-general": {
-          "display_name": "Le Processus de Résolution de Problèmes"
+          "display_name": "Pseudoloc-Ţĥé Þŕôƀļéɱ Šôļṽîñĝ Þŕôçéšš"
         },
         "csd-2022/random-numbers": {
           "display_name": "Nombres aléatoires"
@@ -174,10 +174,10 @@
           "display_name": "Interactions de sprite"
         },
         "csd-2022/sprite-properties": {
-          "display_name": "Propriétés du sprite"
+          "display_name": "Pseudoloc-Šþŕîţé Þŕôþéŕţîéš"
         },
         "csd-2022/sprites": {
-          "display_name": "Sprites"
+          "display_name": "Pseudoloc-Šþŕîţéš"
         },
         "csd-2022/the-accelerometer": {
           "display_name": "L’accéléromètre"
@@ -186,19 +186,19 @@
           "display_name": "La Boucle Dessiner"
         },
         "csd-2022/variables": {
-          "display_name": "Variables"
+          "display_name": "Pseudoloc-Ṽàŕîàƀļéš"
         },
         "csd-2022/velocity": {
-          "display_name": "Vitesse"
+          "display_name": "Pseudoloc-Ṽéļôçîţý"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
           "display_name": "Vélocité et le contre-modèle"
         },
         "csd-2022/web-lab": {
-          "display_name": "Labo Web"
+          "display_name": "Pseudoloc-Ŵéƀ Ļàƀ"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
+          "content": "Pseudoloc-![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
     }

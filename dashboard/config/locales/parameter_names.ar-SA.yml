@@ -2,17 +2,17 @@
 ar:
   data:
     parameter_names:
-      actor: الممثل
-      color: لون
-      counter: العداد
-      height: الارتفاع
-      honey: العسل
-      left: اليسار
-      length: الطول
-      min: على الاقل
-      points: نقاط
-      radius: قُطر
-      sides: جوانب
-      size: الحجم
-      speed: السرعة
-      width: العرض
+      actor: Pseudoloc-لؤفخ
+      color: Pseudoloc-ؤخمخ
+      counter: Pseudoloc-ؤخعىثق
+      height: Pseudoloc-اثهلف
+      honey: Pseudoloc-اخىث
+      left: Pseudoloc-مثبف
+      length: Pseudoloc-مثىلا
+      min: Pseudoloc-ةهى
+      points: Pseudoloc-حخهىس
+      radius: Pseudoloc-قليهس
+      sides: Pseudoloc-سهيث
+      size: Pseudoloc-سهئث
+      speed: Pseudoloc-سحثث
+      width: Pseudoloc-صهيف

@@ -2,23 +2,23 @@
 uk:
   data:
     shared_functions:
-      driving with arrow keys: рух за стрілками
-      fluttering: пурхання
-      growing: ріст
-      jittering: тремтіння
-      moving east: рух на схід
-      moving east and looping: рух на схід у циклі
-      moving north: рух на північ
-      moving north and looping: рух на північ у циклі
-      moving south: рух на південь
-      moving south and looping: рух на південь у циклі
-      moving west: рух на захід
-      moving west and looping: рух на захід у циклі
-      moving with arrow keys: рух за стрілками
-      patrolling: патрулювання
-      shrinking: стиснення
-      spinning left: обертання ліворуч
-      spinning right: обертання праворуч
-      swimming left and right: рух рибки ліворуч та праворуч
-      wandering: бродіння
-      wobbling: хитання
+      driving with arrow keys: Pseudoloc-дріввіндж  вітхх аррров ккеус
+      fluttering: Pseudoloc-флютттерііндж
+      growing: Pseudoloc-джроввіндж
+      jittering: Pseudoloc-джітттерінндж
+      moving east: Pseudoloc-мовііндж ееаст
+      moving east and looping: Pseudoloc-мовііндж ееаст  анд  лооппіндж
+      moving north: Pseudoloc-мовііндж ннортхх
+      moving north and looping: Pseudoloc-мовііндж ннортхх андд лооопіндждж
+      moving south: Pseudoloc-мовііндж ссоютхх
+      moving south and looping: Pseudoloc-мовііндж ссоютхх андд лооопіндждж
+      moving west: Pseudoloc-мовііндж ввест
+      moving west and looping: Pseudoloc-мовііндж ввест  анд  лооппіндж
+      moving with arrow keys: Pseudoloc-мовііндж ввітх  арроов кееус
+      patrolling: Pseudoloc-патрроллііндж
+      shrinking: Pseudoloc-схріінкінндж
+      spinning left: Pseudoloc-спіннніндждж леффт
+      spinning right: Pseudoloc-спіннніндждж ріджджхт
+      swimming left and right: Pseudoloc-свіммміндждж леффт аннд рііджхт
+      wandering: Pseudoloc-ванддерінндж
+      wobbling: Pseudoloc-вобббліндждж

@@ -4,97 +4,129 @@ zh-TW:
     course:
       name:
         allthethingscourse:
-          description_short: 這是所有項目的課程
-          description_student: 這是所有項目 (allthethings) 的課程，並提供較詳細的說明供學生查詢
-          description_teacher: 這是所有項目 (allthethings) 的課程，並提供較詳細的說明供教師查詢
-          title: 所有項目課程
+          title: Pseudoloc-诶勒提尺提尺娜吉西哦儿丝
+        csa-async-2022:
+          title: Pseudoloc-吉伊提艾吉 提诶提伊 马迪勒伊 西诶
+        csa-pilot-facilitator:
+          title: Pseudoloc-西丝 屁勒哦 弗西艾艾提提儿丝
         csd-2017:
-          assignment_family_title: 計算機科學探索
-          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
-          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          title: 計算機科學探索 ('17-'18)
-          version_title: 17-18
+          assignment_family_title: Pseudoloc-西哦屁吾伊儿丝西伊娜伊 艾西哦伊儿伊丝
         csd-2018:
-          assignment_family_title: 計算機科學探索
-          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
-          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          title: 計算機科學探索 ('18-'19)
-          version_title: "'18-'19"
-        csd-2019:
-          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
-          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          title: 計算機科學探索 ('19-'20)
-          version_title: "'19-'20"
-        csd-2020:
-          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
-          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-        csd-2023:
-          title: 計算機科學探索
-        csd-pilot:
-          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
-          title: CSD 試行課程
+          assignment_family_title: Pseudoloc-西哦屁吾伊儿丝西伊娜伊 艾西哦伊儿伊丝
         csp-2017:
-          assignment_family_title: 計算機科學原理
-          description_short: 學習計算機科學的基礎概念。
-          description_student: 在 2016 年秋季，美國大學理事會推出最新的 AP® 課程——AP 電腦科學原理。該課程為學生介紹電腦科學的基本概念，並讓學生接受挑戰，讓他們瞭解電腦運算與科技可如何影響世界。AP
-            計畫設計 AP 電腦科學原理課程之目標，是創造電腦科學範疇的領袖；此外，課程也提供基本的電腦工具與多學科機會，吸引本來無法接觸的人士並引起他們的興趣。
-          description_teacher: 在 2016 年秋季，美國大學理事會推出最新的 AP® 課程——AP 電腦科學原理。該課程為學生介紹電腦科學的基本概念，並讓學生接受挑戰，讓他們瞭解電腦運算與科技可如何影響世界。AP
-            計畫設計 AP 電腦科學原理課程之目標，是創造電腦科學範疇的領袖；此外，課程也提供基本的電腦工具與多學科機會，吸引本來無法接觸的人士並引起他們的興趣。
-          title: 計算機科學原理 ('17-'18)
-          version_title: 17-18
+          assignment_family_title: Pseudoloc-西哦屁吾伊儿丝西伊娜伊 儿娜西屁勒丝
         csp-2018:
-          assignment_family_title: 計算機科學原理
-          description_short: 學習計算機科學的基礎概念。
-          description_student: 在 2016 年秋季，美國大學理事會推出最新的 AP® 課程——AP 電腦科學原理。該課程為學生介紹電腦科學的基本概念，並讓學生接受挑戰，讓他們瞭解電腦運算與科技可如何影響世界。AP
-            計畫設計 AP 電腦科學原理課程之目標，是創造電腦科學範疇的領袖；此外，課程也提供基本的電腦工具與多學科機會，吸引本來無法接觸的人士並引起他們的興趣。
-          description_teacher: 在 2016 年秋季，美國大學理事會推出最新的 AP® 課程——AP 電腦科學原理。該課程為學生介紹電腦科學的基本概念，並讓學生接受挑戰，讓他們瞭解電腦運算與科技可如何影響世界。AP
-            計畫設計 AP 電腦科學原理課程之目標，是創造電腦科學範疇的領袖；此外，課程也提供基本的電腦工具與多學科機會，吸引本來無法接觸的人士並引起他們的興趣。
-          title: 計算機科學原理 ('18-'19)
-          version_title: "'18-'19"
-        csp-2019:
-          description_short: 學習計算機科學的基礎概念。
-          description_student: 在 2016 年秋季，美國大學理事會推出最新的 AP® 課程——AP 電腦科學原理。該課程為學生介紹電腦科學的基本概念，並讓學生接受挑戰，讓他們瞭解電腦運算與科技可如何影響世界。AP
-            計畫設計 AP 電腦科學原理課程之目標，是創造電腦科學範疇的領袖；此外，課程也提供基本的電腦工具與多學科機會，吸引本來無法接觸的人士並引起他們的興趣。
-          description_teacher: 在 2016 年秋季，美國大學理事會推出最新的 AP® 課程——AP 電腦科學原理。該課程為學生介紹電腦科學的基本概念，並讓學生接受挑戰，讓他們瞭解電腦運算與科技可如何影響世界。AP
-            計畫設計 AP 電腦科學原理課程之目標，是創造電腦科學範疇的領袖；此外，課程也提供基本的電腦工具與多學科機會，吸引本來無法接觸的人士並引起他們的興趣。
-          title: 計算機科學原理 ('19-'20)
-          version_title: "'19-'20"
-        csp-2020:
-          description_short: 學習計算機科學的基礎概念。
-        csp-2021:
-          description_short: 學習計算機科學的基礎概念。
-        csp-2022:
-          description_short: 學習計算機科學的基礎概念。
-        csp-2023:
-          description_short: 學習計算機科學的基礎概念。
+          assignment_family_title: Pseudoloc-西哦屁吾伊儿丝西伊娜伊 儿娜西屁勒丝
         mike-test:
-          title: 計算機科學基礎
-        self-paced-pl-csd-unit1-2023:
-          title: 問題解決與計算教學
-        vpl-csa-2023:
-          title: CSA 虛擬專業學習
+          title: Pseudoloc-西哦屁吾伊儿丝西伊娜伊 吾迪诶伊娜诶勒
+        pl-csd-summer-2023:
+          title: Pseudoloc-西丝 艾一屁儿丝娜 勒 哦开丝哦屁西哦儿丝
+        self-paced-pl-csa-2022:
+          title: Pseudoloc-西丝 吉提提娜吉丝提儿提迪马哦吾勒丝
+        self-paced-pl-csa-2023:
+          title: Pseudoloc-西丝 吉提提娜吉丝提儿提迪马哦吾勒丝
+        self-paced-pl-csd-2021:
+          title: Pseudoloc-提伊西尺娜吉西丝迪艾西哦伊艾伊
+        self-paced-pl-csd-2022:
+          title: Pseudoloc-提伊西尺娜吉西丝迪艾西哦伊艾伊 2一2
+        self-paced-pl-csd-2023:
+          title: Pseudoloc-提伊西尺娜吉西丝迪艾西哦伊艾伊
+        self-paced-pl-csp-2021:
+          title: Pseudoloc-提伊西尺娜吉西丝屁儿娜西屁伊丝
+        self-paced-pl-csp-2022:
+          title: Pseudoloc-提伊西尺娜吉西丝屁儿娜西屁伊丝
+        self-paced-pl-csp-2023:
+          title: Pseudoloc-提伊西尺娜吉西丝屁儿娜西屁伊丝
+        self-paced-pl-microbit-2023:
+          title: Pseudoloc-提伊西尺娜吉西儿诶提娜吉诶屁丝尔艾尺 伊维西伊 (艾儿哦比艾)
+        self-paced-pl-physical-computing-2022:
+          title: Pseudoloc-提伊西尺娜吉西儿诶提娜吉诶屁丝尔艾尺 伊维西伊 (艾西吾提 勒诶吉儿吾娜)
+        virtual-pl-csd-summer-2023:
+          title: Pseudoloc-西丝 维儿提诶勒屁勒尔哦开尺哦 西吾儿伊
+        vpl-csd-summer-ci-2023:
+          title: Pseudoloc-西丝迪艾西哦伊儿伊丝西吾儿西吾吾马艾娜伊丝艾吉提艾娜
+        vpl-csd-summer-pilot-ci-2022:
+          title: Pseudoloc-西丝迪艾西哦伊儿伊丝西吾儿西吾吾马艾娜伊丝艾吉提艾娜
     resources:
+      all_code/csd/2021:
+        name: Pseudoloc-诶勒 西迪伊
+      all_code_2/csd/2023:
+        name: Pseudoloc-诶勒 西迪伊
+      all_code_5/csd/2022:
+        name: Pseudoloc-诶勒 西迪伊
+      all_resources_1/csd/2021:
+        name: Pseudoloc-诶勒 儿丝哦儿西丝
+      all_resources_2/csd/2023:
+        name: Pseudoloc-诶勒 儿丝哦儿西丝
+      all_resources_7/csd/2022:
+        name: Pseudoloc-诶勒 儿丝哦儿西丝
+      all_standards_1/csd/2021:
+        name: Pseudoloc-诶勒 丝诶娜诶儿丝
+      all_standards_2/csd/2023:
+        name: Pseudoloc-诶勒 丝诶娜诶儿丝
+      all_standards_7/csd/2022:
+        name: Pseudoloc-诶勒 丝诶娜诶儿丝
+      all_vocabulary_1/csd/2021:
+        name: Pseudoloc-诶勒 维西诶吾勒儿吾
+      all_vocabulary_2/csd/2023:
+        name: Pseudoloc-诶勒 维西诶吾勒儿吾
+      all_vocabulary_7/csd/2022:
+        name: Pseudoloc-诶勒 维西诶吾勒儿吾
+      csd_curriculum_guide/csd/2021:
+        name: Pseudoloc-西丝 西儿儿西吾吾马吉吾迪
+      csd_curriculum_guide/csd/2022:
+        name: Pseudoloc-西丝 西儿儿西吾吾马吉吾迪
+      csd_guide_to_assessment/csd/2021:
+        name: Pseudoloc-西丝 吉艾迪 提 诶丝伊丝伊娜
+      csd_guide_to_assessment/csd/2022:
+        name: Pseudoloc-西丝 吉艾迪 提 诶丝伊丝伊娜
+      csd_guide_to_assessment/csd/2023:
+        name: Pseudoloc-西丝 吉艾迪 提 诶丝伊丝伊娜
       csd_guide_to_curriculum_videos/csd/2023:
-        url: https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE
+        name: Pseudoloc-西丝 吉艾迪 提 西儿儿西勒吾 维迪伊丝
+      csd_guide_to_debugging/csd/2021:
+        name: Pseudoloc-西丝 吉艾迪 提 迪比吾吉娜吉
+      csd_guide_to_debugging/csd/2022:
+        name: Pseudoloc-西丝 吉艾迪 提 迪比吾吉娜吉
+      csd_guide_to_differentiation/csd/2021:
+        name: Pseudoloc-西丝 吉艾迪 提 迪弗弗儿娜提诶提哦娜
+      csd_guide_to_differentiation/csd/2022:
+        name: Pseudoloc-西丝 吉艾迪 提 迪弗弗儿娜提诶提哦娜
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Pseudoloc-西丝 吉艾迪 提 迪弗弗儿娜提诶提哦娜
+      csd_guide_to_teaching_and_learning_strategies/csd/2023:
+        name: Pseudoloc-西丝 吉艾迪 提 提诶西艾吉 娜迪勒伊儿娜娜吉丝提诶伊吉伊丝
+      csd_guide_to_using_resources/csd/2021:
+        name: Pseudoloc-西丝 吉艾迪 提 吾艾娜 伊丝吾儿伊丝
+      csd_guide_to_using_resources/csd/2022:
+        name: Pseudoloc-西丝 吉艾迪 提 吾艾娜 伊丝吾儿伊丝
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Pseudoloc-西丝 吉艾迪 提 吾艾娜 伊丝吾儿伊丝
+      csd_implementation_guide/csd/2021:
+        name: Pseudoloc-西丝 艾屁勒马伊提诶艾哦 吾艾伊
+      csd_implementation_guide/csd/2022:
+        name: Pseudoloc-西丝 艾屁勒马伊提诶艾哦 吾艾伊
+      csd_implementation_guide_1/csd/2023:
+        name: Pseudoloc-西丝 艾屁勒马伊提诶艾哦 吾艾伊
+      csd_learning_frameworks/csd/2022:
+        name: Pseudoloc-西丝 勒诶儿艾娜 弗诶马尔儿开
+      csd_learning_frameworks_1/csd/2023:
+        name: Pseudoloc-西丝 勒诶儿艾娜 弗诶马尔儿开
+      csd_programming_levels_guide/csd/2022:
+        name: Pseudoloc-西丝 屁哦吉诶马艾娜 勒维勒丝吉吾迪伊
       curriculum/csd/2017:
-        name: 課程
+        name: Pseudoloc-西吾儿艾吾勒马
       curriculum/csd/2018:
-        name: 課程
+        name: Pseudoloc-西吾儿艾吾勒马
       curriculum/csd/2019:
-        name: 課程
+        name: Pseudoloc-西吾儿艾吾勒马
       curriculum/csd/2020:
-        name: 課程
-      getting_started_with_csd/csd/2021:
-        name: 計算機科學發現入門
+        name: Pseudoloc-西吾儿艾吾勒马
       teacher_forum/csd/2019:
-        name: 教師論壇
+        name: Pseudoloc-提伊西尺儿 哦儿马
       teacher_forum/csd/2020:
-        name: 教師論壇
+        name: Pseudoloc-提伊西尺儿 哦儿马
       teacher_forum_6/csd/2017:
-        name: 教師論壇
+        name: Pseudoloc-提伊西尺儿 哦儿马
       teacher_forum_6/csd/2018:
-        name: 教師論壇
+        name: Pseudoloc-提伊西尺儿 哦儿马

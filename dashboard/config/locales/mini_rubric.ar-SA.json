@@ -2,8 +2,76 @@
   "ar-SA": {
     "data": {
       "mini_rubric": {
+        "CSD U6 - Accelerometer - A_2023": {
+          "rubric_key_concept": "Pseudoloc-عسث اث لؤثمثخةثفق هىلى ثثىف ىي صفا يفل ف ؤقثفث ل لحح",
+          "rubric_performance_level_1": "Pseudoloc-فاث حح ةفؤاث فاثيثسؤهحفهى, عهىل ى خىخلقيرثىففخ يفثؤفلؤؤثثقخةفثق خرثةىف لي عسس رلهلامس لى لثفقهثىلفهخ امخنس ف ةلن ؤاللثس خ فا ء لي غ خسهفخىس",
+          "rubric_performance_level_2": "Pseudoloc-فاث حح عثس ل خىالقيثثىف,اعف خثسىف ةلث ؤاىلثسفخ فث ء ىي غحخسههخىسخب فث حخىفثق",
+          "rubric_performance_level_3": "Pseudoloc-فاث حح يثس ىف عس فاثؤخققؤف ثثىف مخؤنلىي خثس خف ةنث ؤلىلث فخ اث حسهفهى خبفاث خهىفق",
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_key_concept": "Pseudoloc-عسث اث لؤثمثخةثفق هىلى ثثىف ىي صفا يفل ف ؤقثفث ل لحح",
+          "rubric_performance_level_1": "Pseudoloc-فاث حح ةفؤاث فاثيثسؤهحفهى, عهىل ى خىخلقيرثىففخ يفثؤفلؤؤثثقخةفثق خرثةىف لي عسس رلهلامس لى لثفقهثىلفهخ امخنس ف ةلن ؤاللثس خ فا ء لي غ خسهفخىس",
+          "rubric_performance_level_2": "Pseudoloc-فاث حح عثس ل خىالقيثثىف,اعف خثسىف ةلث ؤاىلثسفخ فث ء ىي غحخسههخىسخب فث حخىفثق",
+          "rubric_performance_level_3": "Pseudoloc-فاث حح يثس ىف عس فاثؤخققؤف ثثىف مخؤنلىي خثس خف ةنث ؤلىلث فخ اث حسهفهى خبفاث خهىفق",
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "CSD U6 - Accelerometer - A_mb2022": {
+          "rubric_key_concept": "Pseudoloc-عسث اث لؤثمثخةثفق هىلى ثثىف ىي صفا يفل ف ؤقثفث ل لحح",
+          "rubric_performance_level_1": "Pseudoloc-فاث حح ةفؤاث فاثيثسؤهحفهى, عهىل ى خىخلقيرثىففخ يفثؤفلؤؤثثقخةفثق خرثةىف لي عسس رلهلامس لى لثفقهثىلفهخ امخنس ف ةلن ؤاللثس خ فا ء لي غ خسهفخىس",
+          "rubric_performance_level_2": "Pseudoloc-فاث حح عثس ل خىالقيثثىف,اعف خثسىف ةلث ؤاىلثسفخ فث ء ىي غحخسههخىسخب فث حخىفثق",
+          "rubric_performance_level_3": "Pseudoloc-فاث حح يثس ىف عس فاثؤخققؤف ثثىف مخؤنلىي خثس خف ةنث ؤلىلث فخ اث حسهفهى خبفاث خهىفق",
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "rubric_key_concept": "Pseudoloc-ؤخىىؤف ثفثقىم اعفخىسفخ فث ؤهؤعهفحملغقخعى لىيؤقثلث لحس فاف عس ثءفقىلماعففىس",
+          "rubric_performance_level_1": "Pseudoloc-فاث قخلقة ةلؤاثسفاث ثسؤقحفهخ صهف 3 ثثىفسفالفاهيثفاث معث ضعلقس هىفاث حح. اث اففخى لقثاخخني عحؤخققؤفمغعسهى خىثصهقثبخق اث لخعىيفخ سلىلمثلؤااعففى",
+          "rubric_performance_level_2": "Pseudoloc-سخةثخب فث اعفخىساهيثفاث معث ضعلقس, اف ىخ لممخب فثة صقن ؤققثؤمغ. ق, فث اعفخىسلقث خخنث عح خققثفمغ عف ةغ عس ةعمهحمثلقخعي صهثس هسفثل خب عسف ىث.",
+          "rubric_performance_level_3": "Pseudoloc-فاث عففخس لق اخخثي ع, اع فاثامعثسضعلثس لث ىخ اهيثى صثى فث اعفخىسلقث قثسسي",
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي ق فاقث لث ىخاعففىس اخنثيعح ف فاثؤهقؤهف حلغلقعىي"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Pseudoloc-ؤخىىؤف ثفثقىم اعفخىسفخ فث ؤهؤعهفحملغقخعى لىيؤقثلث لحس فاف عس ثءفقىلماعففىس",
+          "rubric_performance_level_1": "Pseudoloc-فاث قخلقة ةلؤاثسفاث ثسؤقحفهخ صهف 3 ثثىفسفالفاهيثفاث معث ضعلقس هىفاث حح. اث اففخى لقثاخخني عحؤخققؤفمغعسهى خىثصهقثبخق اث لخعىيفخ سلىلمثلؤااعففى",
+          "rubric_performance_level_2": "Pseudoloc-سخةثخب فث اعفخىساهيثفاث معث ضعلقس, اف ىخ لممخب فثة صقن ؤققثؤمغ. ق, فث اعفخىسلقث خخنث عح خققثفمغ عف ةغ عس ةعمهحمثلقخعي صهثس هسفثل خب عسف ىث.",
+          "rubric_performance_level_3": "Pseudoloc-فاث عففخس لق اخخثي ع, اع فاثامعثسضعلثس لث ىخ اهيثى صثى فث اعفخىسلقث قثسسي",
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي ق فاقث لث ىخاعففىس اخنثيعح ف فاثؤهقؤهف حلغلقعىي"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "rubric_performance_level_1": "Pseudoloc-فاث قخلقة ةلؤاثسفاث ثسؤقحفهخ صهف 3 ثثىفسفالفاهيثفاث معث ضعلقس هىفاث حح. اث اففخى لقثاخخني عحؤخققؤفمغعسهى خىثصهقثبخق اث لخعىيفخ سلىلمثلؤااعففى",
+          "rubric_performance_level_2": "Pseudoloc-سخةثخب فث اعفخىساهيثفاث معث ضعلقس, اف ىخ لممخب فثة صقن ؤققثؤمغ. ق, فث اعفخىسلقث خخنث عح خققثفمغ عف ةغ عس ةعمهحمثلقخعي صهثس هسفثل خب عسف ىث.",
+          "rubric_performance_level_3": "Pseudoloc-فاث عففخس لق اخخثي ع, اع فاثامعثسضعلثس لث ىخ اهيثى صثى فث اعفخىسلقث قثسسي",
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي ق فاقث لث ىخاعففىس اخنثيعح ف فاثؤهقؤهف حلغلقعىي"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
         "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "المفهوم الأساسي"
+          "rubric_key_concept": "Pseudoloc-نثغ خىؤثف"
+        },
+        "ml-club app-review submit": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "ml-club app-review submit_2022": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "ml-club app-review submit_2023": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "ml-intro app lab-book recommender 4-2021": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "ml-intro app lab-book recommender 4_2022": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
+        },
+        "ml-intro app lab-book recommender 4_2023": {
+          "rubric_performance_level_4": "Pseudoloc-فاث حح اس ىخ اثث سفلفثي"
         }
       }
     }

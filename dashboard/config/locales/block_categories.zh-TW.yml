@@ -2,35 +2,19 @@
 zh-TW:
   data:
     block_categories:
-      Actions: 動作
-      Advanced: 進階設定
-      Behaviors: 行為
-      Brushes: 畫筆
-      Category: 類別
-      Color: 顏色
-      Comment: 回應
-      Comments: 註解
-      Conditionals: 條件判斷
-      Dancers: 舞者
-      Default: 預設值
-      Effects: 效果
-      Events: 事件
-      Functions: 函式
-      'Functions ': '函式 '
-      Game/Score: 遊戲/分數
-      Games/Score: 遊戲/分數
-      Groups: 群組
-      Input: 輸入
-      Location: 位置
-      Locations: 座標
-      Logic: 邏輯
-      Loops: 迴圈
-      Math: 運算
-      Numbers: 運算
-      Properties: 屬性
-      Sprites: 角色
-      Text: 文字
-      Variables: 變數
-      'Variables ': '變數 '
-      'Variables  ': '變數  '
-      World: 世界
+      Actions: Pseudoloc-诶西艾哦丝
+      Category: Pseudoloc-西诶伊吉儿吾
+      Color: Pseudoloc-西哦哦儿
+      Conditionals: Pseudoloc-西哦迪艾艾哦诶勒
+      Default: Pseudoloc-迪伊诶吾提
+      Effects: Pseudoloc-伊弗伊西丝
+      Events: Pseudoloc-伊维娜提
+      Functions: Pseudoloc-弗吾西提哦娜
+      Groups: Pseudoloc-吉儿吾屁
+      Location: Pseudoloc-勒哦诶提哦娜
+      Logic: Pseudoloc-勒哦艾西
+      Loops: Pseudoloc-勒哦屁丝
+      Math: Pseudoloc-马诶尺
+      Sprites: Pseudoloc-丝屁艾提丝
+      Text: Pseudoloc-提伊提
+      Variables: Pseudoloc-维诶艾诶勒伊

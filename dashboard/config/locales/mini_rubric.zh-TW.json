@@ -2,8 +2,76 @@
   "zh-TW": {
     "data": {
       "mini_rubric": {
+        "CSD U6 - Accelerometer - A_2023": {
+          "rubric_key_concept": "Pseudoloc-吾丝 提伊 西西勒伊哦马提儿 娜 娜 维伊提 娜迪尔提尺迪诶诶 哦 儿伊提伊诶 诶屁",
+          "rubric_performance_level_1": "Pseudoloc-提尺 诶屁 诶提尺伊 提伊迪伊西儿屁提哦娜 吾艾娜 娜 娜比诶儿伊维娜提提哦迪提伊提 西西勒伊哦马提伊 哦维马伊提 娜迪吾丝丝 诶艾诶勒伊 诶迪 伊提儿艾娜诶提哦娜比勒西开 提 马开 西诶娜伊丝提哦提尺 斯诶迪  屁丝艾艾哦丝",
+          "rubric_performance_level_2": "Pseudoloc-提尺 诶屁 丝伊 诶 哦比诶儿伊维娜提 比提 哦伊娜提 诶开 西诶娜伊丝提哦提伊  诶迪  屁丝艾艾哦丝哦弗提尺 屁艾娜伊儿",
+          "rubric_performance_level_3": "Pseudoloc-提尺 诶屁 哦伊 娜提 丝 提伊 哦儿伊西 伊伊娜 勒哦开 娜迪迪哦丝 哦提马开伊西尺娜吉丝 哦 尺伊屁丝艾艾哦 哦 提伊 哦艾提儿",
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_key_concept": "Pseudoloc-吾丝 提伊 西西勒伊哦马提儿 娜 娜 维伊提 娜迪尔提尺迪诶诶 哦 儿伊提伊诶 诶屁",
+          "rubric_performance_level_1": "Pseudoloc-提尺 诶屁 诶提尺伊 提伊迪伊西儿屁提哦娜 吾艾娜 娜 娜比诶儿伊维娜提提哦迪提伊提 西西勒伊哦马提伊 哦维马伊提 娜迪吾丝丝 诶艾诶勒伊 诶迪 伊提儿艾娜诶提哦娜比勒西开 提 马开 西诶娜伊丝提哦提尺 斯诶迪  屁丝艾艾哦丝",
+          "rubric_performance_level_2": "Pseudoloc-提尺 诶屁 丝伊 诶 哦比诶儿伊维娜提 比提 哦伊娜提 诶开 西诶娜伊丝提哦提伊  诶迪  屁丝艾艾哦丝哦弗提尺 屁艾娜伊儿",
+          "rubric_performance_level_3": "Pseudoloc-提尺 诶屁 哦伊 娜提 丝 提伊 哦儿伊西 伊伊娜 勒哦开 娜迪迪哦丝 哦提马开伊西尺娜吉丝 哦 尺伊屁丝艾艾哦 哦 提伊 哦艾提儿",
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "CSD U6 - Accelerometer - A_mb2022": {
+          "rubric_key_concept": "Pseudoloc-吾丝 提伊 西西勒伊哦马提儿 娜 娜 维伊提 娜迪尔提尺迪诶诶 哦 儿伊提伊诶 诶屁",
+          "rubric_performance_level_1": "Pseudoloc-提尺 诶屁 诶提尺伊 提伊迪伊西儿屁提哦娜 吾艾娜 娜 娜比诶儿伊维娜提提哦迪提伊提 西西勒伊哦马提伊 哦维马伊提 娜迪吾丝丝 诶艾诶勒伊 诶迪 伊提儿艾娜诶提哦娜比勒西开 提 马开 西诶娜伊丝提哦提尺 斯诶迪  屁丝艾艾哦丝",
+          "rubric_performance_level_2": "Pseudoloc-提尺 诶屁 丝伊 诶 哦比诶儿伊维娜提 比提 哦伊娜提 诶开 西诶娜伊丝提哦提伊  诶迪  屁丝艾艾哦丝哦弗提尺 屁艾娜伊儿",
+          "rubric_performance_level_3": "Pseudoloc-提尺 诶屁 哦伊 娜提 丝 提伊 哦儿伊西 伊伊娜 勒哦开 娜迪迪哦丝 哦提马开伊西尺娜吉丝 哦 尺伊屁丝艾艾哦 哦 提伊 哦艾提儿",
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "rubric_key_concept": "Pseudoloc-西哦娜伊提 斯提儿娜勒 吾提哦丝 哦 尺伊西艾西吾提屁勒吾吉哦吾迪 娜迪西儿诶伊 屁屁 提诶提吾丝 伊提儿娜勒 吾提哦娜",
+          "rubric_performance_level_1": "Pseudoloc-提尺 屁哦吉诶马马诶西尺丝提尺 迪丝西艾屁艾哦 尔提 3伊维娜提 提诶提尺艾伊提尺 比吾伊丝吾诶儿丝 娜提尺 诶屁。提尺 比提提娜 诶伊 哦哦伊迪吾屁西哦儿西提吾 丝艾吉 娜伊尔艾伊弗哦 提伊 儿哦娜迪提哦丝吉娜勒 诶西 比提提娜",
+          "rubric_performance_level_2": "Pseudoloc-丝哦伊 弗 尺伊比吾提哦丝尺艾伊 尺伊比勒伊 吾吾儿丝，比吾 娜提 勒勒哦弗提伊马尔哦开 哦儿伊西勒吾 儿，提尺 比提提娜丝诶儿 哦哦伊迪吾屁西哦儿伊提勒 吾提马诶 吾伊 吾勒艾屁伊吉儿吾娜 尔儿伊 艾丝提诶 哦 杰丝提哦娜。",
+          "rubric_performance_level_3": "Pseudoloc-提尺 比提提娜丝诶儿 尺哦伊迪吾屁 比提 尺伊比勒伊丝吾诶儿丝 儿伊娜哦 尺迪伊娜尔尺娜 尺伊比吾提哦丝诶儿 屁伊丝伊迪",
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪哦儿提尺儿伊诶伊 哦 吾提哦娜 尺哦开迪吾屁提哦提尺 西儿西艾提屁诶吾儿哦娜迪"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Pseudoloc-西哦娜伊提 斯提儿娜勒 吾提哦丝 哦 尺伊西艾西吾提屁勒吾吉哦吾迪 娜迪西儿诶伊 屁屁 提诶提吾丝 伊提儿娜勒 吾提哦娜",
+          "rubric_performance_level_1": "Pseudoloc-提尺 屁哦吉诶马马诶西尺丝提尺 迪丝西艾屁艾哦 尔提 3伊维娜提 提诶提尺艾伊提尺 比吾伊丝吾诶儿丝 娜提尺 诶屁。提尺 比提提娜 诶伊 哦哦伊迪吾屁西哦儿西提吾 丝艾吉 娜伊尔艾伊弗哦 提伊 儿哦娜迪提哦丝吉娜勒 诶西 比提提娜",
+          "rubric_performance_level_2": "Pseudoloc-丝哦伊 弗 尺伊比吾提哦丝尺艾伊 尺伊比勒伊 吾吾儿丝，比吾 娜提 勒勒哦弗提伊马尔哦开 哦儿伊西勒吾 儿，提尺 比提提娜丝诶儿 哦哦伊迪吾屁西哦儿伊提勒 吾提马诶 吾伊 吾勒艾屁伊吉儿吾娜 尔儿伊 艾丝提诶 哦 杰丝提哦娜。",
+          "rubric_performance_level_3": "Pseudoloc-提尺 比提提娜丝诶儿 尺哦伊迪吾屁 比提 尺伊比勒伊丝吾诶儿丝 儿伊娜哦 尺迪伊娜尔尺娜 尺伊比吾提哦丝诶儿 屁伊丝伊迪",
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪哦儿提尺儿伊诶伊 哦 吾提哦娜 尺哦开迪吾屁提哦提尺 西儿西艾提屁诶吾儿哦娜迪"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "rubric_performance_level_1": "Pseudoloc-提尺 屁哦吉诶马马诶西尺丝提尺 迪丝西艾屁艾哦 尔提 3伊维娜提 提诶提尺艾伊提尺 比吾伊丝吾诶儿丝 娜提尺 诶屁。提尺 比提提娜 诶伊 哦哦伊迪吾屁西哦儿西提吾 丝艾吉 娜伊尔艾伊弗哦 提伊 儿哦娜迪提哦丝吉娜勒 诶西 比提提娜",
+          "rubric_performance_level_2": "Pseudoloc-丝哦伊 弗 尺伊比吾提哦丝尺艾伊 尺伊比勒伊 吾吾儿丝，比吾 娜提 勒勒哦弗提伊马尔哦开 哦儿伊西勒吾 儿，提尺 比提提娜丝诶儿 哦哦伊迪吾屁西哦儿伊提勒 吾提马诶 吾伊 吾勒艾屁伊吉儿吾娜 尔儿伊 艾丝提诶 哦 杰丝提哦娜。",
+          "rubric_performance_level_3": "Pseudoloc-提尺 比提提娜丝诶儿 尺哦伊迪吾屁 比提 尺伊比勒伊丝吾诶儿丝 儿伊娜哦 尺迪伊娜尔尺娜 尺伊比吾提哦丝诶儿 屁伊丝伊迪",
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪哦儿提尺儿伊诶伊 哦 吾提哦娜 尺哦开迪吾屁提哦提尺 西儿西艾提屁诶吾儿哦娜迪"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
         "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "關鍵概念"
+          "rubric_key_concept": "Pseudoloc-开伊 西娜西屁提"
+        },
+        "ml-club app-review submit": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "ml-club app-review submit_2022": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "ml-club app-review submit_2023": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "ml-intro app lab-book recommender 4-2021": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "ml-intro app lab-book recommender 4_2022": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
+        },
+        "ml-intro app lab-book recommender 4_2023": {
+          "rubric_performance_level_4": "Pseudoloc-提尺 诶屁 诶丝娜哦 比伊 丝诶儿伊迪"
         }
       }
     }

@@ -2,17 +2,17 @@
 uk:
   data:
     parameter_names:
-      actor: виконавець
-      color: колір
-      counter: лічильник
-      height: висота
-      honey: мед
-      left: ліворуч
-      length: довжина
-      min: мінімум
-      points: балів
-      radius: радіус
-      sides: сторони
-      size: розмір
-      speed: швидкість
-      width: ширина
+      actor: Pseudoloc-астоор
+      color: Pseudoloc-солоор
+      counter: Pseudoloc-союннтер
+      height: Pseudoloc-хеіджджхт
+      honey: Pseudoloc-хонееу
+      left: Pseudoloc-лефтт
+      length: Pseudoloc-ленджджтх
+      min: Pseudoloc-мін
+      points: Pseudoloc-поіннтс
+      radius: Pseudoloc-радііюс
+      sides: Pseudoloc-сідеес
+      size: Pseudoloc-сізее
+      speed: Pseudoloc-спееед
+      width: Pseudoloc-відттх

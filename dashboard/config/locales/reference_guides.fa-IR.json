@@ -6,10 +6,10 @@
           "display_name": "رویدادهای شتاب سنج"
         },
         "csd-2022/app-lab": {
-          "display_name": "لابراتوار اپ"
+          "display_name": "آزمایشگاه برنامه"
         },
         "csd-2022/applab-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/board-events": {
           "display_name": "رویدادهای بورد"
@@ -21,7 +21,7 @@
           "display_name": "تشخیص تصادم"
         },
         "csd-2022/css-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/design-mode": {
           "display_name": "حالت طراحی"
@@ -36,10 +36,10 @@
           "display_name": "لابراتوار بازی"
         },
         "csd-2022/game-lab-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/html-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/introduction-to-ai-lab": {
           "display_name": "معرفی آزمایشگاه هوش مصنوعی"
@@ -48,7 +48,7 @@
           "display_name": "ویژوال بیسیک"
         },
         "csd-2022/javascript-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/lists": {
           "display_name": "لیست ها"
@@ -57,7 +57,7 @@
           "display_name": "جعبه ابزار Maker"
         },
         "csd-2022/maker-toolkit-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/model-cards-in-ai-lab": {
           "display_name": "کارت‌های مدل در آزمایشگاه هوش مصنوعی"
@@ -66,10 +66,10 @@
           "display_name": "دیگر"
         },
         "csd-2022/other-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/patterns-overview": {
-          "display_name": "مرور کلی"
+          "display_name": "مرور"
         },
         "csd-2022/playing-notes": {
           "display_name": "نکات بازی"

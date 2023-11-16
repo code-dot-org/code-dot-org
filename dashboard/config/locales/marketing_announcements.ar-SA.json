@@ -4,61 +4,59 @@
       "marketing_announcements": {
         "banners": {
           "ai-2020": {
-            "buttonText": "اعرف المزيد",
-            "title": "اكتشف الذكاء الاصطناعي والتعلم الآلي"
+            "buttonText": "Pseudoloc-مثلق ةخق",
+            "title": "Pseudoloc-ثءحمقث لفهبههلم ىفثمهلثىث لى ةلؤهىث ثلقىىل"
           },
           "ai-launch-2023": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "ai-pl-launch-2023": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "back-to-school-2021": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "codebytes-2020": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "coldplay": {
-            "buttonText": "جربها"
+            "buttonText": "Pseudoloc-فقغ ف"
           },
           "congrats-certificate-share": {
-            "buttonText": "إبدأ"
+            "buttonText": "Pseudoloc-سفلق"
           },
           "csjourneys": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "csjourneys-22": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "csleadersprize": {
-            "buttonText": "اعرف المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "hoc-2023": {
-            "body": "انضم إلى الملايين في جميع أنحاء العالم لتنظيم أنشطة \"ساعة البرمجة\"، باستخدام الذكاء الاصطناعي أو بدونه وتعلم كيفية عمل الذكاء الاصطناعي. يمكن لأي شخص في أي مكان القيام بذلك. ليس هناك حاجة للخبرة.",
-            "buttonText": "اعرف المزيد",
-            "title": "ساعة البرمجة: الإبداع مع الذكاء الاصطناعي"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "hoc-more": {
-            "body": "يحتوي موقع Hour of Code \"ساعة من البرمجة\" على أكثر من 100 نشاط في علم الحاسوب لجميع الأعمار ومستويات الخبرة التي طورها موقع Code.org وشركاؤه."
+            "body": "Pseudoloc-فاث خعق ب ؤخث صثسهفثالس رثق 00 ؤةحعفق سؤثىؤثلؤفههفهث بخقلمم لثس ىي ثحثقهىؤث ثرثم, يثثمخحي اغؤخيثخقل ىي حقفىثس."
           },
           "home-learning-2020": {
-            "buttonText": "اعرض أفكار المشروع"
+            "buttonText": "Pseudoloc-رهثصحقختؤف هثلس"
           },
           "superhero": {
-            "buttonText": "تعلّم المزيد"
+            "buttonText": "Pseudoloc-مثلق ةخق"
           },
           "teacher-apps-closing-2021": {
-            "buttonText": "انضم إلينا"
+            "buttonText": "Pseudoloc-تخهىعس"
           },
           "teacher-apps-nominate-2020": {
-            "buttonText": "ترشيح معلم"
+            "buttonText": "Pseudoloc-ىخةهلفث  فثلاثق"
           },
           "teacher-apps-open-2021": {
-            "buttonText": "انضم إلينا"
+            "buttonText": "Pseudoloc-تخهىعس"
           },
           "teacher-apps-stillon-2020": {
-            "buttonText": "انضم إلينا"
+            "buttonText": "Pseudoloc-تخهىعس"
           }
         }
       }

@@ -4,170 +4,129 @@ fr:
     course:
       name:
         allthethingscourse:
-          description_short: Ceci est un cours pour toutesleschoses
-          description_student: Ceci est un cours pour toutesleschoses et il a une
-            description plus longue pour les élèves
-          description_teacher: Ceci est un cours pour toutesleschoses et il a une
-            description plus longue pour les enseignants
-          title: courstoutesleschoses
+          title: Pseudoloc-àļļţĥéţĥîñĝšçôûŕšé
+        csa-async-2022:
+          title: Pseudoloc-Ĝéţţîñĝ Šţàŕţéð Ṁôðûļéš ÇŠÀ
+        csa-pilot-facilitator:
+          title: Pseudoloc-ÇŠÀ Þîļôţ Ƒàçîļîţàţôŕš
         csd-2017:
-          assignment_family_title: Les Découvertes de l’Informatique
-          description_short: Un cours d’initiation à l’informatique qui permet aux
-            élèves de créer d’authentiques artéfacts.
-          description_student: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          title: Les Découvertes de l’Informatique (2017-2018)
-          version_title: 2017-2018
+          assignment_family_title: Pseudoloc-Çôɱþûţéŕ Šçîéñçé Ðîšçôṽéŕîéš
         csd-2018:
-          assignment_family_title: Les Découvertes de l’Informatique
-          description_short: Un cours d’initiation à l’informatique qui permet aux
-            élèves de créer d’authentiques artéfacts.
-          description_student: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          title: Les Découvertes de l’Informatique (2018-2019)
-          version_title: 2018-2019
-        csd-2019:
-          description_short: Un cours d’initiation à l’informatique qui permet aux
-            élèves de créer d’authentiques artéfacts.
-          description_student: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          title: Les Découvertes de l’Informatique (2019-2020)
-          version_title: 2019-2020
-        csd-2020:
-          description_short: Un cours d’initiation à l’informatique qui permet aux
-            élèves de créer d’authentiques artéfacts.
-          description_student: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-        csd-2023:
-          title: Les Découvertes de l’Informatique
-        csd-pilot:
-          description_student: Découvertes de l’Informatique (CS Discoveries) est
-            un cours d'initiation à l'informatique qui permet aux élèves de créer
-            d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité,
-            de communication, de résolution de problèmes et d'amusement.
-          title: CSD Cours Pilote
+          assignment_family_title: Pseudoloc-Çôɱþûţéŕ Šçîéñçé Ðîšçôṽéŕîéš
         csp-2017:
-          assignment_family_title: Les Principes de l’Informatique
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
-          description_student: À l'automne 2016, le Conseil D'administration de l'Université
-            a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique.
-            Le cours initie les élèves aux concepts fondamentaux de l'informatique
-            et les met au défi d'explorer comment l'informatique et la technologie
-            peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes
-            de L'informatique AP dans le but de créer des leaders dans les domaines
-            de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement
-            sous-représentés, avec des outils informatiques essentiels et des opportunités
-            multidisciplinaires.
-          description_teacher: À l'automne 2016, le Conseil D'administration de l'Université
-            a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique.
-            Le cours initie les élèves aux concepts fondamentaux de l'informatique
-            et les met au défi d'explorer comment l'informatique et la technologie
-            peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes
-            de L'informatique AP dans le but de créer des leaders dans les domaines
-            de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement
-            sous-représentés, avec des outils informatiques essentiels et des opportunités
-            multidisciplinaires.
-          title: Les Principes de l’Informatique (2017-2018)
-          version_title: 2017-2018
+          assignment_family_title: Pseudoloc-Çôɱþûţéŕ Šçîéñçé Þŕîñçîþļéš
         csp-2018:
-          assignment_family_title: Les Principes de l’Informatique
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
-          description_student: À l'automne 2016, le Conseil D'administration de l'Université
-            a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique.
-            Le cours initie les élèves aux concepts fondamentaux de l'informatique
-            et les met au défi d'explorer comment l'informatique et la technologie
-            peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes
-            de L'informatique AP dans le but de créer des leaders dans les domaines
-            de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement
-            sous-représentés, avec des outils informatiques essentiels et des opportunités
-            multidisciplinaires.
-          description_teacher: À l'automne 2016, le Conseil D'administration de l'Université
-            a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique.
-            Le cours initie les élèves aux concepts fondamentaux de l'informatique
-            et les met au défi d'explorer comment l'informatique et la technologie
-            peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes
-            de L'informatique AP dans le but de créer des leaders dans les domaines
-            de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement
-            sous-représentés, avec des outils informatiques essentiels et des opportunités
-            multidisciplinaires.
-          title: Les Principes de l’Informatique (2018-2019)
-          version_title: 2018-2019
-        csp-2019:
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
-          description_student: À l'automne 2016, le Conseil D'administration de l'Université
-            a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique.
-            Le cours initie les élèves aux concepts fondamentaux de l'informatique
-            et les met au défi d'explorer comment l'informatique et la technologie
-            peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes
-            de L'informatique AP dans le but de créer des leaders dans les domaines
-            de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement
-            sous-représentés, avec des outils informatiques essentiels et des opportunités
-            multidisciplinaires.
-          description_teacher: À l'automne 2016, le Conseil D'administration de l'Université
-            a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique.
-            Le cours initie les élèves aux concepts fondamentaux de l'informatique
-            et les met au défi d'explorer comment l'informatique et la technologie
-            peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes
-            de L'informatique AP dans le but de créer des leaders dans les domaines
-            de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement
-            sous-représentés, avec des outils informatiques essentiels et des opportunités
-            multidisciplinaires.
-          title: Les Principes de l'Informatique (2019-2020)
-          version_title: 2019-2020
-        csp-2020:
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
-        csp-2021:
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
-        csp-2022:
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
-        csp-2023:
-          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+          assignment_family_title: Pseudoloc-Çôɱþûţéŕ Šçîéñçé Þŕîñçîþļéš
         mike-test:
-          title: Les bases de l'Informatique
-        self-paced-pl-csd-unit1-2023:
-          title: Enseignement de la résolution de problèmes et de l'informatique
-        vpl-csa-2023:
-          title: Formation professionnelle virtuelle CSA
+          title: Pseudoloc-Çôɱþûţéŕ Šçîéñçé Ƒûñðàɱéñţàļš
+        pl-csd-summer-2023:
+          title: Pseudoloc-ÇŠÐ Îñ‐Þéŕšôñ ÞĻ Ŵôŕķšĥôþ Çôûŕšé
+        self-paced-pl-csa-2022:
+          title: Pseudoloc-ÇŠÀ Ĝéţţîñĝ Šţàŕţéð Ṁôðûļéš
+        self-paced-pl-csa-2023:
+          title: Pseudoloc-ÇŠÀ Ĝéţţîñĝ Šţàŕţéð Ṁôðûļéš
+        self-paced-pl-csd-2021:
+          title: Pseudoloc-Ţéàçĥîñĝ ÇŠ Ðîšçôṽéŕîéš
+        self-paced-pl-csd-2022:
+          title: Pseudoloc-Ţéàçĥîñĝ ÇŠ Ðîšçôṽéŕîéš ②②‐②③
+        self-paced-pl-csd-2023:
+          title: Pseudoloc-Ţéàçĥîñĝ ÇŠ Ðîšçôṽéŕîéš
+        self-paced-pl-csp-2021:
+          title: Pseudoloc-Ţéàçĥîñĝ ÇŠ Þŕîñçîþļéš
+        self-paced-pl-csp-2022:
+          title: Pseudoloc-Ţéàçĥîñĝ ÇŠ Þŕîñçîþļéš
+        self-paced-pl-csp-2023:
+          title: Pseudoloc-Ţéàçĥîñĝ ÇŠ Þŕîñçîþļéš
+        self-paced-pl-microbit-2023:
+          title: Pseudoloc-Ţéàçĥîñĝ Çŕéàţîñĝ Àþþš ŵîţĥ Ðéṽîçéš (ɱîçŕô∶ƀîţ)
+        self-paced-pl-physical-computing-2022:
+          title: Pseudoloc-Ţéàçĥîñĝ Çŕéàţîñĝ Àþþš ŵîţĥ Ðéṽîçéš (Çîŕçûîţ Þļàýĝŕôûñð)
+        virtual-pl-csd-summer-2023:
+          title: Pseudoloc-ÇŠÐ Ṽîŕţûàļ ÞĻ Ŵôŕķšĥôþ Çôûŕšé
+        vpl-csd-summer-ci-2023:
+          title: Pseudoloc-ÇŠ Ðîšçôṽéŕîéš Çûŕŕîçûļûɱ Îñṽéšţîĝàţîôñ
+        vpl-csd-summer-pilot-ci-2022:
+          title: Pseudoloc-ÇŠ Ðîšçôṽéŕîéš Çûŕŕîçûļûɱ Îñṽéšţîĝàţîôñ
     resources:
+      all_code/csd/2021:
+        name: Pseudoloc-Àļļ Çôðé
+      all_code_2/csd/2023:
+        name: Pseudoloc-Àļļ Çôðé
+      all_code_5/csd/2022:
+        name: Pseudoloc-Àļļ Çôðé
+      all_resources_1/csd/2021:
+        name: Pseudoloc-Àļļ Ŕéšôûŕçéš
+      all_resources_2/csd/2023:
+        name: Pseudoloc-Àļļ Ŕéšôûŕçéš
+      all_resources_7/csd/2022:
+        name: Pseudoloc-Àļļ Ŕéšôûŕçéš
+      all_standards_1/csd/2021:
+        name: Pseudoloc-Àļļ Šţàñðàŕðš
+      all_standards_2/csd/2023:
+        name: Pseudoloc-Àļļ Šţàñðàŕðš
+      all_standards_7/csd/2022:
+        name: Pseudoloc-Àļļ Šţàñðàŕðš
+      all_vocabulary_1/csd/2021:
+        name: Pseudoloc-Àļļ Ṽôçàƀûļàŕý
+      all_vocabulary_2/csd/2023:
+        name: Pseudoloc-Àļļ Ṽôçàƀûļàŕý
+      all_vocabulary_7/csd/2022:
+        name: Pseudoloc-Àļļ Ṽôçàƀûļàŕý
+      csd_curriculum_guide/csd/2021:
+        name: Pseudoloc-ÇŠÐ Çûŕŕîçûļûɱ Ĝûîðé
+      csd_curriculum_guide/csd/2022:
+        name: Pseudoloc-ÇŠÐ Çûŕŕîçûļûɱ Ĝûîðé
+      csd_guide_to_assessment/csd/2021:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Àššéššɱéñţ
+      csd_guide_to_assessment/csd/2022:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Àššéššɱéñţ
+      csd_guide_to_assessment/csd/2023:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Àššéššɱéñţ
+      csd_guide_to_curriculum_videos/csd/2023:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Çûŕŕîçûļûɱ Ṽîðéôš
+      csd_guide_to_debugging/csd/2021:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ðéƀûĝĝîñĝ
+      csd_guide_to_debugging/csd/2022:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ðéƀûĝĝîñĝ
+      csd_guide_to_differentiation/csd/2021:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ðîƒƒéŕéñţîàţîôñ
+      csd_guide_to_differentiation/csd/2022:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ðîƒƒéŕéñţîàţîôñ
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ðîƒƒéŕéñţîàţîôñ
+      csd_guide_to_teaching_and_learning_strategies/csd/2023:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ţéàçĥîñĝ àñð Ļéàŕñîñĝ Šţŕàţéĝîéš
+      csd_guide_to_using_resources/csd/2021:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ûšîñĝ Ŕéšôûŕçéš
+      csd_guide_to_using_resources/csd/2022:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ûšîñĝ Ŕéšôûŕçéš
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Pseudoloc-ÇŠÐ Ĝûîðé ţô Ûšîñĝ Ŕéšôûŕçéš
+      csd_implementation_guide/csd/2021:
+        name: Pseudoloc-ÇŠÐ Îɱþļéɱéñţàţîôñ Ĝûîðé
+      csd_implementation_guide/csd/2022:
+        name: Pseudoloc-ÇŠÐ Îɱþļéɱéñţàţîôñ Ĝûîðé
+      csd_implementation_guide_1/csd/2023:
+        name: Pseudoloc-ÇŠÐ Îɱþļéɱéñţàţîôñ Ĝûîðé
+      csd_learning_frameworks/csd/2022:
+        name: Pseudoloc-ÇŠÐ Ļéàŕñîñĝ Ƒŕàɱéŵôŕķš
+      csd_learning_frameworks_1/csd/2023:
+        name: Pseudoloc-ÇŠÐ Ļéàŕñîñĝ Ƒŕàɱéŵôŕķš
       csd_programming_levels_guide/csd/2022:
-        name: Guide des niveaux de programmation CSD
+        name: Pseudoloc-ÇŠÐ Þŕôĝŕàɱɱîñĝ Ļéṽéļš Ĝûîðé
       curriculum/csd/2017:
-        name: Programme
+        name: Pseudoloc-Çûŕŕîçûļûɱ
       curriculum/csd/2018:
-        name: Programme
+        name: Pseudoloc-Çûŕŕîçûļûɱ
       curriculum/csd/2019:
-        name: Programme
+        name: Pseudoloc-Çûŕŕîçûļûɱ
       curriculum/csd/2020:
-        name: Programme
+        name: Pseudoloc-Çûŕŕîçûļûɱ
       teacher_forum/csd/2019:
-        name: Forum des enseignants
+        name: Pseudoloc-Ţéàçĥéŕ Ƒôŕûɱ
       teacher_forum/csd/2020:
-        name: Forum des enseignants
+        name: Pseudoloc-Ţéàçĥéŕ Ƒôŕûɱ
       teacher_forum_6/csd/2017:
-        name: Forum des enseignants
+        name: Pseudoloc-Ţéàçĥéŕ Ƒôŕûɱ
       teacher_forum_6/csd/2018:
-        name: Forum des enseignants
+        name: Pseudoloc-Ţéàçĥéŕ Ƒôŕûɱ

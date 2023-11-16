@@ -2,36 +2,19 @@
 uk:
   data:
     block_categories:
-      Actions: Дії
-      Advanced: Розширені
-      Behaviors: Поведінка
-      Brushes: Пензлі
-      Category: Категорія
-      Color: Колір
-      Comment: Коментар
-      Comments: Коментарі
-      Conditionals: Умови
-      Dancers: Виконавці
-      Default: Типова
-      Effects: Ефекти
-      Events: Події
-      Functions: Функції
-      'Functions ': 'Функції '
-      Game/Score: Гра / рахунок
-      Games/Score: Ігри / рахунок
-      Groups: Групи
-      Image: Зображення
-      Input: Вхідні дані
-      Location: Розташування
-      Locations: Розташування
-      Logic: Логіка
-      Loops: Цикли
-      Math: Математика
-      Numbers: Числа
-      Properties: Властивості
-      Sprites: Спрайти
-      Text: Текст
-      Variables: Змінні
-      'Variables ': 'Змінні '
-      'Variables  ': 'Змінні  '
-      World: Світ
+      Actions: Pseudoloc-Астііонс
+      Category: Pseudoloc-Cатееджоруу
+      Color: Pseudoloc-Cолоор
+      Conditionals: Pseudoloc-Cонддітіооналсс
+      Default: Pseudoloc-Дефааюлт
+      Effects: Pseudoloc-Eффеестс
+      Events: Pseudoloc-Eвеннтс
+      Functions: Pseudoloc-Фюнсстіоннс
+      Groups: Pseudoloc-Гроююпс
+      Location: Pseudoloc-Лосаатіонн
+      Logic: Pseudoloc-Лоджііс
+      Loops: Pseudoloc-Лооппс
+      Math: Pseudoloc-Матхх
+      Sprites: Pseudoloc-Спріітес
+      Text: Pseudoloc-Текстт
+      Variables: Pseudoloc-Варііаблеес

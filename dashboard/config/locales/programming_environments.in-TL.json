@@ -2,144 +2,28 @@
   "in-TL": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "crwdns2993868:0crwdne2993868:0",
-          "description": "crwdns2993870:0crwdne2993870:0",
-          "categories": {
-            "html_tags": {
-              "name": "crwdns2993872:0crwdne2993872:0"
-            },
-            "css_properties": {
-              "name": "crwdns2993874:0crwdne2993874:0"
-            }
-          }
-        },
-        "gamelab": {
-          "name": "crwdns2993876:0crwdne2993876:0",
-          "description": "crwdns2993878:0crwdne2993878:0",
-          "categories": {
-            "game_lab": {
-              "name": "crwdns2993880:0crwdne2993880:0"
-            },
-            "sprites": {
-              "name": "crwdns2993882:0crwdne2993882:0"
-            },
-            "groups": {
-              "name": "crwdns2993884:0crwdne2993884:0"
-            },
-            "drawing": {
-              "name": "crwdns2993886:0crwdne2993886:0"
-            },
-            "control": {
-              "name": "crwdns2993888:0crwdne2993888:0"
-            },
-            "math": {
-              "name": "crwdns2993890:0crwdne2993890:0"
-            },
-            "variables": {
-              "name": "crwdns2993892:0crwdne2993892:0"
-            },
-            "functions": {
-              "name": "crwdns2993894:0crwdne2993894:0"
-            }
-          }
-        },
-        "applab": {
-          "name": "crwdns2993896:0crwdne2993896:0",
-          "description": "crwdns2993898:0crwdne2993898:0",
-          "categories": {
-            "ui_controls": {
-              "name": "crwdns2993900:0crwdne2993900:0"
-            },
-            "canvas": {
-              "name": "crwdns2993902:0crwdne2993902:0"
-            },
-            "data": {
-              "name": "crwdns2993904:0crwdne2993904:0"
-            },
-            "turtle": {
-              "name": "crwdns2993906:0crwdne2993906:0"
-            },
-            "control": {
-              "name": "crwdns2993908:0crwdne2993908:0"
-            },
-            "math": {
-              "name": "crwdns2993910:0crwdne2993910:0"
-            },
-            "variables": {
-              "name": "crwdns2993912:0crwdne2993912:0"
-            },
-            "functions": {
-              "name": "crwdns2993914:0crwdne2993914:0"
-            },
-            "advanced": {
-              "name": "crwdns2993916:0crwdne2993916:0"
-            },
-            "maker": {
-              "name": "crwdns2993918:0crwdne2993918:0"
-            },
-            "circuit": {
-              "name": "crwdns2993920:0crwdne2993920:0"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "crwdns2993922:0crwdne2993922:0",
-          "description": "crwdns2993924:0crwdne2993924:0",
-          "categories": {
-            "sprites": {
-              "name": "crwdns2993926:0crwdne2993926:0"
-            },
-            "world": {
-              "name": "crwdns2993928:0crwdne2993928:0"
-            },
-            "location": {
-              "name": "crwdns2993930:0crwdne2993930:0"
-            },
-            "actions": {
-              "name": "crwdns2993932:0crwdne2993932:0"
-            },
-            "events": {
-              "name": "crwdns2993934:0crwdne2993934:0"
-            },
-            "behaviors": {
-              "name": "crwdns2993936:0crwdne2993936:0"
-            },
-            "loops": {
-              "name": "crwdns2993938:0crwdne2993938:0"
-            },
-            "variables": {
-              "name": "crwdns2993940:0crwdne2993940:0"
-            },
-            "math": {
-              "name": "crwdns2993942:0crwdne2993942:0"
-            },
-            "logic": {
-              "name": "crwdns2993944:0crwdne2993944:0"
-            },
-            "functions": {
-              "name": "crwdns2993946:0crwdne2993946:0"
-            },
-            "text": {
-              "name": "crwdns2993948:0crwdne2993948:0"
-            },
-            "comments": {
-              "name": "crwdns2993950:0crwdne2993950:0"
-            }
-          }
-        },
         "javalab": {
-          "name": "crwdns2993952:0crwdne2993952:0",
-          "description": "crwdns2993954:0crwdne2993954:0",
           "categories": {
-            "java_lab_shortcuts": {
-              "name": "crwdns2993956:0crwdne2993956:0"
+            "control_structures": {
+              "name": "crwdns2993972:0crwdne2993972:0"
+            },
+            "data_structures": {
+              "name": "crwdns2993974:0crwdne2993974:0"
             },
             "general": {
               "name": "crwdns2993958:0crwdne2993958:0"
             },
-            "org_code_theater": {
-              "name": "crwdns2993960:0crwdne2993960:0"
+            "java_io": {
+              "name": "crwdns2993966:0crwdne2993966:0"
+            },
+            "java_lab_shortcuts": {
+              "name": "crwdns2993956:0crwdne2993956:0"
+            },
+            "java_lang": {
+              "name": "crwdns2993970:0crwdne2993970:0"
+            },
+            "java_util": {
+              "name": "crwdns2993968:0crwdne2993968:0"
             },
             "org_code_media": {
               "name": "crwdns2993962:0crwdne2993962:0"
@@ -147,22 +31,57 @@
             "org_code_neighborhood": {
               "name": "crwdns2993964:0crwdne2993964:0"
             },
-            "java_io": {
-              "name": "crwdns2993966:0crwdne2993966:0"
-            },
-            "java_util": {
-              "name": "crwdns2993968:0crwdne2993968:0"
-            },
-            "java_lang": {
-              "name": "crwdns2993970:0crwdne2993970:0"
-            },
-            "control_structures": {
-              "name": "crwdns2993972:0crwdne2993972:0"
-            },
-            "data_structures": {
-              "name": "crwdns2993974:0crwdne2993974:0"
+            "org_code_theater": {
+              "name": "crwdns2993960:0crwdne2993960:0"
             }
-          }
+          },
+          "description": "crwdns2993954:0crwdne2993954:0",
+          "name": "crwdns2993952:0crwdne2993952:0"
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "crwdns2993932:0crwdne2993932:0"
+            },
+            "behaviors": {
+              "name": "crwdns2993936:0crwdne2993936:0"
+            },
+            "comments": {
+              "name": "crwdns2993950:0crwdne2993950:0"
+            },
+            "events": {
+              "name": "crwdns2993934:0crwdne2993934:0"
+            },
+            "functions": {
+              "name": "crwdns2993946:0crwdne2993946:0"
+            },
+            "location": {
+              "name": "crwdns2993930:0crwdne2993930:0"
+            },
+            "logic": {
+              "name": "crwdns2993944:0crwdne2993944:0"
+            },
+            "loops": {
+              "name": "crwdns2993938:0crwdne2993938:0"
+            },
+            "math": {
+              "name": "crwdns2993942:0crwdne2993942:0"
+            },
+            "sprites": {
+              "name": "crwdns2993926:0crwdne2993926:0"
+            },
+            "text": {
+              "name": "crwdns2993948:0crwdne2993948:0"
+            },
+            "variables": {
+              "name": "crwdns2993940:0crwdne2993940:0"
+            },
+            "world": {
+              "name": "crwdns2993928:0crwdne2993928:0"
+            }
+          },
+          "description": "crwdns2993924:0crwdne2993924:0",
+          "name": "crwdns2993922:0crwdne2993922:0"
         }
       }
     }

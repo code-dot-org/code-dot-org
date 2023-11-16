@@ -4,2173 +4,1324 @@
       "function_definitions": {
         "2-3 Artist 11": {
           "x": {
-            "name": "x"
-          }
-        },
-        "2-3 Artist 12": {
-          "details": {
-            "name": "تفاصيل"
-          },
-          "draw eyebrow": {
-            "name": "ارسم حاجب العين"
-          },
-          "draw pupil": {
-            "name": "ارسم بؤبؤ العين"
+            "name": "Pseudoloc-ء"
           }
         },
         "2-3 Artist 3.4": {
-          "draw a car": {
-            "name": "ارسم سيارة"
-          },
           "draw a circle": {
-            "name": "رسم دائرة"
+            "name": "Pseudoloc-يقلصل ؤهؤمث"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
-            "name": "ارسم_مستطيلاً",
             "parameters": {
-              "height": "الارتفاع",
-              "width": "العرض"
+              "height": "Pseudoloc-اثهلف",
+              "width": "Pseudoloc-صهيف"
             }
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw a button": {
-            "name": "ارسم أيقونةً"
-          },
           "draw a circle": {
-            "name": "رسم دائرة"
-          },
-          "draw cord": {
-            "name": "ارسم حبلاً"
+            "name": "Pseudoloc-يقلصل ؤهؤمث"
           },
           "draw square": {
-            "name": "ارسم مربعاً",
             "parameters": {
-              "height": "الارتفاع",
-              "width": "العرض"
+              "height": "Pseudoloc-اثهلف",
+              "width": "Pseudoloc-صهيف"
             }
-          },
-          "jump to controller top left": {
-            "name": "الانتقال إلى وحدة التحكم لأعلى اليسار"
-          },
-          "jump to middle": {
-            "name": "اقفز إلى الوسط"
           }
         },
-        "2-3 Artist Debugging 5": {
-          "draw a head": {
-            "name": "ارسم رأساً"
-          },
-          "draw body and arms": {
-            "name": "ارسم جسماً وذراعين"
-          },
-          "draw left leg": {
-            "name": "ارسم الرجل اليسرى"
-          },
-          "draw right leg": {
-            "name": "ارسم الرجل اليمنى"
-          }
-        },
-        "2-3 Artist Debugging 6": {
-          "draw arms": {
-            "name": "ارسم ذراعين"
-          },
-          "draw head": {
-            "name": "ارسم رأساً"
-          },
-          "draw left leg": {
-            "name": "ارسم الرجل اليسرى"
-          },
-          "draw right leg": {
-            "name": "ارسم الرجل اليمنى"
-          },
-          "draw sitting stick figure": {
-            "name": "ارسم شكل عصا جالسة"
-          },
-          "jump to neck": {
-            "name": "اقفز إلى الرقبة"
-          }
-        },
-        "2-3 Artist Debugging 7": {
-          "draw D": {
-            "name": "ارسم حرف D"
-          },
-          "draw E": {
-            "name": "ارسم حرف E"
-          },
-          "draw O": {
-            "name": "ارسم حرف O"
-          }
-        },
-        "2-3 Artist Functions 10": {
-          "big gear": {
-            "name": "معدات كبيرة"
-          },
-          "small gear": {
-            "name": "معدات صغيرة"
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "2-3 Artist Functions 11": {
           "draw a hexagon": {
-            "name": "رسم شكل سداسي"
+            "name": "Pseudoloc-يقلصل اثللخى"
           }
         },
         "2-3 Artist Functions 11.5": {
           "draw a hexagon": {
-            "name": "رسم شكل سداسي"
+            "name": "Pseudoloc-يقلصل اثللخى"
           }
         },
         "2-3 Artist Functions 12": {
           "draw a flower": {
-            "name": "رسم زهرة"
+            "name": "Pseudoloc-يقلصل بمصثق"
           }
         },
         "2-3 Artist Functions 2": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "2-3 Artist Functions 4": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
-            "name": "رسم ندفة الثلج"
-          }
-        },
-        "2-3 Bee Functions 1": {
-          "get 2 nectar": {
-            "name": "احصل على ٢ من الرحيق"
-          }
-        },
-        "2-3 Bee Functions 10": {
-          "collect purple nectar": {
-            "name": "اجمع الرحيق الأرجواني"
-          }
-        },
-        "2-3 Bee Functions 2": {
-          "get 5": {
-            "name": "احصل على ٥"
-          }
-        },
-        "2-3 Bee Functions 4": {
-          "move and get nectar": {
-            "name": "تحرّك واحصل على رحيق"
-          }
-        },
-        "2-3 Bee Functions 5": {
-          "move and get 4": {
-            "name": "تحرك واحصل على ٤"
-          }
-        },
-        "2-3 Bee Functions 6": {
-          "move and get 4": {
-            "name": "تحرك واحصل على ٤"
-          }
-        },
-        "2-3 Bee Functions 8": {
-          "get 7 nectar make 7 honey": {
-            "name": "احصل على ٧ من الرحيق واصنع ٧ من العسل"
-          }
-        },
-        "2-3 Bee Functions 9": {
-          "get 7 make 7": {
-            "name": "احصل على ٧ اصنع ٧"
-          }
-        },
-        "2-3 Bee Functions Assessment 1": {
-          "get 7": {
-            "name": "احصل على ٧"
-          }
-        },
-        "2-3 Bee Functions Assessment 2": {
-          "move and get 3": {
-            "name": "تحرك واحصل على ٣"
+            "name": "Pseudoloc-يقلصل سىصبملث"
           }
         },
         "4-5 Artist 3": {
           "draw a flower": {
-            "name": "رسم زهرة"
+            "name": "Pseudoloc-يقلصل بمصثق"
           }
         },
         "4-5 Artist 6": {
           "draw a tree": {
-            "name": "رسم شجرة"
+            "name": "Pseudoloc-يقلصل فقث"
           }
         },
         "4-5 Artist 7": {
-          "draw a car": {
-            "name": "ارسم سيارة"
-          },
           "draw a circle": {
-            "name": "رسم دائرة"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
-          }
-        },
-        "4-5 Artist 8": {
-          "draw circle": {
-            "name": "ارسم دائرة"
-          },
-          "draw goal": {
-            "name": "ارسم هدفاً"
-          }
-        },
-        "4-5 Bee Conditionals 7": {
-          "check purple flower": {
-            "name": "تحقق من الزهور الأرجوانية"
-          }
-        },
-        "4-5 Bee Conditionals 8": {
-          "check flower make honey": {
-            "name": "تحقق من الزهرة واصنع العسل"
-          }
-        },
-        "4-5 Bee Conditionals Assessment 1": {
-          "get nectar or make honey": {
-            "name": "احصل على الرحيق أو اصنع العسل"
-          }
-        },
-        "4-5 Bee Debugging 7": {
-          "make 3 honey": {
-            "name": "اصنع ٣ من العسل"
-          }
-        },
-        "4-5 Bee Debugging 8": {
-          "get 5 nectar": {
-            "name": "احصل على ٥ من الرحيق"
-          }
-        },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
-            "name": "اصنع كل العسل"
-          }
-        },
-        "Alien Defender": {
-          "game has been won": {
-            "name": "قد فاز أحد باللعبة"
+            "name": "Pseudoloc-يقلصل ؤهؤمث"
           }
         },
         "Artist Autorun Test": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "Auto Open Function Editor": {
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "Choose Your Own Adventure": {
-          "starting path": {
-            "name": "طريق البداية"
-          },
           "story": {
-            "name": "قصة"
-          },
-          "witch ending": {
-            "name": "نهاية الساحرة"
-          }
-        },
-        "Course 4 Artist Binary 1": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary 2": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary 3": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary 4": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary 5": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary 6": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary 7": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary Free Play 2": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary Free Play 2a": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary Free Play 2b": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Binary pre1": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "Course 4 Artist Functions Inspiration": {
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          }
-        },
-        "Course 4 Artist Functions challenge": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          }
-        },
-        "Course 4 Bee Params 1": {
-          "get 3 nectar": {
-            "name": "احصل على ٣ من الرحيق"
-          }
-        },
-        "Course 4 Bee Params 2": {
-          "get 3 nectar": {
-            "name": "احصل على ٣ من الرحيق"
-          }
-        },
-        "Course 4 Bee Params 3": {
-          "get 3 nectar": {
-            "name": "احصل على ٣ من الرحيق"
-          }
-        },
-        "Course 4 Bee Params 4": {
-          "get 3 nectar": {
-            "name": "احصل على ٣ من الرحيق"
-          }
-        },
-        "Course 4 Bee Params 5": {
-          "get 5 nectar": {
-            "name": "احصل على ٥ من الرحيق"
-          }
-        },
-        "Course 4 Bee Params 6": {
-          "get 5 nectar": {
-            "name": "احصل على ٥ من الرحيق"
-          }
-        },
-        "Course 4 Bee Params 7": {
-          "get many nectar": {
-            "name": "احصل على العديد من الرحيق"
+            "name": "Pseudoloc-سفخق"
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
-            "name": "احصل على الرحيق اصنع العسل",
             "parameters": {
-              "honey": "العسل"
+              "honey": "Pseudoloc-اخىث"
             }
           }
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "قفز"
+            "name": "Pseudoloc-تعةح"
           }
         },
         "Course 4 Play Lab Params 10": {
-          "level_up": {
-            "name": "مستوى_أعلى"
-          },
           "score_points": {
-            "name": "سجل_نقاط",
             "parameters": {
-              "points": "نقاط"
+              "points": "Pseudoloc-حخهىس"
             }
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "قفز"
+            "name": "Pseudoloc-تعةح"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "قفز",
+            "name": "Pseudoloc-تعةح",
             "parameters": {
-              "actor": "الممثل",
-              "height": "الارتفاع"
+              "actor": "Pseudoloc-لؤفخ",
+              "height": "Pseudoloc-اثهلف"
             }
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "patrol": {
-            "name": "دورية"
+            "name": "Pseudoloc-حلفقم"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
-            "name": "دورية",
+            "name": "Pseudoloc-حلفقم",
             "parameters": {
-              "actor": "الممثل"
+              "actor": "Pseudoloc-لؤفخ"
             }
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
-            "name": "دورية",
+            "name": "Pseudoloc-حلفقم",
             "parameters": {
-              "actor": "الممثل"
+              "actor": "Pseudoloc-لؤفخ"
             }
           }
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
-            "name": "دورية",
+            "name": "Pseudoloc-حلفقم",
             "parameters": {
-              "actor": "الممثل",
-              "speed": "السرعة"
+              "actor": "Pseudoloc-لؤفخ",
+              "speed": "Pseudoloc-سحثث"
             }
           }
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
-            "name": "دورية",
+            "name": "Pseudoloc-حلفقم",
             "parameters": {
-              "actor": "الممثل",
-              "speed": "السرعة"
+              "actor": "Pseudoloc-لؤفخ",
+              "speed": "Pseudoloc-سحثث"
             }
           }
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
-            "name": "سجل_نقاط",
             "parameters": {
-              "points": "نقاط"
+              "points": "Pseudoloc-حخهىس"
             }
           }
         },
         "Course 4 Play Lab Vars 1": {
           "set score": {
-            "name": "تعيين النتيجة"
+            "name": "Pseudoloc-سثف ؤخقث"
           }
         },
         "Course 4 Play Lab Vars 2": {
           "set score": {
-            "name": "تعيين النتيجة"
+            "name": "Pseudoloc-سثف ؤخقث"
           }
         },
         "Course 4 SCF 1": {
           "draw a hexagon": {
-            "name": "رسم شكل سداسي"
-          },
-          "draw a line of hexagons": {
-            "name": "ارسم خط من الأشكال السداسية"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          },
-          "shift down/backward": {
-            "name": "الانتقال إلى الأسفل/إلى الخلف"
-          },
-          "shift down/forward": {
-            "name": "الانتقال إلى الأسفل/إلى الأمام"
+            "name": "Pseudoloc-يقلصل اثللخى"
           }
         },
         "Course 4 SCF 1a": {
           "get nectar": {
-            "name": "الحصول على الرحيق",
+            "name": "Pseudoloc-لثف ثؤفل",
             "parameters": {
-              "counter": "العداد"
+              "counter": "Pseudoloc-ؤخعىثق"
             }
-          }
-        },
-        "Course 4 SCF 2": {
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          },
-          "draw an octagon": {
-            "name": "ارسم شكل ثماني"
-          },
-          "draw octagons": {
-            "name": "ارسم أشكال ثمانية"
-          },
-          "shift down": {
-            "name": "إزاحة إلى الأسفل"
           }
         },
         "Course 4 SCF 3": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw an octagon": {
-            "name": "ارسم شكل ثماني",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "Course E: Artist Project_examples2022": {
           "my function": {
-            "name": "وظيفتي"
+            "name": "Pseudoloc-ةغ بىؤفهى"
           }
         },
         "Course E: Artist Project_examples_2021": {
           "my function": {
-            "name": "وظيفتي"
+            "name": "Pseudoloc-ةغ بىؤفهى"
           }
         },
         "Course E: Artist Project_examples_2023": {
           "my function": {
-            "name": "وظيفتي"
+            "name": "Pseudoloc-ةغ بىؤفهى"
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-            "name": "زهرة المنطق"
-          },
-          "LOGIC FLOWERS": {
-            "name": "أزهار المنطق"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "أزهار المنطق ٢"
-          },
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
-          },
-          "small flower": {
-            "name": "زهرة صغيرة"
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-            "name": "زهرة المنطق"
-          },
-          "LOGIC FLOWERS": {
-            "name": "أزهار المنطق"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "أزهار المنطق ٢"
-          },
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
-          },
-          "small flower": {
-            "name": "زهرة صغيرة"
           }
         },
         "Course E: Frozen Project_examples_2023": {
-          "LOGIC FLOWER": {
-            "name": "زهرة المنطق"
-          },
-          "LOGIC FLOWERS": {
-            "name": "أزهار المنطق"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "أزهار المنطق ٢"
-          },
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
-          },
-          "small flower": {
-            "name": "زهرة صغيرة"
           }
         },
         "Course E: Play Lab Project": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist2022": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist_2023": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
-          }
-        },
-        "CourseF_app_computer": {
-          "reset game": {
-            "name": "إعادة اللعبة"
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-            "name": "إعادة اللعبة"
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-            "name": "إعادة اللعبة"
-          }
-        },
-        "CourseF_app_computer_2023": {
-          "reset game": {
-            "name": "إعادة اللعبة"
           }
         },
         "Find the Wizard": {
-          "check guess": {
-            "name": "تحقق من تخمين"
-          },
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "FoodFight": {
-          "level_up": {
-            "name": "مستوى_أعلى"
-          },
           "score_points": {
-            "name": "سجل_نقاط",
             "parameters": {
-              "points": "نقاط"
+              "points": "Pseudoloc-حخهىس"
             }
-          }
-        },
-        "Function intro Ryan": {
-          "build bridge": {
-            "name": "ابن جسراً"
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "ابن جسراً"
-          }
-        },
-        "Function intro Ryan_2019": {
-          "build bridge": {
-            "name": "ابن جسراً"
-          }
-        },
-        "Function intro Ryan_2020": {
-          "build bridge": {
-            "name": "ابن جسراً"
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "ابن جسراً"
-          }
-        },
-        "Function intro Ryan_2023": {
-          "build bridge": {
-            "name": "ابن جسراً"
           }
         },
         "Geometric Sun": {
           "diamond": {
-            "name": "ماسة"
-          },
-          "draw a door": {
-            "name": "ارسم باباً"
+            "name": "Pseudoloc-يهلةىي"
           },
           "draw a house": {
-            "name": "رسم منزل"
-          },
-          "draw grass": {
-            "name": "ارسم عشباً"
-          },
-          "draw windows": {
-            "name": "ارسم نوافذ"
-          },
-          "rectangle": {
-            "name": "مستطيل"
+            "name": "Pseudoloc-يقلصل اخسث"
           },
           "square": {
-            "name": "مربع"
+            "name": "Pseudoloc-سضعلث"
           },
           "sun": {
-            "name": "شمس"
-          },
-          "triangle": {
-            "name": "مثلث"
-          },
-          "window": {
-            "name": "نافذة"
+            "name": "Pseudoloc-سعى"
           }
         },
         "Geometric Sun_2018": {
           "diamond": {
-            "name": "ماسة"
-          },
-          "draw a door": {
-            "name": "ارسم باباً"
+            "name": "Pseudoloc-يهلةىي"
           },
           "draw a house": {
-            "name": "رسم منزل"
-          },
-          "draw grass": {
-            "name": "ارسم عشباً"
-          },
-          "draw windows": {
-            "name": "ارسم نوافذ"
-          },
-          "rectangle": {
-            "name": "مستطيل"
+            "name": "Pseudoloc-يقلصل اخسث"
           },
           "square": {
-            "name": "مربع"
+            "name": "Pseudoloc-سضعلث"
           },
           "sun": {
-            "name": "شمس"
-          },
-          "triangle": {
-            "name": "مثلث"
-          },
-          "window": {
-            "name": "نافذة"
-          }
-        },
-        "Guess The Number": {
-          "check guess": {
-            "name": "تحقق من تخمين"
+            "name": "Pseudoloc-سعى"
           }
         },
         "InspirationalArtwork": {
           "draw a loop": {
-            "name": "ارسم حلقة",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw spiral circle": {
-            "name": "قم برسم دائرة حلزونية",
             "parameters": {
-              "size": "الحجم"
+              "size": "Pseudoloc-سهئث"
             }
           },
           "n-sided shape": {
-            "name": "شكل بحواف -n",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "InspirationalArtwork_2018": {
           "draw a loop": {
-            "name": "ارسم حلقة",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw spiral circle": {
-            "name": "قم برسم دائرة حلزونية",
             "parameters": {
-              "size": "الحجم"
+              "size": "Pseudoloc-سهئث"
             }
-          },
-          "n-sided shape": {
-            "name": "شكل بحواف -n"
           }
         },
         "MC Agent Freeplay": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
-          }
-        },
-        "MC_HOC_2017_07_Cole": {
-          "clear path": {
-            "name": "طريق سالك"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "طريق سالك"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "clear path": {
-            "name": "طريق سالك"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "clear path": {
-            "name": "طريق سالك"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "طريق سالك"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2023": {
-          "clear path": {
-            "name": "طريق سالك"
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-            "name": "أصلح المسار الطويل"
-          },
-          "fix short path": {
-            "name": "أصلح المسار القصير"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "أصلح المسار الطويل"
-          },
-          "fix short path": {
-            "name": "أصلح المسار القصير"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-            "name": "أصلح المسار الطويل"
-          },
-          "fix short path": {
-            "name": "أصلح المسار القصير"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-            "name": "أصلح المسار الطويل"
-          },
-          "fix short path": {
-            "name": "أصلح المسار القصير"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "أصلح المسار الطويل"
-          },
-          "fix short path": {
-            "name": "أصلح المسار القصير"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2023": {
-          "fix long path": {
-            "name": "أصلح المسار الطويل"
-          },
-          "fix short path": {
-            "name": "أصلح المسار القصير"
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build long bridge": {
-            "name": "ابن جسراً طويل"
-          },
-          "build short bridge": {
-            "name": "ابن جسراً قصير"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build long bridge": {
-            "name": "ابن جسراً طويل"
-          },
-          "build short bridge": {
-            "name": "ابن جسراً قصير"
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build long bridge": {
-            "name": "ابن جسراً طويل"
-          },
-          "build short bridge": {
-            "name": "ابن جسراً قصير"
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build long bridge": {
-            "name": "ابن جسراً طويل"
-          },
-          "build short bridge": {
-            "name": "ابن جسراً قصير"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build long bridge": {
-            "name": "ابن جسراً طويل"
-          },
-          "build short bridge": {
-            "name": "ابن جسراً قصير"
-          }
-        },
-        "MC_HOC_2017_Ali_2023": {
-          "build long bridge": {
-            "name": "ابن جسراً طويل"
-          },
-          "build short bridge": {
-            "name": "ابن جسراً قصير"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "MC_HOC_2017_FP20x202022": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "MC_HOC_2017_FP20x20_2019": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "MC_HOC_2017_FP20x20_2020": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
-          }
-        },
-        "NEW Course 4 Artist Functions 11": {
-          "draw a line of  squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          }
-        },
-        "NEW Course 4 Artist Functions 12": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          }
-        },
-        "NEW Course 4 Artist Functions 13": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          }
-        },
-        "NEW Course 4 Artist Functions 14": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          },
-          "draw a square 40": {
-            "name": "ارسم مربع ٤٠"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "NEW Course 4 Artist Functions 7": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "رسم مثلث"
+            "name": "Pseudoloc-يقلصل فقلىلم"
           }
         },
         "NEW Course 4 Artist Functions 9": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           },
           "draw a triangle": {
-            "name": "رسم مثلث"
+            "name": "Pseudoloc-يقلصل فقلىلم"
           }
         },
         "NEW Course 4 Artist Params 1": {
-          "Draw a triangle": {
-            "name": "ارسم مثلث"
-          },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a hexagon": {
-            "name": "رسم شكل سداسي",
+            "name": "Pseudoloc-يقلصل اثللخى",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 11": {
           "do something": {
-            "name": "إفعل شيئاً",
+            "name": "Pseudoloc-يخ سةثفاىل",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "NEW Course 4 Artist Params 12": {
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "NEW Course 4 Artist Params 12a": {
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "NEW Course 4 Artist Params 13": {
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
-            "name": "قم برسم حافة حلزونية",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "NEW Course 4 Artist Params 15": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a triangle": {
-            "description": "رسم مثلث",
-            "name": "رسم مثلث"
+            "description": "Pseudoloc-يقلصل فقلىلم",
+            "name": "Pseudoloc-يقلصل فقلىلم"
           }
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
-            "name": "رسم مثلث"
+            "name": "Pseudoloc-يقلصل فقلىلم"
           }
         },
         "NEW Course 4 Artist Params 4": {
           "draw a triangle with length": {
-            "name": "ارسم مثلث بطول",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 5": {
           "draw a pentagon": {
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 6": {
           "draw a hexagon": {
-            "name": "رسم شكل سداسي",
+            "name": "Pseudoloc-يقلصل اثللخى",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a sqaure": {
-            "name": "ارسم مربع",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 7": {
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
-            "name": "ارسم مثلث بطول",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params 9": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "NEW Course 4 Artist Params inspire": {
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "name": "قفز",
+            "description": "Pseudoloc-تعةحبعىؤهخى مخؤنصهفااثهلف لى لؤفق حللةثفق",
+            "name": "Pseudoloc-تعةح",
             "parameters": {
-              "actor": "الممثل",
-              "height": "الارتفاع"
+              "actor": "Pseudoloc-لؤفخ",
+              "height": "Pseudoloc-اثهلف"
             }
           },
           "patrol": {
-            "name": "دورية",
+            "name": "Pseudoloc-حلفقم",
             "parameters": {
-              "actor": "الممثل",
-              "speed": "السرعة"
+              "actor": "Pseudoloc-لؤفخ",
+              "speed": "Pseudoloc-سحثث"
             }
           }
         },
         "New Artist Project": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "New Minecraft Hero Project": {
           "function 1": {
-            "name": "الوظيفة  1"
+            "name": "Pseudoloc-بعىؤهخى "
           },
           "function 2": {
-            "name": "الوظيفة 2"
+            "name": "Pseudoloc-بعىؤهخى "
           }
         },
         "New Play Lab Project": {
           "jump": {
-            "name": "قفز",
+            "description": "Pseudoloc-تعةحبعىؤهخى مخؤنصهفااثهلف لى لؤفق حللةثفق",
+            "name": "Pseudoloc-تعةح",
             "parameters": {
-              "actor": "الممثل",
-              "height": "الارتفاع"
+              "actor": "Pseudoloc-لؤفخ",
+              "height": "Pseudoloc-اثهلف"
             }
           },
           "patrol": {
-            "name": "دورية",
+            "description": "Pseudoloc-ل حلقخم عىؤفخى فلف اس ل ؤفخقلىي حثثيحلقلثفثق",
+            "name": "Pseudoloc-حلفقم",
             "parameters": {
-              "actor": "الممثل",
-              "speed": "السرعة"
+              "actor": "Pseudoloc-لؤفخ",
+              "speed": "Pseudoloc-سحثث"
             }
-          }
-        },
-        "Robot Doodle": {
-          "draw head": {
-            "name": "ارسم رأساً"
-          }
-        },
-        "Robot Doodle_2018": {
-          "draw head": {
-            "name": "ارسم رأساً"
           }
         },
         "Standalone_Artist_7": {
           "draw a flower": {
-            "name": "رسم زهرة"
+            "name": "Pseudoloc-يقلصل بمصثق"
           }
         },
         "Standalone_Artist_8": {
           "draw a shape": {
-            "name": "ارسم شكل"
+            "name": "Pseudoloc-يقلصل ساحث"
           }
         },
         "Standalone_Artist_9": {
           "my function": {
-            "name": "وظيفتي"
-          }
-        },
-        "course1_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "حل \"بسيط\""
-          }
-        },
-        "course1_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "حلّ محتمل"
+            "name": "Pseudoloc-ةغ بىؤفهى"
           }
         },
         "course3_artist_functions_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "get 3 nectar or honey": {
-            "name": "احصل على ٣ من الرحيق أو عسل"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "move and collect": {
-            "name": "تحرك واجمع"
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "row of nectar": {
-            "name": "صف من الرحيق"
-          },
-          "rowOfNectar": {
-            "name": "سطر_من_الرحيق"
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "move and check": {
-            "name": "تحرك وتأكد"
-          },
-          "row of nectar": {
-            "name": "صف من الرحيق"
-          },
-          "rowOfNectar": {
-            "name": "سطر_من_الرحيق"
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-            "name": "استمر باللعب"
-          },
-          "lose game": {
-            "name": "الخسارة باللعبة"
-          },
-          "win game": {
-            "name": "الفوز باللعبة"
-          }
-        },
-        "course4_artist_binary_challenge1": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "course4_artist_binary_challenge2": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
-            "name": "ارسم مروحة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "course4_artist_fwp_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "sides": "جوانب"
+              "sides": "Pseudoloc-سهيث"
             }
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
           },
           "draw background": {
-            "name": "ارسم خلفية",
             "parameters": {
-              "color": "لون"
+              "color": "Pseudoloc-ؤخمخ"
             }
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
           }
         },
         "course4_bee_fwp_challenge1": {
           "pick row": {
-            "name": "اختر سطر",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
-            "name": "اختر سطر",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
-        "courseA_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "حل \"بسيط\""
-          }
-        },
-        "courseB_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
-        "courseB_artist_loops_challenge22022": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
-        "courseB_artist_loops_challenge2_2018": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
-        "courseB_artist_loops_challenge2_2019": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
-        "courseB_artist_loops_challenge2_2020": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
-        "courseB_artist_loops_challenge2_2023": {
-          "potential solution": {
-            "name": "حلّ محتمل"
-          }
-        },
         "courseC_artist_prog3": {
-          "draw fire": {
-            "name": "ارسم نار"
-          },
           "draw flame": {
-            "name": "ارسم شعلة",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-ء"
             }
           }
         },
@@ -2186,602 +1337,56 @@
           }
         },
         "courseC_artist_prog3_2018": {
-          "draw fire": {
-            "name": "ارسم نار"
-          },
           "draw flame": {
-            "name": "ارسم شعلة",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-ء"
             }
           }
         },
         "courseC_artist_prog3_2019": {
-          "draw fire": {
-            "name": "ارسم نار"
-          },
           "draw flame": {
-            "name": "ارسم شعلة",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-ء"
             }
           }
         },
         "courseC_artist_prog3_2020": {
-          "draw fire": {
-            "name": "ارسم نار"
-          },
           "draw flame": {
-            "name": "ارسم شعلة",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-ء"
             }
           }
         },
         "courseC_artist_prog3_2021": {
-          "draw fire": {
-            "name": "ارسم نار"
-          },
           "draw flame": {
-            "name": "ارسم شعلة",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-ء"
             }
-          }
-        },
-        "courseC_artist_prog4": {
-          "booster": {
-            "name": "الداعم"
-          }
-        },
-        "courseC_artist_prog42022": {
-          "booster": {
-            "name": "الداعم"
-          }
-        },
-        "courseC_artist_prog4_2018": {
-          "booster": {
-            "name": "الداعم"
-          }
-        },
-        "courseC_artist_prog4_2019": {
-          "booster": {
-            "name": "الداعم"
-          }
-        },
-        "courseC_artist_prog4_2020": {
-          "booster": {
-            "name": "الداعم"
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "الداعم"
-          }
-        },
-        "courseC_artist_prog4_2023": {
-          "booster": {
-            "name": "الداعم"
           }
         },
         "courseC_data wizard": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseC_data wizard2022": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseC_data wizard_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseC_data wizard_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseC_data wizard_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          }
-        },
-        "courseD_artist_binary1": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary1_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary1_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary1_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary2": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary2_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary2_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary2_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary3": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary3_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary3_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary3_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary4": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary4_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary4_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary4_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary5": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary5_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary5_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary5_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary6": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary6_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary6_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary6_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary7": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary7_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary7_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary7_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_predict1": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_predict1_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_predict1_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary8_predict1_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binaryFP_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binaryFP_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binaryFP_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary_challenge1_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary_challenge1_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary_challenge1_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary_challenge2_2018": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary_challenge2_2019": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
-          }
-        },
-        "courseD_artist_binary_challenge2_2020": {
-          "draw": {
-            "name": "ارسم",
-            "parameters": {
-              "binary": "ثنائي"
-            }
-          },
-          "draw bit": {
-            "name": "ارسم bit"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -2848,1803 +1453,674 @@
             "name": "ارسم بت"
           }
         },
-        "courseE_Dogger_2": {
-          "lose": {
-            "name": "خسارة"
-          },
-          "stop_everything": {
-            "name": "أوقِف_كل_شيء"
-          }
-        },
         "courseE_artist_concept1": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a hexagon": {
-            "name": "رسم شكل سداسي"
+            "name": "Pseudoloc-يقلصل اثللخى"
           }
         },
         "courseE_artist_concept1_2018": {
           "draw a hexagon": {
-            "name": "رسم شكل سداسي"
+            "name": "Pseudoloc-يقلصل اثللخى"
           }
         },
         "courseE_artist_concept4": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a plane of squares": {
-            "name": "ارسم خطاً من المربعات"
-          },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_concept4_2018": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw a plane of squares": {
-            "name": "ارسم خطاً من المربعات"
-          },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-            "name": "ارسم مروحة"
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
-            "name": "ارسم مروحة"
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions10": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions102022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions10_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions10_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
+            "name": "Pseudoloc-يخ سةثفاىل"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           },
           "draw ear stems": {
-            "name": "ارسم يد النظارة"
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_2023": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions32022": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions3_2018": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions3_2019": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions3_2020": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions3_2021": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions3_2023": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions4": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions4_copy": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions4_dani": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions52022": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_2018": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_2019": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_2020": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_2021": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_2023": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_copy": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions5_dani": {
           "draw a star": {
-            "name": "رسم نجمة"
+            "name": "Pseudoloc-يقلصل سفق"
           }
         },
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "رسم منزل"
-          },
-          "draw a window": {
-            "name": "ارسم نافذة"
-          }
-        },
-        "courseE_artist_functions72022": {
-          "draw a window": {
-            "name": "ارسم نافذة"
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "رسم منزل"
-          },
-          "draw a window": {
-            "name": "ارسم نافذة"
-          }
-        },
-        "courseE_artist_functions7_2019": {
-          "draw a window": {
-            "name": "ارسم نافذة"
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "رسم منزل"
-          },
-          "draw a window": {
-            "name": "ارسم نافذة"
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
-            "name": "ارسم نافذة"
-          }
-        },
-        "courseE_artist_functions7_2023": {
-          "draw a window": {
-            "name": "ارسم نافذة"
           }
         },
         "courseE_artist_functions8": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8a2022": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_functions8a_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_functions8a_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_functions8a_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_functions8a_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_functions8a_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseE_artist_functions8b2022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8b_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions8c_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions9": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions92022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions9_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of triangles": {
-            "name": "ارسم سطراً من المثلثات"
-          },
-          "draw triangle": {
-            "name": "ارسم مثلثاً"
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
-          }
-        },
-        "courseE_artist_functionsProj_2018": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
-          }
-        },
-        "courseE_artist_functionsProj_2019": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
-          }
-        },
-        "courseE_artist_functionsProj_2020": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
-          }
-        },
-        "courseE_artist_functionsProj_2023": {
-          "draw a line of squares": {
-            "name": "ارسم خط من المربعات"
-          },
-          "draw hexagon": {
-            "name": "ارسم شكلاً سداسياً"
-          },
-          "draw line of hexagons": {
-            "name": "ارسم خطاً من الأشكال السداسية"
-          },
-          "draw square": {
-            "name": "ارسم مربعاً"
-          },
-          "staggered squares": {
-            "name": "مربعات متعاقبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "القيام بشيء ما"
-          },
-          "my design": {
-            "name": "تصميمي"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge1_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "القيام بشيء ما"
-          },
-          "my design": {
-            "name": "تصميمي"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_challenge2_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "my design": {
-            "name": "تصميمي"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           },
           "draw ear stems": {
-            "name": "ارسم يد النظارة"
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_2023": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
+          },
+          "draw ear stems": {
+            "name": "Pseudoloc-يقلصثلق فثةس"
           }
         },
         "courseE_artist_functions_predict2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict22022": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict2_2021": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_artist_functions_predict2_2023": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw line of polygons": {
-            "name": "ارسم خطاً من المضلعات"
-          },
-          "draw polygon": {
-            "name": "ارسم مضلعاً"
-          }
-        },
-        "courseE_bee_concept4": {
-          "honey nectar": {
-            "name": "رحيق العسل"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_bee_functions1": {
           "do something": {
-            "name": "إفعل شيئاً"
-          }
-        },
-        "courseE_bee_functions10": {
-          "move and make honey": {
-            "name": "تحرك واصنع عسل"
-          }
-        },
-        "courseE_bee_functions11_predict1": {
-          "move and make honey": {
-            "name": "تحرك واصنع عسل"
-          }
-        },
-        "courseE_bee_functions2": {
-          "get 2 nectar": {
-            "name": "احصل على ٢ من الرحيق"
-          }
-        },
-        "courseE_bee_functions3": {
-          "get 5": {
-            "name": "احصل على ٥"
-          }
-        },
-        "courseE_bee_functions4": {
-          "move and get nectar": {
-            "name": "تحرّك واحصل على رحيق"
-          }
-        },
-        "courseE_bee_functions5": {
-          "move and get 4": {
-            "name": "تحرك واحصل على ٤"
-          }
-        },
-        "courseE_bee_functions6": {
-          "get 7 nectar make 7 honey": {
-            "name": "احصل على ٧ من الرحيق واصنع ٧ من العسل"
-          }
-        },
-        "courseE_bee_functions7": {
-          "get 7 make 7": {
-            "name": "احصل على ٧ اصنع ٧"
-          }
-        },
-        "courseE_bee_functions8": {
-          "collect all nectar": {
-            "name": "اجمع كل الرحيق"
-          }
-        },
-        "courseE_bee_functions9": {
-          "get all nectar": {
-            "name": "احصل على كل الرحيق"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_bee_functions_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "get 3 nectar or honey": {
-            "name": "احصل على ٣ من الرحيق أو عسل"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "move and collect": {
-            "name": "تحرك واجمع"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_farmer_concept1": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_farmer_concept2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "get pumpkin": {
-            "name": "احصل على يقطين"
-          }
-        },
-        "courseE_farmer_concept2_2018": {
-          "get pumpkin": {
-            "name": "احصل على يقطين"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
-            "name": "إفعل شيئاً"
-          }
-        },
-        "courseE_farmer_functions10a12022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions10a1_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions10a1_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions10a1_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions10a1_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions10b": {
-          "navigate": {
-            "name": "تنقّل"
-          }
-        },
-        "courseE_farmer_functions11_predict": {
-          "check and pick": {
-            "name": "قم بالتحقّق والالتقاط"
-          },
-          "find pumpkin": {
-            "name": "اعثر على اليقطين"
-          },
-          "wander path": {
-            "name": "تجول في المسار"
-          }
-        },
-        "courseE_farmer_functions11_predict2022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "get produce": {
-            "name": "اجمع المحصول"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions11_predict_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "get produce": {
-            "name": "اجمع المحصول"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions11_predict_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "get produce": {
-            "name": "اجمع المحصول"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions11_predict_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "get produce": {
-            "name": "اجمع المحصول"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "get produce": {
-            "name": "اجمع المحصول"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions11_predict_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "get produce": {
-            "name": "اجمع المحصول"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          },
-          "pumpkin square": {
-            "name": "مربع اليقطينة"
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "check for corn": {
-            "name": "تأكد من وجود الذرة"
-          },
-          "corn rectangle": {
-            "name": "مستطيل الذرة"
-          },
-          "lettuce stairs": {
-            "name": "سلّم الخس"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions13_2018": {
-          "check for corn": {
-            "name": "تأكد من وجود الذرة"
-          },
-          "corn rectangle": {
-            "name": "مستطيل الذرة"
-          },
-          "lettuce stairs": {
-            "name": "سلّم الخس"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions13_2019": {
-          "check for corn": {
-            "name": "تأكد من وجود الذرة"
-          },
-          "corn rectangle": {
-            "name": "مستطيل الذرة"
-          },
-          "lettuce stairs": {
-            "name": "سلّم الخس"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions13_2020": {
-          "check for corn": {
-            "name": "تأكد من وجود الذرة"
-          },
-          "corn rectangle": {
-            "name": "مستطيل الذرة"
-          },
-          "lettuce stairs": {
-            "name": "سلّم الخس"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "check for corn": {
-            "name": "تأكد من وجود الذرة"
-          },
-          "corn rectangle": {
-            "name": "مستطيل الذرة"
-          },
-          "lettuce stairs": {
-            "name": "سلّم الخس"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions13_2023": {
-          "check for corn": {
-            "name": "تأكد من وجود الذرة"
-          },
-          "corn rectangle": {
-            "name": "مستطيل الذرة"
-          },
-          "lettuce stairs": {
-            "name": "سلّم الخس"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions1a_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions1a_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions1a_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions1a_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2b_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2b_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2b_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2b_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          }
-        },
-        "courseE_farmer_functions2ba": {
-          "corn and pumpkin": {
-            "name": "ذرة ويقطين"
-          }
-        },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions2ba_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions2ba_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions2ba_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions2ba_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions3c": {
-          "corn and pumpkin": {
-            "name": "ذرة ويقطين"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions3c1_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions3c1_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions3c1_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions3c1_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          },
-          "pick along path": {
-            "name": "التقط على امتداد المسار"
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions3c_2018": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions3c_2019": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions3c_2020": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions3c_2023": {
-          "check square for corn": {
-            "name": "تفقد المربع من الذرة"
-          },
-          "get all pumpkins": {
-            "name": "احصل على كل اليقطين"
-          }
-        },
-        "courseE_farmer_functions4b": {
-          "corn and pumpkin": {
-            "name": "ذرة ويقطين"
-          }
-        },
-        "courseE_farmer_functions5c": {
-          "corn and pumpkin": {
-            "name": "ذرة ويقطين"
-          }
-        },
-        "courseE_farmer_functions6c": {
-          "corn and pumpkin": {
-            "name": "ذرة ويقطين"
-          }
-        },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions7a1_2018": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions7a1_2019": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions7a1_2020": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions7a1_2023": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8a1_2018": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8a1_2019": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8a1_2020": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8a1_2023": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions8b": {
-          "navigate": {
-            "name": "تنقّل"
-          }
-        },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions9a1_2018": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions9a1_2019": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions9a1_2020": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions9a1_2023": {
-          "garden square": {
-            "name": "مربع الحديقة"
-          }
-        },
-        "courseE_farmer_functions9b": {
-          "navigate": {
-            "name": "تنقّل"
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-            "name": "استمر باللعب"
-          },
-          "lose game": {
-            "name": "الخسارة باللعبة"
-          },
-          "win game": {
-            "name": "الفوز باللعبة"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_playLab_scaffold2": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_playLab_scaffold3": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseE_playLab_scaffold4": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseF_apps_collector": {
           "end game": {
-            "name": "إنهاء اللعبة"
+            "name": "Pseudoloc-ثىي لةث"
           }
         },
         "courseF_apps_collector2022": {
@@ -4654,556 +2130,310 @@
         },
         "courseF_apps_collector_-2022-2": {
           "end game": {
-            "name": "إنهاء اللعبة"
+            "name": "Pseudoloc-ثىي لةث"
           }
         },
         "courseF_apps_collector_2023": {
           "end game": {
-            "name": "إنهاء اللعبة"
+            "name": "Pseudoloc-ثىي لةث"
           }
         },
         "courseF_artist_fwp1": {
           "Make gingham": {
-            "name": "إنشاء نسيج مخطط",
             "parameters": {
-              "size": "الحجم"
+              "size": "Pseudoloc-سهئث"
             }
           },
           "black outline": {
-            "name": "الخطوط العريضة السوداء",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "checker": {
-            "name": "فاحِص",
             "parameters": {
-              "color": "لون",
-              "size": "الحجم"
+              "color": "Pseudoloc-ؤخمخ",
+              "size": "Pseudoloc-سهئث"
             }
           },
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع"
+            "name": "Pseudoloc-يقلصل سضلقث"
           }
         },
         "courseF_artist_fwp2": {
           "Make gingham": {
-            "name": "إنشاء نسيج مخطط",
             "parameters": {
-              "size": "الحجم"
+              "size": "Pseudoloc-سهئث"
             }
           },
           "black outline": {
-            "name": "الخطوط العريضة السوداء",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "checker": {
-            "name": "فاحِص",
             "parameters": {
-              "color": "لون",
-              "size": "الحجم"
+              "color": "Pseudoloc-ؤخمخ",
+              "size": "Pseudoloc-سهئث"
             }
           },
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "courseF_artist_fwp2_predict1": {
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "courseF_artist_fwp3": {
           "black outline": {
-            "name": "الخطوط العريضة السوداء",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a square2": {
-            "name": "رسم المربع2",
             "parameters": {
-              "size": "الحجم"
+              "size": "Pseudoloc-سهئث"
             }
           },
           "filled square": {
-            "name": "مربع مليء",
             "parameters": {
-              "color": "لون",
-              "size": "الحجم"
+              "color": "Pseudoloc-ؤخمخ",
+              "size": "Pseudoloc-سهئث"
             }
           }
         },
         "courseF_artist_fwp4": {
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
-            "name": "قم برسم حافة حلزونية",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
-            "name": "قم برسم حافة حلزونية",
             "parameters": {
-              "length": "الطول",
-              "min": "على الاقل ",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "min": "Pseudoloc-ةهى",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
-            "name": "قم برسم حافة حلزونية",
             "parameters": {
-              "length": "الطول",
-              "min": "على الاقل ",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "min": "Pseudoloc-ةهى",
+              "sides": "Pseudoloc-سهيث"
             }
           }
         },
         "courseF_artist_fwp9": {
           "draw a circle": {
-            "description": "ارسم دائرة قُطرها محدد.",
-            "name": "رسم دائرة",
+            "description": "Pseudoloc-يقلصل ؤهؤمث ب لهثى قيهعس",
+            "name": "Pseudoloc-يقلصل ؤهؤمث",
             "parameters": {
-              "radius": "قُطر"
+              "radius": "Pseudoloc-قليهس"
             }
           },
           "draw a house": {
-            "name": "رسم منزل",
+            "name": "Pseudoloc-يقلصل اخسث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a pinwheel": {
-            "name": "ارسم دولاب الهواء",
+            "name": "Pseudoloc-يقلصل حهصاثث",
             "parameters": {
-              "length": "الطول",
-              "repeat": "تكرار",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "repeat": "Pseudoloc-قثحثف",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a shape": {
-            "name": "ارسم شكل",
+            "name": "Pseudoloc-يقلصل ساحث",
             "parameters": {
-              "length": "الطول",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a spiral edge": {
-            "name": "قم برسم حافة حلزونية",
             "parameters": {
-              "length": "الطول",
-              "min": "على الاقل ",
-              "sides": "جوانب"
+              "length": "Pseudoloc-مثىلا",
+              "min": "Pseudoloc-ةهى",
+              "sides": "Pseudoloc-سهيث"
             }
           },
           "draw a square": {
-            "name": "رسم مربع",
+            "name": "Pseudoloc-يقلصل سضلقث",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           },
           "draw a star": {
-            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
-            "name": "رسم نجمة",
+            "description": "Pseudoloc-يقلصل سفق صها لهثى حهىفسلىي هيثسخب لرثى ثىلف",
+            "name": "Pseudoloc-يقلصل سفق",
             "parameters": {
-              "length": "الطول",
-              "points": "نقاط"
+              "length": "Pseudoloc-مثىلا",
+              "points": "Pseudoloc-حخهىس"
             }
           },
           "draw a triangle": {
-            "name": "رسم مثلث",
+            "name": "Pseudoloc-يقلصل فقلىلم",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "courseF_artist_fwp_challenge1": {
           "do something": {
-            "name": "إفعل شيئاً"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw a polygon": {
-            "name": "ارسم مضلع",
             "parameters": {
-              "sides": "جوانب"
+              "sides": "Pseudoloc-سهيث"
             }
           },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
-          },
           "draw background": {
-            "name": "ارسم خلفية",
             "parameters": {
-              "color": "لون"
+              "color": "Pseudoloc-ؤخمخ"
             }
           }
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "draw a square 20": {
-            "name": "ارسم مربع ٢٠"
+            "name": "Pseudoloc-يخ سةثفاىل"
           },
           "draw an octagon": {
-            "name": "ارسم شكل ثماني",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
-          }
-        },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "move and check": {
-            "name": "تحرك وتأكد"
-          }
-        },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_for_challenge1_2023": {
-          "move and get nectar with counter": {
-            "name": "انتقل واحصل على الرحيق مع العداد"
-          }
-        },
-        "courseF_bee_functions2": {
-          "get only nectar": {
-            "name": "احصل على رحيق العسل فقط"
-          }
-        },
-        "courseF_bee_functions3": {
-          "only make honey": {
-            "name": "اصنع العسل فقط"
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "move and check": {
-            "name": "تحرك وتأكد"
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "move and check": {
-            "name": "تحرك وتأكد"
-          }
-        },
-        "courseF_bee_functions6": {
-          "get nectar make honey": {
-            "name": "احصل على الرحيق اصنع العسل"
-          }
-        },
-        "courseF_bee_functions7": {
-          "get nectar make honey": {
-            "name": "احصل على الرحيق اصنع العسل"
           }
         },
         "courseF_bee_functions8a": {
           "do something": {
-            "name": "إفعل شيئاً"
-          },
-          "get nectar make honey": {
-            "name": "احصل على الرحيق اصنع العسل"
-          }
-        },
-        "courseF_bee_functionsPre7": {
-          "get nectar make honey": {
-            "name": "احصل على الرحيق اصنع العسل"
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "row of nectar": {
-            "name": "صف من الرحيق"
-          },
-          "rowOfNectar": {
-            "name": "سطر_من_الرحيق"
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-            "name": "تحقق من الرحيق أو العسل"
-          },
-          "move and check": {
-            "name": "تحرك وتأكد"
-          },
-          "rowOfNectar": {
-            "name": "سطر_من_الرحيق"
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-            "name": "سطر_من_الرحيق"
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
-            "name": "سطر_من_الرحيق"
+            "name": "Pseudoloc-يخ سةثفاىل"
           }
         },
         "courseF_bee_fwp4": {
           "rowOfNectar": {
-            "name": "سطر_من_الرحيق",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "courseF_bee_fwp5": {
           "rowOfNectar": {
-            "name": "سطر_من_الرحيق",
             "parameters": {
-              "width": "العرض"
+              "width": "Pseudoloc-صهيف"
             }
           }
         },
         "courseF_bee_fwp6": {
           "rowOfNectar": {
-            "name": "سطر_من_الرحيق",
             "parameters": {
-              "width": "العرض"
+              "width": "Pseudoloc-صهيف"
             }
           }
         },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
-            "name": "صف نكتار او عسل",
             "parameters": {
-              "width": "العرض"
+              "width": "Pseudoloc-صهيف"
             }
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
-            "name": "صف نكتار او عسل",
             "parameters": {
-              "width": "العرض"
+              "width": "Pseudoloc-صهيف"
             }
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
-            "name": "صف نكتار او عسل",
             "parameters": {
-              "width": "العرض"
+              "width": "Pseudoloc-صهيف"
             }
           }
         },
         "courseF_bee_fwp_challenge1": {
           "pick row": {
-            "name": "اختر سطر",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
-            "name": "اختر سطر",
             "parameters": {
-              "length": "الطول"
+              "length": "Pseudoloc-مثىلا"
             }
-          }
-        },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-            "name": "جمع الصف"
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-            "name": "اجمع السلالم\n"
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-            "name": "اجمع السلالم\n"
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-            "name": "اجمع السلالم\n"
           }
         },
         "courseF_bee_variables_7_2018": {
           "collect": {
-            "name": "اجمع"
+            "name": "Pseudoloc-ؤخممؤف"
           }
         },
         "courseF_bee_variables_7_2019": {
           "collect": {
-            "name": "اجمع"
+            "name": "Pseudoloc-ؤخممؤف"
           }
         },
         "courseF_bee_variables_7_2020": {
           "collect": {
-            "name": "اجمع"
+            "name": "Pseudoloc-ؤخممؤف"
           }
         },
         "courseF_bee_variables_8_2018": {
           "collect": {
-            "name": "اجمع"
+            "name": "Pseudoloc-ؤخممؤف"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
-            "name": "اجمع"
+            "name": "Pseudoloc-ؤخممؤف"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
-            "name": "اجمع"
+            "name": "Pseudoloc-ؤخممؤف"
           }
         },
         "grade5_artist_binary11": {

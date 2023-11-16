@@ -4,2271 +4,1324 @@
       "function_definitions": {
         "2-3 Artist 11": {
           "x": {
-            "name": "x"
-          }
-        },
-        "2-3 Artist 12": {
-          "details": {
-            "name": "details"
-          },
-          "draw eyebrow": {
-            "name": "draw eyebrow"
-          },
-          "draw pupil": {
-            "name": "draw pupil"
+            "name": "Pseudoloc-斯"
           }
         },
         "2-3 Artist 3.4": {
-          "draw a car": {
-            "name": "draw a car"
-          },
           "draw a circle": {
-            "name": "畫個圓形"
+            "name": "Pseudoloc-迪儿尔  西儿西伊"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
-            "name": "draw_rect",
             "parameters": {
-              "height": "高度",
-              "width": "寬度"
+              "height": "Pseudoloc-尺伊吉尺",
+              "width": "Pseudoloc-尔艾提尺"
             }
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw R pad": {
-            "name": "draw R pad"
-          },
-          "draw a button": {
-            "name": "draw a button"
-          },
           "draw a circle": {
-            "name": "畫個圓形"
-          },
-          "draw cord": {
-            "name": "draw cord"
+            "name": "Pseudoloc-迪儿尔  西儿西伊"
           },
           "draw square": {
-            "name": "draw square",
             "parameters": {
-              "height": "高度",
-              "width": "寬度"
+              "height": "Pseudoloc-尺伊吉尺",
+              "width": "Pseudoloc-尔艾提尺"
             }
-          },
-          "jump to controller top left": {
-            "name": "jump to controller top left"
-          },
-          "jump to middle": {
-            "name": "jump to middle"
-          }
-        },
-        "2-3 Artist Debugging 5": {
-          "draw a head": {
-            "name": "draw a head"
-          },
-          "draw body and arms": {
-            "name": "draw body and arms",
-            "parameters": {
-              "armlength": "armlength",
-              "bodylength": "bodylength"
-            }
-          },
-          "draw left leg": {
-            "name": "draw left leg"
-          },
-          "draw right leg": {
-            "name": "draw right leg"
-          }
-        },
-        "2-3 Artist Debugging 6": {
-          "draw arms": {
-            "name": "draw arms"
-          },
-          "draw head": {
-            "name": "draw head"
-          },
-          "draw left leg": {
-            "name": "draw left leg"
-          },
-          "draw right leg": {
-            "name": "draw right leg"
-          },
-          "draw sitting stick figure": {
-            "name": "draw sitting stick figure"
-          },
-          "jump to neck": {
-            "name": "jump to neck"
-          }
-        },
-        "2-3 Artist Debugging 7": {
-          "draw D": {
-            "name": "draw D"
-          },
-          "draw E": {
-            "name": "draw E"
-          },
-          "draw O": {
-            "name": "draw O"
           }
         },
         "2-3 Artist Functions 1": {
           "draw ear stems": {
-            "name": "draw ear stems"
-          }
-        },
-        "2-3 Artist Functions 10": {
-          "big gear": {
-            "name": "big gear"
-          },
-          "small gear": {
-            "name": "small gear"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "2-3 Artist Functions 11": {
           "draw a hexagon": {
-            "name": "畫個六邊形"
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜"
           }
         },
         "2-3 Artist Functions 11.5": {
           "draw a hexagon": {
-            "name": "畫個六邊形"
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜"
           }
         },
         "2-3 Artist Functions 12": {
           "draw a flower": {
-            "name": "畫個花朵"
+            "name": "Pseudoloc-迪儿尔  弗哦尔儿"
           }
         },
         "2-3 Artist Functions 2": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "2-3 Artist Functions 4": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
-            "name": "畫個雪花"
-          }
-        },
-        "2-3 Bee Functions 1": {
-          "get 2 nectar": {
-            "name": "get 2 nectar"
-          }
-        },
-        "2-3 Bee Functions 10": {
-          "collect purple nectar": {
-            "name": "collect purple nectar"
-          }
-        },
-        "2-3 Bee Functions 2": {
-          "get 5": {
-            "name": "get 5"
-          }
-        },
-        "2-3 Bee Functions 4": {
-          "move and get nectar": {
-            "name": "move and get nectar"
-          }
-        },
-        "2-3 Bee Functions 5": {
-          "move and get 4": {
-            "name": "move and get 4"
-          }
-        },
-        "2-3 Bee Functions 6": {
-          "move and get 4": {
-            "name": "move and get 4"
-          }
-        },
-        "2-3 Bee Functions 8": {
-          "get 7 nectar make 7 honey": {
-            "name": "get 7 nectar make 7 honey"
-          }
-        },
-        "2-3 Bee Functions 9": {
-          "get 7 make 7": {
-            "name": "get 7 make 7"
-          }
-        },
-        "2-3 Bee Functions Assessment 1": {
-          "get 7": {
-            "name": "get 7"
-          }
-        },
-        "2-3 Bee Functions Assessment 2": {
-          "move and get 3": {
-            "name": "move and get 3"
+            "name": "Pseudoloc-迪儿尔  丝哦尔勒诶伊"
           }
         },
         "4-5 Artist 3": {
           "draw a flower": {
-            "name": "畫個花朵"
+            "name": "Pseudoloc-迪儿尔  弗哦尔儿"
           }
         },
         "4-5 Artist 6": {
           "draw a tree": {
-            "name": "畫棵樹木"
+            "name": "Pseudoloc-迪儿尔  提伊伊"
           }
         },
         "4-5 Artist 7": {
-          "draw a car": {
-            "name": "draw a car"
-          },
           "draw a circle": {
-            "name": "畫個圓形"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
-          }
-        },
-        "4-5 Artist 8": {
-          "draw circle": {
-            "name": "draw circle"
-          },
-          "draw goal": {
-            "name": "draw goal"
-          }
-        },
-        "4-5 Bee Conditionals 7": {
-          "check purple flower": {
-            "name": "check purple flower"
-          }
-        },
-        "4-5 Bee Conditionals 8": {
-          "check flower make honey": {
-            "name": "check flower make honey"
-          }
-        },
-        "4-5 Bee Conditionals Assessment 1": {
-          "get nectar or make honey": {
-            "name": "get nectar or make honey"
-          }
-        },
-        "4-5 Bee Debugging 7": {
-          "make 3 honey": {
-            "name": "make 3 honey"
-          }
-        },
-        "4-5 Bee Debugging 8": {
-          "get 5 nectar": {
-            "name": "get 5 nectar"
-          }
-        },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
-            "name": "make all honey"
-          }
-        },
-        "Alien Defender": {
-          "game has been won": {
-            "name": "game has been won"
+            "name": "Pseudoloc-迪儿尔  西儿西伊"
           }
         },
         "Artist Autorun Test": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "Auto Open Function Editor": {
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "Choose Your Own Adventure": {
-          "starting path": {
-            "name": "starting path"
-          },
           "story": {
-            "name": "story"
-          },
-          "witch ending": {
-            "name": "witch ending"
-          }
-        },
-        "Course 4 Artist Binary 1": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary 2": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary 3": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary 4": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary 5": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary 6": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary 7": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary Free Play 2": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary Free Play 2a": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary Free Play 2b": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Binary pre1": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "Course 4 Artist Functions Inspiration": {
-          "draw a square 20": {
-            "name": "draw a square 20"
-          }
-        },
-        "Course 4 Artist Functions challenge": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          }
-        },
-        "Course 4 Bee Params 1": {
-          "get 3 nectar": {
-            "name": "get 3 nectar"
-          }
-        },
-        "Course 4 Bee Params 2": {
-          "get 3 nectar": {
-            "name": "get 3 nectar"
-          }
-        },
-        "Course 4 Bee Params 3": {
-          "get 3 nectar": {
-            "name": "get 3 nectar",
-            "parameters": {
-              "direction": "方向"
-            }
-          }
-        },
-        "Course 4 Bee Params 4": {
-          "get 3 nectar": {
-            "name": "get 3 nectar",
-            "parameters": {
-              "direction": "方向"
-            }
-          }
-        },
-        "Course 4 Bee Params 5": {
-          "get 5 nectar": {
-            "name": "get 5 nectar",
-            "parameters": {
-              "direction": "方向"
-            }
-          }
-        },
-        "Course 4 Bee Params 6": {
-          "get 5 nectar": {
-            "name": "get 5 nectar",
-            "parameters": {
-              "direction": "方向",
-              "nectar units": "花蜜單位"
-            }
-          }
-        },
-        "Course 4 Bee Params 7": {
-          "get many nectar": {
-            "description": "沿任一個方向收集指定數量的花蜜",
-            "name": "get many nectar",
-            "parameters": {
-              "direction": "方向",
-              "nectars": "花蜜"
-            }
+            "name": "Pseudoloc-丝提儿吾"
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
-            "description": "往任一個方向移動以收集花蜜或製作蜂蜜",
-            "name": "get nectar make honey",
             "parameters": {
-              "direction": "方向",
-              "honey": "蜂蜜",
-              "nectars": "花蜜"
+              "honey": "Pseudoloc-尺哦伊吾"
             }
           }
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "定位到"
+            "name": "Pseudoloc-杰吾屁"
           }
         },
         "Course 4 Play Lab Params 10": {
-          "level_up": {
-            "name": "level_up"
-          },
           "score_points": {
-            "name": "score_points",
             "parameters": {
-              "points": "分"
+              "points": "Pseudoloc-屁哦娜提"
             }
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "定位到"
+            "name": "Pseudoloc-杰吾屁"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "定位到",
+            "name": "Pseudoloc-杰吾屁",
             "parameters": {
-              "actor": "角色",
-              "height": "高度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "height": "Pseudoloc-尺伊吉尺"
             }
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "patrol": {
-            "description": "上下移動精靈",
-            "name": "patrol"
+            "name": "Pseudoloc-屁诶儿哦"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
-            "description": "上下移動精靈",
-            "name": "patrol",
+            "name": "Pseudoloc-屁诶儿哦",
             "parameters": {
-              "actor": "角色"
+              "actor": "Pseudoloc-诶西哦儿"
             }
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
-            "description": "以給定的速度上下移動精靈",
-            "name": "patrol",
+            "name": "Pseudoloc-屁诶儿哦",
             "parameters": {
-              "actor": "角色"
+              "actor": "Pseudoloc-诶西哦儿"
             }
           }
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
-            "description": "以給定的速度上下移動精靈",
-            "name": "patrol",
+            "name": "Pseudoloc-屁诶儿哦",
             "parameters": {
-              "actor": "角色",
-              "speed": "速度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "speed": "Pseudoloc-丝屁伊迪"
             }
           }
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
-            "description": "以給定的速度上下移動精靈",
-            "name": "patrol",
+            "name": "Pseudoloc-屁诶儿哦",
             "parameters": {
-              "actor": "角色",
-              "speed": "速度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "speed": "Pseudoloc-丝屁伊迪"
             }
           }
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
-            "name": "score_points",
             "parameters": {
-              "points": "分"
+              "points": "Pseudoloc-屁哦娜提"
             }
           }
         },
         "Course 4 Play Lab Vars 1": {
           "set score": {
-            "name": "得分設為"
+            "name": "Pseudoloc-丝伊 丝哦儿"
           }
         },
         "Course 4 Play Lab Vars 2": {
           "set score": {
-            "name": "得分設為"
+            "name": "Pseudoloc-丝伊 丝哦儿"
           }
         },
         "Course 4 SCF 1": {
           "draw a hexagon": {
-            "name": "畫個六邊形"
-          },
-          "draw a line of hexagons": {
-            "name": "draw a line of hexagons"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          },
-          "shift down/backward": {
-            "name": "shift down/backward"
-          },
-          "shift down/forward": {
-            "name": "shift down/forward"
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜"
           }
         },
         "Course 4 SCF 1a": {
           "get nectar": {
-            "name": "採集花蜜",
+            "name": "Pseudoloc-吉伊 娜西提儿",
             "parameters": {
-              "counter": "counter",
-              "dir": "資料夾"
+              "counter": "Pseudoloc-西哦娜提儿"
             }
-          }
-        },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {
-            "name": "make honey up and over"
-          }
-        },
-        "Course 4 SCF 2": {
-          "draw a square 20": {
-            "name": "draw a square 20"
-          },
-          "draw an octagon": {
-            "name": "draw an octagon"
-          },
-          "draw octagons": {
-            "name": "draw octagons",
-            "parameters": {
-              "numOctagons": "八邊形數目"
-            }
-          },
-          "shift down": {
-            "name": "shift down"
           }
         },
         "Course 4 SCF 3": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw an octagon": {
-            "name": "draw an octagon",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "Course E: Artist Project_examples2022": {
           "my function": {
-            "name": "my function"
+            "name": "Pseudoloc-马吾弗吾西提哦娜"
           }
         },
         "Course E: Artist Project_examples_2021": {
           "my function": {
-            "name": "my function"
+            "name": "Pseudoloc-马吾弗吾西提哦娜"
           }
         },
         "Course E: Artist Project_examples_2023": {
           "my function": {
-            "name": "my function"
+            "name": "Pseudoloc-马吾弗吾西提哦娜"
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-            "name": "邏輯之花"
-          },
-          "LOGIC FLOWERS": {
-            "name": "邏輯之花"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "邏輯之花2"
-          },
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
-          },
-          "small flower": {
-            "name": "小花"
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-            "name": "邏輯之花"
-          },
-          "LOGIC FLOWERS": {
-            "name": "邏輯之花"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "邏輯之花2"
-          },
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
-          },
-          "small flower": {
-            "name": "小花"
           }
         },
         "Course E: Frozen Project_examples_2023": {
-          "LOGIC FLOWER": {
-            "name": "邏輯之花"
-          },
-          "LOGIC FLOWERS": {
-            "name": "邏輯之花"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "邏輯之花2"
-          },
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
-          },
-          "small flower": {
-            "name": "小花"
           }
         },
         "Course E: Play Lab Project": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist2022": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist_2023": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
-          }
-        },
-        "CourseF_app_computer": {
-          "reset game": {
-            "name": "重置遊戲"
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-            "name": "重置遊戲"
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-            "name": "重置遊戲"
-          }
-        },
-        "CourseF_app_computer_2023": {
-          "reset game": {
-            "name": "重置遊戲"
           }
         },
         "Find the Wizard": {
-          "check guess": {
-            "name": "check guess"
-          },
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "FoodFight": {
-          "level_up": {
-            "name": "level_up"
-          },
           "score_points": {
-            "name": "score_points",
             "parameters": {
-              "points": "分"
+              "points": "Pseudoloc-屁哦娜提"
             }
-          }
-        },
-        "Function intro Ryan": {
-          "build bridge": {
-            "name": "build bridge"
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "build bridge"
-          }
-        },
-        "Function intro Ryan_2019": {
-          "build bridge": {
-            "name": "build bridge"
-          }
-        },
-        "Function intro Ryan_2020": {
-          "build bridge": {
-            "name": "build bridge"
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "build bridge"
-          }
-        },
-        "Function intro Ryan_2023": {
-          "build bridge": {
-            "name": "build bridge"
           }
         },
         "Geometric Sun": {
           "diamond": {
-            "name": "鑽石"
-          },
-          "draw a door": {
-            "name": "draw a door"
+            "name": "Pseudoloc-迪艾马哦迪"
           },
           "draw a house": {
-            "name": "畫個房子"
-          },
-          "draw grass": {
-            "name": "draw grass"
-          },
-          "draw windows": {
-            "name": "draw windows"
-          },
-          "rectangle": {
-            "description": "lol",
-            "name": "rectangle"
+            "name": "Pseudoloc-迪儿尔  尺吾丝"
           },
           "square": {
-            "description": "lol",
-            "name": "square"
+            "name": "Pseudoloc-丝吾诶儿"
           },
           "sun": {
-            "name": "sun"
-          },
-          "triangle": {
-            "name": "triangle"
-          },
-          "window": {
-            "name": "window"
+            "name": "Pseudoloc-丝吾"
           }
         },
         "Geometric Sun_2018": {
           "diamond": {
-            "name": "鑽石"
-          },
-          "draw a door": {
-            "name": "draw a door"
+            "name": "Pseudoloc-迪艾马哦迪"
           },
           "draw a house": {
-            "name": "畫個房子"
-          },
-          "draw grass": {
-            "name": "draw grass"
-          },
-          "draw windows": {
-            "name": "draw windows"
-          },
-          "rectangle": {
-            "description": "lol",
-            "name": "rectangle"
+            "name": "Pseudoloc-迪儿尔  尺吾丝"
           },
           "square": {
-            "description": "lol",
-            "name": "square"
+            "name": "Pseudoloc-丝吾诶儿"
           },
           "sun": {
-            "name": "sun"
-          },
-          "triangle": {
-            "name": "triangle"
-          },
-          "window": {
-            "name": "window"
-          }
-        },
-        "Guess The Number": {
-          "check guess": {
-            "name": "check guess",
-            "parameters": {
-              "theGuess": "猜測"
-            }
+            "name": "Pseudoloc-丝吾"
           }
         },
         "InspirationalArtwork": {
           "draw a loop": {
-            "name": "draw a loop",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw spiral circle": {
-            "name": "draw spiral circle",
             "parameters": {
-              "size": "尺寸"
+              "size": "Pseudoloc-丝艾伊"
             }
           },
           "n-sided shape": {
-            "name": "window",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "InspirationalArtwork_2018": {
           "draw a loop": {
-            "name": "draw a loop",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw spiral circle": {
-            "name": "draw spiral circle",
             "parameters": {
-              "size": "尺寸"
+              "size": "Pseudoloc-丝艾伊"
             }
-          },
-          "n-sided shape": {
-            "name": "window"
-          }
-        },
-        "K-1 Artist2 3": {
-          "draw roof": {
-            "name": "draw roof"
-          }
-        },
-        "K-1 Artist2 4": {
-          "draw rectangle": {
-            "name": "draw roof"
-          }
-        },
-        "K-1 Artist2 5": {
-          "draw rectangle": {
-            "name": "draw roof"
           }
         },
         "MC Agent Freeplay": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
-          }
-        },
-        "MC_HOC_2017_07_Cole": {
-          "clear path": {
-            "name": "clear path"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "clear path"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "clear path": {
-            "name": "clear path"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "clear path": {
-            "name": "clear path"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "clear path"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2023": {
-          "clear path": {
-            "name": "clear path"
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-            "name": "fix long path"
-          },
-          "fix short path": {
-            "name": "fix short path"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "fix long path"
-          },
-          "fix short path": {
-            "name": "fix short path"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-            "name": "fix long path"
-          },
-          "fix short path": {
-            "name": "fix short path"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-            "name": "fix long path"
-          },
-          "fix short path": {
-            "name": "fix short path"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "fix long path"
-          },
-          "fix short path": {
-            "name": "fix short path"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2023": {
-          "fix long path": {
-            "name": "fix long path"
-          },
-          "fix short path": {
-            "name": "fix short path"
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build long bridge": {
-            "name": "build long bridge"
-          },
-          "build short bridge": {
-            "name": "build short bridge"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build long bridge": {
-            "name": "build long bridge"
-          },
-          "build short bridge": {
-            "name": "build short bridge"
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build long bridge": {
-            "name": "build long bridge"
-          },
-          "build short bridge": {
-            "name": "build short bridge"
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build long bridge": {
-            "name": "build long bridge"
-          },
-          "build short bridge": {
-            "name": "build short bridge"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build long bridge": {
-            "name": "build long bridge"
-          },
-          "build short bridge": {
-            "name": "build short bridge"
-          }
-        },
-        "MC_HOC_2017_Ali_2023": {
-          "build long bridge": {
-            "name": "build long bridge"
-          },
-          "build short bridge": {
-            "name": "build short bridge"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "MC_HOC_2017_FP20x202022": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "MC_HOC_2017_FP20x20_2019": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "MC_HOC_2017_FP20x20_2020": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
-          }
-        },
-        "NEW Course 4 Artist Functions 11": {
-          "draw a line of  squares": {
-            "name": "draw a line of  squares"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          }
-        },
-        "NEW Course 4 Artist Functions 12": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          }
-        },
-        "NEW Course 4 Artist Functions 13": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          }
-        },
-        "NEW Course 4 Artist Functions 14": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          },
-          "draw a square 40": {
-            "name": "draw a square 40"
-          },
-          "empty function": {
-            "name": "empty function"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "description": "畫出一個邊長為 100 像素的正方形",
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "NEW Course 4 Artist Functions 7": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "description": "畫出一個邊長為 100 像素的三角形",
-            "name": "畫個三角形"
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒"
           }
         },
         "NEW Course 4 Artist Functions 9": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw a triangle": {
-            "name": "畫個三角形"
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒"
           }
         },
         "NEW Course 4 Artist Params 1": {
-          "Draw a triangle": {
-            "name": "Draw a triangle"
-          },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a hexagon": {
-            "name": "畫個六邊形",
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 11": {
           "do something": {
-            "name": "函式名稱",
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "NEW Course 4 Artist Params 12": {
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "NEW Course 4 Artist Params 12a": {
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "NEW Course 4 Artist Params 13": {
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
-            "name": "draw a spiral edge",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "NEW Course 4 Artist Params 15": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a triangle": {
-            "description": "畫個三角形",
-            "name": "畫個三角形"
+            "description": "Pseudoloc-迪儿尔  提艾诶吉勒",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒"
           }
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
-            "name": "畫個三角形"
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒"
           }
         },
         "NEW Course 4 Artist Params 4": {
           "draw a triangle with length": {
-            "name": "draw a triangle with length",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 5": {
           "draw a pentagon": {
-            "description": "畫一個100像素的五邊形",
-            "name": "draw a pentagon",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 6": {
           "draw a hexagon": {
-            "name": "畫個六邊形",
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a sqaure": {
-            "name": "draw a sqaure",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 7": {
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
-            "name": "draw a triangle with length",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params 9": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "NEW Course 4 Artist Params inspire": {
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "description": "具有高度和角色參數的跳躍函式積木",
-            "name": "定位到",
+            "description": "Pseudoloc-杰吾屁 吾娜提艾娜 勒哦开尔艾尺 伊艾尺提诶娜 诶提儿 诶儿马伊伊儿",
+            "name": "Pseudoloc-杰吾屁",
             "parameters": {
-              "actor": "角色",
-              "height": "高度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "height": "Pseudoloc-尺伊吉尺"
             }
           },
           "patrol": {
-            "description": "以給定的速度上下移動精靈",
-            "name": "patrol",
+            "name": "Pseudoloc-屁诶儿哦",
             "parameters": {
-              "actor": "角色",
-              "speed": "速度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "speed": "Pseudoloc-丝屁伊迪"
             }
           }
         },
         "New Artist Project": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "New Minecraft Hero Project": {
           "function 1": {
-            "name": "function 1"
+            "name": "Pseudoloc-弗吾西提哦娜1"
           },
           "function 2": {
-            "name": "function 2"
+            "name": "Pseudoloc-弗吾西提哦娜2"
           }
         },
         "New Play Lab Project": {
           "jump": {
-            "description": "具有高度和角色參數的跳躍函式積木",
-            "name": "定位到",
+            "description": "Pseudoloc-杰吾屁 吾娜提艾娜 勒哦开尔艾尺 伊艾尺提诶娜 诶提儿 诶儿马伊伊儿",
+            "name": "Pseudoloc-杰吾屁",
             "parameters": {
-              "actor": "角色",
-              "height": "高度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "height": "Pseudoloc-尺伊吉尺"
             }
           },
           "patrol": {
-            "description": "一個有角色和速度參數的patrol函式",
-            "name": "patrol",
+            "description": "Pseudoloc-诶 诶提哦勒弗吾西提哦娜提诶提尺诶 诶诶西哦儿诶娜 屁伊迪 诶儿马伊伊儿",
+            "name": "Pseudoloc-屁诶儿哦",
             "parameters": {
-              "actor": "角色",
-              "speed": "速度"
+              "actor": "Pseudoloc-诶西哦儿",
+              "speed": "Pseudoloc-丝屁伊迪"
             }
-          }
-        },
-        "Robot Doodle": {
-          "25 pixel square": {
-            "name": "25 pixel square"
-          },
-          "draw eye": {
-            "name": "draw eye"
-          },
-          "draw head": {
-            "name": "draw head"
-          }
-        },
-        "Robot Doodle_2018": {
-          "25 pixel square": {
-            "name": "25 pixel square"
-          },
-          "draw eye": {
-            "name": "draw eye"
-          },
-          "draw head": {
-            "name": "draw head"
           }
         },
         "Standalone_Artist_7": {
           "draw a flower": {
-            "name": "畫個花朵"
+            "name": "Pseudoloc-迪儿尔  弗哦尔儿"
           }
         },
         "Standalone_Artist_8": {
           "draw a shape": {
-            "name": "畫個形狀"
+            "name": "Pseudoloc-迪儿尔  丝诶屁"
           }
         },
         "Standalone_Artist_9": {
           "my function": {
-            "name": "my function"
-          }
-        },
-        "course1_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "my behavior"
-          }
-        },
-        "course1_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "\"simple\" solution"
+            "name": "Pseudoloc-马吾弗吾西提哦娜"
           }
         },
         "course3_artist_functions_challenge1": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "get 3 nectar or honey": {
-            "name": "get 3 nectar or honey"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "move and collect": {
-            "name": "move and collect"
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "row of nectar": {
-            "name": "row of nectar"
-          },
-          "rowOfNectar": {
-            "name": "rowOfNectar"
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "move and check": {
-            "name": "move and check"
-          },
-          "row of nectar": {
-            "name": "row of nectar"
-          },
-          "rowOfNectar": {
-            "name": "rowOfNectar"
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-            "name": "keep playing"
-          },
-          "lose game": {
-            "name": "lose game"
-          },
-          "win game": {
-            "name": "win game"
-          }
-        },
-        "course4_artist_binary_challenge1": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "course4_artist_binary_challenge2": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
-            "name": "draw pinwheel"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "course4_artist_fwp_challenge1": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "sides": "邊"
+              "sides": "Pseudoloc-丝艾伊丝"
             }
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
           },
           "draw background": {
-            "name": "draw background",
             "parameters": {
-              "color": "顏色"
+              "color": "Pseudoloc-西哦哦儿"
             }
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
           }
         },
         "course4_bee_fwp_challenge1": {
           "pick row": {
-            "name": "pick row",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
-            "name": "pick row",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
-        "courseA_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "my behavior"
-          }
-        },
-        "courseB_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
-        "courseB_artist_loops_challenge22022": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
-        "courseB_artist_loops_challenge2_2018": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
-        "courseB_artist_loops_challenge2_2019": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
-        "courseB_artist_loops_challenge2_2020": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
-        "courseB_artist_loops_challenge2_2023": {
-          "potential solution": {
-            "name": "\"simple\" solution"
-          }
-        },
         "courseC_artist_prog3": {
-          "draw fire": {
-            "name": "draw fire"
-          },
           "draw flame": {
-            "name": "draw flame",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-斯"
             }
           }
         },
@@ -2284,602 +1337,56 @@
           }
         },
         "courseC_artist_prog3_2018": {
-          "draw fire": {
-            "name": "draw fire"
-          },
           "draw flame": {
-            "name": "draw flame",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-斯"
             }
           }
         },
         "courseC_artist_prog3_2019": {
-          "draw fire": {
-            "name": "draw fire"
-          },
           "draw flame": {
-            "name": "draw flame",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-斯"
             }
           }
         },
         "courseC_artist_prog3_2020": {
-          "draw fire": {
-            "name": "draw fire"
-          },
           "draw flame": {
-            "name": "draw flame",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-斯"
             }
           }
         },
         "courseC_artist_prog3_2021": {
-          "draw fire": {
-            "name": "draw fire"
-          },
           "draw flame": {
-            "name": "draw flame",
             "parameters": {
-              "x": "x"
+              "x": "Pseudoloc-斯"
             }
-          }
-        },
-        "courseC_artist_prog4": {
-          "booster": {
-            "name": "booster"
-          }
-        },
-        "courseC_artist_prog42022": {
-          "booster": {
-            "name": "booster"
-          }
-        },
-        "courseC_artist_prog4_2018": {
-          "booster": {
-            "name": "booster"
-          }
-        },
-        "courseC_artist_prog4_2019": {
-          "booster": {
-            "name": "booster"
-          }
-        },
-        "courseC_artist_prog4_2020": {
-          "booster": {
-            "name": "booster"
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "booster"
-          }
-        },
-        "courseC_artist_prog4_2023": {
-          "booster": {
-            "name": "booster"
           }
         },
         "courseC_data wizard": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseC_data wizard2022": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseC_data wizard_2020": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseC_data wizard_2021": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseC_data wizard_2023": {
           "do something": {
-            "name": "函式名稱"
-          }
-        },
-        "courseD_artist_binary1": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary1_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary1_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary1_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary2": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary2_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary2_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary2_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary3": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary3_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary3_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary3_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary4": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary4_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary4_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary4_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary5": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary5_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary5_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary5_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary6": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary6_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary6_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary6_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary7": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary7_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary7_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary7_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_predict1": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_predict1_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_predict1_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary8_predict1_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binaryFP_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binaryFP_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binaryFP_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary_challenge1_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary_challenge1_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary_challenge1_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary_challenge2_2018": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary_challenge2_2019": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
-          }
-        },
-        "courseD_artist_binary_challenge2_2020": {
-          "draw": {
-            "name": "draw",
-            "parameters": {
-              "binary": "二進制（Binary）"
-            }
-          },
-          "draw bit": {
-            "name": "draw bit"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -2946,1866 +1453,674 @@
             "name": "draw bit"
           }
         },
-        "courseE_Dogger_2": {
-          "lose": {
-            "name": "lose"
-          },
-          "stop_everything": {
-            "name": "stop_everything"
-          }
-        },
         "courseE_artist_concept1": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a hexagon": {
-            "name": "畫個六邊形"
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜"
           }
         },
         "courseE_artist_concept1_2018": {
           "draw a hexagon": {
-            "name": "畫個六邊形"
+            "name": "Pseudoloc-迪儿尔  尺斯诶哦娜"
           }
         },
         "courseE_artist_concept4": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a plane of squares": {
-            "name": "draw a plane of squares"
-          },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_concept4_2018": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw a plane of squares": {
-            "name": "draw a plane of squares"
-          },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
-            "name": "函式名稱"
-          }
-        },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-            "name": "draw pinwheel"
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
-            "name": "draw pinwheel"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions1": {
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions10": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions102022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions10_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions10_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions1_dani": {
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_2023": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions32022": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions3_2018": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions3_2019": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions3_2020": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions3_2021": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions3_2023": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions4": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions4_copy": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions4_dani": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions52022": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_2018": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_2019": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_2020": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_2021": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_2023": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_copy": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions5_dani": {
           "draw a star": {
-            "name": "畫顆星星"
+            "name": "Pseudoloc-迪儿尔  丝诶儿"
           }
         },
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "畫個房子"
-          },
-          "draw a window": {
-            "name": "draw a window"
-          }
-        },
-        "courseE_artist_functions72022": {
-          "draw a window": {
-            "name": "draw a window"
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "畫個房子"
-          },
-          "draw a window": {
-            "name": "draw a window"
-          }
-        },
-        "courseE_artist_functions7_2019": {
-          "draw a window": {
-            "name": "draw a window"
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "畫個房子"
-          },
-          "draw a window": {
-            "name": "draw a window"
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
-            "name": "draw a window"
-          }
-        },
-        "courseE_artist_functions7_2023": {
-          "draw a window": {
-            "name": "draw a window"
           }
         },
         "courseE_artist_functions8": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8a2022": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_functions8a_2018": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_functions8a_2019": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_functions8a_2020": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_functions8a_2021": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_functions8a_2023": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseE_artist_functions8b2022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8b_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions8c_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions9": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions92022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions9_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of triangles": {
-            "name": "draw line of triangles"
-          },
-          "draw triangle": {
-            "name": "draw triangle"
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
-          }
-        },
-        "courseE_artist_functionsProj_2018": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
-          }
-        },
-        "courseE_artist_functionsProj_2019": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
-          }
-        },
-        "courseE_artist_functionsProj_2020": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
-          }
-        },
-        "courseE_artist_functionsProj_2023": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw hexagon": {
-            "name": "draw hexagon"
-          },
-          "draw line of hexagons": {
-            "name": "draw line of hexagons"
-          },
-          "draw square": {
-            "name": "draw square"
-          },
-          "staggered squares": {
-            "name": "staggered squares"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge1_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_challenge2_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "my design": {
-            "name": "my design"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_2023": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           },
           "draw ear stems": {
-            "name": "draw ear stems"
+            "name": "Pseudoloc-迪儿尔 诶儿丝提马丝"
           }
         },
         "courseE_artist_functions_predict2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict22022": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict2_2021": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_artist_functions_predict2_2023": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw line of polygons": {
-            "name": "draw line of polygons"
-          },
-          "draw polygon": {
-            "name": "draw polygon"
-          }
-        },
-        "courseE_bee_concept4": {
-          "honey nectar": {
-            "name": "honey nectar"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_bee_functions1": {
           "do something": {
-            "name": "函式名稱"
-          }
-        },
-        "courseE_bee_functions10": {
-          "move and make honey": {
-            "name": "move and make honey"
-          }
-        },
-        "courseE_bee_functions11_predict1": {
-          "move and make honey": {
-            "name": "move and make honey"
-          }
-        },
-        "courseE_bee_functions2": {
-          "get 2 nectar": {
-            "name": "get 2 nectar"
-          }
-        },
-        "courseE_bee_functions3": {
-          "get 5": {
-            "name": "get 5"
-          }
-        },
-        "courseE_bee_functions4": {
-          "move and get nectar": {
-            "name": "move and get nectar"
-          }
-        },
-        "courseE_bee_functions5": {
-          "move and get 4": {
-            "name": "move and get 4"
-          }
-        },
-        "courseE_bee_functions6": {
-          "get 7 nectar make 7 honey": {
-            "name": "get 7 nectar make 7 honey"
-          }
-        },
-        "courseE_bee_functions7": {
-          "get 7 make 7": {
-            "name": "get 7 make 7"
-          }
-        },
-        "courseE_bee_functions8": {
-          "collect all nectar": {
-            "name": "collect all nectar"
-          }
-        },
-        "courseE_bee_functions9": {
-          "get all nectar": {
-            "name": "get all nectar"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_bee_functions_challenge1": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "get 3 nectar or honey": {
-            "name": "get 3 nectar or honey"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "move and collect": {
-            "name": "move and collect"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_farmer_concept1": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_farmer_concept2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "get pumpkin": {
-            "name": "get pumpkin"
-          }
-        },
-        "courseE_farmer_concept2_2018": {
-          "get pumpkin": {
-            "name": "get pumpkin"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
-            "name": "函式名稱"
-          }
-        },
-        "courseE_farmer_functions10a12022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions10a1_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions10a1_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions10a1_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions10a1_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions10b": {
-          "navigate": {
-            "name": "navigate"
-          }
-        },
-        "courseE_farmer_functions11_predict": {
-          "check and pick": {
-            "name": "check and pick"
-          },
-          "find pumpkin": {
-            "name": "find pumpkin"
-          },
-          "wander path": {
-            "name": "wander path"
-          }
-        },
-        "courseE_farmer_functions11_predict2022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions11_predict_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions11_predict_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions11_predict_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions11_predict_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "check for corn": {
-            "name": "check for corn"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions13_2018": {
-          "check for corn": {
-            "name": "check for corn"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions13_2019": {
-          "check for corn": {
-            "name": "check for corn"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions13_2020": {
-          "check for corn": {
-            "name": "check for corn"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "check for corn": {
-            "name": "check for corn"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions13_2023": {
-          "check for corn": {
-            "name": "check for corn"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions1a_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions1a_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions1a_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions1a_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2b_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2b_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2b_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2b_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          }
-        },
-        "courseE_farmer_functions2ba": {
-          "corn and pumpkin": {
-            "name": "corn and pumpkin"
-          }
-        },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions2ba_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions2ba_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions2ba_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions2ba_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions3c": {
-          "corn and pumpkin": {
-            "name": "corn and pumpkin"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions3c1_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions3c1_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions3c1_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions3c1_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          },
-          "pick along path": {
-            "name": "pick along path"
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions3c_2018": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions3c_2019": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions3c_2020": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions3c_2023": {
-          "check square for corn": {
-            "name": "check square for corn"
-          },
-          "get all pumpkins": {
-            "name": "get all pumpkins"
-          }
-        },
-        "courseE_farmer_functions4b": {
-          "corn and pumpkin": {
-            "name": "corn and pumpkin"
-          }
-        },
-        "courseE_farmer_functions5c": {
-          "corn and pumpkin": {
-            "name": "corn and pumpkin"
-          }
-        },
-        "courseE_farmer_functions6c": {
-          "corn and pumpkin": {
-            "name": "corn and pumpkin"
-          }
-        },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions7a1_2018": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions7a1_2019": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions7a1_2020": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions7a1_2023": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a1_2018": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a1_2019": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a1_2020": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a1_2023": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8b": {
-          "navigate": {
-            "name": "navigate"
-          }
-        },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9a1_2018": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9a1_2019": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9a1_2020": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9a1_2023": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9b": {
-          "navigate": {
-            "name": "navigate"
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-            "name": "keep playing"
-          },
-          "lose game": {
-            "name": "lose game"
-          },
-          "win game": {
-            "name": "win game"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_playLab_scaffold2": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_playLab_scaffold3": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseE_playLab_scaffold4": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseF_apps_collector": {
           "end game": {
-            "name": "結束遊戲"
+            "name": "Pseudoloc-伊娜 吉马伊"
           }
         },
         "courseF_apps_collector2022": {
@@ -4815,565 +2130,310 @@
         },
         "courseF_apps_collector_-2022-2": {
           "end game": {
-            "name": "結束遊戲"
+            "name": "Pseudoloc-伊娜 吉马伊"
           }
         },
         "courseF_apps_collector_2023": {
           "end game": {
-            "name": "結束遊戲"
+            "name": "Pseudoloc-伊娜 吉马伊"
           }
         },
         "courseF_artist_fwp1": {
           "Make gingham": {
-            "name": "Make gingham",
             "parameters": {
-              "size": "尺寸"
+              "size": "Pseudoloc-丝艾伊"
             }
           },
           "black outline": {
-            "name": "black outline",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "checker": {
-            "name": "get corn come back",
             "parameters": {
-              "color": "顏色",
-              "size": "尺寸"
+              "color": "Pseudoloc-西哦哦儿",
+              "size": "Pseudoloc-丝艾伊"
             }
           },
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形"
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊"
           }
         },
         "courseF_artist_fwp2": {
           "Make gingham": {
-            "name": "Make gingham",
             "parameters": {
-              "size": "尺寸"
+              "size": "Pseudoloc-丝艾伊"
             }
           },
           "black outline": {
-            "name": "black outline",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "checker": {
-            "name": "get corn come back",
             "parameters": {
-              "color": "顏色",
-              "size": "尺寸"
+              "color": "Pseudoloc-西哦哦儿",
+              "size": "Pseudoloc-丝艾伊"
             }
           },
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "courseF_artist_fwp2_predict1": {
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "courseF_artist_fwp3": {
           "black outline": {
-            "name": "black outline",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a square2": {
-            "name": "draw a square2",
             "parameters": {
-              "size": "尺寸"
+              "size": "Pseudoloc-丝艾伊"
             }
           },
           "filled square": {
-            "name": "filled square",
             "parameters": {
-              "color": "顏色",
-              "size": "尺寸"
+              "color": "Pseudoloc-西哦哦儿",
+              "size": "Pseudoloc-丝艾伊"
             }
           }
         },
         "courseF_artist_fwp4": {
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
-            "name": "draw a spiral edge",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
-            "name": "draw a spiral edge",
             "parameters": {
-              "length": "長度",
-              "min": "最小值",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "min": "Pseudoloc-马艾",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
-            "name": "draw a spiral edge",
             "parameters": {
-              "length": "長度",
-              "min": "最小值",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "min": "Pseudoloc-马艾",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           }
         },
         "courseF_artist_fwp9": {
           "draw a circle": {
-            "description": "用提供的半徑畫一個圓",
-            "name": "畫個圓形",
+            "description": "Pseudoloc-迪儿尔  西儿西伊 弗 艾伊娜儿诶艾吾",
+            "name": "Pseudoloc-迪儿尔  西儿西伊",
             "parameters": {
-              "radius": "半徑"
+              "radius": "Pseudoloc-儿诶艾吾"
             }
           },
           "draw a house": {
-            "name": "畫個房子",
+            "name": "Pseudoloc-迪儿尔  尺吾丝",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a pinwheel": {
-            "name": "畫個風車",
+            "name": "Pseudoloc-迪儿尔  屁娜尔伊伊",
             "parameters": {
-              "length": "長度",
-              "repeat": "重複",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "repeat": "Pseudoloc-儿伊伊诶",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a shape": {
-            "name": "畫個形狀",
+            "name": "Pseudoloc-迪儿尔  丝诶屁",
             "parameters": {
-              "length": "長度",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a spiral edge": {
-            "name": "draw a spiral edge",
             "parameters": {
-              "length": "長度",
-              "min": "最小值",
-              "sides": "邊"
+              "length": "Pseudoloc-勒伊吉提",
+              "min": "Pseudoloc-马艾",
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
           "draw a square": {
-            "name": "畫個正方形",
+            "name": "Pseudoloc-迪儿尔  丝吾诶伊",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           },
           "draw a star": {
-            "description": "根據給予的點和邊來畫一個星星吧。",
-            "name": "畫顆星星",
+            "description": "Pseudoloc-迪儿尔  丝诶儿尔艾尺 艾伊娜屁哦娜提 诶迪 艾迪丝哦弗吉艾伊娜勒伊吉提",
+            "name": "Pseudoloc-迪儿尔  丝诶儿",
             "parameters": {
-              "length": "長度",
-              "points": "分"
+              "length": "Pseudoloc-勒伊吉提",
+              "points": "Pseudoloc-屁哦娜提"
             }
           },
           "draw a triangle": {
-            "name": "畫個三角形",
+            "name": "Pseudoloc-迪儿尔  提艾诶吉勒",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "courseF_artist_fwp_challenge1": {
           "do something": {
-            "name": "函式名稱"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw a polygon": {
-            "name": "draw a polygon",
             "parameters": {
-              "sides": "邊"
+              "sides": "Pseudoloc-丝艾伊丝"
             }
           },
-          "draw a square 20": {
-            "name": "draw a square 20"
-          },
           "draw background": {
-            "name": "draw background",
             "parameters": {
-              "color": "顏色"
+              "color": "Pseudoloc-西哦哦儿"
             }
           }
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "draw a square 20": {
-            "name": "draw a square 20"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           },
           "draw an octagon": {
-            "name": "draw an octagon",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
-          }
-        },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "move and check": {
-            "name": "move and check"
-          }
-        },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_for_challenge1_2023": {
-          "move and get nectar with counter": {
-            "name": "move and get nectar with counter"
-          }
-        },
-        "courseF_bee_functions2": {
-          "get only nectar": {
-            "name": "get only nectar"
-          }
-        },
-        "courseF_bee_functions3": {
-          "only make honey": {
-            "name": "only make honey"
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "move and check": {
-            "name": "move and check"
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "move and check": {
-            "name": "move and check"
-          }
-        },
-        "courseF_bee_functions6": {
-          "get nectar make honey": {
-            "name": "get nectar make honey"
-          }
-        },
-        "courseF_bee_functions7": {
-          "get nectar make honey": {
-            "name": "get nectar make honey"
           }
         },
         "courseF_bee_functions8a": {
           "do something": {
-            "name": "函式名稱"
-          },
-          "get nectar make honey": {
-            "name": "get nectar make honey"
-          }
-        },
-        "courseF_bee_functionsPre7": {
-          "get nectar make honey": {
-            "name": "get nectar make honey"
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "row of nectar": {
-            "name": "row of nectar"
-          },
-          "rowOfNectar": {
-            "name": "rowOfNectar"
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-            "name": "check nectar or honey"
-          },
-          "move and check": {
-            "name": "move and check"
-          },
-          "rowOfNectar": {
-            "name": "rowOfNectar"
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-            "name": "rowOfNectar"
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
-            "name": "rowOfNectar"
+            "name": "Pseudoloc-迪哦丝哦伊提艾娜"
           }
         },
         "courseF_bee_fwp4": {
           "rowOfNectar": {
-            "name": "rowOfNectar",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "courseF_bee_fwp5": {
           "rowOfNectar": {
-            "name": "rowOfNectar",
             "parameters": {
-              "width": "寬度"
+              "width": "Pseudoloc-尔艾提尺"
             }
           }
         },
         "courseF_bee_fwp6": {
           "rowOfNectar": {
-            "name": "rowOfNectar",
             "parameters": {
-              "width": "寬度"
+              "width": "Pseudoloc-尔艾提尺"
             }
           }
         },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney",
             "parameters": {
-              "width": "寬度"
+              "width": "Pseudoloc-尔艾提尺"
             }
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney",
             "parameters": {
-              "width": "寬度"
+              "width": "Pseudoloc-尔艾提尺"
             }
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney",
             "parameters": {
-              "width": "寬度"
+              "width": "Pseudoloc-尔艾提尺"
             }
           }
         },
         "courseF_bee_fwp_challenge1": {
           "pick row": {
-            "name": "pick row",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
-            "name": "pick row",
             "parameters": {
-              "length": "長度"
+              "length": "Pseudoloc-勒伊吉提"
             }
-          }
-        },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-            "name": "collect row"
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-            "name": "collect stairs"
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-            "name": "collect stairs"
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-            "name": "collect stairs"
           }
         },
         "courseF_bee_variables_7_2018": {
           "collect": {
-            "name": "收集"
+            "name": "Pseudoloc-西哦勒伊提"
           }
         },
         "courseF_bee_variables_7_2019": {
           "collect": {
-            "name": "收集"
+            "name": "Pseudoloc-西哦勒伊提"
           }
         },
         "courseF_bee_variables_7_2020": {
           "collect": {
-            "name": "收集"
+            "name": "Pseudoloc-西哦勒伊提"
           }
         },
         "courseF_bee_variables_8_2018": {
           "collect": {
-            "name": "收集"
-          },
-          "move and increment": {
-            "name": "move and increment"
+            "name": "Pseudoloc-西哦勒伊提"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
-            "name": "收集"
-          },
-          "move and increment": {
-            "name": "move and increment"
+            "name": "Pseudoloc-西哦勒伊提"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
-            "name": "收集"
-          },
-          "move and increment": {
-            "name": "move and increment"
+            "name": "Pseudoloc-西哦勒伊提"
           }
         },
         "grade5_artist_binary11": {

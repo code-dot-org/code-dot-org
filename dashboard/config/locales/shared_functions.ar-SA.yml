@@ -2,18 +2,23 @@
 ar:
   data:
     shared_functions:
-      growing: النمو
-      jittering: الاهتزاز
-      moving east: التحرك ناحية الشرق
-      moving north: التحرك ناحية الشمال
-      moving north and looping: تحريك إلى الشمال والدوران
-      moving south: التحرك ناحية الجنوب
-      moving south and looping: تحريك إلى الجنوب والدوران
-      moving west: التحرك ناحية الغرب
-      moving with arrow keys: التحرك من خلال الأسهم
-      patrolling: التجوُّل
-      shrinking: الانقباض
-      spinning left: الدوران ناحية اليسار
-      spinning right: الدوران ناحية اليمين
-      swimming left and right: السباحة ناحية اليسار واليمين
-      wandering: التحرك
+      driving with arrow keys: Pseudoloc-يقهرىل صفا لقخص ثغس
+      fluttering: Pseudoloc-بمعفثقهى
+      growing: Pseudoloc-لقخصىل
+      jittering: Pseudoloc-تهففقهىل
+      moving east: Pseudoloc-ةخرهل ثلف
+      moving east and looping: Pseudoloc-ةخرهل ثلف لى مخخهىل
+      moving north: Pseudoloc-ةخرهل ىخفا
+      moving north and looping: Pseudoloc-ةخرهل ىخفا لي مخحهىل
+      moving south: Pseudoloc-ةخرهل سخفا
+      moving south and looping: Pseudoloc-ةخرهل سخفا لي مخحهىل
+      moving west: Pseudoloc-ةخرهل صثف
+      moving west and looping: Pseudoloc-ةخرهل صثف لى مخخهىل
+      moving with arrow keys: Pseudoloc-ةخرهل صها لقخص نغس
+      patrolling: Pseudoloc-حلفقممهى
+      shrinking: Pseudoloc-ساقهنهىل
+      spinning left: Pseudoloc-سحهىهىل ثبف
+      spinning right: Pseudoloc-سحهىهىل هلاف
+      swimming left and right: Pseudoloc-سصهةهىل ثبف ىي قلاف
+      wandering: Pseudoloc-صلىيقهىل
+      wobbling: Pseudoloc-صخااهىل

@@ -3,7 +3,7 @@
     "data": {
       "vocabularies": {
         "computer/csd/2021": {
-          "word": "الكمبيوتر"
+          "word": "Pseudoloc-ؤخةحفثق"
         },
         "input/csd/2021": {
           "word": "الإدخال"
@@ -15,7 +15,7 @@
           "word": "البصمة الرقمية"
         },
         "copyright/csd/2021": {
-          "word": "حقوق النسخ",
+          "word": "Pseudoloc-ؤخحغهلاف",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
         },
         "bug/csd/2021": {
@@ -23,7 +23,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/csd/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/csd/2021": {
@@ -41,13 +41,13 @@
           "word": "الشرط"
         },
         "conditionals/csd/2021": {
-          "word": "الجمل الشرطية"
+          "word": "Pseudoloc-ؤخىيفهخىمس"
         },
         "abstraction/csd/2021": {
-          "word": "خلاصة"
+          "word": "Pseudoloc-لاسفلؤفهى"
         },
         "function/csd/2021": {
-          "word": "وظيفة "
+          "word": "Pseudoloc-بعىؤهخى"
         },
         "user/csd/2021": {
           "word": "مستخدم",
@@ -58,7 +58,7 @@
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد مسبقاً (مقدار الخطوة)."
         },
         "machine_learning/csd/2021": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "algorithm/coursea/2021": {
@@ -66,7 +66,7 @@
           "definition": "قائمة بالخطوات اللازمة لإنجاز مهمة."
         },
         "debugging/coursea/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/coursea/2021": {
@@ -94,7 +94,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "programming/coursea/2021": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "loop/coursea/2021": {
@@ -118,7 +118,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/courseb/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "click/courseb/2021": {
@@ -142,7 +142,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/courseb/2021": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "persistence/courseb/2021": {
@@ -170,7 +170,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/coursec/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/coursec/2021": {
@@ -178,11 +178,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "sequencing/coursec/2021": {
-          "word": "التجزيء",
+          "word": "Pseudoloc-سثضعىؤهى",
           "definition": "وضع الأوامر بالترتيب الصحيح حتى تتمكن أجهزة الكمبيوتر من قراءة الأوامر."
         },
         "programming/coursec/2021": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "loop/coursec/2021": {
@@ -198,7 +198,7 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "binary/coursec/2021": {
-          "word": "ثنائي",
+          "word": "Pseudoloc-اهىلغ",
           "definition": "طريقة تمثيل معلومات باستخدام خيارين فقط."
         },
         "algorithm/coursed/2021": {
@@ -214,7 +214,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/coursed/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "loop/coursed/2021": {
@@ -222,7 +222,7 @@
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
         },
         "programming/coursed/2021": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "frustrated/coursed/2021": {
@@ -238,7 +238,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/coursed/2021": {
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق.",
+          "word": "Pseudoloc-ؤخيث"
         },
         "repeat/coursed/2021": {
           "word": "كرر",
@@ -249,7 +250,7 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2021": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "pseudocode/coursed/2021": {
@@ -285,7 +286,7 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "copyright/coursee/2021": {
-          "word": "حقوق النسخ",
+          "word": "Pseudoloc-ؤخحغهلاف",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
         },
         "loop/coursee/2021": {
@@ -297,7 +298,7 @@
           "definition": "أن تفعل شيئًا ما مرة أخرى."
         },
         "function/coursee/2021": {
-          "word": "وظيفة ",
+          "word": "Pseudoloc-بعىؤهخى",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
         "condition/coursee/2021": {
@@ -305,7 +306,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/coursee/2021": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/coursee/2021": {
@@ -377,7 +378,7 @@
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد مسبقاً (مقدار الخطوة)."
         },
         "machine_learning/coursef/2021": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "dns/coursef/2021": {
@@ -393,7 +394,7 @@
           "definition": "طريقة اتصال تستخدم الضوء لنقل المعلومات"
         },
         "internet/coursef/2021": {
-          "word": "الإنترنت",
+          "word": "Pseudoloc-هىفثىثف",
           "definition": "مجموعة من أجهزة الكمبيوتر والخوادم المتصلة بعضها ببعض."
         },
         "ip_address/coursef/2021": {
@@ -441,11 +442,11 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/express/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "sequencing/express/2021": {
-          "word": "التجزيء",
+          "word": "Pseudoloc-سثضعىؤهى",
           "definition": "وضع الأوامر بالترتيب الصحيح حتى تتمكن أجهزة الكمبيوتر من قراءة الأوامر."
         },
         "program/express/2021": {
@@ -453,7 +454,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/express/2021": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "behavior/express/2021": {
@@ -469,7 +470,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/express/2021": {
-          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
+          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر",
+          "word": "Pseudoloc-ؤخيث"
         },
         "loop/express/2021": {
           "word": "الحلقة",
@@ -488,7 +490,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2021": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/express/2021": {
@@ -500,7 +502,7 @@
           "definition": "أمر يخبرك بفعل شيء ما فقط حتى يصبح صحيحاً."
         },
         "function/express/2021": {
-          "word": "وظيفة ",
+          "word": "Pseudoloc-بعىؤهخى",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
         "prompt/express/2021": {
@@ -556,7 +558,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/pre-express/2021": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/pre-express/2021": {
@@ -564,7 +566,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/pre-express/2021": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "persistence/pre-express/2021": {
@@ -584,7 +586,7 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "computer/csd/2022": {
-          "word": "الكمبيوتر"
+          "word": "Pseudoloc-ؤخةحفثق"
         },
         "input/csd/2022": {
           "word": "الإدخال"
@@ -596,7 +598,7 @@
           "word": "البصمة الرقمية"
         },
         "copyright/csd/2022": {
-          "word": "حقوق النسخ",
+          "word": "Pseudoloc-ؤخحغهلاف",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
         },
         "bug/csd/2022": {
@@ -604,7 +606,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/csd/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/csd/2022": {
@@ -622,20 +624,20 @@
           "word": "الشرط"
         },
         "conditionals/csd/2022": {
-          "word": "الجمل الشرطية"
+          "word": "Pseudoloc-ؤخىيفهخىمس"
         },
         "abstraction/csd/2022": {
-          "word": "خلاصة"
+          "word": "Pseudoloc-لاسفلؤفهى"
         },
         "function/csd/2022": {
-          "word": "وظيفة "
+          "word": "Pseudoloc-بعىؤهخى"
         },
         "user/csd/2022": {
           "word": "مستخدم",
           "definition": "شخص يستخدم شيئاً، بما في ذلك البرامج والأجهزة."
         },
         "machine_learning/csd/2022": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "algorithm/coursea/2022": {
@@ -643,7 +645,7 @@
           "definition": "قائمة بالخطوات اللازمة لإنجاز مهمة."
         },
         "debugging/coursea/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/coursea/2022": {
@@ -671,7 +673,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "programming/coursea/2022": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "loop/coursea/2022": {
@@ -695,7 +697,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/courseb/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "click/courseb/2022": {
@@ -719,7 +721,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/courseb/2022": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "persistence/courseb/2022": {
@@ -747,7 +749,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/coursec/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/coursec/2022": {
@@ -755,14 +757,14 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "sequencing/coursec/2022": {
-          "word": "التجزيء",
+          "word": "Pseudoloc-سثضعىؤهى",
           "definition": "وضع الأوامر بالترتيب الصحيح حتى تتمكن أجهزة الكمبيوتر من قراءة الأوامر."
         },
         "persistence/coursec/2022": {
           "word": "المثابرة"
         },
         "programming/coursec/2022": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "loop/coursec/2022": {
@@ -778,10 +780,10 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "data/coursec/2022": {
-          "word": "البيانات"
+          "word": "Pseudoloc-يلفل"
         },
         "binary/coursec/2022": {
-          "word": "ثنائي",
+          "word": "Pseudoloc-اهىلغ",
           "definition": "طريقة تمثيل معلومات باستخدام خيارين فقط."
         },
         "algorithm/coursed/2022": {
@@ -797,7 +799,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/coursed/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "loop/coursed/2022": {
@@ -805,7 +807,7 @@
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
         },
         "programming/coursed/2022": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "frustrated/coursed/2022": {
@@ -821,7 +823,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/coursed/2022": {
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق.",
+          "word": "Pseudoloc-ؤخيث"
         },
         "repeat/coursed/2022": {
           "word": "كرر",
@@ -832,7 +835,7 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2022": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "pseudocode/coursed/2022": {
@@ -868,13 +871,13 @@
           "definition": "أن تفعل شيئًا ما مرة أخرى."
         },
         "function/coursee/2022": {
-          "word": "وظيفة "
+          "word": "Pseudoloc-بعىؤهخى"
         },
         "condition/coursee/2022": {
           "word": "الشرط"
         },
         "conditionals/coursee/2022": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/coursee/2022": {
@@ -882,7 +885,7 @@
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "copyright/coursee/2022": {
-          "word": "حقوق النسخ",
+          "word": "Pseudoloc-ؤخحغهلاف",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
         },
         "define/coursee/2022": {
@@ -937,7 +940,7 @@
           "definition": "المعلومات التي تحصل عليها أجهزة الكمبيوتر من المستخدمين."
         },
         "machine_learning/coursef/2022": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "dns/coursef/2022": {
@@ -953,7 +956,7 @@
           "definition": "طريقة اتصال تستخدم الضوء لنقل المعلومات"
         },
         "internet/coursef/2022": {
-          "word": "الإنترنت",
+          "word": "Pseudoloc-هىفثىثف",
           "definition": "مجموعة من أجهزة الكمبيوتر والخوادم المتصلة بعضها ببعض."
         },
         "ip_address/coursef/2022": {
@@ -1001,11 +1004,11 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/express/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "sequencing/express/2022": {
-          "word": "التجزيء",
+          "word": "Pseudoloc-سثضعىؤهى",
           "definition": "وضع الأوامر بالترتيب الصحيح حتى تتمكن أجهزة الكمبيوتر من قراءة الأوامر."
         },
         "program/express/2022": {
@@ -1013,7 +1016,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/express/2022": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "behavior/express/2022": {
@@ -1029,7 +1032,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/express/2022": {
-          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
+          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر",
+          "word": "Pseudoloc-ؤخيث"
         },
         "loop/express/2022": {
           "word": "الحلقة",
@@ -1048,7 +1052,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2022": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/express/2022": {
@@ -1060,7 +1064,7 @@
           "definition": "أمر يخبرك بفعل شيء ما فقط حتى يصبح صحيحاً."
         },
         "function/express/2022": {
-          "word": "وظيفة ",
+          "word": "Pseudoloc-بعىؤهخى",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
         "prompt/express/2022": {
@@ -1116,7 +1120,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/pre-express/2022": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/pre-express/2022": {
@@ -1124,7 +1128,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/pre-express/2022": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "persistence/pre-express/2022": {
@@ -1144,7 +1148,7 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "artificial_intelligence/ai-ethics/2023": {
-          "word": "الذكاء الاصطناعي"
+          "word": "Pseudoloc-لقفههؤهل هىفممهلىؤث"
         },
         "adaptation/csc-adaptations/2023": {
           "word": "التكيف",
@@ -1219,7 +1223,7 @@
           "definition": "شيء يقوم البرنامج بالتحقق منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء"
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "العبارات التي تعمل فقط في ظل ظروف معينة"
         },
         "ecosystem/csc-ecosystems/2023": {
@@ -1251,7 +1255,7 @@
           "definition": "العالم الذي يدرس كيفية تفاعل الحيوانات والنباتات مع بيئتها."
         },
         "energy/csc-ecosystems/2023": {
-          "word": "طاقة",
+          "word": "Pseudoloc-ثىثقغ",
           "definition": "تنتقل بين الكائنات الحية في شبكات الغذاء من المنتجين إلى المستهلكين. تستخدم الكائنات الحية الطاقة للقيام بمهام معقدة."
         },
         "food_chain/csc-ecosystems/2023": {
@@ -1275,7 +1279,7 @@
           "definition": "صورة أو شخصية في برنامجك."
         },
         "map/csc-mappinglandmarks/2023": {
-          "word": "الخريطة",
+          "word": "Pseudoloc-ةلح",
           "definition": "تمثيل لمنطقة من الأرض أو البحر تُظهر السمات المادية والمدن والطرق وما إلى ذلك."
         },
         "pattern/csc-starquilts/2023": {
@@ -1291,7 +1295,7 @@
           "definition": "هدية تقليدية وقيمة بين الأمريكيين الأصليين من السهول الكبرى"
         },
         "artist/csc-starquilts/2023": {
-          "word": "الرسام",
+          "word": "Pseudoloc-لقفهف",
           "definition": "يمكنك كتابة التعليمات البرمجية لجعله يرسم أي شيء تقريبًا"
         },
         "loop/csc-starquilts/2023": {
@@ -1331,7 +1335,8 @@
           "definition": "صورة أو شخصية في برنامجك"
         },
         "time_capsule/csc-timecapsule/2023": {
-          "definition": "مكان للاحتفاظ بالذكريات والأشياء اليومية التي تمثل يومًا في حياة شخص يعيش خلال فترة زمنية محددة. "
+          "definition": "مكان للاحتفاظ بالذكريات والأشياء اليومية التي تمثل يومًا في حياة شخص يعيش خلال فترة زمنية محددة. ",
+          "word": "Pseudoloc-فهةثؤلحسمث"
         },
         "code/poetry/2023": {
           "word": "البرمجة",
@@ -1362,11 +1367,11 @@
           "definition": "التعليقات المحترمة التي تساعد شخصًا ما على تحسين عمله"
         },
         "poetry_circle/poetry/2023": {
-          "word": "دائرة الشعر",
+          "word": "Pseudoloc-حخثفغ ؤهؤمث",
           "definition": "مساحة آمنة وإبداعية لاختبار القصائد الجديدة والحصول على تعليقات بناءة من الآخرين"
         },
         "computer/csd/2023": {
-          "word": "الكمبيوتر"
+          "word": "Pseudoloc-ؤخةحفثق"
         },
         "input/csd/2023": {
           "word": "الإدخال"
@@ -1378,7 +1383,7 @@
           "word": "البصمة الرقمية"
         },
         "copyright/csd/2023": {
-          "word": "حقوق النسخ",
+          "word": "Pseudoloc-ؤخحغهلاف",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
         },
         "bug/csd/2023": {
@@ -1386,7 +1391,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/csd/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/csd/2023": {
@@ -1404,20 +1409,20 @@
           "word": "الشرط"
         },
         "conditionals/csd/2023": {
-          "word": "الجمل الشرطية"
+          "word": "Pseudoloc-ؤخىيفهخىمس"
         },
         "abstraction/csd/2023": {
-          "word": "خلاصة"
+          "word": "Pseudoloc-لاسفلؤفهى"
         },
         "function/csd/2023": {
-          "word": "وظيفة "
+          "word": "Pseudoloc-بعىؤهخى"
         },
         "user/csd/2023": {
           "word": "مستخدم",
           "definition": "شخص يستخدم شيئاً، بما في ذلك البرامج والأجهزة."
         },
         "machine_learning/csd/2023": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "algorithm/coursea/2023": {
@@ -1425,7 +1430,7 @@
           "definition": "قائمة بالخطوات اللازمة لإنجاز مهمة."
         },
         "debugging/coursea/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/coursea/2023": {
@@ -1453,7 +1458,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "programming/coursea/2023": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "loop/coursea/2023": {
@@ -1477,7 +1482,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/courseb/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "click/courseb/2023": {
@@ -1501,7 +1506,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/courseb/2023": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "persistence/courseb/2023": {
@@ -1529,7 +1534,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/coursec/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/coursec/2023": {
@@ -1537,14 +1542,14 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "sequencing/coursec/2023": {
-          "word": "التجزيء",
+          "word": "Pseudoloc-سثضعىؤهى",
           "definition": "وضع الأوامر بالترتيب الصحيح حتى تتمكن أجهزة الكمبيوتر من قراءة الأوامر."
         },
         "persistence/coursec/2023": {
           "word": "المثابرة"
         },
         "programming/coursec/2023": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "loop/coursec/2023": {
@@ -1560,10 +1565,10 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "data/coursec/2023": {
-          "word": "البيانات"
+          "word": "Pseudoloc-يلفل"
         },
         "binary/coursec/2023": {
-          "word": "ثنائي",
+          "word": "Pseudoloc-اهىلغ",
           "definition": "طريقة تمثيل معلومات باستخدام خيارين فقط."
         },
         "algorithm/coursed/2023": {
@@ -1579,7 +1584,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/coursed/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "loop/coursed/2023": {
@@ -1587,7 +1592,7 @@
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
         },
         "programming/coursed/2023": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "frustrated/coursed/2023": {
@@ -1603,7 +1608,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/coursed/2023": {
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق.",
+          "word": "Pseudoloc-ؤخيث"
         },
         "repeat/coursed/2023": {
           "word": "كرر",
@@ -1614,7 +1620,7 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2023": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "pseudocode/coursed/2023": {
@@ -1650,13 +1656,13 @@
           "definition": "أن تفعل شيئًا ما مرة أخرى."
         },
         "function/coursee/2023": {
-          "word": "وظيفة "
+          "word": "Pseudoloc-بعىؤهخى"
         },
         "condition/coursee/2023": {
           "word": "الشرط"
         },
         "conditionals/coursee/2023": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/coursee/2023": {
@@ -1664,7 +1670,7 @@
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "copyright/coursee/2023": {
-          "word": "حقوق النسخ",
+          "word": "Pseudoloc-ؤخحغهلاف",
           "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح للآخرين بفعل نفس الشيء."
         },
         "define/coursee/2023": {
@@ -1719,7 +1725,7 @@
           "definition": "المعلومات التي تحصل عليها أجهزة الكمبيوتر من المستخدمين."
         },
         "machine_learning/coursef/2023": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "dns/coursef/2023": {
@@ -1735,7 +1741,7 @@
           "definition": "طريقة اتصال تستخدم الضوء لنقل المعلومات"
         },
         "internet/coursef/2023": {
-          "word": "الإنترنت",
+          "word": "Pseudoloc-هىفثىثف",
           "definition": "مجموعة من أجهزة الكمبيوتر والخوادم المتصلة بعضها ببعض."
         },
         "ip_address/coursef/2023": {
@@ -1783,11 +1789,11 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/express/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "sequencing/express/2023": {
-          "word": "التجزيء",
+          "word": "Pseudoloc-سثضعىؤهى",
           "definition": "وضع الأوامر بالترتيب الصحيح حتى تتمكن أجهزة الكمبيوتر من قراءة الأوامر."
         },
         "program/express/2023": {
@@ -1795,7 +1801,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/express/2023": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "behavior/express/2023": {
@@ -1811,7 +1817,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/express/2023": {
-          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
+          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر",
+          "word": "Pseudoloc-ؤخيث"
         },
         "loop/express/2023": {
           "word": "الحلقة",
@@ -1830,7 +1837,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2023": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "while_loop/express/2023": {
@@ -1842,7 +1849,7 @@
           "definition": "أمر يخبرك بفعل شيء ما فقط حتى يصبح صحيحاً."
         },
         "function/express/2023": {
-          "word": "وظيفة ",
+          "word": "Pseudoloc-بعىؤهخى",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
         "prompt/express/2023": {
@@ -1898,7 +1905,7 @@
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
         "debugging/pre-express/2023": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/pre-express/2023": {
@@ -1906,7 +1913,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "programming/pre-express/2023": {
-          "word": "البرمجة",
+          "word": "Pseudoloc-حقخللةةهل",
           "definition": "فن تصميم برنامج."
         },
         "persistence/pre-express/2023": {
@@ -1926,7 +1933,7 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "machine_learning/how-ai-works/2023": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "algorithm/how-ai-works/2023": {
@@ -1950,27 +1957,27 @@
           "definition": "طريقة لاستخدام نموذجين متنافسين للذكاء الاصطناعي لتوليد شيء ما"
         },
         "artificial_intelligence/how-ai-works/2023": {
-          "word": "الذكاء الاصطناعي",
+          "word": "Pseudoloc-لقفههؤهل هىفممهلىؤث",
           "definition": "قدرة الآلات على التعلم وحل المشكلات."
         },
         "code/aquatic/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "condition/aquatic/unversioned": {
           "word": "الشرط",
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "الجمل الشرطية",
+          "word": "Pseudoloc-ؤخىيفهخىمس",
           "definition": "تعبيرات يجري تشغيلها فقط في ظل ظروف معينة."
         },
         "debugging/aquatic/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "loops/aquatic/unversioned": {
-          "word": "الحلقات",
+          "word": "Pseudoloc-مخخح",
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
         },
         "program/aquatic/unversioned": {
@@ -1979,10 +1986,10 @@
         },
         "code/artist/unversioned": {
           "word": "البرمجة",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/artist/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/artist/unversioned": {
@@ -1990,11 +1997,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/basketball/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/basketball/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "event/basketball/unversioned": {
@@ -2006,8 +2013,8 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance-2019/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "event/dance-2019/unversioned": {
           "word": "الحدث",
@@ -2018,8 +2025,8 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "event/dance-extras-2019/unversioned": {
           "word": "الحدث",
@@ -2030,8 +2037,8 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance-extras/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "event/dance-extras/unversioned": {
           "word": "الحدث",
@@ -2042,8 +2049,8 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/dance/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "event/dance/unversioned": {
           "word": "الحدث",
@@ -2054,11 +2061,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/flappy/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/flappy/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/flappy/unversioned": {
@@ -2066,11 +2073,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/frozen/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/frozen/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/frozen/unversioned": {
@@ -2078,27 +2085,27 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/gumball/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/gumball/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+          "word": "Pseudoloc-يثاعلهىل",
+          "definition": "Pseudoloc-بهىيىل لي بههىل قخامةس ه لى ملخقفاة ق حقلقلة"
         },
         "program/gumball/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+          "word": "Pseudoloc-حقخللة",
+          "definition": "Pseudoloc-لى للخقهاة فلف اس اثى ؤخثي هفخ سةثفاىل فلف ؤى اثقعى غ ل لؤاهث."
         },
         "code/hero/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/hero/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "function/hero/unversioned": {
-          "word": "وظيفة ",
+          "word": "Pseudoloc-بعىؤهخى",
           "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
         },
         "program/hero/unversioned": {
@@ -2130,11 +2137,11 @@
           "definition": "تقنية تشفير تقوم بربط كل حرف من الأبجدية بأحرف أخرى تم اختيارها عشوائيًا من الأبجدية."
         },
         "code/hourofcode/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/hourofcode/unversioned": {
@@ -2142,11 +2149,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/iceage/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/iceage/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/iceage/unversioned": {
@@ -2154,11 +2161,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/infinity/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/infinity/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/infinity/unversioned": {
@@ -2166,11 +2173,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/mc/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/mc/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "program/mc/unversioned": {
@@ -2178,11 +2185,11 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/minecraft/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/minecraft/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "event/minecraft/unversioned": {
@@ -2198,7 +2205,7 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "التعلم الآلي",
+          "word": "Pseudoloc-ةلؤاىث ملقىهل",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
         "event/outbreak/unversioned": {
@@ -2210,16 +2217,16 @@
           "definition": "برنامج يكرر أو يحاكي السمات الرئيسية لحدث في العالم الحقيقي من أجل التحقيق في سلوكه دون تكلفة أو وقت أو خطر إجراء تجربة في الحياة الواقعية."
         },
         "code/playlab/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/playlab/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+          "word": "Pseudoloc-يثاعلهىل",
+          "definition": "Pseudoloc-بهىيىل لي بههىل قخامةس ه لى ملخقفاة ق حقلقلة"
         },
         "program/playlab/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+          "word": "Pseudoloc-حقخللة",
+          "definition": "Pseudoloc-لى للخقهاة فلف اس اثى ؤخثي هفخ سةثفاىل فلف ؤى اثقعى غ ل لؤاهث."
         },
         "code/poem-art/2021": {
           "word": "البرمجة",
@@ -2246,7 +2253,7 @@
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
         },
         "debugging/sports/unversioned": {
-          "word": "تصحيح الأخطاء",
+          "word": "Pseudoloc-يثاعلهىل",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
         },
         "event/sports/unversioned": {
@@ -2258,28 +2265,28 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "code/starwars/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/starwars/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+          "word": "Pseudoloc-يثاعلهىل",
+          "definition": "Pseudoloc-بهىيىل لي بههىل قخامةس ه لى ملخقفاة ق حقلقلة"
         },
         "program/starwars/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+          "word": "Pseudoloc-حقخللة",
+          "definition": "Pseudoloc-لى للخقهاة فلف اس اثى ؤخثي هفخ سةثفاىل فلف ؤى اثقعى غ ل لؤاهث."
         },
         "code/starwarsblocks/unversioned": {
-          "word": "الكود",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "word": "Pseudoloc-ؤخيث",
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "تصحيح الأخطاء",
-          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+          "word": "Pseudoloc-يثاعلهىل",
+          "definition": "Pseudoloc-بهىيىل لي بههىل قخامةس ه لى ملخقفاة ق حقلقلة"
         },
         "program/starwarsblocks/unversioned": {
-          "word": "البرنامج",
-          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+          "word": "Pseudoloc-حقخللة",
+          "definition": "Pseudoloc-لى للخقهاة فلف اس اثى ؤخثي هفخ سةثفاىل فلف ؤى اثقعى غ ل لؤاهث."
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "الضغط بدون فقدان البيانات",
@@ -2295,14 +2302,19 @@
         },
         "code/dance-ai/2023": {
           "word": "البرمجة",
-          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+          "definition": "Pseudoloc-(ر) خ صقفث ؤيث, ق فخصقهف هىسقعؤفخىس خق لؤخةحفثق."
         },
         "event/dance-ai/2023": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "program/dance-ai/2023": {
-          "word": "البرنامج"
+          "word": "البرنامج",
+          "definition": " خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "الذكاء الاصطناعي (A.I.) ",
+          "definition": " برنامج كمبيوتر يأخذ البيانات ويتعلم الأنماط من تلك البيانات ثم يتخذ القرارات بناءً على ما تعلمه."
         }
       }
     }

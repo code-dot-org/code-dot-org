@@ -4,61 +4,94 @@
       "marketing_announcements": {
         "banners": {
           "ai-2020": {
-            "buttonText": "Aprende más",
-            "title": "Explore Inteligencia Artificial y Aprendizaje Automático"
+            "body": "Únete a nosotros para explorar cómo la IA impacta a todo nuestro mundo en una nueva serie de videos, entrene la IA para los océanos en más de 25 idiomas y escuche a un panel de expertos durante la transmisión en vivo sobre Ética de la IA el martes 8 de diciembre.",
+            "buttonText": "Más información"
           },
           "ai-launch-2023": {
-            "buttonText": "Aprende más"
+            "body": "Observa cómo planeamos llevar la educación sobre IA a estudiantes de todo el mundo.",
+            "buttonText": "Más información",
+            "title": "Educación en IA para el mundo"
           },
           "ai-pl-launch-2023": {
-            "buttonText": "Aprende más"
+            "body": "Descubre el revolucionario mundo de la Inteligencia Artificial (IA) y su potencial transformador en la educación con nuestra serie completa de aprendizaje online para profesores.",
+            "buttonText": "Más información",
+            "title": "Introducción a la IA para profesores"
           },
           "back-to-school-2021": {
-            "buttonText": "Aprende más"
+            "body": " Consulta las últimas actualizaciones del plan de estudios y las herramientas de Code.org (¡incluido un nuevo módulo de IA/ML!), y aprenda a usar Code.org en tu clase con nuestra nueva serie de videos Getting Started.",
+            "buttonText": "Más información",
+            "title": "Noticias sobre la Vuelta al Cole"
+          },
+          "class-schedule-survey": {
+            "body": "Tómate un momento para completar esta encuesta de 5 preguntas. Las respuestas que proporciones nos ayudarán a determinar cuándo ofrecer programación como excursiones virtuales y charlas con profesionales durante el semestre de otoño.",
+            "buttonText": "Responder la encuesta",
+            "title": "Encuesta sobre el horario de clases de otoño de 2021"
           },
           "codebytes-2020": {
-            "buttonText": "Aprende más"
+            "body": "¿Estás planificando la Hora del Código con tu aula virtual? Únase a nosotros en CodeBytes, una serie de lecciones de 20 minutos que se transmitirán en vivo del 7 al 11 de diciembre. Los episodios están diseñados para todos los grados y estudiantes con diferente acceso a la tecnología.",
+            "buttonText": "Más información",
+            "title": "CodeBytes: ¡Minilecciones interactivas en vivo durante CSEdWeek!"
           },
           "coldplay": {
-            "buttonText": "Pruébalo"
+            "body": "¡Usa Dance Party para crear algo increíble! Compártelo online y Coldplay podría destacar tu proyecto en las redes sociales. ¡Incluso podrías ver a la banda en vivo! ¡Enséñanos tus proyectos!",
+            "title": "Programa y baila con Coldplay"
           },
           "congrats-certificate-share": {
-            "buttonText": "Comenzar"
+            "body": "Cualquiera puede aprender!",
+            "title": "Prueba una Hora del Código"
           },
           "csjourneys": {
-            "buttonText": "Aprende más"
+            "body": "¡Dale vida a CS con el nuevo programa de exploración e inspiración profesional de Code.org! Regístrese para disfrutar de experiencias en el aula interesantes y en vivo, como excursiones virtuales y chats en clase, o permita que los estudiantes exploren con videos cortos y otros recursos.",
+            "buttonText": "Más información",
+            "title": "Explora el amplio mundo de la informática"
           },
           "csjourneys-22": {
-            "buttonText": "Aprende más"
+            "body": "Mira cómo trabajan profesionales de la tecnología únicos, únete a excursiones virtuales de la misión Artemisa de la NASA y más.",
+            "buttonText": "Más información",
+            "title": "Viajes en Ciencias de la Computación está de vuelta, junto con los NEVOS videos de Profesiones en Ciencias de la Computación"
           },
           "csleadersprize": {
-            "buttonText": "Aprende más"
+            "body": "En esta semana de la Educación en Ciencias de la Computación, una escuela primaria y una escuela secundaria en cada estado y en D.C. serán premiados como líderes en Informática con 10.000$ para ayudar a extender el acceso a la educación en ciencias de la computación de sus estudiantes.",
+            "buttonText": "Más información",
+            "title": "¡Empieza un nuevo curso de informática y gana 10.000 $!"
           },
           "hoc-2023": {
-            "body": "Súmate a millones de personas en todo el mundo y organiza una hora de programación para aprender cómo funciona la Inteligencia Artificial. Cualquiera, en cualquier lugar puede hacerlo sin necesidad de experiencia previa.",
-            "buttonText": "Aprende más",
-            "title": "Hora del Código: Creatividad con IA"
+            "buttonText": "Más información"
           },
           "hoc-more": {
-            "body": "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
+            "body": "El sitio web Hour of Code tiene más de 500 actividades de informática para todas las edades y niveles de experiencia, desarrolladas por Code.org y sus socios.",
+            "buttonText": "Ver actividades",
+            "title": "¡Siga aprendiendo!"
           },
           "home-learning-2020": {
-            "buttonText": "Ver Ideas de Proyecto"
+            "body": "Padres y Profesores — echad un vistazo a nuestra página de Ideas de Proyectos para empezar a crear proyectos en Game Lab, App Lab y Web Lab. ¡Podrás encontrar descripciones, consejos y demostraciones que los estudiantes pueden editar y crear los suyos propios! ",
+            "title": "Ideas de proyectos para aprender desde casa"
+          },
+          "soonhoc-2020": {
+            "body": "Apunta a tu clase para probar una de las más de 115 nuevas actividades de la Hora del Código (del 7 al 13 de diciembre). Este año, exploraremos cómo podemos aprovechar la informática y tecnologías como la IA para ayudar a construir la sociedad en la que queremos vivir. ¡Regístrese hoy!",
+            "buttonText": "Únete",
+            "title": "Se acerca la Hora del Código"
           },
           "superhero": {
-            "buttonText": "Aprenda más"
+            "body": "Únete a nuestro programa de desarrollo profesional de gran apoyo para educadores de secundaria.",
+            "buttonText": "Más información",
+            "title": "¡Ayuda a que tus estudiantes se conviertan en superhéroes!"
           },
           "teacher-apps-closing-2021": {
-            "buttonText": "Anímate"
+            "body": "El 98 % de los profesores participantes recomiendan nuestro entretenido y comprehensivo programa. Únete a nuestros talleres prácticos con otros profesores de tu zona. Becas y descuentos disponibles en la mayoría de las áreas.",
+            "title": "No te lo pierdas. ¡Inscríbete hoy!"
           },
           "teacher-apps-nominate-2020": {
-            "buttonText": "Designar a un docente"
+            "body": "Hazle saber lo increíble que es. ¡Nomínale hoy para una beca de Aprendizaje Profesional!",
+            "title": "¿Conoce un Profesor increíble?"
           },
           "teacher-apps-open-2021": {
-            "buttonText": "Anímate"
+            "body": "El 98 % de los profesores participantes recomiendan nuestro entretenido y comprehensivo programa. Únete a nuestros talleres prácticos con otros profesores de tu zona. Becas y descuentos disponibles en la mayoría de las áreas.",
+            "title": "Regístrate para el aprendizaje profesional"
           },
           "teacher-apps-stillon-2020": {
-            "buttonText": "Anímate"
+            "body": "¡Los talleres ahora son virtuales en la mayoría de los estados! El 98% de los profesores recomiendan nuestros atractivos programas de aprendizaje profesional para enseñar informática. Únete a nuestros talleres prácticos con otros profesores de tu zona. Los espacios son limitados, ¡así que presenta tu solicitud hoy!",
+            "title": "¡Desarrollo Profesional sigue en marcha!"
           }
         }
       }

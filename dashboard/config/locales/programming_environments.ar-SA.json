@@ -4,251 +4,86 @@
       "programming_environments": {
         "applab": {
           "categories": {
-            "advanced": {
-              "name": "مُتقدم"
-            },
             "canvas": {
               "expressions": {
-                "circle": {
-                  "palette_params": {
-                    "radius": {
-                      "description": "نصف قطر الدائرة بالبكسل."
-                    }
-                  }
-                },
-                "drawImage": {
-                  "palette_params": {
-                    "id": {
-                      "description": "موضع x بالبكسل في الزاوية اليسرى العليا من الصورة المراد رسمها."
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل في الزاوية اليسرى العليا من الصورة المراد رسمها."
-                    },
-                    "y": {
-                      "description": "موضع y بالبكسل في الزاوية اليسرى العليا من الصورة المراد رسمها."
-                    }
-                  }
-                },
                 "getAlpha": {
                   "palette_params": {
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
-                  },
-                  "short_description": "تُرجع كمية ألفا (العتامة) (تتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة."
+                  }
                 },
                 "getBlue": {
                   "palette_params": {
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "getGreen": {
                   "palette_params": {
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    }
-                  }
-                },
-                "getImageData": {
-                  "palette_params": {
-                    "height": {
-                      "description": "ارتفاع المستطيل المحيط لالتقاط بيانات الصورة."
-                    },
-                    "width": {
-                      "description": "عرض المستطيل المحيط لالتقاط بيانات الصورة."
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل لبدء الالتقاط."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل لبدء الالتقاط."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "getRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "putImageData": {
                   "palette_params": {
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة لوضع البيانات على اللوحة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة لوضع البيانات على اللوحة القماشية."
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "height": {
-                      "description": "الارتفاع الرأسي بالبكسل للمستطيل."
-                    },
-                    "width": {
-                      "description": "العرض الأفقي بالبكسل للمستطيل."
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل في الزاوية اليسرى العليا من المستطيل."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل في الزاوية اليسرى العليا من المستطيل."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
-                    "alphaValue": {
-                      "description": "مقدار ألفا (العتامة) (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
-                  },
-                  "short_description": "يضبط مقدار ألفا (العتامة) (يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة."
+                  }
                 },
                 "setBlue": {
                   "palette_params": {
-                    "blueValue": {
-                      "description": "مقدار اللون الأزرق (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
-                  },
-                  "short_description": "يضبط مقدار اللون الأزرق (الذي يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة إلى مقدار إدخال BlueValue."
+                  }
                 },
                 "setGreen": {
                   "palette_params": {
-                    "greenValue": {
-                      "description": "مقدار اللون الأخضر (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
-                  },
-                  "short_description": "يضبط مقدار اللون الأخضر (الذي يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة إلى مقدار إدخال GreenValue."
+                  }
                 },
                 "setRGB": {
                   "palette_params": {
-                    "alpha": {
-                      "description": "اختياري. مقدار العتامة (من 0 إلى 255) المطلوب ضبطه في البكسل. القيمة الافتراضية هي 255 (العتامة الكاملة)."
-                    },
-                    "blue": {
-                      "description": "مقدار اللون الأزرق (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
-                    "green": {
-                      "description": "مقدار اللون الأخضر (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "red": {
-                      "description": "مقدار اللون الأحمر (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "setRed": {
                   "palette_params": {
                     "imageData": {
-                      "type": "كائن"
-                    },
-                    "redValue": {
-                      "description": "مقدار اللون الأحمر (من 0 إلى 255) المطلوب ضبطه في البكسل."
-                    },
-                    "x": {
-                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
-                    },
-                    "y": {
-                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                      "type": "Pseudoloc-خاتثف"
                     }
-                  },
-                  "short_description": "يضبط مقدار اللون الأحمر (الذي يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة إلى مقدار إدخال RedValue."
+                  }
                 }
               }
             },
             "control": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "القيمة التي تم إرجاعها بواسطة وظيفة setTimeout للإلغاء."
-                    }
-                  }
-                },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "عدد المللي ثانية بين كل تنفيذ للوظيفة."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "عدد المللي ثانية التي يجب انتظارها قبل تنفيذ الوظيفة."
-                    }
-                  }
-                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
-                      "type": "وظيفة "
+                      "type": "Pseudoloc-بعىؤهخى"
                     }
                   }
                 }
@@ -259,457 +94,217 @@
                 "createRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "كائن"
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "deleteRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "كائن"
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "drawChart": {
                   "palette_params": {
                     "options": {
-                      "type": "كائن"
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
                     "options": {
-                      "type": "كائن"
-                    },
-                    "tableName": {
-                      "description": "اسم الجدول الذي سيتم استرداد السجلات منه."
-                    }
-                  }
-                },
-                "getKeyValue": {
-                  "palette_params": {
-                    "key": {
-                      "description": "اسم المفتاح الذي سيتم استرداده."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "getPrediction": {
                   "palette_params": {
                     "callback": {
-                      "type": "وظيفة "
-                    }
-                  }
-                },
-                "getUserId": {
-                  "short_description": "يحصل على معرف فريد للمستخدم الحالي لهذا التطبيق."
-                },
-                "onRecordEvent": {
-                  "palette_params": {
-                    "table": {
-                      "description": "اسم الجدول الذي ينطبق عليه معالج الأحداث هذا."
+                      "type": "Pseudoloc-بعىؤهخى"
                     }
                   }
                 },
                 "readRecords": {
                   "palette_params": {
                     "terms": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "setKeyValue": {
-                  "palette_params": {
-                    "key": {
-                      "description": "اسم المفتاح الذي سيتم تخزينه."
-                    },
-                    "value": {
-                      "description": "البيانات التي سيتم تخزينها."
-                    }
-                  },
-                  "short_description": "يخزن زوج المفاتيح/القيمة في مخزن بيانات المفاتيح/القيمة في App Lab، ويستدعي وظيفة رد الاتصال عند انتهاء الإجراء."
-                },
-                "startWebRequest": {
-                  "palette_params": {
-                    "url": {
-                      "description": "عنوان الويب الخاص بالخدمة التي تقوم بإرجاع البيانات."
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 },
                 "updateRecord": {
                   "palette_params": {
                     "record": {
-                      "type": "كائن"
+                      "type": "Pseudoloc-خاتثف"
                     }
                   }
                 }
               },
-              "name": "البيانات"
+              "name": "Pseudoloc-يلفل"
             },
             "functions": {
-              "name": "دوال"
+              "name": "Pseudoloc-بعىؤهخىس"
+            },
+            "maker": {
+              "name": "Pseudoloc-ةلنث"
             },
             "math": {
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
                     "max": {
-                      "description": "قام بإرجاع أكبر عدد"
+                      "description": "Pseudoloc-فاث لءهةة ىعاثق ثفعقثي"
                     },
                     "min": {
-                      "description": "قام بإرجاع أصغر عدد"
+                      "description": "Pseudoloc-فاث هىهةة ىعاثق ثفعقثي"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "max": {
-                      "description": "قام بإرجاع أكبر عدد"
+                      "description": "Pseudoloc-فاث لءهةة ىعاثق ثفعقثي"
                     },
                     "min": {
-                      "description": "قام بإرجاع أصغر عدد"
+                      "description": "Pseudoloc-فاث هىهةة ىعاثق ثفعقثي"
                     }
                   }
                 }
               },
-              "name": "العمليات الحسابية"
-            },
-            "turtle": {
-              "expressions": {
-                "arcLeft": {
-                  "short_description": "تحرك السلحفاة إلى الأمام وإلى اليسار في قوس دائري سلس."
-                },
-                "getX": {
-                  "short_description": "يحصل على إحداثيات x الحالية بوحدات البكسل للسلحفاة."
-                },
-                "getY": {
-                  "short_description": "يحصل على إحداثيات y الحالية بوحدات البكسل الخاصة بالسلحفاة."
-                },
-                "hide": {
-                  "short_description": "يجعل السلحفاة غير مرئية في موقعها الحالي."
-                },
-                "move": {
-                  "palette_params": {
-                    "x": {
-                      "description": "عدد وحدات البكسل لتحريك السلحفاة إلى اليمين."
-                    },
-                    "y": {
-                      "description": "عدد وحدات البكسل لتحريك السلحفاة لأسفل."
-                    }
-                  }
-                },
-                "moveBackward": {
-                  "short_description": "تحرك السلحفاة للخلف بعدد معين من وحدات البكسل من الاتجاه الحالي."
-                },
-                "moveForward": {
-                  "short_description": "يحرك السلحفاة إلى الأمام بعدد معين من وحدات البكسل في الاتجاه الحالي."
-                },
-                "moveTo": {
-                  "short_description": "ينقل السلحفاة إلى موضع محدد (x، y) على الشاشة."
-                },
-                "penColor": {
-                  "short_description": "يضبط لون القلم الذي تستخدمه السلحفاة لرسم الخطوط والنقاط."
-                },
-                "penDown": {
-                  "short_description": "يضع القلم جانبًا حتى ترسم السلحفاة خطًا خلفه أثناء تحركه."
-                },
-                "penRGB": {
-                  "short_description": "باستخدام قيم RGBA، يضبط لون القلم الذي تستخدمه السلحفاة لرسم الخطوط والنقاط."
-                },
-                "penUp": {
-                  "short_description": "تلتقط القلم حتى لا ترسم السلحفاة خطًا أثناء تحركها."
-                },
-                "penWidth": {
-                  "short_description": "يضبط عرض الخط بالبكسل الذي ترسمه السلحفاة خلفه أثناء تحركه."
-                },
-                "show": {
-                  "short_description": "يجعل السلحفاة مرئية في موقعها الحالي."
-                },
-                "speed": {
-                  "short_description": "تحدد سرعة تنفيذ التطبيق، والتي تتضمن سرعة السلحفاة."
-                },
-                "turnLeft": {
-                  "short_description": "تقوم بتدوير السلحفاة إلى اليسار بالزاوية المحددة. يظل وضع السلحفاة كما هو."
-                },
-                "turnRight": {
-                  "short_description": "تقوم بتدوير السلحفاة يمينًا بالزاوية المحددة. يظل وضع السلحفاة كما هو."
-                },
-                "turnTo": {
-                  "short_description": "يغير اتجاه السلحفاة إلى زاوية محددة. 0 لأعلى، 90 لليمين، 180 لأسفل، 270 لليسار."
-                }
-              }
+              "name": "Pseudoloc-ةلفا"
             },
             "ui_controls": {
               "expressions": {
-                "button": {
-                  "short_description": "يقوم بإنشاء زر على الشاشة يعرض النص المقدم والمشار إليه بواسطة المعرف المحدد في الموقع الافتراضي (0,0)."
-                },
                 "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "الانكماش والنمو"
-                    }
-                  },
                   "palette_params": {
                     "callback": {
-                      "type": "وظيفة "
+                      "type": "Pseudoloc-بعىؤهخى"
                     }
                   }
                 },
                 "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "إنشاء موسيقى"
-                    }
-                  },
-                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "الخاصية المراد تغييرها."
-                    }
-                  },
-                  "short_description": "يقوم بتعيين خاصية إلى قيمة جديدة للعنصر المحدد."
-                },
-                "setScreen": {
-                  "short_description": "يضبط الشاشة على معرف الشاشة المحدد."
-                },
-                "showElement": {
-                  "short_description": "يعرض العنصر بالمعرف المقدم."
-                },
-                "textLabel": {
-                  "short_description": "يقوم بإنشاء تسمية نصية على الشاشة تعرض النص المقدم والمشار إليه بواسطة المعرف المحدد في الموقع الافتراضي (0,0)."
+                  "short_description": "Pseudoloc-حملغ فاثةح3 خعىيبهمثبقخةفاث حثؤههثي قم."
                 }
               }
             },
             "variables": {
               "expressions": {
                 "addPair": {
-                  "return_value": "لا شيء"
-                },
-                "declareAssign_list_123": {
-                  "short_description": "قم بتعريف مصفوفة وتعيينها لمتغير"
+                  "return_value": "Pseudoloc-ىخىث"
                 },
                 "declareAssign_x": {
-                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                  "short_description": "Pseudoloc-يثؤمقثس ىي لسهلى لى ىهفهم رلعث ف ل رقهلاث."
                 },
                 "declareNoAssign_x": {
-                  "short_description": "يقوم بتحديد متغير بالاسم المحدد."
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "السلسلة المراد البحث عنها."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "السلسلة المراد البحث عنها."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "طول السلسلة"
+                  "short_description": "Pseudoloc-يثؤمقثس  رلقلامثصهفافاث هرثىىلةث"
                 }
               },
-              "name": "المتغيرات"
+              "name": "Pseudoloc-رلقهامثس"
             }
           },
-          "description": "مختبر التطبيقات App Lab بيئة برمجية يمكنك من خلالها تصميم التطبيقات البسيطة. لذا؛ صمِّم تطبيقًا وقم بترميزه باستخدام القطع البرمجية أو لغة جافا سكريبت لعمل التطبيق، ثم شارِك تطبيقك في ثوانٍ.",
-          "name": "مختبر التطبيق"
+          "description": "Pseudoloc-لحح لا ه ل حخلقلةهىلثىرهخىةثف صاقث غع ؤل ةلن سهةمث لحس. ثسهل لى حح, خيث هفا مخؤن خق لرلسقهحففخ ةنث ه صخق, فاى ساقث غعق لح هىسثؤخيس.",
+          "name": "Pseudoloc-لحح لا"
         },
         "gamelab": {
           "categories": {
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "عدد المللي ثانية بين كل تنفيذ للوظيفة."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "عدد المللي ثانية التي يجب انتظارها قبل تنفيذ الوظيفة."
-                    }
-                  }
-                }
-              }
-            },
             "drawing": {
               "expressions": {
                 "shape": {
                   "examples": {
                     "Star": {
-                      "name": "الركل"
+                      "name": "Pseudoloc-سفلق"
                     }
                   }
                 }
-              },
-              "name": "الرسم"
+              }
             },
             "functions": {
-              "name": "دوال"
+              "name": "Pseudoloc-بعىؤهخىس"
             },
             "game_lab": {
               "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "أسود وأبيض"
-                    }
-                  }
-                },
                 "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "إنشاء موسيقى"
-                    }
-                  },
-                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
+                  "short_description": "Pseudoloc-حملغ فاثةح3 خعىيبهمثبقخةفاث حثؤههثي قم."
                 },
                 "showMobileControls": {
-                  "content": "يغير عناصر التحكم المحمولة المرئية أسفل مساحة اللعب.",
-                  "short_description": "يغير عناصر التحكم المحمولة المرئية أسفل مساحة اللعب."
+                  "content": "Pseudoloc-ؤالىثس فث ةخهمث خىفقمس رسهام اثىلفا اث حلغ سلؤث.",
+                  "short_description": "Pseudoloc-ؤالىثس فث ةخهمث خىفقمس رسهام اثىلفا اث حلغ سلؤث."
                 }
               },
-              "name": "مختبر اللعب"
+              "name": "Pseudoloc-للةثملا"
             },
             "groups": {
               "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "كائن"
-                    }
-                  }
-                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
-                      "type": "اللون"
+                      "type": "Pseudoloc-ؤخمخ"
                     }
                   }
                 },
                 "setTintEach": {
                   "palette_params": {
                     "color": {
-                      "type": "اللون"
+                      "type": "Pseudoloc-ؤخمخ"
                     }
                   }
                 }
               },
-              "name": "مجموعات"
+              "name": "Pseudoloc-لقخعس"
             },
             "math": {
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
                     "max": {
-                      "description": "قام بإرجاع أكبر عدد"
+                      "description": "Pseudoloc-فاث لءهةة ىعاثق ثفعقثي"
                     },
                     "min": {
-                      "description": "قام بإرجاع أصغر عدد"
+                      "description": "Pseudoloc-فاث هىهةة ىعاثق ثفعقثي"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "max": {
-                      "description": "قام بإرجاع أكبر عدد"
+                      "description": "Pseudoloc-فاث لءهةة ىعاثق ثفعقثي"
                     },
                     "min": {
-                      "description": "قام بإرجاع أصغر عدد"
+                      "description": "Pseudoloc-فاث هىهةة ىعاثق ثفعقثي"
                     }
                   }
                 }
               },
-              "name": "العمليات الحسابية"
+              "name": "Pseudoloc-ةلفا"
             },
             "sprites": {
               "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "حلزوني"
-                    }
-                  }
-                },
                 "sprite.height": {
-                  "return_value": "ارتفاع الكائن."
+                  "return_value": "Pseudoloc-فاث ثهلا خب اث سقهفث"
                 },
                 "sprite.width": {
-                  "return_value": "عرض الكائن."
+                  "return_value": "Pseudoloc-فاث هيفاخب فث سحهفث."
                 }
               },
-              "name": "النقوش المتحركة"
+              "name": "Pseudoloc-سحقهثس"
             },
             "variables": {
               "expressions": {
                 "assign_x": {
-                  "short_description": "يقوم بتعيين قيمة لمتغير تم الإعلان عنه مسبقًا."
+                  "short_description": "Pseudoloc-لسسهىس لرلمع فخ  حقثهخعسغ يثملقث رلقلامث"
                 },
                 "declareAssign_x": {
-                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                  "short_description": "Pseudoloc-يثؤمقثس ىي لسهلى لى ىهفهم رلعث ف ل رقهلاث."
                 },
                 "declareNoAssign_x": {
-                  "short_description": "يقوم بتحديد متغير بالاسم المحدد."
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "السلسلة المراد البحث عنها."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "السلسلة المراد البحث عنها."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "طول السلسلة"
+                  "short_description": "Pseudoloc-يثؤمقثس  رلقلامثصهفافاث هرثىىلةث"
                 }
               },
-              "name": "المتغيرات"
+              "name": "Pseudoloc-رلقهامثس"
             }
           },
-          "name": "مختبر اللعب"
+          "name": "Pseudoloc-للةثملا"
         },
         "javalab": {
           "name": "مختبر Java"
@@ -759,7 +354,7 @@
           "name": "مختبر الرسوم المتحركة"
         },
         "weblab": {
-          "name": "مختبر الويب"
+          "name": "Pseudoloc-صثا لا"
         }
       }
     }

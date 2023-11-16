@@ -3,7 +3,7 @@
     "data": {
       "vocabularies": {
         "computer/csd/2021": {
-          "word": "Ordinateur"
+          "word": "Pseudoloc-Çôɱþûţéŕ"
         },
         "input/csd/2021": {
           "word": "Entrée"
@@ -24,7 +24,7 @@
           "word": "CSS"
         },
         "copyright/csd/2021": {
-          "word": "Copyright",
+          "word": "Pseudoloc-Çôþýŕîĝĥţ",
           "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "relevant/csd/2021": {
@@ -35,7 +35,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/csd/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/csd/2021": {
@@ -53,13 +53,13 @@
           "word": "Condition"
         },
         "conditionals/csd/2021": {
-          "word": "Instructions conditionnelles"
+          "word": "Pseudoloc-Çôñðîţîôñàļš"
         },
         "abstraction/csd/2021": {
-          "word": "Abstraction"
+          "word": "Pseudoloc-Àƀšţŕàçţîôñ"
         },
         "function/csd/2021": {
-          "word": "Fonction"
+          "word": "Pseudoloc-Ƒûñçţîôñ"
         },
         "user/csd/2021": {
           "word": "Utilisateur",
@@ -70,7 +70,7 @@
           "definition": "Des boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
         },
         "machine_learning/csd/2021": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "algorithm/coursea/2021": {
@@ -78,7 +78,7 @@
           "definition": "Une liste d'étapes pour terminer une tâche. "
         },
         "debugging/coursea/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/coursea/2021": {
@@ -106,7 +106,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "programming/coursea/2021": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "loop/coursea/2021": {
@@ -130,7 +130,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/courseb/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2021": {
@@ -154,7 +154,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/courseb/2021": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "persistence/courseb/2021": {
@@ -182,7 +182,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/coursec/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/coursec/2021": {
@@ -190,11 +190,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "sequencing/coursec/2021": {
-          "word": "Séquencement",
+          "word": "Pseudoloc-Šéǫûéñçîñĝ",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "programming/coursec/2021": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "loop/coursec/2021": {
@@ -210,7 +210,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "binary/coursec/2021": {
-          "word": "Binaire",
+          "word": "Pseudoloc-Ɓîñàŕý",
           "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "algorithm/coursed/2021": {
@@ -226,7 +226,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/coursed/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "loop/coursed/2021": {
@@ -234,7 +234,7 @@
           "definition": "L'action de faire quelque chose encore et encore."
         },
         "programming/coursed/2021": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "frustrated/coursed/2021": {
@@ -250,8 +250,8 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2021": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "repeat/coursed/2021": {
           "word": "Répéter",
@@ -262,7 +262,7 @@
           "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2021": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2021": {
@@ -298,7 +298,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "copyright/coursee/2021": {
-          "word": "Copyright",
+          "word": "Pseudoloc-Çôþýŕîĝĥţ",
           "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "loop/coursee/2021": {
@@ -310,7 +310,7 @@
           "definition": "Faire quelque chose de nouveau."
         },
         "function/coursee/2021": {
-          "word": "Fonction",
+          "word": "Pseudoloc-Ƒûñçţîôñ",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "condition/coursee/2021": {
@@ -318,7 +318,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/coursee/2021": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2021": {
@@ -394,7 +394,7 @@
           "definition": "un programme qui reproduit ou imite des caractéristiques clés d'un événement du monde réel afin d'étudier son comportement en évitant le coût, le temps et le danger de mener une telle expérience dans la vie réelle. "
         },
         "machine_learning/coursef/2021": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "dns/coursef/2021": {
@@ -410,7 +410,7 @@
           "definition": "Une connexion qui utilise la lumière pour transmettre les informations."
         },
         "internet/coursef/2021": {
-          "word": "Internet",
+          "word": "Pseudoloc-Îñţéŕñéţ",
           "definition": "Un groupe d'ordinateurs et de serveurs qui sont reliés les uns aux autres."
         },
         "ip_address/coursef/2021": {
@@ -458,11 +458,11 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/express/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "sequencing/express/2021": {
-          "word": "Séquencement",
+          "word": "Pseudoloc-Šéǫûéñçîñĝ",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "program/express/2021": {
@@ -470,7 +470,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/express/2021": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "behavior/express/2021": {
@@ -486,7 +486,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2021": {
-          "word": "Coder",
+          "word": "Pseudoloc-çôðé",
           "definition": "Fait d'écrire du code, c'est-à-dire écrire des instructions pour un ordinateur."
         },
         "loop/express/2021": {
@@ -506,7 +506,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2021": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2021": {
@@ -518,7 +518,7 @@
           "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2021": {
-          "word": "Fonction",
+          "word": "Pseudoloc-Ƒûñçţîôñ",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "prompt/express/2021": {
@@ -574,7 +574,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/pre-express/2021": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/pre-express/2021": {
@@ -582,7 +582,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/pre-express/2021": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "persistence/pre-express/2021": {
@@ -602,7 +602,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "computer/csd/2022": {
-          "word": "Ordinateur"
+          "word": "Pseudoloc-Çôɱþûţéŕ"
         },
         "input/csd/2022": {
           "word": "Entrée"
@@ -623,7 +623,7 @@
           "word": "CSS"
         },
         "copyright/csd/2022": {
-          "word": "Copyright",
+          "word": "Pseudoloc-Çôþýŕîĝĥţ",
           "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "relevant/csd/2022": {
@@ -634,7 +634,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/csd/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/csd/2022": {
@@ -652,20 +652,20 @@
           "word": "Condition"
         },
         "conditionals/csd/2022": {
-          "word": "Instructions conditionnelles"
+          "word": "Pseudoloc-Çôñðîţîôñàļš"
         },
         "abstraction/csd/2022": {
-          "word": "Abstraction"
+          "word": "Pseudoloc-Àƀšţŕàçţîôñ"
         },
         "function/csd/2022": {
-          "word": "Fonction"
+          "word": "Pseudoloc-Ƒûñçţîôñ"
         },
         "user/csd/2022": {
           "word": "Utilisateur",
           "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
         },
         "machine_learning/csd/2022": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "algorithm/coursea/2022": {
@@ -673,7 +673,7 @@
           "definition": "Une liste d'étapes pour terminer une tâche. "
         },
         "debugging/coursea/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/coursea/2022": {
@@ -701,7 +701,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "programming/coursea/2022": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "loop/coursea/2022": {
@@ -725,7 +725,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/courseb/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2022": {
@@ -749,7 +749,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/courseb/2022": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "persistence/courseb/2022": {
@@ -777,7 +777,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/coursec/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/coursec/2022": {
@@ -785,14 +785,14 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "sequencing/coursec/2022": {
-          "word": "Séquencement",
+          "word": "Pseudoloc-Šéǫûéñçîñĝ",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "persistence/coursec/2022": {
           "word": "Persévérance"
         },
         "programming/coursec/2022": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "loop/coursec/2022": {
@@ -808,10 +808,10 @@
           "definition": "Action qui provoque quelque chose."
         },
         "data/coursec/2022": {
-          "word": "Données"
+          "word": "Pseudoloc-Ðàţà"
         },
         "binary/coursec/2022": {
-          "word": "Binaire",
+          "word": "Pseudoloc-Ɓîñàŕý",
           "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "algorithm/coursed/2022": {
@@ -827,7 +827,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/coursed/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "loop/coursed/2022": {
@@ -835,7 +835,7 @@
           "definition": "L'action de faire quelque chose encore et encore."
         },
         "programming/coursed/2022": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "frustrated/coursed/2022": {
@@ -851,8 +851,8 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2022": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "repeat/coursed/2022": {
           "word": "Répéter",
@@ -863,7 +863,7 @@
           "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2022": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2022": {
@@ -899,13 +899,13 @@
           "definition": "Faire quelque chose de nouveau."
         },
         "function/coursee/2022": {
-          "word": "Fonction"
+          "word": "Pseudoloc-Ƒûñçţîôñ"
         },
         "condition/coursee/2022": {
           "word": "Condition"
         },
         "conditionals/coursee/2022": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2022": {
@@ -913,7 +913,7 @@
           "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
         },
         "copyright/coursee/2022": {
-          "word": "Copyright",
+          "word": "Pseudoloc-Çôþýŕîĝĥţ",
           "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "define/coursee/2022": {
@@ -972,7 +972,7 @@
           "definition": "un programme qui reproduit ou imite des caractéristiques clés d'un événement du monde réel afin d'étudier son comportement en évitant le coût, le temps et le danger de mener une telle expérience dans la vie réelle. "
         },
         "machine_learning/coursef/2022": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "dns/coursef/2022": {
@@ -988,7 +988,7 @@
           "definition": "Une connexion qui utilise la lumière pour transmettre les informations."
         },
         "internet/coursef/2022": {
-          "word": "Internet",
+          "word": "Pseudoloc-Îñţéŕñéţ",
           "definition": "Un groupe d'ordinateurs et de serveurs qui sont reliés les uns aux autres."
         },
         "ip_address/coursef/2022": {
@@ -1036,11 +1036,11 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/express/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "sequencing/express/2022": {
-          "word": "Séquencement",
+          "word": "Pseudoloc-Šéǫûéñçîñĝ",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "program/express/2022": {
@@ -1048,7 +1048,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/express/2022": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "behavior/express/2022": {
@@ -1064,7 +1064,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2022": {
-          "word": "Coder",
+          "word": "Pseudoloc-çôðé",
           "definition": "Fait d'écrire du code, c'est-à-dire écrire des instructions pour un ordinateur."
         },
         "loop/express/2022": {
@@ -1084,7 +1084,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2022": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2022": {
@@ -1096,7 +1096,7 @@
           "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2022": {
-          "word": "Fonction",
+          "word": "Pseudoloc-Ƒûñçţîôñ",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "prompt/express/2022": {
@@ -1152,7 +1152,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/pre-express/2022": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/pre-express/2022": {
@@ -1160,7 +1160,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/pre-express/2022": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "persistence/pre-express/2022": {
@@ -1180,7 +1180,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "artificial_intelligence/ai-ethics/2023": {
-          "word": "Intelligence artificielle"
+          "word": "Pseudoloc-Àŕţîƒîçîàļ Îñţéļļîĝéñçé"
         },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptation",
@@ -1255,7 +1255,7 @@
           "definition": "Une chose qu'un programme vérifie pour voir si elle est véridique avant d'autoriser une action"
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Des instructions qui ne s'exécutent que sous certaines conditions"
         },
         "ecosystem/csc-ecosystems/2023": {
@@ -1287,7 +1287,7 @@
           "definition": "Scientifique qui étudie comment les animaux et les plantes interagissent avec leur environnement."
         },
         "energy/csc-ecosystems/2023": {
-          "word": "Énergie",
+          "word": "Pseudoloc-Éñéŕĝý",
           "definition": "Transférée entre les organismes au sein de réseaux trophiques, des producteurs aux consommateurs. Cette énergie est utilisée par les organismes pour effectuer des tâches complexes."
         },
         "food_chain/csc-ecosystems/2023": {
@@ -1311,7 +1311,7 @@
           "definition": "Une image ou un personnage dans votre programme."
         },
         "map/csc-mappinglandmarks/2023": {
-          "word": "Carte",
+          "word": "Pseudoloc-Ṁàþ",
           "definition": "Représentation d'une zone terrestre ou maritime présentant des caractéristiques physiques, des villes, des routes, etc."
         },
         "pattern/csc-starquilts/2023": {
@@ -1327,7 +1327,7 @@
           "definition": "Un cadeau traditionnel et apprécié des Amérindiens des Grandes Plaines"
         },
         "artist/csc-starquilts/2023": {
-          "word": "Artiste",
+          "word": "Pseudoloc-Àŕţîšţ",
           "definition": "Vous pouvez écrire du code pour lui faire dessiner presque n'importe quoi"
         },
         "loop/csc-starquilts/2023": {
@@ -1367,7 +1367,8 @@
           "definition": "Une image ou un personnage dans votre programme"
         },
         "time_capsule/csc-timecapsule/2023": {
-          "definition": "Un endroit pour conserver des souvenirs et des objets du quotidien qui représentent une journée dans la vie d'une personne vivant à une période donnée. "
+          "definition": "Un endroit pour conserver des souvenirs et des objets du quotidien qui représentent une journée dans la vie d'une personne vivant à une période donnée. ",
+          "word": "Pseudoloc-Ţîɱé Çàþšûļé"
         },
         "code/poetry/2023": {
           "word": "Code",
@@ -1398,11 +1399,11 @@
           "definition": "Des commentaires respectueux qui aident quelqu'un à améliorer son travail"
         },
         "poetry_circle/poetry/2023": {
-          "word": "Cercle de poésie",
+          "word": "Pseudoloc-Þôéţŕý Çîŕçļé",
           "definition": "Un espace sûr et créatif pour tester de nouveaux poèmes et obtenir des commentaires constructifs des autres"
         },
         "computer/csd/2023": {
-          "word": "Ordinateur"
+          "word": "Pseudoloc-Çôɱþûţéŕ"
         },
         "input/csd/2023": {
           "word": "Entrée"
@@ -1423,7 +1424,7 @@
           "word": "CSS"
         },
         "copyright/csd/2023": {
-          "word": "Copyright",
+          "word": "Pseudoloc-Çôþýŕîĝĥţ",
           "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "relevant/csd/2023": {
@@ -1434,7 +1435,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/csd/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/csd/2023": {
@@ -1452,20 +1453,20 @@
           "word": "Condition"
         },
         "conditionals/csd/2023": {
-          "word": "Instructions conditionnelles"
+          "word": "Pseudoloc-Çôñðîţîôñàļš"
         },
         "abstraction/csd/2023": {
-          "word": "Abstraction"
+          "word": "Pseudoloc-Àƀšţŕàçţîôñ"
         },
         "function/csd/2023": {
-          "word": "Fonction"
+          "word": "Pseudoloc-Ƒûñçţîôñ"
         },
         "user/csd/2023": {
           "word": "Utilisateur",
           "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
         },
         "machine_learning/csd/2023": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "algorithm/coursea/2023": {
@@ -1473,7 +1474,7 @@
           "definition": "Une liste d'étapes pour terminer une tâche. "
         },
         "debugging/coursea/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/coursea/2023": {
@@ -1501,7 +1502,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "programming/coursea/2023": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "loop/coursea/2023": {
@@ -1525,7 +1526,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/courseb/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "click/courseb/2023": {
@@ -1549,7 +1550,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/courseb/2023": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "persistence/courseb/2023": {
@@ -1577,7 +1578,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/coursec/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/coursec/2023": {
@@ -1585,14 +1586,14 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "sequencing/coursec/2023": {
-          "word": "Séquencement",
+          "word": "Pseudoloc-Šéǫûéñçîñĝ",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "persistence/coursec/2023": {
           "word": "Persévérance"
         },
         "programming/coursec/2023": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "loop/coursec/2023": {
@@ -1608,10 +1609,10 @@
           "definition": "Action qui provoque quelque chose."
         },
         "data/coursec/2023": {
-          "word": "Données"
+          "word": "Pseudoloc-Ðàţà"
         },
         "binary/coursec/2023": {
-          "word": "Binaire",
+          "word": "Pseudoloc-Ɓîñàŕý",
           "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
         "algorithm/coursed/2023": {
@@ -1627,7 +1628,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/coursed/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "loop/coursed/2023": {
@@ -1635,7 +1636,7 @@
           "definition": "L'action de faire quelque chose encore et encore."
         },
         "programming/coursed/2023": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "frustrated/coursed/2023": {
@@ -1651,8 +1652,8 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2023": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "repeat/coursed/2023": {
           "word": "Répéter",
@@ -1663,7 +1664,7 @@
           "definition": "Une instruction pour l'ordinateur. Lorsque de nombreuses commandes sont rassemblées, cela forme des algorithmes et des programmes informatiques."
         },
         "conditionals/coursed/2023": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "pseudocode/coursed/2023": {
@@ -1699,13 +1700,13 @@
           "definition": "Faire quelque chose de nouveau."
         },
         "function/coursee/2023": {
-          "word": "Fonction"
+          "word": "Pseudoloc-Ƒûñçţîôñ"
         },
         "condition/coursee/2023": {
           "word": "Condition"
         },
         "conditionals/coursee/2023": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/coursee/2023": {
@@ -1713,7 +1714,7 @@
           "definition": "Une boucle qui continue de se répéter tant qu'une condition est vraie."
         },
         "copyright/coursee/2023": {
-          "word": "Copyright",
+          "word": "Pseudoloc-Çôþýŕîĝĥţ",
           "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
         },
         "define/coursee/2023": {
@@ -1772,7 +1773,7 @@
           "definition": "un programme qui reproduit ou imite des caractéristiques clés d'un événement du monde réel afin d'étudier son comportement en évitant le coût, le temps et le danger de mener une telle expérience dans la vie réelle. "
         },
         "machine_learning/coursef/2023": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "dns/coursef/2023": {
@@ -1788,7 +1789,7 @@
           "definition": "Une connexion qui utilise la lumière pour transmettre les informations."
         },
         "internet/coursef/2023": {
-          "word": "Internet",
+          "word": "Pseudoloc-Îñţéŕñéţ",
           "definition": "Un groupe d'ordinateurs et de serveurs qui sont reliés les uns aux autres."
         },
         "ip_address/coursef/2023": {
@@ -1836,11 +1837,11 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/express/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "sequencing/express/2023": {
-          "word": "Séquencement",
+          "word": "Pseudoloc-Šéǫûéñçîñĝ",
           "definition": "Mettre les commandes dans le bon ordre afin que les ordinateurs puissent lire les commandes."
         },
         "program/express/2023": {
@@ -1848,7 +1849,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/express/2023": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "behavior/express/2023": {
@@ -1864,7 +1865,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2023": {
-          "word": "Coder",
+          "word": "Pseudoloc-çôðé",
           "definition": "Fait d'écrire du code, c'est-à-dire écrire des instructions pour un ordinateur."
         },
         "loop/express/2023": {
@@ -1884,7 +1885,7 @@
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/express/2023": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "while_loop/express/2023": {
@@ -1896,7 +1897,7 @@
           "definition": "Une commande qui indique de faire quelque chose uniquement jusqu'à ce qu'une chose devienne vraie."
         },
         "function/express/2023": {
-          "word": "Fonction",
+          "word": "Pseudoloc-Ƒûñçţîôñ",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "prompt/express/2023": {
@@ -1952,7 +1953,7 @@
           "definition": "Partie d'un programme qui ne fonctionne pas correctement."
         },
         "debugging/pre-express/2023": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/pre-express/2023": {
@@ -1960,7 +1961,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "programming/pre-express/2023": {
-          "word": "Programmation",
+          "word": "Pseudoloc-Þŕôĝŕàɱɱîñĝ",
           "definition": "L'art de créer un programme."
         },
         "persistence/pre-express/2023": {
@@ -1980,7 +1981,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "machine_learning/how-ai-works/2023": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "algorithm/how-ai-works/2023": {
@@ -2004,27 +2005,27 @@
           "definition": "une façon d'utiliser deux modèles d'IA concurrents pour générer quelque chose"
         },
         "artificial_intelligence/how-ai-works/2023": {
-          "word": "Intelligence artificielle",
+          "word": "Pseudoloc-Àŕţîƒîçîàļ Îñţéļļîĝéñçé",
           "definition": "la capacité des machines à apprendre et à résoudre des problèmes."
         },
         "code/aquatic/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "condition/aquatic/unversioned": {
           "word": "Condition",
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Instructions conditionnelles",
+          "word": "Pseudoloc-Çôñðîţîôñàļš",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "loops/aquatic/unversioned": {
-          "word": "Boucles",
+          "word": "Pseudoloc-Ļôôþš",
           "definition": "L'action de faire quelque chose encore et encore."
         },
         "program/aquatic/unversioned": {
@@ -2033,10 +2034,10 @@
         },
         "code/artist/unversioned": {
           "word": "Code",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/artist/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/artist/unversioned": {
@@ -2044,11 +2045,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/basketball/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/basketball/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "event/basketball/unversioned": {
@@ -2060,8 +2061,8 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance-2019/unversioned": {
-          "word": "coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "event/dance-2019/unversioned": {
           "word": "Évènement",
@@ -2072,8 +2073,8 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "event/dance-extras-2019/unversioned": {
           "word": "Évènement",
@@ -2084,8 +2085,8 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance-extras/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "event/dance-extras/unversioned": {
           "word": "Évènement",
@@ -2096,8 +2097,8 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "event/dance/unversioned": {
           "word": "Évènement",
@@ -2108,11 +2109,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/flappy/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/flappy/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/flappy/unversioned": {
@@ -2120,11 +2121,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/frozen/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/frozen/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/frozen/unversioned": {
@@ -2132,27 +2133,27 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/gumball/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/gumball/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
+          "definition": "Pseudoloc-Ƒîñðîñĝ àñð ƒîẋîñĝ þŕôƀļéɱš îñ àñ àļĝôŕîţĥɱ ôŕ þŕôĝŕàɱ·"
         },
         "program/gumball/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+          "word": "Pseudoloc-Þŕôĝŕàɱ",
+          "definition": "Pseudoloc-Àñ àļĝôŕîţĥɱ ţĥàţ ĥàš ƀééñ çôðéð îñţô šôɱéţĥîñĝ ţĥàţ çàñ ƀé ŕûñ ƀý à ɱàçĥîñé·"
         },
         "code/hero/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/hero/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "function/hero/unversioned": {
-          "word": "Fonction",
+          "word": "Pseudoloc-Ƒûñçţîôñ",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
         },
         "program/hero/unversioned": {
@@ -2163,11 +2164,11 @@
           "word": "Chiffrement"
         },
         "code/hourofcode/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/hourofcode/unversioned": {
@@ -2175,11 +2176,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/iceage/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/iceage/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/iceage/unversioned": {
@@ -2187,11 +2188,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/infinity/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/infinity/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/infinity/unversioned": {
@@ -2199,11 +2200,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/mc/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/mc/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "program/mc/unversioned": {
@@ -2211,11 +2212,11 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/minecraft/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/minecraft/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "event/minecraft/unversioned": {
@@ -2231,7 +2232,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "machine_learning/oceans/unversioned": {
-          "word": "L'Apprentissage Automatique",
+          "word": "Pseudoloc-Ṁàçĥîñé Ļéàŕñîñĝ",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "event/outbreak/unversioned": {
@@ -2243,16 +2244,16 @@
           "definition": "un programme qui reproduit ou imite des caractéristiques clés d'un événement du monde réel afin d'étudier son comportement en évitant le coût, le temps et le danger de mener une telle expérience dans la vie réelle. "
         },
         "code/playlab/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/playlab/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
+          "definition": "Pseudoloc-Ƒîñðîñĝ àñð ƒîẋîñĝ þŕôƀļéɱš îñ àñ àļĝôŕîţĥɱ ôŕ þŕôĝŕàɱ·"
         },
         "program/playlab/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+          "word": "Pseudoloc-Þŕôĝŕàɱ",
+          "definition": "Pseudoloc-Àñ àļĝôŕîţĥɱ ţĥàţ ĥàš ƀééñ çôðéð îñţô šôɱéţĥîñĝ ţĥàţ çàñ ƀé ŕûñ ƀý à ɱàçĥîñé·"
         },
         "code/poem-art/2021": {
           "word": "Code",
@@ -2278,7 +2279,7 @@
           "word": "Code"
         },
         "debugging/sports/unversioned": {
-          "word": "Le Débogage",
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
           "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
         },
         "event/sports/unversioned": {
@@ -2290,35 +2291,35 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/starwars/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/starwars/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
+          "definition": "Pseudoloc-Ƒîñðîñĝ àñð ƒîẋîñĝ þŕôƀļéɱš îñ àñ àļĝôŕîţĥɱ ôŕ þŕôĝŕàɱ·"
         },
         "program/starwars/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+          "word": "Pseudoloc-Þŕôĝŕàɱ",
+          "definition": "Pseudoloc-Àñ àļĝôŕîţĥɱ ţĥàţ ĥàš ƀééñ çôðéð îñţô šôɱéţĥîñĝ ţĥàţ çàñ ƀé ŕûñ ƀý à ɱàçĥîñé·"
         },
         "code/starwarsblocks/unversioned": {
-          "word": "Coder",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "word": "Pseudoloc-çôðé",
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Le Débogage",
-          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+          "word": "Pseudoloc-Ðéƀûĝĝîñĝ",
+          "definition": "Pseudoloc-Ƒîñðîñĝ àñð ƒîẋîñĝ þŕôƀļéɱš îñ àñ àļĝôŕîţĥɱ ôŕ þŕôĝŕàɱ·"
         },
         "program/starwarsblocks/unversioned": {
-          "word": "Programme",
-          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+          "word": "Pseudoloc-Þŕôĝŕàɱ",
+          "definition": "Pseudoloc-Àñ àļĝôŕîţĥɱ ţĥàţ ĥàš ƀééñ çôðéð îñţô šôɱéţĥîñĝ ţĥàţ çàñ ƀé ŕûñ ƀý à ɱàçĥîñé·"
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Compression Sans Perte"
         },
         "code/dance-ai/2023": {
           "word": "Code",
-          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+          "definition": "Pseudoloc-(ṽ) ţô ŵŕîţé çôðé، ôŕ ţô ŵŕîţé îñšţŕûçţîôñš ƒôŕ à çôɱþûţéŕ·"
         },
         "event/dance-ai/2023": {
           "word": "Évènement",

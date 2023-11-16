@@ -2,20 +2,17 @@
 fr:
   data:
     parameter_names:
-      "???": "???"
-      actor: acteur
-      color: couleur
-      counter: compteur
-      direction: direction
-      height: hauteur
-      honey: miel
-      left: vers la gauche
-      length: longueur
-      min: min
-      nectars: nectars
-      points: points
-      radius: rayon
-      sides: côtés
-      size: taille
-      speed: vitesse
-      width: largeur
+      actor: Pseudoloc-àçţôŕ
+      color: Pseudoloc-çôļôŕ
+      counter: Pseudoloc-çôûñţéŕ
+      height: Pseudoloc-ĥéîĝĥţ
+      honey: Pseudoloc-ĥôñéý
+      left: Pseudoloc-ļéƒţ
+      length: Pseudoloc-ļéñĝţĥ
+      min: Pseudoloc-ɱîñ
+      points: Pseudoloc-þôîñţš
+      radius: Pseudoloc-ŕàðîûš
+      sides: Pseudoloc-šîðéš
+      size: Pseudoloc-šîžé
+      speed: Pseudoloc-šþééð
+      width: Pseudoloc-ŵîðţĥ

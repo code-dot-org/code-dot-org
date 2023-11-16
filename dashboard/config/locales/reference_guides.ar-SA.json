@@ -3,13 +3,13 @@
     "data": {
       "reference_guides": {
         "csd-2022/ai-lab": {
-          "display_name": "مختبر الذكاء الاصطناعي"
+          "display_name": "Pseudoloc-له ما"
         },
         "csd-2022/app-lab": {
-          "display_name": "مختبر التطبيق"
+          "display_name": "Pseudoloc-لحح لا"
         },
         "csd-2022/applab-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/arrays": {
           "display_name": "المصفوفات"
@@ -18,16 +18,16 @@
           "display_name": "أحداث اللوحة"
         },
         "csd-2022/circuit-playground": {
-          "display_name": "نظرة عامة على ملعب الدائرة"
+          "display_name": "Pseudoloc-ؤهقؤهف حلغلقعىي رثقرثص"
         },
         "csd-2022/classes": {
-          "display_name": "الفصول الدراسية"
+          "display_name": "Pseudoloc-ؤملسثس"
         },
         "csd-2022/collision-detection": {
           "display_name": "كشف التصادم"
         },
         "csd-2022/css-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/design-mode": {
           "display_name": "وضع التصميم"
@@ -36,82 +36,82 @@
           "display_name": "تصميم الشاشات باستخدام الكود"
         },
         "csd-2022/for-loops": {
-          "display_name": "للحلقات"
+          "display_name": "Pseudoloc-بخق خخحس"
         },
         "csd-2022/functions": {
-          "display_name": "دوال"
+          "display_name": "Pseudoloc-بعىؤهخىس"
         },
         "csd-2022/game-lab": {
-          "display_name": "مختبر اللعب"
+          "display_name": "Pseudoloc-للةثملا"
         },
         "csd-2022/game-lab-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/html-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/images-in-html": {
           "display_name": "الصور بصيغة HTML"
         },
         "csd-2022/introduction-to-ai-lab": {
-          "display_name": "مقدمة لمختبر الذكاء الاصطناعي"
+          "display_name": "Pseudoloc-هىفقيعؤفخى ف له لا"
         },
         "csd-2022/javascript": {
-          "display_name": "جافا سكريبت"
+          "display_name": "Pseudoloc-تلرلؤقهح"
         },
         "csd-2022/javascript-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/lists": {
-          "display_name": "القوائم"
+          "display_name": "Pseudoloc-مهسف"
         },
         "csd-2022/maker-toolkit": {
-          "display_name": "مجموعة أدوات المصمِّم"
+          "display_name": "Pseudoloc-ةلنث فخخنهف"
         },
         "csd-2022/maker-toolkit-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/model-cards-in-ai-lab": {
-          "display_name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي"
+          "display_name": "Pseudoloc-ةخيث ؤلقس هىله ما"
         },
         "csd-2022/multi-screen-apps": {
           "display_name": "التطبيقات متعددة الشاشات"
         },
         "csd-2022/other": {
-          "display_name": "الأخرى"
+          "display_name": "Pseudoloc-خفاث"
         },
         "csd-2022/other-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/patterns-overview": {
-          "display_name": "لمحة عامة"
+          "display_name": "Pseudoloc-خرثقهثص"
         },
         "csd-2022/problem-solving-process": {
-          "display_name": "عملية حل المشكلات"
+          "display_name": "Pseudoloc-فاث قخامة سخرهىلحقخؤسس"
         },
         "csd-2022/problem-solving-process-general": {
-          "display_name": "عملية حل المشكلات"
+          "display_name": "Pseudoloc-فاث قخامة سخرهىلحقخؤسس"
         },
         "csd-2022/sprite-properties": {
-          "display_name": "خصائص الكائنات"
+          "display_name": "Pseudoloc-سحقهث حقحثقفثس"
         },
         "csd-2022/sprites": {
-          "display_name": "النقوش المتحركة"
+          "display_name": "Pseudoloc-سحقهثس"
         },
         "csd-2022/the-draw-loop": {
           "display_name": "حلقة الرسم"
         },
         "csd-2022/variables": {
-          "display_name": "المتغيرات"
+          "display_name": "Pseudoloc-رلقهامثس"
         },
         "csd-2022/velocity": {
-          "display_name": "السرعة"
+          "display_name": "Pseudoloc-رثمخهفغ"
         },
         "csd-2022/web-lab": {
-          "display_name": "مختبر الويب"
+          "display_name": "Pseudoloc-صثا لا"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "content": "Pseudoloc-![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
     }

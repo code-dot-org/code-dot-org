@@ -2,45 +2,19 @@
 ar:
   data:
     block_categories:
-      Actions: الإجراءات
-      Advanced: مُتقدم
-      Behaviors: السلوك
-      Brushes: فرش
-      Category: الفئة
-      Color: اللون
-      Comment: تعليق
-      Comments: 'تعليقات
-
-        '
-      Conditionals: الجمل الشرطية
-      Dancers: الراقصون
-      Default: الافتراضي
-      Effects: المؤثرات
-      Events: الأحداث
-      Functions: دوال
-      'Functions ': 'الدوال '
-      Game/Score: لعبة/نقطة
-      Games/Score: 'ألعاب/نقطة
-
-        '
-      Groups: 'مجموعات
-
-        '
-      Input: الإدخال
-      Location: الموقع
-      Locations: مواقع
-      Logic: المنطق
-      Loops: الحلقات
-      Math: العمليات الحسابية
-      Numbers: أرقام
-      Properties: 'خصائص
-
-        '
-      Sprites: النقوش المتحركة
-      Text: النص
-      Variables: المتغيرات
-      'Variables ': 'المتغيرات
-
-        '
-      'Variables  ': 'المتغيرات  '
-      World: العالم
+      Actions: Pseudoloc-لؤفهىس
+      Category: Pseudoloc-ؤلفثخقغ
+      Color: Pseudoloc-ؤخمخ
+      Conditionals: Pseudoloc-ؤخىيفهخىمس
+      Default: Pseudoloc-يثبلمف
+      Effects: Pseudoloc-ثببثفس
+      Events: Pseudoloc-ثرثىس
+      Functions: Pseudoloc-بعىؤهخىس
+      Groups: Pseudoloc-لقخعس
+      Location: Pseudoloc-مخؤلهخى
+      Logic: Pseudoloc-مخله
+      Loops: Pseudoloc-مخخح
+      Math: Pseudoloc-ةلفا
+      Sprites: Pseudoloc-سحقهثس
+      Text: Pseudoloc-فثءف
+      Variables: Pseudoloc-رلقهامثس

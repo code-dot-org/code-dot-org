@@ -3,671 +3,232 @@ fr:
   data:
     unplugged:
       BigEvent:
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
-          en fonction du bouton choisi.
-        title: Le Grand Événement
+        title: Pseudoloc-Ţĥé Ɓîĝ Éṽéñţ
       BigEvent_2018:
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
-          en fonction du bouton choisi.
-        title: Le Grand Événement
+        title: Pseudoloc-Ţĥé Ɓîĝ Éṽéñţ
       BigEvent_2019:
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
-          en fonction du bouton choisi.
-        title: Le Grand Événement
+        title: Pseudoloc-Ţĥé Ɓîĝ Éṽéñţ
       BinaryBracelets:
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
-        title: Bracelets binaires
+        title: Pseudoloc-Ɓîñàŕý Ɓŕàçéļéţš
       BinaryBracelets_2018:
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
-        title: Bracelets binaires
+        title: Pseudoloc-Ɓîñàŕý Ɓŕàçéļéţš
       BinaryBracelets_2019:
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
-        title: Bracelets binaires
+        title: Pseudoloc-Ɓîñàŕý Ɓŕàçéļéţš
       BinaryImages:
-        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées dans une variété d'options binaires.
-          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
-        title: Images Binaires
+        title: Pseudoloc-Ɓîñàŕý Îɱàĝéš
       BinaryImages_2018:
-        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées dans une variété d'options binaires.
-          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
-        title: Images Binaires
+        title: Pseudoloc-Ɓîñàŕý Îɱàĝéš
       BinaryImages_2019:
-        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées dans une variété d'options binaires.
-          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
-        title: Images Binaires
-      Booleans:
-        desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
-          dans ce cours. Dans le cadre de cette activité, vous apprendrez ce que sont
-          les booléens, et comment ceux-ci permettent d’écrire des fonctions qui pensent
-          logiquement.
-        title: Les Booléens et la Logique
+        title: Pseudoloc-Ɓîñàŕý Îɱàĝéš
       BuildingAFoundation:
-        desc: Les élèves construisent une structure en utilisant uniquement les éléments
-          fournis. Les structures doivent accomplir une tâche (atteindre une certaine
-          hauteur ou soutenir un certain poids), et les élèves discutent du fait de
-          persévérer lorsque les choses se compliquent.
-        title: Construire une Fondation
+        title: Pseudoloc-Ɓûîļðîñĝ à Ƒôûñðàţîôñ
       BuildingAFoundation_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.title'
-      CollisionDetection:
-        desc: Déterminer le moment où les objets sur l'écran se touchent est un aspect
-          important de la plupart des jeux. Dans le cadre de cette leçon, nous verrons
-          comment le Théorème de Pythagore et la Formule de Distance peuvent servir
-          à mesurer la distance entre deux points sur le plan et déciderons ensuite
-          si ces deux points (ou les personnages du jeu) se touchent.
-        title: La Détection de Collision et le Théorème de Pythagore
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·ƁûîļðîñĝÀƑôûñðàţîôñ_②ⓞ①⑧·ţîţļé
       ComputationalThinking:
-        desc: Les élèves utilisent les étapes de la pensée computationnelle (décomposition,
-          recherche de motifs, abstraction, algorithme) pour découvrir comment jouer
-          à un jeu livré sans instructions.
-        title: Algorithmique
+        title: Pseudoloc-Çôɱþûţàţîôñàļ Ţĥîñķîñĝ
       Conditionals:
-        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
-          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
-          ».
-        title: Instructions conditionnelles
-      ConditionalsPiecewiseFunctions:
-        desc: Les paramètres que nous transmettons aux fonctions amènent les résultats
-          à varier selon un schéma très rigide. Supposons que nous voulons des paramètres
-          avec des valeurs pour créer des résultats utilisant un schéma, mais d’autres
-          valeurs pour utiliser un schéma différent. C'est dans ces cas que les conditions
-          deviennent nécessaires...
-        title: Conditions et Fonctions par Morceaux
+        title: Pseudoloc-Çôñðîţîôñàļš
       Conditionals_2018:
-        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
-          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
-          ».
-        title: Instructions conditionnelles
+        title: Pseudoloc-Çôñðîţîôñàļš
       Conditionals_2019:
-        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
-          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
-          ».
-        title: Instructions conditionnelles
-      Contracts:
-        desc: Les contrats nous donnent un moyen de comprendre et de discuter des
-          fonctions. Dans cette leçon, nous verrons comment les contrats peuvent nous
-          aider à comprendre un nouveau langage de programmation ou une nouvelle fonction.
-        title: Contrats, Domaine et Gamme
+        title: Pseudoloc-Çôñðîţîôñàļš
       Crowdsourcing:
-        desc: Les élèves utilisent la production participative, une technique de résolution
-          de problèmes répandue en informatique, et toute la classe accomplit ainsi
-          une tâche plus efficacement que si un élève l'avait tentée seul.
-        title: Production Participative
+        title: Pseudoloc-Çŕôŵðšôûŕçîñĝ
       Crowdsourcing_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title
-
-          '
-      DesignRecipe:
-        desc: Lors de la dernière étape, les élèves ont écrit quelques fonctions très
-          simples - mais des fonctions plus sophistiquées exigent une approche plus
-          réfléchie. La Recette de Conception est une approche structurée servant
-          à écrire des fonctions, et qui inclut la rédaction de scénarios de test
-          pour s'assurer que la fonction s’exécute comme prévu.
-        title: La Recette de Conception
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·Çŕôŵðšôûŕçîñĝ_②ⓞ①⑧·ţîţļé
       DiceRace:
-        desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
-          dans nos vies quotidiennes. Dans ce cadre, les élèves vont identifier et
-          écrire l'algorithme d'un jeu de courses de dés.
-        title: 'Algorithmes du Monde Réel : La Course de Dés'
+        title: Pseudoloc-Ŕéàļ Ļîƒé Àļĝôŕîţĥɱš∶ Ðîçé Ŕàçé
       DigitalCitizenship:
-        desc: Les élèves explorent la différence entre les informations privées et
-          les informations personnelles, en distinguant ce qui est sûr de ce qui est
-          risqué de partager, en ligne.
-        title: Citoyenneté Numérique
+        title: Pseudoloc-Ðîĝîţàļ Çîţîžéñšĥîþ
       DigitalFootprint:
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique, ou « trace »,
-          qui a des conséquences.
-        title: Ton Empreinte Numérique
+        title: Pseudoloc-Ýôûŕ Ðîĝîţàļ Ƒôôţþŕîñţ
       DigitalFootprint_2018:
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique, ou « trace »,
-          qui a des conséquences.
-        title: Ton Empreinte Numérique
+        title: Pseudoloc-Ýôûŕ Ðîĝîţàļ Ƒôôţþŕîñţ
       DigitalFootprint_2019:
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique, ou « trace »,
-          qui a des conséquences.
-        title: Ton Empreinte Numérique
+        title: Pseudoloc-Ýôûŕ Ðîĝîţàļ Ƒôôţþŕîñţ
       EnvelopeVariables:
-        desc: Les variables offrent une grande liberté en informatique. Cette leçon
-          permet d'expliquer ce que sont les variables et les différentes manières
-          dont nous pouvons les utiliser. Utilisez cette activité avant (ou avec)
-          la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
-          le concept.
-        title: Variables de l'Enveloppe
+        title: Pseudoloc-Éñṽéļôþé Ṽàŕîàƀļéš
       EnvelopeVariables_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.title'
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·ÉñṽéļôþéṼàŕîàƀļéš_②ⓞ①⑧·ţîţļé
       ForLoopFun:
-        desc: Nous savons que les boucles nous permettent de répéter des choses encore
-          et encore, mais désormais nous allons apprendre à utiliser les boucles avec
-          des structures supplémentaires intégrées.
-        title: "« Pour » s'amuser en boucle"
+        title: Pseudoloc-Ƒôŕ Ļôôþ Ƒûñ
       ForLoopFun_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.title'
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·ƑôŕĻôôþƑûñ_②ⓞ①⑧·ţîţļé
       FunctionalSuncatchers:
-        desc: Les élèves créent un algorithme avec des variables et des fonctions
-          (portions de code que l’on utilise encore et encore) pour créer des capteurs
-          de soleil à l’aide de ficelles et de perles.
-        title: Capteurs de Soleil Fonctionnels
+        title: Pseudoloc-Ƒûñçţîôñàļ Šûñçàţçĥéŕš
       GettingLoopy:
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
-        title: Affaire bouclée
+        title: Pseudoloc-Ĝéţţîñĝ Ļôôþý
       GettingLoopy_2018:
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
-        title: Affaire bouclée
+        title: Pseudoloc-Ĝéţţîñĝ Ļôôþý
       GettingLoopy_2019:
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
-        title: Affaire bouclée
+        title: Pseudoloc-Ĝéţţîñĝ Ļôôþý
       GoingPlacesSafely:
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité durant la navigation sur Internet.
-        title: Se Déplacer en Toute Sécurité
+        title: Pseudoloc-Ĝôîñĝ Þļàçéš Šàƒéļý
       GoingPlacesSafely_2018:
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité durant la navigation sur Internet.
-        title: Se Déplacer en Toute Sécurité
+        title: Pseudoloc-Ĝôîñĝ Þļàçéš Šàƒéļý
       GoingPlacesSafely_2019:
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité durant la navigation sur Internet.
-        title: Se Déplacer en Toute Sécurité
+        title: Pseudoloc-Ĝôîñĝ Þļàçéš Šàƒéļý
       GraphPaperProgramming:
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
-          reproduction d’un dessin.
-        title: Programmation sur papier quadrillé
+        title: Pseudoloc-Ĝŕàþĥ Þàþéŕ Þŕôĝŕàɱɱîñĝ
       GraphPaperProgramming_2018:
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
-          reproduction d’un dessin.
-        title: Programmation sur papier quadrillé
+        title: Pseudoloc-Ĝŕàþĥ Þàþéŕ Þŕôĝŕàɱɱîñĝ
       GraphPaperProgramming_2019:
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
-          reproduction d’un dessin.
-        title: Programmation sur papier quadrillé
+        title: Pseudoloc-Ĝŕàþĥ Þàþéŕ Þŕôĝŕàɱɱîñĝ
       GraphingData_2019:
-        desc: Dans cette leçon, les élèves collecteront des données à partir d’un
-          projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire
-          des prévisions.
-        title: Se représenter les Données
+        title: Pseudoloc-Þîçţûŕîñĝ Ðàţà
       Internet:
-        desc: Les élèves envoient des messages représentant diverses méthodes de transmission
-          Internet à l'aide de bouts de papier.
-        title: Internet
+        title: Pseudoloc-Îñţéŕñéţ
       Internet_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.Internet_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.Internet_2018.title'
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·Îñţéŕñéţ_②ⓞ①⑧·ţîţļé
       MadGlibs:
-        desc: L’abstraction est l'une des compétences les plus importantes que doit
-          comprendre un informaticien. Vos élèves analyseront des histoires, en particulier
-          leurs différences, afin de pouvoir en faire abstraction. Ces histoires abrégées
-          deviennent des modèles pour de nouvelles histoires folles et amusantes.
-        title: Mad Glibs
+        title: Pseudoloc-Ṁàð Ĝļîƀš
       MoveIt:
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
-        title: Déplace-le, Déplace-le
+        title: Pseudoloc-Ṁôṽé îţ، Ṁôṽé îţ
       MoveItMoveIt_2018:
-        title: Bouge, Bouge ton corps
+        title: Pseudoloc-Ṁôṽé Îţ، Ṁôṽé Îţ
       MoveItMoveIt_2019:
-        title: Bouge, Bouge ton corps
+        title: Pseudoloc-Ṁôṽé Îţ، Ṁôṽé Îţ
       PaperPlanes:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
-          en papier. Cette leçon se concentre également sur l'informatique, en général,
-          et le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Avions en Papier'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þàþéŕ Þļàñéš
       PaperPlanes_2018:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
-          en papier. Cette leçon se concentre également sur l'informatique, en général,
-          et le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Avions en Papier'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þàþéŕ Þļàñéš
       PaperPlanes_2019:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
-          en papier. Cette leçon se concentre également sur l'informatique, en général,
-          et le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Avions en Papier'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þàþéŕ Þļàñéš
       PlantASeed:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
-          une graine. Elle se concentre également sur l'informatique en général, et
-          le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Planter une Graine'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þļàñţ à Šééð
       PlantASeed_2018:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
-          une graine. Elle se concentre également sur l'informatique en général, et
-          le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Planter une Graine'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þļàñţ à Šééð
       PlantASeed_2019:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
-          une graine. Elle se concentre également sur l'informatique en général, et
-          le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Planter une Graine'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þļàñţ à Šééð
       RelayProgramming:
-        desc: Les élèves effectuent une course de relais, où ils traversent rapidement
-          le jardin pour aller écrire un algorithme, basé sur une image de « Programmation
-          sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à
-          la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour
-          retourner à ce point.
-        title: Programmation de relais
+        title: Pseudoloc-Ŕéļàý Þŕôĝŕàɱɱîñĝ
       RelayProgramming_2018:
-        desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
-          puis passera rapidement à une course contre la montre, pendant laquelle
-          les élèves formeront des équipes et travailleront ensemble à la rédaction
-          d'un programme, instruction par instruction.
-        title: Programmation en relais
+        title: Pseudoloc-Ŕéļàý Þŕôĝŕàɱɱîñĝ
       RelayProgramming_2018_2019:
-        desc: Cette activité débutera par une brève leçon sur le débogage et la persévérance,
-          puis passera rapidement à une course contre la montre, pendant laquelle
-          les élèves formeront des équipes et travailleront ensemble à la rédaction
-          d'un programme, instruction par instruction.
-        title: Programmation en relais
+        title: Pseudoloc-Ŕéļàý Þŕôĝŕàɱɱîñĝ
       SongwritingParameters:
-        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          ce que sont la définition et l’appel de fonctions.
-        title: Écrire des chansons
+        title: Pseudoloc-Šôñĝŵŕîţîñĝ
       SongwritingParameters_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·ŠôñĝŵŕîţîñĝÞàŕàɱéţéŕš_②ⓞ①⑧·ţîţļé
       SongwritingWithParameters:
-        desc: Une des structures vraiment formidables, dans le monde de l’informatique,
-          est la fonction. Les fonctions (parfois appelées procédures) sont de mini-programmes
-          que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme.
-          Cette leçon aidera les élèves à comprendre intuitivement pourquoi le fait
-          d’associer des morceaux de code à des fonctions est une pratique tellement
-          utile.
-        title: Composition de chansons avec des paramètres
+        title: Pseudoloc-Šôñĝŵŕîţîñĝ Ŵîţĥ Þàŕàɱéţéŕš
       TangramAlgorithms:
-        desc: Cette leçon nous démontre quelque chose d'important à propos des algorithmes.
-          Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
-          Si vous souhaitez que tout le monde termine avec la même chose, alors votre
-          algorithme a besoin de plus de détails.
-        title: Algorithmes de Tangram
+        title: Pseudoloc-Ţàñĝŕàɱ Àļĝôŕîţĥɱš
       Unplug1:
-        desc: Cette leçon vise à introduire le concept de l’informatique et expliquer
-          ce que fait un informaticien. Elle donnera également aux élèves l'occasion
-          d'assumer le rôle d'un informaticien. À la fin de l'activité, chaque élève
-          repartira à la maison avec un résumé de ce qu'il ou elle aura appris. Vous
-          pourriez être tenté d’omettre l’enseignement aux jeunes enfants des mots
-          de vocabulaire qui sont associés aux leçons qui suivent. Cependant, les
-          leur présenter de manière amusante et ludique à ce stade est beaucoup plus
-          productif que d'attendre des occasions plus avancées futures.
-        title: Introduction à l'informatique
+        title: Pseudoloc-Îñţŕôðûçţîôñ ţô Çôɱþûţéŕ Šçîéñçé
       Unplug10:
-        desc: Dans cette leçon, les élèves vont faire semblant de naviguer sur Internet,
-          tout en apprenant ce que sont les adresses Web, les adresses IP et les DNS.
-        title: Internet et les réseaux connectés
+        title: Pseudoloc-Ţĥé Îñţéŕñéţ
       Unplug11:
-        desc: La conclusion de cette première série de 20 heures aidera la classe
-          à revivre ses moments préférés, tout en lui annonçant des étapes à suivre,
-          en solo, si elle souhaite poursuivre la découverte de l'informatique.
-        title: Conclusion
+        title: Pseudoloc-Ŵŕàþ‐Ûþ
       Unplug2:
-        desc: Seulement munis de papier et de feutres, les élèves vont apprendre les
-          quatre étapes de la pensée computationnelle. Après une brève introduction,
-          ils seront séparées en groupes pour créer des instructions à partir desquelles
-          d'autres élèves devront dessiner un monstre précis (extrait d'un catalogue
-          de monstres pré-établis). L'intégralité de cette tâche doit être décomposée,
-          puis les équipes étudieront les monstres du catalogue pour trouver un schéma,
-          s'écarter des détails des différents monstres, puis utiliser ces informations
-          pour créer un algorithme (des instructions) pour qu'une autre équipe dessine
-          un monstre choisi. Les groupes échangeront alors leurs algorithmes entre
-          eux et dessineront le monstre sur les indications de l'algorithme. Le dessin
-          représente-t-il ce que la première équipe avait prévu ?
-        title: Algorithmique
+        title: Pseudoloc-Çôɱþûţàţîôñàļ Ţĥîñķîñĝ
       Unplug3:
-        desc: En se programmant les uns les autres pour créer des images, les élèves
-          commenceront à comprendre ce qu'est réellement la programmation. Au début
-          du cours, les élèves devront échanger des instructions pour colorier chaque
-          carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
-          Si il reste du temps à la fin du cours, les élèves pourront alors inventer
-          leurs propres images.
-        title: Programmation sur papier quadrillé
+        title: Pseudoloc-Ĝŕàþĥ Þàþéŕ Þŕôĝŕàɱɱîñĝ
       Unplug4:
-        desc: Cette leçon traite des algorithmes. Le premier exercice se fait à l'aide
-          de formes de tangram et de papier millimétré. Il sert à démontrer combien
-          il est important de rendre chaque instruction aussi claire et la moins équivoque
-          possible. Par la suite, la classe explorera les différentes façons de plier
-          un morceau de papier en rectangle, en notant comment certaines méthodes
-          peuvent requérir plus ou moins de plis que d'autres.
-        title: Algorithmes
+        title: Pseudoloc-Àļĝôŕîţĥɱš
       Unplug5:
-        desc: Dans cette leçon, les élèves fabriqueront un capteur de soleil à l’aide
-          de ficelle, de perles et d’un objet fétiche particulier. Les élèves suivront
-          une série d’étapes répétitives, et il leur sera alors demandé d'identifier
-          certains ensembles de « compétences » qui sont reproduits plusieurs fois.
-          Ces compétences étant définies, elles seront appelées depuis un programme
-          principal et tout le merveilleux processus de création sera enregistré sur
-          une seule feuille de papier. Le programme final vise la classe entière,
-          quel que soit le type de ficelle, de perles et d’objets fétiches. Pour plus
-          d’efficacité, les élèves devront « retirer » les détails de leurs matériaux
-          spécifiques et créer des termes vagues pour les fournitures personnelles.
-          Cette utilisation d'espaces réservés génériques est une merveilleuse introduction
-          aux variables.
-        title: fonctions
-      Unplug6:
-        desc: Il s'agit d'un jeu s’adressant à toute la classe. Après avoir introduit
-          la notion de conditions, de déclarations « si » et de boucles, la classe
-          peut s'entrainer ensemble, à l'aide d'un programme pré-écrit, d'un paquet
-          de cartes et d'un tirage au sort.
-        title: Conditions
+        title: Pseudoloc-Ƒûñçţîôñš
       Unplug7:
-        desc: Lire les paroles d’une chanson est une entreprise très intuitive pour
-          la plupart des élèves. Nous allons prendre une activité qui fait déjà partie
-          du savoir collectif et la transformer en une solide formation sur la définition
-          et l'appel de fonctions. Une fois que les élèves ont compris le processus
-          de définition/appel, nous ajoutons les fonctionnalités supplémentaires qui
-          accompagnent le passage des paramètres lors des appels de fonction.
-        title: Ecriture de chanson
+        title: Pseudoloc-Šôñĝ Ŵŕîţîñĝ
       Unplug8:
-        desc: Cette activité associe le quotidien de vos élèves et un jeu de réflexion
-          de type Mad-Libs (histoire à trous) permettant à votre classe d'appréhender
-          l’efficacité de l'abstraction.
-        title: Abstraction
+        title: Pseudoloc-Àƀšţŕàçţîôñ
       Unplug9:
-        desc: Cette leçon emprunte une idée d'une activité précédente (4. La programmation
-          sur papier millimétré) et utilise ces compétences pour insister sur l'importance
-          de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement
-          ces programmes pour y repérer les « bogues ».
-        title: Relayer la programmation
+        title: Pseudoloc-Ŕéļàý Þŕôĝŕàɱɱîñĝ
       UnplugHappyMaps:
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
-        title: Cartes Joyeuses
+        title: Pseudoloc-Ĥàþþý Ṁàþš
       UnplugHappyMaps_2018:
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
-        title: Cartes Joyeuses
+        title: Pseudoloc-Ĥàþþý Ṁàþš
       UnplugHappyMaps_2019:
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
-        title: Cartes Joyeuses
-      VideoGamesCoordinatePlanes:
-        desc: Découvre comment les jeux vidéo auxquels tu aimes jouer sont en réalité
-          dirigés par l'algèbre ! Explore comment des expressions algébriques et le
-          plan de coordonnées peuvent aider à comprendre le fonctionnement des jeux
-          vidéo, puis commence à planifier la création d’un jeu vidéo.
-        title: Les Jeux Vidéos et les Plans de Coordonnées
+        title: Pseudoloc-Ĥàþþý Ṁàþš
       courseABC_unplugged_bigEvent:
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur les boutons d’une télécommande en papier, et les élèves réagiront
-          en fonction du bouton choisi.
-        title: Le Grand Événement
+        title: Pseudoloc-Ţĥé Ɓîĝ Éṽéñţ
       courseAB_unplugged_plantASeed:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en prenant, comme exemple, l’action de planter
-          une graine. Elle se concentre également sur l'informatique en général, et
-          le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Planter une Graine'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þļàñţ à Šééð
       courseA_unplugged_goingPlacesSafely:
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité durant la navigation sur Internet.
-        title: Se Déplacer en Toute Sécurité
+        title: Pseudoloc-Ĝôîñĝ Þļàçéš Šàƒéļý
       courseA_unplugged_happyMaps:
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
-        title: Cartes Joyeuses
+        title: Pseudoloc-Ĥàþþý Ṁàþš
       courseA_unplugged_loops:
-        desc: Dans cette leçon, tu découvriras les boucles!
-        title: Boucles débranchées
+        title: Pseudoloc-Ļôôþš Ûñþļûĝĝéð
       courseA_unplugged_loops_2018:
-        desc: Dans cette leçon, tu découvriras les boucles!
-        title: Boucles débranchées
+        title: Pseudoloc-Ļôôþš Ûñþļûĝĝéð
       courseA_unplugged_loops_2019:
-        desc: Dans cette leçon, tu découvriras les boucles!
-        title: Boucles débranchées
+        title: Pseudoloc-Ļôôþš Ûñþļûĝĝéð
       courseB_unplugged_CnC_2018:
-        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
-          processus créatif de partage et d'inspiration. Parallèlement à cela vient
-          la promotion de l'expression créative et le besoin d'être juste avec le
-          travail créatif.
-        title: C'est Super de Créer et de Jouer Équitablement
+        title: Pseudoloc-Îţ'š Ĝŕéàţ ţô Çŕéàţé àñð Þļàý Ƒàîŕ
       courseB_unplugged_CnC_2019:
-        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
-          processus créatif de partage et d'inspiration. Parallèlement à cela vient
-          la promotion de l'expression créative et le besoin d'être juste avec le
-          travail créatif.
-        title: C'est Super de Créer et de Jouer Équitablement
+        title: Pseudoloc-Îţ'š Ĝŕéàţ ţô Çŕéàţé àñð Þļàý Ƒàîŕ
       courseB_unplugged_MRF:
-        desc: Dans cette leçon, tu « programmeras » tes amis!
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseB_unplugged_MRF_2018:
-        desc: Apprends à programmer en écrivant du code pour tes amis !
-        title: Mes amis les robots
+        title: Pseudoloc-Ṁý Ŕôƀôţîç Ƒŕîéñðš
       courseB_unplugged_MRF_2019:
-        desc: Apprends à programmer en écrivant du code pour tes amis !
-        title: Mes amis les robots
+        title: Pseudoloc-Ṁý Ŕôƀôţîç Ƒŕîéñðš
       courseB_unplugged_digitalFootprint:
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique, ou « trace »,
-          qui a des conséquences.
-        title: Ton Empreinte Numérique
+        title: Pseudoloc-Ýôûŕ Ðîĝîţàļ Ƒôôţþŕîñţ
       courseB_unplugged_loopyMRF:
-        desc: Tout comme dans « Mes Amis Robotisés », tu vas « programmer » tes amis
-          mais, cette fois, avec des boucles !
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseB_unplugged_loopyMRF_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        title: Pseudoloc-Ṁý Ļôôþý Ŕôƀôţîç Ƒŕîéñðš
       courseB_unplugged_passwords_2019:
-        desc: Découvre pourquoi les gens utilisent des mots de passe, apprends les
-          avantages de l’utilisation des mots de passe, et découvre des stratégies
-          pour créer et garder des mots de passe forts et sûrs.
-        title: Mots de Passe Puissant
+        title: Pseudoloc-Þôŵéŕƒûļ Þàššŵôŕðš
       courseC_Unplugged_ScreenOutTheMean:
-        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
-          méchant en ligne.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseC_Unplugged_ScreenOutTheMean_2018:
-        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
-          méchant en ligne.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseC_Unplugged_ScreenOutTheMean_2019:
-        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
-          méchant en ligne.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseC_unplugged_binaryBracelets:
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
-        title: Bracelets binaires
+        title: Pseudoloc-Ɓîñàŕý Ɓŕàçéļéţš
       courseC_unplugged_buildingAFoundation:
-        desc: Les élèves construisent une structure en utilisant uniquement les éléments
-          fournis. Les structures doivent accomplir une tâche (atteindre une certaine
-          hauteur ou soutenir un certain poids), et les élèves discutent du fait de
-          persévérer lorsque les choses se compliquent.
-        title: Construire une Fondation
+        title: Pseudoloc-Ɓûîļðîñĝ à Ƒôûñðàţîôñ
       courseC_unplugged_gettingLoopy:
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
-        title: Affaire bouclée
+        title: Pseudoloc-Ĝéţţîñĝ Ļôôþý
       courseC_unplugged_paperPlanes:
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
-          en papier. Cette leçon se concentre également sur l'informatique, en général,
-          et le rôle essentiel que jouent les algorithmes.
-        title: 'Algorithmes du Monde Réel : Avions en Papier'
+        title: Pseudoloc-Ŕéàļ‐ļîƒé Àļĝôŕîţĥɱš∶ Þàþéŕ Þļàñéš
       courseD_unplugged_binaryImages:
-        desc: Bien que beaucoup de gens considèrent le binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées dans une variété d'options binaires.
-          Cette leçon emmène ce concept un peu plus loin en illustrant comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
-        title: Images Binaires
+        title: Pseudoloc-Ɓîñàŕý Îɱàĝéš
       courseD_unplugged_conditionalsCards:
-        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
-          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
-          ».
-        title: Les instructions conditionnelles avec des cartes
+        title: Pseudoloc-Çôñðîţîôñàļš ŵîţĥ Çàŕðš
       courseD_unplugged_digitalCitizenship:
-        desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseD_unplugged_digitalCitizenship_2018:
-        desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseD_unplugged_digitalCitizenship_2019:
-        desc: Aujourd'hui, tu apprendras ce que veut dire être un Citoyen Numérique.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseD_unplugged_graphPaperProgramming:
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades dans la
-          reproduction d’un dessin.
-        title: Programmation sur papier quadrillé
+        title: Pseudoloc-Ĝŕàþĥ Þàþéŕ Þŕôĝŕàɱɱîñĝ
       courseD_unplugged_relayProgramming:
-        desc: Les élèves effectuent une course de relais, où ils traversent rapidement
-          le jardin pour aller écrire un algorithme, basé sur une image de « Programmation
-          sur Papier Millimétré». Ils ne peuvent écrire qu’une seule instruction à
-          la fois et, s'il y a une erreur quelque part, ils doivent tout effacer pour
-          retourner à ce point.
-        title: Programmation en relais
+        title: Pseudoloc-Ŕéļàý Þŕôĝŕàɱɱîñĝ
       courseE_simon_says_2019:
-        desc: "Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le
-          bon résultat.\r \\ r![image de test] (https://code.org/images/logo.png)"
-        title: Jacques A Dit
+        title: Pseudoloc-Šîɱôñ Šàýš
       courseE_unplugged_CnC_2018:
-        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
-          défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les élèves devraient
-          être encouragés à respecter les droits des artistes, qui constituent un
-          élément important de leur citoyenneté numérique.
-        title: Partage Numérique
+        title: Pseudoloc-Ðîĝîţàļ Šĥàŕîñĝ
       courseE_unplugged_CnC_2019:
-        desc: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
-          défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les élèves devraient
-          être encouragés à respecter les droits des artistes, qui constituent un
-          élément important de leur citoyenneté numérique.
-        title: Partage Numérique
-      courseE_unplugged_accessAbility_2019:
-        desc: Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion
-          en groupes et à la conception de solutions accessibles pour les applications
-          hypothétiques
-        title: 'Capacité d''Accès
-
-          '
+        title: Pseudoloc-Ðîĝîţàļ Šĥàŕîñĝ
       courseE_unplugged_crowdsourcing:
-        desc: Les élèves utilisent la production participative, une technique de résolution
-          de problèmes répandue en informatique, et toute la classe accomplit ainsi
-          une tâche plus efficacement que si un élève l'avait tentée seul.
-        title: Production Participative
-      courseE_unplugged_diceRace:
-        desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
-          dans nos vies quotidiennes. Dans ce cadre, les élèves vont identifier et
-          écrire l'algorithme d'un jeu de courses de dés.
-        title: 'Algorithmes du Monde Réel : Planter une Graine'
+        title: Pseudoloc-Çŕôŵðšôûŕçîñĝ
       courseE_unplugged_internet:
-        desc: Les élèves envoient des messages représentant diverses méthodes de transmission
-          Internet à l'aide de bouts de papier.
-        title: Internet
+        title: Pseudoloc-Îñţéŕñéţ
       courseE_unplugged_privateInformation:
-        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
-          méchant en ligne.
-        title: 'Common Sense Education : Information Privée et Personnelle '
+        title: 'Pseudoloc-Çôɱɱôñ Šéñšé Éðûçàţîôñ∶ Þŕîṽàţé àñð Þéŕšôñàļ Îñƒôŕɱàţîôñ '
       courseE_unplugged_privateInformation_2019:
-        desc: Développée par Common Sense Education, cette leçon traite de la différence
-          entre les informations qui peuvent être partagées, en toute sécurité, en
-          ligne, et les informations qui ne le peuvent pas.
-        title: Informations Privées et Personnelles
+        title: Pseudoloc-Þŕîṽàţé àñð Þéŕšôñàļ Îñƒôŕɱàţîôñ
       courseE_unplugged_songwriting:
-        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          ce que sont la définition et l’appel de fonctions.
-        title: Écrire des chansons
-      courseE_unplugged_songwritingParameters:
-        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          ce que sont la définition et l’appel de fonctions.
-        title: La composition de chansons avec des paramètres
+        title: Pseudoloc-Šôñĝŵŕîţîñĝ
       courseF_unplugged_envelopeVariables:
-        desc: Les variables offrent une grande liberté en informatique. Cette leçon
-          permet d'expliquer ce que sont les variables et les différentes manières
-          dont nous pouvons les utiliser. Utilisez cette activité avant (ou avec)
-          la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
-          le concept.
-        title: Variables de l'Enveloppe
+        title: Pseudoloc-Éñṽéļôþé Ṽàŕîàƀļéš
       courseF_unplugged_forLoopFun:
-        desc: Nous savons que les boucles nous permettent de répéter des choses encore
-          et encore, mais désormais nous allons apprendre à utiliser les boucles avec
-          des structures supplémentaires intégrées.
-        title: "« Pour » s'amuser en boucle"
+        title: Pseudoloc-Ƒôŕ Ļôôþ Ƒûñ
       courseF_unplugged_powerOfWords:
-        desc: Aujourd'hui, tu apprendras ce qu’il faut faire si quelqu'un devient
-          méchant en ligne.
-        title: Activité Déconnectée
+        title: Pseudoloc-Ûñþļûĝĝéð Àçţîṽîţý
       courseF_unplugged_powerOfWords_2019:
-        desc: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-        title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        title: Pseudoloc-ţŕàñšļàţîôñ ɱîššîñĝ∶ éñ‐ÛŠ·ðàţà·ûñþļûĝĝéð·çôûŕšéƑ_ûñþļûĝĝéð_þôŵéŕÔƒŴôŕðš_②ⓞ①⑧·ţîţļé
       courseF_unplugged_songwritingParameters:
-        desc: Une des structures vraiment formidables, dans le monde de l’informatique,
-          est la fonction. Les fonctions (parfois appelées procédures) sont de mini-programmes
-          que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme.
-          Cette leçon aidera les élèves à comprendre intuitivement pourquoi le fait
-          d’associer des morceaux de code à des fonctions est une pratique tellement
-          utile.
-        title: Composition de chansons avec des paramètres
+        title: Pseudoloc-Šôñĝŵŕîţîñĝ Ŵîţĥ Þàŕàɱéţéŕš
       courseF_unplugged_tangrams:
-        desc: Cette leçon nous démontre quelque chose d'important à propos des algorithmes.
-          Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
-          Si vous souhaitez que tout le monde termine avec la même chose, alors votre
-          algorithme a besoin de plus de détails.
-        title: Algorithmes de Tangram
-      deeper learning description:
-        desc: 'traduction manquante : en-US.data.unplugged.desc'
+        title: Pseudoloc-Ţàñĝŕàɱ Àļĝôŕîţĥɱš
       timeforcs_demo_conditionals:
-        desc: Pour mieux comprendre les déclarations conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
-          je gagne un point », et « Si je tire une carte noire, tu gagnes un point
-          ».
-        title: Instructions conditionnelles
+        title: Pseudoloc-Çôñðîţîôñàļš
       timeforcs_demo_crowdsourcing:
-        desc: '_Note de Josh : contrairement à la première leçon, j’ai formaté celle-ci,
-          simplement, comme une leçon débranchée typique.'
-        title: Production Participative
+        title: Pseudoloc-Çŕôŵðšôûŕçîñĝ

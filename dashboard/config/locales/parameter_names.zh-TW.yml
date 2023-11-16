@@ -2,24 +2,17 @@
 zh-TW:
   data:
     parameter_names:
-      "???": "???"
-      actor: 角色
-      color: 顏色
-      counter: counter
-      dir: 資料夾
-      direction: 方向
-      height: 高度
-      honey: 蜂蜜
-      left: " 向左"
-      length: 長度
-      min: 最小值
-      nectar units: 花蜜單位
-      nectars: 花蜜
-      numOctagons: 八邊形數目
-      points: 分
-      radius: 半徑
-      sides: 邊
-      size: 尺寸
-      speed: 速度
-      theGuess: 猜測
-      width: 寬度
+      actor: Pseudoloc-诶西哦儿
+      color: Pseudoloc-西哦哦儿
+      counter: Pseudoloc-西哦娜提儿
+      height: Pseudoloc-尺伊吉尺
+      honey: Pseudoloc-尺哦伊吾
+      left: Pseudoloc-勒伊提
+      length: Pseudoloc-勒伊吉提
+      min: Pseudoloc-马艾
+      points: Pseudoloc-屁哦娜提
+      radius: Pseudoloc-儿诶艾吾
+      sides: Pseudoloc-丝艾伊丝
+      size: Pseudoloc-丝艾伊
+      speed: Pseudoloc-丝屁伊迪
+      width: Pseudoloc-尔艾提尺
