@@ -114,9 +114,9 @@ const getArrayKeys = (count: number) => {
 };
 
 function getArrayKeysForRange(min: number, max: number) {
-  var len = max - min + 1;
-  var arr = new Array(len);
-  for (var i = 0; i < len; i++) {
+  const len = max - min + 1;
+  const arr = new Array(len);
+  for (let i = 0; i < len; i++) {
     arr[i] = min + i;
   }
   return arr;

@@ -48,11 +48,12 @@ export function chooseEffects(
     const weightVector = calculateOutputSummedWeights(selectedEmojis, mapping);
     // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
     const allSortedOptions = getSortedOptions(weightVector, mapping);
-    const numRandomOptions = 3;
+    const numRandomTopOptions = 3;
+    const numRandomBottomOptions = 20;
     const topOrBottomOptions =
       quality === ChooseEffectsQuality.GOOD
-        ? allSortedOptions.slice(0, numRandomOptions)
-        : allSortedOptions.slice(-numRandomOptions);
+        ? allSortedOptions.slice(0, numRandomTopOptions)
+        : allSortedOptions.slice(-numRandomBottomOptions);
 
     const selectedOutputOption =
       topOrBottomOptions[Math.floor(Math.random() * topOrBottomOptions.length)];
