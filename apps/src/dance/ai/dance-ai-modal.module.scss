@@ -63,6 +63,7 @@ $ai-modal-border-width: 8px;
     color: white;
     font-size: 16px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 $ai-modal-border-width;
     margin-top: $ai-modal-border-width;
@@ -95,9 +96,12 @@ $ai-modal-border-width: 8px;
       }
     }
 
-    &Right {
-      margin-left: auto;
+    &Left {
+      display: flex;
+      align-items: center;
+    }
 
+    &Right {
       .closeButton {
         background-color: initial;
         color: white;
@@ -127,11 +131,12 @@ $ai-modal-border-width: 8px;
     .toggleArea {
       position: absolute;
       width: 40%;
-      height: 100px;
       top: 10px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
+      display: flex;
+      justify-content: space-around;
 
       span {
         button {
@@ -383,17 +388,12 @@ $ai-modal-border-width: 8px;
       height: 44px;
       margin-top: auto;
       display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
+      justify-content: space-between;
       position: absolute;
       bottom: 0;
       width: calc(100% - 20px);
       transform: translateX(-50%);
       left: 50%;
-
-      &Left {
-        margin-right: auto;
-      }
     }
 
     .buttonsAreaTop {
@@ -424,7 +424,15 @@ $ai-modal-border-width: 8px;
       margin: 0;
 
       &WithText {
-        margin-right: 10px;
+        margin: 0;
+
+        html[dir='ltr'] & {
+          margin-right: 10px;
+        }
+
+        html[dir='rtl'] & {
+          margin-left: 10px;
+        }
       }
     }
   }

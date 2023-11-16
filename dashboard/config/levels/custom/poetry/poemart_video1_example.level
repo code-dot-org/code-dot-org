@@ -1,5 +1,9 @@
 <Poetry>
   <config><![CDATA[{
+  "game_id": 69,
+  "created_at": "2021-10-25T16:21:58.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -15,7 +19,7 @@
     "show_type_hints": true,
     "use_modal_function_editor": "true",
     "embed": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_new_block\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_new_block\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"8\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_selector\",\r\n  \"callout_text\": \"Select any poem, or enter your own!\",\r\n  \"element_id\": \"#poemSelector\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"poetry_new_block\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"7\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"poetry_new_block\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"8\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"poetry_selector\",\"callout_text\":\"Select any poem, or enter your own!\",\"element_id\":\"#poemSelector\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"7\\\"]\",\"localization_key\":\"poetry_new_block\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"},{\"element_id\":\".blocklyFlyout [data-id=\\\"8\\\"]\",\"localization_key\":\"poetry_new_block\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "instructions_important": "false",
     "long_instructions": "Example Program\r\n",
     "submittable": "false",
@@ -38,11 +42,7 @@
     "skip_autosave": true,
     "preload_asset_list": null
   },
-  "game_id": 69,
   "published": true,
-  "created_at": "2021-10-25T16:21:58.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "audit_log": "[{\"changed_at\":\"2021-10-25T16:21:58.162+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay\"},{\"changed_at\":\"2021-10-25 16:22:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:26:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:27:17 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:28:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:44:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:44:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:45:15 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:45:50 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:48:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:48:34 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:48:59 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:49:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:50:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-25 16:50:20 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-28 00:23:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]",
   "level_concept_difficulty": {
   }
@@ -170,12 +170,12 @@
         <block type="Poetry_destroy">
           <title name="ANIMATION_NAME">"tree_tall"</title>
         </block>
-        <block type="Poetry_makeBurst">
+        <block type="Poetry_makeBurst" id="7">
           <title name="EFFECT">"burst"</title>
           <title name="NUM">10</title>
           <title name="ANIMATION_NAME">"emoji_18_1"</title>
         </block>
-        <block type="Poetry_makeNumSprites">
+        <block type="Poetry_makeNumSprites" id="8">
           <title name="NUM">3</title>
           <title name="ANIMATION_NAME">"night_cloud"</title>
         </block>

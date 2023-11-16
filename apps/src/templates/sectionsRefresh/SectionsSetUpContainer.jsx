@@ -17,12 +17,11 @@ import {
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import ReactTooltip from 'react-tooltip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
-import color from '@cdo/apps/util/color';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
+import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -219,6 +218,12 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
+        coteachersToAdd.forEach(() => {
+          analyticsReporter.sendEvent(
+            EVENTS.COTEACHER_INVITE_SENT,
+            getCoteacherMetricInfoFromSection(section)
+          );
+        });
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (createAnotherSection) {
@@ -298,23 +303,15 @@ export default function SectionsSetUpContainer({
   };
 
   const renderCoteacherSection = () => {
-    const tooltip = (
-      <span>
-        <span data-tip data-for="tooltip" style={styles.tooltipSpan}>
-          <FontAwesome icon="info-circle" style={styles.tooltipIcon} />
-        </span>
-        <ReactTooltip id="tooltip" effect="solid">
-          <p>{i18n.coteacherAddTooltip()}</p>
-        </ReactTooltip>
-      </span>
-    );
-
     return renderExpandableSection(
       'uitest-expandable-coteacher',
       () => (
         <div>
           {i18n.coteacherAdd()}
-          {tooltip}
+          <InfoHelpTip
+            id={'coteacher-toggle-info'}
+            content={i18n.coteacherAddTooltip()}
+          />
         </div>
       ),
       () => (
@@ -324,6 +321,9 @@ export default function SectionsSetUpContainer({
           primaryTeacher={sections[0].primaryInstructor}
           setCoteachersToAdd={setCoteachersToAdd}
           coteachersToAdd={coteachersToAdd}
+          sectionMetricInformation={getCoteacherMetricInfoFromSection(
+            sections[0]
+          )}
         />
       ),
       isCoteacherOpen,
@@ -417,15 +417,6 @@ export default function SectionsSetUpContainer({
     </form>
   );
 }
-
-const styles = {
-  tooltipSpan: {
-    cursor: 'pointer',
-    marginLeft: '12px',
-    verticalAlign: 'text-bottom',
-  },
-  tooltipIcon: {color: color.neutral_dark60, fontSize: '16px'},
-};
 
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,

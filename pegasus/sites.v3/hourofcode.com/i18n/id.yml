@@ -13903,6 +13903,7 @@ id:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_generationai_name: Generasi AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14373,6 +14374,7 @@ id:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: 'Bertualang melintasi waktu untuk membuat penemuan AI-mu di Jam Kode: Generasi AI Minecraft yang baru ini. Gunakan pemecahan masalah, kreativitas, dan pemikiran komputasi dengan prinsip AI yang bertanggung jawab. Dengan penulisan kode di blok atau Python, Jam Kode memungkinkan siapa pun mempelajari dasar-dasar pengodean dan cara membangun AI yang lebih baik untuk semua.'
   tutorial_bsimage_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bscomputing_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_stackpython_string_detail_grades: Kelas 6+ (11 ke atas)
@@ -14504,6 +14506,7 @@ id:
   tutorial_madmobile_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_intelinosmile_string_detail_grades: Pre-reader - Grade 8
   tutorial_intelinoaisign_string_detail_grades: Grades 2-8
+  tutorial_generationai_string_detail_grades: Kelas 2-5 (usia 7-10 ) Kelas 6-8 (usia 11-13 ) Kelas 9+ (usia 14+)
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Dicabut
   tutorial_stackpython_string_platforms: Semua browser modern, tablet Android, iPad,
@@ -14671,6 +14674,7 @@ id:
   tutorial_madmobile_string_platforms: Semua browser modern
   tutorial_intelinosmile_string_platforms: Semua browser modern, iPad
   tutorial_intelinoaisign_string_platforms: Semua browser modern
+  tutorial_generationai_string_platforms: Komputer (Windows PC, Mac), Android (Chromebook), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14802,6 +14806,7 @@ id:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Bahasa independen
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14933,6 +14938,7 @@ id:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Blok
   tutorial_intelinoaisign_string_detail_programming_languages: Blok
+  tutorial_generationai_string_detail_programming_languages: Blok, Python
   school_not_found_heading: Kami tidak dapat menemukan sekolahmu. Harap masukkan informasi
     lebih lanjut.
   school_name: Nama sekolah
