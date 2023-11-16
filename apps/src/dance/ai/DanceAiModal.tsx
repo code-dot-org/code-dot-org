@@ -403,13 +403,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
           playSound('ai-generate-no', {volume: 0.15});
         } else {
-          playSound('ai-generate-yes', {volume: 0.15});
+          //playSound('ai-generate-yes', {volume: 0.15});
         }
       }
     } else if (mode === Mode.GENERATED) {
       if (generatedProgress === 1) {
         playSound('ai-generate-yes', {volume: 0.25});
-      } else if (generatedProgress === 3) {
+      } else if (generatedProgress === 2) {
         setMode(Mode.RESULTS);
       }
     }
@@ -425,7 +425,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       if (mode === Mode.GENERATING) {
         setGeneratingProgress(updateGeneratingProgress);
       } else if (mode === Mode.GENERATED) {
-        if (generatedProgress < 3) {
+        if (generatedProgress < 2) {
           setGeneratedProgress(progress => progress + 1);
         }
       } else if (mode === Mode.EXPLANATION) {
@@ -442,7 +442,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           GENERATION_SUBSTEP_DURATION_MIN
         )
       : mode === Mode.GENERATED
-      ? 1000
+      ? 1500
       : mode === Mode.EXPLANATION
       ? EXPLANATION_STEP_DURATION
       : undefined
@@ -540,14 +540,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
   let previewAreaClass = undefined;
-  if (mode === Mode.GENERATING) {
-    aiBotBody = [aiBotBodyThink0, aiBotBodyThink1, aiBotBodyThink2][
-      generatingProgress.step % 3
-    ];
-  } else if (mode === Mode.GENERATED && generatedProgress >= 1) {
+  if (
+    mode === Mode.GENERATED ||
+    (mode === Mode.GENERATING &&
+      generatingProgress.step >= BAD_GENERATED_RESULTS_COUNT)
+  ) {
     aiBotHead = aiBotHeadYes;
     aiBotBody = aiBotBodyYes;
     previewAreaClass = moduleStyles.previewAreaYes;
+  } else if (mode === Mode.GENERATING) {
+    aiBotBody = [aiBotBodyThink0, aiBotBodyThink1, aiBotBodyThink2][
+      generatingProgress.step % 3
+    ];
   }
 
   const explanationKeyDotColor = [
@@ -616,11 +620,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const text =
     mode === Mode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
-      : mode === Mode.GENERATING
+      : mode === Mode.GENERATING ||
+        (mode === Mode.GENERATED && generatedProgress === 0)
       ? i18n.danceAiModalFinding2()
-      : mode === Mode.GENERATED && generatedProgress >= 1
-      ? i18n.danceAiModalGenerating2()
-      : mode === Mode.RESULTS && currentToggle === Toggle.EFFECT
+      : /*: mode === Mode.GENERATED && generatedProgress >= 1
+      ? i18n.danceAiModalGenerating2()*/
+      (mode === Mode.GENERATED && generatedProgress >= 1) ||
+        (mode === Mode.RESULTS && currentToggle === Toggle.EFFECT)
       ? i18n.danceAiModalEffect2()
       : mode === Mode.RESULTS && currentToggle === Toggle.CODE
       ? i18n.danceAiModalCode2()
@@ -846,6 +852,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               }
               slotCount={SLOT_COUNT}
             />
+          </div>
+        )}
+
+        {mode === Mode.GENERATED && generatedProgress >= 1 && (
+          <div id="check-area" className={moduleStyles.checkArea}>
+            <i className="fa fa-check-circle" />
           </div>
         )}
 
