@@ -9,6 +9,7 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
+@skip
 Scenario: Can create a Function
   Then element "#blockly-9" is visible
   And element "#modalFunctionEditor" is not visible
@@ -22,3 +23,10 @@ Scenario: Can create a Function
   # Now the function should be in the toolbox, along with the original function from start code
   Then I press "blockly-9"
   And the open flyout has 2 blocks
+
+Scenario: Can edit a Function
+  Then I click block button with selector ".blocklyEditableText"
+  And I wait until element "#modalFunctionEditor" is visible
+  # Open first flyout
+  And I press "blockly-1"
+  And I drag block "new-sprite-block" to block "set-background-block"

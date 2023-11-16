@@ -77,7 +77,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-13T13:53:47.340-08:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2023-11-13 13:54:37 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-13 13:55:07 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 15:28:53 -0800\",\"changed\":[\"start_blocks\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 15:57:52 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-13T13:53:47.340-08:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2023-11-13 13:54:37 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-13 13:55:07 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 15:28:53 -0800\",\"changed\":[\"start_blocks\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 15:57:52 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 16:45:06 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-14 16:46:46 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -88,7 +88,7 @@
           <mutation/>
           <field name="NAME" id="set background">set background</field>
           <statement name="STACK">
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" id="set-background-block">
               <field name="IMG">"cave"</field>
             </block>
           </statement>
@@ -1419,7 +1419,7 @@
     <toolbox_blocks>
       <xml>
         <category name="World">
-          <block type="gamelab_setBackgroundImageAs" id="set-background-block">
+          <block type="gamelab_setBackgroundImageAs">
             <field name="IMG">"cave"</field>
           </block>
           <block type="gamelab_setBackground">
@@ -1502,7 +1502,7 @@
           <block type="gamelab_locationMouse"/>
         </category>
         <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
+          <block type="gamelab_makeNewSpriteAnon" id="new-sprite-block">
             <field name="ANIMATION_NAME">"purple bunny"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">

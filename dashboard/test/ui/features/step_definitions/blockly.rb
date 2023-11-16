@@ -286,6 +286,13 @@ Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
   @browser.execute_script(script)
 end
 
+Then(/^I click block button with selector "(.*?)"$/) do |selector|
+  script = "
+    $('#{selector}').simulate('pointerdown')
+  "
+  @browser.execute_script(script)
+end
+
 Then(/^the open flyout has (.*?) blocks$/) do |n|
   script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
   expect(@browser.execute_script(script)).to eq(n.to_i)
