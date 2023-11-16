@@ -488,6 +488,10 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
+  // Trigger a resize event on init to ensure that the visualization is sized correctly and prevent
+  // video thumbnails from being stretched over visualization column.
+  this.resizeVisualization();
+
   window.addEventListener('resize', this.onResize.bind(this));
   window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
     this.resizeVisualization(e.detail);
