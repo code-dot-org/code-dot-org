@@ -82,21 +82,20 @@ html {
 .course-carousel {
   width: 100%;
   margin: 0;
-  background: #5a676f;
+  background: #ffffff;
 }
 .course-carousel .slides {
   width: 100%;
   height: 480px;
-  background: #5a676f;
+  background: #ffffff;
   overflow: hidden;
 }
 .course-carousel .slide {
   display: block;
   position: relative;
   float: left;
-  background: #5a676f;
+  background-color: var(--neutral_light);
   margin: 0;
-  padding: 0 40px;
 }
 .course-carousel .slide-img {
   float: left;
@@ -120,11 +119,10 @@ html {
 .course-carousel .slide p,
 .course-carousel .slide div {
   line-height: 1.2em;
-  color: #fff;
 }
 .course-carousel .slide h2 {
   font-size: 18px;
-  margin: 0 0 .333em 0;
+  margin-top: 40px;
 }
 .course-carousel .slide h3 {
   font-size: 14px;
@@ -140,7 +138,6 @@ html {
 }
 .course-carousel .slide a:link,
 .course-carousel .slide a:visited {
-  color: #fff;
   text-decoration: none;
 }
 .course-carousel .slide .slide-longdescription {
@@ -153,7 +150,6 @@ html {
 .course-carousel .slide .slide-tags {
   margin: 0 0 .833em 0;
   font-size: 12px;
-  padding-right: 75px;
 }
 .course-carousel .slide .slide-teachers-notes-link {
   display: none;
@@ -259,14 +255,11 @@ html {
   .course-carousel {
   }
   .course-carousel-title {
-    text-align: left;
+    text-align: center;
   }
   .course-carousel .slides {
     width: 446px;
     height: 335px;
-  }
-  .course-carousel .slide {
-    padding: 0 40px;
   }
   .course-carousel .slide .slide-img {
     width: 446px;
@@ -296,7 +289,7 @@ html {
   }
   .course-carousel .slide .slide-tags {
     font-size: 14px;
-    padding-right: 120px;
+    font-weight: bold;
   }
   .course-carousel .slide .slide-teachers-notes-link {
     display: block;

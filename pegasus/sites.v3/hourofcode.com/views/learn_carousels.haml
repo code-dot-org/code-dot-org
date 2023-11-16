@@ -9,6 +9,11 @@
 
 - @variation = variation
 
+%h2.carousel-main-title
+  =hoc_s(:hoc_beyond_carousel_title)
+%p.carousel-main-description
+  =hoc_s(:hoc_beyond_carousel_description)
+
 #all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
   - beyond_categories.each do |category|
     - id = "collection-" + category[:tag]
@@ -17,9 +22,7 @@
 - if request.locale == "en-US"
   %br
   %br
-  - unless variation == "university"
-    .footer-banner
-      != I18n.t(:learn_footer_all_tutorials)
+
 
 :javascript
 
