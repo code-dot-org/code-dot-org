@@ -281,14 +281,17 @@ Feature: Curriculum Catalog Page
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
   
   
-   # Curriculum Catalog Filter tests
-   @no_mobile
-  Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
+  # Curriculum Catalog Filter tests
+  @no_mobile
+  Scenario: User can Select all and Clear all in Curriculum Catalog filters
     Given I am on "http://studio.code.org/catalog"
-    Then I wait until element "#grade-dropdown" is visible
+    Then I wait until element "#marketingInitiative-dropdown-button" is visible
+    Then I click selector "#marketingInitiative-dropdown-button"
+    And I wait until element "#select-all" is visible within element "#marketingInitiative-dropdown"
+    Then I click selector "#select-all"
+    And I wait until element "h4:contains(Accelerated Intro to CS Course)" is not visible
+    And I wait until element "#clear-all" is visible within element "#marketingInitiative-dropdown"
+    Then I click selector "#clear-all"
+    And I wait until element "h4:contains(Accelerated Intro to CS Course)" is visible
 
-    Then I click selector "#grade-dropdown-button"
-
-    And I wait until element "span:contains(Kindergarten)" is visible
-    Then I click selector "span:contains(Select all)"
 
