@@ -17,7 +17,7 @@ class Tutorials
   # We alias the database columns with names that have the datatype suffixes stripped off for
   # backwards-compatibility with some existing tutorial pages
   # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
-  def initialize(table, no_cache: false)
+  def initialize(table, no_cache = false)
     @table = "cdo_#{table}".to_sym
 
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
@@ -28,11 +28,6 @@ class Tutorials
         "#{db_column_name}___#{column_alias}".to_sym
       end
     end
-
-    # Lazy loading class definition of the dynamically generated Sequel Table classes
-    # This is needed in cases where the cache is hydrated, but class definition not loaded yet
-    DB[@table]
-
     @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
       DB[@table].select(*@column_aliases).all
     end.deep_dup
