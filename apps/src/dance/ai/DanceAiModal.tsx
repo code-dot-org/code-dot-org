@@ -495,6 +495,7 @@ const DanceAiModal: React.FunctionComponent = () => {
     return (
       <div
         className={moduleStyles.inputsContainer}
+        tabIndex={0}
         onClick={handleStartOverClick}
       >
         {Array.from(Array(SLOT_COUNT).keys()).map(index => {
