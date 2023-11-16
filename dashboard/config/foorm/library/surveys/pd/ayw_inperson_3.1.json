@@ -36,7 +36,34 @@
               "type": "rating",
               "name": "better_prepared_unit7csp_m56",
               "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "I feel prepared to teach Unit 7 (I feel prepared to teach concepts such as parameters, arguments and libraries). ",
+              "title": "I feel prepared to teach Unit 7 (I feel prepared to teach concepts such as parameters, arguments and libraries).",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit8csp_m56",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to teach Unit 8 (I feel prepared to teach concepts such as privacy and security, and global impact).",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit8csp_project",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to guide students through the project in Unit 8.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_ap_exam_multiplechoice",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know how and when to prepare students for the multiple-choice section of the AP exam.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -81,7 +108,7 @@
               "type": "rating",
               "name": "strategies_ensure_inclusion_m56",
               "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
-              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is welcoming to all students.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -90,7 +117,7 @@
               "type": "rating",
               "name": "plan_develop_m56",
               "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "I am committed to implementing a plan to differentiate teaching to create an inclusive classroom environment during unit 7.",
+              "title": "I am committed to implementing a plan to differentiate teaching during units 7 and 8.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -98,7 +125,7 @@
             {
               "type": "rating",
               "name": "plan_measure_m56",
-              "visibleIf": "{workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "title": "I feel ready to track the progress of my inclusion plan: I know how and what to measure as outcomes and supports.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -111,7 +138,9 @@
               "title": "I am confident I can explain how students will be assessed on content and skills on the Create Performance Task of the AP exam.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
@@ -120,7 +149,9 @@
               "title": "After attending this workshop, I have strategies to lead my students through the Make lessons in Unit 7 to adequately prepare them for the Create Performance Task.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
@@ -129,7 +160,9 @@
               "title": "Through my participation in this workshop, I feel prepared to support my students for the AP Exam’s Create Performance Task by identifying potential trouble points in their project ideas.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
@@ -138,7 +171,9 @@
               "title": "I am confident I can help students keep their projects within the scope of the Create Performance Task while defining project ideas that fit the criteria of a minimum viable product.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
