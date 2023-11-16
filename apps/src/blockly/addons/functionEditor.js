@@ -178,6 +178,17 @@ export default class FunctionEditor {
       );
     }
 
+    // We hide the delete button unless it is a function or user-created behavior.
+    const shouldShowDeleteButton =
+      this.block.type === BLOCK_TYPES.procedureDefinition ||
+      this.block.userCreated;
+    const modalEditorDeleteButton = document.getElementById(
+      MODAL_EDITOR_DELETE_ID
+    );
+    modalEditorDeleteButton.style.visibility = shouldShowDeleteButton
+      ? 'visible'
+      : 'hidden';
+
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
 
