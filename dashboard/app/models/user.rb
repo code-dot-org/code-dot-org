@@ -474,14 +474,15 @@ class User < ApplicationRecord
   has_many :section_instructors, foreign_key: 'instructor_id'
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
   has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
-  #alias_attribute :sections, :sections_instructed
+
+  # "sections" previously referred to what is now called :sections_owned.
   def sections
     sections_instructed
   end
 
-  has_many :followers, through: :sections_instructed
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
+  has_many :followers, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
@@ -1376,7 +1377,7 @@ class User < ApplicationRecord
 
   #sections owned by the user AND not deleted
   def owned_section_ids
-    sections_instructed.select(:id).all
+    sections.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
@@ -1883,7 +1884,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections_instructed.to_a
+    sections_as_teacher = student? ? [] : sections.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
@@ -2600,13 +2601,13 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   private def grades_being_taught
-    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
+    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
+    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2636,7 +2637,7 @@ class User < ApplicationRecord
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
-    sections_instructed.each do |section|
+    sections.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section
