@@ -31,6 +31,7 @@ const CopyButton: React.FunctionComponent = () => {
   return (
     <Button
       color={Button.ButtonColor.white}
+      icon={'clipboard'}
       key="copy"
       onClick={() => handleCopy()}
       size={Button.ButtonSize.small}
