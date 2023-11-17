@@ -284,6 +284,8 @@ $ai-modal-border-width: 8px;
         &Back {
           position: absolute;
           backface-visibility: hidden;
+          top: 0;
+          left: 0;
         }
 
         &Back {
@@ -422,6 +424,12 @@ $ai-modal-border-width: 8px;
         html[dir='rtl'] & {
           margin-left: 10px;
         }
+      }
+    }
+
+    &WithoutText {
+      span {
+        margin: 0;
       }
     }
   }
