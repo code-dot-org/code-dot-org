@@ -37,7 +37,7 @@ module.exports = {
     color: color.white,
     boxShadow: '2px 2px 5px ' + color.shadow + ' inset',
   },
-  //TODO: [Desing2-53] remove this once we have a SegmentedButton component and use that instead
+  //TODO: [Design2-53] remove this once we have a SegmentedButton component and use that instead
   rebrandedLikeButtonStyle: {
     boxShadow: 'none',
     padding: '7px 16px',

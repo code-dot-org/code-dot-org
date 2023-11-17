@@ -908,6 +908,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 onClick={handleGenerateClick}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
+                useDefaultLineHeight
               />
             )}
 
@@ -919,6 +920,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
                 disabled={aiModalOpenedFromFlyout}
+                useDefaultLineHeight
               />
             )}
             {showUseButton && (
@@ -928,6 +930,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 onClick={handleUseClick}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
+                useDefaultLineHeight
               />
             )}
           </div>
