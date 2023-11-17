@@ -34,11 +34,12 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   };
 
   const validateAndSave = () => {
-    if (!isEmail(email)) {
+    // Only validate inputs for signed out users
+    if (!isSignedIn && !isEmail(email)) {
       alert(i18n.censusInvalidEmail());
       return;
     }
-    if (!name) {
+    if (!isSignedIn && !name) {
       alert(i18n.censusRequired());
       return;
     }
@@ -56,9 +57,6 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
       },
       body: JSON.stringify(potential_teacher_data),
     })
-      .then(response => {
-        return response.json();
-      })
       .then(() => {
         reportAndNotifyOfEmailSend();
         onClose();
@@ -92,40 +90,44 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
           <div className={style.middle}>
             <Heading3>{i18n.learnHowToHost()}</Heading3>
             {bodyText}
-            <label className={style.typographyLabel}>
-              {i18n.yourNameCaps() + '*'}
-              <input
-                required
-                type="text"
-                id="uitest-hoc-guide-name"
-                className={style.classNameTextField}
-                value={name}
-                onChange={e => setName(e.target.value)}
-              />
-            </label>
-            <label className={style.typographyLabel}>
-              {i18n.yourEmailCaps() + '*'}
-              <input
-                required
-                type="text"
-                id="uitest-hoc-guide-email"
-                className={style.classNameTextField}
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-            </label>
-            <label className={style.label}>
-              <input
-                checked={isMarketingChecked}
-                className={style.box}
-                type="checkbox"
-                id="uitest-receive-updates-checkbox"
-                onChange={() => {
-                  setIsMarketingChecked(!isMarketingChecked);
-                }}
-              />
-              {i18n.receiveFutureUpdates()}
-            </label>
+            {!isSignedIn && (
+              <div>
+                <label className={style.typographyLabel}>
+                  {i18n.yourNameCaps() + '*'}
+                  <input
+                    required
+                    type="text"
+                    id="uitest-hoc-guide-name"
+                    className={style.classNameTextField}
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                  />
+                </label>
+                <label className={style.typographyLabel}>
+                  {i18n.yourEmailCaps() + '*'}
+                  <input
+                    required
+                    type="text"
+                    id="uitest-hoc-guide-email"
+                    className={style.classNameTextField}
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                  />
+                </label>
+                <label className={style.label}>
+                  <input
+                    checked={isMarketingChecked}
+                    className={style.box}
+                    type="checkbox"
+                    id="uitest-receive-updates-checkbox"
+                    onChange={() => {
+                      setIsMarketingChecked(!isMarketingChecked);
+                    }}
+                  />
+                  {i18n.receiveFutureUpdates()}
+                </label>
+              </div>
+            )}
           </div>
           <div className={style.buttonsBottom}>
             <Button
