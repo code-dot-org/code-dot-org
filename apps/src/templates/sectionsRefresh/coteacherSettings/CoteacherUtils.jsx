@@ -6,3 +6,10 @@ export const convertAddCoteacherResponse = response => {
     instructorName: response.instructor_name,
   };
 };
+
+export const getCoteacherMetricInfoFromSection = section => ({
+  sectionId: section.id,
+  sectionLoginType: section.loginType,
+  unitId: section.course?.unitId,
+  grades: section.grades,
+});
