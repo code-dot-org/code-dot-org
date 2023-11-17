@@ -294,7 +294,7 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.permission?(UserPermission::AI_CHAT_ACCESS)
+      if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
       end
     end

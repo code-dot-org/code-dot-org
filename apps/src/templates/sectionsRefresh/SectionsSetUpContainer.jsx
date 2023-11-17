@@ -18,7 +18,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import DCDO from '@cdo/apps/dcdo';
-import experiments from '@cdo/apps/util/experiments';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
@@ -52,6 +51,7 @@ const useSections = section => {
             restrictSection: false,
             ttsAutoplayEnabled: false,
             lessonExtras: true,
+            aiTutorEnabled: false,
             course: {hasTextToSpeech: false, hasLessonExtras: false},
           },
         ]
@@ -77,6 +77,7 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
+  canEnableAITutor,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -200,6 +201,7 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
+      ai_tutor_enabled: section.aiTutorEnabled,
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,
@@ -281,7 +283,7 @@ export default function SectionsSetUpContainer({
     // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
     // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      experiments.isEnabled('ai-tutor-toggle') &&
+      canEnableAITutor &&
       sections[0].course.displayName === 'Computer Science A';
 
     return renderExpandableSection(
@@ -421,4 +423,5 @@ export default function SectionsSetUpContainer({
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
+  canEnableAITutor: PropTypes.bool,
 };
