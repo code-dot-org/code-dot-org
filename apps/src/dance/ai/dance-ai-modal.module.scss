@@ -9,15 +9,6 @@ $ai-block-inputs-border-color: rgba(255 255 255 / 0.6);
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
 
-@keyframes preview-right-to-normal {
-  0% {
-    left: 52%;
-  }
-  100% {
-    left: 50%;
-  }
-}
-
 // Emoji moves across linearly but downwards with acceleration.
 @keyframes flying-emoji-x {
   0% {
