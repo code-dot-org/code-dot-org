@@ -9,16 +9,20 @@ class CoursesControllerTest < ActionController::TestCase
 
     @in_development_unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
 
-    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_coteacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-    @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
+    @pilot_section = create :section, user: pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
+    create(:section_instructor, instructor: @pilot_coteacher, section: @pilot_section, status: :active)
 
-    @pilot_facilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    pilot_facilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    @pilot_cofacilitator = create :facilitator, pilot_experiment: 'my-pl-experiment'
     @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    @pilot_pl_section = create :section, user: @pilot_facilitator, unit_group: @pilot_pl_unit_group
+    @pilot_pl_section = create :section, user: pilot_facilitator, unit_group: @pilot_pl_unit_group
     @pilot_participant = create :teacher
     create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
+    create(:section_instructor, instructor: @pilot_cofacilitator, section: @pilot_pl_section, status: :active)
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
@@ -363,14 +367,14 @@ class CoursesControllerTest < ActionController::TestCase
     assert_includes(response.body, no_access_msg)
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_coteacher},
                               params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
-                              name: 'pilot teacher can view pilot course'
+                              name: 'pilot coteacher can view pilot course'
   ) do
     refute_includes(response.body, no_access_msg)
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_facilitator},
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_cofacilitator},
                               params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
                               name: 'pilot instructor can view pilot course'
   ) do
