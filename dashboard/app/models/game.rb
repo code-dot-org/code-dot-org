@@ -251,7 +251,7 @@ class Game < ApplicationRecord
     !([NETSIM].include? app)
   end
 
-  def use_firebase?
+  def use_firebase? # TODO: unfirebase
     [APPLAB, GAMELAB].include? app
   end
 

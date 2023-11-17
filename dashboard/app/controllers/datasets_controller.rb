@@ -4,7 +4,7 @@ require 'uri'
 class DatasetsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_levelbuilder_mode
-  before_action :initialize_firebase
+  before_action :initialize_firebase # TODO: unfirebase
   authorize_resource class: false
 
   LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide',
@@ -12,7 +12,7 @@ class DatasetsController < ApplicationController
 
   # GET /datasets
   def index
-    tables = @firebase.get_shared_table_list
+    tables = @firebase.get_shared_table_list # TODO: unfirebase
     @datasets = tables.map {|name, _| name}
     @live_datasets = LIVE_DATASETS
   end
@@ -20,15 +20,15 @@ class DatasetsController < ApplicationController
   # GET /datasets/:dataset_name/
   def show
     @table_name = params[:dataset_name]
-    @dataset = @firebase.get_shared_table params[:dataset_name]
+    @dataset = @firebase.get_shared_table params[:dataset_name] # TODO: unfirebase
     @live_datasets = LIVE_DATASETS
   end
 
   # POST /datasets/:dataset_name/
   def update
-    records, columns = @firebase.csv_as_table(params[:csv_data])
-    @firebase.delete_shared_table params[:dataset_name]
-    response = @firebase.upload_shared_table(params[:dataset_name], records, columns)
+    records, columns = @firebase.csv_as_table(params[:csv_data]) # TODO: unfirebase
+    @firebase.delete_shared_table params[:dataset_name] # TODO: unfirebase
+    response = @firebase.upload_shared_table(params[:dataset_name], records, columns) # TODO: unfirebase
     data = {}
     if response.success?
       data[:records] = records
@@ -39,25 +39,25 @@ class DatasetsController < ApplicationController
 
   # DELETE /datasets/:dataset_name/
   def destroy
-    response = @firebase.delete_shared_table params[:dataset_name]
+    response = @firebase.delete_shared_table params[:dataset_name] # TODO: unfirebase
     render json: {}, status: response.code
   end
 
   # GET /datasets/manifest/edit
   def edit_manifest
-    @dataset_library_manifest = @firebase.get_library_manifest
+    @dataset_library_manifest = @firebase.get_library_manifest # TODO: unfirebase
   end
 
   # POST /datasets/manifest/update
   def update_manifest
     parsed_manifest = JSON.parse(params['manifest'])
-    response = @firebase.set_library_manifest parsed_manifest
+    response = @firebase.set_library_manifest parsed_manifest # TODO: unfirebase
     render json: {}, status: response.code
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}
   end
 
   private def initialize_firebase
-    @firebase = FirebaseHelper.new('shared')
+    @firebase = FirebaseHelper.new('shared') # TODO: unfirebase
   end
 end

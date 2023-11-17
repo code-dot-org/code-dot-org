@@ -8,14 +8,14 @@ require 'uri'
 class FirebaseHelper
   def initialize(channel_id)
     raise "channel_id must be non-empty" if channel_id.nil? || channel_id.empty?
-    @firebase = channel_id == 'shared' ? FirebaseHelper.create_shared_client : FirebaseHelper.create_client
+    @firebase = channel_id == 'shared' ? FirebaseHelper.create_shared_client : FirebaseHelper.create_client # TODO: unfirebase
     @channel_id = channel_id + CDO.firebase_channel_id_suffix
   end
 
   # @param [String] table_name The name of the table to query.
   # @return [String] A representation of the table (its columns and its data) as a CSV string.
   def table_as_csv(table_name)
-    response = @firebase.get(
+    response = @firebase.get( # TODO: unfirebase
       "/v3/channels/#{@channel_id}/storage/tables/#{escape_table_name(table_name)}/records"
     )
     records = response.body || []
@@ -61,23 +61,23 @@ class FirebaseHelper
 
   def delete_shared_table(table_name)
     escaped_table_name = escape_table_name(table_name)
-    response = @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}")
+    response = @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}") # TODO: unfirebase
     return response unless response.success?
-    response = @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
+    response = @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records") # TODO: unfirebase
     return response unless response.success?
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
+    @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns") # TODO: unfirebase
   end
 
   def upload_shared_table(table_name, records, columns)
     escaped_table_name = escape_table_name(table_name)
-    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {lastId: records.length, rowCount: records.length})
+    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {lastId: records.length, rowCount: records.length}) # TODO: unfirebase
     return response unless response.success?
-    response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
+    response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records) # TODO: unfirebase
     return response unless response.success?
-    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
+    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns") # TODO: unfirebase
     return response unless response.success?
     columns.each do |column|
-      response = @firebase.push("v3/channels/shared/metadata/tables/#{escaped_table_name}/columns", {columnName: column})
+      response = @firebase.push("v3/channels/shared/metadata/tables/#{escaped_table_name}/columns", {columnName: column}) # TODO: unfirebase
     end
     return response
   end
@@ -85,45 +85,45 @@ class FirebaseHelper
   def upload_live_table(table_name, records, columns)
     delete_shared_table(table_name)
     upload_shared_table(table_name, records, columns)
-    response = @firebase.get("/v3/channels/shared/metadata/manifest/tables/")
+    response = @firebase.get("/v3/channels/shared/metadata/manifest/tables/") # TODO: unfirebase
     return response unless response.success?
     tables = response.body
     index = tables.find_index {|table| table['name'] == table_name}
-    @firebase.set("/v3/channels/shared/metadata/manifest/tables/#{index}/lastUpdated", Time.now.to_i * 1000) unless index.nil?
+    @firebase.set("/v3/channels/shared/metadata/manifest/tables/#{index}/lastUpdated", Time.now.to_i * 1000) unless index.nil? # TODO: unfirebase
   end
 
   def get_shared_table(table_name)
     escaped_table_name = escape_table_name(table_name)
-    columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
+    columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns") # TODO: unfirebase
     columns = columns_response.body ? columns_response.body.map {|_, value| value['columnName']} : []
 
-    records_response = @firebase.get("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
+    records_response = @firebase.get("/v3/channels/shared/storage/tables/#{escaped_table_name}/records") # TODO: unfirebase
     records = records_response.body || []
 
     {columns: columns, records: records}
   end
 
   def get_shared_table_list
-    response = @firebase.get("/v3/channels/shared/counters/tables")
+    response = @firebase.get("/v3/channels/shared/counters/tables") # TODO: unfirebase
     return response unless response.success?
     response.body.transform_keys {|table_name| unescape_table_name(table_name)}
   end
 
   def get_library_manifest
-    response = @firebase.get("/v3/channels/shared/metadata/manifest")
+    response = @firebase.get("/v3/channels/shared/metadata/manifest") # TODO: unfirebase
     response.body
   end
 
   # Important Note: this firebase database is shared across all of our environments.
   # Changes made using this function will be visible immediately in all environments (including prod)
   def set_library_manifest(manifest)
-    @firebase.set("/v3/channels/shared/metadata/manifest", manifest)
+    @firebase.set("/v3/channels/shared/metadata/manifest", manifest) # TODO: unfirebase
   end
 
   def self.delete_channels(encrypted_channel_ids)
     firebase_client = create_client
     encrypted_channel_ids.each do |encrypted_channel_id|
-      firebase_client.delete "/v3/channels/#{encrypted_channel_id}/"
+      firebase_client.delete "/v3/channels/#{encrypted_channel_id}/" # TODO: unfirebase
     end
   end
 
@@ -134,7 +134,7 @@ class FirebaseHelper
 
   def self.create_shared_client
     raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
-    Firebase::Client.new \
+    Firebase::Client.new \ # TODO: unfirebase
       'https://cdo-v3-shared.firebaseio.com/',
       CDO.firebase_shared_secret
   end
@@ -142,7 +142,7 @@ class FirebaseHelper
   def self.create_client
     raise "CDO.firebase_name not defined" unless CDO.firebase_name
     raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
-    Firebase::Client.new \
+    Firebase::Client.new \ # TODO: unfirebase
       "https://#{CDO.firebase_name}.firebaseio.com/",
       CDO.firebase_secret
   end

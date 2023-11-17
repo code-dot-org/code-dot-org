@@ -2,7 +2,7 @@ require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require 'firebase_token_generator'
+require 'firebase_token_generator' # TODO: unfirebase
 require 'image_size'
 require 'cdo/firehose'
 require 'cdo/languages'
@@ -577,7 +577,7 @@ module LevelsHelper
     app_options
   end
 
-  def firebase_options
+  def firebase_options # TODO: unfirebase
     fb_options = {}
 
     if @level.game.use_firebase?
@@ -676,7 +676,7 @@ module LevelsHelper
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    app_options.merge!(firebase_options)
+    app_options.merge!(firebase_options) # TODO: unfirebase
     app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -897,7 +897,7 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
-  def firebase_shared_auth_token
+  def firebase_shared_auth_token # TODO: unfirebase
     return nil unless CDO.firebase_shared_secret
 
     base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
@@ -923,7 +923,7 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
-  def firebase_auth_token
+  def firebase_auth_token # TODO: unfirebase
     return nil unless CDO.firebase_secret
 
     base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
