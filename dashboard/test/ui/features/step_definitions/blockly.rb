@@ -85,6 +85,12 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
 end
 
+Then /^I scroll the ([a-zA-Z]*) blockspace to block "(.*?)"$/ do |workspace_type, block_id|
+  puts block_id
+  block_space_name = workspace_type + 'BlockSpace'
+  @browser.execute_script("Blockly.#{block_space_name}.centerOnBlock('#{block_id}')")
+end
+
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
   id_selector = get_id_selector
   block_id = get_block_id(block)
@@ -304,6 +310,11 @@ Then(/^I drag and drop block "(.*?)" to offset (.*?), (.*?)$/) do |block_id, dx,
   id_selector = get_id_selector
   element = @browser.find_element(:css, "[#{id_selector}='#{block_id}']")
   @browser.action.drag_and_drop_by(element, dx.to_i, dy.to_i).perform
+end
+
+Then(/^the function editor workspace has (\d+) blocks$/) do |n|
+  script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n)
 end
 
 def current_block_xml

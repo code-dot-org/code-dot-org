@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Modal Function Editor
 
 Background:
@@ -9,7 +10,6 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
-@skip
 Scenario: Can create a Function
   Then element "#blockly-9" is visible
   And element "#modalFunctionEditor" is not visible
@@ -29,8 +29,18 @@ Scenario: Can edit a Function
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
   And I press "blockly-d"
+  # We need to drag and drop blockly blocks in two steps.
   And I drag and drop block "new-sprite-block" to offset 70, 177
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I drag and drop block "new-sprite-block" to offset -30, 0
-  And I wait for 3 seconds
+  And I wait for 1 seconds
+  # Close function
+  And I press "closeModalFunctionEditor"
+  And element "#modalFunctionEditor" is not visible
+  # Re-open function
+  Then I click block field that is number 1 in the list of blocks and number 1 in the field row
+  And element "#modalFunctionEditor" is visible
+  # Now the function editor workspace should have 4 blocks: the procedure block,
+  # the set background block, the new sprite block, and the location block attached to the new sprite block.
+  Then the function editor workspace has 4 blocks
 
