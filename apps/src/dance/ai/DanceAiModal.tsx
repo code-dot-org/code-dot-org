@@ -80,6 +80,12 @@ enum Toggle {
   CODE = 'code',
 }
 
+const aiBotBodyThinkImages = [
+  aiBotBodyThink0,
+  aiBotBodyThink1,
+  aiBotBodyThink2,
+];
+
 // Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 function useInterval(callback: () => void, delay: number | undefined) {
   const savedCallback = useRef<() => void>();
@@ -120,6 +126,11 @@ const getRangeArray = (min: number, max: number) => {
   return arr;
 };
 
+// Linear interpolation.
+const lerp = (step: number, steps: number, min: number, max: number) => {
+  return (step / steps) * (max - min) + min;
+};
+
 interface DanceAiModalProps {
   playSound: (name: DanceAiSound, options?: object) => void;
 }
@@ -152,6 +163,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   // How long we spend in each step of the explanation mode.
   const EXPLANATION_STEP_DURATION = 900;
+
+  // The explanation shows the last (EXPLANATION_STEPS_COUNT-1) bad effects and the
+  // one good effect.
+  const EXPLANATION_START_INDEX =
+    BAD_GENERATED_RESULTS_COUNT - EXPLANATION_STEPS_COUNT + 1;
 
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
@@ -421,11 +437,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   }, [generatingProgress, generatedProgress, mode, playSound]);
 
-  // Linear interpolation.
-  const lerp = (step: number, steps: number, min: number, max: number) => {
-    return (step / steps) * (max - min) + min;
-  };
-
   const getGeneratingStepDuration = () => {
     return lerp(
       generatingProgress.step,
@@ -560,11 +571,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     aiBotBody = aiBotBodyYes;
     previewAreaClass = moduleStyles.previewAreaYes;
   } else if (mode === Mode.GENERATING) {
-    const aiBotBodyThinkImages = [
-      aiBotBodyThink0,
-      aiBotBodyThink1,
-      aiBotBodyThink2,
-    ];
     aiBotBody =
       aiBotBodyThinkImages[
         generatingProgress.step % aiBotBodyThinkImages.length
@@ -861,11 +867,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             </div>
             <div className={moduleStyles.visualizationContainer}>
               {getRangeArray(
-                BAD_GENERATED_RESULTS_COUNT - EXPLANATION_STEPS_COUNT + 1,
-                BAD_GENERATED_RESULTS_COUNT -
-                  EXPLANATION_STEPS_COUNT +
-                  explanationProgress +
-                  1
+                EXPLANATION_START_INDEX,
+                EXPLANATION_START_INDEX + explanationProgress
               ).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
