@@ -144,6 +144,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   // How long we spend in each step of the generated mode.
   const GENERATED_STEP_DURATION = 1500;
 
+  // How many steps in the explanation mode.
+  const EXPLANATION_STEPS_COUNT = 5;
+
   // How long we spend in each step of the explanation mode.
   const EXPLANATION_STEP_DURATION = 900;
 
@@ -439,7 +442,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           setGeneratedProgress(progress => progress + 1);
         }
       } else if (mode === Mode.EXPLANATION) {
-        if (explanationProgress < 5) {
+        if (explanationProgress < EXPLANATION_STEPS_COUNT - 1) {
           setExplanationProgress(progress => progress + 1);
         }
       }
@@ -554,9 +557,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     aiBotBody = aiBotBodyYes;
     previewAreaClass = moduleStyles.previewAreaYes;
   } else if (mode === Mode.GENERATING) {
-    aiBotBody = [aiBotBodyThink0, aiBotBodyThink1, aiBotBodyThink2][
-      generatingProgress.step % 3
+    const aiBotBodyThinkImages = [
+      aiBotBodyThink0,
+      aiBotBodyThink1,
+      aiBotBodyThink2,
     ];
+    aiBotBody =
+      aiBotBodyThinkImages[
+        generatingProgress.step % aiBotBodyThinkImages.length
+      ];
   }
 
   const explanationKeyDotColor = [
@@ -849,8 +858,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             </div>
             <div className={moduleStyles.visualizationContainer}>
               {getRangeArray(
-                BAD_GENERATED_RESULTS_COUNT - 4,
-                BAD_GENERATED_RESULTS_COUNT - 4 + explanationProgress - 1
+                BAD_GENERATED_RESULTS_COUNT - EXPLANATION_STEPS_COUNT + 1,
+                BAD_GENERATED_RESULTS_COUNT -
+                  EXPLANATION_STEPS_COUNT +
+                  explanationProgress +
+                  1
               ).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
