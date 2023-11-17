@@ -2241,10 +2241,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/blockly@npm:4.0.14":
-  version: 4.0.14
-  resolution: "@code-dot-org/blockly@npm:4.0.14"
-  checksum: cac8656a374c7a941f3f1741eb5b48d148e2ad1925b11ecd358686d346415d02509371c0bbb50e03b0ea269111a5b327929978b718eda33e412a9530a062406b
+"@code-dot-org/blockly@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@code-dot-org/blockly@npm:4.1.0"
+  checksum: ac5c2971cf9b50298179f21b348aba8de7d67cb5a42bd985a07d5cc593990243c65d94c9e41d59f428ef30e70ab30ee2969ceb53351a0d0e53e368565edfccf9
   languageName: node
   linkType: hard
 
@@ -7657,7 +7657,7 @@ __metadata:
     "@blockly/theme-highcontrast": ^3.0.3
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": 0.2.1
-    "@code-dot-org/blockly": 4.0.14
+    "@code-dot-org/blockly": 4.1.0
     "@code-dot-org/craft": 0.2.2
     "@code-dot-org/dance-party": 1.1.0
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
