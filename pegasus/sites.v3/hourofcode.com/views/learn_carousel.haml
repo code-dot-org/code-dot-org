@@ -1,29 +1,26 @@
+- subheading ||= nil
+- company = request.GET['company']
+- shuffle ||= false
+- items = tutorials.find_with_grade_level(gradelevel)
+- item_count = 3
 
--subheading ||= nil
--company = request.GET['company']
--shuffle ||= false
--items = tutorials.find_with_grade_level(gradelevel)
--item_count = 3 
-
-          
--if items.count > 0
-  -if shuffle
-    -items = items.to_a.shuffle.to_h
+- if items.count > 0
+  - if shuffle
+    - items = items.to_a.shuffle.to_h
   %h3{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}!= heading
 
-  -unless subheading.nil_or_empty?
+  - unless subheading.nil_or_empty?
     %p!= subheading
 
   .learnpage{:style=>'position:relative'}
-
     .carousel-wrapper
       %div{id: id, class: 'carousel course-carousel'}
         .slides
-          -items.each_slice(item_count) do |slice|
+          - items.each_slice(item_count) do |slice|
             .slide.clear
-              -slice.each do |key, tutorial|
-                -url = tutorials.launch_url_for(key,request.host_with_port)
-                -url = "#{url}?company=#{company}" if company
+              - slice.each do |key, tutorial|
+                - url = tutorials.launch_url_for(key, request.host_with_port)
+                - url = "#{url}?company=#{company}" if company
                 .action-block-wrapper
                   .action-block.action-block--one-col.flex-space-between
                     .slide-img-1
@@ -39,3 +36,9 @@
                       =I18n.t(:go)
       .pagination
         %div{:id => "pagination-#{id}"}
+      %button.slide-prev{:href=>'#'}<
+        %span<
+          %span.label= I18n.t(:previous)
+      %button.slide-next{:href=>'#'}<
+        %span<
+          %span.label= I18n.t(:next)
