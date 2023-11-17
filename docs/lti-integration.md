@@ -76,19 +76,11 @@ configuration. Below is the JSON you can paste directly into the
         "text": "Launch Code.org",
         "placements": [
           {
-            "placement": "account_navigation",
-            "message_type": "LtiResourceLinkRequest"       
-          },
-          {
             "placement": "link_selection",
             "message_type": "LtiResourceLinkRequest"       
           },
           {
-            "placement": "assignment_menu",
-            "message_type": "LtiResourceLinkRequest"
-          },
-          {
-            "placement": "assignment_selection",
+            "placement": "submission_type",
             "message_type": "LtiResourceLinkRequest"
           }
         ]
